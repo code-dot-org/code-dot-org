@@ -2,119 +2,77 @@
   "mi-NZ": {
     "data": {
       "lessons": {
-        "minecraft/Minecraft Hour of Code Designer": {
-          "name": "Pūhoahoa Hour of Code Mahimaina"
+        "csd2-2017/Lists": {
+          "name": "Ngā Rārangi"
         },
-        "flappy/Flappy Code": {
-          "name": "Waehere Flappy"
-        },
-        "hourofcode/Maze": {
-          "name": "Rīrapa"
-        },
-        "frozen/Artist": {
-          "name": "Tuhia te waehere ki tō Anna me Elsa taha"
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "Taiwhanga Tākaro Ice Age"
-        },
-        "artist/Artist": {
-          "name": "Rehetoi"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "Taiwhanga Tākaro Gumball"
-        },
-        "aquatic/Aquatic": {
-          "name": "Toihuke: Rerenga Moana"
-        },
-        "starwars/Hour of Code 2015": {
-          "name": "Star Wars: Te Hanga Ikarangi me te Waehere (JavaScript)"
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Hour of Code Mahimaina"
-        },
-        "playlab/Play Lab": {
-          "name": "Taiwhanga Tākaro"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "Taiwhanga Tākaro Disney Infinity"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hour of Code 2013"
-        },
-        "dance-2019/Dance Party": {
-          "name": "Te Pāti Kanikani"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Ngā Koromeke"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Ngā Takunetanga"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "Ngā Here"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "Ngā Taumahi"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "Ngā Taurangi"
         },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "Mō Ngā Koromeke"
+        "csd3-2017/Conditionals": {
+          "name": "Ngā Here"
         },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "Papatono Pepa Kauwhata"
+        "csd3-2017/Functions": {
+          "name": "Ngā Taumahi"
         },
-        "coursed-2022/Relay Programming": {
-          "name": "Papatonotanga ā-Tānga"
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Ngā Taumahi Whai Tawhā"
         },
-        "coursed-2022/Dance Party": {
-          "name": "Te Pāti Kanikani"
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Hātepe Motuhenga: Whakatōkia he Kano"
         },
-        "coursef-2022/The Internet": {
-          "name": "Te Ipurangi"
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Hātepe Motuhenga: Whakatōkia he Kano"
         },
-        "coursee-2022/Songwriting": {
-          "name": "Te Tito Waiata"
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Hātepe Motuhenga: Waka Rererangi Pepa"
         },
-        "courseb-2022/Move It, Move It": {
-          "name": "E Neke, E Neke"
+        "coursed-2017/Nested Loops": {
+          "name": "Ngā Koromeke Tauroto"
         },
-        "courseb-2022/Getting Loopy": {
-          "name": "Kia Koromeke"
+        "coursee-2017/Building a Foundation": {
+          "name": "Te Hanga Tūāpapa"
         },
-        "express-2022/Dance Party": {
-          "name": "Te Pāti Kanikani"
+        "coursee-2017/Nested Loops": {
+          "name": "Ngā Koromeke Tauroto"
         },
-        "coursea-2022/Happy Maps": {
+        "coursef-2017/Building a Foundation": {
+          "name": "Te Hanga Tūāpapa"
+        },
+        "express-2017/Introduction": {
+          "name": "Kupu Whakataki"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Te Hanga Tūāpapa"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Ngā Koromeke Tauroto"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Hātepe Motuhenga: Whakatōkia he Kano"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Ohu Takikupu"
+        },
+        "csd2-2018/Lists": {
+          "name": "Ngā Rārangi"
+        },
+        "csd3-2018/Variables": {
+          "name": "Ngā Taurangi"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Ngā Here"
+        },
+        "csd3-2018/Functions": {
+          "name": "Ngā Taumahi"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Ngā Taumahi Whai Tawhā"
+        },
+        "coursea-2018/Programming: Happy Maps": {
           "name": "Ngā Mahere Harikoa"
         },
-        "coursec-2022/The Big Event": {
-          "name": "Te Takahanga Nui"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "Kōmore Ā-Rua"
-        },
-        "csd3-2022/Variables": {
-          "name": "Ngā Taurangi"
-        },
-        "csd3-2022/Text": {
-          "name": "Kuputuhi"
-        },
-        "csd3-2022/Conditionals": {
-          "name": "Ngā Here"
-        },
-        "csd3-2022/Functions": {
-          "name": "Ngā Taumahi"
-        },
-        "csd6-2022/Functions": {
-          "name": "Ngā Taumahi"
+        "coursea-2018/Going Places Safely": {
+          "name": "Te Karore Haumaru"
         },
         "courseb-2018/Move It, Move It": {
           "name": "E Neke, E Neke"
@@ -122,11 +80,17 @@
         "courseb-2018/Your Digital Footprint": {
           "name": "Tō Tapuwae Matihiko"
         },
-        "coursea-2018/Programming: Happy Maps": {
-          "name": "Ngā Mahere Harikoa"
+        "coursec-2018/Building a Foundation": {
+          "name": "Te Hanga Tūāpapa"
         },
-        "coursea-2018/Going Places Safely": {
-          "name": "Te Karore Haumaru"
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Kia Koromeke"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "Te Takahanga Nui"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Kōmore Ā-Rua"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Papatono Pepa Kauwhata"
@@ -139,6 +103,18 @@
         },
         "coursed-2018/Unplugged: Binary": {
           "name": "Ngā Atahanga Tāhūrua"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Te Hanga Tūāpapa"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Te Tito Waiata"
+        },
+        "coursee-2018/Internet": {
+          "name": "Te Ipurangi"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Te Mahi ā-Ohu"
         },
         "coursef-2018/Building a Foundation": {
           "name": "Te Hanga Tūāpapa"
@@ -182,30 +158,6 @@
         "express-2018/Crowdsourcing": {
           "name": "Te Mahi ā-Ohu"
         },
-        "coursee-2018/Building a Foundation": {
-          "name": "Te Hanga Tūāpapa"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "Te Tito Waiata"
-        },
-        "coursee-2018/Internet": {
-          "name": "Te Ipurangi"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Te Mahi ā-Ohu"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "Te Hanga Tūāpapa"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Kia Koromeke"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "Te Takahanga Nui"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Kōmore Ā-Rua"
-        },
         "pre-express-2018/Move It, Move It": {
           "name": "E Neke, E Neke"
         },
@@ -215,20 +167,20 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Ohu Takikupu"
         },
-        "csd3-2018/Variables": {
+        "csd2-2019/Lists": {
+          "name": "Ngā Rārangi"
+        },
+        "csd3-2019/Variables": {
           "name": "Ngā Taurangi"
         },
-        "csd3-2018/Conditionals": {
+        "csd3-2019/Conditionals": {
           "name": "Ngā Here"
         },
-        "csd3-2018/Functions": {
+        "csd3-2019/Functions": {
           "name": "Ngā Taumahi"
         },
-        "csd6-2018/Functions with Parameters": {
+        "csd6-2019/Functions with Parameters": {
           "name": "Ngā Taumahi Whai Tawhā"
-        },
-        "csd2-2018/Lists": {
-          "name": "Ngā Rārangi"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Te Karore Haumaru"
@@ -245,6 +197,12 @@
         "courseb-2019/Loops: Getting Loopy": {
           "name": "Kia Koromeke"
         },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Kōmore Ā-Rua"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "Te Takahanga Nui"
+        },
         "coursed-2019/Algorithms: Graph Paper Programming": {
           "name": "Papatono Pepa Kauwhata"
         },
@@ -260,6 +218,9 @@
         "coursed-2019/Dance Party": {
           "name": "Te Pāti Kanikani"
         },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Te Tito Waiata"
+        },
         "coursef-2019/Envelope Variables": {
           "name": "Ngā Taurangi Kōpaki"
         },
@@ -272,152 +233,221 @@
         "coursef-2019/Crowdsourcing": {
           "name": "Te Mahi ā-Ohu"
         },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "Te Tito Waiata"
-        },
         "express-2019/Dance Party": {
           "name": "Te Pāti Kanikani"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Kōmore Ā-Rua"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "Te Takahanga Nui"
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Ohu Takikupu"
         },
-        "csd3-2019/Variables": {
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Ngā Mahere Harikoa"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "E Neke, E Neke"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Kia Koromeke"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Kōmore Ā-Rua"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "Te Takahanga Nui"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Papatono Pepa Kauwhata"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "coursed-2020/Dance Party": {
+          "name": "Te Pāti Kanikani"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Ngā Atahanga Tāhūrua"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Te Tito Waiata"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Ngā Taurangi Kōpaki"
+        },
+        "coursef-2020/Internet": {
+          "name": "Te Ipurangi"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "Kia Ngahau te Mahi Koromeke"
+        },
+        "express-2020/Dance Party": {
+          "name": "Te Pāti Kanikani"
+        },
+        "csd3-2021/Variables": {
           "name": "Ngā Taurangi"
         },
-        "csd3-2019/Conditionals": {
+        "csd3-2021/Text": {
+          "name": "Kuputuhi"
+        },
+        "csd3-2021/Conditionals": {
           "name": "Ngā Here"
         },
-        "csd3-2019/Functions": {
+        "csd3-2021/Functions": {
           "name": "Ngā Taumahi"
         },
-        "csd6-2019/Functions with Parameters": {
+        "csd6-2021/Functions with Parameters": {
           "name": "Ngā Taumahi Whai Tawhā"
         },
-        "csd2-2019/Lists": {
-          "name": "Ngā Rārangi"
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Ngā Mahere Harikoa"
         },
-        "coursef-2017/Building a Foundation": {
-          "name": "Te Hanga Tūāpapa"
+        "courseb-2021/Move It, Move It": {
+          "name": "E Neke, E Neke"
         },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Hātepe Motuhenga: Whakatōkia he Kano"
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Kia Koromeke"
         },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Hātepe Motuhenga: Whakatōkia he Kano"
+        "coursec-2021/Events: The Big Event": {
+          "name": "Te Takahanga Nui"
         },
-        "pre-express-2017/Spelling Bee": {
-          "name": "Ohu Takikupu"
+        "coursec-2021/Binary Bracelets": {
+          "name": "Kōmore Ā-Rua"
         },
-        "coursee-2017/Building a Foundation": {
-          "name": "Te Hanga Tūāpapa"
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Papatono Pepa Kauwhata"
         },
-        "coursee-2017/Nested Loops": {
-          "name": "Ngā Koromeke Tauroto"
+        "coursed-2021/Relay Programming": {
+          "name": "Papatonotanga ā-Tānga"
         },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Hātepe Motuhenga: Waka Rererangi Pepa"
+        "coursed-2021/Dance Party": {
+          "name": "Te Pāti Kanikani"
         },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Hātepe Motuhenga: Whakatōkia he Kano"
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Te Tito Waiata"
         },
-        "coursed-2017/Nested Loops": {
-          "name": "Ngā Koromeke Tauroto"
+        "coursef-2021/For Loop Fun": {
+          "name": "Kia Ngahau te Mahi Koromeke"
         },
-        "express-2017/Introduction": {
-          "name": "Kupu Whakataki"
+        "coursef-2021/Internet": {
+          "name": "Te Ipurangi"
         },
-        "express-2017/Building a Foundation": {
-          "name": "Te Hanga Tūāpapa"
+        "express-2021/lesson-1": {
+          "name": "Te Pāti Kanikani"
         },
-        "express-2017/Nested Loops": {
-          "name": "Ngā Koromeke Tauroto"
-        },
-        "csd3-2017/Variables": {
+        "csd3-2022/Variables": {
           "name": "Ngā Taurangi"
         },
-        "csd3-2017/Conditionals": {
+        "csd3-2022/Text": {
+          "name": "Kuputuhi"
+        },
+        "csd3-2022/Conditionals": {
           "name": "Ngā Here"
         },
-        "csd3-2017/Functions": {
+        "csd3-2022/Functions": {
           "name": "Ngā Taumahi"
         },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "Ngā Taumahi Whai Tawhā"
+        "csd6-2022/Functions": {
+          "name": "Ngā Taumahi"
         },
-        "csd2-2017/Lists": {
-          "name": "Ngā Rārangi"
+        "coursea-2022/Happy Maps": {
+          "name": "Ngā Mahere Harikoa"
         },
-        "course4/Unplugged: Tangrams": {
-          "name": "Momotu: Ngā Hangawhitu"
+        "courseb-2022/Move It, Move It": {
+          "name": "E Neke, E Neke"
         },
-        "course4/Maze and Bee": {
-          "name": "Rīrapa me te Pī"
+        "courseb-2022/Getting Loopy": {
+          "name": "Kia Koromeke"
         },
-        "course4/Artist": {
+        "coursec-2022/The Big Event": {
+          "name": "Te Takahanga Nui"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Kōmore Ā-Rua"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Papatono Pepa Kauwhata"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Papatonotanga ā-Tānga"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Te Pāti Kanikani"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Te Tito Waiata"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Te Ipurangi"
+        },
+        "express-2022/Dance Party": {
+          "name": "Te Pāti Kanikani"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
+        },
+        "aquatic/Aquatic": {
+          "name": "Toihuke: Rerenga Moana"
+        },
+        "artist/Artist": {
           "name": "Rehetoi"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Momotu: Ngā Tāupe Pūhera"
+        "dance-2019/Dance Party": {
+          "name": "Te Pāti Kanikani"
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "Momotu: Ngā Madlibs"
+        "flappy/Flappy Code": {
+          "name": "Waehere Flappy"
         },
-        "course4/Artist: Variables": {
-          "name": "Rehetoi: Ngā Tāupe"
+        "frozen/Artist": {
+          "name": "Tuhia te waehere ki tō Anna me Elsa taha"
         },
-        "course4/Play Lab: Variables": {
-          "name": "Taiwhanga Tākaro: Ngā Tāupe"
+        "gumball/Gumball Play Lab": {
+          "name": "Taiwhanga Tākaro Gumball"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Momotu: Mō te Ngahau Koromeke"
+        "hourofcode/Maze": {
+          "name": "Rīrapa"
         },
-        "course4/Bee: For Loops": {
-          "name": "Pī: Mō Ngā Koromeke"
+        "iceage/Ice Age Play Lab": {
+          "name": "Taiwhanga Tākaro Ice Age"
         },
-        "course4/Artist: For Loops": {
-          "name": "Rehetoi: Mō Ngā Koromeke"
+        "infinity/Infinity": {
+          "name": "Taiwhanga Tākaro Disney Infinity"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "Taiwhanga Tākaro: Mō Ngā Koromeke"
+        "mc/Hour of Code 2015": {
+          "name": "Hour of Code Mahimaina"
         },
-        "course4/Artist: Functions": {
-          "name": "Rehetoi: Ngā Taumahi"
+        "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Pūhoahoa Hour of Code Mahimaina"
         },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Momotu: Titowaiata me ngā Tawhā"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Rehetoi: Ngā Taumahi whai Tawhā"
+        "playlab/Play Lab": {
+          "name": "Taiwhanga Tākaro"
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Taiwhanga Tākaro: Ngā Taumahi whai Tawhā"
+        "starwars/Hour of Code 2015": {
+          "name": "Star Wars: Te Hanga Ikarangi me te Waehere (JavaScript)"
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Pī: Ngā Taumahi whai Tawhā"
+        "allthethings/Jigsaw": {
+          "name": "Pangahono"
         },
-        "course4/Unplugged: Binary": {
-          "name": "Momotu: Tāhūrua"
+        "allthethings/Maze": {
+          "name": "Rīrapa"
         },
-        "course4/Artist Binary": {
-          "name": "Rehetoi Tāhūrua"
+        "allthethings/Artist": {
+          "name": "Rehetoi"
         },
-        "course4/Super Challenge - Variables": {
-          "name": "Wero Nui Rawa - Ngā Tāupe"
+        "allthethings/Flappy": {
+          "name": "Flappy"
         },
-        "course4/Super Challenge - For Loops": {
-          "name": "Wero Nui Rawa - Mō Ngā Koromeke"
+        "allthethings/Bounce": {
+          "name": "Tupana"
         },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Wero Nui Rawa: Ngā Taumahi me ngā Tawhā"
+        "allthethings/Studio": {
+          "name": "Taupuni"
         },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Wero Nui Rawa Atu - Matawhānui"
+        "allthethings/Minecraft": {
+          "name": "Mahimaina"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Whakatakinga ki te Pūtaiao Rorohiko"
@@ -478,6 +508,60 @@
         },
         "20-hour/Wrap-up": {
           "name": "Tākaia"
+        },
+        "course1/Happy Maps": {
+          "name": "Ngā Mahere Harikoa"
+        },
+        "course1/Move it, Move it": {
+          "name": "E Neke, E Neke"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Pangahono: Ākona ki te tō me te whakataka"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Rīrapa: Raupapa"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Rīrapa: Patuirotanga"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Hātepe Motuhenga: Whakatōkia he Kano"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Pī: Raupapa"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Rehetoi: Raupapa"
+        },
+        "course1/Building a Foundation": {
+          "name": "Te Hanga Tūāpapa"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Rehetoi: Ngā Āhua"
+        },
+        "course1/Spelling Bee": {
+          "name": "Ohu Takikupu"
+        },
+        "course1/Getting Loopy": {
+          "name": "Kia Koromeke"
+        },
+        "course1/Maze: Loops": {
+          "name": "Rīrapa: Ngā Koromeke"
+        },
+        "course1/Bee: Loops": {
+          "name": "Pī: Ngā Koromeke"
+        },
+        "course1/The Big Event": {
+          "name": "Te Takahanga Nui"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Taiwhanga Tākaro - Waihangahia tētahi Paki"
+        },
+        "course1/Going Places Safely": {
+          "name": "Te Karore Haumaru"
+        },
+        "course1/Artist: Loops": {
+          "name": "Rehetoi: Ngā Koromeke"
         },
         "course2/Graph Paper Programming": {
           "name": "Papatono Pepa Kauwhata"
@@ -599,176 +683,74 @@
         "course3/Artist: Patterns": {
           "name": "Rehetoi: Ngā Tauira"
         },
-        "course1/Happy Maps": {
-          "name": "Ngā Mahere Harikoa"
+        "course4/Unplugged: Tangrams": {
+          "name": "Momotu: Ngā Hangawhitu"
         },
-        "course1/Move it, Move it": {
-          "name": "E Neke, E Neke"
+        "course4/Maze and Bee": {
+          "name": "Rīrapa me te Pī"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Pangahono: Ākona ki te tō me te whakataka"
+        "course4/Artist": {
+          "name": "Rehetoi"
         },
-        "course1/Maze: Sequence": {
-          "name": "Rīrapa: Raupapa"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Momotu: Ngā Tāupe Pūhera"
         },
-        "course1/Maze: Debugging": {
-          "name": "Rīrapa: Patuirotanga"
+        "course4/Unplugged: Madlibs": {
+          "name": "Momotu: Ngā Madlibs"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Hātepe Motuhenga: Whakatōkia he Kano"
+        "course4/Artist: Variables": {
+          "name": "Rehetoi: Ngā Tāupe"
         },
-        "course1/Bee: Sequence": {
-          "name": "Pī: Raupapa"
+        "course4/Play Lab: Variables": {
+          "name": "Taiwhanga Tākaro: Ngā Tāupe"
         },
-        "course1/Artist: Sequence": {
-          "name": "Rehetoi: Raupapa"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Momotu: Mō te Ngahau Koromeke"
         },
-        "course1/Building a Foundation": {
-          "name": "Te Hanga Tūāpapa"
+        "course4/Bee: For Loops": {
+          "name": "Pī: Mō Ngā Koromeke"
         },
-        "course1/Artist: Shapes": {
-          "name": "Rehetoi: Ngā Āhua"
+        "course4/Artist: For Loops": {
+          "name": "Rehetoi: Mō Ngā Koromeke"
         },
-        "course1/Spelling Bee": {
-          "name": "Ohu Takikupu"
+        "course4/Play Lab: For Loops": {
+          "name": "Taiwhanga Tākaro: Mō Ngā Koromeke"
         },
-        "course1/Getting Loopy": {
-          "name": "Kia Koromeke"
+        "course4/Artist: Functions": {
+          "name": "Rehetoi: Ngā Taumahi"
         },
-        "course1/Maze: Loops": {
-          "name": "Rīrapa: Ngā Koromeke"
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Momotu: Titowaiata me ngā Tawhā"
         },
-        "course1/Bee: Loops": {
-          "name": "Pī: Ngā Koromeke"
+        "course4/Artist: Functions with Parameters": {
+          "name": "Rehetoi: Ngā Taumahi whai Tawhā"
         },
-        "course1/The Big Event": {
-          "name": "Te Takahanga Nui"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Taiwhanga Tākaro: Ngā Taumahi whai Tawhā"
         },
-        "course1/Studio: Create a Story": {
-          "name": "Taiwhanga Tākaro - Waihangahia tētahi Paki"
+        "course4/Bee: Functions with Parameters": {
+          "name": "Pī: Ngā Taumahi whai Tawhā"
         },
-        "course1/Going Places Safely": {
-          "name": "Te Karore Haumaru"
+        "course4/Unplugged: Binary": {
+          "name": "Momotu: Tāhūrua"
         },
-        "course1/Artist: Loops": {
-          "name": "Rehetoi: Ngā Koromeke"
+        "course4/Artist Binary": {
+          "name": "Rehetoi Tāhūrua"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Wero Nui Rawa - Ngā Tāupe"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Wero Nui Rawa - Mō Ngā Koromeke"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Wero Nui Rawa: Ngā Taumahi me ngā Tawhā"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Wero Nui Rawa Atu - Matawhānui"
         },
         "jigsaw/Jigsaw": {
           "name": "Pangahono"
-        },
-        "allthethings/Jigsaw": {
-          "name": "Pangahono"
-        },
-        "allthethings/Maze": {
-          "name": "Rīrapa"
-        },
-        "allthethings/Artist": {
-          "name": "Rehetoi"
-        },
-        "allthethings/Flappy": {
-          "name": "Flappy"
-        },
-        "allthethings/Bounce": {
-          "name": "Tupana"
-        },
-        "allthethings/Studio": {
-          "name": "Taupuni"
-        },
-        "allthethings/Minecraft": {
-          "name": "Mahimaina"
-        },
-        "coursef-2021/For Loop Fun": {
-          "name": "Kia Ngahau te Mahi Koromeke"
-        },
-        "coursef-2021/Internet": {
-          "name": "Te Ipurangi"
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "E Neke, E Neke"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "Kia Koromeke"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "Ngā Mahere Harikoa"
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "Te Takahanga Nui"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "Kōmore Ā-Rua"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "Papatono Pepa Kauwhata"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "coursed-2021/Dance Party": {
-          "name": "Te Pāti Kanikani"
-        },
-        "express-2021/lesson-1": {
-          "name": "Te Pāti Kanikani"
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "Te Tito Waiata"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "Ngā Taumahi Whai Tawhā"
-        },
-        "csd3-2021/Variables": {
-          "name": "Ngā Taurangi"
-        },
-        "csd3-2021/Text": {
-          "name": "Kuputuhi"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "Ngā Here"
-        },
-        "csd3-2021/Functions": {
-          "name": "Ngā Taumahi"
-        },
-        "express-2020/Dance Party": {
-          "name": "Te Pāti Kanikani"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "E Neke, E Neke"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "Kia Koromeke"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Papatono Pepa Kauwhata"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Papatonotanga ā-Tānga"
-        },
-        "coursed-2020/Dance Party": {
-          "name": "Te Pāti Kanikani"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "Ngā Atahanga Tāhūrua"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Kōmore Ā-Rua"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "Te Takahanga Nui"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "Te Tito Waiata"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Ngā Mahere Harikoa"
-        },
-        "coursef-2020/Envelope Variables": {
-          "name": "Ngā Taurangi Kōpaki"
-        },
-        "coursef-2020/Internet": {
-          "name": "Te Ipurangi"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "Kia Ngahau te Mahi Koromeke"
         }
       }
     }

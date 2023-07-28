@@ -2,131 +2,59 @@
   "tr-TR": {
     "data": {
       "standard_categories": {
-        "AP": {
-          "description": "Algoritmalar ve Programlama"
-        },
-        "CS": {
-          "description": "Bilişim Sistemleri"
-        },
-        "DA": {
-          "description": "Veri ve Analiz"
-        },
-        "NI": {
-          "description": "Ağlar ve İnternet"
-        },
-        "DAT-1": {
-          "description": "Bilgisayarın verileri temsil etme biçimi, verilerin kullanıcı için yorumlanma ve görüntülenme biçiminden farklıdır. Programlar, verileri insanlar tarafından daha kolay anlaşılabilecek bir temsile dönüştürmek için kullanılır."
-        },
-        "IOC-2": {
-          "description": "Bilgisayar kullanımında yenilikler kişisel güvenlik ve kimliğiniz için riskler içerebilir."
-        },
-        "DAT-1.D": {
-          "description": "Belirli bir bağlamda hangisinin en iyi olduğunu belirlemek için veri sıkıştırma algoritmalarını karşılaştırın."
-        },
-        "IOC-2.B": {
-          "description": "Bilgi işlem kaynaklarının nasıl korunabileceğini ve kötüye kullanılabileceğini açıklayın."
-        },
-        "CD": {
-          "description": "Bilgisayarlar & İletişim Cihazları"
-        },
-        "CI": {
-          "description": "Topluluk, Küresel ve Etik Etkileri"
-        },
-        "CL": {
-          "description": "İşbirliği"
-        },
-        "CPP": {
-          "description": "Bilişim Pratiği & Programlama"
-        },
-        "CT": {
-          "description": "Sayısal Düşünme"
-        },
-        "L": {
-          "description": "Dil"
-        },
-        "RI": {
-          "description": "Bilgilendirici Okuma"
-        },
-        "RL": {
-          "description": "Literatür Okuması"
-        },
-        "SL": {
-          "description": "Konuşma & Dinleme"
-        },
-        "W": {
-          "description": "Yazma"
-        },
-        "ETS": {
-          "description": "Bilimde Mühendislik"
-        },
-        "ETS1": {
-          "description": "Mühendislik Tasarımı"
-        },
-        "C": {
-          "description": "Çemberler"
-        },
-        "F": {
-          "description": "Fonksiyonlar"
-        },
-        "G": {
-          "description": "Geometri"
-        },
-        "MD": {
-          "description": "Karar Vermek İçin Olasılığı Kullanma"
-        },
-        "MP": {
-          "description": "Matematik Pratikleri"
-        },
-        "NBT": {
-          "description": "Onluk Tabanda Sayı Ve İşlemler"
-        },
-        "OA": {
-          "description": "İşlemler ve Cebirsel Düşünme"
-        },
         "1": {
           "description": "Öğrenciler, teknolojiyi kullanarak yaratıcı düşünür, bilgilenir ve yenilikçi ürünler ve süreçler geliştirir."
         },
         "2": {
           "description": "Öğrenciler, belli bir mesafede bireysel öğrenimi desteklemek ve başkalarının öğrenmesine katkı sağlamak dahil olmak üzere işbirliği içerisinde iletişim kurmak ve çalışmak için dijital medya ve ortamları kullanır."
         },
+        "3": {
+          "description": "Öğrenciler bilgi toplamak, değerlendirmek ve kullanmak için dijital araçlar uygular."
+        },
+        "3-A-i": {
+          "description": "Öğrenmenin Doğası - insanlar vs makineler"
+        },
+        "3-A-ii": {
+          "description": "Öğrenmenin Doğası - verilerdeki kalıpları bulma"
+        },
+        "3-A-iii": {
+          "description": "Öğrenmenin Doğası - bir model eğitimi"
+        },
+        "3-A-iv": {
+          "description": "Öğrenme doğası - constructinv vs bir reasoner kullanarak"
+        },
+        "3-A-v": {
+          "description": "Öğrenmenin Doğası - iç temsillerin ayarlanması"
+        },
+        "3-A-vi": {
+          "description": "Öğrenmenin Doğası - deneyimden öğrenme"
+        },
+        "3-B-i": {
+          "description": "Sinir Ağları - sinir ağının yapısı"
+        },
+        "3-B-ii": {
+          "description": "Sinir Ağları - ağırlık ayarı"
+        },
+        "3-C-i": {
+          "description": "Veri kümeleri - özellik kümeleri"
+        },
+        "3-C-ii": {
+          "description": "Veri kümeleri - büyük veri kümeleri"
+        },
+        "3-C-iii": {
+          "description": "Veri kümeleri - önyargı"
+        },
         "4": {
           "description": "Öğrenciler, uygun dijital araçları ve kaynakları kullanarak araştırmayı planlamak ve yürütmek, projeleri yönetmek, sorunları çözmek ve bilinçli kararlar vermek için eleştirel düşünme becerilerini kullanır."
+        },
+        "5": {
+          "description": "Öğrenciler teknoloji ile ilgili insan, kültürel ve toplumsal sorunları anlar ve yasal ve etik davranışları uygular."
         },
         "6": {
           "description": "Öğrenciler; teknoloji kavramları, sistemleri ve işlemlerini iyi bir şekilde anladığını gösterir."
         },
-        "IC": {
-          "description": "Çıkarımlar Yapmak ve Sonuçları Gerekçelendirmek"
-        },
         "AAP-1": {
           "description": "Genelleştirilebilir sorunlara özel çözümler bulmak için, programcılar verileri çeşitli şekillerde temsil eder ve düzenler."
-        },
-        "AAP-2": {
-          "description": "İfadelerin sıralanma ve bir programda birleştirilme şekli hesaplanan sonucu belirler. Programlar, tekrarı temsil etmek ve çeşitli girdi değerlerini işlemek için kararlar almak için yineleme ve seçim yapıları içerir."
-        },
-        "AAP-3": {
-          "description": "Programcılar sorunları daha küçük ve daha yönetilebilir parçalara ayırır. Prosedürler oluşturarak ve parametrelerden yararlanarak, programcılar yeniden kullanılabilecek süreçleri genelleştirir. Prosedürler, programcıların daha önce test edilmiş mevcut koddan yararlanmasına olanak tanır, programcıların programları daha hızlı ve daha güvenli bir şekilde yazmasına izin vermek."
-        },
-        "AAP-4": {
-          "description": "Bilgisayarın çözemediği sorunlar var ve bilgisayar bir sorunu çözebilse bile, makul bir süre içinde bunu yapamayabilir."
-        },
-        "CRD-1": {
-          "description": "İşbirliği yoluyla birden fazla perspektif birleştirmek, geliştirilmekte olan bilgi işlem yeniliklerini iyileştirir."
-        },
-        "CRD-2": {
-          "description": "Geliştiriciler, kullanıcı odaklı, uygulama/geri bildirim döngülerini içeren ve deney ve risk alma için geniş alan bırakan yinelemeli bir tasarım süreci kullanarak yenilik yapar ve yenilik yapar."
-        },
-        "CSN-1": {
-          "description": "Bilgisayar sistemleri ve ağlar, verilerin nasıl aktarıldığını kolaylaştırır."
-        },
-        "CSN-2": {
-          "description": "Paralel ve dağıtılmış bilgi işlem, karmaşık sorunları daha hızlı çözmek veya büyük veri kümelerini işlemek için birden fazla bilgisayardan yararlanır."
-        },
-        "DAT-2": {
-          "description": "Programlar, kullanıcıların bilgileri keşfetmesine ve yeni bilgiler oluşturmasına olanak tanıyan verileri işlemek için kullanılabilir."
-        },
-        "IOC-1": {
-          "description": "Programlar genellikle belirli bir amaca ulaşmak için tasarlanırken, istenmeyen sonuçları olabilir"
         },
         "AAP-1.A": {
           "description": "Değişkenli bir değeri temsil eder."
@@ -139,6 +67,9 @@
         },
         "AAP-1.D": {
           "description": "Veri soyutlaması için: \na Birden fazla öğeyi depolamak için listeleri kullanarak veri soyutlaması geliştirin.\nb.Veri soyutlama kullanımının program kodundaki karmaşıklığı nasıl yönettiğini açıklayın."
+        },
+        "AAP-2": {
+          "description": "İfadelerin sıralanma ve bir programda birleştirilme şekli hesaplanan sonucu belirler. Programlar, tekrarı temsil etmek ve çeşitli girdi değerlerini işlemek için kararlar almak için yineleme ve seçim yapıları içerir."
         },
         "AAP-2.A": {
           "description": "Bir programlama dili kullanmadan dizileme kullanan bir algoritmayı ifade eder."
@@ -182,6 +113,9 @@
         "AAP-2.P": {
           "description": "İkili arama algoritmaları için:\na Bir veri kümesinde bir değer bulmak için gereken yineleme sayısını belirleyin. \nb.İkili aramayı tamamlamak için gerekli gereksinimleri açıklayın."
         },
+        "AAP-3": {
+          "description": "Programcılar sorunları daha küçük ve daha yönetilebilir parçalara ayırır. Prosedürler oluşturarak ve parametrelerden yararlanarak, programcılar yeniden kullanılabilecek süreçleri genelleştirir. Prosedürler, programcıların daha önce test edilmiş mevcut koddan yararlanmasına olanak tanır, programcıların programları daha hızlı ve daha güvenli bir şekilde yazmasına izin vermek."
+        },
         "AAP-3.A": {
           "description": "Prosedür çağrıları için:\na Yordamları çağırmak için ifadeleri yazın.\nb Bir prosedür çağrısının sonucunu veya etkisini belirleyin."
         },
@@ -197,323 +131,65 @@
         "AAP-3.E": {
           "description": "Rasgele değerler oluşturmak için: \na Olası değerler oluşturmak için ifadeler yazın. \nb. olası sonuçları belirlemek için ifadeleri değerlendirin."
         },
+        "AAP-4": {
+          "description": "Bilgisayarın çözemediği sorunlar var ve bilgisayar bir sorunu çözebilse bile, makul bir süre içinde bunu yapamayabilir."
+        },
         "AAP-4.A": {
           "description": "Bir algoritmanın verimliliğini belirlemek için:\na Makul zamanda çalışan algoritmalar ile makul sürede çalışmayan algoritmalar arasındaki farkı açıklar. \nb. sezgisel bir çözümün daha uygun olabileceği durumları belirleyin."
         },
         "AAP-4.B": {
           "description": "Bilgisayar bilimlerinde karar verilemez problemlerin varlığını açıklayabilir."
         },
-        "CRD-1.A": {
-          "description": "Bilgi işlem yeniliklerinin işbirliği yoluyla nasıl geliştirildiğini açıklayın."
+        "AP": {
+          "description": "Algoritmalar ve Programlama"
         },
-        "CRD-1.B": {
-          "description": "Bilgi işlem yeniliklerinin insan grupları tarafından nasıl geliştirildiğini açıklayın."
+        "APR": {
+          "description": "Polinomlarla Aritmetik ve Akılcı İfadeler"
         },
-        "CRD-1.C": {
-          "description": "İşbirliği sırasında etkili kişilerarası beceriler sergileyin."
+        "BF": {
+          "description": "Bina Fonksiyonları"
         },
-        "CRD-2.A": {
-          "description": "Bir bilgi işlem yeniliğinin amacını tanımlayın."
+        "BI-1": {
+          "description": "Bilgisayarlar dünyayı algılayıcıları kullanarak algılar"
         },
-        "CRD-2.B": {
-          "description": "Bir programın veya kod segmentinin nasıl çalıştığını açıklayın."
+        "BI-2": {
+          "description": "Temsilciler dünyanın temsillerini sürdürüyor ve bunları akıl yürütme için kullanıyor"
         },
-        "CRD-2.C": {
-          "description": "Bir programa giriş (ler) i tanımlayın."
+        "BI-3": {
+          "description": "Bilgisayarlar verilerden öğrenebilir"
         },
-        "CRD-2.D": {
-          "description": "Bir program tarafından üretilen çıktıları tanımlayın."
+        "BI-4": {
+          "description": "Akıllı ajanlar, insanlarla doğal olarak etkileşim kurmak için birçok türde bilgiye ihtiyaç duyar"
         },
-        "CRD-2.E": {
-          "description": "Bir geliştirme süreci kullanarak bir program geliştirin."
+        "BI-5": {
+          "description": "Yapay zeka toplumu hem olumlu hem de olumsuz yönde etkileyebilir"
         },
-        "CRD-2.F": {
-          "description": "Bir program ve kullanıcı arayüzü tasarlayın."
+        "C": {
+          "description": "Çemberler"
         },
-        "CRD-2.G": {
-          "description": "Dokümantasyon yazarak bir kod segmentinin veya programın amacını açıklayın."
+        "CC": {
+          "description": "Sayma ve Kardinalite"
         },
-        "CRD-2.H": {
-          "description": "Diğer kaynaklardan kullanılan kod segmentlerini onaylayın."
+        "CD": {
+          "description": "Bilgisayarlar & İletişim Cihazları"
         },
-        "CRD-2.I": {
-          "description": "Bir algoritma veya programdaki hatalar için: \na Hatayı tanımlayın. \nb. hatayı düzeltin."
+        "CED": {
+          "description": "Denklem Oluşturma"
         },
-        "CRD-2.J": {
-          "description": "Bir algoritma veya programın doğruluğunu kontrol etmek için kullanılabilecek girdileri ve karşılık gelen beklenen çıktıları veya davranışları tanımlayın."
+        "CI": {
+          "description": "Topluluk, Küresel ve Etik Etkileri"
         },
-        "CSN-1.A": {
-          "description": "Bilgi işlem cihazlarının bir ağda nasıl birlikte çalıştığını açıklayın."
+        "CL": {
+          "description": "İşbirliği"
         },
-        "CSN-1.B": {
-          "description": "İnternetin nasıl çalıştığını açıklayın."
+        "CN": {
+          "description": "Karmaşık Sayı Sistemi"
         },
-        "CSN-1.C": {
-          "description": "Verilerin İnternet üzerinden paketler aracılığıyla nasıl gönderildiğini açıklayın."
-        },
-        "CSN-1.D": {
-          "description": "İnternet ve World Wide Web arasındaki farkları tanımlar."
-        },
-        "CSN-2.A": {
-          "description": "Sıralı, paralel ve dağıtık hesaplama kullanan problem çözümlerini karşılaştırın."
-        },
-        "CSN-2.B": {
-          "description": "Sıralı ve paralel çözümlerin verimliliğini belirler."
-        },
-        "CSN-2.C": {
-          "description": "Paralel ve dağıtık bilgi işlemin faydalarını ve zorluklarını tanımlayın."
-        },
-        "DAT-1.A": {
-          "description": "Bitler kullanılarak verilerin nasıl temsil edilebileceğini açıklayın."
-        },
-        "DAT-1.B": {
-          "description": "Verileri temsil etmek için bit kullanmanın sonuçlarını açıklayın."
-        },
-        "DAT-1.C": {
-          "description": "İkili sayılar için:\na Pozitif tamsayının ikili (baz 2) eşdeğerini (baz 10) hesaplayın ve bunun tersi de geçerlidir. \nb. ikili sayıları karşılaştırın ve sipariş edin."
-        },
-        "DAT-2.A": {
-          "description": "Verilerden hangi bilgilerin çıkarılabileceğini açıklayın."
-        },
-        "DAT-2.B": {
-          "description": "Meta verilerden hangi bilgilerin çıkarılabileceğini açıklayın."
-        },
-        "DAT-2.C": {
-          "description": "Verilerin işlenmesiyle ilgili zorlukları belirleyin."
-        },
-        "DAT-2.D": {
-          "description": "Bir program kullanarak verilerden bilgi alın."
-        },
-        "DAT-2.E": {
-          "description": "Verilerden bilgi ve bilgi edinmek için programların nasıl kullanılabileceğini açıklayın."
-        },
-        "IOC-1.A": {
-          "description": "Bilişim sistemlerinin etik ve toplumsal etkilerini açıklayabilir"
-        },
-        "IOC-1.B": {
-          "description": "Kişisel verilerin bilgisayar sistemlerinde toplanması ve depolanmasından kaynaklanan gizliliğe yönelik riskleri açıklar."
-        },
-        "IOC-1.C": {
-          "description": "Dijital bölünmeye katkıda bulunan sorunları açıklayın."
-        },
-        "IOC-1.D": {
-          "description": "Bilgi işlem yeniliklerinde önyargının nasıl olduğunu açıklayın."
-        },
-        "IOC-1.E": {
-          "description": "İnsanların problem çözme süreçlerine nasıl katıldığını geniş ölçekte açıklayın."
-        },
-        "IOC-1.F": {
-          "description": "Bilgi işlem kullanımının yasal ve etik kaygıları nasıl artırabileceğini açıklayın."
-        },
-        "IOC-2.A": {
-          "description": "Kişisel verilerin bir bilgisayar sisteminde toplanması ve depolanmasından kaynaklanan gizliliğe yönelik riskleri açıklayın."
-        },
-        "IOC-2.C": {
-          "description": "Bilgi işlem kaynaklarına yetkisiz erişimin nasıl elde edildiğini açıklayın."
-        },
-        "D1": {
-          "description": "Soru Geliştirme ve Planlama Sorguları"
-        },
-        "D3.Sources": {
-          "description": "Kaynakların Toplanması ve Değerlendirilmesi"
-        },
-        "D3.Claims": {
-          "description": "İddia Geliştirme ve Kanıt Kullanma"
-        },
-        "D4.Conclusions": {
-          "description": "Sonuçların İletişimi ve Eleştirisi"
-        },
-        "D4.Action": {
-          "description": "Bilgilendirilmiş Eylem Alma"
-        },
-        "D2.Civ": {
-          "description": "YURTDAŞLIK"
-        },
-        "D2.Eco": {
-          "description": "Ekonomi"
-        },
-        "RF": {
-          "description": "Temel Becerileri Okuma"
-        },
-        "RH": {
-          "description": "Okuma Tarihi/Sosyal Bilgiler"
-        },
-        "RST": {
-          "description": "Okuma Bilimi/Teknik"
-        },
-        "WHST": {
-          "description": "HS/S/T Yazma"
-        },
-        "ESS": {
-          "description": "Yer ve Uzay Bilimleri"
-        },
-        "LS": {
-          "description": "Yaşam bilimi"
-        },
-        "PS": {
-          "description": "Fizik Bilimi"
-        },
-        "ESS1": {
-          "description": "Dünya'nın Evrendeki Yeri"
-        },
-        "ESS2": {
-          "description": "Dünya'nın Sistemleri"
-        },
-        "ESS3": {
-          "description": "Dünya ve İnsan Faaliyetleri"
-        },
-        "LS1": {
-          "description": "Moleküllerden Organizmalara: Yapılar ve Süreçler"
-        },
-        "LS2": {
-          "description": "Ekosistemler: Etkileşimler, Enerji ve Dinamikler"
-        },
-        "LS3": {
-          "description": "Kalıtım: Kalıtım ve Özelliklerin Değişimi"
-        },
-        "LS4": {
-          "description": "Biyolojik Evrim: Birlik ve Çeşitlilik"
-        },
-        "PS1": {
-          "description": "Madde ve Etkileşimleri"
-        },
-        "PS2": {
-          "description": "Hareket ve Kararlılık: Kuvvetler ve Etkileşimler"
-        },
-        "PS3": {
-          "description": "Enerji"
-        },
-        "PS4": {
-          "description": "Dalgalar ve Bilgi Aktarımı Teknolojilerindeki Uygulamaları"
-        },
-        "MOD-1": {
-          "description": "Bazı nesneler veya kavramlar o kadar sık temsil edilir ki, programcılar daha önce test edilmiş mevcut koddan yararlanarak çözümleri daha hızlı ve daha yüksek bir güvenle yazmalarını sağlar"
-        },
-        "MOD-2": {
-          "description": "Programcılar, nesnenin veya kavramın davranışlarına ve/veya davranışlarına dayalı bir sınıf tanımlayarak, gerçek veya hayal edilen fiziksel bir nesneyi veya fiziksel olmayan bir kavramı temsil etmek için kod kullanırlar"
-        },
-        "MOD-3": {
-          "description": "Mulitple sınıfları ortak öznitelikler ve davranışlar içerdiğinde, programcılar paylaşılan öznitelikleri ve hiyerachy oluşturan davranışları içeren yeni bir sınıf oluşturur. Hiyerarşinin en üst düzeyinde yapılan değişiklikler alt sınıflar için geçerlidir."
-        },
-        "VAR-1": {
-          "description": "Genelleştirilebilir sorunlara özel çözümler bulmak için, programcılar kodlarına değişkenler içerir, böylece aynı algoritma farklı giriş değerleri kullanarak çalışır"
-        },
-        "VAR-2": {
-          "description": "Verilerdeki büyük miktarda veriyi veya karmaşık ilişkileri yönetmek için, programcılar, verileri her bir değer için ayrı değişkenler oluşturarak tek bir veri yapısında gruplandıran kod yazar."
+        "CO": {
+          "description": "Uyuşma"
         },
         "CON-1": {
           "description": "Değişkenlerin ve operatörlerin bir ifadede sıralanma ve birleştirilme şekli hesaplanan sonucu belirler."
-        },
-        "CON-2": {
-          "description": "Programcılar, bilgisayarın olası birçok giriş değerinin her birini işlemesi için talimatlar sağlamanın bir yolu olarak yineleme ve seçimi koda dahil eder"
-        },
-        "MOD-1.A": {
-          "description": "Konsola çıktı oluşturmak için System sınıfı yöntemlerini çağırın."
-        },
-        "MOD-1.B": {
-          "description": "Sınıf ve nesne arasındaki ilişkiyi açıklayabilir."
-        },
-        "MOD-1.C": {
-          "description": "Belirleyin, imzasını kullanarak, doğru yapıcı çağrılıyor."
-        },
-        "MOD-1.D": {
-          "description": "Nesne oluşturmak için: a. Parametresiz yapıcıları çağırarak nesneler oluşturun. b. Yapıcıları parametrelerle çağırarak nesneler oluşturun."
-        },
-        "MOD-1.E": {
-          "description": "Parametreler olmadan statik olmayan boşluk yöntemlerini arayın."
-        },
-        "MOD-1.F": {
-          "description": "Parametrelerle statik olmayan boşluk yöntemlerini çağırın"
-        },
-        "MOD-1.G": {
-          "description": "Parametreli veya parametresiz statik olmayan boşluksuz yöntemleri çağırın"
-        },
-        "MOD-1.H": {
-          "description": "Statik yöntemleri çağırın."
-        },
-        "MOD-2.A": {
-          "description": "Sınıflara, verilere, yapıcılara ve yöntemlere erişim ve görünürlük kısıtlamaları belirleyin."
-        },
-        "MOD-2.B": {
-          "description": "Bir sınıfın yapıcıları aracılığıyla başlatılacak öznitelikler için örnek değişkenleri tanımlayın."
-        },
-        "MOD-2.C": {
-          "description": "Yorumlarda program kodunun işlevselliğini ve kullanımını açıklama."
-        },
-        "MOD-2.D": {
-          "description": "Sınıfta yazılmış prametreler olmadan, bir nesnenin davranışlarını geçersiz yöntemlerle tanımlar."
-        },
-        "MOD-2.E": {
-          "description": "Bir nesnenin davranışlarını, sınıfta yazılmış parametreler olsun veya olmasın void yöntemlerle tanımlayın."
-        },
-        "MOD-2.F": {
-          "description": "Sınıfta yazılmış parametrelerle, bir nesnenin davranışlarını geçersiz yöntemlerle tanımlar."
-        },
-        "MOD-2.G": {
-          "description": "Statik yöntemlerle sınıfın davranışlarını tanımlar."
-        },
-        "MOD-2.H": {
-          "description": "Sınıfa ait statik değişkenleri tanımlayın."
-        },
-        "MOD-3.A": {
-          "description": "Nesnenin niteliklerini özetlemek için örnek değişkenlerinin özel görünürlüğünü belirleyin."
-        },
-        "MOD-3.B": {
-          "description": "Bir alt sınıftan üst sınıfa miras ilişkisi oluşturun."
-        },
-        "MOD-3.C": {
-          "description": "Aynı hiyerarşideki bir alt sınıfın nesnesine atanacak bir üst sınıfın referans değişkenlerini tanımlayın."
-        },
-        "MOD-3.D": {
-          "description": "Miras ilişkisinde çağrı yöntemleri."
-        },
-        "MOD-3.E": {
-          "description": "Miras yoluyla Object sınıfı yöntemlerini çağırın."
-        },
-        "VAR-1.A": {
-          "description": "Dize değişmezleri oluşturma"
-        },
-        "VAR-1.B": {
-          "description": "Belirli bir spesifikasyon için en uygun veri türü kategorisini belirleyin"
-        },
-        "VAR-1.C": {
-          "description": "İlkel verileri temsil etmek için doğru türdeki değişkenleri beyan edin"
-        },
-        "VAR-1.D": {
-          "description": "Referans verilerini temsil etmek için doğru türlerin değişkenlerini tanımlayın."
-        },
-        "VAR-1.E": {
-          "description": "String sınıfı için: a. String nesneleri oluşturun. b. Çağrı Dizesi yöntemleri."
-        },
-        "VAR-1.F": {
-          "description": "Sarıcı sınıfları için: a. Tamsayı nesneleri oluşturun. b. Tamsayı yöntemlerini çağırın. c. Çift nesneler oluşturun. d. Çağrı Çifte yöntemler."
-        },
-        "VAR-1.G": {
-          "description": "Değişkenlerin program kodunda nerede kullanılabileceğini açıklayın."
-        },
-        "VAR-1.H": {
-          "description": "Bu anahtar kelimesini kullanan nesne referans ifadelerini değerlendirin."
-        },
-        "VAR-2.A": {
-          "description": "Tek boyutlu (1D) dizi nesneleri kullanarak ilgili ilkel veya nesne referans verilerinin koleksiyonlarını temsil eder."
-        },
-        "VAR-2.B": {
-          "description": "1D dizisindeki öğeleri çapraz çevirin."
-        },
-        "VAR-2.C": {
-          "description": "Geliştirilmiş bir for döngüsü kullanarak 1D dizi nesnesindeki öğeleri çapraz geçiş yapın."
-        },
-        "VAR-2.D": {
-          "description": "ArrayList nesnelerini kullanarak ilgili nesne referans verilerinin koleksiyonlarını temsil eder."
-        },
-        "VAR-2.E": {
-          "description": "ArrayList nesneleri için: • Bir for veya while döngüsü kullanarak çapraz geçiş. • Geliştirilmiş bir for döngüsü kullanarak çapraz geçiş yapın."
-        },
-        "VAR-2.F": {
-          "description": "İki boyutlu (2D) dizi nesneleri kullanarak ilgili ilkel veya nesne referans verilerinin koleksiyonlarını temsil eder."
-        },
-        "VAR-2.G": {
-          "description": "2B dizi nesneleri için: • Döngüler için iç içe geçmiş kullanarak çapraz geçiş. • Döngüler için iç içe geliştirilmiş kullanarak çapraz geçiş yapın."
         },
         "CON-1.A": {
           "description": "Bir program kodundaki aritmetik ifadeleri değerlendirir"
@@ -538,6 +214,9 @@
         },
         "CON-1.H": {
           "description": "Program kodundaki Boole ifadelerini kullanarak nesne başvurularını karşılaştırın."
+        },
+        "CON-2": {
+          "description": "Programcılar, bilgisayarın olası birçok giriş değerinin her birini işlemesi için talimatlar sağlamanın bir yolu olarak yineleme ve seçimi koda dahil eder"
         },
         "CON-2.A": {
           "description": "Koşullu deyimleri kullanarak dallanma mantıksal süreçlerini temsil eder."
@@ -590,29 +269,173 @@
         "CON-2.Q": {
           "description": "Dizi veya ArrayList nesnelerinin öğelerini sıralamak için özyinelemeli algoritmalar uygulayın."
         },
-        "APR": {
-          "description": "Polinomlarla Aritmetik ve Akılcı İfadeler"
-        },
-        "BF": {
-          "description": "Bina Fonksiyonları"
-        },
-        "CC": {
-          "description": "Sayma ve Kardinalite"
-        },
-        "CED": {
-          "description": "Denklem Oluşturma"
-        },
-        "CN": {
-          "description": "Karmaşık Sayı Sistemi"
-        },
-        "CO": {
-          "description": "Uyuşma"
-        },
         "CP": {
           "description": "Koşullu Olasılık ve Olasılık Kuralları"
         },
+        "CPP": {
+          "description": "Bilişim Pratiği & Programlama"
+        },
+        "CRD-1": {
+          "description": "İşbirliği yoluyla birden fazla perspektif birleştirmek, geliştirilmekte olan bilgi işlem yeniliklerini iyileştirir."
+        },
+        "CRD-1.A": {
+          "description": "Bilgi işlem yeniliklerinin işbirliği yoluyla nasıl geliştirildiğini açıklayın."
+        },
+        "CRD-1.B": {
+          "description": "Bilgi işlem yeniliklerinin insan grupları tarafından nasıl geliştirildiğini açıklayın."
+        },
+        "CRD-1.C": {
+          "description": "İşbirliği sırasında etkili kişilerarası beceriler sergileyin."
+        },
+        "CRD-2": {
+          "description": "Geliştiriciler, kullanıcı odaklı, uygulama/geri bildirim döngülerini içeren ve deney ve risk alma için geniş alan bırakan yinelemeli bir tasarım süreci kullanarak yenilik yapar ve yenilik yapar."
+        },
+        "CRD-2.A": {
+          "description": "Bir bilgi işlem yeniliğinin amacını tanımlayın."
+        },
+        "CRD-2.B": {
+          "description": "Bir programın veya kod segmentinin nasıl çalıştığını açıklayın."
+        },
+        "CRD-2.C": {
+          "description": "Bir programa giriş (ler) i tanımlayın."
+        },
+        "CRD-2.D": {
+          "description": "Bir program tarafından üretilen çıktıları tanımlayın."
+        },
+        "CRD-2.E": {
+          "description": "Bir geliştirme süreci kullanarak bir program geliştirin."
+        },
+        "CRD-2.F": {
+          "description": "Bir program ve kullanıcı arayüzü tasarlayın."
+        },
+        "CRD-2.G": {
+          "description": "Dokümantasyon yazarak bir kod segmentinin veya programın amacını açıklayın."
+        },
+        "CRD-2.H": {
+          "description": "Diğer kaynaklardan kullanılan kod segmentlerini onaylayın."
+        },
+        "CRD-2.I": {
+          "description": "Bir algoritma veya programdaki hatalar için: \na Hatayı tanımlayın. \nb. hatayı düzeltin."
+        },
+        "CRD-2.J": {
+          "description": "Bir algoritma veya programın doğruluğunu kontrol etmek için kullanılabilecek girdileri ve karşılık gelen beklenen çıktıları veya davranışları tanımlayın."
+        },
+        "CS": {
+          "description": "Bilişim Sistemleri"
+        },
+        "CSN-1": {
+          "description": "Bilgisayar sistemleri ve ağlar, verilerin nasıl aktarıldığını kolaylaştırır."
+        },
+        "CSN-1.A": {
+          "description": "Bilgi işlem cihazlarının bir ağda nasıl birlikte çalıştığını açıklayın."
+        },
+        "CSN-1.B": {
+          "description": "İnternetin nasıl çalıştığını açıklayın."
+        },
+        "CSN-1.C": {
+          "description": "Verilerin İnternet üzerinden paketler aracılığıyla nasıl gönderildiğini açıklayın."
+        },
+        "CSN-1.D": {
+          "description": "İnternet ve World Wide Web arasındaki farkları tanımlar."
+        },
+        "CSN-2": {
+          "description": "Paralel ve dağıtılmış bilgi işlem, karmaşık sorunları daha hızlı çözmek veya büyük veri kümelerini işlemek için birden fazla bilgisayardan yararlanır."
+        },
+        "CSN-2.A": {
+          "description": "Sıralı, paralel ve dağıtık hesaplama kullanan problem çözümlerini karşılaştırın."
+        },
+        "CSN-2.B": {
+          "description": "Sıralı ve paralel çözümlerin verimliliğini belirler."
+        },
+        "CSN-2.C": {
+          "description": "Paralel ve dağıtık bilgi işlemin faydalarını ve zorluklarını tanımlayın."
+        },
+        "CT": {
+          "description": "Sayısal Düşünme"
+        },
+        "D1": {
+          "description": "Soru Geliştirme ve Planlama Sorguları"
+        },
+        "D2.Civ": {
+          "description": "YURTDAŞLIK"
+        },
+        "D2.Eco": {
+          "description": "Ekonomi"
+        },
+        "D3.Claims": {
+          "description": "İddia Geliştirme ve Kanıt Kullanma"
+        },
+        "D3.Sources": {
+          "description": "Kaynakların Toplanması ve Değerlendirilmesi"
+        },
+        "D4.Action": {
+          "description": "Bilgilendirilmiş Eylem Alma"
+        },
+        "D4.Conclusions": {
+          "description": "Sonuçların İletişimi ve Eleştirisi"
+        },
+        "DA": {
+          "description": "Veri ve Analiz"
+        },
+        "DAT-1": {
+          "description": "Bilgisayarın verileri temsil etme biçimi, verilerin kullanıcı için yorumlanma ve görüntülenme biçiminden farklıdır. Programlar, verileri insanlar tarafından daha kolay anlaşılabilecek bir temsile dönüştürmek için kullanılır."
+        },
+        "DAT-1.A": {
+          "description": "Bitler kullanılarak verilerin nasıl temsil edilebileceğini açıklayın."
+        },
+        "DAT-1.B": {
+          "description": "Verileri temsil etmek için bit kullanmanın sonuçlarını açıklayın."
+        },
+        "DAT-1.C": {
+          "description": "İkili sayılar için:\na Pozitif tamsayının ikili (baz 2) eşdeğerini (baz 10) hesaplayın ve bunun tersi de geçerlidir. \nb. ikili sayıları karşılaştırın ve sipariş edin."
+        },
+        "DAT-1.D": {
+          "description": "Belirli bir bağlamda hangisinin en iyi olduğunu belirlemek için veri sıkıştırma algoritmalarını karşılaştırın."
+        },
+        "DAT-2": {
+          "description": "Programlar, kullanıcıların bilgileri keşfetmesine ve yeni bilgiler oluşturmasına olanak tanıyan verileri işlemek için kullanılabilir."
+        },
+        "DAT-2.A": {
+          "description": "Verilerden hangi bilgilerin çıkarılabileceğini açıklayın."
+        },
+        "DAT-2.B": {
+          "description": "Meta verilerden hangi bilgilerin çıkarılabileceğini açıklayın."
+        },
+        "DAT-2.C": {
+          "description": "Verilerin işlenmesiyle ilgili zorlukları belirleyin."
+        },
+        "DAT-2.D": {
+          "description": "Bir program kullanarak verilerden bilgi alın."
+        },
+        "DAT-2.E": {
+          "description": "Verilerden bilgi ve bilgi edinmek için programların nasıl kullanılabileceğini açıklayın."
+        },
         "EE": {
           "description": "İfadeler ve Denklemler"
+        },
+        "ESS": {
+          "description": "Yer ve Uzay Bilimleri"
+        },
+        "ESS1": {
+          "description": "Dünya'nın Evrendeki Yeri"
+        },
+        "ESS2": {
+          "description": "Dünya'nın Sistemleri"
+        },
+        "ESS3": {
+          "description": "Dünya ve İnsan Faaliyetleri"
+        },
+        "ETS": {
+          "description": "Bilimde Mühendislik"
+        },
+        "ETS1": {
+          "description": "Mühendislik Tasarımı"
+        },
+        "F": {
+          "description": "Fonksiyonlar"
+        },
+        "G": {
+          "description": "Geometri"
         },
         "GMD": {
           "description": "Geometrik Ölçüm ve Boyut"
@@ -620,23 +443,179 @@
         "GPE": {
           "description": "Geometrik Özelliklerin Denklemlerle İfade"
         },
+        "IC": {
+          "description": "Bilişimin Etkileri"
+        },
         "ID": {
           "description": "Kategorik ve Nicel Verilerin Yorumlanması"
         },
         "IF": {
           "description": "Yorumlama Fonksiyonları"
         },
+        "IOC-1": {
+          "description": "Bilgi işlem yenilikleri tipik olarak belirli bir amaca ulaşmak için tasarlanırken, istenmeyen sonuçları olabilir."
+        },
+        "IOC-1.A": {
+          "description": "Bir bilgi işlem yeniliğinin etkisinin nasıl hem yararlı hem de zararlı olabileceğini açıklayın."
+        },
+        "IOC-1.B": {
+          "description": "Bir bilgi işlem inovasyonunun amaçlanan amacının ötesinde nasıl bir etkisi olabileceğini açıklayın."
+        },
+        "IOC-1.C": {
+          "description": "Dijital bölünmeye katkıda bulunan sorunları açıklayın."
+        },
+        "IOC-1.D": {
+          "description": "Bilgi işlem yeniliklerinde önyargının nasıl olduğunu açıklayın."
+        },
+        "IOC-1.E": {
+          "description": "İnsanların problem çözme süreçlerine nasıl katıldığını geniş ölçekte açıklayın."
+        },
+        "IOC-1.F": {
+          "description": "Bilgi işlem kullanımının yasal ve etik kaygıları nasıl artırabileceğini açıklayın."
+        },
+        "IOC-2": {
+          "description": "Bilgisayar kullanımında yenilikler kişisel güvenlik ve kimliğiniz için riskler içerebilir."
+        },
+        "IOC-2.A": {
+          "description": "Kişisel verilerin bir bilgisayar sisteminde toplanması ve depolanmasından kaynaklanan gizliliğe yönelik riskleri açıklayın."
+        },
+        "IOC-2.B": {
+          "description": "Bilgi işlem kaynaklarının nasıl korunabileceğini ve kötüye kullanılabileceğini açıklayın."
+        },
+        "IOC-2.C": {
+          "description": "Bilgi işlem kaynaklarına yetkisiz erişimin nasıl elde edildiğini açıklayın."
+        },
+        "L": {
+          "description": "Dil"
+        },
         "LE": {
           "description": "Doğrusal, Kuadratik ve Üstel Modeller ★"
+        },
+        "LS": {
+          "description": "Yaşam bilimi"
+        },
+        "LS1": {
+          "description": "Moleküllerden Organizmalara: Yapılar ve Süreçler"
+        },
+        "LS2": {
+          "description": "Ekosistemler: Etkileşimler, Enerji ve Dinamikler"
+        },
+        "LS3": {
+          "description": "Kalıtım: Kalıtım ve Özelliklerin Değişimi"
+        },
+        "LS4": {
+          "description": "Biyolojik Evrim: Birlik ve Çeşitlilik"
+        },
+        "MD": {
+          "description": "Karar Vermek İçin Olasılığı Kullanma"
         },
         "MG": {
           "description": "Geometri ile Modelleme"
         },
+        "MOD-1": {
+          "description": "Bazı nesneler veya kavramlar o kadar sık temsil edilir ki, programcılar daha önce test edilmiş mevcut koddan yararlanarak çözümleri daha hızlı ve daha yüksek bir güvenle yazmalarını sağlar"
+        },
+        "MOD-1.A": {
+          "description": "Konsola çıktı oluşturmak için System sınıfı yöntemlerini çağırın."
+        },
+        "MOD-1.B": {
+          "description": "Sınıf ve nesne arasındaki ilişkiyi açıklayabilir."
+        },
+        "MOD-1.C": {
+          "description": "Belirleyin, imzasını kullanarak, doğru yapıcı çağrılıyor."
+        },
+        "MOD-1.D": {
+          "description": "Nesne oluşturmak için: a. Parametresiz yapıcıları çağırarak nesneler oluşturun. b. Yapıcıları parametrelerle çağırarak nesneler oluşturun."
+        },
+        "MOD-1.E": {
+          "description": "Parametreler olmadan statik olmayan boşluk yöntemlerini arayın."
+        },
+        "MOD-1.F": {
+          "description": "Parametrelerle statik olmayan boşluk yöntemlerini çağırın"
+        },
+        "MOD-1.G": {
+          "description": "Parametreli veya parametresiz statik olmayan boşluksuz yöntemleri çağırın"
+        },
+        "MOD-1.H": {
+          "description": "Statik yöntemleri çağırın."
+        },
+        "MOD-2": {
+          "description": "Programcılar, nesnenin veya kavramın davranışlarına ve/veya davranışlarına dayalı bir sınıf tanımlayarak, gerçek veya hayal edilen fiziksel bir nesneyi veya fiziksel olmayan bir kavramı temsil etmek için kod kullanırlar"
+        },
+        "MOD-2.A": {
+          "description": "Sınıflara, verilere, yapıcılara ve yöntemlere erişim ve görünürlük kısıtlamaları belirleyin."
+        },
+        "MOD-2.B": {
+          "description": "Bir sınıfın yapıcıları aracılığıyla başlatılacak öznitelikler için örnek değişkenleri tanımlayın."
+        },
+        "MOD-2.C": {
+          "description": "Yorumlarda program kodunun işlevselliğini ve kullanımını açıklama."
+        },
+        "MOD-2.D": {
+          "description": "Sınıfta yazılmış prametreler olmadan, bir nesnenin davranışlarını geçersiz yöntemlerle tanımlar."
+        },
+        "MOD-2.E": {
+          "description": "Bir nesnenin davranışlarını, sınıfta yazılmış parametreler olsun veya olmasın void yöntemlerle tanımlayın."
+        },
+        "MOD-2.F": {
+          "description": "Sınıfta yazılmış parametrelerle, bir nesnenin davranışlarını geçersiz yöntemlerle tanımlar."
+        },
+        "MOD-2.G": {
+          "description": "Statik yöntemlerle sınıfın davranışlarını tanımlar."
+        },
+        "MOD-2.H": {
+          "description": "Sınıfa ait statik değişkenleri tanımlayın."
+        },
+        "MOD-3": {
+          "description": "Mulitple sınıfları ortak öznitelikler ve davranışlar içerdiğinde, programcılar paylaşılan öznitelikleri ve hiyerachy oluşturan davranışları içeren yeni bir sınıf oluşturur. Hiyerarşinin en üst düzeyinde yapılan değişiklikler alt sınıflar için geçerlidir."
+        },
+        "MOD-3.A": {
+          "description": "Nesnenin niteliklerini özetlemek için örnek değişkenlerinin özel görünürlüğünü belirleyin."
+        },
+        "MOD-3.B": {
+          "description": "Bir alt sınıftan üst sınıfa miras ilişkisi oluşturun."
+        },
+        "MOD-3.C": {
+          "description": "Aynı hiyerarşideki bir alt sınıfın nesnesine atanacak bir üst sınıfın referans değişkenlerini tanımlayın."
+        },
+        "MOD-3.D": {
+          "description": "Miras ilişkisinde çağrı yöntemleri."
+        },
+        "MOD-3.E": {
+          "description": "Miras yoluyla Object sınıfı yöntemlerini çağırın."
+        },
+        "MP": {
+          "description": "Matematik Pratikleri"
+        },
+        "NBT": {
+          "description": "Onluk Tabanda Sayı Ve İşlemler"
+        },
         "NF": {
           "description": "Sayı ve İşlemler — Kesirler"
         },
+        "NI": {
+          "description": "Ağlar ve İnternet"
+        },
         "NS": {
           "description": "Sayı Sistemi"
+        },
+        "OA": {
+          "description": "İşlemler ve Cebirsel Düşünme"
+        },
+        "PS": {
+          "description": "Fizik Bilimi"
+        },
+        "PS1": {
+          "description": "Madde ve Etkileşimleri"
+        },
+        "PS2": {
+          "description": "Hareket ve Kararlılık: Kuvvetler ve Etkileşimler"
+        },
+        "PS3": {
+          "description": "Enerji"
+        },
+        "PS4": {
+          "description": "Dalgalar ve Bilgi Aktarımı Teknolojilerindeki Uygulamaları"
         },
         "Q": {
           "description": "Miktarlar"
@@ -644,11 +623,29 @@
         "REI": {
           "description": "Denklem ve Eşitsizliklerle Akıl Yürütme"
         },
+        "RF": {
+          "description": "Temel Becerileri Okuma"
+        },
+        "RH": {
+          "description": "Okuma Tarihi/Sosyal Bilgiler"
+        },
+        "RI": {
+          "description": "Bilgilendirici Okuma"
+        },
+        "RL": {
+          "description": "Literatür Okuması"
+        },
         "RN": {
           "description": "Gerçek Sayı Sistemi"
         },
         "RP": {
           "description": "Oranlar ve Orantılı İlişkiler"
+        },
+        "RST": {
+          "description": "Okuma Bilimi/Teknik"
+        },
+        "SL": {
+          "description": "Konuşma & Dinleme"
         },
         "SP": {
           "description": "İstatistik ve Olasılık"
@@ -662,62 +659,65 @@
         "TF": {
           "description": "Trigonometrik Fonksiyonlar"
         },
+        "VAR-1": {
+          "description": "Genelleştirilebilir sorunlara özel çözümler bulmak için, programcılar kodlarına değişkenler içerir, böylece aynı algoritma farklı giriş değerleri kullanarak çalışır"
+        },
+        "VAR-1.A": {
+          "description": "Dize değişmezleri oluşturma"
+        },
+        "VAR-1.B": {
+          "description": "Belirli bir spesifikasyon için en uygun veri türü kategorisini belirleyin"
+        },
+        "VAR-1.C": {
+          "description": "İlkel verileri temsil etmek için doğru türdeki değişkenleri beyan edin"
+        },
+        "VAR-1.D": {
+          "description": "Referans verilerini temsil etmek için doğru türlerin değişkenlerini tanımlayın."
+        },
+        "VAR-1.E": {
+          "description": "String sınıfı için: a. String nesneleri oluşturun. b. Çağrı Dizesi yöntemleri."
+        },
+        "VAR-1.F": {
+          "description": "Sarıcı sınıfları için: a. Tamsayı nesneleri oluşturun. b. Tamsayı yöntemlerini çağırın. c. Çift nesneler oluşturun. d. Çağrı Çifte yöntemler."
+        },
+        "VAR-1.G": {
+          "description": "Değişkenlerin program kodunda nerede kullanılabileceğini açıklayın."
+        },
+        "VAR-1.H": {
+          "description": "Bu anahtar kelimesini kullanan nesne referans ifadelerini değerlendirin."
+        },
+        "VAR-2": {
+          "description": "Verilerdeki büyük miktarda veriyi veya karmaşık ilişkileri yönetmek için, programcılar, verileri her bir değer için ayrı değişkenler oluşturarak tek bir veri yapısında gruplandıran kod yazar."
+        },
+        "VAR-2.A": {
+          "description": "Tek boyutlu (1D) dizi nesneleri kullanarak ilgili ilkel veya nesne referans verilerinin koleksiyonlarını temsil eder."
+        },
+        "VAR-2.B": {
+          "description": "1D dizisindeki öğeleri çapraz çevirin."
+        },
+        "VAR-2.C": {
+          "description": "Geliştirilmiş bir for döngüsü kullanarak 1D dizi nesnesindeki öğeleri çapraz geçiş yapın."
+        },
+        "VAR-2.D": {
+          "description": "ArrayList nesnelerini kullanarak ilgili nesne referans verilerinin koleksiyonlarını temsil eder."
+        },
+        "VAR-2.E": {
+          "description": "ArrayList nesneleri için: • Bir for veya while döngüsü kullanarak çapraz geçiş. • Geliştirilmiş bir for döngüsü kullanarak çapraz geçiş yapın."
+        },
+        "VAR-2.F": {
+          "description": "İki boyutlu (2D) dizi nesneleri kullanarak ilgili ilkel veya nesne referans verilerinin koleksiyonlarını temsil eder."
+        },
+        "VAR-2.G": {
+          "description": "2B dizi nesneleri için: • Döngüler için iç içe geçmiş kullanarak çapraz geçiş. • Döngüler için iç içe geliştirilmiş kullanarak çapraz geçiş yapın."
+        },
         "VM": {
           "description": "Vektör ve Matris Miktarları"
         },
-        "BI-1": {
-          "description": "Bilgisayarlar dünyayı algılayıcıları kullanarak algılar"
+        "W": {
+          "description": "Yazma"
         },
-        "BI-2": {
-          "description": "Temsilciler dünyanın temsillerini sürdürüyor ve bunları akıl yürütme için kullanıyor"
-        },
-        "BI-3": {
-          "description": "Bilgisayarlar verilerden öğrenebilir"
-        },
-        "BI-4": {
-          "description": "Akıllı ajanlar, insanlarla doğal olarak etkileşim kurmak için birçok türde bilgiye ihtiyaç duyar"
-        },
-        "BI-5": {
-          "description": "Yapay zeka toplumu hem olumlu hem de olumsuz yönde etkileyebilir"
-        },
-        "3-A-i": {
-          "description": "Öğrenmenin Doğası - insanlar vs makineler"
-        },
-        "3-A-ii": {
-          "description": "Öğrenmenin Doğası - verilerdeki kalıpları bulma"
-        },
-        "3-A-iii": {
-          "description": "Öğrenmenin Doğası - bir model eğitimi"
-        },
-        "3-A-iv": {
-          "description": "Öğrenme doğası - constructinv vs bir reasoner kullanarak"
-        },
-        "3-A-v": {
-          "description": "Öğrenmenin Doğası - iç temsillerin ayarlanması"
-        },
-        "3-A-vi": {
-          "description": "Öğrenmenin Doğası - deneyimden öğrenme"
-        },
-        "3-B-i": {
-          "description": "Sinir Ağları - sinir ağının yapısı"
-        },
-        "3-B-ii": {
-          "description": "Sinir Ağları - ağırlık ayarı"
-        },
-        "3-C-i": {
-          "description": "Veri kümeleri - özellik kümeleri"
-        },
-        "3-C-ii": {
-          "description": "Veri kümeleri - büyük veri kümeleri"
-        },
-        "3-C-iii": {
-          "description": "Veri kümeleri - önyargı"
-        },
-        "3": {
-          "description": "Öğrenciler bilgi toplamak, değerlendirmek ve kullanmak için dijital araçlar uygular."
-        },
-        "5": {
-          "description": "Öğrenciler teknoloji ile ilgili insan, kültürel ve toplumsal sorunları anlar ve yasal ve etik davranışları uygular."
+        "WHST": {
+          "description": "HS/S/T Yazma"
         }
       }
     }

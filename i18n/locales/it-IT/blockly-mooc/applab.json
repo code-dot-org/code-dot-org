@@ -43,6 +43,7 @@
   "designElementProperty_zOrder": "profondità",
   "designElementTheme_classic": "Classico",
   "designElementTheme_default": "Impostazione predefinita",
+  "designElementTheme_orange": "Arancione",
   "downloadMakerAppFor": "Scarica l'app Code.org Maker per {OS} ({installerVersion})",
   "dropletBlock_appendItem_description": "Aggiunge l'elemento alla fine dell'array.",
   "dropletBlock_appendItem_param0_description": "L'array da modificare.",

@@ -316,7 +316,7 @@ discourse_sso_secret:
 ### Application configuration defaults
 
 # Installs bin/i18n dependencies
-build_i18n: true
+build_i18n: false
 
 i18n_backend:
 cache:
@@ -514,10 +514,8 @@ redshift_password:
 
 devinternal_db_writer: !Secret
 
-# Temporarily set in locals.yml until we determine whether we can create a Secret with this name (replacing a deleted one).
-db_cluster_id:
-
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
+db_cluster_id: !StackSecret
 db_endpoint_writer: !StackSecret
 db_endpoint_proxy_writer: !StackSecret
 db_endpoint_proxy_reader: !StackSecret
@@ -584,3 +582,10 @@ cdo_amplitude_api_key:
 
 # API Key for doublethedonation.com
 ddconf_api_key: !Secret
+
+# EC2 Metadata endpoint
+ec2_instance_id_endpoint: 'http://169.254.169.254/latest/meta-data/instance-id'
+
+# Credentials for OpenAI API
+openai_chat_completion_api_key: !Secret
+openai_chat_completion_org_id: !Secret

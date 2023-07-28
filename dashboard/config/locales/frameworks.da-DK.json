@@ -1,2 +1,10 @@
 {
+  "da-DK": {
+    "data": {
+      "frameworks": {
+        "ngss": {
+        }
+      }
+    }
+  }
 }

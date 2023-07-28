@@ -3,54 +3,15 @@ hu:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Számítástechnikai Alapelvek
-          title: Számítástechnikai Alapelvek ('17-'18)
-          version_title: "'17-'18"
-          description_student: 2016 őszén mutatkozott be a College Board legújabb
-            AP® (előrehozott felsőfokú) tanfolyama, az AP Számítógép-tudomány alapjai.
-            A tanfolyam bevezeti a tanulókat a számítógép-tudomány alapvető fogalmaiba
-            és arra ösztönzi őket, hogy felfedezzék, hogyan változtathat a számítógép
-            és a technológia a világon. Az előrehozott felsőfokú programként tervezett
-            AP Számítógép-tudomány alapjainak célja a számítógép-tudományi területek
-            vezetőinek képzése, és olyan személyek bevonása, akik hagyományosan alacsonyabb
-            számban voltak jelen, szükséges eszközök és interdiszciplináris lehetőségek
-            felkínálásával.
-          description_teacher: 2016 őszén mutatkozott be a College Board legújabb
-            AP® (előrehozott felsőfokú) tanfolyama, az AP Számítógép-tudomány alapjai.
-            A tanfolyam bevezeti a tanulókat a számítógép-tudomány alapvető fogalmaiba
-            és arra ösztönzi őket, hogy felfedezzék, hogyan változtathat a számítógép
-            és a technológia a világon. Az előrehozott felsőfokú programként tervezett
-            AP Számítógép-tudomány alapjainak célja a számítógép-tudományi területek
-            vezetőinek képzése, és olyan személyek bevonása, akik hagyományosan alacsonyabb
-            számban voltak jelen, szükséges eszközök és interdiszciplináris lehetőségek
-            felkínálásával.
-          description_short: Ismerd meg az alapvető számítástechnikai fogalmakat!
-        csd-2017:
-          assignment_family_title: Számítástechnikai Felfedezések
-          title: Számítástechnikai Felfedezések ('17-'18)
-          version_title: "'17-'18"
-          description_student: A Számítástechnikai Felfedezések (SZT Felfedezések)
-            egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
-            hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
-            a kommunikáció, a problémamegoldás és szórakozás során.
-          description_teacher: A Számítástechnikai Felfedezések (SZT Felfedezések)
-            egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
-            hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
-            a kommunikáció, a problémamegoldás és szórakozás során.
-          description_short: Bevezető számítástechnikai tanfolyam, amely lehetővé
-            teszi, hogy a tanulók eredeti tartalmakat hozzanak létre.
         allthethingscourse:
-          title: minden-dolog tanfolyam
           description_short: Ez a minden-dolog tanfolyama
           description_student: Ez a minden-dolog tanfolyam; a tanulók számára hosszabb
             leírás tartozik hozzá
           description_teacher: Ez a minden-dolog tanfolyam; a tanárok számára hosszabb
             leírás tartozik hozzá
-        csd-2018:
+          title: minden-dolog tanfolyam
+        csd-2017:
           assignment_family_title: Számítástechnikai Felfedezések
-          title: Számítástechnikai Felfedezések ('18-'19)
-          version_title: "'18-'19"
           description_short: Bevezető számítástechnikai tanfolyam, amely lehetővé
             teszi, hogy a tanulók eredeti tartalmakat hozzanak létre.
           description_student: A Számítástechnikai Felfedezések (SZT Felfedezések)
@@ -61,10 +22,53 @@ hu:
             egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
             hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
             a kommunikáció, a problémamegoldás és szórakozás során.
-        csp-2018:
-          assignment_family_title: Számítástechnikai Alapelvek
-          title: Számítástechnikai Alapelvek ('18-'19)
+          title: Számítástechnikai Felfedezések ('17-'18)
+          version_title: "'17-'18"
+        csd-2018:
+          assignment_family_title: Számítástechnikai Felfedezések
+          description_short: Bevezető számítástechnikai tanfolyam, amely lehetővé
+            teszi, hogy a tanulók eredeti tartalmakat hozzanak létre.
+          description_student: A Számítástechnikai Felfedezések (SZT Felfedezések)
+            egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
+            hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
+            a kommunikáció, a problémamegoldás és szórakozás során.
+          description_teacher: A Számítástechnikai Felfedezések (SZT Felfedezések)
+            egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
+            hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
+            a kommunikáció, a problémamegoldás és szórakozás során.
+          title: Számítástechnikai Felfedezések ('18-'19)
           version_title: "'18-'19"
+        csd-2019:
+          description_short: Bevezető számítástechnikai tanfolyam, amely lehetővé
+            teszi, hogy a tanulók eredeti tartalmakat hozzanak létre.
+          description_student: A Számítástechnikai Felfedezések (SZT Felfedezések)
+            egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
+            hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
+            a kommunikáció, a problémamegoldás és szórakozás során.
+          description_teacher: A Számítástechnikai Felfedezések (SZT Felfedezések)
+            egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
+            hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
+            a kommunikáció, a problémamegoldás és szórakozás során.
+        csd-2020:
+          description_short: Bevezető számítástechnikai tanfolyam, amely lehetővé
+            teszi, hogy a tanulók eredeti tartalmakat hozzanak létre.
+          description_student: A Számítástechnikai Felfedezések (SZT Felfedezések)
+            egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
+            hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
+            a kommunikáció, a problémamegoldás és szórakozás során.
+          description_teacher: A Számítástechnikai Felfedezések (SZT Felfedezések)
+            egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
+            hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
+            a kommunikáció, a problémamegoldás és szórakozás során.
+        csd-2023:
+          title: Számítástechnikai Felfedezések
+        csd-pilot:
+          description_student: A Számítástechnikai Felfedezések (SZT Felfedezések)
+            egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
+            hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
+            a kommunikáció, a problémamegoldás és szórakozás során.
+        csp-2017:
+          assignment_family_title: Számítástechnikai Alapelvek
           description_short: Ismerd meg az alapvető számítástechnikai fogalmakat!
           description_student: 2016 őszén mutatkozott be a College Board legújabb
             AP® (előrehozott felsőfokú) tanfolyama, az AP Számítógép-tudomány alapjai.
@@ -84,6 +88,31 @@ hu:
             vezetőinek képzése, és olyan személyek bevonása, akik hagyományosan alacsonyabb
             számban voltak jelen, szükséges eszközök és interdiszciplináris lehetőségek
             felkínálásával.
+          title: Számítástechnikai Alapelvek ('17-'18)
+          version_title: "'17-'18"
+        csp-2018:
+          assignment_family_title: Számítástechnikai Alapelvek
+          description_short: Ismerd meg az alapvető számítástechnikai fogalmakat!
+          description_student: 2016 őszén mutatkozott be a College Board legújabb
+            AP® (előrehozott felsőfokú) tanfolyama, az AP Számítógép-tudomány alapjai.
+            A tanfolyam bevezeti a tanulókat a számítógép-tudomány alapvető fogalmaiba
+            és arra ösztönzi őket, hogy felfedezzék, hogyan változtathat a számítógép
+            és a technológia a világon. Az előrehozott felsőfokú programként tervezett
+            AP Számítógép-tudomány alapjainak célja a számítógép-tudományi területek
+            vezetőinek képzése, és olyan személyek bevonása, akik hagyományosan alacsonyabb
+            számban voltak jelen, szükséges eszközök és interdiszciplináris lehetőségek
+            felkínálásával.
+          description_teacher: 2016 őszén mutatkozott be a College Board legújabb
+            AP® (előrehozott felsőfokú) tanfolyama, az AP Számítógép-tudomány alapjai.
+            A tanfolyam bevezeti a tanulókat a számítógép-tudomány alapvető fogalmaiba
+            és arra ösztönzi őket, hogy felfedezzék, hogyan változtathat a számítógép
+            és a technológia a világon. Az előrehozott felsőfokú programként tervezett
+            AP Számítógép-tudomány alapjainak célja a számítógép-tudományi területek
+            vezetőinek képzése, és olyan személyek bevonása, akik hagyományosan alacsonyabb
+            számban voltak jelen, szükséges eszközök és interdiszciplináris lehetőségek
+            felkínálásával.
+          title: Számítástechnikai Alapelvek ('18-'19)
+          version_title: "'18-'19"
         csp-2019:
           description_short: Ismerd meg az alapvető számítástechnikai fogalmakat!
           description_student: 2016 őszén mutatkozott be a College Board legújabb
@@ -104,59 +133,30 @@ hu:
             vezetőinek képzése, és olyan személyek bevonása, akik hagyományosan alacsonyabb
             számban voltak jelen, szükséges eszközök és interdiszciplináris lehetőségek
             felkínálásával.
-        csd-2019:
-          description_short: Bevezető számítástechnikai tanfolyam, amely lehetővé
-            teszi, hogy a tanulók eredeti tartalmakat hozzanak létre.
-          description_student: A Számítástechnikai Felfedezések (SZT Felfedezések)
-            egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
-            hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
-            a kommunikáció, a problémamegoldás és szórakozás során.
-          description_teacher: A Számítástechnikai Felfedezések (SZT Felfedezések)
-            egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
-            hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
-            a kommunikáció, a problémamegoldás és szórakozás során.
-        csd-pilot:
-          description_student: A Számítástechnikai Felfedezések (SZT Felfedezések)
-            egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
-            hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
-            a kommunikáció, a problémamegoldás és szórakozás során.
         csp-2020:
           description_short: Ismerd meg az alapvető számítástechnikai fogalmakat!
-        csd-2020:
-          description_short: Bevezető számítástechnikai tanfolyam, amely lehetővé
-            teszi, hogy a tanulók eredeti tartalmakat hozzanak létre.
-          description_student: A Számítástechnikai Felfedezések (SZT Felfedezések)
-            egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
-            hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
-            a kommunikáció, a problémamegoldás és szórakozás során.
-          description_teacher: A Számítástechnikai Felfedezések (SZT Felfedezések)
-            egy bevezető tanfolyam, amely lehetővé teszi, hogy a tanulók eredeti tartalmakat
-            hozzanak létre, és hogy a számítástechnika eszközeit használják az alkotás,
-            a kommunikáció, a problémamegoldás és szórakozás során.
         csp-2021:
           description_short: Ismerd meg az alapvető számítástechnikai fogalmakat!
-        mike-test:
-          title: A számítógép-tudomány alapjai
         csp-2022:
           description_short: Ismerd meg az alapvető számítástechnikai fogalmakat!
         csp-2023:
           description_short: Ismerd meg az alapvető számítástechnikai fogalmakat!
-        csd-2023:
-          title: Számítástechnikai Felfedezések
+        mike-test:
+          title: A számítógép-tudomány alapjai
     resources:
-      curriculum/csd/2020:
-        name: Tanterv
-      teacher_forum/csd/2020:
-        name: Tanári fórum
       curriculum/csd/2017:
         name: Tanterv
-      teacher_forum_6/csd/2017:
-        name: Tanári fórum
+      curriculum/csd/2018:
+        name: Tanterv
       curriculum/csd/2019:
+        name: Tanterv
+      curriculum/csd/2020:
         name: Tanterv
       teacher_forum/csd/2019:
         name: Tanári fórum
-      curriculum/csd/2018:
-        name: Tanterv
+      teacher_forum/csd/2020:
+        name: Tanári fórum
+      teacher_forum_6/csd/2017:
+        name: Tanári fórum
       teacher_forum_6/csd/2018:
         name: Tanári fórum

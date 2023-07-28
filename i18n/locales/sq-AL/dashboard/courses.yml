@@ -8,11 +8,13 @@ sq:
         csp-2018:
           assignment_family_title: Ap® Parimet e Shkencave Kompjuterike
     resources:
-      curriculum/csd/2020:
-        name: Plani mësimor
       curriculum/csd/2017:
-        name: Plani mësimor
-      curriculum/csd/2019:
         name: Plani mësimor
       curriculum/csd/2018:
         name: Plani mësimor
+      curriculum/csd/2019:
+        name: Plani mësimor
+      curriculum/csd/2020:
+        name: Plani mësimor
+      csd_implementation_guide/csd/2022:
+        url: https://docs.google.com/document/d/1vLGKcHC46jE6zZozBTmExOKdKwl544s0tbCds1LSg1Q/preview

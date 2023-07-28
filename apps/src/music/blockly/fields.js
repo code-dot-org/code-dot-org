@@ -1,6 +1,6 @@
 // Common field definitions used across multiple music blocks
 
-import {DEFAULT_PATTERN, DEFAULT_CHORD} from '../constants';
+import {DEFAULT_PATTERN, DEFAULT_CHORD, Triggers} from '../constants';
 import Globals from '../globals';
 import musicI18n from '../locale';
 import {
@@ -11,6 +11,7 @@ import {
   FIELD_PATTERN_TYPE,
   FIELD_CHORD_TYPE,
   FIELD_CHORD_NAME,
+  TRIGGER_FIELD,
 } from './constants';
 
 export const fieldSoundsDefinition = {
@@ -66,4 +67,10 @@ export const fieldRestDurationDefinition = {
     [musicI18n.blockly_fieldRestOneMeasure(), '1'],
     [musicI18n.blockly_fieldRestMeasures({num: 2}), '2'],
   ],
+};
+
+export const fieldTriggerDefinition = {
+  type: 'field_dropdown',
+  name: TRIGGER_FIELD,
+  options: Triggers.map(trigger => [trigger.dropdownLabel, trigger.id]),
 };

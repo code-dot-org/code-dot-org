@@ -2,44 +2,6 @@
   "ka-GE": {
     "data": {
       "placeholder_texts": {
-        "CourseE_hoops": {
-          "498cd895eb5a102c5aeb977e2b928dee": "მადლობა!"
-        },
-        "courseE_Dogger_2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "თქვენ მოიგეთ!"
-        },
-        "courseE_aboutme_3": {
-          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
-        },
-        "courseE_aboutme_3_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
-        },
-        "courseE_aboutme_4": {
-          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
-        },
-        "courseE_aboutme_4_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
-        },
-        "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
-        },
-        "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
-        },
-        "courseF_playlab_variables2b": {
-          "48d6215903dff56238e52e8891380c8f": "ლურჯი",
-          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
-          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
-        },
-        "courseF_playlab_variables5c": {
-          "bda9643ac6601722a28f238714274da4": "წითელი",
-          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
-          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
-        },
-        "courseF_project_1": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "თქვენ მოიგეთ!",
-          "498cd895eb5a102c5aeb977e2b928dee": "მადლობა!"
-        },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
@@ -56,9 +18,12 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "მადლობა!"
+        },
         "Find the Wizard": {
-          "0b895ef4c917e50663bc2a7327cbee3d": "მიპოვე!",
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "0b895ef4c917e50663bc2a7327cbee3d": "მიპოვე!",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
         "FoodFight": {
@@ -70,6 +35,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
         "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
+        },
+        "New Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
@@ -97,7 +66,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
+        "courseC19_playLab_EOC12022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
+        },
         "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
+        },
+        "courseC19_playLab_EOC1_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
@@ -105,7 +82,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
+        "courseC19_playLab_EOC22022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
+        },
         "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
+        },
+        "courseC19_playLab_EOC2_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
@@ -113,7 +98,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
+        "courseC19_playLab_EOC32022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
+        },
         "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
+        },
+        "courseC19_playLab_EOC3_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
@@ -121,11 +114,23 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
+        "courseC19_playLab_EOC42022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
+        },
         "courseC19_playLab_EOC4_2020": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
+        },
         "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
+        },
+        "courseC_PlayLab_eventsFP2022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
@@ -141,9 +146,52 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
+        },
         "courseD_playLab_condFP": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "თქვენ მოიგეთ!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
+        },
+        "courseE_aboutme_32022": {
+          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
+        },
+        "courseE_aboutme_42022": {
+          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
+        },
+        "courseE_aboutme_52022": {
+          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
         },
         "courseE_playLab_scaffold1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
@@ -161,9 +209,35 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
+        "courseF_apps_aquarium": {
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "სხვა",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "არსება"
+        },
+        "courseF_apps_aquarium2022": {
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "სხვა",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "არსება"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "სხვა",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "არსება"
+        },
+        "courseF_apps_collector": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "თქვენ მოიგეთ!"
+        },
+        "courseF_apps_collector2022": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "თქვენ მოიგეთ!"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "თქვენ მოიგეთ!"
+        },
         "courseF_playlab_variables1a": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
+        },
+        "courseF_playlab_variables2b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ",
+          "48d6215903dff56238e52e8891380c8f": "ლურჯი"
         },
         "courseF_playlab_variables3b_josh": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
@@ -176,6 +250,11 @@
         "courseF_playlab_variables4c_predictive1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
+        },
+        "courseF_playlab_variables5c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ",
+          "bda9643ac6601722a28f238714274da4": "წითელი"
         },
         "courseF_playlab_variables6c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
@@ -197,91 +276,8 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
           "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         },
-        "iceage_free_play": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
-          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
-        },
-        "courseC19_playLab_EOC1_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
-          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
-        },
-        "courseC19_playLab_EOC2_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
-          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
-          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
-        },
-        "courseC19_playLab_EOC4_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
-          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
-        },
-        "courseC_PlayLab_eventsFP_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
-          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
-        },
-        "courseE_aboutme_3_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
-        },
-        "courseE_aboutme_4_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
-        },
-        "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
-        },
-        "courseF_apps_aquarium": {
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "სხვა",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "არსება"
-        },
-        "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "თქვენ მოიგეთ!"
-        },
-        "New Play Lab Project": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
-          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
-        },
-        "courseC19_playLab_EOC12022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
-          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
-        },
-        "courseC19_playLab_EOC22022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
-          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
-        },
-        "courseC19_playLab_EOC32022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
-          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
-        },
-        "courseC19_playLab_EOC42022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
-          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
-        },
-        "courseC_PlayLab_eventsFP2022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
-          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
-        },
-        "courseE_aboutme_32022": {
-          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
-        },
-        "courseE_aboutme_42022": {
-          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
-        },
-        "courseE_aboutme_52022": {
-          "ed076287532e86365e841e92bfc50d8c": "ჰეი, სამყარო!"
-        },
-        "courseF_apps_aquarium2022": {
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "სხვა",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "არსება"
-        },
-        "courseF_apps_aquarium_-2022-2": {
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "სხვა",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "არსება"
-        },
-        "courseF_apps_collector2022": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "თქვენ მოიგეთ!"
-        },
-        "courseF_apps_collector_-2022-2": {
+        "courseF_project_1": {
+          "498cd895eb5a102c5aeb977e2b928dee": "მადლობა!",
           "e8a10c04d72b2f135dabe360c4bdd534": "თქვენ მოიგეთ!"
         },
         "coursee_helloworld_freeplay": {
@@ -298,6 +294,10 @@
         },
         "helloworld_retro_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "გამარჯობა, სამყარო!"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "ტექსტი შეიყვანეთ აქ",
+          "30fcc1693fa8402931d13ac3a5f396fd": "დასახელება შეიყვანეთ აქ"
         }
       }
     }
