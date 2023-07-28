@@ -26,7 +26,10 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import ImageInput from './ImageInput';
 import Select from 'react-select';
+import ReactDatePicker from 'react-datepicker';
+import moment from 'moment';
 import 'react-select/dist/react-select.css';
+import 'react-datepicker/dist/react-datepicker.css';
 const translatedNoneOption = `(${i18n.none()})`;
 
 const useCourseOffering = initialCourseOffering => {
@@ -160,6 +163,10 @@ export default function CourseOfferingEditor(props) {
     return candidate.name === 'None'
       ? true
       : candidate.name.toLowerCase().includes(input.toLowerCase());
+  };
+
+  const handleDateChange = date => {
+    updateCourseOffering('published_date', date);
   };
 
   return (
@@ -466,6 +473,15 @@ export default function CourseOfferingEditor(props) {
           ))}
         </select>
       </label>
+      <label>
+        <div style={styles.datePickerContainer}>
+          <ReactDatePicker
+            selected={moment(courseOffering.published_date)}
+            onChange={handleDateChange}
+            style={styles.datePicker}
+          />
+        </div>
+      </label>
       <SaveBar
         handleSave={handleSave}
         error={error}
@@ -496,6 +512,7 @@ CourseOfferingEditor.propTypes = {
     professional_learning_program: PropTypes.string,
     self_paced_pl_course_offering_id: PropTypes.number,
     video: PropTypes.string,
+    published_date: PropTypes.string,
   }),
   selfPacedPLCourseOfferings: PropTypes.arrayOf(
     PropTypes.shape({
@@ -518,6 +535,12 @@ CourseOfferingEditor.propTypes = {
 const styles = {
   checkbox: {
     margin: '0 0 0 7px',
+  },
+  datePicker: {
+    position: 'absolute',
+  },
+  datePickerContainer: {
+    position: 'relative',
   },
   descriptionInput: {
     width: '75%',
