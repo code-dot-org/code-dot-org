@@ -289,7 +289,7 @@ const customInputTypes = {
         }
       }
       block.thumbnailSize = 32;
-      const imageUrl = Blockly.getShadowedBlockImageUrl(block, false);
+      const imageUrl = Blockly.getShadowedBlockImageUrl(block);
       const width = imageUrl.length > 0 ? block.thumbnailSize : 1;
       const firstField =
         imageUrl.length > 0 ? block.shortString : block.longString;

@@ -146,7 +146,7 @@ export const blocks = {
       this.loadExtraState = function (state) {
         this.parentBlockId = state['parentBlockId'];
         if (this.parentBlockId) {
-          updateShadowedBlockImage(this, true, this.parentBlockId);
+          updateShadowedBlockImage(this, this.parentBlockId);
         }
       };
 
@@ -186,8 +186,7 @@ export const blocks = {
             event.type === Blockly.Events.BLOCK_CHANGE ||
             event.type === Blockly.Events.BLOCK_DRAG)
         ) {
-          const checkWorkspaceId = event.type !== Blockly.Events.BLOCK_CREATE;
-          updateShadowedBlockImage(this, checkWorkspaceId);
+          updateShadowedBlockImage(this);
         }
       };
     }

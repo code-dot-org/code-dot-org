@@ -130,10 +130,6 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
       );
   }
 
-  getSourceBlockId() {
-    return this.sourceBlock_.id;
-  }
-
   /**
    * Create and set the path for the visible boundaries of the flyout.
    *
