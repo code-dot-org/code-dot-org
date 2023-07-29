@@ -84,7 +84,7 @@
 
     if node.chef_environment == 'test' && node.name == 'test' # 'real' test only
       # This should be run shortly after the commit_content job run on levelbuilder.
-      cronjob at:'*/2 * * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_test')
+      cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'deploy_to_test')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'snapshot')
     end
 
