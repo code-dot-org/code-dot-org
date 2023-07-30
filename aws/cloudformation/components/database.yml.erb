@@ -16,6 +16,9 @@
       # Use a placeholder string for production db cluster endpoint to avoid placing a slightly sensitive value
       # in source code. We set the value of the Secret manually in production.
       hash[:db_endpoint_writer] = 'PLACEHOLDER'
+      # We haven't yet provisioned the Writer and Reader Proxy Endpoints in production.
+      hash[:db_endpoint_proxy_writer] = 'PLACEHOLDER'
+      hash[:db_endpoint_proxy_reader] = 'PLACEHOLDER'
     end
     if !database
       hash[:db_cluster_id] = MYSQL_DAEMON_HOSTNAME
