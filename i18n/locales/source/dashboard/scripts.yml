@@ -9054,6 +9054,8 @@ en:
               display_name: 'Chapter 2: Computers and Problem Solving'
             lessonGroup-4:
               display_name: Alternative Lessons
+            lessonGroup-5:
+              display_name: Survey
           name: csd1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10319,6 +10321,8 @@ en:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: Alternative Lessons
+            lessonGroup-4:
+              display_name: Survey
           name: focus-on-creativity1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10358,7 +10362,7 @@ en:
           title: Coding a Geometric Star Quilt (2023)
           description_audience: ''
           description_short: ''
-          description: "## Suggested Pre-Work for this Module\n\n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song][0] (2:47 minutes) and [Angles & Lines][1] (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n\n-   [A Trapezoid is Not a Dinosaur][2] by Suzanne Morris \n-   [The Greedy Triangle][3] by Marilyn Burns\n-   Any of these [Geometry Read Alouds][4]\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson][5] (50 minutes) for a basic introduction to the tool. "
+          description: "## Suggested Pre-Work for this Module\n\n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song][0] (2:47 minutes) and [Angles & Lines][1] (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n\n-   [Shota and the Star Quilt][2] Picture book about the tradition of quilting and how traditions can change over time\n-   [Rainbow Weavers][3] This picture book is about weaving, not quilting, but it could deepen students' understanding of how indigenous traditions evolve.\n-   [A Trapezoid is Not a Dinosaur][4] by Suzanne Morris \n-   [The Greedy Triangle][5] by Marilyn Burns\n-   Any of these [Geometry Read Alouds][6]\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson][7] (50 minutes) for a basic introduction to the tool. "
           student_description: ''
         focus-on-creativity4-2023:
           lessons: {}
@@ -10387,6 +10391,8 @@ en:
               display_name: 'Chapter 2: Computers and Problem Solving'
             lessonGroup-4:
               display_name: Alternative Lessons
+            lessonGroup-5:
+              display_name: Survey
           name: focus-on-hardware1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10434,6 +10440,8 @@ en:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: Alternative Lessons
+            lessonGroup-4:
+              display_name: Survey
           name: focus-on-data1-2023
           title: Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10501,6 +10509,8 @@ en:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: Alternative Lessons
+            lessonGroup-4:
+              display_name: Survey
           name: focus-on-design-with-purpose1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10573,6 +10583,8 @@ en:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: Alternative Lessons
+            lessonGroup-4:
+              display_name: Survey
           name: focus-on-coding1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
