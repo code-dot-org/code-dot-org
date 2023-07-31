@@ -15,7 +15,7 @@ const AichatView: React.FunctionComponent = () => {
           <Instructions />
         </PanelContainer>
       </div> */}
-      <div id="chat-workspace-area" className={moduleStyles.chatArea}>
+      <div id="chat-workspace-area">
         <PanelContainer id="chat-workspace-panel" headerText="AI Chat">
           <ChatWorkspace />
         </PanelContainer>
