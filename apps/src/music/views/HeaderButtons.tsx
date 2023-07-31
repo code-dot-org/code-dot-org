@@ -10,17 +10,16 @@ import {AnalyticsContext} from '../context';
 import {MusicState} from '../redux/musicRedux';
 import moduleStyles from './undo-redo-buttons.module.scss';
 
-interface UndoRedoButtonsProps {
+interface HeaderButtonsProps {
   onClickUndo: () => void;
   onClickRedo: () => void;
   clearCode: () => void;
 }
 
 /**
- * A set of undo and redo buttons for Music Lab. Can be disabled based on
- * the undo status in the music redux store.
+ * A set of control buttons for the workspace header in Music Lab.
  */
-const UndoRedoButtons: React.FunctionComponent<UndoRedoButtonsProps> = ({
+const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   onClickUndo,
   onClickRedo,
   clearCode,
@@ -108,4 +107,4 @@ const UndoRedoButtons: React.FunctionComponent<UndoRedoButtonsProps> = ({
   );
 };
 
-export default UndoRedoButtons;
+export default HeaderButtons;

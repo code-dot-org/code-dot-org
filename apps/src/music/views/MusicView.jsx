@@ -68,7 +68,7 @@ import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {isEqual} from 'lodash';
-import UndoRedoButtons from './UndoRedoButtons';
+import HeaderButtons from './HeaderButtons';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -702,7 +702,7 @@ class UnconnectedMusicView extends React.Component {
                 headerText={musicI18n.panelHeaderWorkspace()}
                 hideHeaders={this.props.hideHeaders}
                 rightHeaderContent={
-                  <UndoRedoButtons
+                  <HeaderButtons
                     onClickUndo={this.undo}
                     onClickRedo={this.redo}
                     clearCode={this.clearCode}
