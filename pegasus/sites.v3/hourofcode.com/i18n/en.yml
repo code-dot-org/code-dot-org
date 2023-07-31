@@ -510,7 +510,8 @@
   ai_resources_btn_aria_label_03: "Explore the AI for Teachers website"
 
   ai_pl_101_hero_heading: "AI 101 for Teachers"
-  ai_pl_101_hero_desc: "Discover the transformative potential of artificial intelligence (AI) in education with our free online learning series for educators."
+  ai_pl_101_hero_desc: "Discover the groundbreaking world of artificial intelligence (AI) and its transformative potential in education with our foundational online learning series for teachers."
+  ai_pl_101_hero_desc_02: "A comprehensive online learning series for teachers."
   ai_pl_101_hero_presented: "Presented by"
   ai_pl_101_intro_heading: "What is AI 101 for Teachers?"
   ai_pl_101_intro_text: "AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education. Partners Code.org, ETS, ISTE, Khan Academy are offering engaging sessions with renowned experts that will demystify AI, explore responsible implementation, address bias, and showcase how AI-powered learning can revolutionize student outcomes. Join us on this journey of exploration and empowerment, and unlock the future of teaching with and about AI."
@@ -1014,6 +1015,7 @@
   not_found_desc: 'The requested page was not found'
   not_found_instructions: 'Check the web address and resubmit or choose a link from the list below.'
 
+  company_code_dot_org: "Code.org"
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -1067,6 +1069,7 @@
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
+  company_ets: ETS
   company_everettsd: Everette Public Schools
   company_fsusd: Fairfield-Suisun Unified School District
   company_fayettecountypublicschools: Fayette County Public Schools
@@ -1088,6 +1091,7 @@
   company_houstonisd: Houston Independent School District
   company_hcpss: Howard County Public Schools
   company_idla: Idaho Digital Learning Academy
+  company_iste: ISTE
   company_janesvilleschooldistrict: Janesville School District
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School

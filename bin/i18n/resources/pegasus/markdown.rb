@@ -1,7 +1,6 @@
 require 'fileutils'
 require 'json'
 
-require_relative '../../../../pegasus/router'
 require_relative '../../i18n_script_utils'
 
 module I18n

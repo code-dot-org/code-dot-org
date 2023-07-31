@@ -111,7 +111,7 @@ class UnconnectedMusicView extends React.Component {
     addPlaybackEvents: PropTypes.func,
     addOrderedFunctions: PropTypes.func,
     currentlyPlayingBlockIds: PropTypes.array,
-    isHeadersShowing: PropTypes.bool,
+    hideHeaders: PropTypes.bool,
     sendSuccessReport: PropTypes.func,
     currentScriptId: PropTypes.number,
     setProjectUpdatedSaving: PropTypes.func,
@@ -603,7 +603,7 @@ class UnconnectedMusicView extends React.Component {
         <PanelContainer
           id="instructions-panel"
           headerText={musicI18n.panelHeaderInstructions()}
-          isHeadersShowing={this.props.isHeadersShowing}
+          hideHeaders={this.props.hideHeaders}
         >
           <Instructions
             progressionStep={this.props.levelData}
@@ -632,7 +632,7 @@ class UnconnectedMusicView extends React.Component {
           <PanelContainer
             id="controls-panel"
             headerText={musicI18n.panelHeaderControls()}
-            isHeadersShowing={this.props.isHeadersShowing}
+            hideHeaders={this.props.hideHeaders}
           >
             <Controls
               setPlaying={this.setPlaying}
@@ -652,7 +652,7 @@ class UnconnectedMusicView extends React.Component {
             id="timeline-panel"
             width="calc(100% - 220px)"
             headerText={musicI18n.panelHeaderTimeline()}
-            isHeadersShowing={this.props.isHeadersShowing}
+            hideHeaders={this.props.hideHeaders}
           >
             <Timeline />
           </PanelContainer>
@@ -700,7 +700,7 @@ class UnconnectedMusicView extends React.Component {
               <PanelContainer
                 id="workspace-panel"
                 headerText={musicI18n.panelHeaderWorkspace()}
-                isHeadersShowing={this.props.isHeadersShowing}
+                hideHeaders={this.props.hideHeaders}
                 rightHeaderContent={
                   <UndoRedoButtons
                     onClickUndo={this.undo}
@@ -748,7 +748,7 @@ const MusicView = connect(
     timelineAtTop: state.music.timelineAtTop,
     showInstructions: state.music.showInstructions,
     instructionsPosition: state.music.instructionsPosition,
-    isHeadersShowing: state.music.isHeadersShowing,
+    hideHeaders: state.music.hideHeaders,
     currentScriptId: state.progress.scriptId,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
     initialSources: state.lab.initialSources,
