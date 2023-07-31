@@ -1,6 +1,7 @@
 // Helper functions for block shadowing logic. We use block shadowing for
 // our "mini toolbox" blocks, which are blocks that contain their own toolbox.
-// The blocks inside the toolbox need to shadow the image selected in the parent
+// The blocks in the toolbox (or the blocks pulled from the toolbox)
+// need to shadow the image selected in the parent
 // block.
 
 // This object maps the block types that shadow parents to the parent block type they can shadow.

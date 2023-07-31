@@ -289,6 +289,10 @@ const customInputTypes = {
         }
       }
       block.thumbnailSize = 32;
+      // Try to get the image url for this block. If we find one,
+      // initialize the field with the image and short string.
+      // Otherwise, initialize the field with the long string and a 1 pixel
+      // wide empty image.
       const imageUrl = Blockly.getShadowedBlockImageUrl(block);
       const width = imageUrl.length > 0 ? block.thumbnailSize : 1;
       const firstField =

@@ -330,6 +330,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
   blocklyWrapper.customBlocks = customBlocks;
 
+  // Shadow block behavior is handled in the cdo blockly repo,
+  // so we can safely return an empty string here.
   blocklyWrapper.getShadowedBlockImageUrl = () => {
     return '';
   };
