@@ -1461,6 +1461,7 @@
   header_stats: "Статистикууд"
   header_help_us: "Бидэнд туслах"
   header_about: "Тухай"
+  header_incubator: "Инкубаторын"
   header_teacher_community: "Багш нар"
   header_help_support: 'Тусламж, дэмжлэг '
   header_report_bug: "Асуудал мэдээлэх"
@@ -1566,7 +1567,7 @@
   hoc2018_mc_download_adventurer: "Minecraft Adventurer-ийн офлайн хувилбарыг татаж аваарай."
   hoc2018_mc_educators: "Багш нарт зориулсан"
   hoc2018_mc_educators_box1_title: "Minecraft-тай хамт кодлох"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Боловсролын хувилбар нь Minecraft дахь стандартад нийцсэн сургалтын хөтөлбөр, сургалт, кодчилолоор хангадаг.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Боловсролын хувилбар нь Minecraft дахь стандартад нийцсэн сургалтын хөтөлбөр, сургалт, кодчилолоор хангадаг."
   hoc2018_mc_educators_box1_button: "Эхлүүлэх"
   hoc2018_mc_educators_box2_title: "Сургагчийн зааврыг татаж авах"
   hoc2018_mc_educators_box2_desc: "Энэхүү хэрэгсэл нь Кодын Цагийг зохион байгуулах, сурагчдыг компьютерийн шинжлэх ухаанд хамруулахад туслах болно."
@@ -1666,7 +1667,7 @@
   hoc2018_mc_with_microsoft: "-тай түншлэн"
   hoc2018_mc_thank_microsoft: "Хүүхэд бүр компьютерийн шинжлэх ухаан, 21-р зуунд амжилтанд хүрэх ур чадварыг олж авах боломжийг хангах зорилгоор бидний алсын хараа, эрхэм зорилгыг дэмжсэн Microsoft-д талархаж байна."
   hoc2019_mc_mee_title: "Сайн сайхны төлөө Minecraft AI"
-  hoc2019_mc_mee_description1: 'Minecraft-ийн шинэ Кодын Цагийн хичээл одоо Minecraft дээр бэлэн байна: Windows, Mac, iPad-д зориулсан боловсролын хувилбар дээр ашиглах боломжтой боллоо. Кодлох үндсийг сурч, AI-ийг сурагчидтайгаа судлаарай!'
+  hoc2019_mc_mee_description1: "Minecraft-ийн шинэ Кодын Цагийн хичээл одоо Minecraft дээр бэлэн байна: Windows, Mac, iPad-д зориулсан боловсролын хувилбар дээр ашиглах боломжтой боллоо. Кодлох үндсийг сурч, AI-ийг сурагчидтайгаа судлаарай!"
   hoc2019_mc_mee_description2: "Хичээлийн төлөвлөгөө, видео бичлэг, компьютерийн шинжлэх ухааны сургалтын хөтөлбөр, багшийн сургалт зэргийг багтаасан үнэгүй нөөцөд хандаарай."
   hoc2019_mc_more_coding_resources: "Илүү кодлох эх үүсвэрүүд"
   hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?  \nӨмнөх жилийн [1-р хэсэг](%{dance_2018_link})-г эхлүүлэхийн тулд дарж [2-р хэсэг](%{dance_extras_2018_link})-г дараарай."

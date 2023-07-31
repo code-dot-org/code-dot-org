@@ -1499,6 +1499,7 @@
   header_stats: "Estatísticas"
   header_help_us: "Ajuda-nos"
   header_about: "Sobre"
+  header_incubator: "Incubadora"
   header_teacher_community: "Comunidade de professores"
   header_help_support: 'Ajuda e suporte'
   header_report_bug: "Comunicar um problema"
@@ -1607,7 +1608,7 @@
   hoc2018_mc_download_adventurer: "Baixe a versão offline do Aventureiro de Minecraft."
   hoc2018_mc_educators: "Para Educadores"
   hoc2018_mc_educators_box1_title: "Programe com Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition fornece currículo alinhado com padrões, treinamento e programação no Minecraft.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Education Edition fornece currículo alinhado com padrões, treinamento e programação no Minecraft."
   hoc2018_mc_educators_box1_button: "Comece agora"
   hoc2018_mc_educators_box2_title: "Baixe o Guia de Facilitador"
   hoc2018_mc_educators_box2_desc: "Este kit de ferramentas ajudará você a hospedar uma Hora do Código e envolver seus alunos na ciência da computação."
@@ -1708,18 +1709,18 @@
   hoc2018_mc_with_microsoft: "Em parceria com"
   hoc2018_mc_thank_microsoft: "Nós agradecemos à Microsoft por apoiar nossa visão e missão para que toda criança tenha a oportunidade de aprender ciência da computação e as habilidades necessárias para ter sucesso no século XXI."
   hoc2019_mc_mee_title: "Minecraft AI pra Valer"
-  hoc2019_mc_mee_description1: 'O novo tutorial Hora de Código Minecraft está agora disponível em Minecraft: Edição Educacional para Windows, Mac e iPad. Aprenda os fundamentos de codificação e explore IA com seus alunos!'
+  hoc2019_mc_mee_description1: "O novo tutorial Hora de Código Minecraft está agora disponível em Minecraft: Edição Educacional para Windows, Mac e iPad. Aprenda os fundamentos de codificação e explore IA com seus alunos!"
   hoc2019_mc_mee_description2: "Acesse recursos grátis incluindo um plano de aula, vídeos, currículo de ciência da computação e treinamentos para professores."
   hoc2019_mc_more_coding_resources: "Mais Recursos de Codificação"
   hoc2019_dance_previous_versions: "Procurando uma versão anterior de Festa Dançante?\nClique aqui para começar [Parte 1](%{dance_2018_link}) e [Parte 2](%{dance_extras_2018_link}) de 2018."
   homepage_slot_text_title_at_home: "Aprende em casa"
   page_not_available_button: "Volte para a página inicial"
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Volte no tempo e aprenda a codificar! O novo tutorial de Hora do Código Minecraft já está disponível em Minecraft: Edição Educacional para Windows, Mac, Chromebook e iPad. Dê os primeiros passos para os recursos gratuitos para educadores, treinamentos e vídeos.'
+  hoc2021_mc_mee_description: "Volte no tempo e aprenda a codificar! O novo tutorial de Hora do Código Minecraft já está disponível em Minecraft: Edição Educacional para Windows, Mac, Chromebook e iPad. Dê os primeiros passos para os recursos gratuitos para educadores, treinamentos e vídeos."
   hoc2021_mc_mee_villages_title: "Fábula das Duas Aldeias"
-  hoc2021_mc_mee_villages_description: 'Aprenda a codificação básica e explore a diversidade e a inclusão com os seus alunos em Minecraft: Edição Educacional.'
+  hoc2021_mc_mee_villages_description: "Aprenda a codificação básica e explore a diversidade e a inclusão com os seus alunos em Minecraft: Edição Educacional."
   hoc2021_mc_mee_ai_title: "IA para sempre"
-  hoc2021_mc_mee_ai_description: 'Explore a IA com os seus alunos e aprenda a codificar em Minecraft: Edição Educacional.'
+  hoc2021_mc_mee_ai_description: "Explore a IA com os seus alunos e aprenda a codificar em Minecraft: Edição Educacional."
   footer_powered_by_aws: "Powered by Amazon Web Services"
   codebytes_skinny_banner_english_only: "Somente inglês"
   footer_privacy_policy: "Política de privacidade"

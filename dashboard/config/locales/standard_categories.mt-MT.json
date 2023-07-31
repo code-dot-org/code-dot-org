@@ -2,40 +2,8 @@
   "mt-MT": {
     "data": {
       "standard_categories": {
-        "ESS": {
-        },
-        "ESS1": {
-        },
-        "ESS2": {
-        },
-        "ESS3": {
-        },
-        "ETS": {
-        },
-        "ETS1": {
-        },
         "L": {
           "description": "Lingwa"
-        },
-        "LS": {
-        },
-        "LS1": {
-        },
-        "LS2": {
-        },
-        "LS3": {
-        },
-        "LS4": {
-        },
-        "PS": {
-        },
-        "PS1": {
-        },
-        "PS2": {
-        },
-        "PS3": {
-        },
-        "PS4": {
         }
       }
     }
