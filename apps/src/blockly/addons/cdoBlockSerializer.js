@@ -3,21 +3,20 @@ import {PROCEDURE_DEFINITION_TYPES} from '../constants';
 
 const unknownBlockState = {type: 'unknown', enabled: false};
 
-// Sorting function, used by load()
-function sortBlocksByType(blockStates, prioritizedBlockTypes) {
+// Move blocks of the specified types to the front of the list. Used by load()
+function partitionBlocksByType(blockStates, prioritizedBlockTypes) {
   // Create a copy of the blockStates array in case it's read-only
   const copiedBlockStates = [...blockStates];
+  const prioritizedBlocks = [];
+  const remainingBlocks = [];
 
-  // This function sorts blocks of the specified types to the front of the list.
-  return copiedBlockStates.sort((a, b) => {
-    if (prioritizedBlockTypes.includes(a.type)) {
-      return -1; // a comes before b
-    } else if (prioritizedBlockTypes.includes(b.type)) {
-      return 1; // b comes before a
-    } else {
-      return 0; // no change in order
-    }
+  copiedBlockStates.forEach(block => {
+    prioritizedBlockTypes.includes(block.type)
+      ? prioritizedBlocks.push(block)
+      : remainingBlocks.push(block);
   });
+
+  return [...prioritizedBlocks, ...remainingBlocks];
 }
 
 export default class CdoBlockSerializer extends GoogleBlockly.serialization
@@ -33,7 +32,7 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
   load(stateToLoad, workspace) {
     // Procedure definitions should be loaded ahead of call blocks, so that the
     // procedures map is updated correctly.
-    const blockStates = sortBlocksByType(
+    const blockStates = partitionBlocksByType(
       stateToLoad['blocks'],
       PROCEDURE_DEFINITION_TYPES
     );

@@ -23,6 +23,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
         connectedToParentNext
       );
     } catch (e) {
+      console.warn(`Creating "unknown block". ${e.message}`);
       block = blocklyWrapper.Xml.originalDomToBlock(
         blocklyWrapper.Xml.textToDom('<block type="unknown" />'),
         workspace,
@@ -36,10 +37,15 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     return block;
   };
 
-  // Decode an XML DOM and create blocks on the workspace.
+  /**
+   * Decode an XML DOM and create blocks on the workspace while preserving the original order of blocks.
+   *
+   * @param {Blockly.Workspace} workspace - The Blockly workspace where blocks will be created.
+   * @param {Element} xml - The XML DOM containing block elements to be created on the workspace.
+   * @returns {Object[]} An array of objects containing the created blocks and their positions.
+   */
   blocklyWrapper.Xml.domToBlockSpace = function (workspace, xml) {
-    Blockly.Xml.createBlockOrderMap(xml);
-    const sortedBlockElements = getSortedBlockElements(
+    const partitionedBlockElements = getPartitionedBlockElements(
       xml,
       PROCEDURE_DEFINITION_TYPES
     );
@@ -48,7 +54,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  and parse any X or Y coordinates set in the XML. Then, we store
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
-    sortedBlockElements.forEach(xmlChild => {
+    partitionedBlockElements.forEach(xmlChild => {
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
       const x = parseInt(xmlChild.getAttribute('x'), 10);
       const y = parseInt(xmlChild.getAttribute('y'), 10);
@@ -68,39 +74,41 @@ export default function initializeBlocklyXml(blocklyWrapper) {
 }
 
 /**
- * Creates a block order map for the given XML by sorting the block elements and
- * mapping their sorted positions to their original positions in the XML.
- * This is used to reset a list of blocks into their original order before
- * re-positioning blocks on the rendered workspace.
+ * Creates a block order map for the given XML by partitioning the block
+ * elements based on their types and mapping their partitioned positions to
+ * their original positions in the XML. This is used to reset a list of
+ * blocks into their original order before re-positioning blocks on the
+ * rendered workspace.
  *
  * @param {Element} xml - The XML element containing block elements to create the order map.
- * @returns {Map} A map with sorted block index as key and original index in the XML as value.
+ * @returns {Map} A map with partitioned block index as key and original index in the XML as value.
  */
 export function createBlockOrderMap(xml) {
   // Convert XML to an array of block elements
-  const unsortedBlockElements = Array.from(xml.childNodes).filter(
+  const blockElements = Array.from(xml.childNodes).filter(
     node => node.nodeName.toLowerCase() === 'block'
   );
-  const sortedBlockElements = getSortedBlockElements(
+  const partitionedBlockElements = getPartitionedBlockElements(
     xml,
     PROCEDURE_DEFINITION_TYPES
   );
   const blockOrderMap = new Map();
-  unsortedBlockElements.forEach((element, index) => {
-    blockOrderMap.set(sortedBlockElements.indexOf(element), index);
+  blockElements.forEach((element, index) => {
+    blockOrderMap.set(partitionedBlockElements.indexOf(element), index);
   });
   return blockOrderMap;
 }
 
 /**
- * Extracts block elements from the provided XML and returns them sorted based on their types.
+ * Extracts block elements from the provided XML and returns them partitioned based on their types.
  * If no block elements are found in the XML, an empty array is returned.
  *
  * @param {Element} xml - The XML element containing block elements.
- * @param {string[]} types - An array of strings representing block types. These types are moved to the front of the list.
- * @returns {Array} An array of sorted block elements or an empty array if no blocks are present.
+ * @param {string[]} prioritizedBlockTypes - An array of strings representing block types.
+ *    These types are moved to the front of the list while maintaining the order of non-prioritized types.
+ * @returns {Element[]} An array of partitioned block elements or an empty array if no blocks are present.
  */
-export function getSortedBlockElements(xml, types) {
+export function getPartitionedBlockElements(xml, prioritizedBlockTypes) {
   // Convert XML to an array of block elements
   const blockElements = Array.from(xml.childNodes).filter(
     node => node.nodeName.toLowerCase() === 'block'
@@ -113,42 +121,31 @@ export function getSortedBlockElements(xml, types) {
 
   // Procedure definitions should be loaded ahead of call
   // blocks, so that the procedures map is updated correctly.
-  const sortedBlockElements = sortBlocksByType(blockElements, types);
-  return sortedBlockElements;
+  const partitionedBlockElements = partitionBlocksByType(
+    blockElements,
+    prioritizedBlockTypes
+  );
+  return partitionedBlockElements;
 }
 
 /**
- * Sorts blocks of the specified types to the front of the list.
+ * Partitions blocks of the specified types to the front of the list.
  *
- * @param {Element[]} blockElements - An array of block elements to be sorted.
+ * @param {Element[]} blockElements - An array of block elements to be partitioned.
  * @param {string[]} prioritizedBlockTypes - An array of strings representing block types.
- *    These types are moved to the front of the list.
- * @returns {Element[]} A new array of block elements sorted based on their types.
+ *    These types are moved to the front of the list while otherwise maintaining order.
+ * @returns {Element[]} A new array of block elements partitioned based on their types.
  */
-export function sortBlocksByType(blockElements, prioritizedBlockTypes) {
-  return blockElements.sort((a, b) => {
-    const aType = a.getAttribute('type');
-    const bType = b.getAttribute('type');
+export function partitionBlocksByType(blockElements, prioritizedBlockTypes) {
+  const prioritizedBlocks = [];
+  const remainingBlocks = [];
 
-    // If both blocks are of specified types, maintain their original order
-    if (
-      prioritizedBlockTypes.includes(aType) &&
-      prioritizedBlockTypes.includes(bType)
-    ) {
-      return 0;
-    }
-
-    // If block a is of a specified type, it should come first
-    if (prioritizedBlockTypes.includes(aType)) {
-      return -1;
-    }
-
-    // If block b is of a specified type, it should come first
-    if (prioritizedBlockTypes.includes(bType)) {
-      return 1;
-    }
-
-    // Otherwise, maintain the original order
-    return 0;
+  blockElements.forEach(block => {
+    const blockType = block.getAttribute('type');
+    prioritizedBlockTypes.includes(blockType)
+      ? prioritizedBlocks.push(block)
+      : remainingBlocks.push(block);
   });
+
+  return [...prioritizedBlocks, ...remainingBlocks];
 }

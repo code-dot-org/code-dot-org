@@ -1,15 +1,15 @@
 import {expect} from '../../../util/reconfiguredChai';
 import {
-  sortBlocksByType,
-  getSortedBlockElements,
+  partitionBlocksByType,
+  getPartitionedBlockElements,
   createBlockOrderMap,
 } from '@cdo/apps/blockly/addons/cdoXml';
 import {PROCEDURE_DEFINITION_TYPES} from '@cdo/apps/blockly/constants';
 
 const parser = new DOMParser();
 
-describe('sortBlocksByType', function () {
-  it('should sort block elements based on their types', function () {
+describe('partitionBlocksByType', function () {
+  it('should partition block elements based on their types', function () {
     // Sample block elements
     const blockData = [
       '<block type="blockType1"></block>',
@@ -24,25 +24,25 @@ describe('sortBlocksByType', function () {
     const blockElementsCopy = [...blockElements];
 
     // Call the function
-    const sortedBlockElements = sortBlocksByType(
+    const partitionedBlockElements = partitionBlocksByType(
       blockElementsCopy,
       PROCEDURE_DEFINITION_TYPES
     );
 
-    // Expected sorted block elements
-    const expectedSortedElements = [
+    // Expected partitioned block elements
+    const expectedPartitionedElements = [
       blockElements[1],
       blockElements[0],
       blockElements[2],
     ];
 
-    // Compare the result with the expected sorted elements
-    expect(sortedBlockElements).to.deep.equal(expectedSortedElements);
+    // Compare the result with the expected partitioned elements
+    expect(partitionedBlockElements).to.deep.equal(expectedPartitionedElements);
   });
 });
 
-describe('getSortedBlockElements', function () {
-  it('should return sorted block elements based on their types', function () {
+describe('getPartitionedBlockElements', function () {
+  it('should return partitioned block elements based on their types', function () {
     // Sample XML data
     const xmlData = `
         <xml>
@@ -54,20 +54,20 @@ describe('getSortedBlockElements', function () {
     const xmlDoc = parser.parseFromString(xmlData, 'text/xml');
 
     // Call the function
-    const sortedBlockElements = getSortedBlockElements(
+    const partitionedBlockElements = getPartitionedBlockElements(
       xmlDoc.documentElement,
       PROCEDURE_DEFINITION_TYPES
     );
 
-    // Expected sorted block elements
-    const expectedSortedElements = [
+    // Expected partitioned block elements
+    const expectedPartitionedElements = [
       xmlDoc.querySelector('block[type="procedures_defnoreturn"]'),
       xmlDoc.querySelector('block[type="blockType1"]'),
       xmlDoc.querySelector('block[type="blockType2"]'),
     ];
 
-    // Compare the result with the expected sorted elements
-    expect(sortedBlockElements).to.deep.equal(expectedSortedElements);
+    // Compare the result with the expected partitioned elements
+    expect(partitionedBlockElements).to.deep.equal(expectedPartitionedElements);
   });
 });
 
