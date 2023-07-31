@@ -62,7 +62,7 @@ function getImageUrlFromParent(parentBlock, imageIndexOnParent) {
   return (
     parentBlock.inputList[
       imageIndexOnParent
-    ]?.connection?.targetConnection?.sourceBlock_?.inputList[0].fieldRow[0]?.imageElement_?.getAttribute(
+    ]?.connection?.targetConnection?.sourceBlock_?.inputList[0]?.fieldRow[0]?.imageElement_?.getAttribute(
       'xlink:href'
     ) || ''
   );
