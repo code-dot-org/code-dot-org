@@ -12,7 +12,6 @@ import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import moduleStyles from './music-view.module.scss';
 import {AnalyticsContext} from '../context';
-import TopButtons from './TopButtons';
 import Globals from '../globals';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import AppConfig, {getBlockMode, setAppConfig} from '../appConfig';
@@ -69,7 +68,7 @@ import {Key} from '../utils/Notes';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {isEqual} from 'lodash';
-import UndoRedoButtons from './UndoRedoButtons';
+import HeaderButtons from './HeaderButtons';
 
 /**
  * Top-level container for Music Lab. Manages all views on the page as well as the
@@ -698,28 +697,15 @@ class UnconnectedMusicView extends React.Component {
               this.renderInstructions(InstructionsPositions.LEFT)}
 
             <div id="blockly-area" className={moduleStyles.blocklyArea}>
-              <div
-                id="top-buttons-container"
-                className={classNames(
-                  moduleStyles.topButtonsContainer,
-                  !this.props.hideHeaders &&
-                    moduleStyles.topButtonsContainerWithHeaders
-                )}
-              >
-                <TopButtons
-                  clearCode={this.clearCode}
-                  uploadSound={file => this.soundUploader.uploadSound(file)}
-                  canShowSaveStatus={!this.isScriptLevel()}
-                />
-              </div>
               <PanelContainer
                 id="workspace-panel"
                 headerText={musicI18n.panelHeaderWorkspace()}
                 hideHeaders={this.props.hideHeaders}
                 rightHeaderContent={
-                  <UndoRedoButtons
+                  <HeaderButtons
                     onClickUndo={this.undo}
                     onClickRedo={this.redo}
+                    clearCode={this.clearCode}
                   />
                 }
               >
