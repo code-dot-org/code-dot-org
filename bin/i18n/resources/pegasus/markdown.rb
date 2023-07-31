@@ -1,7 +1,6 @@
 require 'fileutils'
 require 'json'
 
-require_relative '../../../../pegasus/router'
 require_relative '../../i18n_script_utils'
 
 module I18n
@@ -53,7 +52,7 @@ module I18n
             FileUtils.mkdir_p(File.dirname(source_path))
             FileUtils.cp(full_filepath, source_path)
 
-            header, content, _line = ::Documents.new.helpers.parse_yaml_header(source_path)
+            header, content, _line = Documents.new.helpers.parse_yaml_header(source_path)
 
             I18nScriptUtils.sanitize_header!(header)
             I18nScriptUtils.write_markdown_with_header(content, header, source_path)
