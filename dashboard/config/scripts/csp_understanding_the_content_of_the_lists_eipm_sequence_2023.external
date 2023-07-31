@@ -1,0 +1,25 @@
+name 'CSP - Understanding the content of the Lists EIPM sequence_2023'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Understanding the Content of the Lists EIPM Sequence
+
+**Goal:** The purpose of this task is to understand the content in lists EIPM sequence. *(Estimated time: ~25 minutes)*
+
+## Connections to Past and Future Work
+
+In the synchronous workshop for the previous module, you participated in a virtual version of U5L2 - Lists Investigate.  Throughout Unit 5, we build on our knowledge of lists.  As a teacher, it will be important for you to have a good understanding of this learning progression.  Additionally, students will need to use a list in their Create Performance Task that they submit to the College Board as part of the AP test.
+
+To help cement your understanding of lists, we recommend that you either spend time working with lists in the Lists Practice or Lists Make lessons in this unit.
+
+## Do This:
+
+Choose **ONE** of the options below to engage with for 20 minutes. As you engage in the level progression, pay attention to what academic skills you might see your students demonstrate during this lesson.
+
+* <a href="https://studio.code.org/s/csp5-2022/lessons/3/levels/1" target="blank" rel="noopener noreferrer">U5L3 - Lists Practice: Levels 1-5</a> (Recommended for less experienced CS teachers.)
+* <a href="https://studio.code.org/s/csp5-2022/lessons/4/levels/1" target="blank" rel="noopener noreferrer">U5L4 - Lists Make: Levels 1-2</a> (Recommended for more experienced CS teachers. Note you might only get started in the time we allocated for this task for this module and that is okay.  We only expect you to work on this task for 20 minutes)
+
+**Note**: The above links will take you to the student-facing course.  If you worked on these levels earlier in your own exploration of the course, you may see your previous work saved in these levels.  This is to be expected.
+MARKDOWN

@@ -10,7 +10,6 @@ require 'fileutils'
 require 'json'
 require 'digest/md5'
 
-require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 
@@ -21,7 +20,7 @@ module I18n
     def self.perform
       puts "Sync in starting"
       Services::I18n::CurriculumSyncUtils.sync_in
-      HocSyncUtils.sync_in
+      I18n::Resources::Pegasus::HourOfCode.sync_in
       localize_level_and_project_content
       I18n::Resources::Dashboard::Blocks.sync_in
       I18n::Resources::Apps::Animations.sync_in
@@ -30,13 +29,13 @@ module I18n
       I18n::Resources::Dashboard::Standards.sync_in
       I18n::Resources::Dashboard::Docs.sync_in
       I18n::Resources::Apps::ExternalSources.sync_in
+      I18n::Resources::Dashboard::Scripts.sync_in
       I18n::Resources::Dashboard::Courses.sync_in
       I18n::Resources::Apps::Labs.sync_in
       I18n::Resources::Pegasus::Markdown.sync_in
       puts "Copying source files"
       I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
       redact_level_content
-      redact_script
       puts "Sync in completed successfully"
     rescue => exception
       puts "Sync in failed from the error: #{exception}"
@@ -425,32 +424,6 @@ module I18n
 
       Dir.glob(File.join(I18N_SOURCE_DIR, "course_content/**/*.json")).each do |source_path|
         redact_level_file(source_path)
-      end
-    end
-
-    def self.redact_script
-      plugins = %w(resourceLink vocabularyDefinition)
-      fields = %w(description student_description description_student description_teacher)
-
-      %w(script).each do |type|
-        puts "Redacting #{type} content"
-        source = File.join(I18N_SOURCE_DIR, "dashboard/#{type}s.yml")
-
-        # Save the original data, for restoration
-        original = source.sub("source", "original")
-        FileUtils.mkdir_p(File.dirname(original))
-        FileUtils.cp(source, original)
-
-        # Redact the specific subset of fields within each script that we care about.
-        data = YAML.load_file(source)
-        data['en']['data'][type]['name'].values.each do |datum|
-          markdown_data = datum.slice(*fields)
-          redacted_data = RedactRestoreUtils.redact_data(markdown_data, plugins, 'md')
-          datum.merge!(redacted_data)
-        end
-
-        # Overwrite source file with redacted data
-        File.write(source, I18nScriptUtils.to_crowdin_yaml(data))
       end
     end
   end
