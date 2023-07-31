@@ -4,7 +4,7 @@ theme: responsive_full_width
 ---
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
-%link{href: "/css/generated/csd-styles.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/csd-styles.css", rel: "stylesheet"}
 
 %section.hero-banner-basic.overlay
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
@@ -86,6 +86,8 @@ theme: responsive_full_width
 
     = view :carousel_csd_flexible
 
+= view :section_divider_line
+
 %section#collections
   .wrapper
     %h2=hoc_s(:heading_collections)
@@ -121,7 +123,8 @@ theme: responsive_full_width
 
 
 :javascript
-  function reorganizeAndWrapSlides(carouselId) {
+  const windowWidth = window.innerWidth;
+  function reorganizeAndWrapSlides(carouselId, cardsList) {
     const carouselContainer = document.getElementById(carouselId);
     if (!carouselContainer) {
       console.error(`Carousel container with id "${carouselId}" not found.`);
@@ -141,7 +144,7 @@ theme: responsive_full_width
 
     const slides = [];
     while (actionBlocks.length > 0) {
-      slides.push(actionBlocks.splice(0, 3));
+      slides.push(actionBlocks.splice(0, cardsList));
     }
 
     slides.forEach(slide => {
@@ -156,9 +159,15 @@ theme: responsive_full_width
 
     slideItems.forEach(slideItem => slideItem.remove());
   }
+
   function handleScreenSize(carouselId) {
-    if (window.innerWidth > 768) {
-    console.log(carouselId)
-      reorganizeAndWrapSlides(carouselId);
+    if (windowWidth > 639 && windowWidth < 799) {
+      reorganizeAndWrapSlides(carouselId, 2);
+      console.log("639 - 799")
+
+    } else if (windowWidth > 799) {
+      reorganizeAndWrapSlides(carouselId, 3);
+      console.log("> 800")
     }
   }
+
