@@ -86,3 +86,21 @@
     max-width: 300px;
   }
 }
+
+.deprecated-course-page {
+  margin-bottom: 100px;
+
+  .deprecated-course-child {
+    display: inline-block;
+    max-width: 500px;
+  }
+
+  p {
+    color: $neutral_dark;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-family: 'Gotham 7r', sans-serif;
+    line-height: 1.2em;
+  }
+}
