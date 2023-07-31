@@ -21,11 +21,8 @@ firebase_name: cdo-v3-adhoc
 firebase_secret: !Secret
 firebase_shared_secret: !Secret
 
-# Placeholder value until we determine whether we can create a Secret with this name (replacing a deleted one).
-# Most adhocs don't use `CDO.db_cluster_id`
-db_cluster_id: PLACEHOLDER
-
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
+db_cluster_id: !StackSecret
 db_endpoint_writer: !StackSecret
 db_endpoint_proxy_writer: !StackSecret
 db_endpoint_proxy_reader: !StackSecret
