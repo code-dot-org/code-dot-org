@@ -3840,13 +3840,13 @@
         },
         "courseE_farmer_functions11_predict": {
           "check and pick": {
-            "name": "suchen und pflücken"
+            "name": "suchen und pflücken\n"
           },
           "find pumpkin": {
             "name": "finde Kürbis"
           },
           "wander path": {
-            "name": "Weg entlanggehen"
+            "name": "Weg entlanggehen\n"
           }
         },
         "courseE_farmer_functions11_predict2022": {
