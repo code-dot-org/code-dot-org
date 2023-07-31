@@ -600,6 +600,9 @@ Dashboard::Application.routes.draw do
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
     post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
 
+    # OAuth endpoints
+    get '/oauth/jwks', to: 'oauth_jwks#jwks'
+
     get '/notes/:key', to: 'notes#index'
 
     resources :zendesk_session, only: [:index]
