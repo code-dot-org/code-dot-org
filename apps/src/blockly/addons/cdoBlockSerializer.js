@@ -5,12 +5,10 @@ const unknownBlockState = {type: 'unknown', enabled: false};
 
 // Move blocks of the specified types to the front of the list. Used by load()
 function partitionBlocksByType(blockStates, prioritizedBlockTypes) {
-  // Create a copy of the blockStates array in case it's read-only
-  const copiedBlockStates = [...blockStates];
   const prioritizedBlocks = [];
   const remainingBlocks = [];
 
-  copiedBlockStates.forEach(block => {
+  blockStates.forEach(block => {
     prioritizedBlockTypes.includes(block.type)
       ? prioritizedBlocks.push(block)
       : remainingBlocks.push(block);
