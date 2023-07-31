@@ -2755,6 +2755,9 @@ ta:
             lessonGroup-4:
               display_name: சுழற்சிகள்
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: தகவல்கள்
           lesson_groups:
             lessonGroup-2:
               display_name: டிஜிட்டல் குடியுரிமை
@@ -2762,8 +2765,9 @@ ta:
               display_name: வரிசைப்படுத்துதல்
             lessonGroup-4:
               display_name: சுழற்சிகள்
+            lessonGroup-6:
+              display_name: தகவல்கள்
           description_short: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
-          student_description: கணினி அறிவியல் மற்றும் இணையப் பாதுகாப்பின் அடிப்படைகளைக் கற்றுக்கொள்ளுங்கள். பாடத்திட்டத்தின் முடிவில், நீங்கள் பகிர்ந்து கொள்ளக்கூடிய உங்கள் சொந்த கேம் அல்லது கதையை உருவாக்கவும்.
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2776,7 +2780,6 @@ ta:
               display_name: நிகழ்வுகள்
             lessonGroup-7:
               display_name: பாடநெறி திட்டத்தின் முடிவு
-          student_description: கணினி அறிவியல் மற்றும் இணையப் பாதுகாப்பின் அடிப்படைகளைக் கற்றுக்கொள்ளுங்கள். பாடத்திட்டத்தின் முடிவில், நீங்கள் பகிர்ந்து கொள்ளக்கூடிய உங்கள் சொந்த கேம் அல்லது கதையை உருவாக்கவும்.
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2789,7 +2792,6 @@ ta:
               display_name: நிகழ்வுகள்
             lessonGroup-6:
               display_name: தகவல்கள்
-          student_description: வரிசைமுறை, சுழல்கள் மற்றும் நிகழ்வுகளுடன் நிரல்களை உருவாக்கவும். உங்கள் முதலெழுத்துக்களை பைனரியாக மொழிபெயர்க்கவும், பல்வேறு சிக்கல்களைத் தீர்க்கும் நுட்பங்களை ஆராயவும் மற்றும் இணைய அச்சுறுத்தலுக்கு எவ்வாறு பதிலளிப்பது என்பதை அறியவும். பாடத்திட்டத்தின் முடிவில், நீங்கள் பகிர்ந்து கொள்ளக்கூடிய உங்கள் சொந்த விளையாட்டை அல்லது கதையை உருவாக்குங்கள்!
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:
