@@ -458,6 +458,7 @@ export default {
   costumeList,
   customInputTypes,
   install(blockly, blockInstallOptions) {
+    Blockly.cdoUtils.registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
 
