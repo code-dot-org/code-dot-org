@@ -6,7 +6,7 @@ class I18n::SyncInTest < Minitest::Test
     exec_seq = sequence('execution')
 
     Services::I18n::CurriculumSyncUtils.expects(:sync_in).in_sequence(exec_seq)
-    HocSyncUtils.expects(:sync_in).in_sequence(exec_seq)
+    I18n::Resources::Pegasus::HourOfCode.expects(:sync_in).in_sequence(exec_seq)
     I18n::SyncIn.expects(:localize_level_and_project_content).in_sequence(exec_seq)
     I18n::Resources::Dashboard::Blocks.expects(:sync_in).in_sequence(exec_seq)
     I18n::Resources::Apps::Animations.expects(:sync_in).in_sequence(exec_seq)
