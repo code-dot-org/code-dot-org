@@ -3,9 +3,6 @@ dv:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: |-
-          {GROUP} ރިޕީޓް ކުރާނީ ކޮންމެ {N} މެޝަރސްއަށް
-          {MOVE1} އާއި {MOVE2} ދެމެދު
         options:
           GROUP:
             '"BEAR"': ބެއަރ (ސާރިދޯޅު)
@@ -16,90 +13,92 @@ dv:
             '"SLOTH"': ސްލޮތު
             '"UNICORN"': ޔުނިކޯން
           MOVE1:
-            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
             MOVES.ClapHigh: މަތިން އަތްތިލަބަޑި ޖެހުން
+            MOVES.Clown: ގަންގަމް
             MOVES.Dab: ޑެބް ކުރުން
             MOVES.DoubleJam: ޑަބަލް ޑައުން
             MOVES.Drop: ޑްރޮޕް
             MOVES.Floss: ފްލޮސް
             MOVES.Fresh: ފްރެޝް
-            MOVES.Clown: ގަންގަމް
             MOVES.Kick: ސްޓަރ - ތަރި
+            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
             MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
           MOVE2:
-            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
             MOVES.ClapHigh: މަތިން އަތްތިލަބަޑި ޖެހުން
+            MOVES.Clown: ގަންގަމް
             MOVES.Dab: ޑެބް ކުރުން
             MOVES.DoubleJam: ޑަބަލް ޑައުން
             MOVES.Drop: ޑްރޮޕް
             MOVES.Floss: ފްލޮސް
             MOVES.Fresh: ފްރެޝް
-            MOVES.Clown: ގަންގަމް
             MOVES.Kick: ސްޓަރ - ތަރި
+            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
             MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
+        text: |-
+          {GROUP} ރިޕީޓް ކުރާނީ ކޮންމެ {N} މެޝަރސްއަށް
+          {MOVE1} އާއި {MOVE2} ދެމެދު
       Dancelab_atTimestamp:
-        text: "{TIMESTAMP} {UNIT} އަށް ފަހު"
         options:
           UNIT:
             '"measures"': މެޝަރސް
+        text: "{TIMESTAMP} {UNIT} އަށް ފަހު"
       Dancelab_changeColorBy:
-        text: "{AMOUNT} އަދަދަށް {COLOR} {METHOD} ބަދަލުކުރޭ"
         options:
           METHOD:
+            '"brightness"': ބްރައިޓްނެސް (ކުލައިގެ އަލި މިންވަރު)
             '"hue"': ހިޔު (ކުލައިގެ ޝޭޑް)
             '"saturation"': ސެޗުރޭޝަން (ކުލައިގެ އަނދިރި މިންވަރު)
-            '"brightness"': ބްރައިޓްނެސް (ކުލައިގެ އަލި މިންވަރު)
+        text: "{AMOUNT} އަދަދަށް {COLOR} {METHOD} ބަދަލުކުރޭ"
       Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            '"BEAR"': ބެއަރ (ސާރިދޯޅު)
+            '"DUCK"': ޑަކްސް (އަސްދޫނި)
+            '"FROG"': ފްރޮގް (ބޮއް)
+            '"PINEAPPLE"': ޕައިންއެޕަލް (އަލަނާސި)
+            '"SHARK"': ޝާކްސް (މިޔަރު)
+            '"SLOTH"': ސްލޮތު
+            '"UNICORN"': ޔުނިކޯން
+          MOVE:
+            '"next"': "(ނެކްސްޓް - ކުރިއަށް)"
+            '"prev"': "(ޕްރީވިއަސް - ފަހަތަށް)"
+            '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
+            MOVES.ClapHigh: މަތިން އަތްތިލަބަޑި ޖެހުން
+            MOVES.Clown: ގަންގަމް
+            MOVES.Dab: ޑެބް ކުރުން
+            MOVES.DoubleJam: ޑަބަލް ޑައުން
+            MOVES.Drop: ޑްރޮޕް
+            MOVES.Floss: ފްލޮސް
+            MOVES.Fresh: ފްރެޝް
+            MOVES.Kick: ސްޓަރ - ތަރި
+            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
+            MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
         text: "{GROUP} ހަދާ {MOVE} {DIR} އަބަދަށް"
-        options:
-          GROUP:
-            '"BEAR"': ބެއަރ (ސާރިދޯޅު)
-            '"DUCK"': ޑަކްސް (އަސްދޫނި)
-            '"FROG"': ފްރޮގް (ބޮއް)
-            '"PINEAPPLE"': ޕައިންއެޕަލް (އަލަނާސި)
-            '"SHARK"': ޝާކްސް (މިޔަރު)
-            '"SLOTH"': ސްލޮތު
-            '"UNICORN"': ޔުނިކޯން
-          MOVE:
-            '"next"': "(ނެކްސްޓް - ކުރިއަށް)"
-            '"prev"': "(ޕްރީވިއަސް - ފަހަތަށް)"
-            '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
-            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
-            MOVES.ClapHigh: މަތިން އަތްތިލަބަޑި ޖެހުން
-            MOVES.Dab: ޑެބް ކުރުން
-            MOVES.DoubleJam: ޑަބަލް ޑައުން
-            MOVES.Drop: ޑްރޮޕް
-            MOVES.Floss: ފްލޮސް
-            MOVES.Fresh: ފްރެޝް
-            MOVES.Clown: ގަންގަމް
-            MOVES.Kick: ސްޓަރ - ތަރި
-            MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
       Dancelab_changeMoveLR:
-        text: "{SPRITE} ހަދާ {MOVE} {DIR} އަބަދަށް"
         options:
           MOVE:
             '"next"': "(ނެކްސްޓް - ކުރިއަށް)"
             '"prev"': "(ޕްރީވިއަސް - ފަހަތަށް)"
             '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
-            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
             MOVES.ClapHigh: މަތިން އަތްތިލަބަޑި ޖެހުން
+            MOVES.Clown: ގަންގަމް
             MOVES.Dab: ޑެބް ކުރުން
             MOVES.DoubleJam: ޑަބަލް ޑައުން
             MOVES.Drop: ޑްރޮޕް
             MOVES.Floss: ފްލޮސް
             MOVES.Fresh: ފްރެޝް
-            MOVES.Clown: ގަންގަމް
             MOVES.Kick: ސްޓަރ - ތަރި
+            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
             MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
+        text: "{SPRITE} ހަދާ {MOVE} {DIR} އަބަދަށް"
       Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"rotation"': އެނބުރޭ މިންވަރު
+            '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
+            '"y"': ވާރޓިކަލް ޕޮޒިޝަން
         text: "{VAL} އަދަދަށް {SPRITE} {PROPERTY} ބަދަލުކުރޭ"
-        options:
-          PROPERTY:
-            '"rotation"': އެނބުރޭ މިންވަރު
-            '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
-            '"y"': ވާރޓިކަލް ޕޮޒިޝަން
       Dancelab_changePropEachBy:
-        text: "{VAL} އަދަދަށް {GROUP} {PROPERTY} ބަދަލުކުރޭ"
         options:
           GROUP:
             '"BEAR"': ބެއަރ (ސާރިދޯޅު)
@@ -113,8 +112,8 @@ dv:
             '"rotation"': އެނބުރޭ މިންވަރު
             '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
             '"y"': ވާރޓިކަލް ޕޮޒިޝަން
+        text: "{VAL} އަދަދަށް {GROUP} {PROPERTY} ބަދަލުކުރޭ"
       Dancelab_doMoveEachLR:
-        text: "{GROUP} ހަދާ {MOVE} {DIR} އެއްފަހަރު"
         options:
           GROUP:
             '"BEAR"': ބެއަރ (ސާރިދޯޅު)
@@ -126,90 +125,88 @@ dv:
             '"UNICORN"': ޔުނިކޯން
           MOVE:
             '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
-            MOVES.XBend: ބެންޑް - ގުދުވުން
-            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
-            MOVES.XClapSide: ކްލެޕް - އަތްތިލަބަޑިޖެހުން
             MOVES.ClapHigh: މަތިން އަތްތިލަބަޑި ޖެހުން
+            MOVES.Clown: ގަންގަމް
             MOVES.Dab: ޑެބް ކުރުން
-            MOVES.XFever: ޑިސްކޯ
             MOVES.DoubleJam: ޑަބަލް ޑައުން
             MOVES.Drop: ޑްރޮޕް
             MOVES.Floss: ފްލޮސް
             MOVES.Fresh: ފްރެޝް
-            MOVES.Clown: ގަންގަމް
+            MOVES.Kick: ސްޓަރ - ތަރި
+            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
+            MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
+            MOVES.XArmsSide: ރީޗް
+            MOVES.XArmsUp: ސްޓްރެޗް
+            MOVES.XBend: ބެންޑް - ގުދުވުން
+            MOVES.XClapSide: ކްލެޕް - އަތްތިލަބަޑިޖެހުން
+            MOVES.XFever: ޑިސްކޯ
             MOVES.XHeadHips: ބޯ + އުނަގަނޑު
-            MOVES.XHop: ހޮޕް - ކޮރުން
             MOVES.XHighKick: ކިކް - ފައިން ޖެހުން
+            MOVES.XHop: ހޮޕް - ކޮރުން
             MOVES.XKnee: ނީ - ކަކޫ
             MOVES.XKneel: ނީލް - ކަކޫ ޖެހުން
             MOVES.XOle: އޮލޭ
-            MOVES.XArmsSide: ރީޗް
             MOVES.XSlide: ސްލައިޑް
-            MOVES.Kick: ސްޓަރ - ތަރި
-            MOVES.XArmsUp: ސްޓްރެޗް
-            MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
+        text: "{GROUP} ހަދާ {MOVE} {DIR} އެއްފަހަރު"
       Dancelab_doMoveLR:
-        text: "{SPRITE} ހަދާ {MOVE} {DIR} އެއްފަހަރު"
         options:
           MOVE:
             '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
-            MOVES.XBend: ބެންޑް - ގުދުވުން
-            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
-            MOVES.XClapSide: ކްލެޕް - އަތްތިލަބަޑިޖެހުން
             MOVES.ClapHigh: މަތިން އަތްތިލަބަޑި ޖެހުން
+            MOVES.Clown: ގަންގަމް
             MOVES.Dab: ޑެބް ކުރުން
-            MOVES.XFever: ޑިސްކޯ
             MOVES.DoubleJam: ޑަބަލް ޑައުން
             MOVES.Drop: ޑްރޮޕް
             MOVES.Floss: ފްލޮސް
             MOVES.Fresh: ފްރެޝް
-            MOVES.Clown: ގަންގަމް
+            MOVES.Kick: ސްޓަރ - ތަރި
+            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
+            MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
+            MOVES.XArmsSide: ރީޗް
+            MOVES.XArmsUp: ސްޓްރެޗް
+            MOVES.XBend: ބެންޑް - ގުދުވުން
+            MOVES.XClapSide: ކްލެޕް - އަތްތިލަބަޑިޖެހުން
+            MOVES.XFever: ޑިސްކޯ
             MOVES.XHeadHips: ބޯ + އުނަގަނޑު
-            MOVES.XHop: ހޮޕް - ކޮރުން
             MOVES.XHighKick: ކިކް - ފައިން ޖެހުން
+            MOVES.XHop: ހޮޕް - ކޮރުން
             MOVES.XKnee: ނީ - ކަކޫ
             MOVES.XKneel: ނީލް - ކަކޫ ޖެހުން
             MOVES.XOle: އޮލޭ
-            MOVES.XArmsSide: ރީޗް
             MOVES.XSlide: ސްލައިޑް
-            MOVES.Kick: ސްޓަރ - ތަރި
-            MOVES.XArmsUp: ސްޓްރެޗް
-            MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
+        text: "{SPRITE} ހަދާ {MOVE} {DIR} އެއްފަހަރު"
       Dancelab_everySeconds:
-        text: ކޮންމެ {N} {UNIT} އަކަށް ރިޕީޓްކުރޭ
         options:
           UNIT:
             '"measures"': މެޝަރސް
+        text: ކޮންމެ {N} {UNIT} އަކަށް ރިޕީޓްކުރޭ
       Dancelab_everyVerseChorus:
-        text: ކޮންމެ {UNIT}
         options:
           UNIT:
-            '"verse"': ވަރސް
             '"chorus"': ކޯރަސް
+            '"verse"': ވަރސް
+        text: ކޮންމެ {UNIT}
       Dancelab_getEnergy:
-        text: "{RANGE} ހޯދާ"
         options:
           RANGE:
+            '"high"': ޓްރެބްލް
             '"low"': ބޭސް
             '"mid"': މިޑް
-            '"high"': ޓްރެބްލް
+        text: "{RANGE} ހޯދާ"
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"rotation"': އެނބުރޭ މިންވަރު
+            '"tint"': ކުލަ
             '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
             '"y"': ވާރޓިކަލް ޕޮޒިޝަން
-            '"tint"': ކުލަ
+        text: "{SPRITE} {PROPERTY}"
       Dancelab_getTime:
-        text: މިހާރުގެ ވަގުތު {UNIT} އިން
         options:
           UNIT:
             '"measures"': މެޝަރސް
+        text: މިހާރުގެ ވަގުތު {UNIT} އިން
       Dancelab_ifDanceIs:
-        text: |-
-          {SPRITE} މި ނެށުން {DANCE} ނަށާ ނަމަ
-          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: މަތިން އަތްތިލަބަޑި ޖެހުން
@@ -219,32 +216,34 @@ dv:
             MOVES.Drop: ޑްރޮޕް
             MOVES.Floss: ފްލޮސް
             MOVES.Fresh: ފްރެޝް
-            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
             MOVES.Kick: ސްޓަރ - ތަރި
+            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
             MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
+        text: |-
+          {SPRITE} މި ނެށުން {DANCE} ނަށާ ނަމަ
+          {DO1} {DO2}
       Dancelab_ifTime:
+        options:
+          OP:
+            '"<"': ">"
+            '"="': "="
+            '">"': "<"
+          UNIT:
+            '"measures"': މެޝަރސް
         text: |-
           {UNIT} އަކީ {OP} {N} ނަމަ
           {DO1} {DO2}
-        options:
-          UNIT:
-            '"measures"': މެޝަރސް
-          OP:
-            '">"': "<"
-            '"<"': ">"
-            '"="': "="
       Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 100}": މަތިން ވާތް ފަރާތް
+            "{x: 100, y: 300}": ތިރިން ވާތް ފަރާތް
+            "{x: 200, y: 100}": މަތި
+            "{x: 200, y: 300}": ތިރި
+            "{x: 300, y: 100}": މަތިން ކަނާތް ފަރާތް
+            "{x: 300, y: 300}": ތިރިން ކަނާތް ފަރާތް
         text: މި {LOCATION} އަށް {SPRITE} ފުންމާލާ
-        options:
-          LOCATION:
-            "{x: 200, y: 100}": މަތި
-            "{x: 200, y: 300}": ތިރި
-            "{x: 100, y: 100}": މަތިން ވާތް ފަރާތް
-            "{x: 300, y: 100}": މަތިން ކަނާތް ފަރާތް
-            "{x: 100, y: 300}": ތިރިން ވާތް ފަރާތް
-            "{x: 300, y: 300}": ތިރިން ކަނާތް ފަރާތް
       Dancelab_jumpToEach:
-        text: މި {LOCATION} އަށް {GROUP} ފުންމާލާ
         options:
           GROUP:
             '"BEAR"': ބެއަރ (ސާރިދޯޅު)
@@ -255,105 +254,63 @@ dv:
             '"SLOTH"': ސްލޮތު
             '"UNICORN"': ޔުނިކޯން
           LOCATION:
+            "{x: 100, y: 100}": މަތިން ވާތް ފަރާތް
+            "{x: 100, y: 300}": ތިރިން ވާތް ފަރާތް
             "{x: 200, y: 100}": މަތި
             "{x: 200, y: 300}": ތިރި
-            "{x: 100, y: 100}": މަތިން ވާތް ފަރާތް
             "{x: 300, y: 100}": މަތިން ކަނާތް ފަރާތް
-            "{x: 100, y: 300}": ތިރިން ވާތް ފަރާތް
             "{x: 300, y: 300}": ތިރިން ކަނާތް ފަރާތް
+        text: މި {LOCATION} އަށް {GROUP} ފުންމާލާ
       Dancelab_layoutSprites:
-        text: "{FORMAT} އަށް {GROUP} ލޭއައުޓްކޮށްލާ"
         options:
-          GROUP:
-            '"BEAR"': ބެއަރ (ސާރިދޯޅު)
-            '"DUCK"': ޑަކްސް (އަސްދޫނި)
-            '"FROG"': ފްރޮގް (ބޮއް)
-            '"PINEAPPLE"': ޕައިންއެޕަލް (އަލަނާސި)
-            '"SHARK"': ޝާކްސް (މިޔަރު)
-            '"SLOTH"': ސްލޮތު
-            '"UNICORN"': ޔުނިކޯން
           FORMAT:
             '"border"': ބޯޑަރު
-            '"inner"': އެތެރޭގެ ގޮޅި
-            '"circle"': ސަރކަލް (ވަށްބުރު)
-            '"top"': މަތީ ރޯ
-            '"row"': ރޯ
             '"bottom"': ތިރީ ރޯ
-            '"left"': ވާތު ކޮލަމް
+            '"circle"': ސަރކަލް (ވަށްބުރު)
             '"column"': ކޮލަމް
-            '"right"': ކަނާތު ކޮލަމް
-            '"x"': ކްރިސް-ކްރޮސް
+            '"inner"': އެތެރޭގެ ގޮޅި
+            '"left"': ވާތު ކޮލަމް
             '"plus"': ޕްލަސް
+            '"right"': ކަނާތު ކޮލަމް
+            '"row"': ރޯ
+            '"top"': މަތީ ރޯ
+            '"x"': ކްރިސް-ކްރޮސް
+          GROUP:
+            '"BEAR"': ބެއަރ (ސާރިދޯޅު)
+            '"DUCK"': ޑަކްސް (އަސްދޫނި)
+            '"FROG"': ފްރޮގް (ބޮއް)
+            '"PINEAPPLE"': ޕައިންއެޕަލް (އަލަނާސި)
+            '"SHARK"': ޝާކްސް (މިޔަރު)
+            '"SLOTH"': ސްލޮތު
+            '"UNICORN"': ޔުނިކޯން
+        text: "{FORMAT} އަށް {GROUP} ލޭއައުޓްކޮށްލާ"
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
             '"SLOTH"': ސްލޮތު
           LOCATION:
+            "{x: 100, y: 100}": މަތިން ވާތް ފަރާތް
+            "{x: 100, y: 300}": ތިރިން ވާތް ފަރާތް
             "{x: 200, y: 100}": މަތި
             "{x: 200, y: 300}": ތިރި
-            "{x: 100, y: 100}": މަތިން ވާތް ފަރާތް
             "{x: 300, y: 100}": މަތިން ކަނާތް ފަރާތް
-            "{x: 100, y: 300}": ތިރިން ވާތް ފަރާތް
             "{x: 300, y: 300}": ތިރިން ކަނާތް ފަރާތް
       Dancelab_makeNewDanceSprite:
-        text: |-
-          އައު {COSTUME} ހަދާ
-          {NAME} ނަމުގައި {LOCATION} ގައި
         options:
           COSTUME:
             '"SLOTH"': ސްލޮތު
           LOCATION:
+            "{x: 100, y: 100}": މަތިން ވާތް ފަރާތް
+            "{x: 100, y: 300}": ތިރިން ވާތް ފަރާތް
             "{x: 200, y: 100}": މަތި
             "{x: 200, y: 300}": ތިރި
-            "{x: 100, y: 100}": މަތިން ވާތް ފަރާތް
             "{x: 300, y: 100}": މަތިން ކަނާތް ފަރާތް
-            "{x: 100, y: 300}": ތިރިން ވާތް ފަރާތް
             "{x: 300, y: 300}": ތިރިން ކަނާތް ފަރާތް
-      Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          {N} އަދަދަށް އައު {COSTUME} ހަދާ
-          {LAYOUT} ގައި
+          އައު {COSTUME} ހަދާ
+          {NAME} ނަމުގައި {LOCATION} ގައި
+      Dancelab_makeNewDanceSpriteGroup:
         options:
-          N:
-            '2': 2 (ދޭއް)
-            '3': 3 (ތިނެއް)
-            '4': 4 (ހަތަރެއް)
-            '5': 5 (ފަހެއް)
-            '6': 6 (ހައެއް)
-            '7': 7 (ހަތެއް)
-            '8': 8 (އަށެއް)
-            '9': 9 (ނުވައެއް)
-            '10': 10 (ދިހައެއް)
-            '11': 11 (އެގާރަ)
-            '12': 12 (ބާރަ)
-            '13': 13 (ތޭރަ)
-            '14': 14 (ސާދަ)
-            '15': 15 (ފަނަރަ)
-            '16': 16 (ސޯޅަ)
-            '17': 17 (ސަތާރަ)
-            '18': 18 (އަށާރަ)
-            '19': 19 (ނަވާރަ)
-            '20': 20 (ވިހި)
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"BEAR"': ބެއަރ (ސާރިދޯޅު)
             '"DUCK"': ޑަކްސް (އަސްދޫނި)
@@ -364,16 +321,59 @@ dv:
             '"UNICORN"': ޔުނިކޯން
           LAYOUT:
             '"border"': ބޯޑަރު
-            '"inner"': އެތެރޭގެ ގޮޅި
-            '"circle"': ސަރކަލް (ވަށްބުރު)
-            '"top"': މަތީ ރޯ
-            '"row"': ރޯ
             '"bottom"': ތިރީ ރޯ
-            '"left"': ވާތު ކޮލަމް
+            '"circle"': ސަރކަލް (ވަށްބުރު)
             '"column"': ކޮލަމް
-            '"right"': ކަނާތު ކޮލަމް
-            '"x"': ކްރިސް-ކްރޮސް
+            '"inner"': އެތެރޭގެ ގޮޅި
+            '"left"': ވާތު ކޮލަމް
             '"plus"': ޕްލަސް
+            '"right"': ކަނާތު ކޮލަމް
+            '"row"': ރޯ
+            '"top"': މަތީ ރޯ
+            '"x"': ކްރިސް-ކްރޮސް
+          N:
+            '10': 10 (ދިހައެއް)
+            '11': 11 (އެގާރަ)
+            '12': 12 (ބާރަ)
+            '13': 13 (ތޭރަ)
+            '14': 14 (ސާދަ)
+            '15': 15 (ފަނަރަ)
+            '16': 16 (ސޯޅަ)
+            '17': 17 (ސަތާރަ)
+            '18': 18 (އަށާރަ)
+            '19': 19 (ނަވާރަ)
+            '2': 2 (ދޭއް)
+            '20': 20 (ވިހި)
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '3': 3 (ތިނެއް)
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '4': 4 (ހަތަރެއް)
+            '40': '40'
+            '5': 5 (ފަހެއް)
+            '6': 6 (ހައެއް)
+            '7': 7 (ހަތެއް)
+            '8': 8 (އަށެއް)
+            '9': 9 (ނުވައެއް)
+        text: |-
+          {N} އަދަދަށް އައު {COSTUME} ހަދާ
+          {LAYOUT} ގައި
       Dancelab_mixColors:
         text: "{COLOR1} އަދި {COLOR2} އެއްކޮށްލާ"
       Dancelab_nMeasures:
@@ -387,86 +387,85 @@ dv:
       Dancelab_setBackground:
         text: "{COLOR} އަށް ބެކްގްރައުންޑް ކުލަ ސެޓް ކުރަން"
       Dancelab_setBackgroundEffect:
-        text: "{EFFECT} {PALETTE} އަށް ބެކްގްރައުންޑް އެފެކްޓް ސެޓް ކުރަން"
         options:
           EFFECT:
             '"circles"': ސަރކަލް (ވަށްބުރު)
             '"color_cycle"': ކުލަ
             '"diamonds"': ޑަޔަމަންޑް
+            '"disco"': ސްކޮޔަރ (ހަތަރެސްކަން)
             '"disco_ball"': ޑިސްކޯ ބޯޅަ
             '"fireworks"': ފަޔަރވޯކް (ހަވާ)
-            '"swirl"': ހިޕްނޯ
+            '"galaxy"': ސްޕޭސް
             '"kaleidoscope"': ކެލައިޑެސްކޯޕް
             '"lasers"': ލޭޒަރ ޑާންސް ފްލޯ
-            '"splatter"': ޕެއިންޓް ސްޕްލެޓަރ
             '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
             '"snowflakes"': ސްނޯ
-            '"text"': ލަވައިގެ ނަން
-            '"galaxy"': ސްޕޭސް
             '"sparkles"': ސްޕާކްލްސް
             '"spiral"': ސްޕައިރަލް
-            '"disco"': ސްކޮޔަރ (ހަތަރެސްކަން)
+            '"splatter"': ޕެއިންޓް ސްޕްލެޓަރ
             '"stars"': ސްޓަރ - ތަރި
+            '"swirl"': ހިޕްނޯ
+            '"text"': ލަވައިގެ ނަން
           PALETTE:
-            '"rave"': ކަޅާއި ހުދު
             '"cool"': ކޫލް
+            '"default"': ލައިޓް - އަލި
             '"electronic"': އެލެކްޓްރޯނިކް
             '"iceCream"': އައިސްކްރީމް
-            '"default"': ލައިޓް - އަލި
             '"neon"': ނިއޯން
+            '"rave"': ކަޅާއި ހުދު
             '"tropical"': ޓްރޮޕިކަލް
             '"vintage"': ވިންޓޭޖް
             '"warm"': ވޯރމް
+        text: "{EFFECT} {PALETTE} އަށް ބެކްގްރައުންޑް އެފެކްޓް ސެޓް ކުރަން"
       Dancelab_setBackgroundEffectWithPalette:
-        text: "{PALETTE} {EFFECT} އަށް ބެކްގްރައުންޑް އެފެކްޓް ސެޓް ކުރަން"
         options:
           EFFECT:
-            '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
             '"circles"': ސަރކަލް (ވަށްބުރު)
-            '"quads"': އެންޖެލްސް
             '"color_cycle"': ކުލަ
             '"diamonds"': ޑަޔަމަންޑް
+            '"disco"': ސްކޮޔަރ (ހަތަރެސްކަން)
             '"disco_ball"': ޑިސްކޯ ބޯޅަ
             '"fireworks"': ފަޔަރވޯކް (ހަވާ)
             '"flowers"': ފްލާވަރ - މައު
+            '"galaxy"': ސްޕޭސް
             '"growing_stars"': ބޮޑުވަމުންދާ ތަރި
-            '"swirl"': ހިޕްނޯ
             '"kaleidoscope"': ކެލައިޑެސްކޯޕް
             '"lasers"': ލޭޒަރ ޑާންސް ފްލޯ
-            '"splatter"': ޕެއިންޓް ސްޕްލެޓަރ
+            '"music_wave"': ވޭވްސް
+            '"quads"': އެންޖެލްސް
             '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
-            '"ripples_random"': ރެންޑަމް ރިޕްލްސް
+            '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
             '"ripples"': ރިޕްލްސް
+            '"ripples_random"': ރެންޑަމް ރިޕްލްސް
             '"snowflakes"': ސްނޯ
-            '"text"': ލަވައިގެ ނަން
-            '"squiggles"': ސްކުއިގްލްސް
-            '"galaxy"': ސްޕޭސް
             '"sparkles"': ސްޕާކްލްސް
             '"spiral"': ސްޕައިރަލް
-            '"disco"': ސްކޮޔަރ (ހަތަރެސްކަން)
+            '"splatter"': ޕެއިންޓް ސްޕްލެޓަރ
+            '"squiggles"': ސްކުއިގްލްސް
             '"stars"': ސްޓަރ - ތަރި
-            '"music_wave"': ވޭވްސް
+            '"swirl"': ހިޕްނޯ
+            '"text"': ލަވައިގެ ނަން
           PALETTE:
-            '"rave"': ކަޅާއި ހުދު
             '"cool"': ކޫލް
+            '"default"': ލައިޓް - އަލި
             '"electronic"': އެލެކްޓްރޯނިކް
             '"iceCream"': އައިސްކްރީމް
-            '"default"': ލައިޓް - އަލި
             '"neon"': ނިއޯން
+            '"rave"': ކަޅާއި ހުދު
             '"tropical"': ޓްރޮޕިކަލް
             '"vintage"': ވިންޓޭޖް
             '"warm"': ވޯރމް
+        text: "{PALETTE} {EFFECT} އަށް ބެކްގްރައުންޑް އެފެކްޓް ސެޓް ކުރަން"
       Dancelab_setDanceSpeed:
-        text: "{SPRITE} ނަށާ ބާރުމިން {SPEED} އަށް ސެޓްކުރޭ"
         options:
           SPEED:
+            '0.25': ވަރަށް ލަސް
+            '0.5': ލަސް
             '1': normal
             '2': އަވަސް
             '4': ވަރަށް އަވަސް
-            '0.5': ލަސް
-            '0.25': ވަރަށް ލަސް
+        text: "{SPRITE} ނަށާ ބާރުމިން {SPEED} އަށް ސެޓްކުރޭ"
       Dancelab_setDanceSpeedEach:
-        text: "{GROUP} ނަށާ ބާރުމިން {SPEED} އަށް ސެޓްކުރޭ"
         options:
           GROUP:
             '"BEAR"': ބެއަރ (ސާރިދޯޅު)
@@ -477,83 +476,83 @@ dv:
             '"SLOTH"': ސްލޮތު
             '"UNICORN"': ޔުނިކޯން
           SPEED:
+            '0.25': ވަރަށް ލަސް
+            '0.5': ލަސް
             '1': normal
             '2': އަވަސް
             '4': ވަރަށް އަވަސް
-            '0.5': ލަސް
-            '0.25': ވަރަށް ލަސް
+        text: "{GROUP} ނަށާ ބާރުމިން {SPEED} އަށް ސެޓްކުރޭ"
       Dancelab_setForegroundEffect:
-        text: "{EFFECT}  އަށް ފޯގްރައުންޑް އެފެކްޓް ސެޓް ކުރަން"
         options:
           EFFECT:
             '"bubbles"': ބަބްލްސް
+            '"color_lights"': ސްޓޭޖް ލައިޓްސް
             '"confetti"': ކޮންފެޓީ
+            '"floating_rainbows"': ރެއިންބޯ (ވިއްސާރަދުނި)
             '"hearts_red"': ހާރޓްސް
             '"music_notes"': މިޔުޒިކް ނޯޓު
             '"pineapples"': ޕައިންއެޕަލް (އަލަނާސި)
             '"pizzas"': ޕިއްޒާ
-            '"smiling_poop"': ޕޫޕް
             '"rain"': ރެއިން - ވިއްސާރަ
-            '"floating_rainbows"': ރެއިންބޯ (ވިއްސާރަދުނި)
-            '"smile_face"': ސްމައިލް - ހިނިތުންވުން
-            '"spotlight"': ސްޕޮޓްލައިޓް
-            '"color_lights"': ސްޓޭޖް ލައިޓްސް
             '"raining_tacos"': ޓާކޯސް
-      Dancelab_setForegroundEffectExtended:
+            '"smile_face"': ސްމައިލް - ހިނިތުންވުން
+            '"smiling_poop"': ޕޫޕް
+            '"spotlight"': ސްޕޮޓްލައިޓް
         text: "{EFFECT}  އަށް ފޯގްރައުންޑް އެފެކްޓް ސެޓް ކުރަން"
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
-            '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
             '"bubbles"': ބަބްލްސް
-            '"hearts_colorful"': ކުލަކުލައިގެ ހިތް
+            '"color_lights"': ސްޓޭޖް ލައިޓްސް
             '"confetti"': ކޮންފެޓީ
             '"emojis"': އިމޯޖީސް
+            '"exploding_stars"': ސްޓަރ ބަރސްޓް
+            '"floating_rainbows"': ރެއިންބޯ (ވިއްސާރަދުނި)
+            '"hearts_colorful"': ކުލަކުލައިގެ ހިތް
             '"hearts_red"': ހާރޓްސް
             '"music_notes"': މިޔުޒިކް ނޯޓު
             '"paint_drip"': ޕެއިންޓް ޑްރިޕް
             '"pineapples"': ޕައިންއެޕަލް (އަލަނާސި)
             '"pizzas"': ޕިއްޒާ
-            '"smiling_poop"': ޕޫޕް
             '"rain"': ރެއިން - ވިއްސާރަ
-            '"floating_rainbows"': ރެއިންބޯ (ވިއްސާރަދުނި)
-            '"smile_face"': ސްމައިލް - ހިނިތުންވުން
-            '"spotlight"': ސްޕޮޓްލައިޓް
-            '"color_lights"': ސްޓޭޖް ލައިޓްސް
-            '"exploding_stars"': ސްޓަރ ބަރސްޓް
             '"raining_tacos"': ޓާކޯސް
+            '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
+            '"smile_face"': ސްމައިލް - ހިނިތުންވުން
+            '"smiling_poop"': ޕޫޕް
+            '"spotlight"': ސްޕޮޓްލައިޓް
+        text: "{EFFECT}  އަށް ފޯގްރައުންޑް އެފެކްޓް ސެޓް ކުރަން"
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"rotation"': އެނބުރޭ މިންވަރު
+            '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
+            '"y"': ވާރޓިކަލް ޕޮޒިޝަން
         text: "{VAL} އަދަދަށް {SPRITE} {PROPERTY} ސެޓްކުރޭ"
-        options:
-          PROPERTY:
-            '"rotation"': އެނބުރޭ މިންވަރު
-            '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
-            '"y"': ވާރޓިކަލް ޕޮޒިޝަން
       Dancelab_setPropEach:
+        options:
+          GROUP:
+            '"BEAR"': ބެއަރ (ސާރިދޯޅު)
+            '"DUCK"': ޑަކްސް (އަސްދޫނި)
+            '"FROG"': ފްރޮގް (ބޮއް)
+            '"PINEAPPLE"': ޕައިންއެޕަލް (އަލަނާސި)
+            '"SHARK"': ޝާކްސް (މިޔަރު)
+            '"SLOTH"': ސްލޮތު
+            '"UNICORN"': ޔުނިކޯން
+          PROPERTY:
+            '"rotation"': އެނބުރޭ މިންވަރު
+            '"tint"': ކުލަ
+            '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
+            '"y"': ވާރޓިކަލް ޕޮޒިޝަން
         text: "{VAL} އަދަދަށް {GROUP} {PROPERTY} ސެޓްކުރޭ"
-        options:
-          GROUP:
-            '"BEAR"': ބެއަރ (ސާރިދޯޅު)
-            '"DUCK"': ޑަކްސް (އަސްދޫނި)
-            '"FROG"': ފްރޮގް (ބޮއް)
-            '"PINEAPPLE"': ޕައިންއެޕަލް (އަލަނާސި)
-            '"SHARK"': ޝާކްސް (މިޔަރު)
-            '"SLOTH"': ސްލޮތު
-            '"UNICORN"': ޔުނިކޯން
-          PROPERTY:
-            '"rotation"': އެނބުރޭ މިންވަރު
-            '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
-            '"y"': ވާރޓިކަލް ޕޮޒިޝަން
-            '"tint"': ކުލަ
       Dancelab_setPropRandom:
-        text: "{SPRITE} {PROPERTY} ރެންޑަމް ކޮށްލާ"
         options:
           PROPERTY:
             '"rotation"': އެނބުރޭ މިންވަރު
+            '"tint"': ކުލަ
             '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
             '"y"': ވާރޓިކަލް ޕޮޒިޝަން
-            '"tint"': ކުލަ
+        text: "{SPRITE} {PROPERTY} ރެންޑަމް ކޮށްލާ"
       Dancelab_setPropRandomEach:
-        text: "{GROUP} {PROPERTY} ރެންޑަމް ކޮށްލާ"
         options:
           GROUP:
             '"BEAR"': ބެއަރ (ސާރިދޯޅު)
@@ -565,13 +564,13 @@ dv:
             '"UNICORN"': ޔުނިކޯން
           PROPERTY:
             '"rotation"': އެނބުރޭ މިންވަރު
+            '"tint"': ކުލަ
             '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
             '"y"': ވާރޓިކަލް ޕޮޒިޝަން
-            '"tint"': ކުލަ
+        text: "{GROUP} {PROPERTY} ރެންޑަމް ކޮށްލާ"
       Dancelab_setTint:
         text: "{SPRITE} ގެ ކުލަ {VAL} އަށް ސެޓް ކުރޭ"
       Dancelab_setTintEach:
-        text: "{THIS} ގެ ކުލަ {VAL} އަށް ސެޓް ކުރޭ"
         options:
           THIS:
             '"BEAR"': ބެއަރ (ސާރިދޯޅު)
@@ -581,8 +580,8 @@ dv:
             '"SHARK"': ޝާކްސް (މިޔަރު)
             '"SLOTH"': ސްލޮތު
             '"UNICORN"': ޔުނިކޯން
+        text: "{THIS} ގެ ކުލަ {VAL} އަށް ސެޓް ކުރޭ"
       Dancelab_setTintEachInline:
-        text: "{THIS} ގެ ކުލަ {VAL} އަށް ސެޓް ކުރޭ"
         options:
           THIS:
             '"BEAR"': ބެއަރ (ސާރިދޯޅު)
@@ -592,16 +591,16 @@ dv:
             '"SHARK"': ޝާކްސް (މިޔަރު)
             '"SLOTH"': ސްލޮތު
             '"UNICORN"': ޔުނިކޯން
+        text: "{THIS} ގެ ކުލަ {VAL} އަށް ސެޓް ކުރޭ"
       Dancelab_setTintInline:
         text: "{SPRITE} ގެ ކުލަ {VAL} އަށް ސެޓް ކުރޭ"
       Dancelab_setVisible:
-        text: "{SPRITE} ގެ ވިޒިބިލިޓީ {VISIBILITY} އަށް ސެޓް ކުރޭ"
         options:
           VISIBILITY:
-            'true': ވިސިބަލް - ފެނޭ
             'false': އިންވިސިބަލް - ނުފެނޭ
+            'true': ވިސިބަލް - ފެނޭ
+        text: "{SPRITE} ގެ ވިޒިބިލިޓީ {VISIBILITY} އަށް ސެޓް ކުރޭ"
       Dancelab_setVisibleEach:
-        text: "{THIS} ގެ ވިޒިބިލިޓީ {VISIBILITY} އަށް ސެޓް ކުރޭ"
         options:
           THIS:
             '"BEAR"': ބެއަރ (ސާރިދޯޅު)
@@ -612,55 +611,55 @@ dv:
             '"SLOTH"': ސްލޮތު
             '"UNICORN"': ޔުނިކޯން
           VISIBILITY:
-            'true': ވިސިބަލް - ފެނޭ
             'false': އިންވިސިބަލް - ނުފެނޭ
+            'true': ވިސިބަލް - ފެނޭ
+        text: "{THIS} ގެ ވިޒިބިލިޓީ {VISIBILITY} އަށް ސެޓް ކުރޭ"
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"rotation"': އެނބުރޭ މިންވަރު
+            '"tint"': ކުލަ
+            '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
+            '"y"': ވާރޓިކަލް ޕޮޒިޝަން
+          RANGE:
+            '"bass"': ބޭސް
+            '"mid"': މިޑް
+            '"treble"': ޓްރެބްލް
         text: "{SPRITE} ގެ {PROPERTY} ފެށެނީ މި {RANGE} އިން"
-        options:
-          PROPERTY:
-            '"rotation"': އެނބުރޭ މިންވަރު
-            '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
-            '"y"': ވާރޓިކަލް ޕޮޒިޝަން
-            '"tint"': ކުލަ
-          RANGE:
-            '"bass"': ބޭސް
-            '"mid"': މިޑް
-            '"treble"': ޓްރެބްލް
       Dancelab_startMappingEach:
+        options:
+          GROUP:
+            '"BEAR"': ބެއަރ (ސާރިދޯޅު)
+            '"DUCK"': ޑަކްސް (އަސްދޫނި)
+            '"FROG"': ފްރޮގް (ބޮއް)
+            '"PINEAPPLE"': ޕައިންއެޕަލް (އަލަނާސި)
+            '"SHARK"': ޝާކްސް (މިޔަރު)
+            '"SLOTH"': ސްލޮތު
+            '"UNICORN"': ޔުނިކޯން
+          PROPERTY:
+            '"rotation"': އެނބުރޭ މިންވަރު
+            '"tint"': ކުލަ
+            '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
+            '"y"': ވާރޓިކަލް ޕޮޒިޝަން
+          RANGE:
+            '"bass"': ބޭސް
+            '"mid"': މިޑް
+            '"treble"': ޓްރެބްލް
         text: "{GROUP} ގެ {PROPERTY} ފެށެނީ މި {RANGE} އިން"
-        options:
-          GROUP:
-            '"BEAR"': ބެއަރ (ސާރިދޯޅު)
-            '"DUCK"': ޑަކްސް (އަސްދޫނި)
-            '"FROG"': ފްރޮގް (ބޮއް)
-            '"PINEAPPLE"': ޕައިންއެޕަލް (އަލަނާސި)
-            '"SHARK"': ޝާކްސް (މިޔަރު)
-            '"SLOTH"': ސްލޮތު
-            '"UNICORN"': ޔުނިކޯން
-          PROPERTY:
-            '"rotation"': އެނބުރޭ މިންވަރު
-            '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
-            '"y"': ވާރޓިކަލް ޕޮޒިޝަން
-            '"tint"': ކުލަ
-          RANGE:
-            '"bass"': ބޭސް
-            '"mid"': މިޑް
-            '"treble"': ޓްރެބްލް
       Dancelab_stopMapping:
-        text: "{SPRITE} ގެ {PROPERTY} ނިމެނީ މި {RANGE} އިން"
         options:
           PROPERTY:
+            '"direction"': މޫވް ކުރަންވީ ދިމާ
             '"rotation"': އެނބުރޭ މިންވަރު
+            '"tint"': ކުލަ
             '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
             '"y"': ވާރޓިކަލް ޕޮޒިޝަން
-            '"direction"': މޫވް ކުރަންވީ ދިމާ
-            '"tint"': ކުލަ
           RANGE:
             '"bass"': ބޭސް
             '"mid"': މިޑް
             '"treble"': ޓްރެބްލް
+        text: "{SPRITE} ގެ {PROPERTY} ނިމެނީ މި {RANGE} އިން"
       Dancelab_stopMappingEach:
-        text: "{GROUP} ގެ {PROPERTY} ނިމެނީ މި {RANGE} އިން"
         options:
           GROUP:
             '"BEAR"': ބެއަރ (ސާރިދޯޅު)
@@ -671,48 +670,19 @@ dv:
             '"SLOTH"': ސްލޮތު
             '"UNICORN"': ޔުނިކޯން
           PROPERTY:
+            '"direction"': މޫވް ކުރަންވީ ދިމާ
             '"rotation"': އެނބުރޭ މިންވަރު
+            '"tint"': ކުލަ
             '"x"': ހޮރިޒޮންޓަލް ޕޮޒިޝަން
             '"y"': ވާރޓިކަލް ޕޮޒިޝަން
-            '"direction"': މޫވް ކުރަންވީ ދިމާ
-            '"tint"': ކުލަ
           RANGE:
             '"bass"': ބޭސް
             '"mid"': މިޑް
             '"treble"': ޓްރެބްލް
+        text: "{GROUP} ގެ {PROPERTY} ނިމެނީ މި {RANGE} އިން"
       Dancelab_translateStrings:
-        text: "{STRING} ތަރުޖަމާކުރޭ"
         options:
           STRING:
-            '"music_wave"': ވޭވްސް
-            '"ripples"': ރިޕްލްސް
-            '"ripples_random"': ރެންޑަމް ރިޕްލްސް
-            '"quads"': އެންޖެލްސް
-            '"flowers"': ފްލާވަރ - މައު
-            '"popsicles"': ޕޮޕްސިކަލް
-            '"squiggles"': ސްކުއިގްލްސް
-            '"growing_stars"': ބޮޑުވަމުންދާ ތަރި
-            '"emojis"': އިމޯޖީސް
-            '"hearts_colorful"': ހާރޓްސް
-            '"paint_drio"': ޕެއިންޓް ޑްރިޕް
-            '"exploding_stars"': ސްޓަރ ބަރސްޓް
-            '"row_top"': މަތީ ރޯ
-            '"row_bottom"': ތިރީ ރޯ
-            '"column_left"': ވާތު ކޮލަމް
-            '"column_right"': ކަނާތު ކޮލަމް
-            '"mural"': މިއުރަލް
-            '"safari"': ސަފާރީ
-            '"network"': ނެޓްވޯކް
-            '"highway"': ހައިވޭ
-            '"stream"': ސްޓްރީމް
-            '"tile"': ޓައިލް
-            '"shadow"': ޝެޑޯ - ހިޔަނި
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"z"': z
             '"0"': 0 (ސުމެއް)
             '"2"': 2 (ދޭއް)
             '"3"': 3 (ތިނެއް)
@@ -722,16 +692,54 @@ dv:
             '"7"': 7 (ހަތެއް)
             '"8"': 8 (އަށެއް)
             '"9"': 9 (ނުވައެއް)
+            '"column_left"': ވާތު ކޮލަމް
+            '"column_right"': ކަނާތު ކޮލަމް
+            '"emojis"': އިމޯޖީސް
+            '"exploding_stars"': ސްޓަރ ބަރސްޓް
+            '"flowers"': ފްލާވަރ - މައު
+            '"growing_stars"': ބޮޑުވަމުންދާ ތަރި
+            '"hearts_colorful"': ހާރޓްސް
+            '"highway"': ހައިވޭ
+            '"mural"': މިއުރަލް
+            '"music_wave"': ވޭވްސް
+            '"network"': ނެޓްވޯކް
+            '"paint_drio"': ޕެއިންޓް ޑްރިޕް
+            '"popsicles"': ޕޮޕްސިކަލް
+            '"quads"': އެންޖެލްސް
+            '"ripples"': ރިޕްލްސް
+            '"ripples_random"': ރެންޑަމް ރިޕްލްސް
+            '"row_bottom"': ތިރީ ރޯ
+            '"row_top"': މަތީ ރޯ
+            '"s"': s
+            '"safari"': ސަފާރީ
+            '"shadow"': ޝެޑޯ - ހިޔަނި
+            '"squiggles"': ސްކުއިގްލްސް
+            '"stream"': ސްޓްރީމް
+            '"t"': t
+            '"tile"': ޓައިލް
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"z"': z
+        text: "{STRING} ތަރުޖަމާކުރޭ"
       Dancelab_whenKey:
-        text: "{KEY} އަށް ފިތުމުން"
         options:
           KEY:
-            '"enter"': އެންޓަރ
+            '"0"': 0 (ސުމެއް)
+            '"2"': 2 (ދޭއް)
+            '"3"': 3 (ތިނެއް)
+            '"4"': 4 (ހަތަރެއް)
+            '"5"': 5 (ފަހެއް)
+            '"6"': 6 (ހައެއް)
+            '"7"': 7 (ހަތެއް)
+            '"8"': 8 (އަށެއް)
+            '"9"': 9 (ނުވައެއް)
             '"a"': a
             '"b"': b
             '"c"': c
             '"d"': d
             '"e"': e
+            '"enter"': އެންޓަރ
             '"f"': f
             '"g"': g
             '"h"': h
@@ -750,22 +758,14 @@ dv:
             '"v"': v
             '"w"': w
             '"z"': z
-            '"0"': 0 (ސުމެއް)
-            '"2"': 2 (ދޭއް)
-            '"3"': 3 (ތިނެއް)
-            '"4"': 4 (ހަތަރެއް)
-            '"5"': 5 (ފަހެއް)
-            '"6"': 6 (ހައެއް)
-            '"7"': 7 (ހަތެއް)
-            '"8"': 8 (އަށެއް)
-            '"9"': 9 (ނުވައެއް)
+        text: "{KEY} އަށް ފިތުމުން"
       Dancelab_whenPeak:
-        text: "{RANGE} ޕީކުވުމުން"
         options:
           RANGE:
             '0': ބޭސް
             '1': މިޑް
             '2': ޓްރެބްލް
+        text: "{RANGE} ޕީކުވުމުން"
       Dancelab_whenSetup:
         text: ސެޓް އަޕް
       Dancelab_whenSetup2:
@@ -773,8 +773,8 @@ dv:
       Dancelab_whenSetupSong:
         options:
           SONG:
-            '"macklemore90"': މެކްލްމޯ - ކާންޓް ހޯލްޑް އަސް
             '"hammer"': އެމްސީ ހެމަރ - ޔު ކާންޓް ޓަޗް ދިސް
+            '"macklemore90"': މެކްލްމޯ - ކާންޓް ހޯލްޑް އަސް
             '"peas"': ބްލެކް އައިޑް ޕީސް - އައި ގޮޓް އަ ފީލިންގ
       DansBlocks_setForegroundEffect2:
         options:
@@ -782,25 +782,118 @@ dv:
             '"bubbles"': ބަބްލްސް
             '"confetti"': ކޮންފެޓީ
             '"starburst"': ސްޓަރ ބަރސްޓް
-      gamelab_changePropBy:
-        text: "{VAL} އަދަދަށް {SPRITE} {PROPERTY} ބަދަލުކުރޭ"
+      Mikelab_changePropBy:
         options:
           PROPERTY:
-            '"rotation"': އެނބުރޭ މިންވަރު
             '"direction"': މޫވް ކުރަންވީ ދިމާ
-      gamelab_everyInterval:
-        text: ކޮންމެ {N} {UNIT} އަކަށް ރިޕީޓްކުރޭ
-      gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
+            '"rotation"': އެނބުރޭ މިންވަރު
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 100}": މަތިން ވާތް ފަރާތް
+            "{x: 100, y: 300}": ތިރިން ވާތް ފަރާތް
+            "{x: 200, y: 100}": މަތި
+            "{x: 200, y: 300}": ތިރި
+            "{x: 300, y: 100}": މަތިން ކަނާތް ފަރާތް
+            "{x: 300, y: 300}": ތިރިން ކަނާތް ފަރާތް
+      Mikelab_getProp:
         options:
           PROPERTY:
-            '"rotation"': އެނބުރޭ މިންވަރު
             '"direction"': މޫވް ކުރަންވީ ދިމާ
-            '"tint"': ކުލަ
-      gamelab_int10:
+            '"rotation"': އެނބުރޭ މިންވަރު
+      Mikelab_groupChangePropBy:
         options:
-          VALUE:
+          PROPERTY:
+            '"direction"': މޫވް ކުރަންވީ ދިމާ
+            '"rotation"': އެނބުރޭ މިންވަރު
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 100}": މަތިން ވާތް ފަރާތް
+            "{x: 100, y: 300}": ތިރިން ވާތް ފަރާތް
+            "{x: 200, y: 100}": މަތި
+            "{x: 200, y: 300}": ތިރި
+            "{x: 300, y: 100}": މަތިން ކަނާތް ފަރާތް
+            "{x: 300, y: 300}": ތިރިން ކަނާތް ފަރާތް
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"direction"': މޫވް ކުރަންވީ ދިމާ
+            '"rotation"': އެނބުރޭ މިންވަރު
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"direction"': މޫވް ކުރަންވީ ދިމާ
+            '"rotation"': އެނބުރޭ މިންވަރު
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.ClapHigh: މަތިން އަތްތިލަބަޑި ޖެހުން
+            MOVES.Clown: ގަންގަމް
+            MOVES.Dab: ޑެބް ކުރުން
+            MOVES.DoubleJam: ޑަބަލް ޑައުން
+            MOVES.Drop: ޑްރޮޕް
+            MOVES.Floss: ފްލޮސް
+            MOVES.Fresh: ފްރެޝް
+            MOVES.Kick: ސްޓަރ - ތަރި
+            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
+            MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
+        text: |-
+          {SPRITE} މި ނެށުން {DANCE} ނަށާ ނަމަ
+          {DO1} {DO2}
+      Mikelab_setProp:
+        options:
+          PROPERTY:
+            '"direction"': މޫވް ކުރަންވީ ދިމާ
+            '"rotation"': އެނބުރޭ މިންވަރު
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 100}": މަތިން ވާތް ފަރާތް
+            "{x: 100, y: 300}": ތިރިން ވާތް ފަރާތް
+            "{x: 200, y: 100}": މަތި
+            "{x: 200, y: 300}": ތިރި
+            "{x: 300, y: 100}": މަތިން ކަނާތް ފަރާތް
+            "{x: 300, y: 300}": ތިރިން ކަނާތް ފަރާތް
+      Mikelab_whenKeyPressed:
+        text: "{KEY} އަށް ފިތުމުން"
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"iceCream"': އައިސްކްރީމް
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': ލަސް
+      Poetry_setBackground:
+        text: "{COLOR} އަށް ބެކްގްރައުންޑް ކުލަ ސެޓް ކުރަން"
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"bubbles"': ބަބްލްސް
+            '"colors"': ކުލަ
+            '"confetti"': ކޮންފެޓީ
+            '"ripples"': ރިޕްލްސް
+            '"space"': ސްޕޭސް
+            '"squiggles"': ސްކުއިގްލްސް
+            '"stars"': ސްޓަރ - ތަރި
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"bubbles"': ބަބްލްސް
+            '"confetti"': ކޮންފެޓީ
+            '"starburst"': ސްޓަރ ބަރސްޓް
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
             '1': '1'
+            '10': 10 (ދިހައެއް)
+            '11': 11 (އެގާރަ)
+            '12': 12 (ބާރަ)
+            '13': 13 (ތޭރަ)
+            '14': 14 (ސާދަ)
+            '15': 15 (ފަނަރަ)
             '2': 2 (ދޭއް)
             '3': 3 (ތިނެއް)
             '4': 4 (ހަތަރެއް)
@@ -809,7 +902,61 @@ dv:
             '7': 7 (ހަތެއް)
             '8': 8 (އަށެއް)
             '9': 9 (ނުވައެއް)
+      aalab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': ބޯޑަރު
+            '"row"': ރޯ
+      binary_whenKey:
+        options:
+          KEY:
+            '"a"': a
+            '"d"': d
+            '"s"': s
+            '"w"': w
+        text: "{KEY} އަށް ފިތުމުން"
+      ecosystems_int10:
+        options:
+          VALUE:
+            '0': 0 (ސުމެއް)
+            '1': '1'
             '10': 10 (ދިހައެއް)
+            '2': 2 (ދޭއް)
+            '3': 3 (ތިނެއް)
+            '4': 4 (ހަތަރެއް)
+            '5': 5 (ފަހެއް)
+            '6': 6 (ހައެއް)
+            '7': 7 (ހަތެއް)
+            '8': 8 (އަށެއް)
+            '9': 9 (ނުވައެއް)
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"direction"': މޫވް ކުރަންވީ ދިމާ
+            '"rotation"': އެނބުރޭ މިންވަރު
+        text: "{VAL} އަދަދަށް {SPRITE} {PROPERTY} ބަދަލުކުރޭ"
+      gamelab_everyInterval:
+        text: ކޮންމެ {N} {UNIT} އަކަށް ރިޕީޓްކުރޭ
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"direction"': މޫވް ކުރަންވީ ދިމާ
+            '"rotation"': އެނބުރޭ މިންވަރު
+            '"tint"': ކުލަ
+        text: "{SPRITE} {PROPERTY}"
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '10': 10 (ދިހައެއް)
+            '2': 2 (ދޭއް)
+            '3': 3 (ތިނެއް)
+            '4': 4 (ހަތަރެއް)
+            '5': 5 (ފަހެއް)
+            '6': 6 (ހައެއް)
+            '7': 7 (ހަތެއް)
+            '8': 8 (އަށެއް)
+            '9': 9 (ނުވައެއް)
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -865,35 +1012,35 @@ dv:
             '"w"': w
             '"z"': z
       gamelab_layoutSprites:
-        text: "{FORMAT} އަށް {GROUP} ލޭއައުޓްކޮށްލާ"
         options:
           FORMAT:
             '"border"': ބޯޑަރު
-            '"circle"': ސަރކަލް (ވަށްބުރު)
-            '"top"': މަތީ ރޯ
-            '"row"': ރޯ
             '"bottom"': ތިރީ ރޯ
-            '"left"': ވާތު ކޮލަމް
+            '"circle"': ސަރކަލް (ވަށްބުރު)
             '"column"': ކޮލަމް
+            '"left"': ވާތު ކޮލަމް
             '"right"': ކަނާތު ކޮލަމް
+            '"row"': ރޯ
+            '"top"': މަތީ ރޯ
+        text: "{FORMAT} އަށް {GROUP} ލޭއައުޓްކޮށްލާ"
       gamelab_makeNewSpriteGroup:
         options:
           FORMAT:
             '"border"': ބޯޑަރު
-            '"circle"': ސަރކަލް (ވަށްބުރު)
-            '"top"': މަތީ ރޯ
-            '"row"': ރޯ
             '"bottom"': ތިރީ ރޯ
-            '"left"': ވާތު ކޮލަމް
+            '"circle"': ސަރކަލް (ވަށްބުރު)
             '"column"': ކޮލަމް
+            '"left"': ވާތު ކޮލަމް
             '"right"': ކަނާތު ކޮލަމް
+            '"row"': ރޯ
+            '"top"': މަތީ ރޯ
       gamelab_setBackground:
         text: "{COLOR} އަށް ބެކްގްރައުންޑް ކުލަ ސެޓް ކުރަން"
       gamelab_setProp:
         options:
           PROPERTY:
-            '"rotation"': އެނބުރޭ މިންވަރު
             '"direction"': މޫވް ކުރަންވީ ދިމާ
+            '"rotation"': އެނބުރޭ މިންވަރު
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
@@ -903,167 +1050,20 @@ dv:
             '7': އަވަސް
             '9': extra fast
       gamelab_whenKey:
-        text: "{KEY} އަށް ފިތުމުން"
         options:
           KEY:
             '"a"': a
-            '"w"': w
-            '"s"': s
             '"d"': d
+            '"s"': s
+            '"w"': w
+        text: "{KEY} އަށް ފިތުމުން"
       gamelab_whileKey:
         options:
           KEY:
             '"a"': a
-            '"w"': w
-            '"s"': s
             '"d"': d
-      Mikelab_changePropBy:
-        options:
-          PROPERTY:
-            '"rotation"': އެނބުރޭ މިންވަރު
-            '"direction"': މޫވް ކުރަންވީ ދިމާ
-      Mikelab_createNewSprite:
-        options:
-          LOCATION:
-            "{x: 200, y: 100}": މަތި
-            "{x: 200, y: 300}": ތިރި
-            "{x: 100, y: 100}": މަތިން ވާތް ފަރާތް
-            "{x: 300, y: 100}": މަތިން ކަނާތް ފަރާތް
-            "{x: 100, y: 300}": ތިރިން ވާތް ފަރާތް
-            "{x: 300, y: 300}": ތިރިން ކަނާތް ފަރާތް
-      Mikelab_getProp:
-        options:
-          PROPERTY:
-            '"rotation"': އެނބުރޭ މިންވަރު
-            '"direction"': މޫވް ކުރަންވީ ދިމާ
-      Mikelab_groupChangePropBy:
-        options:
-          PROPERTY:
-            '"rotation"': އެނބުރޭ މިންވަރު
-            '"direction"': މޫވް ކުރަންވީ ދިމާ
-      Mikelab_groupCreateNewSprite:
-        options:
-          LOCATION:
-            "{x: 200, y: 100}": މަތި
-            "{x: 200, y: 300}": ތިރި
-            "{x: 100, y: 100}": މަތިން ވާތް ފަރާތް
-            "{x: 300, y: 100}": މަތިން ކަނާތް ފަރާތް
-            "{x: 100, y: 300}": ތިރިން ވާތް ފަރާތް
-            "{x: 300, y: 300}": ތިރިން ކަނާތް ފަރާތް
-      Mikelab_groupGetProp:
-        options:
-          PROPERTY:
-            '"rotation"': އެނބުރޭ މިންވަރު
-            '"direction"': މޫވް ކުރަންވީ ދިމާ
-      Mikelab_groupSetProp:
-        options:
-          PROPERTY:
-            '"rotation"': އެނބުރޭ މިންވަރު
-            '"direction"': މޫވް ކުރަންވީ ދިމާ
-      Mikelab_ifDanceIs:
-        text: |-
-          {SPRITE} މި ނެށުން {DANCE} ނަށާ ނަމަ
-          {DO1} {DO2}
-        options:
-          DANCE:
-            MOVES.ClapHigh: މަތިން އަތްތިލަބަޑި ޖެހުން
-            MOVES.Clown: ގަންގަމް
-            MOVES.Dab: ޑެބް ކުރުން
-            MOVES.DoubleJam: ޑަބަލް ޑައުން
-            MOVES.Drop: ޑްރޮޕް
-            MOVES.Floss: ފްލޮސް
-            MOVES.Fresh: ފްރެޝް
-            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
-            MOVES.Kick: ސްޓަރ - ތަރި
-            MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
-      Mikelab_setProp:
-        options:
-          PROPERTY:
-            '"rotation"': އެނބުރޭ މިންވަރު
-            '"direction"': މޫވް ކުރަންވީ ދިމާ
-      Mikelab_sprite:
-        options:
-          LOCATION:
-            "{x: 200, y: 100}": މަތި
-            "{x: 200, y: 300}": ތިރި
-            "{x: 100, y: 100}": މަތިން ވާތް ފަރާތް
-            "{x: 300, y: 100}": މަތިން ކަނާތް ފަރާތް
-            "{x: 100, y: 300}": ތިރިން ވާތް ފަރާތް
-            "{x: 300, y: 300}": ތިރިން ކަނާތް ފަރާތް
-      Mikelab_whenKeyPressed:
-        text: "{KEY} އަށް ފިތުމުން"
-      Poetry_addFrame:
-        options:
-          BRUSH:
-            '"iceCream"': އައިސްކްރީމް
-      Poetry_playMusic:
-        options:
-          SOUND:
-            '"sound://category_loops/stabilizing_breath_loop1.mp3"': ލަސް
-      Poetry_setBackground:
-        text: "{COLOR} އަށް ބެކްގްރައުންޑް ކުލަ ސެޓް ކުރަން"
-      Poetry_setBackgroundEffect:
-        options:
-          EFFECT:
-            '"bubbles"': ބަބްލްސް
-            '"confetti"': ކޮންފެޓީ
-            '"space"': ސްޕޭސް
-            '"ripples"': ރިޕްލްސް
-            '"colors"': ކުލަ
-            '"stars"': ސްޓަރ - ތަރި
-            '"squiggles"': ސްކުއިގްލްސް
-      Poetry_setForegroundEffect:
-        options:
-          EFFECT:
-            '"bubbles"': ބަބްލްސް
-            '"confetti"': ކޮންފެޓީ
-            '"starburst"': ސްޓަރ ބަރސްޓް
-      Poetry_whenLineShows:
-        options:
-          N:
-            '0': "???"
-            '1': '1'
-            '2': 2 (ދޭއް)
-            '3': 3 (ތިނެއް)
-            '4': 4 (ހަތަރެއް)
-            '5': 5 (ފަހެއް)
-            '6': 6 (ހައެއް)
-            '7': 7 (ހަތެއް)
-            '8': 8 (އަށެއް)
-            '9': 9 (ނުވައެއް)
-            '10': 10 (ދިހައެއް)
-            '11': 11 (އެގާރަ)
-            '12': 12 (ބާރަ)
-            '13': 13 (ތޭރަ)
-            '14': 14 (ސާދަ)
-            '15': 15 (ފަނަރަ)
-      aalab_layoutSprites:
-        options:
-          FORMAT:
-            '"border"': ބޯޑަރު
-            '"row"': ރޯ
-      binary_whenKey:
-        text: "{KEY} އަށް ފިތުމުން"
-        options:
-          KEY:
-            '"a"': a
-            '"w"': w
             '"s"': s
-            '"d"': d
-      ecosystems_int10:
-        options:
-          VALUE:
-            '0': 0 (ސުމެއް)
-            '1': '1'
-            '2': 2 (ދޭއް)
-            '3': 3 (ތިނެއް)
-            '4': 4 (ހަތަރެއް)
-            '5': 5 (ފަހެއް)
-            '6': 6 (ހައެއް)
-            '7': 7 (ހަތެއް)
-            '8': 8 (އަށެއް)
-            '9': 9 (ނުވައެއް)
-            '10': 10 (ދިހައެއް)
+            '"w"': w
       storylab_setForegroundEffect2:
         options:
           EFFECT:

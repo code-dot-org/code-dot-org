@@ -1,82 +1,188 @@
 ---
 tr:
   data:
-    game:
-      name:
-        Unplug1: Bilgisayar Bilimine Giriş
-        Maze: Labirent
-        Multi: Çoktan Seçmeli Maddeler
-        Unplug2: Sayısal Düşünme
-        Unplug3: Grafik Kağıdı Programlama
-        Artist: Sanatçı
-        Unplug4: Algoritmalar
-        Artist2: Sanatçı 2
-        Unplug5: Fonksiyonlar
-        Farmer: Çiftçi
-        Unplug6: Koşullar
-        Artist3: Sanatçı 3
-        Unplug7: Şarkı yazma
-        Farmer2: Çiftçi 2
-        Unplug8: Soyutlama
-        Artist4: Sanatçı 4
-        Unplug9: Röle Programlama
-        Farmer3: Çiftçi 3
-        Unplug10: İnternet
-        Artist5: Sanatçı 5
-        Unplug11: Özet
-        MazeEC: Labirent
-        Bounce: Sıçrama
-        Flappy: Flappy Bird
-        Jigsaw: Yapboz
-        MazeStep: Labirent Adım Modu
-        Wordsearch: Kelime arama
-        Webapp: App Laboratuvarı
-        ArtistEC: Sanatçı
-        TextMatch: Metin Eşleştirmesi
-        StudioEC: Oyun Laboratuvarı
-        Applab: App Laboratuvarı
-        NetSim: İnternet Simülatörü
-        Custom: Sanatçı
-        CustomStudio: Oyun Laboratuvarı
-        Gamelab: Oyun Laboratuvarı
-        Spritelab: Hareketli Nesne Laboratuvarı
-    trophy:
-      name:
-        Bronze: Bronz
-        Silver: Gümüş
-        Gold: Altın
+    callout:
+      text:
+        Infinity_move_collide_callout: Bu olay gerçekleştiğinde ses çal.
+        Infinity_move_directions_callout: Hangi blok yukarı tuşuna basıldığında Baymax'ı
+          yukarı doğru ilerletir?
+        Infinity_move_directions_callout_arrow: Yönlendirmek için bu okları kullanın
+        Infinity_move_right_runbutton: '"İlerle" bloğunu ekle'
+        Infinity_repeat_callout: '"İlerle" bloklarının buraya yerleştir'
+        actions_category: Ataç kutusunun yeni bir görünümü var! "Eylemler" blokları
+          artık burada.
+        add_and_drag_parameter: Buraya parametrenizin adını yazın, "ekle"ye tıklayın
+          ve ardından fonksiyonunuzun tanımına sürükleyin
+        arrows_move_actor: Karakteri hareket ettirmek için okları kullan
+        bee_for_loop: Arının toplaması için nektar sayısını istediğiniz sayıya sürükleyin
+        category_explanation: Aynı bloklara sahipsin fakat şimdi kategorik olarak
+          sıralandılar.
+        change_here: Değişikliği burada yap
+        craft_callout_moveforward: Bu kod, lav olup olmadığını kontrol edecek, ileri
+          gitmek için bir komut ekleyebilir misiniz?
+        craft_callout_preplaced: Başlamanız için buraya birkaç blok koyduk
+        craft_callout_preplaced_house: Bu kod, evinizi inşa etmeye başlayacak. Bakalım
+          bitirebilecek misiniz?
+        craft_drag_block_callout: Bir "ileri git" bloğunu sürükleyin ve diğer bloğun
+          altına dayayın
+        craft_inside_repeat: Blokları buraya yerleştirerek eylemleri tekrar edin
+        craft_run_button_callout: Programınızı denemek içi "Çalıştır"a basın
+        craft_what_is_iron: Bu demiri çıkar!
+        create_function: '"Fonksiyonlar" açılır penceresini açmak için buraya tıkla,
+          ardından "Yeni bir fonksiyon oluştur" butonuna tıkla.'
+        degrees_per_side: 360'ı kenar sayısına bölerek her açının derecesini bulun.
+        drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
+        draw_square_hint: 'İpucu: Son bulmacada yaptığın kare döngüsünü kullan.'
+        edit_add_parameter: Fonksiyonuna parametre eklemek için düzenle'ye tıkla
+        edit_draw_square: Döngü eklemek ve fonksiyonu düzenlemek için bu butonu kullan.
+        edit_function: Fonksiyonunu düzenlemek için buraya tıkla.
+        edit_get_nectar: Fonksiyonu düzenlemek ve arıyı nektara ulaştırmak için yönünü
+          düzeltmekte bu butonu kullan.
+        fill_in_actor: '"???" kısmını her oyuncuya karşılık gelen sayılarla (1,2 ve
+          3) doldurun'
+        frozen_circle_function_in_circle_turn: Her daireyi oluşturduktan sonra dönmeyi
+          unutma.
+        frozen_circle_function_with_parameter_circle: '"Bir daire oluştur" bloğunu
+          kullan ve ölçüyü değiştir.'
+        frozen_create_square: Kare oluşturmak için daha fazla blok ekle
+        frozen_diamond_repeat: Bu şekli oluşturmak için yineleme bloğunu kullan.
+        frozen_snowflake_branch: '"Kar tanesi dalı oluştur" bloğunu kullan'
+        function_editor_draw_square: Bu, fonksiyonunuzun tanımı. Bu bloklar "kare
+          çiz" bloğunu her kullandığınız zaman çalışır
+        get_nectar: Yeni "nektarı al" bloğunu kullan.
+        gray_block_explanation: Gri bloklar silinemezler. Yine de bulmacayı çözebilir
+          misin?
+        house_hint: Resim henüz bir ev gibi görünmüyorsa sorun yok. Bunu sonraki bulmacada
+          düzelteceğiz.
+        if_bee_nectar: Arının nektarı alması gerekiyorsa "if" bloğunu kullanın
+        if_else_bee: '"if/else" bloğunu kullan, böylece arı bir çiçekten nektarı alır
+          ve "eğer" çiçek değilse bal yapar'
+        instructions_repeat_explanation: Her bulmaca için gerekli talimatlar burada
+          tekrarlanır
+        jigsaw_click: Bu bloğa tıklayın!
+        length_parameter: Bu fonksiyonu güncelleyebilir misin? Böylece "uzunluk" parametresini
+          kullanabilir.
+        logic_category: '"if/else" bloğunu bulmak için "Mantık" açılır penceresini
+          aç.'
+        move_elsa_forward: Elsa'yı ilerletmek için bir "İlerle" bloğunu sürükleyip
+          "Çalıştığında" bloğunun altına ekleyin.
+        name_function: Fonksiyonunun ismini buraya yaz
+        place_counter_variable: Sayaç değişkenini bu blokun içine sürükle
+        place_length_variable: Soru işaretlerinin yerine uzunluk değişkenini sürükle
+        place_variable: Değişkenini bloğun içine sürükle
+        playlab_add_blocks: Bloklarını buraya ekle
+        playlab_add_move: '"Hareket et" bloğunu tekrarla bloğunun içine ekle'
+        playlab_add_score: Skor bloklarını buraya ekle
+        playlab_arrow_keys: Çalıştır'a tıkladıktan sonra cadıyı yürütmek için bunları
+          kullanmayı unutma
+        playlab_drag_say: '"de" blokunu buraya sürükleyin ve "merhaba" yazın'
+        playlab_move_girl: Tenisçi kızı yürütmek için "sağa git" bloğunu kullan
+        playlab_play_sound: '"Sesi çal" bloğunu buraya ekle'
+        playlab_use_twice: Bu blok ikilisini kullan ve oyuncunun numarasını değiştirmeyi
+          unutma
+        repeat: Komutları tekrarlamak için blokları döngünün içine sürükleyin
+        repeat_blocks: '"Tekrarla" bloğunu kullanarak çalışma alanındaki blokların
+          etrafında döndürün'
+        repeat_blocks_1: "(1) Bu bloğu kullan ve çalışma alanındaki gri blokların
+          etrafına koy"
+        repeat_blocks_2: (2) "Tekrarla" bloğunu buraya taşı ve gri bloklar içine yerleştir
+        repeat_full_circle: Zombinin kaç kez tam daire yapacağını girin
+        replace_questions: Açılan menüden "???" yerine bir numara seçin
+        replace_questions_degree: Açılan menüden "???" yerine dönüş için doğru açıyı
+          seçin
+        right_arrow_fireball: Ateştoplarını fırlatmak için sağ ok tuşunu kullan
+        run: Programınızı denemek içi "Çalıştır"a basın
+        set_length: '"Uzunluğu" doğru değerine ayarlamak için bu bloğu kullan.'
+        set_sides: Bulmacayı tamamlamakta gerekli olan kenarların sayısını atamak
+          için bu bloğu kullan.
+        set_sprite_image: Bu hikayenin bir figürünü etkinleştirmek için "figürü görsele
+          ata" bloğunu "hikaye başladığında" bloğuna ekleyin
+        set_variable: Değişkenini atamak için bir sayı bloğunu buraya sürükle
+        show_code_explanation: Hazırladığınız programın kodlarını görmek için buraya
+          tıklayın
+        snowflake_dropdown: Bu açılan menüyü kullanarak farklı kar taneleri yaratın!
+        studio_say_text: Karakterinin ne söylemesini istiyorsan tırnak işaretleri
+          arasına yaz
+        turn_elsa: '"Dön" bloğunu kullanarak Elsa''yı döndürün. Açılan menüden Elsa''nın
+          ne kadar döneceğini belirleyebilirsiniz'
+        watch_again: Videoyu tekrar izlemek için burayı tıklayın
+        which_equation: Hangi denklem daha çok kenarı olan şekiller için her kenarı
+          daha kısa yapar?
+        write_draw_square_function: Kare çizmek için blokları araç kutusundan buraya
+          sürükle
+        write_draw_triangle_function: Üçgen çizmek için blokları araç kutusundan buraya
+          sürükle
     concept:
       description:
-        sequence: Sıra
+        function: Fonksiyonlar
         if: if bloğu
         if_else: Eğer-değilse bloğu
+        loop_for: Sayaç bloğu
         loop_times: Bloğu tekrarlayın
         loop_until: Blok kadar tekrarlayın
         loop_while: while bloğu
-        loop_for: Sayaç bloğu
-        function: Fonksiyonlar
         parameters: Fonksiyon parametreleri
+        sequence: Sıra
+    game:
+      name:
+        Applab: App Laboratuvarı
+        Artist: Sanatçı
+        Artist2: Sanatçı 2
+        Artist3: Sanatçı 3
+        Artist4: Sanatçı 4
+        Artist5: Sanatçı 5
+        ArtistEC: Sanatçı
+        Bounce: Sıçrama
+        Custom: Sanatçı
+        CustomStudio: Oyun Laboratuvarı
+        Farmer: Çiftçi
+        Farmer2: Çiftçi 2
+        Farmer3: Çiftçi 3
+        Flappy: Flappy Bird
+        Gamelab: Oyun Laboratuvarı
+        Jigsaw: Yapboz
+        Maze: Labirent
+        MazeEC: Labirent
+        MazeStep: Labirent Adım Modu
+        Multi: Çoktan Seçmeli Maddeler
+        NetSim: İnternet Simülatörü
+        Spritelab: Hareketli Nesne Laboratuvarı
+        StudioEC: Oyun Laboratuvarı
+        TextMatch: Metin Eşleştirmesi
+        Unplug1: Bilgisayar Bilimine Giriş
+        Unplug10: İnternet
+        Unplug11: Özet
+        Unplug2: Sayısal Düşünme
+        Unplug3: Grafik Kağıdı Programlama
+        Unplug4: Algoritmalar
+        Unplug5: Fonksiyonlar
+        Unplug6: Koşullar
+        Unplug7: Şarkı yazma
+        Unplug8: Soyutlama
+        Unplug9: Röle Programlama
+        Webapp: App Laboratuvarı
+        Wordsearch: Kelime arama
     level:
       instructions:
-        maze_2_2: Yaramaz domuzu yakalamama yardım edebilir misin? Oraya gitmem için
-          birkaç "İlerle" bloğunu birleştirmeli ve "Programı Çalıştır" tuşuna basmalısın.
+        Custom_builder: İstediğin seviyeyi çizmek için araç kutusundan blokları çalışma
+          alanına sürükle. Hazır olduğunda "Çalıştır" a bas.
+        applab_ec_simple: Araçlar kutusundaki blokları kullanarak kendi uygulamalarını
+          oluştur.
+        jigsaw_1: Bloğu tıklayın
+        jigsaw_10: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_11: Blokları numaralarına göre sıralayın
+        jigsaw_12: Blokları numaralarına göre sıralayın
+        jigsaw_13: Bulmacayı düzelt!
+        jigsaw_2: Bloğu hedefe sürükle
+        jigsaw_3: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_4: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_5: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_6: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_7: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_8: Şekli oluşturacak biçimde blokları düzenleyin
+        jigsaw_9: Şekli oluşturacak biçimde blokları düzenleyin
         maze_2_1: Bu domuz benim tüylerimi diken diken ediyor. Onu bulmama yardımcı
           ol!
-        maze_2_2_5: Yolu takip et ve beni sersem domuza götür. Patlayıcılardan uzak
-          dur yoksa bu tüylerim havaya uçacak!
-        maze_2_3: Yeşil düşmanıma gitmeme yardımcı ol! (Patlayıcılara dikkat et)
-        maze_2_4: Sakin ol ve kötü domuzu bulmama yardımcı ol. Aksi halde kızmaya
-          başlayabilirim!
-        maze_2_5: Sadece 2 blok kullanarak yeşil domuza ulaşabileceğim bir yol var.
-          Bulabilir misin?
-        maze_2_6: Sadece üç blok kullanarak beni yeşil işgalciye ulaştırmaya çalış.
-        maze_2_7: En az sayıda blok kullanarak bu kötü domuzcuğu ortadan kaldırmama
-          yardım et. Birden fazla "...defa tekrar et " bloğu kullanmayı dene.
-        maze_2_8: 'Eğer blok gri ise, bu onu silemeyeceğin anlamına gelir. Bu bulmacayı
-          3 defa tekrar eden "tekrar" bloğunu kullanarak çöz. Bu 3 bloğu gri renkteki
-          "tekrar" bloğunun içine yerleştir: ilerle, ilerle, dön.'
-        maze_2_9: Tamam, yeni "e kadar tekrarla" bloğunu dene. Bu, ben yeşil domuza
-          ulaşana kadar tekrarlayacak.
         maze_2_10: Tamam, pratik için son kez. Bunu sadece 4 blok kullanarak çözebilir
           misin?
         maze_2_11: Değerli kişi. Ben zombi. Ben açım. Ayçiçeklerini almam gerekli.
@@ -99,9 +205,284 @@ tr:
         maze_2_19: Daha karmaşık bir labirenti sadece 3 blok ekleyerek çözmeme yardımcı
           olur musun? Eğer doğru yaparsan, uzunluğu ne olursa olsun her kıvrımlı yolda
           yürüyebilirim.
+        maze_2_2: Yaramaz domuzu yakalamama yardım edebilir misin? Oraya gitmem için
+          birkaç "İlerle" bloğunu birleştirmeli ve "Programı Çalıştır" tuşuna basmalısın.
+        maze_2_2_5: Yolu takip et ve beni sersem domuza götür. Patlayıcılardan uzak
+          dur yoksa bu tüylerim havaya uçacak!
+        maze_2_3: Yeşil düşmanıma gitmeme yardımcı ol! (Patlayıcılara dikkat et)
+        maze_2_4: Sakin ol ve kötü domuzu bulmama yardımcı ol. Aksi halde kızmaya
+          başlayabilirim!
+        maze_2_5: Sadece 2 blok kullanarak yeşil domuza ulaşabileceğim bir yol var.
+          Bulabilir misin?
+        maze_2_6: Sadece üç blok kullanarak beni yeşil işgalciye ulaştırmaya çalış.
+        maze_2_7: En az sayıda blok kullanarak bu kötü domuzcuğu ortadan kaldırmama
+          yardım et. Birden fazla "...defa tekrar et " bloğu kullanmayı dene.
+        maze_2_8: 'Eğer blok gri ise, bu onu silemeyeceğin anlamına gelir. Bu bulmacayı
+          3 defa tekrar eden "tekrar" bloğunu kullanarak çöz. Bu 3 bloğu gri renkteki
+          "tekrar" bloğunun içine yerleştir: ilerle, ilerle, dön.'
+        maze_2_9: Tamam, yeni "e kadar tekrarla" bloğunu dene. Bu, ben yeşil domuza
+          ulaşana kadar tekrarlayacak.
+        maze_3_1: O domuzu almam gerek! Birkaç telefon görüşmesi için move() yazın;
+          böylece yumurtalarımı geri alabilirim.
+        maze_3_2: Bana bir program yaz, böylece domuza giden tüm yolları yapabileyim.
+        maze_3_3: Domuzu nasıl alabilirim? TNT kutusuna doğru gitmediğimden emin olun!
+        maze_3_4: Ahh! Beni TNT ve domuz çevresine alan bir program yazın.
+        maze_karel_1_1: Merhaba, ben bir çiftçiyim. Çiftlikteki alanı ekime hazırlamak
+          için düzleştirmemde yardımına ihtiyacım var. Beni bir toprak yığınına doğru
+          hareket ettir ve "Kaldır" bloğunu yığını kaldırmam için kullan.
+        maze_karel_1_10: |-
+          Geç saatlere kadar çalışıyorum,yani dışarısı karanlık,ve yığınların ne kadar geniş olduğunu söyleyemem."Süresince" bloğunda eskiden olduğu kadar seçeneğe sahip değilim.
+          Beni alanda hareket ettir ve bir yığın varsa onu kaldır.
+        maze_karel_1_11: 'Dışarısı hala karanlık. Beni alan boyunca ilerlet. Önümde
+          bir yığın varsa kaldır. Eğer bir çukur var ise içini doldur. İpucu: eğer
+          bloğunun üzerinde, seçeneklerin aşağı doğru açılan menüsünü kullan.'
+        maze_karel_1_2: Daha sonra beni çukura götür ve "doldur" bloğunu kullanarak,
+          iki kürek dolusu toprak ile doldur.
+        maze_karel_1_3: Beni toprak yığınına doğru hareket ettir ve olabildiğince
+          az blok kullanarak kaç kürek dolusu boşaltmam gerektiğini söyle.
+        maze_karel_1_4: 'Dört toprak yığınını kaldırmama yardımcı olabilir misin?
+          İpucu: Mümkünse tekrarla bloğu kullan.'
+        maze_karel_1_5: 'Delikleri 5 kürek dolusu toprakla doldurmam için bana yardım
+          et. İpucu: "süresince" bloğunun içine "tekrar" bloğunu yerleştirebilirsin.'
+        maze_karel_1_6: Tüm toprak yığınlarını kullanabildiğin kadar az blok kullanarak
+          kaldır. Liste menüsündeki yeni seçenekler bana bir yığının mı yoksa bir
+          çukurun mu üstünde olduğumu söyler.
+        maze_karel_1_7: Wow, çok derin bir çukur buldum! Kaç kürek dolusu toprağa
+          ihtiyacı olur bilmiyorum. Dolana kadar onu dolduracak bir program yazabilir
+          misin?
+        maze_karel_1_8: Alanın sonundaki çukuru doldurmama yardım et, kullanabildiğin
+          kadar az blok kullanarak.
+        maze_karel_1_9: Tüm toprak yığınlarını yok etmemi sağla. Kullanabildiğin kadar
+          az blok kullanmaya çalış. İpucu:"süresince" bloğunu kullanmaya çalış.
+        maze_karel_2_1: 'Tüm yığınları kaldırmam ve yerdeki tüm delikler doldurmama
+          yardım etmek için blokları kullanmayı dene. Pek çok blok kullanmaktansa
+          döngüleri kullanmayı dene. İpucu: Bir döngünün içinde başka bir döngü kullanabilirsin.'
+        maze_karel_2_10: Beni alanda oynat, bu iki fonksiyonu kullanarak tüm çukurları
+          doldurmama ve tüm yığınları kaldırmama yardım et.
+        maze_karel_2_2: Şu an Fonksiyonlar kategorisinde olan "5 dolgu" isimli kendi
+          bloğu biz tanımladık. O bloğu çukuru doldurmamda bana yardımcı olmak için
+          kullan.
+        maze_karel_2_3: Yeni "5 dolgu" isimli bloğu kullanarak tüm çukurları doldurmamı
+          sağla. "5 dolgu" bloğunu Fonksiyonlar kategorisinden sürükleyerek çıkarmalısın.
+        maze_karel_2_4: 7 kürek atabilen yeni bir fonksiyon tanımla. Daha sonra bu
+          blok ile tüm yığınları kaldırmama yardımcı olacak bir program yaz.
+        maze_karel_2_5: Bir yığından 6 kürek atabilen yeni bir fonksiyon oluştur ve
+          tüm yığınları kaldırmama yardımcı olmakta kullan.
+        maze_karel_2_6: '"5 dolgu" ve "8 kaldır" isimli iki yeni fonksiyon oluştur,
+          yığını kaldırmama ve çukuru doldurmama yardım et.'
+        maze_karel_2_7: Sahamda bir inek var! Beni inekten kaçındıracak ve çamuru
+          kaldıracak yeni bir kod yazın. Bu yeni kodun içine bütün parçalarınızı ekleyin.
+        maze_karel_2_8: 'Bana bütün yığınları kaldırmama yardım etmek için bu yeni
+          fonksiyonu kullan: "İnekten kaçın ve 1''i kaldır".'
+        maze_karel_2_9: Tamam, burada dikey kolonda bulunan 4 farklı çöp yığınını
+          kaldırabilen bir fonksiyon var. Bu fonksiyonu döngünün içine koymayı dene.
+          Yalnızca birkaç yeni blok ekleyerek tüm kir yığınlarını kaldırmaya çalış.
+        maze_karel_debug_function_1: Tüm yığınları kaldırabilmem için bu programda
+          neyi değiştirmelisin?
+        maze_karel_debug_function_2: Tarlamı düzleştirebilmem için programı hatalarından
+          arındırabilir misin?
+        maze_karel_debug_function_3: 'Tüm yığınları kaldırabilmem için programı düzenle. '
+        maze_karel_debug_if: Yardım et! Programı düzelt ki tarlam dümdüz olsun.
+        maze_karel_debug_if_else: Delikleri doldurabilmem ve yığınları kaldırabilmem
+          için programı hatalarından arındır.
+        maze_karel_debug_repeat: Tarlamın düz ve hoş olması için programı hatalarından
+          arındırabilir misin?
+        maze_karel_debug_seq_1: Hata ayıklamaya (debugging) hoşgeldin! Kodum düzgün
+          çalışmıyor. Problemi bulup düzeltebilir misin? Böylece tarlam düzleşir ve
+          ekim için hazır olur.
+        maze_karel_debug_seq_2: Bu programın sorunu ne? Şu yığını kaldırabilmem için
+          düzeltebilir misin?
+        maze_karel_debug_while: Deliği doldurmam için bu programı nasıl değiştirmelisin?
+        maze_wordsearch_k_1: Beni EAST kelimesini oluşturacak şekilde harf harf sırayla
+          hareket ettir
+        maze_wordsearch_k_13: Beni DEBUG kelimesini oluşturacak şekilde bir yöne,
+          sonra diğer yöne hareket ettir
+        maze_wordsearch_k_15: Beni ABOVE kelimesini oluşturacak şekilde bir yöne,
+          sonra diğer yöne hareket ettir
+        maze_wordsearch_k_16: Beni BELOW kelimesini oluşturacak şekilde bir yöne,
+          sonra diğer yöne hareket ettir
+        maze_wordsearch_k_2: Beni SOUTH kelimesini oluşturacak şekilde harf harf sırayla
+          hareket ettir
+        maze_wordsearch_k_20: Bu bir test! Beni STORY kelimesini oluşturacak şekilde
+          bir yöne, sonra diğer yöne hareket ettir
+        maze_wordsearch_k_3: Beni WEST kelimesini oluşturacak şekilde harf harf sırayla
+          hareket ettir
+        maze_wordsearch_k_4: Beni NORTH kelimesini oluşturacak şekilde harf harf sırayla
+          hareket ettir
+        maze_wordsearch_k_6: Beni JUMP kelimesini oluşturacak şekilde SAĞ ve AŞAĞI
+          hareket ettir
+        maze_wordsearch_k_9: Beni CODE kelimesini oluşturacak şekilde bir yöne, sonra
+          diğer yöne hareket ettir
+        mazestep_1: Labirent adım tanımları
+        mazestep_2: Labirent adım tanımları
+        mazestep_3: Labirent adım tanımları
+        mazestep_4: Labirent adım tanımları
+        mazestep_5: Labirent adım tanımları
+        studio_c2_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
+        studio_c2_10: Pengueni oklarla hareket ettirip sayı almasını ve arkaplan ile
+          paytağın hızını değiştirmesini sağlayacak bloğu ekleyebilir misin?
+        studio_c2_11: Kendi hikayeni oluşturabilir misin? Bitirdiğinde "Bitir" düğmesine
+          bas, hikayeni arkadaşlarının telefonlarında denemelerine izin ver.
+        studio_c2_2: Köpek bir şey söylesin sonra da kedi bir şey söylesin. Yapabilir
+          misin?
+        studio_c2_3: Köpeği, kediye doğru hareket ettiren bir program yazabilir misin?
+        studio_c2_4: Köpeği kediye doğru hareket ettirin, sonra köpek kedinin yanına
+          geldiğinde kedinin "Merhaba" demesini sağlayan programı yazabilir misin?
+        studio_c2_5: Ahtapotun tıklandığında "merhaba" demesini sağlayan programı
+          yazabilir misin?
+        studio_c2_6: Yukarı / Aşağı / Sol / Sağ tuşlarını kullanarak paytağın etrafta
+          hareket ettirip bütün bayraklara dokunmasını sağlayan programı yazabilir
+          misin?
+        studio_c2_7: '"Sonsuza kadar tekrarla" bloğu kodunuzun sürekli çalışmasına
+          imkan sağlar.  Dinozorun  yukarı ve aşağı sürekli olarak hareket etmesini
+          sağlayan blokları ekleyebilir misin?'
+        studio_c2_8: Paytağı, ok tuşları ile etrafta hareket ettiren kodları yazın.
+          Dinozora çarpınca da "Ouch!" deyip "çarpma" sesi çıkarmasını sağlayın.
+        studio_c2_9: Paytağı oklarla hareket ettirip sayı almasını ve ahtapota değince
+          sayı almasını sağlayacak bloğu ekleyebilir misin?
+        studio_c3_game_1: Ahtapotun tıklandığında "merhaba" demesini sağlayan programı
+          yazabilir misin?
+        studio_c3_game_2: Yukarı / Aşağı / Sol / Sağ tuşlarını kullanarak paytağın
+          etrafta hareket ettirip bütün bayraklara dokunmasını sağlayan programı yazabilir
+          misin?
+        studio_c3_game_3: '"Sonsuza kadar tekrarla" bloğu kodunuzun sürekli çalışmasına
+          imkan sağlar.  Dinozorun  yukarı ve aşağı sürekli olarak hareket etmesini
+          sağlayan blokları ekleyebilir misin?'
+        studio_c3_game_4: Paytağı, ok tuşları ile etrafta hareket ettiren kodları
+          yazın. Dinozora çarpınca da "Ouch!" deyip "çarpma" sesi çıkarmasını sağlayın.
+        studio_c3_game_5: Pengueni, ok tuşları ile etrafta hareket ettirip, ahtapota
+          çarpınca "skor puanı" ekleyen bloğu ekleyebilir misin?
+        studio_c3_game_6: Arkaplanı ve penguenin hızını değiştiren, skor yapana kadar
+          pengueni etrafta hareket ettiren  blokları ekleyebilir misin?
+        studio_c3_game_7: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
+          ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
+        studio_c3_story_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
+        studio_c3_story_2: Köpeğin bir şeyler demesini sonra da kedinin bir şeyler
+          demesini sağlayabilir misin?
+        studio_c3_story_3: Köpeği, kediye doğru hareket ettiren bir program yazabilir
+          misin?
+        studio_c3_story_4: Köpeği kediye doğru hareket ettirin, sonra köpek kedinin
+          yanına geldiğinde kedinin "Merhaba" demesini sağlayan programı yazabilir
+          misin?
+        studio_c3_story_5: Ahtapotu mutlu edecek bloğu ekleyebilir misin?
+        studio_c3_story_6: Kendi istediğiniz oyununuzu oluşturun. Bitirdiğinizde,
+          "BİTİR" düğmesine tıklayıp arkadaşlarınızın oyunu telefonlarında denemeleri
+          için (Facebook veya Twitter da) hikayenizi paylaşın.
+        studio_ec_sandbox: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
+          ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
+        studio_full_sandbox: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
+          ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
+        studio_gumball_click_hello: Antona "Hazır, vaziyet al, başla!" diyerek yarışı
+          başlatmasına yardım edebilir misin? Programını denemek için Çalıştıra tıkladıktan
+          sona Antona tıklamayı unutmayın!
+        studio_gumball_free_play: Kendi oyununu ya da hikayeni yarat. Bitirdiğinde,
+          Arkadaşlarının da telefon, tablet veya bilgisayarlarında oynaması için "Bitir"e
+          tıkla!
+        studio_gumball_hello1: Anais yeni arkadaş edinmek istiyor. Herkese merhaba
+          diyebilmesi için çalışma alanına 'söyle' bloğunu sürükleyip; bloğun içine
+          de "merhaba" yazarmısın?
+        studio_gumball_hello2: Darwin (aktör 1) ve onun kardeşi Gumball (aktör 2)
+          okula gidiyor.   "aktör der" bloğunu iki kez kullanarak birbirlerini selamlamalarına
+          yardım et.
+        studio_gumball_join_food_fight: Yemek atma savaşına katılın! "Aktör fırlattığında"
+          bloğunu kullanarak Muz Joe nun Antuan a yemek fırlatmasını sağla. Ayrıca
+          Yemek Antuana çarptığında kızgın olmasını sağla.
+        studio_gumball_move_events: Darwin bayrak toplama yarışında. Onun etrafta
+          koşturmasına yardım etmek için her bir olaya "hareket et "bloğu ekle. Bittiğinde
+          çalıştır tuşuna bas ve bütün bayrakları topla.
+        studio_gumball_move_to_actor: Gumball (aktör 1) ve Darwin (aktör 2) bayram
+          için geç kaldı! "hareket aktör" bloğu kullanarak Gumballin aşağı doğru Darwina
+          200 piksel ilerlemesine yardımcı ol.  Ardından, "zaman oyuncu dokunur" olayına
+          bir blok ekleyerek ses çıkarmasını sağlayın.
+        studio_gumball_move_to_flag: Banana Joe günlük bir yarışı kazanmak üzere!
+          Son 200 pikseli gitmesine yardım etmek için "ilerle" bloğunu kullanın.
+        studio_gumball_repeat: '"Sonsuza kadar tekrarla" bloğu size kodu sürekli oynatma
+          imkanı verir. Gumballi sağa ve sola tekrar tekrar hareket ettirerek egzersiz
+          yaptırıp ve yarışa hazırlayabilir misiniz?'
+        studio_gumball_sound_and_points: Kodun çoğunu biz sağladık. Antuan sağa sola
+          hareket edebiliyor ve Muz bütün ekranda hareket edebiliyor. Sizde ektra
+          kodlar ekleyerek "aktör zamanında dokunduğunda" olayında ses çıkarmasını
+          sağlayın. Ayrıca muz ile Antuan her çarptığında puan kazansın. Oyna tuşuna
+          basarak oyunu oynayın.
+        studio_gumball_warn_food_fight: 'Darwin yemek atma savaşından kaçtı! Arka
+          Planı "Karakterler arka planı" olarak değiştir. Darwinin daha hızlı hareket
+          etmesini sağla. Sonra Darwinin hızlıca gidip Pennyi uyarmasını sağla.
+
+          '
+        studio_iceage_click_hello: Sid'e, tıklandığında arkadaşları için son çağrı
+          yapmasına yardım eder misin? Çalıştıra bastıktan sonra Sid'in üstüne tıklamayı
+          unutma.
+        studio_iceage_free_play: Kendi oyununu ya da hikayeni yarat. Bitirdiğinde,
+          Arkadaşlarının da telefon, tablet veya bilgisayarlarında oynaması için "Bitir"e
+          tıkla!
+        studio_iceage_hello1: Sid herkesi yeni bir macera için toplamak istiyor. Sid'in
+          herkese merhaba diyebilmesi için çalışma alanına 'söyle' bloğunu sürükleyip;
+          bloğun içine de "merhaba" yazarmısın?
+        studio_iceage_hello2: Sid (Aktör 1), Manny'i (Aktör 2)  buldu ve onu macerasına
+          davet etmek istiyor. "Aktör der" bloğunu iki kere kullanarak birbirlerini
+          tanımalarına yardım et.
+        studio_iceage_move_events: Scrat yine meşe palamutlarını arıyor! "hareket
+          et" bloklarını kullanarak ok tuşlarıyla etrafta dolaşmasını sağla. Kodlama
+          bittiğinde çalıştır tuşuna bas ve bütün palamutları ok tuşları ile ilerleyerek
+          topla.
+        studio_iceage_move_to_actor: Diego (aktör 1) Manny (aktör 2) yi arıyor. Diego
+          nun 200 piksel aşağı ilerlemesi için "taşı aktör ..." bloğu kullan. Ardından,
+          "aktör zamanında dokunur" bloğuna "hedef sesi çal" bloğu ekleyerek ses çıkarmasını
+          sağla.
+        studio_iceage_move_to_flag: Scrat meşe palamudunu arıyor! Son 200 pikseli
+          gitmesine yardım etmek için "hareket et" bloğunu kullan.
+        studio_iceage_repeat: '"Sonsuza kadar tekrarla" bloğu size kodu sürekli oynatma
+          imkanı verir. Büyükanneyi sağa ve sola tekrar tekrar hareket ettirerek egzersiz
+          yaptırmak için blokları ekleyebilir misiniz?'
+        studio_iceage_sound_and_points: Kodun çoğunu biz sağladık. Büyükanne sağa
+          sola hareket edebiliyor ve Sid bütün ekranda hareket edebiliyor. Sizde ektra
+          kodlar ekleyerek "aktör zamanında dokunduğunda" olayında ses çıkarmasını
+          sağlayın. Ayrıca Sid büyükanneye her çarptığında puan kazansın. Oyna tuşuna
+          basarak oyunu oynayın.
+        studio_iceage_throw_hearts: Sid büyükannesine onu sevdiğini söylemek istiyor.
+          "aktör fırlat" bloğu kullanarak Sid in büyükannesine kalpleri fırlatmasını
+          sağla. Büyükannenin kalpleri aldığında mutlu olmasını sağla.
+        studio_iceage_warn_ice_age: "Buz devri geldiği için herkesin daha hızlı hareket
+          etmesi gerekiyor! Arka planı buzlu hale getir. Sid i hızlandır. \ndaha sonra
+          Çalıştır tuşuna basarak Sid i yönlendirip Diegoyu uyar."
+        studio_k1_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
+        studio_k1_2: Köpeğin bir şeyler demesini sonra da kedinin bir şeyler demesini
+          sağlayabilir misin?
+        studio_k1_3: Köpeği, kediye doğru hareket ettiren bir program yazabilir misin?
+        studio_k1_4: Köpeği, kedinin yanına taşıyın ve kedinin "merhaba" demesini
+          sağlayın.
+        studio_k1_5: Ahtapotu mutlu edecek bloğu ekleyebilir misin?
+        studio_k1_6: Kendi hikayenizi oluşturun. Kedi ve köpeği etrafta dolaştırıp
+          bir şeyler demesini sağlayın.
+        studio_playlab_1: Penguen "Merhaba" demek istiyor - ona yardımcı olabilir
+          misin?
+        studio_playlab_10: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
+          ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
+        studio_playlab_2: Mağara adamı ( karakter 1) ve mağara kadını (karakter 2)
+          birbirlerine "merhaba" demek istiyorlar. "Söyle" bloğunu iki kez kullanarak
+          onlara yardım edebilir misin?
+        studio_playlab_3: Tenis kızının bayrağı almasına yardım edebilir misin?
+        studio_playlab_4: Tenis çocuğun ( karakter 1), tenis kızının (karakter 2)
+          yanına gitmesine ve gittiğinde bir ses çıkarmasına yardım edebilir misin?
+        studio_playlab_5: Uzay botunun tıklandığında "Selamlar insanoğlu" demesine
+          yardım edebilir misin? Çalıştır'a tıkladıktan sonra üzerine tıklamayı unutma
+        studio_playlab_6: Yukarı/aşağı/sağ/sol ok tuşlarını kullanarak cadının etrafta
+          dolaşıp bütün büyülü ateştoplarını toplamasına yardım edebilir misin?
+        studio_playlab_7: '"Tekrar sonsuza dek" bloğu sürekli kod çalıştırmasına olanak
+          sağlar. Sihirbazı sağ ve sola sürekli hareket ettirmeye yardım etmek için
+          blokları iliştirebilir misin?'
+        studio_playlab_8: Puan almak için bir blok ekle ve tek boynuzlu at sihirbaza
+          çarpınca ses oynatmak için bir blok ekle, ve sonra onu ok tuşlarıyla puan
+          alana kadar hareket ettirebilir misin?
+        studio_playlab_9: Uzaylı istilası için arka plan ayarla ve uzaylıyı hemen
+          yakalamak için uzay aracına hızını değiştirerek yardım et. Sonra uzaylıyı
+          ok tuşlarıyla kontrol ederek bota ulaş ve diğer herkesi uyar
         turtle_1_1: Merhaba , ben bir sanatçıyım. İstediğin herhangi bir şeyi çizmek
           için beni programlayabilirsin. Resimdeki gri çizgileri çizdirmek için bir
           kaç blok kullan.
+        turtle_1_10: 'Başardın! Şimdi, istediğin her hangi bir şeyi çiz. Eğlenceli
+          olabilecek bazı fikirler: kartanesi ya da spiral olabilir.Ayrıca "genişiliği
+          ayarla " bloğunu kullanabilirsin. Keyfine bakın!'
         turtle_1_2: 'Şimdi bir kare çiz. Not: Bunu "rengi belirle" bloğunda en sevdiğin
           rengi seçerek yapabilirsin.'
         turtle_1_3: Sadece 3 blok kullanarak bir kare yapın.
@@ -121,66 +502,12 @@ tr:
           Renkler her defasında farklı olur.
         turtle_1_9: Çember çizmek için soru işaretli yere gelmesi gereken sayıyı tahmin
           edebilir misin?
-        turtle_1_10: 'Başardın! Şimdi, istediğin her hangi bir şeyi çiz. Eğlenceli
-          olabilecek bazı fikirler: kartanesi ya da spiral olabilir.Ayrıca "genişiliği
-          ayarla " bloğunu kullanabilirsin. Keyfine bakın!'
-        turtle_4_1: Sadece 3 blok kullanarak bir üçgen(her kenarı 100 piksel olacka)
-          çizebilir misin? İpucu:"tekrar" bloğu kullanın.
-        turtle_4_2: Bu üçgenleri çizebilmek için çalışma masasında mevcut olan programın
-          ortasına bir "90 derece sağa dön" bloğu ekle.
-        turtle_4_3: Tamam, bir üçgen çizmek için yazdığınız kod burda."Tekrarla" ve
-          "dön" bloğu ile güzel bir çiçek yapabilir misiniz?
-        turtle_4_4: 'Bir önceki labirent ile aynı kodları verdik , fakat her üçgen
-          çizdikten sonra 36 derecelik bir açıyla döneceğiz.Bu işlemi kaç kez tekrar
-          etmelisiniz? (İpucu: Tam bir çember oluşturmak için 360 derece dönmeniz
-          gerekmektedir.)'
-        turtle_4_5: Bir önceki bulmaca ile aynı kodları görüyorsunuz fakat 36 kez
-          dönme işlemi uygulanıyor. Her defasında kaç derecelik bir açıyla döndürülmeli?(İpucu:Tam
-          bir çember 360 derece döndürülerek oluşturulabilir.)
-        turtle_4_6: Sadece üç blok kullanarak bir kenarı 20 piksel olacak bir kare
-          çizebilir misiniz?
-        turtle_4_7: 'İşte kare çizmek için son bulmacadan bir kod. Bu kodu birbirine
-          merdiven gibi bitişik 10 tane kare çizmek için tekrarlayabilir misin? İpucu:
-          Yalnızca iki bloğa daha ihtiyacın var.'
-        turtle_4_8: Önceki bulmaca çözümü burada. Çizimi tamamlamak için sadece 2
-          blok daha ekleyebilir misin?
-        turtle_4_9: Önceki bulmaca çözümü burada. Resmin tamamlanması için kaç derece
-          dönmen gerekir? (Birkaç kez tahmin etmen gerekebilir)
-        turtle_4_10: Önceki bulmaca çözümü burada. Çizimi tamamlamak için kaç tekrar
-          gerekli?
-        turtle_4_11: Farklı desenler yapmak için "dön" ve "tekrarla" bloklarındaki
-          sayıları değiştirmeyi dene. Ya da, istediğin herhangi bir şeyi çizmek için
-          kodun geri kalanını değiştirmeyi dene.
-        maze_karel_1_1: Merhaba, ben bir çiftçiyim. Çiftlikteki alanı ekime hazırlamak
-          için düzleştirmemde yardımına ihtiyacım var. Beni bir toprak yığınına doğru
-          hareket ettir ve "Kaldır" bloğunu yığını kaldırmam için kullan.
-        maze_karel_1_2: Daha sonra beni çukura götür ve "doldur" bloğunu kullanarak,
-          iki kürek dolusu toprak ile doldur.
-        maze_karel_1_3: Beni toprak yığınına doğru hareket ettir ve olabildiğince
-          az blok kullanarak kaç kürek dolusu boşaltmam gerektiğini söyle.
-        maze_karel_1_4: 'Dört toprak yığınını kaldırmama yardımcı olabilir misin?
-          İpucu: Mümkünse tekrarla bloğu kullan.'
-        maze_karel_1_5: 'Delikleri 5 kürek dolusu toprakla doldurmam için bana yardım
-          et. İpucu: "süresince" bloğunun içine "tekrar" bloğunu yerleştirebilirsin.'
-        maze_karel_1_6: Tüm toprak yığınlarını kullanabildiğin kadar az blok kullanarak
-          kaldır. Liste menüsündeki yeni seçenekler bana bir yığının mı yoksa bir
-          çukurun mu üstünde olduğumu söyler.
-        maze_karel_1_7: Wow, çok derin bir çukur buldum! Kaç kürek dolusu toprağa
-          ihtiyacı olur bilmiyorum. Dolana kadar onu dolduracak bir program yazabilir
-          misin?
-        maze_karel_1_8: Alanın sonundaki çukuru doldurmama yardım et, kullanabildiğin
-          kadar az blok kullanarak.
-        maze_karel_1_9: Tüm toprak yığınlarını yok etmemi sağla. Kullanabildiğin kadar
-          az blok kullanmaya çalış. İpucu:"süresince" bloğunu kullanmaya çalış.
-        maze_karel_1_10: |-
-          Geç saatlere kadar çalışıyorum,yani dışarısı karanlık,ve yığınların ne kadar geniş olduğunu söyleyemem."Süresince" bloğunda eskiden olduğu kadar seçeneğe sahip değilim.
-          Beni alanda hareket ettir ve bir yığın varsa onu kaldır.
-        maze_karel_1_11: 'Dışarısı hala karanlık. Beni alan boyunca ilerlet. Önümde
-          bir yığın varsa kaldır. Eğer bir çukur var ise içini doldur. İpucu: eğer
-          bloğunun üzerinde, seçeneklerin aşağı doğru açılan menüsünü kullan.'
         turtle_2_1: 'Merhaba. Ben olmak zombi sanatçı! Ben sevmek çizmeyi! Özel renkte
           bir kare çizmeme yardım et. Önemli not: aynı bloklara sahipsin ama artık
           kategorilere ayrıldılar.'
+        turtle_2_10: Değişik spirallerle çalışman için bir kod. Dönme miktarını değiştirirsen
+          ne olur? Ya da döngüyü rastgele renge ayarlasan? İstediğin herhangi bir
+          şey çiz.
         turtle_2_2: Fonksiyonların kullanımına hoş geldiniz,yeni bloklar tanımanıza
           imkan veren yere!Yeni "bir kare çiz bloğu,50x50 yeşil küçük bir kare çizmek
           için Fonksiyonlar kategorisinde bulunuyor.
@@ -207,36 +534,12 @@ tr:
         turtle_2_9: 110, 100, 90, 80 ve 70 boylarında kardan adam ailesi çizmek için
           "ile say" döngüsünü kullanın. Kardan adamların tümü 60 piksel uzaklıkta
           olmalıdır.
-        turtle_2_10: Değişik spirallerle çalışman için bir kod. Dönme miktarını değiştirirsen
-          ne olur? Ya da döngüyü rastgele renge ayarlasan? İstediğin herhangi bir
-          şey çiz.
-        maze_karel_2_1: 'Tüm yığınları kaldırmam ve yerdeki tüm delikler doldurmama
-          yardım etmek için blokları kullanmayı dene. Pek çok blok kullanmaktansa
-          döngüleri kullanmayı dene. İpucu: Bir döngünün içinde başka bir döngü kullanabilirsin.'
-        maze_karel_2_2: Şu an Fonksiyonlar kategorisinde olan "5 dolgu" isimli kendi
-          bloğu biz tanımladık. O bloğu çukuru doldurmamda bana yardımcı olmak için
-          kullan.
-        maze_karel_2_3: Yeni "5 dolgu" isimli bloğu kullanarak tüm çukurları doldurmamı
-          sağla. "5 dolgu" bloğunu Fonksiyonlar kategorisinden sürükleyerek çıkarmalısın.
-        maze_karel_2_4: 7 kürek atabilen yeni bir fonksiyon tanımla. Daha sonra bu
-          blok ile tüm yığınları kaldırmama yardımcı olacak bir program yaz.
-        maze_karel_2_5: Bir yığından 6 kürek atabilen yeni bir fonksiyon oluştur ve
-          tüm yığınları kaldırmama yardımcı olmakta kullan.
-        maze_karel_2_6: '"5 dolgu" ve "8 kaldır" isimli iki yeni fonksiyon oluştur,
-          yığını kaldırmama ve çukuru doldurmama yardım et.'
-        maze_karel_2_7: Sahamda bir inek var! Beni inekten kaçındıracak ve çamuru
-          kaldıracak yeni bir kod yazın. Bu yeni kodun içine bütün parçalarınızı ekleyin.
-        maze_karel_2_8: 'Bana bütün yığınları kaldırmama yardım etmek için bu yeni
-          fonksiyonu kullan: "İnekten kaçın ve 1''i kaldır".'
-        maze_karel_2_9: Tamam, burada dikey kolonda bulunan 4 farklı çöp yığınını
-          kaldırabilen bir fonksiyon var. Bu fonksiyonu döngünün içine koymayı dene.
-          Yalnızca birkaç yeni blok ekleyerek tüm kir yığınlarını kaldırmaya çalış.
-        maze_karel_2_10: Beni alanda oynat, bu iki fonksiyonu kullanarak tüm çukurları
-          doldurmama ve tüm yığınları kaldırmama yardım et.
         turtle_3_1: Bu bulmaca "bir kare çiz" ve "bir çember çiz" fonksiyonlarının
           nasıl tanımlandığını gösterir. Bir fonksiyonun tanımlanması bloklardaki
           komutları çalıştırmaz. Kareyi çizmek için "bir kare çiz" bloğunu komutlara
           eklemen gerekir.
+        turtle_3_10: Çok şey öğrendiz! Şimdi istediklerinizi çizebilirsiniz. Yıldız,
+          spiral veya bir kar tanesi çizmeye çalışın.
         turtle_3_2: '"bir kare çiz" fonksiyonunu örnek olarak kullanmak için "bir
           üçgen çiz" fonksiyonu oluşturman ve komutlara eklemen gerekir.'
         turtle_3_3: 'Kediler etrafında üçgen şeklinde bir çit ve ineğin etrafında
@@ -257,24 +560,33 @@ tr:
           çiz"i düzenle. 3 ev çizmek için bu  düzenlenmiş fonksiyonu kullan.
         turtle_3_9: '"Ev çiz" fonksiyonunu yardım almadan yeniden yapabilir misin?
           Bir dene ve bir dizi ev çiz.'
-        turtle_3_10: Çok şey öğrendiz! Şimdi istediklerinizi çizebilirsiniz. Yıldız,
-          spiral veya bir kar tanesi çizmeye çalışın.
-        maze_karel_debug_seq_1: Hata ayıklamaya (debugging) hoşgeldin! Kodum düzgün
-          çalışmıyor. Problemi bulup düzeltebilir misin? Böylece tarlam düzleşir ve
-          ekim için hazır olur.
-        maze_karel_debug_seq_2: Bu programın sorunu ne? Şu yığını kaldırabilmem için
-          düzeltebilir misin?
-        maze_karel_debug_repeat: Tarlamın düz ve hoş olması için programı hatalarından
-          arındırabilir misin?
-        maze_karel_debug_while: Deliği doldurmam için bu programı nasıl değiştirmelisin?
-        maze_karel_debug_if: Yardım et! Programı düzelt ki tarlam dümdüz olsun.
-        maze_karel_debug_if_else: Delikleri doldurabilmem ve yığınları kaldırabilmem
-          için programı hatalarından arındır.
-        maze_karel_debug_function_1: Tüm yığınları kaldırabilmem için bu programda
-          neyi değiştirmelisin?
-        maze_karel_debug_function_2: Tarlamı düzleştirebilmem için programı hatalarından
-          arındırabilir misin?
-        maze_karel_debug_function_3: 'Tüm yığınları kaldırabilmem için programı düzenle. '
+        turtle_4_1: Sadece 3 blok kullanarak bir üçgen(her kenarı 100 piksel olacka)
+          çizebilir misin? İpucu:"tekrar" bloğu kullanın.
+        turtle_4_10: Önceki bulmaca çözümü burada. Çizimi tamamlamak için kaç tekrar
+          gerekli?
+        turtle_4_11: Farklı desenler yapmak için "dön" ve "tekrarla" bloklarındaki
+          sayıları değiştirmeyi dene. Ya da, istediğin herhangi bir şeyi çizmek için
+          kodun geri kalanını değiştirmeyi dene.
+        turtle_4_2: Bu üçgenleri çizebilmek için çalışma masasında mevcut olan programın
+          ortasına bir "90 derece sağa dön" bloğu ekle.
+        turtle_4_3: Tamam, bir üçgen çizmek için yazdığınız kod burda."Tekrarla" ve
+          "dön" bloğu ile güzel bir çiçek yapabilir misiniz?
+        turtle_4_4: 'Bir önceki labirent ile aynı kodları verdik , fakat her üçgen
+          çizdikten sonra 36 derecelik bir açıyla döneceğiz.Bu işlemi kaç kez tekrar
+          etmelisiniz? (İpucu: Tam bir çember oluşturmak için 360 derece dönmeniz
+          gerekmektedir.)'
+        turtle_4_5: Bir önceki bulmaca ile aynı kodları görüyorsunuz fakat 36 kez
+          dönme işlemi uygulanıyor. Her defasında kaç derecelik bir açıyla döndürülmeli?(İpucu:Tam
+          bir çember 360 derece döndürülerek oluşturulabilir.)
+        turtle_4_6: Sadece üç blok kullanarak bir kenarı 20 piksel olacak bir kare
+          çizebilir misiniz?
+        turtle_4_7: 'İşte kare çizmek için son bulmacadan bir kod. Bu kodu birbirine
+          merdiven gibi bitişik 10 tane kare çizmek için tekrarlayabilir misin? İpucu:
+          Yalnızca iki bloğa daha ihtiyacın var.'
+        turtle_4_8: Önceki bulmaca çözümü burada. Çizimi tamamlamak için sadece 2
+          blok daha ekleyebilir misin?
+        turtle_4_9: Önceki bulmaca çözümü burada. Resmin tamamlanması için kaç derece
+          dönmen gerekir? (Birkaç kez tahmin etmen gerekebilir)
         turtle_5_1: Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler
           yapın. Nasıl çalıştığını tahmin edebiliyor musun? (Ya da silin ve tamamen
           farklı bir şey ile değiştirin)
@@ -293,234 +605,176 @@ tr:
         turtle_5_6: Bu programı çalıştırmayı deneyin ve ne olacağını görmek için değişiklikler
           yapın. Nasıl çalıştığını tahmin edebiliyor musun? (Ya da silin ve tamamen
           farklı bir şey ile değiştirin)
-        maze_3_1: O domuzu almam gerek! Birkaç telefon görüşmesi için move() yazın;
-          böylece yumurtalarımı geri alabilirim.
-        maze_3_2: Bana bir program yaz, böylece domuza giden tüm yolları yapabileyim.
-        maze_3_3: Domuzu nasıl alabilirim? TNT kutusuna doğru gitmediğimden emin olun!
-        maze_3_4: Ahh! Beni TNT ve domuz çevresine alan bir program yazın.
-        Custom_builder: İstediğin seviyeyi çizmek için araç kutusundan blokları çalışma
-          alanına sürükle. Hazır olduğunda "Çalıştır" a bas.
-        jigsaw_1: Bloğu tıklayın
-        jigsaw_2: Bloğu hedefe sürükle
-        jigsaw_3: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_4: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_5: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_6: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_7: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_8: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_9: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_10: Şekli oluşturacak biçimde blokları düzenleyin
-        jigsaw_11: Blokları numaralarına göre sıralayın
-        jigsaw_12: Blokları numaralarına göre sıralayın
-        jigsaw_13: Bulmacayı düzelt!
-        mazestep_1: Labirent adım tanımları
-        mazestep_2: Labirent adım tanımları
-        mazestep_3: Labirent adım tanımları
-        mazestep_4: Labirent adım tanımları
-        mazestep_5: Labirent adım tanımları
-        studio_c2_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
-        studio_c2_2: Köpek bir şey söylesin sonra da kedi bir şey söylesin. Yapabilir
-          misin?
-        studio_c2_3: Köpeği, kediye doğru hareket ettiren bir program yazabilir misin?
-        studio_c2_4: Köpeği kediye doğru hareket ettirin, sonra köpek kedinin yanına
-          geldiğinde kedinin "Merhaba" demesini sağlayan programı yazabilir misin?
-        studio_c2_5: Ahtapotun tıklandığında "merhaba" demesini sağlayan programı
-          yazabilir misin?
-        studio_c2_6: Yukarı / Aşağı / Sol / Sağ tuşlarını kullanarak paytağın etrafta
-          hareket ettirip bütün bayraklara dokunmasını sağlayan programı yazabilir
-          misin?
-        studio_c2_7: '"Sonsuza kadar tekrarla" bloğu kodunuzun sürekli çalışmasına
-          imkan sağlar.  Dinozorun  yukarı ve aşağı sürekli olarak hareket etmesini
-          sağlayan blokları ekleyebilir misin?'
-        studio_c2_8: Paytağı, ok tuşları ile etrafta hareket ettiren kodları yazın.
-          Dinozora çarpınca da "Ouch!" deyip "çarpma" sesi çıkarmasını sağlayın.
-        studio_c2_9: Paytağı oklarla hareket ettirip sayı almasını ve ahtapota değince
-          sayı almasını sağlayacak bloğu ekleyebilir misin?
-        studio_c2_10: Pengueni oklarla hareket ettirip sayı almasını ve arkaplan ile
-          paytağın hızını değiştirmesini sağlayacak bloğu ekleyebilir misin?
-        studio_c2_11: Kendi hikayeni oluşturabilir misin? Bitirdiğinde "Bitir" düğmesine
-          bas, hikayeni arkadaşlarının telefonlarında denemelerine izin ver.
-        studio_c3_story_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
-        studio_c3_story_2: Köpeğin bir şeyler demesini sonra da kedinin bir şeyler
-          demesini sağlayabilir misin?
-        studio_c3_story_3: Köpeği, kediye doğru hareket ettiren bir program yazabilir
-          misin?
-        studio_c3_story_4: Köpeği kediye doğru hareket ettirin, sonra köpek kedinin
-          yanına geldiğinde kedinin "Merhaba" demesini sağlayan programı yazabilir
-          misin?
-        studio_c3_story_5: Ahtapotu mutlu edecek bloğu ekleyebilir misin?
-        studio_c3_story_6: Kendi istediğiniz oyununuzu oluşturun. Bitirdiğinizde,
-          "BİTİR" düğmesine tıklayıp arkadaşlarınızın oyunu telefonlarında denemeleri
-          için (Facebook veya Twitter da) hikayenizi paylaşın.
-        studio_c3_game_1: Ahtapotun tıklandığında "merhaba" demesini sağlayan programı
-          yazabilir misin?
-        studio_c3_game_2: Yukarı / Aşağı / Sol / Sağ tuşlarını kullanarak paytağın
-          etrafta hareket ettirip bütün bayraklara dokunmasını sağlayan programı yazabilir
-          misin?
-        studio_c3_game_3: '"Sonsuza kadar tekrarla" bloğu kodunuzun sürekli çalışmasına
-          imkan sağlar.  Dinozorun  yukarı ve aşağı sürekli olarak hareket etmesini
-          sağlayan blokları ekleyebilir misin?'
-        studio_c3_game_4: Paytağı, ok tuşları ile etrafta hareket ettiren kodları
-          yazın. Dinozora çarpınca da "Ouch!" deyip "çarpma" sesi çıkarmasını sağlayın.
-        studio_c3_game_5: Pengueni, ok tuşları ile etrafta hareket ettirip, ahtapota
-          çarpınca "skor puanı" ekleyen bloğu ekleyebilir misin?
-        studio_c3_game_6: Arkaplanı ve penguenin hızını değiştiren, skor yapana kadar
-          pengueni etrafta hareket ettiren  blokları ekleyebilir misin?
-        studio_c3_game_7: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
-          ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
-        studio_playlab_1: Penguen "Merhaba" demek istiyor - ona yardımcı olabilir
-          misin?
-        studio_playlab_2: Mağara adamı ( karakter 1) ve mağara kadını (karakter 2)
-          birbirlerine "merhaba" demek istiyorlar. "Söyle" bloğunu iki kez kullanarak
-          onlara yardım edebilir misin?
-        studio_playlab_3: Tenis kızının bayrağı almasına yardım edebilir misin?
-        studio_playlab_4: Tenis çocuğun ( karakter 1), tenis kızının (karakter 2)
-          yanına gitmesine ve gittiğinde bir ses çıkarmasına yardım edebilir misin?
-        studio_playlab_5: Uzay botunun tıklandığında "Selamlar insanoğlu" demesine
-          yardım edebilir misin? Çalıştır'a tıkladıktan sonra üzerine tıklamayı unutma
-        studio_playlab_6: Yukarı/aşağı/sağ/sol ok tuşlarını kullanarak cadının etrafta
-          dolaşıp bütün büyülü ateştoplarını toplamasına yardım edebilir misin?
-        studio_playlab_7: '"Tekrar sonsuza dek" bloğu sürekli kod çalıştırmasına olanak
-          sağlar. Sihirbazı sağ ve sola sürekli hareket ettirmeye yardım etmek için
-          blokları iliştirebilir misin?'
-        studio_playlab_8: Puan almak için bir blok ekle ve tek boynuzlu at sihirbaza
-          çarpınca ses oynatmak için bir blok ekle, ve sonra onu ok tuşlarıyla puan
-          alana kadar hareket ettirebilir misin?
-        studio_playlab_9: Uzaylı istilası için arka plan ayarla ve uzaylıyı hemen
-          yakalamak için uzay aracına hızını değiştirerek yardım et. Sonra uzaylıyı
-          ok tuşlarıyla kontrol ederek bota ulaş ve diğer herkesi uyar
-        studio_playlab_10: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
-          ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
-        studio_iceage_hello1: Sid herkesi yeni bir macera için toplamak istiyor. Sid'in
-          herkese merhaba diyebilmesi için çalışma alanına 'söyle' bloğunu sürükleyip;
-          bloğun içine de "merhaba" yazarmısın?
-        studio_iceage_hello2: Sid (Aktör 1), Manny'i (Aktör 2)  buldu ve onu macerasına
-          davet etmek istiyor. "Aktör der" bloğunu iki kere kullanarak birbirlerini
-          tanımalarına yardım et.
-        studio_iceage_move_to_flag: Scrat meşe palamudunu arıyor! Son 200 pikseli
-          gitmesine yardım etmek için "hareket et" bloğunu kullan.
-        studio_iceage_move_to_actor: Diego (aktör 1) Manny (aktör 2) yi arıyor. Diego
-          nun 200 piksel aşağı ilerlemesi için "taşı aktör ..." bloğu kullan. Ardından,
-          "aktör zamanında dokunur" bloğuna "hedef sesi çal" bloğu ekleyerek ses çıkarmasını
-          sağla.
-        studio_iceage_repeat: '"Sonsuza kadar tekrarla" bloğu size kodu sürekli oynatma
-          imkanı verir. Büyükanneyi sağa ve sola tekrar tekrar hareket ettirerek egzersiz
-          yaptırmak için blokları ekleyebilir misiniz?'
-        studio_iceage_click_hello: Sid'e, tıklandığında arkadaşları için son çağrı
-          yapmasına yardım eder misin? Çalıştıra bastıktan sonra Sid'in üstüne tıklamayı
-          unutma.
-        studio_iceage_move_events: Scrat yine meşe palamutlarını arıyor! "hareket
-          et" bloklarını kullanarak ok tuşlarıyla etrafta dolaşmasını sağla. Kodlama
-          bittiğinde çalıştır tuşuna bas ve bütün palamutları ok tuşları ile ilerleyerek
-          topla.
-        studio_iceage_sound_and_points: Kodun çoğunu biz sağladık. Büyükanne sağa
-          sola hareket edebiliyor ve Sid bütün ekranda hareket edebiliyor. Sizde ektra
-          kodlar ekleyerek "aktör zamanında dokunduğunda" olayında ses çıkarmasını
-          sağlayın. Ayrıca Sid büyükanneye her çarptığında puan kazansın. Oyna tuşuna
-          basarak oyunu oynayın.
-        studio_iceage_warn_ice_age: "Buz devri geldiği için herkesin daha hızlı hareket
-          etmesi gerekiyor! Arka planı buzlu hale getir. Sid i hızlandır. \ndaha sonra
-          Çalıştır tuşuna basarak Sid i yönlendirip Diegoyu uyar."
-        studio_iceage_throw_hearts: Sid büyükannesine onu sevdiğini söylemek istiyor.
-          "aktör fırlat" bloğu kullanarak Sid in büyükannesine kalpleri fırlatmasını
-          sağla. Büyükannenin kalpleri aldığında mutlu olmasını sağla.
-        studio_iceage_free_play: Kendi oyununu ya da hikayeni yarat. Bitirdiğinde,
-          Arkadaşlarının da telefon, tablet veya bilgisayarlarında oynaması için "Bitir"e
-          tıkla!
-        studio_gumball_hello1: Anais yeni arkadaş edinmek istiyor. Herkese merhaba
-          diyebilmesi için çalışma alanına 'söyle' bloğunu sürükleyip; bloğun içine
-          de "merhaba" yazarmısın?
-        studio_gumball_hello2: Darwin (aktör 1) ve onun kardeşi Gumball (aktör 2)
-          okula gidiyor.   "aktör der" bloğunu iki kez kullanarak birbirlerini selamlamalarına
-          yardım et.
-        studio_gumball_move_to_flag: Banana Joe günlük bir yarışı kazanmak üzere!
-          Son 200 pikseli gitmesine yardım etmek için "ilerle" bloğunu kullanın.
-        studio_gumball_move_to_actor: Gumball (aktör 1) ve Darwin (aktör 2) bayram
-          için geç kaldı! "hareket aktör" bloğu kullanarak Gumballin aşağı doğru Darwina
-          200 piksel ilerlemesine yardımcı ol.  Ardından, "zaman oyuncu dokunur" olayına
-          bir blok ekleyerek ses çıkarmasını sağlayın.
-        studio_gumball_repeat: '"Sonsuza kadar tekrarla" bloğu size kodu sürekli oynatma
-          imkanı verir. Gumballi sağa ve sola tekrar tekrar hareket ettirerek egzersiz
-          yaptırıp ve yarışa hazırlayabilir misiniz?'
-        studio_gumball_click_hello: Antona "Hazır, vaziyet al, başla!" diyerek yarışı
-          başlatmasına yardım edebilir misin? Programını denemek için Çalıştıra tıkladıktan
-          sona Antona tıklamayı unutmayın!
-        studio_gumball_move_events: Darwin bayrak toplama yarışında. Onun etrafta
-          koşturmasına yardım etmek için her bir olaya "hareket et "bloğu ekle. Bittiğinde
-          çalıştır tuşuna bas ve bütün bayrakları topla.
-        studio_gumball_sound_and_points: Kodun çoğunu biz sağladık. Antuan sağa sola
-          hareket edebiliyor ve Muz bütün ekranda hareket edebiliyor. Sizde ektra
-          kodlar ekleyerek "aktör zamanında dokunduğunda" olayında ses çıkarmasını
-          sağlayın. Ayrıca muz ile Antuan her çarptığında puan kazansın. Oyna tuşuna
-          basarak oyunu oynayın.
-        studio_gumball_warn_food_fight: 'Darwin yemek atma savaşından kaçtı! Arka
-          Planı "Karakterler arka planı" olarak değiştir. Darwinin daha hızlı hareket
-          etmesini sağla. Sonra Darwinin hızlıca gidip Pennyi uyarmasını sağla.
-
-'
-        studio_gumball_join_food_fight: Yemek atma savaşına katılın! "Aktör fırlattığında"
-          bloğunu kullanarak Muz Joe nun Antuan a yemek fırlatmasını sağla. Ayrıca
-          Yemek Antuana çarptığında kızgın olmasını sağla.
-        studio_gumball_free_play: Kendi oyununu ya da hikayeni yarat. Bitirdiğinde,
-          Arkadaşlarının da telefon, tablet veya bilgisayarlarında oynaması için "Bitir"e
-          tıkla!
-        studio_full_sandbox: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
-          ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
-        studio_k1_1: Köpeğin "Merhaba Dünya" demesini sağlayabilir misin?
-        studio_k1_2: Köpeğin bir şeyler demesini sonra da kedinin bir şeyler demesini
-          sağlayabilir misin?
-        studio_k1_3: Köpeği, kediye doğru hareket ettiren bir program yazabilir misin?
-        studio_k1_4: Köpeği, kedinin yanına taşıyın ve kedinin "merhaba" demesini
-          sağlayın.
-        studio_k1_5: Ahtapotu mutlu edecek bloğu ekleyebilir misin?
-        studio_k1_6: Kendi hikayenizi oluşturun. Kedi ve köpeği etrafta dolaştırıp
-          bir şeyler demesini sağlayın.
-        maze_wordsearch_k_1: Beni EAST kelimesini oluşturacak şekilde harf harf sırayla
-          hareket ettir
-        maze_wordsearch_k_2: Beni SOUTH kelimesini oluşturacak şekilde harf harf sırayla
-          hareket ettir
-        maze_wordsearch_k_3: Beni WEST kelimesini oluşturacak şekilde harf harf sırayla
-          hareket ettir
-        maze_wordsearch_k_4: Beni NORTH kelimesini oluşturacak şekilde harf harf sırayla
-          hareket ettir
-        maze_wordsearch_k_6: Beni JUMP kelimesini oluşturacak şekilde SAĞ ve AŞAĞI
-          hareket ettir
-        maze_wordsearch_k_9: Beni CODE kelimesini oluşturacak şekilde bir yöne, sonra
-          diğer yöne hareket ettir
-        maze_wordsearch_k_13: Beni DEBUG kelimesini oluşturacak şekilde bir yöne,
-          sonra diğer yöne hareket ettir
-        maze_wordsearch_k_15: Beni ABOVE kelimesini oluşturacak şekilde bir yöne,
-          sonra diğer yöne hareket ettir
-        maze_wordsearch_k_16: Beni BELOW kelimesini oluşturacak şekilde bir yöne,
-          sonra diğer yöne hareket ettir
-        maze_wordsearch_k_20: Bu bir test! Beni STORY kelimesini oluşturacak şekilde
-          bir yöne, sonra diğer yöne hareket ettir
-        applab_ec_simple: Araçlar kutusundaki blokları kullanarak kendi uygulamalarını
-          oluştur.
-        turtle_ec_1_2: 'Şimdi, bir kare çizin. NOT: yeni "penColor" bloğundan seçerek
-          en sevdiğiniz rengi kullanın.'
         turtle_ec_1_10: 'Başardınız! Şimdi, istediğiniz herhangi bir şey çizin. İşte
           bazı öneriler: bir çöp adam, bir kar tanesi, ya da bir spiral. Yeni "penWidth"
           bloğunu da deneyin. Eğlenmenize bakın!'
-        studio_ec_sandbox: Kendi oyununuzu yaratın. Bitirdiğinizde, Son'u tıklayın
-          ve arkadaşlarınıza kendi telefonlarında oyununuzu denetin.
+        turtle_ec_1_2: 'Şimdi, bir kare çizin. NOT: yeni "penColor" bloğundan seçerek
+          en sevdiğiniz rengi kullanın.'
+    trophy:
+      name:
+        Bronze: Bronz
+        Gold: Altın
+        Silver: Gümüş
     video:
       name:
-        maze_intro: 'Labirent: Tanıtım'
-        artist_intro: 'Ressam: Giriş'
-        farmer_intro: Çiftçi tanıtım
-        flappy_intro: Flappy Tanıtım
-        loop_times: Bloğu tekrarlayın
-        loop_until: Blok kadar tekrarlayın
-        if: Eğer bloğu
-        if_else: Eğer/değilse bloğu
-        if_else_scrat: Eğer/değilse bloğu
-        function: Fonksiyonlar
-        loop_while: while bloğu
-        loop_for: Sayaç bloğu
-        parameters: Fonksiyon parametreleri
-        hoc_wrapup: Kod saatini tamamla
+        C1_artist_intro: 'Ressam: Giriş'
+        C1_bee_level_intro: Arı Seviyesi - Giriş
+        C1_bee_loops: Arı Döngüleri
+        C1_bigevent_unplugged: Büyük Olay
+        C1_building_foundation: Bir Temel Oluşturma
+        C1_getting_loopy: Döngüselleşme
+        C1_going_places_safely: Biryerlere Güvenle Gitmek
+        C1_happy_maps_unplugged: Mutlu Haritalar
+        C1_maze_debugging: Labirent Hata Ayıklaması
+        C1_maze_intro_sequencing: Labirent Dizilemeye Giriş
+        C1_maze_loops: Labirent Döngüleri
+        C1_moveitmoveit_unplugged: Oynat, Oynat
+        C1_pair_programming: Eşli Programlama
+        C1_planting_seed: Tohum Ekme
+        C1_playlab_storytelling: Laboratuvar Oyna - Bir Hikaye Oluştur
+        C1_spelling_bee_intro: 'Yazar Arı: Giriş'
+        C1_zuck_repeat_loop: Labirent Döngüleri
+        C2_artist_debugging: Sanatçı Hata Ayıklama
+        C2_artist_intro: 'Ressam: Giriş'
+        C2_artist_loops: Aktör Döngüleri
+        C2_bee_conditionals: Arı Koşullandırmaları
+        C2_bee_debugging: Arı Ayıklama
+        C2_bee_loops: Arı Döngüleri
+        C2_binary_bracelets: İkilik Bileklikler
+        C2_conditionals_with_cards: Koşullar
+        C2_digital_footprint: Dijital İziniz
+        C2_digital_footprint_v2: Dijital İziniz
+        C2_graph_paper: Grafikli Kağıdıyla Programlama
+        C2_maze_intro: 'Labirent: Tanıtım'
+        C2_paper_airplanes: Kağıt Uçaklar
+        C2_playlab_createstory: Laboratuvar Oyna - Bir Hikaye Oluştur
+        C2_relay_programming: Röle Programlama
+        C2_zuck_repeat_loop: Labirent Döngüleri
+        C3_artist_functions: 'Sanatçı: Fonksiyonlar'
+        C3_artist_intro: 'Ressam: Giriş'
+        C3_artist_nested_loops: İç İçe Döngüler
+        C3_bee_conditionals: Arı Koşullandırmaları
+        C3_bee_debugging: Arı Ayıklama
+        C3_bee_functions: Arı Fonksiyonları
+        C3_bee_nested_loops: İç İçe Döngüler
+        C3_bounce: Sıçrama
+        C3_computational_thinking: Sayısal Düşünme
+        C3_crowdsourcing: Kalabalık Kaynaklandırma 'Crowdsourcing'
+        C3_dice_race: Zar Yarışı
+        C3_farmer_while: While(...durumunda) Döngüleri
+        C3_functional_suncatchers: Fonksiyonel Güneş Avcıları
+        C3_internet: İnternet
+        C3_maze_conditionals: Labirent Koşullandırıcıları
+        C3_maze_level_4: Labirent Döngüleri
+        C3_playlab_create_game: 'Oyun Laboratuvarı: Bir Oyun Oluştur'
+        C3_songwriting_with_parameters: Parametrelerle Şarkı Yazmak
+        C4_bee_conditional: Arı Koşullandırmaları
+        C4_conditionals: Koşullar
+        C4_for_loops: For (İçin) Döngüleri
+        C4_for_loops_bee: For (İçin) Döngüleri
+        C4_for_loops_no_bee: For (İçin) Döngüleri
+        C4_function_create: Fonksiyonları Oluşturma
+        C4_function_edit: Fonksiyonları düzenleme
+        C4_function_parameters: Fonksiyon parametreleri
+        C4_intro: Giriş
+        C4_loops_zombie: Döngüler
+        C4_math_artist: Matematik ile Sanatçı'yı programla
+        C4_unplugged_algorithms: Tangramlar ile algoritmalar
+        C4_unplugged_binary: İkili
+        C4_unplugged_forloops: For (İçin) Döngüleri
+        C4_unplugged_madlibs: Çılgın Kütüphaneler
+        C4_unplugged_parameters: Parametrelerle Şarkı Yazmak
+        C4_unplugged_variables: Zarfların içindeki Değişkenler
+        C4_variables_artist: Değişkenler - Sanatçı
+        C4_variables_playlab: Değişkenler - Oyun laboratuarı
+        CDEF_Video_SpritesInAction: Eylem halindeki Hareketli Nesneler
+        CSA-PL-1d-arrays-new-values: 1 boyutlu dizilere değer girmek
+        CSA-PL-Printing-in-Java: Java'da Yazdırma
+        CSA-PL-conditionals: Java'da Koşullu İfadeler
+        CSA-PL-debugging-22: Java Lab'da hata ayıklama
+        CSA-PL-debugging-temp: Java Lab'da Hata ayıklamaya giriş - geçici
+        CSA-PL-first-program: Java'da Program yazma
+        CSA-PL-for-loops: Java'da döngüler
+        CSA-PL-intro-to-arrays: Bir Boyutlu (1D) Diziler
+        CSA-PL-intro-to-java-lab: Java Laboratuvarı temelleri
+        CSA-PL-multi-selection-statements: Çok Seçenekli İfadeler
+        CSA-PL-two-way-selection: İki yönlü seçim
+        CSA-PL-variables: Java'da Değişken Oluşturmak
+        CSD_Unit6_InteractiveArtExemplar: Etkileşimli Sanat Örnekleri
+        CSD_u6_variables_part1: 'CSD: Değişkenler'
+        CSF-Teaching-Problem-Solving: CSF Problem Çözme Öğretimi
+        CSF_EF_cs_matters: Bilgisayar Bilimi Önemlidir
+        CSF_Going_Places_Safely: Çevrimiçi Mahallem
+        CSF_Power_of_Words: Kelimelerin Gücü
+        CSF_SpriteLabIntro_CDEF: Bu Hareketli Nesne Laboratuvarıdır.
+        CSF_SpriteLab_Intro_v2: Hareketli Nesne Laboratuvarı Tanıtımı
+        CSF_SpriteLab_SpritesInAction_CDEF: Eylem halindeki Hareketli Nesneler
+        CSF_SpriteLab_SpritesInAction_v2: Eylem halindeki Hareketli Nesneler
+        CSF_Spritelab_MakeSprite_CDEF: Hareketli Nesne Laboratuvarında bir Hareketli
+          Nesne Nasıl Oluşturulur
+        CSF_Spritelab_MakeSprite_v2: Hareketli Nesne Oluşturma
+        CSF_StarWars_ProjectIntro: Star Wars Projesine Giriş
+        CSF_Super_Digital_Citizen: Süper Dijital Vatandaş
+        CSF_a_b_artist_loops: Sanatçı- Döngüler
+        CSF_artist_angles: Sanatçı açılarda
+        CSF_bb8_loops_C-F: BB-8 ile Döngüler
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_collector_k1_blocks: 'Bilgisayar bilimleri Temelleri: Toplayıcı'
+        CSF_collector_repeat_loops: Toplayıcı tekrarlama döngüleri
+        CSF_collector_text_blocks: 'Bilgisayar bilimleri Temelleri: Toplayıcı'
+        CSF_create_functions: Fonksiyonları Oluşturma
+        CSF_debugging_k1_blocks: Hata Ayıklama
+        CSF_debugging_text_blocks: Hata Ayıklama
+        CSF_harvester_loops_K1: Hasatçıdaki Döngüler
+        CSF_harvester_skinOverview_K-1: Hasatçı
+        CSF_if_allskins: Eğer Bloğu
+        CSF_ifelse_allskins: Eğer/Değilse Bloğu Kullanılıyor
+        CSF_ifelseifelse_allskins: Eğer/Değilseeğer/Değilse Blokları Kullanılıyor
+        CSF_loops_AB: Döngüler
+        CSF_maze_intro_k1_blocks: Code Studio tanıtımı
+        CSF_maze_intro_text_blocks: Code Studio tanıtımı
+        CSF_my_robotic_friends: Robotik Arkadaşlarım
+        CSF_scrat_loops_CF: Buz Devrindeki Döngüler
+        CSF_scrat_loops_K1: Buz Devrindeki Döngüler
+        CSF_skinOverview_Harvester: Hasatçı
+        CSF_stevie_big_project: Stevie ve Büyük Proje
+        CSF_unspotted_bugs: Fark Edilmeyen Hatalar
+        CSF_zuck_loops_short: Döngüleri yineleyin
+        CS_Changing_Everything: Bilgisayar Bilimi, Her Şeyi Değiştiriyor.
+        Getting_Started_BasicFeatures: Code.org'un Temel Özellikleri
+        Gettting_Started_ClassSection: Sınıf Bölümü Oluşturma
+        Gettting_Started_Progress: İlerleme, Geri Bildirim ve Değerlendirme
+        Gettting_Started_StudentExperience: Öğrenci Deneyimi
+        MC_2018_loops: 'Minecraft: Şuraya Kadar Su Yolculuğunu Tekrarla'
+        PL-Video-21: Code.org'un Profesyonel Öğrenimine Hoş Geldiniz!
+        PL_CSD_CircuitPlayground_Overview: Devre Oyun Alanına Genel Bakış
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Devre Oyun Alanına Genel
+          Bakış
+        PL_CSD_CircuitPlayground_Setup: Devre Oyun Alanı Ayarlama
+        PL_CSD_MicroBit_Intro: Micro:bit'e giriş
+        PL_CSD_TeacherTips_Advise: Öğretmen İpuçları - Yeni Öğretmenlere Tavsiyeler
+        PL_CSD_TeacherTips_Debugging: Öğretmen İpuçları - Hata Ayıklama
+        PL_CSD_TeacherTips_IntroToCSD: Öğretmen İpuçları - BB Keşiflerine Giriş
+        PL_CSD_TeacherTips_LeadLearner: Öğretmen İpuçları - Lider Öğrenci
+        PL_CSD_TeacherTips_PairProgramming: Öğretmen İpuçları - Eşli Programlama
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Öğretmen İpuçları - Problem Çözme
+          Süreci
+        PL_CSD_Unit4_AppTesting: Kağıt Prototip testi
+        PL_CSP_EIPMOverview: EIPM Dersleri Rehberi
+        PL_CSP_TeacherTips_APExam: 'Öğretmen İpuçları: AP Sınavına Hazırlık'
+        PL_CSP_TeacherTips_Advice: Öğretmen İpuçları - Yeni BB Öğretmenlerine Tavsiyeler
+        PL_CSP_TeacherTips_Debugging: 'Öğretmen İpuçları: Hata Ayıklama ile Yardım'
+        PL_CSP_TeacherTips_EIPM: 'Öğretmen İpuçları: EIPM Süreci'
+        PL_CSP_TeacherTips_IntroToCSP: 'Öğretmen İpuçları: BB İlkelerine Giriş'
+        PL_CSP_TeacherTips_LeadLearner: 'Öğretmen İpuçları: Nasıl Lider Öğrenci Olunur'
+        PL_CS_Journeys_Overview: BB Yolculukları
+        PL_Equity_in_CS_Education: BB Eğitiminde Eşitlik
+        PL_overview_CSD: Bilgisayar Bilimi Keşifleri Nedir?
+        PL_overview_CSP: Bilgisayar Bilimi İlkeleri Nedir?
         Unplug1: CS (Bilgisayar Bilimleri) nedir?
+        Unplug10: İnternet
+        Unplug11: Özet
         Unplug2: Sayısal Düşünme
         Unplug3: Grafikli Kağıdıyla Programlama
         Unplug4: Algoritmalar
@@ -529,170 +783,203 @@ tr:
         Unplug7: Şarkı yazma
         Unplug8: Soyutlama
         Unplug9: Röle Programlama
-        Unplug10: İnternet
-        Unplug11: Özet
-        C1_happy_maps_unplugged: Mutlu Haritalar
-        C1_moveitmoveit_unplugged: Oynat, Oynat
-        C1_bigevent_unplugged: Büyük Olay
-        C1_getting_loopy: Döngüselleşme
-        C1_pair_programming: Eşli Programlama
-        C1_maze_intro_sequencing: Labirent Dizilemeye Giriş
-        C1_maze_debugging: Labirent Hata Ayıklaması
-        C1_bee_level_intro: Arı Seviyesi - Giriş
-        C1_artist_intro: 'Ressam: Giriş'
-        C1_spelling_bee_intro: 'Yazar Arı: Giriş'
-        C1_zuck_repeat_loop: Labirent Döngüleri
-        C1_bee_loops: Arı Döngüleri
-        C1_maze_loops: Labirent Döngüleri
-        C1_playlab_storytelling: Laboratuvar Oyna - Bir Hikaye Oluştur
-        C1_planting_seed: Tohum Ekme
-        C1_building_foundation: Bir Temel Oluşturma
-        C1_going_places_safely: Biryerlere Güvenle Gitmek
-        C2_maze_intro: 'Labirent: Tanıtım'
-        C2_artist_intro: 'Ressam: Giriş'
-        C2_zuck_repeat_loop: Labirent Döngüleri
-        C2_artist_loops: Aktör Döngüleri
-        C2_artist_debugging: Sanatçı Hata Ayıklama
-        C2_bee_loops: Arı Döngüleri
-        C2_bee_debugging: Arı Ayıklama
-        C2_bee_conditionals: Arı Koşullandırmaları
-        C2_playlab_createstory: Laboratuvar Oyna - Bir Hikaye Oluştur
-        C2_graph_paper: Grafikli Kağıdıyla Programlama
-        C2_conditionals_with_cards: Koşullar
-        C2_binary_bracelets: İkilik Bileklikler
-        C2_relay_programming: Röle Programlama
-        C2_paper_airplanes: Kağıt Uçaklar
-        C2_digital_footprint: Dijital İziniz
-        C2_digital_footprint_v2: Dijital İziniz
-        C3_maze_level_4: Labirent Döngüleri
-        C3_artist_intro: 'Ressam: Giriş'
-        C3_artist_functions: 'Sanatçı: Fonksiyonlar'
-        C3_bee_functions: Arı Fonksiyonları
-        C3_bee_conditionals: Arı Koşullandırmaları
-        C3_maze_conditionals: Labirent Koşullandırıcıları
-        C3_artist_nested_loops: İç İçe Döngüler
-        C3_farmer_while: While(...durumunda) Döngüleri
-        C3_bee_nested_loops: İç İçe Döngüler
-        C3_bee_debugging: Arı Ayıklama
-        C3_bounce: Sıçrama
-        C3_playlab_create_game: 'Oyun Laboratuvarı: Bir Oyun Oluştur'
-        C3_computational_thinking: Sayısal Düşünme
-        C3_dice_race: Zar Yarışı
-        C3_internet: İnternet
-        C3_crowdsourcing: Kalabalık Kaynaklandırma 'Crowdsourcing'
-        C3_functional_suncatchers: Fonksiyonel Güneş Avcıları
-        C3_songwriting_with_parameters: Parametrelerle Şarkı Yazmak
-        C4_intro: Giriş
-        C4_loops_zombie: Döngüler
-        C4_bee_conditional: Arı Koşullandırmaları
-        C4_variables_artist: Değişkenler - Sanatçı
-        C4_variables_playlab: Değişkenler - Oyun laboratuarı
-        C4_for_loops: For (İçin) Döngüleri
-        C4_for_loops_bee: For (İçin) Döngüleri
-        C4_for_loops_no_bee: For (İçin) Döngüleri
-        C4_math_artist: Matematik ile Sanatçı'yı programla
-        C4_function_edit: Fonksiyonları düzenleme
-        C4_function_create: Fonksiyonları Oluşturma
-        C4_function_parameters: Fonksiyon parametreleri
-        C4_conditionals: Koşullar
-        C4_unplugged_algorithms: Tangramlar ile algoritmalar
-        C4_unplugged_madlibs: Çılgın Kütüphaneler
-        C4_unplugged_variables: Zarfların içindeki Değişkenler
-        C4_unplugged_forloops: For (İçin) Döngüleri
-        C4_unplugged_parameters: Parametrelerle Şarkı Yazmak
-        C4_unplugged_binary: İkili
-        CSF_a_b_artist_loops: Sanatçı- Döngüler
-        CSF_artist_angles: Sanatçı açılarda
-        CSF_collector_k1_blocks: 'Bilgisayar bilimleri Temelleri: Toplayıcı'
-        CSF_collector_repeat_loops: Toplayıcı tekrarlama döngüleri
-        CSF_collector_text_blocks: 'Bilgisayar bilimleri Temelleri: Toplayıcı'
-        CSF_create_functions: Fonksiyonları Oluşturma
-        CSF_debugging_k1_blocks: Hata Ayıklama
-        CSF_debugging_text_blocks: Hata Ayıklama
-        CSF_EF_cs_matters: Bilgisayar Bilimi Önemlidir
-        CSF_maze_intro_k1_blocks: Code Studio tanıtımı
-        CSF_maze_intro_text_blocks: Code Studio tanıtımı
-        CSF_my_robotic_friends: Robotik Arkadaşlarım
-        CSF_Power_of_Words: Kelimelerin Gücü
-        CSF_Super_Digital_Citizen: Süper Dijital Vatandaş
-        CSF_stevie_big_project: Stevie ve Büyük Proje
-        CSF_unspotted_bugs: Fark Edilmeyen Hatalar
-        CSF_zuck_loops_short: Döngüleri yineleyin
-        frozen_intro: Kodlama Saatine Giriş
-        frozen_loops: Döngülere Giriş
-        frozen_functions: Fonksiyonlara Giriş
-        playlab_intro: Oyun laboratuarı için giriş
-        playlab_events: Laboratuvar Olaylarını Oynatın
-        playlab_repeat_forever: Play Lab Sonsuza Dek Tekrarla
-        tutorial_puzzle_challenge: YapBoz Mücadelesi Konu Anlatımı
-        infinity_playlab_intro: Oyun Laboratuvarı - Giriş
-        infinity_playlab_events: Oyun Laboratuvarı - Olaylar
-        infinity_playlab_repeat_forever: Oyun Laboratuarı - Sonsuza kadar tekrarla
-        csd_concept_how_computers_work: Bilgisayarların Nasıl Çalıştığını Anlayalım
-        csd_concept_computer: Bir bilgisayarı, bilgisayar yapan nedir?
+        applab_hoc_designmode: App laboratuvar kod saati- Tasarım Modu
+        applab_hoc_onevent: App laboratuvar kod saati- olaydurumunda
+        applab_hoc_setproperty: App laboratuvar kod saati- setProperty
+        applab_hoc_share: App laboratuvar kod saati- Paylaş
+        applab_hoc_welcome: App laboratuvar kod saati- hoş geldiniz
+        applab_intro_designmode: App Lab - tasarım modu
+        applab_intro_events: App Lab - etkileşimli
+        applab_intro_share: App Lab - Uygulamanı paylaş
+        applab_intro_sounds: App Lab - resimler ve sesler
+        applab_intro_welcome: App Lab - Başlarken
+        artist_intro: 'Ressam: Giriş'
+        c_and_c_digital_sharing: Dijital Paylaşım
+        c_and_c_great_to_create: Oluşturmak ve Adil Oynamak Mükemmel
+        codebreak_e01: 'Kod Kırma 1.0: Hill Harper ile Algoritmalar'
+        codebreak_e02: 'Kod Kırma 2.0: Mark Cuban ve Lyndsey Scott ile Prototipler'
+        codebreak_e03: 'Kod Kırma 3.0: Ashton Kutcher ve Mia Gil Epner ile Şifreleme'
+        codebreak_e04: Kod Kırma 4.0 Mike Krieger ve Alice Keeler ile Dijital Bilgiler
+        codebreak_e05: 'Kod Kırma 5.0: Bill Gates ile Simülasyonlar & Veriler'
+        codebreak_e06: 'Kod Kırma 6.0: Keegan-Michael Scott & Vint Cerf ile İnternet'
+        codebreak_e07: 'Kod Kırma 7.0: Sal Khan ve Flo Vaughn ile Koşullar'
+        codebreak_e08: 'Kod Kırma 8.0: Yara Shahidi ve Fuzzy Khosrowshahi ile Değişkenler'
+        codebreak_e09: 'Kod Kırma 9.0: Macklemore & Scott Forstall ile Etkinlikler'
+        codebreak_e10: 'Kod Kırma 10.0: Kat Graham ve Kate Park ile Yapay Zeka'
+        codebreak_e11: 'Kod Kırma 11.0: Susan Wojcicki ve China Anne McClain ile Soyut
+          Düşünme'
+        codebreak_e12: 'Kod Kırma 12.0: Aloe Blacc, Bret Taylor, & Paula Mejia ile
+          Donanım'
+        conditionals_with_cards: Eylem halindeki Bağlantısız Ders -Kartlarla Koşullar
+        cs-principles-intro-to-objects: 'Bilgisayar Bilimi İlkeleri: Nesnelere Giriş'
+        csa-alias-video: Eşittir ve Takma Adlar
+        csa-day-in-pm-pl: Proje yöneticisi ne yapar?
+        csa-equals-video: Eşitler () yöntemi
+        csa-example-solution-1: 'Canlı Kodlama Örnek Çözüm '
+        csa-multi-select-pl: Java'da Çok Seçimli İfadeler
+        csa-pl-calling-methods: Java'da Çağrı Yöntemleri
+        csa-pl-compareTo: Karşılaştırma () metodu
+        csa-pl-creating-objects: Nesne Oluşturma
+        csa-pl-documentation: Java Lab'de Belgeler
+        csa-pl-equals-book: Kitap sınıfı için Eşitler () yönteminin yazılması
+        csa-pl-intro-to-equality: Eşitliğe Giriş
+        csa-pl-intro-to-equals-method: Eşitler () yöntemine giriş
+        csa-pl-intro-to-oop: Nesne Tabanlı Programlamaya Giriş
+        csa-pl-intro-to-pm: Proje Yönetimine Giriş
+        csa-pl-intro-to-strings: Java'da Dizgilere Giriş
+        csa-pl-vocab-pm: Proje Yönetimi Kelime Bilgisi
+        csa-pl-vpl-m1-unit-3: 3. Ünite'de Yazılım Mühendisliği
+        csa-pl-welcome-to-Neighborhood: Çevremize Hoşgeldiniz
+        csa-user-stories: Yazılım Mühendisliğinde Kullanıcı Hikayeleri
+        csa_accessor_methods: 'CSA: Accessor Yöntemleri'
+        csa_calling_methods: 'CSA: Çağrı Yöntemleri'
+        csa_casting: 'CSA: Döküm'
+        csa_column_major_traversal: 'CSA: Sütun Başlıca Geçişi'
+        csa_conditional_statements: 'CSA: Koşullu İfadeler'
+        csa_constructors: 'CSA: Yapıcılar'
+        csa_creating_a_scanner_object: 'CSA: Tarayıcı Nesnesi Oluşturma'
+        csa_creating_objects: 'CSA: Nesne Oluşturma'
+        csa_creating_variables: 'CSA: Değişken Oluşturma'
+        csa_enhanced_for_loops: 'CSA: Gelişmiş İçin Döngüleri'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Döngüler ve 2D Diziler İçin Geliştirilmiş'
+        csa_equals_and_aliases: 'CSA: Eşittir ve Takma Adlar'
+        csa_for_loops: 'CSA: (İçin) Döngüleri'
+        csa_images_and_pixels: 'CSA: Görüntüler ve Pikseller'
+        csa_inheritance: 'CSA: Kalıtım'
+        csa_instance_variables_and_attributes: 'CSA: Örnek Değişkenleri ve Nitelikleri'
+        csa_modifying_values_in_a_1d_array: 'CSA: 1D Dizideki Değerleri Değiştirme'
+        csa_multi-selection_statements: 'CSA: Çok Seçimli İfadeler'
+        csa_mutator_methods: 'CSA: Mutator Yöntemleri'
+        csa_nested_loops: 'CSA: İç içe Döngüler'
+        csa_object_oriented_programming: 'CSA: Nesne Tabanlı Programlama'
+        csa_one_dimensional_arrays: 'CSA: Tek Boyutlu (1D) Diziler'
+        csa_overloaded_constructors: 'CSA: Aşırı Yüklenmiş Kurucular'
+        csa_polymorphism: 'CSA: Polimorfizm'
+        csa_printing_in_java: 'CSA: Java''da Yazdırma'
+        csa_private_methods: 'CSA: Özel Yöntemler'
+        csa_random_numbers: 'CSA: Rastgele Sayılar'
+        csa_recursion: 'CSA: Özyineleme'
+        csa_remving_data_from_an_arraylist: 'CSA: Bir ArrayList''ten Verileri Kaldırma'
+        csa_row_major_traversal: 'CSA: Büyük Sıra-Geçiş'
+        csa_scanner_class_methods: 'CSA: Tarayıcı Sınıfı Yöntemleri'
+        csa_searching_algorithms: 'CSA: Arama Algoritmaları'
+        csa_software_engineering_code_reviews: 'CSA: Yazılım Mühendisliği - Kod İncelemeleri'
+        csa_sorting_algorithms: 'CSA: Sıralama Algoritmaları'
+        csa_static_methods: 'CSA: Statik Yöntemler'
+        csa_static_variables: 'CSA: Statik Değişkenler'
+        csa_the_arraylist_class: 'CSA: ArrayList Sınıfı'
+        csa_the_equals_method: 'CSA: equals() Yöntemi'
+        csa_the_tostring_method: 'CSA: toString () Yöntemi'
+        csa_two_dimensional_arrays: 'CSA: İki Boyutlu (2D) Diziler'
+        csa_two_way_selection_and_not: 'CSA: İki Yönlü Seçim ve DEĞİL'
+        csa_welcome_to_the_theater: 'CSA: Tiyatroya Hoşgeldiniz'
+        csa_while_loops: 'CSA: Süresince Döngüleri'
+        csa_working_with_2d_array_elements: 'CSA: 2D Dizi Elemanları ile Çalışma'
+        csa_working_with_arraylist_data: 'CSA: ArrayList Verileri ile Çalışma'
+        csa_wrapper_classes_part_1: 'CSA: Sarıcı Sınıfları Bölümü 1'
+        csa_wrapper_classes_part_2: 'CSA: Sarıcı Sınıfları Bölüm 2'
+        csa_writing_a_method: 'CSA: Yöntem Yazma'
+        csc-ecosystems-intro: Ekosistemlere Giriş
+        csc-event-short-intro: Etkinlikler Kısa Giriş
+        csc-mapmakers-intro: 'CSC: Harita yapımcıları\t'
+        csc-poem-art-intro: Giriş Videosu
+        csc-poem-art-outro: Çıkış Videosu
+        csc-sprite-lab-pixel-editor: Kendi Hareketli Nesneni Çiz
+        csc-starquilts-intro: 'CSC: Yıldız Yorgan'
+        csc_animal_adaptations_intro: Hayvan Uyarlamaları Giriş
+        csc_fm_pilot: Fonksiyon Makineleri (Pilot)
+        csc_fm_pilot_v2: 'Fonksiyon Makineleri Tanıtımı '
+        csc_timecapsule_intro: Zaman Kapsülü Giriş
+        csd_app_lab_design_mode: CSD Uygulama Laboratuvarı Tasarım Modu
+        csd_app_lab_events: CSD Uygulama Laboratuvarı Etkinlikleri
+        csd_applab_arrays: Dizilere Giriş
+        csd_applab_designmode: 'Bilgisayar Bilimi Keşifleri: Uygulama Laboratuvarı
+          - Tasarım Modu'
+        csd_applab_designmode_short: Uygulama Laboratuvarı Tasarım Modu
+        csd_applab_loops: Uygulama Laboratuvarındaki Döngüler
+        csd_applab_parameters: Fonksiyon parametreleri
         csd_concept_binary_data: 'Bilgisayar Nasıl İşler: İkili ve veri'
         csd_concept_circuits_logic: 'Bilgisayarlar Nasıl Çalışır: Devreler & Mantık'
+        csd_concept_computer: Bir bilgisayarı, bilgisayar yapan nedir?
+        csd_concept_hardware_software: 'Bilgisayarlar Nasıl Çalışır: Donanım & Yazılım'
+        csd_concept_how_computers_work: Bilgisayarların Nasıl Çalıştığını Anlayalım
         csd_concept_memory_cpu_input_output: 'Bilgisayarlar Nasıl Çalışır: İşlemci,
           Giriş & Çıkışlar'
-        csd_concept_hardware_software: 'Bilgisayarlar Nasıl Çalışır: Donanım & Yazılım'
         csd_concept_search: Arama nasıl çalışır
+        csd_debugging: Hata Ayıklama
         csd_external_amazon_data: Amazon tavsiye sistemlerinde kullanılan Büyük Veri
           hayatımızı değiştirmek için kullanılır
         csd_external_netflix_data: Netflix Nasıl TV Gösterimleri ve Film Önerileri
           Yapabiliyor?
         csd_external_waze_data: Neden pek çok kullanıcı ile Waze ile takıntı yaptı?
         csd_gamelab_animation_tab: Animasyon sekmesi
+        csd_gamelab_booleans: Boolean İfadeleri
+        csd_gamelab_conditional_statements: Koşullu İfadeler
+        csd_gamelab_functions: Fonksiyonların Çağrılması ve Tanımlanması
+        csd_gamelab_if_else: Eğer/Değilse İfadeleri
         csd_gamelab_velocity: Hız
-        csd_weblab_intro_1: Lab - Bölüm 1 Web Tanıtım
-        csd_weblab_intro_2: Lab - Bölüm 2 Web Tanıtım
+        csd_how_teamwork_works: Takım çalışması Nasıl İşler
+        csd_ml_ethics_ai: 'Etik ve Yapay Zeka '
+        csd_ml_import_model: AI Modelini İçe Aktarma
+        csd_ml_intro_ai_lab_july2021: AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş
+        csd_ml_intro_to_ai_lab: AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş
+        csd_ml_model_cards_july2021: AI Laboratuvarında Model Kartları
+        csd_ml_numerical_ai_lab: AI Laboratuvarında Sayısal Veriler
+        csd_ml_training_testing_ai_lan: Yapay Zeka Laboratuvarında Eğitim ve Test
+        csd_pair_programming: Eşli Programlama
+        csd_problem_solving_process: Problem çözme süreci
+        csd_sprite_properties: Nesne özellikleri
+        csd_teamwork_and_disagreement: Takım çalışması - Anlaşmazlıkla Başa Çıkma
+        csd_u6_call_define_functions: 'CSD: Fonksiyonların Çağrılması ve Tanımlanması'
+        csd_u6_circuit_playground: Fiziksel Bilişim
+        csd_u6_if_statements: 'CSD: Eğer (If) İfadeleri'
+        csd_u6_input_output: Girdiler ve çıktılar
+        csd_u6_variables_part2: Değişkenler - Bölüm 2
         csd_weblab_css_1: Bilgisayar Bilimi Tanıtım Bölüm 1
         csd_weblab_css_2: Bilgisayar Bilimi Tanıtım Bölüm 2
+        csd_weblab_intro_1: Lab - Bölüm 1 Web Tanıtım
+        csd_weblab_intro_2: Lab - Bölüm 2 Web Tanıtım
         csd_weblab_intro_3: Web Tanıtım Bölüm 2
+        csd_what_computers_are: Bilgisayar nedir?
+        csd_what_computers_do: Bilgisayarlar Ne Yapar?
+        csf21pilot_events: 'Sprite Lab: Hareketli nesneler harekette'
+        csf21pilot_prompts: 'Sprite Lab: Metin ve Bilgi İstemleri'
+        csf_follow_the_digital_trail: Dijital İzi Takip Edin
+        csf_lots_of_sprites: 'Sprite Lab: Çok sayıda Hareketli Nesneler'
+        csf_my_online_neighborhood_2020: Çevrimiçi Mahallem
+        csf_private_and_personal_information: Özel ve Kişisel Bilgiler
+        csp-pd-welcome: Aileye Hoşgeldiniz!
         csp_applab_functions: Fonksiyonlara Giriş
         csp_applab_functions_parameters: Fonksiyon parametreleri
         csp_applab_loops: Döngüler
+        csp_applab_parameters: Fonksiyon parametreleri
         csp_cs_is_changing_everything: Bilgisayar Bilimi, Her Şeyi Değiştiriyor.
+        csp_defining_calling_functions: Tanımlama ve Çağırma Fonksiyonları
+        csp_global_vs_local: Global ve Yerel Değişkenler Hata Ayıklama
         csp_textcompression: Metin sıkıştırma bileşeni
         csp_textcompression_new: Metin sıkıştırma bileşeni
-        starwars_intro: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - Giriş'
-        starwars_typing: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - JavaScript'
-        starwars_events: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - Etkinlikler'
-        starwars_congrats: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - Tebrikler'
-        starwars_blocks_intro: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek
-          - Giriş'
-        starwars_blocks_events: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek
-          - Etkinlikler'
-        starwars_blocks_congrats: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek
-          - Tebrikler'
-        mc_intro: Minecraft - Giriş
-        mc_repeat: Minecraft - Tekrar
-        mc_if_statements: Minecraft - Eğer ifadeleri
-        mc_congrats_share: Minecraft - Tebrikler
-        mc_congrats_no_share: Minecraft - Tebrikler
-        gumball_intro: Gumball Kod Saati - Giriş
+        csp_tutorial_datatab: Uygulama Laboratuvarında Veri Sekmesi
+        csp_tutorial_datavis1: Uygulama Laboratuvarında Veri Görselleştirici - Bölüm
+          1
+        csp_tutorial_datavis2: Uygulama Laboratuvarında Veri Görselleştirici - Bölüm
+          2
+        csp_tutorial_libraries: Uygulama Laboratuvarındaki Kitaplıklar
+        elem_pd_2: İlkokul Bilgisayar Bilimi - Kişisel Gelişim videosu 2/2
+        enter_your_own_poem: Kendi Şiirinizi Girin
+        farmer_intro: Çiftçi tanıtım
+        flappy_intro: Flappy Tanıtım
+        frozen_functions: Fonksiyonlara Giriş
+        frozen_intro: Kodlama Saatine Giriş
+        frozen_loops: Döngülere Giriş
+        function: Fonksiyonlar
         gumball_events: Gumball Kodlama Saati - Olaylar
+        gumball_intro: Gumball Kod Saati - Giriş
         gumball_repeat: Gumball Kodlama Saati - Tekrarlayan İfadeler
-        iceage_intro: Buz Devri Kodlama Saati - Giriş
-        iceage_events: Buz Devri Kodlama Saati - Olaylar
-        iceage_repeat: Buz Devri Kodlama Saati - Tekrarlayan İfadeler
-        mc_2016_intro: Minecraft Kodlama Saati - Giriş
-        mc_2016_loops: Minecraft Kodlama Saati - Döngüler
-        mc_2016_events: Minecraft Kodlama Saati - Olaylar
-        mc_2016_spawn: Minecraft Kodlama Saati - Spawn
-        mc_2016_congrats: Minecraft Kodlama Saati - Tebrikler
-        applab_hoc_welcome: App laboratuvar kod saati- hoş geldiniz
-        applab_hoc_setproperty: App laboratuvar kod saati- setProperty
-        applab_hoc_onevent: App laboratuvar kod saati- olaydurumunda
-        applab_hoc_designmode: App laboratuvar kod saati- Tasarım Modu
-        applab_hoc_share: App laboratuvar kod saati- Paylaş
-        mc_2017_agent_intro: Minecraft Kodlama Saati - Ajan
-        mc_2017_repeat: Minecraft Kodlama Saati - Döngüler
-        mc_2017_functions: Minecraft Kodlama Saati - Fonksiyonlar
-        mc_2017_congratulations: Minecraft Kodlama Saati - Tebrikler
-        mc_2017_puzzle_1: Minecraft Kodlama Saati - Ajan
-        mc_2017_puzzle_3: Minecraft Kodlama Saati - Döngüler
-        mc_2017_puzzle_8: Minecraft Kodlama Saati - Fonksiyonlar
-        mc_2017_puzzle_12: Minecraft Kodlama Saati - serbest zaman
+        hello_world_congrats: Merhaba Dünya - Dilediğinizi Yapın
+        hello_world_events: Merhaba Dünya - Olaylarla Programlama
+        hello_world_intro: Merhaba Dünya - Hareketli Nesneler Laboratuvarına Hoş Geldiniz
+        hint_videos_d_11_11_first: 'İpucu videolar: D.11.11 ilk'
+        hint_videos_d_11_11_last: 'İpucu videolar: D.11.11 son'
         hint_videos_d_11_3_first: 'İpucu videolar: D.11.3 ilk'
         hint_videos_d_11_3_last: 'İpucu videolar: D.11.3 son'
         hint_videos_d_11_4_first: 'İpucu videolar: D.11.4 ilk'
@@ -705,407 +992,120 @@ tr:
         hint_videos_d_11_7_last: 'İpucu videolar: D.11.7 son'
         hint_videos_d_11_9_first: 'İpucu videolar: D.11.9 ilk'
         hint_videos_d_11_9_last: 'İpucu videolar: D.11.9 son'
-        hint_videos_d_11_11_first: 'İpucu videolar: D.11.11 ilk'
-        hint_videos_d_11_11_last: 'İpucu videolar: D.11.11 son'
-        applab_intro_welcome: App Lab - Başlarken
-        applab_intro_events: App Lab - etkileşimli
-        applab_intro_sounds: App Lab - resimler ve sesler
-        applab_intro_designmode: App Lab - tasarım modu
-        applab_intro_share: App Lab - Uygulamanı paylaş
-        csd_applab_arrays: Dizilere Giriş
-        CSF_skinOverview_Harvester: Hasatçı
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: BB-8 ile Döngüler
-        CSF_harvester_skinOverview_K-1: Hasatçı
-        CSF_harvester_loops_K1: Hasatçıdaki Döngüler
-        CSF_scrat_loops_K1: Buz Devrindeki Döngüler
-        CSF_scrat_loops_CF: Buz Devrindeki Döngüler
-        CSF_if_allskins: Eğer Bloğu
-        CSF_ifelse_allskins: Eğer/Değilse Bloğu Kullanılıyor
-        CSF_ifelseifelse_allskins: Eğer/Değilseeğer/Değilse Blokları Kullanılıyor
-        CSF_loops_AB: Döngüler
-        csd_gamelab_booleans: Boolean İfadeleri
-        csd_gamelab_conditional_statements: Koşullu İfadeler
-        csd_gamelab_if_else: Eğer/Değilse İfadeleri
-        CSF_SpriteLabIntro_CDEF: Bu Hareketli Nesne Laboratuvarıdır.
-        CSF_Spritelab_MakeSprite_CDEF: Hareketli Nesne Laboratuvarında bir Hareketli
-          Nesne Nasıl Oluşturulur
-        CDEF_Video_SpritesInAction: Eylem halindeki Hareketli Nesneler
-        CSF_SpriteLab_SpritesInAction_CDEF: Eylem halindeki Hareketli Nesneler
-        CSF_StarWars_ProjectIntro: Star Wars Projesine Giriş
-        mc_2018_intro: 'Minecraft: Su Yolculuğuna Giriş'
-        MC_2018_loops: 'Minecraft: Şuraya Kadar Su Yolculuğunu Tekrarla'
-        mc_2018_conditionals: 'Minecraft: Su Yolculuğu Koşulları'
-        mc_2018_closing: 'Minecraft: Su Yolculuğu Tebrikler'
-        hoc_dance_warmup: Dans Partisi - Isınma
-        hoc_dance_events: Dans Partisi - Etkinlikler
-        hoc_dance_properties: Dans Partisi - Özellikler
         hoc_dance_congrats: Dans Partisi - Parti Başlıyor!
-        c_and_c_great_to_create: Oluşturmak ve Adil Oynamak Mükemmel
-        c_and_c_digital_sharing: Dijital Paylaşım
-        teaching_csf_how_it_works: 'Bilgisayar Bilimi Temellerinin öğretilmesi: Ders
-          Nasıl İşlenir'
-        elem_pd_2: İlkokul Bilgisayar Bilimi - Kişisel Gelişim videosu 2/2
-        what_is_cs: Bilgisayar bilimi nedir?
-        repeat_block: Tekrarla Bloğunun kullanılması
+        hoc_dance_congrats_2019: Dans Partisi 2019 - Parti Başlıyor!
+        hoc_dance_events: Dans Partisi - Etkinlikler
+        hoc_dance_events_2019: Dans Partisi 2019 - Etkinlikler
+        hoc_dance_measures_2019: Dans Partisi 2019 - Ölçütler
+        hoc_dance_properties: Dans Partisi - Özellikler
+        hoc_dance_properties_2019: Dans Partisi 2019 - Özellikler
+        hoc_dance_warmup: Dans Partisi - Isınma
+        hoc_dance_warmup_2019: Dans Partisi 2019 - Isınma
+        hoc_wrapup: Kod saatini tamamla
+        how-to-k5-workshops: 'Code.org''un Bilgisayar Bilimi Temelleri: Çocuk Test
+          Edildi, Öğretmen Onaylandı'
+        iceage_events: Buz Devri Kodlama Saati - Olaylar
+        iceage_intro: Buz Devri Kodlama Saati - Giriş
+        iceage_repeat: Buz Devri Kodlama Saati - Tekrarlayan İfadeler
+        if: Eğer bloğu
+        if_else: Eğer/değilse bloğu
+        if_else_scrat: Eğer/değilse bloğu
+        infinity_playlab_events: Oyun Laboratuvarı - Olaylar
+        infinity_playlab_intro: Oyun Laboratuvarı - Giriş
+        infinity_playlab_repeat_forever: Oyun Laboratuarı - Sonsuza kadar tekrarla
         lesson_planning: Ders Planlanması
+        loop_for: Sayaç bloğu
+        loop_times: Bloğu tekrarlayın
+        loop_until: Blok kadar tekrarlayın
+        loop_while: while bloğu
+        maze_intro: 'Labirent: Tanıtım'
+        mc_2016_congrats: Minecraft Kodlama Saati - Tebrikler
+        mc_2016_events: Minecraft Kodlama Saati - Olaylar
+        mc_2016_intro: Minecraft Kodlama Saati - Giriş
+        mc_2016_loops: Minecraft Kodlama Saati - Döngüler
+        mc_2016_spawn: Minecraft Kodlama Saati - Spawn
+        mc_2017_agent_intro: Minecraft Kodlama Saati - Ajan
+        mc_2017_congratulations: Minecraft Kodlama Saati - Tebrikler
+        mc_2017_functions: Minecraft Kodlama Saati - Fonksiyonlar
+        mc_2017_puzzle_1: Minecraft Kodlama Saati - Ajan
+        mc_2017_puzzle_12: Minecraft Kodlama Saati - serbest zaman
+        mc_2017_puzzle_3: Minecraft Kodlama Saati - Döngüler
+        mc_2017_puzzle_8: Minecraft Kodlama Saati - Fonksiyonlar
+        mc_2017_repeat: Minecraft Kodlama Saati - Döngüler
+        mc_2018_closing: 'Minecraft: Su Yolculuğu Tebrikler'
+        mc_2018_conditionals: 'Minecraft: Su Yolculuğu Koşulları'
+        mc_2018_intro: 'Minecraft: Su Yolculuğuna Giriş'
+        mc_congrats_no_share: Minecraft - Tebrikler
+        mc_congrats_share: Minecraft - Tebrikler
+        mc_if_statements: Minecraft - Eğer ifadeleri
+        mc_intro: Minecraft - Giriş
+        mc_repeat: Minecraft - Tekrar
+        oceans_machine_learning: Makine Öğrenimi
+        oceans_societal_implications: Toplumsal Çıkarımlar
+        oceans_training_data: Eğitim Verileri
         opd_closing: 'Bilgisayar Bilimi Temellerinin öğretilmesi: Kapanış & Sonraki
           Adımlar'
-        why_unplugged_lessons: '"Bağlantısız" olma'
-        writing_first_program: Birinc bilgisayar programınızın yazılması
-        conditionals_with_cards: Eylem halindeki Bağlantısız Ders -Kartlarla Koşullar
+        outbreak_events: 'Salgın Simülatörü: Etkinlikler'
+        outbreak_intro: 'Salgın simülasyonu: Giriş'
+        outbreak_mike: Mike ile CodeBytes Bölüm 3 - Salgın Simülatörü
+        outbreak_outro: 'Salgın Simülatörü: Bedava Oyna'
+        outbreak_scientist: 'Salgın Simülatörü: Bilim Adamı Gibi Düşünmek'
+        parameters: Fonksiyon parametreleri
+        playlab_2021: Oyun laboratuarı için giriş
+        playlab_2021_reader: Oyun laboratuarı için giriş
+        playlab_events: Laboratuvar Olaylarını Oynatın
+        playlab_intro: Oyun laboratuarı için giriş
+        playlab_repeat_forever: Play Lab Sonsuza Dek Tekrarla
+        poemart_celebration: Şiir Sanatı Kutlama
+        poemart_events: v1 Şiir Sanatı Etkinlikleri
+        poemart_imagery: Şiir Sanatı  - İmgeler
+        poemart_intro: Şiir Sanatına Giriş
+        poembot-pilot-haiku: Haiku Bots - Haiku'nu Göster [PILOT]
+        poembot-pilot-prompts: Haiku Bots - Seçeneklerle İstemi [PILOT]
+        poembot-pilot-text: Haiku Bots - Metin Saklama [PILOT]
+        poembot-playtest-events: ŞiirBot Test Etkinlikler
+        poembot-playtest-intro: ŞiirBot Test Giriş
+        poembot-playtest-sprites: ŞiirBot Test Hareketli Nesneler
+        poetry_module_conditionals: Koşullar - Şiirle Kodlama
+        poetry_module_multichoiceprompts: Çoktan Seçmeli İstemler - Şiirle Kodlama
+        poetry_module_planningapp: Şiir Oluşturucu Uygulamanızı Planlama - Şiirle
+          Kodlama
+        poetry_module_textandvariables: Metin ve Değişkenler - Şiirle Kodlama
+        poetry_module_variables: Değişkenler - Şiirle Kodlama
+        repeat_block: Tekrarla Bloğunun kullanılması
+        rough_poemart_congrats: v1 Şiir Sanatı Tebrikleri
+        rough_poemart_events: v1 Şiir Sanatı Etkinlikleri
+        rough_poemart_imagery: v1 Şiir Sanatı Görüntüleri
+        rough_poemart_intro: v1 Şiir Sanatı Girişi
         songwriting_with_functions: Eylem halindeki Bağlantısız Ders -Fonksiyonlar
           ile şarkı yazma
-        what_is_an_event: Bir etkinlik nedir?
+        star_quilts_intro_to_artist: 'Yıldız Yorganlar: Sanatçıya Giriş'
+        starquilts_intro_artist: Yıldızlı Örtülere Giriş
+        starwars_blocks_congrats: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek
+          - Tebrikler'
+        starwars_blocks_events: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek
+          - Etkinlikler'
+        starwars_blocks_intro: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek
+          - Giriş'
+        starwars_congrats: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - Tebrikler'
+        starwars_events: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - Etkinlikler'
+        starwars_intro: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - Giriş'
+        starwars_typing: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek - JavaScript'
         teaching_cs_pair_programming: 'Bilgisayar Bilimi Temellerinin öğretilmesi:
           Eşli Programlama'
+        teaching_csf_how_it_works: 'Bilgisayar Bilimi Temellerinin öğretilmesi: Ders
+          Nasıl İşlenir'
         teaching_problem_solving: 'Bilgisayar Bilimi Temellerinin öğretilmesi: Problem
           Çözmenin Öğretilmesi'
-        csd_applab_designmode: 'Bilgisayar Bilimi Keşifleri: Uygulama Laboratuvarı
-          - Tasarım Modu'
-        csd_pair_programming: Eşli Programlama
-        csd_gamelab_functions: Fonksiyonların Çağrılması ve Tanımlanması
-        csd_applab_parameters: Fonksiyon parametreleri
-        csd_applab_loops: Uygulama Laboratuvarındaki Döngüler
-        csd_problem_solving_process: Problem çözme süreci
-        CSF_Going_Places_Safely: Çevrimiçi Mahallem
-        CSF_SpriteLab_Intro_v2: Hareketli Nesne Laboratuvarı Tanıtımı
-        CSF_Spritelab_MakeSprite_v2: Hareketli Nesne Oluşturma
-        CSF_SpriteLab_SpritesInAction_v2: Eylem halindeki Hareketli Nesneler
-        csd_debugging: Hata Ayıklama
-        csd_applab_designmode_short: Uygulama Laboratuvarı Tasarım Modu
-        csp-pd-welcome: Aileye Hoşgeldiniz!
-        CSF-Teaching-Problem-Solving: CSF Problem Çözme Öğretimi
+        tutorial_puzzle_challenge: YapBoz Mücadelesi Konu Anlatımı
         u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video
           - Veri bloğu
         u7-libraries-explanation: 'Uygulama Laboratuvarı: Kendi Bloklarınızı Yapın
           - Kütüphaneler Nasıl Kullanılır'
-        how-to-k5-workshops: 'Code.org''un Bilgisayar Bilimi Temelleri: Çocuk Test
-          Edildi, Öğretmen Onaylandı'
+        upload_sprites_backgrounds: Özel Sprite ve Arka Planlar Yükleme
+        what_is_an_event: Bir etkinlik nedir?
+        what_is_cs: Bilgisayar bilimi nedir?
         why-should-teach-unplugged-activities: 'SSS: "Bağlantısız" aktiviteleri neden
           öğretmeliyim?'
-        cs-principles-intro-to-objects: 'Bilgisayar Bilimi İlkeleri: Nesnelere Giriş'
-        oceans_machine_learning: Makine Öğrenimi
-        oceans_training_data: Eğitim Verileri
-        oceans_societal_implications: Toplumsal Çıkarımlar
-        hoc_dance_congrats_2019: Dans Partisi 2019 - Parti Başlıyor!
-        hoc_dance_warmup_2019: Dans Partisi 2019 - Isınma
-        hoc_dance_events_2019: Dans Partisi 2019 - Etkinlikler
-        hoc_dance_measures_2019: Dans Partisi 2019 - Ölçütler
-        hoc_dance_properties_2019: Dans Partisi 2019 - Özellikler
-        csd_what_computers_do: Bilgisayarlar Ne Yapar?
-        csf_my_online_neighborhood_2020: Çevrimiçi Mahallem
-        csf_follow_the_digital_trail: Dijital İzi Takip Edin
-        csf_private_and_personal_information: Özel ve Kişisel Bilgiler
-        csd_what_computers_are: Bilgisayar nedir?
-        codebreak_e01: 'Kod Kırma 1.0: Hill Harper ile Algoritmalar'
-        codebreak_e02: 'Kod Kırma 2.0: Mark Cuban ve Lyndsey Scott ile Prototipler'
-        codebreak_e03: 'Kod Kırma 3.0: Ashton Kutcher ve Mia Gil Epner ile Şifreleme'
-        codebreak_e04: Kod Kırma 4.0 Mike Krieger ve Alice Keeler ile Dijital Bilgiler
-        codebreak_e05: 'Kod Kırma 5.0: Bill Gates ile Simülasyonlar & Veriler'
-        csd_how_teamwork_works: Takım çalışması Nasıl İşler
-        csd_teamwork_and_disagreement: Takım çalışması - Anlaşmazlıkla Başa Çıkma
-        codebreak_e06: 'Kod Kırma 6.0: Keegan-Michael Scott & Vint Cerf ile İnternet'
-        codebreak_e07: 'Kod Kırma 7.0: Sal Khan ve Flo Vaughn ile Koşullar'
-        codebreak_e08: 'Kod Kırma 8.0: Yara Shahidi ve Fuzzy Khosrowshahi ile Değişkenler'
-        codebreak_e09: 'Kod Kırma 9.0: Macklemore & Scott Forstall ile Etkinlikler'
-        codebreak_e10: 'Kod Kırma 10.0: Kat Graham ve Kate Park ile Yapay Zeka'
-        codebreak_e11: 'Kod Kırma 11.0: Susan Wojcicki ve China Anne McClain ile Soyut
-          Düşünme'
-        codebreak_e12: 'Kod Kırma 12.0: Aloe Blacc, Bret Taylor, & Paula Mejia ile
-          Donanım'
-        csf21pilot_events: 'Sprite Lab: Hareketli nesneler harekette'
-        csf21pilot_prompts: 'Sprite Lab: Metin ve Bilgi İstemleri'
-        outbreak_mike: Mike ile CodeBytes Bölüm 3 - Salgın Simülatörü
-        poembot-pilot-prompts: Haiku Bots - Seçeneklerle İstemi [PILOT]
-        poembot-pilot-text: Haiku Bots - Metin Saklama [PILOT]
-        poembot-pilot-haiku: Haiku Bots - Haiku'nu Göster [PILOT]
-        csd_ml_intro_to_ai_lab: AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş
-        csd_ml_import_model: AI Modelini İçe Aktarma
-        csf_lots_of_sprites: 'Sprite Lab: Çok sayıda Hareketli Nesneler'
-        playlab_2021: Oyun laboratuarı için giriş
-        playlab_2021_reader: Oyun laboratuarı için giriş
-        csp_defining_calling_functions: Tanımlama ve Çağırma Fonksiyonları
-        csp_tutorial_datatab: Uygulama Laboratuvarında Veri Sekmesi
-        csp_tutorial_libraries: Uygulama Laboratuvarındaki Kitaplıklar
-        PL-Video-21: Code.org'un Profesyonel Öğrenimine Hoş Geldiniz!
-        csp_tutorial_datavis1: Uygulama Laboratuvarında Veri Görselleştirici - Bölüm
-          1
-        csp_tutorial_datavis2: Uygulama Laboratuvarında Veri Görselleştirici - Bölüm
-          2
-        csd_ml_intro_ai_lab_july2021: AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş
-        csd_ml_training_testing_ai_lan: Yapay Zeka Laboratuvarında Eğitim ve Test
-        csd_ml_model_cards_july2021: AI Laboratuvarında Model Kartları
-        csd_ml_numerical_ai_lab: AI Laboratuvarında Sayısal Veriler
-        Gettting_Started_Progress: İlerleme, Geri Bildirim ve Değerlendirme
-        Gettting_Started_ClassSection: Sınıf Bölümü Oluşturma
-        Gettting_Started_StudentExperience: Öğrenci Deneyimi
-        Getting_Started_BasicFeatures: Code.org'un Temel Özellikleri
-        PL_overview_CSD: Bilgisayar Bilimi Keşifleri Nedir?
-        PL_CSD_TeacherTips_Advise: Öğretmen İpuçları - Yeni Öğretmenlere Tavsiyeler
-        PL_CSD_TeacherTips_IntroToCSD: Öğretmen İpuçları - BB Keşiflerine Giriş
-        PL_CSD_TeacherTips_ProblemSolvingProcess: Öğretmen İpuçları - Problem Çözme
-          Süreci
-        PL_CSD_TeacherTips_PairProgramming: Öğretmen İpuçları - Eşli Programlama
-        PL_CSD_TeacherTips_Debugging: Öğretmen İpuçları - Hata Ayıklama
-        PL_CSD_TeacherTips_LeadLearner: Öğretmen İpuçları - Lider Öğrenci
-        poembot-playtest-intro: ŞiirBot Test Giriş
-        poembot-playtest-sprites: ŞiirBot Test Hareketli Nesneler
-        poembot-playtest-events: ŞiirBot Test Etkinlikler
-        hello_world_intro: Merhaba Dünya - Hareketli Nesneler Laboratuvarına Hoş Geldiniz
-        hello_world_events: Merhaba Dünya - Olaylarla Programlama
-        hello_world_congrats: Merhaba Dünya - Dilediğinizi Yapın
-        csp_global_vs_local: Global ve Yerel Değişkenler Hata Ayıklama
-        rough_poemart_intro: v1 Şiir Sanatı Girişi
-        rough_poemart_events: v1 Şiir Sanatı Etkinlikleri
-        rough_poemart_imagery: v1 Şiir Sanatı Görüntüleri
-        rough_poemart_congrats: v1 Şiir Sanatı Tebrikleri
-        poetry_module_variables: Değişkenler - Şiirle Kodlama
-        poetry_module_textandvariables: Metin ve Değişkenler - Şiirle Kodlama
-        poetry_module_planningapp: Şiir Oluşturucu Uygulamanızı Planlama - Şiirle
-          Kodlama
-        poetry_module_multichoiceprompts: Çoktan Seçmeli İstemler - Şiirle Kodlama
-        poetry_module_conditionals: Koşullar - Şiirle Kodlama
-        poemart_intro: Şiir Sanatına Giriş
-        poemart_events: v1 Şiir Sanatı Etkinlikleri
-        poemart_imagery: Şiir Sanatı  - İmgeler
-        poemart_celebration: Şiir Sanatı Kutlama
-        csd_u6_variables_part2: Değişkenler - Bölüm 2
-        csd_ml_ethics_ai: 'Etik ve Yapay Zeka '
-        outbreak_intro: 'Salgın simülasyonu: Giriş'
-        outbreak_events: 'Salgın Simülatörü: Etkinlikler'
-        outbreak_scientist: 'Salgın Simülatörü: Bilim Adamı Gibi Düşünmek'
-        outbreak_outro: 'Salgın Simülatörü: Bedava Oyna'
-        PL_overview_CSP: Bilgisayar Bilimi İlkeleri Nedir?
-        PL_CSP_EIPMOverview: EIPM Dersleri Rehberi
-        CSA-PL-debugging-temp: Java Lab'da Hata ayıklamaya giriş - geçici
-        csd_app_lab_design_mode: CSD Uygulama Laboratuvarı Tasarım Modu
-        csd_app_lab_events: CSD Uygulama Laboratuvarı Etkinlikleri
-        PL_CSD_Unit4_AppTesting: Kağıt Prototip testi
-        csd_u6_circuit_playground: Fiziksel Bilişim
-        csd_u6_input_output: Girdiler ve çıktılar
-        CSA-PL-for-loops: Java'da döngüler
-        CSA-PL-variables: Java'da Değişken Oluşturmak
-        PL_CS_Journeys_Overview: BB Yolculukları
-        CSA-PL-intro-to-java-lab: Java Laboratuvarı temelleri
-        CSA-PL-first-program: Java'da Program yazma
-        CSD_u6_variables_part1: 'CSD: Değişkenler'
-        csd_u6_if_statements: 'CSD: Eğer (If) İfadeleri'
-        csc-poem-art-intro: Giriş Videosu
-        csc-poem-art-outro: Çıkış Videosu
-        csd_u6_call_define_functions: 'CSD: Fonksiyonların Çağrılması ve Tanımlanması'
-        csp_applab_parameters: Fonksiyon parametreleri
-        starquilts_intro_artist: Yıldızlı Örtülere Giriş
-        CSA-PL-intro-to-arrays: Bir Boyutlu (1D) Diziler
-        CSA-PL-1d-arrays-new-values: 1 boyutlu dizilere değer girmek
-        CSA-PL-conditionals: Java'da Koşullu İfadeler
-        CSA-PL-two-way-selection: İki yönlü seçim
-        CSA-PL-Printing-in-Java: Java'da Yazdırma
-        CSA-PL-multi-selection-statements: Çok Seçenekli İfadeler
-        PL_CSP_TeacherTips_Advice: Öğretmen İpuçları - Yeni BB Öğretmenlerine Tavsiyeler
-        PL_CSP_TeacherTips_IntroToCSP: 'Öğretmen İpuçları: BB İlkelerine Giriş'
-        PL_CSP_TeacherTips_Debugging: 'Öğretmen İpuçları: Hata Ayıklama ile Yardım'
-        PL_CSP_TeacherTips_LeadLearner: 'Öğretmen İpuçları: Nasıl Lider Öğrenci Olunur'
-        PL_CSP_TeacherTips_APExam: 'Öğretmen İpuçları: AP Sınavına Hazırlık'
-        PL_CSP_TeacherTips_EIPM: 'Öğretmen İpuçları: EIPM Süreci'
-        PL_CSD_CircuitPlayground_Overview: Devre Oyun Alanına Genel Bakış
-        CSA-PL-debugging-22: Java Lab'da hata ayıklama
-        CSD_Unit6_InteractiveArtExemplar: Etkileşimli Sanat Örnekleri
-        CS_Changing_Everything: Bilgisayar Bilimi, Her Şeyi Değiştiriyor.
-        csa-alias-video: Eşittir ve Takma Adlar
-        csa-equals-video: Eşitler () yöntemi
-        csa-user-stories: Yazılım Mühendisliğinde Kullanıcı Hikayeleri
-        csa-pl-vpl-m1-unit-3: 3. Ünite'de Yazılım Mühendisliği
-        csa-pl-intro-to-equality: Eşitliğe Giriş
-        csa-pl-intro-to-equals-method: Eşitler () yöntemine giriş
-        csa-pl-equals-book: Kitap sınıfı için Eşitler () yönteminin yazılması
-        csa-multi-select-pl: Java'da Çok Seçimli İfadeler
-        csc_timecapsule_intro: Zaman Kapsülü Giriş
-        PL_Equity_in_CS_Education: BB Eğitiminde Eşitlik
-        csc_fm_pilot: Fonksiyon Makineleri (Pilot)
-        csc_fm_pilot_v2: 'Fonksiyon Makineleri Tanıtımı '
-        csc-sprite-lab-pixel-editor: Kendi Hareketli Nesneni Çiz
-        csa-pl-intro-to-strings: Java'da Dizgilere Giriş
-        csa-pl-compareTo: Karşılaştırma () metodu
-        csc-event-short-intro: Etkinlikler Kısa Giriş
-        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Devre Oyun Alanına Genel
-          Bakış
-        csa-day-in-pm-pl: Proje yöneticisi ne yapar?
-        csa-pl-intro-to-pm: Proje Yönetimine Giriş
-        PL_CSD_CircuitPlayground_Setup: Devre Oyun Alanı Ayarlama
-        csa_object_oriented_programming: 'CSA: Nesne Tabanlı Programlama'
-        csa_creating_objects: 'CSA: Nesne Oluşturma'
-        csa_calling_methods: 'CSA: Çağrı Yöntemleri'
-        csa_while_loops: 'CSA: Süresince Döngüleri'
-        csa_inheritance: 'CSA: Kalıtım'
-        csa_writing_a_method: 'CSA: Yöntem Yazma'
-        csa_software_engineering_code_reviews: 'CSA: Yazılım Mühendisliği - Kod İncelemeleri'
-        csa_conditional_statements: 'CSA: Koşullu İfadeler'
-        csa_printing_in_java: 'CSA: Java''da Yazdırma'
-        csa_two_way_selection_and_not: 'CSA: İki Yönlü Seçim ve DEĞİL'
-        csa-pl-intro-to-oop: Nesne Tabanlı Programlamaya Giriş
-        csa-pl-welcome-to-Neighborhood: Çevremize Hoşgeldiniz
-        csa-pl-calling-methods: Java'da Çağrı Yöntemleri
-        csa-pl-creating-objects: Nesne Oluşturma
-        csa_accessor_methods: 'CSA: Accessor Yöntemleri'
-        csa_constructors: 'CSA: Yapıcılar'
-        csa_creating_a_scanner_object: 'CSA: Tarayıcı Nesnesi Oluşturma'
-        csa_creating_variables: 'CSA: Değişken Oluşturma'
-        csa_instance_variables_and_attributes: 'CSA: Örnek Değişkenleri ve Nitelikleri'
-        csa_mutator_methods: 'CSA: Mutator Yöntemleri'
-        csa_overloaded_constructors: 'CSA: Aşırı Yüklenmiş Kurucular'
-        csa_the_tostring_method: 'CSA: toString () Yöntemi'
-        csa_scanner_class_methods: 'CSA: Tarayıcı Sınıfı Yöntemleri'
-        csa_for_loops: 'CSA: (İçin) Döngüleri'
-        csa_enhanced_for_loops: 'CSA: Gelişmiş İçin Döngüleri'
-        csa_modifying_values_in_a_1d_array: 'CSA: 1D Dizideki Değerleri Değiştirme'
-        csa_nested_loops: 'CSA: İç içe Döngüler'
-        csa_one_dimensional_arrays: 'CSA: Tek Boyutlu (1D) Diziler'
-        csa_polymorphism: 'CSA: Polimorfizm'
-        csa_casting: 'CSA: Döküm'
-        csa_equals_and_aliases: 'CSA: Eşittir ve Takma Adlar'
-        csa_multi-selection_statements: 'CSA: Çok Seçimli İfadeler'
-        csa_random_numbers: 'CSA: Rastgele Sayılar'
-        csa_static_methods: 'CSA: Statik Yöntemler'
-        csa_static_variables: 'CSA: Statik Değişkenler'
-        csa_the_equals_method: 'CSA: equals() Yöntemi'
-        csa_welcome_to_the_theater: 'CSA: Tiyatroya Hoşgeldiniz'
-        enter_your_own_poem: Kendi Şiirinizi Girin
-        csa-example-solution-1: 'Canlı Kodlama Örnek Çözüm '
-        csd_sprite_properties: Nesne özellikleri
-        csa-pl-documentation: Java Lab'de Belgeler
-        csc-starquilts-intro: 'CSC: Yıldız Yorgan'
-        csc-mapmakers-intro: 'CSC: Harita yapımcıları\t'
-        csa-pl-vocab-pm: Proje Yönetimi Kelime Bilgisi
-        csc-ecosystems-intro: Ekosistemlere Giriş
-        PL_CSD_MicroBit_Intro: Micro:bit'e giriş
-        csc_animal_adaptations_intro: Hayvan Uyarlamaları Giriş
-        csa_two_dimensional_arrays: 'CSA: İki Boyutlu (2D) Diziler'
-        csa_working_with_2d_array_elements: 'CSA: 2D Dizi Elemanları ile Çalışma'
-        csa_row_major_traversal: 'CSA: Büyük Sıra-Geçiş'
-        csa_column_major_traversal: 'CSA: Sütun Başlıca Geçişi'
-        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Döngüler ve 2D Diziler İçin Geliştirilmiş'
-        csa_images_and_pixels: 'CSA: Görüntüler ve Pikseller'
-        csa_wrapper_classes_part_1: 'CSA: Sarıcı Sınıfları Bölümü 1'
-        csa_wrapper_classes_part_2: 'CSA: Sarıcı Sınıfları Bölüm 2'
-        csa_the_arraylist_class: 'CSA: ArrayList Sınıfı'
-        csa_working_with_arraylist_data: 'CSA: ArrayList Verileri ile Çalışma'
-        csa_remving_data_from_an_arraylist: 'CSA: Bir ArrayList''ten Verileri Kaldırma'
-        csa_private_methods: 'CSA: Özel Yöntemler'
-        csa_recursion: 'CSA: Özyineleme'
-        csa_searching_algorithms: 'CSA: Arama Algoritmaları'
-        csa_sorting_algorithms: 'CSA: Sıralama Algoritmaları'
-        star_quilts_intro_to_artist: 'Yıldız Yorganlar: Sanatçıya Giriş'
-        upload_sprites_backgrounds: Özel Sprite ve Arka Planlar Yükleme
-    callout:
-      text:
-        drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'
-        run: Programınızı denemek içi "Çalıştır"a basın
-        watch_again: Videoyu tekrar izlemek için burayı tıklayın
-        gray_block_explanation: Gri bloklar silinemezler. Yine de bulmacayı çözebilir
-          misin?
-        show_code_explanation: Hazırladığınız programın kodlarını görmek için buraya
-          tıklayın
-        instructions_repeat_explanation: Her bulmaca için gerekli talimatlar burada
-          tekrarlanır
-        category_explanation: Aynı bloklara sahipsin fakat şimdi kategorik olarak
-          sıralandılar.
-        set_sprite_image: Bu hikayenin bir figürünü etkinleştirmek için "figürü görsele
-          ata" bloğunu "hikaye başladığında" bloğuna ekleyin
-        studio_say_text: Karakterinin ne söylemesini istiyorsan tırnak işaretleri
-          arasına yaz
-        jigsaw_click: Bu bloğa tıklayın!
-        move_elsa_forward: Elsa'yı ilerletmek için bir "İlerle" bloğunu sürükleyip
-          "Çalıştığında" bloğunun altına ekleyin.
-        turn_elsa: '"Dön" bloğunu kullanarak Elsa''yı döndürün. Açılan menüden Elsa''nın
-          ne kadar döneceğini belirleyebilirsiniz'
-        replace_questions: Açılan menüden "???" yerine bir numara seçin
-        replace_questions_degree: Açılan menüden "???" yerine dönüş için doğru açıyı
-          seçin
-        repeat_blocks: '"Tekrarla" bloğunu kullanarak çalışma alanındaki blokların
-          etrafında döndürün'
-        repeat_blocks_1: "(1) Bu bloğu kullan ve çalışma alanındaki gri blokların
-          etrafına koy"
-        repeat_blocks_2: (2) "Tekrarla" bloğunu buraya taşı ve gri bloklar içine yerleştir
-        snowflake_dropdown: Bu açılan menüyü kullanarak farklı kar taneleri yaratın!
-        degrees_per_side: 360'ı kenar sayısına bölerek her açının derecesini bulun.
-        set_sides: Bulmacayı tamamlamakta gerekli olan kenarların sayısını atamak
-          için bu bloğu kullan.
-        set_length: '"Uzunluğu" doğru değerine ayarlamak için bu bloğu kullan.'
-        which_equation: Hangi denklem daha çok kenarı olan şekiller için her kenarı
-          daha kısa yapar?
-        get_nectar: Yeni "nektarı al" bloğunu kullan.
-        actions_category: Ataç kutusunun yeni bir görünümü var! "Eylemler" blokları
-          artık burada.
-        draw_square_hint: 'İpucu: Son bulmacada yaptığın kare döngüsünü kullan.'
-        edit_function: Fonksiyonunu düzenlemek için buraya tıkla.
-        create_function: '"Fonksiyonlar" açılır penceresini açmak için buraya tıkla,
-          ardından "Yeni bir fonksiyon oluştur" butonuna tıkla.'
-        house_hint: Resim henüz bir ev gibi görünmüyorsa sorun yok. Bunu sonraki bulmacada
-          düzelteceğiz.
-        edit_draw_square: Döngü eklemek ve fonksiyonu düzenlemek için bu butonu kullan.
-        edit_get_nectar: Fonksiyonu düzenlemek ve arıyı nektara ulaştırmak için yönünü
-          düzeltmekte bu butonu kullan.
-        logic_category: '"if/else" bloğunu bulmak için "Mantık" açılır penceresini
-          aç.'
-        length_parameter: Bu fonksiyonu güncelleyebilir misin? Böylece "uzunluk" parametresini
-          kullanabilir.
-        frozen_diamond_repeat: Bu şekli oluşturmak için yineleme bloğunu kullan.
-        frozen_circle_function_in_circle_turn: Her daireyi oluşturduktan sonra dönmeyi
-          unutma.
-        frozen_circle_function_with_parameter_circle: '"Bir daire oluştur" bloğunu
-          kullan ve ölçüyü değiştir.'
-        frozen_snowflake_branch: '"Kar tanesi dalı oluştur" bloğunu kullan'
-        frozen_create_square: Kare oluşturmak için daha fazla blok ekle
-        playlab_drag_say: '"de" blokunu buraya sürükleyin ve "merhaba" yazın'
-        playlab_use_twice: Bu blok ikilisini kullan ve oyuncunun numarasını değiştirmeyi
-          unutma
-        playlab_move_girl: Tenisçi kızı yürütmek için "sağa git" bloğunu kullan
-        playlab_play_sound: '"Sesi çal" bloğunu buraya ekle'
-        playlab_arrow_keys: Çalıştır'a tıkladıktan sonra cadıyı yürütmek için bunları
-          kullanmayı unutma
-        playlab_add_move: '"Hareket et" bloğunu tekrarla bloğunun içine ekle'
-        playlab_add_score: Skor bloklarını buraya ekle
-        playlab_add_blocks: Bloklarını buraya ekle
-        set_variable: Değişkenini atamak için bir sayı bloğunu buraya sürükle
-        place_variable: Değişkenini bloğun içine sürükle
-        bee_for_loop: Arının toplaması için nektar sayısını istediğiniz sayıya sürükleyin
-        place_counter_variable: Sayaç değişkenini bu blokun içine sürükle
-        function_editor_draw_square: Bu, fonksiyonunuzun tanımı. Bu bloklar "kare
-          çiz" bloğunu her kullandığınız zaman çalışır
-        change_here: Değişikliği burada yap
-        write_draw_square_function: Kare çizmek için blokları araç kutusundan buraya
-          sürükle
-        write_draw_triangle_function: Üçgen çizmek için blokları araç kutusundan buraya
-          sürükle
-        edit_add_parameter: Fonksiyonuna parametre eklemek için düzenle'ye tıkla
-        add_and_drag_parameter: Buraya parametrenizin adını yazın, "ekle"ye tıklayın
-          ve ardından fonksiyonunuzun tanımına sürükleyin
-        fill_in_actor: '"???" kısmını her oyuncuya karşılık gelen sayılarla (1,2 ve
-          3) doldurun'
-        repeat: Komutları tekrarlamak için blokları döngünün içine sürükleyin
-        if_bee_nectar: Arının nektarı alması gerekiyorsa "if" bloğunu kullanın
-        if_else_bee: '"if/else" bloğunu kullan, böylece arı bir çiçekten nektarı alır
-          ve "eğer" çiçek değilse bal yapar'
-        repeat_full_circle: Zombinin kaç kez tam daire yapacağını girin
-        place_length_variable: Soru işaretlerinin yerine uzunluk değişkenini sürükle
-        arrows_move_actor: Karakteri hareket ettirmek için okları kullan
-        right_arrow_fireball: Ateştoplarını fırlatmak için sağ ok tuşunu kullan
-        name_function: Fonksiyonunun ismini buraya yaz
-        Infinity_move_right_runbutton: '"İlerle" bloğunu ekle'
-        Infinity_move_directions_callout: Hangi blok yukarı tuşuna basıldığında Baymax'ı
-          yukarı doğru ilerletir?
-        Infinity_move_directions_callout_arrow: Yönlendirmek için bu okları kullanın
-        Infinity_move_collide_callout: Bu olay gerçekleştiğinde ses çal.
-        Infinity_repeat_callout: '"İlerle" bloklarının buraya yerleştir'
-        craft_run_button_callout: Programınızı denemek içi "Çalıştır"a basın
-        craft_drag_block_callout: Bir "ileri git" bloğunu sürükleyin ve diğer bloğun
-          altına dayayın
-        craft_callout_preplaced: Başlamanız için buraya birkaç blok koyduk
-        craft_inside_repeat: Blokları buraya yerleştirerek eylemleri tekrar edin
-        craft_callout_preplaced_house: Bu kod, evinizi inşa etmeye başlayacak. Bakalım
-          bitirebilecek misiniz?
-        craft_what_is_iron: Bu demiri çıkar!
-        craft_callout_moveforward: Bu kod, lav olup olmadığını kontrol edecek, ileri
-          gitmek için bir komut ekleyebilir misiniz?
+        why_unplugged_lessons: '"Bağlantısız" olma'
+        writing_first_program: Birinc bilgisayar programınızın yazılması

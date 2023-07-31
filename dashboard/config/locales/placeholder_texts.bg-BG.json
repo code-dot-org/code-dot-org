@@ -2,46 +2,6 @@
   "bg-BG": {
     "data": {
       "placeholder_texts": {
-        "CourseE_hoops": {
-          "498cd895eb5a102c5aeb977e2b928dee": "Благодарим Ви!"
-        },
-        "courseE_Dogger_2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Печелиш!"
-        },
-        "courseE_aboutme_3": {
-          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
-        },
-        "courseE_aboutme_3_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
-        },
-        "courseE_aboutme_4": {
-          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
-        },
-        "courseE_aboutme_4_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
-        },
-        "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
-        },
-        "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
-        },
-        "courseF_playlab_variables2b": {
-          "48d6215903dff56238e52e8891380c8f": "синьо",
-          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
-        },
-        "courseF_playlab_variables5c": {
-          "bda9643ac6601722a28f238714274da4": "червено",
-          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук",
-          "ff800dc7251afead2cdf9c569ff5c9bc": "Днес е доста ",
-          "c30c9d9f51c03a6d42d66cea54206abd": " нали?"
-        },
-        "courseF_project_1": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Печелиш!",
-          "498cd895eb5a102c5aeb977e2b928dee": "Благодарим Ви!"
-        },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
@@ -58,9 +18,12 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Благодарим Ви!"
+        },
         "Find the Wizard": {
-          "0b895ef4c917e50663bc2a7327cbee3d": "Ти ме намери!",
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "0b895ef4c917e50663bc2a7327cbee3d": "Ти ме намери!",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
         "FoodFight": {
@@ -72,6 +35,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
         "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+        },
+        "New Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
@@ -99,7 +66,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
+        "courseC19_playLab_EOC12022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+        },
         "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+        },
+        "courseC19_playLab_EOC1_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
@@ -107,7 +82,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
+        "courseC19_playLab_EOC22022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+        },
         "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+        },
+        "courseC19_playLab_EOC2_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
@@ -115,7 +98,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
+        "courseC19_playLab_EOC32022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+        },
         "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+        },
+        "courseC19_playLab_EOC3_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
@@ -123,11 +114,23 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
+        "courseC19_playLab_EOC42022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+        },
         "courseC19_playLab_EOC4_2020": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+        },
         "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+        },
+        "courseC_PlayLab_eventsFP2022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
@@ -143,9 +146,104 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+        },
+        "courseC_data wizard": {
+          "1c64ef29c853587fbe94f69f05272b79": "Птица!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " котки!",
+          "27944770529dd15319a983bee8951560": "Котка!",
+          "336ad881e37e713ba0325500a8fa1f00": " кучета!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Дракон!",
+          "5b402e6ea05e847a076e03ad74420c45": " птици!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Пребройте животните!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " дракони!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Пребройте Любимците",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Куче!",
+          "f62038e77820419cd978f7b722da560a": "Колко ще се покажат?"
+        },
+        "courseC_data wizard2022": {
+          "1c64ef29c853587fbe94f69f05272b79": "Птица!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " котки!",
+          "27944770529dd15319a983bee8951560": "Котка!",
+          "336ad881e37e713ba0325500a8fa1f00": " кучета!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Дракон!",
+          "5b402e6ea05e847a076e03ad74420c45": " птици!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Пребройте животните!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " дракони!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Пребройте Любимците",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Куче!",
+          "f62038e77820419cd978f7b722da560a": "Колко ще се покажат?"
+        },
+        "courseC_data wizard_2020": {
+          "1c64ef29c853587fbe94f69f05272b79": "Птица!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " котки!",
+          "27944770529dd15319a983bee8951560": "Котка!",
+          "336ad881e37e713ba0325500a8fa1f00": " кучета!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Дракон!",
+          "5b402e6ea05e847a076e03ad74420c45": " птици!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Пребройте животните!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " дракони!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Пребройте Любимците",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Куче!",
+          "f62038e77820419cd978f7b722da560a": "Колко ще се покажат?"
+        },
+        "courseC_data wizard_2021": {
+          "1c64ef29c853587fbe94f69f05272b79": "Птица!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " котки!",
+          "27944770529dd15319a983bee8951560": "Котка!",
+          "336ad881e37e713ba0325500a8fa1f00": " кучета!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Дракон!",
+          "5b402e6ea05e847a076e03ad74420c45": " птици!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Пребройте животните!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " дракони!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Пребройте Любимците",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Куче!",
+          "f62038e77820419cd978f7b722da560a": "Колко ще се покажат?"
+        },
         "courseD_playLab_condFP": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Печелиш!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
+        },
+        "courseE_aboutme_32022": {
+          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
+        },
+        "courseE_aboutme_42022": {
+          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
+        },
+        "courseE_aboutme_52022": {
+          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
         },
         "courseE_playLab_scaffold1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
@@ -163,11 +261,58 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
+        "courseF_apps_aquarium": {
+          "83e4a96aed96436c621b9809e258b309": "риба",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "живо същество",
+          "f655df68ec33643278de7e69794e8d76": "Виртуален Аквариум"
+        },
+        "courseF_apps_aquarium2022": {
+          "83e4a96aed96436c621b9809e258b309": "риба",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "живо същество",
+          "f655df68ec33643278de7e69794e8d76": "Виртуален Аквариум"
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "83e4a96aed96436c621b9809e258b309": "риба",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "живо същество",
+          "f655df68ec33643278de7e69794e8d76": "Виртуален Аквариум"
+        },
+        "courseF_apps_chatbot": {
+          "ae096fbf24d913754b01a1601672bf62": " също!"
+        },
+        "courseF_apps_chatbot2022": {
+          "ae096fbf24d913754b01a1601672bf62": " също!"
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "ae096fbf24d913754b01a1601672bf62": " също!"
+        },
+        "courseF_apps_collector": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Печелиш!"
+        },
+        "courseF_apps_collector2022": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Печелиш!"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Печелиш!"
+        },
+        "courseF_editable_chatbot": {
+          "ae096fbf24d913754b01a1601672bf62": " също!"
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "ae096fbf24d913754b01a1601672bf62": " също!"
+        },
+        "courseF_extras_sim": {
+          "a2e534e7e893bd7ddb5d2047ed29dc8e": "слон е събрал "
+        },
         "courseF_playlab_variables1a": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук",
-          "ea904c9d18bd602705f598372988aaa8": "Какво да изкрещя?",
-          "97a97de7add5e8dcd9f70a407d56968e": "Гол!"
+          "97a97de7add5e8dcd9f70a407d56968e": "Гол!",
+          "ea904c9d18bd602705f598372988aaa8": "Какво да изкрещя?"
+        },
+        "courseF_playlab_variables2b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук",
+          "48d6215903dff56238e52e8891380c8f": "синьо"
         },
         "courseF_playlab_variables3b_josh": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
@@ -185,6 +330,13 @@
           "d065635d5fffcb3739555ae93006081c": "Радвам се да се запознаем, ",
           "f6429fe0f1a76611670df7e1234af936": "Как се казваш?"
         },
+        "courseF_playlab_variables5c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук",
+          "bda9643ac6601722a28f238714274da4": "червено",
+          "c30c9d9f51c03a6d42d66cea54206abd": " нали?",
+          "ff800dc7251afead2cdf9c569ff5c9bc": "Днес е доста "
+        },
         "courseF_playlab_variables6c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
@@ -200,122 +352,18 @@
         "courseF_playlab_variables8c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук",
-          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Поздравления, ",
-          "cd0d7bbbbb604e524bfc25effa78095d": ", аз си мислех за цвета ",
           "8460ae10541cf8ded22a4e899ddfc0bb": "Съжалявам, ",
-          "8622f69e8cf70458a82fc22d8e46372f": ", аз не си мислех за цвета "
+          "8622f69e8cf70458a82fc22d8e46372f": ", аз не си мислех за цвета ",
+          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Поздравления, ",
+          "cd0d7bbbbb604e524bfc25effa78095d": ", аз си мислех за цвета "
         },
         "courseF_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
           "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         },
-        "iceage_free_play": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
-        },
-        "courseC19_playLab_EOC1_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
-        },
-        "courseC19_playLab_EOC2_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
-        },
-        "courseC19_playLab_EOC4_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
-        },
-        "courseC_PlayLab_eventsFP_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
-        },
-        "courseF_apps_collector": {
+        "courseF_project_1": {
+          "498cd895eb5a102c5aeb977e2b928dee": "Благодарим Ви!",
           "e8a10c04d72b2f135dabe360c4bdd534": "Печелиш!"
-        },
-        "courseE_aboutme_3_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
-        },
-        "courseE_aboutme_4_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
-        },
-        "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
-        },
-        "courseF_apps_aquarium": {
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "живо същество",
-          "f655df68ec33643278de7e69794e8d76": "Виртуален Аквариум",
-          "83e4a96aed96436c621b9809e258b309": "риба"
-        },
-        "New Play Lab Project": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
-        },
-        "courseC19_playLab_EOC12022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
-        },
-        "courseC19_playLab_EOC22022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
-        },
-        "courseC19_playLab_EOC32022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
-        },
-        "courseC19_playLab_EOC42022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
-        },
-        "courseC_PlayLab_eventsFP2022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
-          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
-        },
-        "courseE_aboutme_32022": {
-          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
-        },
-        "courseE_aboutme_42022": {
-          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
-        },
-        "courseE_aboutme_52022": {
-          "ed076287532e86365e841e92bfc50d8c": "Здравей, свят!"
-        },
-        "courseF_apps_aquarium2022": {
-          "f655df68ec33643278de7e69794e8d76": "Виртуален Аквариум",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "живо същество",
-          "83e4a96aed96436c621b9809e258b309": "риба"
-        },
-        "courseF_apps_aquarium_-2022-2": {
-          "f655df68ec33643278de7e69794e8d76": "Виртуален Аквариум",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "живо същество",
-          "83e4a96aed96436c621b9809e258b309": "риба"
-        },
-        "courseF_apps_collector2022": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Печелиш!"
-        },
-        "courseF_apps_collector_-2022-2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Печелиш!"
-        },
-        "courseF_apps_chatbot": {
-          "ae096fbf24d913754b01a1601672bf62": " също!"
-        },
-        "courseF_apps_chatbot2022": {
-          "ae096fbf24d913754b01a1601672bf62": " също!"
-        },
-        "courseF_apps_chatbot_-2022-2": {
-          "ae096fbf24d913754b01a1601672bf62": " също!"
-        },
-        "courseF_editable_chatbot": {
-          "ae096fbf24d913754b01a1601672bf62": " също!"
-        },
-        "courseF_editable_chatbot_-2022-2": {
-          "ae096fbf24d913754b01a1601672bf62": " също!"
-        },
-        "courseF_extras_sim": {
-          "a2e534e7e893bd7ddb5d2047ed29dc8e": "слон е събрал "
         },
         "courseF_text_concat": {
           "f6429fe0f1a76611670df7e1234af936": "Как се казваш?"
@@ -334,6 +382,10 @@
         },
         "courseF_variables_predict_-2022-2": {
           "f6429fe0f1a76611670df7e1234af936": "Как се казваш?"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Въведете текст тук",
+          "30fcc1693fa8402931d13ac3a5f396fd": "напиши заглавието тук"
         }
       }
     }

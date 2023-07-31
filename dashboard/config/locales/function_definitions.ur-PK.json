@@ -15,20 +15,20 @@
         "2-3 Artist 7": {
           "draw_rect": {
             "parameters": {
-              "width": "چوڑائی",
-              "height": "اونچائی"
+              "height": "اونچائی",
+              "width": "چوڑائی"
             }
           }
         },
         "2-3 Artist Debugging 10": {
-          "draw square": {
-            "parameters": {
-              "width": "چوڑائی",
-              "height": "اونچائی"
-            }
-          },
           "draw a circle": {
             "name": "ایک دائرہ بنائیں"
+          },
+          "draw square": {
+            "parameters": {
+              "height": "اونچائی",
+              "width": "چوڑائی"
+            }
           }
         },
         "2-3 Artist Functions 11": {
@@ -81,6 +81,18 @@
             "name": "ایک دائرہ بنائیں"
           }
         },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "ایک مربع بنائیں"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "parameters": {
+              "length": "لمبائی"
+            }
+          }
+        },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "parameters": {
@@ -93,6 +105,13 @@
             "name": "چھلانگ لگایں"
           }
         },
+        "Course 4 Play Lab Params 10": {
+          "score_points": {
+            "parameters": {
+              "points": "نقاط"
+            }
+          }
+        },
         "Course 4 Play Lab Params 2": {
           "jump": {
             "name": "چھلانگ لگایں"
@@ -102,8 +121,8 @@
           "jump": {
             "name": "چھلانگ لگایں",
             "parameters": {
-              "height": "اونچائی",
-              "actor": "اداکار"
+              "actor": "اداکار",
+              "height": "اونچائی"
             }
           }
         },
@@ -142,6 +161,23 @@
             }
           }
         },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "parameters": {
+              "points": "نقاط"
+            }
+          }
+        },
+        "Course 4 Play Lab Vars 1": {
+          "set score": {
+            "name": "اسکور کو مقرر کریں"
+          }
+        },
+        "Course 4 Play Lab Vars 2": {
+          "set score": {
+            "name": "اسکور کو مقرر کریں"
+          }
+        },
         "Course 4 SCF 1": {
           "draw a hexagon": {
             "name": "ایک ھیگزاگون کا خاکہ بنائیں"
@@ -149,10 +185,10 @@
         },
         "Course 4 SCF 1a": {
           "get nectar": {
+            "name": "امرت حاصل کریں",
             "parameters": {
               "counter": "گنتی کرنے والا"
-            },
-            "name": "امرت حاصل کریں"
+            }
           }
         },
         "Course 4 SCF 3": {
@@ -165,14 +201,460 @@
             }
           }
         },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "میرا فنکشن"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "میرا فنکشن"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "LOGIC FLOWER": {
+            "name": "منطق پھول"
+          },
+          "LOGIC FLOWERS": {
+            "name": "منطق پھول"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "منطق پھول 2"
+          },
+          "draw a circle": {
+            "name": "ایک دائرہ بنائیں"
+          },
+          "draw a house": {
+            "name": "ایک گھر بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "لمبائی",
+              "repeat": "دوبارہ"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a square": {
+            "name": "ایک مربع بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a star": {
+            "name": "ایک ستارہ کا خاکہ بنائیں",
+            "parameters": {
+              "length": "لمبائی",
+              "points": "نقاط"
+            }
+          },
+          "draw a triangle": {
+            "name": "ایک مثلث بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "small flower": {
+            "name": "چھوٹے پھول"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+            "name": "منطق پھول"
+          },
+          "LOGIC FLOWERS": {
+            "name": "منطق پھول"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "منطق پھول 2"
+          },
+          "draw a circle": {
+            "description": "دیئے گئے رداس کے ایک دائرے کو اپنی طرف متوجہ",
+            "name": "ایک دائرہ بنائیں",
+            "parameters": {
+              "radius": "رداس"
+            }
+          },
+          "draw a house": {
+            "name": "ایک گھر بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ایک پنواہیل اپنی طرف متوجہ",
+            "parameters": {
+              "length": "لمبائی",
+              "repeat": "دوبارہ",
+              "sides": "اطراف"
+            }
+          },
+          "draw a shape": {
+            "name": "ایک شکل اپنی طرف متوجہ",
+            "parameters": {
+              "length": "لمبائی",
+              "sides": "اطراف"
+            }
+          },
+          "draw a square": {
+            "name": "ایک مربع بنائیں",
+            "parameters": {
+              "length": "لمبائی",
+              "sides": "اطراف"
+            }
+          },
+          "draw a star": {
+            "description": "دیئے گئے پوائنٹس اور دی لمبائی کے اطراف کے ساتھ ایک ستارہ اپنی طرف متوجہ",
+            "name": "ایک ستارہ کا خاکہ بنائیں",
+            "parameters": {
+              "length": "لمبائی",
+              "points": "نقاط"
+            }
+          },
+          "draw a triangle": {
+            "name": "ایک مثلث بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "small flower": {
+            "name": "چھوٹے پھول"
+          }
+        },
         "Course E: Play Lab Project": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a circle": {
+            "description": "دیئے گئے رداس کے ایک دائرے کو اپنی طرف متوجہ",
+            "name": "ایک دائرہ بنائیں",
+            "parameters": {
+              "radius": "رداس"
+            }
+          },
+          "draw a house": {
+            "name": "ایک گھر بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ایک پنواہیل اپنی طرف متوجہ",
+            "parameters": {
+              "length": "لمبائی",
+              "repeat": "دوبارہ",
+              "sides": "اطراف"
+            }
+          },
+          "draw a shape": {
+            "name": "ایک شکل اپنی طرف متوجہ",
+            "parameters": {
+              "length": "لمبائی",
+              "sides": "اطراف"
+            }
+          },
+          "draw a square": {
+            "name": "ایک مربع بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a star": {
+            "description": "دیئے گئے پوائنٹس اور دی لمبائی کے اطراف کے ساتھ ایک ستارہ اپنی طرف متوجہ",
+            "name": "ایک ستارہ کا خاکہ بنائیں",
+            "parameters": {
+              "length": "لمبائی",
+              "points": "نقاط"
+            }
+          },
+          "draw a triangle": {
+            "name": "ایک مثلث بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a circle": {
+            "name": "ایک دائرہ بنائیں"
+          },
+          "draw a house": {
+            "name": "ایک گھر بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "لمبائی",
+              "repeat": "دوبارہ"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a square": {
+            "name": "ایک مربع بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a star": {
+            "name": "ایک ستارہ کا خاکہ بنائیں",
+            "parameters": {
+              "length": "لمبائی",
+              "points": "نقاط"
+            }
+          },
+          "draw a triangle": {
+            "name": "ایک مثلث بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a circle": {
+            "name": "ایک دائرہ بنائیں"
+          },
+          "draw a house": {
+            "name": "ایک گھر بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "لمبائی",
+              "repeat": "دوبارہ"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a square": {
+            "name": "ایک مربع بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a star": {
+            "name": "ایک ستارہ کا خاکہ بنائیں",
+            "parameters": {
+              "length": "لمبائی",
+              "points": "نقاط"
+            }
+          },
+          "draw a triangle": {
+            "name": "ایک مثلث بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a circle": {
+            "description": "دیئے گئے رداس کے ایک دائرے کو اپنی طرف متوجہ",
+            "name": "ایک دائرہ بنائیں",
+            "parameters": {
+              "radius": "رداس"
+            }
+          },
+          "draw a house": {
+            "name": "ایک گھر بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ایک پنواہیل اپنی طرف متوجہ",
+            "parameters": {
+              "length": "لمبائی",
+              "repeat": "دوبارہ",
+              "sides": "اطراف"
+            }
+          },
+          "draw a shape": {
+            "name": "ایک شکل اپنی طرف متوجہ",
+            "parameters": {
+              "length": "لمبائی",
+              "sides": "اطراف"
+            }
+          },
+          "draw a square": {
+            "name": "ایک مربع بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a star": {
+            "description": "دیئے گئے پوائنٹس اور دی لمبائی کے اطراف کے ساتھ ایک ستارہ اپنی طرف متوجہ",
+            "name": "ایک ستارہ کا خاکہ بنائیں",
+            "parameters": {
+              "length": "لمبائی",
+              "points": "نقاط"
+            }
+          },
+          "draw a triangle": {
+            "name": "ایک مثلث بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a circle": {
+            "description": "دیئے گئے رداس کے ایک دائرے کو اپنی طرف متوجہ",
+            "name": "ایک دائرہ بنائیں",
+            "parameters": {
+              "radius": "رداس"
+            }
+          },
+          "draw a house": {
+            "name": "ایک گھر بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ایک پنواہیل اپنی طرف متوجہ",
+            "parameters": {
+              "length": "لمبائی",
+              "repeat": "دوبارہ",
+              "sides": "اطراف"
+            }
+          },
+          "draw a shape": {
+            "name": "ایک شکل اپنی طرف متوجہ",
+            "parameters": {
+              "length": "لمبائی",
+              "sides": "اطراف"
+            }
+          },
+          "draw a square": {
+            "name": "ایک مربع بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a star": {
+            "description": "دیئے گئے پوائنٹس اور دی لمبائی کے اطراف کے ساتھ ایک ستارہ اپنی طرف متوجہ",
+            "name": "ایک ستارہ کا خاکہ بنائیں",
+            "parameters": {
+              "length": "لمبائی",
+              "points": "نقاط"
+            }
+          },
+          "draw a triangle": {
+            "name": "ایک مثلث بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "name": "ایک دائرہ بنائیں"
+          },
+          "draw a house": {
+            "name": "ایک گھر بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "لمبائی",
+              "repeat": "دوبارہ"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a square": {
+            "name": "ایک مربع بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a star": {
+            "name": "ایک ستارہ کا خاکہ بنائیں",
+            "parameters": {
+              "length": "لمبائی",
+              "points": "نقاط"
+            }
+          },
+          "draw a triangle": {
+            "name": "ایک مثلث بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "ری سیٹ کھیل"
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": "ری سیٹ کھیل"
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "ری سیٹ کھیل"
+          }
+        },
         "Find the Wizard": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
+          }
+        },
+        "FoodFight": {
+          "score_points": {
+            "parameters": {
+              "points": "نقاط"
+            }
+          }
+        },
+        "Function intro Ryan": {
+          "build bridge": {
+            "name": "پل بنائیں"
+          }
+        },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "پل بنائیں"
+          }
+        },
+        "Function intro Ryan_2019": {
+          "build bridge": {
+            "name": "پل بنائیں"
+          }
+        },
+        "Function intro Ryan_2020": {
+          "build bridge": {
+            "name": "پل بنائیں"
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "پل بنائیں"
           }
         },
         "Geometric Sun": {
@@ -182,11 +664,11 @@
           "draw a house": {
             "name": "ایک گھر بنائیں"
           },
-          "sun": {
-            "name": "سورج"
-          },
           "square": {
             "name": "مربع"
+          },
+          "sun": {
+            "name": "سورج"
           }
         },
         "Geometric Sun_2018": {
@@ -196,19 +678,14 @@
           "draw a house": {
             "name": "ایک گھر بنائیں"
           },
-          "sun": {
-            "name": "سورج"
-          },
           "square": {
             "name": "مربع"
+          },
+          "sun": {
+            "name": "سورج"
           }
         },
         "InspirationalArtwork": {
-          "n-sided shape": {
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
           "draw a loop": {
             "parameters": {
               "length": "لمبائی"
@@ -217,6 +694,11 @@
           "draw spiral circle": {
             "parameters": {
               "size": "سائز"
+            }
+          },
+          "n-sided shape": {
+            "parameters": {
+              "length": "لمبائی"
             }
           }
         },
@@ -230,6 +712,119 @@
             "parameters": {
               "size": "سائز"
             }
+          }
+        },
+        "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "راستہ صاف کریں"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
+          "clear path": {
+            "name": "راستہ صاف کریں"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2019": {
+          "clear path": {
+            "name": "راستہ صاف کریں"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2020": {
+          "clear path": {
+            "name": "راستہ صاف کریں"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "راستہ صاف کریں"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "طویل راستہ مقرر کریں"
+          },
+          "fix short path": {
+            "name": "مختصر راستہ مقرر کریں"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "fix long path": {
+            "name": "طویل راستہ مقرر کریں"
+          },
+          "fix short path": {
+            "name": "مختصر راستہ مقرر کریں"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "طویل راستہ مقرر کریں"
+          },
+          "fix short path": {
+            "name": "مختصر راستہ مقرر کریں"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "طویل راستہ مقرر کریں"
+          },
+          "fix short path": {
+            "name": "مختصر راستہ مقرر کریں"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "طویل راستہ مقرر کریں"
+          },
+          "fix short path": {
+            "name": "مختصر راستہ مقرر کریں"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build long bridge": {
+            "name": "طویل پل بنائیں"
+          },
+          "build short bridge": {
+            "name": "مختصر پل بنائیں"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build long bridge": {
+            "name": "طویل پل بنائیں"
+          },
+          "build short bridge": {
+            "name": "مختصر پل بنائیں"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build long bridge": {
+            "name": "طویل پل بنائیں"
+          },
+          "build short bridge": {
+            "name": "مختصر پل بنائیں"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build long bridge": {
+            "name": "طویل پل بنائیں"
+          },
+          "build short bridge": {
+            "name": "مختصر پل بنائیں"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build long bridge": {
+            "name": "طویل پل بنائیں"
+          },
+          "build short bridge": {
+            "name": "مختصر پل بنائیں"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "فنکشن 1"
+          },
+          "function 2": {
+            "name": "فنکشن 2"
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -277,13 +872,13 @@
           }
         },
         "NEW Course 4 Artist Params 11": {
-          "draw a polygon": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں",
             "parameters": {
               "length": "لمبائی"
             }
           },
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں",
+          "draw a polygon": {
             "parameters": {
               "length": "لمبائی"
             }
@@ -318,32 +913,8 @@
           }
         },
         "NEW Course 4 Artist Params 15": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں",
-            "parameters": {
-              "length": "لمبائی",
-              "points": "نقاط"
-            }
-          },
           "draw a circle": {
             "name": "ایک دائرہ بنائیں"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "لمبائی",
-              "repeat": "دوبارہ"
-            }
-          },
-          "draw a triangle": {
-            "name": "ایک مثلث بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "لمبائی"
-            }
           },
           "draw a house": {
             "name": "ایک گھر بنائیں",
@@ -351,8 +922,32 @@
               "length": "لمبائی"
             }
           },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "لمبائی",
+              "repeat": "دوبارہ"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
           "draw a square": {
             "name": "ایک مربع بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a star": {
+            "name": "ایک ستارہ کا خاکہ بنائیں",
+            "parameters": {
+              "length": "لمبائی",
+              "points": "نقاط"
+            }
+          },
+          "draw a triangle": {
+            "name": "ایک مثلث بنائیں",
             "parameters": {
               "length": "لمبائی"
             }
@@ -363,8 +958,8 @@
             "name": "کچھ نہ کچھ کرتے ہیں"
           },
           "draw a triangle": {
-            "name": "ایک مثلث بنائیں",
-            "description": "ایک مثلث بنائیں"
+            "description": "ایک مثلث بنائیں",
+            "name": "ایک مثلث بنائیں"
           }
         },
         "NEW Course 4 Artist Params 3": {
@@ -387,14 +982,13 @@
           }
         },
         "NEW Course 4 Artist Params 6": {
-          "draw a triangle": {
-            "name": "ایک مثلث بنائیں",
+          "draw a hexagon": {
+            "name": "ایک ھیگزاگون کا خاکہ بنائیں",
             "parameters": {
               "length": "لمبائی"
             }
           },
-          "draw a hexagon": {
-            "name": "ایک ھیگزاگون کا خاکہ بنائیں",
+          "draw a sqaure": {
             "parameters": {
               "length": "لمبائی"
             }
@@ -405,7 +999,8 @@
               "length": "لمبائی"
             }
           },
-          "draw a sqaure": {
+          "draw a triangle": {
+            "name": "ایک مثلث بنائیں",
             "parameters": {
               "length": "لمبائی"
             }
@@ -427,14 +1022,14 @@
           }
         },
         "NEW Course 4 Artist Params 9": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
           "draw a square": {
             "name": "ایک مربع بنائیں",
             "parameters": {
               "length": "لمبائی"
             }
-          },
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
         "NEW Course 4 Artist Params inspire": {
@@ -448,8 +1043,8 @@
           "jump": {
             "name": "چھلانگ لگایں",
             "parameters": {
-              "height": "اونچائی",
-              "actor": "اداکار"
+              "actor": "اداکار",
+              "height": "اونچائی"
             }
           },
           "patrol": {
@@ -460,15 +1055,14 @@
           }
         },
         "New Artist Project": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں",
-            "parameters": {
-              "length": "لمبائی",
-              "points": "نقاط"
-            }
-          },
           "draw a circle": {
             "name": "ایک دائرہ بنائیں"
+          },
+          "draw a house": {
+            "name": "ایک گھر بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
@@ -476,19 +1070,7 @@
               "repeat": "دوبارہ"
             }
           },
-          "draw a triangle": {
-            "name": "ایک مثلث بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
           "draw a shape": {
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a house": {
-            "name": "ایک گھر بنائیں",
             "parameters": {
               "length": "لمبائی"
             }
@@ -498,14 +1080,27 @@
             "parameters": {
               "length": "لمبائی"
             }
+          },
+          "draw a star": {
+            "name": "ایک ستارہ کا خاکہ بنائیں",
+            "parameters": {
+              "length": "لمبائی",
+              "points": "نقاط"
+            }
+          },
+          "draw a triangle": {
+            "name": "ایک مثلث بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
           }
         },
         "New Play Lab Project": {
           "jump": {
             "name": "چھلانگ لگایں",
             "parameters": {
-              "height": "اونچائی",
-              "actor": "اداکار"
+              "actor": "اداکار",
+              "height": "اونچائی"
             }
           },
           "patrol": {
@@ -518,6 +1113,11 @@
         "Standalone_Artist_7": {
           "draw a flower": {
             "name": "ایک پھول بنائیں"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "میرا فنکشن"
           }
         },
         "course3_artist_functions_challenge1": {
@@ -546,13 +1146,13 @@
           }
         },
         "course4_artist_fwp_challenge1": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
           "draw background": {
             "parameters": {
               "color": "رنگ"
             }
-          },
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -569,7 +1169,19 @@
             }
           }
         },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "ممکنہ حل"
+          }
+        },
         "courseC_artist_prog3": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog32022": {
           "draw flame": {
             "parameters": {
               "x": "x"
@@ -597,12 +1209,38 @@
             }
           }
         },
+        "courseC_artist_prog3_2021": {
+          "draw fire": {
+            "name": "آگ اپنی طرف متوجہ"
+          },
+          "draw flame": {
+            "name": "شعلے کو اپنی طرف متوجہ",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "بوسٹر"
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          }
+        },
         "courseC_data wizard_2020": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          }
+        },
+        "courseC_data wizard_2021": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
@@ -645,6 +1283,11 @@
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
+        "courseE_artist_functions102022": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          }
+        },
         "courseE_artist_functions10_2018": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
@@ -660,7 +1303,23 @@
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw hexagon": {
+            "name": "مسدس اپنی طرف متوجہ"
+          },
+          "draw line of hexagons": {
+            "name": "hexagons کی لائن کو اپنی طرف متوجہ"
+          }
+        },
         "courseE_artist_functions2": {
+          "draw a square": {
+            "name": "ایک مربع بنائیں"
+          }
+        },
+        "courseE_artist_functions22022": {
           "draw a square": {
             "name": "ایک مربع بنائیں"
           }
@@ -680,9 +1339,27 @@
             "name": "ایک مربع بنائیں"
           }
         },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "ایک مربع بنائیں"
+          },
+          "draw ear stems": {
+            "name": "کان تنوں کو اپنی طرف متوجہ"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "ایک مربع بنائیں"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "ایک مربع بنائیں"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "ایک ستارہ کا خاکہ بنائیں"
           }
         },
         "courseE_artist_functions3_2018": {
@@ -700,6 +1377,11 @@
             "name": "ایک ستارہ کا خاکہ بنائیں"
           }
         },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "ایک ستارہ کا خاکہ بنائیں"
+          }
+        },
         "courseE_artist_functions4": {
           "draw a star": {
             "name": "ایک ستارہ کا خاکہ بنائیں"
@@ -710,7 +1392,17 @@
             "name": "ایک ستارہ کا خاکہ بنائیں"
           }
         },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "ایک ستارہ کا خاکہ بنائیں"
+          }
+        },
         "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "ایک ستارہ کا خاکہ بنائیں"
+          }
+        },
+        "courseE_artist_functions52022": {
           "draw a star": {
             "name": "ایک ستارہ کا خاکہ بنائیں"
           }
@@ -730,7 +1422,17 @@
             "name": "ایک ستارہ کا خاکہ بنائیں"
           }
         },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "ایک ستارہ کا خاکہ بنائیں"
+          }
+        },
         "courseE_artist_functions5_copy": {
+          "draw a star": {
+            "name": "ایک ستارہ کا خاکہ بنائیں"
+          }
+        },
+        "courseE_artist_functions5_dani": {
           "draw a star": {
             "name": "ایک ستارہ کا خاکہ بنائیں"
           }
@@ -750,7 +1452,17 @@
             "name": "ایک گھر بنائیں"
           }
         },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "ایک ونڈو اپنی طرف متوجہ"
+          }
+        },
         "courseE_artist_functions8": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          }
+        },
+        "courseE_artist_functions82022": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
@@ -770,26 +1482,61 @@
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
-        "courseE_artist_functions8a_2018": {
-          "draw a square": {
-            "name": "ایک مربع بنائیں"
-          },
+        "courseE_artist_functions8_2021": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw a line of squares": {
+            "name": "چوکوں کی ایک لائن کو اپنی طرف متوجہ"
+          },
+          "draw square": {
+            "name": "مربع اپنی طرف متوجہ"
+          },
+          "staggered squares": {
+            "name": "ڈگمگایا چوکوں"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw a square": {
+            "name": "ایک مربع بنائیں"
+          }
+        },
+        "courseE_artist_functions8a_2018": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw a square": {
+            "name": "ایک مربع بنائیں"
           }
         },
         "courseE_artist_functions8a_2019": {
-          "draw a square": {
-            "name": "ایک مربع بنائیں"
-          },
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw a square": {
+            "name": "ایک مربع بنائیں"
           }
         },
         "courseE_artist_functions8a_2020": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
           "draw a square": {
             "name": "ایک مربع بنائیں"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
           },
+          "draw a square": {
+            "name": "ایک مربع بنائیں"
+          }
+        },
+        "courseE_artist_functions8b2022": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
@@ -809,6 +1556,22 @@
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw a line of squares": {
+            "name": "چوکوں کی ایک لائن کو اپنی طرف متوجہ"
+          },
+          "draw square": {
+            "name": "مربع اپنی طرف متوجہ"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          }
+        },
         "courseE_artist_functions8c_2018": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
@@ -824,7 +1587,26 @@
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw a line of squares": {
+            "name": "چوکوں کی ایک لائن کو اپنی طرف متوجہ"
+          },
+          "draw square": {
+            "name": "مربع اپنی طرف متوجہ"
+          },
+          "staggered squares": {
+            "name": "ڈگمگایا چوکوں"
+          }
+        },
         "courseE_artist_functions9": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          }
+        },
+        "courseE_artist_functions92022": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
@@ -844,7 +1626,40 @@
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw line of triangles": {
+            "name": "مثلث کی لائن کو اپنی طرف متوجہ"
+          },
+          "draw triangle": {
+            "name": "مثلث اپنی طرف متوجہ"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw a line of squares": {
+            "name": "چوکوں کی ایک لائن کو اپنی طرف متوجہ"
+          },
+          "draw hexagon": {
+            "name": "مسدس اپنی طرف متوجہ"
+          },
+          "draw line of hexagons": {
+            "name": "hexagons کی لائن کو اپنی طرف متوجہ"
+          },
+          "draw square": {
+            "name": "مربع اپنی طرف متوجہ"
+          },
+          "staggered squares": {
+            "name": "ڈگمگایا چوکوں"
+          }
+        },
         "courseE_artist_functions_challenge1": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
@@ -864,7 +1679,20 @@
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "my design": {
+            "name": "میرا ڈیزائن"
+          }
+        },
         "courseE_artist_functions_challenge2": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
@@ -884,7 +1712,20 @@
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "my design": {
+            "name": "میرا ڈیزائن"
+          }
+        },
         "courseE_artist_functions_predict1": {
+          "draw a square": {
+            "name": "ایک مربع بنائیں"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
           "draw a square": {
             "name": "ایک مربع بنائیں"
           }
@@ -904,12 +1745,30 @@
             "name": "ایک مربع بنائیں"
           }
         },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "ایک مربع بنائیں"
+          },
+          "draw ear stems": {
+            "name": "کان تنوں کو اپنی طرف متوجہ"
+          }
+        },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "ایک مربع بنائیں"
           }
         },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "ایک مربع بنائیں"
+          }
+        },
         "courseE_artist_functions_predict2": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
@@ -927,6 +1786,17 @@
         "courseE_artist_functions_predict2_2020": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw line of polygons": {
+            "name": "کثیرالاضلاع کی لائن کو اپنی طرف متوجہ"
+          },
+          "draw polygon": {
+            "name": "کثیرالاضلاع اپنی طرف متوجہ"
           }
         },
         "courseE_bee_functions1": {
@@ -959,6 +1829,103 @@
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
+        "courseE_farmer_functions10a1_2021": {
+          "check square for corn": {
+            "name": "مکئی کے لئے مربع چیک کریں"
+          },
+          "get all pumpkins": {
+            "name": "تمام کدو حاصل"
+          },
+          "pick along path": {
+            "name": "راستے کے ساتھ ساتھ لینے"
+          },
+          "pumpkin square": {
+            "name": "قددو مربع"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "check square for corn": {
+            "name": "مکئی کے لئے مربع چیک کریں"
+          },
+          "get all pumpkins": {
+            "name": "تمام کدو حاصل"
+          },
+          "get produce": {
+            "name": "پیداوار حاصل کریں"
+          },
+          "pick along path": {
+            "name": "راستے کے ساتھ ساتھ لینے"
+          },
+          "pumpkin square": {
+            "name": "قددو مربع"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "check for corn": {
+            "name": "مکئی کے لئے چیک کریں"
+          },
+          "corn rectangle": {
+            "name": "مکئی مستطیل"
+          },
+          "lettuce stairs": {
+            "name": "لیٹش سیڑھیاں"
+          },
+          "pick along path": {
+            "name": "راستے کے ساتھ ساتھ لینے"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "مکئی کے لئے مربع چیک کریں"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "مکئی کے لئے مربع چیک کریں"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "مکئی کے لئے مربع چیک کریں"
+          },
+          "get all pumpkins": {
+            "name": "تمام کدو حاصل"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "check square for corn": {
+            "name": "مکئی کے لئے مربع چیک کریں"
+          },
+          "get all pumpkins": {
+            "name": "تمام کدو حاصل"
+          },
+          "pick along path": {
+            "name": "راستے کے ساتھ ساتھ لینے"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "مکئی کے لئے مربع چیک کریں"
+          },
+          "get all pumpkins": {
+            "name": "تمام کدو حاصل"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "باغ مربع"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "باغ مربع"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "باغ مربع"
+          }
+        },
         "courseE_playLab_scaffold1": {
           "do something": {
             "name": "کچھ نہ کچھ کرتے ہیں"
@@ -979,19 +1946,22 @@
             "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "کھیل ختم کریں"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "کھیل ختم کریں"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "کھیل ختم کریں"
+          }
+        },
         "courseF_artist_fwp1": {
-          "draw a square": {
-            "name": "ایک مربع بنائیں"
-          },
-          "checker": {
-            "parameters": {
-              "size": "سائز",
-              "color": "رنگ"
-            }
-          },
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          },
           "Make gingham": {
             "parameters": {
               "size": "سائز"
@@ -1001,30 +1971,42 @@
             "parameters": {
               "length": "لمبائی"
             }
+          },
+          "checker": {
+            "parameters": {
+              "color": "رنگ",
+              "size": "سائز"
+            }
+          },
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw a square": {
+            "name": "ایک مربع بنائیں"
           }
         },
         "courseF_artist_fwp2": {
-          "draw a square": {
-            "name": "ایک مربع بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "checker": {
-            "parameters": {
-              "size": "سائز",
-              "color": "رنگ"
-            }
-          },
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          },
           "Make gingham": {
             "parameters": {
               "size": "سائز"
             }
           },
           "black outline": {
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "checker": {
+            "parameters": {
+              "color": "رنگ",
+              "size": "سائز"
+            }
+          },
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
+          "draw a square": {
+            "name": "ایک مربع بنائیں",
             "parameters": {
               "length": "لمبائی"
             }
@@ -1039,6 +2021,11 @@
           }
         },
         "courseF_artist_fwp3": {
+          "black outline": {
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
           "draw a square": {
             "name": "ایک مربع بنائیں",
             "parameters": {
@@ -1052,13 +2039,8 @@
           },
           "filled square": {
             "parameters": {
-              "size": "سائز",
-              "color": "رنگ"
-            }
-          },
-          "black outline": {
-            "parameters": {
-              "length": "لمبائی"
+              "color": "رنگ",
+              "size": "سائز"
             }
           }
         },
@@ -1100,32 +2082,8 @@
           }
         },
         "courseF_artist_fwp9": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں",
-            "parameters": {
-              "length": "لمبائی",
-              "points": "نقاط"
-            }
-          },
           "draw a circle": {
             "name": "ایک دائرہ بنائیں"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "لمبائی",
-              "repeat": "دوبارہ"
-            }
-          },
-          "draw a triangle": {
-            "name": "ایک مثلث بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "لمبائی"
-            }
           },
           "draw a house": {
             "name": "ایک گھر بنائیں",
@@ -1133,8 +2091,13 @@
               "length": "لمبائی"
             }
           },
-          "draw a square": {
-            "name": "ایک مربع بنائیں",
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "لمبائی",
+              "repeat": "دوبارہ"
+            }
+          },
+          "draw a shape": {
             "parameters": {
               "length": "لمبائی"
             }
@@ -1144,16 +2107,35 @@
               "length": "لمبائی",
               "min": "کم سے کم"
             }
+          },
+          "draw a square": {
+            "name": "ایک مربع بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
+          },
+          "draw a star": {
+            "name": "ایک ستارہ کا خاکہ بنائیں",
+            "parameters": {
+              "length": "لمبائی",
+              "points": "نقاط"
+            }
+          },
+          "draw a triangle": {
+            "name": "ایک مثلث بنائیں",
+            "parameters": {
+              "length": "لمبائی"
+            }
           }
         },
         "courseF_artist_fwp_challenge1": {
+          "do something": {
+            "name": "کچھ نہ کچھ کرتے ہیں"
+          },
           "draw background": {
             "parameters": {
               "color": "رنگ"
             }
-          },
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
           }
         },
         "courseF_artist_fwp_challenge2": {
@@ -1164,6 +2146,11 @@
             "parameters": {
               "length": "لمبائی"
             }
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "اقدام اور انسداد کے ساتھ امرت حاصل"
           }
         },
         "courseF_bee_functions8a": {
@@ -1227,565 +2214,6 @@
             }
           }
         },
-        "CourseD_EOC_artist": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں",
-            "parameters": {
-              "length": "لمبائی",
-              "points": "نقاط"
-            }
-          },
-          "draw a circle": {
-            "name": "ایک دائرہ بنائیں"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "لمبائی",
-              "repeat": "دوبارہ"
-            }
-          },
-          "draw a triangle": {
-            "name": "ایک مثلث بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a house": {
-            "name": "ایک گھر بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a square": {
-            "name": "ایک مربع بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          }
-        },
-        "Course E: Frozen Project_examples_2021": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں",
-            "parameters": {
-              "length": "لمبائی",
-              "points": "نقاط"
-            },
-            "description": "دیئے گئے پوائنٹس اور دی لمبائی کے اطراف کے ساتھ ایک ستارہ اپنی طرف متوجہ"
-          },
-          "draw a circle": {
-            "name": "ایک دائرہ بنائیں",
-            "description": "دیئے گئے رداس کے ایک دائرے کو اپنی طرف متوجہ",
-            "parameters": {
-              "radius": "رداس"
-            }
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "لمبائی",
-              "repeat": "دوبارہ",
-              "sides": "اطراف"
-            },
-            "name": "ایک پنواہیل اپنی طرف متوجہ"
-          },
-          "draw a triangle": {
-            "name": "ایک مثلث بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "لمبائی",
-              "sides": "اطراف"
-            },
-            "name": "ایک شکل اپنی طرف متوجہ"
-          },
-          "draw a house": {
-            "name": "ایک گھر بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a square": {
-            "name": "ایک مربع بنائیں",
-            "parameters": {
-              "length": "لمبائی",
-              "sides": "اطراف"
-            }
-          },
-          "small flower": {
-            "name": "چھوٹے پھول"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "منطق پھول 2"
-          },
-          "LOGIC FLOWER": {
-            "name": "منطق پھول"
-          },
-          "LOGIC FLOWERS": {
-            "name": "منطق پھول"
-          }
-        },
-        "Course F: Artist Project_Flowers_examples_2021": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں",
-            "parameters": {
-              "length": "لمبائی",
-              "points": "نقاط"
-            },
-            "description": "دیئے گئے پوائنٹس اور دی لمبائی کے اطراف کے ساتھ ایک ستارہ اپنی طرف متوجہ"
-          },
-          "draw a circle": {
-            "name": "ایک دائرہ بنائیں",
-            "description": "دیئے گئے رداس کے ایک دائرے کو اپنی طرف متوجہ",
-            "parameters": {
-              "radius": "رداس"
-            }
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "لمبائی",
-              "repeat": "دوبارہ",
-              "sides": "اطراف"
-            },
-            "name": "ایک پنواہیل اپنی طرف متوجہ"
-          },
-          "draw a triangle": {
-            "name": "ایک مثلث بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "لمبائی",
-              "sides": "اطراف"
-            },
-            "name": "ایک شکل اپنی طرف متوجہ"
-          },
-          "draw a house": {
-            "name": "ایک گھر بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a square": {
-            "name": "ایک مربع بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          }
-        },
-        "CourseD_EOC_artist_2021": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں",
-            "parameters": {
-              "length": "لمبائی",
-              "points": "نقاط"
-            },
-            "description": "دیئے گئے پوائنٹس اور دی لمبائی کے اطراف کے ساتھ ایک ستارہ اپنی طرف متوجہ"
-          },
-          "draw a circle": {
-            "name": "ایک دائرہ بنائیں",
-            "description": "دیئے گئے رداس کے ایک دائرے کو اپنی طرف متوجہ",
-            "parameters": {
-              "radius": "رداس"
-            }
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "لمبائی",
-              "repeat": "دوبارہ",
-              "sides": "اطراف"
-            },
-            "name": "ایک پنواہیل اپنی طرف متوجہ"
-          },
-          "draw a triangle": {
-            "name": "ایک مثلث بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "لمبائی",
-              "sides": "اطراف"
-            },
-            "name": "ایک شکل اپنی طرف متوجہ"
-          },
-          "draw a house": {
-            "name": "ایک گھر بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a square": {
-            "name": "ایک مربع بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          }
-        },
-        "CourseD_EOC_artist_example2021": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں",
-            "parameters": {
-              "length": "لمبائی",
-              "points": "نقاط"
-            },
-            "description": "دیئے گئے پوائنٹس اور دی لمبائی کے اطراف کے ساتھ ایک ستارہ اپنی طرف متوجہ"
-          },
-          "draw a circle": {
-            "name": "ایک دائرہ بنائیں",
-            "description": "دیئے گئے رداس کے ایک دائرے کو اپنی طرف متوجہ",
-            "parameters": {
-              "radius": "رداس"
-            }
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "لمبائی",
-              "repeat": "دوبارہ",
-              "sides": "اطراف"
-            },
-            "name": "ایک پنواہیل اپنی طرف متوجہ"
-          },
-          "draw a triangle": {
-            "name": "ایک مثلث بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "لمبائی",
-              "sides": "اطراف"
-            },
-            "name": "ایک شکل اپنی طرف متوجہ"
-          },
-          "draw a house": {
-            "name": "ایک گھر بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a square": {
-            "name": "ایک مربع بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          }
-        },
-        "courseC_artist_prog3_2021": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
-            "name": "شعلے کو اپنی طرف متوجہ"
-          },
-          "draw fire": {
-            "name": "آگ اپنی طرف متوجہ"
-          }
-        },
-        "courseC_data wizard_2021": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          }
-        },
-        "courseE_artist_functions10_2021": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          },
-          "draw hexagon": {
-            "name": "مسدس اپنی طرف متوجہ"
-          },
-          "draw line of hexagons": {
-            "name": "hexagons کی لائن کو اپنی طرف متوجہ"
-          }
-        },
-        "courseE_artist_functions2_2021": {
-          "draw a square": {
-            "name": "ایک مربع بنائیں"
-          },
-          "draw ear stems": {
-            "name": "کان تنوں کو اپنی طرف متوجہ"
-          }
-        },
-        "courseE_artist_functions2_dani": {
-          "draw a square": {
-            "name": "ایک مربع بنائیں"
-          }
-        },
-        "courseE_artist_functions3_2021": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں"
-          }
-        },
-        "courseE_artist_functions4_dani": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں"
-          }
-        },
-        "courseE_artist_functions5_2021": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں"
-          }
-        },
-        "courseE_artist_functions5_dani": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں"
-          }
-        },
-        "courseE_artist_functions8_2021": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          },
-          "staggered squares": {
-            "name": "ڈگمگایا چوکوں"
-          },
-          "draw a line of squares": {
-            "name": "چوکوں کی ایک لائن کو اپنی طرف متوجہ"
-          },
-          "draw square": {
-            "name": "مربع اپنی طرف متوجہ"
-          }
-        },
-        "courseE_artist_functions8a_2021": {
-          "draw a square": {
-            "name": "ایک مربع بنائیں"
-          },
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          }
-        },
-        "courseE_artist_functions8b_2021": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          },
-          "draw a line of squares": {
-            "name": "چوکوں کی ایک لائن کو اپنی طرف متوجہ"
-          },
-          "draw square": {
-            "name": "مربع اپنی طرف متوجہ"
-          }
-        },
-        "courseE_artist_functions8c_2021": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          },
-          "draw a line of squares": {
-            "name": "چوکوں کی ایک لائن کو اپنی طرف متوجہ"
-          },
-          "draw square": {
-            "name": "مربع اپنی طرف متوجہ"
-          },
-          "staggered squares": {
-            "name": "ڈگمگایا چوکوں"
-          }
-        },
-        "courseE_artist_functions9_2021": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          },
-          "draw triangle": {
-            "name": "مثلث اپنی طرف متوجہ"
-          },
-          "draw line of triangles": {
-            "name": "مثلث کی لائن کو اپنی طرف متوجہ"
-          }
-        },
-        "courseE_artist_functions_challenge1_2021": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          },
-          "my design": {
-            "name": "میرا ڈیزائن"
-          }
-        },
-        "courseE_artist_functions_challenge2_2021": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          },
-          "my design": {
-            "name": "میرا ڈیزائن"
-          }
-        },
-        "courseE_artist_functions_predict1_2021": {
-          "draw a square": {
-            "name": "ایک مربع بنائیں"
-          }
-        },
-        "courseE_artist_functions_predict1_dani": {
-          "draw a square": {
-            "name": "ایک مربع بنائیں"
-          }
-        },
-        "courseE_artist_functions_predict2_2021": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          },
-          "draw line of polygons": {
-            "name": "کثیرالاضلاع کی لائن کو اپنی طرف متوجہ"
-          },
-          "draw polygon": {
-            "name": "کثیرالاضلاع اپنی طرف متوجہ"
-          }
-        },
-        "courseF_apps_collector": {
-          "end game": {
-            "name": "کھیل ختم کریں"
-          }
-        },
-        "Function intro Ryan": {
-          "build bridge": {
-            "name": "پل بنائیں"
-          }
-        },
-        "Function intro Ryan_2019": {
-          "build bridge": {
-            "name": "پل بنائیں"
-          }
-        },
-        "Function intro Ryan_2020": {
-          "build bridge": {
-            "name": "پل بنائیں"
-          }
-        },
-        "Function intro Ryan_2021": {
-          "build bridge": {
-            "name": "پل بنائیں"
-          }
-        },
-        "MC_HOC_2017_07_Cole": {
-          "clear path": {
-            "name": "راستہ صاف کریں"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2019": {
-          "clear path": {
-            "name": "راستہ صاف کریں"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2020": {
-          "clear path": {
-            "name": "راستہ صاف کریں"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2021": {
-          "clear path": {
-            "name": "راستہ صاف کریں"
-          }
-        },
-        "MC_HOC_2017_10_RETRY": {
-          "fix long path": {
-            "name": "طویل راستہ مقرر کریں"
-          },
-          "fix short path": {
-            "name": "مختصر راستہ مقرر کریں"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2019": {
-          "fix long path": {
-            "name": "طویل راستہ مقرر کریں"
-          },
-          "fix short path": {
-            "name": "مختصر راستہ مقرر کریں"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2020": {
-          "fix long path": {
-            "name": "طویل راستہ مقرر کریں"
-          },
-          "fix short path": {
-            "name": "مختصر راستہ مقرر کریں"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2021": {
-          "fix long path": {
-            "name": "طویل راستہ مقرر کریں"
-          },
-          "fix short path": {
-            "name": "مختصر راستہ مقرر کریں"
-          }
-        },
-        "MC_HOC_2017_Ali": {
-          "build short bridge": {
-            "name": "مختصر پل بنائیں"
-          },
-          "build long bridge": {
-            "name": "طویل پل بنائیں"
-          }
-        },
-        "MC_HOC_2017_Ali_2019": {
-          "build short bridge": {
-            "name": "مختصر پل بنائیں"
-          },
-          "build long bridge": {
-            "name": "طویل پل بنائیں"
-          }
-        },
-        "MC_HOC_2017_Ali_2020": {
-          "build short bridge": {
-            "name": "مختصر پل بنائیں"
-          },
-          "build long bridge": {
-            "name": "طویل پل بنائیں"
-          }
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "build short bridge": {
-            "name": "مختصر پل بنائیں"
-          },
-          "build long bridge": {
-            "name": "طویل پل بنائیں"
-          }
-        },
-        "Course 4 Play Lab Params 10": {
-          "score_points": {
-            "parameters": {
-              "points": "نقاط"
-            }
-          }
-        },
-        "Course 4 Play Lab Params 9": {
-          "score_points": {
-            "parameters": {
-              "points": "نقاط"
-            }
-          }
-        },
-        "Course 4 Play Lab Vars 1": {
-          "set score": {
-            "name": "اسکور کو مقرر کریں"
-          }
-        },
-        "Course 4 Play Lab Vars 2": {
-          "set score": {
-            "name": "اسکور کو مقرر کریں"
-          }
-        },
-        "Course E: Artist Project_examples_2021": {
-          "my function": {
-            "name": "میرا فنکشن"
-          }
-        },
-        "FoodFight": {
-          "score_points": {
-            "parameters": {
-              "points": "نقاط"
-            }
-          }
-        },
-        "Standalone_Artist_9": {
-          "my function": {
-            "name": "میرا فنکشن"
-          }
-        },
         "courseF_bee_variables_7_2018": {
           "collect": {
             "name": "جمع کریں"
@@ -1814,431 +2242,6 @@
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "جمع کریں"
-          }
-        },
-        "Artist Autorun Test": {
-          "draw a square": {
-            "name": "ایک مربع بنائیں"
-          }
-        },
-        "Auto Open Function Editor": {
-          "draw a shape": {
-            "parameters": {
-              "length": "لمبائی"
-            }
-          }
-        },
-        "Course E: Artist Project_examples2022": {
-          "my function": {
-            "name": "میرا فنکشن"
-          }
-        },
-        "Course E: Frozen Project_examples2022": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں",
-            "parameters": {
-              "points": "نقاط",
-              "length": "لمبائی"
-            }
-          },
-          "draw a circle": {
-            "name": "ایک دائرہ بنائیں"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "لمبائی",
-              "repeat": "دوبارہ"
-            }
-          },
-          "draw a triangle": {
-            "name": "ایک مثلث بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a house": {
-            "name": "ایک گھر بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a square": {
-            "name": "ایک مربع بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "small flower": {
-            "name": "چھوٹے پھول"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "منطق پھول 2"
-          },
-          "LOGIC FLOWER": {
-            "name": "منطق پھول"
-          },
-          "LOGIC FLOWERS": {
-            "name": "منطق پھول"
-          }
-        },
-        "CourseD_EOC_artist2022": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں",
-            "parameters": {
-              "points": "نقاط",
-              "length": "لمبائی"
-            }
-          },
-          "draw a circle": {
-            "name": "ایک دائرہ بنائیں"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "لمبائی",
-              "repeat": "دوبارہ"
-            }
-          },
-          "draw a triangle": {
-            "name": "ایک مثلث بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a house": {
-            "name": "ایک گھر بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a square": {
-            "name": "ایک مربع بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          }
-        },
-        "CourseD_EOC_artist_example20212022": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں",
-            "parameters": {
-              "points": "نقاط",
-              "length": "لمبائی"
-            }
-          },
-          "draw a circle": {
-            "name": "ایک دائرہ بنائیں"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "لمبائی",
-              "repeat": "دوبارہ"
-            }
-          },
-          "draw a triangle": {
-            "name": "ایک مثلث بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a shape": {
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a house": {
-            "name": "ایک گھر بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          },
-          "draw a square": {
-            "name": "ایک مربع بنائیں",
-            "parameters": {
-              "length": "لمبائی"
-            }
-          }
-        },
-        "Function intro Ryan2022": {
-          "build bridge": {
-            "name": "پل بنائیں"
-          }
-        },
-        "MC_HOC_2017_07_Cole2022": {
-          "clear path": {
-            "name": "راستہ صاف کریں"
-          }
-        },
-        "MC_HOC_2017_10_RETRY2022": {
-          "fix long path": {
-            "name": "طویل راستہ مقرر کریں"
-          },
-          "fix short path": {
-            "name": "مختصر راستہ مقرر کریں"
-          }
-        },
-        "MC_HOC_2017_Ali2022": {
-          "build short bridge": {
-            "name": "مختصر پل بنائیں"
-          },
-          "build long bridge": {
-            "name": "طویل پل بنائیں"
-          }
-        },
-        "courseC_artist_prog32022": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            }
-          }
-        },
-        "courseC_data wizard2022": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          }
-        },
-        "courseE_artist_functions102022": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          }
-        },
-        "courseE_artist_functions22022": {
-          "draw a square": {
-            "name": "ایک مربع بنائیں"
-          }
-        },
-        "courseE_artist_functions32022": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں"
-          }
-        },
-        "courseE_artist_functions52022": {
-          "draw a star": {
-            "name": "ایک ستارہ کا خاکہ بنائیں"
-          }
-        },
-        "courseE_artist_functions82022": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          }
-        },
-        "courseE_artist_functions8a2022": {
-          "draw a square": {
-            "name": "ایک مربع بنائیں"
-          },
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          }
-        },
-        "courseE_artist_functions8b2022": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          }
-        },
-        "courseE_artist_functions8c2022": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          }
-        },
-        "courseE_artist_functions92022": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          }
-        },
-        "courseE_artist_functions_challenge12022": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          }
-        },
-        "courseE_artist_functions_challenge22022": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          }
-        },
-        "courseE_artist_functions_predict12022": {
-          "draw a square": {
-            "name": "ایک مربع بنائیں"
-          }
-        },
-        "courseE_artist_functions_predict22022": {
-          "do something": {
-            "name": "کچھ نہ کچھ کرتے ہیں"
-          }
-        },
-        "courseF_apps_collector2022": {
-          "end game": {
-            "name": "کھیل ختم کریں"
-          }
-        },
-        "courseF_apps_collector_-2022-2": {
-          "end game": {
-            "name": "کھیل ختم کریں"
-          }
-        },
-        "CourseF_app_computer": {
-          "reset game": {
-            "name": "ری سیٹ کھیل"
-          }
-        },
-        "CourseF_app_computer2022": {
-          "reset game": {
-            "name": "ری سیٹ کھیل"
-          }
-        },
-        "CourseF_app_computer_-2022-2": {
-          "reset game": {
-            "name": "ری سیٹ کھیل"
-          }
-        },
-        "MC_HOC_2017_FP20x20_2021": {
-          "function 1": {
-            "name": "فنکشن 1"
-          },
-          "function 2": {
-            "name": "فنکشن 2"
-          }
-        },
-        "courseB_artist_loops_challenge2_2021": {
-          "potential solution": {
-            "name": "ممکنہ حل"
-          }
-        },
-        "courseC_artist_prog4_2021": {
-          "booster": {
-            "name": "بوسٹر"
-          }
-        },
-        "courseE_artist_functions7_2021": {
-          "draw a window": {
-            "name": "ایک ونڈو اپنی طرف متوجہ"
-          }
-        },
-        "courseE_artist_functionsProj_2021": {
-          "draw hexagon": {
-            "name": "مسدس اپنی طرف متوجہ"
-          },
-          "draw line of hexagons": {
-            "name": "hexagons کی لائن کو اپنی طرف متوجہ"
-          },
-          "staggered squares": {
-            "name": "ڈگمگایا چوکوں"
-          },
-          "draw a line of squares": {
-            "name": "چوکوں کی ایک لائن کو اپنی طرف متوجہ"
-          },
-          "draw square": {
-            "name": "مربع اپنی طرف متوجہ"
-          }
-        },
-        "courseE_farmer_functions10a1_2021": {
-          "pick along path": {
-            "name": "راستے کے ساتھ ساتھ لینے"
-          },
-          "check square for corn": {
-            "name": "مکئی کے لئے مربع چیک کریں"
-          },
-          "get all pumpkins": {
-            "name": "تمام کدو حاصل"
-          },
-          "pumpkin square": {
-            "name": "قددو مربع"
-          }
-        },
-        "courseE_farmer_functions11_predict_2021": {
-          "pick along path": {
-            "name": "راستے کے ساتھ ساتھ لینے"
-          },
-          "pumpkin square": {
-            "name": "قددو مربع"
-          },
-          "check square for corn": {
-            "name": "مکئی کے لئے مربع چیک کریں"
-          },
-          "get produce": {
-            "name": "پیداوار حاصل کریں"
-          },
-          "get all pumpkins": {
-            "name": "تمام کدو حاصل"
-          }
-        },
-        "courseE_farmer_functions13_2021": {
-          "pick along path": {
-            "name": "راستے کے ساتھ ساتھ لینے"
-          },
-          "check for corn": {
-            "name": "مکئی کے لئے چیک کریں"
-          },
-          "corn rectangle": {
-            "name": "مکئی مستطیل"
-          },
-          "lettuce stairs": {
-            "name": "لیٹش سیڑھیاں"
-          }
-        },
-        "courseE_farmer_functions1a_2021": {
-          "check square for corn": {
-            "name": "مکئی کے لئے مربع چیک کریں"
-          }
-        },
-        "courseE_farmer_functions2b_2021": {
-          "check square for corn": {
-            "name": "مکئی کے لئے مربع چیک کریں"
-          }
-        },
-        "courseE_farmer_functions2ba_2021": {
-          "check square for corn": {
-            "name": "مکئی کے لئے مربع چیک کریں"
-          },
-          "get all pumpkins": {
-            "name": "تمام کدو حاصل"
-          }
-        },
-        "courseE_farmer_functions3c1_2021": {
-          "pick along path": {
-            "name": "راستے کے ساتھ ساتھ لینے"
-          },
-          "check square for corn": {
-            "name": "مکئی کے لئے مربع چیک کریں"
-          },
-          "get all pumpkins": {
-            "name": "تمام کدو حاصل"
-          }
-        },
-        "courseE_farmer_functions3c_2021": {
-          "check square for corn": {
-            "name": "مکئی کے لئے مربع چیک کریں"
-          },
-          "get all pumpkins": {
-            "name": "تمام کدو حاصل"
-          }
-        },
-        "courseE_farmer_functions7a1_2021": {
-          "garden square": {
-            "name": "باغ مربع"
-          }
-        },
-        "courseE_farmer_functions8a1_2021": {
-          "garden square": {
-            "name": "باغ مربع"
-          }
-        },
-        "courseE_farmer_functions9a1_2021": {
-          "garden square": {
-            "name": "باغ مربع"
-          }
-        },
-        "courseF_bee_for_challenge1_2021": {
-          "move and get nectar with counter": {
-            "name": "اقدام اور انسداد کے ساتھ امرت حاصل"
           }
         }
       }

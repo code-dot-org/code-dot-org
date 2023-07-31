@@ -39,6 +39,15 @@ class MusiclabController < ApplicationController
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
   end
 
+  def gallery
+    unless current_user&.admin?
+      render :no_access
+    end
+
+    view_options(full_width: true, responsive_content: true, no_padding_container: true)
+    @channel_ids = Project.where(project_type: "music").last(50).map {|project| JSON.parse(project.value)["id"]}.compact_blank
+  end
+
   # TODO: This is a temporary addition to serve the analytics API key
   # specifically for Music Lab. When we start using Amplitude for other
   # applications, we should create a dedicated controller/util that serves

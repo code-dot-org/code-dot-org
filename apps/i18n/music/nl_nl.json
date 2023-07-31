@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "geluid afspelen",
   "blockly_blockPlaySoundAtMeasureTooltip": "geluid afspelen",
+  "blockly_blockPlaySoundTooltip": "geluid afspelen",
   "blockly_blockRepeatTooltip": "herhaal",
   "blockly_blockWhenRun": "als gestart",
   "blockly_blockWhenRunTooltip": "als gestart",
@@ -11,11 +11,11 @@
   "blockly_toolboxCategoryMath": "wiskundige",
   "blockly_toolboxCategoryPlay": "Geluiden",
   "blockly_toolboxCategoryVariables": "Variabelen",
+  "continue": "Doorgaan",
   "feedback": "Feedback",
-  "share": "Delen",
-  "startOver": "Begin opnieuw",
-  "upload": "Uploaden",
   "panelHeaderInstructions": "Instructies",
   "panelHeaderWorkspace": "Werkplaats: ",
-  "continue": "Doorgaan"
+  "share": "Delen",
+  "startOver": "Begin opnieuw",
+  "upload": "Uploaden"
 }

@@ -1,2 +1,10 @@
 {
+  "gl-ES": {
+    "data": {
+      "frameworks": {
+        "ngss": {
+        }
+      }
+    }
+  }
 }

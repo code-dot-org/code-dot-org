@@ -23,9 +23,9 @@
           "2-3_Artist_4_a": "Norint pabaigti namą, viskas ką mums reikia padaryti, tai nupiešti kvadratą!"
         },
         "2-3 Artist 6": {
+          "2-3_Artist_6_a": "Norint padaryti mažesnius kampus, reikia pasisukti _daugiau_ laipsnių.   ",
           "2-3_Artist_6_b": "Kadangi aš jau esu atsisukęs į dešinę pusę, lengviausia būtų pradėti judinant mane pirmyn, o tada pasukti mane kairėn, kad gautųsi trikampis.",
-          "2-3_Artist_6_c": "Visos trikampio kraštinės yra vienodo ilgio: 100 pikselių!",
-          "2-3_Artist_6_a": "Norint padaryti mažesnius kampus, reikia pasisukti _daugiau_ laipsnių.   "
+          "2-3_Artist_6_c": "Visos trikampio kraštinės yra vienodo ilgio: 100 pikselių!"
         },
         "2-3 Artist 7": {
           "2-3_Artist_7_a": "Lengviausias būdas išspręsti šią užduotį – nupiešk pirmąjį kvadratą. O kai jį nupieši, įsitikink, kad menininkas žiūri žemyn – ir tik tada piešk antrąjį kvadratą."
@@ -110,7 +110,17 @@
           "2-3_Bee_Conditionals_14_a": "Susidūrei su sunkumais? Pamėgink su rausva gėle elgtis taip pat, kaip ir su violetine!",
           "2-3_Bee_Conditionals_14_b": "Jei rausva gėlė būtų violetinė, ar sugalvotum, kaip reikia panaudoti dar vieną kartojimo blokelį?"
         },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "Menininkas turi pasisukti 120 laipsnių, prieš piešdamas naują kvadratą."
+        },
+        "course2_artist_prog_challenge1": {
+          "courseC_artist_prog_challenge1_a": "Stačiakampis yra 200 pikselių pločio ir 100 pikselių aukščio. "
+        },
         "courseC_artist_prog2": {
+          "courseC_artist_prog2_a": "Jei panaudosi bloką kad aš 'pajudėčiau į priekį 100 pixelių', aš linija nupiešiu automatiškai.",
+          "courseC_artist_prog2_b": "Problemos pasukant? Panaudok 'pasukti 90 laipsnių dešinėn bloką."
+        },
+        "courseC_artist_prog22022": {
           "courseC_artist_prog2_a": "Jei panaudosi bloką kad aš 'pajudėčiau į priekį 100 pixelių', aš linija nupiešiu automatiškai.",
           "courseC_artist_prog2_b": "Problemos pasukant? Panaudok 'pasukti 90 laipsnių dešinėn bloką."
         },
@@ -126,7 +136,14 @@
           "courseC_artist_prog2_a": "Jei panaudosi bloką kad aš 'pajudėčiau į priekį 100 pixelių', aš linija nupiešiu automatiškai.",
           "courseC_artist_prog2_b": "Problemos pasukant? Panaudok 'pasukti 90 laipsnių dešinėn bloką."
         },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "Jei panaudosi bloką kad aš 'pajudėčiau į priekį 100 pixelių', aš linija nupiešiu automatiškai.",
+          "courseC_artist_prog2_b": "Problemos pasukant? Panaudok 'pasukti 90 laipsnių dešinėn bloką."
+        },
         "courseD_artist_nestedLoops3": {
+          "courseD_artist_nestedLoops3_a": "Pamėgink panaudoti blokelį „peršok“, kad atsidurtum nuo vieno kvadrato prie kito. \n\nJei kiekvieno kvadrato kraštinės yra po 20 pikselių, o tarpai tarp jų irgi yra 20 pikselių, kaip toli tau reikia peršokti?"
+        },
+        "courseD_artist_nestedLoops32022": {
           "courseD_artist_nestedLoops3_a": "Pamėgink panaudoti blokelį „peršok“, kad atsidurtum nuo vieno kvadrato prie kito. \n\nJei kiekvieno kvadrato kraštinės yra po 20 pikselių, o tarpai tarp jų irgi yra 20 pikselių, kaip toli tau reikia peršokti?"
         },
         "courseD_artist_nestedLoops3_2018": {
@@ -138,6 +155,9 @@
         "courseD_artist_nestedLoops3_2020": {
           "courseD_artist_nestedLoops3_a": "Pamėgink panaudoti blokelį „peršok“, kad atsidurtum nuo vieno kvadrato prie kito. \n\nJei kiekvieno kvadrato kraštinės yra po 20 pikselių, o tarpai tarp jų irgi yra 20 pikselių, kaip toli tau reikia peršokti?"
         },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "Pamėgink panaudoti blokelį „peršok“, kad atsidurtum nuo vieno kvadrato prie kito. \n\nJei kiekvieno kvadrato kraštinės yra po 20 pikselių, o tarpai tarp jų irgi yra 20 pikselių, kaip toli tau reikia peršokti?"
+        },
         "courseE_artist_functions1": {
           "courseE_artist_functions1_a": "Abiejų kvadratų kraštinės yra po 100 pikselių, o tai reiškia, kad tau reikia paeiti 175 pikselius prieš brėžiant antrąjį kvadratą.",
           "courseE_artist_functions1_b": "Jeigu dukart nupieši kurią nors liniją – nieko baisaus."
@@ -146,7 +166,14 @@
           "courseE_artist_functions1_a": "Abiejų kvadratų kraštinės yra po 100 pikselių, o tai reiškia, kad tau reikia paeiti 175 pikselius prieš brėžiant antrąjį kvadratą.",
           "courseE_artist_functions1_b": "Jeigu dukart nupieši kurią nors liniją – nieko baisaus."
         },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "Abiejų kvadratų kraštinės yra po 100 pikselių, o tai reiškia, kad tau reikia paeiti 175 pikselius prieš brėžiant antrąjį kvadratą.",
+          "courseE_artist_functions1_b": "Jeigu dukart nupieši kurią nors liniją – nieko baisaus."
+        },
         "courseE_artist_functions2": {
+          "courseD_artist_functions2_a": "Tavo programoje turi būti:\n– Panaudota komanda\n– Judama pirmyn 100 + 75 pikselių\n– Panaudota komanda"
+        },
+        "courseE_artist_functions22022": {
           "courseD_artist_functions2_a": "Tavo programoje turi būti:\n– Panaudota komanda\n– Judama pirmyn 100 + 75 pikselių\n– Panaudota komanda"
         },
         "courseE_artist_functions2_2018": {
@@ -158,41 +185,14 @@
         "courseE_artist_functions2_2020": {
           "courseD_artist_functions2_a": "Tavo programoje turi būti:\n– Panaudota komanda\n– Judama pirmyn 100 + 75 pikselių\n– Panaudota komanda"
         },
-        "courseE_artist_functions2_copy": {
+        "courseE_artist_functions2_2021": {
           "courseD_artist_functions2_a": "Tavo programoje turi būti:\n– Panaudota komanda\n– Judama pirmyn 100 + 75 pikselių\n– Panaudota komanda"
         },
-        "courseC_artist_prog2_2021": {
-          "courseC_artist_prog2_a": "Jei panaudosi bloką kad aš 'pajudėčiau į priekį 100 pixelių', aš linija nupiešiu automatiškai.",
-          "courseC_artist_prog2_b": "Problemos pasukant? Panaudok 'pasukti 90 laipsnių dešinėn bloką."
-        },
-        "courseD_artist_nestedLoops3_2021": {
-          "courseD_artist_nestedLoops3_a": "Pamėgink panaudoti blokelį „peršok“, kad atsidurtum nuo vieno kvadrato prie kito. \n\nJei kiekvieno kvadrato kraštinės yra po 20 pikselių, o tarpai tarp jų irgi yra 20 pikselių, kaip toli tau reikia peršokti?"
-        },
-        "courseE_artist_functions1_dani": {
-          "courseE_artist_functions1_a": "Abiejų kvadratų kraštinės yra po 100 pikselių, o tai reiškia, kad tau reikia paeiti 175 pikselius prieš brėžiant antrąjį kvadratą.",
-          "courseE_artist_functions1_b": "Jeigu dukart nupieši kurią nors liniją – nieko baisaus."
-        },
-        "courseE_artist_functions2_2021": {
+        "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_a": "Tavo programoje turi būti:\n– Panaudota komanda\n– Judama pirmyn 100 + 75 pikselių\n– Panaudota komanda"
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_a": "Tavo programoje turi būti:\n– Panaudota komanda\n– Judama pirmyn 100 + 75 pikselių\n– Panaudota komanda"
-        },
-        "Artist Autorun Test": {
-          "2-3_Artist_Functions_4_a": "Menininkas turi pasisukti 120 laipsnių, prieš piešdamas naują kvadratą."
-        },
-        "courseC_artist_prog22022": {
-          "courseC_artist_prog2_a": "Jei panaudosi bloką kad aš 'pajudėčiau į priekį 100 pixelių', aš linija nupiešiu automatiškai.",
-          "courseC_artist_prog2_b": "Problemos pasukant? Panaudok 'pasukti 90 laipsnių dešinėn bloką."
-        },
-        "courseD_artist_nestedLoops32022": {
-          "courseD_artist_nestedLoops3_a": "Pamėgink panaudoti blokelį „peršok“, kad atsidurtum nuo vieno kvadrato prie kito. \n\nJei kiekvieno kvadrato kraštinės yra po 20 pikselių, o tarpai tarp jų irgi yra 20 pikselių, kaip toli tau reikia peršokti?"
-        },
-        "courseE_artist_functions22022": {
-          "courseD_artist_functions2_a": "Tavo programoje turi būti:\n– Panaudota komanda\n– Judama pirmyn 100 + 75 pikselių\n– Panaudota komanda"
-        },
-        "course2_artist_prog_challenge1": {
-          "courseC_artist_prog_challenge1_a": "Stačiakampis yra 200 pikselių pločio ir 100 pikselių aukščio. "
         }
       }
     }

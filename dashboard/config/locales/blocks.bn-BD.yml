@@ -9,15 +9,15 @@ bn:
       Dancelab_changePropBy:
         options:
           PROPERTY:
+            '"height"': উচ্চতা
             '"scale"': আকার
             '"width"': চওড়া
-            '"height"': উচ্চতা
       Dancelab_changePropEachBy:
         options:
           PROPERTY:
+            '"height"': উচ্চতা
             '"scale"': আকার
             '"width"': চওড়া
-            '"height"': উচ্চতা
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -25,9 +25,9 @@ bn:
       Dancelab_getProp:
         options:
           PROPERTY:
+            '"height"': উচ্চতা
             '"scale"': আকার
             '"width"': চওড়া
-            '"height"': উচ্চতা
       Dancelab_getTime:
         options:
           UNIT:
@@ -77,27 +77,27 @@ bn:
       Dancelab_setProp:
         options:
           PROPERTY:
+            '"height"': উচ্চতা
             '"scale"': আকার
             '"width"': চওড়া
-            '"height"': উচ্চতা
       Dancelab_setPropEach:
         options:
           PROPERTY:
+            '"height"': উচ্চতা
             '"scale"': আকার
             '"width"': চওড়া
-            '"height"': উচ্চতা
       Dancelab_setPropRandom:
         options:
           PROPERTY:
+            '"height"': উচ্চতা
             '"scale"': আকার
             '"width"': চওড়া
-            '"height"': উচ্চতা
       Dancelab_setPropRandomEach:
         options:
           PROPERTY:
+            '"height"': উচ্চতা
             '"scale"': আকার
             '"width"': চওড়া
-            '"height"': উচ্চতা
       Dancelab_setVisible:
         options:
           VISIBILITY:
@@ -109,27 +109,27 @@ bn:
       Dancelab_startMapping:
         options:
           PROPERTY:
+            '"height"': উচ্চতা
             '"scale"': আকার
             '"width"': চওড়া
-            '"height"': উচ্চতা
       Dancelab_startMappingEach:
         options:
           PROPERTY:
+            '"height"': উচ্চতা
             '"scale"': আকার
             '"width"': চওড়া
-            '"height"': উচ্চতা
       Dancelab_stopMapping:
         options:
           PROPERTY:
+            '"height"': উচ্চতা
             '"scale"': আকার
             '"width"': চওড়া
-            '"height"': উচ্চতা
       Dancelab_stopMappingEach:
         options:
           PROPERTY:
+            '"height"': উচ্চতা
             '"scale"': আকার
             '"width"': চওড়া
-            '"height"': উচ্চতা
       Dancelab_translateStrings:
         options:
           STRING:
@@ -137,138 +137,16 @@ bn:
       Dancelab_whenKey:
         options:
           KEY:
-            '"up"': উপরে
-            '"left"': বামে
             '"down"': নিচে
+            '"left"': বামে
             '"right"': ডানে
             '"space"': স্থান
+            '"up"': উপরে
             '"x"': এক্স
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
             '"hearts"': হরতন
-      gamelab_atTime:
-        options:
-          UNIT:
-            '"seconds"': সেকেন্ড
-      gamelab_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-            '"speed"': গতি
-      gamelab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': যখন
-            '"while"': যখন
-      gamelab_everyInterval:
-        options:
-          UNIT:
-            '"seconds"': সেকেন্ড
-      gamelab_getProp:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-            '"speed"': গতি
-      gamelab_getTime:
-        options:
-          UNIT:
-            '"seconds"': সেকেন্ড
-      gamelab_isKeyPressed:
-        options:
-          KEY:
-            '"up"': উপরে
-            '"down"': নিচে
-            '"left"': বামে
-            '"right"': ডানে
-            '"space"': স্থান
-            '"x"': এক্স
-      gamelab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': যখন
-            '"while"': যখন
-          KEY:
-            '"up"': উপরে
-            '"down"': নিচে
-            '"left"': বামে
-            '"right"': ডানে
-            '"space"': স্থান
-            '"x"': এক্স
-      gamelab_makeProjectile:
-        options:
-          DIRECTION:
-            '0': ডানে
-            '90': নিচে
-            '180': বামে
-            '270': উপরে
-      gamelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': ডানে
-            '"left"': বামে
-      gamelab_playSoundOptions:
-        options:
-          SOUND:
-            "'sound://category_collect/clicky_crunch.mp3'": কড়্কড়্ শব্দ
-            "'sound://category_digital/jump_7.mp3'": লাফান
-      gamelab_randColor:
-        text: যেকোনো রঙ
-      gamelab_randomColor:
-        text: যেকোনো রঙ
-      gamelab_repeatForever:
-        text: সবসময় পুনরাবৃত্তি করুন
-      gamelab_setBackgroundImage:
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': গুহা
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': নগরী
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': মরুভূমি
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': রামধনু
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': পানির
-              নিচে
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': শীতকাল
-      gamelab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-            '"speed"': গতি
-      gamelab_setProp_dropdown:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-      gamelab_setSizes:
-        options:
-          PROPERTY:
-            '"scale"': আকার
-            '"width"': চওড়া
-            '"height"': উচ্চতা
-      gamelab_spriteClicked:
-        options:
-          CONDITION:
-            '"when"': যখন
-            '"while"': যখন
-      gamelab_turn:
-        options:
-          DIRECTION:
-            '"right"': ডানে
-            '"left"': বামে
-      gamelab_whenKey:
-        options:
-          KEY:
-            '"up"': উপরে
-            '"down"': নিচে
-            '"left"': বামে
-            '"right"': ডানে
-            '"space"': স্থান
-      gamelab_whileKey:
-        options:
-          KEY:
-            '"up"': উপরে
-            '"down"': নিচে
-            '"left"': বামে
-            '"right"': ডানে
-            '"space"': স্থান
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -314,8 +192,8 @@ bn:
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': ডানে
             '"left"': বামে
+            '"right"': ডানে
       Mikelab_sprite:
         options:
           LOCATION:
@@ -324,33 +202,33 @@ bn:
       Mikelab_whenKeyPressed:
         options:
           KEY:
-            '"up"': ঊর্ধ্বমুখী তীর
             '"down"': নিচের তীর
             '"left"': বামের তীর
             '"right"': ডানমুখী তীর
-            '"w"': W
             '"s"': S
+            '"up"': ঊর্ধ্বমুখী তীর
+            '"w"': W
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': ঊর্ধ্বমুখী তীর
             '"down"': নিচের তীর
             '"left"': বামের তীর
             '"right"': ডানমুখী তীর
-            '"w"': W
             '"s"': S
+            '"up"': ঊর্ধ্বমুখী তীর
+            '"w"': W
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': '"হ্যাঁ"'
             '"no"': না
+            '"yes"': '"হ্যাঁ"'
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': ঊর্ধ্বমুখী তীর
             '"down"': নিচের তীর
             '"left"': বামের তীর
             '"right"': ডানমুখী তীর
+            '"up"': ঊর্ধ্বমুখী তীর
       Poetry_addFrame:
         options:
           BRUSH:
@@ -394,18 +272,18 @@ bn:
       binary_move:
         options:
           DIR:
-            '"up"': উপরে
             '"down"': নিচে
             '"left"': বামে
             '"right"': ডানে
+            '"up"': উপরে
       binary_whenKey:
         options:
           KEY:
-            '"up"': উপরে
             '"down"': নিচে
             '"left"': বামে
             '"right"': ডানে
             '"space"': স্থান
+            '"up"': উপরে
       craft_ifPath:
         options:
           DIR:
@@ -413,8 +291,8 @@ bn:
       craft_ifStandingOn:
         options:
           TYPE:
-            "'sand'": বালি
             "'planksOak'": ওকের তক্তা
+            "'sand'": বালি
       craft_ifStandingOnLimit:
         options:
           TYPE:
@@ -423,6 +301,128 @@ bn:
         text: সামনে এগিয়ে যান
       craft_placeTorch:
         text: মশাল বসান
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"speed"': গতি
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': যখন
+            '"while"': যখন
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"speed"': গতি
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
+            '"up"': উপরে
+            '"x"': এক্স
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': যখন
+            '"while"': যখন
+          KEY:
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
+            '"up"': উপরে
+            '"x"': এক্স
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ডানে
+            '180': বামে
+            '270': উপরে
+            '90': নিচে
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"left"': বামে
+            '"right"': ডানে
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": কড়্কড়্ শব্দ
+            "'sound://category_digital/jump_7.mp3'": লাফান
+      gamelab_randColor:
+        text: যেকোনো রঙ
+      gamelab_randomColor:
+        text: যেকোনো রঙ
+      gamelab_repeatForever:
+        text: সবসময় পুনরাবৃত্তি করুন
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': নগরী
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': গুহা
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': মরুভূমি
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': রামধনু
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': পানির
+              নিচে
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': শীতকাল
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+            '"speed"': গতি
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': আকার
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': উচ্চতা
+            '"scale"': আকার
+            '"width"': চওড়া
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': যখন
+            '"while"': যখন
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"left"': বামে
+            '"right"': ডানে
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
+            '"up"': উপরে
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"down"': নিচে
+            '"left"': বামে
+            '"right"': ডানে
+            '"space"': স্থান
+            '"up"': উপরে
       storylab_setForegroundEffect2:
         options:
           EFFECT:

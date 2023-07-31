@@ -2,17 +2,29 @@
   "en-GB": {
     "data": {
       "lessons": {
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd2-2017/Lists": {
+          "name": "Lists"
         },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Loops"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "Variables"
+        },
+        "csd2-2018/Lists": {
+          "name": "Lists"
+        },
+        "csd3-2018/Variables": {
+          "name": "Variables"
+        },
+        "csd2-2019/Lists": {
+          "name": "Lists"
+        },
+        "csd3-2019/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2021/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2021/Text": {
+          "name": "Text"
         },
         "csd3-2022/Variables": {
           "name": "Variables"
@@ -20,23 +32,11 @@
         "csd3-2022/Text": {
           "name": "Text"
         },
-        "csd3-2018/Variables": {
-          "name": "Variables"
-        },
-        "csd2-2018/Lists": {
-          "name": "Lists"
-        },
-        "csd3-2019/Variables": {
-          "name": "Variables"
-        },
-        "csd2-2019/Lists": {
-          "name": "Lists"
-        },
-        "csd3-2017/Variables": {
-          "name": "Variables"
-        },
-        "csd2-2017/Lists": {
-          "name": "Lists"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Introduction to Computer Science"
@@ -52,12 +52,6 @@
         },
         "course3/Computational Thinking": {
           "name": "Computational Thinking"
-        },
-        "csd3-2021/Variables": {
-          "name": "Variables"
-        },
-        "csd3-2021/Text": {
-          "name": "Text"
         }
       }
     }

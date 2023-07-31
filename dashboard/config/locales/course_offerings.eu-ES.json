@@ -2,28 +2,28 @@
   "eu-ES": {
     "data": {
       "course_offerings": {
-        "csp": "AP® Informatikaren Oinarriak",
-        "csa": "Informatika A",
         "20-hour": "CS kurtsora sarrera azkarra",
-        "flappy": "Flappy Code",
-        "jigsaw": "Buruhaustea",
         "algebra": "Informatika Aljebran",
         "artist": "Artista",
         "course1": "1. Kurtsoa",
         "course2": "2. Kurtsoa",
         "course3": "3. Kurtsoa",
         "course4": "4. Kurtsoa",
+        "csa": "Informatika A",
+        "csp": "AP® Informatikaren Oinarriak",
+        "edit-code": "Editatu kodea",
+        "flappy": "Flappy Code",
         "frozen": "Anna eta Elsarekin programatu",
         "gumball": "Gumball joko laborategia",
         "hourofcode": "Labirinto klasikoa",
         "iceage": "Ice Age joku laborategia",
         "infinity": "Disneyren Infinity Play Lab",
+        "jigsaw": "Buruhaustea",
+        "k5-onlinepd": "Informatika-oinarriak irakastea",
         "mc": "Minecraft Kode Ordua",
         "playlab": "Jolas Laborategia",
-        "k5-onlinepd": "Informatika-oinarriak irakastea",
-        "edit-code": "Editatu kodea",
-        "step": "pauso",
-        "soccer": "futbola"
+        "soccer": "futbola",
+        "step": "pauso"
       }
     }
   }

@@ -57,31 +57,31 @@ he:
         לפתוח את החשבון שלך בתוך מספר דקות.
       unlocked: החשבון שלך נפתח. בבקשה התחבר בשביל להמשיך.
   errors:
+    invitations:
+      edit:
+        header: קבע את הסיסמה שלך
+        submit_button: קבע את הסיסמה שלי
+      invitation_removed: ההזמנה שלך הוסרה.
+      invitation_token_invalid: אסימון ההזמנה שסופק אינו תקין!
+      new:
+        header: שלח הזמנה
+        submit_button: שלח הזמנה
+      no_invitations_remaining: לא נותרו הזמנות
+      send_instructions: הודעת הזמנה נשלחה ל%{email}.
+      updated: הסיסמה שונתה בהצלחה. אתה עכשיו מחובר.
+    mailer:
+      invitation_instructions:
+        accept: אשר הזמנה
+        hello: שלום %{email}
+        ignore: |-
+          אם אתה לא רוצה לאשר את ההזמנה, אנא התעלם ממייל זה.<br />
+          לא ניתן ליצור את החשבון שלך עד שתיכנס לקישור למעלה ותקבע את הסיסמה שלך.
+        someone_invited_you: מישהו הזמין אותך ל%{url}, אתה יכול לאשר זאת בעזרת הקישור
+          למטה.
+        subject: הוראות הזמנה
     messages:
       already_confirmed: כבר אומת. בקשה נסה להתחבר שוב
       confirmation_period_expired: צריך להיות מאושר ב%{period}, בבקשה בקש חדש
       expired: פג תוקף, בבקשה בקש חדש
       not_found: לא נמצא
       not_locked: לא היה נעול
-    invitations:
-      send_instructions: הודעת הזמנה נשלחה ל%{email}.
-      invitation_token_invalid: אסימון ההזמנה שסופק אינו תקין!
-      updated: הסיסמה שונתה בהצלחה. אתה עכשיו מחובר.
-      no_invitations_remaining: לא נותרו הזמנות
-      invitation_removed: ההזמנה שלך הוסרה.
-      new:
-        header: שלח הזמנה
-        submit_button: שלח הזמנה
-      edit:
-        header: קבע את הסיסמה שלך
-        submit_button: קבע את הסיסמה שלי
-    mailer:
-      invitation_instructions:
-        subject: הוראות הזמנה
-        hello: שלום %{email}
-        someone_invited_you: מישהו הזמין אותך ל%{url}, אתה יכול לאשר זאת בעזרת הקישור
-          למטה.
-        accept: אשר הזמנה
-        ignore: |-
-          אם אתה לא רוצה לאשר את ההזמנה, אנא התעלם ממייל זה.<br />
-          לא ניתן ליצור את החשבון שלך עד שתיכנס לקישור למעלה ותקבע את הסיסמה שלך.

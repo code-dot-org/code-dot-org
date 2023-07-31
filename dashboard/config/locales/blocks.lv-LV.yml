@@ -17,15 +17,15 @@ lv:
       Dancelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': izmērs
             '"height"': augstums
+            '"scale"': izmērs
       Dancelab_changePropEachBy:
         options:
           GROUP:
             '"UNICORN"': vienradži
           PROPERTY:
-            '"scale"': izmērs
             '"height"': augstums
+            '"scale"': izmērs
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -37,8 +37,8 @@ lv:
       Dancelab_getProp:
         options:
           PROPERTY:
-            '"scale"': izmērs
             '"height"': augstums
+            '"scale"': izmērs
       Dancelab_getTime:
         options:
           UNIT:
@@ -63,12 +63,12 @@ lv:
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": nejaušs
       Dancelab_layoutSprites:
         options:
-          GROUP:
-            '"UNICORN"': vienradži
           FORMAT:
-            '"row"': rinda
             '"column"': kolonna
             '"random"': nejaušs
+            '"row"': rinda
+          GROUP:
+            '"UNICORN"': vienradži
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
@@ -104,9 +104,9 @@ lv:
           COSTUME:
             '"UNICORN"': vienradži
           LAYOUT:
-            '"row"': rinda
             '"column"': kolonna
             '"random"': nejaušs
+            '"row"': rinda
       Dancelab_randomColor:
         text: nejauša krāsa
       Dancelab_setBackgroundEffect:
@@ -134,27 +134,27 @@ lv:
       Dancelab_setProp:
         options:
           PROPERTY:
-            '"scale"': izmērs
             '"height"': augstums
+            '"scale"': izmērs
       Dancelab_setPropEach:
         options:
           GROUP:
             '"UNICORN"': vienradži
           PROPERTY:
-            '"scale"': izmērs
             '"height"': augstums
+            '"scale"': izmērs
       Dancelab_setPropRandom:
         options:
           PROPERTY:
-            '"scale"': izmērs
             '"height"': augstums
+            '"scale"': izmērs
       Dancelab_setPropRandomEach:
         options:
           GROUP:
             '"UNICORN"': vienradži
           PROPERTY:
-            '"scale"': izmērs
             '"height"': augstums
+            '"scale"': izmērs
       Dancelab_setTintEach:
         options:
           THIS:
@@ -170,27 +170,27 @@ lv:
       Dancelab_startMapping:
         options:
           PROPERTY:
-            '"scale"': izmērs
             '"height"': augstums
+            '"scale"': izmērs
       Dancelab_startMappingEach:
         options:
           GROUP:
             '"UNICORN"': vienradži
           PROPERTY:
-            '"scale"': izmērs
             '"height"': augstums
+            '"scale"': izmērs
       Dancelab_stopMapping:
         options:
           PROPERTY:
-            '"scale"': izmērs
             '"height"': augstums
+            '"scale"': izmērs
       Dancelab_stopMappingEach:
         options:
           GROUP:
             '"UNICORN"': vienradži
           PROPERTY:
-            '"scale"': izmērs
             '"height"': augstums
+            '"scale"': izmērs
       Dancelab_translateStrings:
         options:
           STRING:
@@ -198,159 +198,13 @@ lv:
       Dancelab_whenKey:
         options:
           KEY:
-            '"up"': uz augšu
-            '"left"': pa kreisi
             '"down"': uz leju
-            '"right"': pa labi
-            '"space"': telpa
             '"enter"': ievadiet
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
+            '"up"': uz augšu
             '"x"': x
-      gamelab_atTime:
-        options:
-          UNIT:
-            '"seconds"': sekundes
-      gamelab_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
-            '"speed"': ātrums
-      gamelab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': kad
-            '"while"': kamēr
-      gamelab_everyInterval:
-        options:
-          UNIT:
-            '"seconds"': sekundes
-      gamelab_getProp:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
-            '"speed"': ātrums
-      gamelab_getTime:
-        options:
-          UNIT:
-            '"seconds"': sekundes
-      gamelab_isKeyPressed:
-        options:
-          KEY:
-            '"up"': uz augšu
-            '"down"': uz leju
-            '"left"': pa kreisi
-            '"right"': pa labi
-            '"space"': telpa
-            '"x"': x
-      gamelab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': kad
-            '"while"': kamēr
-          KEY:
-            '"up"': uz augšu
-            '"down"': uz leju
-            '"left"': pa kreisi
-            '"right"': pa labi
-            '"space"': telpa
-            '"x"': x
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"row"': rinda
-            '"column"': kolonna
-      gamelab_locationModifier:
-        options:
-          DIRECTION:
-            '"North"': Ziemeļi
-      gamelab_makeNewSpriteGroup:
-        options:
-          FORMAT:
-            '"row"': rinda
-            '"column"': kolonna
-      gamelab_makeProjectile:
-        options:
-          DIRECTION:
-            '0': pa labi
-            '90': uz leju
-            '180': pa kreisi
-            '270': uz augšu
-      gamelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': pa labi
-            '"left"': pa kreisi
-      gamelab_moveInDirection:
-        options:
-          DIRECTION:
-            '"North"': Ziemeļi
-      gamelab_playSoundOptions:
-        options:
-          SOUND:
-            "'sound://category_collect/clicky_crunch.mp3'": kraukš
-            "'sound://category_animals/bear.mp3'": Lācis
-            "'sound://category_animals/cat.mp3'": kaķis
-            "'sound://category_animals/cow.mp3'": govs
-            "'sound://category_animals/dog.mp3'": suns
-            "'sound://category_digital/jump_7.mp3'": lēkt
-      gamelab_pointInDirection:
-        options:
-          DIRECTION:
-            '"North"': Ziemeļi
-      gamelab_randColor:
-        text: nejauša krāsa
-      gamelab_randomColor:
-        text: nejauša krāsa
-      gamelab_repeatForever:
-        text: mūžīgi atkārtot
-      gamelab_setBackgroundImage:
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ala
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': pilsēta
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': tuksnesis
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': varavīksne
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': zemūdens
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ziema
-      gamelab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
-            '"speed"': ātrums
-      gamelab_setProp_dropdown:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
-      gamelab_setSizes:
-        options:
-          PROPERTY:
-            '"scale"': izmērs
-            '"height"': augstums
-      gamelab_spriteClicked:
-        options:
-          CONDITION:
-            '"when"': kad
-            '"while"': kamēr
-      gamelab_turn:
-        options:
-          DIRECTION:
-            '"right"': pa labi
-            '"left"': pa kreisi
-      gamelab_whenKey:
-        options:
-          KEY:
-            '"up"': uz augšu
-            '"down"': uz leju
-            '"left"': pa kreisi
-            '"right"': pa labi
-            '"space"': telpa
-      gamelab_whileKey:
-        options:
-          KEY:
-            '"up"': uz augšu
-            '"down"': uz leju
-            '"left"': pa kreisi
-            '"right"': pa labi
-            '"space"': telpa
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -396,8 +250,8 @@ lv:
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': pa labi
             '"left"': pa kreisi
+            '"right"': pa labi
       Mikelab_sprite:
         options:
           LOCATION:
@@ -406,37 +260,37 @@ lv:
       Mikelab_whenKeyPressed:
         options:
           KEY:
-            '"up"': bultiņa uz augšu
+            '"a"': A
+            '"d"': D
             '"down"': bultiņa uz leju
             '"left"': bultiņa pa kreisi
             '"right"': bultiņa pa labi
-            '"w"': R
-            '"a"': A
             '"s"': D
-            '"d"': D
+            '"up"': bultiņa uz augšu
+            '"w"': R
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': bultiņa uz augšu
+            '"a"': A
+            '"d"': D
             '"down"': bultiņa uz leju
             '"left"': bultiņa pa kreisi
             '"right"': bultiņa pa labi
-            '"w"': R
-            '"a"': A
             '"s"': D
-            '"d"': D
+            '"up"': bultiņa uz augšu
+            '"w"': R
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': jā
             '"no"': nē
+            '"yes"': jā
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': bultiņa uz augšu
             '"down"': bultiņa uz leju
             '"left"': bultiņa pa kreisi
             '"right"': bultiņa pa labi
+            '"up"': bultiņa uz augšu
       Poetry_addFrame:
         options:
           BRUSH:
@@ -472,23 +326,23 @@ lv:
       aalab_layoutSprites:
         options:
           FORMAT:
-            '"row"': rinda
             '"random"': nejaušs
+            '"row"': rinda
       binary_move:
         options:
           DIR:
-            '"up"': uz augšu
             '"down"': uz leju
             '"left"': pa kreisi
             '"right"': pa labi
+            '"up"': uz augšu
       binary_whenKey:
         options:
           KEY:
-            '"up"': uz augšu
             '"down"': uz leju
             '"left"': pa kreisi
             '"right"': pa labi
             '"space"': telpa
+            '"up"': uz augšu
       craft_ifPath:
         options:
           DIR:
@@ -496,8 +350,8 @@ lv:
       craft_ifStandingOn:
         options:
           TYPE:
-            "'sand'": smiltis
             "'planksOak'": ozola dēļi
+            "'sand'": smiltis
       craft_ifStandingOnLimit:
         options:
           TYPE:
@@ -506,3 +360,149 @@ lv:
         text: pārvietot uz priekšu
       craft_placeTorch:
         text: nolikt lāpu
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekundes
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+            '"speed"': ātrums
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': kad
+            '"while"': kamēr
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': sekundes
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+            '"speed"': ātrums
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekundes
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
+            '"up"': uz augšu
+            '"x"': x
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': kad
+            '"while"': kamēr
+          KEY:
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
+            '"up"': uz augšu
+            '"x"': x
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"column"': kolonna
+            '"row"': rinda
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"North"': Ziemeļi
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"column"': kolonna
+            '"row"': rinda
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': pa labi
+            '180': pa kreisi
+            '270': uz augšu
+            '90': uz leju
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"left"': pa kreisi
+            '"right"': pa labi
+      gamelab_moveInDirection:
+        options:
+          DIRECTION:
+            '"North"': Ziemeļi
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_animals/bear.mp3'": Lācis
+            "'sound://category_animals/cat.mp3'": kaķis
+            "'sound://category_animals/cow.mp3'": govs
+            "'sound://category_animals/dog.mp3'": suns
+            "'sound://category_collect/clicky_crunch.mp3'": kraukš
+            "'sound://category_digital/jump_7.mp3'": lēkt
+      gamelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"North"': Ziemeļi
+      gamelab_randColor:
+        text: nejauša krāsa
+      gamelab_randomColor:
+        text: nejauša krāsa
+      gamelab_repeatForever:
+        text: mūžīgi atkārtot
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': pilsēta
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ala
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': tuksnesis
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': varavīksne
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': zemūdens
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ziema
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+            '"speed"': ātrums
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': izmērs
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': augstums
+            '"scale"': izmērs
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': kad
+            '"while"': kamēr
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"left"': pa kreisi
+            '"right"': pa labi
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
+            '"up"': uz augšu
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"down"': uz leju
+            '"left"': pa kreisi
+            '"right"': pa labi
+            '"space"': telpa
+            '"up"': uz augšu

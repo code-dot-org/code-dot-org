@@ -1,2 +1,10 @@
 {
+  "mi-NZ": {
+    "data": {
+      "frameworks": {
+        "ngss": {
+        }
+      }
+    }
+  }
 }
