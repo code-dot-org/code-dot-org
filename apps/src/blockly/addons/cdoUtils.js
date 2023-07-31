@@ -1,4 +1,9 @@
-import {ToolboxType, CLAMPED_NUMBER_REGEX, DEFAULT_SOUND} from '../constants';
+import {
+  ToolboxType,
+  CLAMPED_NUMBER_REGEX,
+  DEFAULT_SOUND,
+  stringIsXml,
+} from '../constants';
 import cdoTheme from '../themes/cdoTheme';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
@@ -6,20 +11,30 @@ import {
   convertXmlToJson,
   positionBlocksOnWorkspace,
 } from './cdoSerializationHelpers';
+import {parseElement as parseXmlElement} from '../../xml';
+import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
+import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
 
 /**
  * Loads blocks to a workspace.
  * To maintain backwards compatibility we must be able to use the XML source if no JSON state is provided.
  * @param {Blockly.Workspace} workspace - the current Blockly workspace
- * @param {xml} xml - workspace serialization, current/legacy format
+ * @param {string} source - workspace serialization, either XML or JSON
  * @param {*} stateToLoad - modern workspace serialization, may not be present
  */
-export function loadBlocksToWorkspace(workspace, xml, stateToLoad) {
-  if (!stateToLoad) {
+export function loadBlocksToWorkspace(workspace, source) {
+  let isXml = stringIsXml(source);
+  let stateToLoad;
+  let blockOrderMap;
+  if (isXml) {
+    const xml = parseXmlElement(source);
     stateToLoad = convertXmlToJson(xml);
+    blockOrderMap = Blockly.Xml.createBlockOrderMap(xml);
+  } else {
+    stateToLoad = JSON.parse(source);
   }
   Blockly.serialization.workspaces.load(stateToLoad, workspace);
-  positionBlocksOnWorkspace(workspace);
+  positionBlocksOnWorkspace(workspace, blockOrderMap);
 }
 
 export function setHSV(block, h, s, v) {
@@ -132,8 +147,21 @@ export function getUserTheme(themeOption) {
   return Blockly.themes[localStorage.blocklyTheme] || themeOption || cdoTheme;
 }
 
-export function getCode(workspace) {
-  return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
+/**
+ * Retrieves the serialization of the workspace (student code).
+ *
+ * @param {Blockly.WorkspaceSvg} workspace - The workspace to serialize.
+ * @param {boolean} [getSourceAsJson] - Flag indicating whether to retrieve the code as JSON or XML.
+ *                                      If truthy, the code will be returned as a JSON string.
+ *                                      If falsy, the code will be returned as an XML string.
+ * @returns {string} The serialization of the workspace.
+ */
+export function getCode(workspace, getSourceAsJson) {
+  if (getSourceAsJson) {
+    return JSON.stringify(Blockly.serialization.workspaces.save(workspace));
+  } else {
+    return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
+  }
 }
 
 export function soundField(onClick, transformText, icon) {
@@ -176,4 +204,9 @@ export function locationField(icon, onClick) {
     transformText: transformTextSetField,
     icon,
   });
+}
+
+export function registerCustomProcedureBlocks() {
+  unregisterProcedureBlocks();
+  Blockly.common.defineBlocks(procedureBlocks);
 }

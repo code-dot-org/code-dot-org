@@ -38,6 +38,7 @@ class Level < ApplicationRecord
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
+  has_many :rubrics, dependent: :destroy
 
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
@@ -327,6 +328,7 @@ class Level < ApplicationRecord
   end
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
+    'Aichat', # no ideal solution
     'Ailab', # no ideal solution
     'Applab', # freeplay
     'Bounce', # no ideal solution
@@ -813,6 +815,7 @@ class Level < ApplicationRecord
     properties_camelized = properties.camelize_keys
     properties_camelized[:levelData] = video if video
     properties_camelized[:type] = type
+    properties_camelized[:appName] = game&.app
     properties_camelized
   end
 

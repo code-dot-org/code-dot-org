@@ -1,0 +1,46 @@
+@import 'color.scss';
+@import 'font.scss';
+
+.floatingActionButton {
+  position: fixed;
+  left: 10px;
+  bottom: 48px;
+
+  height: 60px;
+  width: 60px;
+  padding: 0;
+
+  border-width: 0;
+  border-radius: 30px;
+}
+
+.rubricContainer {
+  position: fixed;
+  left: 10px;
+  bottom: 116px;
+  z-index: 400;
+}
+
+.rubricContent {
+  border-radius: 0 0 4px 4px;
+  border: 1px solid $neutral_dark;
+  background: $neutral_light;
+  box-shadow: 4px 4px 6px 0 rgba(0 0 0 / 0.25);
+  width: 726px;
+  height: 108px;
+  padding: 16px;
+}
+
+.rubricHeader {
+  width: 730px;
+  height: 21px;
+  border-radius: 4px 4px 0 0;
+  background: $neutral_dark;
+  color: $neutral_white;
+  padding: 9px 15px 8px;
+
+  h6 {
+    color: $neutral_white;
+    line-height: 1.1875;
+  }
+}

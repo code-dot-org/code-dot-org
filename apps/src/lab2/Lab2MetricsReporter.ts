@@ -6,7 +6,7 @@ import {MetricDimension} from '@cdo/apps/lib/metrics/types';
  */
 interface ReportingProperties {
   channelId?: string;
-  projectType?: string;
+  appName?: string;
   currentLevelId?: string;
   scriptId?: number;
 }
@@ -35,10 +35,11 @@ class Lab2MetricsReporter {
     MetricsReporter.logWarning(this.decorateMessage(message));
   }
 
-  public logError(errorMessage: string | object, error?: Error) {
+  public logError(errorMessage: string, error?: Error, details?: object) {
     const message = {
       errorMessage,
       error: error?.stack || error?.message,
+      details,
     };
     MetricsReporter.logError(this.decorateMessage(message));
   }
@@ -83,10 +84,10 @@ class Lab2MetricsReporter {
    */
   private getCommonDimensions(): MetricDimension[] {
     const dimensions = [];
-    if (this.commonProperties.projectType) {
+    if (this.commonProperties.appName) {
       dimensions.push({
-        name: 'ProjectType',
-        value: this.commonProperties.projectType,
+        name: 'AppName',
+        value: this.commonProperties.appName,
       });
     }
     return dimensions;

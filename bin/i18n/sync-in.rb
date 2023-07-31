@@ -10,7 +10,6 @@ require 'fileutils'
 require 'json'
 require 'digest/md5'
 
-require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 
@@ -21,210 +20,26 @@ module I18n
     def self.perform
       puts "Sync in starting"
       Services::I18n::CurriculumSyncUtils.sync_in
-      HocSyncUtils.sync_in
+      I18n::Resources::Pegasus::HourOfCode.sync_in
       localize_level_and_project_content
-      localize_block_content
+      I18n::Resources::Dashboard::Blocks.sync_in
       I18n::Resources::Apps::Animations.sync_in
       I18n::Resources::Dashboard::SharedFunctions.sync_in
       I18n::Resources::Dashboard::CourseOfferings.sync_in
-      localize_standards
-      localize_docs
+      I18n::Resources::Dashboard::Standards.sync_in
+      I18n::Resources::Dashboard::Docs.sync_in
+      I18n::Resources::Apps::ExternalSources.sync_in
+      I18n::Resources::Dashboard::Scripts.sync_in
+      I18n::Resources::Dashboard::Courses.sync_in
+      I18n::Resources::Apps::Labs.sync_in
+      I18n::Resources::Pegasus::Markdown.sync_in
       puts "Copying source files"
       I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
-      localize_external_sources
-      localize_course_resources
       redact_level_content
-      redact_block_content
-      redact_docs
-      redact_script_and_course_content
-      redact_labs_content
-      localize_markdown_content
       puts "Sync in completed successfully"
     rescue => exception
       puts "Sync in failed from the error: #{exception}"
       raise exception
-    end
-
-    # Takes strings describing and naming Framework, StandardCategory, and Standard
-    # and places them in the source pool to be sent to crowdin.
-    def self.localize_standards
-      puts "Preparing standards content"
-      standards_content_path = File.join(I18N_SOURCE_DIR, "standards")
-
-      frameworks = {}
-
-      # Localize all frameworks.
-      Framework.all.each do |framework|
-        frameworks[framework.shortcode] = {
-          'name' => framework.name,
-          'categories' => {},
-          'standards' => {}
-        }
-      end
-
-      # Localize all categories.
-      StandardCategory.all.each do |category|
-        framework = category.framework
-
-        categories = frameworks[framework.shortcode]['categories']
-        categories[category.shortcode] = {
-          'description' => category.description
-        }
-      end
-
-      # Localize all standards.
-      Standard.all.each do |standard|
-        framework = standard.framework
-
-        standards = frameworks[framework.shortcode]['standards']
-        standards[standard.shortcode] = {
-          'description' => standard.description
-        }
-      end
-
-      FileUtils.mkdir_p(standards_content_path)
-
-      # Then, for each framework, generate a file for it.
-      frameworks.keys.each do |framework|
-        File.write(File.join(standards_content_path, "#{framework}.json"), JSON.pretty_generate(frameworks[framework]))
-      end
-    end
-
-    # This function localizes content in studio.code.org/docs
-    def self.localize_docs
-      puts "Preparing /docs content"
-
-      # TODO: Adding spritelab and Javalab to translation pipeline
-      # Currently supporting translations for applab, gamelab and weblab. NOT translating javalab and spritelab.
-      # Javalab documentations exists in a different table because it has a different structure, more align with java.
-      # Spritelab uses translatable block names, unlike JavaScript blocks.
-      localized_environments = %w(applab gamelab weblab)
-
-      ### Localize Programming Environments
-      # For each programming environment, name is used as key, title is used as name
-      ProgrammingEnvironment.all.sort.each do |env|
-        next unless localized_environments.include?(env.name)
-
-        # In the sync-in, each environment is store in an individual file.
-        # Files are merged during the sync-out in programming_environments.{locale}.json
-        docs_content_file = File.join(I18N_SOURCE_DIR, "docs", env.name + ".json")
-
-        programming_env_docs = {}
-        programming_env_docs[env.name] = {
-          'name' => env.properties["title"],
-          'description' => env.properties["description"],
-          'categories' => {},
-        }
-        ### Localize Categories for Navigation
-        # Programming environment has a method defined in the programming_environment model that returns the
-        # categories for navigation. The method is used to obtain the current categories existing in the database.
-        categories_data = programming_env_docs[env.name]["categories"]
-        env.categories_for_navigation.each do |category_for_navigation|
-          category_key = category_for_navigation[:key]
-          categories_data.store(
-            category_key, {
-              'name' => category_for_navigation[:name],
-            'expressions' => {}
-            }
-          )
-
-          ### localize Programming Expressions
-          # expression_docs.properties["syntax"] is not translated as it is the JavaScript expression syntax
-          expressions_data = categories_data[category_key]["expressions"]
-          category_for_navigation[:docs].each do |expression|
-            expression_key = expression[:key]
-            expression_docs = ProgrammingExpression.find_by_id(expression[:id])
-            expressions_data.store(
-              expression_key, {
-                'content' => expression_docs.properties["content"],
-              'examples' => ({} unless expression_docs.properties["examples"].nil?),
-              'palette_params' => ({} unless expression_docs.properties["palette_params"].nil?),
-              'return_value' => expression_docs.properties["return_value"],
-              'short_description' => expression_docs.properties["short_description"],
-              'tips' => expression_docs.properties["tips"]
-              }.compact
-            )
-
-            ### Localize Examples
-            # Programming expressions may have 0 or more examples.
-            # Only example["name"] and example["description"] are translated. example["code"] is NOT translated.
-            example_docs = expressions_data[expression_key]["examples"]
-            expression_docs.properties["examples"]&.each do |example|
-              unless example["name"].nil_or_empty? && example["description"].nil_or_empty?
-                example_docs.store(
-                  example["name"], {
-                    'name' => (example["name"] if example["name"]),
-                  'description' => (example["description"] if example["description"]),
-                  }.compact
-                )
-              end
-            end
-
-            ### localize Parameters
-            # Programming expresions may have 0 or more parameters.
-            # Parameter name (param["name"]) is not translated as it needs to match the JavaScript expression syntax.
-            param_docs = expressions_data[expression_key]["palette_params"]
-            expression_docs.properties["palette_params"]&.each do |param|
-              param_docs.store(
-                param["name"], {
-                  'type' => (param["type"] if param["type"]),
-                'description' => (param["description"] if param["description"])
-                }.compact
-              )
-            end
-          end
-        end
-        # Generate a file containing the string of each Programming Environment.
-        FileUtils.mkdir_p(File.dirname(docs_content_file))
-        File.write(docs_content_file, JSON.pretty_generate(programming_env_docs.compact))
-      end
-    end
-
-    # These files are synced in using the `bin/i18n-codeorg/in.sh` script.
-    def self.localize_external_sources
-      puts "Preparing external sources"
-      external_sources_dir = File.join(I18N_SOURCE_DIR, "external-sources")
-
-      # ml-playground (AI Lab) files
-
-      # Get the display names of the datasets stored in the dataset manifest file.
-      # manifest = File.join(external_sources_dir, 'ml-playground', 'datasets-manifest.json')
-      manifest = "apps/node_modules/@code-dot-org/ml-playground/public/datasets-manifest.json"
-      manifest_datasets = JSON.parse(File.read(manifest))['datasets']
-      dataset_names = manifest_datasets.map {|dataset| [dataset['id'], dataset['name']]}.to_h
-
-      # These are overwritten in this format so the properties that use
-      # arrays have unique identifiers for translation.
-      dataset_files = File.join(external_sources_dir, 'ml-playground', 'datasets', '*')
-      Dir.glob(dataset_files).each do |dataset_file|
-        original_dataset = JSON.parse(File.read(dataset_file))
-
-        # Converts array to map and uses the field id as a unique identifier.
-        fields_as_hash = original_dataset["fields"].map do |field|
-          [
-            field["id"],
-            {
-              "id" => field["id"],
-              "description" => field["description"]
-            }
-          ]
-        end.to_h
-
-        final_dataset = {
-          "fields" => fields_as_hash,
-          "card" => {
-            "description" => original_dataset.dig("card", "description"),
-            "context" => {
-              "potentialUses" => original_dataset.dig("card", "context", "potentialUses"),
-              "potentialMisuses" => original_dataset.dig("card", "context", "potentialMisuses")
-            }
-          }
-        }
-        dataset_name = dataset_names[original_dataset['name']]
-        final_dataset["name"] = dataset_name if dataset_name
-
-        File.write(dataset_file, JSON.pretty_generate(final_dataset))
-      end
     end
 
     def self.localize_level_and_project_content
@@ -561,71 +376,6 @@ module I18n
       end
     end
 
-    # Merging dashboard/config/courses/*.course with courses.yml
-    # These files contain resources used by UnitGroup (used in the landing pages of full courses).
-    # https://studio.code.org/courses/csd-2021
-    # All other resources used in Unit come from scrip_json files (used in the landing pages for each Unit).
-    # https://studio.code.org/s/csd1-2021
-    def self.localize_course_resources
-      puts "Preparing course resources"
-
-      # Currently, csd is the only fully translatable course that has resources in this directory
-      translatable_courses = %w(csd)
-      resources = {}
-      Dir.glob(File.join('dashboard', 'config', 'courses', '*.course')).each do |file|
-        course_json = JSON.parse(File.read(file))
-        course_properties = course_json['properties']
-        next unless translatable_courses.include?(course_properties['family_name'])
-
-        course_resources = course_json['resources']
-        next if course_resources.empty?
-        course_resources.each do |resource|
-          # resoruce.rb uses Services::GloballyUniqueIdentifiers.build_resource_key to create resource keys as follow
-          # resource.key / resource.course_version.course_offering.key / resource.course_version.key
-          # resource_key is used to localize the resources.
-          resource_key = [resource['key'], course_properties['family_name'], course_properties['version_year']].join('/')
-          resources.store(resource_key, {'name' => resource['name'], 'url' => resource['url']})
-        end
-      end
-      courses_source = File.join(I18N_SOURCE_DIR, 'dashboard', 'courses.yml')
-      courses_yaml = YAML.load_file(courses_source)
-      courses_data = courses_yaml['en']['data']
-      # Merging resources if courses already contain resources
-      courses_data['resources'] ? courses_data['resources'].merge!(resources) : courses_data.store('resources', resources)
-      File.write(courses_source, I18nScriptUtils.to_crowdin_yaml(courses_yaml))
-    end
-
-    # Pull in various fields for custom blocks from .json files and save them to
-    # blocks.en.yml.
-    def self.localize_block_content
-      puts "Preparing block content"
-
-      blocks = {}
-
-      Dir.glob('dashboard/config/blocks/**/*.json').sort.each do |file|
-        name = File.basename(file, '.*')
-        config = JSON.parse(File.read(file))['config']
-        blocks[name] = {
-          'text' => config['blockText'],
-        }
-
-        next unless config['args']
-
-        args_with_options = {}
-        config['args'].each do |arg|
-          next if !arg['options'] || arg['options'].empty?
-
-          options = args_with_options[arg['name']] = {}
-          arg['options'].each do |option_tuple|
-            options[option_tuple.last] = option_tuple.first
-          end
-        end
-        blocks[name]['options'] = args_with_options unless args_with_options.empty?
-      end
-
-      File.write("dashboard/config/locales/blocks.en.yml", I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"blocks" => blocks}}}))
-    end
-
     def self.select_redactable(i18n_strings)
       redactable_content = %w(
         authored_hints
@@ -669,122 +419,11 @@ module I18n
       File.write(source_path, JSON.pretty_generate(source_data.deep_merge(redacted_data)))
     end
 
-    def self.redact_docs
-      puts "Redacting /docs content"
-
-      Dir.glob(File.join(I18N_SOURCE_DIR, "docs", "*.json")).each do |source|
-        backup = source.sub("source", "original")
-        FileUtils.mkdir_p(File.dirname(backup))
-        FileUtils.cp(source, backup)
-        RedactRestoreUtils.redact(source, source, ['visualCodeBlock', 'link', 'resourceLink'])
-      end
-    end
-
     def self.redact_level_content
       puts "Redacting level content"
 
       Dir.glob(File.join(I18N_SOURCE_DIR, "course_content/**/*.json")).each do |source_path|
         redact_level_file(source_path)
-      end
-    end
-
-    # These files are synced in using the `bin/i18n-codeorg/in.sh` script.
-    def self.redact_labs_content
-      puts "Redacting *labs content"
-
-      # Only CSD labs are redacted, since other labs were already part of the i18n pipeline and redaction would edit
-      # strings existing in crowdin already
-      redactable_labs = %w(applab gamelab weblab)
-
-      redactable_labs.each do |lab_name|
-        source_path = File.join(I18N_SOURCE_DIR, "blockly-mooc", lab_name + ".json")
-        backup_path = source_path.sub("source", "original")
-        FileUtils.mkdir_p(File.dirname(backup_path))
-        FileUtils.cp(source_path, backup_path)
-        RedactRestoreUtils.redact(source_path, source_path, ['link'])
-      end
-    end
-
-    def self.redact_block_content
-      puts "Redacting block content"
-
-      source = File.join(I18N_SOURCE_DIR, "dashboard/blocks.yml")
-      backup = source.sub("source", "original")
-      FileUtils.mkdir_p(File.dirname(backup))
-      FileUtils.cp(source, backup)
-      RedactRestoreUtils.redact(source, source, ['blockfield'], 'txt')
-    end
-
-    def self.redact_script_and_course_content
-      plugins = %w(resourceLink vocabularyDefinition)
-      fields = %w(description student_description description_student description_teacher)
-
-      %w(script course).each do |type|
-        puts "Redacting #{type} content"
-        source = File.join(I18N_SOURCE_DIR, "dashboard/#{type}s.yml")
-
-        # Save the original data, for restoration
-        original = source.sub("source", "original")
-        FileUtils.mkdir_p(File.dirname(original))
-        FileUtils.cp(source, original)
-
-        # Redact the specific subset of fields within each script that we care about.
-        data = YAML.load_file(source)
-        data['en']['data'][type]['name'].values.each do |datum|
-          markdown_data = datum.slice(*fields)
-          redacted_data = RedactRestoreUtils.redact_data(markdown_data, plugins, 'md')
-          datum.merge!(redacted_data)
-        end
-
-        # Overwrite source file with redacted data
-        File.write(source, I18nScriptUtils.to_crowdin_yaml(data))
-      end
-    end
-
-    def self.localize_markdown_content
-      markdown_files_to_localize = %w[
-        athome.md.partial
-        break.md.partial
-        coldplay.md.partial
-        csforgood.md
-        curriculum/unplugged.md.partial
-        educate/csc.md.partial
-        educate/curriculum/csf-transition-guide.md
-        educate/it.md
-        helloworld.md.partial
-        hourofcode/artist.md.partial
-        hourofcode/flappy.md.partial
-        hourofcode/frozen.md.partial
-        hourofcode/hourofcode.md.partial
-        hourofcode/infinity.md.partial
-        hourofcode/mc.md.partial
-        hourofcode/playlab.md.partial
-        hourofcode/starwars.md.partial
-        hourofcode/unplugged-conditionals-with-cards.md.partial
-        international/about.md.partial
-        poetry.md.partial
-        ../views/hoc2022_create_activities.md.partial
-        ../views/hoc2022_play_activities.md.partial
-        ../views/hoc2022_explore_activities.md.partial
-      ]
-      markdown_files_to_localize.each do |path|
-        original_path = File.join('pegasus/sites.v3/code.org/public', path)
-        original_path_exists = File.exist?(original_path)
-        puts "#{original_path} does not exist" unless original_path_exists
-        next unless original_path_exists
-        # This reforms the `../` relative paths so they appear as though they are
-        # within the `public` path. This is a legacy solution to keep things clean
-        # when viewed by the translators in crowdin.
-        path = path[3...] if path.start_with? "../"
-        # Remove the .partial if it exists
-        source_path = File.join(I18N_SOURCE_DIR, 'markdown/public', File.dirname(path), File.basename(path, '.partial'))
-        FileUtils.mkdir_p(File.dirname(source_path))
-        FileUtils.cp(original_path, source_path)
-      end
-      Dir.glob(File.join(I18N_SOURCE_DIR, "markdown/**/*.md")).each do |path|
-        header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-        I18nScriptUtils.sanitize_header!(header)
-        I18nScriptUtils.write_markdown_with_header(content, header, path)
       end
     end
   end
