@@ -6,10 +6,11 @@ import React from 'react';
 import Aichat from './Aichat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import ChatWorkspace from './ChatWorkspace';
+import moduleStyles from './aichat.module.scss';
 
 const AichatView: React.FunctionComponent = () => {
   return (
-    <div id="aichat">
+    <div id="aichat" className={moduleStyles.aichat}>
       <Aichat>
         <PanelContainer id="chat-workspace" headerText="AI Chat">
           <ChatWorkspace />

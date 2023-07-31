@@ -23,9 +23,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
 const styles = {
   container: {
     margin: '10px 5%',
-  },
-  label: {
-    margin: 0,
+    overflow: 'auto',
   },
 };
 export default ChatWorkspace;
