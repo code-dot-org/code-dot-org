@@ -46,7 +46,7 @@
   "jump": "លោត",
   "jumpBackward": "លោត​ថយ​ក្រោយ​ចំនួន",
   "jumpForward": "លោត​ទៅ​មុខ​ចំនួន",
-  "jumpToOverDown": "លោតទៅ% 1 លើ% 2 ចុះក្រោម",
+  "jumpToOverDown": "លោតទៅ %1 លើ %2 ចុះក្រោម",
   "jumpToPosition": "ប្តូរទីតាំងទៅកាន់%1",
   "jumpByDirection": "ប្តូរពី%1ទៅ%2ភិកសែល",
   "jumpTooltip": "ផ្លាស់ទីតួអង្គដោយគ្មានការចាកចេញពីសញ្ញាណាមួយ",
