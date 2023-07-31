@@ -108,6 +108,7 @@ mi:
           description_short: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga Tākaro Gumball!
           student_description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga Tākaro Gumball!
         starwars:
+          title: 'Star Wars: Te Hanga Ikarangi me te Waehere (JavaScript)'
           description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
           description_short: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
           student_description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.

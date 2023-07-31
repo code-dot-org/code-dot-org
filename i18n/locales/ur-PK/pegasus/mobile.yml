@@ -631,6 +631,7 @@
   header_teach: "سکھائیں"
   header_help_us: "ہماری مدد کریں"
   header_about: "متعلق"
+  header_incubator: "انکیوبیٹر"
   header_teacher_community: "ٹیچر کمیونٹی"
   header_help_support: 'مدد اور معاونت '
   header_report_bug: "ایک مسئلہ کی اطلاع دیں"
@@ -694,14 +695,14 @@
   hoc2018_dance_measure_colon: 'پیمائش:'
   hoc2018_mc_thank_microsoft: "ہم Microsoft کا شکریہ ادا کرتے ہیں کہ انہوں نے ہماری بصیرت اور مشن کہ ہر بچے کو کمپیوٹر سائنس اور 21ویں صدی میں کامیابی کی مہارتیں سیکھنے کا موقع فراہم ہو کی حمایت کی."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'وقت میں واپس سفر کریں اور کوڈ بنانا سیکھیں! نیا Minecraft آور آف کوڈ ٹیوٹوریل اب Minecraft میں دستیاب ہے: ونڈوز، میک، کروم بک، اور آئی پیڈ کے لیے تعلیمی ایڈیشن۔ مفت معلم وسائل، تربیت اور ویڈیوز کے ساتھ شروع کریں۔'
+  hoc2021_mc_mee_description: "وقت میں واپس سفر کریں اور کوڈ بنانا سیکھیں! نیا Minecraft آور آف کوڈ ٹیوٹوریل اب Minecraft میں دستیاب ہے: ونڈوز، میک، کروم بک، اور آئی پیڈ کے لیے تعلیمی ایڈیشن۔ مفت معلم وسائل، تربیت اور ویڈیوز کے ساتھ شروع کریں۔"
   hoc2021_mc_mee_villages_title: "دو گاؤں کی کہانی"
-  hoc2021_mc_mee_villages_description: 'کوڈنگ کی بنیادی باتیں سیکھیں اور Minecraft میں اپنے طلباء کے ساتھ تنوع اور شمولیت دریافت کریں: تعلیمی ایڈیشن۔'
+  hoc2021_mc_mee_villages_description: "کوڈنگ کی بنیادی باتیں سیکھیں اور Minecraft میں اپنے طلباء کے ساتھ تنوع اور شمولیت دریافت کریں: تعلیمی ایڈیشن۔"
   hoc2021_mc_mee_ai_title: "AI ہمیشہ کے لیے"
-  hoc2021_mc_mee_ai_description: 'اپنے طلباء کے ساتھ AI کو دریافت کریں اور Minecraft میں کوڈ سیکھیں: تعلیمی ایڈیشن۔'
+  hoc2021_mc_mee_ai_description: "اپنے طلباء کے ساتھ AI کو دریافت کریں اور Minecraft میں کوڈ سیکھیں: تعلیمی ایڈیشن۔"
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'صبح تک پراسرار حویلی سے بچ کر نکلیں اور ایک ملین ایمرلڈ کمائیں! نیا Minecraft Hour of Code ٹیوٹوریل اب مائن کرافٹ: ایجوکیشن ایڈیشن برائے ونڈوز، میک، کروم بک، آئی پیڈ اور موبائل میں دستیاب ہے۔ مفت معلم وسائل، تربیت، اور ویڈیوز کے ساتھ شروع کریں۔'
-  hoc2022_mc_mee_timecraft_description: 'مائن کرافٹ: تعلیمی ایڈیشن (Minecraft: Education Edition) میں کوڈنگ کے اس مفت سبق میں اپنے مستقبل کو بچانے کے لیے وقت میں واپس سفر کریں۔'
+  hoc2022_mc_mee_timecraft_description: "مائن کرافٹ: تعلیمی ایڈیشن (Minecraft: Education Edition) میں کوڈنگ کے اس مفت سبق میں اپنے مستقبل کو بچانے کے لیے وقت میں واپس سفر کریں۔"
   footer_powered_by_aws: "ایمیزون ویب سروسز اور “اے ڈبلیو ایس کی طرف سے طاقت” علامت (لوگو) Amazon.com، انکارپوریٹڈ یا ریاستہائے متحدہ امریکہ اور/یا دیگر ممالک میں اس کے ملحقہ ٹریڈ مارک ہیں."
   codebytes_skinny_banner_english_only: "صرف انگریزی"
   footer_privacy_policy: "رازداری کی پالیسی"

@@ -2045,6 +2045,8 @@ he:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2209,6 +2211,11 @@ he:
           lesson_groups:
             lessonGroup-4:
               display_name: חזרות
+            lessonGroup-6:
+              display_name: נתונים
+          lessons:
+            lesson-1:
+              name: נתונים
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-4:

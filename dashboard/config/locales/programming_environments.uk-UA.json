@@ -192,6 +192,11 @@
                   }
                 },
                 "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Створення музики"
+                    }
+                  },
                   "short_description": "Відтворює звуковий MP3-файл із зазначеного URL."
                 }
               }
@@ -259,6 +264,11 @@
                   }
                 },
                 "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Створення музики"
+                    }
+                  },
                   "short_description": "Відтворює звуковий MP3-файл із зазначеного URL."
                 }
               },

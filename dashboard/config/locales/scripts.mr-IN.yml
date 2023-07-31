@@ -1787,9 +1787,6 @@ mr:
               display_name: ईव्हेंट्स
             lessonGroup-7:
               display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
-          student_description: संगणक विज्ञान आणि इंटरनेट सुरक्षेची मूलभूत माहिती जाणून
-            घ्या. कोर्सच्या शेवटी, तुमचा स्वतःचा गेम किंवा स्टोरी तयार करा जी तुम्ही
-            शेअर करू शकता.
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-3:
@@ -1805,9 +1802,11 @@ mr:
               display_name: सिक्वेन्सिंग
             lessonGroup-4:
               display_name: लूप्स
-          student_description: संगणक विज्ञान आणि इंटरनेट सुरक्षेची मूलभूत माहिती जाणून
-            घ्या. कोर्सच्या शेवटी, तुमचा स्वतःचा गेम किंवा स्टोरी तयार करा जी तुम्ही
-            शेअर करू शकता.
+            lessonGroup-6:
+              display_name: डेटा
+          lessons:
+            lesson-1:
+              name: डेटा
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1820,10 +1819,6 @@ mr:
               display_name: ईव्हेंट्स
             lessonGroup-6:
               display_name: डेटा
-          student_description: सिक्वेन्सिंग, लूप आणि इव्हेंट्ससह प्रोग्राम तयार करा.
-            तुमची आद्याक्षरे बायनरीमध्ये भाषांतरित करा, विविध समस्या सोडवण्याच्या
-            तंत्रांचा तपास करा आणि सायबर धमकीला प्रतिसाद कसा द्यावा ते शिका. कोर्सच्या
-            शेवटी, तुमचा स्वतःचा गेम किंवा स्टोरी तयार करा जी तुम्ही शेअर करू शकता!
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

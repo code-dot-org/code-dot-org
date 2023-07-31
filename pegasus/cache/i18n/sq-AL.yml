@@ -365,6 +365,7 @@ sq-AL:
   coursec-2020_gradelevel: Moshat 6-10
   coursec-2021_gradelevel: Moshat 6-10
   coursec-2022_gradelevel: Moshat 6-10
+  coursec-2022_name: Kursi C (2022)
   coursec_gradelevel: Moshat 6-10
   coursed-2017_gradelevel: Klasat 8+
   coursed-2018_gradelevel: Klasat 8+
@@ -372,6 +373,7 @@ sq-AL:
   coursed-2020_gradelevel: Klasat 8+
   coursed-2021_gradelevel: Klasat 8+
   coursed-2022_gradelevel: Klasat 8+
+  coursed-2022_name: Kursi D (2022)
   coursed_gradelevel: Klasat 8+
   coursee-2017_gradelevel: Moshat 8-12
   coursee-2018_gradelevel: Moshat 8-12
@@ -754,6 +756,7 @@ sq-AL:
   hacketyhack_beyond_platformtext: Instalim desktopi
   hacketyhack_beyond_shortdescription: Mëso Ruby nga fillimi
   header_about: Rreth
+  header_course_catalog: Katalogu i kursit
   header_courses: Kurset
   header_educate_hoc: Ora e Kodimit
   header_help_us: Na Ndihmo
