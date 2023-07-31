@@ -236,7 +236,7 @@ def parse_options
     opt_parser.parse!(ARGV)
     # Standardize: Drop leading dot-slash on feature paths
     options.features = ARGV + (options.features || []).
-        map! {|feature| feature.gsub(/^\.\//, '')}
+      map! {|feature| feature.gsub(/^\.\//, '')}
 
     if options.force_db_access
       options.pegasus_db_access = true
@@ -343,6 +343,8 @@ def run_tests(env, feature, arguments, log_prefix)
     extra_dimensions = {test_type: test_type,
                         feature_name: feature}
     # Metrics for individual feature runs. They will be flushed once all of them run
+    flakiness = flakiness_for_test(feature)
+    Infrastructure::Logger.put("runner_feature_flakiness", flakiness.nil? ? 0 : flakiness, extra_dimensions)
     Infrastructure::Logger.put("runner_feature_success", cucumber_succeeded ? 1 : 0, extra_dimensions)
     Infrastructure::Logger.put("runner_feature_failure", cucumber_succeeded ? 0 : 1, extra_dimensions)
     Infrastructure::Logger.put("runner_feature_execution_time", duration, extra_dimensions)
@@ -425,9 +427,14 @@ def report_tests_finished(start_time, run_results)
 
   extra_dimensions = {test_type: test_type}
   success_rate = run_results.count > 0 ? (1.0 * suite_success_count) / run_results.count : nil
-  Infrastructure::Logger.put('runner_feature_tests_success', suite_success_count, extra_dimensions)
+  failure_rate = run_results.count > 0 ? (1.0 * failures.count) / run_results.count : nil
+
   Infrastructure::Logger.put('runner_feature_tests_failure', failures.count, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_failure_rate', failure_rate, extra_dimensions)
+
+  Infrastructure::Logger.put('runner_feature_tests_success', suite_success_count, extra_dimensions)
   Infrastructure::Logger.put('runner_feature_tests_success_rate', success_rate, extra_dimensions)
+
   Infrastructure::Logger.put('runner_feature_tests_flaky_reruns', total_flaky_reruns, extra_dimensions)
   Infrastructure::Logger.put('runner_feature_tests_successful_flaky_reruns', total_flaky_successful_reruns, extra_dimensions)
   Infrastructure::Logger.put('runner_feature_tests_count', run_results.count, extra_dimensions)
