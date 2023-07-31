@@ -2776,6 +2776,8 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
+            lessonGroup-4:
+              display_name: Suirbhé
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3115,6 +3117,7 @@ ga:
             Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
           student_description: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche
             Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
+          title: 'Star Wars: Tóg do Réaltra Féin le Cód (JavaScript)'
         starwarsblocks:
           description: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche
             Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
