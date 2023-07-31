@@ -959,7 +959,7 @@
   "equalTo": "Égal à",
   "errorResettingAnswer": "Une erreur s'est produite lors de la suppression de votre réponse. Vous n'avez peut-être pas les autorisations nécessaires pour supprimer cette réponse.",
   "errorEmptyFunctionBlockModal": "Il faut des blocs à l'intérieur de ta définition de fonction. Clique sur « Modifier », puis fais glisser les blocs dans le bloc vert.",
-  "errorExceededLimitedBlocks": "Tu as réussi ! Maintenant, vas trouver le modèle dans ton code et retire les blocs inutiles. Tu ne peux utiliser que {limit} de ces blocs :",
+  "errorExceededLimitedBlocks": "Tu as réussi ! Maintenant, va trouver le modèle dans ton code et retire les blocs inutiles. Tu ne peux utiliser que {limit} de ces blocs :",
   "errorFindingClassLibraries": "Impossible de charger vos librairies de classe pour le moment. Veuillez vérifier votre connexion internet et réessayer.",
   "errorIncompleteBlockInFunction": "Clique sur « Modifier » pour t’assurer qu'il ne manque aucun bloc dans ta définition de fonction.",
   "errorGenericLintError": "Ton programme contient une erreur qui doit être corrigée. Avec le curseur, survole les icônes, près des numéros de ligne dans l'éditeur, pour en savoir plus.",

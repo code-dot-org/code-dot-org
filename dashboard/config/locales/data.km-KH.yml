@@ -1,6 +1,10 @@
 ---
 km:
   data:
+    callout:
+      text:
+        craft_run_button_callout: ចុច "ដំណើរការ" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!
+        run: ចុច "ដំណើរការ" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!
     concept:
       description:
         function: អនុ​គមន៍
@@ -74,13 +78,18 @@ km:
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
         C3_artist_intro: ការណែនាំពីវិចិត្រករ
+        C3_artist_nested_loops: បណ្ដុំប្រតិបត្តិដដែលៗ
+        C3_bee_nested_loops: បណ្ដុំប្រតិបត្តិដដែលៗ
         C3_bounce: បាល់​លោត
         C3_computational_thinking: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         C4_conditionals: លក្ខខណ្ឌ
         C4_loops_zombie: ប្រតិបត្តិដដែលៗ
         C4_variables_artist: អថេរ - សិល្បករ
-        CSF_SpriteLab_Intro_v2: សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍
-        CSF_Spritelab_MakeSprite_v2: របៀបបង្កើតអាង (Sprite)
+        CDEF_Video_SpritesInAction: កំណត់សកម្មភាពឱ្យ Sprites
+        CSF_SpriteLab_Intro_v2: សេចក្ដីណែនាំពី Sprite Lab
+        CSF_SpriteLab_SpritesInAction_CDEF: កំណត់សកម្មភាពឱ្យ Sprites
+        CSF_SpriteLab_SpritesInAction_v2: កំណត់សកម្មភាពឱ្យ Sprites
+        CSF_Spritelab_MakeSprite_v2: របៀបបង្កើត SPRITE
         CSF_a_b_artist_loops: សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)
         CSF_bb8_loops_C-F: ការធ្វើដដែលៗជាមួយ​ BB-8
         CSF_bb8_skinOverview_C-F: BB-8
@@ -107,10 +116,11 @@ km:
         artist_intro: ការណែនាំពីវិចិត្រករ
         csd_debugging: ការបំបាត់កំហុស (Debugging)
         csd_sprite_properties: លក្ខណៈសម្បត្តិនៃ sprite
+        csf21pilot_events: កំណត់សកម្មភាពឱ្យ Sprites
         csp_applab_loops: ប្រតិបត្តិដដែលៗ
         function: អនុគមន៍
         hoc_dance_events: ព្រឹត្ដិការណ៍ - Dance Party
-        hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - Dance Party
+        hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - ជប់លៀងរាំ
         hoc_dance_properties: លក្ខណៈសម្បត្តិ - Dance Party
         hoc_dance_properties_2019: លក្ខណៈសម្បត្តិ - Dance Party
         loop_until: ធ្វើឡើងវិញរហូតដល់ប្លុក
@@ -126,6 +136,8 @@ km:
         mc_2018_closing: 'Minecraft: សូមអបអរសាទរដំណើរកម្សាន្តក្នុងទឹក'
         mc_2018_conditionals: 'Minecraft: លក្ខខណ្ឌនៃការធ្វើដំណើរកម្សាន្តក្នុងទឹក'
         mc_2018_intro: 'Minecraft: ការណែនាំអំពីដំណើរកម្សាន្តក្នុងទឹក'
+        mc_intro: ការណែនាំពី Minecraft
+        mc_repeat: ការប្រើប្រាស់ ប្រតិបត្តិដដែលៗ ក្នុង Minecraft
         playlab_2021: ការណែនាំអំពីការអនុវត្តលើ Play Lab
         playlab_2021_reader: ការណែនាំអំពីការអនុវត្តលើ Play Lab
         playlab_intro: ការណែនាំអំពីការអនុវត្តលើ Play Lab

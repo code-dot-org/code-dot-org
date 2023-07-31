@@ -48,7 +48,7 @@
   "jump": "atıl",
   "jumpBackward": "geriyə atıl",
   "jumpForward": "irəli atıl",
-  "jumpToOverDown": "% 2-dən yuxarı% 1-ə atlayın",
+  "jumpToOverDown": "%2-dən yuxarı %1-ə atlayın",
   "jumpToPosition": "% 1 mövqeyinə keçin",
   "jumpByDirection": "% 1 x% 2 piksel atlayın",
   "jumpTooltip": "Heç bir iz qoymadan rəssamın yerini dəyişir.",

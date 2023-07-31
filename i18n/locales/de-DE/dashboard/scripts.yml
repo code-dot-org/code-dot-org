@@ -5268,6 +5268,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5557,6 +5559,9 @@ de:
               display_name: Auswirkungen der Datenverarbeitung
           description_audience: 'Alter: 4-7'
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Daten
           lesson_groups:
             lessonGroup-2:
               display_name: Digitalen Staatsbürgerschaft
@@ -5566,9 +5571,10 @@ de:
               display_name: Schleifen
             lessonGroup-5:
               display_name: Auswirkungen der Datenverarbeitung
+            lessonGroup-6:
+              display_name: Daten
           description_audience: 'Alter: 4-7'
           description_short: Eine Einführung in die Informatik für Leseanfänger.
-          student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5585,7 +5591,6 @@ de:
               display_name: Projekt am Ende des Kurses
           description_audience: 'Alter: 5-8'
           description_short: Eine Einführung in die Informatik für Leseanfänger. (Ähnlich wie Kurs A, aber mit mehr Konzepttiefe.)
-          student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5598,7 +5603,6 @@ de:
               display_name: Ereignisse
             lessonGroup-6:
               display_name: Daten
-          student_description: Erstellen Sie Programme mit Sequenzen, Schleifen und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre eigene Geschichte, die Sie mit anderen teilen können!
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

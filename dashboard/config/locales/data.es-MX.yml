@@ -1136,13 +1136,13 @@ es-MX:
         poembot-playtest-events: PoemBot Prueba de Juego Eventos
         poembot-playtest-intro: PoemBot Prueba de Juego Introducción
         poembot-playtest-sprites: PoemBot Prueba del Juego Sprites
-        poetry_module_conditionals: Condicionales - Codificación con Poesía
-        poetry_module_multichoiceprompts: Preguntas de Elección Múltiple - Codificación
+        poetry_module_conditionals: Condicionales - Programación con Poesía
+        poetry_module_multichoiceprompts: Preguntas de Elección Múltiple - Programación
           con Poesía
-        poetry_module_planningapp: Planificación de tu Aplicación Generadora de Poemas
-          - Codificación con Poesía
-        poetry_module_textandvariables: Texto y Variables - Codificación con Poesía
-        poetry_module_variables: Variables - Codificación con Poesía
+        poetry_module_planningapp: El plan de tu Generador de Poemas - Programación
+          con Poesía
+        poetry_module_textandvariables: Texto y Variables - Programación con Poesía
+        poetry_module_variables: Variables - Programación con Poesía
         repeat_block: Uso del bloque 'repetir'
         rough_poemart_congrats: v1 Arte del Poema Felicidades
         rough_poemart_events: v1 Arte del Poema Eventos

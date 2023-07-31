@@ -527,56 +527,16 @@
         }
       }
     },
-    "thanksgiving": {
-      "card": {
-      },
-      "fields": {
-      }
-    },
     "zoo": {
       "card": {
-        "context": {
-        },
         "description": "Un pequeño conjunto de datos de diferentes atributos de animales (si tienen pelo, plumas, dientes y más) usados para propósitos de clasificación. Casi todas las características son Yes/No excepto el Nombre del Animal, Clase y Número de Patas."
       },
       "fields": {
-        "Airborne": {
-        },
-        "Animal Name": {
-        },
         "Aquatic": {
           "id": "Aquatic"
         },
-        "Backbone": {
-        },
-        "Breathes": {
-        },
-        "Catsize": {
-        },
-        "Class": {
-        },
-        "Domestic": {
-        },
-        "Eggs": {
-        },
-        "Feathers": {
-        },
-        "Fins": {
-        },
-        "Hair": {
-        },
-        "Legs": {
-        },
-        "Milk": {
-        },
-        "Predator": {
-        },
-        "Tail": {
-        },
         "Toothed": {
           "description": "¿El animal tiene dientes?"
-        },
-        "Venomous": {
         }
       }
     }
