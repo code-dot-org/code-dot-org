@@ -1,12 +1,12 @@
 import React from 'react';
 import Button from '@cdo/apps/templates/Button';
-import styles from './aichat.module.scss';
+import styles from './userChatMessageEditor.module.scss';
 
 const UserChatMessageEditor: React.FunctionComponent = () => {
   return (
     <div className={styles.UserChatMessageEditor}>
       <textarea
-        style={{width: '80%', boxSizing: 'border-box'}}
+        className={styles.textArea}
         placeholder="Add a chat message..."
       />
       <Button

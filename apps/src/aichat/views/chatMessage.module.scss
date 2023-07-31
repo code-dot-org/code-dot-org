@@ -1,0 +1,44 @@
+@import 'color.scss';
+
+.name {
+    font-family: "Gotham 5r", sans-serif;
+}
+
+.message {
+    background-color: $lightest_gray;
+    padding: 10px 12px;
+}
+
+.userMessageContainer {
+    margin: 0 0 25px 50px;
+    border-radius: 10px;
+    overflow: 'hidden';
+}
+
+.assistantMessageContainer {
+    margin: 0 50px 25px 0;
+    border-radius: 10px;
+    overflow: 'hidden';
+}
+
+.userMessage {
+    background-color: $lightest_cyan;
+}
+
+.assistantMessage {
+    background-color: $lightest_gray;
+}
+
+.inappropriateMessage {
+    background-color: $lightest_red;
+}
+
+.tooPersonalMessage {
+    background-color: $lightest_yellow;
+}
+
+.messageHeaderContainer {
+    margin: 0 0 5px 0;
+    border-radius: 10px;
+    overflow: 'hidden';
+}

@@ -1,5 +1,6 @@
 import React from 'react';
-import color from '@cdo/apps/util/color';
+import styles from './chatMessage.module.scss';
+import classNames from 'classnames';
 
 interface ChatMessageProps {
   id: string;
@@ -42,17 +43,16 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   return (
     <div id={id}>
       {isUser(role) && (
-        <div style={styles.userMessageContainer}>
-          <div style={{...styles.messageHeaderContainer, ...styles.name}}>
+        <div className={styles.userMessageContainer}>
+          <div
+            className={classNames(styles.messageHeaderContainer, styles.name)}
+          >
             {name} ({role})
           </div>
           {isVisible(status) && isUser(role) && (
             <div
               id={'chat-workspace-message-body'}
-              style={{
-                ...styles.message,
-                ...styles.userMessage,
-              }}
+              className={classNames(styles.message, styles.userMessage)}
             >
               {chatMessageText}
             </div>
@@ -60,10 +60,10 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
           {isInappropriate(status) && (
             <div
               id={'chat-workspace-message-body-inappropriate'}
-              style={{
-                ...styles.message,
-                ...styles.inappropriateMessage,
-              }}
+              className={classNames(
+                styles.message,
+                styles.inappropriateMessage
+              )}
             >
               {INAPPROPRIATE_MESSAGE}
             </div>
@@ -71,10 +71,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
           {isTooPersonal(status) && (
             <div
               id={'chat-workspace-message-body-too-personal'}
-              style={{
-                ...styles.message,
-                ...styles.tooPersonalMessage,
-              }}
+              className={classNames(styles.message, styles.tooPersonalMessage)}
             >
               {TOO_PERSONAL_MESSAGE}
             </div>
@@ -83,17 +80,16 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
       )}
 
       {isAssistant(role) && (
-        <div style={styles.assistantMessageContainer}>
-          <div style={{...styles.messageHeaderContainer, ...styles.name}}>
+        <div className={styles.assistantMessageContainer}>
+          <div
+            className={classNames(styles.messageHeaderContainer, styles.name)}
+          >
             {name} ({role})
           </div>
           {isVisible(status) && isAssistant(role) && (
             <div
               id={'chat-workspace-message-body'}
-              style={{
-                ...styles.message,
-                ...styles.assistantMessage,
-              }}
+              className={classNames(styles.message, styles.assistantMessage)}
             >
               {chatMessageText}
             </div>
@@ -102,41 +98,6 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
       )}
     </div>
   );
-};
-
-const styles = {
-  name: {
-    fontFamily: '"Gotham 5r"',
-  },
-  message: {
-    backgroundColor: color.lighter_gray,
-    padding: '10px 12px',
-  },
-  userMessageContainer: {
-    margin: '0 0 25px 50px',
-    borderRadius: 10,
-    overflow: 'hidden',
-  },
-  assistantMessageContainer: {
-    margin: '0 50px 25px 0',
-    borderRadius: 10,
-    overflow: 'hidden',
-  },
-  userMessage: {
-    backgroundColor: color.lightest_cyan,
-  },
-  assistantMessage: {
-    backgroundColor: color.lightest_gray,
-  },
-  inappropriateMessage: {
-    backgroundColor: color.lightest_red,
-  },
-  tooPersonalMessage: {
-    backgroundColor: color.lightest_yellow,
-  },
-  messageHeaderContainer: {
-    margin: '0 0 5px 0',
-  },
 };
 
 export default ChatMessage;
