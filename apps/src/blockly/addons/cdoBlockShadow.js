@@ -44,16 +44,29 @@ export function getShadowedBlockImageUrl(block, parentId) {
     if (rootBlock.type === blockShadowData.parent) {
       parent = rootBlock;
     } else if (block.getRootBlock().type === block.type) {
-      // CdoBlockFlyout initializes workspaces with a sourceBlockId option.
-      // This allows us to find the source block for a flyout workspace, and get
-      // the image from that block. If the block's workspace is not a flyout or
-      // does not have a sourceBlockId, this isn't a CdoBlockFlyout workspace,
-      // and we can ignore it.
       const workspace = Blockly.Workspace.getById(block.workspace.id);
-      if (workspace && workspace.isFlyout && workspace.options.sourceBlockId) {
-        parent = Blockly.getMainWorkspace().getBlockById(
-          workspace.options.sourceBlockId
+      // If this block has itself as a parent and is in a flyout workspace,
+      // it may be a in a mini toolbox. We check the parentBlockId on the block to
+      // confirm it is still inside the parent flyout workspace.
+      if (workspace && workspace.isFlyout && block.parentBlockId) {
+        const potentialParent = Blockly.getMainWorkspace().getBlockById(
+          block.parentBlockId
         );
+        // Confirm potential parent is the correct type and it
+        // does contain this block's current workspace.
+        if (potentialParent.type === blockShadowData.parent) {
+          const inputs = potentialParent.inputList.filter(
+            input => input.name === 'flyout_input'
+          );
+          if (inputs.length > 0) {
+            const flyoutWorkspace = inputs[0].fieldRow[0]?.flyout_?.workspace_;
+            // If tthis block's workspace id matches the flyout workspace id,
+            // then we have found the parent.
+            if (flyoutWorkspace && flyoutWorkspace.id === block.workspace.id) {
+              parent = potentialParent;
+            }
+          }
+        }
       }
     }
   }
