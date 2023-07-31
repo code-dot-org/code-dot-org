@@ -41,14 +41,17 @@ module LtiAccessTokenHelper
       scope: 'https://purl.imsglobal.org/spec/lti-ags/scope/lineitem https://purl.imsglobal.org/spec/lti-ags/scope/result/read',
     }
 
+    p query
+
     res = HTTParty.post(access_token_url, query: query, headers: {'Content-Type' => 'application/x-www-form-urlencoded'})
     # get access_token and exp from response
-    access_token = res.body[:access_token]
-    exp = res.body[:expires_in]
+    # access_token = res.body[:access_token]
+    # exp = res.body[:expires_in]
 
-    # cache access_token, set expiration
-    CDO.shared_cache.write(cache_key, access_token, expires_in: exp)
+    # # cache access_token, set expiration
+    # CDO.shared_cache.write(cache_key, access_token, expires_in: exp)
 
-    return access_token
+    # return access_token
+    return res.body
   end
 end
