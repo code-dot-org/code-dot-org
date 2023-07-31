@@ -2042,19 +2042,7 @@
       "name": "Регионално Проучване на Храните за Деня на благодарността"
     },
     "zoo": {
-      "card": {
-        "context": {
-        }
-      },
       "fields": {
-        "Airborne": {
-        },
-        "Animal Name": {
-        },
-        "Aquatic": {
-        },
-        "Backbone": {
-        },
         "Breathes": {
           "description": "Животното диша ли?",
           "id": "Диша"
@@ -2066,32 +2054,16 @@
           "description": "Какъв вид животно е?",
           "id": "Клас"
         },
-        "Domestic": {
-        },
-        "Eggs": {
-        },
-        "Feathers": {
-        },
         "Fins": {
           "description": "Животното има ли перки?"
-        },
-        "Hair": {
         },
         "Legs": {
           "description": "Колко крака има животното?",
           "id": "Крака"
         },
-        "Milk": {
-        },
-        "Predator": {
-        },
         "Tail": {
           "description": "Животното има ли опашка?",
           "id": "Опашка"
-        },
-        "Toothed": {
-        },
-        "Venomous": {
         }
       },
       "name": "Зоологическа градина"
