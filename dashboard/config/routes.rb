@@ -602,6 +602,7 @@ Dashboard::Application.routes.draw do
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'
+    get '/oauth/access_token', to: 'oauth_jwks#access_token'
 
     get '/notes/:key', to: 'notes#index'
 
