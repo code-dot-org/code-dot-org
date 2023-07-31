@@ -335,56 +335,10 @@
         }
       }
     },
-    "taco_toppings_toy": {
-    },
-    "thanksgiving": {
-      "card": {
-      },
-      "fields": {
-      }
-    },
     "zoo": {
-      "card": {
-        "context": {
-        }
-      },
       "fields": {
-        "Airborne": {
-        },
-        "Animal Name": {
-        },
         "Aquatic": {
           "id": "Su"
-        },
-        "Backbone": {
-        },
-        "Breathes": {
-        },
-        "Catsize": {
-        },
-        "Class": {
-        },
-        "Domestic": {
-        },
-        "Eggs": {
-        },
-        "Feathers": {
-        },
-        "Fins": {
-        },
-        "Hair": {
-        },
-        "Legs": {
-        },
-        "Milk": {
-        },
-        "Predator": {
-        },
-        "Tail": {
-        },
-        "Toothed": {
-        },
-        "Venomous": {
         }
       }
     }
