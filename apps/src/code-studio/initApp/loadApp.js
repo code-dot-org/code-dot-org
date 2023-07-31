@@ -25,7 +25,6 @@ import msg from '@cdo/locale';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import DCDO from '@cdo/apps/dcdo';
 
 const SHARE_IMAGE_NAME = '_share_image.png';
 
@@ -480,7 +479,7 @@ const sourceHandler = {
       let source;
       let appOptions = getAppOptions();
       if (window.Blockly && Blockly.mainBlockSpace) {
-        const getSourceAsJson = !!DCDO.get('blockly-json', false);
+        const getSourceAsJson = true;
         // If we're readOnly, source hasn't changed at all
         source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
           ? currentLevelSource
