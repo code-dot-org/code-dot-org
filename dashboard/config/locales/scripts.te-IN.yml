@@ -836,6 +836,11 @@ te:
               display_name: డిజిటల్ పౌరసత్వం
             lessonGroup-4:
               display_name: ఉచ్చులు
+            lessonGroup-6:
+              display_name: డేటా
+          lessons:
+            lesson-1:
+              name: డేటా
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
