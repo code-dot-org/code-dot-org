@@ -1677,7 +1677,11 @@ uk-UA:
     Для доступу до всіх підручників, оновіть <a href="http://browsehappy.com/" target="_blank">браузер
     до останньої версії.</a>
   outbreak_tile_title: Спалах
+  page_not_available_button: Повернутись на домашню сторінку
   page_not_available_title: Сторінка недоступна
+  page_not_found_button: Повернутись на домашню сторінку
+  page_not_found_description: Сторінки за цією адресою не існує. Перевірте веб-адресу
+    та надішліть ще раз. Або поверніться на нашу домашню сторінку
   page_not_found_header: '404: Сторінка не знайдена'
   page_not_found_title: Сторінка не знайдена
   participant_educator: Педагог
