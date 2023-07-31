@@ -27,6 +27,7 @@ import {
 import ImageInput from './ImageInput';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
+
 const translatedNoneOption = `(${i18n.none()})`;
 
 const useCourseOffering = initialCourseOffering => {
@@ -130,7 +131,7 @@ export default function CourseOfferingEditor(props) {
     }
   };
 
-  const noneOption = {
+  const videoNoneOption = {
     value: 'None',
     label: (
       <div style={styles.dropdownLabel}>
@@ -141,8 +142,8 @@ export default function CourseOfferingEditor(props) {
     thumbnail: null,
   };
 
-  const renderedOptions = [
-    noneOption,
+  const videoRenderedOptions = [
+    videoNoneOption,
     ...props.videos.map(video => ({
       value: video.youtube_url,
       label: (
@@ -338,7 +339,7 @@ export default function CourseOfferingEditor(props) {
         </HelpTip>
         <div style={{width: '75%'}}>
           <Select
-            options={renderedOptions}
+            options={videoRenderedOptions}
             filterOption={filterOption}
             value={
               courseOffering.video === null ? 'None' : courseOffering.video
@@ -347,7 +348,7 @@ export default function CourseOfferingEditor(props) {
             defaultValue={translatedNoneOption}
           />
         </div>
-        {thumbnail && <img src={thumbnail} style={styles.image} />}
+        {thumbnail && <img src={thumbnail} alt="" style={styles.image} />}
       </label>
       <label>
         CS Topic
