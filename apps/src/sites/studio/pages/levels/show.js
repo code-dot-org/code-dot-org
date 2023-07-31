@@ -9,6 +9,7 @@ import instructions, {
   setTtsAutoplayEnabledForLevel,
   setCodeReviewEnabledForLevel,
 } from '@cdo/apps/redux/instructions';
+import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 
 $(document).ready(initPage);
 
