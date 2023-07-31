@@ -62,6 +62,8 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
       RTL: this.workspace_.RTL,
       minWidth: this.minWidth_,
       maxWidth: this.maxWidth_,
+      // TODO: this is a hack to easily find the flyout. Follow-up to fix this
+      // with a better solution.
       // We use sourceBlockId to map the flyout workspace to the parent block.
       sourceBlockId: this.getSourceBlock().id,
     });
