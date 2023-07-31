@@ -10,9 +10,8 @@ interface ChatMessageProps {
   status: string;
 }
 
-const isVisible = (status: string) => {
-  return status === 'ok';
-};
+const INAPPROPRIATE_MESSAGE = 'This message has been flagged as inappropriate.';
+const TOO_PERSONAL_MESSAGE = 'This message has been flagged as too personal.';
 
 const isAssistant = (role: string) => {
   return role === 'assistant';
@@ -22,16 +21,49 @@ const isUser = (role: string) => {
   return role === 'user';
 };
 
-const isInappropriate = (status: string) => {
-  return status === 'inappropriate';
+const displayUserMessage = (status: string, chatMessageText: string) => {
+  if (status === 'ok') {
+    return (
+      <div
+        id={'chat-workspace-message-body'}
+        className={classNames(styles.message, styles.userMessage)}
+      >
+        {chatMessageText}
+      </div>
+    );
+  } else if (status === 'inappropriate') {
+    return (
+      <div
+        id={'chat-workspace-message-body-inappropriate'}
+        className={classNames(styles.message, styles.inappropriateMessage)}
+      >
+        {INAPPROPRIATE_MESSAGE}
+      </div>
+    );
+  } else if (status === 'personal') {
+    return (
+      <div
+        id={'chat-workspace-message-body-too-personal'}
+        className={classNames(styles.message, styles.tooPersonalMessage)}
+      >
+        {TOO_PERSONAL_MESSAGE}
+      </div>
+    );
+  }
 };
 
-const isTooPersonal = (status: string) => {
-  return status === 'personal';
+const displayAssistantMessage = (status: string, chatMessageText: string) => {
+  if (status === 'ok') {
+    return (
+      <div
+        id={'chat-workspace-message-body'}
+        className={classNames(styles.message, styles.assistantMessage)}
+      >
+        {chatMessageText}
+      </div>
+    );
+  }
 };
-
-const INAPPROPRIATE_MESSAGE = 'This message has been flagged as inappropriate.';
-const TOO_PERSONAL_MESSAGE = 'This message has been flagged as too personal.';
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   id,
@@ -41,7 +73,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   status,
 }) => {
   return (
-    <div id={id}>
+    <div id={`ChatMessage id: ${id}`}>
       {isUser(role) && (
         <div className={styles.userMessageContainer}>
           <div
@@ -49,33 +81,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
           >
             {name} ({role})
           </div>
-          {isVisible(status) && isUser(role) && (
-            <div
-              id={'chat-workspace-message-body'}
-              className={classNames(styles.message, styles.userMessage)}
-            >
-              {chatMessageText}
-            </div>
-          )}
-          {isInappropriate(status) && (
-            <div
-              id={'chat-workspace-message-body-inappropriate'}
-              className={classNames(
-                styles.message,
-                styles.inappropriateMessage
-              )}
-            >
-              {INAPPROPRIATE_MESSAGE}
-            </div>
-          )}
-          {isTooPersonal(status) && (
-            <div
-              id={'chat-workspace-message-body-too-personal'}
-              className={classNames(styles.message, styles.tooPersonalMessage)}
-            >
-              {TOO_PERSONAL_MESSAGE}
-            </div>
-          )}
+          {displayUserMessage(status, chatMessageText)}
         </div>
       )}
 
@@ -86,14 +92,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
           >
             {name} ({role})
           </div>
-          {isVisible(status) && isAssistant(role) && (
-            <div
-              id={'chat-workspace-message-body'}
-              className={classNames(styles.message, styles.assistantMessage)}
-            >
-              {chatMessageText}
-            </div>
-          )}
+          {displayAssistantMessage(status, chatMessageText)}
         </div>
       )}
     </div>
