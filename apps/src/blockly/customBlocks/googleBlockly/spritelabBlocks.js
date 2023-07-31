@@ -132,17 +132,20 @@ export const blocks = {
     };
   },
 
-  // Set block to shadow for preview field if needed. This will also
+  // Set up this block to shadow a parent block's image, if needed. This will also
   // deserialize any parent toolbox information from the block configuration.
   setUpBlockShadowing() {
-    // when the parent changes, trigger a change to this block's field
+    // We only set up block shadowing for blocks that have a type in blockShadowingPairs.
     if (Object.keys(blockShadowingPairs).includes(this.type)) {
+      // saveExtraState is used to serialize the parent block ID.
       this.saveExtraState = function () {
         return {
           parentBlockId: this.parentBlockId,
         };
       };
 
+      // loadExtraState is used to deserialize the parent block ID.
+      // We use this id to set the initial shadowed block image.
       this.loadExtraState = function (state) {
         this.parentBlockId = state['parentBlockId'];
         if (this.parentBlockId) {
@@ -150,6 +153,8 @@ export const blocks = {
         }
       };
 
+      // When the block's parent workspace changes, we check to see if
+      // we need to update the shadowed block image.
       this.onchange = function (event) {
         const imagePreview = this.inputList && this.inputList[0].fieldRow[1];
         if (!imagePreview) {
