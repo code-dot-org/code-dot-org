@@ -33,9 +33,19 @@ class ScriptConstantsTest < ActiveSupport::TestCase
     assert_nil ScriptConstants.csf_next_course_recommendation("something-unknown")
   end
 
-  describe 'ScriptConstants::i18n' do
-    it 'finds course1 in i18n' do
-      assert ScriptConstants.i18n?('course1')
+  [
+    *ScriptConstants::CATEGORIES[:csf], *ScriptConstants::CATEGORIES[:csf_2018], *ScriptConstants::CATEGORIES[:csf_2019],
+    *ScriptConstants::CATEGORIES[:csf_2020], *ScriptConstants::CATEGORIES[:csf_2021], *ScriptConstants::CATEGORIES[:csf_2022],
+    *ScriptConstants::CATEGORIES[:csd], *ScriptConstants::CATEGORIES[:csd_2018], *ScriptConstants::CATEGORIES[:csd_2019],
+    *ScriptConstants::CATEGORIES[:csd_2021], *ScriptConstants::CATEGORIES[:csd_2022], *ScriptConstants::CATEGORIES[:twenty_hour],
+    *ScriptConstants::CATEGORIES[:hoc], ScriptConstants::JIGSAW_NAME, *ScriptConstants::ADDITIONAL_I18N_UNITS
+  ].uniq.each do |script|
+    test "ScriptConstants.i18n? returns true when the script is #{script}" do
+      assert ScriptConstants.i18n?(script)
     end
+  end
+
+  test 'ScriptConstants.i18n? returns false when the script is not translatable' do
+    refute ScriptConstants.i18n?('untranslatable')
   end
 end

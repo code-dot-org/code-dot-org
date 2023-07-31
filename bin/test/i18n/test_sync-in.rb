@@ -5,7 +5,7 @@ class I18n::SyncInTest < Minitest::Test
   def test_correct_methods_execution
     exec_seq = sequence('execution')
 
-    Services::I18n::CurriculumSyncUtils.expects(:sync_in).in_sequence(exec_seq)
+    I18n::Resources::Dashboard::CurriculumContent.expects(:sync_in).in_sequence(exec_seq)
     I18n::Resources::Pegasus::HourOfCode.expects(:sync_in).in_sequence(exec_seq)
     I18n::SyncIn.expects(:localize_level_and_project_content).in_sequence(exec_seq)
     I18n::Resources::Dashboard::Blocks.expects(:sync_in).in_sequence(exec_seq)
@@ -28,7 +28,7 @@ class I18n::SyncInTest < Minitest::Test
   def test_exception_handling
     expected_error = 'test error'
 
-    Services::I18n::CurriculumSyncUtils.stubs(:sync_in).raises(expected_error)
+    I18n::Resources::Dashboard::CurriculumContent.stubs(:sync_in).raises(expected_error)
 
     assert_raises expected_error do
       I18n::SyncIn.perform
