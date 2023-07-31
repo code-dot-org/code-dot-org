@@ -12716,4 +12716,85 @@ en:
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description: Fifth graders begin this course by learning to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about conditionals and variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
           student_description: ''
+        vpl-csp-2023-m1:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m1
+          title: Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m2:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m2
+          title: Module 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m3:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m3
+          title: Module 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m4:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m4
+          title: Module 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m5:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m5
+          title: Module 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m6:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m6
+          title: Module 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m7:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m7
+          title: Module 7
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m8:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m8
+          title: Module 8
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m1:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m1
+          title: Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
 ...
