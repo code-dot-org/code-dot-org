@@ -8,12 +8,12 @@ class I18nMetricsTest < Minitest::Test
     I18n::Metrics.stubs(:machine_id).returns('local_machine')
   end
 
-  def expect_metric(name, value, dimensions)
-    Cdo::Metrics.expects(:put_metric).with('I18n', {metric_name: name, value: value, dimensions: dimensions}).once
+  def expect_metric(name, value, dimensions, unit)
+    Cdo::Metrics.expects(:put_metric).with('I18n', {metric_name: name, value: value, dimensions: dimensions, unit: unit}).once
   end
 
   def test_report_runtime
-    expect_metric(:Runtime, 1, [{name: 'MethodName', value: 'method'}, {name: 'SyncComp', value: 'component'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}])
+    expect_metric(:Runtime, 1, [{name: 'MethodName', value: 'method'}, {name: 'SyncComp', value: 'component'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'Seconds')
     I18n::Metrics.report_runtime('method', 'component') {1}
   end
 end
