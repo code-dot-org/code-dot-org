@@ -13,7 +13,7 @@ class OauthJwksController < ApplicationController
   # TEMP: Use this endpoint to invoke the get_access_token. You can configure your
   # local LTI Integration client_id
   def access_token
-    access_token = get_access_token("10000000000001", "https://canvas.instructure.com")
+    access_token = get_access_token("10000000000003", "https://canvas.instructure.com")
     p access_token
     render json: access_token
   end
