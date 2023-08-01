@@ -6,7 +6,7 @@ import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
 import aichatI18n from '../locale';
 
-import {demoChatMessages} from './chatMessageShape'; // demo chat messages - remove when connected to backend
+import {demoChatMessages} from './demoMessages'; // demo chat messages - remove when connected to backend
 
 const ChatWorkspace: React.FunctionComponent = () => {
   return (
