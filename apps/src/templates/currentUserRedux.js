@@ -47,9 +47,10 @@ export const setMuteMusic = isBackgroundMusicMuted => ({
   type: SET_MUTE_MUSIC,
   isBackgroundMusicMuted,
 });
-export const setSortByFamilyName = isSortedByFamilyName => ({
+export const setSortByFamilyName = (isSortedByFamilyName, sectionId) => ({
   type: SET_SORT_BY_FAMILY_NAME,
   isSortedByFamilyName,
+  sectionId,
 });
 
 const initialState = {
@@ -106,7 +107,7 @@ export default function currentUser(state = initialState, action) {
     };
   }
   if (action.type === SET_SORT_BY_FAMILY_NAME) {
-    if (action.isSortedByFamilyName) {
+    if (action.isSortedByFamilyName === 'true') {
       analyticsReport.sendEvent(EVENTS.SORT_BY_FAMILY_NAME, {
         sectionId: action.sectionId,
       });
