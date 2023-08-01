@@ -484,7 +484,7 @@ export default function CourseOfferingEditor(props) {
             <p>Select the Published Date of the course offering</p>
           </HelpTip>
         </div>
-        <DatePicker date={selectedDate} onChange={handleDateChange} />
+        <DatePicker date={selectedDate} onChange={handleDateChange} clearable />
       </label>
       <SaveBar
         handleSave={handleSave}
