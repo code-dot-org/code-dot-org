@@ -9,58 +9,28 @@ $default-spacing: 2px;
   height: 100%;
   padding: 0;
   box-sizing: border-box;
-  border-radius: 0;
   overflow: hidden;
   user-select: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2px;
 }
 
 .chatWorkspace {
   margin: 10px 5%;
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
 }
 
 .conversationArea {
-  height: calc(100% - $message-editor-height);
+  flex-grow: 1;
   gap: $default-spacing;
   box-sizing: border-box;
-  overflow: scroll;
 }
 
 .userChatMessageEditor {
   width: 100%;
   height: $message-editor-height;
   box-sizing: border-box;
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 0;
-  gap: $default-spacing;
 }
-
-// We will fade in the next button for 1s after a 6s delay, then leave it showing.
-@keyframes fade-in-button {
-  0% {
-    opacity: 0;
-  }
-  86% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.nextButton {
-  animation: fade-in-button 6s;
-  font-size: 14px;
-  background-color: $brand_secondary_default;
-  border-color: $brand_secondary_default;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 8px;
-  height: 38px;
-  margin: 10px 0 0 0;
-}
-

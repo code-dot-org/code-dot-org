@@ -13,7 +13,7 @@ import classNames from 'classnames';
 const AichatView: React.FunctionComponent = () => {
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
-      <div id="chat-workspace-area">
+      <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
         <PanelContainer id="chat-workspace-panel" headerText="AI Chat">
           <div
             id="chat-workspace-conversation"
