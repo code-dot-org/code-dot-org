@@ -5,7 +5,6 @@ dashboard_enable_pegasus: true
 
 db_cluster_id: localhost
 
-# FOLLOW ON: Remove the above naming convention to the `db_endpoint_[type]` convention below.
 db_endpoint_writer: localhost
 db_endpoint_proxy_writer: localhost
 db_endpoint_proxy_reader: localhost
@@ -71,5 +70,9 @@ redshift_password: !Secret
 redshift_username: !Secret
 
 slack_bot_token: !Secret
+
+# JSON Web Key Set and private key data, configured in locals.yml
+jwks_data:
+jwk_private_key_data:
 
 openai_chat_completion_api_key: ''

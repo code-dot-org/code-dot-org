@@ -174,11 +174,9 @@ describe('setProperty and read Property', () => {
     });
     it('Sets the expected value for dropdowns, text area, and text input', () => {
       designMode.updateProperty(text_input, 'value', 'Iota Kappa');
-      designMode.updateProperty(text_area, 'value', 'Lambda Mu');
       designMode.updateProperty(dropdown, 'value', 'Eta Theta');
 
       expect(text_input.value).to.equal('Iota Kappa');
-      expect(text_area.innerHTML).to.equal('Lambda Mu');
       expect(dropdown.value).to.equal('Eta Theta');
     });
     it('Uses the asset timestamp in the source path for pictures', () => {
@@ -203,9 +201,6 @@ describe('setProperty and read Property', () => {
     });
     it('Gets the expected value for dropdowns, text area, and text input', () => {
       expect(designMode.readProperty(text_input, 'value')).to.equal('Nu Xi');
-      expect(designMode.readProperty(text_area, 'value')).to.equal(
-        'Omicron Pi'
-      );
       expect(designMode.readProperty(dropdown, 'value')).to.equal(
         'Epsilon Zeta'
       );

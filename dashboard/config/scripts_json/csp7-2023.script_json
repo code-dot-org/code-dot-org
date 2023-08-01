@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-18 20:55:43 UTC",
+    "serialized_at": "2023-07-31 22:02:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3730,6 +3730,18 @@
       }
     },
     {
+      "name": "Parameters, Returns, and Libraries",
+      "url": "https://docs.google.com/presentation/d/1P9JATX2RDE9TJZ4_Iqx_cSxv-NMhTXYSatrHMlUrRXw/edit?usp=sharing",
+      "key": "parameters_returns_and_libraries",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "parameters_returns_and_libraries"
+      }
+    },
+    {
       "name": "Project Guide - Make a Library",
       "url": "https://docs.google.com/document/d/1EO9J47qre36SGGWm-ohnXCapV2V_8fbMYLbPZv1fI74/edit?usp=sharing",
       "key": "project_guide_-_make_a_library",
@@ -3886,6 +3898,12 @@
       "seeding_key": {
         "lesson.key": "Parameters and Return Explore",
         "resource.key": "functions_with_parameters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "resource.key": "parameters_returns_and_libraries"
       }
     },
     {
@@ -4790,6 +4808,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

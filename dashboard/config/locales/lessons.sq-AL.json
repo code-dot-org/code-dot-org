@@ -402,6 +402,7 @@
           "name": "Siguria në Lagjen Time Online",
           "overview": "[![edukimi me kuptim të përgjithshëm](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nKy mësim u krijua fillimisht nga Edukimi me Kuptim të Përgjithshëm. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nFuqia e internetit i lejon studentët të përjetojnë dhe vizitojnë vende që mund të mos jenë në gjendje t'i shohin personalisht. Por, ashtu si të udhëtoni në botën reale, është e rëndësishme të jeni të sigurt kur udhëtoni online. Në këtë udhëtim virtual në terren, fëmijët mund të praktikojnë qëndrimin e sigurt në aventurat online.",
           "preparation": "-   Rishiko materialeve mësimore.\n-   Printo fletëushkat për secilin nxënës.\n-   (Opsionale) Printo posterin e poezisë për ta shfaqur në klasë.",
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Privatësinë dhe Sigurinë. Nxënësit mësojnë se si të mbrojnë informatën personale dhe të fitojnë një kuptim më të thellë të të drejtave të tyre të privatësisë së të dhënave në mënyrë që të mund të mbrojnë veten dhe të tjerët.",
           "student_overview": "Mësoni si të shkoni në vende të sigurta online.\n."
         },
         "coursea-2021/Learn to Drag and Drop": {
@@ -449,8 +450,16 @@
         "courseb-2021/Loops: Getting Loopy": {
           "name": "Duke u Çmëndur"
         },
+        "courseb-2021/The Right App": {
+          "overview": "Në këtë mësim **eksplorues**, nxënësit ndjejnë empati me disa përdorues imagjinarë të smartfonëve për t'i ndihmuar ata të gjejnë “aplikacionin e duhur” që adreson nevojat e tyre.",
+          "preparation": "-   Lexo shënimer e folësit në **\\*slide deck**. \n-   Përgatit materiale të mjaftueshme për skicim/vizatim për të gjithë nxënësit.\n-   Sigurohu që secili student të ketë një ditar reflektimi.",
+          "purpose": "Sot kompjuteri është më i qasshëm se kurrë më parë. Njerëzit nga të gjitha sferat e jetës përdorin softuer në shumë pajisje të ndryshme, veçanërisht smartfonëve, për informacion, komunikim dhe argëtim. Për shkak se njerëzit kanë përvoja dhe nevoja të ndryshme, është e rëndësishme që shkencëtarët e kompjuterave të kenë empati me njerëzit dhe të identifikojnë zgjidhje duke pasur parasysh ata."
+        },
         "courseb-2021/lesson-1": {
           "name": "Përfundimi i projektit të kursit"
+        },
+        "coursec-2021/Putting a STOP to Online Meanness": {
+          "overview": " [![edukimi i logjikës së përgjithshme](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org) \n\nKy mësim u krijua fillimisht nga Edukimi i logjikës së përgjithshme. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum) \n\nInterneti është i mbushur me lloj-lloj njerëzish interesant, por ndonjëherë disa prej tyre mund të jenë të këqij me njëri-tjetrin. Me këtë lojë me role, ndihmojini nxënësit tuaj të kuptojnë pse shpesh është më e lehtë të jesh keqdashës në komunik online në internet sesa në takim fizik dhe si të merreni me padrejtësitë në internet kur i hasni ato."
         },
         "coursec-2021/Programming in Maze": {
           "name": "Programimi me Angry Birds",
@@ -486,6 +495,9 @@
         "coursec-2021/End of Course Project: Create a Play Lab Game": {
           "name": "Përfundimi i projektit të kursit"
         },
+        "coursed-2021/lesson-5": {
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Privatësinë dhe Sigurinë. Nxënësit mësojnë se si të mbrojnë informatën personale dhe të fitojnë një kuptim më të thellë të të drejtave të tyre të privatësisë së të dhënave në mënyrë që të mund të mbrojnë veten dhe të tjerët."
+        },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "name": "Programimi Grafik me Letër"
         },
@@ -503,6 +515,9 @@
         },
         "coursed-2021/End of Course Project": {
           "name": "Përfundimi i projektit të kursit"
+        },
+        "coursee-2021/Private and Personal Information": {
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Privatësinë dhe Sigurinë. Nxënësit mësojnë se si të mbrojnë informatën personale dhe të fitojnë një kuptim më të thellë të të drejtave të tyre të privatësisë së të dhënave në mënyrë që të mund të mbrojnë veten dhe të tjerët."
         },
         "coursee-2021/Functions: Songwriting": {
           "name": "Të shkruarit e Këngëve"
@@ -697,13 +712,24 @@
         "courseb-2022/Drawing Gardens with Loops": {
           "name": "Vizatimi i kopshteve me Loops"
         },
+        "courseb-2022/The Right App": {
+          "name": "Aplikacioni i duhur",
+          "overview": "Në këtë mësim **eksplorues**, nxënësit ndjejnë empati me disa përdorues imagjinarë të smartfonëve për t'i ndihmuar ata të gjejnë “aplikacionin e duhur” që adreson nevojat e tyre.",
+          "preparation": "-   Lexo shënimer e folësit në **\\*slide deck**. \n-   Përgatit materiale të mjaftueshme për skicim/vizatim për të gjithë nxënësit.\n-   Sigurohu që secili student të ketë një ditar reflektimi.",
+          "purpose": "Sot kompjuteri është më i qasshëm se kurrë më parë. Njerëzit nga të gjitha sferat e jetës përdorin softuer në shumë pajisje të ndryshme, veçanërisht smartfonëve, për informacion, komunikim dhe argëtim. Për shkak se njerëzit kanë përvoja dhe nevoja të ndryshme, është e rëndësishme që shkencëtarët e kompjuterave të kenë empati me njerëzit dhe të identifikojnë zgjidhje duke pasur parasysh ata."
+        },
         "courseb-2022/End of Course Project": {
           "name": "Përfundimi i projektit të kursit"
+        },
+        "coursec-2022/Putting a STOP to Online Meanness": {
+          "name": "Vendosja e një STOP për padrejtësitë në internet",
+          "overview": "[![edukimi i logjikës së përgjithshme](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nKy mësim u krijua fillimisht nga Edukimi i logjikës së përgjithshme. [Mëso më shumë.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nInterneti është i mbushur me lloj-lloj njerëzish interesant, por ndonjëherë disa prej tyre mund të jenë të këqij me njëri-tjetrin. Me këtë lojë me role, ndihmojini nxënësit tuaj të kuptojnë pse shpesh është më e lehtë të jesh keqdashës në komunik online në internet sesa në takim fizik dhe si të merreni me padrejtësitë në internet kur i hasni ato.",
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Cyberbullying, Drama Digjitale dhe Gjuhën e Urrejtjes. Nxënësit marrin përsipër këto tema të vështira dhe luajnë rolin aktiv të mbështetësve për të ndërtuar komunitete pozitive, mbështetëse në internet dhe për të luftuar mizorinë në internet."
         },
         "coursec-2022/My Robotic Friends Jr": {
           "name": "Shokët e mi robotik",
           "overview": "Në këtë mësim **përcaktimi i kontekstit**, nxënësit do të përdorin një sërë simbolesh për të udhëzuar një “robot” për të grumbulluar gota në modele të ndryshme. Nxënësit do të marrin pjesë me radhë si robot, duke iu përgjigjur vetëm algoritmit të përcaktuar nga kolegët e tyre.",
-          "preparation": "-   Përgatitni një raft prej 20 gota letre (ose trapezoide letre) për secilin grup prej 2-3 nxënësish.\n-   Shfaqni simbolet nga **\\*Çelësi i simboleve** ku nxënësit mund të referohen gjatë gjithë mësimit.\n-   (Opsionale) Shtypni një **\\*Ide për grumbullimin e kupave** për një grup prej 2-3 nxënësish."
+          "preparation": "-   Përgatitni nga një model me 20 gota letre (ose trapezoide prej letrës) për secilin grup prej 2-3 nxënësish.\n-   Shfaqni simbolet nga **\\*Çelësi i simboleve** ku nxënësit mund të referohen gjatë gjithë mësimit.\n-   (Opsionale) Shtypni një **\\*Ide për grumbullimin e kupave** për një grup prej 2-3 nxënësish."
         },
         "coursec-2022/Programming with Angry Birds": {
           "name": "Programimi me Angry Birds",
@@ -789,6 +815,9 @@
         },
         "coursed-2022/End of Course Project": {
           "name": "Përfundimi i projektit të kursit"
+        },
+        "coursee-2022/Private and Personal Information": {
+          "purpose": "Kurrikula e Qytetarisë Digjitale e Logjikës së Përgjithshme trajton gjashtë tema thelbësore, bazuar në hulumtimet më të fundit mbi fëmijët, mediat dhe teknologjinë. Ky mësim fokusohet në Privatësinë dhe Sigurinë. Nxënësit mësojnë se si të mbrojnë informatën personale dhe të fitojnë një kuptim më të thellë të të drejtave të tyre të privatësisë së të dhënave në mënyrë që të mund të mbrojnë veten dhe të tjerët."
         },
         "coursee-2022/Songwriting": {
           "name": "Të shkruarit e Këngëve"

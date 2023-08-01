@@ -5,7 +5,6 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import $ from 'jquery';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
-
 import {
   CourseOfferingCategories,
   CourseOfferingHeaders,
@@ -30,6 +29,7 @@ import moment from 'moment';
 import DatePicker from '../../code-studio/pd/workshop_dashboard/components/date_picker';
 import 'react-select/dist/react-select.css';
 import 'react-datepicker/dist/react-datepicker.css';
+
 const translatedNoneOption = `(${i18n.none()})`;
 
 const useCourseOffering = initialCourseOffering => {
@@ -136,7 +136,7 @@ export default function CourseOfferingEditor(props) {
     }
   };
 
-  const noneOption = {
+  const videoNoneOption = {
     value: 'None',
     label: (
       <div style={styles.dropdownLabel}>
@@ -147,8 +147,8 @@ export default function CourseOfferingEditor(props) {
     thumbnail: null,
   };
 
-  const renderedOptions = [
-    noneOption,
+  const videoRenderedOptions = [
+    videoNoneOption,
     ...props.videos.map(video => ({
       value: video.youtube_url,
       label: (
@@ -340,7 +340,7 @@ export default function CourseOfferingEditor(props) {
         showPreview={true}
         helpTipText={'Image used to market the curriculum around the site.'}
       />
-      <label style={styles.flexContainer}>
+      <label style={styles.videoContainer}>
         Video
         <HelpTip>
           <p>
@@ -349,7 +349,7 @@ export default function CourseOfferingEditor(props) {
         </HelpTip>
         <div style={{width: '75%'}}>
           <Select
-            options={renderedOptions}
+            options={videoRenderedOptions}
             filterOption={filterOption}
             value={
               courseOffering.video === null ? 'None' : courseOffering.video
@@ -358,7 +358,7 @@ export default function CourseOfferingEditor(props) {
             defaultValue={translatedNoneOption}
           />
         </div>
-        {thumbnail && <img src={thumbnail} style={styles.image} />}
+        {thumbnail && <img src={thumbnail} alt="" style={styles.image} />}
       </label>
       <label>
         CS Topic

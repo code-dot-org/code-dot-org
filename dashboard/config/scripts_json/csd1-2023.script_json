@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-25 22:43:18 UTC",
+    "serialized_at": "2023-07-31 19:15:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4958,6 +4958,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pre-survey-levelgroup_21_22_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7058,6 +7061,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

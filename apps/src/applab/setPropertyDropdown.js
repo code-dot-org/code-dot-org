@@ -393,7 +393,6 @@ PROPERTIES[ElementType.TEXT_AREA] = {
     'textAlign',
     'readonly',
     'hidden',
-    'value',
     'borderWidth',
     'borderColor',
     'borderRadius',

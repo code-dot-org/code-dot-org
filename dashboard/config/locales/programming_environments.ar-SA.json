@@ -222,8 +222,6 @@
                 }
               }
             },
-            "circuit": {
-            },
             "control": {
               "expressions": {
                 "clearTimeout": {
@@ -351,8 +349,6 @@
             "functions": {
               "name": "دوال"
             },
-            "maker": {
-            },
             "math": {
               "expressions": {
                 "randomNumber": {
@@ -377,8 +373,6 @@
                 }
               },
               "name": "العمليات الحسابية"
-            },
-            "micro_bit": {
             },
             "turtle": {
               "expressions": {
@@ -560,8 +554,6 @@
               "name": "الرسم"
             },
             "functions": {
-              "expressions": {
-              },
               "name": "دوال"
             },
             "game_lab": {
@@ -767,168 +759,6 @@
           "name": "مختبر الرسوم المتحركة"
         },
         "weblab": {
-          "categories": {
-            "css_properties": {
-              "expressions": {
-                "Text-Dec": {
-                  "examples": {
-                  }
-                },
-                "background-color": {
-                  "examples": {
-                  }
-                },
-                "border": {
-                  "examples": {
-                  }
-                },
-                "border-bottom": {
-                  "examples": {
-                  }
-                },
-                "border-color": {
-                  "examples": {
-                  }
-                },
-                "border-left": {
-                  "examples": {
-                  }
-                },
-                "border-radius": {
-                  "examples": {
-                  }
-                },
-                "border-right": {
-                  "examples": {
-                  }
-                },
-                "border-style": {
-                  "examples": {
-                  }
-                },
-                "border-top": {
-                  "examples": {
-                  }
-                },
-                "border-width": {
-                  "examples": {
-                  }
-                },
-                "color": {
-                  "examples": {
-                  }
-                },
-                "float": {
-                  "examples": {
-                  }
-                },
-                "font-family": {
-                  "examples": {
-                  }
-                },
-                "font-size": {
-                  "examples": {
-                  }
-                },
-                "height": {
-                  "examples": {
-                  }
-                },
-                "margin": {
-                  "examples": {
-                  }
-                },
-                "pad": {
-                  "examples": {
-                  }
-                },
-                "pseudo-classes": {
-                  "examples": {
-                  }
-                },
-                "rgb-color": {
-                  "examples": {
-                  }
-                },
-                "width": {
-                  "examples": {
-                  }
-                }
-              }
-            },
-            "html_tags": {
-              "expressions": {
-                "A": {
-                  "examples": {
-                  }
-                },
-                "P": {
-                  "examples": {
-                  }
-                },
-                "body": {
-                  "examples": {
-                  }
-                },
-                "comment": {
-                  "examples": {
-                  }
-                },
-                "div": {
-                  "examples": {
-                  }
-                },
-                "doctype": {
-                  "examples": {
-                  }
-                },
-                "h": {
-                  "examples": {
-                  }
-                },
-                "head": {
-                  "examples": {
-                  }
-                },
-                "html": {
-                  "examples": {
-                  }
-                },
-                "img": {
-                  "examples": {
-                  }
-                },
-                "li": {
-                  "examples": {
-                  }
-                },
-                "link": {
-                  "examples": {
-                  }
-                },
-                "meta": {
-                  "examples": {
-                  }
-                },
-                "ol": {
-                  "examples": {
-                  }
-                },
-                "style": {
-                  "examples": {
-                  }
-                },
-                "title": {
-                  "examples": {
-                  }
-                },
-                "ul": {
-                  "examples": {
-                  }
-                }
-              }
-            }
-          },
           "name": "مختبر الويب"
         }
       }
