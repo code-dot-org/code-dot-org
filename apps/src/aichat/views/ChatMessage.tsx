@@ -1,17 +1,18 @@
 import React from 'react';
 import moduleStyles from './chatMessage.module.scss';
 import classNames from 'classnames';
+import aichatI18n from '../locale';
 
 interface ChatMessageProps {
   id: string;
   name: string;
-  role: string;
+  role: 'user' | 'assistant' | 'system';
   chatMessageText: string;
-  status: string;
+  status: 'ok' | 'inappropriate' | 'personal';
 }
 
-const INAPPROPRIATE_MESSAGE = 'This message has been flagged as inappropriate.';
-const TOO_PERSONAL_MESSAGE = 'This message has been flagged as too personal.';
+const INAPPROPRIATE_MESSAGE = aichatI18n.inappropriateUserMessage();
+const TOO_PERSONAL_MESSAGE = aichatI18n.tooPersonalUserMessage();
 
 const isAssistant = (role: string) => {
   return role === 'assistant';

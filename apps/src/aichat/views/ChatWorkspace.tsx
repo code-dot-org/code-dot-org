@@ -4,12 +4,16 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import ChatMessage from './ChatMessage';
 import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
+import aichatI18n from '../locale';
 
 import {demoChatMessages} from './chatMessageShape'; // demo chat messages - remove when connected to backend
 
 const ChatWorkspace: React.FunctionComponent = () => {
   return (
-    <PanelContainer id="chat-workspace-panel" headerText="AI Chat">
+    <PanelContainer
+      id="chat-workspace-panel"
+      headerText={aichatI18n.aichatWorkspaceHeader()}
+    >
       <div
         id="chat-workspace-conversation"
         className={classNames(
