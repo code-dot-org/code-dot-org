@@ -481,8 +481,6 @@ export default {
         Blockly.BlockValueType.LOCATION,
       ]
     ));
-    console.log('**** setting main workspace ****');
-    // behaviorEditor.setMainWorkspace(Blockly.mainBlockSpace);
 
     Blockly.Blocks.sprite_variables_get = {
       // Variable getter.
