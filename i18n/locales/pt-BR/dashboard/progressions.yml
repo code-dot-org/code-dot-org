@@ -25,20 +25,20 @@ pt:
       'App Project: Linking Screens': 'Projeto do Aplicativo: Vinculando Telas'
       'App Project: Screen Design': 'Projeto do Aplicativo: Design da Tela'
       'App Project: Screen Import': 'Projeto do Aplicativo: Importação de Tela'
-      'App: Choose a Kid''s Movie': 'App: Escolha um Filme Infantil'
+      'App: Choose a Kid''s Movie': 'Aplicativo: Escolha um Filme Infantil'
       'App: Friend Finder': 'App: Localizador de Amigos'
-      'App: Guess the Number': 'App: Adivinhe o Número'
-      'App: How Many Countries': 'App: Quantos Países'
-      'App: Improved Pet App': 'App: App de Pets Melhorado'
-      'App: Is It Your Birthday?': 'App: É seu aniversário?'
-      'App: My Famous Birthday': 'App: Meu Aniversário Famoso'
-      'App: National Parks': 'App: Parques Nacionais'
-      'App: Outfit Picker': 'App: Selecionador de Look'
+      'App: Guess the Number': 'Aplicativo: Adivinhe o Número'
+      'App: How Many Countries': 'Aplicativos: Quantos Países'
+      'App: Improved Pet App': 'Aplicativo: Aplicativo Melhorado para Pets'
+      'App: Is It Your Birthday?': 'Aplicativo: É seu aniversário?'
+      'App: My Famous Birthday': 'Aplicativo: Meu Aniversário Famoso'
+      'App: National Parks': 'Aplicativo: Parques Nacionais'
+      'App: Outfit Picker': 'Aplicativo: Selecionador de Look'
       'App: Pet Chooser': 'App: Selecionador de Pet'
-      'App: Stamp Notebook': 'App: Caderno de Selos'
+      'App: Stamp Notebook': 'Aplicativo: Caderno de Selos'
       'App: Story Creator': 'App: Criador de Histórias'
-      'App: The Fastest Finger': 'App: O Dedo Mais Rápido'
-      'App: Where Should I Live?': 'App: Onde eu Deveria Morar?'
+      'App: The Fastest Finger': 'Aplicativo: O Dedo Mais Rápido'
+      'App: Where Should I Live?': 'Aplicativo: Onde eu Devo Morar?'
       Arrays: Vetores
       Artist Intro with JR Hildebrand: Introdução do Artista com JR Hildebrand
       Artist Intro with JR Hildebrande: Introdução do Artista com JR Hildebrande
@@ -58,6 +58,7 @@ pt:
       Binary and Data: Binário e Dados
       Board Events: Eventos de borda
       Board Input and Output: Entrada e Saída da Placa
+      Book Recommender App: App de recomendação de livros
       Boolean Comparison: Comparação Booleana
       Booleans and Comparison Operators: Operadores de comparação e valores booleanos
       Build a Platform Jumper: Crie um Jogo - Saltador Plataformas
@@ -133,6 +134,7 @@ pt:
       Creating Sprites: Fazendo Sprites
       Creative Commons Search: Busca Creative Commons
       Customize: Personalizar
+      Customize Your App: Personalize seu aplicativo
       Dance Crews: Equipes de dança
       Data Visualization: Visualização de Dados
       De-bugging with the Step Button: Depuração com o Botão Step
@@ -204,6 +206,7 @@ pt:
       Free Play: Atividade livre
       'Free Play: Make a Scene': 'Diversão Livre: monte uma cena'
       'Free Play: Make an Interactive Scene': 'Diversão Livre: monte uma cena interativa'
+      Fruit and Veggie Explorer: Explorador de frutas e vegetais
       Functions: funções
       Functions Review: Revisão sobre Funções
       Functions with Parameters: Funções com Parâmetros
@@ -227,6 +230,7 @@ pt:
       If-Else Statements: Instruções Se/Senão
       Images and Sounds: Imagens e Sons
       Images in HTML: Imagens em HTML
+      Import a Model: Importe um modelo
       Importing Screens: Importando Telas
       Improve Your Game: Melhore seu Jogo
       Improved Shoe Recommender: Recomendador de calçado aprimorado
@@ -312,16 +316,17 @@ pt:
       Overview: Visão geral
       Pair Programming: Programação em duplas
       Picturing Data: Estruturação de dados
+      Pizza Recommendations: Recomendações de pizza
       Plan Your Project: Planeje seu projeto
       Plan Your Scene: Planeje sua Cena
       Plane Jumper: Saltador de avião
       Planning: Planejamento
-      Platform Jumper - Background and Variables: Saltador de Plataformas - Histórico e Variáveis
+      Platform Jumper - Background and Variables: Platform Jumper - Plano de fundo e variáveis
       Platform Jumper - Items: Saltador de Plataformas - Itens
       Platform Jumper - Platforms: Saltador de Plataformas - Plataformas
       Platform Jumper - Player: Saltador de Plataformas - Jogador
       Platform Jumper Review: Análise do Saltador de Plataformas
-      Player Controls: Controles do jogador
+      Player Controls: Controles do Jogador
       Playing Notes: Jogando Notas
       Playing with Notes: Jogando com Notas
       Plotting Shapes in Game Lab: Plotando Formas no Jogo do Laboratório
@@ -349,6 +354,7 @@ pt:
       Recognizing Expressions: Reconhecendo expressões
       Recognizing Fish: Reconhecendo peixes
       Recognizing Fish Features: Reconhecendo as características dos peixes
+      Recognizing Shapes: Reconhecendo formas
       Reflection: Reflexão
       Repeat Blocks: Blocos de Repetição
       Repeat Blocks with BB-8: Blocos de Repetição com BB-8
@@ -370,6 +376,7 @@ pt:
       Revisiting the Counter Pattern: Revisitando o Padrão do Contador
       Robot Doodle: Desenho de Robô
       Run a simulation: Executar uma Simulação
+      Same Game: O Jogo Igual
       Sample App: Aplicativo exemplo
       Sample Game: Jogo de Exemplo
       Sample Games: Jogos de Exemplo
@@ -380,7 +387,7 @@ pt:
       Sample Programs: Programas de Exemplo
       Sample Web Page: Exemplo de site
       Sample Website: Exemplo de site
-      Scoring & Scoreboard: Pontuação e placar
+      Scoring & Scoreboard: Pontuação e Placar
       Screen Design: Design de Tela
       Sensor Events: Eventos de Sensor
       Sensor Experiment: Experimento com Sensor
@@ -485,6 +492,7 @@ pt:
       Where'd They Go?: Onde eles foram?
       While Loops with the Farmer: While Loops com o agricultor
       Wrap-up: Resumo
+      'You Choose: Restaurant Recommendations': 'Você escolhe: Recomendações de restaurantes'
       Your Personal Website: Seu Site Pessoal
       Your Team Project: Seu Projeto de Equipe
       getNumber: pegarNúmero

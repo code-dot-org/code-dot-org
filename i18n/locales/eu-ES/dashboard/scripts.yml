@@ -1145,11 +1145,16 @@ eu:
             lessonGroup-4:
               display_name: Itzuliak
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Datu
           lesson_groups:
             lessonGroup-2:
               display_name: Hiritartasun digitala
             lessonGroup-4:
               display_name: Itzuliak
+            lessonGroup-6:
+              display_name: Datu
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:

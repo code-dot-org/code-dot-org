@@ -224,8 +224,6 @@ sr:
             '"row"': ред
       Dancelab_randomColor:
         text: насумична боја
-      Dancelab_setBackgroundEffect:
-        options: {}
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
@@ -258,8 +256,6 @@ sr:
             '1': нормално
             '2': fast
             '4': very fast
-      Dancelab_setForegroundEffect:
-        options: {}
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:

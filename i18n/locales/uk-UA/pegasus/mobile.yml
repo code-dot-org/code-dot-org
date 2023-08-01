@@ -1632,6 +1632,8 @@
   hoc2018_dance_video4: "Танцювальна вечірка - Вітання"
   page_not_found_title: "Сторінка не знайдена"
   page_not_found_header: '404: Сторінка не знайдена'
+  page_not_found_description: "Сторінки за цією адресою не існує. Перевірте веб-адресу та надішліть ще раз. Або поверніться на нашу домашню сторінку"
+  page_not_found_button: "Повернутись на домашню сторінку"
   hoc2018_mc_with_microsoft: "У партнерстві з"
   hoc2018_mc_thank_microsoft: "Ми дякуємо Microsoft за підтримку нашого бачення та місії щодо забезпечення кожної дитини можливістю вивчати інформатику та навички, необхідні для досягнення успіху в 21 столітті."
   hoc2019_mc_mee_description2: "Доступ до безкоштовних ресурсів, включаючи план уроків, відео, навчальну програму з інформатики та тренінги для вчителів."
@@ -1641,9 +1643,10 @@
   homepage_slot_text_blurb_at_home: "З нашими ресурсами це легко"
   homepage_slot_text_link_code_break: "Зробіть перерву на код"
   page_not_available_title: "Сторінка недоступна"
+  page_not_available_button: "Повернутись на домашню сторінку"
   hoc2022_mc_mee_title: "Майнкрафт: втеча з особняка"
   hoc2022_mc_mee_description: 'Утечіть із таємничого особняка до світанку й заробіть мільйон смарагдів! Новий навчальний посібник «Година коду Майнкрафт» тепер доступний у Minecraft: Education Edition для Windows, Mac, Chromebook, Ipad і мобільних пристроїв. Почніть із безкоштовних ресурсів для викладачів, тренінгів і відеороликів. '
-  hoc2022_mc_mee_timecraft_description: 'Зробіть подорож у минуле, щоб врятувати майбутнє, в цьому безкоштовному уроці програмування в Minecraft: Education Edition.'
+  hoc2022_mc_mee_timecraft_description: "Зробіть подорож у минуле, щоб врятувати майбутнє, в цьому безкоштовному уроці програмування в Minecraft: Education Edition."
   footer_powered_by_aws: "На потужностях Amazon Web Services"
   codebytes_skinny_banner_english_only: "Лише англійська"
   codebytes_skinny_banner_learn: "Дізнатися більше на [code.org/codebytes](%{code_bytes_url}). "
