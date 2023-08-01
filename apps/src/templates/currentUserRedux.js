@@ -1,5 +1,6 @@
 import {makeEnum} from '../utils';
 import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
@@ -105,6 +106,15 @@ export default function currentUser(state = initialState, action) {
     };
   }
   if (action.type === SET_SORT_BY_FAMILY_NAME) {
+    if (action.isSortedByFamilyName) {
+      analyticsReport.sendEvent(EVENTS.SORT_BY_FAMILY_NAME, {
+        sectionId: action.sectionId,
+      });
+    } else {
+      analyticsReport.sendEvent(EVENTS.SORT_BY_DISPLAY_NAME, {
+        sectionId: action.sectionId,
+      });
+    }
     return {
       ...state,
       isSortedByFamilyName: action.isSortedByFamilyName,

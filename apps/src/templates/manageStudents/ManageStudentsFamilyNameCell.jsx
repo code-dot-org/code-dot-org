@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 class ManageStudentFamilyNameCell extends Component {
   static propTypes = {
@@ -10,6 +12,7 @@ class ManageStudentFamilyNameCell extends Component {
     familyName: PropTypes.string,
     isEditing: PropTypes.bool,
     editedValue: PropTypes.string,
+    sectionId: PropTypes.number,
 
     //Provided by redux
     editStudent: PropTypes.func.isRequired,
@@ -20,6 +23,9 @@ class ManageStudentFamilyNameCell extends Component {
     // add empty family names to students.
     const newValue = e.target.value || null;
     this.props.editStudent(this.props.id, {familyName: newValue});
+    analyticsReporter.sendEvent(EVENTS.UPDATE_FAMILY_NAME, {
+      sectionId: this.props.sectionId,
+    });
   };
 
   render() {

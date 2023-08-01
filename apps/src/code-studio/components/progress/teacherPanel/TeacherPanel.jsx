@@ -248,6 +248,7 @@ class TeacherPanel extends React.Component {
             <SortByNameDropdown
               sortByStyles={styles.sortBy}
               selectStyles={styles.select}
+              sectionId={sectionId}
             />
           )}
           {viewAs === ViewType.Instructor && (students || []).length > 0 && (

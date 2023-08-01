@@ -339,6 +339,7 @@ class ManageStudentsTable extends Component {
         familyName={familyName}
         isEditing={rowData.isEditing}
         editedValue={editedValue}
+        sectionId={rowData.sectionId}
       />
     );
   }
