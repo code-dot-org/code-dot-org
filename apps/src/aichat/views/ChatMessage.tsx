@@ -49,6 +49,8 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         {TOO_PERSONAL_MESSAGE}
       </div>
     );
+  } else {
+    return null;
   }
 };
 
@@ -76,11 +78,6 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
     <div id={`ChatMessage id: ${id}`}>
       {isUser(role) && (
         <div className={styles.userMessageContainer}>
-          <div
-            className={classNames(styles.messageHeaderContainer, styles.name)}
-          >
-            {name} ({role})
-          </div>
           {displayUserMessage(status, chatMessageText)}
         </div>
       )}

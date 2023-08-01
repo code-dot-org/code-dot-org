@@ -9,12 +9,7 @@ import moduleStyles from './aichat.module.scss';
 
 const AichatView: React.FunctionComponent = () => {
   return (
-    <div id="aichat" className={moduleStyles.aichat}>
-      {/* <div id="chat-instructions-area" className={moduleStyles.instructions}>
-        <PanelContainer id="chat-instructions-panel" headerText="Instructions">
-          <Instructions />
-        </PanelContainer>
-      </div> */}
+    <div id="aichat-lab" className={moduleStyles.aichatLab}>
       <div id="chat-workspace-area">
         <PanelContainer id="chat-workspace-panel" headerText="AI Chat">
           <ChatWorkspace />
