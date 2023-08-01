@@ -190,7 +190,17 @@ var baseConfig = {
         test: /\.scss$/,
         use: [
           {loader: 'style-loader'},
-          {loader: 'css-loader', options: {modules: {auto: true}}},
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                auto: true,
+                localIdentName: process.env.DEV
+                  ? '[path][name]__[local]'
+                  : '[hash:base64]',
+              },
+            },
+          },
           {
             loader: 'sass-loader',
             options: {

@@ -21,10 +21,10 @@
           "AppLabHoCFinal11": "Тепер ви в режимі Дизайну."
         },
         "CSD U3 Random add_2021": {
-          "CSD_U3_butterfly": "Уважно подивися на цей код."
+          "CSD_U3_butterfly": "Уважно переглянь цей код."
         },
         "CSD U3 Random add_2022": {
-          "CSD_U3_butterfly": "Уважно подивися на цей код."
+          "CSD_U3_butterfly": "Уважно переглянь цей код."
         },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "Зміни номер тут"
@@ -204,10 +204,10 @@
           "CSDU6L10_rainbow": "Додай свій код тут"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "CSD U6L9.7 - if-statement": "Додай команду умови тут"
+          "CSD U6L9.7 - if-statement": "Додай сюди команду умови "
         },
         "CSD U6 - If Variables - A_2222": {
-          "U6L6.4 - If": "Додай команду умови тут"
+          "U6L6.4 - If": "Додай сюди команду умови "
         },
         "CSD U6 colorLeds intensity": {
           "CSDU6L10_rainbow": "Додай свій код тут"
@@ -699,10 +699,10 @@
           "courseA_artist_loops4_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
         },
         "courseA_artist_loops7_2021": {
-          "courseA_artist_loops7_1": "Ця цифра означає, що в кінцевій відповіді може бути використаний лише один блок такого типу."
+          "courseA_artist_loops7_1": "Ця цифра означає, що лише один блок такого типу може бути використаний у кінцевій відповіді."
         },
         "courseA_artist_loops8_2021": {
-          "courseA_artist_loops8_1": "Ти знаєш, що можна малювати поверх ліній, якщо буде потрібно?"
+          "courseA_artist_loops8_1": "Ти знаєш, що можна малювати поверх лінії, якщо буде потрібно?"
         },
         "courseA_collector_loops1": {
           "courseA_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
@@ -780,16 +780,16 @@
           "courseA_playlab_events4_callout1": "Це заклик"
         },
         "courseA_playLab_events5_2021": {
-          "courseA_playLab_events5_1": "Клацни, щоб змінити напрямок стрілки події."
+          "courseA_playLab_events5_1": "Натисни, щоб змінити напрямок стрілки події."
         },
         "courseA_playLab_events6_2021": {
           "courseA_playLab_events6_1": "Це дозволяє тобі вибрати \"випадковий\" звук, і це означає, що ти до останнього не знатимеш, який це буде звук, поки не почуєш його!"
         },
         "courseB_Scrat_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Після з'єднання усіх блоків натисни \"Запустити\" щоб випробувати програму."
+          "grade2_CaringForNewPet_0_1": "Після з'єднання усіх блоків натисни \"Запустити\" ті запусти програму."
         },
         "courseB_Scrat_ramp3a_2021": {
-          "courseC_maze_programming2_1": "Це панель інструментів. Тут ти знайдеш додаткові блоки для розв'язання завдань."
+          "courseC_maze_programming2_1": "Це скринька з інструментами. Тут ти знайдеш додаткові блоки для завершення завдань."
         },
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_1": "У наборі інструментів є лише один з цих блоків.  Як ти будеш його використовувати?"
@@ -1581,58 +1581,58 @@
           "hello_world_new": "Новий блок!"
         },
         "ml-customize apps-choice3": {
-          "CSD_AI_L10_predict": "Додай команду умови сюди"
+          "CSD_AI_L10_predict": "Додай сюди команду умови "
         },
         "ml-customize apps-choice3_2022": {
-          "CSD_AI_L10_predict": "Додай команду умови сюди"
+          "CSD_AI_L10_predict": "Додай сюди команду умови "
         },
         "ml-customize apps-choice5": {
-          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+          "CSD_AI_L11_top": "Розмісти блок над цим рядком"
         },
         "ml-customize apps-choice5_2022": {
-          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+          "CSD_AI_L11_top": "Розмісти блок над цим рядком"
         },
         "ml-intro app lab-book recommender 5C-2021": {
-          "CSD_AI_L7_event": "Додай сюди блок 'відворитиЗвук'"
+          "CSD_AI_L7_event": "Додай сюди блок 'playSound'"
         },
         "ml-intro app lab-book recommender 5C_2022": {
-          "CSD_AI_L7_event": "Додай сюди блок 'відворитиЗвук'"
+          "CSD_AI_L7_event": "Додай сюди блок 'playSound'"
         },
         "ml-intro app lab-book recommender 5E-2021": {
-          "CSD_AI_L7_top": "Помісти блок над цим рядком"
+          "CSD_AI_L7_top": "Розмісти блок над цим рядком"
         },
         "ml-intro app lab-book recommender 5E_2022": {
-          "CSD_AI_L7_top": "Помісти блок над цим рядком"
+          "CSD_AI_L7_top": "Розмісти блок над цим рядком"
         },
         "ml-models in applab-screens-1-2021": {
-          "CSD_AI_L10_ifstatement": "Додай команду умови сюди"
+          "CSD_AI_L10_ifstatement": "Додай сюди команду умови "
         },
         "ml-models in applab-screens-1_2022": {
-          "CSD_AI_L10_ifstatement": "Додай команду умови сюди"
+          "CSD_AI_L10_ifstatement": "Додай сюди команду умови "
         },
         "ml-models in applab-screens-3-2021": {
-          "CSD_AI_L7_ifstatement": "Додай команду умови тут"
+          "CSD_AI_L7_ifstatement": "Додай сюди команду умови "
         },
         "ml-models in applab-screens-3_2022": {
-          "CSD_AI_L7_ifstatement": "Додай команду умови тут"
+          "CSD_AI_L7_ifstatement": "Додай сюди команду умови "
         },
         "ml-use model card-choice3": {
-          "CSD_AI_L10_predict": "Додай команду умови сюди"
+          "CSD_AI_L10_predict": "Додай сюди команду умови "
         },
         "ml-use model card-choice3_2022": {
-          "CSD_AI_L10_predict": "Додай команду умови сюди"
+          "CSD_AI_L10_predict": "Додай сюди команду умови "
         },
         "ml-use model card-choice5": {
-          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+          "CSD_AI_L11_top": "Розмісти блок над цим рядком"
         },
         "ml-use model card-choice5_2022": {
-          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+          "CSD_AI_L11_top": "Розмісти блок над цим рядком"
         },
         "ml-use model card-example3C-2021": {
-          "CSD_AI_L11_temp": "Це функція температури"
+          "CSD_AI_L11_temp": "Це функція \"Температура\""
         },
         "ml-use model card-example3C_2022": {
-          "CSD_AI_L11_temp": "Це функція температури"
+          "CSD_AI_L11_temp": "Це функція \"Температура\""
         },
         "ml-use model card-example3D-2021": {
           "CSD_AI_L11_time": "Це функція \"Час доби\""
@@ -1641,10 +1641,10 @@
           "CSD_AI_L11_time": "Це функція \"Час доби\""
         },
         "ml-use model card-example3_EditB-2021": {
-          "CSD_AI_L11_cars": "Це ознака \"Кількість автомобілів\""
+          "CSD_AI_L11_cars": "Це функція \"Кількість автомобілів\""
         },
         "ml-use model card-example3_EditB_2022": {
-          "CSD_AI_L11_cars": "Це ознака \"Кількість автомобілів\""
+          "CSD_AI_L11_cars": "Це функція \"Кількість автомобілів\""
         },
         "ml-use model card-example3_EditC-2021": {
           "CSD_AI_L11_weather": "Це функція \"Погода\""

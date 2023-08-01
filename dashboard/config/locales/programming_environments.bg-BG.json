@@ -1276,8 +1276,6 @@
               "name": "Рисуване"
             },
             "functions": {
-              "expressions": {
-              },
               "name": "Функции"
             },
             "game_lab": {
@@ -1830,62 +1828,6 @@
           "categories": {
             "css_properties": {
               "expressions": {
-                "Text-Dec": {
-                  "examples": {
-                  }
-                },
-                "background-color": {
-                  "examples": {
-                  }
-                },
-                "border": {
-                  "examples": {
-                  }
-                },
-                "border-bottom": {
-                  "examples": {
-                  }
-                },
-                "border-color": {
-                  "examples": {
-                  }
-                },
-                "border-left": {
-                  "examples": {
-                  }
-                },
-                "border-radius": {
-                  "examples": {
-                  }
-                },
-                "border-right": {
-                  "examples": {
-                  }
-                },
-                "border-style": {
-                  "examples": {
-                  }
-                },
-                "border-top": {
-                  "examples": {
-                  }
-                },
-                "border-width": {
-                  "examples": {
-                  }
-                },
-                "color": {
-                  "examples": {
-                  }
-                },
-                "float": {
-                  "examples": {
-                  }
-                },
-                "font-family": {
-                  "examples": {
-                  }
-                },
                 "font-size": {
                   "examples": {
                     "Changing the Font Size": {
@@ -1903,14 +1845,6 @@
                     }
                   }
                 },
-                "margin": {
-                  "examples": {
-                  }
-                },
-                "pad": {
-                  "examples": {
-                  }
-                },
                 "pseudo-classes": {
                   "examples": {
                     "Unvisited Link": {
@@ -1919,10 +1853,6 @@
                     "Visited Link": {
                       "name": "Посетена Връзка"
                     }
-                  }
-                },
-                "rgb-color": {
-                  "examples": {
                   }
                 },
                 "text-align": {
@@ -1956,10 +1886,6 @@
                     }
                   }
                 },
-                "P": {
-                  "examples": {
-                  }
-                },
                 "body": {
                   "content": "# Тяло\n\nТагът `<body>` дефинира основното съдържание на HTML документа и ще бъде виждан директно на уеб страницата. Този таг `<body>` съдържа цялото съдържание на един HTML документ, като заглавия, параграфи, снимки, хиперлинкове, таблици, списъци, др.",
                   "examples": {
@@ -1980,10 +1906,6 @@
                   "short_description": "Коментар\nКоментарите в HTML започват с \\<!-- и завършват с -->. Коментарът е част от кода, който се игнорира от всеки уеб браузър. ",
                   "tips": "-   Всчко съдържание поставено в таговете `<!--` и `-->` юе бъде напълно игнорирано от браузъра.\n-   Добра практика е да добавяте коментари към HTML кода си, за да помагате на себе си и другите да разберат кода ви и да повишите неговата четливост."
                 },
-                "div": {
-                  "examples": {
-                  }
-                },
                 "doctype": {
                   "examples": {
                     "": {
@@ -1998,10 +1920,6 @@
                     "Largest and smallest headings": {
                       "description": "Използване на таговете `<h1>` и `<h6>` за създаване на най-голямото и най-малкото заглавие."
                     }
-                  }
-                },
-                "head": {
-                  "examples": {
                   }
                 },
                 "html": {
@@ -2027,22 +1945,6 @@
                     }
                   }
                 },
-                "li": {
-                  "examples": {
-                  }
-                },
-                "link": {
-                  "examples": {
-                  }
-                },
-                "meta": {
-                  "examples": {
-                  }
-                },
-                "ol": {
-                  "examples": {
-                  }
-                },
                 "style": {
                   "examples": {
                     "Style": {
@@ -2055,10 +1957,6 @@
                     "Title": {
                       "name": "Заглавие"
                     }
-                  }
-                },
-                "ul": {
-                  "examples": {
                   }
                 }
               }

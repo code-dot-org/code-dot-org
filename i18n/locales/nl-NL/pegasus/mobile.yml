@@ -1631,7 +1631,7 @@
   hoc2018_mc_download_adventurer: "Download de offline versie van Minecraft avonturier."
   hoc2018_mc_educators: "Voor docenten"
   hoc2018_mc_educators_box1_title: "Programmeren met Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition biedt op standaarden afgestemd curriculum, training en codering in Minecraft.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Education Edition biedt op standaarden afgestemd curriculum, training en codering in Minecraft."
   hoc2018_mc_educators_box1_button: "Aan de slag"
   hoc2018_mc_educators_box2_title: "Gids voor facilitator downloaden"
   hoc2018_mc_educators_box2_desc: "Deze toolkit helpt je om een Hour of Code te hosten en je studenten te betrekken bij informatica."
@@ -1732,7 +1732,7 @@
   hoc2018_mc_with_microsoft: "In samenwerking met"
   hoc2018_mc_thank_microsoft: "  We danken Microsoft voor het ondersteunen van onze visie en missie om ervoor te zorgen dat elk kind de kans krijgt om informatica te leren en de vaardigheden om te slagen in de 21e eeuw.  "
   hoc2019_mc_mee_title: "Minecraft AI voorgoed"
-  hoc2019_mc_mee_description1: 'De nieuwe Minecraft Hour of Code-zelfstudie is nu beschikbaar in Minecraft: Education Edition voor Windows, Mac en iPad. Leer de basisprincipes van coderen en verken AI met je studenten!'
+  hoc2019_mc_mee_description1: "De nieuwe Minecraft Hour of Code-zelfstudie is nu beschikbaar in Minecraft: Education Edition voor Windows, Mac en iPad. Leer de basisprincipes van coderen en verken AI met je studenten!"
   hoc2019_mc_mee_description2: "Krijg toegang tot gratis bronnen, waaronder een lesplan, video's, curriculum informatica en lerarentrainingen."
   hoc2019_mc_more_coding_resources: "Meer coderingsbronnen"
   hoc2019_dance_previous_versions: "Op zoek naar een vorige versie van Dance Party?  \nKlik hier om [Deel 1] (%{dance_2018_link}) en [Deel 2] (%{dance_extras_2018_link}) vanaf 2018 te starten."
@@ -1745,15 +1745,15 @@
   page_not_available_description: "Het spijt ons, de door u opgevraagde pagina is niet langer beschikbaar op dit adres. Als je nog steeds toegang nodig hebt, stuur dan een e-mail naar [support@code.org] (%{support_email_link})."
   page_not_available_button: "Terug naar huis"
   hoc2020_mc_available_code_org: "Beschikbaar op Code.org"
-  hoc2020_mc_available_mee: 'Beschikbaar in Minecraft: Education Edition'
+  hoc2020_mc_available_mee: "Beschikbaar in Minecraft: Education Edition"
   hoc2020_mc_mee_title: "Minecraft Tale of Two Villages"
-  hoc2020_mc_mee_description: 'De nieuwe Minecraft Hour of Code-zelfstudie is nu beschikbaar in Minecraft: Education Edition voor Windows, Mac, Chromebook en iPad. Leer de basisprincipes van coderen en ontdek diversiteit en inclusie met je studenten! Krijg toegang tot gratis bronnen, waaronder een lesplan, video''s, curriculum informatica, equity-lessen en lerarentrainingen.'
+  hoc2020_mc_mee_description: "De nieuwe Minecraft Hour of Code-zelfstudie is nu beschikbaar in Minecraft: Education Edition voor Windows, Mac, Chromebook en iPad. Leer de basisprincipes van coderen en ontdek diversiteit en inclusie met je studenten! Krijg toegang tot gratis bronnen, waaronder een lesplan, video's, curriculum informatica, equity-lessen en lerarentrainingen."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Reis terug in de tijd en leer coderen! De nieuwe Minecraft Hour of Code-tutorial is nu beschikbaar in Minecraft: Education Edition voor Windows, Mac, Chromebook en iPad. Ga aan de slag met gratis educatieve bronnen, trainingen en video''s.'
+  hoc2021_mc_mee_description: "Reis terug in de tijd en leer coderen! De nieuwe Minecraft Hour of Code-tutorial is nu beschikbaar in Minecraft: Education Edition voor Windows, Mac, Chromebook en iPad. Ga aan de slag met gratis educatieve bronnen, trainingen en video's."
   hoc2021_mc_mee_villages_title: "Verhaal van twee dorpen"
-  hoc2021_mc_mee_villages_description: 'Leer de basisbeginselen van coderen en verken diversiteit en inclusie met je leerlingen in Minecraft: Education Edition.'
+  hoc2021_mc_mee_villages_description: "Leer de basisbeginselen van coderen en verken diversiteit en inclusie met je leerlingen in Minecraft: Education Edition."
   hoc2021_mc_mee_ai_title: "AI voor goed"
-  hoc2021_mc_mee_ai_description: 'Verken AI met je leerlingen en leer coderen in Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_description: "Verken AI met je leerlingen en leer coderen in Minecraft: Education Edition."
   footer_powered_by_aws: "Aangedreven door Amazon webservices"
   footer_built_on_github: "Gebouwd op GitHub van Microsoft"
   codebytes_skinny_banner_title: "Doe mee met ons op 7-11 december voor onze CodeBytes live minilessen!"
@@ -1802,7 +1802,7 @@
   ai_zooniverse: "Zooniverse - Snapshot Berg Zebra"
   ai_zooniverse_description: "Help de bedreigde Cape Mountain Zebra te beschermen door de verschillende dieren in de afbeeldingen te identificeren."
   ai_audience: "Publiek"
-  ai_minecraft_description: 'Krijg toegang tot gratis bronnen, waaronder een lesplan, video''s, curriculum informatica en lerarentrainingen. (Vereist Minecraft: Education Edition)'
+  ai_minecraft_description: "Krijg toegang tot gratis bronnen, waaronder een lesplan, video's, curriculum informatica en lerarentrainingen. (Vereist Minecraft: Education Edition)"
   ai_k_12_audience: "K-12 (lezen vereist)"
   ai_microsoft_workshop: "Gratis virtuele workshops van Microsoft"
   ai_microsoft_workshop_description: "Wekt nieuwsgierigheid op met gratis STEM- en coderingsworkshops."

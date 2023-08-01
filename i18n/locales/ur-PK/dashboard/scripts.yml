@@ -1667,11 +1667,16 @@ ur:
             lessonGroup-4:
               display_name: لوپس
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: ڈیٹا
           lesson_groups:
             lessonGroup-2:
               display_name: ڈیجیٹل شہریت
             lessonGroup-4:
               display_name: لوپس
+            lessonGroup-6:
+              display_name: ڈیٹا
           description_short: پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:

@@ -4456,6 +4456,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4733,9 +4735,6 @@ mn:
               display_name: Тооцооллын нөлөө
             lessonGroup-6:
               display_name: Үйл явдлууд
-          student_description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын
-            үндсийг мэдэж аваарай. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох
-            өөрийн гэсэн тоглоом эсвэл түүхийг бий болго.
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 8-12 насныхан
           lesson_groups:
@@ -4755,9 +4754,11 @@ mn:
               display_name: Гогцоонууд
             lessonGroup-5:
               display_name: Тооцооллын нөлөө
-          student_description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын
-            үндсийг мэдэж аваарай. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох
-            өөрийн гэсэн тоглоом эсвэл түүхийг бий болго.
+            lessonGroup-6:
+              display_name: Өгөгдөл
+          lessons:
+            lesson-1:
+              name: Өгөгдөл
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4770,10 +4771,6 @@ mn:
               display_name: Үйл явдлууд
             lessonGroup-6:
               display_name: Өгөгдөл
-          student_description: Дараалал, гогцоо, үйл явдал бүхий програмууд үүсгэ.
-            Эх үсгээ хоёртын хэл рүү орчуулж, асуудлыг шийдэх өөр арга техникийг судалж,
-            кибер дайралтад хэрхэн хариу үйлдэл үзүүлэхээ сур. Хичээлийн төгсгөлд
-            та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго!
         nevada-standards-aligned-third-grade-2023:
           description_audience: 7-11 насныхан
           description_short: Нөхцөлт мэдэгдлийн талаар мэдэж аваарай. Өөрийн урлаг,
@@ -5032,6 +5029,7 @@ mn:
             дайны тоглоомыг зохиоорой.
           student_description: Дройд програмыг сурч, алс холын галактикт өөрийн Оддын
             дайны тоглоомыг зохиоорой.
+          title: 'Оддын дайн: Галаксиг кодоор бүтээх (JavaScript)'
         starwarsblocks:
           description: Дройд програмыг сурч, алс холын галактикт өөрийн Оддын дайны
             тоглоомыг зохиоорой.
