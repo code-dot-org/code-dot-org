@@ -14,7 +14,7 @@ class I18nMetricsTest < Minitest::Test
   end
 
   def test_report_runtime
-    expect_metric(:Runtime, 1, [{name: 'MethodName', value: 'method'}, {name: 'SyncComp', value: 'component'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'Seconds')
+    expect_metric(:Runtime, Benchmark.realtime {sleep 1.second}, [{name: 'MethodName', value: 'method'}, {name: 'SyncComp', value: 'component'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'Seconds')
     I18n::Metrics.report_runtime('method', 'component') {sleep 1.second}
   end
 end
