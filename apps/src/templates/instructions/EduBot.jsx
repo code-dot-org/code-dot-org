@@ -17,7 +17,8 @@ import {
 
 import Button from '@cdo/apps/templates/Button';
 import {openaiCompletion} from '@cdo/apps/util/openai';
-import eduBotPng from '@cdo/apps/templates/instructions/eduBot.png';
+// TODO: edubot is all lowercase because there's some weird issue that keeps popping up on the adhoc
+import eduBotPng from '@cdo/apps/templates/instructions/edubot.png';
 import {Modal} from 'react-bootstrap';
 
 const systemPrompts = [
