@@ -20,7 +20,7 @@ module LtiAccessTokenHelper
       aud: access_token_url,
       iat: Time.now.to_i,
       # this can be short, since the JWT will be validated as part of the access_token request handshake. Start at 5 minutes, reduce it if we feel like it.
-      exp: (5).minutes.from_now.to_i,
+      exp: (15).minutes.from_now.to_i,
       jti: SecureRandom.alphanumeric(10),
     }
 
@@ -38,20 +38,23 @@ module LtiAccessTokenHelper
       grant_type: 'client_credentials',
       client_assertion_type: 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer',
       client_assertion: jwt,
-      scope: 'https://purl.imsglobal.org/spec/lti-ags/scope/lineitem https://purl.imsglobal.org/spec/lti-ags/scope/result/read',
+      # specify scopes, there are additional optional scopes available
+      scope: 'https://purl.imsglobal.org/spec/lti-ags/scope/lineitem',
     }
 
-    p query
-
     res = HTTParty.post(access_token_url, query: query, headers: {'Content-Type' => 'application/x-www-form-urlencoded'})
-    # get access_token and exp from response
-    # access_token = res.body[:access_token]
-    # exp = res.body[:expires_in]
 
-    # # cache access_token, set expiration
-    # CDO.shared_cache.write(cache_key, access_token, expires_in: exp)
+    # get access_token and exp from response
+    token_response = JSON.parse(res.body)
+    access_token = token_response[:access_token]
+    exp = token_response[:expires_in]
+
+    # cache access_token, set expiration
+    CDO.shared_cache.write(cache_key, access_token, expires_in: exp)
 
     # return access_token
+
+    #TEMP put here for deving
     return res.body
   end
 end
