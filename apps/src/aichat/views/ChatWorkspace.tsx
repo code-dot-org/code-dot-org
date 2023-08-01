@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import ChatMessage from './ChatMessage';
 import UserChatMessageEditor from './UserChatMessageEditor';
@@ -10,37 +9,33 @@ import {demoChatMessages} from './demoMessages'; // demo chat messages - remove 
 
 const ChatWorkspace: React.FunctionComponent = () => {
   return (
-    <PanelContainer
-      id="chat-workspace-panel"
-      headerText={aichatI18n.aichatWorkspaceHeader()}
-    >
-      <div
-        id="chat-workspace-conversation"
-        className={classNames(
-          moduleStyles.chatWorkspace,
-          moduleStyles.conversationArea
-        )}
+    <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
+      <PanelContainer
+        id="chat-workspace-panel"
+        headerText={aichatI18n.aichatWorkspaceHeader()}
       >
-        {demoChatMessages.map(message => (
-          <ChatMessage
-            id={message.id}
-            name={message.name}
-            role={message.role}
-            chatMessageText={message.chatMessageText}
-            status={message.status}
-          />
-        ))}
-      </div>
-      <div
-        id="chat-workspace-editor"
-        className={classNames(
-          moduleStyles.chatWorkspace,
-          moduleStyles.userChatMessageEditor
-        )}
-      >
-        <UserChatMessageEditor />
-      </div>
-    </PanelContainer>
+        <div
+          id="chat-workspace-conversation"
+          className={moduleStyles.conversationArea}
+        >
+          {demoChatMessages.map(message => (
+            <ChatMessage
+              id={message.id}
+              name={message.name}
+              role={message.role}
+              chatMessageText={message.chatMessageText}
+              status={message.status}
+            />
+          ))}
+        </div>
+        <div
+          id="chat-workspace-editor"
+          className={moduleStyles.userChatMessageEditor}
+        >
+          <UserChatMessageEditor />
+        </div>
+      </PanelContainer>
+    </div>
   );
 };
 export default ChatWorkspace;
