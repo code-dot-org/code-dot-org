@@ -4,7 +4,7 @@ import Button from '@cdo/apps/templates/Button';
 import {
   updatePointerBlockImage,
   spriteLabPointers,
-} from '@cdo/apps/blockly/addons/cdoBlockShadow';
+} from '@cdo/apps/blockly/addons/cdoSpritePointer';
 import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
 //import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blocks';
 // This file contains customizations to Google Blockly Sprite Lab blocks.

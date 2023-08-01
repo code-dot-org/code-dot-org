@@ -55,7 +55,7 @@ import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
 import CdoFieldImage from './addons/cdoFieldImage';
-import {getPointerBlockImageUrl} from './addons/cdoBlockShadow';
+import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import {
   ObservableProcedureModel,
   ObservableParameterModel,
