@@ -1,3 +1,11 @@
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 a.underscorehover:hover
 {
   text-decoration: underline;
@@ -354,6 +362,8 @@ body.modal-open .supreme-container{
   height: 40px;
   padding: 0 30px;
   margin: 10px 5px 0 0;
+  background-color: #ffa400;
+  border-color: #ffa400;
 }
 
 #homepage #actions .herolink-white {
@@ -532,13 +542,18 @@ body.modal-open .supreme-container{
 }
 
 #homepage .quarterslot-links .thelinks .linkentry {
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 #homepage .quarterslot-links .thelinks .link {
   font-size: 16px;
   font-family: 'Gotham 4r', sans-serif;
   color: white;
+  text-decoration: none;
+}
+
+#homepage .quarterslot-links .thelinks .link:hover {
+  text-decoration: underline;
 }
 
 #homepage #gallerycolumn {
@@ -561,6 +576,10 @@ body.modal-open .supreme-container{
   text-align: center;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+
+#homepage #gallerycolumn a {
+  text-decoration: none;
 }
 
 #homepage #gallerycolumn .thelinks {
@@ -619,10 +638,11 @@ body.modal-open .supreme-container{
 .stats-box {
   padding: 0 1em;
   line-height: 1;
+  text-decoration: none;
 }
 
 .every-student {
-  color: rgb(77, 87, 95);
+  color: #292F36;
   font-size: 18px;
   text-align: center;
   margin-top: 20px;
@@ -647,11 +667,16 @@ body.modal-open .supreme-container{
   row-gap: 3em;
 }
 
+.statistics a {
+  text-decoration: none;
+}
+
 .statistics a .stats-number {
   text-align: center;
-  color: rgb(77, 87, 95);
+  color: #292F36;
   font-family: 'Gotham 4r', sans-serif;
   font-weight: 900;
+  text-decoration: none;
 }
 
 .statistics a .stats-phrase {
@@ -659,12 +684,12 @@ body.modal-open .supreme-container{
   line-height: 1.2;
   text-align: center;
   padding-top: 12px;
-  color: rgb(77, 87, 95);
+  color: #292F36;
   font-family: 'Gotham 4r', sans-serif;
 }
 
 .statistics a .stats-number:hover {
-  color: rgb(0,173,188);
+  color: #009EB0;
 }
 
 .below_hero_announcement {
