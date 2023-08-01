@@ -8,7 +8,7 @@ import PaneHeader, {
 } from '@cdo/apps/templates/PaneHeader';
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import {RecordingFileType} from '../code-studio/components/recorders';
-import {white} from '../util/color';
+import color from '@cdo/apps/util/color';
 
 export default function PreviewPaneHeader({
   isCollapsed,
@@ -26,7 +26,7 @@ export default function PreviewPaneHeader({
           icon={
             <CollapserIcon
               isCollapsed={isCollapsed}
-              style={styles.previewPaneCollapserIcon}
+              style={styles.collapserIcon}
             />
           }
           onClick={toggleVisualizationCollapsed}
@@ -96,7 +96,7 @@ const styles = {
       backgroundColor: 'transparent',
     },
   },
-  previewPaneCollapserIcon: {
-    color: white,
+  collapserIcon: {
+    color: color.white,
   },
 };
