@@ -704,7 +704,7 @@
   teach_page_additional_materials_list_heading_03: "Classroom Posters"
   teach_page_additional_materials_list_desc_03: "Print these posters of diverse role models to hang in your school and inspire your students to try computer science."
 
-  csp_page_top_desc: "Free set of elementary curricula that introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. Can be taught as an introductory class and as an AP course."
+  csp_page_top_desc: "Free year-long curriculum that introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. Can be taught as an introductory class and as an AP course."
   csp_page_intro_heading: "Free, AP® CSP endorsed, high school introductory course"
   csp_page_intro_list_01: "Culturally responsive pedagogy"
   csp_page_intro_list_02: "Real-world problem investigation"
@@ -825,7 +825,7 @@
   csc_page_faq_question_05: "What materials do I need for CS Connections?"
   csc_page_faq_answer_05: "Ideally, each student will have their own computer and teachers will have a projector to display the slideshow that corresponds with each lesson."
 
-  csf_page_top_desc: "Free year-long curriculum that introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world."
+  csf_page_top_desc: "Free set of elementary curricula that introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world."
   csf_page_intro_heading: "Free, and fun, elementary courses for each grade"
   csf_page_intro_list_01: "Six courses, one for each elementary grade"
   csf_page_intro_list_02: "Equitable introductory CS courses"
