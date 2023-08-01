@@ -1,77 +1,47 @@
-// Helper functions for block shadowing logic. We use block shadowing for
-// our "mini toolbox" blocks, which are blocks that contain their own toolbox.
-// The blocks in the toolbox (or the blocks pulled from the toolbox)
-// need to shadow the image selected in the parent
-// block.
+// Helper functions for pointer block logic. In our pointer blocks (a.k.a.)
+// mini toolbox blocks) we "shadow" the image on the block from a source block.
+// This file contains functions to get and set the image on the pointer block.
 
-// This object maps the block types that shadow parents to the parent block type they can shadow.
-// It also includes the index of the image to shadow in the parent's inputList.
-export const blockShadowingPairs = {
-  gamelab_clickedSpritePointer: {
-    parent: 'gamelab_spriteClicked',
-    imageIndex: 0,
-  },
-  gamelab_newSpritePointer: {
-    parent: 'gamelab_whenSpriteCreated',
-    imageIndex: 0,
-  },
-  gamelab_subjectSpritePointer: {
-    parent: 'gamelab_checkTouching',
-    imageIndex: 0,
-  },
-  gamelab_objectSpritePointer: {
-    parent: 'gamelab_checkTouching',
-    imageIndex: 1,
-  },
-};
-
-// Given a shadow block and an optional parent block id, return the url of the image
-// that the shadow block should display, or an empty string if the block should display
-// no image. If given a parent id, use that block as the parent, otherwise try to find the parent.
-// The parent block will either be the root block of the shadow block (if the shadow block is not inside
-// a mini toolbox), or the source block of the block's workspace (if the shadow block is inside a mini toolbox).
-export function getShadowedBlockImageUrl(block, parentId) {
-  const blockShadowData = blockShadowingPairs[block.type];
-  if (!blockShadowData || !block.inputList || block.inputList.length === 0) {
+/**
+ * Get the image url for the given pointer block.
+ * @param {Block} block pointer block to get the image url for
+ * @param {*} pointerMetadataMap Object of the form {blockType: {imageSourceType: <string>, imageIndex: <number>}},
+ *  which maps pointer block types to the image source block type they can shadow and the index of the image to shadow.
+ * @param {string} imageSourceId Optional id of the image source block.
+ * @returns The url of the image that the pointer block should display, or an empty string if the block should display no image
+ */
+export function getPointerBlockImageUrl(
+  block,
+  pointerMetadataMap,
+  imageSourceId
+) {
+  const pointerData = pointerMetadataMap[block.type];
+  if (!pointerData || !block.inputList || block.inputList.length === 0) {
     return '';
   }
-  let parent = undefined;
-  if (parentId !== undefined) {
-    parent = Blockly.getMainWorkspace().getBlockById(parentId);
+  let imageSource = undefined;
+  // const mainWorkspace = Blockly.getMainWorkspace();
+  if (imageSourceId !== undefined) {
+    imageSource = Blockly.getMainWorkspace().getBlockById(imageSourceId);
   }
-  if (!parent) {
+  if (!imageSource) {
     const rootBlock = block.getRootBlock();
-    if (rootBlock.type === blockShadowData.parent) {
-      parent = rootBlock;
+    if (rootBlock.type === pointerData.imageSourceType) {
+      imageSource = rootBlock;
     } else if (block.getRootBlock().type === block.type) {
-      const workspace = Blockly.Workspace.getById(block.workspace.id);
-      // If this block has itself as a parent and is in a flyout workspace,
-      // it may be a in a mini toolbox. We check the parentBlockId on the block to
-      // confirm it is still inside the parent flyout workspace.
-      if (workspace && workspace.isFlyout && block.parentBlockId) {
-        const potentialParent = Blockly.getMainWorkspace().getBlockById(
-          block.parentBlockId
+      const blockWorkspace = Blockly.Workspace.getById(block.workspace.id);
+      // If this block has itself as a root and is in a flyout workspace,
+      // it is a in a mini toolbox. A block can't be moved from one flyout to
+      // another, so if it's in a flyout, it is in its original flyout.
+      if (blockWorkspace && blockWorkspace.isFlyout && block.imageSourceId) {
+        imageSource = Blockly.getMainWorkspace().getBlockById(
+          block.imageSourceId
         );
-        // Confirm potential parent is the correct type and it
-        // does contain this block's current workspace.
-        if (potentialParent.type === blockShadowData.parent) {
-          const inputs = potentialParent.inputList.filter(
-            input => input.name === 'flyout_input'
-          );
-          if (inputs.length > 0) {
-            const flyoutWorkspace = inputs[0].fieldRow[0]?.flyout_?.workspace_;
-            // If tthis block's workspace id matches the flyout workspace id,
-            // then we have found the parent.
-            if (flyoutWorkspace && flyoutWorkspace.id === block.workspace.id) {
-              parent = potentialParent;
-            }
-          }
-        }
       }
     }
   }
-  if (parent) {
-    return getImageUrlFromParent(parent, blockShadowData.imageIndex);
+  if (imageSource) {
+    return getImageUrlFromImageSource(imageSource, pointerData.imageIndex);
   } else {
     // The block is probably disconnected from any root or toolbox. Reset to
     // default text.
@@ -79,23 +49,28 @@ export function getShadowedBlockImageUrl(block, parentId) {
   }
 }
 
-// Given a shadow block and an optional parent block id, update the image displayed
-// on the shadow block to match the image selected in the parent block. See getShadowedBlockImageUrl
-// for details on how we find the parent block.
-export function updateShadowedBlockImage(block, parentId) {
-  const url = getShadowedBlockImageUrl(block, parentId);
-  changeShadowedImage(url, block);
+// Given a shadow block and an optional image source block id, update the image displayed
+// on the pointer block to match the image selected in the image source block. See getPointerBlockImageUrl
+// for details on how we find the image source block.
+export function updatePointerBlockImage(
+  block,
+  pointerMetadataMap,
+  imageSourceId
+) {
+  const url = getPointerBlockImageUrl(block, pointerMetadataMap, imageSourceId);
+  changePointerImage(url, block);
 }
 
-// Get the image url from the parent block's inputList at the given index.
+// Get the image url from the image source block's inputList at the given index.
 // We find the image url by looking at the connection to the input at the given index.
-// If the parent does not have an image at the given index, return an empty string.
-function getImageUrlFromParent(parentBlock, imageIndexOnParent) {
+// If the image source does not have an image at the given index, return an empty string.
+function getImageUrlFromImageSource(imageSourceBlock, imageIndexOnSource) {
   const targetConnection =
-    parentBlock.inputList[imageIndexOnParent]?.connection?.targetConnection;
+    imageSourceBlock.inputList[imageIndexOnSource]?.connection
+      ?.targetConnection;
   // We only want to get the image from a connection block that is not an insertion marker.
   // If the block is an insertion marker that means the block is being dragged
-  // and is not yet connected to the parent block.
+  // and is not yet connected to the image source block.
   if (
     targetConnection &&
     targetConnection.sourceBlock_ &&
@@ -111,31 +86,50 @@ function getImageUrlFromParent(parentBlock, imageIndexOnParent) {
   }
 }
 
-// Set the given childBlock's image input to the given imageUrl,
+// Set the given block's image input to the given imageUrl,
 // or reset the image input to the default long text if the imageUrl is empty.
-function changeShadowedImage(imageUrl, childBlock) {
+function changePointerImage(imageUrl, block) {
   if (!imageUrl || imageUrl.length === 0) {
-    resetShadowedImageToLongString(childBlock);
+    resetPointerImageToLongString(block);
     return;
   }
-  const textInput = childBlock.inputList[0].fieldRow[0];
-  const previewInput = childBlock.inputList[0].fieldRow[1];
-  textInput.setValue(childBlock.shortString);
+  const textInput = block.inputList[0].fieldRow[0];
+  const previewInput = block.inputList[0].fieldRow[1];
+  textInput.setValue(block.shortString);
   previewInput.setValue(imageUrl);
-  previewInput.updateDimensions(
-    childBlock.thumbnailSize,
-    childBlock.thumbnailSize
-  );
+  previewInput.updateDimensions(block.thumbnailSize, block.thumbnailSize);
   previewInput.getSize();
 }
 
-// Reset the child block to no longer have an image input, and only
+// Reset the block to no longer have an image input, and only
 // show the long text input.
-function resetShadowedImageToLongString(childBlock) {
-  const textInput = childBlock.inputList[0].fieldRow[0];
-  const previewInput = childBlock.inputList[0].fieldRow[1];
-  textInput.setValue(childBlock.longString);
+function resetPointerImageToLongString(block) {
+  const textInput = block.inputList[0].fieldRow[0];
+  const previewInput = block.inputList[0].fieldRow[1];
+  textInput.setValue(block.longString);
   previewInput.setValue('');
-  previewInput.updateDimensions(1, childBlock.thumbnailSize);
+  previewInput.updateDimensions(1, block.thumbnailSize);
   previewInput.getSize();
 }
+
+// This object maps the pointer block types that shadow images to the image source
+// block type they can shadow.
+// It also includes the index of the image to shadow in the image source's inputList.
+export const spriteLabPointers = {
+  gamelab_clickedSpritePointer: {
+    imageSourceType: 'gamelab_spriteClicked',
+    imageIndex: 0,
+  },
+  gamelab_newSpritePointer: {
+    imageSourceType: 'gamelab_whenSpriteCreated',
+    imageIndex: 0,
+  },
+  gamelab_subjectSpritePointer: {
+    imageSourceType: 'gamelab_checkTouching',
+    imageIndex: 0,
+  },
+  gamelab_objectSpritePointer: {
+    imageSourceType: 'gamelab_checkTouching',
+    imageIndex: 1,
+  },
+};

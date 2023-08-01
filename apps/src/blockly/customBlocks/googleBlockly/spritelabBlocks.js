@@ -2,10 +2,11 @@ import _ from 'lodash';
 import {SVG_NS} from '@cdo/apps/constants';
 import Button from '@cdo/apps/templates/Button';
 import {
-  blockShadowingPairs,
-  updateShadowedBlockImage,
+  updatePointerBlockImage,
+  spriteLabPointers,
 } from '@cdo/apps/blockly/addons/cdoBlockShadow';
 import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
+//import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blocks';
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 
 export const blocks = {
@@ -79,7 +80,7 @@ export const blocks = {
     }
 
     if (this.workspace.rendered) {
-      const parentBlockId = this.id;
+      const imageSourceId = this.id;
       this.workspace.registerToolboxCategoryCallback(
         CdoFieldFlyout.getFlyoutId(this),
         function (workspace) {
@@ -89,7 +90,7 @@ export const blocks = {
               kind: 'block',
               type: blockType,
               extraState: {
-                parentBlockId: parentBlockId,
+                imageSourceId: imageSourceId,
               },
             })
           );
@@ -132,24 +133,24 @@ export const blocks = {
     };
   },
 
-  // Set up this block to shadow a parent block's image, if needed. This will also
-  // deserialize any parent toolbox information from the block configuration.
+  // Set up this block to shadow a image source block's image, if needed. This will also
+  // deserialize the image source id from the block configuration, if it exists.
   setUpBlockShadowing() {
-    // We only set up block shadowing for blocks that have a type in blockShadowingPairs.
-    if (Object.keys(blockShadowingPairs).includes(this.type)) {
-      // saveExtraState is used to serialize the parent block ID.
+    // We only set up block shadowing for blocks that have a type in spriteLabPointers.
+    if (Object.keys(spriteLabPointers).includes(this.type)) {
+      // saveExtraState is used to serialize the image source block ID.
       this.saveExtraState = function () {
         return {
-          parentBlockId: this.parentBlockId,
+          imageSourceId: this.imageSourceId,
         };
       };
 
-      // loadExtraState is used to deserialize the parent block ID.
-      // We use this id to set the initial shadowed block image.
+      // loadExtraState is used to deserialize the image source block ID.
+      // We use this id to set the initial pointer block image.
       this.loadExtraState = function (state) {
-        this.parentBlockId = state['parentBlockId'];
-        if (this.parentBlockId) {
-          updateShadowedBlockImage(this, this.parentBlockId);
+        this.imageSourceId = state['imageSourceId'];
+        if (this.imageSourceId) {
+          updatePointerBlockImage(this, spriteLabPointers, this.imageSourceId);
         }
       };
 
@@ -187,7 +188,7 @@ export const blocks = {
             event.type === Blockly.Events.BLOCK_CHANGE ||
             event.type === Blockly.Events.BLOCK_DRAG)
         ) {
-          updateShadowedBlockImage(this);
+          updatePointerBlockImage(this, spriteLabPointers);
         }
       };
     }

@@ -9,6 +9,7 @@ import {changeInterfaceMode} from '../actions';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 import {parseSoundPathString} from '@cdo/apps/blockly/utils';
+import {spriteLabPointers} from '@cdo/apps/blockly/addons/cdoBlockShadow';
 
 function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;
@@ -293,7 +294,10 @@ const customInputTypes = {
       // initialize the field with the image and short string.
       // Otherwise, initialize the field with the long string and a 1 pixel
       // wide empty image.
-      const imageUrl = Blockly.getShadowedBlockImageUrl(block);
+      const imageUrl = Blockly.getPointerBlockImageUrl(
+        block,
+        spriteLabPointers
+      );
       const width = imageUrl.length > 0 ? block.thumbnailSize : 1;
       const firstField =
         imageUrl.length > 0 ? block.shortString : block.longString;

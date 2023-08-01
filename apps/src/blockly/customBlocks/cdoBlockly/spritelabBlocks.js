@@ -58,7 +58,7 @@ export const blocks = {
   // This is just needed by block_utils when using the Google Blockly Wrapper.
   appendMiniToolboxToggle() {},
 
-  // Set up this block to shadow a parent block's image, if needed.
+  // Set up this block to shadow an image source block's image, if needed.
   setUpBlockShadowing() {
     switch (this.type) {
       case 'gamelab_clickedSpritePointer':

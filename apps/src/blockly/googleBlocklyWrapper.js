@@ -55,7 +55,7 @@ import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
 import CdoFieldImage from './addons/cdoFieldImage';
-import {getShadowedBlockImageUrl} from './addons/cdoBlockShadow';
+import {getPointerBlockImageUrl} from './addons/cdoBlockShadow';
 import {
   ObservableProcedureModel,
   ObservableParameterModel,
@@ -691,7 +691,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.cdoUtils = cdoUtils;
   blocklyWrapper.customBlocks = customBlocks;
-  blocklyWrapper.getShadowedBlockImageUrl = getShadowedBlockImageUrl;
+  blocklyWrapper.getPointerBlockImageUrl = getPointerBlockImageUrl;
 
   return blocklyWrapper;
 }
