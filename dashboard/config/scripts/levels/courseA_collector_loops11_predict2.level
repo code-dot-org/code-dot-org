@@ -35,10 +35,15 @@
     "contained_level_names": [
       "courseA_multi_collector_loops11_predict2"
     ],
-    "step_speed": "2"
+    "step_speed": "2",
+    "encrypted": "false",
+    "show_type_hints": "false",
+    "shape_shift": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-07-31 21:53:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-07-31 21:55:03 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-07-31 21:55:14 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-07-31 21:58:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-07-31 22:00:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -47,8 +52,8 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_simplified_dropdown">
-              <title name="TIMES" config="2-10">7</title>
+            <block type="controls_repeat_dropdown">
+              <field name="TIMES" config="2-10">7</field>
               <statement name="DO">
                 <block type="maze_moveWest">
                   <next>
@@ -57,8 +62,8 @@
                 </block>
               </statement>
               <next>
-                <block type="controls_repeat_simplified_dropdown">
-                  <title name="TIMES" config="2-10">6</title>
+                <block type="controls_repeat_dropdown">
+                  <field name="TIMES" config="2-10">6</field>
                   <statement name="DO">
                     <block type="maze_moveSouth">
                       <next>
@@ -67,8 +72,8 @@
                     </block>
                   </statement>
                   <next>
-                    <block type="controls_repeat_simplified_dropdown">
-                      <title name="TIMES" config="2-10">5</title>
+                    <block type="controls_repeat_dropdown">
+                      <field name="TIMES" config="2-10">7</field>
                       <statement name="DO">
                         <block type="maze_moveEast">
                           <next>
@@ -97,8 +102,5 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <recommended_blocks>
-      <xml/>
-    </recommended_blocks>
   </blocks>
 </Karel>
