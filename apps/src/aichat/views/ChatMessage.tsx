@@ -24,28 +24,19 @@ const isUser = (role: string) => {
 const displayUserMessage = (status: string, chatMessageText: string) => {
   if (status === 'ok') {
     return (
-      <div
-        id={'chat-workspace-message-body'}
-        className={classNames(styles.message, styles.userMessage)}
-      >
+      <div className={classNames(styles.message, styles.userMessage)}>
         {chatMessageText}
       </div>
     );
   } else if (status === 'inappropriate') {
     return (
-      <div
-        id={'chat-workspace-message-body-inappropriate'}
-        className={classNames(styles.message, styles.inappropriateMessage)}
-      >
+      <div className={classNames(styles.message, styles.inappropriateMessage)}>
         {INAPPROPRIATE_MESSAGE}
       </div>
     );
   } else if (status === 'personal') {
     return (
-      <div
-        id={'chat-workspace-message-body-too-personal'}
-        className={classNames(styles.message, styles.tooPersonalMessage)}
-      >
+      <div className={classNames(styles.message, styles.tooPersonalMessage)}>
         {TOO_PERSONAL_MESSAGE}
       </div>
     );
