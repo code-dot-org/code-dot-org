@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './aichat.module.scss';
 import {openaiCompletion} from '@cdo/apps/util/openai';
+import {ChatMessage} from '../redux/aichatRedux';
 
 /**
  * Renders a simple AI chat.
@@ -8,11 +9,6 @@ import {openaiCompletion} from '@cdo/apps/util/openai';
 
 interface AichatProps {
   children: React.ReactNode;
-}
-
-interface ChatMessage {
-  content: string;
-  role: 'system' | 'user' | 'assistant' | 'function';
 }
 
 const Aichat: React.FunctionComponent<AichatProps> = ({children}) => {
