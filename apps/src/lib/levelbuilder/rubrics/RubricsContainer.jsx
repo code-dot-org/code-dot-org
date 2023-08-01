@@ -4,13 +4,15 @@ import {BodyTwoText, Heading1} from '@cdo/apps/componentLibrary/typography';
 import LearningGoalItem from './LearningGoalItem';
 import Button from '@cdo/apps/templates/Button';
 
-export default function RubricsContainer({unit, lesson}) {
+// TODO: After the MVP is done, consider how to handle stand-alone lessons/units
+export default function RubricsContainer({unitName, lessonNumber, levels}) {
   // note that the use of currentId here is temporary until we are connected to the data
   const [currentId, setCurrentId] = useState(1);
   const [learningGoalList, setLearningGoalList] = useState([{id: currentId}]);
 
-  // holding levels in this temporary variable before connecting the data
-  const tempLevelList = [1, 2, 3, 4, 5];
+  // TODO: In the future we might want to filter this for "submittable" levels
+  //  "submittable" is in the properties of each level in the list.
+  const levelsForDropDownList = levels.map(level => level.name);
 
   const renderLearningGoalItems = learningGoalList.map(goal => (
     <LearningGoalItem
@@ -42,7 +44,7 @@ export default function RubricsContainer({unit, lesson}) {
     <div>
       <Heading1>Create or modify your rubric</Heading1>
       <BodyTwoText>
-        This rubric will be used for Unit {unit}, lesson {lesson}.
+        This rubric will be used for {unitName}, lesson {lessonNumber}.
       </BodyTwoText>
 
       <div style={styles.containerStyle}>
@@ -51,7 +53,7 @@ export default function RubricsContainer({unit, lesson}) {
           required={true}
           onChange={() => console.log('dropdown changed')}
         >
-          {tempLevelList.map(level => (
+          {levelsForDropDownList.map(level => (
             <option key={level} value={level}>
               {level}
             </option>
@@ -82,8 +84,9 @@ export default function RubricsContainer({unit, lesson}) {
 }
 
 RubricsContainer.propTypes = {
-  unit: PropTypes.number,
-  lesson: PropTypes.number,
+  unitName: PropTypes.string,
+  lessonNumber: PropTypes.number,
+  levels: PropTypes.array,
 };
 
 const styles = {

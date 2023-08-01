@@ -36,6 +36,7 @@ class LessonEditor extends Component {
     initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
     initialLessonData: PropTypes.object,
     unitInfo: PropTypes.object,
+    hasRubric: PropTypes.bool,
 
     // from redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
@@ -134,6 +135,10 @@ class LessonEditor extends Component {
       });
   };
 
+  getLessonId = () => {
+    return this.props.initialLessonData.id;
+  };
+
   handleUpdateAnnouncements = newAnnouncements => {
     this.setState({announcements: newAnnouncements});
   };
@@ -157,8 +162,13 @@ class LessonEditor extends Component {
       preparation,
       announcements,
     } = this.state;
-    const {relatedLessons, standards, opportunityStandards, unitInfo} =
-      this.props;
+    const {
+      relatedLessons,
+      standards,
+      opportunityStandards,
+      unitInfo,
+      hasRubric,
+    } = this.props;
     const frameworks = this.props.initialLessonData.frameworks;
 
     const allowMajorCurriculumChanges = unitInfo.allowMajorCurriculumChanges;
@@ -457,14 +467,26 @@ class LessonEditor extends Component {
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         </CollapsibleEditorSection>
-        <a
-          className="btn add-rubric"
-          style={styles.addRubric}
-          href="/rubrics/new"
-        >
-          <i style={styles.buttonText} className="fa fa-plus-circle" />
-          Add Rubric
-        </a>
+        {!hasRubric && (
+          <a
+            className="btn add-rubric"
+            style={styles.addRubric}
+            href={'/rubrics/new?lessonId=' + this.getLessonId()}
+          >
+            <i style={styles.buttonText} className="fa fa-plus-circle" />
+            Add Rubric
+          </a>
+        )}
+        {hasRubric && (
+          <a
+            className="btn add-rubric"
+            style={styles.addRubric}
+            href={'/rubrics/' + this.getLessonId() + '/edit'}
+          >
+            <i style={styles.buttonText} className="fa fa-plus-circle" />
+            Edit Rubric
+          </a>
+        )}
 
         <SaveBar
           handleSave={this.handleSave}
