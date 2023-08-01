@@ -1,12 +1,9 @@
 import _ from 'lodash';
 import {SVG_NS} from '@cdo/apps/constants';
 import Button from '@cdo/apps/templates/Button';
-import {
-  updatePointerBlockImage,
-  spriteLabPointers,
-} from '@cdo/apps/blockly/addons/cdoSpritePointer';
+import {updatePointerBlockImage} from '@cdo/apps/blockly/addons/cdoSpritePointer';
 import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
-//import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blocks';
+import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 
 export const blocks = {

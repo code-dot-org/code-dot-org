@@ -9,7 +9,7 @@ import {changeInterfaceMode} from '../actions';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 import {parseSoundPathString} from '@cdo/apps/blockly/utils';
-import {spriteLabPointers} from '@cdo/apps/blockly/addons/cdoBlockShadow';
+import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 
 function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;
