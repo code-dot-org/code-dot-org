@@ -14,9 +14,10 @@ import {
   AppName,
   Channel,
   LevelData,
-  LevelProperties,
+  ServerLevelProperties,
   ProjectManagerStorageType,
   ProjectSources,
+  LevelProperties,
 } from './types';
 import Lab2Registry from './Lab2Registry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
@@ -53,14 +54,10 @@ export interface LabState {
   // Initial sources for the current level, as loaded from the server. Subsequent changes to sources
   // while the project is being edited are managed by the Lab and Project Manager directly.
   initialSources: ProjectSources | undefined;
-  // Level data for the current level
-  levelData: LevelData | undefined;
-  hideShareAndRemix: boolean;
-  isProjectLevel: boolean;
+  levelProperties: LevelProperties;
   // Validation status for the current level. This is used by the progress system to determine
   // what instructions to display and if the user has satisfied the validation conditions, if present.
   validationState: ValidationState;
-  appName: AppName | undefined;
 }
 
 const initialState: LabState = {
@@ -69,11 +66,13 @@ const initialState: LabState = {
   pageError: undefined,
   channel: undefined,
   initialSources: undefined,
-  levelData: undefined,
-  hideShareAndRemix: true,
-  isProjectLevel: false,
   validationState: {...initialValidationState},
-  appName: undefined,
+  levelProperties: {
+    isProjectLevel: false,
+    hideShareAndRemix: true,
+    levelData: undefined,
+    appName: undefined,
+  },
 };
 
 // Thunks
@@ -227,10 +226,10 @@ const labSlice = createSlice({
       state.channel = action.payload;
     },
     setHideShareAndRemix(state, action: PayloadAction<boolean>) {
-      state.hideShareAndRemix = action.payload;
+      state.levelProperties.hideShareAndRemix = action.payload;
     },
     setIsProjectLevel(state, action: PayloadAction<boolean>) {
-      state.isProjectLevel = action.payload;
+      state.levelProperties.isProjectLevel = action.payload;
     },
     setValidationState(state, action: PayloadAction<ValidationState>) {
       state.validationState = {...action.payload};
@@ -247,8 +246,8 @@ const labSlice = createSlice({
       }>
     ) {
       state.channel = action.payload.channel;
-      state.appName = action.payload.appName;
-      state.levelData = action.payload.levelData;
+      state.levelProperties.appName = action.payload.appName;
+      state.levelProperties.levelData = action.payload.levelData;
       state.initialSources = action.payload.initialSources;
     },
   },
@@ -328,7 +327,7 @@ function setProjectAndLevelData(
   data: {
     channel?: Channel;
     initialSources?: ProjectSources;
-    levelProperties?: LevelProperties;
+    levelProperties?: ServerLevelProperties;
   },
   aborted: boolean,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
@@ -368,8 +367,8 @@ function setProjectAndLevelData(
 
 async function loadLevelProperties(
   levelPropertiesPath: string
-): Promise<LevelProperties> {
-  const response = await HttpClient.fetchJson<LevelProperties>(
+): Promise<ServerLevelProperties> {
+  const response = await HttpClient.fetchJson<ServerLevelProperties>(
     levelPropertiesPath
   );
   return response.value;
