@@ -301,7 +301,10 @@ module AWS
       begin
         cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: @stack_id) do |w|
           w.delay = 5 # seconds
-          w.max_attempts = 1.5.hours / w.delay
+          # TODO: lower this back to 1.5 hours once we're no longer building
+          # Node.js from source as part of adhoc creation, which right now is
+          # making this often take longer than that.
+          w.max_attempts = 2.5.hours / w.delay
           w.before_wait do
             yield
             print '.' unless options[:quiet]
