@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2023-07-26 22:32:46 UTC",
+    "serialized_at": "2023-07-31 17:49:00 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -12426,7 +12426,7 @@
     },
     {
       "name": "Shoe Survey",
-      "url": "https://docs.google.com/forms/d/1PWlwQuyTn_7f4lQUXkujQRZQrDPXFQllw7y7IGd02VM/view",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc7rkOHqoMHb2GLBW5tuTjVFPY7xblkCLnzCpGyF6UaX2mKpQ/viewform?usp=sharing",
       "key": "shoe_survey",
       "properties": {
         "audience": "Teacher",
@@ -14545,6 +14545,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
