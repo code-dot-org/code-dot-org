@@ -64,6 +64,6 @@ portForward:
 - resourceType: StatefulSet
   resourceName: db
   port: 3306
-- resourceType: deployment
-  resourceName: svc/kubernetes-dashboard-nginx-controller
-  port: 8443:443
+# - resourceType: deployment
+#   resourceName: svc/kubernetes-dashboard-nginx-controller
+#   port: 8443:443
