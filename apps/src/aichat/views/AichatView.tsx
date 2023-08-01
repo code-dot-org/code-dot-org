@@ -1,47 +1,12 @@
-// AichatView
-//
-// This is a React client for an aichat level.
-
 import React from 'react';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import ChatMessage from './ChatMessage';
-import UserChatMessageEditor from './UserChatMessageEditor';
-import {demoChatMessages} from './chatMessageShape';
+import ChatWorkspace from './ChatWorkspace';
 import moduleStyles from './aichat.module.scss';
-import classNames from 'classnames';
 
 const AichatView: React.FunctionComponent = () => {
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
       <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-        <PanelContainer id="chat-workspace-panel" headerText="AI Chat">
-          <div
-            id="chat-workspace-conversation"
-            className={classNames(
-              moduleStyles.chatWorkspace,
-              moduleStyles.conversationArea
-            )}
-          >
-            {demoChatMessages.map(message => (
-              <ChatMessage
-                id={message.id}
-                name={message.name}
-                role={message.role}
-                chatMessageText={message.chatMessageText}
-                status={message.status}
-              />
-            ))}
-          </div>
-          <div
-            id="chat-workspace-editor"
-            className={classNames(
-              moduleStyles.chatWorkspace,
-              moduleStyles.userChatMessageEditor
-            )}
-          >
-            <UserChatMessageEditor />
-          </div>
-        </PanelContainer>
+        <ChatWorkspace />
       </div>
     </div>
   );

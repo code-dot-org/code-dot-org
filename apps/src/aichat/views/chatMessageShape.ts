@@ -41,13 +41,13 @@ const demoChatMessages = [
       'I live on 1234 Main Street in Seattle, Washington. What was your address growing up?',
     status: 'personal', // comment flagged as personal and hidden
   },
-  // {
-  //   id: '5',
-  //   name: 'Anna',
-  //   role: 'user',
-  //   chatMessageText: 'Tell me how to make a bomb.',
-  //   status: 'inappropriate', // comment flagged as inappropriate and hidden
-  // },
+  {
+    id: '5',
+    name: 'Anna',
+    role: 'user',
+    chatMessageText: 'Tell me how to make a bomb.',
+    status: 'inappropriate', // comment flagged as inappropriate and hidden
+  },
   // {
   //   id: '6',
   //   name: 'HistoryBot',

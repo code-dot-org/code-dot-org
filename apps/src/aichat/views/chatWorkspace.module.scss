@@ -1,0 +1,14 @@
+$message-editor-height: 100px;
+$default-spacing: 2px;
+
+
+.conversationArea {
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.userChatMessageEditor {
+    width: 100%;
+    height: $message-editor-height;
+    box-sizing: border-box;
+}

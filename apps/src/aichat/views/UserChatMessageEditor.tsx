@@ -1,12 +1,12 @@
 import React from 'react';
 import Button from '@cdo/apps/templates/Button';
-import styles from './userChatMessageEditor.module.scss';
+import moduleStyles from './userChatMessageEditor.module.scss';
 
 const UserChatMessageEditor: React.FunctionComponent = () => {
   return (
-    <div className={styles.UserChatMessageEditor}>
+    <div className={moduleStyles.UserChatMessageEditor}>
       <textarea
-        className={styles.textArea}
+        className={moduleStyles.textArea}
         placeholder="Add a chat message..."
       />
       <Button

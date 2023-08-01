@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './chatMessage.module.scss';
+import moduleStyles from './chatMessage.module.scss';
 import classNames from 'classnames';
 
 interface ChatMessageProps {
@@ -24,19 +24,31 @@ const isUser = (role: string) => {
 const displayUserMessage = (status: string, chatMessageText: string) => {
   if (status === 'ok') {
     return (
-      <div className={classNames(styles.message, styles.userMessage)}>
+      <div
+        className={classNames(moduleStyles.message, moduleStyles.userMessage)}
+      >
         {chatMessageText}
       </div>
     );
   } else if (status === 'inappropriate') {
     return (
-      <div className={classNames(styles.message, styles.inappropriateMessage)}>
+      <div
+        className={classNames(
+          moduleStyles.message,
+          moduleStyles.inappropriateMessage
+        )}
+      >
         {INAPPROPRIATE_MESSAGE}
       </div>
     );
   } else if (status === 'personal') {
     return (
-      <div className={classNames(styles.message, styles.tooPersonalMessage)}>
+      <div
+        className={classNames(
+          moduleStyles.message,
+          moduleStyles.tooPersonalMessage
+        )}
+      >
         {TOO_PERSONAL_MESSAGE}
       </div>
     );
@@ -50,7 +62,10 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
     return (
       <div
         id={'chat-workspace-message-body'}
-        className={classNames(styles.message, styles.assistantMessage)}
+        className={classNames(
+          moduleStyles.message,
+          moduleStyles.assistantMessage
+        )}
       >
         {chatMessageText}
       </div>
@@ -68,15 +83,18 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   return (
     <div id={`ChatMessage id: ${id}`}>
       {isUser(role) && (
-        <div className={styles.userMessageContainer}>
+        <div className={moduleStyles.userMessageContainer}>
           {displayUserMessage(status, chatMessageText)}
         </div>
       )}
 
       {isAssistant(role) && (
-        <div className={styles.assistantMessageContainer}>
+        <div className={moduleStyles.assistantMessageContainer}>
           <div
-            className={classNames(styles.messageHeaderContainer, styles.name)}
+            className={classNames(
+              moduleStyles.messageHeaderContainer,
+              moduleStyles.name
+            )}
           >
             {name} ({role})
           </div>
