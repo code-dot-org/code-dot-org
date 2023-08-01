@@ -28,7 +28,6 @@ import Select from 'react-select';
 import moment from 'moment';
 import DatePicker from '../../code-studio/pd/workshop_dashboard/components/date_picker';
 import 'react-select/dist/react-select.css';
-import 'react-datepicker/dist/react-datepicker.css';
 
 const translatedNoneOption = `(${i18n.none()})`;
 
