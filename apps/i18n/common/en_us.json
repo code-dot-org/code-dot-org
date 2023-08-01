@@ -2104,6 +2104,7 @@
   "share": "Share",
   "shareCopyLink": "Copy the link:",
   "shareEmbedDescription": "You can paste the embed code into an HTML page to display the project on a webpage.",
+  "shareEmbedWarning": "Some functionality, such as the playSpeech function, will not work on embedded projects.",
   "shareLibraryButton": "Assign library",
   "shareLibrary": "Share as library",
   "shareLibraryAccess": "Sharing an ID directly gives permanent access to your library",
