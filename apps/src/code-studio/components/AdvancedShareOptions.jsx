@@ -38,12 +38,6 @@ const style = {
     color: color.neutral_dark,
     fontFamily: "'Gotham 5r', sans-serif",
   },
-  warningp: {
-    fontSize: 'inherit',
-    lineHeight: 'inherit',
-    color: color.red,
-    fontFamily: "'Gotham 5r', sans-serif",
-  },
   bold: {
     fontFamily: "'Gotham 7r', sans-serif",
   },
@@ -135,7 +129,6 @@ class AdvancedShareOptions extends React.Component {
     return (
       <div>
         <p style={style.p}>{i18n.shareEmbedDescription()}</p>
-        <p style={style.warningp}>{i18n.shareEmbedWarning()}</p>
         <textarea
           type="text"
           onClick={e => e.target.select()}
