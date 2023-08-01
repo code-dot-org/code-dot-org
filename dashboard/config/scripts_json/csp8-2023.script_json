@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-18 20:42:12 UTC",
+    "serialized_at": "2023-07-31 23:07:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3530,6 +3530,18 @@
       }
     },
     {
+      "name": "Cybersecurity and Global Impacts (Unit Slides)",
+      "url": "https://docs.google.com/presentation/d/1yA5Wzqz4NwsCaOstBjGqOckTBbj6pcoIM-VDh6o9F2g/edit?usp=sharing",
+      "key": "cybersecurity_and_global_impacts_unit_slides_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "cybersecurity_and_global_impacts_unit_slides_"
+      }
+    },
+    {
       "name": "Encryption and Public Keys",
       "url": "https://youtu.be/ZghMPWGXexs",
       "key": "encryption_and_public_keys",
@@ -3736,6 +3748,12 @@
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 1",
         "resource.key": "csp_unit_8_-_lesson_1_-_project_innovation_simulation_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Innovation Simulation Part 1",
+        "resource.key": "cybersecurity_and_global_impacts_unit_slides_"
       }
     },
     {
@@ -4791,6 +4809,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

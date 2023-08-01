@@ -11,15 +11,18 @@ import Lab2Wrapper from './Lab2Wrapper';
 import ProjectContainer from '../projects/ProjectContainer';
 import MetricsAdapter from './MetricsAdapter';
 import LabViewsRenderer from './LabViewsRenderer';
+import DialogManager from './dialogs/DialogManager';
 
 const Lab2: React.FunctionComponent = () => {
   return (
     <Provider store={getStore()}>
       <Lab2Wrapper>
-        <MetricsAdapter />
-        <ProjectContainer channelId={getStandaloneProjectId()}>
-          <LabViewsRenderer />
-        </ProjectContainer>
+        <DialogManager>
+          <MetricsAdapter />
+          <ProjectContainer channelId={getStandaloneProjectId()}>
+            <LabViewsRenderer />
+          </ProjectContainer>
+        </DialogManager>
       </Lab2Wrapper>
     </Provider>
   );

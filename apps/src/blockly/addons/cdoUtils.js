@@ -12,6 +12,8 @@ import {
   positionBlocksOnWorkspace,
 } from './cdoSerializationHelpers';
 import {parseElement as parseXmlElement} from '../../xml';
+import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
+import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
 
 /**
  * Loads blocks to a workspace.
@@ -23,13 +25,16 @@ import {parseElement as parseXmlElement} from '../../xml';
 export function loadBlocksToWorkspace(workspace, source) {
   let isXml = stringIsXml(source);
   let stateToLoad;
+  let blockOrderMap;
   if (isXml) {
-    stateToLoad = convertXmlToJson(parseXmlElement(source));
+    const xml = parseXmlElement(source);
+    stateToLoad = convertXmlToJson(xml);
+    blockOrderMap = Blockly.Xml.createBlockOrderMap(xml);
   } else {
     stateToLoad = JSON.parse(source);
   }
   Blockly.serialization.workspaces.load(stateToLoad, workspace);
-  positionBlocksOnWorkspace(workspace);
+  positionBlocksOnWorkspace(workspace, blockOrderMap);
 }
 
 export function setHSV(block, h, s, v) {
@@ -199,4 +204,9 @@ export function locationField(icon, onClick) {
     transformText: transformTextSetField,
     icon,
   });
+}
+
+export function registerCustomProcedureBlocks() {
+  unregisterProcedureBlocks();
+  Blockly.common.defineBlocks(procedureBlocks);
 }
