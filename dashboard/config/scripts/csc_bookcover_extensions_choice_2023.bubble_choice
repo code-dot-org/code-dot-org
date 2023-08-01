@@ -3,9 +3,6 @@ display_name 'Extend Your Book Cover!'
 description 'Choose from the activities below to add to your book cover! You can pick multiple options and do more than one!'
 
 sublevels
-level 'csc_bookcover_clicksay_2023'
-level 'csc_bookcover_prompt_2023'
-level 'csc_bookcover_promptanswered_2023'
 level 'csc_bookcover_foreground_2023'
 level 'csc_bookcover_behavior_2023'
 level 'csc_bookcover_burst_2023'

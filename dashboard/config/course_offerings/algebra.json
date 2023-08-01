@@ -3,7 +3,7 @@
   "display_name": "Computer Science in Algebra",
   "category": "math",
   "is_featured": false,
-  "assignable": true,
+  "assignable": false,
   "curriculum_type": null,
   "marketing_initiative": null,
   "grade_levels": "6,7,8",
@@ -11,5 +11,10 @@
   "image": "https://images.code.org/2eca236c5eee8b057b68b86606cece7b-CS in Algebra.png",
   "cs_topic": "programming",
   "school_subject": "math",
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_id": null
 }

@@ -1,0 +1,65 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2023-06-08T22:38:23.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "level_data": {
+      "text": "First, please play one sound.",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        }
+      },
+      "sounds": {
+        "beats": [
+          "disco_beat",
+          "reggaeton_beat"
+        ]
+      },
+      "validations": [
+        {
+          "conditions": [
+            {"name": "played_sounds_together", "value": 1}
+          ],
+          "message": "Nice work.",
+          "next": "true"
+        },
+        {
+          "message": "Please play one sound."
+        }
+      ],
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "id": "when-run-block",
+              "type": "when_run_simple2",
+              "x": 34,
+              "y": 34
+            }
+          ]
+        },
+        "variables": [
+          {
+            "name": "currentTime"
+          },
+          {
+            "name": "i"
+          }
+        ]
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-08T22:38:23.788+00:00\",\"changed\":[\"cloned from \\\"Music Level 1\\\"\"],\"cloned_from\":\"Music Level 1\"}]"
+}]]></config>
+  <blocks/>
+</Music>

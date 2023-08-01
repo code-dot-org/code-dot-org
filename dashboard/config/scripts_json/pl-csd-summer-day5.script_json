@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-10 20:01:57 UTC",
+    "serialized_at": "2023-05-12 17:37:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -80,7 +80,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**Purpose:**\nTake a deeper look at assessment resources available in the curriculum\nDiscuss with other teachers who grade and assess in similar ways about how to grade and assess CS Discoveries\n\n\n**Objectives:**\n* Participants develop concrete strategies and plans for assessment while using this curriculum\n* Participants make plans for sharing resources and think about how they can build off of each other’s work\n* Participants become more familiar with the assessment resources in the curriculum\n\n**Suggested Time:** 40 minutes",
-        "student_overview": "\n\n**You will:**\n* Develop concrete strategies and plans for assessment while using this curriculum\n* Make plans for sharing resources and think about how they can build off of each other’s work\n* Become more familiar with the assessment resources in the curriculum"
+        "student_overview": "**You will:**\n* Develop concrete strategies and plans for assessment while using this curriculum\n* Make plans for sharing resources and think about how you can build off of each other’s work\n* Become more familiar with the assessment resources in the curriculum"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -97,7 +97,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**Purpose:**\nThis session is intended to provide a space for participants to revisit important topics from earlier in the week and share implementation ideas with each other. These ideas can be revisited later in the day when participants begin to work on their plans for the year.\n\n\n**Objectives:**\n* Participants have shared implementation ideas with each other\n* Participants have written down ideas they would like to implement in their classroom\n\n**Suggested Time:** 45 minutes",
-        "student_overview": "**You will:**\n* Share implementation ideas with each other teachers\n* Write down ideas you would like to implement in their classroom"
+        "student_overview": "**You will:**\n* Share implementation ideas with other teachers\n* Write down ideas you would like to implement in your classroom"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",

@@ -22,3 +22,12 @@ Which of the following best describes the behavior of the method?
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+The `strChange` method is a recursive method that operates on a `String`. Here's how it works:
+
+1. If the length of the `String` is greater than `0`, it prints the first character of the `String` (using `str.substring(0, 1)`) and then calls itself recursively on the rest of the `String` (using `str.substring(1)`).
+
+2. This process continues until the `String` is empty, at which point the recursion stops because the method does nothing when the length of the `String` is not greater than `0`.
+
+The effect of this method is to print the characters of the `String` in the order they appear, starting from the first character and continuing to the last.
+MARKDOWN

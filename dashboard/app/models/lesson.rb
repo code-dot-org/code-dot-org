@@ -57,6 +57,8 @@ class Lesson < ApplicationRecord
   has_many :lessons_opportunity_standards,  dependent: :destroy
   has_many :opportunity_standards, through: :lessons_opportunity_standards, source: :standard
 
+  has_one :rubric, dependent: :destroy
+
   self.table_name = 'stages'
 
   serialized_attrs %w(
@@ -597,7 +599,7 @@ class Lesson < ApplicationRecord
 
   def next_level_number_for_lesson_extras(user)
     next_level = next_level_for_lesson_extras(user)
-    next_level ? next_level.lesson.relative_position : nil
+    next_level&.lesson&.relative_position
   end
 
   # Updates this lesson's lesson_activities to match the activities represented
@@ -631,13 +633,13 @@ class Lesson < ApplicationRecord
   def update_objectives(objectives)
     return unless objectives
 
-    self.objectives = objectives.map do |objective|
+    self.objectives = objectives.filter_map do |objective|
       next nil if objective['description'].blank?
       persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
-    end.compact
+    end
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to

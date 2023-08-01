@@ -132,9 +132,6 @@ jotform_forms:
     post201:     90065524560150
     facilitator: 91405279991164
 
-# Learning Tools Interoperability (LTI)
-lti_credentials: !Secret
-
 # PagerDuty
 pagerduty_token: !Secret
 
@@ -318,6 +315,9 @@ discourse_sso_secret:
 
 ### Application configuration defaults
 
+# Installs bin/i18n dependencies
+build_i18n: false
+
 i18n_backend:
 cache:
 app_servers: {}
@@ -387,7 +387,7 @@ dashboard_secret_key_base: !Secret
 dashboard_host: 0.0.0.0
 dashboard_port: 3000
 dashboard_workers: 8
-dashboard_unicorn_name: dashboard
+dashboard_web_server_name: dashboard
 dashboard_sock:
 
 # Causes dashboard-server to run pegasus as middleware, starting both in a
@@ -399,7 +399,7 @@ override_pegasus:
 pegasus_host:
 pegasus_sock:
 pegasus_port: 3000
-pegasus_unicorn_name: pegasus
+pegasus_web_server_name: pegasus
 pegasus_workers: 8
 sinatra_session_secret:
 
@@ -446,7 +446,7 @@ stub_school_data: false
 
 disable_s3_image_uploads: false
 
-channels_api_secret: <%=poste_secret%>
+channels_api_secret: !Secret
 
 # Whether to prefix bundler commands with 'sudo'.
 # It may be useful to set this false when doing local development on Linux.
@@ -514,15 +514,23 @@ redshift_password:
 
 devinternal_db_writer: !Secret
 
-# Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
-db_cluster_id: !Secret
-db_proxy_reporting_endpoint: !Secret
-db_writer_endpoint: !Secret
+# Temporarily set in locals.yml until Stack Secrets are ready to deploy.
+db_cluster_id:
 
+db_endpoint_writer: PLACEHOLDER
+db_endpoint_proxy_writer: PLACEHOLDER
+db_endpoint_proxy_reader: PLACEHOLDER
+db_endpoint_proxy_reporting: PLACEHOLDER
+
+# Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
+# https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
+db_credential_admin: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
 db_admin_user: master
 db_admin_password: !Secret
+db_credential_writer: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
 db_writer_user: application-writer
 db_writer_password: !Secret
+db_credential_reader: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
 db_reader_user: readonly
 db_reader_password: !Secret
 
@@ -583,6 +591,19 @@ cdo_amplitude_api_key:
 
 # Credentials for the OpenAI API
 openai_api_key:
-
 # To distinguish from api key owner's personal / default organization
 openai_org:
+
+# API Key for doublethedonation.com
+ddconf_api_key: !Secret
+
+# JSON Web Key Set and private key data
+jwks_data: <%=File.read("#{File.expand_path(File.dirname(__FILE__))}/dashboard/public/oauth/jwks.json")%>
+jwk_private_key_data: !Secret
+
+# EC2 Metadata endpoint
+ec2_instance_id_endpoint: 'http://169.254.169.254/latest/meta-data/instance-id'
+
+# Credentials for OpenAI API
+openai_chat_completion_api_key: !Secret
+openai_chat_completion_org_id: !Secret

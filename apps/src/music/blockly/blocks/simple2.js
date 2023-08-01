@@ -1,7 +1,6 @@
 import {BlockTypes} from '../blockTypes';
 import {
   TRIGGER_FIELD,
-  DYNAMIC_TRIGGER_EXTENSION,
   FIELD_SOUNDS_NAME,
   FIELD_PATTERN_NAME,
   FIELD_REST_DURATION_NAME,
@@ -9,12 +8,15 @@ import {
   FIELD_EFFECTS_VALUE,
   FIELD_CHORD_NAME,
   DOCS_BASE_URL,
+  FIELD_TRIGGER_START_NAME,
+  TriggerStart,
 } from '../constants';
 import {
   fieldSoundsDefinition,
   fieldPatternDefinition,
   fieldRestDurationDefinition,
   fieldChordDefinition,
+  fieldTriggerDefinition,
 } from '../fields';
 import {getCodeForSingleBlock} from '../blockUtils';
 import musicI18n from '../../locale';
@@ -94,23 +96,37 @@ export const whenRunSimple2 = {
 export const triggeredAtSimple2 = {
   definition: {
     type: BlockTypes.TRIGGERED_AT_SIMPLE2,
-    message0: musicI18n.blockly_blockTriggered({trigger: '%1'}),
+    message0: musicI18n.blockly_blockTriggered({trigger: '%1', when: '%2'}),
     args0: [
+      fieldTriggerDefinition,
       {
-        type: 'input_dummy',
-        name: TRIGGER_FIELD,
+        type: 'field_dropdown',
+        name: FIELD_TRIGGER_START_NAME,
+        options: [
+          [
+            musicI18n.blockly_fieldTriggerStartImmediately(),
+            TriggerStart.IMMEDIATELY,
+          ],
+          [
+            musicI18n.blockly_fieldTriggerStartNextBeat(),
+            TriggerStart.NEXT_BEAT,
+          ],
+          [
+            musicI18n.blockly_fieldTriggerStartNextMeasure(),
+            TriggerStart.NEXT_MEASURE,
+          ],
+        ],
       },
     ],
     inputsInline: true,
     nextStatement: null,
     style: 'event_blocks',
     tooltip: musicI18n.blockly_blockTriggeredTooltip(),
-    extensions: [DYNAMIC_TRIGGER_EXTENSION],
     helpUrl: DOCS_BASE_URL + 'trigger',
   },
   generator: block =>
     `
-      Sequencer.newSequence(Math.ceil(startPosition), true);
+      Sequencer.newSequence(startPosition, true);
       Sequencer.startFunctionContext('${block.getFieldValue(TRIGGER_FIELD)}');
       Sequencer.playSequential();
     `,
@@ -131,7 +147,7 @@ export const playSoundAtCurrentLocationSimple2 = {
   generator: block =>
     `Sequencer.playSound("${block.getFieldValue(FIELD_SOUNDS_NAME)}", "${
       block.id
-    }");`,
+    }");\n`,
 };
 
 export const playPatternAtCurrentLocationSimple2 = {

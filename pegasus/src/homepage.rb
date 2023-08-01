@@ -217,7 +217,7 @@ class Homepage
   def self.get_actions(request)
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
-    latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
+    latam_language_codes = [:'es-MX', :'es-ES', :'pt-BR', :'pt-PT']
 
     if latam_language_codes.include?(I18n.locale)
       youtube_id = "EGgdCryC8Uo"
@@ -244,7 +244,25 @@ class Homepage
           download_path: action["download_path"],
           facebook: action["facebook"],
           twitter: action["twitter"],
-          image_url: action["image_url"]
+          # The following is used with the
+          # `flex-container` entry type
+          image_url: action["image_url"],
+          text_h1: action["text_h1"],
+          text_desc: action["text_desc"],
+          text_desc_02: action["text_desc_02"],
+          button_link: action["button_link"],
+          studio_button_link: action["studio_button_link"],
+          button_text: action["button_text"],
+          img_src: action["img_src"],
+          # Used with the `ai-pl-launch-2023` hero banner
+          logo_list_01: action["logo_list_01"],
+          logo_list_02: action["logo_list_02"],
+          logo_list_03: action["logo_list_03"],
+          logo_list_04: action["logo_list_04"],
+          logo_list_01_alt: action["logo_list_01_alt"],
+          logo_list_02_alt: action["logo_list_02_alt"],
+          logo_list_03_alt: action["logo_list_03_alt"],
+          logo_list_04_alt: action["logo_list_04_alt"],
         }
       end
     elsif hoc_mode == "actual-hoc"
@@ -444,7 +462,7 @@ class Homepage
           text: "homepage_slot_text_blurb_educators",
           color1: "0, 148, 202",
           color2: "89, 185, 220",
-          url: CDO.studio_url("/courses?view=teacher"),
+          url: CDO.code_org_url("/teach"),
           image: "/shared/images/courses/logo_tall_teacher2.jpg"
         },
         {
@@ -462,7 +480,7 @@ class Homepage
   end
 
   def self.get_video(request)
-    video = get_actions(request).find {|a| ["video", "video_thumbnail"].include? a[:type]}
+    video = get_actions(request).find {|a| a[:type] == "video" || a[:type] == "video_thumbnail"}
 
     if video
       {
@@ -504,7 +522,7 @@ class Homepage
       # celeb, stat, non-celeb, stat, celeb, stat, non-celeb, stat, celeb, stat,
       # etc.
       heroes.shuffle!
-      heroes_nonceleb = heroes.select {|hero| ["student", "teacher"].include? hero[:type]}
+      heroes_nonceleb = heroes.select {|hero| hero[:type] == "student" || hero[:type] == "teacher"}
       heroes_celeb = heroes.select {|hero| hero[:type] == "celeb"}
       heroes_stat = heroes.select {|hero| hero[:type] == "stat"}
       heroes_arranged =
@@ -560,7 +578,7 @@ class Homepage
 
   def self.get_dance_stars
     [
-      "Beyoncé", "Harry Styles", "Lizzo", "Post Malone", "Disney\'s \"Encanto\"", "Nicky Youre",
+      "Beyoncé", "BTS", "Harry Styles", "Lizzo", "Post Malone", "Disney's \"Encanto\"", "Nicky Youre",
       "Katy Perry", "Lil Nas X", "Jonas Brothers", "Panic! At The Disco",
       "Shawn Mendes", "Nicki Minaj", "Pedro Capó", "Francesco Gabbani", "Sia",
       "Ariana Grande", "Avicii and Aloe Blacc", "Calvin Harris",

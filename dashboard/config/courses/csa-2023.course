@@ -11,7 +11,7 @@
     "csa8-2023",
     "csa9-2023"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",

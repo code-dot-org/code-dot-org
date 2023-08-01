@@ -37,10 +37,15 @@
       "courseB_multi_collector_loops3_predict1"
     ],
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "encrypted": "false",
+    "show_type_hints": "false",
+    "shape_shift": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-07-31 22:08:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-07-31 22:10:09 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -49,8 +54,8 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_simplified_dropdown">
-              <title name="TIMES" config="3-10">3</title>
+            <block type="controls_repeat_dropdown">
+              <field name="TIMES" config="2-10">3</field>
               <statement name="DO">
                 <block type="maze_moveEast">
                   <next>

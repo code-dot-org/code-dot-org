@@ -1,3 +1,3 @@
-class Api::V1::Pd::ReportControllerBase < ::ApplicationController
+class Api::V1::Pd::ReportControllerBase < ApplicationController
   include Api::CsvDownload
 end

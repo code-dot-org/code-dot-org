@@ -10,12 +10,13 @@ import moduleStyles from './sections-refresh.module.scss';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {navigateToHref} from '@cdo/apps/utils';
 import {
-  BodyOneText,
+  BodyTwoText,
   Heading1,
   Heading3,
 } from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 
 const FORM_ID = 'sections-set-up-container';
 const SECTIONS_API = '/api/v1/sections';
@@ -141,7 +142,7 @@ export default function SectionsSetUpContainer({
     }
   };
 
-  const saveSection = section => {
+  const saveSection = (section, createAnotherSection) => {
     const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
     // Determine data sources and save method based on new vs edit section
     const dataUrl = isNewSection
@@ -163,8 +164,14 @@ export default function SectionsSetUpContainer({
       return;
     }
 
+    // Checking that the csrf-token exists since it is disabled on test
     const csrfToken = document.querySelector('meta[name="csrf-token"]')
-      .attributes['content'].value;
+      ? document.querySelector('meta[name="csrf-token"]').attributes['content']
+          .value
+      : null;
+
+    const computedGrades =
+      participantType === 'student' ? section.grade : ['pl'];
 
     const section_data = {
       login_type: loginType,
@@ -177,7 +184,7 @@ export default function SectionsSetUpContainer({
       pairing_allowed: section.pairingAllowed,
       tts_autoplay_enabled: section.ttsAutoplayEnabled,
       sharing_disabled: section.sharingDisabled,
-      grades: section.grade,
+      grades: computedGrades,
       ...section,
     };
 
@@ -196,7 +203,9 @@ export default function SectionsSetUpContainer({
         recordSectionSetupEvent(section);
         // Redirect to the sections list.
         let redirectUrl = window.location.origin + '/home';
-        if (shouldShowCelebrationDialogOnRedirect) {
+        if (createAnotherSection) {
+          redirectUrl += '?openAddSectionDialog=true';
+        } else if (shouldShowCelebrationDialogOnRedirect) {
           redirectUrl += '?showSectionCreationDialog=true';
         }
         navigateToHref(redirectUrl);
@@ -205,6 +214,21 @@ export default function SectionsSetUpContainer({
         setIsSaveInProgress(false);
         console.error(err);
       });
+  };
+
+  const onURLClick = () => {
+    showVideoDialog(
+      {
+        autoplay: true,
+        download:
+          'https://videos.code.org/levelbuilder/gettingstarted-creatingclasssection_sm-mp4.mp4',
+        enable_fallback: true,
+        key: 'Gettting_Started_ClassSection',
+        name: 'Creating a Class Section',
+        src: 'https://www.youtube-nocookie.com/embed/4Wugxc80fNU/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=yPWQfa4CHbw&wmode=transparent',
+      },
+      true
+    );
   };
 
   return (
@@ -217,14 +241,14 @@ export default function SectionsSetUpContainer({
         </Heading1>
         {isNewSection && (
           <>
-            <BodyOneText className={moduleStyles.noMarginBottomParagraph}>
+            <BodyTwoText className={moduleStyles.noMarginBottomParagraph}>
               {i18n.setUpClassSectionsSubheader()}
-            </BodyOneText>
-            <BodyOneText>
-              <a href="https://www.youtube.com/watch?v=4Wugxc80fNU">
+            </BodyTwoText>
+            <BodyTwoText>
+              <a onClick={onURLClick} className={moduleStyles.textPopUp}>
                 {i18n.setUpClassSectionsSubheaderLink()}
               </a>
-            </BodyOneText>
+            </BodyTwoText>
           </>
         )}
       </div>
@@ -237,6 +261,7 @@ export default function SectionsSetUpContainer({
       />
 
       <CurriculumQuickAssign
+        id="uitest-curriculum-quick-assign"
         isNewSection={isNewSection}
         updateSection={(key, val) => updateSection(0, key, val)}
         sectionCourse={sections[0].course}
@@ -270,37 +295,27 @@ export default function SectionsSetUpContainer({
           )}
         </div>
       </div>
-
       <div
         className={classnames(
-          moduleStyles.buttonsContainer,
+          moduleStyles.splitButtonsContainer,
           moduleStyles.containerWithMarginTop
         )}
       >
-        {/*
-         TODO: for the first iteration of this feature we will only have
-        participants create one section at a time.  For edit section redirects,
-        adding another section is not needed.  This can be uncommented when the
-        functionality of adding another class section is ready.
-
-        {isNewSection && (
+        {isNewSection && ( // Only show 'save and add another' button when creating a new section
+          <Button
+            className={moduleStyles.buttonLeft}
+            icon="plus"
+            text={i18n.addAnotherClassSection()}
+            color={Button.ButtonColor.neutralDark}
+            onClick={e => {
+              e.preventDefault();
+              saveSection(sections[0], true);
+            }}
+          />
+        )}
         <Button
-          useDefaultLineHeight
-          icon="plus"
-          text={i18n.addAnotherClassSection()}
-          color={Button.ButtonColor.neutralDark}
-          onClick={e => {
-            e.preventDefault();
-            console.log('Add Another Class Section clicked');
-          }}
-        />
-        */}
-        {/*
-        TODO: currently this button just changes text if it is a "new" or "editied"
-        screen, depending on how we want the functionality of this button to work,
-        this might mean creating a different button for the "edit" page
-        */}
-        <Button
+          className={moduleStyles.buttonRight}
+          id="uitest-save-section-changes"
           text={
             isSaveInProgress
               ? i18n.saving()
@@ -313,7 +328,7 @@ export default function SectionsSetUpContainer({
           onClick={e => {
             e.preventDefault();
             setIsSaveInProgress(true);
-            saveSection(sections[0]);
+            saveSection(sections[0], false);
           }}
         />
       </div>

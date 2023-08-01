@@ -3,9 +3,13 @@ title 'Making Counters'
 
 
 markdown <<MARKDOWN
-##The Food Chain
-###All ecosystems have a delicately balanced food chain. The first two lessons demonstrated a marine ecosystem food chain:
 
+##**All ecosystems have a _delicately balanced_ food chain**
+###The marine ecosystem food chain:
+
+
+
+<img src="https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg" style= "width:80%">
 <div style= "width: 80%"> 
 
 >###1. The sun provides energy for photosynthesis to occur in algae.
@@ -14,13 +18,6 @@ markdown <<MARKDOWN
 
 </div>
 
-<img src="https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg" style= "width:80%">
 
-###In our simulation, the boat took too many fish out of the ecosystem. Since fish eat the algae, removing fish meant that the algae was overgrown. Too much algae in the ecosystem caused the coral to die.
- <br><br>
->**In the next level, you will explore a few other ecosystems that are facing challenges from human interference. You will get to choose what ecosystem to balance.**   
-  <br>
->Will you be a Rainforest ecologist, Desert ecologist, Wetlands ecologist, or Arctic ecologist? The choice is yours!
-
-
+##**If there is too much or too little of one organism in the food chain, there are effects on the whole ecosystem.**
 MARKDOWN

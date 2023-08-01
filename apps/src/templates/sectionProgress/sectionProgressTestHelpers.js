@@ -67,7 +67,7 @@ export function createStore(numStudents, numLessons) {
   return store;
 }
 
-function buildSectionProgress(students, scriptData) {
+export function buildSectionProgress(students, scriptData) {
   const lastUpdates = {[scriptData.id]: {}};
   const progress = {};
 
@@ -92,7 +92,7 @@ function buildSectionProgress(students, scriptData) {
     studentLessonProgressByUnit: {
       [scriptData.id]: lessonProgressForSection(progress, scriptData.lessons),
     },
-    studentLastUpdateByUnit: {[scriptData.id]: lastUpdates},
+    studentLastUpdateByUnit: lastUpdates,
   };
 }
 
@@ -149,7 +149,7 @@ function randomReviewState() {
   }
 }
 
-function getScriptData(numLessons) {
+export function getScriptData(numLessons) {
   return {
     id: 2,
     csf: true,

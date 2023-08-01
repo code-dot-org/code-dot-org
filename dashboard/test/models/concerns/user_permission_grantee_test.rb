@@ -123,6 +123,13 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     assert user.workshop_organizer?
   end
 
+  test 'ai_chat_access?' do
+    user = create :teacher
+    refute user.ai_chat_access?
+    user.permission = UserPermission::AI_CHAT_ACCESS
+    assert user.ai_chat_access?
+  end
+
   test 'grant admin permission logs to infrasecurity' do
     teacher = create :teacher, :google_sso_provider, password: nil
 
@@ -130,9 +137,9 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     ChatClient.
       expects(:message).
       with('infra-security',
-        "Granting UserPermission: environment: #{rack_env}, "\
-        "user ID: #{teacher.id}, "\
-        "email: #{teacher.email}, "\
+        "Granting UserPermission: environment: #{rack_env}, " \
+        "user ID: #{teacher.id}, " \
+        "email: #{teacher.email}, " \
         "permission: ADMIN",
         color: 'yellow'
       ).
@@ -148,9 +155,9 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     ChatClient.
       expects(:message).
       with('infra-security',
-        "Revoking UserPermission: environment: #{rack_env}, "\
-        "user ID: #{admin_user.id}, "\
-        "email: #{admin_user.email}, "\
+        "Revoking UserPermission: environment: #{rack_env}, " \
+        "user ID: #{admin_user.id}, " \
+        "email: #{admin_user.email}, " \
         "permission: ADMIN",
         color: 'yellow'
       ).

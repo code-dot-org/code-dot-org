@@ -7,7 +7,7 @@ right '`b 1a`'
 wrong '`ab 1`'
 wrong 'Nothing - compile-time error'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 markdown <<MARKDOWN
 Consider the following class.

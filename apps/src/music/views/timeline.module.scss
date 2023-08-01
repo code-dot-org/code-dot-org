@@ -1,147 +1,156 @@
-@import "color.scss";
+@import 'color.scss';
+@import './music-view.module.scss';
 
-.wrapper {
-  background-color: $neutral_dark90;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
+.timeline {
+  border-radius: $default-border-radius;
   background-size: 100% 200%;
-  padding: 10px;
   box-sizing: border-box;
+  background-color: $neutral_dark;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 100%;
+  position: relative;
 
-  .container {
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
+  .fullWidthOverlay {
     height: 100%;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
-    .fullWidthOverlay {
-      height: 100%;
+  .measuresBackground {
+    background-color: $neutral_dark90;
+    height: 24px;
+    border-bottom: solid $default-spacing $dark_black;
+    cursor: pointer;
+  }
+
+  .barLineContainer {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+
+    .barNumber {
       position: absolute;
-      top: 0;
-      left: 0;
-    }
+      top: 4px;
+      left: 6px;
+      color: $neutral_dark20;
+      cursor: pointer;
 
-    .barLineContainer {
-      position: absolute;
-      top: 0;
-      width: 1px;
-      height: 100%;
-
-      .barLine {
-        position: absolute;
-        top: 20px;
-        bottom: 0;
-        border-left: 2px $neutral_dark50 solid;
-
-        &Current {
-          border-left-color: $neutral_dark20;
-        }
-      }
-
-      .barNumber {
-        color: $neutral_dark20;
-        padding-left: 6px;
-
-        &Current {
-          color: $neutral_white;
-        }
+      &Current {
+        color: $neutral_light;
       }
     }
 
-    .soundsArea {
-      width: 0;
-      height: 100%;
+    .barLine {
+      position: absolute;
+      top: 32px;
+      bottom: 6px;
+      border-left: 1px $neutral_dark50 solid;
 
-      .timelineElement {
-        position: absolute;
-        box-sizing: border-box;
-        border-radius: 8px;
-        border: solid 2px;
+      &Current {
+        border-left-color: $neutral_dark20;
+      }
+    }
+  }
 
-        &Purple {
-          background-color: purple;
-          border-color: lightpink;
-        }
+  .soundsArea {
+    width: 0;
+    height: 100%;
 
-        &Blue {
-          background-color: blue;
-          border-color: lightblue;
-        }
+    .timelineElement {
+      position: absolute;
+      box-sizing: border-box;
+      border-radius: 8px;
+      border: solid 2px;
 
-        &Green {
-          background-color: green;
-          border-color: lightgreen;
-        }
-
-        &Yellow {
-          background-color: yellow;
-          border-color: brown;
-        }
-
-        &Pattern {
-          background-color: black;
-          border-color: white;
-        }
-
-        &Chord {
-          background-color: $light_cyan;
-          border-color: $neutral_dark80;
-        }
-
-        &Playing {
-          box-shadow: 0 0 10px rgba(255 255 255 / 0.5);
-        }
-
-        &InsideRandom {
-          border-color: #a1a1a1;
-        }
-
-        &SkipSound {
-          background-color: #808080;
-        }
-
-        &BlockSelected {
-          border-color: #fc3;
-          border-width: 3px;
-        }
-
-        &Clickable {
-          cursor: pointer;
-        }
+      &Purple {
+        background-color: purple;
+        border-color: lightpink;
       }
 
-      .tracksContainer {
+      &Blue {
+        background-color: blue;
+        border-color: lightblue;
+      }
+
+      &Green {
+        background-color: green;
+        border-color: lightgreen;
+      }
+
+      &Yellow {
+        background-color: yellow;
+        border-color: brown;
+      }
+
+      &Pattern {
+        background-color: black;
+        border-color: white;
+      }
+
+      &Chord {
+        background-color: $light_cyan;
+        border-color: $neutral_dark80;
+      }
+
+      &Playing {
+        box-shadow: 0 0 10px rgba(255 255 255 / 0.5);
+      }
+
+      &InsideRandom {
+        border-color: #a1a1a1;
+      }
+
+      &SkipSound {
+        background-color: #808080;
+      }
+
+      &BlockSelected {
+        border-color: #fc3;
+        border-width: 3px;
+      }
+
+      &Clickable {
+        cursor: pointer;
+      }
+    }
+
+    .tracksContainer {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      margin-top: 20px;
+
+      .trackRowContainer {
         display: flex;
-        position: relative;
         flex-direction: column;
-        margin-top: 20px;
+        margin-bottom: 2px;
 
-        .trackRowContainer {
+        .trackName {
+          font-size: 12px;
+          font-style: italic;
+          padding-left: 2px;
+        }
+
+        .trackSoundsContainer {
           display: flex;
-          flex-direction: column;
-          margin-bottom: 2px;
-
-          .trackName {
-            font-size: 12px;
-            font-style: italic;
-            padding-left: 2px;
-          }
-
-          .trackSoundsContainer {
-            display: flex;
-            flex-direction: row;
-          }
+          flex-direction: row;
         }
       }
     }
+  }
 
-    .playhead {
-      position: absolute;
-      top: 0;
-      width: 1px;
-      height: 100%;
+  .playhead {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    border-left: 3px $neutral_dark20 solid;
+
+    &Playing {
       border-left: 3px yellow solid;
     }
   }

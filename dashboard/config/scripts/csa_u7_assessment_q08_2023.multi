@@ -25,3 +25,12 @@ Assume that `int val` has been declared and initialized with a value that satisf
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+The method `what(int num)` is a recursive method that operates on the digits of a number. Here's how it works:
+
+1. If `num` is less than 10 (i.e., it has only one digit), it simply returns `num`.
+
+2. If `num` is `10` or greater (i.e., it has more than one digit), it adds the last digit of `num` (`num % 10`) to the result of the recursive call on `num` divided by 10 (`num/10`), effectively removing the last digit of `num`.
+
+This process continues until `num` has only one digit, at which point it returns `num`. The effect of this is to sum all the digits of `num`.
+MARKDOWN

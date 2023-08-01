@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-03 00:41:22 UTC",
+    "serialized_at": "2023-07-25 22:42:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -27,9 +28,21 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 1,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "focus-on-creativity1-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
       "properties": {
         "display_name": "Chapter 1: The Problem Solving Process"
       },
@@ -41,7 +54,7 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
         "display_name": "Alternative Lessons"
       },
@@ -53,9 +66,24 @@
   ],
   "lessons": [
     {
+      "key": "Student Pre-Course Survey",
+      "name": "Student Pre-Course Survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "focus-on-creativity1-2023"
+      }
+    },
+    {
       "key": "Intro to Problem Solving",
       "name": "Intro to Problem Solving",
-      "absolute_position": 1,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
@@ -74,7 +102,7 @@
     {
       "key": "The Problem Solving Process",
       "name": "The Problem Solving Process",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
@@ -93,7 +121,7 @@
     {
       "key": "Exploring Problem Solving",
       "name": "Exploring Problem Solving",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
@@ -112,7 +140,7 @@
     {
       "key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
       "name": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
@@ -131,7 +159,7 @@
     {
       "key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
       "name": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
@@ -150,7 +178,7 @@
     {
       "key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
       "name": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
@@ -169,7 +197,7 @@
     {
       "key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
       "name": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
@@ -189,7 +217,7 @@
     {
       "key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
       "name": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
@@ -207,6 +235,19 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "fca6ce79-1431-455d-80c6-149a69f8c8ad",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fca6ce79-1431-455d-80c6-149a69f8c8ad",
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "focus-on-creativity1-2023"
+      }
+    },
     {
       "key": "767aa7d8-df5b-41a8-9dee-b7736b13b721",
       "position": 1,
@@ -663,6 +704,16 @@
   ],
   "activity_sections": [
     {
+      "key": "c7c6547c-96d2-41ff-a3fd-15e525b46339",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c7c6547c-96d2-41ff-a3fd-15e525b46339",
+        "lesson_activity.key": "fca6ce79-1431-455d-80c6-149a69f8c8ad"
+      }
+    },
+    {
       "key": "889660cb-06d5-470e-b27e-0f544237d69d",
       "position": 1,
       "properties": {
@@ -1050,7 +1101,7 @@
       "key": "5b58735f-ef57-4d1d-873b-db37de7ab19f",
       "position": 2,
       "properties": {
-        "description": "**Distribute**: Hand out copies of the activity guides."
+        "description": "**Distribute**: Hand out copies of the [r the_problem_solving_process/focus-on-creativity/2023] activity guides."
       },
       "seeding_key": {
         "activity_section.key": "5b58735f-ef57-4d1d-873b-db37de7ab19f",
@@ -2860,6 +2911,27 @@
       "level_keys": [
         "intro-pulse-survey_csd1_2023"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pre-survey-levelgroup_21_22_2023"
+        ],
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "focus-on-creativity1-2023",
+        "activity_section.key": "c7c6547c-96d2-41ff-a3fd-15e525b46339"
+      },
+      "level_keys": [
+        "csd-pre-survey-levelgroup_21_22_2023"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -2873,6 +2945,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "focus-on-creativity1-2023",
         "activity_section.key": "74883862-86b2-48ab-9fbb-5f12d0144e77"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pre-survey-levelgroup_21_22_2023",
+        "script_level.level_keys": [
+          "csd-pre-survey-levelgroup_21_22_2023"
+        ],
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "focus-on-creativity1-2023",
+        "activity_section.key": "c7c6547c-96d2-41ff-a3fd-15e525b46339"
       }
     }
   ],

@@ -1,4 +1,145 @@
+@import "color.scss";
+
+button.dropdownButton {
+  color: $neutral_dark;
+  background-color: $neutral_light;
+  border: 1px solid $neutral_dark;
+  border-radius: 4px;
+  padding: 8px 16px;
+  box-shadow: none;
+  display: flex;
+  align-items: baseline;
+
+  &:hover {
+    background-color: $neutral_dark10;
+  }
+
+  &:focus {
+    outline: 2px solid $light_primary_500;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    outline: 1px solid $neutral_dark;
+    outline-offset: 0;
+    border-color: $neutral_dark !important;
+  }
+
+  i {
+    font-size: 16px;
+    width: 1.25em;
+    line-height: 1.25em;
+
+    &:first-child {
+      margin-right: 8px;
+    }
+
+    &:last-child {
+      margin-left: 8px;
+    }
+  }
+
+  span {
+    margin: 0;
+  }
+}
+
+form.dropDownMenuContainer {
+  padding: 4px 0;
+}
+
+.dropdownCheckboxUL {
+  max-height: 280px;
+  overflow-y: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding: 0;
+
+    label {
+      display: flex;
+      padding: 12px 8px 12px 0;
+      align-items: start;
+      gap: 12px;
+      margin: 0;
+
+      input[type="checkbox"] {
+        position: relative;
+      }
+
+      i {
+        padding-left: 3px;
+      }
+
+      span {
+        margin: 0;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+    }
+
+
+    &:hover {
+      background-color: $neutral_dark10;
+
+      i {
+        &::before {
+          background-color: $brand_primary_light;
+        }
+      }
+    }
+
+    &:focus-within {
+      outline: 2px solid $brand_primary_default;
+      outline-offset: -2px;
+    }
+
+    input[type="checkbox"] {
+      &:focus {
+        + i::before {
+          outline: none;
+        }
+      }
+    }
+
+    &:has(label:active),
+    &:has(input[type="checkbox"]:active) {
+      background-color: $light_primary_500;
+      label {
+        span {
+          color: $neutral_white;
+        }
+
+        input[type="checkbox"]:checked + i::before, input[type="checkbox"] + i::before {
+          background-color: $neutral_white;
+          border-color: $neutral_white;
+          color: $light_primary_500;
+        }
+      }
+    }
+  }
+}
+
+
 .affectAllButton {
   display: flex;
   justify-content: center;
+}
+
+.bottomButtonsContainer {
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid $neutral_dark20;
+  margin-top: 4px;
+  padding: 4px;
+
+  button {
+    padding: 8px 16px;
+
+    span {
+      margin: 0;
+    }
+  }
 }

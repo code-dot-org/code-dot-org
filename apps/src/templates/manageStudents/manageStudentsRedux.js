@@ -852,10 +852,12 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
     studentLookup[student.id] = {
       id: student.id,
       name: student.name,
+      familyName: student.family_name,
       username: student.username,
       email: student.email,
       age: student.age || '',
       gender: student.gender || '',
+      genderTeacherInput: student.gender_teacher_input || '',
       secretWords: student.secret_words,
       secretPicturePath: student.secret_picture_path,
       loginType: loginType,
@@ -884,8 +886,10 @@ const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
     student: {
       id: updatedStudentInfo.id,
       name: updatedStudentInfo.name,
+      family_name: updatedStudentInfo.familyName,
       age: updatedStudentInfo.age,
       gender: updatedStudentInfo.gender,
+      gender_teacher_input: updatedStudentInfo.genderTeacherInput,
       sharing_disabled: updatedStudentInfo.sharingDisabled,
     },
   };
@@ -911,8 +915,10 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
     studentsToAdd[i] = {
       editing: true,
       name: updatedStudentsInfo[i].name,
+      family_name: updatedStudentsInfo[i].familyName,
       age: updatedStudentsInfo[i].age,
       gender: updatedStudentsInfo[i].gender,
+      gender_teacher_input: updatedStudentsInfo[i].genderTeacherInput,
       sharing_disabled: updatedStudentsInfo[i].sharingDisabled,
     };
   }

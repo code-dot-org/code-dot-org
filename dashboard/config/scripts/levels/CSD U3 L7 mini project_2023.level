@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2023-03-06T23:48:14.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -27,7 +32,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Robot Face\r\n\r\nUse different shape blocks, variables, and random numbers to create a robot face with **unique** and **creative** features!\r\n\r\n# Do This\r\n\r\n1) Use your plan from your activity guide to create your robot face.\r\n2) Make sure you use variables with random numbers to give your robot features that change each time the program is run.\r\n\r\n\r\n\r\n",
+    "long_instructions": "# Robot Face\r\n\r\nUse at least 4 different shape blocks, variables, and random numbers to create a robot face with **unique** and **creative** features!\r\n\r\n# Do This\r\n\r\n1) Use your plan from your activity guide to create your robot face.\r\n2) Make sure you use at least 4 variables with random numbers to give your robot features that change each time the program is run.\r\n\r\n\r\n\r\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "is_k1": "false",
@@ -52,7 +57,7 @@
     "hide_animation_mode": "true",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
-    "submittable": "false",
+    "submittable": "true",
     "hide_view_data_button": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
@@ -81,13 +86,8 @@
 
     ]
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2023-03-06T23:48:14.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-06T23:48:14.724+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random free play_2023\\\"\"],\"cloned_from\":\"CSD U3 Random free play_2023\"},{\"changed_at\":\"2023-03-06 23:57:13 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"teacher_markdown\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-09 00:07:08 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-09 17:41:31 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-06T23:48:14.724+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random free play_2023\\\"\"],\"cloned_from\":\"CSD U3 Random free play_2023\"},{\"changed_at\":\"2023-03-06 23:57:13 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"teacher_markdown\",\"bubble_choice_description\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-09 00:07:08 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-09 17:41:31 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-06-21 21:05:41 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-31 21:01:55 +0000\",\"changed\":[\"code_functions\",\"submittable\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

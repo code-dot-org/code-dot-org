@@ -30,7 +30,7 @@
         {
           "type": "html",
           "name": "section1_teaching_context",
-          "html": "<h1>Teaching Context</h1>\n<p><span style='font-size: 12pt;'>This survey is about teaching with Code.org materials and resources during the 2022-23 school year.</p>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand better who our teachers are, their motivation to use the Code.org curriculum and tools, as well as some questions about professional develpment preferences.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
+          "html": "<h1>Teaching Context</h1>\n<p><span style='font-size: 12pt;'>This survey is about teaching with Code.org materials and resources during the 2022-23 school year.</p>\n<p><span style='font-size: 12pt;'>The purpose of this survey is to understand better who our teachers are, their motivation to use the Code.org curriculum and tools, as well as some questions about professional development preferences.</span></p>\n<p><span style='font-size: 12pt;'>Let's get started!</span></p>"
         },
         {
           "type": "radiogroup",
@@ -926,7 +926,7 @@
             },
             {
               "value": "pd_barriers_ce_credits",
-              "text": "The program that does not award Continued Education credit"
+              "text": "The program does not award Continued Education credit"
             },
             {
               "value": "pd_barriers_certification",

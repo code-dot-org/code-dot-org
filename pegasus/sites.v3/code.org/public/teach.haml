@@ -1,1 +1,183 @@
-- redirect CDO.studio_url('/courses?view=teacher', CDO.default_scheme)
+---
+title: Teach Computer Science
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/teach-styles.css", rel: "stylesheet"}
+
+-# FontAwesome icons
+- icon_party_horn = "fa-solid fa-party-horn"
+- icon_lightbulb_on = "fa-solid fa-lightbulb-on"
+- icon_link = "fa-solid fa-link"
+
+%section.top
+  .wrapper
+    .text-wrapper.col-50
+      %h1=hoc_s(:teach_page_top_heading)
+      %p=hoc_s(:teach_page_top_desc_01)
+      %p.body-three
+        =hoc_s(:teach_page_top_desc_02)
+      %a{href: CDO.studio_url("/users/sign_up"), class: "link-button"}
+        =hoc_s(:call_to_action_sign_up_free)
+    %figure.col-45{style: "float: right; margin-top: 1.25rem;"}
+      %img.rounded-corners.box-shadow-primary{src: "/images/teach-page-top.png", alt: "", style: "position: relative; width: 100%;"}
+    .clear
+
+= view :ai_pl_skinny_banner
+
+%section.why-teach-cs.bg-neutral-light
+  .wrapper
+    %h2.centered
+      =hoc_s(:teach_page_why_teach_cs_heading)
+    %div.grid-container
+      %div.flex-container
+        %figure
+          %img{src: "/images/teach-page-why-cs-01.png", alt: ""}
+        .text-wrapper
+          %h3.heading-sm
+            =hoc_s(:teach_page_why_teach_cs_block_heading_01)
+          %p=hoc_s(:teach_page_why_teach_cs_block_desc_01)
+      %div.flex-container
+        %figure
+          %img{src: "/images/teach-page-why-cs-02.png", alt: ""}
+        .text-wrapper
+          %h3.heading-sm
+            =hoc_s(:teach_page_why_teach_cs_block_heading_02)
+          %p=hoc_s(:teach_page_why_teach_cs_block_desc_02)
+      %div.flex-container
+        %figure
+          %img{src: "/images/teach-page-why-cs-03.png", alt: ""}
+        .text-wrapper
+          %h3.heading-sm
+            =hoc_s(:teach_page_why_teach_cs_block_heading_03)
+          %p=hoc_s(:teach_page_why_teach_cs_block_desc_03)
+      %div.flex-container
+        %figure
+          %img{src: "/images/teach-page-why-cs-04.png", alt: ""}
+        .text-wrapper
+          %h3.heading-sm
+            =hoc_s(:teach_page_why_teach_cs_block_heading_04)
+          %p=hoc_s(:teach_page_why_teach_cs_block_desc_04)
+          %a{href: "/ai", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:call_to_action_explore_ai_resources)
+    %hr.dark
+    %div.centered
+      %h4=hoc_s(:teach_page_why_teach_cs_heading_02)
+      %a.link-button{href: CDO.studio_url("/catalog")}
+        =hoc_s(:call_to_action_explore_curriculum_catalog)
+
+%section.quote.bg-neutral-dark
+  .wrapper
+    %div.quotes-wrapper
+      %p.quote-text
+        =hoc_s(:teach_page_quote)
+      %p.no-margin-bottom
+        Kevin Barry
+        %span •
+        =hoc_s(:teacher_label_csd)
+
+%section.free-curriculum
+  .wrapper
+    %h2.centered
+      =hoc_s(:teach_page_free_curriculum_heading)
+    %p.centered
+      =hoc_s(:teach_page_free_curriculum_desc)
+    %div.flex-container.justify-space-between.wrap-reverse
+      %ul.icon-bullet-list.full-width.col-60
+        %li
+          %div
+            %i{class: "#{icon_party_horn}"}
+          .text-wrapper
+            %h3=hoc_s(:teach_page_free_curriculum_list_heading_01)
+            %p.no-margin-bottom
+              =hoc_s(:teach_page_free_curriculum_list_desc_01)
+        %li
+          %div
+            %i{class: "#{icon_lightbulb_on}"}
+          .text-wrapper
+            %h3=hoc_s(:teach_page_free_curriculum_list_heading_02)
+            %p.no-margin-bottom
+              =hoc_s(:teach_page_free_curriculum_list_desc_02)
+        %li.no-margin-bottom
+          %div
+            %i{class: "#{icon_link}"}
+          .text-wrapper
+            %h3=hoc_s(:teach_page_free_curriculum_list_heading_03)
+            %p.no-margin-bottom
+              =hoc_s(:teach_page_free_curriculum_list_desc_03)
+      %figure.rounded-corners.col-33{style: "float: right"}
+    .clear
+    %hr.dark
+    %div.centered
+      %h4=hoc_s(:teach_page_free_curriculum_heading_02)
+      %div.flex-container.justify-center.wrap{style: "gap: 1rem"}
+        %a.link-button{href: CDO.studio_url("/catalog?grade=grade_1&grade=grade_2&grade=grade_3&grade=grade_4&grade=grade_5&grade=kindergarten")}
+          =hoc_s(:grade_level_label_elementary)
+        %a.link-button{href: CDO.studio_url("/catalog?grade=grade_6&grade=grade_7&grade=grade_8")}
+          =hoc_s(:grade_level_label_middle)
+        %a.link-button{href: CDO.studio_url("/catalog?grade=grade_10&grade=grade_11&grade=grade_12&grade=grade_9")}
+          =hoc_s(:grade_level_label_high)
+
+%section.resources.bg-neutral-light
+  .wrapper
+    = view :resources_tabs
+
+%section.curriculum-offerings
+  .wrapper
+    %h2.centered
+      =hoc_s(:teach_page_curriculum_heading)
+    %p.centered
+      =hoc_s(:teach_page_curriculum_desc)
+    - if request.language == "en"
+      = view :teach_page_curriculum_english
+    - else
+      = view :teach_page_curriculum_intl
+    %div.centered{style: "margin-top: 2rem"}
+      %a.link-button.secondary{href: CDO.studio_url("/catalog")}
+        =hoc_s(:call_to_action_see_full_curriculum_catalog)
+
+%section.pl-offerings.bg-neutral-light.centered
+  .wrapper
+    = view :teach_page_pl
+
+- if request.language == "en"
+  %section.bg-primary-light.centered
+    .wrapper
+      %p.no-margin-bottom
+        %strong
+          Are you a district leader or administrator? <a href="/administrators">Find out how to bring Code.org to your district</a>.
+
+%section
+  .wrapper
+    %h2.centered
+      =hoc_s(:teach_page_additional_materials_heading)
+    %p.centered
+      =hoc_s(:teach_page_additional_materials_desc)
+    .action-block__wrapper.action-block__wrapper--three-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:teach_page_additional_materials_list_heading_01)
+          %img{src: "/images/teach-page-resources-01.png", alt: ""}
+          %p=hoc_s(:teach_page_additional_materials_list_desc_01)
+        .content-footer
+          %a.link-button{href: "/csjourneys", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:call_to_action_explore_career_resources)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:teach_page_additional_materials_list_heading_02)
+          %img{src: "/images/teach-page-resources-02.png", alt: ""}
+          %p=hoc_s(:teach_page_additional_materials_list_desc_02)
+        .content-footer
+          %a.link-button{href: "/educate/resources/videos", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:call_to_action_watch_videos)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:teach_page_additional_materials_list_heading_03)
+          %img{src: "/images/teach-page-resources-03.png", alt: ""}
+          %p=hoc_s(:teach_page_additional_materials_list_desc_03)
+        .content-footer
+          %a.link-button{href: "/educate/resources/posters", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:call_to_action_download_posters)
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::TEACH_PAGE_VISITED_EVENT
