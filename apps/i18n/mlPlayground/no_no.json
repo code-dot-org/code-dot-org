@@ -1,95 +1,14 @@
 {
-  "navigateForward": "Fortsett",
-  "navigateBack": "Tilbake",
-  "tryAgain": "Prøv igjen",
-  "navigateDone": "Fullfør",
-  "saveProgress": "Lagre",
-  "correctAnswer": "Riktig",
-  "incorrectAnswer": "Feil",
-  "modelCardPossibleValuesMinimum": "minimum",
-  "modelCardPossibleValuesMaximum": "maksimum",
-  "columnInspectorDescription": "Beskrivelse",
-  "columnDetailsMinimumValue": "minimum",
   "columnDetailsMaximumValue": "maksimum",
+  "columnDetailsMinimumValue": "minimum",
+  "columnInspectorDescription": "Beskrivelse",
+  "correctAnswer": "Riktig",
   "dataCardLastUpdated": "Sist oppdatert",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "alder"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "vær"
-        },
-        "day": {
-          "id": "dag"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "corn": {
-          "id": "mais"
-        },
-        "beans": {
-          "id": "bønner"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "farge"
-        },
-        "food": {
-          "id": "mat"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "alder"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "Beskrivelse"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "Sider"
-        },
-        "size": {
-          "id": "størrelse"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "chicken": {
-          "id": "kylling"
-        },
-        "fruit": {
-          "id": "frukt"
-        },
-        "beans": {
-          "id": "bønner"
+        "Length": {
+          "id": "Lengde"
         }
       }
     },
@@ -103,21 +22,38 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banan"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "alder"
         }
       }
     },
-    "naan_toy": {
+    "club_random_toy": {
       "fields": {
-        "chicken": {
-          "id": "kylling"
+        "color": {
+          "id": "farge"
+        },
+        "food": {
+          "id": "mat"
         }
       }
     },
-    "census_part": {
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Alder"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "alder"
@@ -131,43 +67,53 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Land"
+        },
+        "Dance": {
+          "id": "Dans"
+        },
+        "Music": {
+          "id": "Musikk"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "alder"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Poengsum"
-        },
         "Country": {
           "id": "Land"
         },
         "Name": {
           "id": "Navn"
         },
+        "Score": {
+          "id": "Poengsum"
+        },
         "Star": {
           "id": "Stjerne"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Kunstner"
+        "chicken": {
+          "id": "kylling"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "elephant": {
-          "id": "elefant"
-        },
-        "alligator": {
-          "id": "alligator"
-        }
-      }
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Lengde"
+        "Description": {
+          "id": "Beskrivelse"
         }
       }
     },
@@ -178,44 +124,42 @@
         }
       }
     },
-    "student_survey": {
+    "safari_toy": {
       "fields": {
-        "Music": {
-          "id": "Musikk"
+        "alligator": {
+          "id": "alligator"
         },
-        "Dance": {
-          "id": "Dans"
-        },
-        "Country": {
-          "id": "Land"
-        },
-        "Internet": {
-          "id": "Internett"
-        },
-        "Achievements": {
-          "id": "Prestasjoner"
-        },
-        "Age": {
-          "id": "Alder",
-          "description": "Alder"
-        },
-        "Gender": {
-          "id": "Kjønn",
-          "description": "Kjønn"
+        "elephant": {
+          "id": "elefant"
         }
       }
     },
-    "boba_toy": {
+    "salad_toy": {
       "fields": {
-        "banana": {
-          "id": "banan"
+        "avocado": {
+          "id": "avokado"
+        },
+        "beans": {
+          "id": "bønner"
+        },
+        "chicken": {
+          "id": "kylling"
+        },
+        "fruit": {
+          "id": "frukt"
         }
       }
     },
-    "heart": {
+    "salsa_toy": {
       "fields": {
-        "Age": {
-          "id": "Alder"
+        "avocado": {
+          "id": "avokado"
+        },
+        "beans": {
+          "id": "bønner"
+        },
+        "corn": {
+          "id": "mais"
         }
       }
     },
@@ -229,18 +173,74 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "Musikk"
+        "sides": {
+          "id": "Sider"
+        },
+        "size": {
+          "id": "størrelse"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "dag"
+        },
+        "weather": {
+          "id": "vær"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Kunstner"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "alder"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Prestasjoner"
+        },
+        "Age": {
+          "description": "Alder",
+          "id": "Alder"
+        },
+        "Country": {
+          "id": "Land"
         },
         "Dance": {
           "id": "Dans"
         },
-        "Country": {
-          "id": "Land"
+        "Gender": {
+          "description": "Kjønn",
+          "id": "Kjønn"
+        },
+        "Internet": {
+          "id": "Internett"
+        },
+        "Music": {
+          "id": "Musikk"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Feil",
+  "modelCardPossibleValuesMaximum": "maksimum",
+  "modelCardPossibleValuesMinimum": "minimum",
+  "navigateBack": "Tilbake",
+  "navigateDone": "Fullfør",
+  "navigateForward": "Fortsett",
+  "saveProgress": "Lagre",
+  "tryAgain": "Prøv igjen"
 }

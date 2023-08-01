@@ -69,14 +69,6 @@
               callback: function(editor, change) {
                 const xmlContainer = space.find('.markdown_preview').get(0);
 
-                // Prevent rendering multiple copies of a block svgs by removing
-                // all Blockly SVG containers before converting any XML into blocks.
-                const blocklySvgs = xmlContainer.querySelectorAll('svg.blocklySvg.readOnlyBlockSpace');
-                // Loop through each svg element and remove its parent element
-                blocklySvgs.forEach(svg => {
-                  svg.parentNode.remove();
-                });
-
                 convertXmlToBlockly(xmlContainer);
                 space.find('.hint_markdown').val(editor.getValue());
                 space.find('.hint_markdown').trigger('change');

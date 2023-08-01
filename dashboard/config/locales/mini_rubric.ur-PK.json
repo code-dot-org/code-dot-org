@@ -2,9 +2,6 @@
   "ur-PK": {
     "data": {
       "mini_rubric": {
-        "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "اہم تصور"
-        },
         "CDU U6 Playground Sound Board_2019": {
           "rubric_key_concept": "arrays بنائیں اور ترمیم کریں، مختلف قسم کے جسمانی آلات کو کنٹرول کرنے کے لئے سافٹ ویئر تیار کریں.",
           "rubric_performance_level_1": "پروگرام کام کرتا ہے جیسا کہ بیان کیا گیا ہے، کم از کم چار بورڈ کے واقعات کے ساتھ ہر ایک نوٹوں کی ایک مختلف سیریز کو متحرک کرتا ہے. ",
@@ -695,6 +692,9 @@
           "rubric_performance_level_2": "ایک نئی صف پیدا اور ایک متغیر میں محفوظ کیا جاتا ہے، لیکن غیر متعلقہ غلطیاں ہو سکتی ہیں جو دائیں بٹن دبایا جاتا ہے جب ایک نوٹ کو کھیلا جا رہا ہے سے روکنے کے.",
           "rubric_performance_level_3": "ایک نئی صف بنتی ہے، لیکن یہ یا تو کسی عنصر میں محفوظ نہیں ہے، یا یہ خالی ہے، لہذا یہ پروگرام جیسا کہ بیان کیا گیا ہے کام نہیں کر سکتا۔",
           "rubric_performance_level_4": "پروگرام میں کوئی arrays ہیں."
+        },
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "اہم تصور"
         },
         "ml-club app-review submit": {
           "rubric_key_concept": "ایک صارف دوست ایپ بنانا جو مشین لرننگ کا استعمال کرتا ہے",

@@ -1,2 +1,11 @@
 {
+  "he-IL": {
+    "data": {
+      "mini_rubric": {
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "קונספט מפתח"
+        }
+      }
+    }
+  }
 }

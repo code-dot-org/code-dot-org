@@ -6,12 +6,14 @@ import {
   FIELD_REST_DURATION_NAME,
   PRIMARY_SOUND_INPUT_NAME,
   FIELD_EFFECTS_NAME,
+  FIELD_TRIGGER_START_NAME,
+  TriggerStart,
 } from './constants';
 import musicI18n from '../locale';
 
 const baseCategoryCssConfig = {
   container: moduleStyles.toolboxCategoryContainer,
-  row: moduleStyles.toolboxRow,
+  row: `${moduleStyles.toolboxRow} blocklyTreeRow`, // Used to look up category labels in UI tests
   label: moduleStyles.toolboxLabel,
 };
 
@@ -39,6 +41,7 @@ const toolboxBlocks = {
     type: BlockTypes.SET_CURRENT_LOCATION_NEXT_MEASURE,
   },
   [BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2]: {
+    id: 'play-sound-block',
     kind: 'block',
     type: BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
   },
@@ -152,6 +155,9 @@ const toolboxBlocks = {
   [BlockTypes.TRIGGERED_AT_SIMPLE2]: {
     kind: 'block',
     type: BlockTypes.TRIGGERED_AT_SIMPLE2,
+    fields: {
+      [FIELD_TRIGGER_START_NAME]: TriggerStart.NEXT_MEASURE,
+    },
   },
   [BlockTypes.FOR_LOOP]: {
     kind: 'block',
@@ -299,7 +305,7 @@ const toolboxBlocks = {
 
 function generateToolbox(categoryBlocksMap, options) {
   const toolbox = {
-    kind: 'categoryToolbox',
+    kind: options?.type === 'flyout' ? 'flyoutToolbox' : 'categoryToolbox',
     contents: [],
   };
 
@@ -324,12 +330,16 @@ function generateToolbox(categoryBlocksMap, options) {
       categoryContents.push(toolboxBlocks[blockName]);
     }
 
-    toolbox.contents.push({
-      kind: 'category',
-      name: getCategoryName(category),
-      cssConfig: baseCategoryCssConfig,
-      contents: categoryContents,
-    });
+    if (options?.type === 'flyout') {
+      toolbox.contents = toolbox.contents.concat(categoryContents);
+    } else {
+      toolbox.contents.push({
+        kind: 'category',
+        name: getCategoryName(category),
+        cssConfig: baseCategoryCssConfig,
+        contents: categoryContents,
+      });
+    }
   }
 
   if (options?.includeVariables) {
@@ -373,7 +383,7 @@ function getCategoryName(category) {
   return categoryTypeToLocalizedName[category];
 }
 
-export function getToolbox(allowList) {
+export function getToolbox(toolbox) {
   switch (getBlockMode()) {
     case BlockMode.SIMPLE:
       return generateToolbox({
@@ -384,30 +394,6 @@ export function getToolbox(allowList) {
           'controls_repeat_ext',
         ],
       });
-    case BlockMode.SIMPLE2:
-      return generateToolbox(
-        {
-          Play: [
-            BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
-            BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
-            BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
-            BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
-          ],
-          Control: [
-            BlockTypes.TRIGGERED_AT_SIMPLE2,
-            BlockTypes.PLAY_SOUNDS_TOGETHER,
-            BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
-            BlockTypes.PLAY_SOUNDS_RANDOM,
-            BlockTypes.REPEAT_SIMPLE2,
-          ],
-          Effects: [
-            BlockTypes.SET_VOLUME_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
-            BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
-            BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
-          ],
-        },
-        {includeFunctions: true, allowList}
-      );
     case BlockMode.TRACKS:
       return generateToolbox({
         Tracks: [
@@ -440,9 +426,34 @@ export function getToolbox(allowList) {
         },
         {includeVariables: true}
       );
+    case BlockMode.SIMPLE2:
+    default:
+      return generateToolbox(
+        {
+          Play: [
+            BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
+          ],
+          Control: [
+            BlockTypes.TRIGGERED_AT_SIMPLE2,
+            BlockTypes.PLAY_SOUNDS_TOGETHER,
+            BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
+            BlockTypes.PLAY_SOUNDS_RANDOM,
+            BlockTypes.REPEAT_SIMPLE2,
+          ],
+          Effects: [
+            BlockTypes.SET_VOLUME_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.SET_FILTER_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+            BlockTypes.SET_DELAY_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,
+          ],
+        },
+        {
+          includeFunctions: true,
+          allowList: toolbox?.blocks,
+          type: toolbox?.type,
+        }
+      );
   }
-
-  console.warn(
-    `Could not find toolbox for unknown block mode: ${getBlockMode()}`
-  );
 }

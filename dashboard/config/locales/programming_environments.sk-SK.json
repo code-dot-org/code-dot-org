@@ -2,35 +2,564 @@
   "sk-SK": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web Lab",
+        "applab": {
           "categories": {
-            "html_tags": {
-              "name": "HTML tag-y",
+            "advanced": {
+              "name": "Pokročilé"
+            },
+            "canvas": {
               "expressions": {
-                "style": {
-                  "examples": {
-                    "Style": {
-                      "name": "Štýl"
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Polomer kruhu v pixeloch."
                     }
                   }
                 },
-                "title": {
-                  "examples": {
-                    "Title": {
-                      "name": "Názov"
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "Pozícia x v pixeloch ľavého horného rohu obrázka, ktorý sa má kresliť."
+                    },
+                    "x": {
+                      "description": "Pozícia x v pixeloch ľavého horného rohu obrázka, ktorý sa má kresliť."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixeloch ľavého horného rohu obrázka, ktorý sa má kresliť."
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    },
+                    "x": {
+                      "description": "Pozícia x v pixeloch začínajúca od ľavého horného rohu obrázka."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixeloch začínajúc od ľavého horného rohu obrázka."
+                    }
+                  },
+                  "short_description": "Vráti množstvo alfa (opacity) (v rozsahu od 0 do 255) vo farbe pixelu umiestneného na danej pozícii x a y v daných obrazových údajoch."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    },
+                    "x": {
+                      "description": "Pozícia x v pixeloch začínajúca od ľavého horného rohu obrázka."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixeloch začínajúc od ľavého horného rohu obrázka."
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    },
+                    "x": {
+                      "description": "Pozícia x v pixeloch začínajúca od ľavého horného rohu obrázka."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixeloch začínajúc od ľavého horného rohu obrázka."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "Výška ohraničovacieho obdĺžnika na zachytenie obrazových dát."
+                    },
+                    "width": {
+                      "description": "Šírka ohraničovacieho obdĺžnika na zachytenie obrazových dát."
+                    },
+                    "x": {
+                      "description": "Pozícia x v pixeloch na spustenie snímania."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixeloch na spustenie snímania."
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    },
+                    "x": {
+                      "description": "Pozícia x v pixeloch začínajúca od ľavého horného rohu obrázka."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixeloch začínajúc od ľavého horného rohu obrázka."
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    },
+                    "x": {
+                      "description": "Pozícia x v pixeloch začínajúc od ľavého horného rohu obrázka, aby sa dáta umiestnili na plátno."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixeloch začínajúc od ľavého horného rohu obrázka, aby sa dáta umiestnili na plátno."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "Vertikálna výška obdĺžnika v pixeloch."
+                    },
+                    "width": {
+                      "description": "Horizontálna šírka obdĺžnika v pixeloch."
+                    },
+                    "x": {
+                      "description": "Pozícia x v pixeloch ľavého horného rohu obdĺžnika."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixeloch ľavého horného rohu obdĺžnika."
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "Množstvo alfa (opacity) (od 0 do 255), ktoré sa má nastaviť v pixeli."
+                    },
+                    "imageData": {
+                      "type": "predmet"
+                    },
+                    "x": {
+                      "description": "Pozícia x v pixeloch začínajúca od ľavého horného rohu obrázka."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixeloch začínajúc od ľavého horného rohu obrázka."
+                    }
+                  },
+                  "short_description": "Nastavuje množstvo alfa (opacity) (v rozsahu od 0 do 255) vo farbe pixelu umiestneného na danej pozícii x a y v daných obrazových údajoch."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "Množstvo modrej (od 0 do 255), ktoré sa má nastaviť v pixeli."
+                    },
+                    "imageData": {
+                      "type": "predmet"
+                    },
+                    "x": {
+                      "description": "Pozícia x v pixeloch začínajúca od ľavého horného rohu obrázka."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixeloch začínajúc od ľavého horného rohu obrázka."
+                    }
+                  },
+                  "short_description": "Nastaví množstvo modrej (v rozmedzí od 0 do 255) vo farbe pixelu umiestneného na danej pozícii x a y v daných obrazových údajoch na vstupnú hodnotu BlueValue."
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "Množstvo zelenej (od 0 do 255), ktoré sa má nastaviť v pixeli."
+                    },
+                    "imageData": {
+                      "type": "predmet"
+                    },
+                    "x": {
+                      "description": "Pozícia x v pixeloch začínajúca od ľavého horného rohu obrázka."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixeloch začínajúc od ľavého horného rohu obrázka."
+                    }
+                  },
+                  "short_description": "Nastaví množstvo zelene (v rozmedzí od 0 do 255) vo farbe pixelu umiestneného na danej pozícii x a y v daných obrazových údajoch na vstupnú hodnotu GreenValue."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "Voliteľné. Množstvo nepriehľadnosti (od 0 do 255), ktoré sa má nastaviť v pixeli. Predvolené hodnoty 255 (plná nepriehľadnosť)."
+                    },
+                    "blue": {
+                      "description": "Množstvo modrej (od 0 do 255), ktoré sa má nastaviť v pixeli."
+                    },
+                    "green": {
+                      "description": "Množstvo zelenej (od 0 do 255), ktoré sa má nastaviť v pixeli."
+                    },
+                    "imageData": {
+                      "type": "predmet"
+                    },
+                    "red": {
+                      "description": "Množstvo červenej (od 0 do 255), ktoré sa má nastaviť v pixeli."
+                    },
+                    "x": {
+                      "description": "Pozícia x v pixeloch začínajúca od ľavého horného rohu obrázka."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixeloch začínajúc od ľavého horného rohu obrázka."
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "predmet"
+                    },
+                    "redValue": {
+                      "description": "Množstvo červenej (od 0 do 255), ktoré sa má nastaviť v pixeli."
+                    },
+                    "x": {
+                      "description": "Pozícia x v pixeloch začínajúca od ľavého horného rohu obrázka."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixeloch začínajúc od ľavého horného rohu obrázka."
+                    }
+                  },
+                  "short_description": "Nastaví množstvo červenej (v rozmedzí od 0 do 255) vo farbe pixelu umiestneného na danej pozícii x a y v daných obrazových údajoch na vstupnú hodnotu RedValue."
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Hodnota vrátená funkciou SetTimeout zrušiť."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Počet milisekúnd medzi každým vykonaním funkcie."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Počet milisekúnd čakať pred vykonaním funkcie."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcia"
                     }
                   }
                 }
               }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "predmet"
+                    },
+                    "tableName": {
+                      "description": "Názov tabuľky, z ktorého chcete načítať záznamy."
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Názov kľúča, ktorý sa má načítať."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcia"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Získava jedinečný identifikátor pre aktuálneho používateľa tejto aplikácie."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Názov tabuľky, na ktorú sa vzťahuje tento obsluh udalosti."
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "predmet"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Názov kľúča, ktorý sa má uložiť."
+                    },
+                    "value": {
+                      "description": "Údaje, ktoré majú byť uložené."
+                    }
+                  },
+                  "short_description": "Uloží pár kľúč/hodnota do úložiska údajov kľúč/hodnota aplikácie App Lab a po dokončení akcie zavolá funkciu spätného volania."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Webová adresa služby, ktorá vracia údaje."
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "predmet"
+                    }
+                  }
+                }
+              },
+              "name": "Dáta"
+            },
+            "functions": {
+              "name": "Funkcie"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Najvyššie vrátené číslo"
+                    },
+                    "min": {
+                      "description": "Najnižšie vrátené číslo"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Najvyššie vrátené číslo"
+                    },
+                    "min": {
+                      "description": "Najnižšie vrátené číslo"
+                    }
+                  }
+                }
+              },
+              "name": "Matematika"
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "Presunie korytnačku dopredu a doľava v hladkom kruhovom oblúku."
+                },
+                "getX": {
+                  "short_description": "Získa aktuálnu súradnicu x v pixeloch korytnačky."
+                },
+                "getY": {
+                  "short_description": "Získa aktuálnu súradnicu y v pixeloch korytnačky."
+                },
+                "hide": {
+                  "short_description": "Robí korytnačku neviditeľnou na svojom aktuálnom mieste."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Počet pixelov pre pohyb korytnačky vpravo."
+                    },
+                    "y": {
+                      "description": "Počet pixelov pre pohyb korytnačky nadol."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "Presunie korytnačku dozadu o daný počet pixelov od aktuálneho smeru."
+                },
+                "moveForward": {
+                  "short_description": "Presunie korytnačku dopredu o daný počet pixelov v aktuálnom smere."
+                },
+                "moveTo": {
+                  "short_description": "Presunie korytnačku do určitej polohy (x, y) na obrazovke."
+                },
+                "penColor": {
+                  "short_description": "Nastavuje farbu pera používaného korytnačkou na kreslenie čiar a bodiek."
+                },
+                "penDown": {
+                  "short_description": "Položí pero tak, aby korytnačka nakreslila čiaru za ním, keď sa pohybuje."
+                },
+                "penRGB": {
+                  "short_description": "Pomocou hodnôt RGBA nastaví farbu pera používaného korytnačkou na kreslenie čiar a bodiek."
+                },
+                "penUp": {
+                  "short_description": "Zoberie pero tak, aby korytnačka pri pohybe nekreslila čiaru."
+                },
+                "penWidth": {
+                  "short_description": "Nastaví šírku čiary v pixeloch, ktorú korytnačka kreslí za ňou pri pohybe."
+                },
+                "show": {
+                  "short_description": "Zviditeľní korytnačku na jej aktuálnom mieste."
+                },
+                "speed": {
+                  "short_description": "Nastavuje rýchlosť vykonávania aplikácie, ktorá zahŕňa rýchlosť korytnačky."
+                },
+                "turnLeft": {
+                  "short_description": "Otáča korytnačku vľavo o zadaný uhol. Poloha korytnačky zostáva rovnaká."
+                },
+                "turnRight": {
+                  "short_description": "Otáča korytnačku priamo o zadaný uhol. Poloha korytnačky zostáva rovnaká."
+                },
+                "turnTo": {
+                  "short_description": "Zmení smer korytnačky na určitý uhol. 0 je hore, 90 je vpravo, 180 je dole a 270 je vľavo."
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "Vytvorí tlačidlo na obrazovke zobrazujúce text poskytnutý a odkazovaný daným id v predvolenom umiestnení (0,0)."
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Rastieme a zmenšujeme sa"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcia"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Prehrá MP3 zvukový súbor zo zadanej URL adresy."
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "Vlastnosť zmeniť."
+                    }
+                  },
+                  "short_description": "Nastaví vlastnosť na novú hodnotu pre zadaný prvok."
+                },
+                "setScreen": {
+                  "short_description": "Nastaví obrazovku na daný ScreenID."
+                },
+                "showElement": {
+                  "short_description": "Zobrazuje prvok s dodaným id."
+                },
+                "textLabel": {
+                  "short_description": "Na obrazovke sa vytvorí textový štítok zobrazujúci zadaný text a na ktorý odkazuje daný id v predvolenom umiestnení (0,0)."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "Žiadne"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "Deklarovať a priradiť pole k premennej"
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Interaktívny príbeh"
+                    }
+                  }
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Reťazec, ktorý chcete vyhľadať."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Reťazec, ktorý chcete vyhľadať."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Dĺžka reťazca"
+                }
+              },
+              "name": "Premenné"
             }
-          }
+          },
+          "description": "App Lab je programovacie prostredie, v ktorom si môžeš vytvoriť jednoduché aplikácie. Navrhni vlastnú appku, naprogramuj ju pomocou blokov alebo JavaScriptu a zdieľaj ju v priebehu niekoľkých sekúnd.",
+          "name": "App Lab"
         },
         "gamelab": {
-          "name": "Game Lab",
           "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Počet milisekúnd medzi každým vykonaním funkcie."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Počet milisekúnd čakať pred vykonaním funkcie."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "background": {
+                  "examples": {
+                    "RGB Colors": {
+                      "name": "RGB farby"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Star"
+                    }
+                  }
+                }
+              },
+              "name": "Kreslenie"
+            },
+            "functions": {
+              "name": "Funkcie"
+            },
             "game_lab": {
-              "name": "Game Lab",
               "expressions": {
                 "mouseIsOver": {
                   "palette_params": {
@@ -55,23 +584,15 @@
                 },
                 "playSound": {
                   "short_description": "Prehrá MP3 zvukový súbor zo zadanej URL adresy."
+                },
+                "showMobileControls": {
+                  "content": "Zmení mobilné ovládacie prvky viditeľné pod herným priestorom.",
+                  "short_description": "Zmení mobilné ovládacie prvky viditeľné pod herným priestorom."
                 }
-              }
-            },
-            "sprites": {
-              "name": "Sprajty",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Špirála"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Game Lab"
             },
             "groups": {
-              "name": "Skupiny",
               "expressions": {
                 "add": {
                   "palette_params": {
@@ -108,316 +629,147 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "name": "Kreslenie",
-              "expressions": {
-                "background": {
-                  "examples": {
-                    "RGB Colors": {
-                      "name": "RGB farby"
-                    }
-                  }
-                },
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Star"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Skupiny"
             },
             "math": {
-              "name": "Matematika",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "Najnižšie vrátené číslo"
-                    },
                     "max": {
                       "description": "Najvyššie vrátené číslo"
+                    },
+                    "min": {
+                      "description": "Najnižšie vrátené číslo"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "Najnižšie vrátené číslo"
-                    },
                     "max": {
                       "description": "Najvyššie vrátené číslo"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Premenné"
-            },
-            "functions": {
-              "name": "Funkcie"
-            }
-          }
-        },
-        "applab": {
-          "name": "App Lab",
-          "description": "App Lab je programovacie prostredie, v ktorom si môžeš vytvoriť jednoduché aplikácie. Navrhni vlastnú appku, naprogramuj ju pomocou blokov alebo JavaScriptu a zdieľaj ju v priebehu niekoľkých sekúnd.",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "Rastieme a zmenšujeme sa"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funkcia"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Prehrá MP3 zvukový súbor zo zadanej URL adresy."
-                }
-              }
-            },
-            "canvas": {
-              "expressions": {
-                "getAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "predmet"
-                    }
-                  }
-                },
-                "getBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "predmet"
-                    }
-                  }
-                },
-                "getGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "predmet"
-                    }
-                  }
-                },
-                "getRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "predmet"
-                    }
-                  }
-                },
-                "putImageData": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "predmet"
-                    }
-                  }
-                },
-                "setAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "predmet"
-                    }
-                  }
-                },
-                "setBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "predmet"
-                    }
-                  }
-                },
-                "setGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "predmet"
-                    }
-                  }
-                },
-                "setRGB": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "predmet"
-                    }
-                  }
-                },
-                "setRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "predmet"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "name": "Dáta",
-              "expressions": {
-                "createRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "predmet"
-                    }
-                  }
-                },
-                "deleteRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "predmet"
-                    }
-                  }
-                },
-                "drawChart": {
-                  "palette_params": {
-                    "options": {
-                      "type": "predmet"
-                    }
-                  }
-                },
-                "drawChartFromRecords": {
-                  "palette_params": {
-                    "options": {
-                      "type": "predmet"
-                    }
-                  }
-                },
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funkcia"
-                    }
-                  }
-                },
-                "readRecords": {
-                  "palette_params": {
-                    "terms": {
-                      "type": "predmet"
-                    }
-                  }
-                },
-                "updateRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "predmet"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funkcia"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematika",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
+                    },
                     "min": {
                       "description": "Najnižšie vrátené číslo"
-                    },
-                    "max": {
-                      "description": "Najvyššie vrátené číslo"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Najnižšie vrátené číslo"
-                    },
-                    "max": {
-                      "description": "Najvyššie vrátené číslo"
                     }
                   }
                 }
-              }
+              },
+              "name": "Matematika"
             },
-            "variables": {
-              "name": "Premenné",
-              "expressions": {
-                "declareAssign_object": {
-                  "examples": {
-                    "Choose Your Own Adventure": {
-                      "name": "Interaktívny príbeh"
-                    }
-                  }
-                },
-                "addPair": {
-                  "return_value": "Žiadne"
-                }
-              }
-            },
-            "functions": {
-              "name": "Funkcie"
-            },
-            "advanced": {
-              "name": "Pokročilé"
-            }
-          }
-        },
-        "spritelab": {
-          "name": "Sprite Lab",
-          "categories": {
             "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Špirála"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "Výška sprite."
+                },
+                "sprite.width": {
+                  "return_value": "Šírka sprite."
+                }
+              },
               "name": "Sprajty"
             },
-            "world": {
-              "name": "Prostredie"
-            },
-            "location": {
-              "name": "Miesta"
-            },
+            "variables": {
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Reťazec, ktorý chcete vyhľadať."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Reťazec, ktorý chcete vyhľadať."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Dĺžka reťazca"
+                }
+              },
+              "name": "Premenné"
+            }
+          },
+          "name": "Game Lab"
+        },
+        "javalab": {
+          "name": "Java Lab"
+        },
+        "spritelab": {
+          "categories": {
             "actions": {
               "name": "Akcie"
-            },
-            "events": {
-              "name": "Udalosti"
             },
             "behaviors": {
               "name": "Správanie"
             },
-            "loops": {
-              "name": "Cykly"
+            "comments": {
+              "name": "Komentáre"
             },
-            "variables": {
-              "name": "Premenné"
-            },
-            "math": {
-              "name": "Matematika"
-            },
-            "logic": {
-              "name": "Logické"
+            "events": {
+              "name": "Udalosti"
             },
             "functions": {
               "name": "Funkcie"
             },
+            "location": {
+              "name": "Miesta"
+            },
+            "logic": {
+              "name": "Logické"
+            },
+            "loops": {
+              "name": "Cykly"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "sprites": {
+              "name": "Sprajty"
+            },
             "text": {
               "name": "Text"
             },
-            "comments": {
-              "name": "Komentáre"
+            "variables": {
+              "name": "Premenné"
+            },
+            "world": {
+              "name": "Prostredie"
             }
-          }
+          },
+          "name": "Sprite Lab"
         },
-        "javalab": {
-          "name": "Java Lab"
+        "weblab": {
+          "categories": {
+            "html_tags": {
+              "expressions": {
+                "style": {
+                  "examples": {
+                    "Style": {
+                      "name": "Štýl"
+                    }
+                  }
+                },
+                "title": {
+                  "examples": {
+                    "Title": {
+                      "name": "Názov"
+                    }
+                  }
+                }
+              },
+              "name": "HTML tag-y"
+            }
+          },
+          "name": "Web Lab"
         }
       }
     }

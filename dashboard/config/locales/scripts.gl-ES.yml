@@ -3,169 +3,71 @@ gl:
   data:
     script:
       name:
-        course1:
-          title: Curso 1
-          description: O Curso 1 esta deseñado para permitir aos lectores primeirizos
-            crear programas de computador que lles axuden a aprender a colaborar con
-            outros, desenvolver habilidades de solución de problemas, e persistir
-            en tarefas difíciles. Para o final deste curso, os estudantes crean o
-            seu propio xogo personalizado ou historia que poden compartir. Recomendado
-            para primeiro grao de primaria.
-          description_short: O Curso 1 esta\* desenh_ado para lectores tempera_ns.
-          description_audience: Idades de 4 a 6 anos
-          student_description: O Curso 1 esta deseñado para permitir aos lectores
-            primeirizos crear programas de computador que lles axuden a aprender a
-            colaborar con outros, desenvolver habilidades de solución de problemas,
-            e persistir en tarefas difíciles. Para o final deste curso, os estudantes
-            crean o seu propio xogo personalizado ou historia que poden compartir.
-            Recomendado para primeiro grao de primaria.
-        course2:
-          title: Curso 2
-          description: O Curso 2 está deseñado para estudantes que poden ler e non
-            teñen experiencia previa en programación. Neste curso os estudantes crearán
-            programas para resolver problemas e desenvolver xogos interactivos ou
-            historias que poden compartir. Recoméndase para os cursos 2 a 5 de primaria.
-          description_short: O Curso 2 esta\* desenh\*ado para estudantes que poden
-            ler.
-          description_audience: A partir de 6 anos (cómpre saber ler)
-          student_description: O Curso 2 está deseñado para estudantes que poden ler
-            e non teñen experiencia previa en programación. Neste curso os estudantes
-            crearán programas para resolver problemas e desenvolver xogos interactivos
-            ou historias que poden compartir. Recoméndase para os cursos 2 a 5 de
-            primaria.
-        course3:
-          title: Curso 3
-          description: O Curso 3 está deseñado para estudantes que fixeron o Curso
-            2. Profundarase en temas de programación xa presentados nos cursos anteriores,
-            e que dan solucións flexíbeis a problemas máis complexos. Ao remate do
-            curso, os estudantes son quen de crear historias e xogos interactivos
-            que poden compartir con calquera. Recomendado para os cursos 4º a 5º de
-            Primaria.
-          description_short: O Curso 3 e\* unha continuacio\*n do Curso 2.
-          description_audience: Idades de 8 a 18 anos
-          student_description: O Curso 3 está deseñado para estudantes que fixeron
-            o Curso 2. Profundarase en temas de programación xa presentados nos cursos
-            anteriores, e que dan solucións flexíbeis a problemas máis complexos.
-            Ao remate do curso, os estudantes son quen de crear historias e xogos
-            interactivos que poden compartir con calquera. Recomendado para os cursos
-            4º a 5º de Primaria.
-        playlab:
-          title: Laboratorio de Xogos
-          description: Crea unha historia ou fai un xogo con Laboratorio de Xogos!
-          description_short: Crea unha historia ou fai un xogo con Laboratorio de
-            Xogos!
-          student_description: Crea unha historia ou fai un xogo con Laboratorio de
-            Xogos!
-        artist:
-          title: Artista
-          description: Debuxa imaxes estupendas e deseños co Artista!
-          description_short: Debuxa imaxes estupendas e deseños co Artista!
-          student_description: Debuxa imaxes estupendas e deseños co Artista!
-        hourofcode:
-          title: Labirinto clásico
-          description: Proba os fundamentos da informática cos personaxes de Angry
-            Birds, Plantas vs Zombies e o Scrat da Era do Xeo!
-          description_short: Proba os fundamentos da informa\*tica con moitos personaxes
-            divertidos!
-          student_description: Proba os fundamentos da informática cos personaxes
-            de Angry Birds, Plantas vs Zombies e o Scrat da Era do Xeo!
-        frozen:
-          title: Programa con Ana e Elsa
-          description: Imos usar código para unirnos a Ana e Elsa mentres exploran
-            a maxia e a beleza do xeo. Crearás flocos de neve e padróns a medida que
-            patinas sobre xeo e farás unha paisaxe invernal que logo podes compartir
-            cos teus amigos!
-          description_short: Usa a programación para explorar a maxia e a beleza do
-            xeo con Anna e Elsa.
-          student_description: Imos usar código para unirnos a Ana e Elsa mentres
-            exploran a maxia e a beleza do xeo. Crearás flocos de neve e padróns a
-            medida que patinas sobre xeo e farás unha paisaxe invernal que logo podes
-            compartir cos teus amigos!
-        course4:
-          title: Curso 4
-          description: O Curso 4 está deseñado para estudantes que fixeron os cursos
-            2 e 3. O alumnado aprenderá a resolver problemas de maior complexidade
-            segundo vaian aprendendo a combinar varios conceptos para cada desafío.
-            Ao remate do curso, os estudantes serán quen de crear programas que amosen
-            habilidades múltiples, incluídos bucles e funcións con parámetros. Recomendado
-            dende 4º de Primaria a 2º de ESO.
-          description_short: Os alumnos que fan o curso 4 deben ter feitos xa os cursos
-            2 e 3.
+        20-hour:
+          description: Este curso de 20 horas introduce o núcleo da informática e
+            os conceptos da programación. O curso está deseñado para o seu uso en
+            clase para os cursos de primaria pero é divertido aprender con calquera
+            idade!
           description_audience: Idades de 10 a 18 anos
-          student_description: O Curso 4 está deseñado para estudantes que fixeron
-            os cursos 2 e 3. O alumnado aprenderá a resolver problemas de maior complexidade
-            segundo vaian aprendendo a combinar varios conceptos para cada desafío.
-            Ao remate do curso, os estudantes serán quen de crear programas que amosen
-            habilidades múltiples, incluídos bucles e funcións con parámetros. Recomendado
-            dende 4º de Primaria a 2º de ESO.
+          description_short: Este curso de 20 horas cobre os conceptos ba_sicos de
+            informa_tica e programacio\*n dos cursos 2-4.
+          student_description: Este curso de 20 horas introduce o núcleo da informática
+            e os conceptos da programación. O curso está deseñado para o seu uso en
+            clase para os cursos de primaria pero é divertido aprender con calquera
+            idade!
+          title: Curso acelerado de Introdución a programación informática
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Introdución
+            lessonGroup-3:
+              display_name: Variables
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hora de Código
+        CSF_Secret_Sample:
+          description_audience: Idades de 8 a 18 anos
+        CSF_Secret_Sample_Story:
+          description_audience: Idades de 8 a 18 anos+
         Course4pre:
-          title: Prerequisitos do Curso 4
           description: Un breve resumo de conceptos para os estudantes que non deron
             os cursos 2 e 3.
           description_short: Un breve resumo de conceptos para os estudantes que non
             deron os cursos 2 e 3.
           student_description: Un breve resumo de conceptos para os estudantes que
             non deron os cursos 2 e 3.
-        algebra:
-          title: Informática na álxebra
-        infinity:
-          title: Laboratorio de Xogo Disney Infinity
-          description: Utiliza o laboratorio de xogos para crear unha historia ou
-            xogo protagonizada por personaxes de Disney Infinity.
-          description_short: Utiliza o laboratorio de xogos para crear unha historia
-            ou xogo protagonizada por personaxes de Disney Infinity.
-          student_description: Utiliza o laboratorio de xogos para crear unha historia
-            ou xogo protagonizada por personaxes de Disney Infinity.
-        netsim:
-          title: Simulador de internet
-        20-hour:
-          title: Curso acelerado de Introdución a programación informática
-          description: Este curso de 20 horas introduce o núcleo da informática e
-            os conceptos da programación. O curso está deseñado para o seu uso en
-            clase para os cursos de primaria pero é divertido aprender con calquera
-            idade!
-          description_short: Este curso de 20 horas cobre os conceptos ba_sicos de
-            informa_tica e programacio\*n dos cursos 2-4.
-          description_audience: Idades de 10 a 18 anos
-          student_description: Este curso de 20 horas introduce o núcleo da informática
-            e os conceptos da programación. O curso está deseñado para o seu uso en
-            clase para os cursos de primaria pero é divertido aprender con calquera
-            idade!
-        edit-code:
-          title: Editar código
-          description: Editar código
-          description_short: Editar código
-          student_description: Editar código
-        events:
-          title: Eventos
-          description: Eventos
-          description_short: Eventos
-          student_description: Eventos
-        flappy:
-          title: Código do Flappy bird
-          description: Queer crear o seu proprio xogo en menos de 10 minutos? Experimente
-            o noso titorial sobre o Código do Flappy bird!
-          description_short: Escribe o teu propio xogo Flappy en menos de 10 minutos!
-          student_description: Queer crear o seu proprio xogo en menos de 10 minutos?
-            Experimente o noso titorial sobre o Código do Flappy bird!
-        jigsaw:
-          title: Crebacabezas
-          description: Proba o noso titorial de Jigsaw.
-          description_short: Proba o noso titorial de Jigsaw.
-          student_description: Proba o noso titorial de Jigsaw.
-        step:
-          title: Paso
-          description: Titorial paso a paso
-          description_short: Titorial paso a paso
-          student_description: Titorial paso a paso
+          title: Prerequisitos do Curso 4
+        ECSPD2:
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
+        ECSPD2-NexTech:
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
+        ECSPD2-iZone:
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
         Hour of Code:
-          title: Hora de Código 2013
           description: Proba os fundamentos da informa\*tica con personaxes de Angry
             Birds e Plantas vs. Zombis!
           description_short: Proba os fundamentos da informa\*tica con moitos personaxes
             divertidos!
           student_description: Proba os fundamentos da informa\*tica con personaxes
             de Angry Birds e Plantas vs. Zombis!
+          title: Hora de Código 2013
+        MikeTest:
+          description_audience: Idades de 8 a 98 anos
+        Special Fun:
+          description_audience: Idades de 10 a 18 anos
+        SpecialSeries:
+          description_audience: Idades de 10 a 18 anos
+        afterschool1:
+          description_audience: De 7 a 13 anos
+        algebra:
+          title: Informática na álxebra
         algebraPD2a:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
@@ -174,236 +76,396 @@ gl:
           description: 'Fase 2 - on-line: combinado de estudos de verán'
           description_short: 'Fase 2 - on-line: combinado de estudos de verán'
           student_description: 'Fase 2 - on-line: combinado de estudos de verán'
-        ECSPD2:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
-        sciencePD2b:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
-        sciencePD2b-iZone:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
-        ECSPD2-iZone:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
-        ECSPD2-NexTech:
-          description: 'Fase 2 - on-line: combinado de estudos de verán'
-          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
-          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
-        asUnplugged:
-          description_audience: De 6 a 13 anos
-        afterschool1:
-          description_audience: De 7 a 13 anos
-        Special Fun:
-          description_audience: Idades de 10 a 18 anos
-        SpecialSeries:
-          description_audience: Idades de 10 a 18 anos
-        iceage:
-          title: O xogo de laboratorio da Idade de xeo
-          description: Crea unha historia ou crea un xogo co laboratorio de xogo da
-            Idade de Xeo!
-          description_short: Crea unha historia ou crea un xogo co laboratorio de
-            xogo da Idade de Xeo!
-          student_description: Crea unha historia ou crea un xogo co laboratorio de
-            xogo da Idade de Xeo!
-        gumball:
-          title: Laboratorio de xogo de Gumball
-          description: Crea unha historia ou fai un xogo co laboratorio de xogo de
-            Gumball!
-          description_short: Crea unha historia ou fai un xogo co laboratorio de xogo
-            de Gumball!
-          student_description: Crea unha historia ou fai un xogo co laboratorio de
-            xogo de Gumball!
-        starwars:
-          description: Aprende a programar androides e crea o teu propio xogo Star
-            Wars nunha galaxia moi, moi afastada.
-          description_short: Aprende a programar androides e crea o teu propio xogo
-            Star Wars nunha galaxia moi, moi afastada.
-          student_description: Aprende a programar androides e crea o teu propio xogo
-            Star Wars nunha galaxia moi, moi afastada.
-        starwarsblocks:
-          description: Aprende a programar androides e crea o teu propio xogo Star
-            Wars nunha galaxia moi, moi afastada.
-          description_short: Aprende a programar androides e crea o teu propio xogo
-            Star Wars nunha galaxia moi, moi afastada.
-          student_description: Aprende a programar androides e crea o teu propio xogo
-            Star Wars nunha galaxia moi, moi afastada.
-        mc:
-          title: Hora do Código Minecraft
-          description: Usa bloques de código para acompañar a Steve ou a Alex nunha
-            aventura polo mundo de Minecraft
-          description_short: Explora o mundo de Minecraft a través do código
-          student_description: Usa bloques de código para acompañar a Steve ou a Alex
-            nunha aventura polo mundo de Minecraft
-        CSF_Secret_Sample:
-          description_audience: Idades de 8 a 18 anos
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: Visión xeral
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: Visión xeral
-        CSF_Secret_Sample_Story:
-          description_audience: Idades de 8 a 18 anos+
-        MikeTest:
-          description_audience: Idades de 8 a 98 anos
-        artistExemplar:
-          description_audience: Idades de 8 a 18 anos
-        teachercon:
-          lesson_groups:
-            required:
-              display_name: Visión xeral
-        gradeKinder:
-          description_audience: Idades de 5 a 18 anos
-        grade4:
-          description_audience: De 9 a 99 anos
-        grade1:
-          description_audience: Idades de 5 a 18 anos
-        grade5:
-          description_audience: De 10 a 110 anos
-        grade3:
-          description_audience: Idades de 5 a 18 anos
         alltheplcthings:
           lesson_groups:
             required:
               display_name: Visión xeral
-        grade2:
-          description_audience: Idades de 5 a 18 anos
-        csp-online-test:
+        andrea-test:
           lesson_groups:
             required:
               display_name: Visión xeral
-        csp1-support:
-          lesson_groups:
-            required:
-              display_name: Visión xeral
+        artist:
+          description: Debuxa imaxes estupendas e deseños co Artista!
+          description_short: Debuxa imaxes estupendas e deseños co Artista!
+          student_description: Debuxa imaxes estupendas e deseños co Artista!
+          title: Artista
+        artistExemplar:
+          description_audience: Idades de 8 a 18 anos
+        asUnplugged:
+          description_audience: De 6 a 13 anos
         basketball:
           name: pelota de baloncesto
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: Visión xeral
         classic-hoc-impact-study:
           description_short: Proba os fundamentos da informa\*tica con moitos personaxes
             divertidos!
-        hoc-impact-study:
-          description_short: Proba os fundamentos da informa\*tica con moitos personaxes
-            divertidos!
-        csp3-support:
+        course1:
+          description: O Curso 1 esta deseñado para permitir aos lectores primeirizos
+            crear programas de computador que lles axuden a aprender a colaborar con
+            outros, desenvolver habilidades de solución de problemas, e persistir
+            en tarefas difíciles. Para o final deste curso, os estudantes crean o
+            seu propio xogo personalizado ou historia que poden compartir. Recomendado
+            para primeiro grao de primaria.
+          description_audience: Idades de 4 a 6 anos
+          description_short: O Curso 1 esta\* desenh_ado para lectores tempera_ns.
+          student_description: O Curso 1 esta deseñado para permitir aos lectores
+            primeirizos crear programas de computador que lles axuden a aprender a
+            colaborar con outros, desenvolver habilidades de solución de problemas,
+            e persistir en tarefas difíciles. Para o final deste curso, os estudantes
+            crean o seu propio xogo personalizado ou historia que poden compartir.
+            Recomendado para primeiro grao de primaria.
+          title: Curso 1
+        course2:
+          description: O Curso 2 está deseñado para estudantes que poden ler e non
+            teñen experiencia previa en programación. Neste curso os estudantes crearán
+            programas para resolver problemas e desenvolver xogos interactivos ou
+            historias que poden compartir. Recoméndase para os cursos 2 a 5 de primaria.
+          description_audience: A partir de 6 anos (cómpre saber ler)
+          description_short: O Curso 2 esta\* desenh\*ado para estudantes que poden
+            ler.
+          student_description: O Curso 2 está deseñado para estudantes que poden ler
+            e non teñen experiencia previa en programación. Neste curso os estudantes
+            crearán programas para resolver problemas e desenvolver xogos interactivos
+            ou historias que poden compartir. Recoméndase para os cursos 2 a 5 de
+            primaria.
+          title: Curso 2
+        course3:
+          description: O Curso 3 está deseñado para estudantes que fixeron o Curso
+            2. Profundarase en temas de programación xa presentados nos cursos anteriores,
+            e que dan solucións flexíbeis a problemas máis complexos. Ao remate do
+            curso, os estudantes son quen de crear historias e xogos interactivos
+            que poden compartir con calquera. Recomendado para os cursos 4º a 5º de
+            Primaria.
+          description_audience: Idades de 8 a 18 anos
+          description_short: O Curso 3 e\* unha continuacio\*n do Curso 2.
+          student_description: O Curso 3 está deseñado para estudantes que fixeron
+            o Curso 2. Profundarase en temas de programación xa presentados nos cursos
+            anteriores, e que dan solucións flexíbeis a problemas máis complexos.
+            Ao remate do curso, os estudantes son quen de crear historias e xogos
+            interactivos que poden compartir con calquera. Recomendado para os cursos
+            4º a 5º de Primaria.
+          title: Curso 3
+        course4:
+          description: O Curso 4 está deseñado para estudantes que fixeron os cursos
+            2 e 3. O alumnado aprenderá a resolver problemas de maior complexidade
+            segundo vaian aprendendo a combinar varios conceptos para cada desafío.
+            Ao remate do curso, os estudantes serán quen de crear programas que amosen
+            habilidades múltiples, incluídos bucles e funcións con parámetros. Recomendado
+            dende 4º de Primaria a 2º de ESO.
+          description_audience: Idades de 10 a 18 anos
+          description_short: Os alumnos que fan o curso 4 deben ter feitos xa os cursos
+            2 e 3.
+          student_description: O Curso 4 está deseñado para estudantes que fixeron
+            os cursos 2 e 3. O alumnado aprenderá a resolver problemas de maior complexidade
+            segundo vaian aprendendo a combinar varios conceptos para cada desafío.
+            Ao remate do curso, os estudantes serán quen de crear programas que amosen
+            habilidades múltiples, incluídos bucles e funcións con parámetros. Recomendado
+            dende 4º de Primaria a 2º de ESO.
+          title: Curso 4
+        coursea-2019:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp4-support:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        coursea-2020:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp5-support:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        coursea-2021:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        cspnovice:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        coursea-2022:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp1-dlp:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        coursea-2023:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp2-dlp:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        courseb-2019:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp3-dlp:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        courseb-2020:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp4-dlp:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        courseb-2021:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp5-dlp:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        courseb-2022:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csd1-dlp:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        courseb-2023:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csd6-dlp:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        coursec-2019:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csd5-dlp:
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        coursec-2020:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csd4-dlp:
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        coursec-2021:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csd3-dlp:
+            csf_binary:
+              display_name: Binario
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        coursec-2022:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csd2-dlp:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        coursec-2023:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csd1-dlp-18:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        coursed-2019:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csd2-dlp-18:
+            csf_binary:
+              display_name: Binario
+            csf_conditionals:
+              display_name: Condicionais
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        coursed-2020:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csd3-dlp-18:
+            csf_binary:
+              display_name: Binario
+            csf_conditionals:
+              display_name: Condicionais
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        coursed-2021:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csd4-dlp-18:
+            csf_binary:
+              display_name: Binario
+            csf_conditionals:
+              display_name: Condicionais
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            lessonGroup-6:
+              display_name: Cidadanía dixital
+        coursed-2022:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csd5-dlp-18:
+            csf_conditionals:
+              display_name: Condicionais
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            lessonGroup-6:
+              display_name: Cidadanía dixital
+        coursed-2023:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csd6-dlp-18:
+            csf_conditionals:
+              display_name: Condicionais
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+            lessonGroup-6:
+              display_name: Cidadanía dixital
+        coursee-2019:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp1-dlp-18:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_functions:
+              display_name: Funcións
+            csf_nested_loops:
+              display_name: Bucles aniñados
+        coursee-2020:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp2-dlp-18:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_functions:
+              display_name: Funcións
+            csf_nested_loops:
+              display_name: Bucles aniñados
+        coursee-2021:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp3-dlp-18:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_functions:
+              display_name: Funcións
+            csf_nested_loops:
+              display_name: Condicionais
+            ramp_up:
+              display_name: Bucles aniñados
+        coursee-2022:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp4-dlp-18:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_functions:
+              display_name: Funcións
+            csf_nested_loops:
+              display_name: Condicionais
+            ramp_up:
+              display_name: Bucles aniñados
+        coursee-2023:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp5-dlp-18:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_functions:
+              display_name: Funcións
+            csf_nested_loops:
+              display_name: Condicionais
+            ramp_up:
+              display_name: Bucles aniñados
+        coursef-2019:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp-explore-dlp-18:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+            csf_internet:
+              display_name: Internet
+            csf_variables:
+              display_name: Variables
+        coursef-2020:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp-create-dlp-18:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+            csf_variables:
+              display_name: Variables
+        coursef-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+            csf_variables:
+              display_name: Bucles "Para" (For)
+            lessonGroup-7:
+              display_name: Cidadanía dixital
+            lessonGroup-8:
+              display_name: Variables
+            lessonGroup-9:
+              display_name: eliminar
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Cidadanía dixital
+            lessonGroup-8:
+              display_name: Variables
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Cidadanía dixital
+            lessonGroup-8:
+              display_name: Variables
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-4:
+              display_name: Variables
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unidade 1
+            lessonGroup-4:
+              display_name: Unidade 2
+            lessonGroup-5:
+              display_name: Unidade 3
+            lessonGroup-6:
+              display_name: Unidade 4
+            lessonGroup-7:
+              display_name: Unidade 5
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Bucles
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variables
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: Bucles "Para" (For)
+        csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Visión xeral
@@ -411,7 +473,81 @@ gl:
           lesson_groups:
             required:
               display_name: Visión xeral
-        csd-apprentice-18:
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
+            ramp_up:
+              display_name: Introdución
+            variables:
+              display_name: Variables
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp-explore-dlp-18:
           lesson_groups:
             required:
               display_name: Visión xeral
@@ -419,108 +555,16 @@ gl:
           lesson_groups:
             required:
               display_name: Visión xeral
-        csp-apprentice-18:
+        csp-online-test:
           lesson_groups:
             required:
               display_name: Visión xeral
-        fit-test:
+        csp1-dlp:
           lesson_groups:
             required:
               display_name: Visión xeral
-        cspplayground:
+        csp1-dlp-18:
           lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Condicionais
-            csp_functions:
-              display_name: Funcións
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: Variables
-            csf_for_loops:
-              display_name: Bucles "Para" (For)
-            csf_internet:
-              display_name: Internet
-            csf_digcit:
-              display_name: Cidadanía dixital
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: Eventos
-            csf_loops:
-              display_name: Bucles
-            csf_conditionals:
-              display_name: Condicionais
-            csf_binary:
-              display_name: Binario
-            csf_digcit:
-              display_name: Cidadanía dixital
-        coursee-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_nested_loops:
-              display_name: Bucles aniñados
-            csf_functions:
-              display_name: Funcións
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Bucles
-            csf_conditionals:
-              display_name: Condicionais
-            csf_functions:
-              display_name: Funcións
-            csf_variables:
-              display_name: Variables
-            csf_for_loops:
-              display_name: Bucles "Para" (For)
-        andrea-test:
-          lesson_groups:
-            required:
-              display_name: Visión xeral
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_binary:
-              display_name: Binario
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        coursea-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Condicionais
-            csp_functions:
-              display_name: Funcións
             required:
               display_name: Visión xeral
         csp1-pilot:
@@ -529,66 +573,164 @@ gl:
               display_name: Visión xeral
         csp1-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Variables
             csp_conditionals:
               display_name: Condicionais
             csp_functions:
               display_name: Funcións
+            csp_variables:
+              display_name: Variables
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+            csp_variables:
+              display_name: Variables
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         csp2-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Variables
             csp_conditionals:
               display_name: Condicionais
             csp_functions:
               display_name: Funcións
+            csp_variables:
+              display_name: Variables
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+            csp_variables:
+              display_name: Variables
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+            csp_variables:
+              display_name: Variables
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+            csp_variables:
+              display_name: Variables
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+            csp_variables:
+              display_name: Variables
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+            csp_variables:
+              display_name: Variables
+            required:
+              display_name: Visión xeral
         csp4-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Variables
             csp_conditionals:
               display_name: Condicionais
             csp_functions:
               display_name: Funcións
-        csp5-pilot-staging:
+            csp_variables:
+              display_name: Variables
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+            csp_variables:
+              display_name: Variables
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Listas
             csp_loops:
               display_name: Bucles
-        csp6-pilot-staging:
+        csp5-2021:
           lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Condicionais
-            csp_functions:
-              display_name: Funcións
-        csp8-pilot-staging:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Bucles
+        csp5-2022:
           lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Condicionais
-            csp_functions:
-              display_name: Funcións
-        csp9-pilot-staging:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
+              display_name: Bucles
+        csp5-2023:
           lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Condicionais
-            csp_functions:
-              display_name: Funcións
-        csp10-pilot-staging:
+            csp_loops:
+              display_name: Bucles
+        csp5-dlp:
           lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Condicionais
-            csp_functions:
-              display_name: Funcións
+            required:
+              display_name: Visión xeral
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -597,29 +739,75 @@ gl:
               display_name: Bucles
             required:
               display_name: Visión xeral
-        fit2019-novice:
+        csp5-pilot-staging:
           lesson_groups:
-            required:
-              display_name: Visión xeral
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp3-pilot:
-          lesson_groups:
-            required:
-              display_name: Visión xeral
-        csl-vn:
-          lesson_groups:
-            csf_loops:
+            csp_lists:
+              display_name: Listas
+            csp_loops:
               display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        dlp19-csd-mod-fit:
+        csp5-support:
           lesson_groups:
             required:
               display_name: Visión xeral
-        dlp19-csp-mod-fit:
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmos
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listas
+            lessonGroup-3:
+              display_name: Bucles
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+            csp_variables:
+              display_name: Variables
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+            csp_variables:
+              display_name: Variables
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+            csp_variables:
+              display_name: Variables
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Condicionais
+            csp_functions:
+              display_name: Funcións
+            csp_variables:
+              display_name: Variables
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        dlp19-csd-mod-fit:
           lesson_groups:
             required:
               display_name: Visión xeral
@@ -639,6 +827,10 @@ gl:
           lesson_groups:
             required:
               display_name: Visión xeral
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
@@ -655,483 +847,347 @@ gl:
           lesson_groups:
             required:
               display_name: Visión xeral
-        csp2-pilot:
-          lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp6-pilot:
-          lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Condicionais
-            csp_functions:
-              display_name: Funcións
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_conditionals:
-              display_name: Condicionais
-            csf_nested_loops:
-              display_name: Bucles aniñados
-            csf_functions:
-              display_name: Funcións
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Bucles
-            csf_conditionals:
-              display_name: Condicionais
-            csf_events:
-              display_name: Eventos
-            csf_digcit:
-              display_name: Cidadanía dixital
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Bucles
-            csf_conditionals:
-              display_name: Condicionais
-            csf_events:
-              display_name: Eventos
-            csf_digcit:
-              display_name: Cidadanía dixital
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: Visión xeral
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Condicionais
-            csp_functions:
-              display_name: Funcións
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Listas
-            csp_loops:
-              display_name: Bucles
-        coursea-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        courseb-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        coursec-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_binary:
-              display_name: Binario
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Eventos
-            csf_loops:
-              display_name: Bucles
-            csf_conditionals:
-              display_name: Condicionais
-            csf_binary:
-              display_name: Binario
-            csf_digcit:
-              display_name: Cidadanía dixital
-        coursee-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_nested_loops:
-              display_name: Bucles aniñados
-            csf_functions:
-              display_name: Funcións
-        coursef-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_variables:
-              display_name: Variables
-            csf_for_loops:
-              display_name: Bucles "Para" (For)
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Bucles
-            csf_conditionals:
-              display_name: Condicionais
-            csf_functions:
-              display_name: Funcións
-            csf_variables:
-              display_name: Variables
-            csf_for_loops:
-              display_name: Bucles "Para" (For)
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        2021drafting:
-          lesson_groups:
-            introduction:
-              display_name: Introdución
-            lessonGroup-3:
-              display_name: Variables
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Condicionais
-            csp_functions:
-              display_name: Funcións
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Listas
-            csp_loops:
-              display_name: Bucles
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Algoritmos
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_binary:
-              display_name: Binario
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Eventos
-            csf_loops:
-              display_name: Bucles
-            csf_conditionals:
-              display_name: Condicionais
-            csf_binary:
-              display_name: Binario
-            csf_digcit:
-              display_name: Cidadanía dixital
-            lessonGroup-6:
-              display_name: Cidadanía dixital
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Bucles aniñados
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_nested_loops:
-              display_name: Condicionais
-            csf_functions:
-              display_name: Funcións
-        coursef-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_variables:
-              display_name: Bucles "Para" (For)
-            csf_for_loops:
-              display_name: Bucles "Para" (For)
-            lessonGroup-8:
-              display_name: Variables
-            lessonGroup-9:
-              display_name: eliminar
-            lessonGroup-7:
-              display_name: Cidadanía dixital
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Bucles
-            csf_conditionals:
-              display_name: Condicionais
-            csf_functions:
-              display_name: Funcións
-            csf_variables:
-              display_name: Variables
-            csf_for_loops:
-              display_name: Bucles "Para" (For)
-            lessonGroup-9:
-              display_name: Eventos
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: Introdución
-            lessonGroup-3:
-              display_name: Variables
-            variables:
-              display_name: Variables
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: Introdución
-            Introduction:
-              display_name: Introdución
-        csa-videos:
+        dlp21-csd:
           lesson_groups:
             lessonGroup-2:
-              display_name: Unidade 1
-            lessonGroup-4:
-              display_name: Unidade 2
-            lessonGroup-5:
-              display_name: Unidade 3
-            lessonGroup-6:
-              display_name: Unidade 4
-            lessonGroup-7:
-              display_name: Unidade 5
+              description: test
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
               display_name: 1.ª ETAPA
             lessonGroup-3:
               display_name: 2.ª ETAPA
-        dlp21-csd:
+        edit-code:
+          description: Editar código
+          description_short: Editar código
+          student_description: Editar código
+          title: Editar código
+        events:
+          description: Eventos
+          description_short: Eventos
+          student_description: Eventos
+          title: Eventos
+        express-2019:
           lesson_groups:
-            lessonGroup-2:
-              description: test
-        spelling-bee:
-          title: Abella que Soletrea
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Hora de Código
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Variables
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
+            csf_conditionals:
+              display_name: Condicionais
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+            csf_functions:
+              display_name: Funcións
             csf_loops:
               display_name: Bucles
-            csf_events:
+            csf_variables:
+              display_name: Variables
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Condicionais
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+            csf_functions:
+              display_name: Funcións
+            csf_loops:
+              display_name: Bucles
+            csf_variables:
+              display_name: Variables
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Condicionais
+            csf_for_loops:
+              display_name: Bucles "Para" (For)
+            csf_functions:
+              display_name: Funcións
+            csf_loops:
+              display_name: Bucles
+            csf_variables:
+              display_name: Variables
+            lessonGroup-9:
               display_name: Eventos
         express-2022:
           lesson_groups:
-            lessonGroup-9:
-              display_name: Eventos
-            csf_loops:
-              display_name: Bucles
             csf_conditionals:
               display_name: Condicionais
-            csf_functions:
-              display_name: Funcións
-            csf_variables:
-              display_name: Variables
             csf_for_loops:
               display_name: Bucles "Para" (For)
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Condicionais
-            csp_functions:
-              display_name: Funcións
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Listas
-            csp_loops:
-              display_name: Bucles
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Cidadanía dixital
-            csf_events:
-              display_name: Eventos
-            csf_loops:
-              display_name: Bucles
-            csf_conditionals:
-              display_name: Condicionais
-        coursee-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            ramp_up:
-              display_name: Bucles aniñados
             csf_functions:
               display_name: Funcións
-            csf_nested_loops:
-              display_name: Condicionais
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Cidadanía dixital
-            lessonGroup-8:
-              display_name: Variables
-        pre-express-2022:
-          lesson_groups:
             csf_loops:
               display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Cidadanía dixital
-            lessonGroup-8:
+            csf_variables:
               display_name: Variables
-        soccer:
-          name: fútbol
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: Bucles
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Variables
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: Bucles "Para" (For)
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Condicionais
-            csp_functions:
-              display_name: Funcións
-        csp5-2023:
-          lesson_groups:
-            csp_loops:
-              display_name: Bucles
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Listas
-            lessonGroup-3:
-              display_name: Bucles
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Bucles
-            csf_events:
+            lessonGroup-9:
               display_name: Eventos
         express-2023:
           lesson_groups:
-            lessonGroup-9:
-              display_name: Eventos
-            csf_loops:
-              display_name: Bucles
             csf_conditionals:
               display_name: Condicionais
-            csf_functions:
-              display_name: Funcións
-            csf_variables:
-              display_name: Variables
             csf_for_loops:
               display_name: Bucles "Para" (For)
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        courseb-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            csf_loops:
-              display_name: Bucles
-            csf_events:
-              display_name: Eventos
-        coursed-2023:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Cidadanía dixital
-            csf_events:
-              display_name: Eventos
-            csf_loops:
-              display_name: Bucles
-            csf_conditionals:
-              display_name: Condicionais
-        coursee-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Cidadanía dixital
-            ramp_up:
-              display_name: Bucles aniñados
             csf_functions:
               display_name: Funcións
-            csf_nested_loops:
+            csf_loops:
+              display_name: Bucles
+            csf_variables:
+              display_name: Variables
+            lessonGroup-9:
+              display_name: Eventos
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        flappy:
+          description: Queer crear o seu proprio xogo en menos de 10 minutos? Experimente
+            o noso titorial sobre o Código do Flappy bird!
+          description_short: Escribe o teu propio xogo Flappy en menos de 10 minutos!
+          student_description: Queer crear o seu proprio xogo en menos de 10 minutos?
+            Experimente o noso titorial sobre o Código do Flappy bird!
+          title: Código do Flappy bird
+        frozen:
+          description: Imos usar código para unirnos a Ana e Elsa mentres exploran
+            a maxia e a beleza do xeo. Crearás flocos de neve e padróns a medida que
+            patinas sobre xeo e farás unha paisaxe invernal que logo podes compartir
+            cos teus amigos!
+          description_short: Usa a programación para explorar a maxia e a beleza do
+            xeo con Anna e Elsa.
+          student_description: Imos usar código para unirnos a Ana e Elsa mentres
+            exploran a maxia e a beleza do xeo. Crearás flocos de neve e padróns a
+            medida que patinas sobre xeo e farás unha paisaxe invernal que logo podes
+            compartir cos teus amigos!
+          title: Programa con Ana e Elsa
+        grade1:
+          description_audience: Idades de 5 a 18 anos
+        grade2:
+          description_audience: Idades de 5 a 18 anos
+        grade3:
+          description_audience: Idades de 5 a 18 anos
+        grade4:
+          description_audience: De 9 a 99 anos
+        grade5:
+          description_audience: De 10 a 110 anos
+        gradeKinder:
+          description_audience: Idades de 5 a 18 anos
+        gumball:
+          description: Crea unha historia ou fai un xogo co laboratorio de xogo de
+            Gumball!
+          description_short: Crea unha historia ou fai un xogo co laboratorio de xogo
+            de Gumball!
+          student_description: Crea unha historia ou fai un xogo co laboratorio de
+            xogo de Gumball!
+          title: Laboratorio de xogo de Gumball
+        hoc-impact-study:
+          description_short: Proba os fundamentos da informa\*tica con moitos personaxes
+            divertidos!
+        hourofcode:
+          description: Proba os fundamentos da informática cos personaxes de Angry
+            Birds, Plantas vs Zombies e o Scrat da Era do Xeo!
+          description_short: Proba os fundamentos da informa\*tica con moitos personaxes
+            divertidos!
+          student_description: Proba os fundamentos da informática cos personaxes
+            de Angry Birds, Plantas vs Zombies e o Scrat da Era do Xeo!
+          title: Labirinto clásico
+        iceage:
+          description: Crea unha historia ou crea un xogo co laboratorio de xogo da
+            Idade de Xeo!
+          description_short: Crea unha historia ou crea un xogo co laboratorio de
+            xogo da Idade de Xeo!
+          student_description: Crea unha historia ou crea un xogo co laboratorio de
+            xogo da Idade de Xeo!
+          title: O xogo de laboratorio da Idade de xeo
+        infinity:
+          description: Utiliza o laboratorio de xogos para crear unha historia ou
+            xogo protagonizada por personaxes de Disney Infinity.
+          description_short: Utiliza o laboratorio de xogos para crear unha historia
+            ou xogo protagonizada por personaxes de Disney Infinity.
+          student_description: Utiliza o laboratorio de xogos para crear unha historia
+            ou xogo protagonizada por personaxes de Disney Infinity.
+          title: Laboratorio de Xogo Disney Infinity
+        jigsaw:
+          description: Proba o noso titorial de Jigsaw.
+          description_short: Proba o noso titorial de Jigsaw.
+          student_description: Proba o noso titorial de Jigsaw.
+          title: Crebacabezas
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: Introdución
+            k5_getting_started_1:
+              display_name: Introdución
+        mc:
+          description: Usa bloques de código para acompañar a Steve ou a Alex nunha
+            aventura polo mundo de Minecraft
+          description_short: Explora o mundo de Minecraft a través do código
+          student_description: Usa bloques de código para acompañar a Steve ou a Alex
+            nunha aventura polo mundo de Minecraft
+          title: Hora do Código Minecraft
+        netsim:
+          title: Simulador de internet
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
               display_name: Condicionais
+            lessonGroup-5:
+              display_name: Variables
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-4:
+              display_name: Bucles
+            lessonGroup-6:
+              display_name: Eventos
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Bucles aniñados
+            lessonGroup-4:
+              display_name: Funcións
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-4:
+              display_name: Bucles
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-4:
+              display_name: Bucles
+            lessonGroup-5:
+              display_name: Eventos
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-6:
+              display_name: Bucles
         pl-csd-summer-day1:
           lessons:
             lesson-3:
+              name: Introdución
+        playlab:
+          description: Crea unha historia ou fai un xogo con Laboratorio de Xogos!
+          description_short: Crea unha historia ou fai un xogo con Laboratorio de
+            Xogos!
+          student_description: Crea unha historia ou fai un xogo con Laboratorio de
+            Xogos!
+          title: Laboratorio de Xogos
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        sciencePD2b:
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
+        sciencePD2b-iZone:
+          description: 'Fase 2 - on-line: combinado de estudos de verán'
+          description_short: 'Fase 2 - on-line: combinado de estudos de verán'
+          student_description: 'Fase 2 - on-line: combinado de estudos de verán'
+        soccer:
+          name: fútbol
+        spelling-bee:
+          title: Abella que Soletrea
+        starwars:
+          description: Aprende a programar androides e crea o teu propio xogo Star
+            Wars nunha galaxia moi, moi afastada.
+          description_short: Aprende a programar androides e crea o teu propio xogo
+            Star Wars nunha galaxia moi, moi afastada.
+          student_description: Aprende a programar androides e crea o teu propio xogo
+            Star Wars nunha galaxia moi, moi afastada.
+        starwarsblocks:
+          description: Aprende a programar androides e crea o teu propio xogo Star
+            Wars nunha galaxia moi, moi afastada.
+          description_short: Aprende a programar androides e crea o teu propio xogo
+            Star Wars nunha galaxia moi, moi afastada.
+          student_description: Aprende a programar androides e crea o teu propio xogo
+            Star Wars nunha galaxia moi, moi afastada.
+        step:
+          description: Titorial paso a paso
+          description_short: Titorial paso a paso
+          student_description: Titorial paso a paso
+          title: Paso
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadanía dixital
+            lessonGroup-4:
+              display_name: Bucles
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: Visión xeral
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Condicionais
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Condicionais
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_functions:
+              display_name: Funcións
+            csf_nested_loops:
+              display_name: Bucles aniñados
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Condicionais
+            csf_digcit:
+              display_name: Cidadanía dixital
+            csf_events:
+              display_name: Eventos
+            csf_loops:
+              display_name: Bucles
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
               name: Introdución

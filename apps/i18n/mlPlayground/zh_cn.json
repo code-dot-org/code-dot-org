@@ -1,153 +1,27 @@
 {
-  "navigateForward": "继续",
-  "navigateBack": "返回",
-  "tryAgain": "再试一次",
-  "navigateDone": "完成",
-  "saveProgress": "保存​​",
-  "correctAnswer": "正确。",
-  "incorrectAnswer": "错误",
-  "modelCardPossibleValuesMinimum": "最小",
-  "modelCardPossibleValuesMaximum": "最大",
-  "columnInspectorDescription": "描述",
-  "columnDetailsMinimumValue": "最小",
   "columnDetailsMaximumValue": "最大",
+  "columnDetailsMinimumValue": "最小",
+  "columnInspectorDescription": "描述",
+  "correctAnswer": "正确。",
   "dataCardLastUpdated": "最近更新",
-  "predictButton": "预测",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "年龄"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "天气"
+        "Height": {
+          "id": "高度"
         },
-        "day": {
-          "id": "日"
-        },
-        "shoe": {
-          "id": "鞋履"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "洋葱"
-        },
-        "avocado": {
-          "id": "牛油果"
-        },
-        "corn": {
-          "id": "玉米"
-        },
-        "beans": {
-          "id": "豆子"
-        },
-        "lime": {
-          "id": "青柠"
+        "Length": {
+          "id": "长度"
         }
       }
     },
     "bike_sharing": {
       "fields": {
+        "Month": {
+          "id": "月"
+        },
         "index": {
           "id": "索引"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "蘑菇"
-        },
-        "lobster": {
-          "id": "龙虾"
-        },
-        "bacon": {
-          "id": "培根"
-        },
-        "cheese": {
-          "id": "芝士"
-        },
-        "meat": {
-          "id": "肉"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "颜色"
-        },
-        "music": {
-          "id": "音乐"
-        },
-        "food": {
-          "id": "食物"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "年龄"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "类别"
-        },
-        "Description": {
-          "id": "描述"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "草莓"
-        },
-        "lime": {
-          "id": "青柠"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "边"
-        },
-        "size": {
-          "id": "大小"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "番茄"
-        },
-        "avocado": {
-          "id": "牛油果"
-        },
-        "chicken": {
-          "id": "鸡"
-        },
-        "fruit": {
-          "id": "水果"
-        },
-        "beans": {
-          "id": "豆子"
-        },
-        "cheese": {
-          "id": "芝士"
         }
       }
     },
@@ -161,36 +35,41 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "学校"
-        },
-        "age": {
-          "id": "年龄"
-        },
-        "health": {
-          "id": "健康"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "鸡"
-        },
-        "lamb": {
-          "id": "羊肉"
-        },
-        "onion": {
-          "id": "洋葱"
-        },
-        "cheese": {
-          "id": "芝士"
+        "banana": {
+          "id": "香蕉"
         }
       }
     },
     "census_part": {
+      "fields": {
+        "age": {
+          "id": "年龄"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "颜色"
+        },
+        "food": {
+          "id": "食物"
+        },
+        "music": {
+          "id": "音乐"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "年龄"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "年龄"
@@ -207,63 +86,65 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "国家"
+        },
+        "Dance": {
+          "id": "舞蹈"
+        },
+        "Music": {
+          "id": "音乐"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "年龄"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "分数"
-        },
         "Country": {
           "id": "国家"
         },
         "Name": {
           "id": "姓名"
         },
+        "Score": {
+          "id": "分数"
+        },
         "Star": {
           "id": "踢腿"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "小艺术家"
+        "cheese": {
+          "id": "芝士"
+        },
+        "chicken": {
+          "id": "鸡"
+        },
+        "lamb": {
+          "id": "羊肉"
+        },
+        "onion": {
+          "id": "洋葱"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "人们"
+        "Category": {
+          "id": "类别"
         },
-        "rhino": {
-          "id": "犀牛"
-        },
-        "elephant": {
-          "id": "大象"
-        },
-        "alligator": {
-          "id": "鳄鱼"
-        },
-        "trees": {
-          "id": "树"
-        }
-      },
-      "name": "游猎"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "长度"
-        },
-        "Height": {
-          "id": "高度"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "水上"
+        "Description": {
+          "id": "描述"
         }
       }
     },
@@ -272,59 +153,101 @@
         "avocado": {
           "id": "牛油果"
         },
-        "onion": {
-          "id": "洋葱"
-        },
         "ginger": {
           "id": "生姜"
+        },
+        "onion": {
+          "id": "洋葱"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "音乐"
+        "bacon": {
+          "id": "培根"
         },
-        "Dance": {
-          "id": "舞蹈"
+        "cheese": {
+          "id": "芝士"
         },
-        "Country": {
-          "id": "国家"
+        "lobster": {
+          "id": "龙虾"
         },
-        "Internet": {
-          "id": "互联网"
+        "meat": {
+          "id": "肉"
         },
-        "Writing": {
-          "id": "写作"
-        },
-        "Achievements": {
-          "id": "成就"
-        },
-        "Age": {
-          "id": "年龄",
-          "description": "年龄"
-        },
-        "Height": {
-          "id": "高度",
-          "description": "高度"
-        },
-        "Gender": {
-          "id": "性别",
-          "description": "性别"
+        "mushrooms": {
+          "id": "蘑菇"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "香蕉"
+        "lime": {
+          "id": "青柠"
+        },
+        "strawberry": {
+          "id": "草莓"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "年龄"
+        "alligator": {
+          "id": "鳄鱼"
+        },
+        "elephant": {
+          "id": "大象"
+        },
+        "people": {
+          "id": "人们"
+        },
+        "rhino": {
+          "id": "犀牛"
+        },
+        "trees": {
+          "id": "树"
+        }
+      },
+      "name": "游猎"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "牛油果"
+        },
+        "beans": {
+          "id": "豆子"
+        },
+        "cheese": {
+          "id": "芝士"
+        },
+        "chicken": {
+          "id": "鸡"
+        },
+        "fruit": {
+          "id": "水果"
+        },
+        "tomato": {
+          "id": "番茄"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "牛油果"
+        },
+        "beans": {
+          "id": "豆子"
+        },
+        "corn": {
+          "id": "玉米"
+        },
+        "lime": {
+          "id": "青柠"
+        },
+        "onion": {
+          "id": "洋葱"
         }
       }
     },
@@ -338,18 +261,99 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "音乐"
+        "sides": {
+          "id": "边"
+        },
+        "size": {
+          "id": "大小"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "日"
+        },
+        "shoe": {
+          "id": "鞋履"
+        },
+        "weather": {
+          "id": "天气"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "小艺术家"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "年龄"
+        },
+        "health": {
+          "id": "健康"
+        },
+        "school": {
+          "id": "学校"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "成就"
+        },
+        "Age": {
+          "description": "年龄",
+          "id": "年龄"
+        },
+        "Country": {
+          "id": "国家"
         },
         "Dance": {
           "id": "舞蹈"
         },
-        "Country": {
-          "id": "国家"
+        "Gender": {
+          "description": "性别",
+          "id": "性别"
+        },
+        "Height": {
+          "description": "高度",
+          "id": "高度"
+        },
+        "Internet": {
+          "id": "互联网"
+        },
+        "Music": {
+          "id": "音乐"
+        },
+        "Writing": {
+          "id": "写作"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "水上"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "错误",
+  "modelCardPossibleValuesMaximum": "最大",
+  "modelCardPossibleValuesMinimum": "最小",
+  "navigateBack": "返回",
+  "navigateDone": "完成",
+  "navigateForward": "继续",
+  "predictButton": "预测",
+  "saveProgress": "保存​​",
+  "tryAgain": "再试一次",
+  "uniqueOptionsWarningNotice": "注意"
 }

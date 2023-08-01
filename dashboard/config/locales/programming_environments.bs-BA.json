@@ -2,8 +2,107 @@
   "bs-BA": {
     "data": {
       "programming_environments": {
+        "applab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "Funkcije"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Vrača največi broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Vrača največi broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                }
+              },
+              "name": "Matematika"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Pravljenje muzike"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "Nijedno"
+                },
+                "declareAssign_x": {
+                  "short_description": "Deklarira varijablu sa datim imenom nakon 'var', i dodijeljuje joj vrijednost na desnoj strani izraza"
+                }
+              },
+              "name": "Varijable"
+            }
+          },
+          "name": "Laboratorij za Aplikacije"
+        },
         "gamelab": {
           "categories": {
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Zvijezda"
+                    }
+                  }
+                }
+              },
+              "name": "Crtanje"
+            },
+            "functions": {
+              "name": "Funkcije"
+            },
             "game_lab": {
               "expressions": {
                 "mouseWentDown": {
@@ -17,17 +116,6 @@
                   "examples": {
                     "Making Music": {
                       "name": "Pravljenje muzike"
-                    }
-                  }
-                }
-              }
-            },
-            "sprites": {
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Spirala"
                     }
                   }
                 }
@@ -51,137 +139,49 @@
                 }
               }
             },
-            "drawing": {
-              "name": "Crtanje",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Zvijezda"
-                    }
-                  }
-                }
-              }
-            },
             "math": {
-              "name": "Matematika",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "Vraća najmanji broj"
-                    },
                     "max": {
                       "description": "Vrača največi broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "Vraća najmanji broj"
-                    },
                     "max": {
                       "description": "Vrača največi broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                }
+              },
+              "name": "Matematika"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirala"
                     }
                   }
                 }
               }
             },
             "variables": {
-              "name": "Varijable",
               "expressions": {
                 "declareAssign_x": {
                   "short_description": "Deklarira varijablu sa datim imenom nakon 'var', i dodijeljuje joj vrijednost na desnoj strani izraza"
                 }
-              }
-            },
-            "functions": {
-              "name": "Funkcije"
-            }
-          }
-        },
-        "applab": {
-          "name": "Laboratorij za Aplikacije",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funkcija"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Pravljenje muzike"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "expressions": {
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funkcija"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funkcija"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematika",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Vraća najmanji broj"
-                    },
-                    "max": {
-                      "description": "Vrača največi broj"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Vraća najmanji broj"
-                    },
-                    "max": {
-                      "description": "Vrača največi broj"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Varijable",
-              "expressions": {
-                "declareAssign_x": {
-                  "short_description": "Deklarira varijablu sa datim imenom nakon 'var', i dodijeljuje joj vrijednost na desnoj strani izraza"
-                },
-                "addPair": {
-                  "return_value": "Nijedno"
-                }
-              }
-            },
-            "functions": {
-              "name": "Funkcije"
+              },
+              "name": "Varijable"
             }
           }
         },
@@ -193,23 +193,23 @@
             "events": {
               "name": "Događaji"
             },
-            "loops": {
-              "name": "Petlje"
-            },
-            "variables": {
-              "name": "Varijable"
-            },
-            "math": {
-              "name": "Matematika"
+            "functions": {
+              "name": "Funkcije"
             },
             "logic": {
               "name": "Logika"
             },
-            "functions": {
-              "name": "Funkcije"
+            "loops": {
+              "name": "Petlje"
+            },
+            "math": {
+              "name": "Matematika"
             },
             "text": {
               "name": "Tekst"
+            },
+            "variables": {
+              "name": "Varijable"
             }
           }
         }

@@ -2,723 +2,22 @@
   "sv-SE": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web Lab"
-        },
-        "gamelab": {
-          "categories": {
-            "game_lab": {
-              "expressions": {
-                "keyDown": {
-                  "palette_params": {
-                    "code": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "keyWentDown": {
-                  "palette_params": {
-                    "code": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "keyWentUp": {
-                  "palette_params": {
-                    "code": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "mouseDown": {
-                  "palette_params": {
-                    "button": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "Svartvitt"
-                    }
-                  },
-                  "palette_params": {
-                    "button": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "mouseWentUp": {
-                  "palette_params": {
-                    "button": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "playSound": {
-                  "palette_params": {
-                    "url": {
-                      "type": "Sträng"
-                    },
-                    "loop": {
-                      "type": "Boolean"
-                    }
-                  },
-                  "short_description": "Spelar MP3 ljudfilen från en angiven URL."
-                },
-                "playSpeech": {
-                  "palette_params": {
-                    "text": {
-                      "type": "Sträng"
-                    },
-                    "gender": {
-                      "type": "Sträng"
-                    },
-                    "language": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "showMobileControls": {
-                  "palette_params": {
-                    "spaceButtonVisible": {
-                      "type": "Boolean"
-                    },
-                    "dpadVisible": {
-                      "type": "Boolean"
-                    },
-                    "dpadFourWay": {
-                      "type": "Boolean"
-                    },
-                    "mobileOnly": {
-                      "type": "Boolean"
-                    }
-                  }
-                },
-                "stopSound": {
-                  "palette_params": {
-                    "url": {
-                      "type": "Sträng"
-                    }
-                  }
-                }
-              }
-            },
-            "sprites": {
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Spiral"
-                    }
-                  }
-                },
-                "mirrorX": {
-                  "palette_params": {
-                    "dir": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "mirrorY": {
-                  "palette_params": {
-                    "dir": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "pointTo": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Nummer"
-                    },
-                    "y": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setAnimation": {
-                  "palette_params": {
-                    "label": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "setCollider": {
-                  "palette_params": {
-                    "type": {
-                      "type": "Sträng"
-                    },
-                    "xOffset": {
-                      "type": "Nummer"
-                    },
-                    "yOffset": {
-                      "type": "Nummer"
-                    },
-                    "width/radius": {
-                      "type": "Nummer"
-                    },
-                    "height": {
-                      "type": "Nummer"
-                    },
-                    "rotationOffset": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setFrame": {
-                  "palette_params": {
-                    "frame": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setSpeedAndDirection": {
-                  "palette_params": {
-                    "speed": {
-                      "type": "Nummer"
-                    },
-                    "angle": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setVelocity": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Nummer"
-                    },
-                    "y": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "createSprite": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Nummer"
-                    },
-                    "width": {
-                      "type": "Nummer"
-                    },
-                    "y": {
-                      "type": "Nummer"
-                    },
-                    "height": {
-                      "type": "Nummer"
-                    }
-                  }
-                }
-              }
-            },
-            "groups": {
-              "name": "Grupper",
-              "expressions": {
-                "get": {
-                  "palette_params": {
-                    "i": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "pointToEach": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Nummer"
-                    },
-                    "y": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setAnimationEach": {
-                  "palette_params": {
-                    "label": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "setColliderEach": {
-                  "palette_params": {
-                    "type": {
-                      "type": "Sträng"
-                    },
-                    "yOffset": {
-                      "type": "Nummer"
-                    },
-                    "width/radius": {
-                      "type": "Nummer"
-                    },
-                    "height": {
-                      "type": "Nummer"
-                    },
-                    "rotationOffset": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Färg"
-                    }
-                  }
-                },
-                "setHeightEach": {
-                  "palette_params": {
-                    "height": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setLifetimeEach": {
-                  "palette_params": {
-                    "lifetime": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setMirrorXEach": {
-                  "palette_params": {
-                    "dir": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setMirrorYEach": {
-                  "palette_params": {
-                    "dir": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setRotateToDirectionEach": {
-                  "palette_params": {
-                    "bool": {
-                      "type": "Boolean"
-                    }
-                  }
-                },
-                "setRotationEach": {
-                  "palette_params": {
-                    "angle": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setRotationSpeedEach": {
-                  "palette_params": {
-                    "speed": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setScaleEach": {
-                  "palette_params": {
-                    "scale": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setSpeedAndDirectionEach": {
-                  "palette_params": {
-                    "speed": {
-                      "type": "Nummer"
-                    },
-                    "angle": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Färg"
-                    }
-                  }
-                },
-                "setVelocityEach": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Nummer"
-                    },
-                    "y": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setVelocityXEach": {
-                  "palette_params": {
-                    "velocity": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setVelocityYEach": {
-                  "palette_params": {
-                    "velocity": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setVisibleEach": {
-                  "palette_params": {
-                    "bool": {
-                      "type": "Boolean"
-                    }
-                  }
-                },
-                "setWidthEach": {
-                  "palette_params": {
-                    "width": {
-                      "type": "Nummer"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "Ritning",
-              "expressions": {
-                "arc": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Nummer"
-                    },
-                    "y": {
-                      "type": "Nummer"
-                    },
-                    "w": {
-                      "type": "Nummer"
-                    },
-                    "h": {
-                      "type": "Nummer"
-                    },
-                    "start": {
-                      "type": "Nummer"
-                    },
-                    "stop": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "background": {
-                  "examples": {
-                    "RGB Colors": {
-                      "name": "RGB-färger"
-                    }
-                  },
-                  "palette_params": {
-                    "color": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "ellipse": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Nummer"
-                    },
-                    "y": {
-                      "type": "Nummer"
-                    },
-                    "w": {
-                      "type": "Nummer"
-                    },
-                    "h": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "fill": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "line": {
-                  "palette_params": {
-                    "x1": {
-                      "type": "Nummer"
-                    },
-                    "y1": {
-                      "type": "Nummer"
-                    },
-                    "x2": {
-                      "type": "Nummer"
-                    },
-                    "y2": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "point": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Nummer"
-                    },
-                    "y": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "rect": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Nummer"
-                    },
-                    "y": {
-                      "type": "Nummer"
-                    },
-                    "w": {
-                      "type": "Nummer"
-                    },
-                    "h": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "regularPolygon": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Nummer"
-                    },
-                    "y": {
-                      "type": "Nummer"
-                    },
-                    "sides": {
-                      "type": "Nummer"
-                    },
-                    "size": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "rgb": {
-                  "palette_params": {
-                    "r": {
-                      "type": "Nummer"
-                    },
-                    "g": {
-                      "type": "Nummer"
-                    },
-                    "b": {
-                      "type": "Nummer"
-                    },
-                    "a": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Stjärna"
-                    }
-                  },
-                  "palette_params": {
-                    "x1": {
-                      "type": "Nummer"
-                    },
-                    "y1": {
-                      "type": "Nummer"
-                    },
-                    "x2": {
-                      "type": "Nummer"
-                    },
-                    "y2": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "stroke": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "strokeWeight": {
-                  "palette_params": {
-                    "size": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "text": {
-                  "palette_params": {
-                    "str": {
-                      "type": "Sträng"
-                    },
-                    "x": {
-                      "type": "Nummer"
-                    },
-                    "y": {
-                      "type": "Nummer"
-                    },
-                    "width": {
-                      "type": "Nummer"
-                    },
-                    "height": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "textAlign": {
-                  "palette_params": {
-                    "horiz": {
-                      "type": "Sträng"
-                    },
-                    "vert": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "textFont": {
-                  "palette_params": {
-                    "font": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "textSize": {
-                  "palette_params": {
-                    "pixels": {
-                      "type": "Nummer"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matte",
-              "expressions": {
-                "mathSqrt": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "moduloOperator": {
-                  "palette_params": {
-                    "value1": {
-                      "type": "Nummer"
-                    },
-                    "value2": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Det minsta talet returneras"
-                    },
-                    "max": {
-                      "description": "Det största talet returneras"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Det minsta talet returneras"
-                    },
-                    "max": {
-                      "description": "Det största talet returneras"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "variabler"
-            },
-            "functions": {
-              "name": "funktioner"
-            }
-          }
-        },
         "applab": {
-          "name": "App Lab",
-          "description": "App Lab är en programmeringsmiljö där du kan göra enkla appar. Skapa en app, koda med block eller JavaScript och få den att fungera. Dela sedan med dig av den till andra inom några sekunder.",
           "categories": {
-            "ui_controls": {
+            "advanced": {
               "expressions": {
-                "getProperty": {
+                "setStyle": {
                   "palette_params": {
-                    "id": {
-                      "type": "Sträng"
-                    },
-                    "property": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "onEvent": {
-                  "palette_params": {
-                    "type": {
+                    "css": {
                       "type": "Sträng"
                     },
                     "id": {
-                      "type": "Sträng"
-                    },
-                    "callback": {
-                      "type": "Funktion"
-                    }
-                  }
-                },
-                "playSound": {
-                  "palette_params": {
-                    "loop": {
-                      "type": "Boolean"
-                    }
-                  },
-                  "short_description": "Spelar MP3 ljudfilen från en angiven URL."
-                },
-                "playSpeech": {
-                  "palette_params": {
-                    "text": {
-                      "type": "Sträng"
-                    },
-                    "gender": {
-                      "type": "Sträng"
-                    },
-                    "language": {
-                      "type": "Sträng"
-                    }
-                  }
-                },
-                "rgb": {
-                  "palette_params": {
-                    "r": {
-                      "type": "Nummer"
-                    },
-                    "g": {
-                      "type": "Nummer"
-                    },
-                    "b": {
-                      "type": "Nummer"
-                    },
-                    "a": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "id": {
-                      "type": "Sträng"
-                    },
-                    "property": {
                       "type": "Sträng"
                     }
                   }
                 }
-              }
+              },
+              "name": "Avancerat"
             },
             "canvas": {
               "expressions": {
@@ -808,8 +107,60 @@
                 }
               }
             },
+            "circuit": {
+              "expressions": {
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "isPressed": {
+                  "return_value": "Boolean"
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Boolean"
+                }
+              },
+              "name": "Krets"
+            },
+            "control": {
+              "expressions": {
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktion"
+                    },
+                    "ms": {
+                      "type": "Nummer"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Data",
               "expressions": {
                 "createRecord": {
                   "palette_params": {
@@ -848,24 +199,24 @@
                 },
                 "getColumn": {
                   "palette_params": {
-                    "table": {
+                    "column": {
                       "type": "Sträng"
                     },
-                    "column": {
+                    "table": {
                       "type": "Sträng"
                     }
                   }
                 },
                 "getPrediction": {
                   "palette_params": {
-                    "name": {
-                      "type": "Sträng"
+                    "callback": {
+                      "type": "Funktion"
                     },
                     "id": {
                       "type": "Sträng"
                     },
-                    "callback": {
-                      "type": "Funktion"
+                    "name": {
+                      "type": "Sträng"
                     }
                   }
                 },
@@ -890,49 +241,27 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "Data"
             },
-            "turtle": {
+            "functions": {
+              "name": "funktioner"
+            },
+            "maker": {
               "expressions": {
-                "penColor": {
+                "pinMode": {
                   "palette_params": {
-                    "color": {
+                    "mode": {
                       "type": "Sträng"
-                    }
-                  }
-                },
-                "penRGB": {
-                  "palette_params": {
-                    "r": {
-                      "type": "Nummer"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "stopTimedLoop": {
-                  "palette_params": {
-                    "loop": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "timedLoop": {
-                  "palette_params": {
-                    "ms": {
-                      "type": "Nummer"
                     },
-                    "callback": {
-                      "type": "Funktion"
+                    "pin": {
+                      "type": "Nummer"
                     }
                   }
                 }
               }
             },
             "math": {
-              "name": "Matte",
               "expressions": {
                 "mathPow": {
                   "palette_params": {
@@ -961,111 +290,28 @@
                     }
                   }
                 },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Det minsta talet returneras"
-                    },
-                    "max": {
-                      "description": "Det största talet returneras"
-                    }
-                  }
-                },
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "Det minsta talet returneras"
-                    },
                     "max": {
                       "description": "Det största talet returneras"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "variabler",
-              "expressions": {
-                "addPair": {
-                  "palette_params": {
-                    "key": {
-                      "type": "Sträng"
-                    }
-                  },
-                  "return_value": "Ingen"
-                },
-                "getValue": {
-                  "palette_params": {
-                    "key": {
-                      "type": "Sträng"
-                    }
-                  }
-                }
-              }
-            },
-            "functions": {
-              "name": "funktioner"
-            },
-            "advanced": {
-              "name": "Avancerat",
-              "expressions": {
-                "setStyle": {
-                  "palette_params": {
-                    "id": {
-                      "type": "Sträng"
                     },
-                    "css": {
-                      "type": "Sträng"
+                    "min": {
+                      "description": "Det minsta talet returneras"
                     }
                   }
-                }
-              }
-            },
-            "maker": {
-              "expressions": {
-                "pinMode": {
+                },
+                "randomNumber_min_max": {
                   "palette_params": {
-                    "pin": {
-                      "type": "Nummer"
+                    "max": {
+                      "description": "Det största talet returneras"
                     },
-                    "mode": {
-                      "type": "Sträng"
+                    "min": {
+                      "description": "Det minsta talet returneras"
                     }
                   }
                 }
-              }
-            },
-            "circuit": {
-              "name": "Krets",
-              "expressions": {
-                "isPressed": {
-                  "return_value": "Boolean"
-                },
-                "buzzer.play": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "buzzer.playNotes": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "buzzer.playSong": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Nummer"
-                    }
-                  }
-                },
-                "toggleSwitch.isOpen": {
-                  "return_value": "Boolean"
-                }
-              }
+              },
+              "name": "Matte"
             },
             "micro_bit": {
               "expressions": {
@@ -1114,48 +360,802 @@
                   }
                 }
               }
+            },
+            "turtle": {
+              "expressions": {
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Nummer"
+                    }
+                  }
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Sträng"
+                    },
+                    "property": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktion"
+                    },
+                    "id": {
+                      "type": "Sträng"
+                    },
+                    "type": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Boolean"
+                    }
+                  },
+                  "short_description": "Spelar MP3 ljudfilen från en angiven URL."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "Sträng"
+                    },
+                    "language": {
+                      "type": "Sträng"
+                    },
+                    "text": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Nummer"
+                    },
+                    "b": {
+                      "type": "Nummer"
+                    },
+                    "g": {
+                      "type": "Nummer"
+                    },
+                    "r": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Sträng"
+                    },
+                    "property": {
+                      "type": "Sträng"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Sträng"
+                    }
+                  },
+                  "return_value": "Ingen"
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Sträng"
+                    }
+                  }
+                }
+              },
+              "name": "variabler"
+            }
+          },
+          "description": "App Lab är en programmeringsmiljö där du kan göra enkla appar. Skapa en app, koda med block eller JavaScript och få den att fungera. Dela sedan med dig av den till andra inom några sekunder.",
+          "name": "App Lab"
+        },
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Nummer"
+                    },
+                    "start": {
+                      "type": "Nummer"
+                    },
+                    "stop": {
+                      "type": "Nummer"
+                    },
+                    "w": {
+                      "type": "Nummer"
+                    },
+                    "x": {
+                      "type": "Nummer"
+                    },
+                    "y": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "background": {
+                  "examples": {
+                    "RGB Colors": {
+                      "name": "RGB-färger"
+                    }
+                  },
+                  "palette_params": {
+                    "color": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Nummer"
+                    },
+                    "w": {
+                      "type": "Nummer"
+                    },
+                    "x": {
+                      "type": "Nummer"
+                    },
+                    "y": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Nummer"
+                    },
+                    "x2": {
+                      "type": "Nummer"
+                    },
+                    "y1": {
+                      "type": "Nummer"
+                    },
+                    "y2": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nummer"
+                    },
+                    "y": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Nummer"
+                    },
+                    "w": {
+                      "type": "Nummer"
+                    },
+                    "x": {
+                      "type": "Nummer"
+                    },
+                    "y": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "sides": {
+                      "type": "Nummer"
+                    },
+                    "size": {
+                      "type": "Nummer"
+                    },
+                    "x": {
+                      "type": "Nummer"
+                    },
+                    "y": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Nummer"
+                    },
+                    "b": {
+                      "type": "Nummer"
+                    },
+                    "g": {
+                      "type": "Nummer"
+                    },
+                    "r": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Stjärna"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "Nummer"
+                    },
+                    "x2": {
+                      "type": "Nummer"
+                    },
+                    "y1": {
+                      "type": "Nummer"
+                    },
+                    "y2": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Nummer"
+                    },
+                    "str": {
+                      "type": "Sträng"
+                    },
+                    "width": {
+                      "type": "Nummer"
+                    },
+                    "x": {
+                      "type": "Nummer"
+                    },
+                    "y": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "Sträng"
+                    },
+                    "vert": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Nummer"
+                    }
+                  }
+                }
+              },
+              "name": "Ritning"
+            },
+            "functions": {
+              "name": "funktioner"
+            },
+            "game_lab": {
+              "expressions": {
+                "keyDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "keyWentDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "keyWentUp": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "mouseDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Svartvitt"
+                    }
+                  },
+                  "palette_params": {
+                    "button": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "mouseWentUp": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Boolean"
+                    },
+                    "url": {
+                      "type": "Sträng"
+                    }
+                  },
+                  "short_description": "Spelar MP3 ljudfilen från en angiven URL."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "Sträng"
+                    },
+                    "language": {
+                      "type": "Sträng"
+                    },
+                    "text": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "showMobileControls": {
+                  "palette_params": {
+                    "dpadFourWay": {
+                      "type": "Boolean"
+                    },
+                    "dpadVisible": {
+                      "type": "Boolean"
+                    },
+                    "mobileOnly": {
+                      "type": "Boolean"
+                    },
+                    "spaceButtonVisible": {
+                      "type": "Boolean"
+                    }
+                  }
+                },
+                "stopSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Sträng"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "expressions": {
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nummer"
+                    },
+                    "y": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setAnimationEach": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Nummer"
+                    },
+                    "rotationOffset": {
+                      "type": "Nummer"
+                    },
+                    "type": {
+                      "type": "Sträng"
+                    },
+                    "width/radius": {
+                      "type": "Nummer"
+                    },
+                    "yOffset": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Färg"
+                    }
+                  }
+                },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Boolean"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Nummer"
+                    },
+                    "speed": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Färg"
+                    }
+                  }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nummer"
+                    },
+                    "y": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Boolean"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "Nummer"
+                    }
+                  }
+                }
+              },
+              "name": "Grupper"
+            },
+            "math": {
+              "expressions": {
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "Nummer"
+                    },
+                    "value2": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Det största talet returneras"
+                    },
+                    "min": {
+                      "description": "Det minsta talet returneras"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Det största talet returneras"
+                    },
+                    "min": {
+                      "description": "Det minsta talet returneras"
+                    }
+                  }
+                }
+              },
+              "name": "Matte"
+            },
+            "sprites": {
+              "expressions": {
+                "createSprite": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Nummer"
+                    },
+                    "width": {
+                      "type": "Nummer"
+                    },
+                    "x": {
+                      "type": "Nummer"
+                    },
+                    "y": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spiral"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nummer"
+                    },
+                    "y": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Sträng"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Nummer"
+                    },
+                    "rotationOffset": {
+                      "type": "Nummer"
+                    },
+                    "type": {
+                      "type": "Sträng"
+                    },
+                    "width/radius": {
+                      "type": "Nummer"
+                    },
+                    "xOffset": {
+                      "type": "Nummer"
+                    },
+                    "yOffset": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Nummer"
+                    },
+                    "speed": {
+                      "type": "Nummer"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Nummer"
+                    },
+                    "y": {
+                      "type": "Nummer"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "variabler"
             }
           }
         },
         "spritelab": {
           "categories": {
-            "world": {
-              "name": "Världen"
-            },
-            "location": {
-              "name": "Platser"
-            },
             "actions": {
               "name": "Åtgärder"
-            },
-            "events": {
-              "name": "Händelser"
             },
             "behaviors": {
               "name": "Beteenden"
             },
-            "loops": {
-              "name": "loopar"
+            "comments": {
+              "name": "Kommentarer"
             },
-            "variables": {
-              "name": "variabler"
-            },
-            "math": {
-              "name": "Matte"
-            },
-            "logic": {
-              "name": "Logik"
+            "events": {
+              "name": "Händelser"
             },
             "functions": {
               "name": "funktioner"
             },
+            "location": {
+              "name": "Platser"
+            },
+            "logic": {
+              "name": "Logik"
+            },
+            "loops": {
+              "name": "loopar"
+            },
+            "math": {
+              "name": "Matte"
+            },
             "text": {
               "name": "text"
             },
-            "comments": {
-              "name": "Kommentarer"
+            "variables": {
+              "name": "variabler"
+            },
+            "world": {
+              "name": "Världen"
             }
           }
+        },
+        "weblab": {
+          "name": "Web Lab"
         }
       }
     }

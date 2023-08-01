@@ -3,31 +3,31 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "այո",
-          "No": "ոչ"
+          "No": "ոչ",
+          "Yes": "այո"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "այո",
-          "No": "ոչ"
+          "No": "ոչ",
+          "Yes": "այո"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "այո",
-          "No": "ոչ"
+          "No": "ոչ",
+          "Yes": "այո"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "այո",
-          "No": "ոչ"
+          "No": "ոչ",
+          "Yes": "այո"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Անուն",
-          "Color": "Գույնը",
           "City": "Քաղաք",
+          "Color": "Գույնը",
+          "Name": "Անուն",
           "text": "տեքստ"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Անուն",
-          "Color": "Գույնը",
           "City": "Քաղաք",
+          "Color": "Գույնը",
+          "Name": "Անուն",
           "text": "տեքստ"
         },
         "CSD U1 processing guess_2021": {
@@ -49,48 +49,48 @@
           "Back": "Վերադառնալ"
         },
         "CSD U1 storage movies_2021": {
+          "No": "ոչ",
           "Star Wars": "Աստղային պատերազմներ",
           "Yes": "այո",
-          "No": "ոչ",
           "text": "տեքստ"
         },
         "CSD U1 storage movies_2022": {
+          "No": "ոչ",
           "Star Wars": "Աստղային պատերազմներ",
           "Yes": "այո",
-          "No": "ոչ",
           "text": "տեքստ"
         },
         "CSD U1 storage outfit_2021": {
-          "pink": "վարդագույն",
-          "green": "կանաչ",
           "black": "Սեվ",
+          "green": "կանաչ",
+          "pink": "վարդագույն",
           "purple": "մանուշակագույն"
         },
         "CSD U1 storage outfit_2022": {
-          "pink": "վարդագույն",
-          "green": "կանաչ",
           "black": "Սեվ",
+          "green": "կանաչ",
+          "pink": "վարդագույն",
           "purple": "մանուշակագույն"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "միջին"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "ձախ",
-          "right": "ճիշտ",
-          "red": "կարմիր",
-          "yellow": "դեղին",
           "green": "կանաչ",
-          "purple": "մանուշակագույն"
+          "left": "ձախ",
+          "purple": "մանուշակագույն",
+          "red": "կարմիր",
+          "right": "ճիշտ",
+          "yellow": "դեղին"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "ձախ",
           "right": "ճիշտ"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "դեղին",
+          "blue": "կապույտ",
           "green": "կանաչ",
-          "blue": "կապույտ"
+          "yellow": "դեղին"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
@@ -130,10 +130,10 @@
           "title": "կոչում"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "մինչեւ",
           "down": "ներքեւ",
           "left": "ձախ",
-          "right": "ճիշտ"
+          "right": "ճիշտ",
+          "up": "մինչեւ"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "անուն"
@@ -242,21 +242,21 @@
         },
         "CSDU4 Crowdsource App Demo": {
           "Cancel": "վերացնել",
-          "Yes": "այո",
           "No": "ոչ",
-          "Save": "Save"
+          "Save": "Save",
+          "Yes": "այո"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "Cancel": "վերացնել",
-          "Yes": "այո",
           "No": "ոչ",
-          "Save": "Save"
+          "Save": "Save",
+          "Yes": "այո"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "Cancel": "վերացնել",
-          "Yes": "այո",
           "No": "ոչ",
-          "Save": "Save"
+          "Save": "Save",
+          "Yes": "այո"
         },
         "CSDU4 Decision App Demo": {
           "When?": "Երբ?"
@@ -272,16 +272,16 @@
           "Show": "Ցուցադրում"
         },
         "CSDU4 List App Demo": {
-          "Done": "Done",
-          "Cancel": "վերացնել"
+          "Cancel": "վերացնել",
+          "Done": "Done"
         },
         "CSDU4 List App Demo_2018": {
-          "Done": "Done",
-          "Cancel": "վերացնել"
+          "Cancel": "վերացնել",
+          "Done": "Done"
         },
         "CSDU4 List App Demo_2019": {
-          "Done": "Done",
-          "Cancel": "վերացնել"
+          "Cancel": "վերացնել",
+          "Done": "Done"
         },
         "CSDU4 Quiz App Demo": {
           "Submit": "Հաստատել",
@@ -379,12 +379,12 @@
           "Next": "Next"
         },
         "ml-customize-raspado-2021": {
-          "yes": "այո",
-          "no": "ոչ"
+          "no": "ոչ",
+          "yes": "այո"
         },
         "ml-customize-raspado_2022": {
-          "yes": "այո",
-          "no": "ոչ"
+          "no": "ոչ",
+          "yes": "այո"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Շարունակել",
@@ -396,13 +396,13 @@
         },
         "ml-model card-medical app v2 2021-2": {
           "W": "W",
-          "yes": "այո",
-          "no": "ոչ"
+          "no": "ոչ",
+          "yes": "այո"
         },
         "ml-model card-medical app v2 2021-2_2022": {
           "W": "W",
-          "yes": "այո",
-          "no": "ոչ"
+          "no": "ոչ",
+          "yes": "այո"
         },
         "ml-models in applab-choice intended warnings": {
           "Back": "Վերադառնալ"
@@ -411,20 +411,20 @@
           "Back": "Վերադառնալ"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "այո",
-          "No": "ոչ"
+          "No": "ոչ",
+          "Yes": "այո"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "այո",
-          "No": "ոչ"
+          "No": "ոչ",
+          "Yes": "այո"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "այո",
-          "No": "ոչ"
+          "No": "ոչ",
+          "Yes": "այո"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "այո",
-          "No": "ոչ"
+          "No": "ոչ",
+          "Yes": "այո"
         },
         "ml-use model card-example3A-2021": {
           "cloudy": "ամպամած",

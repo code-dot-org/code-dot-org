@@ -1,37 +1,13 @@
 {
-  "navigateForward": "Vazhdo ",
-  "navigateBack": "Kthehu",
-  "tryAgain": "Provo përsëri",
-  "navigateDone": "Përfundo",
-  "saveProgress": "Ruaj",
-  "correctAnswer": "E saktë",
-  "modelCardPossibleValuesMinimum": "minimum",
-  "modelCardPossibleValuesMaximum": "Maksimum",
-  "columnInspectorDescription": "Përshkrimi",
-  "columnDetailsMinimumValue": "minimum",
   "columnDetailsMaximumValue": "Maksimum",
+  "columnDetailsMinimumValue": "minimum",
+  "columnInspectorDescription": "Përshkrimi",
+  "correctAnswer": "E saktë",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "mosha"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "ditë"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "qepë"
-        },
-        "corn": {
-          "id": "misër"
+        "Length": {
+          "id": "Gjatësi"
         }
       }
     },
@@ -42,10 +18,27 @@
         }
       }
     },
-    "poutine_toy": {
+    "billionaires": {
       "fields": {
-        "meat": {
-          "id": "mish"
+        "Age": {
+          "id": "Mosha"
+        },
+        "Gender": {
+          "id": "Gjinia"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "Banane"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "mosha"
         }
       }
     },
@@ -53,65 +46,23 @@
       "fields": {
         "color": {
           "id": "ngjyra"
+        },
+        "food": {
+          "id": "ushqim"
+        },
+        "music": {
+          "id": "muzikë"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Mosha"
         }
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "mosha"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "Përshkrimi"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "madhësia"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "pulë"
-        }
-      }
-    },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Mosha"
-        },
-        "Gender": {
-          "id": "Gjini"
-        }
-      }
-    },
-    "student_alcohol_consumption": {
-      "fields": {
-        "age": {
-          "id": "mosha"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "pulë"
-        },
-        "onion": {
-          "id": "qepë"
-        }
-      }
-    },
-    "census_part": {
       "fields": {
         "age": {
           "id": "mosha"
@@ -125,79 +76,155 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Shteti"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "mosha"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "rezultati"
-        },
         "Country": {
           "id": "Shteti"
         },
         "Name": {
           "id": "Emri"
+        },
+        "Score": {
+          "id": "rezultati"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Artisti"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "people": {
-          "id": "njerëzit"
-        }
-      }
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Gjatësi"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
+        "cheese": {
+          "id": "djathë"
+        },
+        "chicken": {
+          "id": "pulë"
+        },
+        "lamb": {
+          "id": "qengji"
+        },
         "onion": {
           "id": "qepë"
         }
       }
     },
-    "student_survey": {
+    "nutrition": {
       "fields": {
-        "Country": {
-          "id": "Shteti"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Achievements": {
-          "id": "Arritjet"
-        },
-        "Age": {
-          "id": "Mosha",
-          "description": "Mosha"
-        },
-        "Gender": {
-          "id": "Gjini",
-          "description": "Gjini"
+        "Description": {
+          "id": "Përshkrimi"
         }
       }
     },
-    "boba_toy": {
+    "poke_toy": {
       "fields": {
-        "banana": {
-          "id": "Banane"
+        "avocado": {
+          "id": "avokado"
+        },
+        "ginger": {
+          "id": "xhenxhefil"
+        },
+        "onion": {
+          "id": "qepë"
         }
       }
     },
-    "heart": {
+    "poutine_toy": {
       "fields": {
-        "Age": {
-          "id": "Mosha"
+        "bacon": {
+          "id": "proshutë"
+        },
+        "cheese": {
+          "id": "djathë"
+        },
+        "lobster": {
+          "id": "karavidhe"
+        },
+        "meat": {
+          "id": "mish"
+        },
+        "mushrooms": {
+          "id": "kërpudha"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "lime": {
+          "id": "gëlqere"
+        },
+        "strawberry": {
+          "id": "luleshtrydhe"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "aligator"
+        },
+        "elephant": {
+          "id": "elefant"
+        },
+        "people": {
+          "id": "njerëzit"
+        },
+        "rhino": {
+          "id": "rinoceront"
+        },
+        "trees": {
+          "id": "pemë"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
+        "beans": {
+          "id": "fasule"
+        },
+        "cheese": {
+          "id": "djathë"
+        },
+        "chicken": {
+          "id": "pulë"
+        },
+        "fruit": {
+          "id": "frutë"
+        },
+        "tomato": {
+          "id": "domate"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
+        "beans": {
+          "id": "fasule"
+        },
+        "corn": {
+          "id": "misër"
+        },
+        "lime": {
+          "id": "gëlqere"
+        },
+        "onion": {
+          "id": "qepë"
         }
       }
     },
@@ -208,12 +235,71 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
+        "size": {
+          "id": "madhësia"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "ditë"
+        },
+        "shoe": {
+          "id": "mbath"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Artisti"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "mosha"
+        },
+        "health": {
+          "id": "dolli"
+        },
+        "school": {
+          "id": "shkollë"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Arritjet"
+        },
+        "Age": {
+          "description": "Mosha",
+          "id": "Mosha"
+        },
         "Country": {
           "id": "Shteti"
+        },
+        "Gender": {
+          "description": "Gjinia",
+          "id": "Gjinia"
+        },
+        "Internet": {
+          "id": "Internet"
         }
       }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "Maksimum",
+  "modelCardPossibleValuesMinimum": "minimum",
+  "navigateBack": "Kthehu",
+  "navigateDone": "Përfundo",
+  "navigateForward": "Vazhdo ",
+  "saveProgress": "Ruaj",
+  "tryAgain": "Provo përsëri",
+  "uniqueOptionsWarningNotice": "Shënim"
 }

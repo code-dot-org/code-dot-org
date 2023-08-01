@@ -1,0 +1,51 @@
+name 'csa-se-github-scavenger-hunt-pt3'
+title 'GitHub Scavenger Hunt'
+
+markdown <<MARKDOWN
+# GitHub Scavenger Hunt
+
+## Making a Commit
+
+A **commit** is an individual change to a file or set of files.
+
+1. Make some changes to the code in the repo. Be sure to save the file after making your changes.
+
+2. The **Source Control** icon now shows the number of files that have been changed. Click on the **Source Control** tab to see the list of files that have been modified.
+
+<div style="background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;">
+💡 <strong>TIP:</strong> When you click on a file in this list, you'll then see the original code next to the modified code with the changes highlighted.
+</div>
+
+<div style="border: 3px solid #007ACC; border-radius: 5px; font-size: 1em; line-height: 1.4; padding: 10px 20px 20px 20px; margin-top: 25px; margin-bottom: 20px;">
+<strong><h3>By the way . . .</h3></strong>
+Git has three main states that your file can be in:
+<br>
+<ul style="font-size: 1em; line-height: 1.4">
+<li><strong>Modified</strong> means that you have made changes to the file but have not yet committed your changes to the repo..</li>
+<li><strong>Staged</strong> means that you have marked a modified file to include in a commit.</li>
+<li><strong>Committed:</strong> means that the changes have been noted on the repo.</li>
+</ul>
+</div>
+
+3. When we're ready to send modifications to the repo, we first need to add those files to staging.
+
+   **To stage all changes:** Right-click on **Changes** and choose **Stage All Changes** *or* hover over **Changes** and click the **+** to add all of the modified files to staging.
+
+   **To stage some of the changes:** Right-click on a single file and choose **Stage Changes** *or* hover over the file and click the **+** to add it to staging.
+
+Once you select the files to add to staging, you'll see these appear under **Staged Changes**. When you commit your code, only these files will be included.
+
+4. In the text box, enter a short description of the changes that were made.
+
+<div style="border: 3px solid #007ACC; border-radius: 5px; font-size: 1em; line-height: 1.4; padding: 10px 20px 20px 20px; margin-top: 25px; margin-bottom: 20px;">
+<strong><h3>By the way . . .</h3></strong>
+Writing a clear and descriptive commit message is an essential part of good version control practices. Here are some best practices for writing commit messages:
+<br><br>
+<ul style="font-size: 1em; line-height: 1.4">
+<li><strong>Keep it concise:</strong> A commit message should be brief. If your commit has too many changes that can't be described in a few words, it's a sign that you should break it down into smaller commits.</li><br>
+<li><strong>Use command form:</strong> Use verbs like <em>add</em>, <em>fix</em>, <em>remove</em> when describing what the change accomplishes, as if you're giving a command. For example "fix bug in user login" or "add user image selection".</li>
+</ul>
+</div>
+
+5. Click the **Commit** button. When this is the first commit, you'll then see a **Publish Branch** button. Click this button so the changes are updated in the repo.
+MARKDOWN

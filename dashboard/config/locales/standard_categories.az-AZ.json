@@ -2,23 +2,44 @@
   "az-AZ": {
     "data": {
       "standard_categories": {
-        "CT": {
-          "description": "Hesablama təfəkkürü"
+        "3": {
+          "description": "Tələbələr tool-lara informasiyanı toplamaq, qiymətləndirmək və istifadə etmək üz tuturlar."
         },
-        "L": {
-          "description": "Dil"
+        "3-A-v": {
+          "description": "Öyrənmənin təbiəti - daxili  təsvirləri tənzimləmək"
         },
-        "RF": {
-          "description": "Əsas Oxu Bacarıqları"
+        "3-A-vi": {
+          "description": "Öyrənmənin Təbiəti - təcrübədən öyrənmək"
         },
-        "RH": {
-          "description": "Tarix/İctimai Elmlər oxumaq"
+        "3-B-i": {
+          "description": "Neytral Şəbəkələr - sinir şəbəkənin strukturu"
         },
-        "RST": {
-          "description": "Elm/texniki oxumaq"
+        "3-B-ii": {
+          "description": "Neyron şəbəkələri - çəki tənzimləmə"
+        },
+        "3-C-ii": {
+          "description": "Datasets - böyük verilənlər dəstləri"
+        },
+        "5": {
+          "description": "Tələbələr insaniç mədəni və sosiolji şeyləri texnologiya ilə əlaqaləndirməyi anlayırlar və qanuni-etik davranışı praktika edirlər."
+        },
+        "AAP-1.A": {
+          "description": "Bir dəyişən bir dəyərlə təmsil edin."
         },
         "APR": {
           "description": "Çoxhədlilərlə və Rasional ifadələrlə hesablama\n"
+        },
+        "BI-1": {
+          "description": "Kompüterlər dünyanı sensorlar vasitəsilə dərk edirlər"
+        },
+        "BI-2": {
+          "description": "Cəsuslar dünyanın təqdimatlarını saxlayır və onlardan əsaslandırma üçün istifadə edirlər"
+        },
+        "BI-4": {
+          "description": "Ağıllı agentlər insanlarla təbii şəkildə qarşılıqlı əlaqədə olmaq üçün çoxlu növ bilik tələb edirlər"
+        },
+        "BI-5": {
+          "description": "AI -( artificial intelligence) süni intellekt cəmiyyətə həm pozitiv həm də negativ şəkildə təsir edir"
         },
         "C": {
           "description": "Çevrələr"
@@ -38,11 +59,26 @@
         "CP": {
           "description": "Şərti Ehtimal və Ehtimalın qaydaları"
         },
+        "CRD-2.C": {
+          "description": "Proqrama giriş(lər)i müəyyən edin."
+        },
+        "CRD-2.E": {
+          "description": "İnkişaf prosesindən istifadə edərək proqram hazırlayın."
+        },
+        "CT": {
+          "description": "Hesablama təfəkkürü"
+        },
+        "D2.His": {
+          "description": "Tarix"
+        },
         "EE": {
           "description": "İfadələr və Bərabərliklər"
         },
         "F": {
           "description": "Funksiyalar"
+        },
+        "G": {
+          "description": "Həndəsə"
         },
         "GMD": {
           "description": "Həndəsi Ölçmə və Ölçülər (Ölçülər,  obyektin ölçüsünü müəyyən edir. ölçmə obyektin xassələrinin müəyyən edilməsi aktıdır və ölçmə yalnız ölçülərlə məhdudlaşmır; rəng, çəki, spin, yük, kütlə ölçülə bilən xüsusiyyətlərdir)"
@@ -56,8 +92,14 @@
         "IF": {
           "description": "Funksiyaların Şərhi"
         },
+        "L": {
+          "description": "Dil"
+        },
         "LE": {
           "description": "Xətti, kvadratik və Üstlü Funksiyaların Modelləri "
+        },
+        "MP": {
+          "description": "Riyaziyyat təcrübələri"
         },
         "NF": {
           "description": "Ədəd və Hesablama Əməlləri - Fraksiyalar"
@@ -68,8 +110,17 @@
         "Q": {
           "description": "Miqdarlar"
         },
+        "RF": {
+          "description": "Əsas Oxu Bacarıqları"
+        },
+        "RH": {
+          "description": "Tarix/İctimai Elmlər oxumaq"
+        },
         "RN": {
           "description": "Real Ədədlər Sistemi(çoxluğu)"
+        },
+        "RST": {
+          "description": "Elm/texniki oxumaq"
         },
         "SP": {
           "description": "Statistika və Ehtimal"
@@ -79,60 +130,6 @@
         },
         "TF": {
           "description": "Triqonometrik Funksiyalar"
-        },
-        "BI-1": {
-          "description": "Kompüterlər dünyanı sensorlar vasitəsilə dərk edirlər"
-        },
-        "BI-2": {
-          "description": "Cəsuslar dünyanın təqdimatlarını saxlayır və onlardan əsaslandırma üçün istifadə edirlər"
-        },
-        "BI-4": {
-          "description": "Ağıllı agentlər insanlarla təbii şəkildə qarşılıqlı əlaqədə olmaq üçün çoxlu növ bilik tələb edirlər"
-        },
-        "BI-5": {
-          "description": "AI -( artificial intelligence) süni intellekt cəmiyyətə həm pozitiv həm də negativ şəkildə təsir edir"
-        },
-        "3-A-v": {
-          "description": "Öyrənmənin təbiəti - daxili  təsvirləri tənzimləmək"
-        },
-        "3-A-vi": {
-          "description": "Öyrənmənin Təbiəti - təcrübədən öyrənmək"
-        },
-        "3-B-i": {
-          "description": "Neytral Şəbəkələr - sinir şəbəkənin strukturu"
-        },
-        "3-B-ii": {
-          "description": "Neyron şəbəkələri - çəki tənzimləmə"
-        },
-        "3-C-ii": {
-          "description": "Datasets - böyük verilənlər dəstləri"
-        },
-        "3": {
-          "description": "Tələbələr tool-lara informasiyanı toplamaq, qiymətləndirmək və istifadə etmək üz tuturlar."
-        },
-        "5": {
-          "description": "Tələbələr insaniç mədəni və sosiolji şeyləri texnologiya ilə əlaqaləndirməyi anlayırlar və qanuni-etik davranışı praktika edirlər."
-        },
-        "AAP-1.A": {
-          "description": "Bir dəyişən bir dəyərlə təmsil edin."
-        },
-        "CRD-2.C": {
-          "description": "Proqrama giriş(lər)i müəyyən edin."
-        },
-        "CRD-2.E": {
-          "description": "İnkişaf prosesindən istifadə edərək proqram hazırlayın."
-        },
-        "G": {
-          "description": "Həndəsə"
-        },
-        "MP": {
-          "description": "Riyaziyyat təcrübələri"
-        },
-        "D2.His": {
-          "description": "Tarix"
-        },
-        "IC": {
-          "description": "Bir Şeydən Nəticə Çıxarma Prosesi və Nəticənin Əsaslandırılması"
         }
       }
     }

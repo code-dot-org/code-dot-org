@@ -1,55 +1,51 @@
 {
-  "navigateForward": "Weiter",
-  "navigateBack": "Zurück",
-  "tryAgain": "Versuche es noch einmal",
-  "navigateDone": "Abschließen",
-  "saveProgress": "Speichern",
-  "correctAnswer": "Richtig",
-  "incorrectAnswer": "Falsch",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Beschreibung",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Beschreibung",
+  "correctAnswer": "Richtig",
   "dataCardLastUpdated": "Letztes Update",
-  "predictButton": "Vorhersage",
   "datasets": {
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "Alter"
+    "abalone": {
+      "card": {
+        "context": {
+          "potentialMisuses": " ",
+          "potentialUses": "Ermittele das Alter eines Seeohrs."
         }
-      }
-    },
-    "shoe_survey_toy": {
+      },
       "fields": {
-        "weather": {
-          "id": "Wetter"
+        "Diameter": {
+          "description": "Der Durchmesser in Millimetern.",
+          "id": "Durchmesser"
         },
-        "day": {
-          "id": "Tag"
+        "Height": {
+          "id": "Höhe"
         },
-        "shoe": {
-          "id": "Schuh"
+        "Length": {
+          "id": "Länge"
+        },
+        "Rings": {
+          "description": "Das Alter in Jahren.",
+          "id": "Ringe"
+        },
+        "Sex": {
+          "id": "Geschlecht"
+        },
+        "Shell weight": {
+          "id": "Gewicht der Schale"
+        },
+        "Viscera weight": {
+          "id": "Gewicht der Eingeweide"
+        },
+        "Whole weight": {
+          "id": "Gesamtes Gewicht"
         }
-      }
+      },
+      "name": "Seeohren"
     },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "Zwiebel"
-        },
-        "avocado": {
-          "id": "Avocado"
-        },
-        "corn": {
-          "id": "Mais"
-        },
-        "beans": {
-          "id": "Bohnen"
-        },
-        "lime": {
-          "id": "Limette"
+    "basketball_shots": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },
@@ -58,106 +54,10 @@
         "context": {
           "potentialMisuses": " "
         }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "Pilze"
-        },
-        "lobster": {
-          "id": "Hummer"
-        },
-        "bacon": {
-          "id": "Speck"
-        },
-        "cheese": {
-          "id": "Käse"
-        },
-        "meat": {
-          "id": "Fleisch"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "Farbe"
-        },
-        "music": {
-          "id": "Musik"
-        },
-        "food": {
-          "id": "Essen"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "Alter"
-        }
       },
-      "card": {
-        "context": {
-          "potentialMisuses": " "
-        }
-      }
-    },
-    "nutrition": {
       "fields": {
-        "Category": {
-          "id": "Kategorie"
-        },
-        "Description": {
-          "id": "Beschreibung"
-        }
-      },
-      "card": {
-        "context": {
-          "potentialMisuses": " "
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "Erdbeere"
-        },
-        "lime": {
-          "id": "Limette"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "Kanten"
-        },
-        "size": {
-          "id": "Größe"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "Tomate"
-        },
-        "avocado": {
-          "id": "Avocado"
-        },
-        "chicken": {
-          "id": "Huhn"
-        },
-        "fruit": {
-          "id": "Frucht"
-        },
-        "beans": {
-          "id": "Bohnen"
-        },
-        "cheese": {
-          "id": "Käse"
+        "Month": {
+          "id": "Monat"
         }
       }
     },
@@ -171,38 +71,10 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "Schule"
-        },
-        "age": {
-          "id": "Alter"
-        },
-        "health": {
-          "id": "Gesundheit"
-        }
-      },
-      "card": {
-        "context": {
-          "potentialUses": " ",
-          "potentialMisuses": " "
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "Huhn"
-        },
-        "lamb": {
-          "id": "Lamm"
-        },
-        "onion": {
-          "id": "Zwiebel"
-        },
-        "cheese": {
-          "id": "Käse"
+        "banana": {
+          "id": "Banane"
         }
       }
     },
@@ -210,6 +82,53 @@
       "fields": {
         "age": {
           "id": "Alter"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "Farbe"
+        },
+        "food": {
+          "id": "Essen"
+        },
+        "music": {
+          "id": "Musik"
+        }
+      }
+    },
+    "heart": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
+      },
+      "fields": {
+        "Age": {
+          "id": "Alter"
+        },
+        "Sex": {
+          "id": "Geschlecht"
+        }
+      }
+    },
+    "insurance_cost": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
+      },
+      "fields": {
+        "age": {
+          "id": "Alter"
+        }
+      }
+    },
+    "jeans": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },
@@ -223,107 +142,75 @@
         }
       }
     },
-    "movies": {
+    "loneliness_music": {
       "fields": {
-        "Score": {
-          "id": "Punktzahl"
+        "Country": {
+          "id": "Land"
         },
+        "Dance": {
+          "id": "Tanz"
+        },
+        "Music": {
+          "id": "Musik"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "Alter"
+        }
+      }
+    },
+    "movies": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
+      },
+      "fields": {
         "Country": {
           "id": "Land"
         },
         "Name": {
           "id": "Name"
         },
+        "Score": {
+          "id": "Punktzahl"
+        },
         "Star": {
           "id": "Stern"
         }
-      },
-      "card": {
-        "context": {
-          "potentialMisuses": " "
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "Käse"
+        },
+        "chicken": {
+          "id": "Huhn"
+        },
+        "lamb": {
+          "id": "Lamm"
+        },
+        "onion": {
+          "id": "Zwiebel"
         }
       }
     },
-    "songs": {
-      "fields": {
-        "Artist": {
-          "id": "Künstler"
-        }
-      },
+    "nutrition": {
       "card": {
         "context": {
           "potentialMisuses": " "
         }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "people": {
-          "id": "Menschen"
-        },
-        "rhino": {
-          "id": "Nashorn"
-        },
-        "elephant": {
-          "id": "Elefant"
-        },
-        "alligator": {
-          "id": "Krokodil"
-        },
-        "trees": {
-          "id": "Bäume"
-        }
       },
-      "name": "Safari"
-    },
-    "abalone": {
       "fields": {
-        "Sex": {
-          "id": "Geschlecht"
+        "Category": {
+          "id": "Kategorie"
         },
-        "Length": {
-          "id": "Länge"
-        },
-        "Diameter": {
-          "id": "Durchmesser",
-          "description": "Der Durchmesser in Millimetern."
-        },
-        "Height": {
-          "id": "Höhe"
-        },
-        "Whole weight": {
-          "id": "Gesamtes Gewicht"
-        },
-        "Viscera weight": {
-          "id": "Gewicht der Eingeweide"
-        },
-        "Shell weight": {
-          "id": "Gewicht der Schale"
-        },
-        "Rings": {
-          "id": "Ringe",
-          "description": "Das Alter in Jahren."
-        }
-      },
-      "card": {
-        "context": {
-          "potentialUses": "Ermittele das Alter eines Seeohrs.",
-          "potentialMisuses": " "
-        }
-      },
-      "name": "Seeohren"
-    },
-    "basketball_shots": {
-      "card": {
-        "context": {
-          "potentialMisuses": " "
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Wassersport"
+        "Description": {
+          "id": "Beschreibung"
         }
       }
     },
@@ -332,67 +219,101 @@
         "avocado": {
           "id": "Avocado"
         },
-        "onion": {
-          "id": "Zwiebel"
-        },
         "ginger": {
           "id": "Ingwer"
+        },
+        "onion": {
+          "id": "Zwiebel"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "Musik"
+        "bacon": {
+          "id": "Speck"
         },
-        "Dance": {
-          "id": "Tanz"
+        "cheese": {
+          "id": "Käse"
         },
-        "Country": {
-          "id": "Land"
+        "lobster": {
+          "id": "Hummer"
         },
-        "Internet": {
-          "id": "Internet"
+        "meat": {
+          "id": "Fleisch"
         },
-        "Writing": {
-          "id": "Schreiben"
-        },
-        "Achievements": {
-          "id": "Erfolge"
-        },
-        "Age": {
-          "id": "Alter",
-          "description": "Alter"
-        },
-        "Height": {
-          "id": "Höhe",
-          "description": "Höhe"
-        },
-        "Gender": {
-          "id": "Geschlecht",
-          "description": "Geschlecht"
+        "mushrooms": {
+          "id": "Pilze"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "Banane"
+        "lime": {
+          "id": "Limette"
+        },
+        "strawberry": {
+          "id": "Erdbeere"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "Alter"
+        "alligator": {
+          "id": "Krokodil"
         },
-        "Sex": {
-          "id": "Geschlecht"
+        "elephant": {
+          "id": "Elefant"
+        },
+        "people": {
+          "id": "Menschen"
+        },
+        "rhino": {
+          "id": "Nashorn"
+        },
+        "trees": {
+          "id": "Bäume"
         }
       },
-      "card": {
-        "context": {
-          "potentialMisuses": " "
+      "name": "Safari"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "Avocado"
+        },
+        "beans": {
+          "id": "Bohnen"
+        },
+        "cheese": {
+          "id": "Käse"
+        },
+        "chicken": {
+          "id": "Huhn"
+        },
+        "fruit": {
+          "id": "Frucht"
+        },
+        "tomato": {
+          "id": "Tomate"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "Avocado"
+        },
+        "beans": {
+          "id": "Bohnen"
+        },
+        "corn": {
+          "id": "Mais"
+        },
+        "lime": {
+          "id": "Limette"
+        },
+        "onion": {
+          "id": "Zwiebel"
         }
       }
     },
@@ -406,25 +327,110 @@
         }
       }
     },
-    "jeans": {
+    "shapes_v2_toy": {
+      "fields": {
+        "sides": {
+          "id": "Kanten"
+        },
+        "size": {
+          "id": "Größe"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "Tag"
+        },
+        "shoe": {
+          "id": "Schuh"
+        },
+        "weather": {
+          "id": "Wetter"
+        }
+      }
+    },
+    "songs": {
       "card": {
         "context": {
           "potentialMisuses": " "
         }
+      },
+      "fields": {
+        "Artist": {
+          "id": "Künstler"
+        }
       }
     },
-    "loneliness_music": {
+    "student_alcohol_consumption": {
+      "card": {
+        "context": {
+          "potentialMisuses": " ",
+          "potentialUses": " "
+        }
+      },
       "fields": {
-        "Music": {
-          "id": "Musik"
+        "age": {
+          "id": "Alter"
+        },
+        "health": {
+          "id": "Gesundheit"
+        },
+        "school": {
+          "id": "Schule"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Erfolge"
+        },
+        "Age": {
+          "description": "Alter",
+          "id": "Alter"
+        },
+        "Country": {
+          "id": "Land"
         },
         "Dance": {
           "id": "Tanz"
         },
-        "Country": {
-          "id": "Land"
+        "Gender": {
+          "description": "Geschlecht",
+          "id": "Geschlecht"
+        },
+        "Height": {
+          "description": "Höhe",
+          "id": "Höhe"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Music": {
+          "id": "Musik"
+        },
+        "Writing": {
+          "id": "Schreiben"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Wassersport"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Falsch",
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Zurück",
+  "navigateDone": "Abschließen",
+  "navigateForward": "Weiter",
+  "predictButton": "Vorhersage",
+  "saveProgress": "Speichern",
+  "tryAgain": "Versuche es noch einmal",
+  "uniqueOptionsWarningNotice": "Hinweis"
 }

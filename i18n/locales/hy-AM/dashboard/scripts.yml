@@ -146,6 +146,7 @@ hy:
           description_short: Create a story or make a game with Gumball Play Lab!
           student_description: Create a story or make a game with Gumball Play Lab!
         starwars:
+          title: 'Star Wars: Building a Galaxy With Code (JavaScript)'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
@@ -1557,3 +1558,59 @@ hy:
           lessons:
             lesson-3:
               name: ներածություն
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: ներածություն
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: փոփոխականների
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: loops
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: loops
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: loops
+            lessonGroup-6:
+              display_name: Իրադարձություններ
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: loops
+            lessonGroup-5:
+              display_name: Իրադարձություններ
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-6:
+              display_name: loops
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: nested Loops
+            lessonGroup-4:
+              display_name: գործառույթները
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: conditionals
+            lessonGroup-5:
+              display_name: փոփոխականների

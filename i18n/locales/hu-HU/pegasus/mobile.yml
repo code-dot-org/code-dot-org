@@ -1472,7 +1472,7 @@
   header_home: "Főmenü"
   header_my_dashboard: "Vezérlőpult"
   header_courses: "tanfolyamok"
-  header_course_catalog: "Tanfolyamaink"
+  header_course_catalog: "Tanfolyamok"
   header_project_gallery: "Projektek"
   header_sections: "Szakaszok"
   header_professional_learning: "Professzionális tanulás"
@@ -1616,7 +1616,7 @@
   hoc2018_mc_download_adventurer: "Töltsd le a Minecraft kaland offline verzióját!"
   hoc2018_mc_educators: "Oktatóknak"
   hoc2018_mc_educators_box1_title: "Kód a Minecrafttal"
-  hoc2018_mc_educators_box1_desc: 'A Minecraft: Education Edition szabványoknak megfelelő tantervet, képzést és kódolást biztosít a Minecraft-ban.'
+  hoc2018_mc_educators_box1_desc: "A Minecraft: Education Edition szabványoknak megfelelő tantervet, képzést és kódolást biztosít a Minecraft-ban."
   hoc2018_mc_educators_box1_button: "Kezdje el"
   hoc2018_mc_educators_box2_title: "A Facilitator Útmutató letöltése"
   hoc2018_mc_educators_box2_desc: "Ez az eszközkészlet segít Önnek egy Hour of Code és bevonni a diákokat a számítástechnika területén."
@@ -1723,7 +1723,7 @@
   hoc2018_mc_with_microsoft: "Partnerségben a"
   hoc2018_mc_thank_microsoft: "Köszönjük a Microsoftnak, hogy támogat bennünket elképzelésünk és küldetésünk valóra váltásában, abban, hogy minden gyermeknek legyen lehetősége számítástechnikát tanulni és a 21. században szükséges készségeket elsajátítani."
   hoc2019_mc_mee_title: "Minecraft AI jó"
-  hoc2019_mc_mee_description1: 'Az új Minecraft Hour of Code oktatóanyag mostantól elérhető a Windows, Mac és iPad rendszerhez készült Minecraft: Education Edition rendszerben. Ismerje meg a kódolás alapjait, és fedezze fel a mesterséges intelligenciát diákjaival!'
+  hoc2019_mc_mee_description1: "Az új Minecraft Hour of Code oktatóanyag mostantól elérhető a Windows, Mac és iPad rendszerhez készült Minecraft: Education Edition rendszerben. Ismerje meg a kódolás alapjait, és fedezze fel a mesterséges intelligenciát diákjaival!"
   hoc2019_mc_mee_description2: "Hozzáférhet ingyenes erőforrásokhoz, például óravázlathoz, videókhoz, számítástechnikai tantervhez és tanárképzésekhez."
   hoc2019_mc_more_coding_resources: "További kódolási erőforrások"
   hoc2019_dance_previous_versions: "A Dance Party korábbi verzióját keresi?  \nKattintson ide a 2018-as [1. rész] (%{dance_2018_link}) és [2. rész] (%{dance_extras_2018_link}) indításához."
@@ -1736,18 +1736,18 @@
   page_not_available_description: "Sajnáljuk, de a kért oldal már nem érhető el ezen a címen. Ha továbbra is szüksége van a hozzáférésre, kérjük írjon e-mailt a [support@code.org] (%{support_email_link}) címre."
   page_not_available_button: "Hazatérés"
   hoc2020_mc_available_code_org: "Elérhető a Code.org weboldalon"
-  hoc2020_mc_available_mee: 'Elérhető a Minecraft: Education Edition'
+  hoc2020_mc_available_mee: "Elérhető a Minecraft: Education Edition"
   hoc2020_mc_mee_title: "Két falu Minecraft mese"
-  hoc2020_mc_mee_description: 'Az új Minecraft Hour of Code oktatóanyag mostantól elérhető a Windows, Mac, Chromebook és iPad rendszerhez készült Minecraft: Education Edition verzióban. Ismerje meg a kódolás alapjait, és fedezze fel a sokszínűséget és a befogadást diákjaival! Hozzáférhet ingyenes erőforrásokhoz, beleértve az óratervet, a videókat, a számítástechnikai tananyagot, a méltányossági órákat és a tanári'
+  hoc2020_mc_mee_description: "Az új Minecraft Hour of Code oktatóanyag mostantól elérhető a Windows, Mac, Chromebook és iPad rendszerhez készült Minecraft: Education Edition verzióban. Ismerje meg a kódolás alapjait, és fedezze fel a sokszínűséget és a befogadást diákjaival! Hozzáférhet ingyenes erőforrásokhoz, beleértve az óratervet, a videókat, a számítástechnikai tananyagot, a méltányossági órákat és a tanári"
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Utazz vissza az időben és tanulj meg kódolni! Az új Minecraft Kódolás órája oktatóprogram már elérhető a Minecraftban: Oktatási kiadás Windows, Mac, Chromebook és iPad számára. Kezdj neki az ingyenes oktatói források, képzések és videók segítségével.'
+  hoc2021_mc_mee_description: "Utazz vissza az időben és tanulj meg kódolni! Az új Minecraft Kódolás órája oktatóprogram már elérhető a Minecraftban: Oktatási kiadás Windows, Mac, Chromebook és iPad számára. Kezdj neki az ingyenes oktatói források, képzések és videók segítségével."
   hoc2021_mc_mee_villages_title: "Két falu meséje"
-  hoc2021_mc_mee_villages_description: 'Tanuld meg a kódolás alapjait, és fedezd fel a sokszínűséget és a befogadást diákjaiddal a Minecraft Oktatási kiadásában.'
+  hoc2021_mc_mee_villages_description: "Tanuld meg a kódolás alapjait, és fedezd fel a sokszínűséget és a befogadást diákjaiddal a Minecraft Oktatási kiadásában."
   hoc2021_mc_mee_ai_title: "Mesterséges intelligencia jó célokra"
-  hoc2021_mc_mee_ai_description: 'Fedezd fel a mesterséges intelligenciát a diákjaiddal, és tanulj meg kódolni a Minecraft Oktatási kiadásában.'
+  hoc2021_mc_mee_ai_description: "Fedezd fel a mesterséges intelligenciát a diákjaiddal, és tanulj meg kódolni a Minecraft Oktatási kiadásában."
   hoc2022_mc_mee_title: "Minecraft szabadulószoba"
   hoc2022_mc_mee_description: 'Szökj meg még hajnal előtt a titokzatos kastélyból, és keress egymillió smaragdot!  A tananyag az új Minecraft Kódolás órájához már elérhető a Minecraftban: Oktatási változat Windowsra, Macre, Chromebookra, Ipadre és mobileszközökre. Kezdd el, és használd az oktatók számára ingyenesen elérhető erőforrásokat, képzéseket és videókat.'
-  hoc2022_mc_mee_timecraft_description: 'Utazz vissza a múltba, és mentsd meg a jövőt a Minecraftnak ebben az ingyenesen hozzáférhető kódolási leckéjében: Oktatási kiadás.'
+  hoc2022_mc_mee_timecraft_description: "Utazz vissza a múltba, és mentsd meg a jövőt a Minecraftnak ebben az ingyenesen hozzáférhető kódolási leckéjében: Oktatási kiadás."
   footer_powered_by_aws: "Az Amazon Web Services és a  “Powered by AWS” logo az Amazon.com, Inc. és leányvállalatainak védjegyei az Egyesült Államokban és/vagy más országokban. "
   footer_built_on_github: "A Microsoft GitHubra épül"
   codebytes_skinny_banner_title: "Csatlakozzon hozzánk december 7-11 a mi CodeBytes élő mini-leckék!"
@@ -1796,7 +1796,7 @@
   ai_zooniverse: "Zooniverse - Snapshot Mountain Zebra"
   ai_zooniverse_description: "Segítsen megvédeni a veszélyeztetett Cape Mountain Zebra azonosításával a különböző állatok a képeken."
   ai_audience: "A közönség"
-  ai_minecraft_description: 'Hozzáférhet ingyenes erőforrásokhoz, például óravázlathoz, videókhoz, számítástechnikai tantervhez és tanárképzésekhez. (Minecraft: Education Edition szükséges)'
+  ai_minecraft_description: "Hozzáférhet ingyenes erőforrásokhoz, például óravázlathoz, videókhoz, számítástechnikai tantervhez és tanárképzésekhez. (Minecraft: Education Edition szükséges)"
   ai_k_12_audience: "K-12 (Olvasás szükséges)"
   ai_microsoft_workshop: "Ingyenes virtuális műhelyek a Microsofttól"
   ai_microsoft_workshop_description: "Szikra kíváncsiság ingyenes STEM és kódoló műhelyek."
@@ -1827,5 +1827,6 @@
   hoc2022_landing_page_create_description: "Készíts valami izgalmasat és csodálatosat!"
   hoc2022_landing_page_banner_alt_left: "Egy földönkívüli táncol az űrben, a Szaturnusz közelében"
   hoc2022_landing_page_banner_alt_right: "Egy robot egy focilabdával cselez az űrben, egy felszállásra készülő rakéta előtt."
+  try_it_yourself: "Próbáld ki magad!"
   hoc2022_nasa_banner_heading: "Csatlakozzon a NASA-hoz egy különleges Hour of Code programhoz, amely az űrbeli számítástechnikáról szól!"
   hoc2022_nasa_banner_description: "Premier 10AM ET, december 5-én a NASA STEM YouTube-csatornáján."

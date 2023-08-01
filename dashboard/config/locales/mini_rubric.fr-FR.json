@@ -2,9 +2,6 @@
   "fr-FR": {
     "data": {
       "mini_rubric": {
-        "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "Concept Clé"
-        },
         "CSD U2 Image assessment_2021": {
           "rubric_key_concept": "Structurer le contenu d'une page web en utilisant le langage HTML (ajouter une image à une page web).  Attribuer correctement le nom des autres lorsqu'ils utilisent leur travail.",
           "rubric_performance_level_1": "L'image s'affiche correctement et un attribut `alt` donne une description test raisonnable de l'image.  Aucun code inutile n'est inclus dans la balise « img ».  L'attribution est précise et l'image est nommée de manière appropriée.",
@@ -56,6 +53,9 @@
           "rubric_performance_level_2": "Les paragraphes sont d'une nouvelle couleur ou d'une nouvelle taille.",
           "rubric_performance_level_3": "Les paragraphes ont un ensemble de règles spéciales dans la feuille de style, et la propriété couleur ou taille est utilisée, mais il y a suffisamment d'erreurs pour que le texte ne change pas de couleur ou de taille.  Il existe un code HTML qui tente de lier la feuille de style à la page web.",
           "rubric_performance_level_4": "Il n'y a pas de jeu de règles spécial pour les paragraphes ou les propriétés de couleur ou de taille ne sont pas utilisées dans le jeu de règles.  Il n'y a pas de code pour lier la feuille de style à la page web."
+        },
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "Concept Clé"
         }
       }
     }

@@ -53,11 +53,35 @@
         "2.L.2": {
           "description": "Yazarkən standart ingilis dilinin böyük hərfləri, durğu işarələri və orfoqrafiya qaydalarına əməl etməyi nümayiş etdirin."
         },
+        "2.c": {
+          "description": "Başqa mədəniyyətin öyrənənləri ilə əlaqə quraraq mədəni anlayışı və qlobal şüuru inkişaf etdirinş"
+        },
+        "2.d": {
+          "description": "Orijinal əsərlər hazırlamaq və ya problemləri həll etmək üçün layihə qruplarına kömək edin"
+        },
+        "3-A-i.3-5": {
+          "description": "İnsanların necə öyrənməsi ilə komouterlərin necə öyrənməsi fərqləndirin"
+        },
+        "3-A-i.K-2": {
+          "description": "İnsanların necə öyrəndiyini və kompüterlərin necə öyrəndiyini təsvir edin və nümunələr verin."
+        },
         "3.L.1": {
           "description": "Yazarkən və ya danışarkən standart İngilis dili qrammatikası və istifadə qaydalarına əməl etməyi nümayiş etdirin.Yazarkən və ya danışarkən standart İngilis dili qrammatikası və istifadə qaydalarına əməl etməyi nümayiş etdirin."
         },
         "3.L.2": {
           "description": "Yazarkən standart ingilis dilinin böyük hərfləri, durğu işarələri və orfoqrafiya qaydalarına əməl etməyi nümayiş etdirin."
+        },
+        "3.a": {
+          "description": "Sorğuya rəhbərlik etmək üçün strategiyalar planlaşdırın."
+        },
+        "3.b": {
+          "description": "Müxtəlif mənbələrdən məlumatları tapın, təşkil edin, təhlil edin, qiymətləndirin, sintez edin və etik cəhətdən istifadə edin."
+        },
+        "3.c": {
+          "description": "Xüsusi tapşırıqlara uyğunluq əsasında məlumat mənbələri və rəqəmsal vasitələrini qiymətləndirin və seçin."
+        },
+        "3.d": {
+          "description": "Məlumatı emal et və nəticələri report et."
         },
         "4.L.1": {
           "description": "Yazarkən və ya danışarkən standart İngilis dili qrammatikası və istifadə qaydalarına əməl etməyi nümayiş etdirin.Yazarkən və ya danışarkən standart İngilis dili qrammatikası və istifadə qaydalarına əməl etməyi nümayiş etdirin."
@@ -65,11 +89,23 @@
         "4.L.2": {
           "description": "Yazarkən standart ingilis dilinin böyük hərfləri, durğu işarələri və orfoqrafiya qaydalarına əməl etməyi nümayiş etdirin."
         },
+        "4.a": {
+          "description": "Tədqiqat üçün orijinal problemləri və əhəmiyyətli sualları müəyyən edin və aydınlaşdırın."
+        },
+        "4.c": {
+          "description": "Həll yollarını müəyyən etmək və/və ya əsaslandırılmış qərarlar qəbul etmək üçün məlumatları toplayın və təhlil edin."
+        },
         "5.L.1": {
           "description": "Yazarkən və ya danışarkən standart İngilis dili qrammatikası və istifadə qaydalarına əməl etməyi nümayiş etdirin.Yazarkən və ya danışarkən standart İngilis dili qrammatikası və istifadə qaydalarına əməl etməyi nümayiş etdirin."
         },
         "5.L.2": {
           "description": "Yazarkən standart ingilis dilinin böyük hərfləri, durğu işarələri və orfoqrafiya qaydalarına əməl etməyi nümayiş etdirin."
+        },
+        "5.a": {
+          "description": "İnformasiya və texnologiyadan təhlükəsiz, qanuni və məsuliyyətli istifadəni təbliğ edin və tətbiq edin."
+        },
+        "5.b": {
+          "description": "Əməkdaşlıq, öyrənmə və məhsuldarlığı dəstəkləyən texnologiyadan istifadəyə müsbət münasibət nümayiş etdirin."
         },
         "6.L.1": {
           "description": "Yazarkən və ya danışarkən standart İngilis dili qrammatikası və istifadə qaydalarına əməl etməyi nümayiş etdirin.Yazarkən və ya danışarkən standart İngilis dili qrammatikası və istifadə qaydalarına əməl etməyi nümayiş etdirin."
@@ -95,51 +131,6 @@
         "9-10.L.2": {
           "description": "Yazarkən standart ingilis dilinin böyük hərfləri, durğu işarələri və orfoqrafiya qaydalarına əməl etməyi nümayiş etdirin."
         },
-        "K.L.1": {
-          "description": "Yazarkən və ya danışarkən standart İngilis dili qrammatikası və istifadə qaydalarına əməl etməyi nümayiş etdirin.Yazarkən və ya danışarkən standart İngilis dili qrammatikası və istifadə qaydalarına əməl etməyi nümayiş etdirin."
-        },
-        "K.L.2": {
-          "description": "Yazarkən standart ingilis dilinin böyük hərfləri, durğu işarələri və orfoqrafiya qaydalarına əməl etməyi nümayiş etdirin."
-        },
-        "F.BF.1": {
-          "description": "İki miqdar arasındakı əlaqəni təsvir edən funksiya yazın."
-        },
-        "3-A-i.K-2": {
-          "description": "İnsanların necə öyrəndiyini və kompüterlərin necə öyrəndiyini təsvir edin və nümunələr verin."
-        },
-        "3-A-i.3-5": {
-          "description": "İnsanların necə öyrənməsi ilə komouterlərin necə öyrənməsi fərqləndirin"
-        },
-        "2.c": {
-          "description": "Başqa mədəniyyətin öyrənənləri ilə əlaqə quraraq mədəni anlayışı və qlobal şüuru inkişaf etdirinş"
-        },
-        "2.d": {
-          "description": "Orijinal əsərlər hazırlamaq və ya problemləri həll etmək üçün layihə qruplarına kömək edin"
-        },
-        "3.a": {
-          "description": "Sorğuya rəhbərlik etmək üçün strategiyalar planlaşdırın."
-        },
-        "3.b": {
-          "description": "Müxtəlif mənbələrdən məlumatları tapın, təşkil edin, təhlil edin, qiymətləndirin, sintez edin və etik cəhətdən istifadə edin."
-        },
-        "3.c": {
-          "description": "Xüsusi tapşırıqlara uyğunluq əsasında məlumat mənbələri və rəqəmsal vasitələrini qiymətləndirin və seçin."
-        },
-        "3.d": {
-          "description": "Məlumatı emal et və nəticələri report et."
-        },
-        "4.a": {
-          "description": "Tədqiqat üçün orijinal problemləri və əhəmiyyətli sualları müəyyən edin və aydınlaşdırın."
-        },
-        "4.c": {
-          "description": "Həll yollarını müəyyən etmək və/və ya əsaslandırılmış qərarlar qəbul etmək üçün məlumatları toplayın və təhlil edin."
-        },
-        "5.a": {
-          "description": "İnformasiya və texnologiyadan təhlükəsiz, qanuni və məsuliyyətli istifadəni təbliğ edin və tətbiq edin."
-        },
-        "5.b": {
-          "description": "Əməkdaşlıq, öyrənmə və məhsuldarlığı dəstəkləyən texnologiyadan istifadəyə müsbət münasibət nümayiş etdirin."
-        },
         "AAP-2.E.1": {
           "description": "Boolean dəyəri doğru və ya yalandır"
         },
@@ -149,11 +140,20 @@
         "DAT-1.A.4": {
           "description": "1 bayt 8 bitdir."
         },
+        "F.BF.1": {
+          "description": "İki miqdar arasındakı əlaqəni təsvir edən funksiya yazın."
+        },
         "F.BF.4": {
           "description": "Tərs funksiyaları tapın."
         },
         "G.C.1": {
           "description": "Bütün dairələrin oxşar olduğunu sübut edin."
+        },
+        "K.L.1": {
+          "description": "Yazarkən və ya danışarkən standart İngilis dili qrammatikası və istifadə qaydalarına əməl etməyi nümayiş etdirin.Yazarkən və ya danışarkən standart İngilis dili qrammatikası və istifadə qaydalarına əməl etməyi nümayiş etdirin."
+        },
+        "K.L.2": {
+          "description": "Yazarkən standart ingilis dilinin böyük hərfləri, durğu işarələri və orfoqrafiya qaydalarına əməl etməyi nümayiş etdirin."
         }
       }
     }

@@ -1,71 +1,13 @@
 {
-  "navigateForward": "Haere tonu",
-  "navigateBack": "Ki Muri",
-  "tryAgain": "Ngana anō",
-  "navigateDone": "Whakamutu",
-  "correctAnswer": "Tika",
-  "modelCardPossibleValuesMinimum": "mōkito",
-  "modelCardPossibleValuesMaximum": "mōrahi",
-  "columnInspectorDescription": "Whakaahuatanga",
-  "columnDetailsMinimumValue": "mōkito",
   "columnDetailsMaximumValue": "mōrahi",
+  "columnDetailsMinimumValue": "mōkito",
+  "columnInspectorDescription": "Whakaahuatanga",
+  "correctAnswer": "Tika",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "pakeke"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "huarere"
-        },
-        "day": {
-          "id": "rā"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "kānga"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "tae"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "pakeke"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "Whakaahuatanga"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "te rahi"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "heihei"
+        "Length": {
+          "id": "Roanga"
         }
       }
     },
@@ -79,21 +21,35 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "panana"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "pakeke"
         }
       }
     },
-    "naan_toy": {
+    "club_random_toy": {
       "fields": {
-        "chicken": {
-          "id": "heihei"
+        "color": {
+          "id": "tae"
         }
       }
     },
-    "census_part": {
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Pakeke"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "pakeke"
@@ -107,23 +63,44 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Dance": {
+          "id": "Kanikani"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "pakeke"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Tapeke piro"
-        },
         "Name": {
           "id": "Ingoa"
+        },
+        "Score": {
+          "id": "Tapeke piro"
         },
         "Star": {
           "id": "Te Whetū"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Rehetoi"
+        "chicken": {
+          "id": "heihei"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "Whakaahuatanga"
         }
       }
     },
@@ -135,45 +112,17 @@
       },
       "name": "Haumaru"
     },
-    "abalone": {
+    "salad_toy": {
       "fields": {
-        "Length": {
-          "id": "Roanga"
+        "chicken": {
+          "id": "heihei"
         }
       }
     },
-    "student_survey": {
+    "salsa_toy": {
       "fields": {
-        "Dance": {
-          "id": "Kanikani"
-        },
-        "Internet": {
-          "id": "Te Ipurangi"
-        },
-        "Achievements": {
-          "id": "Whakatutukitanga"
-        },
-        "Age": {
-          "id": "Pakeke",
-          "description": "Pakeke"
-        },
-        "Gender": {
-          "id": "Ira",
-          "description": "Ira"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "panana"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "Pakeke"
+        "corn": {
+          "id": "kānga"
         }
       }
     },
@@ -184,12 +133,63 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
+        "size": {
+          "id": "te rahi"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "rā"
+        },
+        "weather": {
+          "id": "huarere"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Rehetoi"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "pakeke"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Whakatutukitanga"
+        },
+        "Age": {
+          "description": "Pakeke",
+          "id": "Pakeke"
+        },
         "Dance": {
           "id": "Kanikani"
+        },
+        "Gender": {
+          "description": "Ira",
+          "id": "Ira"
+        },
+        "Internet": {
+          "id": "Te Ipurangi"
         }
       }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "mōrahi",
+  "modelCardPossibleValuesMinimum": "mōkito",
+  "navigateBack": "Ki Muri",
+  "navigateDone": "Whakamutu",
+  "navigateForward": "Haere tonu",
+  "tryAgain": "Ngana anō"
 }

@@ -1,11 +1,16 @@
 {
-  "navigateBack": "Бозгашт",
-  "incorrectAnswer": "Нодуруст",
   "datasets": {
     "billionaires": {
       "fields": {
         "Gender": {
           "id": "Ҷинс"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Кишвар"
         }
       }
     },
@@ -25,17 +30,12 @@
           "id": "Кишвар"
         },
         "Gender": {
-          "id": "Ҷинс",
-          "description": "Ҷинс"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Кишвар"
+          "description": "Ҷинс",
+          "id": "Ҷинс"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Нодуруст",
+  "navigateBack": "Бозгашт"
 }

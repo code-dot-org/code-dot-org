@@ -1,4 +1,5 @@
 {
+  "aaronTitle": "1963 - La marche sur Washington",
   "alexanderLines": "Qu’arrive-t-il à un rêve brisé ? \n\nCoule-t-il\ncomme une épave dans la mer ?\n\nOu barbote-t-il dans l’eau\nComme un garçon par-dessus bord ? \n\nPeut-être qu’il flotte simplement\nen rond et en rond…\n\nOu coule-t-il ?",
   "alexanderTitle": "Rêve brisé",
   "author": "Auteur :",
@@ -43,9 +44,9 @@
   "noSprites": "Il te manque une image-objet scriptée. Trouve ce bloc et ajoute-le à ton code : \n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">'{\"x\":200 »,y\":243}'</title></block></xml>",
   "noTextEffect": "Essaie d’ajouter un bloc de texte de couleur sous ‘quand exécuter’.",
   "oneTextEffect": "Super bon travail ! Tu as ajouté un effet de texte. Essaie d’en ajouter un autre.",
-  "poem": "Poème :",
   "poLines": "Les oiseaux ont disparu dans le ciel,\nEt maintenant, le dernier nuage se vide.\nNous sommes assis ensemble, la montagne et moi,\nJusqu’à ce qu’il ne reste que la montagne.",
   "poTitle": "Montagne",
+  "poem": "Poème :",
   "profanityFoundError": "Votre poème contient un langage inapproprié et il ne sera donc pas sauvegardé. Veuillez actualiser votre poème pour enlever le {wordCount, plural, one {word} other {words}} « {words} ».",
   "reinfFeedbackMsg": "Vous avez fini! Cliquez sur « Continuer » pour passer au niveau suivant.",
   "removedSprite": "Il te manque une image-objet scriptée. Trouve ce bloc et ajoute-le à ton code : \n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"ocean_wave\"</title><title name=\"LOCATION\">'{\"x\":200 »,y\":243}'</title></block></xml>",

@@ -2,19 +2,95 @@
   "ky-KG": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web Lab"
-        },
-        "gamelab": {
-          "name": "Оюн лабы",
+        "applab": {
           "categories": {
-            "game_lab": {
-              "name": "Оюн лабы",
+            "control": {
               "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функция"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функция"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "Функциялар"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Максималдык сан кайтарылды"
+                    },
+                    "min": {
+                      "description": "Минималдык сан кайтарылды"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Максималдык сан кайтарылды"
+                    },
+                    "min": {
+                      "description": "Минималдык сан кайтарылды"
+                    }
+                  }
+                }
+              },
+              "name": "Математика"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функция"
+                    }
+                  }
+                },
                 "playSound": {
                   "short_description": "Берилген URL'деги MP3 үн файлын ойнотот."
                 }
               }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "Жок"
+                }
+              },
+              "name": "Өзгөрмөлөр"
+            }
+          },
+          "name": "App Lab"
+        },
+        "gamelab": {
+          "categories": {
+            "functions": {
+              "name": "Функциялар"
+            },
+            "game_lab": {
+              "expressions": {
+                "playSound": {
+                  "short_description": "Берилген URL'деги MP3 үн файлын ойнотот."
+                }
+              },
+              "name": "Оюн лабы"
             },
             "groups": {
               "expressions": {
@@ -35,114 +111,35 @@
               }
             },
             "math": {
-              "name": "Математика",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "Минималдык сан кайтарылды"
-                    },
                     "max": {
                       "description": "Максималдык сан кайтарылды"
+                    },
+                    "min": {
+                      "description": "Минималдык сан кайтарылды"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "Минималдык сан кайтарылды"
-                    },
                     "max": {
                       "description": "Максималдык сан кайтарылды"
+                    },
+                    "min": {
+                      "description": "Минималдык сан кайтарылды"
                     }
                   }
                 }
-              }
+              },
+              "name": "Математика"
             },
             "variables": {
               "name": "Өзгөрмөлөр"
-            },
-            "functions": {
-              "name": "Функциялар"
             }
-          }
-        },
-        "applab": {
-          "name": "App Lab",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Функция"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Берилген URL'деги MP3 үн файлын ойнотот."
-                }
-              }
-            },
-            "data": {
-              "expressions": {
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Функция"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Функция"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Математика",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Минималдык сан кайтарылды"
-                    },
-                    "max": {
-                      "description": "Максималдык сан кайтарылды"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Минималдык сан кайтарылды"
-                    },
-                    "max": {
-                      "description": "Максималдык сан кайтарылды"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Өзгөрмөлөр",
-              "expressions": {
-                "addPair": {
-                  "return_value": "Жок"
-                }
-              }
-            },
-            "functions": {
-              "name": "Функциялар"
-            }
-          }
+          },
+          "name": "Оюн лабы"
         },
         "spritelab": {
           "categories": {
@@ -152,25 +149,28 @@
             "events": {
               "name": "Окуялар"
             },
-            "loops": {
-              "name": "Циклдер"
-            },
-            "variables": {
-              "name": "Өзгөрмөлөр"
-            },
-            "math": {
-              "name": "Математика"
+            "functions": {
+              "name": "Функциялар"
             },
             "logic": {
               "name": "Логика"
             },
-            "functions": {
-              "name": "Функциялар"
+            "loops": {
+              "name": "Циклдер"
+            },
+            "math": {
+              "name": "Математика"
             },
             "text": {
               "name": "Тексттер"
+            },
+            "variables": {
+              "name": "Өзгөрмөлөр"
             }
           }
+        },
+        "weblab": {
+          "name": "Web Lab"
         }
       }
     }

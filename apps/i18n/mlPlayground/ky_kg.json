@@ -1,69 +1,12 @@
 {
-  "navigateForward": "Улантуу",
-  "tryAgain": "Кайрадан",
-  "navigateDone": "Аяктоо",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Түшүндүрмөсү",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Түшүндүрмөсү",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "жашы"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "аба ырайы"
-        },
-        "day": {
-          "id": "күн"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "жүгөрү"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "түс"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "жашы"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "Түшүндүрмөсү"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "өлчөмү"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "тоок"
+        "Length": {
+          "id": "Узактыгы"
         }
       }
     },
@@ -74,17 +17,10 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "age": {
-          "id": "жашы"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "тоок"
+        "banana": {
+          "id": "банан"
         }
       }
     },
@@ -95,45 +31,10 @@
         }
       }
     },
-    "movies": {
+    "club_random_toy": {
       "fields": {
-        "Score": {
-          "id": "Эсеп"
-        },
-        "Name": {
-          "id": "Аты"
-        }
-      }
-    },
-    "songs": {
-      "fields": {
-        "Artist": {
-          "id": "Сүрөтчү"
-        }
-      }
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Узактыгы"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Жетишкендиктер"
-        },
-        "Age": {
-          "id": "Жашы",
-          "description": "Жашы"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "банан"
+        "color": {
+          "id": "түс"
         }
       }
     },
@@ -144,12 +45,111 @@
         }
       }
     },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "жашы"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "жашы"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Name": {
+          "id": "Аты"
+        },
+        "Score": {
+          "id": "Эсеп"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "тоок"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "Түшүндүрмөсү"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "chicken": {
+          "id": "тоок"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "corn": {
+          "id": "жүгөрү"
+        }
+      }
+    },
     "shapes_v1_toy": {
       "fields": {
         "size": {
           "id": "өлчөмү"
         }
       }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "өлчөмү"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "күн"
+        },
+        "weather": {
+          "id": "аба ырайы"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Сүрөтчү"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "жашы"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Жетишкендиктер"
+        },
+        "Age": {
+          "description": "Жашы",
+          "id": "Жашы"
+        }
+      }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateDone": "Аяктоо",
+  "navigateForward": "Улантуу",
+  "tryAgain": "Кайрадан"
 }

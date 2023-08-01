@@ -4,8 +4,7 @@ Feature: Submittable free response
 
 Background:
   Given I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
-  Then I rotate to landscape
-  And I wait to see ".submitButton"
+  Then I wait to see ".submitButton"
   And element ".submitButton" is visible
 
 Scenario: Loading the level
@@ -30,3 +29,16 @@ Scenario: Submit anything, unsubmit, be able to resubmit.
   And I wait to see ".submitButton"
   And element ".submitButton" is visible
   And element ".submitButton" is not disabled
+
+Scenario: Level without multiple attempts allowed is locked after submit
+  # First, submit something.
+  Given I am on "http://studio.code.org/s/allthethings/lessons/27/levels/4"
+  And I type "sample response" into ".free-response > textarea"
+  And I press ".submitButton" using jQuery to load a new page
+
+  # Reload the page to see that unsubmit is the option.
+  Then I am on "http://studio.code.org/s/allthethings/lessons/27/levels/4"
+  And I wait to see ".nextLevelButton"
+  And element ".free-response > textarea" contains text "sample response"
+  And element ".free-response > textarea" is readonly
+  And element ".submitButton" is not visible

@@ -3,67 +3,1419 @@ hy:
   data:
     script:
       name:
+        20-hour:
+          description: This 20-hour course covers the core computer science and programming
+            concepts in courses 2-4. The course is designed for use with ages 10-18.
+            Check out courses 2-4 for a more complete experience!
+          description_audience: Ages 10-18
+          description_short: This 20-hour course covers the core computer science
+            and programming concepts in courses 2-4.
+          student_description: This 20-hour course covers the core computer science
+            and programming concepts in courses 2-4. The course is designed for use
+            with ages 10-18. Check out courses 2-4 for a more complete experience!
+          title: Accelerated Intro to CS Course
+        2021drafting:
+          lesson_groups:
+            debugging:
+              display_name: Debugging
+            introduction:
+              display_name: ներածություն
+            lessonGroup-3:
+              display_name: փոփոխականների
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Կոդի ժամ
+        CSDU3-Draft:
+          description_short: Programming
+        CSF_Secret_Sample:
+          description_audience: Ages 8-18
+        CSF_Secret_Sample_Story:
+          description_audience: Ages 8-18+
+        Course4pre:
+          description: A brief rampup of concepts for students who have not taken
+            Course 2 and 3.
+          description_short: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          student_description: A brief rampup of concepts for students who have not
+            taken Course 2 and 3.
+          title: Course 4 Prerequisite
+        ECSPD2:
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          student_description: 'Phase 2 Online: Blended Summer Study'
+        ECSPD2-NexTech:
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          student_description: 'Phase 2 Online: Blended Summer Study'
+        ECSPD2-iZone:
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          student_description: 'Phase 2 Online: Blended Summer Study'
+        Hour of Code:
+          description: Try the basics of computer science with characters from Angry
+            Birds and Plants vs. Zombies!
+          description_short: Try the basics of computer science with many fun characters!
+          student_description: Try the basics of computer science with characters
+            from Angry Birds and Plants vs. Zombies!
+          title: Ժամ օրենսգրքի 2013-
+        MikeTest:
+          description_audience: Ages 8-98
+        Special Fun:
+          description_audience: Ages 10-18
+        SpecialSeries:
+          description_audience: Ages 10-18
+        TEMP CSD Unit 3:
+          description_short: Programming
+        afterschool1:
+          description_audience: Ages 7-13
+        algebra:
+          title: Computer Science in Algebra
+        algebraPD1:
+          title: CS in Algebra Part 1
+        algebraPD2:
+          title: CS in Algebra Part 2
+        algebraPD2a:
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          student_description: 'Phase 2 Online: Blended Summer Study'
+        algebraPD2b:
+          description: 'Phase 2 Online: Blended Summer Study'
+          description_short: 'Phase 2 Online: Blended Summer Study'
+          student_description: 'Phase 2 Online: Blended Summer Study'
+        alltheplcthings:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            practice:
+              display_name: Ուսուցիչի փորձեր
+            required:
+              display_name: Overview
+        andrea-test:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Assessments
+        artist:
+          description: Draw cool pictures and designs with the Artist!
+          description_short: Draw cool pictures and designs with the Artist!
+          student_description: Draw cool pictures and designs with the Artist!
+          title: Արտիստ
+        artistExemplar:
+          description_audience: Ages 8-18
+        asUnplugged:
+          description_audience: Ages 6-13
+        basketball:
+          name: basketball
+        classic-hoc-impact-study:
+          description_short: Try the basics of computer science with many fun characters!
+        contagion-pilot:
+          description_audience: Grade 5
         course1:
-          title: Course 1
           description: Start with Course 1 for early readers. Students will create
             computer programs that will help them learn to collaborate with others,
             develop problem-solving skills, and persist through difficult tasks. By
             the end of this course, students create their very own custom game or
             story that they can share. Recommended for grades K-1.
-          description_short: Start with Course 1 for early readers.
           description_audience: Ages 4-6
+          description_short: Start with Course 1 for early readers.
           student_description: Start with Course 1 for early readers. Students will
             create computer programs that will help them learn to collaborate with
             others, develop problem-solving skills, and persist through difficult
             tasks. By the end of this course, students create their very own custom
             game or story that they can share. Recommended for grades K-1.
+          title: Course 1
         course2:
-          title: Course 2
           description: 'Դասընթաց 2-ը այն ուսանողների համար է, ովքեր կարող են կարդալ
             և նախկինում ունեն ծրագրավորման փորձ: Այս դասընթացի շրջանականերում ուսանողները
             ծրագրեր կստեղծեն, խնդիրներ կլուծեն և ինտերակտիվ խաղեր կամ պատմություններ
             կզարգացնեն: Խուրհուրդ է տրվում 2-5-րդ դասարանների համար:'
-          description_short: Start with Course 2 for students who can read.
           description_audience: Ages 6-18
+          description_short: Start with Course 2 for students who can read.
           student_description: 'Դասընթաց 2-ը այն ուսանողների համար է, ովքեր կարող
             են կարդալ և նախկինում ունեն ծրագրավորման փորձ: Այս դասընթացի շրջանականերում
             ուսանողները ծրագրեր կստեղծեն, խնդիրներ կլուծեն և ինտերակտիվ խաղեր կամ
             պատմություններ կզարգացնեն: Խուրհուրդ է տրվում 2-5-րդ դասարանների համար:'
+          title: Course 2
         course3:
-          title: Course 3
           description: 'Դասընթաց 3-ը նախատեսված է դասընթաց 2-ը ավարտած ուսանողների
             համար: Ուսանողները նախորդ դասընթացից էլ ավելի խորը պատկերացում կկազմեն
             ծրագրավորման թեմաների վերաբերյալ՝ բարդ խնդիրներին տալով հեշտ լուծումներ:
             Դասընթացը ավարտելուց հետո կկարողանան ստեղծել ինտերակտիվ պատմություններ
             և խաղեր, որոնցով և կիսվել բոլորի հետ: Խորհուրդ է տրվում 4-5-րդ դասարանների
             համար: '
-          description_short: Course 3 is a follow-up to Course 2.
           description_audience: Ages 8-18
+          description_short: Course 3 is a follow-up to Course 2.
           student_description: 'Դասընթաց 3-ը նախատեսված է դասընթաց 2-ը ավարտած ուսանողների
             համար: Ուսանողները նախորդ դասընթացից էլ ավելի խորը պատկերացում կկազմեն
             ծրագրավորման թեմաների վերաբերյալ՝ բարդ խնդիրներին տալով հեշտ լուծումներ:
             Դասընթացը ավարտելուց հետո կկարողանան ստեղծել ինտերակտիվ պատմություններ
             և խաղեր, որոնցով և կիսվել բոլորի հետ: Խորհուրդ է տրվում 4-5-րդ դասարանների
             համար: '
-        playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          description_short: Create a story or make a game with Play Lab!
-          student_description: Create a story or make a game with Play Lab!
-        artist:
-          title: Արտիստ
-          description: Draw cool pictures and designs with the Artist!
-          description_short: Draw cool pictures and designs with the Artist!
-          student_description: Draw cool pictures and designs with the Artist!
-        hourofcode:
-          title: Classic Maze
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
-          student_description: Try the basics of computer science with characters
-            from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          title: Course 3
+        course4:
+          description: Course 4 is designed for students who have taken Courses 2
+            and 3. Students will learn how to tackle puzzles with increased complexity
+            as they learn how to combine several concepts when solving each challenge.
+            By the time this Course is completed, students will be creating programs
+            that let them showcase multiple skills, including for loops and functions
+            with parameters. Recommended for grades 4-8.
+          description_audience: Ages 10-18
+          description_short: Students taking Course 4 should have already taken Courses
+            2 and 3.
+          student_description: Course 4 is designed for students who have taken Courses
+            2 and 3. Students will learn how to tackle puzzles with increased complexity
+            as they learn how to combine several concepts when solving each challenge.
+            By the time this Course is completed, students will be creating programs
+            that let them showcase multiple skills, including for loops and functions
+            with parameters. Recommended for grades 4-8.
+          title: Course 4
+        coursea-2017:
+          assignment_family_title: Կուրս A
+          title: Կուրս A
+        coursea-2018:
+          assignment_family_title: Կուրս A
+        coursea-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        coursea-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        coursea-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        coursea-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        courseb-2017:
+          assignment_family_title: Կուրս B
+          title: Կուրս B
+        courseb-2018:
+          assignment_family_title: Կուրս B
+        courseb-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        courseb-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        courseb-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        courseb-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        coursec-2017:
+          assignment_family_title: Կուրս C
+          title: Կուրս C
+        coursec-2018:
+          assignment_family_title: Կուրս C
+        coursec-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: երկուական
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        coursec-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: երկուական
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        coursec-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: երկուական
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        coursec-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        coursed-2017:
+          assignment_family_title: Կուրս D
+          title: Կուրս D
+        coursed-2018:
+          assignment_family_title: Կուրս D
+        coursed-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: երկուական
+            csf_conditionals:
+              display_name: conditionals
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        coursed-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: երկուական
+            csf_conditionals:
+              display_name: conditionals
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        coursed-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: երկուական
+            csf_conditionals:
+              display_name: conditionals
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+            lessonGroup-6:
+              display_name: Digital Citizenship
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: conditionals
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+            lessonGroup-6:
+              display_name: Digital Citizenship
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: conditionals
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+            lessonGroup-6:
+              display_name: Digital Citizenship
+        coursee-2017:
+          assignment_family_title: Կուրս E
+          title: Կուրս E
+        coursee-2018:
+          assignment_family_title: Կուրս E
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_functions:
+              display_name: գործառույթները
+            csf_nested_loops:
+              display_name: nested Loops
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_functions:
+              display_name: գործառույթները
+            csf_nested_loops:
+              display_name: nested Loops
+        coursee-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_functions:
+              display_name: գործառույթները
+            csf_nested_loops:
+              display_name: conditionals
+            ramp_up:
+              display_name: nested Loops
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_functions:
+              display_name: գործառույթները
+            csf_nested_loops:
+              display_name: conditionals
+            ramp_up:
+              display_name: nested Loops
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_functions:
+              display_name: գործառույթները
+            csf_nested_loops:
+              display_name: conditionals
+            ramp_up:
+              display_name: nested Loops
+        coursee-draft:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+        coursef-2017:
+          assignment_family_title: Կուրս F
+          title: Կուրս F
+        coursef-2018:
+          assignment_family_title: Կուրս F
+        coursef-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_for_loops:
+              display_name: For Loops
+            csf_internet:
+              display_name: Internet
+            csf_variables:
+              display_name: փոփոխականների
+        coursef-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_for_loops:
+              display_name: For Loops
+            csf_variables:
+              display_name: փոփոխականների
+        coursef-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_for_loops:
+              display_name: For Loops
+            csf_variables:
+              display_name: For Loops
+            lessonGroup-7:
+              display_name: Digital Citizenship
+            lessonGroup-8:
+              display_name: փոփոխականների
+            lessonGroup-9:
+              display_name: ջնջել
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digital Citizenship
+            lessonGroup-8:
+              display_name: փոփոխականների
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digital Citizenship
+            lessonGroup-8:
+              display_name: փոփոխականների
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: փոփոխականների
+        coursef-draft:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unit 1
+            lessonGroup-4:
+              display_name: Unit 2
+            lessonGroup-5:
+              display_name: Unit 3
+            lessonGroup-6:
+              display_name: Unit 4
+            lessonGroup-7:
+              display_name: Unit 5
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa1-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa1-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: պարունակություն
+          lessons:
+            lesson-6:
+              name: loops
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa2-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+          lessons:
+            lesson-4:
+              name: փոփոխականների
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: պարունակություն
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: պարունակություն
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+          lessons:
+            lesson-3:
+              name: For Loops
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa4-exemplars:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            lesson group:
+              display_name: պարունակություն
+            lessonGroup-2:
+              display_name: պարունակություն
+            lesson_group:
+              display_name: պարունակություն
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csd-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csd-novice-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csd1-dlp:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csd1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csd2-dlp:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csd2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csd3-dlp:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csd3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csd3-virtual:
+          lesson_groups:
+            csd3_1:
+              display_name: պարունակություն
+            csd3_2:
+              display_name: պարունակություն
+            cspSurvey:
+              display_name: պարունակություն
+        csd4-dlp:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csd4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csd5-dlp:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csd5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csd6-dlp:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csd6-dlp-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: փոփոխականների
+            ramp_up:
+              display_name: ներածություն
+            variables:
+              display_name: փոփոխականների
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: փոփոխականների
+        csf2harvey:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        csp-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp-create-dlp-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp-explore-dlp-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp-novice-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp-online-test:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            practice:
+              display_name: Ուսուցիչի փորձեր
+            required:
+              display_name: Overview
+        csp1-2020:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: CS Principles Unit 1
+        csp1-2021:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: CS Principles Unit 1
+        csp1-2022:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: CS Principles Unit 1
+        csp1-2023:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: CS Principles Unit 1
+        csp1-dlp:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Overview
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+            csp_variables:
+              display_name: փոփոխականների
+        csp1-support:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            practice:
+              display_name: Ուսուցիչի փորձեր
+            required:
+              display_name: Overview
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+            csp_variables:
+              display_name: փոփոխականների
+        csp2-2018:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unit 2: Digital Information'
+        csp2-2019:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unit 2: Digital Information'
+        csp2-2020:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: CS Principles Unit 2
+        csp2-2021:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: CS Principles Unit 2
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: CS Principles Unit 2
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: CS Principles Unit 2
+        csp2-dlp:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+            csp_variables:
+              display_name: փոփոխականների
+          title: CS Principles Unit 2
+        csp2-support:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            practice:
+              display_name: Ուսուցիչի փորձեր
+            required:
+              display_name: Overview
+        csp3-dlp:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp3-support:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            practice:
+              display_name: Ուսուցիչի փորձեր
+            required:
+              display_name: Overview
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+            csp_variables:
+              display_name: փոփոխականների
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+            csp_variables:
+              display_name: փոփոխականների
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+            csp_variables:
+              display_name: փոփոխականների
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+            csp_variables:
+              display_name: փոփոխականների
+        csp4-dlp:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+            csp_variables:
+              display_name: փոփոխականների
+            required:
+              display_name: Overview
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+            csp_variables:
+              display_name: փոփոխականների
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+            csp_variables:
+              display_name: փոփոխականների
+        csp4-support:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            practice:
+              display_name: Ուսուցիչի փորձեր
+            required:
+              display_name: Overview
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: ցուցակները
+            csp_loops:
+              display_name: loops
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: ցուցակները
+            csp_loops:
+              display_name: loops
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: ցուցակները
+            csp_loops:
+              display_name: loops
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: loops
+        csp5-dlp:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: ցուցակները
+            csp_loops:
+              display_name: loops
+            required:
+              display_name: Overview
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: ցուցակները
+            csp_loops:
+              display_name: loops
+        csp5-support:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            practice:
+              display_name: Ուսուցիչի փորձեր
+            required:
+              display_name: Overview
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ալգորիթմները
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ցուցակները
+            lessonGroup-3:
+              display_name: loops
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+            csp_variables:
+              display_name: փոփոխականների
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Overview
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+            csp_variables:
+              display_name: փոփոխականների
+        csp9-2020:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: CS Principles Unit 9
+        csp9-2021:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: CS Principles Unit 9
+        csp9-2022:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: CS Principles Unit 9
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: CS Principles Unit 9
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+            csp_variables:
+              display_name: փոփոխականների
+          title: CS Principles Unit 9
+        cspnovice:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+            csp_variables:
+              display_name: փոփոխականների
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+        cspunit1-support:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            practice:
+              display_name: Ուսուցիչի փորձեր
+            required:
+              display_name: Overview
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: փորձ
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Փուլ 1
+            lessonGroup-3:
+              display_name: Փուլ 2
+        ecs-unit4:
+          description: CS Principles Unit 4
+          description_short: CS Principles Unit 4
+          student_description: CS Principles Unit 4
+        edit-code:
+          description: Խմբագրել Code
+          description_short: Խմբագրել Code
+          student_description: Խմբագրել Code
+          title: Խմբագրել Code
+        events:
+          description: Իրադարձություններ
+          description_short: Իրադարձություններ
+          student_description: Իրադարձություններ
+          title: Իրադարձություններ
+        express-2017:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+        express-2019:
+          lesson_groups:
+            csf_conditionals:
+              display_name: conditionals
+            csf_for_loops:
+              display_name: For Loops
+            csf_functions:
+              display_name: գործառույթները
+            csf_loops:
+              display_name: loops
+            csf_variables:
+              display_name: փոփոխականների
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: conditionals
+            csf_for_loops:
+              display_name: For Loops
+            csf_functions:
+              display_name: գործառույթները
+            csf_loops:
+              display_name: loops
+            csf_variables:
+              display_name: փոփոխականների
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: conditionals
+            csf_for_loops:
+              display_name: For Loops
+            csf_functions:
+              display_name: գործառույթները
+            csf_loops:
+              display_name: loops
+            csf_variables:
+              display_name: փոփոխականների
+            lessonGroup-9:
+              display_name: Իրադարձություններ
+        express-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: conditionals
+            csf_for_loops:
+              display_name: For Loops
+            csf_functions:
+              display_name: գործառույթները
+            csf_loops:
+              display_name: loops
+            csf_variables:
+              display_name: փոփոխականների
+            lessonGroup-9:
+              display_name: Իրադարձություններ
+        express-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: conditionals
+            csf_for_loops:
+              display_name: For Loops
+            csf_functions:
+              display_name: գործառույթները
+            csf_loops:
+              display_name: loops
+            csf_variables:
+              display_name: փոփոխականների
+            lessonGroup-9:
+              display_name: Իրադարձություններ
+        fit-test:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        fit2019-apprentice:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        fit2019-novice:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+            required:
+              display_name: Overview
+        flappy:
+          description: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե: Փորձեք
+            մեր Flappy Code խնամակալական!'
+          description_short: Write your own Flappy game in less than 10 minutes!
+          student_description: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե:
+            Փորձեք մեր Flappy Code խնամակալական!'
+          title: Flappy-ի կոդը
         frozen:
-          title: Code with Anna and Elsa
           description: Let's use code to join Anna and Elsa as they explore the magic
             and beauty of ice. You will create snowflakes and patterns as you ice-skate
             and make a winter wonderland that you can then share with your friends!
@@ -73,102 +1425,153 @@ hy:
             the magic and beauty of ice. You will create snowflakes and patterns as
             you ice-skate and make a winter wonderland that you can then share with
             your friends!
-        course4:
-          title: Course 4
-          description: Course 4 is designed for students who have taken Courses 2
-            and 3. Students will learn how to tackle puzzles with increased complexity
-            as they learn how to combine several concepts when solving each challenge.
-            By the time this Course is completed, students will be creating programs
-            that let them showcase multiple skills, including for loops and functions
-            with parameters. Recommended for grades 4-8.
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description_audience: Ages 10-18
-          student_description: Course 4 is designed for students who have taken Courses
-            2 and 3. Students will learn how to tackle puzzles with increased complexity
-            as they learn how to combine several concepts when solving each challenge.
-            By the time this Course is completed, students will be creating programs
-            that let them showcase multiple skills, including for loops and functions
-            with parameters. Recommended for grades 4-8.
-        Course4pre:
-          title: Course 4 Prerequisite
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-          student_description: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
-        algebra:
-          title: Computer Science in Algebra
+          title: Code with Anna and Elsa
+        grade1:
+          description_audience: Ages 5-18
+          title: Grade 1
+        grade2:
+          description_audience: Ages 5-18
+        grade3:
+          description_audience: Ages 5-18
+          title: Grade 3
+        grade4:
+          description_audience: Ages 9-99
+          title: Grade 4
+        grade5:
+          description_audience: Ages 10-110
+          title: Grade 5
+        gradeKinder:
+          description_audience: Ages 5-18
+        gumball:
+          description: Create a story or make a game with Gumball Play Lab!
+          description_short: Create a story or make a game with Gumball Play Lab!
+          student_description: Create a story or make a game with Gumball Play Lab!
+          title: Gumball Play Lab
+        hoc-impact-study:
+          description_short: Try the basics of computer science with many fun characters!
+        hourofcode:
+          description: Try the basics of computer science with characters from Angry
+            Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_short: Try the basics of computer science with many fun characters!
+          student_description: Try the basics of computer science with characters
+            from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          title: Classic Maze
+        iceage:
+          description: Create a story or make a game with Ice Age Play Lab!
+          description_short: Create a story or make a game with Ice Age Play Lab!
+          student_description: Create a story or make a game with Ice Age Play Lab!
+          title: Ice Age Play Lab
         infinity:
-          title: Disney Infinity Play Lab
           description: Use Play Lab to create a story or game starring Disney Infinity
             characters.
           description_short: Use Play Lab to create a story or game starring Disney
             Infinity characters.
           student_description: Use Play Lab to create a story or game starring Disney
             Infinity characters.
-        netsim:
-          title: Ինտերնետ Simulator
-        20-hour:
-          title: Accelerated Intro to CS Course
-          description: This 20-hour course covers the core computer science and programming
-            concepts in courses 2-4. The course is designed for use with ages 10-18.
-            Check out courses 2-4 for a more complete experience!
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
-          description_audience: Ages 10-18
-          student_description: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4. The course is designed for use
-            with ages 10-18. Check out courses 2-4 for a more complete experience!
-        edit-code:
-          title: Խմբագրել Code
-          description: Խմբագրել Code
-          description_short: Խմբագրել Code
-          student_description: Խմբագրել Code
-        events:
-          title: Իրադարձություններ
-          description: Իրադարձություններ
-          description_short: Իրադարձություններ
-          student_description: Իրադարձություններ
-        flappy:
-          title: Flappy-ի կոդը
-          description: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե: Փորձեք
-            մեր Flappy Code խնամակալական!'
-          description_short: Write your own Flappy game in less than 10 minutes!
-          student_description: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե:
-            Փորձեք մեր Flappy Code խնամակալական!'
+          title: Disney Infinity Play Lab
         jigsaw:
-          title: ոլորահատ սղոց
           description: Try our Jigsaw tutorial.
           description_short: Try our Jigsaw tutorial.
           student_description: Try our Jigsaw tutorial.
-        step:
-          title: քայլ
-          description: Step tutorial
-          description_short: Step tutorial
-          student_description: Step tutorial
-        Hour of Code:
-          title: Ժամ օրենսգրքի 2013-
-          description: Try the basics of computer science with characters from Angry
-            Birds and Plants vs. Zombies!
-          description_short: Try the basics of computer science with many fun characters!
-          student_description: Try the basics of computer science with characters
-            from Angry Birds and Plants vs. Zombies!
-        algebraPD2a:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          student_description: 'Phase 2 Online: Blended Summer Study'
-        algebraPD2b:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          student_description: 'Phase 2 Online: Blended Summer Study'
-        ECSPD2:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          student_description: 'Phase 2 Online: Blended Summer Study'
-        algebraPD2:
-          title: CS in Algebra Part 2
+          title: ոլորահատ սղոց
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: ներածություն
+            k5_getting_started_1:
+              display_name: ներածություն
+        mc:
+          description: Use blocks of code to take Steve or Alex on an adventure through
+            this Minecraft world
+          description_short: Explore a Minecraft world through code
+          student_description: Use blocks of code to take Steve or Alex on an adventure
+            through this Minecraft world
+          title: Minecraft Hour of Code
+        netsim:
+          title: Ինտերնետ Simulator
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: conditionals
+            lessonGroup-5:
+              display_name: փոփոխականների
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: loops
+            lessonGroup-6:
+              display_name: Իրադարձություններ
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: nested Loops
+            lessonGroup-4:
+              display_name: գործառույթները
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: loops
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: loops
+            lessonGroup-5:
+              display_name: Իրադարձություններ
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-6:
+              display_name: loops
+        new-express:
+          lesson_groups:
+            content:
+              display_name: պարունակություն
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: ներածություն
+        playlab:
+          description: Create a story or make a game with Play Lab!
+          description_short: Create a story or make a game with Play Lab!
+          student_description: Create a story or make a game with Play Lab!
+          title: Play Lab
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
         sciencePD2b:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
@@ -177,32 +1580,10 @@ hy:
           description: 'Phase 2 Online: Blended Summer Study'
           description_short: 'Phase 2 Online: Blended Summer Study'
           student_description: 'Phase 2 Online: Blended Summer Study'
-        ECSPD2-iZone:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          student_description: 'Phase 2 Online: Blended Summer Study'
-        ECSPD2-NexTech:
-          description: 'Phase 2 Online: Blended Summer Study'
-          description_short: 'Phase 2 Online: Blended Summer Study'
-          student_description: 'Phase 2 Online: Blended Summer Study'
-        asUnplugged:
-          description_audience: Ages 6-13
-        afterschool1:
-          description_audience: Ages 7-13
-        Special Fun:
-          description_audience: Ages 10-18
-        SpecialSeries:
-          description_audience: Ages 10-18
-        iceage:
-          title: Ice Age Play Lab
-          description: Create a story or make a game with Ice Age Play Lab!
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          student_description: Create a story or make a game with Ice Age Play Lab!
-        gumball:
-          title: Gumball Play Lab
-          description: Create a story or make a game with Gumball Play Lab!
-          description_short: Create a story or make a game with Gumball Play Lab!
-          student_description: Create a story or make a game with Gumball Play Lab!
+        soccer:
+          name: ֆուտբոլ
+        spelling-bee:
+          title: Spelling Bee
         starwars:
           description: Learn to program droids, and create your own Star Wars game
             in a galaxy far, far away.
@@ -210,6 +1591,7 @@ hy:
             game in a galaxy far, far away.
           student_description: Learn to program droids, and create your own Star Wars
             game in a galaxy far, far away.
+          title: 'Star Wars: Building a Galaxy With Code (JavaScript)'
         starwarsblocks:
           description: Learn to program droids, and create your own Star Wars game
             in a galaxy far, far away.
@@ -217,797 +1599,63 @@ hy:
             game in a galaxy far, far away.
           student_description: Learn to program droids, and create your own Star Wars
             game in a galaxy far, far away.
-        mc:
-          title: Minecraft Hour of Code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
-          description_short: Explore a Minecraft world through code
-          student_description: Use blocks of code to take Steve or Alex on an adventure
-            through this Minecraft world
-        algebraPD1:
-          title: CS in Algebra Part 1
-        CSDU3-Draft:
-          description_short: Programming
-        TEMP CSD Unit 3:
-          description_short: Programming
-        CSF_Secret_Sample:
-          description_audience: Ages 8-18
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
-        CSF_Secret_Sample_Story:
-          description_audience: Ages 8-18+
-        MikeTest:
-          description_audience: Ages 8-98
-        artistExemplar:
-          description_audience: Ages 8-18
+        step:
+          description: Step tutorial
+          description_short: Step tutorial
+          student_description: Step tutorial
+          title: քայլ
         teachercon:
           lesson_groups:
-            required:
-              display_name: Overview
             content:
               display_name: պարունակություն
             practice:
               display_name: Ուսուցիչի փորձեր
-        gradeKinder:
-          description_audience: Ages 5-18
-        grade4:
-          title: Grade 4
-          description_audience: Ages 9-99
-        grade1:
-          title: Grade 1
-          description_audience: Ages 5-18
-        grade5:
-          title: Grade 5
-          description_audience: Ages 10-110
-        ecs-unit4:
-          description: CS Principles Unit 4
-          description_short: CS Principles Unit 4
-          student_description: CS Principles Unit 4
-        grade3:
-          title: Grade 3
-          description_audience: Ages 5-18
-        alltheplcthings:
-          lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
-        grade2:
-          description_audience: Ages 5-18
-        csp-online-test:
+        test-nv-coursea-2023:
           lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
-        csp1-support:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
-        basketball:
-          name: basketball
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
-        coursee-draft:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
-        coursef-draft:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
-        classic-hoc-impact-study:
-          description_short: Try the basics of computer science with many fun characters!
-        hoc-impact-study:
-          description_short: Try the basics of computer science with many fun characters!
-        csp3-support:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
-        csp4-support:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
-        csf2harvey:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
-        csp5-support:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-            practice:
-              display_name: Ուսուցիչի փորձեր
-        csppostap-2017:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
-        coursea-2017:
-          title: Կուրս A
-          assignment_family_title: Կուրս A
-        courseb-2017:
-          title: Կուրս B
-          assignment_family_title: Կուրս B
-        coursec-2017:
-          title: Կուրս C
-          assignment_family_title: Կուրս C
-        coursed-2017:
-          title: Կուրս D
-          assignment_family_title: Կուրս D
-        coursee-2017:
-          title: Կուրս E
-          assignment_family_title: Կուրս E
-        coursef-2017:
-          title: Կուրս F
-          assignment_family_title: Կուրս F
-        cspnovice:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp1-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp2-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp3-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp4-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp5-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csd1-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csd6-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csd5-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csd4-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csd3-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csd2-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        express-2017:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
-        new-express:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
-        coursea-2018:
-          assignment_family_title: Կուրս A
-        courseb-2018:
-          assignment_family_title: Կուրս B
-        coursed-2018:
-          assignment_family_title: Կուրս D
-        coursec-2018:
-          assignment_family_title: Կուրս C
-        coursee-2018:
-          assignment_family_title: Կուրս E
-        coursef-2018:
-          assignment_family_title: Կուրս F
-        csp2-2018:
-          lesson_groups:
-            csp2_1_2018:
-              display_name: 'Unit 2: Digital Information'
-        csd1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csd2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csd3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csd4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csd5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csd6-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp-explore-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp-create-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csd-novice-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csd-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp-novice-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        fit-test:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        cspplayground:
-          lesson_groups:
-            csp_variables:
-              display_name: փոփոխականների
-            csp_conditionals:
-              display_name: conditionals
-            csp_functions:
-              display_name: գործառույթները
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: փոփոխականների
-            csf_for_loops:
-              display_name: For Loops
-            csf_internet:
-              display_name: Internet
-            csf_digcit:
+            lessonGroup-2:
               display_name: Digital Citizenship
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: Իրադարձություններ
-            csf_loops:
+            lessonGroup-4:
               display_name: loops
-            csf_conditionals:
-              display_name: conditionals
-            csf_binary:
-              display_name: երկուական
-            csf_digcit:
-              display_name: Digital Citizenship
-        coursee-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_nested_loops:
-              display_name: nested Loops
-            csf_functions:
-              display_name: գործառույթները
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: loops
-            csf_conditionals:
-              display_name: conditionals
-            csf_functions:
-              display_name: գործառույթները
-            csf_variables:
-              display_name: փոփոխականների
-            csf_for_loops:
-              display_name: For Loops
-        andrea-test:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_binary:
-              display_name: երկուական
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        coursea-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: փոփոխականների
-            csp_conditionals:
-              display_name: conditionals
-            csp_functions:
-              display_name: գործառույթները
-            required:
-              display_name: Overview
-        csp2-2019:
-          lesson_groups:
-            csp2_1_2018:
-              display_name: 'Unit 2: Digital Information'
-        csp1-pilot:
-          lesson_groups:
-            required:
-              display_name: Overview
-        csp1-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: փոփոխականների
-            csp_conditionals:
-              display_name: conditionals
-            csp_functions:
-              display_name: գործառույթները
-        csp2-pilot-staging:
-          title: CS Principles Unit 2
-          lesson_groups:
-            csp_variables:
-              display_name: փոփոխականների
-            csp_conditionals:
-              display_name: conditionals
-            csp_functions:
-              display_name: գործառույթները
-        csp4-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: փոփոխականների
-            csp_conditionals:
-              display_name: conditionals
-            csp_functions:
-              display_name: գործառույթները
-        csp5-pilot-staging:
-          lesson_groups:
-            csp_lists:
-              display_name: ցուցակները
-            csp_loops:
-              display_name: loops
-        csp6-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: փոփոխականների
-            csp_conditionals:
-              display_name: conditionals
-            csp_functions:
-              display_name: գործառույթները
-        csp8-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: փոփոխականների
-            csp_conditionals:
-              display_name: conditionals
-            csp_functions:
-              display_name: գործառույթները
-        csp9-pilot-staging:
-          title: CS Principles Unit 9
-          lesson_groups:
-            csp_variables:
-              display_name: փոփոխականների
-            csp_conditionals:
-              display_name: conditionals
-            csp_functions:
-              display_name: գործառույթները
-        csp10-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: փոփոխականների
-            csp_conditionals:
-              display_name: conditionals
-            csp_functions:
-              display_name: գործառույթները
-        csp5-pilot:
-          lesson_groups:
-            csp_lists:
-              display_name: ցուցակները
-            csp_loops:
-              display_name: loops
-            required:
-              display_name: Overview
-        fit2019-novice:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp3-pilot:
+        test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:
               display_name: պարունակություն
+            practice:
+              display_name: Ուսուցիչի փորձեր
             required:
               display_name: Overview
-        csl-vn:
-          lesson_groups:
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        dlp19-csd-mod-fit:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        dlp19-csp-mod-fit:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        dlp19-csd-mod-w1:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        dlp19-csd-mod-w2:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        dlp19-csd-mod-w3:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        dlp19-csd-mod-w4:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        dlp19-csp-mod-w1:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        dlp19-csp-mod-w2:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        dlp19-csp-mod-w3:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        dlp19-csp-mod-w4:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: պարունակություն
-        csp2-pilot:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
-            required:
-              display_name: Overview
-        csp6-pilot:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
-            required:
-              display_name: Overview
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: փոփոխականների
-            csp_conditionals:
-              display_name: conditionals
-            csp_functions:
-              display_name: գործառույթները
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_conditionals:
-              display_name: conditionals
-            csf_nested_loops:
-              display_name: nested Loops
-            csf_functions:
-              display_name: գործառույթները
         time4cs-control-unit-1:
           lesson_groups:
-            csf_loops:
-              display_name: loops
             csf_conditionals:
               display_name: conditionals
-            csf_events:
-              display_name: Իրադարձություններ
             csf_digcit:
               display_name: Digital Citizenship
-        time4cs-experiment-unit-1:
-          lesson_groups:
+            csf_events:
+              display_name: Իրադարձություններ
             csf_loops:
               display_name: loops
+        time4cs-control-unit-2:
+          lesson_groups:
             csf_conditionals:
               display_name: conditionals
-            csf_events:
-              display_name: Իրադարձություններ
             csf_digcit:
               display_name: Digital Citizenship
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: Overview
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: փոփոխականների
-            csp_conditionals:
-              display_name: conditionals
-            csp_functions:
+            csf_functions:
               display_name: գործառույթները
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: ցուցակները
-            csp_loops:
-              display_name: loops
-        coursea-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        courseb-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        coursec-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_binary:
-              display_name: երկուական
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Իրադարձություններ
-            csf_loops:
-              display_name: loops
-            csf_conditionals:
-              display_name: conditionals
-            csf_binary:
-              display_name: երկուական
-            csf_digcit:
-              display_name: Digital Citizenship
-        coursee-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
             csf_nested_loops:
               display_name: nested Loops
-            csf_functions:
-              display_name: գործառույթները
-        coursef-2020:
+        time4cs-experiment-unit-1:
           lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_variables:
-              display_name: փոփոխականների
-            csf_for_loops:
-              display_name: For Loops
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: loops
             csf_conditionals:
               display_name: conditionals
-            csf_functions:
-              display_name: գործառույթները
-            csf_variables:
-              display_name: փոփոխականների
-            csf_for_loops:
-              display_name: For Loops
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: loops
+            csf_digcit:
+              display_name: Digital Citizenship
             csf_events:
               display_name: Իրադարձություններ
-        csp1-2020:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: CS Principles Unit 1
-        csp2-2020:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: CS Principles Unit 2
-        csp9-2020:
-          lesson_groups:
-            csp_unit9_2020:
-              display_name: CS Principles Unit 9
-        virtual-holding-place:
-          lesson_groups:
-            content:
-              display_name: պարունակություն
-        csd3-virtual:
-          lesson_groups:
-            csd3_1:
-              display_name: պարունակություն
-            csd3_2:
-              display_name: պարունակություն
-            cspSurvey:
-              display_name: պարունակություն
+            csf_loops:
+              display_name: loops
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -1024,602 +1672,11 @@ hy:
           lesson_groups:
             lg_1:
               display_name: պարունակություն
-        2021drafting:
+        virtual-holding-place:
           lesson_groups:
-            introduction:
-              display_name: ներածություն
-            lessonGroup-3:
-              display_name: փոփոխականների
-            debugging:
-              display_name: Debugging
-        csp1-2021:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: CS Principles Unit 1
-        csp2-2021:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: CS Principles Unit 2
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: փոփոխականների
-            csp_conditionals:
-              display_name: conditionals
-            csp_functions:
-              display_name: գործառույթները
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: ցուցակները
-            csp_loops:
-              display_name: loops
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: ալգորիթմները
-        csp9-2021:
-          lesson_groups:
-            csp_unit9_2020:
-              display_name: CS Principles Unit 9
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_binary:
-              display_name: երկուական
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Իրադարձություններ
-            csf_loops:
-              display_name: loops
-            csf_conditionals:
-              display_name: conditionals
-            csf_binary:
-              display_name: երկուական
-            csf_digcit:
-              display_name: Digital Citizenship
-            lessonGroup-6:
-              display_name: Digital Citizenship
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: nested Loops
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_nested_loops:
-              display_name: conditionals
-            csf_functions:
-              display_name: գործառույթները
-        coursef-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_variables:
-              display_name: For Loops
-            csf_for_loops:
-              display_name: For Loops
-            lessonGroup-8:
-              display_name: փոփոխականների
-            lessonGroup-9:
-              display_name: ջնջել
-            lessonGroup-7:
-              display_name: Digital Citizenship
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: loops
-            csf_conditionals:
-              display_name: conditionals
-            csf_functions:
-              display_name: գործառույթները
-            csf_variables:
-              display_name: փոփոխականների
-            csf_for_loops:
-              display_name: For Loops
-            lessonGroup-9:
-              display_name: Իրադարձություններ
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: ներածություն
-            lessonGroup-3:
-              display_name: փոփոխականների
-            variables:
-              display_name: փոփոխականների
-        contagion-pilot:
-          description_audience: Grade 5
-        csa1-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa2-pilot:
-          lesson_groups:
-            lesson group:
-              display_name: պարունակություն
-        csa3-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa4-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa5-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa6-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa8-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: ներածություն
-            Introduction:
-              display_name: ներածություն
-        csa1-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa2-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa-videos:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Unit 1
-            lessonGroup-4:
-              display_name: Unit 2
-            lessonGroup-5:
-              display_name: Unit 3
-            lessonGroup-6:
-              display_name: Unit 4
-            lessonGroup-7:
-              display_name: Unit 5
-        csa3-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        dlp21-csp-mod4:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Փուլ 1
-            lessonGroup-3:
-              display_name: Փուլ 2
-        dlp21-csd:
-          lesson_groups:
-            lessonGroup-2:
-              description: փորձ
-        csa1-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa2-pilot-facilitator:
-          lesson_groups:
-            lesson group:
-              display_name: պարունակություն
-        csa3-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa4-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa5-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa4-exemplars:
-          lesson_groups:
-            lesson group:
-              display_name: պարունակություն
             content:
               display_name: պարունակություն
-            lesson_group:
-              display_name: պարունակություն
-            lessonGroup-2:
-              display_name: պարունակություն
-        spelling-bee:
-          title: Spelling Bee
-        csa5-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa6-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa6-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Կոդի ժամ
-        csa7-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: փոփոխականների
-        csa8-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa7-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa8-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        express-2022:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: Իրադարձություններ
-            csf_loops:
-              display_name: loops
-            csf_conditionals:
-              display_name: conditionals
-            csf_functions:
-              display_name: գործառույթները
-            csf_variables:
-              display_name: փոփոխականների
-            csf_for_loops:
-              display_name: For Loops
-        csp1-2022:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: CS Principles Unit 1
-        csp2-2022:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: CS Principles Unit 2
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: փոփոխականների
-            csp_conditionals:
-              display_name: conditionals
-            csp_functions:
-              display_name: գործառույթները
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: ցուցակները
-            csp_loops:
-              display_name: loops
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        csp9-2022:
-          lesson_groups:
-            csp_unit9_2020:
-              display_name: CS Principles Unit 9
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digital Citizenship
-            csf_events:
-              display_name: Իրադարձություններ
-            csf_loops:
-              display_name: loops
-            csf_conditionals:
-              display_name: conditionals
-        coursee-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            ramp_up:
-              display_name: nested Loops
-            csf_functions:
-              display_name: գործառույթները
-            csf_nested_loops:
-              display_name: conditionals
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Digital Citizenship
-            lessonGroup-8:
-              display_name: փոփոխականների
-        csa1-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        csa2-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa3-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa4-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa5-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa1-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa7-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa8-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Digital Citizenship
-            lessonGroup-8:
-              display_name: փոփոխականների
-        csa6-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa7-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa8-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa2-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        soccer:
-          name: ֆուտբոլ
-        csa1-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa2-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa3-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa4-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa5-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa6-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa7-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa8-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa1-2023:
+        virtual-pl-csd-summer-day1:
           lessons:
-            lesson-6:
-              name: loops
-          lesson_groups:
-            lessonGroup-3:
-              display_name: պարունակություն
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: փոփոխականների
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: For Loops
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa5-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa7-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csa8-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        csp1-2023:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: CS Principles Unit 1
-        csp2-2023:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: CS Principles Unit 2
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: փոփոխականների
-            csp_conditionals:
-              display_name: conditionals
-            csp_functions:
-              display_name: գործառույթները
-        csp5-2023:
-          lesson_groups:
-            csp_loops:
-              display_name: loops
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: ցուցակները
-            lessonGroup-3:
-              display_name: loops
-        csp9-2023:
-          lesson_groups:
-            csp_unit9_2020:
-              display_name: CS Principles Unit 9
-        angelina-playground:
-          lessons:
-            lesson-5:
-              name: Assessments
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        express-2023:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: Իրադարձություններ
-            csf_loops:
-              display_name: loops
-            csf_conditionals:
-              display_name: conditionals
-            csf_functions:
-              display_name: գործառույթները
-            csf_variables:
-              display_name: փոփոխականների
-            csf_for_loops:
-              display_name: For Loops
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        courseb-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: loops
-            csf_events:
-              display_name: Իրադարձություններ
-        coursed-2023:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digital Citizenship
-            csf_events:
-              display_name: Իրադարձություններ
-            csf_loops:
-              display_name: loops
-            csf_conditionals:
-              display_name: conditionals
-        coursee-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            ramp_up:
-              display_name: nested Loops
-            csf_functions:
-              display_name: գործառույթները
-            csf_nested_loops:
-              display_name: conditionals
-        pl-csd-summer-day1:
-          lessons:
-            lesson-3:
+            lesson-1:
               name: ներածություն

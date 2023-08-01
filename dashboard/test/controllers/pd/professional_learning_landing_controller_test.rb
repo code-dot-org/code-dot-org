@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCase
+class Pd::ProfessionalLearningLandingControllerTest < ActionController::TestCase
   def prepare_scenario
-    @csf_workshop = create :workshop, :ended, num_sessions: 3, course: Pd::Workshop::COURSE_CSF, ended_at: Date.today - 1.day
-    @csd_workshop = create :workshop, :ended, num_sessions: 3, course: Pd::Workshop::COURSE_CSD, ended_at: Date.today - 2.days
+    @csf_workshop = create :workshop, :ended, num_sessions: 3, course: Pd::Workshop::COURSE_CSF, ended_at: Time.zone.today - 1.day
+    @csd_workshop = create :workshop, :ended, num_sessions: 3, course: Pd::Workshop::COURSE_CSD, ended_at: Time.zone.today - 2.days
     @csp_workshop = create :workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSP
 
     @teacher = create(:teacher, email: 'test_email@foo.com', user_type: 'teacher')
@@ -104,7 +104,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   test 'FiT workshops do not interfere with other pending exit surveys' do
     # Fake CSF workshop (older than the FiT workshop) which should
     # produce a pending exit survey
-    csf_workshop = create :csf_workshop, :ended, ended_at: Date.today - 1.day
+    csf_workshop = create :csf_workshop, :ended, ended_at: Time.zone.today - 1.day
 
     # Fake FiT workshop, which should not produce an exit survey
     fit_workshop = create :fit_workshop, :ended
@@ -146,7 +146,7 @@ class Pd::ProfessionalLearningLandingControllerTest < ::ActionController::TestCa
   test 'Facilitator workshops do not interfere with other pending exit surveys' do
     # Fake CSF workshop (older than the Facilitator workshop) which should
     # produce a pending exit survey
-    csf_workshop = create :csf_workshop, :ended, ended_at: Date.today - 1.day
+    csf_workshop = create :csf_workshop, :ended, ended_at: Time.zone.today - 1.day
 
     # Fake Facilitator workshop, which should not produce an exit survey
     facilitator_workshop = create :facilitator_workshop, :ended

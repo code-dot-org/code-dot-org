@@ -657,7 +657,74 @@ zh-CN:
         csc-sprite-lab-pixel-editor: 画自己的精灵图
         csa-pl-intro-to-strings: Java 中的字符串简介
         csa-pl-compareTo: compareTo() 方法
+        csc-event-short-intro: 活动简短介绍
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: 赛道游乐场单元概述
+        csa-day-in-pm-pl: 项目经理会做什么？
+        csa-pl-intro-to-pm: 项目管理简介
+        PL_CSD_CircuitPlayground_Setup: 赛道游乐场设置
+        csa_object_oriented_programming: 'CSA：面向对象编程'
+        csa_creating_objects: 'CSA：创建对象'
+        csa_calling_methods: 'CSA：调用方法'
+        csa_while_loops: 'CSA: While Loops'
+        csa_inheritance: 'CSA：继承'
+        csa_writing_a_method: 'CSA：编写方法'
+        csa_software_engineering_code_reviews: 'CSA：软件工程-代码审查'
+        csa_conditional_statements: 'CSA：条件语句'
+        csa_printing_in_java: 'CSA：用 Java 打印'
+        csa_two_way_selection_and_not: 'CSA：双向选择与否'
+        csa-pl-intro-to-oop: 面向对象编程简介
+        csa-pl-welcome-to-Neighborhood: 欢迎来到邻里
+        csa-pl-calling-methods: 在 Java 中调用方法
+        csa-pl-creating-objects: 创建对象
+        csa_accessor_methods: 'CSA：访问器方法'
+        csa_constructors: 'CSA：构造函数'
+        csa_creating_a_scanner_object: 'CSA：创建扫描仪对象'
+        csa_creating_variables: 'CSA：创建变量'
+        csa_instance_variables_and_attributes: 'CSA：实例变量和属性'
+        csa_mutator_methods: 'CSA：突变器方法'
+        csa_overloaded_constructors: 'CSA：重载构造函数'
+        csa_the_tostring_method: 'CSA：toString () 方法'
+        csa_scanner_class_methods: 'CSA：扫描仪类别方法'
+        csa_for_loops: 'CSA：For Loops'
+        csa_enhanced_for_loops: 'CSA：针对循环的增强版'
+        csa_modifying_values_in_a_1d_array: 'CSA：修改一维数组中的值'
+        csa_nested_loops: 'CSA：嵌套循环'
+        csa_one_dimensional_arrays: 'CSA：一维 (1D) 数组'
+        csa_polymorphism: 'CSA：多态性'
+        csa_casting: 'CSA：铸造'
+        csa_equals_and_aliases: 'CSA：等号和别名'
+        csa_multi-selection_statements: 'CSA：多选声明'
+        csa_random_numbers: 'CSA：随机数'
+        csa_static_methods: 'CSA：静态方法'
+        csa_static_variables: 'CSA：静态变量'
+        csa_the_equals_method: 'CSA：等于 () 方法'
+        csa_welcome_to_the_theater: 'CSA：欢迎来到剧院'
+        enter_your_own_poem: 输入你自己的诗
+        csa-example-solution-1: '实时编码示例解决方案 '
         csd_sprite_properties: 精灵图属性
+        csa-pl-documentation: Java 实验室中的文档
+        csc-starquilts-intro: 'CSC: Star Quilts'
+        csa-pl-vocab-pm: 项目管理词汇
+        csc-ecosystems-intro: 生态系统简介
+        PL_CSD_MicroBit_Intro: 'micro: bit 简介'
+        csc_animal_adaptations_intro: 动物改编简介
+        csa_two_dimensional_arrays: 'CSA：二维（二维）数组'
+        csa_working_with_2d_array_elements: 'CSA：使用二维数组元素'
+        csa_row_major_traversal: 'CSA：Row-Major Traversal'
+        csa_column_major_traversal: 'CSA：列大遍历'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA：针对循环和二维数组进行了增强'
+        csa_images_and_pixels: 'CSA：图像和像素'
+        csa_wrapper_classes_part_1: 'CSA：包装类第 1 部分'
+        csa_wrapper_classes_part_2: 'CSA：包装类第 2 部分'
+        csa_the_arraylist_class: 'CSA：ArrayList 类'
+        csa_working_with_arraylist_data: 'CSA：使用 ArrayList 数据'
+        csa_remving_data_from_an_arraylist: 'CSA：从阵列列表中删除数据'
+        csa_private_methods: 'CSA：私有方法'
+        csa_recursion: 'CSA：递归'
+        csa_searching_algorithms: 'CSA：搜索算法'
+        csa_sorting_algorithms: 'CSA：排序算法'
+        star_quilts_intro_to_artist: 'Star Quilts：艺术家简介'
+        upload_sprites_backgrounds: 上传自定义精灵和背景
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

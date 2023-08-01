@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-26 17:19:07 UTC",
-    "published_state": null,
+    "serialized_at": "2023-07-24 21:55:16 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -635,6 +635,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1_-22"
         ],
@@ -735,6 +736,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSD-Mod5-ml-intro categorical-pizza_-22"
         ],
@@ -810,6 +812,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-21-CSD-Mod5ml-intro app lab-book recommender 0_-22"
         ],

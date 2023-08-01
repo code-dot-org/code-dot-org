@@ -61,8 +61,8 @@
           "create_function": "Clic aquí para abrir o submenu \"Funcións\", e entón clic no botón \"Crear unha función\"."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Clic en editar para agregar un par",
-          "add_and_drag_parameter": "Escriba o nome do seu parámetro aqui, clique en agregar e, de seguida, arrástreo para a súa definición de función"
+          "add_and_drag_parameter": "Escriba o nome do seu parámetro aqui, clique en agregar e, de seguida, arrástreo para a súa definición de función",
+          "edit_add_parameter": "Clic en editar para agregar un par"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Arrastre a variábel de lonxitude aquí para substituír os puntos de interrogación"
@@ -76,13 +76,22 @@
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Colocamos algúns bloques aquí para poderes comezar"
         },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Colocamos algúns bloques aquí para poderes comezar"
+        },
         "Overworld Chop Trees_2019": {
           "craft_callout_preplaced": "Colocamos algúns bloques aquí para poderes comezar"
         },
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "Colocamos algúns bloques aquí para poderes comezar"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Colocamos algúns bloques aquí para poderes comezar"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Este código vai comezar a construír a túa casa. Consegues terminala?"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "Este código vai comezar a construír a túa casa. Consegues terminala?"
         },
         "Overworld House Frame Chosen_2019": {
@@ -91,7 +100,13 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "Este código vai comezar a construír a túa casa. Consegues terminala?"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Este código vai comezar a construír a túa casa. Consegues terminala?"
+        },
         "Overworld Move to Sheep": {
+          "craft_run_button_callout": "Preme en \"Correr\" para probares o teu programa"
+        },
+        "Overworld Move to Sheep2022": {
           "craft_run_button_callout": "Preme en \"Correr\" para probares o teu programa"
         },
         "Overworld Move to Sheep_2019": {
@@ -100,7 +115,13 @@
         "Overworld Move to Sheep_2020": {
           "craft_run_button_callout": "Preme en \"Correr\" para probares o teu programa"
         },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Preme en \"Correr\" para probares o teu programa"
+        },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "Repite accións colocando bloques aquí"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "Repite accións colocando bloques aquí"
         },
         "Overworld Place Wall_2019": {
@@ -109,7 +130,13 @@
         "Overworld Place Wall_2020": {
           "craft_inside_repeat": "Repite accións colocando bloques aquí"
         },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Repite accións colocando bloques aquí"
+        },
         "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Este código vai verificar se hai lava, consegues agregarlle un comando para mover cara adiante?"
+        },
+        "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "Este código vai verificar se hai lava, consegues agregarlle un comando para mover cara adiante?"
         },
         "Underground Avoiding Lava_2019": {
@@ -118,13 +145,22 @@
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "Este código vai verificar se hai lava, consegues agregarlle un comando para mover cara adiante?"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Este código vai verificar se hai lava, consegues agregarlle un comando para mover cara adiante?"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "Escava este ferro!"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "Escava este ferro!"
         },
         "Underground Iron_2019": {
           "craft_what_is_iron": "Escava este ferro!"
         },
         "Underground Iron_2020": {
+          "craft_what_is_iron": "Escava este ferro!"
+        },
+        "Underground Iron_2021": {
           "craft_what_is_iron": "Escava este ferro!"
         },
         "frozen circle function with parameter": {
@@ -147,8 +183,8 @@
           "snowflake_dropdown": "Use este menu suspenso para criar diferentes flocos de neve!"
         },
         "frozen line": {
-          "run": "Preme en \"Correr\" para probares o teu programa!",
-          "move_elsa_forward": "Arrastre un bloque \"Avance\" e encáixeo baixo o bloque \"Cando o xogo comeza\" para que Elsa avance"
+          "move_elsa_forward": "Arrastre un bloque \"Avance\" e encáixeo baixo o bloque \"Cando o xogo comeza\" para que Elsa avance",
+          "run": "Preme en \"Correr\" para probares o teu programa!"
         },
         "frozen perpendicular": {
           "turn_elsa": "Use o bloque \"Vire\" para que Elsa vire. O número no menu suspenso determina canto vai virar Elsa"
@@ -167,42 +203,6 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Use o menu suspenso para substituír \"???\" por un número"
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Colocamos algúns bloques aquí para poderes comezar"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Este código vai comezar a construír a túa casa. Consegues terminala?"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Preme en \"Correr\" para probares o teu programa"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Repite accións colocando bloques aquí"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Este código vai verificar se hai lava, consegues agregarlle un comando para mover cara adiante?"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "Escava este ferro!"
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Colocamos algúns bloques aquí para poderes comezar"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Este código vai comezar a construír a túa casa. Consegues terminala?"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Preme en \"Correr\" para probares o teu programa"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Repite accións colocando bloques aquí"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Este código vai verificar se hai lava, consegues agregarlle un comando para mover cara adiante?"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Escava este ferro!"
         }
       }
     }

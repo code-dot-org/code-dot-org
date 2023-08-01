@@ -2,27 +2,174 @@
   "te-IN": {
     "data": {
       "function_definitions": {
+        "2-3 Artist 11": {
+          "x": {
+            "name": "x"
+          }
+        },
         "2-3 Artist 7": {
           "draw_rect": {
             "parameters": {
-              "width": "వెడల్పు",
-              "height": "ఎత్తు"
+              "height": "ఎత్తు",
+              "width": "వెడల్పు"
             }
           }
         },
         "2-3 Artist Debugging 10": {
           "draw square": {
             "parameters": {
-              "width": "వెడల్పు",
-              "height": "ఎత్తు"
+              "height": "ఎత్తు",
+              "width": "వెడల్పు"
             }
+          }
+        },
+        "Course 4 Bee Params 8": {
+          "get nectar make honey": {
+            "parameters": {
+              "honey": "తేనె"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 1": {
+          "jump": {
+            "name": "దూకి"
+          }
+        },
+        "Course 4 Play Lab Params 10": {
+          "score_points": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 2": {
+          "jump": {
+            "name": "దూకి"
           }
         },
         "Course 4 Play Lab Params 3": {
           "jump": {
+            "name": "దూకి",
             "parameters": {
+              "actor": "నటుడు",
               "height": "ఎత్తు"
             }
+          }
+        },
+        "Course 4 Play Lab Params 5": {
+          "patrol": {
+            "parameters": {
+              "actor": "నటుడు"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 6": {
+          "patrol": {
+            "parameters": {
+              "actor": "నటుడు"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 7": {
+          "patrol": {
+            "parameters": {
+              "actor": "నటుడు",
+              "speed": "వేగం"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 8": {
+          "patrol": {
+            "parameters": {
+              "actor": "నటుడు",
+              "speed": "వేగం"
+            }
+          }
+        },
+        "Course 4 Play Lab Params 9": {
+          "score_points": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "draw a star": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a star": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a star": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a star": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a star": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a star": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a star": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
+        "FoodFight": {
+          "score_points": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
+        "Geometric Sun": {
+          "square": {
+            "name": "చదరపు"
+          },
+          "sun": {
+            "name": "సూర్యుడు"
+          }
+        },
+        "Geometric Sun_2018": {
+          "square": {
+            "name": "చదరపు"
+          },
+          "sun": {
+            "name": "సూర్యుడు"
           }
         },
         "InspirationalArtwork": {
@@ -39,39 +186,104 @@
             }
           }
         },
+        "NEW Course 4 Artist Params 15": {
+          "draw a star": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
         "NEW Course 4 Play Lab Params 11": {
           "jump": {
+            "name": "దూకి",
             "parameters": {
+              "actor": "నటుడు",
               "height": "ఎత్తు"
+            }
+          },
+          "patrol": {
+            "parameters": {
+              "actor": "నటుడు",
+              "speed": "వేగం"
+            }
+          }
+        },
+        "New Artist Project": {
+          "draw a star": {
+            "parameters": {
+              "points": "పాయింట్లు"
             }
           }
         },
         "New Play Lab Project": {
           "jump": {
+            "name": "దూకి",
             "parameters": {
+              "actor": "నటుడు",
               "height": "ఎత్తు"
+            }
+          },
+          "patrol": {
+            "parameters": {
+              "actor": "నటుడు",
+              "speed": "వేగం"
+            }
+          }
+        },
+        "courseC_artist_prog3": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2018": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2019": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2020": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
             }
           }
         },
         "courseF_artist_fwp1": {
-          "checker": {
+          "Make gingham": {
             "parameters": {
               "size": "సైజు"
             }
           },
-          "Make gingham": {
+          "checker": {
             "parameters": {
               "size": "సైజు"
             }
           }
         },
         "courseF_artist_fwp2": {
-          "checker": {
+          "Make gingham": {
             "parameters": {
               "size": "సైజు"
             }
           },
-          "Make gingham": {
+          "checker": {
             "parameters": {
               "size": "సైజు"
             }
@@ -86,6 +298,32 @@
           "filled square": {
             "parameters": {
               "size": "సైజు"
+            }
+          }
+        },
+        "courseF_artist_fwp7": {
+          "draw a spiral edge": {
+            "parameters": {
+              "min": "ని"
+            }
+          }
+        },
+        "courseF_artist_fwp8": {
+          "draw a spiral edge": {
+            "parameters": {
+              "min": "ని"
+            }
+          }
+        },
+        "courseF_artist_fwp9": {
+          "draw a spiral edge": {
+            "parameters": {
+              "min": "ని"
+            }
+          },
+          "draw a star": {
+            "parameters": {
+              "points": "పాయింట్లు"
             }
           }
         },
@@ -122,6 +360,36 @@
             "parameters": {
               "width": "వెడల్పు"
             }
+          }
+        },
+        "courseF_bee_variables_7_2018": {
+          "collect": {
+            "name": "సేకరించండి"
+          }
+        },
+        "courseF_bee_variables_7_2019": {
+          "collect": {
+            "name": "సేకరించండి"
+          }
+        },
+        "courseF_bee_variables_7_2020": {
+          "collect": {
+            "name": "సేకరించండి"
+          }
+        },
+        "courseF_bee_variables_8_2018": {
+          "collect": {
+            "name": "సేకరించండి"
+          }
+        },
+        "courseF_bee_variables_8_2019": {
+          "collect": {
+            "name": "సేకరించండి"
+          }
+        },
+        "courseF_bee_variables_8_2020": {
+          "collect": {
+            "name": "సేకరించండి"
           }
         }
       }

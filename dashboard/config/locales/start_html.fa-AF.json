@@ -9,12 +9,12 @@
           "green": "سبز"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "red": "قرمز",
-          "green": "سبز"
+          "green": "سبز",
+          "red": "قرمز"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "سبز",
-          "blue": "آبی"
+          "blue": "آبی",
+          "green": "سبز"
         }
       }
     }

@@ -64,7 +64,7 @@ Resources:
               - !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:<%=environment%>/cdo/*"
               - !Ref ChefConfig
 <% if database && !rack_env?(:production) -%>
-              - !Ref DatabaseSecret
+              - !Ref DatabaseSecretAdmin
 <% end -%>
             Condition:
               StringEquals:
@@ -557,7 +557,7 @@ Resources:
       DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
 # We don't yet provision the production database cluster/instances via CloudFormation.
 <% if database && !rack_env?(:production) %>
-    DependsOn: Aurora1
+    DependsOn: DBProxy
 <% end -%>
 <%end-%>
 
@@ -605,7 +605,7 @@ Resources:
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
 # We don't yet provision the production database cluster/instances via CloudFormation.
 <%   if database && !rack_env?(:production)%>
-    DependsOn: Aurora1
+    DependsOn: DBProxy
 <%   end -%>
 <% end-%>
 
@@ -617,14 +617,12 @@ Resources:
 <%=  component 'alarms'%>
 <% end -%>
 
+<%=  component 'logging'%>
 
-
-<% if database-%>
   # ---------------------------------------------
   # Database
   # ---------------------------------------------
 <%=  component 'database'%>
-<% end -%>
 
   # ---------------------------------------------
   # Codeprojects Resources

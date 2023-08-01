@@ -2,87 +2,20 @@
   "sm-WS": {
     "data": {
       "vocabularies": {
-        "function/hero/unversioned": {
-          "word": "Faiva"
-        },
-        "code/poem-art/2021": {
-          "word": "Faailo"
-        },
-        "code/artist/unversioned": {
-          "word": "Faailo"
-        },
-        "loops/aquatic/unversioned": {
-          "word": "taamiloga"
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/sports/unversioned": {
-          "word": "Faailo"
-        },
-        "behavior/coursef/2022": {
-          "word": "Amio"
-        },
-        "variable/coursef/2022": {
+        "variable/csd/2021": {
           "word": "Fuainumera lasi "
         },
-        "define/coursef/2022": {
-          "word": "Faamatala"
+        "function/csd/2021": {
+          "word": "Faiva"
         },
-        "behavior/coursee/2022": {
+        "behavior/coursee/2021": {
           "word": "Amio"
         },
-        "function/coursee/2022": {
+        "function/coursee/2021": {
           "word": "Faiva"
         },
-        "define/coursee/2022": {
+        "define/coursee/2021": {
           "word": "Faamatala"
-        },
-        "behavior/express/2022": {
-          "word": "Amio"
-        },
-        "function/express/2022": {
-          "word": "Faiva"
-        },
-        "variable/express/2022": {
-          "word": "Fuainumera lasi "
-        },
-        "define/express/2022": {
-          "word": "Faamatala"
-        },
-        "data/coursec/2022": {
-          "word": "Faamaumauga"
-        },
-        "variable/csd/2022": {
-          "word": "Fuainumera lasi "
-        },
-        "function/csd/2022": {
-          "word": "Faiva"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Faailo",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "behavior/coursef/2021": {
           "word": "Amio"
@@ -105,20 +38,87 @@
         "define/express/2021": {
           "word": "Faamatala"
         },
-        "behavior/coursee/2021": {
-          "word": "Amio"
-        },
-        "function/coursee/2021": {
-          "word": "Faiva"
-        },
-        "define/coursee/2021": {
-          "word": "Faamatala"
-        },
-        "variable/csd/2021": {
+        "variable/csd/2022": {
           "word": "Fuainumera lasi "
         },
-        "function/csd/2021": {
+        "function/csd/2022": {
           "word": "Faiva"
+        },
+        "data/coursec/2022": {
+          "word": "Faamaumauga"
+        },
+        "behavior/coursee/2022": {
+          "word": "Amio"
+        },
+        "function/coursee/2022": {
+          "word": "Faiva"
+        },
+        "define/coursee/2022": {
+          "word": "Faamatala"
+        },
+        "behavior/coursef/2022": {
+          "word": "Amio"
+        },
+        "variable/coursef/2022": {
+          "word": "Fuainumera lasi "
+        },
+        "define/coursef/2022": {
+          "word": "Faamatala"
+        },
+        "behavior/express/2022": {
+          "word": "Amio"
+        },
+        "function/express/2022": {
+          "word": "Faiva"
+        },
+        "variable/express/2022": {
+          "word": "Fuainumera lasi "
+        },
+        "define/express/2022": {
+          "word": "Faamatala"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "taamiloga"
+        },
+        "code/artist/unversioned": {
+          "word": "Faailo"
+        },
+        "function/hero/unversioned": {
+          "word": "Faiva"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/poem-art/2021": {
+          "word": "Faailo"
+        },
+        "code/sports/unversioned": {
+          "word": "Faailo"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Faailo",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         }
       }
     }

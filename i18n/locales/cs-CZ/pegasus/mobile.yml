@@ -985,8 +985,18 @@
   coursed-2020_name: Kurz D (2019)
   coursee-2020_name: Kurz E (2019)
   coursef-2020_name: Kurz F (2019)
+  coursea-2021_name: Kurz A (2021)
+  courseb-2021_name: Kurz B (2021)
+  coursec-2021_name: Kurz C (2021)
   coursed-2021_name: Kurz D (2021)
+  coursee-2021_name: Kurz E (2021)
+  coursef-2021_name: Kurz F (2021)
+  coursea-2022_name: Kurz A (2022)
+  courseb-2022_name: Kurz B (2022)
+  coursec-2022_name: Předmět C (2022)
   coursed-2022_name: Kurz D (2021)
+  coursee-2022_name: Předmět E (2022)
+  coursef-2022_name: Předmět F (2022)
   express-2018_name: Rychlý kurz (2018)
   pre-express-2018_name: Rychlý kurz pro předškoláky (2018)
   express-2019_name: Rychlý kurz (2019)
@@ -1509,6 +1519,7 @@
   header_stats: "Statistiky"
   header_help_us: "Pomozte nám"
   header_about: "O nás"
+  header_incubator: "Inkubátor"
   header_teacher_community: "Komunita učitelů"
   header_help_support: 'Nápověda a podpora '
   header_report_bug: "Nahlásit chybu"
@@ -1623,7 +1634,7 @@
   hoc2018_mc_download_adventurer: "Stáhni si offline verzi Minecraft Adventurer."
   hoc2018_mc_educators: "Pro učitele"
   hoc2018_mc_educators_box1_title: "Kód s Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition poskytuje v Minecraft učební osnovy, školení a kódování přizpůsobené standardům.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Education Edition poskytuje v Minecraft učební osnovy, školení a kódování přizpůsobené standardům."
   hoc2018_mc_educators_box1_button: "Začněte"
   hoc2018_mc_educators_box2_title: "Download Facilitator Guide"
   hoc2018_mc_educators_box2_desc: "Tato sada nástrojů vám pomůže hostit Hodinu kódu a zapojit studenty do počítačové vědy."
@@ -1731,7 +1742,7 @@
   hoc2018_mc_with_microsoft: "V rámci partnerství s"
   hoc2018_mc_thank_microsoft: "Děkujeme společnosti Microsoft, že podporuje naši vizi a misi zajištění toho, aby všechny děti měly příležitost učit se počítačové vědy a dovednosti potřebné k dosahování úspěchu ve 21. století."
   hoc2019_mc_mee_title: "Umělá inteligence Minecraft pro dobro"
-  hoc2019_mc_mee_description1: 'Nový výukový kurz Minecraft „Hodina programování“ je teď k dostání na Minecraft: Edice pro školy pro Windows, Mac, a iPad. Učte se základy programování a umělé inteligence se svými studenty!'
+  hoc2019_mc_mee_description1: "Nový výukový kurz Minecraft „Hodina programování“ je teď k dostání na Minecraft: Edice pro školy pro Windows, Mac, a iPad. Učte se základy programování a umělé inteligence se svými studenty!"
   hoc2019_mc_mee_description2: "Získejte přístup k bezplatným zdrojům včetně plánu lekcí, videí, učebních osnov informatiky a školení učitelů."
   hoc2019_mc_more_coding_resources: "Další zdroje o programování"
   hoc2019_dance_previous_versions: "Hledáte předchozí verzi Tanečního večírku?  \nKlikněte zde, abyste začali [Část 1](%{dance_2018_link}) a [Část 2](%{dance_extras_2018_link}) z minulého roku."
@@ -1744,18 +1755,18 @@
   page_not_available_description: "Omlouváme se, požadovaná stránka již není k dispozici na této adrese. Pokud stále potřebujete přístup, pošlete prosím e-mail na adresu [support@code.org] (%{support_email_link})."
   page_not_available_button: "Zpět domů"
   hoc2020_mc_available_code_org: "Dostupné na Code.org"
-  hoc2020_mc_available_mee: 'Dostupné v Minecraft: Edice pro školy'
+  hoc2020_mc_available_mee: "Dostupné v Minecraft: Edice pro školy"
   hoc2020_mc_mee_title: "Minecraft Příběh dvou vesnic"
-  hoc2020_mc_mee_description: 'Nový výukový kurz „Hodiny programování Minecraft“ je nyní dostupný v „Minecraft: Edice pro školy“ pro Windows, Mac, Chromebook a iPad. Učte se základy programování a poznávejte se svými studenty různorodost a inkluzi! Získejte přístup k prostředkům, jako je plán lekcí, videa, osnovy počítačové vědy, lekce rovnostářství, a výuka učitelů.'
+  hoc2020_mc_mee_description: "Nový výukový kurz „Hodiny programování Minecraft“ je nyní dostupný v „Minecraft: Edice pro školy“ pro Windows, Mac, Chromebook a iPad. Učte se základy programování a poznávejte se svými studenty různorodost a inkluzi! Získejte přístup k prostředkům, jako je plán lekcí, videa, osnovy počítačové vědy, lekce rovnostářství, a výuka učitelů."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Cestujte zpět v čase a naučte se kódovat! Nový výukový program Hodiny kódu s Minecraftem je nyní dostupný ve hře Minecraft: Education Edition pro Windows, Mac, Chromebook a iPad. Začněte s bezplatnými zdroji, školeními a videi pro učitele.'
+  hoc2021_mc_mee_description: "Cestujte zpět v čase a naučte se kódovat! Nový výukový program Hodiny kódu s Minecraftem je nyní dostupný ve hře Minecraft: Education Edition pro Windows, Mac, Chromebook a iPad. Začněte s bezplatnými zdroji, školeními a videi pro učitele."
   hoc2021_mc_mee_villages_title: "Příběh Dvou Vesnic"
-  hoc2021_mc_mee_villages_description: 'Naučte se základy kódování a prozkoumejte se svými studenty diverzitu a inkluzi ve hře Minecraft: Education Edition.'
+  hoc2021_mc_mee_villages_description: "Naučte se základy kódování a prozkoumejte se svými studenty diverzitu a inkluzi ve hře Minecraft: Education Edition."
   hoc2021_mc_mee_ai_title: "Umělá inteligence Pro Dobro"
-  hoc2021_mc_mee_ai_description: 'Prozkoumejte se svými studenty umělou inteligenci a naučte se kódovat ve hře Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_description: "Prozkoumejte se svými studenty umělou inteligenci a naučte se kódovat ve hře Minecraft: Education Edition."
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'Uprchněte před rozbřeskem ze záhadného sídla a vydělejte si milion smaragdů! Nový výukový kurz Hodiny programování Minecraft je teď k dostání na Minecraft: Education Edition pro Windows, Mac, Chromebook, iPad a mobily. Začněte s bezplatnými zdroji, školeními a videy pro vzdělavatele. '
-  hoc2022_mc_mee_timecraft_description: 'Cestujte zpět v čase, abyste zachránili budoucnost v této bezplatné lekci programování ve hře Minecraft: Education Edition.'
+  hoc2022_mc_mee_timecraft_description: "Cestujte zpět v čase, abyste zachránili budoucnost v této bezplatné lekci programování ve hře Minecraft: Education Edition."
   footer_powered_by_aws: "Poháněn Amazon Web Services"
   footer_built_on_github: "Postavený na GitHubu od Microsoftu"
   codebytes_skinny_banner_title: "Přidejte se k nám 7.-11. prosince pro naše CodeBytes živé mini-lekce!"
@@ -1804,7 +1815,7 @@
   ai_zooniverse: "Zooniverse - Pořiďte snímek horské zebry"
   ai_zooniverse_description: "Pomáhejte chránit ohroženou kapskou horskou zebru určováním různých zvířat na obrázcích."
   ai_audience: "Obecenstvo"
-  ai_minecraft_description: 'Získejte přístup k bezplatným prostředkům, jako například k plánu lekcí, videím, osnovám počítačových věd a školením pro učitele. (Podmínkou je Minecraft: Edice pro školy)'
+  ai_minecraft_description: "Získejte přístup k bezplatným prostředkům, jako například k plánu lekcí, videím, osnovám počítačových věd a školením pro učitele. (Podmínkou je Minecraft: Edice pro školy)"
   ai_k_12_audience: "Věk 12 a více (potřebná schopnost čtení)"
   ai_microsoft_workshop: "Bezplatné virtuální dílny od společnosti Microsoft"
   ai_microsoft_workshop_description: "Podněcujte představivost s bezplatnými dílnami STEM a programování."

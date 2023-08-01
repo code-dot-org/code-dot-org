@@ -2,554 +2,136 @@
   "da-DK": {
     "data": {
       "resources": {
-        "poem_art_celebration/poem-art/2021": {
-          "type": "Video"
-        },
-        "poem_art_events/poem-art/2021": {
-          "type": "Video"
-        },
-        "poem_art_imagery/poem-art/2021": {
-          "type": "Video"
-        },
-        "poem_art_introduction/poem-art/2021": {
-          "type": "Video"
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "type": "Video"
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "type": "Video"
-        },
-        "ai-ml/oceans/unversioned": {
-          "type": "Video"
-        },
-        "ai-societal/oceans/unversioned": {
-          "type": "Video"
-        },
-        "ai-training/oceans/unversioned": {
-          "type": "Video"
-        },
-        "implementation_guide/coursed/2022": {
-          "name": "Implementeringsvejledning"
-        },
-        "teacher_forum/coursed/2022": {
-          "name": "Teacher forum"
-        },
-        "graph_paper_programming/coursed/2022": {
-          "name": "Programmering på millimeterpapir"
-        },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "Programmering på millimeterpapir"
-        },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "Programmering på millimeterpapir"
-        },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "Programmering på millimeterpapir"
-        },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "Programmering på millimeterpapir"
-        },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "Programmering på millimeterpapir"
-        },
-        "pair_programming/coursed/2022": {
-          "name": "Par programmering"
-        },
-        "relay_programming/coursed/2022": {
-          "name": "Stafet-programmering"
-        },
-        "relay_programming_1/coursed/2022": {
-          "name": "Stafet-programmering"
-        },
-        "relay_programming_2/coursed/2022": {
-          "name": "Stafet-programmering"
-        },
-        "relay_programming_3/coursed/2022": {
-          "name": "Stafet-programmering"
-        },
-        "relay_programming_4/coursed/2022": {
-          "name": "Stafet-programmering"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "Stafet-programmering"
-        },
-        "pause_and_think_online/coursed/2022": {
-          "type": "Video"
-        },
-        "conditionals_with_cards/coursed/2022": {
-          "name": "Betingelser med kortspil"
-        },
-        "conditionals_with_cards_1/coursed/2022": {
-          "name": "Betingelser med kortspil"
-        },
-        "conditionals_with_cards_2/coursed/2022": {
-          "name": "Betingelser med kortspil"
-        },
-        "conditionals_with_cards_3/coursed/2022": {
-          "name": "Betingelser med kortspil"
-        },
-        "conditionals_with_cards_4/coursed/2022": {
-          "name": "Betingelser med kortspil"
-        },
-        "implementation_guide/coursef/2022": {
-          "name": "Implementeringsvejledning"
-        },
-        "teacher_forum/coursef/2022": {
-          "name": "Teacher forum"
-        },
-        "the_power_of_words_the_power_of_words/coursef/2022": {
-          "type": "Video"
-        },
-        "introducing_sprite_lab_1/coursef/2022": {
-          "type": "Video"
-        },
-        "ai_impact_on_society/coursef/2022": {
-          "type": "Video"
-        },
-        "ai_machine_learning/coursef/2022": {
-          "type": "Video"
-        },
-        "ai_training_data_bias/coursef/2022": {
-          "type": "Video"
-        },
-        "internet/coursef/2022": {
-          "name": "Internet"
-        },
-        "internet_1/coursef/2022": {
-          "name": "Internet"
-        },
-        "the_internet/coursef/2022": {
-          "name": "Internettet"
-        },
-        "implementation_guide/coursee/2022": {
-          "name": "Implementeringsvejledning"
-        },
-        "teacher_forum/coursee/2022": {
-          "name": "Teacher forum"
-        },
-        "pause_and_think_online/coursee/2022": {
-          "type": "Video"
-        },
-        "digital_sharing_ethics_video_/coursee/2022": {
-          "type": "Video"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "Implementeringsvejledning"
-        },
-        "teacher_forum/courseb/2022": {
-          "name": "Teacher forum"
-        },
-        "move_it_move_it/courseb/2022": {
-          "name": "Flyt det, flyt det"
-        },
-        "move_it_move_it_1/courseb/2022": {
-          "name": "Flyt det, flyt det"
-        },
-        "move_it_move_it_2/courseb/2022": {
-          "name": "Flyt det, flyt det"
-        },
-        "move_it_move_it_3/courseb/2022": {
-          "name": "Flyt det, Flyt det"
-        },
-        "pair_programming/courseb/2022": {
-          "name": "Par programmering"
-        },
-        "wiggles_-_gonoodle/courseb/2022": {
-          "type": "Video"
-        },
-        "unspotted_bugs/courseb/2022": {
-          "type": "Video"
-        },
-        "getting_loopy/courseb/2022": {
-          "name": "Blive Svimmel"
-        },
-        "getting_loopy_1/courseb/2022": {
-          "name": "Blive Svimmel"
-        },
-        "getting_loopy_2/courseb/2022": {
-          "name": "Blive Svimmel"
-        },
-        "getting_loopy_3/courseb/2022": {
-          "name": "Blive Svimmel"
-        },
-        "pause_and_think_online/courseb/2022": {
-          "type": "Video"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "Den store begivenhed"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "Den store begivenhed"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "Den store begivenhed"
-        },
-        "teacher_forum/express/2022": {
-          "name": "Teacher forum"
-        },
-        "pair_programming/express/2022": {
-          "name": "Par programmering",
-          "type": "Video"
-        },
-        "artist_introduction/express/2022": {
-          "type": "Video"
-        },
-        "turns_angles/express/2022": {
-          "type": "Video"
-        },
-        "pause_and_think_online/express/2022": {
-          "type": "Video"
-        },
-        "pair_programming_video/express/2022": {
-          "type": "Video"
-        },
-        "variables/express/2022": {
-          "name": "Variabler"
-        },
-        "teacher_forum/pre-express/2022": {
-          "name": "Teacher forum"
-        },
-        "20_20_20_rule/pre-express/2022": {
-          "type": "Video"
-        },
-        "pair_programming/pre-express/2022": {
-          "name": "Par programmering"
-        },
-        "wiggles_-_go_noodle/pre-express/2022": {
-          "type": "Video"
-        },
-        "pause_and_think_online/pre-express/2022": {
-          "type": "Video"
-        },
-        "implementation_guide/coursea/2022": {
-          "name": "Implementeringsvejledning"
-        },
-        "teacher_forum/coursea/2022": {
-          "name": "Teacher forum"
-        },
-        "getting_started_-_creating_a_class_section/coursea/2022": {
-          "type": "Video"
-        },
-        "pair_programming/coursea/2022": {
-          "name": "Par programmering"
-        },
-        "wiggles-go_noodle/coursea/2022": {
-          "type": "Video"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "Glade Kort"
-        },
-        "wiggles_-_gonoodle/coursea/2022": {
-          "type": "Video"
-        },
-        "debugging_with_the_step_button/coursea/2022": {
-          "type": "Video"
-        },
-        "pair-programming/coursea/2022": {
-          "type": "Video"
-        },
-        "pause_and_think_online/coursea/2022": {
-          "type": "Video"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "Den store begivenhed"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "Den store begivenhed"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "Den store begivenhed"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "Implementeringsvejledning"
-        },
-        "teacher_forum/coursec/2022": {
-          "name": "Teacher forum"
-        },
-        "my_robotic_friends/coursec/2022": {
-          "name": "Mine robot venner"
-        },
-        "my_robotic_friends_1/coursec/2022": {
-          "name": "Mine robot venner"
-        },
-        "my_robotic_friends_2/coursec/2022": {
-          "name": "Mine robot venner"
-        },
-        "my_robotic_friends_3/coursec/2022": {
-          "name": "Mine robot venner"
-        },
-        "my_robotic_friends_4/coursec/2022": {
-          "name": "Mine robot venner"
-        },
-        "pair_programming/coursec/2022": {
-          "name": "Par programmering",
-          "type": "Video"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "Den store begivenhed"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "Den store begivenhed"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "Den store begivenhed"
-        },
-        "pause_and_think_online/coursec/2022": {
-          "type": "Video"
-        },
-        "binary_bracelets/coursec/2022": {
-          "name": "Binære armbånd"
-        },
-        "binary_bracelets_1/coursec/2022": {
-          "name": "Binære armbånd"
-        },
-        "binary_bracelets_2/coursec/2022": {
-          "name": "Binære armbånd"
-        },
-        "binary_bracelets_3/coursec/2022": {
-          "name": "Binære armbånd"
-        },
-        "binary_bracelets_4/coursec/2022": {
-          "name": "Binære armbånd"
-        },
-        "teacher_forum/csd/2022": {
-          "name": "Teacher forum"
-        },
-        "binary_and_data/csd/2022": {
-          "type": "Video"
-        },
-        "amazon_and_data/csd/2022": {
-          "type": "Video"
-        },
-        "netflix_and_data/csd/2022": {
-          "type": "Video"
-        },
-        "waze_and_data/csd/2022": {
-          "type": "Video"
-        },
-        "video_impact_on_society/csd/2022": {
-          "type": "Video"
-        },
-        "video_machine_learning/csd/2022": {
-          "name": "Video: Maskinlæring",
-          "type": "Video"
-        },
-        "video_training_data_and_bias/csd/2022": {
-          "type": "Video"
-        },
-        "problem_solving_process_1/csd/2022": {
-          "type": "Video"
-        },
-        "what_is_a_computer/csd/2022": {
-          "type": "Video"
-        },
-        "what_do_computers_do/csd/2022": {
-          "type": "Video"
-        },
-        "drawing_in_game_lab_-_part_1/csd/2022": {
-          "type": "Video"
-        },
-        "drawing_in_game_lab_-_part_2/csd/2022": {
-          "type": "Video"
-        },
-        "introduction_to_variables/csd/2022": {
-          "type": "Video"
-        },
-        "variables/csd/2022": {
-          "name": "Variabler"
-        },
-        "variables_3/csd/2022": {
-          "name": "Variabler"
-        },
-        "introduction_to_sprites/csd/2022": {
-          "type": "Video"
-        },
-        "sprites/csd/2022": {
-          "name": "figure"
-        },
-        "the_animation_tab/csd/2022": {
-          "type": "Video"
-        },
-        "sprites_1/csd/2022": {
-          "name": "figure"
-        },
-        "text/csd/2022": {
-          "name": "Tekst"
-        },
-        "flipbook_example_-_by_marnic_bos/csd/2022": {
-          "type": "Video"
-        },
-        "introduction_to_the_draw_loop/csd/2022": {
-          "type": "Video"
-        },
-        "sprite_movement/csd/2022": {
-          "type": "Video"
-        },
-        "boolean_expressions/csd/2022": {
-          "type": "Video"
-        },
-        "conditional_statements/csd/2022": {
-          "type": "Video"
-        },
-        "conditionals/csd/2022": {
-          "name": "Betingelser"
-        },
-        "if_else_statements/csd/2022": {
-          "type": "Video"
-        },
-        "velocity/csd/2022": {
-          "type": "Video"
-        },
-        "functions/csd/2022": {
-          "name": "Funktioner",
-          "type": "Video"
-        },
-        "functions_1/csd/2022": {
-          "name": "Funktioner"
-        },
-        "functions_4/csd/2022": {
-          "name": "Funktioner"
-        },
-        "intro_to_web_lab_part_2/csd/2022": {
-          "type": "Video"
-        },
-        "video_intro_to_web_lab_part_1/csd/2022": {
-          "type": "Video"
-        },
-        "video_debugging/csd/2022": {
-          "type": "Video"
-        },
-        "video_pair_programming/csd/2022": {
-          "type": "Video"
-        },
-        "lists/csd/2022": {
-          "name": "Lister"
-        },
-        "intro_to_css_-_part_1/csd/2022": {
-          "type": "Video"
-        },
-        "intro_to_css_-_part_2/csd/2022": {
-          "type": "Video"
-        },
-        "creative_commons_overview/csd/2022": {
-          "type": "Video"
-        },
-        "publishing_your_website/csd/2022": {
-          "type": "Video"
-        },
-        "video_managing_disagreement/csd/2022": {
-          "type": "Video"
-        },
-        "video_teamwork/csd/2022": {
-          "type": "Video"
-        },
-        "video_how_search_works/csd/2022": {
-          "type": "Video"
-        },
-        "the_design_thinking_process/csd/2022": {
-          "type": "Video"
-        },
-        "design_mode/csd/2022": {
-          "name": "Designtilstand"
-        },
-        "what_s_for_lunch_testing/csd/2022": {
-          "type": "Video"
-        },
-        "intro_to_design_mode/csd/2022": {
-          "type": "Video"
-        },
-        "events_in_app_lab_1/csd/2022": {
-          "type": "Video"
-        },
-        "computer_science_is_changing_everything/csd/2022": {
-          "type": "Video"
-        },
-        "the_internet_of_things/csd/2022": {
-          "type": "Video"
-        },
-        "circuits_and_logic/csd/2022": {
-          "type": "Video"
-        },
-        "if_statements_2/csd/2022": {
-          "type": "Video"
-        },
-        "the_counter_pattern_1/csd/2022": {
-          "type": "Video"
-        },
-        "variables_1/csd/2022": {
-          "name": "Variabler"
-        },
-        "variables_2/csd/2022": {
-          "name": "Variabler",
-          "type": "Video"
-        },
-        "input_output_devices/csd/2022": {
-          "type": "Video"
-        },
-        "introduction_to_arrays/csd/2022": {
-          "type": "Video"
-        },
-        "functions_2/csd/2022": {
-          "name": "Funktioner"
-        },
-        "functions_3/csd/2022": {
-          "name": "Funktioner",
-          "type": "Video"
-        },
-        "functions_with_parameters/csd/2022": {
-          "name": "Funktioner med parametre",
-          "type": "Video"
-        },
-        "functions_5/csd/2022": {
-          "name": "Funktioner"
-        },
-        "ai_what_is_machine_learning_/csd/2022": {
-          "type": "Video"
-        },
-        "seeing_ai/csd/2022": {
-          "type": "Video"
-        },
-        "finding_patterns_in_data/csd/2022": {
-          "type": "Video"
-        },
-        "introduction_to_ai_lab_1/csd/2022": {
-          "type": "Video"
-        },
-        "training_and_testing_in_ai_lab/csd/2022": {
-          "type": "Video"
-        },
-        "ai_training_data_bias/csd/2022": {
-          "type": "Video"
-        },
-        "model_cards_in_ai_lab/csd/2022": {
-          "type": "Video"
-        },
-        "if-statements_in_app_lab/csd/2022": {
-          "type": "Video"
-        },
-        "numerical_data_in_ai_lab_2/csd/2022": {
-          "type": "Video"
-        },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
-          "type": "Video"
-        },
-        "creating_a_survey_in_google_forms/csd/2022": {
-          "type": "Video"
-        },
-        "cleaning_survey_data/csd/2022": {
-          "type": "Video"
-        },
-        "view_and_download_survey_data/csd/2022": {
-          "type": "Video"
-        },
-        "lesson_plans/courseb/2018": {
+        "lesson_plans/csd/2017": {
           "name": "Lektionsplaner"
         },
-        "teacher_forum/courseb/2018": {
+        "teacher_forum/csd/2017": {
           "name": "Teacher forum"
         },
-        "vocabulary/courseb/2018": {
+        "vocabulary/csd/2017": {
+          "name": "Ordforråd"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Kode introduceret"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Teacher forum"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Ordforråd"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Kode introduceret"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Teacher forum"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Ordforråd"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Kode introduceret"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Teacher forum"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Ordforråd"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Teacher forum"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Ordforråd"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Kode introduceret"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Teacher forum"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Ordforråd"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Teacher forum"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Ordforråd"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Kode introduceret"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Teacher forum"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Ordforråd"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Kode introduceret"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Teacher forum"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Ordforråd"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Kode introduceret"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Teacher forum"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Ordforråd"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Teacher forum"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Ordforråd"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Kode introduceret"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Teacher forum"
+        },
+        "vocabulary_5/csd/2018": {
           "name": "Ordforråd"
         },
         "lesson_plans/coursea/2018": {
@@ -561,6 +143,24 @@
         "vocabulary/coursea/2018": {
           "name": "Ordforråd"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Teacher forum"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Ordforråd"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Teacher forum"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Ordforråd"
+        },
         "lesson_plans/coursed/2018": {
           "name": "Lektionsplaner"
         },
@@ -568,6 +168,15 @@
           "name": "Teacher forum"
         },
         "vocabulary/coursed/2018": {
+          "name": "Ordforråd"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Teacher forum"
+        },
+        "vocabulary/coursee/2018": {
           "name": "Ordforråd"
         },
         "lesson_plans/coursef/2018": {
@@ -588,88 +197,55 @@
         "vocabulary/express/2018": {
           "name": "Ordforråd"
         },
-        "lesson_plans/coursee/2018": {
+        "lesson_plans/csd/2019": {
           "name": "Lektionsplaner"
         },
-        "teacher_forum/coursee/2018": {
+        "teacher_forum/csd/2019": {
           "name": "Teacher forum"
         },
-        "vocabulary/coursee/2018": {
+        "vocabulary/csd/2019": {
           "name": "Ordforråd"
         },
-        "lesson_plans/coursec/2018": {
-          "name": "Lektionsplaner"
-        },
-        "teacher_forum/coursec/2018": {
-          "name": "Teacher forum"
-        },
-        "vocabulary/coursec/2018": {
-          "name": "Ordforråd"
-        },
-        "code_introduced_1/csd/2018": {
+        "code_introduced/csd/2019": {
           "name": "Kode introduceret"
         },
-        "lesson_plans_2/csd/2018": {
+        "lesson_plans_1/csd/2019": {
           "name": "Lektionsplaner"
         },
-        "teacher_forum_2/csd/2018": {
-          "name": "Teacher forum"
-        },
-        "vocabulary_2/csd/2018": {
+        "vocabulary_1/csd/2019": {
           "name": "Ordforråd"
         },
-        "code_introduced_3/csd/2018": {
+        "code_introduced_1/csd/2019": {
           "name": "Kode introduceret"
         },
-        "lesson_plans_5/csd/2018": {
+        "lesson_plans_2/csd/2019": {
           "name": "Lektionsplaner"
         },
-        "teacher_forum_5/csd/2018": {
-          "name": "Teacher forum"
-        },
-        "vocabulary_5/csd/2018": {
+        "vocabulary_2/csd/2019": {
           "name": "Ordforråd"
         },
-        "lesson_plans_4/csd/2018": {
-          "name": "Lektionsplaner"
-        },
-        "teacher_forum_4/csd/2018": {
-          "name": "Teacher forum"
-        },
-        "vocabulary_4/csd/2018": {
-          "name": "Ordforråd"
-        },
-        "code_introduced_2/csd/2018": {
+        "code_introduced_2/csd/2019": {
           "name": "Kode introduceret"
         },
-        "lesson_plans_3/csd/2018": {
+        "lesson_plans_3/csd/2019": {
           "name": "Lektionsplaner"
         },
-        "teacher_forum_3/csd/2018": {
-          "name": "Teacher forum"
-        },
-        "vocabulary_3/csd/2018": {
+        "vocabulary_3/csd/2019": {
           "name": "Ordforråd"
         },
-        "code_introduced/csd/2018": {
+        "lesson_plans_4/csd/2019": {
+          "name": "Lektionsplaner"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Ordforråd"
+        },
+        "code_introduced_3/csd/2019": {
           "name": "Kode introduceret"
         },
-        "lesson_plans_1/csd/2018": {
+        "lesson_plans_5/csd/2019": {
           "name": "Lektionsplaner"
         },
-        "teacher_forum_1/csd/2018": {
-          "name": "Teacher forum"
-        },
-        "vocabulary_1/csd/2018": {
-          "name": "Ordforråd"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Lektionsplaner"
-        },
-        "teacher_forum/csd/2018": {
-          "name": "Teacher forum"
-        },
-        "vocabulary/csd/2018": {
+        "vocabulary_5/csd/2019": {
           "name": "Ordforråd"
         },
         "lesson_plans/coursea/2019": {
@@ -690,6 +266,15 @@
         "vocabulary/courseb/2019": {
           "name": "Ordforråd"
         },
+        "lesson_plans/coursec/2019": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Teacher forum"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Ordforråd"
+        },
         "lesson_plans/coursed/2019": {
           "name": "Lektionsplaner"
         },
@@ -697,15 +282,6 @@
           "name": "Teacher forum"
         },
         "vocabulary/coursed/2019": {
-          "name": "Ordforråd"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "Lektionsplaner"
-        },
-        "teacher_forum/coursef/2019": {
-          "name": "Teacher forum"
-        },
-        "vocabulary/coursef/2019": {
           "name": "Ordforråd"
         },
         "lesson_plans/coursee/2019": {
@@ -717,6 +293,15 @@
         "vocabulary/coursee/2019": {
           "name": "Ordforråd"
         },
+        "lesson_plans/coursef/2019": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Teacher forum"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Ordforråd"
+        },
         "lesson_plans/express/2019": {
           "name": "Lektionsplaner"
         },
@@ -726,184 +311,317 @@
         "vocabulary/express/2019": {
           "name": "Ordforråd"
         },
-        "lesson_plans/coursec/2019": {
+        "lesson_plans/coursea/2020": {
           "name": "Lektionsplaner"
         },
-        "teacher_forum/coursec/2019": {
+        "teacher_forum/coursea/2020": {
           "name": "Teacher forum"
         },
-        "vocabulary/coursec/2019": {
+        "vocabulary/coursea/2020": {
           "name": "Ordforråd"
         },
-        "teacher_forum/csd/2019": {
+        "lesson_plans/courseb/2020": {
+          "name": "Lektionsplaner"
+        },
+        "teacher_forum/courseb/2020": {
           "name": "Teacher forum"
         },
-        "code_introduced_1/csd/2019": {
-          "name": "Kode introduceret"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "Lektionsplaner"
-        },
-        "vocabulary_2/csd/2019": {
+        "vocabulary/courseb/2020": {
           "name": "Ordforråd"
         },
-        "code_introduced_3/csd/2019": {
-          "name": "Kode introduceret"
-        },
-        "lesson_plans_5/csd/2019": {
+        "lesson_plans/coursec/2020": {
           "name": "Lektionsplaner"
         },
-        "vocabulary_5/csd/2019": {
-          "name": "Ordforråd"
-        },
-        "code_introduced_2/csd/2019": {
-          "name": "Kode introduceret"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "Lektionsplaner"
-        },
-        "vocabulary_3/csd/2019": {
-          "name": "Ordforråd"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "Lektionsplaner"
-        },
-        "vocabulary_4/csd/2019": {
-          "name": "Ordforråd"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "Lektionsplaner"
-        },
-        "vocabulary/csd/2019": {
-          "name": "Ordforråd"
-        },
-        "code_introduced/csd/2019": {
-          "name": "Kode introduceret"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "Lektionsplaner"
-        },
-        "vocabulary_1/csd/2019": {
-          "name": "Ordforråd"
-        },
-        "code_introduced_1/csd/2017": {
-          "name": "Kode introduceret"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "Lektionsplaner"
-        },
-        "teacher_forum_2/csd/2017": {
+        "teacher_forum/coursec/2020": {
           "name": "Teacher forum"
         },
-        "vocabulary_2/csd/2017": {
+        "vocabulary/coursec/2020": {
           "name": "Ordforråd"
         },
-        "code_introduced_3/csd/2017": {
-          "name": "Kode introduceret"
-        },
-        "lesson_plans_5/csd/2017": {
+        "lesson_plans/coursed/2020": {
           "name": "Lektionsplaner"
         },
-        "teacher_forum_5/csd/2017": {
+        "teacher_forum/coursed/2020": {
           "name": "Teacher forum"
         },
-        "vocabulary_5/csd/2017": {
+        "vocabulary/coursed/2020": {
           "name": "Ordforråd"
         },
-        "code_introduced/csd/2017": {
-          "name": "Kode introduceret"
-        },
-        "lesson_plans_1/csd/2017": {
+        "lesson_plans/coursee/2020": {
           "name": "Lektionsplaner"
         },
-        "teacher_forum_1/csd/2017": {
+        "teacher_forum/coursee/2020": {
           "name": "Teacher forum"
         },
-        "vocabulary_1/csd/2017": {
+        "vocabulary/coursee/2020": {
           "name": "Ordforråd"
         },
-        "lesson_plans/csd/2017": {
+        "lesson_plans/coursef/2020": {
           "name": "Lektionsplaner"
         },
-        "teacher_forum/csd/2017": {
+        "teacher_forum/coursef/2020": {
           "name": "Teacher forum"
         },
-        "vocabulary/csd/2017": {
+        "vocabulary/coursef/2020": {
           "name": "Ordforråd"
         },
-        "lesson_plans_4/csd/2017": {
+        "lesson_plans/express/2020": {
           "name": "Lektionsplaner"
         },
-        "teacher_forum_4/csd/2017": {
+        "teacher_forum/express/2020": {
           "name": "Teacher forum"
         },
-        "vocabulary_4/csd/2017": {
+        "vocabulary/express/2020": {
           "name": "Ordforråd"
         },
-        "code_introduced_2/csd/2017": {
-          "name": "Kode introduceret"
-        },
-        "lesson_plans_3/csd/2017": {
+        "lesson_plans/pre-express/2020": {
           "name": "Lektionsplaner"
         },
-        "teacher_forum_3/csd/2017": {
+        "teacher_forum/pre-express/2020": {
           "name": "Teacher forum"
         },
-        "vocabulary_3/csd/2017": {
+        "vocabulary/pre-express/2020": {
           "name": "Ordforråd"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+        "teacher_forum/csd/2021": {
+          "name": "Teacher forum"
         },
-        "implementation_guide/coursef/2021": {
+        "problem-solving-process-1/csd/2021": {
+          "type": "Video"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "Video"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "Video"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2021": {
+          "type": "Video"
+        },
+        "video_debugging/csd/2021": {
+          "type": "Video"
+        },
+        "lists/csd/2021": {
+          "name": "Lister"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "Video"
+        },
+        "publishing_your_website/csd/2021": {
+          "type": "Video"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "Video"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "Video"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "Video"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Teacher forum"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "Video"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variabler"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "Video"
+        },
+        "the_animation_tab/csd/2021": {
+          "type": "Video"
+        },
+        "sprites_1/csd/2021": {
+          "name": "figure"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "Video"
+        },
+        "animating-sprites/csd/2021": {
+          "type": "Video"
+        },
+        "boolean_expressions/csd/2021": {
+          "type": "Video"
+        },
+        "conditional_statements/csd/2021": {
+          "type": "Video"
+        },
+        "if_else_statements/csd/2021": {
+          "type": "Video"
+        },
+        "velocity_1/csd/2021": {
+          "type": "Video"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funktioner",
+          "type": "Video"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funktioner"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "Video"
+        },
+        "design_mode/csd/2021": {
+          "name": "Designtilstand"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "Video"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Designtilstand"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "Video"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "Video"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "Video"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Maskinlæring",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "Video"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "Video"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "type": "Video"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "Video"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funktioner"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "type": "Video"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For Loops",
+          "type": "Video"
+        },
+        "for_loops/csd/2021": {
+          "name": "For Loops"
+        },
+        "circuits-logic-video/csd/2021": {
+          "type": "Video"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "Video"
+        },
+        "seeing_ai/csd/2021": {
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "implementation_guide/coursea/2021": {
           "name": "Implementeringsvejledning"
         },
-        "teacher_forum_1/coursef/2021": {
+        "teacher_forum_1/coursea/2021": {
           "name": "Teacher forum"
         },
-        "introducing_sprite_lab_1/coursef/2021": {
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Video"
         },
-        "the_power_of_words_the_power_of_words/coursef/2021": {
+        "pair-programming-vid/coursea/2021": {
+          "name": "Par programmering"
+        },
+        "wiggles-go_noodle/coursea/2021": {
           "type": "Video"
         },
-        "pause_and_think_online/coursef/2021": {
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Glade Kort"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
           "type": "Video"
         },
-        "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "For loop sjov"
-        },
-        "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "For loop sjov"
-        },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "For loop sjov"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "For loop sjov"
-        },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "For loop sjov"
-        },
-        "ai-ml/coursef/2021": {
+        "csf_debugging_k1_blocks/coursea/2021": {
           "type": "Video"
         },
-        "ai-societal/coursef/2021": {
+        "pair-programming/coursea/2021": {
           "type": "Video"
         },
-        "ai-training/coursef/2021": {
+        "common-sense-media-pause-think/coursea/2021": {
           "type": "Video"
         },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Internet"
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Den store begivenhed"
         },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "Internet"
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Den store begivenhed"
         },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "Internettet"
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Den store begivenhed"
         },
         "implementation_guide/courseb/2021": {
           "name": "Implementeringsvejledning"
@@ -956,45 +674,6 @@
         "unplugged-video-big-event/courseb/2021": {
           "name": "Den store begivenhed",
           "type": "Video"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "Implementeringsvejledning"
-        },
-        "teacher_forum_1/coursea/2021": {
-          "name": "Teacher forum"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "type": "Video"
-        },
-        "pair-programming-vid/coursea/2021": {
-          "name": "Par programmering"
-        },
-        "wiggles-go_noodle/coursea/2021": {
-          "type": "Video"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Glade Kort"
-        },
-        "wiggles_-_gonoodle/coursea/2021": {
-          "type": "Video"
-        },
-        "csf_debugging_k1_blocks/coursea/2021": {
-          "type": "Video"
-        },
-        "pair-programming/coursea/2021": {
-          "type": "Video"
-        },
-        "common-sense-media-pause-think/coursea/2021": {
-          "type": "Video"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "Den store begivenhed"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "Den store begivenhed"
-        },
-        "unplugged-video-big-event/coursea/2021": {
-          "name": "Den store begivenhed"
         },
         "implementation_guide/coursec/2021": {
           "name": "Implementeringsvejledning"
@@ -1114,6 +793,66 @@
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Betingelser med kortspil"
         },
+        "implementation_guide/coursee/2021": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "Teacher forum"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "type": "Video"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "type": "Video"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Teacher forum"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "type": "Video"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "Video"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "type": "Video"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "For loop sjov"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "For loop sjov"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "For loop sjov"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "For loop sjov"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "For loop sjov"
+        },
+        "ai-ml/coursef/2021": {
+          "type": "Video"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "Video"
+        },
+        "ai-training/coursef/2021": {
+          "type": "Video"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Internettet"
+        },
         "teacher_forum_1/express/2021": {
           "name": "Teacher forum"
         },
@@ -1151,290 +890,551 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "Video"
         },
-        "implementation_guide/coursee/2021": {
-          "name": "Implementeringsvejledning"
-        },
-        "teacher_forum_1/coursee/2021": {
+        "teacher_forum/csd/2022": {
           "name": "Teacher forum"
         },
-        "common-sense-media-pause-think/coursee/2021": {
+        "problem_solving_process_1/csd/2022": {
           "type": "Video"
         },
-        "digital-sharing-video/coursee/2021": {
+        "what_is_a_computer/csd/2022": {
           "type": "Video"
         },
-        "ai_what_is_machine_learning_/csd/2021": {
+        "what_do_computers_do/csd/2022": {
           "type": "Video"
         },
-        "seeing_ai/csd/2021": {
+        "intro_to_web_lab_part_2/csd/2022": {
           "type": "Video"
         },
-        "finding_patterns_in_data/csd/2021": {
+        "video_intro_to_web_lab_part_1/csd/2022": {
           "type": "Video"
         },
-        "introduction_to_ai_lab_1/csd/2021": {
+        "video_debugging/csd/2022": {
           "type": "Video"
         },
-        "training_and_testing_in_ai_lab/csd/2021": {
+        "video_pair_programming/csd/2022": {
           "type": "Video"
         },
-        "ai_training_data_bias/csd/2021": {
+        "lists/csd/2022": {
+          "name": "Lister"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
           "type": "Video"
         },
-        "model_cards_in_ai_lab/csd/2021": {
+        "intro_to_css_-_part_2/csd/2022": {
           "type": "Video"
         },
-        "if-statements_in_app_lab/csd/2021": {
+        "creative_commons_overview/csd/2022": {
           "type": "Video"
         },
-        "numerical_data_in_ai_lab_2/csd/2021": {
+        "publishing_your_website/csd/2022": {
           "type": "Video"
         },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+        "video_managing_disagreement/csd/2022": {
           "type": "Video"
         },
-        "cleaning_survey_data/csd/2021": {
+        "video_teamwork/csd/2022": {
           "type": "Video"
         },
-        "view_and_download_survey_data/csd/2021": {
+        "video_how_search_works/csd/2022": {
           "type": "Video"
         },
-        "teacher_forum/csd/2021": {
-          "name": "Teacher forum"
-        },
-        "the-design-thinking-process/csd/2021": {
+        "drawing_in_game_lab_-_part_1/csd/2022": {
           "type": "Video"
         },
-        "design_mode/csd/2021": {
-          "name": "Designtilstand"
-        },
-        "whats-for-lunch-testing/csd/2021": {
+        "drawing_in_game_lab_-_part_2/csd/2022": {
           "type": "Video"
         },
-        "intro_to_design_mode/csd/2021": {
+        "introduction_to_variables/csd/2022": {
           "type": "Video"
         },
-        "design_mode_1/csd/2021": {
-          "name": "Designtilstand"
-        },
-        "internet-of-things-video/csd/2021": {
-          "type": "Video"
-        },
-        "innovation-video-1-1/csd/2021": {
-          "type": "Video"
-        },
-        "how_computers_word_hardware_software/csd/2021": {
-          "type": "Video"
-        },
-        "analog-digital-video/csd/2021": {
-          "type": "Video"
-        },
-        "functions_2/csd/2021": {
-          "name": "Funktioner"
-        },
-        "introduction_to_arrays/csd/2021": {
-          "type": "Video"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "For Loops",
-          "type": "Video"
-        },
-        "for_loops/csd/2021": {
-          "name": "For Loops"
-        },
-        "circuits-logic-video/csd/2021": {
-          "type": "Video"
-        },
-        "how-computers-work-data-and-binary/csd/2021": {
-          "type": "Video"
-        },
-        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
-          "type": "Video"
-        },
-        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
-          "type": "Video"
-        },
-        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
-          "type": "Video"
-        },
-        "video_impact_on_society/csd/2021": {
-          "type": "Video"
-        },
-        "video_machine_learning/csd/2021": {
-          "name": "Video: Maskinlæring",
-          "type": "Video"
-        },
-        "video_training_data_and_bias/csd/2021": {
-          "type": "Video"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "Teacher forum"
-        },
-        "drawing_in_game_lab_-_part_1/csd/2021": {
-          "type": "Video"
-        },
-        "drawing_in_game_lab_-_part_2/csd/2021": {
-          "type": "Video"
-        },
-        "introduction-to-variables/csd/2021": {
-          "type": "Video"
-        },
-        "variables_1/csd/2021": {
+        "variables/csd/2022": {
           "name": "Variabler"
         },
-        "introduction_to_sprites/csd/2021": {
+        "variables_3/csd/2022": {
+          "name": "Variabler"
+        },
+        "introduction_to_sprites/csd/2022": {
           "type": "Video"
         },
-        "the_animation_tab/csd/2021": {
-          "type": "Video"
-        },
-        "sprites_1/csd/2021": {
+        "sprites/csd/2022": {
           "name": "figure"
         },
-        "youtube-flipbook/csd/2021": {
+        "the_animation_tab/csd/2022": {
           "type": "Video"
         },
-        "introduction_to_the_draw_loop/csd/2021": {
+        "sprites_1/csd/2022": {
+          "name": "figure"
+        },
+        "text/csd/2022": {
+          "name": "Tekst"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
           "type": "Video"
         },
-        "animating-sprites/csd/2021": {
+        "introduction_to_the_draw_loop/csd/2022": {
           "type": "Video"
         },
-        "boolean_expressions/csd/2021": {
+        "sprite_movement/csd/2022": {
           "type": "Video"
         },
-        "conditional_statements/csd/2021": {
+        "boolean_expressions/csd/2022": {
           "type": "Video"
         },
-        "if_else_statements/csd/2021": {
+        "conditional_statements/csd/2022": {
           "type": "Video"
         },
-        "velocity_1/csd/2021": {
+        "conditionals/csd/2022": {
+          "name": "Betingelser"
+        },
+        "if_else_statements/csd/2022": {
           "type": "Video"
         },
-        "calling_and_defining_functions/csd/2021": {
+        "velocity/csd/2022": {
+          "type": "Video"
+        },
+        "functions/csd/2022": {
           "name": "Funktioner",
           "type": "Video"
         },
-        "functions_1/csd/2021": {
+        "functions_1/csd/2022": {
           "name": "Funktioner"
         },
-        "problem-solving-process-1/csd/2021": {
+        "functions_4/csd/2022": {
+          "name": "Funktioner"
+        },
+        "the_design_thinking_process/csd/2022": {
           "type": "Video"
         },
-        "what-is-a-computer-1-2-3/csd/2021": {
+        "design_mode/csd/2022": {
+          "name": "Designtilstand"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
           "type": "Video"
         },
-        "what-do-computers-do/csd/2021": {
+        "intro_to_design_mode/csd/2022": {
           "type": "Video"
         },
-        "intro_to_web_lab_part_2/csd/2021": {
+        "events_in_app_lab_1/csd/2022": {
           "type": "Video"
         },
-        "video_intro_to_web_lab_part_1/csd/2021": {
+        "binary_and_data/csd/2022": {
           "type": "Video"
         },
-        "video_pair_programming/csd/2021": {
+        "amazon_and_data/csd/2022": {
           "type": "Video"
         },
-        "video_debugging/csd/2021": {
+        "netflix_and_data/csd/2022": {
           "type": "Video"
         },
-        "lists/csd/2021": {
-          "name": "Lister"
-        },
-        "intro_to_css_-_part_1/csd/2021": {
+        "waze_and_data/csd/2022": {
           "type": "Video"
         },
-        "intro_to_css_-_part_2/csd/2021": {
+        "video_impact_on_society/csd/2022": {
           "type": "Video"
         },
-        "creative-commons-video/csd/2021": {
+        "video_machine_learning/csd/2022": {
+          "name": "Video: Maskinlæring",
           "type": "Video"
         },
-        "publishing_your_website/csd/2021": {
+        "video_training_data_and_bias/csd/2022": {
           "type": "Video"
         },
-        "teamwork-dealing-with-disagreement/csd/2021": {
+        "computer_science_is_changing_everything/csd/2022": {
           "type": "Video"
         },
-        "how-teamwork-works/csd/2021": {
+        "the_internet_of_things/csd/2022": {
           "type": "Video"
         },
-        "how-search-works-video/csd/2021": {
+        "circuits_and_logic/csd/2022": {
           "type": "Video"
         },
-        "lesson_plans/pre-express/2020": {
-          "name": "Lektionsplaner"
+        "if_statements_2/csd/2022": {
+          "type": "Video"
         },
-        "teacher_forum/pre-express/2020": {
+        "the_counter_pattern_1/csd/2022": {
+          "type": "Video"
+        },
+        "variables_1/csd/2022": {
+          "name": "Variabler"
+        },
+        "variables_2/csd/2022": {
+          "name": "Variabler",
+          "type": "Video"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "type": "Video"
+        },
+        "functions_2/csd/2022": {
+          "name": "Funktioner"
+        },
+        "functions_3/csd/2022": {
+          "name": "Funktioner",
+          "type": "Video"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Funktioner med parametre",
+          "type": "Video"
+        },
+        "functions_5/csd/2022": {
+          "name": "Funktioner"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "type": "Video"
+        },
+        "seeing_ai/csd/2022": {
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "Video"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum/coursea/2022": {
           "name": "Teacher forum"
         },
-        "vocabulary/pre-express/2020": {
-          "name": "Ordforråd"
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Video"
         },
-        "lesson_plans/express/2020": {
-          "name": "Lektionsplaner"
+        "pair_programming/coursea/2022": {
+          "name": "Par programmering"
         },
-        "teacher_forum/express/2020": {
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Video"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Glade Kort"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Video"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Video"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Video"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Den store begivenhed"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Den store begivenhed"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Den store begivenhed"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum/courseb/2022": {
           "name": "Teacher forum"
         },
-        "vocabulary/express/2020": {
-          "name": "Ordforråd"
+        "move_it_move_it/courseb/2022": {
+          "name": "Flyt det, flyt det"
         },
-        "lesson_plans/courseb/2020": {
-          "name": "Lektionsplaner"
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Flyt det, flyt det"
         },
-        "teacher_forum/courseb/2020": {
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Flyt det, flyt det"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Flyt det, Flyt det"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Par programmering"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Video"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "type": "Video"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Blive Svimmel"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Blive Svimmel"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Blive Svimmel"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Blive Svimmel"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Video"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Den store begivenhed"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Den store begivenhed"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Den store begivenhed"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum/coursec/2022": {
           "name": "Teacher forum"
         },
-        "vocabulary/courseb/2020": {
-          "name": "Ordforråd"
+        "my_robotic_friends/coursec/2022": {
+          "name": "Mine robot venner"
         },
-        "lesson_plans/coursed/2020": {
-          "name": "Lektionsplaner"
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Mine robot venner"
         },
-        "teacher_forum/coursed/2020": {
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Mine robot venner"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Mine robot venner"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Mine robot venner"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Par programmering",
+          "type": "Video"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Den store begivenhed"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Den store begivenhed"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Den store begivenhed"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Video"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binære armbånd"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binære armbånd"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binære armbånd"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binære armbånd"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binære armbånd"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum/coursed/2022": {
           "name": "Teacher forum"
         },
-        "vocabulary/coursed/2020": {
-          "name": "Ordforråd"
+        "graph_paper_programming/coursed/2022": {
+          "name": "Programmering på millimeterpapir"
         },
-        "lesson_plans/coursec/2020": {
-          "name": "Lektionsplaner"
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Programmering på millimeterpapir"
         },
-        "teacher_forum/coursec/2020": {
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Par programmering"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Stafet-programmering"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Stafet-programmering"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Stafet-programmering"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Stafet-programmering"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Stafet-programmering"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Stafet-programmering"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Video"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Betingelser med kortspil"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Betingelser med kortspil"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Betingelser med kortspil"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Betingelser med kortspil"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Betingelser med kortspil"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum/coursee/2022": {
           "name": "Teacher forum"
         },
-        "vocabulary/coursec/2020": {
-          "name": "Ordforråd"
+        "pause_and_think_online/coursee/2022": {
+          "type": "Video"
         },
-        "lesson_plans/coursee/2020": {
-          "name": "Lektionsplaner"
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Video"
         },
-        "teacher_forum/coursee/2020": {
+        "implementation_guide/coursef/2022": {
+          "name": "Implementeringsvejledning"
+        },
+        "teacher_forum/coursef/2022": {
           "name": "Teacher forum"
         },
-        "vocabulary/coursee/2020": {
-          "name": "Ordforråd"
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Video"
         },
-        "lesson_plans/coursea/2020": {
-          "name": "Lektionsplaner"
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Video"
         },
-        "teacher_forum/coursea/2020": {
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Video"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Internettet"
+        },
+        "teacher_forum/express/2022": {
           "name": "Teacher forum"
         },
-        "vocabulary/coursea/2020": {
-          "name": "Ordforråd"
+        "pair_programming/express/2022": {
+          "name": "Par programmering",
+          "type": "Video"
         },
-        "lesson_plans/coursef/2020": {
-          "name": "Lektionsplaner"
+        "artist_introduction/express/2022": {
+          "type": "Video"
         },
-        "teacher_forum/coursef/2020": {
+        "turns_angles/express/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Video"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Video"
+        },
+        "variables/express/2022": {
+          "name": "Variabler"
+        },
+        "teacher_forum/pre-express/2022": {
           "name": "Teacher forum"
         },
-        "vocabulary/coursef/2020": {
-          "name": "Ordforråd"
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Video"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Par programmering"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Video"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "Video"
+        },
+        "ai-ml/oceans/unversioned": {
+          "type": "Video"
+        },
+        "ai-societal/oceans/unversioned": {
+          "type": "Video"
+        },
+        "ai-training/oceans/unversioned": {
+          "type": "Video"
+        },
+        "poem_art_celebration/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "type": "Video"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "Video"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         }
       }
     }

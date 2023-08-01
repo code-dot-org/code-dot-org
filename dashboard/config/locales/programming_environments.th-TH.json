@@ -2,14 +2,556 @@
   "th-TH": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "เว็บแลป"
+        "applab": {
+          "categories": {
+            "advanced": {
+              "name": "ก้าวหน้า"
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "รัศมีของวงกลมพิกเซล"
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "ตำแหน่ง x พิกเซลของมุมซ้ายบนของภาพที่จะวาด"
+                    },
+                    "x": {
+                      "description": "ตำแหน่ง x พิกเซลของมุมซ้ายบนของภาพที่จะวาด"
+                    },
+                    "y": {
+                      "description": "ตำแหน่ง y พิกเซลของมุมซ้ายบนของภาพที่จะวาด"
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    },
+                    "x": {
+                      "description": "ตำแหน่ง x พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    },
+                    "y": {
+                      "description": "ตำแหน่ง Y พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    }
+                  },
+                  "short_description": "ส่งกลับจำนวนของอัลฟา (ความทึบ) (ตั้งแต่ 0-255) ในสีของพิกเซลอยู่ที่กำหนด x และ y ตำแหน่งในข้อมูลภาพที่ได้รับ"
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    },
+                    "x": {
+                      "description": "ตำแหน่ง x พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    },
+                    "y": {
+                      "description": "ตำแหน่ง Y พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    },
+                    "x": {
+                      "description": "ตำแหน่ง x พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    },
+                    "y": {
+                      "description": "ตำแหน่ง Y พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "ความสูงของรูปสี่เหลี่ยมผืนผ้า bounding ในการจับข้อมูลภาพ"
+                    },
+                    "width": {
+                      "description": "ความกว้างของสี่เหลี่ยมผืนผ้า bounding ในการจับข้อมูลภาพ"
+                    },
+                    "x": {
+                      "description": "ตำแหน่ง x พิกเซลเพื่อเริ่มต้นการจับภาพ"
+                    },
+                    "y": {
+                      "description": "ตำแหน่ง Y พิกเซลเพื่อเริ่มต้นการจับภาพ"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    },
+                    "x": {
+                      "description": "ตำแหน่ง x พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    },
+                    "y": {
+                      "description": "ตำแหน่ง Y พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    },
+                    "x": {
+                      "description": "ตำแหน่ง x พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพที่จะวางข้อมูลบนผืนผ้าใบ"
+                    },
+                    "y": {
+                      "description": "ตำแหน่ง Y พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพที่จะวางข้อมูลบนผืนผ้าใบ"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "ความสูงในแนวตั้งพิกเซลของสี่เหลี่ยมผืนผ้า"
+                    },
+                    "width": {
+                      "description": "ความกว้างในแนวนอนพิกเซลของสี่เหลี่ยมผืนผ้า"
+                    },
+                    "x": {
+                      "description": "ตำแหน่ง x พิกเซลของมุมซ้ายบนของรูปสี่เหลี่ยมผืนผ้า"
+                    },
+                    "y": {
+                      "description": "ตำแหน่ง Y พิกเซลของมุมซ้ายบนของรูปสี่เหลี่ยมผืนผ้า"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "ปริมาณของอัลฟา (ความทึบ) (0-255) ที่จะตั้งอยู่ในพิกเซล"
+                    },
+                    "imageData": {
+                      "type": "วัตถุ"
+                    },
+                    "x": {
+                      "description": "ตำแหน่ง x พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    },
+                    "y": {
+                      "description": "ตำแหน่ง Y พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    }
+                  },
+                  "short_description": "กำหนดปริมาณของอัลฟา (ความทึบ) (ตั้งแต่ 0-255) ในสีของพิกเซลอยู่ที่กำหนด x และ y ตำแหน่งในข้อมูลภาพที่ได้รับ"
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "ปริมาณของสีฟ้า (0-255) ที่จะตั้งอยู่ในพิกเซล"
+                    },
+                    "imageData": {
+                      "type": "วัตถุ"
+                    },
+                    "x": {
+                      "description": "ตำแหน่ง x พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    },
+                    "y": {
+                      "description": "ตำแหน่ง Y พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    }
+                  },
+                  "short_description": "กำหนดปริมาณของสีฟ้า (ตั้งแต่ 0-255) ในสีของพิกเซลอยู่ที่รับ x และ y ตำแหน่งในข้อมูลภาพที่กำหนดให้กับจำนวนเงินที่ป้อนข้อมูล BlueValue"
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "ปริมาณของสีเขียว (0-255) ที่จะตั้งอยู่ในพิกเซล"
+                    },
+                    "imageData": {
+                      "type": "วัตถุ"
+                    },
+                    "x": {
+                      "description": "ตำแหน่ง x พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    },
+                    "y": {
+                      "description": "ตำแหน่ง Y พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    }
+                  },
+                  "short_description": "กำหนดปริมาณของสีเขียว (ตั้งแต่ 0-255) ในสีของพิกเซลอยู่ที่รับ x และ y ตำแหน่งในข้อมูลภาพที่กำหนดจำนวนเงินที่ป้อนเข้า greenValue"
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "ไม่จำเป็นปริมาณของความทึบ (0-255) เพื่อตั้งอยู่ในพิกเซลเริ่มต้นที่ 255 (ทึบเต็ม)"
+                    },
+                    "blue": {
+                      "description": "ปริมาณของสีฟ้า (0-255) ที่จะตั้งอยู่ในพิกเซล"
+                    },
+                    "green": {
+                      "description": "ปริมาณของสีเขียว (0-255) ที่จะตั้งอยู่ในพิกเซล"
+                    },
+                    "imageData": {
+                      "type": "วัตถุ"
+                    },
+                    "red": {
+                      "description": "จำนวนของสีแดง (0-255) ที่จะตั้งอยู่ในพิกเซล"
+                    },
+                    "x": {
+                      "description": "ตำแหน่ง x พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    },
+                    "y": {
+                      "description": "ตำแหน่ง Y พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "วัตถุ"
+                    },
+                    "redValue": {
+                      "description": "จำนวนของสีแดง (0-255) ที่จะตั้งอยู่ในพิกเซล"
+                    },
+                    "x": {
+                      "description": "ตำแหน่ง x พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    },
+                    "y": {
+                      "description": "ตำแหน่ง Y พิกเซลเริ่มต้นจากมุมซ้ายบนของภาพ"
+                    }
+                  },
+                  "short_description": "กำหนดปริมาณของสีแดง (ตั้งแต่ 0-255) ในสีของพิกเซลอยู่ที่รับ x และ y ตำแหน่งในข้อมูลภาพที่กำหนดจำนวนเงินที่ป้อนข้อมูล RedValue"
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "ค่าส่งกลับโดยฟังก์ชั่น setTimeout เพื่อยกเลิก"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "จำนวนมิลลิวินาทีระหว่างการดำเนินการของฟังก์ชั่นแต่ละ"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "จำนวนมิลลิวินาทีที่จะรอก่อนที่จะดำเนินการฟังก์ชั่น"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ฟังก์ชัน"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "วัตถุ"
+                    },
+                    "tableName": {
+                      "description": "ชื่อของตารางเพื่อเรียกระเบียนจาก"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "ชื่อของคีย์ที่จะดึง"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ฟังก์ชัน"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "ได้รับการระบุที่ไม่ซ้ำกันสำหรับผู้ใช้ปัจจุบันของ app นี้"
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "ชื่อของตารางที่จัดการเหตุการณ์นี้นำไปใช้"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "ชื่อของคีย์ที่จะเก็บไว้"
+                    },
+                    "value": {
+                      "description": "ข้อมูลที่จะเก็บไว้"
+                    }
+                  },
+                  "short_description": "เก็บคู่คีย์/ค่าในการจัดเก็บข้อมูลที่สำคัญ/ค่า App Lab และเรียกฟังก์ชันการเรียกกลับเมื่อการดำเนินการเสร็จสิ้น"
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "ที่อยู่เว็บของบริการที่ส่งกลับข้อมูล"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "วัตถุ"
+                    }
+                  }
+                }
+              },
+              "name": "ข้อมูล"
+            },
+            "functions": {
+              "name": "ฟังก์ชัน"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "ตัวเลขที่มากที่สุดที่ส่งกลับมา"
+                    },
+                    "min": {
+                      "description": "ตัวเลขที่น้อยที่สุดที่ส่งกลับมา"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "ตัวเลขที่มากที่สุดที่ส่งกลับมา"
+                    },
+                    "min": {
+                      "description": "ตัวเลขที่น้อยที่สุดที่ส่งกลับมา"
+                    }
+                  }
+                }
+              },
+              "name": "คณิตศาสตร์"
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "เลื่อนเต่าไปข้างหน้าและไปทางซ้ายในโค้งวงกลมเรียบ"
+                },
+                "getX": {
+                  "short_description": "ได้รับ x ปัจจุบันพิกัดพิกเซลของเต่า"
+                },
+                "getY": {
+                  "short_description": "ได้รับ y ปัจจุบันพิกัดพิกเซลของเต่า"
+                },
+                "hide": {
+                  "short_description": "ทำให้เต่ามองไม่เห็นที่ตำแหน่งปัจจุบัน"
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "จำนวนพิกเซลที่จะย้ายไปทางขวาเต่า"
+                    },
+                    "y": {
+                      "description": "จำนวนพิกเซลที่จะย้ายเต่าลง"
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "ย้ายเต่าถอยหลังจำนวนที่กำหนดของพิกเซลจากทิศทางปัจจุบัน"
+                },
+                "moveForward": {
+                  "short_description": "ย้ายเต่าไปข้างหน้าจำนวนที่กำหนดของพิกเซลในทิศทางปัจจุบัน"
+                },
+                "moveTo": {
+                  "short_description": "ย้ายเต่าไปยังตำแหน่งเฉพาะ (x, y) บนหน้าจอ"
+                },
+                "penColor": {
+                  "short_description": "ตั้งค่าสีของปากกาที่ใช้โดยเต่าสำหรับการวาดเส้นและจุด"
+                },
+                "penDown": {
+                  "short_description": "วางปากกาลงเพื่อให้เต่าลากเส้นข้างหลังขณะที่มันเคลื่อนที่"
+                },
+                "penRGB": {
+                  "short_description": "ใช้ค่า RGBA กำหนดสีของปากกาที่ใช้โดยเต่าสำหรับการวาดเส้นและจุด"
+                },
+                "penUp": {
+                  "short_description": "หยิบปากกาขึ้นเพื่อให้เต่าไม่ได้วาดเส้นขณะที่มันเคลื่อนที่"
+                },
+                "penWidth": {
+                  "short_description": "กำหนดความกว้างของเส้นพิกเซลที่เต่าดึงอยู่เบื้องหลังมันเป็นมันย้าย"
+                },
+                "show": {
+                  "short_description": "ทำให้เต่าสามารถมองเห็นได้ในตำแหน่งปัจจุบัน"
+                },
+                "speed": {
+                  "short_description": "ตั้งค่าความเร็วสำหรับการดำเนินการของแอปซึ่งรวมถึงความเร็วของเต่า"
+                },
+                "turnLeft": {
+                  "short_description": "หมุนเต่าซ้ายตามมุมที่ระบุตำแหน่งของเต่ายังคงเหมือนเดิม"
+                },
+                "turnRight": {
+                  "short_description": "หมุนเต่าขวาตามมุมที่ระบุตำแหน่งของเต่ายังคงเหมือนเดิม"
+                },
+                "turnTo": {
+                  "short_description": "เปลี่ยนทิศทางของเต่าเป็นมุมเฉพาะ 0 ขึ้น, 90 เป็นขวา, 180 อยู่ลง, เหลือ 270"
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "สร้างปุ่มบนหน้าจอแสดงข้อความที่มีให้และอ้างอิงโดย ID ที่กำหนดในสถานที่เริ่มต้น (0,0)"
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "หดตัวและขยายตัว"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "ฟังก์ชัน"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "เล่นไฟล์เสียง MP3 จาก URL ที่กำหนด"
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "สถานที่ให้บริการที่จะเปลี่ยนแปลง"
+                    }
+                  },
+                  "short_description": "ตั้งค่าคุณสมบัติเป็นค่าใหม่สำหรับองค์ประกอบที่ระบุ"
+                },
+                "setScreen": {
+                  "short_description": "ชุดหน้าจอเพื่อ ScreenID ที่กำหนด"
+                },
+                "showElement": {
+                  "short_description": "แสดงให้เห็นถึงองค์ประกอบที่มี ID ที่จัดไว้ให้"
+                },
+                "textLabel": {
+                  "short_description": "สร้างป้ายข้อความบนหน้าจอแสดงข้อความที่มีให้และอ้างอิงโดย ID ที่กำหนดในสถานที่เริ่มต้น (0,0)"
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "ไม่มี"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "ประกาศและกำหนดอาร์เรย์ให้กับตัวแปร"
+                },
+                "declareAssign_x": {
+                  "short_description": "ประกาศและกำหนดค่าเริ่มต้นให้กับตัวแปร"
+                },
+                "declareNoAssign_x": {
+                  "short_description": "ประกาศตัวแปรด้วยชื่อที่กำหนด"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "สตริงเพื่อค้นหา"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "สตริงเพื่อค้นหา"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "ความยาวของสตริง"
+                }
+              },
+              "name": "ตัวแปร"
+            }
+          },
+          "description": "App Lab เป็นสภาพแวดล้อมการเขียนโปรแกรมที่คุณสามารถทำให้ปพลิเคชันที่เรียบง่ายออกแบบแอป โค้ดด้วยบล็อก หรือ JavaScript เพื่อให้ทำงานได้ จากนั้นแชร์แอปของคุณในไม่กี่วินาที",
+          "name": "แอ๊ปแล็บ"
         },
         "gamelab": {
-          "name": "เกมแล๊บ (Game Lab)",
           "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "จำนวนมิลลิวินาทีระหว่างการดำเนินการของฟังก์ชั่นแต่ละ"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "จำนวนมิลลิวินาทีที่จะรอก่อนที่จะดำเนินการฟังก์ชั่น"
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "สตาร์"
+                    }
+                  }
+                }
+              },
+              "name": "การวาด"
+            },
+            "functions": {
+              "name": "ฟังก์ชัน"
+            },
             "game_lab": {
-              "name": "เกมแล๊บ (Game Lab)",
               "expressions": {
                 "mouseIsOver": {
                   "palette_params": {
@@ -34,22 +576,15 @@
                 },
                 "playSound": {
                   "short_description": "เล่นไฟล์เสียง MP3 จาก URL ที่กำหนด"
+                },
+                "showMobileControls": {
+                  "content": "เปลี่ยนการควบคุมมือถือที่มองเห็นได้ใต้พื้นที่เล่น",
+                  "short_description": "เปลี่ยนการควบคุมมือถือที่มองเห็นได้ใต้พื้นที่เล่น"
                 }
-              }
-            },
-            "sprites": {
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "วงก้นหอย"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "เกมแล๊บ (Game Lab)"
             },
             "groups": {
-              "name": "กลุ่ม",
               "expressions": {
                 "add": {
                   "palette_params": {
@@ -86,314 +621,130 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "name": "การวาด",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "สตาร์"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "กลุ่ม"
             },
             "math": {
-              "name": "คณิตศาสตร์",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "ตัวเลขที่น้อยที่สุดที่ส่งกลับมา"
-                    },
                     "max": {
                       "description": "ตัวเลขที่มากที่สุดที่ส่งกลับมา"
+                    },
+                    "min": {
+                      "description": "ตัวเลขที่น้อยที่สุดที่ส่งกลับมา"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "ตัวเลขที่น้อยที่สุดที่ส่งกลับมา"
-                    },
                     "max": {
                       "description": "ตัวเลขที่มากที่สุดที่ส่งกลับมา"
+                    },
+                    "min": {
+                      "description": "ตัวเลขที่น้อยที่สุดที่ส่งกลับมา"
                     }
                   }
+                }
+              },
+              "name": "คณิตศาสตร์"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "วงก้นหอย"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "ความสูงของสไปรท์"
+                },
+                "sprite.width": {
+                  "return_value": "ความกว้างของเทพดาที่"
                 }
               }
             },
             "variables": {
-              "name": "ตัวแปร",
               "expressions": {
                 "assign_x": {
                   "short_description": "กำหนดค่าให้กับตัวแปรที่ประกาศไว้ก่อนหน้านี้"
                 },
+                "declareAssign_x": {
+                  "short_description": "ประกาศและกำหนดค่าเริ่มต้นให้กับตัวแปร"
+                },
                 "declareNoAssign_x": {
                   "short_description": "ประกาศตัวแปรด้วยชื่อที่กำหนด"
                 },
-                "declareAssign_x": {
-                  "short_description": "ประกาศและกำหนดค่าเริ่มต้นให้กับตัวแปร"
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "สตริงเพื่อค้นหา"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "สตริงเพื่อค้นหา"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "ความยาวของสตริง"
                 }
-              }
-            },
-            "functions": {
-              "name": "ฟังก์ชัน"
+              },
+              "name": "ตัวแปร"
             }
-          }
+          },
+          "name": "เกมแล๊บ (Game Lab)"
         },
-        "applab": {
-          "name": "แอ๊ปแล็บ",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "หดตัวและขยายตัว"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "ฟังก์ชัน"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "เล่นไฟล์เสียง MP3 จาก URL ที่กำหนด"
-                }
-              }
-            },
-            "canvas": {
-              "expressions": {
-                "getAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                },
-                "getBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                },
-                "getGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                },
-                "getRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                },
-                "putImageData": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                },
-                "setAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                },
-                "setBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                },
-                "setGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                },
-                "setRGB": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                },
-                "setRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "name": "ข้อมูล",
-              "expressions": {
-                "createRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                },
-                "deleteRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                },
-                "drawChart": {
-                  "palette_params": {
-                    "options": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                },
-                "drawChartFromRecords": {
-                  "palette_params": {
-                    "options": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                },
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "ฟังก์ชัน"
-                    }
-                  }
-                },
-                "readRecords": {
-                  "palette_params": {
-                    "terms": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                },
-                "updateRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "วัตถุ"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "ฟังก์ชัน"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "คณิตศาสตร์",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "ตัวเลขที่น้อยที่สุดที่ส่งกลับมา"
-                    },
-                    "max": {
-                      "description": "ตัวเลขที่มากที่สุดที่ส่งกลับมา"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "ตัวเลขที่น้อยที่สุดที่ส่งกลับมา"
-                    },
-                    "max": {
-                      "description": "ตัวเลขที่มากที่สุดที่ส่งกลับมา"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "ตัวแปร",
-              "expressions": {
-                "declareNoAssign_x": {
-                  "short_description": "ประกาศตัวแปรด้วยชื่อที่กำหนด"
-                },
-                "declareAssign_x": {
-                  "short_description": "ประกาศและกำหนดค่าเริ่มต้นให้กับตัวแปร"
-                },
-                "addPair": {
-                  "return_value": "ไม่มี"
-                }
-              }
-            },
-            "functions": {
-              "name": "ฟังก์ชัน"
-            },
-            "advanced": {
-              "name": "ก้าวหน้า"
-            }
-          }
+        "javalab": {
+          "name": "จาวาแลป"
         },
         "spritelab": {
           "categories": {
-            "world": {
-              "name": "โลก"
-            },
-            "location": {
-              "name": "สถานที่ตั้ง"
-            },
             "actions": {
               "name": "การดำเนินการ"
-            },
-            "events": {
-              "name": "เหตุการณ์"
             },
             "behaviors": {
               "name": "พฤติกรรม"
             },
-            "loops": {
-              "name": "ลูป"
+            "comments": {
+              "name": "หมายเหตุ (Comment)"
             },
-            "variables": {
-              "name": "ตัวแปร"
-            },
-            "math": {
-              "name": "คณิตศาสตร์"
-            },
-            "logic": {
-              "name": "ตรรกะ"
+            "events": {
+              "name": "เหตุการณ์"
             },
             "functions": {
               "name": "ฟังก์ชัน"
             },
+            "location": {
+              "name": "สถานที่ตั้ง"
+            },
+            "logic": {
+              "name": "ตรรกะ"
+            },
+            "loops": {
+              "name": "ลูป"
+            },
+            "math": {
+              "name": "คณิตศาสตร์"
+            },
             "text": {
               "name": "ข้อความ"
             },
-            "comments": {
-              "name": "หมายเหตุ (Comment)"
+            "variables": {
+              "name": "ตัวแปร"
+            },
+            "world": {
+              "name": "โลก"
             }
           }
         },
-        "javalab": {
-          "name": "จาวาแลป"
+        "weblab": {
+          "name": "เว็บแลป"
         }
       }
     }

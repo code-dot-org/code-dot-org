@@ -2,44 +2,6 @@
   "ne-NP": {
     "data": {
       "placeholder_texts": {
-        "CourseE_hoops": {
-          "498cd895eb5a102c5aeb977e2b928dee": "तपाईँलाई धन्यवाद!"
-        },
-        "courseE_Dogger_2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "You win!"
-        },
-        "courseE_aboutme_3": {
-          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
-        },
-        "courseE_aboutme_3_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
-        },
-        "courseE_aboutme_4": {
-          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
-        },
-        "courseE_aboutme_4_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
-        },
-        "courseE_aboutme_5": {
-          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
-        },
-        "courseE_aboutme_5_2020": {
-          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
-        },
-        "courseF_playlab_variables2b": {
-          "48d6215903dff56238e52e8891380c8f": "निलो",
-          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
-        },
-        "courseF_playlab_variables5c": {
-          "bda9643ac6601722a28f238714274da4": "रातो",
-          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
-        },
-        "courseF_project_1": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "You win!",
-          "498cd895eb5a102c5aeb977e2b928dee": "तपाईँलाई धन्यवाद!"
-        },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
@@ -56,9 +18,12 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
+        "CourseE_hoops": {
+          "498cd895eb5a102c5aeb977e2b928dee": "तपाईँलाई धन्यवाद!"
+        },
         "Find the Wizard": {
-          "0b895ef4c917e50663bc2a7327cbee3d": "तिमीले मलाई भेटायो",
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+          "0b895ef4c917e50663bc2a7327cbee3d": "तिमीले मलाई भेटायो",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
         "FoodFight": {
@@ -70,6 +35,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
         "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+        },
+        "New Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
@@ -97,7 +66,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
+        "courseC19_playLab_EOC12022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+        },
         "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+        },
+        "courseC19_playLab_EOC1_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
@@ -105,7 +82,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
+        "courseC19_playLab_EOC22022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+        },
         "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+        },
+        "courseC19_playLab_EOC2_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
@@ -113,7 +98,15 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
+        "courseC19_playLab_EOC32022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+        },
         "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+        },
+        "courseC19_playLab_EOC3_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
@@ -121,11 +114,23 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
+        "courseC19_playLab_EOC42022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+        },
         "courseC19_playLab_EOC4_2020": {
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+        },
         "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+        },
+        "courseC_PlayLab_eventsFP2022": {
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
@@ -141,9 +146,52 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+        },
         "courseD_playLab_condFP": {
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "You win!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
+        },
+        "courseE_aboutme_32022": {
+          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
+        },
+        "courseE_aboutme_42022": {
+          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
+        },
+        "courseE_aboutme_52022": {
+          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
         },
         "courseE_playLab_scaffold1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
@@ -161,9 +209,23 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
+        "courseF_apps_collector": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "You win!"
+        },
+        "courseF_apps_collector2022": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "You win!"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "You win!"
+        },
         "courseF_playlab_variables1a": {
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+        },
+        "courseF_playlab_variables2b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+          "30fcc1693fa8402931d13ac3a5f396fd": "type title here",
+          "48d6215903dff56238e52e8891380c8f": "निलो"
         },
         "courseF_playlab_variables3b_josh": {
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
@@ -176,6 +238,11 @@
         "courseF_playlab_variables4c_predictive1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
+        },
+        "courseF_playlab_variables5c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
+          "30fcc1693fa8402931d13ac3a5f396fd": "type title here",
+          "bda9643ac6601722a28f238714274da4": "रातो"
         },
         "courseF_playlab_variables6c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
@@ -197,80 +264,13 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
         },
+        "courseF_project_1": {
+          "498cd895eb5a102c5aeb977e2b928dee": "तपाईँलाई धन्यवाद!",
+          "e8a10c04d72b2f135dabe360c4bdd534": "You win!"
+        },
         "iceage_free_play": {
           "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
           "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
-        },
-        "courseC19_playLab_EOC1_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
-        },
-        "courseC19_playLab_EOC2_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
-        },
-        "courseC19_playLab_EOC4_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
-        },
-        "courseC_PlayLab_eventsFP_2021": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
-        },
-        "courseE_aboutme_3_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
-        },
-        "courseE_aboutme_4_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
-        },
-        "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
-        },
-        "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "You win!"
-        },
-        "New Play Lab Project": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
-        },
-        "courseC19_playLab_EOC12022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
-        },
-        "courseC19_playLab_EOC22022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
-        },
-        "courseC19_playLab_EOC32022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
-        },
-        "courseC19_playLab_EOC42022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
-        },
-        "courseC_PlayLab_eventsFP2022": {
-          "0ab65920c84bec05a22e09feea7fe4ea": "type text here",
-          "30fcc1693fa8402931d13ac3a5f396fd": "type title here"
-        },
-        "courseF_apps_collector2022": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "You win!"
-        },
-        "courseF_apps_collector_-2022-2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "You win!"
-        },
-        "courseE_aboutme_32022": {
-          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
-        },
-        "courseE_aboutme_42022": {
-          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
-        },
-        "courseE_aboutme_52022": {
-          "ed076287532e86365e841e92bfc50d8c": "हेल्लो विश्व !"
         }
       }
     }

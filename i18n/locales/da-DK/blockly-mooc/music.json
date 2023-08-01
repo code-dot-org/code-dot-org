@@ -11,5 +11,8 @@
   "blockly_toolboxCategoryMath": "Matematik",
   "blockly_toolboxCategoryVariables": "Variabler",
   "share": "Del",
-  "startOver": "Start forfra"
+  "startOver": "Start forfra",
+  "panelHeaderInstructions": "Instruktioner",
+  "panelHeaderWorkspace": "Arbejdsområde: ",
+  "continue": "Fortsæt"
 }

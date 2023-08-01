@@ -1,5 +1,7 @@
 {
+  "genericBonusSuccess": "Punë e shkëlqyeshme! Ju keni përfunduar nivelin, duke përfshirë sfidën shtesë!",
   "makeBackground": "Ju duhet të shtonji një efekt në sfond.",
+  "reinfFeedbackMsg": "Ju keni mbaruar! Kliko “Vazhdo” për të kaluar në nivelin e ardhshëm.",
   "save": "Ruaj",
   "shareGame": "Shpërndaj lojën tënde:"
 }

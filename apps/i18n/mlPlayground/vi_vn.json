@@ -1,115 +1,24 @@
 {
-  "navigateForward": "Tiếp tục",
-  "navigateBack": "Trở lại",
-  "tryAgain": "Thử lại",
-  "navigateDone": "Hoàn Thành",
-  "saveProgress": "Lưu",
-  "correctAnswer": "Chính xác",
-  "incorrectAnswer": "Không chính xác",
-  "modelCardPossibleValuesMinimum": "nhỏ nhất",
-  "modelCardPossibleValuesMaximum": "lớn nhất",
-  "columnInspectorDescription": "Mô tả",
-  "columnDetailsMinimumValue": "nhỏ nhất",
   "columnDetailsMaximumValue": "lớn nhất",
+  "columnDetailsMinimumValue": "nhỏ nhất",
+  "columnInspectorDescription": "Mô tả",
+  "correctAnswer": "Chính xác",
   "dataCardLastUpdated": "Cập nhật lần cuối",
-  "predictButton": "Dự đoán",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "tuổi"
+        "Height": {
+          "id": "Chiều cao"
+        },
+        "Length": {
+          "id": "Độ dài"
         }
       }
     },
-    "shoe_survey_toy": {
+    "bike_sharing": {
       "fields": {
-        "weather": {
-          "id": "thời tiết"
-        },
-        "day": {
-          "id": "ngày"
-        },
-        "shoe": {
-          "id": "giày"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "quả bơ"
-        },
-        "corn": {
-          "id": "ngô"
-        },
-        "beans": {
-          "id": "những hạt đậu"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "thịt xông khói\n"
-        },
-        "cheese": {
-          "id": "phô mai"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "màu sắc"
-        },
-        "food": {
-          "id": "thức ăn"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "tuổi"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Danh mục"
-        },
-        "Description": {
-          "id": "Mô tả"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "các cạnh"
-        },
-        "size": {
-          "id": "kích cỡ"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "cà chua"
-        },
-        "avocado": {
-          "id": "quả bơ"
-        },
-        "chicken": {
-          "id": "con gà"
-        },
-        "beans": {
-          "id": "những hạt đậu"
-        },
-        "cheese": {
-          "id": "phô mai"
+        "Month": {
+          "id": "Tháng"
         }
       }
     },
@@ -123,30 +32,41 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "age": {
-          "id": "tuổi"
-        },
-        "health": {
-          "id": "sức khỏe"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "con gà"
-        },
-        "lamb": {
-          "id": "cừu"
-        },
-        "cheese": {
-          "id": "phô mai"
+        "banana": {
+          "id": "chuối"
         }
       }
     },
     "census_part": {
+      "fields": {
+        "age": {
+          "id": "tuổi"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "màu sắc"
+        },
+        "food": {
+          "id": "thức ăn"
+        },
+        "music": {
+          "id": "Âm nhạc"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Tuổi"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "tuổi"
@@ -163,54 +83,65 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Quốc gia"
+        },
+        "Dance": {
+          "id": "Khiêu vũ"
+        },
+        "Music": {
+          "id": "Âm nhạc"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "tuổi"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Điểm số"
-        },
         "Country": {
           "id": "Quốc gia"
         },
         "Name": {
           "id": "Tên"
         },
+        "Score": {
+          "id": "Điểm số"
+        },
         "Star": {
           "id": "Ngôi sao"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Họa sĩ"
+        "cheese": {
+          "id": "phô mai"
+        },
+        "chicken": {
+          "id": "con gà"
+        },
+        "lamb": {
+          "id": "cừu"
+        },
+        "onion": {
+          "id": "củ hành"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "elephant": {
-          "id": "voi"
+        "Category": {
+          "id": "Danh mục"
         },
-        "alligator": {
-          "id": "cá sấu"
-        }
-      },
-      "name": "Khu hoang dã"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Độ dài"
-        },
-        "Height": {
-          "id": "Chiều cao"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Đại dương"
+        "Description": {
+          "id": "Mô tả"
         }
       }
     },
@@ -218,54 +149,102 @@
       "fields": {
         "avocado": {
           "id": "quả bơ"
+        },
+        "ginger": {
+          "id": "gừng"
+        },
+        "onion": {
+          "id": "củ hành"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "Âm nhạc"
+        "bacon": {
+          "id": "thịt xông khói\n"
         },
-        "Dance": {
-          "id": "Khiêu vũ"
+        "cheese": {
+          "id": "phô mai"
         },
-        "Country": {
-          "id": "Quốc gia"
+        "lobster": {
+          "id": "tôm hùm"
         },
-        "Internet": {
-          "id": "internet"
+        "meat": {
+          "id": "thịt"
         },
-        "Writing": {
-          "id": "Viết"
-        },
-        "Achievements": {
-          "id": "Thành tựu"
-        },
-        "Age": {
-          "id": "Tuổi",
-          "description": "Tuổi"
-        },
-        "Height": {
-          "id": "Chiều cao",
-          "description": "Chiều cao"
-        },
-        "Gender": {
-          "id": "Giới tính",
-          "description": "Giới tính"
+        "mushrooms": {
+          "id": "nấm"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "chuối"
+        "lime": {
+          "id": "vôi"
+        },
+        "strawberry": {
+          "id": "dâu tây"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "Tuổi"
+        "alligator": {
+          "id": "cá sấu"
+        },
+        "elephant": {
+          "id": "voi"
+        },
+        "people": {
+          "id": "những người"
+        },
+        "rhino": {
+          "id": "tê giác"
+        },
+        "trees": {
+          "id": "cây"
+        }
+      },
+      "name": "Khu hoang dã"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "quả bơ"
+        },
+        "beans": {
+          "id": "những hạt đậu"
+        },
+        "cheese": {
+          "id": "phô mai"
+        },
+        "chicken": {
+          "id": "con gà"
+        },
+        "fruit": {
+          "id": "trái cây"
+        },
+        "tomato": {
+          "id": "cà chua"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "quả bơ"
+        },
+        "beans": {
+          "id": "những hạt đậu"
+        },
+        "corn": {
+          "id": "ngô"
+        },
+        "lime": {
+          "id": "vôi"
+        },
+        "onion": {
+          "id": "củ hành"
         }
       }
     },
@@ -279,18 +258,99 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "Âm nhạc"
+        "sides": {
+          "id": "các cạnh"
+        },
+        "size": {
+          "id": "kích cỡ"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "ngày"
+        },
+        "shoe": {
+          "id": "giày"
+        },
+        "weather": {
+          "id": "thời tiết"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Họa sĩ"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "tuổi"
+        },
+        "health": {
+          "id": "sức khỏe"
+        },
+        "school": {
+          "id": "trường học"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Thành tựu"
+        },
+        "Age": {
+          "description": "Tuổi",
+          "id": "Tuổi"
+        },
+        "Country": {
+          "id": "Quốc gia"
         },
         "Dance": {
           "id": "Khiêu vũ"
         },
-        "Country": {
-          "id": "Quốc gia"
+        "Gender": {
+          "description": "Giới tính",
+          "id": "Giới tính"
+        },
+        "Height": {
+          "description": "Chiều cao",
+          "id": "Chiều cao"
+        },
+        "Internet": {
+          "id": "internet"
+        },
+        "Music": {
+          "id": "Âm nhạc"
+        },
+        "Writing": {
+          "id": "Viết"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Đại dương"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Không chính xác",
+  "modelCardPossibleValuesMaximum": "lớn nhất",
+  "modelCardPossibleValuesMinimum": "nhỏ nhất",
+  "navigateBack": "Trở lại",
+  "navigateDone": "Hoàn Thành",
+  "navigateForward": "Tiếp tục",
+  "predictButton": "Dự đoán",
+  "saveProgress": "Lưu",
+  "tryAgain": "Thử lại",
+  "uniqueOptionsWarningNotice": "Lưu ý"
 }

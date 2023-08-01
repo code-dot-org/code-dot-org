@@ -435,6 +435,32 @@ si-LK:
         questions:
         - text: කුමන කොටස විසඳාවිද ප්‍රෙහේලිකාව?
         title: වංකගිරියේ විවිධ තේරීම්
+      Begin planning your project:
+        content1: විස්තරය මෙහි
+      Begin planning your project_2018:
+        content1: විස්තරය මෙහි
+      Begin planning your project_2018_2019:
+        content1: විස්තරය මෙහි
+      Begin planning your project_2018_2019_2020:
+        content1: විස්තරය මෙහි
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties multi predict_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD Header Size MC:
         answers:
         - {}
@@ -453,7 +479,365 @@ si-LK:
         - {}
         - {}
         - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U1 IOSP match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U1 IOSP match_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U1 IOSP match_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U1 Test PSP match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - text: අර්ථ දක්වන්න
+      CSD U1 Test PSP match_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - text: අර්ථ දක්වන්න
+      CSD U1 Test PSP match_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - text: අර්ථ දක්වන්න
+      CSD U1 Test define a computer:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U1 Test define a computer_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U1 Test define a computer_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U1 Test define problem:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U1 Test define problem_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U1 Test define problem_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Design Project:
+        content1: විස්තරය මෙහි
+      CSD U2 Design Project_2018:
+        content1: විස්තරය මෙහි
+      CSD U2 Design Project_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U2 L1 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L2 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L3 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L4 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L5 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 L6 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 Lesson 6 Overview:
+        content1: විස්තරය මෙහි
+      CSD U2 Test Classes:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test Classes_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test Classes_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test ContentStructureStyle:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test ContentStructureStyle_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test ContentStructureStyle_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test Copyright:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test Copyright_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test Copyright_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test Debug:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 Test Debug_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 Test Debug_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 Test HTML Usage:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test HTML Usage_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test HTML Usage_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test code styles:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test code styles_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test code styles_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Test code stylesheet:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 Test code stylesheet_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 Test code stylesheet_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 expand project:
+        content1: විස්තරය මෙහි
+      CSD U2 expand project_2018:
+        content1: විස්තරය මෙහි
+      CSD U2 expand project_2018_2019:
+        content1: විස්තරය මෙහි
       CSD U2 image debug match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 image debug match_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
         answers:
         - {}
         - {}
@@ -505,6 +889,16 @@ si-LK:
         - {}
         - {}
         - {}
+      CSD U2 project guide:
+        content1: විස්තරය මෙහි
+      CSD U2 project guide_2018:
+        content1: විස්තරය මෙහි
+      CSD U2 project guide_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: විස්තරය මෙහි
+      CSD U2 project guide_2018_2019_pilot_2022:
+        content1: විස්තරය මෙහි
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -544,6 +938,32 @@ si-LK:
         - {}
         - {}
         - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Boolean MC:
         answers:
         - {}
@@ -571,6 +991,30 @@ si-LK:
         questions:
         - {}
         title: මාතෘකාව
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: මාතෘකාව
+      CSD U3 Boolean MC_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: මාතෘකාව
+      CSD U3 Card Examples_2018:
+        content1: විස්තරය මෙහි
+      CSD U3 Card Examples_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: විස්තරය මෙහි
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -584,6 +1028,18 @@ si-LK:
         - {}
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
         answers:
         - {}
         - {}
@@ -640,6 +1096,22 @@ si-LK:
         - {}
         questions:
         - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD U3 Sprites intro predict multi:
         answers:
         - {}
@@ -664,6 +1136,180 @@ si-LK:
         - {}
         questions:
         - {}
+      CSD U3 Test clean code:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Test clean code_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Test clean code_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Test comment:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Test comment_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Test comment_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Test debugging:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Test debugging_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Test debugging_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Test functions:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Test functions_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Test functions_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Test planning:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Test planning_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Test planning_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Test variables:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Test variables_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Test variables_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 combining rep:
+        content1: විස්තරය මෙහි
+      CSD U3 combining rep_2018:
+        content1: විස්තරය මෙහි
+      CSD U3 combining rep_2018_2019:
+        content1: විස්තරය මෙහි
       CSD U3 drawSprites placement match:
         answers:
         - {}
@@ -686,6 +1332,368 @@ si-LK:
         - {}
         - {}
         - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawSprites placement match_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro:
+        content1: විස්තරය මෙහි
+      CSD U3 game intro_2018:
+        content1: විස්තරය මෙහි
+      CSD U3 game intro_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: විස්තරය මෙහි
+      CSD U3 platform intro:
+        content1: විස්තරය මෙහි
+      CSD U3 platform intro_2018:
+        content1: විස්තරය මෙහි
+      CSD U3 platform intro_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: විස්තරය මෙහි
+      CSD U3 platform intro_2018_2019_pilot_2022:
+        content1: විස්තරය මෙහි
+      CSD U4 test feature match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U4 test feature match_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U4 test feature match_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U4 test needs multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 test needs multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 test needs multi_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 test prioritize multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 test prioritize multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 test prioritize multi_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 test testing multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 test testing multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 test testing multi_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 wireframe test multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 wireframe test multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 wireframe test multi_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 Encryption 1:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 1_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 1_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 2:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 2_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 Encryption 2_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 L13 SFLP Interpreting Data:
+        content1: විස්තරය මෙහි
+      CSD U5 crosstab warmup:
+        content1: විස්තරය මෙහි
+      CSD U5 crosstab warmup_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 crosstab warmup_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 data visualization:
+        content1: විස්තරය මෙහි
+      CSD U5 data visualization_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 data visualization_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 student record:
+        content1: විස්තරය මෙහි
+      CSD U5 student record_2018:
+        content1: විස්තරය මෙහි
+      CSD U5 student record_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U5 test clean multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test clean multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test clean multi_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test crosstab multi:
+        answers:
+        - text: බල්ලා
+        - text: පෙන්ගුයින්
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test crosstab multi_2021:
+        answers:
+        - text: බල්ලා
+        - text: පෙන්ගුයින්
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test crosstab multi_2022:
+        answers:
+        - text: බල්ලා
+        - text: පෙන්ගුයින්
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test datacount multi:
+        answers:
+        - text: බල්ලා
+        - text: පෙන්ගුයින්
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test datacount multi_2021:
+        answers:
+        - text: බල්ලා
+        - text: පෙන්ගුයින්
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test datacount multi_2022:
+        answers:
+        - text: බල්ලා
+        - text: පෙන්ගුයින්
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test encoding multi2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test encoding multi2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test encoding multi2_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test secure multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test secure multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 test secure multi_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 LED create intro:
+        content1: විස්තරය මෙහි
+      CSD U6 LED create intro_2018:
+        content1: විස්තරය මෙහි
+      CSD U6 LED create intro_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U6 LED create intro_2021:
+        content1: විස්තරය මෙහි
       CSD U6 array multi:
         answers:
         - {}
@@ -710,6 +1718,22 @@ si-LK:
         - {}
         questions:
         - {}
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 final intro:
+        content1: විස්තරය මෙහි
+      CSD U6 final intro_2018:
+        content1: විස්තරය මෙහි
+      CSD U6 final intro_2018_2019:
+        content1: විස්තරය මෙහි
+      CSD U6 final intro_2021:
+        content1: විස්තරය මෙහි
       CSD U6 setProperty predict multi:
         answers:
         - {}
@@ -734,6 +1758,185 @@ si-LK:
         - {}
         questions:
         - {}
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test algorithms multi2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test algorithms multi2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test debugging multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test debugging multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test debugging multi_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test events multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test events multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test events multi_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test hardware multi2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test hardware multi2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test hardware multi2_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test parameters multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test parameters multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 test parameters multi_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSP PD Example Question 1:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+      CSP PD Example Question 2:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+      Choose 2 Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CourseF_outbreak_story:
+        content1: විස්තරය මෙහි
+      CourseF_outbreak_story2:
+        content1: විස්තරය මෙහි
+      CourseF_outbreak_story2022_2022_pilot_-2022-2:
+        content1: විස්තරය මෙහි
+      CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: විස්තරය මෙහි
+      Eval Contracts F:
+        answers:
+        - ''
+      Internet Simulator Setup:
+        content1: විස්තරය මෙහි
+      Internet Simulator Setup 2:
+        content1: විස්තරය මෙහි
+      Internet Simulator Setup 3:
+        content1: විස්තරය මෙහි
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -929,1032 +2132,16 @@ si-LK:
         questions:
         - text: කුමන වචනය අක්ෂර වින්‍යාසය දක්වයිද?
         title: බහුවරණ
-      behaviors 1 predict:
+      Multi Horizontal Scroll Test:
         answers:
         - {}
         - {}
         - {}
-        - feedback: වැරදියි
-        questions:
-        - {}
-      behaviors 1 predict_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - feedback: වැරදියි
-        questions:
-        - {}
-      behaviors 4 predict:
-        answers:
-        - {}
-        - {}
-        - {}
-        - feedback: වැරදියි
-        questions:
-        - {}
-      behaviors 4 predict_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - feedback: වැරදියි
-        questions:
-        - {}
-      courseC_multi_artist_prog6_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_artist_prog6_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_artist_prog6_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_artist_prog6_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_binary8_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_binary8_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_binary8_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_binary8_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_copy:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_collector_debugging10_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_ramp13:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_scrat_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_bee_functions_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_copy:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_bee_variables_8a_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_bee_variables_8a_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_bee_variables_8a_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_for10_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_for10_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_for10_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_for10_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_fwp2_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_conditionals1_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_conditionals7_predict2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_fwp9_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_playlab_variables4c_predictive1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      coursee_prediction_artistfunction2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      coursee_prediction_artistfunction2_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      coursee_prediction_artistfunction2_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      coursee_prediction_artistfunction2_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      grade2_multi_collector_A_predict1:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      grade2_multi_collector_A_predict1_2018:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      grade2_multi_collector_A_predict1_2018_2019:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      grade2_multi_collector_A_predict1_2018_2019_2020:
-        answers:
-        - {}
         - {}
         - {}
         - {}
         questions:
         - {}
-      outbreak_freeplay_choice:
-        display_name: නොමිලේ ක්‍රීඩා කිරීම
-      Begin planning your project:
-        content1: විස්තරය මෙහි
-      Begin planning your project_2018:
-        content1: විස්තරය මෙහි
-      Begin planning your project_2018_2019:
-        content1: විස්තරය මෙහි
-      Begin planning your project_2018_2019_2020:
-        content1: විස්තරය මෙහි
-      CSD U2 Design Project:
-        content1: විස්තරය මෙහි
-      CSD U2 Design Project_2018:
-        content1: විස්තරය මෙහි
-      CSD U2 Design Project_2018_2019:
-        content1: විස්තරය මෙහි
-      CSD U2 L1 Overview:
-        content1: විස්තරය මෙහි
-      CSD U2 L2 Overview:
-        content1: විස්තරය මෙහි
-      CSD U2 L3 Overview:
-        content1: විස්තරය මෙහි
-      CSD U2 L4 Overview:
-        content1: විස්තරය මෙහි
-      CSD U2 L5 Overview:
-        content1: විස්තරය මෙහි
-      CSD U2 L6 Overview:
-        content1: විස්තරය මෙහි
-      CSD U2 Lesson 6 Overview:
-        content1: විස්තරය මෙහි
-      CSD U2 expand project:
-        content1: විස්තරය මෙහි
-      CSD U2 expand project_2018:
-        content1: විස්තරය මෙහි
-      CSD U2 expand project_2018_2019:
-        content1: විස්තරය මෙහි
-      CSD U2 project guide:
-        content1: විස්තරය මෙහි
-      CSD U2 project guide_2018:
-        content1: විස්තරය මෙහි
-      CSD U2 project guide_2018_2019:
-        content1: විස්තරය මෙහි
-      CSD U3 Card Examples_2018:
-        content1: විස්තරය මෙහි
-      CSD U3 Card Examples_2018_2019:
-        content1: විස්තරය මෙහි
-      CSD U3 combining rep:
-        content1: විස්තරය මෙහි
-      CSD U3 combining rep_2018:
-        content1: විස්තරය මෙහි
-      CSD U3 combining rep_2018_2019:
-        content1: විස්තරය මෙහි
-      CSD U3 game intro:
-        content1: විස්තරය මෙහි
-      CSD U3 game intro_2018:
-        content1: විස්තරය මෙහි
-      CSD U3 game intro_2018_2019:
-        content1: විස්තරය මෙහි
-      CSD U3 platform intro:
-        content1: විස්තරය මෙහි
-      CSD U3 platform intro_2018:
-        content1: විස්තරය මෙහි
-      CSD U3 platform intro_2018_2019:
-        content1: විස්තරය මෙහි
-      CSD U5 Encryption 1:
-        content1: විස්තරය මෙහි
-      CSD U5 Encryption 1_2018:
-        content1: විස්තරය මෙහි
-      CSD U5 Encryption 1_2018_2019:
-        content1: විස්තරය මෙහි
-      CSD U5 Encryption 2:
-        content1: විස්තරය මෙහි
-      CSD U5 Encryption 2_2018:
-        content1: විස්තරය මෙහි
-      CSD U5 Encryption 2_2018_2019:
-        content1: විස්තරය මෙහි
-      CSD U5 L13 SFLP Interpreting Data:
-        content1: විස්තරය මෙහි
-      CSD U5 crosstab warmup:
-        content1: විස්තරය මෙහි
-      CSD U5 crosstab warmup_2018:
-        content1: විස්තරය මෙහි
-      CSD U5 crosstab warmup_2018_2019:
-        content1: විස්තරය මෙහි
-      CSD U5 data visualization:
-        content1: විස්තරය මෙහි
-      CSD U5 data visualization_2018:
-        content1: විස්තරය මෙහි
-      CSD U5 data visualization_2018_2019:
-        content1: විස්තරය මෙහි
-      CSD U5 student record:
-        content1: විස්තරය මෙහි
-      CSD U5 student record_2018:
-        content1: විස්තරය මෙහි
-      CSD U5 student record_2018_2019:
-        content1: විස්තරය මෙහි
-      CSD U6 LED create intro:
-        content1: විස්තරය මෙහි
-      CSD U6 LED create intro_2018:
-        content1: විස්තරය මෙහි
-      CSD U6 LED create intro_2018_2019:
-        content1: විස්තරය මෙහි
-      CSD U6 final intro:
-        content1: විස්තරය මෙහි
-      CSD U6 final intro_2018:
-        content1: විස්තරය මෙහි
-      CSD U6 final intro_2018_2019:
-        content1: විස්තරය මෙහි
-      Internet Simulator Setup:
-        content1: විස්තරය මෙහි
-      Internet Simulator Setup 2:
-        content1: විස්තරය මෙහි
-      Internet Simulator Setup 3:
-        content1: විස්තරය මෙහි
       Multi-Screen Apps:
         content1: විස්තරය මෙහි
       New Challenge Introduction:
@@ -1994,6 +2181,8 @@ si-LK:
       OPD-K5 Stage3aGo:
         content1: විස්තරය මෙහි
       OPD-K5 Stage3aGo_copy:
+        content1: විස්තරය මෙහි
+      OPD-K5 Stage3aGo_dani:
         content1: විස්තරය මෙහි
       OPD-K5 conditionals introduced:
         content1: විස්තරය මෙහි
@@ -2049,79 +2238,6 @@ si-LK:
         content1: විස්තරය මෙහි
       OPD-K5-projects-1:
         content1: විස්තරය මෙහි
-      Prepare for your presentation:
-        content1: විස්තරය මෙහි
-      'Technique: Frequency Analysis':
-        content1: විස්තරය මෙහි
-        markdown: |-
-          # ආදේශන කේතාංක බිඳ දැමීම
-
-          අහඹු ආදේශක කේතාංකයක් බිඳ දැමීමේ හොඳම තාක්‍ෂණය ** සංඛ්‍යාත විශ්ලේෂණය ** ලෙස හැඳින්වේ.
-
-          අක්ෂර වින්‍යාසය: [විකිපීඩියා](https://en.wikipedia.org/wiki/Frequency_analysis)
-
-          * ** සංඛ්‍යාත විශ්ලේෂණය ** යනු ඉංග්‍රීසි භාෂාවෙන් * නිතර නිතර * සමහර අකුරු දිස්වන ආකාරය මත පදනම් වූ තාක්‍ෂණයකි.
-          * උදාහරණයක් ලෙස, ඉංග්‍රීසි පෙළෙහි කොටසක් ලබා දී ඇති විට, * E *, * T *, * A * සහ * O * වඩාත් සුලභ වන අතර * Z *, * Q * සහ * X * දුර්ලභ වේ. ඒ හා සමානව, * TH *, * ER *, * ON *, සහ * AN * යනු එකිනෙකට යාබදව ඇති අකුරු යුගල වේ.
-          * ඇත්ත වශයෙන්ම, ඉංග්‍රීසි පෙළේ සියලුම සාම්පල සඳහා අකුරු බෙදා හැරීම දළ වශයෙන් සමාන වේ.
-
-
-          පෙර පිටුවේ ඇති විජට් අනුවාදය ඔබට සංඛ්‍යාත විශ්ලේෂණය හරහා ආදේශක කේතාංකයක් බිඳ දැමීමට උදව් කිරීමට අදහස් කරයි **.
-
-          සාමාන්‍ය ඉංග්‍රීසි ගද්‍ය කැබැල්ලක අකුරු සංඛ්‍යාතයට සාපේක්ෂව සංකේතාත්මක පණිවිඩයේ ඇති අක්ෂරවල සංඛ්‍යාතය විශ්ලේෂණය කිරීමෙන්, සමහර අක්ෂර සිතියම් ගත කිරීම් කුමක් විය හැකිද යන්න පිළිබඳව ඔබට පටු වීමට පටන් ගත හැකිය.
-
-          සංකේතාත්මක පෙළේ (තැඹිලි) අක්ෂරවල සංඛ්‍යාතය සාමාන්‍ය ඉංග්‍රීසි (නිල්) සංඛ්‍යාත සමඟ සැසඳෙන ආකාරය මෙවලම ඔබට පෙන්වයි.
-
-          ### ඉඟිය: ආරම්භ කළ යුත්තේ කොතැනින්ද?
-
-          1. කෙටි වචන සොයාගෙන පළමුව ඒවා "බිඳ දමන්න". එක් අකුරු වචන කීයක් ඔබ දන්නවාද? ("ඒ"). අකුරු 3 කින් යුත් වචනයක් වන්නේ "ද" යන්නයි.
-          2. ඔබ එය කළ පසු, ඔබට වඩාත් පොදු අකුරු කිහිපයක් සඳහා ආදේශක තිබේ. මෙම අර්ධ උපසිරැසි සමඟ වෙනත් වචන දෙස බැලීමට සහ හොඳ අනුමාන කිරීමට ඔබට බුද්ධිය භාවිතා කළ හැකිය.
-          3. අසීරු අකුරු අතළොස්සක් පමණක් සොයා ගැනීමෙන් පසුව, ඉතිරිය ඉක්මනින් කඩා වැටෙනු ඇත.
-          4. අක්ෂරවල සංඛ්‍යාත සංසන්දනය කිරීමෙන් සංවේදී අනුමාන කිරීම සඳහා හොඳ අවබෝධයක් ලැබේ.
-
-          ### මේක උත්සාහ කරන්න:
-          පහත සජීවිකරණය මඟින් යමෙකු ආරම්භ කරන බව පෙන්වයි. මෙන්න ඔවුන් උත්සාහ කළ දේ
-
-          * පළමුව අක්ෂර සංඛ්‍යාත අනුව වර්ග කරන්න.
-          * `` යන වචනයට අනුරූප විය හැකි අක්ෂර සමූහයක් හඳුනා ගන්න.
-          එය හොඳ ආරම්භයක්!
-
-          ! [](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)
-
-          ## අහඹු ආදේශනය හොඳද?
-          * කුඩා පුහුණුවකින් පසු, අහඹු ආදේශක කේතාංකයක් බිඳ දැමීමට ඔබට කොපමණ කාලයක් ගතවේද?
-          * මෙය හොඳ ද නැද්ද?
-      Terminology Recap:
-        content1: විස්තරය මෙහි
-        markdown: |-
-          # විරාමය සහ නැවත සකස් කිරීම
-
-          ** සීසර් කේතාංකය ** සමඟ සංකේතනය කර ඇති පණිවිඩ, විශේෂයෙන් පරිගණකමය මෙවලමක් සමඟ බිඳ දැමීම ඉතා පහසුය. දැන් ඔබට අකාරාදී මාර්‍ග කේතාංකයක් ඉරිතලා යාමේ පුරුද්දක් ඇත (තරමක් පහසුයි, හාහ්?) අපි වඩාත් දුෂ්කර දෙයක් උත්සාහ කරමු.
-
-          ** පාරිභාෂිතය නැවත කියවීම: **
-
-          * ** ගුප්තකේතනය ** - පණිවිඩ රහසිගතව තබා ගැනීම සඳහා කේතනාංකනය කිරීමේ ක්‍රියාවලියක් වන බැවින් එය කියවිය හැක්කේ “බලයලත්” පාර්ශ්වයන්ට පමණි.
-          * ** විකේතනය ** - ගුප්තකේතනය ආපසු හරවන, රහස් පණිවිඩයක් ගෙන මුල් පිටපත ප්‍රතිනිෂ්පාදනය කරන ක්‍රියාවලියකි
-          * ** කේතාංකය ** - ගුප්තකේතනය සිදු කරන තාක්‍ෂණයක (හෝ ඇල්ගොරිතමයේ) සාමාන්‍ය යෙදුම
-          * ** සීසර්ගේ කේතාංකය ** - අක්ෂර මාලාව අක්ෂර කිහිපයකින් වෙනස් කරන සංකේතාංකනය සඳහා වූ තාක්‍ෂණයකි.
-          * ** ගුප්ත කේතනය බිඳ දැමීම ** - කේතාංකයේ සියලුම විශේෂතා නොදැන ඔබ රහස් පණිවිඩයක් විකේතනය කිරීමට උත්සාහ කරන විට, ඔබ උත්සාහ කරන්නේ ගුප්තකේතනය ** බිඳ දැමීමට ** ය.
-
-          ** ඊළඟ අභියෝගය බැලීමට ඉදිරියට යන්න ක්ලික් කරන්න ** ...
-      csf_be_a_super_digital_citizen:
-        content1: විස්තරය මෙහි
-      csf_password_power-up:
-        content1: විස්තරය මෙහි
-      csf_putting_a_stop_to_online_meanness:
-        content1: විස්තරය මෙහි
-      outbreak_story:
-        content1: විස්තරය මෙහි
-      outbreak_story2:
-        content1: විස්තරය මෙහි
-      CourseF_outbreak_story:
-        content1: විස්තරය මෙහි
-      CourseF_outbreak_story2:
-        content1: විස්තරය මෙහි
-      OPD-K5 Stage3aGo_dani:
-        content1: විස්තරය මෙහි
       'Overview: Design Mode':
         markdown: |
           #යෙදුම් විද්‍යාගාර සැලසුම් මාදිලියට සාදරයෙන් පිළිගනිමු
@@ -2173,1403 +2289,6 @@ si-LK:
           උඩුගත කරන සෑම අවස්ථාවකම ඒවා ලැයිස්තුගත කර ඇති අතර ඔබ දැනටමත් උඩුගත කර ඇති
           * ඕනෑම * ගොනුවක් භාවිතා කිරීමට තෝරා ගත හැකිය.\n\n![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)\n###
           එය උත්සාහ කිරීමට ඉදිරියට යන්න ක්ලික් කරන්න!\n\n\n"
-      courseC_multi_artist_prog6_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_dani:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_dance_events_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_dani:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_swim_fish_behavior_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_events_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_labels_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_sprites_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_stop:
-        content1: විස්තරය මෙහි
-      coursee_prediction_artistfunction2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      csf_be_a_super_digital_citizen_2021:
-        content1: විස්තරය මෙහි
-      csf_password_power-up_2021:
-        content1: විස්තරය මෙහි
-      csf_putting_a_stop_to_online_meanness_2021:
-        content1: විස්තරය මෙහි
-      grade2_multi_collector_A_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD Games Properties multi predict_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD Header Size MC_2018_2019_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 image debug match_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 project guide_2018_2019_pilot_2021:
-        content1: විස්තරය මෙහි
-      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Boolean MC_2018_2019_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        title: මාතෘකාව
-      CSD U3 Card Examples_2018_2019_pilot_2021:
-        content1: විස්තරය මෙහි
-      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 drawSprites placement match_2019_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 game intro_2018_2019_pilot_2021:
-        content1: විස්තරය මෙහි
-      CSD U3 platform intro_2018_2019_pilot_2021:
-        content1: විස්තරය මෙහි
-      CSD U6 LED create intro_2021:
-        content1: විස්තරය මෙහි
-      CSD U6 array multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 final intro_2021:
-        content1: විස්තරය මෙහි
-      CSD U6 setProperty predict multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      Choose 2 Test:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      Eval Contracts F:
-        answers:
-        - ''
-      Multi Horizontal Scroll Test:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      Submittable Multi:
-        answers:
-        - text: නිල්
-        - text: කොළ
-        - {}
-        - {}
-        - {}
-        - text: රතු
-        questions:
-        - {}
-      Test Contained Multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      allthethings_external_displayed_as_unplugged:
-        content1: විස්තරය මෙහි
-      allthethings_external_not_displayed_as_unplugged:
-        content1: විස්තරය මෙහි
-      contained_Choose_2_Test:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      contained_Choose_2_Test_2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      contained_Happy_Maps_Multi 1:
-        answers:
-        - text: "/script_assets/k_1_images/unplugged_images/up.png"
-        - text: "/script_assets/k_1_images/unplugged_images/down.png"
-        - {}
-        - {}
-        questions:
-        - text: පුද්ගලයාව නිධානය වෙතට ගෙනයන්නේ කුමන ඊතලයෙන්ද?
-        title: බහුවරණ
-      test questionless single multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD Games Properties multi predict_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD Header Size MC_2018_2019_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U1 IOSP match:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U1 IOSP match_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U1 IOSP match_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U1 Test PSP match:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - text: අර්ථ දක්වන්න
-      CSD U1 Test PSP match_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - text: අර්ථ දක්වන්න
-      CSD U1 Test PSP match_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - text: අර්ථ දක්වන්න
-      CSD U1 Test define a computer:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U1 Test define a computer_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U1 Test define a computer_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U1 Test define problem:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U1 Test define problem_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U1 Test define problem_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test Classes:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test Classes_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test Classes_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test ContentStructureStyle:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test ContentStructureStyle_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test ContentStructureStyle_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test Copyright:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test Copyright_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test Copyright_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test Debug:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 Test Debug_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 Test Debug_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 Test HTML Usage:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test HTML Usage_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test HTML Usage_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test code styles:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test code styles_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test code styles_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U2 Test code stylesheet:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 Test code stylesheet_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 Test code stylesheet_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 image debug match_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U2 project guide_2018_2019_pilot_2022:
-        content1: විස්තරය මෙහි
-      CSD U3 - conditionals - Matching_2018_2019_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Boolean MC_2018_2019_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        title: මාතෘකාව
-      CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 Test clean code:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 Test clean code_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 Test clean code_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 Test comment:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Test comment_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Test comment_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Test debugging:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Test debugging_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Test debugging_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 Test functions:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 Test functions_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 Test functions_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 Test planning:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 Test planning_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 Test planning_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 Test variables:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 Test variables_pilot_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 Test variables_pilot_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U3 drawSprites placement match_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U3 platform intro_2018_2019_pilot_2022:
-        content1: විස්තරය මෙහි
-      CSD U4 test feature match:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U4 test feature match_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U4 test feature match_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-      CSD U4 test needs multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 test needs multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 test needs multi_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 test prioritize multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 test prioritize multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 test prioritize multi_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 test testing multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 test testing multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 test testing multi_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 wireframe test multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 wireframe test multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U4 wireframe test multi_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test clean multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test clean multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test clean multi_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test crosstab multi:
-        answers:
-        - text: බල්ලා
-        - text: පෙන්ගුයින්
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test crosstab multi_2021:
-        answers:
-        - text: බල්ලා
-        - text: පෙන්ගුයින්
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test crosstab multi_2022:
-        answers:
-        - text: බල්ලා
-        - text: පෙන්ගුයින්
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test datacount multi:
-        answers:
-        - text: බල්ලා
-        - text: පෙන්ගුයින්
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test datacount multi_2021:
-        answers:
-        - text: බල්ලා
-        - text: පෙන්ගුයින්
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test datacount multi_2022:
-        answers:
-        - text: බල්ලා
-        - text: පෙන්ගුයින්
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test encoding multi2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test encoding multi2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test encoding multi2_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test secure multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test secure multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U5 test secure multi_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 setProperty predict multi_2222:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test algorithms multi2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test algorithms multi2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test debugging multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test debugging multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test debugging multi_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test events multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test events multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test events multi_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test hardware multi2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test hardware multi2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test hardware multi2_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test parameters multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test parameters multi_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSD U6 test parameters multi_2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CSP PD Example Question 1:
-        answers:
-        - {}
-        - {}
-        questions:
-        - {}
-      CSP PD Example Question 2:
-        answers:
-        - {}
-        - {}
-        questions:
-        - {}
       PS U3 Q1-1:
         answers:
         - {}
@@ -3634,6 +2353,8 @@ si-LK:
         - {}
         questions:
         - {}
+      Prepare for your presentation:
+        content1: විස්තරය මෙහි
       Student End of Unit Survey - Q1_2022:
         answers:
         - {}
@@ -3648,6 +2369,87 @@ si-LK:
         - {}
         - {}
         - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Submittable Multi:
+        answers:
+        - text: නිල්
+        - text: කොළ
+        - {}
+        - {}
+        - {}
+        - text: රතු
+        questions:
+        - {}
+      'Technique: Frequency Analysis':
+        content1: විස්තරය මෙහි
+        markdown: |-
+          # ආදේශන කේතාංක බිඳ දැමීම
+
+          අහඹු ආදේශක කේතාංකයක් බිඳ දැමීමේ හොඳම තාක්‍ෂණය ** සංඛ්‍යාත විශ්ලේෂණය ** ලෙස හැඳින්වේ.
+
+          අක්ෂර වින්‍යාසය: [විකිපීඩියා](https://en.wikipedia.org/wiki/Frequency_analysis)
+
+          * ** සංඛ්‍යාත විශ්ලේෂණය ** යනු ඉංග්‍රීසි භාෂාවෙන් * නිතර නිතර * සමහර අකුරු දිස්වන ආකාරය මත පදනම් වූ තාක්‍ෂණයකි.
+          * උදාහරණයක් ලෙස, ඉංග්‍රීසි පෙළෙහි කොටසක් ලබා දී ඇති විට, * E *, * T *, * A * සහ * O * වඩාත් සුලභ වන අතර * Z *, * Q * සහ * X * දුර්ලභ වේ. ඒ හා සමානව, * TH *, * ER *, * ON *, සහ * AN * යනු එකිනෙකට යාබදව ඇති අකුරු යුගල වේ.
+          * ඇත්ත වශයෙන්ම, ඉංග්‍රීසි පෙළේ සියලුම සාම්පල සඳහා අකුරු බෙදා හැරීම දළ වශයෙන් සමාන වේ.
+
+
+          පෙර පිටුවේ ඇති විජට් අනුවාදය ඔබට සංඛ්‍යාත විශ්ලේෂණය හරහා ආදේශක කේතාංකයක් බිඳ දැමීමට උදව් කිරීමට අදහස් කරයි **.
+
+          සාමාන්‍ය ඉංග්‍රීසි ගද්‍ය කැබැල්ලක අකුරු සංඛ්‍යාතයට සාපේක්ෂව සංකේතාත්මක පණිවිඩයේ ඇති අක්ෂරවල සංඛ්‍යාතය විශ්ලේෂණය කිරීමෙන්, සමහර අක්ෂර සිතියම් ගත කිරීම් කුමක් විය හැකිද යන්න පිළිබඳව ඔබට පටු වීමට පටන් ගත හැකිය.
+
+          සංකේතාත්මක පෙළේ (තැඹිලි) අක්ෂරවල සංඛ්‍යාතය සාමාන්‍ය ඉංග්‍රීසි (නිල්) සංඛ්‍යාත සමඟ සැසඳෙන ආකාරය මෙවලම ඔබට පෙන්වයි.
+
+          ### ඉඟිය: ආරම්භ කළ යුත්තේ කොතැනින්ද?
+
+          1. කෙටි වචන සොයාගෙන පළමුව ඒවා "බිඳ දමන්න". එක් අකුරු වචන කීයක් ඔබ දන්නවාද? ("ඒ"). අකුරු 3 කින් යුත් වචනයක් වන්නේ "ද" යන්නයි.
+          2. ඔබ එය කළ පසු, ඔබට වඩාත් පොදු අකුරු කිහිපයක් සඳහා ආදේශක තිබේ. මෙම අර්ධ උපසිරැසි සමඟ වෙනත් වචන දෙස බැලීමට සහ හොඳ අනුමාන කිරීමට ඔබට බුද්ධිය භාවිතා කළ හැකිය.
+          3. අසීරු අකුරු අතළොස්සක් පමණක් සොයා ගැනීමෙන් පසුව, ඉතිරිය ඉක්මනින් කඩා වැටෙනු ඇත.
+          4. අක්ෂරවල සංඛ්‍යාත සංසන්දනය කිරීමෙන් සංවේදී අනුමාන කිරීම සඳහා හොඳ අවබෝධයක් ලැබේ.
+
+          ### මේක උත්සාහ කරන්න:
+          පහත සජීවිකරණය මඟින් යමෙකු ආරම්භ කරන බව පෙන්වයි. මෙන්න ඔවුන් උත්සාහ කළ දේ
+
+          * පළමුව අක්ෂර සංඛ්‍යාත අනුව වර්ග කරන්න.
+          * `` යන වචනයට අනුරූප විය හැකි අක්ෂර සමූහයක් හඳුනා ගන්න.
+          එය හොඳ ආරම්භයක්!
+
+          ! [](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)
+
+          ## අහඹු ආදේශනය හොඳද?
+          * කුඩා පුහුණුවකින් පසු, අහඹු ආදේශක කේතාංකයක් බිඳ දැමීමට ඔබට කොපමණ කාලයක් ගතවේද?
+          * මෙය හොඳ ද නැද්ද?
+      Terminology Recap:
+        content1: විස්තරය මෙහි
+        markdown: |-
+          # විරාමය සහ නැවත සකස් කිරීම
+
+          ** සීසර් කේතාංකය ** සමඟ සංකේතනය කර ඇති පණිවිඩ, විශේෂයෙන් පරිගණකමය මෙවලමක් සමඟ බිඳ දැමීම ඉතා පහසුය. දැන් ඔබට අකාරාදී මාර්‍ග කේතාංකයක් ඉරිතලා යාමේ පුරුද්දක් ඇත (තරමක් පහසුයි, හාහ්?) අපි වඩාත් දුෂ්කර දෙයක් උත්සාහ කරමු.
+
+          ** පාරිභාෂිතය නැවත කියවීම: **
+
+          * ** ගුප්තකේතනය ** - පණිවිඩ රහසිගතව තබා ගැනීම සඳහා කේතනාංකනය කිරීමේ ක්‍රියාවලියක් වන බැවින් එය කියවිය හැක්කේ “බලයලත්” පාර්ශ්වයන්ට පමණි.
+          * ** විකේතනය ** - ගුප්තකේතනය ආපසු හරවන, රහස් පණිවිඩයක් ගෙන මුල් පිටපත ප්‍රතිනිෂ්පාදනය කරන ක්‍රියාවලියකි
+          * ** කේතාංකය ** - ගුප්තකේතනය සිදු කරන තාක්‍ෂණයක (හෝ ඇල්ගොරිතමයේ) සාමාන්‍ය යෙදුම
+          * ** සීසර්ගේ කේතාංකය ** - අක්ෂර මාලාව අක්ෂර කිහිපයකින් වෙනස් කරන සංකේතාංකනය සඳහා වූ තාක්‍ෂණයකි.
+          * ** ගුප්ත කේතනය බිඳ දැමීම ** - කේතාංකයේ සියලුම විශේෂතා නොදැන ඔබ රහස් පණිවිඩයක් විකේතනය කිරීමට උත්සාහ කරන විට, ඔබ උත්සාහ කරන්නේ ගුප්තකේතනය ** බිඳ දැමීමට ** ය.
+
+          ** ඊළඟ අභියෝගය බැලීමට ඉදිරියට යන්න ක්ලික් කරන්න ** ...
+      Test Contained Multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Test Contained Retriable Multi:
+        answers:
         - {}
         - {}
         - {}
@@ -3913,6 +2715,10 @@ si-LK:
         - {}
         questions:
         - {}
+      allthethings_external_displayed_as_unplugged:
+        content1: විස්තරය මෙහි
+      allthethings_external_not_displayed_as_unplugged:
+        content1: විස්තරය මෙහි
       asked-to-problem-solve:
         answers:
         - {}
@@ -3931,6 +2737,38 @@ si-LK:
         - {}
         - {}
         - {}
+        questions:
+        - {}
+      behaviors 1 predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - feedback: වැරදියි
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - feedback: වැරදියි
+        questions:
+        - {}
+      behaviors 4 predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - feedback: වැරදියි
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - feedback: වැරදියි
         questions:
         - {}
       comfortable-in-cs-class:
@@ -3966,6 +2804,31 @@ si-LK:
         - {}
         questions:
         - {}
+      contained_Choose_2_Test:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Choose_2_Test_2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      contained_Happy_Maps_Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+        - {}
+        - {}
+        questions:
+        - text: පුද්ගලයාව නිධානය වෙතට ගෙනයන්නේ කුමන ඊතලයෙන්ද?
+        title: බහුවරණ
       counselor_encourage:
         answers:
         - text: ඔව්
@@ -3976,6 +2839,1327 @@ si-LK:
         answers:
         - text: ඔව්
         - text: නැහැ
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict12022:
+        answers:
+        - feedback: වැරදියි! ස්‍ක්‍රැට් වැරදි මාවතකට හැරීම හේතුවෙන් ඒකෝන් වෙත ළඟා
+            නොවනු ඇත.
+        - feedback: නිවැරදියි! ස්‍ක්‍රැට් වැරදි දිශාවකට හැරෙන අතර ඒකෝන් වෙත ළඟා නොවනු
+            ඇත.
+        - feedback: වැරදියි! ස්‍ක්‍රැට් වැරදි මාවතකට හැරීම හේතුවෙන් ඒකෝන් වෙත ළඟා
+            නොවනු ඇත.
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_collector_debugging10_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_ramp13:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_scrat_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_bee_functions_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_fwp2_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_conditionals1_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_conditionals7_predict2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_fwp9_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_playlab_variables4c_predictive1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict2_multi2022_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: විස්තරය මෙහි
+      courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: විස්තරය මෙහි
+      coursee_prediction_artistfunction2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         questions:
         - {}
       csd-post-survey-2017-q11_2018:
@@ -7084,6 +7268,24 @@ si-LK:
         - {}
         questions:
         - {}
+      csf_be_a_super_digital_citizen:
+        content1: විස්තරය මෙහි
+      csf_be_a_super_digital_citizen2022:
+        content1: විස්තරය මෙහි
+      csf_be_a_super_digital_citizen_2021:
+        content1: විස්තරය මෙහි
+      csf_password_power-up:
+        content1: විස්තරය මෙහි
+      csf_password_power-up2022:
+        content1: විස්තරය මෙහි
+      csf_password_power-up_2021:
+        content1: විස්තරය මෙහි
+      csf_putting_a_stop_to_online_meanness:
+        content1: විස්තරය මෙහි
+      csf_putting_a_stop_to_online_meanness2022:
+        content1: විස්තරය මෙහි
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: විස්තරය මෙහි
       csp-post-survey-2017-q1:
         answers:
         - {}
@@ -8594,6 +8796,54 @@ si-LK:
         - text: නැහැ
         questions:
         - {}
+      grade2_multi_collector_A_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       how-often-consider-alternative-approaches-2019:
         answers:
         - {}
@@ -8759,6 +9009,12 @@ si-LK:
         - {}
         questions:
         - {}
+      outbreak_freeplay_choice:
+        display_name: නොමිලේ ක්‍රීඩා කිරීම
+      outbreak_story:
+        content1: විස්තරය මෙහි
+      outbreak_story2:
+        content1: විස්තරය මෙහි
       outside-school-cs:
         answers:
         - {}
@@ -9166,6 +9422,22 @@ si-LK:
         - {}
         questions:
         - {}
+      test questionless single multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       will-be-myself-in-cs:
         answers:
         - {}
@@ -9226,259 +9498,6 @@ si-LK:
         - {}
         - {}
         - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      CourseF_outbreak_story2022_2022_pilot_-2022-2:
-        content1: විස්තරය මෙහි
-      CourseF_outbreak_story22022_2022_pilot_-2022-2:
-        content1: විස්තරය මෙහි
-      courseC_multi_artist_prog6_predict12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict22022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict22022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict22022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict22022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict22022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict2022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_swim_fish_behavior_predict12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_events_predict_multi2022_2022_pilot_-2022-2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_groups_predict_multi_2022_pilot_-2022-2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_labels_predict_multi2022_2022_pilot_-2022-2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict12022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables2_predict2_multi2022_-2022-2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_predict_multi2022_2022_pilot_-2022-2:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_stop2022_2022_pilot_-2022-2:
-        content1: විස්තරය මෙහි
-      coursee_prediction_artistfunction22022:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      csf_be_a_super_digital_citizen2022:
-        content1: විස්තරය මෙහි
-      csf_password_power-up2022:
-        content1: විස්තරය මෙහි
-      csf_putting_a_stop_to_online_meanness2022:
-        content1: විස්තරය මෙහි
-      grade2_multi_collector_A_predict12022:
-        answers:
         - {}
         - {}
         - {}

@@ -5,11 +5,11 @@
         "CT": {
           "description": "Te menduarit kompjuterik"
         },
-        "L": {
-          "description": "Gjuha"
-        },
         "F": {
           "description": "funksione"
+        },
+        "L": {
+          "description": "Gjuha"
         }
       }
     }

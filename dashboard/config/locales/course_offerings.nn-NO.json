@@ -2,38 +2,31 @@
   "nn-NO": {
     "data": {
       "course_offerings": {
-        "coursea": "Kurs A",
-        "courseb": "Kurs B",
-        "coursec": "Kurs C",
-        "coursed": "Kurs D",
-        "coursee": "Kurs E",
-        "coursef": "Kurs F",
-        "express": "Ekspresskurs",
-        "csd": "Oppdagingar i datavitskap",
-        "csp": "AP® Prinsipp i Datavitskap",
         "20-hour": "Aksellerert intro til CS-kurs",
-        "flappy": "Flakse-kode",
-        "jigsaw": "Puslespill",
         "algebra": "Datavitskap i Algebra",
+        "allthethingscourse": "alt kursinnhald",
         "artist": "Kunstnar",
-        "basketball": "Lag eit basketballspel",
         "course1": "Kurs 1",
         "course2": "Kurs 2",
         "course3": "Kurs 3",
         "course4": "Kurs 4",
+        "csd": "Oppdagingar i datavitskap",
+        "csp": "AP® Prinsipp i Datavitskap",
+        "edit-code": "Rediger kode",
+        "flappy": "Flakse-kode",
         "frozen": "Koding med Anna og Elsa",
         "gumball": "Gumball Spel-lab",
+        "hero": "Minecraft: Helten si reise",
         "hourofcode": "Klassisk labyrint",
         "iceage": "Istid Spel-lab",
         "infinity": "Disney Infinity Spel-Lab",
+        "jigsaw": "Puslespill",
         "mc": "Kodetimen med Minecraft",
         "minecraft": "Kodetimens Minecraft-designer",
         "playlab": "Spel-lab",
-        "sports": "Kode din eigen sport",
-        "edit-code": "Rediger kode",
-        "allthethingscourse": "alt kursinnhald",
-        "step": "steg",
-        "soccer": "fotball"
+        "soccer": "fotball",
+        "starwars": "Star Wars: Bygg ein galakse med kode(JavaScript)",
+        "step": "steg"
       }
     }
   }

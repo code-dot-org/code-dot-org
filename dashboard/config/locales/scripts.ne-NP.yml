@@ -3,960 +3,710 @@ ne:
   data:
     script:
       name:
-        course1:
-          title: Course 1
-          description: Start with Course 1 for early readers. Students will create
-            computer programs that will help them learn to collaborate with others,
-            develop problem-solving skills, and persist through difficult tasks. By
-            the end of this course, students create their very own custom game or
-            story that they can share. Recommended for grades K-1.
-          description_short: Start with Course 1 for early readers.
-          description_audience: Ages 4-6
-          student_description: Start with Course 1 for early readers. Students will
-            create computer programs that will help them learn to collaborate with
-            others, develop problem-solving skills, and persist through difficult
-            tasks. By the end of this course, students create their very own custom
-            game or story that they can share. Recommended for grades K-1.
-        course2:
-          title: Course 2
-          description: Start with Course 2 for students who can read and have no prior
-            programming experience. In this course students will create programs to
-            solve problems and develop interactive games or stories they can share.
-            Recommended for grades 2-5.
-          description_short: Start with Course 2 for students who can read.
-          description_audience: Ages 6+ (reading required)
-          student_description: Start with Course 2 for students who can read and have
-            no prior programming experience. In this course students will create programs
-            to solve problems and develop interactive games or stories they can share.
-            Recommended for grades 2-5.
-        course3:
-          title: Course 3
-          description: Course 3 is designed for students who have taken Course 2.
-            Students will delve deeper into programming topics introduced in previous
-            courses to create flexible solutions to more complex problems. By the
-            end of this course, students create interactive stories and games they
-            can share with anyone. Recommended for grades 4-5.
-          description_short: Course 3 is a follow-up to Course 2.
+        20-hour:
+          description: This 20-hour course covers the core computer science and programming
+            concepts in courses 2-4. The course is designed for use with ages 10-18.
+            Check out courses 2-4 for a more complete experience!
+          description_audience: Ages 10-18
+          description_short: This 20-hour course covers the core computer science
+            and programming concepts in courses 2-4.
+          student_description: This 20-hour course covers the core computer science
+            and programming concepts in courses 2-4. The course is designed for use
+            with ages 10-18. Check out courses 2-4 for a more complete experience!
+          title: Accelerated Intro to CS Course
+        2021drafting:
+          lesson_groups:
+            debugging:
+              display_name: Debugging
+            introduction:
+              display_name: Introduction
+            lessonGroup-3:
+              display_name: Variables
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hour of Code
+        CSF_Secret_Sample:
           description_audience: Ages 8-18
-          student_description: Course 3 is designed for students who have taken Course
-            2. Students will delve deeper into programming topics introduced in previous
-            courses to create flexible solutions to more complex problems. By the
-            end of this course, students create interactive stories and games they
-            can share with anyone. Recommended for grades 4-5.
-        playlab:
-          title: Play Lab
-          description: Create a story or make a game with Play Lab!
-          description_short: Create a story or make a game with Play Lab!
-          student_description: Create a story or make a game with Play Lab!
-          name: playlab
-        artist:
-          title: Artist
-          description: Draw cool pictures and designs with the Artist!
-          description_short: Draw cool pictures and designs with the Artist!
-          student_description: Draw cool pictures and designs with the Artist!
-          name: artiste
-        hourofcode:
-          title: Classic Maze
-          description: Try the basics of computer science with characters from Angry
-            Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          description_short: Try the basics of computer science with many fun characters!
-          student_description: Try the basics of computer science with characters
-            from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
-          name: hourOfCode
-        frozen:
-          title: Code with Anna and Elsa
-          description: Let's use code to join Anna and Elsa as they explore the magic
-            and beauty of ice. You will create snowflakes and patterns as you ice-skate
-            and make a winter wonderland that you can then share with your friends!
-          description_short: Let's use code to join Anna and Elsa as they explore
-            the magic and beauty of ice.
-          student_description: Let's use code to join Anna and Elsa as they explore
-            the magic and beauty of ice. You will create snowflakes and patterns as
-            you ice-skate and make a winter wonderland that you can then share with
-            your friends!
-          name: frozen
-        course4:
-          title: Course 4
-          description: Course 4 is designed for students who have taken Courses 2
-            and 3. Students will learn how to tackle puzzles with increased complexity
-            as they learn how to combine several concepts when solving each challenge.
-            By the time this Course is completed, students will be creating programs
-            that let them showcase multiple skills, including for loops and functions
-            with parameters. Recommended for grades 4-8.
-          description_short: Students taking Course 4 should have already taken Courses
-            2 and 3.
-          description_audience: Ages 9-18
-          student_description: Course 4 is designed for students who have taken Courses
-            2 and 3. Students will learn how to tackle puzzles with increased complexity
-            as they learn how to combine several concepts when solving each challenge.
-            By the time this Course is completed, students will be creating programs
-            that let them showcase multiple skills, including for loops and functions
-            with parameters. Recommended for grades 4-8.
+        CSF_Secret_Sample_Story:
+          description_audience: Ages 8-18+
         Course4pre:
-          title: Course 4 Prerequisite
           description: A brief rampup of concepts for students who have not taken
             Course 2 and 3.
           description_short: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
           student_description: A brief rampup of concepts for students who have not
             taken Course 2 and 3.
-        algebra:
-          title: Computer Science in Algebra
-        infinity:
-          title: Disney Infinity Play Lab
-          description: Use Play Lab to create a story or game starring Disney Infinity
-            characters.
-          description_short: Use Play Lab to create a story or game starring Disney
-            Infinity characters.
-          student_description: Use Play Lab to create a story or game starring Disney
-            Infinity characters.
-          name: infinity
-        netsim:
-          title: Internet Simulator
-        20-hour:
-          title: Accelerated Intro to CS Course
-          description: This 20-hour course covers the core computer science and programming
-            concepts in courses 2-4. The course is designed for use with ages 10-18.
-            Check out courses 2-4 for a more complete experience!
-          description_short: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4.
-          description_audience: Ages 10-18
-          student_description: This 20-hour course covers the core computer science
-            and programming concepts in courses 2-4. The course is designed for use
-            with ages 10-18. Check out courses 2-4 for a more complete experience!
-        events:
-          title: घटनाहरु
-          description: घटनाहरु
-          description_short: घटनाहरु
-          student_description: घटनाहरु
-        flappy:
-          title: Flappy Code
-          description: Wanna write your own game in less than 10 minutes? Try our
-            Flappy Code tutorial!
-          description_short: Write your own Flappy game in less than 10 minutes!
-          student_description: Wanna write your own game in less than 10 minutes?
-            Try our Flappy Code tutorial!
-          name: flappy
-        jigsaw:
-          title: Jigsaw
-          description: Try our Jigsaw tutorial.
-          description_short: Try our Jigsaw tutorial.
-          student_description: Try our Jigsaw tutorial.
-          name: jigsaw
-        step:
-          title: Step
-          description: Step tutorial
-          description_short: Step tutorial
-          student_description: Step tutorial
+          title: Course 4 Prerequisite
         Hour of Code:
-          title: Hour of Code 2013
           description: Try the basics of computer science with characters from Angry
             Birds and Plants vs. Zombies!
           description_short: Try the basics of computer science with many fun characters!
           student_description: Try the basics of computer science with characters
             from Angry Birds and Plants vs. Zombies!
-        asUnplugged:
-          description_audience: Ages 6-13
-        afterschool1:
-          description_audience: Ages 7-13
+          title: Hour of Code 2013
+        MikeTest:
+          description_audience: Ages 8-98
         Special Fun:
           description_audience: Ages 10-18
         SpecialSeries:
           description_audience: Ages 10-18
-        iceage:
-          title: Ice Age Play Lab
-          description: Create a story or make a game with Ice Age Play Lab!
-          description_short: Create a story or make a game with Ice Age Play Lab!
-          student_description: Create a story or make a game with Ice Age Play Lab!
-        gumball:
-          title: Gumball Play Lab
-          description: Create a story or make a game with Gumball Play Lab!
-          description_short: Create a story or make a game with Gumball Play Lab!
-          student_description: Create a story or make a game with Gumball Play Lab!
-        starwars:
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          student_description: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-        starwarsblocks:
-          description: Learn to program droids, and create your own Star Wars game
-            in a galaxy far, far away.
-          description_short: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-          student_description: Learn to program droids, and create your own Star Wars
-            game in a galaxy far, far away.
-        mc:
-          title: Minecraft Hour of Code
-          description: Use blocks of code to take Steve or Alex on an adventure through
-            this Minecraft world
-          description_short: Explore a Minecraft world through code
-          student_description: Use blocks of code to take Steve or Alex on an adventure
-            through this Minecraft world
-        oceans:
-          title: महासागरका लागि A.I
-        CSF_Secret_Sample:
-          description_audience: Ages 8-18
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-            practice:
-              display_name: Teaching Practices
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-            practice:
-              display_name: Teaching Practices
-        CSF_Secret_Sample_Story:
-          description_audience: Ages 8-18+
-        MikeTest:
-          description_audience: Ages 8-98
-        artistExemplar:
-          description_audience: Ages 8-18
-        teachercon:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-            practice:
-              display_name: Teaching Practices
-        gradeKinder:
-          description_audience: Ages 5-18
-        grade4:
-          title: Grade 4
-          description_audience: Ages 9-99
-        grade1:
-          title: Grade 1
-          description_audience: Ages 5-18
-        grade5:
-          title: Grade 5
-          description_audience: Ages 10-110
-        ecs-unit4:
-          description: "(old) Unit 4: Programming"
-          description_short: "(old) Unit 4: Programming"
-          student_description: "(old) Unit 4: Programming"
-        grade3:
-          title: Grade 3
-          description_audience: Ages 5-18
+        afterschool1:
+          description_audience: Ages 7-13
+        algebra:
+          title: Computer Science in Algebra
         alltheplcthings:
           lesson_groups:
-            required:
-              display_name: Overview
             content:
               display_name: Content
             practice:
               display_name: Teaching Practices
-        grade2:
-          description_audience: Ages 5-18
-        csp-online-test:
-          lesson_groups:
             required:
               display_name: Overview
-            content:
-              display_name: Content
-            practice:
-              display_name: Teaching Practices
-        csp1-support:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-            practice:
-              display_name: Teaching Practices
-        basketball:
-          title: Choose your team and make a basketball game
-          description_short: Choose your team and make a basketball game
-          description: Choose your team and make a basketball game
-          student_description: Choose your team and make a basketball game
-          name: basketball
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-            practice:
-              display_name: Teaching Practices
-        minecraft:
-          title: Minecraft Hour of Code Designer
-          description_short: Program animals and other Minecraft creatures in your
-            own version of Minecraft.
-          description: Program animals and other Minecraft creatures in your own version
-            of Minecraft.
-          student_description: Program animals and other Minecraft creatures in your
-            own version of Minecraft.
-        coursee-draft:
-          lesson_groups:
-            content:
-              display_name: Content
-        coursef-draft:
-          lesson_groups:
-            content:
-              display_name: Content
-        classic-hoc-impact-study:
-          description_short: Try the basics of computer science with many fun characters!
-        hoc-impact-study:
-          description_short: Try the basics of computer science with many fun characters!
-        sports:
-          title: Code your own sports game
-          description_short: Mix and match across sports
-          description: Mix and match across sports
-          student_description: Mix and match across sports
-        csp3-support:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-            practice:
-              display_name: Teaching Practices
-        csp4-support:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-            practice:
-              display_name: Teaching Practices
-        csf2harvey:
-          lesson_groups:
-            content:
-              display_name: Content
-        csp5-support:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-            practice:
-              display_name: Teaching Practices
-        csppostap-2017:
-          lesson_groups:
-            content:
-              display_name: Content
-        cspnovice:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp1-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp2-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp3-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp4-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp5-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csd1-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csd6-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csd5-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csd4-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csd3-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csd2-dlp:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        express-2017:
-          lesson_groups:
-            content:
-              display_name: Content
-        new-express:
-          lesson_groups:
-            content:
-              display_name: Content
-        csp2-2018:
-          lesson_groups:
-            csp2_1_2018:
-              display_name: 'Unit 2: Digital Information'
-        csd1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csd2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csd3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csd4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csd5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csd6-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp-explore-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp-create-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csd-novice-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csd-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp-novice-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        fit-test:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        cspplayground:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Conditionals
-            csp_functions:
-              display_name: Functions
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: Variables
-            csf_for_loops:
-              display_name: For Loops
-            csf_internet:
-              display_name: Internet
-            csf_digcit:
-              display_name: Digital Citizenship
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: घटनाहरु
-            csf_loops:
-              display_name: Loops
-            csf_conditionals:
-              display_name: Conditionals
-            csf_binary:
-              display_name: Binary
-            csf_digcit:
-              display_name: Digital Citizenship
-        coursee-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_nested_loops:
-              display_name: Nested Loops
-            csf_functions:
-              display_name: Functions
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-            csf_conditionals:
-              display_name: Conditionals
-            csf_functions:
-              display_name: Functions
-            csf_variables:
-              display_name: Variables
-            csf_for_loops:
-              display_name: For Loops
         andrea-test:
           lesson_groups:
-            required:
-              display_name: Overview
             content:
               display_name: Content
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_binary:
-              display_name: Binary
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
+            required:
+              display_name: Overview
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Assessments
+        artist:
+          description: Draw cool pictures and designs with the Artist!
+          description_short: Draw cool pictures and designs with the Artist!
+          name: artiste
+          student_description: Draw cool pictures and designs with the Artist!
+          title: Artist
+        artistExemplar:
+          description_audience: Ages 8-18
+        asUnplugged:
+          description_audience: Ages 6-13
+        basketball:
+          description: Choose your team and make a basketball game
+          description_short: Choose your team and make a basketball game
+          name: basketball
+          student_description: Choose your team and make a basketball game
+          title: Choose your team and make a basketball game
+        classic-hoc-impact-study:
+          description_short: Try the basics of computer science with many fun characters!
+        contagion-pilot:
+          description_audience: Grade 5
+        course1:
+          description: Start with Course 1 for early readers. Students will create
+            computer programs that will help them learn to collaborate with others,
+            develop problem-solving skills, and persist through difficult tasks. By
+            the end of this course, students create their very own custom game or
+            story that they can share. Recommended for grades K-1.
+          description_audience: Ages 4-6
+          description_short: Start with Course 1 for early readers.
+          student_description: Start with Course 1 for early readers. Students will
+            create computer programs that will help them learn to collaborate with
+            others, develop problem-solving skills, and persist through difficult
+            tasks. By the end of this course, students create their very own custom
+            game or story that they can share. Recommended for grades K-1.
+          title: Course 1
+        course2:
+          description: Start with Course 2 for students who can read and have no prior
+            programming experience. In this course students will create programs to
+            solve problems and develop interactive games or stories they can share.
+            Recommended for grades 2-5.
+          description_audience: Ages 6+ (reading required)
+          description_short: Start with Course 2 for students who can read.
+          student_description: Start with Course 2 for students who can read and have
+            no prior programming experience. In this course students will create programs
+            to solve problems and develop interactive games or stories they can share.
+            Recommended for grades 2-5.
+          title: Course 2
+        course3:
+          description: Course 3 is designed for students who have taken Course 2.
+            Students will delve deeper into programming topics introduced in previous
+            courses to create flexible solutions to more complex problems. By the
+            end of this course, students create interactive stories and games they
+            can share with anyone. Recommended for grades 4-5.
+          description_audience: Ages 8-18
+          description_short: Course 3 is a follow-up to Course 2.
+          student_description: Course 3 is designed for students who have taken Course
+            2. Students will delve deeper into programming topics introduced in previous
+            courses to create flexible solutions to more complex problems. By the
+            end of this course, students create interactive stories and games they
+            can share with anyone. Recommended for grades 4-5.
+          title: Course 3
+        course4:
+          description: Course 4 is designed for students who have taken Courses 2
+            and 3. Students will learn how to tackle puzzles with increased complexity
+            as they learn how to combine several concepts when solving each challenge.
+            By the time this Course is completed, students will be creating programs
+            that let them showcase multiple skills, including for loops and functions
+            with parameters. Recommended for grades 4-8.
+          description_audience: Ages 9-18
+          description_short: Students taking Course 4 should have already taken Courses
+            2 and 3.
+          student_description: Course 4 is designed for students who have taken Courses
+            2 and 3. Students will learn how to tackle puzzles with increased complexity
+            as they learn how to combine several concepts when solving each challenge.
+            By the time this Course is completed, students will be creating programs
+            that let them showcase multiple skills, including for loops and functions
+            with parameters. Recommended for grades 4-8.
+          title: Course 4
         coursea-2019:
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
-            csf_loops:
-              display_name: Loops
             csf_events:
               display_name: घटनाहरु
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
             csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Conditionals
-            csp_functions:
-              display_name: Functions
-            required:
-              display_name: Overview
-        csp2-2019:
-          lesson_groups:
-            csp2_1_2018:
-              display_name: 'Unit 2: Digital Information'
-        csp1-pilot:
-          lesson_groups:
-            required:
-              display_name: Overview
-        csp1-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Conditionals
-            csp_functions:
-              display_name: Functions
-        csp2-pilot-staging:
-          title: "(old) Unit 2: The Internet"
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Conditionals
-            csp_functions:
-              display_name: Functions
-        csp4-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Conditionals
-            csp_functions:
-              display_name: Functions
-        csp5-pilot-staging:
-          lesson_groups:
-            csp_lists:
-              display_name: Lists
-            csp_loops:
-              display_name: Loops
-        csp6-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Conditionals
-            csp_functions:
-              display_name: Functions
-        csp8-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Conditionals
-            csp_functions:
-              display_name: Functions
-        csp9-pilot-staging:
-          title: "(old) Unit 9: Data"
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Conditionals
-            csp_functions:
-              display_name: Functions
-        csp10-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Conditionals
-            csp_functions:
-              display_name: Functions
-        csp5-pilot:
-          lesson_groups:
-            csp_lists:
-              display_name: Lists
-            csp_loops:
-              display_name: Loops
-            required:
-              display_name: Overview
-        fit2019-novice:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp3-pilot:
-          lesson_groups:
-            content:
-              display_name: Content
-            required:
-              display_name: Overview
-        csl-vn:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        dlp19-csd-mod-fit:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        dlp19-csp-mod-fit:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        dlp19-csd-mod-w1:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        dlp19-csd-mod-w2:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        dlp19-csd-mod-w3:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        dlp19-csd-mod-w4:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        dlp19-csp-mod-w1:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        dlp19-csp-mod-w2:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        dlp19-csp-mod-w3:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        dlp19-csp-mod-w4:
-          lesson_groups:
-            required:
-              display_name: Overview
-            content:
-              display_name: Content
-        csp2-pilot:
-          lesson_groups:
-            content:
-              display_name: Content
-            required:
-              display_name: Overview
-        csp6-pilot:
-          lesson_groups:
-            content:
-              display_name: Content
-            required:
-              display_name: Overview
-        dance-2019:
-          title: डान्स पार्टी (२०१९)
-          description_short: क्याटी पेरी, शन मेन्डेस, प्यानिक । द डिस्कोमा लिल नास
-            एक्स, जोनास ब्रदर्स, निक्की मिनाज, र थप ३४ अरु ।
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Conditionals
-            csp_functions:
-              display_name: Functions
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_conditionals:
-              display_name: Conditionals
-            csf_nested_loops:
-              display_name: Nested Loops
-            csf_functions:
-              display_name: Functions
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-            csf_conditionals:
-              display_name: Conditionals
-            csf_events:
-              display_name: घटनाहरु
-            csf_digcit:
-              display_name: Digital Citizenship
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-            csf_conditionals:
-              display_name: Conditionals
-            csf_events:
-              display_name: घटनाहरु
-            csf_digcit:
-              display_name: Digital Citizenship
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: Overview
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Conditionals
-            csp_functions:
-              display_name: Functions
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Lists
-            csp_loops:
               display_name: Loops
         coursea-2020:
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
-            csf_loops:
-              display_name: Loops
             csf_events:
               display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        coursea-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        coursea-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        courseb-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
         courseb-2020:
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
-            csf_loops:
-              display_name: Loops
             csf_events:
               display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        courseb-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        courseb-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        coursec-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Binary
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
         coursec-2020:
           lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
             csf_binary:
               display_name: Binary
-            csf_loops:
-              display_name: Loops
+            csf_digcit:
+              display_name: Digital Citizenship
             csf_events:
               display_name: घटनाहरु
-        coursed-2020:
+            csf_loops:
+              display_name: Loops
+        coursec-2021:
           lesson_groups:
+            csf_binary:
+              display_name: Binary
+            csf_digcit:
+              display_name: Digital Citizenship
             csf_events:
               display_name: घटनाहरु
             csf_loops:
               display_name: Loops
+        coursec-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        coursed-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Binary
             csf_conditionals:
               display_name: Conditionals
-            csf_binary:
-              display_name: Binary
             csf_digcit:
               display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        coursed-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: Binary
+            csf_conditionals:
+              display_name: Conditionals
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        coursed-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: Binary
+            csf_conditionals:
+              display_name: Conditionals
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+            lessonGroup-6:
+              display_name: Digital Citizenship
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Conditionals
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+            lessonGroup-6:
+              display_name: Digital Citizenship
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Conditionals
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+            lessonGroup-6:
+              display_name: Digital Citizenship
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_functions:
+              display_name: Functions
+            csf_nested_loops:
+              display_name: Nested Loops
         coursee-2020:
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
-            csf_nested_loops:
-              display_name: Nested Loops
             csf_functions:
               display_name: Functions
+            csf_nested_loops:
+              display_name: Nested Loops
+        coursee-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_functions:
+              display_name: Functions
+            csf_nested_loops:
+              display_name: Conditionals
+            ramp_up:
+              display_name: Nested Loops
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_functions:
+              display_name: Functions
+            csf_nested_loops:
+              display_name: Conditionals
+            ramp_up:
+              display_name: Nested Loops
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_functions:
+              display_name: Functions
+            csf_nested_loops:
+              display_name: Conditionals
+            ramp_up:
+              display_name: Nested Loops
+        coursee-draft:
+          lesson_groups:
+            content:
+              display_name: Content
+        coursef-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_for_loops:
+              display_name: For Loops
+            csf_internet:
+              display_name: Internet
+            csf_variables:
+              display_name: Variables
         coursef-2020:
           lesson_groups:
             csf_digcit:
               display_name: Digital Citizenship
-            csf_variables:
-              display_name: Variables
             csf_for_loops:
               display_name: For Loops
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-            csf_conditionals:
-              display_name: Conditionals
-            csf_functions:
-              display_name: Functions
             csf_variables:
               display_name: Variables
+        coursef-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
             csf_for_loops:
               display_name: For Loops
-        pre-express-2020:
+            csf_variables:
+              display_name: For Loops
+            lessonGroup-7:
+              display_name: Digital Citizenship
+            lessonGroup-8:
+              display_name: Variables
+        coursef-2022:
           lesson_groups:
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        csp1-2020:
+            lessonGroup-7:
+              display_name: Digital Citizenship
+            lessonGroup-8:
+              display_name: Variables
+        coursef-2022-pilot:
           lesson_groups:
-            csp_unit1_2020:
-              display_name: "(old) Unit 1: Digital Information"
-        csp2-2020:
+            lessonGroup-7:
+              display_name: Digital Citizenship
+            lessonGroup-8:
+              display_name: Variables
+        coursef-2023:
           lesson_groups:
-            csp_unit2_2020:
-              display_name: "(old) Unit 2: The Internet"
-        csp9-2020:
-          lesson_groups:
-            csp_unit9_2020:
-              display_name: "(old) Unit 9: Data"
-        virtual-holding-place:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: Variables
+        coursef-draft:
           lesson_groups:
             content:
               display_name: Content
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa1-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa1-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Content
+          lessons:
+            lesson-6:
+              name: Loops
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa2-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+          lessons:
+            lesson-4:
+              name: Variables
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Content
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Content
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+          lessons:
+            lesson-3:
+              name: For Loops
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa4-exemplars:
+          lesson_groups:
+            content:
+              display_name: Content
+            lesson group:
+              display_name: Content
+            lessonGroup-2:
+              display_name: Content
+            lesson_group:
+              display_name: Content
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csd-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csd-novice-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csd1-dlp:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csd1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csd2-dlp:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csd2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csd3-dlp:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csd3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
         csd3-virtual:
           lesson_groups:
             csd3_1:
@@ -965,6 +715,884 @@ ne:
               display_name: Content
             cspSurvey:
               display_name: Content
+        csd4-dlp:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csd4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csd5-dlp:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csd5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csd6-dlp:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csd6-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
+            ramp_up:
+              display_name: Introduction
+            variables:
+              display_name: Variables
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
+        csf2harvey:
+          lesson_groups:
+            content:
+              display_name: Content
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        csp-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp-create-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp-explore-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp-novice-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp-online-test:
+          lesson_groups:
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+            required:
+              display_name: Overview
+        csp1-2020:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(old) Unit 1: Digital Information"
+        csp1-2021:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(old) Unit 1: Digital Information"
+        csp1-2022:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(old) Unit 1: Digital Information"
+        csp1-2023:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(old) Unit 1: Digital Information"
+        csp1-dlp:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Overview
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+        csp1-support:
+          lesson_groups:
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+            required:
+              display_name: Overview
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+        csp2-2018:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unit 2: Digital Information'
+        csp2-2019:
+          lesson_groups:
+            csp2_1_2018:
+              display_name: 'Unit 2: Digital Information'
+        csp2-2020:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(old) Unit 2: The Internet"
+        csp2-2021:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(old) Unit 2: The Internet"
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(old) Unit 2: The Internet"
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(old) Unit 2: The Internet"
+        csp2-dlp:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+          title: "(old) Unit 2: The Internet"
+        csp2-support:
+          lesson_groups:
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+            required:
+              display_name: Overview
+        csp3-dlp:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp3-support:
+          lesson_groups:
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+            required:
+              display_name: Overview
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+        csp4-dlp:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+            required:
+              display_name: Overview
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+        csp4-support:
+          lesson_groups:
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+            required:
+              display_name: Overview
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Loops
+        csp5-dlp:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+            required:
+              display_name: Overview
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+        csp5-support:
+          lesson_groups:
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+            required:
+              display_name: Overview
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algorithms
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lists
+            lessonGroup-3:
+              display_name: Loops
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Overview
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+        csp9-2020:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(old) Unit 9: Data"
+        csp9-2021:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(old) Unit 9: Data"
+        csp9-2022:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(old) Unit 9: Data"
+        csp9-2023:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(old) Unit 9: Data"
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+          title: "(old) Unit 9: Data"
+        cspnovice:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Conditionals
+            csp_functions:
+              display_name: Functions
+            csp_variables:
+              display_name: Variables
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Content
+        cspunit1-support:
+          lesson_groups:
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+            required:
+              display_name: Overview
+        dance-2019:
+          description_short: क्याटी पेरी, शन मेन्डेस, प्यानिक । द डिस्कोमा लिल नास
+            एक्स, जोनास ब्रदर्स, निक्की मिनाज, र थप ३४ अरु ।
+          title: डान्स पार्टी (२०१९)
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test
+        ecs-unit4:
+          description: "(old) Unit 4: Programming"
+          description_short: "(old) Unit 4: Programming"
+          student_description: "(old) Unit 4: Programming"
+        events:
+          description: घटनाहरु
+          description_short: घटनाहरु
+          student_description: घटनाहरु
+          title: घटनाहरु
+        express-2017:
+          lesson_groups:
+            content:
+              display_name: Content
+        express-2019:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Conditionals
+            csf_for_loops:
+              display_name: For Loops
+            csf_functions:
+              display_name: Functions
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Conditionals
+            csf_for_loops:
+              display_name: For Loops
+            csf_functions:
+              display_name: Functions
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Conditionals
+            csf_for_loops:
+              display_name: For Loops
+            csf_functions:
+              display_name: Functions
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
+            lessonGroup-9:
+              display_name: घटनाहरु
+        express-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Conditionals
+            csf_for_loops:
+              display_name: For Loops
+            csf_functions:
+              display_name: Functions
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
+            lessonGroup-9:
+              display_name: घटनाहरु
+        express-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Conditionals
+            csf_for_loops:
+              display_name: For Loops
+            csf_functions:
+              display_name: Functions
+            csf_loops:
+              display_name: Loops
+            csf_variables:
+              display_name: Variables
+            lessonGroup-9:
+              display_name: घटनाहरु
+        fit-test:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        fit2019-apprentice:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        fit2019-novice:
+          lesson_groups:
+            content:
+              display_name: Content
+            required:
+              display_name: Overview
+        flappy:
+          description: Wanna write your own game in less than 10 minutes? Try our
+            Flappy Code tutorial!
+          description_short: Write your own Flappy game in less than 10 minutes!
+          name: flappy
+          student_description: Wanna write your own game in less than 10 minutes?
+            Try our Flappy Code tutorial!
+          title: Flappy Code
+        frozen:
+          description: Let's use code to join Anna and Elsa as they explore the magic
+            and beauty of ice. You will create snowflakes and patterns as you ice-skate
+            and make a winter wonderland that you can then share with your friends!
+          description_short: Let's use code to join Anna and Elsa as they explore
+            the magic and beauty of ice.
+          name: frozen
+          student_description: Let's use code to join Anna and Elsa as they explore
+            the magic and beauty of ice. You will create snowflakes and patterns as
+            you ice-skate and make a winter wonderland that you can then share with
+            your friends!
+          title: Code with Anna and Elsa
+        grade1:
+          description_audience: Ages 5-18
+          title: Grade 1
+        grade2:
+          description_audience: Ages 5-18
+        grade3:
+          description_audience: Ages 5-18
+          title: Grade 3
+        grade4:
+          description_audience: Ages 9-99
+          title: Grade 4
+        grade5:
+          description_audience: Ages 10-110
+          title: Grade 5
+        gradeKinder:
+          description_audience: Ages 5-18
+        gumball:
+          description: Create a story or make a game with Gumball Play Lab!
+          description_short: Create a story or make a game with Gumball Play Lab!
+          student_description: Create a story or make a game with Gumball Play Lab!
+          title: Gumball Play Lab
+        hoc-impact-study:
+          description_short: Try the basics of computer science with many fun characters!
+        hourofcode:
+          description: Try the basics of computer science with characters from Angry
+            Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          description_short: Try the basics of computer science with many fun characters!
+          name: hourOfCode
+          student_description: Try the basics of computer science with characters
+            from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          title: Classic Maze
+        iceage:
+          description: Create a story or make a game with Ice Age Play Lab!
+          description_short: Create a story or make a game with Ice Age Play Lab!
+          student_description: Create a story or make a game with Ice Age Play Lab!
+          title: Ice Age Play Lab
+        infinity:
+          description: Use Play Lab to create a story or game starring Disney Infinity
+            characters.
+          description_short: Use Play Lab to create a story or game starring Disney
+            Infinity characters.
+          name: infinity
+          student_description: Use Play Lab to create a story or game starring Disney
+            Infinity characters.
+          title: Disney Infinity Play Lab
+        jigsaw:
+          description: Try our Jigsaw tutorial.
+          description_short: Try our Jigsaw tutorial.
+          name: jigsaw
+          student_description: Try our Jigsaw tutorial.
+          title: Jigsaw
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: Introduction
+            k5_getting_started_1:
+              display_name: Introduction
+        mc:
+          description: Use blocks of code to take Steve or Alex on an adventure through
+            this Minecraft world
+          description_short: Explore a Minecraft world through code
+          student_description: Use blocks of code to take Steve or Alex on an adventure
+            through this Minecraft world
+          title: Minecraft Hour of Code
+        minecraft:
+          description: Program animals and other Minecraft creatures in your own version
+            of Minecraft.
+          description_short: Program animals and other Minecraft creatures in your
+            own version of Minecraft.
+          student_description: Program animals and other Minecraft creatures in your
+            own version of Minecraft.
+          title: Minecraft Hour of Code Designer
+        netsim:
+          title: Internet Simulator
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Conditionals
+            lessonGroup-5:
+              display_name: Variables
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: Loops
+            lessonGroup-6:
+              display_name: घटनाहरु
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Nested Loops
+            lessonGroup-4:
+              display_name: Functions
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: Loops
+            lessonGroup-5:
+              display_name: घटनाहरु
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-6:
+              display_name: Loops
+        new-express:
+          lesson_groups:
+            content:
+              display_name: Content
+        oceans:
+          title: महासागरका लागि A.I
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introduction
+        playlab:
+          description: Create a story or make a game with Play Lab!
+          description_short: Create a story or make a game with Play Lab!
+          name: playlab
+          student_description: Create a story or make a game with Play Lab!
+          title: Play Lab
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        soccer:
+          name: प्राप्तांक
+        spelling-bee:
+          title: Spelling Bee
+        sports:
+          description: Mix and match across sports
+          description_short: Mix and match across sports
+          student_description: Mix and match across sports
+          title: Code your own sports game
+        starwars:
+          description: Learn to program droids, and create your own Star Wars game
+            in a galaxy far, far away.
+          description_short: Learn to program droids, and create your own Star Wars
+            game in a galaxy far, far away.
+          student_description: Learn to program droids, and create your own Star Wars
+            game in a galaxy far, far away.
+          title: 'Star Wars: Building a Galaxy With Code (JavaScript)'
+        starwarsblocks:
+          description: Learn to program droids, and create your own Star Wars game
+            in a galaxy far, far away.
+          description_short: Learn to program droids, and create your own Star Wars
+            game in a galaxy far, far away.
+          student_description: Learn to program droids, and create your own Star Wars
+            game in a galaxy far, far away.
+        step:
+          description: Step tutorial
+          description_short: Step tutorial
+          student_description: Step tutorial
+          title: Step
+        teachercon:
+          lesson_groups:
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+            required:
+              display_name: Overview
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: Loops
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            content:
+              display_name: Content
+            practice:
+              display_name: Teaching Practices
+            required:
+              display_name: Overview
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Conditionals
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Conditionals
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_functions:
+              display_name: Functions
+            csf_nested_loops:
+              display_name: Nested Loops
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Conditionals
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -981,637 +1609,66 @@ ne:
           lesson_groups:
             lg_1:
               display_name: Content
-        2021drafting:
+        virtual-holding-place:
           lesson_groups:
-            introduction:
-              display_name: Introduction
-            lessonGroup-3:
-              display_name: Variables
-            debugging:
-              display_name: Debugging
-        csp1-2021:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: "(old) Unit 1: Digital Information"
-        csp2-2021:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: "(old) Unit 2: The Internet"
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Conditionals
-            csp_functions:
-              display_name: Functions
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Lists
-            csp_loops:
-              display_name: Loops
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Algorithms
-        csp9-2021:
-          lesson_groups:
-            csp_unit9_2020:
-              display_name: "(old) Unit 9: Data"
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_binary:
-              display_name: Binary
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: घटनाहरु
-            csf_loops:
-              display_name: Loops
-            csf_conditionals:
-              display_name: Conditionals
-            csf_binary:
-              display_name: Binary
-            csf_digcit:
-              display_name: Digital Citizenship
-            lessonGroup-6:
-              display_name: Digital Citizenship
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Nested Loops
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_nested_loops:
-              display_name: Conditionals
-            csf_functions:
-              display_name: Functions
-        coursef-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_variables:
-              display_name: For Loops
-            csf_for_loops:
-              display_name: For Loops
-            lessonGroup-8:
-              display_name: Variables
-            lessonGroup-7:
-              display_name: Digital Citizenship
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-            csf_conditionals:
-              display_name: Conditionals
-            csf_functions:
-              display_name: Functions
-            csf_variables:
-              display_name: Variables
-            csf_for_loops:
-              display_name: For Loops
-            lessonGroup-9:
-              display_name: घटनाहरु
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: Introduction
-            lessonGroup-3:
-              display_name: Variables
-            variables:
-              display_name: Variables
-        contagion-pilot:
-          description_audience: Grade 5
-        csa1-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa2-pilot:
-          lesson_groups:
-            lesson group:
-              display_name: Content
-        csa3-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa4-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa5-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa6-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa8-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: Introduction
-            Introduction:
-              display_name: Introduction
-        csa1-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa2-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa3-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        dlp21-csd:
-          lesson_groups:
-            lessonGroup-2:
-              description: test
-        csa1-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa2-pilot-facilitator:
-          lesson_groups:
-            lesson group:
-              display_name: Content
-        csa3-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa4-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa5-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa4-exemplars:
-          lesson_groups:
-            lesson group:
-              display_name: Content
             content:
               display_name: Content
-            lesson_group:
-              display_name: Content
-            lessonGroup-2:
-              display_name: Content
-        spelling-bee:
-          title: Spelling Bee
-        csa5-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa6-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa6-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Hour of Code
-        csa7-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Variables
-        csa8-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa7-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa8-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        express-2022:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: घटनाहरु
-            csf_loops:
-              display_name: Loops
-            csf_conditionals:
-              display_name: Conditionals
-            csf_functions:
-              display_name: Functions
-            csf_variables:
-              display_name: Variables
-            csf_for_loops:
-              display_name: For Loops
-        csp1-2022:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: "(old) Unit 1: Digital Information"
-        csp2-2022:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: "(old) Unit 2: The Internet"
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Conditionals
-            csp_functions:
-              display_name: Functions
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Lists
-            csp_loops:
-              display_name: Loops
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        csp9-2022:
-          lesson_groups:
-            csp_unit9_2020:
-              display_name: "(old) Unit 9: Data"
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digital Citizenship
-            csf_events:
-              display_name: घटनाहरु
-            csf_loops:
-              display_name: Loops
-            csf_conditionals:
-              display_name: Conditionals
-        coursee-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            ramp_up:
-              display_name: Nested Loops
-            csf_functions:
-              display_name: Functions
-            csf_nested_loops:
-              display_name: Conditionals
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Digital Citizenship
-            lessonGroup-8:
-              display_name: Variables
-        csa1-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        csa2-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa3-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa4-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa5-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa1-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa7-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa8-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Digital Citizenship
-            lessonGroup-8:
-              display_name: Variables
-        csa6-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa7-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa8-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa2-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        vpl-csd1-ci-pilot-2022:
-          name: vpl-csd1-ci-pilot-2022
-          title: 'Module 1 : Préparation à l''enseignement de la résolution de problèmes
-            et de l''informatique'
-          description: |-
-            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
-
-            **Dans ce module d'apprentissage professionnel, vous devrez :**.
-
-            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
-            -   Mettre en pratique les concepts clés inclus dans l'unité.
-            -   Explorer les projets de fin de chapitre.
-
-            \*\*Durée suggérée : 30 minutes.
-
-            Traduit avec www.DeepL.com/Translator (version gratuite)
-          student_description: |-
-            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
-
-            **Dans ce module d'apprentissage professionnel, vous devrez :**.
-
-            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
-            -   Mettre en pratique les concepts clés inclus dans l'unité.
-            -   Explorer les projets de fin de chapitre.
-
-            \*\*Durée suggérée : 30 minutes.
-
-            Traduit avec www.DeepL.com/Translator (version gratuite)
-        soccer:
-          name: प्राप्तांक
-        csa1-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa2-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa3-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa4-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa5-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa6-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa7-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa8-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa1-2023:
+        virtual-pl-csd-summer-day1:
           lessons:
-            lesson-6:
-              name: Loops
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Content
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Variables
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: For Loops
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa5-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa7-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csa8-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Content
-        csp1-2023:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: "(old) Unit 1: Digital Information"
-        csp2-2023:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: "(old) Unit 2: The Internet"
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-            csp_conditionals:
-              display_name: Conditionals
-            csp_functions:
-              display_name: Functions
-        csp5-2023:
-          lesson_groups:
-            csp_loops:
-              display_name: Loops
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Lists
-            lessonGroup-3:
-              display_name: Loops
-        csp9-2023:
-          lesson_groups:
-            csp_unit9_2020:
-              display_name: "(old) Unit 9: Data"
-        angelina-playground:
-          lessons:
-            lesson-5:
-              name: Assessments
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        express-2023:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: घटनाहरु
-            csf_loops:
-              display_name: Loops
-            csf_conditionals:
-              display_name: Conditionals
-            csf_functions:
-              display_name: Functions
-            csf_variables:
-              display_name: Variables
-            csf_for_loops:
-              display_name: For Loops
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        courseb-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            csf_loops:
-              display_name: Loops
-            csf_events:
-              display_name: घटनाहरु
-        coursed-2023:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digital Citizenship
-            csf_events:
-              display_name: घटनाहरु
-            csf_loops:
-              display_name: Loops
-            csf_conditionals:
-              display_name: Conditionals
-        coursee-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digital Citizenship
-            ramp_up:
-              display_name: Nested Loops
-            csf_functions:
-              display_name: Functions
-            csf_nested_loops:
-              display_name: Conditionals
-        vpl-csd-ci-1:
-          title: 'Module 1 : Préparation à l''enseignement de la résolution de problèmes
-            et de l''informatique'
-          description: |-
-            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
-
-            **Dans ce module d'apprentissage professionnel, vous devrez :**.
-
-            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
-            -   Mettre en pratique les concepts clés inclus dans l'unité.
-            -   Explorer les projets de fin de chapitre.
-
-            \*\*Durée suggérée : 30 minutes.
-
-            Traduit avec www.DeepL.com/Translator (version gratuite)
-          student_description: |-
-            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
-
-            **Dans ce module d'apprentissage professionnel, vous devrez :**.
-
-            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
-            -   Mettre en pratique les concepts clés inclus dans l'unité.
-            -   Explorer les projets de fin de chapitre.
-
-            \*\*Durée suggérée : 30 minutes.
-
-            Traduit avec www.DeepL.com/Translator (version gratuite)
-        pl-csd-summer-day1:
-          lessons:
-            lesson-3:
+            lesson-1:
               name: Introduction
+        vpl-csd-ci-1:
+          description: |-
+            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
+
+            **Dans ce module d'apprentissage professionnel, vous devrez :**.
+
+            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
+            -   Mettre en pratique les concepts clés inclus dans l'unité.
+            -   Explorer les projets de fin de chapitre.
+
+            \*\*Durée suggérée : 30 minutes.
+
+            Traduit avec www.DeepL.com/Translator (version gratuite)
+          student_description: |-
+            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
+
+            **Dans ce module d'apprentissage professionnel, vous devrez :**.
+
+            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
+            -   Mettre en pratique les concepts clés inclus dans l'unité.
+            -   Explorer les projets de fin de chapitre.
+
+            \*\*Durée suggérée : 30 minutes.
+
+            Traduit avec www.DeepL.com/Translator (version gratuite)
+          title: 'Module 1 : Préparation à l''enseignement de la résolution de problèmes
+            et de l''informatique'
+        vpl-csd1-ci-pilot-2022:
+          description: |-
+            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
+
+            **Dans ce module d'apprentissage professionnel, vous devrez :**.
+
+            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
+            -   Mettre en pratique les concepts clés inclus dans l'unité.
+            -   Explorer les projets de fin de chapitre.
+
+            \*\*Durée suggérée : 30 minutes.
+
+            Traduit avec www.DeepL.com/Translator (version gratuite)
+          name: vpl-csd1-ci-pilot-2022
+          student_description: |-
+            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
+
+            **Dans ce module d'apprentissage professionnel, vous devrez :**.
+
+            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
+            -   Mettre en pratique les concepts clés inclus dans l'unité.
+            -   Explorer les projets de fin de chapitre.
+
+            \*\*Durée suggérée : 30 minutes.
+
+            Traduit avec www.DeepL.com/Translator (version gratuite)
+          title: 'Module 1 : Préparation à l''enseignement de la résolution de problèmes
+            et de l''informatique'

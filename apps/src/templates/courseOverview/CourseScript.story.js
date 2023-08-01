@@ -2,6 +2,13 @@ import React from 'react';
 import Immutable from 'immutable';
 import {UnconnectedCourseScript as CourseScript} from './CourseScript';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {reduxStore} from '../../../.storybook/decorators';
+import {Provider} from 'react-redux';
+
+export default {
+  title: 'CourseScript',
+  component: CourseScript,
+};
 
 const sectionId = 11;
 const courseId = 123;
@@ -40,45 +47,29 @@ const defaultProps = {
   ],
 };
 
-export default storybook => {
-  storybook
-    .storiesOf('CourseScript', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'Plain CourseScript',
-        story: () => <CourseScript {...defaultProps} />,
-      },
-      {
-        name: 'With teacher info',
-        story: () => (
-          <CourseScript
-            {...defaultProps}
-            selectedSectionId={sectionId}
-            hasNoSections={false}
-          />
-        ),
-      },
-      {
-        name: 'hidden as teacher',
-        story: () => (
-          <CourseScript
-            {...defaultProps}
-            selectedSectionId={sectionId}
-            hasNoSections={false}
-            hiddenLessonState={hiddenState}
-          />
-        ),
-      },
-      {
-        name: 'no section selected',
-        story: () => (
-          <CourseScript
-            {...defaultProps}
-            hasNoSections={false}
-            hiddenLessonState={hiddenState}
-          />
-        ),
-      },
-    ]);
+const Template = args => (
+  <Provider store={reduxStore()}>
+    <CourseScript {...defaultProps} {...args} />
+  </Provider>
+);
+
+export const Default = Template.bind({});
+
+export const WithTeacherInfo = Template.bind({});
+WithTeacherInfo.args = {
+  selectedSectionId: sectionId,
+  hasNoSections: false,
+};
+
+export const HiddenAsTeacher = Template.bind({});
+HiddenAsTeacher.args = {
+  selectedSectionId: sectionId,
+  hasNoSections: false,
+  hiddenLessonState: hiddenState,
+};
+
+export const NoSectionSelected = Template.bind({});
+NoSectionSelected.args = {
+  hasNoSection: false,
+  hiddenLessonState: hiddenState,
 };

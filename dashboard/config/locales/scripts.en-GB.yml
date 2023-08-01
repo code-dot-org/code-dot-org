@@ -3,70 +3,58 @@ en-GB:
   data:
     script:
       name:
-        course1:
-          title: Course 1
-          description_audience: Ages 4-6
-        course2:
-          title: Course 2
-        course3:
-          title: Course 3
-          description_audience: Ages 8-18
-        course4:
-          title: Course 4
-          description_audience: Ages 9-18
         20-hour:
           description_audience: Ages 10-18
-        step:
-          title: Step
-        afterschool1:
-          description_audience: Ages 7-13
-        Special Fun:
-          description_audience: Ages 10-18
-        SpecialSeries:
-          description_audience: Ages 10-18
+        2021drafting:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: The Hour of Code
         CSF_Secret_Sample:
           description_audience: Ages 8-18
         CSF_Secret_Sample_Story:
           description_audience: Ages 8-18+
         MikeTest:
           description_audience: Ages 8-98
+        Special Fun:
+          description_audience: Ages 10-18
+        SpecialSeries:
+          description_audience: Ages 10-18
+        afterschool1:
+          description_audience: Ages 7-13
         artistExemplar:
           description_audience: Ages 8-18
-        gradeKinder:
-          description_audience: Ages 5-18
-        grade4:
-          description_audience: Ages 9-99
-        grade1:
-          description_audience: Ages 5-18
-        grade5:
-          description_audience: Ages 10-110
-        grade3:
-          description_audience: Ages 5-18
-        grade2:
-          description_audience: Ages 5-18
-        cspplayground:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: Variables
-        coursed-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-            csf_variables:
-              display_name: Variables
-        coursec-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
+        course1:
+          description_audience: Ages 4-6
+          title: Course 1
+        course2:
+          title: Course 2
+        course3:
+          description_audience: Ages 8-18
+          title: Course 3
+        course4:
+          description_audience: Ages 9-18
+          title: Course 4
         coursea-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursea-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursea-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursea-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursea-2023:
           lesson_groups:
             csf_loops:
               display_name: Loops
@@ -74,15 +62,115 @@ en-GB:
           lesson_groups:
             csf_loops:
               display_name: Loops
-        pre-express-2019:
+        courseb-2020:
           lesson_groups:
             csf_loops:
               display_name: Loops
-        csp4-pilot:
+        courseb-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        courseb-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursec-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursec-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursec-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursec-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursec-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursed-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursed-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursed-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursed-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursed-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        coursef-2019:
+          lesson_groups:
+            csf_variables:
+              display_name: Variables
+        coursef-2020:
+          lesson_groups:
+            csf_variables:
+              display_name: Variables
+        coursef-2021:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Variables
+            lessonGroup-9:
+              display_name: remove
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Variables
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Variables
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Variables
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Loops
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Variables
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
+            variables:
+              display_name: Variables
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        csp1-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: Variables
-        csp1-pilot-staging:
+        csp10-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: Variables
@@ -90,15 +178,73 @@ en-GB:
           lesson_groups:
             csp_variables:
               display_name: Variables
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: Variables
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Loops
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Lists
+            csp_loops:
+              display_name: Loops
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Lists
             csp_loops:
+              display_name: Loops
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Lists
+            lessonGroup-3:
               display_name: Loops
         csp6-pilot-staging:
           lesson_groups:
@@ -112,60 +258,22 @@ en-GB:
           lesson_groups:
             csp_variables:
               display_name: Variables
-        csp10-pilot-staging:
+        cspplayground:
           lesson_groups:
             csp_variables:
               display_name: Variables
-        csp5-pilot:
+        dlp21-csd:
           lesson_groups:
-            csp_lists:
-              display_name: Lists
-            csp_loops:
-              display_name: Loops
-        csl-vn:
+            lessonGroup-2:
+              description: test
+        dlp21-csp-mod4:
           lesson_groups:
-            csf_loops:
-              display_name: Loops
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-        time4cs-control-unit-1:
+            lessonGroup-3:
+              display_name: Stage 2
+        express-2019:
           lesson_groups:
             csf_loops:
               display_name: Loops
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Lists
-            csp_loops:
-              display_name: Loops
-        coursea-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        courseb-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        coursec-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        coursed-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        coursef-2020:
-          lesson_groups:
             csf_variables:
               display_name: Variables
         express-2020:
@@ -174,167 +282,87 @@ en-GB:
               display_name: Loops
             csf_variables:
               display_name: Variables
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        2021drafting:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Variables
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Lists
-            csp_loops:
-              display_name: Loops
-        coursea-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        courseb-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        coursec-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        coursed-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        coursef-2021:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Variables
-            lessonGroup-9:
-              display_name: remove
         express-2021:
           lesson_groups:
             csf_loops:
               display_name: Loops
             csf_variables:
               display_name: Variables
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        csf-2021-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Variables
-            variables:
-              display_name: Variables
-        dlp21-csp-mod4:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Stage 2
-        dlp21-csd:
-          lesson_groups:
-            lessonGroup-2:
-              description: test
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: The Hour of Code
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Variables
-        coursea-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
         express-2022:
           lesson_groups:
             csf_loops:
               display_name: Loops
             csf_variables:
               display_name: Variables
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Lists
-            csp_loops:
-              display_name: Loops
-        courseb-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        coursec-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        coursed-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Variables
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Variables
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: Loops
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Variables
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Variables
-        csp5-2023:
-          lesson_groups:
-            csp_loops:
-              display_name: Loops
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Lists
-            lessonGroup-3:
-              display_name: Loops
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Loops
         express-2023:
           lesson_groups:
             csf_loops:
               display_name: Loops
             csf_variables:
               display_name: Variables
-        coursea-2023:
+        grade1:
+          description_audience: Ages 5-18
+        grade2:
+          description_audience: Ages 5-18
+        grade3:
+          description_audience: Ages 5-18
+        grade4:
+          description_audience: Ages 9-99
+        grade5:
+          description_audience: Ages 10-110
+        gradeKinder:
+          description_audience: Ages 5-18
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Variables
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Loops
+        pre-express-2019:
           lesson_groups:
             csf_loops:
               display_name: Loops
-        courseb-2023:
+        pre-express-2020:
           lesson_groups:
             csf_loops:
               display_name: Loops
-        coursec-2023:
+        pre-express-2021:
           lesson_groups:
             csf_loops:
               display_name: Loops
-        coursed-2023:
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        step:
+          title: Step
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+        time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
               display_name: Loops

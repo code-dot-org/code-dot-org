@@ -7,6 +7,7 @@ import MusicLibrary from '../player/MusicLibrary';
 import {getNoteName} from '../utils/Notes';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 const experiments = require('@cdo/apps/util/experiments');
+const color = require('@cdo/apps/util/color');
 
 const MAX_DISPLAY_NOTES = 3;
 const FIELD_WIDTH = 51;
@@ -79,7 +80,7 @@ export default class FieldChord extends Field {
     }
     if (this.textElement_) {
       if (experiments.isEnabled('zelos')) {
-        this.textElement_.style.fill = 'white';
+        this.textElement_.style.fill = color.neutral_light;
       }
     }
   }
@@ -101,7 +102,7 @@ export default class FieldChord extends Field {
     GoogleBlockly.utils.dom.createSvgElement(
       'rect',
       {
-        fill: '#54595e',
+        fill: color.neutral_dark90,
         x: 1,
         y: 1,
         width: FIELD_WIDTH,
@@ -125,7 +126,7 @@ export default class FieldChord extends Field {
       GoogleBlockly.utils.dom.createSvgElement(
         'rect',
         {
-          fill: '#59b9dc',
+          fill: color.light_cyan,
           x: graphNote.x,
           y: graphNote.y,
           width: graphNote.width,
@@ -167,9 +168,9 @@ export default class FieldChord extends Field {
 
     this.renderContent();
 
-    this.newDiv.style.color = 'white';
+    this.newDiv.style.color = color.neutral_light;
     this.newDiv.style.width = 'auto';
-    this.newDiv.style.backgroundColor = 'black';
+    this.newDiv.style.backgroundColor = color.dark_black;
     this.newDiv.style.padding = '5px';
 
     return this.newDiv;

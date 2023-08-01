@@ -972,15 +972,27 @@
   coursed-2020_name: 課程 D（2019）
   coursee-2020_name: 課程 E（2019）
   coursef-2020_name: 課程 F（2019）
+  coursea-2021_name: A 課程
+  courseb-2021_name: B 課程
+  coursec-2021_name: C 課程
   coursed-2021_name: 課程 D（2021）
+  coursee-2021_name: E 課程
+  coursef-2021_name: F 課程
+  coursea-2022_name: A 課程
+  courseb-2022_name: B 課程
+  coursec-2022_name: 丙課程
   coursed-2022_name: 課程 D（2021）
+  coursee-2022_name: E 課程
+  coursef-2022_name: F 課程
   express-2018_name: 速學課程（2018）
   pre-express-2018_name: 學前兒童的速學課程（2018）
   express-2019_name: 速學課程（2019）
   pre-express-2019_name: 學前兒童的速學課程（2019）
   express-2020_name: 速學課程（2019）
   pre-express-2020_name: 學前兒童的速學課程（2020）
+  express-2021_name: 特快課程
   pre-express-2021_name: 學前兒童的速學課程（2021）
+  express-2022_name: 特快課程
   pre-express-2022_name: 學前兒童快捷課程（2022）
   csd2_name: '單元 2：網頁開發'
   csd3_name: '單元 3：動畫與遊戲'
@@ -1511,6 +1523,7 @@
   header_stats: "統計資料"
   header_help_us: "幫助我們"
   header_about: "關於"
+  header_incubator: "孵化器"
   header_teacher_community: "教師社群"
   header_help_support: '幫助與支援'
   header_report_bug: "回報問題"
@@ -1625,7 +1638,7 @@
   hoc2018_mc_download_adventurer: "下載離線版的 Minecraft 探險家。"
   hoc2018_mc_educators: "致教師"
   hoc2018_mc_educators_box1_title: "在 Minecraft 裡寫程式"
-  hoc2018_mc_educators_box1_desc: 'Minecraft：教育版提供符合標準的Minecraft課程、培訓與編碼。'
+  hoc2018_mc_educators_box1_desc: "Minecraft：教育版提供符合標準的Minecraft課程、培訓與編碼。"
   hoc2018_mc_educators_box1_button: "這就啟動"
   hoc2018_mc_educators_box2_title: "下載主持人指南"
   hoc2018_mc_educators_box2_desc: "這個工具包會幫助你主持一小時玩程式，並讓你的學生投入到計算機科學。"
@@ -1733,7 +1746,7 @@
   hoc2018_mc_with_microsoft: "合作夥伴"
   hoc2018_mc_thank_microsoft: "感謝Microsoft支持我們的願景與使命，以確保每位孩童都有機會學習電腦科學及掌握在21世紀獲得成功的技能。"
   hoc2019_mc_mee_title: "Minecraft AI for Good"
-  hoc2019_mc_mee_description1: '新的《Minecraft Hour of Code》教程現已在 Minecraft 教育版上線：適用於 Windows、Mac 與 iPad。和你的學生一同學習編碼的基礎知識，一起探索人工智慧！'
+  hoc2019_mc_mee_description1: "新的《Minecraft Hour of Code》教程現已在 Minecraft 教育版上線：適用於 Windows、Mac 與 iPad。和你的學生一同學習編碼的基礎知識，一起探索人工智慧！"
   hoc2019_mc_mee_description2: "免費獲得資源，包括課程計劃、影片、電腦科學課程及教師培訓。"
   hoc2019_mc_more_coding_resources: "更多編程資源"
   hoc2019_dance_previous_versions: "你在找之前的舞蹈派對嗎？\n這裡有 2018 年版的[第 1 部分](%{dance_2018_link})和[第 2 部分](%{dance_extras_2018_link})。"
@@ -1746,18 +1759,18 @@
   page_not_available_description: "我們很抱歉地告知您，您所要求的頁面目前已被移除。如果您仍然需要存取，歡迎寄信給我們[support@code.org](%{support_email_link})，告知您的需求"
   page_not_available_button: "返回主頁"
   hoc2020_mc_available_code_org: "可於 Code.org 取得"
-  hoc2020_mc_available_mee: '可於 Minecraft 教育版取得'
+  hoc2020_mc_available_mee: "可於 Minecraft 教育版取得"
   hoc2020_mc_mee_title: "我的世界兩個村莊的故事"
-  hoc2020_mc_mee_description: '現在可於 Windows、Mac、Chromebook 及 iPad 的 Minecraft 教育版取得全新 Minecraft 一小時玩程式教程。學習基本編程，與學生探討多樣性和包容性。取得免費資源，包括教學計劃、影片、計算機科學課程、公平課程和教師培訓。'
+  hoc2020_mc_mee_description: "現在可於 Windows、Mac、Chromebook 及 iPad 的 Minecraft 教育版取得全新 Minecraft 一小時玩程式教程。學習基本編程，與學生探討多樣性和包容性。取得免費資源，包括教學計劃、影片、計算機科學課程、公平課程和教師培訓。"
   hoc2021_mc_mee_title: "「最新世界」計時"
-  hoc2021_mc_mee_description: '回到過去，學習編寫程式碼！全新的「我的世界一小時程式編程」教學課程現已在 Windows、Mac、色彩筆記本和 iPad 版的「我的世界：教育版」中推出。開始使用免費的教育工作者資源、訓練和影片。'
+  hoc2021_mc_mee_description: "回到過去，學習編寫程式碼！全新的「我的世界一小時程式編程」教學課程現已在 Windows、Mac、色彩筆記本和 iPad 版的「我的世界：教育版」中推出。開始使用免費的教育工作者資源、訓練和影片。"
   hoc2021_mc_mee_villages_title: "兩個村莊的故事"
-  hoc2021_mc_mee_villages_description: '在 Minecraft：教育版中，與您的學生一起學習編碼基礎知識，並探索多元化和包容性。'
+  hoc2021_mc_mee_villages_description: "在 Minecraft：教育版中，與您的學生一起學習編碼基礎知識，並探索多元化和包容性。"
   hoc2021_mc_mee_ai_title: "人工智慧"
-  hoc2021_mc_mee_ai_description: '與您的學生一起探索人工智慧，並在 Minecraft：教育版中學習編寫程式碼。'
+  hoc2021_mc_mee_ai_description: "與您的學生一起探索人工智慧，並在 Minecraft：教育版中學習編寫程式碼。"
   hoc2022_mc_mee_title: "我的世界逃生莊園"
   hoc2022_mc_mee_description: '在黎明前逃離神秘的豪宅，賺取一百萬顆翡翠！新鮮出爐的我的世界一小時玩程式教程現已在《我的世界：教育版》中推出，適用於Windows、Mac、Chromebook、Ipad和移動設備。開始使用免費的教育工作者資源、培訓和視訊。'
-  hoc2022_mc_mee_timecraft_description: '在《我的世界：教育版》的這個免費編程課中，進行時間旅行，拯救未來。'
+  hoc2022_mc_mee_timecraft_description: "在《我的世界：教育版》的這個免費編程課中，進行時間旅行，拯救未來。"
   footer_powered_by_aws: "Powered by Amazon Web Services"
   footer_built_on_github: "構建於 Microsoft 的 Github"
   codebytes_skinny_banner_title: "12 月 7–11 日，加入我們 CodeBytes 的迷你課程直播。"
@@ -1806,7 +1819,7 @@
   ai_zooniverse: "祖尼爾斯-快照山斑馬"
   ai_zooniverse_description: "幫助保護瀕危的開普山斑馬通過識別不同的動物的圖像。"
   ai_audience: "觀眾"
-  ai_minecraft_description: '免費取得包含課程計畫、影片、計算機科學課程和教師培訓等各種資源。（需要當個創世神：教育版）'
+  ai_minecraft_description: "免費取得包含課程計畫、影片、計算機科學課程和教師培訓等各種資源。（需要當個創世神：教育版）"
   ai_k_12_audience: "K-12 (需要閱讀)"
   ai_microsoft_workshop: "免費的微軟線上工作坊"
   ai_microsoft_workshop_description: "透過免費 STEM 和編碼工作坊激發好奇心。"

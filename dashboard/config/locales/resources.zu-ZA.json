@@ -2,19 +2,19 @@
   "zu-ZA": {
     "data": {
       "resources": {
-        "text/csd/2022": {
-          "name": "Umbhalo"
+        "lists/csd/2021": {
+          "name": "Umbhalo olandelanayo"
         },
         "lists/csd/2022": {
           "name": "Umbhalo olandelanayo"
+        },
+        "text/csd/2022": {
+          "name": "Umbhalo"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "",
           "url": "",
           "type": ""
-        },
-        "lists/csd/2021": {
-          "name": "Umbhalo olandelanayo"
         }
       }
     }

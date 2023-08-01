@@ -717,6 +717,7 @@
   dashboard_sections_table_secret: "Jenis log masuk"
   dashboard_sections_table_grade: "Gred"
   dashboard_sections_table_course: "Kursus"
+  dashboard_sections_table_pairing_allowed: "Pengaturcaraan Pasangan"
   dashboard_sections_table_stage_extras: "Tambahan Peringkat"
   dashboard_sections_table_students: "Pelajar"
   dashboard_sections_table_code: "Kod Bahagian"
@@ -939,6 +940,7 @@
   blockly_name: "Blockly"
   projguts_name: "Batu, Kertas, Gunting"
   hourofcode_name: "Pagar Sesat Klasik"
+  playlab_name: "Main Makmal"
   infinity_name: "Makmal Mainan Infiniti"
   artist_name: "Artis"
   monstercoding_name: "Pencarian Koding Pulau Misteri"
@@ -1023,6 +1025,8 @@
   flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Penyulitan Mudah
   text-compression_name: Pemampatan Teks
+  applab_name: "Makmal Aplikasi"
+  gamelab_name: "Makmal Permainan"
   basketball_name: "Membuat permainan bola keranjang"
   sports_name: "Mengekod permainan sukan anda sendiri"
   applab_gradelevel: "Umur 13+"
@@ -1512,6 +1516,7 @@
   header_stats: "Statistik"
   header_help_us: "Bantu Kami"
   header_about: "Tentang"
+  header_incubator: "Inkubator"
   header_teacher_community: "Komuniti Guru"
   header_help_support: 'Bantuan dan sokongan '
   header_report_bug: "Laporkan masalah"
@@ -1538,6 +1543,8 @@
   user_header_create: 'Cipta '
   user_header_applab: 'App Lab '
   user_header_artist: 'Artis '
+  user_header_gamelab: "Makmal Permainan"
+  user_header_playlab: "Main Makmal"
   user_header_dance: "Majlis Tari-Menari"
   user_header_spritelab: "Sprite Lab"
   user_header_minecraft: "Minecraft"
@@ -1624,7 +1631,7 @@
   hoc2018_mc_download_adventurer: "Muat turun versi Pengembara Minecraft luar talian."
   hoc2018_mc_educators: "Untuk Warga Pendidik"
   hoc2018_mc_educators_box1_title: "Kod dengan Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Edisi Pendidikan menyediakan kurikulum sejajar standard, latihan dan pengekodan dalam Minecraft.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Edisi Pendidikan menyediakan kurikulum sejajar standard, latihan dan pengekodan dalam Minecraft."
   hoc2018_mc_educators_box1_button: "Mulakan"
   hoc2018_mc_educators_box2_title: "Muat turun Panduan Fasilitator"
   hoc2018_mc_educators_box2_desc: "Kit alatan ini akan membantu anda menganjurkan Hour of Code dan melibatkan pelajar anda dalam sains komputer."
@@ -1732,7 +1739,7 @@
   hoc2018_mc_with_microsoft: "Bekerjasama dengan"
   hoc2018_mc_thank_microsoft: "  Kami mengucapkan terima kasih kepada Microsoft kerana menyokong wawasan dan misi kami untuk memastikan setiap kanak-kanak mempunyai peluang mempelajari sains komputer dan kemahiran untuk berjaya pada abad ke-21.  "
   hoc2019_mc_mee_title: "Minecraft AI for Good"
-  hoc2019_mc_mee_description1: 'Tutorial Jam Kod Minecraft baharu kini boleh didapati di dalam Minecraft: Edisi Pendidikan untuk Windows, Mac dan iPad. Pelajari asas pengekodan dan terokai AI bersama pelajar anda!'
+  hoc2019_mc_mee_description1: "Tutorial Jam Kod Minecraft baharu kini boleh didapati di dalam Minecraft: Edisi Pendidikan untuk Windows, Mac dan iPad. Pelajari asas pengekodan dan terokai AI bersama pelajar anda!"
   hoc2019_mc_mee_description2: "Akses sumber percuma termasuk rancangan pelajaran, video, kurikulum sains komputer dan latihan guru."
   hoc2019_mc_more_coding_resources: "Lebih Banyak Sumber Pengekodan"
   hoc2019_dance_previous_versions: "Mencari versi Majlis Tari-Menari yang Terdahulu?  \nKlik di sini untuk memulakan [Part 1](%{dance_2018_link}) dan [Part 2](%{dance_extras_2018_link}) dari 2018."
@@ -1745,18 +1752,18 @@
   page_not_available_description: "Harap maaf, halaman yang anda minta tidak lagi tersedia di alamat ini. Jika anda masih memerlukan akses, sila e-mel [support@code.org](%{support_email_link})."
   page_not_available_button: "Kembali ke halaman utama"
   hoc2020_mc_available_code_org: "Tersedia di Dalam Code.org"
-  hoc2020_mc_available_mee: 'Tersedia di dalam Minecraft: Edisi Pendidikan'
+  hoc2020_mc_available_mee: "Tersedia di dalam Minecraft: Edisi Pendidikan"
   hoc2020_mc_mee_title: "Minecraft Tale of Two Villages"
-  hoc2020_mc_mee_description: 'Tutorial Jam Kod Minecraft baharu kini boleh didapati di dalam Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook dan iPad. Pelajari asas pengekodan dan terokai kepelbagaian dan perangkuman bersama pelajar anda! Akses sumber percuma termasuk rancangan pelajaran, video, kurikulum sains komputer, pelajaran kesaksamaan dan latihan para guru.'
+  hoc2020_mc_mee_description: "Tutorial Jam Kod Minecraft baharu kini boleh didapati di dalam Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook dan iPad. Pelajari asas pengekodan dan terokai kepelbagaian dan perangkuman bersama pelajar anda! Akses sumber percuma termasuk rancangan pelajaran, video, kurikulum sains komputer, pelajaran kesaksamaan dan latihan para guru."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Mengembara kembali ke masa lalu dan belajar mengekod! Tutorial Jam Kod Minecraft baharu kini tersedia dalam Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook dan iPad. Mulakan dengan sumber pendidik, latihan dan video percuma.'
+  hoc2021_mc_mee_description: "Mengembara kembali ke masa lalu dan belajar mengekod! Tutorial Jam Kod Minecraft baharu kini tersedia dalam Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook dan iPad. Mulakan dengan sumber pendidik, latihan dan video percuma."
   hoc2021_mc_mee_villages_title: "Kisah Dua Kampung"
-  hoc2021_mc_mee_villages_description: 'Pelajari asas pengekodan dan terokai kepelbagaian dan perangkuman dengan pelajar anda dalam Minecraft: Edisi Pendidikan.'
+  hoc2021_mc_mee_villages_description: "Pelajari asas pengekodan dan terokai kepelbagaian dan perangkuman dengan pelajar anda dalam Minecraft: Edisi Pendidikan."
   hoc2021_mc_mee_ai_title: "AI untuk Kebaikan"
-  hoc2021_mc_mee_ai_description: 'Terokai AI dengan pelajar anda dan belajar mengekod dalam Minecraft: Edisi Pendidikan.'
+  hoc2021_mc_mee_ai_description: "Terokai AI dengan pelajar anda dan belajar mengekod dalam Minecraft: Edisi Pendidikan."
   hoc2022_mc_mee_title: "Hartanah Melepas Minecraft"
   hoc2022_mc_mee_description: 'Lepaskan diri dari rumah misteri menjelang subuh dan dapat satu juta zamrud! Tutorial Minecraft Hour of Code yang baru kini boleh didapati di Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook, Ipad dan Mobile. Mulakan dengan sumber pendidik, latihan, dan video percuma. '
-  hoc2022_mc_mee_timecraft_description: 'Perjalanan kembali ke masa untuk menyelamatkan masa depan dalam pelajaran pengekodan percuma ini di Minecraft: Edisi Pendidikan.'
+  hoc2022_mc_mee_timecraft_description: "Perjalanan kembali ke masa untuk menyelamatkan masa depan dalam pelajaran pengekodan percuma ini di Minecraft: Edisi Pendidikan."
   footer_powered_by_aws: "Perkhidmatan Web Amazon dan logo \"Powered by AWS\" ialah tanda dagangan Amazon.com, Inc. atau ahli gabungannya di Amerika Syarikat dan/atau negara lain."
   footer_built_on_github: "Dibina pada GitHub daripada Microsoft"
   codebytes_skinny_banner_title: "Sertai kami 7-11 Disember untuk pelajaran mini langsung CodeBytes kami!"
@@ -1805,7 +1812,7 @@
   ai_zooniverse: "Zooniverse - Syot Kilat Zebra Gunung"
   ai_zooniverse_description: "Bantu melindungi Zebra Gunung Tanjung yang terancam dengan mengenal pasti haiwan berbeza di dalam imej."
   ai_audience: "Hadirin"
-  ai_minecraft_description: 'Akses sumber percuma termasuk rancangan pelajaran, video, kurikulum sains komputer dan latihan para guru. (Memerlukan Minecraft: Edisi Pendidikan)'
+  ai_minecraft_description: "Akses sumber percuma termasuk rancangan pelajaran, video, kurikulum sains komputer dan latihan para guru. (Memerlukan Minecraft: Edisi Pendidikan)"
   ai_k_12_audience: "K-12 (Pembacaan diperlukan)"
   ai_microsoft_workshop: "Bengkel maya secara percuma daripada Microsoft"
   ai_microsoft_workshop_description: "Cetuskan rasa ingin tahu dengan bengkel STEM dan pengekodan percuma"
@@ -1842,3 +1849,4 @@
   try_it_yourself: "Cubalah sendiri!"
   try_an_activity: "Cuba satu aktiviti"
   see_more_activities: "Cuba lebih banyak aktiviti"
+  hoc2022_nasa_webb_alt_text: "Ilustrasi teleskop James Webb NASA"

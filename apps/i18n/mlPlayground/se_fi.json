@@ -1,42 +1,6 @@
 {
-  "navigateBack": "Ruovttoluotta",
   "correctAnswer": "Riekta",
   "datasets": {
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "ahki"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "beaivi"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "ivdni"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "ahki"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "siiddut"
-        }
-      }
-    },
     "billionaires": {
       "fields": {
         "Age": {
@@ -47,14 +11,28 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "census_part": {
       "fields": {
         "age": {
           "id": "ahki"
         }
       }
     },
-    "census_part": {
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "ivdni"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Ahki"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "ahki"
@@ -68,10 +46,48 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Music": {
+          "id": "Musihkka"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "ahki"
+        }
+      }
+    },
     "movies": {
       "fields": {
         "Star": {
           "id": "Násti"
+        }
+      }
+    },
+    "safari_toy": {
+      "name": "Safári"
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "sides": {
+          "id": "siiddut"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "sides": {
+          "id": "siiddut"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "beaivi"
         }
       }
     },
@@ -82,47 +98,31 @@
         }
       }
     },
-    "safari_toy": {
-      "name": "Safári"
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "ahki"
+        }
+      }
     },
     "student_survey": {
       "fields": {
-        "Music": {
-          "id": "Musihkka"
+        "Age": {
+          "description": "Ahki",
+          "id": "Ahki"
+        },
+        "Gender": {
+          "description": "Sohkabealli",
+          "id": "Sohkabealli"
         },
         "Internet": {
           "id": "Interneahtta"
         },
-        "Age": {
-          "id": "Ahki",
-          "description": "Ahki"
-        },
-        "Gender": {
-          "id": "Sohkabealli",
-          "description": "Sohkabealli"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "Ahki"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "siiddut"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
         "Music": {
           "id": "Musihkka"
         }
       }
     }
-  }
+  },
+  "navigateBack": "Ruovttoluotta"
 }

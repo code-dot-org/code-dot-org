@@ -1468,3 +1468,59 @@ kk:
           lessons:
             lesson-3:
               name: Кіріспе
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Кіріспе
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Айнымалылар
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Ілмек
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Ілмек
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Ілмек
+            lessonGroup-6:
+              display_name: Шаралар
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Ілмек
+            lessonGroup-5:
+              display_name: Шаралар
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-6:
+              display_name: Ілмек
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Кіріккен Циклдер
+            lessonGroup-4:
+              display_name: Функциялар
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Шарттар
+            lessonGroup-5:
+              display_name: Айнымалылар

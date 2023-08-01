@@ -5,11 +5,11 @@
         "CT": {
           "description": "Skaičiuojamasis mąstymas"
         },
-        "L": {
-          "description": "Kalba"
-        },
         "F": {
           "description": "Komandų kūrimas"
+        },
+        "L": {
+          "description": "Kalba"
         }
       }
     }

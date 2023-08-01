@@ -7,6 +7,7 @@ import shapes from './shapes';
 import {getTagString, getTutorialDetailString, DoNotShow} from './util';
 import Image from './image';
 import i18n from '@cdo/tutorialExplorer/locale';
+import FocusTrap from 'focus-trap-react';
 
 export default class TutorialDetail extends React.Component {
   static propTypes = {
@@ -106,179 +107,180 @@ export default class TutorialDetail extends React.Component {
       .replace('.png', '.jpg');
 
     const imageComponent = (
-      <div
-        style={styles.tutorialDetailImageOuterContainer}
-        className="col-xs-12 col-sm-6"
-      >
-        <div style={styles.tutorialDetailImageContainer}>
-          <div style={styles.tutorialDetailImageBackground} />
-          <Image style={styles.tutorialDetailImage} src={imageSrc} />
-        </div>
+      <div style={styles.tutorialDetailImageBounds}>
+        <div style={styles.tutorialDetailImageBackground} />
+        <Image style={styles.tutorialDetailImage} src={imageSrc} />
       </div>
     );
 
     return (
-      <div id="tutorialPopupFullWidth" style={styles.popupFullWidth}>
-        <div
-          className="modal"
-          id="tutorialPopup"
-          style={{display: 'block'}}
-          onClick={this.props.closeClicked}
-        >
+      <FocusTrap>
+        <div id="tutorialPopupFullWidth" style={styles.popupFullWidth}>
           <div
-            className="modal-dialog modal-lg"
-            onClick={e => e.stopPropagation()}
+            className="modal"
+            id="tutorialPopup"
+            style={{display: 'block'}}
+            onClick={this.props.closeClicked}
           >
-            <div className="modal-content">
-              <div
-                className="modal-header"
-                style={styles.tutorialDetailModalHeader}
-              >
-                <button
-                  className="close"
-                  data-dismiss="modal"
-                  style={{height: 48}}
-                  type="button"
-                  onClick={this.props.closeClicked}
-                >
-                  <span aria-hidden="true" style={{fontSize: 48}}>
-                    ×
-                  </span>
-                  <span className="sr-only">Close</span>
-                </button>
-                <div style={{clear: 'both'}} />
-              </div>
-              <div
-                className="modal-body"
-                style={styles.tutorialDetailModalBody}
-              >
-                {!this.props.disabledTutorial && (
-                  <a
-                    href={this.props.item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={this.startTutorialClicked}
-                  >
-                    {imageComponent}
-                  </a>
-                )}
-                {this.props.disabledTutorial && imageComponent}
-
+            <div
+              className="modal-dialog modal-lg"
+              onClick={e => e.stopPropagation()}
+            >
+              <div className="modal-content" aria-modal="true" role="dialog">
                 <div
-                  style={styles.tutorialDetailInfoContainer}
-                  className="col-xs-12 col-sm-6"
+                  className="modal-header"
+                  style={styles.tutorialDetailModalHeader}
                 >
-                  <div style={styles.tutorialDetailName}>
-                    {this.props.item.name}
-                  </div>
-                  {this.props.item.orgname !== DoNotShow && (
-                    <div style={styles.tutorialDetailPublisher}>
-                      {this.props.item.orgname}
-                    </div>
-                  )}
-                  <div style={styles.tutorialDetailSub}>
-                    {getTutorialDetailString(this.props.item)}
-                  </div>
-                  <div style={styles.tutorialDetailDescription}>
-                    {this.props.item.longdescription}
-                  </div>
-                  {this.props.disabledTutorial && (
-                    <div style={styles.tutorialDetailDisabled}>
-                      <i
-                        className="fa fa-warning warning-sign"
-                        style={styles.tutorialDetailDisabledIcon}
-                      />
-                      &nbsp;
-                      {i18n.tutorialDetailDisabled()}
-                    </div>
-                  )}
-                  {!this.props.disabledTutorial && (
-                    <a
-                      href={this.props.item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={this.startTutorialClicked}
-                    >
-                      <button type="button" style={{marginTop: 20}}>
-                        {i18n.startButton()}
-                      </button>
-                    </a>
-                  )}
+                  <button
+                    className="close"
+                    data-dismiss="modal"
+                    style={styles.tutorialDetailCloseButton}
+                    type="button"
+                    onClick={this.props.closeClicked}
+                  >
+                    <i className="fa fa-close" aria-hidden={true} />
+                    <span className="sr-only">Close</span>
+                  </button>
+                  <div style={{clear: 'both'}} />
                 </div>
-                <div style={{clear: 'both'}} />
-                <table style={styles.tutorialDetailsTable}>
-                  <tbody>
-                    {this.props.item.teachers_notes && (
-                      <tr key={0}>
-                        <td style={styles.tutorialDetailsTableTitle}>
-                          {i18n.tutorialDetailsMoreResources()}
-                        </td>
-                        <td style={styles.tutorialDetailsTableBody}>
-                          <a
-                            href={this.props.item.teachers_notes}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <i
-                              className="fa fa-external-link"
-                              aria-hidden={true}
-                            />
-                            &nbsp;
-                            {i18n.tutorialDetailsTeacherNotes()}
-                          </a>
-                        </td>
-                      </tr>
+                <div
+                  className="modal-body"
+                  style={styles.tutorialDetailModalBody}
+                  tabIndex={-1}
+                >
+                  <div
+                    style={styles.tutorialDetailImageOuterContainer}
+                    className="col-xs-12 col-sm-6"
+                  >
+                    {!this.props.disabledTutorial && (
+                      <a
+                        href={this.props.item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={styles.tutorialDetailImageLink}
+                        onClick={this.startTutorialClicked}
+                      >
+                        {imageComponent}
+                      </a>
                     )}
-                    {!this.props.disabledTutorial &&
-                      this.props.item.tags_activity_type
-                        .split(',')
-                        .indexOf('online-tutorial') !== -1 && (
-                        <tr key={1}>
+                    {this.props.disabledTutorial && imageComponent}
+                  </div>
+                  <div
+                    style={styles.tutorialDetailInfoContainer}
+                    className="col-xs-12 col-sm-6"
+                  >
+                    <div style={styles.tutorialDetailName}>
+                      {this.props.item.name}
+                    </div>
+                    {this.props.item.orgname !== DoNotShow && (
+                      <div style={styles.tutorialDetailPublisher}>
+                        {this.props.item.orgname}
+                      </div>
+                    )}
+                    <div style={styles.tutorialDetailSub}>
+                      {getTutorialDetailString(this.props.item)}
+                    </div>
+                    <div style={styles.tutorialDetailDescription}>
+                      {this.props.item.longdescription}
+                    </div>
+                    {this.props.disabledTutorial && (
+                      <div style={styles.tutorialDetailDisabled}>
+                        <i
+                          className="fa fa-warning warning-sign"
+                          style={styles.tutorialDetailDisabledIcon}
+                        />
+                        &nbsp;
+                        {i18n.tutorialDetailDisabled()}
+                      </div>
+                    )}
+                    {!this.props.disabledTutorial && (
+                      <a
+                        href={this.props.item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={this.startTutorialClicked}
+                      >
+                        <div style={styles.tutorialDetailStartButton}>
+                          {i18n.startButton()}
+                        </div>
+                      </a>
+                    )}
+                  </div>
+                  <div style={{clear: 'both'}} />
+                  <table style={styles.tutorialDetailsTable}>
+                    <tbody>
+                      {this.props.item.teachers_notes && (
+                        <tr key={0}>
                           <td style={styles.tutorialDetailsTableTitle}>
-                            {i18n.tutorialDetailsShortLink()}
+                            {i18n.tutorialDetailsMoreResources()}
                           </td>
                           <td style={styles.tutorialDetailsTableBody}>
                             <a
-                              href={`https://hourofcode.com/${this.props.item.short_code}`}
+                              href={this.props.item.teachers_notes}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              {`https://hourofcode.com/${this.props.item.short_code}`}
+                              <i
+                                className="fa fa-external-link"
+                                aria-hidden={true}
+                              />
+                              &nbsp;
+                              {i18n.tutorialDetailsTeacherNotes()}
                             </a>
                           </td>
                         </tr>
                       )}
-                    {tableEntries.map(item => (
-                      <tr key={item.key}>
-                        <td style={styles.tutorialDetailsTableTitle}>
-                          {item.title}
-                        </td>
-                        <td style={styles.tutorialDetailsTableBody}>
-                          {item.body}
-                        </td>
-                      </tr>
-                    ))}
-                    {this.props.localeEnglish &&
-                      this.props.item.string_standards && (
-                        <tr key={8}>
+                      {!this.props.disabledTutorial &&
+                        this.props.item.tags_activity_type
+                          .split(',')
+                          .indexOf('online-tutorial') !== -1 && (
+                          <tr key={1}>
+                            <td style={styles.tutorialDetailsTableTitle}>
+                              {i18n.tutorialDetailsShortLink()}
+                            </td>
+                            <td style={styles.tutorialDetailsTableBody}>
+                              <a
+                                href={`https://hourofcode.com/${this.props.item.short_code}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {`https://hourofcode.com/${this.props.item.short_code}`}
+                              </a>
+                            </td>
+                          </tr>
+                        )}
+                      {tableEntries.map(item => (
+                        <tr key={item.key}>
                           <td style={styles.tutorialDetailsTableTitle}>
-                            {i18n.tutorialDetailStandards()}
+                            {item.title}
                           </td>
-                          <td style={styles.tutorialDetailsTableBodyNoWrap}>
-                            {this.props.item.string_standards}
+                          <td style={styles.tutorialDetailsTableBody}>
+                            {item.body}
                           </td>
                         </tr>
-                      )}
-                  </tbody>
-                </table>
-                <div style={styles.tutorialDetailsAsReported}>
-                  {i18n.tutorialDetailAsReported()}
+                      ))}
+                      {this.props.localeEnglish &&
+                        this.props.item.string_standards && (
+                          <tr key={8}>
+                            <td style={styles.tutorialDetailsTableTitle}>
+                              {i18n.tutorialDetailStandards()}
+                            </td>
+                            <td style={styles.tutorialDetailsTableBodyNoWrap}>
+                              {this.props.item.string_standards}
+                            </td>
+                          </tr>
+                        )}
+                    </tbody>
+                  </table>
+                  <div style={styles.tutorialDetailsAsReported}>
+                    {i18n.tutorialDetailAsReported()}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </FocusTrap>
     );
   }
 }
@@ -287,8 +289,9 @@ const styles = {
   tutorialDetailModalHeader: {
     borderBottomWidth: 0,
     paddingTop: 0,
-    paddingBottom: 4,
-    height: 48,
+    paddingBottom: 0,
+    height: 44,
+    paddingRight: 11,
   },
   tutorialDetailModalBody: {
     paddingTop: 0,
@@ -303,11 +306,31 @@ const styles = {
     top: 0,
     width: '100%',
   },
+  tutorialDetailCloseButton: {
+    position: 'absolute',
+    top: 8,
+    right: 8,
+    height: 36,
+    width: 36,
+    fontSize: 36,
+    marginTop: 6,
+    marginRight: 6,
+  },
   tutorialDetailImageOuterContainer: {
     float: 'left',
     paddingBottom: 10,
+    paddingLeft: 0,
+    paddingRight: 0,
+    marginBottom: 6,
   },
-  tutorialDetailImageContainer: {
+  tutorialDetailImageLink: {
+    display: 'inline-block',
+    width: '100%',
+    height: '100%',
+    padding: 4,
+    marginTop: 4,
+  },
+  tutorialDetailImageBounds: {
     position: 'relative',
     width: '100%',
     height: 0,
@@ -330,7 +353,17 @@ const styles = {
   },
   tutorialDetailInfoContainer: {
     float: 'left',
+    paddingTop: 8,
     paddingLeft: 20,
+  },
+  tutorialDetailStartButton: {
+    display: 'inline-block',
+    padding: '6px 12px',
+    color: 'white',
+    backgroundColor: '#ffa400',
+    borderColor: '#ffa400',
+    borderRadius: 4,
+    marginTop: 20,
   },
   tutorialDetailName: {
     fontFamily: '"Gotham 5r", sans-serif',

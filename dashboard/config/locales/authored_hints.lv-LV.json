@@ -102,6 +102,9 @@
         "4-5 Nested Loops 12": {
           "4-5_Nested_Loops_12_a": "**360 / 36 = ?**"
         },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "Māksliniekam starp katru kvadrātu nepieciešams pagriezties par 120 grādiem, lai pabeigtu zīmējumu."
+        },
         "Course 4 Artist 6": {
           "Course_4_Artist_6_a": "Te ir 3 trīsstūri 360 grādu pagriezienā...cik daudz reižu 3 ietilpst iekš 360?"
         },
@@ -133,6 +136,9 @@
         "courseD_artist_nestedLoops3": {
           "courseD_artist_nestedLoops3_a": "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
         },
+        "courseD_artist_nestedLoops32022": {
+          "courseD_artist_nestedLoops3_a": "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
+        },
         "courseD_artist_nestedLoops3_2018": {
           "courseD_artist_nestedLoops3_a": "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
         },
@@ -140,6 +146,9 @@
           "courseD_artist_nestedLoops3_a": "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
         },
         "courseD_artist_nestedLoops3_2020": {
+          "courseD_artist_nestedLoops3_a": "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
+        },
+        "courseD_artist_nestedLoops3_2021": {
           "courseD_artist_nestedLoops3_a": "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
         },
         "courseE_artist_functions1": {
@@ -150,11 +159,18 @@
           "courseE_artist_functions1_a": "Kvadrātiem malas ir 100 punktu garas, tas nozīmē, ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.",
           "courseE_artist_functions1_b": "Tas nekas, ja zīmējot brilles līnijas pārklājas."
         },
+        "courseE_artist_functions1_dani": {
+          "courseE_artist_functions1_a": "Kvadrātiem malas ir 100 punktu garas, tas nozīmē, ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.",
+          "courseE_artist_functions1_b": "Tas nekas, ja zīmējot brilles līnijas pārklājas."
+        },
         "courseE_artist_functions2": {
           "courseD_artist_functions2_a": "Tavai programmai nepieciešams:\n\n-   izmantot funkciju\n-   pārvietoties uz priekšu 100+75 punktus\n-   izmantot funkciju"
         },
         "courseE_artist_functions2_copy": {
-          "courseD_artist_functions2_a": "Tavai programmai nepieciešams:\n - izmantot funkciju\n - pārvietoties uz priekšu 100+75 punktus\n - izmantot funkciju"
+          "courseD_artist_functions2_a": "Tavai programmai nepieciešams:\n\n-   izmantot funkciju\n-   pārvietoties uz priekšu 100+75 punktus\n-   izmantot funkciju"
+        },
+        "courseE_artist_functions2_dani": {
+          "courseD_artist_functions2_a": "Tavai programmai nepieciešams:\n\n-   izmantot funkciju\n-   pārvietoties uz priekšu 100+75 punktus\n-   izmantot funkciju"
         },
         "grade5_artist_variables_triangles1": {
           "grade5_artist_variables_triangles1_b": "Izmanto 'atkārtot' ciklu, lai kods būtu īsāks."
@@ -167,22 +183,6 @@
         },
         "grade5_artist_variables_triangles1_2020": {
           "grade5_artist_variables_triangles1_b": "Izmanto 'atkārtot' ciklu, lai kods būtu īsāks."
-        },
-        "courseD_artist_nestedLoops3_2021": {
-          "courseD_artist_nestedLoops3_a": "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
-        },
-        "courseE_artist_functions1_dani": {
-          "courseE_artist_functions1_a": "Kvadrātiem malas ir 100 punktu garas, tas nozīmē, ka pirms sākt zīmēt otru kvadrātu nepieciešams lekt uz priekšu 175 punktus.",
-          "courseE_artist_functions1_b": "Tas nekas, ja zīmējot brilles līnijas pārklājas."
-        },
-        "courseE_artist_functions2_dani": {
-          "courseD_artist_functions2_a": "Tavai programmai nepieciešams:\n\n-   izmantot funkciju\n-   pārvietoties uz priekšu 100+75 punktus\n-   izmantot funkciju"
-        },
-        "Artist Autorun Test": {
-          "2-3_Artist_Functions_4_a": "Māksliniekam starp katru kvadrātu nepieciešams pagriezties par 120 grādiem, lai pabeigtu zīmējumu."
-        },
-        "courseD_artist_nestedLoops32022": {
-          "courseD_artist_nestedLoops3_a": "Mēģini izmantot 'lekt uz priekšu' bloku, lai no kvadrāta virsotnes nokļūtu uz vietu, kur sāksi nākamo.\n\nJa kvadrāti ir 20 punktus augsti un tie atrodas 20 punktu attālumā, cik tālu nepieciešams lekt?"
         }
       }
     }

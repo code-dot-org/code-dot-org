@@ -1,0 +1,28 @@
+name 'virtual-pl-csd-summer-day3-Context4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Access to CS Education
+
+## What is my role as the teacher?
+
+#### As a CS teacher, it is important to understand who has access to CS in your community and school. Although you might not have control over all of the barriers to access, there are likely areas that you can influence in your role as a CS teacher. 
+
+## Questions to consider:
+
+* #### Who has access to CS in my community?
+* #### What are the demographics of the CS classrooms in my school?
+* #### How do those demographics compare to the demographics of my school? 
+<br>
+
+#### We will continue to explore these questions throughout the workshop. You will start by exploring access data from your state in the next level. 
+
+ <hr style="clear:both">
+
+##### **Note:** Much of the data available at the national scale is high school data. Middle school teachers might consider the role they play in laying an early foundation in CS for future success at the high school level. 
+
+
+
+
+MARKDOWN

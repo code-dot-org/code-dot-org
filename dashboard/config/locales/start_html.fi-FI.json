@@ -3,43 +3,35 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Kyllä",
-          "No": "Ei"
+          "No": "Ei",
+          "Yes": "Kyllä"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Kyllä",
-          "No": "Ei"
+          "No": "Ei",
+          "Yes": "Kyllä"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Kyllä",
-          "No": "Ei"
+          "No": "Ei",
+          "Yes": "Kyllä"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Kyllä",
-          "No": "Ei"
+          "No": "Ei",
+          "Yes": "Kyllä"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Nimi",
-          "Color": "Väri",
           "City": "Kaupunki",
+          "Color": "Väri",
+          "Name": "Nimi",
           "text": "teksti"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Nimi",
-          "Color": "Väri",
           "City": "Kaupunki",
+          "Color": "Väri",
+          "Name": "Nimi",
           "text": "teksti"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -50,18 +42,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -72,28 +64,28 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -104,19 +96,19 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
           "text": "teksti"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -127,7 +119,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
           "text": "teksti"
         },
         "CSD U1 processing live_2021": {
@@ -144,14 +144,6 @@
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -162,18 +154,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -184,7 +176,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Takaisin"
@@ -193,24 +193,24 @@
           "Back": "Takaisin"
         },
         "CSD U1 storage movies_2021": {
+          "No": "Ei",
           "Star Wars": "Tähtien sota",
           "Yes": "Kyllä",
-          "No": "Ei",
           "text": "teksti"
         },
         "CSD U1 storage movies_2022": {
+          "No": "Ei",
           "Star Wars": "Tähtien sota",
           "Yes": "Kyllä",
-          "No": "Ei",
           "text": "teksti"
         },
         "CSD U1 storage outfit_2021": {
-          "green": "vihreä",
-          "black": "musta"
+          "black": "musta",
+          "green": "vihreä"
         },
         "CSD U1 storage outfit_2022": {
-          "green": "vihreä",
-          "black": "musta"
+          "black": "musta",
+          "green": "vihreä"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -278,9 +278,9 @@
           "Success!": "Onnistui!"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "Itä",
           "North": "Pohjoinen",
           "South": "Etelä",
-          "East": "Itä",
           "West": "Länsi"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
@@ -296,46 +296,46 @@
           "Medium": "Normaali"
         },
         "CSD U6 - Combine Inputs - A_2222": {
+          "green": "vihreä",
           "left": "vasemmalle",
-          "right": "oikealle",
           "red": "punainen",
-          "green": "vihreä"
+          "right": "oikealle"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "päällä",
           "fast": "nopea",
-          "slow": "hidas",
+          "long": "pitkä",
+          "on": "päällä",
           "short": "lyhyt",
-          "long": "pitkä"
+          "slow": "hidas"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "Punainen",
+          "Blue": "Sininen",
           "Green": "Vihreä",
-          "Blue": "Sininen"
+          "Red": "Punainen"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "vasemmalle",
           "right": "oikealle"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "vihreä",
-          "blue": "sininen"
+          "blue": "sininen",
+          "green": "vihreä"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "Punainen",
-          "Blue": "Sininen"
+          "Blue": "Sininen",
+          "Red": "Punainen"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -344,9 +344,9 @@
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Nimi"
@@ -364,40 +364,40 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Onnistui!"
@@ -416,8 +416,8 @@
           "Success!": "Onnistui!"
         },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "Tulos",
-          "0": "0"
+          "0": "0",
+          "Score": "Tulos"
         },
         "CSD U6 - Physical Input - PC_2222": {
           "Success!": "Onnistui!"
@@ -456,14 +456,14 @@
           "Success!": "Onnistui!"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "Punainen",
+          "Blue": "Sininen",
           "Green": "Vihreä",
-          "Blue": "Sininen"
+          "Red": "Punainen"
         },
         "CSD U6 - Screen Inputs - P_2222": {
-          "Red": "Punainen",
-          "Green": "Vihreä",
           "Blue": "Sininen",
+          "Green": "Vihreä",
+          "Red": "Punainen",
           "Save": "Tallenna"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
@@ -479,16 +479,16 @@
           "title": "otsikko"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "Valkoihoinen",
-          "Red": "Punainen",
+          "Blue": "Sininen",
           "Green": "Vihreä",
-          "Blue": "Sininen"
+          "Red": "Punainen",
+          "White": "Valkoihoinen"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "ylös",
           "down": "alas",
           "left": "vasemmalle",
-          "right": "oikealle"
+          "right": "oikealle",
+          "up": "ylös"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "nimi"
@@ -591,40 +591,40 @@
           "Update": "Päivitä"
         },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "ensimmäinen"
@@ -639,20 +639,20 @@
           "first": "ensimmäinen"
         },
         "CSD U6 change": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 change_2018": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 change_2019": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 change_2021": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Normaali"
@@ -667,59 +667,59 @@
           "Medium": "Normaali"
         },
         "CSD U6 frequency": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 frequency_2018": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 frequency_2019": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 frequency_2021": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 get toggle": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 get toggle_2018": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 get toggle_2019": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 get toggle_2021": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 getProperty Demo": {
-          "Red": "Punainen",
-          "Green": "Vihreä",
           "Blue": "Sininen",
+          "Green": "Vihreä",
+          "Red": "Punainen",
           "Save": "Tallenna"
         },
         "CSD U6 getProperty Demo_2018": {
-          "Red": "Punainen",
-          "Green": "Vihreä",
           "Blue": "Sininen",
+          "Green": "Vihreä",
+          "Red": "Punainen",
           "Save": "Tallenna"
         },
         "CSD U6 getProperty Demo_2019": {
-          "Red": "Punainen",
-          "Green": "Vihreä",
           "Blue": "Sininen",
+          "Green": "Vihreä",
+          "Red": "Punainen",
           "Save": "Tallenna"
         },
         "CSD U6 getProperty Demo_2021": {
-          "Red": "Punainen",
-          "Green": "Vihreä",
           "Blue": "Sininen",
+          "Green": "Vihreä",
+          "Red": "Punainen",
           "Save": "Tallenna"
         },
         "CSD U6 getProperty input": {
@@ -735,76 +735,76 @@
           "Submit": "Jatka"
         },
         "CSD U6 getters debug": {
-          "slow": "hidas",
           "fast": "nopea",
+          "long": "pitkä",
           "short": "lyhyt",
-          "long": "pitkä"
+          "slow": "hidas"
         },
         "CSD U6 getters debug_2018": {
           "fast": "nopea",
-          "slow": "hidas",
+          "long": "pitkä",
           "short": "lyhyt",
-          "long": "pitkä"
+          "slow": "hidas"
         },
         "CSD U6 getters debug_2019": {
           "fast": "nopea",
-          "slow": "hidas",
+          "long": "pitkä",
           "short": "lyhyt",
-          "long": "pitkä"
+          "slow": "hidas"
         },
         "CSD U6 getters debug_2021": {
           "fast": "nopea",
-          "slow": "hidas",
+          "long": "pitkä",
           "short": "lyhyt",
-          "long": "pitkä"
+          "slow": "hidas"
         },
         "CSD U6 interval": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 interval_2018": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 interval_2019": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 interval_2021": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 light show": {
-          "on": "päällä",
-          "off": "pois"
+          "off": "pois",
+          "on": "päällä"
         },
         "CSD U6 light show_2018": {
-          "on": "päällä",
-          "off": "pois"
+          "off": "pois",
+          "on": "päällä"
         },
         "CSD U6 light show_2019": {
-          "on": "päällä",
-          "off": "pois"
+          "off": "pois",
+          "on": "päällä"
         },
         "CSD U6 light show_2021": {
-          "on": "päällä",
-          "off": "pois"
+          "off": "pois",
+          "on": "päällä"
         },
         "CSD U6 params create colors": {
-          "Red": "Punainen",
-          "Blue": "Sininen"
+          "Blue": "Sininen",
+          "Red": "Punainen"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "Punainen",
-          "Blue": "Sininen"
+          "Blue": "Sininen",
+          "Red": "Punainen"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "Punainen",
-          "Blue": "Sininen"
+          "Blue": "Sininen",
+          "Red": "Punainen"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "Punainen",
-          "Blue": "Sininen"
+          "Blue": "Sininen",
+          "Red": "Punainen"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -855,20 +855,20 @@
           "title": "otsikko"
         },
         "CSD U6 slider intro": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 slider intro_2018": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 slider intro_2019": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 slider intro_2021": {
-          "short": "lyhyt",
-          "long": "pitkä"
+          "long": "pitkä",
+          "short": "lyhyt"
         },
         "CSD U6 test LED": {
           "Success!": "Onnistui!"
@@ -883,65 +883,65 @@
           "Success!": "Onnistui!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "Punainen",
+          "Blue": "Sininen",
           "Green": "Vihreä",
-          "Blue": "Sininen"
+          "Red": "Punainen"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "Punainen",
+          "Blue": "Sininen",
           "Green": "Vihreä",
-          "Blue": "Sininen"
+          "Red": "Punainen"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "Tietoja",
           "About Us": "Tietoja meistä",
-          "Cancel": "Peru",
-          "Red": "Punainen",
-          "Green": "Vihreä",
           "Blue": "Sininen",
-          "Yes": "Kyllä",
+          "Cancel": "Peru",
+          "Green": "Vihreä",
           "No": "Ei",
-          "Save": "Tallenna"
+          "Red": "Punainen",
+          "Save": "Tallenna",
+          "Yes": "Kyllä"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Tietoja",
           "About Us": "Tietoja meistä",
-          "Cancel": "Peru",
-          "Red": "Punainen",
-          "Green": "Vihreä",
           "Blue": "Sininen",
-          "Yes": "Kyllä",
+          "Cancel": "Peru",
+          "Green": "Vihreä",
           "No": "Ei",
-          "Save": "Tallenna"
+          "Red": "Punainen",
+          "Save": "Tallenna",
+          "Yes": "Kyllä"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Tietoja",
           "About Us": "Tietoja meistä",
-          "Cancel": "Peru",
-          "Red": "Punainen",
-          "Green": "Vihreä",
           "Blue": "Sininen",
-          "Yes": "Kyllä",
+          "Cancel": "Peru",
+          "Green": "Vihreä",
           "No": "Ei",
-          "Save": "Tallenna"
+          "Red": "Punainen",
+          "Save": "Tallenna",
+          "Yes": "Kyllä"
         },
         "CSDU4 Decision App Demo": {
           "About": "Tietoja",
+          "About Us": "Tietoja meistä",
           "I don't know": "En tiedä",
-          "When?": "Milloin?",
-          "About Us": "Tietoja meistä"
+          "When?": "Milloin?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Tietoja",
+          "About Us": "Tietoja meistä",
           "I don't know": "En tiedä",
-          "When?": "Milloin?",
-          "About Us": "Tietoja meistä"
+          "When?": "Milloin?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Tietoja",
+          "About Us": "Tietoja meistä",
           "I don't know": "En tiedä",
-          "When?": "Milloin?",
-          "About Us": "Tietoja meistä"
+          "When?": "Milloin?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Piilota",
@@ -950,38 +950,38 @@
         "CSDU4 List App Demo": {
           "About": "Tietoja",
           "About Us": "Tietoja meistä",
-          "Done": "Valmis",
-          "Cancel": "Peru"
+          "Cancel": "Peru",
+          "Done": "Valmis"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Tietoja",
           "About Us": "Tietoja meistä",
-          "Done": "Valmis",
-          "Cancel": "Peru"
+          "Cancel": "Peru",
+          "Done": "Valmis"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Tietoja",
           "About Us": "Tietoja meistä",
-          "Done": "Valmis",
-          "Cancel": "Peru"
+          "Cancel": "Peru",
+          "Done": "Valmis"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Tietoja",
+          "About Us": "Tietoja meistä",
           "Submit": "Jatka",
-          "When?": "Milloin?",
-          "About Us": "Tietoja meistä"
+          "When?": "Milloin?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Tietoja",
+          "About Us": "Tietoja meistä",
           "Submit": "Jatka",
-          "When?": "Milloin?",
-          "About Us": "Tietoja meistä"
+          "When?": "Milloin?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Tietoja",
+          "About Us": "Tietoja meistä",
           "Submit": "Jatka",
-          "When?": "Milloin?",
-          "About Us": "Tietoja meistä"
+          "When?": "Milloin?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+"
@@ -1005,76 +1005,76 @@
           "Success!": "Onnistui!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "I",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "teksti"
@@ -1095,12 +1095,12 @@
           "Start": "Aloita"
         },
         "csd-apps for good-2": {
-          "Next": "Seuraava",
-          "Home": "Etusivu"
+          "Home": "Etusivu",
+          "Next": "Seuraava"
         },
         "csd-apps for good-2_2022": {
-          "Next": "Seuraava",
-          "Home": "Etusivu"
+          "Home": "Etusivu",
+          "Next": "Seuraava"
         },
         "csd-apps for good-3": {
           "1": "1",
@@ -1115,23 +1115,15 @@
           "4": "4"
         },
         "csd-explore ui-2": {
-          "Next": "Seuraava",
-          "Home": "Etusivu"
+          "Home": "Etusivu",
+          "Next": "Seuraava"
         },
         "csd-explore ui-2_2022": {
-          "Next": "Seuraava",
-          "Home": "Etusivu"
+          "Home": "Etusivu",
+          "Next": "Seuraava"
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1142,18 +1134,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1164,7 +1156,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Sorry!": "Anteeksi!"
@@ -1174,14 +1174,6 @@
         },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1192,18 +1184,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1214,7 +1206,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "Seuraava"
@@ -1237,12 +1237,12 @@
           "Next": "Seuraava"
         },
         "ml-customize-raspado-2021": {
-          "yes": "kyllä",
-          "no": "ei"
+          "no": "ei",
+          "yes": "kyllä"
         },
         "ml-customize-raspado_2022": {
-          "yes": "kyllä",
-          "no": "ei"
+          "no": "ei",
+          "yes": "kyllä"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Jatka",
@@ -1253,88 +1253,88 @@
           "Loading...": "Lataa..."
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "L",
           "A": "A",
-          "yes": "kyllä",
-          "no": "ei"
+          "W": "L",
+          "no": "ei",
+          "yes": "kyllä"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "L",
           "A": "A",
-          "yes": "kyllä",
-          "no": "ei"
+          "W": "L",
+          "no": "ei",
+          "yes": "kyllä"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Back": "Takaisin"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Back": "Takaisin"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Kyllä",
+          "B": "B",
           "No": "Ei",
-          "B": "B"
+          "Yes": "Kyllä"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Kyllä",
+          "B": "B",
           "No": "Ei",
-          "B": "B"
+          "Yes": "Kyllä"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Kyllä",
-          "No": "Ei"
+          "No": "Ei",
+          "Yes": "Kyllä"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Kyllä",
-          "No": "Ei"
+          "No": "Ei",
+          "Yes": "Kyllä"
         },
         "ml-use model card-example3A-2021": {
-          "rain": "sade",
-          "snow": "lumi",
           "cloudy": "pilvinen",
-          "night": "yö"
+          "night": "yö",
+          "rain": "sade",
+          "snow": "lumi"
         },
         "ml-use model card-example3A_2022": {
-          "rain": "sade",
-          "snow": "lumi",
           "cloudy": "pilvinen",
-          "night": "yö"
+          "night": "yö",
+          "rain": "sade",
+          "snow": "lumi"
         }
       }
     }

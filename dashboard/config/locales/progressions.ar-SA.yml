@@ -19,6 +19,7 @@ ar:
       'Bunny ': " باني "
       CS Discoveries Post-Course Survey: استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب
       Challenge: تحدي
+      Change: تغيير
       Collision Detection: كشف التصادم
       Collisions: التصادمات
       Combining Representations: الجمع بين التمثيلات
@@ -83,7 +84,7 @@ ar:
       Project: مشروع
       Properties: 'خصائص
 
-'
+        '
       Quarter Notes: ملاحظات ربع سنوية
       Reflection: تأملات
       Representing Images: تمثيل الصور

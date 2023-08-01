@@ -8,7 +8,7 @@ require_relative 'i18n_script_utils'
 
 class RedactRestoreUtils
   def self.redact_file(source_path, plugins=[], format='md')
-    args = ['bin/i18n/node_modules/.bin/redact']
+    args = [CDO.dir('bin/i18n/node_modules/.bin/redact')]
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
     args.push(Shellwords.escape(source_path))
@@ -18,7 +18,7 @@ class RedactRestoreUtils
   end
 
   def self.restore_file(source_path, redacted_path, plugins=[], format='md')
-    args = ['bin/i18n/node_modules/.bin/restore']
+    args = [CDO.dir('bin/i18n/node_modules/.bin/restore')]
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
     args.push("-s #{Shellwords.escape(source_path)}")
@@ -30,7 +30,7 @@ class RedactRestoreUtils
   end
 
   def self.redact_data(source_data, plugins=[], format='md')
-    args = ['bin/i18n/node_modules/.bin/redact']
+    args = [CDO.dir('bin/i18n/node_modules/.bin/redact')]
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
 
@@ -111,7 +111,7 @@ class RedactRestoreUtils
 
     source_data =
       if File.extname(source) == '.json'
-        JSON.parse(File.read(source))
+        JSON.load_file(source)
       else
         YAML.load_file(source)
       end
@@ -128,6 +128,6 @@ class RedactRestoreUtils
   end
 
   private_class_method def self.plugins_to_arg(plugins)
-    plugins.map {|name| "bin/i18n/node_modules/@code-dot-org/remark-plugins/src/#{name}.js" if name}.join(',')
+    plugins.map {|name| CDO.dir("bin/i18n/node_modules/@code-dot-org/remark-plugins/src/#{name}.js") if name}.join(',')
   end
 end

@@ -2,8 +2,19 @@
   "pt-BR": {
     "data": {
       "mini_rubric": {
-        "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "Conceito-chave"
+        "CSD U2 Image assessment_2021": {
+          "rubric_key_concept": "Estruture o conteúdo em uma página web usando HTML (Adicionar uma imagem a uma página web). Dê devidamente os créditos a outras pessoas quando utilizar o trabalho delas."
+        },
+        "CSD U2 Image assessment_2022": {
+          "rubric_key_concept": "Estruture o conteúdo em uma página web usando HTML (Adicionar uma imagem a uma página web). Dê devidamente os créditos a outras pessoas quando utilizar o trabalho delas."
+        },
+        "CSD U2 adding pages_2021": {
+          "rubric_performance_level_2": "Há pelo menos um link funcionando de uma página HTML para outra\n",
+          "rubric_performance_level_4": "Nenhuma nova página foi criada e não há links\n"
+        },
+        "CSD U2 adding pages_2022": {
+          "rubric_performance_level_2": "Há pelo menos um link funcionando de uma página HTML para outra\n",
+          "rubric_performance_level_4": "Nenhuma nova página foi criada e não há links\n"
         },
         "CSD U4 - Design Mode Project_2019": {
           "rubric_key_concept": "Crie um protótipo digital para a tela de um aplicativo.",
@@ -25,6 +36,27 @@
           "rubric_performance_level_2": "A maioria dos elementos do protótipo em papel foi recriada no protótipo digital, mas pode haver algumas inconsistências com o layout, o tamanho ou alguns pequenos elementos ausentes. As inconsistências não afetariam a funcionalidade do protótipo.",
           "rubric_performance_level_3": "Alguns elementos do protótipo em papel foram recriados no protótipo digital, mas há inconsistências suficientes para afetar a funcionalidade do protótipo.",
           "rubric_performance_level_4": "Não há elementos no protótipo digital ou os elementos não são consistentes com o protótipo em papel."
+        },
+        "CSD U6 - Board Inputs - A_2222": {
+          "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando o código",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
+        "CSD Web CSS Assessment_2021": {
+          "rubric_key_concept": "Crie uma folha de estilo e adicione seu link no HTML. A folha de estilo inclui uma regra que altera o elemento de parágrafo de uma página Web.",
+          "rubric_performance_level_1": "Os parágrafos têm uma nova cor e tamanho, e não há erros ou inconsistências no código HTML ou CSS.",
+          "rubric_performance_level_2": "Os parágrafos têm uma nova cor ou tamanho.",
+          "rubric_performance_level_3": "Os parágrafos possuem um conjunto de regras especial na folha de estilo e a propriedade cor ou tamanho está sendo usada, mas há erros suficientes para que o texto não mude de cor ou tamanho. Há um código HTML que tenta vincular a folha de estilo à página Web.",
+          "rubric_performance_level_4": "Não foi encontrado um conjunto de regras especial para parágrafos, ou as propriedades de cor ou tamanho não estão sendo usadas no conjunto de regras. O código que vincula a folha de estilo à página da Web não está presente."
+        },
+        "CSD Web CSS Assessment_2022": {
+          "rubric_key_concept": "Crie uma folha de estilo e adicione seu link no HTML. A folha de estilo inclui uma regra que altera o elemento de parágrafo de uma página Web.",
+          "rubric_performance_level_1": "Os parágrafos têm uma nova cor e tamanho, e não há erros ou inconsistências no código HTML ou CSS.",
+          "rubric_performance_level_2": "Os parágrafos têm uma nova cor ou tamanho.",
+          "rubric_performance_level_3": "Os parágrafos possuem um conjunto de regras especial na folha de estilo e a propriedade cor ou tamanho está sendo usada, mas há erros suficientes para que o texto não mude de cor ou tamanho. Há um código HTML que tenta vincular a folha de estilo à página Web.",
+          "rubric_performance_level_4": "Não foi encontrado um conjunto de regras especial para parágrafos, ou as propriedades de cor ou tamanho não estão sendo usadas no conjunto de regras. O código que vincula a folha de estilo à página da Web não está presente."
         },
         "CSDU4 Project Events_2019": {
           "rubric_performance_level_1": "Todas as telas de cada membro da equipe estão incluídas no projeto, e cada botão é vinculado à tela apropriada.",
@@ -82,6 +114,9 @@
           "rubric_performance_level_2": "Vários botões no protótipo são vinculados à tela apropriada.",
           "rubric_performance_level_3": "Há pelo menos um evento no protótipo que pode ser acionado para produzir algum tipo de resposta.",
           "rubric_performance_level_4": "Não há eventos no protótipo."
+        },
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "Conceito-chave"
         }
       }
     }

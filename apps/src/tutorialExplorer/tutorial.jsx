@@ -39,6 +39,7 @@ export default class Tutorial extends React.Component {
         onKeyDown={this.keyboardSelectTutorial}
         tabIndex="0"
         role="button"
+        data-tutorial-code={this.props.item.code}
       >
         <div style={styles.tutorialImageContainer}>
           <div style={styles.tutorialImageBackground} />

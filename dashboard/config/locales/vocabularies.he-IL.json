@@ -2,231 +2,77 @@
   "he-IL": {
     "data": {
       "vocabularies": {
-        "debugging/minecraft/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "debugging/hero/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "function/hero/unversioned": {
-          "word": "פונקציה"
-        },
-        "code/poem-art/2021": {
-          "word": "קוד"
-        },
-        "mood/poem-art/2021": {
-          "word": "אווירה"
-        },
-        "debugging/flappy/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "code/artist/unversioned": {
-          "word": "קוד"
-        },
-        "debugging/artist/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "conditionals/aquatic/unversioned": {
-          "word": "תנאים"
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "loops/aquatic/unversioned": {
-          "word": "חזרות"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "debugging/mc/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "debugging/playlab/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/sports/unversioned": {
-          "word": "קוד"
-        },
-        "debugging/sports/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "debugging/basketball/unversioned": {
-          "word": "מציאת טעויות"
-        },
-        "machine_learning/oceans/unversioned": {
-          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
-        },
-        "debugging/coursed/2022": {
-          "word": "מציאת טעויות"
-        },
-        "conditionals/coursed/2022": {
-          "word": "תנאים"
-        },
-        "sprite/coursef/2022": {
-          "word": "ספרייט"
-        },
-        "behavior/coursef/2022": {
-          "word": "התנהגות"
-        },
-        "variable/coursef/2022": {
-          "word": "משתנה"
-        },
-        "machine_learning/coursef/2022": {
-          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
-        },
-        "dns/coursef/2022": {
-          "word": "DNS"
-        },
-        "internet/coursef/2022": {
-          "word": "אינטרנט"
-        },
-        "url/coursef/2022": {
-          "word": "קישור"
-        },
-        "define/coursef/2022": {
-          "word": "הגדר"
-        },
-        "behavior/coursee/2022": {
-          "word": "התנהגות"
-        },
-        "sprite/coursee/2022": {
-          "word": "ספרייט"
-        },
-        "function/coursee/2022": {
-          "word": "פונקציה"
-        },
-        "conditionals/coursee/2022": {
-          "word": "תנאים"
-        },
-        "copyright/coursee/2022": {
+        "copyright/csd/2021": {
           "word": "זכויות יוצרים"
         },
-        "define/coursee/2022": {
-          "word": "הגדר"
-        },
-        "debugging/courseb/2022": {
+        "debugging/csd/2021": {
           "word": "מציאת טעויות"
         },
-        "click/courseb/2022": {
-          "word": "קליק"
-        },
-        "drop/courseb/2022": {
-          "word": "דְרוֹפּ"
-        },
-        "debugging/express/2022": {
-          "word": "מציאת טעויות"
-        },
-        "behavior/express/2022": {
-          "word": "התנהגות"
-        },
-        "sprite/express/2022": {
-          "word": "ספרייט"
-        },
-        "conditionals/express/2022": {
-          "word": "תנאים"
-        },
-        "function/express/2022": {
-          "word": "פונקציה"
-        },
-        "variable/express/2022": {
+        "variable/csd/2021": {
           "word": "משתנה"
         },
-        "define/express/2022": {
-          "word": "הגדר"
-        },
-        "click/pre-express/2022": {
-          "word": "קליק"
-        },
-        "drop/pre-express/2022": {
-          "word": "דְרוֹפּ"
-        },
-        "debugging/pre-express/2022": {
-          "word": "מציאת טעויות"
-        },
-        "debugging/coursea/2022": {
-          "word": "מציאת טעויות"
-        },
-        "click/coursea/2022": {
-          "word": "קליק"
-        },
-        "drop/coursea/2022": {
-          "word": "דְרוֹפּ"
-        },
-        "debugging/coursec/2022": {
-          "word": "מציאת טעויות"
-        },
-        "binary/coursec/2022": {
-          "word": "בינארי"
-        },
-        "debugging/csd/2022": {
-          "word": "מציאת טעויות"
-        },
-        "variable/csd/2022": {
-          "word": "משתנה"
-        },
-        "sprite/csd/2022": {
+        "sprite/csd/2021": {
           "word": "ספרייט"
         },
-        "conditionals/csd/2022": {
+        "conditionals/csd/2021": {
           "word": "תנאים"
         },
-        "abstraction/csd/2022": {
+        "abstraction/csd/2021": {
           "word": "הפשטה"
         },
-        "function/csd/2022": {
+        "function/csd/2021": {
           "word": "פונקציה"
         },
-        "copyright/csd/2022": {
-          "word": "זכויות יוצרים"
-        },
-        "machine_learning/csd/2022": {
+        "machine_learning/csd/2021": {
           "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
-        "code/poem-art/unversioned": {
-          "word": "קוד",
-          "definition": ""
+        "debugging/coursea/2021": {
+          "word": "מציאת טעויות"
         },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "click/coursea/2021": {
+          "word": "קליק"
         },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "drop/coursea/2021": {
+          "word": "דְרוֹפּ"
         },
-        "mood/poem-art/unversioned": {
-          "word": "אווירה",
-          "definition": ""
+        "debugging/courseb/2021": {
+          "word": "מציאת טעויות"
         },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "click/courseb/2021": {
+          "word": "קליק"
+        },
+        "drop/courseb/2021": {
+          "word": "דְרוֹפּ"
+        },
+        "debugging/coursec/2021": {
+          "word": "מציאת טעויות"
+        },
+        "binary/coursec/2021": {
+          "word": "בינארי"
+        },
+        "debugging/coursed/2021": {
+          "word": "מציאת טעויות"
+        },
+        "conditionals/coursed/2021": {
+          "word": "תנאים"
+        },
+        "behavior/coursee/2021": {
+          "word": "התנהגות"
+        },
+        "sprite/coursee/2021": {
+          "word": "ספרייט"
+        },
+        "copyright/coursee/2021": {
+          "word": "זכויות יוצרים"
+        },
+        "function/coursee/2021": {
+          "word": "פונקציה"
+        },
+        "conditionals/coursee/2021": {
+          "word": "תנאים"
+        },
+        "define/coursee/2021": {
+          "word": "הגדר"
         },
         "sprite/coursef/2021": {
           "word": "ספרייט"
@@ -251,36 +97,6 @@
         },
         "define/coursef/2021": {
           "word": "הגדר"
-        },
-        "debugging/courseb/2021": {
-          "word": "מציאת טעויות"
-        },
-        "click/courseb/2021": {
-          "word": "קליק"
-        },
-        "drop/courseb/2021": {
-          "word": "דְרוֹפּ"
-        },
-        "debugging/coursea/2021": {
-          "word": "מציאת טעויות"
-        },
-        "click/coursea/2021": {
-          "word": "קליק"
-        },
-        "drop/coursea/2021": {
-          "word": "דְרוֹפּ"
-        },
-        "debugging/coursec/2021": {
-          "word": "מציאת טעויות"
-        },
-        "binary/coursec/2021": {
-          "word": "בינארי"
-        },
-        "debugging/coursed/2021": {
-          "word": "מציאת טעויות"
-        },
-        "conditionals/coursed/2021": {
-          "word": "תנאים"
         },
         "debugging/express/2021": {
           "word": "מציאת טעויות"
@@ -312,47 +128,234 @@
         "debugging/pre-express/2021": {
           "word": "מציאת טעויות"
         },
-        "behavior/coursee/2021": {
-          "word": "התנהגות"
-        },
-        "sprite/coursee/2021": {
-          "word": "ספרייט"
-        },
-        "copyright/coursee/2021": {
+        "copyright/csd/2022": {
           "word": "זכויות יוצרים"
         },
-        "function/coursee/2021": {
-          "word": "פונקציה"
-        },
-        "conditionals/coursee/2021": {
-          "word": "תנאים"
-        },
-        "define/coursee/2021": {
-          "word": "הגדר"
-        },
-        "machine_learning/csd/2021": {
-          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
-        },
-        "debugging/csd/2021": {
+        "debugging/csd/2022": {
           "word": "מציאת טעויות"
         },
-        "variable/csd/2021": {
+        "variable/csd/2022": {
           "word": "משתנה"
         },
-        "sprite/csd/2021": {
+        "sprite/csd/2022": {
           "word": "ספרייט"
         },
-        "conditionals/csd/2021": {
+        "conditionals/csd/2022": {
           "word": "תנאים"
         },
-        "abstraction/csd/2021": {
+        "abstraction/csd/2022": {
           "word": "הפשטה"
         },
-        "function/csd/2021": {
+        "function/csd/2022": {
           "word": "פונקציה"
         },
-        "copyright/csd/2021": {
+        "machine_learning/csd/2022": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
+        },
+        "debugging/coursea/2022": {
+          "word": "מציאת טעויות"
+        },
+        "click/coursea/2022": {
+          "word": "קליק"
+        },
+        "drop/coursea/2022": {
+          "word": "דְרוֹפּ"
+        },
+        "debugging/courseb/2022": {
+          "word": "מציאת טעויות"
+        },
+        "click/courseb/2022": {
+          "word": "קליק"
+        },
+        "drop/courseb/2022": {
+          "word": "דְרוֹפּ"
+        },
+        "debugging/coursec/2022": {
+          "word": "מציאת טעויות"
+        },
+        "data/coursec/2022": {
+          "word": "נתונים"
+        },
+        "binary/coursec/2022": {
+          "word": "בינארי"
+        },
+        "debugging/coursed/2022": {
+          "word": "מציאת טעויות"
+        },
+        "conditionals/coursed/2022": {
+          "word": "תנאים"
+        },
+        "behavior/coursee/2022": {
+          "word": "התנהגות"
+        },
+        "sprite/coursee/2022": {
+          "word": "ספרייט"
+        },
+        "function/coursee/2022": {
+          "word": "פונקציה"
+        },
+        "conditionals/coursee/2022": {
+          "word": "תנאים"
+        },
+        "copyright/coursee/2022": {
           "word": "זכויות יוצרים"
+        },
+        "define/coursee/2022": {
+          "word": "הגדר"
+        },
+        "sprite/coursef/2022": {
+          "word": "ספרייט"
+        },
+        "behavior/coursef/2022": {
+          "word": "התנהגות"
+        },
+        "variable/coursef/2022": {
+          "word": "משתנה"
+        },
+        "machine_learning/coursef/2022": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
+        },
+        "dns/coursef/2022": {
+          "word": "DNS"
+        },
+        "internet/coursef/2022": {
+          "word": "אינטרנט"
+        },
+        "url/coursef/2022": {
+          "word": "קישור"
+        },
+        "define/coursef/2022": {
+          "word": "הגדר"
+        },
+        "debugging/express/2022": {
+          "word": "מציאת טעויות"
+        },
+        "behavior/express/2022": {
+          "word": "התנהגות"
+        },
+        "sprite/express/2022": {
+          "word": "ספרייט"
+        },
+        "conditionals/express/2022": {
+          "word": "תנאים"
+        },
+        "function/express/2022": {
+          "word": "פונקציה"
+        },
+        "variable/express/2022": {
+          "word": "משתנה"
+        },
+        "define/express/2022": {
+          "word": "הגדר"
+        },
+        "click/pre-express/2022": {
+          "word": "קליק"
+        },
+        "drop/pre-express/2022": {
+          "word": "דְרוֹפּ"
+        },
+        "debugging/pre-express/2022": {
+          "word": "מציאת טעויות"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "תנאים"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "חזרות"
+        },
+        "code/artist/unversioned": {
+          "word": "קוד"
+        },
+        "debugging/artist/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/hero/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "function/hero/unversioned": {
+          "word": "פונקציה"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/mc/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "machine_learning/oceans/unversioned": {
+          "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/playlab/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "code/poem-art/2021": {
+          "word": "קוד"
+        },
+        "mood/poem-art/2021": {
+          "word": "אווירה"
+        },
+        "code/sports/unversioned": {
+          "word": "קוד"
+        },
+        "debugging/sports/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "code/poem-art/unversioned": {
+          "word": "קוד",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "אווירה",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         }
       }
     }

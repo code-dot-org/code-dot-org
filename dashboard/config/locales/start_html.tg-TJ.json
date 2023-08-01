@@ -3,12 +3,12 @@
     "data": {
       "start_html": {
         "CSD U1 IO Story_2021": {
-          "Name": "Ном",
-          "City": "Шаҳр"
+          "City": "Шаҳр",
+          "Name": "Ном"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Ном",
-          "City": "Шаҳр"
+          "City": "Шаҳр",
+          "Name": "Ном"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Бозгашт"
@@ -23,12 +23,12 @@
           "green": "сабз"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "red": "сурх",
-          "green": "сабз"
+          "green": "сабз",
+          "red": "сурх"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "сабз",
-          "blue": "кабуд"
+          "blue": "кабуд",
+          "green": "сабз"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Ном"

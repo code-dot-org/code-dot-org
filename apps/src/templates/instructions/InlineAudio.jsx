@@ -284,7 +284,11 @@ class InlineAudio extends React.Component {
             id="volume"
           >
             <i
-              className={classNames('fa fa-volume-up', moduleStyles.buttonImg)}
+              className={classNames(
+                'fa fa-volume-up',
+                moduleStyles.buttonImg,
+                moduleStyles.buttonImgVolume
+              )}
               style={[this.props.style && this.props.style.buttonImg]}
             />
           </div>

@@ -13,7 +13,7 @@ import Sounds from '../Sounds';
 export async function getSongManifest(useRestrictedSongs, manifestFilename) {
   if (!manifestFilename || manifestFilename.length === 0) {
     manifestFilename = useRestrictedSongs
-      ? 'songManifest2022.json'
+      ? 'songManifest2023_v1.json'
       : 'testManifest.json';
   }
 

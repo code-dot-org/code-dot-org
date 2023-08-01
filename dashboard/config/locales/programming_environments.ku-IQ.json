@@ -2,79 +2,14 @@
   "ku-IQ": {
     "data": {
       "programming_environments": {
-        "gamelab": {
-          "name": "تاقیگەی یاری",
-          "categories": {
-            "game_lab": {
-              "name": "تاقیگەی یاری",
-              "expressions": {
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "ڕەش و سپی"
-                    }
-                  }
-                }
-              }
-            },
-            "sprites": {
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "لوولپێچی"
-                    }
-                  }
-                }
-              }
-            },
-            "groups": {
-              "name": "کۆمەڵەکان",
-              "expressions": {
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "ڕەنگ"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "ڕەنگ"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "ئەستێرە"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "بیرکاری"
-            },
-            "variables": {
-              "name": "گۆڕاوەکان"
-            },
-            "functions": {
-              "name": "فرمانەکان"
-            }
-          }
-        },
         "applab": {
-          "name": "تاقیگەی ئاپ",
           "categories": {
-            "ui_controls": {
+            "advanced": {
+              "name": "پێشکەوتوو"
+            },
+            "control": {
               "expressions": {
-                "onEvent": {
+                "timedLoop": {
                   "palette_params": {
                     "callback": {
                       "type": "فرمان"
@@ -94,9 +29,15 @@
                 }
               }
             },
-            "control": {
+            "functions": {
+              "name": "فرمانەکان"
+            },
+            "math": {
+              "name": "بیرکاری"
+            },
+            "ui_controls": {
               "expressions": {
-                "timedLoop": {
+                "onEvent": {
                   "palette_params": {
                     "callback": {
                       "type": "فرمان"
@@ -105,51 +46,110 @@
                 }
               }
             },
-            "math": {
-              "name": "بیرکاری"
-            },
             "variables": {
               "name": "گۆڕاوەکان"
+            }
+          },
+          "name": "تاقیگەی ئاپ"
+        },
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "ئەستێرە"
+                    }
+                  }
+                }
+              }
             },
             "functions": {
               "name": "فرمانەکان"
             },
-            "advanced": {
-              "name": "پێشکەوتوو"
+            "game_lab": {
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "ڕەش و سپی"
+                    }
+                  }
+                }
+              },
+              "name": "تاقیگەی یاری"
+            },
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "ڕەنگ"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "ڕەنگ"
+                    }
+                  }
+                }
+              },
+              "name": "کۆمەڵەکان"
+            },
+            "math": {
+              "name": "بیرکاری"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "لوولپێچی"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "گۆڕاوەکان"
             }
-          }
+          },
+          "name": "تاقیگەی یاری"
         },
         "spritelab": {
           "categories": {
-            "location": {
-              "name": "شوێنەکان"
-            },
             "actions": {
               "name": "کردەوەکان"
             },
             "behaviors": {
               "name": "ڕەفتارەکان"
             },
-            "loops": {
-              "name": "گرێکان"
-            },
-            "variables": {
-              "name": "گۆڕاوەکان"
-            },
-            "math": {
-              "name": "بیرکاری"
-            },
-            "logic": {
-              "name": "لۆژيك"
+            "comments": {
+              "name": "سەرنجەکان"
             },
             "functions": {
               "name": "فرمانەکان"
             },
+            "location": {
+              "name": "شوێنەکان"
+            },
+            "logic": {
+              "name": "لۆژيك"
+            },
+            "loops": {
+              "name": "گرێکان"
+            },
+            "math": {
+              "name": "بیرکاری"
+            },
             "text": {
               "name": "دەق"
             },
-            "comments": {
-              "name": "سەرنجەکان"
+            "variables": {
+              "name": "گۆڕاوەکان"
             }
           }
         }

@@ -14,6 +14,7 @@ km:
       Course E Artist Project: វគ្គសិក្សា​ E គម្រោងអ្នកសិល្បៈ
       Creating Sprites: ការបង្កើត Sprites
       Dance Crews: ក្រុមរាំ
+      Debugging: ការបំបាត់កំហុស (Debugging)
       Designing Screens with Code: ការរចនា​អេក្រង់​ជាមួយ​កូដ
       Drawing: គំនូរ
       Drawing Shapes: គំនូរគូរជារាង
@@ -26,40 +27,54 @@ km:
       Get In Formation: សម្រាក! ប្រុង! តម្រង់ជួរ!
       Hardware and Software: ផ្នែក​រឹង(គ្រឿងឧបករណ៍) និង​ផ្នែក​ទន់​(កម្មវិធី)
       Headings in HTML: "ចំណងជើងក្នុង HTML\n\n"
+      How to Make a Sprite: របៀបបង្កើត SPRITE
+      Introducing Sprite Lab: សេចក្ដីណែនាំពី Sprite Lab
       Introduction to Game Lab: ការណែនាំទៅកាន់បន្ទប់ពិសោធន៍ហ្គេម
       Lesson Extras: មេរៀនបន្ថែម
       Lesson Overview: ទិដ្ឋភាព​ទូទៅ​របស់​មេរៀន
       Lists: បញ្ជី
       Make a Prediction: សូម​ធ្វើការ​ប៉ាន់ស្មាន
       'Minecraft: Hero''s Journey': 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
+      'Mini-Project: Royal Battle': 'គម្រោងខ្នាតតូច៖ Royal Battle'
+      'Mini-Project: Sticker Art': 'គម្រោងខ្នាតតូច៖ សិល្បៈស្ទីគ័រ'
       More Buttons: ប៊ូតុងបន្ថែម
       Naming Variables: ការដាក់ឈ្មោះអថេរ
       Overview: ទិដ្ឋភាពទូទៅ 
       Plotting Shapes in Game Lab: គម្រោងរូបភាពនៅក្នុងបន្ទប់ល្បែងពិសោធន៍
-      Programming with Rey and BB-8: ការសរសេរកូដកម្មវិធិជាមួយ រៃសនិង ប៊ីប៊ី-8។
+      Practice: អនុវត្តន៍
+      Prediction: ការទស្សន៍ទាយ
+      Programming with Rey and BB-8: សរសេរកម្មវិធីជាមួយ Rey និង BB-8
       Properties: ធាតុ
       Quarter Notes: រង្វាស់ ១ ភាគ ៤
       Random Numbers: លេខចៃដន្យ
       Sample Game: ល្បែងគំរូ
       Shapes and Parameters: រូបរាងនិងប៉ារ៉ាម៉ែត្រ
+      Skill Building: ការកសាងជំនាញ
       Speed it Up, Slow it Down: ជាន់ហ្គែរ ចាប់ហ្វ្រាំង
       Sprite Interactions: Sprite អន្តរកម្ម
       Sprite Properties: លក្ខណៈសម្បត្តិនៃ sprite
       Sprite Scenes: ឈុតឆាក ស្រ្ពៃយ៍
       Sprite Velocity: ល្បឿន Sprite
       The Draw Loop: ការគូររង្វិលជុំដដែលៗ
+      The Harvester: អ្នកប្រមូលផល
       Using the Grid: ប្រើប្រាស់រូបក្រឡាចត្រង្គ
       Variables: អ​ថេរ
       Velocity and the Counter Pattern: ល្បឿននិងលំនាំរាប់
       Velocity and the Counter Pattern Review: ល្បឿននិងការពិនិត្យឡើងវិញនៃគំរូរាប់
       Video: វីដេអូ
+      'Video: Dance Party Events': 'វីដេអូ៖ ពិធីជប់លៀងរាំកម្តៅសាច់ដុំ'
+      'Video: Dance Party Warm Up': 'វីដេអូ៖ ពិធីជប់លៀងរាំកម្តៅសាច់ដុំ'
       'Video: Drawing in Game Lab - Part 1': 'វីដេអូ: គំនូរនៅក្នុងបន្ទប់ពិសោធន៍នៃហ្គេម- ផ្នែកទី១'
       'Video: Drawing in Game Lab - Part 2': 'វីដេអូ: គំនូរគំនូរនៅក្នុងបន្ទប់ពិសោធន៍នៃហ្គេម-ផ្នែកទី២'
+      'Video: How to Make a Sprite': 'របៀបបង្កើតអាង (Sprite)'
       'Video: Intro to Web Lab - Part 1': 'វីដេអូ: ការណែនាំមកកាន់ Web Lab - ផ្នែកទី ១'
+      'Video: Introducing Sprite Lab': 'វីដេអូ៖ ការណែនាំ អាង(Sprite)'
       'Video: Introduction to Sprites': 'វីដេអូ: ការណែនាំមកកាន់ Sprites'
       'Video: Introduction to the Draw Loop': 'វីដេអូ: សេចក្តីណែនាំអំពីការគូររង្វិលជុំដដែលៗ'
       'Video: Problem Solving Process': 'វីដេអូ៖ របៀបដោះស្រាយបញ្ហា'
+      'Video: Sprites in Action': 'កំណត់សកម្មភាពឱ្យតួរអង្គ'
       'Video: The Animation Tab': 'វីដេអូ: ផ្ទាំងគំនូរជីវចល'
+      'Video: The Collector': 'វីដេអូ៖ អ្នកប្រមូល'
       'Video: Velocity': 'វីដេអូ៖ ល្បឿន'
       'Video: What Makes a Computer, a Computer?': 'វីដេអូ: តើអ្វីទៅដែលធ្វើអោយកុំព្យូរទ័រទៅជាកុំព្យូរទ័រ?'
       Where'd They Go?: តើគេទៅណាអស់ទៅ?

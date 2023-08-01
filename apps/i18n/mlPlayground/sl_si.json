@@ -1,120 +1,14 @@
 {
-  "navigateForward": "Nadaljuj",
-  "navigateBack": "Nazaj",
-  "tryAgain": "Poskusi ponovno",
-  "navigateDone": "Končaj",
-  "saveProgress": "Shrani",
-  "correctAnswer": "Pravilno",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Opis",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Opis",
+  "correctAnswer": "Pravilno",
   "dataCardLastUpdated": "Nazadnje posodobljeno",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "starost"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "vreme"
-        },
-        "day": {
-          "id": "dan"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "čebula"
-        },
-        "avocado": {
-          "id": "avokado"
-        },
-        "corn": {
-          "id": "koruza"
-        },
-        "beans": {
-          "id": "fižolčki"
-        },
-        "lime": {
-          "id": "limeta"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "lobster": {
-          "id": "jastog"
-        },
-        "bacon": {
-          "id": "slanina"
-        },
-        "cheese": {
-          "id": "sir"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "barva"
-        },
-        "food": {
-          "id": "hrana"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "starost"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "Opis"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "limeta"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "velikost"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "chicken": {
-          "id": "piščanec"
-        },
-        "fruit": {
-          "id": "sadje"
-        },
-        "beans": {
-          "id": "fižolčki"
-        },
-        "cheese": {
-          "id": "sir"
+        "Length": {
+          "id": "Dolžina"
         }
       }
     },
@@ -128,33 +22,38 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "age": {
-          "id": "starost"
-        },
-        "health": {
-          "id": "zdravje"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "piščanec"
-        },
-        "lamb": {
-          "id": "jagenjček"
-        },
-        "onion": {
-          "id": "čebula"
-        },
-        "cheese": {
-          "id": "sir"
+        "banana": {
+          "id": "banana"
         }
       }
     },
     "census_part": {
+      "fields": {
+        "age": {
+          "id": "starost"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "barva"
+        },
+        "food": {
+          "id": "hrana"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Starost"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "starost"
@@ -168,43 +67,53 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Država"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "starost"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Rezultat"
-        },
         "Country": {
           "id": "Država"
         },
         "Name": {
           "id": "Ime"
-        }
-      }
-    },
-    "songs": {
-      "fields": {
-        "Artist": {
-          "id": "Umetnik"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "people": {
-          "id": "ljudje"
         },
-        "elephant": {
-          "id": "slon"
-        },
-        "alligator": {
-          "id": "aligator"
+        "Score": {
+          "id": "Rezultat"
         }
       }
     },
-    "abalone": {
+    "naan_toy": {
       "fields": {
-        "Length": {
-          "id": "Dolžina"
+        "cheese": {
+          "id": "sir"
+        },
+        "chicken": {
+          "id": "piščanec"
+        },
+        "lamb": {
+          "id": "jagenjček"
+        },
+        "onion": {
+          "id": "čebula"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "Opis"
         }
       }
     },
@@ -218,38 +127,74 @@
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Country": {
-          "id": "Država"
+        "bacon": {
+          "id": "slanina"
         },
-        "Internet": {
-          "id": "Internet"
+        "cheese": {
+          "id": "sir"
         },
-        "Achievements": {
-          "id": "Dosežki"
-        },
-        "Age": {
-          "id": "Starost",
-          "description": "Starost"
-        },
-        "Gender": {
-          "id": "Spol",
-          "description": "Spol"
+        "lobster": {
+          "id": "jastog"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "banana"
+        "lime": {
+          "id": "limeta"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "Starost"
+        "alligator": {
+          "id": "aligator"
+        },
+        "elephant": {
+          "id": "slon"
+        },
+        "people": {
+          "id": "ljudje"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
+        "beans": {
+          "id": "fižolčki"
+        },
+        "cheese": {
+          "id": "sir"
+        },
+        "chicken": {
+          "id": "piščanec"
+        },
+        "fruit": {
+          "id": "sadje"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
+        "beans": {
+          "id": "fižolčki"
+        },
+        "corn": {
+          "id": "koruza"
+        },
+        "lime": {
+          "id": "limeta"
+        },
+        "onion": {
+          "id": "čebula"
         }
       }
     },
@@ -260,12 +205,67 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
+        "size": {
+          "id": "velikost"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "dan"
+        },
+        "weather": {
+          "id": "vreme"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Umetnik"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "starost"
+        },
+        "health": {
+          "id": "zdravje"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Dosežki"
+        },
+        "Age": {
+          "description": "Starost",
+          "id": "Starost"
+        },
         "Country": {
           "id": "Država"
+        },
+        "Gender": {
+          "description": "Spol",
+          "id": "Spol"
+        },
+        "Internet": {
+          "id": "Internet"
         }
       }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Nazaj",
+  "navigateDone": "Končaj",
+  "navigateForward": "Nadaljuj",
+  "saveProgress": "Shrani",
+  "tryAgain": "Poskusi ponovno"
 }

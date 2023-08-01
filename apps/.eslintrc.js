@@ -33,6 +33,7 @@ module.exports = {
     Eval: 'readonly',
     Flappy: 'readonly',
     ga: 'readonly',
+    gtag: 'readonly',
     Gamelab: 'readonly',
     google: 'readonly',
     Handsontable: 'readonly',

@@ -2,74 +2,11 @@
   "bn-BD": {
     "data": {
       "programming_environments": {
-        "gamelab": {
-          "categories": {
-            "groups": {
-              "expressions": {
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "রং"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "রং"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "গণিত",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "ন্যূনতম নম্বর ফিরে আসে"
-                    },
-                    "max": {
-                      "description": "সর্বোচ্চ নম্বর ফিরে আসে"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "ন্যূনতম নম্বর ফিরে আসে"
-                    },
-                    "max": {
-                      "description": "সর্বোচ্চ নম্বর ফিরে আসে"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "চলকগুলো",
-              "expressions": {
-                "assign_x": {
-                  "short_description": "বিদ্যমান এক variable এর মান নির্ধারন কর। উদাহরণস্বরূপ, x = 0;"
-                },
-                "declareAssign_x": {
-                  "short_description": "'var' এর পরে থাকা নাম দিয়ে একটি variable বানাও, এবং expression এর ডান দিকের মানের সাথে এটিকে জুড়ে দাও"
-                }
-              }
-            },
-            "functions": {
-              "name": "ফাংশনগুলি"
-            }
-          }
-        },
         "applab": {
-          "name": "অ্যাপ ল্যাব",
-          "description": "অ্যাপ ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি সহজ অ্যাপ বানানো হয়। একটি অ্যাপ্লিকেশন নকশা (ডিজাইন) করুন ,তাকে কাজ করানোর জন্য ব্লক বা জাভাস্ক্রিপ্ট দিয়ে কোড করুন, তারপর এক সেকেন্ডের মধ্যে আপনার অ্যাপ্লিকেশন শেয়ার করুন।",
           "categories": {
-            "ui_controls": {
+            "control": {
               "expressions": {
-                "onEvent": {
+                "timedLoop": {
                   "palette_params": {
                     "callback": {
                       "type": "ফাংশন"
@@ -89,9 +26,37 @@
                 }
               }
             },
-            "control": {
+            "functions": {
+              "name": "ফাংশনগুলি"
+            },
+            "math": {
               "expressions": {
-                "timedLoop": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "সর্বোচ্চ নম্বর ফিরে আসে"
+                    },
+                    "min": {
+                      "description": "ন্যূনতম নম্বর ফিরে আসে"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "সর্বোচ্চ নম্বর ফিরে আসে"
+                    },
+                    "min": {
+                      "description": "ন্যূনতম নম্বর ফিরে আসে"
+                    }
+                  }
+                }
+              },
+              "name": "গণিত"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
                   "palette_params": {
                     "callback": {
                       "type": "ফাংশন"
@@ -100,41 +65,76 @@
                 }
               }
             },
-            "math": {
-              "name": "গণিত",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "ন্যূনতম নম্বর ফিরে আসে"
-                    },
-                    "max": {
-                      "description": "সর্বোচ্চ নম্বর ফিরে আসে"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "ন্যূনতম নম্বর ফিরে আসে"
-                    },
-                    "max": {
-                      "description": "সর্বোচ্চ নম্বর ফিরে আসে"
-                    }
-                  }
-                }
-              }
-            },
             "variables": {
-              "name": "চলকগুলো",
               "expressions": {
                 "declareAssign_x": {
                   "short_description": "'var' এর পরে থাকা নাম দিয়ে একটি variable বানাও, এবং expression এর ডান দিকের মানের সাথে এটিকে জুড়ে দাও"
                 }
-              }
-            },
+              },
+              "name": "চলকগুলো"
+            }
+          },
+          "description": "অ্যাপ ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি সহজ অ্যাপ বানানো হয়। একটি অ্যাপ্লিকেশন নকশা (ডিজাইন) করুন ,তাকে কাজ করানোর জন্য ব্লক বা জাভাস্ক্রিপ্ট দিয়ে কোড করুন, তারপর এক সেকেন্ডের মধ্যে আপনার অ্যাপ্লিকেশন শেয়ার করুন।",
+          "name": "অ্যাপ ল্যাব"
+        },
+        "gamelab": {
+          "categories": {
             "functions": {
               "name": "ফাংশনগুলি"
+            },
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "রং"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "রং"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "সর্বোচ্চ নম্বর ফিরে আসে"
+                    },
+                    "min": {
+                      "description": "ন্যূনতম নম্বর ফিরে আসে"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "সর্বোচ্চ নম্বর ফিরে আসে"
+                    },
+                    "min": {
+                      "description": "ন্যূনতম নম্বর ফিরে আসে"
+                    }
+                  }
+                }
+              },
+              "name": "গণিত"
+            },
+            "variables": {
+              "expressions": {
+                "assign_x": {
+                  "short_description": "বিদ্যমান এক variable এর মান নির্ধারন কর। উদাহরণস্বরূপ, x = 0;"
+                },
+                "declareAssign_x": {
+                  "short_description": "'var' এর পরে থাকা নাম দিয়ে একটি variable বানাও, এবং expression এর ডান দিকের মানের সাথে এটিকে জুড়ে দাও"
+                }
+              },
+              "name": "চলকগুলো"
             }
           }
         },
@@ -146,23 +146,23 @@
             "events": {
               "name": "ঘটনাবলী"
             },
-            "loops": {
-              "name": "চক্র"
-            },
-            "variables": {
-              "name": "চলকগুলো"
-            },
-            "math": {
-              "name": "গণিত"
+            "functions": {
+              "name": "ফাংশনগুলি"
             },
             "logic": {
               "name": "যুক্তি"
             },
-            "functions": {
-              "name": "ফাংশনগুলি"
+            "loops": {
+              "name": "চক্র"
+            },
+            "math": {
+              "name": "গণিত"
             },
             "text": {
               "name": "পাঠ"
+            },
+            "variables": {
+              "name": "চলকগুলো"
             }
           }
         }

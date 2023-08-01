@@ -3,49 +3,41 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "예",
           "No": "아니요",
+          "Yes": "예",
           "cute": "귀여움"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "예",
           "No": "아니요",
+          "Yes": "예",
           "cute": "귀여움"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "예",
           "No": "아니요",
+          "Yes": "예",
           "cute": "귀여움"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "예",
           "No": "아니요",
+          "Yes": "예",
           "cute": "귀여움"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "이름",
+          "City": "도시",
           "Color": "색",
           "Food": "음식",
-          "City": "도시",
+          "Name": "이름",
           "text": "문장"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "이름",
+          "City": "도시",
           "Color": "색",
           "Food": "음식",
-          "City": "도시",
+          "Name": "이름",
           "text": "문장"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -56,18 +48,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -78,29 +70,28 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
-          "?": "?",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -111,20 +102,20 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
           "text": "문장"
         },
         "CSD U1 processing guess_2022": {
-          "?": "?",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -135,18 +126,27 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
           "text": "문장"
         },
         "CSD U1 processing live_2021": {
-          "walking": "걷기",
           "bear": "곰",
-          "rat": "쥐"
+          "rat": "쥐",
+          "walking": "걷기"
         },
         "CSD U1 processing live_2022": {
-          "walking": "걷기",
           "bear": "곰",
-          "rat": "쥐"
+          "rat": "쥐",
+          "walking": "걷기"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "맞습니다!",
@@ -158,14 +158,6 @@
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -176,18 +168,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -198,7 +190,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "뒤로"
@@ -207,36 +207,36 @@
           "Back": "뒤로"
         },
         "CSD U1 storage movies_2021": {
+          "No": "아니요",
           "Star Wars": "스타워즈",
           "Yes": "예",
-          "No": "아니요",
           "text": "문장"
         },
         "CSD U1 storage movies_2022": {
+          "No": "아니요",
           "Star Wars": "스타워즈",
           "Yes": "예",
-          "No": "아니요",
           "text": "문장"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "지우기",
-          "white": "하얀색",
-          "pink": "핑크색",
-          "green": "초록",
-          "black": "검정",
-          "purple": "보라색",
+          "Rainy": "비가 옴",
           "Sunny": "화창함",
-          "Rainy": "비가 옴"
+          "black": "검정",
+          "green": "초록",
+          "pink": "핑크색",
+          "purple": "보라색",
+          "white": "하얀색"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "지우기",
-          "white": "하얀색",
-          "pink": "핑크색",
-          "green": "초록",
-          "black": "검정",
-          "purple": "보라색",
+          "Rainy": "비가 옴",
           "Sunny": "화창함",
-          "Rainy": "비가 옴"
+          "black": "검정",
+          "green": "초록",
+          "pink": "핑크색",
+          "purple": "보라색",
+          "white": "하얀색"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -310,9 +310,9 @@
           "Success!": "성공!"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "동",
           "North": "북",
           "South": "남",
-          "East": "동",
           "West": "서"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
@@ -328,58 +328,58 @@
           "Medium": "보통"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "왼쪽으로",
-          "right": "오른쪽으로",
-          "red": "빨강",
-          "yellow": "노란",
           "green": "초록",
-          "purple": "보라색"
+          "left": "왼쪽으로",
+          "purple": "보라색",
+          "red": "빨강",
+          "right": "오른쪽으로",
+          "yellow": "노란"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "을 (를) 켜십시오",
           "fast": "빠르게",
-          "slow": "느리게",
-          "short": "짧음",
+          "high": "높음",
           "long": "긺",
           "low": "낮음",
-          "high": "높음"
+          "on": "을 (를) 켜십시오",
+          "short": "짧음",
+          "slow": "느리게"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "빨간색",
+          "Blue": "파란색",
           "Green": "녹색",
-          "Blue": "파란색"
+          "Red": "빨간색"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "왼쪽으로",
           "right": "오른쪽으로"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "노란",
-          "green": "초록",
           "blue": "파랑",
-          "orange": "주황"
+          "green": "초록",
+          "orange": "주황",
+          "yellow": "노란"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "quiet": "조용함",
-          "Test": "테스트"
+          "Test": "테스트",
+          "quiet": "조용함"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "짧음",
-          "long": "긺"
+          "long": "긺",
+          "short": "짧음"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "짧음",
+          "high": "높음",
           "long": "긺",
           "low": "낮음",
-          "high": "높음"
+          "short": "짧음"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "짧음",
-          "long": "긺"
+          "long": "긺",
+          "short": "짧음"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "빨간색",
-          "Blue": "파란색"
+          "Blue": "파란색",
+          "Red": "빨간색"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -388,9 +388,9 @@
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "이름"
@@ -411,41 +411,41 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
           "G": "G",
-          "A": "A",
-          "B": "B",
           "Note:": "참고:"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "성공!"
@@ -464,8 +464,8 @@
           "Success!": "성공!"
         },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "점수",
-          "0": "0"
+          "0": "0",
+          "Score": "점수"
         },
         "CSD U6 - Physical Input - PC_2222": {
           "Success!": "성공!"
@@ -507,15 +507,15 @@
           "Name:": "이름："
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "빨간색",
+          "Blue": "파란색",
           "Green": "녹색",
-          "Blue": "파란색"
+          "Red": "빨간색"
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "파란색",
+          "Green": "녹색",
           "Name:": "이름：",
           "Red": "빨간색",
-          "Green": "녹색",
-          "Blue": "파란색",
           "Save": "저장"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
@@ -533,23 +533,23 @@
           "white": "하얀색"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "행복하다",
-          "?": "?"
+          "?": "?",
+          "Happy": "행복하다"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "제목화면 주제"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "백인",
-          "Red": "빨간색",
+          "Blue": "파란색",
           "Green": "녹색",
-          "Blue": "파란색"
+          "Red": "빨간색",
+          "White": "백인"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "위로",
           "down": "아래로",
           "left": "왼쪽으로",
-          "right": "오른쪽으로"
+          "right": "오른쪽으로",
+          "up": "위로"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "맵 이름"
@@ -562,9 +562,9 @@
           "on": "을 (를) 켜십시오"
         },
         "CSD U6 - Sensors - P_2222": {
-          "text": "문장",
           "high": "높음",
-          "low": "낮음"
+          "low": "낮음",
+          "text": "문장"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "업데이트"
@@ -654,40 +654,40 @@
           "Update": "업데이트"
         },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "첫번째"
@@ -702,20 +702,20 @@
           "first": "첫번째"
         },
         "CSD U6 change": {
-          "short": "짧음",
-          "long": "긺"
+          "long": "긺",
+          "short": "짧음"
         },
         "CSD U6 change_2018": {
-          "short": "짧음",
-          "long": "긺"
+          "long": "긺",
+          "short": "짧음"
         },
         "CSD U6 change_2019": {
-          "short": "짧음",
-          "long": "긺"
+          "long": "긺",
+          "short": "짧음"
         },
         "CSD U6 change_2021": {
-          "short": "짧음",
-          "long": "긺"
+          "long": "긺",
+          "short": "짧음"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "보통"
@@ -730,95 +730,95 @@
           "Medium": "보통"
         },
         "CSD U6 emotion machine example": {
-          "Happy": "행복하다",
-          "?": "?"
+          "?": "?",
+          "Happy": "행복하다"
         },
         "CSD U6 emotion machine example_2018": {
-          "Happy": "행복하다",
-          "?": "?"
+          "?": "?",
+          "Happy": "행복하다"
         },
         "CSD U6 emotion machine example_2019": {
-          "Happy": "행복하다",
-          "?": "?"
+          "?": "?",
+          "Happy": "행복하다"
         },
         "CSD U6 emotion machine example_2021": {
-          "Happy": "행복하다",
-          "?": "?"
+          "?": "?",
+          "Happy": "행복하다"
         },
         "CSD U6 frequency": {
-          "short": "짧음",
+          "high": "높음",
           "long": "긺",
           "low": "낮음",
-          "high": "높음"
+          "short": "짧음"
         },
         "CSD U6 frequency_2018": {
-          "short": "짧음",
+          "high": "높음",
           "long": "긺",
           "low": "낮음",
-          "high": "높음"
+          "short": "짧음"
         },
         "CSD U6 frequency_2019": {
-          "short": "짧음",
+          "high": "높음",
           "long": "긺",
           "low": "낮음",
-          "high": "높음"
+          "short": "짧음"
         },
         "CSD U6 frequency_2021": {
-          "short": "짧음",
+          "high": "높음",
           "long": "긺",
           "low": "낮음",
-          "high": "높음"
+          "short": "짧음"
         },
         "CSD U6 get toggle": {
-          "short": "짧음",
+          "high": "높음",
           "long": "긺",
           "low": "낮음",
-          "high": "높음"
+          "short": "짧음"
         },
         "CSD U6 get toggle_2018": {
-          "short": "짧음",
+          "high": "높음",
           "long": "긺",
           "low": "낮음",
-          "high": "높음"
+          "short": "짧음"
         },
         "CSD U6 get toggle_2019": {
-          "short": "짧음",
+          "high": "높음",
           "long": "긺",
           "low": "낮음",
-          "high": "높음"
+          "short": "짧음"
         },
         "CSD U6 get toggle_2021": {
-          "short": "짧음",
+          "high": "높음",
           "long": "긺",
           "low": "낮음",
-          "high": "높음"
+          "short": "짧음"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "파란색",
+          "Green": "녹색",
           "Name:": "이름：",
           "Red": "빨간색",
-          "Green": "녹색",
-          "Blue": "파란색",
           "Save": "저장"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "파란색",
+          "Green": "녹색",
           "Name:": "이름：",
           "Red": "빨간색",
-          "Green": "녹색",
-          "Blue": "파란색",
           "Save": "저장"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "파란색",
+          "Green": "녹색",
           "Name:": "이름：",
           "Red": "빨간색",
-          "Green": "녹색",
-          "Blue": "파란색",
           "Save": "저장"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "파란색",
+          "Green": "녹색",
           "Name:": "이름：",
           "Red": "빨간색",
-          "Green": "녹색",
-          "Blue": "파란색",
           "Save": "저장"
         },
         "CSD U6 getProperty input": {
@@ -834,84 +834,84 @@
           "Submit": "제출하기"
         },
         "CSD U6 getters debug": {
-          "slow": "느리게",
           "fast": "빠르게",
-          "short": "짧음",
+          "high": "높음",
           "long": "긺",
           "low": "낮음",
-          "high": "높음"
+          "short": "짧음",
+          "slow": "느리게"
         },
         "CSD U6 getters debug_2018": {
           "fast": "빠르게",
-          "slow": "느리게",
-          "short": "짧음",
+          "high": "높음",
           "long": "긺",
           "low": "낮음",
-          "high": "높음"
+          "short": "짧음",
+          "slow": "느리게"
         },
         "CSD U6 getters debug_2019": {
           "fast": "빠르게",
-          "slow": "느리게",
-          "short": "짧음",
+          "high": "높음",
           "long": "긺",
           "low": "낮음",
-          "high": "높음"
+          "short": "짧음",
+          "slow": "느리게"
         },
         "CSD U6 getters debug_2021": {
           "fast": "빠르게",
-          "slow": "느리게",
-          "short": "짧음",
+          "high": "높음",
           "long": "긺",
           "low": "낮음",
-          "high": "높음"
+          "short": "짧음",
+          "slow": "느리게"
         },
         "CSD U6 interval": {
-          "short": "짧음",
-          "long": "긺"
+          "long": "긺",
+          "short": "짧음"
         },
         "CSD U6 interval_2018": {
-          "short": "짧음",
-          "long": "긺"
+          "long": "긺",
+          "short": "짧음"
         },
         "CSD U6 interval_2019": {
-          "short": "짧음",
-          "long": "긺"
+          "long": "긺",
+          "short": "짧음"
         },
         "CSD U6 interval_2021": {
-          "short": "짧음",
-          "long": "긺"
+          "long": "긺",
+          "short": "짧음"
         },
         "CSD U6 light show": {
-          "on": "을 (를) 켜십시오",
-          "off": "꺼져요"
+          "off": "꺼져요",
+          "on": "을 (를) 켜십시오"
         },
         "CSD U6 light show_2018": {
-          "on": "을 (를) 켜십시오",
-          "off": "꺼져요"
+          "off": "꺼져요",
+          "on": "을 (를) 켜십시오"
         },
         "CSD U6 light show_2019": {
-          "on": "을 (를) 켜십시오",
-          "off": "꺼져요"
+          "off": "꺼져요",
+          "on": "을 (를) 켜십시오"
         },
         "CSD U6 light show_2021": {
-          "on": "을 (를) 켜십시오",
-          "off": "꺼져요"
+          "off": "꺼져요",
+          "on": "을 (를) 켜십시오"
         },
         "CSD U6 params create colors": {
-          "Red": "빨간색",
-          "Blue": "파란색"
+          "Blue": "파란색",
+          "Red": "빨간색"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "빨간색",
-          "Blue": "파란색"
+          "Blue": "파란색",
+          "Red": "빨간색"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "빨간색",
-          "Blue": "파란색"
+          "Blue": "파란색",
+          "Red": "빨간색"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "빨간색",
-          "Blue": "파란색"
+          "Blue": "파란색",
+          "Red": "빨간색"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -938,24 +938,24 @@
           "Success!": "성공!"
         },
         "CSD U6 sensor experiment embedded": {
-          "text": "문장",
           "high": "높음",
-          "low": "낮음"
+          "low": "낮음",
+          "text": "문장"
         },
         "CSD U6 sensor experiment embedded_2018": {
-          "text": "문장",
           "high": "높음",
-          "low": "낮음"
+          "low": "낮음",
+          "text": "문장"
         },
         "CSD U6 sensor experiment embedded_2019": {
-          "text": "문장",
           "high": "높음",
-          "low": "낮음"
+          "low": "낮음",
+          "text": "문장"
         },
         "CSD U6 sensor experiment embedded_2021": {
-          "text": "문장",
           "high": "높음",
-          "low": "낮음"
+          "low": "낮음",
+          "text": "문장"
         },
         "CSD U6 setProperty predict app": {
           "title": "제목화면 주제"
@@ -970,20 +970,20 @@
           "title": "제목화면 주제"
         },
         "CSD U6 slider intro": {
-          "short": "짧음",
-          "long": "긺"
+          "long": "긺",
+          "short": "짧음"
         },
         "CSD U6 slider intro_2018": {
-          "short": "짧음",
-          "long": "긺"
+          "long": "긺",
+          "short": "짧음"
         },
         "CSD U6 slider intro_2019": {
-          "short": "짧음",
-          "long": "긺"
+          "long": "긺",
+          "short": "짧음"
         },
         "CSD U6 slider intro_2021": {
-          "short": "짧음",
-          "long": "긺"
+          "long": "긺",
+          "short": "짧음"
         },
         "CSD U6 test LED": {
           "Success!": "성공!"
@@ -998,74 +998,74 @@
           "Success!": "성공!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "빨간색",
+          "Blue": "파란색",
           "Green": "녹색",
-          "Blue": "파란색"
+          "Red": "빨간색"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "빨간색",
+          "Blue": "파란색",
           "Green": "녹색",
-          "Blue": "파란색"
+          "Red": "빨간색"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "소개",
           "About Us": "우리 소개",
-          "User": "사용자",
-          "Cancel": "취소",
-          "Name:": "이름：",
-          "Red": "빨간색",
-          "Green": "녹색",
           "Blue": "파란색",
-          "Yes": "예",
+          "Cancel": "취소",
+          "Green": "녹색",
+          "Name:": "이름：",
           "No": "아니요",
-          "Save": "저장"
+          "Red": "빨간색",
+          "Save": "저장",
+          "User": "사용자",
+          "Yes": "예"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "소개",
           "About Us": "우리 소개",
-          "User": "사용자",
-          "Cancel": "취소",
-          "Name:": "이름：",
-          "Red": "빨간색",
-          "Green": "녹색",
           "Blue": "파란색",
-          "Yes": "예",
+          "Cancel": "취소",
+          "Green": "녹색",
+          "Name:": "이름：",
           "No": "아니요",
-          "Save": "저장"
+          "Red": "빨간색",
+          "Save": "저장",
+          "User": "사용자",
+          "Yes": "예"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "소개",
           "About Us": "우리 소개",
-          "User": "사용자",
-          "Cancel": "취소",
-          "Name:": "이름：",
-          "Red": "빨간색",
-          "Green": "녹색",
           "Blue": "파란색",
-          "Yes": "예",
+          "Cancel": "취소",
+          "Green": "녹색",
+          "Name:": "이름：",
           "No": "아니요",
-          "Save": "저장"
+          "Red": "빨간색",
+          "Save": "저장",
+          "User": "사용자",
+          "Yes": "예"
         },
         "CSDU4 Decision App Demo": {
           "About": "소개",
-          "Why?": "왜 그런가요?",
+          "About Us": "우리 소개",
           "I don't know": "잘 모르겠음",
           "When?": "언제?",
-          "About Us": "우리 소개"
+          "Why?": "왜 그런가요?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "소개",
-          "Why?": "왜 그런가요?",
+          "About Us": "우리 소개",
           "I don't know": "잘 모르겠음",
           "When?": "언제?",
-          "About Us": "우리 소개"
+          "Why?": "왜 그런가요?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "소개",
-          "Why?": "왜 그런가요?",
+          "About Us": "우리 소개",
           "I don't know": "잘 모르겠음",
           "When?": "언제?",
-          "About Us": "우리 소개"
+          "Why?": "왜 그런가요?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "숨기기",
@@ -1074,49 +1074,49 @@
         "CSDU4 List App Demo": {
           "About": "소개",
           "About Us": "우리 소개",
-          "Done": "완료",
-          "Cancel": "취소"
+          "Cancel": "취소",
+          "Done": "완료"
         },
         "CSDU4 List App Demo_2018": {
           "About": "소개",
           "About Us": "우리 소개",
-          "Done": "완료",
-          "Cancel": "취소"
+          "Cancel": "취소",
+          "Done": "완료"
         },
         "CSDU4 List App Demo_2019": {
           "About": "소개",
           "About Us": "우리 소개",
-          "Done": "완료",
-          "Cancel": "취소"
+          "Cancel": "취소",
+          "Done": "완료"
         },
         "CSDU4 Quiz App Demo": {
           "About": "소개",
-          "Submit": "제출하기",
-          "Why?": "왜 그런가요?",
-          "When?": "언제?",
           "About Us": "우리 소개",
-          "Correct!": "맞습니다!"
+          "Correct!": "맞습니다!",
+          "Submit": "제출하기",
+          "When?": "언제?",
+          "Why?": "왜 그런가요?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "소개",
-          "Submit": "제출하기",
-          "Why?": "왜 그런가요?",
-          "When?": "언제?",
           "About Us": "우리 소개",
-          "Correct!": "맞습니다!"
+          "Correct!": "맞습니다!",
+          "Submit": "제출하기",
+          "When?": "언제?",
+          "Why?": "왜 그런가요?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "소개",
-          "Submit": "제출하기",
-          "Why?": "왜 그런가요?",
-          "When?": "언제?",
           "About Us": "우리 소개",
-          "Correct!": "맞습니다!"
+          "Correct!": "맞습니다!",
+          "Submit": "제출하기",
+          "When?": "언제?",
+          "Why?": "왜 그런가요?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
-          "???": "???",
-          "=": "="
+          "=": "=",
+          "???": "???"
         },
         "CSDU6 - UI and Inputs - setScreen": {
           "Back": "뒤로"
@@ -1137,76 +1137,76 @@
           "Success!": "성공!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "오른쪽",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "문장"
@@ -1231,12 +1231,12 @@
           "flying": "날라가기"
         },
         "csd-apps for good-2": {
-          "Next": "다음",
-          "Home": "홈"
+          "Home": "홈",
+          "Next": "다음"
         },
         "csd-apps for good-2_2022": {
-          "Next": "다음",
-          "Home": "홈"
+          "Home": "홈",
+          "Next": "다음"
         },
         "csd-apps for good-3": {
           "1": "1",
@@ -1253,23 +1253,15 @@
           "???": "???"
         },
         "csd-explore ui-2": {
-          "Next": "다음",
-          "Home": "홈"
+          "Home": "홈",
+          "Next": "다음"
         },
         "csd-explore ui-2_2022": {
-          "Next": "다음",
-          "Home": "홈"
+          "Home": "홈",
+          "Next": "다음"
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1280,18 +1272,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1302,7 +1294,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Correct!": "맞습니다!",
@@ -1314,14 +1314,6 @@
         },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1332,18 +1324,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1354,7 +1346,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "다음"
@@ -1363,38 +1363,38 @@
           "Next": "다음"
         },
         "ml-L2 supervised - green glass door-2021": {
-          "Green Glass Door": "녹색 유리문",
           "Accepted": "수락됨",
-          "Rejected": "거절됨",
-          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "이 게임에서는 Green Glass Door를 통해 어떤 단어가 허용되는지 알아보려고 합니다.",
-          "Some words are accepted and others are rejected": "어떤 단어는 받아들여지고 어떤 단어는 거부됩니다",
-          "In the next screen, a wise wizard will show us how to play the game": "다음 화면에서는 현명한 마법사가 게임 방법을 보여줍니다.",
-          "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "그러면 플레이를 하면서 어떤 단어가 문 쪽에서 받아들여지거나 거부되는지 맞출 기회를 얻게 됩니다.",
-          "Start Playing": "플레이 시작",
-          "Word:": "단어:",
+          "Check Your Word": "단어 확인하기",
           "Decision:": "결정:",
-          "New Example Word": "새 예제 단어",
+          "Green Glass Door": "녹색 유리문",
           "I'm Ready To Try Myself!": "직접 해볼 준비가 됐어요!",
-          "See All Results": "모든 결과 보기",
+          "In the next screen, a wise wizard will show us how to play the game": "다음 화면에서는 현명한 마법사가 게임 방법을 보여줍니다.",
+          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "이 게임에서는 Green Glass Door를 통해 어떤 단어가 허용되는지 알아보려고 합니다.",
+          "New Example Word": "새 예제 단어",
           "On this screen, the wizard can show you example words. See if you notice any patterns": "이 화면에서 마법사는 예제 단어를 보여 줄 수 있습니다. 패턴이 보이는지 확인하세요",
-          "Check Your Word": "단어 확인하기"
+          "Rejected": "거절됨",
+          "See All Results": "모든 결과 보기",
+          "Some words are accepted and others are rejected": "어떤 단어는 받아들여지고 어떤 단어는 거부됩니다",
+          "Start Playing": "플레이 시작",
+          "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "그러면 플레이를 하면서 어떤 단어가 문 쪽에서 받아들여지거나 거부되는지 맞출 기회를 얻게 됩니다.",
+          "Word:": "단어:"
         },
         "ml-L2 supervised - green glass door_2022": {
-          "Green Glass Door": "녹색 유리문",
           "Accepted": "수락됨",
-          "Rejected": "거절됨",
-          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "이 게임에서는 Green Glass Door를 통해 어떤 단어가 허용되는지 알아보려고 합니다.",
-          "Some words are accepted and others are rejected": "어떤 단어는 받아들여지고 어떤 단어는 거부됩니다",
-          "In the next screen, a wise wizard will show us how to play the game": "다음 화면에서는 현명한 마법사가 게임 방법을 보여줍니다.",
-          "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "그러면 플레이를 하면서 어떤 단어가 문 쪽에서 받아들여지거나 거부되는지 맞출 기회를 얻게 됩니다.",
-          "Start Playing": "플레이 시작",
-          "Word:": "단어:",
+          "Check Your Word": "단어 확인하기",
           "Decision:": "결정:",
-          "New Example Word": "새 예제 단어",
+          "Green Glass Door": "녹색 유리문",
           "I'm Ready To Try Myself!": "직접 해볼 준비가 됐어요!",
-          "See All Results": "모든 결과 보기",
+          "In the next screen, a wise wizard will show us how to play the game": "다음 화면에서는 현명한 마법사가 게임 방법을 보여줍니다.",
+          "In this game, we're trying to learn what words are allowed through the Green Glass Door.": "이 게임에서는 Green Glass Door를 통해 어떤 단어가 허용되는지 알아보려고 합니다.",
+          "New Example Word": "새 예제 단어",
           "On this screen, the wizard can show you example words. See if you notice any patterns": "이 화면에서 마법사는 예제 단어를 보여 줄 수 있습니다. 패턴이 보이는지 확인하세요",
-          "Check Your Word": "단어 확인하기"
+          "Rejected": "거절됨",
+          "See All Results": "모든 결과 보기",
+          "Some words are accepted and others are rejected": "어떤 단어는 받아들여지고 어떤 단어는 거부됩니다",
+          "Start Playing": "플레이 시작",
+          "Then we'll get a chance to play and guess which words are accepted or rejected by the door": "그러면 플레이를 하면서 어떤 단어가 문 쪽에서 받아들여지거나 거부되는지 맞출 기회를 얻게 됩니다.",
+          "Word:": "단어:"
         },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "다음"
@@ -1403,608 +1403,608 @@
           "Next": "다음"
         },
         "ml-customize-raspado-2021": {
-          "yes": "예",
-          "no": "아니요",
-          "Raspado Recommender": "라스파도 추천",
           "Predict": "예측",
+          "Raspado Recommender": "라스파도 추천",
+          "chili en polbo:": "칠리 엔 폴보:",
+          "coconut:": "코코넛:",
+          "lechera:": "레체라:",
+          "lime:": "라임:",
+          "mango:": "망고:",
+          "no": "아니요",
           "pecan:": "피칸:",
           "strawberry:": "딸기:",
-          "mango:": "망고:",
           "vanilla:": "바닐라:",
-          "lime:": "라임:",
-          "chili en polbo:": "칠리 엔 폴보:",
-          "lechera:": "레체라:",
-          "coconut:": "코코넛:"
+          "yes": "예"
         },
         "ml-customize-raspado_2022": {
-          "yes": "예",
-          "no": "아니요",
-          "Raspado Recommender": "라스파도 추천",
           "Predict": "예측",
+          "Raspado Recommender": "라스파도 추천",
+          "chili en polbo:": "칠리 엔 폴보:",
+          "coconut:": "코코넛:",
+          "lechera:": "레체라:",
+          "lime:": "라임:",
+          "mango:": "망고:",
+          "no": "아니요",
           "pecan:": "피칸:",
           "strawberry:": "딸기:",
-          "mango:": "망고:",
           "vanilla:": "바닐라:",
-          "lime:": "라임:",
-          "chili en polbo:": "칠리 엔 폴보:",
-          "lechera:": "레체라:",
-          "coconut:": "코코넛:"
+          "yes": "예"
         },
         "ml-intro ai lab- fruit veggie widget": {
-          "Continue": "계속하기",
-          "Loading...": "Loading...",
-          "Hover over a dot to see its name": "점 위에 마우스를 갖다대면 이름이 보입니다",
-          "Try Your Own Food!": "직접 차려 드세요!",
-          "x Axis": "x 축",
-          "y Axis": "y 축",
+          "According to the line you drew, your model thinks this food is a": "그려진 선에 따르면, 모델은 이 음식을 ~이라고 생각합니다",
+          "Click in two places to draw a line!": "두 곳을 클릭하여 선을 그리세요!",
+          "Continue": "계속",
           "Flip Colors": "색상 뒤집기",
           "Fruit Accuracy:": "과일 정확도:",
-          "Veggie Accuracy:": "채소 정확도:",
-          "Click in two places to draw a line!": "두 곳을 클릭하여 선을 그리세요!",
-          "What is the nameof your food?": "음식 이름은 무엇입니까?",
+          "Hover over a dot to see its name": "점 위에 마우스를 갖다대면 이름이 보입니다",
           "Let's See What The Model Decides": "모델이 무엇을 결정하는지 봅시다",
+          "Loading...": "Loading...",
           "On a Scale from 1-10, how would you rate": "1-10의 척도로 평가하면 어떻게 평가하시겠습니까?",
+          "Try Your Own Food!": "직접 차려 드세요!",
+          "Veggie Accuracy:": "채소 정확도:",
+          "What is the nameof your food?": "음식 이름은 무엇입니까?",
           "Your new food has been added to the graph as a gray square!": "새 음식이 그래프에 회색 사각형으로 추가되었습니다!",
-          "According to the line you drew, your model thinks this food is a": "그려진 선에 따르면, 모델은 이 음식을 ~이라고 생각합니다"
+          "x Axis": "x 축",
+          "y Axis": "y 축"
         },
         "ml-intro ai lab- fruit veggie widget_2022": {
-          "Continue": "계속하기",
-          "Loading...": "Loading...",
-          "Hover over a dot to see its name": "점 위에 마우스를 갖다대면 이름이 보입니다",
-          "Try Your Own Food!": "직접 차려 드세요!",
-          "x Axis": "x 축",
-          "y Axis": "y 축",
+          "According to the line you drew, your model thinks this food is a": "그려진 선에 따르면, 모델은 이 음식을 ~이라고 생각합니다",
+          "Click in two places to draw a line!": "두 곳을 클릭하여 선을 그리세요!",
+          "Continue": "계속",
           "Flip Colors": "색상 뒤집기",
           "Fruit Accuracy:": "과일 정확도:",
-          "Veggie Accuracy:": "채소 정확도:",
-          "Click in two places to draw a line!": "두 곳을 클릭하여 선을 그리세요!",
-          "What is the nameof your food?": "음식 이름은 무엇입니까?",
+          "Hover over a dot to see its name": "점 위에 마우스를 갖다대면 이름이 보입니다",
           "Let's See What The Model Decides": "모델이 무엇을 결정하는지 봅시다",
+          "Loading...": "Loading...",
           "On a Scale from 1-10, how would you rate": "1-10의 척도로 평가하면 어떻게 평가하시겠습니까?",
+          "Try Your Own Food!": "직접 차려 드세요!",
+          "Veggie Accuracy:": "채소 정확도:",
+          "What is the nameof your food?": "음식 이름은 무엇입니까?",
           "Your new food has been added to the graph as a gray square!": "새 음식이 그래프에 회색 사각형으로 추가되었습니다!",
-          "According to the line you drew, your model thinks this food is a": "그려진 선에 따르면, 모델은 이 음식을 ~이라고 생각합니다"
+          "x Axis": "x 축",
+          "y Axis": "y 축"
         },
         "ml-intro app lab-book recommender demo-2021": {
-          "Silly": "어리석다",
-          "Predict": "예측",
-          "Outdoors": "야외",
-          "Indoors": "실내",
+          "By Myself": "혼자",
           "Class Book Recommender": "학급 도서 추천인",
-          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "이 앱은 사용자의 관심사에 기초하여 책을 추천할 수 있습니다. 이러한 앱은 새로 학교에 다닐 신입생에게 유용하여 학교의 다른 학생들이 역시 읽는 책을 읽어 새로 친구를 사귈 때 함께 이야기할 거리를 얻게 됩니다.",
-          "Which animal do you like the most?": "어느 동물을 가장 좋아하세요?",
-          "Wolf": "늑대",
           "Dragon": "용",
-          "Walrus": "바다코끼리",
+          "How do you like to spendtime?": "어떻게 시간을 보내고 싶으신가요?",
           "How would your friends describe you?": "친구들이 당신을 어떻게 묘사할까요?",
           "Independent": "독립적인",
-          "Thoughtful": "사려 깊은",
+          "Indoors": "실내",
           "Myterious": "신비한",
+          "Outdoors": "야외",
+          "Predict": "예측",
+          "Silly": "어리석다",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "이 앱은 사용자의 관심사에 기초하여 책을 추천할 수 있습니다. 이러한 앱은 새로 학교에 다닐 신입생에게 유용하여 학교의 다른 학생들이 역시 읽는 책을 읽어 새로 친구를 사귈 때 함께 이야기할 거리를 얻게 됩니다.",
+          "Thoughtful": "사려 깊은",
+          "Walrus": "바다코끼리",
           "Where do you like to spend time?": "어디서 시간을 보내고 싶으신가요?",
-          "How do you like to spendtime?": "어떻게 시간을 보내고 싶으신가요?",
-          "By Myself": "혼자",
-          "With Friends": "친구와 함께"
+          "Which animal do you like the most?": "어느 동물을 가장 좋아하세요?",
+          "With Friends": "친구와 함께",
+          "Wolf": "늑대"
         },
         "ml-intro app lab-book recommender demo_2022": {
-          "Silly": "어리석다",
-          "Predict": "예측",
-          "Outdoors": "야외",
-          "Indoors": "실내",
+          "By Myself": "혼자",
           "Class Book Recommender": "학급 도서 추천인",
-          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "이 앱은 사용자의 관심사에 기초하여 책을 추천할 수 있습니다. 이러한 앱은 새로 학교에 다닐 신입생에게 유용하여 학교의 다른 학생들이 역시 읽는 책을 읽어 새로 친구를 사귈 때 함께 이야기할 거리를 얻게 됩니다.",
-          "Which animal do you like the most?": "어느 동물을 가장 좋아하세요?",
-          "Wolf": "늑대",
           "Dragon": "용",
-          "Walrus": "바다코끼리",
+          "How do you like to spendtime?": "어떻게 시간을 보내고 싶으신가요?",
           "How would your friends describe you?": "친구들이 당신을 어떻게 묘사할까요?",
           "Independent": "독립적인",
-          "Thoughtful": "사려 깊은",
+          "Indoors": "실내",
           "Myterious": "신비한",
+          "Outdoors": "야외",
+          "Predict": "예측",
+          "Silly": "어리석다",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "이 앱은 사용자의 관심사에 기초하여 책을 추천할 수 있습니다. 이러한 앱은 새로 학교에 다닐 신입생에게 유용하여 학교의 다른 학생들이 역시 읽는 책을 읽어 새로 친구를 사귈 때 함께 이야기할 거리를 얻게 됩니다.",
+          "Thoughtful": "사려 깊은",
+          "Walrus": "바다코끼리",
           "Where do you like to spend time?": "어디서 시간을 보내고 싶으신가요?",
-          "How do you like to spendtime?": "어떻게 시간을 보내고 싶으신가요?",
-          "By Myself": "혼자",
-          "With Friends": "친구와 함께"
+          "Which animal do you like the most?": "어느 동물을 가장 좋아하세요?",
+          "With Friends": "친구와 함께",
+          "Wolf": "늑대"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "왼쪽",
+          "18-34": "18 ~ 34세",
+          "35-60": "35 ~ 60세",
           "A": "A",
-          "yes": "예",
-          "no": "아니요",
-          "head": "머리",
-          "nonbinary (identifies outside gender binary)": "논바이너리 (젠더 바이너리 이외를 식별)",
-          "Shortness of Breath?": "호흡이 곤란한가요?",
-          "Pain Type": "통증 유형",
+          "AIAN": "AIAN",
           "Achy": "아픈",
+          "Age?": "나이?",
+          "Area of Pain?": "통증 부위는?",
+          "BAM": "BAM",
+          "Bleeding?": "출혈?",
           "Dull": "둔한",
+          "Gender?": "성별?",
+          "Medical Priority": "의료 우선순위",
+          "NHPI": "NHPI",
+          "Over 60": "60세 이상",
+          "Pain Type": "통증 유형",
+          "Please Sign In Below": "아래에서 로그인하세요",
+          "Race?": "인종?",
           "Sharp": "날카로운",
+          "Shortness of Breath?": "호흡이 곤란한가요?",
+          "Sign In": "로그인",
           "Stabbing": "쑤시는 듯한",
           "Throbbing": "욱신거림",
-          "Area of Pain?": "통증 부위는?",
-          "stomach": "배",
-          "limb": "팔다리",
-          "chest": "가슴",
-          "Sign In": "로그인",
-          "Medical Priority": "의료 우선순위",
-          "Please Sign In Below": "아래에서 로그인하세요",
-          "Over 60": "60세 이상",
-          "18-34": "18 ~ 34세",
           "Under 18": "18세 미만",
-          "35-60": "35 ~ 60세",
-          "Age?": "나이?",
-          "Bleeding?": "출혈?",
-          "Race?": "인종?",
-          "BAM": "BAM",
-          "NHPI": "NHPI",
-          "AIAN": "AIAN",
-          "Gender?": "성별?",
+          "W": "왼쪽",
+          "chest": "가슴",
+          "female": "여성",
+          "head": "머리",
+          "limb": "팔다리",
           "male": "남성",
-          "female": "여성"
+          "no": "아니요",
+          "nonbinary (identifies outside gender binary)": "논바이너리 (젠더 바이너리 이외를 식별)",
+          "stomach": "배",
+          "yes": "예"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "왼쪽",
+          "18-34": "18 ~ 34세",
+          "35-60": "35 ~ 60세",
           "A": "A",
-          "yes": "예",
-          "no": "아니요",
-          "head": "머리",
-          "nonbinary (identifies outside gender binary)": "논바이너리 (젠더 바이너리 이외를 식별)",
-          "Shortness of Breath?": "호흡이 곤란한가요?",
-          "Pain Type": "통증 유형",
+          "AIAN": "AIAN",
           "Achy": "아픈",
+          "Age?": "나이?",
+          "Area of Pain?": "통증 부위는?",
+          "BAM": "BAM",
+          "Bleeding?": "출혈?",
           "Dull": "둔한",
+          "Gender?": "성별?",
+          "Medical Priority": "의료 우선순위",
+          "NHPI": "NHPI",
+          "Over 60": "60세 이상",
+          "Pain Type": "통증 유형",
+          "Please Sign In Below": "아래에서 로그인하세요",
+          "Race?": "인종?",
           "Sharp": "날카로운",
+          "Shortness of Breath?": "호흡이 곤란한가요?",
+          "Sign In": "로그인",
           "Stabbing": "쑤시는 듯한",
           "Throbbing": "욱신거림",
-          "Area of Pain?": "통증 부위는?",
-          "stomach": "배",
-          "limb": "팔다리",
-          "chest": "가슴",
-          "Sign In": "로그인",
-          "Medical Priority": "의료 우선순위",
-          "Please Sign In Below": "아래에서 로그인하세요",
-          "Over 60": "60세 이상",
-          "18-34": "18 ~ 34세",
           "Under 18": "18세 미만",
-          "35-60": "35 ~ 60세",
-          "Age?": "나이?",
-          "Bleeding?": "출혈?",
-          "Race?": "인종?",
-          "BAM": "BAM",
-          "NHPI": "NHPI",
-          "AIAN": "AIAN",
-          "Gender?": "성별?",
+          "W": "왼쪽",
+          "chest": "가슴",
+          "female": "여성",
+          "head": "머리",
+          "limb": "팔다리",
           "male": "남성",
-          "female": "여성"
+          "no": "아니요",
+          "nonbinary (identifies outside gender binary)": "논바이너리 (젠더 바이너리 이외를 식별)",
+          "stomach": "배",
+          "yes": "예"
         },
         "ml-model cards-book recommender model card": {
-          "Silly": "어리석다",
-          "Predict": "예측",
-          "Outdoors": "야외",
-          "Indoors": "실내",
+          "By Myself": "혼자",
           "Class Book Recommender": "학급 도서 추천인",
-          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "이 앱은 사용자의 관심사에 기초하여 책을 추천할 수 있습니다. 이러한 앱은 새로 학교에 다닐 신입생에게 유용하여 학교의 다른 학생들이 역시 읽는 책을 읽어 새로 친구를 사귈 때 함께 이야기할 거리를 얻게 됩니다.",
-          "Which animal do you like the most?": "어느 동물을 가장 좋아하세요?",
-          "Wolf": "늑대",
           "Dragon": "용",
-          "Walrus": "바다코끼리",
+          "How do you like to spendtime?": "어떻게 시간을 보내고 싶으신가요?",
           "How would your friends describe you?": "친구들이 당신을 어떻게 묘사할까요?",
           "Independent": "독립적인",
-          "Thoughtful": "사려 깊은",
+          "Indoors": "실내",
           "Myterious": "신비한",
+          "Outdoors": "야외",
+          "Predict": "예측",
+          "Silly": "어리석다",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "이 앱은 사용자의 관심사에 기초하여 책을 추천할 수 있습니다. 이러한 앱은 새로 학교에 다닐 신입생에게 유용하여 학교의 다른 학생들이 역시 읽는 책을 읽어 새로 친구를 사귈 때 함께 이야기할 거리를 얻게 됩니다.",
+          "Thoughtful": "사려 깊은",
+          "Walrus": "바다코끼리",
           "Where do you like to spend time?": "어디서 시간을 보내고 싶으신가요?",
-          "How do you like to spendtime?": "어떻게 시간을 보내고 싶으신가요?",
-          "By Myself": "혼자",
-          "With Friends": "친구와 함께"
+          "Which animal do you like the most?": "어느 동물을 가장 좋아하세요?",
+          "With Friends": "친구와 함께",
+          "Wolf": "늑대"
         },
         "ml-model cards-book recommender model card_2022": {
-          "Silly": "어리석다",
-          "Predict": "예측",
-          "Outdoors": "야외",
-          "Indoors": "실내",
+          "By Myself": "혼자",
           "Class Book Recommender": "학급 도서 추천인",
-          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "이 앱은 사용자의 관심사에 기초하여 책을 추천할 수 있습니다. 이러한 앱은 새로 학교에 다닐 신입생에게 유용하여 학교의 다른 학생들이 역시 읽는 책을 읽어 새로 친구를 사귈 때 함께 이야기할 거리를 얻게 됩니다.",
-          "Which animal do you like the most?": "어느 동물을 가장 좋아하세요?",
-          "Wolf": "늑대",
           "Dragon": "용",
-          "Walrus": "바다코끼리",
+          "How do you like to spendtime?": "어떻게 시간을 보내고 싶으신가요?",
           "How would your friends describe you?": "친구들이 당신을 어떻게 묘사할까요?",
           "Independent": "독립적인",
-          "Thoughtful": "사려 깊은",
+          "Indoors": "실내",
           "Myterious": "신비한",
+          "Outdoors": "야외",
+          "Predict": "예측",
+          "Silly": "어리석다",
+          "This app can recommend a book to read based on your interests. It's meant for a new student inschool so they can read a book that other people in the school have also read and have something to talk about to make new friends": "이 앱은 사용자의 관심사에 기초하여 책을 추천할 수 있습니다. 이러한 앱은 새로 학교에 다닐 신입생에게 유용하여 학교의 다른 학생들이 역시 읽는 책을 읽어 새로 친구를 사귈 때 함께 이야기할 거리를 얻게 됩니다.",
+          "Thoughtful": "사려 깊은",
+          "Walrus": "바다코끼리",
           "Where do you like to spend time?": "어디서 시간을 보내고 싶으신가요?",
-          "How do you like to spendtime?": "어떻게 시간을 보내고 싶으신가요?",
-          "By Myself": "혼자",
-          "With Friends": "친구와 함께"
+          "Which animal do you like the most?": "어느 동물을 가장 좋아하세요?",
+          "With Friends": "친구와 함께",
+          "Wolf": "늑대"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "예측",
-          "Free Time": "자유 시간",
-          "Playful?": "장난기가 많나요?",
-          "Sort Of": "일종의",
-          "Not At All": "전혀 아닙니다",
-          "Very": "매우",
-          "Number of Pets?": "애완동물의 수는?",
+          "2": "2",
+          "3": "3",
           "4+": "4+",
+          "Free Time": "자유 시간",
+          "Not At All": "전혀 아닙니다",
+          "Number of Pets?": "애완동물의 수는?",
           "Pet": "애완동물",
+          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!",
           "Pet Recommendation: Fish!": "애완동물 추천: 물고기!",
           "Pet Recommendation: Iguana!": "애완동물 추천: 이구아나!",
           "Pet Recommendation: Parakeet": "애완동물 추천: 잉꼬",
-          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!"
+          "Playful?": "장난기가 많나요?",
+          "Predict": "예측",
+          "Sort Of": "일종의",
+          "Very": "매우"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "예측",
-          "Free Time": "자유 시간",
-          "Playful?": "장난기가 많나요?",
-          "Sort Of": "일종의",
-          "Not At All": "전혀 아닙니다",
-          "Very": "매우",
-          "Number of Pets?": "애완동물의 수는?",
+          "2": "2",
+          "3": "3",
           "4+": "4+",
+          "Free Time": "자유 시간",
+          "Not At All": "전혀 아닙니다",
+          "Number of Pets?": "애완동물의 수는?",
           "Pet": "애완동물",
+          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!",
           "Pet Recommendation: Fish!": "애완동물 추천: 물고기!",
           "Pet Recommendation: Iguana!": "애완동물 추천: 이구아나!",
           "Pet Recommendation: Parakeet": "애완동물 추천: 잉꼬",
-          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!"
+          "Playful?": "장난기가 많나요?",
+          "Predict": "예측",
+          "Sort Of": "일종의",
+          "Very": "매우"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "예측",
-          "Free Time": "자유 시간",
-          "Playful?": "장난기가 많나요?",
-          "Sort Of": "일종의",
-          "Not At All": "전혀 아닙니다",
-          "Very": "매우",
-          "Number of Pets?": "애완동물의 수는?",
+          "2": "2",
+          "3": "3",
           "4+": "4+",
+          "Free Time": "자유 시간",
+          "Not At All": "전혀 아닙니다",
+          "Number of Pets?": "애완동물의 수는?",
           "Pet": "애완동물",
+          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!",
           "Pet Recommendation: Fish!": "애완동물 추천: 물고기!",
           "Pet Recommendation: Iguana!": "애완동물 추천: 이구아나!",
           "Pet Recommendation: Parakeet": "애완동물 추천: 잉꼬",
-          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!"
+          "Playful?": "장난기가 많나요?",
+          "Predict": "예측",
+          "Sort Of": "일종의",
+          "Very": "매우"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "예측",
-          "Free Time": "자유 시간",
-          "Playful?": "장난기가 많나요?",
-          "Sort Of": "일종의",
-          "Not At All": "전혀 아닙니다",
-          "Very": "매우",
-          "Number of Pets?": "애완동물의 수는?",
+          "2": "2",
+          "3": "3",
           "4+": "4+",
+          "Free Time": "자유 시간",
+          "Not At All": "전혀 아닙니다",
+          "Number of Pets?": "애완동물의 수는?",
           "Pet": "애완동물",
+          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!",
           "Pet Recommendation: Fish!": "애완동물 추천: 물고기!",
           "Pet Recommendation: Iguana!": "애완동물 추천: 이구아나!",
           "Pet Recommendation: Parakeet": "애완동물 추천: 잉꼬",
-          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!"
+          "Playful?": "장난기가 많나요?",
+          "Predict": "예측",
+          "Sort Of": "일종의",
+          "Very": "매우"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "예측",
+          "2": "2",
+          "3": "3",
+          "4+": "4+",
           "Back": "뒤로",
           "Free Time": "자유 시간",
-          "Playful?": "장난기가 많나요?",
-          "Sort Of": "일종의",
-          "Not At All": "전혀 아닙니다",
-          "Very": "매우",
-          "Number of Pets?": "애완동물의 수는?",
-          "4+": "4+",
-          "Pet": "애완동물",
+          "Intended Uses": "용도",
+          "Limitations and Warnings": "제한 및 경고",
           "More Information": "정보 더 보기",
+          "Not At All": "전혀 아닙니다",
+          "Number of Pets?": "애완동물의 수는?",
+          "Pet": "애완동물",
+          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!",
           "Pet Recommendation: Fish!": "애완동물 추천: 물고기!",
           "Pet Recommendation: Iguana!": "애완동물 추천: 이구아나!",
           "Pet Recommendation: Parakeet": "애완동물 추천: 잉꼬",
-          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!",
-          "Intended Uses": "용도",
-          "Limitations and Warnings": "제한 및 경고"
+          "Playful?": "장난기가 많나요?",
+          "Predict": "예측",
+          "Sort Of": "일종의",
+          "Very": "매우"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "예측",
+          "2": "2",
+          "3": "3",
+          "4+": "4+",
           "Back": "뒤로",
           "Free Time": "자유 시간",
-          "Playful?": "장난기가 많나요?",
-          "Sort Of": "일종의",
-          "Not At All": "전혀 아닙니다",
-          "Very": "매우",
-          "Number of Pets?": "애완동물의 수는?",
-          "4+": "4+",
-          "Pet": "애완동물",
+          "Intended Uses": "용도",
+          "Limitations and Warnings": "제한 및 경고",
           "More Information": "정보 더 보기",
+          "Not At All": "전혀 아닙니다",
+          "Number of Pets?": "애완동물의 수는?",
+          "Pet": "애완동물",
+          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!",
           "Pet Recommendation: Fish!": "애완동물 추천: 물고기!",
           "Pet Recommendation: Iguana!": "애완동물 추천: 이구아나!",
           "Pet Recommendation: Parakeet": "애완동물 추천: 잉꼬",
-          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!",
-          "Intended Uses": "용도",
-          "Limitations and Warnings": "제한 및 경고"
+          "Playful?": "장난기가 많나요?",
+          "Predict": "예측",
+          "Sort Of": "일종의",
+          "Very": "매우"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "예측",
-          "Free Time": "자유 시간",
-          "Playful?": "장난기가 많나요?",
-          "Sort Of": "일종의",
-          "Not At All": "전혀 아닙니다",
-          "Very": "매우",
-          "Number of Pets?": "애완동물의 수는?",
+          "2": "2",
+          "3": "3",
           "4+": "4+",
+          "Free Time": "자유 시간",
+          "Not At All": "전혀 아닙니다",
+          "Number of Pets?": "애완동물의 수는?",
           "Pet": "애완동물",
+          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!",
           "Pet Recommendation: Fish!": "애완동물 추천: 물고기!",
           "Pet Recommendation: Iguana!": "애완동물 추천: 이구아나!",
           "Pet Recommendation: Parakeet": "애완동물 추천: 잉꼬",
-          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!"
+          "Playful?": "장난기가 많나요?",
+          "Predict": "예측",
+          "Sort Of": "일종의",
+          "Very": "매우"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "예측",
-          "Free Time": "자유 시간",
-          "Playful?": "장난기가 많나요?",
-          "Sort Of": "일종의",
-          "Not At All": "전혀 아닙니다",
-          "Very": "매우",
-          "Number of Pets?": "애완동물의 수는?",
+          "2": "2",
+          "3": "3",
           "4+": "4+",
+          "Free Time": "자유 시간",
+          "Not At All": "전혀 아닙니다",
+          "Number of Pets?": "애완동물의 수는?",
           "Pet": "애완동물",
+          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!",
           "Pet Recommendation: Fish!": "애완동물 추천: 물고기!",
           "Pet Recommendation: Iguana!": "애완동물 추천: 이구아나!",
           "Pet Recommendation: Parakeet": "애완동물 추천: 잉꼬",
-          "Pet Recommendation: Dog!": "애완동물 추천: 강아지!"
+          "Playful?": "장난기가 많나요?",
+          "Predict": "예측",
+          "Sort Of": "일종의",
+          "Very": "매우"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "예",
-          "No": "아니요",
-          "B": "B",
-          "Predict": "예측",
-          "H": "H",
-          "AQ": "AQ",
           "AB": "AB",
-          "It's A Reptile!": "파충류입니다!",
+          "AQ": "AQ",
+          "B": "B",
+          "H": "H",
           "It's A Mammal!": "포유류입니다!",
+          "It's A Reptile!": "파충류입니다!",
           "It's a Bird!": "조류입니다!",
+          "It's a Bug!": "곤충입니다!",
+          "It's a Crustacean!": "갑각류예요!",
           "It's a Fish!": "어류입니다!",
           "It's an Amphibian!": "양서류입니다!",
-          "It's a Bug!": "곤충입니다!",
-          "It's a Crustacean!": "갑각류예요!"
+          "No": "아니요",
+          "Predict": "예측",
+          "Yes": "예"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "예",
-          "No": "아니요",
-          "B": "B",
-          "Predict": "예측",
-          "H": "H",
-          "AQ": "AQ",
           "AB": "AB",
-          "It's A Reptile!": "파충류입니다!",
+          "AQ": "AQ",
+          "B": "B",
+          "H": "H",
           "It's A Mammal!": "포유류입니다!",
+          "It's A Reptile!": "파충류입니다!",
           "It's a Bird!": "조류입니다!",
+          "It's a Bug!": "곤충입니다!",
+          "It's a Crustacean!": "갑각류예요!",
           "It's a Fish!": "어류입니다!",
           "It's an Amphibian!": "양서류입니다!",
-          "It's a Bug!": "곤충입니다!",
-          "It's a Crustacean!": "갑각류예요!"
+          "No": "아니요",
+          "Predict": "예측",
+          "Yes": "예"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "예",
-          "No": "아니요",
-          "Predict": "예측",
           "Animal Predictor!": "동물 예측인!",
-          "This app will predict a type of animal based on four questions!": "이 앱은 네 가지 질문을 기반으로 동물의 유형을 예측합니다!",
-          "More Information": "정보 더 보기",
-          "Does it have hair?": "머리카락 있어요?",
-          "Is it aquatic?": "수중 동물인가요?",
           "Does it have a backbone?": "척추가 있나요?",
+          "Does it have hair?": "머리카락 있어요?",
+          "Intended Uses": "용도",
           "Is it airborne?": "하늘에 떠 있나요?",
-          "It's A Reptile!": "파충류입니다!",
+          "Is it aquatic?": "수중 동물인가요?",
           "It's A Mammal!": "포유류입니다!",
+          "It's A Reptile!": "파충류입니다!",
           "It's a Bird!": "조류입니다!",
-          "It's a Fish!": "어류입니다!",
-          "It's an Amphibian!": "양서류입니다!",
           "It's a Bug!": "곤충입니다!",
           "It's a Crustacean!": "갑각류예요!",
-          "Intended Uses": "용도",
-          "This app can be used to identify the type of animal you see in the real world. This can be used in Zoos or Wildlife Sanctuaries to help educate people about the type of animals they are looking at.": "이 앱은 실제 세계에서 볼 수 있는 동물의 유형을 식별하는데 사용할 수 있습니다. 동물원이나 야생동물 보호구역에서 자신들이 보고 있는 동물의 유형에 대해 교육하는 데 사용할 수 있습니다.",
-          "Next!": "다음!",
+          "It's a Fish!": "어류입니다!",
+          "It's an Amphibian!": "양서류입니다!",
           "Limitations": "제한 사항",
-          "This app was trained on a small set of animals and only animals that typically appear in a zoo. This app may not work well with more exotic animals.": "이 앱은 일반적으로 동물원에 볼 수 있는 소수의 동물에 대해서만 학습되었습니다. 이 앱은 더 이국적인 동물에게는 잘 작동하지 않을 수 있습니다."
+          "More Information": "정보 더 보기",
+          "Next!": "다음!",
+          "No": "아니요",
+          "Predict": "예측",
+          "This app can be used to identify the type of animal you see in the real world. This can be used in Zoos or Wildlife Sanctuaries to help educate people about the type of animals they are looking at.": "이 앱은 실제 세계에서 볼 수 있는 동물의 유형을 식별하는데 사용할 수 있습니다. 동물원이나 야생동물 보호구역에서 자신들이 보고 있는 동물의 유형에 대해 교육하는 데 사용할 수 있습니다.",
+          "This app was trained on a small set of animals and only animals that typically appear in a zoo. This app may not work well with more exotic animals.": "이 앱은 일반적으로 동물원에 볼 수 있는 소수의 동물에 대해서만 학습되었습니다. 이 앱은 더 이국적인 동물에게는 잘 작동하지 않을 수 있습니다.",
+          "This app will predict a type of animal based on four questions!": "이 앱은 네 가지 질문을 기반으로 동물의 유형을 예측합니다!",
+          "Yes": "예"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "예",
-          "No": "아니요",
-          "Predict": "예측",
           "Animal Predictor!": "동물 예측인!",
-          "This app will predict a type of animal based on four questions!": "이 앱은 네 가지 질문을 기반으로 동물의 유형을 예측합니다!",
-          "More Information": "정보 더 보기",
-          "Does it have hair?": "머리카락 있어요?",
-          "Is it aquatic?": "수중 동물인가요?",
           "Does it have a backbone?": "척추가 있나요?",
+          "Does it have hair?": "머리카락 있어요?",
+          "Intended Uses": "용도",
           "Is it airborne?": "하늘에 떠 있나요?",
-          "It's A Reptile!": "파충류입니다!",
+          "Is it aquatic?": "수중 동물인가요?",
           "It's A Mammal!": "포유류입니다!",
+          "It's A Reptile!": "파충류입니다!",
           "It's a Bird!": "조류입니다!",
-          "It's a Fish!": "어류입니다!",
-          "It's an Amphibian!": "양서류입니다!",
           "It's a Bug!": "곤충입니다!",
           "It's a Crustacean!": "갑각류예요!",
-          "Intended Uses": "용도",
-          "This app can be used to identify the type of animal you see in the real world. This can be used in Zoos or Wildlife Sanctuaries to help educate people about the type of animals they are looking at.": "이 앱은 실제 세계에서 볼 수 있는 동물의 유형을 식별하는데 사용할 수 있습니다. 동물원이나 야생동물 보호구역에서 자신들이 보고 있는 동물의 유형에 대해 교육하는 데 사용할 수 있습니다.",
-          "Next!": "다음!",
+          "It's a Fish!": "어류입니다!",
+          "It's an Amphibian!": "양서류입니다!",
           "Limitations": "제한 사항",
-          "This app was trained on a small set of animals and only animals that typically appear in a zoo. This app may not work well with more exotic animals.": "이 앱은 일반적으로 동물원에 볼 수 있는 소수의 동물에 대해서만 학습되었습니다. 이 앱은 더 이국적인 동물에게는 잘 작동하지 않을 수 있습니다."
+          "More Information": "정보 더 보기",
+          "Next!": "다음!",
+          "No": "아니요",
+          "Predict": "예측",
+          "This app can be used to identify the type of animal you see in the real world. This can be used in Zoos or Wildlife Sanctuaries to help educate people about the type of animals they are looking at.": "이 앱은 실제 세계에서 볼 수 있는 동물의 유형을 식별하는데 사용할 수 있습니다. 동물원이나 야생동물 보호구역에서 자신들이 보고 있는 동물의 유형에 대해 교육하는 데 사용할 수 있습니다.",
+          "This app was trained on a small set of animals and only animals that typically appear in a zoo. This app may not work well with more exotic animals.": "이 앱은 일반적으로 동물원에 볼 수 있는 소수의 동물에 대해서만 학습되었습니다. 이 앱은 더 이국적인 동물에게는 잘 작동하지 않을 수 있습니다.",
+          "This app will predict a type of animal based on four questions!": "이 앱은 네 가지 질문을 기반으로 동물의 유형을 예측합니다!",
+          "Yes": "예"
         },
         "ml-models-shoes decision tree-2021": {
-          "Improved Shoe Recommender": "개선된 구두 추천",
-          "Sports": "스포츠",
-          "Recommend Shoes!": "신발 추천!",
           "Another Recommendation!": "또 다른 추천!",
-          "We Recommend...": "다음을 추천합니다...",
-          "Is It Raining Outside?": "밖에 비가 오나요?",
-          "Yes!": "예!",
-          "No!": "아니요!",
-          "Where Are You Spending Your Day?": "하루를 어디서 보내고 계신가요?",
-          "Choose An Option": "옵션 선택하기",
-          "Indoors": "실내",
-          "Outdoors": "야외",
-          "In Bed": "침대에서",
-          "Recommend Shoes": "신발 추천",
-          "What Kind Of Day is Today?": "오늘은 어떤 날인가요?",
           "Casual": "보통",
-          "Fancy": "멋짐"
+          "Choose An Option": "옵션 선택하기",
+          "Fancy": "멋짐",
+          "Improved Shoe Recommender": "개선된 구두 추천",
+          "In Bed": "침대에서",
+          "Indoors": "실내",
+          "Is It Raining Outside?": "밖에 비가 오나요?",
+          "No!": "아니요!",
+          "Outdoors": "야외",
+          "Recommend Shoes": "신발 추천",
+          "Recommend Shoes!": "신발 추천!",
+          "Sports": "스포츠",
+          "We Recommend...": "다음을 추천합니다...",
+          "What Kind Of Day is Today?": "오늘은 어떤 날인가요?",
+          "Where Are You Spending Your Day?": "하루를 어디서 보내고 계신가요?",
+          "Yes!": "예!"
         },
         "ml-models-shoes decision tree_2022": {
-          "Improved Shoe Recommender": "개선된 구두 추천",
-          "Sports": "스포츠",
-          "Recommend Shoes!": "신발 추천!",
           "Another Recommendation!": "또 다른 추천!",
-          "We Recommend...": "다음을 추천합니다...",
-          "Is It Raining Outside?": "밖에 비가 오나요?",
-          "Yes!": "예!",
-          "No!": "아니요!",
-          "Where Are You Spending Your Day?": "하루를 어디서 보내고 계신가요?",
-          "Choose An Option": "옵션 선택하기",
-          "Indoors": "실내",
-          "Outdoors": "야외",
-          "In Bed": "침대에서",
-          "Recommend Shoes": "신발 추천",
-          "What Kind Of Day is Today?": "오늘은 어떤 날인가요?",
           "Casual": "보통",
-          "Fancy": "멋짐"
+          "Choose An Option": "옵션 선택하기",
+          "Fancy": "멋짐",
+          "Improved Shoe Recommender": "개선된 구두 추천",
+          "In Bed": "침대에서",
+          "Indoors": "실내",
+          "Is It Raining Outside?": "밖에 비가 오나요?",
+          "No!": "아니요!",
+          "Outdoors": "야외",
+          "Recommend Shoes": "신발 추천",
+          "Recommend Shoes!": "신발 추천!",
+          "Sports": "스포츠",
+          "We Recommend...": "다음을 추천합니다...",
+          "What Kind Of Day is Today?": "오늘은 어떤 날인가요?",
+          "Where Are You Spending Your Day?": "하루를 어디서 보내고 계신가요?",
+          "Yes!": "예!"
         },
         "ml-models-shoes points-2021": {
-          "Ultimate Shoe Recommender": "최종적인 구두 추천",
-          "Recommend Shoes!": "신발 추천!",
           "Another Recommendation!": "또 다른 추천!",
-          "We Recommend...": "다음을 추천합니다...",
-          "Where will you spend most of your time?": "가장 많은 시간을 보내는 곳은 어디입니까?",
+          "Casual": "보통",
+          "Do you care about people noticing your shoes?": "사람들이 내 신발을 알아보는 게 신경 쓰이나요?",
+          "Hard Work": "열심히 일함",
+          "How do you feel about socks?": "양말에 대해 어떻게 생각하세요?",
           "In Bed": "침대에서",
           "Indoors": "실내",
-          "Outside in a City": "도시 외부",
-          "Outside in Nature": "외부 자연 속에서",
-          "What is the weather like?": "날씨가 어떤가요?",
-          "Sunny": "화창함",
-          "Rainy": "비가 옴",
-          "Snowy": "눈이 내림",
-          "Windy": "바람이 붐",
-          "How do you feel about socks?": "양말에 대해 어떻게 생각하세요?",
-          "Yes Socks!": "네, 양말!",
-          "No Socks!": "양말은 아니에요!",
-          "What is your day like?": "오늘 하루는 어떤가요?",
-          "Casual": "보통",
-          "Professional": "전문적인",
-          "Hard Work": "열심히 일함",
           "Lazy": "게으름",
-          "Do you care about people noticing your shoes?": "사람들이 내 신발을 알아보는 게 신경 쓰이나요?",
-          "Yes!": "예!",
-          "No!": "아니요!"
+          "No Socks!": "양말은 아니에요!",
+          "No!": "아니요!",
+          "Outside in Nature": "외부 자연 속에서",
+          "Outside in a City": "도시 외부",
+          "Professional": "전문적인",
+          "Rainy": "비가 옴",
+          "Recommend Shoes!": "신발 추천!",
+          "Snowy": "눈이 내림",
+          "Sunny": "화창함",
+          "Ultimate Shoe Recommender": "최종적인 구두 추천",
+          "We Recommend...": "다음을 추천합니다...",
+          "What is the weather like?": "날씨가 어떤가요?",
+          "What is your day like?": "오늘 하루는 어떤가요?",
+          "Where will you spend most of your time?": "가장 많은 시간을 보내는 곳은 어디입니까?",
+          "Windy": "바람이 붐",
+          "Yes Socks!": "네, 양말!",
+          "Yes!": "예!"
         },
         "ml-models-shoes points_2022": {
-          "Ultimate Shoe Recommender": "최종적인 구두 추천",
-          "Recommend Shoes!": "신발 추천!",
           "Another Recommendation!": "또 다른 추천!",
-          "We Recommend...": "다음을 추천합니다...",
-          "Where will you spend most of your time?": "가장 많은 시간을 보내는 곳은 어디입니까?",
+          "Casual": "보통",
+          "Do you care about people noticing your shoes?": "사람들이 내 신발을 알아보는 게 신경 쓰이나요?",
+          "Hard Work": "열심히 일함",
+          "How do you feel about socks?": "양말에 대해 어떻게 생각하세요?",
           "In Bed": "침대에서",
           "Indoors": "실내",
-          "Outside in a City": "도시 외부",
-          "Outside in Nature": "외부 자연 속에서",
-          "What is the weather like?": "날씨가 어떤가요?",
-          "Sunny": "화창함",
-          "Rainy": "비가 옴",
-          "Snowy": "눈이 내림",
-          "Windy": "바람이 붐",
-          "How do you feel about socks?": "양말에 대해 어떻게 생각하세요?",
-          "Yes Socks!": "네, 양말!",
-          "No Socks!": "양말은 아니에요!",
-          "What is your day like?": "오늘 하루는 어떤가요?",
-          "Casual": "보통",
-          "Professional": "전문적인",
-          "Hard Work": "열심히 일함",
           "Lazy": "게으름",
-          "Do you care about people noticing your shoes?": "사람들이 내 신발을 알아보는 게 신경 쓰이나요?",
-          "Yes!": "예!",
-          "No!": "아니요!"
+          "No Socks!": "양말은 아니에요!",
+          "No!": "아니요!",
+          "Outside in Nature": "외부 자연 속에서",
+          "Outside in a City": "도시 외부",
+          "Professional": "전문적인",
+          "Rainy": "비가 옴",
+          "Recommend Shoes!": "신발 추천!",
+          "Snowy": "눈이 내림",
+          "Sunny": "화창함",
+          "Ultimate Shoe Recommender": "최종적인 구두 추천",
+          "We Recommend...": "다음을 추천합니다...",
+          "What is the weather like?": "날씨가 어떤가요?",
+          "What is your day like?": "오늘 하루는 어떤가요?",
+          "Where will you spend most of your time?": "가장 많은 시간을 보내는 곳은 어디입니까?",
+          "Windy": "바람이 붐",
+          "Yes Socks!": "네, 양말!",
+          "Yes!": "예!"
         },
         "ml-models-shoes random-2021": {
-          "Shoe Recommender": "구두 추천",
-          "Recommend Shoes!": "신발 추천!",
           "Another Recommendation!": "또 다른 추천!",
+          "Recommend Shoes!": "신발 추천!",
+          "Shoe Recommender": "구두 추천",
           "We Recommend...": "다음을 추천합니다..."
         },
         "ml-models-shoes random_2022": {
-          "Shoe Recommender": "구두 추천",
-          "Recommend Shoes!": "신발 추천!",
           "Another Recommendation!": "또 다른 추천!",
+          "Recommend Shoes!": "신발 추천!",
+          "Shoe Recommender": "구두 추천",
           "We Recommend...": "다음을 추천합니다..."
         },
         "ml-use model card-example3A-2021": {
+          "Cars:": "자동차:",
           "Driver Alert System": "드라이버 경보 시스템",
+          "Get Started": "시작하기",
+          "How Many Other Cars Are On The Road?": "도로에 몇 대의 다른 자동차가 있습니까?",
+          "Note: Normally all of this data would be collected by sensors. For this test, you will need to enter the data yourself": "참고: 일반적으로 이 모든 데이터는 센서에 의해 수집됩니다. 이 테스트를 위해, 데이터를 직접 입력해야 합니다.",
+          "Predict": "예측",
+          "Predict!": "예측!",
+          "Temperature:": "온도:",
+          "This app simulates a Car Alert System safety feature. It analyzes the road conditions and gives a rating on how safe it is to be driving right now.": "이 앱은 자동차 경보 시스템 안전 특징을 시뮬레이션합니다. 도로 상태를 분석하고 현재 얼마나 안전하게 운전하는지에 대한 평점을 줍니다.",
+          "This feature determines how many other cars are on the road using a proximity sensor. The more cars there are on the road, the more dangerous driving conditions can be.": "이 특징은 근접 센서를 사용하여 도로에 다른 차량이 몇 대가 있는지 결정합니다. 도로에 자동차가 많을수록 운전 조건이 더 위험해질 수 있습니다.",
+          "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "이 특징은 온도 센서를 사용하여 현재 온도를 결정합니다. 날씨가 너무 더우면 자동차가 과열되어 오작동할 수 있습니다. 날씨가 너무 추우면 차량 부품이 얼거나 뻑뻑해져 오작동할 수 있습니다.",
+          "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "이 특징은 광 센서를 사용하여 시간을 결정합니다. 황혼 및 야간 운전은 주간 운전보다 더 위험한 경향이 있습니다.",
+          "This feature determines what the weather is like using an atmospheric sensor. Road conditions become more dangerous in snowy or foggy weather. Under certain conditions, the sun can also blind drivers and cause accidents": "이 특징은 대기 센서를 사용하여 날씨를 결정합니다. 눈이 오거나 안개가 끼는 날씨에는 도로 상황이 더욱 위험해집니다. 특정 상황에서 태양은 운전자의 눈을 부시게 하여 사고를 일으킬 수도 있습니다.",
+          "Time Of Day:": "하루 중 시간:",
+          "Weather:": "날씨:",
+          "What Is The Weather Like?": "날씨가 어때요?",
+          "What is the Temperature Outside?": "바깥 온도는 어떤가요?",
+          "What time of day is it?": "하루 중 몇 시예요?",
+          "cloudy": "구름",
+          "daylight": "낮",
+          "dusk": "황혼",
+          "foggy": "흐린",
+          "night": "밤",
           "rain": "비",
           "snow": "눈",
-          "cloudy": "구름",
-          "night": "밤",
-          "dusk": "황혼",
-          "Predict": "예측",
-          "This app simulates a Car Alert System safety feature. It analyzes the road conditions and gives a rating on how safe it is to be driving right now.": "이 앱은 자동차 경보 시스템 안전 특징을 시뮬레이션합니다. 도로 상태를 분석하고 현재 얼마나 안전하게 운전하는지에 대한 평점을 줍니다.",
-          "Note: Normally all of this data would be collected by sensors. For this test, you will need to enter the data yourself": "참고: 일반적으로 이 모든 데이터는 센서에 의해 수집됩니다. 이 테스트를 위해, 데이터를 직접 입력해야 합니다.",
-          "Get Started": "시작하기",
-          "Weather:": "날씨:",
-          "foggy": "흐린",
-          "sunny": "맑음",
-          "Time Of Day:": "하루 중 시간:",
-          "daylight": "낮",
-          "Temperature:": "온도:",
-          "Cars:": "자동차:",
-          "How Many Other Cars Are On The Road?": "도로에 몇 대의 다른 자동차가 있습니까?",
-          "This feature determines how many other cars are on the road using a proximity sensor. The more cars there are on the road, the more dangerous driving conditions can be.": "이 특징은 근접 센서를 사용하여 도로에 다른 차량이 몇 대가 있는지 결정합니다. 도로에 자동차가 많을수록 운전 조건이 더 위험해질 수 있습니다.",
-          "What Is The Weather Like?": "날씨가 어때요?",
-          "This feature determines what the weather is like using an atmospheric sensor. Road conditions become more dangerous in snowy or foggy weather. Under certain conditions, the sun can also blind drivers and cause accidents": "이 특징은 대기 센서를 사용하여 날씨를 결정합니다. 눈이 오거나 안개가 끼는 날씨에는 도로 상황이 더욱 위험해집니다. 특정 상황에서 태양은 운전자의 눈을 부시게 하여 사고를 일으킬 수도 있습니다.",
-          "What is the Temperature Outside?": "바깥 온도는 어떤가요?",
-          "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "이 특징은 온도 센서를 사용하여 현재 온도를 결정합니다. 날씨가 너무 더우면 자동차가 과열되어 오작동할 수 있습니다. 날씨가 너무 추우면 차량 부품이 얼거나 뻑뻑해져 오작동할 수 있습니다.",
-          "What time of day is it?": "하루 중 몇 시예요?",
-          "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "이 특징은 광 센서를 사용하여 시간을 결정합니다. 황혼 및 야간 운전은 주간 운전보다 더 위험한 경향이 있습니다.",
-          "Predict!": "예측!"
+          "sunny": "맑음"
         },
         "ml-use model card-example3A_2022": {
+          "Cars:": "자동차:",
           "Driver Alert System": "드라이버 경보 시스템",
+          "Get Started": "시작하기",
+          "How Many Other Cars Are On The Road?": "도로에 몇 대의 다른 자동차가 있습니까?",
+          "Note: Normally all of this data would be collected by sensors. For this test, you will need to enter the data yourself": "참고: 일반적으로 이 모든 데이터는 센서에 의해 수집됩니다. 이 테스트를 위해, 데이터를 직접 입력해야 합니다.",
+          "Predict": "예측",
+          "Predict!": "예측!",
+          "Temperature:": "온도:",
+          "This app simulates a Car Alert System safety feature. It analyzes the road conditions and gives a rating on how safe it is to be driving right now.": "이 앱은 자동차 경보 시스템 안전 특징을 시뮬레이션합니다. 도로 상태를 분석하고 현재 얼마나 안전하게 운전하는지에 대한 평점을 줍니다.",
+          "This feature determines how many other cars are on the road using a proximity sensor. The more cars there are on the road, the more dangerous driving conditions can be.": "이 특징은 근접 센서를 사용하여 도로에 다른 차량이 몇 대가 있는지 결정합니다. 도로에 자동차가 많을수록 운전 조건이 더 위험해질 수 있습니다.",
+          "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "이 특징은 온도 센서를 사용하여 현재 온도를 결정합니다. 날씨가 너무 더우면 자동차가 과열되어 오작동할 수 있습니다. 날씨가 너무 추우면 차량 부품이 얼거나 뻑뻑해져 오작동할 수 있습니다.",
+          "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "이 특징은 광 센서를 사용하여 시간을 결정합니다. 황혼 및 야간 운전은 주간 운전보다 더 위험한 경향이 있습니다.",
+          "This feature determines what the weather is like using an atmospheric sensor. Road conditions become more dangerous in snowy or foggy weather. Under certain conditions, the sun can also blind drivers and cause accidents": "이 특징은 대기 센서를 사용하여 날씨를 결정합니다. 눈이 오거나 안개가 끼는 날씨에는 도로 상황이 더욱 위험해집니다. 특정 상황에서 태양은 운전자의 눈을 부시게 하여 사고를 일으킬 수도 있습니다.",
+          "Time Of Day:": "하루 중 시간:",
+          "Weather:": "날씨:",
+          "What Is The Weather Like?": "날씨가 어때요?",
+          "What is the Temperature Outside?": "바깥 온도는 어떤가요?",
+          "What time of day is it?": "하루 중 몇 시예요?",
+          "cloudy": "구름",
+          "daylight": "낮",
+          "dusk": "황혼",
+          "foggy": "흐린",
+          "night": "밤",
           "rain": "비",
           "snow": "눈",
-          "cloudy": "구름",
-          "night": "밤",
-          "dusk": "황혼",
-          "Predict": "예측",
-          "This app simulates a Car Alert System safety feature. It analyzes the road conditions and gives a rating on how safe it is to be driving right now.": "이 앱은 자동차 경보 시스템 안전 특징을 시뮬레이션합니다. 도로 상태를 분석하고 현재 얼마나 안전하게 운전하는지에 대한 평점을 줍니다.",
-          "Note: Normally all of this data would be collected by sensors. For this test, you will need to enter the data yourself": "참고: 일반적으로 이 모든 데이터는 센서에 의해 수집됩니다. 이 테스트를 위해, 데이터를 직접 입력해야 합니다.",
-          "Get Started": "시작하기",
-          "Weather:": "날씨:",
-          "foggy": "흐린",
-          "sunny": "맑음",
-          "Time Of Day:": "하루 중 시간:",
-          "daylight": "낮",
-          "Temperature:": "온도:",
-          "Cars:": "자동차:",
-          "How Many Other Cars Are On The Road?": "도로에 몇 대의 다른 자동차가 있습니까?",
-          "This feature determines how many other cars are on the road using a proximity sensor. The more cars there are on the road, the more dangerous driving conditions can be.": "이 특징은 근접 센서를 사용하여 도로에 다른 차량이 몇 대가 있는지 결정합니다. 도로에 자동차가 많을수록 운전 조건이 더 위험해질 수 있습니다.",
-          "What Is The Weather Like?": "날씨가 어때요?",
-          "This feature determines what the weather is like using an atmospheric sensor. Road conditions become more dangerous in snowy or foggy weather. Under certain conditions, the sun can also blind drivers and cause accidents": "이 특징은 대기 센서를 사용하여 날씨를 결정합니다. 눈이 오거나 안개가 끼는 날씨에는 도로 상황이 더욱 위험해집니다. 특정 상황에서 태양은 운전자의 눈을 부시게 하여 사고를 일으킬 수도 있습니다.",
-          "What is the Temperature Outside?": "바깥 온도는 어떤가요?",
-          "This feature determines the current temperature using a temperature sensor. If the weather is too hot, cars can overheat and malfunction. If the weather is too cold, parts of the car can freeze or tighten and malfunction.": "이 특징은 온도 센서를 사용하여 현재 온도를 결정합니다. 날씨가 너무 더우면 자동차가 과열되어 오작동할 수 있습니다. 날씨가 너무 추우면 차량 부품이 얼거나 뻑뻑해져 오작동할 수 있습니다.",
-          "What time of day is it?": "하루 중 몇 시예요?",
-          "This feature determines the time of day using a light sensor. Dusk and nighttime driving tend to be more dangerous than daylight driving.": "이 특징은 광 센서를 사용하여 시간을 결정합니다. 황혼 및 야간 운전은 주간 운전보다 더 위험한 경향이 있습니다.",
-          "Predict!": "예측!"
+          "sunny": "맑음"
         }
       }
     }

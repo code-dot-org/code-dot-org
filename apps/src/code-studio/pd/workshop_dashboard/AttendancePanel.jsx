@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import {Row, Col, Button} from 'react-bootstrap';
+import {Row, Col, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import WorkshopPanel from './WorkshopPanel';
 import {DATE_FORMAT} from './workshopConstants';
 

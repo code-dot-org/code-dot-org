@@ -2,9 +2,6 @@
   "bg-BG": {
     "data": {
       "mini_rubric": {
-        "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "Ключова Идея"
-        },
         "CSD Games properties assessment_2021": {
           "rubric_performance_level_4": "Кодът е или еднакъв, или е бил променен по начини, които не са свързане със задачата."
         },
@@ -171,6 +168,9 @@
           "rubric_performance_level_2": "Справихте се добре.",
           "rubric_performance_level_3": "Справихте се приемливо.",
           "rubric_performance_level_4": "Направихте нищо."
+        },
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "Ключова Идея"
         }
       }
     }

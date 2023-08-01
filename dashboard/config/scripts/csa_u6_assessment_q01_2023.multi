@@ -58,3 +58,8 @@ for (Book b : bookList) {
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+**Option I** uses a traditional `for` loop to iterate over the elements of `bookList`. It uses the `get()` method to access each `Book` object at the specified index and then calls the `getCost()` method on that `Book` object to retrieve its cost. The cost is added to the `total` variable.
+
+**Option II** uses an enhanced `for` loop to iterate over the elements of `bookList`. It directly assigns each element to the variable `b`, which represents a `Book` object. Then, it calls the `getCost()` method on `b` to retrieve its cost and adds it to the `total` variable.
+MARKDOWN

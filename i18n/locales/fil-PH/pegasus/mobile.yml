@@ -1499,6 +1499,7 @@
   header_stats: "Mga Stats"
   header_help_us: "Tulungan Kami"
   header_about: "Tungkol sa"
+  header_incubator: "Incubator"
   header_teacher_community: "Komunidad ng mga Guro"
   header_help_support: 'Tulong at suporta '
   header_report_bug: "I-report ang problema"
@@ -1613,7 +1614,7 @@
   hoc2018_mc_download_adventurer: "I-download ang offline na bersyon ng Minecraft Adventurer."
   hoc2018_mc_educators: "Para sa mga Tagapagturo"
   hoc2018_mc_educators_box1_title: "Code gamit ang Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Edisyon ng Edukasyon ay nagbibigay ng standards-aligned na kurikulum, training at coding sa Minecraft.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Edisyon ng Edukasyon ay nagbibigay ng standards-aligned na kurikulum, training at coding sa Minecraft."
   hoc2018_mc_educators_box1_button: "Magsimula"
   hoc2018_mc_educators_box2_title: "I-download ang Gabay sa Facilitator"
   hoc2018_mc_educators_box2_desc: "Ang toolkit na ito ay tutulong sa iyo na mag-host ng Hour of Code at makisali sa mga mag-aaral mo sa computer science."
@@ -1721,7 +1722,7 @@
   hoc2018_mc_with_microsoft: "Sa pakikipagtulungan ng"
   hoc2018_mc_thank_microsoft: " Nagpapasalamat kami sa Microsoft sa pagsuporta sa aming bisyon at misyon na matiyak na ang bawat bata ay may pagkakataon na matuto ng computer science at sa mga skill para magtagumpay sa ika-21 siglo.  "
   hoc2019_mc_mee_title: "Minecraft AI Kailanman"
-  hoc2019_mc_mee_description1: 'Ang bagong Minecraft Hour of Code tutorial ay available na ngayon sa Minecraft: Education Edition para sa Windows, Mac, at iPad. Alamin ang mga pangunahing kaalaman sa coding at tuklasin ang AI kasama ng iyong mga mag-aaral!'
+  hoc2019_mc_mee_description1: "Ang bagong Minecraft Hour of Code tutorial ay available na ngayon sa Minecraft: Education Edition para sa Windows, Mac, at iPad. Alamin ang mga pangunahing kaalaman sa coding at tuklasin ang AI kasama ng iyong mga mag-aaral!"
   hoc2019_mc_mee_description2: "Mag-access ng mga libreng mapagkukunan kabilang ang isang plano ng aralin, mga video, kurikulum ng computer science, at mga pagsasanay ng guro."
   hoc2019_mc_more_coding_resources: "Higit pang Mga Mapagkukunan ng Coding"
   hoc2019_dance_previous_versions: "Naghahanap para sa isang nakaraang bersiyon ng Dance Party?\nMag-click dito upang simulan ang [Bahagi 1](%{dance_2018_link}) at [Bahagi 2](%{dance_extras_2018_link}) mula 2018."
@@ -1734,18 +1735,18 @@
   page_not_available_description: "Ikinalulungkot namin, ang pahinang hiniling mo ay hindi na magagamit sa address na ito. Kung kailangan mo pa rin ng access, mangyaring mag-email sa [support@code.org](%{support_email_link})."
   page_not_available_button: "Bumalik sa Home"
   hoc2020_mc_available_code_org: "Available sa Code.org"
-  hoc2020_mc_available_mee: 'Available sa Minecraft: Edisyon ng Edukasyon'
+  hoc2020_mc_available_mee: "Available sa Minecraft: Edisyon ng Edukasyon"
   hoc2020_mc_mee_title: "Kwento ng Dalawang Nayon ng Minecraft"
-  hoc2020_mc_mee_description: 'Available na ngayon ang bagong Minecraft Hour of Code na tutorial sa Minecraft: Edisyon ng Edukasyon sa Windows, Mac, Chromebook, at iPad. Alamin ang mga pangunahing kaalaman sa coding at tuklasin ang pagkakaiba-iba at paglalakip sa mga mag-aaral mo! Mag-access ng mga libreng mapagkukunan kabilang ang isang lesson plan, mga video, kurikulum ng computer science, mga aralin sa equity, at mga pagsasanay ng guro.'
+  hoc2020_mc_mee_description: "Available na ngayon ang bagong Minecraft Hour of Code na tutorial sa Minecraft: Edisyon ng Edukasyon sa Windows, Mac, Chromebook, at iPad. Alamin ang mga pangunahing kaalaman sa coding at tuklasin ang pagkakaiba-iba at paglalakip sa mga mag-aaral mo! Mag-access ng mga libreng mapagkukunan kabilang ang isang lesson plan, mga video, kurikulum ng computer science, mga aralin sa equity, at mga pagsasanay ng guro."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Maglakbay pabalik sa nakaraan at matutong mag-code! Available na ngayon ang bagong Minecraft Hour of Code na tutorial sa Minecraft: Edisyon ng Edukasyon sa Windows, Mac, Chromebook, at iPad. Magsimula sa mga libreng mapagkukunan ng tagapagturo, pagsasanay, at video.'
+  hoc2021_mc_mee_description: "Maglakbay pabalik sa nakaraan at matutong mag-code! Available na ngayon ang bagong Minecraft Hour of Code na tutorial sa Minecraft: Edisyon ng Edukasyon sa Windows, Mac, Chromebook, at iPad. Magsimula sa mga libreng mapagkukunan ng tagapagturo, pagsasanay, at video."
   hoc2021_mc_mee_villages_title: "Kwento ng Dalawang Nayon"
-  hoc2021_mc_mee_villages_description: 'Alamin ang mga pangunahing kaalaman sa coding at tuklasin ang pagkakaiba-iba at paglalakip sa mga mag-aaral mo sa Minecraft: Edisyon ng Edukasyon.'
+  hoc2021_mc_mee_villages_description: "Alamin ang mga pangunahing kaalaman sa coding at tuklasin ang pagkakaiba-iba at paglalakip sa mga mag-aaral mo sa Minecraft: Edisyon ng Edukasyon."
   hoc2021_mc_mee_ai_title: "AI Kailanman"
-  hoc2021_mc_mee_ai_description: 'I-explore ang AI kasama ang mga mag-aaral mo at matutong mag-code sa Minecraft: Edisyon ng Edukasyon.'
+  hoc2021_mc_mee_ai_description: "I-explore ang AI kasama ang mga mag-aaral mo at matutong mag-code sa Minecraft: Edisyon ng Edukasyon."
   hoc2022_mc_mee_title: "Minecraft Escape na Estate"
   hoc2022_mc_mee_description: 'Tumakas sa mahiwagang mansyon pagsapit ng madaling araw at kumita ng milyong esmeralda! Ang bagong Minecraft Hour of Code tutorial ay magagamit na ngayon sa Minecraft: Education Edition sa Windows, Mac, Chromebook, Ipad at Mobile. Magsimula sa mga libreng mapagkukunan ng tagapagturo, pagsasanay, at video.'
-  hoc2022_mc_mee_timecraft_description: 'Maglakbay pabalik sa nakaraan upang i-save ang hinaharap sa libreng coding lesson na ito sa Minecraft: Education Edition.'
+  hoc2022_mc_mee_timecraft_description: "Maglakbay pabalik sa nakaraan upang i-save ang hinaharap sa libreng coding lesson na ito sa Minecraft: Education Edition."
   footer_powered_by_aws: "Pinagana sa pamamagitan ng Amazon Web Services"
   footer_built_on_github: "Binuo sa GitHub mula sa Microsoft"
   codebytes_skinny_banner_title: "Samahan kami sa Disyembre 7-11 sa aming CodeBytes live na mga mini-lesson!"
@@ -1794,7 +1795,7 @@
   ai_zooniverse: "Zooniverse - Snapshot Mountain Zebra"
   ai_zooniverse_description: "Tumulong na protektahan ang nanganganib na Cape Mountain Zebra sa pamamagitan ng pagtukoy sa iba't ibang hayop sa mga larawan."
   ai_audience: "Madla"
-  ai_minecraft_description: 'Mag-access ng mga libreng mapagkukunan kabilang ang isang plano ng aralin, mga video, kurikulum ng computer science, at mga pagsasanay ng guro. (Nangangailangan ng Minecraft: Edisyon ng Edukasyon)'
+  ai_minecraft_description: "Mag-access ng mga libreng mapagkukunan kabilang ang isang plano ng aralin, mga video, kurikulum ng computer science, at mga pagsasanay ng guro. (Nangangailangan ng Minecraft: Edisyon ng Edukasyon)"
   ai_k_12_audience: "K-12 (Kailangan ng pagbabasa)"
   ai_microsoft_workshop: "Libreng virtual workshop mula sa Microsoft"
   ai_microsoft_workshop_description: "Pumukaw ang pagkamausisa sa mga libreng STEM at coding na workshop."

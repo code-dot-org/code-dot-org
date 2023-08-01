@@ -531,6 +531,7 @@ ja:
         csf_my_online_neighborhood_2020: 私のオンラインネイバーフッド
         csf_follow_the_digital_trail: デジタルトレイルをたどる
         csf_private_and_personal_information: プライベートおよび個人情報を編集
+        csd_what_computers_are: コンピューターとは
         codebreak_e01: 'コードブレーク 1.0: Hill Harperのアルゴリズム'
         codebreak_e02: 'コードブレーク 2.0: Mark CubanとLyndsey Scottのプロトタイプ'
         codebreak_e03: 'コードブレーク 3.0: Ashton KutcherとMia Gil Epnerの暗号化'
@@ -545,8 +546,28 @@ ja:
         codebreak_e10: 'コードブレーク 10.0: Kat GrahamとKate ParkのAI'
         codebreak_e11: 'コードブレイク 11.0: Susan WojcickiとChina Anne McClainの抽象化'
         codebreak_e12: 'コードブレーク 12.0: Aloe Blacc、Bret TaylorとPaula Mejiaのハードウェア'
+        csf21pilot_events: 'スプライトラボ:スプライト・イン・アクション'
+        csf21pilot_prompts: 'スプライトラボ:テキストとプロンプト'
+        csd_ml_intro_to_ai_lab: AI ラボの紹介
+        csd_ml_import_model: AI モデルのインポート
+        csf_lots_of_sprites: 'スプライトラボ:たくさんのスプライト'
         playlab_2021: Playラボの概要
         playlab_2021_reader: Playラボの概要
+        csp_defining_calling_functions: 関数の定義と呼び出し
+        csp_tutorial_datatab: アプリラボの「データ」タブ
+        csp_tutorial_libraries: アプリラボのライブラリ
+        PL-Video-21: Code.orgのプロフェッショナルラーニングへようこそ！
+        csp_tutorial_datavis1: アプリラボのデータビジュアライザー-パート 1
+        csp_tutorial_datavis2: アプリラボのデータビジュアライザー-パート 2
+        csd_ml_intro_ai_lab_july2021: AI ラボの紹介
+        csd_ml_training_testing_ai_lan: AI ラボでのトレーニングとテスト
+        csd_ml_model_cards_july2021: AI ラボのモデルカード
+        csd_ml_numerical_ai_lab: AI ラボの数値データ
+        Gettting_Started_Progress: 進捗状況、フィードバック、評価
+        Gettting_Started_ClassSection: クラスセクションの作成
+        Gettting_Started_StudentExperience: 学生体験
+        Getting_Started_BasicFeatures: Code.orgの基本的な機能
+        PL_overview_CSD: コンピュータ・サイエンス・ディスカバリーとは？
         PL_CSD_TeacherTips_Advise: 教師のためのヒント - 新米教師へのアドバイス
         PL_CSD_TeacherTips_IntroToCSD: 教師のためのヒント - CSを知るための入門
         PL_CSD_TeacherTips_ProblemSolvingProcess: 教師のためのヒント - 問題解決プロセス
@@ -559,6 +580,7 @@ ja:
         hello_world_intro: Hello World - スプライトラボへようこそ
         hello_world_events: Hello World - Eventsでもっとプログラミング
         hello_world_congrats: Hello World - 望むことをせよ
+        csp_global_vs_local: グローバル変数とローカル変数のデバッグ
         rough_poemart_intro: v1ポエムアート 入門
         rough_poemart_events: v1ポエムアート イベント
         rough_poemart_imagery: v1ポエムアート イメージ
@@ -569,7 +591,21 @@ ja:
         poetry_module_multichoiceprompts: 多肢選択式のプロンプト - 詩を使ったプログラミング
         poetry_module_conditionals: 条件文 - 詩を使ったプログラミング
         poemart_intro: ポエムアート入門
+        poemart_events: ポエムアートイベント
+        poemart_imagery: ポエムアート画像
+        poemart_celebration: ポエム・アート・セレブレーション
+        csd_u6_variables_part2: 変数-カウンターパターン
+        csd_ml_ethics_ai: '倫理と人工知能 '
+        outbreak_intro: 'アウトブレイクのシミュレーション:はじめに'
+        outbreak_events: 'アウトブレイク・シミュレータ:イベント'
+        outbreak_scientist: 'アウトブレイク・シミュレーター:科学者のように考える'
+        outbreak_outro: 'アウトブレイク・シミュレーター:フリープレイ'
+        PL_overview_CSP: コンピュータサイエンスの原則とは？
+        PL_CSP_EIPMOverview: EIPM レッスンのガイド
         CSA-PL-debugging-temp: Java Labへのデバッグ入門 - temp
+        csd_app_lab_design_mode: CSD アプリラボデザインモード
+        csd_app_lab_events: CSD アプリケーションラボイベント
+        PL_CSD_Unit4_AppTesting: ペーパープロトタイプテスト
         csd_u6_circuit_playground: 物理コンピューティング
         csd_u6_input_output: 入出力
         CSA-PL-for-loops: JavaのForループ
@@ -590,8 +626,104 @@ ja:
         CSA-PL-two-way-selection: 双方向選択
         CSA-PL-Printing-in-Java: Javaでプリント
         CSA-PL-multi-selection-statements: 複数選択文
+        PL_CSP_TeacherTips_Advice: '先生へのアドバイス:CSの新任教師へのアドバイス'
+        PL_CSP_TeacherTips_IntroToCSP: '先生へのアドバイス:CS 原則入門'
+        PL_CSP_TeacherTips_Debugging: '先生へのアドバイス:デバッグのヘルプ'
+        PL_CSP_TeacherTips_LeadLearner: '先生へのアドバイス：主任学習者になるには'
+        PL_CSP_TeacherTips_APExam: '先生へのアドバイス：AP試験の準備'
+        PL_CSP_TeacherTips_EIPM: '先生へのアドバイス:EIPMプロセス'
+        PL_CSD_CircuitPlayground_Overview: サーキットプレイグラウンドの概要
+        CSA-PL-debugging-22: Java ラボでのデバッグ
+        CSD_Unit6_InteractiveArtExemplar: インタラクティブ・アート・サンプル
         CS_Changing_Everything: コンピューター サイエンスはすべてを変えています
+        csa-alias-video: イコールとエイリアス
+        csa-equals-video: equals () メソッド
+        csa-user-stories: ソフトウェアエンジニアリングのユーザーストーリー
+        csa-pl-vpl-m1-unit-3: ユニット3のソフトウェア工学
+        csa-pl-intro-to-equality: 平等入門
+        csa-pl-intro-to-equals-method: .equals () メソッドの概要
+        csa-pl-equals-book: Book クラスの equals () メソッドの記述
+        csa-multi-select-pl: Java での複数選択ステートメント
+        csc_timecapsule_intro: タイムカプセルの紹介
+        PL_Equity_in_CS_Education: CS教育における公平性
+        csc_fm_pilot: ファンクションマシン (パイロット)
+        csc_fm_pilot_v2: 'ファンクションマシン入門 '
+        csc-sprite-lab-pixel-editor: 自分だけのスプライトを描こう
+        csa-pl-intro-to-strings: Java の文字列入門
+        csa-pl-compareTo: compareTo () メソッド
+        csc-event-short-intro: イベントショートイントロ
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: サーキットプレイグラウンドユニットの概要
+        csa-day-in-pm-pl: プロジェクトマネージャーは何をしますか？
+        csa-pl-intro-to-pm: プロジェクト管理入門
+        PL_CSD_CircuitPlayground_Setup: サーキットプレイグラウンドのセットアップ
+        csa_object_oriented_programming: 'CSA: オブジェクト指向プログラミング'
+        csa_creating_objects: 'CSA: オブジェクトの作成'
+        csa_calling_methods: 'CSA: メソッドの呼び出し'
+        csa_while_loops: 'CSA: ホイルループ'
+        csa_inheritance: 'CSA: 継承'
+        csa_writing_a_method: 'CSA: メソッドを書く'
+        csa_software_engineering_code_reviews: 'CSA: ソフトウェアエンジニアリング-コードレビュー'
+        csa_conditional_statements: 'CSA: 条件付きステートメント'
+        csa_printing_in_java: 'CSA: Java でのプリント'
+        csa_two_way_selection_and_not: 'CSA: 双方向選択と非選択'
+        csa-pl-intro-to-oop: オブジェクト指向プログラミング入門
+        csa-pl-welcome-to-Neighborhood: ご近所へようこそ
+        csa-pl-calling-methods: Java でのメソッドの呼び出し
+        csa-pl-creating-objects: オブジェクト作成
+        csa_accessor_methods: 'CSA: アクセサメソッド'
+        csa_constructors: 'CSA: コンストラクター'
+        csa_creating_a_scanner_object: 'CSA: スキャナーオブジェクトの作成'
+        csa_creating_variables: 'CSA: 変数の作成'
+        csa_instance_variables_and_attributes: 'CSA: インスタンス変数と属性'
+        csa_mutator_methods: 'CSA: ミューテーターメソッド'
+        csa_overloaded_constructors: 'CSA: オーバーロードされたコンストラクター'
+        csa_the_tostring_method: 'CSA: toString () メソッド'
+        csa_scanner_class_methods: 'CSA: スキャナークラスメソッド'
+        csa_for_loops: 'CSA: ループ用'
+        csa_enhanced_for_loops: 'CSA: ループ用に機能強化'
+        csa_modifying_values_in_a_1d_array: 'CSA: 1D 配列の値の変更'
+        csa_nested_loops: 'CSA: ネストループ'
+        csa_one_dimensional_arrays: 'CSA: 1 次元 (1D) アレイ'
+        csa_polymorphism: 'CSA: ポリモーフィズム'
+        csa_casting: 'CSA: キャスティング'
+        csa_equals_and_aliases: 'CSA: イコールとエイリアス'
+        csa_multi-selection_statements: 'CSA: 複数選択ステートメント'
+        csa_random_numbers: 'CSA: ランダム番号'
+        csa_static_methods: 'CSA: スタティックメソッド'
+        csa_static_variables: 'CSA: スタティック変数'
+        csa_the_equals_method: 'CSA: イコールズ () メソッド'
+        csa_welcome_to_the_theater: 'CSA: 劇場へようこそ'
+        enter_your_own_poem: 自分の詩を入力してください
+        csa-example-solution-1: 'サンプルソリューションのライブコーディング '
         csd_sprite_properties: スプライトのプロパティ
+        csa-pl-documentation: Java ラボのドキュメント
+        csc-starquilts-intro: 'CSC: スターキルト'
+        csa-pl-vocab-pm: プロジェクト管理用語
+        csc-ecosystems-intro: エコシステム入門
+        PL_CSD_MicroBit_Intro: マイクロ:ビットの紹介
+        csc_animal_adaptations_intro: 動物適応入門
+        csa_two_dimensional_arrays: 'CSA: 2 次元 (2D) アレイ'
+        csa_working_with_2d_array_elements: 'CSA: 2D 配列要素の操作'
+        csa_row_major_traversal: 'CSA: 行メジャー・トラバーサル'
+        csa_column_major_traversal: 'CSA: 列優先トラバーサル'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: ループと 2D 配列向けに強化'
+        csa_images_and_pixels: 'CSA: イメージとピクセル'
+        csa_wrapper_classes_part_1: 'CSA: ラッパークラスパート 1'
+        csa_wrapper_classes_part_2: 'CSA: ラッパークラスパート 2'
+        csa_the_arraylist_class: 'CSA: 配列リストクラス'
+        csa_working_with_arraylist_data: 'CSA: 配列リストデータの処理'
+        csa_remving_data_from_an_arraylist: 'CSA: 配列リストからデータを削除する'
+        csa_private_methods: 'CSA: プライベートメソッド'
+        csa_recursion: 'CSA: 再帰処理'
+        csa_searching_algorithms: 'CSA: 検索アルゴリズム'
+        csa_sorting_algorithms: 'CSA: ソートアルゴリズム'
+        star_quilts_intro_to_artist: 'スターキルト:アーティスト紹介'
+        upload_sprites_backgrounds: カスタムスプライトと背景のアップロード
+        PL_CSD_EquityBlindSpotsvid: 偏見と責任
+        how-ai-works-llms-full: チャットボットと大規模言語モデルの仕組み
+        how-ai-works-creativity-full: AIに創造性と想像力はあるのか？
+        how-ai-works-llms-part1: チャットボットと大規模言語モデル Part 1
+        how-ai-works-llms-part2: チャットボットと大規模言語モデル Part 2
     callout:
       text:
         drag_blocks: '「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。'

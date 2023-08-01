@@ -1,62 +1,13 @@
 {
-  "navigateForward": "Continuar",
-  "navigateBack": "Voltar",
-  "tryAgain": "Inténtao de novo",
-  "navigateDone": "Rematar",
-  "saveProgress": "Salvar",
-  "correctAnswer": "Certo",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Rango",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Rango",
+  "correctAnswer": "Certo",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "idade"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "día"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "millo"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "cor"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "idade"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "Rango"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "tamaño"
+        "Length": {
+          "id": "Extensión"
         }
       }
     },
@@ -70,14 +21,35 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "plátano"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "idade"
         }
       }
     },
-    "census_part": {
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "cor"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Idade"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "idade"
@@ -91,6 +63,20 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "País"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "idade"
+        }
+      }
+    },
     "movies": {
       "fields": {
         "Country": {
@@ -101,52 +87,17 @@
         }
       }
     },
-    "songs": {
+    "nutrition": {
       "fields": {
-        "Artist": {
-          "id": "Artista"
+        "Description": {
+          "id": "Rango"
         }
       }
     },
-    "abalone": {
+    "salsa_toy": {
       "fields": {
-        "Length": {
-          "id": "Extensión"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Country": {
-          "id": "País"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Achievements": {
-          "id": "Logros"
-        },
-        "Age": {
-          "id": "Idade",
-          "description": "Idade"
-        },
-        "Gender": {
-          "id": "Xénero",
-          "description": "Xénero"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "plátano"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "Idade"
+        "corn": {
+          "id": "millo"
         }
       }
     },
@@ -157,12 +108,61 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
+        "size": {
+          "id": "tamaño"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "día"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Artista"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "idade"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Logros"
+        },
+        "Age": {
+          "description": "Idade",
+          "id": "Idade"
+        },
         "Country": {
           "id": "País"
+        },
+        "Gender": {
+          "description": "Xénero",
+          "id": "Xénero"
+        },
+        "Internet": {
+          "id": "Internet"
         }
       }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Voltar",
+  "navigateDone": "Rematar",
+  "navigateForward": "Continuar",
+  "saveProgress": "Salvar",
+  "tryAgain": "Inténtao de novo"
 }

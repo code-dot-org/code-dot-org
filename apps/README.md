@@ -220,6 +220,16 @@ To add a new package using npm, e.g., `lodash`, run: `npm i --save-dev lodash`
 - `--save-dev` adds the dependency to node's package.json, freezing the current version
 - Because the build process is done in dev mode, include dependencies as devDependencies rather than production dependencies
 
+### Typescript Migration
+We are trying out Typescript in our repository, and currently have a combination of Typescript and Javascript files. Typescript files can be added anywhere in `/src`, and wil
+be linted and built. 
+
+#### Typescript Imports
+If you need to import a .js or .jsx function or component into a Typescript file, you may need to take an additional step to use the syntax
+`import {component} from "folder/component";`. Check [tsconfig.json](tsconfig.json#9) and see if the file you are importing is included
+in the `includes` list. If it is not, add the folder containing the file to the list. We are adding folders as-needed because adding
+folders here increases the build time.
+
 ## Contributing
 
 We'd love to have you join our group of contributors!

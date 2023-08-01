@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "플레이 소리",
-  "blockly_blockPlaySoundAtMeasureTooltip": "플레이 소리",
+  "blockly_blockPlaySoundAtMeasureTooltip": "소리 재생",
+  "blockly_blockPlaySoundTooltip": "소리 재생",
   "blockly_blockRepeatTooltip": "반복",
   "blockly_blockRestTooltip": "휴식",
   "blockly_blockWhenRun": "실행하면",
@@ -12,11 +12,14 @@
   "blockly_toolboxCategoryFunctions": "함수",
   "blockly_toolboxCategoryLogic": "논리",
   "blockly_toolboxCategoryMath": "계산",
-  "blockly_toolboxCategoryPlay": "재생",
+  "blockly_toolboxCategoryPlay": "사운드",
   "blockly_toolboxCategoryVariables": "변수",
+  "continue": "계속",
   "control": "제어",
   "feedback": "피드백",
+  "panelHeaderInstructions": "안내",
+  "panelHeaderWorkspace": "작업 공간",
   "share": "공유하기",
-  "startOver": "다시 시작하기",
+  "startOver": "다시 시작",
   "upload": "업로드"
 }

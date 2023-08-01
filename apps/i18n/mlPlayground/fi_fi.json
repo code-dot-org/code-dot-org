@@ -1,89 +1,14 @@
 {
-  "navigateForward": "Jatka",
-  "navigateBack": "Takaisin",
-  "tryAgain": "Yritä uudestaan",
-  "navigateDone": "Valmis",
-  "saveProgress": "Tallenna",
-  "correctAnswer": "Oikein",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Kuvaus",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Kuvaus",
+  "correctAnswer": "Oikein",
   "dataCardLastUpdated": "Viimeksi päivitetty",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "ikä"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "sää"
-        },
-        "day": {
-          "id": "päivä"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "corn": {
-          "id": "maissi"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "pekoni"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "väri"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "ikä"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "Kuvaus"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "sivut"
-        },
-        "size": {
-          "id": "koko"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "chicken": {
-          "id": "kana"
+        "Length": {
+          "id": "Pituus"
         }
       }
     },
@@ -97,21 +22,35 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banaani"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "ikä"
         }
       }
     },
-    "naan_toy": {
+    "club_random_toy": {
       "fields": {
-        "chicken": {
-          "id": "kana"
+        "color": {
+          "id": "väri"
         }
       }
     },
-    "census_part": {
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Ikä"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "ikä"
@@ -125,43 +64,50 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Maa"
+        },
+        "Dance": {
+          "id": "Tanssi"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "ikä"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Tulos"
-        },
         "Country": {
           "id": "Maa"
         },
         "Name": {
           "id": "Nimi"
         },
+        "Score": {
+          "id": "Tulos"
+        },
         "Star": {
           "id": "Tähti"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Taiteilija"
+        "chicken": {
+          "id": "kana"
         }
       }
     },
-    "safari_toy": {
-      "name": "Safari"
-    },
-    "abalone": {
+    "nutrition": {
       "fields": {
-        "Length": {
-          "id": "Pituus"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "merellinen"
+        "Description": {
+          "id": "Kuvaus"
         }
       }
     },
@@ -172,41 +118,33 @@
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Dance": {
-          "id": "Tanssi"
-        },
-        "Country": {
-          "id": "Maa"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Achievements": {
-          "id": "Saavutukset"
-        },
-        "Age": {
-          "id": "Ikä",
-          "description": "Ikä"
-        },
-        "Gender": {
-          "id": "Sukupuoli",
-          "description": "Sukupuoli"
+        "bacon": {
+          "id": "pekoni"
         }
       }
     },
-    "boba_toy": {
+    "safari_toy": {
+      "name": "Safari"
+    },
+    "salad_toy": {
       "fields": {
-        "banana": {
-          "id": "banaani"
+        "avocado": {
+          "id": "avokado"
+        },
+        "chicken": {
+          "id": "kana"
         }
       }
     },
-    "heart": {
+    "salsa_toy": {
       "fields": {
-        "Age": {
-          "id": "Ikä"
+        "avocado": {
+          "id": "avokado"
+        },
+        "corn": {
+          "id": "maissi"
         }
       }
     },
@@ -220,15 +158,77 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Dance": {
-          "id": "Tanssi"
+        "sides": {
+          "id": "sivut"
+        },
+        "size": {
+          "id": "koko"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "päivä"
+        },
+        "weather": {
+          "id": "sää"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Taiteilija"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "ikä"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Saavutukset"
+        },
+        "Age": {
+          "description": "Ikä",
+          "id": "Ikä"
         },
         "Country": {
           "id": "Maa"
+        },
+        "Dance": {
+          "id": "Tanssi"
+        },
+        "Gender": {
+          "description": "Sukupuoli",
+          "id": "Sukupuoli"
+        },
+        "Internet": {
+          "id": "Internet"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "merellinen"
         }
       }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Takaisin",
+  "navigateDone": "Valmis",
+  "navigateForward": "Jatka",
+  "saveProgress": "Tallenna",
+  "tryAgain": "Yritä uudestaan"
 }

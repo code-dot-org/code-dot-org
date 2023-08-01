@@ -2,27 +2,27 @@
   "se-FI": {
     "data": {
       "course_offerings": {
-        "csd": "DihtorDiehtaga Fuomášumit",
-        "csp": "DihtorDiehtaga Prinsihpat",
         "20-hour": "Jođanis Láidehus CS:kursii",
-        "flappy": "Flappy Koda",
         "algebrab": "DihtorDiehta Algebra:s: Kursa B",
+        "allthethingscourse": "buotáđaidkursa",
         "artist": "Dáiddár",
-        "basketball": "Vállje iežat/alccat joavkku ja ráhkat gorespábba spealu",
         "course1": "Kursa 1",
         "course2": "Kursa 2",
         "course3": "Kursa 3",
         "course4": "Kursa 4",
+        "csd": "DihtorDiehtaga Fuomášumit",
+        "csp": "DihtorDiehtaga Prinsihpat",
+        "flappy": "Flappy Koda",
         "frozen": "Kode Annain ja Elsain",
         "gumball": "Gumball Speallan-lab",
         "hourofcode": "Klassikalaš Labirynta",
         "iceage": "Jiekŋaáiggi Speallan-lab",
         "infinity": "Disney Infinitiija Speallan-lab",
+        "netsim": "netsim",
         "oceans": "AI Mearaide",
         "playlab": "Speallan-lab",
-        "text-compression": "TeakstaKomprimeren",
-        "netsim": "netsim",
-        "allthethingscourse": "buotáđaidkursa"
+        "starwars": "Náste Soahti: Hukse Galáksa Kodemiin (JavaScript)",
+        "text-compression": "TeakstaKomprimeren"
       }
     }
   }

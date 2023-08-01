@@ -4,7 +4,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import _ from 'lodash';
-import {Tabs, Tab} from 'react-bootstrap';
+import {Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {enrollmentShape} from '../types';
 import WorkshopEnrollmentSchoolInfo from './workshop_enrollment_school_info';
 import WorkshopEnrollmentPreSurvey from './workshop_enrollment_pre_survey';

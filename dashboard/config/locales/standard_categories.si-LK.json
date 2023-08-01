@@ -5,11 +5,11 @@
         "CT": {
           "description": "සංඛ්‍යාත්මක සිතීම"
         },
-        "L": {
-          "description": "භාෂාව"
-        },
         "F": {
           "description": "ශ්‍රිතයන්"
+        },
+        "L": {
+          "description": "භාෂාව"
         }
       }
     }

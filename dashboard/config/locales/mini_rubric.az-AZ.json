@@ -2,11 +2,20 @@
   "az-AZ": {
     "data": {
       "mini_rubric": {
-        "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "Əsas anlayış"
+        "CSD U2 HTML Adding Paragraphs pt 2_2019": {
+          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2021": {
+          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2022": {
+          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
         },
         "CSD U2 Heading Test_2018": {
           "rubric_performance_level_2": "Bütün məzmun teqlərdə olur, paraqraf və başlıq teqlərindən məntiqi şəkildə istifadə edir."
+        },
+        "CSD U2 Image Tag 2_2019": {
+          "rubric_performance_level_2": "Şəkil düzgün şəkildə göstərilir."
         },
         "CSD U2 Image assessment_2021": {
           "rubric_performance_level_2": "Şəkil düzgün göstərilir və müəllif hüququ lisenziyasının təsvirinə uyğun olaraq işlədilir.",
@@ -27,6 +36,15 @@
           "rubric_performance_level_2": "Sinif və qayda dəsti yaradılıb və veb-saytın seçilmiş haiku bölməsindəki elementlərin əksəriyyəti bu sinifdən təsirlənib, lakin mətnin bəzi hissələridə bir neçə kiçik xəta ola bilər və ya qayda dəstində üçdən daha az qayda ola bilər.",
           "rubric_performance_level_3": "Və sinif və qayda dəsti yaradılıb, və veb səhifədən heç olmasa bir neçə element o sinifdədir, ancaq mətnə üslub verməyin qarşısını alan böyük xətalar ola bilər.",
           "rubric_performance_level_4": "Heç bir sinif ya da qaydalar dəsti yaradılmayıb ya da sinfə heç bir veb səhifə elementi qoyulmayıb."
+        },
+        "CSD U2 text style h3_2019": {
+          "rubric_key_concept": "CSS istifadə edərək veb səhifədə formatlaşdırma tətbiq edin"
+        },
+        "CSD U2 text style h3_2021": {
+          "rubric_key_concept": "CSS istifadə edərək veb səhifədə formatlaşdırma tətbiq edin"
+        },
+        "CSD U2 text style h3_2022": {
+          "rubric_key_concept": "CSS istifadə edərək veb səhifədə formatlaşdırma tətbiq edin"
         },
         "CSD U3 Movement Your Own 2_2018": {
           "rubric_performance_level_4": "Sayğac nümunəsi yoxdur."
@@ -53,24 +71,24 @@
           "rubric_key_concept": "İnformasiyaları saxlamaq və yeniləmək üçün dəyişənlərdən istifadə et."
         },
         "CSD U3 debug_2019": {
-          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
           "rubric_key_concept": "Obyektin ölçüsünü və üst-üstə düşməsini nəzərə alaraq elementləri ekranda yerləşdirmək üçün koordinat sistemindən istifadə edin.",
           "rubric_performance_level_1": "Proqram rəsm nümunədəki ilə eynidir və yeddi kod sətirində yer alır.",
           "rubric_performance_level_2": "Proqram rəsm əsasən rəsmlə eynidır, lakin bəzi kiçik yerləşdirmə səhvləri ola bilər və əlavə kod xətləri ola bilər.",
+          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
           "rubric_performance_level_4": "Şəkil ya eynidir, ya da hər hansı bir dəyişiklik tapşırıqla əlaqəli görünmür."
         },
         "CSD U3 debug_2021": {
-          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
           "rubric_key_concept": "Obyektin ölçüsünü və üst-üstə düşməsini nəzərə alaraq elementləri ekranda yerləşdirmək üçün koordinat sistemindən istifadə edin.",
           "rubric_performance_level_1": "Proqram rəsm nümunədəki ilə eynidir və yeddi kod sətirində yer alır.",
           "rubric_performance_level_2": "Proqram rəsm əsasən rəsmlə eynidır, lakin bəzi kiçik yerləşdirmə səhvləri ola bilər və əlavə kod xətləri ola bilər.",
+          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
           "rubric_performance_level_4": "Şəkil ya eynidir, ya da hər hansı bir dəyişiklik tapşırıqla əlaqəli görünmür."
         },
         "CSD U3 debug_2022": {
-          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
           "rubric_key_concept": "Obyektin ölçüsünü və üst-üstə düşməsini nəzərə alaraq elementləri ekranda yerləşdirmək üçün koordinat sistemindən istifadə edin.",
           "rubric_performance_level_1": "Proqram rəsm nümunədəki ilə eynidir və yeddi kod sətirində yer alır.",
           "rubric_performance_level_2": "Proqram rəsm əsasən rəsmlə eynidır, lakin bəzi kiçik yerləşdirmə səhvləri ola bilər və əlavə kod xətləri ola bilər.",
+          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
           "rubric_performance_level_4": "Şəkil ya eynidir, ya da hər hansı bir dəyişiklik tapşırıqla əlaqəli görünmür."
         },
         "CSD Web CSS Assessment_2021": {
@@ -81,26 +99,8 @@
           "rubric_performance_level_2": "Paraqraflar yeni rəng və ya ölçüdür.",
           "rubric_performance_level_3": "Paraqrafların üslub cədvəlində xüsusi qaydaları var və rəng və ya ölçü xassəsindən istifadə edilir, lakin mətnin rəng və ya ölçüsünü dəyişməyən kifayət qədər səhvlər var. Üslub cədvəlini veb səhifə ilə əlaqələndirməyə çalışan HTML kodu var."
         },
-        "CSD U2 HTML Adding Paragraphs pt 2_2019": {
-          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
-        },
-        "CSD U2 HTML Adding Paragraphs pt 2_2021": {
-          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
-        },
-        "CSD U2 HTML Adding Paragraphs pt 2_2022": {
-          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
-        },
-        "CSD U2 Image Tag 2_2019": {
-          "rubric_performance_level_2": "Şəkil düzgün şəkildə göstərilir."
-        },
-        "CSD U2 text style h3_2019": {
-          "rubric_key_concept": "CSS istifadə edərək veb səhifədə formatlaşdırma tətbiq edin"
-        },
-        "CSD U2 text style h3_2021": {
-          "rubric_key_concept": "CSS istifadə edərək veb səhifədə formatlaşdırma tətbiq edin"
-        },
-        "CSD U2 text style h3_2022": {
-          "rubric_key_concept": "CSS istifadə edərək veb səhifədə formatlaşdırma tətbiq edin"
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "Əsas anlayış"
         }
       }
     }

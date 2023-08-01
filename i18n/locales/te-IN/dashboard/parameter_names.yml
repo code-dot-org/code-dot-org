@@ -1,7 +1,12 @@
 te:
   data:
     parameter_names:
+      actor: నటుడు
       height: ఎత్తు
+      honey: తేనె
       left: ఎడమ
+      min: ని
+      points: పాయింట్లు
       size: సైజు
+      speed: వేగం
       width: వెడల్పు

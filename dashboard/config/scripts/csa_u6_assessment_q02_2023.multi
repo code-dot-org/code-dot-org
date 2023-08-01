@@ -22,3 +22,6 @@ What is stored in `data` after the code segment is run?
 MARKDOWN
 
 allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+![](https://images.code.org/f5ec7724de83c7afb89d5712e4171b87-image-1683927302846.gif)
+MARKDOWN

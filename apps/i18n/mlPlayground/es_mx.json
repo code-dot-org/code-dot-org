@@ -1,300 +1,107 @@
 {
-  "trainModelButtonText": "Entrenar",
-  "navigateForward": "Continuar",
-  "navigateBack": "Volver",
-  "tryAgain": "Vuelve a intentarlo",
-  "navigateDone": "Terminar",
-  "saveProgress": "Guardar",
-  "correctAnswer": "Correcto",
-  "incorrectAnswer": "Incorrecto",
-  "potentialUsesLabel": "Propósito",
-  "potentialUsesDescription": "Describe el problema que crees que este modelo puede solucionar o una posible aplicación en la que alguien pueda usar este modelo.",
-  "potentialMisusesLabel": "Limitaciones y Advertencias",
-  "potentialMisusesDescription": "Describe cualquier limitación de como el modelo ha sido creado y como debe usarse. Puedes decir algo como \"Evita usar este modelo para...\" o \"Ten cuidado con...\". Considera las siguientes preguntas preguntas:",
-  "potentialMisusesDescriptionRepresent": "¿Representan los datos a todos los usuarios y escenarios posibles?",
-  "potentialMisusesDescriptionEnough": "¿Recopilaste suficientes datos para confiar en la precisión del modelo?",
-  "potentialMisusesDescriptionSituations": "¿Hay situaciones en las que este modelo definitivamente no debería usarse?",
-  "datasetDescriptionLabel": "Acerca de los Datos",
-  "modelCardAccuracy": "Precisión",
-  "modelCardIntendedUse": "Propósito",
-  "modelCardLimitations": "Limitaciones y Advertencias",
-  "modelCardDatasetDetails": "Acerca de los Datos",
-  "modelCardFeaturesAndLabel": "Características y Etiquetas",
-  "modelCardLabel": "Etiqueta",
-  "modelCardPossibleValues": "Valores Posibles",
-  "modelCardPossibleValuesMinimum": "mín.",
-  "modelCardPossibleValuesMaximum": "máx.",
-  "modelCardFeatures": "Características",
+  "addFeatureButton": "Añadir característica",
+  "columnDetailsMaximumValue": "máx.",
+  "columnDetailsMinimumValue": "mín.",
   "columnInspectorDataType": "Tipo de Datos",
   "columnInspectorDescription": "Descripción",
-  "columnDetailsMinimumValue": "mín.",
-  "columnDetailsMaximumValue": "máx.",
-  "selectLabelButton": "Seleccionar etiqueta",
-  "scatterPlotLabel": "Información sobre la relación",
-  "addFeatureButton": "Añadir característica",
+  "correctAnswer": "Correcto",
+  "crossTabRelationshipHeader": "Información sobre la relación",
   "dataCardDefaultHeader": "Detalles",
   "dataCardLastUpdated": "Última actualización",
-  "trainModelHeading": "Entrenamiento",
-  "generateResultsHeader": "Probando el modelo",
-  "resultsHeader": "Resultado",
-  "resultsAccuracy": "Precisión",
-  "resultsDetailsButton": "Detalles",
-  "resultsPreviousResults": "Resultados anteriores",
-  "resultsTableFeatureHeader": "Características",
-  "resultsTablePredictedValueHeader": "Predicción de la I.A.",
-  "predictHeader": "¡Pruébalo!",
-  "predictButton": "Predecir",
-  "predictAIBotPredicts": "La I.A. predice",
-  "crossTabRelationshipHeader": "Información sobre la relación",
-  "uniqueOptionsWarningNotice": "Nota",
+  "datasetDescriptionLabel": "Acerca de los Datos",
   "datasets": {
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "edad"
+    "abalone": {
+      "card": {
+        "context": {
+          "potentialUses": "Determina la edad de un abulón."
         }
       },
-      "name": "Prioridad Médica"
-    },
-    "shoe_survey_toy": {
       "fields": {
-        "weather": {
-          "id": "clima"
+        "Diameter": {
+          "description": "Su diámetro en milímetros.",
+          "id": "Diámetro"
         },
-        "day": {
-          "id": "día"
+        "Height": {
+          "description": "Su altura con el caracol en el caparazón en milímetros. ",
+          "id": "Altura"
         },
-        "shoe": {
-          "id": "zapato"
+        "Length": {
+          "description": "Su longitud en el punto más largo en milímetros.",
+          "id": "Extensión"
+        },
+        "Rings": {
+          "description": "La edad en años.",
+          "id": "Anillos"
+        },
+        "Sex": {
+          "description": "El sexo del abulón: M, F o I (infante).",
+          "id": "género"
+        },
+        "Shell weight": {
+          "description": "El peso de la cáscara después de secarse, en gramos.",
+          "id": "Peso de la cáscara"
+        },
+        "Shucked weight": {
+          "description": "El peso del caracol sin cáscara en gramos.",
+          "id": "Peso descascarado "
+        },
+        "Viscera weight": {
+          "description": "El peso de las vísceras, en gramos.",
+          "id": "Peso de las vísceras"
+        },
+        "Whole weight": {
+          "description": "El peso total del adulón en gramos.",
+          "id": "Peso total"
         }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "cebolla"
-        },
-        "avocado": {
-          "id": "aguacate"
-        },
-        "corn": {
-          "id": "maíz"
-        },
-        "beans": {
-          "id": "alubias"
-        },
-        "lime": {
-          "id": "lima"
-        },
-        "preference": {
-          "id": "preferencia"
-        }
-      }
+      },
+      "name": "Abulón"
     },
     "auto_mpg": {
       "fields": {
         "mpg": {
-          "id": "mpg",
-          "description": "Millas por galón."
+          "description": "Millas por galón.",
+          "id": "mpg"
         }
       }
     },
     "bike_sharing": {
       "fields": {
-        "index": {
-          "id": "Índice"
+        "Month": {
+          "id": "Mes"
         },
         "Year": {
           "id": "Año"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "setas"
         },
-        "lobster": {
-          "id": "langosta"
-        },
-        "bacon": {
-          "id": "tocino"
-        },
-        "cheese": {
-          "id": "Queso"
-        },
-        "meat": {
-          "id": "carne"
-        },
-        "preference": {
-          "id": "preferencia"
-        }
-      }
-    },
-    "cookies_toy": {
-      "fields": {
-        "preference": {
-          "id": "preferencia"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "color"
-        },
-        "music": {
-          "id": "música"
-        },
-        "food": {
-          "id": "comida"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "edad"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Categoría"
-        },
-        "Description": {
-          "id": "Descripción"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "fresa"
-        },
-        "lime": {
-          "id": "lima"
-        },
-        "preference": {
-          "id": "preferencia"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "lados",
-          "description": "Número de lados que tiene la forma"
-        },
-        "border color": {
-          "id": "color de borde",
-          "description": "Color del contorno de la forma"
-        },
-        "fill color": {
-          "id": "color de relleno",
-          "description": "Color del interior de la forma"
-        },
-        "background color": {
-          "id": "Color del fondo",
-          "description": "Color del fondo detrás de la forma"
-        },
-        "size": {
-          "id": "tamaño",
-          "description": "Ya sea grande o pequeño"
-        },
-        "shape": {
-          "id": "Forma",
-          "description": "Tipo de forma"
-        }
-      },
-      "card": {
-        "description": "Se extrajeron características de un dataset visual que muestra diferentes formas.",
-        "context": {
-          "potentialUses": "Se utiliza para entrenar al AI Bot sobre cómo clasificar formas.",
-          "potentialMisuses": "Cualquier otra cosa que no sea el propósito anterior."
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "tomate"
-        },
-        "avocado": {
-          "id": "aguacate"
-        },
-        "chicken": {
-          "id": "gallina"
-        },
-        "fruit": {
-          "id": "fruta"
-        },
-        "beans": {
-          "id": "alubias"
-        },
-        "cheese": {
-          "id": "Queso"
-        },
-        "preference": {
-          "id": "preferencia"
+        "index": {
+          "id": "Índice"
         }
       }
     },
     "billionaires": {
       "fields": {
-        "Rank": {
-          "id": "Posición",
-          "description": "Su rango de riqueza para el año de este récord."
-        },
-        "Year": {
-          "id": "Año"
-        },
-        "Company Founding Year": {
-          "id": "Año de fundación de la empresa",
-          "description": "El año en que se fundó su empresa."
-        },
         "Age": {
           "id": "Edad"
         },
+        "Company Founding Year": {
+          "description": "El año en que se fundó su empresa.",
+          "id": "Año de fundación de la empresa"
+        },
         "Gender": {
           "id": "Sexo"
+        },
+        "Rank": {
+          "description": "Su rango de riqueza para el año de este récord.",
+          "id": "Posición"
+        },
+        "Year": {
+          "id": "Año"
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "escuela"
-        },
-        "age": {
-          "id": "edad"
-        },
-        "health": {
-          "id": "salud"
-        }
-      }
-    },
-    "icecream_toppings_toy": {
-      "fields": {
-        "Preference": {
-          "id": "Preferencia"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "gallina"
-        },
-        "lamb": {
-          "id": "cordero"
-        },
-        "onion": {
-          "id": "cebolla"
-        },
-        "cheese": {
-          "id": "Queso"
+        "banana": {
+          "id": "plátano"
         },
         "preference": {
           "id": "preferencia"
@@ -308,182 +115,21 @@
         }
       }
     },
-    "loneliness_interests": {
+    "club_random_toy": {
       "fields": {
-        "Internet": {
-          "id": "Internet"
+        "color": {
+          "id": "color"
         },
-        "Writing": {
-          "id": "Escribir"
+        "food": {
+          "id": "comida"
+        },
+        "music": {
+          "id": "música"
         }
       }
     },
-    "movies": {
+    "cookies_toy": {
       "fields": {
-        "Score": {
-          "id": "Puntuación"
-        },
-        "Country": {
-          "id": "País"
-        },
-        "Name": {
-          "id": "Nombre"
-        },
-        "Star": {
-          "id": "Estrella"
-        },
-        "Year": {
-          "id": "Año"
-        }
-      }
-    },
-    "songs": {
-      "fields": {
-        "Artist": {
-          "id": "Artista"
-        },
-        "Year": {
-          "id": "Año"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "people": {
-          "id": "personas"
-        },
-        "rhino": {
-          "id": "rinoceronte"
-        },
-        "elephant": {
-          "id": "elefante"
-        },
-        "alligator": {
-          "id": "caimán"
-        },
-        "trees": {
-          "id": "árboles"
-        }
-      },
-      "name": "Safari"
-    },
-    "abalone": {
-      "fields": {
-        "Sex": {
-          "id": "género",
-          "description": "El sexo del abulón: M, F o I (infante)."
-        },
-        "Length": {
-          "id": "Extensión",
-          "description": "Su longitud en el punto más largo en milímetros."
-        },
-        "Diameter": {
-          "id": "Diámetro",
-          "description": "Su diámetro en milímetros."
-        },
-        "Height": {
-          "id": "Altura",
-          "description": "Su altura con el caracol en el caparazón en milímetros. "
-        },
-        "Whole weight": {
-          "id": "Peso total",
-          "description": "El peso total del adulón en gramos."
-        },
-        "Shucked weight": {
-          "id": "Peso descascarado ",
-          "description": "El peso del caracol sin cáscara en gramos."
-        },
-        "Viscera weight": {
-          "id": "Peso de las vísceras",
-          "description": "El peso de las vísceras, en gramos."
-        },
-        "Shell weight": {
-          "id": "Peso de la cáscara",
-          "description": "El peso de la cáscara después de secarse, en gramos."
-        },
-        "Rings": {
-          "id": "Anillos",
-          "description": "La edad en años."
-        }
-      },
-      "card": {
-        "context": {
-          "potentialUses": "Determina la edad de un abulón."
-        }
-      },
-      "name": "Abulón"
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Aquatic"
-        },
-        "Toothed": {
-          "description": "¿El animal tiene dientes?"
-        }
-      },
-      "card": {
-        "description": "Un pequeño conjunto de datos de diferentes atributos de animales (si tienen pelo, plumas, dientes y más) usados para propósitos de clasificación. Casi todas las características son Yes/No excepto el Nombre del Animal, Clase y Número de Patas."
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "aguacate"
-        },
-        "onion": {
-          "id": "cebolla"
-        },
-        "ginger": {
-          "id": "jengibre"
-        },
-        "preference": {
-          "id": "preferencia"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Music": {
-          "id": "Música"
-        },
-        "Dance": {
-          "id": "Baile"
-        },
-        "Country": {
-          "id": "País"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Writing": {
-          "id": "Escribir"
-        },
-        "Empathy": {
-          "id": "Empatía"
-        },
-        "Achievements": {
-          "id": "Logros"
-        },
-        "Age": {
-          "id": "Edad",
-          "description": "Edad"
-        },
-        "Height": {
-          "id": "Altura",
-          "description": "Altura"
-        },
-        "Gender": {
-          "id": "Sexo",
-          "description": "Sexo"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "plátano"
-        },
         "preference": {
           "id": "preferencia"
         }
@@ -506,41 +152,98 @@
         }
       }
     },
-    "shapes_v1_toy": {
+    "icecream_toppings_toy": {
       "fields": {
-        "sides": {
-          "id": "lados",
-          "description": "Número de lados que tiene la forma"
+        "Preference": {
+          "id": "Preferencia"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "edad"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internet"
         },
-        "border color": {
-          "id": "color de borde",
-          "description": "Color del contorno de la forma"
+        "Writing": {
+          "id": "Escribir"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "País"
         },
-        "fill color": {
-          "id": "color de relleno",
-          "description": "Color del interior de la forma"
+        "Dance": {
+          "id": "Baile"
         },
-        "size": {
-          "id": "tamaño",
-          "description": "Ya sea grande o pequeño"
-        },
-        "background color": {
-          "id": "Color del fondo",
-          "description": "Color del fondo detrás de la forma"
-        },
-        "shape": {
-          "id": "Forma",
-          "description": "Tipo de forma"
+        "Music": {
+          "id": "Música"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "edad"
         }
       },
-      "card": {
-        "description": "Se extrajeron características de un dataset visual que muestra diferentes formas.",
-        "context": {
-          "potentialUses": "Se utiliza para entrenar al AI Bot sobre cómo clasificar formas.",
-          "potentialMisuses": "Cualquier otra cosa que no sea el propósito anterior."
+      "name": "Prioridad Médica"
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "País"
+        },
+        "Name": {
+          "id": "Nombre"
+        },
+        "Score": {
+          "id": "Puntuación"
+        },
+        "Star": {
+          "id": "Estrella"
+        },
+        "Year": {
+          "id": "Año"
         }
-      },
-      "name": "Formas V1"
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "Queso"
+        },
+        "chicken": {
+          "id": "gallina"
+        },
+        "lamb": {
+          "id": "cordero"
+        },
+        "onion": {
+          "id": "cebolla"
+        },
+        "preference": {
+          "id": "preferencia"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "Categoría"
+        },
+        "Description": {
+          "id": "Descripción"
+        }
+      }
     },
     "pizza_toppings_toy": {
       "fields": {
@@ -552,6 +255,271 @@
         }
       }
     },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "aguacate"
+        },
+        "ginger": {
+          "id": "jengibre"
+        },
+        "onion": {
+          "id": "cebolla"
+        },
+        "preference": {
+          "id": "preferencia"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "bacon": {
+          "id": "tocino"
+        },
+        "cheese": {
+          "id": "Queso"
+        },
+        "lobster": {
+          "id": "langosta"
+        },
+        "meat": {
+          "id": "carne"
+        },
+        "mushrooms": {
+          "id": "setas"
+        },
+        "preference": {
+          "id": "preferencia"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "lime": {
+          "id": "lima"
+        },
+        "preference": {
+          "id": "preferencia"
+        },
+        "strawberry": {
+          "id": "fresa"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "caimán"
+        },
+        "elephant": {
+          "id": "elefante"
+        },
+        "people": {
+          "id": "personas"
+        },
+        "rhino": {
+          "id": "rinoceronte"
+        },
+        "trees": {
+          "id": "árboles"
+        }
+      },
+      "name": "Safari"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "aguacate"
+        },
+        "beans": {
+          "id": "alubias"
+        },
+        "cheese": {
+          "id": "Queso"
+        },
+        "chicken": {
+          "id": "gallina"
+        },
+        "fruit": {
+          "id": "fruta"
+        },
+        "preference": {
+          "id": "preferencia"
+        },
+        "tomato": {
+          "id": "tomate"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "aguacate"
+        },
+        "beans": {
+          "id": "alubias"
+        },
+        "corn": {
+          "id": "maíz"
+        },
+        "lime": {
+          "id": "lima"
+        },
+        "onion": {
+          "id": "cebolla"
+        },
+        "preference": {
+          "id": "preferencia"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Cualquier otra cosa que no sea el propósito anterior.",
+          "potentialUses": "Se utiliza para entrenar al AI Bot sobre cómo clasificar formas."
+        },
+        "description": "Se extrajeron características de un dataset visual que muestra diferentes formas."
+      },
+      "fields": {
+        "background color": {
+          "description": "Color del fondo detrás de la forma",
+          "id": "Color del fondo"
+        },
+        "border color": {
+          "description": "Color del contorno de la forma",
+          "id": "color de borde"
+        },
+        "fill color": {
+          "description": "Color del interior de la forma",
+          "id": "color de relleno"
+        },
+        "shape": {
+          "description": "Tipo de forma",
+          "id": "Forma"
+        },
+        "sides": {
+          "description": "Número de lados que tiene la forma",
+          "id": "lados"
+        },
+        "size": {
+          "description": "Ya sea grande o pequeño",
+          "id": "tamaño"
+        }
+      },
+      "name": "Formas V1"
+    },
+    "shapes_v2_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Cualquier otra cosa que no sea el propósito anterior.",
+          "potentialUses": "Se utiliza para entrenar al AI Bot sobre cómo clasificar formas."
+        },
+        "description": "Se extrajeron características de un dataset visual que muestra diferentes formas."
+      },
+      "fields": {
+        "background color": {
+          "description": "Color del fondo detrás de la forma",
+          "id": "Color del fondo"
+        },
+        "border color": {
+          "description": "Color del contorno de la forma",
+          "id": "color de borde"
+        },
+        "fill color": {
+          "description": "Color del interior de la forma",
+          "id": "color de relleno"
+        },
+        "shape": {
+          "description": "Tipo de forma",
+          "id": "Forma"
+        },
+        "sides": {
+          "description": "Número de lados que tiene la forma",
+          "id": "lados"
+        },
+        "size": {
+          "description": "Ya sea grande o pequeño",
+          "id": "tamaño"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "día"
+        },
+        "shoe": {
+          "id": "zapato"
+        },
+        "weather": {
+          "id": "clima"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Artista"
+        },
+        "Year": {
+          "id": "Año"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "edad"
+        },
+        "health": {
+          "id": "salud"
+        },
+        "internet": {
+          "id": "internet"
+        },
+        "school": {
+          "id": "escuela"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Logros"
+        },
+        "Age": {
+          "description": "Edad",
+          "id": "Edad"
+        },
+        "Country": {
+          "id": "País"
+        },
+        "Dance": {
+          "id": "Baile"
+        },
+        "Empathy": {
+          "id": "Empatía"
+        },
+        "Gender": {
+          "description": "Sexo",
+          "id": "Sexo"
+        },
+        "Height": {
+          "description": "Altura",
+          "id": "Altura"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Music": {
+          "id": "Música"
+        },
+        "Writing": {
+          "id": "Escribir"
+        }
+      }
+    },
     "taco_toppings_toy": {
       "fields": {
         "Preference": {
@@ -559,18 +527,56 @@
         }
       }
     },
-    "loneliness_music": {
+    "zoo": {
+      "card": {
+        "description": "Un pequeño conjunto de datos de diferentes atributos de animales (si tienen pelo, plumas, dientes y más) usados para propósitos de clasificación. Casi todas las características son Yes/No excepto el Nombre del Animal, Clase y Número de Patas."
+      },
       "fields": {
-        "Music": {
-          "id": "Música"
+        "Aquatic": {
+          "id": "Aquatic"
         },
-        "Dance": {
-          "id": "Baile"
-        },
-        "Country": {
-          "id": "País"
+        "Toothed": {
+          "description": "¿El animal tiene dientes?"
         }
       }
     }
-  }
+  },
+  "generateResultsHeader": "Probando el modelo",
+  "incorrectAnswer": "Incorrecto",
+  "modelCardAccuracy": "Precisión",
+  "modelCardDatasetDetails": "Acerca de los Datos",
+  "modelCardFeatures": "Características",
+  "modelCardFeaturesAndLabel": "Características y Etiquetas",
+  "modelCardIntendedUse": "Propósito",
+  "modelCardLabel": "Etiqueta",
+  "modelCardLimitations": "Limitaciones y Advertencias",
+  "modelCardPossibleValues": "Valores Posibles",
+  "modelCardPossibleValuesMaximum": "máx.",
+  "modelCardPossibleValuesMinimum": "mín.",
+  "navigateBack": "Volver",
+  "navigateDone": "Terminar",
+  "navigateForward": "Continuar",
+  "potentialMisusesDescription": "Describe cualquier limitación de como el modelo ha sido creado y como debe usarse. Puedes decir algo como \"Evita usar este modelo para...\" o \"Ten cuidado con...\". Considera las siguientes preguntas preguntas:",
+  "potentialMisusesDescriptionEnough": "¿Recopilaste suficientes datos para confiar en la precisión del modelo?",
+  "potentialMisusesDescriptionRepresent": "¿Representan los datos a todos los usuarios y escenarios posibles?",
+  "potentialMisusesDescriptionSituations": "¿Hay situaciones en las que este modelo definitivamente no debería usarse?",
+  "potentialMisusesLabel": "Limitaciones y Advertencias",
+  "potentialUsesDescription": "Describe el problema que crees que este modelo puede solucionar o una posible aplicación en la que alguien pueda usar este modelo.",
+  "potentialUsesLabel": "Propósito",
+  "predictAIBotPredicts": "La I.A. predice",
+  "predictButton": "Predecir",
+  "predictHeader": "¡Pruébalo!",
+  "resultsAccuracy": "Precisión",
+  "resultsDetailsButton": "Detalles",
+  "resultsHeader": "Resultado",
+  "resultsPreviousResults": "Resultados anteriores",
+  "resultsTableFeatureHeader": "Características",
+  "resultsTablePredictedValueHeader": "Predicción de la I.A.",
+  "saveProgress": "Guardar",
+  "scatterPlotLabel": "Información sobre la relación",
+  "selectLabelButton": "Seleccionar etiqueta",
+  "trainModelButtonText": "Entrenar",
+  "trainModelHeading": "Entrenamiento",
+  "tryAgain": "Vuelve a intentarlo",
+  "uniqueOptionsWarningNotice": "Nota"
 }

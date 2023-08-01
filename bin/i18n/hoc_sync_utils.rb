@@ -7,31 +7,6 @@ require 'fileutils'
 require 'tempfile'
 
 class HocSyncUtils
-  # Pulls in all strings that need to be translated for HourOfCode.com. Pulls
-  # source files from pegasus/sites.v3/hourofcode.com and collects them to a
-  # single source folder i18n/locales/source.
-  def self.sync_in
-    puts "Preparing Hour of Code content"
-    orig_dir = "pegasus/sites.v3/hourofcode.com/public"
-    dest_dir = File.join(I18N_SOURCE_DIR, "hourofcode")
-
-    # Copy the file containing developer-added strings
-    Dir.mkdir(dest_dir) unless Dir.exist?(dest_dir)
-    FileUtils.cp("pegasus/sites.v3/hourofcode.com/i18n/en.yml", dest_dir)
-
-    # Copy the markdown files representing individual page content
-    Dir.glob(File.join(orig_dir, "**/*.{md,md.partial}")).each do |file|
-      dest = file.sub(orig_dir, dest_dir)
-      if File.extname(dest) == '.partial'
-        dest = File.join(File.dirname(dest), File.basename(dest, '.partial'))
-      end
-
-      FileUtils.mkdir_p(File.dirname(dest))
-      FileUtils.cp(file, dest)
-      sanitize_hoc_file(dest)
-    end
-  end
-
   def self.sync_out
     rename_yml_to_locale
     copy_from_i18n_source_to_hoc
@@ -87,19 +62,6 @@ class HocSyncUtils
         FileUtils.cp(source_path, File.join(dest_dir, dest_name))
       end
     end
-  end
-
-  # YAML headers can include a lot of things we don't want translators to mess
-  # with or worry about; layout, navigation settings, social media tags, etc.
-  # However, they also include things like page titles that we DO want
-  # translators to be able to translate, so we can't ignore them completely.
-  # Instead, here we reduce the headers down to contain only the keys we care
-  # about and then in the out step we reinflate the received headers with the
-  # values from the original source.
-  def self.sanitize_hoc_file(path)
-    header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-    I18nScriptUtils.sanitize_header!(header)
-    I18nScriptUtils.write_markdown_with_header(content, header, path)
   end
 
   # In the sync in, we slice the YAML headers of the files we upload to crowdin

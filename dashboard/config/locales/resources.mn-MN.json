@@ -2,932 +2,172 @@
   "mn-MN": {
     "data": {
       "resources": {
-        "poem_art_celebration/poem-art/2021": {
-          "type": "Видео"
-        },
-        "poem_art_events/poem-art/2021": {
-          "type": "Видео"
-        },
-        "poem_art_imagery/poem-art/2021": {
-          "type": "Видео"
-        },
-        "poem_art_introduction/poem-art/2021": {
-          "type": "Видео"
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "type": "Видео"
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "type": "Видео"
-        },
-        "ai-ml/oceans/unversioned": {
-          "type": "Видео"
-        },
-        "ai-societal/oceans/unversioned": {
-          "type": "Видео"
-        },
-        "ai-training/oceans/unversioned": {
-          "type": "Видео"
-        },
-        "curriculum_guide/coursed/2022": {
-          "name": "Сургалтын хөтөлбөрийн заавар"
-        },
-        "implementation_guide/coursed/2022": {
-          "name": "Хэрэгжүүлэх заавар"
-        },
-        "teacher_forum/coursed/2022": {
-          "name": "Багш нарын форум"
-        },
-        "graph_paper_programming/coursed/2022": {
-          "name": "График цаасны программчлал"
-        },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "График цаасны программчлал"
-        },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "График цаасны программчлал"
-        },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "График цаасны программчлал"
-        },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "График цаасны программчлал",
-          "type": "Үнэлгээ"
-        },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "График цаасны программчлал"
-        },
-        "pair_programming/coursed/2022": {
-          "name": "Хос програмчлал"
-        },
-        "relay_programming/coursed/2022": {
-          "name": "Буухиа программчлал"
-        },
-        "relay_programming_1/coursed/2022": {
-          "name": "Буухиа программчлал"
-        },
-        "relay_programming_2/coursed/2022": {
-          "name": "Буухиа программчлал"
-        },
-        "relay_programming_3/coursed/2022": {
-          "name": "Буухиа программчлал"
-        },
-        "relay_programming_4/coursed/2022": {
-          "name": "Буухиа программчлал"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "Буухиа программчлал"
-        },
-        "pause_and_think_online/coursed/2022": {
-          "type": "Видео"
-        },
-        "conditionals_with_cards/coursed/2022": {
-          "name": "Карт бүхий нөхцлүүд"
-        },
-        "conditionals_with_cards_1/coursed/2022": {
-          "name": "Карт бүхий нөхцлүүд"
-        },
-        "conditionals_with_cards_2/coursed/2022": {
-          "name": "Карт бүхий нөхцлүүд",
-          "type": "Үнэлгээ"
-        },
-        "conditionals_with_cards_3/coursed/2022": {
-          "name": "Карт бүхий нөхцлүүд"
-        },
-        "conditionals_with_cards_4/coursed/2022": {
-          "name": "Карт бүхий нөхцлүүд"
-        },
-        "curriculum_guide/coursef/2022": {
-          "name": "Сургалтын хөтөлбөрийн заавар"
-        },
-        "implementation_guide/coursef/2022": {
-          "name": "Хэрэгжүүлэх заавар"
-        },
-        "sprite_lab_documentation/coursef/2022": {
-          "name": "Шидтэний лабын баримт бичиг"
-        },
-        "teacher_forum/coursef/2022": {
-          "name": "Багш нарын форум"
-        },
-        "the_power_of_words_the_power_of_words/coursef/2022": {
-          "type": "Видео"
-        },
-        "exploring_apps/coursef/2022": {
-          "name": "Апп судлах"
-        },
-        "exploring_apps_1/coursef/2022": {
-          "name": "Апп судлах"
-        },
-        "introducing_sprite_lab_1/coursef/2022": {
-          "name": "Шидтэний лабораторийг танилцуулах",
-          "type": "Видео"
-        },
-        "running_simulations/coursef/2022": {
-          "name": "Симуляцийг ажиллуулах"
-        },
-        "ai_impact_on_society/coursef/2022": {
-          "type": "Видео"
-        },
-        "ai_machine_learning/coursef/2022": {
-          "type": "Видео"
-        },
-        "ai_training_data_bias/coursef/2022": {
-          "type": "Видео"
-        },
-        "internet/coursef/2022": {
-          "name": "Интернэт",
-          "type": "Үнэлгээ"
-        },
-        "internet_1/coursef/2022": {
-          "name": "Интернэт"
-        },
-        "the_internet/coursef/2022": {
-          "name": "Интернэт"
-        },
-        "curriculum_guide/coursee/2022": {
-          "name": "Сургалтын хөтөлбөрийн заавар"
-        },
-        "implementation_guide/coursee/2022": {
-          "name": "Хэрэгжүүлэх заавар"
-        },
-        "sprite_lab_documentation/coursee/2022": {
-          "name": "Шидтэний лабын баримт бичиг"
-        },
-        "teacher_forum/coursee/2022": {
-          "name": "Багш нарын форум"
-        },
-        "pause_and_think_online/coursee/2022": {
-          "type": "Видео"
-        },
-        "functions_unplugged_songwriting_2/coursee/2022": {
-          "type": "Үнэлгээ"
-        },
-        "digital_sharing_ethics_video_/coursee/2022": {
-          "type": "Видео"
-        },
-        "curriculum_guide/courseb/2022": {
-          "name": "Сургалтын хөтөлбөрийн заавар"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "Хэрэгжүүлэх заавар"
-        },
-        "teacher_forum/courseb/2022": {
-          "name": "Багш нарын форум"
-        },
-        "move_it_move_it/courseb/2022": {
-          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
-        },
-        "move_it_move_it_1/courseb/2022": {
-          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
-        },
-        "move_it_move_it_2/courseb/2022": {
-          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
-        },
-        "move_it_move_it_3/courseb/2022": {
-          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
-        },
-        "pair_programming/courseb/2022": {
-          "name": "Хос програмчлал"
-        },
-        "wiggles_-_gonoodle/courseb/2022": {
-          "type": "Видео"
-        },
-        "stevie_and_the_big_project/courseb/2022": {
-          "name": "Стиви ба том төсөл"
-        },
-        "unspotted_bugs/courseb/2022": {
-          "name": "Үл анзаарагдсан алдаанууд",
-          "type": "Видео"
-        },
-        "getting_loopy/courseb/2022": {
-          "name": "Гогцоорох"
-        },
-        "getting_loopy_1/courseb/2022": {
-          "name": "Гогцоорох"
-        },
-        "getting_loopy_2/courseb/2022": {
-          "name": "Гогцоорох",
-          "type": "Үнэлгээ"
-        },
-        "getting_loopy_3/courseb/2022": {
-          "name": "Гогцоорох"
-        },
-        "pause_and_think_online/courseb/2022": {
-          "type": "Видео"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "Том үйл явдал"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "Том үйл явдал",
-          "type": "Үнэлгээ"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "Том үйл явдал"
-        },
-        "teacher_forum/express/2022": {
-          "name": "Багш нарын форум"
-        },
-        "pair_programming/express/2022": {
-          "name": "Хос програмчлал",
-          "type": "Видео"
-        },
-        "artist_introduction/express/2022": {
-          "type": "Видео"
-        },
-        "turns_angles/express/2022": {
-          "type": "Видео"
-        },
-        "sprite_lab_documentation/express/2022": {
-          "name": "Шидтэний лабын баримт бичиг"
-        },
-        "sprites_in_action/express/2022": {
-          "name": "Шидтэн ажиллаж байна"
-        },
-        "pause_and_think_online/express/2022": {
-          "type": "Видео"
-        },
-        "pair_programming_video/express/2022": {
-          "type": "Видео"
-        },
-        "variables/express/2022": {
-          "name": "Хувьсагчууд"
-        },
-        "teacher_forum/pre-express/2022": {
-          "name": "Багш нарын форум"
-        },
-        "20_20_20_rule/pre-express/2022": {
-          "type": "Видео"
-        },
-        "pair_programming/pre-express/2022": {
-          "name": "Хос програмчлал"
-        },
-        "wiggles_-_go_noodle/pre-express/2022": {
-          "type": "Видео"
-        },
-        "pause_and_think_online/pre-express/2022": {
-          "type": "Видео"
-        },
-        "curriculum_guide/coursea/2022": {
-          "name": "Сургалтын хөтөлбөрийн заавар"
-        },
-        "implementation_guide/coursea/2022": {
-          "name": "Хэрэгжүүлэх заавар"
-        },
-        "teacher_forum/coursea/2022": {
-          "name": "Багш нарын форум"
-        },
-        "getting_started_-_creating_a_class_section/coursea/2022": {
-          "type": "Видео"
-        },
-        "pair_programming/coursea/2022": {
-          "name": "Хос програмчлал"
-        },
-        "wiggles-go_noodle/coursea/2022": {
-          "type": "Видео"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "Аз жаргалтай газрын зургууд"
-        },
-        "wiggles_-_gonoodle/coursea/2022": {
-          "type": "Видео"
-        },
-        "debugging_with_the_step_button/coursea/2022": {
-          "type": "Видео"
-        },
-        "pair-programming/coursea/2022": {
-          "type": "Видео"
-        },
-        "pause_and_think_online/coursea/2022": {
-          "type": "Видео"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "Том үйл явдал"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "Том үйл явдал",
-          "type": "Үнэлгээ"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "Том үйл явдал"
-        },
-        "curriculum_guide/coursec/2022": {
-          "name": "Сургалтын хөтөлбөрийн заавар"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "Хэрэгжүүлэх заавар"
-        },
-        "teacher_forum/coursec/2022": {
-          "name": "Багш нарын форум"
-        },
-        "my_robotic_friends/coursec/2022": {
-          "name": "Миний робот найзууд"
-        },
-        "my_robotic_friends_1/coursec/2022": {
-          "name": "Миний робот найзууд"
-        },
-        "my_robotic_friends_2/coursec/2022": {
-          "name": "Миний робот найзууд"
-        },
-        "my_robotic_friends_3/coursec/2022": {
-          "name": "Миний робот найзууд"
-        },
-        "my_robotic_friends_4/coursec/2022": {
-          "name": "Миний робот найзууд"
-        },
-        "pair_programming/coursec/2022": {
-          "name": "Хос програмчлал",
-          "type": "Видео"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "Том үйл явдал"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "Том үйл явдал",
-          "type": "Үнэлгээ"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "Том үйл явдал"
-        },
-        "pause_and_think_online/coursec/2022": {
-          "type": "Видео"
-        },
-        "binary_bracelets/coursec/2022": {
-          "name": "Хоёртын бугуйвч"
-        },
-        "binary_bracelets_1/coursec/2022": {
-          "name": "Хоёртын бугуйвч"
-        },
-        "binary_bracelets_2/coursec/2022": {
-          "name": "Хоёртын бугуйвч"
-        },
-        "binary_bracelets_3/coursec/2022": {
-          "name": "Хоёртын бугуйвч",
-          "type": "Үнэлгээ"
-        },
-        "binary_bracelets_4/coursec/2022": {
-          "name": "Хоёртын бугуйвч"
-        },
-        "teacher_forum/csd/2022": {
-          "name": "Багш нарын форум"
-        },
-        "representation_matters/csd/2022": {
-          "name": "Төлөөллийн асуудал"
-        },
-        "representation_matters_1/csd/2022": {
-          "name": "Төлөөллийн асуудал"
-        },
-        "representation_matters_2/csd/2022": {
-          "name": "Төлөөллийн асуудал"
-        },
-        "representing_information/csd/2022": {
-          "name": "Мэдээллийг төлөөлөх"
-        },
-        "patterns_and_representation/csd/2022": {
-          "name": "Дүрсүүд ба төлөөлөл"
-        },
-        "ascii_and_binary_representation/csd/2022": {
-          "name": "ASCII ба хоёртын төлөөлөл"
-        },
-        "representing_images/csd/2022": {
-          "name": "Зургийг төлөөлөх"
-        },
-        "binary_and_data/csd/2022": {
-          "type": "Видео"
-        },
-        "representing_numbers/csd/2022": {
-          "name": "Тоог төлөөлөх"
-        },
-        "representing_numbers_1/csd/2022": {
-          "name": "Тоог төлөөлөх"
-        },
-        "combining_representations/csd/2022": {
-          "name": "Төлөөллийг нэгтгэх"
-        },
-        "keeping_data_secret_1/csd/2022": {
-          "name": "Мэдээллийг нууцлах"
-        },
-        "computer_science_practices/csd/2022": {
-          "type": "Тусгал"
-        },
-        "structuring_data/csd/2022": {
-          "name": "Өгөгдлийг бүтэцчилэх"
-        },
-        "structuring_data_1/csd/2022": {
-          "name": "Өгөгдлийг бүтэцчилэх"
-        },
-        "interpreting_data/csd/2022": {
-          "name": "Өгөгдлийг тайлбарлах"
-        },
-        "interpreting_data_1/csd/2022": {
-          "name": "Өгөгдлийг тайлбарлах"
-        },
-        "interpreting_data_2/csd/2022": {
-          "name": "Өгөгдлийг тайлбарлах"
-        },
-        "interpreting_data_3/csd/2022": {
-          "name": "Өгөгдлийг тайлбарлах"
-        },
-        "making_decisions_with_data_1/csd/2022": {
-          "name": "Өгөгдлөөр шийдвэр гаргах"
-        },
-        "making_decisions_with_data_2/csd/2022": {
-          "name": "Өгөгдлөөр шийдвэр гаргах"
-        },
-        "automating_data_decisions/csd/2022": {
-          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
-        },
-        "automating_data_decisions_1/csd/2022": {
-          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
-        },
-        "automating_data_decisions_2/csd/2022": {
-          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
-        },
-        "automating_data_decisions_3/csd/2022": {
-          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
-        },
-        "amazon_and_data/csd/2022": {
-          "type": "Видео"
-        },
-        "data_in_the_real_world/csd/2022": {
-          "name": "Бодит ертөнц дэх өгөгдөл"
-        },
-        "data_in_the_real_world_1/csd/2022": {
-          "name": "Бодит ертөнц дэх өгөгдөл"
-        },
-        "netflix_and_data/csd/2022": {
-          "type": "Видео"
-        },
-        "waze_and_data/csd/2022": {
-          "type": "Видео"
-        },
-        "problem_solving_with_big_data/csd/2022": {
-          "name": "Том өгөгдлийг ашиглан асуудлыг шийдвэрлэх"
-        },
-        "video_impact_on_society/csd/2022": {
-          "type": "Видео"
-        },
-        "video_machine_learning/csd/2022": {
-          "name": "Видео: Машины суралцалт",
-          "type": "Видео"
-        },
-        "video_training_data_and_bias/csd/2022": {
-          "type": "Видео"
-        },
-        "intro_to_problem_solving/csd/2022": {
-          "name": "Асуудлыг шийдвэрлэх талаар танилцуулга"
-        },
-        "problem_solving_process/csd/2022": {
-          "name": "Асуудал шийдэх үйл явц"
-        },
-        "problem_solving_process_1/csd/2022": {
-          "name": "Асуудал шийдэх үйл явц",
-          "type": "Видео"
-        },
-        "problem_solving_process_2/csd/2022": {
-          "name": "Асуудал шийдэх үйл явц"
-        },
-        "the_problem_solving_process/csd/2022": {
-          "name": "Асуудал шийдэх үйл явц"
-        },
-        "the_problem_solving_process_1/csd/2022": {
-          "name": "Асуудал шийдэх үйл явц"
-        },
-        "exploring_problem_solving/csd/2022": {
-          "name": "Асуудлыг шийдэхийг судлах"
-        },
-        "what_is_a_computer/csd/2022": {
-          "type": "Видео"
-        },
-        "what_is_a_computer_/csd/2022": {
-          "name": "Компьютер гэж юу вэ?"
-        },
-        "input_and_output/csd/2022": {
-          "name": "Оролт ба гаралт"
-        },
-        "input_and_output_1/csd/2022": {
-          "name": "Оролт ба гаралт"
-        },
-        "input_and_output_2/csd/2022": {
-          "name": "Оролт ба гаралт"
-        },
-        "what_do_computers_do/csd/2022": {
-          "type": "Видео"
-        },
-        "apps_and_problem_solving/csd/2022": {
-          "name": "Апп ба асуудлыг шийдэх"
-        },
-        "apps_and_problem_solving_1/csd/2022": {
-          "name": "Апп ба асуудлыг шийдэх"
-        },
-        "apps_and_problem_solving_2/csd/2022": {
-          "name": "Апп ба асуудлыг шийдэх"
-        },
-        "project_-_propose_an_app/csd/2022": {
-          "name": "Төсөл - Апп санал болгох"
-        },
-        "programming_for_entertainment/csd/2022": {
-          "name": "Үзвэр үйлчилгээний програмчлал"
-        },
-        "plotting_shapes/csd/2022": {
-          "name": "Дүрсийг зураглах"
-        },
-        "drawing_in_game_lab_-_part_1/csd/2022": {
-          "type": "Видео"
-        },
-        "drawing_in_game_lab_-_part_2/csd/2022": {
-          "type": "Видео"
-        },
-        "drawing_in_game_lab/csd/2022": {
-          "name": "Тоглоомын лабораторид зураг зурах"
-        },
-        "introduction_to_variables/csd/2022": {
-          "type": "Видео"
-        },
-        "variables/csd/2022": {
-          "name": "Хувьсагчууд"
-        },
-        "variables_3/csd/2022": {
-          "name": "Хувьсагчууд"
-        },
-        "introduction_to_sprites/csd/2022": {
-          "type": "Видео"
-        },
-        "sprites/csd/2022": {
-          "name": "Шидтэнгүүд"
-        },
-        "the_animation_tab/csd/2022": {
-          "name": "Анимэйшний таб",
-          "type": "Видео"
-        },
-        "sprites_1/csd/2022": {
-          "name": "Шидтэнгүүд"
-        },
-        "text/csd/2022": {
-          "name": "Текст"
-        },
-        "flipbook_example_-_by_marnic_bos/csd/2022": {
-          "type": "Видео"
-        },
-        "introduction_to_the_draw_loop/csd/2022": {
-          "type": "Видео"
-        },
-        "the_draw_loop/csd/2022": {
-          "name": "Зурах гогцоо"
-        },
-        "the_draw_loop_1/csd/2022": {
-          "name": "Зурах гогцоо"
-        },
-        "sprite_movement/csd/2022": {
-          "name": "Шидтэний хөдөлгөөн",
-          "type": "Видео"
-        },
-        "sprite_movement_1/csd/2022": {
-          "name": "Шидтэний хөдөлгөөн"
-        },
-        "boolean_expressions/csd/2022": {
-          "name": "Бүүлийн илэрхийлэл",
-          "type": "Видео"
-        },
-        "conditional_statements/csd/2022": {
-          "name": "Нөхцлүүдийн өгүүлбэр",
-          "type": "Видео"
-        },
-        "conditionals/csd/2022": {
-          "name": "Нөхцлүүд"
-        },
-        "keyboard_input/csd/2022": {
-          "name": "Гараар оруулах"
-        },
-        "if_else_statements/csd/2022": {
-          "name": "Хэрэв/өөр өгүүлбэрүүд",
-          "type": "Видео"
-        },
-        "project_-_interactive_card/csd/2022": {
-          "name": "Төсөл - Интерактив карт"
-        },
-        "velocity/csd/2022": {
-          "name": "Хурд",
-          "type": "Видео"
-        },
-        "velocity_1/csd/2022": {
-          "name": "Хурд"
-        },
-        "velocity_2/csd/2022": {
-          "name": "Хурд"
-        },
-        "collision_detection/csd/2022": {
-          "name": "Мөргөлдөөнийг илрүүлэх"
-        },
-        "collision_detection_1/csd/2022": {
-          "name": "Мөргөлдөөнийг илрүүлэх"
-        },
-        "collision_detection_2/csd/2022": {
-          "name": "Мөргөлдөөнийг илрүүлэх"
-        },
-        "complex_sprite_movement/csd/2022": {
-          "name": "Шидтэний нийлмэл хөдөлгөөн"
-        },
-        "collisions/csd/2022": {
-          "name": "Мөргөлдөөн"
-        },
-        "functions/csd/2022": {
-          "name": "Функцүүд",
-          "type": "Видео"
-        },
-        "functions_1/csd/2022": {
-          "name": "Функцүүд"
-        },
-        "functions_4/csd/2022": {
-          "name": "Функцүүд"
-        },
-        "the_game_design_process/csd/2022": {
-          "name": "Тоглоомын дизайн боловсруулах үйл явц"
-        },
-        "using_the_game_design_process/csd/2022": {
-          "name": "Тоглоомын дизайн боловсруулах үйл явцыг ашиглах"
-        },
-        "project_-_design_a_game/csd/2022": {
-          "name": "Төсөл - Тоглоом зохиох"
-        },
-        "exploring_web_pages/csd/2022": {
-          "name": "Вэб хуудсуудыг судлах"
-        },
-        "exploring_web_pages_1/csd/2022": {
-          "name": "Вэб хуудсуудыг судлах"
-        },
-        "exploring_web_pages_2/csd/2022": {
-          "name": "Вэб хуудсуудыг судлах"
-        },
-        "intro_to_web_lab_part_2/csd/2022": {
-          "type": "Видео"
-        },
-        "video_intro_to_web_lab_part_1/csd/2022": {
-          "type": "Видео"
-        },
-        "intro_to_html/csd/2022": {
-          "name": "HTML-н танилцуулга"
-        },
-        "video_debugging/csd/2022": {
-          "type": "Видео"
-        },
-        "video_pair_programming/csd/2022": {
-          "type": "Видео"
-        },
-        "headings/csd/2022": {
-          "name": "Гарчиг"
-        },
-        "lists/csd/2022": {
-          "name": "Жагсаалтууд"
-        },
-        "digital_footprint/csd/2022": {
-          "name": "Дижитал ул мөр"
-        },
-        "intro_to_css_-_part_1/csd/2022": {
-          "name": "CSS-ийн танилцуулга - 1-р хэсэг",
-          "type": "Видео"
-        },
-        "intro_to_css_-_part_2/csd/2022": {
-          "name": "CSS-ийн танилцуулга - 2-р хэсэг",
-          "type": "Видео"
-        },
-        "styling_text_with_css/csd/2022": {
-          "name": "Текстийг CSS ашиглан загварчлах"
-        },
-        "creative_commons_overview/csd/2022": {
-          "type": "Видео"
-        },
-        "intellectual_property/csd/2022": {
-          "name": "Оюуны өмч"
-        },
-        "images_in_html/csd/2022": {
-          "name": "HTML дээрх зургууд"
-        },
-        "styling_elements_with_css/csd/2022": {
-          "name": "Элементийг CSS ашиглан загварчлах"
-        },
-        "publishing_your_website/csd/2022": {
-          "type": "Видео"
-        },
-        "video_managing_disagreement/csd/2022": {
-          "type": "Видео"
-        },
-        "video_teamwork/csd/2022": {
-          "type": "Видео"
-        },
-        "team_problem_solving/csd/2022": {
-          "name": "Багийн асуудлыг шийдэх"
-        },
-        "video_how_search_works/csd/2022": {
-          "type": "Видео"
-        },
-        "sources_and_research/csd/2022": {
-          "name": "Эх сурвалж, судалгаа"
-        },
-        "classes/csd/2022": {
-          "name": "Ангиуд"
-        },
-        "linking_pages/csd/2022": {
-          "name": "Хуудас холбох"
-        },
-        "project_-_website_for_a_purpose/csd/2022": {
-          "name": "Төсөл - Зорилго бүхий вэбсайт"
-        },
-        "peer_review_and_final_touches/csd/2022": {
-          "name": "Хамтрагчдын хяналт ба төгсгөлийн зөвлөмжүүд"
-        },
-        "understanding_your_user/csd/2022": {
-          "name": "Хэрэглэгчээ ойлгох"
-        },
-        "the_design_thinking_process/csd/2022": {
-          "type": "Видео"
-        },
-        "user_interfaces/csd/2022": {
-          "name": "Хэрэглэгчийн интерфейс"
-        },
-        "feedback_and_testing/csd/2022": {
-          "name": "Санал хүсэлт ба тест"
-        },
-        "identifying_user_needs/csd/2022": {
-          "name": "Хэрэглэгчийн хэрэгцээг тодорхойлох"
-        },
-        "paper_prototypes/csd/2022": {
-          "name": "Цаасан туршилт"
-        },
-        "project_-_paper_prototype/csd/2022": {
-          "name": "Төсөл - Цаасны прототип"
-        },
-        "designing_apps_for_good/csd/2022": {
-          "name": "Сайн сайхны төлөө апп зохиох"
-        },
-        "market_research/csd/2022": {
-          "name": "Зах зээлийн судалгаа"
-        },
-        "market_research_1/csd/2022": {
-          "name": "Зах зээлийн судалгаа"
-        },
-        "market_research_2/csd/2022": {
-          "name": "Зах зээлийн судалгаа"
-        },
-        "design_mode/csd/2022": {
-          "name": "Дизайны горим"
-        },
-        "what_s_for_lunch_testing/csd/2022": {
-          "type": "Видео"
-        },
-        "prototype_testing/csd/2022": {
-          "name": "Жишээ туршилт"
-        },
-        "intro_to_design_mode/csd/2022": {
-          "type": "Видео"
-        },
-        "events_in_app_lab_1/csd/2022": {
-          "type": "Видео"
-        },
-        "multi-screen_apps/csd/2022": {
-          "name": "Олон дэлгэцийн аппууд"
-        },
-        "testing_the_app/csd/2022": {
-          "name": "Апп-ыг туршиж байна"
-        },
-        "app_presentation/csd/2022": {
-          "name": "Апп танилцуулга"
-        },
-        "app_presentation_1/csd/2022": {
-          "name": "Апп танилцуулга"
-        },
-        "project_-_app_presentation/csd/2022": {
-          "name": "Төсөл - Апп танилцуулга"
-        },
-        "computer_science_is_changing_everything/csd/2022": {
-          "name": "Компьютерийн шинжлэх ухаан бүх зүйлийг өөрчилж байна",
-          "type": "Видео"
-        },
-        "computing_innovations_1/csd/2022": {
-          "name": "Тооцооллын инноваци"
-        },
-        "innovations_in_computing/csd/2022": {
-          "name": "Тооцоолол дээрх инноваци"
-        },
-        "the_internet_of_things/csd/2022": {
-          "type": "Видео"
-        },
-        "circuits_and_logic/csd/2022": {
-          "type": "Видео"
-        },
-        "the_circuit_playground/csd/2022": {
-          "name": "Хэлхээний тоглоомын талбай"
-        },
-        "designing_screens_with_code/csd/2022": {
-          "name": "Дэлгэцийг кодоор загварчлах"
-        },
-        "board_events/csd/2022": {
-          "name": "Самбарын үйл явдлууд"
-        },
-        "board_events_1/csd/2022": {
-          "name": "Самбарын үйл явдлууд"
-        },
-        "physical_input/csd/2022": {
-          "name": "Биет оролт"
-        },
-        "if_statements_2/csd/2022": {
-          "type": "Видео"
-        },
-        "the_counter_pattern_1/csd/2022": {
-          "type": "Видео"
-        },
-        "variables_1/csd/2022": {
-          "name": "Хувьсагчууд"
-        },
-        "variables_2/csd/2022": {
-          "name": "Хувьсагчууд",
-          "type": "Видео"
-        },
-        "input_output_devices/csd/2022": {
-          "type": "Видео"
-        },
-        "accelerometer/csd/2022": {
-          "name": "Хурдасгуур хэмжигч"
-        },
-        "introduction_to_arrays/csd/2022": {
-          "name": "Матрицын танилцуулга",
-          "type": "Видео"
-        },
-        "making_music/csd/2022": {
-          "name": "Хөгжим зохиох"
-        },
-        "arrays/csd/2022": {
-          "name": "Матрицууд"
-        },
-        "functions_2/csd/2022": {
-          "name": "Функцүүд"
-        },
-        "functions_3/csd/2022": {
-          "name": "Функцүүд",
-          "type": "Видео"
-        },
-        "functions_with_parameters/csd/2022": {
-          "name": "Параметртэй функцүүд",
-          "type": "Видео"
-        },
-        "functions_5/csd/2022": {
-          "name": "Функцүүд"
-        },
-        "project_prototype_an_innovation/csd/2022": {
-          "name": "Төсөл: Инновацийг загварчлах"
-        },
-        "ai_what_is_machine_learning_/csd/2022": {
-          "type": "Видео"
-        },
-        "seeing_ai/csd/2022": {
-          "type": "Видео"
-        },
-        "finding_patterns_in_data/csd/2022": {
-          "type": "Видео"
-        },
-        "introduction_to_ai_lab_1/csd/2022": {
-          "type": "Видео"
-        },
-        "training_and_testing_in_ai_lab/csd/2022": {
-          "type": "Видео"
-        },
-        "ai_training_data_bias/csd/2022": {
-          "type": "Видео"
-        },
-        "model_cards_in_ai_lab/csd/2022": {
-          "type": "Видео"
-        },
-        "if-statements_in_app_lab/csd/2022": {
-          "type": "Видео"
-        },
-        "numerical_data_in_ai_lab_2/csd/2022": {
-          "type": "Видео"
-        },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
-          "type": "Видео"
-        },
-        "survey_planning/csd/2022": {
-          "name": "Өгөгдөл цуглуулах ажлыг зохион бүтээх"
-        },
-        "creating_a_survey_in_google_forms/csd/2022": {
-          "type": "Видео"
-        },
-        "cleaning_survey_data/csd/2022": {
-          "type": "Видео"
-        },
-        "view_and_download_survey_data/csd/2022": {
-          "type": "Видео"
-        },
-        "lesson_plans/courseb/2018": {
+        "lesson_plans/csd/2017": {
           "name": "Хичээлийн төлөвлөгөө"
         },
-        "standard_mappings/courseb/2018": {
+        "standard_mappings/csd/2017": {
           "name": "Стандарт зураглал"
         },
-        "teacher_forum/courseb/2018": {
+        "teacher_forum/csd/2017": {
           "name": "Багш нарын форум"
         },
-        "vocabulary/courseb/2018": {
+        "vocabulary/csd/2017": {
+          "name": "Үгсийн сан"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Кодыг танилцуулав"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Үгсийн сан"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Кодыг танилцуулав"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Үгсийн сан"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Кодыг танилцуулав"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Үгсийн сан"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Үгсийн сан"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Кодыг танилцуулав"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Үгсийн сан"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Үгсийн сан"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Кодыг танилцуулав"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Үгсийн сан"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Кодыг танилцуулав"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Үгсийн сан"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Кодыг танилцуулав"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Үгсийн сан"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Үгсийн сан"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Кодыг танилцуулав"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary_5/csd/2018": {
           "name": "Үгсийн сан"
         },
         "lesson_plans/coursea/2018": {
@@ -942,6 +182,30 @@
         "vocabulary/coursea/2018": {
           "name": "Үгсийн сан"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Үгсийн сан"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Үгсийн сан"
+        },
         "lesson_plans/coursed/2018": {
           "name": "Хичээлийн төлөвлөгөө"
         },
@@ -952,6 +216,18 @@
           "name": "Багш нарын форум"
         },
         "vocabulary/coursed/2018": {
+          "name": "Үгсийн сан"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary/coursee/2018": {
           "name": "Үгсийн сан"
         },
         "lesson_plans/coursef/2018": {
@@ -978,112 +254,73 @@
         "vocabulary/express/2018": {
           "name": "Үгсийн сан"
         },
-        "lesson_plans/coursee/2018": {
+        "lesson_plans/csd/2019": {
           "name": "Хичээлийн төлөвлөгөө"
         },
-        "standard_mappings/coursee/2018": {
+        "standard_mappings/csd/2019": {
           "name": "Стандарт зураглал"
         },
-        "teacher_forum/coursee/2018": {
+        "teacher_forum/csd/2019": {
           "name": "Багш нарын форум"
         },
-        "vocabulary/coursee/2018": {
+        "vocabulary/csd/2019": {
           "name": "Үгсийн сан"
         },
-        "lesson_plans/coursec/2018": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings/coursec/2018": {
-          "name": "Стандарт зураглал"
-        },
-        "teacher_forum/coursec/2018": {
-          "name": "Багш нарын форум"
-        },
-        "vocabulary/coursec/2018": {
-          "name": "Үгсийн сан"
-        },
-        "code_introduced_1/csd/2018": {
+        "code_introduced/csd/2019": {
           "name": "Кодыг танилцуулав"
         },
-        "lesson_plans_2/csd/2018": {
+        "lesson_plans_1/csd/2019": {
           "name": "Хичээлийн төлөвлөгөө"
         },
-        "standard_mappings_2/csd/2018": {
+        "standard_mappings_1/csd/2019": {
           "name": "Стандарт зураглал"
         },
-        "teacher_forum_2/csd/2018": {
-          "name": "Багш нарын форум"
-        },
-        "vocabulary_2/csd/2018": {
+        "vocabulary_1/csd/2019": {
           "name": "Үгсийн сан"
         },
-        "code_introduced_3/csd/2018": {
+        "code_introduced_1/csd/2019": {
           "name": "Кодыг танилцуулав"
         },
-        "lesson_plans_5/csd/2018": {
+        "lesson_plans_2/csd/2019": {
           "name": "Хичээлийн төлөвлөгөө"
         },
-        "standard_mappings_5/csd/2018": {
+        "standard_mappings_2/csd/2019": {
           "name": "Стандарт зураглал"
         },
-        "teacher_forum_5/csd/2018": {
-          "name": "Багш нарын форум"
-        },
-        "vocabulary_5/csd/2018": {
+        "vocabulary_2/csd/2019": {
           "name": "Үгсийн сан"
         },
-        "lesson_plans_4/csd/2018": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings_4/csd/2018": {
-          "name": "Стандарт зураглал"
-        },
-        "teacher_forum_4/csd/2018": {
-          "name": "Багш нарын форум"
-        },
-        "vocabulary_4/csd/2018": {
-          "name": "Үгсийн сан"
-        },
-        "code_introduced_2/csd/2018": {
+        "code_introduced_2/csd/2019": {
           "name": "Кодыг танилцуулав"
         },
-        "lesson_plans_3/csd/2018": {
+        "lesson_plans_3/csd/2019": {
           "name": "Хичээлийн төлөвлөгөө"
         },
-        "standard_mappings_3/csd/2018": {
+        "standard_mappings_3/csd/2019": {
           "name": "Стандарт зураглал"
         },
-        "teacher_forum_3/csd/2018": {
-          "name": "Багш нарын форум"
-        },
-        "vocabulary_3/csd/2018": {
+        "vocabulary_3/csd/2019": {
           "name": "Үгсийн сан"
         },
-        "code_introduced/csd/2018": {
+        "lesson_plans_4/csd/2019": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Стандарт зураглал"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Үгсийн сан"
+        },
+        "code_introduced_3/csd/2019": {
           "name": "Кодыг танилцуулав"
         },
-        "lesson_plans_1/csd/2018": {
+        "lesson_plans_5/csd/2019": {
           "name": "Хичээлийн төлөвлөгөө"
         },
-        "standard_mappings_1/csd/2018": {
+        "standard_mappings_5/csd/2019": {
           "name": "Стандарт зураглал"
         },
-        "teacher_forum_1/csd/2018": {
-          "name": "Багш нарын форум"
-        },
-        "vocabulary_1/csd/2018": {
-          "name": "Үгсийн сан"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings/csd/2018": {
-          "name": "Стандарт зураглал"
-        },
-        "teacher_forum/csd/2018": {
-          "name": "Багш нарын форум"
-        },
-        "vocabulary/csd/2018": {
+        "vocabulary_5/csd/2019": {
           "name": "Үгсийн сан"
         },
         "curriculum_guide/coursea/2019": {
@@ -1116,6 +353,21 @@
         "vocabulary/courseb/2019": {
           "name": "Үгсийн сан"
         },
+        "curriculum_guide/coursec/2019": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Үгсийн сан"
+        },
         "curriculum_guide/coursed/2019": {
           "name": "Сургалтын хөтөлбөрийн заавар"
         },
@@ -1129,21 +381,6 @@
           "name": "Багш нарын форум"
         },
         "vocabulary/coursed/2019": {
-          "name": "Үгсийн сан"
-        },
-        "curriculum_guide/coursef/2019": {
-          "name": "Сургалтын хөтөлбөрийн заавар"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings/coursef/2019": {
-          "name": "Стандарт зураглал"
-        },
-        "teacher_forum/coursef/2019": {
-          "name": "Багш нарын форум"
-        },
-        "vocabulary/coursef/2019": {
           "name": "Үгсийн сан"
         },
         "curriculum_guide/coursee/2019": {
@@ -1161,6 +398,21 @@
         "vocabulary/coursee/2019": {
           "name": "Үгсийн сан"
         },
+        "curriculum_guide/coursef/2019": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Үгсийн сан"
+        },
         "lesson_plans/express/2019": {
           "name": "Хичээлийн төлөвлөгөө"
         },
@@ -1173,253 +425,597 @@
         "vocabulary/express/2019": {
           "name": "Үгсийн сан"
         },
-        "curriculum_guide/coursec/2019": {
+        "curriculum_guide/coursea/2020": {
           "name": "Сургалтын хөтөлбөрийн заавар"
         },
-        "lesson_plans/coursec/2019": {
+        "lesson_plans/coursea/2020": {
           "name": "Хичээлийн төлөвлөгөө"
         },
-        "standard_mappings/coursec/2019": {
+        "standard_mappings/coursea/2020": {
           "name": "Стандарт зураглал"
         },
-        "teacher_forum/coursec/2019": {
+        "teacher_forum/coursea/2020": {
           "name": "Багш нарын форум"
         },
-        "vocabulary/coursec/2019": {
+        "vocabulary/coursea/2020": {
           "name": "Үгсийн сан"
         },
-        "teacher_forum/csd/2019": {
-          "name": "Багш нарын форум"
-        },
-        "code_introduced_1/csd/2019": {
-          "name": "Кодыг танилцуулав"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings_2/csd/2019": {
-          "name": "Стандарт зураглал"
-        },
-        "vocabulary_2/csd/2019": {
-          "name": "Үгсийн сан"
-        },
-        "code_introduced_3/csd/2019": {
-          "name": "Кодыг танилцуулав"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings_5/csd/2019": {
-          "name": "Стандарт зураглал"
-        },
-        "vocabulary_5/csd/2019": {
-          "name": "Үгсийн сан"
-        },
-        "code_introduced_2/csd/2019": {
-          "name": "Кодыг танилцуулав"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings_3/csd/2019": {
-          "name": "Стандарт зураглал"
-        },
-        "vocabulary_3/csd/2019": {
-          "name": "Үгсийн сан"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings_4/csd/2019": {
-          "name": "Стандарт зураглал"
-        },
-        "vocabulary_4/csd/2019": {
-          "name": "Үгсийн сан"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings/csd/2019": {
-          "name": "Стандарт зураглал"
-        },
-        "vocabulary/csd/2019": {
-          "name": "Үгсийн сан"
-        },
-        "code_introduced/csd/2019": {
-          "name": "Кодыг танилцуулав"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings_1/csd/2019": {
-          "name": "Стандарт зураглал"
-        },
-        "vocabulary_1/csd/2019": {
-          "name": "Үгсийн сан"
-        },
-        "code_introduced_1/csd/2017": {
-          "name": "Кодыг танилцуулав"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings_2/csd/2017": {
-          "name": "Стандарт зураглал"
-        },
-        "teacher_forum_2/csd/2017": {
-          "name": "Багш нарын форум"
-        },
-        "vocabulary_2/csd/2017": {
-          "name": "Үгсийн сан"
-        },
-        "code_introduced_3/csd/2017": {
-          "name": "Кодыг танилцуулав"
-        },
-        "lesson_plans_5/csd/2017": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings_5/csd/2017": {
-          "name": "Стандарт зураглал"
-        },
-        "teacher_forum_5/csd/2017": {
-          "name": "Багш нарын форум"
-        },
-        "vocabulary_5/csd/2017": {
-          "name": "Үгсийн сан"
-        },
-        "code_introduced/csd/2017": {
-          "name": "Кодыг танилцуулав"
-        },
-        "lesson_plans_1/csd/2017": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings_1/csd/2017": {
-          "name": "Стандарт зураглал"
-        },
-        "teacher_forum_1/csd/2017": {
-          "name": "Багш нарын форум"
-        },
-        "vocabulary_1/csd/2017": {
-          "name": "Үгсийн сан"
-        },
-        "lesson_plans/csd/2017": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings/csd/2017": {
-          "name": "Стандарт зураглал"
-        },
-        "teacher_forum/csd/2017": {
-          "name": "Багш нарын форум"
-        },
-        "vocabulary/csd/2017": {
-          "name": "Үгсийн сан"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings_4/csd/2017": {
-          "name": "Стандарт зураглал"
-        },
-        "teacher_forum_4/csd/2017": {
-          "name": "Багш нарын форум"
-        },
-        "vocabulary_4/csd/2017": {
-          "name": "Үгсийн сан"
-        },
-        "code_introduced_2/csd/2017": {
-          "name": "Кодыг танилцуулав"
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "Хичээлийн төлөвлөгөө"
-        },
-        "standard_mappings_3/csd/2017": {
-          "name": "Стандарт зураглал"
-        },
-        "teacher_forum_3/csd/2017": {
-          "name": "Багш нарын форум"
-        },
-        "vocabulary_3/csd/2017": {
-          "name": "Үгсийн сан"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "curriculum_guide_1/coursef/2021": {
+        "curriculum_guide/courseb/2020": {
           "name": "Сургалтын хөтөлбөрийн заавар"
         },
-        "implementation_guide/coursef/2021": {
+        "lesson_plans/courseb/2020": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Үгсийн сан"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Үгсийн сан"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Үгсийн сан"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Үгсийн сан"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Үгсийн сан"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary/express/2020": {
+          "name": "Үгсийн сан"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Хичээлийн төлөвлөгөө"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Стандарт зураглал"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Багш нарын форум"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Үгсийн сан"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Багш нарын форум"
+        },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "Асуудал шийдэх үйл явц"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "Асуудал шийдэх үйл явц",
+          "type": "Видео"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Асуудал шийдэх үйл явц"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "Асуудал шийдэх үйл явц"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Компьютер гэж юу вэ?"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "Видео"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "Оролт ба гаралт"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "Оролт ба гаралт"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "Видео"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "Апп ба асуудлыг шийдэх"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "Апп ба асуудлыг шийдэх",
+          "type": "Үе тэнгийн тойм"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "Тусгал"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "Апп ба асуудлыг шийдэх",
+          "type": "Rubric"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "Вэб хуудсуудыг судлах"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "Вэб хуудсуудыг судлах"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "Видео"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "Видео"
+        },
+        "video_pair_programming/csd/2021": {
+          "type": "Видео"
+        },
+        "video_debugging/csd/2021": {
+          "type": "Видео"
+        },
+        "html-web-page-1/csd/2021": {
+          "type": "Rubric"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "lists/csd/2021": {
+          "name": "Жагсаалтууд"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Дижитал ул мөр"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "CSS-ийн танилцуулга - 1-р хэсэг",
+          "type": "Видео"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "CSS-ийн танилцуулга - 2-р хэсэг",
+          "type": "Видео"
+        },
+        "your-personal-style-1-2-3/csd/2021": {
+          "type": "Rubric"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "Видео"
+        },
+        "images_in_html/csd/2021": {
+          "name": "HTML дээрх зургууд"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "personal-web-page/csd/2021": {
+          "type": "Rubric"
+        },
+        "publishing_your_website/csd/2021": {
+          "type": "Видео"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "Видео"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "Видео"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "Видео"
+        },
+        "classes/csd/2021": {
+          "name": "Ангиуд"
+        },
+        "website-for-a-purpose-1/csd/2021": {
+          "type": "Rubric"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Багш нарын форум"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "Видео"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "Видео"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "Видео"
+        },
+        "variables_1/csd/2021": {
+          "name": "Хувьсагчууд"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "Видео"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Анимэйшний таб",
+          "type": "Видео"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Шидтэнгүүд"
+        },
+        "captioned-scenes/csd/2021": {
+          "type": "Rubric"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "Видео"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "Видео"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "Зурах гогцоо"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "Шидтэний хөдөлгөөн",
+          "type": "Видео"
+        },
+        "animated-scene-1/csd/2021": {
+          "type": "Rubric"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Бүүлийн илэрхийлэл",
+          "type": "Видео"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Нөхцлүүдийн өгүүлбэр",
+          "type": "Видео"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Хэрэв/өөр өгүүлбэрүүд",
+          "type": "Видео"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "interactive_card/csd/2021": {
+          "type": "Rubric"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Хурд",
+          "type": "Видео"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Хурд"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Мөргөлдөөнийг илрүүлэх"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Мөргөлдөөнийг илрүүлэх"
+        },
+        "side-scroller-1/csd/2021": {
+          "type": "Rubric"
+        },
+        "flyer-game-1/csd/2021": {
+          "type": "Rubric"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Функцүүд",
+          "type": "Видео"
+        },
+        "functions_1/csd/2021": {
+          "name": "Функцүүд"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "make_your_own_game/csd/2021": {
+          "type": "Rubric"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "Видео"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "Цаасан туршилт",
+          "type": "Rubric"
+        },
+        "market-research/csd/2021": {
+          "name": "Зах зээлийн судалгаа"
+        },
+        "market_research/csd/2021": {
+          "name": "Зах зээлийн судалгаа"
+        },
+        "design_mode/csd/2021": {
+          "name": "Дизайны горим"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "Видео"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "Видео"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Дизайны горим"
+        },
+        "multi-screen_apps/csd/2021": {
+          "name": "Олон дэлгэцийн аппууд"
+        },
+        "app-presentation/csd/2021": {
+          "name": "Апп танилцуулга",
+          "type": "Rubric"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "Апп танилцуулга"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "Төлөөллийн асуудал"
+        },
+        "representation-matters/csd/2021": {
+          "name": "Төлөөллийн асуудал"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "Мэдээллийг төлөөлөх"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "Видео"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "Тоог төлөөлөх"
+        },
+        "create_a_representation/csd/2021": {
+          "type": "Rubric"
+        },
+        "structuring_data/csd/2021": {
+          "name": "Өгөгдлийг бүтэцчилэх"
+        },
+        "interpreting-data-exemplar-2019/csd/2021": {
+          "name": "Өгөгдлийг тайлбарлах"
+        },
+        "interpreting-data/csd/2021": {
+          "name": "Өгөгдлийг тайлбарлах"
+        },
+        "interpreting-data-1/csd/2021": {
+          "name": "Өгөгдлийг тайлбарлах"
+        },
+        "making-decisions-with-data/csd/2021": {
+          "name": "Өгөгдлөөр шийдвэр гаргах"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
+        },
+        "data-decisions-resource/csd/2021": {
+          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
+        },
+        "automating-data-decisions-1/csd/2021": {
+          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "Видео"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "Видео"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "Видео"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "name": "Бодит ертөнц дэх өгөгдөл"
+        },
+        "data-in-the-real-world/csd/2021": {
+          "name": "Бодит ертөнц дэх өгөгдөл"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "Видео"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Видео: Машины суралцалт",
+          "type": "Видео"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "Видео"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "make-a-recommendation-1/csd/2021": {
+          "type": "Rubric"
+        },
+        "computing-innovations/csd/2021": {
+          "name": "Тооцооллын инноваци"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Видео"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Компьютерийн шинжлэх ухаан бүх зүйлийг өөрчилж байна",
+          "type": "Видео"
+        },
+        "designing_screens_with_code/csd/2021": {
+          "name": "Дэлгэцийг кодоор загварчлах"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Компьютерууд хэрхэн ажилладаг вэ: Техник хангамж ба програм хангамж",
+          "type": "Видео"
+        },
+        "board_events/csd/2021": {
+          "name": "Самбарын үйл явдлууд"
+        },
+        "physical_input/csd/2021": {
+          "name": "Биет оролт"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "Видео"
+        },
+        "functions_2/csd/2021": {
+          "name": "Функцүүд"
+        },
+        "make_a_game_1/csd/2021": {
+          "type": "Rubric"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Матрицын танилцуулга",
+          "type": "Видео"
+        },
+        "arrays/csd/2021": {
+          "name": "Матрицууд"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Гогцоонд зориулав",
+          "type": "Видео"
+        },
+        "for_loops/csd/2021": {
+          "name": "Гогцоонд зориулав"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Компьютерууд хэрхэн ажилладаг: Хэлхээ ба логик",
+          "type": "Видео"
+        },
+        "prototype-an-innovation-1/csd/2021": {
+          "type": "Rubric"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "Видео"
+        },
+        "seeing_ai/csd/2021": {
+          "type": "Видео"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Видео"
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "AI лабораторийн танилцуулга"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "name": "AI лабораторийн танилцуулга",
+          "type": "Видео"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "AI Lab дахь сургалт, туршилт",
+          "type": "Видео"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "Видео"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "name": "AI Lab дахь загвар картууд",
+          "type": "Видео"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Видео"
+        },
+        "numerical_data_in_ai_lab/csd/2021": {
+          "name": "AI лабораторийн тоон өгөгдөл"
+        },
+        "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "AI лабораторийн тоон өгөгдөл"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "AI лабораторийн тоон өгөгдөл",
+          "type": "Видео"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Видео"
+        },
+        "create_an_ml_app/csd/2021": {
+          "type": "Rubric"
+        },
+        "survey_planning/csd/2021": {
+          "name": "Өгөгдөл цуглуулах ажлыг зохион бүтээх"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Видео"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Видео"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "type": "Rubric"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "implementation_guide/coursea/2021": {
           "name": "Хэрэгжүүлэх заавар"
         },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "Шидтэний лабын баримт бичиг"
-        },
-        "teacher_forum_1/coursef/2021": {
+        "teacher_forum_1/coursea/2021": {
           "name": "Багш нарын форум"
         },
-        "exploring_apps/coursef/2021": {
-          "name": "Апп судлах"
-        },
-        "exploring_apps_1/coursef/2021": {
-          "name": "Апп судлах"
-        },
-        "introducing_sprite_lab/coursef/2021": {
-          "name": "Шидтэний лабораторийг танилцуулах"
-        },
-        "introducing_sprite_lab_1/coursef/2021": {
-          "name": "Шидтэний лабораторийг танилцуулах",
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Видео"
         },
-        "sprite_lab_documentation/coursef/2021": {
-          "name": "Шидтэний лабын баримт бичиг"
+        "pair-programming-vid/coursea/2021": {
+          "name": "Хос програмчлал"
         },
-        "sprites_in_action/coursef/2021": {
-          "name": "Шидтэн ажиллаж байна"
-        },
-        "the_power_of_words_the_power_of_words/coursef/2021": {
+        "wiggles-go_noodle/coursea/2021": {
           "type": "Видео"
         },
-        "pause_and_think_online/coursef/2021": {
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Аз жаргалтай газрын зургууд"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
           "type": "Видео"
         },
-        "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Гогцоонд зориулсан хөгжилтэй зүйлс"
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "type": "Видео"
         },
-        "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Гогцоонд зориулсан хөгжилтэй зүйлс",
+        "pair-programming/coursea/2021": {
+          "type": "Видео"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "type": "Видео"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Том үйл явдал"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Том үйл явдал",
           "type": "Үнэлгээ"
         },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Гогцоонд зориулсан хөгжилтэй зүйлс"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Гогцоонд зориулсан хөгжилтэй зүйлс"
-        },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Гогцоонд зориулсан хөгжилтэй зүйлс"
-        },
-        "running-simulations/coursef/2021": {
-          "name": "Симуляцийг ажиллуулах"
-        },
-        "ai-ml/coursef/2021": {
-          "type": "Видео"
-        },
-        "ai-societal/coursef/2021": {
-          "type": "Видео"
-        },
-        "ai-training/coursef/2021": {
-          "type": "Видео"
-        },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Интернэт"
-        },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "Интернэт",
-          "type": "Үнэлгээ"
-        },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "Интернэт"
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Том үйл явдал"
         },
         "curriculum_guide_1/courseb/2021": {
           "name": "Сургалтын хөтөлбөрийн заавар"
@@ -1481,49 +1077,6 @@
         "unplugged-video-big-event/courseb/2021": {
           "name": "Том үйл явдал",
           "type": "Видео"
-        },
-        "curriculum_guide_1/coursea/2021": {
-          "name": "Сургалтын хөтөлбөрийн заавар"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "Хэрэгжүүлэх заавар"
-        },
-        "teacher_forum_1/coursea/2021": {
-          "name": "Багш нарын форум"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "type": "Видео"
-        },
-        "pair-programming-vid/coursea/2021": {
-          "name": "Хос програмчлал"
-        },
-        "wiggles-go_noodle/coursea/2021": {
-          "type": "Видео"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Аз жаргалтай газрын зургууд"
-        },
-        "wiggles_-_gonoodle/coursea/2021": {
-          "type": "Видео"
-        },
-        "csf_debugging_k1_blocks/coursea/2021": {
-          "type": "Видео"
-        },
-        "pair-programming/coursea/2021": {
-          "type": "Видео"
-        },
-        "common-sense-media-pause-think/coursea/2021": {
-          "type": "Видео"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "Том үйл явдал"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "Том үйл явдал",
-          "type": "Үнэлгээ"
-        },
-        "unplugged-video-big-event/coursea/2021": {
-          "name": "Том үйл явдал"
         },
         "curriculum_guide_1/coursec/2021": {
           "name": "Сургалтын хөтөлбөрийн заавар"
@@ -1653,6 +1206,114 @@
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Карт бүхий нөхцлүүд"
         },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Хэрэгжүүлэх заавар"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Шидтэний лабын баримт бичиг"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "Багш нарын форум"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Шидтэний лабын баримт бичиг"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "type": "Видео"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "type": "Видео"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "type": "Үнэлгээ"
+        },
+        "designing_for_accessibility_1/coursee/2021": {
+          "name": "Хүртээмжтэй болгохын тулд дизайн хийх"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "type": "Rubric"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Сургалтын хөтөлбөрийн заавар"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Хэрэгжүүлэх заавар"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Шидтэний лабын баримт бичиг"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Багш нарын форум"
+        },
+        "exploring_apps/coursef/2021": {
+          "name": "Апп судлах"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "Апп судлах"
+        },
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Шидтэний лабораторийг танилцуулах"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "Шидтэний лабораторийг танилцуулах",
+          "type": "Видео"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Шидтэний лабын баримт бичиг"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "Шидтэн ажиллаж байна"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "type": "Видео"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Гогцоонд зориулсан хөгжилтэй зүйлс"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Гогцоонд зориулсан хөгжилтэй зүйлс",
+          "type": "Үнэлгээ"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Гогцоонд зориулсан хөгжилтэй зүйлс"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Гогцоонд зориулсан хөгжилтэй зүйлс"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Гогцоонд зориулсан хөгжилтэй зүйлс"
+        },
+        "running-simulations/coursef/2021": {
+          "name": "Симуляцийг ажиллуулах"
+        },
+        "ai-ml/coursef/2021": {
+          "type": "Видео"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "Видео"
+        },
+        "ai-training/coursef/2021": {
+          "type": "Видео"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Интернэт"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Интернэт",
+          "type": "Үнэлгээ"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Интернэт"
+        },
+        "rubric-csf-final-projects/coursef/2021": {
+          "type": "Rubric"
+        },
         "teacher_forum_1/express/2021": {
           "name": "Багш нарын форум"
         },
@@ -1684,6 +1345,9 @@
         "variables_video/express/2021": {
           "name": "Хувьсагчууд"
         },
+        "rubric-csf-final-projects/express/2021": {
+          "type": "Rubric"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "Багш нарын форум"
         },
@@ -1699,495 +1363,1027 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "Видео"
         },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "Сургалтын хөтөлбөрийн заавар"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "Хэрэгжүүлэх заавар"
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "Шидтэний лабын баримт бичиг"
-        },
-        "teacher_forum_1/coursee/2021": {
+        "teacher_forum/csd/2022": {
           "name": "Багш нарын форум"
         },
-        "sprite_lab_documentation/coursee/2021": {
-          "name": "Шидтэний лабын баримт бичиг"
+        "intro_to_problem_solving/csd/2022": {
+          "name": "Асуудлыг шийдвэрлэх талаар танилцуулга"
         },
-        "common-sense-media-pause-think/coursee/2021": {
-          "type": "Видео"
-        },
-        "digital-sharing-video/coursee/2021": {
-          "type": "Видео"
-        },
-        "csf-songwriting-assessment/coursee/2021": {
-          "type": "Үнэлгээ"
-        },
-        "designing_for_accessibility_1/coursee/2021": {
-          "name": "Хүртээмжтэй болгохын тулд дизайн хийх"
-        },
-        "ai_what_is_machine_learning_/csd/2021": {
-          "type": "Видео"
-        },
-        "seeing_ai/csd/2021": {
-          "type": "Видео"
-        },
-        "finding_patterns_in_data/csd/2021": {
-          "type": "Видео"
-        },
-        "introduction_to_ai_lab_1/csd/2021": {
-          "type": "Видео"
-        },
-        "training_and_testing_in_ai_lab/csd/2021": {
-          "type": "Видео"
-        },
-        "ai_training_data_bias/csd/2021": {
-          "type": "Видео"
-        },
-        "model_cards_in_ai_lab/csd/2021": {
-          "type": "Видео"
-        },
-        "if-statements_in_app_lab/csd/2021": {
-          "type": "Видео"
-        },
-        "numerical_data_in_ai_lab_2/csd/2021": {
-          "type": "Видео"
-        },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
-          "type": "Видео"
-        },
-        "survey_planning/csd/2021": {
-          "name": "Өгөгдөл цуглуулах ажлыг зохион бүтээх"
-        },
-        "cleaning_survey_data/csd/2021": {
-          "type": "Видео"
-        },
-        "view_and_download_survey_data/csd/2021": {
-          "type": "Видео"
-        },
-        "teacher_forum/csd/2021": {
-          "name": "Багш нарын форум"
-        },
-        "the-design-thinking-process/csd/2021": {
-          "type": "Видео"
-        },
-        "computer-science-practices/csd/2021": {
-          "type": "Тусгал"
-        },
-        "paper-prototypes/csd/2021": {
-          "name": "Цаасан туршилт"
-        },
-        "market-research/csd/2021": {
-          "name": "Зах зээлийн судалгаа"
-        },
-        "market_research/csd/2021": {
-          "name": "Зах зээлийн судалгаа"
-        },
-        "design_mode/csd/2021": {
-          "name": "Дизайны горим"
-        },
-        "whats-for-lunch-testing/csd/2021": {
-          "type": "Видео"
-        },
-        "intro_to_design_mode/csd/2021": {
-          "type": "Видео"
-        },
-        "design_mode_1/csd/2021": {
-          "name": "Дизайны горим"
-        },
-        "multi-screen_apps/csd/2021": {
-          "name": "Олон дэлгэцийн аппууд"
-        },
-        "app-presentation/csd/2021": {
-          "name": "Апп танилцуулга"
-        },
-        "app-presentation-exemplar/csd/2021": {
-          "name": "Апп танилцуулга"
-        },
-        "computing-innovations/csd/2021": {
-          "name": "Тооцооллын инноваци"
-        },
-        "internet-of-things-video/csd/2021": {
-          "type": "Видео"
-        },
-        "innovation-video-1-1/csd/2021": {
-          "name": "Компьютерийн шинжлэх ухаан бүх зүйлийг өөрчилж байна",
-          "type": "Видео"
-        },
-        "designing_screens_with_code/csd/2021": {
-          "name": "Дэлгэцийг кодоор загварчлах"
-        },
-        "how_computers_word_hardware_software/csd/2021": {
-          "name": "Компьютерууд хэрхэн ажилладаг вэ: Техник хангамж ба програм хангамж",
-          "type": "Видео"
-        },
-        "board_events/csd/2021": {
-          "name": "Самбарын үйл явдлууд"
-        },
-        "physical_input/csd/2021": {
-          "name": "Биет оролт"
-        },
-        "analog-digital-video/csd/2021": {
-          "type": "Видео"
-        },
-        "functions_2/csd/2021": {
-          "name": "Функцүүд"
-        },
-        "introduction_to_arrays/csd/2021": {
-          "name": "Матрицын танилцуулга",
-          "type": "Видео"
-        },
-        "arrays/csd/2021": {
-          "name": "Матрицууд"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "Гогцоонд зориулав",
-          "type": "Видео"
-        },
-        "for_loops/csd/2021": {
-          "name": "Гогцоонд зориулав"
-        },
-        "circuits-logic-video/csd/2021": {
-          "name": "Компьютерууд хэрхэн ажилладаг: Хэлхээ ба логик",
-          "type": "Видео"
-        },
-        "representation-matters-exemplar-2019/csd/2021": {
-          "name": "Төлөөллийн асуудал"
-        },
-        "representation-matters/csd/2021": {
-          "name": "Төлөөллийн асуудал"
-        },
-        "representing-information-1/csd/2021": {
-          "name": "Мэдээллийг төлөөлөх"
-        },
-        "how-computers-work-data-and-binary/csd/2021": {
-          "type": "Видео"
-        },
-        "representing-numbers-exemplar-2019/csd/2021": {
-          "name": "Тоог төлөөлөх"
-        },
-        "structuring_data/csd/2021": {
-          "name": "Өгөгдлийг бүтэцчилэх"
-        },
-        "interpreting-data-exemplar-2019/csd/2021": {
-          "name": "Өгөгдлийг тайлбарлах"
-        },
-        "interpreting-data/csd/2021": {
-          "name": "Өгөгдлийг тайлбарлах"
-        },
-        "interpreting-data-1/csd/2021": {
-          "name": "Өгөгдлийг тайлбарлах"
-        },
-        "making-decisions-with-data/csd/2021": {
-          "name": "Өгөгдлөөр шийдвэр гаргах"
-        },
-        "automating-data-decisions-exemplar-2019/csd/2021": {
-          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
-        },
-        "data-decisions-resource/csd/2021": {
-          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
-        },
-        "automating-data-decisions-1/csd/2021": {
-          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
-        },
-        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
-          "type": "Видео"
-        },
-        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
-          "type": "Видео"
-        },
-        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
-          "type": "Видео"
-        },
-        "data-in-the-real-world-exemplar-2019/csd/2021": {
-          "name": "Бодит ертөнц дэх өгөгдөл"
-        },
-        "data-in-the-real-world/csd/2021": {
-          "name": "Бодит ертөнц дэх өгөгдөл"
-        },
-        "video_impact_on_society/csd/2021": {
-          "type": "Видео"
-        },
-        "video_machine_learning/csd/2021": {
-          "name": "Видео: Машины суралцалт",
-          "type": "Видео"
-        },
-        "video_training_data_and_bias/csd/2021": {
-          "type": "Видео"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "Багш нарын форум"
-        },
-        "drawing_in_game_lab_-_part_1/csd/2021": {
-          "type": "Видео"
-        },
-        "drawing_in_game_lab_-_part_2/csd/2021": {
-          "type": "Видео"
-        },
-        "introduction-to-variables/csd/2021": {
-          "type": "Видео"
-        },
-        "variables_1/csd/2021": {
-          "name": "Хувьсагчууд"
-        },
-        "introduction_to_sprites/csd/2021": {
-          "type": "Видео"
-        },
-        "the_animation_tab/csd/2021": {
-          "name": "Анимэйшний таб",
-          "type": "Видео"
-        },
-        "sprites_1/csd/2021": {
-          "name": "Шидтэнгүүд"
-        },
-        "youtube-flipbook/csd/2021": {
-          "type": "Видео"
-        },
-        "introduction_to_the_draw_loop/csd/2021": {
-          "type": "Видео"
-        },
-        "the_draw_loop/csd/2021": {
-          "name": "Зурах гогцоо"
-        },
-        "animating-sprites/csd/2021": {
-          "name": "Шидтэний хөдөлгөөн",
-          "type": "Видео"
-        },
-        "boolean_expressions/csd/2021": {
-          "name": "Бүүлийн илэрхийлэл",
-          "type": "Видео"
-        },
-        "conditional_statements/csd/2021": {
-          "name": "Нөхцлүүдийн өгүүлбэр",
-          "type": "Видео"
-        },
-        "if_else_statements/csd/2021": {
-          "name": "Хэрэв/өөр өгүүлбэрүүд",
-          "type": "Видео"
-        },
-        "velocity_1/csd/2021": {
-          "name": "Хурд",
-          "type": "Видео"
-        },
-        "velocity_2/csd/2021": {
-          "name": "Хурд"
-        },
-        "collision-detection-exemplar-2020/csd/2021": {
-          "name": "Мөргөлдөөнийг илрүүлэх"
-        },
-        "collision_detection/csd/2021": {
-          "name": "Мөргөлдөөнийг илрүүлэх"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Функцүүд",
-          "type": "Видео"
-        },
-        "functions_1/csd/2021": {
-          "name": "Функцүүд"
-        },
-        "problem-solving-process-exemplar-2020/csd/2021": {
+        "problem_solving_process/csd/2022": {
           "name": "Асуудал шийдэх үйл явц"
         },
-        "problem-solving-process-1/csd/2021": {
+        "problem_solving_process_1/csd/2022": {
           "name": "Асуудал шийдэх үйл явц",
           "type": "Видео"
         },
-        "the-problem-solving-process/csd/2021": {
+        "problem_solving_process_2/csd/2022": {
           "name": "Асуудал шийдэх үйл явц"
         },
-        "problem-solving-process/csd/2021": {
+        "the_problem_solving_process/csd/2022": {
           "name": "Асуудал шийдэх үйл явц"
         },
-        "what-is-a-computer-2020/csd/2021": {
+        "the_problem_solving_process_1/csd/2022": {
+          "name": "Асуудал шийдэх үйл явц"
+        },
+        "exploring_problem_solving/csd/2022": {
+          "name": "Асуудлыг шийдэхийг судлах"
+        },
+        "what_is_a_computer/csd/2022": {
+          "type": "Видео"
+        },
+        "what_is_a_computer_/csd/2022": {
           "name": "Компьютер гэж юу вэ?"
         },
-        "what-is-a-computer-1-2-3/csd/2021": {
-          "type": "Видео"
-        },
-        "input-and-output-2020/csd/2021": {
+        "input_and_output/csd/2022": {
           "name": "Оролт ба гаралт"
         },
-        "input-and-output-1/csd/2021": {
+        "input_and_output_1/csd/2022": {
           "name": "Оролт ба гаралт"
         },
-        "what-do-computers-do/csd/2021": {
+        "input_and_output_2/csd/2022": {
+          "name": "Оролт ба гаралт"
+        },
+        "what_do_computers_do/csd/2022": {
           "type": "Видео"
         },
-        "app-proposal-project/csd/2021": {
+        "apps_and_problem_solving/csd/2022": {
           "name": "Апп ба асуудлыг шийдэх"
         },
-        "apps-and-problem-solving-peer-review-2019/csd/2021": {
-          "name": "Апп ба асуудлыг шийдэх"
+        "apps_and_problem_solving_1/csd/2022": {
+          "name": "Апп ба асуудлыг шийдэх",
+          "type": "Үе тэнгийн тойм"
         },
-        "apps_and_problem_solving/csd/2021": {
-          "name": "Апп ба асуудлыг шийдэх"
+        "apps_and_problem_solving_2/csd/2022": {
+          "name": "Апп ба асуудлыг шийдэх",
+          "type": "Rubric"
         },
-        "exploring-web-pages-exemplar-2020/csd/2021": {
+        "computer_science_practices/csd/2022": {
+          "type": "Тусгал"
+        },
+        "project_-_propose_an_app/csd/2022": {
+          "name": "Төсөл - Апп санал болгох"
+        },
+        "exploring_web_pages/csd/2022": {
           "name": "Вэб хуудсуудыг судлах"
         },
-        "exploring-web-pages/csd/2021": {
+        "exploring_web_pages_1/csd/2022": {
           "name": "Вэб хуудсуудыг судлах"
         },
-        "intro_to_web_lab_part_2/csd/2021": {
+        "exploring_web_pages_2/csd/2022": {
+          "name": "Вэб хуудсуудыг судлах"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
           "type": "Видео"
         },
-        "video_intro_to_web_lab_part_1/csd/2021": {
+        "video_intro_to_web_lab_part_1/csd/2022": {
           "type": "Видео"
         },
-        "video_pair_programming/csd/2021": {
+        "intro_to_html/csd/2022": {
+          "name": "HTML-н танилцуулга"
+        },
+        "video_debugging/csd/2022": {
           "type": "Видео"
         },
-        "video_debugging/csd/2021": {
+        "video_pair_programming/csd/2022": {
           "type": "Видео"
         },
-        "lists/csd/2021": {
+        "headings/csd/2022": {
+          "name": "Гарчиг"
+        },
+        "html_web_page/csd/2022": {
+          "type": "Rubric"
+        },
+        "html_web_page_2/csd/2022": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "lists/csd/2022": {
           "name": "Жагсаалтууд"
         },
-        "digital-footprint/csd/2021": {
+        "digital_footprint/csd/2022": {
           "name": "Дижитал ул мөр"
         },
-        "intro_to_css_-_part_1/csd/2021": {
+        "intro_to_css_-_part_1/csd/2022": {
           "name": "CSS-ийн танилцуулга - 1-р хэсэг",
           "type": "Видео"
         },
-        "intro_to_css_-_part_2/csd/2021": {
+        "intro_to_css_-_part_2/csd/2022": {
           "name": "CSS-ийн танилцуулга - 2-р хэсэг",
           "type": "Видео"
         },
-        "creative-commons-video/csd/2021": {
+        "styling_text_with_css/csd/2022": {
+          "name": "Текстийг CSS ашиглан загварчлах"
+        },
+        "your_personal_style/csd/2022": {
+          "type": "Rubric"
+        },
+        "your_personal_style_1/csd/2022": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "creative_commons_overview/csd/2022": {
           "type": "Видео"
         },
-        "images_in_html/csd/2021": {
+        "intellectual_property/csd/2022": {
+          "name": "Оюуны өмч"
+        },
+        "images_in_html/csd/2022": {
           "name": "HTML дээрх зургууд"
         },
-        "publishing_your_website/csd/2021": {
+        "styling_elements_with_css/csd/2022": {
+          "name": "Элементийг CSS ашиглан загварчлах"
+        },
+        "personal_web_page/csd/2022": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "personal_web_page_1/csd/2022": {
+          "type": "Rubric"
+        },
+        "publishing_your_website/csd/2022": {
           "type": "Видео"
         },
-        "teamwork-dealing-with-disagreement/csd/2021": {
+        "video_managing_disagreement/csd/2022": {
           "type": "Видео"
         },
-        "how-teamwork-works/csd/2021": {
+        "video_teamwork/csd/2022": {
           "type": "Видео"
         },
-        "how-search-works-video/csd/2021": {
+        "team_problem_solving/csd/2022": {
+          "name": "Багийн асуудлыг шийдэх"
+        },
+        "video_how_search_works/csd/2022": {
           "type": "Видео"
         },
-        "classes/csd/2021": {
+        "sources_and_research/csd/2022": {
+          "name": "Эх сурвалж, судалгаа"
+        },
+        "classes/csd/2022": {
           "name": "Ангиуд"
         },
-        "lesson_plans/pre-express/2020": {
-          "name": "Хичээлийн төлөвлөгөө"
+        "website_for_a_purpose/csd/2022": {
+          "type": "Rubric"
         },
-        "standard_mappings/pre-express/2020": {
-          "name": "Стандарт зураглал"
+        "linking_pages/csd/2022": {
+          "name": "Хуудас холбох"
         },
-        "teacher_forum/pre-express/2020": {
-          "name": "Багш нарын форум"
+        "project_-_website_for_a_purpose/csd/2022": {
+          "name": "Төсөл - Зорилго бүхий вэбсайт"
         },
-        "vocabulary/pre-express/2020": {
-          "name": "Үгсийн сан"
+        "website_for_a_purpose_1/csd/2022": {
+          "type": "Үе тэнгийн тойм"
         },
-        "lesson_plans/express/2020": {
-          "name": "Хичээлийн төлөвлөгөө"
+        "peer_review_and_final_touches/csd/2022": {
+          "name": "Хамтрагчдын хяналт ба төгсгөлийн зөвлөмжүүд"
         },
-        "standard_mappings/express/2020": {
-          "name": "Стандарт зураглал"
+        "programming_for_entertainment/csd/2022": {
+          "name": "Үзвэр үйлчилгээний програмчлал"
         },
-        "teacher_forum/express/2020": {
-          "name": "Багш нарын форум"
+        "plotting_shapes/csd/2022": {
+          "name": "Дүрсийг зураглах"
         },
-        "vocabulary/express/2020": {
-          "name": "Үгсийн сан"
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "Видео"
         },
-        "curriculum_guide/courseb/2020": {
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "Видео"
+        },
+        "drawing_in_game_lab/csd/2022": {
+          "name": "Тоглоомын лабораторид зураг зурах"
+        },
+        "introduction_to_variables/csd/2022": {
+          "type": "Видео"
+        },
+        "variables/csd/2022": {
+          "name": "Хувьсагчууд"
+        },
+        "variables_3/csd/2022": {
+          "name": "Хувьсагчууд"
+        },
+        "introduction_to_sprites/csd/2022": {
+          "type": "Видео"
+        },
+        "sprites/csd/2022": {
+          "name": "Шидтэнгүүд"
+        },
+        "the_animation_tab/csd/2022": {
+          "name": "Анимэйшний таб",
+          "type": "Видео"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Шидтэнгүүд"
+        },
+        "text/csd/2022": {
+          "name": "Текст"
+        },
+        "captioned_scenes/csd/2022": {
+          "type": "Rubric"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "Видео"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "Видео"
+        },
+        "the_draw_loop/csd/2022": {
+          "name": "Зурах гогцоо"
+        },
+        "the_draw_loop_1/csd/2022": {
+          "name": "Зурах гогцоо"
+        },
+        "sprite_movement/csd/2022": {
+          "name": "Шидтэний хөдөлгөөн",
+          "type": "Видео"
+        },
+        "sprite_movement_1/csd/2022": {
+          "name": "Шидтэний хөдөлгөөн"
+        },
+        "animated_scene/csd/2022": {
+          "type": "Rubric"
+        },
+        "boolean_expressions/csd/2022": {
+          "name": "Бүүлийн илэрхийлэл",
+          "type": "Видео"
+        },
+        "conditional_statements/csd/2022": {
+          "name": "Нөхцлүүдийн өгүүлбэр",
+          "type": "Видео"
+        },
+        "conditionals/csd/2022": {
+          "name": "Нөхцлүүд"
+        },
+        "keyboard_input/csd/2022": {
+          "name": "Гараар оруулах"
+        },
+        "if_else_statements/csd/2022": {
+          "name": "Хэрэв/өөр өгүүлбэрүүд",
+          "type": "Видео"
+        },
+        "interactive_card_2/csd/2022": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "interactive_card_3/csd/2022": {
+          "type": "Rubric"
+        },
+        "project_-_interactive_card/csd/2022": {
+          "name": "Төсөл - Интерактив карт"
+        },
+        "velocity/csd/2022": {
+          "name": "Хурд",
+          "type": "Видео"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Хурд"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Хурд"
+        },
+        "collision_detection/csd/2022": {
+          "name": "Мөргөлдөөнийг илрүүлэх"
+        },
+        "collision_detection_1/csd/2022": {
+          "name": "Мөргөлдөөнийг илрүүлэх"
+        },
+        "collision_detection_2/csd/2022": {
+          "name": "Мөргөлдөөнийг илрүүлэх"
+        },
+        "side_scroller/csd/2022": {
+          "type": "Rubric"
+        },
+        "complex_sprite_movement/csd/2022": {
+          "name": "Шидтэний нийлмэл хөдөлгөөн"
+        },
+        "collisions/csd/2022": {
+          "name": "Мөргөлдөөн"
+        },
+        "flyer_game/csd/2022": {
+          "type": "Rubric"
+        },
+        "functions/csd/2022": {
+          "name": "Функцүүд",
+          "type": "Видео"
+        },
+        "functions_1/csd/2022": {
+          "name": "Функцүүд"
+        },
+        "functions_4/csd/2022": {
+          "name": "Функцүүд"
+        },
+        "the_game_design_process/csd/2022": {
+          "name": "Тоглоомын дизайн боловсруулах үйл явц"
+        },
+        "using_the_game_design_process/csd/2022": {
+          "name": "Тоглоомын дизайн боловсруулах үйл явцыг ашиглах"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "make_your_own_game_3/csd/2022": {
+          "type": "Rubric"
+        },
+        "project_-_design_a_game/csd/2022": {
+          "name": "Төсөл - Тоглоом зохиох"
+        },
+        "understanding_your_user/csd/2022": {
+          "name": "Хэрэглэгчээ ойлгох"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "Видео"
+        },
+        "user_interfaces/csd/2022": {
+          "name": "Хэрэглэгчийн интерфейс"
+        },
+        "feedback_and_testing/csd/2022": {
+          "name": "Санал хүсэлт ба тест"
+        },
+        "identifying_user_needs/csd/2022": {
+          "name": "Хэрэглэгчийн хэрэгцээг тодорхойлох"
+        },
+        "paper_prototypes/csd/2022": {
+          "name": "Цаасан туршилт",
+          "type": "Rubric"
+        },
+        "project_-_paper_prototype/csd/2022": {
+          "name": "Төсөл - Цаасны прототип"
+        },
+        "designing_apps_for_good/csd/2022": {
+          "name": "Сайн сайхны төлөө апп зохиох"
+        },
+        "market_research/csd/2022": {
+          "name": "Зах зээлийн судалгаа"
+        },
+        "market_research_1/csd/2022": {
+          "name": "Зах зээлийн судалгаа"
+        },
+        "market_research_2/csd/2022": {
+          "name": "Зах зээлийн судалгаа"
+        },
+        "design_mode/csd/2022": {
+          "name": "Дизайны горим"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "Видео"
+        },
+        "prototype_testing/csd/2022": {
+          "name": "Жишээ туршилт"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "type": "Видео"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "Видео"
+        },
+        "multi-screen_apps/csd/2022": {
+          "name": "Олон дэлгэцийн аппууд"
+        },
+        "testing_the_app/csd/2022": {
+          "name": "Апп-ыг туршиж байна"
+        },
+        "app_presentation/csd/2022": {
+          "name": "Апп танилцуулга",
+          "type": "Rubric"
+        },
+        "app_presentation_1/csd/2022": {
+          "name": "Апп танилцуулга"
+        },
+        "project_-_app_presentation/csd/2022": {
+          "name": "Төсөл - Апп танилцуулга"
+        },
+        "representation_matters/csd/2022": {
+          "name": "Төлөөллийн асуудал"
+        },
+        "representation_matters_1/csd/2022": {
+          "name": "Төлөөллийн асуудал"
+        },
+        "representation_matters_2/csd/2022": {
+          "name": "Төлөөллийн асуудал"
+        },
+        "representing_information/csd/2022": {
+          "name": "Мэдээллийг төлөөлөх"
+        },
+        "patterns_and_representation/csd/2022": {
+          "name": "Дүрсүүд ба төлөөлөл"
+        },
+        "ascii_and_binary_representation/csd/2022": {
+          "name": "ASCII ба хоёртын төлөөлөл"
+        },
+        "representing_images/csd/2022": {
+          "name": "Зургийг төлөөлөх"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "Видео"
+        },
+        "representing_numbers/csd/2022": {
+          "name": "Тоог төлөөлөх"
+        },
+        "representing_numbers_1/csd/2022": {
+          "name": "Тоог төлөөлөх"
+        },
+        "combining_representations/csd/2022": {
+          "name": "Төлөөллийг нэгтгэх"
+        },
+        "keeping_data_secret_1/csd/2022": {
+          "name": "Мэдээллийг нууцлах"
+        },
+        "create_a_representation_2/csd/2022": {
+          "type": "Rubric"
+        },
+        "structuring_data/csd/2022": {
+          "name": "Өгөгдлийг бүтэцчилэх"
+        },
+        "structuring_data_1/csd/2022": {
+          "name": "Өгөгдлийг бүтэцчилэх"
+        },
+        "interpreting_data/csd/2022": {
+          "name": "Өгөгдлийг тайлбарлах"
+        },
+        "interpreting_data_1/csd/2022": {
+          "name": "Өгөгдлийг тайлбарлах"
+        },
+        "interpreting_data_2/csd/2022": {
+          "name": "Өгөгдлийг тайлбарлах"
+        },
+        "interpreting_data_3/csd/2022": {
+          "name": "Өгөгдлийг тайлбарлах"
+        },
+        "making_decisions_with_data_1/csd/2022": {
+          "name": "Өгөгдлөөр шийдвэр гаргах"
+        },
+        "making_decisions_with_data_2/csd/2022": {
+          "name": "Өгөгдлөөр шийдвэр гаргах"
+        },
+        "automating_data_decisions/csd/2022": {
+          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
+        },
+        "automating_data_decisions_1/csd/2022": {
+          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
+        },
+        "automating_data_decisions_2/csd/2022": {
+          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
+        },
+        "automating_data_decisions_3/csd/2022": {
+          "name": "Өгөгдлийн шийдвэрийг автоматжуулах"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "Видео"
+        },
+        "data_in_the_real_world/csd/2022": {
+          "name": "Бодит ертөнц дэх өгөгдөл"
+        },
+        "data_in_the_real_world_1/csd/2022": {
+          "name": "Бодит ертөнц дэх өгөгдөл"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "Видео"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "Видео"
+        },
+        "problem_solving_with_big_data/csd/2022": {
+          "name": "Том өгөгдлийг ашиглан асуудлыг шийдвэрлэх"
+        },
+        "video_impact_on_society/csd/2022": {
+          "type": "Видео"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Видео: Машины суралцалт",
+          "type": "Видео"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "type": "Видео"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "Үе тэнгийн тойм"
+        },
+        "make_a_recommendation_1/csd/2022": {
+          "type": "Rubric"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "name": "Компьютерийн шинжлэх ухаан бүх зүйлийг өөрчилж байна",
+          "type": "Видео"
+        },
+        "computing_innovations_1/csd/2022": {
+          "name": "Тооцооллын инноваци"
+        },
+        "innovations_in_computing/csd/2022": {
+          "name": "Тооцоолол дээрх инноваци"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "Видео"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "Видео"
+        },
+        "the_circuit_playground/csd/2022": {
+          "name": "Хэлхээний тоглоомын талбай"
+        },
+        "designing_screens_with_code/csd/2022": {
+          "name": "Дэлгэцийг кодоор загварчлах"
+        },
+        "board_events/csd/2022": {
+          "name": "Самбарын үйл явдлууд"
+        },
+        "board_events_1/csd/2022": {
+          "name": "Самбарын үйл явдлууд"
+        },
+        "physical_input/csd/2022": {
+          "name": "Биет оролт"
+        },
+        "if_statements_2/csd/2022": {
+          "type": "Видео"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "Видео"
+        },
+        "variables_1/csd/2022": {
+          "name": "Хувьсагчууд"
+        },
+        "variables_2/csd/2022": {
+          "name": "Хувьсагчууд",
+          "type": "Видео"
+        },
+        "rubric_-_on-the-go_app/csd/2022": {
+          "type": "Rubric"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "Видео"
+        },
+        "rubric_-_human_device_interaction/csd/2022": {
+          "type": "Rubric"
+        },
+        "accelerometer/csd/2022": {
+          "name": "Хурдасгуур хэмжигч"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "name": "Матрицын танилцуулга",
+          "type": "Видео"
+        },
+        "making_music/csd/2022": {
+          "name": "Хөгжим зохиох"
+        },
+        "arrays/csd/2022": {
+          "name": "Матрицууд"
+        },
+        "functions_2/csd/2022": {
+          "name": "Функцүүд"
+        },
+        "functions_3/csd/2022": {
+          "name": "Функцүүд",
+          "type": "Видео"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Параметртэй функцүүд",
+          "type": "Видео"
+        },
+        "functions_5/csd/2022": {
+          "name": "Функцүүд"
+        },
+        "student_rubric_-_interactive_art/csd/2022": {
+          "type": "Rubric"
+        },
+        "project_prototype_an_innovation/csd/2022": {
+          "name": "Төсөл: Инновацийг загварчлах"
+        },
+        "prototype_an_innovation/csd/2022": {
+          "type": "Rubric"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "type": "Видео"
+        },
+        "seeing_ai/csd/2022": {
+          "type": "Видео"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "Видео"
+        },
+        "introduction_to_ai_lab/csd/2022": {
+          "name": "AI лабораторийн танилцуулга"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "name": "AI лабораторийн танилцуулга",
+          "type": "Видео"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "name": "AI Lab дахь сургалт, туршилт",
+          "type": "Видео"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "type": "Видео"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "name": "AI Lab дахь загвар картууд",
+          "type": "Видео"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "Видео"
+        },
+        "numerical_data_in_ai_lab/csd/2022": {
+          "name": "AI лабораторийн тоон өгөгдөл"
+        },
+        "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "AI лабораторийн тоон өгөгдөл"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "AI лабораторийн тоон өгөгдөл",
+          "type": "Видео"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "Видео"
+        },
+        "create_an_ml_app/csd/2022": {
+          "type": "Rubric"
+        },
+        "survey_planning/csd/2022": {
+          "name": "Өгөгдөл цуглуулах ажлыг зохион бүтээх"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "Видео"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "Видео"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "Видео"
+        },
+        "design_an_ai_app_1/csd/2022": {
+          "type": "Rubric"
+        },
+        "curriculum_guide/coursea/2022": {
           "name": "Сургалтын хөтөлбөрийн заавар"
         },
-        "lesson_plans/courseb/2020": {
-          "name": "Хичээлийн төлөвлөгөө"
+        "implementation_guide/coursea/2022": {
+          "name": "Хэрэгжүүлэх заавар"
         },
-        "standard_mappings/courseb/2020": {
-          "name": "Стандарт зураглал"
-        },
-        "teacher_forum/courseb/2020": {
+        "teacher_forum/coursea/2022": {
           "name": "Багш нарын форум"
         },
-        "vocabulary/courseb/2020": {
-          "name": "Үгсийн сан"
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Видео"
         },
-        "curriculum_guide/coursed/2020": {
+        "pair_programming/coursea/2022": {
+          "name": "Хос програмчлал"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Видео"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Аз жаргалтай газрын зургууд"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Видео"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Видео"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Видео"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Том үйл явдал"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Том үйл явдал",
+          "type": "Үнэлгээ"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Том үйл явдал"
+        },
+        "curriculum_guide/courseb/2022": {
           "name": "Сургалтын хөтөлбөрийн заавар"
         },
-        "lesson_plans/coursed/2020": {
-          "name": "Хичээлийн төлөвлөгөө"
+        "implementation_guide/courseb/2022": {
+          "name": "Хэрэгжүүлэх заавар"
         },
-        "standard_mappings/coursed/2020": {
-          "name": "Стандарт зураглал"
-        },
-        "teacher_forum/coursed/2020": {
+        "teacher_forum/courseb/2022": {
           "name": "Багш нарын форум"
         },
-        "vocabulary/coursed/2020": {
-          "name": "Үгсийн сан"
+        "move_it_move_it/courseb/2022": {
+          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
         },
-        "curriculum_guide/coursec/2020": {
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Хос програмчлал"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Видео"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Стиви ба том төсөл"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Үл анзаарагдсан алдаанууд",
+          "type": "Видео"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Гогцоорох"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Гогцоорох"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Гогцоорох",
+          "type": "Үнэлгээ"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Гогцоорох"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Видео"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Том үйл явдал"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Том үйл явдал",
+          "type": "Үнэлгээ"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Том үйл явдал"
+        },
+        "curriculum_guide/coursec/2022": {
           "name": "Сургалтын хөтөлбөрийн заавар"
         },
-        "lesson_plans/coursec/2020": {
-          "name": "Хичээлийн төлөвлөгөө"
+        "implementation_guide/coursec/2022": {
+          "name": "Хэрэгжүүлэх заавар"
         },
-        "standard_mappings/coursec/2020": {
-          "name": "Стандарт зураглал"
-        },
-        "teacher_forum/coursec/2020": {
+        "teacher_forum/coursec/2022": {
           "name": "Багш нарын форум"
         },
-        "vocabulary/coursec/2020": {
-          "name": "Үгсийн сан"
+        "my_robotic_friends/coursec/2022": {
+          "name": "Миний робот найзууд"
         },
-        "curriculum_guide/coursee/2020": {
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Миний робот найзууд"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Миний робот найзууд"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Миний робот найзууд"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Миний робот найзууд"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Хос програмчлал",
+          "type": "Видео"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Том үйл явдал"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Том үйл явдал",
+          "type": "Үнэлгээ"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Том үйл явдал"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Видео"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Хоёртын бугуйвч"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Хоёртын бугуйвч"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Хоёртын бугуйвч"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Хоёртын бугуйвч",
+          "type": "Үнэлгээ"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Хоёртын бугуйвч"
+        },
+        "curriculum_guide/coursed/2022": {
           "name": "Сургалтын хөтөлбөрийн заавар"
         },
-        "lesson_plans/coursee/2020": {
-          "name": "Хичээлийн төлөвлөгөө"
+        "implementation_guide/coursed/2022": {
+          "name": "Хэрэгжүүлэх заавар"
         },
-        "standard_mappings/coursee/2020": {
-          "name": "Стандарт зураглал"
-        },
-        "teacher_forum/coursee/2020": {
+        "teacher_forum/coursed/2022": {
           "name": "Багш нарын форум"
         },
-        "vocabulary/coursee/2020": {
-          "name": "Үгсийн сан"
+        "graph_paper_programming/coursed/2022": {
+          "name": "График цаасны программчлал"
         },
-        "curriculum_guide/coursea/2020": {
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "График цаасны программчлал"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "График цаасны программчлал"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "График цаасны программчлал"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "График цаасны программчлал",
+          "type": "Үнэлгээ"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "График цаасны программчлал"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Хос програмчлал"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Буухиа программчлал"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Видео"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Карт бүхий нөхцлүүд"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Карт бүхий нөхцлүүд"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Карт бүхий нөхцлүүд",
+          "type": "Үнэлгээ"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Карт бүхий нөхцлүүд"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Карт бүхий нөхцлүүд"
+        },
+        "curriculum_guide/coursee/2022": {
           "name": "Сургалтын хөтөлбөрийн заавар"
         },
-        "lesson_plans/coursea/2020": {
-          "name": "Хичээлийн төлөвлөгөө"
+        "implementation_guide/coursee/2022": {
+          "name": "Хэрэгжүүлэх заавар"
         },
-        "standard_mappings/coursea/2020": {
-          "name": "Стандарт зураглал"
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Шидтэний лабын баримт бичиг"
         },
-        "teacher_forum/coursea/2020": {
+        "teacher_forum/coursee/2022": {
           "name": "Багш нарын форум"
         },
-        "vocabulary/coursea/2020": {
-          "name": "Үгсийн сан"
+        "pause_and_think_online/coursee/2022": {
+          "type": "Видео"
         },
-        "curriculum_guide/coursef/2020": {
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "Үнэлгээ"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Видео"
+        },
+        "cs_fundamentals_final_project/coursee/2022": {
+          "type": "Rubric"
+        },
+        "curriculum_guide/coursef/2022": {
           "name": "Сургалтын хөтөлбөрийн заавар"
         },
-        "lesson_plans/coursef/2020": {
-          "name": "Хичээлийн төлөвлөгөө"
+        "implementation_guide/coursef/2022": {
+          "name": "Хэрэгжүүлэх заавар"
         },
-        "standard_mappings/coursef/2020": {
-          "name": "Стандарт зураглал"
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Шидтэний лабын баримт бичиг"
         },
-        "teacher_forum/coursef/2020": {
+        "teacher_forum/coursef/2022": {
           "name": "Багш нарын форум"
         },
-        "vocabulary/coursef/2020": {
-          "name": "Үгсийн сан"
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Видео"
+        },
+        "exploring_apps/coursef/2022": {
+          "name": "Апп судлах"
+        },
+        "exploring_apps_1/coursef/2022": {
+          "name": "Апп судлах"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "name": "Шидтэний лабораторийг танилцуулах",
+          "type": "Видео"
+        },
+        "running_simulations/coursef/2022": {
+          "name": "Симуляцийг ажиллуулах"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Видео"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Видео"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Видео"
+        },
+        "internet/coursef/2022": {
+          "name": "Интернэт",
+          "type": "Үнэлгээ"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Интернэт"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Интернэт"
+        },
+        "cs_fundamentals_final_project/coursef/2022": {
+          "type": "Rubric"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Багш нарын форум"
+        },
+        "pair_programming/express/2022": {
+          "name": "Хос програмчлал",
+          "type": "Видео"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Видео"
+        },
+        "turns_angles/express/2022": {
+          "type": "Видео"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Шидтэний лабын баримт бичиг"
+        },
+        "sprites_in_action/express/2022": {
+          "name": "Шидтэн ажиллаж байна"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Видео"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Видео"
+        },
+        "variables/express/2022": {
+          "name": "Хувьсагчууд"
+        },
+        "cs_fundamentals_final_project/express/2022": {
+          "type": "Rubric"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Багш нарын форум"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Видео"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Хос програмчлал"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Видео"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "Видео"
+        },
+        "ai-ml/oceans/unversioned": {
+          "type": "Видео"
+        },
+        "ai-societal/oceans/unversioned": {
+          "type": "Видео"
+        },
+        "ai-training/oceans/unversioned": {
+          "type": "Видео"
+        },
+        "poem_art_celebration/poem-art/2021": {
+          "type": "Видео"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "Видео"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "Видео"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "type": "Видео"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "Видео"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         }
       }
     }

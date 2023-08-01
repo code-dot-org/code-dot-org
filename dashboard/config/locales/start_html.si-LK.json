@@ -3,31 +3,31 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "ඔව්",
-          "No": "නැහැ"
+          "No": "නැහැ",
+          "Yes": "ඔව්"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "ඔව්",
-          "No": "නැහැ"
+          "No": "නැහැ",
+          "Yes": "ඔව්"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "ඔව්",
-          "No": "නැහැ"
+          "No": "නැහැ",
+          "Yes": "ඔව්"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "ඔව්",
-          "No": "නැහැ"
+          "No": "නැහැ",
+          "Yes": "ඔව්"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "නම",
-          "Color": "පාට",
           "City": "නගරය",
+          "Color": "පාට",
+          "Name": "නම",
           "text": "පෙළ"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "නම",
-          "Color": "පාට",
           "City": "නගරය",
+          "Color": "පාට",
+          "Name": "නම",
           "text": "පෙළ"
         },
         "CSD U1 processing guess_2021": {
@@ -55,60 +55,60 @@
           "Back": "ආපසු"
         },
         "CSD U1 storage movies_2021": {
+          "No": "නැහැ",
           "Star Wars": "Star Wars",
           "Yes": "ඔව්",
-          "No": "නැහැ",
           "text": "පෙළ"
         },
         "CSD U1 storage movies_2022": {
+          "No": "නැහැ",
           "Star Wars": "Star Wars",
           "Yes": "ඔව්",
-          "No": "නැහැ",
           "text": "පෙළ"
         },
         "CSD U1 storage outfit_2021": {
-          "green": "කොළ",
-          "black": "කළු"
+          "black": "කළු",
+          "green": "කොළ"
         },
         "CSD U1 storage outfit_2022": {
-          "green": "කොළ",
-          "black": "කළු"
+          "black": "කළු",
+          "green": "කොළ"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "මධ්‍යස්ත"
         },
         "CSD U6 - Combine Inputs - A_2222": {
+          "green": "කොළ",
           "left": "වම",
-          "right": "දකුණ",
           "red": "රතු",
-          "green": "කොළ"
+          "right": "දකුණ"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "වම",
           "right": "දකුණ"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "කොළ",
-          "blue": "නිල්"
+          "blue": "නිල්",
+          "green": "කොළ"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "Test": "පරීක්ෂාව"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
@@ -148,10 +148,10 @@
           "White": "සුදු ජාතික"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "උඩ",
           "down": "යට",
           "left": "වම",
-          "right": "දකුණ"
+          "right": "දකුණ",
+          "up": "උඩ"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "නම"
@@ -199,20 +199,20 @@
           "first": "ප්‍රථම"
         },
         "CSD U6 change": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 change_2018": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 change_2019": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 change_2021": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "මධ්‍යස්ත"
@@ -227,36 +227,36 @@
           "Medium": "මධ්‍යස්ත"
         },
         "CSD U6 frequency": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 frequency_2018": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 frequency_2019": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 frequency_2021": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 get toggle": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 get toggle_2018": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 get toggle_2019": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 get toggle_2021": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 getProperty Demo": {
           "Save": "සුරකින්න"
@@ -283,36 +283,36 @@
           "Submit": "යොමුකරන්න"
         },
         "CSD U6 getters debug": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 getters debug_2018": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 getters debug_2019": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 getters debug_2021": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 interval": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 interval_2018": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 interval_2019": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 interval_2021": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 sensor experiment embedded": {
           "text": "පෙළ"
@@ -339,38 +339,38 @@
           "title": "මාතෘකාව"
         },
         "CSD U6 slider intro": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 slider intro_2018": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 slider intro_2019": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSD U6 slider intro_2021": {
-          "short": "කෙටි කාලයක්",
-          "long": "දිගු කාලයක්"
+          "long": "දිගු කාලයක්",
+          "short": "කෙටි කාලයක්"
         },
         "CSDU4 Crowdsource App Demo": {
           "Cancel": "අවලංගු කරන්න",
-          "Yes": "ඔව්",
           "No": "නැහැ",
-          "Save": "සුරකින්න"
+          "Save": "සුරකින්න",
+          "Yes": "ඔව්"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "Cancel": "අවලංගු කරන්න",
-          "Yes": "ඔව්",
           "No": "නැහැ",
-          "Save": "සුරකින්න"
+          "Save": "සුරකින්න",
+          "Yes": "ඔව්"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "Cancel": "අවලංගු කරන්න",
-          "Yes": "ඔව්",
           "No": "නැහැ",
-          "Save": "සුරකින්න"
+          "Save": "සුරකින්න",
+          "Yes": "ඔව්"
         },
         "CSDU4 Decision App Demo": {
           "When?": "කවදා ද?"
@@ -385,16 +385,16 @@
           "Show": "පෙන්වන්න"
         },
         "CSDU4 List App Demo": {
-          "Done": "හරි",
-          "Cancel": "අවලංගු කරන්න"
+          "Cancel": "අවලංගු කරන්න",
+          "Done": "හරි"
         },
         "CSDU4 List App Demo_2018": {
-          "Done": "හරි",
-          "Cancel": "අවලංගු කරන්න"
+          "Cancel": "අවලංගු කරන්න",
+          "Done": "හරි"
         },
         "CSDU4 List App Demo_2019": {
-          "Done": "හරි",
-          "Cancel": "අවලංගු කරන්න"
+          "Cancel": "අවලංගු කරන්න",
+          "Done": "හරි"
         },
         "CSDU4 Quiz App Demo": {
           "Submit": "යොමුකරන්න",
@@ -492,12 +492,12 @@
           "Next": "ඊළඟ"
         },
         "ml-customize-raspado-2021": {
-          "yes": "ඔව්",
-          "no": "නැහැ"
+          "no": "නැහැ",
+          "yes": "ඔව්"
         },
         "ml-customize-raspado_2022": {
-          "yes": "ඔව්",
-          "no": "නැහැ"
+          "no": "නැහැ",
+          "yes": "ඔව්"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "කරගෙන යන්න",
@@ -509,13 +509,13 @@
         },
         "ml-model card-medical app v2 2021-2": {
           "W": "බ",
-          "yes": "ඔව්",
-          "no": "නැහැ"
+          "no": "නැහැ",
+          "yes": "ඔව්"
         },
         "ml-model card-medical app v2 2021-2_2022": {
           "W": "බ",
-          "yes": "ඔව්",
-          "no": "නැහැ"
+          "no": "නැහැ",
+          "yes": "ඔව්"
         },
         "ml-models in applab-choice intended warnings": {
           "Back": "ආපසු"
@@ -524,20 +524,20 @@
           "Back": "ආපසු"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "ඔව්",
-          "No": "නැහැ"
+          "No": "නැහැ",
+          "Yes": "ඔව්"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "ඔව්",
-          "No": "නැහැ"
+          "No": "නැහැ",
+          "Yes": "ඔව්"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "ඔව්",
-          "No": "නැහැ"
+          "No": "නැහැ",
+          "Yes": "ඔව්"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "ඔව්",
-          "No": "නැහැ"
+          "No": "නැහැ",
+          "Yes": "ඔව්"
         },
         "ml-use model card-example3A-2021": {
           "cloudy": "වළාකුළු සහිත",

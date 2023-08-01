@@ -1,11 +1,15 @@
-# A controller for reporting browser logs and metrics to Cloudwatch
+require 'cdo/aws/metrics'
 
+# A controller for reporting browser logs and metrics to Cloudwatch
 class BrowserEventsController < ApplicationController
   EXPERIMENT_FLAG_NAME = 'browser-cloudwatch-metrics'
   FIREHOSE_STUDY_NAME = 'browser-cloudwatch-metrics-errors'
 
   LOGS_CLIENT = Aws::CloudWatchLogs::Client.new
-  LOG_GROUP_NAME_PREFIX = 'browser-event-logs-'
+  ENV_PREFIX = rack_env?(:adhoc) ? CDO.stack_name : rack_env
+  LOG_GROUP_NAME = "#{ENV_PREFIX}-browser-events"
+  LOG_STREAM_NAME = ENV_PREFIX
+  METRIC_NAMESPACE = "#{ENV_PREFIX}-browser-metrics"
 
   before_action :check_preconditions
 
@@ -21,8 +25,8 @@ class BrowserEventsController < ApplicationController
 
     resp = LOGS_CLIENT.put_log_events(
       {
-        log_group_name: "#{LOG_GROUP_NAME_PREFIX}#{rack_env}",
-        log_stream_name: rack_env,
+        log_group_name: LOG_GROUP_NAME,
+        log_stream_name: LOG_STREAM_NAME,
         log_events: logs
       }
     )
@@ -38,6 +42,37 @@ class BrowserEventsController < ApplicationController
       error_message: "Error publishing logs to Cloudwatch"
     )
     render status: :internal_server_error, json: {error: exception}
+  end
+
+  # POST /put_metric_data
+  def put_metric_data
+    body = JSON.parse(request.body.read)
+
+    return render status :bad_request, json: {message: 'missing required params: metricData'} unless body["metricData"]
+
+    metrics = body["metricData"].map {|datum| convert_metric_datum(datum)}
+    Cdo::Metrics.push(METRIC_NAMESPACE, metrics)
+
+    render status: :ok, json: {}
+  rescue => exception
+    Honeybadger.notify(
+      exception,
+      error_message: "Error publishing metrics to Cloudwatch"
+    )
+    render status: :internal_server_error, json: {error: exception}
+  end
+
+  private def convert_metric_datum(metric_datum)
+    return nil unless metric_datum["name"]
+
+    # Replace the 'name' key with 'metric_name'
+    # (AWS Ruby SDK requires a 'metric_name' parameter)
+    metric_datum["metric_name"] = metric_datum["name"]
+    metric_datum.delete("name")
+    # put_metric_data uses ISO timestamps
+    metric_datum["timestamp"] = Time.now
+
+    metric_datum.deep_symbolize_keys
   end
 
   # Adds shared params to all log objects and convert to stringified JSON

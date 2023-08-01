@@ -1,9 +1,9 @@
 {
   "absolute": "fuainumera sao",
+  "agentDiamondPathCongrats": "Malo lava, ua e maua le ala mo taimane. O le taimi nei ua aoina le (taimane e 1) (taimane e #)",
   "agentGenericFailureMessage": "Faailo pea! Manatua e faaaoga le Agent e fesoasoani ",
   "agentTooFewBlocksFailureMessage": "Taumafai e auauai le faaopoopo o se poloka se tasi ina ia ave le Agent i le tulaga sao",
   "at": "i le",
-  "agentDiamondPathCongrats": "Malo lava, ua e maua le ala mo taimane. O le taimi nei ua aoina le (taimane e 1) (taimane e #)",
   "blockActionAdd": "faaopoopo",
   "blockActionAttack": "fasi",
   "blockActionClone": "faaluaina poloka",

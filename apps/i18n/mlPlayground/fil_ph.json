@@ -1,144 +1,24 @@
 {
-  "navigateForward": "Magpatuloy",
-  "navigateBack": "Bumalik",
-  "tryAgain": "Subukang muli",
-  "navigateDone": "Tapusin",
-  "saveProgress": "I-save",
-  "correctAnswer": "Tama",
-  "incorrectAnswer": "Hindi tama",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Deskripsyon",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Deskripsyon",
+  "correctAnswer": "Tama",
   "dataCardLastUpdated": "Huling na-update",
-  "predictButton": "Hula",
-  "uniqueOptionsWarningNotice": "Paalala",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "edad"
+        "Height": {
+          "id": "Taas"
+        },
+        "Length": {
+          "id": "Haba"
         }
       }
     },
-    "shoe_survey_toy": {
+    "bike_sharing": {
       "fields": {
-        "weather": {
-          "id": "lagay ng panahon"
-        },
-        "day": {
-          "id": "araw"
-        },
-        "shoe": {
-          "id": "sapatos"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "sibuyas"
-        },
-        "avocado": {
-          "id": "avocado"
-        },
-        "corn": {
-          "id": "mais"
-        },
-        "beans": {
-          "id": "beans"
-        },
-        "lime": {
-          "id": "kalamansi"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "mga kabute"
-        },
-        "lobster": {
-          "id": "ulang"
-        },
-        "bacon": {
-          "id": "bacon"
-        },
-        "cheese": {
-          "id": "keso"
-        },
-        "meat": {
-          "id": "karne"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "kulay"
-        },
-        "music": {
-          "id": "musika"
-        },
-        "food": {
-          "id": "pagkain"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "edad"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Kategorya"
-        },
-        "Description": {
-          "id": "Deskripsyon"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "strawberry"
-        },
-        "lime": {
-          "id": "kalamansi"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "sukat"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "kamatis"
-        },
-        "avocado": {
-          "id": "avocado"
-        },
-        "chicken": {
-          "id": "manok"
-        },
-        "fruit": {
-          "id": "prutas"
-        },
-        "beans": {
-          "id": "beans"
-        },
-        "cheese": {
-          "id": "keso"
+        "Month": {
+          "id": "Buwan"
         }
       }
     },
@@ -152,36 +32,41 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "paaralan"
-        },
-        "age": {
-          "id": "edad"
-        },
-        "health": {
-          "id": "kalusugan"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "manok"
-        },
-        "lamb": {
-          "id": "tupa"
-        },
-        "onion": {
-          "id": "sibuyas"
-        },
-        "cheese": {
-          "id": "keso"
+        "banana": {
+          "id": "saging"
         }
       }
     },
     "census_part": {
+      "fields": {
+        "age": {
+          "id": "edad"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "kulay"
+        },
+        "food": {
+          "id": "pagkain"
+        },
+        "music": {
+          "id": "musika"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Edad"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "edad"
@@ -195,63 +80,65 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Bansa"
+        },
+        "Dance": {
+          "id": "Sayaw"
+        },
+        "Music": {
+          "id": "Musika"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "edad"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Iskor"
-        },
         "Country": {
           "id": "Bansa"
         },
         "Name": {
           "id": "Pangalan"
         },
+        "Score": {
+          "id": "Iskor"
+        },
         "Star": {
           "id": "Bituin"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Artista"
+        "cheese": {
+          "id": "keso"
+        },
+        "chicken": {
+          "id": "manok"
+        },
+        "lamb": {
+          "id": "tupa"
+        },
+        "onion": {
+          "id": "sibuyas"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "mga tao"
+        "Category": {
+          "id": "Kategorya"
         },
-        "rhino": {
-          "id": "rhino"
-        },
-        "elephant": {
-          "id": "elepante"
-        },
-        "alligator": {
-          "id": "buwaya"
-        },
-        "trees": {
-          "id": "mga puno"
-        }
-      },
-      "name": "Safari"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Haba"
-        },
-        "Height": {
-          "id": "Taas"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Pantubig"
+        "Description": {
+          "id": "Deskripsyon"
         }
       }
     },
@@ -260,56 +147,101 @@
         "avocado": {
           "id": "avocado"
         },
-        "onion": {
-          "id": "sibuyas"
-        },
         "ginger": {
           "id": "luya"
+        },
+        "onion": {
+          "id": "sibuyas"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "Musika"
+        "bacon": {
+          "id": "bacon"
         },
-        "Dance": {
-          "id": "Sayaw"
+        "cheese": {
+          "id": "keso"
         },
-        "Country": {
-          "id": "Bansa"
+        "lobster": {
+          "id": "ulang"
         },
-        "Internet": {
-          "id": "Internet"
+        "meat": {
+          "id": "karne"
         },
-        "Achievements": {
-          "id": "Mga Nakamit"
-        },
-        "Age": {
-          "id": "Edad",
-          "description": "Edad"
-        },
-        "Height": {
-          "id": "Taas",
-          "description": "Taas"
-        },
-        "Gender": {
-          "id": "Kasarian",
-          "description": "Kasarian"
+        "mushrooms": {
+          "id": "mga kabute"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "saging"
+        "lime": {
+          "id": "kalamansi"
+        },
+        "strawberry": {
+          "id": "strawberry"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "Edad"
+        "alligator": {
+          "id": "buwaya"
+        },
+        "elephant": {
+          "id": "elepante"
+        },
+        "people": {
+          "id": "mga tao"
+        },
+        "rhino": {
+          "id": "rhino"
+        },
+        "trees": {
+          "id": "mga puno"
+        }
+      },
+      "name": "Safari"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avocado"
+        },
+        "beans": {
+          "id": "beans"
+        },
+        "cheese": {
+          "id": "keso"
+        },
+        "chicken": {
+          "id": "manok"
+        },
+        "fruit": {
+          "id": "prutas"
+        },
+        "tomato": {
+          "id": "kamatis"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avocado"
+        },
+        "beans": {
+          "id": "beans"
+        },
+        "corn": {
+          "id": "mais"
+        },
+        "lime": {
+          "id": "kalamansi"
+        },
+        "onion": {
+          "id": "sibuyas"
         }
       }
     },
@@ -320,18 +252,93 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "Musika"
+        "size": {
+          "id": "sukat"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "araw"
+        },
+        "shoe": {
+          "id": "sapatos"
+        },
+        "weather": {
+          "id": "lagay ng panahon"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Artista"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "edad"
+        },
+        "health": {
+          "id": "kalusugan"
+        },
+        "school": {
+          "id": "paaralan"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Mga Nakamit"
+        },
+        "Age": {
+          "description": "Edad",
+          "id": "Edad"
+        },
+        "Country": {
+          "id": "Bansa"
         },
         "Dance": {
           "id": "Sayaw"
         },
-        "Country": {
-          "id": "Bansa"
+        "Gender": {
+          "description": "Kasarian",
+          "id": "Kasarian"
+        },
+        "Height": {
+          "description": "Taas",
+          "id": "Taas"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Music": {
+          "id": "Musika"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Pantubig"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Hindi tama",
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Bumalik",
+  "navigateDone": "Tapusin",
+  "navigateForward": "Magpatuloy",
+  "predictButton": "Hula",
+  "saveProgress": "I-save",
+  "tryAgain": "Subukang muli",
+  "uniqueOptionsWarningNotice": "Paalala"
 }

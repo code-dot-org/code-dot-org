@@ -1,12 +1,5 @@
 {
-  "coursea": "Curso A",
-  "courseb": "Curso B",
-  "coursec": "Curso C",
-  "coursed": "Curso D",
-  "coursee": "Curso E",
-  "coursef": "Curso F",
-  "express": "Curso Expresso",
-  "pre-express": "Expresso de Pré-Leitor",
+  "coursea": "Fundamentos de Ciência da Computação: Curso A",
   "csd": "Descobertas da Ciência de Computação",
   "csp": "Princípios da Ciência de Computação",
   "20-hour": "Introdução acelerada para o curso de CC",
@@ -17,7 +10,6 @@
   "applab-intro": "Introdução Laboratório de Aplicativos",
   "aquatic": "Minecraft: Viagem Aquática",
   "artist": "Artista",
-  "basketball": "Escolha seu time e faça um jogo de basquete",
   "course1": "Curso 1",
   "course2": "Curso 2",
   "course3": "Curso 3",
@@ -32,6 +24,7 @@
   "fit2019-apprentice": "Workshop de Reflexões para Aprendizes de Verão 2019",
   "frozen": "Programação com Anna e Elsa",
   "gumball": "Laboratório do Gumball",
+  "hero": "Minecraft: Jornada do Herói",
   "hourofcode": "Labirinto clássico",
   "iceage": "Laboratório da Era do Gelo",
   "infinity": "Laboratório Infinito Disney",
@@ -41,7 +34,7 @@
   "outbreak": "Simulador de Epidemia",
   "pixelation": "Pixelização",
   "playlab": "Laboratório",
-  "sports": "Programe seus próprios jogos esportivos",
+  "starwars": "Star Wars: Construa uma galáxia com a programação (JavaScript)",
   "text-compression": "Compressão de texto",
   "csa-self-paced-pl": "Navegação pelo Code.org para professores-piloto do CSA",
   "outbreak-csc": "Epidemia",
@@ -57,5 +50,6 @@
   "step": "passo",
   "coursee-ramp": "percurso",
   "csa5-exemplars": "csa5-exemplars",
-  "soccer": "futebol"
+  "soccer": "futebol",
+  "design-process": "O processo de design"
 }

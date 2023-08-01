@@ -3,26 +3,25 @@
     "data": {
       "course_offerings": {
         "20-hour": "Whakataki Whakatere ki te Akoranga CS",
-        "flappy": "Waehere Flappy",
-        "jigsaw": "Pangahono",
         "aquatic": "Toihuke: Rerenga Moana",
         "artist": "Rehetoi",
-        "basketball": "Hangaia tētahi kēmu poitūkohu",
         "course1": "Akoranga 1",
         "course2": "Akoranga 2",
         "course3": "Akoranga 3",
         "course4": "Akoranga 4",
+        "flappy": "Waehere Flappy",
         "frozen": "Tuhia te waehere ki tō Anna me Elsa taha",
         "gumball": "Taiwhanga Tākaro Gumball",
         "hourofcode": "Rīrapa Tauhira",
         "iceage": "Taiwhanga Tākaro Ice Age",
         "infinity": "Taiwhanga Tākaro Disney Infinity",
+        "jigsaw": "Pangahono",
         "mc": "Hour of Code Mahimaina",
         "minecraft": "Pūhoahoa Hour of Code Mahimaina",
         "playlab": "Taiwhanga Tākaro",
-        "sports": "Ngā Hākinakina",
-        "step": "hipanga",
-        "soccer": "poiwhana"
+        "soccer": "poiwhana",
+        "starwars": "Star Wars: Te Hanga Ikarangi me te Waehere (JavaScript)",
+        "step": "hipanga"
       }
     }
   }

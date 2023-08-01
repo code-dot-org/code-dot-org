@@ -9,22 +9,13 @@
           "2-3_Artist_6_a": "Da napraviš ove male kuteve, trebaš skrenuti svaki puta _dalje_ nego što si s kvadratom.   ",
           "2-3_Artist_6_b": "Budući da sam već usmjeren desno, najlakše je krenuti naprijed, zatim raditi skretanja ulijevo da napravimo trokut."
         },
-        "helloworld_animals_click": {
-          "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
-        },
-        "helloworld_emoji_click": {
-          "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
-        },
-        "helloworld_food_click": {
-          "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
-        },
-        "helloworld_retro_click": {
-          "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
-        },
         "course1_artist_loops_challenge4": {
           "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
         },
         "courseB_artist_loops_challenge1": {
+          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
+        },
+        "courseB_artist_loops_challenge12022": {
           "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
         },
         "courseB_artist_loops_challenge1_2018": {
@@ -39,6 +30,15 @@
         "courseB_artist_loops_challenge1_2021": {
           "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
         },
+        "helloworld_animals_click": {
+          "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
+        },
+        "helloworld_animals_location": {
+          "location_pin_hint": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_emoji_click": {
+          "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
+        },
         "helloworld_emoji_location": {
           "location_pin_hint": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
@@ -48,23 +48,8 @@
         "helloworld_emoji_say": {
           "hello-world-first-solution-emoji": "Kako bi emotikoni nešto rekli, povežite blokove koda na sljedeći način:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
-        "helloworld_animals_location": {
-          "location_pin_hint": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
-        },
-        "helloworld_food_location": {
-          "location_pin_hint": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
-        },
-        "helloworld_food_multi": {
-          "storyboard_costume": "Provjerite odgovaraju li kostimi za svaki sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
-        },
-        "helloworld_retro_location": {
-          "location_pin_hint": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
-        },
-        "helloworld_retro_multi": {
-          "storyboard_costume": "Provjerite odgovaraju li kostimi za svaki sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
-        },
-        "courseB_artist_loops_challenge12022": {
-          "courseB_artist_loops_challenge1_c": "Morat ćeš se `pomaknuti` ili `preskočiti` preko nekoliko istih redaka dvaput."
+        "helloworld_food_click": {
+          "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
         },
         "helloworld_food_click_soccer-2022": {
           "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
@@ -72,17 +57,32 @@
         "helloworld_food_click_space-2022": {
           "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
         },
+        "helloworld_food_location": {
+          "location_pin_hint": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
         "helloworld_food_location_soccer-2022": {
           "location_pin_hint": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_food_location_space-2022": {
           "location_pin_hint": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
+        "helloworld_food_multi": {
+          "storyboard_costume": "Provjerite odgovaraju li kostimi za svaki sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
         "helloworld_food_multi_soccer-2022": {
           "storyboard_costume": "Provjerite odgovaraju li kostimi za svaki sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_multi_space-2022": {
           "storyboard_costume": "Provjerite odgovaraju li kostimi za svaki sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_retro_click": {
+          "hw_click_sprites": "Kliknite na spriteove dok je program pokrenut."
+        },
+        "helloworld_retro_location": {
+          "location_pin_hint": "Da bi promijenili lokaciju spritea, klikni pribadaču na bloku lokacije, a zatim klikni kamo želiš da ide.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_retro_multi": {
+          "storyboard_costume": "Provjerite odgovaraju li kostimi za svaki sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
         }
       }
     }

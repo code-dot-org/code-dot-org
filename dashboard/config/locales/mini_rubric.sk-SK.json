@@ -2,9 +2,6 @@
   "sk-SK": {
     "data": {
       "mini_rubric": {
-        "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "Kľúčové koncepty"
-        },
         "CSD U2 HTML Adding Paragraphs pt 2_2019": {
           "rubric_key_concept": "Vytvoriť pomocou HTML webovú stránku, ktorá obsahuje rôzne úrovne nadpisov, odseky, zoznamy a obrázky; pochopiť, že pri používaní počítačových jazykov je potrebná presnosť a používanie vhodnej syntaxe.\n",
           "rubric_performance_level_1": "Všetok text je obsiahnutý v značkách odsekov. Sú vytvorené aspoň dva odseky, a to pomocou správne použitých značiek odsekov.",
@@ -155,6 +152,9 @@
           "rubric_performance_level_2": "Odseky majú novú farbu alebo veľkosť.",
           "rubric_performance_level_3": "Odseky majú v súbore štýlov vytvorený vlastny´súbor pravidiel, ktorý využíva vlastnosť „color“ alebo „size“. V kóde sú však chyby, takže text nemení farbu ani veľkosť. Je vytvorený HTML kód, ktorý sa pokúša prepojiť súbor štýlov s webovou stránkou.",
           "rubric_performance_level_4": "Odseky nemajú vytvorený vlastný súbor pravidiel, prípadne v súbore pravidiel nie sú využité vlastnosti „color“ alebo „size“. Nie je vytvorený žiadny kód, ktorý by súbor štýlov prepájal s webovou stránkou."
+        },
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "Kľúčové koncepty"
         }
       }
     }

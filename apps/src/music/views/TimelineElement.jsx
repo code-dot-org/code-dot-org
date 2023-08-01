@@ -37,6 +37,7 @@ const TimelineElement = ({
   const isSkipSound = isPlaying && skipContext?.skipSound;
 
   const isCurrentlyPlaying =
+    isPlaying &&
     !isSkipSound &&
     currentPlayheadPosition !== 0 &&
     currentPlayheadPosition >= when &&
@@ -51,6 +52,7 @@ const TimelineElement = ({
   return (
     <div
       className={classNames(
+        'timeline-element',
         moduleStyles.timelineElement,
         colorClass,
         isCurrentlyPlaying && moduleStyles.timelineElementPlaying,

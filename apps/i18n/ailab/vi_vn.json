@@ -1,2 +1,15 @@
 {
+  "dataDisplayFeatures": "Chọn một hoặc nhiều cột làm đầu vào để giúp thực hiện dự đoán.",
+  "dataDisplayLabel": "Chọn một cột để dự đoán.",
+  "generateResults": "Mô hình của bạn đang được thử nghiệm.",
+  "modelSummary": "Bạn đã đào tạo thành công và lưu mô hình của bạn. Xem lại chi tiết mô hình của bạn và nhấp vào Kết thúc để sử dụng mô hình được đào tạo của bạn trong App Lab.",
+  "results": "Xem lại kết quả.",
+  "resultsDetails": "Chi tiết về kết quả đang được hiển thị.",
+  "saveModel": "Lưu mô hình được đào tạo để sử dụng trong App Lab.",
+  "selectDataset": "Chọn tập dữ liệu bạn muốn sử dụng.",
+  "selectedDataset": "Bạn vừa chọn một tập dữ liệu.",
+  "selectedFeatureCategorical": "Bạn vừa chọn một tính năng phân loại.",
+  "selectedFeatureNumerical": "Bạn vừa chọn một tính năng số.",
+  "trainModel": "Người mẫu của anh đang được huấn luyện.",
+  "uploadedDataset": "Bạn vừa tải lên một tập dữ liệu."
 }

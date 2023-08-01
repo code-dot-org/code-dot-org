@@ -668,6 +668,32 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(levelbuilder).can? :view_as_user, @login_required_script_level, student
   end
 
+  test 'verified teacher can access main javabuilder' do
+    verified_teacher = create :authorized_teacher
+    assert Ability.new(verified_teacher).can? :use_unrestricted_javabuilder, :javabuilder_session
+  end
+
+  test 'student of verified teacher in CSA section can access main javabuilder' do
+    teacher = create :authorized_teacher
+    csa_script = create :csa_script
+    section = create(:section, user: teacher, login_type: 'word', script: csa_script)
+    student = create(:follower, section: section).student_user
+
+    assert Ability.new(student).can? :use_unrestricted_javabuilder, :javabuilder_session
+  end
+
+  test 'unverified teacher cannot access main javabuilder' do
+    teacher = create :teacher
+    refute Ability.new(teacher).can? :use_unrestricted_javabuilder, :javabuilder_session
+  end
+
+  test 'student in section of unverified teacher cannot access main javabuilder' do
+    student = create :student
+    section = create :section
+    create :follower, section: section, student_user: student
+    refute Ability.new(student).can? :use_unrestricted_javabuilder, :javabuilder_session
+  end
+
   test 'student in same CSA code review enabled section and code review group as student seeking code review can view as peer' do
     # We enable read only access to other student work only on Javalab levels
     javalab_script_level = create :script_level,
@@ -905,6 +931,16 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(program_manager).can? :show, incomplete_application
     refute Ability.new(program_manager).can? :update, incomplete_application
     refute Ability.new(program_manager).can? :destroy, incomplete_application
+  end
+
+  test 'users with AI_CHAT_ACCESS can access Open AI chat completion endpoint' do
+    ai_chat_access_user = create :ai_chat_access
+    assert Ability.new(ai_chat_access_user).can? :chat_completion, :openai_chat
+  end
+
+  test 'user without AI_CHAT_ACCESS cannot access Open AI chat completion endpoint' do
+    levelbuilder = create :levelbuilder
+    refute Ability.new(levelbuilder).can? :chat_completion, :openai_chat
   end
 
   private

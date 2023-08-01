@@ -3,45 +3,41 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
+          "No": "yo‘q",
           "Yes": "Ha",
-          "No": "yo‘q"
+          "cute": "yoqimli"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
+          "No": "yo‘q",
           "Yes": "Ha",
-          "No": "yo‘q"
+          "cute": "yoqimli"
         },
         "CSD U1 IO Pet Chooser_2021": {
+          "No": "yo‘q",
           "Yes": "Ha",
-          "No": "yo‘q"
+          "cute": "yoqimli"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "yo‘q",
           "Yes": "Ha",
-          "No": "yo‘q"
+          "cute": "yoqimli"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Ismingiz",
+          "City": "Shahar",
           "Color": "Rang",
           "Food": "Ovqat",
-          "City": "Shahar",
+          "Name": "Ismingiz",
           "text": "Matn"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Ismingiz",
+          "City": "Shahar",
           "Color": "Rang",
           "Food": "Ovqat",
-          "City": "Shahar",
+          "Name": "Ismingiz",
           "text": "Matn"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -52,18 +48,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -74,29 +70,28 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
-          "?": "?",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -107,20 +102,20 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
           "text": "Matn"
         },
         "CSD U1 processing guess_2022": {
-          "?": "?",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -131,14 +126,27 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
           "text": "Matn"
         },
         "CSD U1 processing live_2021": {
-          "bear": "ayiq"
+          "bear": "ayiq",
+          "rat": "kalamush",
+          "walking": "yurish"
         },
         "CSD U1 processing live_2022": {
-          "bear": "ayiq"
+          "bear": "ayiq",
+          "rat": "kalamush",
+          "walking": "yurish"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "To‘g’ri!",
@@ -150,14 +158,6 @@
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -168,18 +168,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -190,7 +190,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Orqaga"
@@ -199,30 +207,32 @@
           "Back": "Orqaga"
         },
         "CSD U1 storage movies_2021": {
+          "No": "yo‘q",
           "Star Wars": "Yulduzlar urushi",
           "Yes": "Ha",
-          "No": "yo‘q",
           "text": "Matn"
         },
         "CSD U1 storage movies_2022": {
+          "No": "yo‘q",
           "Star Wars": "Yulduzlar urushi",
           "Yes": "Ha",
-          "No": "yo‘q",
           "text": "Matn"
         },
         "CSD U1 storage outfit_2021": {
-          "white": "oq",
-          "pink": "pushti",
-          "green": "yashil",
+          "Clear": "Clear",
           "black": "qora",
-          "purple": "siyohrang"
+          "green": "yashil",
+          "pink": "pushti",
+          "purple": "siyohrang",
+          "white": "oq"
         },
         "CSD U1 storage outfit_2022": {
-          "white": "oq",
-          "pink": "pushti",
-          "green": "yashil",
+          "Clear": "Clear",
           "black": "qora",
-          "purple": "siyohrang"
+          "green": "yashil",
+          "pink": "pushti",
+          "purple": "siyohrang",
+          "white": "oq"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -296,9 +306,9 @@
           "Success!": "Muvaffaqiyat!"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "Sharq",
           "North": "Shimol",
           "South": "Janub",
-          "East": "Sharq",
           "West": "G'arb"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
@@ -314,53 +324,54 @@
           "Medium": "O‘rta"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "chap",
-          "right": "o‘ng",
-          "red": "qizil",
-          "yellow": "sariq",
           "green": "yashil",
-          "purple": "siyohrang"
+          "left": "chap",
+          "purple": "siyohrang",
+          "red": "qizil",
+          "right": "o‘ng",
+          "yellow": "sariq"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "yoqilgan",
           "fast": "tez",
-          "slow": "sekin",
+          "long": "uzun",
+          "on": "yoqilgan",
           "short": "qisqa",
-          "long": "uzun"
+          "slow": "sekin"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "qizil",
+          "Blue": "ko‘k",
           "Green": "yashil",
-          "Blue": "ko‘k"
+          "Red": "qizil"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "chap",
           "right": "o‘ng"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "sariq",
-          "green": "yashil",
           "blue": "ko‘k",
-          "orange": "apelsin"
+          "green": "yashil",
+          "orange": "apelsin",
+          "yellow": "sariq"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "Test": "Test"
+          "Test": "Test",
+          "quiet": "jim"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "qizil",
-          "Blue": "ko‘k"
+          "Blue": "ko‘k",
+          "Red": "qizil"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -369,9 +380,9 @@
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Ismingiz"
@@ -392,40 +403,41 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
           "G": "G",
-          "A": "A",
-          "B": "B"
+          "Note:": "Eslatma:"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Muvaffaqiyat!"
@@ -444,8 +456,8 @@
           "Success!": "Muvaffaqiyat!"
         },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "ball",
-          "0": "0"
+          "0": "0",
+          "Score": "ball"
         },
         "CSD U6 - Physical Input - PC_2222": {
           "Success!": "Muvaffaqiyat!"
@@ -487,15 +499,15 @@
           "Name:": "Ism:"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "qizil",
+          "Blue": "ko‘k",
           "Green": "yashil",
-          "Blue": "ko‘k"
+          "Red": "qizil"
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "ko‘k",
+          "Green": "yashil",
           "Name:": "Ism:",
           "Red": "qizil",
-          "Green": "yashil",
-          "Blue": "ko‘k",
           "Save": "Saqlash"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
@@ -513,23 +525,23 @@
           "white": "oq"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "baxtli",
-          "?": "?"
+          "?": "?",
+          "Happy": "baxtli"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "sarlavha"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "Oq",
-          "Red": "qizil",
+          "Blue": "ko‘k",
           "Green": "yashil",
-          "Blue": "ko‘k"
+          "Red": "qizil",
+          "White": "Oq"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "yuqoriga",
           "down": "pastga",
           "left": "chap",
-          "right": "o‘ng"
+          "right": "o‘ng",
+          "up": "yuqoriga"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "ism"
@@ -544,8 +556,21 @@
         "CSD U6 - Sensors - P_2222": {
           "text": "Matn"
         },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "qadriyat"
+        },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Yangilash"
+          "Update": "Yangilash",
+          "value": "qadriyat"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "qadriyat"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "qadriyat"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "qadriyat"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Siz buni amalladingiz!"
@@ -619,53 +644,93 @@
         "CSD U6 add LED button_2021": {
           "Success!": "Muvaffaqiyat!"
         },
+        "CSD U6 analog change": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog data": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "qadriyat"
+        },
         "CSD U6 analog light": {
-          "Update": "Yangilash"
+          "Update": "Yangilash",
+          "value": "qadriyat"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Yangilash"
+          "Update": "Yangilash",
+          "value": "qadriyat"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Yangilash"
+          "Update": "Yangilash",
+          "value": "qadriyat"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Yangilash"
+          "Update": "Yangilash",
+          "value": "qadriyat"
+        },
+        "CSD U6 analog sound": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "qadriyat"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "qadriyat"
         },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "birinchi"
@@ -680,20 +745,20 @@
           "first": "birinchi"
         },
         "CSD U6 change": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 change_2018": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 change_2019": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 change_2021": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "O‘rta"
@@ -708,79 +773,79 @@
           "Medium": "O‘rta"
         },
         "CSD U6 emotion machine example": {
-          "Happy": "baxtli",
-          "?": "?"
+          "?": "?",
+          "Happy": "baxtli"
         },
         "CSD U6 emotion machine example_2018": {
-          "Happy": "baxtli",
-          "?": "?"
+          "?": "?",
+          "Happy": "baxtli"
         },
         "CSD U6 emotion machine example_2019": {
-          "Happy": "baxtli",
-          "?": "?"
+          "?": "?",
+          "Happy": "baxtli"
         },
         "CSD U6 emotion machine example_2021": {
-          "Happy": "baxtli",
-          "?": "?"
+          "?": "?",
+          "Happy": "baxtli"
         },
         "CSD U6 frequency": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 frequency_2018": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 frequency_2019": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 frequency_2021": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 get toggle": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 get toggle_2018": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 get toggle_2019": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 get toggle_2021": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "ko‘k",
+          "Green": "yashil",
           "Name:": "Ism:",
           "Red": "qizil",
-          "Green": "yashil",
-          "Blue": "ko‘k",
           "Save": "Saqlash"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "ko‘k",
+          "Green": "yashil",
           "Name:": "Ism:",
           "Red": "qizil",
-          "Green": "yashil",
-          "Blue": "ko‘k",
           "Save": "Saqlash"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "ko‘k",
+          "Green": "yashil",
           "Name:": "Ism:",
           "Red": "qizil",
-          "Green": "yashil",
-          "Blue": "ko‘k",
           "Save": "Saqlash"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "ko‘k",
+          "Green": "yashil",
           "Name:": "Ism:",
           "Red": "qizil",
-          "Green": "yashil",
-          "Blue": "ko‘k",
           "Save": "Saqlash"
         },
         "CSD U6 getProperty input": {
@@ -796,76 +861,76 @@
           "Submit": "Taqdim qilmoq"
         },
         "CSD U6 getters debug": {
-          "slow": "sekin",
           "fast": "tez",
+          "long": "uzun",
           "short": "qisqa",
-          "long": "uzun"
+          "slow": "sekin"
         },
         "CSD U6 getters debug_2018": {
           "fast": "tez",
-          "slow": "sekin",
+          "long": "uzun",
           "short": "qisqa",
-          "long": "uzun"
+          "slow": "sekin"
         },
         "CSD U6 getters debug_2019": {
           "fast": "tez",
-          "slow": "sekin",
+          "long": "uzun",
           "short": "qisqa",
-          "long": "uzun"
+          "slow": "sekin"
         },
         "CSD U6 getters debug_2021": {
           "fast": "tez",
-          "slow": "sekin",
+          "long": "uzun",
           "short": "qisqa",
-          "long": "uzun"
+          "slow": "sekin"
         },
         "CSD U6 interval": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 interval_2018": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 interval_2019": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 interval_2021": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 light show": {
-          "on": "yoqilgan",
-          "off": "o'chirilgan"
+          "off": "o'chirilgan",
+          "on": "yoqilgan"
         },
         "CSD U6 light show_2018": {
-          "on": "yoqilgan",
-          "off": "o'chirilgan"
+          "off": "o'chirilgan",
+          "on": "yoqilgan"
         },
         "CSD U6 light show_2019": {
-          "on": "yoqilgan",
-          "off": "o'chirilgan"
+          "off": "o'chirilgan",
+          "on": "yoqilgan"
         },
         "CSD U6 light show_2021": {
-          "on": "yoqilgan",
-          "off": "o'chirilgan"
+          "off": "o'chirilgan",
+          "on": "yoqilgan"
         },
         "CSD U6 params create colors": {
-          "Red": "qizil",
-          "Blue": "ko‘k"
+          "Blue": "ko‘k",
+          "Red": "qizil"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "qizil",
-          "Blue": "ko‘k"
+          "Blue": "ko‘k",
+          "Red": "qizil"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "qizil",
-          "Blue": "ko‘k"
+          "Blue": "ko‘k",
+          "Red": "qizil"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "qizil",
-          "Blue": "ko‘k"
+          "Blue": "ko‘k",
+          "Red": "qizil"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -916,20 +981,20 @@
           "title": "sarlavha"
         },
         "CSD U6 slider intro": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 slider intro_2018": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 slider intro_2019": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 slider intro_2021": {
-          "short": "qisqa",
-          "long": "uzun"
+          "long": "uzun",
+          "short": "qisqa"
         },
         "CSD U6 test LED": {
           "Success!": "Muvaffaqiyat!"
@@ -944,74 +1009,74 @@
           "Success!": "Muvaffaqiyat!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "qizil",
+          "Blue": "ko‘k",
           "Green": "yashil",
-          "Blue": "ko‘k"
+          "Red": "qizil"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "qizil",
+          "Blue": "ko‘k",
           "Green": "yashil",
-          "Blue": "ko‘k"
+          "Red": "qizil"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "Biz haqimizda",
           "About Us": "Biz haqimizda",
-          "User": "Foydalanuvchi",
-          "Cancel": "Bekor qilish",
-          "Name:": "Ism:",
-          "Red": "qizil",
-          "Green": "yashil",
           "Blue": "ko‘k",
-          "Yes": "Ha",
+          "Cancel": "Bekor qilish",
+          "Green": "yashil",
+          "Name:": "Ism:",
           "No": "yo‘q",
-          "Save": "Saqlash"
+          "Red": "qizil",
+          "Save": "Saqlash",
+          "User": "Foydalanuvchi",
+          "Yes": "Ha"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Biz haqimizda",
           "About Us": "Biz haqimizda",
-          "User": "Foydalanuvchi",
-          "Cancel": "Bekor qilish",
-          "Name:": "Ism:",
-          "Red": "qizil",
-          "Green": "yashil",
           "Blue": "ko‘k",
-          "Yes": "Ha",
+          "Cancel": "Bekor qilish",
+          "Green": "yashil",
+          "Name:": "Ism:",
           "No": "yo‘q",
-          "Save": "Saqlash"
+          "Red": "qizil",
+          "Save": "Saqlash",
+          "User": "Foydalanuvchi",
+          "Yes": "Ha"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Biz haqimizda",
           "About Us": "Biz haqimizda",
-          "User": "Foydalanuvchi",
-          "Cancel": "Bekor qilish",
-          "Name:": "Ism:",
-          "Red": "qizil",
-          "Green": "yashil",
           "Blue": "ko‘k",
-          "Yes": "Ha",
+          "Cancel": "Bekor qilish",
+          "Green": "yashil",
+          "Name:": "Ism:",
           "No": "yo‘q",
-          "Save": "Saqlash"
+          "Red": "qizil",
+          "Save": "Saqlash",
+          "User": "Foydalanuvchi",
+          "Yes": "Ha"
         },
         "CSDU4 Decision App Demo": {
           "About": "Biz haqimizda",
-          "Why?": "Nima uchun?",
+          "About Us": "Biz haqimizda",
           "I don't know": "Bilmadim",
           "When?": "Qachon?",
-          "About Us": "Biz haqimizda"
+          "Why?": "Nima uchun?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Biz haqimizda",
-          "Why?": "Nima uchun?",
+          "About Us": "Biz haqimizda",
           "I don't know": "Bilmadim",
           "When?": "Qachon?",
-          "About Us": "Biz haqimizda"
+          "Why?": "Nima uchun?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Biz haqimizda",
-          "Why?": "Nima uchun?",
+          "About Us": "Biz haqimizda",
           "I don't know": "Bilmadim",
           "When?": "Qachon?",
-          "About Us": "Biz haqimizda"
+          "Why?": "Nima uchun?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Yashirish",
@@ -1020,44 +1085,44 @@
         "CSDU4 List App Demo": {
           "About": "Biz haqimizda",
           "About Us": "Biz haqimizda",
-          "Done": "Bajarildi",
-          "Cancel": "Bekor qilish"
+          "Cancel": "Bekor qilish",
+          "Done": "Bajarildi"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Biz haqimizda",
           "About Us": "Biz haqimizda",
-          "Done": "Bajarildi",
-          "Cancel": "Bekor qilish"
+          "Cancel": "Bekor qilish",
+          "Done": "Bajarildi"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Biz haqimizda",
           "About Us": "Biz haqimizda",
-          "Done": "Bajarildi",
-          "Cancel": "Bekor qilish"
+          "Cancel": "Bekor qilish",
+          "Done": "Bajarildi"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Biz haqimizda",
-          "Submit": "Taqdim qilmoq",
-          "Why?": "Nima uchun?",
-          "When?": "Qachon?",
           "About Us": "Biz haqimizda",
-          "Correct!": "To‘g’ri!"
+          "Correct!": "To‘g’ri!",
+          "Submit": "Taqdim qilmoq",
+          "When?": "Qachon?",
+          "Why?": "Nima uchun?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Biz haqimizda",
-          "Submit": "Taqdim qilmoq",
-          "Why?": "Nima uchun?",
-          "When?": "Qachon?",
           "About Us": "Biz haqimizda",
-          "Correct!": "To‘g’ri!"
+          "Correct!": "To‘g’ri!",
+          "Submit": "Taqdim qilmoq",
+          "When?": "Qachon?",
+          "Why?": "Nima uchun?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Biz haqimizda",
-          "Submit": "Taqdim qilmoq",
-          "Why?": "Nima uchun?",
-          "When?": "Qachon?",
           "About Us": "Biz haqimizda",
-          "Correct!": "To‘g’ri!"
+          "Correct!": "To‘g’ri!",
+          "Submit": "Taqdim qilmoq",
+          "When?": "Qachon?",
+          "Why?": "Nima uchun?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1082,76 +1147,76 @@
           "Success!": "Muvaffaqiyat!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "Matn"
@@ -1172,12 +1237,12 @@
           "Start": "Boshlash"
         },
         "csd-apps for good-2": {
-          "Next": "Keyingi",
-          "Home": "Home"
+          "Home": "Home",
+          "Next": "Keyingi"
         },
         "csd-apps for good-2_2022": {
-          "Next": "Keyingi",
-          "Home": "Home"
+          "Home": "Home",
+          "Next": "Keyingi"
         },
         "csd-apps for good-3": {
           "1": "1",
@@ -1192,23 +1257,15 @@
           "4": "4"
         },
         "csd-explore ui-2": {
-          "Next": "Keyingi",
-          "Home": "Home"
+          "Home": "Home",
+          "Next": "Keyingi"
         },
         "csd-explore ui-2_2022": {
-          "Next": "Keyingi",
-          "Home": "Home"
+          "Home": "Home",
+          "Next": "Keyingi"
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1219,18 +1276,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1241,7 +1298,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Correct!": "To‘g’ri!",
@@ -1253,14 +1318,6 @@
         },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1271,18 +1328,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1293,7 +1350,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "Keyingi"
@@ -1316,12 +1381,12 @@
           "Next": "Keyingi"
         },
         "ml-customize-raspado-2021": {
-          "yes": "ha",
-          "no": "yo‘q"
+          "no": "yo‘q",
+          "yes": "ha"
         },
         "ml-customize-raspado_2022": {
-          "yes": "ha",
-          "no": "yo‘q"
+          "no": "yo‘q",
+          "yes": "ha"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Davom etish",
@@ -1338,16 +1403,18 @@
           "Silly": "Axmoqona"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "W",
           "A": "A",
-          "yes": "ha",
-          "no": "yo‘q"
+          "W": "W",
+          "head": "bosh",
+          "no": "yo‘q",
+          "yes": "ha"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "W",
           "A": "A",
-          "yes": "ha",
-          "no": "yo‘q"
+          "W": "W",
+          "head": "bosh",
+          "no": "yo‘q",
+          "yes": "ha"
         },
         "ml-model cards-book recommender model card": {
           "Silly": "Axmoqona"
@@ -1356,64 +1423,64 @@
           "Silly": "Axmoqona"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Back": "Orqaga"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Back": "Orqaga"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Ha",
+          "B": "B",
           "No": "yo‘q",
-          "B": "B"
+          "Yes": "Ha"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Ha",
+          "B": "B",
           "No": "yo‘q",
-          "B": "B"
+          "Yes": "Ha"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Ha",
-          "No": "yo‘q"
+          "No": "yo‘q",
+          "Yes": "Ha"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Ha",
-          "No": "yo‘q"
+          "No": "yo‘q",
+          "Yes": "Ha"
         },
         "ml-models-shoes decision tree-2021": {
           "Sports": "Sport"
@@ -1422,16 +1489,16 @@
           "Sports": "Sport"
         },
         "ml-use model card-example3A-2021": {
-          "rain": "yomg‘ir",
-          "snow": "qor",
           "cloudy": "bulutli",
-          "night": "qorong‘u"
+          "night": "qorong‘u",
+          "rain": "yomg‘ir",
+          "snow": "qor"
         },
         "ml-use model card-example3A_2022": {
-          "rain": "yomg‘ir",
-          "snow": "qor",
           "cloudy": "bulutli",
-          "night": "qorong‘u"
+          "night": "qorong‘u",
+          "rain": "yomg‘ir",
+          "snow": "qor"
         }
       }
     }

@@ -3,31 +3,31 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Ооба",
-          "No": "Жок"
+          "No": "Жок",
+          "Yes": "Ооба"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Ооба",
-          "No": "Жок"
+          "No": "Жок",
+          "Yes": "Ооба"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Ооба",
-          "No": "Жок"
+          "No": "Жок",
+          "Yes": "Ооба"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Ооба",
-          "No": "Жок"
+          "No": "Жок",
+          "Yes": "Ооба"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Аты",
-          "Color": "Түс",
           "City": "шаар",
+          "Color": "Түс",
+          "Name": "Аты",
           "text": "Тексттер"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Аты",
-          "Color": "Түс",
           "City": "шаар",
+          "Color": "Түс",
+          "Name": "Аты",
           "text": "Тексттер"
         },
         "CSD U1 processing guess_2021": {
@@ -43,22 +43,22 @@
           "Sorry!": "Кечир!"
         },
         "CSD U1 storage movies_2021": {
-          "Yes": "Ооба",
           "No": "Жок",
+          "Yes": "Ооба",
           "text": "Тексттер"
         },
         "CSD U1 storage movies_2022": {
-          "Yes": "Ооба",
           "No": "Жок",
+          "Yes": "Ооба",
           "text": "Тексттер"
         },
         "CSD U1 storage outfit_2021": {
-          "green": "жашыл",
-          "black": "кара"
+          "black": "кара",
+          "green": "жашыл"
         },
         "CSD U1 storage outfit_2022": {
-          "green": "жашыл",
-          "black": "кара"
+          "black": "кара",
+          "green": "жашыл"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Бүтүрдүңөр!"
@@ -97,34 +97,34 @@
           "Medium": "Орто"
         },
         "CSD U6 - Combine Inputs - A_2222": {
+          "green": "жашыл",
           "left": "солго",
-          "right": "оңго",
           "red": "кызыл",
-          "green": "жашыл"
+          "right": "оңго"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "солго",
           "right": "оңго"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "жашыл",
-          "blue": "көк"
+          "blue": "көк",
+          "green": "жашыл"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
@@ -143,40 +143,40 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Ийгилик!"
@@ -239,10 +239,10 @@
           "title": "титул"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "өйдө",
           "down": "ылдый",
           "left": "солго",
-          "right": "оңго"
+          "right": "оңго",
+          "up": "өйдө"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "аты"
@@ -299,56 +299,56 @@
           "Success!": "Ийгилик!"
         },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 change": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 change_2018": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 change_2019": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 change_2021": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Орто"
@@ -363,36 +363,36 @@
           "Medium": "Орто"
         },
         "CSD U6 frequency": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 frequency_2018": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 frequency_2019": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 frequency_2021": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 get toggle": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 get toggle_2018": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 get toggle_2019": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 get toggle_2021": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 getProperty input": {
           "Submit": "Кошуу"
@@ -407,36 +407,36 @@
           "Submit": "Кошуу"
         },
         "CSD U6 getters debug": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 getters debug_2018": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 getters debug_2019": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 getters debug_2021": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 interval": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 interval_2018": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 interval_2019": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 interval_2021": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 predict LED button": {
           "Success!": "Ийгилик!"
@@ -475,20 +475,20 @@
           "title": "титул"
         },
         "CSD U6 slider intro": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 slider intro_2018": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 slider intro_2019": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 slider intro_2021": {
-          "short": "кыска",
-          "long": "узак"
+          "long": "узак",
+          "short": "кыска"
         },
         "CSD U6 test LED": {
           "Success!": "Ийгилик!"
@@ -504,18 +504,18 @@
         },
         "CSDU4 Crowdsource App Demo": {
           "Cancel": "Жок кыл",
-          "Yes": "Ооба",
-          "No": "Жок"
+          "No": "Жок",
+          "Yes": "Ооба"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "Cancel": "Жок кыл",
-          "Yes": "Ооба",
-          "No": "Жок"
+          "No": "Жок",
+          "Yes": "Ооба"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "Cancel": "Жок кыл",
-          "Yes": "Ооба",
-          "No": "Жок"
+          "No": "Жок",
+          "Yes": "Ооба"
         },
         "CSDU4 Decision App Demo": {
           "I don't know": "Билбейм",
@@ -573,76 +573,76 @@
           "Success!": "Ийгилик!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ч",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "Тексттер"
@@ -666,12 +666,12 @@
           "Sorry!": "Кечир!"
         },
         "ml-customize-raspado-2021": {
-          "yes": "ооба",
-          "no": "жок"
+          "no": "жок",
+          "yes": "ооба"
         },
         "ml-customize-raspado_2022": {
-          "yes": "ооба",
-          "no": "жок"
+          "no": "жок",
+          "yes": "ооба"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Улантуу"
@@ -680,44 +680,44 @@
           "Continue": "Улантуу"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "Б",
           "A": "A",
-          "yes": "ооба",
-          "no": "жок"
+          "W": "Б",
+          "no": "жок",
+          "yes": "ооба"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "Б",
           "A": "A",
-          "yes": "ооба",
-          "no": "жок"
+          "W": "Б",
+          "no": "жок",
+          "yes": "ооба"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Ооба",
+          "B": "B",
           "No": "Жок",
-          "B": "B"
+          "Yes": "Ооба"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Ооба",
+          "B": "B",
           "No": "Жок",
-          "B": "B"
+          "Yes": "Ооба"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Ооба",
-          "No": "Жок"
+          "No": "Жок",
+          "Yes": "Ооба"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Ооба",
-          "No": "Жок"
+          "No": "Жок",
+          "Yes": "Ооба"
         },
         "ml-use model card-example3A-2021": {
-          "rain": "жаан",
           "cloudy": "булуттуу",
-          "night": "түн"
+          "night": "түн",
+          "rain": "жаан"
         },
         "ml-use model card-example3A_2022": {
-          "rain": "жаан",
           "cloudy": "булуттуу",
-          "night": "түн"
+          "night": "түн",
+          "rain": "жаан"
         }
       }
     }

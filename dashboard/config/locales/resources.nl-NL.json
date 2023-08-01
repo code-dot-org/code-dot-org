@@ -2,667 +2,136 @@
   "nl-NL": {
     "data": {
       "resources": {
-        "list_of_poems/poem-art/2021": {
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
-        },
-        "poem_art_celebration/poem-art/2021": {
-          "type": "Video"
-        },
-        "poem_art_events/poem-art/2021": {
-          "type": "Video"
-        },
-        "poem_art_imagery/poem-art/2021": {
-          "type": "Video"
-        },
-        "poem_art_introduction/poem-art/2021": {
-          "name": "Dichtkunst 1 - Inleiding",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
-          "type": "Video"
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "type": "Video"
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "type": "Video"
-        },
-        "ai-ml/oceans/unversioned": {
-          "type": "Video"
-        },
-        "ai-societal/oceans/unversioned": {
-          "type": "Video"
-        },
-        "ai-training/oceans/unversioned": {
-          "type": "Video"
-        },
-        "curriculum_guide/coursed/2022": {
-          "name": "Curriculum gids"
-        },
-        "implementation_guide/coursed/2022": {
-          "name": "Implementatiehandleiding"
-        },
-        "teacher_forum/coursed/2022": {
-          "name": "Lerarenforum"
-        },
-        "virtual_lesson_modifications/coursed/2022": {
-          "name": "Wijzigingen virtuele les"
-        },
-        "graph_paper_programming/coursed/2022": {
-          "name": "Programmeren op Ruitjespapier"
-        },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "Programmeren op Ruitjespapier"
-        },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "Programmeren op Ruitjespapier"
-        },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "Programmeren op Ruitjespapier"
-        },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "Programmeren op Ruitjespapier",
-          "type": "Beoordeling"
-        },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "Programmeren op Ruitjespapier"
-        },
-        "pair_programming/coursed/2022": {
-          "name": "Programmeren in Tweetallen"
-        },
-        "relay_programming/coursed/2022": {
-          "name": "Estafette Programmeren"
-        },
-        "relay_programming_1/coursed/2022": {
-          "name": "Estafette Programmeren"
-        },
-        "relay_programming_2/coursed/2022": {
-          "name": "Estafette Programmeren"
-        },
-        "relay_programming_3/coursed/2022": {
-          "name": "Estafette Programmeren"
-        },
-        "relay_programming_4/coursed/2022": {
-          "name": "Estafette Programmeren"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "Estafette Programmeren"
-        },
-        "pause_and_think_online/coursed/2022": {
-          "type": "Video"
-        },
-        "conditionals_with_cards/coursed/2022": {
-          "name": "Statements met Kaarten"
-        },
-        "conditionals_with_cards_1/coursed/2022": {
-          "name": "Statements met Kaarten"
-        },
-        "conditionals_with_cards_2/coursed/2022": {
-          "name": "Statements met Kaarten",
-          "type": "Beoordeling"
-        },
-        "conditionals_with_cards_3/coursed/2022": {
-          "name": "Statements met Kaarten"
-        },
-        "conditionals_with_cards_4/coursed/2022": {
-          "name": "Statements met Kaarten"
-        },
-        "curriculum_guide/coursef/2022": {
-          "name": "Curriculum gids"
-        },
-        "implementation_guide/coursef/2022": {
-          "name": "Implementatiehandleiding"
-        },
-        "sprite_lab_documentation/coursef/2022": {
-          "name": "Documentatie van Sprite Lab"
-        },
-        "teacher_forum/coursef/2022": {
-          "name": "Lerarenforum"
-        },
-        "virtual_lesson_modifications/coursef/2022": {
-          "name": "Wijzigingen virtuele les"
-        },
-        "the_power_of_words_the_power_of_words/coursef/2022": {
-          "type": "Video"
-        },
-        "introducing_sprite_lab_1/coursef/2022": {
-          "type": "Video"
-        },
-        "ai_impact_on_society/coursef/2022": {
-          "type": "Video"
-        },
-        "ai_machine_learning/coursef/2022": {
-          "type": "Video"
-        },
-        "ai_training_data_bias/coursef/2022": {
-          "type": "Video"
-        },
-        "internet/coursef/2022": {
-          "name": "Internet",
-          "type": "Beoordeling"
-        },
-        "internet_1/coursef/2022": {
-          "name": "Internet"
-        },
-        "the_internet/coursef/2022": {
-          "name": "Het Internet"
-        },
-        "curriculum_guide/coursee/2022": {
-          "name": "Curriculum gids"
-        },
-        "implementation_guide/coursee/2022": {
-          "name": "Implementatiehandleiding"
-        },
-        "sprite_lab_documentation/coursee/2022": {
-          "name": "Documentatie van Sprite Lab"
-        },
-        "teacher_forum/coursee/2022": {
-          "name": "Lerarenforum"
-        },
-        "virtual_lesson_modifications/coursee/2022": {
-          "name": "Wijzigingen virtuele les"
-        },
-        "pause_and_think_online/coursee/2022": {
-          "type": "Video"
-        },
-        "functions_unplugged_songwriting_2/coursee/2022": {
-          "type": "Beoordeling"
-        },
-        "digital_sharing_ethics_video_/coursee/2022": {
-          "type": "Video"
-        },
-        "curriculum_guide/courseb/2022": {
-          "name": "Curriculum gids"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "Implementatiehandleiding"
-        },
-        "teacher_forum/courseb/2022": {
-          "name": "Lerarenforum"
-        },
-        "virtual_lesson_modifications/courseb/2022": {
-          "name": "Wijzigingen virtuele les"
-        },
-        "move_it_move_it/courseb/2022": {
-          "name": "verplaats het, verplaats het"
-        },
-        "move_it_move_it_1/courseb/2022": {
-          "name": "verplaats het, verplaats het"
-        },
-        "move_it_move_it_2/courseb/2022": {
-          "name": "verplaats het, verplaats het"
-        },
-        "move_it_move_it_3/courseb/2022": {
-          "name": "Beweeg, Beweeg"
-        },
-        "pair_programming/courseb/2022": {
-          "name": "Programmeren in Tweetallen"
-        },
-        "wiggles_-_gonoodle/courseb/2022": {
-          "type": "Video"
-        },
-        "stevie_and_the_big_project/courseb/2022": {
-          "name": "Stevie en het Grote Project"
-        },
-        "unspotted_bugs/courseb/2022": {
-          "name": "Onbekende bugs",
-          "type": "Video"
-        },
-        "getting_loopy/courseb/2022": {
-          "name": "Rondjes lopen"
-        },
-        "getting_loopy_1/courseb/2022": {
-          "name": "Rondjes lopen"
-        },
-        "getting_loopy_2/courseb/2022": {
-          "name": "Rondjes lopen",
-          "type": "Beoordeling"
-        },
-        "getting_loopy_3/courseb/2022": {
-          "name": "Rondjes lopen"
-        },
-        "pause_and_think_online/courseb/2022": {
-          "type": "Video"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "De grote gebeurtenis"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "De grote gebeurtenis",
-          "type": "Beoordeling"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "De grote gebeurtenis"
-        },
-        "teacher_forum/express/2022": {
-          "name": "Lerarenforum"
-        },
-        "pair_programming/express/2022": {
-          "name": "Programmeren in Tweetallen",
-          "type": "Video"
-        },
-        "artist_introduction/express/2022": {
-          "type": "Video"
-        },
-        "turns_angles/express/2022": {
-          "type": "Video"
-        },
-        "sprite_lab_documentation/express/2022": {
-          "name": "Documentatie van Sprite Lab"
-        },
-        "pause_and_think_online/express/2022": {
-          "type": "Video"
-        },
-        "pair_programming_video/express/2022": {
-          "type": "Video"
-        },
-        "variables/express/2022": {
-          "name": "Variabelen"
-        },
-        "teacher_forum/pre-express/2022": {
-          "name": "Lerarenforum"
-        },
-        "20_20_20_rule/pre-express/2022": {
-          "type": "Video"
-        },
-        "pair_programming/pre-express/2022": {
-          "name": "Programmeren in Tweetallen"
-        },
-        "wiggles_-_go_noodle/pre-express/2022": {
-          "type": "Video"
-        },
-        "pause_and_think_online/pre-express/2022": {
-          "type": "Video"
-        },
-        "curriculum_guide/coursea/2022": {
-          "name": "Curriculum gids"
-        },
-        "implementation_guide/coursea/2022": {
-          "name": "Implementatiehandleiding"
-        },
-        "teacher_forum/coursea/2022": {
-          "name": "Lerarenforum"
-        },
-        "virtual_lesson_modifications/coursea/2022": {
-          "name": "Wijzigingen virtuele les"
-        },
-        "getting_started_-_creating_a_class_section/coursea/2022": {
-          "type": "Video"
-        },
-        "pair_programming/coursea/2022": {
-          "name": "Programmeren in Tweetallen"
-        },
-        "wiggles-go_noodle/coursea/2022": {
-          "type": "Video"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "Vrolijke Routes"
-        },
-        "wiggles_-_gonoodle/coursea/2022": {
-          "type": "Video"
-        },
-        "debugging_with_the_step_button/coursea/2022": {
-          "type": "Video"
-        },
-        "pair-programming/coursea/2022": {
-          "type": "Video"
-        },
-        "pause_and_think_online/coursea/2022": {
-          "type": "Video"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "De grote gebeurtenis"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "De grote gebeurtenis",
-          "type": "Beoordeling"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "De grote gebeurtenis"
-        },
-        "curriculum_guide/coursec/2022": {
-          "name": "Curriculum gids"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "Implementatiehandleiding"
-        },
-        "teacher_forum/coursec/2022": {
-          "name": "Lerarenforum"
-        },
-        "virtual_lesson_modifications/coursec/2022": {
-          "name": "Wijzigingen virtuele les"
-        },
-        "my_robotic_friends/coursec/2022": {
-          "name": "My Robotic Friends"
-        },
-        "my_robotic_friends_1/coursec/2022": {
-          "name": "My Robotic Friends"
-        },
-        "my_robotic_friends_2/coursec/2022": {
-          "name": "My Robotic Friends"
-        },
-        "my_robotic_friends_3/coursec/2022": {
-          "name": "My Robotic Friends"
-        },
-        "my_robotic_friends_4/coursec/2022": {
-          "name": "My Robotic Friends"
-        },
-        "pair_programming/coursec/2022": {
-          "name": "Programmeren in Tweetallen",
-          "type": "Video"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "De grote gebeurtenis"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "De grote gebeurtenis",
-          "type": "Beoordeling"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "De grote gebeurtenis"
-        },
-        "pause_and_think_online/coursec/2022": {
-          "type": "Video"
-        },
-        "binary_bracelets/coursec/2022": {
-          "name": "Binaire armbanden"
-        },
-        "binary_bracelets_1/coursec/2022": {
-          "name": "Binaire armbanden"
-        },
-        "binary_bracelets_2/coursec/2022": {
-          "name": "Binaire armbanden"
-        },
-        "binary_bracelets_3/coursec/2022": {
-          "name": "Binaire armbanden",
-          "type": "Beoordeling"
-        },
-        "binary_bracelets_4/coursec/2022": {
-          "name": "Binaire armbanden"
-        },
-        "teacher_forum/csd/2022": {
-          "name": "Lerarenforum"
-        },
-        "representing_information/csd/2022": {
-          "name": "Het voorstellen van informatie"
-        },
-        "representing_images/csd/2022": {
-          "name": "Het voorstellen van afbeeldingen"
-        },
-        "binary_and_data/csd/2022": {
-          "type": "Video"
-        },
-        "representing_numbers/csd/2022": {
-          "name": "Het voorstellen van getallen"
-        },
-        "representing_numbers_1/csd/2022": {
-          "name": "Het voorstellen van getallen"
-        },
-        "computer_science_practices/csd/2022": {
-          "type": "Reflectie"
-        },
-        "amazon_and_data/csd/2022": {
-          "type": "Video"
-        },
-        "netflix_and_data/csd/2022": {
-          "type": "Video"
-        },
-        "waze_and_data/csd/2022": {
-          "type": "Video"
-        },
-        "video_impact_on_society/csd/2022": {
-          "type": "Video"
-        },
-        "video_machine_learning/csd/2022": {
-          "name": "Video: Machinaal leren",
-          "type": "Video"
-        },
-        "video_training_data_and_bias/csd/2022": {
-          "type": "Video"
-        },
-        "problem_solving_process_1/csd/2022": {
-          "type": "Video"
-        },
-        "what_is_a_computer/csd/2022": {
-          "type": "Video"
-        },
-        "what_do_computers_do/csd/2022": {
-          "type": "Video"
-        },
-        "drawing_in_game_lab_-_part_1/csd/2022": {
-          "type": "Video"
-        },
-        "drawing_in_game_lab_-_part_2/csd/2022": {
-          "type": "Video"
-        },
-        "introduction_to_variables/csd/2022": {
-          "type": "Video"
-        },
-        "variables/csd/2022": {
-          "name": "Variabelen"
-        },
-        "variables_3/csd/2022": {
-          "name": "Variabelen"
-        },
-        "introduction_to_sprites/csd/2022": {
-          "type": "Video"
-        },
-        "sprites/csd/2022": {
-          "name": "Sprites"
-        },
-        "the_animation_tab/csd/2022": {
-          "name": "Het tabblad Animatie",
-          "type": "Video"
-        },
-        "sprites_1/csd/2022": {
-          "name": "Sprites"
-        },
-        "text/csd/2022": {
-          "name": "Tekst"
-        },
-        "flipbook_example_-_by_marnic_bos/csd/2022": {
-          "type": "Video"
-        },
-        "introduction_to_the_draw_loop/csd/2022": {
-          "type": "Video"
-        },
-        "sprite_movement/csd/2022": {
-          "type": "Video"
-        },
-        "boolean_expressions/csd/2022": {
-          "type": "Video"
-        },
-        "conditional_statements/csd/2022": {
-          "type": "Video"
-        },
-        "conditionals/csd/2022": {
-          "name": "Voorwaardelijke instructies"
-        },
-        "if_else_statements/csd/2022": {
-          "type": "Video"
-        },
-        "velocity/csd/2022": {
-          "name": "Snelheid",
-          "type": "Video"
-        },
-        "velocity_1/csd/2022": {
-          "name": "Snelheid"
-        },
-        "velocity_2/csd/2022": {
-          "name": "Snelheid"
-        },
-        "collision_detection/csd/2022": {
-          "name": "Botsingdetectie"
-        },
-        "collision_detection_1/csd/2022": {
-          "name": "Botsingdetectie"
-        },
-        "collision_detection_2/csd/2022": {
-          "name": "Botsingdetectie"
-        },
-        "functions/csd/2022": {
-          "name": "Functies",
-          "type": "Video"
-        },
-        "functions_1/csd/2022": {
-          "name": "Functies"
-        },
-        "functions_4/csd/2022": {
-          "name": "Functies"
-        },
-        "intro_to_web_lab_part_2/csd/2022": {
-          "type": "Video"
-        },
-        "video_intro_to_web_lab_part_1/csd/2022": {
-          "type": "Video"
-        },
-        "video_debugging/csd/2022": {
-          "type": "Video"
-        },
-        "video_pair_programming/csd/2022": {
-          "type": "Video"
-        },
-        "headings/csd/2022": {
-          "name": "Headings"
-        },
-        "lists/csd/2022": {
-          "name": "Lijsten"
-        },
-        "intro_to_css_-_part_1/csd/2022": {
-          "name": "Introductie tot CSS - Deel 1",
-          "type": "Video"
-        },
-        "intro_to_css_-_part_2/csd/2022": {
-          "name": "Introductie tot CSS - Deel 2",
-          "type": "Video"
-        },
-        "creative_commons_overview/csd/2022": {
-          "type": "Video"
-        },
-        "intellectual_property/csd/2022": {
-          "name": "Intellectuele Eigendom"
-        },
-        "using_images/csd/2022": {
-          "name": "Afbeeldingen gebruiken"
-        },
-        "publishing_your_website/csd/2022": {
-          "type": "Video"
-        },
-        "video_managing_disagreement/csd/2022": {
-          "type": "Video"
-        },
-        "video_teamwork/csd/2022": {
-          "type": "Video"
-        },
-        "video_how_search_works/csd/2022": {
-          "type": "Video"
-        },
-        "classes/csd/2022": {
-          "name": "Lessen"
-        },
-        "the_design_thinking_process/csd/2022": {
-          "type": "Video"
-        },
-        "design_mode/csd/2022": {
-          "name": "Ontwerpmodus"
-        },
-        "what_s_for_lunch_testing/csd/2022": {
-          "type": "Video"
-        },
-        "intro_to_design_mode/csd/2022": {
-          "type": "Video"
-        },
-        "events_in_app_lab_1/csd/2022": {
-          "type": "Video"
-        },
-        "computer_science_is_changing_everything/csd/2022": {
-          "type": "Video"
-        },
-        "the_internet_of_things/csd/2022": {
-          "type": "Video"
-        },
-        "circuits_and_logic/csd/2022": {
-          "type": "Video"
-        },
-        "if_statements_2/csd/2022": {
-          "type": "Video"
-        },
-        "the_counter_pattern_1/csd/2022": {
-          "type": "Video"
-        },
-        "variables_1/csd/2022": {
-          "name": "Variabelen"
-        },
-        "variables_2/csd/2022": {
-          "name": "Variabelen",
-          "type": "Video"
-        },
-        "input_output_devices/csd/2022": {
-          "type": "Video"
-        },
-        "introduction_to_arrays/csd/2022": {
-          "name": "Inleiding tot Arrays",
-          "type": "Video"
-        },
-        "functions_2/csd/2022": {
-          "name": "Functies"
-        },
-        "functions_3/csd/2022": {
-          "name": "Functies",
-          "type": "Video"
-        },
-        "functions_with_parameters/csd/2022": {
-          "name": "Functies met Parameters",
-          "type": "Video"
-        },
-        "functions_5/csd/2022": {
-          "name": "Functies"
-        },
-        "ai_what_is_machine_learning_/csd/2022": {
-          "type": "Video"
-        },
-        "seeing_ai/csd/2022": {
-          "name": "AI zien",
-          "type": "Video"
-        },
-        "finding_patterns_in_data/csd/2022": {
-          "type": "Video"
-        },
-        "introduction_to_ai_lab_1/csd/2022": {
-          "type": "Video"
-        },
-        "training_and_testing_in_ai_lab/csd/2022": {
-          "type": "Video"
-        },
-        "ai_training_data_bias/csd/2022": {
-          "type": "Video"
-        },
-        "model_cards_in_ai_lab/csd/2022": {
-          "type": "Video"
-        },
-        "if-statements_in_app_lab/csd/2022": {
-          "type": "Video"
-        },
-        "numerical_data_in_ai_lab_2/csd/2022": {
-          "type": "Video"
-        },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
-          "type": "Video"
-        },
-        "creating_a_survey_in_google_forms/csd/2022": {
-          "type": "Video"
-        },
-        "cleaning_survey_data/csd/2022": {
-          "type": "Video"
-        },
-        "view_and_download_survey_data/csd/2022": {
-          "type": "Video"
-        },
-        "lesson_plans/courseb/2018": {
+        "lesson_plans/csd/2017": {
           "name": "Les plan"
         },
-        "teacher_forum/courseb/2018": {
+        "teacher_forum/csd/2017": {
           "name": "Lerarenforum"
         },
-        "vocabulary/courseb/2018": {
+        "vocabulary/csd/2017": {
+          "name": "Woordenschat"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Code ingevoerd"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Les plan"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Woordenschat"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Code ingevoerd"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Les plan"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Woordenschat"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Code ingevoerd"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Les plan"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Woordenschat"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Les plan"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Woordenschat"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Code ingevoerd"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Les plan"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Woordenschat"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Les plan"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Woordenschat"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Code ingevoerd"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Les plan"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Woordenschat"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Code ingevoerd"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Les plan"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Woordenschat"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Code ingevoerd"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Les plan"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Woordenschat"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Les plan"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Woordenschat"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Code ingevoerd"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Les plan"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary_5/csd/2018": {
           "name": "Woordenschat"
         },
         "lesson_plans/coursea/2018": {
@@ -674,6 +143,24 @@
         "vocabulary/coursea/2018": {
           "name": "Woordenschat"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Les plan"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Woordenschat"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Les plan"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Woordenschat"
+        },
         "lesson_plans/coursed/2018": {
           "name": "Les plan"
         },
@@ -681,6 +168,15 @@
           "name": "Lerarenforum"
         },
         "vocabulary/coursed/2018": {
+          "name": "Woordenschat"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Les plan"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary/coursee/2018": {
           "name": "Woordenschat"
         },
         "lesson_plans/coursef/2018": {
@@ -701,88 +197,55 @@
         "vocabulary/express/2018": {
           "name": "Woordenschat"
         },
-        "lesson_plans/coursee/2018": {
+        "lesson_plans/csd/2019": {
           "name": "Les plan"
         },
-        "teacher_forum/coursee/2018": {
+        "teacher_forum/csd/2019": {
           "name": "Lerarenforum"
         },
-        "vocabulary/coursee/2018": {
+        "vocabulary/csd/2019": {
           "name": "Woordenschat"
         },
-        "lesson_plans/coursec/2018": {
-          "name": "Les plan"
-        },
-        "teacher_forum/coursec/2018": {
-          "name": "Lerarenforum"
-        },
-        "vocabulary/coursec/2018": {
-          "name": "Woordenschat"
-        },
-        "code_introduced_1/csd/2018": {
+        "code_introduced/csd/2019": {
           "name": "Code ingevoerd"
         },
-        "lesson_plans_2/csd/2018": {
+        "lesson_plans_1/csd/2019": {
           "name": "Les plan"
         },
-        "teacher_forum_2/csd/2018": {
-          "name": "Lerarenforum"
-        },
-        "vocabulary_2/csd/2018": {
+        "vocabulary_1/csd/2019": {
           "name": "Woordenschat"
         },
-        "code_introduced_3/csd/2018": {
+        "code_introduced_1/csd/2019": {
           "name": "Code ingevoerd"
         },
-        "lesson_plans_5/csd/2018": {
+        "lesson_plans_2/csd/2019": {
           "name": "Les plan"
         },
-        "teacher_forum_5/csd/2018": {
-          "name": "Lerarenforum"
-        },
-        "vocabulary_5/csd/2018": {
+        "vocabulary_2/csd/2019": {
           "name": "Woordenschat"
         },
-        "lesson_plans_4/csd/2018": {
-          "name": "Les plan"
-        },
-        "teacher_forum_4/csd/2018": {
-          "name": "Lerarenforum"
-        },
-        "vocabulary_4/csd/2018": {
-          "name": "Woordenschat"
-        },
-        "code_introduced_2/csd/2018": {
+        "code_introduced_2/csd/2019": {
           "name": "Code ingevoerd"
         },
-        "lesson_plans_3/csd/2018": {
+        "lesson_plans_3/csd/2019": {
           "name": "Les plan"
         },
-        "teacher_forum_3/csd/2018": {
-          "name": "Lerarenforum"
-        },
-        "vocabulary_3/csd/2018": {
+        "vocabulary_3/csd/2019": {
           "name": "Woordenschat"
         },
-        "code_introduced/csd/2018": {
+        "lesson_plans_4/csd/2019": {
+          "name": "Les plan"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Woordenschat"
+        },
+        "code_introduced_3/csd/2019": {
           "name": "Code ingevoerd"
         },
-        "lesson_plans_1/csd/2018": {
+        "lesson_plans_5/csd/2019": {
           "name": "Les plan"
         },
-        "teacher_forum_1/csd/2018": {
-          "name": "Lerarenforum"
-        },
-        "vocabulary_1/csd/2018": {
-          "name": "Woordenschat"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Les plan"
-        },
-        "teacher_forum/csd/2018": {
-          "name": "Lerarenforum"
-        },
-        "vocabulary/csd/2018": {
+        "vocabulary_5/csd/2019": {
           "name": "Woordenschat"
         },
         "curriculum_guide/coursea/2019": {
@@ -809,6 +272,18 @@
         "vocabulary/courseb/2019": {
           "name": "Woordenschat"
         },
+        "curriculum_guide/coursec/2019": {
+          "name": "Curriculum gids"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Les plan"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Woordenschat"
+        },
         "curriculum_guide/coursed/2019": {
           "name": "Curriculum gids"
         },
@@ -819,18 +294,6 @@
           "name": "Lerarenforum"
         },
         "vocabulary/coursed/2019": {
-          "name": "Woordenschat"
-        },
-        "curriculum_guide/coursef/2019": {
-          "name": "Curriculum gids"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "Les plan"
-        },
-        "teacher_forum/coursef/2019": {
-          "name": "Lerarenforum"
-        },
-        "vocabulary/coursef/2019": {
           "name": "Woordenschat"
         },
         "curriculum_guide/coursee/2019": {
@@ -845,6 +308,18 @@
         "vocabulary/coursee/2019": {
           "name": "Woordenschat"
         },
+        "curriculum_guide/coursef/2019": {
+          "name": "Curriculum gids"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Les plan"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Woordenschat"
+        },
         "lesson_plans/express/2019": {
           "name": "Les plan"
         },
@@ -854,202 +329,370 @@
         "vocabulary/express/2019": {
           "name": "Woordenschat"
         },
-        "curriculum_guide/coursec/2019": {
+        "curriculum_guide/coursea/2020": {
           "name": "Curriculum gids"
         },
-        "lesson_plans/coursec/2019": {
+        "lesson_plans/coursea/2020": {
           "name": "Les plan"
         },
-        "teacher_forum/coursec/2019": {
+        "teacher_forum/coursea/2020": {
           "name": "Lerarenforum"
         },
-        "vocabulary/coursec/2019": {
+        "vocabulary/coursea/2020": {
           "name": "Woordenschat"
         },
-        "teacher_forum/csd/2019": {
-          "name": "Lerarenforum"
-        },
-        "code_introduced_1/csd/2019": {
-          "name": "Code ingevoerd"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "Les plan"
-        },
-        "vocabulary_2/csd/2019": {
-          "name": "Woordenschat"
-        },
-        "code_introduced_3/csd/2019": {
-          "name": "Code ingevoerd"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "Les plan"
-        },
-        "vocabulary_5/csd/2019": {
-          "name": "Woordenschat"
-        },
-        "code_introduced_2/csd/2019": {
-          "name": "Code ingevoerd"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "Les plan"
-        },
-        "vocabulary_3/csd/2019": {
-          "name": "Woordenschat"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "Les plan"
-        },
-        "vocabulary_4/csd/2019": {
-          "name": "Woordenschat"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "Les plan"
-        },
-        "vocabulary/csd/2019": {
-          "name": "Woordenschat"
-        },
-        "code_introduced/csd/2019": {
-          "name": "Code ingevoerd"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "Les plan"
-        },
-        "vocabulary_1/csd/2019": {
-          "name": "Woordenschat"
-        },
-        "code_introduced_1/csd/2017": {
-          "name": "Code ingevoerd"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "Les plan"
-        },
-        "teacher_forum_2/csd/2017": {
-          "name": "Lerarenforum"
-        },
-        "vocabulary_2/csd/2017": {
-          "name": "Woordenschat"
-        },
-        "code_introduced_3/csd/2017": {
-          "name": "Code ingevoerd"
-        },
-        "lesson_plans_5/csd/2017": {
-          "name": "Les plan"
-        },
-        "teacher_forum_5/csd/2017": {
-          "name": "Lerarenforum"
-        },
-        "vocabulary_5/csd/2017": {
-          "name": "Woordenschat"
-        },
-        "code_introduced/csd/2017": {
-          "name": "Code ingevoerd"
-        },
-        "lesson_plans_1/csd/2017": {
-          "name": "Les plan"
-        },
-        "teacher_forum_1/csd/2017": {
-          "name": "Lerarenforum"
-        },
-        "vocabulary_1/csd/2017": {
-          "name": "Woordenschat"
-        },
-        "lesson_plans/csd/2017": {
-          "name": "Les plan"
-        },
-        "teacher_forum/csd/2017": {
-          "name": "Lerarenforum"
-        },
-        "vocabulary/csd/2017": {
-          "name": "Woordenschat"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "Les plan"
-        },
-        "teacher_forum_4/csd/2017": {
-          "name": "Lerarenforum"
-        },
-        "vocabulary_4/csd/2017": {
-          "name": "Woordenschat"
-        },
-        "code_introduced_2/csd/2017": {
-          "name": "Code ingevoerd"
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "Les plan"
-        },
-        "teacher_forum_3/csd/2017": {
-          "name": "Lerarenforum"
-        },
-        "vocabulary_3/csd/2017": {
-          "name": "Woordenschat"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "Lijst van gedichten",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": ""
-        },
-        "curriculum_guide_1/coursef/2021": {
+        "curriculum_guide/courseb/2020": {
           "name": "Curriculum gids"
         },
-        "implementation_guide/coursef/2021": {
+        "lesson_plans/courseb/2020": {
+          "name": "Les plan"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Woordenschat"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Curriculum gids"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Les plan"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Woordenschat"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Curriculum gids"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Les plan"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Woordenschat"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Curriculum gids"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Les plan"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Woordenschat"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Curriculum gids"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Les plan"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Woordenschat"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Les plan"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary/express/2020": {
+          "name": "Woordenschat"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Les plan"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Lerarenforum"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Woordenschat"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Lerarenforum"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Video"
+        },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "Video"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "Video"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "Reflectie"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2021": {
+          "type": "Video"
+        },
+        "video_debugging/csd/2021": {
+          "type": "Video"
+        },
+        "lists/csd/2021": {
+          "name": "Lijsten"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Introductie tot CSS - Deel 1",
+          "type": "Video"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Introductie tot CSS - Deel 2",
+          "type": "Video"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "Video"
+        },
+        "publishing_your_website/csd/2021": {
+          "type": "Video"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "Video"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "Video"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "Video"
+        },
+        "classes/csd/2021": {
+          "name": "Lessen"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Lerarenforum"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "Video"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variabelen"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "Video"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Het tabblad Animatie",
+          "type": "Video"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Sprites"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "Video"
+        },
+        "animating-sprites/csd/2021": {
+          "type": "Video"
+        },
+        "boolean_expressions/csd/2021": {
+          "type": "Video"
+        },
+        "conditional_statements/csd/2021": {
+          "type": "Video"
+        },
+        "if_else_statements/csd/2021": {
+          "type": "Video"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Snelheid",
+          "type": "Video"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Snelheid"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Botsingdetectie"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Botsingdetectie"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Functies",
+          "type": "Video"
+        },
+        "functions_1/csd/2021": {
+          "name": "Functies"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "Video"
+        },
+        "design_mode/csd/2021": {
+          "name": "Ontwerpmodus"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "Video"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Ontwerpmodus"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "Het voorstellen van informatie"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "Video"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "Het voorstellen van getallen"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "Video"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "Video"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Machinaal leren",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "Video"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "Video"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "type": "Video"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "Video"
+        },
+        "functions_2/csd/2021": {
+          "name": "Functies"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Inleiding tot Arrays",
+          "type": "Video"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For-lussen",
+          "type": "Video"
+        },
+        "for_loops/csd/2021": {
+          "name": "For-lussen"
+        },
+        "circuits-logic-video/csd/2021": {
+          "type": "Video"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "Video"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "AI zien",
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Curriculum gids"
+        },
+        "implementation_guide/coursea/2021": {
           "name": "Implementatiehandleiding"
         },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "Documentatie van Sprite Lab"
-        },
-        "teacher_forum_1/coursef/2021": {
+        "teacher_forum_1/coursea/2021": {
           "name": "Lerarenforum"
         },
-        "virtual_lesson_modifications/coursef/2021": {
+        "virtual_lesson_modifications/coursea/2021": {
           "name": "Wijzigingen virtuele les",
-          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
-        "introducing_sprite_lab_1/coursef/2021": {
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "type": "Video"
         },
-        "sprite_lab_documentation/coursef/2021": {
-          "name": "Documentatie van Sprite Lab"
+        "pair-programming-vid/coursea/2021": {
+          "name": "Programmeren in Tweetallen"
         },
-        "the_power_of_words_the_power_of_words/coursef/2021": {
+        "wiggles-go_noodle/coursea/2021": {
           "type": "Video"
         },
-        "pause_and_think_online/coursef/2021": {
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Vrolijke Routes"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
           "type": "Video"
         },
-        "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "For Lus fun"
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "type": "Video"
         },
-        "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "For Lus fun",
+        "pair-programming/coursea/2021": {
+          "type": "Video"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "type": "Video"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "De grote gebeurtenis"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "De grote gebeurtenis",
           "type": "Beoordeling"
         },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "For Lus fun"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "For Lus fun"
-        },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "For Lus fun"
-        },
-        "ai-ml/coursef/2021": {
-          "type": "Video"
-        },
-        "ai-societal/coursef/2021": {
-          "type": "Video"
-        },
-        "ai-training/coursef/2021": {
-          "type": "Video"
-        },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Internet"
-        },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "Internet",
-          "type": "Beoordeling"
-        },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "Het Internet"
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "De grote gebeurtenis"
         },
         "curriculum_guide_1/courseb/2021": {
           "name": "Curriculum gids"
@@ -1115,53 +758,6 @@
         "unplugged-video-big-event/courseb/2021": {
           "name": "De grote gebeurtenis",
           "type": "Video"
-        },
-        "curriculum_guide_1/coursea/2021": {
-          "name": "Curriculum gids"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "Implementatiehandleiding"
-        },
-        "teacher_forum_1/coursea/2021": {
-          "name": "Lerarenforum"
-        },
-        "virtual_lesson_modifications/coursea/2021": {
-          "name": "Wijzigingen virtuele les",
-          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "type": "Video"
-        },
-        "pair-programming-vid/coursea/2021": {
-          "name": "Programmeren in Tweetallen"
-        },
-        "wiggles-go_noodle/coursea/2021": {
-          "type": "Video"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Vrolijke Routes"
-        },
-        "wiggles_-_gonoodle/coursea/2021": {
-          "type": "Video"
-        },
-        "csf_debugging_k1_blocks/coursea/2021": {
-          "type": "Video"
-        },
-        "pair-programming/coursea/2021": {
-          "type": "Video"
-        },
-        "common-sense-media-pause-think/coursea/2021": {
-          "type": "Video"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "De grote gebeurtenis"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "De grote gebeurtenis",
-          "type": "Beoordeling"
-        },
-        "unplugged-video-big-event/coursea/2021": {
-          "name": "De grote gebeurtenis"
         },
         "curriculum_guide_1/coursec/2021": {
           "name": "Curriculum gids"
@@ -1299,6 +895,97 @@
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Statements met Kaarten"
         },
+        "curriculum_guide_1/coursee/2021": {
+          "name": "Curriculum gids"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "Implementatiehandleiding"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Documentatie van Sprite Lab"
+        },
+        "teacher_forum_1/coursee/2021": {
+          "name": "Lerarenforum"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "Wijzigingen virtuele les",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Documentatie van Sprite Lab"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "type": "Video"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "type": "Video"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "type": "Beoordeling"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "name": "Curriculum gids"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Implementatiehandleiding"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Documentatie van Sprite Lab"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "Lerarenforum"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "Wijzigingen virtuele les",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "type": "Video"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Documentatie van Sprite Lab"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "Video"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "type": "Video"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "For Lus fun"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "For Lus fun",
+          "type": "Beoordeling"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "For Lus fun"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "For Lus fun"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "For Lus fun"
+        },
+        "ai-ml/coursef/2021": {
+          "type": "Video"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "Video"
+        },
+        "ai-training/coursef/2021": {
+          "type": "Video"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet",
+          "type": "Beoordeling"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Het Internet"
+        },
         "teacher_forum_1/express/2021": {
           "name": "Lerarenforum"
         },
@@ -1342,351 +1029,664 @@
         "common-sense-media-pause-think/pre-express/2021": {
           "type": "Video"
         },
-        "curriculum_guide_1/coursee/2021": {
-          "name": "Curriculum gids"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "Implementatiehandleiding"
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "Documentatie van Sprite Lab"
-        },
-        "teacher_forum_1/coursee/2021": {
+        "teacher_forum/csd/2022": {
           "name": "Lerarenforum"
         },
-        "virtual_lesson_modifications/coursee/2021": {
-          "name": "Wijzigingen virtuele les",
-          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
-        },
-        "sprite_lab_documentation/coursee/2021": {
-          "name": "Documentatie van Sprite Lab"
-        },
-        "common-sense-media-pause-think/coursee/2021": {
+        "problem_solving_process_1/csd/2022": {
           "type": "Video"
         },
-        "digital-sharing-video/coursee/2021": {
+        "what_is_a_computer/csd/2022": {
           "type": "Video"
         },
-        "csf-songwriting-assessment/coursee/2021": {
-          "type": "Beoordeling"
-        },
-        "ai_what_is_machine_learning_/csd/2021": {
+        "what_do_computers_do/csd/2022": {
           "type": "Video"
         },
-        "seeing_ai/csd/2021": {
-          "name": "AI zien",
-          "type": "Video"
-        },
-        "finding_patterns_in_data/csd/2021": {
-          "type": "Video"
-        },
-        "introduction_to_ai_lab_1/csd/2021": {
-          "type": "Video"
-        },
-        "training_and_testing_in_ai_lab/csd/2021": {
-          "type": "Video"
-        },
-        "ai_training_data_bias/csd/2021": {
-          "type": "Video"
-        },
-        "model_cards_in_ai_lab/csd/2021": {
-          "type": "Video"
-        },
-        "if-statements_in_app_lab/csd/2021": {
-          "type": "Video"
-        },
-        "numerical_data_in_ai_lab_2/csd/2021": {
-          "type": "Video"
-        },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
-          "type": "Video"
-        },
-        "cleaning_survey_data/csd/2021": {
-          "type": "Video"
-        },
-        "view_and_download_survey_data/csd/2021": {
-          "type": "Video"
-        },
-        "teacher_forum/csd/2021": {
-          "name": "Lerarenforum"
-        },
-        "the-design-thinking-process/csd/2021": {
-          "type": "Video"
-        },
-        "computer-science-practices/csd/2021": {
+        "computer_science_practices/csd/2022": {
           "type": "Reflectie"
         },
-        "design_mode/csd/2021": {
-          "name": "Ontwerpmodus"
-        },
-        "whats-for-lunch-testing/csd/2021": {
+        "intro_to_web_lab_part_2/csd/2022": {
           "type": "Video"
         },
-        "intro_to_design_mode/csd/2021": {
+        "video_intro_to_web_lab_part_1/csd/2022": {
           "type": "Video"
         },
-        "design_mode_1/csd/2021": {
-          "name": "Ontwerpmodus"
-        },
-        "internet-of-things-video/csd/2021": {
+        "video_debugging/csd/2022": {
           "type": "Video"
         },
-        "innovation-video-1-1/csd/2021": {
+        "video_pair_programming/csd/2022": {
           "type": "Video"
         },
-        "how_computers_word_hardware_software/csd/2021": {
-          "type": "Video"
+        "headings/csd/2022": {
+          "name": "Headings"
         },
-        "analog-digital-video/csd/2021": {
-          "type": "Video"
-        },
-        "functions_2/csd/2021": {
-          "name": "Functies"
-        },
-        "introduction_to_arrays/csd/2021": {
-          "name": "Inleiding tot Arrays",
-          "type": "Video"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "For-lussen",
-          "type": "Video"
-        },
-        "for_loops/csd/2021": {
-          "name": "For-lussen"
-        },
-        "circuits-logic-video/csd/2021": {
-          "type": "Video"
-        },
-        "representing-information-1/csd/2021": {
-          "name": "Het voorstellen van informatie"
-        },
-        "how-computers-work-data-and-binary/csd/2021": {
-          "type": "Video"
-        },
-        "representing-numbers-exemplar-2019/csd/2021": {
-          "name": "Het voorstellen van getallen"
-        },
-        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
-          "type": "Video"
-        },
-        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
-          "type": "Video"
-        },
-        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
-          "type": "Video"
-        },
-        "video_impact_on_society/csd/2021": {
-          "type": "Video"
-        },
-        "video_machine_learning/csd/2021": {
-          "name": "Video: Machinaal leren",
-          "type": "Video"
-        },
-        "video_training_data_and_bias/csd/2021": {
-          "type": "Video"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "Lerarenforum"
-        },
-        "drawing_in_game_lab_-_part_1/csd/2021": {
-          "type": "Video"
-        },
-        "drawing_in_game_lab_-_part_2/csd/2021": {
-          "type": "Video"
-        },
-        "introduction-to-variables/csd/2021": {
-          "type": "Video"
-        },
-        "variables_1/csd/2021": {
-          "name": "Variabelen"
-        },
-        "introduction_to_sprites/csd/2021": {
-          "type": "Video"
-        },
-        "the_animation_tab/csd/2021": {
-          "name": "Het tabblad Animatie",
-          "type": "Video"
-        },
-        "sprites_1/csd/2021": {
-          "name": "Sprites"
-        },
-        "youtube-flipbook/csd/2021": {
-          "type": "Video"
-        },
-        "introduction_to_the_draw_loop/csd/2021": {
-          "type": "Video"
-        },
-        "animating-sprites/csd/2021": {
-          "type": "Video"
-        },
-        "boolean_expressions/csd/2021": {
-          "type": "Video"
-        },
-        "conditional_statements/csd/2021": {
-          "type": "Video"
-        },
-        "if_else_statements/csd/2021": {
-          "type": "Video"
-        },
-        "velocity_1/csd/2021": {
-          "name": "Snelheid",
-          "type": "Video"
-        },
-        "velocity_2/csd/2021": {
-          "name": "Snelheid"
-        },
-        "collision-detection-exemplar-2020/csd/2021": {
-          "name": "Botsingdetectie"
-        },
-        "collision_detection/csd/2021": {
-          "name": "Botsingdetectie"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Functies",
-          "type": "Video"
-        },
-        "functions_1/csd/2021": {
-          "name": "Functies"
-        },
-        "problem-solving-process-1/csd/2021": {
-          "type": "Video"
-        },
-        "what-is-a-computer-1-2-3/csd/2021": {
-          "type": "Video"
-        },
-        "what-do-computers-do/csd/2021": {
-          "type": "Video"
-        },
-        "intro_to_web_lab_part_2/csd/2021": {
-          "type": "Video"
-        },
-        "video_intro_to_web_lab_part_1/csd/2021": {
-          "type": "Video"
-        },
-        "video_pair_programming/csd/2021": {
-          "type": "Video"
-        },
-        "video_debugging/csd/2021": {
-          "type": "Video"
-        },
-        "lists/csd/2021": {
+        "lists/csd/2022": {
           "name": "Lijsten"
         },
-        "intro_to_css_-_part_1/csd/2021": {
+        "intro_to_css_-_part_1/csd/2022": {
           "name": "Introductie tot CSS - Deel 1",
           "type": "Video"
         },
-        "intro_to_css_-_part_2/csd/2021": {
+        "intro_to_css_-_part_2/csd/2022": {
           "name": "Introductie tot CSS - Deel 2",
           "type": "Video"
         },
-        "creative-commons-video/csd/2021": {
+        "creative_commons_overview/csd/2022": {
           "type": "Video"
         },
-        "publishing_your_website/csd/2021": {
+        "intellectual_property/csd/2022": {
+          "name": "Intellectuele Eigendom"
+        },
+        "using_images/csd/2022": {
+          "name": "Afbeeldingen gebruiken"
+        },
+        "publishing_your_website/csd/2022": {
           "type": "Video"
         },
-        "teamwork-dealing-with-disagreement/csd/2021": {
+        "video_managing_disagreement/csd/2022": {
           "type": "Video"
         },
-        "how-teamwork-works/csd/2021": {
+        "video_teamwork/csd/2022": {
           "type": "Video"
         },
-        "how-search-works-video/csd/2021": {
+        "video_how_search_works/csd/2022": {
           "type": "Video"
         },
-        "classes/csd/2021": {
+        "classes/csd/2022": {
           "name": "Lessen"
         },
-        "lesson_plans/pre-express/2020": {
-          "name": "Les plan"
+        "drawing_in_game_lab_-_part_1/csd/2022": {
+          "type": "Video"
         },
-        "teacher_forum/pre-express/2020": {
-          "name": "Lerarenforum"
+        "drawing_in_game_lab_-_part_2/csd/2022": {
+          "type": "Video"
         },
-        "vocabulary/pre-express/2020": {
-          "name": "Woordenschat"
+        "introduction_to_variables/csd/2022": {
+          "type": "Video"
         },
-        "lesson_plans/express/2020": {
-          "name": "Les plan"
+        "variables/csd/2022": {
+          "name": "Variabelen"
         },
-        "teacher_forum/express/2020": {
-          "name": "Lerarenforum"
+        "variables_3/csd/2022": {
+          "name": "Variabelen"
         },
-        "vocabulary/express/2020": {
-          "name": "Woordenschat"
+        "introduction_to_sprites/csd/2022": {
+          "type": "Video"
         },
-        "curriculum_guide/courseb/2020": {
+        "sprites/csd/2022": {
+          "name": "Sprites"
+        },
+        "the_animation_tab/csd/2022": {
+          "name": "Het tabblad Animatie",
+          "type": "Video"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Sprites"
+        },
+        "text/csd/2022": {
+          "name": "Tekst"
+        },
+        "flipbook_example_-_by_marnic_bos/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2022": {
+          "type": "Video"
+        },
+        "sprite_movement/csd/2022": {
+          "type": "Video"
+        },
+        "boolean_expressions/csd/2022": {
+          "type": "Video"
+        },
+        "conditional_statements/csd/2022": {
+          "type": "Video"
+        },
+        "conditionals/csd/2022": {
+          "name": "Voorwaardelijke instructies"
+        },
+        "if_else_statements/csd/2022": {
+          "type": "Video"
+        },
+        "velocity/csd/2022": {
+          "name": "Snelheid",
+          "type": "Video"
+        },
+        "velocity_1/csd/2022": {
+          "name": "Snelheid"
+        },
+        "velocity_2/csd/2022": {
+          "name": "Snelheid"
+        },
+        "collision_detection/csd/2022": {
+          "name": "Botsingdetectie"
+        },
+        "collision_detection_1/csd/2022": {
+          "name": "Botsingdetectie"
+        },
+        "collision_detection_2/csd/2022": {
+          "name": "Botsingdetectie"
+        },
+        "functions/csd/2022": {
+          "name": "Functies",
+          "type": "Video"
+        },
+        "functions_1/csd/2022": {
+          "name": "Functies"
+        },
+        "functions_4/csd/2022": {
+          "name": "Functies"
+        },
+        "the_design_thinking_process/csd/2022": {
+          "type": "Video"
+        },
+        "design_mode/csd/2022": {
+          "name": "Ontwerpmodus"
+        },
+        "what_s_for_lunch_testing/csd/2022": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2022": {
+          "type": "Video"
+        },
+        "events_in_app_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "representing_information/csd/2022": {
+          "name": "Het voorstellen van informatie"
+        },
+        "representing_images/csd/2022": {
+          "name": "Het voorstellen van afbeeldingen"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "representing_numbers/csd/2022": {
+          "name": "Het voorstellen van getallen"
+        },
+        "representing_numbers_1/csd/2022": {
+          "name": "Het voorstellen van getallen"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2022": {
+          "type": "Video"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "Video: Machinaal leren",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2022": {
+          "type": "Video"
+        },
+        "computer_science_is_changing_everything/csd/2022": {
+          "type": "Video"
+        },
+        "the_internet_of_things/csd/2022": {
+          "type": "Video"
+        },
+        "circuits_and_logic/csd/2022": {
+          "type": "Video"
+        },
+        "if_statements_2/csd/2022": {
+          "type": "Video"
+        },
+        "the_counter_pattern_1/csd/2022": {
+          "type": "Video"
+        },
+        "variables_1/csd/2022": {
+          "name": "Variabelen"
+        },
+        "variables_2/csd/2022": {
+          "name": "Variabelen",
+          "type": "Video"
+        },
+        "input_output_devices/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_arrays/csd/2022": {
+          "name": "Inleiding tot Arrays",
+          "type": "Video"
+        },
+        "functions_2/csd/2022": {
+          "name": "Functies"
+        },
+        "functions_3/csd/2022": {
+          "name": "Functies",
+          "type": "Video"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Functies met Parameters",
+          "type": "Video"
+        },
+        "functions_5/csd/2022": {
+          "name": "Functies"
+        },
+        "ai_what_is_machine_learning_/csd/2022": {
+          "type": "Video"
+        },
+        "seeing_ai/csd/2022": {
+          "name": "AI zien",
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2022": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab_1/csd/2022": {
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2022": {
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2022": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2022": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2022": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
+          "type": "Video"
+        },
+        "creating_a_survey_in_google_forms/csd/2022": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2022": {
+          "type": "Video"
+        },
+        "curriculum_guide/coursea/2022": {
           "name": "Curriculum gids"
         },
-        "lesson_plans/courseb/2020": {
-          "name": "Les plan"
+        "implementation_guide/coursea/2022": {
+          "name": "Implementatiehandleiding"
         },
-        "teacher_forum/courseb/2020": {
+        "teacher_forum/coursea/2022": {
           "name": "Lerarenforum"
         },
-        "vocabulary/courseb/2020": {
-          "name": "Woordenschat"
+        "virtual_lesson_modifications/coursea/2022": {
+          "name": "Wijzigingen virtuele les"
         },
-        "curriculum_guide/coursed/2020": {
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "Video"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Programmeren in Tweetallen"
+        },
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "Video"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Vrolijke Routes"
+        },
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "Video"
+        },
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "Video"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "Video"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "De grote gebeurtenis"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "De grote gebeurtenis",
+          "type": "Beoordeling"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "De grote gebeurtenis"
+        },
+        "curriculum_guide/courseb/2022": {
           "name": "Curriculum gids"
         },
-        "lesson_plans/coursed/2020": {
-          "name": "Les plan"
+        "implementation_guide/courseb/2022": {
+          "name": "Implementatiehandleiding"
         },
-        "teacher_forum/coursed/2020": {
+        "teacher_forum/courseb/2022": {
           "name": "Lerarenforum"
         },
-        "vocabulary/coursed/2020": {
-          "name": "Woordenschat"
+        "virtual_lesson_modifications/courseb/2022": {
+          "name": "Wijzigingen virtuele les"
         },
-        "curriculum_guide/coursec/2020": {
+        "move_it_move_it/courseb/2022": {
+          "name": "verplaats het, verplaats het"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "verplaats het, verplaats het"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "verplaats het, verplaats het"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Beweeg, Beweeg"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Programmeren in Tweetallen"
+        },
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "Video"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie en het Grote Project"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Onbekende bugs",
+          "type": "Video"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Rondjes lopen"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Rondjes lopen"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Rondjes lopen",
+          "type": "Beoordeling"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Rondjes lopen"
+        },
+        "pause_and_think_online/courseb/2022": {
+          "type": "Video"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "De grote gebeurtenis"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "De grote gebeurtenis",
+          "type": "Beoordeling"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "De grote gebeurtenis"
+        },
+        "curriculum_guide/coursec/2022": {
           "name": "Curriculum gids"
         },
-        "lesson_plans/coursec/2020": {
-          "name": "Les plan"
+        "implementation_guide/coursec/2022": {
+          "name": "Implementatiehandleiding"
         },
-        "teacher_forum/coursec/2020": {
+        "teacher_forum/coursec/2022": {
           "name": "Lerarenforum"
         },
-        "vocabulary/coursec/2020": {
-          "name": "Woordenschat"
+        "virtual_lesson_modifications/coursec/2022": {
+          "name": "Wijzigingen virtuele les"
         },
-        "curriculum_guide/coursee/2020": {
+        "my_robotic_friends/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "My Robotic Friends"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Programmeren in Tweetallen",
+          "type": "Video"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "De grote gebeurtenis"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "De grote gebeurtenis",
+          "type": "Beoordeling"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "De grote gebeurtenis"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "Video"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binaire armbanden"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binaire armbanden"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binaire armbanden"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binaire armbanden",
+          "type": "Beoordeling"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binaire armbanden"
+        },
+        "curriculum_guide/coursed/2022": {
           "name": "Curriculum gids"
         },
-        "lesson_plans/coursee/2020": {
-          "name": "Les plan"
+        "implementation_guide/coursed/2022": {
+          "name": "Implementatiehandleiding"
         },
-        "teacher_forum/coursee/2020": {
+        "teacher_forum/coursed/2022": {
           "name": "Lerarenforum"
         },
-        "vocabulary/coursee/2020": {
-          "name": "Woordenschat"
+        "virtual_lesson_modifications/coursed/2022": {
+          "name": "Wijzigingen virtuele les"
         },
-        "curriculum_guide/coursea/2020": {
+        "graph_paper_programming/coursed/2022": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Programmeren op Ruitjespapier",
+          "type": "Beoordeling"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Programmeren in Tweetallen"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Estafette Programmeren"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Estafette Programmeren"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Estafette Programmeren"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Estafette Programmeren"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Estafette Programmeren"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Estafette Programmeren"
+        },
+        "pause_and_think_online/coursed/2022": {
+          "type": "Video"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Statements met Kaarten"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Statements met Kaarten"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Statements met Kaarten",
+          "type": "Beoordeling"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Statements met Kaarten"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Statements met Kaarten"
+        },
+        "curriculum_guide/coursee/2022": {
           "name": "Curriculum gids"
         },
-        "lesson_plans/coursea/2020": {
-          "name": "Les plan"
+        "implementation_guide/coursee/2022": {
+          "name": "Implementatiehandleiding"
         },
-        "teacher_forum/coursea/2020": {
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Documentatie van Sprite Lab"
+        },
+        "teacher_forum/coursee/2022": {
           "name": "Lerarenforum"
         },
-        "vocabulary/coursea/2020": {
-          "name": "Woordenschat"
+        "virtual_lesson_modifications/coursee/2022": {
+          "name": "Wijzigingen virtuele les"
         },
-        "curriculum_guide/coursef/2020": {
+        "pause_and_think_online/coursee/2022": {
+          "type": "Video"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "type": "Beoordeling"
+        },
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "Video"
+        },
+        "curriculum_guide/coursef/2022": {
           "name": "Curriculum gids"
         },
-        "lesson_plans/coursef/2020": {
-          "name": "Les plan"
+        "implementation_guide/coursef/2022": {
+          "name": "Implementatiehandleiding"
         },
-        "teacher_forum/coursef/2020": {
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Documentatie van Sprite Lab"
+        },
+        "teacher_forum/coursef/2022": {
           "name": "Lerarenforum"
         },
-        "vocabulary/coursef/2020": {
-          "name": "Woordenschat"
+        "virtual_lesson_modifications/coursef/2022": {
+          "name": "Wijzigingen virtuele les"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "Video"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_impact_on_society/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "Video"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet",
+          "type": "Beoordeling"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Het Internet"
+        },
+        "teacher_forum/express/2022": {
+          "name": "Lerarenforum"
+        },
+        "pair_programming/express/2022": {
+          "name": "Programmeren in Tweetallen",
+          "type": "Video"
+        },
+        "artist_introduction/express/2022": {
+          "type": "Video"
+        },
+        "turns_angles/express/2022": {
+          "type": "Video"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Documentatie van Sprite Lab"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "Video"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "Video"
+        },
+        "variables/express/2022": {
+          "name": "Variabelen"
+        },
+        "teacher_forum/pre-express/2022": {
+          "name": "Lerarenforum"
+        },
+        "20_20_20_rule/pre-express/2022": {
+          "type": "Video"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Programmeren in Tweetallen"
+        },
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "Video"
+        },
+        "pause_and_think_online/pre-express/2022": {
+          "type": "Video"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "Video"
+        },
+        "ai-ml/oceans/unversioned": {
+          "type": "Video"
+        },
+        "ai-societal/oceans/unversioned": {
+          "type": "Video"
+        },
+        "ai-training/oceans/unversioned": {
+          "type": "Video"
+        },
+        "list_of_poems/poem-art/2021": {
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
+        "poem_art_celebration/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "name": "Dichtkunst 1 - Inleiding",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "Video"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "Video"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "Lijst van gedichten",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
+          "type": ""
         }
       }
     }

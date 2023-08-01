@@ -5,7 +5,6 @@
   "jigsaw": "Jigsaw",
   "algebra": "Computer Science in Algebra",
   "artist": "Artist",
-  "basketball": "Choose your team and make a basketball game",
   "course1": "Course 1",
   "course2": "Course 2",
   "course3": "Course 3",
@@ -20,7 +19,7 @@
   "minecraft": "Minecraft Hour of Code Designer",
   "oceans": "महासागरका लागि A.I",
   "playlab": "Play Lab",
-  "sports": "Code your own sports game",
+  "starwars": "Star Wars: Building a Galaxy With Code (JavaScript)",
   "step": "step",
   "soccer": "प्राप्तांक"
 }
