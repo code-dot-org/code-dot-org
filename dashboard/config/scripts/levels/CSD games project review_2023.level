@@ -32,7 +32,7 @@
     "lock_zero_param_functions": "false",
     "free_play": "false",
     "text_mode_at_start": "false",
-    "submittable": "false",
+    "submittable": "true",
     "hide_view_data_button": "false",
     "show_debug_watch": "true",
     "debugger_disabled": "true",
@@ -72,7 +72,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:27.716+00:00\",\"changed\":[\"cloned from \\\"CSD games project review_2022\\\"\"],\"cloned_from\":\"CSD games project review_2022\"},{\"changed_at\":\"2023-03-09 17:56:12 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 18:09:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:27.716+00:00\",\"changed\":[\"cloned from \\\"CSD games project review_2022\\\"\"],\"cloned_from\":\"CSD games project review_2022\"},{\"changed_at\":\"2023-03-09 17:56:12 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 18:09:09 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-31 21:57:04 +0000\",\"changed\":[\"submittable\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
