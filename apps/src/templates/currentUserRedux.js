@@ -9,6 +9,7 @@ const SET_HAS_SEEN_STANDARDS_REPORT =
   'currentUser/SET_HAS_SEEN_STANDARDS_REPORT';
 const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
 const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
+const SET_SORT_BY_FAMILY_NAME = 'currentUser/SET_SORT_BY_FAMILY_NAME';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -45,6 +46,10 @@ export const setMuteMusic = isBackgroundMusicMuted => ({
   type: SET_MUTE_MUSIC,
   isBackgroundMusicMuted,
 });
+export const setSortByFamilyName = isSortedByFamilyName => ({
+  type: SET_SORT_BY_FAMILY_NAME,
+  isSortedByFamilyName,
+});
 
 const initialState = {
   userId: null,
@@ -54,6 +59,7 @@ const initialState = {
   signInState: SignInState.Unknown,
   hasSeenStandardsReportInfo: false,
   isBackgroundMusicMuted: false,
+  isSortedByFamilyName: false,
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true,
 };
@@ -96,6 +102,12 @@ export default function currentUser(state = initialState, action) {
     return {
       ...state,
       isBackgroundMusicMuted: action.isBackgroundMusicMuted,
+    };
+  }
+  if (action.type === SET_SORT_BY_FAMILY_NAME) {
+    return {
+      ...state,
+      isSortedByFamilyName: action.isSortedByFamilyName,
     };
   }
   if (action.type === SET_INITIAL_DATA) {

@@ -1,0 +1,13 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2023-07-31T21:20:20.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-07-31T21:20:20.654+00:00\",\"changed\":[\"cloned from \\\"AI Chat Test Level\\\"\"],\"cloned_from\":\"AI Chat Test Level\"}]"
+}]]></config>
+</Aichat>

@@ -1499,6 +1499,7 @@
   header_stats: "الإحصائيات"
   header_help_us: "ساعدنا"
   header_about: "نبذة"
+  header_incubator: "حاضنة"
   header_teacher_community: "مجتمع المدرسين"
   header_help_support: 'المساعدة والدعم '
   header_report_bug: "أبلغ عن وجود خلل"
@@ -1613,7 +1614,7 @@
   hoc2018_mc_download_adventurer: "حمل مغامرة ماينكرافت نسخة عدم الاتصال بالانترنت."
   hoc2018_mc_educators: "للمعلمين"
   hoc2018_mc_educators_box1_title: "قم بالبرمجة باستخدام ماينكرافت"
-  hoc2018_mc_educators_box1_desc: 'ماينكرافت: النسخة التعليمية تقدم منهج دراسي بمحاذاة المعايير، التدريب والبرمجة في ماينكرافت.'
+  hoc2018_mc_educators_box1_desc: "ماينكرافت: النسخة التعليمية تقدم منهج دراسي بمحاذاة المعايير، التدريب والبرمجة في ماينكرافت."
   hoc2018_mc_educators_box1_button: "قم بالبدء"
   hoc2018_mc_educators_box2_title: "تحميل الدليل الميسّر"
   hoc2018_mc_educators_box2_desc: "ستساعدك الأدوات هذه في استضافة ساعة برمجة وانخراط طلابك في علم الحاسوب."
@@ -1719,7 +1720,7 @@
   hoc2018_mc_with_microsoft: "بالشراكة مع"
   hoc2018_mc_thank_microsoft: "نشكر مايكروسوفت على دعم رؤيتنا ورسالتنا لتأمين فرصة تعلم علم الحاسوب والمهارات لكل طفل لتحقيق النجاح في القرن 21."
   hoc2019_mc_mee_title: "Minecraft AI for Good"
-  hoc2019_mc_mee_description1: 'برنامج تعليم ساعة برمجة الجديد من ماينكرافت متوفر الآن في ماينكرافت: النسخة التعليمية للنوافذ، ماك واللوح الإلكتروني. تعلم المبادئ الأساسية للبرمجة واستكشاف AI مع طلابك!'
+  hoc2019_mc_mee_description1: "برنامج تعليم ساعة برمجة الجديد من ماينكرافت متوفر الآن في ماينكرافت: النسخة التعليمية للنوافذ، ماك واللوح الإلكتروني. تعلم المبادئ الأساسية للبرمجة واستكشاف AI مع طلابك!"
   hoc2019_mc_mee_description2: "استفد من المصادر المجانية بما فيها خطة الدرس، أفلام فيديو، منهج علم الحاسوب، وتدريبات المدرسين."
   hoc2019_mc_more_coding_resources: "المزيد من مصادر البرمجة"
   hoc2019_dance_previous_versions: "هل تبحث عن النسخ السابقة للحفلة الراقصة؟ انقر هنا لبدء [القسم 1](%{dance_2018_link}) و [القسم 2](%{dance_extras_2018_link}) من السنة السابقة."
@@ -1732,18 +1733,18 @@
   page_not_available_description: "نأسف لأن الصفحة التي طلبتها لم تعد متاحة على هذا العنوان. إذا كنت لا تزال بحاجة إلى الوصول، يرجى إرسال بريد إلكتروني [support@code.org] (%{support_email_link})."
   page_not_available_button: "ارجع إلى صفحتنا الرئيسية"
   hoc2020_mc_available_code_org: "متوفر على Code.org"
-  hoc2020_mc_available_mee: 'متوفر في Minecraft: إصدار التعليم'
+  hoc2020_mc_available_mee: "متوفر في Minecraft: إصدار التعليم"
   hoc2020_mc_mee_title: "حكاية ماين كرافت لقريتين"
-  hoc2020_mc_mee_description: 'برنامج Minecraft Hour of Code التعليمي الجديد متاح الآن في Minecraft: Education Edition لنظام التشغيل Windows و Mac و Chromebook و iPad. تعلم أساسيات الترميز واستكشف التنوع والشمول مع طلابك! الوصول إلى الموارد المجانية بما في ذلك خطة الدرس ومقاطع الفيديو ومناهج علوم الكمبيوتر ودروس الإنصاف وتدريبات المعلمين.'
+  hoc2020_mc_mee_description: "برنامج Minecraft Hour of Code التعليمي الجديد متاح الآن في Minecraft: Education Edition لنظام التشغيل Windows و Mac و Chromebook و iPad. تعلم أساسيات الترميز واستكشف التنوع والشمول مع طلابك! الوصول إلى الموارد المجانية بما في ذلك خطة الدرس ومقاطع الفيديو ومناهج علوم الكمبيوتر ودروس الإنصاف وتدريبات المعلمين."
   hoc2021_mc_mee_title: "ماين كرافت تايم كرافت"
-  hoc2021_mc_mee_description: 'سافر مرة أخرى في الوقت المناسب وتعلم التعليمات البرمجية! برنامج Minecraft Hour of Code التعليمي الجديد متاح الآن في Minecraft: Education Edition لنظام التشغيل Windows و Mac و Chromebook و iPad. ابدأ بموارد المعلمين المجانية والدورات التدريبية ومقاطع الفيديو.'
+  hoc2021_mc_mee_description: "سافر مرة أخرى في الوقت المناسب وتعلم التعليمات البرمجية! برنامج Minecraft Hour of Code التعليمي الجديد متاح الآن في Minecraft: Education Edition لنظام التشغيل Windows و Mac و Chromebook و iPad. ابدأ بموارد المعلمين المجانية والدورات التدريبية ومقاطع الفيديو."
   hoc2021_mc_mee_villages_title: "حكاية قريتين"
-  hoc2021_mc_mee_villages_description: 'تعلم أساسيات الترميز واستكشف التنوع والشمول مع طلابك في Minecraft: Education Edition.'
+  hoc2021_mc_mee_villages_description: "تعلم أساسيات الترميز واستكشف التنوع والشمول مع طلابك في Minecraft: Education Edition."
   hoc2021_mc_mee_ai_title: "منظمة العفو الدولية للخير"
-  hoc2021_mc_mee_ai_description: 'استكشف الذكاء الاصطناعي مع طلابك وتعلم البرمجة في Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_description: "استكشف الذكاء الاصطناعي مع طلابك وتعلم البرمجة في Minecraft: Education Edition."
   hoc2022_mc_mee_title: "لعبة Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'اهرب من القصر الغامض قبل الفجر واكسب مليون جوهرة زمرد! برنامج ماينكرافت الجديد من "ساعة من البرمجة" متاح الآن في ماينكرافت: الإصدار التعليمي لأنظمة التشغيل Windows وMac وChromebook وiPad والهواتف المحمولة. ابدأ باستخدام مصادر المعلم المجانية والدورات التدريبية ومقاطع الفيديو.'
-  hoc2022_mc_mee_timecraft_description: 'سافر عبر الزمن لإنقاذ المستقبل في درس البرمجة المجاني هذا في ماينكرافت: الإصدار التعليمي.'
+  hoc2022_mc_mee_timecraft_description: "سافر عبر الزمن لإنقاذ المستقبل في درس البرمجة المجاني هذا في ماينكرافت: الإصدار التعليمي."
   footer_powered_by_aws: "تُعد Amazon Web Services وشعار \"Powered by AWS\" علامتين تجاريتين لشركة Amazon.com، Inc. أو الشركات التابعة لها في الولايات المتحدة و / أو البلدان الأخرى."
   footer_built_on_github: "بنيت على GitHub من مايكروسوفت"
   codebytes_skinny_banner_title: "انضم إلينا 7-11 ديسمبر للحصول على دروس CodeBytes المصغرة الحية!"
@@ -1792,7 +1793,7 @@
   ai_zooniverse: "زونيفيرس - سناب شوت ماونتن زيبرا"
   ai_zooniverse_description: "ساعد في حماية حمار وحشي كيب ماونتن المهددة بالانقراض من خلال تحديد الحيوانات المختلفة في الصور."
   ai_audience: "الجمهور"
-  ai_minecraft_description: 'الوصول إلى الموارد المجانية بما في ذلك خطة الدرس ومقاطع الفيديو ومناهج علوم الكمبيوتر وتدريبات المعلمين. (يتطلب ماين كرافت: إصدار التعليم)'
+  ai_minecraft_description: "الوصول إلى الموارد المجانية بما في ذلك خطة الدرس ومقاطع الفيديو ومناهج علوم الكمبيوتر وتدريبات المعلمين. (يتطلب ماين كرافت: إصدار التعليم)"
   ai_k_12_audience: "K-12 (القراءة مطلوبة)"
   ai_microsoft_workshop: "ورش عمل افتراضية مجانية من Microsoft"
   ai_microsoft_workshop_description: "أشعل الفضول مع ورش عمل STEM والترميز المجانية."

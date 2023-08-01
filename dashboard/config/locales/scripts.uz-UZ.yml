@@ -5228,6 +5228,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5509,9 +5511,6 @@ uz:
               display_name: Hodisalar
             lessonGroup-7:
               display_name: End of Course Project
-          student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini
-            o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni
-            yarating.
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Yosh: 8-12'
           lesson_groups:
@@ -5533,9 +5532,11 @@ uz:
               display_name: Sikllar
             lessonGroup-5:
               display_name: Kompyuterlar ta'siri
-          student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini
-            o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni
-            yarating.
+            lessonGroup-6:
+              display_name: Maʼlumotlar
+          lessons:
+            lesson-1:
+              name: Maʼlumotlar
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5548,10 +5549,6 @@ uz:
               display_name: Hodisalar
             lessonGroup-6:
               display_name: Maʼlumotlar
-          student_description: Create programs with sequencing, loops, and events.
-            Translate your initials into binary, investigate different problem-solving
-            techniques, and learn how to respond to cyberbullying. At the end of the
-            course, create your very own game or story you can share!
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'Yosh: 7-11'
           description_short: Learn about conditional statements. Create your own art,
