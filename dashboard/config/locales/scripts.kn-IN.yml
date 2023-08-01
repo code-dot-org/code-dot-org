@@ -1515,6 +1515,11 @@ kn:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             lessonGroup-4:
               display_name: ಲೂಪ್‌ಗಳು
+            lessonGroup-6:
+              display_name: ಡೇಟಾ
+          lessons:
+            lesson-1:
+              name: ಡೇಟಾ
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:

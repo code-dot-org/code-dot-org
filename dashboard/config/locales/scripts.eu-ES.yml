@@ -1110,6 +1110,11 @@ eu:
               display_name: Hiritartasun digitala
             lessonGroup-4:
               display_name: Itzuliak
+            lessonGroup-6:
+              display_name: Datu
+          lessons:
+            lesson-1:
+              name: Datu
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:

@@ -1256,6 +1256,7 @@ es-MX:
   header_help_support: 'Ayuda y soporte '
   header_help_us: Ayúdanos
   header_home: Inicio
+  header_incubator: Incubadora
   header_learn: Aprender
   header_legal: Privacidad y Legalidad
   header_legal_privacy: Política de privacidad
@@ -1571,8 +1572,8 @@ es-MX:
   hoc_overview_dance_title: Fiesta de baile
   hoc_overview_hello_world_2022_alt_text: Astronauta animado y animalitos flotando
     alrededor de una ilustración de la tierra
-  hoc_overview_hello_world_2022_subtitle: Elige entre cuatro temas divertidos para
-    codificar personajes interactivos en un mundo creado por ti.
+  hoc_overview_hello_world_2022_subtitle: Elige entre seis temas divertidos para programar
+    personajes interactivos en un mundo creado por ti.
   hoc_overview_more_resources: Para obtener más recursos sobre cómo participar en
     tu aula a distancia, consulta nuestra guía para organizar una [Hora del Código
     virtual](https://hourofcode.com/us/how-to/virtual). Para los alumnos con tecnología

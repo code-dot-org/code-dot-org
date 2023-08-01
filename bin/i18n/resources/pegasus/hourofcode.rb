@@ -43,6 +43,20 @@ module I18n
               I18nScriptUtils.sanitize_header!(header)
               I18nScriptUtils.write_markdown_with_header(content, header, dest)
             end
+
+            FileUtils.mkdir_p(File.dirname(dest))
+            FileUtils.cp(file, dest)
+
+            # YAML headers can include a lot of things we don't want translators to mess
+            # with or worry about; layout, navigation settings, social media tags, etc.
+            # However, they also include things like page titles that we DO want
+            # translators to be able to translate, so we can't ignore them completely.
+            # Instead, here we reduce the headers down to contain only the keys we care
+            # about and then in the out step we reinflate the received headers with the
+            # values from the original source.
+            header, content, _line = Documents.new.helpers.parse_yaml_header(dest)
+            I18nScriptUtils.sanitize_header!(header)
+            I18nScriptUtils.write_markdown_with_header(content, header, dest)
           end
         end
       end

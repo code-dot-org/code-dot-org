@@ -249,10 +249,20 @@ class Homepage
           image_url: action["image_url"],
           text_h1: action["text_h1"],
           text_desc: action["text_desc"],
+          text_desc_02: action["text_desc_02"],
           button_link: action["button_link"],
           studio_button_link: action["studio_button_link"],
           button_text: action["button_text"],
-          img_src: action["img_src"]
+          img_src: action["img_src"],
+          # Used with the `ai-pl-launch-2023` hero banner
+          logo_list_01: action["logo_list_01"],
+          logo_list_02: action["logo_list_02"],
+          logo_list_03: action["logo_list_03"],
+          logo_list_04: action["logo_list_04"],
+          logo_list_01_alt: action["logo_list_01_alt"],
+          logo_list_02_alt: action["logo_list_02_alt"],
+          logo_list_03_alt: action["logo_list_03_alt"],
+          logo_list_04_alt: action["logo_list_04_alt"],
         }
       end
     elsif hoc_mode == "actual-hoc"

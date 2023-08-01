@@ -2,24 +2,6 @@
   "vi-VN": {
     "data": {
       "start_html": {
-        "AllTheThings Applab DesignModeDefault": {
-        },
-        "AppLab Intro 7 - Change Text 2": {
-        },
-        "AppLab Intro 7 - Full Text": {
-        },
-        "AppLab Intro 7 - onEvent intro": {
-        },
-        "AppLab Intro 7 - onEvent twoButtons": {
-        },
-        "AppLab Intro 7 - playSound": {
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-        },
-        "AppLab Intro 7 - thisOrThatPersonalize": {
-        },
-        "AppLab Intro 7 - thisOrThatSetScreen": {
-        },
         "CSD U1 IO Pet Chooser 2_2021": {
           "No": "Không",
           "Yes": "Đồng ý",
@@ -97,10 +79,6 @@
           "7": "7",
           "8": "8",
           "9": "9"
-        },
-        "CSD U1 processing countries_2021": {
-        },
-        "CSD U1 processing countries_2022": {
         },
         "CSD U1 processing fastest_2021": {
           "0": "0",
@@ -291,32 +269,6 @@
           "4": "4",
           "5": "5"
         },
-        "CSD U2 RGB others": {
-        },
-        "CSD U2 RGB others_2018": {
-        },
-        "CSD U2 RGB others_2019": {
-        },
-        "CSD U2 RGB summer": {
-        },
-        "CSD U2 RGB summer_2018": {
-        },
-        "CSD U2 RGB summer_2019": {
-        },
-        "CSD U2 RGB winter": {
-        },
-        "CSD U2 RGB winter_2018": {
-        },
-        "CSD U2 RGB winter_2019": {
-        },
-        "CSD U6 - Accelerometer - A_2222": {
-        },
-        "CSD U6 - Accelerometer - ChalA_2222": {
-        },
-        "CSD U6 - Accelerometer - ChalC_2222": {
-        },
-        "CSD U6 - Accelerometer - PA_2222": {
-        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
         },
@@ -325,16 +277,6 @@
         },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
-        },
-        "CSD U6 - Accelerometer - P_2222": {
-        },
-        "CSD U6 - Accelerometer - SB1_2222": {
-        },
-        "CSD U6 - Accelerometer - SB3_2222": {
-        },
-        "CSD U6 - Board Inputs - A_2222": {
-        },
-        "CSD U6 - Board Inputs - PracA_2222": {
         },
         "CSD U6 - Board Inputs - SB1_2222": {
           "Success!": "Thành công!"
@@ -345,24 +287,8 @@
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "Thành công!"
         },
-        "CSD U6 - Board Inputs - SB4_2222": {
-        },
-        "CSD U6 - Board Outputs - A_2222": {
-        },
-        "CSD U6 - Board Outputs - P2_2222": {
-        },
         "CSD U6 - Board Outputs - P_2222": {
           "Success!": "Thành công!"
-        },
-        "CSD U6 - Board Outputs - PracA_2222": {
-        },
-        "CSD U6 - Board Outputs - PracB_2222": {
-        },
-        "CSD U6 - Board Outputs - PracC_2222": {
-        },
-        "CSD U6 - Board Outputs - PracD_2222": {
-        },
-        "CSD U6 - Board Outputs - PracE_2222": {
         },
         "CSD U6 - Board Outputs - SB1_2222": {
           "Success!": "Thành công!"
@@ -370,17 +296,11 @@
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "Thành công!"
         },
-        "CSD U6 - Board Outputs - SB3_2222": {
-        },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Cá"
         },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "Thành công!"
-        },
-        "CSD U6 - Color LEDs - A_2222": {
-        },
-        "CSD U6 - Color LEDs - CA_2222": {
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "East": "Đông",
@@ -390,14 +310,6 @@
         },
         "CSD U6 - Color LEDs - PracA_2222": {
           "Success!": "Thành công!"
-        },
-        "CSD U6 - Color LEDs - PracB_2222": {
-        },
-        "CSD U6 - Color LEDs - PracC_2222": {
-        },
-        "CSD U6 - Color LEDs - PracD_2222": {
-        },
-        "CSD U6 - Color LEDs - SB1_2222": {
         },
         "CSD U6 - Color LEDs - SB2_2222": {
           "Success!": "Thành công!"
@@ -425,22 +337,14 @@
           "short": "ngắn",
           "slow": "chậm"
         },
-        "CSD U6 - Combine Inputs - ChalA_2222": {
-        },
-        "CSD U6 - Combine Inputs - ChalC_2222": {
-        },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Blue": "Màu xanh da trời",
           "Green": "Màu xanh lá",
           "Red": "Màu đỏ"
         },
-        "CSD U6 - Combine Inputs - P_2222": {
-        },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "trái",
           "right": "phải"
-        },
-        "CSD U6 - Combine Inputs - PracB_2222": {
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "màu xanh dương",
@@ -451,8 +355,6 @@
         "CSD U6 - Combine Inputs - PracD_2222": {
           "Test": "Kiểm tra",
           "quiet": "Yên tĩnh"
-        },
-        "CSD U6 - Combine Inputs - SB1_2222": {
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "long": "dài",
@@ -475,20 +377,8 @@
         "CSD U6 - Functions - P_2222": {
           "0": "0"
         },
-        "CSD U6 - Functions - SB6_2222": {
-        },
         "CSD U6 - Functions - SB7_2222": {
           "0": "0"
-        },
-        "CSD U6 - Functions - SB_2222": {
-        },
-        "CSD U6 - If Variables - A_2222": {
-        },
-        "CSD U6 - If Variables - ChalA_2222": {
-        },
-        "CSD U6 - If Variables - ChalB_2222": {
-        },
-        "CSD U6 - If Variables - ChalC_2222": {
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
@@ -501,14 +391,6 @@
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
-        "CSD U6 - If Variables - SB7_2222": {
-        },
-        "CSD U6 - Music - A_2222": {
-        },
-        "CSD U6 - Music - ChalB_2222": {
-        },
-        "CSD U6 - Music - ChalC_2222": {
-        },
         "CSD U6 - Music - ChalD_2222": {
           "A": "A",
           "B": "B",
@@ -517,8 +399,6 @@
           "E": "Đông",
           "F": "F",
           "G": "G"
-        },
-        "CSD U6 - Music - P_2222": {
         },
         "CSD U6 - Music - Piano_2222": {
           "A": "A",
@@ -539,10 +419,6 @@
           "F": "F",
           "G": "G"
         },
-        "CSD U6 - Music - SB2.1_2022": {
-        },
-        "CSD U6 - Music - SB2.2_2022": {
-        },
         "CSD U6 - Music - SB2.5_2222": {
           "A": "A",
           "B": "B",
@@ -551,8 +427,6 @@
           "E": "Đông",
           "F": "F",
           "G": "G"
-        },
-        "CSD U6 - Music - SB2_2222": {
         },
         "CSD U6 - Music - SB3_2222": {
           "A": "A",
@@ -565,8 +439,6 @@
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Thành công!"
-        },
-        "CSD U6 - Music - SB5_2222": {
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
@@ -594,8 +466,6 @@
         "CSD U6 - Physical Input - SB1_2222": {
           "Success!": "Thành công!"
         },
-        "CSD U6 - Physical Output - A_2222": {
-        },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "Thành công!"
         },
@@ -604,8 +474,6 @@
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "Thành công!"
-        },
-        "CSD U6 - Physical Output - PA_2222": {
         },
         "CSD U6 - Physical Output - PB_2222": {
           "Success!": "Thành công!"
@@ -628,16 +496,10 @@
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Tên:"
         },
-        "CSD U6 - Screen Inputs - ChalA_2222": {
-        },
         "CSD U6 - Screen Inputs - ChalB_2222": {
           "Blue": "Màu xanh da trời",
           "Green": "Màu xanh lá",
           "Red": "Màu đỏ"
-        },
-        "CSD U6 - Screen Inputs - ChalC_2222": {
-        },
-        "CSD U6 - Screen Inputs - ChalD_2222": {
         },
         "CSD U6 - Screen Inputs - P_2222": {
           "Blue": "Màu xanh da trời",
@@ -645,12 +507,6 @@
           "Name:": "Tên:",
           "Red": "Màu đỏ",
           "Save": "Lưu"
-        },
-        "CSD U6 - Screen Inputs - PracA_2222": {
-        },
-        "CSD U6 - Screen Inputs - PracB_2222": {
-        },
-        "CSD U6 - Screen Inputs - PracC_2222": {
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
@@ -666,22 +522,8 @@
           "black": "đen",
           "white": "trắng"
         },
-        "CSD U6 - Screen Inputs - SB3_2222": {
-        },
-        "CSD U6 - Screen Inputs - SB4_2222": {
-        },
-        "CSD U6 - Screen Inputs - SB5_2222": {
-        },
-        "CSD U6 - Screen Outputs - A_2222": {
-        },
-        "CSD U6 - Screen Outputs - ChalA_2222": {
-        },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "?": "?"
-        },
-        "CSD U6 - Screen Outputs - ChalC_2222": {
-        },
-        "CSD U6 - Screen Outputs - ChalD_2222": {
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "tiêu đề"
@@ -698,27 +540,15 @@
           "right": "phải",
           "up": "trên"
         },
-        "CSD U6 - Screen Outputs - PracC_2222": {
-        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "tên"
-        },
-        "CSD U6 - Screen Outputs - SB1_2222": {
         },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
         },
-        "CSD U6 - Sensors - ChalC_2222": {
-        },
-        "CSD U6 - Sensors - PA_2222": {
-        },
-        "CSD U6 - Sensors - PB_2222": {
-        },
         "CSD U6 - Sensors - PC_2222": {
           "off": "tắt",
           "on": "trên"
-        },
-        "CSD U6 - Sensors - PD_2222": {
         },
         "CSD U6 - Sensors - P_2222": {
           "high": "cao",
@@ -740,14 +570,6 @@
         },
         "CSD U6 - Sensors - SB4_2222": {
           "value": "giá trị"
-        },
-        "CSD U6 Catch the Mouse": {
-        },
-        "CSD U6 Catch the Mouse_2018": {
-        },
-        "CSD U6 Catch the Mouse_2019": {
-        },
-        "CSD U6 Catch the Mouse_2021": {
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Bạn đã làm được!"
@@ -937,14 +759,6 @@
           "long": "dài",
           "short": "ngắn"
         },
-        "CSD U6 colorLED on": {
-        },
-        "CSD U6 colorLED on_2018": {
-        },
-        "CSD U6 colorLED on_2019": {
-        },
-        "CSD U6 colorLED on_2021": {
-        },
         "CSD U6 colorLeds intensity": {
           "Medium": "Trung bình"
         },
@@ -957,22 +771,6 @@
         "CSD U6 colorLeds intensity_2021": {
           "Medium": "Trung bình"
         },
-        "CSD U6 directional LEDs roll": {
-        },
-        "CSD U6 directional LEDs roll_2018": {
-        },
-        "CSD U6 directional LEDs roll_2019": {
-        },
-        "CSD U6 directional LEDs roll_2021": {
-        },
-        "CSD U6 emoji race demo": {
-        },
-        "CSD U6 emoji race demo_2018": {
-        },
-        "CSD U6 emoji race demo_2019": {
-        },
-        "CSD U6 emoji race demo_2021": {
-        },
         "CSD U6 emotion machine example": {
           "?": "?"
         },
@@ -984,46 +782,6 @@
         },
         "CSD U6 emotion machine example_2021": {
           "?": "?"
-        },
-        "CSD U6 for loop button array": {
-        },
-        "CSD U6 for loop button array_2018": {
-        },
-        "CSD U6 for loop button array_2019": {
-        },
-        "CSD U6 for loop button array_2021": {
-        },
-        "CSD U6 for loop click exit": {
-        },
-        "CSD U6 for loop click exit_2018": {
-        },
-        "CSD U6 for loop click exit_2019": {
-        },
-        "CSD U6 for loop click exit_2021": {
-        },
-        "CSD U6 for loop click predict": {
-        },
-        "CSD U6 for loop click predict_2018": {
-        },
-        "CSD U6 for loop click predict_2019": {
-        },
-        "CSD U6 for loop click predict_2021": {
-        },
-        "CSD U6 for loop images": {
-        },
-        "CSD U6 for loop images_2018": {
-        },
-        "CSD U6 for loop images_2019": {
-        },
-        "CSD U6 for loop images_2021": {
-        },
-        "CSD U6 for loop list.length": {
-        },
-        "CSD U6 for loop list.length_2018": {
-        },
-        "CSD U6 for loop list.length_2019": {
-        },
-        "CSD U6 for loop list.length_2021": {
         },
         "CSD U6 frequency": {
           "high": "cao",
@@ -1101,30 +859,6 @@
           "Red": "Màu đỏ",
           "Save": "Lưu"
         },
-        "CSD U6 getProperty board predict": {
-        },
-        "CSD U6 getProperty board predict_2018": {
-        },
-        "CSD U6 getProperty board predict_2019": {
-        },
-        "CSD U6 getProperty board predict_2021": {
-        },
-        "CSD U6 getProperty buzzer": {
-        },
-        "CSD U6 getProperty buzzer_2018": {
-        },
-        "CSD U6 getProperty buzzer_2019": {
-        },
-        "CSD U6 getProperty buzzer_2021": {
-        },
-        "CSD U6 getProperty dropdown": {
-        },
-        "CSD U6 getProperty dropdown_2018": {
-        },
-        "CSD U6 getProperty dropdown_2019": {
-        },
-        "CSD U6 getProperty dropdown_2021": {
-        },
         "CSD U6 getProperty input": {
           "Submit": "Gửi"
         },
@@ -1184,20 +918,6 @@
         "CSD U6 interval_2021": {
           "long": "dài",
           "short": "ngắn"
-        },
-        "CSD U6 investigate orientation": {
-        },
-        "CSD U6 investigate orientation_2018": {
-        },
-        "CSD U6 investigate orientation_2019": {
-        },
-        "CSD U6 investigate orientation_2021": {
-        },
-        "CSD U6 light pattern challenge_2018": {
-        },
-        "CSD U6 light pattern challenge_2019": {
-        },
-        "CSD U6 light pattern challenge_2021": {
         },
         "CSD U6 light show": {
           "off": "tắt",
@@ -1275,30 +995,6 @@
           "low": "thấp",
           "text": "văn bản"
         },
-        "CSD U6 setProperty Text": {
-        },
-        "CSD U6 setProperty Text_2018": {
-        },
-        "CSD U6 setProperty Text_2019": {
-        },
-        "CSD U6 setProperty Text_2021": {
-        },
-        "CSD U6 setProperty hidden": {
-        },
-        "CSD U6 setProperty hidden 2": {
-        },
-        "CSD U6 setProperty hidden 2_2018": {
-        },
-        "CSD U6 setProperty hidden 2_2019": {
-        },
-        "CSD U6 setProperty hidden 2_2021": {
-        },
-        "CSD U6 setProperty hidden_2018": {
-        },
-        "CSD U6 setProperty hidden_2019": {
-        },
-        "CSD U6 setProperty hidden_2021": {
-        },
         "CSD U6 setProperty predict app": {
           "title": "tiêu đề"
         },
@@ -1327,14 +1023,6 @@
           "long": "dài",
           "short": "ngắn"
         },
-        "CSD U6 stillness game predict code": {
-        },
-        "CSD U6 stillness game predict code_2018": {
-        },
-        "CSD U6 stillness game predict code_2019": {
-        },
-        "CSD U6 stillness game predict code_2021": {
-        },
         "CSD U6 test LED": {
           "Success!": "Thành công!"
         },
@@ -1346,18 +1034,6 @@
         },
         "CSD U6 test LED_2021": {
           "Success!": "Thành công!"
-        },
-        "CSD U6 tugowar demo": {
-        },
-        "CSD U6 tugowar demo_2018": {
-        },
-        "CSD U6 tugowar demo_2019": {
-        },
-        "CSD U6 tugowar demo_2021": {
-        },
-        "CSDU4 - Design Mode - 17": {
-        },
-        "CSDU4 - Design Mode - 18": {
         },
         "CSDU4 Connecting Screens": {
           "Blue": "Màu xanh da trời",
@@ -1475,30 +1151,12 @@
           "When?": "Khi nào?",
           "Why?": "Tại sao?"
         },
-        "CSDU6 - UI and Inputs - get set with text input": {
-        },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
           "=": "="
         },
-        "CSDU6 - UI and Inputs - getNumber practice": {
-        },
-        "CSDU6 - UI and Inputs - setProperty": {
-        },
-        "CSDU6 - UI and Inputs - setProperty first level": {
-        },
         "CSDU6 - UI and Inputs - setScreen": {
           "Back": "Trở lại"
-        },
-        "CSDU6 - UI and Inputs - setText": {
-        },
-        "CSDU6 - toggleswitch state setProp": {
-        },
-        "CSDU6 - toggleswitch state setProp_2018": {
-        },
-        "CSDU6 - toggleswitch state setProp_2019": {
-        },
-        "CSDU6 - toggleswitch state setProp_2021": {
         },
         "CSDU6 Circuit Playground Test": {
           "Success!": "Thành công!"
@@ -1514,14 +1172,6 @@
         },
         "CSDU6 Circuit Playground Test_2222": {
           "Success!": "Thành công!"
-        },
-        "CSDU6 array select days": {
-        },
-        "CSDU6 array select days_2018": {
-        },
-        "CSDU6 array select days_2019": {
-        },
-        "CSDU6 array select days_2021": {
         },
         "CSDU6 circuit playground piano": {
           "A": "A",
@@ -1595,34 +1245,8 @@
           "F": "F",
           "G": "G"
         },
-        "Escape Room Example": {
-        },
-        "Final Room Escape App": {
-        },
-        "Room Escape Workshop - 1": {
-        },
-        "Room Escape Workshop - 10": {
-        },
-        "Room Escape Workshop - 10 - 2": {
-        },
-        "Room Escape Workshop - 3": {
-        },
-        "Room Escape Workshop - 3-2": {
-        },
-        "Room Escape Workshop - 4": {
-        },
-        "Room Escape Workshop - 5": {
-        },
-        "Room Escape Workshop - 7": {
-        },
-        "Room Escape Workshop - 8": {
-        },
-        "Room Escape Workshop - 9-2": {
-        },
         "allthethings design mode elements": {
           "text": "văn bản"
-        },
-        "allthethings_moviebot": {
         },
         "csa widget test2": {
           "8": "8"
@@ -1638,10 +1262,6 @@
         },
         "csd u5 recommender sample_2022": {
           "Start": "Bắt đầu"
-        },
-        "csd-apps for good-1": {
-        },
-        "csd-apps for good-1_2022": {
         },
         "csd-apps for good-2": {
           "Home": "Trang chủ",
@@ -1662,10 +1282,6 @@
           "2": "2",
           "3": "3",
           "4": "4"
-        },
-        "csd-explore ui-1": {
-        },
-        "csd-explore ui-1_2022": {
         },
         "csd-explore ui-2": {
           "Home": "Trang chủ",

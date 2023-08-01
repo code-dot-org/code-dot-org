@@ -2,8 +2,6 @@
   "de-DE": {
     "data": {
       "dynamic_instructions": {
-        "allthethings AI Lab 1": {
-        },
         "ml-bad data-club investigations": {
           "modelSummary": " ",
           "saveModel": " ",
@@ -59,14 +57,6 @@
           "selectedDataset": " ",
           "selectedFeatureNumerical": " ",
           "uploadedDataset": " "
-        },
-        "ml-final project-ai lab-2021": {
-        },
-        "ml-final project-ai lab_2022": {
-        },
-        "ml-good data-upload csv": {
-        },
-        "ml-good data-upload csv_2022": {
         },
         "ml-good data-upload isaac csv": {
           "modelSummary": " ",
