@@ -12293,8 +12293,8 @@ en:
           title: Software Engineering & Computer Vision
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: This two-chapter post-AP CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program. Students will gain practical knowledge, learn industry-standard practices, and cultivate critical thinking through discussions and problem-solving centered around AI tools and models. These lessons aim not only to bolster their understanding of AI and its applications but also foster creativity and collaboration, equipping students with the set of skills and the beginning of a software development portfolio they can take with them beyond high school.
+          student_description: This two-part module lets you explore pro-level tools like GitHub and GitHub Copilot and teaches you how to create your own computer vision program. You'll be solving real-world AI problems and tinkering with cutting-edge models, learning industry-standard practices along the way. This isn't just about understanding AI better - it's about sparking your creativity, improving your teamwork skills, and starting to build your own software development portfolio.
         csa-frq-practice:
           lessons:
             lesson-1:
@@ -12601,7 +12601,9 @@ en:
             '
           student_description: ''
         nevada-standards-aligned-first-grade-2023:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Data
           lesson_groups:
             lessonGroup-2:
               display_name: Digital Citizenship
@@ -12615,6 +12617,8 @@ en:
               display_name: Events
             lessonGroup-7:
               display_name: End of Course Project
+            lessonGroup-8:
+              display_name: Data
           name: nevada-standards-aligned-first-grade-2023
           title: Nevada Standards Aligned First Grade Course
           description_audience: 'Ages: 5-8'
@@ -12622,7 +12626,9 @@ en:
           description: This course for first graders moves students to learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation, critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
           student_description: ''
         nevada-standards-aligned-second-grade-2023:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Computing Systems
           lesson_groups:
             lessonGroup-2:
               display_name: Digital Citizenship
@@ -12636,6 +12642,8 @@ en:
               display_name: Data
             lessonGroup-7:
               display_name: End of Group Project
+            lessonGroup-8:
+              display_name: Computing Systems
           name: nevada-standards-aligned-second-grade-2023
           title: Nevada Standards Aligned Second Grade Course
           description_audience: ''
@@ -12797,4 +12805,13 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        how-ai-works-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: how-ai-works-2023
+          title: How AI Works
+          description_audience: ''
+          description_short: ''
+          description: These lessons supplement the [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video series. Each lesson is paired with a single video from the series, diving-deeper into the concepts introduced in the videos. Lessons focus on creating an exciting first experience for students, where students engage in an activity or simulation and then reflect on the experience as a way to build understanding around AI and build empathy with those impacted by it. Some lessons focus more on the technology behind AI, while other lessons focus on the societal impacts and ethical considerations of AI.
+          student_description: Learn how AI works by participating in different experiences and watching the [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video series!
 ...
