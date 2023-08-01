@@ -23,7 +23,7 @@ $default-spacing: 2px;
 }
 
 .conversationArea {
-  height: 800px;
+  height: calc(100% - $message-editor-height);
   gap: $default-spacing;
   box-sizing: border-box;
   overflow: scroll;
