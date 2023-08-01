@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-18 20:54:50 UTC",
+    "serialized_at": "2023-07-31 21:34:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5630,6 +5630,18 @@
       }
     },
     {
+      "name": "Lists, Loops, and Traversals",
+      "url": "https://docs.google.com/presentation/d/1E2Zw5ta3nR4MfF49uQyXJwyfLklxAjI4ZVIUcfn3rCA/edit?usp=sharing",
+      "key": "lists_loops_and_traversals",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "lists_loops_and_traversals"
+      }
+    },
+    {
       "name": "Loops Game Board",
       "url": "https://docs.google.com/document/d/1tvAqNjn1ktrzMROtHAxOZDfHHMOn367Fdpnp9sbWghM/view",
       "key": "loops_game_board",
@@ -5846,6 +5858,12 @@
       "seeding_key": {
         "lesson.key": "Lists Explore",
         "resource.key": "introduction_to_lists_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "resource.key": "lists_loops_and_traversals"
       }
     },
     {
@@ -7091,6 +7109,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
