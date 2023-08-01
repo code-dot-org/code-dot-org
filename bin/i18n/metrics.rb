@@ -50,8 +50,8 @@ module I18n
         I18N_METRICS_NAMESPACE,
           {
             metric_name: metric_name,
-            dimensions: addtl_dimensions,
             value: metric_value,
+            dimensions: addtl_dimensions,
             unit: metric_units
           }
       )
