@@ -15,7 +15,7 @@ module I18n
       result = nil
       runtime = Benchmark.realtime {result = yield}
       log_metric(
-        :RuntimeTest,
+        :Runtime,
         runtime,
         [{name: "SyncComp", value: sync_comp}, {name: "MethodName", value: method_name}],
         'Seconds'

@@ -1,6 +1,7 @@
 require_relative '../test_helper'
 require_relative '../../i18n/metrics'
 require 'cdo/aws/metrics'
+require 'benchmark'
 
 class I18nMetricsTest < Minitest::Test
   def setup
@@ -13,7 +14,7 @@ class I18nMetricsTest < Minitest::Test
   end
 
   def test_report_runtime
-    expect_metric(:Runtime, 1, [{name: 'MethodName', value: 'method'}, {name: 'SyncComp', value: 'component'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'Seconds')
+    expect_metric(:Runtime, Benchmark.realtime {1}, [{name: 'MethodName', value: 'method'}, {name: 'SyncComp', value: 'component'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'Seconds')
     I18n::Metrics.report_runtime('method', 'component') {1}
   end
 end
