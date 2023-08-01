@@ -155,4 +155,15 @@ class Video < ApplicationRecord
       }
     end
   end
+
+  def self.videos_for_course_offering_editor
+    Video.all.map do |video|
+      {
+        name: video.localized_name,
+        youtube_url: video.youtube_url,
+        thumbnail: video.thumbnail_path,
+        locale: video.locale
+      }
+    end
+  end
 end
