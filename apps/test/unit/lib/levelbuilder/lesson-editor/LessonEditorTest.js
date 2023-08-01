@@ -376,4 +376,14 @@ describe('LessonEditor', () => {
 
     server.restore();
   });
+
+  it('should render "Add Rubric" button when hasRubric prop is false', () => {
+    const wrapper = createWrapper({hasRubric: false});
+    expect(wrapper.find('.btn.add-rubric').text()).to.contain('Add Rubric');
+  });
+
+  it('should render "Edit Rubric" button when hasRubric prop is true', () => {
+    const wrapper = createWrapper({hasRubric: true});
+    expect(wrapper.find('.btn.add-rubric').text()).to.contain('Edit Rubric');
+  });
 });

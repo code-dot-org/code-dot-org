@@ -4,9 +4,16 @@ import {expect} from '../../../../util/reconfiguredChai';
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
 
 describe('RubricsContainerTest', () => {
+  const defaultProps = {
+    levels: [
+      {id: 1, name: 'level 1'},
+      {id: 2, name: 'level 2'},
+      {id: 3, name: 'level 3'},
+    ],
+  };
   it('adds and deletes Learning Goals when add or delete button is clicked', () => {
     // add LearningGoals
-    const wrapper = mount(<RubricsContainer />);
+    const wrapper = mount(<RubricsContainer {...defaultProps} />);
     expect(wrapper.find('.uitest-learning-goal-card').length).to.equal(1);
     const addConceptButton = wrapper
       .find('#ui-test-add-new-concept-button')
