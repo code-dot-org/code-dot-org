@@ -24,13 +24,7 @@ const AichatView: React.FunctionComponent = () => {
             )}
           >
             {demoChatMessages.map(message => (
-              <ChatMessage
-                id={message.id}
-                name={message.name}
-                role={message.role}
-                chatMessageText={message.chatMessageText}
-                status={message.status}
-              />
+              <ChatMessage chatMessage={message} />
             ))}
           </div>
           <div

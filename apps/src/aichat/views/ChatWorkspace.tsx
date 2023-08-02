@@ -19,13 +19,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
           className={moduleStyles.conversationArea}
         >
           {demoChatMessages.map(message => (
-            <ChatMessage
-              id={message.id}
-              name={message.name}
-              role={message.role}
-              chatMessageText={message.chatMessageText}
-              status={message.status}
-            />
+            <ChatMessage chatMessage={message} />
           ))}
         </div>
         <div

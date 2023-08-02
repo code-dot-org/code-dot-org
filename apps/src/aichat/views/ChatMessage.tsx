@@ -2,13 +2,10 @@ import React from 'react';
 import moduleStyles from './chatMessage.module.scss';
 import classNames from 'classnames';
 import aichatI18n from '../locale';
+import {ChatMessage} from '../types';
 
 interface ChatMessageProps {
-  id: string;
-  name: string;
-  role: 'user' | 'assistant' | 'system';
-  chatMessageText: string;
-  status: 'ok' | 'inappropriate' | 'personal';
+  chatMessage: ChatMessage;
 }
 
 const INAPPROPRIATE_MESSAGE = aichatI18n.inappropriateUserMessage();
@@ -75,21 +72,17 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
 };
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
-  id,
-  name,
-  role,
-  chatMessageText,
-  status,
+  chatMessage,
 }) => {
   return (
-    <div id={`ChatMessage id: ${id}`}>
-      {isUser(role) && (
+    <div id={`ChatMessage id: ${chatMessage.id}`}>
+      {isUser(chatMessage.role) && (
         <div className={moduleStyles.userMessageContainer}>
-          {displayUserMessage(status, chatMessageText)}
+          {displayUserMessage(chatMessage.status, chatMessage.chatMessageText)}
         </div>
       )}
 
-      {isAssistant(role) && (
+      {isAssistant(chatMessage.role) && (
         <div className={moduleStyles.assistantMessageContainer}>
           <div
             className={classNames(
@@ -97,9 +90,12 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
               moduleStyles.name
             )}
           >
-            {name} ({role})
+            {chatMessage.name} ({chatMessage.role})
           </div>
-          {displayAssistantMessage(status, chatMessageText)}
+          {displayAssistantMessage(
+            chatMessage.status,
+            chatMessage.chatMessageText
+          )}
         </div>
       )}
     </div>

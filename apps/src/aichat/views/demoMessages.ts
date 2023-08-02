@@ -1,13 +1,13 @@
 // Will delete once we've connected UI to backend.
+import {ChatMessage} from '../types';
+const ASSISTANT = 'assistant';
+const USER = 'user';
+const SYSTEM = 'system';
+const OK = 'ok';
+const PERSONAL = 'personal';
+const INAPPROPRIATE = 'inappropriate';
 
-const ASSISTANT = 'assistant' as const;
-const USER = 'user' as const;
-const SYSTEM = 'system' as const;
-const OK = 'ok' as const;
-const PERSONAL = 'personal' as const;
-const INAPPROPRIATE = 'inappropriate' as const;
-
-const demoChatMessages = [
+const demoChatMessages: ChatMessage[] = [
   {
     id: '1',
     name: 'HistoryBot',
