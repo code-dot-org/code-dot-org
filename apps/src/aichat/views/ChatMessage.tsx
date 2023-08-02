@@ -3,6 +3,7 @@ import moduleStyles from './chatMessage.module.scss';
 import classNames from 'classnames';
 import aichatI18n from '../locale';
 import {ChatMessage} from '../types';
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 
 interface ChatMessageProps {
   chatMessage: ChatMessage;
@@ -84,14 +85,13 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
 
       {isAssistant(chatMessage.role) && (
         <div className={moduleStyles.assistantMessageContainer}>
-          <div
-            className={classNames(
-              moduleStyles.messageHeaderContainer,
-              moduleStyles.name
-            )}
+          <Typography
+            className={moduleStyles.messageHeaderContainer}
+            semanticTag="h5"
+            visualAppearance="heading-xs"
           >
             {chatMessage.name} ({chatMessage.role})
-          </div>
+          </Typography>
           {displayAssistantMessage(
             chatMessage.status,
             chatMessage.chatMessageText

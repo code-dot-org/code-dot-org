@@ -4,6 +4,7 @@ import ChatMessage from './ChatMessage';
 import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
 import aichatI18n from '../locale';
+import classNames from 'classnames';
 
 import {demoChatMessages} from './demoMessages'; // demo chat messages - remove when connected to backend
 
@@ -16,7 +17,10 @@ const ChatWorkspace: React.FunctionComponent = () => {
       >
         <div
           id="chat-workspace-conversation"
-          className={moduleStyles.conversationArea}
+          className={classNames(
+            moduleStyles.chatWorkspace,
+            moduleStyles.conversationArea
+          )}
         >
           {demoChatMessages.map(message => (
             <ChatMessage chatMessage={message} />
@@ -24,7 +28,10 @@ const ChatWorkspace: React.FunctionComponent = () => {
         </div>
         <div
           id="chat-workspace-editor"
-          className={moduleStyles.userChatMessageEditor}
+          className={classNames(
+            moduleStyles.chatWorkspace,
+            moduleStyles.userChatMessageEditor
+          )}
         >
           <UserChatMessageEditor />
         </div>

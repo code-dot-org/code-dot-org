@@ -10,6 +10,7 @@ $default-spacing: 2px;
 
 .conversationArea {
     flex-grow: 1;
+    gap: $default-spacing;
     box-sizing: border-box;
 }
 
