@@ -6,12 +6,16 @@ import {demoChatMessages} from './demoMessages'; // demo chat messages - remove 
 import ChatMessage from './ChatMessage';
 import UserChatMessageEditor from './UserChatMessageEditor';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import aichatI18n from '../locale';
 
 const AichatView: React.FunctionComponent = () => {
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
       <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-        <PanelContainer id="chat-workspace-panel" headerText="AI Chat">
+        <PanelContainer
+          id="chat-workspace-panel"
+          headerText={aichatI18n.aichatWorkspaceHeader()}
+        >
           <div
             id="chat-workspace-conversation"
             className={classNames(
