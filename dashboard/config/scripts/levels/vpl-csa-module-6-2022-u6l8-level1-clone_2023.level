@@ -1,0 +1,26 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-08-01T16:32:43.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String laCity = \"Livingston\";\n    String txCity = \"Holiday Lakes\";\n    String miCity = \"Ubly\";\n    String paCity = \"East York\";\n\n    System.out.println(paCity.compareTo(miCity));\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "name_suffix": "_2023",
+    "long_instructions": "##Investigate and Modify\r\n\r\n<span style=\"color:red\"><strong>Note: This is a copy of U6L8 - Level 1 from the CSA curriculum.</strong></span>\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. What do you notice about what the `compareTo()`(#e7e8ea) method returns? Try swapping the `paCity`(#e7e8ea) and `miCity`(#e7e8ea) then run the program to observe the results.\r\n\r\n2. Add the line `System.out.println(txCity.compareTo(paCity));`(#e7e8ea) then run the program. What do you notice about what is printed?\r\n\r\n3. Try comparing different combinations of `String`(#e7e8ea)s. Run the program after each change to observe the results."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-08-01T16:32:43.473+00:00\",\"changed\":[\"cloned from \\\"vpl-csa-module-6-2022-u6l8-level1-clone\\\"\"],\"cloned_from\":\"vpl-csa-module-6-2022-u6l8-level1-clone\"}]"
+}]]></config>
+</Javalab>
