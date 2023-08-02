@@ -401,7 +401,7 @@ FactoryBot.define do
           child_account_compliance_state_last_updated {DateTime.now}
           child_account_compliance_lock_out {DateTime.now}
           trait :expired do
-            child_account_compliance_lock_out {8.days.ago}
+            child_account_compliance_lock_out {7.days.ago}
           end
         end
       end

@@ -16,7 +16,7 @@ class Queries::ChildAccount
         Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
       ).
       where(
-        "JSON_EXTRACT(properties, '$.child_account_compliance_lock_out') < ?",
+        "CAST(properties->>'$.child_account_compliance_lock_out' AS DATETIME) <= ?",
         expiration_date
       )
   end

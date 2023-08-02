@@ -11,7 +11,8 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     Services::ChildAccount.lock_out(user)
 
     assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, user.child_account_compliance_state
-    assert_not_empty user.child_account_compliance_state_last_updated
+    assert_not_nil user.child_account_compliance_state_last_updated
+    assert_not_nil user.child_account_compliance_lock_out
   end
 
   test 'lock_out given locked_out user does not update state' do
