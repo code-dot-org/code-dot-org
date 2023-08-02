@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-temp",
-    "serialized_at": "2023-07-27 21:48:06 UTC",
+    "serialized_at": "2023-08-01 21:31:25 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2594,7 +2594,7 @@
       "key": "fb24f924-99a8-44ff-9702-6eed190fd78d",
       "position": 2,
       "properties": {
-        "progression_name": "Eliza Widget"
+        "progression_name": "(Optional) Eliza Widget"
       },
       "seeding_key": {
         "activity_section.key": "fb24f924-99a8-44ff-9702-6eed190fd78d",
@@ -3894,7 +3894,7 @@
         "level_keys": [
           "LLM - Eliza"
         ],
-        "progression": "Eliza Widget"
+        "progression": "(Optional) Eliza Widget"
       },
       "bonus": false,
       "seeding_key": {

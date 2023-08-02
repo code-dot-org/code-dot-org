@@ -12812,6 +12812,195 @@ en:
           title: How AI Works
           description_audience: ''
           description_short: ''
-          description: These lessons supplement the [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video series. Each lesson is paired with a single video from the series, diving-deeper into the concepts introduced in the videos. Lessons focus on creating an exciting first experience for students, where students engage in an activity or simulation and then reflect on the experience as a way to build understanding around AI and build empathy with those impacted by it. Some lessons focus more on the technology behind AI, while other lessons focus on the societal impacts and ethical considerations of AI.
+          description: |-
+            These lessons supplement the [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video series. Each lesson is paired with a single video from the series, diving-deeper into the concepts introduced in the videos. Lessons focus on creating an exciting first experience for students, where students engage in an activity or simulation and then reflect on the experience as a way to build understanding around AI and build empathy with those impacted by it. Some lessons focus more on the technology behind AI, while other lessons focus on the societal impacts and ethical considerations of AI.
+
+            **Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers series](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.
+
+            **Implementation Options:** Click one of the options below to expand and view more details.
+
+            ::: details [<span style="font-size: 1em; font-weight: bold;">"I want to teach them all!"</spa>]
+            Lessons 1-7 can be taught as a 7-day sequence, where each day focuses on an individual video from the video series and dives deeper into the concepts introduced. Classrooms that go this direction should hide Lesson 8, which does not fit in this sequence. [Click here to learn more about hiding lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+
+            ::: details [<span style="font-size: 1em; font-weight: bold;">"I want to teach a specific lesson or integrate into another class"</span>]
+            Each lesson can stand on its own and be taught independently from the others. This is especially useful if you would like to integrate a lesson into another subject or an existing computer science, artificial intelligence, or general education class. Classrooms that go this direction should hide all lessons except the one you want to teach. [Click here to learn more about hiding lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+            ::: details [<span style="font-size: 1em; font-weight: bold;">"I Only Have a Day"</span>]
+            Lesson 8 is designed for classrooms that want to introduce AI to students, but only have a day to do so. This lesson provides a notetaker for students as the class watches the entire video sequence. Classrooms that go this direction should hide all lessons except for Lesson 8. [Click here to learn more about hiding lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+            <br />
+            <br />
           student_description: Learn how AI works by participating in different experiences and watching the [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video series!
-...
+        vpl-csa-2023-m2:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m2
+          title: Module 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m3:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m3
+          title: Module 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m4:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m4
+          title: Module 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m5:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m5
+          title: Module 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m6:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m6
+          title: Module 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m7:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m7
+          title: Module 7
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m8:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m8
+          title: Module 8
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-csd-2023-m1:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-csd-2023-m1
+          title: 'Module 1 '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m1:
+          lessons:
+            lesson-2:
+              name: CSD Module 1 Synchronous
+            lesson-3:
+              name: 'Synchronous Session 2: Model Lesson'
+            lesson-4:
+              name: 'Synchronous Session 3: Wrap Up'
+          lesson_groups: {}
+          name: vpl-csd-2023-m1
+          title: Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m2:
+          lessons:
+            lesson-2:
+              name: CSD Module 2 Synchronous
+            lesson-3:
+              name: 'Synchronous Session 5: Review of the Curriculum Investigation'
+            lesson-4:
+              name: 'Synchronous Session 6: Assessment'
+            lesson-5:
+              name: 'Synchronous Session 7: Inclusion Scenarios'
+            lesson-6:
+              name: 'Synchronous Session 8: Wrap Up'
+          lesson_groups: {}
+          name: vpl-csd-2023-m2
+          title: Module 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m3:
+          lessons:
+            lesson-2:
+              name: CSD Module 3 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m3
+          title: Module 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m4:
+          lessons:
+            lesson-2:
+              name: CSD Module 4 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m4
+          title: Module 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m5:
+          lessons:
+            lesson-2:
+              name: CSD Module 5 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m5
+          title: Module 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m6:
+          lessons:
+            lesson-2:
+              name: CSD Module 6 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m6
+          title: Module 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m7:
+          lessons:
+            lesson-2:
+              name: CSD Module 7 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m7
+          title: Module 7
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m8:
+          lessons:
+            lesson-2:
+              name: CSD Module 8 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m8
+          title: Module 8
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
