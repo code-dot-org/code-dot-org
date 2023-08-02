@@ -308,6 +308,7 @@ class Unit < ApplicationRecord
     is_migrated
     seeded_from
     use_legacy_lesson_plans
+    is_deprecated
   )
 
   def self.twenty_hour_unit
