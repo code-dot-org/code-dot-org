@@ -1,6 +1,6 @@
 # don't inject K8S related manifests so skaffold doesn't rebuild/sync
 skaffold.yaml
-k8s/code.org
+k8s
 
 ##########################################################################
 # THESE LARGE STATIC FILES ARE INJECTED USING code.org-static.dockerfile #
