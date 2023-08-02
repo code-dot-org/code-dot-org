@@ -1,0 +1,361 @@
+{
+  "script": {
+    "name": "vpl-csa-2023-m8",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSA Virtual PL",
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2023-08-02 00:14:07 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csa-2023-m8"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+      "name": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "50992229-c900-46b8-bf52-fedc0438bd7e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "50992229-c900-46b8-bf52-fedc0438bd7e",
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "75619ddb-dbd5-49f2-a8a7-6acb57b7e4a2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 8 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "75619ddb-dbd5-49f2-a8a7-6acb57b7e4a2",
+        "lesson_activity.key": "50992229-c900-46b8-bf52-fedc0438bd7e"
+      }
+    },
+    {
+      "key": "860319c5-7fbe-4444-b21f-8e4e11fe35b4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Preparing to support students (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "860319c5-7fbe-4444-b21f-8e4e11fe35b4",
+        "lesson_activity.key": "50992229-c900-46b8-bf52-fedc0438bd7e"
+      }
+    },
+    {
+      "key": "f0aca57e-9c14-4b5a-af02-cf32267b618e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Creating and using a pre-assessment (~45 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f0aca57e-9c14-4b5a-af02-cf32267b618e",
+        "lesson_activity.key": "50992229-c900-46b8-bf52-fedc0438bd7e"
+      }
+    },
+    {
+      "key": "b960ff29-0ae7-4a87-920e-eb01396ea203",
+      "position": 4,
+      "properties": {
+        "progression_name": "Module 8 Wrap-up (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "b960ff29-0ae7-4a87-920e-eb01396ea203",
+        "lesson_activity.key": "50992229-c900-46b8-bf52-fedc0438bd7e"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 8 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-overviews_-f_2023"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8",
+        "activity_section.key": "75619ddb-dbd5-49f2-a8a7-6acb57b7e4a2"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-overviews_-f_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Preparing to support students (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-feelings-reflection_2023"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8",
+        "activity_section.key": "860319c5-7fbe-4444-b21f-8e4e11fe35b4"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-2022-feelings-reflection_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating and using a pre-assessment (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-what-you-expect-reflection_2023"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8",
+        "activity_section.key": "f0aca57e-9c14-4b5a-af02-cf32267b618e"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-2022-what-you-expect-reflection_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating and using a pre-assessment (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-ap-exam-breakdown_-f_2023"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8",
+        "activity_section.key": "f0aca57e-9c14-4b5a-af02-cf32267b618e"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-2022-ap-exam-breakdown_-f_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating and using a pre-assessment (~45 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-administering-reflection_2023"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8",
+        "activity_section.key": "f0aca57e-9c14-4b5a-af02-cf32267b618e"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-2022-administering-reflection_2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 8 Wrap-up (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "vpl-csa-module-8-wrap-up_-f_2023"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8",
+        "activity_section.key": "b960ff29-0ae7-4a87-920e-eb01396ea203"
+      },
+      "level_keys": [
+        "vpl-csa-module-8-wrap-up_-f_2023"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-overviews_-f_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-overviews_-f_2023"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8",
+        "activity_section.key": "75619ddb-dbd5-49f2-a8a7-6acb57b7e4a2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-2022-feelings-reflection_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-feelings-reflection_2023"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8",
+        "activity_section.key": "860319c5-7fbe-4444-b21f-8e4e11fe35b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-2022-what-you-expect-reflection_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-what-you-expect-reflection_2023"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8",
+        "activity_section.key": "f0aca57e-9c14-4b5a-af02-cf32267b618e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-2022-ap-exam-breakdown_-f_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-ap-exam-breakdown_-f_2023"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8",
+        "activity_section.key": "f0aca57e-9c14-4b5a-af02-cf32267b618e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-2022-administering-reflection_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-2022-administering-reflection_2023"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8",
+        "activity_section.key": "f0aca57e-9c14-4b5a-af02-cf32267b618e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "vpl-csa-module-8-wrap-up_-f_2023",
+        "script_level.level_keys": [
+          "vpl-csa-module-8-wrap-up_-f_2023"
+        ],
+        "lesson.key": "Module 8 post-work: Preparing students for the AP CSA Exam ",
+        "lesson_group.key": "",
+        "script.name": "vpl-csa-2023-m8",
+        "activity_section.key": "b960ff29-0ae7-4a87-920e-eb01396ea203"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

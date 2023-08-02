@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-18 20:52:53 UTC",
+    "serialized_at": "2023-08-02 04:22:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4320,10 +4320,200 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "comment",
+      "word": "Comment",
+      "definition": "form of program documentation written into the program to be read by people and which do not affect how a program runs",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "comment"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "development_process",
+      "word": "Development Process",
+      "definition": " the steps or phases used to create a piece of software. Typical phases include investigating, designing, prototyping, and testing.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "development_process"
+      }
+    },
+    {
+      "key": "documentation",
+      "word": "Documentation",
+      "definition": "a written description of how a command or piece of code works or was developed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "documentation"
+      }
+    },
+    {
+      "key": "event_driven_programming",
+      "word": "Event Driven Programming",
+      "definition": "some program statements run when triggered by an event, like a mouse click or a key press",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event_driven_programming"
+      }
+    },
+    {
+      "key": "input",
+      "word": "Input",
+      "definition": "data that are sent to a computer for processing by a program. Can come in a variety of forms, such as tactile interaction, audio, visuals, or text.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "key": "output",
+      "word": "Output",
+      "definition": "any data that are sent from a program to a device. Can come in a variety of forms, such as tactile interaction, audio, visuals, or text.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "output"
+      }
+    },
+    {
+      "key": "pair_programming",
+      "word": "Pair Programming",
+      "definition": "a collaborative programming style in which two programmers switch between the roles of writing code and tracking or planning high level progress",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pair_programming"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "a collection of program statements. Programs run (or “execute”) one command at a time.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "program_statement",
+      "word": "Program Statement",
+      "definition": "a command or instruction. Sometimes also referred to as a code statement.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program_statement"
+      }
+    },
+    {
+      "key": "sequential_programming",
+      "word": "Sequential Programming",
+      "definition": "program statements run in order, from top to bottom",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequential_programming"
+      }
+    },
+    {
+      "key": "user_interface",
+      "word": "User Interface",
+      "definition": "the inputs and outputs that allow a user to interact with a piece of software. User interfaces can include a variety of forms such as buttons, menus, images, text, and graphics.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "user_interface"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "vocabulary.key": "comment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "vocabulary.key": "documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "vocabulary.key": "event_driven_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "vocabulary.key": "program_statement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "vocabulary.key": "sequential_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Apps",
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Apps",
+        "vocabulary.key": "output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Apps",
+        "vocabulary.key": "user_interface"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Designing an App Part 3",
+        "vocabulary.key": "development_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Designing an App Part 3",
+        "vocabulary.key": "pair_programming"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -4993,6 +5183,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
