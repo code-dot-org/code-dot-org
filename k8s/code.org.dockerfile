@@ -206,22 +206,22 @@ RUN \
   true
 
 # Link in large static assets built in a separate dockerfile
-COPY --chown=${USERNAME} --link \
+COPY --link \
   --from=code.org-static / \
   ./
 
 # Link in levels and other db seed data built in a separate dockerfile
-COPY --chown=${USERNAME} --link \
+COPY --link \
   --from=code.org-db-seed  / \
   ./
 
 # Copy in apps/node_modules (built in parallel)
-COPY --chown=${USERNAME} --link \
+COPY --link \
   --from=code.org-node_modules ${SRC}/apps/node_modules \
   ./apps/node_modules
 
 # Copy in ~/.rbenv (built in parallel)
-COPY --chown=${USERNAME} --link \
+COPY --link \
   --from=code.org-rbenv ${HOME}/.rbenv \
   ${HOME}/.rbenv
 
