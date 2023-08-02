@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-07-28T17:41:11.000Z",
   "level_num": "custom",
@@ -22,7 +23,7 @@
     },
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "The counter pattern can be used with strings too.\r\n\r\n# Do This\r\n\r\n* Run the program to see how it runs now. Note a new block: `getText()` on line 14. \r\n* Add code so that each reminder is added to a different line of code. Remember the new line character is `\\n`.\r\n* Add code so that the reminder input is cleared out when you click the Remind! button.\r\n* If you need a refresher on your patterns you can always check \"Help & Tips\".\r\n\r\n<span style=\"color:red\"><i>Note: This is the same level as U4L3 - Level 7 in the CS Principles Curriculum. It is not expected that you as a teacher discuss these with a partner, but rather think through the answers independently.</i></span>",
+    "long_instructions": "The counter pattern can be used with strings too.\r\n\r\n# Do This\r\n\r\n* Run the program to see how it runs now. Note a new block: `getText()`(#e7e8ea) on line 14. \r\n* Add code so that each reminder is added to a different line on the screen. Remember the new line character is `\\n`(#e7e8ea).\r\n* Add code so that the reminder input is cleared out when you click the Remind! button.\r\n* If you need a refresher on your patterns you can always check \"Help & Tips\".\r\n\r\n\r\n\r\n::: details [**Show Me How**]\r\nThe counter pattern with strings with each new string appearing on a new line is shown below: \r\n\r\n![](https://images.code.org/c59f0f831e68274688e7281e51423541-image-1653019079613.png)\r\n\r\nWhen using the counter pattern with strings replace `allStrings`(#e7e8ea) and `newString`(#e7e8ea) with the names of the variables. \r\n\r\n:::\r\n\r\n___\r\n\r\n<span style=\"color:red\"><i>Note: This is the same level as U4L3 - Level 7 in the CS Principles Curriculum. It is not expected that you as a teacher discuss these with a partner, but rather think through the answers independently.</i></span>",
     "submittable": "false",
     "start_blocks": "// Create and assign variables\r\n// Feel free to change the reminder\r\nvar allReminders = \"Feed the cats\";\r\nvar newReminder;\r\n\r\n// Put the first reminder on the screen\r\nsetProperty(\"reminderText\", \"text\", allReminders);\r\n\r\n// When the button is clicked, add the new reminder\r\n// to the screen on a new line. The reminder\r\n// input box should be cleared out for the next\r\n// reminder.\r\nonEvent(\"reminderButton\", \"click\", function() {\r\n  newReminder = getText(\"reminderInput\");\r\n  allReminders = allReminders + newReminder;\r\n  setProperty(\"reminderText\", \"text\", allReminders);\r\n  \r\n  \r\n  \r\n  \r\n  \r\n});\r\n",
     "never_autoplay_video": "false",
@@ -45,7 +46,6 @@
     "watchers_prepopulated": "[\"allReminders\",\"newReminder\"]",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
-    "makerlab_enabled": "false",
     "parent_level_id": 16675,
     "palette_category_at_start": "variables",
     "mini_rubric": "false",
@@ -62,9 +62,8 @@
     "name_suffix": "_2023",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-07-28T17:41:11.044+00:00\",\"changed\":[\"cloned from \\\"CSP - PL8 - U4 L03 Variables operator practice 6_2022\\\"\"],\"cloned_from\":\"CSP - PL8 - U4 L03 Variables operator practice 6_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-07-28T17:41:11.044+00:00\",\"changed\":[\"cloned from \\\"CSP - PL8 - U4 L03 Variables operator practice 6_2022\\\"\"],\"cloned_from\":\"CSP - PL8 - U4 L03 Variables operator practice 6_2022\"},{\"changed_at\":\"2023-08-01 23:43:10 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
