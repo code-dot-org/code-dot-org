@@ -2,5 +2,7 @@
 
 FROM scratch
 
-COPY --link dashboard/config/scripts dashboard/config/scripts
-COPY --link dashboard/config/scripts_json dashboard/config/scripts_json
+ARG UID=1000
+
+COPY --chown=${UID} --link dashboard/config/scripts dashboard/config/scripts
+COPY --chown=${UID} --link dashboard/config/scripts_json dashboard/config/scripts_json
