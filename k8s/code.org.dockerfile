@@ -119,7 +119,7 @@ RUN \
 RUN \
 #   --mount=type=cache,sharing=locked,uid=1000,gid=1000,target=${SRC}/vendor/cache \
   eval "$(rbenv init -)" && \
-  time bundle install && \
+  bundle install --quiet && \
   true
 
 ################################################################################
@@ -202,7 +202,7 @@ RUN \
   #
   # We don't copy in .git (huge), but `bundle exec rake install` references .git in 
   # a couple places, like git hooks, and fails without it, create a blank .git for now
-  git init && \
+  git init --quiet && \
   true
 
 # Link in large static assets built in a separate dockerfile
