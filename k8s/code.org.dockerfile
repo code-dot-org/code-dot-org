@@ -199,17 +199,26 @@ RUN \
   true
 
 # Link in large static assets built in a separate dockerfile
-COPY --from=code.org-static --link / ./
+COPY --chown=${USERNAME} --link \
+  --from=code.org-static / \
+  ./
 
 # Link in levels and other db seed data built in a separate dockerfile
-COPY --from=code.org-db-seed --link / ./
+COPY --chown=${USERNAME} --link \
+  --from=code.org-db-seed  / \
+  ./
 
 # Copy in apps/node_modules (built in parallel)
-COPY --from=code.org-node_modules --link ${SRC}/apps/node_modules ./apps/node_modules
+COPY --chown=${USERNAME} --link \
+  --from=code.org-node_modules ${SRC}/apps/node_modules \
+  ./apps/node_modules
 
 # Copy in ~/.rbenv (built in parallel)
-COPY --from=code.org-rbenv --link ${HOME}/.rbenv ${HOME}/.rbenv
+COPY --chown=${USERNAME} --link \
+  --from=code.org-rbenv ${HOME}/.rbenv \
+  ${HOME}/.rbenv
 
+# Copy in the rest of the source code
 COPY --chown=${USERNAME} --link ./ ./
 
 # These are only required for installing Apple Silicon hack workarounds from code.org-rbenv
