@@ -298,6 +298,9 @@ const customInputTypes = {
         block,
         spriteLabPointers
       );
+      // We set the width to 1 so we don't show a blank space when there is no
+      // image (we can't set a width of 0). We keep the height the same no matter what
+      // because blockly doesn't seem to support us changing the height after initialization.
       const width = imageUrl.length > 0 ? block.thumbnailSize : 1;
       const firstLabel =
         imageUrl.length > 0 ? block.shortString : block.longString;
