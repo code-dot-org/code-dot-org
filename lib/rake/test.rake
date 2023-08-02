@@ -1,5 +1,3 @@
-# coding: utf-8
-
 # Run 'rake' or 'rake -P' to get a list of valid Rake commands.
 
 require 'cdo/chat_client'
