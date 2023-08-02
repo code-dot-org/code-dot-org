@@ -39,7 +39,7 @@ var TEXT_PADDING_Y = 10;
  * @constructor
  * @augments NetSimVizElement
  */
-var NetSimVizNode = (module.exports = function(useBackgroundAnimation) {
+var NetSimVizNode = (module.exports = function (useBackgroundAnimation) {
   NetSimVizElement.call(this);
 
   /**
@@ -134,7 +134,7 @@ NetSimVizNode.inherits(NetSimVizElement);
 /**
  * Flag this viz node as the simulation local node.
  */
-NetSimVizNode.prototype.setIsLocalNode = function() {
+NetSimVizNode.prototype.setIsLocalNode = function () {
   this.isLocalNode = true;
   this.getRoot().addClass('local-node');
 };
@@ -143,18 +143,18 @@ NetSimVizNode.prototype.setIsLocalNode = function() {
  * Change the display name of the viz node
  * @param {string} newName
  */
-NetSimVizNode.prototype.setName = function(newName) {
+NetSimVizNode.prototype.setName = function (newName) {
   this.displayName_.text(newName);
   this.resizeNameBox_();
 };
 
 /** @private */
-NetSimVizNode.prototype.resizeNameBox_ = function() {
+NetSimVizNode.prototype.resizeNameBox_ = function () {
   this.resizeRectToText_(this.nameBox_, this.displayName_);
 };
 
 /** @private */
-NetSimVizNode.prototype.resizeAddressBox_ = function() {
+NetSimVizNode.prototype.resizeAddressBox_ = function () {
   this.resizeRectToText_(this.addressBox_, this.addressText_);
 };
 
@@ -164,7 +164,7 @@ NetSimVizNode.prototype.resizeAddressBox_ = function() {
  * @param {jQuery} text
  * @private
  */
-NetSimVizNode.prototype.resizeRectToText_ = function(rect, text) {
+NetSimVizNode.prototype.resizeRectToText_ = function (rect, text) {
   try {
     var box = text[0].getBBox();
     var width = Math.max(TEXT_MIN_WIDTH, box.width + TEXT_PADDING_X);
@@ -189,7 +189,7 @@ NetSimVizNode.prototype.resizeRectToText_ = function(rect, text) {
  * another node of matching ID being added, and begins its exit animation.
  * @override
  */
-NetSimVizNode.prototype.kill = function() {
+NetSimVizNode.prototype.kill = function () {
   NetSimVizNode.superPrototype.kill.call(this);
   this.stopAllAnimation();
   this.tweenToScale(0, 200, tweens.easeInQuad);
@@ -199,7 +199,7 @@ NetSimVizNode.prototype.kill = function() {
  * Provides drifting animation for nodes in the background.
  * @param {RunLoop.Clock} clock
  */
-NetSimVizNode.prototype.tick = function(clock) {
+NetSimVizNode.prototype.tick = function (clock) {
   NetSimVizNode.superPrototype.tick.call(this, clock);
 
   // Trigger a new drift if we're in the background and the last one finished.
@@ -218,7 +218,7 @@ NetSimVizNode.prototype.tick = function(clock) {
  * When visible, runs every frame
  * @param {RunLoop.Clock} [clock]
  */
-NetSimVizNode.prototype.render = function(clock) {
+NetSimVizNode.prototype.render = function (clock) {
   NetSimVizNode.superPrototype.render.call(this, clock);
 
   // If currently animating, adjust text box sizes to match
@@ -231,7 +231,7 @@ NetSimVizNode.prototype.render = function(clock) {
 /**
  * @param {boolean} isForeground
  */
-NetSimVizNode.prototype.onDepthChange = function(isForeground) {
+NetSimVizNode.prototype.onDepthChange = function (isForeground) {
   NetSimVizNode.superPrototype.onDepthChange.call(this, isForeground);
 
   // Don't add tweens if this node has been killed
@@ -252,7 +252,7 @@ NetSimVizNode.prototype.onDepthChange = function(isForeground) {
 /**
  * @param {string} address
  */
-NetSimVizNode.prototype.setAddress = function(address) {
+NetSimVizNode.prototype.setAddress = function (address) {
   this.address_ = address;
   this.updateAddressDisplay();
 };
@@ -260,7 +260,7 @@ NetSimVizNode.prototype.setAddress = function(address) {
 /**
  * @param {DNSMode} newDnsMode
  */
-NetSimVizNode.prototype.setDnsMode = function(newDnsMode) {
+NetSimVizNode.prototype.setDnsMode = function (newDnsMode) {
   this.dnsMode_ = newDnsMode;
   this.updateAddressDisplay();
 };
@@ -268,12 +268,12 @@ NetSimVizNode.prototype.setDnsMode = function(newDnsMode) {
 /**
  * @param {boolean} isDnsNode
  */
-NetSimVizNode.prototype.setIsDnsNode = function(isDnsNode) {
+NetSimVizNode.prototype.setIsDnsNode = function (isDnsNode) {
   this.isDnsNode = isDnsNode;
   this.updateAddressDisplay();
 };
 
-NetSimVizNode.prototype.updateAddressDisplay = function() {
+NetSimVizNode.prototype.updateAddressDisplay = function () {
   var levelConfig = NetSimGlobals.getLevelConfig();
 
   // If we are never assigned an address, don't try to show one.

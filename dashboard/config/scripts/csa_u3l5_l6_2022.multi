@@ -22,3 +22,5 @@ for (String color : paintColors) {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

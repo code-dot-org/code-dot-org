@@ -12,7 +12,7 @@ class AddUniqueConstraintToPdWorkshopAttendance < ActiveRecord::Migration[4.2]
         duplicate_attendance_values.each do |pd_session_id, teacher_id|
           Pd::Attendance.with_deleted.
             where(pd_session_id: pd_session_id, teacher_id: teacher_id).
-            order(id: :desc)[1..-1].
+            order(id: :desc)[1..].
             each(&:destroy)
         end
       end

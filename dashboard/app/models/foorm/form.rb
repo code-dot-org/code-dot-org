@@ -66,16 +66,14 @@ class Foorm::Form < ApplicationRecord
 
   def validate_questions
     errors_arr = Foorm::Form.validate_questions(JSON.parse(questions))
-    errors_arr.each {|error| errors[:questions] << error}
+    errors_arr.each {|error| errors.add(:questions, error)}
   end
 
   def validate_published
     parsed_questions = JSON.parse(questions)
 
-    unless parsed_questions['published'].nil?
-      if published != parsed_questions['published']
-        errors[:questions] << 'Mismatch between published state in questions and published state in model'
-      end
+    if !parsed_questions['published'].nil? && (published != parsed_questions['published'])
+      errors.add(:questions, 'Mismatch between published state in questions and published state in model')
     end
   end
 
@@ -83,9 +81,9 @@ class Foorm::Form < ApplicationRecord
     if write_to_file? && saved_changes?
       file_path = Rails.root.join("config/foorm/forms/#{name}.#{version}.json")
       file_directory = File.dirname(file_path)
-      unless Dir.exist?(file_directory)
-        FileUtils.mkdir_p(file_directory)
-      end
+
+      FileUtils.mkdir_p(file_directory)
+
       File.write(file_path, questions)
     end
   end
@@ -119,8 +117,8 @@ class Foorm::Form < ApplicationRecord
             question_name: element["name"]
           ).first
           unless library_question
-            raise InvalidFoormConfigurationError, "cannot find library item with library name #{element['library_name']},"\
-                                        " version: #{element['library_version']} and question name #{element['name']}."
+            raise InvalidFoormConfigurationError, "cannot find library item with library name #{element['library_name']}, " \
+                                        "version: #{element['library_version']} and question name #{element['name']}."
           end
           JSON.parse(library_question.question)
         else
@@ -137,8 +135,8 @@ class Foorm::Form < ApplicationRecord
     errors = []
     begin
       filled_questions = Foorm::Form.fill_in_library_items(questions)
-    rescue StandardError => e
-      errors.append(e.message)
+    rescue StandardError => exception
+      errors.append(exception.message)
       return errors
     end
     filled_questions.deep_symbolize_keys!
@@ -147,8 +145,8 @@ class Foorm::Form < ApplicationRecord
       page[:elements]&.each do |element_data|
         # validate_element will throw an exception if the element is invalid
         Foorm::Form.validate_element(element_data, element_names)
-      rescue StandardError => e
-        errors.append(e.message)
+      rescue StandardError => exception
+        errors.append(exception.message)
       end
     end
     errors

@@ -2,7 +2,7 @@ name 'CSA U5 Assessment 2022 q10'
 
 wrong '`{{0}}`'
 wrong '`{{0}, {0}}`'
-right '`{{0, 1}, {0, 1}}`'
+right '`{{1, 0}, {1, 0}}`'
 wrong '`{{0, 1, 0}, {0, 1, 0}}`'
 wrong '`{{0, 1, 1, 0}, {0, 1, 1, 0}}`'
 
@@ -25,3 +25,5 @@ public static int[][] reverse(int[][] arr) {
 
 The code does not work as intended. Which of the following arrays can be passed to reverse to show that the method does NOT work as intended?
 MARKDOWN
+
+allow_multiple_attempts true

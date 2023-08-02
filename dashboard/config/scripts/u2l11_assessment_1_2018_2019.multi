@@ -12,3 +12,5 @@ Answer:
 - HTTP requests make use of abstractions provided by lower level protocols.
 
 MARKDOWN
+
+allow_multiple_attempts true

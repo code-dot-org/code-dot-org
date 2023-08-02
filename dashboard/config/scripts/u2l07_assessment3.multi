@@ -1,11 +1,15 @@
 name 'U2L07 Assessment3'
-encrypted 'IXexRTAudWzGsUeGMLp4UpWsZjyBHxt6I3SQS5SGSc0066kwXyvgIgf6Ue8L
-SPuXDX68EDD7+eRF4CBEXbPBtUgn5Op01pfkRrtIeMZU0qmasl/Rv4AT5cjB
-QQ1HdI7yTNzBpCrUl6Wr9rmV9EwzCt0oq1c4nvU8OXyW+VlAwAqQYnpnT3q4
-Au5llc8dAhBTM8U0i1e8BMV0aopuuXlg30QAQcotMrNbMx7lXNZqBTQac40B
-xqyK48HcvqxN9Zzksfmw3wSOsl+cxIr9Q1TfgtAMXKyr8fr8dX0mnFRwxyIX
-Q1U5L/D3q/7dCfCiFOM8N7jwxLVeOT2M+dstxYyMtwYQxLmfZK+ePdEio+Fm
-Gl5++doqEAxg+7MINLF1UYXe7oAcKjnvXAjgrOuGoeiKcjK1zLCtCykz8d7v
-nLT9bQTXNovi7wE1pChjeV8dPbka28TkZ1ALHSwYsnyBxyfPMp8Gfzip2bAG
-09ySKC5j9rMkx+eD4MHVT1H/PX6+PRNrLNStlmuizL5RLeGTbCnhFg==
-'
+title 'Question 3'
+question 'Which of the following is NOT something we are concerned with when we write an algorithm?'
+right 'The algorithm is short.'
+wrong 'The algorithm is correct.'
+wrong 'The algorithm is efficient.'
+wrong 'The algorithm is understandable.'
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- A. The algorithm is short.
+MARKDOWN
+
+allow_multiple_attempts true

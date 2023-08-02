@@ -114,3 +114,5 @@ Tato série krátkých videí, k níž úvod poskytl CEO Microsoftu Satya Nadell
 Úrovně 6-8 využívají „Stroj podpůrných vektorů“ \[Support-Vector Machine\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Podíváme se na jednotlivé součásti ryby (jako například oči, ústa a tělo) a sestavíme všechna metadata pro tyto součásti (jako například počet zubů, tvar těla) do vektoru čísel pro jednotlivé ryby. Tyto vektory používáme k trénování SVM. Na základě školicích dat rozdělí SVM „prostor“ všech možných ryb na dvě části odpovídající oněm třídám, které se snažíme naučit (jako například „modrá“ a „nemodrá“).
 
 [[Zpět nahoru]](#top)
+
+{{ visit_partial_event_logger }}

@@ -7,13 +7,14 @@ import {
   CP_BUTTON_VARS,
   CP_COMPONENT_EVENTS,
   SONG_CHARGE,
-  SONG_SINGLE_NOTE
+  SONG_SINGLE_NOTE,
 } from './boards/circuitPlayground/PlaygroundConstants';
 
 import {
   MB_BUTTON_VARS,
   MB_SENSOR_VARS,
-  MB_COMPONENT_EVENTS
+  MB_ACCELEROMETER_VAR,
+  MB_COMPONENT_EVENTS,
 } from './boards/microBit/MicroBitConstants';
 
 const config = {};
@@ -47,11 +48,7 @@ function getBoardEventDropdownForParam(firstParam, componentEvents) {
   const wrapInQuotes = e => `"${e}"`;
   const idealOptions = componentEvents[firstParam];
   if (Array.isArray(idealOptions)) {
-    return _.chain(idealOptions)
-      .sort()
-      .sortedUniq()
-      .map(wrapInQuotes)
-      .value();
+    return _.chain(idealOptions).sort().sortedUniq().map(wrapInQuotes).value();
   }
 
   // If we can't find an ideal subset, use all possible
@@ -71,62 +68,77 @@ function createMakerPinProps(defaultParam) {
     parent: api,
     category: MAKER_CATEGORY,
     paletteParams: ['pin'],
-    params: [defaultParam]
+    params: [defaultParam],
   };
 }
 
-// LED-related blocks that we'll reuse in multiple categories
-function sharedLedBlocks({category, blockPrefix, objectDropdown}) {
+/**
+ * Color LED-related blocks that we'll reuse in multiple categories
+ *
+ * Note: in order to differentiate blocks between different categories, we can prepend
+ * the blockPrefix to the func name directly, as blocks with the same func name are
+ * considered the same block. However, in order to not break existing levels, we also
+ * temporarily need to support versions of these blocks without the blockPrefix prepended
+ * directly. We can use the {@param includePrefixInFunc} flag to support both these versions.
+ * Once we've stopped using the old versions of these blocks (without the prefix directly in
+ * the func name), we can remove this flag.
+ */
+function sharedColorLedBlocks({
+  category,
+  blockPrefix,
+  objectDropdown,
+  includePrefixInFunc,
+}) {
   return [
     {
-      func: 'on',
-      blockPrefix,
+      func: `${includePrefixInFunc ? blockPrefix : ''}on`,
+      blockPrefix: includePrefixInFunc ? undefined : blockPrefix,
       category,
       tipPrefix: pixelType,
       modeOptionName: '*.on',
-      objectDropdown
+      objectDropdown,
     },
     {
-      func: 'off',
-      blockPrefix,
+      func: `${includePrefixInFunc ? blockPrefix : ''}off`,
+      blockPrefix: includePrefixInFunc ? undefined : blockPrefix,
       category,
       tipPrefix: pixelType,
       modeOptionName: '*.off',
-      objectDropdown
+      objectDropdown,
     },
     {
-      func: 'toggle',
-      blockPrefix,
+      func: `${includePrefixInFunc ? blockPrefix : ''}toggle`,
+      blockPrefix: includePrefixInFunc ? undefined : blockPrefix,
       category,
       tipPrefix: pixelType,
       modeOptionName: '*.toggle',
-      objectDropdown
+      objectDropdown,
     },
     {
-      func: 'blink',
-      blockPrefix,
+      func: `${includePrefixInFunc ? blockPrefix : ''}blink`,
+      blockPrefix: includePrefixInFunc ? undefined : blockPrefix,
       category,
       paletteParams: ['interval'],
       params: ['100'],
       tipPrefix: pixelType,
       modeOptionName: '*.blink',
-      objectDropdown
+      objectDropdown,
     },
     {
-      func: 'pulse',
-      blockPrefix,
+      func: `${includePrefixInFunc ? blockPrefix : ''}pulse`,
+      blockPrefix: includePrefixInFunc ? undefined : blockPrefix,
       category,
       paletteParams: ['interval'],
       params: ['300'],
       tipPrefix: pixelType,
       modeOptionName: '*.pulse',
-      objectDropdown
-    }
+      objectDropdown,
+    },
   ];
 }
 
 /**
- * Generic Johnny-Five / Firmata blocks
+ * Maker drawer blocks used by both Circuit Playground and Micro:Bit
  */
 export function getMakerBlocks(boardType) {
   let defaultPin = '"A6"';
@@ -140,7 +152,7 @@ export function getMakerBlocks(boardType) {
       category: MAKER_CATEGORY,
       paletteParams: ['pin', 'mode'],
       params: [defaultPin, '"output"'],
-      dropdown: {1: ['"output"', '"input"', '"analog"']}
+      dropdown: {1: ['"output"', '"input"', '"analog"']},
     },
     {
       func: 'digitalWrite',
@@ -148,7 +160,7 @@ export function getMakerBlocks(boardType) {
       category: MAKER_CATEGORY,
       paletteParams: ['pin', 'value'],
       params: [defaultPin, '1'],
-      dropdown: {1: ['1', '0']}
+      dropdown: {1: ['1', '0']},
     },
     {
       func: 'digitalRead',
@@ -157,14 +169,14 @@ export function getMakerBlocks(boardType) {
       type: 'value',
       nativeIsAsync: true,
       paletteParams: ['pin'],
-      params: [defaultPin]
+      params: [defaultPin],
     },
     {
       func: 'analogWrite',
       parent: api,
       category: MAKER_CATEGORY,
       paletteParams: ['pin', 'value'],
-      params: [defaultPin, '150']
+      params: [defaultPin, '150'],
     },
     {
       func: 'analogRead',
@@ -173,44 +185,51 @@ export function getMakerBlocks(boardType) {
       type: 'value',
       nativeIsAsync: true,
       paletteParams: ['pin'],
-      params: [defaultPin]
+      params: [defaultPin],
     },
     {
       func: 'boardConnected',
       parent: api,
       category: MAKER_CATEGORY,
-      type: 'value'
+      type: 'value',
     },
     {func: 'exit', category: MAKER_CATEGORY, noAutocomplete: true},
 
     {
       func: 'createLed',
       ...createMakerPinProps(defaultPin),
-      type: 'either'
+      type: 'either',
     },
     {
       func: 'var myLed = createLed',
       ...createMakerPinProps(defaultPin),
       noAutocomplete: true,
-      docFunc: 'createLed'
+      docFunc: 'createLed',
     },
 
-    ...sharedLedBlocks({
+    ...sharedColorLedBlocks({
       category: MAKER_CATEGORY,
-      blockPrefix: emptySocketPrefix
+      blockPrefix: emptySocketPrefix,
+      includePrefixInFunc: true,
+    }),
+
+    ...sharedColorLedBlocks({
+      category: MAKER_CATEGORY,
+      blockPrefix: emptySocketPrefix,
+      includePrefixInFunc: false,
     }),
 
     {
       func: 'createButton',
       ...createMakerPinProps(defaultPin),
-      type: 'either'
+      type: 'either',
     },
     {
       func: 'var myButton = createButton',
       ...createMakerPinProps(defaultPin),
       noAutocomplete: true,
-      docFunc: 'createButton'
-    }
+      docFunc: 'createButton',
+    },
   ];
 }
 
@@ -227,20 +246,20 @@ const circuitPlaygroundBlocks = [
     allowFunctionDrop: {2: true},
     dropdown: {
       0: Object.keys(CP_COMPONENT_EVENTS),
-      1: function(editor) {
+      1: function (editor) {
         return getBoardEventDropdownForParam(
           getFirstParam('onBoardEvent', this.parent, editor),
           CP_COMPONENT_EVENTS
         );
-      }
-    }
+      },
+    },
   },
 
   {
     func: 'led',
     category: CIRCUIT_CATEGORY,
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {func: 'led.on', category: CIRCUIT_CATEGORY},
   {func: 'led.off', category: CIRCUIT_CATEGORY},
@@ -248,22 +267,30 @@ const circuitPlaygroundBlocks = [
     func: 'led.blink',
     category: CIRCUIT_CATEGORY,
     paletteParams: ['interval'],
-    params: ['200']
+    params: ['200'],
   },
   {func: 'led.toggle', category: CIRCUIT_CATEGORY},
   {
     func: 'led.pulse',
     category: CIRCUIT_CATEGORY,
     paletteParams: ['interval'],
-    params: ['200']
+    params: ['200'],
   },
 
   {func: 'colorLeds', category: CIRCUIT_CATEGORY, type: 'readonlyproperty'},
 
-  ...sharedLedBlocks({
+  ...sharedColorLedBlocks({
     category: CIRCUIT_CATEGORY,
     blockPrefix: colorLedBlockPrefix,
-    objectDropdown: {options: colorPixelVariables}
+    objectDropdown: {options: colorPixelVariables},
+    includePrefixInFunc: true,
+  }),
+
+  ...sharedColorLedBlocks({
+    category: CIRCUIT_CATEGORY,
+    blockPrefix: colorLedBlockPrefix,
+    objectDropdown: {options: colorPixelVariables},
+    includePrefixInFunc: false,
   }),
 
   {
@@ -273,7 +300,7 @@ const circuitPlaygroundBlocks = [
     params: ['25'],
     tipPrefix: pixelType,
     modeOptionName: '*.intensity',
-    objectDropdown: {options: colorPixelVariables}
+    objectDropdown: {options: colorPixelVariables},
   },
   {
     func: 'color',
@@ -284,28 +311,28 @@ const circuitPlaygroundBlocks = [
     paramButtons: {minArgs: 1, maxArgs: 3},
     tipPrefix: pixelType,
     modeOptionName: '*.color',
-    objectDropdown: {options: colorPixelVariables}
+    objectDropdown: {options: colorPixelVariables},
   },
 
   {
     func: 'buzzer',
     category: CIRCUIT_CATEGORY,
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'buzzer.frequency',
     category: CIRCUIT_CATEGORY,
     paletteParams: ['frequency', 'duration'],
     params: ['500', '100'],
-    paramButtons: {minArgs: 1, maxArgs: 2}
+    paramButtons: {minArgs: 1, maxArgs: 2},
   },
   {
     func: 'buzzer.note',
     category: CIRCUIT_CATEGORY,
     paletteParams: ['note', 'duration'],
     params: ['"A4"', '100'],
-    paramButtons: {minArgs: 1, maxArgs: 2}
+    paramButtons: {minArgs: 1, maxArgs: 2},
   },
   {func: 'buzzer.off', category: CIRCUIT_CATEGORY},
   {func: 'buzzer.stop', category: CIRCUIT_CATEGORY},
@@ -315,21 +342,21 @@ const circuitPlaygroundBlocks = [
     category: CIRCUIT_CATEGORY,
     paletteParams: ['notes', 'tempo'],
     params: [stringifySong(SONG_CHARGE), 120],
-    paramButtons: {minArgs: 1, maxArgs: 2}
+    paramButtons: {minArgs: 1, maxArgs: 2},
   },
   {
     func: 'buzzer.playNotes',
     category: CIRCUIT_CATEGORY,
     paletteParams: ['notes', 'tempo'],
     params: [stringifySong(SONG_SINGLE_NOTE), 120],
-    paramButtons: {minArgs: 1, maxArgs: 2}
+    paramButtons: {minArgs: 1, maxArgs: 2},
   },
   {
     func: 'buzzer.playSong',
     category: CIRCUIT_CATEGORY,
     paletteParams: ['notes', 'tempo'],
     params: [`[${stringifySong(SONG_CHARGE[0])}]`, 120],
-    paramButtons: {minArgs: 1, maxArgs: 2}
+    paramButtons: {minArgs: 1, maxArgs: 2},
   },
   {
     func: 'accelerometer.getOrientation',
@@ -337,7 +364,7 @@ const circuitPlaygroundBlocks = [
     type: 'value',
     paletteParams: ['orientationType'],
     params: ['"inclination"'],
-    dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}
+    dropdown: {0: ['"inclination"', '"pitch"', '"roll"']},
   },
   {
     func: 'accelerometer.getAcceleration',
@@ -345,13 +372,13 @@ const circuitPlaygroundBlocks = [
     type: 'value',
     paletteParams: ['orientationType'],
     params: ['"x"'],
-    dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}
+    dropdown: {0: ['"x"', '"y"', '"z"', '"total"']},
   },
   {func: 'accelerometer.start', category: CIRCUIT_CATEGORY},
   {
     func: 'accelerometer.sensitivity',
     category: CIRCUIT_CATEGORY,
-    type: 'property'
+    type: 'property',
   },
 
   // Known issue - objectDropdown doesn't work with type:'readonlyproperty'
@@ -362,7 +389,7 @@ const circuitPlaygroundBlocks = [
     blockPrefix: `${CP_BUTTON_VARS[0]}.`,
     modeOptionName: '*.isPressed',
     type: 'readonlyproperty',
-    tipPrefix: '[Button].'
+    tipPrefix: '[Button].',
   },
   // Known issue - objectDropdown doesn't work with type:'readonlyproperty'
   {
@@ -372,27 +399,27 @@ const circuitPlaygroundBlocks = [
     blockPrefix: `${CP_BUTTON_VARS[0]}.`,
     modeOptionName: '*.holdtime',
     type: 'readonlyproperty',
-    tipPrefix: '[Button].'
+    tipPrefix: '[Button].',
   },
 
   {func: 'soundSensor.start', category: CIRCUIT_CATEGORY, noAutocomplete: true},
   {
     func: 'soundSensor.value',
     category: CIRCUIT_CATEGORY,
-    type: 'readonlyproperty'
+    type: 'readonlyproperty',
   },
   {
     func: 'soundSensor.getAveragedValue',
     category: CIRCUIT_CATEGORY,
     params: ['500'],
     paletteParams: ['ms'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'soundSensor.setScale',
     category: CIRCUIT_CATEGORY,
     params: ['0', '100'],
-    paletteParams: ['low', 'high']
+    paletteParams: ['low', 'high'],
   },
   {func: 'soundSensor.threshold', category: CIRCUIT_CATEGORY, type: 'property'},
 
@@ -400,20 +427,20 @@ const circuitPlaygroundBlocks = [
   {
     func: 'lightSensor.value',
     category: CIRCUIT_CATEGORY,
-    type: 'readonlyproperty'
+    type: 'readonlyproperty',
   },
   {
     func: 'lightSensor.getAveragedValue',
     category: CIRCUIT_CATEGORY,
     params: ['500'],
     paletteParams: ['ms'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'lightSensor.setScale',
     category: CIRCUIT_CATEGORY,
     params: ['0', '100'],
-    paletteParams: ['low', 'high']
+    paletteParams: ['low', 'high'],
   },
   {func: 'lightSensor.threshold', category: CIRCUIT_CATEGORY, type: 'property'},
 
@@ -423,8 +450,8 @@ const circuitPlaygroundBlocks = [
   {
     func: 'toggleSwitch.isOpen',
     category: CIRCUIT_CATEGORY,
-    type: 'readonlyproperty'
-  }
+    type: 'readonlyproperty',
+  },
 ];
 
 /* micro:bit specific blocks */
@@ -432,13 +459,13 @@ const microBitBlocks = [
   {
     func: 'createCapacitiveTouchSensor',
     ...createMakerPinProps('"A6"'),
-    type: 'either'
+    type: 'either',
   },
   {
     func: 'var mySensor = createCapacitiveTouchSensor',
     ...createMakerPinProps('"A6"'),
     noAutocomplete: true,
-    docFunc: 'createCapacitiveTouchSensor'
+    docFunc: 'createCapacitiveTouchSensor',
   },
   {
     func: 'onBoardEvent',
@@ -449,61 +476,61 @@ const microBitBlocks = [
     allowFunctionDrop: {2: true},
     dropdown: {
       0: Object.keys(MB_COMPONENT_EVENTS),
-      1: function(editor) {
+      1: function (editor) {
         return getBoardEventDropdownForParam(
           getFirstParam('onBoardEvent', this.parent, editor),
           MB_COMPONENT_EVENTS
         );
-      }
-    }
+      },
+    },
   },
   {
     func: 'ledScreen',
     category: MICROBIT_CATEGORY,
-    type: 'readonlyproperty'
+    type: 'readonlyproperty',
   },
   {
     func: 'ledScreen.on',
     category: MICROBIT_CATEGORY,
     params: ['0', '0'],
-    paletteParams: ['x', 'y']
+    paletteParams: ['x', 'y'],
   },
   {
     func: 'ledScreen.off',
     category: MICROBIT_CATEGORY,
     params: ['0', '0'],
-    paletteParams: ['x', 'y']
+    paletteParams: ['x', 'y'],
   },
   {
     func: 'ledScreen.toggle',
     category: MICROBIT_CATEGORY,
     params: ['0', '0'],
-    paletteParams: ['x', 'y']
+    paletteParams: ['x', 'y'],
   },
   {
     func: 'ledScreen.clear',
-    category: MICROBIT_CATEGORY
+    category: MICROBIT_CATEGORY,
   },
   {
     func: 'ledScreen.scrollNumber',
     category: MICROBIT_CATEGORY,
     params: ['100'],
-    paletteParams: ['number']
+    paletteParams: ['number'],
   },
   {
     func: 'ledScreen.scrollString',
     category: MICROBIT_CATEGORY,
     params: ['"Hello World!"'],
-    paletteParams: ['string']
+    paletteParams: ['string'],
   },
 
   {
     func: 'ledScreen.display',
     category: MICROBIT_CATEGORY,
     params: [
-      '[\n[1, 0, 1, 0, 1],\n[1, 0, 1, 0, 1],\n[1, 0, 1, 0, 1],\n[0, 1, 0, 1, 0],\n[1, 0, 1, 0, 1]\n]'
+      '[\n([1, 1, 1, 1, 1]),\n([1, 1, 1, 1, 1]),\n([1, 1, 1, 1, 1]),\n([1, 1, 1, 1, 1]),\n([1, 1, 1, 1, 1])\n]',
     ],
-    paletteParams: ['boardArray']
+    paletteParams: ['boardArray'],
   },
   {
     func: 'isPressed',
@@ -512,7 +539,7 @@ const microBitBlocks = [
     blockPrefix: `${MB_BUTTON_VARS[0]}.`,
     modeOptionName: '*.isPressed',
     type: 'readonlyproperty',
-    tipPrefix: '[Button].'
+    tipPrefix: '[Button].',
   },
   {
     func: 'accelerometer.getOrientation',
@@ -520,7 +547,7 @@ const microBitBlocks = [
     type: 'value',
     paletteParams: ['orientationType'],
     params: ['"inclination"'],
-    dropdown: {0: ['"inclination"', '"pitch"', '"roll"']}
+    dropdown: {0: ['"inclination"', '"pitch"', '"roll"']},
   },
   {
     func: 'accelerometer.getAcceleration',
@@ -528,60 +555,54 @@ const microBitBlocks = [
     type: 'value',
     paletteParams: ['orientationType'],
     params: ['"x"'],
-    dropdown: {0: ['"x"', '"y"', '"z"', '"total"']}
+    dropdown: {0: ['"x"', '"y"', '"z"', '"total"']},
   },
   {
     func: 'lightSensor.start',
     category: MICROBIT_CATEGORY,
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'lightSensor.value',
     category: MICROBIT_CATEGORY,
-    type: 'readonlyproperty'
+    type: 'readonlyproperty',
   },
   {
     func: 'lightSensor.getAveragedValue',
     category: MICROBIT_CATEGORY,
     params: ['500'],
     paletteParams: ['ms'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'lightSensor.setScale',
     category: MICROBIT_CATEGORY,
     params: ['0', '100'],
-    paletteParams: ['low', 'high']
+    paletteParams: ['low', 'high'],
   },
   {
     func: 'lightSensor.threshold',
     category: MICROBIT_CATEGORY,
-    type: 'property'
+    type: 'property',
   },
-  {
-    func: 'compass.getHeading',
-    category: MICROBIT_CATEGORY,
-    type: 'value'
-  },
-
   {
     func: 'tempSensor.F',
     category: MICROBIT_CATEGORY,
-    type: 'readonlyproperty'
+    type: 'readonlyproperty',
   },
   {
     func: 'tempSensor.C',
     category: MICROBIT_CATEGORY,
-    type: 'readonlyproperty'
-  }
+    type: 'readonlyproperty',
+  },
 ];
 
 config.categories = {
   [MAKER_CATEGORY]: {
     color: 'cyan',
     rgb: color.droplet_cyan,
-    blocks: []
-  }
+    blocks: [],
+  },
 };
 
 export let configMicrobit = {
@@ -590,11 +611,15 @@ export let configMicrobit = {
       id: 'microbit',
       color: 'red',
       rgb: color.droplet_red,
-      blocks: []
-    }
+      blocks: [],
+    },
   },
   blocks: [...getMakerBlocks(MICROBIT_CATEGORY), ...microBitBlocks],
-  additionalPredefValues: [...MB_BUTTON_VARS, ...MB_SENSOR_VARS]
+  additionalPredefValues: [
+    ...MB_BUTTON_VARS,
+    ...MB_SENSOR_VARS,
+    MB_ACCELEROMETER_VAR,
+  ],
 };
 
 export let configCircuitPlayground = {
@@ -603,9 +628,9 @@ export let configCircuitPlayground = {
       id: 'circuitPlayground',
       color: 'red',
       rgb: color.droplet_red,
-      blocks: []
-    }
+      blocks: [],
+    },
   },
   blocks: [...getMakerBlocks(CIRCUIT_CATEGORY), ...circuitPlaygroundBlocks],
-  additionalPredefValues: Object.keys(CP_COMPONENT_EVENTS)
+  additionalPredefValues: Object.keys(CP_COMPONENT_EVENTS),
 };

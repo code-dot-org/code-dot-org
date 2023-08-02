@@ -74,13 +74,6 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     assert user.verified_teacher?
   end
 
-  test 'census_reviewer?' do
-    user = create :teacher
-    refute user.census_reviewer?
-    user.permission = UserPermission::CENSUS_REVIEWER
-    assert user.census_reviewer?
-  end
-
   test 'facilitator?' do
     user = create :teacher
     refute user.facilitator?
@@ -130,6 +123,13 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     assert user.workshop_organizer?
   end
 
+  test 'ai_chat_access?' do
+    user = create :teacher
+    refute user.ai_chat_access?
+    user.permission = UserPermission::AI_CHAT_ACCESS
+    assert user.ai_chat_access?
+  end
+
   test 'grant admin permission logs to infrasecurity' do
     teacher = create :teacher, :google_sso_provider, password: nil
 
@@ -137,9 +137,9 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     ChatClient.
       expects(:message).
       with('infra-security',
-        "Granting UserPermission: environment: #{rack_env}, "\
-        "user ID: #{teacher.id}, "\
-        "email: #{teacher.email}, "\
+        "Granting UserPermission: environment: #{rack_env}, " \
+        "user ID: #{teacher.id}, " \
+        "email: #{teacher.email}, " \
         "permission: ADMIN",
         color: 'yellow'
       ).
@@ -155,9 +155,9 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     ChatClient.
       expects(:message).
       with('infra-security',
-        "Revoking UserPermission: environment: #{rack_env}, "\
-        "user ID: #{admin_user.id}, "\
-        "email: #{admin_user.email}, "\
+        "Revoking UserPermission: environment: #{rack_env}, " \
+        "user ID: #{admin_user.id}, " \
+        "email: #{admin_user.email}, " \
         "permission: ADMIN",
         color: 'yellow'
       ).
@@ -208,5 +208,25 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
   test 'grant admin permission does not log in test environment' do
     ChatClient.expects(:message).never
     create :admin
+  end
+
+  test 'grant authorized_teacher permission calls mailer' do
+    user = create :teacher
+    TeacherMailer.expects(:verified_teacher_email).
+      once.
+      returns(stub(deliver_now: nil))
+    user.permission = UserPermission::AUTHORIZED_TEACHER
+  end
+
+  test 'grant admin permission does not call mailer' do
+    TeacherMailer.expects(:verified_teacher_email).never
+    create :admin
+  end
+
+  test 'cannot grant permission to student user' do
+    student = create :student
+    assert_raises do
+      student.permission = UserPermission::AUTHORIZED_TEACHER
+    end
   end
 end

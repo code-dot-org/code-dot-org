@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {
   activityShape,
   scriptLevelShape,
-  tipShape
+  tipShape,
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
@@ -36,17 +36,17 @@ export const NEW_LEVEL_ID = '-1';
 
 export const initLevelSearching = levelSearchingInfo => ({
   type: INIT_LEVEL_SEARCHING,
-  levelSearchingInfo
+  levelSearchingInfo,
 });
 
 export const initUnitInfo = unitInfo => ({
   type: INIT_UNIT_INFO,
-  unitInfo
+  unitInfo,
 });
 
 export const initActivities = activities => ({
   type: INIT_ACTIVITIES,
-  activities
+  activities,
 });
 
 export const addActivity = (
@@ -57,7 +57,7 @@ export const addActivity = (
   type: ADD_ACTIVITY,
   activityPosition,
   activityKey,
-  activitySectionKey
+  activitySectionKey,
 });
 
 export const updateActivityField = (
@@ -68,7 +68,7 @@ export const updateActivityField = (
   type: UPDATE_ACTIVITY_FIELD,
   activityPosition,
   fieldName,
-  fieldValue
+  fieldValue,
 });
 
 export const updateActivitySectionField = (
@@ -81,13 +81,13 @@ export const updateActivitySectionField = (
   activityPosition,
   activitySectionPosition,
   fieldName,
-  fieldValue
+  fieldValue,
 });
 
 export const addActivitySection = (activityPosition, activitySectionKey) => ({
   type: ADD_ACTIVITY_SECTION,
   activityPosition,
-  activitySectionKey
+  activitySectionKey,
 });
 
 export const toggleExpand = (
@@ -98,7 +98,7 @@ export const toggleExpand = (
   type: TOGGLE_EXPAND,
   activityPosition,
   activitySectionPosition,
-  scriptLevelPosition
+  scriptLevelPosition,
 });
 
 export const removeLevel = (
@@ -109,7 +109,7 @@ export const removeLevel = (
   type: REMOVE_LEVEL,
   activityPosition,
   activitySectionPosition,
-  scriptLevelPosition
+  scriptLevelPosition,
 });
 
 export const setScriptLevelField = (
@@ -122,7 +122,7 @@ export const setScriptLevelField = (
   activityPosition,
   activitySectionPosition,
   scriptLevelPosition,
-  modifier
+  modifier,
 });
 
 export const reorderLevel = (
@@ -135,7 +135,7 @@ export const reorderLevel = (
   activityPosition,
   activitySectionPosition,
   originalScriptLevelPosition,
-  newScriptLevelPosition
+  newScriptLevelPosition,
 });
 
 export const moveLevelToActivitySection = (
@@ -150,20 +150,20 @@ export const moveLevelToActivitySection = (
   activitySectionPosition,
   scriptLevelPosition,
   newActivityPosition,
-  newActivitySectionPosition
+  newActivitySectionPosition,
 });
 
 export const addLevel = (activityPosition, activitySectionPosition, level) => ({
   type: ADD_LEVEL,
   activityPosition,
   activitySectionPosition,
-  level
+  level,
 });
 
 export const moveActivity = (activityPosition, direction) => ({
   type: MOVE_ACTIVITY,
   activityPosition,
-  direction
+  direction,
 });
 
 export const moveActivitySection = (
@@ -174,12 +174,12 @@ export const moveActivitySection = (
   type: MOVE_ACTIVITY_SECTION,
   activityPosition,
   activitySectionPosition,
-  direction
+  direction,
 });
 
 export const removeActivity = activityPosition => ({
   type: REMOVE_ACTIVITY,
-  activityPosition
+  activityPosition,
 });
 
 export const removeActivitySection = (
@@ -188,14 +188,14 @@ export const removeActivitySection = (
 ) => ({
   type: REMOVE_ACTIVITY_SECTION,
   activityPosition,
-  activitySectionPosition
+  activitySectionPosition,
 });
 
 export const addTip = (activityPosition, activitySectionPosition, tip) => ({
   type: ADD_TIP,
   activityPosition,
   activitySectionPosition,
-  tip
+  tip,
 });
 
 export const updateTip = (
@@ -206,7 +206,7 @@ export const updateTip = (
   type: UPDATE_TIP,
   activityPosition,
   activitySectionPosition,
-  newTip
+  newTip,
 });
 
 export const removeTip = (
@@ -217,7 +217,7 @@ export const removeTip = (
   type: REMOVE_TIP,
   activityPosition,
   activitySectionPosition,
-  tipKey
+  tipKey,
 });
 
 function updateActivityPositions(activities) {
@@ -270,9 +270,9 @@ function activities(state = [], action) {
         activitySections: [
           {
             ...emptyActivitySection,
-            key: action.activitySectionKey
-          }
-        ]
+            key: action.activitySectionKey,
+          },
+        ],
       });
       updateActivityPositions(newState);
       break;
@@ -312,7 +312,7 @@ function activities(state = [], action) {
         newState[action.activityPosition - 1].activitySections;
       activitySections.push({
         ...emptyActivitySection,
-        key: action.activitySectionKey
+        key: action.activitySectionKey,
       });
       updateActivitySectionPositions(newState);
       break;
@@ -399,13 +399,12 @@ function activities(state = [], action) {
     case REMOVE_TIP: {
       const activitySections =
         newState[action.activityPosition - 1].activitySections;
-      activitySections[
-        action.activitySectionPosition - 1
-      ].tips = activitySections[action.activitySectionPosition - 1].tips.filter(
-        tip => {
-          return tip.key !== action.tipKey;
-        }
-      );
+      activitySections[action.activitySectionPosition - 1].tips =
+        activitySections[action.activitySectionPosition - 1].tips.filter(
+          tip => {
+            return tip.key !== action.tipKey;
+          }
+        );
       break;
     }
 
@@ -612,7 +611,7 @@ function validateScriptLevel(scriptLevel, location) {
 export default {
   activities,
   levelSearchingInfo,
-  unitInfo
+  unitInfo,
 };
 
 export const emptyActivitySection = {
@@ -625,7 +624,7 @@ export const emptyActivitySection = {
   text: '',
   scriptLevels: [],
   position: 1,
-  progressionName: ''
+  progressionName: '',
 };
 
 export const emptyActivity = {
@@ -633,5 +632,5 @@ export const emptyActivity = {
   displayName: '',
   position: 1,
   duration: '',
-  activitySections: [emptyActivitySection]
+  activitySections: [emptyActivitySection],
 };

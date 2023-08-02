@@ -13,13 +13,13 @@ const DEFAULT_PROPS = {
     lessonGroup: {
       displayName: 'jazz',
       description: 'A chapter about conditionals',
-      bigQuestions: 'Why is the earth round? Can pigs fly?'
+      bigQuestions: 'Why is the earth round? Can pigs fly?',
     },
     lessons: [fakeLesson('lesson1', 1)],
-    levelsByLesson: []
+    levelsByLesson: [],
   },
   hasVisibleLesson: true,
-  viewAs: ViewType.Instructor
+  viewAs: ViewType.Instructor,
 };
 
 describe('LessonGroup', () => {
@@ -28,10 +28,7 @@ describe('LessonGroup', () => {
     expect(wrapper.find('FontAwesome')).to.have.lengthOf(2);
 
     expect(wrapper.state('lessonGroupInfoDialogOpen')).to.be.false;
-    wrapper
-      .find('FontAwesome')
-      .at(1)
-      .simulate('click');
+    wrapper.find('FontAwesome').at(1).simulate('click');
     expect(wrapper.state('lessonGroupInfoDialogOpen')).to.be.true;
   });
   it('renders without lesson group info button when there is no description or big questions', () => {
@@ -42,9 +39,9 @@ describe('LessonGroup', () => {
         lessonGroup: {
           displayName: 'jazz',
           description: null,
-          bigQuestions: null
-        }
-      }
+          bigQuestions: null,
+        },
+      },
     };
     const wrapper = shallow(<LessonGroup {...props} />);
     expect(wrapper.find('FontAwesome')).to.have.lengthOf(1);
@@ -54,7 +51,7 @@ describe('LessonGroup', () => {
       ...DEFAULT_PROPS,
       isSummaryView: true,
       hasVisibleLesson: false,
-      viewAs: ViewType.Participant
+      viewAs: ViewType.Participant,
     };
     const wrapper = shallow(<LessonGroup {...props} />);
     expect(wrapper.get(0)).to.be.null;
@@ -64,10 +61,10 @@ describe('LessonGroup', () => {
       ...DEFAULT_PROPS,
       groupedLesson: {
         ...DEFAULT_PROPS.groupedLesson,
-        lessons: []
+        lessons: [],
       },
       isSummaryView: true,
-      viewAs: ViewType.Instructor
+      viewAs: ViewType.Instructor,
     };
     const wrapper = shallow(<LessonGroup {...props} />);
     expect(wrapper.get(0)).to.not.be.null;

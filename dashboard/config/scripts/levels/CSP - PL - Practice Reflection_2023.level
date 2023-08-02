@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2023-07-28T17:41:11.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "instructions_important": "false",
+    "long_instructions": "# Reflecting on the role of the teacher\r\n##### Now that you have seen a few of the levels in Code Studio from this lesson, it may feel like the role of the teacher is less important in the Practice lessons, but that is not the case.  While the goal of the lesson is to help students become more confident with the concept, the teacher still plays a role in helping students gain that confidence in Practice lessons. \r\n\r\n##### You may find it helpful to re-watch the <a href=\"https://youtu.be/Aad0UJXGcR4\" target=\"blank\">Guide to Practice Lessons video</a> to remember the intent of the Practice lesson type after seeing the lesson in action.\r\n\r\n##### Can’t open videos on YouTube? Click <a href=\"https://docs.google.com/presentation/d/1hVCRvFX28vMoVEg9V4Gs8oULEeCgE1Pd9agBrhA5X9Q/edit?usp=sharing\" target=\"blank\">this link instead</a> to access the video on slide 5.\r\n\r\n## Reflect\r\n* ##### How do you as a teacher plan to support students during the Practice lesson types?\r\n* ##### What specific tools or strategies can you use to support students during Practice lessons?\r\n* ##### How will you know if a student needs support during a Practice lesson?\r\n\r\n___\r\n\r\n<span style=\"font-size:12px;\">**Note:** Your cohort's facilitators will be able to see your response, but your response will not be seen by other participants in your cohort. Facilitators will use these reflections to inform their planning for the upcoming synchronous call, but the primary purpose of these reflections is to allow you time to process or apply what you learn in the asynchronous work. For that reason, feel free to write as much or as little as is helpful for you - this might be 2 paragraphs, 2 sentences, or a list, etc. You don't need to worry about spelling or punctuation in this space either - this is your space! </span>\r\n\r\n<span style=\"font-size:12px;\">Finally, you can always adjust the size of the text box by clicking and dragging the bottom-right corner of the text box if more space is needed.</span>",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24303,
+    "name_suffix": "_2023",
+    "allow_multiple_attempts": "true"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-07-28T17:41:11.857+00:00\",\"changed\":[\"cloned from \\\"CSP - PL - Practice Reflection_2022\\\"\"],\"cloned_from\":\"CSP - PL - Practice Reflection_2022\"},{\"changed_at\":\"2023-08-01 23:44:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

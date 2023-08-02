@@ -24,12 +24,12 @@ class DataWorkspace extends React.Component {
     view: PropTypes.oneOf(Object.keys(DataView)),
 
     // from redux dispatch
-    onClearWarning: PropTypes.func.isRequired
+    onClearWarning: PropTypes.func.isRequired,
   };
 
   render() {
     const style = {
-      display: this.props.isVisible ? 'block' : 'none'
+      display: this.props.isVisible ? 'block' : 'none',
     };
     return (
       <div id="dataWorkspaceWrapper" style={style}>
@@ -92,14 +92,14 @@ const styles = {
     borderLeft: '1px solid gray',
     borderRight: '1px solid gray',
     borderBottom: '1px solid gray',
-    overflowY: 'auto'
+    overflowY: 'auto',
   },
   libraryHeader: {
     display: 'block',
     width: 270,
     borderRight: '1px solid gray',
-    float: 'left'
-  }
+    float: 'left',
+  },
 };
 
 export default connect(
@@ -110,11 +110,11 @@ export default connect(
     warningMsg: state.data.warningMsg,
     warningTitle: state.data.warningTitle || '',
     isWarningDialogOpen: state.data.isWarningDialogOpen,
-    view: state.data.view
+    view: state.data.view,
   }),
   dispatch => ({
     onClearWarning() {
       dispatch(clearWarning());
-    }
+    },
   })
 )(DataWorkspace);

@@ -18,13 +18,15 @@ export default class TeacherSectionSelector extends Component {
     // We need to reload on section change on the script overview page to get
     // accurate information about students in the selected section.
     forceReload: PropTypes.bool,
-    courseId: PropTypes.number,
-    scriptId: PropTypes.number
+    courseOfferingId: PropTypes.number,
+    courseOfferingParticipantType: PropTypes.string,
+    courseVersionId: PropTypes.number,
+    unitId: PropTypes.number,
   };
 
   state = {
     isMenuOpen: false,
-    targetPoint: {top: 0, left: 0}
+    targetPoint: {top: 0, left: 0},
   };
 
   handleMouseDown = e => {
@@ -47,11 +49,11 @@ export default class TeacherSectionSelector extends Component {
     const rect = this.select.getBoundingClientRect();
     const targetPoint = {
       top: rect.bottom + window.pageYOffset,
-      left: rect.left + window.pageXOffset
+      left: rect.left + window.pageXOffset,
     };
     this.setState({
       isMenuOpen: true,
-      targetPoint
+      targetPoint,
     });
   }
 
@@ -69,12 +71,19 @@ export default class TeacherSectionSelector extends Component {
   };
 
   render() {
-    const {sections, selectedSection, courseId, scriptId} = this.props;
+    const {
+      sections,
+      selectedSection,
+      courseOfferingId,
+      courseVersionId,
+      unitId,
+    } = this.props;
     const menuOffset = {x: 0, y: 0};
     const value = selectedSection ? selectedSection.id : '';
     const queryParams = queryString.stringify({
-      courseId,
-      scriptId
+      courseOfferingId,
+      courseVersionId,
+      unitId,
     });
 
     return (
@@ -125,7 +134,7 @@ const styles = {
   select: {
     height: 34,
     width: 300,
-    marginBottom: 0
+    marginBottom: 0,
   },
   addNewSection: {
     borderTop: `1px solid ${color.charcoal}`,
@@ -133,6 +142,6 @@ const styles = {
     paddingBottom: 8,
     paddingLeft: 20,
     paddingRight: 12,
-    width: 268
-  }
+    width: 268,
+  },
 };

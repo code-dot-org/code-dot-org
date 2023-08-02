@@ -13,15 +13,15 @@ class IFrameEmbedOverlay extends Component {
     appWidth: PropTypes.number.isRequired,
     appHeight: PropTypes.number.isRequired,
     style: PropTypes.object,
-    playButtonStyle: PropTypes.object
+    playButtonStyle: PropTypes.object,
   };
 
   state = {
-    tooYoung: false
+    tooYoung: false,
   };
 
   static defaultProps = {
-    showPlayButton: true
+    showPlayButton: true,
   };
 
   handleTooYoung = () => {
@@ -41,10 +41,10 @@ class IFrameEmbedOverlay extends Component {
           styles.overlay.wrapper,
           {
             width: this.props.appWidth,
-            height: this.props.appHeight
+            height: this.props.appHeight,
           },
           !this.state.tooYoung && {cursor: 'cursor'},
-          this.props.style
+          this.props.style,
         ]}
         onClick={this.onClick}
       >
@@ -60,9 +60,9 @@ class IFrameEmbedOverlay extends Component {
                   left:
                     this.props.appWidth / 2 -
                     PLAY_BUTTON_SIZE / 2 -
-                    styles.playButtonWrapper.padding / 2
+                    styles.playButtonWrapper.padding / 2,
                 },
-                this.props.playButtonStyle
+                this.props.playButtonStyle,
               ]}
             >
               <span className="fa fa-play" style={styles.playButton} />
@@ -81,7 +81,7 @@ var styles = {
       top: PHONE_MARGIN,
       left: 16,
       zIndex: 5,
-      textAlign: 'center'
+      textAlign: 'center',
     },
     clickText: {
       position: 'absolute',
@@ -92,8 +92,8 @@ var styles = {
       bottom: 50,
       textShadow:
         '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
-      cursor: 'default'
-    }
+      cursor: 'default',
+    },
   },
   playButtonWrapper: {
     color: 'white',
@@ -111,17 +111,17 @@ var styles = {
     borderStyle: 'solid',
     cursor: 'pointer',
     ':hover': {
-      boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)'
+      boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)',
     },
     ':active': {
       borderWidth: 1,
       borderStyle: 'solid',
-      borderColor: '#888'
-    }
+      borderColor: '#888',
+    },
   },
   playButton: {
-    paddingLeft: 4
-  }
+    paddingLeft: 4,
+  },
 };
 
 export default Radium(IFrameEmbedOverlay);

@@ -13,7 +13,7 @@ export default class ArtistVisualizationColumn extends React.Component {
     showFinishButton: PropTypes.bool.isRequired,
     showSaveImageButton: PropTypes.bool.isRequired,
     displayCanvas: PropTypes.instanceOf(HTMLCanvasElement).isRequired,
-    iconPath: PropTypes.string.isRequired
+    iconPath: PropTypes.string.isRequired,
   };
 
   render() {
@@ -77,6 +77,6 @@ export default class ArtistVisualizationColumn extends React.Component {
 
 const styles = {
   invisible: {
-    visibility: 'hidden'
-  }
+    visibility: 'hidden',
+  },
 };

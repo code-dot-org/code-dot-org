@@ -5,7 +5,6 @@ import * as actions from './redux/errorDialogStack';
 import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-var labMsg = require('@cdo/gamelab/locale') || require('@cdo/spritelab/locale');
 import msg from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
@@ -23,7 +22,7 @@ class ErrorDialogStack extends React.Component {
     dismissError: PropTypes.func.isRequired,
     deleteAnimation: PropTypes.func,
     animationList: PropTypes.object,
-    isSpriteLab: PropTypes.bool.isRequired
+    isSpriteLab: PropTypes.bool.isRequired,
   };
 
   handleDeleteChoice(key) {
@@ -36,8 +35,8 @@ class ErrorDialogStack extends React.Component {
         project_id: getCurrentId(),
         data_json: JSON.stringify({
           version: this.props.animationList.propsByKey[key].version,
-          animationName: this.props.animationList.propsByKey[key].name
-        })
+          animationName: this.props.animationList.propsByKey[key].name,
+        }),
       },
       {includeUserId: true}
     );
@@ -55,8 +54,8 @@ class ErrorDialogStack extends React.Component {
         project_id: getCurrentId(),
         data_json: JSON.stringify({
           version: this.props.animationList.propsByKey[key].version,
-          animationName: this.props.animationList.propsByKey[key].name
-        })
+          animationName: this.props.animationList.propsByKey[key].name,
+        }),
       },
       {includeUserId: true}
     );
@@ -87,9 +86,7 @@ class ErrorDialogStack extends React.Component {
             information and choice to reload the page or delete the animation */}
         {error.error_type === 'anim_load' && (
           <div>
-            <p>
-              {labMsg.errorLoadingAnimation({animationName: animationName})}
-            </p>
+            <p>{msg.errorLoadingAnimation({animationName: animationName})}</p>
             <p>
               {msg.contactWithoutEmail()}{' '}
               <a
@@ -127,17 +124,17 @@ export default connect(
     return {
       errors: state.errorDialogStack,
       animationList: state.animationList,
-      isSpriteLab: state.pageConstants.isBlockly
+      isSpriteLab: state.pageConstants.isBlockly,
     };
   },
   function propsFromDispatch(dispatch) {
     return {
-      dismissError: function() {
+      dismissError: function () {
         dispatch(actions.dismissError());
       },
-      deleteAnimation: function(key, isSpriteLab) {
+      deleteAnimation: function (key, isSpriteLab) {
         dispatch(animationActions.deleteAnimation(key, isSpriteLab));
-      }
+      },
     };
   }
 )(ErrorDialogStack);

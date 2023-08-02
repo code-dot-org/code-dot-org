@@ -88,8 +88,8 @@ class Gamelab < Blockly
     if code_functions.present? && code_functions.is_a?(String)
       self.code_functions = JSON.parse(code_functions)
     end
-  rescue JSON::ParserError => e
-    errors.add(:code_functions, "#{e.class.name}: #{e.message}")
+  rescue JSON::ParserError => exception
+    errors.add(:code_functions, "#{exception.class.name}: #{exception.message}")
     return false
   end
 

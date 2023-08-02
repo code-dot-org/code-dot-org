@@ -43,3 +43,5 @@ Starting off with the robot at B3 and that data = ["F", "F", "R", "F", "L", "F",
 * "F" - the robot can move forward and ends up at C2
 
 MARKDOWN
+
+allow_multiple_attempts true

@@ -31,7 +31,7 @@ class Lesson < ApplicationRecord
   include Rails.application.routes.url_helpers
   include SerializedProperties
 
-  belongs_to :script, inverse_of: :lessons, optional: true
+  belongs_to :script, class_name: 'Unit', inverse_of: :lessons, optional: true
   belongs_to :lesson_group, optional: true
   has_many :lesson_activities, -> {order(:position)}, dependent: :destroy
   has_many :activity_sections, through: :lesson_activities
@@ -56,6 +56,8 @@ class Lesson < ApplicationRecord
   # the join model must have an :id column.
   has_many :lessons_opportunity_standards,  dependent: :destroy
   has_many :opportunity_standards, through: :lessons_opportunity_standards, source: :standard
+
+  has_one :rubric, dependent: :destroy
 
   self.table_name = 'stages'
 
@@ -128,7 +130,7 @@ class Lesson < ApplicationRecord
   end
 
   def script
-    return Script.get_from_cache(script_id) if Script.should_cache?
+    return Unit.get_from_cache(script_id) if Unit.should_cache?
     super
   end
 
@@ -140,7 +142,7 @@ class Lesson < ApplicationRecord
     # if Scripts are cached, then we do in-memory filtering to avoid a database
     # hit. If Scripts are NOT cached, then we want to find by a query in order
     # to _minimize_ the database hit.
-    if Script.should_cache?
+    if Unit.should_cache?
       script_levels = script.script_levels.select {|sl| sl.stage_id == id}
       return script_levels.first
     else
@@ -166,7 +168,7 @@ class Lesson < ApplicationRecord
   end
 
   def has_lesson_pdf?
-    return false if Script.unit_in_category?('csf', script.name) && ['2017', '2018'].include?(script.version_year)
+    return false if Unit.unit_in_category?('csf', script.name) && ['2017', '2018'].include?(script.version_year)
 
     !!has_lesson_plan
   end
@@ -342,7 +344,7 @@ class Lesson < ApplicationRecord
     # a user trying to edit a lesson plan via /s/[script-name]/lessons/1/edit
     # has sufficient permissions or not. therefore, use a different path
     # when editing lesson plans in hoc scripts.
-    has_lesson_plan && !ScriptConfig.hoc_scripts.include?(script.name) ?
+    has_lesson_plan && ScriptConfig.hoc_scripts.exclude?(script.name) ?
       script_lesson_edit_path(script, self) :
       edit_lesson_path(id: id)
   end
@@ -454,7 +456,7 @@ class Lesson < ApplicationRecord
       standards: standards.map(&:summarize_for_lesson_show),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
       is_instructor: script.can_be_instructor?(user),
-      assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
+      assessmentOpportunities: render_property(:assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
       courseVersionStandardsUrl: course_version_standards_url,
       isVerifiedInstructor: user&.verified_instructor?,
@@ -571,9 +573,9 @@ class Lesson < ApplicationRecord
 
   # Ensures we get the cached ScriptLevels if they are being cached, vs hitting the db.
   def cached_script_levels
-    return script_levels unless Script.should_cache?
+    return script_levels unless Unit.should_cache?
 
-    script_levels.map {|sl| Script.cache_find_script_level(sl.id)}
+    script_levels.map {|sl| Unit.cache_find_script_level(sl.id)}
   end
 
   def last_progression_script_level
@@ -597,7 +599,7 @@ class Lesson < ApplicationRecord
 
   def next_level_number_for_lesson_extras(user)
     next_level = next_level_for_lesson_extras(user)
-    next_level ? next_level.lesson.relative_position : nil
+    next_level&.lesson&.relative_position
   end
 
   # Updates this lesson's lesson_activities to match the activities represented
@@ -631,13 +633,13 @@ class Lesson < ApplicationRecord
   def update_objectives(objectives)
     return unless objectives
 
-    self.objectives = objectives.map do |objective|
+    self.objectives = objectives.filter_map do |objective|
       next nil if objective['description'].blank?
       persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
-    end.compact
+    end
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to
@@ -711,7 +713,7 @@ class Lesson < ApplicationRecord
   end
 
   def related_csf_lessons
-    # because curriculum umbrella is stored on the Script model, take a big
+    # because curriculum umbrella is stored on the Unit model, take a big
     # shortcut and look only at curriculum umbrella, ignoring course version
     # and course offering. In the future, when curriulum_umbrella moves to
     # CourseOffering, this implementation will need to change to be more like
@@ -777,7 +779,7 @@ class Lesson < ApplicationRecord
     destination_lesson_group = destination_unit.lesson_groups.last
     unless destination_lesson_group
       destination_lesson_group = LessonGroup.create!(script: destination_unit, position: 1, user_facing: false, key: 'new-lesson-group')
-      Script.merge_and_write_i18n(destination_lesson_group.i18n_hash, destination_unit.name)
+      Unit.merge_and_write_i18n(destination_lesson_group.i18n_hash, destination_unit.name)
     end
     copied_lesson.lesson_group_id = destination_lesson_group.id
 
@@ -891,12 +893,10 @@ class Lesson < ApplicationRecord
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
   end
 
-  private
-
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
   # @param activity [Hash]
   # @returns [LessonActivity]
-  def fetch_activity(activity)
+  private def fetch_activity(activity)
     if activity['id']
       lesson_activity = lesson_activities.find(activity['id'])
       return lesson_activity if lesson_activity

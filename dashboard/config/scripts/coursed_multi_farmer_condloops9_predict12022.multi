@@ -8,3 +8,5 @@ markdown <<MARKDOWN
 The sprouts in this puzzle will be either corn or lettuce.
 <br/>
 MARKDOWN
+
+allow_multiple_attempts false

@@ -87,7 +87,7 @@ module BrowserHelpers
   def element_has_css_multiple_properties(selector, properties, expected_value)
     expected = false
     properties.each do |property|
-      expected ||= (element_css_value(selector, property) === (expected_value))
+      expected ||= (element_css_value(selector, property) == (expected_value))
     end
     expected
   end
@@ -117,8 +117,8 @@ module BrowserHelpers
       JS
       )
     end
-  rescue => err
-    puts "DEBUG: Unable to install js error recorder; #{err}"
+  rescue => exception
+    puts "DEBUG: Unable to install js error recorder; #{exception}"
   end
 
   def check_window_for_js_errors(check_reason_description)
@@ -132,13 +132,13 @@ module BrowserHelpers
         end
       end
     end
-  rescue => err
+  rescue => exception
     # We're not currently failing any tests based on JS errors showing up, so
     # this is just a debugging tool.
     # We're getting intermittent timing errors that have to do with SauceLabs
     # going away before we can check for JS errors.
     # We don't want that to cause test runs to fail, so ignore exceptions for now.
-    puts "DEBUG: Unable to check window for JS errors; #{err}"
+    puts "DEBUG: Unable to check window for JS errors; #{exception}"
   end
 
   def wait

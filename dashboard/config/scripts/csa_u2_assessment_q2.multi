@@ -33,3 +33,5 @@ III. “true”
 IV. false
 
 MARKDOWN
+
+allow_multiple_attempts true

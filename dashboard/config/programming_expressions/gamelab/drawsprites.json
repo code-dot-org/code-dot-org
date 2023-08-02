@@ -34,5 +34,5 @@
   ],
   "return_value": "No return value. Changes output to the display only.",
   "short_description": "Displays a group of sprites. If no parameter is specified, draws all sprites in the sketch. ",
-  "syntax": "drawSprites(group)"
+  "syntax": "drawSprites()"
 }

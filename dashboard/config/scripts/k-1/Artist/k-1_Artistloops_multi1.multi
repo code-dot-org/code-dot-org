@@ -8,3 +8,5 @@ wrong '/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a1.png'
 wrong '/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a2.png'
 right '/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a3.png'
 wrong '/script_assets/k_1_images/artist_images/K-1_artistloops_multi_1_a4.png'
+
+allow_multiple_attempts true

@@ -14,7 +14,7 @@ const BorderedCallToAction = ({
   buttonClass,
   buttonColor,
   onClick,
-  solidBorder
+  solidBorder,
 }) => {
   if (!buttonUrl && !onClick) {
     throw new Error('Expect at least one of buttonUrl / onClick');
@@ -40,7 +40,7 @@ const BorderedCallToAction = ({
 };
 
 BorderedCallToAction.defaultProps = {
-  buttonColor: Button.ButtonColor.gray
+  buttonColor: Button.ButtonColor.brandSecondaryDefault,
 };
 
 BorderedCallToAction.propTypes = {
@@ -52,7 +52,7 @@ BorderedCallToAction.propTypes = {
   buttonClass: PropTypes.string,
   buttonColor: PropTypes.oneOf(Object.keys(Button.ButtonColor)),
   onClick: PropTypes.func,
-  solidBorder: PropTypes.bool
+  solidBorder: PropTypes.bool,
 };
 
 const extraSpace = 25;
@@ -61,45 +61,45 @@ const styles = {
   outerBox: {
     width: styleConstants['content-width'],
     backgroundColor: color.white,
-    borderColor: color.border_gray,
+    borderColor: color.neutral_dark20,
     boxSizing: 'border-box',
     marginBottom: 20,
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   solidBorder: {
     borderStyle: 'solid',
-    borderWidth: 1
+    borderWidth: 1,
   },
   dashedBorder: {
     borderStyle: 'dashed',
-    borderWidth: 5
+    borderWidth: 5,
   },
   wordBox: {
     paddingLeft: extraSpace,
-    paddingRight: extraSpace
+    paddingRight: extraSpace,
   },
   heading: {
     fontSize: 20,
     fontFamily: 'Gotham 5r',
     fontWeight: 'bold',
-    color: color.teal,
-    paddingTop: extraSpace
+    color: color.neutral_dark,
+    paddingTop: extraSpace,
   },
   description: {
     fontSize: 14,
-    color: color.charcoal,
+    color: color.neutral_dark,
     paddingTop: 5,
-    paddingBottom: extraSpace
+    paddingBottom: extraSpace,
   },
   button: {
     flexShrink: 0,
     marginLeft: extraSpace,
     marginRight: extraSpace,
-    paddingLeft: extraSpace,
-    paddingRight: extraSpace
-  }
+    paddingLeft: 16,
+    paddingRight: 16,
+  },
 };
 
 export default BorderedCallToAction;

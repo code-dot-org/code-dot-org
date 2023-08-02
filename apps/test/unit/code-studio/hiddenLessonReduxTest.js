@@ -10,18 +10,18 @@ import reducer, {
   isLessonHiddenForSection,
   isScriptHiddenForSection,
   initializeHiddenScripts,
-  STUDENT_SECTION_ID
+  STUDENT_SECTION_ID,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {
   stubRedux,
   restoreRedux,
   registerReducers,
-  getStore
+  getStore,
 } from '@cdo/apps/redux';
 
 function fakeLessonLockReducer(state, action) {
   return {
-    selectedSection: 1
+    selectedSection: 1,
   };
 }
 
@@ -44,7 +44,7 @@ describe('hiddenLessonRedux', () => {
       stubRedux();
       registerReducers({
         hiddenLesson: reducerSpy,
-        lessonLock: fakeLessonLockReducer
+        lessonLock: fakeLessonLockReducer,
       });
       store = getStore();
     });
@@ -61,7 +61,7 @@ describe('hiddenLessonRedux', () => {
         hiddenLessonsInitialized: false,
         hideableLessonsAllowed: false,
         lessonsBySection: {},
-        scriptsBySection: {}
+        scriptsBySection: {},
       });
 
       const action = getHiddenLessons('scriptName', true);
@@ -80,10 +80,10 @@ describe('hiddenLessonRedux', () => {
         lessonsBySection: {
           STUDENT: {
             123: true,
-            456: true
-          }
+            456: true,
+          },
         },
-        scriptsBySection: {}
+        scriptsBySection: {},
       });
     });
 
@@ -93,7 +93,7 @@ describe('hiddenLessonRedux', () => {
         hiddenLessonsInitialized: false,
         hideableLessonsAllowed: false,
         lessonsBySection: {},
-        scriptsBySection: {}
+        scriptsBySection: {},
       });
 
       const action = getHiddenLessons('scriptName', true);
@@ -104,7 +104,7 @@ describe('hiddenLessonRedux', () => {
         {'Content-Type': 'application/json'},
         JSON.stringify({
           10: [123, 456],
-          11: [123]
+          11: [123],
         })
       );
 
@@ -115,13 +115,13 @@ describe('hiddenLessonRedux', () => {
         lessonsBySection: {
           10: {
             123: true,
-            456: true
+            456: true,
           },
           11: {
-            123: true
-          }
+            123: true,
+          },
         },
-        scriptsBySection: {}
+        scriptsBySection: {},
       });
     });
 
@@ -131,7 +131,7 @@ describe('hiddenLessonRedux', () => {
         hiddenLessonsInitialized: false,
         hideableLessonsAllowed: false,
         lessonsBySection: {},
-        scriptsBySection: {}
+        scriptsBySection: {},
       });
 
       const action = getHiddenLessons('scriptName', true);
@@ -148,7 +148,7 @@ describe('hiddenLessonRedux', () => {
         hiddenLessonsInitialized: true,
         hideableLessonsAllowed: true,
         lessonsBySection: {},
-        scriptsBySection: {}
+        scriptsBySection: {},
       });
     });
 
@@ -158,7 +158,7 @@ describe('hiddenLessonRedux', () => {
         hiddenLessonsInitialized: false,
         hideableLessonsAllowed: false,
         lessonsBySection: {},
-        scriptsBySection: {}
+        scriptsBySection: {},
       });
 
       let action, nextState;
@@ -172,10 +172,10 @@ describe('hiddenLessonRedux', () => {
         hideableLessonsAllowed: false,
         lessonsBySection: {
           10: {
-            123: true
-          }
+            123: true,
+          },
         },
-        scriptsBySection: {}
+        scriptsBySection: {},
       });
 
       // hide the same lesson in a different section
@@ -187,13 +187,13 @@ describe('hiddenLessonRedux', () => {
         hideableLessonsAllowed: false,
         lessonsBySection: {
           10: {
-            123: true
+            123: true,
           },
           11: {
-            123: true
-          }
+            123: true,
+          },
         },
-        scriptsBySection: {}
+        scriptsBySection: {},
       });
 
       // unhide the lesson in one section
@@ -205,13 +205,13 @@ describe('hiddenLessonRedux', () => {
         hideableLessonsAllowed: false,
         lessonsBySection: {
           10: {
-            123: false
+            123: false,
           },
           11: {
-            123: true
-          }
+            123: true,
+          },
         },
-        scriptsBySection: {}
+        scriptsBySection: {},
       });
 
       // hide another lesson
@@ -224,13 +224,13 @@ describe('hiddenLessonRedux', () => {
         lessonsBySection: {
           10: {
             123: false,
-            345: true
+            345: true,
           },
           11: {
-            123: true
-          }
+            123: true,
+          },
         },
-        scriptsBySection: {}
+        scriptsBySection: {},
       });
     });
 
@@ -308,8 +308,8 @@ describe('hiddenLessonRedux', () => {
 
       it('dispatches for each section/script for teachers', () => {
         const data = {
-          '123': ['1', '2'],
-          '456': ['3']
+          123: ['1', '2'],
+          456: ['3'],
         };
         initializeHiddenScripts(data)(dispatch);
         assert.deepEqual(

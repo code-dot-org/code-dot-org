@@ -19,19 +19,19 @@ class SetupAllAndTeardownAllTest < ActiveSupport::TestCase
     assert_equal %w(foo bar baz qux quux bar baz), @called_back
   end
 
-  private
-
   %w(foo bar baz qux quux garply).each do |method|
     define_method(method) do
       @called_back << method
     end
+
+    private method
   end
 
-  def reset_callback_record
+  private def reset_callback_record
     @called_back = []
   end
 
-  def sentinel
+  private def sentinel
     assert_equal %w(foo bar baz qux quux bar baz qux quux garply), @called_back
   end
 end

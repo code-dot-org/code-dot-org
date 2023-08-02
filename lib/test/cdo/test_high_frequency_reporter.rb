@@ -23,7 +23,7 @@ class HighFrequencyReporterTest < MiniTest::Test
 
       # The second time the same error occurs, it should be reported
       # to Slack.  We add a mock expectation to check that.
-      fake_slack.expect :message, nil, [String, Hash]
+      fake_slack.expect(:message, nil, [String], params: Hash)
       reporter = HighFrequencyReporter.new(fake_slack, 'fake_channel', f.path)
       reporter.load
       reporter.record "Something happened"
@@ -50,7 +50,7 @@ class HighFrequencyReporterTest < MiniTest::Test
         reporter.load # Load "old events" to "new events"
         reporter.record "Something happened"
 
-        fake_slack.expect :message, nil, [String, Hash]
+        fake_slack.expect(:message, nil, [String], params: Hash)
         reporter.report! 5
         fake_slack.verify # message was sent
       end

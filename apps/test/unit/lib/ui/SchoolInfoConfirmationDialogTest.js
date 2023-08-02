@@ -12,9 +12,9 @@ describe('SchoolInfoConfirmationDialog', () => {
       formUrl: '',
       authTokenName: 'auth_token',
       authTokenValue: 'fake_auth_token',
-      existingSchoolInfo: {}
+      existingSchoolInfo: {},
     },
-    onClose: function() {}
+    onClose: function () {},
   };
 
   it('renders the schoolinfointerstitial form', () => {
@@ -24,8 +24,8 @@ describe('SchoolInfoConfirmationDialog', () => {
         scriptData={{
           ...MINIMUM_PROPS.scriptData,
           existingSchoolInfo: {
-            country: 'US'
-          }
+            country: 'US',
+          },
         }}
       />
     );
@@ -41,8 +41,8 @@ describe('SchoolInfoConfirmationDialog', () => {
         scriptData={{
           ...MINIMUM_PROPS.scriptData,
           existingSchoolInfo: {
-            country: 'US'
-          }
+            country: 'US',
+          },
         }}
       />
     );
@@ -57,8 +57,8 @@ describe('SchoolInfoConfirmationDialog', () => {
         scriptData={{
           ...MINIMUM_PROPS.scriptData,
           existingSchoolInfo: {
-            country: 'US'
-          }
+            country: 'US',
+          },
         }}
       />
     );
@@ -91,8 +91,8 @@ describe('SchoolInfoConfirmationDialog', () => {
           scriptData={{
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
-              country: 'US'
-            }
+              country: 'US',
+            },
           }}
           onClose={onClose}
           isOpen={true}
@@ -138,8 +138,8 @@ describe('SchoolInfoConfirmationDialog', () => {
           scriptData={{
             ...MINIMUM_PROPS.scriptData,
             existingSchoolInfo: {
-              country: 'US'
-            }
+              country: 'US',
+            },
           }}
           onClose={onClose}
           isOpen={true}

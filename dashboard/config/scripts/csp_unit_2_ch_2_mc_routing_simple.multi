@@ -14,3 +14,5 @@ right 'Routers act independently and route packets as they see fit. '
 teacher_markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

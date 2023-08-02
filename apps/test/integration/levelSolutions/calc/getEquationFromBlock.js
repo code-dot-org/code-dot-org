@@ -34,7 +34,7 @@ function validateGeneratedEquation(
 ) {
   blockIndex = blockIndex || 0;
   // Clear existing blocks
-  Blockly.mainBlockSpace.getTopBlocks().forEach(function(b) {
+  Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) {
     // use b.blockSpace as an indicator for whether block has already
     // been disposed
     if (b.blockSpace) {
@@ -69,18 +69,18 @@ module.exports = {
   levelDefinition: {
     solutionBlocks: '',
     requiredBlocks: '',
-    freePlay: true
+    freePlay: true,
   },
   tests: [
     {
       description: 'getEquationFromBlock',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
       // Run all validation in a single test to avoid the overhead of new node
       // processes
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         validateGeneratedEquation(
           assert,
           blockUtils.calcBlockXml('functional_plus', [1, 2]),
@@ -139,7 +139,7 @@ module.exports = {
         validateGeneratedEquation(
           assert,
           blockUtils.mathBlockXml('functional_math_number_dropdown', null, {
-            NUM: 1
+            NUM: 1,
           }),
           new Equation(null, [], new ExpressionNode(1))
         );
@@ -148,7 +148,7 @@ module.exports = {
         validateGeneratedEquation(
           assert,
           blockUtils.mathBlockXml('functional_math_number_dropdown', null, {
-            NUM: '???'
+            NUM: '???',
           }),
           new Equation(null, [], new ExpressionNode(0))
         );
@@ -257,7 +257,7 @@ module.exports = {
 
         return true;
       },
-      xml: ''
-    }
-  ]
+      xml: '',
+    },
+  ],
 };

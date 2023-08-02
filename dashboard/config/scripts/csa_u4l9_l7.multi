@@ -34,3 +34,4 @@ right 'O'
 wrong 'D'
 wrong 'E'
 wrong 'Nothing is printed.'
+allow_multiple_attempts true

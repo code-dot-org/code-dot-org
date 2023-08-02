@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2017-09-20T16:54:44.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Free Response: Why Limit to 4 Commands?",
     "long_instructions": "In this lesson we solved a series of problems with a limited set of commands (only 2). Give at least one reason why it's useful to learn how to solve and program solutions with a limited set of commands.\r\n\r\nIn this lesson we solved a series of problems using the `Move turtle` and `Orient turtle` subgoals. Give at least one reason that breaking problems down into subgoals is a good approach to solving problems.",
@@ -13,8 +9,13 @@
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
-    "peer_reviewable": "false"
+    "peer_reviewable": "false",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2017-09-20T16:54:44.000Z",
+  "user_id": 0,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-09-20 16:54:53 +0000\",\"changed\":[\"notes\",\"markdown_instructions\",\"encrypted_solution\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"},{\"changed_at\":\"2017-10-02 17:10:50 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-02 17:11:21 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-09 16:24:08 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":743,\"changed_by_email\":\"kvenkatesh@unomaha.edu\"},{\"changed_at\":\"2017-10-09 21:27:07 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":726,\"changed_by_email\":\"bbmorrison@unomaha.edu\"}]",

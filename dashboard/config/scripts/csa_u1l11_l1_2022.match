@@ -14,3 +14,4 @@ answer 'getting the best outcome with the least amount of waste'
 
 question 'concatenation'
 answer 'joining two strings together'
+allow_multiple_attempts true

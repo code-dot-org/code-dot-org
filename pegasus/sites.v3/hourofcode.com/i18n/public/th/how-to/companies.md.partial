@@ -16,23 +16,37 @@ nav: how_to_nav
 
 ในช่วงแคมเปญ Hour of Code นั้นบริษัทของคุณจะสามารถช่วยเพิ่มความสนใจในด้านวิทยาการคอมพิวเตอร์ได้ ไม่ว่าคุณจะเป็นอาสาสมัครแบบบุคคลธรรมดาหรือวางแผนอีเวนต์สำหรับบริษัทของตัวเองก็ตามแต่ ความตั้งใจที่คุณมีนั้นก็สามารถสร้างการเปลี่ยนแปลงครั้งยิ่งใหญ่ต่อความคิดเห็นในด้านวิทยาการคอมพิวเตอร์และศักยภาพของตนเองของเยาวชนหญิงและนักเรียนที่ถูกแบ่งแยกได้
 
-Check out the steps below to get started, and see our [guide for corporate partners](/files/hoc-corporate-toolkit.pdf) for more on how to get your company excited about the Hour of Code.
+ดูขั้นตอนด้านล่างเพื่อเริ่มต้น และดู[คู่มือสำหรับพันธมิตรองค์กร](/files/hoc-corporate-toolkit.pdf)ของเรา สำหรับข้อมูลเพิ่มเติมเกี่ยวกับวิธีที่ทำให้บริษัทของคุณสนุกไปกับ Hour of Code
 
-- [ส่งเสริมให้พนักงานเป็นอาสาสมัครในชั้นเรียน](#encourage-employees)
-- [เชื่อมต่อบริษัทของคุณกับโรงเรียน](#connect-with-a-school)
+- [Connect with a local school](#connect-with-a-school)
+- [Encourage employees to volunteer with a classroom](#encourage-employees)
 - [เป็นผู้จัดอีเวนต์ Hour of Code](#host-hour-of-code)
 - [โปรโมทกิจกรรมชั่วโมงเขียนโค้ด](#promote-hour-of-code)
 - [อีกหลากหลายวิธีในการสนับสนุน Hour of Code](#support-hour-of-code)
 
 * * *
 
+<a id="connect-with-a-school"></a>
+
+## Connect with a local school
+
+It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+
+[![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
+
+From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+
+If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+
+* * *
+
 <a id="encourage-employees"></a>
 
-## ส่งเสริมให้พนักงานเป็นอาสาสมัครในชั้นเรียน
+## Encourage employees to volunteer with a classroom
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology have impacted your role.
+One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
 
 [<button>ลงทะเบียนเป็นอาสาสมัคร</button>]({{ urls/volunteer }})
 
@@ -42,23 +56,9 @@ For more guidance on volunteering and sample messaging to get your company excit
 
 * * *
 
-<a id="connect-with-a-school"></a>
-
-## เชื่อมต่อบริษัทของคุณกับโรงเรียน
-
-You don’t have to use our volunteer map in order to connect with a classroom or school. Oftentimes, we recommend starting locally. Consider if there are schools that you or your employees have a strong connection to such as an alma mater, a child’s school, or an organization or school that is focused on serving a population that has been historically underrepresented in computer science.
-
-[![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
-
-From there, you can visit the school’s website to find appropriate contacts to reach out to such as administrators like a Principal or Vice Principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
-
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
-
-* * *
-
 <h4><font color="00adbc"><i>"ฉันชอบมากที่ได้เห็นว่าเด็กๆตื่นเต้นขนาดไหน สิ่งที่น่าสนใจคือครูผู้สอนทั้งหลายจะเห็นได้ว่านักเรียนที่ไม่ถนัดด้านวิชาการมักจะมีความคิดอย่างนักพัฒนาและเก่งในด้านช่วยเหลือผู้อื่นซึ่งนั่นเป็นสิ่งที่ทำให้พวกเขามั่นใจ"</i></font></h4>
 
--Hour of Code volunteer
+- อาสาสมัครใน Hour of Code
 
 * * *
 
@@ -66,7 +66,7 @@ If you are unable to connect with a school, please [contact us](https://support.
 
 ## เป็นผู้จัดอีเวนต์ Hour of Code
 
-If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+หากคุณต้องการเพิ่มระยะทางในถนนเส้นนี้ให้ยาวออกไปอีก บริษัทของคุณก็สามารถจัดกิจกรรม Hour of Code เองได้อีกด้วย การจัดกิจกรรมนั้นไม่มีสูตรตายตัว ดังนั้นความคิดสร้างสรรค์ถือเป็นกุญแจสำคัญ! เนื่องด้วยเรามีจำนวนพนักงานน้อย (แต่ทรงพลัง!) Code.org จึงยังไม่มีทีมที่ประสานงานด้านการจัดกิจกรรม Hour of Code โดยตรง อย่างไรก็ตาม นี่คือเคล็ดลับเล็กๆ น้อยๆ เพื่อใช้ในการเริ่มต้น
 
 ### 1. ดูวิดีโอวิธีการสอนนี้ <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
@@ -78,14 +78,14 @@ If you want to go the extra mile, your company can also host an Hour of Code eve
 
 #### ตัวอย่างกำหนดการ:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? อะไรหรือใครที่สร้างแรงบันดาลใจให้คุณ? คุณเริ่มสนใจในวิชาวิทยาการคอมพิวเตอร์ได้อย่างไร? คุณมีที่ปรึกษาหรือไม่? ถามคำถามนักเรียนและให้เวลาสำหรับการถาม-ตอบ | |30-60 minutes | Code! หากอีเวนต์ที่คุณเข้าร่วมเป็นแบบพบปะ นี่เป็นเวลาที่คุณจะต้องตอบคำถามและให้คำแนะนำนักเรียนในการแก้ปัญหายากๆ พยายามอย่าเฉลยวิธีการในทันที เเต่ลองถามคำถามนักเรียนเพื่อที่พวกเขาจะได้ตอบด้วยตัวเองว่ามีอะไรผิดปกติ และแนะนำให้นักเรียนปรึกษากันเมื่อมีคำถาม หากคุณเป็นอาสาสมัครแบบเสมือนจริง ให้ปรึกษากับครูเพื่อหาแนวทางที่ให้ผลลัพธ์ที่ดีที่สุด บางทีการกลับมาดูความคืบหน้าของสิ่งที่นักเรียนทำอีกครั้งหลังจากหมดเวลาก็อาจเป็นสิ่งที่เหมาะสม | | |1-3 นาที | กล่าวขอบคุณและกล่าวคำพูดสร้างแรงบันดาลใจเป็นการปิดท้าย แจกของที่ระลึกของบริษัท ([สติ๊กเกอร์](#celebrate) นั้นดีมาก)! | | <br />
+|เวลา | รายการแผนงาน | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 นาที | แสดง [วิดีโอสร้างแรงบันดาลใจ](https://hourofcode.com/us/promote/resources#videos)|  
+|5-10 นาที | แนะนำตัวและทำความรู้จักกับนักเรียน: คุณทำงานที่ไหน คุณทำงานอะไรและสิ่งที่คุณชอบที่สุดในการทำงานคืออะไร? อะไรหรือใครที่สร้างแรงบันดาลใจให้คุณ? คุณเริ่มสนใจในวิชาวิทยาการคอมพิวเตอร์ได้อย่างไร? คุณมีที่ปรึกษาหรือไม่? ถามคำถามนักเรียนและให้เวลาสำหรับการถาม-ตอบ | |30-60 นาที | โค้ด! หากอีเวนต์ที่คุณเข้าร่วมเป็นแบบพบปะ นี่เป็นเวลาที่คุณจะต้องตอบคำถามและให้คำแนะนำนักเรียนในการแก้ปัญหายากๆ พยายามอย่าเฉลยวิธีการในทันที เเต่ลองถามคำถามนักเรียนเพื่อที่พวกเขาจะได้ตอบด้วยตัวเองว่ามีอะไรผิดปกติ และแนะนำให้นักเรียนปรึกษากันเมื่อมีคำถาม หากคุณเป็นอาสาสมัครแบบเสมือนจริง ให้ปรึกษากับครูเพื่อหาแนวทางที่ให้ผลลัพธ์ที่ดีที่สุด บางทีการกลับมาดูความคืบหน้าของสิ่งที่นักเรียนทำอีกครั้งหลังจากหมดเวลาก็อาจเป็นสิ่งที่เหมาะสม | | |1-3 นาที | กล่าวขอบคุณและกล่าวคำพูดสร้างแรงบันดาลใจเป็นการปิดท้าย แจกของที่ระลึกของบริษัท ([สติ๊กเกอร์](#celebrate) นั้นดีมาก)! | | <br />
 
 #### ไอเดียอื่นๆเพื่อเพิ่มในอีเวนต์ของคุณ
 
 - อธิบายวิธีที่เทคโนโลยีส่งผลต่อชีวิตของเรา ด้วยตัวอย่างที่ทั้งเด็กผู้ชายและเด็กผู้หญิงจากภูมิหลังทุกแบบจะสนให้ความสนใจ - พูดถึงเทคโนโลยีที่ช่วยชีวิต, ช่วยเหลือคน, เชื่อมต่อผู้คน
 - หากว่าคุณเป็นบริษัทที่ดำเนินงานด้านเทคโนโลยี ให้กล่าวถึงความสนุกในการทดลองหรือผลิตภัณฑ์นวัตกรรมที่บริษัทกำลังทำอยู่ แต่หากไม่ใช่บริษัทเกี่ยวกับเทคโนโลยี ให้พูดคุยถึงวิธีที่บริษัทใช้เทคโนโลยีในการแก้ปัญหาและก้าวไปสู่เป้าหมาย
 - เชิญวิศวกรซอฟต์แวร์จากบริษัทของคุณมาพูดเกี่ยวกับว่าทำไมพวกเขาจึงตัดสินใจเรียนวิชาวิทยาการคอมพิวเตอร์ และพูดถึงโครงการที่พวกเขากำลังทำอยู่
-- หากคุณมีกลุ่มพนักงานผู้ที่ต้องทำงานในอีเวนต์หรือเป็นอาสาสมัครที่โรงเรียนในท้องถิ่น เราขอแนะนำ [เสื้อยืดทีม](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) สำหรับพนักงาน
 
 ### 3. วางแผนเกี่ยวกับเทคโนโลยีที่จำเป็น
 
@@ -124,7 +124,7 @@ If you want to go the extra mile, your company can also host an Hour of Code eve
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
 - [พิมพ์ "สติ๊กเกอร์ฉันจบหลักสูตร Hour of Code!"]({{ promote/resources_stickers }}) หรือทำรางวัลและแจกใน [Code.org Amazon Store](https://code.org/shop)
-- Share photos and videos of your Hour of Code event on social media. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- Share photos and videos of your Hour of Code event on social media. ใช้ [#HourOfCode](https://twitter.com/hashtag/hourofcode) และ [@codeorg](https://twitter.com/codeorg) เพื่อให้เราสามารถเน้นย้ำความสำเร็จของคุณได้เช่นกัน!
 
 * * *
 
@@ -138,7 +138,7 @@ If you want to go the extra mile, your company can also host an Hour of Code eve
 
 ### 1. ลงทะเบียนอีเวนต์
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. นอกจากนี้ คุณยังสามารถประชาสัมพันธ์ให้โรงเรียนหรือผู้ปกครองที่คุณรู้จักได้ทราบว่าคุณกำลังจะจัดอีเวนต์ซึ่งอยู่ไม่ไกล
+เมื่อคุณ [ ลงทะเบียนกิจกรรม Hour of Code](/#join) คุณจะได้รับการสื่อสารที่เป็นประโยชน์ทางอีเมลพร้อมข่าวสารและเคล็ดลับสำหรับการจัดงาน Hour of Code ที่ประสบความสำเร็จ นอกจากนี้ คุณยังสามารถประชาสัมพันธ์ให้โรงเรียนหรือผู้ปกครองที่คุณรู้จักได้ทราบว่าคุณกำลังจะจัดอีเวนต์ซึ่งอยู่ไม่ไกล
 
 ### 2. โพสต์ลงบนโซเชียลมีเดีย
 
@@ -151,7 +151,7 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 
 #### สถิติ
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
+- คุณทราบหรือไม่ว่า ในอเมริกานั้นมีโรงเรียนเพียง 53% เท่านั้นที่สอนเรื่องวิทยาการคอมพิวเตอร์? เปิดโอกาสให้นักเรียนทุกคนได้เรียนรู้สิ่งนี้ #HourOfCode https://hourofcode.com/
 - ในอเมริกา มีผู้หญิงที่ทำอาชีพด้านซอฟต์แวร์เพียง 26% เท่านั้น แนะนำเยาวชนหญิงให้รู้จักกับวิทยาการคอมพิวเตอร์ด้วย #HourOfCode https://hourofcode.com/
 - งานด้านคอมพิวเตอร์ในอเมริกากว่า 67% นั้นไม่ได้อยู่ในส่วนของเทคโนโลยี ช่วยจัดความรู้ด้านวิทยาการคอมพิวเตอร์ให้อยู่ในหลักสูตรมาตรฐานไปกับ #HourOfCode https://hourofcode.com/
 
@@ -165,7 +165,7 @@ When you [sign up your Hour of Code event](/#join), you’ll receive helpful ema
 - หากโค้ดบรรทัดแรกเคยเปลี่ยนแปลงชีวิตคุณมาแล้ว โปรดช่วยนักเรียนรอบๆตัวคุณเขียนโค้ดแรกของตัวเองใน #HourOfCode https://code.org/volunteer
 - ถ้าคุณเคยเรียนเขียนโค้ด คุณมีเรื่องเล่าไหม? เติมแรงบันดาลใจให้นักเรียนรอบตัวคุณผ่านการเขียนโค้ดตัวแรกใน #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">เรียนรู้เพิ่มเติม</a> เกี่ยวกับโปสเตอร์ วิดีโอ สติ๊กเกอร์และวิธีอื่นๆที่ใช้ในการประชาสัมพันธ์อีเวนต์ของคุณให้ชุมชนทราบ
+<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
 
 * * *
 

@@ -15,11 +15,12 @@ export default function EmbeddedBlock({blockName, link, ariaLabel}) {
         blocksDom,
         {
           noScrolling: true,
-          inline: true
+          inline: true,
         }
       );
       shrinkBlockSpaceContainer(blockSpace, true);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [blockRef]);
 
   return (
@@ -39,5 +40,5 @@ export default function EmbeddedBlock({blockName, link, ariaLabel}) {
 EmbeddedBlock.propTypes = {
   blockName: PropTypes.string.isRequired,
   link: PropTypes.string,
-  ariaLabel: PropTypes.string
+  ariaLabel: PropTypes.string,
 };

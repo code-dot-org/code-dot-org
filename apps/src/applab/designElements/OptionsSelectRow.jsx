@@ -6,7 +6,7 @@ export default class OptionsSelectRow extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLSelectElement).isRequired,
     handleChange: PropTypes.func,
-    desc: PropTypes.node
+    desc: PropTypes.node,
   };
 
   constructor(props) {
@@ -24,7 +24,7 @@ export default class OptionsSelectRow extends React.Component {
   handleChangeInternal = event => {
     const value = event.target.value;
     // Extract an array of text values, 1 per line
-    const optionList = value.split('\n').filter(function(val) {
+    const optionList = value.split('\n').filter(function (val) {
       return val !== '';
     });
     this.props.handleChange(optionList);
@@ -33,7 +33,7 @@ export default class OptionsSelectRow extends React.Component {
 
   render() {
     const textAreaStyle = Object.assign({}, rowStyle.input, {
-      height: 40
+      height: 40,
     });
     return (
       <div style={rowStyle.container}>

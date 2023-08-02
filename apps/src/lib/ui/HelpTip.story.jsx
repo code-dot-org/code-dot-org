@@ -3,7 +3,7 @@ import HelpTip from './HelpTip';
 
 export default {
   title: 'HelpTip',
-  component: HelpTip
+  component: HelpTip,
 };
 
 //

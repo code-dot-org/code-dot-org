@@ -38,6 +38,7 @@ class Level < ApplicationRecord
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
+  has_many :rubrics, dependent: :destroy
 
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
@@ -91,6 +92,7 @@ class Level < ApplicationRecord
     teacher_markdown
     bubble_choice_description
     thumbnail_url
+    start_html
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -303,7 +305,7 @@ class Level < ApplicationRecord
 
   def filter_level_attributes(level_hash)
     %w(name id updated_at type solution_level_source_id ideal_level_source_id md5).each {|field| level_hash.delete field}
-    level_hash.reject! {|_, v| v.nil?}
+    level_hash.compact!
     level_hash
   end
 
@@ -326,6 +328,7 @@ class Level < ApplicationRecord
   end
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
+    'Aichat', # no ideal solution
     'Ailab', # no ideal solution
     'Applab', # freeplay
     'Bounce', # no ideal solution
@@ -348,6 +351,7 @@ class Level < ApplicationRecord
     'Map', # no user submitted content
     'Match', # dsl defined, covered in dsl
     'Multi', # dsl defined, covered in dsl
+    'Music', # no ideal solution
     'BubbleChoice', # dsl defined, covered in dsl
     'NetSim', # widget
     'Odometer', # widget
@@ -380,7 +384,7 @@ class Level < ApplicationRecord
 
   def self.where_we_want_to_calculate_ideal_level_source
     where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
-    where('ideal_level_source_id is null').
+    where(ideal_level_source_id: nil).
     to_a.reject {|level| level.try(:free_play)}
   end
 
@@ -435,8 +439,8 @@ class Level < ApplicationRecord
 
   def reject_illegal_chars
     if name&.match /[^A-Za-z0-9 !"&'()+,\-.:=?_|]/
-      msg = "\"#{name}\" may only contain letters, numbers, spaces, "\
-      "and the following characters: !\"&'()+,\-.:=?_|"
+      msg = "\"#{name}\" may only contain letters, numbers, spaces, " \
+      "and the following characters: !\"&'()+,-.:=?_|"
       errors.add(:name, msg)
     end
   end
@@ -492,7 +496,7 @@ class Level < ApplicationRecord
   end
 
   def self.cache_find(id)
-    Script.cache_find_level(id)
+    Unit.cache_find_level(id)
   end
 
   def icon
@@ -609,6 +613,10 @@ class Level < ApplicationRecord
     false
   end
 
+  def uses_lab2?
+    false
+  end
+
   # Create a copy of this level named new_name
   # @param [String] new_name
   # @param [String] editor_experiment
@@ -679,8 +687,8 @@ class Level < ApplicationRecord
       level.save!
 
       level
-    rescue Exception => e
-      raise e, "Failed to clone Level #{name.inspect} as #{new_name.inspect}. Message:\n#{e.message}", e.backtrace
+    rescue Exception => exception
+      raise exception, "Failed to clone Level #{name.inspect} as #{new_name.inspect}. Message:\n#{exception.message}", exception.backtrace
     end
   end
 
@@ -742,7 +750,7 @@ class Level < ApplicationRecord
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
   def hint_prompt_enabled?
-    script_levels.map(&:script).select(&:hint_prompt_enabled?).any?
+    script_levels.map(&:script).any?(&:hint_prompt_enabled?)
   end
 
   # Define search filter fields
@@ -754,7 +762,7 @@ class Level < ApplicationRecord
       ],
       scriptOptions: [
         ['All scripts', ''],
-        *Script.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
+        *Unit.all_scripts.pluck(:name, :id).sort_by {|a| a[0]}
       ],
       ownerOptions: [
         ['Any owner', ''],
@@ -797,12 +805,28 @@ class Level < ApplicationRecord
     }
   end
 
-  private
+  # Summarize the properties for a lab2 level.
+  # Called by ScriptLevelsController.level_properties.
+  # These properties are usually just the serialized properties for
+  # the level, which usually include levelData.  If this level is a
+  # StandaloneVideo then we put its properties into levelData.
+  def summarize_for_lab2_properties
+    video = specified_autoplay_video&.summarize(false)&.camelize_keys
+    properties_camelized = properties.camelize_keys
+    properties_camelized[:levelData] = video if video
+    properties_camelized[:type] = type
+    properties_camelized[:appName] = game&.app
+    properties_camelized
+  end
+
+  def project_type
+    return game&.app
+  end
 
   # Returns the level name, removing the name_suffix first (if present), and
   # also removing any additional suffixes of the format "_NNNN" which might
   # represent a version year.
-  def base_name
+  private def base_name
     base_name = name
     if name_suffix
       strip_suffix_regex = /^(.*)#{Regexp.escape(name_suffix)}$/
@@ -814,7 +838,7 @@ class Level < ApplicationRecord
 
   # repeatedly strip any version year suffix of the form _NNNN or -NNNN ()e.g. _2017 or -2017)
   # from the input string.
-  def strip_version_year_suffixes(str)
+  private def strip_version_year_suffixes(str)
     year_suffix_regex = /^(.*)[_-][0-9]{4}$/
     loop do
       matchdata = str.match(year_suffix_regex)
@@ -824,7 +848,7 @@ class Level < ApplicationRecord
     str
   end
 
-  def write_to_file?
+  private def write_to_file?
     custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
   end
 end

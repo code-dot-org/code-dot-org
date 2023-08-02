@@ -25,7 +25,7 @@ Ci sono innumerevoli <a href="https://hourofcode.com/us/learn">attività dell'Or
 Tutte le nostre attività integrano la risoluzione dei problemi e il pensiero critico con il divertimento e la creatività, ma ecco alcune preferite dagli studenti:
 
 - Per il bambino che ama giocare: <a href="https://code.org/minecraft">Minecraft</a> o <a href="https://code.org/dance">Dance Party</a>
-- Per il bambino che ama la Disney: <a href="https://code.org/starwars">Guerre stellari</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Frozen</a>, o <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Oceania</a>
+- Per il bambino che ama la Disney: <a href="https://code.org/starwars">Star Wars</a>, <a href="https://studio.code.org/s/frozen/stage/1/puzzle/1">Programma con Anna ed Elsa (Frozen)</a> o <a href="https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C">Oceania</a>
 - Per un bambino che ama imparare: <a href="https://code.org/oceans">L'Intelligenza Artificiale per il mare</a> o <a href="https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg">Crea musica con Scratch</a>
 
 <h3>Poca o nessuna tecnologia?</h3>
@@ -48,7 +48,7 @@ Se utilizzerai un solo dispositivo o se desideri semplicemente rendere la tua Or
 <h3>Emoziona e coinvolgi i ragazzi! </h3>
 Questa è una grande opportunità per aggiungere un nuovo tipo di attività alla giornata di tuo figlio. Puoi estendere il divertimento oltre un'esercitazione con questi suggerimenti:
 
-- Mostragli un <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">video ispiratore</a> che presenta uno dei loro modelli di ruolo preferiti
+- Mostragli un <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">video motivazionale</a> che presenta uno dei loro modelli di ruolo preferiti
 - Ispirali con un video su una delle <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">tante carriere</a> a cui le competenze informatiche possono  condurre
 - <a href="https://store.code.org/">Ordina un po' di gadget</a>! Puoi scegliere tra magliette, adesivi o persino tatuaggi temporanei. Condividili subito con loro per entusiasmarli o salvali per la fine della tua Ora del Codice come premio speciale.
 

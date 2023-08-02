@@ -39,9 +39,11 @@
     = render partial: 'levels/editors/gamelab', locals: {f: f} if @level.instance_of?(Gamelab)
     = render partial: 'levels/editors/spritelab', locals: {f: f} if @level.instance_of?(GamelabJr)
     = render partial: 'levels/editors/weblab', locals: {f: f} if @level.is_a? Weblab
+    = render partial: 'levels/editors/aichat', locals: {f: f} if @level.is_a? Aichat
     = render partial: 'levels/editors/ailab', locals: {f: f} if @level.is_a? Ailab
     = render partial: 'levels/editors/javalab', locals: {f: f} if @level.is_a? Javalab
     = render partial: 'levels/editors/poetry', locals: {f: f} if @level.is_a? Poetry
+    = render partial: 'levels/editors/music', locals: {f: f} if @level.is_a? Music
     -# Widgets
     = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
@@ -65,7 +67,11 @@
   .actions{style: "position: fixed; bottom: 0px; width: 100%; background-color: rgb(231, 232, 234); left: 0px; z-index: 900; display: flex; justify-content: flex-end; margin: 0px; align-items: center"}
     %span.publishLevelErrorMessage{style: "display: none; color: red; margin-bottom: 10px; margin-right: 5px; line-height: 35px;"}
       = "There was an error - scroll to the bottom to see"
+    %div.resetLevel{:style => "height: 35px; margin: 15px"}
+      = label_tag 'reset', 'Reset version history when saving and loading level', {:style => "display: inline; margin-top: 4px"}
+      = check_box_tag 'reset'
     = f.submit 'Save and publish your completed work', {:class => 'publishLevel', :style => "background-color: #f0c14b; margin-bottom: 10px; height: 35px"}
+
     %div{style: "display: flex; flex-direction: column; padding: 10px 10px 0px 10px"}
       - if @in_script
         %p Or, save, publish, and return to:

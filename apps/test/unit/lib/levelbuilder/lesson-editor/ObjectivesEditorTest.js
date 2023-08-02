@@ -15,7 +15,7 @@ describe('ObjectivesEditor', () => {
     updateObjectives = sinon.spy();
     defaultProps = {
       objectives: [{key: '1', description: 'description'}],
-      updateObjectives
+      updateObjectives,
     };
   });
 
@@ -40,13 +40,13 @@ describe('ObjectivesEditor', () => {
     addObjectiveButton.simulate('mouseDown');
     expect(updateObjectives).to.have.been.calledWith([
       {description: 'description', key: '1'},
-      {description: '', key: 'objective-2'}
+      {description: '', key: 'objective-2'},
     ]);
     wrapper.setProps({
       objectives: [
         {description: 'description', key: '1'},
-        {description: '', key: 'objective-2'}
-      ]
+        {description: '', key: 'objective-2'},
+      ],
     });
 
     updateObjectives.resetHistory();
@@ -59,7 +59,7 @@ describe('ObjectivesEditor', () => {
     objectiveInput.simulate('keyDown', {key: 'Enter'});
     expect(updateObjectives).to.have.been.calledWith([
       {description: 'description', key: '1'},
-      {description: 'new description', key: 'objective-2'}
+      {description: 'new description', key: 'objective-2'},
     ]);
   });
 
@@ -69,13 +69,13 @@ describe('ObjectivesEditor', () => {
     addObjectiveButton.simulate('mouseDown');
     expect(updateObjectives).to.have.been.calledWith([
       {description: 'description', key: '1'},
-      {description: '', key: 'objective-2'}
+      {description: '', key: 'objective-2'},
     ]);
     wrapper.setProps({
       objectives: [
         {description: 'description', key: '1'},
-        {description: '', key: 'objective-2'}
-      ]
+        {description: '', key: 'objective-2'},
+      ],
     });
 
     updateObjectives.resetHistory();
@@ -86,7 +86,7 @@ describe('ObjectivesEditor', () => {
       .first();
     cancelEditButton.simulate('mouseDown');
     expect(updateObjectives).to.have.been.calledWith([
-      {description: 'description', key: '1'}
+      {description: 'description', key: '1'},
     ]);
   });
 });

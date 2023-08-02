@@ -2,7 +2,7 @@
  * Given a set of values (i.e. [1,2,3], and a number of parameters, generates
  * all possible combinations of values.
  */
-var InputIterator = function(values, numParams) {
+var InputIterator = function (values, numParams) {
   this.numParams_ = numParams;
   this.remaining_ = Math.pow(values.length, numParams);
   this.availableValues_ = values;
@@ -21,7 +21,7 @@ module.exports = InputIterator;
  * @returns {number[]} List of length numParams representing the next set of
  *   inputs.
  */
-InputIterator.prototype.next = function() {
+InputIterator.prototype.next = function () {
   if (this.remaining_ === 0) {
     throw new Error('empty');
   }
@@ -39,7 +39,7 @@ InputIterator.prototype.next = function() {
   } while (wrapped && paramNum < this.numParams_);
   this.remaining_--;
 
-  return this.indices_.map(function(index) {
+  return this.indices_.map(function (index) {
     return this.availableValues_[index];
   }, this);
 };
@@ -47,6 +47,6 @@ InputIterator.prototype.next = function() {
 /**
  * @returns How many permutations are left
  */
-InputIterator.prototype.remaining = function() {
+InputIterator.prototype.remaining = function () {
   return this.remaining_;
 };

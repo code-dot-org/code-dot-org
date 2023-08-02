@@ -13,3 +13,5 @@ answer 'A statement that selects a single action from three or more conditional 
 
 question 'Declaration'
 answer 'Giving a name and data type to a variable'
+
+allow_multiple_attempts true

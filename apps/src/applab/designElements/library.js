@@ -62,7 +62,7 @@ export default {
   // 3) Reload page, add another item, it gets item1
   // Seems a little like we should always get the lowest available (as in step 3)
   // or always get the next (as in step 2)
-  getUnusedElementId: function(prefix) {
+  getUnusedElementId: function (prefix) {
     var i = nextElementIdMap[prefix] || 1;
     while (elementUtils.getPrefixedElementById(prefix + i)) {
       i++;
@@ -75,7 +75,7 @@ export default {
    * Resets the next element id for all prefixes to be 1. Called after clearing
    * all design mode elements
    */
-  resetIds: function() {
+  resetIds: function () {
     nextElementIdMap = {};
   },
 
@@ -86,7 +86,7 @@ export default {
    * @param {number} top Position from top.
    * @param {boolean} [withoutId] If true, don't generate an id
    */
-  createElement: function(elementType, left, top, withoutId) {
+  createElement: function (elementType, left, top, withoutId) {
     var elementClass = elements[elementType];
     if (!elementClass) {
       throw new Error('Unknown elementType: ' + elementType);
@@ -112,11 +112,11 @@ export default {
     return element;
   },
 
-  getElementPropertyTab: function(elementType) {
+  getElementPropertyTab: function (elementType) {
     return elements[elementType].PropertyTab;
   },
 
-  getElementEventTab: function(elementType) {
+  getElementEventTab: function (elementType) {
     return elements[elementType].EventTab;
   },
 
@@ -125,7 +125,7 @@ export default {
    * @param {boolean?} allowUnknown If true, we won't throw on unknown element types
    * @returns {string} String representing elementType
    */
-  getElementType: function(element, allowUnknown) {
+  getElementType: function (element, allowUnknown) {
     var tagname = element.tagName.toLowerCase();
     switch (tagname) {
       case 'button':
@@ -178,13 +178,13 @@ export default {
   /**
    * Gets the theme values for this element type (if specified).
    */
-  getThemeValues: function(element) {
+  getThemeValues: function (element) {
     const elementType = this.getElementType(element);
     const {themeValues} = elements[elementType] || {};
     return themeValues;
   },
 
-  getCurrentTheme: function(parentScreen) {
+  getCurrentTheme: function (parentScreen) {
     return (
       (parentScreen && parentScreen.getAttribute('data-theme')) ||
       themeOptions[DEFAULT_THEME_INDEX]
@@ -196,7 +196,7 @@ export default {
    * of the parent screen. This function ignores any student customization
    * on those properties and overwrites all theme properties.
    */
-  setAllPropertiesToCurrentTheme: function(element, parentScreen) {
+  setAllPropertiesToCurrentTheme: function (element, parentScreen) {
     const currentTheme = this.getCurrentTheme(parentScreen);
     const themeValues = this.getThemeValues(element);
     for (const propName in themeValues) {
@@ -210,7 +210,7 @@ export default {
    * Code to be called after deserializing element, allowing us to attach any
    * necessary event handlers.
    */
-  onDeserialize: function(element, updateProperty, skipIfUnknown) {
+  onDeserialize: function (element, updateProperty, skipIfUnknown) {
     var elementType = this.getElementType(element, skipIfUnknown);
     if (
       elementType &&
@@ -225,7 +225,7 @@ export default {
    * Gets data from an element before it is changed, should it be necessary to do so. This data will be passed to the
    * typeSpecificPropertyChange method below.
    */
-  getPreChangeData: function(element, name, batchChangeId) {
+  getPreChangeData: function (element, name, batchChangeId) {
     var elementType = this.getElementType(element);
     if (elements[elementType].beforePropertyChange) {
       return elements[elementType].beforePropertyChange(
@@ -243,7 +243,7 @@ export default {
    * @returns {boolean} True if we modified the element in such a way that the
    *   property table needs to be updated.
    */
-  typeSpecificPropertyChange: function(element, name, value, preChangeData) {
+  typeSpecificPropertyChange: function (element, name, value, preChangeData) {
     var elementType = this.getElementType(element);
     if (elements[elementType].onPropertyChange) {
       return elements[elementType].onPropertyChange(
@@ -264,11 +264,11 @@ export default {
    * @param {String} name Property name.
    * @returns {*}
    */
-  typeSpecificPropertyRead: function(element, name) {
+  typeSpecificPropertyRead: function (element, name) {
     const elementType = this.getElementType(element);
     if (elements[elementType].readProperty) {
       return elements[elementType].readProperty(element, name);
     }
     throw `unknown property type ${name}`;
-  }
+  },
 };

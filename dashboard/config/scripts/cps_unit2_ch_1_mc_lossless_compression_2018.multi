@@ -17,3 +17,5 @@ Since it’s binary, any run of 0s must be followed by a run of 1s (even if the 
 
 To uncompress the data back into its original binary state, you simply reverse the process.  This technique is an example of what type of compression?
 MARKDOWN
+
+allow_multiple_attempts true

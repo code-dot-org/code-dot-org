@@ -114,3 +114,5 @@ A 2-4. szintek a [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://g
 A 6-8. szintek egy [Support-Vector Machine]-t használnak (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Megvizsgáljuk a halak minden egyes összetevőjét (például szemek, száj, test), és az összetevők összes metaadatát (például fogak száma, testforma) minden egyes hal esetében számvektorba foglaljuk. Ezeket a vektorokat használjuk az SVM tanítására. A tanítási adatok alapján az SVM az összes lehetséges hal "terét" két részre osztja, amelyek megfelelnek a tanulni kívánt osztályoknak (például „kék” vagy „nem kék”).
 
 [[Vissza a tetejére]](#top)
+
+{{ visit_partial_event_logger }}

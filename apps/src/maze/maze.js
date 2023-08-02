@@ -4,8 +4,8 @@ const Provider = require('react-redux').Provider;
 
 const timeoutList = require('../lib/util/timeoutList');
 import AppView from '../templates/AppView';
-const CustomMarshalingInterpreter = require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter')
-  .default;
+const CustomMarshalingInterpreter =
+  require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter').default;
 const dom = require('../dom');
 const utils = require('../utils');
 import {TestResults, ResultType} from '../constants';
@@ -27,14 +27,14 @@ const maze = require('@code-dot-org/maze');
 const MazeController = maze.MazeController;
 const tiles = maze.tiles;
 
-const createResultsHandlerForSubtype = require('./results/utils')
-  .createResultsHandlerForSubtype;
+const createResultsHandlerForSubtype =
+  require('./results/utils').createResultsHandlerForSubtype;
 
 module.exports = class Maze {
   constructor() {
     this.scale = {
       snapRadius: 1,
-      stepSpeed: 5
+      stepSpeed: 5,
     };
 
     this.shouldSpeedUpInfiniteLoops = true;
@@ -57,7 +57,7 @@ module.exports = class Maze {
    */
   getAppReducers() {
     return {
-      maze: mazeReducer.default
+      maze: mazeReducer.default,
     };
   }
 
@@ -92,8 +92,8 @@ module.exports = class Maze {
         },
         playAudioOnFailure: studioApp().playAudioOnFailure.bind(studioApp()),
         loadAudio: studioApp().loadAudio.bind(studioApp()),
-        getTestResults: studioApp().getTestResults.bind(studioApp())
-      }
+        getTestResults: studioApp().getTestResults.bind(studioApp()),
+      },
     });
 
     this.resultsHandler = createResultsHandlerForSubtype(
@@ -190,7 +190,7 @@ module.exports = class Maze {
 
     // Push initial level properties into the Redux store
     studioApp().setPageConstants(config, {
-      hideRunButton: alwaysHideRunButton
+      hideRunButton: alwaysHideRunButton,
     });
 
     var visualizationColumn = (
@@ -359,7 +359,7 @@ module.exports = class Maze {
             // Run trial
             CustomMarshalingInterpreter.evalWith(code, {
               Maze: api,
-              executionInfo: this.executionInfo
+              executionInfo: this.executionInfo,
             });
 
             // Sort static grids based on trial result
@@ -402,7 +402,7 @@ module.exports = class Maze {
 
         CustomMarshalingInterpreter.evalWith(code, {
           Maze: api,
-          executionInfo: this.executionInfo
+          executionInfo: this.executionInfo,
         });
       }
 
@@ -474,8 +474,7 @@ module.exports = class Maze {
 
       program = studioApp().editor.getValue();
     } else {
-      var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-      program = Blockly.Xml.domToText(xml);
+      program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
     }
 
     this.waitingForReport = true;
@@ -493,7 +492,7 @@ module.exports = class Maze {
         result: this.result === ResultType.SUCCESS,
         testResult: this.testResults,
         program: encodeURIComponent(program),
-        onComplete: this.onReportComplete_
+        onComplete: this.onReportComplete_,
       });
     }
 
@@ -561,7 +560,7 @@ module.exports = class Maze {
     var options = {
       feedbackType: this.testResults,
       response: this.response,
-      level: this.controller.level
+      level: this.controller.level,
     };
 
     let message;
@@ -610,7 +609,7 @@ module.exports = class Maze {
    */
   prepareForExecution_() {
     this.executionInfo = new ExecutionInfo({
-      ticks: 1000
+      ticks: 1000,
     });
     this.resultsHandler.executionInfo = this.executionInfo;
     this.result = ResultType.UNSET;
@@ -717,7 +716,7 @@ module.exports = class Maze {
       studioApp().playAudioOnWin();
       this.controller.animatedFinish(timePerStep);
     } else {
-      timeoutList.setTimeout(function() {
+      timeoutList.setTimeout(function () {
         studioApp().playAudioOnFailure();
       }, this.stepSpeed);
     }

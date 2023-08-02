@@ -9,7 +9,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 const DEFAULT_PROPS = {
   viewAs: ViewType.Participant,
   changeViewType: () => {},
-  logToFirehose: () => {}
+  logToFirehose: () => {},
 };
 
 const setUp = (overrideProps = {}) => {

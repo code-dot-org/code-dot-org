@@ -5,3 +5,5 @@ right 'The bird will run into the TNT right away.', feedback: 'Correct!'
 wrong 'The bird will not move at all.', feedback: 'Incorrect. The bird runs into the TNT with his first move.'
 wrong 'I don\'t know.', feedback: 'The bird runs into the TNT with his first move.'
 
+
+allow_multiple_attempts false

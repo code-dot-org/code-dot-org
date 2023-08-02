@@ -35,12 +35,18 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "encrypted": "false",
+    "show_type_hints": "false",
+    "validation_enabled": "false",
+    "enable_download_image": "false",
     "contained_level_names": [
       "courseB_multi_artist_loops8_predict1"
-    ]
+    ],
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2022-10-10 20:42:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-10-10 20:42:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2023-07-31 22:10:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-07-31 22:12:22 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -49,8 +55,8 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_simplified">
-              <title name="TIMES">3</title>
+            <block type="controls_repeat_dropdown">
+              <field name="TIMES" config="2-10">3</field>
               <statement name="DO">
                 <block type="simple_move_right">
                   <next>

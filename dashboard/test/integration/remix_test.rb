@@ -87,7 +87,15 @@ class RemixTest < ActionDispatch::IntegrationTest
   end
 
   test 'spritelab only remixes Sources, Assets and Animations buckets' do
+    stub_project_body false
     assert_only_remixes_sources_assets_animations 'spritelab'
+    unstub_project_body
+  end
+
+  test 'spritelab returns forbidden if in restricted share mode' do
+    stub_project_body true
+    assert_forbidden 'spritelab'
+    unstub_project_body
   end
 
   test 'makerlab only remixes Sources and Assets buckets' do
@@ -201,9 +209,17 @@ class RemixTest < ActionDispatch::IntegrationTest
     refute_equal original_channel_id, new_channel_id
   end
 
+  def assert_forbidden(project_type)
+    stub_project_level project_type
+    original_channel_id = create_a_new_project project_type
+
+    get "/projects/#{project_type}/#{original_channel_id}/remix"
+    assert_response :forbidden
+  end
+
   private def stub_project_level(type)
-    factory = FactoryGirl.factories.registered?(type) ? type : :level
-    level = FactoryGirl.create(factory)
+    factory = FactoryBot.factories.registered?(type) ? type : :level
+    level = FactoryBot.create(factory)
     ProjectsController.any_instance.stubs(:get_from_cache).returns(level)
   end
 
@@ -236,5 +252,15 @@ class RemixTest < ActionDispatch::IntegrationTest
   private def unpack(location)
     /\/projects\/(?<project_type>\w+)\/(?<channel_id>[^\\]*)\/(?<action>\w+)$/ =~ location
     [project_type, channel_id, action]
+  end
+
+  private def stub_project_body(should_restrict_share)
+    sample_project = StringIO.new
+    sample_project.puts "{\"inRestrictedShareMode\": #{should_restrict_share}}"
+    SourceBucket.any_instance.stubs(:get).returns({body: sample_project})
+  end
+
+  private def unstub_project_body
+    SourceBucket.any_instance.unstub(:get)
   end
 end

@@ -1,4 +1,3 @@
-/*globals dashboard*/
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -38,13 +37,13 @@ export const mapUserNameToProjectLibraries = (
 const DisplayLibraryMode = {
   NONE: 'none',
   VIEW: 'view',
-  UPDATE: 'update'
+  UPDATE: 'update',
 };
 
 export class LibraryManagerDialog extends React.Component {
   static propTypes = {
     onClose: PropTypes.func.isRequired,
-    isOpen: PropTypes.bool.isRequired
+    isOpen: PropTypes.bool.isRequired,
   };
 
   state = {
@@ -57,7 +56,7 @@ export class LibraryManagerDialog extends React.Component {
     isLoading: false,
     errorMessages: {},
     updatedLibraryChannels: [],
-    sectionFilter: ''
+    sectionFilter: '',
   };
 
   componentDidUpdate(prevProps) {
@@ -83,8 +82,8 @@ export class LibraryManagerDialog extends React.Component {
         this.setState({
           errorMessages: {
             ...this.state.errorMessages,
-            loadClassLibraries: i18n.errorFindingClassLibraries()
-          }
+            loadClassLibraries: i18n.errorFindingClassLibraries(),
+          },
         });
       }
     );
@@ -99,19 +98,19 @@ export class LibraryManagerDialog extends React.Component {
 
     const libraryQuery = libraries.map(library => ({
       channel_id: library.channelId,
-      version: library.versionId
+      version: library.versionId,
     }));
 
     $.ajax({
       method: 'GET',
-      url: `/libraries/get_updates?libraries=${JSON.stringify(libraryQuery)}`
+      url: `/libraries/get_updates?libraries=${JSON.stringify(libraryQuery)}`,
     }).done(updatedLibraryChannels => this.setState({updatedLibraryChannels}));
   };
 
   setLibraryToImport = event => {
     this.setState({
       importLibraryId: event.target.value,
-      errorMessages: {...this.state.errorMessages, importFromId: undefined}
+      errorMessages: {...this.state.errorMessages, importFromId: undefined},
     });
   };
 
@@ -145,9 +144,9 @@ export class LibraryManagerDialog extends React.Component {
       this.setState({
         errorMessages: {
           ...this.state.errorMessages,
-          importFromId: i18n.libraryImportError()
+          importFromId: i18n.libraryImportError(),
         },
-        isLoading: false
+        isLoading: false,
       });
     } else if (libraryJson) {
       this.addLibraryToProject(libraryJson);
@@ -180,7 +179,7 @@ export class LibraryManagerDialog extends React.Component {
             );
             this.setState({
               cachedClassLibraries: [...cachedClassLibraries, updatedjson],
-              isLoading: false
+              isLoading: false,
             });
             callback(updatedjson, null);
           },
@@ -276,7 +275,7 @@ export class LibraryManagerDialog extends React.Component {
 
     this.setState({
       displayLibrary: library,
-      displayLibraryMode: mode || DisplayLibraryMode.VIEW
+      displayLibraryMode: mode || DisplayLibraryMode.VIEW,
     });
   };
 
@@ -294,7 +293,7 @@ export class LibraryManagerDialog extends React.Component {
     const onClose = () =>
       this.setState({
         displayLibrary: null,
-        displayLibraryMode: DisplayLibraryMode.NONE
+        displayLibraryMode: DisplayLibraryMode.NONE,
       });
 
     switch (displayLibraryMode) {
@@ -311,7 +310,7 @@ export class LibraryManagerDialog extends React.Component {
         return (
           <LibraryViewCode
             title={i18n.updateLibraryConfirmation({
-              libraryName: displayLibrary.name
+              libraryName: displayLibrary.name,
             })}
             description={displayLibrary.description}
             onClose={onClose}
@@ -343,7 +342,7 @@ export class LibraryManagerDialog extends React.Component {
       displayLibrary,
       isLoading,
       errorMessages,
-      classLibraries
+      classLibraries,
     } = this.state;
 
     if (!isOpen) {
@@ -351,7 +350,7 @@ export class LibraryManagerDialog extends React.Component {
     }
 
     const sections = [
-      ...new Set(classLibraries.map(library => library.sectionName))
+      ...new Set(classLibraries.map(library => library.sectionName)),
     ];
 
     return (
@@ -419,29 +418,29 @@ export class LibraryManagerDialog extends React.Component {
 const styles = {
   dialog: {
     padding: '0 15px',
-    cursor: 'default'
+    cursor: 'default',
   },
   linkBox: {
     cursor: 'auto',
     height: '22px',
     marginBottom: 0,
     flex: 1,
-    maxWidth: 400
+    maxWidth: 400,
   },
   header: {
     textAlign: 'left',
     fontSize: 24,
-    marginTop: 20
+    marginTop: 20,
   },
   subHeader: {
     textAlign: 'left',
     fontSize: 18,
-    margin: DEFAULT_MARGIN
+    margin: DEFAULT_MARGIN,
   },
   libraryList: {
     maxHeight: '200px',
     overflowY: 'auto',
-    borderBottom: `2px solid ${color.purple}`
+    borderBottom: `2px solid ${color.purple}`,
   },
   message: {
     color: color.dark_charcoal,
@@ -449,11 +448,11 @@ const styles = {
     margin: DEFAULT_MARGIN,
     overflow: 'hidden',
     lineHeight: '15px',
-    whiteSpace: 'pre-wrap'
+    whiteSpace: 'pre-wrap',
   },
   inputParent: {
     display: 'flex',
-    alignItems: 'baseline'
+    alignItems: 'baseline',
   },
   add: {
     margin: DEFAULT_MARGIN,
@@ -464,11 +463,11 @@ const styles = {
     ':disabled': {
       color: color.light_gray,
       borderColor: color.light_gray,
-      backgroundColor: color.lightest_gray
-    }
+      backgroundColor: color.lightest_gray,
+    },
   },
   hidden: {
-    visibility: 'hidden'
+    visibility: 'hidden',
   },
   error: {
     color: color.red,
@@ -476,12 +475,12 @@ const styles = {
     margin: DEFAULT_MARGIN,
     minHeight: 18,
     whiteSpace: 'pre-wrap',
-    lineHeight: 1
+    lineHeight: 1,
   },
   updateButtons: {
     display: 'flex',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'space-between',
+  },
 };
 
 export default Radium(LibraryManagerDialog);

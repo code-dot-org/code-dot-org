@@ -3,19 +3,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 import Notification, {NotificationType} from '../Notification';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {
-  switchToSection,
-  recordSwitchToSection,
-  recordOpenEditSectionDetails
-} from './sectionHelpers';
+import {switchToSection, recordSwitchToSection} from './sectionHelpers';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import SmallChevronLink from '../SmallChevronLink';
-import {ReloadAfterEditSectionDialog} from './EditSectionDialog';
 import {
   beginEditingSection,
   getAssignmentName,
-  sortedSectionsList
+  sortedSectionsList,
 } from './teacherSectionsRedux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
@@ -27,7 +22,7 @@ class TeacherDashboardHeader extends React.Component {
     sections: PropTypes.arrayOf(sectionShape).isRequired,
     selectedSection: sectionShape.isRequired,
     openEditSectionDialog: PropTypes.func.isRequired,
-    assignmentName: PropTypes.string
+    assignmentName: PropTypes.string,
   };
 
   constructor(props) {
@@ -37,7 +32,7 @@ class TeacherDashboardHeader extends React.Component {
   getDropdownOptions(optionMetricName) {
     let self = this;
 
-    let options = self.props.sections.map(function(section, i) {
+    let options = self.props.sections.map(function (section, i) {
       let optionOnClick = () => {
         switchToSection(section.id, self.props.selectedSection.id);
         recordSwitchToSection(
@@ -61,7 +56,7 @@ class TeacherDashboardHeader extends React.Component {
 
   lockedSectionNotification = ({restrictSection, loginType}) =>
     restrictSection &&
-    (loginType !==
+    loginType !==
       (SectionLoginType.google_classroom || SectionLoginType.clever) && (
       <Notification
         type={NotificationType.failure}
@@ -69,7 +64,7 @@ class TeacherDashboardHeader extends React.Component {
         details={i18n.manageStudentsNotificationLockedDetails({loginType})}
         dismissable={false}
       />
-    ));
+    );
 
   progressNotSavingNotification() {
     return (
@@ -88,6 +83,12 @@ class TeacherDashboardHeader extends React.Component {
       />
     );
   }
+  /**
+   * Returns the URL to the correct section to be edited
+   */
+  editRedirectUrl = sectionId => {
+    return '/sections/' + sectionId + '/edit';
+  };
 
   render() {
     return (
@@ -120,15 +121,8 @@ class TeacherDashboardHeader extends React.Component {
             <div style={styles.buttonSection}>
               <Button
                 __useDeprecatedTag
-                onClick={() => {
-                  this.props.openEditSectionDialog(
-                    this.props.selectedSection.id
-                  );
-                  recordOpenEditSectionDetails(
-                    this.props.selectedSection.id,
-                    'dashboard_header'
-                  );
-                }}
+                href={this.editRedirectUrl(this.props.selectedSection.id)}
+                className="edit-section-details-link"
                 icon="gear"
                 size="narrow"
                 color="gray"
@@ -145,7 +139,6 @@ class TeacherDashboardHeader extends React.Component {
             </div>
           </div>
         </div>
-        <ReloadAfterEditSectionDialog />
       </div>
     );
   }
@@ -153,23 +146,25 @@ class TeacherDashboardHeader extends React.Component {
 
 const styles = {
   sectionPrompt: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   header: {
     display: 'flex',
     justifyContent: 'space-between',
-    marginBottom: '5px'
+    marginBottom: '5px',
   },
   rightColumn: {
     display: 'flex',
-    flexDirection: 'column-reverse'
+    flexDirection: 'column-reverse',
   },
   buttonSection: {
-    display: 'flex'
+    display: 'flex',
+    marginBottom: 5,
   },
   buttonWithMargin: {
-    marginRight: '5px'
-  }
+    margin: 0,
+    marginRight: 5,
+  },
 };
 
 export const UnconnectedTeacherDashboardHeader = TeacherDashboardHeader;
@@ -189,7 +184,7 @@ export default connect(
   },
   dispatch => {
     return {
-      openEditSectionDialog: id => dispatch(beginEditingSection(id))
+      openEditSectionDialog: id => dispatch(beginEditingSection(id)),
     };
   }
 )(TeacherDashboardHeader);

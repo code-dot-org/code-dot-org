@@ -22,7 +22,7 @@ export default function Congrats(props) {
       hero: '2017Minecraft',
       minecraft: 'pre2017Minecraft',
       mc: 'pre2017Minecraft',
-      oceans: 'oceans'
+      oceans: 'oceans',
     }[tutorial] || 'other');
   /**
    * Renders links to certificate alternatives when there is a special event going on.
@@ -32,13 +32,19 @@ export default function Congrats(props) {
    */
   const renderExtraCertificateLinks = (language, tutorial) => {
     let extraLinkUrl, extraLinkText;
+    // If Adding extra links see this PR: https://github.com/code-dot-org/code-dot-org/pull/48515
     if (!extraLinkUrl || !extraLinkText) {
       // There are no extra links to render.
       return;
     }
     return (
       <div style={styles.extraLinkContainer}>
-        <a href={extraLinkUrl} target={'_blank'} style={styles.extraLink}>
+        <a
+          href={extraLinkUrl}
+          target={'_blank'}
+          style={styles.extraLink}
+          rel="noreferrer"
+        >
           {extraLinkText}
         </a>
       </div>
@@ -55,12 +61,11 @@ export default function Congrats(props) {
     randomDonorTwitter,
     randomDonorName,
     hideDancePartyFollowUp,
-    showStudioCertificate,
     initialCertificateImageUrl,
     isHocTutorial,
     nextCourseScriptName,
     nextCourseTitle,
-    nextCourseDesc
+    nextCourseDesc,
   } = props;
 
   const isEnglish = language === 'en';
@@ -74,7 +79,6 @@ export default function Congrats(props) {
         randomDonorTwitter={randomDonorTwitter}
         randomDonorName={randomDonorName}
         under13={under13}
-        showStudioCertificate={showStudioCertificate}
         initialCertificateImageUrl={initialCertificateImageUrl}
         isHocTutorial={isHocTutorial}
       >
@@ -115,12 +119,11 @@ Congrats.propTypes = {
   randomDonorTwitter: PropTypes.string,
   randomDonorName: PropTypes.string,
   hideDancePartyFollowUp: PropTypes.bool,
-  showStudioCertificate: PropTypes.bool,
   initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
   nextCourseScriptName: PropTypes.string,
   nextCourseTitle: PropTypes.string,
-  nextCourseDesc: PropTypes.string
+  nextCourseDesc: PropTypes.string,
 };
 
 const styles = {
@@ -128,20 +131,20 @@ const styles = {
     width: '100%',
     maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
   },
   divider: {
     borderColor: color.lightest_gray,
     borderWidth: '1px 0 0 0',
     borderStyle: 'solid',
-    margin: '20px 0px 20px 0px'
+    margin: '20px 0px 20px 0px',
   },
   extraLinkContainer: {
     clear: 'both',
-    paddingTop: 20
+    paddingTop: 20,
   },
   extraLink: {
     color: color.teal,
-    fontSize: 14
-  }
+    fontSize: 14,
+  },
 };

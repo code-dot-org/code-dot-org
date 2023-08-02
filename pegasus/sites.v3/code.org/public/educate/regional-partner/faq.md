@@ -1,6 +1,7 @@
 ---
 title: Regional Partner FAQs
 nav: plc_regional_partner_nav
+theme: responsive
 ---
 <a id="top"></a>
 

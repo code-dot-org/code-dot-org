@@ -7,7 +7,7 @@ import {
   details,
   expandableImages,
   visualCodeBlock,
-  xmlAsTopLevelBlock
+  xmlAsTopLevelBlock,
 } from '@code-dot-org/remark-plugins';
 
 import remarkRehype from 'remark-rehype';
@@ -27,7 +27,7 @@ class SafeMarkdown extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
     openExternalLinksInNewTab: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
   };
 
   render() {
@@ -90,7 +90,7 @@ const blocklyTags = [
   'title',
   'field',
   'value',
-  'xml'
+  'xml',
 ];
 schema.tagNames = schema.tagNames.concat(blocklyTags);
 let blocklyComponentWrappers = {};
@@ -100,7 +100,7 @@ blocklyTags.forEach(tag => {
   // Create a React component to wrap each Blockly tag. Since these elements ultimately
   // render as React components, creating a wrapper makes them valid (whereas <xml>
   // is not a valid React tag).
-  blocklyComponentWrappers[tag] = function(props) {
+  blocklyComponentWrappers[tag] = function (props) {
     const BlocklyElement = tag;
     // The "is" attribute prevents React from warning about unrecognized tags:
     // https://github.com/facebook/react/issues/11184#issuecomment-335942439
@@ -115,7 +115,7 @@ const markdownToReact = Parser.create()
   // convert markdown to an HTML Abstract Syntax Tree (HAST)
   .use(remarkRehype, {
     // include any raw HTML in the markdown as raw HTML nodes in the HAST
-    allowDangerousHTML: true
+    allowDangerousHTML: true,
   })
   // parse the raw HTML nodes in the HAST to actual HAST nodes
   .use(rehypeRaw)
@@ -126,11 +126,11 @@ const markdownToReact = Parser.create()
     createElement: React.createElement,
     // Use React component wrappers for Blockly XML elements to prevent
     // React from warning us about invalid components.
-    components: blocklyComponentWrappers
+    components: blocklyComponentWrappers,
   });
 
 const markdownToReactExternalLinks = markdownToReact().use(externalLinks, {
-  links: 'all'
+  links: 'all',
 });
 
 export default SafeMarkdown;

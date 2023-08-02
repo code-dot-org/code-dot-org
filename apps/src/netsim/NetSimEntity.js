@@ -12,7 +12,7 @@
  * @param {Object} [entityRow] JSON row from table.
  * @constructor
  */
-var NetSimEntity = (module.exports = function(shard, entityRow) {
+var NetSimEntity = (module.exports = function (shard, entityRow) {
   if (entityRow === undefined) {
     entityRow = {};
   }
@@ -45,9 +45,9 @@ var NetSimEntity = (module.exports = function(shard, entityRow) {
  * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimEntity.create = function(EntityType, shard, onComplete) {
+NetSimEntity.create = function (EntityType, shard, onComplete) {
   var entity = new EntityType(shard);
-  entity.getTable().create(entity.buildRow(), function(err, row) {
+  entity.getTable().create(entity.buildRow(), function (err, row) {
     if (err) {
       onComplete(err, null);
     } else {
@@ -67,9 +67,9 @@ NetSimEntity.create = function(EntityType, shard, onComplete) {
  * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        found entity, or null if entity search failed.
  */
-NetSimEntity.get = function(EntityType, entityID, shard, onComplete) {
+NetSimEntity.get = function (EntityType, entityID, shard, onComplete) {
   var entity = new EntityType(shard);
-  entity.getTable().read(entityID, function(err, row) {
+  entity.getTable().read(entityID, function (err, row) {
     if (err) {
       onComplete(err, null);
     } else {
@@ -82,8 +82,8 @@ NetSimEntity.get = function(EntityType, entityID, shard, onComplete) {
  * Push entity state into remote storage.
  * @param {NodeStyleCallback} [onComplete] - Optional completion callback.
  */
-NetSimEntity.prototype.update = function(onComplete) {
-  onComplete = onComplete || function() {};
+NetSimEntity.prototype.update = function (onComplete) {
+  onComplete = onComplete || function () {};
 
   this.getTable().update(this.entityID, this.buildRow(), onComplete);
 };
@@ -92,8 +92,8 @@ NetSimEntity.prototype.update = function(onComplete) {
  * Remove entity from remote storage.
  * @param {NodeStyleCallback} [onComplete] - Optional completion callback
  */
-NetSimEntity.prototype.destroy = function(onComplete) {
-  onComplete = onComplete || function() {};
+NetSimEntity.prototype.destroy = function (onComplete) {
+  onComplete = onComplete || function () {};
 
   this.getTable().delete(this.entityID, onComplete);
 };
@@ -102,18 +102,18 @@ NetSimEntity.prototype.destroy = function(onComplete) {
  * Remove entity from remote storage while user is navigating away from the page.
  * @returns {Error|null} error if entity delete fails
  */
-NetSimEntity.prototype.destroyOnUnload = function() {
+NetSimEntity.prototype.destroyOnUnload = function () {
   return this.getTable().deleteOnUnload(this.entityID);
 };
 
 /** Get storage table for this entity type. */
-NetSimEntity.prototype.getTable = function() {
+NetSimEntity.prototype.getTable = function () {
   // This method should be implemented by a child class.
   throw new Error('Method getTable is not implemented.');
 };
 
 /** Construct table row for this entity. */
-NetSimEntity.prototype.buildRow = function() {
+NetSimEntity.prototype.buildRow = function () {
   return {};
 };
 
@@ -124,14 +124,14 @@ NetSimEntity.prototype.buildRow = function() {
  * @param {!NodeStyleCallback} onComplete
  * @throws {Error} if all passed entities do not belong to the same table.
  */
-NetSimEntity.destroyEntities = function(entities, onComplete) {
+NetSimEntity.destroyEntities = function (entities, onComplete) {
   if (entities.length === 0) {
     onComplete(null, true);
     return;
   }
 
   var table = entities[0].getTable();
-  var entityIDs = entities.map(function(entity) {
+  var entityIDs = entities.map(function (entity) {
     if (entity.getTable() !== table) {
       throw new Error(
         'destroyEntities requires all entities to be in the same table'

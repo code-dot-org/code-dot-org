@@ -17,10 +17,7 @@ describe('NewDataDocForm', () => {
   it('contains field for Content', () => {
     const wrapper = shallow(<NewDataDocForm />);
     expect(
-      wrapper
-        .find('TextareaWithMarkdownPreview')
-        .first()
-        .props().label
+      wrapper.find('TextareaWithMarkdownPreview').first().props().label
     ).to.equal('Content');
   });
 });

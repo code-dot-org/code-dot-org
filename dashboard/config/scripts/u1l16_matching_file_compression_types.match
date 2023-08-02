@@ -15,3 +15,5 @@ question 'ZIP'
 answer 'Compressed Files - Lossless'
 question 'PNG'
 answer 'Compressed Image - Lossless'
+
+allow_multiple_attempts true

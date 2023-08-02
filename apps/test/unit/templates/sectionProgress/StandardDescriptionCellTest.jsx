@@ -4,14 +4,14 @@ import {expect} from '../../../util/reconfiguredChai';
 import StandardDescriptionCell from '@cdo/apps/templates/sectionProgress/standards/StandardDescriptionCell';
 import {
   standardsData,
-  lessonCompletedByStandard
+  lessonCompletedByStandard,
 } from '@cdo/apps/templates/sectionProgress/standards/standardsTestHelpers';
 
 describe('StandardDescriptionCell', () => {
   let DEFAULT_PROPS = {
     description: standardsData[1].description,
     lessonsForStandardStatus: lessonCompletedByStandard[1],
-    isViewingReport: null
+    isViewingReport: null,
   };
 
   it('shows the correct number of progress boxes for lessons', () => {

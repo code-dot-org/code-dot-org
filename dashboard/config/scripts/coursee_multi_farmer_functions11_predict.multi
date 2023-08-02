@@ -4,3 +4,5 @@ wrong 'The harvester will pick two pumpkins.', feedback: 'Incorrect.  The harves
 wrong 'The harvester will pick all of the pumpkins.', feedback: 'Incorrect.  The harvester does not call "check and pick" until she gets to the corn.'
 wrong 'The harvester will pick the lettuce.', feedback: 'Incorrect. The harvester only makes one turn, and ends at the corn.'
 right 'The harvester will pick the corn.', feedback: 'Correct!'
+
+allow_multiple_attempts false

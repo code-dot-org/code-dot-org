@@ -8,14 +8,14 @@ export const sectionData = PropTypes.shape({
   page_type: PropTypes.string,
   script_id: PropTypes.number,
   script_name: PropTypes.string,
-  section: PropTypes.object
+  section: PropTypes.object,
 });
 
 const lessonExtra = PropTypes.shape({
   bonusLevels: PropTypes.array,
   lessonNumber: PropTypes.number,
   nextLessonNumber: PropTypes.number,
-  nextLevelPath: PropTypes.string
+  nextLevelPath: PropTypes.string,
 });
 
 // This is the shape of the data returned by summarize_for_teacher_panel in
@@ -39,10 +39,10 @@ export const levelWithProgress = PropTypes.shape({
   teacherFeedbackReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
   kind: PropTypes.string,
   userLevelId: PropTypes.number,
-  updatedAt: PropTypes.date
+  updatedAt: PropTypes.date,
 });
 
 export const studentShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 });

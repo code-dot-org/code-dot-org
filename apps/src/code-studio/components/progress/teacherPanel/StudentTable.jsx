@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+import DCDO from '@cdo/apps/dcdo';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {levelWithProgress, studentShape} from './types';
@@ -14,7 +15,7 @@ class StudentTable extends React.Component {
     selectedUserId: PropTypes.number,
     levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
     sectionId: PropTypes.number,
-    unitName: PropTypes.string
+    unitName: PropTypes.string,
   };
 
   getRowLink = studentId => {
@@ -38,12 +39,8 @@ class StudentTable extends React.Component {
   };
 
   render() {
-    const {
-      students,
-      onSelectUser,
-      selectedUserId,
-      levelsWithProgress
-    } = this.props;
+    const {students, onSelectUser, selectedUserId, levelsWithProgress} =
+      this.props;
 
     return (
       <table style={styles.table} className="student-table">
@@ -74,6 +71,8 @@ class StudentTable extends React.Component {
                   )}
                   <div style={styles.name}>
                     {student.name}
+                    {!!DCDO.get('family-name-features', false) &&
+                      ` ${student.familyName}`}
                     <a
                       href={this.getRowLink(student.id)}
                       target="_blank"
@@ -96,7 +95,7 @@ class StudentTable extends React.Component {
 const styles = {
   table: {
     width: '90%',
-    margin: 'auto'
+    margin: 'auto',
   },
   tr: {
     height: 41,
@@ -105,33 +104,33 @@ const styles = {
     backgroundColor: color.lightest_gray,
     ':hover': {
       backgroundColor: color.lighter_cyan,
-      cursor: 'pointer'
-    }
+      cursor: 'pointer',
+    },
   },
   td: {
-    padding: 1
+    padding: 1,
   },
   selected: {
     fontFamily: '"Gotham 7r", sans-serif',
     color: color.white,
-    backgroundColor: color.light_cyan
+    backgroundColor: color.light_cyan,
   },
   studentTableRow: {
     display: 'flex',
     alignItems: 'center',
-    width: '100%'
+    width: '100%',
   },
   meRow: {
-    padding: '1px 1px 1px 5px'
+    padding: '1px 1px 1px 5px',
   },
   name: {
     paddingLeft: 5,
     margin: '1px 1px 1px 0',
-    flexGrow: 1
+    flexGrow: 1,
   },
   linkIcon: {
-    marginLeft: 10
-  }
+    marginLeft: 10,
+  },
 };
 
 export default Radium(StudentTable);

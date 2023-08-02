@@ -10,7 +10,7 @@ export default class QuestionAveragesTable extends React.Component {
     allWorkshopsData: PropTypes.object.isRequired,
     facilitatorNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     facilitatorBreakdown: PropTypes.bool.isRequired,
-    workshopType: PropTypes.string.isRequired
+    workshopType: PropTypes.string.isRequired,
   };
 
   renderHeaderRow() {

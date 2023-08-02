@@ -5,7 +5,7 @@ import color from '@cdo/apps/util/color';
 import {
   changeView,
   updateTableColumns,
-  updateTableRecords
+  updateTableRecords,
 } from '../redux/data';
 import {DataView} from '../constants';
 import ConfirmDeleteButton from '../dataBrowser/ConfirmDeleteButton';
@@ -17,12 +17,12 @@ class Dataset extends React.Component {
     isLive: PropTypes.bool.isRequired,
     // Provided via Redux
     tableName: PropTypes.string.isRequired,
-    onUploadComplete: PropTypes.func.isRequired
+    onUploadComplete: PropTypes.func.isRequired,
   };
 
   state = {
     notice: null,
-    isError: false
+    isError: false,
   };
 
   importCsv = (csv, onComplete) => {
@@ -30,7 +30,7 @@ class Dataset extends React.Component {
       url: `/datasets/${this.props.tableName}`,
       method: 'PUT',
       contentType: 'application/json',
-      data: JSON.stringify({csv_data: csv})
+      data: JSON.stringify({csv_data: csv}),
     })
       .done(data => {
         this.props.onUploadComplete(
@@ -44,7 +44,7 @@ class Dataset extends React.Component {
       .fail((jqXHR, textStatus) => {
         this.setState({
           notice: `Upload failed - ${textStatus}`,
-          isError: true
+          isError: true,
         });
       });
   };
@@ -52,7 +52,7 @@ class Dataset extends React.Component {
   deleteTable = () => {
     $.ajax({
       url: `/datasets/${this.props.tableName}`,
-      method: 'DELETE'
+      method: 'DELETE',
     })
       .done(data => {
         window.location.href = '/datasets';
@@ -77,9 +77,7 @@ class Dataset extends React.Component {
         {!this.props.isLive && (
           <div>
             <ConfirmDeleteButton
-              body={`Are you sure you want to delete ${
-                this.props.tableName
-              }? This action cannot be undone.`}
+              body={`Are you sure you want to delete ${this.props.tableName}? This action cannot be undone.`}
               buttonText="Delete table"
               containerStyle={{width: 125, marginLeft: 10}}
               buttonId="clearTableButton"
@@ -100,25 +98,25 @@ const styles = {
     color: color.red,
     backgroundColor: color.lightest_red,
     padding: 10,
-    fontSize: 14
+    fontSize: 14,
   },
   success: {
     color: color.realgreen,
     backgroundColor: color.lighter_green,
     padding: 10,
-    fontSize: 14
-  }
+    fontSize: 14,
+  },
 };
 
 export default connect(
   state => ({
-    tableName: state.data.tableName || ''
+    tableName: state.data.tableName || '',
   }),
   dispatch => ({
     onUploadComplete(tableName, records, columns) {
       dispatch(changeView(DataView.TABLE, tableName));
       dispatch(updateTableRecords(tableName, records));
       dispatch(updateTableColumns(tableName, columns));
-    }
+    },
   })
 )(Dataset);

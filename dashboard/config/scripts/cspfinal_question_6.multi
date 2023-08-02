@@ -7,3 +7,5 @@ markdown <<MARKDOWN
 How does a computer resolve a domain name into an IP address?
 
 MARKDOWN
+
+allow_multiple_attempts true

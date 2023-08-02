@@ -31,12 +31,7 @@ describe('WorkspaceAlert', () => {
     );
     expect(jQueryHeight.callCount).to.equal(1);
     expect(jQueryHeight.thisValues[0].selector).to.equal('#headers');
-    expect(
-      top
-        .find('div')
-        .first()
-        .props().style.top
-    ).to.equal(4);
+    expect(top.find('div').first().props().style.top).to.equal(4);
   });
 
   it('can be at the bottom', () => {
@@ -50,12 +45,7 @@ describe('WorkspaceAlert', () => {
         <span>This is a bottom alert</span>
       </WorkspaceAlert>
     );
-    expect(
-      bottom
-        .find('div')
-        .first()
-        .props().style.bottom
-    ).to.equal(0);
+    expect(bottom.find('div').first().props().style.bottom).to.equal(0);
   });
 
   it('isBlockly uses #toolbox-header for left', () => {
@@ -72,19 +62,11 @@ describe('WorkspaceAlert', () => {
     );
     expect(jQueryWidth.callCount).to.equal(1);
     expect(jQueryWidth.thisValues[0].selector).to.equal('#toolbox-header');
-    expect(
-      isBlockly
-        .find('div')
-        .first()
-        .props().style.left
-    ).to.equal(1);
+    expect(isBlockly.find('div').first().props().style.left).to.equal(1);
   });
 
   it('not isBlockly uses .droplet-gutter and .droplet-palette-element for left', () => {
-    jQueryWidth
-      .onCall(0)
-      .returns(1)
-      .returns(2);
+    jQueryWidth.onCall(0).returns(1).returns(2);
     const neither = mount(
       <WorkspaceAlert
         type="warning"
@@ -95,12 +77,7 @@ describe('WorkspaceAlert', () => {
         <span>This is not a blockly alert</span>
       </WorkspaceAlert>
     );
-    expect(
-      neither
-        .find('div')
-        .first()
-        .props().style.left
-    ).to.equal(3);
+    expect(neither.find('div').first().props().style.left).to.equal(3);
     expect(jQueryWidth.callCount).to.equal(2);
     expect(jQueryWidth.thisValues[0].selector).to.equal(
       '.droplet-palette-element'

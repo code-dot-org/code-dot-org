@@ -1,4 +1,3 @@
-/* global navigator */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -17,7 +16,7 @@ export class SwipePrompt extends React.Component {
     buttonsAreDisabled: PropTypes.bool.isRequired,
     hasBeenDismissed: PropTypes.bool.isRequired,
     onDismiss: PropTypes.func.isRequired,
-    dismissAction: PropTypes.string.isRequired
+    dismissAction: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -68,7 +67,7 @@ export class SwipePrompt extends React.Component {
       buttonsAreVisible,
       buttonsAreDisabled,
       hasBeenDismissed,
-      useMinecraftStyling
+      useMinecraftStyling,
     } = this.props;
 
     if (
@@ -117,12 +116,12 @@ const styles = {
   overlay: {
     position: 'absolute',
     zIndex: 1,
-    opacity: '90%'
+    opacity: '90%',
   },
   minecraft: {
     top: '62px',
-    left: '17px'
-  }
+    left: '17px',
+  },
 };
 
 export const UnconnectedSwipePrompt = SwipePrompt;
@@ -132,11 +131,11 @@ export default connect(
     buttonsAreVisible: state.arrowDisplay.buttonsAreVisible,
     buttonsAreDisabled: state.arrowDisplay.buttonsAreDisabled,
     hasBeenDismissed: state.arrowDisplay.swipeOverlayHasBeenDismissed,
-    dismissAction: state.arrowDisplay.swipeOverlayDismissAction
+    dismissAction: state.arrowDisplay.swipeOverlayDismissAction,
   }),
   dispatch => ({
     onDismiss(action) {
       dispatch(dismissSwipeOverlay(action));
-    }
+    },
   })
 )(SwipePrompt);

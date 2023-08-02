@@ -24,8 +24,8 @@ class FilesTest < FilesApiTestBase
     file_data = 'fake-file-data'
     old_filename = @api.randomize_filename 'old_file.html'
     new_filename = @api.randomize_filename 'new_file.html'
-    delete_all_file_versions old_filename, URI.escape(old_filename),
-      new_filename, URI.escape(new_filename)
+    delete_all_file_versions old_filename, CGI.escape(old_filename),
+      new_filename, CGI.escape(new_filename)
     delete_all_manifest_versions
     post_file_data @api, old_filename, file_data, 'test/html'
 
@@ -51,8 +51,8 @@ class FilesTest < FilesApiTestBase
     file_data = 'fake-file-data'
     old_filename = @api.randomize_filename 'old_file.html'
     new_filename = @api.randomize_filename 'new_file.html'
-    delete_all_file_versions old_filename, URI.escape(old_filename),
-      new_filename, URI.escape(new_filename)
+    delete_all_file_versions old_filename, CGI.escape(old_filename),
+      new_filename, CGI.escape(new_filename)
     delete_all_manifest_versions
     post_file_data @api, old_filename, file_data, 'test/html'
 
@@ -79,7 +79,7 @@ class FilesTest < FilesApiTestBase
     file_data = 'fake-file-data'
     old_filename = @api.randomize_filename 'old_file.html'
     new_filename = "long_filename#{'_' * 512}.html"
-    delete_all_file_versions old_filename, URI.escape(old_filename)
+    delete_all_file_versions old_filename, CGI.escape(old_filename)
     delete_all_manifest_versions
     post_file_data @api, old_filename, file_data, 'test/html'
 
@@ -470,6 +470,59 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_file_versions_non_owner
+    filename = @api.randomize_filename('test.png')
+    delete_all_file_versions(filename)
+    delete_all_manifest_versions
+
+    # Create an animation file
+    post_file_data(@api, filename, 'stub-v1-body', 'image/png')
+    assert successful?
+
+    # Overwrite it.
+    post_file_data(@api, filename, 'stub-v2-body', 'image/png')
+    assert successful?
+
+    with_session(:non_owner) do
+      # List project versions for a non-owner. They should only get the current version
+      non_owner_api = FilesApiTestHelper.new(current_session, 'files', @channel_id)
+      non_owner_project_versions = non_owner_api.list_object_versions(filename)
+      assert successful?
+      assert_equal 1, non_owner_project_versions.count
+      assert non_owner_project_versions[0]['isLatest']
+    end
+
+    delete_all_manifest_versions
+  end
+
+  def test_file_versions_teacher_of_owner
+    FilesApi.any_instance.stubs(:teaches_student?).returns(true)
+
+    filename = @api.randomize_filename('test.png')
+    delete_all_file_versions(filename)
+    delete_all_manifest_versions
+
+    # Create an animation file
+    post_file_data(@api, filename, 'stub-v1-body', 'image/png')
+    assert successful?
+
+    # Overwrite it.
+    post_file_data(@api, filename, 'stub-v2-body', 'image/png')
+    assert successful?
+
+    with_session(:teacher_of_owner) do
+      # List project versions for the teacher of a project owner. They should get all versions
+      teacher_of_owner_api = FilesApiTestHelper.new(current_session, 'files', @channel_id)
+      teacher_of_owner_project_versions = teacher_of_owner_api.list_object_versions(filename)
+      assert successful?
+      assert_equal 2, teacher_of_owner_project_versions.count
+      assert teacher_of_owner_project_versions[0]['isLatest']
+      refute teacher_of_owner_project_versions[1]['isLatest']
+    end
+
+    delete_all_manifest_versions
+  end
+
   def test_invalid_file_extension
     @api.get_object('bad_extension.css%22')
     assert unsupported_media_type?
@@ -689,7 +742,8 @@ class FilesTest < FilesApiTestBase
     post_file_data(src_api, sound_filename, sound_body, 'audio/mpeg')
     assert_equal escaped_sound_filename, JSON.parse(last_response.body)['filename']
 
-    src_api.patch_abuse(10)
+    # Can't test abuse score functionality, since it's been moved to Rails.
+    #src_api.patch_abuse(10)
 
     expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
     expected_sound_info = {'filename' =>  escaped_sound_filename, 'category' => 'audio', 'size' => sound_body.length}
@@ -702,7 +756,7 @@ class FilesTest < FilesApiTestBase
     assert_fileinfo_equal(expected_image_info, dest_file_infos[0])
     assert_fileinfo_equal(expected_sound_info, dest_file_infos[1])
 
-    dest_api.get_object(URI.escape(image_filename))
+    dest_api.get_object(CGI.escape(image_filename))
     assert successful?
     assert_equal image_body, last_response.body
 
@@ -711,21 +765,22 @@ class FilesTest < FilesApiTestBase
     assert_equal sound_body, last_response.body
 
     # abuse score didn't carry over
-    assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, URI.escape(image_filename.downcase))
+    # note: these assertions aren't verifying anything, since the abuse score functionality
+    # got moved to Rails, so we can't actually increase the abuse score in this test.
+    assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, CGI.escape(image_filename.downcase))
     assert_equal 0, FileBucket.new.get_abuse_score(dest_channel_id, escaped_sound_filename.downcase)
 
     assert_newrelic_metrics %w(
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
-      Custom/ListRequests/FileBucket/BucketHelper.list
       Custom/ListRequests/FileBucket/BucketHelper.copy_files
     )
 
-    src_api.delete_object(URI.escape(image_filename))
-    src_api.delete_object(URI.escape(escaped_sound_filename))
+    src_api.delete_object(CGI.escape(image_filename))
+    src_api.delete_object(CGI.escape(escaped_sound_filename))
     delete_all_manifest_versions
-    dest_api.delete_object(URI.escape(image_filename))
-    dest_api.delete_object(URI.escape(escaped_sound_filename))
+    dest_api.delete_object(CGI.escape(image_filename))
+    dest_api.delete_object(CGI.escape(escaped_sound_filename))
     delete_channel(dest_channel_id)
   end
 

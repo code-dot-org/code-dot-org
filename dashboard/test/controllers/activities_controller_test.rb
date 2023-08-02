@@ -815,7 +815,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'milestone changes to next lesson in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
-    script = create :script, :with_levels, lessons_count: 2, name: 'Milestone Script', skip_name_format_validation: true
+    script = create :script, :with_levels, lessons_count: 2, name: 'Milestone Unit', skip_name_format_validation: true
     script.lessons.first.update!(key: 'Milestone Lesson 1', name: 'Milestone Lesson 1')
     script.reload
 
@@ -837,7 +837,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     lesson = create :lesson, script: script
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
-    script_level = create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
+    script_level = create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {active: false}}
 
     post :milestone,
       params: @milestone_params.merge(
@@ -882,7 +882,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "milestone with multiple pairings creates multiple new user levels" do
     section = create(:follower, student_user: @user).section
-    pairings = 3.times.map {create(:follower, section: section).student_user}
+    pairings = Array.new(3) {create(:follower, section: section).student_user}
     session[:pairings] = pairings.map(&:id)
     session[:pairing_section_id] = section.id
 

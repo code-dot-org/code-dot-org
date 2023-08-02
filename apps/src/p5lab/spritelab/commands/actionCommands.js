@@ -1,4 +1,5 @@
 import {commands as behaviorCommands} from './behaviorCommands';
+import {layoutSpriteGroup} from '../../layoutUtils';
 
 function move(coreLibrary, spriteArg, distance) {
   let sprites = coreLibrary.getSpriteArray(spriteArg);
@@ -47,12 +48,17 @@ export const commands = {
     sprites.forEach(sprite => {
       targets.forEach(target => {
         if (sprite.isTouching(target)) {
+          // Reverse the movement direction of the sprite
           sprite.direction = (sprite.direction + 180) % 360;
-          target.direction = (target.direction + 180) % 360;
-          sprite.x += 1 * Math.cos((sprite.direction * Math.PI) / 180);
-          sprite.y += 1 * Math.sin((sprite.direction * Math.PI) / 180);
-          target.x += 1 * Math.cos((target.direction * Math.PI) / 180);
-          target.y += 1 * Math.sin((target.direction * Math.PI) / 180);
+          // Calculate the angle between x axis and a line between the sprites.
+          let angle = Math.atan2(target.y - sprite.y, target.x - sprite.x);
+          if (!isNaN(angle)) {
+            // Move the sprite back from the target, based on the calculated angle.
+            let dy = Math.sin(angle) * -(sprite.speed + 1);
+            let dx = Math.cos(angle) * -(sprite.speed + 1);
+            sprite.x += dx;
+            sprite.y += dy;
+          }
         }
       });
     });
@@ -71,7 +77,7 @@ export const commands = {
           sprite.scale = 0;
         }
       },
-      y: sprite => (sprite.y -= val)
+      y: sprite => (sprite.y -= val),
     };
     sprites.forEach(sprite => {
       if (specialCases[prop]) {
@@ -102,7 +108,7 @@ export const commands = {
       sprite.glideTargets.push(location);
       this.addBehavior(sprite, {
         func: behaviorCommands.glideFunc.apply(this),
-        name: 'glide'
+        name: 'glide',
       });
     });
   },
@@ -113,6 +119,11 @@ export const commands = {
       return false;
     }
     return sprites.every(sprite => sprite.getAnimationLabel() === costumeName);
+  },
+
+  layoutSprites(costume, layout) {
+    const group = this.getSpriteArray({costume});
+    layoutSpriteGroup(group, layout, this.p5);
   },
 
   isKeyPressed(key) {
@@ -183,7 +194,7 @@ export const commands = {
       North: sprite => (sprite.y -= distance),
       East: sprite => (sprite.x += distance),
       South: sprite => (sprite.y += distance),
-      West: sprite => (sprite.x -= distance)
+      West: sprite => (sprite.x -= distance),
     };
     if (!dirs[direction]) {
       console.error('invalid direction: ' + direction);
@@ -232,12 +243,12 @@ export const commands = {
         if (val) {
           this.addBehavior(sprite, {
             func: behaviorCommands.draggableFunc.apply(this),
-            name: 'draggable'
+            name: 'draggable',
           });
         } else {
           this.removeBehavior(sprite, {
             func: behaviorCommands.draggableFunc.apply(this),
-            name: 'draggable'
+            name: 'draggable',
           });
         }
       },
@@ -246,7 +257,7 @@ export const commands = {
       scale: sprite => sprite.setScale(val / 100),
       width: sprite =>
         (sprite.width = (sprite.animation.getWidth() * val) / 100),
-      y: sprite => (sprite.y = 400 - val)
+      y: sprite => (sprite.y = 400 - val),
     };
     sprites.forEach(sprite => {
       if (specialCases[prop]) {
@@ -297,5 +308,5 @@ export const commands = {
         sprite.direction -= degrees;
       }
     });
-  }
+  },
 };

@@ -7,11 +7,56 @@
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "supported_locales": [
+        "ar-SA",
+        "az-AZ",
+        "bg-BG",
+        "cs-CZ",
+        "de-DE",
+        "dv-MV",
+        "es-ES",
+        "es-MX",
+        "fa-IR",
+        "fr-FR",
+        "he-IL",
+        "hi-IN",
+        "hr-HR",
+        "hu-HU",
+        "id-ID",
+        "is-IS",
+        "it-IT",
+        "ja-JP",
+        "ka-GE",
+        "ko-KR",
+        "km-KH",
+        "kn-IN",
+        "mr-IN",
+        "ms-MY",
+        "nl-NL",
+        "no-NO",
+        "pl-PL",
+        "pt-BR",
+        "pt-PT",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK",
+        "sv-SE",
+        "ta-IN",
+        "te-IN",
+        "th-TH",
+        "tr-TR",
+        "uk-UA",
+        "ur-PK",
+        "uz-UZ",
+        "vi-VN",
+        "zh-CN",
+        "zh-TW"
+      ],
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "oceans",
-    "serialized_at": "2022-03-18 18:40:07 UTC",
+    "serialized_at": "2023-08-01 22:53:25 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -44,7 +89,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. First, students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
-        "preparation": "### One Week Before Your Hour of Code\n\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) in order to begin to plan your Hour of Code event. \n- [Register your Hour of Code event](http://hourofcode.com).\n- Review and complete the online tutorial yourself.\n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n\n### One Day Before Your Hour of Code\n\n- Each student who completes the activity should receive a certificate. Print one [certificate](https://code.org/certificates?script=oceans) for each student in advance to make this easier at the end of your Hour of Code.\n",
+        "preparation": "### One Week Before Your Hour of Code\n\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) in order to begin to plan your Hour of Code event. \n- [Register your Hour of Code event](http://hourofcode.com).\n- Review and complete the online tutorial yourself.\n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n\n### One Day Before Your Hour of Code\n\n- Each student who completes the activity should receive a certificate. Print one [certificate](https://studio.code.org/certificates/batch?course=b2NlYW5z) for each student in advance to make this easier at the end of your Hour of Code.\n",
         "purpose": "This tutorial is designed to quickly introduce students to **machine learning**, a type of **artificial intelligence**. Students will explore how **training data** is used to enable a machine learning model to classify new data. Students should have a positive experience during the tutorial and more importantly should be motivated to keep learning computer science. ",
         "student_overview": "First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own."
       },
@@ -60,6 +105,7 @@
       "key": "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0",
       "position": 1,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -73,6 +119,7 @@
       "key": "160cbd69-f567-4fb4-9623-0e69ecec9b3a",
       "position": 2,
       "properties": {
+        "duration": 40,
         "name": "Activity"
       },
       "seeding_key": {
@@ -295,7 +342,7 @@
       "key": "0cc68ced-0af8-4fbf-a8df-4df044149a60",
       "position": 1,
       "properties": {
-        "description": "[Print certificates](https://code.org/certificates?script=oceans) for students to celebrate their achievement.\n\nAt the end of the lesson encourage students to head to [Code.org/learn](http://Code.org/learn) where they can get ideas for more ways to keep their adventure with computer science going."
+        "description": "[Print certificates](https://studio.code.org/certificates/batch?course=b2NlYW5z) for students to celebrate their achievement.\n\nAt the end of the lesson encourage students to head to [Code.org/learn](http://Code.org/learn) where they can get ideas for more ways to keep their adventure with computer science going."
       },
       "seeding_key": {
         "activity_section.key": "0cc68ced-0af8-4fbf-a8df-4df044149a60",
@@ -775,6 +822,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

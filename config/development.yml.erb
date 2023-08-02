@@ -3,6 +3,17 @@
 
 dashboard_enable_pegasus: true
 
+db_cluster_id: localhost
+db_endpoint_writer: localhost
+db_endpoint_proxy_writer: localhost
+db_endpoint_proxy_reader: localhost
+db_endpoint_proxy_reporting: localhost
+
+db_credential_admin: {"username":"root", "password":""}
+db_credential_writer: {"username":"root", "password":""}
+db_credential_reader: {"username":"root", "password":""}
+db_writer: 'mysql://root@localhost/'
+
 firebase_name: cdo-v3-dev
 # provide a unique path for firebase channels data for development, to avoid conflicts in channel ids.
 firebase_secret: !Secret
@@ -29,14 +40,14 @@ pusher_app_id:             fake_app_id
 pusher_application_key:    fake_application_key
 pusher_application_secret: fake_application_secret
 poste_secret: not a real secret
+channels_api_secret: not a real secret
 dashboard_devise_pepper: not a pepper!
 dashboard_secret_key_base: not a secret
-db_writer: 'mysql://root@localhost/'
 
 custom_error_response: false
 
 # Used for exporting the workshop data to a gsheet
-applications_2022_2023_gsheet_key: !Secret
+applications_gsheet_key: !Secret
 eir_teacher_enrollments_gsheet_key: !Secret
 
 # Used for decoding certain protected level sources
@@ -52,3 +63,9 @@ redshift_password: !Secret
 redshift_username: !Secret
 
 slack_bot_token: !Secret
+
+# JSON Web Key Set and private key data, configured in locals.yml
+jwks_data:
+jwk_private_key_data:
+
+openai_chat_completion_api_key: ''

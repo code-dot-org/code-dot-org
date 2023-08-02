@@ -7,12 +7,10 @@ layout: wide
 
 # 국제 파트너에 연락
 
-Code.org는 세계 많은 조직과 함께 일하며 아워오브코드를 진정으로 국제적인 운동으로 만들고 있습니다. 2017년 전체 아워오브코드 이벤트의 60%가 미국 외 지역에서 열린 사실을 아세요?
+Code.org는 세계 많은 조직과 함께 일하며 아워오브코드를 진정으로 국제적인 운동으로 만들고 있습니다. 2017년 전체 아워오브코드 이벤트의 60%가 미국 외 지역에서 열린 사실을 아세요? If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.
 
-여러분 역시 여러분 국가의 더 많은 사람을 참여시키게 할 선도적인 역할을 할 수 있습니다! 아래 국가 중 한 곳에 계시면, 목록에 있는 파트너에게 연락하여 지역 아워오브코드에 연결시켜 주십시오.
+*Don't see your country listed here?* [See how to become our international partner!](https://code.org/international/apply) <br /> <br />
 
-*여러분의 국가가 여기 목록에 없습니까?* [아워오브코드 국제 파트너가 되기 위해 신청하세요](https://goo.gl/forms/PZQEsqvet7yBE5ps2)! <br /> <br />
+*여러분의 국가가 여기 목록에 없습니까?* [아워오브코드 국제 파트너가 되기 위해 신청하세요](https://goo.gl/forms/PZQEsqvet7yBE5ps2)!
 
 {{ international_partners_table }}
-
-{{ signup_button }}

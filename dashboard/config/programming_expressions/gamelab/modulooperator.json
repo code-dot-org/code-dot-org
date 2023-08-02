@@ -1,7 +1,7 @@
 {
   "key": "moduloOperator",
   "name": "Modulo operator",
-  "category": null,
+  "category": "Math",
   "category_key": "math",
   "content": "Returns the remainder of a division problem.",
   "examples": [
@@ -17,17 +17,18 @@
   ],
   "palette_params": [
     {
-      "name": "x",
+      "name": "value1",
       "type": "Number",
       "required": true,
       "description": "The dividend of the division, the number being divided."
     },
     {
-      "name": "y",
+      "name": "value2",
       "type": "Number",
       "required": true,
-      "description": "The divisor of the division, the number x is being divided by."
+      "description": "The divisor of the division, the number value1 is being divided by."
     }
   ],
-  "short_description": "Modulo operator\r\nCategory: Math"
+  "short_description": "Modulo operator\r\nCategory: Math",
+  "syntax": "value1 % value2;"
 }

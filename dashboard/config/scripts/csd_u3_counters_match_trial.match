@@ -8,3 +8,5 @@ question '	var position = 0;
         rect(position, 20, 50, 50);
     }'
 answer 'Maybe'
+
+allow_multiple_attempts true

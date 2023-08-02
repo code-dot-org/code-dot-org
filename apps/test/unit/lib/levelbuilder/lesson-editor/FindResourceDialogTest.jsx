@@ -13,7 +13,7 @@ describe('FindResourceDialog', () => {
       isOpen: true,
       handleConfirm,
       handleClose: sinon.spy(),
-      resources: resourceTestData
+      resources: resourceTestData,
     };
   });
 

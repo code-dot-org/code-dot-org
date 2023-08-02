@@ -10,3 +10,5 @@ wrong '54.209.61.132'
 wrong '64.14.68.10'
 right '54.243.71.82'
 
+
+allow_multiple_attempts true

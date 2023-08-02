@@ -89,13 +89,13 @@ class ProgrammingClass < ApplicationRecord
     return unless Rails.application.config.levelbuilder_mode
     object_to_serialize = serialize
     directory_name = File.dirname(file_path)
-    FileUtils.mkdir_p(directory_name) unless File.exist?(directory_name)
+    FileUtils.mkdir_p(directory_name)
     File.write(file_path, JSON.pretty_generate(object_to_serialize))
   end
 
   def remove_serialization
     return unless Rails.application.config.levelbuilder_mode
-    File.delete(file_path) if File.exist?(file_path)
+    FileUtils.rm_f(file_path)
   end
 
   def summarize_for_edit
@@ -167,19 +167,17 @@ class ProgrammingClass < ApplicationRecord
 
   def self.get_from_cache(programming_environment_name, key)
     cache_key = "programming_class/#{programming_environment_name}/#{key}"
-    Rails.cache.fetch(cache_key, force: !Script.should_cache?) do
+    Rails.cache.fetch(cache_key, force: !Unit.should_cache?) do
       env = ProgrammingEnvironment.find_by_name(programming_environment_name)
       ProgrammingClass.includes([:programming_environment, :programming_environment_category, :programming_methods]).find_by(programming_environment_id: env.id, key: key)
     end
   end
 
-  private
-
-  def parsed_examples
+  private def parsed_examples
     examples.blank? ? [] : JSON.parse(examples)
   end
 
-  def parsed_fields
+  private def parsed_fields
     fields.blank? ? [] : JSON.parse(fields)
   end
 end

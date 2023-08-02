@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'census_helper'
 
 class Api::V1::Census::CensusControllerTest < ActionController::TestCase
   test 'census submission with bad version fails' do
@@ -24,7 +25,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusHoc2017v3',
         nces_school_s: '60000113717',
-        school_year: 2017,
         submitter_email_address: "fake@email.address",
         submitter_name: "Somebody",
         opt_in: true
@@ -39,7 +39,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusHoc2017v3',
         nces_school_s: '-1',
-        school_year: 2017,
         country_s: "US",
         school_name_s:  "Brooklyn Heights",
         submitter_email_address: "fake@email.address",
@@ -51,12 +50,80 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
     refute response['census_submission_id'].nil?, "census_submission_id expected in response: #{response}"
   end
 
+  test 'HoC census submission uses current_census_year' do
+    post :create,
+      params: {
+        form_version: 'CensusHoc2017v3',
+        nces_school_s: '60000113717',
+        submitter_email_address: "fake@email.address",
+        submitter_name: "Somebody",
+        opt_in: true
+      }
+    assert_response 201
+    response = JSON.parse(@response.body)
+    submission_id = response['census_submission_id']
+    submission = Census::CensusSubmission.find(submission_id)
+    refute submission.nil?
+    assert_equal current_census_year, submission.school_year
+  end
+
+  test 'yourschool census submission at start of new census year uses new school_year' do
+    time = Date.new(2023, 7, 1)
+
+    Timecop.freeze(time) do
+      post :create,
+      params: {
+        form_version: 'CensusYourSchool2017v4',
+        nces_school_s: '60000113717',
+        submitter_email_address: "fake@email.address",
+        submitter_name: "Somebody",
+        submitter_role: 'OTHER',
+        how_many_do_hoc: 'NONE',
+        how_many_after_school: 'NONE',
+        how_many_10_hours: 'NONE',
+        how_many_20_hours: 'NONE',
+        opt_in: true
+      }
+      assert_response 201, @response.body.to_s
+      response = JSON.parse(@response.body)
+      submission_id = response['census_submission_id']
+      submission = Census::CensusSubmission.find(submission_id)
+      refute submission.nil?
+      assert_equal time.year, submission.school_year
+    end
+  end
+
+  test 'yourschool census submission at end of previous census year uses previous school_year' do
+    time = Date.new(2023, 6, 30)
+
+    Timecop.freeze(time) do
+      post :create,
+      params: {
+        form_version: 'CensusYourSchool2017v4',
+        nces_school_s: '60000113717',
+        submitter_email_address: "fake@email.address",
+        submitter_name: "Somebody",
+        submitter_role: 'OTHER',
+        how_many_do_hoc: 'NONE',
+        how_many_after_school: 'NONE',
+        how_many_10_hours: 'NONE',
+        how_many_20_hours: 'NONE',
+        opt_in: true
+      }
+      assert_response 201, @response.body.to_s
+      response = JSON.parse(@response.body)
+      submission_id = response['census_submission_id']
+      submission = Census::CensusSubmission.find(submission_id)
+      refute submission.nil?
+      assert_equal (time.year - 1), submission.school_year
+    end
+  end
+
   test 'yourschool census submission with good school succeeds' do
     post :create,
       params: {
         form_version: 'CensusYourSchool2017v4',
         nces_school_s: '60000113717',
-        school_year: 2017,
         submitter_email_address: "fake@email.address",
         submitter_name: "Somebody",
         submitter_role: 'OTHER',
@@ -76,7 +143,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusYourSchool2017v4',
         nces_school_s: '-1',
-        school_year: 2017,
         country_s: "US",
         school_name_s: "Philly High",
         submitter_email_address: "fake@email.address",
@@ -98,7 +164,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusYourSchool2017v4',
         nces_school_s: '-1',
-        school_year: 2017,
         country_s: "US",
         school_name_s: "Rushmore",
         submitter_email_address: "rushmore@email.address",
@@ -115,7 +180,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusYourSchool2017v4',
         nces_school_s: '-1',
-        school_year: 2017,
         country_s: "US",
         school_name_s: "Rushmore",
         submitter_email_address: "rushmore@email.address",
@@ -137,7 +201,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusYourSchool2017v4',
         nces_school_s: '-1',
-        school_year: 2017,
         country_s: "US",
         submitter_email_address: "fake@email.address",
         submitter_name: "Somebody",
@@ -158,7 +221,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusTeacherBannerV1',
         nces_school_s: '60000113717',
-        school_year: 2017,
         submitter_email_address: "fake@email.address",
         submitter_name: "Somebody",
         submitter_role: 'TEACHER',
@@ -175,7 +237,6 @@ class Api::V1::Census::CensusControllerTest < ActionController::TestCase
       params: {
         form_version: 'CensusYourSchool2017v4',
         nces_school_s: '60000113717',
-        school_year: 2017,
         submitter_email_address: "fake\u{1F600}@email.address",
         submitter_name: "Somebody\u{1F600}",
         submitter_role: 'OTHER',

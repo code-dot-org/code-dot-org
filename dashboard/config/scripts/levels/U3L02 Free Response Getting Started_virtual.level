@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2020-03-17T16:56:00.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Free Response: Why Limit to 4 Commands?",
     "long_instructions": "Today we solved a series of problems with a limited set of commands (only 4). Give at least one reason why it's useful to learn how to solve and program solutions with a limited set of commands.  \n",
@@ -11,8 +7,13 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 16888,
-    "name_suffix": "_virtual"
+    "name_suffix": "_virtual",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2020-03-17T16:56:00.000Z",
+  "user_id": 0,
   "published": true
 }]]></config>
 </FreeResponse>

@@ -13,7 +13,7 @@ export const SCHOOL_TYPES_HAVING_NAMES = [
   'private',
   'public',
   'afterschool',
-  'organization'
+  'organization',
 ];
 
 export default class SchoolInfoInputs extends Component {
@@ -34,7 +34,7 @@ export default class SchoolInfoInputs extends Component {
     fieldNames: PropTypes.object,
     showErrors: PropTypes.bool,
     showRequiredIndicator: PropTypes.bool,
-    styles: PropTypes.object
+    styles: PropTypes.object,
   };
 
   static defaultProps = {
@@ -54,8 +54,8 @@ export default class SchoolInfoInputs extends Component {
       schoolName: 'user[school_info_attributes][school_name]',
       schoolState: 'user[school_info_attributes][school_state]',
       schoolZip: 'user[school_info_attributes][school_zip]',
-      googleLocation: 'user[school_info_attributes][full_address]'
-    }
+      googleLocation: 'user[school_info_attributes][full_address]',
+    },
   };
 
   constructor() {

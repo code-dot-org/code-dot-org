@@ -3,11 +3,12 @@
   "name": "Math.sqrt()",
   "category": "Math",
   "category_key": "math",
-  "content": "[description]\r\n\r\n[short_description]\r\n\r\nTakes the square root of x.\r\n\r\n[/short_description]\r\n\r\nThere are some math calculations that require you to take the square root. *Math.sqrt(x)* does not change the value of x, rather it returns the the square root of x.\r\n\r\n[/description]",
+  "content": "There are some math calculations that require you to take the square root. *Math.sqrt(x)* does not change the value of x, rather it returns the the square root of x.",
   "examples": [
     {
-      "name": "",
-      "description": "var t = Math.sqrt(16);\r\nconsole.log(t);",
+      "name": "Square Root of 16",
+      "description": "Calculates the square root of 16 and prints it on the console.",
+      "code": "```\nvar t = Math.sqrt(16);\nconsole.log(t);\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",
@@ -23,6 +24,6 @@
     }
   ],
   "return_value": "A number that is the square root of x",
-  "short_description": "\nTakes the square root of x.",
+  "short_description": "Takes the square root of x.",
   "syntax": "Math.sqrt(x);"
 }

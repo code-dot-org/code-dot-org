@@ -10,3 +10,5 @@ right '(+ 5 (* (- 8 6) 4))'
 
 
 
+
+allow_multiple_attempts true

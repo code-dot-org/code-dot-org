@@ -11,12 +11,9 @@ $(document).ready(initPage);
 
 function initPage() {
   function make_selection_handler(flag) {
-    return function(e) {
+    return function (e) {
       e.preventDefault();
-      const options = $(this)
-        .parent()
-        .siblings('select')
-        .children('option');
+      const options = $(this).parent().siblings('select').children('option');
       options[flag ? 'attr' : 'removeAttr']('selected', true);
     };
   }
@@ -31,10 +28,10 @@ _.extend(window.levelbuilder, {
   initializeBlockPreview: require('@cdo/apps/code-studio/initializeBlockPreview'),
   jsonEditor: require('@cdo/apps/code-studio/jsonEditor'),
   acapela: require('@cdo/apps/code-studio/acapela'),
-  ajaxSubmit: require('@cdo/apps/code-studio/ajaxSubmit')
+  ajaxSubmit: require('@cdo/apps/code-studio/ajaxSubmit'),
 });
 
-window.levelbuilder.installBlocks = function(app, blockly, options) {
+window.levelbuilder.installBlocks = function (app, blockly, options) {
   var appBlocks = require('@cdo/apps/' + app + '/blocks');
   var commonBlocks = require('@cdo/apps/blocksCommon');
 
@@ -42,20 +39,37 @@ window.levelbuilder.installBlocks = function(app, blockly, options) {
   appBlocks.install(blockly, options);
 };
 
-window.levelbuilder.copyWorkspaceToClipboard = function() {
+window.levelbuilder.copyWorkspaceToClipboard = function () {
   const str = Blockly.Xml.domToPrettyText(
     Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
   );
   copyToClipboard(str);
+  localStorage.setItem('blockXml', str);
 };
 
-window.levelbuilder.copySelectedBlockToClipboard = function() {
+window.levelbuilder.copySelectedBlockToClipboard = function () {
   if (Blockly.selected) {
     const str = Blockly.Xml.domToPrettyText(
       Blockly.Xml.blockToDom(Blockly.selected)
     );
     copyToClipboard(str);
+    localStorage.setItem('blockXml', str);
   }
+};
+
+window.levelbuilder.pasteBlocksToWorkspace = function () {
+  let str = localStorage.getItem('blockXml');
+
+  if (str.startsWith('<block') && str.endsWith('</block>')) {
+    // If a single block has been copied, wrap it in <xml></xml>
+    str = `<xml>${str}</xml>`;
+  }
+  if (!(str.startsWith('<xml') && str.endsWith('</xml>'))) {
+    // str is not valid block xml.
+    return;
+  }
+
+  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, str);
 };
 
 // TODO: Remove when global `CodeMirror` is no longer required.

@@ -1,4 +1,4 @@
-@import 'color.scss', 'font.scss', 'imports/_breakpoints.scss';
+@import 'color.scss', 'font.scss', 'breakpoints.scss';
 
 html, body {
   height: 100%;
@@ -96,11 +96,28 @@ section.join-us {
     max-width: 820px;
   }
 
+  p.signup-closed {
+    font-size: 18px;
+    font-family: $gotham-bold;
+    text-align: center;
+    line-height: 1.4;
+    margin: 0 auto;
+    max-width: 820px;
+
+    @media screen and (max-width: $width-sm){
+      font-size: 16px;
+    }
+  }
+
   .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
 
     & > div:first-child {
-      float: none;
       margin: 0 auto;
+      float: none;
 
       h2 {
         margin: 0 0 1em;
@@ -115,6 +132,101 @@ section.join-us {
   h1#thanks-header {
     text-align: center;
     font-size: 22px;
+  }
+}
+
+// Announcements boxes
+aside.announcement {
+  margin: 0 2em;
+  border-radius: 5px;
+  font-size: 16px;
+
+  // CS Leaders Prize
+  &.cs-leaders-prize {
+    background-color: #D2EFDC;
+    background-image: linear-gradient(62deg, #D2EFDC 0%, #EDD8FE 100%);
+    padding: 2.5em 2em 3em;
+    text-align: center;
+    margin-top: 1em;
+
+    @media screen and (max-width: $width-md) {
+      margin: 3em auto 0;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      padding: 2.5em 3em 3em;
+    }
+
+    h1 {
+      color: $dark_purple;
+      margin: 0 auto;
+      font-size: 1.65em;
+    }
+
+    img {
+      width: 150px;
+      display: block;
+      margin: 1.5em auto 2.5em;
+    }
+
+    button {
+      background-color: $dark_purple;
+      border: 1px solid $dark_purple;
+    }
+  }
+
+  // CSEdWeek
+  &.cs-ed-week {
+    background-color: #F6E7DB;
+    padding: 2em;
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap-reverse;
+
+    @media screen and (max-width: $width-md) {
+      margin: 2em auto 0;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      text-align: center;
+    }
+
+    & > div {
+      width: 70%;
+
+      @media screen and (max-width: $width-lg) {
+        width: 65%;
+      }
+
+      @media screen and (max-width: $width-sm) {
+        width: 100%;
+      }
+
+      p {
+        margin-top: .75em;
+      }
+
+      button {
+        background: none;
+        border: 2px solid rgba($darkest_gray,.8);
+        color: rgba($darkest_gray,.85);
+      }
+    }
+
+    img:last-child {
+
+      @media screen and (max-width: $width-md) {
+        width: 140px;
+        margin-right: 1em;
+      }
+
+      @media screen and (max-width: $width-sm) {
+        width: 125px;
+        margin: 0 auto 1.5em;
+      }
+    }
   }
 }
 
@@ -228,6 +340,11 @@ section.host-an-hour {
     float: none !important; // removes inline styles on views/signup_button.haml
     margin: 0 !important; // removes inline styles on views/signup_button.haml
   }
+
+  p {
+    margin: 5em auto 1em;
+    font-size: 1.15em;
+  }
 }
 
 .ctabuttongroup {
@@ -280,7 +397,6 @@ section.host-an-hour {
 .ctabuttonatag {
   text-decoration: none;
 }
-
 
 .ctatext {
   display: inline-block;
@@ -556,8 +672,6 @@ a.category-link {
   font-family: $gotham-regular;
   text-decoration: none;
 }
-
-
 
 .students-served {
   font-size: 16px;

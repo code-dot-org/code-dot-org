@@ -1,4 +1,5 @@
 // Style rules associated with our visual debugger for the JSInterpreter.
+// TODO: refactor this into js-debugger.module.scss if possible: https://codedotorg.atlassian.net/browse/SL-353
 @import "color.scss";
 @import "mixins";
 @import "style-constants";
@@ -28,6 +29,15 @@
   padding: 3px 6px;
   font-size: 14px;
   min-width: 120px;
+
+  &:disabled {
+    cursor: not-allowed;
+    &:active {
+      // We need this !important in order to overwrite !important styles in common.scss
+      // (apps/style/common.scss, line 628)that makes disabled active button to have a black border.
+      border: none !important;
+    }
+  }
 }
 
 #continueButton {
@@ -76,12 +86,6 @@ $debug-header-border-width: 1px;
   .fa {
     margin: 0 0.25em;
   }
-}
-
-#debug-watch-header {
-  width: $debug-watch-max-column-width + $debug-header-border-width;
-  float: right;
-  border-left: $debug-header-border-width solid gray;
 }
 
 #watchersResizeBar {

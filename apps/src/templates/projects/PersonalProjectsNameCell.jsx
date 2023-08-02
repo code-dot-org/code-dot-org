@@ -11,7 +11,7 @@ class PersonalProjectsNameCell extends Component {
     projectName: PropTypes.string.isRequired,
     isEditing: PropTypes.bool,
     updatedName: PropTypes.string,
-    updateProjectName: PropTypes.func.isRequired
+    updateProjectName: PropTypes.func.isRequired,
   };
 
   onChangeName = e => {
@@ -19,13 +19,8 @@ class PersonalProjectsNameCell extends Component {
   };
 
   render() {
-    const {
-      projectId,
-      projectType,
-      projectName,
-      updatedName,
-      isEditing
-    } = this.props;
+    const {projectId, projectType, projectName, updatedName, isEditing} =
+      this.props;
     const url = `/projects/${projectType}/${projectId}/edit`;
 
     return (
@@ -59,8 +54,8 @@ class PersonalProjectsNameCell extends Component {
 
 const styles = {
   inputBox: {
-    width: 225
-  }
+    width: 225,
+  },
 };
 
 export default connect(
@@ -68,6 +63,6 @@ export default connect(
   dispatch => ({
     updateProjectName(projectId, updatedName) {
       dispatch(updateProjectName(projectId, updatedName));
-    }
+    },
   })
 )(PersonalProjectsNameCell);

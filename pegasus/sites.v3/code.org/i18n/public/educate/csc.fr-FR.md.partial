@@ -1,17 +1,5 @@
 ---
 title: CS Connections
-theme: responsive
-set_dir: true
-social:
-  og:title: CS Connections
-  twitter:title: CS Connections
-  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
-  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
-  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
-  og:image:width: 1200
-  og:image:height: 630
-  twitter:card: summary_large_image
-  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
 ---
 
 <style>
@@ -26,6 +14,8 @@ social:
 </style>
 
 <link href="/css/generated/csc-module.css" rel="stylesheet">
+
+{{ ai_skinny_banner_2023 }}
 
 # Connexions en l'Informatique
 
@@ -77,3 +67,5 @@ Our Quick Activities provide a quick and interesting way to make a connection be
 {{ clearfix }}
 
 <em>Finished a CS Connection activity and/or looking for more options for your classroom? Please <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">share your feedback</a> and ideas for more lessons here!</em>
+
+{{ visit_partial_event_logger }}

@@ -2,7 +2,7 @@ import {expect} from '../../util/reconfiguredChai';
 import {__TestInterface} from '@cdo/apps/storage/getColumnDropdown';
 
 describe('getTableNameFromColumnSocket', () => {
-  const makeFakeSocket = function(tableName) {
+  const makeFakeSocket = function (tableName) {
     return {
       parent: {
         start: {
@@ -10,10 +10,10 @@ describe('getTableNameFromColumnSocket', () => {
           next: {
             type: 'text',
             // The value in the socket has an extra set of double quotes
-            value: `"${tableName}"`
-          }
-        }
-      }
+            value: `"${tableName}"`,
+          },
+        },
+      },
     };
   };
   it('gets the table name from the socket', () => {

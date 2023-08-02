@@ -1,9 +1,11 @@
 require_relative '../../deployment'
 require 'cdo/rake_utils'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 namespace :install do
   desc 'Install Git hooks.'
-  task :hooks do
+  timed_task_with_logging :hooks do
     files = %w(
       pre-commit
       post-commit
@@ -23,7 +25,7 @@ namespace :install do
   end
 
   desc 'Create default locals.yml file if it doesn\'t exist'
-  task :locals_yml do
+  timed_task_with_logging :locals_yml do
     config_file = deploy_dir('locals.yml')
     config_defaults = deploy_dir('locals.yml.default')
     unless File.exist?(config_file)
@@ -31,14 +33,14 @@ namespace :install do
     end
   end
 
-  task :apps do
+  timed_task_with_logging :apps do
     if RakeUtils.local_environment?
       RakeUtils.install_npm
     end
   end
 
   desc 'Install Dashboard rubygems and setup database.'
-  task :dashboard do
+  timed_task_with_logging :dashboard do
     if RakeUtils.local_environment?
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
@@ -55,11 +57,20 @@ namespace :install do
   end
 
   desc 'Install Pegasus rubygems and setup database.'
-  task :pegasus do
+  timed_task_with_logging :pegasus do
     if RakeUtils.local_environment?
       Dir.chdir(pegasus_dir) do
         RakeUtils.bundle_install
         RakeUtils.rake 'pegasus:setup_db'
+      end
+    end
+  end
+
+  desc 'Install I18n libs'
+  timed_task_with_logging :i18n do
+    if RakeUtils.local_environment?
+      Dir.chdir(bin_dir('i18n')) do
+        RakeUtils.install_npm
       end
     end
   end
@@ -70,7 +81,8 @@ namespace :install do
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  task all: tasks
+  tasks << :i18n if CDO.build_i18n
+  timed_task_with_logging all: tasks
 end
 desc 'Install all OS dependencies.'
-task install: ['install:all']
+timed_task_with_logging install: ['install:all']

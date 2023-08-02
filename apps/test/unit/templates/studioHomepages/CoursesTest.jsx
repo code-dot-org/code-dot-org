@@ -8,10 +8,9 @@ import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
 const TEST_PROPS = {
   isEnglish: true,
-  isTeacher: true,
   isSignedOut: true,
   studentsCount: '0',
-  modernElementaryCoursesAvailable: true
+  modernElementaryCoursesAvailable: true,
 };
 
 describe('Courses', () => {
@@ -32,71 +31,48 @@ describe('Courses', () => {
   });
 
   describe('course ordering', () => {
-    describe('English', () => {
-      const isEnglish = true;
-
-      it('as student', () => {
-        const wrapper = mountCourses({isEnglish, isTeacher: false});
-        assertComponentsInOrder(wrapper, [
-          'SpecialAnnouncement',
-          'CourseBlocksStudentGradeBands',
-          'CourseBlocksHoc',
-          'LocalClassActionBlock'
-        ]);
-      });
-
-      it('as teacher', () => {
-        const wrapper = mountCourses({isEnglish, isTeacher: true});
-        assertComponentsInOrder(wrapper, [
-          'CoursesTeacherEnglish',
-          'CourseBlocksTeacherGradeBands',
-          'CourseBlocksHoc',
-          'CourseBlocksTools',
-          'AdministratorResourcesActionBlock'
-        ]);
-      });
+    it('English', () => {
+      const wrapper = mountCourses({isEnglish: true});
+      assertComponentsInOrder(wrapper, [
+        'SpecialAnnouncement',
+        'CourseBlocksWrapper',
+        'CourseBlocksHoc',
+        'LocalClassActionBlock',
+      ]);
     });
 
     describe('non-English', () => {
       const isEnglish = false;
 
-      // Student and teacher view should be the same for international
-      // users.  Run all tests for both cases to verify that this is true.
-      [false, true].forEach(isTeacher => {
-        describe(isTeacher ? 'as teacher' : 'as student', () => {
-          it('modern CSF', () => {
-            const wrapper = mountCourses({
-              isEnglish,
-              isTeacher,
-              modernElementaryCoursesAvailable: true
-            });
-            assertComponentsInOrder(wrapper, [
-              'ModernCsfCourses',
-              'CourseBlocksHoc',
-              'SpecialAnnouncement',
-              'CoursesAToF',
-              'LegacyCSFNotification',
-              'CourseBlocksInternationalGradeBands',
-              'CourseBlocksTools'
-            ]);
-          });
-
-          it('legacy CSF', () => {
-            const wrapper = mountCourses({
-              isEnglish,
-              isTeacher,
-              modernElementaryCoursesAvailable: false
-            });
-            assertComponentsInOrder(wrapper, [
-              'AcceleratedAndUnplugged',
-              'CourseBlocksHoc',
-              'SpecialAnnouncement',
-              'Courses1To4',
-              'CourseBlocksInternationalGradeBands',
-              'CourseBlocksTools'
-            ]);
-          });
+      it('modern CSF', () => {
+        const wrapper = mountCourses({
+          isEnglish,
+          modernElementaryCoursesAvailable: true,
         });
+        assertComponentsInOrder(wrapper, [
+          'ModernCsfCourses',
+          'CourseBlocksHoc',
+          'SpecialAnnouncement',
+          'CoursesAToF',
+          'LegacyCSFNotification',
+          'CourseBlocksWrapper',
+          'CourseBlocksWrapper',
+        ]);
+      });
+
+      it('legacy CSF', () => {
+        const wrapper = mountCourses({
+          isEnglish,
+          modernElementaryCoursesAvailable: false,
+        });
+        assertComponentsInOrder(wrapper, [
+          'AcceleratedAndUnplugged',
+          'CourseBlocksHoc',
+          'SpecialAnnouncement',
+          'Courses1To4',
+          'CourseBlocksWrapper',
+          'CourseBlocksWrapper',
+        ]);
       });
     });
   });

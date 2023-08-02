@@ -1,7 +1,6 @@
 # A client for invoking the NewRelic V2 REST API.
 require 'json'
 require "net/http"
-require "pp"
 
 class NewRelicClient
   attr_reader :api_key
@@ -44,7 +43,7 @@ class NewRelicClient
       end
     end
 
-    body = {'alert_policy': policy}.to_json
+    body = {alert_policy: policy}.to_json
     call_newrelic_rest("alert_policies/#{policy_id}.json", 'PUT', body)
   end
 

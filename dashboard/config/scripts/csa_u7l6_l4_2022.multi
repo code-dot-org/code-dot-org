@@ -31,3 +31,5 @@ public class Calculator {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

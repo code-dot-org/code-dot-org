@@ -33,11 +33,11 @@ class Block < ApplicationRecord
   end
 
   def self.load_and_cache_by_pool(pool)
-    if Script.should_cache? && !Block.all_pool_names.include?(pool)
+    if Unit.should_cache? && Block.all_pool_names.exclude?(pool)
       return nil
     end
 
-    Rails.cache.fetch("blocks/#{pool}", force: !Script.should_cache?) do
+    Rails.cache.fetch("blocks/#{pool}", force: !Unit.should_cache?) do
       Block.where(pool: pool).map(&:block_options)
     end
   end
@@ -87,7 +87,7 @@ class Block < ApplicationRecord
   end
 
   def delete_additional_files
-    File.delete js_path_was if File.exist? js_path_was
+    FileUtils.rm_f js_path_was
   end
 
   def js_path(old=false)

@@ -5,7 +5,7 @@ var evalMsg = require('./locale');
  * the bad and want our app to handle it (i.e. user used an invalid style
  * string and we want to display an error message).
  */
-var CustomEvalError = function(type, val) {
+var CustomEvalError = function (type, val) {
   this.type = type;
 
   switch (type) {
@@ -32,5 +32,5 @@ CustomEvalError.Type = {
   BadStyle: 0,
   BadColor: 1,
   InfiniteRecursion: 2,
-  UserCodeException: 3
+  UserCodeException: 3,
 };

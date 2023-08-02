@@ -51,9 +51,7 @@ def main
     POSTE_DB[:poste_deliveries].where(sent_at: nil).limit(BATCH_SIZE).reverse_order(:id).each {|i| results << i}
   end
 
-  queue_count = queue.length
-
-  worker_count = [[queue_count / MIN_MESSAGES_PER_THREAD, MAX_THREAD_COUNT].min, 1].max
+  worker_count = (queue.length / MIN_MESSAGES_PER_THREAD).clamp(1, MAX_THREAD_COUNT)
 
   workers = create_threads(worker_count) do
     deliverer = Deliverer.new SMTP_OPTIONS
@@ -65,23 +63,23 @@ def main
 
       begin
         deliverer.send delivery
-      rescue Net::SMTPSyntaxError, Net::SMTPFatalError => e
+      rescue Net::SMTPSyntaxError, Net::SMTPFatalError => exception
         Honeybadger.notify(
-          e,
-          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+          exception,
+          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{exception.message.to_s.strip}'"
         )
         deliverer.reset_connection
         sent_at = 0
-      rescue AbortEmailError => e
+      rescue AbortEmailError => exception
         Honeybadger.notify(
-          e,
-          error_message: "Abandoning delivery of #{delivery[:id]} because '#{e.message.to_s.strip}'"
+          exception,
+          error_message: "Abandoning delivery of #{delivery[:id]} because '#{exception.message.to_s.strip}'"
         )
         sent_at = 0
-      rescue => e
+      rescue => exception
         Honeybadger.notify(
-          e,
-          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{e.message.to_s.strip}'"
+          exception,
+          error_message: "Unable to deliver #{delivery[:id]} to '#{delivery[:contact_email]}' because '#{exception.message.to_s.strip}'"
         )
         raise
       end

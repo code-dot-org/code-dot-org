@@ -1,9 +1,5 @@
 <Gamelab>
   <config><![CDATA[{
-  "game_id": 50,
-  "created_at": "2022-09-19T22:54:24.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "gamelab",
     "edit_code": true,
@@ -65,8 +61,8 @@
     "pause_animations_by_default": "false",
     "callout_json": "[]",
     "encrypted_examples": "V54CN/FkZ9nATHG1jyrvV48xCpXiwgkRa2n047mE31ZzPygQKdWOqjFslnSf\nKLVlsNGWRQf5LxuyYGTkEqGFbw==\n",
-    "long_instructions": "# Add Text\r\n\r\nHere is a scene, but it needs text.\r\n\r\n# Do this\r\n* Add two pieces of text to the following scene.  \r\n* Make the two pieces of text different sizes.",
-    "start_blocks": "var grass = createSprite(200,200);\r\ngrass.setAnimation(\"floating_grass\");\r\nvar alien = createSprite(180,100);\r\nalien.setAnimation(\"alien\");\r\nalien.scale = 1.3;\r\nvar robot = createSprite(300,300);\r\nrobot.setAnimation(\"robot\");\r\nrobot.scale = 0.2;\r\ndrawSprites();",
+    "long_instructions": "# Add Text\r\n\r\nHere is a scene, but it needs text.\r\n\r\n# Do this\r\n1) Add two pieces of text to the following scene.  \r\n2) Make the two pieces of text different sizes.",
+    "start_blocks": "//1) Add two pieces of text to the following scene.  \r\n//2) Make the two pieces of text different sizes.\r\nvar grass = createSprite(200,200);\r\ngrass.setAnimation(\"floating_grass\");\r\nvar alien = createSprite(180,100);\r\nalien.setAnimation(\"alien\");\r\nalien.scale = 1.3;\r\nvar robot = createSprite(300,300);\r\nrobot.setAnimation(\"robot\");\r\nrobot.scale = 0.2;\r\ndrawSprites();",
     "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"c5132016-9052-47cd-a0dc-3fb4fdd88517\",\r\n    \"2a8eff61-2d51-4026-9ceb-199132365bdc\",\r\n    \"395c819c-9efe-4848-b1bc-1e98a253f4b8\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"c5132016-9052-47cd-a0dc-3fb4fdd88517\": {\r\n      \"name\": \"floating_grass\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/ZLEm0q25Lyhu7RwqwTdbRew44ah6Crun/category_backgrounds/floating_grass.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"ZLEm0q25Lyhu7RwqwTdbRew44ah6Crun\"\r\n    },\r\n    \"2a8eff61-2d51-4026-9ceb-199132365bdc\": {\r\n      \"name\": \"robot\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/FLIlZngbLraAbFW3ZHhftnt2XpqItlKM/category_characters/gray_robot_1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 501,\r\n        \"y\": 825\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"FLIlZngbLraAbFW3ZHhftnt2XpqItlKM\"\r\n    },\r\n    \"395c819c-9efe-4848-b1bc-1e98a253f4b8\": {\r\n      \"name\": \"alien\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/1KCqnXz4sr4w2BPNbh272WoL9KZHrKba/category_characters/alienPink_duck.png\",\r\n      \"frameSize\": {\r\n        \"x\": 69,\r\n        \"y\": 71\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"1KCqnXz4sr4w2BPNbh272WoL9KZHrKba\"\r\n    }\r\n  }\r\n}",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
@@ -94,9 +90,13 @@
     "rubric_performance_level_4": "No text blocks are used, or it contains so many errors that the program cannot run.",
     "preload_asset_list": null
   },
+  "game_id": 50,
   "published": true,
+  "created_at": "2022-09-19T22:54:24.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:54:24.125+00:00\",\"changed\":[\"cloned from \\\"CSD web text assessment_2022\\\"\"],\"cloned_from\":\"CSD web text assessment_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:54:24.125+00:00\",\"changed\":[\"cloned from \\\"CSD web text assessment_2022\\\"\"],\"cloned_from\":\"CSD web text assessment_2022\"},{\"changed_at\":\"2023-01-11 01:07:35 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

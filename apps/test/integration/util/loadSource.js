@@ -5,7 +5,7 @@ export default function loadSource(src) {
   var scr = $(`script[src="${src}"]`);
   if (scr.length <= 0) {
     document.head.appendChild(
-      $('<script>', {src: src}).on('load', function() {
+      $('<script>', {src: src}).on('load', function () {
         deferred.resolve();
       })[0]
     );

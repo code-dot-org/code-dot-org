@@ -1,3 +1,5 @@
+import {PROCEDURE_DEFINITION_TYPES} from '../constants';
+
 export default function initializeBlocklyXml(blocklyWrapper) {
   // Clear xml namespace
   blocklyWrapper.utils.xml.NAME_SPACE = '';
@@ -6,7 +8,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   // to call Google's domToBlock() in the override function.
   blocklyWrapper.Xml.originalDomToBlock = blocklyWrapper.Xml.domToBlock;
   // Override domToBlock so that we can gracefully handle unknown blocks.
-  blocklyWrapper.Xml.domToBlock = function(
+  blocklyWrapper.Xml.domToBlock = function (
     xmlBlock,
     workspace,
     parentConnection,
@@ -21,6 +23,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
         connectedToParentNext
       );
     } catch (e) {
+      console.warn(`Creating "unknown block". ${e.message}`);
       block = blocklyWrapper.Xml.originalDomToBlock(
         blocklyWrapper.Xml.textToDom('<block type="unknown" />'),
         workspace,
@@ -34,87 +37,115 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     return block;
   };
 
-  blocklyWrapper.Xml.domToBlockSpace = function(blockSpace, xml) {
+  /**
+   * Decode an XML DOM and create blocks on the workspace while preserving the original order of blocks.
+   *
+   * @param {Blockly.Workspace} workspace - The Blockly workspace where blocks will be created.
+   * @param {Element} xml - The XML DOM containing block elements to be created on the workspace.
+   * @returns {Object[]} An array of objects containing the created blocks and their positions.
+   */
+  blocklyWrapper.Xml.domToBlockSpace = function (workspace, xml) {
+    const partitionedBlockElements = getPartitionedBlockElements(
+      xml,
+      PROCEDURE_DEFINITION_TYPES
+    );
+    const blocks = [];
     // To position the blocks, we first render them all to the Block Space
     //  and parse any X or Y coordinates set in the XML. Then, we store
     //  the rendered blocks and the coordinates in an array so that we can
-    //  position them in two passes.
-    //  In the first pass, we position the visible blocks. In the second
-    //  pass, we position the invisible blocks. We do this so that
-    //  invisible blocks don't cause the visible blocks to flow
-    //  differently, which could leave gaps between the visible blocks.
-    const blocks = [];
-    xml.childNodes.forEach(xmlChild => {
-      if (xmlChild.nodeName.toLowerCase() !== 'block') {
-        // skip non-block xml elements
-        return;
-      }
-      const blockly_block = Blockly.Xml.domToBlock(xmlChild, blockSpace);
+    //  position them.
+    partitionedBlockElements.forEach(xmlChild => {
+      const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
       const x = parseInt(xmlChild.getAttribute('x'), 10);
       const y = parseInt(xmlChild.getAttribute('y'), 10);
       blocks.push({
         blockly_block: blockly_block,
         x: x,
-        y: y
+        y: y,
       });
     });
 
-    // Note that RTL languages position blocks from the left within a
-    // blockSpace. For instructions and embedded hints, there is no viewWidth,
-    // so we determine the starting point based on the width of the block.
-    const metrics = blockSpace.getMetrics();
-    const viewWidth = metrics ? metrics.viewWidth : 0;
-    const blockWidth = blocks[0]
-      ? blocks[0].blockly_block.getHeightWidth().width
-      : 0;
-    const padding = 16;
-    const verticalSpaceBetweenBlocks = 10;
-
-    let cursor = {
-      x: blockSpace.RTL
-        ? viewWidth
-          ? viewWidth - padding
-          : blockWidth + padding
-        : padding,
-      y: padding
-    };
-
-    const positionBlock = function(block) {
-      const heightWidth = block.blockly_block.getHeightWidth();
-
-      if (isNaN(block.x)) {
-        block.x = cursor.x;
-      } else {
-        block.x = blockSpace.RTL ? viewWidth - block.x : block.x;
-      }
-
-      if (isNaN(block.y)) {
-        block.y = cursor.y;
-        cursor.y += heightWidth.height + verticalSpaceBetweenBlocks;
-      }
-      block.blockly_block.moveTo(
-        new Blockly.utils.Coordinate(block.x, block.y)
-      );
-    };
-
-    blocks
-      .filter(function(block) {
-        return block.blockly_block.isVisible();
-      })
-      .forEach(positionBlock);
-
-    blocks
-      .filter(function(block) {
-        return !block.blockly_block.isVisible();
-      })
-      .forEach(positionBlock);
-
-    blockSpace.render();
     return blocks;
   };
 
   blocklyWrapper.Xml.blockSpaceToDom = blocklyWrapper.Xml.workspaceToDom;
 
-  // We don't want to save absolute position in the block XML
-  blocklyWrapper.Xml.blockToDomWithXY = blocklyWrapper.Xml.blockToDom;
+  blocklyWrapper.Xml.createBlockOrderMap = createBlockOrderMap;
+}
+
+/**
+ * Creates a block order map for the given XML by partitioning the block
+ * elements based on their types and mapping their partitioned positions to
+ * their original positions in the XML. This is used to reset a list of
+ * blocks into their original order before re-positioning blocks on the
+ * rendered workspace.
+ *
+ * @param {Element} xml - The XML element containing block elements to create the order map.
+ * @returns {Map} A map with partitioned block index as key and original index in the XML as value.
+ */
+export function createBlockOrderMap(xml) {
+  // Convert XML to an array of block elements
+  const blockElements = Array.from(xml.childNodes).filter(
+    node => node.nodeName.toLowerCase() === 'block'
+  );
+  const partitionedBlockElements = getPartitionedBlockElements(
+    xml,
+    PROCEDURE_DEFINITION_TYPES
+  );
+  const blockOrderMap = new Map();
+  blockElements.forEach((element, index) => {
+    blockOrderMap.set(partitionedBlockElements.indexOf(element), index);
+  });
+  return blockOrderMap;
+}
+
+/**
+ * Extracts block elements from the provided XML and returns them partitioned based on their types.
+ * If no block elements are found in the XML, an empty array is returned.
+ *
+ * @param {Element} xml - The XML element containing block elements.
+ * @param {string[]} prioritizedBlockTypes - An array of strings representing block types.
+ *    These types are moved to the front of the list while maintaining the order of non-prioritized types.
+ * @returns {Element[]} An array of partitioned block elements or an empty array if no blocks are present.
+ */
+export function getPartitionedBlockElements(xml, prioritizedBlockTypes) {
+  // Convert XML to an array of block elements
+  const blockElements = Array.from(xml.childNodes).filter(
+    node => node.nodeName.toLowerCase() === 'block'
+  );
+
+  // Check if any block elements were found
+  if (blockElements.length === 0) {
+    return [];
+  }
+
+  // Procedure definitions should be loaded ahead of call
+  // blocks, so that the procedures map is updated correctly.
+  const partitionedBlockElements = partitionBlocksByType(
+    blockElements,
+    prioritizedBlockTypes
+  );
+  return partitionedBlockElements;
+}
+
+/**
+ * Partitions blocks of the specified types to the front of the list.
+ *
+ * @param {Element[]} blockElements - An array of block elements to be partitioned.
+ * @param {string[]} prioritizedBlockTypes - An array of strings representing block types.
+ *    These types are moved to the front of the list while otherwise maintaining order.
+ * @returns {Element[]} A new array of block elements partitioned based on their types.
+ */
+export function partitionBlocksByType(blockElements, prioritizedBlockTypes) {
+  const prioritizedBlocks = [];
+  const remainingBlocks = [];
+
+  blockElements.forEach(block => {
+    const blockType = block.getAttribute('type');
+    prioritizedBlockTypes.includes(blockType)
+      ? prioritizedBlocks.push(block)
+      : remainingBlocks.push(block);
+  });
+
+  return [...prioritizedBlocks, ...remainingBlocks];
 }

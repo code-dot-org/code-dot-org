@@ -7,21 +7,21 @@ const SET_LOADING_LEVELS_WITH_PROGRESS =
 
 const initialState = {
   isLoadingLevelsWithProgress: false,
-  levelsWithProgress: []
+  levelsWithProgress: [],
 };
 
 export default function reducer(state = initialState, action) {
   if (action.type === SET_LEVELS_WITH_PROGRESS) {
     return {
       ...state,
-      levelsWithProgress: action.levelsWithProgress
+      levelsWithProgress: action.levelsWithProgress,
     };
   }
 
   if (action.type === SET_LOADING_LEVELS_WITH_PROGRESS) {
     return {
       ...state,
-      isLoadingLevelsWithProgress: action.isLoading
+      isLoadingLevelsWithProgress: action.isLoading,
     };
   }
 
@@ -30,12 +30,12 @@ export default function reducer(state = initialState, action) {
 
 const setLevelsWithProgress = levelsWithProgress => ({
   type: SET_LEVELS_WITH_PROGRESS,
-  levelsWithProgress
+  levelsWithProgress,
 });
 
 const setLoadingLevelsWithProgress = isLoading => ({
   type: SET_LOADING_LEVELS_WITH_PROGRESS,
-  isLoading
+  isLoading,
 });
 
 export const loadLevelsWithProgress = () => (dispatch, getState) => {
@@ -49,13 +49,11 @@ export const loadLevelsWithProgress = () => (dispatch, getState) => {
 
   const queryParams = getLevelProgressQueryParams(state);
 
-  const baseUrl = `/api/teacher_panel_progress/${
-    state.teacherSections.selectedSectionId
-  }`;
+  const baseUrl = `/api/teacher_panel_progress/${state.teacherSections.selectedSectionId}`;
 
   return $.ajax({
     url: baseUrl + '?' + queryString.stringify(queryParams),
-    method: 'GET'
+    method: 'GET',
   })
     .done(data => {
       dispatch(setLevelsWithProgress(data));
@@ -74,12 +72,12 @@ const getLevelProgressQueryParams = state => {
     return {
       lesson_id: state.progress.currentLessonId,
       is_lesson_extras: true,
-      script_id: state.progress.scriptId
+      script_id: state.progress.scriptId,
     };
   } else {
     return {
       script_id: state.progress.scriptId,
-      level_id: state.progress.currentLevelId
+      level_id: state.progress.currentLevelId,
     };
   }
 };

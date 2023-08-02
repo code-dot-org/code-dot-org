@@ -1,9 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "game_id": 52,
-  "created_at": "2019-02-18T07:01:50.000Z",
-  "level_num": "custom",
-  "user_id": 0,
   "properties": {
     "title": "Assessment: Question 1",
     "long_instructions": "What is a Caesar cipher?  As part of your answer demonstrate encrypting the plaintext messages: `CS IS COOL` with a caesar cipher.\r\n",
@@ -14,8 +10,13 @@
     "submittable": "false",
     "peer_reviewable": "false",
     "parent_level_id": 13356,
-    "name_suffix": "_2019"
+    "name_suffix": "_2019",
+    "allow_multiple_attempts": "true"
   },
+  "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2019-02-18T07:01:50.000Z",
+  "user_id": 0,
   "published": true,
   "notes": ""
 }]]></config>

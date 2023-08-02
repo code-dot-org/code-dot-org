@@ -31,7 +31,7 @@ function saySpriteRequiredBlock(options) {
 
   return [
     {
-      test: function(block) {
+      test: function (block) {
         if (block.type !== 'studio_saySprite') {
           return false;
         }
@@ -51,8 +51,8 @@ function saySpriteRequiredBlock(options) {
         return true;
       },
       type: 'studio_saySprite',
-      titles: titles
-    }
+      titles: titles,
+    },
   ];
 }
 
@@ -76,7 +76,7 @@ function moveRequiredBlock(options) {
 
   return [
     {
-      test: function(block) {
+      test: function (block) {
         if (block.type !== 'studio_move') {
           return false;
         }
@@ -93,8 +93,8 @@ function moveRequiredBlock(options) {
         return true;
       },
       type: 'studio_move',
-      titles: titles
-    }
+      titles: titles,
+    },
   ];
 }
 
@@ -188,9 +188,9 @@ levels.custom = {
   ideal: Infinity,
   requiredBlocks: [],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
-  startBlocks: ''
+  startBlocks: '',
 };
 
 // Can you make this dog say "hello world"
@@ -199,11 +199,11 @@ levels.dog_hello = {
   instructionsImportant: true,
   requiredBlocks: [
     saySpriteRequiredBlock({
-      notDefaultText: true
-    })
+      notDefaultText: true,
+    }),
   ],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -213,20 +213,21 @@ levels.dog_hello = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sayComplete > 0;
-    }
+    },
   },
   timeoutFailureTick: 100,
   toolbox: tb(blockOfType('studio_saySprite')),
-  startBlocks: '<block type="when_run" deletable="false" x="20" y="20"></block>'
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>',
 };
 levels.k1_1 = extend(levels.dog_hello, {
   isK1: true,
-  toolbox: tb(blockOfType('studio_saySprite'))
+  toolbox: tb(blockOfType('studio_saySprite')),
 });
 levels.c2_1 = extend(levels.dog_hello);
 levels.c3_story_1 = extend(levels.dog_hello);
@@ -236,25 +237,25 @@ levels.playlab_1 = extend(levels.dog_hello, {
   timeoutAfterWhenRun: true,
   firstSpriteIndex: 2, // penguin
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 0;
-    }
+    },
   },
   // difference is we say hello instead of hello world
   requiredBlocks: [
     saySpriteRequiredBlock({
-      requiredText: msg.hello()
-    })
-  ]
+      requiredText: msg.hello(),
+    }),
+  ],
 });
 
 levels.iceage_hello1 = extend(levels.playlab_1, {
   background: 'icy5',
-  firstSpriteIndex: 1
+  firstSpriteIndex: 1,
 });
 levels.gumball_hello1 = extend(levels.playlab_1, {
   background: 'dots',
-  firstSpriteIndex: 0
+  firstSpriteIndex: 0,
 });
 
 // Can you make the dog say something and then have the cat say something afterwards?
@@ -264,15 +265,15 @@ levels.dog_and_cat_hello = {
     // make sure each sprite says something
     saySpriteRequiredBlock({
       sprite: '0',
-      notDefaultText: true
+      notDefaultText: true,
     }),
     saySpriteRequiredBlock({
       sprite: '1',
-      notDefaultText: true
-    })
+      notDefaultText: true,
+    }),
   ],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -282,20 +283,21 @@ levels.dog_and_cat_hello = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sayComplete > 1;
-    }
+    },
   },
   timeoutFailureTick: 200,
   toolbox: tb(blockOfType('studio_saySprite')),
-  startBlocks: '<block type="when_run" deletable="false" x="20" y="20"></block>'
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>',
 };
 levels.k1_2 = extend(levels.dog_and_cat_hello, {
   isK1: true,
-  toolbox: tb(blockOfType('studio_saySprite'))
+  toolbox: tb(blockOfType('studio_saySprite')),
 });
 levels.c2_2 = extend(levels.dog_and_cat_hello, {});
 levels.c3_story_2 = extend(levels.dog_and_cat_hello, {});
@@ -306,20 +308,20 @@ levels.playlab_2 = extend(levels.dog_and_cat_hello, {
   timeoutAfterWhenRun: true,
   defaultEmotion: Emotions.HAPPY,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;
-    }
+    },
   },
   requiredBlocks: [
     // make sure each sprite says something
     saySpriteRequiredBlock({
       sprite: '0',
-      requiredText: msg.hello()
+      requiredText: msg.hello(),
     }),
     saySpriteRequiredBlock({
       sprite: '1',
-      requiredText: msg.hello()
-    })
+      requiredText: msg.hello(),
+    }),
   ],
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -329,17 +331,17 @@ levels.playlab_2 = extend(levels.dog_and_cat_hello, {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 16, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ]
+    [0, 0, 0, 0, 0, 0, 0, 0],
+  ],
 });
 levels.iceage_hello2 = extend(levels.playlab_2, {
   background: 'icy1',
-  firstSpriteIndex: 0
+  firstSpriteIndex: 0,
 });
 levels.gumball_hello2 = extend(levels.playlab_2, {
   background: 'dots',
   firstSpriteIndex: 3,
-  defaultEmotion: Emotions.NORMAL
+  defaultEmotion: Emotions.NORMAL,
 });
 
 // extended by: k1_3
@@ -347,10 +349,10 @@ levels.gumball_hello2 = extend(levels.playlab_2, {
 levels.dog_move_cat = {
   ideal: 2,
   requiredBlocks: [
-    [{test: 'moveDistance', type: 'studio_moveDistance', titles: {DIR: '2'}}]
+    [{test: 'moveDistance', type: 'studio_moveDistance', titles: {DIR: '2'}}],
   ],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -360,33 +362,34 @@ levels.dog_move_cat = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1);
-    }
+    },
   },
   timeoutFailureTick: 100,
   toolbox: tb(
     '<block type="studio_moveDistance"><title name="DIR">2</title></block>' +
       blockOfType('studio_saySprite')
   ),
-  startBlocks: '<block type="when_run" deletable="false" x="20" y="20"></block>'
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>',
 };
 levels.k1_3 = extend(levels.dog_move_cat, {
   isK1: true,
   requiredBlocks: [
     [
       {
-        test: function(block) {
+        test: function (block) {
           return block.type === 'studio_moveEastDistance';
         },
-        type: 'studio_moveEastDistance'
-      }
-    ]
+        type: 'studio_moveEastDistance',
+      },
+    ],
   ],
-  toolbox: tb(moveDistanceNSEW + blockOfType('studio_saySprite'))
+  toolbox: tb(moveDistanceNSEW + blockOfType('studio_saySprite')),
 });
 levels.c2_3 = extend(levels.dog_move_cat, {});
 levels.c3_story_3 = extend(levels.dog_move_cat, {});
@@ -398,14 +401,14 @@ levels.playlab_3 = {
       {
         test: 'moveDistance',
         type: 'studio_moveDistance',
-        titles: {DIR: '2', DISTANCE: '200'}
-      }
-    ]
+        titles: {DIR: '2', DISTANCE: '200'},
+      },
+    ],
   ],
   timeoutFailureTick: null,
   timeoutAfterWhenRun: true,
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   background: 'tennis',
   firstSpriteIndex: 26, // tennis girl
@@ -425,16 +428,16 @@ levels.playlab_3 = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 16, 0, 0, 0, 1, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ]
+    [0, 0, 0, 0, 0, 0, 0, 0],
+  ],
 };
 levels.iceage_move_to_flag = extend(levels.playlab_3, {
   background: 'icy3',
-  firstSpriteIndex: 2
+  firstSpriteIndex: 2,
 });
 levels.gumball_move_to_flag = extend(levels.playlab_3, {
   background: 'clouds',
-  firstSpriteIndex: 2
+  firstSpriteIndex: 2,
 });
 
 // Can you write a program that makes the dog move to the cat, and have the cat
@@ -446,16 +449,16 @@ levels.dog_move_cat_hello = {
       {
         test: 'moveDistance',
         type: 'studio_moveDistance',
-        titles: {DIR: '2', DISTANCE: '100'}
-      }
+        titles: {DIR: '2', DISTANCE: '100'},
+      },
     ],
     saySpriteRequiredBlock({
       sprite: '1',
-      requiredText: msg.hello()
-    })
+      requiredText: msg.hello(),
+    }),
   ],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -465,12 +468,12 @@ levels.dog_move_cat_hello = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sayComplete > 0 && Studio.sprite[0].isCollidingWith(1);
-    }
+    },
   },
   timeoutFailureTick: 200,
   toolbox: tb(
@@ -479,22 +482,22 @@ levels.dog_move_cat_hello = {
   ),
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block> \
-    <block type="studio_whenSpriteCollided" deletable="false" x="20" y="120"></block>'
+    <block type="studio_whenSpriteCollided" deletable="false" x="20" y="120"></block>',
 };
 levels.k1_4 = extend(levels.dog_move_cat_hello, {
   isK1: true,
   requiredBlocks: [
     [
       {
-        test: function(block) {
+        test: function (block) {
           return block.type === 'studio_moveEastDistance';
         },
-        type: 'studio_moveEastDistance'
-      }
+        type: 'studio_moveEastDistance',
+      },
     ],
     [
       {
-        test: function(block) {
+        test: function (block) {
           // Make sure they have the right block, and have changed the default
           // text
           return (
@@ -504,14 +507,14 @@ levels.k1_4 = extend(levels.dog_move_cat_hello, {
           );
         },
         type: 'studio_saySprite',
-        titles: {TEXT: msg.hello(), SPRITE: '1'}
-      }
-    ]
+        titles: {TEXT: msg.hello(), SPRITE: '1'},
+      },
+    ],
   ],
   toolbox: tb(moveDistanceNSEW + blockOfType('studio_saySprite')),
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block> \
-     <block type="studio_whenSpriteCollided" deletable="false" x="20" y="140"></block>'
+     <block type="studio_whenSpriteCollided" deletable="false" x="20" y="140"></block>',
 });
 levels.c2_4 = extend(levels.dog_move_cat_hello, {});
 levels.c3_story_4 = extend(levels.dog_move_cat_hello, {});
@@ -519,7 +522,7 @@ levels.c3_story_4 = extend(levels.dog_move_cat_hello, {});
 levels.playlab_4 = {
   ideal: 4,
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   background: 'tennis',
   avatarList: ['tennisboy', 'tennisgirl'],
@@ -529,24 +532,24 @@ levels.playlab_4 = {
       {
         test: 'moveDistance',
         type: 'studio_moveDistance',
-        titles: {DIR: '4', DISTANCE: '200'}
-      }
+        titles: {DIR: '4', DISTANCE: '200'},
+      },
     ],
     [
       {
         test: 'playSound',
         type: 'studio_playSound',
-        titles: {SOUND: 'goal1'}
-      }
-    ]
+        titles: {SOUND: 'goal1'},
+      },
+    ],
   ],
   // timeout when we've hit 100 OR we had only when run commands and finished them
   timeoutFailureTick: 100,
   timeoutAfterWhenRun: true,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.playSoundCount > 0 && Studio.sprite[0].isCollidingWith(1);
-    }
+    },
   },
   toolbox: tb(
     '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">200</title></block>' +
@@ -566,17 +569,17 @@ levels.playlab_4 = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 16, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ]
+    [0, 0, 0, 0, 0, 0, 0, 0],
+  ],
 };
 levels.iceage_move_to_actor = extend(levels.playlab_4, {
   background: 'icy3',
-  avatarList: ['diego', 'manny']
+  avatarList: ['diego', 'manny'],
 });
 levels.gumball_move_to_actor = extend(levels.playlab_4, {
   background: 'space',
   avatarList: ['gumball', 'darwin'],
-  defaultEmotion: Emotions.NORMAL
+  defaultEmotion: Emotions.NORMAL,
 });
 
 // Can you write a program to make the octopus say "hello" when it is clicked?
@@ -585,11 +588,11 @@ levels.click_hello = {
   ideal: 3,
   requiredBlocks: [
     saySpriteRequiredBlock({
-      requiredText: msg.hello()
-    })
+      requiredText: msg.hello(),
+    }),
   ],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -599,11 +602,11 @@ levels.click_hello = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   firstSpriteIndex: 4,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       if (!this.successState.seenCmd) {
         this.successState.seenCmd = Studio.isCmdCurrentInQueue(
           'saySprite',
@@ -611,7 +614,7 @@ levels.click_hello = {
         );
       }
       return Studio.sayComplete > 0 && this.successState.seenCmd;
-    }
+    },
   },
   callouts: [
     {
@@ -619,18 +622,18 @@ levels.click_hello = {
       element_id: '#prompt-table',
       qtip_config: {
         content: {
-          text: msg.calloutInstructions()
+          text: msg.calloutInstructions(),
         },
         position: {
           my: 'bottom left',
           at: 'top right',
           adjust: {
             x: -40,
-            y: 0
-          }
-        }
-      }
-    }
+            y: 0,
+          },
+        },
+      },
+    },
   ],
   timeoutFailureTick: 300,
   toolbox: tb(
@@ -639,7 +642,7 @@ levels.click_hello = {
   ),
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block> \
-    <block type="studio_whenSpriteClicked" deletable="false" x="20" y="120"></block>'
+    <block type="studio_whenSpriteClicked" deletable="false" x="20" y="120"></block>',
 };
 levels.c2_5 = extend(levels.click_hello, {});
 levels.c3_game_1 = extend(levels.click_hello, {});
@@ -650,20 +653,20 @@ levels.playlab_5 = extend(levels.click_hello, {
   defaultEmotion: Emotions.HAPPY,
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
-    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>'
+    '<block type="studio_whenSpriteClicked" deletable="false" x="20" y="20"></block>',
 });
 levels.iceage_click_hello = extend(levels.playlab_5, {
   background: 'icy4',
-  firstSpriteIndex: 1
+  firstSpriteIndex: 1,
 });
 
 levels.octopus_happy = {
   ideal: 2,
   requiredBlocks: [
-    [{test: 'setSpriteEmotion', type: 'studio_setSpriteEmotion'}]
+    [{test: 'setSpriteEmotion', type: 'studio_setSpriteEmotion'}],
   ],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -673,26 +676,27 @@ levels.octopus_happy = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   firstSpriteIndex: 4,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return (
         Studio.sprite[0].emotion === Emotions.HAPPY && Studio.tickCount >= 50
       );
-    }
+    },
   },
   timeoutFailureTick: 100,
   toolbox: tb(
     '<block type="studio_moveDistance"><title name="DIR">2</title></block>' +
       blockOfType('studio_setSpriteEmotion')
   ),
-  startBlocks: '<block type="when_run" deletable="false" x="20" y="20"></block>'
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>',
 };
 levels.k1_5 = extend(levels.octopus_happy, {
   isK1: true,
-  toolbox: tb(moveDistanceNSEW + blockOfType('studio_setSpriteEmotion'))
+  toolbox: tb(moveDistanceNSEW + blockOfType('studio_setSpriteEmotion')),
 });
 levels.c3_story_5 = extend(levels.octopus_happy, {});
 
@@ -702,7 +706,7 @@ levels.c3_story_6 = {
   ideal: Infinity,
   requiredBlocks: [],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   minWorkspaceHeight: 1400,
   edgeCollisions: true,
@@ -718,7 +722,7 @@ levels.c3_story_6 = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 16, 0, 0, 0, 16, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   toolbox: tb(
     blockOfType('studio_setSprite') +
@@ -738,7 +742,8 @@ levels.c3_story_6 = {
       blockOfType('studio_setSpriteSpeed') +
       blockOfType('studio_setSpriteEmotion')
   ),
-  startBlocks: '<block type="when_run" deletable="false" x="20" y="20"></block>'
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>',
 };
 
 // Can you write a program to make this penguin move around using the up / down /
@@ -747,7 +752,7 @@ levels.move_penguin = {
   ideal: 8,
   requiredBlocks: [[{test: 'move', type: 'studio_move'}]],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   softButtons: ['leftButton', 'rightButton', 'downButton', 'upButton'],
   map: [
@@ -758,7 +763,7 @@ levels.move_penguin = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 1, 0, 0, 0, 0, 1, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   firstSpriteIndex: 2,
   toolbox: tb(blockOfType('studio_move') + blockOfType('studio_saySprite')),
@@ -766,7 +771,7 @@ levels.move_penguin = {
     '<block type="studio_whenLeft" deletable="false" x="20" y="20"></block> \
     <block type="studio_whenRight" deletable="false" x="180" y="20"></block> \
     <block type="studio_whenUp" deletable="false" x="20" y="120"></block> \
-    <block type="studio_whenDown" deletable="false" x="180" y="120"></block>'
+    <block type="studio_whenDown" deletable="false" x="180" y="120"></block>',
 };
 levels.c2_6 = extend(levels.move_penguin, {});
 levels.c3_game_2 = extend(levels.move_penguin, {});
@@ -776,7 +781,7 @@ levels.playlab_6 = extend(levels.move_penguin, {
   goalOverride: {
     goalImage: 'red_fireball',
     successImage: 'blue_fireball',
-    imageWidth: 800
+    imageWidth: 800,
   },
   defaultEmotion: Emotions.ANGRY,
   toolbox: tb(
@@ -793,25 +798,25 @@ levels.playlab_6 = extend(levels.move_penguin, {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [1, 0, 0, 0, 0, 0, 1, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ]
+    [0, 0, 0, 0, 0, 0, 0, 0],
+  ],
 });
 levels.iceage_move_events = extend(levels.playlab_6, {
   background: 'icy5',
   firstSpriteIndex: 2,
-  goalOverride: {} // This prevents the override from original playlab from being used
+  goalOverride: {}, // This prevents the override from original playlab from being used
 });
 
 levels.gumball_click_hello = extend(levels.playlab_5, {
   background: 'characters',
-  firstSpriteIndex: 1 // sid
+  firstSpriteIndex: 1, // sid
 });
 
 levels.gumball_move_events = extend(levels.playlab_6, {
   background: 'cornered',
   firstSpriteIndex: 3, // diego
   goalOverride: {}, // This prevents the override from original playlab from being used
-  defaultEmotion: Emotions.NORMAL
+  defaultEmotion: Emotions.NORMAL,
 });
 
 // The "repeat forever" block allows you to run code continuously. Can you
@@ -823,12 +828,12 @@ levels.dino_up_and_down = {
       {
         test: 'moveDistance',
         type: 'studio_moveDistance',
-        titles: {SPRITE: '1', DISTANCE: '400'}
-      }
-    ]
+        titles: {SPRITE: '1', DISTANCE: '400'},
+      },
+    ],
   ],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   softButtons: ['leftButton', 'rightButton', 'downButton', 'upButton'],
   map: [
@@ -839,7 +844,7 @@ levels.dino_up_and_down = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 1, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   firstSpriteIndex: 2,
   protagonistSpriteIndex: 1,
@@ -869,7 +874,7 @@ levels.dino_up_and_down = {
       <next><block type="studio_move"> \
               <title name="DIR">4</title></block> \
       </next></block> \
-    <block type="studio_repeatForever" deletable="false" x="20" y="540"></block>'
+    <block type="studio_repeatForever" deletable="false" x="20" y="540"></block>',
 };
 levels.c2_7 = extend(levels.dino_up_and_down, {});
 levels.c3_game_3 = extend(levels.dino_up_and_down, {});
@@ -879,7 +884,7 @@ levels.playlab_7 = {
   background: 'rainbow',
   firstSpriteIndex: 10, // wizard
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   softButtons: ['leftButton', 'rightButton', 'downButton', 'upButton'],
   defaultEmotion: Emotions.HAPPY,
@@ -891,15 +896,15 @@ levels.playlab_7 = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [16, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       // successful after a given period of time as long as we've used all
       // required blocks. this number has us go back and forth twice, and end
       // facing forward
       return Studio.tickCount === 252;
-    }
+    },
   },
   timeoutFailureTick: 253,
   minWorkspaceHeight: 800,
@@ -914,27 +919,27 @@ levels.playlab_7 = {
   requiredBlocks: [
     [
       {
-        test: function(b) {
+        test: function (b) {
           return (
             b.type === 'studio_moveDistance' && b.getFieldValue('DIR') === '2'
           );
         },
         type: 'studio_moveDistance',
-        titles: {DIR: 2, DISTANCE: '400'}
-      }
+        titles: {DIR: 2, DISTANCE: '400'},
+      },
     ],
     [
       {
-        test: function(b) {
+        test: function (b) {
           return (
             b.type === 'studio_moveDistance' && b.getFieldValue('DIR') === '8'
           );
         },
         type: 'studio_moveDistance',
-        titles: {DIR: 8, DISTANCE: '400'}
-      }
-    ]
-  ]
+        titles: {DIR: 8, DISTANCE: '400'},
+      },
+    ],
+  ],
 };
 levels.iceage_repeat = extend(levels.playlab_7, {
   background: 'icy1',
@@ -947,8 +952,8 @@ levels.iceage_repeat = extend(levels.playlab_7, {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 16, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ]
+    [0, 0, 0, 0, 0, 0, 0, 0],
+  ],
 });
 levels.gumball_repeat = extend(levels.playlab_7, {
   background: 'dots',
@@ -962,8 +967,8 @@ levels.gumball_repeat = extend(levels.playlab_7, {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 16, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
-  ]
+    [0, 0, 0, 0, 0, 0, 0, 0],
+  ],
 });
 
 // Can you have the penguin say "Ouch!" and play a "hit" sound if he runs into
@@ -973,12 +978,12 @@ levels.penguin_ouch = {
   requiredBlocks: [
     saySpriteRequiredBlock({
       sprite: '0',
-      requiredText: msg.ouchExclamation()
+      requiredText: msg.ouchExclamation(),
     }),
-    [{test: 'playSound', type: 'studio_playSound'}]
+    [{test: 'playSound', type: 'studio_playSound'}],
   ],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   softButtons: ['leftButton', 'rightButton', 'downButton', 'upButton'],
   map: [
@@ -989,14 +994,14 @@ levels.penguin_ouch = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   firstSpriteIndex: 2,
   minWorkspaceHeight: 900,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1);
-    }
+    },
   },
   timeoutFailureTick: 300,
   toolbox: tb(
@@ -1033,7 +1038,7 @@ levels.penguin_ouch = {
                 <title name="DIR">4</title></block> \
         </next></block> \
     </statement></block> \
-    <block type="studio_whenSpriteCollided" deletable="false" x="20" y="730"></block>'
+    <block type="studio_whenSpriteCollided" deletable="false" x="20" y="730"></block>',
 };
 levels.c2_8 = extend(levels.penguin_ouch, {});
 levels.c3_game_4 = extend(levels.penguin_ouch, {});
@@ -1044,7 +1049,7 @@ levels.penguin_touch_octopus = {
   ideal: 16,
   requiredBlocks: [[{test: 'changeScore', type: 'studio_changeScore'}]],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   softButtons: ['leftButton', 'rightButton', 'downButton', 'upButton'],
   map: [
@@ -1055,14 +1060,14 @@ levels.penguin_touch_octopus = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   firstSpriteIndex: 2,
   minWorkspaceHeight: 1050,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sprite[0].isCollidingWith(2);
-    }
+    },
   },
   timeoutFailureTick: 600,
   toolbox: tb(
@@ -1107,7 +1112,7 @@ levels.penguin_touch_octopus = {
       </next></block> \
       </next></block> \
     <block type="studio_whenSpriteCollided" deletable="false" x="20" y="860"> \
-     <title name="SPRITE2">2</title></block>'
+     <title name="SPRITE2">2</title></block>',
 };
 levels.c2_9 = extend(levels.penguin_touch_octopus, {});
 levels.c3_game_5 = extend(levels.penguin_touch_octopus, {});
@@ -1117,10 +1122,16 @@ levels.playlab_8 = {
   ideal: 16,
   requiredBlocks: [
     [{test: 'changeScore', type: 'studio_changeScore'}],
-    [{test: 'playSound', type: 'studio_playSound', titles: {SOUND: 'winpoint'}}]
+    [
+      {
+        test: 'playSound',
+        type: 'studio_playSound',
+        titles: {SOUND: 'winpoint'},
+      },
+    ],
   ],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   softButtons: ['leftButton', 'rightButton', 'downButton', 'upButton'],
   map: [
@@ -1131,17 +1142,17 @@ levels.playlab_8 = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [16, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   avatarList: ['unicorn', 'wizard'],
   defaultEmotion: Emotions.HAPPY,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore === 1;
     },
-    failureCondition: function() {
+    failureCondition: function () {
       return Studio.sprite[0].isCollidingWith(1) && Studio.playerScore !== 1;
-    }
+    },
   },
   timeoutFailureTick: 600,
   toolbox: tb(
@@ -1170,17 +1181,17 @@ levels.playlab_8 = {
     '</next></block>' +
     '<block type="studio_whenDown" deletable="false" x="20" y="600"><next>' +
     blockOfType('studio_move', {SPRITE: 0, DIR: 4}) +
-    '</next></block>'
+    '</next></block>',
 };
 levels.iceage_sound_and_points = extend(levels.playlab_8, {
   background: 'icy2',
-  avatarList: ['sid', 'granny']
+  avatarList: ['sid', 'granny'],
 });
 levels.gumball_sound_and_points = extend(levels.playlab_8, {
   background: 'wood',
   avatarList: ['bananajoe', 'anton'],
   delayCompletion: 500,
-  defaultEmotion: Emotions.NORMAL
+  defaultEmotion: Emotions.NORMAL,
 });
 
 // Can you add blocks to change the background and the speed of the penguin, and
@@ -1192,19 +1203,19 @@ levels.change_background_and_speed = {
       {
         test: 'setBackground',
         type: 'studio_setBackground',
-        titles: {VALUE: '"night"'}
-      }
+        titles: {VALUE: '"night"'},
+      },
     ],
     [
       {
         test: 'setSpriteSpeed',
         type: 'studio_setSpriteSpeed',
-        titles: {VALUE: 'Studio.SpriteSpeed.FAST'}
-      }
-    ]
+        titles: {VALUE: 'Studio.SpriteSpeed.FAST'},
+      },
+    ],
   ],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   softButtons: ['leftButton', 'rightButton', 'downButton', 'upButton'],
   map: [
@@ -1215,14 +1226,14 @@ levels.change_background_and_speed = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   firstSpriteIndex: 2,
   minWorkspaceHeight: 1250,
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sprite[0].isCollidingWith(2);
-    }
+    },
   },
   timeoutFailureTick: 600,
   toolbox: tb(
@@ -1279,7 +1290,7 @@ levels.change_background_and_speed = {
     '<next>' +
     blockOfType('studio_changeScore') +
     '</next>' +
-    '</block>'
+    '</block>',
 };
 levels.c2_10 = extend(levels.change_background_and_speed, {});
 levels.c3_game_6 = extend(levels.change_background_and_speed, {});
@@ -1291,28 +1302,28 @@ levels.playlab_9 = {
       {
         test: 'setBackground',
         type: 'studio_setBackground',
-        titles: {VALUE: '"space"'}
-      }
+        titles: {VALUE: '"space"'},
+      },
     ],
     [
       {
         test: 'setSpriteSpeed',
         type: 'studio_setSpriteSpeed',
-        titles: {VALUE: 'Studio.SpriteSpeed.FAST'}
-      }
-    ]
+        titles: {VALUE: 'Studio.SpriteSpeed.FAST'},
+      },
+    ],
   ],
   timeoutFailureTick: 400,
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   defaultEmotion: Emotions.ANGRY,
   softButtons: ['leftButton', 'rightButton', 'downButton', 'upButton'],
   avatarList: ['spacebot', 'alien'],
   goal: {
-    successCondition: function() {
+    successCondition: function () {
       return Studio.sprite[0].isCollidingWith(1);
-    }
+    },
   },
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
@@ -1322,7 +1333,7 @@ levels.playlab_9 = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   toolbox: tb(
     blockOfType('studio_setSpriteSpeed', {VALUE: 'Studio.SpriteSpeed.FAST'}) +
@@ -1374,7 +1385,7 @@ levels.playlab_9 = {
     '<next>' +
     blockOfType('studio_move', {DIR: 4}) +
     '</next>' +
-    '</block>'
+    '</block>',
 };
 
 levels.iceage_warn_ice_age = extend(levels.playlab_9, {
@@ -1392,16 +1403,16 @@ levels.iceage_warn_ice_age = extend(levels.playlab_9, {
       {
         test: 'setBackground',
         type: 'studio_setBackground',
-        titles: {VALUE: '"grassy"'}
-      }
+        titles: {VALUE: '"grassy"'},
+      },
     ],
     [
       {
         test: 'setSpriteSpeed',
         type: 'studio_setSpriteSpeed',
-        titles: {VALUE: 'Studio.SpriteSpeed.FAST'}
-      }
-    ]
+        titles: {VALUE: 'Studio.SpriteSpeed.FAST'},
+      },
+    ],
   ],
   avatarList: ['sid', 'diego'],
   startBlocks:
@@ -1445,7 +1456,7 @@ levels.iceage_warn_ice_age = extend(levels.playlab_9, {
     '<next>' +
     blockOfType('studio_move', {DIR: 4}) +
     '</next>' +
-    '</block>'
+    '</block>',
 });
 
 levels.gumball_warn_food_fight = extend(levels.playlab_9, {
@@ -1465,16 +1476,16 @@ levels.gumball_warn_food_fight = extend(levels.playlab_9, {
       {
         test: 'setBackground',
         type: 'studio_setBackground',
-        titles: {VALUE: '"characters"'}
-      }
+        titles: {VALUE: '"characters"'},
+      },
     ],
     [
       {
         test: 'setSpriteSpeed',
         type: 'studio_setSpriteSpeed',
-        titles: {VALUE: 'Studio.SpriteSpeed.FAST'}
-      }
-    ]
+        titles: {VALUE: 'Studio.SpriteSpeed.FAST'},
+      },
+    ],
   ],
   avatarList: ['darwin', 'penny'],
   startBlocks:
@@ -1518,7 +1529,7 @@ levels.gumball_warn_food_fight = extend(levels.playlab_9, {
     '<next>' +
     blockOfType('studio_move', {DIR: 4}) +
     '</next>' +
-    '</block>'
+    '</block>',
 });
 
 levels.gumball_join_food_fight = {
@@ -1526,11 +1537,11 @@ levels.gumball_join_food_fight = {
   delayCompletion: 2000,
   requiredBlocks: [
     [{test: 'setSpriteEmotion', type: 'studio_setSpriteEmotion'}],
-    [{test: 'throw', type: 'studio_throw'}]
+    [{test: 'throw', type: 'studio_throw'}],
   ],
   timeoutFailureTick: 300,
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   defaultEmotion: Emotions.NORMAL,
   avatarList: ['bananajoe', 'anton'],
@@ -1542,12 +1553,12 @@ levels.gumball_join_food_fight = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   toolbox: tb(
     blockOfType('studio_whenSpriteCollided', {
       SPRITE1: 1,
-      SPRITE2: 'anything'
+      SPRITE2: 'anything',
     }) +
       blockOfType('studio_setSpriteEmotion', {SPRITE: 1}) +
       blockOfType('studio_throw', {SPRITE: 0, DIR: 2}) +
@@ -1559,15 +1570,15 @@ levels.gumball_join_food_fight = {
   progressConditions: [
     {
       required: {setEmotion: true, throwProjectile: true},
-      result: {success: true}
+      result: {success: true},
     },
-    {required: {timedOut: true}, result: {success: false}}
-  ]
+    {required: {timedOut: true}, result: {success: false}},
+  ],
 };
 
 levels.iceage_throw_hearts = extend(levels.gumball_join_food_fight, {
   background: 'icy3',
-  avatarList: ['sid', 'granny']
+  avatarList: ['sid', 'granny'],
 });
 
 // Create your own game. When you're done, click Finish to let friends try your story on their phones.
@@ -1575,7 +1586,7 @@ levels.sandbox = {
   ideal: Infinity,
   requiredBlocks: [],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   softButtons: ['leftButton', 'rightButton', 'downButton', 'upButton'],
   minWorkspaceHeight: 1400,
@@ -1592,7 +1603,7 @@ levels.sandbox = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 16, 0, 0, 0, 16, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   toolbox: tb(
     blockOfType('studio_setSprite') +
@@ -1616,24 +1627,25 @@ levels.sandbox = {
       blockOfType('studio_setSpriteEmotion') +
       blockOfType('studio_vanish')
   ),
-  startBlocks: '<block type="when_run" deletable="false" x="20" y="20"></block>'
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>',
 };
 levels.c2_11 = extend(levels.sandbox, {});
 levels.c3_game_7 = extend(levels.sandbox, {});
 levels.playlab_10 = extend(levels.sandbox, {
   appStringsFunctions: {
-    continueText: msg.playlab_lastLevel_continueText
-  }
+    continueText: msg.playlab_lastLevel_continueText,
+  },
 });
 levels.iceage_free_play = extend(levels.playlab_10, {
   appStringsFunctions: {
-    continueText: msg.playlab_lastLevel_continueText
-  }
+    continueText: msg.playlab_lastLevel_continueText,
+  },
 });
 levels.gumball_free_play = extend(levels.playlab_10, {
   appStringsFunctions: {
-    continueText: msg.playlab_lastLevel_continueText
-  }
+    continueText: msg.playlab_lastLevel_continueText,
+  },
 });
 
 // Create your own story! Move around the cat and dog, and make them say things.
@@ -1641,7 +1653,7 @@ levels.k1_6 = {
   ideal: Infinity,
   requiredBlocks: [],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   minWorkspaceHeight: 1500,
   spritesHiddenToStart: true,
@@ -1654,7 +1666,7 @@ levels.k1_6 = {
     [16, 0, 16, 0, 16, 0, 16, 0],
     [0, 16, 0, 16, 0, 16, 0, 0],
     [16, 16, 16, 16, 16, 16, 16, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   isK1: true,
   softButtons: [],
@@ -1673,7 +1685,7 @@ levels.k1_6 = {
     '<block type="when_run" deletable="false" x="20" y="20">\
       <next><block type="studio_setSprite"> \
         <title name="SPRITE">0</title></block> \
-      </next></block>'
+      </next></block>',
 };
 
 levels.k1_block_test = extend(levels['99'], {
@@ -1688,7 +1700,7 @@ levels.k1_block_test = extend(levels['99'], {
       blockOfType('studio_moveEast_length') +
       blockOfType('studio_moveWest_length')
   ),
-  isK1: true
+  isK1: true,
 });
 
 // you can get here via http://learn.code.org/2014/11, which is semi-hidden
@@ -1696,7 +1708,7 @@ levels.full_sandbox = {
   scrollbars: true,
   requiredBlocks: [],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   softButtons: ['leftButton', 'rightButton', 'downButton', 'upButton'],
   minWorkspaceHeight: 1400,
@@ -1713,7 +1725,7 @@ levels.full_sandbox = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 16, 0, 0, 0, 16, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   toolbox: tb(
     createCategory(
@@ -1858,7 +1870,8 @@ levels.full_sandbox = {
           blockOfType('functional_boolean')
       )
   ),
-  startBlocks: '<block type="when_run" deletable="false" x="20" y="20"></block>'
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>',
 };
 
 levels.full_sandbox_infinity = extend(levels.full_sandbox, {});
@@ -1873,7 +1886,7 @@ levels.ec_sandbox = extend(levels.sandbox, {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 16, 0, 0, 0, 16, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   codeFunctions: {
     // Play Lab
@@ -1925,9 +1938,9 @@ levels.ec_sandbox = extend(levels.sandbox, {
     functionParams_none: null,
     functionParams_n: null,
     callMyFunction: null,
-    callMyFunction_n: null
+    callMyFunction_n: null,
   },
-  startBlocks: ''
+  startBlocks: '',
 });
 
 /* ******* Hour of Code 2015 ********/
@@ -1943,7 +1956,7 @@ levels.js_hoc2015_move_right = {
     moveRight: null,
     moveLeft: null,
     moveUp: null,
-    moveDown: null
+    moveDown: null,
   },
   startBlocks: ['moveRight();', ''].join('\n'),
   itemGridAlignedMovement: true,
@@ -1952,85 +1965,37 @@ levels.js_hoc2015_move_right = {
   floatingScore: true,
   map: [
     [
-      0x1020000,
-      0x1020000,
+      0x1020000, 0x1020000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00,
       0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x0000000
     ],
     [
-      0x1020000,
-      0x1020000,
+      0x1020000, 0x1020000, 0x0000000, 0x0010000, 0x0020000, 0x0100000, 0x00,
       0x0000000,
-      0x0010000,
-      0x0020000,
+    ],
+    [
+      0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00,
+      0x0000000,
+    ],
+    [
+      0x0000000, 0x0000000, 0x0000000, 0x0000010, 0x0000000, 0x0000001, 0x00,
+      0x0000000,
+    ],
+    [
+      0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00,
+      0x0000000,
+    ],
+    [
+      0x0000000, 0x0000000, 0x0000000, 0x0100000, 0x0010000, 0x0120000, 0x00,
+      0x0000000,
+    ],
+    [
+      0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00,
       0x0100000,
-      0x00,
-      0x0000000
     ],
     [
+      0x0000000, 0x1120000, 0x1120000, 0x0000000, 0x0000000, 0x0000000, 0x00,
       0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x0000000
     ],
-    [
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000010,
-      0x0000000,
-      0x0000001,
-      0x00,
-      0x0000000
-    ],
-    [
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x0000000
-    ],
-    [
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0100000,
-      0x0010000,
-      0x0120000,
-      0x00,
-      0x0000000
-    ],
-    [
-      0x0000000,
-      0x1120000,
-      0x1120000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x0100000
-    ],
-    [
-      0x0000000,
-      0x1120000,
-      0x1120000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00,
-      0x0000000
-    ]
   ],
 
   shortInstructions: msg.hoc2015_move_right_instructions(),
@@ -2038,7 +2003,7 @@ levels.js_hoc2015_move_right = {
   timeoutFailureTick: 100,
   timeoutAfterWhenRun: true,
   goalOverride: {
-    goalImage: 'goal1'
+    goalImage: 'goal1',
   },
   callouts: [
     {
@@ -2046,29 +2011,29 @@ levels.js_hoc2015_move_right = {
       element_id: '#runButton',
       qtip_config: {
         content: {
-          text: msg.calloutMoveRightRunButton()
+          text: msg.calloutMoveRightRunButton(),
         },
         position: {
           my: 'bottom left',
           at: 'top center',
           adjust: {
             x: 0,
-            y: 0
-          }
-        }
-      }
-    }
+            y: 0,
+          },
+        },
+      },
+    },
   ],
   progressConditions: [
     {
       required: {allGoalsVisited: true},
-      result: {success: true, message: msg.successHasAllGoals()}
+      result: {success: true, message: msg.successHasAllGoals()},
     },
     {
       required: {timedOut: true, allGoalsVisited: false},
-      result: {success: false, message: msg.failedHasAllGoals()}
-    }
-  ]
+      result: {success: false, message: msg.failedHasAllGoals()},
+    },
+  ],
 };
 
 levels.js_hoc2015_move_right_down = {
@@ -2081,7 +2046,7 @@ levels.js_hoc2015_move_right_down = {
     moveRight: null,
     moveLeft: null,
     moveUp: null,
-    moveDown: null
+    moveDown: null,
   },
   startBlocks: ['moveRight();', ''].join('\n'),
   itemGridAlignedMovement: true,
@@ -2090,102 +2055,54 @@ levels.js_hoc2015_move_right_down = {
   floatingScore: true,
   map: [
     [
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00
     ],
     [
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00
     ],
     [
-      0x1100000,
-      0x1100000,
+      0x1100000, 0x1100000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00
     ],
     [
-      0x1100000,
-      0x1100000,
+      0x1100000, 0x1100000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0000000,
       0x00,
-      0x0000010,
-      0x0000000,
-      0x0000001,
-      0x0000000,
-      0x00
     ],
     [
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000,
       0x00,
-      0x1010000,
-      0x1010000,
-      0x0000000,
-      0x0000000,
-      0x00
     ],
     [
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x1010000, 0x1010000, 0x0000001, 0x0000000,
       0x00,
-      0x1010000,
-      0x1010000,
-      0x0000001,
-      0x0000000,
-      0x00
     ],
     [
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00
     ],
     [
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00
-    ]
+    ],
   ],
   shortInstructions: msg.hoc2015_move_right_down_instructions(),
   ticksBeforeFaceSouth: 9,
   timeoutAfterWhenRun: true,
   goalOverride: {
-    goalImage: 'goal2'
+    goalImage: 'goal2',
   },
   progressConditions: [
     {
       required: {allGoalsVisited: true},
-      result: {success: true, message: msg.successHasAllGoals()}
+      result: {success: true, message: msg.successHasAllGoals()},
     },
     {
       required: {timedOut: true, allGoalsVisited: false},
-      result: {success: false, message: msg.failedHasAllGoals()}
-    }
-  ]
+      result: {success: false, message: msg.failedHasAllGoals()},
+    },
+  ],
 };
 
 levels.js_hoc2015_move_backtrack = {
@@ -2198,7 +2115,7 @@ levels.js_hoc2015_move_backtrack = {
     moveRight: null,
     moveLeft: null,
     moveUp: null,
-    moveDown: null
+    moveDown: null,
   },
   startBlocks: ['moveRight();', ''].join('\n'),
   itemGridAlignedMovement: true,
@@ -2213,13 +2130,13 @@ levels.js_hoc2015_move_backtrack = {
     [0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
     [0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
-    [0x00, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00]
+    [0x00, 0x0000000, 0x0000020, 0x0000000, 0x0000000, 0x0000000, 0x00, 0x00],
   ],
   shortInstructions: msg.hoc2015_move_backtrack_instructions(),
   ticksBeforeFaceSouth: 9,
   timeoutAfterWhenRun: true,
   goalOverride: {
-    goalImage: 'goal1'
+    goalImage: 'goal1',
   },
   progressConditions: [
     {
@@ -2227,18 +2144,18 @@ levels.js_hoc2015_move_backtrack = {
       result: {
         success: false,
         message: msg.failedAvoidHazard(),
-        pauseInterpreter: true
-      }
+        pauseInterpreter: true,
+      },
     },
     {
       required: {allGoalsVisited: true},
-      result: {success: true, message: msg.successHasAllGoals()}
+      result: {success: true, message: msg.successHasAllGoals()},
     },
     {
       required: {timedOut: true, allGoalsVisited: false},
-      result: {success: false, message: msg.failedHasAllGoals()}
-    }
-  ]
+      result: {success: false, message: msg.failedHasAllGoals()},
+    },
+  ],
 };
 
 levels.js_hoc2015_move_diagonal = {
@@ -2252,7 +2169,7 @@ levels.js_hoc2015_move_diagonal = {
     moveRight: null,
     moveLeft: null,
     moveUp: null,
-    moveDown: null
+    moveDown: null,
   },
   startBlocks: ['moveDown();', ''].join('\n'),
   itemGridAlignedMovement: true,
@@ -2261,92 +2178,44 @@ levels.js_hoc2015_move_diagonal = {
   floatingScore: true,
   map: [
     [
+      0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00
     ],
     [
+      0x00, 0x0000000, 0x0000000, 0x0000000, 0x0010000, 0x0000010, 0x0000000,
       0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0010000,
-      0x0000010,
-      0x0000000,
-      0x00
     ],
     [
+      0x00, 0x1100000, 0x1100000, 0x0000000, 0x0000001, 0x0000000, 0x0000000,
       0x00,
-      0x1100000,
-      0x1100000,
-      0x0000000,
-      0x0000001,
-      0x0000000,
-      0x0000000,
-      0x00
     ],
     [
+      0x00, 0x1100000, 0x1100000, 0x0000001, 0x0240000, 0x0250000, 0x0000000,
       0x00,
-      0x1100000,
-      0x1100000,
-      0x0000001,
-      0x0240000,
-      0x0250000,
-      0x0000000,
-      0x00
     ],
     [
+      0x00, 0x0000020, 0x0000001, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00,
-      0x0000020,
-      0x0000001,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00
     ],
     [
+      0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00
     ],
     [
+      0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000,
       0x00,
-      0x0000000,
-      0x0000000,
-      0x1340000,
-      0x1340000,
-      0x1350000,
-      0x1350000,
-      0x00
     ],
     [
+      0x00, 0x0000000, 0x0000000, 0x1340000, 0x1340000, 0x1350000, 0x1350000,
       0x00,
-      0x0000000,
-      0x0000000,
-      0x1340000,
-      0x1340000,
-      0x1350000,
-      0x1350000,
-      0x00
-    ]
+    ],
   ],
   embed: 'false',
   shortInstructions: msg.hoc2015_move_diagonal_instructions(),
   ticksBeforeFaceSouth: 9,
   timeoutAfterWhenRun: true,
   goalOverride: {
-    goalImage: 'goal1'
+    goalImage: 'goal1',
   },
   progressConditions: [
     {
@@ -2354,17 +2223,17 @@ levels.js_hoc2015_move_diagonal = {
       result: {
         success: false,
         message: msg.failedAvoidHazard(),
-        pauseInterpreter: true
-      }
+        pauseInterpreter: true,
+      },
     },
     {
       required: {allGoalsVisited: true},
-      result: {success: true, message: msg.successHasAllGoals()}
+      result: {success: true, message: msg.successHasAllGoals()},
     },
     {
       required: {timedOut: true, allGoalsVisited: false},
-      result: {success: false, message: msg.failedHasAllGoals()}
-    }
+      result: {success: false, message: msg.failedHasAllGoals()},
+    },
   ],
   callouts: [
     {
@@ -2372,19 +2241,19 @@ levels.js_hoc2015_move_diagonal = {
       element_id: '#show-code-header',
       qtip_config: {
         content: {
-          text: msg.calloutShowCodeToggle()
+          text: msg.calloutShowCodeToggle(),
         },
         position: {
           my: 'top right',
           at: 'bottom left',
           adjust: {
             x: 0,
-            y: 0
-          }
-        }
-      }
-    }
-  ]
+            y: 0,
+          },
+        },
+      },
+    },
+  ],
 };
 
 levels.js_hoc2015_move_around = {
@@ -2398,7 +2267,7 @@ levels.js_hoc2015_move_around = {
     moveRight: null,
     moveLeft: null,
     moveUp: null,
-    moveDown: null
+    moveDown: null,
   },
   startBlocks: ['moveRight();', ''].join('\n'),
   itemGridAlignedMovement: true,
@@ -2407,92 +2276,44 @@ levels.js_hoc2015_move_around = {
   floatingScore: true,
   map: [
     [
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00
     ],
     [
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00
     ],
     [
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0000010, 0x0000000, 0x0000001, 0x0010000,
       0x00,
-      0x0000010,
-      0x0000000,
-      0x0000001,
-      0x0010000,
-      0x00
     ],
     [
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x00, 0x0040000, 0x0020000, 0x0000000, 0x0000000,
       0x00,
-      0x0040000,
-      0x0020000,
-      0x0000000,
-      0x0000000,
-      0x00
     ],
     [
-      0x0000000,
-      0x0000000,
+      0x0000000, 0x0000000, 0x20, 0x0140000, 0x0000000, 0x0000001, 0x0000000,
       0x20,
-      0x0140000,
-      0x0000000,
-      0x0000001,
-      0x0000000,
-      0x20
     ],
     [
-      0x1120000,
-      0x1120000,
+      0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000001, 0x0000000, 0x0000000,
       0x00,
-      0x0000000,
-      0x0000001,
-      0x0000000,
-      0x0000000,
-      0x00
     ],
     [
-      0x1120000,
-      0x1120000,
+      0x1120000, 0x1120000, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00
     ],
     [
-      0x0000000,
-      0x0000020,
+      0x0000000, 0x0000020, 0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x00
-    ]
+    ],
   ],
   embed: 'false',
   shortInstructions: msg.hoc2015_move_around_instructions(),
   ticksBeforeFaceSouth: 9,
   timeoutAfterWhenRun: true,
   goalOverride: {
-    goalImage: 'goal2'
+    goalImage: 'goal2',
   },
   progressConditions: [
     {
@@ -2500,18 +2321,18 @@ levels.js_hoc2015_move_around = {
       result: {
         success: false,
         message: msg.failedAvoidHazard(),
-        pauseInterpreter: true
-      }
+        pauseInterpreter: true,
+      },
     },
     {
       required: {allGoalsVisited: true},
-      result: {success: true, message: msg.successHasAllGoals()}
+      result: {success: true, message: msg.successHasAllGoals()},
     },
     {
       required: {timedOut: true, allGoalsVisited: false},
-      result: {success: false, message: msg.failedHasAllGoals()}
-    }
-  ]
+      result: {success: false, message: msg.failedHasAllGoals()},
+    },
+  ],
 };
 
 levels.js_hoc2015_move_finale = {
@@ -2524,7 +2345,7 @@ levels.js_hoc2015_move_finale = {
     moveRight: null,
     moveLeft: null,
     moveUp: null,
-    moveDown: null
+    moveDown: null,
   },
   startBlocks: ['moveDown();', ''].join('\n'),
   itemGridAlignedMovement: true,
@@ -2533,92 +2354,44 @@ levels.js_hoc2015_move_finale = {
   floatingScore: true,
   map: [
     [
-      0x00,
+      0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000
     ],
     [
-      0x00,
+      0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000
     ],
     [
-      0x00,
-      0x0000020,
-      0x0000010,
-      0x0020000,
-      0x0000001,
-      0x0100000,
+      0x00, 0x0000020, 0x0000010, 0x0020000, 0x0000001, 0x0100000, 0x0000000,
       0x0000000,
-      0x0000000
     ],
     [
-      0x00,
+      0x00, 0x0000000, 0x0000000, 0x0000001, 0x0000000, 0x0000001, 0x0000020,
       0x0000000,
-      0x0000000,
-      0x0000001,
-      0x0000000,
-      0x0000001,
-      0x0000020,
-      0x0000000
     ],
     [
-      0x00,
+      0x00, 0x0000000, 0x0000001, 0x0120000, 0x0000000, 0x0000000, 0x0000000,
       0x0000000,
-      0x0000001,
-      0x0120000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000
     ],
     [
-      0x00,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000020,
-      0x0000000,
+      0x00, 0x0000000, 0x0000000, 0x0000000, 0x0000020, 0x0000000, 0x1020000,
       0x1020000,
-      0x1020000
     ],
     [
-      0x00,
-      0x1010000,
-      0x1010000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
+      0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x1020000,
       0x1020000,
-      0x1020000
     ],
     [
-      0x00,
-      0x1010000,
-      0x1010000,
+      0x00, 0x1010000, 0x1010000, 0x0000000, 0x0000000, 0x0000000, 0x0000000,
       0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000,
-      0x0000000
-    ]
+    ],
   ],
   embed: 'false',
   shortInstructions: msg.hoc2015_move_finale_instructions(),
   ticksBeforeFaceSouth: 9,
   timeoutAfterWhenRun: true,
   goalOverride: {
-    goalImage: 'goal2'
+    goalImage: 'goal2',
   },
   progressConditions: [
     {
@@ -2626,17 +2399,17 @@ levels.js_hoc2015_move_finale = {
       result: {
         success: false,
         message: msg.failedAvoidHazard(),
-        pauseInterpreter: true
-      }
+        pauseInterpreter: true,
+      },
     },
     {
       required: {allGoalsVisited: true},
-      result: {success: true, message: msg.successHasAllGoals()}
+      result: {success: true, message: msg.successHasAllGoals()},
     },
     {
       required: {timedOut: true, allGoalsVisited: false},
-      result: {success: false, message: msg.failedHasAllGoals()}
-    }
+      result: {success: false, message: msg.failedHasAllGoals()},
+    },
   ],
   callouts: [
     {
@@ -2644,19 +2417,19 @@ levels.js_hoc2015_move_finale = {
       element_id: '#show-code-header',
       qtip_config: {
         content: {
-          text: msg.calloutShowCodeCanToggle()
+          text: msg.calloutShowCodeCanToggle(),
         },
         position: {
           my: 'top right',
           at: 'bottom left',
           adjust: {
             x: 15,
-            y: 0
-          }
-        }
-      }
-    }
-  ]
+            y: 0,
+          },
+        },
+      },
+    },
+  ],
 };
 
 /* ** level 7 ** */
@@ -2676,7 +2449,7 @@ levels.js_hoc2015_event_two_items = {
     goDown: null,
 
     whenUp: null,
-    whenDown: null
+    whenDown: null,
   },
   startBlocks: [
     'function whenUp() {',
@@ -2684,7 +2457,7 @@ levels.js_hoc2015_event_two_items = {
     '}',
     'function whenDown() {',
     '  ',
-    '}'
+    '}',
   ].join('\n'),
   removeItemsWhenActorCollides: true,
   delayCompletion: 2000,
@@ -2697,7 +2470,7 @@ levels.js_hoc2015_event_two_items = {
     [0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x00],
     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
-    [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00]
+    [0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00],
   ],
   pinWorkspaceToBottom: 'true',
   embed: 'false',
@@ -2707,21 +2480,21 @@ levels.js_hoc2015_event_two_items = {
   showTimeoutRect: 'rgba(0, 0, 0, 0.5)',
   goalOverride: {
     goalAnimation: 'animatedGoal',
-    goalRenderOffsetX: 0
+    goalRenderOffsetX: 0,
   },
   progressConditions: [
     {
       required: {allGoalsVisited: true},
-      result: {success: true, message: msg.successCharacter1()}
+      result: {success: true, message: msg.successCharacter1()},
     },
     {
       required: {timedOut: true},
       result: {
         success: false,
         message: msg.failedTwoItemsTimeout(),
-        blocklyMessage: msg.failedTwoItemsTimeoutBlockly()
-      }
-    }
+        blocklyMessage: msg.failedTwoItemsTimeoutBlockly(),
+      },
+    },
   ],
   callouts: [
     {
@@ -2730,20 +2503,20 @@ levels.js_hoc2015_event_two_items = {
       hide_target_selector: '.droplet-drag-cover',
       qtip_config: {
         content: {
-          text: msg.calloutShowPlaceGoUpHere()
+          text: msg.calloutShowPlaceGoUpHere(),
         },
         hide: {
-          event: 'mouseup touchend'
+          event: 'mouseup touchend',
         },
         position: {
           my: 'top left',
           at: 'bottom right',
           adjust: {
             x: 30,
-            y: -10
-          }
-        }
-      }
+            y: -10,
+          },
+        },
+      },
     },
     {
       id: 'playlab:js_hoc2015_event_two_items:arrowsCallout',
@@ -2751,15 +2524,15 @@ levels.js_hoc2015_event_two_items = {
       hide_target_selector: '#soft-buttons',
       qtip_config: {
         content: {
-          text: msg.calloutUseArrowButtons()
+          text: msg.calloutUseArrowButtons(),
         },
         position: {
           my: 'bottom left',
-          at: 'top center'
-        }
-      }
-    }
-  ]
+          at: 'top center',
+        },
+      },
+    },
+  ],
 };
 
 levels.js_hoc2015_event_four_items = {
@@ -2781,7 +2554,7 @@ levels.js_hoc2015_event_four_items = {
     whenLeft: null,
     whenRight: null,
     whenUp: null,
-    whenDown: null
+    whenDown: null,
   },
   startBlocks: [
     'function whenUp() {',
@@ -2789,7 +2562,7 @@ levels.js_hoc2015_event_four_items = {
     '}',
     'function whenDown() {',
     '  ',
-    '}'
+    '}',
   ].join('\n'),
   removeItemsWhenActorCollides: true,
   delayCompletion: 2000,
@@ -2802,7 +2575,7 @@ levels.js_hoc2015_event_four_items = {
     [0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x01],
     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
     [0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00],
-    [0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00]
+    [0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00],
   ],
   embed: 'false',
   shortInstructions: msg.hoc2015_event_four_items_instructions(),
@@ -2810,23 +2583,23 @@ levels.js_hoc2015_event_four_items = {
   timeoutFailureTick: 1350, // 45 seconds
   showTimeoutRect: 'rgba(0, 0, 0, 0.5)',
   goalOverride: {
-    goalAnimation: 'animatedGoal'
+    goalAnimation: 'animatedGoal',
   },
 
   progressConditions: [
     {
       required: {allGoalsVisited: true},
-      result: {success: true, message: msg.successCharacter1()}
+      result: {success: true, message: msg.successCharacter1()},
     },
     {
       required: {timedOut: true},
       result: {
         success: false,
         message: msg.failedFourItemsTimeout(),
-        blocklyMessage: msg.failedFourItemsTimeoutBlockly()
-      }
-    }
-  ]
+        blocklyMessage: msg.failedFourItemsTimeoutBlockly(),
+      },
+    },
+  ],
 };
 
 levels.js_hoc2015_score = {
@@ -2841,18 +2614,18 @@ levels.js_hoc2015_score = {
   wallMap: 'circle',
   softButtons: ['leftButton', 'rightButton', 'downButton', 'upButton'],
   autohandlerOverrides: {
-    whenGetRebelPilot: 'whenTouchGoal'
+    whenGetRebelPilot: 'whenTouchGoal',
   },
   codeFunctions: {
     playSound: null,
     addPoints: {params: ['100']},
 
-    whenGetRebelPilot: null
+    whenGetRebelPilot: null,
   },
   startBlocks: [
     'function whenGetRebelPilot() {',
     '  playSound("R2-D2random");',
-    '}'
+    '}',
   ].join('\n'),
   paramRestrictions: {
     playSound: {
@@ -2861,8 +2634,8 @@ levels.js_hoc2015_score = {
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
-      'R2-D2sound4': true
-    }
+      'R2-D2sound4': true,
+    },
   },
   itemGridAlignedMovement: true,
   removeItemsWhenActorCollides: true,
@@ -2877,7 +2650,7 @@ levels.js_hoc2015_score = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 1, 0, 0, 0, 0]
+    [0, 0, 0, 1, 0, 0, 0, 0],
   ],
   shortInstructions: msg.hoc2015_score_instructions(),
   instructions2: msg.hoc2015_score_instructions2(),
@@ -2885,26 +2658,26 @@ levels.js_hoc2015_score = {
   timeoutFailureTick: 1350, // 45 seconds
   showTimeoutRect: 'rgba(0, 0, 0, 0.5)',
   goalOverride: {
-    goalAnimation: 'animatedGoal'
+    goalAnimation: 'animatedGoal',
   },
   goal: {
     // The level uses completeOnSuccessConditionNotGoals, so make sure this
     // returns null  The progressConditions will take care of completion.
-    successCondition: function() {
+    successCondition: function () {
       return false;
-    }
+    },
   },
   progressConditions: [
     // complete success
     {
       required: {allGoalsVisited: true, currentPointsAtOrAbove: 900},
-      result: {success: true, message: msg.successCharacter1()}
+      result: {success: true, message: msg.successCharacter1()},
     },
 
     // timed out: not enough goals
     {
       required: {timedOut: true, allGoalsVisited: false},
-      result: {success: false, message: msg.failedScoreTimeout()}
+      result: {success: false, message: msg.failedScoreTimeout()},
     },
 
     // got all the goals, but not enough points
@@ -2913,9 +2686,9 @@ levels.js_hoc2015_score = {
       result: {
         success: false,
         message: msg.failedScoreScore(),
-        blocklyMessage: msg.failedScoreScoreBlockly()
-      }
-    }
+        blocklyMessage: msg.failedScoreScoreBlockly(),
+      },
+    },
   ],
   completeOnSuccessConditionNotGoals: true,
   callouts: [
@@ -2925,13 +2698,13 @@ levels.js_hoc2015_score = {
       hide_target_selector: '#soft-buttons',
       qtip_config: {
         content: {
-          text: msg.calloutUseArrowButtonsAutoSteer()
+          text: msg.calloutUseArrowButtonsAutoSteer(),
         },
         position: {
           my: 'bottom left',
-          at: 'top center'
-        }
-      }
+          at: 'top center',
+        },
+      },
     },
     {
       id: 'playlab:js_hoc2015_score:placeCommandsAtTop',
@@ -2939,22 +2712,22 @@ levels.js_hoc2015_score = {
       hide_target_selector: '.droplet-drag-cover',
       qtip_config: {
         content: {
-          text: msg.calloutShowPlaySound()
+          text: msg.calloutShowPlaySound(),
         },
         hide: {
-          event: 'mouseup touchend'
+          event: 'mouseup touchend',
         },
         position: {
           my: 'top center',
           at: 'bottom center',
           adjust: {
             x: 170,
-            y: 0
-          }
-        }
-      }
-    }
-  ]
+            y: 0,
+          },
+        },
+      },
+    },
+  ],
 };
 
 levels.js_hoc2015_win_lose = {
@@ -2973,7 +2746,7 @@ levels.js_hoc2015_win_lose = {
     removePoints: {params: ['100']},
     whenGetRebelPilot: null,
     whenGetStormtrooper: null,
-    whenGetMynock: null
+    whenGetMynock: null,
   },
   startBlocks: [].join('\n'),
   paramRestrictions: {
@@ -2983,8 +2756,8 @@ levels.js_hoc2015_win_lose = {
       'R2-D2sound1': true,
       'R2-D2sound2': true,
       'R2-D2sound3': true,
-      'R2-D2sound4': true
-    }
+      'R2-D2sound4': true,
+    },
   },
   itemGridAlignedMovement: true,
   removeItemsWhenActorCollides: true,
@@ -2998,7 +2771,7 @@ levels.js_hoc2015_win_lose = {
     [0x000, 0x000, 0x000, 0x010, 0x000, 0x000, 0x000, 0x000],
     [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
     [0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
-    [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000]
+    [0x000, 0x100, 0x000, 0x000, 0x000, 0x000, 0x000, 0x000],
   ],
   embed: 'false',
   shortInstructions: msg.hoc2015_win_lose_instructions(),
@@ -3012,18 +2785,18 @@ levels.js_hoc2015_win_lose = {
       element_id: '#prompt-table',
       qtip_config: {
         content: {
-          text: msg.calloutInstructions()
+          text: msg.calloutInstructions(),
         },
         position: {
           my: 'bottom left',
           at: 'top right',
           adjust: {
             x: -40,
-            y: 0
-          }
-        }
-      }
-    }
+            y: 0,
+          },
+        },
+      },
+    },
   ],
 
   progressConditions: [
@@ -3032,8 +2805,8 @@ levels.js_hoc2015_win_lose = {
       required: {gotAllItems: true, currentPointsBelow: 200},
       result: {
         message: msg.failedWinLoseScore(),
-        blocklyMessage: msg.failedWinLoseScoreBlockly()
-      }
+        blocklyMessage: msg.failedWinLoseScoreBlockly(),
+      },
     },
 
     // Timed out: not enough items, not enough points
@@ -3041,9 +2814,9 @@ levels.js_hoc2015_win_lose = {
       required: {
         timedOut: true,
         collectedItemsBelow: 2,
-        currentPointsBelow: 200
+        currentPointsBelow: 200,
       },
-      result: {success: false, message: msg.failedWinLoseTimeout()}
+      result: {success: false, message: msg.failedWinLoseTimeout()},
     },
 
     // Timed out: enough items, not enough points
@@ -3051,13 +2824,13 @@ levels.js_hoc2015_win_lose = {
       required: {
         timedOut: true,
         collectedItemsAtOrAbove: 2,
-        currentPointsBelow: 200
+        currentPointsBelow: 200,
       },
       result: {
         success: false,
         message: msg.failedWinLoseScore(),
-        blocklyMessage: msg.failedWinLoseScoreBlockly()
-      }
+        blocklyMessage: msg.failedWinLoseScoreBlockly(),
+      },
     },
 
     // Timed out: not enough items, enough points
@@ -3065,21 +2838,21 @@ levels.js_hoc2015_win_lose = {
       required: {
         timedOut: true,
         collectedItemsBelow: 2,
-        currentPointsAtOrAbove: 200
+        currentPointsAtOrAbove: 200,
       },
       result: {
         success: false,
         message: msg.failedWinLoseGoals(),
-        blocklyMessage: msg.failedWinLoseGoalsBlockly()
-      }
+        blocklyMessage: msg.failedWinLoseGoalsBlockly(),
+      },
     },
 
     // Success: enough items, enough points
     {
       required: {collectedItemsAtOrAbove: 2, currentPointsAtOrAbove: 200},
-      result: {success: true, message: msg.successCharacter1()}
-    }
-  ]
+      result: {success: true, message: msg.successCharacter1()},
+    },
+  ],
 };
 
 levels.js_hoc2015_add_characters = {
@@ -3098,7 +2871,7 @@ levels.js_hoc2015_add_characters = {
     removePoints: {params: ['1000']},
     playSound: null,
 
-    whenGetPufferPig: null
+    whenGetPufferPig: null,
   },
   startBlocks: [
     'playSound("R2-D2sound1");',
@@ -3107,7 +2880,7 @@ levels.js_hoc2015_add_characters = {
     'function whenGetPufferPig() {',
     '  playSound("PufferPigRandom");',
     '  addPoints(1000);',
-    '}'
+    '}',
   ].join('\n'),
   paramRestrictions: {
     playSound: {
@@ -3120,8 +2893,8 @@ levels.js_hoc2015_add_characters = {
       PufferPigRandom: true,
       PufferPigSound1: true,
       PufferPigSound2: true,
-      PufferPigSound3: true
-    }
+      PufferPigSound3: true,
+    },
   },
   itemGridAlignedMovement: true,
   removeItemsWhenActorCollides: true,
@@ -3135,7 +2908,7 @@ levels.js_hoc2015_add_characters = {
     [0, 0, 0, 16, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   embed: 'false',
   shortInstructions: msg.hoc2015_add_characters_instructions(),
@@ -3150,17 +2923,17 @@ levels.js_hoc2015_add_characters = {
       hide_target_selector: '.droplet-drag-cover',
       qtip_config: {
         content: {
-          text: msg.calloutPutCommandsHereRunStart()
+          text: msg.calloutPutCommandsHereRunStart(),
         },
         hide: {
-          event: 'mouseup touchend'
+          event: 'mouseup touchend',
         },
         position: {
           my: 'top left',
-          at: 'center right'
-        }
-      }
-    }
+          at: 'center right',
+        },
+      },
+    },
   ],
   progressConditions: [
     {
@@ -3168,24 +2941,24 @@ levels.js_hoc2015_add_characters = {
       result: {
         success: false,
         message: msg.failedAddCharactersTimeout(),
-        blocklyMessage: msg.failedAddCharactersTimeoutBlockly()
-      }
+        blocklyMessage: msg.failedAddCharactersTimeoutBlockly(),
+      },
     },
     {
       required: {
-        collectedSpecificItemsAtOrAbove: {className: 'pufferpig', count: 3}
+        collectedSpecificItemsAtOrAbove: {className: 'pufferpig', count: 3},
       },
-      result: {success: true, message: msg.successCharacter1()}
+      result: {success: true, message: msg.successCharacter1()},
     },
     {
       required: {timedOut: true},
       result: {
         success: false,
         message: msg.failedAddCharactersTimeout(),
-        blocklyMessage: msg.failedAddCharactersTimeoutBlockly()
-      }
-    }
-  ]
+        blocklyMessage: msg.failedAddCharactersTimeoutBlockly(),
+      },
+    },
+  ],
 };
 
 levels.js_hoc2015_chain_characters = {
@@ -3205,7 +2978,7 @@ levels.js_hoc2015_chain_characters = {
     playSound: null,
 
     whenGetTauntaun: null,
-    whenGetMynock: null
+    whenGetMynock: null,
   },
   startBlocks: [
     'addCharacter("Tauntaun");',
@@ -3217,7 +2990,7 @@ levels.js_hoc2015_chain_characters = {
     '  playSound("TauntaunRandom");',
     '  addPoints(50);',
     '',
-    '}'
+    '}',
   ].join('\n'),
   paramRestrictions: {
     playSound: {
@@ -3235,8 +3008,8 @@ levels.js_hoc2015_chain_characters = {
       MynockRandom: true,
       MynockSound1: true,
       MynockSound2: true,
-      MynockSound3: true
-    }
+      MynockSound3: true,
+    },
   },
   itemGridAlignedMovement: true,
   removeItemsWhenActorCollides: true,
@@ -3250,7 +3023,7 @@ levels.js_hoc2015_chain_characters = {
     [0, 0, 0, 16, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   embed: 'false',
   shortInstructions: msg.hoc2015_chain_characters_instructions(),
@@ -3261,32 +3034,32 @@ levels.js_hoc2015_chain_characters = {
   progressConditions: [
     {
       required: {
-        collectedSpecificItemsAtOrAbove: {className: 'mynock', count: 8}
+        collectedSpecificItemsAtOrAbove: {className: 'mynock', count: 8},
       },
-      result: {success: true, message: msg.successCharacter1()}
+      result: {success: true, message: msg.successCharacter1()},
     },
     {
       required: {
         timedOut: true,
-        collectedSpecificItemsAtOrAbove: {className: 'mynock', count: 5}
+        collectedSpecificItemsAtOrAbove: {className: 'mynock', count: 5},
       },
       result: {
         success: false,
         canPass: true,
-        message: msg.failedChainCharactersTimeoutGotSome()
-      }
+        message: msg.failedChainCharactersTimeoutGotSome(),
+      },
     },
     {
       required: {
         collectedSpecificItemsAtOrAbove: {className: 'tauntaun', count: 4},
-        createdSpecificItemsBelow: {className: 'mynock', count: 5}
+        createdSpecificItemsBelow: {className: 'mynock', count: 5},
       },
-      result: {success: false, message: msg.failedChainCharactersTimeout()}
+      result: {success: false, message: msg.failedChainCharactersTimeout()},
     },
     {
       required: {timedOut: true},
-      result: {success: false, message: msg.failedChainCharactersTimeout()}
-    }
+      result: {success: false, message: msg.failedChainCharactersTimeout()},
+    },
   ],
   callouts: [
     {
@@ -3295,22 +3068,22 @@ levels.js_hoc2015_chain_characters = {
       hide_target_selector: '.droplet-drag-cover',
       qtip_config: {
         content: {
-          text: msg.calloutPlaceTwoWhenTauntaun()
+          text: msg.calloutPlaceTwoWhenTauntaun(),
         },
         hide: {
-          event: 'mouseup touchend'
+          event: 'mouseup touchend',
         },
         position: {
           my: 'top left',
           at: 'bottom center',
           adjust: {
             x: 65,
-            y: 0
-          }
-        }
-      }
-    }
-  ]
+            y: 0,
+          },
+        },
+      },
+    },
+  ],
 };
 
 levels.js_hoc2015_multiply_characters = {
@@ -3329,11 +3102,11 @@ levels.js_hoc2015_multiply_characters = {
     addPoints: null,
     removePoints: null,
 
-    whenGetMouseDroid: null
+    whenGetMouseDroid: null,
   },
   startBlocks: [
     'addCharacter("MouseDroid");',
-    'playSound("R2-D2sound3");'
+    'playSound("R2-D2sound3");',
   ].join('\n'),
   paramRestrictions: {
     playSound: {
@@ -3346,8 +3119,8 @@ levels.js_hoc2015_multiply_characters = {
       MouseDroidRandom: true,
       MouseDroidSound1: true,
       MouseDroidSound2: true,
-      MouseDroidSound3: true
-    }
+      MouseDroidSound3: true,
+    },
   },
   itemGridAlignedMovement: true,
   removeItemsWhenActorCollides: true,
@@ -3361,7 +3134,7 @@ levels.js_hoc2015_multiply_characters = {
     [0, 0, 0, 16, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   embed: 'false',
   shortInstructions: msg.hoc2015_multiply_characters_instructions(),
@@ -3372,31 +3145,31 @@ levels.js_hoc2015_multiply_characters = {
   progressConditions: [
     {
       required: {collectedItemsAtOrAbove: 20},
-      result: {success: true, message: msg.successCharacter1()}
+      result: {success: true, message: msg.successCharacter1()},
     },
     {
       required: {
         collectedSpecificItemsAtOrAbove: {className: 'mousedroid', count: 1},
-        createdSpecificItemsBelow: {className: 'mousedroid', count: 2}
+        createdSpecificItemsBelow: {className: 'mousedroid', count: 2},
       },
-      result: {success: false, message: msg.failedMultiplyCharactersTimeout()}
+      result: {success: false, message: msg.failedMultiplyCharactersTimeout()},
     },
     {
       required: {timedOut: true, collectedItemsAtOrAbove: 2},
       result: {
         success: false,
         canPass: true,
-        message: msg.failedMultiplyCharactersTimeoutGotSome()
-      }
+        message: msg.failedMultiplyCharactersTimeoutGotSome(),
+      },
     },
     {
       required: {timedOut: true},
       result: {
         success: false,
         message: msg.failedMultiplyCharactersTimeout(),
-        blocklyMessage: msg.failedMultiplyCharactersTimeoutBlockly()
-      }
-    }
+        blocklyMessage: msg.failedMultiplyCharactersTimeoutBlockly(),
+      },
+    },
   ],
   callouts: [
     {
@@ -3405,18 +3178,18 @@ levels.js_hoc2015_multiply_characters = {
       hide_target_selector: '.droplet-drag-cover',
       qtip_config: {
         content: {
-          text: msg.calloutPlaceTwo()
+          text: msg.calloutPlaceTwo(),
         },
         hide: {
-          event: 'mouseup touchend'
+          event: 'mouseup touchend',
         },
         position: {
           my: 'top left',
-          at: 'bottom center'
-        }
-      }
-    }
-  ]
+          at: 'bottom center',
+        },
+      },
+    },
+  ],
 };
 
 levels.js_hoc2015_change_setting = {
@@ -3439,7 +3212,7 @@ levels.js_hoc2015_change_setting = {
     addPoints: null,
     removePoints: null,
 
-    whenGetRebelPilot: null
+    whenGetRebelPilot: null,
   },
   startBlocks: [
     'addCharacter("RebelPilot");',
@@ -3448,7 +3221,7 @@ levels.js_hoc2015_change_setting = {
     '',
     'setBackground("random");',
     'setMap("random");',
-    ''
+    '',
   ].join('\n'),
   paramRestrictions: {
     playSound: {
@@ -3482,8 +3255,8 @@ levels.js_hoc2015_change_setting = {
       ProbotRandom: true,
       ProbotSound1: true,
       ProbotSound2: true,
-      ProbotSound3: true
-    }
+      ProbotSound3: true,
+    },
   },
   itemGridAlignedMovement: true,
   removeItemsWhenActorCollides: true,
@@ -3497,7 +3270,7 @@ levels.js_hoc2015_change_setting = {
     [0, 0, 0, 16, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   embed: 'false',
   shortInstructions: msg.hoc2015_change_setting_instructions(),
@@ -3511,14 +3284,14 @@ levels.js_hoc2015_change_setting = {
       element_id: '#droplet_palette_block_setDroid',
       qtip_config: {
         content: {
-          text: msg.calloutSetDroidAndSpeed()
+          text: msg.calloutSetDroidAndSpeed(),
         },
         position: {
           my: 'center left',
-          at: 'center right'
-        }
-      }
-    }
+          at: 'center right',
+        },
+      },
+    },
   ],
   progressConditions: [
     // Collected all the items and set the right properties?  Success.
@@ -3526,21 +3299,21 @@ levels.js_hoc2015_change_setting = {
       required: {
         setSprite: true,
         setDroidSpeed: true,
-        collectedItemsAtOrAbove: 3
+        collectedItemsAtOrAbove: 3,
       },
-      result: {success: true, message: msg.successGenericCharacter()}
+      result: {success: true, message: msg.successGenericCharacter()},
     },
     // If all items are collected, but either property not set?  Immediate failure.
     {
       required: {collectedItemsAtOrAbove: 3},
-      result: {success: false, message: msg.failedChangeSettingSettings()}
+      result: {success: false, message: msg.failedChangeSettingSettings()},
     },
     // Timed out and obviously collected not enough items.
     {
       required: {timedOut: true},
-      result: {success: false, message: msg.failedChangeSettingTimeout()}
-    }
-  ]
+      result: {success: false, message: msg.failedChangeSettingTimeout()},
+    },
+  ],
 };
 
 var js_hoc2015_event_free_markdown = [
@@ -3601,7 +3374,7 @@ var js_hoc2015_event_free_markdown = [
   '</p>',
   '',
   '</details>',
-  '</div>'
+  '</div>',
 ].join('\r\n');
 
 levels.js_hoc2015_event_free = {
@@ -3653,7 +3426,7 @@ levels.js_hoc2015_event_free = {
     whenGetAllMouseDroids: {category: 'Events'},
     whenGetAllTauntauns: {category: 'Events'},
     whenGetAllProbots: {category: 'Events'},
-    whenGetAllCharacters: {category: 'Events'}
+    whenGetAllCharacters: {category: 'Events'},
   },
   startBlocks: [
     'setBackground("Endor");',
@@ -3673,7 +3446,7 @@ levels.js_hoc2015_event_free = {
     'function whenRight() {',
     '  goRight();',
     '}',
-    ''
+    '',
   ].join('\n'),
   itemGridAlignedMovement: true,
   removeItemsWhenActorCollides: true,
@@ -3688,7 +3461,7 @@ levels.js_hoc2015_event_free = {
     [0, 0, 0, 0, 16, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   embed: 'false',
   shortInstructions: msg.hoc2015_event_free_instructions(),
@@ -3701,13 +3474,13 @@ levels.js_hoc2015_event_free = {
       element_id: '.droplet-palette-group-header.green',
       qtip_config: {
         content: {
-          text: msg.calloutClickEvents()
+          text: msg.calloutClickEvents(),
         },
         position: {
           my: 'top center',
-          at: 'bottom center'
-        }
-      }
+          at: 'bottom center',
+        },
+      },
     },
     {
       id: 'playlab:js_hoc2015_event_free:finishButton',
@@ -3715,21 +3488,21 @@ levels.js_hoc2015_event_free = {
       on: 'finishButtonShown',
       qtip_config: {
         content: {
-          text: msg.calloutFinishButton()
+          text: msg.calloutFinishButton(),
         },
         position: {
           my: 'center left',
-          at: 'center right'
-        }
-      }
-    }
+          at: 'center right',
+        },
+      },
+    },
   ],
   appStringsFunctions: {
     continueText: msg.hoc2015_lastLevel_continueText,
     reinfFeedbackMsg: msg.hoc2015_reinfFeedbackMsg,
-    sharingText: msg.hoc2015_shareGame
+    sharingText: msg.hoc2015_shareGame,
   },
-  playStartSound: false
+  playStartSound: false,
 };
 
 levels.hoc2015_blockly_1 = extend(levels.js_hoc2015_move_right, {
@@ -3745,19 +3518,19 @@ levels.hoc2015_blockly_1 = extend(levels.js_hoc2015_move_right, {
       element_id: '#runButton',
       qtip_config: {
         content: {
-          text: msg.calloutBlocklyMoveRightRunButton()
+          text: msg.calloutBlocklyMoveRightRunButton(),
         },
         position: {
           my: 'bottom left',
           at: 'top center',
           adjust: {
             x: 0,
-            y: 0
-          }
-        }
-      }
-    }
-  ]
+            y: 0,
+          },
+        },
+      },
+    },
+  ],
 });
 
 levels.hoc2015_blockly_2 = extend(levels.js_hoc2015_move_right_down, {
@@ -3765,7 +3538,7 @@ levels.hoc2015_blockly_2 = extend(levels.js_hoc2015_move_right_down, {
   enableShowCode: true,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
-  requiredBlocks: [moveEastRequiredBlock(), moveSouthRequiredBlock()]
+  requiredBlocks: [moveEastRequiredBlock(), moveSouthRequiredBlock()],
 });
 
 levels.hoc2015_blockly_3 = extend(levels.js_hoc2015_move_backtrack, {
@@ -3773,7 +3546,7 @@ levels.hoc2015_blockly_3 = extend(levels.js_hoc2015_move_backtrack, {
   enableShowCode: true,
   startBlocks: whenRunMoveEast,
   toolbox: tb(hocMoveNSEW),
-  requiredBlocks: [moveEastRequiredBlock(), moveNorthRequiredBlock()]
+  requiredBlocks: [moveEastRequiredBlock(), moveNorthRequiredBlock()],
 });
 
 levels.hoc2015_blockly_4 = extend(levels.js_hoc2015_move_diagonal, {
@@ -3782,7 +3555,7 @@ levels.hoc2015_blockly_4 = extend(levels.js_hoc2015_move_diagonal, {
   callouts: null,
   startBlocks: whenRunMoveSouth,
   toolbox: tb(hocMoveNSEW),
-  requiredBlocks: [moveSouthRequiredBlock(), moveWestRequiredBlock()]
+  requiredBlocks: [moveSouthRequiredBlock(), moveWestRequiredBlock()],
 });
 
 levels.hoc2015_blockly_5 = extend(levels.js_hoc2015_move_around, {
@@ -3793,9 +3566,9 @@ levels.hoc2015_blockly_5 = extend(levels.js_hoc2015_move_around, {
   requiredBlocks: [
     moveEastRequiredBlock(),
     moveSouthRequiredBlock(),
-    moveWestRequiredBlock()
+    moveWestRequiredBlock(),
   ],
-  callouts: []
+  callouts: [],
 });
 
 levels.hoc2015_blockly_6 = extend(levels.js_hoc2015_move_finale, {
@@ -3807,14 +3580,14 @@ levels.hoc2015_blockly_6 = extend(levels.js_hoc2015_move_finale, {
   requiredBlocks: [
     moveNorthRequiredBlock(),
     moveSouthRequiredBlock(),
-    moveEastRequiredBlock()
-  ]
+    moveEastRequiredBlock(),
+  ],
 });
 
 levels.hoc2015_blockly_7 = extend(levels.js_hoc2015_event_two_items, {
   editCode: false,
   msgStringOverrides: {
-    moveSprite: 'goSprite'
+    moveSprite: 'goSprite',
   },
   startBlocks: whenUpDown,
   toolbox: tb(hocMoveNS),
@@ -3829,17 +3602,17 @@ levels.hoc2015_blockly_7 = extend(levels.js_hoc2015_event_two_items, {
       hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
-          text: msg.calloutBlocklyPlaceMoveUpHere()
+          text: msg.calloutBlocklyPlaceMoveUpHere(),
         },
         position: {
           my: 'top left',
           at: 'bottom left',
           adjust: {
             x: 22,
-            y: 0
-          }
-        }
-      }
+            y: 0,
+          },
+        },
+      },
     },
     {
       id: 'playlab:hoc2015_blockly_7:arrowsCallout',
@@ -3847,15 +3620,15 @@ levels.hoc2015_blockly_7 = extend(levels.js_hoc2015_event_two_items, {
       hide_target_selector: '#soft-buttons',
       qtip_config: {
         content: {
-          text: msg.calloutUseArrowButtons()
+          text: msg.calloutUseArrowButtons(),
         },
         position: {
           my: 'bottom left',
-          at: 'top center'
-        }
-      }
-    }
-  ]
+          at: 'top center',
+        },
+      },
+    },
+  ],
 });
 
 // exactly clone this level so we can insert it into scripts without a
@@ -3865,20 +3638,20 @@ levels.hoc2015_blockly_7_no_video = extend(levels.hoc2015_blockly_7);
 levels.hoc2015_blockly_8 = extend(levels.js_hoc2015_event_four_items, {
   editCode: false,
   msgStringOverrides: {
-    moveSprite: 'goSprite'
+    moveSprite: 'goSprite',
   },
   startBlocks: whenUpDownLeftRight,
   toolbox: tb(hocMoveNSEW),
   requiredBlocks: [
     // Note: not listing move blocks since the error messages are already
     // sufficient and we've renamed these blocks to goUp/goDown/goLeft/goRight
-  ]
+  ],
 });
 
 levels.hoc2015_blockly_9 = extend(levels.js_hoc2015_score, {
   editCode: false,
   msgStringOverrides: {
-    whenTouchGoal: 'whenGetCharacterRebelPilot'
+    whenTouchGoal: 'whenGetCharacterRebelPilot',
   },
   startBlocks:
     '<block type="studio_whenTouchGoal" deletable="false"> \
@@ -3898,13 +3671,13 @@ levels.hoc2015_blockly_9 = extend(levels.js_hoc2015_score, {
       hide_target_selector: '#soft-buttons',
       qtip_config: {
         content: {
-          text: msg.calloutUseArrowButtonsAutoSteer()
+          text: msg.calloutUseArrowButtonsAutoSteer(),
         },
         position: {
           my: 'bottom left',
-          at: 'top center'
-        }
-      }
+          at: 'top center',
+        },
+      },
     },
     {
       id: 'playlab:hoc2015_blockly_9:placeCommandsAtTop',
@@ -3912,15 +3685,15 @@ levels.hoc2015_blockly_9 = extend(levels.js_hoc2015_score, {
       hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
-          text: msg.calloutShowPlaySound()
+          text: msg.calloutShowPlaySound(),
         },
         position: {
           my: 'top left',
-          at: 'bottom center'
-        }
-      }
-    }
-  ]
+          at: 'bottom center',
+        },
+      },
+    },
+  ],
 });
 
 levels.hoc2015_blockly_10 = extend(levels.js_hoc2015_win_lose, {
@@ -3936,7 +3709,7 @@ levels.hoc2015_blockly_10 = extend(levels.js_hoc2015_win_lose, {
   ),
   requiredBlocks: [
     // TODO: addPoints, removePoints, whenGetPilot, whenGetMan
-  ]
+  ],
 });
 
 levels.hoc2015_blockly_11 = extend(levels.js_hoc2015_add_characters, {
@@ -3975,22 +3748,22 @@ levels.hoc2015_blockly_11 = extend(levels.js_hoc2015_add_characters, {
       hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
-          text: msg.calloutPutCommandsHereRunStart()
+          text: msg.calloutPutCommandsHereRunStart(),
         },
         position: {
           my: 'top left',
           at: 'bottom left',
           adjust: {
             x: 22,
-            y: 0
-          }
-        }
-      }
-    }
+            y: 0,
+          },
+        },
+      },
+    },
   ],
   requiredBlocks: [
     // TODO: addCharacter
-  ]
+  ],
 });
 
 levels.hoc2015_blockly_12 = extend(levels.js_hoc2015_chain_characters, {
@@ -4041,19 +3814,19 @@ levels.hoc2015_blockly_12 = extend(levels.js_hoc2015_chain_characters, {
       hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
-          text: msg.calloutPlaceTwoWhenTauntaun()
+          text: msg.calloutPlaceTwoWhenTauntaun(),
         },
         position: {
           my: 'top left',
           at: 'bottom center',
           adjust: {
             x: 0,
-            y: 0
-          }
-        }
-      }
-    }
-  ]
+            y: 0,
+          },
+        },
+      },
+    },
+  ],
 });
 
 levels.hoc2015_blockly_13 = extend(levels.js_hoc2015_multiply_characters, {
@@ -4085,15 +3858,15 @@ levels.hoc2015_blockly_13 = extend(levels.js_hoc2015_multiply_characters, {
       hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
-          text: msg.calloutPlaceTwo()
+          text: msg.calloutPlaceTwo(),
         },
         position: {
           my: 'top left',
-          at: 'bottom center'
-        }
-      }
-    }
-  ]
+          at: 'bottom center',
+        },
+      },
+    },
+  ],
 });
 
 levels.hoc2015_blockly_14 = extend(levels.js_hoc2015_change_setting, {
@@ -4140,21 +3913,21 @@ levels.hoc2015_blockly_14 = extend(levels.js_hoc2015_change_setting, {
       element_id: '[block-id="1"]',
       qtip_config: {
         content: {
-          text: msg.calloutSetDroidAndSpeed()
+          text: msg.calloutSetDroidAndSpeed(),
         },
         position: {
           my: 'center left',
-          at: 'center right'
-        }
-      }
-    }
-  ]
+          at: 'center right',
+        },
+      },
+    },
+  ],
 });
 
 levels.hoc2015_blockly_15 = extend(levels.js_hoc2015_event_free, {
   editCode: false,
   msgStringOverrides: {
-    moveSprite: 'goSprite'
+    moveSprite: 'goSprite',
   },
   longInstructions: null,
   markdownInstructionsWithClassicMargins: false,
@@ -4179,8 +3952,7 @@ levels.hoc2015_blockly_15 = extend(levels.js_hoc2015_event_free, {
         </next> \
        </block> \
       </next> \
-     </block>' +
-    whenArrowBlocks(200, 80),
+     </block>' + whenArrowBlocks(200, 80),
   toolbox: tb(
     createCategory(
       msg.catCommands(),
@@ -4216,30 +3988,30 @@ levels.hoc2015_blockly_15 = extend(levels.js_hoc2015_event_free, {
       on: 'finishButtonShown',
       qtip_config: {
         content: {
-          text: msg.calloutFinishButton()
+          text: msg.calloutFinishButton(),
         },
         position: {
           my: 'center left',
-          at: 'center right'
-        }
-      }
+          at: 'center right',
+        },
+      },
     },
     {
       id: 'playlab:hoc2015_blockly_15:categories',
       element_id: '.blocklyTreeRoot:visible',
       qtip_config: {
         content: {
-          text: msg.calloutBlocklyCategories()
+          text: msg.calloutBlocklyCategories(),
         },
         position: {
           my: 'top left',
           at: 'bottom right',
           adjust: {
             x: -10,
-            y: 0
-          }
-        }
-      }
-    }
-  ]
+            y: 0,
+          },
+        },
+      },
+    },
+  ],
 });

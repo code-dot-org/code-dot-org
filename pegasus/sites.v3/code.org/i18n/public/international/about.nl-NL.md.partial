@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org cursussen worden gebruikt door tientallen miljoenen leerlingen en door een miljoen leerkrachten over de hele wereld.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## Geschiedenis
 
 In 2013 werd Code.org gelanceerd door de tweelingbroers Hadi en Ali Partovi met een [(engelstalige) video om informatica te promoten](https://www.youtube.com/watch?v=nKIu9yen5nc). Deze video werd voor één dag nummer 1 op YouTube en 15.000 scholen vroegen ons voor hulp. Sindsdien zijn we geëvolueerd van een samengeraapt team van vrijwilligers naar een echte organisatie die een wereldwijde beweging ondersteunt. Wij zijn van mening dat kwalitatief hoogstaand informatica-onderwijs voor elk kind beschikbaar moet zijn, niet alleen voor een paar gelukkigen.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Wat Wij Doen
 

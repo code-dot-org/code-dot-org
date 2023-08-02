@@ -4,7 +4,7 @@ require_relative '../deployment'
 # Ensure all application secrets are loaded.
 CDO.cdo_secrets&.required! unless rack_env?(:development)
 
-require ::File.expand_path('../config/environment',  __FILE__)
+require File.expand_path('../config/environment',  __FILE__)
 
 unless rack_env?(:development)
   require 'cdo/app_server_metrics'
@@ -17,8 +17,6 @@ unless rack_env?(:development)
     }
 end
 
-require 'gctools/oobgc/unicorn_middleware'
-use GC::OOB::UnicornMiddleware
 use Rack::ContentLength
 require 'rack/ssl-enforcer'
 use Rack::SslEnforcer,

@@ -6,6 +6,7 @@
       1,
       0.74
     ],
+    "style": "event_blocks",
     "func": "whenSpriteCreated",
     "blockText": "when {SPRITE} created",
     "miniToolboxBlocks": [

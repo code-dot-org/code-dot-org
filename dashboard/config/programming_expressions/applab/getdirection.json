@@ -3,7 +3,20 @@
   "name": "getDirection",
   "category": "Turtle",
   "category_key": "turtle",
-  "content": "[name]\n\n## getDirection()\n\n[/name]\n\n[category]\n\nCategory: Turtle\n\n[/category]\n\n[description]\n\n[short_description]\n\nReturns the current direction that the turtle is facing. Zero degrees is pointing up and the direction increases clockwise.\n\n[/short_description]\n\nSometimes the user controls the turtle and your app might need to know what direction the turtle is facing. The direction is a number between 0 and 359 degrees.\n\n[/description]\n\n### Examples\n____________________________________________________\n\n[example]\n\n```\nturnRight(randomNumber(359));\nconsole.log(getDirection());\n```\n\n[/example]\n\n____________________________________________________\n\n[example]\n\n**Turning on your Command** Turn the turtle in a random direction, and display the direction, on every user click of a button.\n\n```\n// Turn the turtle in a random direction, and display the direction, on every user click of a button.\ntextLabel(\"direction\", \"direction: \" + getDirection());\nbutton(\"random-direction\", \"Random Direction\");\nonEvent(\"random-direction\", \"click\", function() {\n  turnRight(randomNumber(359));\n  setText(\"direction\", \"direction: \" + getDirection());\n});\n```\n\n\n[/example]\n\n____________________________________________________\n\n\n\n[parameters]\n\n### Parameters\ngetDirection() does not take any parameters.\n\n[/parameters]\n\n[returns]\n\n### Returns\nReturns an integer between 0 and 359 representing the direction the turtle is facing. \n[/returns]\n\n[tips]\n\n### Tips\n- The values of the compass directions are: North:0, East:90, South:180, West:270.\n\n[/tips]\n\n",
-  "short_description": "\ngetDirection()\nCategory: Turtle",
-  "syntax": "getDirection()"
+  "content": "Sometimes the user controls the turtle and your app might need to know what direction the turtle is facing. The direction is a number between 0 and 359 degrees.",
+  "examples": [
+    {
+      "name": "Basic Example",
+      "code": "```\nturnRight(randomNumber(359));\nconsole.log(getDirection());\n```"
+    },
+    {
+      "name": "Turning on your Command",
+      "description": "Turn the turtle in a random direction, and display the direction, on every user click of a button.",
+      "code": "```\n// Turn the turtle in a random direction, and display the direction, on every user click of a button.\ntextLabel(\"direction\", \"direction: \" + getDirection());\nbutton(\"random-direction\", \"Random Direction\");\nonEvent(\"random-direction\", \"click\", function() {\n  turnRight(randomNumber(359));\n  setText(\"direction\", \"direction: \" + getDirection());\n});\n```"
+    }
+  ],
+  "return_value": "Returns an integer between 0 and 359 representing the direction the turtle is facing. ",
+  "short_description": "Returns the current direction that the turtle is facing. Zero degrees is pointing up and the direction increases clockwise.",
+  "syntax": "getDirection()",
+  "tips": "- The values of the compass directions are: North:0, East:90, South:180, West:270."
 }

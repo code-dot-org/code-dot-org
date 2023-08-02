@@ -44,7 +44,7 @@ begin
 
     start_index += batch_size
   end
-rescue Exception => e
+rescue Exception => exception
   puts "PROCESSING: #{log_message}"
-  raise e
+  raise exception
 end

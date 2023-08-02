@@ -14,7 +14,7 @@ export default class LessonGroupInfoDialog extends Component {
     displayName: PropTypes.string.isRequired,
     description: PropTypes.string,
     closeDialog: PropTypes.func,
-    bigQuestions: PropTypes.string
+    bigQuestions: PropTypes.string,
   };
 
   render() {
@@ -32,7 +32,6 @@ export default class LessonGroupInfoDialog extends Component {
         />
         <DialogFooter rightAlign>
           <Button
-            __useDeprecatedTag
             text={i18n.closeDialog()}
             onClick={this.props.closeDialog}
             color={Button.ButtonColor.orange}
@@ -46,21 +45,21 @@ export default class LessonGroupInfoDialog extends Component {
 const styles = {
   description: {
     color: color.dark_charcoal,
-    fontFamily: '"Gotham 4r", sans-serif'
+    fontFamily: '"Gotham 4r", sans-serif',
   },
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   bigQuestion: {
     fontWeight: 'bolder',
-    fontFamily: '"Gotham 7r", sans-serif'
+    fontFamily: '"Gotham 7r", sans-serif',
   },
   lessonGroupName: {
-    color: color.purple
+    color: color.purple,
   },
   subTitle: {
-    color: color.teal
-  }
+    color: color.teal,
+  },
 };

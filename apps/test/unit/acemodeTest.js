@@ -2,8 +2,8 @@ import {assert} from '../util/reconfiguredChai';
 
 var errorMapper = require('@cdo/apps/acemode/errorMapper');
 
-describe('errorMapper correctly maps different errors', function() {
-  it('defined but never used', function() {
+describe('errorMapper correctly maps different errors', function () {
+  it('defined but never used', function () {
     var jslintResults = {
       data: [
         {
@@ -11,9 +11,9 @@ describe('errorMapper correctly maps different errors', function() {
           raw: "'{a}' is defined but never used.",
           row: 0,
           text: "'x' is defined but never used.",
-          type: 'info'
-        }
-      ]
+          type: 'info',
+        },
+      ],
     };
 
     errorMapper.processResults(jslintResults);
@@ -24,7 +24,7 @@ describe('errorMapper correctly maps different errors', function() {
     );
   });
 
-  it('assignment in conditional expression', function() {
+  it('assignment in conditional expression', function () {
     var jslintResults = {
       data: [
         {
@@ -32,9 +32,9 @@ describe('errorMapper correctly maps different errors', function() {
           raw: 'Assignment in conditional expression',
           row: 0,
           text: 'Assignment in conditional expression',
-          type: 'warning'
-        }
-      ]
+          type: 'warning',
+        },
+      ],
     };
 
     errorMapper.processResults(jslintResults);
@@ -45,7 +45,7 @@ describe('errorMapper correctly maps different errors', function() {
     );
   });
 
-  it('not defined', function() {
+  it('not defined', function () {
     var jslintResults = {
       data: [
         {
@@ -53,9 +53,9 @@ describe('errorMapper correctly maps different errors', function() {
           raw: "'{a}' is not defined.",
           row: 0,
           text: "'x' is not defined.",
-          type: 'warning'
-        }
-      ]
+          type: 'warning',
+        },
+      ],
     };
 
     errorMapper.processResults(jslintResults);
@@ -63,18 +63,17 @@ describe('errorMapper correctly maps different errors', function() {
     assert.equal(jslintResults.data[0].text, "'x' hasn't been declared yet.");
   });
 
-  it('reserved words (App lab)', function() {
+  it('reserved words (App lab)', function () {
     var jslintResults = {
       data: [
         {
           column: 0,
-          raw:
-            "Expected an identifier and instead saw '{a}' (a reserved word).",
+          raw: "Expected an identifier and instead saw '{a}' (a reserved word).",
           row: 0,
           text: "Expected an identifier and instead saw 'x' (a reserved word).",
-          type: 'error'
-        }
-      ]
+          type: 'error',
+        },
+      ],
     };
 
     errorMapper.processResults(jslintResults, 'Applab');
@@ -84,18 +83,17 @@ describe('errorMapper correctly maps different errors', function() {
     );
   });
 
-  it('reserved words (Game lab)', function() {
+  it('reserved words (Game lab)', function () {
     var jslintResults = {
       data: [
         {
           column: 0,
-          raw:
-            "Expected an identifier and instead saw '{a}' (a reserved word).",
+          raw: "Expected an identifier and instead saw '{a}' (a reserved word).",
           row: 0,
           text: "Expected an identifier and instead saw 'x' (a reserved word).",
-          type: 'error'
-        }
-      ]
+          type: 'error',
+        },
+      ],
     };
 
     errorMapper.processResults(jslintResults, 'Gamelab');
@@ -105,7 +103,7 @@ describe('errorMapper correctly maps different errors', function() {
     );
   });
 
-  it('redefining setup', function() {
+  it('redefining setup', function () {
     var jslintResults = {
       data: [
         {
@@ -113,9 +111,9 @@ describe('errorMapper correctly maps different errors', function() {
           raw: "'{a}' is defined but never used.",
           row: 0,
           text: "'setup' is defined but never used.",
-          type: 'error'
-        }
-      ]
+          type: 'error',
+        },
+      ],
     };
 
     errorMapper.processResults(jslintResults, 'Gamelab');

@@ -10,13 +10,14 @@
     "optional": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "encrypted_solution": "ko0nzKOgtugo7cBmbw2AkSe76XAErk2fEbg6+z9BYgVgQgINqakMEY7HPJ91\nL+Wte1L5A2S5JXYLdZvN7jhPf2htsVOurYjRmfkBPawXEvg=\n"
+    "encrypted_solution": "ko0nzKOgtugo7cBmbw2AkSe76XAErk2fEbg6+z9BYgVgQgINqakMEY7HPJ91\nL+Wte1L5A2S5JXYLdZvN7jhPf2htsVOurYjRmfkBPawXEvg=\n",
+    "allow_multiple_attempts": "true"
   },
-  "game_id": 52,
-  "published": true,
-  "created_at": "2022-09-14T12:45:07.000Z",
   "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2022-09-14T12:45:07.000Z",
   "user_id": 16889,
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2022-09-14 12:45:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-14 12:55:57 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }

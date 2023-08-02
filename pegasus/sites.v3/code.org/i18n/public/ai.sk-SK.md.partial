@@ -114,3 +114,5 @@ Táto séria krátkych videí s príhovorom od výkonného riaditeľa Microsoft
 Úrovne 6 až 8 využívajú \[metódu podporných vektorov\] (https://en.wikipedia.org/wiki/Support-vector_machine) (anglicky support-vector machine, skrátene SVM). Pozrieme sa na každú súčasť ryby (napríklad oči, ústa, telo) a zo všetkých metadát týchto súčastí (napríklad počet zubov, tvar tela) vytvoríme pri každej rybe vektor čísel. Tieto vektory využívame na trénovanie SVM. SVM na základe trénovacích dát rozdelí „priestor“ všetkých možných rýb na dve časti zodpovedajúce triedam, ktoré sa snažíme naučiť rozlišovať (napríklad „modrá“ alebo „nie modrá“).
 
 [[Naspäť hore]](#top)
+
+{{ visit_partial_event_logger }}

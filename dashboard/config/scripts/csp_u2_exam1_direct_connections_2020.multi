@@ -10,3 +10,5 @@ wrong 'Both devices are directly connected to at least one part of the Internetâ
 teacher_markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

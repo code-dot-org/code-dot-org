@@ -1,0 +1,273 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2023-06-22T20:17:57.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "level_data": {
+      "library": "happy",
+      "text": "# Let's Make a Mix\nNow it's time to make your first mix! You have the basic ingredients - including a new `lead`(#509919) function that you can use to make a full song.\n##Do This\nIn the toolbox, you'll notice a few new blocks: the \"play random\" block, which plays one of the blocks inside it at random each time it's played, and some `effect`(#7435b2) blocks that let you change the sound of each function.\nWhat can you make with these new tools?",
+      "startSources": {
+        "variables": [
+          {
+            "name": "currentTime"
+          },
+          {
+            "name": "i"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "#hViLYVH?B$eM)OoFi0;",
+              "x": 750,
+              "y": 90,
+              "fields": {
+                "NAME": "lead"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "play-sound-block",
+                    "fields": {
+                      "sound": "remix_happy/happy-guitar1"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "Dwt2)6N|(qBP2JWr0QZl",
+                        "fields": {
+                          "sound": "remix_happy/happy-guitar1"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "(|%+_F=$2VZPlzk4M}AD",
+                            "fields": {
+                              "sound": "remix_happy/happy-guitar2"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "b,sc2DF|@#q6QGmF9uA1",
+                                "fields": {
+                                  "sound": "remix_happy/happy-guitar2"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "v;sMGE?{!IapoH5z+ARw",
+                                    "fields": {
+                                      "sound": "remix_happy/happy-guitar1"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "ly:ov=pHf5*g0jx[hhQ^",
+                                        "fields": {
+                                          "sound": "remix_happy/happy-guitar3"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "8!6jnXH+_q$?y=K_a8zf",
+                                            "fields": {
+                                              "sound": "remix_happy/happy-guitar1"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "8xN(GhUe_4-y=Z#syq$I",
+                                                "fields": {
+                                                  "sound": "remix_happy/happy-guitar2"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "KnA?Ci)GF5_(J;[2ln:V",
+                                                    "fields": {
+                                                      "sound": "remix_happy/happy-guitar1"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "x": 300,
+              "y": 70,
+              "fields": {
+                "NAME": "beat"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "repeat_simple2",
+                    "id": "kHh8G%3S4)7Vn.k4X$It",
+                    "fields": {
+                      "times": 5
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "play-sound-block",
+                          "fields": {
+                            "sound": "remix_happy/drums_1"
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "repeat_simple2",
+                        "id": "~gh)$MjeauaRz2l@BCt=",
+                        "fields": {
+                          "times": 3
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "i|;)|,51jW[SQ6vCSdRG",
+                              "fields": {
+                                "sound": "remix_happy/drums_2"
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "A~m]tmy71BB:O6u}gxje",
+                            "fields": {
+                              "sound": "remix_happy/drums_1"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "x": 150,
+              "y": 150,
+              "fields": {
+                "NAME": "bass"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "fields": {
+                      "sound": "remix_happy/bass_1"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "fields": {
+                          "sound": "remix_happy/bass_1"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "fields": {
+                              "sound": "remix_happy/bass_2"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "fields": {
+                                  "sound": "remix_happy/bass_2"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "fields": {
+                                      "sound": "remix_happy/bass_1"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "fields": {
+                                          "sound": "remix_happy/bass_3"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "fields": {
+                                              "sound": "remix_happy/bass_1"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "fields": {
+                                                  "sound": "remix_happy/bass_2"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "fields": {
+                                                      "sound": "remix_happy/bass_1"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-22T20:17:57.588+00:00\",\"changed\":[\"cloned from \\\"music_lab_2023_5\\\"\"],\"cloned_from\":\"music_lab_2023_5\"},{\"changed_at\":\"2023-06-22 20:36:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-22 20:40:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:20:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:24:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:30:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:25:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

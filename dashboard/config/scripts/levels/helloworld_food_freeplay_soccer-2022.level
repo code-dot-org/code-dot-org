@@ -55,16 +55,15 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"costumes_tab\",\r\n  \"callout_text\": \"Click here to add costumes to your project.\",\r\n  \"element_id\": \"[id=\\\"animationMode\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "video_key": "hello_world_congrats",
     "skip_autosave": true,
-    "encrypted_examples": "WNbw/L2bHm21vqyYxd/S1ez3SBbhJEgMIxWCBziMWNsoCGQMTIy11pR5tnZv\nhJqfTadSL4wpavw5BnQd4zA6tw==\n",
     "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-09-19T19:15:14.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-09-19T19:15:14.000Z",
   "user_id": 833,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T19:15:14.745+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_freeplay\\\"\"],\"cloned_from\":\"helloworld_food_freeplay\"},{\"changed_at\":\"2022-10-06 03:06:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:08:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:11:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:14:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 03:34:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-09-19T19:15:14.745+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_freeplay\\\"\"],\"cloned_from\":\"helloworld_food_freeplay\"},{\"changed_at\":\"2022-10-06 03:06:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:08:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:11:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:14:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 03:34:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 20:16:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 19:18:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -79,12 +78,12 @@
       <xml>
         <category name="World">
           <block type="gamelab_setBackgroundImageAs">
-            <title name="IMG">"hw_plate_background_1"</title>
+            <field name="IMG">"soccer_field_1b"</field>
           </block>
           <block type="gamelab_setBackground">
             <value name="COLOR">
               <block type="colour_picker">
-                <title name="COLOUR">#33ccff</title>
+                <field name="COLOUR">#33ccff</field>
               </block>
             </value>
           </block>
@@ -93,25 +92,25 @@
               <block type="gamelab_randColor"/>
             </value>
           </block>
-          <block type="gamelab_playSound">
-            <title name="SOUND">Choose</title>
+          <block type="gamelab_playSoundOptionsSoccer">
+            <field name="SOUND">'sound://category_sports/Airhorn_SFX.mp3'</field>
           </block>
           <block type="gamelab_printText">
             <value name="TEXT">
               <block type="text">
-                <title name="TEXT"/>
+                <field name="TEXT"/>
               </block>
             </value>
           </block>
           <block type="gamelab_showTitleScreen">
             <value name="TITLE">
               <block type="text">
-                <title name="TEXT"/>
+                <field name="TEXT"/>
               </block>
             </value>
             <value name="SUBTITLE">
               <block type="text">
-                <title name="TEXT"/>
+                <field name="TEXT"/>
               </block>
             </value>
           </block>
@@ -119,93 +118,93 @@
         </category>
         <category name="Sprites">
           <block type="gamelab_makeNewSpriteAnon">
-            <title name="ANIMATION_NAME">"face_pizza_1"</title>
+            <field name="ANIMATION_NAME">"soccer_player_6"</field>
             <value name="LOCATION">
               <block type="gamelab_location_picker">
-                <title name="LOCATION">{"x":200,"y":200}</title>
+                <field name="LOCATION">{"x":200,"y":200}</field>
               </block>
             </value>
           </block>
           <block type="gamelab_makeNumSprites">
-            <title name="ANIMATION_NAME">"face_pizza_1"</title>
+            <field name="ANIMATION_NAME">"soccer_player_6"</field>
             <value name="NUM">
               <block type="math_number">
-                <title name="NUM">3</title>
+                <field name="NUM">3</field>
               </block>
             </value>
           </block>
           <block type="gamelab_makeBurst">
-            <title name="EFFECT">"burst"</title>
-            <title name="ANIMATION_NAME">"face_pizza_1"</title>
+            <field name="EFFECT">"burst"</field>
+            <field name="ANIMATION_NAME">"soccer_player_6"</field>
             <value name="NUM">
               <block type="math_number">
-                <title name="NUM">10</title>
+                <field name="NUM">10</field>
               </block>
             </value>
           </block>
           <block type="gamelab_spriteSay">
-            <title name="SPEECH">Hello, world!</title>
+            <field name="SPEECH">Hello, world!</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_spriteSayTime">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="TEXT1">
               <block type="text">
-                <title name="TEXT">Hello, world!</title>
+                <field name="TEXT">Hello, world!</field>
               </block>
             </value>
             <value name="NUM">
               <block type="math_number">
-                <title name="NUM">4</title>
+                <field name="NUM">4</field>
               </block>
             </value>
           </block>
           <block type="gamelab_setProp">
-            <title name="PROPERTY">"scale"</title>
+            <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="VAL">
               <block type="math_number">
-                <title name="NUM">50</title>
+                <field name="NUM">50</field>
               </block>
             </value>
           </block>
           <block type="gamelab_changePropBy">
-            <title name="PROPERTY">"scale"</title>
+            <field name="PROPERTY">"scale"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="VAL">
               <block type="math_number">
-                <title name="NUM">10</title>
+                <field name="NUM">10</field>
               </block>
             </value>
           </block>
           <block type="gamelab_setAnimation">
-            <title name="ANIMATION">"face_burger_1"</title>
+            <field name="ANIMATION">"soccer_player_6"</field>
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_jumpTo">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="LOCATION">
@@ -215,19 +214,19 @@
           <block type="gamelab_setTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="COLOR">
               <block type="colour_picker">
-                <title name="COLOUR">#33ccff</title>
+                <field name="COLOUR">#33ccff</field>
               </block>
             </value>
           </block>
           <block type="gamelab_setTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="COLOR">
@@ -237,77 +236,77 @@
           <block type="gamelab_removeTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_mirrorSprite">
-            <title name="DIRECTION">"right"</title>
+            <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_destroy">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_moveInDirection">
-            <title name="DIRECTION">"North"</title>
+            <field name="DIRECTION">"North"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="DISTANCE">
               <block type="math_number">
-                <title name="NUM">5</title>
+                <field name="NUM">5</field>
               </block>
             </value>
           </block>
           <block type="gamelab_turn">
-            <title name="DIRECTION">"right"</title>
+            <field name="DIRECTION">"right"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="N">
               <block type="math_number">
-                <title name="NUM">45</title>
+                <field name="NUM">45</field>
               </block>
             </value>
           </block>
           <block type="gamelab_moveForward">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="DISTANCE">
               <block type="math_number">
-                <title name="NUM">5</title>
+                <field name="NUM">5</field>
               </block>
             </value>
           </block>
         </category>
         <category name="Locations">
           <block type="gamelab_location_picker">
-            <title name="LOCATION">{"x":200,"y":200}</title>
+            <field name="LOCATION">{"x":200,"y":200}</field>
           </block>
           <block type="gamelab_locationAt">
             <value name="X">
               <block type="math_number">
-                <title name="NUM">200</title>
+                <field name="NUM">200</field>
               </block>
             </value>
             <value name="Y">
               <block type="math_number">
-                <title name="NUM">200</title>
+                <field name="NUM">200</field>
               </block>
             </value>
           </block>
@@ -315,140 +314,140 @@
         </category>
         <category name="Events">
           <block type="gamelab_spriteClicked">
-            <title name="CONDITION">"when"</title>
+            <field name="CONDITION">"when"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_checkTouching">
-            <title name="CONDITION">"when"</title>
+            <field name="CONDITION">"when"</field>
             <value name="SPRITE1">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
             <value name="SPRITE2">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_burger_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_atTime">
-            <title name="UNIT">"seconds"</title>
+            <field name="UNIT">"seconds"</field>
             <value name="N">
               <block type="math_number" can_disconnect_from_parent="false">
-                <title name="NUM">3</title>
+                <field name="NUM">3</field>
               </block>
             </value>
           </block>
           <block type="gamelab_keyPressed">
-            <title name="CONDITION">"when"</title>
-            <title name="KEY">"up"</title>
+            <field name="CONDITION">"when"</field>
+            <field name="KEY">"up"</field>
           </block>
         </category>
         <category name="Behaviors">
           <block type="gamelab_addBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_removeBehaviorSimple">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_removeAllBehaviors">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                <title name="ANIMATION">"face_pizza_1"</title>
+                <field name="ANIMATION">"soccer_player_6"</field>
               </block>
             </value>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="spinning right">spinning right</title>
+            <field name="VAR" id="spinning right">spinning right</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="spinning left">spinning left</title>
+            <field name="VAR" id="spinning left">spinning left</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="shrinking">shrinking</title>
+            <field name="VAR" id="shrinking">shrinking</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="growing">growing</title>
+            <field name="VAR" id="growing">growing</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="fluttering">fluttering</title>
+            <field name="VAR" id="fluttering">fluttering</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="jittering">jittering</title>
+            <field name="VAR" id="jittering">jittering</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="wobbling">wobbling</title>
+            <field name="VAR" id="wobbling">wobbling</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="wandering">wandering</title>
+            <field name="VAR" id="wandering">wandering</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving north">moving north</title>
+            <field name="VAR" id="moving north">moving north</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving south">moving south</title>
+            <field name="VAR" id="moving south">moving south</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving east">moving east</title>
+            <field name="VAR" id="moving east">moving east</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving west">moving west</title>
+            <field name="VAR" id="moving west">moving west</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving north and looping">moving north and looping</title>
+            <field name="VAR" id="moving north and looping">moving north and looping</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving south and looping">moving south and looping</title>
+            <field name="VAR" id="moving south and looping">moving south and looping</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving east and looping">moving east and looping</title>
+            <field name="VAR" id="moving east and looping">moving east and looping</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving west and looping">moving west and looping</title>
+            <field name="VAR" id="moving west and looping">moving west and looping</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="swimming left and right">swimming left and right</title>
+            <field name="VAR" id="swimming left and right">swimming left and right</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="patrolling">patrolling</title>
+            <field name="VAR" id="patrolling">patrolling</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="moving with arrow keys">moving with arrow keys</title>
+            <field name="VAR" id="moving with arrow keys">moving with arrow keys</field>
           </block>
           <block type="gamelab_behavior_get">
             <mutation/>
-            <title name="VAR" id="driving with arrow keys">driving with arrow keys</title>
+            <field name="VAR" id="driving with arrow keys">driving with arrow keys</field>
           </block>
         </category>
       </xml>

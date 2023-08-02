@@ -10,7 +10,7 @@ describe('StudentSelector', () => {
       {id: 2, name: 'b'},
       {id: 3, name: 'c'},
       {id: 4, name: 'd'},
-      {id: 5, name: 'e'}
+      {id: 5, name: 'e'},
     ];
 
     it('displays warning message', () => {
@@ -53,16 +53,12 @@ describe('StudentSelector', () => {
       const wrapper = shallow(
         <StudentSelector students={students} handleSubmit={() => {}} />
       );
-      let btnBackground = wrapper
-        .find('button')
-        .at(0)
-        .props().style.backgroundColor;
+      let btnBackground = wrapper.find('button').at(0).props()
+        .style.backgroundColor;
       expect(btnBackground).to.equal('white');
       wrapper.setState({selectedStudentIds: [1]});
-      btnBackground = wrapper
-        .find('button')
-        .at(0)
-        .props().style.backgroundColor;
+      btnBackground = wrapper.find('button').at(0).props()
+        .style.backgroundColor;
       expect(btnBackground).to.equal('#0094ca');
     });
   });

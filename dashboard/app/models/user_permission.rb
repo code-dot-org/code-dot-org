@@ -42,10 +42,11 @@ class UserPermission < ApplicationRecord
     # Granted to regional partner program managers.
     # Initially has the same abilities as workshop organizer.
     PROGRAM_MANAGER = 'program_manager'.freeze,
-    # Grants access to review reported inaccuracies in census data
-    CENSUS_REVIEWER = 'census_reviewer'.freeze,
     # Grants ability to be the instructor of any course no matter instructor_audience
     UNIVERSAL_INSTRUCTOR = 'universal_instructor'.freeze,
+    # Grants access to use AI Chat API
+    AI_CHAT_ACCESS = 'ai_chat_access'.freeze,
+
   ].freeze
 
   # Do not log the granting/removal of these permissions to slack
@@ -59,6 +60,11 @@ class UserPermission < ApplicationRecord
 
   after_save :log_permission_save
   before_destroy :log_permission_delete
+  after_create :send_verified_teacher_email, if: proc {permission == AUTHORIZED_TEACHER}
+
+  def send_verified_teacher_email
+    TeacherMailer.verified_teacher_email(user).deliver_now if user&.email.present?
+  end
 
   def log_permission_save
     return if saved_changes.empty?
@@ -70,10 +76,10 @@ class UserPermission < ApplicationRecord
     return if SILENCED_PERMISSIONS.include? permission
 
     ChatClient.message 'infra-security',
-      'Updating UserPermission: '\
-        "environment: #{rack_env}, "\
-        "user ID: #{user.id}, "\
-        "email: #{user.email}, "\
+      'Updating UserPermission: ' \
+        "environment: #{rack_env}, " \
+        "user ID: #{user.id}, " \
+        "email: #{user.email}, " \
         "permission: #{permission}",
       color: 'yellow'
   end
@@ -86,10 +92,10 @@ class UserPermission < ApplicationRecord
     return if SILENCED_PERMISSIONS.include? permission
 
     ChatClient.message 'infra-security',
-      'Deleting UserPermission: '\
-        "environment: #{rack_env}, "\
-        "user ID: #{user.id}, "\
-        "email: #{user.email}, "\
+      'Deleting UserPermission: ' \
+        "environment: #{rack_env}, " \
+        "user ID: #{user.id}, " \
+        "email: #{user.email}, " \
         "permission: #{permission}",
       color: 'yellow'
   end

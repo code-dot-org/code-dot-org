@@ -1,11 +1,14 @@
 class CourseOfferingsController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource except: [:quick_assign_course_offerings]
 
-  before_action :require_levelbuilder_mode
+  before_action :require_levelbuilder_mode, except: [:quick_assign_course_offerings]
   before_action :authenticate_user!
 
   def edit
     @course_offering = CourseOffering.find_by!(key: params[:key])
+    @self_paced_pl_course_offerings = CourseOffering.professional_learning_and_self_paced_course_offerings
+    @professional_learning_program_paths = CourseOffering::PROFESSIONAL_LEARNING_PROGRAM_PATHS
+    @videos = Video.videos_for_course_offering_editor
     render :not_found unless @course_offering
   end
 
@@ -18,13 +21,21 @@ class CourseOfferingsController < ApplicationController
     end
 
     render json: @course_offering.summarize_for_edit
-  rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => e
-    render(status: :not_acceptable, plain: e.message)
+  rescue ActiveRecord::RecordNotFound, ActiveRecord::RecordInvalid => exception
+    render(status: :not_acceptable, plain: exception.message)
   end
 
-  private
+  def quick_assign_course_offerings
+    return head :forbidden unless current_user
 
-  def course_offering_params
-    params.permit(:display_name, :is_featured, :category, :assignable).to_h
+    participant_type = params[:participantType]
+    return head :bad_request unless participant_type
+
+    offerings = QuickAssignHelper.course_offerings(current_user, request.locale, participant_type)
+    render :ok, json: offerings.to_json
+  end
+
+  private def course_offering_params
+    params.permit(:display_name, :is_featured, :category, :assignable, :grade_levels, :curriculum_type, :header, :marketing_initiative, :image, :cs_topic, :school_subject, :device_compatibility, :description, :professional_learning_program, :self_paced_pl_course_offering_id, :video, :published_date).to_h
   end
 end

@@ -1,4 +1,4 @@
-require 'google/apis/analytics_v3'
+require 'google-apis-analytics_v3'
 require 'googleauth'
 
 # Google Analytics Client helper.

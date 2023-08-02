@@ -14,3 +14,5 @@ A certain social media Web site allows users to post messages and to comment on 
 
 For which of the following goals would it be more useful to analyze the data instead of the metadata?
 MARKDOWN
+
+allow_multiple_attempts true

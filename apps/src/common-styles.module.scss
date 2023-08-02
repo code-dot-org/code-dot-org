@@ -1,0 +1,84 @@
+// As we move from inline css to css modules we are temporarily duplicating commonStyles.js into this css module.
+// Any changes in one should be made in the other to apply to all components.
+@use "color.scss";
+@use "style-constants.scss";
+
+.hidden {
+  display: none;
+}
+
+.darkHeader {
+  height: style-constants.$workspace-headers-height;
+  background-color: color.$neutral_dark;
+  color: color.$neutral_white;
+  overflow-y: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &Unfocused {
+    background-color: color.$neutral_dark;
+    color: color.$neutral_white;
+
+    button {
+      span {
+        color: color.$neutral_dark;
+      }
+    }
+  }
+}
+
+// TODO: [Phase 2] This now is legacy style that we use for Javalab. Remove .purpleHeader styles and it's usages
+//  once we move all the headers to updated styles.
+//  More info here: https://github.com/code-dot-org/code-dot-org/pull/50895
+.purpleHeader {
+  height: style-constants.$workspace-headers-height;
+  background-color: color.$purple;
+  color: color.$white;
+  overflow-y: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &Unfocused {
+    background-color: color.$lighter_purple;
+    color: color.$dark_charcoal;
+
+    button {
+      span {
+        color: color.$dark_charcoal;
+      }
+    }
+  }
+}
+
+.teacherBlueHeader {
+  background-color: color.$cyan;
+  color: color.$lightest_cyan;
+}
+
+.teacherHeaderUnfocused {
+  color: color.$dark_charcoal;
+}
+
+.minecraftHeader {
+  background-color: #3b3b3b;
+  color: color.$white;
+}
+
+.button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+
+// Div contain instructions; either below visualization or in top instructions
+// May not need a common location once everything is in top instructions
+.bubble {
+  color: color.$black;
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+}

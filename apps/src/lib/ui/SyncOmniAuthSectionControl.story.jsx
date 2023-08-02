@@ -4,30 +4,69 @@ import {
   SyncOmniAuthSectionButton,
   READY,
   IN_PROGRESS,
-  SUCCESS
+  SUCCESS,
 } from './SyncOmniAuthSectionControl';
 import {action} from '@storybook/addon-actions';
 
-export default storybook => {
-  const stories = [];
-  [OAuthSectionTypes.clever, OAuthSectionTypes.google_classroom].forEach(
-    provider => {
-      [READY, IN_PROGRESS, SUCCESS].forEach(buttonState => {
-        stories.push({
-          name: `Sync ${provider} - ${buttonState}`,
-          story: () => (
-            <SyncOmniAuthSectionButton
-              provider={provider}
-              buttonState={buttonState}
-              onClick={action('click')}
-            />
-          )
-        });
-      });
-    }
-  );
+export default {
+  title: 'SyncOmniAuthSectionButton',
+  component: SyncOmniAuthSectionButton,
+};
 
-  return storybook
-    .storiesOf('SyncOmniAuthSectionButton', module)
-    .addStoryTable(stories);
+//
+// TEMPLATE
+//
+
+const Template = args => (
+  <SyncOmniAuthSectionButton onClick={action('click')} {...args} />
+);
+
+const TemplateClever = Template.bind({});
+TemplateClever.args = {
+  provider: OAuthSectionTypes.clever,
+};
+
+const TemplateGoogleClassroom = Template.bind({});
+TemplateGoogleClassroom.args = {
+  provider: OAuthSectionTypes.google_classroom,
+};
+
+//
+// STORIES
+//
+
+export const SyncCleverReady = Template.bind({});
+SyncCleverReady.args = {
+  ...TemplateClever.args,
+  buttonState: READY,
+};
+
+export const SyncGoogleClassroomReady = Template.bind({});
+SyncGoogleClassroomReady.args = {
+  ...TemplateGoogleClassroom.args,
+  buttonState: READY,
+};
+
+export const SyncCleverInProgress = Template.bind({});
+SyncCleverInProgress.args = {
+  ...TemplateClever.args,
+  buttonState: IN_PROGRESS,
+};
+
+export const SyncGoogleClassroomInProgress = Template.bind({});
+SyncGoogleClassroomInProgress.args = {
+  ...TemplateGoogleClassroom.args,
+  buttonState: IN_PROGRESS,
+};
+
+export const SyncCleverSuccess = Template.bind({});
+SyncCleverSuccess.args = {
+  ...TemplateClever.args,
+  buttonState: SUCCESS,
+};
+
+export const SyncGoogleClassroomSuccess = Template.bind({});
+SyncGoogleClassroomSuccess.args = {
+  ...TemplateGoogleClassroom.args,
+  buttonState: SUCCESS,
 };

@@ -13,6 +13,7 @@
         "type": "String",
         "field": true
       }
-    ]
+    ],
+    "style": "default"
   }
 }

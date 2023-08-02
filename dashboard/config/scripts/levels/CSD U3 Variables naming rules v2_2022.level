@@ -42,7 +42,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "pause_animations_by_default": "false",
-    "encrypted_examples": "qVXkIojXW6gEv+Xt804Z+hSjBSbHs0z6nVhrey3l+RpY3AVosTfgplMFla+M\nnntO1DqFBc81gqELITUdor9rsg==\n",
+    "encrypted_examples": "b4ZuvdZqB//rBb/XVsXEQ7DoUxyD9pqf1JVs/L9r3MegrZun5hnmOxsOIgkB\nX5DtDYnccnVcCqpL6cvG+ylApQ==\n",
     "show_debug_watch": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -72,7 +72,7 @@
   "level_num": "custom",
   "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:01.922+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables naming rules v2_2021\\\"\"],\"cloned_from\":\"CSD U3 Variables naming rules v2_2021\"},{\"changed_at\":\"2022-09-28 22:13:05 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-28 22:13:34 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:39:01.922+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables naming rules v2_2021\\\"\"],\"cloned_from\":\"CSD U3 Variables naming rules v2_2021\"},{\"changed_at\":\"2022-09-28 22:13:05 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-09-28 22:13:34 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-28 17:05:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-28 17:08:59 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

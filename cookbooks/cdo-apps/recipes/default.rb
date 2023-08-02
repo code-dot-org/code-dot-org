@@ -44,9 +44,6 @@ end
 # Used by lesson plan generator.
 apt_package 'enscript'
 
-# Provides a Dashboard database fixture for Pegasus tests.
-apt_package 'libsqlite3-dev'
-
 # Used to sync content between our Code.org shared Dropbox folder
 # and our git repository.
 apt_package 'unison' if node.chef_environment == 'staging'
@@ -131,8 +128,6 @@ include_recipe 'cdo-analytics' if %w[production-daemon production-console].inclu
 
 # Daemon-specific configuration for SSH access to frontend instances.
 include_recipe 'cdo-apps::daemon_ssh' if node['cdo-apps']['daemon'] && node['cdo-apps']['frontends']
-
-include_recipe 'cdo-apps::lighthouse' if node.chef_environment == 'test'
 
 include_recipe 'cdo-tippecanoe' if node['cdo-apps']['daemon']
 

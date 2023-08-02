@@ -41,7 +41,8 @@ layout: none
     %br
 
     %a{href: "/2022_state_of_cs.pdf", target: "_blank", style: "text-decoration: none"}
-      %button{style: "background-color: #ffa400; color: white; border-color: #ffa400; margin-top: 20px; margin-bottom: 20px"} Download Report
+      %button{style: "background-color: #ffa400; color: white; border-color: #ffa400; margin-top: 20px; margin-bottom: 20px; padding: 6px 16px"} Download Report
+    
 
     %br
     %select.small-state-dropdown{style: "padding: 6px 12px; border-radius: 4px;"}
@@ -50,6 +51,16 @@ layout: none
         %option{value: state.delete(' ')}= state
       :javascript
         statePicker()
+    %br
+    %br
+
+    %a{href: CDO.code_org_url("/yourschool/accessreport"), target: "_blank"}
+      Data dashboard
+    &nbsp;
+    |
+    &nbsp;
+    %a{href: "/data/2022_state_of_cs_data.xlsx", download: "2022_state_of_cs_data.xlsx"}
+      Download data
 
   .col-50
     %img{style: "width: 75%; margin-left: 20%; margin-top: 35px", src: "images/advocacy1-subject.png"}

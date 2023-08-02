@@ -1,32 +1,29 @@
 ---
-title: Teacher Resources - Make a Flappy Game
-nav: hoc_teacher_resources_nav
-theme: responsive
-video_player: true
+title: Ресурси для вчителів - Створіть гру "Пташка Пурх"
 ---
 
-# Make a Flappy Game: An Hour of Code Tutorial
+# Створіть гру "Пташка Пурх": Підручник "Година коду"
 
 {{ hoc_flappy_video }}
 
 [col-50]
 
-## Teacher Resources
+## Ресурси для вчителів
 
-### Lesson Plans:
+### Плани уроків:
 
-- [Make a Flappy Game]({{ hoc_flappy_cb_url }})
+- [Створіть гру "Пташка Пурх"]({{ hoc_flappy_cb_url }})
 
-### Extension Activities:
+### Завдання для поглиблення знань:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Поза Годиною коду](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Курс 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Інші ресурси для вчителів:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Година коду: Посібник для викладачів](https://hourofcode.com/how-to)
+- [Найкращі практики від успішних викладачів](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live Event: [Посібник для викладача до Години коду](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -34,12 +31,12 @@ video_player: true
 
 ## Огляд
 
-Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
+Створіть власну гру "Пташка Пурх", перетягуючи візуальні блоки-команди, і змініть її зовнішній вигляд (акула Пурх, Санта Пурх - що завгодно). Додайте гру на свій телефон в один клік.
 
-**Recommended Age Range:** 4-104
+**Рекомендована вікова категорія:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Технологічні вимоги:** Сучасні браузери, смартфони + планшети
 
-<a href="http://studio.code.org/s/flappy/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/flappy/reset"><button>Спробуйте цей підручник</button></a>
 
 [/col-50]

@@ -8,13 +8,13 @@ require_relative 'properties'
 
 PEGASUS_DB_READER = sequel_connect(CDO.pegasus_db_reader, CDO.pegasus_db_reader, query_timeout: 1200)
 
-WEIGHTED_COUNT = "SUM(" \
-  " IF(session REGEXP '^_.*_'," +
+WEIGHTED_COUNT = "SUM( " \
+  "IF(session REGEXP '^_.*_'," +
   # Parses the session weight 'xyz' from the session '_xyz_abcdefghijk'.
   "   SUBSTRING(SUBSTRING_INDEX(session, '_', 2) FROM 2)," +
   # The session does not specify the session weight, default to one.
-  "   1)" \
-  " ) AS count".freeze
+  "   1) " \
+  ") AS count".freeze
 
 # Generates a MySQL Query over a range of dates and configurable subset
 # of rows from the hoc_activity table
@@ -89,9 +89,9 @@ def analyze_day_fast(date)
   # Code.org hosted tutorials below.
   codedotorg_tutorials = []
   PEGASUS_DB_READER.fetch(
-    "SELECT code FROM tutorials WHERE orgname = 'Code.org'"
+    "SELECT code_s FROM cdo_tutorials WHERE orgname_s = 'Code.org'"
   ).each do |row|
-    codedotorg_tutorials.push(row[:code])
+    codedotorg_tutorials.push(row[:code_s])
   end
 
   codedotorg_tutorial_count = 0

@@ -4,7 +4,7 @@
  */
 import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import five from '@code-dot-org/johnny-five-deprecated';
+import five from '@code-dot-org/johnny-five';
 
 /** @const {number} Pin for the toggle switch on a Circuit Playground. */
 const SWITCH_PIN = 21;
@@ -15,7 +15,7 @@ export const READ_ONLY_PROPERTIES = [
   'isClosed',
   'board',
   'pin',
-  'value'
+  'value',
 ];
 export const READ_WRITE_PROPERTIES = ['closeValue', 'invert', 'openValue'];
 
@@ -51,8 +51,8 @@ export default class Switch extends EventEmitter {
       .map(name => [
         name,
         {
-          get: () => fiveSwitch[name]
-        }
+          get: () => fiveSwitch[name],
+        },
       ])
       .fromPairs()
       .value();
@@ -63,15 +63,15 @@ export default class Switch extends EventEmitter {
         name,
         {
           get: () => fiveSwitch[name],
-          set: x => (fiveSwitch[name] = x)
-        }
+          set: x => (fiveSwitch[name] = x),
+        },
       ])
       .fromPairs()
       .value();
 
     Object.defineProperties(this, {
       ...readOnlyProperties,
-      ...readWriteProperties
+      ...readWriteProperties,
     });
 
     // Listen to 'open' and 'close' events on the wrapped five.Switch controller.

@@ -36,7 +36,7 @@ class AdminReportsController < ApplicationController
 
           # Determine whether the level is a multi question, replacing the
           # numerical answer with its corresponding text if so.
-          level_info = Level.where(id: level_id).pluck(:type, :properties).first
+          level_info = Level.where(id: level_id).pick(:type, :properties)
           next unless level_info && level_info[0] == 'Multi' && !level_info[1].empty?
           level_answers = level_info[1]["answers"]
           @responses[level_id].each do |response|
@@ -121,12 +121,10 @@ class AdminReportsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_script
-    @script = Script.get_from_cache(params[:script_id]) if params[:script_id]
+    @script = Unit.get_from_cache(params[:script_id]) if params[:script_id]
   end
 
-  private
-
-  def level_answers_csv
+  private def level_answers_csv
     send_data(
       CSV.generate do |csv|
         csv << @headers

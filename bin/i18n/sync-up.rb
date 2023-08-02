@@ -18,7 +18,7 @@ def sync_up
         while line = stdout.gets
           # skip lines detailing individual file upload, unless that file
           # resulted in an unexpected response
-          next if line.start_with?("File ") && line.end_with?("OK\n", "SKIPPED\n")
+          next if line.start_with?("✔️  File")
 
           puts line
         end
@@ -28,9 +28,9 @@ def sync_up
     end
 
     puts "Sync up completed successfully"
-  rescue => e
-    puts "Sync up failed from the error: #{e}"
-    raise e
+  rescue => exception
+    puts "Sync up failed from the error: #{exception}"
+    raise exception
   end
 end
 

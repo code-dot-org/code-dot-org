@@ -80,8 +80,8 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   end
 
   test 'filter_workshops with start and end' do
-    start_date = Date.today.to_s
-    end_date = (Date.today + 1.day).to_s
+    start_date = Time.zone.today.to_s
+    end_date = (Time.zone.today + 1.day).to_s
     expects(:scheduled_start_on_or_after).with(start_date)
     expects(:scheduled_start_on_or_before).with(end_date)
 
@@ -280,7 +280,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
       :order_by,
     ]
 
-    params expected_keys.map {|k| [k, 'some value']}.to_h
+    params expected_keys.index_with('some value')
     assert_equal expected_keys.map(&:to_s), @controller.filter_params.keys
   end
 
@@ -299,8 +299,8 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
 
   # Defaults to 1 week ending today by scheduled start date
   def set_default_date_expectations
-    expects(:scheduled_start_on_or_before).with(Date.today)
-    expects(:scheduled_start_on_or_after).with(Date.today - 1.week)
+    expects(:scheduled_start_on_or_before).with(Time.zone.today)
+    expects(:scheduled_start_on_or_after).with(Time.zone.today - 1.week)
   end
 
   def expects(method_name)

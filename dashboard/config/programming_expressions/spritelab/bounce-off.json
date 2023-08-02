@@ -4,7 +4,7 @@
   "category": "Sprites",
   "category_key": "actions",
   "block_name": "gamelab_bounceOff",
-  "content": "If the first  sprite is touching the second sprite, then the movement direction of each sprite changes by 180º, and then both sprites move 1 pixel away from each other.",
+  "content": "If the first  sprite is touching the second sprite, then the first sprite moves away from the second sprite. The movement direction of the first sprite also changes by 180 degrees.",
   "examples": [
     {
       "name": "Example 2",
@@ -24,7 +24,7 @@
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/Screen_Shot_2020-07-01_at_11.36.45_AM_vYv2bHl.png",
-  "short_description": "If the first  sprite is touching the second sprite, then the movement direction of each sprite changes by 180º, and then both sprites move 1 pixel away from each other.",
+  "short_description": "If the first  sprite is touching the second sprite, then the first sprite moves away from the second sprite. The movement direction of the first sprite also changes by 180 degrees.",
   "syntax": "bounceOff",
-  "tips": "* If a sprite’s is programmed with [`move in direction`(#5ef3ff)](/docs/spritelab/gamelab_moveInDirection/) blocks, this block does not change those directions in the code. This block will not affect the direction of sprites moving with behaviors such as “moving east”.\r\n* This block works best under the [`sprite touches sprite`(#62fc94)](/docs/spritelab/gamelab_whenTouching/) event for sprites with behaviors that use the [`move forward`(#5ef3ff)](/docs/spritelab/gamelab_moveForward/) block such as “wandering” or “swimming left and right”.\r\n"
+  "tips": "* This block works best under the [`sprite touches sprite`(#62fc94)](/docs/spritelab/gamelab_whenTouching/) event for sprites with behaviors that use the [`move forward`(#5ef3ff)](/docs/spritelab/gamelab_moveForward/) block such as “wandering” or “swimming left and right”.\r\n* If a sprite is programmed with [`move in direction`(#5ef3ff)](/docs/spritelab/gamelab_moveInDirection/) blocks, this block does not change the selected direction. \r\n"
 }

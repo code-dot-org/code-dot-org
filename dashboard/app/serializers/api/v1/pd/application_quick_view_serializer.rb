@@ -6,7 +6,6 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     :district_name,
     :school_name,
     :status,
-    :locked,
     :notes,
     :notes_2,
     :notes_3,
@@ -21,10 +20,6 @@ class Api::V1::Pd::ApplicationQuickViewSerializer < ActiveModel::Serializer
     :friendly_scholarship_status,
     :allow_sending_principal_email
   )
-
-  def locked
-    object.locked?
-  end
 
   def principal_approval_state
     object.try(:principal_approval_state)

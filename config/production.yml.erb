@@ -11,11 +11,10 @@ redshift_host: !Secret
 redshift_password: !Secret
 redshift_username: !Secret
 sinatra_session_secret: !Secret
-reporting_db_admin: !Secret
 
+# In production, only the console server populates the admin credential.
 <% unless name&.include?('console') %>
-db_admin:
-reporting_db_admin:
+db_credential_admin: {"username":"ACCESS_DISABLED", "password":"ACCESS_DISABLED"}
 <% end %>
 
 newrelic_logging: true
@@ -27,7 +26,7 @@ use_pusher:                             true
 
 # Used for the exporting teacher enrollment data to a gsheet
 enrollments_summer_2020_gsheet_key: !Secret
-applications_2022_2023_gsheet_key: !Secret
+applications_gsheet_key: !Secret
 eir_teacher_enrollments_gsheet_key: !Secret
 
 # Amazon Future Engineer integration
@@ -36,3 +35,6 @@ afe_pardot_form_handler_url: !Secret
 # Configurations for making calls to the Immersive Reader API on Azure
 imm_reader_client_id:     '06d74083-9d25-43e4-acf6-0377f381a1e5'
 imm_reader_subdomain:     'cdo-immersive-reader-prod'
+
+# General CDO Amplitude key
+cdo_amplitude_api_key: !Secret

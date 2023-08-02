@@ -4,18 +4,18 @@ var CustomEvalError = require('./evalError');
  * Throws an exception if val is not of the expected type. Type is either a
  * string (like "number" or "string") or an object (Like EvalImage).
  */
-module.exports.ensureString = function(val) {
+module.exports.ensureString = function (val) {
   return module.exports.ensureType(val, 'string');
 };
 
-module.exports.ensureNumber = function(val) {
+module.exports.ensureNumber = function (val) {
   return module.exports.ensureType(val, 'number');
 };
 
 /**
  * Style is either "solid", "outline", or a percentage i.e. "70%"
  */
-module.exports.ensureStyle = function(val) {
+module.exports.ensureStyle = function (val) {
   if (val.slice(-1) === '%') {
     var opacity = module.exports.getOpacity(val);
     if (opacity >= 0 && opacity <= 1.0) {
@@ -32,7 +32,7 @@ module.exports.ensureStyle = function(val) {
  * Checks to see if this is a valid color, throwing if it isnt. Color validity
  * is determined by setting the value on an html element and seeing if it takes.
  */
-module.exports.ensureColor = function(val) {
+module.exports.ensureColor = function (val) {
   var e = document.createElement('div');
   e.style.color = val;
   // We can't check that e.style.color === val, since some vals will be
@@ -46,7 +46,7 @@ module.exports.ensureColor = function(val) {
  * @param val
  * @param {string|Class} type
  */
-module.exports.ensureType = function(val, type) {
+module.exports.ensureType = function (val, type) {
   if (typeof type === 'string') {
     if (typeof val !== type) {
       throw new Error('expected type: ' + type + '\ngot type: ' + typeof val);
@@ -56,7 +56,7 @@ module.exports.ensureType = function(val, type) {
   }
 };
 
-module.exports.getFill = function(style, color) {
+module.exports.getFill = function (style, color) {
   if (style === 'outline') {
     return 'none';
   }
@@ -64,7 +64,7 @@ module.exports.getFill = function(style, color) {
   return color;
 };
 
-module.exports.getStroke = function(style, color) {
+module.exports.getStroke = function (style, color) {
   if (style === 'outline') {
     return color;
   }
@@ -75,7 +75,7 @@ module.exports.getStroke = function(style, color) {
  * Get the opacity from the style. Style is a string that is either a word or
  * percentage (i.e. 25%).
  */
-module.exports.getOpacity = function(style) {
+module.exports.getOpacity = function (style) {
   var alpha = 1.0;
   if (style.slice(-1) === '%') {
     alpha = parseInt(style.slice(0, -1), 10) / 100;
@@ -90,6 +90,6 @@ module.exports.getOpacity = function(style) {
  * The pixel coordinate system instead has origin at the top left, and x and y
  * increase as you move right/down.
  */
-module.exports.cartesianToPixel = function(cartesianY) {
+module.exports.cartesianToPixel = function (cartesianY) {
   return 400 - cartesianY;
 };

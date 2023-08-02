@@ -4,20 +4,20 @@ import i18n from '@cdo/locale';
 
 export const keyValidation = {
   name_s: {
-    isValid: value => !!value
+    isValid: value => !!value,
   },
   email_s: {
-    isValid: isEmail
+    isValid: isEmail,
   },
   zip_code_or_country_s: {
-    isValid: () => true
+    isValid: () => true,
   },
   age_i: {
-    isValid: isInt
+    isValid: isInt,
   },
   role_s: {
-    isValid: () => true
-  }
+    isValid: () => true,
+  },
 };
 
 export const getInvalidFields = data => {
@@ -49,7 +49,7 @@ export const getErrorMessage = data => {
 export const getAgeSafeData = data => {
   const safeData = {
     email_s: 'anonymous@code.org',
-    name_s: ''
+    name_s: '',
   };
   return data.age_i < 16 ? merge(data, safeData) : data;
 };
@@ -61,5 +61,5 @@ export const professionOptions = [
   {text: i18n.educator(), dataString: 'educator'},
   {text: i18n.administrator(), dataString: 'administrator'},
   {text: i18n.softwareEngineer(), dataString: 'engineer'},
-  {text: i18n.noneOfTheAbove(), dataString: 'other'}
+  {text: i18n.noneOfTheAbove(), dataString: 'other'},
 ];

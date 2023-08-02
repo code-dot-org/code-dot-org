@@ -23,8 +23,8 @@ post '/forms/:kind' do |kind|
       data.delete "volunteer_id_i"
     end
     data.to_json
-  rescue FormError => e
-    halt 400, {'Content-Type' => 'text/json'}, e.errors.to_json
+  rescue FormError => exception
+    halt 400, {'Content-Type' => 'text/json'}, exception.errors.to_json
   rescue Sequel::UniqueConstraintViolation
     halt 409
   rescue NameError
@@ -50,8 +50,8 @@ post "/forms/:kind/:secret" do |kind, secret|
     cache_control :private, :must_revalidate, max_age: 0
     forbidden! unless form = update_form(kind, secret, params)
     form[:data]
-  rescue FormError => e
-    halt 400, {'Content-Type' => 'text/json'}, e.errors.to_json
+  rescue FormError => exception
+    halt 400, {'Content-Type' => 'text/json'}, exception.errors.to_json
   end
 end
 
@@ -64,7 +64,7 @@ post '/forms/:parent_kind/:parent_id/children/:kind' do |parent_kind, parent_id,
   begin
     content_type :json
     insert_or_upsert_form(kind, params, parent_id: parent_form[:id])[:data].to_json
-  rescue FormError => e
-    form_error! e
+  rescue FormError => exception
+    form_error! exception
   end
 end

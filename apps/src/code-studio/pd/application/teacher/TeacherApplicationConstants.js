@@ -9,30 +9,46 @@ const PROGRAM_CSA =
 
 const styles = {
   indented: {
-    marginLeft: 20
+    marginLeft: 20,
   },
   formText: {
-    fontSize: 14
+    fontSize: 14,
   },
   questionText: {
     fontSize: 14,
     lineHeight: 1.5,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   checkBoxAfterButtonList: {
-    marginTop: -30
+    marginTop: -30,
   },
   bold: {
-    fontFamily: '"Gotham 7r", sans-serif'
+    fontFamily: '"Gotham 7r", sans-serif',
   },
   linkLike: {
     fontFamily: '"Gotham 7r", sans-serif',
     cursor: 'pointer',
-    color: color.purple
+    color: color.purple,
   },
   red: {
-    color: color.red
-  }
+    color: color.red,
+  },
+  error: {
+    color: color.red,
+  },
 };
 
-export {PROGRAM_CSD, PROGRAM_CSP, PROGRAM_CSA, styles};
+function getProgramInfo(program) {
+  switch (program) {
+    case PROGRAM_CSD:
+      return {name: 'CS Discoveries', shortName: 'CSD', minCourseHours: 25};
+    case PROGRAM_CSP:
+      return {name: 'CS Principles', shortName: 'CSP', minCourseHours: 100};
+    case PROGRAM_CSA:
+      return {name: 'CSA', shortName: 'CSA', minCourseHours: 140};
+    default:
+      return {name: 'CS Program', shortName: null, minCourseHours: 0};
+  }
+}
+
+export {PROGRAM_CSD, PROGRAM_CSP, PROGRAM_CSA, styles, getProgramInfo};

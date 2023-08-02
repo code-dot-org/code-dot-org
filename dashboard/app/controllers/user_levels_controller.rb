@@ -24,8 +24,8 @@ class UserLevelsController < ApplicationController
   end
 
   def delete_predict_level_progress
-    script = Script.get_from_cache(params[:script_id])
-    return head :not_found, text: 'Script not found' unless script
+    script = Unit.get_from_cache(params[:script_id])
+    return head :not_found, text: 'Unit not found' unless script
     return head :forbidden, text: 'User must be instructor of course' unless script.can_be_instructor?(current_user)
     level = Level.find(params[:level_id])
     return head :not_found, text: 'Level not found' unless level
@@ -40,15 +40,13 @@ class UserLevelsController < ApplicationController
     return head :ok
   end
 
-  private
-
-  def set_user_level
+  private def set_user_level
     return unless params[:id]
     @user_level = UserLevel.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def user_level_params
+  private def user_level_params
     params.require(:user_level).permit(:best_result, :submitted)
   end
 end

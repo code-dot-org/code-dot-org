@@ -49,3 +49,5 @@ public void start() {
  
 What is printed as a result of the call `start()`?
 MARKDOWN
+
+allow_multiple_attempts true

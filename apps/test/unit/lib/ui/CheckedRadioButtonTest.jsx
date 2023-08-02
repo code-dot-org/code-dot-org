@@ -8,7 +8,7 @@ const DEFAULT_PROPS = {
   disabledMode: false,
   checked: false,
   value: 'performanceLevel1',
-  onRadioButtonChange: () => {}
+  onRadioButtonChange: () => {},
 };
 
 describe('CheckedRadioButton', () => {

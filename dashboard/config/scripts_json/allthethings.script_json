@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-07-22 18:24:08 UTC",
+    "serialized_at": "2023-07-02 01:30:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -739,6 +739,51 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "lesson-48",
+      "name": "Poetry",
+      "absolute_position": 48,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 45,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "lesson-49",
+      "name": "Music",
+      "absolute_position": 49,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 46,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "lesson-50",
+      "name": "AI Chat",
+      "absolute_position": 50,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 47,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "lesson_activities": [
@@ -1351,6 +1396,42 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "bd958217-a2d9-423d-a515-78757692b268",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bd958217-a2d9-423d-a515-78757692b268",
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "e58ff15e-708f-4cd0-97cc-260c9929b0ca",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e58ff15e-708f-4cd0-97cc-260c9929b0ca",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "df85eaeb-e712-4d23-a0de-da19f1c0ef96",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "df85eaeb-e712-4d23-a0de-da19f1c0ef96",
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "activity_sections": [
@@ -1822,6 +1903,36 @@
       "seeding_key": {
         "activity_section.key": "6f0eab1f-82d4-469a-8a61-11c5d7780734",
         "lesson_activity.key": "afb69493-76c4-4ae5-919e-8ddf15331820"
+      }
+    },
+    {
+      "key": "b68acb29-b590-46e0-82a1-ade0d51c420f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f",
+        "lesson_activity.key": "bd958217-a2d9-423d-a515-78757692b268"
+      }
+    },
+    {
+      "key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a",
+        "lesson_activity.key": "e58ff15e-708f-4cd0-97cc-260c9929b0ca"
+      }
+    },
+    {
+      "key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231",
+        "lesson_activity.key": "df85eaeb-e712-4d23-a0de-da19f1c0ef96"
       }
     }
   ],
@@ -2717,6 +2828,30 @@
     },
     {
       "chapter": 38,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-single-multi-standalone-retriable"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-single-multi-standalone-retriable"
+        ],
+        "lesson.key": "Multi",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "fcd19b9e-936c-4fbc-875b-b01da1125ceb"
+      },
+      "level_keys": [
+        "test-single-multi-standalone-retriable"
+      ]
+    },
+    {
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2740,7 +2875,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2764,7 +2899,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2788,7 +2923,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2812,7 +2947,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2836,7 +2971,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2860,7 +2995,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2884,7 +3019,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2908,7 +3043,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2932,7 +3067,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2956,7 +3091,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -2980,7 +3115,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -3004,7 +3139,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -3028,7 +3163,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -3052,7 +3187,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
@@ -3076,7 +3211,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3100,7 +3235,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3124,7 +3259,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3148,7 +3283,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3172,7 +3307,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -3196,7 +3331,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3220,7 +3355,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3244,7 +3379,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3268,7 +3403,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3292,7 +3427,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3316,7 +3451,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3340,7 +3475,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -3364,7 +3499,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3388,7 +3523,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3412,7 +3547,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3436,7 +3571,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3460,7 +3595,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -3484,7 +3619,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -3508,7 +3643,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -3532,7 +3667,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -3556,7 +3691,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -3580,7 +3715,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -3604,7 +3739,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
@@ -3628,7 +3763,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 12,
       "activity_section_position": 12,
       "assessment": false,
@@ -3652,7 +3787,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 13,
       "activity_section_position": 13,
       "assessment": false,
@@ -3676,7 +3811,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 14,
       "activity_section_position": 14,
       "assessment": false,
@@ -3700,7 +3835,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 15,
       "activity_section_position": 15,
       "assessment": false,
@@ -3724,7 +3859,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 16,
       "activity_section_position": 16,
       "assessment": false,
@@ -3748,7 +3883,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 17,
       "activity_section_position": 17,
       "assessment": false,
@@ -3772,7 +3907,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 18,
       "activity_section_position": 18,
       "assessment": false,
@@ -3796,7 +3931,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 19,
       "activity_section_position": 19,
       "assessment": false,
@@ -3820,7 +3955,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 20,
       "activity_section_position": 20,
       "assessment": false,
@@ -3844,7 +3979,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 21,
       "activity_section_position": 21,
       "assessment": false,
@@ -3868,7 +4003,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 22,
       "activity_section_position": 22,
       "assessment": false,
@@ -3892,7 +4027,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3916,7 +4051,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3940,7 +4075,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3964,7 +4099,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3988,7 +4123,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4012,7 +4147,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4036,7 +4171,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4060,7 +4195,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4084,7 +4219,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4108,7 +4243,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4132,7 +4267,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4156,7 +4291,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4180,7 +4315,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4204,7 +4339,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4228,7 +4363,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4252,7 +4387,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4276,7 +4411,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4300,7 +4435,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4324,7 +4459,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4348,7 +4483,79 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L5 CSP CFU subgroups2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L5 CSP CFU subgroups2022"
+        ],
+        "lesson.key": "Free Response",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "e39b746e-7160-4df7-87c2-c370d042e3da"
+      },
+      "level_keys": [
+        "U2L5 CSP CFU subgroups2022"
+      ]
+    },
+    {
+      "chapter": 108,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U1L4-L1 Contained_2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L4-L1 Contained_2022"
+        ],
+        "lesson.key": "Free Response",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "e39b746e-7160-4df7-87c2-c370d042e3da"
+      },
+      "level_keys": [
+        "CSA U1L4-L1 Contained_2022"
+      ]
+    },
+    {
+      "chapter": 109,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-nonretriable-freeresponse-standalone"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-nonretriable-freeresponse-standalone"
+        ],
+        "lesson.key": "Free Response",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "e39b746e-7160-4df7-87c2-c370d042e3da"
+      },
+      "level_keys": [
+        "test-nonretriable-freeresponse-standalone"
+      ]
+    },
+    {
+      "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4372,7 +4579,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 111,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4404,7 +4611,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 112,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4436,7 +4643,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 113,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4468,7 +4675,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 114,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4500,7 +4707,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 115,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4532,7 +4739,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 116,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -4564,7 +4771,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 117,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -4596,7 +4803,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 118,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -4628,7 +4835,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 119,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -4660,7 +4867,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 120,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4684,7 +4891,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4708,7 +4915,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 122,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4732,7 +4939,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 123,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4756,7 +4963,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 124,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4780,7 +4987,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 125,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4804,7 +5011,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 126,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4828,7 +5035,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 127,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4852,7 +5059,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 128,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4876,7 +5083,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 129,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4900,7 +5107,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 130,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4924,7 +5131,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 131,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4948,7 +5155,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 132,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4972,7 +5179,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 133,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4996,7 +5203,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 134,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -5020,7 +5227,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 135,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -5044,7 +5251,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 136,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5068,7 +5275,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 137,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5092,7 +5299,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 138,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5116,7 +5323,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 139,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5140,7 +5347,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 140,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5164,7 +5371,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 141,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5188,7 +5395,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 142,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5212,7 +5419,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 143,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5236,7 +5443,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 144,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5260,7 +5467,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 145,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -5284,7 +5491,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 146,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -5308,7 +5515,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 147,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -5332,7 +5539,55 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 148,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PS predictive Applab level test retriable"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PS predictive Applab level test retriable"
+        ],
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "dac2f35d-ed12-4c9f-ad45-2b6a68d94244"
+      },
+      "level_keys": [
+        "PS predictive Applab level test retriable"
+      ]
+    },
+    {
+      "chapter": 149,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Test GameLab Retriable Multi"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Test GameLab Retriable Multi"
+        ],
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "dac2f35d-ed12-4c9f-ad45-2b6a68d94244"
+      },
+      "level_keys": [
+        "Test GameLab Retriable Multi"
+      ]
+    },
+    {
+      "chapter": 150,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5356,7 +5611,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 151,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5380,7 +5635,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 152,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5404,7 +5659,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 153,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5428,7 +5683,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 154,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5452,7 +5707,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 155,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5476,7 +5731,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 156,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5500,7 +5755,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 157,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5524,7 +5779,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 158,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -5548,7 +5803,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 159,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -5572,7 +5827,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 160,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -5596,7 +5851,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 161,
       "position": 9,
       "activity_section_position": 10,
       "assessment": false,
@@ -5620,7 +5875,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 162,
       "position": 10,
       "activity_section_position": 11,
       "assessment": false,
@@ -5644,7 +5899,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 163,
       "position": 11,
       "activity_section_position": 12,
       "assessment": false,
@@ -5668,7 +5923,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 164,
       "position": 12,
       "activity_section_position": 13,
       "assessment": false,
@@ -5692,7 +5947,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 165,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5713,6 +5968,216 @@
       },
       "level_keys": [
         "allthethings-example-csp-assessment"
+      ]
+    },
+    {
+      "chapter": 166,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "New Poetry HOC Project"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "New Poetry HOC Project"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      },
+      "level_keys": [
+        "New Poetry HOC Project"
+      ]
+    },
+    {
+      "chapter": 167,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "New Poetry Project"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "New Poetry Project"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      },
+      "level_keys": [
+        "New Poetry Project"
+      ]
+    },
+    {
+      "chapter": 168,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_no_modal_function_editor"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_no_modal_function_editor"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      },
+      "level_keys": [
+        "poetry_no_modal_function_editor"
+      ]
+    },
+    {
+      "chapter": 169,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_modal_function_editor"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_modal_function_editor"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      },
+      "level_keys": [
+        "poetry_modal_function_editor"
+      ]
+    },
+    {
+      "chapter": 170,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Music Video 1"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      },
+      "level_keys": [
+        "Music Video 1"
+      ]
+    },
+    {
+      "chapter": 171,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Music Level 1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Music Level 1"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      },
+      "level_keys": [
+        "Music Level 1"
+      ]
+    },
+    {
+      "chapter": 172,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Music Level 2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Music Level 2"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      },
+      "level_keys": [
+        "Music Level 2"
+      ]
+    },
+    {
+      "chapter": 173,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Music Level 3"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Music Level 3"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      },
+      "level_keys": [
+        "Music Level 3"
+      ]
+    },
+    {
+      "chapter": 174,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AI Chat Test Level"
+        ],
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
+      },
+      "level_keys": [
+        "AI Chat Test Level"
       ]
     }
   ],
@@ -6154,6 +6619,18 @@
         "level.key": "test questionless single multi",
         "script_level.level_keys": [
           "test questionless single multi"
+        ],
+        "lesson.key": "Multi",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "fcd19b9e-936c-4fbc-875b-b01da1125ceb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-single-multi-standalone-retriable",
+        "script_level.level_keys": [
+          "test-single-multi-standalone-retriable"
         ],
         "lesson.key": "Multi",
         "lesson_group.key": "",
@@ -6979,6 +7456,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "U2L5 CSP CFU subgroups2022",
+        "script_level.level_keys": [
+          "U2L5 CSP CFU subgroups2022"
+        ],
+        "lesson.key": "Free Response",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "e39b746e-7160-4df7-87c2-c370d042e3da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L4-L1 Contained_2022",
+        "script_level.level_keys": [
+          "CSA U1L4-L1 Contained_2022"
+        ],
+        "lesson.key": "Free Response",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "e39b746e-7160-4df7-87c2-c370d042e3da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-nonretriable-freeresponse-standalone",
+        "script_level.level_keys": [
+          "test-nonretriable-freeresponse-standalone"
+        ],
+        "lesson.key": "Free Response",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "e39b746e-7160-4df7-87c2-c370d042e3da"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Sample CSP Assessment",
         "script_level.level_keys": [
           "Sample CSP Assessment"
@@ -7147,7 +7660,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 4",
+        "level.key": "4-5 Maze 1",
         "script_level.level_keys": [
           "4-5 Maze 1",
           "4-5 Maze 4"
@@ -7160,7 +7673,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "4-5 Maze 1",
+        "level.key": "4-5 Maze 4",
         "script_level.level_keys": [
           "4-5 Maze 1",
           "4-5 Maze 4"
@@ -7561,6 +8074,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "PS predictive Applab level test retriable",
+        "script_level.level_keys": [
+          "PS predictive Applab level test retriable"
+        ],
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "dac2f35d-ed12-4c9f-ad45-2b6a68d94244"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Test GameLab Retriable Multi",
+        "script_level.level_keys": [
+          "Test GameLab Retriable Multi"
+        ],
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "dac2f35d-ed12-4c9f-ad45-2b6a68d94244"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "allthethings HOC ML Fish 1",
         "script_level.level_keys": [
           "allthethings HOC ML Fish 1"
@@ -7749,6 +8286,114 @@
         "lesson_group.key": "",
         "script.name": "allthethings",
         "activity_section.key": "6f0eab1f-82d4-469a-8a61-11c5d7780734"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "New Poetry HOC Project",
+        "script_level.level_keys": [
+          "New Poetry HOC Project"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "New Poetry Project",
+        "script_level.level_keys": [
+          "New Poetry Project"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_no_modal_function_editor",
+        "script_level.level_keys": [
+          "poetry_no_modal_function_editor"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_modal_function_editor",
+        "script_level.level_keys": [
+          "poetry_modal_function_editor"
+        ],
+        "lesson.key": "lesson-48",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b68acb29-b590-46e0-82a1-ade0d51c420f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Music Video 1",
+        "script_level.level_keys": [
+          "Music Video 1"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Music Level 1",
+        "script_level.level_keys": [
+          "Music Level 1"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Music Level 2",
+        "script_level.level_keys": [
+          "Music Level 2"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Music Level 3",
+        "script_level.level_keys": [
+          "Music Level 3"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AI Chat Test Level",
+        "script_level.level_keys": [
+          "AI Chat Test Level"
+        ],
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
       }
     }
   ],

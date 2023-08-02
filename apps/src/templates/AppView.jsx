@@ -20,7 +20,7 @@ class AppView extends React.Component {
 
     // not provided by redux
     visualizationColumn: PropTypes.element,
-    onMount: PropTypes.func.isRequired
+    onMount: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -30,7 +30,7 @@ class AppView extends React.Component {
   render() {
     const visualizationColumnClassNames = classNames({
       responsive: this.props.isResponsive,
-      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom,
     });
 
     return (
@@ -52,5 +52,5 @@ export const UnconnectedAppView = AppView;
 export default connect(state => ({
   hideSource: state.pageConstants.hideSource,
   isResponsive: isResponsiveFromState(state),
-  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
+  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
 }))(UnconnectedAppView);

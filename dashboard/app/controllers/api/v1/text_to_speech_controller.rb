@@ -33,9 +33,7 @@ class Api::V1::TextToSpeechController < Api::V1::JSONApiController
     head :too_many_requests
   end
 
-  private
-
-  def locale
+  private def locale
     params[:locale] || request.locale
   end
 end

@@ -1,0 +1,883 @@
+{
+  "script": {
+    "name": "csa-software-engineering",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSA",
+      "hideable_lessons": true,
+      "is_course": true,
+      "is_migrated": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": "csa-software-engineering",
+    "serialized_at": "2023-07-31 22:17:54 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "csa-software-engineering"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Chapter 1: GitHub and Copilot"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 2: Computer Vision"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Intro to GitHub",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**How can the integration of commits, PRs, and code reviews in GitHub lead to a productive and collaborative environment for software development?**\n\nIn this lesson, students are introduced to Git and GitHub, with a focus on understanding the importance of version control systems and gaining practical skills in using these tools. Through hands-on exploration and practice, they learn to clone repositories, make commits, push changes, manage branches, and work with pull requests in GitHub to expose students to the collaborative practices and tools common in the software development industry.",
+        "preparation": "* Preview the _What is GitHub?_ video\n* Print copies of the Getting Started on GitHub resource (one for each student) if students do not already have GitHub accounts\n* Print copies of the GitHub Student Developer Pack resource (one for each student) if students do not already have verified student GitHub accounts\n* Print copies of the Submitting an Assignment on GitHub Classroom resource (one for each student)\n* Print copies of the Frame of Reference: Teamwork and Collaboration handout (one for each student)\n* Print copies of the GitHub Scavenger Hunt handout (one for each pair of students)",
+        "student_overview": "**How can the integration of commits, PRs, and code reviews in GitHub lead to a productive and collaborative environment for software development?**\n\nGet ready for an exciting dive into the world of Git and GitHub! These are super important tools that software developers use all the time, and you're about to get the inside scoop. We'll learn how to track changes in our code, work together on projects, and keep our code neat and tidy. You'll get to play around with creating your own code repositories, making updates, and even merging different versions of code – just like real software developers! Plus, we'll get to see how code reviews work IRL, which are all about helping each other write the best code possible. This isn't just textbook stuff; it's real-world skills that will make you a coding superstar in no time."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Intro to Copilot",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Build with Copilot",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Intro to AI Models",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Training Your Model",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Using Your Model",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "550d737e-3a95-481b-9475-c7981e1168b3",
+      "position": 1,
+      "properties": {
+        "name": "Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "550d737e-3a95-481b-9475-c7981e1168b3",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "15ce0799-2146-4615-a3d0-ce879504e629",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "15ce0799-2146-4615-a3d0-ce879504e629",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "9999f882-addb-427c-9c4b-f0bedee16249",
+      "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9999f882-addb-427c-9c4b-f0bedee16249",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "a912b9ea-ac38-45d0-a692-07d597ba708f",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a912b9ea-ac38-45d0-a692-07d597ba708f",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "08793d33-c868-4dbf-8f33-a9db2f6ca60d",
+      "position": 1,
+      "properties": {
+        "description": "Follow the instructions on the [**Getting Started on GitHub (Teachers)**](https://docs.google.com/document/d/16qrRG9ez9Yn\\_ZL44vM54dQb4EzKMtHSWvtKllFNRa6Y/edit?usp=sharing) resource to create your GitHub account and obtain verified teacher access to GitHub Classroom.\n\nHave students following the instructions on the [**Getting Started on GitHub (Students)**](https://docs.google.com/document/d/1cE-x93hhE1xLfxy8qnJlkwe1-hSyKhpO01Uo03aqnhU/edit?usp=sharing) resource to create their GitHub account. They should also complete the steps on the [**GitHub Student Developer Pack**](https://docs.google.com/document/d/1ZeT9iXkmxAxTbtmFWfrLMsFneicKOzvx4cYogntwfOE/edit?usp=sharing) resource so they can obtain access to the free resources and tools GitHub offers to students, including Copilot.",
+        "name": "Step 1: GitHub Classroom",
+        "progression_name": "GitHub Scavenger Hunt"
+      },
+      "seeding_key": {
+        "activity_section.key": "08793d33-c868-4dbf-8f33-a9db2f6ca60d",
+        "lesson_activity.key": "550d737e-3a95-481b-9475-c7981e1168b3"
+      }
+    },
+    {
+      "key": "27fa4cbd-6fc1-4fa1-99f3-228e4f7d6613",
+      "position": 2,
+      "properties": {
+        "description": "You will need to install Visual Studio Code (VS Code) and set it up for Java development. The easiest way to do this is to install the **Coding Pack for Java** from [**https://code.visualstudio.com/docs/java/java-tutorial**](https://code.visualstudio.com/docs/java/java-tutorial), which includes VS Code, the Java Development Kit (JDK), and essential Java extensions. You should install this on each student's computer or on your computers in your lab if you have one.",
+        "name": "Step 2: Set Up Visual Studio Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "27fa4cbd-6fc1-4fa1-99f3-228e4f7d6613",
+        "lesson_activity.key": "550d737e-3a95-481b-9475-c7981e1168b3"
+      }
+    },
+    {
+      "key": "20c7dd0d-c8fc-4f30-bf03-a51f3e9f3d52",
+      "position": 1,
+      "properties": {
+        "description": "Over the next few days, we'll learn how AI-generated code and tools like GitHub make teamwork a breeze. But first, we're going to do an activity called \"Frame of Reference.\" This activity will help us figure out how we feel about working in a group – the good stuff, the not-so-good stuff, and everything in between. It's all about seeing how our past experiences might shape our future team projects. So, get your pens ready, open your minds, and let's create our Frames of Reference!",
+        "name": "Teamwork and Collaboration",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "20c7dd0d-c8fc-4f30-bf03-a51f3e9f3d52",
+        "lesson_activity.key": "15ce0799-2146-4615-a3d0-ce879504e629"
+      }
+    },
+    {
+      "key": "d14be5f1-9b0d-4572-a023-1272a16b20f7",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i>  **Distribute:** Give each student a copy of the Frame of Reference: Teamwork and Collaboration handout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The printed version is strongly encouraged and preferred. However, you can choose to use the digital version of the Frame of Reference: Teamwork and Collaboration handout instead if printing is a limited at your school."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d14be5f1-9b0d-4572-a023-1272a16b20f7",
+        "lesson_activity.key": "15ce0799-2146-4615-a3d0-ce879504e629"
+      }
+    },
+    {
+      "key": "5b6da92e-d9f4-4524-ac3f-56669da24f38",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Frame of Reference activity.\n\n* At the center of the \"frame\" is the topic _group projects_ where a picture would be placed in a picture frame.\n* Students will have several minutes to individually jot down words or phrases that come to mind related to the topic. These words go in the \"mat\" area of their frame of reference.\n* Students will then jot down how they came to know what they know or think - the sources, people, and/or events that have influenced their thinking. These reactions go in the \"frame\" area of the graphic.\n* After the individual reflection and writing, students will share their \"frames of reference\" with a partner or small group.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete their frame of reference.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share their frame of reference with a partner or small group.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have each group share common themes in their frames of reference with the class."
+      },
+      "seeding_key": {
+        "activity_section.key": "5b6da92e-d9f4-4524-ac3f-56669da24f38",
+        "lesson_activity.key": "15ce0799-2146-4615-a3d0-ce879504e629"
+      }
+    },
+    {
+      "key": "07eff666-7233-48da-81ed-f5f21c42bc66",
+      "position": 1,
+      "properties": {
+        "description": "Today, we're going to explore an important aspect of coding and software development - version control systems. Before we get into what these are and how they work, let's pause and reflect on our journey so far.",
+        "duration": "10",
+        "name": "Version Control Systems and Git",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "07eff666-7233-48da-81ed-f5f21c42bc66",
+        "lesson_activity.key": "9999f882-addb-427c-9c4b-f0bedee16249"
+      }
+    },
+    {
+      "key": "da4eae67-b6fa-4e30-8207-3d2cbbc705cc",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How did some of the tools we used throughout the year address some of the challenges we just discussed? What was missing or something you wished you had?_\n\n**Discussion Goal:** Students should reflect on how they used Java Lab and code reviews throughout the year and the specific functionalities of these tools. They should identify ways that these tools addressed or attempted to address the challenges that surfaced from their Frame of Reference, such as aiding in collaboration, as well as challenges they faced while using these tools, such as lack of specific features.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To get students moving and provide opportunities for them to share their ideas and perspectives with each other, you could conduct this discussion as a Stir the Class activity:\n\n1. Have students number a sheet a paper 1 to 20.\n2. Have each student write three ideas in response to the prompt.\n3. Direct students to move around the room collecting/giving an idea from/to each student. Ideas received from one student can be passed to another student.\n4. After a few minutes, ask students to return to their seats. At this point, you can have students compare lists with a neighbor to prioritize or categorize ideas."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "da4eae67-b6fa-4e30-8207-3d2cbbc705cc",
+        "lesson_activity.key": "9999f882-addb-427c-9c4b-f0bedee16249"
+      }
+    },
+    {
+      "key": "cdb11244-943d-48dd-b481-d83f1a8f1666",
+      "position": 3,
+      "properties": {
+        "description": "We've learned a lot from our experiences with the tools we've used this year. Let's now explore a tool that's key to managing coding projects - version control systems and Git. This tool might just be the solution to some of the challenges we talked about!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cdb11244-943d-48dd-b481-d83f1a8f1666",
+        "lesson_activity.key": "9999f882-addb-427c-9c4b-f0bedee16249"
+      }
+    },
+    {
+      "key": "162a38db-ef6b-4e06-882b-a92f6b626697",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce and define _**version control system**_.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It is not important to get into the specific terminology and process here. The goal is to give a high level overview of how these systems work. For this and the next slide, you might choose to say something like:\n\n* _Version control systems allow us to create snapshots of our project at specific times. So for instance, on March 16, we added some code to our project with a note in the version control system that we added a User class. Then on April 21, we added more code to our project with a note that we added the Menu class. On May 3, we changed some code in our project and added a note in the version control system that we changed the Menu options._\n* _Git is a type of version control system that allows software engineers to create their own copies of the main project and make modifications separately from the main project. When they are ready to merge those changes back to the main project, they can then push those changes up to the main project. So for instance, Tasha makes a copy of the main code, makes some changes that are separate from the main code, then makes some more changes, then pushes those changes to the main code. Malik also makes a copy and makes his own changes separate from the main code AND Tasha's code and pushes those changes to the main project when he's ready._"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "162a38db-ef6b-4e06-882b-a92f6b626697",
+        "lesson_activity.key": "9999f882-addb-427c-9c4b-f0bedee16249"
+      }
+    },
+    {
+      "key": "afb4b472-7a30-4b75-b2d2-f4242d1aa2b5",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce and define _**Git**_.\n\n**Do This:** Explain how version control works with Git.\n\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> The main branch is the \"official\" branch where all changes eventually get merged back into.\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> When we create a branch, we are creating an isolated version of the project and can make changes without affecting any of the other branches.\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> When we're ready to merge our changes back to the main branch, we can then open a pull request.\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Before the changes are merged, we can get feedback on our code, make any additional changes needed, and test the changes to make sure there are no issues.\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Then our changes can be merged back to the main branch.\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Along the way, other software engineers can be doing the same.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It is not important for students to remember all of these steps and terms right now. Students will be doing a scavenger hunt next to see these in action. The goal here is to provide a brief overview of the general workflow of a version control system to help students with thinking about how this could be useful and to provide an anchor going into the scavenger hunt."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "afb4b472-7a30-4b75-b2d2-f4242d1aa2b5",
+        "lesson_activity.key": "9999f882-addb-427c-9c4b-f0bedee16249"
+      }
+    },
+    {
+      "key": "79935859-b75b-40ac-bf4e-5bd3ff99a2d4",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Can you think of a situation in your daily life where a form of version control is used, or where using a form of version control could be beneficial?_\n\n**Discussion Goal:** The main goal of this discussion is to enable students to identify and understand the applications of version control in everyday situations. Encourage students to think creatively about where version control could be implemented in their daily lives, such as document editing, managing photos, organizing digital music, or even planning events.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students first think quietly about possible answers to this question (about 30 seconds to a minute). Encourage students to write notes or draw quick doodles to help them think. Then have students pair with a neighbor to discuss their thinking before asking students to share their responses with the whole group or with a table group.\n\nRemind students to refer back to their Frame of Reference and recall any relevant points made in the previous discussion to think about how they could solve potential issues or challenges they identified using version control."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "79935859-b75b-40ac-bf4e-5bd3ff99a2d4",
+        "lesson_activity.key": "9999f882-addb-427c-9c4b-f0bedee16249"
+      }
+    },
+    {
+      "key": "d470831a-73c0-4e1a-94cf-772a05001770",
+      "position": 7,
+      "properties": {
+        "description": "Building on our understanding of version control systems and Git, let's take the next step into GitHub. It's a bit like the social media of coding - a space to store projects, collaborate with others, and showcase your work.",
+        "duration": "20",
+        "name": "Exploring GitHub",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d470831a-73c0-4e1a-94cf-772a05001770",
+        "lesson_activity.key": "9999f882-addb-427c-9c4b-f0bedee16249"
+      }
+    },
+    {
+      "key": "a8120ce8-29de-4878-8676-969067d881fb",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce GitHub.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the GitHub Scavenger Hunt handout.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partner to complete the GitHub Scavenger Hunt handout.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _What is GitHub?_.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement with the video and reflect on the GitHub Scavenger Hunt, have students:\n\n* Write down 3 features that they found particularly useful or interesting.\n* Identify 2 aspects or uses of GitHub that they'd like to explore or understand better.\n* Reflect on 1 way they might use GitHub in their personal projects or future collaborative work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a8120ce8-29de-4878-8676-969067d881fb",
+        "lesson_activity.key": "9999f882-addb-427c-9c4b-f0bedee16249"
+      }
+    },
+    {
+      "key": "fb6ccb4a-4c9a-4731-a3e2-11b6e391585d",
+      "position": 1,
+      "properties": {
+        "description": "Today, we explored the world of version control systems, and we learned how GitHub can be a game-changer for managing code in programming projects. Remember, tools like GitHub aren't just about storing code - they're about enabling teamwork, streamlining project management, and fostering a coding environment where mistakes can be made and fixed easily.",
+        "name": "Closing the Loop",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fb6ccb4a-4c9a-4731-a3e2-11b6e391585d",
+        "lesson_activity.key": "a912b9ea-ac38-45d0-a692-07d597ba708f"
+      }
+    },
+    {
+      "key": "2eaffa12-049e-4b2e-87a9-3cf6a9be8e6d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n* _What was the most surprising or unexpected thing you learned about GitHub today?_\n* _What is a situation where you think using GitHub could significantly simplify the development process?_\n* _How do you see version control systems and platforms like GitHub influencing your approach to coding and collaboration?_\n\n**Discussion Goal:** Students should recall and articulate the main points of the lesson, such as GitHub's features, their role in team collaboration, and how they facilitate project development. They should highlight how these tools could improve their development process and share their own personal insights and reactions to the lesson content.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to consider the challenges they identified in their Frame of Reference and earlier discussions to consider how tools like GitHub can address common issues in group projects. For example:\n\n* Creating separate branches for developing a new feature and fixing a bug simultaneously and then merging these changes back into the main project without conflict using GitHub.\n* Facilitating multiple developers working on the same codebase without overwriting each other's work and using pull requests for code reviews."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2eaffa12-049e-4b2e-87a9-3cf6a9be8e6d",
+        "lesson_activity.key": "a912b9ea-ac38-45d0-a692-07d597ba708f"
+      }
+    },
+    {
+      "key": "9b941571-b054-4312-b484-e23e301d75a8",
+      "position": 3,
+      "properties": {
+        "description": "It's ok if today felt overwhelming! These are tools and skills we'll use throughout the rest of this unit, and we'll continue to reflect on how we can best use them.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9b941571-b054-4312-b484-e23e301d75a8",
+        "lesson_activity.key": "a912b9ea-ac38-45d0-a692-07d597ba708f"
+      }
+    },
+    {
+      "key": "03683a5b-d193-4fa7-857c-07b2c8539a3c",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "03683a5b-d193-4fa7-857c-07b2c8539a3c",
+        "lesson_activity.key": "a912b9ea-ac38-45d0-a692-07d597ba708f"
+      }
+    },
+    {
+      "key": "1dc0c64a-421e-4dc4-b084-a6c399c888bd",
+      "position": 5,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "1dc0c64a-421e-4dc4-b084-a6c399c888bd",
+        "lesson_activity.key": "a912b9ea-ac38-45d0-a692-07d597ba708f"
+      }
+    },
+    {
+      "key": "0afebfd4-fe10-48ea-9505-69a6b155944b",
+      "position": 6,
+      "properties": {
+        "description": "_Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket._",
+        "name": "Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "0afebfd4-fe10-48ea-9505-69a6b155944b",
+        "lesson_activity.key": "a912b9ea-ac38-45d0-a692-07d597ba708f"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-L1L1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "0afebfd4-fe10-48ea-9505-69a6b155944b"
+      },
+      "level_keys": [
+        "CSA-SE-L1L1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-L1L1",
+        "script_level.level_keys": [
+          "CSA-SE-L1L1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "0afebfd4-fe10-48ea-9505-69a6b155944b"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "[DIGITAL] Frame of Reference: Teamwork and Collaboration",
+      "url": "https://docs.google.com/presentation/d/1qmHnN4APm0pBDcQlzU4w3vReHRVVMwA6fEzrQ0X5btM/edit?usp=sharing",
+      "key": "_digital_frame_of_reference_teamwork_and_collaboration",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "_digital_frame_of_reference_teamwork_and_collaboration"
+      }
+    },
+    {
+      "name": "[KEY] GitHub Scavenger Hunt",
+      "url": "https://docs.google.com/document/d/1\\_P9xE9PFtgoxjAK9rtTvkjkG0vGegT9m0fITJ5JaQic/edit?usp=sharing",
+      "key": "_key_github_scavenger_hunt",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_github_scavenger_hunt"
+      }
+    },
+    {
+      "name": "Frame of Reference: Teamwork and Collaboration",
+      "url": "https://docs.google.com/document/d/1MNTpgngHWVlkWkQR\\_Vg1xgDV2j96XQ39X33INECIYfc/edit?usp=sharing",
+      "key": "frame_of_reference_teamwork_and_collaboration",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "frame_of_reference_teamwork_and_collaboration"
+      }
+    },
+    {
+      "name": "Getting Started on GitHub (Students)",
+      "url": "https://docs.google.com/document/d/1cE-x93hhE1xLfxy8qnJlkwe1-hSyKhpO01Uo03aqnhU/edit?usp=share\\_link",
+      "key": "getting_started_on_github_students_",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "getting_started_on_github_students_"
+      }
+    },
+    {
+      "name": "Getting Started on GitHub (Teachers)",
+      "url": "https://docs.google.com/document/d/16qrRG9ez9Yn\\_ZL44vM54dQb4EzKMtHSWvtKllFNRa6Y/edit?usp=share\\_link",
+      "key": "getting_started_on_github_teachers_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "getting_started_on_github_teachers_"
+      }
+    },
+    {
+      "name": "GitHub Scavenger Hunt",
+      "url": "https://docs.google.com/document/d/1uGtmuezdrtT0EN4pQwWnNswk9KiTTjgTV7d6RyJr89c/edit?usp=sharing",
+      "key": "github_scavenger_hunt",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "github_scavenger_hunt"
+      }
+    },
+    {
+      "name": "GitHub Student Developer Pack",
+      "url": "https://docs.google.com/document/d/1ZeT9iXkmxAxTbtmFWfrLMsFneicKOzvx4cYogntwfOE/edit?usp=share\\_link",
+      "key": "github_student_developer_pack",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "github_student_developer_pack"
+      }
+    },
+    {
+      "name": "Intro to GitHub",
+      "url": "https://docs.google.com/presentation/d/1NCxGnTcSxzXHpeLK1pimdqro0mg5uIg2P35vsXlgE9U/edit?usp=sharing",
+      "key": "intro_to_github",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_github"
+      }
+    },
+    {
+      "name": "Software Engineering & Computer Vision Overview",
+      "url": "https://docs.google.com/document/d/1IgrcAiejHTGbIxs_IAhlBqW5yAL0FxLCPAoiefO2qK8/edit?usp=sharing",
+      "key": "software_engineering_computer_vision_overview",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "software_engineering_computer_vision_overview"
+      }
+    },
+    {
+      "name": "Software Engineering Lesson 1 Repo",
+      "url": "https://github.com/code-dot-org/csa-se-lesson1",
+      "key": "software_engineering_lesson_1_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "software_engineering_lesson_1_repo"
+      }
+    },
+    {
+      "name": "Submitting an Assignment on GitHub Classroom",
+      "url": "https://docs.google.com/document/d/1eOlMx2YW3qRI5DJzpInnN10dSGEupIRa-qOfL\\_xNMR0/edit?usp=share\\_link",
+      "key": "submitting_an_assignment_on_github_classroom",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "submitting_an_assignment_on_github_classroom"
+      }
+    },
+    {
+      "name": "What is GitHub?",
+      "url": "https://youtu.be/pBy1zgt0XPc",
+      "key": "what_is_github_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "what_is_github_"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_digital_frame_of_reference_teamwork_and_collaboration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_github_scavenger_hunt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "frame_of_reference_teamwork_and_collaboration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "getting_started_on_github_students_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "getting_started_on_github_teachers_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "github_scavenger_hunt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "github_student_developer_pack"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "intro_to_github"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "software_engineering_lesson_1_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "submitting_an_assignment_on_github_classroom"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "what_is_github_"
+      }
+    }
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "software_engineering_computer_vision_overview",
+        "script.name": "csa-software-engineering"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "branch",
+      "word": "branch",
+      "definition": "a separate line of development",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "branch"
+      }
+    },
+    {
+      "key": "git",
+      "word": "Git",
+      "definition": "a type of version control system that allows software engineers to have a full copy of the code that can contain the full history of all changes",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "git"
+      }
+    },
+    {
+      "key": "pull_request",
+      "word": "pull request",
+      "definition": "a method of submitting contributions to a project",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pull_request"
+      }
+    },
+    {
+      "key": "repository",
+      "word": "repository",
+      "definition": "contains all of the project files and each file's revision history",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "repository"
+      }
+    },
+    {
+      "key": "version_control_system",
+      "word": "version control system",
+      "definition": "a type of software that helps software engineers manage changes to source code over time",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "version_control_system"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "branch"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "git"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "pull_request"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "repository"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "version_control_system"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "5ef421af-06fb-4d7f-be73-02fd7b6f17e7",
+      "properties": {
+        "description": "Create and merge pull requests (PRs) while performing code reviews to maintain code quality, provide constructive feedback, and integrate feedback into their own work"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "5ef421af-06fb-4d7f-be73-02fd7b6f17e7"
+      }
+    },
+    {
+      "key": "923c5a3a-58c5-4c8f-a1e3-9ad8e1ed4106",
+      "properties": {
+        "description": "Use GitHub to create and clone repositories, make commits, push changes to a repository, and create and merge branches"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "923c5a3a-58c5-4c8f-a1e3-9ad8e1ed4106"
+      }
+    },
+    {
+      "key": "da147a36-5372-47fe-b36f-bb9887ef56cc",
+      "properties": {
+        "description": "Explain the concept of version control systems, specifically Git, and their importance in managing changes to source code over time"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "da147a36-5372-47fe-b36f-bb9887ef56cc"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-20"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

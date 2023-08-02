@@ -3,7 +3,6 @@ Feature: App Lab Versions
 
 Scenario: Script Level Versions
   Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I ensure droplet is in block mode
   And I switch to text mode
@@ -35,10 +34,8 @@ Scenario: Script Level Versions
   And I wait for the page to fully load
   Then ace editor code is equal to "// comment 2// comment 1"
 
-@no_ie
 Scenario: Project Load and Reload
   Given I am on "http://studio.code.org/projects/applab/new"
-  And I rotate to landscape
   And I wait for the page to fully load
   # The initial load results in save only because this is a new project.
   And I wait for initial project save to complete
@@ -73,11 +70,9 @@ Scenario: Project Load and Reload
 
   And element "#showVersionsModal tr:contains(a minute ago):contains(Restore):eq(1)" is not visible
 
-@no_ie
 @no_mobile
 Scenario: Project Version Checkpoints
   Given I am on "http://studio.code.org/projects/applab/new"
-  And I rotate to landscape
   And I wait for the page to fully load
   # The initial load results in save only because this is a new project.
   And I wait for initial project save to complete
@@ -106,12 +101,10 @@ Scenario: Project Version Checkpoints
   Then ".versionRow:nth-child(2) p" contains the saved text
   And element ".versionRow:nth-child(2) .img-upload" contains text "Restore"
 
-# Skip on IE due to blocked pop-ups
-@no_mobile @no_ie
+@no_mobile
 Scenario: Project page refreshes when other client adds a newer version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
-  And I rotate to landscape
   And I wait for the page to fully load
   And element ".project_updated_at" eventually contains text "Saved"
   And I ensure droplet is in block mode
@@ -145,12 +138,10 @@ Scenario: Project page refreshes when other client adds a newer version
   And I wait for the page to fully load
   Then ace editor code is equal to "// comment Y// comment X"
 
-# Skip on IE due to blocked pop-ups
-@no_mobile @no_ie
+@no_mobile
 Scenario: Project page refreshes when other client replaces current version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
-  And I rotate to landscape
   And I wait for the page to fully load
   And element ".project_updated_at" eventually contains text "Saved"
   And I ensure droplet is in block mode

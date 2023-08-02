@@ -22,3 +22,5 @@ Consider the following code segment.  What is the value of `num` after running t
 6. num -= value;
 ```
 MARKDOWN
+
+allow_multiple_attempts true

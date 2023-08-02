@@ -19,7 +19,7 @@ class ManageStudentNameCell extends Component {
 
     //Provided by redux
     editStudent: PropTypes.func.isRequired,
-    scriptName: PropTypes.string
+    scriptName: PropTypes.string,
   };
 
   onChangeName = e => {
@@ -27,15 +27,8 @@ class ManageStudentNameCell extends Component {
   };
 
   render() {
-    const {
-      id,
-      sectionId,
-      name,
-      username,
-      email,
-      editedValue,
-      scriptName
-    } = this.props;
+    const {id, sectionId, name, username, email, editedValue, scriptName} =
+      this.props;
     const studentUrl = scriptUrlForStudent(sectionId, scriptName, id);
 
     return (
@@ -81,20 +74,20 @@ class ManageStudentNameCell extends Component {
 
 const styles = {
   inputBox: {
-    width: 225
+    width: 225,
   },
   details: {
-    fontSize: 12
-  }
+    fontSize: 12,
+  },
 };
 
 export default connect(
   state => ({
-    scriptName: getSelectedScriptName(state)
+    scriptName: getSelectedScriptName(state),
   }),
   dispatch => ({
     editStudent(id, studentInfo) {
       dispatch(editStudent(id, studentInfo));
-    }
+    },
   })
 )(ManageStudentNameCell);

@@ -1,6 +1,6 @@
 import {
   SubjectNames,
-  AcademicYearWorkshopSubjects
+  AcademicYearWorkshopSubjects,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {CSF, CSD, CSP, CSA} from '../application/ApplicationConstants';
 

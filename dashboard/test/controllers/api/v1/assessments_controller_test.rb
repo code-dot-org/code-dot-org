@@ -291,15 +291,15 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     # Set up an assessment for that script.
     sub_level1 = create :multi, name: 'level_multi2_correct', type: 'Multi',
-                        properties: {"answers": [{"text" => "Incorrect Answer", "correct" => false},
-                                                 {"text" => "Incorrect Answer", "correct" => false},
-                                                 {"text" => "Correct Answer", "correct" => true},
-                                                 {"text" => "Correct Answer", "correct" => true}]}
+                        properties: {answers: [{"text" => "Incorrect Answer", "correct" => false},
+                                               {"text" => "Incorrect Answer", "correct" => false},
+                                               {"text" => "Correct Answer", "correct" => true},
+                                               {"text" => "Correct Answer", "correct" => true}]}
     sub_level2 = create :multi, name: 'level_multi2_incorrect_only_one_choice', type: 'Multi',
-                        properties: {"answers": [{"text" => "Incorrect Answer", "correct" => false},
-                                                 {"text" => "Incorrect Answer", "correct" => false},
-                                                 {"text" => "Correct Answer", "correct" => true},
-                                                 {"text" => "Correct Answer", "correct" => true}]}
+                        properties: {answers: [{"text" => "Incorrect Answer", "correct" => false},
+                                               {"text" => "Incorrect Answer", "correct" => false},
+                                               {"text" => "Correct Answer", "correct" => true},
+                                               {"text" => "Correct Answer", "correct" => true}]}
 
     level_group_dsl = <<~DSL
       name 'LevelGroupLevel1'
@@ -711,7 +711,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
       create :teacher_feedback, script: script, level: weblab_level, student: student, teacher: @teacher
     end
 
-    assert_queries 12 do
+    assert_queries 11 do
       get :section_feedback, params: {section_id: @section.id, script_id: script.id}
     end
 

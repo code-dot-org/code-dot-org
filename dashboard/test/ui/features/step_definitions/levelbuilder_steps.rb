@@ -48,14 +48,14 @@ end
 Given(/^I view the temp unit edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
-    And I wait until element ".edit_script" is visible
+    And I wait until element ".edit_unit" is visible
   }
 end
 
 Given(/^I wait for the temp unit edit page to load$/) do
   steps %{
     And I wait until I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
-    And I wait until element ".edit_script" is visible
+    And I wait until element ".edit_unit" is visible
   }
 end
 
@@ -155,22 +155,39 @@ Given(/^I wait for the temp data doc page to load$/) do
   }
 end
 
+Given(/^I wait for the temp data doc edit page to load$/) do
+  steps %{
+    And I wait until I am on "http://studio.code.org/data_docs/#{@temp_data_doc_key}/edit"
+    And I wait until element "#edit-data-doc" is visible
+  }
+end
+
 Given(/^element "([^"]*)" contains the name of the temp data doc$/) do |selector|
   steps %{
      And element "#{selector}" contains text "#{@temp_data_doc_name}"
   }
 end
 
-Given(/^the element contains path to temp data doc$/) do
+Given(/^the element contains the path to the temp data doc$/) do
   steps %{
     And the href of selector "a:contains(#{@temp_data_doc_name})" contains "/data_docs/#{@temp_data_doc_key}"
   }
 end
 
-Given(/^I delete the temp data doc$/) do
-  browser_request(
-    url: '/api/test/destroy_data_doc',
-    method: 'POST',
-    body: {key: @temp_data_doc_key}
-  )
+Given(/^I click the icon to edit the temp data doc$/) do
+  steps %{
+    And I click selector "#edit_#{@temp_data_doc_key}"
+  }
+end
+
+Given(/^I click the icon to delete the temp data doc$/) do
+  steps %{
+    And I click selector "#delete_#{@temp_data_doc_key}"
+  }
+end
+
+Given(/^the temp data doc is not visible$/) do
+  steps %{
+    And element "a" does not contain text "#{@temp_data_doc_name}"
+  }
 end

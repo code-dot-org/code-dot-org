@@ -71,9 +71,7 @@ module Geocoder
         data['relevance']
       end
 
-      private
-
-      def mapbox_context(name)
+      private def mapbox_context(name)
         context.map do |c|
           c if c['id']&.match?(Regexp.new(name))
         end&.compact&.first

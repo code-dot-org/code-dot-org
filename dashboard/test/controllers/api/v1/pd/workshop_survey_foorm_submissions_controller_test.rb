@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopSurveyFoormSubmissionsControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::WorkshopSurveyFoormSubmissionsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
   setup do
     @user = create :user
@@ -25,6 +25,16 @@ class Api::V1::Pd::WorkshopSurveyFoormSubmissionsControllerTest < ::ActionContro
     response_body = JSON.parse(response.body)
     assert_not_nil response_body['submission_id']
     assert_not_nil response_body['survey_submission_id']
+  end
+
+  # this enforces a requirement which the RED team depends on
+  test 'new form submission is linked to workshop' do
+    post :create, params: @default_params
+    assert_response :created
+
+    foorm_submission_id = JSON.parse(response.body)['submission_id']
+    foorm_submission = Foorm::Submission.find(foorm_submission_id)
+    assert_equal @pd_summer_workshop.id, foorm_submission.workshop_metadata.pd_workshop_id
   end
 
   test 'can create and save blank survey submission' do

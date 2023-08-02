@@ -4,10 +4,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {
   WorkshopTypes,
-  SubjectNames
+  SubjectNames,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {PermissionPropType} from '../permission';
@@ -15,7 +15,7 @@ import {shouldUseFoormSurvey} from '../workshop_summary_utils';
 
 export class WorkshopManagement extends React.Component {
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   static propTypes = {
@@ -28,12 +28,12 @@ export class WorkshopManagement extends React.Component {
     onDelete: PropTypes.func,
     showSurveyUrl: PropTypes.bool,
     date: PropTypes.string,
-    endDate: PropTypes.string
+    endDate: PropTypes.string,
   };
 
   static defaultProps = {
     editUrl: null,
-    onDelete: null
+    onDelete: null,
   };
 
   constructor(props) {
@@ -88,7 +88,7 @@ export class WorkshopManagement extends React.Component {
   };
 
   state = {
-    showDeleteConfirmation: false
+    showDeleteConfirmation: false,
   };
 
   handleViewClick = event => {
@@ -199,5 +199,5 @@ export class WorkshopManagement extends React.Component {
 }
 
 export default connect(state => ({
-  permission: state.workshopDashboard.permission
+  permission: state.workshopDashboard.permission,
 }))(WorkshopManagement);

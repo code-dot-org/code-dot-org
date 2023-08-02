@@ -15,7 +15,7 @@ import {
   KeywordPublicKey,
   KeywordPrivateKey,
   KeywordPublicNumber,
-  KeywordSecretNumber
+  KeywordSecretNumber,
 } from './cryptographyFields';
 import {COLORS, LINE_HEIGHT} from './style';
 
@@ -28,22 +28,22 @@ const INITIAL_STATE = {
   checkingPrivateKey: false,
   privateKeyEquationResult: null,
   checkingSecretNumber: false,
-  secretNumberEquationResult: null
+  secretNumberEquationResult: null,
 };
 
 const tdEquationStyleRHS = {
   lineHeight: LINE_HEIGHT + 'px',
-  verticalAlign: 'top'
+  verticalAlign: 'top',
 };
 const tdEquationStyleLHS = Object.assign({}, tdEquationStyleRHS, {
-  whiteSpace: 'nowrap'
+  whiteSpace: 'nowrap',
 });
 
 export default class Eve extends React.Component {
   static propTypes = {
     disabled: PropTypes.bool,
     setPublicModulus: PropTypes.func.isRequired,
-    runModuloClock: PropTypes.func.isRequired
+    runModuloClock: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};
@@ -75,13 +75,13 @@ export default class Eve extends React.Component {
         currentDividend => {
           this.setState({
             privateKeyEquationResult: currentDividend % publicModulus,
-            checkingPrivateKey: true
+            checkingPrivateKey: true,
           });
         },
         () => {
           this.setState({
             privateKeyEquationResult,
-            checkingPrivateKey: false
+            checkingPrivateKey: false,
           });
         }
       );
@@ -107,13 +107,13 @@ export default class Eve extends React.Component {
         currentDividend => {
           this.setState({
             secretNumberEquationResult: currentDividend % publicModulus,
-            checkingSecretNumber: true
+            checkingSecretNumber: true,
           });
         },
         () => {
           this.setState({
             secretNumberEquationResult,
-            checkingSecretNumber: false
+            checkingSecretNumber: false,
           });
         }
       );
@@ -133,7 +133,7 @@ export default class Eve extends React.Component {
       checkingPrivateKey,
       privateKeyEquationResult,
       checkingSecretNumber,
-      secretNumberEquationResult
+      secretNumberEquationResult,
     } = this.state;
     return (
       <CharacterPanel title="Eve">

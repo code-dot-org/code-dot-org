@@ -1,31 +1,33 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 namespace :lint do
   desc 'Lints Ruby code with rubocop.'
-  task :ruby do
+  timed_task_with_logging :ruby do
     RakeUtils.bundle_exec 'rubocop', '--parallel'
   end
 
   desc 'Lints Haml code with haml-lint.'
-  task :haml do
+  timed_task_with_logging :haml do
     RakeUtils.bundle_exec 'haml-lint dashboard pegasus'
   end
 
   desc 'Lints SCSS code with scss-lint.'
-  task :scss do
+  timed_task_with_logging :scss do
     RakeUtils.bundle_exec 'scss-lint'
   end
 
   desc 'Lints JavaScript code.'
-  task :javascript do
+  timed_task_with_logging :javascript do
     Dir.chdir(apps_dir) do
       # The linter depends on eslint and its plugins, which are installed
       # as apps dependencies by yarn.  Ensure they are up-to-date before
       # linting.
       ChatClient.log 'Installing <b>apps</b> dependencies...'
-      RakeUtils.npm_install
+      RakeUtils.yarn_install
 
       ChatClient.log 'Linting <b>apps</b> JavaScript...'
       RakeUtils.system 'npm run lint'
@@ -37,7 +39,7 @@ namespace :lint do
     end
   end
 
-  task all: [:ruby, :haml, :scss, :javascript]
+  timed_task_with_logging all: [:ruby, :haml, :scss, :javascript]
 end
 desc 'Lints all code.'
-task lint: ['lint:all']
+timed_task_with_logging lint: ['lint:all']

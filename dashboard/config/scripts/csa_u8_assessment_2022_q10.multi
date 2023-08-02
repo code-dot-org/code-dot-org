@@ -26,3 +26,5 @@ int location = getLocation(nums, 86);
 
 How many times does the line labeled `// check` get executed?
 MARKDOWN
+
+allow_multiple_attempts true

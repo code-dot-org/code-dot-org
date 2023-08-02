@@ -9,60 +9,56 @@ const sections = [
   {
     id: 1,
     name: 'NoStudents',
+    courseVersionName: 'cv',
     loginType: 'word',
     studentCount: 0,
     code: 'ABCD',
     grade: '10',
     providerManaged: false,
-    assignmentNames: ['a'],
-    assignmentPaths: ['b'],
-    hidden: false
+    hidden: false,
   },
   {
     id: 2,
     name: 'ThirdParty',
+    courseVersionName: 'cv',
     loginType: 'google_classroom',
     studentCount: 0,
     code: 'EFGH',
     grade: '11',
     providerManaged: true,
-    assignmentNames: ['a'],
-    assignmentPaths: ['b'],
-    hidden: false
+    hidden: false,
   },
   {
     id: 3,
     name: 'HasStudents',
+    courseVersionName: 'cv',
     loginType: 'picture',
     studentCount: 4,
     code: 'IJKL',
     grade: '9',
     providerManaged: false,
-    assignmentNames: ['a'],
-    assignmentPaths: ['b'],
-    hidden: false
+    hidden: false,
   },
   {
     id: 4,
     name: 'Hidden',
+    courseVersionName: 'cv',
     loginType: 'email',
     studentCount: 2,
     code: 'MNOP',
     grade: '6',
     providerManaged: false,
-    assignmentNames: ['a'],
-    assignmentPaths: ['b'],
-    hidden: true
-  }
+    hidden: true,
+  },
 ];
 
 const DEFAULT_PROPS = {
   sectionData: sections[0],
-  onEdit: () => {},
+  handleEdit: () => {},
   removeSection: () => {},
   toggleSectionHidden: () => {},
   updateRoster: () => {},
-  setRosterProvider
+  setRosterProvider,
 };
 
 describe('SectionActionDropdown', () => {
@@ -103,7 +99,7 @@ describe('SectionActionDropdown', () => {
     expect(wrapper).to.not.contain('Print Login Cards');
     expect(wrapper).to.contain('Edit Section Details');
     expect(
-      wrapper.find(<PrintCertificates sectionId={2} assignmentName="a" />)
+      wrapper.find(<PrintCertificates sectionId={2} courseVersionName="cv" />)
         .length,
       1
     );
@@ -118,7 +114,7 @@ describe('SectionActionDropdown', () => {
     expect(wrapper).to.contain('Print Login Cards');
     expect(wrapper).to.contain('Edit Section Details');
     expect(
-      wrapper.find(<PrintCertificates sectionId={1} assignmentName="a" />)
+      wrapper.find(<PrintCertificates sectionId={1} courseVersionName="cv" />)
         .length,
       1
     );
@@ -136,5 +132,17 @@ describe('SectionActionDropdown', () => {
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
     expect(wrapper).to.contain('Restore Section');
+  });
+
+  it('sends selected user to the new edit page', () => {
+    const wrapper = shallow(
+      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
+    );
+    const sectionId = wrapper.instance().props.sectionData.id;
+    const expectedUrl = '/sections/' + sectionId + '/edit';
+    expect(wrapper).to.contain('Edit Section Details');
+    expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
+      expectedUrl
+    );
   });
 });

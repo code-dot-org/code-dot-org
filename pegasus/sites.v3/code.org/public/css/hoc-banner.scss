@@ -1,36 +1,82 @@
-@import 'color.scss', 'font.scss', 'imports/_breakpoints.scss';
+@import 'color.scss', 'font.scss', 'breakpoints.scss';
 
 // Code.org HoC homepage banner
+#bars {
+  height: 450px;
+  position: relative;
+
+  @media screen and (max-width: $width-md) {
+    height: 400px;
+  }
+
+  & > div.col-33 {
+    position: absolute;
+
+    // Left image
+    &:nth-of-type(1) {
+      height: inherit;
+      max-width: 500px;
+      left: 0;
+      bottom: 0;
+
+      @media screen and (max-width: $width-md) {
+        width: 45%;
+        left: -6%;
+      }
+    }
+
+    // Copy and buttons (.hoc-banner.homepage)
+    &:nth-of-type(2) {
+      width: 700px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media screen and (max-width: $width-lg) {
+        width: 570px;
+      }
+
+      @media screen and (max-width: $width-sm) {
+        width: 100%;
+      }
+    }
+
+    // Right image
+    &:nth-of-type(3) {
+      height: inherit;
+      max-width: 500px;
+      right: 0;
+      bottom: 0;
+
+      @media screen and (max-width: $width-md) {
+        width: 45%;
+        right: -5%;
+      }
+    }
+  }
+}
+
 .hoc-banner.homepage {
   text-align: center;
-  color: $darkest_gray;
-  padding: 7em 0;
+  color: $white;
   line-height: 1.4;
+  text-shadow: 0px 0px 8px #5d1582;
 
-  @media (min-width: $width-xl) and (max-width: $width-xxl)  {
-    padding: 9em 0;
-  }
-
-  @media screen and (max-width: $width-lg)  {
-    padding: 7em 0 6em;
-  }
-
-  @media screen and (max-width: $width-md)  {
-    padding: 5em 0 4.5em;
-  }
-
-  @media screen and (max-width: $width-sm) {
-    padding: 5em 1em 6em;
+  h1, h2 {
+    color: $white
   }
 
   h1 {
     font-size: 4.5em;
     font-family: $gotham-extra-bold;
     margin: 0 auto 0.5em;
-    color: $darkest_gray;
 
     @media screen and (max-width: $width-lg) {
       font-size: 3.75em;
+    }
+
+    @media screen and (max-width: $width-md) {
+      font-size: 3.5em;
     }
 
     @media screen and (max-width: $width-sm) {
@@ -38,10 +84,26 @@
     }
   }
 
+  h2 {
+    margin-top: 0;
+    font-family: $gotham-regular;
+
+    @media screen and (max-width: $width-md) {
+      font-size: 1.25em;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   // The Hour of Code is coming/here text
   p {
     font-size: 2em;
     font-family: $gotham-bold;
+
+    @media screen and (max-width: $width-md) {
+      font-size: 1.75em;
+    }
 
     @media screen and (max-width: $width-sm) {
       font-size: 1.35em;

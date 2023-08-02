@@ -9,10 +9,10 @@ var ExpressionNode = require('@cdo/apps/calc/expressionNode.js');
 import {TestResults, ResultType} from '@cdo/apps/constants';
 var calcMsg = require('@cdo/apps/calc/locale');
 
-describe('evaluateResults_/evaluateFunction_', function() {
+describe('evaluateResults_/evaluateFunction_', function () {
   testUtils.setExternalGlobals();
 
-  it('fails when callers have different compute signatures', function() {
+  it('fails when callers have different compute signatures', function () {
     // f(x, y) = x + y
     // f(2, 2)
     var targetSet = new EquationSet();
@@ -42,7 +42,7 @@ describe('evaluateResults_/evaluateFunction_', function() {
     assert.deepEqual(outcome, otherOutcome);
   });
 
-  it("fails if userSet gets different result for targetSet's compute expression", function() {
+  it("fails if userSet gets different result for targetSet's compute expression", function () {
     // f(x) = x + 1
     // f(2)
     var targetSet = new EquationSet();
@@ -72,7 +72,7 @@ describe('evaluateResults_/evaluateFunction_', function() {
     assert.deepEqual(outcome, otherOutcome);
   });
 
-  it('fails when evaluate is different for non-compute inputs', function() {
+  it('fails when evaluate is different for non-compute inputs', function () {
     // f(x) = x + 1
     // f(2)
     var targetSet = new EquationSet();
@@ -96,7 +96,7 @@ describe('evaluateResults_/evaluateFunction_', function() {
     assert.deepEqual(outcome.failedInput, [1]);
   });
 
-  it('fails when target has computesFunctionCall, userSet does not', function() {
+  it('fails when target has computesFunctionCall, userSet does not', function () {
     // f(x) = x + 1
     // f(2)
     var targetSet = new EquationSet();
@@ -121,7 +121,7 @@ describe('evaluateResults_/evaluateFunction_', function() {
         [],
         new ExpressionNode('+', [
           new ExpressionNode('f', [2]),
-          new ExpressionNode('yvar')
+          new ExpressionNode('yvar'),
         ])
       )
     );
@@ -137,7 +137,7 @@ describe('evaluateResults_/evaluateFunction_', function() {
     assert.deepEqual(outcome, otherOutcome);
   });
 
-  it('fails when target is simple expression and userSet computesFunctionCall', function() {
+  it('fails when target is simple expression and userSet computesFunctionCall', function () {
     // compute: 1 + 2
     var targetSet = new EquationSet();
     targetSet.addEquation_(
@@ -157,7 +157,7 @@ describe('evaluateResults_/evaluateFunction_', function() {
     assert.equal(outcome.failedInput, null);
   });
 
-  it('fails when target hasVariablesOrFunctions and user does not', function() {
+  it('fails when target hasVariablesOrFunctions and user does not', function () {
     // x = 1
     // y = 2
     // compute: x + y
@@ -181,7 +181,7 @@ describe('evaluateResults_/evaluateFunction_', function() {
     assert.equal(outcome.failedInput, null);
   });
 
-  it('fails when we have the wrong input but right function', function() {
+  it('fails when we have the wrong input but right function', function () {
     // f(x) = x + 1
     // compute: f(1)
     var targetSet = new EquationSet();
@@ -207,7 +207,7 @@ describe('evaluateResults_/evaluateFunction_', function() {
     assert.equal(outcome.failedInput, null);
   });
 
-  it('succeeds when user/target both have multiple variables and are identical', function() {
+  it('succeeds when user/target both have multiple variables and are identical', function () {
     // x = 1
     // y = x + 1
     // compute: y
@@ -235,7 +235,7 @@ describe('evaluateResults_/evaluateFunction_', function() {
     assert.equal(outcome.failedInput, null);
   });
 
-  it('fails when user/target both have multiple variables and are different', function() {
+  it('fails when user/target both have multiple variables and are different', function () {
     // x = 1
     // y = x + 1
     // compute: y
@@ -264,10 +264,10 @@ describe('evaluateResults_/evaluateFunction_', function() {
   });
 });
 
-describe('evaluateResults_/evaluateSingleVariable_', function() {
+describe('evaluateResults_/evaluateSingleVariable_', function () {
   var targetSet;
 
-  before(function() {
+  before(function () {
     // compute: age_in_months
     // age = 17
     // age_in_months = age * 12
@@ -281,7 +281,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function() {
     );
   });
 
-  it('when user doesnt have age variable', function() {
+  it('when user doesnt have age variable', function () {
     // compute: age_in_months
     // age_in_months = 17 * 12
     var userSet = new EquationSet();
@@ -301,7 +301,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function() {
     assert.equal(outcome.failedInput, null);
   });
 
-  it('when user has age variable, but hard codes age instead of using variable', function() {
+  it('when user has age variable, but hard codes age instead of using variable', function () {
     // compute: age_in_months
     // age = 17
     // age_in_months = 17 * 12
@@ -323,7 +323,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function() {
     assert.deepEqual(outcome.failedInput, [1]);
   });
 
-  it('when user has age variable, but wrong expression', function() {
+  it('when user has age variable, but wrong expression', function () {
     // compute: age_in_months
     // age = 17
     // age_in_months = age * 10
@@ -346,7 +346,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function() {
   it(
     'when user has different age variable, and hard codes age instead of using ' +
       'variable',
-    function() {
+    function () {
       // compute: age_in_months
       // age = 12
       // age_in_months = 17 * 12
@@ -369,7 +369,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function() {
     }
   );
 
-  it('when user has the wrong compute expression', function() {
+  it('when user has the wrong compute expression', function () {
     // compute: 194
     // age = 17
     // age_in_months = age * 12
@@ -387,7 +387,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function() {
     assert.equal(outcome.failedInput, null);
   });
 
-  it('when users age variable is the same, and their answer is right', function() {
+  it('when users age variable is the same, and their answer is right', function () {
     // compute: age_in_months
     // age = 17
     // age_in_months = age * 12
@@ -407,7 +407,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function() {
     assert.equal(outcome.failedInput, null);
   });
 
-  it('when users age variable is different, and their answer is right', function() {
+  it('when users age variable is different, and their answer is right', function () {
     // compute: age_in_months
     // age = 12
     // age_in_months = age * 12
@@ -427,7 +427,7 @@ describe('evaluateResults_/evaluateSingleVariable_', function() {
     assert.equal(outcome.failedInput, null);
   });
 
-  it('when user gets the right answer using a slightlly different equation', function() {
+  it('when user gets the right answer using a slightlly different equation', function () {
     // compute: age_in_months
     // age = 17
     // age_in_months = (age * 6) * 2

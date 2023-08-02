@@ -3,11 +3,7 @@
   "config": {
     "func": "changeMoveEachLR",
     "blockText": "{GROUP} do {MOVE} {DIR} forever",
-    "color": [
-      270,
-      ".7",
-      ".7"
-    ],
+    "style": "lab_blocks",
     "args": [
       {
         "name": "GROUP",

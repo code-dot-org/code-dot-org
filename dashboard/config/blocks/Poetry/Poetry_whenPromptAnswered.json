@@ -1,11 +1,7 @@
 {
   "category": "Poetry - Events",
   "config": {
-    "color": [
-      140,
-      1,
-      0.74
-    ],
+    "style": "event_blocks",
     "func": "whenPromptAnswered",
     "blockText": "when {VAR} answered",
     "args": [

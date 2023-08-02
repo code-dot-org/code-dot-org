@@ -79,9 +79,9 @@ Ak vytvoríte aktivitu alebo kurz, ktorý je určený pre žiakov so špeciálny
 
 Cieľom Hodiny kódu je poskytnúť začiatočníkom prvé skúsenosti s informatikou alebo programovaním. Tón by mal byť takýto:
 
-- Informatiku sa môže učiť každý - bez ohľadu na vek, pohlavie, rasu alebo schopnosti/zdravotné postihnutie. 
+- Informatiku sa môže učiť každý - bez ohľadu na vek, pohlavie, rasu alebo schopnosti/zdravotné postihnutie.
 - Informatika je spojená so širokou škálou oblastí a záujmov. Mal by sa ju naučiť každý!
-- Nabádajte žiakov, aby vytvorili niečo jedinečné, o čo sa môžu podeliť s rodičmi/priateľmi alebo na internete. 
+- Nabádajte žiakov, aby vytvorili niečo jedinečné, o čo sa môžu podeliť s rodičmi/priateľmi alebo na internete.
 
 Aktivity by mali slúžiť na výučbu konceptov informatiky, ako sú cykly, podmienky, šifrovanie alebo fungovanie internetu. Aktivita môže tiež poskytnúť informácie o tom, ako informatika súvisí s povolaniami, udalosťami alebo históriou v skutočnom svete. Napríklad výučba dizajnu používateľského prostredia s cieľom vytvárať aplikácie, ktoré majú zmysel pre publikum alebo vec. Neodporúčame aktivity, ktoré sa zameriavajú na syntax programovania, a nie na koncepty. Napríklad zaradíme, ale nezvýrazníme aktivity, ktoré vyučujú jazyk HTML. Podobne neodporúčame hodiny blokového programovania, ktoré sa zameriavajú na nastavovanie/zmenu konfiguračných možností namiesto výučby modelovania algoritmov alebo procesov.
 
@@ -123,7 +123,7 @@ Svoju aktivitu môžete odoslať vyplnením dotazníka na stránke [Hour of Code
 
 #### Ďalšie veci, ktoré budete potrebovať pri odosielaní plánov hodín
 
-* Odkaz na váš plán hodiny. Môže to byť webová stránka, odkaz na umiestnenie v DropBox, na Disku Google alebo v podobnej službe. 
+* Odkaz na váš plán hodiny. Môže to byť webová stránka, odkaz na umiestnenie v DropBox, na Disku Google alebo v podobnej službe.
 * Aký softvér alebo hardvér bude učiteľ potrebovať na realizáciu vášho plánu vyučovacej hodiny (Scratch? Robots? Žiadny?)
 
 #### Ďalšie veci, ktoré budete potrebovať pri odosielaní online aktivít
@@ -182,7 +182,7 @@ Ak hodnotiaca komisia ohodnotí aktivitu nulou z hľadiska kvality produkcie (kv
 Okrem toho, aby mohli byť všetky aktivity zaradené do zoznamu, musia spĺňať tieto kritériá:
 
 - musia byť vhodné pre vyučovanie na verejnej škole (žiadne zbrane, žiadny explicitný obsah/obsah pre dospelých, žiadny náboženský obsah atď.);
-- nesmú vyžadovať registráciu; 
+- nesmú vyžadovať registráciu;
 - nesmú vyžadovať žiadnu platbu (výnimkou sú aktivity v oblasti robotiky, ktoré môžu vyžadovať nákup robota/modelu) Pri samostatne vedených aktivitách pre nových učiteľov a žiakov bude hodnotiaca komisia skúmať, či:
 
 For self-directed activities for new teachers and students the review committee will be looking for whether:
@@ -213,7 +213,7 @@ Poznámka: Toto sú všeobecné usmernenia pre poskytovanie spätnej väzby. Pre
 
 - Na akých platformách a v akých prehliadačoch funguje tento kurz najlepšie?
 - Funguje na smartfónoch? Tabletoch?
-- Odporúčate párové programovanie? 
+- Odporúčate párové programovanie?
 - Čo je potrebné zvážiť pri používaní v triede? Napr. ak sú k dispozícii videá, odporučte učiteľom, aby ich premietli na plátno, aby si ich mohla pozrieť celá trieda.
 
 Všetky aktivity predložené na predbežné posúdenie dostanú spätnú väzbu do 1. septembra. Poskytneme vám aj odkaz na formulár, ktorý môžete použiť na vysvetlenie konkrétnych zmien vykonaných v aktivite v reakcii na spätnú väzbu.
@@ -276,4 +276,4 @@ To nám umožní spočítať používateľov, ktorí absolvujú váš kurz na Ho
 
 [**Späť na začiatok**](#top)
 
-POZNÁMKA: v prípade inštalovateľných aplikácií (aplikácie pre iOS/Android alebo aplikácie pre počítač) to nie je dôležité.<!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->
+POZNÁMKA: v prípade inštalovateľných aplikácií (aplikácie pre iOS/Android alebo aplikácie pre počítač) to nie je dôležité.

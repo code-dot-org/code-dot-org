@@ -6,3 +6,5 @@ wrong '8'
 wrong '15'
 wrong 'string'
 
+
+allow_multiple_attempts true

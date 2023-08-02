@@ -24,8 +24,6 @@
 #  index_levels_on_name       (name)
 #
 
-require 'cdo/script_constants'
-
 # Levels defined using a text-based ruby DSL syntax.
 # See #BaseDSL for the DSL format implementation.
 class DSLDefined < Level
@@ -41,6 +39,12 @@ class DSLDefined < Level
 
   def dsl_default
     "Enter the level definition here.\n"
+  end
+
+  def localized_teacher_markdown
+    # Overrides the normal behavior since for DSLDefined levels, the teacher
+    # markdown is part of the dsl.
+    localized_property('teacher_markdown')
   end
 
   def localized_property(property)
@@ -85,7 +89,7 @@ class DSLDefined < Level
   end
 
   def self.setup(data, md5=nil)
-    level = find_or_create_by({name: data[:name]})
+    level = find_or_create_by({name: data[:name].strip})
     level.send(:write_attribute, 'properties', {})
 
     level.update!(name: data[:name], game_id: Game.find_by(name: to_s).id, properties: data[:properties], md5: md5)
@@ -145,7 +149,7 @@ class DSLDefined < Level
 
   def existing_filename
     # Find a file in config/scripts/**/*.[class]* containing the string "name '[name]'"
-    grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* config/scripts --color=never"
+    grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* #{Rails.root}/config/scripts --color=never"
     `#{grep_string}`.chomp
   end
 
@@ -233,10 +237,8 @@ class DSLDefined < Level
     dsl_text
   end
 
-  private
-
-  def delete_level_file
-    File.delete(file_path) if File.exist?(file_path)
+  private def delete_level_file
+    FileUtils.rm_f(file_path)
   end
 end
 

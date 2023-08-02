@@ -129,12 +129,12 @@ def main
           lines_of_code = lines_of_code_from_milestone
           break
         elsif lines_of_code_from_milestone < DEFAULT_LINES_OF_CODE && $?.exitstatus == 0
-          $stderr.puts "count-lines-of-code-from-milestone-logs_v2 returned a small number: #{lines_of_code_from_milestone}"
+          warn "count-lines-of-code-from-milestone-logs_v2 returned a small number: #{lines_of_code_from_milestone}"
         else
-          $stderr.puts "count-lines-of-code-from-milestone-logs_v2 had non-zero exitstatus: #{$?}"
+          warn "count-lines-of-code-from-milestone-logs_v2 had non-zero exitstatus: #{$?}"
         end
       else
-        $stderr.puts "count-lines-of-code-from-milestone-logs_v2 did not exit normally"
+        warn "count-lines-of-code-from-milestone-logs_v2 did not exit normally"
       end
     end
   end

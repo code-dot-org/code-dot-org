@@ -6,7 +6,7 @@ import {updateQueryParam} from '../../utils';
 import {reload} from '../../../utils';
 import {
   selectSection,
-  sectionsNameAndId
+  sectionsNameAndId,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 // Exported for unit testing
@@ -19,7 +19,7 @@ function SectionSelector({
   selectedSectionId,
   logToFirehose,
   reloadOnChange,
-  selectSection
+  selectSection,
 }) {
   const handleSelectChange = event => {
     const newSectionId = event.target.value;
@@ -52,7 +52,7 @@ function SectionSelector({
       name="sections"
       style={{
         ...styles.select,
-        ...style
+        ...style,
       }}
       value={selectedSectionId || NO_SELECTED_SECTION_VALUE}
       onChange={handleSelectChange}
@@ -88,17 +88,17 @@ SectionSelector.propTypes = {
   sections: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      id: PropTypes.number.isRequired
+      id: PropTypes.number.isRequired,
     })
   ).isRequired,
   selectedSectionId: PropTypes.number,
-  selectSection: PropTypes.func.isRequired
+  selectSection: PropTypes.func.isRequired,
 };
 
 const styles = {
   select: {
-    width: 180
-  }
+    width: 180,
+  },
 };
 
 export const UnconnectedSectionSelector = SectionSelector;
@@ -106,11 +106,11 @@ export const UnconnectedSectionSelector = SectionSelector;
 export default connect(
   state => ({
     selectedSectionId: state.teacherSections.selectedSectionId,
-    sections: sectionsNameAndId(state.teacherSections)
+    sections: sectionsNameAndId(state.teacherSections),
   }),
   dispatch => ({
     selectSection(sectionId) {
       dispatch(selectSection(sectionId));
-    }
+    },
   })
 )(SectionSelector);

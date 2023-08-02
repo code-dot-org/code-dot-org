@@ -6,3 +6,4 @@ wrong 'wrong answer a'
 right 'right answer b'
 wrong 'wrong answer c'
 wrong 'wrong answer d'
+allow_multiple_attempts true

@@ -12,3 +12,5 @@ right '_____ is a _____ city.'
 wrong '_____ is _____ a _____.'
 wrong 'Eugene is a _____ city.'
 
+
+allow_multiple_attempts true

@@ -7,3 +7,5 @@ wrong 'string'
 markdown <<MARKDOWN
 ## Assessment Question 1
 MARKDOWN
+
+allow_multiple_attempts true

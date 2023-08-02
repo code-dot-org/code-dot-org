@@ -20,3 +20,4 @@ answer 'small-star: string -> image'
 
 question '(find-price "cheese")'
 answer 'find-price: string -> number'
+allow_multiple_attempts true

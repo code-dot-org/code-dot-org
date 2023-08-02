@@ -10,3 +10,5 @@ This program is supposed to paint the street while the `Painter`(#e7e8ea) object
 
 Which of the following do you think is the cause of the error?
 MARKDOWN
+
+allow_multiple_attempts false

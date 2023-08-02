@@ -1,6 +1,4 @@
 /** @file Component wrapping embedded Piskel editor */
-// PISKEL_DEVELOPMENT_MODE is a build flag.  See Gruntfile.js for how to enable it.
-/* global PISKEL_DEVELOPMENT_MODE */
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -9,7 +7,6 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import * as shapes from '../shapes';
 import {editAnimation, removePendingFramesAction} from '../redux/animationList';
 import {show, Goal} from '../redux/animationPicker';
-
 /**
  * @const {string} domain-relative URL to Piskel index.html
  * In special environment builds, append ?debug flag to get Piskel to load its own debug mode.
@@ -29,15 +26,15 @@ class PiskelEditor extends React.Component {
     style: PropTypes.object,
     // Provided by Redux
     animationList: shapes.AnimationList.isRequired,
-    selectedAnimation: shapes.AnimationKey,
-    channelId: PropTypes.string.isRequired,
+    currentAnimation: shapes.AnimationKey,
+    channelId: PropTypes.string,
     editAnimation: PropTypes.func.isRequired,
     allAnimationsSingleFrame: PropTypes.bool.isRequired,
     onNewFrameClick: PropTypes.func.isRequired,
     pendingFrames: PropTypes.object,
     removePendingFrames: PropTypes.func.isRequired,
     isBlockly: PropTypes.bool,
-    localeCode: PropTypes.string
+    localeCode: PropTypes.string,
   };
 
   componentDidMount() {
@@ -80,19 +77,19 @@ class PiskelEditor extends React.Component {
   }
 
   UNSAFE_componentWillReceiveProps(newProps) {
-    if (newProps.selectedAnimation !== this.props.selectedAnimation) {
+    if (newProps.currentAnimation !== this.props.currentAnimation) {
       this.loadSelectedAnimation_(newProps);
     }
     if (
       newProps.pendingFrames &&
-      newProps.selectedAnimation === newProps.pendingFrames.key
+      newProps.currentAnimation === newProps.pendingFrames.key
     ) {
       this.sendPendingFramesToPiskel(newProps.pendingFrames);
     }
   }
 
   sendPendingFramesToPiskel(animationProps) {
-    const key = this.props.selectedAnimation;
+    const {currentAnimation: key} = this.props;
     if (!animationProps) {
       throw new Error('No props present for animation with key ' + key);
     }
@@ -112,7 +109,7 @@ class PiskelEditor extends React.Component {
           this.props.removePendingFrames();
 
           // If the selected animation changed out from under us, load again.
-          if (this.props.selectedAnimation !== key) {
+          if (this.props.currentAnimation !== key) {
             this.loadSelectedAnimation_(this.props);
           }
         }
@@ -121,7 +118,7 @@ class PiskelEditor extends React.Component {
   }
 
   loadSelectedAnimation_(props) {
-    const key = props.selectedAnimation;
+    const {currentAnimation: key} = props;
     if (!this.isPiskelReady_) {
       return;
     }
@@ -175,10 +172,11 @@ class PiskelEditor extends React.Component {
           this.isLoadingAnimation_ = false;
 
           // If the selected animation changed out from under us, load again.
-          if (this.props.selectedAnimation !== key) {
+          if (this.props.currentAnimation !== key) {
             this.loadSelectedAnimation_(this.props);
           }
-        }
+        },
+        animationProps.frameCount
       );
     }
   }
@@ -212,7 +210,7 @@ class PiskelEditor extends React.Component {
         study: 'animation-library',
         study_group: 'control-2020',
         event: 'asset-editing',
-        data_string: this.props.isBlockly ? 'spritelab' : 'gamelab'
+        data_string: this.props.isBlockly ? 'spritelab' : 'gamelab',
       });
       this.hasLoggedFirehoseEvent_ = true;
     }
@@ -223,7 +221,7 @@ class PiskelEditor extends React.Component {
       sourceSize: {x: message.sourceSizeX, y: message.sourceSizeY},
       frameSize: {x: message.frameSizeX, y: message.frameSizeY},
       frameCount: message.frameCount,
-      frameDelay: message.frameRate
+      frameDelay: message.frameRate,
     });
   };
 
@@ -239,13 +237,13 @@ class PiskelEditor extends React.Component {
 }
 export default connect(
   state => ({
-    selectedAnimation: state.animationTab.selectedAnimation,
+    currentAnimation: state.animationTab.currentAnimations[state.interfaceMode],
     animationList: state.animationList,
     channelId: state.pageConstants.channelId,
     allAnimationsSingleFrame: !!state.pageConstants.allAnimationsSingleFrame,
     pendingFrames: state.animationList.pendingFrames,
     isBlockly: state.pageConstants.isBlockly,
-    localeCode: state.locales.localeCode
+    localeCode: state.locales.localeCode,
   }),
   dispatch => ({
     editAnimation: (key, props) => dispatch(editAnimation(key, props)),
@@ -254,6 +252,6 @@ export default connect(
     },
     removePendingFrames() {
       dispatch(removePendingFramesAction());
-    }
+    },
   })
 )(PiskelEditor);

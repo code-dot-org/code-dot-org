@@ -12,12 +12,12 @@ wrong '`[apple, dream, food]`'
 
 markdown <<MARKDOWN
 ```
-var words = [“apple”,”bug”,”car”,”dream”,”ear”, “food”]
+var words = [“apple”, ”bug”, ”car”, ”dream”, ”ear”, “food”];
 var filteredWords = [];
-for(var i = 0; i < words.length; i++){
+for (var i = 0; i < words.length; i++) {
   var word = words[i];
-  if (word.length < 4){
-    appendItem(filteredWords,word)
+  if (word.length < 4) {
+    appendItem(filteredWords,word);
   }
 }
 console.log(filteredWords);
@@ -40,3 +40,5 @@ b. Determine the result of an algorithm that includes list traversals.
 :::
 
 MARKDOWN
+
+allow_multiple_attempts true

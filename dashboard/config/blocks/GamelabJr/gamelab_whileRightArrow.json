@@ -6,6 +6,7 @@
       0.9,
       0.95
     ],
+    "style": "loop_blocks",
     "func": "whileRightArrow",
     "blockText": "while right arrow pressed",
     "args": [

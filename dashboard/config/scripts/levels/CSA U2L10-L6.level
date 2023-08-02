@@ -10,13 +10,14 @@
     "optional": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "encrypted_solution": "TOv/G2eTW5uP/F0l2JNNTJVZg3Doam+vwFSobqGd3LreND4owz2KCoFO0C/M\nQYVnHXTvF7c8x/VgVunGvNw+Z1kXrWxsBZaUPkPrIurFW4I1wtmbpWh9317l\nh1whTKw1GquY43gcOWOEQCS3LtP0UFuM5nZPtAB9urhlWp6H0wEYSgXoRk1r\nBBbp+MoD633TG/5ZJTTKInQ3oSnVu+HC0X3I6Bz2J5Q5Pe6q/TEVM9IQJlPd\nRNLII7MWHD6P2/lQEWBxERkJxp04Rzt4ajFo6AqurOlgtPFU6HPwXr9m4PsL\nVlAkL3yv61gQX+031FCC6+4a4Y8kCVhjcLph+xk/rhtPcJZmliBn65+NJZUr\nsIZUXvB+UrjRg/1unnEe4M0JOoT+YFBVThwOfJMYxZQBBylfcXlLanvnwX3r\nZlYkP28SPE5iDHN4xSfWd3+LMR6m\n"
+    "encrypted_solution": "TOv/G2eTW5uP/F0l2JNNTJVZg3Doam+vwFSobqGd3LreND4owz2KCoFO0C/M\nQYVnHXTvF7c8x/VgVunGvNw+Z1kXrWxsBZaUPkPrIurFW4I1wtmbpWh9317l\nh1whTKw1GquY43gcOWOEQCS3LtP0UFuM5nZPtAB9urhlWp6H0wEYSgXoRk1r\nBBbp+MoD633TG/5ZJTTKInQ3oSnVu+HC0X3I6Bz2J5Q5Pe6q/TEVM9IQJlPd\nRNLII7MWHD6P2/lQEWBxERkJxp04Rzt4ajFo6AqurOlgtPFU6HPwXr9m4PsL\nVlAkL3yv61gQX+031FCC6+4a4Y8kCVhjcLph+xk/rhtPcJZmliBn65+NJZUr\nsIZUXvB+UrjRg/1unnEe4M0JOoT+YFBVThwOfJMYxZQBBylfcXlLanvnwX3r\nZlYkP28SPE5iDHN4xSfWd3+LMR6m\n",
+    "allow_multiple_attempts": "true"
   },
-  "game_id": 52,
-  "published": true,
-  "created_at": "2021-06-23T15:24:28.000Z",
   "level_num": "custom",
+  "game_id": 52,
+  "created_at": "2021-06-23T15:24:28.000Z",
   "user_id": 9271,
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2021-10-08 17:17:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2021-10-08 17:18:19 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"},{\"changed_at\":\"2021-10-08 17:21:11 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie@code.org\"}]",
   "level_concept_difficulty": {
   }

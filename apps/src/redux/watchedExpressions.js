@@ -44,7 +44,7 @@ export default function reducer(
         ? Immutable.Map({
             lastValue: value,
             expression,
-            uuid: e.get('uuid')
+            uuid: e.get('uuid'),
           })
         : e
     );
@@ -64,16 +64,16 @@ export default function reducer(
 
 export const add = expression => ({
   type: ADD_EXPRESSION,
-  expression
+  expression,
 });
 
 export const remove = expression => ({
   type: REMOVE_EXPRESSION,
-  expression
+  expression,
 });
 
 export const update = (expression, value) => ({
   type: UPDATE_VALUE,
   expression,
-  value
+  value,
 });

@@ -57,8 +57,6 @@ module Foorm
         # If questions does contain a published state and a published state was provided as a param, verify they match.
       elsif !published_params.nil? && published != published_params
         return render(status: :bad_request, plain: "Published state in questions did not match provided published parameter.")
-      else
-        published = published
       end
 
       form_questions = JSON.pretty_generate(questions_json)

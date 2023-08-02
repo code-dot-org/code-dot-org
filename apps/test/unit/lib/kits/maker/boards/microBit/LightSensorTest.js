@@ -1,4 +1,4 @@
-import {MicrobitStubBoard} from '../makeStubBoard';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import LightSensor from '@cdo/apps/lib/kits/maker/boards/microBit/LightSensor';
@@ -6,14 +6,14 @@ import {
   SENSOR_CHANNELS,
   MAX_SENSOR_BUFFER_DURATION,
   SAMPLE_INTERVAL,
-  MAX_LIGHT_SENSOR_VALUE
+  MAX_LIGHT_SENSOR_VALUE,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
-describe('LightSensor', function() {
+describe('LightSensor', function () {
   let boardClient, lightSensor;
 
   beforeEach(() => {
-    boardClient = new MicrobitStubBoard();
+    boardClient = new MBFirmataClientStub();
     lightSensor = new LightSensor({mb: boardClient});
   });
   afterEach(() => {
@@ -41,9 +41,8 @@ describe('LightSensor', function() {
       boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 0;
       expect(lightSensor.value).to.equal(0);
 
-      boardClient.analogChannel[
-        SENSOR_CHANNELS.lightSensor
-      ] = MAX_LIGHT_SENSOR_VALUE;
+      boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] =
+        MAX_LIGHT_SENSOR_VALUE;
       expect(lightSensor.value).to.equal(MAX_LIGHT_SENSOR_VALUE);
 
       boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 123;
@@ -56,9 +55,8 @@ describe('LightSensor', function() {
       boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 0;
       expect(lightSensor.value).to.equal(10);
 
-      boardClient.analogChannel[
-        SENSOR_CHANNELS.lightSensor
-      ] = MAX_LIGHT_SENSOR_VALUE;
+      boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] =
+        MAX_LIGHT_SENSOR_VALUE;
       expect(lightSensor.value).to.equal(110);
 
       boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 123;

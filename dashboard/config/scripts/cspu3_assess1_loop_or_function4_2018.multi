@@ -11,3 +11,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Since the drawing of the circle is inconsistent in size and in the placement of it, it is best to use a function and pass in different parameters for a particular circle (smaller/larger circle, placement of the circle) rather than using a loop.
 MARKDOWN
+
+allow_multiple_attempts true

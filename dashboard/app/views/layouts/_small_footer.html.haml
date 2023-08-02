@@ -2,7 +2,7 @@
   full_width = local_assigns[:full_width]
   channel = local_assigns[:channel]
   reactProps = {
-    i18nDropdown: (view_options[:has_i18n] ? URI.encode(i18n_dropdown.to_str) : ''),
+    i18nDropdown: (view_options[:has_i18n] ? ERB::Util.url_encode(i18n_dropdown.to_str) : ''),
     privacyPolicyInBase: true,
     copyrightInBase: true,
     baseCopyrightString: I18n.t('footer.copyright'),
@@ -12,7 +12,8 @@
     # false because we're not rendering into a phone wireframe here
     phoneFooter: false,
     fullWidth: full_width,
-    channel: channel
+    channel: channel,
+    unitYear: view_options[:unit_year]
   }
 
 #page-small-footer

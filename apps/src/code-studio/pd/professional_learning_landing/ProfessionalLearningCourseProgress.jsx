@@ -9,7 +9,7 @@ import PlcEnrollment from './plcElements/PlcEnrollment';
 
 export default class ProfessionalLearningCourseProgress extends Component {
   static propTypes = {
-    deeperLearningCourseData: PropTypes.array
+    deeperLearningCourseData: PropTypes.array,
   };
 
   render() {

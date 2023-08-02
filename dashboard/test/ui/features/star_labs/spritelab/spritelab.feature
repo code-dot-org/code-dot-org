@@ -2,7 +2,6 @@ Feature: Sprite Lab
 
 Background:
   Given I am on "http://studio.code.org/s/allthethings/lessons/36/levels/1?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I wait for 3 seconds
   And I wait until I don't see selector "#p5_loading"
@@ -26,7 +25,7 @@ Scenario: Losing the first level
 Scenario: Winning the first level
   Then I press dropdown number 6
   And the dropdown is visible
-  And I select item 1 from the dropdown
+  And I select item 0 from the dropdown
   And I wait for 1 seconds
   Then the dropdown is hidden
   And I press "runButton"

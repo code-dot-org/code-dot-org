@@ -22,3 +22,5 @@ Learning Objective: **5.2.1** and Essential Knowledge statements: **5.2.1C**
  (D) Not correct. The Boolean operator is > greater than and the variable that is greater is passed on by being stored in the variable b. If the purpose was to find the smallest number, you would need to save the smaller of the two numbers in variable b for later use.
 
 MARKDOWN
+
+allow_multiple_attempts true

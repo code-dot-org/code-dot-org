@@ -2,7 +2,7 @@ import {assert} from 'chai';
 import createResourcesReducer, {
   addResource,
   editResource,
-  removeResource
+  removeResource,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import resourceTestData from './resourceTestData';
 import _ from 'lodash';
@@ -22,14 +22,13 @@ describe('resourcesEditorRedux reducer tests', () => {
       addResource('lessonResource', {
         key: 'new-key',
         name: 'new-name',
-        url: 'new-fake.url'
+        url: 'new-fake.url',
       })
     );
-    assert.deepEqual(nextState.map(r => r.key), [
-      'resource-1',
-      'resource-2',
-      'new-key'
-    ]);
+    assert.deepEqual(
+      nextState.map(r => r.key),
+      ['resource-1', 'resource-2', 'new-key']
+    );
   });
 
   it('keeps rollup resources at the end', () => {
@@ -41,14 +40,13 @@ describe('resourcesEditorRedux reducer tests', () => {
         key: 'new-key',
         name: 'new-name',
         url: 'new-fake.url',
-        isRollup: false
+        isRollup: false,
       })
     );
-    assert.deepEqual(nextState.map(r => r.key), [
-      'resource-1',
-      'new-key',
-      'resource-2'
-    ]);
+    assert.deepEqual(
+      nextState.map(r => r.key),
+      ['resource-1', 'new-key', 'resource-2']
+    );
   });
 
   it('edit resource', () => {
@@ -58,7 +56,10 @@ describe('resourcesEditorRedux reducer tests', () => {
       initialState,
       editResource('lessonResource', editedResource)
     );
-    assert.deepEqual(nextState.map(r => r.name), ['new name', 'Resource 2']);
+    assert.deepEqual(
+      nextState.map(r => r.name),
+      ['new name', 'Resource 2']
+    );
   });
 
   it('remove resource', () => {
@@ -66,7 +67,10 @@ describe('resourcesEditorRedux reducer tests', () => {
       initialState,
       removeResource('lessonResource', 'resource-1')
     );
-    assert.deepEqual(nextState.map(r => r.key), ['resource-2']);
+    assert.deepEqual(
+      nextState.map(r => r.key),
+      ['resource-2']
+    );
   });
 
   it('can add teacher resource without adding student resource', () => {
@@ -77,7 +81,7 @@ describe('resourcesEditorRedux reducer tests', () => {
       addResource('teacherResource', {
         key: 'new-teacher-resource-key',
         name: 'new-teacher-resource0name',
-        url: 'new-fake.url'
+        url: 'new-fake.url',
       })
     );
     const nextStudentResourceState = studentResourcesEditor(
@@ -85,18 +89,16 @@ describe('resourcesEditorRedux reducer tests', () => {
       addResource('studentResource', {
         key: 'new-student-resource-key',
         name: 'new-student-resourcename',
-        url: 'new-fake.url'
+        url: 'new-fake.url',
       })
     );
-    assert.deepEqual(nextTeacherResourceState.map(r => r.key), [
-      'resource-1',
-      'resource-2',
-      'new-teacher-resource-key'
-    ]);
-    assert.deepEqual(nextStudentResourceState.map(r => r.key), [
-      'resource-1',
-      'resource-2',
-      'new-student-resource-key'
-    ]);
+    assert.deepEqual(
+      nextTeacherResourceState.map(r => r.key),
+      ['resource-1', 'resource-2', 'new-teacher-resource-key']
+    );
+    assert.deepEqual(
+      nextStudentResourceState.map(r => r.key),
+      ['resource-1', 'resource-2', 'new-student-resource-key']
+    );
   });
 });

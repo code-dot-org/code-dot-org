@@ -70,10 +70,10 @@ def update_behavior_blocks_ids
     raw_level_data = xml.root.to_s
     File.write(path, raw_level_data)
     updated_levels += 1
-  rescue Exception => e
+  rescue Exception => exception
     # print filename for better debugging
-    new_e = Exception.new("in level: #{path}: #{e.message}")
-    new_e.set_backtrace(e.backtrace)
+    new_e = Exception.new("in level: #{path}: #{exception.message}")
+    new_e.set_backtrace(exception.backtrace)
     raise new_e
   end
 

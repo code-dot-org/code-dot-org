@@ -1,4 +1,5 @@
 import {makeEnum} from '../utils';
+import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const SET_CURRENT_USER_NAME = 'currentUser/SET_CURRENT_USER_NAME';
 const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
@@ -8,6 +9,7 @@ const SET_HAS_SEEN_STANDARDS_REPORT =
   'currentUser/SET_HAS_SEEN_STANDARDS_REPORT';
 const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
 const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
+const SET_SORT_BY_FAMILY_NAME = 'currentUser/SET_SORT_BY_FAMILY_NAME';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -16,32 +18,37 @@ export const CourseRoles = makeEnum('Unknown', 'Instructor', 'Participant');
 // Action creators
 export const setCurrentUserName = userName => ({
   type: SET_CURRENT_USER_NAME,
-  userName
+  userName,
 });
-export const setCurrentUserHasSeenStandardsReportInfo = hasSeenStandardsReport => ({
-  type: SET_HAS_SEEN_STANDARDS_REPORT,
-  hasSeenStandardsReport
-});
+export const setCurrentUserHasSeenStandardsReportInfo =
+  hasSeenStandardsReport => ({
+    type: SET_HAS_SEEN_STANDARDS_REPORT,
+    hasSeenStandardsReport,
+  });
 export const setUserSignedIn = isSignedIn => ({
   type: SET_USER_SIGNED_IN,
-  isSignedIn
+  isSignedIn,
 });
 export const setUserType = (userType, under13) => ({
   type: SET_USER_TYPE,
   userType,
-  under13
+  under13,
 });
 export const setUserRoleInCourse = userRoleInCourse => ({
   type: SET_USER_ROLE_IN_COURSE,
-  userRoleInCourse
+  userRoleInCourse,
 });
 export const setInitialData = serverUser => ({
   type: SET_INITIAL_DATA,
-  serverUser
+  serverUser,
 });
 export const setMuteMusic = isBackgroundMusicMuted => ({
   type: SET_MUTE_MUSIC,
-  isBackgroundMusicMuted
+  isBackgroundMusicMuted,
+});
+export const setSortByFamilyName = isSortedByFamilyName => ({
+  type: SET_SORT_BY_FAMILY_NAME,
+  isSortedByFamilyName,
 });
 
 const initialState = {
@@ -52,21 +59,22 @@ const initialState = {
   signInState: SignInState.Unknown,
   hasSeenStandardsReportInfo: false,
   isBackgroundMusicMuted: false,
+  isSortedByFamilyName: false,
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
-  under13: true
+  under13: true,
 };
 
 export default function currentUser(state = initialState, action) {
   if (action.type === SET_CURRENT_USER_NAME) {
     return {
       ...state,
-      userName: action.userName
+      userName: action.userName,
     };
   }
   if (action.type === SET_HAS_SEEN_STANDARDS_REPORT) {
     return {
       ...state,
-      hasSeenStandardsReportInfo: action.hasSeenStandardsReport
+      hasSeenStandardsReportInfo: action.hasSeenStandardsReport,
     };
   }
   if (action.type === SET_USER_SIGNED_IN) {
@@ -74,37 +82,44 @@ export default function currentUser(state = initialState, action) {
       ...state,
       signInState: action.isSignedIn
         ? SignInState.SignedIn
-        : SignInState.SignedOut
+        : SignInState.SignedOut,
     };
   }
   if (action.type === SET_USER_TYPE) {
     return {
       ...state,
       userType: action.userType,
-      under13: action.under13
+      under13: action.under13,
     };
   }
   if (action.type === SET_USER_ROLE_IN_COURSE) {
     return {
       ...state,
-      userRoleInCourse: action.userRoleInCourse
+      userRoleInCourse: action.userRoleInCourse,
     };
   }
   if (action.type === SET_MUTE_MUSIC) {
     return {
       ...state,
-      isBackgroundMusicMuted: action.isBackgroundMusicMuted
+      isBackgroundMusicMuted: action.isBackgroundMusicMuted,
+    };
+  }
+  if (action.type === SET_SORT_BY_FAMILY_NAME) {
+    return {
+      ...state,
+      isSortedByFamilyName: action.isSortedByFamilyName,
     };
   }
   if (action.type === SET_INITIAL_DATA) {
     const {id, username, user_type, mute_music, under_13} = action.serverUser;
+    analyticsReport.setUserProperties(id, user_type, !!id);
     return {
       ...state,
       userId: id,
       userName: username,
       userType: user_type,
       isBackgroundMusicMuted: mute_music,
-      under13: under_13
+      under13: under_13,
     };
   }
 

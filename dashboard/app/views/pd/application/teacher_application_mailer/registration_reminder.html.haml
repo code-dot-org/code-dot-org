@@ -18,7 +18,8 @@
 %p
   %strong It takes only 1 minute
   to register for your workshop(s) and confirm your seat.
-  = link_to('Register here', registration_url) + '!'
+  %strong
+    = link_to('Register here', registration_url) + '!'
 
 = render partial: 'expectations'
 
@@ -27,30 +28,31 @@
 
 %ul
   %li
-    %strong Mark your calendar for your summer workshop!
-    Details about the dates/location of your workshop can be found at
-    = link_to('this registration link', registration_url) + '.'
-    You will receive more details
-    approximately six weeks prior to your summer workshop.
+    %strong
+      Register for your workshop(s) and confirm your seat.
+      = link_to('Register here', registration_url) + '!'
+    %ul
+      %li
+        Mark your calendar for your summer workshop! Details about the
+        dates/location of your workshop can be found at
+        = link_to('the registration link', registration_url) + '.'
+        You will receive more details
+        approximately six weeks prior to your summer workshop.
   %li
-    Share the good news with your school! Start talking with your
-    administration, colleagues, students, and parents about the course you
-    will be teaching next year, and encourage a diverse group of students to
-    enroll. Once you register for the program, you will receive a
-    welcome kit complete with recruitment tips and tools. In the meantime,
-    please check out these
+    %strong Share the good news with your school!
+    Start talking with your administration, colleagues, students, and parents
+    about the course you will be teaching next year, and encourage a diverse
+    group of students to enroll. Once you register for the program, you will
+    receive a welcome kit complete with recruitment tips and tools. In the
+    meantime, please check out these
     = link_to('recruitment resources', 'https://code.org/educate/resources/recruit') + '.'
+  %li
+    = render partial: 'interested_teachers'
 
 %p
   %em
     %center
       If you want to decline your seat, let me know as soon as possible.
-
-%p
-  Do you know other teachers that would be interested in our Professional
-  Learning Program? Spread the word and have them apply at
-  = link_to('code.org/apply', 'https://code.org/apply')
-  or reach out to me directly for additional information.
 
 %p
   Congratulations again! We look forward to receiving your registration.

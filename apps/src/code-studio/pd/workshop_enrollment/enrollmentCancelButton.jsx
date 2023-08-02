@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ConfirmationDialog from '../components/confirmation_dialog';
 
 export default class EnrollmentCancelButton extends React.Component {
   static propTypes = {
     enrollmentCode: PropTypes.string.isRequired,
-    workshopFriendlyName: PropTypes.string.isRequired
+    workshopFriendlyName: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -14,7 +14,7 @@ export default class EnrollmentCancelButton extends React.Component {
 
     this.state = {
       showConfirmation: false,
-      canceled: false
+      canceled: false,
     };
   }
 
@@ -32,7 +32,7 @@ export default class EnrollmentCancelButton extends React.Component {
     this.cancelEnrollmentRequest = $.ajax({
       method: 'DELETE',
       url: `/api/v1/pd/enrollments/${this.props.enrollmentCode}`,
-      dataType: 'json'
+      dataType: 'json',
     }).done(() => {
       window.location.reload(true);
       // this.setState({canceled: true});

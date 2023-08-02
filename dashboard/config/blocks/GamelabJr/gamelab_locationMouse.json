@@ -4,6 +4,7 @@
     "func": "locationMouse",
     "docFunc": "gamelab_locationMouse",
     "blockText": "mouse location",
-    "returnType": "Location"
+    "returnType": "Location",
+    "style": "location_blocks"
   }
 }

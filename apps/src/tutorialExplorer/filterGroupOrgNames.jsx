@@ -11,7 +11,7 @@ export default class FilterGroupOrgNames extends React.Component {
   static propTypes = {
     orgName: PropTypes.string.isRequired,
     uniqueOrgNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    onUserInput: PropTypes.func.isRequired
+    onUserInput: PropTypes.func.isRequired,
   };
 
   handleChangeOrgName = event => {
@@ -60,6 +60,6 @@ const styles = {
     width: '100%',
     marginTop: 10,
     height: 26,
-    fontSize: 13
-  }
+    fontSize: 13,
+  },
 };

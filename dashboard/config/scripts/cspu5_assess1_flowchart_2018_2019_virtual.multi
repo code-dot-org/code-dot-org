@@ -17,3 +17,5 @@ teacher_markdown <<MARKDOWN
 
 The statement is "a < b" and since a = 5, b = 10, and 5 is less than 10, then the statement is true. Following the arrow for a "true" statement, the computer is told to print the value of b. As the value of b is 10, the program will display "10."
 MARKDOWN
+
+allow_multiple_attempts true

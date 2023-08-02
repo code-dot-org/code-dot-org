@@ -1,0 +1,61 @@
+name 'CSC-SelfPaced-meetingstudentneeds_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Meeting student needs
+
+## Review
+
+<img src="https://images.code.org/338fa261e6b5a8bff980c99e6f1ff08c-image-1682377358327.png" alt= "images of different sprite characters" style="float: center; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+##### What did you notice and wonder... 
+
+* ##### about Sprite Lab? 
+* ##### your students' needs when using Sprite Lab? 
+
+***
+
+<details>
+
+<summary><strong>Did you notice ...</strong></summary>
+
+<img src="https://images.code.org/9b6959aa8dfe1ff674aad8c0a78119ec-image-1680739466965.gif" alt= "sprite moving to a set location" style="float: left; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+##### **... students can**
+
+* ##### choose among different sprites?
+* ##### give sprites a location and behaviors?
+* ##### change and set the size of sprites?
+
+<hr style="clear:both">
+
+<img src="https://images.code.org/a699901168d72010283137be13ffbf10-image-1680736491646.gif" alt= "sprite moving and compass rose giving its direction" style="float: left; height: 300px; clear: both ; margin: 0 20px 20px 0;">
+
+##### **... events can happen**
+
+* ##### with a click?
+* ##### when sprites touch?
+
+</details>
+
+<div style="clear:both"/>
+
+
+<details>
+
+<summary><strong>Did you wonder ...</strong></summary>
+
+* ##### ... what challenges might my students have with sprites?
+* ##### ... what challenges might my students have with events?
+
+##### Before sharing CS Connections with your students, prepare by collecting the challenges you encountered and how you overcame those challenges.  Do this while working through examples in this module as well as lesson levels in the modules you plan to teach.  
+
+##### Your students are likely to face these challenges too and you will be ready to guide them!
+
+</details>
+
+<div style="clear:both"/>
+
+## Let's keep learning! 
+MARKDOWN

@@ -1,0 +1,42 @@
+@import "color.scss";
+@import "../../mixins.scss";
+
+.controlsRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  justify-content: space-around;
+
+  .buttonContainer {
+    @include remove-button-styles($color: $background_gray);
+
+    &:hover,
+    &:focus {
+      > .previewButton {
+        color: $light_teal;
+
+        &Disabled {
+          color: $neutral_dark40;
+        }
+      }
+    }
+  }
+
+  .previewButton {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.1s ease;
+
+    &Disabled {
+      color: $neutral_dark40;
+    }
+  }
+
+  .clearButton {
+    font-size: 12px;
+    padding: 5px;
+    width: 100%;
+  }
+}

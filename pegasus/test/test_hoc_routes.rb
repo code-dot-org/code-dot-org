@@ -53,29 +53,39 @@ class HocRoutesTest < Minitest::Test
       assert_includes @pegasus.last_request.url, "&s=#{Base64.urlsafe_encode64('mc')}"
     end
 
-    it 'has certificate share page' do
-      cert_id = make_certificate
-      assert_successful_get CDO.code_org_url("/certificates/#{cert_id}")
-      assert_successful_get CDO.code_org_url("/printcertificate/#{cert_id}")
-
-      invalid_cert_id = 'abcdefg12345'
-      assert_not_found_get CDO.code_org_url("/certificates/#{invalid_cert_id}")
+    it 'redirects batch certificate page to code studio' do
+      @pegasus.get CDO.code_org_url('/certificates')
+      assert_equal 301, @pegasus.last_response.status
+      expected_url = 'https://studio.code.org/certificates/batch'
+      assert_equal expected_url, @pegasus.last_response['Location'].strip
     end
 
-    it 'has certificates pages for different scripts' do
-      assert_successful_get CDO.code_org_url('/certificates?course=20-hour')
-      assert_successful_get CDO.code_org_url('/certificates?course=mc')
-      assert_successful_get CDO.code_org_url('/certificates?course=course1')
-      assert_successful_get CDO.code_org_url('/certificates?course=Hour%20of%20Code')
+    it 'redirects blank certificate page to code studio' do
+      @pegasus.get CDO.code_org_url('/certificates/blank')
+      assert_equal 301, @pegasus.last_response.status
+      expected_url = 'https://studio.code.org/certificates/blank'
+      assert_equal expected_url, @pegasus.last_response['Location'].strip
     end
 
-    it 'serves png, jpg, jpeg certificate images, not others' do
-      cert_id = make_certificate
-      assert_successful_jpeg_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.jpg")
-      assert_successful_jpeg_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.jpeg")
-      assert_successful_png_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.png")
+    it 'redirects sharecertificate page to code studio' do
+      @pegasus.get CDO.code_org_url('/sharecertificate')
+      assert_equal 301, @pegasus.last_response.status
+      expected_url = 'https://studio.code.org/certificates/blank'
+      assert_equal expected_url, @pegasus.last_response['Location'].strip
+    end
 
-      assert_not_found_get CDO.code_org_url("/api/hour/certificate/#{cert_id}.bmp")
+    it 'redirects vanilla congrats page to code studio' do
+      @pegasus.get CDO.code_org_url('/congrats')
+      assert_equal 302, @pegasus.last_response.status
+      expected_url = CDO.studio_url('/congrats', CDO.default_scheme)
+      assert_equal expected_url, @pegasus.last_response['Location']
+    end
+
+    it 'preserves url params when redirecting congrats page' do
+      @pegasus.get CDO.code_org_url('/congrats?i=foo&s=bar')
+      assert_equal 302, @pegasus.last_response.status
+      expected_url = CDO.studio_url('/congrats?i=foo&s=bar', CDO.default_scheme)
+      assert_equal expected_url, @pegasus.last_response['Location']
     end
 
     it 'starts and ends given tutorial, tracking company and tutorial' do
@@ -285,29 +295,27 @@ class HocRoutesTest < Minitest::Test
       end
     end
 
-    private
-
     # Extracts the sampling weight from a hoc_activity row. We would like to add
     # a separate column for maintaining this but this is too expensive/risky before
     # Hour of Code 2015, so it is current embedded in the session id. For example,
     # _2_7af16d90c00ceb6a82d4361470fd843d encodes a weight of 2.
-    def get_sampling_weight(row)
+    private def get_sampling_weight(row)
       row[:session].split('_')[1].to_i
     end
 
-    def assert_datetime_within(after_start_time, before_begin_time, after_begin_time)
+    private def assert_datetime_within(after_start_time, before_begin_time, after_begin_time)
       assert (before_begin_time..after_begin_time).cover?(after_start_time)
     end
 
-    def now_in_sequel_datetime
+    private def now_in_sequel_datetime
       Sequel.string_to_datetime(Time.now.utc.to_s)
     end
 
-    def get_session_hoc_activity_entry
+    private def get_session_hoc_activity_entry
       DB[:hoc_activity].where(session: @mock_session.cookie_jar['hour_of_code']).first
     end
 
-    def with_test_company(name)
+    private def with_test_company(name)
       remove_test_company(name)
       DB[:forms].insert(kind: 'CompanyProfile',
                         name: name,
@@ -322,41 +330,41 @@ class HocRoutesTest < Minitest::Test
       )
     end
 
-    def remove_test_company(name)
+    private def remove_test_company(name)
       DB[:forms].where(kind: 'CompanyProfile', name: name).delete
     end
 
-    def make_certificate
+    private def make_certificate
       assert_redirects_from_to '/api/hour/finish/mc', '/congrats'
       CGI.parse(@pegasus.last_request.query_string)['i'][0]
     end
 
-    def assert_redirects_from_to(from, to)
+    private def assert_redirects_from_to(from, to)
       @pegasus.get from
       assert_equal 302, @pegasus.last_response.status
       @pegasus.follow_redirect!
       assert_includes @pegasus.last_request.url, to
     end
 
-    def assert_successful_get(path)
+    private def assert_successful_get(path)
       assert_code_on_get(200, path)
     end
 
-    def assert_successful_png_get(path)
+    private def assert_successful_png_get(path)
       assert_code_on_get(200, path)
       assert_equal 'image/png', @pegasus.last_response['Content-Type']
     end
 
-    def assert_successful_jpeg_get(path)
+    private def assert_successful_jpeg_get(path)
       assert_code_on_get(200, path)
       assert_equal 'image/jpeg', @pegasus.last_response['Content-Type']
     end
 
-    def assert_not_found_get(path)
+    private def assert_not_found_get(path)
       assert_code_on_get(404, path)
     end
 
-    def assert_code_on_get(code, path)
+    private def assert_code_on_get(code, path)
       @pegasus.get path
       assert_equal code, @pegasus.last_response.status
     end

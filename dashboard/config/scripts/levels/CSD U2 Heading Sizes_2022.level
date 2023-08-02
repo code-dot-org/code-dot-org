@@ -18,12 +18,12 @@
     "validation_enabled": "true",
     "mini_rubric": "false"
   },
-  "level_num": "custom",
   "game_id": 58,
-  "created_at": "2022-03-30T23:32:03.000Z",
-  "user_id": 324,
   "published": true,
+  "created_at": "2022-03-30T23:32:03.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:03.896+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Heading Sizes_2021\\\"\"],\"cloned_from\":\"CSD U2 Heading Sizes_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:32:03.896+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Heading Sizes_2021\\\"\"],\"cloned_from\":\"CSD U2 Heading Sizes_2021\"},{\"changed_at\":\"2023-02-14 17:36:46 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

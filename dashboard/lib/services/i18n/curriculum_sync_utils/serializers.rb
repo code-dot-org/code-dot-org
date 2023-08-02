@@ -44,7 +44,7 @@ module Services::I18n::CurriculumSyncUtils
         # default of only a single level of nesting.
         options[:include_directive] ||= JSONAPI::IncludeDirective.new('**', allow_wildcard: true)
         # compact the result, excluding not only nil values but also empty ones
-        result = super.reject {|_, v| v.blank?}
+        result = super.compact_blank
         raise KeyEror.new("Serializer must define :crowdin_key for curriculum content I18N serialization; got #{result.keys.inspect}") unless result.key?(:crowdin_key)
         # We override the default serialization for single objects because we want the crowdin_key
         # moved outside the object. For example:
@@ -124,31 +124,20 @@ module Services::I18n::CurriculumSyncUtils
       attribute :description
     end
 
-    class FrameworkCrowdinSerializer < CrowdinSerializer
-      attributes :name
+    class ReferenceGuideCrowdinSerializer < CrowdinSerializer
+      attributes :display_name, :content
 
-      delegate :crowdin_key, to: :object
-    end
-
-    class StandardCategoryCrowdinSerializer < CrowdinSerializer
-      attributes :description
-
-      delegate :crowdin_key, to: :object
-    end
-
-    class StandardCrowdinSerializer < CrowdinSerializer
-      attributes :description
-
-      belongs_to :framework, serializer: FrameworkCrowdinSerializer, optional: true
-      belongs_to :parent_category, serializer: StandardCategoryCrowdinSerializer, optional: true
-      belongs_to :category, serializer: StandardCategoryCrowdinSerializer, optional: true
-
-      delegate :crowdin_key, to: :object
+      # override
+      def crowdin_key
+        path = Rails.application.routes.url_helpers.course_reference_guide_path(object.course_offering_version, object.key)
+        URI.join("https://studio.code.org", path)
+      end
     end
 
     class LessonCrowdinSerializer < CrowdinSerializer
       attributes(
         :name,
+        :assessment_opportunities,
         :overview,
         :preparation,
         :purpose,
@@ -159,8 +148,6 @@ module Services::I18n::CurriculumSyncUtils
       has_many :objectives, serializer: ObjectiveCrowdinSerializer
       has_many :resources, serializer: ResourceCrowdinSerializer
       has_many :vocabularies, serializer: VocabularyCrowdinSerializer
-      has_many :standards, serializer: StandardCrowdinSerializer
-      has_many :opportunity_standards, serializer: StandardCrowdinSerializer
 
       # override
       def crowdin_key
@@ -170,12 +157,17 @@ module Services::I18n::CurriculumSyncUtils
     end
 
     class ScriptCrowdinSerializer < CrowdinSerializer
+      has_many :resources, serializer: ResourceCrowdinSerializer
+      has_many :student_resources, serializer: ResourceCrowdinSerializer
+      has_many :reference_guides, serializer: ReferenceGuideCrowdinSerializer do
+        object.get_course_version&.reference_guides
+      end
+
       # Optional `only_numbered_lessons` scope to avoid `relative_position` conflicts between Lessons
       has_many :lessons, serializer: LessonCrowdinSerializer do
         scope[:only_numbered_lessons] ? object.lessons.select(&:numbered_lesson?) : object.lessons
       end
-      has_many :resources, serializer: ResourceCrowdinSerializer
-      has_many :student_resources, serializer: ResourceCrowdinSerializer
+
       has_many :announcements, serializer: AnnouncementCrowdinSerializer do
         next if object.announcements.nil?
 

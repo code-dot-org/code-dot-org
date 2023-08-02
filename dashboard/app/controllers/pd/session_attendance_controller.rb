@@ -36,7 +36,7 @@ class Pd::SessionAttendanceController < ApplicationController
     enrollment_code = params.require(:enrollment_code)
 
     enrollment = Pd::Enrollment.find_by(code: enrollment_code)
-    if enrollment.nil? || Pd::Attendance.for_workshop(@session.workshop).where(enrollment: enrollment).exists?
+    if enrollment.nil? || Pd::Attendance.for_workshop(@session.workshop).exists?(enrollment: enrollment)
       # This has already been claimed
       flash[:error] = "#{params[:safe_name] || 'This name'} has been claimed. Please look again."
       redirect_to action: :attend, session_code: @session.code
@@ -79,12 +79,10 @@ class Pd::SessionAttendanceController < ApplicationController
     redirect_to action: :attend
   end
 
-  private
-
-  def render_own_workshop
+  private def render_own_workshop
     attend_url = CDO.code_org_url "/pd/#{@session.code}", CDO.default_scheme
 
-    flash[:notice] = "You can't attend this workshop because you organized it. "\
+    flash[:notice] = "You can't attend this workshop because you organized it. " \
       "If your attendees go to the link #{attend_url} they will see a success message here."
 
     redirect_to CDO.studio_url('/', CDO.default_scheme)

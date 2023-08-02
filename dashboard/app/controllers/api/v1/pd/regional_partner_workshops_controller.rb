@@ -1,4 +1,4 @@
-class Api::V1::Pd::RegionalPartnerWorkshopsController < ::ApplicationController
+class Api::V1::Pd::RegionalPartnerWorkshopsController < ApplicationController
   authorize_resource class: :regional_partner_workshops
   before_action :get_filtered_workshops
 
@@ -34,9 +34,7 @@ class Api::V1::Pd::RegionalPartnerWorkshopsController < ::ApplicationController
            scope: {course: @course, subject: @subject}
   end
 
-  private
-
-  def get_filtered_workshops
+  private def get_filtered_workshops
     @partners = RegionalPartner.includes(:pd_workshops)
 
     @course = params[:course]

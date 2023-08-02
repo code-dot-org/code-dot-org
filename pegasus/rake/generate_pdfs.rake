@@ -2,6 +2,8 @@ require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/db'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 PDFConversionInfo = Struct.new(:url_path, :src_files, :output_pdf_path)
 
@@ -34,9 +36,9 @@ def generate_pdf_file(base_url, pdf_conversion_info, fetchfile_for_pdf)
 
   begin
     PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose: true)
-  rescue Exception => e
+  rescue Exception => exception
     ChatClient.log "PDF generation failure for #{url}"
-    ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+    ChatClient.log "/quote #{exception.message}\n#{CDO.backtrace exception}", message_format: 'text'
     raise
   end
 
@@ -50,7 +52,7 @@ def generate_pdf_file(base_url, pdf_conversion_info, fetchfile_for_pdf)
 end
 
 desc 'Generate PDFs for *.makepdf files and all state-facts pages.'
-task :generate_pdfs do
+timed_task_with_logging :generate_pdfs do
   require_relative '../../pegasus/src/env'
   all_outfiles = []
   # Generate pdf for files that are appended with .makepdf

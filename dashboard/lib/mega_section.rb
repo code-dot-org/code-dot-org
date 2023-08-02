@@ -1,4 +1,4 @@
-include FactoryGirl::Syntax::Methods
+include FactoryBot::Syntax::Methods
 
 class MegaSection
   SAMPLE_TEACHER_EMAIL = 'mega_section_teacher@code.org'.freeze
@@ -99,8 +99,8 @@ class MegaSection
   #  :script_name_2 - name of additional script to generate progress for
   #  :num_students - number of students to generate for section
   def self.create_section(options)
-    script_1 = Script.get_from_cache(options[:script_name_1])
-    script_2 = Script.get_from_cache(options[:script_name_2])
+    script_1 = Unit.get_from_cache(options[:script_name_1])
+    script_2 = Unit.get_from_cache(options[:script_name_2])
     script_levels_1 = script_1.script_levels.includes(:levels)
     script_levels_2 = script_2.script_levels.includes(:levels)
 
@@ -196,15 +196,14 @@ class MegaSection
   # Helper that generates a few sentences of plausible latin-esqe text, for use as obviously
   # fake text data.
   def self.tiny_lipsum
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut" \
-    " labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco" \
-    " laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in" \
-    " voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat" \
-    " non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut " \
+    "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco " \
+    "laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in " \
+    "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat " \
+    "non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".
       split(/[.,]/).
       sample(rng.rand(3..6)).
-      map(&:strip).
-      compact.
+      filter_map(&:strip).
       map(&:capitalize).
       join('. ') + '.'
   end

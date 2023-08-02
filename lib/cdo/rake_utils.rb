@@ -23,52 +23,18 @@ module RakeUtils
     args.map(&:to_s).join(' ')
   end
 
-  def self.upgrade_service(id)
-    sudo 'service', id.to_s, 'upgrade' if OS.linux? && CDO.chef_managed
-  end
-
   def self.start_service(id)
-    sudo 'service', id.to_s, 'start' if OS.linux? && CDO.chef_managed
+    sudo 'systemctl', 'start', id.to_s if OS.linux? && CDO.chef_managed
   end
 
   def self.stop_service(id)
-    sudo 'service', id.to_s, 'stop' if OS.linux? && CDO.chef_managed
-  end
-
-  # We've been having problems with 'sudo service dashboard stop', where it
-  # gets hung waiting for the process to stop, but the signal never takes effect.
-  # This calls and retries stop-with-status, which will wait for a bit but
-  # return an error code if the service doesn't actually stop. It finishes with
-  # a call to the normal stop method, which will wait indefinitely, if the retries
-  # all fail - this allows us to manually go in and kill the process without needing
-  # to restart the build.
-  def self.stop_service_with_retry(id, retry_count)
-    if OS.linux? && CDO.chef_managed
-      success = false
-      (1..retry_count + 1).each do |i|
-        if sudo('service', id.to_s, 'stop-with-status')
-          success = true
-          ChatClient.log "Successfully stopped service #{id}"
-          break
-        end
-      rescue RuntimeError # sudo call raises a RuntimeError if it fails
-        ChatClient.log "Service #{id} failed to stop, retrying (attempt #{i})"
-        next
-      end
-      unless success
-        # Alert the relevant room that the service may be hung...
-        ChatClient.log "Could not stop #{id} after #{retry_count + 1} attempts"
-        # ...but we're trying one last time and going into a wait loop, so it can be stopped manually
-        ChatClient.log "Calling 'sudo service #{id} stop'. If #{id} does not stop shortly you will need to "\
-          "log into the server and manually stop the process. The build will resume automatically "\
-          "once the #{id} has stopped."
-        stop_service(id)
-      end
-    end
+    sudo 'systemctl', 'stop', id.to_s if OS.linux? && CDO.chef_managed
   end
 
   def self.restart_service(id)
-    sudo 'service', id.to_s, 'restart' if OS.linux? && CDO.chef_managed
+    return unless OS.linux? && CDO.chef_managed
+    sudo 'systemctl', 'daemon-reload'
+    sudo 'systemctl', 'restart', id.to_s
   end
 
   def self.system_(*args)
@@ -127,9 +93,11 @@ module RakeUtils
   # Changes the Bundler environment to the specified directory for the specified block.
   # Runs bundle_install ensuring dependencies are up to date.
   def self.with_bundle_dir(dir)
-    # Using `with_clean_env` is necessary when shelling out to a different bundle.
-    # Ref: http://bundler.io/man/bundle-exec.1.html#Shelling-out
-    Bundler.with_clean_env do
+    # Using `with_clean_env` is recommended when shelling out to a different bundle (ref:
+    # http://bundler.io/man/bundle-exec.1.html#Shelling-out), but `with_clean_env` is
+    # deprecated in favor of `with_unbundled_env` (ref:
+    # https://bundler.io/v2.1/whats_new.html#helper-deprecations) so use that instead.
+    Bundler.with_unbundled_env do
       ENV['AWS_DEFAULT_REGION'] ||= CDO.aws_region
       Dir.chdir(dir) do
         bundle_install
@@ -151,10 +119,15 @@ module RakeUtils
 
   def self.bundle_install(*args)
     without = CDO.rack_envs - [CDO.rack_env]
+    run_bundle_command('config set --local without', *without)
+    run_bundle_command('install --quiet --jobs', nproc, *args)
+  end
+
+  def self.run_bundle_command(*args)
     if CDO.bundler_use_sudo
-      sudo 'bundle', '--without', *without, '--quiet', '--jobs', nproc, *args
+      sudo('bundle', *args)
     else
-      system 'bundle', '--without', *without, '--quiet', '--jobs', nproc, *args
+      system('bundle', *args)
     end
   end
 
@@ -229,21 +202,26 @@ module RakeUtils
     RakeUtils.sudo 'npm', 'update', '--quiet', '-g', *args unless output.empty?
   end
 
-  def self.npm_install(*args)
-    frozen_lockfile = ENV['CI'] ? '--frozen-lockfile' : ''
+  def self.run_packages_with(command, *args)
     commands = []
+
     commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands += " yarn #{frozen_lockfile}".split
+    commands << command
     commands += args
+
     RakeUtils.system(*commands)
   end
 
+  def self.npm_install(*args)
+    run_packages_with('npm install', ENV['CI'] && '--frozen-lockfile', *args)
+  end
+
+  def self.yarn_install(*args)
+    run_packages_with('yarn', ENV['CI'] && '--frozen-lockfile', *args)
+  end
+
   def self.npm_rebuild(*args)
-    commands = []
-    commands << 'PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig' if OS.mac?
-    commands += " npm rebuild".split
-    commands += args
-    RakeUtils.system(*commands)
+    run_packages_with('npm rebuild', *args)
   end
 
   # Installs list of global npm packages if not already installed
@@ -303,7 +281,7 @@ module RakeUtils
 
     destination_local_pathname = Pathname(destination_local_path)
     FileUtils.mkdir_p(File.dirname(destination_local_pathname))
-    File.open(destination_local_pathname, 'w') {|f| f.write(new_fetchable_url)}
+    File.write(destination_local_pathname, new_fetchable_url)
     new_fetchable_url
   end
 

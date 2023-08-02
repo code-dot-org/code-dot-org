@@ -1,4 +1,4 @@
-# Script serialization and seeding. Serializes to JSON using ActiveModelSerializers,
+# Unit serialization and seeding. Serializes to JSON using ActiveModelSerializers,
 # and bulk imports to the DB using ActiveRecord-Import.
 #
 # We use serialization and seeding to synchronize curriculum data from Levelbuilder to
@@ -21,21 +21,21 @@ module Services
       :resources, :lessons_resources, :scripts_resources, :scripts_student_resources,
       :vocabularies, :lessons_vocabularies, :programming_environments,
       :programming_expressions, :lessons_programming_expressions, :objectives, :frameworks,
-      :standards, :lessons_standards, :lessons_opportunity_standards, keyword_init: true
+      :standards, :lessons_standards, :lessons_opportunity_standards, :rubrics, :learning_goals, :learning_goal_evidence_levels, keyword_init: true
     )
 
-    # Produces a JSON representation of the given Script and all objects under it in its "tree", in a format specifically
+    # Produces a JSON representation of the given Unit and all objects under it in its "tree", in a format specifically
     # designed to be used for seeding.
     #
-    # Even though conceptually a Script and the objects under it (LessonGroups, Lessons, ScriptLevels, etc.) form a tree,
+    # Even though conceptually a Unit and the objects under it (LessonGroups, Lessons, ScriptLevels, etc.) form a tree,
     # the serialized JSON is "flat" - all objects for a model are stored together in an array, without nested children.
     # Instead, each object contains the necessary identifying information for their associated objects. This flatter format
     # is better suited for the bulk import logic used in seeding, where we import all objects for a model in a single insert.
     #
-    # @param [Script] script - the Script object to serialize
+    # @param [Unit] script - the Unit object to serialize
     # @return [String] the JSON representation
     def self.serialize_seeding_json(script)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       # We need to retrieve the Levels anyway, and doing it this way makes it fast to get the Level keys for each ScriptLevel.
       my_script_levels = ScriptLevel.includes(:levels).where(script_id: script.id)
@@ -54,6 +54,7 @@ module Services
       # in a manner that will be stable across environments.
       sort_context = SeedContext.new(
         script: script,
+        lesson_groups: script.lesson_groups,
         lessons: script.lessons,
         resources: resources,
         frameworks: frameworks,
@@ -71,6 +72,10 @@ module Services
       lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten.sort_by {|lpe| lpe.seeding_key(sort_context).to_json}
 
       objectives = script.lessons.map(&:objectives).flatten.sort_by(&:key)
+
+      rubrics = script.lessons.filter_map(&:rubric).sort_by {|r| r.seeding_key(sort_context).to_json}
+      learning_goals = rubrics.map(&:learning_goals).flatten.sort_by(&:key)
+      learning_goal_evidence_levels = learning_goals.map(&:learning_goal_evidence_levels).flatten.sort_by(&:understanding)
 
       seed_context = SeedContext.new(
         script: script,
@@ -94,7 +99,9 @@ module Services
         frameworks: frameworks,
         standards: standards,
         lessons_standards: lessons_standards,
-        lessons_opportunity_standards: lessons_opportunity_standards
+        lessons_opportunity_standards: lessons_opportunity_standards,
+        rubrics: rubrics,
+        learning_goals: learning_goals
       )
       scope = {seed_context: seed_context}
 
@@ -116,6 +123,9 @@ module Services
         objectives: objectives.map {|o| ScriptSeed::ObjectiveSerializer.new(o, scope: scope).as_json},
         lessons_standards: lessons_standards.map {|ls| ScriptSeed::LessonsStandardSerializer.new(ls, scope: scope).as_json},
         lessons_opportunity_standards: lessons_opportunity_standards.map {|ls| ScriptSeed::LessonsOpportunityStandardSerializer.new(ls, scope: scope).as_json},
+        rubrics: rubrics.map {|r| ScriptSeed::RubricSerializer.new(r, scope: scope).as_json},
+        learning_goals: learning_goals.map {|lg| ScriptSeed::LearningGoalSerializer.new(lg, scope: scope).as_json},
+        learning_goal_evidence_levels: learning_goal_evidence_levels.map {|lgel| ScriptSeed::LearningGoalEvidenceLevelSerializer.new(lgel, scope: scope).as_json},
       }
       JSON.pretty_generate(data) + "\n"
     end
@@ -124,7 +134,7 @@ module Services
     #
     # @param [String | File] file_or_path - Can be String representing a path, relative or absolute, to the file
     #   to read from, or it can be a File object to read from.
-    # @return [Script] the Script created/updated from seeding
+    # @return [Unit] the Unit created/updated from seeding
     def self.seed_from_json_file(file_or_path)
       seed_from_json(File.read(file_or_path))
     end
@@ -132,17 +142,17 @@ module Services
     # Convenience wrapper around seed_from_hash. Parses the given content as a json string and then seeds using it.
     #
     # @param [String] json_string
-    # @return [Script] the Script created/updated from seeding
+    # @return [Unit] the Unit created/updated from seeding
     def self.seed_from_json(json_string)
       seed_from_hash(JSON.parse(json_string))
     end
 
     # Creates / updates the objects in the database described by the input hash.
     #
-    # This method is responsible for Script objects and everything "under" them logically in the curriculum data
+    # This method is responsible for Unit objects and everything "under" them logically in the curriculum data
     # hierarchy. Currently (9/23/2020), this looks like:
     #
-    # Script (has_many)-> LessonGroup (has_many)-> Lesson (has_many)-> ScriptLevel.
+    # Unit (has_many)-> LessonGroup (has_many)-> Lesson (has_many)-> ScriptLevel.
     #
     # This method is not responsible for creating/updating Levels, so it depends on level seeding running before it.
     # However, it is responsible for creating/updating the associations between ScriptLevels and Levels, which control
@@ -152,11 +162,11 @@ module Services
     #
     # An outline of the approach:
     #
-    # Go through the hierarchy top-to-bottom order, starting with Script, and do the following for each model:
+    # Go through the hierarchy top-to-bottom order, starting with Unit, and do the following for each model:
     # 1. For each object for the current model, look up and fill in the ids for their associated objects, based on their
     # seeding keys. The rest of the attributes are used as-is from the input data.
     # 2. Bulk import all of those objects using ActiveRecord-Import
-    # 3. After import, query for all objects of that model now associated with the Script. Find all of these objects which
+    # 3. After import, query for all objects of that model now associated with the Unit. Find all of these objects which
     # were not present in the input data, based on their seeding keys. Bulk-destroy those objects.
     #
     # Some important implementation details:
@@ -170,7 +180,7 @@ module Services
     # too complex or not performant, and making the repeated queries achieves decent performance empirically.
     #
     # - One way to avoid repeated queries when looking up associations is to load all objects of the associated model
-    # for the Script into the SeedContext, and do lookups against that already-loaded data.
+    # for the Unit into the SeedContext, and do lookups against that already-loaded data.
     #
     # - If a seeding_key has a corresponding unique index, we can skip looking up objects to update, and just
     # rely on the "on duplicate key update" feature instead.
@@ -178,7 +188,7 @@ module Services
     # - We try to achieve both simplicity and performance.
     #
     # @param [Hash] data - The input data to seed from.
-    # @return [Script] the Script created/updated from seeding
+    # @return [Unit] the Unit created/updated from seeding
     def self.seed_from_hash(data)
       script_data = data['script']
       lesson_groups_data = data['lesson_groups']
@@ -197,9 +207,12 @@ module Services
       objectives_data = data['objectives']
       lessons_standards_data = data['lessons_standards'] || []
       lessons_opportunity_standards_data = data['lessons_opportunity_standards'] || []
+      rubrics_data = data['rubrics'] || []
+      learning_goals_data = data['learning_goals'] || []
+      learning_goals_evidence_levels_data = data['learning_goal_evidence_levels'] || []
       seed_context = SeedContext.new
 
-      Script.transaction do
+      Unit.transaction do
         # The order of the following import steps is important. If B belongs_to
         # A, then B holds an id field referring to A, and therefore A must be
         # imported before B. For example, LessonsResource belongs to both
@@ -245,6 +258,10 @@ module Services
         seed_context.lessons_standards = import_lessons_standards(lessons_standards_data, seed_context)
         seed_context.lessons_opportunity_standards = import_lessons_opportunity_standards(lessons_opportunity_standards_data, seed_context)
 
+        seed_context.rubrics = import_rubrics(rubrics_data, seed_context)
+        seed_context.learning_goals = import_learning_goals(learning_goals_data, seed_context)
+        seed_context.learning_goal_evidence_levels = import_learning_goals_evidence_levels(learning_goals_evidence_levels_data, seed_context)
+
         # generate_plc_objects must be run after lessons are added.
         seed_context.script.generate_plc_objects
 
@@ -255,12 +272,12 @@ module Services
     # Internal methods and classes below
 
     def self.import_script(script_data)
-      script_to_import = Script.new(script_data.except('seeding_key', 'serialized_at'))
+      script_to_import = Unit.new(script_data.except('seeding_key', 'serialized_at'))
       script_to_import.seeded_from = script_data['serialized_at']
       script_to_import.is_migrated = true
       # Needed because we already have some Scripts with invalid names
       script_to_import.skip_name_format_validation = true
-      Script.import! [script_to_import], on_duplicate_key_update: get_columns(Script)
+      Unit.import! [script_to_import], on_duplicate_key_update: get_columns(Unit)
 
       # activerecord-import doesn't trigger callbacks for imported models, and
       # Scripts rely on the after_save hook to invoke `generate_plc_objects`,
@@ -270,9 +287,9 @@ module Services
       #
       # Note that we use activerecord-import extensively in the script seeding
       # process, so we may end up needing to manually invoke these callbacks
-      # for more models than just Script, in which case we should probably
+      # for more models than just Unit, in which case we should probably
       # reassess the pattern being used here.
-      imported_script = Script.find_by!(name: script_to_import.name)
+      imported_script = Unit.find_by!(name: script_to_import.name)
       imported_script.run_callbacks(:save)
       return imported_script
     end
@@ -404,7 +421,7 @@ module Services
       LevelsScriptLevel.import! levels_script_levels_to_import, on_duplicate_key_update: get_columns(LevelsScriptLevel)
 
       # Delete any existing LevelsScriptLevels that weren't in the imported list, return remaining
-      levels_script_levels = Script.find(seed_context.script.id).levels_script_levels
+      levels_script_levels = Unit.find(seed_context.script.id).levels_script_levels
       destroy_outdated_objects(LevelsScriptLevel, levels_script_levels, levels_script_levels_to_import, seed_context)
     end
 
@@ -422,8 +439,8 @@ module Services
         # this method will be able to import the resources the next time the
         # seed process runs.
         if resources_data.count > 0
-          puts "WARNING: unable to import resources into script #{seed_context.script.name} "\
-            "because course version is missing. This is only to be expected if "\
+          puts "WARNING: unable to import resources into script #{seed_context.script.name} " \
+            "because course version is missing. This is only to be expected if " \
             "the script is being seeded for the first time."
         end
         return []
@@ -530,8 +547,8 @@ module Services
         # this method will be able to import vocabulary the next time the
         # seed process runs.
         if vocabularies_data.count > 0
-          puts "WARNING: unable to import vocabulary into script #{seed_context.script.name} "\
-            "because course version is missing. This is only to be expected if "\
+          puts "WARNING: unable to import vocabulary into script #{seed_context.script.name} " \
+            "because course version is missing. This is only to be expected if " \
             "the script is being seeded for the first time."
         end
         return []
@@ -671,6 +688,57 @@ module Services
       LessonsOpportunityStandard.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     end
 
+    def self.import_rubrics(rubrics_data, seed_context)
+      rubrics_to_import = rubrics_data.map do |rubric_data|
+        lesson = seed_context.lessons.find {|l| l.key == rubric_data['seeding_key']['lesson.key']}
+        raise 'No lesson found' if lesson.nil?
+
+        level = lesson.levels.find {|l| l.name == rubric_data['level_name']}
+
+        rubric_attrs = rubric_data.except('seeding_key', 'level_name')
+        rubric_attrs['lesson_id'] = lesson.id
+        rubric_attrs['level_id'] = level&.id if level
+        Rubric.new(rubric_attrs)
+      end
+
+      existing_rubrics = Rubric.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+      destroy_outdated_objects(Rubric, existing_rubrics, rubrics_to_import, seed_context)
+      Rubric.import! rubrics_to_import, on_duplicate_key_update: get_columns(Rubric)
+      Rubric.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+    end
+
+    def self.import_learning_goals(learning_goals_data, seed_context)
+      learning_goals_to_import = learning_goals_data.map do |learning_goal_data|
+        rubric = seed_context.lessons.find {|l| l.key == learning_goal_data['seeding_key']['lesson.key']}.rubric
+        raise 'No rubric found' if rubric.nil?
+
+        learning_goal_attrs = learning_goal_data.except('seeding_key')
+        learning_goal_attrs['rubric_id'] = rubric.id
+        LearningGoal.new(learning_goal_attrs)
+      end
+
+      existing_learning_goals = LearningGoal.joins(:rubric).where('rubrics.lesson_id' => seed_context.lessons.pluck(:id))
+      destroy_outdated_objects(LearningGoal, existing_learning_goals, learning_goals_to_import, seed_context)
+      LearningGoal.import! learning_goals_to_import, on_duplicate_key_update: get_columns(LearningGoal)
+      LearningGoal.joins(:rubric).where('rubrics.lesson_id' => seed_context.lessons.pluck(:id))
+    end
+
+    def self.import_learning_goals_evidence_levels(learning_goal_evidence_levels_data, seed_context)
+      learning_goals_evidence_levels_to_import = learning_goal_evidence_levels_data.map do |learning_goal_evidence_level_data|
+        learning_goal = seed_context.learning_goals.find {|lg| lg.key == learning_goal_evidence_level_data['seeding_key']['learning_goal.key']}
+        raise 'No learning goal found' if learning_goal.nil?
+
+        learning_goal_evidence_level_attrs = learning_goal_evidence_level_data.except('seeding_key')
+        learning_goal_evidence_level_attrs['learning_goal_id'] = learning_goal.id
+        LearningGoalEvidenceLevel.new(learning_goal_evidence_level_attrs)
+      end
+
+      existing_learning_goals_evidence_levels = LearningGoalEvidenceLevel.joins(:learning_goal).where('learning_goals.rubric_id' => seed_context.rubrics.pluck(:id))
+      destroy_outdated_objects(LearningGoalEvidenceLevel, existing_learning_goals_evidence_levels, learning_goals_evidence_levels_to_import, seed_context)
+      LearningGoalEvidenceLevel.import! learning_goals_evidence_levels_to_import, on_duplicate_key_update: get_columns(LearningGoalEvidenceLevel)
+      LearningGoalEvidenceLevel.joins(:learning_goal).where('learning_goals.rubric_id' => seed_context.rubrics.pluck(:id))
+    end
+
     def self.destroy_outdated_objects(model_class, all_objects, imported_objects, seed_context)
       objects_to_keep_by_seeding_key = imported_objects.index_by {|o| o.seeding_key(seed_context)}
       should_keep = all_objects.group_by {|o| objects_to_keep_by_seeding_key.include?(o.seeding_key(seed_context))}
@@ -707,7 +775,7 @@ module Services
       # A simple field to track when the script was most recently serialized.
       # This will be set by levelbuilder whenever the script is saved, and then
       # read by the seeding process on other environments and persisted to the
-      # `seeded_from` property on Script objects. Currently used by the PDF
+      # `seeded_from` property on Unit objects. Currently used by the PDF
       # generation logic to identify when a script is actually being updated,
       # but could easily be used by other business logic that has similar
       # versioning concerns.
@@ -910,6 +978,34 @@ module Services
 
     class LessonsOpportunityStandardSerializer < ActiveModel::Serializer
       attributes :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class RubricSerializer < ActiveModel::Serializer
+      attributes :level_name, :seeding_key
+
+      def level_name
+        object.level&.name
+      end
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class LearningGoalSerializer < ActiveModel::Serializer
+      attributes :key, :position, :learning_goal, :ai_enabled, :tips, :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class LearningGoalEvidenceLevelSerializer < ActiveModel::Serializer
+      attributes :understanding, :teacher_description, :ai_prompt, :seeding_key
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])

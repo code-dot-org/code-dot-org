@@ -107,9 +107,7 @@ module Rack
     end
 
     class DeflateStream
-      # TODO: The `||=` is used below instead of `=` so as to avoid a constant redefinition warning.
-      # Fix this, so that direct assignment can be used.
-      DEFLATE_ARGS ||= [
+      DEFLATE_ARGS = [
         Zlib::DEFAULT_COMPRESSION,
         # drop the zlib header which causes both Safari and IE to choke
         -Zlib::MAX_WBITS,
@@ -137,9 +135,7 @@ module Rack
       end
     end
 
-    private
-
-    def should_deflate?(env, status, headers, body)
+    private def should_deflate?(env, status, headers, body)
       # Skip compressing empty entity body responses and responses with
       # no-transform set.
       if Utils::STATUS_WITH_NO_ENTITY_BODY.include?(status) ||

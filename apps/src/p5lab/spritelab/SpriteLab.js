@@ -43,7 +43,7 @@ export default class SpriteLab extends P5Lab {
   preloadLabAssets() {
     return Promise.all([
       this.preloadSpriteImages_(),
-      this.p5Wrapper.preloadBackgrounds()
+      this.p5Wrapper.preloadBackgrounds(),
     ]);
   }
 
@@ -109,7 +109,7 @@ export default class SpriteLab extends P5Lab {
         'div',
         {},
         this.getMsg().workspaceAlertError({
-          error: msg || ''
+          error: msg || '',
         })
       ),
       true /* bottom */
@@ -133,7 +133,7 @@ export default class SpriteLab extends P5Lab {
   setupReduxSubscribers(store) {
     super.setupReduxSubscribers(store);
     let state = {};
-    store.subscribe(function() {
+    store.subscribe(function () {
       const lastState = state;
       state = store.getState();
 
@@ -159,5 +159,16 @@ export default class SpriteLab extends P5Lab {
    */
   getReinfFeedbackMsg(isFinalFreePlayLevel) {
     return isFinalFreePlayLevel ? null : this.getMsg().reinfFeedbackMsg();
+  }
+
+  runValidationCode() {
+    // Skip validation code in 'editBlocks' mode (i.e., a levelbuilder is
+    // editing start blocks for the level).
+    if (this.level.editBlocks) {
+      this.onPuzzleComplete(false /* submit */);
+      return;
+    }
+
+    super.runValidationCode();
   }
 }

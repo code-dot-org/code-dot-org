@@ -12,6 +12,7 @@ const ABSOLUTE_CDO_CURRICULUM_REGEXP = new RegExp(
   '^https://curriculum.code.org/',
   'i'
 );
+const ABSOLUTE_CDO_IMAGES_REGEXP = new RegExp('^https://images.code.org/', 'i');
 
 export const DATA_URL_PREFIX_REGEX = new RegExp('^data:image');
 
@@ -55,7 +56,10 @@ export function fixPath(filename) {
   // exported app, in which case our media proxy won't be good for anything
   // anyway.
   if (ABSOLUTE_REGEXP.test(filename) && window.location.protocol !== 'file:') {
-    if (ABSOLUTE_CDO_CURRICULUM_REGEXP.test(filename)) {
+    if (
+      ABSOLUTE_CDO_CURRICULUM_REGEXP.test(filename) ||
+      ABSOLUTE_CDO_IMAGES_REGEXP.test(filename)
+    ) {
       // We know that files served from this location will respond with the
       // access-control-allow-origin: * header, meaning no CORS issue & no need
       // for the media proxy.

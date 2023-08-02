@@ -5,7 +5,7 @@ import {shallow, mount} from 'enzyme';
 import * as expandableImages from '@cdo/apps/templates/utils/expandableImages';
 import EnhancedSafeMarkdown, {
   ExpandableImagesWrapper,
-  UnconnectedExpandableImagesWrapper
+  UnconnectedExpandableImagesWrapper,
 } from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {expect} from '../../util/reconfiguredChai';
@@ -14,6 +14,15 @@ describe('EnhancedSafeMarkdown', () => {
   it('renders SafeMarkdown by default', () => {
     const wrapper = shallow(<EnhancedSafeMarkdown markdown="test" />);
     expect(wrapper.equals(<SafeMarkdown markdown="test" />)).to.equal(true);
+  });
+
+  it('renders SafeMarkdown by default with class name', () => {
+    const wrapper = shallow(
+      <EnhancedSafeMarkdown markdown="test" className="class test" />
+    );
+    expect(
+      wrapper.equals(<SafeMarkdown markdown="test" className="class test" />)
+    ).to.equal(true);
   });
 
   it('wraps output in enhancements as specified', () => {

@@ -37,7 +37,7 @@ MAX_INT_VALUE = (2**31) - 1
 
 class AuthoredHintViewRequest < ApplicationRecord
   belongs_to :user, optional: true
-  belongs_to :script
+  belongs_to :script, class_name: 'Unit'
   belongs_to :level
 
   # manually validate all integer values; otherwise extra-large values

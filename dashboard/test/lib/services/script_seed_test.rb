@@ -20,7 +20,7 @@ module Services
       @framework = create :framework, shortcode: 'test_framework'
     end
 
-    # Tests serialization of a "full Script tree" - a Script with all of the associated models under it populated.
+    # Tests serialization of a "full Unit tree" - a Unit with all of the associated models under it populated.
     # When adding a new model that is serialized, update this test to include the model, generate new json,
     # save it to test-serialize-seeding-json.script_json, and eyeball the changes to see that they look right.
     test 'serialize_seeding_json' do
@@ -57,7 +57,7 @@ module Services
       counts_before = get_counts
 
       # remove the script from the database, leaving the frozen script object intact.
-      script_to_destroy = Script.find(script.id)
+      script_to_destroy = Unit.find(script.id)
       script_to_destroy.course_version.resources.destroy_all
       script_to_destroy.course_version.vocabularies.destroy_all
       script_to_destroy.course_version.destroy!
@@ -68,7 +68,7 @@ module Services
       #   4 queries to set up course offering and course version
       #   34 queries - two for each model, + one extra query each for Lessons,
       #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
-      #     Resources, and Vocabulary.
+      #     Resources, Vocabulary, Rubric, LearningGoal, and LearningGoalEvidenceLevel.
       #     These 2-3 queries per model are to (1) delete old entries, (2) import
       #     new/updated entries, and then (3) fetch the result for use by the next
       #     layer down in the hierarchy.
@@ -90,12 +90,12 @@ module Services
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
       # (Dani) This will go back up by one when we turn the validation of families sharing course type back on
-      assert_queries(86) do
+      assert_queries(98) do
         ScriptSeed.seed_from_json(json)
       end
 
       assert_equal counts_before, get_counts
-      script_after_seed = Script.with_seed_models.find_by!(name: script.name)
+      script_after_seed = Unit.with_seed_models.find_by!(name: script.name)
       assert_script_trees_equal(script, script_after_seed)
     end
 
@@ -122,7 +122,7 @@ module Services
       # remove the script's resources and lesson groups, which will also remove
       # its lessons and everything else they contain. Leave the script and its
       # unit group intact, so that resources can be imported.
-      script_to_destroy = Script.find(script.id)
+      script_to_destroy = Unit.find(script.id)
       script_to_destroy.unit_group.course_version.resources.destroy_all
       script_to_destroy.unit_group.course_version.vocabularies.destroy_all
       script_to_destroy.lesson_groups.destroy_all
@@ -130,7 +130,7 @@ module Services
       ScriptSeed.seed_from_json(json)
 
       assert_equal counts_before, get_counts
-      script_after_seed = Script.with_seed_models.find_by!(name: script.name)
+      script_after_seed = Unit.with_seed_models.find_by!(name: script.name)
       assert_script_trees_equal(script, script_after_seed)
     end
 
@@ -155,7 +155,7 @@ module Services
 
       # destroy the script and its unit group, so that no course version will
       # be available during seed.
-      script_to_destroy = Script.find(script.id)
+      script_to_destroy = Unit.find(script.id)
       script_to_destroy.unit_group.course_version.destroy!
       script_to_destroy.unit_group.destroy!
       script_to_destroy.destroy!
@@ -163,7 +163,7 @@ module Services
       ScriptSeed.seed_from_json(json)
 
       assert_equal expected_counts, get_counts
-      script_after_seed = Script.with_seed_models.find_by!(name: script.name)
+      script_after_seed = Unit.with_seed_models.find_by!(name: script.name)
       assert_script_trees_equal(script, script_after_seed)
     end
 
@@ -173,7 +173,7 @@ module Services
       ScriptSeed.seed_from_json(ScriptSeed.serialize_seeding_json(script))
 
       assert_equal counts_before, get_counts
-      script_after_seed = Script.with_seed_models.find_by!(name: script.name)
+      script_after_seed = Unit.with_seed_models.find_by!(name: script.name)
       assert_script_trees_equal(script, script_after_seed)
       assert_equal script.script_levels.map(&:id), script_after_seed.script_levels.map(&:id)
     end
@@ -215,7 +215,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       assert_equal 'updated big questions', script.lesson_groups.first.big_questions
@@ -230,7 +230,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       assert_equal 'updated overview', script.lessons.first.overview
@@ -250,7 +250,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
@@ -274,7 +274,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       activity = script.lessons.first.lesson_activities.first
@@ -296,7 +296,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       assert_equal 'foo', script.script_levels.first.challenge
@@ -317,7 +317,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       assert_equal 2, script.script_levels.first.levels.count
@@ -338,7 +338,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       assert_equal 2, script.script_levels.first.levels.count
@@ -361,7 +361,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
@@ -386,7 +386,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       assert_equal(
@@ -410,7 +410,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       assert_equal(
@@ -441,7 +441,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
@@ -476,7 +476,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
@@ -511,7 +511,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
@@ -539,7 +539,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
@@ -571,7 +571,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
@@ -604,7 +604,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       lesson = script.lessons.first
       assert_equal expected_shortcodes, lesson.standards.map(&:shortcode)
@@ -636,7 +636,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
@@ -675,12 +675,52 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
       assert_equal expected_shortcodes, lesson.opportunity_standards.map(&:shortcode)
       assert_equal expected_descriptions, lesson.opportunity_standards.map(&:description)
+    end
+
+    test 'seed updates learning goals' do
+      script = create_script_tree
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        rubric = script.lessons.first.rubric
+        rubric.learning_goals.first.update!(learning_goal: 'Updated Learning Goal')
+        rubric.learning_goals.create!(learning_goal: 'New Learning Goal', position: rubric.learning_goals.count + 1, key: "new-learning-goal-#{rubric.id}")
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Unit.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      rubric = script.lessons.first.rubric
+      assert_equal(
+        ['Updated Learning Goal', 'New Learning Goal'],
+        rubric.learning_goals.map(&:learning_goal)
+      )
+    end
+
+    test 'seed updates learning goal evidence level' do
+      script = create_script_tree
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        rubric = script.lessons.first.rubric
+        rubric.learning_goals.first.learning_goal_evidence_levels.first.update!(teacher_description: 'Updated Evidence Level')
+        rubric.learning_goals.first.learning_goal_evidence_levels.create!(teacher_description: 'New Evidence Level', understanding: 4)
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Unit.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      rubric = script.lessons.first.rubric
+      assert_equal(
+        ['Updated Evidence Level', 'Description for teacher', 'New Evidence Level'],
+        rubric.learning_goals.first.learning_goal_evidence_levels.map(&:teacher_description)
+      )
     end
 
     test 'seed deletes lesson_groups' do
@@ -697,7 +737,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       assert_equal [1], script.lesson_groups.map(&:position)
@@ -718,6 +758,9 @@ module Services
       expected_counts['Objective'] -= 4
       expected_counts['LessonsStandard'] -= 4
       expected_counts['LessonsOpportunityStandard'] -= 4
+      expected_counts['Rubric'] -= 2
+      expected_counts['LearningGoal'] -= 2
+      expected_counts['LearningGoalEvidenceLevel'] -= 4
       assert_equal expected_counts, get_counts
     end
 
@@ -734,7 +777,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       assert_equal (1..3).to_a, script.lessons.map(&:absolute_position)
@@ -753,6 +796,9 @@ module Services
       expected_counts['Objective'] -= 2
       expected_counts['LessonsStandard'] -= 2
       expected_counts['LessonsOpportunityStandard'] -= 2
+      expected_counts['Rubric'] -= 1
+      expected_counts['LearningGoal'] -= 1
+      expected_counts['LearningGoalEvidenceLevel'] -= 2
       assert_equal expected_counts, get_counts
     end
 
@@ -766,7 +812,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       assert_equal (1..2).to_a, script.lessons.map(&:absolute_position)
@@ -791,7 +837,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       assert_equal (1..2).to_a, script.lessons.map(&:absolute_position)
@@ -817,7 +863,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       assert_equal (1..15).to_a, script.script_levels.map(&:chapter)
@@ -846,7 +892,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       assert_equal 1, script.script_levels.first.levels.count
@@ -871,7 +917,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       expected_counts = original_counts.clone
@@ -892,7 +938,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       expected_counts = original_counts.clone
@@ -913,7 +959,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       expected_counts = original_counts.clone
@@ -937,7 +983,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       expected_counts = original_counts.clone
@@ -954,7 +1000,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       expected_counts = original_counts.clone
@@ -975,7 +1021,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
@@ -1000,7 +1046,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       expected_counts = original_counts.clone
@@ -1020,7 +1066,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       expected_counts = original_counts.clone
@@ -1052,7 +1098,7 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       expected_counts = original_counts.clone
@@ -1074,11 +1120,52 @@ module Services
       end
 
       ScriptSeed.seed_from_json(json)
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
 
       assert_script_trees_equal script_with_deletion, script
       expected_counts = original_counts.clone
       expected_counts['LessonsOpportunityStandard'] -= 1
+      assert_equal expected_counts, get_counts
+    end
+
+    test 'seed deletes learning goal' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        rubric = script.lessons.first.rubric
+        assert_equal 1, rubric.learning_goals.count
+        rubric.learning_goals.first.delete
+        assert_equal 0, rubric.learning_goals.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Unit.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LearningGoal'] -= 1
+      expected_counts['LearningGoalEvidenceLevel'] -= 2
+      assert_equal expected_counts, get_counts
+    end
+
+    test 'seed deletes learning goal evidence level' do
+      script = create_script_tree
+      original_counts = get_counts
+
+      script_with_deletion, json = get_script_and_json_with_change_and_rollback(script) do
+        rubric = script.lessons.first.rubric
+        assert_equal 2, rubric.learning_goals.first.learning_goal_evidence_levels.count
+        rubric.learning_goals.first.learning_goal_evidence_levels.first.delete
+        assert_equal 1, rubric.learning_goals.first.learning_goal_evidence_levels.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Unit.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_deletion, script
+      expected_counts = original_counts.clone
+      expected_counts['LearningGoalEvidenceLevel'] -= 1
       assert_equal expected_counts, get_counts
     end
 
@@ -1100,7 +1187,7 @@ module Services
       json = ScriptSeed.serialize_seeding_json(script)
       ScriptSeed.seed_from_json(json)
 
-      script = Script.with_seed_models.find(script.id)
+      script = Unit.with_seed_models.find(script.id)
       assert_equal 'preview', script.course_version.published_state
     end
 
@@ -1152,10 +1239,10 @@ module Services
 
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)
       script_with_change = json = nil
-      Script.transaction do
+      Unit.transaction do
         # TODO: should this be handled automatically by a callback? It is for absolute_position somehow.
         yield
-        script_with_change = Script.with_seed_models.find(script.id)
+        script_with_change = Unit.with_seed_models.find(script.id)
         script_with_change.freeze
         json = ScriptSeed.serialize_seeding_json(script_with_change)
 
@@ -1166,9 +1253,9 @@ module Services
 
     def get_counts
       [
-        Script, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
+        Unit, LessonGroup, Lesson, LessonActivity, ActivitySection, ScriptLevel,
         LevelsScriptLevel, Resource, LessonsResource, ScriptsResource, ScriptsStudentResource, Vocabulary, LessonsVocabulary,
-        LessonsProgrammingExpression, Objective, Standard, LessonsStandard, LessonsOpportunityStandard
+        LessonsProgrammingExpression, Objective, Standard, LessonsStandard, LessonsOpportunityStandard, Rubric, LearningGoal, LearningGoalEvidenceLevel
       ].map {|c| [c.name, c.count]}.to_h
     end
 
@@ -1222,6 +1309,11 @@ module Services
         assert_standards_equal(
           s1.lessons.map(&:opportunity_standards).flatten,
           s2.lessons.map(&:opportunity_standards).flatten,
+        )
+        assert_equal(s1.lessons.filter_map(&:rubric).count, s2.lessons.filter_map(&:rubric).count)
+        assert_learning_goals_equal(
+          s1.lessons.filter_map(&:rubric).map(&:learning_goals).flatten,
+          s2.lessons.filter_map(&:rubric).map(&:learning_goals).flatten
         )
       end
     end
@@ -1296,6 +1388,20 @@ module Services
       end
     end
 
+    def assert_learning_goals_equal(learning_goals1, learning_goals2)
+      assert_equal learning_goals1.count, learning_goals2.count
+      learning_goals1.zip(learning_goals2).each do |lg1, lg2|
+        assert_attributes_equal(lg1, lg2, ['rubric_id'])
+      end
+    end
+
+    def assert_learning_goal_evidence_levels_equal(learning_goal_evidence_levels1, learning_goal_evidence_levels2)
+      assert_equal learning_goal_evidence_levels1.count, learning_goal_evidence_levels2.count
+      learning_goals_evidence_levels1.zip(learning_goal_evidence_levels2).each do |lgel1, lgel2|
+        assert_attributes_equal(lgel1, lgel2, ['learning_goal_id'])
+      end
+    end
+
     def assert_attributes_equal(a, b, additional_excludes=[])
       excludes = ['id', 'created_at', 'updated_at'] + additional_excludes
       assert_equal a.attributes.except(*excludes), b.attributes.except(*excludes)
@@ -1315,7 +1421,10 @@ module Services
       num_programming_expressions_per_lesson: 2,
       num_objectives_per_lesson: 2,
       num_standards_per_lesson: 2,
-      with_unit_group: false
+      with_unit_group: false,
+      num_rubrics_per_lesson: 1,
+      num_learning_goals_per_rubric: 1,
+      num_learning_goal_evidence_levels_per_learning_goal: 2
     )
       # Avoid randomly generated characters at the start of the name prefix,
       # to help avoid flaky tests. The name_prefix gets used in various fields,
@@ -1433,9 +1542,20 @@ module Services
           standard = create :standard, framework: @framework, shortcode: "#{lesson.name}-opportunity-standard-#{s}"
           LessonsOpportunityStandard.find_or_create_by!(standard: standard, lesson: lesson)
         end
+
+        next if lesson.levels.empty?
+        (1..num_rubrics_per_lesson).each do |_r|
+          rubric = create :rubric, lesson: lesson, level: lesson.levels.last
+          (1..num_learning_goals_per_rubric).each do |lg|
+            learning_goal = create :learning_goal, rubric: rubric, key: "#{lesson.name}-learning-goal-#{lg}"
+            (1..num_learning_goal_evidence_levels_per_learning_goal).each do |lge|
+              create :learning_goal_evidence_level, learning_goal: learning_goal, understanding: lge
+            end
+          end
+        end
       end
 
-      Script.with_seed_models.find(script.id)
+      Unit.with_seed_models.find(script.id)
     end
   end
 end

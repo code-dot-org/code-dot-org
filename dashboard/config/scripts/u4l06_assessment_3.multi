@@ -5,3 +5,5 @@ right 'column'
 markdown <<MARKDOWN
 ## Assessment Question 3
 MARKDOWN
+
+allow_multiple_attempts true

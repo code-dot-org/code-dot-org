@@ -441,7 +441,7 @@ class PardotV2Test < Minitest::Test
 
   def test_delete_prospects_by_email_finds_matching_pardot_ids
     email = 'test@domain.com'
-    read_prospect_url = "#{PardotV2::PROSPECT_READ_URL}/#{email}"
+    read_prospect_url = "#{PardotV2::PROSPECT_READ_URL}/#{URI.encode_www_form_component(email)}"
     pardot_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok" version="1.0">
         <prospect>
@@ -459,7 +459,7 @@ class PardotV2Test < Minitest::Test
 
   def test_delete_prospects_by_email_sends_deletion_requests
     email = 'test@domain.com'
-    read_prospect_url = "#{PardotV2::PROSPECT_READ_URL}/#{email}"
+    read_prospect_url = "#{PardotV2::PROSPECT_READ_URL}/#{URI.encode_www_form_component(email)}"
     pardot_response = create_xml_from_heredoc <<~XML
       <rsp stat="ok" version="1.0">
         <prospect>
@@ -487,11 +487,9 @@ class PardotV2Test < Minitest::Test
     assert PardotV2.delete_prospects_by_email(email)
   end
 
-  private
-
   # @param str a heredoc string
   # @return Nokogiri::XML::Document
-  def create_xml_from_heredoc(str)
+  private def create_xml_from_heredoc(str)
     # Trims whitespaces at the beginning and end of each line, and delete newline characters
     # in the input before parsing. Otherwise they will pollute XML document result.
     cleaned_str = str.strip.gsub(/\s*\n\s*/, '')
