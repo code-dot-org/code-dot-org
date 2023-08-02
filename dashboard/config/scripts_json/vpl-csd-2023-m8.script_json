@@ -1,0 +1,559 @@
+{
+  "script": {
+    "name": "vpl-csd-2023-m8",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSD Virtual PL",
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2023-08-02 00:10:23 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csd-2023-m8"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Module 8",
+      "name": "CSD Module 8 Asynchronous ",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "CSD Module 8 Synchronous",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "2b2702fe-e3f3-43fb-9f69-357ce78ee1a9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2b2702fe-e3f3-43fb-9f69-357ce78ee1a9",
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9d154ec5-b421-403c-88f5-5b681463b5dc",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 8 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d154ec5-b421-403c-88f5-5b681463b5dc",
+        "lesson_activity.key": "2b2702fe-e3f3-43fb-9f69-357ce78ee1a9"
+      }
+    },
+    {
+      "key": "8b448b2b-34b7-4de0-94b5-f7c2cd044296",
+      "position": 2,
+      "properties": {
+        "progression_name": "Curriculum Investigation Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b448b2b-34b7-4de0-94b5-f7c2cd044296",
+        "lesson_activity.key": "2b2702fe-e3f3-43fb-9f69-357ce78ee1a9"
+      }
+    },
+    {
+      "key": "452b803c-1ff5-418a-b4f3-6e19f7eef9dd",
+      "position": 3,
+      "properties": {
+        "progression_name": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
+      },
+      "seeding_key": {
+        "activity_section.key": "452b803c-1ff5-418a-b4f3-6e19f7eef9dd",
+        "lesson_activity.key": "2b2702fe-e3f3-43fb-9f69-357ce78ee1a9"
+      }
+    },
+    {
+      "key": "6c1d50a7-35ae-43c5-b202-a26cd7988d7b",
+      "position": 4,
+      "properties": {
+        "progression_name": "Conclusions and Connections (~20 - 25 mins)"
+      },
+      "seeding_key": {
+        "activity_section.key": "6c1d50a7-35ae-43c5-b202-a26cd7988d7b",
+        "lesson_activity.key": "2b2702fe-e3f3-43fb-9f69-357ce78ee1a9"
+      }
+    },
+    {
+      "key": "019d7d79-3b1d-4c1c-9420-558129dca225",
+      "position": 5,
+      "properties": {
+        "name": "Module 8 Asynchronous Wrap Up (~10 mins)",
+        "progression_name": "Module 8 Asynchronous Wrap Up (~10 mins)"
+      },
+      "seeding_key": {
+        "activity_section.key": "019d7d79-3b1d-4c1c-9420-558129dca225",
+        "lesson_activity.key": "2b2702fe-e3f3-43fb-9f69-357ce78ee1a9"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 8 Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 8 Overview_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "9d154ec5-b421-403c-88f5-5b681463b5dc"
+      },
+      "level_keys": [
+        "VPL - CSD Module 8 Overview_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Curriculum Investigation Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - CI_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "8b448b2b-34b7-4de0-94b5-f7c2cd044296"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - CI_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "452b803c-1ff5-418a-b4f3-6e19f7eef9dd"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - U6L6_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6 Lesson 2_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "452b803c-1ff5-418a-b4f3-6e19f7eef9dd"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - U6L6 Lesson 2_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6 Level 3_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "452b803c-1ff5-418a-b4f3-6e19f7eef9dd"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - U6L6 Level 3_2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6 - Level 4_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "452b803c-1ff5-418a-b4f3-6e19f7eef9dd"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - U6L6 - Level 4_2023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 8  U6L6 Reflection_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "452b803c-1ff5-418a-b4f3-6e19f7eef9dd"
+      },
+      "level_keys": [
+        "VPL - CSD Module 8  U6L6 Reflection_2023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Conclusions and Connections (~20 - 25 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - Conclusions and Connections2_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "6c1d50a7-35ae-43c5-b202-a26cd7988d7b"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 - Conclusions and Connections2_2023"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Conclusions and Connections (~20 - 25 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD U6 Chapter 1 Project_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "6c1d50a7-35ae-43c5-b202-a26cd7988d7b"
+      },
+      "level_keys": [
+        "VPL - CSD U6 Chapter 1 Project_2023"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Conclusions and Connections (~20 - 25 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD M8 Conclusions and Connections Reflection_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "6c1d50a7-35ae-43c5-b202-a26cd7988d7b"
+      },
+      "level_keys": [
+        "VPL - CSD M8 Conclusions and Connections Reflection_2023"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 8 Asynchronous Wrap Up (~10 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 Wrap Up_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "019d7d79-3b1d-4c1c-9420-558129dca225"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 8 Wrap Up_2023"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 8 Overview_2023",
+        "script_level.level_keys": [
+          "VPL - CSD Module 8 Overview_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "9d154ec5-b421-403c-88f5-5b681463b5dc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - CI_2023",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - CI_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "8b448b2b-34b7-4de0-94b5-f7c2cd044296"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - U6L6_2023",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "452b803c-1ff5-418a-b4f3-6e19f7eef9dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - U6L6 Lesson 2_2023",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6 Lesson 2_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "452b803c-1ff5-418a-b4f3-6e19f7eef9dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - U6L6 Level 3_2023",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6 Level 3_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "452b803c-1ff5-418a-b4f3-6e19f7eef9dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - U6L6 - Level 4_2023",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - U6L6 - Level 4_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "452b803c-1ff5-418a-b4f3-6e19f7eef9dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 8  U6L6 Reflection_2023",
+        "script_level.level_keys": [
+          "VPL - CSD Module 8  U6L6 Reflection_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "452b803c-1ff5-418a-b4f3-6e19f7eef9dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 - Conclusions and Connections2_2023",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 - Conclusions and Connections2_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "6c1d50a7-35ae-43c5-b202-a26cd7988d7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD U6 Chapter 1 Project_2023",
+        "script_level.level_keys": [
+          "VPL - CSD U6 Chapter 1 Project_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "6c1d50a7-35ae-43c5-b202-a26cd7988d7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD M8 Conclusions and Connections Reflection_2023",
+        "script_level.level_keys": [
+          "VPL - CSD M8 Conclusions and Connections Reflection_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "6c1d50a7-35ae-43c5-b202-a26cd7988d7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 8 Wrap Up_2023",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 8 Wrap Up_2023"
+        ],
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m8",
+        "activity_section.key": "019d7d79-3b1d-4c1c-9420-558129dca225"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

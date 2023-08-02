@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "musiclab",
-    "serialized_at": "2023-06-01 23:19:10 UTC",
+    "serialized_at": "2023-08-02 04:08:05 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -65,8 +65,19 @@
   ],
   "activity_sections": [
     {
-      "key": "4f111193-3868-45e9-ada3-db5b8c2407fe",
+      "key": "8b4a4aa4-d56b-4588-a2e8-1e5901c99003",
       "position": 1,
+      "properties": {
+        "name": "I Need a Dollar"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b4a4aa4-d56b-4588-a2e8-1e5901c99003",
+        "lesson_activity.key": "5e2c253b-4775-432f-a7d6-4b21f72bf1fd"
+      }
+    },
+    {
+      "key": "4f111193-3868-45e9-ada3-db5b8c2407fe",
+      "position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -86,6 +97,51 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "I Need a Dollar"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "8b4a4aa4-d56b-4588-a2e8-1e5901c99003"
+      },
+      "level_keys": [
+        "I Need a Dollar"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "I Need a Dollar Remix"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "8b4a4aa4-d56b-4588-a2e8-1e5901c99003"
+      },
+      "level_keys": [
+        "I Need a Dollar Remix"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "tcip"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "tcip"
         ],
         "lesson.key": "lesson-1",
@@ -99,6 +155,30 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "I Need a Dollar",
+        "script_level.level_keys": [
+          "I Need a Dollar"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "8b4a4aa4-d56b-4588-a2e8-1e5901c99003"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "I Need a Dollar Remix",
+        "script_level.level_keys": [
+          "I Need a Dollar Remix"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "8b4a4aa4-d56b-4588-a2e8-1e5901c99003"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "tcip",
@@ -140,6 +220,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
