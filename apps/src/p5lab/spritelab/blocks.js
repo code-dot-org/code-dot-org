@@ -302,10 +302,9 @@ const customInputTypes = {
       // image (we can't set a width of 0). We keep the height the same no matter what
       // because blockly doesn't seem to support us changing the height after initialization.
       const width = imageUrl.length > 0 ? block.thumbnailSize : 1;
-      const firstLabel =
-        imageUrl.length > 0 ? block.shortString : block.longString;
+      const label = imageUrl.length > 0 ? block.shortString : block.longString;
       currentInputRow
-        .appendField(firstLabel)
+        .appendField(label)
         .appendField(
           new Blockly.FieldImage(imageUrl, width, block.thumbnailSize),
           inputConfig.name

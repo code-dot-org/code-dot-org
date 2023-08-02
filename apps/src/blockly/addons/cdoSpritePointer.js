@@ -19,27 +19,27 @@ export function getPointerBlockImageUrl(
   if (!pointerData || !block.inputList || block.inputList.length === 0) {
     return '';
   }
-  let imageSource = undefined;
+  let imageSourceBlock = undefined;
   const mainWorkspace = Blockly.getMainWorkspace();
   if (imageSourceId !== undefined) {
-    imageSource = mainWorkspace.getBlockById(imageSourceId);
+    imageSourceBlock = mainWorkspace.getBlockById(imageSourceId);
   }
-  if (!imageSource) {
+  if (!imageSourceBlock) {
     const rootBlock = block.getRootBlock();
     if (rootBlock.type === pointerData.imageSourceType) {
-      imageSource = rootBlock;
-    } else if (block.getRootBlock().type === block.type) {
+      imageSourceBlock = rootBlock;
+    } else if (rootBlock.id === block.id) {
       const blockWorkspace = Blockly.Workspace.getById(block.workspace.id);
       // If this block has itself as a root and is in a flyout workspace,
       // it is a in a mini toolbox. A block can't be moved from one flyout to
       // another, so if it's in a flyout, it is in its original flyout.
       if (blockWorkspace && blockWorkspace.isFlyout && block.imageSourceId) {
-        imageSource = mainWorkspace.getBlockById(block.imageSourceId);
+        imageSourceBlock = mainWorkspace.getBlockById(block.imageSourceId);
       }
     }
   }
-  if (imageSource) {
-    return getImageUrlFromImageSource(imageSource, pointerData.imageIndex);
+  if (imageSourceBlock) {
+    return getImageUrlFromImageSource(imageSourceBlock, pointerData.imageIndex);
   } else {
     // The block is probably disconnected from any root or toolbox. Reset to
     // default text.
@@ -59,9 +59,15 @@ export function updatePointerBlockImage(
   changePointerImage(url, block);
 }
 
-// Get the image url from the image source block's inputList at the given index.
-// We find the image url by looking at the connection to the input at the given index.
-// If the image source does not have an image at the given index, return an empty string.
+/**
+ * Get the image url from the image source block's inputList at the given index.
+ * We find the image url by looking at the connection to the input at the given index.
+ *
+ * @param {Block} imageSourceBlock Image source block to get image url from.
+ * @param {number} imageIndexOnSource index of the source block's input list to get the image url from. This index
+ *  should have a connection to a block of type gamelab_allSpritesWithAnimation, or we will return an empty string.
+ * @returns Image url or empty string if the image source block does not have an image at the given index.
+ */
 function getImageUrlFromImageSource(imageSourceBlock, imageIndexOnSource) {
   const targetConnection =
     imageSourceBlock.inputList[imageIndexOnSource]?.connection
@@ -75,6 +81,8 @@ function getImageUrlFromImageSource(imageSourceBlock, imageIndexOnSource) {
     targetConnection.sourceBlock_.type === 'gamelab_allSpritesWithAnimation' &&
     !targetConnection.sourceBlock_.isInsertionMarker()
   ) {
+    // Blocks of type gamelab_allSpritesWithAnimation have an input with one field (the costume
+    // picker dropdown).
     return (
       targetConnection.sourceBlock_.inputList[0].fieldRow[0].imageElement_.getAttribute(
         'xlink:href'
