@@ -8,6 +8,7 @@ import PaneHeader, {
 } from '@cdo/apps/templates/PaneHeader';
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import {RecordingFileType} from '../code-studio/components/recorders';
+import color from '@cdo/apps/util/color';
 
 export default function PreviewPaneHeader({
   isCollapsed,
@@ -22,7 +23,12 @@ export default function PreviewPaneHeader({
       <PaneSection className={'pane-header-section pane-header-section-left'}>
         <PaneButton
           headerHasFocus
-          icon={<CollapserIcon isCollapsed={isCollapsed} />}
+          icon={
+            <CollapserIcon
+              isCollapsed={isCollapsed}
+              style={styles.collapserIcon}
+            />
+          }
           onClick={toggleVisualizationCollapsed}
           label=""
           isRtl={false}
@@ -89,5 +95,8 @@ const styles = {
     ':hover': {
       backgroundColor: 'transparent',
     },
+  },
+  collapserIcon: {
+    color: color.white,
   },
 };
