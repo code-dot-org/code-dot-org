@@ -51,12 +51,6 @@ import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
-<<<<<<< HEAD
-import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
-=======
-import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
-import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
->>>>>>> 36576271c28 (initialize modal function editor with separate procedure model/workspace)
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
 import {
