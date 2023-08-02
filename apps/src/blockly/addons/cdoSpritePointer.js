@@ -72,10 +72,11 @@ function getImageUrlFromImageSource(imageSourceBlock, imageIndexOnSource) {
   if (
     targetConnection &&
     targetConnection.sourceBlock_ &&
+    targetConnection.sourceBlock_.type === 'gamelab_allSpritesWithAnimation' &&
     !targetConnection.sourceBlock_.isInsertionMarker()
   ) {
     return (
-      targetConnection.sourceBlock_.inputList[0]?.fieldRow[0]?.imageElement_?.getAttribute(
+      targetConnection.sourceBlock_.inputList[0].fieldRow[0].imageElement_.getAttribute(
         'xlink:href'
       ) || ''
     );
