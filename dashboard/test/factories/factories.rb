@@ -1771,6 +1771,7 @@ FactoryBot.define do
   end
 
   factory :learning_goal do
+    association :rubric
     sequence(:key) {|n| "lg_#{n}"}
     position {0}
     learning_goal {"Test Learning Goal"}
