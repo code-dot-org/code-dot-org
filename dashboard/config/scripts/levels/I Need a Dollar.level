@@ -10,23 +10,224 @@
     "hide_share_and_remix": "false",
     "level_data": {
       "library": "dollar",
-      "text": "Base Mix",
+      "text": "__I Need a Dollar__\nBase Mix",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
           "blocks": [
             {
-              "type": "when_run_simple2",
-              "x": 190,
-              "y": 90
-            }
-          ],
-          "variables": [
-            {
-              "name": "currentTime"
+              "type": "procedures_defnoreturn",
+              "id": "^1I:u=Q6}xU|OMR]QW/W",
+              "x": 230,
+              "y": 50,
+              "extraState": {
+                "procedureId": "%CsUH#OmwTE$9^${T3ZX"
+              },
+              "fields": {
+                "NAME": "vocals"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "id": "play-sound-block",
+                    "fields": {
+                      "sound": "i_need_a_dollar_aloe_blacc/i_need_a_dollar_1"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "O8`adYXj9vv6m#oQD=gy",
+                        "fields": {
+                          "sound": "i_need_a_dollar_aloe_blacc/i_need_a_dollar_2"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "x?3@71d16D5mTAAd~vbB",
+                            "fields": {
+                              "sound": "i_need_a_dollar_aloe_blacc/i_need_a_dollar_3"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "TAd1.e(OixOVgxyCmx)u",
+                                "fields": {
+                                  "sound": "i_need_a_dollar_aloe_blacc/share_with_you"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             },
             {
-              "name": "i"
+              "type": "procedures_defnoreturn",
+              "id": "X*;A`+2F@h2*^RDMSwx:",
+              "x": 690,
+              "y": 30,
+              "extraState": {
+                "procedureId": "?yoPto^VJvU}bvUzo~bv"
+              },
+              "fields": {
+                "NAME": "backup"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "repeat_simple2",
+                    "id": "BLui6uz4V_{(0@Xp6W$B",
+                    "fields": {
+                      "times": 2
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "Zz*odIOHb4q#X$VqhZy!",
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "ibUnDXI[aOgf{[7x[/m6",
+                                "fields": {
+                                  "sound": "i_need_a_dollar_aloe_blacc/drums_1"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "Bem6:p6~R27BWVUiHh%{",
+                                    "fields": {
+                                      "sound": "i_need_a_dollar_aloe_blacc/piano_1"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": ";6VV+}{A%Z!}5U%fsG)S",
+                                        "fields": {
+                                          "sound": "i_need_a_dollar_aloe_blacc/bass_1"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "(?;be)-2qLH6|[UFGQHT",
+              "x": 410,
+              "y": 250,
+              "extraState": {
+                "procedureId": "GYC#Dg4VFu0HNDcBq:)9"
+              },
+              "fields": {
+                "NAME": "hey hey"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "repeat_simple2",
+                    "id": ".UwoVN%@MEnLcbuJ?sJJ",
+                    "fields": {
+                      "times": 2
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_rest_at_current_location_simple2",
+                          "id": "(f#}5)M|~AOstN/qq[f(",
+                          "fields": {
+                            "rest_duration": "<field name=\"rest_duration\">1</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "Goja/*t)4}sH}d*C0?}^",
+                              "fields": {
+                                "sound": "i_need_a_dollar_aloe_blacc/hey_hey"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "when_run_simple2",
+              "id": "*+!=@+i`ETr:}_lA=S!E",
+              "x": 30,
+              "y": 30,
+              "next": {
+                "block": {
+                  "type": "procedures_callnoreturn",
+                  "id": "%({d~e*Ke[_sGE(wD;Wd",
+                  "extraState": {
+                    "name": "backup"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "g4/E.FB7IJeL8?aH8S}(",
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "procedures_callnoreturn",
+                            "id": "{/4E5N|KANw~8M@ri4:6",
+                            "extraState": {
+                              "name": "vocals"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "procedures_callnoreturn",
+                                "id": "PlhFh{K~M#pc/uB{D;oX",
+                                "extraState": {
+                                  "name": "hey hey"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "repeat_simple2",
+                                    "id": "E!)3i2{bPKx{U+t_ie-T",
+                                    "fields": {
+                                      "times": 2
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "procedures_callnoreturn",
+                                          "id": "lfut)JWI-{wp_N4~xY]9",
+                                          "extraState": {
+                                            "name": "backup"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           ]
         }
@@ -34,7 +235,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2023-07-31 19:48:26 +0000\",\"changed\":[\"published\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-07-31 19:48:26 +0000\",\"changed\":[\"published\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-02 03:20:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-02 03:22:38 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-02 04:19:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-02 04:19:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

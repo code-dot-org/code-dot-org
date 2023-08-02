@@ -1,0 +1,82 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-08-01T16:21:50.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Create a scene that draws the logos of basketball teams based on the number of championship wins they have.\r\n\r\n##In BasketballScene.java:\r\n\r\n1. Write the `chooseSize()`(#e7e8ea) method using multi-selection statements to check the number of championship wins and return the size to draw the image.\r\n\r\n   * If the number of wins is greater than `10`(#e7e8ea), return a size of `150`(#e7e8ea).\r\n   \r\n   * Else if the number of wins is greater than or equal to `5`(#e7e8ea), return a size of `100`(#e7e8ea).\r\n   \r\n   * Otherwise, return a size of `50`(#e7e8ea).\r\n\r\n##In MyTheater.java:\r\n\r\n2. Call the `createScene()`(#e7e8ea) method with the array.\r\n\r\n3. Use `Theater.playScenes()`(#e7e8ea) to play the scene.\r\n\r\n::: details [**Show Me How**]\r\nA multi-selection statement uses the following syntax:\r\n  \r\n  ```\r\n  if (condition) {\r\n    // code to execute\r\n  }\r\n  else if (condition) {\r\n    // code to execute\r\n  }\r\n  else {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nYou can have more than one `else if`(#e7e8ea) if you have additional conditions you need to check.\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    FileReader myFileReader = new FileReader(\"logos.txt\");\n    String[] logos = myFileReader.getStringData(30);\n\n    myFileReader.setFile(\"wins.txt\");\n    int[] wins = myFileReader.getIntData(30);\n\n    BasketballScene myScene = new BasketballScene(logos, wins);\n\n    // TO DO #2: Call the createScene() method.\n\n\n    // TO DO #3: Use Theater.playScenes() to play the scene.\n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\n/*\n * Reads data from a file\n */\npublic class FileReader {\n\n  private Scanner fileReader;   // The Scanner object to read the file\n  private File myFile;          // The File object containing the data\n\n  /*\n   * Constructor to create a FileReader with\n   * the specified filename to read\n   */\n  public FileReader(String filename) {\n    setFile(filename);\n  }\n\n  /*\n   * Sets the file to the specified filename\n   */\n  public void setFile(String filename) {\n    myFile = new File(filename);\n    fileReader = createScanner(myFile);\n  }\n\n  /*\n   * Returns a Scanner object to read the file\n   * or notifies the user if the file is not found\n   */\n  public Scanner createScanner(File theFile) {\n    Scanner tempScanner = null;\n\n    try {\n      tempScanner = new Scanner(theFile);\n    } catch(FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n\n    return tempScanner;\n  }\n\n  /*\n   * Returns an int array containing the values in the file\n   */\n  public int[] getIntData(int numValues) {\n    int[] values = new int[numValues];\n    \n    for (int index = 0; index < values.length; index++) {\n      if (fileReader.hasNextInt()) {\n        values[index] = fileReader.nextInt();\n      }\n    }\n\n    fileReader.close();\n    return values;\n  }\n\n  /*\n   * Returns a double array containing the values in the file\n   */\n  public double[] getDoubleData(int numValues) {\n    double[] values = new double[numValues];\n    \n    for (int index = 0; index < values.length; index++) {\n      if (fileReader.hasNextDouble()) {\n        values[index] = fileReader.nextDouble();\n      }\n    }\n\n    fileReader.close();\n    return values;\n  }\n\n  /*\n   * Returns a String array containing the values in the file\n   */\n  public String[] getStringData(int numValues) {\n    String[] values = new String[numValues];\n\n    for (int index = 0; index < values.length; index++) {\n      if (fileReader.hasNextLine()) {\n        values[index] = fileReader.nextLine();\n      }\n    }\n\n    fileReader.close();\n    return values;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "BasketballScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * A scene visualizing the number of championship wins\n * for each basketball team\n */\npublic class BasketballScene extends Scene {\n\n  private String[] logos;             // The list of basketball team logos\n  private int[] championships;        // The list of championship wins\n\n  /*\n   * Constructor to create a BasketballScene with the\n   * specified arrays of logos and championship wins\n   */\n  public BasketballScene(String[] logos, int[] championships) {\n    this.logos = logos;\n    this.championships = championships;\n  }\n\n  /*\n   * Return the size to draw the image based on\n   * the number of championship wins\n   */\n  public int chooseSize(int numWins) {\n    int size = 0;\n\n    // TO DO #1: Check the number of championship wins and\n    // decide the image size to use based on the value.\n    \n\n    return size;\n  }\n\n  /*\n   * Creates the scene by drawing each team logo based\n   * on the number of championship wins they have\n   */\n  public void createScene() {    \n    for (int i = 0; i < championships.length; i++) {\n      int x = (int) (Math.random() * getWidth());\n      int y = (int) (Math.random() * getHeight());\n      int size = chooseSize(championships[i]);\n      drawImage(logos[i], x, y, size);\n    }\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "logos.txt": {
+        "text": "bostonceltics.png\nbrooklynnets.png\nnewyorkknicks.png\nphiladelphia76ers.png\ntorontoraptors.png\nchicagobulls.png\nclevelandcavaliers.png\ndetroitpistons.png\nindianapacers.png\nmilwaukeebucks.png\natlantahawks.png\ncharlottehornets.png\nmiamiheat.png\norlandomagic.png\nwashingtonwizards.png\ndenvernuggets.png\nminnesotatimberwolves.png\nokcthunder.png\nportlandtrailblazers.png\nutahjazz.png\ngoldenstatewarriors.png\nlosangelesclippers.png\nlalakers.png\nphoenixsuns.png\nsacramentokings.png\ndallasmavericks.png\nhoustonrockets.png\nmemphisgrizzlies.png\nneworleanspelicans.png\nsanantoniospurs.png",
+        "isVisible": true,
+        "tabOrder": 3
+      },
+      "wins.txt": {
+        "text": "17\n0\n2\n3\n1\n6\n1\n3\n0\n1\n1\n0\n3\n0\n1\n0\n0\n1\n1\n0\n6\n0\n16\n0\n1\n1\n2\n0\n0\n5",
+        "isVisible": true,
+        "tabOrder": 4
+      }
+    },
+    "display_name": "NBA Teams",
+    "bubble_choice_description": "Draw the logos for each NBA team based on the number of championship wins they have.",
+    "thumbnail_url": "https://images.code.org/4c3552b00321d044c4c44408ddc5af8c-image-1650719208107.png",
+    "starter_assets": {
+      "bostonceltics.png": "8d0c4cbc-ad44-4fec-b5bb-ea75a2f11845.png",
+      "brooklynnets.png": "4ed2f12b-25bb-4a1f-a1a6-de3088a6b146.png",
+      "newyorkknicks.png": "973a488c-6506-49e4-b5db-0a1e6307783e.png",
+      "philadelphia76ers.png": "b62ef4ce-20e5-4fd2-a0f8-267612e24c44.png",
+      "torontoraptors.png": "201e2e9f-e591-4ab2-a109-371d1d080bb7.png",
+      "chicagobulls.png": "9c45f74b-e082-4eb0-8d70-b6404302a567.png",
+      "clevelandcavaliers.png": "0e990edc-33d4-44b7-9777-06bd84338265.png",
+      "detroitpistons.png": "5467cc09-9161-4d50-bb27-570488cf97fe.png",
+      "indianapacers.png": "fb42d121-fcdd-477c-9b32-9dcad075b3f8.png",
+      "milwaukeebucks.png": "eed23b47-9443-463d-9a7a-95fc668860f1.png",
+      "atlantahawks.png": "089bc0ba-0a70-44b4-a2a9-bf770714f94f.png",
+      "charlottehornets.png": "7307b9a1-b9cb-4af1-bf4b-11b2f45074fd.png",
+      "miamiheat.png": "4c8a15cd-0413-4c84-9ae7-5ae5f4af0434.png",
+      "orlandomagic.png": "55a8642f-355b-4f35-8679-dcc2725869aa.png",
+      "washingtonwizards.png": "7491cdfa-9f32-4b15-9ff4-c10953d35bf9.png",
+      "denvernuggets.png": "3c713d8e-7e68-483e-855c-af30a287d90e.png",
+      "minnesotatimberwolves.png": "8c54f077-9c64-4a63-b143-a740aecd24bd.png",
+      "okcthunder.png": "19419a54-8649-48b8-8b21-536a523e548b.png",
+      "portlandtrailblazers.png": "06937393-537f-4aa6-b4c4-f326baeec984.png",
+      "utahjazz.png": "67b4e79a-aae9-4c3e-b1dd-498f85971a63.png",
+      "goldenstatewarriors.png": "f06c5338-5b48-45a1-91fb-ccdd990a289f.png",
+      "losangelesclippers.png": "9a53038a-651e-486e-bec0-324d68044fc5.png",
+      "lalakers.png": "22e61a3c-bcde-4f80-b4e9-983511257d1d.png",
+      "phoenixsuns.png": "65dee8d5-28c7-4479-a837-d457a947d738.png",
+      "sacramentokings.png": "d5b6b861-8036-4f0e-a55a-cf35dc37fdbe.png",
+      "dallasmavericks.png": "f98ff3e0-e9ba-48db-a38d-fa35b55f3844.png",
+      "houstonrockets.png": "f7643790-2edb-4ffc-89a6-62c06a7a92b9.png",
+      "memphisgrizzlies.png": "e5115728-8b77-42fb-848f-9beba94cec64.png",
+      "neworleanspelicans.png": "34dd1e64-8e4a-4d2f-a3f3-9c895d807e48.png",
+      "sanantoniospurs.png": "b90c5bbd-2602-4a9d-ac10-fd2d12da00db.png"
+    },
+    "encrypted_exemplar_sources": "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\nDQCr1Gg0nQ==\n",
+    "name_suffix": "_2023"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-08-01T16:21:50.423+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L3b_2022\\\"\"],\"cloned_from\":\"CSA U4L10-L3b_2022\"}]"
+}]]></config>
+</Javalab>
