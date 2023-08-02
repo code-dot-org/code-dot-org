@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2023-08-01T17:51:05.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "instructions_important": "false",
+    "long_instructions": "# Check In\r\n\r\n**Suggested Time: 5 minutes**\r\n\r\n## Personal Reflection\r\n\r\nTake a couple of minutes to reflect on the following topics.  You may want to use your journal to write down thoughts you want to focus on or return to during the workshop. \r\n\r\n* **Topics from the last workshop**\r\n\t* How has your role as the teacher shifted and changed as you have implemented various aspects of the course?\r\n\t* How are your students doing with applying the debugging process to programming?\r\n* **In general**\r\n\t* What adaptations have you made for your student's needs?\r\n* **What's on your mind?**\r\n\t* What concerns or issues do you have about the topics that are coming up soon?\r\n    \r\n##Shared Reflection\r\n\r\nChoose one of the reflections topics from above, and share your reflection below.  Your response will be visible to your facilitators, but not to other participants.\r\n\r\n* Topics from the last workshop\r\n* In general\r\n* What's on your mind?\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24370,
+    "name_suffix": "_2023",
+    "allow_multiple_attempts": "true"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-08-01T17:51:05.255+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD M3 Check-in_2022\\\"\"],\"cloned_from\":\"VPL - CSD M3 Check-in_2022\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
