@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-31 23:07:48 UTC",
+    "serialized_at": "2023-08-01 19:55:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3361,7 +3361,7 @@
       }
     },
     {
-      "name": "CSP U10L07 - Optional Podcast Transcripts",
+      "name": "CSP U8L6 - Optional Podcast Transcripts",
       "url": "https://docs.google.com/document/d/1tszGwxqqQhlCrG03rt6CwT5udU7rDdOWJtjgYN0Ad-w/edit?usp=sharing",
       "key": "csp_u10l07_-_optional_podcast_transcripts",
       "properties": {
@@ -3375,7 +3375,7 @@
     },
     {
       "name": "CSP Innovation Simulation Project Overview",
-      "url": "https://docs.google.com/document/d/105rBn4_ylOlRWmgxvQdMjo8v0Iwrg3Aw-9vPIVsAYpc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1u90WHeb0IBcWZDe3agEyAjUPOotHla8MpPcB_0jlwQA/edit?usp=sharing",
       "key": "csp_unit_10_project_overview",
       "properties": {
         "audience": "Teacher",
@@ -3400,7 +3400,7 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 11 - Project: Innovation Simulation Part 5",
+      "name": "CSP Unit 8 - Lesson 10 - Project: Innovation Simulation Part 4",
       "url": "https://docs.google.com/presentation/d/1eddAzjMCA_uVc_DlMXPZZkNs-4d4nh-gK4yR41XpTpk/copy",
       "key": "csp_unit_8_-_lesson_11_-_project_innovation_simulation_part_5",
       "properties": {
@@ -3452,7 +3452,7 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 4 - The Value of Privacy",
+      "name": "CSP Unit 8 - Lesson 3 - The Value of Privacy",
       "url": "https://docs.google.com/presentation/d/1_d9JATEfx3UEhpKWA10HfIK0HrdBDl62p9-DJ028peQ/copy",
       "key": "csp_unit_8_-_lesson_4_-_the_value_of_privacy",
       "properties": {
@@ -3465,7 +3465,7 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 5 - Project: Innovation Simulation Part 3",
+      "name": "CSP Unit 8 - Lesson 4 - Project: Innovation Simulation Part 2",
       "url": "https://docs.google.com/presentation/d/1NQm12j4Bk7XsZczgZbTDuSVM8we-S4vnHYyjZY-UUro/copy",
       "key": "csp_unit_8_-_lesson_5_-_project_innovation_simulation_part_3",
       "properties": {
@@ -3491,7 +3491,7 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 7 - Security Risks Part 2",
+      "name": "CSP Unit 8 - Lesson 6 - Security Risks Part 2",
       "url": "https://docs.google.com/presentation/d/1SgM-bQorufulv8cXUPa-ZN082RHO0DWlktc2hlK1IwY/copy",
       "key": "csp_unit_8_-_lesson_7_-_security_risks_part_2",
       "properties": {
@@ -3504,7 +3504,7 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 8 - Project: Innovation Simulation Part 4",
+      "name": "CSP Unit 8 - Lesson 7 - Project: Innovation Simulation Part 3",
       "url": "https://docs.google.com/presentation/d/1bApf23hj78Pg_4dqArZ5vwdNwJT6TRxZjYX6J2mEt0g/copy",
       "key": "csp_unit_8_-_lesson_8_-_project_innovation_simulation_part_4",
       "properties": {
@@ -3517,7 +3517,7 @@
       }
     },
     {
-      "name": "CSP Unit 8 - Lesson 9 - Protecting Data Part 1",
+      "name": "CSP Unit 8 - Lesson 8 - Protecting Data Part 1",
       "url": "https://docs.google.com/presentation/d/13UxFNpOXcnrANeMBynFLC2XyAK7fzHN5_Gg8ZKSMddc/copy",
       "key": "csp_unit_8_-_lesson_9_-_protecting_data_part_1",
       "properties": {

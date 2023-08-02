@@ -1,0 +1,27 @@
+name 'VPL - CSD U6 Chapter 1 Project_2023'
+title 'Create Your Own Game'
+display_name 'Design Your Game'
+description 'description here'
+href 'path/to/html/in/asset/folder'
+markdown <<MARKDOWN
+# Physical Computing - End of Chapter 1 Project
+## Lesson 10: Project:  Human Device Interaction
+**Estimated time: 20 minutes**
+
+Physical Computing, Chapter 1 ends with Lesson 10 in which students develop an app of their own design that uses the Circuit Playground so it interacts with the physical environment around it.  Students have the opportunity to show what they've learned throughout Chapter 1 (event handlers, using the Circuit Playground as output, etc).
+
+
+## Explore Physical Computing - Chapter 1 Project Resources
+
+* Review the lesson plan, <a href="https://studio.code.org/s/csd6-2022/lessons/10" target="_blank">Lesson 10: Project - Human Device Interaction</a>
+
+	* Focus on the project resources included:
+    	* rubric
+        * CS practices reflection
+        * project guide
+        * sample marked rubrics
+        	* <a href="https://docs.google.com/document/d/1GqR49vQTEirALh2c7pIDoGugJD3WqX-sEYygPQ2vlhQ/view" target="_blank">Unit 6 Chapter 1 Project student rubric</a> 
+
+* Preview the code used to program the Circuit Playground required for this project.
+
+MARKDOWN
