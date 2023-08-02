@@ -63,9 +63,7 @@ class Ability
       Foorm::LibraryQuestion,
       :javabuilder_session,
       CodeReview,
-      Rubric,
-      LearningGoal,
-      LearningGoalEvidenceLevel
+      Rubric
     ]
     cannot :index, Level
 
@@ -411,9 +409,7 @@ class Ability
         Foorm::Form,
         Foorm::Library,
         Foorm::LibraryQuestion,
-        Rubric,
-        LearningGoal,
-        LearningGoalEvidenceLevel
+        Rubric
       ]
 
       # Only custom levels are editable.
