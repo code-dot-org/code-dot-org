@@ -20,9 +20,9 @@ export function getPointerBlockImageUrl(
     return '';
   }
   let imageSource = undefined;
-  // const mainWorkspace = Blockly.getMainWorkspace();
+  const mainWorkspace = Blockly.getMainWorkspace();
   if (imageSourceId !== undefined) {
-    imageSource = Blockly.getMainWorkspace().getBlockById(imageSourceId);
+    imageSource = mainWorkspace.getBlockById(imageSourceId);
   }
   if (!imageSource) {
     const rootBlock = block.getRootBlock();
@@ -34,9 +34,7 @@ export function getPointerBlockImageUrl(
       // it is a in a mini toolbox. A block can't be moved from one flyout to
       // another, so if it's in a flyout, it is in its original flyout.
       if (blockWorkspace && blockWorkspace.isFlyout && block.imageSourceId) {
-        imageSource = Blockly.getMainWorkspace().getBlockById(
-          block.imageSourceId
-        );
+        imageSource = mainWorkspace.getBlockById(block.imageSourceId);
       }
     }
   }

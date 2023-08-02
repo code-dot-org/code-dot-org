@@ -299,10 +299,10 @@ const customInputTypes = {
         spriteLabPointers
       );
       const width = imageUrl.length > 0 ? block.thumbnailSize : 1;
-      const firstField =
+      const firstLabel =
         imageUrl.length > 0 ? block.shortString : block.longString;
       currentInputRow
-        .appendField(firstField)
+        .appendField(firstLabel)
         .appendField(
           new Blockly.FieldImage(imageUrl, width, block.thumbnailSize),
           inputConfig.name
