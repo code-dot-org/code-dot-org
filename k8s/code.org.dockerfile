@@ -12,12 +12,18 @@ FROM $CODE_ORG_DB_SEED as code.org-db-seed
 FROM ubuntu:22.04 as code.org-base
 ################################################################################
 
-ENV \
+
+ARG \
   USERNAME=code.org \
-  AWS_PROFILE=cdo \
+  UID=1000 \
+  GID=1000 \
   NODE_VERSION=18.16.0 \
   YARN_VERSION=1.22.19 \
   SRC="/code-dot-org"
+
+ENV \
+  AWS_PROFILE=cdo \
+  SRC=${SRC}
 
 RUN \
   # Ideally install all apt packages here
@@ -62,13 +68,14 @@ RUN \
   # 
   # Setup 'code.org' user and group
   echo "${USERNAME} ALL=NOPASSWD: ALL" >> /etc/sudoers && \
-  groupadd -g 1000 ${USERNAME} && \
-  useradd --system --create-home --no-log-init -s /bin/zsh -u 1000 -g 1000 ${USERNAME} && \
+  groupadd -g ${UID} ${USERNAME} && \
+  useradd --system --create-home --no-log-init -s /bin/zsh -u ${UID} -g ${UID} ${USERNAME} && \
+  # FIXME: why did I do this?
   chown -R ${USERNAME} /usr/local && \
   #
   # Create ${SRC} directory
   mkdir -p ${SRC} && \
-  chown ${USERNAME} ${SRC} && \
+  chown ${UID}:${GID} ${SRC} && \
   true
 
 USER ${USERNAME}
@@ -79,7 +86,7 @@ WORKDIR ${SRC}
 FROM code.org-base as code.org-rbenv
 ################################################################################
 
-COPY --chown=${USERNAME} \
+COPY --chown=${UID} \
   .ruby-version \
   ./
 
@@ -89,7 +96,7 @@ RUN \
   rbenv install && \
   true
 
-COPY --chown=${USERNAME} \
+COPY --chown=${UID} \
   Gemfile \
   Gemfile.lock \
   ./
@@ -167,12 +174,12 @@ WORKDIR ${SRC}
 FROM code.org-user-utils as code.org-node_modules
 ################################################################################
 
-COPY --chown=${USERNAME} \
+COPY --chown=${UID} \
   ./apps/package.json \
   ./apps/yarn.lock \
   ./apps/
 
-COPY --chown=${USERNAME} \
+COPY --chown=${UID} \
   ./apps/eslint \
   ./apps/eslint/
 
@@ -219,7 +226,7 @@ COPY --chown=${USERNAME} --link \
   ${HOME}/.rbenv
 
 # Copy in the rest of the source code
-COPY --chown=${USERNAME} --link ./ ./
+COPY --chown=${UID} --link ./ ./
 
 # These are only required for installing Apple Silicon hack workarounds from code.org-rbenv
 COPY --from=code.org-rbenv ${SRC}/.bundle ${SRC}/.bundle
