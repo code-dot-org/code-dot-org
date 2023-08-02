@@ -62,7 +62,10 @@ class Ability
       Foorm::Library,
       Foorm::LibraryQuestion,
       :javabuilder_session,
-      CodeReview
+      CodeReview,
+      Rubric,
+      LearningGoal,
+      LearningGoalEvidenceLevel
     ]
     cannot :index, Level
 
@@ -187,6 +190,14 @@ class Ability
         end
 
         can_view_as_user_for_code_review
+      end
+
+      can :read, Rubric do |rubric|
+        if user.teacher?
+          user.has_pilot_experiment?('ai-ta-rubrics') && can?(:read, rubric.lesson)
+        else
+          user.sections_as_student.reject(&:hidden).any? {|s| s.unit_group.name == 'csd-2022' && Ability.new(s.teacher).can?(:read, rubric)}
+        end
       end
 
       if user.teacher?
@@ -400,6 +411,9 @@ class Ability
         Foorm::Form,
         Foorm::Library,
         Foorm::LibraryQuestion,
+        Rubric,
+        LearningGoal,
+        LearningGoalEvidenceLevel
       ]
 
       # Only custom levels are editable.

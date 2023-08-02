@@ -9,7 +9,8 @@ class AbilityTest < ActiveSupport::TestCase
     end
 
     @public_teacher_to_student_unit = create(:script, name: 'teacher-to-student', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
-      @public_teacher_to_student_script_level = create(:script_level, script: script)
+      @public_teacher_to_student_lesson = create(:lesson, script: script)
+      @public_teacher_to_student_script_level = create(:script_level, script: script, lesson: @public_teacher_to_student_lesson)
     end
 
     @public_facilitator_to_teacher_unit = create(:script, name: 'facilitator-to-teacher', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
@@ -941,6 +942,43 @@ class AbilityTest < ActiveSupport::TestCase
   test 'user without AI_CHAT_ACCESS cannot access Open AI chat completion endpoint' do
     levelbuilder = create :levelbuilder
     refute Ability.new(levelbuilder).can? :chat_completion, :openai_chat
+  end
+
+  test 'teacher with pilot experiment can view rubrics' do
+    rubric = create :rubric, lesson: @public_teacher_to_student_lesson, level: @public_teacher_to_student_script_level.levels[0]
+    teacher = create :teacher
+    create :single_user_experiment, min_user_id: teacher.id, max_user_id: teacher.id, name: 'ai-ta-rubrics'
+    assert Ability.new(teacher).can? :read, rubric
+    refute Ability.new(teacher).can? :edit, rubric
+  end
+
+  test 'teacher without pilot experiment cannot view rubrics' do
+    rubric = create :rubric, lesson: @public_teacher_to_student_lesson, level: @public_teacher_to_student_script_level.levels[0]
+    teacher = create :teacher
+
+    refute teacher.has_pilot_experiment?('ai-ta-rubrics')
+    refute Ability.new(teacher).can? :read, rubric
+    refute Ability.new(teacher).can? :edit, rubric
+  end
+
+  test 'any levelbuilder can manage rubrics' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    levelbuilder = create :levelbuilder
+    refute levelbuilder.has_pilot_experiment?('ai-ta-rubrics')
+    assert Ability.new(levelbuilder).can? :manage, Rubric
+  end
+
+  test 'students in the section of a teacher with pilot experiment can view rubrics' do
+    teacher = create :teacher
+    create :single_user_experiment, min_user_id: teacher.id, max_user_id: teacher.id, name: 'ai-ta-rubrics'
+    student = create :student
+    unit_group = create :unit_group, name: 'csd-2022'
+    section = create :section, user: teacher, unit_group: unit_group
+    create :follower, section: section, student_user: student
+
+    rubric = create :rubric, lesson: @public_teacher_to_student_lesson, level: @public_teacher_to_student_script_level.levels[0]
+    assert Ability.new(student).can? :read, rubric
+    refute Ability.new(student).can? :edit, rubric
   end
 
   private
