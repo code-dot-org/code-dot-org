@@ -4,15 +4,15 @@ import {BodyTwoText, Heading1} from '@cdo/apps/componentLibrary/typography';
 import LearningGoalItem from './LearningGoalItem';
 import Button from '@cdo/apps/templates/Button';
 
-// TODO: After the MVP is done, consider how to handle stand-alone lessons/units
-export default function RubricsContainer({unitName, lessonNumber, levels}) {
+export default function RubricsContainer({
+  unitName,
+  lessonNumber,
+  levels,
+  rubric,
+}) {
   // note that the use of currentId here is temporary until we are connected to the data
   const [currentId, setCurrentId] = useState(1);
   const [learningGoalList, setLearningGoalList] = useState([{id: currentId}]);
-
-  // TODO: In the future we might want to filter this for "submittable" levels
-  //  "submittable" is in the properties of each level in the list.
-  const levelsForDropDownList = levels.map(level => level.name);
 
   const renderLearningGoalItems = learningGoalList.map(goal => (
     <LearningGoalItem
@@ -40,6 +40,8 @@ export default function RubricsContainer({unitName, lessonNumber, levels}) {
     });
   };
 
+  // TODO: In the future we might want to filter the levels in the dropdown for "submittable" levels
+  //  "submittable" is in the properties of each level in the list.
   return (
     <div>
       <Heading1>Create or modify your rubric</Heading1>
@@ -53,9 +55,9 @@ export default function RubricsContainer({unitName, lessonNumber, levels}) {
           required={true}
           onChange={() => console.log('dropdown changed')}
         >
-          {levelsForDropDownList.map(level => (
-            <option key={level} value={level}>
-              {level}
+          {levels.map(level => (
+            <option key={level.id} value={level.id}>
+              {level.name}
             </option>
           ))}
         </select>
@@ -87,6 +89,7 @@ RubricsContainer.propTypes = {
   unitName: PropTypes.string,
   lessonNumber: PropTypes.number,
   levels: PropTypes.array,
+  rubric: PropTypes.object,
 };
 
 const styles = {

@@ -432,7 +432,7 @@ class Lesson < ApplicationRecord
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
       lessonPath: get_uncached_show_path,
-      hasRubric: rubric ? true : false
+      rubric: rubric,
     }
   end
 
@@ -511,7 +511,7 @@ class Lesson < ApplicationRecord
   def summarize_for_rubric_edit
     {
       id: id,
-      unit: script.summarize_for_lesson_show,
+      unitName: script.title_for_display,
       lessonNumber: relative_position,
       lessonName: localized_name,
       levels: levels

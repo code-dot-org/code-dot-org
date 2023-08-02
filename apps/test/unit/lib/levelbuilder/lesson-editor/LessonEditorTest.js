@@ -378,12 +378,12 @@ describe('LessonEditor', () => {
   });
 
   it('should render "Add Rubric" button when hasRubric prop is false', () => {
-    const wrapper = createWrapper({hasRubric: false});
+    const wrapper = createWrapper({});
     expect(wrapper.find('.btn.add-rubric').text()).to.contain('Add Rubric');
   });
 
   it('should render "Edit Rubric" button when hasRubric prop is true', () => {
-    const wrapper = createWrapper({hasRubric: true});
+    const wrapper = createWrapper({rubricId: 9});
     expect(wrapper.find('.btn.add-rubric').text()).to.contain('Edit Rubric');
   });
 });

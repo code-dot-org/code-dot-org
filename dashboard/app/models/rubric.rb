@@ -21,4 +21,12 @@ class Rubric < ApplicationRecord
     my_lesson = seed_context.lessons.find {|l| l.id == lesson_id}
     my_lesson.seeding_key(seed_context)
   end
+
+  def summarize_for_rubric_edit
+    {
+      id: id,
+      lessonId: lesson_id,
+      levelId: level_id,
+    }
+  end
 end
