@@ -1,6 +1,6 @@
 class RubricsController < ApplicationController
   def edit
-    @lesson = Lesson.find_by(id: params[:id])
+    @rubric = Rubric.find_by(id: params[:id])
   end
 
   def new

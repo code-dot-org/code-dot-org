@@ -6,15 +6,17 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 // Note that I will need to pass some data in here (perhaps the id of the rubric)
 $(document).ready(() => {
   const lessonData = getScriptData('lessonData');
-  const unitName = lessonData.unit.displayName;
+  const unitName = lessonData.unitName;
   const lessonNumber = lessonData.lessonNumber;
   const levels = lessonData.levels;
+  const rubric = getScriptData('rubric');
 
   ReactDOM.render(
     <RubricsContainer
       unitName={unitName}
       lessonNumber={lessonNumber}
       levels={levels}
+      rubric={rubric}
     />,
     document.getElementById('form')
   );

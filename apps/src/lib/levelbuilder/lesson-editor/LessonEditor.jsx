@@ -36,7 +36,7 @@ class LessonEditor extends Component {
     initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
     initialLessonData: PropTypes.object,
     unitInfo: PropTypes.object,
-    hasRubric: PropTypes.bool,
+    rubricId: PropTypes.number,
 
     // from redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
@@ -135,6 +135,10 @@ class LessonEditor extends Component {
       });
   };
 
+  hasRubric = () => {
+    return !!this.props.rubricId;
+  };
+
   getLessonId = () => {
     return this.props.initialLessonData.id;
   };
@@ -167,7 +171,7 @@ class LessonEditor extends Component {
       standards,
       opportunityStandards,
       unitInfo,
-      hasRubric,
+      rubricId,
     } = this.props;
     const frameworks = this.props.initialLessonData.frameworks;
 
@@ -467,7 +471,7 @@ class LessonEditor extends Component {
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         </CollapsibleEditorSection>
-        {!hasRubric && (
+        {!this.hasRubric() && (
           <a
             className="btn add-rubric"
             style={styles.addRubric}
@@ -477,11 +481,11 @@ class LessonEditor extends Component {
             Add Rubric
           </a>
         )}
-        {hasRubric && (
+        {this.hasRubric() && (
           <a
             className="btn add-rubric"
             style={styles.addRubric}
-            href={'/rubrics/' + this.getLessonId() + '/edit'}
+            href={'/rubrics/' + rubricId + '/edit'}
           >
             <i style={styles.buttonText} className="fa fa-plus-circle" />
             Edit Rubric
