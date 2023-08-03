@@ -1,0 +1,44 @@
+.action-block__wrapper.action-block__wrapper--three-col
+  .action-block.action-block--one-col.flex-space-between
+    .content-wrapper
+      %p.overline
+        =hoc_s(:teachers_label)
+      %h3=hoc_s(:ai_pl_callout_title)
+      %img{src: "/shared/images/announcement/announcement_ai_pl_2023.png", alt: ""}
+      %p=hoc_s(:ai_pl_callout_desc_01)
+    .content-footer
+      %p
+        %strong=hoc_s(:module_label_duration)
+        -# =hoc_s(:module_duration_5_hrs)
+        5 hours
+      %a.link-button{href: "/ai/pl/101", aria:{label: hoc_s(:aria_label_call_to_action_ai_pl_101_videos)}}
+        =hoc_s(:call_to_action_watch_videos)
+  .action-block.action-block--one-col.flex-space-between
+    .content-wrapper
+      %p.overline
+        =hoc_s(:students_label)
+      %h3=hoc_s(:ai_curriculum_title_01)
+      %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: ""}
+      %p=hoc_s(:ai_curriculum_desc_01)
+    .content-footer
+      %p
+        %strong=hoc_s(:module_label_duration)
+        -# =hoc_s(:module_duration_20_hrs)
+        20 hours
+      %a.link-button{href: CDO.studio_url("/s/aiml"), aria:{label: hoc_s(:ai_curriculum_btn_aria_label_01)}}
+        =hoc_s(:call_to_action_explore_unit)
+  .action-block.action-block--one-col.flex-space-between
+    .content-wrapper
+      %p.overline
+        =hoc_s(:teachers_label)
+      -# %h3=hoc_s(:ai_pl_title)
+      %h3 Teaching AI and Machine Learning
+      %img{src: "/images/ai/ai-professional-learning.png", alt: ""}
+      -# %p=hoc_s(:ai_pl_desc)
+      %p Introduction to artificial intelligence and machine learning. Train a machine learning model using AI Lab. and engage with machine learning apps. Consider real-world implications of AI and machine learning.
+    .content-footer
+      %p
+        %strong=hoc_s(:module_label_duration)
+        =hoc_s(:module_duration_2_hrs)
+      %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-aiml-2023"), aria:{label: hoc_s(:aria_label_call_to_action_ai_teaching_module)}}
+        =hoc_s(:call_to_action_explore_module)
