@@ -123,6 +123,9 @@
   grade_level_label_middle: "Middle School"
   grade_level_label_high: "High School"
 
+  students_label: "Students"
+  teachers_label: "Teachers"
+
   teacher_label_csf: "CS Fundamentals Teacher"
   teacher_label_csd: "CS Discoveries Teacher"
   teacher_label_csp: "CS Principles Teacher"
@@ -140,6 +143,7 @@
   call_to_action_explore_curriculum_options: "Explore curriculum options"
   call_to_action_explore_lessons: "Explore lessons"
   call_to_action_explore_modules: "Explore modules"
+  call_to_action_explore_module: "Explore module"
   call_to_action_explore_workshops: "Explore workshops"
   call_to_action_explore_course: "Explore course"
   call_to_action_explore_courses: "Explore courses"
@@ -232,6 +236,8 @@
   aria_label_call_to_action_csf_course_d: "See Course D details"
   aria_label_call_to_action_csf_course_e: "See Course E details"
   aria_label_call_to_action_csf_course_f: "See Course F details"
+  aria_label_call_to_action_ai_pl_101_videos: "Watch AI 101 for Teachers videos"
+  aria_label_call_to_action_ai_teaching_module: "Explore the Teaching AI and Machine Learning module"
 
   video_title_professional_learning_program: "Code.org's Professional Learning Program"
 
@@ -546,7 +552,8 @@
   how_ai_works_lessons_heading: "AI lessons for your class"
   how_ai_works_lessons_in_a_day_title: "How AI Works in a Day"
   how_ai_works_lessons_in_a_day_desc: "Only have a day? There's also the option to introduce the whole series to students in a single day. Perfect for any subject-area teacher looking to introduce students to AI, or even for as a lesson for a guest teacher."
-  how_ai_works_lessons_in_a_day_desc_02: "Introduce all of the \"How AI Works\" videos in one day. Students follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. "
+  how_ai_works_lessons_in_a_day_desc_02: "Introduce all of the \"How AI Works\" videos in one day. Students follow along with each video by matching vocabulary from the video, then answering a reflection question about each video."
+  how_ai_works_resources_desc: "Interested in learning more about AI? Here are some additional resources that can help extend you and your students' learning."
 
   ai_vid_intro_caption: "Introducing How AI Works"
   ai_vid_chatbots_caption: "How Chatbots and Large Language Models Work"
