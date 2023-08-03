@@ -175,7 +175,7 @@ const CustomizableCurriculumCatalogCard = ({
     }
   };
   const handleQuickView = () => {
-    setIsExpandedCardDisplayed(true);
+    setIsExpandedCardDisplayed(!isExpandedCardDisplayed);
   };
 
   return (
