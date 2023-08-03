@@ -3,13 +3,13 @@ require_relative '../deployment'
 require_relative '../lib/cdo/mysql_console_helper'
 require 'uri'
 
-raise 'please define CDO.db_writer_endpoint' unless CDO.db_writer_endpoint
-
+raise 'please define CDO.db_credential_admin' unless CDO.db_credential_admin
+credentials = CDO.db_credential_admin
 db_connection_settings = URI::Generic.build(
   scheme: 'mysql',
-  userinfo: CDO.db_writer_user + ':' + CDO.db_writer_password,
-  host: CDO.db_writer_endpoint,
+  userinfo: credentials['username'] + ':' + credentials['password'],
+  host: CDO.db_endpoint_writer,
   port: 3306,
-  path: '/' + CDO.pegasus_db_name
+  path: '/'
 )
 MysqlConsoleHelper.run(db_connection_settings, ARGV.join(' ').strip)
