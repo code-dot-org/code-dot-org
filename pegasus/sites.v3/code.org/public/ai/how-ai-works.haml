@@ -35,20 +35,7 @@ theme: responsive_full_width
 %section#how-ai-works-lessons
   .wrapper
     %h2=hoc_s(:how_ai_works_lessons_heading)
-    .action-block__wrapper.action-block__wrapper--two-col
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline
-            =hoc_s(:ai_curriculum_grades_01)
-          %h3=hoc_s(:how_ai_works_lesson_title_01)
-          =view :display_video_thumbnail, id: "what_is_ml", video_code: "KHbwOetbmbs", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/ai_series/ai-02-machine-learning.mp4"
-          %p=hoc_s(:how_ai_works_lesson_desc_01)
-        .content-footer
-          %p
-            %strong=hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_45_mins)
-          %a.link-button{href: "https://youtu.be/3oqxjPXbynE", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
-            =hoc_s(:call_to_action_see_lesson_details)
+    = view :how_ai_works_lessons
 
 = view :section_divider_line
 
