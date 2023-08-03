@@ -119,11 +119,18 @@ export interface Condition {
   value?: string | number;
 }
 
+export interface ConditionType {
+  name: string;
+  hasValue: boolean;
+  valueType?: 'string' | 'number';
+}
+
 // Validation in the level.
 export interface Validation {
   conditions: Condition[];
   message: string;
   next: boolean;
+  key: string;
 }
 
 // TODO: these are not all the properties of app options.

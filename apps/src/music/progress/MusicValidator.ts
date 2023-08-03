@@ -1,18 +1,22 @@
 // Music Lab specific validations.
 
 import MusicPlayer from '../player/MusicPlayer';
-import {Condition} from '@cdo/apps/lab2/types';
+import {Condition, ConditionType} from '@cdo/apps/lab2/types';
 import ConditionsChecker from '@cdo/apps/lab2/progress/ConditionsChecker';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {Validator} from '@cdo/apps/lab2/progress/ProgressManager';
 
 export interface ConditionNames {
-  [key: string]: string;
+  [key: string]: ConditionType;
 }
 
-export const ConditionNamesList: ConditionNames = {
-  PLAYED_SOUNDS_TOGETHER: 'played_sounds_together',
-  PLAYED_SOUND_TRIGGERED: 'played_sound_triggered',
+export const MusicConditions: ConditionNames = {
+  PLAYED_SOUNDS_TOGETHER: {
+    name: 'played_sounds_together',
+    hasValue: true,
+    valueType: 'number',
+  },
+  PLAYED_SOUND_TRIGGERED: {name: 'played_sound_triggered', hasValue: false},
 };
 
 export default class MusicValidator extends Validator {
@@ -21,7 +25,7 @@ export default class MusicValidator extends Validator {
     private readonly getPlaybackEvents: () => PlaybackEvent[],
     private readonly player: MusicPlayer,
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
-      Object.values(ConditionNamesList)
+      Object.values(MusicConditions).map(condition => condition.name)
     )
   ) {
     super();
@@ -45,7 +49,7 @@ export default class MusicValidator extends Validator {
 
         if (eventData.triggered) {
           this.conditionsChecker.addSatisfiedCondition({
-            name: ConditionNamesList.PLAYED_SOUND_TRIGGERED,
+            name: MusicConditions.PLAYED_SOUND_TRIGGERED.name,
           });
         }
       }
@@ -62,7 +66,7 @@ export default class MusicValidator extends Validator {
     ) {
       if (currentNumberSounds >= numberSounds) {
         this.conditionsChecker.addSatisfiedCondition({
-          name: ConditionNamesList.PLAYED_SOUNDS_TOGETHER,
+          name: MusicConditions.PLAYED_SOUNDS_TOGETHER.name,
           value: currentNumberSounds,
         });
       }
