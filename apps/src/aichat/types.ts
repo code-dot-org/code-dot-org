@@ -8,10 +8,10 @@ export type AichatLocale = {
   [key: string]: () => string;
 };
 
-export type ChatMessage = {
-  id: string;
+export type ChatCompletionMessage = {
+  id: number;
   name: string;
   role: 'user' | 'assistant' | 'system';
   chatMessageText: string;
-  status: 'ok' | 'inappropriate' | 'personal';
+  status: 'ok' | 'inappropriate' | 'personal' | 'unknown';
 };
