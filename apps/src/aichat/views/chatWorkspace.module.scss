@@ -1,4 +1,4 @@
-$message-editor-height: 150px;
+$message-editor-height: 100px;
 $default-spacing: 2px;
 
 .chatWorkspace {
@@ -19,6 +19,7 @@ $default-spacing: 2px;
 }
 
 .userChatMessageEditor {
+    padding: 1% 1%;
     margin: 10px 2%;
     display: flex;
     flex-direction: column;
