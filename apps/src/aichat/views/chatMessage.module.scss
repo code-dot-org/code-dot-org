@@ -1,17 +1,17 @@
 @import 'color.scss';
 
 .message {
-    padding: 10px 12px;
+    padding: 10px 10px;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .userMessageContainer {
-    margin: 0 0 25px 50px;
+    margin: 0 0 15px 50px;
 }
 
 .assistantMessageContainer {
-    margin: 0 50px 25px 0;
+    margin: 0 50px 15px 0;
 }
 
 .userMessage {

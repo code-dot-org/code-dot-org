@@ -1,4 +1,4 @@
-$message-editor-height: 100px;
+$message-editor-height: 150px;
 $default-spacing: 2px;
 
 .chatWorkspace {
@@ -9,13 +9,21 @@ $default-spacing: 2px;
 }
 
 .conversationArea {
+    margin: 5px 2%;
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
     gap: $default-spacing;
     box-sizing: border-box;
+    overflow: scroll;
 }
 
 .userChatMessageEditor {
+    margin: 10px 2%;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: $message-editor-height;
     box-sizing: border-box;
+    overflow: scroll;
 }

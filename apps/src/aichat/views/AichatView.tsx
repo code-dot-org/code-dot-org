@@ -1,5 +1,5 @@
 import React from 'react';
-import moduleStyles from './aichat.module.scss';
+import moduleStyles from './aichatView.module.scss';
 import ChatWorkspace from './ChatWorkspace';
 
 const AichatView: React.FunctionComponent = () => {
