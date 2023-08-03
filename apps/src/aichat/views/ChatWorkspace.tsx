@@ -14,7 +14,7 @@ const getStoredMessages = () => {
   return demoChatMessages;
 };
 
-const onSubmit = (name: string, message: string) => {
+const onSubmit = async (name: string, message: string) => {
   console.log(`Submit button clicked with message: ${message}`);
 
   const storedMessages: ChatCompletionMessage[] = getStoredMessages();
@@ -50,7 +50,8 @@ const onSubmit = (name: string, message: string) => {
   const messagesToSend = [systemPromptMessage];
   storedMessages.forEach(message => messagesToSend.push(message));
   console.log(messagesToSend);
-  openaiCompletion(messagesToSend);
+  const response = await openaiCompletion(messagesToSend);
+  console.log(response);
 };
 
 const ChatWorkspace: React.FunctionComponent = () => {
