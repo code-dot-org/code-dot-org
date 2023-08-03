@@ -233,8 +233,10 @@ const CustomizableCurriculumCatalogCard = ({
                 color={Button.ButtonColor.neutralDark}
                 type="button"
                 href={pathToCourse}
-                aria-label={quickViewButtonDescription}
-                text={quickViewButtonText}
+                aria-label={i18n.quickViewDescription({
+                  course_name: courseDisplayName,
+                })}
+                text={i18n.learnMore()}
               />
             )}
             <Button
