@@ -1,11 +1,55 @@
 @use 'sass:math';
+@import 'phase1-design-system';
+
+$container-width: 634px;
 
 .expandedCardContainer {
   position: absolute;
   background-color: #f9f9f9;
   color: #333;
   border: 1px solid #ccc;
+  border-color: #333;
   border-radius: 4px;
   padding: 10px;
   z-index: 1;
+  width: $container-width;
+  height: 25em;
+  box-sizing: border-box;
+}
+
+.iconWithDescription {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5em;
+  margin: 0 0 0.5em 0;
+
+  > p {
+    font-size: 0.875em;
+    margin: 0;
+    color: $neutral_dark;
+  }
+
+  i {
+    font-size: 0.875em;
+  }
+}
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+}
+.expandedCardContainer:after {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  top: 3%;
+  left: 25%;
+  margin-left: -25px;
+  content: '';
+  transform: rotate(225deg);
+  margin-top: -25px;
+  background: #f9f9f9;
 }

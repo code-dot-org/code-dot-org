@@ -303,6 +303,7 @@ class CourseOffering < ApplicationRecord
 
   def summarize_for_catalog(locale_code = 'en-us')
     {
+      id: id,
       key: key,
       display_name: localized_display_name,
       display_name_with_latest_year: display_name_with_latest_year(locale_code),
@@ -318,7 +319,8 @@ class CourseOffering < ApplicationRecord
       course_offering_id: id,
       script_id: script_id,
       is_standalone_unit: standalone_unit?,
-      is_translated: translated?(locale_code)
+      is_translated: translated?(locale_code),
+      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
     }
   end
 

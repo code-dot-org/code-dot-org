@@ -175,7 +175,7 @@ const CustomizableCurriculumCatalogCard = ({
     }
   };
   const handleQuickView = () => {
-    setIsExpandedCardDisplayed(true);
+    setIsExpandedCardDisplayed(!isExpandedCardDisplayed);
   };
 
   return (
@@ -221,20 +221,20 @@ const CustomizableCurriculumCatalogCard = ({
           >
             {!!DCDO.get('quick-view', false) ? (
               <Button
+                color={Button.ButtonColor.neutralDark}
+                type="button"
+                onClick={handleQuickView}
+                aria-label={quickViewButtonDescription}
+                text={'Quick View'}
+              />
+            ) : (
+              <Button
                 __useDeprecatedTag
                 color={Button.ButtonColor.neutralDark}
                 type="button"
                 href={pathToCourse}
                 aria-label={quickViewButtonDescription}
                 text={quickViewButtonText}
-              />
-            ) : (
-              <Button
-                color={Button.ButtonColor.neutralDark}
-                type="button"
-                onClick={handleQuickView}
-                aria-label={quickViewButtonDescription}
-                text={'Quick View'}
               />
             )}
             <Button
@@ -248,7 +248,14 @@ const CustomizableCurriculumCatalogCard = ({
         </div>
       </div>
       {isAssignDialogOpen && renderAssignDialog()}
-      {isExpandedCardDisplayed && <ExpandedCurriculumCatalogCard />}
+      {isExpandedCardDisplayed && (
+        <ExpandedCurriculumCatalogCard
+          courseDisplayName={courseDisplayName}
+          duration={duration}
+          gradeRange={gradeRange}
+          subjectsAndTopics={subjectsAndTopics}
+        />
+      )}
     </div>
   );
 };
