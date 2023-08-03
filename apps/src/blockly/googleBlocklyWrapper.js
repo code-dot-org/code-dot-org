@@ -54,7 +54,8 @@ import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
-import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
+import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
+import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
 import {
@@ -668,13 +669,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const trashcan = new CdoTrashcan(workspace);
     trashcan.init();
 
-    if (options.useModalFunctionEditor) {
-      // Customize auto-populated Functions toolbox category.
-      workspace.registerToolboxCategoryCallback(
-        'PROCEDURE',
-        functionsFlyoutCategory
-      );
-    }
+    // Customize auto-populated Functions toolbox category.
+    workspace.registerToolboxCategoryCallback(
+      'PROCEDURE',
+      functionsFlyoutCategory
+    );
+
+    // Customize auto-populated Behaviors toolbox category.
+    workspace.registerToolboxCategoryCallback(
+      'Behavior',
+      behaviorsFlyoutCategory
+    );
 
     return workspace;
   };

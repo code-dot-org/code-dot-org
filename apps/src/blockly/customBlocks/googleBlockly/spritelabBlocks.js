@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import {SVG_NS} from '@cdo/apps/constants';
 import Button from '@cdo/apps/templates/Button';
+import {blocks as behaviorBlocks} from './behaviorBlocks';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 
@@ -117,6 +118,20 @@ export const blocks = {
         // Coerce string to Boolean
         xmlElement.getAttribute('useDefaultIcon') === 'true';
       flyoutToggleButton.setIcon(useDefaultIcon);
+    };
+  },
+
+  installBehaviorBlocks() {
+    Blockly.common.defineBlocks(behaviorBlocks);
+
+    const generator = Blockly.getGenerator();
+    generator.behavior_definition = generator.procedures_defnoreturn;
+    generator.gamelab_behavior_get = function () {
+      const name = Blockly.JavaScript.nameDB_.getName(
+        this.getFieldValue('NAME'),
+        'PROCEDURE'
+      );
+      return [`new Behavior(${name}, [])`, Blockly.JavaScript.ORDER_ATOMIC];
     };
   },
 };

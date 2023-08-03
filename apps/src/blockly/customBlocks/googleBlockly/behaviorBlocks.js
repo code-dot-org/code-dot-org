@@ -1,7 +1,7 @@
 import * as GoogleBlockly from 'blockly/core';
 import BlockSvgFrame from '../../addons/blockSvgFrame';
 import msg from '@cdo/locale';
-import {procedureDefMutator} from './mutators/procedureDefMutator';
+import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
 
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
@@ -13,9 +13,9 @@ const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
  */
 export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   {
-    // Block for defining a function (aka procedure) with no return value.
+    // Block for defining a behavior (a type of procedure) with no return value.
     // When using the modal function editor, the name field is an uneditable label.
-    type: 'procedures_defnoreturn',
+    type: 'behavior_definition',
     message0: '%1 %2 %3 %4',
     message1: '%1',
     args0: [
@@ -45,7 +45,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         name: 'STACK',
       },
     ],
-    style: 'procedure_blocks',
+    style: 'behavior_blocks',
     helpUrl: '%{BKY_PROCEDURES_DEFNORETURN_HELPURL}',
     tooltip: '%{BKY_PROCEDURES_DEFNORETURN_TOOLTIP}',
     extensions: [
@@ -58,13 +58,13 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_defnoreturn_get_caller_block_mixin',
       'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
-      'procedures_block_frame',
+      'behaviors_block_frame',
+      'behavior_add_this_sprite_param',
     ],
     mutator: 'procedure_def_mutator',
   },
   {
-    // Block for calling a procedure with no return value.
-    type: 'procedures_callnoreturn',
+    type: 'gamelab_behavior_get',
     message0: '%1 %2',
     args0: [
       {type: 'field_label', name: 'NAME', text: '%{BKY_UNNAMED_KEY}'},
@@ -73,9 +73,8 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         name: 'TOPROW',
       },
     ],
-    nextStatement: null,
-    previousStatement: null,
-    style: 'procedure_blocks',
+    output: 'Behavior',
+    style: 'behavior_blocks',
     helpUrl: '%{BKY_PROCEDURES_CALLNORETURN_HELPURL}',
     extensions: [
       'procedures_edit_button',
@@ -85,52 +84,19 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
+      'behavior_update_params_mixin',
     ],
-    mutator: 'procedure_caller_mutator',
+    mutator: 'behavior_get_mutator',
   },
 ]);
 
-// Respond to the click of a call block's edit button
-export const editButtonHandler = function () {
-  console.log('edit button clicked!');
-
-  // Eventually, this will be where we create a modal function editor.
-  // For now, just find the function definition block and select it.
-  const workspace = this.getSourceBlock().workspace;
-  const name = this.getSourceBlock().getFieldValue('NAME');
-  const definition = GoogleBlockly.Procedures.getDefinition(name, workspace);
-  if (definition) {
-    workspace.centerOnBlock(definition.id);
-    definition.select();
-  }
-};
-
-// This extension adds an edit button to the end of a procedure call block.
-const editButton = function () {
-  // Edit buttons are used to open the modal editor. The button is appended to the last input.
-  if (
-    useModalFunctionEditor &&
-    this.inputList.length &&
-    !this.workspace.isFlyout
-  ) {
-    const button = new Blockly.FieldButton({
-      value: msg.edit(),
-      onClick: editButtonHandler,
-      colorOverrides: {button: 'blue', text: 'white'},
-    });
-    this.inputList[this.inputList.length - 1].appendField(button, 'EDIT');
-  }
-};
-
-GoogleBlockly.Extensions.register('procedures_edit_button', editButton);
-
-// This extension adds an SVG frame around procedures definition blocks.
-// Not used in Music Lab or wherever the modal function is enabled.
-GoogleBlockly.Extensions.register('procedures_block_frame', function () {
+// This extension adds an SVG frame around behavior definition blocks.
+// Not used when the modal function is enabled.
+GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
   if (!useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
     this.functionalSvg_ = new BlockSvgFrame(
       this,
-      msg.function(),
+      msg.behaviorEditorHeader(),
       'blocklyFunctionalFrame'
     );
 
@@ -142,13 +108,84 @@ GoogleBlockly.Extensions.register('procedures_block_frame', function () {
   }
 });
 
-// TODO: After updating to Blockly v10, remove this local copy of
-// procedureDefMutator and instead modify the imported mutator directly.
-// Our local copy has the compose() and decompose() methods removed.
-GoogleBlockly.Extensions.unregister('procedure_def_mutator');
+const behaviorGetMutator = {
+  previousEnabledState_: true,
+
+  paramsFromSerializedState_: [],
+
+  /**
+   * Returns the state of this block as a JSON serializable object.
+   * @returns The state of
+   *     this block, ie the params and procedure name.
+   */
+  saveExtraState: function () {
+    const state = Object.create(null);
+    const model = this.getProcedureModel();
+    if (!model) return state;
+    state['name'] = model.getName();
+    if (model.getParameters().length) {
+      state['params'] = model.getParameters().map(p => p.getName());
+    }
+    return state;
+  },
+  /**
+   * Applies the given state to this block.
+   * @param state The state to apply to this block, ie the params and
+   *     procedure name.
+   */
+  loadExtraState: function (state) {
+    this.deserialize_(state['name'], state['params'] || []);
+  },
+  /**
+   * Applies the given name and params from the serialized state to the block.
+   * @param name The name to apply to the block.
+   * @param params The parameters to apply to the block.
+   */
+  deserialize_: function (name, params) {
+    this.setFieldValue(name, 'NAME');
+    if (!this.model_) this.model_ = this.findProcedureModel_(name, params);
+    if (this.getProcedureModel()) {
+      this.initBlockWithProcedureModel_();
+    } else {
+      // Create inputs based on the mutation so that children can be connected.
+      this.createArgInputs_(params);
+    }
+    this.paramsFromSerializedState_ = params;
+  },
+};
+
 GoogleBlockly.Extensions.registerMutator(
-  'procedure_def_mutator',
-  procedureDefMutator
+  'behavior_get_mutator',
+  behaviorGetMutator
+);
+
+const behaviorAddThisSpriteParam = function () {
+  if (!this.workspace.isFlyout) {
+    this.getProcedureModel().insertParameter(
+      new ObservableParameterModel(this.workspace, msg.thisSprite()),
+      0
+    );
+  }
+
+  this.doProcedureUpdate();
+};
+
+GoogleBlockly.Extensions.register(
+  'behavior_add_this_sprite_param',
+  behaviorAddThisSpriteParam
+);
+
+const behaviorUpdateParamsMixin = {
+  /**
+   * No-ops updateParameters_ so that behavior_get blocks do not have argument inputs.
+   * @override
+   */
+  updateParameters_: function () {},
+};
+
+GoogleBlockly.Extensions.registerMixin(
+  'behavior_update_params_mixin',
+  behaviorUpdateParamsMixin
 );
 
 /**
@@ -157,26 +194,26 @@ GoogleBlockly.Extensions.registerMutator(
  * Derived from core Google Blockly:
  * https://github.com/google/blockly/blob/5a23c84e6ef9c0b2bbd503ad9f58fa86db1232a8/core/procedures.ts#L202-L287
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
- * @returns an array of block objects representing the flyout blocks
+ * @returns an array of XML block elements
  */
 export function flyoutCategory(workspace) {
   const blockList = [];
 
-  const newFunctionButton = {
+  const newBehaviorButton = {
     kind: 'button',
-    text: msg.createBlocklyFunction(),
-    callbackKey: 'createNewFunction',
+    text: msg.createBlocklyBehavior(),
+    callbackKey: 'createNewBehavior',
   };
 
-  const functionDefinitionBlock = {
+  const behaviorDefinitionBlock = {
     kind: 'block',
-    type: 'procedures_defnoreturn',
+    type: 'behavior_definition',
     fields: {
       NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
     },
   };
 
-  const createNewFunction = function () {
+  const createNewBehavior = function () {
     // Everything here is place-holder code that should be replaced with a
     // call to open the behavior editor with a new defintion block.
     // Until then, we just create a block under all existing blocks on the
@@ -195,47 +232,39 @@ export function flyoutCategory(workspace) {
       return lowestBlockBottom + 16;
     };
     Blockly.serialization.blocks.append(
-      {...functionDefinitionBlock, x: 16, y: getLowestBlockBottomY()},
+      {...behaviorDefinitionBlock, x: 16, y: getLowestBlockBottomY()},
       Blockly.getMainWorkspace()
     );
     Blockly.getMainWorkspace().hideChaff();
   };
   if (useModalFunctionEditor) {
-    workspace.registerButtonCallback('createNewFunction', createNewFunction);
-    blockList.push(newFunctionButton);
+    workspace.registerButtonCallback('createNewBehavior', createNewBehavior);
+    blockList.push(newBehaviorButton);
   } else {
-    blockList.push(functionDefinitionBlock);
+    blockList.push(behaviorDefinitionBlock);
   }
-
   const allWorkspaceProcedures = Blockly.procedureSerializer.save(
     Blockly.getMainWorkspace()
   );
-  let allWorkspaceFunctions = [];
+  let allWorkspaceBehaviors = [];
   if (allWorkspaceProcedures) {
-    allWorkspaceFunctions = allWorkspaceProcedures.filter(
-      procedure => !procedureIsBehavior(procedure)
+    allWorkspaceBehaviors = allWorkspaceProcedures.filter(procedure =>
+      procedureIsBehavior(procedure)
     );
   }
-  allWorkspaceFunctions
-    .filter(procedure => !procedureIsBehavior(procedure))
-    .forEach(procedure => {
-      const name = procedure.name;
-
-      blockList.push({
-        kind: 'block',
-        type: 'procedures_callnoreturn',
-        extraState: {
-          name: name,
-        },
-        fields: {
-          NAME: name,
-        },
-        mutation: {
-          name: name,
-        },
-      });
+  allWorkspaceBehaviors.forEach(procedure => {
+    blockList.push({
+      kind: 'block',
+      type: 'gamelab_behavior_get',
+      extraState: {
+        name: procedure.name,
+        params: [msg.thisSprite()],
+      },
+      fields: {
+        NAME: procedure.name,
+      },
     });
-
+  });
   return blockList;
 }
 
