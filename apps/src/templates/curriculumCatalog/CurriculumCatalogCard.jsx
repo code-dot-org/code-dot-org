@@ -221,20 +221,22 @@ const CustomizableCurriculumCatalogCard = ({
           >
             {!!DCDO.get('quick-view', false) ? (
               <Button
-                __useDeprecatedTag
-                color={Button.ButtonColor.neutralDark}
-                type="button"
-                href={pathToCourse}
-                aria-label={quickViewButtonDescription}
-                text={quickViewButtonText}
-              />
-            ) : (
-              <Button
                 color={Button.ButtonColor.neutralDark}
                 type="button"
                 onClick={handleQuickView}
                 aria-label={quickViewButtonDescription}
                 text={'Quick View'}
+              />
+            ) : (
+              <Button
+                __useDeprecatedTag
+                color={Button.ButtonColor.neutralDark}
+                type="button"
+                href={pathToCourse}
+                aria-label={i18n.quickViewDescription({
+                  course_name: courseDisplayName,
+                })}
+                text={i18n.learnMore()}
               />
             )}
             <Button
