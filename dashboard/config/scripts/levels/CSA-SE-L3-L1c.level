@@ -1,0 +1,18 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2023-08-02T16:26:38.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Virtual Pet App",
+    "long_instructions": "## Virtual Pet App\r\n\r\nThe app currently defaults to a dog and does not allow users to choose their pet. The user also does not allow the user to choose a name for their pet.\r\n\r\n![](https://images.code.org/6a7b17e32a1b8b9e5e0957405276fdce-image-1690993651168.png)\r\n\r\nBut what we want is to let the user choose the type of pet they want and give it a name before they can feed and play with their pet.\r\n\r\n![](https://images.code.org/dcc62ebbfb6d93f1197c70322f5f22b3-image-1690993670066.png)",
+    "bubble_choice_description": "The app currently defaults to a dog and does not allow users to choose their pet. The user also does not allow the user to choose a name for their pet. But what we want is to let the user choose the type of pet they want and give it a name before they can feed and play with their pet.",
+    "link_title": "Virtual Pet App",
+    "url": "https://github.com/code-dot-org/csa-se-lesson3c"
+  },
+  "audit_log": "[{\"changed_at\":\"2023-08-02T16:26:38.238+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L3-L1b\\\"\"],\"cloned_from\":\"CSA-SE-L3-L1b\"},{\"changed_at\":\"2023-08-02 16:28:03 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"link_title\",\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</ExternalLink>

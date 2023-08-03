@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-01 19:59:01 UTC",
+    "serialized_at": "2023-08-02 21:09:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1720,7 +1720,7 @@
       "key": "f31b53a2-d183-42e5-b58f-c99ff5f89ee6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add the following vocabulary words and definitions to their journals: sequential computing, parallel computing, distributed computing, speedup"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add the following vocabulary words and definitions to their journals: sequential computing, parallel computing, distributed computing, speedup\n\n----"
       },
       "seeding_key": {
         "activity_section.key": "f31b53a2-d183-42e5-b58f-c99ff5f89ee6",
@@ -1728,13 +1728,13 @@
       }
     },
     {
-      "key": "8cc33b4e-f41e-4ab5-93e9-01722c10d33d",
+      "key": "fc5668f7-7044-4b6b-a700-8b063daa3b7d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Based on what we saw here today, create a list of pros and cons for distributed and parallel computing. Share it with a partner.*\n\n**Discussion Goal:** This lesson covers a lot of ground so this is a good chance to review some of the main points of the lesson. Here's some big ones to cover.\n\n* Parallel programs typically are faster\n* Parallel programs don't get faster forever. At some point adding more processors doesn't really help\n* Parallel programs can be more complicated.\n* Parallel programs can be slowed down if only one of many devices is slow.\n* Distributed programs can be run on thousands or even millions of computers which allows you to take on enormous problems\n"
+        "description": "####CSP Vocabulary Bingo"
       },
       "seeding_key": {
-        "activity_section.key": "8cc33b4e-f41e-4ab5-93e9-01722c10d33d",
+        "activity_section.key": "fc5668f7-7044-4b6b-a700-8b063daa3b7d",
         "lesson_activity.key": "2bb4915a-c0c0-4521-8543-ee0dfb08c214"
       }
     },
@@ -1742,7 +1742,8 @@
       "key": "b8253126-ad0a-47d5-8b0d-dd79f475d2b4",
       "position": 4,
       "properties": {
-        "description": "Have students write their list, then share with a partner, and then finally discuss responses with the entire room."
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "b8253126-ad0a-47d5-8b0d-dd79f475d2b4",
@@ -1753,8 +1754,7 @@
       "key": "acb2fb6f-8368-4baa-8e14-49fc89a002ba",
       "position": 5,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** What is the speedup of this parallel solution?\r\n\r\n**Question:** In your own words, explain why the speedup of a parallel algorithm will eventually reach some limit.",
-        "name": "Assessment: Check For Understanding\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Ten in order to generate clues for the students."
       },
       "seeding_key": {
         "activity_section.key": "acb2fb6f-8368-4baa-8e14-49fc89a002ba",
@@ -2592,6 +2592,31 @@
       }
     },
     {
+      "name": "CSP Bingo Cards - Unit Ten",
+      "url": "https://drive.google.com/file/d/1-gQuYsp5KtSC-DDI9yvJO9AO2-8lELbg/view?usp=drive_link",
+      "key": "csp_bingo_cards_-_unit_ten",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1-gQuYsp5KtSC-DDI9yvJO9AO2-8lELbg",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_ten"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
       "name": "CSP Unit 10 - Lesson 4 - The Limits of Algorithms",
       "url": "https://docs.google.com/presentation/d/1PCnIYmmx_CIXXbiDaXwmTEqVluv8CKI33LY8x5THPWo/copy",
       "key": "csp_unit_10_-_lesson_4_-_the_limits_of_algorithms",
@@ -2799,6 +2824,18 @@
       "seeding_key": {
         "lesson.key": "Assessment Day",
         "resource.key": "csp_unit_10_-_lesson_6_-_assessment_day"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "resource.key": "csp_bingo_cards_-_unit_ten"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "resource.key": "csp_bingo_generator"
       }
     },
     {
