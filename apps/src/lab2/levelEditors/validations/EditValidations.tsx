@@ -116,7 +116,7 @@ const EditValidations: React.FunctionComponent<EditValidationsProps> = ({
         <br />
         NOTE: Validations are checked in the order they are listed. The first
         validation set that passes is the one that is displayed, so be sure to
-        order your validation sets from most conditions to least.
+        order your validation sets from most stringent to least.
       </Typography>
       {validations.map((validation, index) => {
         return (
