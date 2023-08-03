@@ -513,7 +513,7 @@ class Lesson < ApplicationRecord
       id: id,
       unitName: script.title_for_display,
       lessonNumber: relative_position,
-      lessonName: localized_name,
+      lessonName: name,
       levels: levels
     }
   end
