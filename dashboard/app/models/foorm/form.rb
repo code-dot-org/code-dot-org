@@ -190,17 +190,17 @@ class Foorm::Form < ApplicationRecord
   def self.validate_choices(choices, question_name)
     choice_values = Set.new
     choices.each do |choice|
-      if choice.class == Hash && choice.key?(:value) && choice.key?(:text)
+      if choice.instance_of?(Hash) && choice.key?(:value) && choice.key?(:text)
         if choice_values.include?(choice[:value])
           raise InvalidFoormConfigurationError, "Duplicate choice value #{choice[:value]} in question #{question_name}."
         end
         choice_values.add(choice[:value])
-      elsif choice.class == Hash
+      elsif choice.instance_of?(Hash)
         unless choice.key?(:value)
           error_msg = "Foorm configuration contains question '#{question_name}' without a  value for a choice. Choice text is '#{choice[:text]}'."
           raise InvalidFoormConfigurationError, error_msg
         end
-      elsif choice.class == String
+      elsif choice.instance_of?(String)
         error_msg = "Foorm configuration contains question '#{question_name}' without key-value choice. Choice is '#{choice}'."
         raise InvalidFoormConfigurationError,  error_msg
       end
