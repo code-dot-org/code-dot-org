@@ -45,7 +45,11 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     if (this.icon) {
       this.icon.style.fill =
         this.colorOverrides?.icon || this.getSourceBlock().style.colourPrimary;
+      console.log(this.icon);
+      console.log(`width before updateSize_ is ${this.size_.width}`);
       this.textElement_.appendChild(this.icon);
+      this.updateSize_();
+      console.log(`width after updateSize_ is ${this.size_.width}`);
     }
   }
 
@@ -97,5 +101,47 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     if (textElement && textColor) {
       textElement.setAttribute('style', 'fill: ' + textColor);
     }
+  }
+
+  /**
+   * Updates the size of the field based on the text.
+   *
+   * @param margin margin to use when positioning the text element.
+   */
+  updateSize_(margin) {
+    const constants = this.getConstants();
+    const xOffset =
+      margin !== undefined
+        ? margin
+        : this.borderRect_
+        ? this.getConstants()?.FIELD_BORDER_RECT_X_PADDING
+        : 0;
+    let totalWidth = xOffset * 2;
+    console.log({totalWidth});
+    let totalHeight = constants?.FIELD_TEXT_HEIGHT;
+
+    let contentWidth = 0;
+    console.log(
+      `font size: ${constants?.FIELD_TEXT_FONTSIZE}, font weight: ${constants?.FIELD_TEXT_FONTWEIGHT}, font family: ${constants?.FIELD_TEXT_FONTFAMILY}`
+    );
+    if (this.textElement_) {
+      contentWidth = Blockly.utils.dom.getFastTextWidth(
+        this.textElement_,
+        constants?.FIELD_TEXT_FONTSIZE,
+        constants?.FIELD_TEXT_FONTWEIGHT,
+        constants?.FIELD_TEXT_FONTFAMILY
+      );
+      console.log({contentWidth});
+      totalWidth += contentWidth;
+    }
+    if (this.borderRect_) {
+      totalHeight = Math.max(totalHeight, constants?.FIELD_BORDER_RECT_HEIGHT);
+    }
+
+    this.size_.height = totalHeight;
+    this.size_.width = totalWidth;
+
+    this.positionTextElement_(xOffset, contentWidth);
+    this.positionBorderRect_();
   }
 }
