@@ -7,22 +7,22 @@
   <field name="NAME" id="moving east">moving east</field>
   <statement name="STACK">
     <block type="gamelab_moveInDirection">
-<field name="DIRECTION">"East"</field>
-<value name="SPRITE">
-<block type="sprite_parameter_get">
-<field name="VAR">this sprite</field>
-</block>
-</value>
-<value name="DISTANCE">
-<block type="gamelab_getProp">
-<field name="PROPERTY">"speed"</field>
-<value name="SPRITE">
-<block type="sprite_parameter_get">
-<field name="VAR">this sprite</field>
-</block>
-</value>
-</block>
-</value>
-</block>
+      <field name="DIRECTION">"East"</field>
+      <value name="SPRITE">
+        <block type="sprite_parameter_get">
+          <field name="VAR">this sprite</field>
+        </block>
+      </value>
+      <value name="DISTANCE">
+        <block type="gamelab_getProp">
+          <field name="PROPERTY">"speed"</field>
+          <value name="SPRITE">
+            <block type="sprite_parameter_get">
+              <field name="VAR">this sprite</field>
+            </block>
+          </value>
+        </block>
+      </value>
+    </block>
   </statement>
 </block>
