@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 04:14:58 UTC",
+    "serialized_at": "2023-08-02 21:02:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2138,7 +2138,6 @@
       "position": 1,
       "properties": {
         "description": "Yesterday you began researching for your Internet Dilemma Policy One Pager. Today you will write the One Pager and then share what you've learned.",
-        "duration": "3",
         "name": "Warm Up",
         "remarks": true,
         "tips": [
@@ -2216,8 +2215,8 @@
       "key": "df3f0929-1a29-4cd5-a509-2d1132fdffc1",
       "position": 6,
       "properties": {
-        "description": "These dilemmas are tough - that's what makes a good dilemma. But hopefully you can now understand why it is so important to understand how the Internet works. You are now prepared to thoughtfully engage in these types of conversations that you may hear politicians talking about or read about in the news.",
-        "duration": "2",
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
+        "duration": "5",
         "name": "Wrap Up",
         "remarks": true
       },
@@ -2227,8 +2226,19 @@
       }
     },
     {
-      "key": "86d9d9d9-3738-4166-b64f-fc667ae66591",
+      "key": "8d75807d-8f74-4f75-991d-4333901e348d",
       "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Two in order to generate clues for the students."
+      },
+      "seeding_key": {
+        "activity_section.key": "8d75807d-8f74-4f75-991d-4333901e348d",
+        "lesson_activity.key": "8d50c603-a607-4087-b33a-966b2bc95564"
+      }
+    },
+    {
+      "key": "86d9d9d9-3738-4166-b64f-fc667ae66591",
+      "position": 8,
       "properties": {
         "description": "---"
       },
@@ -2239,7 +2249,7 @@
     },
     {
       "key": "39bb44c6-502b-48e9-84a5-c78b27f9103c",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "####Assessment: Submit\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students turn in the Project Guide for assessment."
       },
@@ -2250,7 +2260,7 @@
     },
     {
       "key": "2e5946e6-b245-4236-b2db-703e774e77cf",
-      "position": 9,
+      "position": 10,
       "properties": {
         "progression_name": "End-of-Unit Survey"
       },
@@ -3102,6 +3112,31 @@
       }
     },
     {
+      "name": "CSP Bingo Cards - Unit Two",
+      "url": "https://drive.google.com/file/d/1cKEiIhVlEjKUqgNM4-pLVZmlO4gD5kBT/view?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_two",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1cKEiIhVlEjKUqgNM4-pLVZmlO4gD5kBT",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_two"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
       "name": "CSP Unit 2 Slides",
       "url": "https://docs.google.com/presentation/d/1TCbTiyJC7hDJs43AjMBlo_wjAbvZhfGc8NCs654mLKc/edit?usp=drive_link",
       "key": "csp_unit_2_slides",
@@ -3544,6 +3579,18 @@
       "seeding_key": {
         "lesson.key": "Packets",
         "resource.key": "u2l05_packets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Internet Dilemmas Part 1",
+        "resource.key": "csp_bingo_cards_-_unit_two"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Internet Dilemmas Part 1",
+        "resource.key": "csp_bingo_generator"
       }
     },
     {
