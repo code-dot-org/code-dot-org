@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 04:02:51 UTC",
+    "serialized_at": "2023-08-02 21:01:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3859,7 +3859,7 @@
       "key": "4d656c7b-5d95-4d3f-b971-f2d2d9706f7c",
       "position": 10,
       "properties": {
-        "description": "There are trade-offs in representing information digitally. Usually someone is benefitting while others are harmed.",
+        "description": "Now that we are near the end of the unit, we are going to play our first game of CSP Vocabulary BINGO. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
         "duration": "5",
         "name": "Wrap Up",
         "remarks": true
@@ -3873,7 +3873,7 @@
       "key": "f5f4a597-38de-4843-83fd-dbcf3ddd0a68",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why should we care about information being represented digitally? How does this impact you personally?*\n\nAllow students time to think and share about the personal implications of digital representation. \n\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit One in order to generate clues for the students."
       },
       "seeding_key": {
         "activity_section.key": "f5f4a597-38de-4843-83fd-dbcf3ddd0a68",
@@ -5610,6 +5610,31 @@
       }
     },
     {
+      "name": "CSP Bingo Cards - Unit One",
+      "url": "https://drive.google.com/file/d/1SkzhU8UB8gzKzCLe8nBXT9ysQV8zs-EP/view?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_one",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1SkzhU8UB8gzKzCLe8nBXT9ysQV8zs-EP",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_one"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
       "name": "Lossy Compression",
       "url": "https://docs.google.com/presentation/d/1JJ-IX_dV6497KXmimsIOussZQoDOS9cV8udzeRaeJ-E/",
       "key": "csp_unit_1-10_-_digital_information",
@@ -6121,6 +6146,18 @@
       }
     },
     {
+      "name": "Unit 1 Journal - Example",
+      "url": "https://docs.google.com/presentation/d/17jJG9aGnvUsS_HClqDoAW7LkPS51PIsv2Q1npTlsbwM/edit?usp=sharing",
+      "key": "unit_1_journal_-_example",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_journal_-_example"
+      }
+    },
+    {
       "name": "Unit 1 Journal (Interactive Notebook)",
       "url": "https://docs.google.com/presentation/d/1hydmwrk4buHxg1gW-4TvVKMkIDvru8FTRuk53N8T8es/edit?usp=drive_link",
       "key": "unit_1_journal_-_interactive_notebook",
@@ -6287,6 +6324,18 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Digital Information Dilemmas Part 1",
+        "resource.key": "csp_bingo_cards_-_unit_one"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "resource.key": "csp_unit_1-12_-_digital_information"
       }
     },
@@ -6354,6 +6403,12 @@
       "seeding_key": {
         "lesson.key": "Representing Information",
         "resource.key": "unit_1_journal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "resource.key": "unit_1_journal_-_example"
       }
     },
     {
