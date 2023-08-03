@@ -13,3 +13,25 @@ theme: responsive_full_width
       %p.body-one{style: "color: white"}=hoc_s(:how_ai_works_hero_desc)
     %figure
       %img{src: "/images/banners/ai-bot-artist-w-trophy.png", alt: ""}
+
+%section.bg-neutral-light
+  .wrapper
+    %h2=hoc_s(:how_ai_works_hero_heading)
+    %p=hoc_s(:how_ai_works_intro_desc)
+    %div.col-45{style: "margin: 0.5rem 0 1rem;"}
+      = view :display_video_thumbnail, id: "intro_csp", video_code: "YlwVMtNEWKA", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/ai_series/ai-intro-to-how-ai-works-lessons.mp4"
+    .text-wrapper.col-50{style: "float: right;"}
+      %p
+        %strong=hoc_s(:heading_these_lessons_will)
+      %ul
+        %li=hoc_s(:how_ai_works_intro_list_01)
+        %li=hoc_s(:how_ai_works_intro_list_02)
+        %li=hoc_s(:how_ai_works_intro_list_03)
+        %li=hoc_s(:how_ai_works_intro_list_04)
+      %a.link-button{href: "#how-ai-works-lessons"}
+        =hoc_s(:call_to_action_explore_lessons)
+    .clear
+
+%section#how-ai-works-lessons
+  .wrapper
+    %h2=hoc_s(:how_ai_works_hero_heading)

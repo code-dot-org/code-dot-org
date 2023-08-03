@@ -138,6 +138,7 @@
   call_to_action_explore_unit: 'Explore unit'
   call_to_action_explore_curriculum: 'Explore curriculum'
   call_to_action_explore_curriculum_options: "Explore curriculum options"
+  call_to_action_explore_lessons: "Explore lessons"
   call_to_action_explore_modules: "Explore modules"
   call_to_action_explore_workshops: "Explore workshops"
   call_to_action_explore_course: "Explore course"
@@ -397,6 +398,7 @@
   heading_no_devices: "No devices? We have you covered"
   heading_java_lab: "Java Lab"
   heading_objects_first: "Objects first"
+  heading_these_lessons_will: "These lessons will:"
 
   professional_learning_section_desc: "Get the support you need as you prepare to teach. Teachers love it, with over 90% ranking it the best professional development ever!"
   professional_learning_section_desc_short: "Get the support you need as you prepare to teach."
@@ -535,6 +537,11 @@
 
   how_ai_works_hero_heading: "How AI Works"
   how_ai_works_hero_desc: "Dive into the world of AI with \"How AI Works,\" our video series and accompanying lessons!"
+  how_ai_works_intro_desc: "This series of short videos and accompanying in-classroom lessons will introduce you and your students to how artificial intelligence works and why it matters. You can choose individual lessons based on topic, explore the whole series of topics in one class or teach all 7 lessons to give a deeper dive."
+  how_ai_works_intro_list_01: "Introduce you to artificial intelligence and machine learning"
+  how_ai_works_intro_list_02: "Dive into how generative AI works, including large language models (LLMs) and image generation"
+  how_ai_works_intro_list_03: "Explore bias, ethics, privacy and the responsible use of AI"
+  how_ai_works_intro_list_04: "Touch on real world applications of AI, including computer vision"
 
   ai_vid_intro_caption: "Introducing How AI Works"
   ai_vid_chatbots_caption: "How Chatbots and Large Language Models Work"
