@@ -656,8 +656,17 @@ form {
     }
   }
 
-  figure.video-responsive {
-    margin-bottom: 1rem;
+  figure {
+
+    &.video-responsive {
+      margin-bottom: 1rem;
+    }
+
+    // Hides the unused caption div from the
+    // display_video_thumbnail partial
+    .video_caption_link {
+      display: none;
+    }
   }
 
   ul {

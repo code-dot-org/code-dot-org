@@ -186,6 +186,7 @@
   call_to_action_see_module_details: "See module details"
   call_to_action_start_modules: "Start modules"
   call_to_action_see_course_details: "See course details"
+  call_to_action_see_lesson_details: "See lesson details"
   call_to_action_learn_about_approach: "Learn more about our approach"
   call_to_action_try_java_lab: "Try Java Lab"
 
@@ -542,6 +543,10 @@
   how_ai_works_intro_list_02: "Dive into how generative AI works, including large language models (LLMs) and image generation"
   how_ai_works_intro_list_03: "Explore bias, ethics, privacy and the responsible use of AI"
   how_ai_works_intro_list_04: "Touch on real world applications of AI, including computer vision"
+  how_ai_works_lessons_heading: "AI lessons for your class"
+  how_ai_works_lessons_in_a_day_title: "How AI Works in a Day"
+  how_ai_works_lessons_in_a_day_desc: "Only have a day? There's also the option to introduce the whole series to students in a single day. Perfect for any subject-area teacher looking to introduce students to AI, or even for as a lesson for a guest teacher."
+  how_ai_works_lessons_in_a_day_desc_02: "Introduce all of the \"How AI Works\" videos in one day. Students follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. "
 
   ai_vid_intro_caption: "Introducing How AI Works"
   ai_vid_chatbots_caption: "How Chatbots and Large Language Models Work"

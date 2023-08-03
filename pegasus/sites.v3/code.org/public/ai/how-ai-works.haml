@@ -34,4 +34,29 @@ theme: responsive_full_width
 
 %section#how-ai-works-lessons
   .wrapper
-    %h2=hoc_s(:how_ai_works_hero_heading)
+    %h2=hoc_s(:how_ai_works_lessons_heading)
+
+= view :section_divider_line
+
+%section
+  .wrapper
+    %h2=hoc_s(:how_ai_works_lessons_in_a_day_title)
+    %p=hoc_s(:how_ai_works_lessons_in_a_day_desc)
+    .action-block.action-block--two-col
+      %figure.col-50
+        = view :display_video_thumbnail, id: "introducing_ai", video_code: "Ok-xpKjKp2g", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/ai_series/ai-01-intro-to-ai.mp4"
+      .text-wrapper.col-50
+        %p=hoc_s(:how_ai_works_lessons_in_a_day_desc_02)
+        %p
+          %strong=hoc_s(:module_label_duration)
+          -# Swap this out with the 'module_duration_1_hr' string after merging the AI page PR
+          1 hour
+        %p
+          %strong=hoc_s(:module_label_grades)
+          =hoc_s(:module_grade_6_12)
+        %a.link-button{href: CDO.studio_url("#")}
+          =hoc_s(:call_to_action_see_lesson_details)
+      .clear
+
+= view :section_divider_line
+
