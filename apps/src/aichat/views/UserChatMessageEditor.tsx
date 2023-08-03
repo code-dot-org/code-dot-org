@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import moduleStyles from './userChatMessageEditor.module.scss';
 import {ChatWorkspaceContext} from './ChatWorkspace';
+import aichatI18n from '../locale';
 
 const UserChatMessageEditor: React.FunctionComponent = () => {
   const [userMessage, setUserMessage] = useState<string>('');
@@ -12,7 +13,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
     <div className={moduleStyles.UserChatMessageEditor}>
       <textarea
         className={moduleStyles.textArea}
-        placeholder="Add a chat message..."
+        placeholder={aichatI18n.userChatMessagePlaceholder()}
         onChange={e => setUserMessage(e.target.value)}
         value={userMessage}
       />
