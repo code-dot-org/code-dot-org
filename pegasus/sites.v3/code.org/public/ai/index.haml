@@ -60,7 +60,7 @@ theme: responsive_full_width
             %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_03)
     .clear
 
-%section.bg-primary-light.blog-post-callout{id: "ai-pl-callout"}
+%section#ai-pl-callout.bg-primary-light.blog-post-callout
   .wrapper
     %i{class: "#{icon_megaphone}"}
     .text-wrapper
@@ -85,7 +85,7 @@ theme: responsive_full_width
         %i{class: "#{icon_video}"}
         %a{href:"#ai-videos"}=hoc_s(:ai_why_link_03)
 
-%section{id: "ai-curricula"}
+%section#ai-curricula
   .wrapper
     %h2=hoc_s(:ai_curricula_heading)
     %p=hoc_s(:ai_curricula_desc)
@@ -153,7 +153,7 @@ theme: responsive_full_width
     .quotes-wrapper
       = view :ai_carousel
 
-%section{id: "ai-pl"}
+%section#ai-pl
   .wrapper
     %h2=hoc_s(:ai_pl_heading)
     .action-block__wrapper.action-block__wrapper--two-col
@@ -188,7 +188,7 @@ theme: responsive_full_width
 
 = view :section_divider_line
 
-%section{id: "ai-videos"}
+%section#ai-videos
   .wrapper
     %h2=hoc_s(:ai_video_series_title)
     %p=hoc_s(:ai_video_series_desc)
