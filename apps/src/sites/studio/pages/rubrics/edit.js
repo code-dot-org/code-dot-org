@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom';
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
-// Note that I will need to pass some data in here (perhaps the id of the rubric)
 $(document).ready(() => {
+  const rubric = getScriptData('rubricData');
   const lessonData = getScriptData('lessonData');
   const unitName = lessonData.unitName;
   const lessonNumber = lessonData.lessonNumber;
   const levels = lessonData.levels;
-  const rubric = getScriptData('rubric');
 
   ReactDOM.render(
     <RubricsContainer

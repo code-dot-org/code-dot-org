@@ -88,7 +88,9 @@ export default function RubricsContainer({
 RubricsContainer.propTypes = {
   unitName: PropTypes.string,
   lessonNumber: PropTypes.number,
-  levels: PropTypes.array,
+  levels: PropTypes.arrayOf(
+    PropTypes.shape({id: PropTypes.number, name: PropTypes.string})
+  ),
   rubric: PropTypes.object,
 };
 
