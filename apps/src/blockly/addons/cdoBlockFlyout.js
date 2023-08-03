@@ -1,6 +1,9 @@
 import GoogleBlockly from 'blockly/core';
 
 const svgPaths = GoogleBlockly.utils.svgPaths;
+// The width of the border around the root block if it is selected.
+const SELECTED_BORDER_WIDTH = 4;
+
 export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   /**
    * This is a customized flyout class that extends the HorizontalFlyout class.
@@ -92,7 +95,13 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     const topBlockWidth = this.sourceBlock_.svgGroup_
       .querySelector('path')
       .getBoundingClientRect().width;
-    const blockWidthMinusPadding = topBlockWidth - this.flyoutBlockPadding * 2;
+    let blockWidthMinusPadding = topBlockWidth - this.flyoutBlockPadding * 2;
+
+    // If the block is selected, there is an additional border that we don't want to
+    // count towards the flyout width.
+    if (this.sourceBlock_.svgGroup_.classList.contains('blocklySelected')) {
+      blockWidthMinusPadding -= SELECTED_BORDER_WIDTH * 2;
+    }
     this.width_ = Math.max(this.width_, blockWidthMinusPadding);
     this.setBackgroundPath_(this.width_, this.height_);
     this.position();
