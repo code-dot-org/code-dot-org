@@ -8,7 +8,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Sprite Movement Functions\r\n\r\nNow you'll make the functions that make the sprite move in different ways as the game is played.  Some examples of functions that you've written are `loopPlatforms` in [Lesson 26 Puzzle 9](../../26/levels/9) and `playerFall` in [Lesson 26 Puzzle 14](../../26/levels/14).\r\n\r\nFor each movement:\r\n1. Create a function that will make the sprite move in that way\r\n* Call the function inside the draw loop\r\n",
+    "long_instructions": "# Sprite Movement Functions\r\n\r\nNow you'll make the functions that make the sprite move in different ways as the game is played.  Some examples of functions that you've written are `loopPlatforms` in [Lesson 27 Puzzle 8](../../27/levels/8) and `playerFall` in [Lesson 27 Puzzle 13](../../27/levels/13).\r\n\r\nFor each movement:\r\n1. Create a function that will make the sprite move in that way\r\n* Call the function inside the draw loop\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -70,7 +70,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:27.035+00:00\",\"changed\":[\"cloned from \\\"CSD U3 game sprite movement_2022\\\"\"],\"cloned_from\":\"CSD U3 game sprite movement_2022\"},{\"changed_at\":\"2023-03-09 17:55:06 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 18:07:04 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:27.035+00:00\",\"changed\":[\"cloned from \\\"CSD U3 game sprite movement_2022\\\"\"],\"cloned_from\":\"CSD U3 game sprite movement_2022\"},{\"changed_at\":\"2023-03-09 17:55:06 +0000\",\"changed\":[\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-06 18:07:04 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-02 22:44:51 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-02 22:46:47 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

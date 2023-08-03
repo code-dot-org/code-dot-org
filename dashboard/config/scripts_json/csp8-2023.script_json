@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-01 19:55:06 UTC",
+    "serialized_at": "2023-08-02 21:08:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2512,6 +2512,41 @@
       }
     },
     {
+      "key": "9d0d7852-03bd-4ca6-a7f1-6f1c3cbe760c",
+      "position": 10,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d0d7852-03bd-4ca6-a7f1-6f1c3cbe760c",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
+      }
+    },
+    {
+      "key": "29bfe180-695f-4f5f-9c45-fdbb0b049d63",
+      "position": 11,
+      "properties": {
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
+        "name": "CSP Vocabulary Bingo",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "29bfe180-695f-4f5f-9c45-fdbb0b049d63",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
+      }
+    },
+    {
+      "key": "59190cf1-7357-4a51-9931-9058f719f300",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Eight in order to generate clues for the students."
+      },
+      "seeding_key": {
+        "activity_section.key": "59190cf1-7357-4a51-9931-9058f719f300",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
+      }
+    },
+    {
       "key": "f8e31b1c-c837-4ac5-bed9-b1db30a2deb3",
       "position": 1,
       "properties": {
@@ -3311,6 +3346,31 @@
       }
     },
     {
+      "name": "CSP Bingo Cards - Unit Eight",
+      "url": "https://drive.google.com/file/d/1Y3nk6a5yehh29OH-WYt2GVUgbc4UNCbD/view?usp=drive_link",
+      "key": "csp_bingo_cards_-_unit_eight",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1Y3nk6a5yehh29OH-WYt2GVUgbc4UNCbD",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_eight"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
       "name": "CSP Innovation Simulation Badges",
       "url": "https://drive.google.com/file/d/1iTYcQ-Jqe-aCQ3Jcq0Td0xZEgreNdGVp/",
       "key": "csp_innovation_simulation_badges",
@@ -3802,6 +3862,18 @@
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 4",
         "resource.key": "csp_unit_8_-_lesson_8_-_project_innovation_simulation_part_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Innovation Simulation Part 5",
+        "resource.key": "csp_bingo_cards_-_unit_eight"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Innovation Simulation Part 5",
+        "resource.key": "csp_bingo_generator"
       }
     },
     {
