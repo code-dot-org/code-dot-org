@@ -8,9 +8,12 @@ import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 export default function LearningGoal({learningGoal, canProvideFeedback}) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const renderLearningGoalHeader = () => {
-    return (
-      <div className={style.learningGoalHeader}>
+  return (
+    <details
+      className={style.learningGoalRow}
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <summary className={style.learningGoalHeader}>
         <div className={style.learningGoalHeaderLeftSide}>
           {isOpen && (
             <FontAwesome icon="angle-up" onClick={() => setIsOpen(false)} />
@@ -25,12 +28,9 @@ export default function LearningGoal({learningGoal, canProvideFeedback}) {
           {/*TODO: Display status of feedback*/}
           {canProvideFeedback && <BodyThreeText>Needs approval</BodyThreeText>}
         </div>
-      </div>
-    );
-  };
-
-  return (
-    <div className={style.learningGoalRow}>{renderLearningGoalHeader()}</div>
+      </summary>
+      Learning Goal Details
+    </details>
   );
 }
 

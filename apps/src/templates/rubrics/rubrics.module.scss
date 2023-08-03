@@ -48,6 +48,9 @@
 .learningGoalRow {
   border-bottom: 1px solid $neutral_dark40;
   height: 40px;
+  :hover {
+    background: none;
+  }
 }
 
 .learningGoalHeader {
