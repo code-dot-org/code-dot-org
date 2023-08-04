@@ -6,7 +6,7 @@
   font-size: 30px;
   font-family: 'Gotham 7r', sans-serif;
   line-height: 1.2em;
-  background-color: #7665a0;
+  background-color: #6A6E73;
   color: white;
   height: auto;
   width: 100%;
@@ -406,7 +406,7 @@ button {
 a.link-button {
   display: inline-block;
   color: white;
-  background-color: #ffa400;
+  background-color: #9660BF;
   border-radius: 4px;
   padding: 6px 12px;
   font-size: 14px;
@@ -416,7 +416,7 @@ a.link-button {
 
 #map .mapboxgl-popup-close-button {
   margin-top: 0px;
-  background-color: #ffa400;
+  background-color: #9660BF;
 }
 
 /* Promote page */
@@ -542,7 +542,7 @@ a.link-button {
 .impact-stats-link {
   width: 100%;
   color: white;
-  background-color: #7665a0;
+  background-color: #54595E;
   margin-top: 20px;
   margin-bottom: 20px;
   overflow: hidden;

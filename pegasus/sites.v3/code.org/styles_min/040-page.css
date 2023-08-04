@@ -163,11 +163,10 @@ td {
 .listed_supporter{
   font-family: 'Gotham 7r', sans-serif;
   font-weight: normal;
-  color: #7665a0;
 }
 
 .greybox {
-  background-color: rgb(88, 103, 113);
+  background-color: #54595E;
   color: white;
   padding: 20px;
   text-align: center;
@@ -269,10 +268,10 @@ button {
   border-left-color: #b9bf15;
 }
 .carousel-wrapper .pagination a {
-  background: #9660BF;
+  background: #ABDFE5;
 }
 .carousel-wrapper .pagination a.selected {
-  background: #ffa401;
+  background: #009EB0;
 }
 
 @media screen and (max-width: 450px) {

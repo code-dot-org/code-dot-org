@@ -15,7 +15,6 @@
   text-align: center;
   float: right;
   background-color: rgb(231,232,234);
-  color: dimgrey;
   padding: 20px;
   text-align: center;
   overflow: hidden;
@@ -76,13 +75,11 @@
 }
 
 .fa-circle {
-  color: dimgray;
   font-size: 44px;
   padding-top: 2px;
 }
 
 .icon-fact .fa-check-circle {
-  color: dimgray;
   display: inline-block;
   font-size: 48px;
   vertical-align: middle;
@@ -102,14 +99,6 @@
   width: 80%;
 }
 
-.fact.subfact {
-  color: dimgrey;
-}
-
-.fact > a {
-  color: dimgrey;
-}
-
 #state-title {
   font-family: 'Gotham 7r', sans-serif;
   color: #0094a3;
@@ -125,13 +114,7 @@
   clear: both;
   float: right;
   font-size: 12px;
-  line-height: 12px;
   text-align: center;
-  color: dimgrey;
-  opacity: 0.8;
+  color: #7F8286;
   padding-top: 10px;
-}
-
-#sources a {
-  color: #7665a0;
 }
