@@ -87,17 +87,16 @@ export default class FunctionEditor {
     // Serialized data from all procedures
     this.allFunctions = {};
 
-    // TODO: This is was firing too often, I think. Confirm that listening for BLOCK_CHANGE events works?
     // Add an event listener that saves the data for the given procedure whenever the procedure is saved
     this.editorWorkspace.addChangeListener(e => {
-      if (e.type !== Blockly.Events.BLOCK_CHANGE) return;
+      if (e.isUiEvent) return;
       // save the procedure block only, ignore other blocks
       if (!this.block) return;
       const id = this.block.getProcedureModel().getId();
       this.allFunctions[id] = Blockly.serialization.blocks.save(this.block);
     });
 
-    // TODO: This is firing too often. How can we fix it?
+    // TODO: I think this is firing too often. How can we fix it?
     this.editorWorkspace.addChangeListener(e => {
       // If the main workspace hasn't been initialized yet, don't do anything
       if (!this.mainWorkspace) return;
@@ -118,6 +117,10 @@ export default class FunctionEditor {
         this.mainWorkspace.getToolbox().refreshSelection();
       }
     });
+    console.log(
+      'this.editorWorkspace.procedureModel in init',
+      this.editorWorkspace.getProcedureMap()
+    );
   }
 
   // TODO: Address areas in codebase where hideIfOpen is used
@@ -134,8 +137,9 @@ export default class FunctionEditor {
   // TODO: Rename
   showForFunction(procedure) {
     this.editorWorkspace.clear();
+    console.log('procedure.getName()', procedure.getName());
     this.nameInput.value = procedure.getName();
-    // TODO: procedure.getDescription() is not a thing -- this will be on extra state?
+    // TODO: procedure.getDescription() is not a thing -- this will be on extra state, I think
     // this.functionDescriptionInput.value = procedure.getDescription();
 
     this.dom.style.display = '';
@@ -164,6 +168,7 @@ export default class FunctionEditor {
         x: 50,
         y: 200, // TODO: This is a magic number
       };
+      console.log();
       this.block = Blockly.serialization.blocks.append(
         newDefinitionBlock,
         this.editorWorkspace
@@ -194,12 +199,19 @@ export default class FunctionEditor {
   }
 
   newProcedureCallback() {
+    console.log(
+      'this.editorWorkspace.getProcedureMap() before new procedure is added',
+      this.editorWorkspace.getProcedureMap()
+    );
     const name = this.getNameForNewFunction();
     const procedure = new ObservableProcedureModel(this.mainWorkspace, name);
 
     // add the model to the main workspace so we know all procedures available there
     // const allProcedures = Blockly.Procedures.allProcedures(workspace)[0];
     this.mainWorkspace.getProcedureMap().add(procedure);
+    console.log(
+      `procedure added to main workspace is ${procedure.getId()} with name ${procedure.getName()}`
+    );
 
     // Add the procedure model to the editor's map as well
     // Can't use the same underlying model or events get weird. Models were not intended to be added to multiple
@@ -210,6 +222,9 @@ export default class FunctionEditor {
       procedure.getId()
     );
     this.editorWorkspace.getProcedureMap().add(editorProcedureModel);
+    console.log(
+      `procedure added to editor workspace is ${editorProcedureModel.getId()} with name ${editorProcedureModel.getName()}`
+    );
     this.showForFunction(procedure);
   }
 }
