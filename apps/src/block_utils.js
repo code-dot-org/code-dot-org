@@ -1074,9 +1074,7 @@ exports.createJsWrapperBlockCreator = function (
         let flyoutToggleButton;
         if (showMiniToolbox) {
           flyoutToggleButton =
-            Blockly.customBlocks.initializeMiniToolbox.bind(this)(
-              miniToolboxBlocks
-            );
+            Blockly.customBlocks.initializeMiniToolbox.bind(this)();
         }
 
         // These blocks should not be loaded into a Google Blockly level.

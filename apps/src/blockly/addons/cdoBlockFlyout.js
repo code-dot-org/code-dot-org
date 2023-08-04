@@ -98,6 +98,16 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
     this.position();
   }
 
+  getMinimumWidthPlusPadding() {
+    let minimumWidth = 0;
+    const topBlocks = this.workspace_.getTopBlocks(false);
+    topBlocks.forEach(block => {
+      const blockHW = block.getHeightWidth();
+      minimumWidth += blockHW.width + this.GAP_X;
+    });
+    return minimumWidth + this.flyoutBlockPadding * 2;
+  }
+
   /** Update the flyout height based on the new block height.
    *
    * @param {number} newHeight - The new block height.
