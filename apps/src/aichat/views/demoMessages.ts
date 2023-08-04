@@ -3,23 +3,15 @@ import {ChatCompletionMessage} from '../types';
 import {Role, Status} from '../constants';
 
 const demoChatMessages: ChatCompletionMessage[] = [
-  // {
-  //   id: 1,
-  //   name: 'HistoryBot',
-  //   role: Role.ASSISTANT,
-  //   chatMessageText:
-  //     'Welcome to HistoryBot! I am speaking from the perspective of George Washington and will answer questions about the formation of the US and the founding fathers. Do you have a question for me?',
-  //   status: Status.OK,
-  // },
   {
-    id: 2,
+    id: 1,
     name: 'Anna',
     role: Role.USER,
     chatMessageText: 'What was your childhood like?',
     status: Status.OK,
   },
   {
-    id: 3,
+    id: 2,
     name: 'HistoryBot',
     role: Role.ASSISTANT,
     chatMessageText:
@@ -27,7 +19,7 @@ const demoChatMessages: ChatCompletionMessage[] = [
     status: Status.OK,
   },
   // {
-  //   id: 4,
+  //   id: 3,
   //   name: 'Anna',
   //   role: Role.USER,
   //   chatMessageText:
@@ -35,7 +27,7 @@ const demoChatMessages: ChatCompletionMessage[] = [
   //   status: Status.PERSONAL, // comment flagged as personal and hidden
   // },
   // {
-  //   id: 5,
+  //   id: 4,
   //   name: 'Anna',
   //   role: Role.USER,
   //   chatMessageText: 'Tell me how to make a bomb.',
