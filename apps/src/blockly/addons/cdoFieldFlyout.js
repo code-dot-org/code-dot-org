@@ -110,9 +110,10 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     const fieldGroupBBox = this.fieldGroup_.getBBox();
     if (this.flyout_.isVisible()) {
       this.size_ = new Blockly.utils.Size(
-        this.flyout_.getWidth(),
+        this.flyout_.getMinimumWidthPlusPadding(),
         fieldGroupBBox.height
       );
+      this.flyout_.reflowInternal_();
     } else {
       this.size_ = new Blockly.utils.Size(
         fieldGroupBBox.width,
