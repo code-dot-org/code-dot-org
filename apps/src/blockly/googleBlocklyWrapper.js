@@ -192,7 +192,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FunctionalBlockUtils');
   blocklyWrapper.wrapReadOnlyProperty('FunctionalTypeColors');
   blocklyWrapper.wrapReadOnlyProperty('FunctionEditor');
-  blocklyWrapper.wrapReadOnlyProperty('functionEditor');
   blocklyWrapper.wrapReadOnlyProperty('gamelab_locale');
   blocklyWrapper.wrapReadOnlyProperty('getMainWorkspace');
   blocklyWrapper.wrapReadOnlyProperty('Generator');
@@ -338,6 +337,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // Properties cannot be modified until wrapSettableProperty has been called
   blocklyWrapper.wrapSettableProperty('assetUrl');
   blocklyWrapper.wrapSettableProperty('behaviorEditor');
+  // TODO: Does it make sense to wrap this?
+  blocklyWrapper.wrapSettableProperty('functionEditor');
   blocklyWrapper.wrapSettableProperty('customSimpleDialog');
   blocklyWrapper.wrapSettableProperty('BROKEN_CONTROL_POINTS');
   blocklyWrapper.wrapSettableProperty('BUMP_UNCONNECTED');
@@ -659,9 +660,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     trashcan.init();
 
     if (options.useModalFunctionEditor) {
+      Blockly.functionEditor = new Blockly.FunctionEditor();
       // TODO: Is this the best place to call the init function
       // (and is using the init function) reasonable for the modal function editor?
-      Blockly.behaviorEditor.init(workspace, opt_options.toolbox);
+      Blockly.functionEditor.init(workspace, opt_options);
     }
 
     return workspace;
