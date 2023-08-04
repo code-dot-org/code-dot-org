@@ -224,6 +224,9 @@ RUN \
 #
 # Meanwhile, upstream containerd appears to have this issue with no fix in sight:
 # https://github.com/containerd/continuity/pull/145
+#
+# Question: what if any set of builders should enable --link
+# in a way that's performant on Docker 24?
 
 # Link in large static assets built in a separate dockerfile
 COPY --link \
