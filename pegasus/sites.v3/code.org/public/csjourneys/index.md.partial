@@ -18,7 +18,7 @@ social:
 <a id="top"></a>
 
 <div class="col-66" style="padding-right:25px">
-  <h3 style="margin-top:45px; color:#00adbc"><strong>Make engaging, real-world connections with CS Journeys</strong></h3>
+  <h3 style="margin-top:45px;"><strong>Make engaging, real-world connections with CS Journeys</strong></h3>
   <p>Connecting what students are learning to the real world not only enables them to better understand and recall concepts but also excites and inspires them to continue learning.</p>
   <p>Code.org has created easy-to-use resources designed to help you illuminate real-world connections and give students opportunities to explore different career pathways.</p>
   <p>View the <a href="https://code.org/files/csjourneys/csjourneys-teacherguide.pdf" target="_blank">Teacher Guide</a> to learn how to engage your students in CS Journeys.</p>
@@ -40,8 +40,8 @@ social:
         <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/mbari-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Monterey Bay Aquarium Trip">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Virtual field trips</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Sign your classroom up for virtual field trips with iRobot, Amazon, Monterey Bay Aquarium, and more! Students get a firsthand look at different ways that CS and tech are used in the real world.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Virtual field trips</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Sign your classroom up for virtual field trips with iRobot, Amazon, Monterey Bay Aquarium, and more! Students get a firsthand look at different ways that CS and tech are used in the real world.</div>
         <a class="linktag" id="csadventures" href="/csjourneys/csadventures#trips" target="_blank"><button>Learn more</button></a>
   </div>
 </div>
@@ -53,10 +53,10 @@ social:
   <div class="tutorial-tile" style="padding-right:20px">
       <img class="tutorial-tile-img" src="/images/csjourneys/careers-thumbnail2.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Explore Careers">
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Careers with CS videos and other resources</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">View our career exploration pages for videos, interactive tools, and other resources that students can use to explore different CS pathways.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Careers with CS videos and other resources</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">View our career exploration pages for videos, interactive tools, and other resources that students can use to explore different CS pathways.</div>
         <br>
-        <div class="smalltext" style="color: dimgray; text-align: left"><a class="linktag" id="career-k5" href="/careers-with-cs/k5" target="_blank">For grades K-5</a> | <a class="linktag" id="career-explore" href="/careers-with-cs" target="_blank">For grades 6-12</a></div>
+        <div class="smalltext" style="text-align: left"><a class="linktag" id="career-k5" href="/careers-with-cs/k5" target="_blank">For grades K-5</a> | <a class="linktag" id="career-explore" href="/careers-with-cs" target="_blank">For grades 6-12</a></div>
     </div>
   </div>
 </div>
@@ -69,8 +69,8 @@ social:
       <img class="tutorial-tile-img" src="/images/csjourneys/go-beyond.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0;" alt="Resources to empower students to take the next step">
     </a>
     <div class="tutorial-info" style="border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <h3 class="tutorial-info-h" style="color: #dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Resources to empower students to take the next step</strong></h3>
-        <div class="smalltext" style="color: #dimgray; text-align: left; margin-bottom: 10px">Point students to opportunities like mentorships, scholarships, and extracurricular opportunities.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Resources to empower students to take the next step</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Point students to opportunities like mentorships, scholarships, and extracurricular opportunities.</div>
         <br>
         <a class="linktag" id="beyond-resources" href="/beyond" target="_blank"><button>Learn more</button></a>
     </div>
