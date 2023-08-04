@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2023-06-27 22:30:20 UTC",
+    "serialized_at": "2023-08-02 21:25:12 UTC",
     "published_state": "sunsetting",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2978,5 +2978,14 @@
         "opportunity_standard.shortcode": "3-LS4-4"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }
