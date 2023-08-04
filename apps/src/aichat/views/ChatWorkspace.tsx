@@ -30,10 +30,13 @@ const ChatWorkspace: React.FunctionComponent = () => {
     };
     lastMessageID++;
 
-    setStoredMessages([...storedMessages, newMessage]);
+    const copyStoredMessages = [...storedMessages];
+    copyStoredMessages.push(newMessage);
+    setStoredMessages([...storedMessages, newMessage]); // not working ???
+    console.log('added new message?', storedMessages);
 
     // Update storedMessages in redux.
-    console.log(storedMessages);
+    console.log(copyStoredMessages);
 
     // Retrieve system prompt from levebuilder - assign for now.
     const systemPrompt =
@@ -49,12 +52,11 @@ const ChatWorkspace: React.FunctionComponent = () => {
 
     const messagesToSend = [systemPromptMessage];
     // TODO: Filter out messages that are inappropriate or too personal in messagesToSend.
-    storedMessages.forEach(message => messagesToSend.push(message));
+    copyStoredMessages.forEach(message => messagesToSend.push(message));
     console.log('messagesToSend', messagesToSend);
     const response = await openaiCompletion(messagesToSend);
-    console.log('response in ChatWorkspace', response);
-    const jsonResponse = await response.json();
-    const assistantMessage = jsonResponse.content;
+    console.log(response);
+    const assistantMessage = response.content;
     console.log('assistantMessage', assistantMessage);
 
     // TODO: If user message was inappropriate or too personal, update message status

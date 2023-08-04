@@ -3,7 +3,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 
 export async function openaiCompletion(
   chatMessages: ChatCompletionMessage[]
-): Promise<Response> {
+): Promise<openaiResponse> {
   const payload = {messages: formatForChatCompletion(chatMessages)};
   console.log('payload formatted for chat completion controller');
   console.log(payload);
@@ -21,3 +21,5 @@ const formatForChatCompletion = (chatMessages: ChatCompletionMessage[]) => {
     return {role: message.role, content: message.chatMessageText};
   });
 };
+
+type openaiResponse = {role: string; content: string};
