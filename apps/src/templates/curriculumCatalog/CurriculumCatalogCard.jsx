@@ -42,6 +42,12 @@ const CurriculumCatalogCard = ({
   topics = [],
   pathToCourse,
   onAssignSuccess,
+  deviceCompatibility,
+  description,
+  professionalLearningProgram,
+  video,
+  publishedDate,
+  selfPacedPlCourseOfferingPath,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -71,6 +77,12 @@ const CurriculumCatalogCard = ({
     translationIconTitle={i18n.courseInYourLanguage()}
     pathToCourse={pathToCourse + '?viewAs=Instructor'}
     onAssignSuccess={onAssignSuccess}
+    deviceCompatibility={deviceCompatibility}
+    description={description}
+    professionalLearningProgram={professionalLearningProgram}
+    video={video}
+    publishedDate={publishedDate}
+    selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
     {...props}
   />
 );
@@ -98,6 +110,12 @@ CurriculumCatalogCard.propTypes = {
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
   onAssignSuccess: PropTypes.func,
+  deviceCompatibility: PropTypes.string,
+  description: PropTypes.string,
+  professionalLearningProgram: PropTypes.string,
+  video: PropTypes.string,
+  publishedDate: PropTypes.string,
+  selfPacedPlCourseOfferingPath: PropTypes.string,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -121,6 +139,12 @@ const CustomizableCurriculumCatalogCard = ({
   isSignedOut,
   onAssignSuccess,
   courseId,
+  deviceCompatibility,
+  description,
+  professionalLearningProgram,
+  video,
+  publishedDate,
+  selfPacedPlCourseOfferingPath,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -256,6 +280,12 @@ const CustomizableCurriculumCatalogCard = ({
           duration={duration}
           gradeRange={gradeRange}
           subjectsAndTopics={subjectsAndTopics}
+          deviceCompatibility={deviceCompatibility}
+          description={description}
+          professionalLearningProgram={professionalLearningProgram}
+          video={video}
+          publishedDate={publishedDate}
+          selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
         />
       )}
     </div>
@@ -288,6 +318,13 @@ CustomizableCurriculumCatalogCard.propTypes = {
   imageAltText: PropTypes.string,
   quickViewButtonDescription: PropTypes.string.isRequired,
   assignButtonDescription: PropTypes.string.isRequired,
+  // for expanded card
+  deviceCompatibility: PropTypes.string,
+  description: PropTypes.string,
+  professionalLearningProgram: PropTypes.string,
+  video: PropTypes.string,
+  publishedDate: PropTypes.string,
+  selfPacedPlCourseOfferingPath: PropTypes.string,
 };
 
 export default connect(

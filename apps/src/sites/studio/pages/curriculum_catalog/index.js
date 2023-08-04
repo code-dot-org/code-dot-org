@@ -19,7 +19,9 @@ $(document).ready(function () {
     sections,
     isSignedOut,
     isTeacher,
+    selfPacedPlCourseOfferings,
   } = catalogData;
+  console.log(selfPacedPlCourseOfferings);
 
   const store = getStore();
   sections && store.dispatch(setSections(sections));
@@ -36,6 +38,7 @@ $(document).ready(function () {
         languageNativeName={languageNativeName}
         isSignedOut={isSignedOut}
         isTeacher={isTeacher}
+        selfPacedPlCourseOfferings={selfPacedPlCourseOfferings}
       />
     </Provider>,
     document.getElementById('curriculum-catalog-container')
