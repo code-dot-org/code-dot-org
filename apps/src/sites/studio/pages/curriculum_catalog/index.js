@@ -21,7 +21,6 @@ $(document).ready(function () {
     isTeacher,
     selfPacedPlCourseOfferings,
   } = catalogData;
-  console.log(selfPacedPlCourseOfferings);
 
   const store = getStore();
   sections && store.dispatch(setSections(sections));
