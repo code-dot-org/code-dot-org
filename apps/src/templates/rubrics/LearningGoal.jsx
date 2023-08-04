@@ -16,12 +16,20 @@ export default function LearningGoal({learningGoal, canProvideFeedback}) {
       <summary className={style.learningGoalHeader}>
         <div className={style.learningGoalHeaderLeftSide}>
           {isOpen && (
-            <FontAwesome icon="angle-up" onClick={() => setIsOpen(false)} />
+            <FontAwesome
+              icon="angle-up"
+              onClick={() => setIsOpen(false)}
+              className={style.arrowIcon}
+            />
           )}
           {!isOpen && (
-            <FontAwesome icon="angle-down" onClick={() => setIsOpen(true)} />
+            <FontAwesome
+              icon="angle-down"
+              onClick={() => setIsOpen(true)}
+              className={style.arrowIcon}
+            />
           )}
-          {learningGoal.learningGoal}
+          <span>{learningGoal.learningGoal}</span>
         </div>
         <div className={style.learningGoalHeaderRightSide}>
           {learningGoal.aiEnabled && <AiToken />}
@@ -29,7 +37,9 @@ export default function LearningGoal({learningGoal, canProvideFeedback}) {
           {canProvideFeedback && <BodyThreeText>Needs approval</BodyThreeText>}
         </div>
       </summary>
-      Learning Goal Details
+      <div className={style.learningGoalExpanded}>
+        Learning Goal Evidence Levels will be here.
+      </div>
     </details>
   );
 }

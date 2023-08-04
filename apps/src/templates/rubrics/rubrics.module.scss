@@ -67,8 +67,16 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  font-size: 14px;
-  font-weight: 350;
+
+  span {
+    font-size: 14px;
+    font-weight: 350;
+  }
+
+  .arrowIcon {
+    font-weight: 900;
+    font-size: 16px;
+  }
 }
 
 .learningGoalHeaderRightSide {
@@ -102,4 +110,9 @@
   font-size: 12px;
   font-weight: 400;
   line-height: 18px; /* 150% */
+}
+
+.learningGoalExpanded {
+  border-bottom: 1px solid $neutral_dark40;
+  padding: 20px 16px;
 }
