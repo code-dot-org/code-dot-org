@@ -1,7 +1,7 @@
 @use 'sass:math';
 @import 'phase1-design-system';
 
-$container-width: 634px;
+$container-width: 960px;
 
 .expandedCardContainer {
   position: absolute;
@@ -10,8 +10,7 @@ $container-width: 634px;
   border: 1px solid #ccc;
   border-color: #333;
   border-radius: 4px;
-  padding: 10px;
-  z-index: 1;
+  padding: 16px;
   width: $container-width;
   height: 25em;
   box-sizing: border-box;
@@ -38,18 +37,4 @@ $container-width: 634px;
   display: flex;
   align-items: center;
   column-gap: 1em;
-}
-.expandedCardContainer:after {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-right: 1px solid #333;
-  border-bottom: 1px solid #333;
-  top: 3%;
-  left: 25%;
-  margin-left: -25px;
-  content: '';
-  transform: rotate(225deg);
-  margin-top: -25px;
-  background: #f9f9f9;
 }

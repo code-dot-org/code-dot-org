@@ -6,39 +6,55 @@ import PropTypes from 'prop-types';
 const ExpandedCurriculumCatalogCard = ({
   courseDisplayName,
   duration,
-  video,
-  device,
   gradeRange,
   subjectsAndTopics,
+  deviceCompatibility,
+  description,
+  professionalLearningProgram,
+  video,
+  publishedDate,
+  selfPacedPlCourseOfferingPath,
 }) => {
   return (
-    <div className={style.expandedCardContainer}>
-      <h4>{courseDisplayName}</h4>
-      <div className={style.infoContainer}>
-        <div className={style.iconWithDescription}>
-          <FontAwesome icon="user" className="fa-solid" />
-          <p>{gradeRange}</p>
+    <div>
+      <div className={style.expandedCardContainer}>
+        <h4>{courseDisplayName}</h4>
+        <div className={style.infoContainer}>
+          <div className={style.iconWithDescription}>
+            <FontAwesome icon="user" className="fa-solid" />
+            <p>{gradeRange}</p>
+          </div>
+          <div className={style.iconWithDescription}>
+            <FontAwesome icon="clock" className="fa-solid" />
+            <p>{duration}</p>
+          </div>
+          <div className={style.iconWithDescription}>
+            <FontAwesome icon="book" className="fa-solid" />
+            <p>{subjectsAndTopics.join(', ')}</p>
+          </div>
         </div>
-        <div className={style.iconWithDescription}>
-          <FontAwesome icon="clock" className="fa-solid" />
-          <p>{duration}</p>
-        </div>
-        <div className={style.iconWithDescription}>
-          <FontAwesome icon="book" className="fa-solid" />
-          <p>{subjectsAndTopics.join(', ')}</p>
+        <div>{deviceCompatibility}</div>
+        <div>{description}</div>
+        <div>{professionalLearningProgram}</div>
+        <div>{video}</div>
+        <div>{publishedDate}</div>
+        <div>
+          <a href={selfPacedPlCourseOfferingPath}>here</a>
         </div>
       </div>
     </div>
   );
 };
-
 ExpandedCurriculumCatalogCard.propTypes = {
   courseDisplayName: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
-  video: PropTypes.string,
-  device: PropTypes.string,
   gradeRange: PropTypes.string.isRequired,
-  subjectsAndTopics: PropTypes.arrayOf(PropTypes.string),
+  subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
+  deviceCompatibility: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  professionalLearningProgram: PropTypes.string.isRequired,
+  video: PropTypes.string.isRequired,
+  publishedDate: PropTypes.string.isRequired,
+  selfPacedPlCourseOfferingPath: PropTypes.string.isRequired,
 };
-
 export default ExpandedCurriculumCatalogCard;
