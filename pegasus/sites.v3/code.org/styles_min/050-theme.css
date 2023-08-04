@@ -63,12 +63,14 @@ body {
   color: white;
   font-size: 14px;
   font-family: 'Gotham 4r', sans-serif;
+  text-decoration: none;
 }
 
 .whitefooterlink:hover {
   color: white;
   font-size: 14px;
   font-family: 'Gotham 4r', sans-serif;
+  text-decoration: underline;
 }
 
 .whitefooterlink:visited {
