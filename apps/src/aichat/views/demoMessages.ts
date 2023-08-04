@@ -5,19 +5,20 @@ import {Role, Status} from '../constants';
 const demoChatMessages: ChatCompletionMessage[] = [
   {
     id: 1,
-    name: 'Anna',
-    role: Role.USER,
-    chatMessageText: 'What was your childhood like?',
-    status: Status.OK,
-  },
-  {
-    id: 2,
     name: 'HistoryBot',
     role: Role.ASSISTANT,
     chatMessageText:
-      'Ah, my childhood was quite eventful, Anna. I was born into a farming family in Westmoreland County, Virginia. I had the privilege of receiving a basic education, but my formal schooling ended at the age of 15 when my father passed away. After that, I worked as a surveyor, which allowed me to explore the wilderness and develop valuable skills. These experiences in my youth helped shape my character and prepared me for the challenges that lay ahead in my life.',
+      'Welcome to AI Chat! I am your assistant - please ask me questions according to the instructions given.',
     status: Status.OK,
   },
+  // {
+  //   id: 2,
+  //   name: 'HistoryBot',
+  //   role: Role.ASSISTANT,
+  //   chatMessageText:
+  //     'Ah, my childhood was quite eventful, Anna. I was born into a farming family in Westmoreland County, Virginia. I had the privilege of receiving a basic education, but my formal schooling ended at the age of 15 when my father passed away. After that, I worked as a surveyor, which allowed me to explore the wilderness and develop valuable skills. These experiences in my youth helped shape my character and prepared me for the challenges that lay ahead in my life.',
+  //   status: Status.OK,
+  // },
   // {
   //   id: 3,
   //   name: 'Anna',

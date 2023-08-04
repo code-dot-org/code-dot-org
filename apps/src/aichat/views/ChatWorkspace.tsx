@@ -23,20 +23,13 @@ const ChatWorkspace: React.FunctionComponent = () => {
 
     const newMessage: ChatCompletionMessage = {
       id: lastMessageID + 1,
-      name: 'User', // get name from signed in user
+      name: 'User', // Get name from signed in user.
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText: message,
     };
     lastMessageID++;
-
-    const copyStoredMessages = [...storedMessages];
-    copyStoredMessages.push(newMessage);
-    setStoredMessages([...storedMessages, newMessage]); // not working ???
-    console.log('added new message?', storedMessages);
-
-    // Update storedMessages in redux.
-    console.log(copyStoredMessages);
+    console.log('newMessage', newMessage);
 
     // Retrieve system prompt from levebuilder - assign for now.
     const systemPrompt =
@@ -52,14 +45,18 @@ const ChatWorkspace: React.FunctionComponent = () => {
 
     const messagesToSend = [systemPromptMessage];
     // TODO: Filter out messages that are inappropriate or too personal in messagesToSend.
-    copyStoredMessages.forEach(message => messagesToSend.push(message));
+    storedMessages.forEach(message => messagesToSend.push(message));
+    messagesToSend.push(newMessage);
     console.log('messagesToSend', messagesToSend);
     const response = await openaiCompletion(messagesToSend);
-    console.log(response);
+
+    // TODO: Check if response was successful. Update user message status accordingly.
+    newMessage.status = Status.OK;
+
     const assistantMessage = response.content;
     console.log('assistantMessage', assistantMessage);
 
-    // TODO: If user message was inappropriate or too personal, update message status
+    // TODO: If user message was inappropriate or too personal, update status.
 
     const assistantChatMessage: ChatCompletionMessage = {
       id: lastMessageID + 1,
@@ -69,8 +66,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
       chatMessageText: assistantMessage,
     };
 
-    // Add response to storedMessages.
-    setStoredMessages([...storedMessages, assistantChatMessage]);
+    setStoredMessages([...storedMessages, newMessage, assistantChatMessage]);
   };
 
   return (

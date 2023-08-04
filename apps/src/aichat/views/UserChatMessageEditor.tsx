@@ -23,6 +23,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
         icon="arrow-up"
         onClick={() => {
           onSubmit?.(userMessage);
+          setUserMessage('');
         }}
         color="purple"
       />
