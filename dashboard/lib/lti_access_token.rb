@@ -1,4 +1,4 @@
-module LtiAccessTokenHelper
+module LtiAccessToken
   NAMESPACE = "lti_v1_controller".freeze
 
   # client_id and issuer are present in the id_token we cache or store as a cookie from the LTI launch
@@ -45,16 +45,13 @@ module LtiAccessTokenHelper
     res = HTTParty.post(access_token_url, query: query, headers: {'Content-Type' => 'application/x-www-form-urlencoded'})
 
     # get access_token and exp from response
-    token_response = JSON.parse(res.body)
+    token_response = JSON.parse(res.body).transform_keys(&:to_sym)
     access_token = token_response[:access_token]
     exp = token_response[:expires_in]
 
     # cache access_token, set expiration
     CDO.shared_cache.write(cache_key, access_token, expires_in: exp)
 
-    # return access_token
-
-    #TEMP put here for deving
-    return res.body
+    return access_token
   end
 end
