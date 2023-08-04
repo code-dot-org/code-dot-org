@@ -15,10 +15,6 @@ html {
   font-size: 100%;
 }
 
-body {
-  color: $neutral-dark;
-}
-
 p {
   @include body-two;
 }
