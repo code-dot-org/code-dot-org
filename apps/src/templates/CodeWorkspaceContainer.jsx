@@ -152,7 +152,7 @@ const styles = {
     borderTopColor: '#ddd',
   },
   [MODAL_EDITOR_ID]: {
-    visibility: 'hidden',
+    display: 'none',
     position: 'absolute',
     // TODO: Calculate these values based on the size of the workspace
     top: '30px',
@@ -162,7 +162,6 @@ const styles = {
     height: '100%',
     // border: '10px solid green',
     // borderRadius: '15px',
-    backgroundColor: 'white',
   },
   noVisualization: {
     // Overrides left set in css
