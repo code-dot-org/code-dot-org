@@ -1,0 +1,15 @@
+@import 'color.scss';
+
+
+.aichatLab {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
