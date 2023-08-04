@@ -10,7 +10,10 @@ export async function openaiCompletion(
   console.log(JSON.stringify(payload));
   // Send request to chat completion backend controller.
   const url = '/openai/chat_completion';
-  return HttpClient.post(url, JSON.stringify(payload), true);
+  const response = await HttpClient.post(url, JSON.stringify(payload), true, {
+    'Content-Type': 'application/json; charset=UTF-8',
+  });
+  return await response.json();
 }
 
 const formatForChatCompletion = (chatMessages: ChatCompletionMessage[]) => {
