@@ -7,7 +7,7 @@ import aichatI18n from '../locale';
 const UserChatMessageEditor: React.FunctionComponent = () => {
   const [userMessage, setUserMessage] = useState<string>('');
 
-  const onSubmit = useContext(ChatWorkspaceContext);
+  const onSubmit = useContext(ChatWorkspaceContext)?.onSubmit;
 
   return (
     <div className={moduleStyles.UserChatMessageEditor}>
@@ -22,8 +22,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
         text="Submit"
         icon="arrow-up"
         onClick={() => {
-          console.log('Submit button clicked');
-          onSubmit(userMessage);
+          onSubmit?.(userMessage);
         }}
         color="purple"
       />
