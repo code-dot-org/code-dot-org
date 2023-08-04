@@ -6,7 +6,10 @@ import LearningGoal from '@cdo/apps/templates/rubrics/LearningGoal';
 describe('LearningGoal', () => {
   it('shows AI token when AI is enabled', () => {
     const wrapper = shallow(
-      <LearningGoal learningGoal={{learningGoal: 'Testing', aiEnabled: true}} />
+      <LearningGoal
+        learningGoal={{learningGoal: 'Testing', aiEnabled: true}}
+        teacherHasEnabledAi
+      />
     );
     expect(wrapper.text()).to.include('Testing');
     expect(wrapper.find('AiToken')).to.have.lengthOf(1);
@@ -16,6 +19,18 @@ describe('LearningGoal', () => {
     const wrapper = shallow(
       <LearningGoal
         learningGoal={{learningGoal: 'Testing', aiEnabled: false}}
+        teacherHasEnabledAi
+      />
+    );
+    expect(wrapper.text()).to.include('Testing');
+    expect(wrapper.find('AiToken')).to.have.lengthOf(0);
+  });
+
+  it('does not show AI token when teacher has disabled AI', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{learningGoal: 'Testing', aiEnabled: true}}
+        teacherHasEnabledAi={false}
       />
     );
     expect(wrapper.text()).to.include('Testing');

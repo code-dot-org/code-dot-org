@@ -13,6 +13,7 @@ const defaultLearningGoal = {
 export const AiDisabledFeedbackUnavailable = () => (
   <LearningGoal
     learningGoal={{...defaultLearningGoal, aiEnabled: false}}
+    teacherHasEnabledAi
     canProvideFeedback={false}
   />
 );
@@ -20,6 +21,7 @@ export const AiDisabledFeedbackUnavailable = () => (
 export const AiDisabledFeedbackAvailable = () => (
   <LearningGoal
     learningGoal={{...defaultLearningGoal, aiEnabled: false}}
+    teacherHasEnabledAi
     canProvideFeedback
   />
 );
@@ -27,6 +29,7 @@ export const AiDisabledFeedbackAvailable = () => (
 export const AiEnabledFeedbackUnavailable = () => (
   <LearningGoal
     learningGoal={{...defaultLearningGoal, aiEnabled: true}}
+    teacherHasEnabledAi
     canProvideFeedback={false}
   />
 );
@@ -34,6 +37,7 @@ export const AiEnabledFeedbackUnavailable = () => (
 export const AiEnabledFeedbackAvailable = () => (
   <LearningGoal
     learningGoal={{...defaultLearningGoal, aiEnabled: true}}
+    teacherHasEnabledAi
     canProvideFeedback
   />
 );

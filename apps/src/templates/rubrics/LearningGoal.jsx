@@ -5,8 +5,14 @@ import style from './rubrics.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 
-export default function LearningGoal({learningGoal, canProvideFeedback}) {
+export default function LearningGoal({
+  learningGoal,
+  teacherHasEnabledAi,
+  canProvideFeedback,
+}) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
 
   return (
     <details
@@ -32,7 +38,7 @@ export default function LearningGoal({learningGoal, canProvideFeedback}) {
           <span>{learningGoal.learningGoal}</span>
         </div>
         <div className={style.learningGoalHeaderRightSide}>
-          {learningGoal.aiEnabled && <AiToken />}
+          {aiEnabled && <AiToken />}
           {/*TODO: Display status of feedback*/}
           {canProvideFeedback && <BodyThreeText>Needs approval</BodyThreeText>}
         </div>
@@ -46,6 +52,7 @@ export default function LearningGoal({learningGoal, canProvideFeedback}) {
 
 LearningGoal.propTypes = {
   learningGoal: PropTypes.object,
+  teacherHasEnabledAi: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
 };
 
