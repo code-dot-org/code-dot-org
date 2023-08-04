@@ -9,6 +9,7 @@ import {Role, Status} from '../constants';
 import {demoChatMessages} from './demoMessages'; // demo chat messages - remove when connected to backend
 import {openaiCompletion} from '../openai';
 
+// storedMessages stored in Redux.
 const getStoredMessages = () => {
   // Retrieve messages from redux - use demoChatMessage for now.
   return demoChatMessages;
@@ -22,6 +23,7 @@ const onSubmit = async (name: string, message: string) => {
     storedMessages.length === 0
       ? 1
       : storedMessages[storedMessages.length - 1].id;
+
   const newMessage: ChatCompletionMessage = {
     id: lastMessageID + 1,
     name,
@@ -32,10 +34,10 @@ const onSubmit = async (name: string, message: string) => {
 
   storedMessages.push(newMessage);
 
-  // Update storedMessages in redux
+  // Update storedMessages in redux.
   console.log(storedMessages);
 
-  // Retrieve system prompt from levebuilder - assigne for now.
+  // Retrieve system prompt from levebuilder - assign for now.
   const systemPrompt =
     'You are a chatbot for a middle school classroom where they can chat with a historical figure. You must answer only questions about the formation of America and the founding fathers. You will act as George Washington; every question you answer must be from his perspective. Wait for the student to ask a question before responding.';
 
@@ -48,10 +50,14 @@ const onSubmit = async (name: string, message: string) => {
   };
 
   const messagesToSend = [systemPromptMessage];
+  // TODO: Do not include messages that are inappropriate or too personal in messagesToSend.
   storedMessages.forEach(message => messagesToSend.push(message));
+  console.log('inside onSubmit');
   console.log(messagesToSend);
   const response = await openaiCompletion(messagesToSend);
-  console.log(response);
+  console.log('response in ChatWorkspace', response);
+  // If user message was inappropriate or too personal, update message status
+  // Add response to storedMessages.
 };
 
 const ChatWorkspace: React.FunctionComponent = () => {
