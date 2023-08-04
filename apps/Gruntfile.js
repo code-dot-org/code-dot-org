@@ -740,6 +740,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
     'levels/editors/fields/_validation_code':
       './src/sites/studio/pages/levels/editors/fields/_validation_code.js',
+    'levels/editors/fields/_validations':
+      './src/sites/studio/pages/levels/editors/fields/_validations.js',
     'levels/editors/fields/_video':
       './src/sites/studio/pages/levels/editors/fields/_video.js',
     'levels/editors/_gamelab':
