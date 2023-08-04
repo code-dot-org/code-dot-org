@@ -216,6 +216,14 @@ RUN \
 #
 # Here is an issue with somebody having a similar problem:
 # https://github.com/moby/buildkit/issues/1704
+#
+# This was reported to be fixed by:
+# https://github.com/moby/buildkit/pull/2181
+# But some of that funcationality may have been reverted a few months later:
+# https://github.com/moby/buildkit/pull/2480
+#
+# Meanwhile, upstream containerd appears to have this issue with no fix in sight:
+# https://github.com/containerd/continuity/pull/145
 
 # Link in large static assets built in a separate dockerfile
 COPY --link \
