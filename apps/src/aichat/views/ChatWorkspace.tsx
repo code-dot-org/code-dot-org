@@ -14,8 +14,6 @@ const ChatWorkspace: React.FunctionComponent = () => {
     useState<ChatCompletionMessage[]>(demoChatMessages);
 
   const onSubmit = async (message: string) => {
-    console.log(`Submit button clicked with message: ${message}`);
-
     let lastMessageID =
       storedMessages.length === 0
         ? 1
@@ -29,7 +27,6 @@ const ChatWorkspace: React.FunctionComponent = () => {
       chatMessageText: message,
     };
     lastMessageID++;
-    console.log('newMessage', newMessage);
 
     // Retrieve system prompt from levebuilder - assign for now.
     const systemPrompt =
@@ -47,17 +44,13 @@ const ChatWorkspace: React.FunctionComponent = () => {
     // TODO: Filter out messages that are inappropriate or too personal in messagesToSend.
     storedMessages.forEach(message => messagesToSend.push(message));
     messagesToSend.push(newMessage);
-    console.log('messagesToSend', messagesToSend);
     const response = await openaiCompletion(messagesToSend);
 
     // TODO: Check if response was successful. Update user message status accordingly.
     newMessage.status = Status.OK;
-
     const assistantMessage = response.content;
-    console.log('assistantMessage', assistantMessage);
 
     // TODO: If user message was inappropriate or too personal, update status.
-
     const assistantChatMessage: ChatCompletionMessage = {
       id: lastMessageID + 1,
       name: 'HistoryBot',
