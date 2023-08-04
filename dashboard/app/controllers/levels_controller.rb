@@ -299,6 +299,10 @@ class LevelsController < ApplicationController
     # first-order member of the properties JSON, rather than simply as a string of
     # JSON belonging to a single property.
     update_level_params[:level_data] = JSON.parse(level_params[:level_data]) if level_params[:level_data]
+    # Update level data with validations, and remove from level properties.
+    # We can remove this once validations are read from level properties directly.
+    update_level_params[:level_data]["validations"] = JSON.parse(update_level_params[:validations]) if update_level_params[:validations]
+    update_level_params[:validations] = nil if level_params[:validations]
 
     @level.assign_attributes(update_level_params)
     @level.log_changes(current_user)
