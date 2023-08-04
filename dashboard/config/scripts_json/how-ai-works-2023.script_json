@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "how-ai-works",
-    "serialized_at": "2023-08-02 18:15:45 UTC",
+    "serialized_at": "2023-08-03 21:31:54 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2952,12 +2952,29 @@
       }
     },
     {
-      "key": "951bcfae-b43b-4783-81a2-3022a55bcf63",
+      "key": "b4aa3386-cb77-4253-89c8-2c255a7d620f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Pass out the [r _optional_gan_game_activity_guide/how-ai-works/2023]. Show students how to use the widget by playing one round of human guessing vs computer guessing. Feel free to use the slides at the end of the slide deck as a guide. Be sure to be clear to students that they have no information initially, and they do not have to over-think initial guesses. They'll get things wrong and that's ok! In fact, it's part of the model of the activity -- GANs are wildly guessing too until they have more information.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Students log into Code studio to explore a game where they act like generators.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Pass out the [r _optional_gan_game_activity_guide/how-ai-works/2023]. Show students how to use the widget by playing one round of human guessing vs computer guessing. Feel free to use the slides at the end of the slide deck as a guide. Be sure to be clear to students that they have no information initially, and they do not have to over-think initial guesses. They'll get things wrong and that's ok! In fact, it's part of the model of the activity -- GANs are wildly guessing too until they have more information.",
         "duration": "20",
-        "name": "Optional GAN Activity",
+        "name": "(Optional) GAN Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Exemplar:** You can find an exemplar of this activity guide here: [GAN Game Activity Guide Exemplar](https://docs.google.com/document/d/1pn0eptWyWC0zkX9DtV5fR7qTCw0h9AokkGgLt-8JNkY/)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b4aa3386-cb77-4253-89c8-2c255a7d620f",
+        "lesson_activity.key": "8e09a958-4202-48e1-bd2e-7d0afa3a0c6d"
+      }
+    },
+    {
+      "key": "951bcfae-b43b-4783-81a2-3022a55bcf63",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Students log into Code studio to explore a game where they act like generators.",
         "progression_name": "(Optional) GAN Guess Widget",
         "tips": [
           {
@@ -2973,7 +2990,7 @@
     },
     {
       "key": "2bc8da2b-fdb5-4b36-a01e-9ca2d9aae2e3",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Help student stay on task, coming up with guesses with them. (Eventually Students should figure out that the rule is a password must have a red circle -- help students who are struggling figure this out by procedurally trying different shapes and colors with them."
       },
@@ -2984,7 +3001,7 @@
     },
     {
       "key": "bc9a34c9-7108-479b-ac07-604c87c08891",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Regroup:** Have students regroup for a synthesis discussion to help them further cement their understanding of generators and discriminators by connecting it to what they did in the activity."
       },
@@ -2995,7 +3012,7 @@
     },
     {
       "key": "371b03d3-6872-4368-b2a0-7528ccb6d2f1",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  When were you acting like a generator in this activity?"
       },
@@ -3006,7 +3023,7 @@
     },
     {
       "key": "cf90f879-7888-4c15-a3c8-a270a7ad8291",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  When students generated random passwords -- even when they weren't accepted -- they were acting like a generator. Generators generate random images that may or may not be accepted as real. "
       },
@@ -3017,7 +3034,7 @@
     },
     {
       "key": "9b5844df-8cd9-492c-8ff3-cd81721402a2",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  When were you acting like a discriminator in this activity? ",
         "tips": [
@@ -3034,22 +3051,12 @@
     },
     {
       "key": "4fd7624a-db55-47c0-9582-f66aba02cd69",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students acted like a discriminator when they guessed if the computer's generated password followed the rule or not. They didn't initially know, but got better as they got more data."
       },
       "seeding_key": {
         "activity_section.key": "4fd7624a-db55-47c0-9582-f66aba02cd69",
-        "lesson_activity.key": "8e09a958-4202-48e1-bd2e-7d0afa3a0c6d"
-      }
-    },
-    {
-      "key": "17e5f2a5-eb21-46e5-a3aa-d48786fc7912",
-      "position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "17e5f2a5-eb21-46e5-a3aa-d48786fc7912",
         "lesson_activity.key": "8e09a958-4202-48e1-bd2e-7d0afa3a0c6d"
       }
     },
@@ -4117,6 +4124,18 @@
       }
     },
     {
+      "name": "[Key] Vocabulary Matching",
+      "url": "https://drive.google.com/file/d/1cF8MsKO_lCLziA5FisbcQc2-529j1HXZ/view",
+      "key": "_key_vocabulary_matching",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_vocabulary_matching"
+      }
+    },
+    {
       "name": "(Optional) GAN Game Activity Guide",
       "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
       "key": "_optional_gan_game_activity_guide",
@@ -4260,7 +4279,7 @@
       }
     },
     {
-      "name": "Eliza Activity Guide",
+      "name": "(Optional) Eliza Activity Guide",
       "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6",
       "key": "eliza_activity_guide",
       "properties": {
@@ -4269,18 +4288,6 @@
       },
       "seeding_key": {
         "resource.key": "eliza_activity_guide"
-      }
-    },
-    {
-      "name": "GAN Game Activity Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1pn0eptWyWC0zkX9DtV5fR7qTCw0h9AokkGgLt-8JNkY/",
-      "key": "gan_game_activity_guide_exemplar",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "gan_game_activity_guide_exemplar"
       }
     },
     {
@@ -4296,7 +4303,7 @@
       }
     },
     {
-      "name": "Generative Images Activity Guide",
+      "name": "[Key] Generative Images Activity Guide",
       "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
       "key": "generative_images_activity_guide",
       "properties": {
@@ -4530,7 +4537,7 @@
       }
     },
     {
-      "name": "LLM Vocab And Video Guide Answer Key",
+      "name": "[Key] Vocab And Video Guide",
       "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
       "key": "llm_vocab_and_video_guide_answer_key",
       "properties": {
@@ -4566,12 +4573,11 @@
       }
     },
     {
-      "name": "Noisy Image Activity Exemplar",
+      "name": "[Exemplar] Noisy Image Activity",
       "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/",
       "key": "noisy_image_activity_exemplar",
       "properties": {
         "audience": "Teacher",
-        "include_in_pdf": true,
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -4715,7 +4721,7 @@
       }
     },
     {
-      "name": "Written Voice Simulator Activity Guide Exemplar",
+      "name": "[Exemplar] Written Voice Simulator Activity Guide",
       "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/",
       "key": "written_voice_simulator_activity_guide_exemplar",
       "properties": {
@@ -4875,12 +4881,6 @@
     {
       "seeding_key": {
         "lesson.key": "Generative Images",
-        "resource.key": "gan_game_activity_guide_exemplar"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Generative Images",
         "resource.key": "generative_images"
       }
     },
@@ -4918,6 +4918,12 @@
       "seeding_key": {
         "lesson.key": "Generative Images",
         "resource.key": "video_and_vocabulary_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "How AI Works In a Day",
+        "resource.key": "_key_vocabulary_matching"
       }
     },
     {
