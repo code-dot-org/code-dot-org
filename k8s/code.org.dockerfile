@@ -209,6 +209,14 @@ RUN \
 # as of today, it does nothing unless `Use containerd for pulling and storing images` is enabled
 # for explanation see: https://github.com/docker/buildx/issues/1099#issuecomment-1524940116
 # upstream issue: https://github.com/moby/moby/issues/45111
+#
+# Unfortunately "use containerd" appears to non-performant, it is ridiculously slow
+# at handling the "exporting image" step at the end of a build, possibly/probably due
+# to a file-by-file diffing step (instead of relying on nanosecond filesystem timestamps)
+#
+# Here is an issue with somebody having a similar problem:
+# https://github.com/moby/buildkit/issues/1704
+
 # Link in large static assets built in a separate dockerfile
 COPY --link \
   --from=code.org-static / \
