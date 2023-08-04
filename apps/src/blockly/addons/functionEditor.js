@@ -1,7 +1,6 @@
-import xml from '@cdo/apps/xml';
 import {
   ObservableProcedureModel,
-  // ProcedureBase,
+  ProcedureBase,
 } from '@blockly/block-shareable-procedures';
 import {
   MODAL_EDITOR_ID,
@@ -13,21 +12,28 @@ import {
 // This class is not yet implemented. It is used for the modal function editor,
 // which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
-  // TODO: Confirm we are limited in what we can do in the constructor because
-  // we don't have access to the main workspace when we instantiate this class.
   constructor(
     opt_msgOverrides,
     opt_definitionBlockType,
     opt_parameterBlockTypes,
     opt_disableParamEditing,
     opt_paramTypes
-  ) {}
+  ) {
+    // TODO: Are these options from the fork still relevant?
+    this.msgOverrides_ = opt_msgOverrides || {};
+    if (opt_definitionBlockType) {
+      this.definitionBlockType = opt_definitionBlockType;
+    }
+    this.parameterBlockTypes = opt_parameterBlockTypes || {};
+    this.disableParamEditing = opt_disableParamEditing || false;
+    this.paramTypes = opt_paramTypes || [];
+  }
 
   setMainWorkspace = workspace => {
     this.mainWorkspace = workspace;
   };
 
-  init(workspace, toolbox) {
+  init(workspace, options) {
     this.setMainWorkspace(workspace);
 
     // The workspace we'll show to users for editing
@@ -35,9 +41,8 @@ export default class FunctionEditor {
     this.dom = modalEditor;
 
     // Customize auto-populated Functions toolbox category.
-    this.editorWorkspace = Blockly.inject(modalEditor, {
-      toolbox,
-      trashcan: false,
+    this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
+      toolbox: options.toolbox,
     });
 
     document
@@ -49,11 +54,18 @@ export default class FunctionEditor {
       this.block.getProcedureModel().setName(e.target.value);
     });
 
+    this.functionDescriptionInput = document.getElementById(
+      'functionDescriptionText'
+    );
+    this.functionDescriptionInput.addEventListener('input', () => {
+      // TODO: Save the description to the procedure model
+    });
+
     // Set up the delete function button
     document
       .getElementById(MODAL_EDITOR_DELETE_ID)
-      .addEventListener('click', e => {
-        console.log('This is complicated and we do not support it yet!');
+      .addEventListener('click', () => {
+        // TODO: Handle deletion
       });
 
     this.mainWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
@@ -61,10 +73,8 @@ export default class FunctionEditor {
     );
     // we have to pass the main ws so that the correct procedures are populated
     // false to not show the new function button inside the modal editor
-    this.editorWorkspace.registerToolboxCategoryCallback(
-      'PROCEDURE',
-      () => {}
-      // modalProceduresToolboxCallback(this.mainWorkspace, false)
+    this.editorWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
+      flyoutCategory(this.mainWorkspace, false)
     );
 
     // Set up the "new procedure" button in the toolbox
@@ -74,17 +84,45 @@ export default class FunctionEditor {
       this.mainWorkspace.getToolbox().refreshSelection();
     });
 
-    // TODO: Maribeth's code uses local storage for these
+    // Serialized data from all procedures
     this.allFunctions = {};
+
+    // TODO: This is was firing too often, I think. Confirm that listening for BLOCK_CHANGE events works?
+    // Add an event listener that saves the data for the given procedure whenever the procedure is saved
+    this.editorWorkspace.addChangeListener(e => {
+      if (e.type !== Blockly.Events.BLOCK_CHANGE) return;
+      // save the procedure block only, ignore other blocks
+      if (!this.block) return;
+      const id = this.block.getProcedureModel().getId();
+      this.allFunctions[id] = Blockly.serialization.blocks.save(this.block);
+    });
+
+    // TODO: This is firing too often. How can we fix it?
+    this.editorWorkspace.addChangeListener(e => {
+      // If the main workspace hasn't been initialized yet, don't do anything
+      if (!this.mainWorkspace) return;
+      if (e instanceof ProcedureBase && e.type !== 'procedure_create') {
+        let event;
+        try {
+          console.log('e.toJson()', e.toJson());
+          event = Blockly.Events.fromJson(e.toJson(), this.mainWorkspace);
+        } catch (err) {
+          // Could not deserialize event. This is expected to happen. E.g. When round-tripping parameter deletes,
+          // the delete in the secondary workspace cannot be deserialized into the original workspace.
+          console.log(err);
+          return;
+        }
+        event.run(true);
+
+        // Update the toolbox in case this change is happening while the flyout is open
+        this.mainWorkspace.getToolbox().refreshSelection();
+      }
+    });
   }
 
-  // TODO
-  isOpen() {
-    return false;
-  }
-
+  // TODO: Address areas in codebase where hideIfOpen is used
   hide() {
-    this.dom.style.visibility = 'hidden';
+    this.dom.style.display = 'none';
   }
 
   // TODO
@@ -93,52 +131,44 @@ export default class FunctionEditor {
   // TODO
   refreshParamsEverywhere() {}
 
-  // TODO: Use the name openWithFunction (or openWithNewFunction vs. openEditorForFunction here)?
-  // Ex. openEditorForFunction(procedureBlock, functionName) {}
+  // TODO: Rename
   showForFunction(procedure) {
     this.editorWorkspace.clear();
     this.nameInput.value = procedure.getName();
+    // TODO: procedure.getDescription() is not a thing -- this will be on extra state?
+    // this.functionDescriptionInput.value = procedure.getDescription();
 
-    this.dom.style.visibility = 'visible';
+    this.dom.style.display = '';
     Blockly.common.svgResize(this.editorWorkspace);
 
-    const VERTICAL_OFFSET = 250;
-    const overrides = {y: VERTICAL_OFFSET, deletable: false, movable: false};
-    const entry = this.allFunctions[procedure.getId()];
-    if (entry) {
-      const data = {...entry, ...overrides};
+    const existingData = this.allFunctions[procedure.getId()];
+    if (existingData) {
       // If we already have stored data about the procedure, use that
       this.block = Blockly.serialization.blocks.append(
-        data,
+        existingData,
         this.editorWorkspace
       );
     } else {
       // Otherwise, we need to create a new block from scratch.
-      const baseData = {
-        // TODO: Was 'modal_procedures_defnoreturn'; confirm that this is the appropriate switch
+      const newDefinitionBlock = {
+        kind: 'block',
         type: 'procedures_defnoreturn',
-        x: 20,
-        y: 20,
         extraState: {
           procedureId: procedure.getId(),
-        },
-        icons: {
-          comment: {
-            text: 'Describe this function...',
-            pinned: false,
-            height: 80,
-            width: 160,
-          },
         },
         fields: {
           NAME: procedure.getName(),
         },
+        deletable: false,
+        movable: false,
+        x: 50,
+        y: 200, // TODO: This is a magic number
       };
-      const newBlockData = {...baseData, ...overrides};
       this.block = Blockly.serialization.blocks.append(
-        newBlockData,
+        newDefinitionBlock,
         this.editorWorkspace
       );
+      console.log('new block: ', this.block);
     }
   }
 
@@ -149,7 +179,6 @@ export default class FunctionEditor {
    */
   getNameForNewFunction() {
     let name = 'do something';
-
     // Copied logic from blockly core because findLegalName requires us to
     // have a block first.
     while (Blockly.Procedures.isNameUsed(name, this.mainWorkspace)) {
@@ -186,16 +215,15 @@ export default class FunctionEditor {
 }
 
 const createCallBlock = function (procedure) {
+  const name = procedure.getName();
   return {
     kind: 'block',
-    // TODO: Previous logic only seemed to use procedures_callnoreturn vs. modal_procedures_callreturn/modal_procedures_callnoreturn
-    type: procedure.getReturnTypes()
-      ? 'procedures_callreturn'
-      : 'procedures_callnoreturn',
-    extraState: {
-      name: procedure.getName(),
-      // TODO: Do we support functions with parameters?
-      params: procedure.getParameters().map(param => param.getName()),
+    type: 'procedures_callnoreturn',
+    fields: {
+      NAME: name,
+    },
+    mutation: {
+      name: name,
     },
   };
 };
@@ -233,49 +261,4 @@ export function flyoutCategory(workspace, includeNewButton = true) {
     .getProcedures()
     .forEach(procedure => blockList.push(createCallBlock(procedure)));
   return blockList;
-}
-
-export function allCallBlocks(procedures) {
-  let blockElements = [];
-  for (let i = 0; i < procedures.length; i++) {
-    const name = procedures[i][0];
-    const args = procedures[i][1];
-
-    const block = xml.parseElement('<block></block>', true);
-    block.setAttribute('type', 'procedures_callnoreturn');
-    block.setAttribute('gap', 16);
-
-    const mutation = xml.parseElement('<mutation></mutation>', true);
-    mutation.setAttribute('name', name);
-    block.appendChild(mutation);
-
-    // The argument list is likely empty as we don't currently support
-    // functions with parameters. This loop is needed if that changes.
-    for (let j = 0; j < args.length; j++) {
-      const arg = xml.parseElement(`<arg name="${args[j]}"></arg>`, true);
-      mutation.appendChild(arg);
-    }
-    blockElements.push(block);
-  }
-  return blockElements;
-}
-
-export function newDefinitionBlock(localizedNewFunctionString) {
-  // Create a block with the following XML:
-  // <block type="procedures_defnoreturn" gap="24">
-  //     <field name="NAME">do something</field>
-  // </block>
-  const blockElement = xml.parseElement('<block></block>', true);
-  blockElement.setAttribute('type', 'procedures_defnoreturn');
-  // Add slightly larger gap between system blocks and user calls.
-  blockElement.setAttribute('gap', 24);
-
-  const nameField = xml.parseElement(
-    `<field>${localizedNewFunctionString}</field>`,
-    true
-  );
-  nameField.setAttribute('name', 'NAME');
-  blockElement.appendChild(nameField);
-
-  return blockElement;
 }
