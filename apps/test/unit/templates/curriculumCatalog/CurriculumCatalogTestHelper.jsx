@@ -148,6 +148,13 @@ const noPathCurriculum = {
   is_translated: false,
 };
 
+const selfPacedPlCurriculum = {
+  id: 390,
+  key: 'self-paced-pl-csd-2021',
+  display_name: 'Teaching CS Discoveries',
+  course_version_path: '/courses/self-paced-pl-csd-2022',
+};
+
 // Curricula groups
 const allCurricula = [
   makerCurriculum,
@@ -233,4 +240,5 @@ export default {
   allFiltersAppliedShownCurricula,
   noGradesCurriculum,
   noPathCurriculum,
+  selfPacedPlCurriculum,
 };
