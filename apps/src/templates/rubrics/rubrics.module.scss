@@ -111,3 +111,15 @@
   border-bottom: 1px solid $neutral_dark40;
   padding: 20px 16px;
 }
+
+.evidenceLevelOption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+
+  .evidenceLevelDescriptionIndented {
+    padding-left: 34px;
+  }
+}

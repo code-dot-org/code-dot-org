@@ -8,6 +8,13 @@ export default {
 
 const defaultLearningGoal = {
   learningGoal: 'Program Development',
+  evidenceLevels: [
+    {
+      id: 1,
+      understanding: 4,
+      teacherDescription: 'Student is able to write code',
+    },
+  ],
 };
 
 export const AiDisabledFeedbackUnavailable = () => (

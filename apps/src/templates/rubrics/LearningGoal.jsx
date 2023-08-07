@@ -8,6 +8,7 @@ import {
   BodyThreeText,
   BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
+import EvidenceLevels from './EvidenceLevels';
 
 export default function LearningGoal({
   learningGoal,
@@ -49,7 +50,10 @@ export default function LearningGoal({
         </div>
       </summary>
       <div className={style.learningGoalExpanded}>
-        Learning Goal Evidence Levels will be here.
+        <EvidenceLevels
+          evidenceLevels={learningGoal.evidenceLevels}
+          canProvideFeedback={canProvideFeedback}
+        />
       </div>
     </details>
   );
