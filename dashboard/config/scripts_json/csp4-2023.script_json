@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-18 20:55:11 UTC",
+    "serialized_at": "2023-08-06 18:00:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3171,7 +3171,6 @@
       "position": 1,
       "properties": {
         "description": "Today we are continuing work on the Decision Maker App. Each level in Code Studio contains a step to think through while constructing your app.",
-        "duration": "2",
         "name": "Warm Up",
         "remarks": true,
         "tips": [
@@ -3191,7 +3190,7 @@
       "position": 2,
       "properties": {
         "description": "####Build the Decision Maker App",
-        "duration": "43",
+        "duration": "40",
         "name": "Activity",
         "tips": [
           {
@@ -3279,11 +3278,24 @@
       "key": "77feeee2-5ee2-4482-8b5e-7b5da1b7e0ce",
       "position": 9,
       "properties": {
-        "description": "No wrap-up today. All time is spent on the project.",
-        "name": "Wrap Up"
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "77feeee2-5ee2-4482-8b5e-7b5da1b7e0ce",
+        "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
+      }
+    },
+    {
+      "key": "e0a4e96d-b318-4dbd-b748-e9b6372b623b",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Four in order to generate clues for the students."
+      },
+      "seeding_key": {
+        "activity_section.key": "e0a4e96d-b318-4dbd-b748-e9b6372b623b",
         "lesson_activity.key": "46210050-edd2-4362-a647-275a649d3b07"
       }
     },
@@ -6264,6 +6276,31 @@
       }
     },
     {
+      "name": "CSP Bingo Cards - Unit Four",
+      "url": "https://drive.google.com/file/d/1RAuE7kkU9BKxKL3vB4-_udp9jD7Msj4I/view?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_four",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1RAuE7kkU9BKxKL3vB4-_udp9jD7Msj4I",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_four"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
       "name": "CSP Conditionals Make - Museum Ticket Generator App",
       "url": "https://docs.google.com/document/d/1Xl34LDzK2GB2x46Bo8Mx6RI1K-deRG_vHO1oQqZlfsA/edit",
       "key": "csp_conditionals_make_-_museum_ticket_generator_app",
@@ -6998,6 +7035,18 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Decision Maker App Part 1",
+        "resource.key": "csp_bingo_cards_-_unit_four"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Decision Maker App Part 1",
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Decision Maker App Part 1",
         "resource.key": "csp_u4_practice_pt_planning_guide"
       }
     },
@@ -7236,10 +7285,174 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "assignment_operator",
+      "word": "Assignment Operator",
+      "definition": "allows a program to change the value represented by a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "assignment_operator"
+      }
+    },
+    {
+      "key": "boolean_value",
+      "word": "Boolean Value",
+      "definition": "a data type that is either true or false",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean_value"
+      }
+    },
+    {
+      "key": "comparison_operator",
+      "word": "Comparison Operator",
+      "definition": "<, >, <=, >=, ==, != indicate a Boolean expression",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "comparison_operator"
+      }
+    },
+    {
+      "key": "conditional_statement",
+      "word": "Conditional Statement",
+      "definition": "affects the sequential flow of control by executing different statements based on the value of a Boolean expression",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "conditional_statement"
+      }
+    },
+    {
+      "key": "expression",
+      "word": "Expression",
+      "definition": "a combination of operators and values that evaluates to a single value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "expression"
+      }
+    },
+    {
+      "key": "function",
+      "word": "Function",
+      "definition": "a named group of programming instructions. Also referred to as a “procedure”.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "key": "function_call",
+      "word": "Function Call",
+      "definition": "a command that executes the code within a function",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "function_call"
+      }
+    },
+    {
+      "key": "logical_operator",
+      "word": "Logical Operator",
+      "definition": "NOT, AND, and OR, which evaluate to a Boolean value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "logical_operator"
+      }
+    },
+    {
+      "key": "string",
+      "word": "String",
+      "definition": "an ordered sequence of characters",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "string"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "a named reference to a value that can be used repeatedly throughout a program",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "vocabulary.key": "boolean_value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "vocabulary.key": "comparison_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "vocabulary.key": "logical_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "vocabulary.key": "conditional_statement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "vocabulary.key": "logical_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Explore / Investigate",
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Explore / Investigate",
+        "vocabulary.key": "function_call"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "vocabulary.key": "assignment_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "vocabulary.key": "expression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "vocabulary.key": "string"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "vocabulary.key": "variable"
+      }
+    }
   ],
   "lessons_programming_expressions": [
     {
@@ -8210,6 +8423,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -3,7 +3,10 @@ require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
+require 'dynamic_config/dcdo'
+
 include TimedTaskWithLogging
+
 namespace :build do
   desc 'Builds apps.'
   timed_task_with_logging :apps do
@@ -25,6 +28,11 @@ namespace :build do
       npm_target = CDO.optimize_webpack_assets ? 'build:dist' : 'build'
       RakeUtils.system "npm run #{npm_target}"
       File.write(commit_hash, calculate_apps_commit_hash)
+
+      if rack_env?(:staging) && DCDO.get('deploy_storybook', false)
+        ChatClient.log 'Deploying <b>storybook</b>...'
+        RakeUtils.system 'npm run storybook:deploy'
+      end
     end
   end
 

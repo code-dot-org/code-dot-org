@@ -1,0 +1,20 @@
+name 'CSA SE-CV Student Pre-Survey Preamble'
+markdown <<MARKDOWN
+### **This survey is anonymous**
+
+* This short survey should take **10 minutes or less** to complete.
+* Code.org takes your privacy very seriously.
+* Your responses here will be kept anonymous.
+
+Your teacher will see the responses for the whole class, but won't be able to identify your individual responses.
+
+We do this because we want you to **be as open and honest as possible**. We care about your experience, and we make improvements based on what you say.
+
+## Confidence & Comfort with AI Tools and Concepts
+
+Rate your level of confidence and comfort using AI tools to generate code and general AI concepts.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
