@@ -39,7 +39,7 @@ module I18n
               # Instead, here we reduce the headers down to contain only the keys we care
               # about and then in the out step we reinflate the received headers with the
               # values from the original source.
-              header, content, _line = ::Documents.new.helpers.parse_yaml_header(dest)
+              header, content, _line = Documents.new.helpers.parse_yaml_header(dest)
               I18nScriptUtils.sanitize_header!(header)
               I18nScriptUtils.write_markdown_with_header(content, header, dest)
             end
