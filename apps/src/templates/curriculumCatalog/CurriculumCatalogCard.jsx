@@ -29,6 +29,8 @@ import {
 } from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import DCDO from '@cdo/apps/dcdo';
+import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
 
 const CurriculumCatalogCard = ({
   courseDisplayName,
@@ -64,7 +66,7 @@ const CurriculumCatalogCard = ({
     quickViewButtonDescription={i18n.quickViewDescription({
       course_name: courseDisplayName,
     })}
-    quickViewButtonText={i18n.learnMore()}
+    quickViewButtonText={i18n.quickView()}
     imageAltText={imageAltText}
     translationIconTitle={i18n.courseInYourLanguage()}
     pathToCourse={pathToCourse + '?viewAs=Instructor'}
@@ -122,6 +124,7 @@ const CustomizableCurriculumCatalogCard = ({
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
+  const [isExpandedCardDisplayed, setIsExpandedCardDisplayed] = useState(false);
 
   const handleClickAssign = () => {
     setIsAssignDialogOpen(true);
@@ -171,6 +174,9 @@ const CustomizableCurriculumCatalogCard = ({
       );
     }
   };
+  const handleQuickView = () => {
+    setIsExpandedCardDisplayed(!isExpandedCardDisplayed);
+  };
 
   return (
     <div>
@@ -213,14 +219,26 @@ const CustomizableCurriculumCatalogCard = ({
                 : style.buttonsContainer_notEnglish
             )}
           >
-            <Button
-              __useDeprecatedTag
-              color={Button.ButtonColor.neutralDark}
-              type="button"
-              href={pathToCourse}
-              aria-label={quickViewButtonDescription}
-              text={quickViewButtonText}
-            />
+            {!!DCDO.get('quick-view', false) ? (
+              <Button
+                color={Button.ButtonColor.neutralDark}
+                type="button"
+                onClick={handleQuickView}
+                aria-label={quickViewButtonDescription}
+                text={quickViewButtonText}
+              />
+            ) : (
+              <Button
+                __useDeprecatedTag
+                color={Button.ButtonColor.neutralDark}
+                type="button"
+                href={pathToCourse}
+                aria-label={i18n.quickViewDescription({
+                  course_name: courseDisplayName,
+                })}
+                text={i18n.learnMore()}
+              />
+            )}
             <Button
               color={Button.ButtonColor.brandSecondaryDefault}
               type="button"
@@ -232,6 +250,7 @@ const CustomizableCurriculumCatalogCard = ({
         </div>
       </div>
       {isAssignDialogOpen && renderAssignDialog()}
+      {isExpandedCardDisplayed && <ExpandedCurriculumCatalogCard />}
     </div>
   );
 };
