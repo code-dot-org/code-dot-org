@@ -11,6 +11,18 @@ module I18n
       log_metric(:Runtime, yield, addtl_dimensions)
     end
 
+    def self.report_success(sync_comp)
+      log_metric(:Success, 1, [])
+    end
+
+    def self.report_failure(sync_comp)
+      log_metric(:Failure, 0, [])
+    end
+
+    def self.report_filesize(sync_comp)
+      log_metric(:Filesize, 0, [])
+    end
+
     # returns the EC2 instance ID if we are running the sync from an EC2,
     # and 'local_machine' otherwise
     def self.machine_id
