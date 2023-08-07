@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 21:05:38 UTC",
+    "serialized_at": "2023-08-06 18:16:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6208,10 +6208,120 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "data_abstraction",
+      "word": "Data Abstraction",
+      "definition": "manage complexity in programs by giving a collection of data a name without referencing the specific details of the representation",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_abstraction"
+      }
+    },
+    {
+      "key": "element",
+      "word": "Element",
+      "definition": "an individual value in a list that is assigned a unique index",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "element"
+      }
+    },
+    {
+      "key": "index",
+      "word": "Index",
+      "definition": " a common method for referencing the elements in a list or string using numbers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "index"
+      }
+    },
+    {
+      "key": "infinite_loop",
+      "word": "Infinite Loop",
+      "definition": "occurs when the ending condition will never evaluate to true",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "infinite_loop"
+      }
+    },
+    {
+      "key": "iteration",
+      "word": "Iteration",
+      "definition": "a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "iteration"
+      }
+    },
+    {
+      "key": "list",
+      "word": "List",
+      "definition": "an ordered collection of elements",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "list"
+      }
+    },
+    {
+      "key": "traversal",
+      "word": "Traversal",
+      "definition": "the process of accessing each item in a list one at a time",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "traversal"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "vocabulary.key": "data_abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "vocabulary.key": "element"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "vocabulary.key": "index"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "vocabulary.key": "list"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "vocabulary.key": "infinite_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "vocabulary.key": "iteration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
+        "vocabulary.key": "traversal"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 

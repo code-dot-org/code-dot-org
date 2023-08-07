@@ -6,7 +6,7 @@ DSL_TYPES = %w(TextMatch ContractMatch External Match Multi).freeze
 DSL_TYPES.map(&:constantize).each do |c|
   c.all.each do |level|
     # these should be dsl levels and should not have .level files
-    level_file = Level.level_file_path(level.name)
+    level_file = Policies::LevelFiles.level_file_path(level.name)
     if File.exist? level_file
       puts `ls -l '#{level_file}'`
       puts `git rm '#{level_file}'`
