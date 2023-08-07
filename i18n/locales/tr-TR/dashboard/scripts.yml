@@ -6030,6 +6030,8 @@ tr:
               display_name: 'Bölüm 1: Problem çözme süreci'
             lessonGroup-3:
               display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
+            lessonGroup-5:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         csd2-2023:
           lesson_groups:
@@ -6477,6 +6479,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-creativity2-2023:
           lesson_groups:
@@ -6504,6 +6508,8 @@ tr:
               display_name: 'Bölüm 1: Problem çözme süreci'
             lessonGroup-3:
               display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
+            lessonGroup-5:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-hardware2-2023:
           lesson_groups:
@@ -6522,6 +6528,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-data2:
           lesson_groups:
@@ -6564,6 +6572,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-design-with-purpose2-2023:
           lesson_groups:
@@ -6589,6 +6599,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
         focus-on-coding2-2023:
           lesson_groups:
