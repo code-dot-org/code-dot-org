@@ -1,7 +1,9 @@
 @use 'sass:math';
+
 @import 'phase1-design-system';
 
 $container-width: 960px;
+
 
 .expandedCardContainer {
   position: absolute;
@@ -37,4 +39,5 @@ $container-width: 960px;
   display: flex;
   align-items: center;
   column-gap: 1em;
+
 }
