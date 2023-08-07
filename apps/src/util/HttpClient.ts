@@ -4,7 +4,7 @@ import {
 } from './AuthenticityTokenStore';
 
 export type ResponseValidator<ResponseType> = (
-  bodyJson: object
+  bodyJson: Record<string, unknown>
 ) => ResponseType;
 
 export type GetResponse<ResponseType> = {

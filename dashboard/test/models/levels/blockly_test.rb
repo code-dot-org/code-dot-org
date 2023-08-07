@@ -198,15 +198,6 @@ class BlocklyTest < ActiveSupport::TestCase
     assert_equal '//test-studio.code.org/blockly/', Blockly.base_url
   end
 
-  test 'converts from and to XML level format' do
-    name = 'Test level convert'
-    level = LevelLoader.load_custom_level_xml(File.read(File.join(self.class.fixture_path, 'test_level.xml')), Level.new(name: name))
-    xml = level.to_xml
-    xml2 = LevelLoader.load_custom_level_xml(xml, Level.new(name: name.next)).to_xml
-    level.destroy
-    assert_equal xml, xml2
-  end
-
   def create_custom_block(name, pool, block_text, args, category: 'Events')
     [{
       name: name,

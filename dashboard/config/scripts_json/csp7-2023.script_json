@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-31 22:02:45 UTC",
+    "serialized_at": "2023-08-06 18:22:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -781,7 +781,6 @@
       "key": "cd69e094-b99d-4d3f-8b66-78df270bd18a",
       "position": 2,
       "properties": {
-        "duration": 2,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -809,7 +808,7 @@
       "key": "87f99d24-5fbf-4557-b881-963819694aca",
       "position": 4,
       "properties": {
-        "duration": 3,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -2165,8 +2164,42 @@
       }
     },
     {
-      "key": "ea8d26a6-aee5-4447-8056-f959e17ad3cb",
+      "key": "1e6364bd-55a9-4a6b-954c-dd4cc9bb889c",
       "position": 2,
+      "properties": {
+        "description": "#### CSP Vocabulary Bingo"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e6364bd-55a9-4a6b-954c-dd4cc9bb889c",
+        "lesson_activity.key": "87f99d24-5fbf-4557-b881-963819694aca"
+      }
+    },
+    {
+      "key": "cc1acbfb-8d9b-4ca3-a0b6-ae79865c2896",
+      "position": 3,
+      "properties": {
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cc1acbfb-8d9b-4ca3-a0b6-ae79865c2896",
+        "lesson_activity.key": "87f99d24-5fbf-4557-b881-963819694aca"
+      }
+    },
+    {
+      "key": "29e125a4-63ad-4579-86fe-cf0eb6571097",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Seven in order to generate clues for the students.\n\n----"
+      },
+      "seeding_key": {
+        "activity_section.key": "29e125a4-63ad-4579-86fe-cf0eb6571097",
+        "lesson_activity.key": "87f99d24-5fbf-4557-b881-963819694aca"
+      }
+    },
+    {
+      "key": "ea8d26a6-aee5-4447-8056-f959e17ad3cb",
+      "position": 5,
       "properties": {
         "description": "**Rubric:** Evaluate the projects using the provided rubric in the Project Guide",
         "name": "Assessment\r"
@@ -2178,7 +2211,7 @@
     },
     {
       "key": "e3e4dc15-9739-47e6-943a-a0991665778a",
-      "position": 3,
+      "position": 6,
       "properties": {
         "progression_name": "End-of-Unit Survey"
       },
@@ -3575,6 +3608,31 @@
       }
     },
     {
+      "name": "CSP Bingo Cards - Unit Seven",
+      "url": "https://drive.google.com/file/d/1Wi7aIio59YiLOaGNK23lgTzPFa3ES3-u/view?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_seven",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1Wi7aIio59YiLOaGNK23lgTzPFa3ES3-u",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_seven"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
       "name": "CSP Parameters and Return Make - Rock Paper Scissors App",
       "url": "https://docs.google.com/document/d/1SoiuvHw0tuSUZe9vL4hmRzyPrH_2IIOvD7LgkGtEph8/edit",
       "key": "csp_parameters_and_return_make_-_rock_paper_scissors_app",
@@ -3981,6 +4039,18 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Make a Library Part 3",
+        "resource.key": "csp_bingo_cards_-_unit_seven"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Make a Library Part 3",
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Make a Library Part 3",
         "resource.key": "csp_unit_7_-_lesson_8-11_-_project_assessment"
       }
     },
@@ -4063,10 +4133,120 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "api",
+      "word": "API",
+      "definition": "Application Program Interface - specifications for how functions in a library behave and can be used",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "api"
+      }
+    },
+    {
+      "key": "argument",
+      "word": "Argument",
+      "definition": "the value passed to the parameter",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "argument"
+      }
+    },
+    {
+      "key": "library",
+      "word": "Library",
+      "definition": "a group of functions (procedures) that may be used in creating new programs",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "library"
+      }
+    },
+    {
+      "key": "modularity",
+      "word": "Modularity",
+      "definition": "the subdivision of a computer program into separate subprograms",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "modularity"
+      }
+    },
+    {
+      "key": "parameter",
+      "word": "Parameter",
+      "definition": "a variable in a function definition. Used as a placeholder for values that will be passed through the function",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "key": "procedural_abstraction",
+      "word": "Procedural Abstraction",
+      "definition": "a process and allows a procedure to be used only knowing what it does, not how it does it. Procedural abstraction allows a solution to a large problem to be based on the solution of smaller subproblems. This is accomplished by creating procedures to solve each of the subproblems.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "procedural_abstraction"
+      }
+    },
+    {
+      "key": "return",
+      "word": "Return",
+      "definition": "used to return the flow of control to the point where the procedure (also known as a function) was called and to return the value of expression",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "return"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "vocabulary.key": "api"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "vocabulary.key": "library"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "vocabulary.key": "modularity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "vocabulary.key": "argument"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "vocabulary.key": "return"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "vocabulary.key": "procedural_abstraction"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 

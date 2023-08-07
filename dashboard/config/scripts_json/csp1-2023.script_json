@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-18 20:52:03 UTC",
+    "serialized_at": "2023-08-02 21:01:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -984,7 +984,13 @@
       "position": 2,
       "properties": {
         "description": "**Do This:** Students can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [r how_to_administer_a_locked_assessment/csp/2023] document provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \r\n\r\n<img src=\"https://curriculum.code.org/media/uploads/presurvey.png\" style=\"width:400px\">",
-        "name": "Important! Have your students take the CSP Pre-Course Survey!\r"
+        "name": "Important! Have your students take the CSP Pre-Course Survey!\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**\"Why do the pre-course survey?\"**\n\n* A major goal of CS Principles is to broaden participation in computer science.  \n* It is *crucial* therefore to have insight into students' attitidues and beliefs about computer science *before* the course so that we can measure the amount of change that occured *after* the course is over.\n\n* Please note that this survey is **anonymous for students**\n* Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.\n   \nPlease help by having your students contribute to this vital dataset.  Their voices make the difference!\n\n**How much time does it take?**\n\n* The survey is roughly 40 quick response items. We expect it to take 5-10 minutes to complete.   You might consider administering it on an admin day at school, or as an early homework.\n* Because it is a pre-course survey it is important that students take it as early in the course as possible, before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.\n\nThank you!\n\n-- The Code.org Team\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b3c14750-5afa-4db5-a5bf-2d0d58a6ab6b",
@@ -1035,13 +1041,7 @@
       "key": "f24fb79e-ef56-4fcf-89ca-14dcaf8472e1",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** What’s something that you know a lot about? Something that you could teach somebody?\"",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**\"Why do the pre-course survey?\"**\r\n\r\n* A major goal of CS Principles is to broaden participation in computer science.  \r\n* It is *crucial* therefore to have insight into students' attitidues and beliefs about computer science *before* the course so that we can measure the amount of change that occured *after* the course is over.\r\n\r\n* Please note that this survey is **anonymous for students**\r\n* Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.\r\n   \r\nPlease help by having your students contribute to this vital dataset.  Their voices make the difference!\r\n\r\n**How much time does it take?**\r\n\r\n* The survey is roughly 40 quick response items. We expect it to take 5-10 minutes to complete.   You might consider administering it on an admin day at school, or as an early homework.\r\n* Because it is a pre-course survey it is important that students take it as early in the course as possible, before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.\r\n\r\nThank you!\r\n\r\n-- The Code.org Team\r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** What’s something that you know a lot about? Something that you could teach somebody?\""
       },
       "seeding_key": {
         "activity_section.key": "f24fb79e-ef56-4fcf-89ca-14dcaf8472e1",
@@ -3859,7 +3859,7 @@
       "key": "4d656c7b-5d95-4d3f-b971-f2d2d9706f7c",
       "position": 10,
       "properties": {
-        "description": "There are trade-offs in representing information digitally. Usually someone is benefitting while others are harmed.",
+        "description": "Now that we are near the end of the unit, we are going to play our first game of CSP Vocabulary BINGO. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
         "duration": "5",
         "name": "Wrap Up",
         "remarks": true
@@ -3873,7 +3873,7 @@
       "key": "f5f4a597-38de-4843-83fd-dbcf3ddd0a68",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why should we care about information being represented digitally? How does this impact you personally?*\n\nAllow students time to think and share about the personal implications of digital representation. \n\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit One in order to generate clues for the students."
       },
       "seeding_key": {
         "activity_section.key": "f5f4a597-38de-4843-83fd-dbcf3ddd0a68",
@@ -5610,6 +5610,31 @@
       }
     },
     {
+      "name": "CSP Bingo Cards - Unit One",
+      "url": "https://drive.google.com/file/d/1SkzhU8UB8gzKzCLe8nBXT9ysQV8zs-EP/view?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_one",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1SkzhU8UB8gzKzCLe8nBXT9ysQV8zs-EP",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_one"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
       "name": "Lossy Compression",
       "url": "https://docs.google.com/presentation/d/1JJ-IX_dV6497KXmimsIOussZQoDOS9cV8udzeRaeJ-E/",
       "key": "csp_unit_1-10_-_digital_information",
@@ -6121,6 +6146,18 @@
       }
     },
     {
+      "name": "Unit 1 Journal - Example",
+      "url": "https://docs.google.com/presentation/d/17jJG9aGnvUsS_HClqDoAW7LkPS51PIsv2Q1npTlsbwM/edit?usp=sharing",
+      "key": "unit_1_journal_-_example",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_journal_-_example"
+      }
+    },
+    {
       "name": "Unit 1 Journal (Interactive Notebook)",
       "url": "https://docs.google.com/presentation/d/1hydmwrk4buHxg1gW-4TvVKMkIDvru8FTRuk53N8T8es/edit?usp=drive_link",
       "key": "unit_1_journal_-_interactive_notebook",
@@ -6287,6 +6324,18 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Digital Information Dilemmas Part 1",
+        "resource.key": "csp_bingo_cards_-_unit_one"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Digital Information Dilemmas Part 1",
         "resource.key": "csp_unit_1-12_-_digital_information"
       }
     },
@@ -6354,6 +6403,12 @@
       "seeding_key": {
         "lesson.key": "Representing Information",
         "resource.key": "unit_1_journal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "resource.key": "unit_1_journal_-_example"
       }
     },
     {
@@ -6483,10 +6538,216 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "analog_data",
+      "word": "Analog Data",
+      "definition": "Data with values that change continuously, or smoothly, over time. Some examples of analog data include music, colors of a painting, or position of a sprinter during a race.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "analog_data"
+      }
+    },
+    {
+      "key": "binary",
+      "word": "Binary",
+      "definition": "A way of representing information using only two options",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "binary"
+      }
+    },
+    {
+      "key": "bit",
+      "word": "Bit",
+      "definition": "A contraction of \"Binary Digit\";  the single unit of information in a computer, typically represented as a 0 or 1",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bit"
+      }
+    },
+    {
+      "key": "byte",
+      "word": "Byte",
+      "definition": "8 bits",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "byte"
+      }
+    },
+    {
+      "key": "creative_commons",
+      "word": "Creative Commons",
+      "definition": "A collection of public copyright licenses that enable the free distribution of an otherwise copyrighted work, used when an author wants to give people the right to share, use, and build upon a work that they have created",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "creative_commons"
+      }
+    },
+    {
+      "key": "decimal",
+      "word": "Decimal",
+      "definition": "A way of representing information using ten options",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decimal"
+      }
+    },
+    {
+      "key": "digital_data",
+      "word": "Digital Data",
+      "definition": "Data that changes discretely through a finite set of possible values",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "digital_data"
+      }
+    },
+    {
+      "key": "intellectual_property",
+      "word": "Intellectual Property",
+      "definition": "A work or invention that is the result of creativity, such as a piece of writing or a design, to which one has rights and for which one may apply for a patent, copyright, trademark, etc.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "intellectual_property"
+      }
+    },
+    {
+      "key": "lossless_compression",
+      "word": "Lossless Compression",
+      "definition": "A process for reducing the number of bits needed to represent something without losing any information. This process is reversible.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "lossless_compression"
+      }
+    },
+    {
+      "key": "lossy_compression",
+      "word": "Lossy Compression",
+      "definition": "A process for reducing the number of bits needed to represent something in which some information is lost or thrown away. This process is not reversible.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "lossy_compression"
+      }
+    },
+    {
+      "key": "overflow_error",
+      "word": "Overflow Error",
+      "definition": "Error from attempting to represent a number that is too large",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "overflow_error"
+      }
+    },
+    {
+      "key": "round_off_error",
+      "word": "Round-off Error",
+      "definition": "Error from attempting to represent a number that is too precise. The value is rounded.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "round_off_error"
+      }
+    },
+    {
+      "key": "sampling",
+      "word": "Sampling",
+      "definition": "A process for creating a digital representation of analog data by measuring the analog data at regular intervals called samples.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sampling"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "vocabulary.key": "binary"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "vocabulary.key": "bit"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "vocabulary.key": "byte"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "vocabulary.key": "decimal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "vocabulary.key": "analog_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "vocabulary.key": "digital_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "vocabulary.key": "sampling"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "vocabulary.key": "creative_commons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "vocabulary.key": "intellectual_property"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "vocabulary.key": "lossless_compression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "vocabulary.key": "lossy_compression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "vocabulary.key": "overflow_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "vocabulary.key": "round_off_error"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -7154,6 +7415,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

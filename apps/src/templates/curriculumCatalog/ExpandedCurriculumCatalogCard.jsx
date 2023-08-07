@@ -57,4 +57,5 @@ ExpandedCurriculumCatalogCard.propTypes = {
   publishedDate: PropTypes.string.isRequired,
   selfPacedPlCourseOfferingPath: PropTypes.string.isRequired,
 };
+
 export default ExpandedCurriculumCatalogCard;

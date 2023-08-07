@@ -656,8 +656,11 @@ form {
     }
   }
 
-  figure.video-responsive {
-    margin-bottom: 1rem;
+  figure {
+
+    &.video-responsive {
+      margin-bottom: 1rem;
+    }
   }
 
   ul {
@@ -670,6 +673,12 @@ form {
     h3 {
       @include heading-sm;
     }
+  }
+
+  // Hides the unused caption div from the
+  // display_video_thumbnail partial
+  .video_caption_link {
+    display: none;
   }
 }
 
