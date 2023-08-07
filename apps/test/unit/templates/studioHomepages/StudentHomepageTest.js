@@ -24,9 +24,7 @@ describe('StudentHomepage', () => {
   it('shows a Header Banner that says My Dashboard', () => {
     const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
     const headerBanner = wrapper.find(HeaderBanner);
-    assert.deepEqual(headerBanner.props(), {
-      headingText: 'My Dashboard',
-    });
+    expect(headerBanner.props().headingText).to.equal('My Dashboard');
   });
 
   it('references a ProtectedStatefulDiv for flashes', () => {

@@ -55,9 +55,7 @@ describe('TeacherHomepage', () => {
   it('shows a Header Banner that says My Dashboard', () => {
     const wrapper = setUp();
     const headerBanner = wrapper.find('HeaderBanner');
-    assert.deepEqual(headerBanner.props(), {
-      headingText: 'My Dashboard',
-    });
+    expect(headerBanner.props().headingText).to.equal('My Dashboard');
   });
 
   it('renders 2 ProtectedStatefulDivs', () => {
