@@ -1,0 +1,11 @@
+name 'CSA-SE-L2-Survey'
+title 'Lesson 2: Intro to Copilot Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'CSA SE Student End of Lesson Survey'
+level 'CSA-SE-L2-Survey-Q01'
+level 'CSA-SE-L2-Survey-Q02'
+level 'CSA-SE-L2-Survey-Q03'
+level 'CSA-SE-L2-Survey-Q04'

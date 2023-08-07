@@ -400,11 +400,6 @@ Style/OptionalBooleanParameter:
 Style/RedundantAssignment:
   Enabled: false
 
-# Offense count: 6
-# This cop supports safe auto-correction (--auto-correct).
-Style/RedundantBegin:
-  Enabled: false
-
 # Offense count: 29
 # This cop supports safe auto-correction (--auto-correct).
 Style/RedundantCondition:

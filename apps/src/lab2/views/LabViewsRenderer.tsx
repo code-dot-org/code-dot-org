@@ -44,7 +44,7 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
 
 const LabViewsRenderer: React.FunctionComponent = () => {
   const currentAppName = useSelector(
-    (state: {lab: LabState}) => state.lab.appName
+    (state: {lab: LabState}) => state.lab.levelProperties?.appName
   );
 
   const [appsToRender, setAppsToRender] = useState<AppName[]>([]);

@@ -844,7 +844,7 @@ const interpolateInputs = function (
 exports.interpolateInputs = interpolateInputs;
 
 /**
- * Create a block generator that creats blocks that directly map to a javascript
+ * Create a block generator that creates blocks that directly map to a javascript
  * function call, method call, or other (hopefully simple) expression.
  *
  * @params {Blockly} blockly The Blockly object provided to install()
@@ -1077,48 +1077,8 @@ exports.createJsWrapperBlockCreator = function (
             Blockly.customBlocks.initializeMiniToolbox.bind(this)();
         }
 
-        // These blocks should not be loaded into a Google Blockly level.
-        // In the event that they are, skip this so the page doesn't crash.
-        if (this.setBlockToShadow) {
-          // Set block to shadow for preview field if needed
-          switch (this.type) {
-            case 'gamelab_clickedSpritePointer':
-              this.setBlockToShadow(
-                root =>
-                  root.type === 'gamelab_spriteClicked' &&
-                  root.getConnections_()[1] &&
-                  root.getConnections_()[1].targetBlock()
-              );
-              break;
-            case 'gamelab_newSpritePointer':
-              this.setBlockToShadow(
-                root =>
-                  root.type === 'gamelab_whenSpriteCreated' &&
-                  root.getConnections_()[1] &&
-                  root.getConnections_()[1].targetBlock()
-              );
-              break;
-            case 'gamelab_subjectSpritePointer':
-              this.setBlockToShadow(
-                root =>
-                  root.type === 'gamelab_checkTouching' &&
-                  root.getConnections_()[1] &&
-                  root.getConnections_()[1].targetBlock()
-              );
-              break;
-            case 'gamelab_objectSpritePointer':
-              this.setBlockToShadow(
-                root =>
-                  root.type === 'gamelab_checkTouching' &&
-                  root.getConnections_()[2] &&
-                  root.getConnections_()[2].targetBlock()
-              );
-              break;
-            default:
-              // Not a pointer block, so no block to shadow
-              break;
-          }
-        }
+        Blockly.customBlocks.setUpBlockShadowing.bind(this)();
+
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
         this.setInputsInline(inline);
 
