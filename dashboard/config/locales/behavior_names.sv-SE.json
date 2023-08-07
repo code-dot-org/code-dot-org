@@ -994,10 +994,6 @@
           "running east": "springer österut",
           "shrinking": "krymper"
         },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
-        },
         "courseE_Dogger_2": {
           "drive left": "kör vänster",
           "drive right": "kör höger",
@@ -1839,8 +1835,6 @@
           "moving west and looping": "flyttar västerut och loopar",
           "patrolling": "patrullerar",
           "shrinking": "krymper"
-        },
-        "courseF_extras_sim": {
         },
         "courseF_label_predict": {
           "growing": "växer",

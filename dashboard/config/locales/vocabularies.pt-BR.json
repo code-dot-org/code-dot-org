@@ -428,7 +428,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursef/2021": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursef/2021": {
@@ -602,43 +602,105 @@
           "word": "armazenamento",
           "definition": "informações salvas para uso futuro"
         },
+        "html/csd/2022": {
+          "definition": "Hypertext Markup Language, uma linguagem usada para criar páginas na web"
+        },
+        "html_element/csd/2022": {
+          "definition": "Uma parte de um site, marcada por uma tag inicial e geralmente fechada com uma tag final"
+        },
+        "html_tag/csd/2022": {
+          "definition": "O conjunto especial de caracteres que indica o início e o fim de um elemento HTML e o tipo desse elemento"
+        },
+        "website_content/csd/2022": {
+          "definition": "o texto e as imagens em um site"
+        },
+        "website_structure/csd/2022": {
+          "definition": "como o conteúdo de um site é organizado"
+        },
+        "heading/csd/2022": {
+          "definition": "Um título ou resumo de um documento ou seção de um documento."
+        },
         "digital_footprint/csd/2022": {
-          "word": "Pegada Digital"
+          "word": "Pegada Digital",
+          "definition": "As informações coletas sobre um indivíduo a partir de vários sites na Internet."
+        },
+        "css/csd/2022": {
+          "definition": "Folhas de estilo em cascata; uma linguagem usada para descrever como os elementos HTML devem ser estilizados"
+        },
+        "css_selector/csd/2022": {
+          "definition": "a parte de um conjunto de regras CSS que define a quais elementos HTML o estilo deve ser aplicado"
         },
         "copyright/csd/2022": {
           "word": "Direitos Autorais",
-          "definition": "o direito legal exclusivo de imprimir, publicar, executar, filmar ou gravar material literário, artístico ou musical e autorizar outros a fazer o mesmo"
+          "definition": "o direito legal exclusivo de imprimir, publicar, executar, filmar ou gravar material literário, artístico ou musical e autorizar outros a fazerem o mesmo"
+        },
+        "relevant/csd/2022": {
+          "word": "Relevante",
+          "definition": "intimamente ligado a um tópico"
+        },
+        "search_engine/csd/2022": {
+          "word": "Ferramenta de Busca",
+          "definition": "Um programa que busca itens na World Wide Web."
+        },
+        "trustworthy/csd/2022": {
+          "word": "Fidedigno",
+          "definition": "confiável, honesto e verdadeiro "
+        },
+        "css_class/csd/2022": {
+          "word": "Aula de CSS",
+          "definition": "Um identificador que permite que vários elementos em um documento HTML sejam estilizados da mesma forma"
         },
         "bug/csd/2022": {
-          "word": "Bug",
+          "word": "Erro (Bug)",
           "definition": "Parte de um programa que não funciona corretamente."
         },
         "debugging/csd/2022": {
-          "word": "Analisando",
-          "definition": "Encontrar e corrigir problemas em um algoritmo ou programa."
+          "word": "Depuração (Debugging)",
+          "definition": "Encontrando e corrigindo problemas em um algoritmo ou programa."
         },
         "program/csd/2022": {
           "word": "Programa",
-          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+          "definition": "Um algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "parameter/csd/2022": {
+          "word": "Parâmetro",
+          "definition": "Informações adicionais fornecidas como entrada a um bloco para personalizar sua funcionalidade"
         },
         "variable/csd/2022": {
           "word": "Variável",
-          "definition": "Espaço reservado para uma informação que pode mudar."
+          "definition": "Um rótulo reservado para uma informação usada num programa."
+        },
+        "dot_notation/csd/2022": {
+          "word": "Notação de pontos",
+          "definition": "a forma como as propriedades dos sprites são usadas no Game Lab, conectando o sprite à propriedade com um ponto."
         },
         "sprite/csd/2022": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Um personagem ou objeto na tela com propriedades que descrevem sua localização, movimento e aparência."
+        },
+        "property/csd/2022": {
+          "word": "Propriedade",
+          "definition": "Um rótulo para uma característica de um sprite, como sua localização e aparência"
+        },
+        "boolean_expression/csd/2022": {
+          "word": "Expressão Booleana",
+          "definition": "em programação, uma expressão que avalia algo como verdadeiro ou falso. "
         },
         "condition/csd/2022": {
-          "word": "Condição"
+          "word": "Condição",
+          "definition": "Algo que um programa verifica para ver se é verdade antes de decidir executar uma ação."
         },
         "conditionals/csd/2022": {
-          "word": "Condições"
+          "word": "Condicionais",
+          "definition": "Instruções que só são executadas quando certas condições são verdadeiras."
         },
         "abstraction/csd/2022": {
-          "word": "Abstração"
+          "word": "Abstração",
+          "definition": "uma representação simplificada de algo mais complexo. As abstrações permitem ocultar detalhes para ajudá-lo a gerenciar a complexidade, focar em conceitos relevantes e raciocinar sobre problemas em um nível mais complexo."
         },
         "function/csd/2022": {
-          "word": "Função"
+          "word": "Função",
+          "definition": "Um trecho nomeado de instruções de programação."
         },
         "user/csd/2022": {
           "word": "Usuário",
@@ -648,11 +710,36 @@
           "word": "Interface do Usuário"
         },
         "output/csd/2022": {
+          "word": "Saída",
           "definition": "as informações que os computadores oferecem a usuários, dispositivos ou outros computadores"
         },
         "machine_learning/csd/2022": {
           "word": "Máquina de aprendizado",
           "definition": "A maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados diretamente."
+        },
+        "features/csd/2022": {
+          "definition": "As entradas que um modelo usa para tomar decisões"
+        },
+        "label/csd/2022": {
+          "definition": "A saída que você está tentando decidir ou prever com um modelo"
+        },
+        "model/csd/2022": {
+          "definition": "Um programa de computador projetado para tomar uma decisão"
+        },
+        "supervised_learning/csd/2022": {
+          "definition": "Quando um humano treina um modelo para aprender com exemplos"
+        },
+        "training/csd/2022": {
+          "definition": "Dando exemplos a um modelo para que ele aprenda"
+        },
+        "unsupervised_learning/csd/2022": {
+          "definition": "Encontrando padrões em dados que não têm labels"
+        },
+        "categorical_data/csd/2022": {
+          "definition": "Dados que podem ser separados em grupos"
+        },
+        "classification/csd/2022": {
+          "definition": "Prever uma categoria com base em outros recursos"
         },
         "algorithm/coursea/2022": {
           "word": "Algoritmo",

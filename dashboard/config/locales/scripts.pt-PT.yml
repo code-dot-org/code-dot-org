@@ -5365,6 +5365,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5634,6 +5636,92 @@ pt:
           description_short: Aprenda como a Internet funciona
           student_description: Aprenda como a Internet funciona
           title: Simulador de internet
+        nevada-standards-aligned-fifth-grade-2023:
+          description_audience: 'Idades: 9-13'
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da
+            Computação e crie sua própria arte, história ou jogo.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprite
+            lessonGroup-3:
+              display_name: Condicionais
+            lessonGroup-5:
+              display_name: Variáveis
+            lessonGroup-6:
+              display_name: Impacto da computação
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: 'Idades: 9-13'
+          description_short: Aprenda todos os conceitos Fundamentais da Ciência da
+            Computação e crie sua própria arte, história ou jogo.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprite
+        nevada-standards-aligned-first-grade-2023:
+          description_audience: 'Idades: 5-8'
+          description_short: Uma introdução à ciência da computação na alfabetização
+            Semelhante ao curso A, mas com conceitos mais aprofundados.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadania digital
+            lessonGroup-3:
+              display_name: Sequenciamento
+            lessonGroup-4:
+              display_name: Ciclos
+            lessonGroup-5:
+              display_name: Impacto da computação
+            lessonGroup-6:
+              display_name: Eventos
+        nevada-standards-aligned-fourth-grade-2023:
+          description_audience: De 8 a 12 anos
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Laços aninhados
+            lessonGroup-4:
+              display_name: Funções
+        nevada-standards-aligned-kindergarten-2023:
+          description_audience: 'Idade: de 4 a 7 anos'
+          description_short: Uma introdução à ciência da computação para pré-leitores.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadania digital
+            lessonGroup-3:
+              display_name: Sequenciamento
+            lessonGroup-4:
+              display_name: Ciclos
+            lessonGroup-5:
+              display_name: Impacto da computação
+            lessonGroup-6:
+              display_name: Dados
+          lessons:
+            lesson-1:
+              name: Dados
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadania digital
+            lessonGroup-3:
+              display_name: Sequenciamento
+            lessonGroup-4:
+              display_name: Ciclos
+            lessonGroup-5:
+              display_name: Eventos
+            lessonGroup-6:
+              display_name: Dados
+        nevada-standards-aligned-third-grade-2023:
+          description_audience: 'Idades: 7-11'
+          description_short: Aprenda sobre declarações condicionais. Crie sua própria
+            arte, jogos e até uma festa de dança.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadania digital
+            lessonGroup-3:
+              display_name: Sequenciamento
+            lessonGroup-4:
+              display_name: Impacto da computação
+            lessonGroup-6:
+              display_name: Ciclos
+            lessonGroup-7:
+              display_name: Dados
         new-d:
           title: Novo Curso Script D
         new-e:
@@ -5968,6 +6056,7 @@ pt:
             Star Wars em uma galáxia muito, muito distante.
           student_description: Aprenda a programar droids, e crie seu próprio jogo
             do Star Wars em uma galáxia muito, muito distante.
+          title: 'Star Wars: Construa uma galáxia com a programação (JavaScript)'
         starwarsblocks:
           description: Aprenda a programar droids, e crie seu próprio jogo do Star
             Wars em uma galáxia muito, muito distante.
@@ -5996,6 +6085,17 @@ pt:
               display_name: Capítulo 1
             lessonGroup-3:
               display_name: Capítulo 2
+        test-nv-coursea-2023:
+          description_audience: 'Idade: de 4 a 7 anos'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cidadania digital
+            lessonGroup-3:
+              display_name: Sequenciamento
+            lessonGroup-4:
+              display_name: Ciclos
+            lessonGroup-5:
+              display_name: Impacto da computação
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

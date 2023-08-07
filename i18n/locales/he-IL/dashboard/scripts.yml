@@ -2699,6 +2699,8 @@ he:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-4:
+              display_name: סקר
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2813,3 +2815,62 @@ he:
         csa-frq-practice-pre2019: {}
         self-paced-pl-aiml1: {}
         self-paced-pl-aiml2: {}
+        musiclab-pilot: {}
+        tesspltest23: {}
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: חזרות
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: נתונים
+          lesson_groups:
+            lessonGroup-4:
+              display_name: חזרות
+            lessonGroup-6:
+              display_name: נתונים
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: חזרות
+            lessonGroup-6:
+              display_name: אירועים
+            lessonGroup-7:
+              display_name: פרויקט סיום קורס
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: חזרות
+            lessonGroup-5:
+              display_name: אירועים
+            lessonGroup-6:
+              display_name: נתונים
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: חזרות
+            lessonGroup-7:
+              display_name: נתונים
+            lessonGroup-8:
+              display_name: פרויקט סיום קורס
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: פונקציות
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: דמויות
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: דמויות
+            lessonGroup-3:
+              display_name: תנאים
+            lessonGroup-5:
+              display_name: משתנים
+            lessonGroup-7:
+              display_name: פרויקט סיום קורס

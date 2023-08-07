@@ -972,6 +972,9 @@ pt:
         csd_gamelab_animation_tab: A Guia de Animação
         csd_gamelab_booleans: Expressões Booleanas
         csd_gamelab_conditional_statements: Instruções Condicionais
+        csd_gamelab_draw_1: Desenho no Game Lab - Parte 1
+        csd_gamelab_draw_2: Desenho no Game Lab - Parte 2
+        csd_gamelab_drawloop: Introdução ao Draw Loop
         csd_gamelab_functions: Chamando e Definindo Funções
         csd_gamelab_if_else: Declarações Se/Senão
         csd_gamelab_velocity: Velocidade

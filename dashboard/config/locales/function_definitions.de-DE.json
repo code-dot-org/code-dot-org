@@ -165,11 +165,6 @@
             "name": "zeichne eine Schneeflocke"
           }
         },
-        "2-3 Artist Loops 2": {
-          "draw 3 hexagons": {},
-          "draw 4 hexagons": {},
-          "draw 5 hexagons": {}
-        },
         "2-3 Bee Functions 1": {
           "get 2 nectar": {
             "name": "sammle 2 Nektar"
@@ -621,9 +616,6 @@
               "dir": "dir"
             }
           }
-        },
-        "Course 4 SCF 1b": {
-          "make honey up and over": {}
         },
         "Course 4 SCF 2": {
           "draw a square 20": {

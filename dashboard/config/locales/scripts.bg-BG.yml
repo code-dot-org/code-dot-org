@@ -2367,6 +2367,10 @@ bg:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Глава 1: Вход и Изход'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         focus-on-impact-in-society4-2023:
           title: AI и Машинно Обучение
         frozen:
@@ -2502,6 +2506,75 @@ bg:
           description_short: Научете как работи Интернет.
           student_description: Научете как работи Интернет.
           title: Интернет симулатор
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайт
+            lessonGroup-3:
+              display_name: Условия
+            lessonGroup-4:
+              display_name: Данни и Симулации
+            lessonGroup-5:
+              display_name: Променливи
+            lessonGroup-7:
+              display_name: Проект за Края на Курса
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайт
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-4:
+              display_name: Повторения
+            lessonGroup-6:
+              display_name: Събития
+            lessonGroup-7:
+              display_name: Проект за Края на Курса
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Вмъкнати цикли
+            lessonGroup-4:
+              display_name: Функции
+            lessonGroup-5:
+              display_name: Данни и Симулации
+            lessonGroup-6:
+              display_name: Проект за Края на Курса
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-4:
+              display_name: Повторения
+            lessonGroup-6:
+              display_name: Данни
+          lessons:
+            lesson-1:
+              name: Данни
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-4:
+              display_name: Повторения
+            lessonGroup-5:
+              display_name: Събития
+            lessonGroup-6:
+              display_name: Данни
+        nevada-standards-aligned-third-grade-2023:
+          description_short: Научете за условни твърдения. Създайте свои собствени
+            творби, игри и дори танцови партита.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-6:
+              display_name: Повторения
+            lessonGroup-7:
+              display_name: Данни
+            lessonGroup-8:
+              display_name: Проект за Края на Курса
         new-e:
           lesson_groups:
             end_of_course_project:
@@ -2624,6 +2697,7 @@ bg:
             игра "Междузвездни войни" в галактиката далече, далече.
           student_description: Научете се да програмирате дроиди и създайте своя собствена
             игра "Междузвездни войни" в галактиката далече, далече.
+          title: 'Междузвездни войни: Изграждане на галактика с код (JavaScript)'
         starwarsblocks:
           description: Научете се да програмирате дроиди и създайте своя собствена
             игра "Междузвездни войни" в галактиката далече, далече.
@@ -2646,6 +2720,12 @@ bg:
               display_name: Общ преглед
         tess-testing-problem-solving-2023:
           title: Разрешаване на Проблеми
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-4:
+              display_name: Повторения
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

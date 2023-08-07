@@ -4212,6 +4212,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4598,3 +4600,104 @@ hi:
           lesson_groups:
             lessonGroup-3:
               display_name: कक्षाएं
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: डिजीटल नागरिकता
+            lessonGroup-3:
+              display_name: अनुक्रमण
+            lessonGroup-4:
+              display_name: फंदे
+            lessonGroup-5:
+              display_name: कंप्यूटिंग के प्रभाव
+          description_audience: 'आयु: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: डेटा
+          lesson_groups:
+            lessonGroup-2:
+              display_name: डिजीटल नागरिकता
+            lessonGroup-3:
+              display_name: अनुक्रमण
+            lessonGroup-4:
+              display_name: फंदे
+            lessonGroup-5:
+              display_name: कंप्यूटिंग के प्रभाव
+            lessonGroup-6:
+              display_name: डेटा
+          description_audience: 'आयु: 4-7'
+          description_short: प्री-रीडर्स के लिए कंप्यूटर विज्ञान का परिचय।
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: डिजीटल नागरिकता
+            lessonGroup-3:
+              display_name: अनुक्रमण
+            lessonGroup-4:
+              display_name: फंदे
+            lessonGroup-5:
+              display_name: कंप्यूटिंग के प्रभाव
+            lessonGroup-6:
+              display_name: घटनाएँ
+            lessonGroup-7:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          description_audience: 'उम्र: 5-8'
+          description_short: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय। कोर्स A से मिलता-जुलता, लेकिन इसमें अवधारणा को गहराई से शामिल किया गया है।
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: डिजीटल नागरिकता
+            lessonGroup-3:
+              display_name: अनुक्रमण
+            lessonGroup-4:
+              display_name: फंदे
+            lessonGroup-5:
+              display_name: घटनाएँ
+            lessonGroup-6:
+              display_name: डेटा
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: डिजीटल नागरिकता
+            lessonGroup-3:
+              display_name: अनुक्रमण
+            lessonGroup-4:
+              display_name: कंप्यूटिंग के प्रभाव
+            lessonGroup-6:
+              display_name: फंदे
+            lessonGroup-7:
+              display_name: डेटा
+            lessonGroup-8:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          description_audience: 'उम्र: 7-11'
+          description_short: सापेक्ष स्टेटमेंट्स के बारे में सीखें और अपनी खुद की कलाकृति, गेम और यहां तक कि डांस पार्टी बनाएं।
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: नेस्टड लूप्स
+            lessonGroup-4:
+              display_name: कार्य
+            lessonGroup-6:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          description_audience: 'उम्र: 8-12'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: स्प्राइट्स
+          description_audience: 'उम्र: 9-13'
+          description_short: कंप्यूटर विज्ञान के बुनियादी बातों में सभी अवधारणाओं को जानें और अपनी खुद की कला, कहानी या खेल बनाएं।
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: स्प्राइट्स
+            lessonGroup-3:
+              display_name: कंडीशनल्स
+            lessonGroup-5:
+              display_name: चर
+            lessonGroup-6:
+              display_name: कंप्यूटिंग के प्रभाव
+            lessonGroup-7:
+              display_name: कोर्स समाप्ति प्रोजेक्ट
+          description_audience: 'उम्र: 9-13'
+          description_short: कंप्यूटर विज्ञान के बुनियादी बातों में सभी अवधारणाओं को जानें और अपनी खुद की कला, कहानी या खेल बनाएं।

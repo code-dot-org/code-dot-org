@@ -298,8 +298,6 @@ ne:
             '"diamond"': diamond
       Dancelab_randomColor:
         text: कुनै एक  रङ
-      Dancelab_setBackgroundEffect:
-        options: {}
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
@@ -314,8 +312,6 @@ ne:
             '"SHARK"': सार्कहरु
             '"SLOTH"': स्लथ्स
             '"UNICORN"': घोडाहरु
-      Dancelab_setForegroundEffect:
-        options: {}
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:

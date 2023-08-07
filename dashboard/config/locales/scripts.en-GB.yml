@@ -312,6 +312,26 @@ en-GB:
           description_audience: Ages 10-110
         gradeKinder:
           description_audience: Ages 5-18
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Variables
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Loops
         pre-express-2019:
           lesson_groups:
             csf_loops:
@@ -334,6 +354,10 @@ en-GB:
               display_name: Loops
         step:
           title: Step
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Loops
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:

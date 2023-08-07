@@ -21,7 +21,7 @@ module Services
       :resources, :lessons_resources, :scripts_resources, :scripts_student_resources,
       :vocabularies, :lessons_vocabularies, :programming_environments,
       :programming_expressions, :lessons_programming_expressions, :objectives, :frameworks,
-      :standards, :lessons_standards, :lessons_opportunity_standards, keyword_init: true
+      :standards, :lessons_standards, :lessons_opportunity_standards, :rubrics, :learning_goals, :learning_goal_evidence_levels, keyword_init: true
     )
 
     # Produces a JSON representation of the given Unit and all objects under it in its "tree", in a format specifically
@@ -54,6 +54,7 @@ module Services
       # in a manner that will be stable across environments.
       sort_context = SeedContext.new(
         script: script,
+        lesson_groups: script.lesson_groups,
         lessons: script.lessons,
         resources: resources,
         frameworks: frameworks,
@@ -71,6 +72,10 @@ module Services
       lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten.sort_by {|lpe| lpe.seeding_key(sort_context).to_json}
 
       objectives = script.lessons.map(&:objectives).flatten.sort_by(&:key)
+
+      rubrics = script.lessons.filter_map(&:rubric).sort_by {|r| r.seeding_key(sort_context).to_json}
+      learning_goals = rubrics.map(&:learning_goals).flatten.sort_by(&:key)
+      learning_goal_evidence_levels = learning_goals.map(&:learning_goal_evidence_levels).flatten.sort_by(&:understanding)
 
       seed_context = SeedContext.new(
         script: script,
@@ -94,7 +99,9 @@ module Services
         frameworks: frameworks,
         standards: standards,
         lessons_standards: lessons_standards,
-        lessons_opportunity_standards: lessons_opportunity_standards
+        lessons_opportunity_standards: lessons_opportunity_standards,
+        rubrics: rubrics,
+        learning_goals: learning_goals
       )
       scope = {seed_context: seed_context}
 
@@ -116,6 +123,9 @@ module Services
         objectives: objectives.map {|o| ScriptSeed::ObjectiveSerializer.new(o, scope: scope).as_json},
         lessons_standards: lessons_standards.map {|ls| ScriptSeed::LessonsStandardSerializer.new(ls, scope: scope).as_json},
         lessons_opportunity_standards: lessons_opportunity_standards.map {|ls| ScriptSeed::LessonsOpportunityStandardSerializer.new(ls, scope: scope).as_json},
+        rubrics: rubrics.map {|r| ScriptSeed::RubricSerializer.new(r, scope: scope).as_json},
+        learning_goals: learning_goals.map {|lg| ScriptSeed::LearningGoalSerializer.new(lg, scope: scope).as_json},
+        learning_goal_evidence_levels: learning_goal_evidence_levels.map {|lgel| ScriptSeed::LearningGoalEvidenceLevelSerializer.new(lgel, scope: scope).as_json},
       }
       JSON.pretty_generate(data) + "\n"
     end
@@ -197,6 +207,9 @@ module Services
       objectives_data = data['objectives']
       lessons_standards_data = data['lessons_standards'] || []
       lessons_opportunity_standards_data = data['lessons_opportunity_standards'] || []
+      rubrics_data = data['rubrics'] || []
+      learning_goals_data = data['learning_goals'] || []
+      learning_goals_evidence_levels_data = data['learning_goal_evidence_levels'] || []
       seed_context = SeedContext.new
 
       Unit.transaction do
@@ -244,6 +257,10 @@ module Services
         seed_context.standards = Standard.all
         seed_context.lessons_standards = import_lessons_standards(lessons_standards_data, seed_context)
         seed_context.lessons_opportunity_standards = import_lessons_opportunity_standards(lessons_opportunity_standards_data, seed_context)
+
+        seed_context.rubrics = import_rubrics(rubrics_data, seed_context)
+        seed_context.learning_goals = import_learning_goals(learning_goals_data, seed_context)
+        seed_context.learning_goal_evidence_levels = import_learning_goals_evidence_levels(learning_goals_evidence_levels_data, seed_context)
 
         # generate_plc_objects must be run after lessons are added.
         seed_context.script.generate_plc_objects
@@ -671,6 +688,57 @@ module Services
       LessonsOpportunityStandard.joins(:lesson).where('stages.script_id' => seed_context.script.id)
     end
 
+    def self.import_rubrics(rubrics_data, seed_context)
+      rubrics_to_import = rubrics_data.map do |rubric_data|
+        lesson = seed_context.lessons.find {|l| l.key == rubric_data['seeding_key']['lesson.key']}
+        raise 'No lesson found' if lesson.nil?
+
+        level = lesson.levels.find {|l| l.name == rubric_data['level_name']}
+
+        rubric_attrs = rubric_data.except('seeding_key', 'level_name')
+        rubric_attrs['lesson_id'] = lesson.id
+        rubric_attrs['level_id'] = level&.id if level
+        Rubric.new(rubric_attrs)
+      end
+
+      existing_rubrics = Rubric.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+      destroy_outdated_objects(Rubric, existing_rubrics, rubrics_to_import, seed_context)
+      Rubric.import! rubrics_to_import, on_duplicate_key_update: get_columns(Rubric)
+      Rubric.joins(:lesson).where('stages.script_id' => seed_context.script.id)
+    end
+
+    def self.import_learning_goals(learning_goals_data, seed_context)
+      learning_goals_to_import = learning_goals_data.map do |learning_goal_data|
+        rubric = seed_context.lessons.find {|l| l.key == learning_goal_data['seeding_key']['lesson.key']}.rubric
+        raise 'No rubric found' if rubric.nil?
+
+        learning_goal_attrs = learning_goal_data.except('seeding_key')
+        learning_goal_attrs['rubric_id'] = rubric.id
+        LearningGoal.new(learning_goal_attrs)
+      end
+
+      existing_learning_goals = LearningGoal.joins(:rubric).where('rubrics.lesson_id' => seed_context.lessons.pluck(:id))
+      destroy_outdated_objects(LearningGoal, existing_learning_goals, learning_goals_to_import, seed_context)
+      LearningGoal.import! learning_goals_to_import, on_duplicate_key_update: get_columns(LearningGoal)
+      LearningGoal.joins(:rubric).where('rubrics.lesson_id' => seed_context.lessons.pluck(:id))
+    end
+
+    def self.import_learning_goals_evidence_levels(learning_goal_evidence_levels_data, seed_context)
+      learning_goals_evidence_levels_to_import = learning_goal_evidence_levels_data.map do |learning_goal_evidence_level_data|
+        learning_goal = seed_context.learning_goals.find {|lg| lg.key == learning_goal_evidence_level_data['seeding_key']['learning_goal.key']}
+        raise 'No learning goal found' if learning_goal.nil?
+
+        learning_goal_evidence_level_attrs = learning_goal_evidence_level_data.except('seeding_key')
+        learning_goal_evidence_level_attrs['learning_goal_id'] = learning_goal.id
+        LearningGoalEvidenceLevel.new(learning_goal_evidence_level_attrs)
+      end
+
+      existing_learning_goals_evidence_levels = LearningGoalEvidenceLevel.joins(:learning_goal).where('learning_goals.rubric_id' => seed_context.rubrics.pluck(:id))
+      destroy_outdated_objects(LearningGoalEvidenceLevel, existing_learning_goals_evidence_levels, learning_goals_evidence_levels_to_import, seed_context)
+      LearningGoalEvidenceLevel.import! learning_goals_evidence_levels_to_import, on_duplicate_key_update: get_columns(LearningGoalEvidenceLevel)
+      LearningGoalEvidenceLevel.joins(:learning_goal).where('learning_goals.rubric_id' => seed_context.rubrics.pluck(:id))
+    end
+
     def self.destroy_outdated_objects(model_class, all_objects, imported_objects, seed_context)
       objects_to_keep_by_seeding_key = imported_objects.index_by {|o| o.seeding_key(seed_context)}
       should_keep = all_objects.group_by {|o| objects_to_keep_by_seeding_key.include?(o.seeding_key(seed_context))}
@@ -910,6 +978,34 @@ module Services
 
     class LessonsOpportunityStandardSerializer < ActiveModel::Serializer
       attributes :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class RubricSerializer < ActiveModel::Serializer
+      attributes :level_name, :seeding_key
+
+      def level_name
+        object.level&.name
+      end
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class LearningGoalSerializer < ActiveModel::Serializer
+      attributes :key, :position, :learning_goal, :ai_enabled, :tips, :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class LearningGoalEvidenceLevelSerializer < ActiveModel::Serializer
+      attributes :understanding, :teacher_description, :ai_prompt, :seeding_key
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])

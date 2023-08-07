@@ -14,19 +14,9 @@
           "013405bba4219ed238e87658786699b6": " Poäng: ",
           "46e888cc716ac8ec6fad01e85eb7c37c": "Nivå: "
         },
-        "Course 4 Play Lab Vars 1": {
-        },
-        "Course 4 Play Lab Vars 2": {
-        },
-        "Course 4 Play Lab Vars 6": {
-        },
-        "Course 4 Play Lab Vars 7": {
-        },
         "Course 4 Playlab For Loop Freeplay": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
           "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär"
-        },
-        "Course 4 Playlab For Loops 6b": {
         },
         "Course E: Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
@@ -65,10 +55,6 @@
           "78d989e01047ba7043a38650d695abaa": "Välj spelare",
           "7fec9998c3e5a11f435dc6f2f8e399db": "val 2",
           "c3787b1ed128fdeec3ad638c8ba547d3": "val 3"
-        },
-        "CourseF_outbreak8": {
-        },
-        "CourseF_outbreak8_-2022-2": {
         },
         "Find the Wizard": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
@@ -116,10 +102,6 @@
         },
         "OPD-K5-projects-7": {
           "3e11a2dc6edb909c47778bed75a81769": "Text här"
-        },
-        "Virtual Pet 1_2019": {
-        },
-        "Virtual Pet 1_2020": {
         },
         "course3_playLab_challenge1": {
           "3e11a2dc6edb909c47778bed75a81769": "Text här"
@@ -303,12 +285,6 @@
           "c865bfd8e0c78020ace8e1376d3cc9ad": "Du förlorade.",
           "e8a10c04d72b2f135dabe360c4bdd534": "Du vann!"
         },
-        "courseE_aboutme_1": {
-        },
-        "courseE_aboutme_1_2020": {
-        },
-        "courseE_aboutme_1_2021": {
-        },
         "courseE_aboutme_3": {
           "ed076287532e86365e841e92bfc50d8c": "Hej Världen!"
         },
@@ -367,8 +343,6 @@
         "courseE_playLab_scaffold5": {
           "3e11a2dc6edb909c47778bed75a81769": "Text här"
         },
-        "courseE_playLab_scaffold6": {
-        },
         "courseF_apps_aquarium": {
           "0d3e73168beb875063ea0f0302fe32bd": "Vilken fisk?",
           "83e4a96aed96436c621b9809e258b309": "fisk"
@@ -389,12 +363,6 @@
         },
         "courseF_apps_card_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
-        },
-        "courseF_apps_chatbot": {
-        },
-        "courseF_apps_chatbot2022": {
-        },
-        "courseF_apps_chatbot_-2022-2": {
         },
         "courseF_apps_collector": {
           "077449fb290b51b9d70c9f2f3d3213bc": " sekunder",
@@ -444,12 +412,6 @@
           "7c9fbd20ed3a7bcfad08351050ffe0ff": " spel.",
           "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga",
           "f6175c6f0b0bcfff0256286315f0eb7b": "Partyspel"
-        },
-        "courseF_extras_sim": {
-        },
-        "courseF_label_predict": {
-        },
-        "courseF_label_predict_-2022-2": {
         },
         "courseF_playlab_variables1a": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
@@ -547,10 +509,6 @@
         "courseF_text_choice_interview_-2022-2": {
           "34088af1fb721900963462375b3bbe23": "roboten!"
         },
-        "courseF_text_choice_multiprompt": {
-        },
-        "courseF_text_choice_multiprompt_-2022-2": {
-        },
         "courseF_text_choice_title": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
         },
@@ -604,10 +562,6 @@
         },
         "courseF_variables_madlib_finish_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
-        },
-        "courseF_variables_predict": {
-        },
-        "courseF_variables_predict_-2022-2": {
         },
         "coursee_helloworld_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Hallå, värld!"

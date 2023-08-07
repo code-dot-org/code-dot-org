@@ -20,15 +20,16 @@ theme: responsive_full_width
     .text-wrapper.col-60
       %h1{style: "color: white"}=hoc_s(:ai_hero_heading)
       %p.body-one{style: "color: white"}=hoc_s(:ai_hero_desc)
-      -# Hiding this button that links to the blur banner section below as of 7/7/23
-      -# %a.link-button.has-icon{href: "#ai-pl-callout"}
-      -#   %div.flex-wrapper
-      -#     %i{class: "#{icon_megaphone}"}
-      -#     =hoc_s(:call_to_action_special_announcement)
+      %a.link-button.has-icon{href: "#ai-pl-callout"}
+        %div.flex-wrapper
+          %i{class: "#{icon_megaphone}"}
+          =hoc_s(:call_to_action_learning_opportunity)
     %figure.col-33{style: "float: right"}
       %img.fade-in-out{src: "/images/banners/ai-bot-wizard.svg", alt: "", style: "z-index: 10"}
       %img{src: "/images/banners/ai-bot-default.svg", alt: "", style: "position: relative;"}
     .clear
+
+= view :teach_ai_skinny_banner
 
 %section.intro
   .wrapper
@@ -59,16 +60,16 @@ theme: responsive_full_width
             %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_03)
     .clear
 
--# Hiding this section s of 7/7/23
--# %section.bg-primary-light.blog-post-callout{id: "ai-pl-callout"}
--#   .wrapper
--#     %i{class: "#{icon_megaphone}"}
--#     .text-wrapper
--#       %h2.heading-lg=hoc_s(:ai_pl_callout_title)
--#       %p
--#         %strong=hoc_s(:ai_pl_callout_desc_01)
--#       %p.body-three=hoc_s(:ai_pl_callout_desc_02)
--#       %a.link-button{href: "https://code.zoom.us/webinar/register/8616874889915/WN_TGKpfOD8Rw-z5Q-D3ZiuLQ", target: "_blank", rel: "noopener noreferrer"}=hoc_s(:signup_submit_label)
+
+%section.bg-primary-light.blog-post-callout{id: "ai-pl-callout"}
+  .wrapper
+    %i{class: "#{icon_megaphone}"}
+    .text-wrapper
+      %h2.heading-lg=hoc_s(:ai_pl_callout_title)
+      %p
+        %strong=hoc_s(:ai_pl_callout_desc_01)
+      %p.body-three=hoc_s(:ai_pl_callout_desc_02)
+      %a.link-button{href: "/ai/pl/101"}=hoc_s(:signup_submit_explore)
 
 %section.bg-neutral-light
   .wrapper

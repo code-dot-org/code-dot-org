@@ -3174,6 +3174,8 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3314,6 +3316,81 @@ hu:
           title: Minecraft Kódolás órája tervező
         netsim:
           title: Internet szimulátor
+        nevada-standards-aligned-fifth-grade-2023:
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját,
+            és hozzon létre saját művészetét, történetét vagy
+          lesson_groups:
+            lessonGroup-2:
+              display_name: sprite-ok
+            lessonGroup-3:
+              display_name: Feltételek
+            lessonGroup-5:
+              display_name: változók
+            lessonGroup-7:
+              display_name: Kurzus Projekt vége
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját,
+            és hozzon létre saját művészetét, történetét vagy
+          lesson_groups:
+            lessonGroup-2:
+              display_name: sprite-ok
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-4:
+              display_name: Ciklusok
+            lessonGroup-6:
+              display_name: Események
+            lessonGroup-7:
+              display_name: Kurzus Projekt vége
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Egymásba ágyazott ciklusok
+            lessonGroup-4:
+              display_name: Függvények
+            lessonGroup-6:
+              display_name: Kurzus Projekt vége
+        nevada-standards-aligned-kindergarten-2023:
+          description: Az A kurzus számítástechnikai tantervet kínál azoknak az olvasással
+            épp csak ismerkedő gyerekek számára, beleértve akár az óvodásokat is.
+            A diákok megtanulnak programozni olyan parancsokkal, mint a ciklusok és
+            az események. Az ebben a kurzusban bemutatott leckék arra is megtanítják
+            a diákokat, hogy értelmesen együttműködjenek másokkal, vizsgálják meg
+            a különböző problémamegoldó technikákat, a kihívást jelentő feladatok
+            megoldásával kitartóak legyenek, és megismerjék az internetbiztonságot.
+          description_short: Bevezetés a számítástechnikába az előolvasók számára.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-4:
+              display_name: Ciklusok
+            lessonGroup-6:
+              display_name: Adat
+          lessons:
+            lesson-1:
+              name: Adat
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-4:
+              display_name: Ciklusok
+            lessonGroup-5:
+              display_name: Események
+            lessonGroup-6:
+              display_name: Adat
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-6:
+              display_name: Ciklusok
+            lessonGroup-7:
+              display_name: Adat
+            lessonGroup-8:
+              display_name: Kurzus Projekt vége
         new-e:
           lesson_groups:
             end_of_course_project:
@@ -3444,6 +3521,7 @@ hu:
             Star Wars játékodat egy messzi, messzi galaxisban.
           student_description: Tanulj meg droidokat programozni és készítsd el a saját
             Star Wars játékodat egy messzi, messzi galaxisban.
+          title: 'Star Wars: Egy galaxis építése kóddal (JavaScript)'
         starwarsblocks:
           description: Tanulj meg droidokat programozni és készítsd el a saját Star
             Wars játékodat egy messzi, messzi galaxisban.
@@ -3471,6 +3549,12 @@ hu:
             lessonGroup-3:
               display_name: 2.  fejezet
           title: Problémamegoldás
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-4:
+              display_name: Ciklusok
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

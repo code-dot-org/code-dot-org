@@ -14,86 +14,8 @@
         "4-5 Bee Conditionals 2": {
           "4_5_Bee_Conditionals_2_1": "यादरखें,यहदेखनेकेलिएजांचेंकिक्याप्रत्येकबादलमेंफ्लोअरहैयानहीं।आपकोहनीकॉमकीजांचकरनेकीज़रूरतनहींहै।"
         },
-        "AppLab Intro 7 - Change Screen Color": {
-        },
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "अब आप डिज़ाइन मोड में हैं।"
-        },
-        "Big Game Vars 1": {
-        },
-        "CSD U3 - conditionals - transition": {
-        },
-        "CSD U3 - conditionals - transition_2018": {
-        },
-        "CSD U3 - conditionals - transition_2019": {
-        },
-        "CSD U3 - conditionals - transition_2021": {
-        },
-        "CSD U3 - conditionals - transition_2022": {
-        },
-        "CSD U3 Boolean Predict": {
-        },
-        "CSD U3 Boolean Predict_2018": {
-        },
-        "CSD U3 Boolean Predict_2019": {
-        },
-        "CSD U3 Boolean Predict_2021": {
-        },
-        "CSD U3 Boolean Predict_2022": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
-        },
-        "CSD U3 Random add_2021": {
-        },
-        "CSD U3 Random add_2022": {
-        },
-        "CSD U3 Sprites anitab 1": {
-        },
-        "CSD U3 Sprites anitab 1_2018": {
-        },
-        "CSD U3 Sprites anitab 1_2019": {
-        },
-        "CSD U3 Sprites anitab 1_2021": {
-        },
-        "CSD U3 Sprites anitab 1_2022": {
-        },
-        "CSD U3 Sprites intro sprites": {
-        },
-        "CSD U3 Sprites intro sprites_2018": {
-        },
-        "CSD U3 Sprites intro sprites_2019": {
-        },
-        "CSD U3 Sprites intro sprites_2021": {
-        },
-        "CSD U3 Sprites intro sprites_2022": {
-        },
-        "CSD U3 Sprites text": {
-        },
-        "CSD U3 Sprites text_2018": {
-        },
-        "CSD U3 Sprites text_2019": {
-        },
-        "CSD U3 Sprites text_2021": {
-        },
-        "CSD U3 Sprites text_2022": {
-        },
-        "CSD U3 UP_ARROW": {
-        },
-        "CSD U3 UP_ARROW_2018": {
-        },
-        "CSD U3 UP_ARROW_2018_2019": {
-        },
-        "CSD U3 UP_ARROW_2021": {
-        },
-        "CSD U3 UP_ARROW_2022": {
-        },
-        "CSD U3 Variables Predict Where X": {
         },
         "CSD U3 Variables Predict Where XY": {
           "grid": "ग्रिड दिखाने के लिए यहां क्लिक करें।"
@@ -110,410 +32,8 @@
         "CSD U3 Variables Predict Where XY_2022": {
           "grid": "ग्रिड दिखाने के लिए यहां क्लिक करें।"
         },
-        "CSD U3 Variables Predict Where X_2018": {
-        },
-        "CSD U3 Variables Predict Where X_2019": {
-        },
-        "CSD U3 Variables Predict Where X_2021": {
-        },
-        "CSD U3 Variables Predict Where X_2022": {
-        },
-        "CSD U3 abstraction accelerateX": {
-        },
-        "CSD U3 abstraction accelerateX_2018": {
-        },
-        "CSD U3 abstraction accelerateX_2019": {
-        },
-        "CSD U3 abstraction accelerateX_2021": {
-        },
-        "CSD U3 abstraction accelerateX_2022": {
-        },
-        "CSD U3 abstraction accelerateY": {
-        },
-        "CSD U3 abstraction accelerateY_2018": {
-        },
-        "CSD U3 abstraction accelerateY_2019": {
-        },
-        "CSD U3 abstraction accelerateY_2021": {
-        },
-        "CSD U3 abstraction accelerateY_2022": {
-        },
-        "CSD U3 abstraction jump": {
-        },
-        "CSD U3 abstraction jump_2018": {
-        },
-        "CSD U3 abstraction jump_2018_2019": {
-        },
-        "CSD U3 abstraction jump_2021": {
-        },
-        "CSD U3 abstraction jump_2022": {
-        },
-        "CSD U3 abstraction jumping": {
-        },
-        "CSD U3 abstraction jumping_2018": {
-        },
-        "CSD U3 abstraction jumping_2019": {
-        },
-        "CSD U3 abstraction jumping_2021": {
-        },
-        "CSD U3 abstraction jumping_2022": {
-        },
-        "CSD U3 abstraction looping": {
-        },
-        "CSD U3 abstraction looping_2018": {
-        },
-        "CSD U3 abstraction looping_2019": {
-        },
-        "CSD U3 abstraction looping_2021": {
-        },
-        "CSD U3 abstraction looping_2022": {
-        },
-        "CSD U3 abstraction rotation": {
-        },
-        "CSD U3 abstraction rotation control": {
-        },
-        "CSD U3 abstraction rotation control_2018": {
-        },
-        "CSD U3 abstraction rotation control_2019": {
-        },
-        "CSD U3 abstraction rotation control_2021": {
-        },
-        "CSD U3 abstraction rotation control_2022": {
-        },
-        "CSD U3 abstraction rotation_2018": {
-        },
-        "CSD U3 abstraction rotation_2019": {
-        },
-        "CSD U3 abstraction rotation_2021": {
-        },
-        "CSD U3 abstraction rotation_2022": {
-        },
-        "CSD U3 abstraction tumbleweed": {
-        },
-        "CSD U3 abstraction tumbleweed_2018": {
-        },
-        "CSD U3 abstraction tumbleweed_2019": {
-        },
-        "CSD U3 abstraction tumbleweed_2021": {
-        },
-        "CSD U3 abstraction tumbleweed_2022": {
-        },
-        "CSD U3 abstraction velocityX": {
-        },
-        "CSD U3 abstraction velocityX control": {
-        },
-        "CSD U3 abstraction velocityX control_2018": {
-        },
-        "CSD U3 abstraction velocityX control_2019": {
-        },
-        "CSD U3 abstraction velocityX control_2021": {
-        },
-        "CSD U3 abstraction velocityX control_2022": {
-        },
-        "CSD U3 abstraction velocityX if-statements": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2018": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2019": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2021": {
-        },
-        "CSD U3 abstraction velocityX if-statements_2022": {
-        },
-        "CSD U3 abstraction velocityX_2018": {
-        },
-        "CSD U3 abstraction velocityX_2019": {
-        },
-        "CSD U3 abstraction velocityX_2021": {
-        },
-        "CSD U3 abstraction velocityX_2022": {
-        },
-        "CSD U3 abstraction velocityY": {
-        },
-        "CSD U3 abstraction velocityY control": {
-        },
-        "CSD U3 abstraction velocityY control_2018": {
-        },
-        "CSD U3 abstraction velocityY control_2019": {
-        },
-        "CSD U3 abstraction velocityY control_2021": {
-        },
-        "CSD U3 abstraction velocityY control_2022": {
-        },
-        "CSD U3 abstraction velocityY_2018": {
-        },
-        "CSD U3 abstraction velocityY_2019": {
-        },
-        "CSD U3 abstraction velocityY_2021": {
-        },
-        "CSD U3 abstraction velocityY_2022": {
-        },
-        "CSD U3 collisions isTouching intro": {
-        },
-        "CSD U3 collisions isTouching intro_2018": {
-        },
-        "CSD U3 collisions isTouching intro_2019": {
-        },
-        "CSD U3 collisions isTouching intro_2021": {
-        },
-        "CSD U3 collisions isTouching intro_2022": {
-        },
-        "CSD U3 collisions scoreboard": {
-        },
-        "CSD U3 collisions scoreboard_2018": {
-        },
-        "CSD U3 collisions scoreboard_2019": {
-        },
-        "CSD U3 collisions try blocks": {
-        },
-        "CSD U3 collisions try blocks_2018": {
-        },
-        "CSD U3 collisions try blocks_2019": {
-        },
-        "CSD U3 collisions try blocks_2021": {
-        },
-        "CSD U3 collisions try blocks_2022": {
-        },
-        "CSD U3 collisions types": {
-        },
-        "CSD U3 collisions types2_2021": {
-        },
-        "CSD U3 collisions types2_2022": {
-        },
-        "CSD U3 collisions types3_2021": {
-        },
-        "CSD U3 collisions types3_2022": {
-        },
-        "CSD U3 collisions types4_2021": {
-        },
-        "CSD U3 collisions types4_2022": {
-        },
-        "CSD U3 collisions types_2018": {
-        },
-        "CSD U3 collisions types_2019": {
-        },
-        "CSD U3 collisions types_2021": {
-        },
-        "CSD U3 collisions types_2022": {
-        },
-        "CSD U3 debug": {
-        },
-        "CSD U3 debug_2018": {
-        },
-        "CSD U3 debug_2019": {
-        },
-        "CSD U3 debug_2021": {
-        },
-        "CSD U3 debug_2022": {
-        },
-        "CSD U3 drawing challenge 2_2021": {
-        },
-        "CSD U3 drawing challenge 2_2022": {
-        },
-        "CSD U3 drawing challenge 3_2021": {
-        },
-        "CSD U3 drawing challenge 3_2022": {
-        },
-        "CSD U3 drawing practice 1_2021": {
-        },
-        "CSD U3 drawing practice 1_2022": {
-        },
-        "CSD U3 drawing practice 2_2021": {
-        },
-        "CSD U3 drawing practice 2_2022": {
-        },
-        "CSD U3 drawing practice 3_2021": {
-        },
-        "CSD U3 drawing practice 3_2022": {
-        },
-        "CSD U3 ellipse": {
-        },
-        "CSD U3 ellipse_2018": {
-        },
-        "CSD U3 ellipse_2019": {
-        },
-        "CSD U3 ellipse_2021": {
-        },
-        "CSD U3 ellipse_2022": {
-        },
-        "CSD U3 fill": {
-        },
-        "CSD U3 fill_2018": {
-        },
-        "CSD U3 fill_2019": {
-        },
-        "CSD U3 fill_2021": {
-        },
-        "CSD U3 fill_2022": {
-        },
-        "CSD U3 game backgrounds": {
-        },
-        "CSD U3 game backgrounds_2018": {
-        },
-        "CSD U3 game backgrounds_2019": {
-        },
-        "CSD U3 game backgrounds_2021": {
-        },
-        "CSD U3 game backgrounds_2022": {
-        },
-        "CSD U3 game variables": {
-        },
-        "CSD U3 game variables_2018": {
-        },
-        "CSD U3 game variables_2019": {
-        },
-        "CSD U3 game variables_2021": {
-        },
-        "CSD U3 game variables_2022": {
-        },
-        "CSD U3 keydown conditional": {
-        },
-        "CSD U3 keydown conditional_2018": {
-        },
-        "CSD U3 keydown conditional_2018_2019": {
-        },
-        "CSD U3 keydown conditional_2021": {
-        },
-        "CSD U3 keydown conditional_2022": {
-        },
-        "CSD U3 platform background1": {
-        },
-        "CSD U3 platform background1_2018": {
-        },
-        "CSD U3 platform background1_2019": {
-        },
-        "CSD U3 platform background1_2021": {
-        },
-        "CSD U3 platform background1_2022": {
-        },
-        "CSD U3 platform platform1": {
-        },
-        "CSD U3 platform platform1_2018": {
-        },
-        "CSD U3 platform platform1_2019": {
-        },
-        "CSD U3 platform platform1_2021": {
-        },
-        "CSD U3 platform platform1_2022": {
-        },
-        "CSD U3 platform scoreboard": {
-        },
-        "CSD U3 platform scoreboard_2018": {
-        },
-        "CSD U3 platform scoreboard_2019": {
-        },
-        "CSD U3 platform scoreboard_2021": {
-        },
-        "CSD U3 platform scoreboard_2022": {
-        },
-        "CSD U3 platform variable1": {
-        },
-        "CSD U3 platform variable1_2018": {
-        },
-        "CSD U3 platform variable1_2019": {
-        },
-        "CSD U3 platform variable1_2021": {
-        },
-        "CSD U3 platform variable1_2022": {
-        },
-        "CSD U3 properties depth_2021": {
-        },
-        "CSD U3 properties depth_2022": {
-        },
-        "CSD U3 properties tint_2021": {
-        },
-        "CSD U3 properties tint_2022": {
-        },
-        "CSD U3 rect": {
-        },
-        "CSD U3 rect_2018": {
-        },
-        "CSD U3 rect_2019": {
-        },
-        "CSD U3 rect_2021": {
-        },
-        "CSD U3 rect_2022": {
-        },
-        "CSD U3 sequence": {
-        },
-        "CSD U3 sequence_2018": {
-        },
-        "CSD U3 sequence_2019": {
-        },
-        "CSD U3 sequence_2021": {
-        },
-        "CSD U3 sequence_2022": {
-        },
-        "CSD U3 shapes arc_2021": {
-        },
-        "CSD U3 shapes arc_2022": {
-        },
-        "CSD U3 shapes behind_2021": {
-        },
-        "CSD U3 shapes behind_2022": {
-        },
-        "CSD U3 shapes line_2021": {
-        },
-        "CSD U3 shapes line_2022": {
-        },
-        "CSD U3 shapes missing_2021": {
-        },
-        "CSD U3 shapes missing_2022": {
-        },
-        "CSD U3 shapes polygon_2021": {
-        },
-        "CSD U3 shapes polygon_2022": {
-        },
-        "CSD U3 shapes scene_2021": {
-        },
-        "CSD U3 shapes scene_2022": {
-        },
-        "CSD U3 shapes_2021": {
-        },
-        "CSD U3 shapes_2022": {
-        },
-        "CSD U6 - Accelerometer - PB_2222": {
-        },
-        "CSD U6 - Accelerometer - PC_2222": {
-        },
-        "CSD U6 - Accelerometer - SB2_2222": {
-        },
-        "CSD U6 - Color LEDs - CA_2222": {
-        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "अपना कोड यहां जोड़ें।"
-        },
-        "CSD U6 - Combine Inputs - A_2222": {
-        },
-        "CSD U6 - Combine Inputs - PracD_2222": {
-        },
-        "CSD U6 - Combine Inputs - SB1_2222": {
-        },
-        "CSD U6 - Functions - P2A_2222": {
-        },
-        "CSD U6 - Functions - P2C_2222": {
-        },
-        "CSD U6 - Functions - SB1_2222": {
-        },
-        "CSD U6 - Functions - SB2_2222": {
-        },
-        "CSD U6 - Functions - SB3_2222": {
-        },
-        "CSD U6 - Functions - SB4_2222": {
-        },
-        "CSD U6 - Functions - SB6_2222": {
-        },
-        "CSD U6 - Functions - SB7_2222": {
-        },
-        "CSD U6 - Functions - SB_2222": {
-        },
-        "CSD U6 - If Variables - A_2222": {
-        },
-        "CSD U6 - Music - A_2222": {
-        },
-        "CSD U6 - Music - SB3_2222": {
-        },
-        "CSD U6 - Sensors - PB_2222": {
         },
         "CSD U6 colorLeds intensity": {
           "CSDU6L10_rainbow": "अपना कोड यहां जोड़ें।"
@@ -527,68 +47,6 @@
         "CSD U6 colorLeds intensity_2021": {
           "CSDU6L10_rainbow": "अपना कोड यहां जोड़ें।"
         },
-        "CSD U6 getProperty input": {
-        },
-        "CSD U6 getProperty input_2018": {
-        },
-        "CSD U6 getProperty input_2019": {
-        },
-        "CSD U6 getProperty input_2021": {
-        },
-        "CSD U6 light show": {
-        },
-        "CSD U6 light show_2018": {
-        },
-        "CSD U6 light show_2019": {
-        },
-        "CSD U6 light show_2021": {
-        },
-        "CSD U6 tugowar variables 1": {
-        },
-        "CSD U6 tugowar variables 1_2018": {
-        },
-        "CSD U6 tugowar variables 1_2019": {
-        },
-        "CSD U6 tugowar variables 1_2021": {
-        },
-        "CSD U6 tugowar variables 2": {
-        },
-        "CSD U6 tugowar variables 2_2018": {
-        },
-        "CSD U6 tugowar variables 2_2019": {
-        },
-        "CSD U6 tugowar variables 2_2021": {
-        },
-        "CSD U6 tugowar variables 3": {
-        },
-        "CSD U6 tugowar variables 3_2018": {
-        },
-        "CSD U6 tugowar variables 3_2019": {
-        },
-        "CSD U6 tugowar variables 3_2021": {
-        },
-        "CSD games sidescroll background_2021": {
-        },
-        "CSD games sidescroll background_2022": {
-        },
-        "CSD games velocity bee_2021": {
-        },
-        "CSD games velocity bee_2022": {
-        },
-        "CSD web text explore_2021": {
-        },
-        "CSD web text explore_2022": {
-        },
-        "CSD web text size_2021": {
-        },
-        "CSD web text size_2022": {
-        },
-        "CSDU4 - Design Mode - 3": {
-        },
-        "Calc Circles of Eval .2": {
-        },
-        "Calc Vars 1": {
-        },
         "Course 4 Artist 4": {
           "repeat_full_circle": "पूरा चक्कर बनाने के लिए जितनी बार ज़ोम्बी को मूव करना होगा, उसकी संख्या दर्ज करें"
         },
@@ -597,8 +55,6 @@
         },
         "Course 4 Artist For Loops 4": {
           "place_counter_variable": "अपनी काउंटर वेरिएबल को इस ब्लॉक के अंदर खींचें"
-        },
-        "Course 4 Artist Functions challenge": {
         },
         "Course 4 Artist Vars 1": {
           "repeat_blocks": "\"दोहराएं\" ब्लॉक का उपयोग करें और इसे वर्कस्पेस में ब्लॉक्स के चारों ओर मिलाएं"
@@ -612,10 +68,6 @@
         "Course 4 Artist Vars 6": {
           "degrees_per_side": "प्रत्येक कोण के आकार को डिग्रियों में प्राप्त करने के लिए 360 को भुजाओं की संख्या से भाग करें।"
         },
-        "Course 4 Artist Vars 8": {
-        },
-        "Course 4 Bee 1": {
-        },
         "Course 4 Bee 3": {
           "if_else_bee": "\"इफ/एल्स\" ब्लॉक का उपयोग करें ताकि मधुमक्खी फूल से मधुरस प्राप्त करे और यदि वहां फूल नहीं है तो शहद बनाए"
         },
@@ -625,8 +77,6 @@
         "Course 4 Maze 4": {
           "repeat": "दोहराएं कमांड्स के लिए लूप के अंदर ब्लॉक रखें"
         },
-        "Course 4 Play Lab Params 2": {
-        },
         "Course 4 Play Lab Params 3": {
           "edit_function": "अपना फंक्शन संपादित करने के लिए यहां क्लिक करें।"
         },
@@ -635,12 +85,6 @@
         },
         "Course 4 Play Lab Vars 1": {
           "arrows_move_actor": "अभिनेता को मूव करने के लिए तीरों का उपयोग करें"
-        },
-        "Course 4 Play Lab Vars 9": {
-        },
-        "Course 4 Playlab For Loops 4b": {
-        },
-        "Course 4 SCV 6": {
         },
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "यह ब्लॉक अपने प्रोग्राम में शामिल करें!"
@@ -786,14 +230,6 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "\"सभी बत्तखें\" ब्लॉक्स के लिए यहां देखें"
         },
-        "Eval Booleans 2": {
-        },
-        "Eval Define Funcs 3": {
-        },
-        "Eval Define Funcs Test": {
-        },
-        "Eval Strings Images .2": {
-        },
         "Fish Tank 3-validated2022": {
           "spritelab_comment": "आपका कोड कैसे काम करता है, इस बारे में अपने लिए या अध्यापक के लिए नोट्स छोड़ने हेतु इस ब्लॉक का उपयोग करें।"
         },
@@ -842,14 +278,6 @@
         },
         "InspirationalArtwork": {
           "InspirationalArtwork_1": "अपने प्रोग्राम के अंदर अपने नोट्स छोड़ने के लिए इस लेबल के अंतर्गत नया `टिप्पणी` ब्लॉक उपयोग करने का प्रयास करें!"
-        },
-        "InspirationalArtwork_2018": {
-        },
-        "Luigi's Pizza 1": {
-        },
-        "MC HOC 2016 Level 2-2": {
-        },
-        "MC HOC 2016 New Walk": {
         },
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_1": "यह `दोहराएं` लूप है!  वर्कस्पेस में इस पर क्लिक करें और वह कोड शामिल करें, जिसे आप बार-बार चलाना चाहते हैं। "
@@ -911,8 +339,6 @@
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "एजेंट पानी के ऊपर मंडरा सकता है, लेकिन स्टीव और एलेक्स नहीं मंडरा सकते!"
         },
-        "NEW Course 4 Artist Functions 3": {
-        },
         "NEW Course 4 Artist Functions 7": {
           "edit_function": "अपना फंक्शन संपादित करने के लिए यहां क्लिक करें।"
         },
@@ -922,16 +348,12 @@
         "NEW Course 4 Artist Params 10": {
           "create_function": "\"फंक्शन्स\" फ्लाइआउट खोलने के लिए यहां क्लिक करें, फिर \"फंक्शन बनाएं\" बटन पर क्लिक करें।"
         },
-        "NEW Course 4 Artist Params 2": {
-        },
         "NEW Course 4 Artist Params 9": {
           "add_and_drag_parameter": "यहां अपने मापदंड का नाम लिखें, जोड़ें पर क्लिक करें, और फिर इसे अपनी फंक्शन परिभाषा में खींचें",
           "edit_add_parameter": "अपने फंक्शन में मापदंड जोड़ने के लिए संपादित करें पर क्लिक करें"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "प्रश्नचिन्हों को बदलने के लिए यहां लम्बाई वेरिएबल खींचें"
-        },
-        "NEW Course 4 Bee For Loops 4": {
         },
         "NEW Course 4 Bee For Loops 5": {
           "actions_category": "टूल बॉक्स नए रूप में आ गया है! \"क्रियाएं\" ब्लॉक्स अब यहां हैं"
@@ -1093,23 +515,11 @@
         "behaviors 1_2020": {
           "behaviors_edit": "यह देखने के लिए यहां क्लिक करें कि यह व्यवहार कैसे काम करता है।"
         },
-        "behaviors 3a": {
-        },
-        "behaviors 3a_2020": {
-        },
         "behaviors 4": {
           "behaviors_edit": "यह देखने के लिए यहां क्लिक करें कि यह व्यवहार कैसे काम करता है।"
         },
         "behaviors 4_2020": {
           "behaviors_edit": "यह देखने के लिए यहां क्लिक करें कि यह व्यवहार कैसे काम करता है।"
-        },
-        "behaviors 5": {
-        },
-        "behaviors 5_2020": {
-        },
-        "behaviors free play": {
-        },
-        "behaviors free play_2020": {
         },
         "course2_bee_conditionals_challenge2": {
           "courseD_bee_conditionals_challenge2_1": "एक फूल (या मधु के छत्ते) से सारा मधुरस (या शहद) एकत्र करने के लिए इस लूप का उपयोग करें।"
@@ -1243,8 +653,6 @@
         },
         "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "यह नंबर आपको बताता है कि आप इनमें से कितने ब्लॉक्स का उपयोग इस पहेली में कर सकते हैं।"
-        },
-        "courseA_collector_preLoops1": {
         },
         "courseA_collector_preLoops2": {
           "courseA_collector_loops1_1": "क्या आपको टूलबॉक्स में कुछ नए ब्लॉक दिखाई दे रहे हैं?  चिंता न करें, हम आपको बाद में दिखाएंगे कि उनका उपयोग कैसे करना है।"
@@ -1614,8 +1022,6 @@
         },
         "courseC_maze_debugging52022": {
           "courseC_maze_debugging5_1": "ये ब्लॉक्स लॉक हैं और इन्हें मिटाया नहीं जा सकता!"
-        },
-        "courseC_maze_debugging5_2018": {
         },
         "courseC_maze_debugging5_2019": {
           "courseC_maze_debugging5_1": "ये ब्लॉक्स लॉक हैं और इन्हें मिटाया नहीं जा सकता!"
@@ -2465,10 +1871,6 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "आप अपने वेरिएबल्स यहां नीचे पा सकते हैं!"
         },
-        "courseF_collector_items_-2022-2": {
-        },
-        "courseF_collector_player_move_-2022-2": {
-        },
         "courseF_editable_card": {
           "visualizationResizeBar": "खेलने वाले क्षेत्र का आकार बदलने के लिए 3 बिंदियां खींचें।"
         },
@@ -2522,8 +1924,6 @@
         },
         "courseF_events_time_-2022-2": {
           "events_category": "इवेंट्स श्रेणी खोलने के लिए यहां क्लिक करें।"
-        },
-        "courseF_groups_size_-2022-2": {
         },
         "courseF_label_predict": {
           "variablesPredict": "इस बिंदु के नीचे दिए कोड को ध्यान से देखें। "
@@ -2927,74 +2327,6 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "नई ब्लॉक"
-        },
-        "iceage_hello1": {
-        },
-        "iceage_hello2": {
-        },
-        "iceage_move_events": {
-        },
-        "iceage_move_events_dani": {
-        },
-        "iceage_move_to_actor": {
-        },
-        "iceage_repeat": {
-        },
-        "iceage_sound_and_points": {
-        },
-        "iceage_sound_and_points_dani": {
-        },
-        "iceage_warn_ice_age": {
-        },
-        "iceage_warn_ice_age_dani": {
-        },
-        "ml-customize apps-choice3": {
-        },
-        "ml-customize apps-choice3_2022": {
-        },
-        "ml-customize apps-choice5": {
-        },
-        "ml-customize apps-choice5_2022": {
-        },
-        "ml-intro app lab-book recommender 5C-2021": {
-        },
-        "ml-intro app lab-book recommender 5C_2022": {
-        },
-        "ml-intro app lab-book recommender 5E-2021": {
-        },
-        "ml-intro app lab-book recommender 5E_2022": {
-        },
-        "ml-models in applab-screens-1-2021": {
-        },
-        "ml-models in applab-screens-1_2022": {
-        },
-        "ml-models in applab-screens-3-2021": {
-        },
-        "ml-models in applab-screens-3_2022": {
-        },
-        "ml-use model card-choice3": {
-        },
-        "ml-use model card-choice3_2022": {
-        },
-        "ml-use model card-choice5": {
-        },
-        "ml-use model card-choice5_2022": {
-        },
-        "ml-use model card-example3C-2021": {
-        },
-        "ml-use model card-example3C_2022": {
-        },
-        "ml-use model card-example3D-2021": {
-        },
-        "ml-use model card-example3D_2022": {
-        },
-        "ml-use model card-example3_EditB-2021": {
-        },
-        "ml-use model card-example3_EditB_2022": {
-        },
-        "ml-use model card-example3_EditC-2021": {
-        },
-        "ml-use model card-example3_EditC_2022": {
         },
         "outbreak2": {
           "minitoolbox": "ब्लॉक को एक्सपैंड करने के लिए यहां क्लिक करें।",

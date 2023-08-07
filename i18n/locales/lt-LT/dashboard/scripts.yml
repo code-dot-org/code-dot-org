@@ -150,6 +150,7 @@ lt:
           description_short: Sukurk istoriją arba žaidimą su Gumball laboratorija!
           student_description: Sukurk istoriją arba žaidimą su Gumball laboratorija!
         starwars:
+          title: 'Žvaigždžių karai: Programuojame galaktiką (JavaScript kalba)'
           description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
           description_short: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
           student_description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
@@ -1525,4 +1526,50 @@ lt:
             lessonGroup-2:
               display_name: Virtuali pilietybė
             lessonGroup-4:
+              display_name: Kintamieji
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-4:
+              display_name: Kartojimas
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-4:
+              display_name: Kartojimas
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-4:
+              display_name: Kartojimas
+            lessonGroup-6:
+              display_name: Įvykiai
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-4:
+              display_name: Kartojimas
+            lessonGroup-5:
+              display_name: Įvykiai
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-6:
+              display_name: Kartojimas
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kartojimas kartojime
+            lessonGroup-4:
+              display_name: Komandų kūrimas
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sąlyginiai sakiniai
+            lessonGroup-5:
               display_name: Kintamieji

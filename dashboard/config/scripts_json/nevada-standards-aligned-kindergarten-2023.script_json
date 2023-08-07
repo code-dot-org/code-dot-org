@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "nevada-standards-aligned-kindergarten",
-    "serialized_at": "2023-07-12 21:38:40 UTC",
+    "serialized_at": "2023-07-31 23:45:46 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -72,6 +72,19 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "nevada-standards-aligned-kindergarten-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Data",
+        "description": "Students will recognize that data can be collected and stored on different computing devices.  See [codenv.org/lessons/grade-k-lesson-11] (codenv.org/lessons/grade-k-lesson-11)"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "nevada-standards-aligned-kindergarten-2023"
       }
     }
@@ -278,6 +291,22 @@
       "seeding_key": {
         "lesson.key": "The Right App",
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "nevada-standards-aligned-kindergarten-2023"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Data",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+        "overview": "Students will recognize that data can be collected and stored on different computing devices.  See codenv.org/lessons/grade-k-lesson-11"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "nevada-standards-aligned-kindergarten-2023"
       }
     }
@@ -908,6 +937,18 @@
         "lesson_activity.key": "b941b94a-2a9c-4dde-9fa1-1ef3c147d9dd",
         "lesson.key": "The Right App",
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "nevada-standards-aligned-kindergarten-2023"
+      }
+    },
+    {
+      "key": "47c7ba1d-fe82-4f1d-95e4-a662f81af6b4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47c7ba1d-fe82-4f1d-95e4-a662f81af6b4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "nevada-standards-aligned-kindergarten-2023"
       }
     }
@@ -2127,6 +2168,17 @@
         "activity_section.key": "cedc599a-f494-40bf-a671-91b30f26db56",
         "lesson_activity.key": "b941b94a-2a9c-4dde-9fa1-1ef3c147d9dd"
       }
+    },
+    {
+      "key": "06c9a899-101f-45ee-9e8a-adb9c7d1871d",
+      "position": 1,
+      "properties": {
+        "description": "See codenv.org/lessons/grade-k-lesson-11"
+      },
+      "seeding_key": {
+        "activity_section.key": "06c9a899-101f-45ee-9e8a-adb9c7d1871d",
+        "lesson_activity.key": "47c7ba1d-fe82-4f1d-95e4-a662f81af6b4"
+      }
     }
   ],
   "script_levels": [
@@ -2136,6 +2188,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csf_safety_in_my_online_neighborhood2022_2023"
+        ],
         "progression": "My Online Neighborhood"
       },
       "bonus": false,
@@ -2158,6 +2213,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2180,6 +2238,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2202,6 +2263,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:3"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2224,6 +2288,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2246,6 +2313,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2268,6 +2338,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:6"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2290,6 +2363,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:7"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2312,6 +2388,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:8"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2334,6 +2413,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:9"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2356,6 +2438,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:10"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2378,6 +2463,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:11"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2400,6 +2488,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:12"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2422,6 +2513,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HappyMaps-Unplugged2022_2023"
+        ],
         "progression": "Video: Happy Maps - Unplugged Activity"
       },
       "bonus": false,
@@ -2444,6 +2538,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseAB_video_NewIntro_2023"
+        ],
         "progression": "Video: Programming with Blocks"
       },
       "bonus": false,
@@ -2466,6 +2563,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp12022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2488,6 +2588,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp22022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2510,6 +2613,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp3a2022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2532,6 +2638,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp3b2022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2554,6 +2663,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp4a2022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2576,6 +2688,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp5a2022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2598,6 +2713,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "elementary_video_pairProgramming_2023"
+        ],
         "progression": "Video: Pair Programming "
       },
       "bonus": false,
@@ -2620,6 +2738,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq1_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2642,6 +2763,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq4_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2664,6 +2788,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq5_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2686,6 +2813,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq6_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2708,6 +2838,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseAB_video_debugging_2023"
+        ],
         "progression": "Video: Debugging with the Step Button"
       },
       "bonus": false,
@@ -2730,6 +2863,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq7_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2752,6 +2888,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq8_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2775,6 +2914,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseB_maze_seq9_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2797,6 +2939,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq10_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2819,6 +2964,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq11_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2841,6 +2989,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq12_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2863,6 +3014,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq_challenge1_2023"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2885,6 +3039,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq_challenge2_2023"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2907,6 +3064,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bb8_skinOverview_K-1_video2022_2023"
+        ],
         "progression": "Video: Programming with Rey and BB-8"
       },
       "bonus": false,
@@ -2929,6 +3089,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog12022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2951,6 +3114,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog22022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2973,6 +3139,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog32022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2995,6 +3164,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog42022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3017,6 +3189,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog52022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3039,6 +3214,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog62022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3061,6 +3239,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog72022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3084,6 +3265,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseB_starWars_prog82022_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3106,6 +3290,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog92022_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3128,6 +3315,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog102022_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3150,6 +3340,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog112022_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3172,359 +3365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: The Collector"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseAB_video_collector_2023"
+        "level_keys": [
+          "courseB_iceage_loops12022_2023"
         ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "5510e85a-8ef8-43a9-8bf5-9ade1b39ebec"
-      },
-      "level_keys": [
-        "courseAB_video_collector_2023"
-      ]
-    },
-    {
-      "chapter": 49,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_collector_loops1_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "67f8621b-15aa-4b57-a3b6-10034f26eac5"
-      },
-      "level_keys": [
-        "courseA_collector_loops1_2023"
-      ]
-    },
-    {
-      "chapter": 50,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_collector_loops2_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "67f8621b-15aa-4b57-a3b6-10034f26eac5"
-      },
-      "level_keys": [
-        "courseA_collector_loops2_2023"
-      ]
-    },
-    {
-      "chapter": 51,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Video: Using the Repeat Block"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_video_Loops_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "ffa6bdbd-19fd-4eb6-8321-001e38f9e601"
-      },
-      "level_keys": [
-        "courseA_video_Loops_2023"
-      ]
-    },
-    {
-      "chapter": 52,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_collector_loops3_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "bad6ca1c-f239-4052-9468-df36c5ebc61c"
-      },
-      "level_keys": [
-        "courseA_collector_loops3_2023"
-      ]
-    },
-    {
-      "chapter": 53,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_collector_loops4_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "bad6ca1c-f239-4052-9468-df36c5ebc61c"
-      },
-      "level_keys": [
-        "courseA_collector_loops4_2023"
-      ]
-    },
-    {
-      "chapter": 54,
-      "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_collector_loops5_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "bad6ca1c-f239-4052-9468-df36c5ebc61c"
-      },
-      "level_keys": [
-        "courseA_collector_loops5_2023"
-      ]
-    },
-    {
-      "chapter": 55,
-      "position": 8,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_collector_loops6_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "bad6ca1c-f239-4052-9468-df36c5ebc61c"
-      },
-      "level_keys": [
-        "courseA_collector_loops6_2023"
-      ]
-    },
-    {
-      "chapter": 56,
-      "position": 9,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_collector_loops7_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "bad6ca1c-f239-4052-9468-df36c5ebc61c"
-      },
-      "level_keys": [
-        "courseA_collector_loops7_2023"
-      ]
-    },
-    {
-      "chapter": 57,
-      "position": 10,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_collector_loops8_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "bad6ca1c-f239-4052-9468-df36c5ebc61c"
-      },
-      "level_keys": [
-        "courseA_collector_loops8_2023"
-      ]
-    },
-    {
-      "chapter": 58,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "challenge": true,
-        "progression": "Challenge"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_collector_loops9_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "f706e91b-71bc-465b-b232-4c94adc636e9"
-      },
-      "level_keys": [
-        "courseA_collector_loops9_2023"
-      ]
-    },
-    {
-      "chapter": 59,
-      "position": 12,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_collector_loops10_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "3bc7a2a3-3385-4598-823c-c68400ccb820"
-      },
-      "level_keys": [
-        "courseA_collector_loops10_2023"
-      ]
-    },
-    {
-      "chapter": 60,
-      "position": 13,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_collector_loops11_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "3bc7a2a3-3385-4598-823c-c68400ccb820"
-      },
-      "level_keys": [
-        "courseA_collector_loops11_2023"
-      ]
-    },
-    {
-      "chapter": 61,
-      "position": 14,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_collector_loops12_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "3bc7a2a3-3385-4598-823c-c68400ccb820"
-      },
-      "level_keys": [
-        "courseA_collector_loops12_2023"
-      ]
-    },
-    {
-      "chapter": 62,
-      "position": 15,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Lesson Extras"
-      },
-      "bonus": true,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_collector_loops_challenge2kp_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "7a8c0efe-28b1-4117-8060-b4b3dfed8df4"
-      },
-      "level_keys": [
-        "courseA_collector_loops_challenge2kp_2023"
-      ]
-    },
-    {
-      "chapter": 63,
-      "position": 16,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Lesson Extras"
-      },
-      "bonus": true,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseA_collector_loops_challenge1_2023"
-        ],
-        "lesson.key": "Loops with Laurel",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "7a8c0efe-28b1-4117-8060-b4b3dfed8df4"
-      },
-      "level_keys": [
-        "courseA_collector_loops_challenge1_2023"
-      ]
-    },
-    {
-      "chapter": 64,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3542,11 +3385,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops22022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3564,11 +3410,14 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops_video2022_2023"
+        ],
         "progression": "Video: Ice Age Loops"
       },
       "bonus": false,
@@ -3586,11 +3435,14 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops32022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3608,11 +3460,14 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops42022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3630,11 +3485,14 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 53,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops62022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3652,11 +3510,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 54,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops72022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3674,11 +3535,14 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 55,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops82022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3696,11 +3560,14 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 56,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops92022_2023"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3718,12 +3585,15 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 57,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseB_iceage_loops102022_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3741,11 +3611,14 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 58,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops112022_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3763,11 +3636,14 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 59,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops122022_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3785,11 +3661,415 @@
       ]
     },
     {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseAB_video_collector_2023"
+        ],
+        "progression": "Video: The Collector"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseAB_video_collector_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "5510e85a-8ef8-43a9-8bf5-9ade1b39ebec"
+      },
+      "level_keys": [
+        "courseAB_video_collector_2023"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops1_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops1_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "67f8621b-15aa-4b57-a3b6-10034f26eac5"
+      },
+      "level_keys": [
+        "courseA_collector_loops1_2023"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops2_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops2_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "67f8621b-15aa-4b57-a3b6-10034f26eac5"
+      },
+      "level_keys": [
+        "courseA_collector_loops2_2023"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_video_Loops_2023"
+        ],
+        "progression": "Video: Using the Repeat Block"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_video_Loops_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "ffa6bdbd-19fd-4eb6-8321-001e38f9e601"
+      },
+      "level_keys": [
+        "courseA_video_Loops_2023"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops3_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops3_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "bad6ca1c-f239-4052-9468-df36c5ebc61c"
+      },
+      "level_keys": [
+        "courseA_collector_loops3_2023"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops4_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops4_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "bad6ca1c-f239-4052-9468-df36c5ebc61c"
+      },
+      "level_keys": [
+        "courseA_collector_loops4_2023"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops5_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops5_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "bad6ca1c-f239-4052-9468-df36c5ebc61c"
+      },
+      "level_keys": [
+        "courseA_collector_loops5_2023"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops6_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops6_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "bad6ca1c-f239-4052-9468-df36c5ebc61c"
+      },
+      "level_keys": [
+        "courseA_collector_loops6_2023"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops7_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops7_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "bad6ca1c-f239-4052-9468-df36c5ebc61c"
+      },
+      "level_keys": [
+        "courseA_collector_loops7_2023"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops8_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops8_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "bad6ca1c-f239-4052-9468-df36c5ebc61c"
+      },
+      "level_keys": [
+        "courseA_collector_loops8_2023"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "challenge": true,
+        "level_keys": [
+          "courseA_collector_loops9_2023"
+        ],
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops9_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "f706e91b-71bc-465b-b232-4c94adc636e9"
+      },
+      "level_keys": [
+        "courseA_collector_loops9_2023"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops10_2023"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops10_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "3bc7a2a3-3385-4598-823c-c68400ccb820"
+      },
+      "level_keys": [
+        "courseA_collector_loops10_2023"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops11_2023"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops11_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "3bc7a2a3-3385-4598-823c-c68400ccb820"
+      },
+      "level_keys": [
+        "courseA_collector_loops11_2023"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops12_2023"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops12_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "3bc7a2a3-3385-4598-823c-c68400ccb820"
+      },
+      "level_keys": [
+        "courseA_collector_loops12_2023"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops_challenge2kp_2023"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops_challenge2kp_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "7a8c0efe-28b1-4117-8060-b4b3dfed8df4"
+      },
+      "level_keys": [
+        "courseA_collector_loops_challenge2kp_2023"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 16,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseA_collector_loops_challenge1_2023"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseA_collector_loops_challenge1_2023"
+        ],
+        "lesson.key": "Loops with Laurel",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "7a8c0efe-28b1-4117-8060-b4b3dfed8df4"
+      },
+      "level_keys": [
+        "courseA_collector_loops_challenge1_2023"
+      ]
+    },
+    {
       "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "TheRightAppMarkdownLevel2022_2023"
+        ],
         "progression": "The Right App - Unplugged Activity"
       },
       "bonus": false,
@@ -4374,6 +4654,150 @@
     },
     {
       "seeding_key": {
+        "level.key": "courseB_iceage_loops12022_2023",
+        "script_level.level_keys": [
+          "courseB_iceage_loops12022_2023"
+        ],
+        "lesson.key": "Loops with Scrat",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "c52af45d-a3ff-4e92-8dd1-b2222cd91b41"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops22022_2023",
+        "script_level.level_keys": [
+          "courseB_iceage_loops22022_2023"
+        ],
+        "lesson.key": "Loops with Scrat",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "c52af45d-a3ff-4e92-8dd1-b2222cd91b41"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops_video2022_2023",
+        "script_level.level_keys": [
+          "courseB_iceage_loops_video2022_2023"
+        ],
+        "lesson.key": "Loops with Scrat",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "5f54ffcd-ad09-488a-b4a6-69455ae32a1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops32022_2023",
+        "script_level.level_keys": [
+          "courseB_iceage_loops32022_2023"
+        ],
+        "lesson.key": "Loops with Scrat",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "b6f4b5a4-c0d1-4eae-b370-025c4f813de4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops42022_2023",
+        "script_level.level_keys": [
+          "courseB_iceage_loops42022_2023"
+        ],
+        "lesson.key": "Loops with Scrat",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "b6f4b5a4-c0d1-4eae-b370-025c4f813de4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops62022_2023",
+        "script_level.level_keys": [
+          "courseB_iceage_loops62022_2023"
+        ],
+        "lesson.key": "Loops with Scrat",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "b6f4b5a4-c0d1-4eae-b370-025c4f813de4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops72022_2023",
+        "script_level.level_keys": [
+          "courseB_iceage_loops72022_2023"
+        ],
+        "lesson.key": "Loops with Scrat",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "b6f4b5a4-c0d1-4eae-b370-025c4f813de4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops82022_2023",
+        "script_level.level_keys": [
+          "courseB_iceage_loops82022_2023"
+        ],
+        "lesson.key": "Loops with Scrat",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "b6f4b5a4-c0d1-4eae-b370-025c4f813de4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops92022_2023",
+        "script_level.level_keys": [
+          "courseB_iceage_loops92022_2023"
+        ],
+        "lesson.key": "Loops with Scrat",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "b6f4b5a4-c0d1-4eae-b370-025c4f813de4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops102022_2023",
+        "script_level.level_keys": [
+          "courseB_iceage_loops102022_2023"
+        ],
+        "lesson.key": "Loops with Scrat",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "f80b8da8-3778-4fcb-88a2-e430c90728e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops112022_2023",
+        "script_level.level_keys": [
+          "courseB_iceage_loops112022_2023"
+        ],
+        "lesson.key": "Loops with Scrat",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "245b4b6d-9f36-45f2-bf3b-cbdcaada3367"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_iceage_loops122022_2023",
+        "script_level.level_keys": [
+          "courseB_iceage_loops122022_2023"
+        ],
+        "lesson.key": "Loops with Scrat",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "nevada-standards-aligned-kindergarten-2023",
+        "activity_section.key": "245b4b6d-9f36-45f2-bf3b-cbdcaada3367"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseAB_video_collector_2023",
         "script_level.level_keys": [
           "courseAB_video_collector_2023"
@@ -4562,150 +4986,6 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "nevada-standards-aligned-kindergarten-2023",
         "activity_section.key": "7a8c0efe-28b1-4117-8060-b4b3dfed8df4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseB_iceage_loops12022_2023",
-        "script_level.level_keys": [
-          "courseB_iceage_loops12022_2023"
-        ],
-        "lesson.key": "Loops with Scrat",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "c52af45d-a3ff-4e92-8dd1-b2222cd91b41"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseB_iceage_loops22022_2023",
-        "script_level.level_keys": [
-          "courseB_iceage_loops22022_2023"
-        ],
-        "lesson.key": "Loops with Scrat",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "c52af45d-a3ff-4e92-8dd1-b2222cd91b41"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseB_iceage_loops_video2022_2023",
-        "script_level.level_keys": [
-          "courseB_iceage_loops_video2022_2023"
-        ],
-        "lesson.key": "Loops with Scrat",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "5f54ffcd-ad09-488a-b4a6-69455ae32a1e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseB_iceage_loops32022_2023",
-        "script_level.level_keys": [
-          "courseB_iceage_loops32022_2023"
-        ],
-        "lesson.key": "Loops with Scrat",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "b6f4b5a4-c0d1-4eae-b370-025c4f813de4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseB_iceage_loops42022_2023",
-        "script_level.level_keys": [
-          "courseB_iceage_loops42022_2023"
-        ],
-        "lesson.key": "Loops with Scrat",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "b6f4b5a4-c0d1-4eae-b370-025c4f813de4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseB_iceage_loops62022_2023",
-        "script_level.level_keys": [
-          "courseB_iceage_loops62022_2023"
-        ],
-        "lesson.key": "Loops with Scrat",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "b6f4b5a4-c0d1-4eae-b370-025c4f813de4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseB_iceage_loops72022_2023",
-        "script_level.level_keys": [
-          "courseB_iceage_loops72022_2023"
-        ],
-        "lesson.key": "Loops with Scrat",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "b6f4b5a4-c0d1-4eae-b370-025c4f813de4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseB_iceage_loops82022_2023",
-        "script_level.level_keys": [
-          "courseB_iceage_loops82022_2023"
-        ],
-        "lesson.key": "Loops with Scrat",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "b6f4b5a4-c0d1-4eae-b370-025c4f813de4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseB_iceage_loops92022_2023",
-        "script_level.level_keys": [
-          "courseB_iceage_loops92022_2023"
-        ],
-        "lesson.key": "Loops with Scrat",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "b6f4b5a4-c0d1-4eae-b370-025c4f813de4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseB_iceage_loops102022_2023",
-        "script_level.level_keys": [
-          "courseB_iceage_loops102022_2023"
-        ],
-        "lesson.key": "Loops with Scrat",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "f80b8da8-3778-4fcb-88a2-e430c90728e2"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseB_iceage_loops112022_2023",
-        "script_level.level_keys": [
-          "courseB_iceage_loops112022_2023"
-        ],
-        "lesson.key": "Loops with Scrat",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "245b4b6d-9f36-45f2-bf3b-cbdcaada3367"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseB_iceage_loops122022_2023",
-        "script_level.level_keys": [
-          "courseB_iceage_loops122022_2023"
-        ],
-        "lesson.key": "Loops with Scrat",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "nevada-standards-aligned-kindergarten-2023",
-        "activity_section.key": "245b4b6d-9f36-45f2-bf3b-cbdcaada3367"
       }
     },
     {
@@ -4979,6 +5259,16 @@
       },
       "seeding_key": {
         "resource.key": "lesson_type_guide"
+      }
+    },
+    {
+      "name": "Nevada CS Standards",
+      "url": "https://docs.google.com/spreadsheets/d/1zUGymPWwlVdVjti_lhsUrgwLDFDzy33VY9JVwi4AikE/edit?usp=sharing",
+      "key": "nv_cs_standards",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "nv_cs_standards"
       }
     },
     {
@@ -5386,6 +5676,12 @@
     {
       "seeding_key": {
         "resource.key": "lesson_type_guide",
+        "script.name": "nevada-standards-aligned-kindergarten-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "nv_cs_standards",
         "script.name": "nevada-standards-aligned-kindergarten-2023"
       }
     },
@@ -6109,5 +6405,14 @@
         "opportunity_standard.shortcode": "K-2-ETS1-2"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

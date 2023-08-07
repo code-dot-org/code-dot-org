@@ -65,6 +65,8 @@ km:
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
         C3_artist_intro: ការណែនាំពីវិចិត្រករ
+        C3_artist_nested_loops: បណ្ដុំប្រតិបត្តិដដែលៗ
+        C3_bee_nested_loops: បណ្ដុំប្រតិបត្តិដដែលៗ
         C3_bounce: បាល់​លោត
         C3_computational_thinking: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         C4_loops_zombie: ប្រតិបត្តិដដែលៗ
@@ -83,6 +85,8 @@ km:
         CSF_unspotted_bugs: កំហុសដែលមិនបានគ្រោងទុក
         playlab_intro: ការណែនាំអំពីការអនុវត្តលើ Play Lab
         csp_applab_loops: ប្រតិបត្តិដដែលៗ
+        mc_intro: ការណែនាំពី Minecraft
+        mc_repeat: ការប្រើប្រាស់ ប្រតិបត្តិដដែលៗ ក្នុង Minecraft
         mc_2016_congrats: Minecraft Hour of Code - អបអរសាទរ
         mc_2017_agent_intro: Minecraft Hour of Code - The Agent
         mc_2017_repeat: Minecraft Hour of Code - រង្វិលជុំ
@@ -100,17 +104,25 @@ km:
         CSF_scrat_loops_K1: ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក
         CSF_scrat_loops_CF: រង្វិលជុំក្នុងយុគសម័យទឹកកក
         CSF_loops_AB: ប្រតិបត្តិដដែលៗ
+        CDEF_Video_SpritesInAction: កំណត់សកម្មភាពឱ្យ Sprites
+        CSF_SpriteLab_SpritesInAction_CDEF: កំណត់សកម្មភាពឱ្យ Sprites
         mc_2018_intro: 'Minecraft: ការណែនាំអំពីដំណើរកម្សាន្តក្នុងទឹក'
         MC_2018_loops: 'Minecraft: ដំណើរកម្សាន្តក្នុងទឹក (ធ្វើសារឡើងវិញ)'
         mc_2018_conditionals: 'Minecraft: លក្ខខណ្ឌនៃការធ្វើដំណើរកម្សាន្តក្នុងទឹក'
         mc_2018_closing: 'Minecraft: សូមអបអរសាទរដំណើរកម្សាន្តក្នុងទឹក'
         hoc_dance_events: ព្រឹត្ដិការណ៍ - Dance Party
         hoc_dance_properties: លក្ខណៈសម្បត្តិ - Dance Party
-        CSF_SpriteLab_Intro_v2: សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍
-        CSF_Spritelab_MakeSprite_v2: របៀបបង្កើតអាង (Sprite)
+        CSF_SpriteLab_Intro_v2: សេចក្ដីណែនាំពី Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: របៀបបង្កើត SPRITE
+        CSF_SpriteLab_SpritesInAction_v2: កំណត់សកម្មភាពឱ្យ Sprites
         csd_debugging: ការបំបាត់កំហុស (Debugging)
-        hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - Dance Party
+        hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - ជប់លៀងរាំ
         hoc_dance_properties_2019: លក្ខណៈសម្បត្តិ - Dance Party
+        csf21pilot_events: 'កំណត់សកម្មភាពឱ្យ Sprites'
         playlab_2021: ការណែនាំអំពីការអនុវត្តលើ Play Lab
         playlab_2021_reader: ការណែនាំអំពីការអនុវត្តលើ Play Lab
         csd_sprite_properties: លក្ខណៈសម្បត្តិនៃ sprite
+    callout:
+      text:
+        run: ចុច "ដំណើរការ" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!
+        craft_run_button_callout: ចុច "ដំណើរការ" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!

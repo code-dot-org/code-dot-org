@@ -1374,3 +1374,7 @@ en:
     binary: "Binary"
     hexadecimal: "Hexadecimal"
     pixel_format_header: "Pixel Format"
+  course_deprecated:
+    title: "Heads up! This curriculum is no longer available, but Code.org has newer options available for you."
+    button: "View new curriculum"
+

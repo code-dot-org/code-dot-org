@@ -21,9 +21,7 @@
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :is_k1, description: "Is Pre-Reader level"}
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :disable_variable_editing, description: "Disable editing of variable names and creation of new variables"}
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :show_type_hints, description: "Show a small visual hint for what type of block a connection accepts"}
-    -# Google Blockly does not currently support the modal function editor
-  - unless (@level.uses_google_blockly?)
-    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :use_modal_function_editor, description: "Use modal function editor"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :use_modal_function_editor, description: "Use modal function editor"}
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :disable_if_else_editing, description: "Don\'t let users mutate (add or remove) branches to if/else blocks"}
   .aligned-input-group
     = f.check_box :disable_param_editing, {}, 'false', 'true'

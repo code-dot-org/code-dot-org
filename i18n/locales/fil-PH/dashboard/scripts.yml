@@ -3293,6 +3293,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3535,3 +3537,84 @@ fil:
           lesson_groups:
             lessonGroup-3:
               display_name: Mga Klase
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital na Pagkamamamayan
+            lessonGroup-4:
+              display_name: Mga loop
+            lessonGroup-5:
+              display_name: Epekto ng Pag-Compute
+          description_audience: 'Mga Edad: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital na Pagkamamamayan
+            lessonGroup-4:
+              display_name: Mga loop
+            lessonGroup-5:
+              display_name: Epekto ng Pag-Compute
+            lessonGroup-6:
+              display_name: Data
+          description_audience: 'Mga Edad: 4-7'
+          description_short: Isang panimula sa computer science para sa mga hindi pa marunong magbasa.
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital na Pagkamamamayan
+            lessonGroup-4:
+              display_name: Mga loop
+            lessonGroup-5:
+              display_name: Epekto ng Pag-Compute
+            lessonGroup-6:
+              display_name: Mga event
+          description_audience: 'Mga Edad: 5-8'
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital na Pagkamamamayan
+            lessonGroup-4:
+              display_name: Mga loop
+            lessonGroup-5:
+              display_name: Mga event
+            lessonGroup-6:
+              display_name: Data
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital na Pagkamamamayan
+            lessonGroup-4:
+              display_name: Epekto ng Pag-Compute
+            lessonGroup-6:
+              display_name: Mga loop
+            lessonGroup-7:
+              display_name: Data
+          description_audience: 'Mga Edad: 7-11'
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Mga Loops na naka-nest
+            lessonGroup-4:
+              display_name: Mga function
+          description_audience: 'Mga Edad: 8-12'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Mga Sprites
+          description_audience: 'Mga Edad: 9-13'
+          description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Mga Sprites
+            lessonGroup-3:
+              display_name: Mga conditional
+            lessonGroup-5:
+              display_name: Mga variable
+            lessonGroup-6:
+              display_name: Epekto ng Pag-Compute
+          description_audience: 'Mga Edad: 9-13'
+          description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.

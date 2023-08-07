@@ -2,61 +2,9 @@
   "uk-UA": {
     "data": {
       "dynamic_instructions": {
-        "allthethings AI Lab 1": {
-        },
-        "ml-bad data-club investigations": {
-        },
-        "ml-bad data-club investigations_2022": {
-        },
-        "ml-bad data-loneliness all": {
-        },
-        "ml-bad data-loneliness all_2022": {
-        },
-        "ml-data decisions-zoo1-2021": {
-        },
-        "ml-data decisions-zoo1_2022": {
-        },
-        "ml-data decisions-zoo2-2021": {
-        },
-        "ml-data decisions-zoo2_2022": {
-        },
-        "ml-data decisions-zoo3-2021": {
-        },
-        "ml-data decisions-zoo3_2022": {
-        },
-        "ml-final project-ai lab-2021": {
-        },
-        "ml-final project-ai lab_2022": {
-        },
-        "ml-good data-upload csv": {
-        },
-        "ml-good data-upload csv_2022": {
-        },
-        "ml-good data-upload isaac csv": {
-        },
-        "ml-good data-upload isaac csv_2022": {
-        },
         "ml-intro ai lab-shapes v1": {
           "results": "На цьому екрані можна побачити, наскільки точний ШІ-бот, якщо порівняти його прогнози з даними тестування, на які ми вже знаємо відповіді. \n\n**Завдання:** Продовжуй навчати модель, доки не досягнеш принаймні 100% точності",
-          "selectedFeatureCategorical": "Коли ти обираєш стовпчик, на правій панелі з'являється додаткова інформація. Це може допомогти вирішити, чи є ця функція корисною для прогнозування вашої етикетки. Ви можете дізнатися більше в розділі \"Допомога та підказки\" цієї інструкції.\n\n**Завдання:** Виріши чи хочеш ти використовувати цей стовпчик як ознаку. Якщо так, натисни кнопку \"Додати ознаку\". Якщо ні, обери новий стовпець для вивчення. Повторюй ці дії, доки не обереш кілька стовпців для використання як ознаки."
-        },
-        "ml-intro ai lab-shapes v1_2022": {
-        },
-        "ml-intro categorical-food choices-2021": {
-        },
-        "ml-intro categorical-food choices_2022": {
-        },
-        "ml-intro categorical-pizza-2021": {
-        },
-        "ml-intro categorical-pizza_2022": {
-        },
-        "ml-mini project-ai lab 2": {
-        },
-        "ml-mini project-ai lab 2_2022": {
-        },
-        "ml-numerical ai lab-safari 1-2021": {
-        },
-        "ml-numerical ai lab-safari 1_2022": {
+          "selectedFeatureCategorical": "Коли ти обираєш стовпчик, на правій панелі з'являється додаткова інформація. Це може допомогти вирішити, чи є ця функція корисною для прогнозування назви категорії. Можна дізнатися більше в розділі \"Допомога та підказки\" цієї інструкції.\n\n**Завдання:** Виріши чи хочеш ти використовувати цей стовпчик як ознаку. Якщо так, натисни кнопку \"Додати ознаку\". Якщо ні, обери новий стовпець для вивчення. Повторюй ці дії, доки не обереш кілька стовпців для використання як ознаки."
         }
       }
     }

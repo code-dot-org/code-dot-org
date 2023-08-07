@@ -2,8 +2,6 @@
   "ur-PK": {
     "data": {
       "behavior_descriptions": {
-        "AllTheThings sprite lab with video": {
-        },
         "CourseE_Project_SpriteLab": {
           "change the size of a sprite": "ایک سپرائٹ کا سائز تبدیل",
           "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے",
@@ -405,62 +403,6 @@
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "افقی طور پر ایک سپرائٹ منتقل, سمت reورس اگر یہ سکرین کے کناروں کو چھوتا",
           "rotate a sprite to its left": "اس کے بائیں طرف ایک سپرائٹ باری دکھائے"
         },
-        "Dance Party 6": {
-        },
-        "Dance Party 6_2019": {
-        },
-        "Dance Party 6_2020": {
-        },
-        "Dance Party 6_2021": {
-        },
-        "Dance Party 7_2019": {
-        },
-        "Dance Party 7_2020": {
-        },
-        "Dance Party 7_2021": {
-        },
-        "Dance Party Freeplay": {
-        },
-        "Fish Tank 2-validated2022": {
-        },
-        "Fish Tank 2-validated_2019": {
-        },
-        "Fish Tank 2-validated_2020": {
-        },
-        "Fish Tank 2-validated_2021": {
-        },
-        "Fish Tank 3-validated2022": {
-        },
-        "Fish Tank 3-validated_2019": {
-        },
-        "Fish Tank 3-validated_2020": {
-        },
-        "Fish Tank 3-validated_2021": {
-        },
-        "Fish Tank 4-validated2022": {
-        },
-        "Fish Tank 4-validated_2019": {
-        },
-        "Fish Tank 4-validated_2020": {
-        },
-        "Fish Tank 4-validated_2021": {
-        },
-        "Fish Tank 5-validated2022": {
-        },
-        "Fish Tank 5-validated_2019": {
-        },
-        "Fish Tank 5-validated_2020": {
-        },
-        "Fish Tank 5-validated_2021": {
-        },
-        "Fish Tank 6-validated2022": {
-        },
-        "Fish Tank 6-validated_2019": {
-        },
-        "Fish Tank 6-validated_2020": {
-        },
-        "Fish Tank 6-validated_2021": {
-        },
         "Virtual Pet 1_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "سکرین بھر میں بائیں کرنے کے لئے ایک سپرائٹ منتقل کریں. جب یہ اسکرین کے بائیں جانب سے چلا جاتا ہے، تو اسے اسکرین کے دائیں جانب واپس منتقل کریں.",
           "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "سکرین بھر میں حق کے لئے ایک سپرائٹ منتقل کریں. جب یہ اسکرین کے دائیں جانب سے چلا جاتا ہے، تو اسے اسکرین کے بائیں جانب واپس منتقل کریں.",
@@ -631,8 +573,6 @@
           "rotate a sprite to its left": "اس کے بائیں طرف ایک سپرائٹ باری دکھائے",
           "rotate a sprite to its right": "اس کے حق پر ایک سپرائٹ باری دکھائے گا"
         },
-        "Virtual Pet 4": {
-        },
         "Virtual Pet 4_2019": {
           "change the size of a sprite": "ایک سپرائٹ کا سائز تبدیل",
           "move a sprite across the screen, reversing direction if it touches the edges": "سکرین کے پار ایک سپرائٹ منتقل، سمت reورنگ اگر یہ کناروں کو چھوتا ہے",
@@ -658,14 +598,6 @@
           "randomly change the size of a sprite": "تصادفی طور پر ایک سپرائٹ کا سائز تبدیل",
           "rotate a sprite to its left": "اس کے بائیں طرف ایک سپرائٹ باری دکھائے",
           "rotate a sprite to its right": "اس کے حق پر ایک سپرائٹ باری دکھائے گا"
-        },
-        "Virtual Pet 5": {
-        },
-        "Virtual Pet 6": {
-        },
-        "Virtual Pet Freeplay": {
-        },
-        "allthethings_fish_tank": {
         },
         "behaviors 1": {
           "change the size of a sprite": "ایک سپرائٹ کا سائز تبدیل",

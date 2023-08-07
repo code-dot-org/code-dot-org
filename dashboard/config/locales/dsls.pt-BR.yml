@@ -739,13 +739,6 @@ pt-BR:
         display_name: Cores RGB
       CSD CSS project RGB_2022:
         display_name: Cores RGB
-      CSD CSS project Review_2021: {}
-      CSD CSS project Review_2022: {}
-      CSD End of Unit Survey - Unit 1 - IntroMD_2022: {}
-      CSD Games Parameters challenge_2021: {}
-      CSD Games Parameters challenge_2022: {}
-      CSD Games Properties challenge_2021: {}
-      CSD Games Properties challenge_2022: {}
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -768,22 +761,10 @@ pt-BR:
         display_name: Propriedades do Sprite
       CSD Games Properties practice_2022:
         display_name: Propriedades do Sprite
-      CSD Games Sprites Challenges_2021: {}
-      CSD Games Sprites Challenges_2022: {}
-      CSD Games Sprites practice_2021: {}
-      CSD Games Sprites practice_2022: {}
-      CSD Games parameters practice_2021: {}
-      CSD Games parameters practice_2022: {}
-      CSD Games variables challenge_2021: {}
-      CSD Games variables challenge_2022: {}
       CSD Games variables practice_2021:
         display_name: Prática de Variáveis
       CSD Games variables practice_2022:
         display_name: Prática de Variáveis
-      CSD HTML project Lists_2021: {}
-      CSD HTML project Lists_2022: {}
-      CSD HTML project Review_2021: {}
-      CSD HTML project Review_2022: {}
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -926,7 +907,6 @@ pt-BR:
         title: Teste Pós-Projeto de Computação Física
       CSD Physical Computing Post-Project Test_2022:
         title: Teste Pós-Projeto de Computação Física
-      CSD Student End of Unit Survey - Unit 1_2022: {}
       CSD U1 IOSP match:
         answers:
         - {}
@@ -1048,7 +1028,7 @@ pt-BR:
         - {}
         questions:
         - text: Preparar
-        - text: Refletir
+        - text: Reflita
         - text: Tentar
         - text: Definir
       CSD U1 Test PSP match_2022:
@@ -1059,7 +1039,7 @@ pt-BR:
         - {}
         questions:
         - text: Preparar
-        - text: Refletir
+        - text: Reflita
         - text: Tentar
         - text: Definir
       CSD U1 Test define a computer:
@@ -1117,8 +1097,6 @@ pt-BR:
         title: Teste Pós-Projeto para Computadores e Resolução de Problemas
       CSD U1 Test_2022:
         title: Teste Pós-Projeto para Computadores e Resolução de Problemas
-      CSD U2 CSS challenge_pilot_2021: {}
-      CSD U2 CSS challenge_pilot_2022: {}
       CSD U2 CSS practice_pilot_2021:
         display_name: Estilo de texto com CSS
       CSD U2 CSS practice_pilot_2022:
@@ -1252,8 +1230,6 @@ pt-BR:
           <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
 
           <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
-      CSD U2 Expression Exemplars_2018_2019_pilot_2021: {}
-      CSD U2 Expression Exemplars_2018_2019_pilot_2022: {}
       CSD U2 Image challenge_pilot_2021:
         display_name: Adicionando Imagens
       CSD U2 Image challenge_pilot_2022:
@@ -1559,12 +1535,6 @@ pt-BR:
           # Revisar o processo de resolução de problemas
 
           Revise as quatro etapas do Processo de Resolução de Problemas como uma classe.
-      CSD U2 Sample CSS layout_2021: {}
-      CSD U2 Sample CSS layout_2022: {}
-      CSD U2 Sample CSS text_2021: {}
-      CSD U2 Sample CSS text_2022: {}
-      CSD U2 Sample classes_2021: {}
-      CSD U2 Sample classes_2022: {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -1781,8 +1751,6 @@ pt-BR:
           * Amazon.com - Sites de compras on-line para todos os tipos de mercadorias
           * Yahoo.com - Um mecanismo de pesquisa, provedor de e-mail e fonte de notícias
           * Wikipedia.org - Uma enciclopédia gratuita com conteúdo gerado pelos usuários
-      CSD U2 Top Websites_2018_2019_pilot_2021: {}
-      CSD U2 Top Websites_2018_2019_pilot_2022: {}
       CSD U2 expand project:
         content1: descrição aqui
         markdown: |
@@ -1923,12 +1891,6 @@ pt-BR:
           do estudante sobre a sintaxe da tag `<img>`, seu principal objetivo é conscientizar
           os estudantes sobre os tipos mais comuns de erros que podem encontrar ao
           adicionar imagens a páginas da web.
-      CSD U2 layout style challenge_pilot_2021: {}
-      CSD U2 layout style challenge_pilot_2022: {}
-      CSD U2 layout style practice_pilot_2021: {}
-      CSD U2 layout style practice_pilot_2022: {}
-      CSD U2 links challenge_2021: {}
-      CSD U2 links challenge_2022: {}
       CSD U2 lists match:
         answers:
         - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
@@ -2100,8 +2062,6 @@ pt-BR:
           # Ponto de controle de planejamento
 
           Verifique os planos dos estudantes antes de permitir que eles continuem nos demais níveis.
-      CSD U3 - Design a Game 1 - ExampleChoice_2022: {}
-      CSD U3 - Interactive Card - ExampleChoice_2022: {}
       CSD U3 - conditionals - Matching:
         answers:
         - text: cachorro.rotacao &lt; gato.rotacao
@@ -2192,8 +2152,6 @@ pt-BR:
           # Pare
 
           Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde instruções do seu professor também.
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021: {}
-      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022: {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -3289,14 +3247,18 @@ pt-BR:
         - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
             AM.png">
         title: drawSprites
-      CSD U3 drawing challenges_2021: {}
-      CSD U3 drawing challenges_2022: {}
+      CSD U3 drawing challenges_2021:
+        description: Experimente alguns desafios!
+        display_name: Desafios de desenho
+      CSD U3 drawing challenges_2022:
+        description: Experimente alguns desafios!
+        display_name: Desafios de desenho
       CSD U3 drawing practice choice_2021:
         description: Pratique muito!
-        display_name: Praticar
+        display_name: Pratique
       CSD U3 drawing practice choice_2022:
         description: Pratique muito!
-        display_name: Praticar
+        display_name: Pratique
       CSD U3 game intro:
         content1: descrição aqui
         markdown: |
@@ -4322,39 +4284,28 @@ pt-BR:
         title: Teste pós-projeto de dados e sociedade
       CSD U6 - Accelerometer - Chal_2222:
         display_name: Níveis de Desafio
-      CSD U6 - Accelerometer - Prac_2222: {}
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Níveis de Desafio
-      CSD U6 - Board Inputs - Prac_2222: {}
       CSD U6 - Board Outputs - Chal_2222:
         display_name: Níveis de Desafio
-      CSD U6 - Board Outputs - Prac_2222: {}
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Níveis de Desafio
-      CSD U6 - Color LEDs - Prac_2222: {}
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: Níveis de Desafio
-      CSD U6 - Combine Inputs - Prac_2222: {}
-      CSD U6 - Functions - Prac_2222: {}
       CSD U6 - If Variables - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Music - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Physical Input - Chal_2222:
         display_name: Níveis de Desafio
-      CSD U6 - Physical Input - Prac_2222: {}
       CSD U6 - Physical Output - Chal_2222:
         display_name: Níveis de Desafio
-      CSD U6 - Physical Output - Prac_2222: {}
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Níveis de Desafio
-      CSD U6 - Screen Inputs - Prac_2222: {}
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Níveis de Desafio
-      CSD U6 - Screen Outputs - Prac_2222: {}
       CSD U6 - Sensors - Chal_2222:
         display_name: Níveis de Desafio
-      CSD U6 - Sensors - Prac_2222: {}
       CSD U6 LED create intro:
         content1: descrição aqui
         markdown: |
@@ -4863,82 +4814,34 @@ pt-BR:
         title: Teste Pós-Projeto de Desenvolvimento Web
       CSD Web Development Post-Project Test_pilot_2022:
         title: Teste Pós-Projeto de Desenvolvimento Web
-      CSD Web Headings challenge_2021: {}
-      CSD Web Headings challenge_2022: {}
-      CSD Web Headings practice_2021: {}
-      CSD Web Headings practice_2022: {}
-      CSD Web Sample Pages_2021: {}
-      CSD Web Sample Pages_2022: {}
       CSD games cake challenge choice_2021:
         display_name: Desafios
       CSD games cake challenge choice_2022:
         display_name: Desafios
-      CSD games collisions challenge choice_2021: {}
-      CSD games collisions challenge choice_2022: {}
-      CSD games collisions practice choice_2021: {}
-      CSD games collisions practice choice_2022: {}
-      CSD games functions challenge choice_2021: {}
-      CSD games functions challenge choice_2022: {}
       CSD games functions practice choice_2021:
         display_name: Prática de Funções
       CSD games functions practice choice_2022:
         display_name: Prática de Funções
-      CSD games istouching challenge choice_2021: {}
-      CSD games istouching challenge choice_2022: {}
-      CSD games istouching practice choice_2021: {}
-      CSD games istouching practice choice_2022: {}
-      CSD games movement2 challenge choice_2021: {}
-      CSD games movement2 challenge choice_2022: {}
-      CSD games movement2 practice choice_2021: {}
-      CSD games movement2 practice choice_2022: {}
       CSD games platform challenge choice_2021:
         display_name: Desafios
       CSD games platform challenge choice_2022:
         display_name: Desafios
-      CSD games random challenge_2021: {}
-      CSD games random challenge_2022: {}
-      CSD games random practice_2021: {}
-      CSD games random practice_2022: {}
-      CSD games velocity challenge choice_2021: {}
-      CSD games velocity challenge choice_2022: {}
-      CSD games velocity practice choice_2021: {}
-      CSD games velocity practice choice_2022: {}
-      CSD web classes challenge_2021: {}
-      CSD web classes challenge_2022: {}
-      CSD web classes practice_2021: {}
-      CSD web classes practice_2022: {}
-      CSD web conditionals challenge choice_2021: {}
-      CSD web conditionals challenge choice_2022: {}
       CSD web conditionals practice choice_2021:
         display_name: Prática de Condicionais
       CSD web conditionals practice choice_2022:
         display_name: Prática de Condicionais
-      CSD web draw loop challenge choice_2021: {}
-      CSD web draw loop challenge choice_2022: {}
       CSD web draw loop practice choice_2021:
-        display_name: Praticar
+        display_name: Pratique
       CSD web draw loop practice choice_2022:
-        display_name: Praticar
-      CSD web keyboard challenge choice_2021: {}
-      CSD web keyboard challenge choice_2022: {}
-      CSD web keyboard practice choice_2021: {}
-      CSD web keyboard practice choice_2022: {}
-      CSD web mouse challenge choice_2021: {}
-      CSD web mouse challenge choice_2022: {}
-      CSD web mouse practice choice_2021: {}
-      CSD web mouse practice choice_2022: {}
-      CSD web movement challenge choice_2021: {}
-      CSD web movement challenge choice_2022: {}
+        display_name: Pratique
       CSD web movement practice choice_2021:
-        display_name: Praticar
+        display_name: Pratique
       CSD web movement practice choice_2022:
-        display_name: Praticar
-      CSD web text challenge choice_2021: {}
-      CSD web text challenge choice_2022: {}
+        display_name: Pratique
       CSD web text practice choice_2021:
-        display_name: Praticar
+        display_name: Pratique
       CSD web text practice choice_2022:
-        display_name: Praticar
+        display_name: Pratique
       CSD-U5-SFLP ASCII and Binary Representation:
         markdown: |
           # Visão global
@@ -5368,7 +5271,6 @@ pt-BR:
 
           * [CNet](https://www.cnet.com/smart-home/)
           * [Evolução do IoT](http://www.iotevolutionworld.com/smart-home/)
-      CSDU6 Innovation_2021: {}
       CSP PD Example Question 1:
         answers:
         - {}
@@ -5381,7 +5283,6 @@ pt-BR:
         - {}
         questions:
         - {}
-      CSP pre-assessment survey: {}
       Choose 2 Test:
         answers:
         - correct: true
@@ -5980,8 +5881,6 @@ pt-BR:
           # Compartilhamento Digital
 
           Nesta aula você irá considerar os desafios e os benefícios de respeitar a propriedade e o copyright, em particular nos ambientes digitais.
-      ECSPD1 computational thinker: {}
-      Embedded Video Test: {}
       EnvelopeVariables-Unplugged:
         markdown: "# Envelopes de Variáveis\n\nVariáveis nos dão muita liberdade em
           ciências da computação. Esta aula ajuda a explicar o que são variáveis e
@@ -6809,7 +6708,6 @@ pt-BR:
           > <a href="http://support.code.org" target="blank"><button class="plc">Obtenha ajuda >></button></a>
 
           Após inserir comentários no fórum, volte aqui e clique abaixo para ir à próxima etapa.
-      OPD-K5 Assessment_copy: {}
       OPD-K5 Assessment_dani:
         markdown: |
           # Planejamento > Outros Materiais
@@ -6856,8 +6754,6 @@ pt-BR:
           diárias para guiar seus estudantes, com atividades desplugadas que você
           pode fazer sem um computador, e com os fóruns para se conectar a outros
           professores.\n\n\n"
-      OPD-K5 CS Courses_copy: {}
-      OPD-K5 CS Courses_dani: {}
       OPD-K5 CS Tips:
         markdown: |
           Vamos Começar > Navegando por este Curso Online
@@ -6918,7 +6814,6 @@ pt-BR:
           <br/>
 
           > Isto é tudo! Fique à vontade para retornar a este nível sempre que você sentir necessidade de relembrar como esta plataforma funciona.
-      OPD-K5 CS Tips_copy: {}
       OPD-K5 CS Tips_dani:
         markdown: |
           Vamos Começar > Navegando por este Curso Online
@@ -7062,7 +6957,6 @@ pt-BR:
           alunos, enquanto eleva a percepção do assunto no público em geral. Eles
           sediam uma conferência anual e também possuem seções regionais que promovem
           eventos locais.\n"
-      OPD-K5 Connect_copy: {}
       OPD-K5 Connect_dani:
         markdown: "# Próximos Passos > Conecte-se\n\nAlém dos treinamentos formais
           posteriores, você poderá considerar acessar a comunidade da code.org para
@@ -7234,7 +7128,6 @@ pt-BR:
           - Compartilhar os benefícios que você obteve e considerações sobre o curso
 
           > **Nota**: Os tempos sugeridos são providos acima para ajudá-lo a planejar seu tempo. Por favor veja que você poderá querer gastar mais ou menos tempo em determinada etapa, a depender de seu conhecimento prévio, interesse e disponibilidade. Tenha em mente que o andamento deste curso é totalmente definido por você; você sempre poderá deixar o curso para retomá-lo depois, ou revistar qualquer etapa ou nível a qualquer tempo.
-      OPD-K5 Outline_copy: {}
       OPD-K5 Outline_dani:
         markdown: |
           # Vamos Começar > Linhas Gerais do Curso
@@ -7352,7 +7245,6 @@ pt-BR:
           <iframe width="640" height="390" src="https://www.youtube.com/embed/sxToW3ixrwo" frameborder="0" allowfullscreen></iframe>
           [Não consegue ver o vídeo? Clique aqui](https://videos.code.org/levelbuilder/06pairprogramming_small-mp4.mp4)
           <br/>
-      OPD-K5 Pair_copy: {}
       OPD-K5 Pair_dani:
         markdown: |
           # Melhores Práticas > Programação em Pares
@@ -7415,7 +7307,6 @@ pt-BR:
           ## Qual é o seu plano?
 
           Tome um momento para considerar como e quando você irá completar este curso online para garantir que você obtenha o benefício máximo desta experiência. Quando você tiver um bom plano esboçado, continue a mergulhar mais profundamente na Etapa 1.
-      OPD-K5 Participation_copy: {}
       OPD-K5 Participation_dani:
         markdown: |
           # Vamos começar > Planejando sua participação
@@ -7594,7 +7485,6 @@ pt-BR:
           - Refletir no seu aprendizado
           - Planejar os próximos passos que você poderá dar para continuar seu aprendizado
           - Conectar-se com uma comunidade global de educadores interessados no ensino de ciência da computação
-      OPD-K5 Stage10Start_copy: {}
       OPD-K5 Stage10Start_dani:
         markdown: |
           # Próximos Passos > Vamos Revisar
@@ -7662,7 +7552,6 @@ pt-BR:
           > **Dica para Ensino:** Embora ciência da computação possa ser uma disciplina rica e complexa, na Code.org nós acreditamos que professores e estudantes devam dominar os conceitos básicos antes de mergulharem em projetos de alto nível. Este curso online ensina a você, o professor, estes conceitos básicos para que você possa apoiar seus alunos a fazerem isto também.
 
           Na próxima etapa, iremos brevemente apresentar algumas estruturas para pensar sobre o conteúdo restante deste curso. A seguir, iremos mergulhar fundo e começar a aprender ciência da computação.
-      OPD-K5 Stage2Go_copy: {}
       OPD-K5 Stage2Go_dani:
         markdown: |
           # Fundamentos de CC > Olhando à Frente
@@ -7762,7 +7651,6 @@ pt-BR:
           > **O que Esperar desta Etapa:** Nos níveis que seguem, iremos começar com um plano desplugado de aulas para introduzi-lo a um conceito, para planejar como você poderia introduzir ideias para os estudantes de sua classe. A seguir, iremos prover a você instruções em vídeo e apresentar uma série de desafios para você aplicar seu conhecimento. Para completar um desafio, você deverá escrever código usando blocos de código Blockly. Estas lições são do Curso A, que é dirigido aos alunos da pré-escola. Terminaremos com uma oportunidade para refletir sobre como você poderia ensinar este conceito aos seus alunos. Você deverá gastar entre 10-30 minutos neste etapa.
 
           Tudo pronto? Vamos lá!
-      OPD-K5 Stage3Start_copy: {}
       OPD-K5 Stage3Start_dani:
         markdown: |
           # Sequenciamento > Visão Geral da Etapa
@@ -7903,7 +7791,6 @@ pt-BR:
           target=\"blank\"><button class=\"plc\">Discuta nos fórums >></button></a>\n\nApós
           comentar no fórum, volte aqui e clique abaixo para prosseguir à próxima
           página.\n"
-      OPD-K5 Stage4Go_copy: {}
       OPD-K5 Stage4Go_dani:
         markdown: "Laços > Lições Desplugadas\n\nNesta etapa, vimos como adicionar
           laços em um programa é mais eficiente ao codificar ações repetitivas. Na
@@ -7965,7 +7852,6 @@ pt-BR:
           > **O que Esperar desta Etapa:** Nos níveis que seguem, iremos introduzir uma aula desplugada e uma série de quebra-cabeças do Curso C (destinado ao Ano 2) com foco no conceito de laços. Para completar um quebra-cabeça, você precisará escrever código usando programação visual, baseada em blocos. Iremos terminar com uma oportunidade para refletir. Você deverá gastar entre 20-45 minutos nesta etapa.
 
           Tudo pronto? Vamos lá!
-      OPD-K5 Stage4Start_copy: {}
       OPD-K5 Stage4Start_dani:
         markdown: |
           Laços > Visão Geral da Etapa 5
@@ -8017,8 +7903,6 @@ pt-BR:
           > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank"><button class="plc">Discuta nos fórums >></button></a>
 
           Após comentar no fórum, volte aqui e clique abaixo para prosseguir à etapa seguinte.
-      OPD-K5 Stage5Go_copy: {}
-      OPD-K5 Stage5Go_dani: {}
       OPD-K5 Stage5Review:
         markdown: |
           # Condicionais > Reflexão
@@ -8053,7 +7937,6 @@ pt-BR:
           >**O que Esperar desta Etapa:** Primeiramente iremos introduzir uma aula desplugada do Curso D (destinada ao Ano 3) que apresenta a ideia de condicionais. A seguir, você irá completar uma série de quebra-cabeças para aplicar seus conhecimentos usando condicionais. Terminaremos com uma oportunidade para reflexão. Você deverá gastar entre 20-45 minutos nesta etapa.
 
           Tudo pronto? Vamos lá!
-      OPD-K5 Stage5Start_copy: {}
       OPD-K5 Stage5Start_dani:
         markdown: |
           # Condicionais > Visão Geral da Etapa
@@ -8093,7 +7976,6 @@ pt-BR:
           target=\"blank\"><button class=\"plc\">Discuta nos fóruns >></button></a>\n\nApós
           comentar no fórum, volte aqui e clique abaixo para prosseguir à próxima
           página.\n"
-      OPD-K5 Stage6Go_copy: {}
       OPD-K5 Stage6Go_dani:
         markdown: "# Funções > Aulas desplugadas\n\nProgramadores estão sempre à busca
           de maneiras para tornar seus códigos mais eficientes. Uma forma que eles
@@ -8152,7 +8034,6 @@ pt-BR:
 
           Tudo pronto? Vamos lá!
 
-      OPD-K5 Stage6Start_copy: {}
       OPD-K5 Stage6Start_dani:
         markdown: |+
           # Funções > Visão Geral da Etapa
@@ -8209,7 +8090,6 @@ pt-BR:
           > <a href="http://forum.code.org/t/teaching-events/409/1" target="blank"><button class="plc">Discuta nos fóruns >></button></a>
 
           Após comentar no fórum, volte aqui e clique abaixo para seguir em frente.
-      OPD-K5 Stage7Go_copy: {}
       OPD-K5 Stage7Go_dani:
         markdown: |
           # Eventos > Aulas Desplugadas
@@ -8264,7 +8144,6 @@ pt-BR:
           ao Ano 5) para experimentação com blocos de evento. Iremos fechar com uma
           oportunidade para reflexão. Você deverá gastar entre 20-45 minutos nesta
           etapa.\n\nTudo pronto? Vamos lá!\n"
-      OPD-K5 Stage7Start_copy: {}
       OPD-K5 Stage7Start_dani:
         markdown: "# Eventos > Visão Geral da Etapa\n\n<img src=\"https://images.code.org/319df539d56b2795d659a56e9334a5fb-image-1434397946590.JPG\"
           width=\"450px\" style=\"border-radius: 10px; float: right; margin: 0 0 40px
@@ -8465,7 +8344,6 @@ pt-BR:
 
 
 
-      OPD-K5 Using CS_dani: {}
       OPD-K5 Vocabulary:
         markdown: |
           # Fundamentos de CC > Vocabulário Chave
@@ -8504,7 +8382,6 @@ pt-BR:
            - **[Fundamentos em Ciências da Computação (CC) Pré-espresso](http://studio.code.org/s/pre-express)**: aproximadamente 20 horas (Idades 4-8)
 
 
-      OPD-K5 Welcome 2_copy: {}
       OPD-K5 Welcome 2_dani:
         markdown: |+
           # Vamos começar > Cursos Fundamentais de Ciências da Computação
@@ -8557,7 +8434,6 @@ pt-BR:
           da computação.\n\nNas **Etapas 10 e 11**, nós iremos apontar a direção aos
           recursos que você pode usar para aprender mais ou se sentir mais preparado
           para ensinar estes conceitos em sua sala de aula.\n"
-      OPD-K5 What is Mastery_copy: {}
       OPD-K5 What is Mastery_dani:
         markdown: "## Olhando à Frente > O que é ter domínio do assunto?\n\nNas etapas
           que seguem, você irá dominar os seguintes conceitos básicos de ciência da
@@ -8701,7 +8577,6 @@ pt-BR:
           <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"><button class="plc">Publique seu plano >></button></a>
 
           Após comentar no fórum, volte aqui e clique abaixo para continuar.
-      OPD-K5 Your Plan_copy: {}
       OPD-K5 Your Plan_dani:
         markdown: |
           # Planejamento > Seu Plano
@@ -8956,9 +8831,6 @@ pt-BR:
 
           <img src="https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif">
           </div>
-      PDK5 Foundations F: {}
-      PDK5 Intro C: {}
-      PS U3 Assessment1 new: {}
       PS U3 Q1-1:
         answers:
         - correct: true
@@ -9197,7 +9069,6 @@ pt-BR:
           \"click\", doSomething);\n\n\nNesse segundo exemplo, note que ao passarmos
           a função `doSomething` para a função `onEvent`, nós _não_ incluímos os parênteses
           ao final. Isso é porque estamos passando a função em si como um objeto.\n"
-      Sample CSP Assessment: {}
       ScreenOutTheMean-Unplugged:
         markdown: |
           # Identifique o Perturbador
@@ -9283,12 +9154,6 @@ pt-BR:
           # Composição Musical
 
           Use o conceito do refrão em uma música para aprender sobre definição e chamada de funções.
-      Student End of Unit Survey - Intro+TeacherMD_csd2-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd3-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd4-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd5-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd6-2022: {}
-      Student End of Unit Survey - Intro+TeacherMD_csd7-2022: {}
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -9314,12 +9179,6 @@ pt-BR:
           text: Discordo totalmente
         questions:
         - {}
-      Student End of Unit Survey_csd2-2022: {}
-      Student End of Unit Survey_csd3-2022: {}
-      Student End of Unit Survey_csd4-2022: {}
-      Student End of Unit Survey_csd5-2022: {}
-      Student End of Unit Survey_csd6-2022: {}
-      Student End of Unit Survey_csd7-2022: {}
       Submittable Multi:
         answers:
         - text: azul
@@ -9564,7 +9423,6 @@ pt-BR:
           *  **[Border Width](//docs.code.org/weblab/border-width/)** - `border-width: value;`
           *  **[Border Color](//docs.code.org/weblab/border-color/)** - `border-color: value;`
 
-      Video - The Future of Big Data: {}
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -9889,7 +9747,6 @@ pt-BR:
         title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
       aiml-intro-pulse-survey_2022:
         title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
-      aiml-pulse-check-survey-1-levelgroup Ch2_2021: {}
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -9970,8 +9827,6 @@ pt-BR:
           text: Discordo totalmente
         questions:
         - {}
-      aiml-pulse-check-survey-preamble_2021: {}
-      allthethings_bubble_choice: {}
       allthethings_external_displayed_as_unplugged:
         content1: descrição aqui
       allthethings_external_not_displayed_as_unplugged:
@@ -12693,8 +12548,6 @@ pt-BR:
           <br/><hr/>
           <h3>Nas próximas etapas, você vai escrever códigos com variáveis que *mudam* dentro do programa.</h3>
 
-      courseF_groups_freeplay_2022_pilot_-2022-2: {}
-      courseF_groups_practice_2022_pilot_-2022-2: {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
@@ -13765,9 +13618,6 @@ pt-BR:
           text: O artista desenhará quatro quadrados um em cima do outro.
         questions:
         - text: O que acontecerá quando você pressionar o botão "Executar"?
-      csd-post-survey-2017-implementation-student: {}
-      csd-post-survey-2017-implementation-teacher: {}
-      csd-post-survey-2017-implementation-teacher_2019: {}
       csd-post-survey-2017-levelgroup:
         title: Pesquisa de estudantes ao final do curso do CS Discoveries
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
@@ -14459,7 +14309,6 @@ pt-BR:
           href=\"/s/csd-post-survey-2021/lockable/1/levels/1/page/1\" target=\"top\">
           Clique aqui para completar o CS descobertas Pesquisa pós-curso</a>\n\n(abre
           em uma nova aba)\n\n<br>\n\n\n\n\n\n"
-      csd-post-survey-markdown-with-link-to-survey_2022: {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -18338,11 +18187,6 @@ pt-BR:
           text: Discordo totalmente
         questions:
         - {}
-      csd-pulse-check-survey-preamble: {}
-      csd-pulse-check-survey-preamble_2018: {}
-      csd-pulse-check-survey-preamble_2018_2019: {}
-      csd-pulse-check-survey-preamble_2019: {}
-      csd-pulse-check-survey-preamble_2019_pilot_2021: {}
       csd-pulse-check-survey-preamble_2019_pilot_2022:
         markdown: |-
           ### Por favor, reserve um momento para responder estas **cinco questões**.
@@ -18350,9 +18194,6 @@ pt-BR:
           <small>
           <em>Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anonimas</strong>. O seu professor pode ver as respostas de todos da classe, mas sem nomes associados a elas.
           </small>
-      csd-pulse-check-survey-preamble_2021: {}
-      csd-pulse-check-survey-preamble_2022: {}
-      csd-pulse-check-survey-preamble_2222: {}
       csf_be_a_super_digital_citizen:
         content1: descrição aqui
         markdown: |-
@@ -18482,8 +18323,6 @@ pt-BR:
           #Minha Vizinhança Online
 
           ##Como usar a internet com segurança ?
-      csp-post-survey-2017 preamble 1: {}
-      csp-post-survey-2017 preamble 1_2019: {}
       csp-post-survey-2017-q1:
         answers:
         - correct: true
@@ -19083,7 +18922,6 @@ pt-BR:
           text: Discordo totalmente
         questions:
         - {}
-      csp-post-survey-2017-thanks_2018: {}
       csp-post-survey-2018-topics-preamble:
         content1: descrição aqui
       csp-post-survey-2018-unit-feedback-preamble:
@@ -19117,30 +18955,6 @@ pt-BR:
           text: Discordo totalmente
         questions:
         - {}
-      csp-pre-survey-2017 preamble 1: {}
-      csp-pre-survey-2017 preamble 1_2018: {}
-      csp-pre-survey-2017 preamble 1_2021: {}
-      csp-pre-survey-2017 preamble 1_2022: {}
-      csp-pre-survey-2017 preamble 2 cs in general: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2018_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2019: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2021: {}
-      csp-pre-survey-2017 preamble 2 cs in general_2022: {}
-      csp-pre-survey-2017 preamble 3 this class: {}
-      csp-pre-survey-2017 preamble 3 this class_2018: {}
-      csp-pre-survey-2017 preamble 3 this class_2018_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2019: {}
-      csp-pre-survey-2017 preamble 3 this class_2021: {}
-      csp-pre-survey-2017 preamble 3 this class_2022: {}
-      csp-pre-survey-2017 preamble 4 the future: {}
-      csp-pre-survey-2017 preamble 4 the future_2018: {}
-      csp-pre-survey-2017 preamble 4 the future_2021: {}
-      csp-pre-survey-2017 preamble 4 the future_2022: {}
-      csp-pre-survey-2017 preamble 5 demographics: {}
-      csp-pre-survey-2017 preamble 5 demographics_2018: {}
-      csp-pre-survey-2017 preamble 5 demographics_2021: {}
-      csp-pre-survey-2017 preamble 5 demographics_2022: {}
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -20227,8 +20041,6 @@ pt-BR:
         - correct: true
         questions:
         - {}
-      csp-pre-survey-2017-q36-preamble: {}
-      csp-pre-survey-2017-q36-preamble_2018: {}
       csp-pre-survey-2017-q37:
         answers:
         - correct: true
@@ -20973,26 +20785,14 @@ pt-BR:
         - correct: true
         questions:
         - {}
-      ml-club app-choice parent: {}
-      ml-club app-choice parent_2022: {}
-      ml-customize apps-practice choice-2021: {}
-      ml-customize apps-practice choice_2022: {}
-      ml-good data-isaac data: {}
-      ml-good data-isaac data_2022: {}
-      ml-good data-kim data: {}
-      ml-good data-kim data_2022: {}
-      ml-good data-kim survey: {}
-      ml-good data-kim survey_2022: {}
-      ml-intro app lab-book recommender 5-2021: {}
-      ml-intro app lab-book recommender 5_2022: {}
-      ml-model card-medical-1-2021: {}
-      ml-model card-medical-1_2022: {}
-      ml-model card-medical-2-2021: {}
-      ml-model card-medical-2_2022: {}
-      ml-model card-medical-3-2021: {}
-      ml-model card-medical-3_2022: {}
-      ml-models in applab-choice parent: {}
-      ml-models in applab-choice parent_2022: {}
+      ml-club app-choice parent:
+        display_name: Personalize seu aplicativo
+      ml-club app-choice parent_2022:
+        display_name: Personalize seu aplicativo
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Personalize seu aplicativo
+      ml-intro app lab-book recommender 5_2022:
+        display_name: Personalize seu aplicativo
       ml-models-shoe survey:
         markdown: |
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
@@ -21003,12 +20803,6 @@ pt-BR:
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
           ## [Clique Aqui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para responder a pesquisa sobre o Recomendador de Sapatos
-      ml-plan survey-copy form: {}
-      ml-plan survey-copy form_2022: {}
-      ml-use model card-pet model card-2021: {}
-      ml-use model card-pet model card_2022: {}
-      ml-use models applab-practice choice-2021: {}
-      ml-use models applab-practice choice_2022: {}
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -21200,9 +20994,6 @@ pt-BR:
           text: Discordo totalmente
         questions:
         - {}
-      pre-assessment survey heading1: {}
-      pre-assessment survey heading2: {}
-      pre-assessment survey heading3: {}
       pre-assessment survey q1:
         answers:
         - correct: true
@@ -21696,8 +21487,6 @@ pt-BR:
           text: Discordo totalmente
         questions:
         - {}
-      sample external 1: {}
-      sample external 2: {}
       someone_else_encourage:
         answers:
         - correct: true

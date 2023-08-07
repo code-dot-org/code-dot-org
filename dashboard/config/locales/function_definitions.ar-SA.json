@@ -36,7 +36,6 @@
           }
         },
         "2-3 Artist Debugging 10": {
-          "draw R pad": {},
           "draw a button": {
             "name": "ارسم أيقونةً"
           },
@@ -65,8 +64,7 @@
             "name": "ارسم رأساً"
           },
           "draw body and arms": {
-            "name": "ارسم جسماً وذراعين",
-            "parameters": {}
+            "name": "ارسم جسماً وذراعين"
           },
           "draw left leg": {
             "name": "ارسم الرجل اليسرى"
@@ -106,9 +104,6 @@
             "name": "ارسم حرف O"
           }
         },
-        "2-3 Artist Functions 1": {
-          "draw ear stems": {}
-        },
         "2-3 Artist Functions 10": {
           "big gear": {
             "name": "معدات كبيرة"
@@ -135,14 +130,12 @@
         "2-3 Artist Functions 2": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "2-3 Artist Functions 4": {
           "draw a square": {
@@ -153,11 +146,6 @@
           "draw a snowflake": {
             "name": "رسم ندفة الثلج"
           }
-        },
-        "2-3 Artist Loops 2": {
-          "draw 3 hexagons": {},
-          "draw 4 hexagons": {},
-          "draw 5 hexagons": {}
         },
         "2-3 Bee Functions 1": {
           "get 2 nectar": {
@@ -444,32 +432,27 @@
         },
         "Course 4 Bee Params 3": {
           "get 3 nectar": {
-            "name": "احصل على ٣ من الرحيق",
-            "parameters": {}
+            "name": "احصل على ٣ من الرحيق"
           }
         },
         "Course 4 Bee Params 4": {
           "get 3 nectar": {
-            "name": "احصل على ٣ من الرحيق",
-            "parameters": {}
+            "name": "احصل على ٣ من الرحيق"
           }
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "احصل على ٥ من الرحيق",
-            "parameters": {}
+            "name": "احصل على ٥ من الرحيق"
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "احصل على ٥ من الرحيق",
-            "parameters": {}
+            "name": "احصل على ٥ من الرحيق"
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "احصل على العديد من الرحيق",
-            "parameters": {}
+            "name": "احصل على العديد من الرحيق"
           }
         },
         "Course 4 Bee Params 8": {
@@ -595,9 +578,6 @@
             }
           }
         },
-        "Course 4 SCF 1b": {
-          "make honey up and over": {}
-        },
         "Course 4 SCF 2": {
           "draw a square 20": {
             "name": "ارسم مربع ٢٠"
@@ -606,8 +586,7 @@
             "name": "ارسم شكل ثماني"
           },
           "draw octagons": {
-            "name": "ارسم أشكال ثمانية",
-            "parameters": {}
+            "name": "ارسم أشكال ثمانية"
           },
           "shift down": {
             "name": "إزاحة إلى الأسفل"
@@ -1193,8 +1172,7 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "تحقق من تخمين",
-            "parameters": {}
+            "name": "تحقق من تخمين"
           }
         },
         "InspirationalArtwork": {
@@ -1236,15 +1214,6 @@
           "n-sided shape": {
             "name": "شكل بحواف -n"
           }
-        },
-        "K-1 Artist2 3": {
-          "draw roof": {}
-        },
-        "K-1 Artist2 4": {
-          "draw rectangle": {}
-        },
-        "K-1 Artist2 5": {
-          "draw rectangle": {}
         },
         "MC Agent Freeplay": {
           "function 1": {
@@ -1435,8 +1404,7 @@
           },
           "draw a square 40": {
             "name": "ارسم مربع ٤٠"
-          },
-          "empty function": {}
+          }
         },
         "NEW Course 4 Artist Functions 3": {
           "draw a square": {
@@ -1770,15 +1738,11 @@
           }
         },
         "Robot Doodle": {
-          "25 pixel square": {},
-          "draw eye": {},
           "draw head": {
             "name": "ارسم رأساً"
           }
         },
         "Robot Doodle_2018": {
-          "25 pixel square": {},
-          "draw eye": {},
           "draw head": {
             "name": "ارسم رأساً"
           }
@@ -2725,9 +2689,6 @@
             "name": "ارسم مروحة"
           }
         },
-        "courseE_artist_functions1": {
-          "draw ear stems": {}
-        },
         "courseE_artist_functions10": {
           "do something": {
             "name": "إفعل شيئاً"
@@ -2794,41 +2755,30 @@
             "name": "ارسم خطاً من الأشكال السداسية"
           }
         },
-        "courseE_artist_functions1_copy": {
-          "draw ear stems": {}
-        },
-        "courseE_artist_functions1_dani": {
-          "draw ear stems": {}
-        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "courseE_artist_functions22022": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
@@ -2841,14 +2791,12 @@
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "courseE_artist_functions2_dani": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "courseE_artist_functions32022": {
           "draw a star": {
@@ -3465,32 +3413,27 @@
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "courseE_artist_functions_predict12022": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
@@ -3503,14 +3446,12 @@
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "courseE_artist_functions_predict1_dani": {
           "draw a square": {
             "name": "رسم مربع"
-          },
-          "draw ear stems": {}
+          }
         },
         "courseE_artist_functions_predict2": {
           "do something": {
@@ -4755,17 +4696,17 @@
         },
         "courseF_bee_variables_6_2018": {
           "collect stairs": {
-            "name": "اجمع السلالم"
+            "name": "اجمع السلالم\n"
           }
         },
         "courseF_bee_variables_6_2019": {
           "collect stairs": {
-            "name": "اجمع السلالم"
+            "name": "اجمع السلالم\n"
           }
         },
         "courseF_bee_variables_6_2020": {
           "collect stairs": {
-            "name": "اجمع السلالم"
+            "name": "اجمع السلالم\n"
           }
         },
         "courseF_bee_variables_7_2018": {
@@ -4786,20 +4727,17 @@
         "courseF_bee_variables_8_2018": {
           "collect": {
             "name": "اجمع"
-          },
-          "move and increment": {}
+          }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
             "name": "اجمع"
-          },
-          "move and increment": {}
+          }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "اجمع"
-          },
-          "move and increment": {}
+          }
         },
         "grade5_artist_binary11": {
           "draw": {

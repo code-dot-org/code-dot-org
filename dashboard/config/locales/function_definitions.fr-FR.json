@@ -165,14 +165,6 @@
             "name": "dessine un flocon de neige"
           }
         },
-        "2-3 Artist Loops 2": {
-          "draw 3 hexagons": {
-          },
-          "draw 4 hexagons": {
-          },
-          "draw 5 hexagons": {
-          }
-        },
         "2-3 Bee Functions 1": {
           "get 2 nectar": {
             "name": "obtenir 2 nectars"
@@ -635,9 +627,7 @@
             "name": "dessinez un octogone"
           },
           "draw octagons": {
-            "name": "dessinez des octogones",
-            "parameters": {
-            }
+            "name": "dessinez des octogones"
           },
           "shift down": {
             "name": "décaler vers le bas"
@@ -1223,9 +1213,7 @@
         },
         "Guess The Number": {
           "check guess": {
-            "name": "vérifier supposition",
-            "parameters": {
-            }
+            "name": "vérifier supposition"
           }
         },
         "InspirationalArtwork": {

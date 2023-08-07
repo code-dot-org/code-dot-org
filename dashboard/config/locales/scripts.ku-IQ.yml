@@ -416,6 +416,32 @@ ku:
           title: مەتەڵە وێنە
         netsim:
           title: هاوشێوەسازی ئینتەرنێت
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: مەرجیەکان
+            lessonGroup-5:
+              display_name: گۆڕاوەکان
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: گرێکان
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: فرمانەکان
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: گرێکان
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: گرێکان
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: گرێکان
         pre-express-2019:
           lesson_groups:
             csf_loops:
@@ -438,6 +464,10 @@ ku:
               display_name: گرێکان
         soccer:
           name: یاری تۆپی پێ
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: گرێکان
         time4cs-control-unit-1:
           lesson_groups:
             csf_conditionals:

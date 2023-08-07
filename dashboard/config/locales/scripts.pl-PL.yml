@@ -347,6 +347,8 @@ pl:
           lessons:
             lesson-49:
               name: Muzyka
+            lesson-50:
+              name: Czat AI
           name: wszystkie rzeczy
           student_description: Wszystkie typy poziomów dla testowania UI
           title: Wszystkie te Rzeczy!
@@ -7551,6 +7553,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-impact-in-society1-2023
         focus-on-impact-in-society2-2023:
           lesson_groups:
@@ -8002,11 +8006,147 @@ pl:
           name: musiclab-2023
           student_description: Koduj własną wersję utworu, aby udostępnić lub wykonać!
           title: Laboratorium muzyczne
+        musiclab-pilot:
+          description: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+          description_short: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+          lessons:
+            lesson-1:
+              name: Laboratorium muzyczne
+          name: musiclab-pilot
+          student_description: Koduj własną wersję utworu, aby udostępnić lub wykonać!
+          title: Laboratorium muzyczne
         netsim:
           description: Dowiedz się, jak działa Internet.
           description_short: Dowiedz się, jak działa Internet.
           student_description: Dowiedz się, jak działa Internet.
           title: Symulator internetowy
+        nevada-standards-aligned-fifth-grade-2023:
+          description: Stworzyliśmy Kurs F dla uczniów piątej klasy. Kurs rozpoczyna
+            się od przyjrzenia się, w jaki sposób użytkownicy dokonują wyboru w aplikacjach,
+            z których korzystają. Następnie uczniowie uczą się tworzyć różne aplikacje
+            w Sprite Lab, które również oferują użytkownikowi wybór. Na późniejszych
+            lekcjach kursu uczniowie poznają zmienne w różnych kontekstach. W trakcie
+            tego kursu, mają większą autonomię i większy wybór. Pod koniec kursu uczniowie
+            utworzą interaktywne projekty, którymi będą mogli dzielić się z przyjaciółmi
+            i rodziną.
+          description_audience: W wieku 9-13
+          description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz
+            własne dzieło sztuki, historyjkę lub grę.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Duszki
+            lessonGroup-3:
+              display_name: Zdania z warunkami
+            lessonGroup-5:
+              display_name: Zmienne
+            lessonGroup-6:
+              display_name: Wplywy informatyki
+            lessonGroup-7:
+              display_name: Koniec projektu kursu
+          name: nevada-standards-aligned-fifth-grade-2023
+          title: Kurs dla piątej klasy dostosowany do standardów Nevady
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description: Stworzyliśmy Kurs F dla uczniów piątej klasy. Kurs rozpoczyna
+            się od przyjrzenia się, w jaki sposób użytkownicy dokonują wyboru w aplikacjach,
+            z których korzystają. Następnie uczniowie uczą się tworzyć różne aplikacje
+            w Sprite Lab, które również oferują użytkownikowi wybór. Na późniejszych
+            lekcjach kursu uczniowie poznają zmienne w różnych kontekstach. W trakcie
+            tego kursu, mają większą autonomię i większy wybór. Pod koniec kursu uczniowie
+            utworzą interaktywne projekty, którymi będą mogli dzielić się z przyjaciółmi
+            i rodziną.
+          description_audience: W wieku 9-13
+          description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz
+            własne dzieło sztuki, historyjkę lub grę.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Duszki
+          name: nevada-standards-aligned-fifth-grade-2023-2023
+          student_description: Naucz się kodować z duszkami i zmiennymi, oraz omów
+            wpływ komputerów i internetu na społeczeństwo. Pod koniec tego kursu zaprojektuj
+            i stwórz projekt, którym możesz podzielić się z przyjaciółmi i rodziną.
+          title: Kurs dla piątej klasy dostosowany do standardów Nevady
+        nevada-standards-aligned-first-grade-2023:
+          description_audience: W wieku 5-8
+          description_short: Wprowadzenie do informatyki dla nieumiejących jeszcze
+            czytać. Podobne do Kursu A, ale z pogłębieniem pojęć.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Pętle
+            lessonGroup-5:
+              display_name: Wplywy informatyki
+            lessonGroup-6:
+              display_name: Zdarzenia
+            lessonGroup-7:
+              display_name: Koniec projektu kursu
+          name: nevada-standards-aligned-first-grade-2023
+        nevada-standards-aligned-fourth-grade-2023:
+          description_audience: W wieku 8-12
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Zdarzenia i duszki
+            lessonGroup-3:
+              display_name: Zagnieżdżające się  pętle
+            lessonGroup-4:
+              display_name: Funkcje
+            lessonGroup-6:
+              display_name: Koniec projektu kursu
+          name: nevada-standards-aligned-fourth-grade-2023
+          title: Kurs dla czwartej klasy dostosowany do standardów Nevady
+        nevada-standards-aligned-kindergarten-2023:
+          description_audience: W wieku 4-7
+          description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Pętle
+            lessonGroup-5:
+              display_name: Wplywy informatyki
+            lessonGroup-6:
+              display_name: Dane
+          lessons:
+            lesson-1:
+              name: Dane
+          name: nevada-standards-aligned-kindergarten-2023
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Pętle
+            lessonGroup-5:
+              display_name: Zdarzenia
+            lessonGroup-6:
+              display_name: Dane
+          name: nevada-standards-aligned-second-grade-2023
+        nevada-standards-aligned-third-grade-2023:
+          description_audience: W wieku 7-11
+          description_short: Ucz się o instrukcjach warunkowych. Twórz swoją własną
+            grafikę, gry, a nawet potańcówkę.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Wplywy informatyki
+            lessonGroup-5:
+              display_name: Zdarzenia i zmienne
+            lessonGroup-6:
+              display_name: Pętle
+            lessonGroup-7:
+              display_name: Dane
+            lessonGroup-8:
+              display_name: Koniec projektu kursu
+          name: nevada-standards-aligned-third-grade-2023
         new-d:
           title: Nowy skrypt dla Kursu D
         new-e:
@@ -8819,8 +8959,24 @@ pl:
         tesspltest:
           name: tesspl test
           title: Testowanie Jednostka 1 Kurs PL
+        tesspltest23:
+          name: tesspltest23
+          title: 'Testowanie PL '
         tesstest921:
           name: tesstest921
+        test-nv-coursea-2023:
+          description_audience: W wieku 4-7
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyfrowe obywatelstwo
+            lessonGroup-3:
+              display_name: Sekwencjonowanie
+            lessonGroup-4:
+              display_name: Pętle
+            lessonGroup-5:
+              display_name: Wplywy informatyki
+          name: test-nv-coursea-2023
+          title: 'Nevada Kurs A '
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

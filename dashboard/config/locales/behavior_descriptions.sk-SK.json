@@ -2,8 +2,6 @@
   "sk-SK": {
     "data": {
       "behavior_descriptions": {
-        "AllTheThings sprite lab with video": {
-        },
         "CourseE_Project_SpriteLab": {
           "change the size of a sprite": "zmeniť veľkosť sprite",
           "move a sprite across the screen, reversing direction if it touches the edges": "presunúť sprite po obrazovke a obrátiť smer, ak sa dotkne okrajov",
@@ -389,62 +387,6 @@
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "pohybovať sprite vodorovne, reverzný smer, ak sa dotkne okrajov obrazovky",
           "rotate a sprite to its left": "otočiť sprite doľava"
         },
-        "Dance Party 6": {
-        },
-        "Dance Party 6_2019": {
-        },
-        "Dance Party 6_2020": {
-        },
-        "Dance Party 6_2021": {
-        },
-        "Dance Party 7_2019": {
-        },
-        "Dance Party 7_2020": {
-        },
-        "Dance Party 7_2021": {
-        },
-        "Dance Party Freeplay": {
-        },
-        "Fish Tank 2-validated2022": {
-        },
-        "Fish Tank 2-validated_2019": {
-        },
-        "Fish Tank 2-validated_2020": {
-        },
-        "Fish Tank 2-validated_2021": {
-        },
-        "Fish Tank 3-validated2022": {
-        },
-        "Fish Tank 3-validated_2019": {
-        },
-        "Fish Tank 3-validated_2020": {
-        },
-        "Fish Tank 3-validated_2021": {
-        },
-        "Fish Tank 4-validated2022": {
-        },
-        "Fish Tank 4-validated_2019": {
-        },
-        "Fish Tank 4-validated_2020": {
-        },
-        "Fish Tank 4-validated_2021": {
-        },
-        "Fish Tank 5-validated2022": {
-        },
-        "Fish Tank 5-validated_2019": {
-        },
-        "Fish Tank 5-validated_2020": {
-        },
-        "Fish Tank 5-validated_2021": {
-        },
-        "Fish Tank 6-validated2022": {
-        },
-        "Fish Tank 6-validated_2019": {
-        },
-        "Fish Tank 6-validated_2020": {
-        },
-        "Fish Tank 6-validated_2021": {
-        },
         "Virtual Pet 1_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Presuňte sprite doľava cez obrazovku. Keď zhasne ľavú stranu obrazovky, presuňte ju späť na pravú stranu obrazovky.",
           "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Presuňte sprite doprava cez obrazovku. Keď zhasne pravú stranu obrazovky, presuňte ju späť na ľavú stranu obrazovky.",
@@ -615,8 +557,6 @@
           "rotate a sprite to its left": "otočiť sprite doľava",
           "rotate a sprite to its right": "otočiť sprite doprava"
         },
-        "Virtual Pet 4": {
-        },
         "Virtual Pet 4_2019": {
           "change the size of a sprite": "zmeniť veľkosť sprite",
           "move a sprite across the screen, reversing direction if it touches the edges": "presunúť sprite po obrazovke a obrátiť smer, ak sa dotkne okrajov",
@@ -642,14 +582,6 @@
           "randomly change the size of a sprite": "náhodne zmeniť veľkosť sprite",
           "rotate a sprite to its left": "otočiť sprite doľava",
           "rotate a sprite to its right": "otočiť sprite doprava"
-        },
-        "Virtual Pet 5": {
-        },
-        "Virtual Pet 6": {
-        },
-        "Virtual Pet Freeplay": {
-        },
-        "allthethings_fish_tank": {
         },
         "behaviors 1": {
           "change the size of a sprite": "zmeniť veľkosť sprite",

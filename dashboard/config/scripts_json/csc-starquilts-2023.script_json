@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-starquilts",
-    "serialized_at": "2023-06-30 15:47:57 UTC",
+    "serialized_at": "2023-07-25 20:56:11 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1471,6 +1471,28 @@
   ],
   "resources": [
     {
+      "name": "CS Connections Landing Page",
+      "url": "https://code.org/educate/csc",
+      "key": "cs_connections_landing_page",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page"
+      }
+    },
+    {
+      "name": "CSC Extended Connections Book List",
+      "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview\t",
+      "key": "csc_extended_connections_book_list",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list"
+      }
+    },
+    {
       "name": "Helpful Hints",
       "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
       "key": "helpful_hints",
@@ -1507,6 +1529,39 @@
       },
       "seeding_key": {
         "resource.key": "helpful_hints_2"
+      }
+    },
+    {
+      "name": "Helpful Hints for teachers and learners",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+      "key": "helpful_hints_for_teachers_and_learners",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners"
+      }
+    },
+    {
+      "name": "Resource list for all lessons",
+      "url": "/s/csc-starquilts-2023/resources",
+      "key": "resource_list_for_all_lessons",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons"
+      }
+    },
+    {
+      "name": "Standards in Coding a Star Quilt",
+      "url": "/s/csc-starquilts-2023/standards",
+      "key": "standards_in_coding_a_star_quilt",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "standards_in_coding_a_star_quilt"
       }
     },
     {
@@ -1580,6 +1635,17 @@
       },
       "seeding_key": {
         "resource.key": "virtual_pattern_blocks_optional_"
+      }
+    },
+    {
+      "name": "Vocabulary in Coding Geometric Star Quilts",
+      "url": "/s/csc-starquilts-2023/vocab",
+      "key": "vocabulary_in_coding_geometric_star_quilts",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_in_coding_geometric_star_quilts"
       }
     }
   ],
@@ -1658,7 +1724,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page",
+        "script.name": "csc-starquilts-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list",
+        "script.name": "csc-starquilts-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners",
+        "script.name": "csc-starquilts-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons",
+        "script.name": "csc-starquilts-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standards_in_coding_a_star_quilt",
+        "script.name": "csc-starquilts-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_in_coding_geometric_star_quilts",
+        "script.name": "csc-starquilts-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

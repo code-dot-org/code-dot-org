@@ -1426,6 +1426,46 @@ ne:
           title: Minecraft Hour of Code Designer
         netsim:
           title: Internet Simulator
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Conditionals
+            lessonGroup-5:
+              display_name: Variables
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: Loops
+            lessonGroup-6:
+              display_name: घटनाहरु
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Nested Loops
+            lessonGroup-4:
+              display_name: Functions
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: Loops
+            lessonGroup-5:
+              display_name: घटनाहरु
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-6:
+              display_name: Loops
         new-express:
           lesson_groups:
             content:
@@ -1488,6 +1528,7 @@ ne:
             game in a galaxy far, far away.
           student_description: Learn to program droids, and create your own Star Wars
             game in a galaxy far, far away.
+          title: 'Star Wars: Building a Galaxy With Code (JavaScript)'
         starwarsblocks:
           description: Learn to program droids, and create your own Star Wars game
             in a galaxy far, far away.
@@ -1508,6 +1549,12 @@ ne:
               display_name: Teaching Practices
             required:
               display_name: Overview
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: Loops
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

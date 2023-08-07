@@ -1462,7 +1462,7 @@ uk-UA:
   kidsruby_beyond_platformtext: Установка програми
   kidsruby_beyond_shortdescription: Навчіться програмувати на Ruby
   kodable_beyond_gradelevel: Початкова школа
-  kodable_beyond_longdescription: Kodable - це самостійне гра для iPad, котра знайомить
+  kodable_beyond_longdescription: Kodable - це самостійна гра для iPad, котра знайомить
     дітей від 5 років з основами програмування. Супровід вчителя чи іншого дорослого
     не обов'язковий, хоча й бажаний.
   kodable_beyond_name: Kodable
@@ -1677,7 +1677,11 @@ uk-UA:
     Для доступу до всіх підручників, оновіть <a href="http://browsehappy.com/" target="_blank">браузер
     до останньої версії.</a>
   outbreak_tile_title: Спалах
+  page_not_available_button: Повернутись на домашню сторінку
   page_not_available_title: Сторінка недоступна
+  page_not_found_button: Повернутись на домашню сторінку
+  page_not_found_description: Сторінки за цією адресою не існує. Перевірте веб-адресу
+    та надішліть ще раз. Або поверніться на нашу домашню сторінку
   page_not_found_header: '404: Сторінка не знайдена'
   page_not_found_title: Сторінка не знайдена
   participant_educator: Педагог

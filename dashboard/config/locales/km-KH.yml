@@ -80,6 +80,8 @@ km:
     use_clever: សុំទោស គណនេយ្យរបស់អ្នកមិនអាចដំណើរការទៅកាន់%{provider}​របស់អ្នកបានទេ។​
       សូមចូលទៅដំណើរការគណនេយ្យ Clever Portal របស់អ្នកជំនួសវិញ។
     windowslive: គណនី Microsoft
+  behaviors:
+    this_sprite: Sprite មួយនេះ
   builder:
     back: ត្រឡប់​ទៅ​ស្គ្រីប
     created: ខ្ញុំ​បាន​បង្កើត​ស្គ្រីប​ថ្មី​មួយ។
@@ -178,6 +180,14 @@ km:
         subject: Code.org notification:​​ %{student_name} មិនបានបន្តដំណើរការជាសិស្សរបស់អ្នកទៀតទេ។
     registered: អ្នក​បាន​ចុះឈ្មោះ​សម្រាប់ %{section_name}
   footer:
+    art_from_html: Minecraft&#8482; &ចម្លង; %{current_year} Microsoft ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។
+      សង្គ្រាមផ្កាយ&#8482; &ចម្លង; %{current_year} Disney និង Lucasfilm ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។
+      បង្កក&#8482; &ចម្លង; %{current_year} Disney ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ យុគសម័យទឹកកក&#8482;
+      &ចម្លង; %{current_year} 20th Century Fox។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ Angry Birds&#8482;
+      &ចម្លង; 2009-%{current_year} Rovio Entertainment Ltd. រក្សាសិទ្ធិគ្រប់យ៉ាង។
+      រុក្ខជាតិទល់នឹង Zombies&#8482; &ចម្លង; %{current_year} Electronic Arts Inc.
+      រក្សាសិទ្ធិគ្រប់យ៉ាង។ DreamWorks មនុស្សអាក្រក់ &copy; %{current_year} DreamWorks
+      Animation LLC ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។
     art_from_html_old: Minecraft&#8482; &ចម្លង; %{current_year} Microsoft ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។
       សង្គ្រាមផ្កាយ&#8482; &ចម្លង; %{current_year} Disney និង Lucasfilm ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។
       បង្កក&#8482; &ចម្លង; %{current_year} Disney ។ រក្សា​រ​សិទ្ធ​គ្រប់យ៉ាង។ យុគសម័យទឹកកក&#8482;
@@ -259,7 +269,7 @@ km:
     correct_title: ត្រឹម​ត្រូវ
     wrong_body: ដំណោះស្រាយ​ដែល​អ្នក​បាន​បញ្ចូល​គឺ​មិន​ត្រឹមត្រូវ​ទេ។ សូម​ព្យាយាម​ម្ដង​ទៀត!
     wrong_title: ដំណោះស្រាយ​មិន​ត្រឹមត្រូវ
-  more: បង្ហាញ​ច្រើន
+  more: "​ច្រើនទៀត"
   more_info: ព័ត៌មាន​បន្ថែម
   multi:
     correct_body: នោះ​គឺ​ជា​ចម្លើយ​ត្រឹមត្រូវ។
@@ -552,9 +562,7 @@ km:
     valid_username: អាច​ប្រើ​បាន!
   slow_loading: វាចំណាយពេលយូរជាងធម្មតា...
   stage: ដំណាក់​កាល
-  stage_number: 'មេរៀនទី %{number}
-
-    '
+  stage_number: មេរៀនទី %{number}
   submit: ដាក់ស្នើ
   teacher:
     answer: ចម្លើយ

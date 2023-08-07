@@ -327,6 +327,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     resizeSvg(blockSpace) {
       return blockSpace.blockSpaceEditor.svgResize();
     },
+    registerCustomProcedureBlocks() {
+      // Google Blockly only. Registers custom blocks for modal function editor.
+    },
   };
   blocklyWrapper.customBlocks = customBlocks;
   return blocklyWrapper;

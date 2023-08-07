@@ -5413,6 +5413,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5694,6 +5696,100 @@ id:
           title: Desainer Hour of Code Minecraft
         netsim:
           title: Simulator Internet
+        nevada-standards-aligned-fifth-grade-2023:
+          description_audience: 'Usia: 9-13'
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer
+            dan buat seni, cerita atau permainan anda sendiri.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Kondisi
+            lessonGroup-5:
+              display_name: variabel
+            lessonGroup-6:
+              display_name: Dampak dari Komputasi
+            lessonGroup-7:
+              display_name: Proyek Akhir Kursus
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: 'Usia: 9-13'
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer
+            dan buat seni, cerita atau permainan anda sendiri.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+        nevada-standards-aligned-first-grade-2023:
+          description_audience: 'Usia: 5-8'
+          description_short: Pengenalan ilmu komputer untuk prabaca. Sama dengan Kursus
+            A, tetapi dengan tambahan konsep 'pendalaman'.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: Dampak dari Komputasi
+            lessonGroup-6:
+              display_name: kegiatan
+            lessonGroup-7:
+              display_name: Proyek Akhir Kursus
+        nevada-standards-aligned-fourth-grade-2023:
+          description_audience: 'Usia: 8-12'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Nested Loop
+            lessonGroup-4:
+              display_name: fungsi
+            lessonGroup-6:
+              display_name: Proyek Akhir Kursus
+        nevada-standards-aligned-kindergarten-2023:
+          description_audience: 'Usia: 4-7'
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: Dampak dari Komputasi
+            lessonGroup-6:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: kegiatan
+            lessonGroup-6:
+              display_name: Data
+        nevada-standards-aligned-third-grade-2023:
+          description_audience: 'Usia: 7-11'
+          description_short: Pelajari tentang pernyataan conditional. Buat karya seni,
+            permainan, dan bahkan pesta dansa.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Dampak dari Komputasi
+            lessonGroup-6:
+              display_name: Loop
+            lessonGroup-7:
+              display_name: Data
+            lessonGroup-8:
+              display_name: Proyek Akhir Kursus
         new-d:
           title: Kursus Baru D Script
         new-e:
@@ -6470,6 +6566,17 @@ id:
           name: tessplayground
         tesstest921:
           name: tesstest921
+        test-nv-coursea-2023:
+          description_audience: 'Usia: 4-7'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: Dampak dari Komputasi
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

@@ -985,6 +985,44 @@ sr:
           student_description: Програмирај животиње и друга Minecraft створења у својој
             верзији Minecraft-а.
           title: Мајнкрафт дизајнер - час програмирања
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Кондиционали
+            lessonGroup-5:
+              display_name: Променљиве
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-4:
+              display_name: Петље
+            lessonGroup-6:
+              display_name: Догађаји
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Функције
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-4:
+              display_name: Петље
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-4:
+              display_name: Петље
+            lessonGroup-5:
+              display_name: Догађаји
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-6:
+              display_name: Петље
         playlab:
           description: Направи причу или игру у Играоници!
           description_short: Направи причу или игру у Играоници!
@@ -1055,6 +1093,12 @@ sr:
           lesson_groups:
             required:
               display_name: Преглед
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дигитално држављанство
+            lessonGroup-4:
+              display_name: Петље
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:

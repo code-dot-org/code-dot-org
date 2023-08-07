@@ -3164,6 +3164,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3331,6 +3333,88 @@ is:
           title: Klukkustund kóðunar - Minecraft Hönnuður
         netsim:
           title: Internet hermir
+        nevada-standards-aligned-fifth-grade-2023:
+          description_audience: 'Aldur: 9-13'
+          description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu
+            til eigin myndir, sögur og leiki.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kvikar
+            lessonGroup-3:
+              display_name: Skilyrði
+            lessonGroup-5:
+              display_name: Breytur
+            lessonGroup-7:
+              display_name: Lokaverkefni námskeiðs
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: 'Aldur: 9-13'
+          description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu
+            til eigin myndir, sögur og leiki.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kvikar
+        nevada-standards-aligned-first-grade-2023:
+          description_audience: 'Aldur: 5 - 8'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stafrænn borgari
+            lessonGroup-3:
+              display_name: Skipanaröð
+            lessonGroup-4:
+              display_name: Lykkjur
+            lessonGroup-6:
+              display_name: Atvik
+            lessonGroup-7:
+              display_name: Lokaverkefni námskeiðs
+        nevada-standards-aligned-fourth-grade-2023:
+          description_audience: 'Aldur: 8 - 12'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Innri lykkjur
+            lessonGroup-4:
+              display_name: Föll
+            lessonGroup-6:
+              display_name: Lokaverkefni námskeiðs
+        nevada-standards-aligned-kindergarten-2023:
+          description_audience: 'Aldur: 4-7'
+          description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stafrænn borgari
+            lessonGroup-3:
+              display_name: Skipanaröð
+            lessonGroup-4:
+              display_name: Lykkjur
+            lessonGroup-6:
+              display_name: Gögn
+          lessons:
+            lesson-1:
+              name: Gögn
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stafrænn borgari
+            lessonGroup-3:
+              display_name: Skipanaröð
+            lessonGroup-4:
+              display_name: Lykkjur
+            lessonGroup-5:
+              display_name: Atvik
+            lessonGroup-6:
+              display_name: Gögn
+        nevada-standards-aligned-third-grade-2023:
+          description_audience: 'Aldur: 7-11'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stafrænn borgari
+            lessonGroup-3:
+              display_name: Skipanaröð
+            lessonGroup-6:
+              display_name: Lykkjur
+            lessonGroup-7:
+              display_name: Gögn
+            lessonGroup-8:
+              display_name: Lokaverkefni námskeiðs
         new-e:
           lesson_groups:
             csf_e_1:
@@ -3499,6 +3583,7 @@ is:
             Wars leik í órafjarlægri vetrarbraut.
           student_description: Lærðu að forrita vélmenni og búðu til þinn eigin Star
             Wars leik í órafjarlægri vetrarbraut.
+          title: 'Star Wars: Gerð Vetrarbrautar með Kóða - JavaScript'
         starwarsblocks:
           description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars
             leik í órafjarlægri vetrarbraut.
@@ -3519,6 +3604,15 @@ is:
               display_name: Kennsluaðferðir
             required:
               display_name: Yfirlit
+        test-nv-coursea-2023:
+          description_audience: 'Aldur: 4-7'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stafrænn borgari
+            lessonGroup-3:
+              display_name: Skipanaröð
+            lessonGroup-4:
+              display_name: Lykkjur
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

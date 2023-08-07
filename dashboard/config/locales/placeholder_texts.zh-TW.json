@@ -13,21 +13,9 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
           "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題"
         },
-        "Course 4 Play Lab Params 10": {
-        },
-        "Course 4 Play Lab Vars 1": {
-        },
-        "Course 4 Play Lab Vars 2": {
-        },
-        "Course 4 Play Lab Vars 6": {
-        },
-        "Course 4 Play Lab Vars 7": {
-        },
         "Course 4 Playlab For Loop Freeplay": {
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
           "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題"
-        },
-        "Course 4 Playlab For Loops 6b": {
         },
         "Course E: Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
@@ -127,16 +115,6 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
           "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題"
         },
-        "OPD-K5-projects-6": {
-        },
-        "OPD-K5-projects-7": {
-        },
-        "Virtual Pet 1_2019": {
-        },
-        "Virtual Pet 1_2020": {
-        },
-        "course3_playLab_challenge1": {
-        },
         "course4_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
           "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題"
@@ -205,27 +183,13 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
           "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題"
         },
-        "courseC19_playLab_EOC5": {
-        },
-        "courseC19_playLab_EOC52022": {
-        },
-        "courseC19_playLab_EOC5_2020": {
-        },
         "courseC19_playLab_EOC5_2021": {
           "3e11a2dc6edb909c47778bed75a81769": "在這裡輸入文本",
           "5cec903c4d41c49412a70a94d54999ee": "你可以寫點東西。"
         },
-        "courseC19_playLab_EOC6": {
-        },
-        "courseC19_playLab_EOC62022": {
-        },
-        "courseC19_playLab_EOC6_2020": {
-        },
         "courseC19_playLab_EOC6_2021": {
           "3e11a2dc6edb909c47778bed75a81769": "在這裡輸入文本",
           "5cec903c4d41c49412a70a94d54999ee": "你可以寫點東西。"
-        },
-        "courseC19_playLab_sample12022": {
         },
         "courseC19_playLab_sample1_2021": {
           "3e11a2dc6edb909c47778bed75a81769": "在這裡輸入文本",
@@ -273,12 +237,6 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
           "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題"
         },
-        "courseC_data wizard": {
-        },
-        "courseC_data wizard2022": {
-        },
-        "courseC_data wizard_2020": {
-        },
         "courseC_data wizard_2021": {
           "1c64ef29c853587fbe94f69f05272b79": "一隻鳥！",
           "22f6f6821f4d6d0a08653935b466ac2f": " 隻貓！",
@@ -300,10 +258,6 @@
           "8437002ea42b64a5fd68abfb2ab8dae0": "遊戲結束。",
           "c865bfd8e0c78020ace8e1376d3cc9ad": "你輸了。",
           "e8a10c04d72b2f135dabe360c4bdd534": "你贏了！"
-        },
-        "courseE_aboutme_1": {
-        },
-        "courseE_aboutme_1_2020": {
         },
         "courseE_aboutme_1_2021": {
           "31ba97bb501bb1f5b448221be09bad32": "那是我的柯基犬，Lollipop！我應該教她怎麼編寫代碼！",
@@ -349,8 +303,6 @@
           "6ae99d4d2de5e3cbd29fec87ae7d76eb": "嘿！",
           "ed076287532e86365e841e92bfc50d8c": "Hello World!"
         },
-        "courseE_playLab_challenge1": {
-        },
         "courseE_playLab_scaffold1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
           "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題"
@@ -366,8 +318,6 @@
         "courseE_playLab_scaffold4": {
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
           "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題"
-        },
-        "courseE_playLab_scaffold5": {
         },
         "courseE_playLab_scaffold6": {
           "2d3cdcfdd4061212e4d4930a183dad2d": "請再試一次。",
@@ -610,8 +560,6 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
           "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題"
         },
-        "courseF_playlab_variables_challenge2": {
-        },
         "courseF_project_1": {
           "498cd895eb5a102c5aeb977e2b928dee": "謝謝！",
           "e8a10c04d72b2f135dabe360c4bdd534": "你贏了！"
@@ -722,8 +670,6 @@
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "你叫什麼名字？"
-        },
-        "courseF_variables_predict_-2022-2": {
         },
         "coursee_helloworld_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "你好，世界！"

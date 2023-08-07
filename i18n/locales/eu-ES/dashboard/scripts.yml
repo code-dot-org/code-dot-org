@@ -1138,3 +1138,64 @@ eu:
           lessons:
             lesson-4:
               name: Datu
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hiritartasun digitala
+            lessonGroup-4:
+              display_name: Itzuliak
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Datu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hiritartasun digitala
+            lessonGroup-4:
+              display_name: Itzuliak
+            lessonGroup-6:
+              display_name: Datu
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hiritartasun digitala
+            lessonGroup-4:
+              display_name: Itzuliak
+            lessonGroup-6:
+              display_name: Gertaerak
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hiritartasun digitala
+            lessonGroup-4:
+              display_name: Itzuliak
+            lessonGroup-5:
+              display_name: Gertaerak
+            lessonGroup-6:
+              display_name: Datu
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hiritartasun digitala
+            lessonGroup-6:
+              display_name: Itzuliak
+            lessonGroup-7:
+              display_name: Datu
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kabiatutako begiztak
+            lessonGroup-4:
+              display_name: Funtzioak
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pertsonaiak
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pertsonaiak
+            lessonGroup-3:
+              display_name: Baldintzak
+            lessonGroup-5:
+              display_name: Aldagaiak

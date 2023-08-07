@@ -5263,15 +5263,6 @@ ca:
               display_name: Lliçons antigues
             lessonGroup-6:
               display_name: Noves lliçons
-          student_description: Aquesta unitat explora el paper de les plataformes
-            de maquinari en la informàtica i com els diferents sensors poden proporcionar
-            una entrada i una sortida més eficaços que el teclat, el ratolí i el monitor
-            tradicionals. Utilitzant App Lab i Circuit Playground d'Adafruit, desenvolupareu
-            programes que utilitzin les mateixes entrades i sortides de maquinari
-            que veieu en els dispositius intel·ligents, mirant com un simple prototip
-            rugós pot conduir a un producte acabat. La unitat conclou amb un repte
-            de disseny per utilitzar el Circuit Playground com a base per a una innovació
-            del seu propi disseny.
           title: "(Opció A) Creació d'aplicacions amb dispositius - Circuit Playground
             ('23-'24)"
         csd6-dlp:
@@ -9418,6 +9409,8 @@ ca:
               display_name: 'Capítol 1: El procés de resolució de problemes'
             lessonGroup-3:
               display_name: Lliçons alternatives
+            lessonGroup-4:
+              display_name: Enquesta
           name: enfocament-en-impacte-en-societat1-2023
           student_description: Problem Solving and Computing és una introducció altament
             interactiva i col·laborativa al camp de la informàtica, emmarcada dins
@@ -9935,6 +9928,159 @@ ca:
           description_short: Obteniu informació sobre com funciona Internet.
           student_description: Obteniu informació sobre com funciona Internet.
           title: Simulador d'Internet
+        nevada-standards-aligned-fifth-grade-2023:
+          description: Hem creat el Curs F per a estudiants de cinquè de primària.
+            El curs comença observant com els usuaris prenen decisions en les apps
+            que utilitzen. Els estudiants aprenen a fer una varietat d'aplicacions
+            Sprite Lab que també ofereixen opcions per a l'usuari. En les lliçons
+            posteriors del curs, els estudiants aprendran sobre variables en diversos
+            contextos. L'alumnat té més autonomia i més opcions al llarg d'aquest
+            curs. Al final del curs, els alumnes hauran creat projectes interactius
+            per compartir amb els seus amics i familiars.
+          description_audience: De 9 a 13 anys
+          description_short: Apreneu tots els conceptes dels Fonaments de la informàtica
+            i creeu el vostre propi art, històries i jocs.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Condicionals
+            lessonGroup-4:
+              display_name: Dades i Simulacions
+            lessonGroup-5:
+              display_name: Variables
+            lessonGroup-6:
+              display_name: Els impactes de la informàtica
+            lessonGroup-7:
+              display_name: Projecte de final de curs
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description: Hem creat el Curs F per a estudiants de cinquè de primària.
+            El curs comença observant com els usuaris prenen decisions en les apps
+            que utilitzen. Els estudiants aprenen a fer una varietat d'aplicacions
+            Sprite Lab que també ofereixen opcions per a l'usuari. En les lliçons
+            posteriors del curs, els estudiants aprendran sobre variables en diversos
+            contextos. L'alumnat té més autonomia i més opcions al llarg d'aquest
+            curs. Al final del curs, els alumnes hauran creat projectes interactius
+            per compartir amb els seus amics i familiars.
+          description_audience: De 9 a 13 anys
+          description_short: Apreneu tots els conceptes dels Fonaments de la informàtica
+            i creeu el vostre propi art, històries i jocs.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          student_description: Aprendre a codificar amb sprites i variables, i discutir
+            els impactes socials de la informàtica i Internet. Al final d'aquest curs,
+            dissenyar i crear un projecte que puguis compartir amb amics i familiars.
+        nevada-standards-aligned-first-grade-2023:
+          description: Hem desenvolupat el curs B pensant en els alumnes de primer
+            de primària. Mentre que els conceptes del curs B paral·lelament als del
+            curs A, els estudiants aprenen activitats unplugged més sofisticades i
+            treballen a través d'una major varietat de puzles. Els estudiants aprendran
+            els conceptes bàsics de programació, tècniques de col·laboració, habilitats
+            d'investigació i pensament crític, persistència davant la dificultat i
+            seguretat a Internet. Al final d'aquest curs, els alumnes creen jocs en
+            l'entorn de programació Play Lab.
+          description_audience: De 5 a 8 anys
+          description_short: Introducció a la informàtica per a prelectors. Similar
+            al curs A, però amb profunditat de concepte afegit.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ciutadania digital
+            lessonGroup-3:
+              display_name: Seqüenciació
+            lessonGroup-4:
+              display_name: Bucles
+            lessonGroup-5:
+              display_name: Els impactes de la informàtica
+            lessonGroup-6:
+              display_name: Esdeveniments
+            lessonGroup-7:
+              display_name: Projecte de final de curs
+        nevada-standards-aligned-fourth-grade-2023:
+          description: Hem creat el Curs E per a alumnes de quart de primària. El
+            curs comença amb una introducció a l'eina de programació Sprite Lab. Els
+            alumnes aprendran a fer projectes divertits i interactius que reforcen
+            el que aprendran sobre seguretat en línia. Després d'aquestes lliçons,
+            els estudiants es dedicaran a una codificació més complexa. Els estudiants
+            aprendran sobre bucles niats, funcions i condicionals. Al final del curs,
+            els estudiants combinaran aquests conceptes per resoldre enigmes desafiants.
+            El curs finalitza amb un projecte obert on els alumnes creen un joc o
+            dibuix.
+          description_audience: De 8 a 12 anys
+          description_short: Aprendre els conceptes bàsics dels sprites, bucles niats
+            i funcions.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Bucles imbricats
+            lessonGroup-4:
+              display_name: Funcions
+            lessonGroup-5:
+              display_name: Dades i Simulacions
+            lessonGroup-6:
+              display_name: Projecte de final de curs
+        nevada-standards-aligned-kindergarten-2023:
+          description: El curs A ofereix un pla d'estudis d'informàtica per als lectors
+            inicials, inclosos els estudiants de Kindergarten. Els estudiants aprendran
+            a programar utilitzant ordres com bucles i esdeveniments. Les lliçons
+            presentades en aquest curs també ensenyen als estudiants a col·laborar
+            de manera significativa amb els altres, investigar diferents tècniques
+            de resolució de problemes, persistir davant de tasques desafiants i aprendre
+            sobre seguretat a Internet.
+          description_audience: De 4 a 7 anys
+          description_short: Una introducció a la informàtica per prelectors.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ciutadania digital
+            lessonGroup-3:
+              display_name: Seqüenciació
+            lessonGroup-4:
+              display_name: Bucles
+            lessonGroup-5:
+              display_name: Els impactes de la informàtica
+            lessonGroup-6:
+              display_name: Dades
+          lessons:
+            lesson-1:
+              name: Dades
+        nevada-standards-aligned-second-grade-2023:
+          description: Hem desenvolupat el Curs C per a estudiants de segon de primària.
+            Els estudiants crearan programes amb seqüenciació, bucles i esdeveniments.
+            Investigaran tècniques de resolució de problemes i desenvoluparan estratègies
+            per a la construcció de comunitats positives tant online com offline.
+            Al final del curs, els alumnes crearan jocs interactius que podran compartir.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ciutadania digital
+            lessonGroup-3:
+              display_name: Seqüenciació
+            lessonGroup-4:
+              display_name: Bucles
+            lessonGroup-5:
+              display_name: Esdeveniments
+            lessonGroup-6:
+              display_name: Dades
+        nevada-standards-aligned-third-grade-2023:
+          description: Hem creat el curs D per a estudiants de tercer de primària.
+            El curs comença amb una revisió dels conceptes trobats en cursos anteriors,
+            incloent bucles i esdeveniments. Després, els estudiants desenvoluparan
+            la seva comprensió d'algoritmes, bucles niats, mentre que bucles, condicionals,
+            i molt més.
+          description_audience: De 7 a 11 anys
+          description_short: Obteniu informació sobre les declaracions condicionals.
+            Crea el teu propi art, jocs, i fins i tot una festa de ball.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ciutadania digital
+            lessonGroup-3:
+              display_name: Seqüenciació
+            lessonGroup-4:
+              display_name: Els impactes de la informàtica
+            lessonGroup-6:
+              display_name: Bucles
+            lessonGroup-7:
+              display_name: Dades
+            lessonGroup-8:
+              display_name: Projecte de final de curs
         new-d:
           title: Nou Curs D Guió
         new-e:
@@ -11102,6 +11248,17 @@ ca:
             lessonGroup-4:
               display_name: Lliçons alternatives
           title: Resolució de problemes
+        test-nv-coursea-2023:
+          description_audience: De 4 a 7 anys
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ciutadania digital
+            lessonGroup-3:
+              display_name: Seqüenciació
+            lessonGroup-4:
+              display_name: Bucles
+            lessonGroup-5:
+              display_name: Els impactes de la informàtica
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

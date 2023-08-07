@@ -327,7 +327,7 @@
           "name": "Словник"
         },
         "curriculum_guide/coursea/2019": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "lesson_plans/coursea/2019": {
           "name": "Плани уроків"
@@ -342,7 +342,7 @@
           "name": "Словник"
         },
         "curriculum_guide/courseb/2019": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "lesson_plans/courseb/2019": {
           "name": "Плани уроків"
@@ -357,7 +357,7 @@
           "name": "Словник"
         },
         "curriculum_guide/coursec/2019": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "lesson_plans/coursec/2019": {
           "name": "Плани уроків"
@@ -372,7 +372,7 @@
           "name": "Словник"
         },
         "curriculum_guide/coursed/2019": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "lesson_plans/coursed/2019": {
           "name": "Плани уроків"
@@ -387,7 +387,7 @@
           "name": "Словник"
         },
         "curriculum_guide/coursee/2019": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "lesson_plans/coursee/2019": {
           "name": "Плани уроків"
@@ -402,7 +402,7 @@
           "name": "Словник"
         },
         "curriculum_guide/coursef/2019": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "lesson_plans/coursef/2019": {
           "name": "Плани уроків"
@@ -429,7 +429,7 @@
           "name": "Словник"
         },
         "curriculum_guide/coursea/2020": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "lesson_plans/coursea/2020": {
           "name": "Плани уроків"
@@ -444,7 +444,7 @@
           "name": "Словник"
         },
         "curriculum_guide/courseb/2020": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "lesson_plans/courseb/2020": {
           "name": "Плани уроків"
@@ -459,7 +459,7 @@
           "name": "Словник"
         },
         "curriculum_guide/coursec/2020": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "lesson_plans/coursec/2020": {
           "name": "Плани уроків"
@@ -474,7 +474,7 @@
           "name": "Словник"
         },
         "curriculum_guide/coursed/2020": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "lesson_plans/coursed/2020": {
           "name": "Плани уроків"
@@ -489,7 +489,7 @@
           "name": "Словник"
         },
         "curriculum_guide/coursee/2020": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "lesson_plans/coursee/2020": {
           "name": "Плани уроків"
@@ -504,7 +504,7 @@
           "name": "Словник"
         },
         "curriculum_guide/coursef/2020": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "lesson_plans/coursef/2020": {
           "name": "Плани уроків"
@@ -547,23 +547,23 @@
           "url": "https://forum.code.org/c/csd"
         },
         "all_resources/csd/2021": {
-          "name": "Розділ 1 Ресурси",
+          "name": "Розділ 1 - Ресурси",
           "url": "/s/csd1-2021/resources"
         },
         "all_standards/csd/2021": {
-          "name": "Розділ 1 Стандарти"
+          "name": "Розділ 1 - Стандарти"
         },
         "all_vocabulary/csd/2021": {
-          "name": "Розділ 1 Словник",
+          "name": "Розділ 1 - Словник",
           "url": "/s/csd1-2021/vocab"
         },
         "csd_curriculum_guide/csd/2021": {
-          "name": "Керівництво з навчальної програми CSD",
+          "name": "Методичні рекомендації до програми CSD",
           "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
           "type": "Ресурс"
         },
         "csd_implementation_guide/csd/2021": {
-          "name": "Практика впровадження CSD",
+          "name": "Рекомендації з реалізації CSD",
           "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
           "type": "Ресурс"
         },
@@ -575,14 +575,14 @@
         "aluminum-boats-activity-guide-2020/csd/2021": {
           "name": "Алюмінієві човни",
           "url": "https://docs.google.com/document/d/1dY3N0DvsPLoPRgWOXcSwRKGxZGaiP2HI84QaalQcE7s/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "how-to-videos/csd/2021": {
           "name": "Інструкції до відео на Code.org ",
           "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-"
         },
         "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
-          "name": "Розділ 1 CSD - Розв'язування задач та обчислення",
+          "name": "Розділ 1 CSD - Вирішення проблем та обчислення",
           "url": "https://docs.google.com/presentation/d/1shN8hHC5rgEgb09IU_2eYoU1cDBEee924-E7q6RDUcc/copy",
           "type": "Слайди"
         },
@@ -599,7 +599,7 @@
         "the-problem-solving-process/csd/2021": {
           "name": "Процес вирішення проблем",
           "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "problem-solving-process/csd/2021": {
           "name": "Процес вирішення проблем",
@@ -613,7 +613,7 @@
         "solving-problems-activity-guide-2020/csd/2021": {
           "name": "Вирішення проблем",
           "url": "https://docs.google.com/document/d/1HUE7g2tqk-_3wiOU4cEFfE4CoOQ5kMzZQc-BTXdco5E/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Що таке комп’ютер?",
@@ -628,12 +628,12 @@
         "what-is-a-computer-version-b/csd/2021": {
           "name": "Що таке комп'ютер (Версія B)",
           "url": "https://docs.google.com/document/d/1z4LfopE0NCEdiQo2BhYDXGm39Z7Wgr-SZjN1nw2U00Q/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "what-is-a-computer-version-a/csd/2021": {
           "name": "Що таке комп'ютер (Версія А)",
           "url": "https://docs.google.com/document/d/1I0Pw3qKhtT0TdbPME3EKsi-L7ufgpxB3JBT59uxgp4w",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "input-and-output-2020/csd/2021": {
           "name": "Вхідні та вихідні дані",
@@ -643,17 +643,17 @@
         "input-and-output-1/csd/2021": {
           "name": "Вхідні та вихідні дані",
           "url": "https://docs.google.com/document/d/1Wf9oUuRi5iNb2cVrn1F8kbDDys0CcAcN-m4ZLpXohmY",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "processing-2020/csd/2021": {
-          "name": "Застосунки з обробкою даних",
+          "name": "Застосунки з опрацюванням даних",
           "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing",
           "type": "Зразок"
         },
         "apps-with-processing/csd/2021": {
-          "name": "Застосунки з обробкою даних",
+          "name": "Застосунки з опрацюванням даних",
           "url": "https://docs.google.com/document/d/1X_F-Sr4pj_E4jM0eGqE9crfrY2bNEozJqPw765QQ4Jw/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "what-do-computers-do/csd/2021": {
           "name": "Що роблять комп’ютери",
@@ -668,7 +668,7 @@
         "storage/csd/2021": {
           "name": "Застосунки зі сховищем",
           "url": "https://docs.google.com/document/d/17X6xpUxRugcGDMRzplSRPU3d18VviQ4v7uOj2E3s99s/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "project-propose-an-app-2020/csd/2021": {
           "name": "Зразок інструкції до проєкту",
@@ -676,12 +676,12 @@
           "type": "Зразок"
         },
         "app-proposal-project/csd/2021": {
-          "name": "Застосунки та розв'язання проблем",
+          "name": "Застосунки та вирішення проблем",
           "url": "https://docs.google.com/document/d/1Oza12wkU_FWawNSeXBae_v6knPNdO8Ph5EPeYBSvy3k/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
-          "name": "Застосунки та розв'язання проблем",
+          "name": "Застосунки та вирішення проблем",
           "url": "https://docs.google.com/document/d/1pJbXBKzppBtWwjo3bBXD8fE_QfI4yt2gQQD1hou1_Gg/",
           "type": "Рецензування"
         },
@@ -696,29 +696,29 @@
           "type": "Зразок"
         },
         "peer_review_exemplar/csd/2021": {
-          "name": "Приклад експертної оцінки",
+          "name": "Приклад взаємо-оцінки",
           "url": "https://docs.google.com/document/d/1Vctwpr27vkSbw3SLuOtT86jzltqWt6LQ1YotnbutEgs/edit",
           "type": "Зразок"
         },
         "apps_and_problem_solving/csd/2021": {
-          "name": "Застосунки та розв'язання проблем",
+          "name": "Застосунки та вирішення проблем",
           "url": "https://docs.google.com/document/d/1lkmNph6eIP1ERFbn7PTbUagWaVnPOiFGgESMKuECTuE/edit",
           "type": "Рубрика"
         },
         "apps_and_problem_solving_-_student_checklist/csd/2021": {
-          "name": "Застосунки та розв'язання задач - Контрольний список для учнів",
+          "name": "Застосунки та вирішення проблем - Контрольний список для учнів",
           "url": "https://docs.google.com/document/d/1KVhC59py0Myrqx2hJcFX9wEST48u_kxZ8CCAzZSwJe0/edit",
           "type": "Ресурс"
         },
         "intro-to-problem-solving-newspaper-table-2020/csd/2021": {
-          "name": "Будування газетного столика",
+          "name": "Будування журнального столика",
           "url": "https://docs.google.com/document/d/1ghhCM2xUqrm2qe6egJ2JGjYNVAHsCTVv3c5ywo-JJmo/edit?usp=sharing",
           "type": "Зразок"
         },
         "build-a-newspaper-table/csd/2021": {
-          "name": "Будування газетного столика",
+          "name": "Будування журнального столика",
           "url": "https://docs.google.com/document/d/1dBzGa8_2iObdnxfSkBtgdYoQXRaM3bIB1eYiDnfAo7k/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "intro-to-problem-solving-spaghetti-bridge-2020/csd/2021": {
           "name": "Міст зі спагетті",
@@ -730,21 +730,21 @@
           "url": "https://docs.google.com/document/d/17j77zulzXehMma9Y8yDrJNTRWnN1B7z1aBgQ4vqg8z0/edit?usp=sharing"
         },
         "intro-to-problem-solving-paper-tower-2020/csd/2021": {
-          "name": "Вступ до розв'язання завдання - паперова вежа",
+          "name": "Вступ до вирішення проблем - Паперова вежа",
           "url": "https://docs.google.com/document/d/1UNCZD2dRyfZB7wW2yW5_zDRF_lzJjmdLeu21YovvmBs/edit?usp=sharing",
           "type": "Зразок"
         },
         "paper-planes/csd/2021": {
           "name": "Паперова вежа",
           "url": "https://docs.google.com/document/d/1B4c4oTSnJdlhXjUmmkVNgPrWa1WxTn2-QLEIg4ZI5yU/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "plane-how-to-videos/csd/2021": {
           "name": "Список відео з інструкціями на Code.org",
           "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5"
         },
         "exploring-problem-solving-animal-theme-2020/csd/2021": {
-          "name": "Шляхи розв'язання проблем - Тема тварин",
+          "name": "Дослідження вирішування проблем - Тема тварин",
           "url": "https://docs.google.com/document/d/1yEDSiEwx6OICs4MZwzl4zBd_aVfVEWd6JlPIqo2mc1c/edit?usp=sharing",
           "type": "Зразок"
         },
@@ -756,17 +756,17 @@
         "solving-problems-activity-guide-animal-2020/csd/2021": {
           "name": "Вирішення проблем",
           "url": "https://docs.google.com/document/d/10kPXjW-A81o_7lIigLzpPq1lCVbE0bT42fxBUT6C758/edit#heading=h.1nymh4dpxwx1",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "exploring-problem-solving-games-theme-2020/csd/2021": {
-          "name": "Шляхи розв'язання проблем - Тема ігор",
+          "name": "Дослідження вирішування проблем - Тема ігор",
           "url": "https://docs.google.com/document/d/1INTy954U_5XR2VgA5Mq17GKfxXHr29KVwMPVfVqcm04/edit?usp=sharing",
           "type": "Зразок"
         },
         "solving-problems-activity-guide-game-2020/csd/2021": {
           "name": "Вирішення проблем",
           "url": "https://docs.google.com/document/d/1Fwpp9gfPGNdF32LlOFTIa0mF6i5c6s2_2uXnRZlvkhU/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "all_code_2/csd/2021": {
           "name": "Весь код"
@@ -783,7 +783,7 @@
           "url": "/s/csd2-2021/vocab"
         },
         "csd_guide_to_debugging/csd/2021": {
-          "name": "Інструкція з відлагодження CSD",
+          "name": "Інструкція з налагодження CSD",
           "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
         },
         "csd_guide_to_differentiation/csd/2021": {
@@ -791,14 +791,14 @@
           "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
-          "name": "Дослідження веб-сторінок",
+          "name": "Дослідження вебсторінок",
           "url": "https://docs.google.com/document/d/1H442FzizijHYbf8mozKacAZNQaMBHNQ2wvXY5qRB8nU/edit?usp=sharing",
           "type": "Зразок"
         },
         "exploring-web-pages/csd/2021": {
-          "name": "Дослідження веб-сторінок",
+          "name": "Дослідження вебсторінок",
           "url": "https://docs.google.com/document/d/1aJj7fg6BQDZlAwBI9KLnQh7_7kZGXi6avPVO0PSqYh0/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "csd_unit_2_-_web_development/csd/2021": {
           "name": "Блок 2 CSD: Веб-розробка",
@@ -806,7 +806,7 @@
           "type": "Слайди"
         },
         "exemplar-text-website/csd/2021": {
-          "name": "Зразковий текст веб-сайту",
+          "name": "Зразковий текст вебсайту",
           "url": "https://codeprojects.org/t0CRT-85_y-VLFBO5RF3VQ/",
           "type": "Веб-сайт"
         },
@@ -816,12 +816,12 @@
           "type": "Ресурс"
         },
         "intro_to_web_lab_part_2/csd/2021": {
-          "name": "Вступ до Веб-лабораторії, Частина 2",
+          "name": "Вступ до Веб Лабораторії, Частина 2",
           "url": "https://youtu.be/Hjl6gbg9kmk",
           "type": "Відео"
         },
         "video_intro_to_web_lab_part_1/csd/2021": {
-          "name": "Відео: Вступ до Веб-лабораторії, Частина 1",
+          "name": "Відео: Вступ до Веб Лабораторії, Частина 1",
           "url": "https://www.youtube.com/watch?v=itx0RYOnoBs",
           "type": "Відео"
         },
@@ -836,6 +836,7 @@
           "type": "Ресурс"
         },
         "video_debugging/csd/2021": {
+          "name": "Відео: Налагодження",
           "url": "https://youtu.be/auv10y-dN4s",
           "type": "Відео"
         },
@@ -866,7 +867,8 @@
         },
         "html-page/csd/2021": {
           "name": "Веб-сторінка HTML",
-          "url": "https://docs.google.com/document/d/1PJlbQlD7Ke9Alb82ci37BbDxJZqC4iUL6XozVoCWJPg"
+          "url": "https://docs.google.com/document/d/1PJlbQlD7Ke9Alb82ci37BbDxJZqC4iUL6XozVoCWJPg",
+          "type": "План проєкту"
         },
         "formatting_html/csd/2021": {
           "name": "Форматування HTML",
@@ -884,12 +886,14 @@
           "type": "Слайди"
         },
         "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Соціальний розшук",
           "url": "https://docs.google.com/document/d/1FX4Js8yX867G4feEbRuWxCdDD2R33f-oHfm5sBD2rnw/edit",
           "type": "Зразок"
         },
         "social-sleuth/csd/2021": {
+          "name": "Соціальний розшук",
           "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "Основи CSS - частина 1",
@@ -933,7 +937,8 @@
         },
         "your-personal-style/csd/2021": {
           "name": "Ваш особистий стиль",
-          "url": "https://docs.google.com/document/d/1vQBq4Aa0IYuQlKD_HgSawYgVwm-QKgO-UHGglzp_bTI/edit"
+          "url": "https://docs.google.com/document/d/1vQBq4Aa0IYuQlKD_HgSawYgVwm-QKgO-UHGglzp_bTI/edit",
+          "type": "План проєкту"
         },
         "licensing-your-work-exemplar-2020/csd/2021": {
           "name": "Ліцензування вашої роботи",
@@ -943,7 +948,7 @@
         "licensing-your-work-2020/csd/2021": {
           "name": "Ліцензування вашої роботи",
           "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "creative-commons-video/csd/2021": {
           "name": "Огляд Creative Commons",
@@ -959,14 +964,14 @@
           "type": "Ресурс"
         },
         "define-your-webpage-2020/csd/2021": {
-          "name": "Визначте свою веб-сторінку",
+          "name": "Визначте свою вебсторінку",
           "url": "https://docs.google.com/document/d/1jn2gZEwppoUfNQYyV-zdBp4phvA4rJZJENt5nsyzMCk/edit?usp=sharing",
           "type": "Зразок"
         },
         "define-your-web-page/csd/2021": {
-          "name": "Визначте свою веб-сторінку",
+          "name": "Визначте свою вебсторінку",
           "url": "https://docs.google.com/document/d/1T410ZSCp3WuuapICLcZYq3tMcONumEMi6HSkpOx4iq4/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "body-styling/csd/2021": {
           "name": "Стилізація основної конструкції",
@@ -979,13 +984,14 @@
           "type": "Сторінка ресурсів"
         },
         "project-guide-personal-web-page-prepare-exemplar-2020/csd/2021": {
-          "name": "Інструкція по проєкту - Персональна веб-сторінка - Підготовка",
+          "name": "Інструкція по проєкту - Особиста вебсторінка - Підготовка",
           "url": "https://docs.google.com/document/d/1zpK8MdquwIvu1yM9RsMqFnDN0bN7qRL3Kwz3MUFtLE4/view",
           "type": "Зразок"
         },
         "person-web-page-prepare/csd/2021": {
-          "name": "Персональна веб-сторінка - Підготуйте",
-          "url": "https://docs.google.com/document/d/1qsiOoSuh_n1oxNEDCrSRwQyKSevuG69B3iojDR3ZQKE/"
+          "name": "Особиста вебсторінка - Підготуйте",
+          "url": "https://docs.google.com/document/d/1qsiOoSuh_n1oxNEDCrSRwQyKSevuG69B3iojDR3ZQKE/",
+          "type": "План проєкту"
         },
         "practices-reflection-exemplar-2020/csd/2021": {
           "name": "Практика рефлексії",
@@ -993,35 +999,37 @@
           "type": "Зразок"
         },
         "project-guide-personal-web-page-reflect-exemplar-2020/csd/2021": {
-          "name": "Інструкція по проєкту - Персональна веб-сторінка - Рефлексія",
+          "name": "Інструкція по проєкту - Особиста вебсторінка - Рефлексія",
           "url": "https://docs.google.com/document/d/177zgnLZgK8EWy2J_ztV7iAKPmi6uhRk5EZ4PocHBG0Y/view",
           "type": "Зразок"
         },
         "peer-review-personal-website-exemplar-2020/csd/2021": {
-          "name": "Експертна оцінка - персональний веб-сайт",
+          "name": "Експертна оцінка - особистий вебсайт",
           "url": "https://docs.google.com/document/d/1HrCgKzgZ4QqMBU4nqLd9NsDBKvjnbSZQxyhpZpSA92k/view",
           "type": "Зразок"
         },
         "personal-web-page-1/csd/2021": {
-          "name": "Персональна веб-сторінка",
+          "name": "Особиста вебсторінка",
           "url": "https://docs.google.com/document/d/1IwOlw4RqqWtpi6qvOZf7BoQt_hpAGSL_p7os8rLOTK0/",
           "type": "Рецензування"
         },
         "person-web-page-reflect/csd/2021": {
-          "name": "Персональна веб-сторінка - Рефлексія",
-          "url": "https://docs.google.com/document/d/1J8BV9ekJXvT8-KzWkzc8_XOTam5BFzZ42A_0ZaUXoww/"
+          "name": "Особиста вебсторінка - Рефлексія",
+          "url": "https://docs.google.com/document/d/1J8BV9ekJXvT8-KzWkzc8_XOTam5BFzZ42A_0ZaUXoww/",
+          "type": "План проєкту"
         },
         "personal-web-page/csd/2021": {
-          "name": "Персональна веб-сторінка",
+          "name": "Особиста вебсторінка",
           "url": "https://docs.google.com/document/d/1xDnK38-eItsz7ccg4OctJjBuy7svd3yBXF9tTvDpGo0/view",
           "type": "Рубрика"
         },
         "publishing_your_website/csd/2021": {
+          "name": "Публікація свого вебсайту",
           "url": "https://youtu.be/2qcIlRtdpgE",
           "type": "Відео"
         },
         "personal_web_page_-_student_checklist/csd/2021": {
-          "name": "Персональна веб-сторінка - Контрольний список учнів",
+          "name": "Особиста вебсторінка - Контрольний список учнів",
           "url": "https://docs.google.com/document/d/1pL93fCFPGSxOo9nCmU3bfAw2m2MhY7B9nG-k-IT28Lo/view",
           "type": "Ресурс"
         },
@@ -1038,14 +1046,15 @@
         "websites-for-a-purpose/csd/2021": {
           "name": "Веб-сайти для будь-якої цілі",
           "url": "https://docs.google.com/document/d/18UiOaX7ThahC5cfDeWVMNjCpEy_BKPNz5MDOjLlSkbU/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "website-team-plan-2020/csd/2021": {
-          "name": "План команди веб-сайту",
+          "name": "План команди вебсайту",
           "url": "https://docs.google.com/document/d/1aiH8sJkWOupnPNC99pgCIUvC9Posjojbx8lrZy-7faM/edit?usp=sharing/edit?usp=sharing",
           "type": "Зразок"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
+          "name": "Відео: Керування розбіжностями",
           "url": "https://youtu.be/6GgrUeVT-xs",
           "type": "Відео"
         },
@@ -1055,9 +1064,9 @@
           "type": "Відео"
         },
         "website-team-plan/csd/2021": {
-          "name": "План команди веб-сайту",
+          "name": "План команди вебсайту",
           "url": "https://docs.google.com/document/d/1OchbcAqSQLvL0-ho3tOFTc3sd461KK-4Mz0qHI_6kHc/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "links-and-research-1/csd/2021": {
           "name": "Посилання та дослідження",
@@ -1067,16 +1076,17 @@
         "links-and-research/csd/2021": {
           "name": "Посилання та дослідження",
           "url": "https://docs.google.com/document/d/1fx7eXn3778CUU2GHHagCj1AXY95ll_HJssfeZDbN4gk/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "how-search-works-video/csd/2021": {
+          "name": " Відео: Як працює пошук",
           "url": "https://youtu.be/LVV_93mBfSU",
           "type": "Відео"
         },
         "internet-scavenger-hunt/csd/2021": {
-          "name": "Полювання на сміття в Інтернеті",
+          "name": "Полювання на сміття в інтернеті",
           "url": "https://docs.google.com/document/d/1aDiUc0G3srj0CCaibxdWYfJNpuKK0MygpOz_NYsjKIQ/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "classes/csd/2021": {
           "name": "Класи",
@@ -1094,8 +1104,9 @@
           "type": "Рубрика"
         },
         "plan-a-multi-page-website/csd/2021": {
-          "name": "Сплануйте багатосторінковий веб-сайт",
-          "url": "https://docs.google.com/document/d/1RlLpWsXEHX2GC6eVVsYrx7pAaZ_VUACKpgAQfkWUKKw"
+          "name": "Сплануйте багатосторінковий вебсайт",
+          "url": "https://docs.google.com/document/d/1RlLpWsXEHX2GC6eVVsYrx7pAaZ_VUACKpgAQfkWUKKw",
+          "type": "План проєкту"
         },
         "website_for_a_purpose_-_student_checklist/csd/2021": {
           "name": "Веб-сайт для певної мети - Контрольний список для учнів",
@@ -1117,7 +1128,7 @@
           "type": "Зразок"
         },
         "peer-review-final-personal-website-exemplar-2020/csd/2021": {
-          "name": "Експертна оцінка - фінальна персональна веб-сторінка",
+          "name": "Експертна оцінка - фінальна особиста вебсторінка",
           "url": "https://docs.google.com/document/d/1fbZ7Ik_H0r39t5yHEkgrYa5mSbx5BCqfLpuH6G1pP6k/view",
           "type": "Зразок"
         },
@@ -1128,7 +1139,8 @@
         },
         "website-for-a-purpose-reflect/csd/2021": {
           "name": "Веб-сайт для будь-якої цілі - Відображення",
-          "url": "https://docs.google.com/document/d/1aThUWcwpI-7KNFtWfbn0V2haHiOHbVzDaIYG6SfCiGs/edit"
+          "url": "https://docs.google.com/document/d/1aThUWcwpI-7KNFtWfbn0V2haHiOHbVzDaIYG6SfCiGs/edit",
+          "type": "План проєкту"
         },
         "teacher_forum_1/csd/2021": {
           "name": "Форум вчителів",
@@ -1151,7 +1163,7 @@
         "cs-entertainment-activity/csd/2021": {
           "name": "Інформатика у сфері розваг",
           "url": "https://docs.google.com/document/d/110oPOgyPaeWt1_9_UEaw5T_7cCG_xgPDhwkTF2J47j8/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "cs_in_entertainment/csd/2021": {
           "name": "Інформатика у сфері розваг",
@@ -1176,18 +1188,20 @@
         "drawing_shapes_version_b_/csd/2021": {
           "name": "Малювання фігур (версія B)",
           "url": "https://docs.google.com/document/d/1OCYkSeNuuEggdlmhNOG-LOfl51ctcyzyFmsPdQAtq84/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "drawing_shapes_version_a_/csd/2021": {
           "name": "Малювання фігур (версія A)",
           "url": "https://docs.google.com/document/d/1ht990ZS0tJFc8dg-B6nmOi6nzayWq3ODiNNL4EBORlM/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
+          "name": "Малювання в Ігровій Лабораторії - Частина 1",
           "url": "https://youtu.be/PXn9gKiKKFo",
           "type": "Відео"
         },
         "drawing_in_game_lab_-_part_2/csd/2021": {
+          "name": "Малювання в Ігровій Лабораторії - Частина 2",
           "url": "https://youtu.be/QLabeWhw_O0",
           "type": "Відео"
         },
@@ -1197,10 +1211,12 @@
           "type": "Ресурс"
         },
         "shapes_and_parameters_-_map_level/csd/2021": {
+          "name": "Фігури та параметри",
           "url": "https://studio.code.org/docs/concepts/game-lab/shapes-and-parameters/",
           "type": "Ресурс"
         },
         "shapes_and_parameters/csd/2021": {
+          "name": "Фігури та параметри",
           "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -1218,10 +1234,12 @@
           "type": "Ресурс"
         },
         "random_numbers/csd/2021": {
+          "name": "Випадкові числа",
           "url": "https://drive.google.com/file/d/1BZwjs4cvsGdhtNhY8qjUXWkCgblmZUcD/view",
           "type": "Ресурс"
         },
         "introduction_to_sprites/csd/2021": {
+          "name": "Знайомство зі спрайтами",
           "url": "https://youtu.be/aUHzpGt9nso",
           "type": "Відео"
         },
@@ -1241,6 +1259,7 @@
           "type": "Ресурс"
         },
         "sprite_properties/csd/2021": {
+          "name": "Властивості спрайтів",
           "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -1257,7 +1276,7 @@
         "sprite-scene-planning/csd/2021": {
           "name": "Планування сцен зі спрайтами",
           "url": "https://docs.google.com/document/d/10TvBlmIsCVtf4encEutlYmzU30voTyE1L3PNXQQFobw/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "random-dot-flipbook/csd/2021": {
           "name": "Кінеограф з випадковими точками",
@@ -1273,14 +1292,17 @@
           "type": "Відео"
         },
         "introduction_to_the_draw_loop/csd/2021": {
+          "name": "Знайомство з циклом малювання",
           "url": "https://youtu.be/G6QJeuHhqCM",
           "type": "Відео"
         },
         "the_draw_loop/csd/2021": {
+          "name": "Цикл малювання",
           "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
           "type": "Ресурс"
         },
         "animating-sprites/csd/2021": {
+          "name": "Переміщення спрайтів",
           "url": "https://youtu.be/G666sFzAg5g",
           "type": "Відео"
         },
@@ -1302,15 +1324,15 @@
         "animated-scene/csd/2021": {
           "name": "Анімована сцена",
           "url": "https://docs.google.com/document/d/1vYDwIgLOLPH4ymHusLyTo4Ydn5OEOCJ4rf5ZbQ9rrOQ/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "boolean_expressions/csd/2021": {
-          "name": "Булеві вирази",
+          "name": "Логічні вирази",
           "url": "https://youtu.be/_j9nvYKaOVE",
           "type": "Відео"
         },
         "conditional_statements/csd/2021": {
-          "name": "Умовні твердження",
+          "name": "Умовні конструкції",
           "url": "https://youtu.be/TuLIK7DcPWs",
           "type": "Відео"
         },
@@ -1328,7 +1350,7 @@
           "type": "Ресурс"
         },
         "if_else_statements/csd/2021": {
-          "name": "Якщо/Інші Твердження",
+          "name": "Команди Якщо/Інакше",
           "url": "https://youtu.be/6m6FFUJsOzo",
           "type": "Відео"
         },
@@ -1344,7 +1366,8 @@
         },
         "interactive-card-project-guide-2019/csd/2021": {
           "name": "Інтерактивна картка",
-          "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/"
+          "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/",
+          "type": "План проєкту"
         },
         "interactive-card-1-2-3-4/csd/2021": {
           "name": "Інтерактивна картка",
@@ -1376,20 +1399,22 @@
           "type": "Ресурс"
         },
         "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Виявлення зіткнень",
           "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
           "type": "Зразок"
         },
         "collision_detection_version_b_/csd/2021": {
           "name": "Виявлення зіткнення (Версія B)",
           "url": "https://docs.google.com/document/d/1FquQ6g2xpWsJyXf1GFrBM33aL7mxn-htJpG8plRQ9MU/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "collision_detection_version_a_/csd/2021": {
           "name": "Виявлення зіткнення (Версія A)",
           "url": "https://docs.google.com/document/d/18RKLr5ZwCX5OOpzpnQuekQMpas7JreTcQxL1TyCnv7o/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "collision_detection/csd/2021": {
+          "name": "Виявлення зіткнень",
           "url": "https://drive.google.com/file/d/1xPa35tY4P8GUXKSMp0F6OUTQjcDpMa6M/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -1405,7 +1430,8 @@
         },
         "side-scroller/csd/2021": {
           "name": "Прокрутка збоку",
-          "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit"
+          "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit",
+          "type": "План проєкту"
         },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
           "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
@@ -1421,7 +1447,8 @@
           "type": "Рубрика"
         },
         "flyer-game/csd/2021": {
-          "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit"
+          "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit",
+          "type": "План проєкту"
         },
         "calling_and_defining_functions/csd/2021": {
           "name": "Функції",
@@ -1458,7 +1485,8 @@
         },
         "make-your-own-game/csd/2021": {
           "name": "Створіть власну гру",
-          "url": "https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/edit?usp=sharing",
+          "type": "План проєкту"
         },
         "make-your-own-game-1-2-3/csd/2021": {
           "name": "Створіть власну гру",
@@ -1501,7 +1529,7 @@
         "designing_with_empathy/csd/2021": {
           "name": "Дизайн з емпатією",
           "url": "https://docs.google.com/document/d/10uAtyNYjzc91_hMTBRHRkSSxx7QJRZptkguzeH8Dwqg/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "designing_with_empathy_1/csd/2021": {
           "name": "Дизайн з емпатією",
@@ -1516,7 +1544,7 @@
         "reacting-as-your-user/csd/2021": {
           "name": "Реагувати як користувач",
           "url": "https://docs.google.com/document/d/1cQXtr4zj3LEuOMoOYJf8KtBUl9ge3qmwBBzEBv8GixA/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "profile-1/csd/2021": {
           "name": "Профіль 1",
@@ -1556,7 +1584,7 @@
         "user-centered-design-2021/csd/2021": {
           "name": "Дизайн, орієнтований на користувача (\"Визначити\" та \"Підготувати\") 2021",
           "url": "https://docs.google.com/document/d/1XkDwOnyf6zxvBOb6MVYk00X9YuMnQdd-0xT11-idHRg/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "the-design-thinking-process/csd/2021": {
           "name": "Процес дизайн-мислення",
@@ -1571,7 +1599,7 @@
         "user-centered-design-reflect-2021/csd/2021": {
           "name": "Дизайн, орієнтований на користувача (\"Спробувати\" та \"Обміркувати\") 2021",
           "url": "https://docs.google.com/document/d/1mHWy7a3_eSdEgjXRFCb1ezGFdi1QMgPTtitqHap0ERQ/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "user_centered_design_try_reflect_/csd/2021": {
           "name": "Дизайн, орієнтований на користувача (\"Спробувати\" та \"Обміркувати\")",
@@ -1586,12 +1614,12 @@
         "user-experience-computer/csd/2021": {
           "name": "Тестування користувачами (комп'ютер)",
           "url": "https://docs.google.com/document/d/1_ce_F8_tnexWhS718ALJadACNKe0oomeIeyKTwuWmAg/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "user-experience-user/csd/2021": {
           "name": "Тестування користувачами (користувач)",
           "url": "https://docs.google.com/document/d/1qE028_n5aq9n8ebVm09uzu0169ykzvxfl8pUvV6S6D8/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "improve-a-screen-exemplar-19/csd/2021": {
           "name": "Покращення екрана",
@@ -1606,12 +1634,12 @@
         "improve-a-screen/csd/2021": {
           "name": "Покращення екрана",
           "url": "https://docs.google.com/document/d/1y0YfE6qZKKlRRpeVGU2d-SuctJP9P5fI2062yo85nZg/edit?usp=sharing",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "user-interviews-1/csd/2021": {
           "name": "Інтерв'ю з користувачами",
           "url": "https://docs.google.com/document/d/1nkieg4ryGPbOFt6AkNYEzdvjm8pJi2zr_BM8ty3kbtc/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "user-interviews/csd/2021": {
           "name": "Приклад інтерв'ю з користувачами",
@@ -1639,7 +1667,7 @@
         "app-design-kickoff-2019/csd/2021": {
           "name": "Початок розробки застосунку",
           "url": "https://docs.google.com/document/d/163Ene8sb4nK0kfoDHsIBzUCMJWiFtaYZ8YYVIytGH4A/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "example-apps-for-good/csd/2021": {
           "name": "Приклади застосунків для добра",
@@ -1653,7 +1681,7 @@
         "market-research/csd/2021": {
           "name": "Дослідження ринку",
           "url": "https://docs.google.com/document/d/1xROZ51ntcX11OmXXfB46slca_ViqIjmOrAydkytVWdw/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "market_research/csd/2021": {
           "name": "Дослідження ринку",
@@ -1663,7 +1691,7 @@
         "explore-ui-elements/csd/2021": {
           "name": "Дослідження елементів UI",
           "url": "https://docs.google.com/document/d/1OyTMxdwh3yLv7EnE-FOtxb9mDScbkMgjZn_ypxF7q5U/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "explore_ui_elements/csd/2021": {
           "name": "Дослідження елементів UI",
@@ -1673,7 +1701,7 @@
         "paper-prototype-planning/csd/2021": {
           "name": "Планування паперового прототипу",
           "url": "https://docs.google.com/document/d/1q06xCd9SXPup1KHcfXL0kczUNUs5C-rUTfxyB2qhs-Y/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "phone-paper-prototype/csd/2021": {
           "name": "Паперовий прототип для телефону",
@@ -1696,12 +1724,12 @@
         "user-test-cases/csd/2021": {
           "name": "Кейси тестування користувачами",
           "url": "https://docs.google.com/document/d/1i1_B7ZK8ljkijlKLIKndNtpbNYiY34Xe5W1vsigjw7I/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "paper-prototype-user-testing-1-2/csd/2021": {
           "name": "Тестування паперового прототипу користувачами",
           "url": "https://docs.google.com/document/d/1uEBql95st5PNTCzJUbytcSwUe4nu7JD-AxpjxlAVx3k/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "whats-for-lunch-testing/csd/2021": {
           "name": "Тестування \"What's For Lunch\"",
@@ -1721,12 +1749,12 @@
         "screen-ownership-2021/csd/2021": {
           "name": "Власники екранів (2021)",
           "url": "https://docs.google.com/document/d/1iCbvI452ztUOn1jPqcVBQUg9EiuzCIwhV7rWPuFCAQ8/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "screen-design-1/csd/2021": {
           "name": "Дизайн екрана (2021)",
           "url": "https://docs.google.com/document/d/1QGuwv8brhQRgXewOgsEV1zy7qrhCMawqlMNP4WLNh9Y/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "model-screen-design/csd/2021": {
           "name": "Дизайн зразка екрана",
@@ -1768,12 +1796,12 @@
         "digital-prototype-user-testing/csd/2021": {
           "name": "Тестування цифрового прототипу користувачами",
           "url": "https://docs.google.com/document/d/1hdfiToUH-GACjesuIOIQB_C9FYqS-HjAHkGc5ju1kN0/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "bugs-and-features-planning/csd/2021": {
           "name": "Баги та фічі",
           "url": "https://docs.google.com/document/d/1TGQ7XrKwn9fPRG0Mx73KJa8aGns6mZf49Q9FaNd-s4Y/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "bugs_and_features/csd/2021": {
           "name": "Баги та фічі",
@@ -1781,8 +1809,9 @@
           "type": "Зразок"
         },
         "updating-your-prototype/csd/2021": {
+          "name": "Оновлення прототипу",
           "url": "https://docs.google.com/document/d/1-Ax_KooQaPObURbSS7tYp00gshGzIjufv7P-y5UU98M/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "app-presentation/csd/2021": {
           "name": "Презентація застосунку",
@@ -1839,7 +1868,7 @@
           "type": "Слайди"
         },
         "representation-matters-exemplar-2019/csd/2021": {
-          "name": "Представлення має значення",
+          "name": "Кодування має значення",
           "url": "https://docs.google.com/document/d/17LnkRYXZMiyjC9enTcZRp2akfySN_YYmMe8fJRmkF4E/edit",
           "type": "Зразок"
         },
@@ -1849,17 +1878,17 @@
           "type": "Ресурс"
         },
         "representation-matters/csd/2021": {
-          "name": "Представлення має значення",
+          "name": "Кодування має значення",
           "url": "https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/edit?usp=sharing",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "representing-information-1/csd/2021": {
-          "name": "Представлення інформації",
+          "name": "Кодування інформації",
           "url": "https://docs.google.com/document/d/13uCoIIaBhxSzVqMk9xMBDJzQ0KBT-cBav3Bb3srftkk/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "representing-information-exemplar-2019/csd/2021": {
-          "name": "Представлення інформації 1",
+          "name": "Кодування інформації 1",
           "url": "https://docs.google.com/document/d/1B3BDFK50Na6D28aoZFHHtBTInThj26Qgdu82Z7YrcRI/edit",
           "type": "Зразок"
         },
@@ -1868,7 +1897,7 @@
           "url": "https://docs.google.com/document/d/1C4ibYExm68IWA-1q_RujlEMZhxwwjCKIaH7UT-fMvy8/edit"
         },
         "representing_information_2/csd/2021": {
-          "name": "Представлення інформації 2",
+          "name": "Кодування інформації 2",
           "url": "https://docs.google.com/document/d/1XXyUF6qGzMpriXd89XH8Kg10jMwiWIsbC8_utCJIYRY/edit",
           "type": "Зразок"
         },
@@ -1885,7 +1914,7 @@
         "ascii-challenges/csd/2021": {
           "name": "ASCII Challenges",
           "url": "https://docs.google.com/document/d/1YN3r7hmuf_fFpOhnIMRDrUbEha7Ij8mP647X3FdrBz0/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "ascii_challenges/csd/2021": {
           "name": "ASCII Challenges",
@@ -1893,13 +1922,14 @@
           "type": "Відповіді"
         },
         "how-computers-work-data-and-binary/csd/2021": {
+          "name": "Двійкова система і дані",
           "url": "https://www.youtube.com/watch?v=USCBCmwMCDA",
           "type": "Відео"
         },
         "representing-numbers-2021/csd/2021": {
-          "name": "Представлення чисел 2021",
+          "name": "Кодування чисел 2021",
           "url": "https://docs.google.com/document/d/1fJwrzxyEtp8LFLKdCHod9ZO0b6U-DSjjJzpaBBCGcQo/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "number-cards-1/csd/2021": {
           "name": "Картки з номерами",
@@ -1907,7 +1937,7 @@
           "type": "Цифрові підручні матеріали"
         },
         "representing-numbers-exemplar-2019/csd/2021": {
-          "name": "Представлення чисел",
+          "name": "Кодування чисел",
           "url": "https://docs.google.com/document/d/1t9wdaM33w8EfC6MNxoqdkC0M974ez5FGQIPDj8lHgn4/edit",
           "type": "Зразок"
         },
@@ -1924,7 +1954,7 @@
         "activity-guide-pet-records/csd/2021": {
           "name": " Інструкція до завдання - Записи про домашніх тварин",
           "url": "https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "ascii-to-binary-table/csd/2021": {
           "name": "Таблиця перетворення ASCII в двійковий код",
@@ -1934,7 +1964,7 @@
         "keeping-data-secret/csd/2021": {
           "name": "Медичні картки",
           "url": "https://docs.google.com/document/d/1dwpyCS7QjQg9L6h-V8Xnc6r21P6VCiFCJckk_ZBlxco/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "unit_5_data_society/csd/2021": {
           "name": "Розділ 5 \"Дані та суспільство\"",
@@ -1944,7 +1974,7 @@
         "secret_messages_2021/csd/2021": {
           "name": "Таємні повідомлення 2021",
           "url": "https://docs.google.com/document/d/1McCQtY7xWPnKvemkAf0bLxxxyJVJzQomWv4wcjInjXc/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "medical_records/csd/2021": {
           "name": "Медичні картки",
@@ -1952,12 +1982,12 @@
           "type": "Відповіді"
         },
         "create-a-representation-exemplar-2019/csd/2021": {
-          "name": "Створення системи представлення",
+          "name": "Створення системи кодування",
           "url": "https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit",
           "type": "Зразок"
         },
         "encode-a-thing/csd/2021": {
-          "name": "Створення системи представлення",
+          "name": "Створення системи кодування",
           "url": "https://docs.google.com/document/d/1DWD0xxNqdoAeusdS2NBQQL_lCGjvx8_uS_tb0Fzvfhw/edit#"
         },
         "unit_5_data_society_1/csd/2021": {
@@ -1966,16 +1996,16 @@
           "type": "Слайди"
         },
         "create_a_representation/csd/2021": {
-          "name": "Створення системи представлення",
+          "name": "Створення системи кодування",
           "url": "https://docs.google.com/document/d/1Ndo0YTX76UMcxiY_SQz_CgPyrbux1Vzqi9KcM5-Ijw8/edit",
           "type": "Рубрика"
         },
         "create_a_representation_-_student_checklist/csd/2021": {
-          "name": "Створення системи представлення - Контрольний список для учнів",
+          "name": "Створення системи кодування - Контрольний список для учнів",
           "url": "https://docs.google.com/document/d/1UGYRASWLwE7LulGVyKKKN96_DMUvRzjHbkI5rBqtP2Q/view"
         },
         "create_a_representation_marked_rubrics/csd/2021": {
-          "name": "Створення системи представлення - Марковані рубрикатори",
+          "name": "Створення системи кодування - Марковані рубрикатори",
           "url": "https://docs.google.com/document/d/1ln_KKQGsghLvPZv2dtM2fKrrXk8LDVYKQ7ap_hWR0B8/view",
           "type": "Зразок"
         },
@@ -1987,12 +2017,12 @@
         "problem-solving-with-data/csd/2021": {
           "name": "Розв'язання задач за допомогою даних",
           "url": "https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "structuring-data-2021/csd/2021": {
           "name": "Структурування даних 2021",
           "url": "https://docs.google.com/document/d/1edTTFHTHp4uxIi1CrHvvfEfFCZacCB5BXNfL1uaBf-E/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "structuring_data/csd/2021": {
           "name": "Структурування даних",
@@ -2007,7 +2037,7 @@
         "interpreting-data/csd/2021": {
           "name": "Інтерпретація даних",
           "url": "https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "interpreting-data-1/csd/2021": {
           "name": "Інтерпретація даних",
@@ -2022,7 +2052,7 @@
         "making-decisions-with-data/csd/2021": {
           "name": "Прийняття рішень на основі даних",
           "url": "https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/edit?usp=sharing",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "problem-solving-process-with-data/csd/2021": {
           "name": "Процес розв'язання задач за допомогою даних",
@@ -2042,7 +2072,7 @@
         "automating-data-decisions-1/csd/2021": {
           "name": "Автоматизація прийняття рішень на основі даних",
           "url": "https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
           "name": "Amazon та дані",
@@ -2067,9 +2097,10 @@
         "data-in-the-real-world/csd/2021": {
           "name": "Дані в реальному житті",
           "url": "https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/edit?usp=sharing",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "video_impact_on_society/csd/2021": {
+          "name": "Відео: Вплив на суспільство",
           "url": "https://www.youtube.com/watch?v=ng4c1g3COfs",
           "type": "Відео"
         },
@@ -2094,7 +2125,8 @@
         },
         "solve-a-data-problem/csd/2021": {
           "name": "Дай рекомендацію",
-          "url": "https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/edit"
+          "url": "https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/edit",
+          "type": "План проєкту"
         },
         "project_guide_exemplar/csd/2021": {
           "name": "Зразок інструкції до проєкту",
@@ -2147,7 +2179,7 @@
         "computing-innovations/csd/2021": {
           "name": "Інновації обчислювальної техніки",
           "url": "https://docs.google.com/document/d/1-fvLAoZcGopplA-0bwCFrCRoPFYPCPgSeb2ablNteCg/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "internet-of-things-video/csd/2021": {
           "name": "Інтернет речей",
@@ -2165,10 +2197,12 @@
           "type": "Слайди"
         },
         "designing_screens_with_code/csd/2021": {
+          "name": "Проектування екранів за допомогою коду",
           "url": "https://drive.google.com/file/d/1Jpoij-Rp7SE5-lySX8J2x7vgADErzBt3/view?usp=sharing",
           "type": "Ресурс"
         },
         "random_numbers_1/csd/2021": {
+          "name": "Випадкові числа",
           "url": "https://drive.google.com/file/d/1Ix9XXFWgnPi7xoGUZ9ljdD8gZPrhFLUn/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -2189,9 +2223,10 @@
         "input-and-events/csd/2021": {
           "name": "Вхідні дані та події",
           "url": "https://docs.google.com/document/d/1Pqq09UzF8xNP688FwK7x9zrsjxxM4WajAVtEwM1wYPE/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "board_events/csd/2021": {
+          "name": "Події плати",
           "url": "https://drive.google.com/file/d/1XvRUPOeqLcQonhk1Sq9FYkIv_DAwx6aR/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -2231,7 +2266,8 @@
         },
         "emoji-race-guide/csd/2021": {
           "name": "Перегони емодзі",
-          "url": "https://docs.google.com/document/d/1dn4FIRKYaVb1o7TNiyeKqoT1fBL9FPoqOmJV-nvJYUM/"
+          "url": "https://docs.google.com/document/d/1dn4FIRKYaVb1o7TNiyeKqoT1fBL9FPoqOmJV-nvJYUM/",
+          "type": "План проєкту"
         },
         "booleans_and_comparison_operators_1/csd/2021": {
           "name": "Булеві та оператори порівняння",
@@ -2250,7 +2286,7 @@
         "make-game-guide/csd/2021": {
           "name": "Створіть гру",
           "url": "https://docs.google.com/document/d/1vPeG-bJlGJTVU91eNzxIzp1gTCK-s5AGAX_T-SrfBZE/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "make_a_game_-_student_checklist/csd/2021": {
           "name": "Створіть гру - Контрольний список для учнів",
@@ -2285,6 +2321,7 @@
           "type": "Ресурс"
         },
         "playing_notes/csd/2021": {
+          "name": "Відтворення нот",
           "url": "https://drive.google.com/file/d/1drBef9298Ijm4uir9Iyt0m-NNYowRH38/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -2324,7 +2361,8 @@
         },
         "physical-prototyping-project/csd/2021": {
           "name": "Фізичний прототип",
-          "url": "https://docs.google.com/document/d/1MYLYmwNW4DH7n_oCTZFGnYz52e99htwzKTqOcmL5txQ/edit"
+          "url": "https://docs.google.com/document/d/1MYLYmwNW4DH7n_oCTZFGnYz52e99htwzKTqOcmL5txQ/edit",
+          "type": "План проєкту"
         },
         "circuits_and_buttons/csd/2021": {
           "name": "Контури та кнопки",
@@ -2338,7 +2376,8 @@
         },
         "planning-your-innovation/csd/2021": {
           "name": "Створіть прототип інновації",
-          "url": "https://docs.google.com/document/d/14fdmAmOJpOJw6KXielJAws1wf2AWEnSqQnZueUC6GvM/edit"
+          "url": "https://docs.google.com/document/d/14fdmAmOJpOJw6KXielJAws1wf2AWEnSqQnZueUC6GvM/edit",
+          "type": "План проєкту"
         },
         "peer_review_1_1/csd/2021": {
           "name": "Рецензування 1",
@@ -2374,7 +2413,7 @@
         "classifying_fish/csd/2021": {
           "name": "Класифікування риб",
           "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "introduction_to_machine_learning/csd/2021": {
           "name": "Вступ до машинного навчання",
@@ -2393,7 +2432,7 @@
         "types_of_machine_learning_1/csd/2021": {
           "name": "Типи машинного навчання",
           "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "types_of_machine_learning_2/csd/2021": {
           "name": "Типи машинного навчання",
@@ -2430,7 +2469,7 @@
         "patterns_in_data_1/csd/2021": {
           "name": "Закономірності в даних",
           "url": "https://docs.google.com/document/d/1bOLsuDQuPdMEY3gwNEmGSL-vM_Twpllj-6Toq9qicrU/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "shoe_survey/csd/2021": {
           "name": "Опитування про взуття",
@@ -2450,7 +2489,7 @@
         "classification_models/csd/2021": {
           "name": "Моделі класифікації",
           "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "classification_models_1/csd/2021": {
           "name": "Моделі класифікації",
@@ -2463,17 +2502,19 @@
           "type": "Ресурс"
         },
         "introduction_to_ai_lab/csd/2021": {
+          "name": "Вступ до Лабораторії ШІ",
           "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/copy",
           "type": "Слайди"
         },
         "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Вступ до Лабораторії ШІ",
           "url": "https://www.youtube.com/watch?v=bs3slynHTvc",
           "type": "Відео"
         },
         "training_a_model_in_ai_lab/csd/2021": {
           "name": "Тренування моделі в AI Lab",
           "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
           "url": "https://www.youtube.com/watch?v=Pm70TO--ee4",
@@ -2520,7 +2561,7 @@
         "model_cards_1/csd/2021": {
           "name": "Картки моделі",
           "url": "https://docs.google.com/document/d/1vdmL2UnG7KaMMenq5UsnsC4wbkuQZVP1OxVuT5WJvk0/edit#",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "model_cards_in_ai_lab/csd/2021": {
           "url": "https://www.youtube.com/watch?v=_iAGDFmZhYI",
@@ -2534,7 +2575,7 @@
         "zoo_models/csd/2021": {
           "name": "Моделі зоопарку",
           "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "_key_zoo_models/csd/2021": {
           "name": "[KEY] Моделі зоопарку",
@@ -2559,7 +2600,7 @@
         "numerical_accuracy_-_activity_guide/csd/2021": {
           "name": "Точність числових даних",
           "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "numerical_models/csd/2021": {
           "name": "Числові моделі",
@@ -2569,7 +2610,7 @@
         "zombie_prediction_-_activity_guide/csd/2021": {
           "name": "Передбачення про зомбі",
           "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "zombie_prediction_-_answer_key/csd/2021": {
           "name": "[KEY] Передбачення про зомбі",
@@ -2582,14 +2623,17 @@
           "type": "Відповіді"
         },
         "numerical_data_in_ai_lab/csd/2021": {
+          "name": "Числові дані в Лабораторії ШІ",
           "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
           "type": "Слайди"
         },
         "numerical_data_in_ai_lab_1/csd/2021": {
+          "name": "Числові дані в Лабораторії ШІ",
           "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
+          "name": "Числові дані в Лабораторії ШІ",
           "url": "https://www.youtube.com/watch?v=Po4i_EtpDWI",
           "type": "Відео"
         },
@@ -2781,7 +2825,7 @@
           "type": "Ресурс"
         },
         "curriculum_guide_1/coursea/2021": {
-          "name": "Посібник з методики",
+          "name": "Методичні рекомендації до програми",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "Ресурс"
         },
@@ -2811,22 +2855,22 @@
           "type": "Ресурс"
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
-          "name": "Безпека у Моєму Інтернет-сусідстві: Слайди до уроку",
-          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit",
+          "name": "Безпека у моєму інтернет-районі: Слайди до уроку",
+          "url": "https://docs.google.com/presentation/d/12PEsRb4LtQz_E-BJSmZNd9xnmdmIIiuQjqomcq3MPkQ/edit",
           "type": "Набір слайдів"
         },
         "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
-          "name": "Безпека у Моєму Інтернет-сусідстві: Моє Інтернет-сусідство",
+          "name": "Безпека у моєму інтернет-районі: Моє Інтернет-сусідство",
           "url": "https://www.commonsense.org/education/videos/my-online-neighborhood",
           "type": "Відео уроку"
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
-          "name": "Безпека у Моєму Інтернет-сусідстві: Хвилинка на зупинку",
+          "name": "Безпека у моєму інтернет-районі: Зупинись і поміркуй",
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
           "type": "Роздатковий матеріал"
         },
         "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
-          "name": "Безпека у Моєму Інтернет-сусідстві: Безпека рулить!",
+          "name": "Безпека у моєму інтернет-районі: Безпека рулить!",
           "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
           "type": "Віршований плакат"
         },
@@ -2995,12 +3039,12 @@
           "type": "Ресурс"
         },
         "artist_project_planning_guide/coursea/2021": {
-          "name": "Посібник з планування проєктів Художника",
+          "name": "План проєкту з Художником",
           "url": "https://docs.google.com/document/d/1j4m3VDvrkaRqQ3cFqnqSI7wTFfymunDbkjN7pm7Pt14/template/preview",
           "type": "Роздатковий матеріал"
         },
         "artist_project_planning_guide_1/coursea/2021": {
-          "name": "Посібник з планування проєктів Художника",
+          "name": "План проєкту з Художником",
           "url": "https://docs.google.com/document/d/1Z1M9KLiLuX4pqcb9xpzpmafbmuLOjgtsZGZLQzMXtt4/template/preview",
           "type": "Відповіді"
         },
@@ -3030,7 +3074,7 @@
           "type": "Ресурс"
         },
         "curriculum_guide_1/courseb/2021": {
-          "name": "Посібник з методики",
+          "name": "Методичні рекомендації до програми",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "Ресурс"
         },
@@ -3076,7 +3120,7 @@
         },
         "digital-trails-lesson-slides/courseb/2021": {
           "name": "Цифрові сліди: Слайди для уроку",
-          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
+          "url": "https://docs.google.com/presentation/d/1q_ujXpFBY06ufa_GnX6490uGlnGhRyaRgu3w-W4tdNc/edit",
           "type": "Набір слайдів"
         },
         "feeling_faces_emotion_image/courseb/2021": {
@@ -3193,7 +3237,7 @@
           "type": "Відео"
         },
         "the-right-app-scenarios/courseb/2021": {
-          "name": "Сценарії \"Застосунок, як треба\"",
+          "name": "Сценарії \"Ідеальний застосунок\"",
           "url": "https://docs.google.com/presentation/d/1wWqt0pWEdIBTNVxJ3uGbqAKr0cR15snJUtxs_fLllho/edit#slide=id.g45fb8e6318_0_0",
           "type": "Набір слайдів"
         },
@@ -3218,12 +3262,12 @@
           "type": "Відео"
         },
         "play_lab_project_planning_guide/courseb/2021": {
-          "name": "Посібник з планування проєктів в Ігровій студії",
+          "name": "План проєкту в Ігровій студії",
           "url": "https://docs.google.com/document/d/1w3lryp97htn9ac28F42Hoi3G0rdZx8gd0lvWQ_aZndQ/template/preview",
           "type": "Роздатковий матеріал"
         },
         "play_lab_project_planning_guide_1/courseb/2021": {
-          "name": "Посібник з планування проєктів в Ігровій студії",
+          "name": "План проєкту в Ігровій студії",
           "url": "https://docs.google.com/document/d/10q7gSfNW-xDzvESbjkbpnkEQQWwakVQ00_cZbrRhiXM/template/preview",
           "type": "Відповіді"
         },
@@ -3253,7 +3297,7 @@
           "type": "Ресурс"
         },
         "curriculum_guide_1/coursec/2021": {
-          "name": "Посібник з методики",
+          "name": "Методичні рекомендації до програми",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "Ресурс"
         },
@@ -3284,7 +3328,7 @@
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
           "name": "Зупиняємо образи в мережі: STOP жорстокість в інтернеті: слайди для уроку",
-          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
+          "url": "https://docs.google.com/presentation/d/1AucG8pTXbSBTbmZN8IJhX7CKgOLoUPjxnUyohMXyokI/edit",
           "type": "Набір слайдів"
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
@@ -3434,12 +3478,12 @@
           "type": "Відео про безмашинну вправу"
         },
         "play-lab-project-guide/coursec/2021": {
-          "name": "Посібник з планування проєктів в Ігровій студії",
+          "name": "План проєкту в Ігровій студії",
           "url": "https://docs.google.com/document/d/1wdUd0RViocsMvDqdjb5WQME2e9Hr7PwMeM1vNzSovio/edit",
           "type": "Робочий аркуш"
         },
         "play-lab-project-planning-guide-exemplar/coursec/2021": {
-          "name": "Посібник з планування проєкту в Ігровій студії (Приклад заповнення)",
+          "name": "План проєкту в Ігровій студії (Приклад заповнення)",
           "url": "https://docs.google.com/document/d/1QpMMZTGReEzocnTcez15WMvDHHG7taLdPxKXCsIjFuc/edit",
           "type": "Ресурси для уроку"
         },
@@ -3469,7 +3513,7 @@
           "type": "Ресурс"
         },
         "curriculum_guide_1/coursed/2021": {
-          "name": "Посібник з методики",
+          "name": "Методичні рекомендації до програми",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "Ресурс"
         },
@@ -3520,7 +3564,7 @@
         },
         "password_power-up_lesson_slides/coursed/2021": {
           "name": "Посилення пароля: слайди до уроку",
-          "url": "https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit",
+          "url": "https://docs.google.com/presentation/d/1b19MEJxL5MRVftQeP_vHb0Lma-aoSyKHnVHeKbM3yFg/edit",
           "type": "Слайди"
         },
         "password_power-up_power-up_your_password/coursed/2021": {
@@ -3550,7 +3594,7 @@
         },
         "graph-paper-programming/coursed/2021": {
           "name": "Програмування по клітинках",
-          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/1l_SpN8FNTAUqU5RLiAnpp6WahHprDFdPA8YwaIut_pc/edit?usp=sharing",
           "type": "Робочий аркуш вправи"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
@@ -3626,8 +3670,8 @@
           "name": "Плейлист Spotify (для всіх вікових категорій)"
         },
         "dance-party-project-guide/coursed/2021": {
-          "name": "Інструкція до проєкту \"Танцювальна вечірка\"",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "name": "План проєкту \"Танцювальна вечірка\"",
+          "url": "https://docs.google.com/document/d/1Cep4K9CwUM4HfsqFXHM7eR3ZHQfMBgX6S5HHN66Qu64/edit",
           "type": "Робочий аркуш"
         },
         "dance_party_unplugged/coursed/2021": {
@@ -3681,8 +3725,9 @@
           "type": "Відео про безмашинну вправу"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
-          "name": "Посібник з планування проєктів наприкінці курсу \"Основи інформатики - Курс D\"",
-          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
+          "name": "План підсумкового проєкту \"Основи інформатики - Курс D\"",
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
+          "type": "План проєкту"
         },
         "2021_change_log/coursee/2021": {
           "name": "Журнал змін 2021",
@@ -3710,7 +3755,7 @@
           "type": "Ресурс"
         },
         "curriculum_guide_1/coursee/2021": {
-          "name": "Керівництво з навчальної програми",
+          "name": "Методичні рекомендації до програми",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "Ресурс"
         },
@@ -3760,7 +3805,7 @@
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
           "name": "Стань суперцифровим громадянином: Слайди до уроку",
-          "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
+          "url": "https://docs.google.com/presentation/d/142G9Y1tG1-eboN4Iyg5iMEjD1DTTXjhlHQCVkC4UqmM/edit"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
           "name": "Стань суперцифровим громадянином: Супер цифровий громадянин",
@@ -3783,7 +3828,7 @@
         },
         "private-and-personal-information-lesson-slides/coursee/2021": {
           "name": "Приватна та особиста інформація: Слайди уроку",
-          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit",
+          "url": "https://docs.google.com/presentation/d/1qmC8zb_VEUFDQvxFmqsSj8PBCQyaDsOI3HMxiDM0wz4/edit",
           "type": "Набір слайдів"
         },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
@@ -3871,7 +3916,7 @@
           "type": "Посібник для підготовки вчителя"
         },
         "end-of-course-project-guide/coursee/2021": {
-          "name": "Посібник з планування підсумкового проєкту",
+          "name": "План підсумкового проєкту курсу",
           "url": "https://docs.google.com/document/d/1W3k1Hj7FRDCf1qJsgYxnnjZBCXcGGtVbIK-BSGqd3ko/edit",
           "type": "Робочий аркуш"
         },
@@ -3906,7 +3951,7 @@
           "type": "Ресурс"
         },
         "curriculum_guide_1/coursef/2021": {
-          "name": "Керівництво з навчальної програми",
+          "name": "Методичні рекомендації до програми",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
           "type": "Ресурс"
         },
@@ -3942,12 +3987,12 @@
         },
         "exploring_apps/coursef/2021": {
           "name": "Вивчаємо застосунки",
-          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
+          "url": "https://docs.google.com/document/d/1Kp8dLxcUzveKIxFtLzJfKdiyzPiUYV3B_E-fUOy7GiY/template/preview",
           "type": "Ресурс"
         },
         "exploring_apps_1/coursef/2021": {
           "name": "Вивчаємо застосунки",
-          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
+          "url": "https://docs.google.com/document/d/14vrc6T7dYse2Xsbq6-7uE3oIZuPKLtL95NRHN5RDwmY/template/preview",
           "type": "Відповіді"
         },
         "introducing_sprite_lab/coursef/2021": {
@@ -3987,7 +4032,7 @@
         },
         "the_power_of_words_lesson_slides/coursef/2021": {
           "name": "Сила слова: Слайди уроку",
-          "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit",
+          "url": "https://docs.google.com/presentation/d/1Y09jm89Oz9tvZHu3KzE0sEwwvWdpaUDj0cZxAW7bKAA/edit",
           "type": "Слайди"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
@@ -4027,7 +4072,7 @@
         },
         "mini_project_user_input_programs_1/coursef/2021": {
           "name": "Міні-проєкт: Програми з введенням даних користувачем",
-          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview",
+          "url": "https://docs.google.com/document/d/1XCb-Z_7rN_hutTayWr06eH1oCBNEwj_xnCriRIYeo6s/template/preview",
           "type": "Відповіді"
         },
         "teacher_sandbox_level/coursef/2021": {
@@ -4037,7 +4082,7 @@
         },
         "user_input_programs/coursef/2021": {
           "name": "Програми з введенням даних користувачем",
-          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview",
+          "url": "https://docs.google.com/document/d/1YpVgGcos_aA1BPu4IOc0i14eOi10YbB2jKePIzHIMDw/template/preview",
           "type": "Вказівки до діяльності"
         },
         "pause_and_think_online/coursef/2021": {
@@ -4082,7 +4127,7 @@
         },
         "running-simulations/coursef/2021": {
           "name": "Запуск моделей",
-          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
+          "url": "https://docs.google.com/document/d/1hWTLjY5jmn4aqQgQWna8lt3CNJHd1xYLQXmO8tXZPQs/edit",
           "type": "Робочий аркуш"
         },
         "ai-ml/coursef/2021": {
@@ -4212,8 +4257,8 @@
           "name": "Плейлист Spotify (для всіх вікових категорій)"
         },
         "dance-party-project-guide/express/2021": {
-          "name": "Інструкція до проєкту \"Танцювальна вечірка\"",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "name": "План проєкту \"Танцювальна вечірка\"",
+          "url": "https://docs.google.com/document/d/1Cep4K9CwUM4HfsqFXHM7eR3ZHQfMBgX6S5HHN66Qu64/edit",
           "type": "Робочий аркуш"
         },
         "open-ended_programming_levels/express/2021": {
@@ -4257,8 +4302,9 @@
           "type": "Відео для учнів"
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
-          "name": "Посібник з планування підсумкового проєкту курсу \"CSF Express\"",
-          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+          "name": "План підсумкового проєкту \"CSF Express\"",
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
+          "type": "План проєкту"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Підсумковий проєкт з основ інформатики",
@@ -4315,10 +4361,10 @@
           "type": "Відео"
         },
         "csd_curriculum_guide/csd/2022": {
-          "name": "Керівництво з навчальної програми CSD"
+          "name": "Методичні рекомендації до програми CSD"
         },
         "csd_implementation_guide/csd/2022": {
-          "name": "Практика впровадження CSD"
+          "name": "Рекомендації з реалізації CSD"
         },
         "teacher_forum/csd/2022": {
           "name": "Форум вчителів",
@@ -4341,7 +4387,7 @@
         "aluminum_boats_1/csd/2022": {
           "name": "Алюмінієві човни",
           "url": "https://docs.google.com/document/d/1dY3N0DvsPLoPRgWOXcSwRKGxZGaiP2HI84QaalQcE7s/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "code_org_how-to_videos/csd/2022": {
           "name": "Інструкції до відео на Code.org ",
@@ -4367,7 +4413,7 @@
         "the_problem_solving_process/csd/2022": {
           "name": "Процес вирішення проблем",
           "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "the_problem_solving_process_1/csd/2022": {
           "name": "Процес вирішення проблем",
@@ -4381,7 +4427,7 @@
         "solving_problems_1/csd/2022": {
           "name": "Вирішення проблем",
           "url": "https://docs.google.com/document/d/1HUE7g2tqk-_3wiOU4cEFfE4CoOQ5kMzZQc-BTXdco5E/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "exploring_problem_solving/csd/2022": {
           "type": "Слайди"
@@ -4399,12 +4445,12 @@
         "what_is_a_computer_version_a_/csd/2022": {
           "name": "Що таке комп'ютер (Версія А)",
           "url": "https://docs.google.com/document/d/1I0Pw3qKhtT0TdbPME3EKsi-L7ufgpxB3JBT59uxgp4w",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "what_is_a_computer_version_b_/csd/2022": {
           "name": "Що таке комп'ютер (Версія B)",
           "url": "https://docs.google.com/document/d/1z4LfopE0NCEdiQo2BhYDXGm39Z7Wgr-SZjN1nw2U00Q/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "what_is_a_computer_1/csd/2022": {
           "name": "Що таке комп’ютер",
@@ -4418,24 +4464,24 @@
         "input_and_output_1/csd/2022": {
           "name": "Вхідні та вихідні дані",
           "url": "https://docs.google.com/document/d/1Wf9oUuRi5iNb2cVrn1F8kbDDys0CcAcN-m4ZLpXohmY",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "input_and_output_2/csd/2022": {
           "name": "Вхідні та вихідні дані",
           "type": "Слайди"
         },
         "apps_with_processing/csd/2022": {
-          "name": "Застосунки з обробкою даних",
+          "name": "Застосунки з опрацюванням даних",
           "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing",
           "type": "Зразок"
         },
         "apps_with_processing_1/csd/2022": {
-          "name": "Застосунки з обробкою даних",
+          "name": "Застосунки з опрацюванням даних",
           "url": "https://docs.google.com/document/d/1X_F-Sr4pj_E4jM0eGqE9crfrY2bNEozJqPw765QQ4Jw/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "apps_with_processing_2/csd/2022": {
-          "name": "Застосунки з обробкою даних",
+          "name": "Застосунки з опрацюванням даних",
           "type": "Слайди"
         },
         "apps_with_storage/csd/2022": {
@@ -4446,7 +4492,7 @@
         "apps_with_storage_1/csd/2022": {
           "name": "Застосунки зі сховищем",
           "url": "https://docs.google.com/document/d/17X6xpUxRugcGDMRzplSRPU3d18VviQ4v7uOj2E3s99s/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "what_do_computers_do/csd/2022": {
           "name": "Що роблять комп’ютери",
@@ -4458,22 +4504,22 @@
           "type": "Слайди"
         },
         "apps_and_problem_solving/csd/2022": {
-          "name": "Застосунки та розв'язання проблем",
+          "name": "Застосунки та вирішення проблем",
           "url": "https://docs.google.com/document/d/1Oza12wkU_FWawNSeXBae_v6knPNdO8Ph5EPeYBSvy3k/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "apps_and_problem_solving_-_student_checklist/csd/2022": {
-          "name": "Застосунки та розв'язання задач - Контрольний список для учнів",
+          "name": "Застосунки та вирішення проблем - Контрольний список для учнів",
           "url": "https://docs.google.com/document/d/1KVhC59py0Myrqx2hJcFX9wEST48u_kxZ8CCAzZSwJe0/edit",
           "type": "Ресурс"
         },
         "apps_and_problem_solving_1/csd/2022": {
-          "name": "Застосунки та розв'язання проблем",
+          "name": "Застосунки та вирішення проблем",
           "url": "https://docs.google.com/document/d/1pJbXBKzppBtWwjo3bBXD8fE_QfI4yt2gQQD1hou1_Gg/",
           "type": "Рецензування"
         },
         "apps_and_problem_solving_2/csd/2022": {
-          "name": "Застосунки та розв'язання проблем",
+          "name": "Застосунки та вирішення проблем",
           "url": "https://docs.google.com/document/d/1lkmNph6eIP1ERFbn7PTbUagWaVnPOiFGgESMKuECTuE/edit",
           "type": "Рубрика"
         },
@@ -4483,7 +4529,7 @@
           "type": "Рефлексія"
         },
         "peer_review_exemplar/csd/2022": {
-          "name": "Приклад експертної оцінки",
+          "name": "Приклад взаємо-оцінки",
           "url": "https://docs.google.com/document/d/1Vctwpr27vkSbw3SLuOtT86jzltqWt6LQ1YotnbutEgs/edit",
           "type": "Зразок"
         },
@@ -4501,14 +4547,14 @@
           "type": "Слайди"
         },
         "build_a_newspaper_table/csd/2022": {
-          "name": "Будування газетного столика",
+          "name": "Будування журнального столика",
           "url": "https://docs.google.com/document/d/1ghhCM2xUqrm2qe6egJ2JGjYNVAHsCTVv3c5ywo-JJmo/edit?usp=sharing",
           "type": "Зразок"
         },
         "build_a_newspaper_table_1/csd/2022": {
-          "name": "Будування газетного столика",
+          "name": "Будування журнального столика",
           "url": "https://docs.google.com/document/d/1dBzGa8_2iObdnxfSkBtgdYoQXRaM3bIB1eYiDnfAo7k/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "intro_to_problem_solving_newspapers_/csd/2022": {
           "type": "Слайди"
@@ -4521,7 +4567,7 @@
         "spaghetti_bridge_-_activity_guide/csd/2022": {
           "name": "Міст зі спагетті - Інструкція до завдання",
           "url": "https://docs.google.com/document/d/17j77zulzXehMma9Y8yDrJNTRWnN1B7z1aBgQ4vqg8z0/edit?usp=sharing",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "intro_to_problem_solving_spaghetti_/csd/2022": {
           "type": "Слайди"
@@ -4531,27 +4577,27 @@
           "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5"
         },
         "intro_to_problem_solving_-_paper_tower/csd/2022": {
-          "name": "Вступ до розв'язання завдання - паперова вежа",
+          "name": "Вступ до вирішення проблем - Паперова вежа",
           "url": "https://docs.google.com/document/d/1UNCZD2dRyfZB7wW2yW5_zDRF_lzJjmdLeu21YovvmBs/edit?usp=sharing",
           "type": "Зразок"
         },
         "paper_tower/csd/2022": {
           "name": "Паперова вежа",
           "url": "https://docs.google.com/document/d/1B4c4oTSnJdlhXjUmmkVNgPrWa1WxTn2-QLEIg4ZI5yU/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "intro_to_problem_solving_paper_towels_/csd/2022": {
           "type": "Слайди"
         },
         "exploring_problem_solving_-_animal_theme/csd/2022": {
-          "name": "Шляхи розв'язання проблем - Тема тварин",
+          "name": "Дослідження вирішування проблем - Тема тварин",
           "url": "https://docs.google.com/document/d/1yEDSiEwx6OICs4MZwzl4zBd_aVfVEWd6JlPIqo2mc1c/edit?usp=sharing",
           "type": "Зразок"
         },
         "solving_problems_2/csd/2022": {
           "name": "Вирішення проблем",
           "url": "https://docs.google.com/document/d/10kPXjW-A81o_7lIigLzpPq1lCVbE0bT42fxBUT6C758/edit#heading=h.1nymh4dpxwx1",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "tangrams/csd/2022": {
           "name": "Танграми",
@@ -4562,14 +4608,14 @@
           "type": "Слайди"
         },
         "exploring_problem_solving_-_games_theme/csd/2022": {
-          "name": "Шляхи розв'язання проблем - Тема ігор",
+          "name": "Дослідження вирішування проблем - Тема ігор",
           "url": "https://docs.google.com/document/d/1INTy954U_5XR2VgA5Mq17GKfxXHr29KVwMPVfVqcm04/edit?usp=sharing",
           "type": "Зразок"
         },
         "solving_problems_3/csd/2022": {
           "name": "Вирішення проблем",
           "url": "https://docs.google.com/document/d/1Fwpp9gfPGNdF32LlOFTIa0mF6i5c6s2_2uXnRZlvkhU/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "exploring_problem_solving_games_/csd/2022": {
           "type": "Слайди"
@@ -4587,7 +4633,7 @@
           "name": "Всі терміни"
         },
         "csd_guide_to_debugging/csd/2022": {
-          "name": "Інструкція з відлагодження CSD",
+          "name": "Інструкція з налагодження CSD",
           "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
         },
         "csd_guide_to_differentiation/csd/2022": {
@@ -4595,21 +4641,21 @@
           "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
         },
         "exploring_web_pages/csd/2022": {
-          "name": "Дослідження веб-сторінок",
+          "name": "Дослідження вебсторінок",
           "url": "https://docs.google.com/document/d/1H442FzizijHYbf8mozKacAZNQaMBHNQ2wvXY5qRB8nU/edit?usp=sharing",
           "type": "Зразок"
         },
         "exploring_web_pages_1/csd/2022": {
-          "name": "Дослідження веб-сторінок",
+          "name": "Дослідження вебсторінок",
           "url": "https://docs.google.com/document/d/1aJj7fg6BQDZlAwBI9KLnQh7_7kZGXi6avPVO0PSqYh0/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "exploring_web_pages_2/csd/2022": {
-          "name": "Дослідження веб-сторінок",
+          "name": "Дослідження вебсторінок",
           "type": "Слайди"
         },
         "exemplar_text_website/csd/2022": {
-          "name": "Зразковий текст веб-сайту",
+          "name": "Зразковий текст вебсайту",
           "url": "https://codeprojects.org/t0CRT-85_y-VLFBO5RF3VQ/",
           "type": "Веб-сайт"
         },
@@ -4619,12 +4665,12 @@
           "type": "Ресурс"
         },
         "intro_to_web_lab_part_2/csd/2022": {
-          "name": "Вступ до Веб-лабораторії, Частина 2",
+          "name": "Вступ до Веб Лабораторії, Частина 2",
           "url": "https://youtu.be/Hjl6gbg9kmk",
           "type": "Відео"
         },
         "video_intro_to_web_lab_part_1/csd/2022": {
-          "name": "Відео: Вступ до Веб-лабораторії, Частина 1",
+          "name": "Відео: Вступ до Веб Лабораторії, Частина 1",
           "url": "https://www.youtube.com/watch?v=itx0RYOnoBs",
           "type": "Відео"
         },
@@ -4638,6 +4684,7 @@
           "type": "Ресурс"
         },
         "video_debugging/csd/2022": {
+          "name": "Відео: Налагодження",
           "url": "https://youtu.be/auv10y-dN4s",
           "type": "Відео"
         },
@@ -4647,6 +4694,7 @@
           "type": "Відео"
         },
         "headings/csd/2022": {
+          "name": "Заголовки",
           "type": "Слайди"
         },
         "formatting_html/csd/2022": {
@@ -4666,7 +4714,8 @@
         },
         "html_web_page_3/csd/2022": {
           "name": "Веб-сторінка HTML",
-          "url": "https://docs.google.com/document/d/1PJlbQlD7Ke9Alb82ci37BbDxJZqC4iUL6XozVoCWJPg"
+          "url": "https://docs.google.com/document/d/1PJlbQlD7Ke9Alb82ci37BbDxJZqC4iUL6XozVoCWJPg",
+          "type": "План проєкту"
         },
         "lists/csd/2022": {
           "name": "Списки",
@@ -4684,7 +4733,7 @@
           "type": "Зразок"
         },
         "mini-project_html_web_page/csd/2022": {
-          "name": "Міні-проєкт: веб-сторінка HTML ",
+          "name": "Міні-проєкт: Вебсторінка мовою HTML",
           "type": "Слайди"
         },
         "digital_footprint/csd/2022": {
@@ -4692,12 +4741,14 @@
           "type": "Слайди"
         },
         "social_sleuth/csd/2022": {
+          "name": "Соціальний розшук",
           "url": "https://docs.google.com/document/d/1FX4Js8yX867G4feEbRuWxCdDD2R33f-oHfm5sBD2rnw/edit",
           "type": "Зразок"
         },
         "social_sleuth_1/csd/2022": {
+          "name": "Соціальний розшук",
           "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "intro_to_css_-_part_1/csd/2022": {
           "name": "Основи CSS - частина 1",
@@ -4745,7 +4796,8 @@
         },
         "your_personal_style_2/csd/2022": {
           "name": "Ваш особистий стиль",
-          "url": "https://docs.google.com/document/d/1vQBq4Aa0IYuQlKD_HgSawYgVwm-QKgO-UHGglzp_bTI/edit"
+          "url": "https://docs.google.com/document/d/1vQBq4Aa0IYuQlKD_HgSawYgVwm-QKgO-UHGglzp_bTI/edit",
+          "type": "План проєкту"
         },
         "mini-project_your_personal_style/csd/2022": {
           "name": "Міні-проєкт: Ваш особистий стиль",
@@ -4764,7 +4816,7 @@
         "licensing_your_work_1/csd/2022": {
           "name": "Ліцензування вашої роботи",
           "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "intellectual_property/csd/2022": {
           "name": "Інтелектуальна власність",
@@ -4783,17 +4835,17 @@
           "type": "Слайди"
         },
         "define_your_web_page/csd/2022": {
-          "name": "Визначте свою веб-сторінку",
+          "name": "Визначте свою вебсторінку",
           "url": "https://docs.google.com/document/d/1T410ZSCp3WuuapICLcZYq3tMcONumEMi6HSkpOx4iq4/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "define_your_webpage/csd/2022": {
-          "name": "Визначте свою веб-сторінку",
+          "name": "Визначте свою вебсторінку",
           "url": "https://docs.google.com/document/d/1jn2gZEwppoUfNQYyV-zdBp4phvA4rJZJENt5nsyzMCk/edit?usp=sharing",
           "type": "Зразок"
         },
         "websites_for_expression/csd/2022": {
-          "name": "Веб-сайти для вираження",
+          "name": "Вебсайти для вираження",
           "type": "Слайди"
         },
         "body_styling/csd/2022": {
@@ -4811,11 +4863,12 @@
           "type": "Слайди"
         },
         "personal_web_page_-_prepare/csd/2022": {
-          "name": "Персональна веб-сторінка - Підготуйте",
-          "url": "https://docs.google.com/document/d/1qsiOoSuh_n1oxNEDCrSRwQyKSevuG69B3iojDR3ZQKE/"
+          "name": "Особиста вебсторінка - Підготуйте",
+          "url": "https://docs.google.com/document/d/1qsiOoSuh_n1oxNEDCrSRwQyKSevuG69B3iojDR3ZQKE/",
+          "type": "План проєкту"
         },
         "project_guide_-_personal_web_page_-_prepare/csd/2022": {
-          "name": "Інструкція по проєкту - Персональна веб-сторінка - Підготовка",
+          "name": "Інструкція по проєкту - Особиста вебсторінка - Підготовка",
           "url": "https://docs.google.com/document/d/1zpK8MdquwIvu1yM9RsMqFnDN0bN7qRL3Kwz3MUFtLE4/view",
           "type": "Зразок"
         },
@@ -4828,26 +4881,27 @@
           "type": "Ресурс"
         },
         "peer_review_-_personal_website/csd/2022": {
-          "name": "Експертна оцінка - персональний веб-сайт",
+          "name": "Експертна оцінка - особистий вебсайт",
           "url": "https://docs.google.com/document/d/1HrCgKzgZ4QqMBU4nqLd9NsDBKvjnbSZQxyhpZpSA92k/view",
           "type": "Зразок"
         },
         "personal_web_page/csd/2022": {
-          "name": "Персональна веб-сторінка",
+          "name": "Особиста вебсторінка",
           "url": "https://docs.google.com/document/d/1IwOlw4RqqWtpi6qvOZf7BoQt_hpAGSL_p7os8rLOTK0/",
           "type": "Рецензування"
         },
         "personal_web_page_-_reflect/csd/2022": {
-          "name": "Персональна веб-сторінка - Рефлексія",
-          "url": "https://docs.google.com/document/d/1J8BV9ekJXvT8-KzWkzc8_XOTam5BFzZ42A_0ZaUXoww/"
+          "name": "Особиста вебсторінка - Рефлексія",
+          "url": "https://docs.google.com/document/d/1J8BV9ekJXvT8-KzWkzc8_XOTam5BFzZ42A_0ZaUXoww/",
+          "type": "План проєкту"
         },
         "personal_web_page_-_student_checklist/csd/2022": {
-          "name": "Персональна веб-сторінка - Контрольний список учнів",
+          "name": "Особиста вебсторінка - Контрольний список учнів",
           "url": "https://docs.google.com/document/d/1pL93fCFPGSxOo9nCmU3bfAw2m2MhY7B9nG-k-IT28Lo/view",
           "type": "Ресурс"
         },
         "personal_web_page_1/csd/2022": {
-          "name": "Персональна веб-сторінка",
+          "name": "Особиста вебсторінка",
           "url": "https://docs.google.com/document/d/1xDnK38-eItsz7ccg4OctJjBuy7svd3yBXF9tTvDpGo0/view",
           "type": "Рубрика"
         },
@@ -4857,16 +4911,17 @@
           "type": "Зразок"
         },
         "project_guide_-_personal_web_page_-_reflect/csd/2022": {
-          "name": "Інструкція по проєкту - Персональна веб-сторінка - Рефлексія",
+          "name": "Інструкція по проєкту - Особиста вебсторінка - Рефлексія",
           "url": "https://docs.google.com/document/d/177zgnLZgK8EWy2J_ztV7iAKPmi6uhRk5EZ4PocHBG0Y/view",
           "type": "Зразок"
         },
         "publishing_your_website/csd/2022": {
+          "name": "Публікація свого вебсайту",
           "url": "https://youtu.be/2qcIlRtdpgE",
           "type": "Відео"
         },
         "project_-_personal_web_page/csd/2022": {
-          "name": "Проєкт - Персональна веб-сторінка",
+          "name": "Проєкт - Особиста вебсторінка",
           "type": "Слайди"
         },
         "websites_for_a_purpose/csd/2022": {
@@ -4877,13 +4932,14 @@
         "websites_for_a_purpose_1/csd/2022": {
           "name": "Веб-сайти для будь-якої цілі",
           "url": "https://docs.google.com/document/d/18UiOaX7ThahC5cfDeWVMNjCpEy_BKPNz5MDOjLlSkbU/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "websites_for_a_purpose_2/csd/2022": {
           "name": "Веб-сайти для будь-якої цілі",
           "type": "Слайди"
         },
         "video_managing_disagreement/csd/2022": {
+          "name": "Відео: Керування розбіжностями",
           "url": "https://youtu.be/6GgrUeVT-xs",
           "type": "Відео"
         },
@@ -4893,23 +4949,23 @@
           "type": "Відео"
         },
         "website_team_plan/csd/2022": {
-          "name": "План команди веб-сайту",
+          "name": "План команди вебсайту",
           "url": "https://docs.google.com/document/d/1aiH8sJkWOupnPNC99pgCIUvC9Posjojbx8lrZy-7faM/edit?usp=sharing/edit?usp=sharing",
           "type": "Зразок"
         },
         "website_team_plan_1/csd/2022": {
-          "name": "План команди веб-сайту",
+          "name": "План команди вебсайту",
           "url": "https://docs.google.com/document/d/1OchbcAqSQLvL0-ho3tOFTc3sd461KK-4Mz0qHI_6kHc/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "team_problem_solving/csd/2022": {
-          "name": "Команда для розв'язання проблем",
+          "name": "Вирішення проблем у команді",
           "type": "Слайди"
         },
         "internet_scavenger_hunt/csd/2022": {
-          "name": "Полювання на сміття в Інтернеті",
+          "name": "Полювання на сміття в інтернеті",
           "url": "https://docs.google.com/document/d/1aDiUc0G3srj0CCaibxdWYfJNpuKK0MygpOz_NYsjKIQ/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "links_and_research/csd/2022": {
           "name": "Посилання та дослідження",
@@ -4919,9 +4975,10 @@
         "links_and_research_1/csd/2022": {
           "name": "Посилання та дослідження",
           "url": "https://docs.google.com/document/d/1fx7eXn3778CUU2GHHagCj1AXY95ll_HJssfeZDbN4gk/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "video_how_search_works/csd/2022": {
+          "name": " Відео: Як працює пошук",
           "url": "https://youtu.be/LVV_93mBfSU",
           "type": "Відео"
         },
@@ -4939,8 +4996,9 @@
           "type": "Слайди"
         },
         "plan_a_multi-page_website/csd/2022": {
-          "name": "Сплануйте багатосторінковий веб-сайт",
-          "url": "https://docs.google.com/document/d/1RlLpWsXEHX2GC6eVVsYrx7pAaZ_VUACKpgAQfkWUKKw"
+          "name": "Сплануйте багатосторінковий вебсайт",
+          "url": "https://docs.google.com/document/d/1RlLpWsXEHX2GC6eVVsYrx7pAaZ_VUACKpgAQfkWUKKw",
+          "type": "План проєкту"
         },
         "project_guide_-_website_for_a_purpose_-_prepare/csd/2022": {
           "name": "Інструкція з проєкту - Веб-сайт для будь-якої цілі - Підготовка",
@@ -4957,7 +5015,7 @@
           "url": "https://docs.google.com/document/d/1HA8nG3-qIb57id98VJfpYgVTx83vsri9C5ACLtvk8wA/edit"
         },
         "planning_a_multi-page_site/csd/2022": {
-          "name": "Планування веб-сайту на багато сторінок",
+          "name": "Планування багатосторінкового вебсайту",
           "type": "Слайди"
         },
         "hyperlinks/csd/2022": {
@@ -4969,11 +5027,11 @@
           "type": "Слайди"
         },
         "project_-_website_for_a_purpose/csd/2022": {
-          "name": "Проєкт - веб-сайт для певної мети",
+          "name": "Проєкт - вебсайт для певної мети",
           "type": "Слайди"
         },
         "peer_review_-_final_personal_website/csd/2022": {
-          "name": "Експертна оцінка - фінальна персональна веб-сторінка",
+          "name": "Експертна оцінка - фінальна особиста вебсторінка",
           "url": "https://docs.google.com/document/d/1fbZ7Ik_H0r39t5yHEkgrYa5mSbx5BCqfLpuH6G1pP6k/view",
           "type": "Зразок"
         },
@@ -4989,7 +5047,8 @@
         },
         "website_for_a_purpose_-_reflect/csd/2022": {
           "name": "Веб-сайт для будь-якої цілі - Відображення",
-          "url": "https://docs.google.com/document/d/1aThUWcwpI-7KNFtWfbn0V2haHiOHbVzDaIYG6SfCiGs/edit"
+          "url": "https://docs.google.com/document/d/1aThUWcwpI-7KNFtWfbn0V2haHiOHbVzDaIYG6SfCiGs/edit",
+          "type": "План проєкту"
         },
         "website_for_a_purpose_1/csd/2022": {
           "name": "Веб-сайт для будь-якої цілі",
@@ -4997,7 +5056,7 @@
           "type": "Рецензування"
         },
         "peer_review_and_final_touches/csd/2022": {
-          "name": "Експертне оцінювання та фінальні штрихи",
+          "name": "Партнерське оцінювання та фінальні штрихи",
           "type": "Слайди"
         },
         "all_code_1/csd/2022": {
@@ -5015,7 +5074,7 @@
         "cs_in_entertainment/csd/2022": {
           "name": "Інформатика у сфері розваг",
           "url": "https://docs.google.com/document/d/110oPOgyPaeWt1_9_UEaw5T_7cCG_xgPDhwkTF2J47j8/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "cs_in_entertainment_1/csd/2022": {
           "name": "Інформатика у сфері розваг",
@@ -5034,12 +5093,12 @@
         "drawing_shapes_version_a_/csd/2022": {
           "name": "Малювання фігур (версія A)",
           "url": "https://docs.google.com/document/d/1ht990ZS0tJFc8dg-B6nmOi6nzayWq3ODiNNL4EBORlM/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "drawing_shapes_version_b_/csd/2022": {
           "name": "Малювання фігур (версія B)",
           "url": "https://docs.google.com/document/d/1OCYkSeNuuEggdlmhNOG-LOfl51ctcyzyFmsPdQAtq84/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "sample_shape_drawing/csd/2022": {
           "name": "Приклад малювання фігури",
@@ -5051,10 +5110,12 @@
           "type": "Слайди"
         },
         "drawing_in_game_lab_-_part_1/csd/2022": {
+          "name": "Малювання в Ігровій Лабораторії - Частина 1",
           "url": "https://youtu.be/PXn9gKiKKFo",
           "type": "Відео"
         },
         "drawing_in_game_lab_-_part_2/csd/2022": {
+          "name": "Малювання в Ігровій Лабораторії - Частина 2",
           "url": "https://youtu.be/QLabeWhw_O0",
           "type": "Відео"
         },
@@ -5064,14 +5125,16 @@
           "type": "Ресурс"
         },
         "drawing_in_game_lab/csd/2022": {
-          "name": "Малювання в Ігровій студії",
+          "name": "Малювання в Ігровій Лабораторії",
           "type": "Слайди"
         },
         "shapes_and_parameters_1/csd/2022": {
+          "name": "Фігури та параметри",
           "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing",
           "type": "Ресурс"
         },
         "shapes_and_parameters_2/csd/2022": {
+          "name": "Фігури та параметри",
           "type": "Слайди"
         },
         "introduction_to_variables/csd/2022": {
@@ -5092,10 +5155,12 @@
           "type": "Слайди"
         },
         "random_numbers/csd/2022": {
+          "name": "Випадкові числа",
           "url": "https://drive.google.com/file/d/1BZwjs4cvsGdhtNhY8qjUXWkCgblmZUcD/view",
           "type": "Ресурс"
         },
         "random_numbers_2/csd/2022": {
+          "name": "Випадкові числа",
           "type": "Слайди"
         },
         "animation_tab/csd/2022": {
@@ -5104,6 +5169,7 @@
           "type": "Ресурс"
         },
         "introduction_to_sprites/csd/2022": {
+          "name": "Знайомство зі спрайтами",
           "url": "https://youtu.be/aUHzpGt9nso",
           "type": "Відео"
         },
@@ -5122,10 +5188,12 @@
           "type": "Слайди"
         },
         "sprite_properties/csd/2022": {
+          "name": "Властивості спрайтів",
           "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
           "type": "Ресурс"
         },
         "sprite_properties_1/csd/2022": {
+          "name": "Властивості спрайтів",
           "type": "Слайди"
         },
         "text/csd/2022": {
@@ -5145,7 +5213,7 @@
         "sprite_scene_planning/csd/2022": {
           "name": "Планування сцен зі спрайтами",
           "url": "https://docs.google.com/document/d/10TvBlmIsCVtf4encEutlYmzU30voTyE1L3PNXQQFobw/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "mini-project_-_captioned_scenes/csd/2022": {
           "name": "Мініпроєкт - Сцени з субтитрами",
@@ -5157,6 +5225,7 @@
           "type": "Відео"
         },
         "introduction_to_the_draw_loop/csd/2022": {
+          "name": "Знайомство з циклом малювання",
           "url": "https://youtu.be/G6QJeuHhqCM",
           "type": "Відео"
         },
@@ -5169,13 +5238,16 @@
           "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit"
         },
         "the_draw_loop/csd/2022": {
+          "name": "Цикл малювання",
           "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
           "type": "Ресурс"
         },
         "the_draw_loop_1/csd/2022": {
+          "name": "Цикл малювання",
           "type": "Слайди"
         },
         "sprite_movement/csd/2022": {
+          "name": "Переміщення спрайтів",
           "url": "https://youtu.be/G666sFzAg5g",
           "type": "Відео"
         },
@@ -5185,6 +5257,7 @@
           "type": "Ресурс"
         },
         "sprite_movement_1/csd/2022": {
+          "name": "Переміщення спрайтів",
           "type": "Слайди"
         },
         "animated_scene/csd/2022": {
@@ -5195,7 +5268,7 @@
         "animated_scene_1/csd/2022": {
           "name": "Анімована сцена",
           "url": "https://docs.google.com/document/d/1vYDwIgLOLPH4ymHusLyTo4Ydn5OEOCJ4rf5ZbQ9rrOQ/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "animated_scene_planning/csd/2022": {
           "name": "Планування анімованих сцен",
@@ -5207,7 +5280,7 @@
           "type": "Слайди"
         },
         "boolean_expressions/csd/2022": {
-          "name": "Булеві вирази",
+          "name": "Логічні вирази",
           "url": "https://youtu.be/_j9nvYKaOVE",
           "type": "Відео"
         },
@@ -5217,7 +5290,7 @@
           "type": "Ресурс"
         },
         "conditional_statements/csd/2022": {
-          "name": "Умовні твердження",
+          "name": "Умовні конструкції",
           "url": "https://youtu.be/TuLIK7DcPWs",
           "type": "Відео"
         },
@@ -5230,6 +5303,7 @@
           "type": "Слайди"
         },
         "keyboard_input/csd/2022": {
+          "name": "Введення з клавіатури",
           "type": "Слайди"
         },
         "if-else_statements/csd/2022": {
@@ -5237,12 +5311,12 @@
           "type": "Ресурс"
         },
         "if_else_statements/csd/2022": {
-          "name": "Якщо/Інші Твердження",
+          "name": "Команди Якщо/Інакше",
           "url": "https://youtu.be/6m6FFUJsOzo",
           "type": "Відео"
         },
         "mouse_input/csd/2022": {
-          "name": "Введення даних з миші",
+          "name": "Вхідні дані з миші",
           "type": "Слайди"
         },
         "extra_code_in_challenge_levels_1/csd/2022": {
@@ -5266,7 +5340,8 @@
         },
         "interactive_card_1/csd/2022": {
           "name": "Інтерактивна картка",
-          "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/"
+          "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/",
+          "type": "План проєкту"
         },
         "interactive_card_2/csd/2022": {
           "name": "Інтерактивна картка",
@@ -5279,7 +5354,7 @@
           "type": "Рубрика"
         },
         "project_-_interactive_card/csd/2022": {
-          "name": "Проєкт - Інтерактивна картка",
+          "name": "Проєкт - Інтерактивна листівка",
           "type": "Слайди"
         },
         "velocity/csd/2022": {
@@ -5297,24 +5372,27 @@
           "type": "Слайди"
         },
         "collision_detection/csd/2022": {
+          "name": "Виявлення зіткнень",
           "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
           "type": "Зразок"
         },
         "collision_detection_1/csd/2022": {
+          "name": "Виявлення зіткнень",
           "url": "https://drive.google.com/file/d/1xPa35tY4P8GUXKSMp0F6OUTQjcDpMa6M/view?usp=sharing",
           "type": "Ресурс"
         },
         "collision_detection_version_a_/csd/2022": {
           "name": "Виявлення зіткнення (Версія A)",
           "url": "https://docs.google.com/document/d/18RKLr5ZwCX5OOpzpnQuekQMpas7JreTcQxL1TyCnv7o/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "collision_detection_version_b_/csd/2022": {
           "name": "Виявлення зіткнення (Версія B)",
           "url": "https://docs.google.com/document/d/1FquQ6g2xpWsJyXf1GFrBM33aL7mxn-htJpG8plRQ9MU/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "collision_detection_2/csd/2022": {
+          "name": "Виявлення зіткнень",
           "type": "Слайди"
         },
         "mini-project_guide_-_side_scroller/csd/2022": {
@@ -5329,7 +5407,8 @@
         },
         "side_scroller_1/csd/2022": {
           "name": "Прокрутка збоку",
-          "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit"
+          "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit",
+          "type": "План проєкту"
         },
         "mini-project_-_side_scroller/csd/2022": {
           "name": "Мініпроєкт - гра у стилі сайд-скролер",
@@ -5357,7 +5436,8 @@
           "type": "Зразок"
         },
         "flyer_game_1/csd/2022": {
-          "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit"
+          "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit",
+          "type": "План проєкту"
         },
         "mini-project_-_flyer_game/csd/2022": {
           "name": "Мініпроєкт: гра \"Літун\"",
@@ -5393,7 +5473,7 @@
         "planning_your_platform_game_1/csd/2022": {
           "name": "Планування гри-платформера",
           "url": "https://docs.google.com/document/d/1JcjgqryqRKeyxieHrJlNlFQnSBybBjPIp3zolO3iJAE/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "using_the_game_design_process/csd/2022": {
           "name": "Використання процесу розробки ігор",
@@ -5415,7 +5495,8 @@
         },
         "make_your_own_game_1/csd/2022": {
           "name": "Створіть власну гру",
-          "url": "https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/edit?usp=sharing",
+          "type": "План проєкту"
         },
         "make_your_own_game_2/csd/2022": {
           "name": "Створіть власну гру",
@@ -5446,7 +5527,7 @@
         "designing_with_empathy/csd/2022": {
           "name": "Дизайн з емпатією",
           "url": "https://docs.google.com/document/d/10uAtyNYjzc91_hMTBRHRkSSxx7QJRZptkguzeH8Dwqg/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "designing_with_empathy_1/csd/2022": {
           "name": "Дизайн з емпатією",
@@ -5485,7 +5566,7 @@
         "reacting_as_your_user/csd/2022": {
           "name": "Реагувати як користувач",
           "url": "https://docs.google.com/document/d/1cQXtr4zj3LEuOMoOYJf8KtBUl9ge3qmwBBzEBv8GixA/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "reacting_as_your_user_profile_1/csd/2022": {
           "name": "Реагувати як користувач - Профіль 1",
@@ -5508,7 +5589,7 @@
           "type": "Зразок"
         },
         "understanding_your_user/csd/2022": {
-          "name": "Розуміння твого користувача",
+          "name": "Розуміння свого користувача",
           "type": "Слайди"
         },
         "the_design_thinking_process/csd/2022": {
@@ -5524,7 +5605,7 @@
         "user_centered_design_define_prepare_2021/csd/2022": {
           "name": "Дизайн, орієнтований на користувача (\"Визначити\" та \"Підготувати\") 2021",
           "url": "https://docs.google.com/document/d/1XkDwOnyf6zxvBOb6MVYk00X9YuMnQdd-0xT11-idHRg/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "user_centered_design_-_define_and_prepare/csd/2022": {
           "type": "Слайди"
@@ -5537,7 +5618,7 @@
         "user_centered_design_try_reflect_2021/csd/2022": {
           "name": "Дизайн, орієнтований на користувача (\"Спробувати\" та \"Обміркувати\") 2021",
           "url": "https://docs.google.com/document/d/1mHWy7a3_eSdEgjXRFCb1ezGFdi1QMgPTtitqHap0ERQ/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "user_centered_design_-_try_and_reflect/csd/2022": {
           "type": "Слайди"
@@ -5550,12 +5631,12 @@
         "user_testing_computer_/csd/2022": {
           "name": "Тестування користувачами (комп'ютер)",
           "url": "https://docs.google.com/document/d/1_ce_F8_tnexWhS718ALJadACNKe0oomeIeyKTwuWmAg/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "user_testing_user_/csd/2022": {
           "name": "Тестування користувачами (користувач)",
           "url": "https://docs.google.com/document/d/1qE028_n5aq9n8ebVm09uzu0169ykzvxfl8pUvV6S6D8/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "user_interfaces/csd/2022": {
           "name": "Інтерфейс користувача",
@@ -5569,7 +5650,7 @@
         "improve_a_screen_1/csd/2022": {
           "name": "Покращення екрана",
           "url": "https://docs.google.com/document/d/1y0YfE6qZKKlRRpeVGU2d-SuctJP9P5fI2062yo85nZg/edit?usp=sharing",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "prototype_feedback/csd/2022": {
           "name": "Відгук на прототип",
@@ -5588,7 +5669,7 @@
         "user_interviews/csd/2022": {
           "name": "Інтерв'ю з користувачами",
           "url": "https://docs.google.com/document/d/1nkieg4ryGPbOFt6AkNYEzdvjm8pJi2zr_BM8ty3kbtc/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "identifying_user_needs/csd/2022": {
           "name": "Визначення потреб користувача",
@@ -5619,7 +5700,7 @@
         "app_design_kickoff/csd/2022": {
           "name": "Початок розробки застосунку",
           "url": "https://docs.google.com/document/d/163Ene8sb4nK0kfoDHsIBzUCMJWiFtaYZ8YYVIytGH4A/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "app_design_kickoff_1/csd/2022": {
           "name": "Початок розробки застосунку",
@@ -5637,7 +5718,7 @@
         "market_research/csd/2022": {
           "name": "Дослідження ринку",
           "url": "https://docs.google.com/document/d/1xROZ51ntcX11OmXXfB46slca_ViqIjmOrAydkytVWdw/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "market_research_1/csd/2022": {
           "name": "Дослідження ринку",
@@ -5651,7 +5732,7 @@
         "explore_ui_elements/csd/2022": {
           "name": "Дослідження елементів UI",
           "url": "https://docs.google.com/document/d/1OyTMxdwh3yLv7EnE-FOtxb9mDScbkMgjZn_ypxF7q5U/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "explore_ui_elements_1/csd/2022": {
           "name": "Дослідження елементів UI",
@@ -5674,7 +5755,7 @@
         "paper_prototype_planning/csd/2022": {
           "name": "Планування паперового прототипу",
           "url": "https://docs.google.com/document/d/1q06xCd9SXPup1KHcfXL0kczUNUs5C-rUTfxyB2qhs-Y/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "paper_prototype_planning_1/csd/2022": {
           "name": "Планування паперового прототипу",
@@ -5692,7 +5773,7 @@
         "paper_prototype_user_testing/csd/2022": {
           "name": "Тестування паперового прототипу користувачами",
           "url": "https://docs.google.com/document/d/1uEBql95st5PNTCzJUbytcSwUe4nu7JD-AxpjxlAVx3k/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "paper_prototype_user_testing_1/csd/2022": {
           "name": "Тестування паперового прототипу користувачами",
@@ -5702,7 +5783,7 @@
         "user_test_cases/csd/2022": {
           "name": "Кейси тестування користувачами",
           "url": "https://docs.google.com/document/d/1i1_B7ZK8ljkijlKLIKndNtpbNYiY34Xe5W1vsigjw7I/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "user_test_cases_1/csd/2022": {
           "name": "Кейси тестування користувачами",
@@ -5730,15 +5811,15 @@
         "screen_design_2021_/csd/2022": {
           "name": "Дизайн екрана (2021)",
           "url": "https://docs.google.com/document/d/1QGuwv8brhQRgXewOgsEV1zy7qrhCMawqlMNP4WLNh9Y/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "screen_ownership_2021_/csd/2022": {
           "name": "Власники екранів (2021)",
           "url": "https://docs.google.com/document/d/1iCbvI452ztUOn1jPqcVBQUg9EiuzCIwhV7rWPuFCAQ8/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "design_mode_in_app_lab/csd/2022": {
-          "name": "Design Mode в App Lab",
+          "name": "Режим конструктора в Програмній Лабораторії ",
           "type": "Слайди"
         },
         "build_a_digital_prototype/csd/2022": {
@@ -5778,7 +5859,7 @@
         "digital_prototype_user_testing/csd/2022": {
           "name": "Тестування цифрового прототипу користувачами",
           "url": "https://docs.google.com/document/d/1hdfiToUH-GACjesuIOIQB_C9FYqS-HjAHkGc5ju1kN0/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "testing_the_app/csd/2022": {
           "name": "Тестування застосунку",
@@ -5787,7 +5868,7 @@
         "bugs_and_features/csd/2022": {
           "name": "Баги та фічі",
           "url": "https://docs.google.com/document/d/1TGQ7XrKwn9fPRG0Mx73KJa8aGns6mZf49Q9FaNd-s4Y/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "bugs_and_features_1/csd/2022": {
           "name": "Баги та фічі",
@@ -5799,10 +5880,12 @@
           "type": "Слайди"
         },
         "updating_your_prototype/csd/2022": {
+          "name": "Оновлення прототипу",
           "url": "https://docs.google.com/document/d/1-Ax_KooQaPObURbSS7tYp00gshGzIjufv7P-y5UU98M/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "updating_your_prototype_1/csd/2022": {
+          "name": "Оновлення прототипу",
           "type": "Слайди"
         },
         "app_presentation/csd/2022": {
@@ -5840,7 +5923,7 @@
           "type": "Зразок"
         },
         "project_-_app_presentation/csd/2022": {
-          "name": "Презентація проєкту - застосунку",
+          "name": "Проєкт - Презентація застосунку",
           "type": "Слайди"
         },
         "all_resources_3/csd/2022": {
@@ -5862,17 +5945,17 @@
           "type": "Ресурс"
         },
         "representation_matters/csd/2022": {
-          "name": "Представлення має значення",
+          "name": "Кодування має значення",
           "url": "https://docs.google.com/document/d/17LnkRYXZMiyjC9enTcZRp2akfySN_YYmMe8fJRmkF4E/edit",
           "type": "Зразок"
         },
         "representation_matters_1/csd/2022": {
-          "name": "Представлення має значення",
+          "name": "Кодування має значення",
           "url": "https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/edit?usp=sharing",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "representation_matters_2/csd/2022": {
-          "name": "Представлення має значення",
+          "name": "Кодування має значення",
           "type": "Слайди"
         },
         "animal_shapes/csd/2022": {
@@ -5880,21 +5963,22 @@
           "url": "https://docs.google.com/document/d/1C4ibYExm68IWA-1q_RujlEMZhxwwjCKIaH7UT-fMvy8/edit"
         },
         "representing_information/csd/2022": {
-          "name": "Представлення інформації",
+          "name": "Кодування інформації",
           "url": "https://docs.google.com/document/d/13uCoIIaBhxSzVqMk9xMBDJzQ0KBT-cBav3Bb3srftkk/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "representing_information_1/csd/2022": {
-          "name": "Представлення інформації 1",
+          "name": "Кодування інформації 1",
           "url": "https://docs.google.com/document/d/1B3BDFK50Na6D28aoZFHHtBTInThj26Qgdu82Z7YrcRI/edit",
           "type": "Зразок"
         },
         "representing_information_2/csd/2022": {
-          "name": "Представлення інформації 2",
+          "name": "Кодування інформації 2",
           "url": "https://docs.google.com/document/d/1XXyUF6qGzMpriXd89XH8Kg10jMwiWIsbC8_utCJIYRY/edit",
           "type": "Зразок"
         },
         "patterns_and_representation/csd/2022": {
+          "name": "Шаблони та кодування",
           "type": "Слайди"
         },
         "ascii/csd/2022": {
@@ -5905,7 +5989,7 @@
         "ascii_challenges/csd/2022": {
           "name": "ASCII Challenges",
           "url": "https://docs.google.com/document/d/1YN3r7hmuf_fFpOhnIMRDrUbEha7Ij8mP647X3FdrBz0/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "ascii_challenges_1/csd/2022": {
           "name": "ASCII Challenges",
@@ -5918,12 +6002,15 @@
           "type": "Ресурс"
         },
         "ascii_and_binary_representation/csd/2022": {
+          "name": "ASCII та двійкове кодування",
           "type": "Слайди"
         },
         "representing_images/csd/2022": {
+          "name": "Кодування зображень",
           "type": "Слайди"
         },
         "binary_and_data/csd/2022": {
+          "name": "Двійкова система і дані",
           "url": "https://www.youtube.com/watch?v=USCBCmwMCDA",
           "type": "Відео"
         },
@@ -5938,23 +6025,23 @@
           "type": "Підручні матеріали"
         },
         "representing_numbers/csd/2022": {
-          "name": "Представлення чисел",
+          "name": "Кодування чисел",
           "url": "https://docs.google.com/document/d/1t9wdaM33w8EfC6MNxoqdkC0M974ez5FGQIPDj8lHgn4/edit",
           "type": "Зразок"
         },
         "representing_numbers_2021/csd/2022": {
-          "name": "Представлення чисел 2021",
+          "name": "Кодування чисел 2021",
           "url": "https://docs.google.com/document/d/1fJwrzxyEtp8LFLKdCHod9ZO0b6U-DSjjJzpaBBCGcQo/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "representing_numbers_1/csd/2022": {
-          "name": "Представлення чисел",
+          "name": "Кодування чисел",
           "type": "Слайди"
         },
         "activity_guide_-_pet_records/csd/2022": {
           "name": " Інструкція до завдання - Записи про домашніх тварин",
           "url": "https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "ascii_to_binary_table/csd/2022": {
           "name": "Таблиця перетворення ASCII в двійковий код",
@@ -5967,12 +6054,13 @@
           "type": "Зразок"
         },
         "combining_representations/csd/2022": {
+          "name": "Поєднання типів кодування",
           "type": "Слайди"
         },
         "medical_records/csd/2022": {
           "name": "Медичні картки",
           "url": "https://docs.google.com/document/d/1dwpyCS7QjQg9L6h-V8Xnc6r21P6VCiFCJckk_ZBlxco/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "medical_records_1/csd/2022": {
           "name": "Медичні картки",
@@ -5982,36 +6070,37 @@
         "secret_messages_2021/csd/2022": {
           "name": "Таємні повідомлення 2021",
           "url": "https://docs.google.com/document/d/1McCQtY7xWPnKvemkAf0bLxxxyJVJzQomWv4wcjInjXc/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "keeping_data_secret_1/csd/2022": {
+          "name": "Збереження даних у таємниці",
           "type": "Слайди"
         },
         "create_a_representation/csd/2022": {
-          "name": "Створення системи представлення",
+          "name": "Створення системи кодування",
           "url": "https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit",
           "type": "Зразок"
         },
         "create_a_representation_-_student_checklist/csd/2022": {
-          "name": "Створення системи представлення - Контрольний список для учнів",
+          "name": "Створення системи кодування - Контрольний список для учнів",
           "url": "https://docs.google.com/document/d/1UGYRASWLwE7LulGVyKKKN96_DMUvRzjHbkI5rBqtP2Q/view"
         },
         "create_a_representation_1/csd/2022": {
-          "name": "Створення системи представлення",
+          "name": "Створення системи кодування",
           "url": "https://docs.google.com/document/d/1DWD0xxNqdoAeusdS2NBQQL_lCGjvx8_uS_tb0Fzvfhw/edit#"
         },
         "create_a_representation_2/csd/2022": {
-          "name": "Створення системи представлення",
+          "name": "Створення системи кодування",
           "url": "https://docs.google.com/document/d/1Ndo0YTX76UMcxiY_SQz_CgPyrbux1Vzqi9KcM5-Ijw8/edit",
           "type": "Рубрика"
         },
         "create_a_representation_marked_rubrics/csd/2022": {
-          "name": "Створення системи представлення - Марковані рубрикатори",
+          "name": "Створення системи кодування - Марковані рубрикатори",
           "url": "https://docs.google.com/document/d/1ln_KKQGsghLvPZv2dtM2fKrrXk8LDVYKQ7ap_hWR0B8/view",
           "type": "Зразок"
         },
         "create_a_representation_3/csd/2022": {
-          "name": "Створення системи представлення",
+          "name": "Створення системи кодування",
           "type": "Слайди"
         },
         "problem_solving_with_data/csd/2022": {
@@ -6022,7 +6111,7 @@
         "problem_solving_with_data_1/csd/2022": {
           "name": "Розв'язання задач за допомогою даних",
           "url": "https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "problem_solving_and_data/csd/2022": {
           "type": "Слайди"
@@ -6035,7 +6124,7 @@
         "structuring_data_2021/csd/2022": {
           "name": "Структурування даних 2021",
           "url": "https://docs.google.com/document/d/1edTTFHTHp4uxIi1CrHvvfEfFCZacCB5BXNfL1uaBf-E/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "structuring_data_1/csd/2022": {
           "name": "Структурування даних",
@@ -6049,7 +6138,7 @@
         "interpreting_data_1/csd/2022": {
           "name": "Інтерпретація даних",
           "url": "https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "interpreting_data_2/csd/2022": {
           "name": "Інтерпретація даних",
@@ -6068,7 +6157,7 @@
         "making_decisions_with_data_1/csd/2022": {
           "name": "Прийняття рішень на основі даних",
           "url": "https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/edit?usp=sharing",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "problem_solving_process_with_data/csd/2022": {
           "name": "Процес розв'язання задач за допомогою даних",
@@ -6092,7 +6181,7 @@
         "automating_data_decisions_2/csd/2022": {
           "name": "Автоматизація прийняття рішень на основі даних",
           "url": "https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "automating_data_decisions_3/csd/2022": {
           "name": "Автоматизація прийняття рішень на основі даних",
@@ -6111,7 +6200,7 @@
         "data_in_the_real_world_1/csd/2022": {
           "name": "Дані в реальному житті",
           "url": "https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/edit?usp=sharing",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "netflix_and_data/csd/2022": {
           "name": "Netflix та дані",
@@ -6124,9 +6213,11 @@
           "type": "Відео"
         },
         "problem_solving_with_big_data/csd/2022": {
+          "name": "Вирішення проблем за допомогою великих даних",
           "type": "Слайди"
         },
         "video_impact_on_society/csd/2022": {
+          "name": "Відео: Вплив на суспільство",
           "url": "https://www.youtube.com/watch?v=ng4c1g3COfs",
           "type": "Відео"
         },
@@ -6159,7 +6250,8 @@
         },
         "make_a_recommendation_2/csd/2022": {
           "name": "Дай рекомендацію",
-          "url": "https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/edit"
+          "url": "https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/edit",
+          "type": "План проєкту"
         },
         "peer_review_exemplar_1/csd/2022": {
           "name": "Приклад експертної оцінки 1 ",
@@ -6182,7 +6274,7 @@
           "type": "Зразок"
         },
         "project_-_make_a_recommendation/csd/2022": {
-          "name": "Проєкт - Дай рекомендацію",
+          "name": "Проєкт - Даємо рекомендацію",
           "type": "Слайди"
         },
         "all_code_4/csd/2022": {
@@ -6204,7 +6296,7 @@
         },
         "computing_innovations_1/csd/2022": {
           "name": "Інновації обчислювальної техніки",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "computing_innovations_research_areas/csd/2022": {
           "type": "Ресурс"
@@ -6233,14 +6325,16 @@
           "type": "Ресурс"
         },
         "the_circuit_playground/csd/2022": {
-          "name": "Ігрова плата Circuit Playground",
+          "name": "Плата Circuit Playground",
           "type": "Слайди"
         },
         "designing_screens_with_code/csd/2022": {
+          "name": "Проектування екранів за допомогою коду",
           "url": "https://drive.google.com/file/d/1Jpoij-Rp7SE5-lySX8J2x7vgADErzBt3/view?usp=sharing",
           "type": "Ресурс"
         },
         "random_numbers_1/csd/2022": {
+          "name": "Випадкові числа",
           "url": "https://drive.google.com/file/d/1Ix9XXFWgnPi7xoGUZ9ljdD8gZPrhFLUn/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -6248,10 +6342,12 @@
           "type": "Слайди"
         },
         "board_events/csd/2022": {
+          "name": "Події плати",
           "url": "https://drive.google.com/file/d/1XvRUPOeqLcQonhk1Sq9FYkIv_DAwx6aR/view?usp=sharing",
           "type": "Ресурс"
         },
         "board_events_1/csd/2022": {
+          "name": "Події плати",
           "type": "Слайди"
         },
         "physical_input/csd/2022": {
@@ -6298,7 +6394,7 @@
           "type": "Слайди"
         },
         "project_guide_-_on-the-go_app/csd/2022": {
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "rubric_-_on-the-go_app/csd/2022": {
           "type": "Рубрика"
@@ -6339,7 +6435,7 @@
           "type": "Ресурс"
         },
         "project_guide_-_human_device_interaction/csd/2022": {
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "project_human_device_interaction/csd/2022": {
           "type": "Слайди"
@@ -6383,9 +6479,11 @@
           "type": "Відео"
         },
         "making_music/csd/2022": {
+          "name": "Створення музики",
           "type": "Слайди"
         },
         "playing_notes/csd/2022": {
+          "name": "Відтворення нот",
           "url": "https://drive.google.com/file/d/1drBef9298Ijm4uir9Iyt0m-NNYowRH38/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -6433,7 +6531,7 @@
           "type": "Слайди"
         },
         "project_guide_-_interactive_art/csd/2022": {
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "student_rubric_-_interactive_art/csd/2022": {
           "type": "Рубрика"
@@ -6468,7 +6566,7 @@
         },
         "prototype_an_innovation_1/csd/2022": {
           "name": "Створіть прототип інновації",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "prototype_an_innovation_example_1/csd/2022": {
           "type": "Зразок"
@@ -6498,7 +6596,7 @@
         "classifying_fish/csd/2022": {
           "name": "Класифікування риб",
           "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "introduction_to_machine_learning/csd/2022": {
           "name": "Вступ до машинного навчання",
@@ -6511,7 +6609,7 @@
         "types_of_machine_learning_1/csd/2022": {
           "name": "Типи машинного навчання",
           "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "types_of_machine_learning_2/csd/2022": {
           "name": "Типи машинного навчання",
@@ -6550,7 +6648,7 @@
         "patterns_in_data_1/csd/2022": {
           "name": "Закономірності в даних",
           "url": "https://docs.google.com/document/d/1bOLsuDQuPdMEY3gwNEmGSL-vM_Twpllj-6Toq9qicrU/view",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "shoe_survey/csd/2022": {
           "name": "Опитування про взуття",
@@ -6565,7 +6663,7 @@
         "classification_models/csd/2022": {
           "name": "Моделі класифікації",
           "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "classification_models_1/csd/2022": {
           "name": "Моделі класифікації",
@@ -6587,9 +6685,11 @@
           "type": "Ресурс"
         },
         "introduction_to_ai_lab/csd/2022": {
+          "name": "Вступ до Лабораторії ШІ",
           "type": "Слайди"
         },
         "introduction_to_ai_lab_1/csd/2022": {
+          "name": "Вступ до Лабораторії ШІ",
           "type": "Відео"
         },
         "selecting_features/csd/2022": {
@@ -6600,7 +6700,7 @@
         "training_a_model_in_ai_lab/csd/2022": {
           "name": "Тренування моделі в AI Lab",
           "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "training_and_testing_in_ai_lab/csd/2022": {
           "type": "Відео"
@@ -6628,7 +6728,7 @@
         },
         "model_cards_1/csd/2022": {
           "name": "Картки моделі",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "_key_zoo_models/csd/2022": {
           "name": "[KEY] Моделі зоопарку",
@@ -6650,7 +6750,7 @@
         "zoo_models/csd/2022": {
           "name": "Моделі зоопарку",
           "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "if-statements_in_app_lab/csd/2022": {
           "name": "Команди умови в App Lab",
@@ -6677,7 +6777,7 @@
         "numerical_accuracy/csd/2022": {
           "name": "Точність числових даних",
           "url": "https://docs.google.com/document/d/1z1QlqauVb0S3TBFICvoIP2fOvfDGkAItx7hL3FlOnf8/edit#",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "numerical_models/csd/2022": {
           "name": "Числові моделі",
@@ -6686,7 +6786,7 @@
         "zombie_prediction/csd/2022": {
           "name": "Передбачення про зомбі",
           "url": "https://docs.google.com/document/d/1mylu7XueQyZQpTftM5UqtuDY4cYKAR7YTdlSHOXbkSA/edit#",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2022": {
           "name": "[KEY] - Числові дані в AI Lab",
@@ -6694,13 +6794,16 @@
           "type": "Відповіді"
         },
         "numerical_data_in_ai_lab/csd/2022": {
+          "name": "Числові дані в Лабораторії ШІ",
           "type": "Слайди"
         },
         "numerical_data_in_ai_lab_1/csd/2022": {
+          "name": "Числові дані в Лабораторії ШІ",
           "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#",
-          "type": "Вказівки до діяльності"
+          "type": "Інструкція до вправи"
         },
         "numerical_data_in_ai_lab_2/csd/2022": {
+          "name": "Числові дані в Лабораторії ШІ",
           "type": "Відео"
         },
         "using_data_with_numerical_features/csd/2022": {
@@ -6872,7 +6975,7 @@
           "type": "Ресурс"
         },
         "curriculum_guide/coursea/2022": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "debugging_guide/coursea/2022": {
           "name": "Керівництво з налагодження",
@@ -6898,22 +7001,22 @@
           "name": "Зміни для віртуального уроку"
         },
         "safety_in_my_online_neighborhood_lesson_slides/coursea/2022": {
-          "name": "Безпека у Моєму Інтернет-сусідстві: Слайди до уроку",
-          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit",
+          "name": "Безпека у моєму інтернет-районі: Слайди до уроку",
+          "url": "https://docs.google.com/presentation/d/12PEsRb4LtQz_E-BJSmZNd9xnmdmIIiuQjqomcq3MPkQ/edit",
           "type": "Набір слайдів"
         },
         "safety_in_my_online_neighborhood_my_online_neighborhood/coursea/2022": {
-          "name": "Безпека у Моєму Інтернет-сусідстві: Моє Інтернет-сусідство",
+          "name": "Безпека у моєму інтернет-районі: Моє Інтернет-сусідство",
           "url": "https://www.commonsense.org/education/videos/my-online-neighborhood",
           "type": "Відео уроку"
         },
         "safety_in_my_online_neighborhood_pause_and_think_moment/coursea/2022": {
-          "name": "Безпека у Моєму Інтернет-сусідстві: Хвилинка на зупинку",
+          "name": "Безпека у моєму інтернет-районі: Зупинись і поміркуй",
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
           "type": "Роздатковий матеріал"
         },
         "safety_in_my_online_neighborhood_safety_it_rules_/coursea/2022": {
-          "name": "Безпека у Моєму Інтернет-сусідстві: Безпека рулить!",
+          "name": "Безпека у моєму інтернет-районі: Безпека рулить!",
           "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
           "type": "Віршований плакат"
         },
@@ -7042,12 +7145,12 @@
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "artist_project_planning_guide/coursea/2022": {
-          "name": "Посібник з планування проєктів Художника",
+          "name": "План проєкту з Художником",
           "url": "https://docs.google.com/document/d/1j4m3VDvrkaRqQ3cFqnqSI7wTFfymunDbkjN7pm7Pt14/template/preview",
           "type": "Роздатковий матеріал"
         },
         "artist_project_planning_guide_1/coursea/2022": {
-          "name": "Посібник з планування проєктів Художника",
+          "name": "План проєкту з Художником",
           "url": "https://docs.google.com/document/d/1Z1M9KLiLuX4pqcb9xpzpmafbmuLOjgtsZGZLQzMXtt4/template/preview",
           "type": "Відповіді"
         },
@@ -7071,7 +7174,7 @@
           "type": "Ресурс"
         },
         "curriculum_guide/courseb/2022": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "debugging_guide/courseb/2022": {
           "name": "Керівництво з налагодження",
@@ -7113,7 +7216,7 @@
         },
         "digital_trails_lesson_slides/courseb/2022": {
           "name": "Цифрові сліди: Слайди для уроку",
-          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
+          "url": "https://docs.google.com/presentation/d/1q_ujXpFBY06ufa_GnX6490uGlnGhRyaRgu3w-W4tdNc/edit",
           "type": "Набір слайдів"
         },
         "feeling_faces_emotion_image/courseb/2022": {
@@ -7229,7 +7332,7 @@
           "type": "Відео"
         },
         "the_right_app_scenarios/courseb/2022": {
-          "name": "Сценарії \"Застосунок, як треба\"",
+          "name": "Сценарії \"Ідеальний застосунок\"",
           "url": "https://docs.google.com/presentation/d/1wWqt0pWEdIBTNVxJ3uGbqAKr0cR15snJUtxs_fLllho/edit#slide=id.g45fb8e6318_0_0",
           "type": "Набір слайдів"
         },
@@ -7253,12 +7356,12 @@
           "type": "Зображення \"Пульт керування\""
         },
         "play_lab_project_planning_guide/courseb/2022": {
-          "name": "Посібник з планування проєктів в Ігровій студії",
+          "name": "План проєкту в Ігровій студії",
           "url": "https://docs.google.com/document/d/1w3lryp97htn9ac28F42Hoi3G0rdZx8gd0lvWQ_aZndQ/template/preview",
           "type": "Роздатковий матеріал"
         },
         "play_lab_project_planning_guide_1/courseb/2022": {
-          "name": "Посібник з планування проєктів в Ігровій студії",
+          "name": "План проєкту в Ігровій студії",
           "url": "https://docs.google.com/document/d/10q7gSfNW-xDzvESbjkbpnkEQQWwakVQ00_cZbrRhiXM/template/preview",
           "type": "Відповіді"
         },
@@ -7282,7 +7385,7 @@
           "type": "Ресурс"
         },
         "curriculum_guide/coursec/2022": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "debugging_guide_1/coursec/2022": {
           "name": "Керівництво з налагодження",
@@ -7312,7 +7415,7 @@
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Зупиняємо образи в мережі: STOP жорстокість в інтернеті: слайди для уроку",
-          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
+          "url": "https://docs.google.com/presentation/d/1AucG8pTXbSBTbmZN8IJhX7CKgOLoUPjxnUyohMXyokI/edit",
           "type": "Набір слайдів"
         },
         "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2022": {
@@ -7464,12 +7567,12 @@
           "type": "Відео для учнів"
         },
         "play_lab_project_planning_guide/coursec/2022": {
-          "name": "Посібник з планування проєктів в Ігровій студії",
+          "name": "План проєкту в Ігровій студії",
           "url": "https://docs.google.com/document/d/1wdUd0RViocsMvDqdjb5WQME2e9Hr7PwMeM1vNzSovio/edit",
           "type": "Робочий аркуш"
         },
         "play_lab_project_planning_guide_exemplar_/coursec/2022": {
-          "name": "Посібник з планування проєкту в Ігровій студії (Приклад заповнення)",
+          "name": "План проєкту в Ігровій студії (Приклад заповнення)",
           "url": "https://docs.google.com/document/d/1QpMMZTGReEzocnTcez15WMvDHHG7taLdPxKXCsIjFuc/edit",
           "type": "Ресурси для уроку"
         },
@@ -7493,7 +7596,7 @@
           "type": "Ресурс"
         },
         "curriculum_guide/coursed/2022": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "debugging_guide/coursed/2022": {
           "name": "Керівництво з налагодження",
@@ -7543,7 +7646,7 @@
         },
         "password_power-up_lesson_slides/coursed/2022": {
           "name": "Посилення пароля: слайди до уроку",
-          "url": "https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit",
+          "url": "https://docs.google.com/presentation/d/1b19MEJxL5MRVftQeP_vHb0Lma-aoSyKHnVHeKbM3yFg/edit",
           "type": "Слайди"
         },
         "password_power-up_power-up_your_password/coursed/2022": {
@@ -7561,7 +7664,7 @@
         },
         "graph_paper_programming/coursed/2022": {
           "name": "Програмування по клітинках",
-          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/1l_SpN8FNTAUqU5RLiAnpp6WahHprDFdPA8YwaIut_pc/edit?usp=sharing",
           "type": "Робочий аркуш вправи"
         },
         "graph_paper_programming_1/coursed/2022": {
@@ -7649,8 +7752,8 @@
           "type": "Відповіді"
         },
         "dance_party_project_guide/coursed/2022": {
-          "name": "Інструкція до проєкту \"Танцювальна вечірка\"",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "name": "План проєкту \"Танцювальна вечірка\"",
+          "url": "https://docs.google.com/document/d/1Cep4K9CwUM4HfsqFXHM7eR3ZHQfMBgX6S5HHN66Qu64/edit",
           "type": "Робочий аркуш"
         },
         "dance_party_unplugged/coursed/2022": {
@@ -7701,8 +7804,9 @@
           "type": "Посібник для підготовки вчителя"
         },
         "csf_course_d_end_of_course_project_planning_guide/coursed/2022": {
-          "name": "Посібник з планування проєктів наприкінці курсу \"Основи інформатики - Курс D\"",
-          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
+          "name": "План підсумкового проєкту \"Основи інформатики - Курс D\"",
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
+          "type": "План проєкту"
         },
         "all_resources/coursee/2022": {
           "name": "Всі ресурси"
@@ -7724,7 +7828,7 @@
           "type": "Ресурс"
         },
         "curriculum_guide/coursee/2022": {
-          "name": "Посібник з методики"
+          "name": "Методичні рекомендації до програми"
         },
         "debugging_guide/coursee/2022": {
           "name": "Керівництво з налагодження",
@@ -7759,7 +7863,7 @@
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2022": {
           "name": "Стань суперцифровим громадянином: Слайди до уроку",
-          "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
+          "url": "https://docs.google.com/presentation/d/142G9Y1tG1-eboN4Iyg5iMEjD1DTTXjhlHQCVkC4UqmM/edit"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2022": {
           "name": "Стань суперцифровим громадянином: Супер цифровий громадянин",
@@ -7782,7 +7886,7 @@
         },
         "private_and_personal_information_lesson_slides/coursee/2022": {
           "name": "Приватна та особиста інформація: Слайди уроку",
-          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit",
+          "url": "https://docs.google.com/presentation/d/1qmC8zb_VEUFDQvxFmqsSj8PBCQyaDsOI3HMxiDM0wz4/edit",
           "type": "Набір слайдів"
         },
         "private_and_personal_information_private_and_personal_information/coursee/2022": {
@@ -7870,7 +7974,7 @@
           "type": "Рубрика"
         },
         "end_of_course_project_guide/coursee/2022": {
-          "name": "Посібник з планування підсумкового проєкту",
+          "name": "План підсумкового проєкту курсу",
           "type": "Вказівки до діяльності"
         },
         "all_resources/coursef/2022": {
@@ -7893,7 +7997,7 @@
           "type": "Ресурс"
         },
         "curriculum_guide/coursef/2022": {
-          "name": "Посібник з методики",
+          "name": "Методичні рекомендації до програми",
           "type": "Ресурс"
         },
         "debugging_guide/coursef/2022": {
@@ -7937,7 +8041,7 @@
         },
         "the_power_of_words_lesson_slides/coursef/2022": {
           "name": "Сила слова: Слайди уроку",
-          "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit",
+          "url": "https://docs.google.com/presentation/d/1Y09jm89Oz9tvZHu3KzE0sEwwvWdpaUDj0cZxAW7bKAA/edit",
           "type": "Слайди"
         },
         "the_power_of_words_the_power_of_words/coursef/2022": {
@@ -7955,12 +8059,12 @@
         },
         "exploring_apps/coursef/2022": {
           "name": "Вивчаємо застосунки",
-          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview",
+          "url": "https://docs.google.com/document/d/1Kp8dLxcUzveKIxFtLzJfKdiyzPiUYV3B_E-fUOy7GiY/template/preview",
           "type": "Ресурс"
         },
         "exploring_apps_1/coursef/2022": {
           "name": "Вивчаємо застосунки",
-          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
+          "url": "https://docs.google.com/document/d/14vrc6T7dYse2Xsbq6-7uE3oIZuPKLtL95NRHN5RDwmY/template/preview",
           "type": "Відповіді"
         },
         "introducing_sprite_lab_1/coursef/2022": {
@@ -7990,7 +8094,7 @@
         },
         "mini_project_user_input_programs_1/coursef/2022": {
           "name": "Міні-проєкт: Програми з введенням даних користувачем",
-          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview",
+          "url": "https://docs.google.com/document/d/1XCb-Z_7rN_hutTayWr06eH1oCBNEwj_xnCriRIYeo6s/template/preview",
           "type": "Відповіді"
         },
         "teacher_sandbox_level/coursef/2022": {
@@ -8000,12 +8104,12 @@
         },
         "user_input_programs/coursef/2022": {
           "name": "Програми з введенням даних користувачем",
-          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview",
+          "url": "https://docs.google.com/document/d/1YpVgGcos_aA1BPu4IOc0i14eOi10YbB2jKePIzHIMDw/template/preview",
           "type": "Вказівки до діяльності"
         },
         "running_simulations/coursef/2022": {
           "name": "Запуск моделей",
-          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit",
+          "url": "https://docs.google.com/document/d/1hWTLjY5jmn4aqQgQWna8lt3CNJHd1xYLQXmO8tXZPQs/edit",
           "type": "Робочий аркуш"
         },
         "ai_impact_on_society/coursef/2022": {
@@ -8047,7 +8151,7 @@
           "type": "Рубрика"
         },
         "final_project_design_1/coursef/2022": {
-          "name": "Посібник з планування підсумкового проєкту",
+          "name": "План підсумкового проєкту курсу",
           "type": "Вказівки до діяльності"
         },
         "all_resources/express/2022": {
@@ -8114,8 +8218,8 @@
           "type": "Відео"
         },
         "dance_party_project_guide/express/2022": {
-          "name": "Інструкція до проєкту \"Танцювальна вечірка\"",
-          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+          "name": "План проєкту \"Танцювальна вечірка\"",
+          "url": "https://docs.google.com/document/d/1Cep4K9CwUM4HfsqFXHM7eR3ZHQfMBgX6S5HHN66Qu64/edit",
           "type": "Робочий аркуш"
         },
         "open-ended_programming_levels/express/2022": {
@@ -8151,8 +8255,9 @@
           "type": "Рубрика"
         },
         "csf_express_end_of_course_project_planning_guide/express/2022": {
-          "name": "Посібник з планування підсумкового проєкту курсу \"CSF Express\"",
-          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+          "name": "План підсумкового проєкту \"CSF Express\"",
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
+          "type": "План проєкту"
         },
         "all_resources/pre-express/2022": {
           "name": "Всі ресурси"

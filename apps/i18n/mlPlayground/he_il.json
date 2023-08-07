@@ -12,6 +12,9 @@
         }
       },
       "fields": {
+        "Height": {
+          "id": "גובה"
+        },
         "Length": {
           "id": "אורך"
         }
@@ -355,6 +358,10 @@
           "description": "מין",
           "id": "מין"
         },
+        "Height": {
+          "description": "גובה",
+          "id": "גובה"
+        },
         "Internet": {
           "id": "אינטרנט"
         },
@@ -363,58 +370,6 @@
         },
         "Writing": {
           "id": "כתיבה"
-        }
-      }
-    },
-    "taco_toppings_toy": {
-    },
-    "thanksgiving": {
-      "card": {
-      },
-      "fields": {
-      }
-    },
-    "zoo": {
-      "card": {
-        "context": {
-        }
-      },
-      "fields": {
-        "Airborne": {
-        },
-        "Animal Name": {
-        },
-        "Aquatic": {
-        },
-        "Backbone": {
-        },
-        "Breathes": {
-        },
-        "Catsize": {
-        },
-        "Class": {
-        },
-        "Domestic": {
-        },
-        "Eggs": {
-        },
-        "Feathers": {
-        },
-        "Fins": {
-        },
-        "Hair": {
-        },
-        "Legs": {
-        },
-        "Milk": {
-        },
-        "Predator": {
-        },
-        "Tail": {
-        },
-        "Toothed": {
-        },
-        "Venomous": {
         }
       }
     }

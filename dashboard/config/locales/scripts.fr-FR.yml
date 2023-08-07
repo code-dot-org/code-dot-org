@@ -5647,15 +5647,6 @@ fr:
               display_name: Anciennes leçons
             lessonGroup-6:
               display_name: Nouvelles leçons
-          student_description: Cette unité explore le rôle des plateformes matérielles
-            dans l'informatique et explique comment différents capteurs peuvent fournir
-            des entrées et des sorties plus efficaces que le clavier, la souris et
-            le moniteur traditionnels. À l'aide d'App Lab et de Circuit Playground
-            d'Adafruit, vous développerez des programmes qui utilisent les mêmes entrées
-            et sorties matérielles que celles des appareils intelligents, en étudiant
-            comment un simple prototype peut mener à un produit fini. L'unité se termine
-            par un défi de conception consistant à utiliser le Circuit Playground
-            comme base pour une innovation de votre propre conception.
           title: "(Option A) Création d'applications avec des appareils - Circuit
             Playground (23-24)"
         csd6-dlp:
@@ -8322,7 +8313,7 @@ fr:
             présenter des risques pour votre sécurité et votre identité personnelles.\n\nCette
             unité inclut du contenu des rubriques suivantes du cadre de principes
             AP CS. Pour plus d'informations sur la couverture des sujets, consultez
-            la revue du cours [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n-
+            la revue du cours [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing).\n\n-
             \  5.1 Effets bénéfiques et nocifs\n-   5.6 Sécurité informatique\n\n : : :\n\n##
             Vous avez fini d'enseigner cette unité ?\n\nRépondez à cette [\\*\\*courte
             enquête\\*\\*](<>) pour informer l'équipe du programme de Code.org du
@@ -10208,6 +10199,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: se concentrer sur l'impact dans la société1-2023
           student_description: Problem Solving and Computing est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
@@ -10758,6 +10751,164 @@ fr:
           description_short: Découvrez comment fonctionne Internet.
           student_description: Découvrez comment fonctionne Internet.
           title: Simulateur d'Internet
+        nevada-standards-aligned-fifth-grade-2023:
+          description: Nous avons créé le cours F pour les élèves de cinquième année.
+            Le cours commence par examiner comment les utilisateurs font leurs choix
+            dans les applications qu'ils utilisent. Les étudiants apprennent ensuite
+            à créer diverses applications Sprite Lab qui offrent également des choix
+            à l'utilisateur. Au cours des dernières leçons du cours, les étudiants
+            découvriront les variables dans divers contextes. Les étudiants bénéficient
+            d'une plus grande autonomie et d'un plus grand choix tout au long de ce
+            cours. À la fin du cours, les étudiants auront créé des projets interactifs
+            à partager avec leurs amis et leur famille.
+          description_audience: 'Àges : 9 à 13 ans'
+          description_short: Apprends toutes les notions dans les Concepts Fondamentaux
+            de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Instructions conditionnelles
+            lessonGroup-4:
+              display_name: Données et Simulations
+            lessonGroup-5:
+              display_name: Variables
+            lessonGroup-6:
+              display_name: L'impact de l'informatique
+            lessonGroup-7:
+              display_name: Projet de fin de cours
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description: Nous avons créé le cours F pour les élèves de cinquième année.
+            Le cours commence par examiner comment les utilisateurs font leurs choix
+            dans les applications qu'ils utilisent. Les étudiants apprennent ensuite
+            à créer diverses applications Sprite Lab qui offrent également des choix
+            à l'utilisateur. Au cours des dernières leçons du cours, les étudiants
+            découvriront les variables dans divers contextes. Les étudiants bénéficient
+            d'une plus grande autonomie et d'un plus grand choix tout au long de ce
+            cours. À la fin du cours, les étudiants auront créé des projets interactifs
+            à partager avec leurs amis et leur famille.
+          description_audience: 'Àges : 9 à 13 ans'
+          description_short: Apprends toutes les notions dans les Concepts Fondamentaux
+            de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          student_description: Apprenez à coder avec des sprites et des variables,
+            et discutez des impacts sociétaux de l'informatique et d'Internet. À la
+            fin de ce cours, concevez et créez un projet que vous pourrez partager
+            avec vos amis et votre famille.
+        nevada-standards-aligned-first-grade-2023:
+          description: Le Cours B a été pensé avec les élèves de CP à l'esprit. Si
+            les notions présentées dans le Cours B suivent de près celles du Cours
+            A, les élèves découvriront néanmoins des activités déconnectées plus complexes
+            et travailleront avec une plus grande variété de casse-têtes. Les élèves
+            apprendront les bases de la programmation, des techniques de collaboration,
+            développeront des compétences d'investigation et leur esprit critique,
+            et apprendront à persévérer face aux difficultés et à naviguer l'internet
+            en toute sécurité. À la fin de ce cours, les élèves créeront leurs propres
+            jeux dans l'environnement Labo Jeux.
+          description_audience: 'Âges : 5 à 8 ans'
+          description_short: Une introduction à l'informatique pour les pré-lecteurs.
+            Similaire au cours A, mais avec une profondeur de concept accrue.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Citoyenneté Numérique
+            lessonGroup-3:
+              display_name: Séquencement
+            lessonGroup-4:
+              display_name: Boucles
+            lessonGroup-5:
+              display_name: L'impact de l'informatique
+            lessonGroup-6:
+              display_name: Événements
+            lessonGroup-7:
+              display_name: Projet de fin de cours
+        nevada-standards-aligned-fourth-grade-2023:
+          description: Nous avons créé le cours E pour des élèves de CM1. Le cours
+            commence par une introduction à l'outil de programmation Labo des Sprites.
+            Les élèves apprendront à créer des projets amusants et interactifs qui
+            renforceront ce qu'ils apprendront sur la sécurité en ligne. À la suite
+            de ces leçons, les élèves se mettront à faire du codage plus complexe.
+            Les élèves découvriront les boucles imbriquées, les fonctions et les instructions
+            conditionnelles. À la fin du cours, les élèves associeront ces notions
+            pour résoudre des casse-têtes difficiles. Le cours se termine par un projet
+            libre dans le cadre duquel les élèves créeront un jeu ou feront un dessin.
+          description_audience: 'Âge : 8 à 12 ans'
+          description_short: Découvrez les bases des sprites, des boucles imbriquées
+            et des fonctions.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Boucles Imbriquées
+            lessonGroup-4:
+              display_name: Fonctions
+            lessonGroup-5:
+              display_name: Données et Simulations
+            lessonGroup-6:
+              display_name: Projet de fin de cours
+        nevada-standards-aligned-kindergarten-2023:
+          description: Le Cours A propose un programme d'informatique pour les lecteurs
+            débutants, dont les élèves de maternelle. Les élèves apprendront à programmer
+            en utilisant des commandes telles que les boucles et les événements. Les
+            leçons qui se trouvent dans ce cours enseigneront également aux élèves
+            à collaborer sérieusement les uns avec les autres, différentes techniques
+            de résolution de problèmes, à persister face aux tâches plus exigeantes,
+            et comment naviguer l'internet en toute sécurité.
+          description_audience: 'Âges : 4 à 7 ans'
+          description_short: Une initiation à l’informatique pour les pré-lecteurs.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Citoyenneté Numérique
+            lessonGroup-3:
+              display_name: Séquencement
+            lessonGroup-4:
+              display_name: Boucles
+            lessonGroup-5:
+              display_name: L'impact de l'informatique
+            lessonGroup-6:
+              display_name: Données
+          lessons:
+            lesson-1:
+              name: Données
+        nevada-standards-aligned-second-grade-2023:
+          description: Nous avons développé le Cours C pour des élèves de CE1. Les
+            élèves créeront des programmes avec du séquençage, des boucles et des
+            événements. Ils examineront des techniques de résolution de problèmes
+            et élaboreront des stratégies pour créer des communautés positives en
+            ligne et hors ligne. À la fin du cours, les élèves créeront des jeux interactifs
+            qu'ils pourront partager.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Citoyenneté Numérique
+            lessonGroup-3:
+              display_name: Séquencement
+            lessonGroup-4:
+              display_name: Boucles
+            lessonGroup-5:
+              display_name: Événements
+            lessonGroup-6:
+              display_name: Données
+        nevada-standards-aligned-third-grade-2023:
+          description: Nous avons créé le cours D pour les élèves de CE2. Le cours
+            commence par un examen des notions abordées dans les cours précédents,
+            dont les boucles et les événements. Par la suite, les élèves développeront
+            leur compréhension des algorithmes, des boucles imbriquées, des boucles
+            « tant que », des instructions conditionnelles, et bien plus encore.
+          description_audience: 'Àges : 7 à 11 ans'
+          description_short: Learn about conditional statements. Create your own art,
+            games, and even a dance party.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Citoyenneté Numérique
+            lessonGroup-3:
+              display_name: Séquencement
+            lessonGroup-4:
+              display_name: L'impact de l'informatique
+            lessonGroup-6:
+              display_name: Boucles
+            lessonGroup-7:
+              display_name: Données
+            lessonGroup-8:
+              display_name: Projet de fin de cours
         new-d:
           title: Script du Nouveau Cours D
         new-e:
@@ -11976,6 +12127,17 @@ fr:
           name: tessplayground
         tesstest921:
           name: tesstest921
+        test-nv-coursea-2023:
+          description_audience: 'Âges : 4 à 7 ans'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Citoyenneté Numérique
+            lessonGroup-3:
+              display_name: Séquencement
+            lessonGroup-4:
+              display_name: Boucles
+            lessonGroup-5:
+              display_name: L'impact de l'informatique
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

@@ -3902,9 +3902,6 @@ zh-TW:
               display_name: 舊課
             lessonGroup-6:
               display_name: 新課程
-          student_description: 本單元探討硬體平台在運算中的作用，以及不同的感測器如何比傳統鍵盤、滑鼠和顯示器提供更有效的輸入和輸出。使用
-            App Lab 和 Adafruit 的 Circuit 遊樂場，您將開發使用與智能設備中相同的硬件輸入和輸出的程序，以查看簡單的粗略原型如何導致成品。該單位最後面臨的設計挑戰，以使用
-            Circuit 遊樂場作為您自己設計創新的基礎。
           title: "（選項 A）使用設備創建應用程序-電路遊樂場（'23 年 24 月）"
         csd6-dlp:
           description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 6。你將可在這裡找到反思提示與指引，以表現出熟練
@@ -6677,6 +6674,8 @@ zh-TW:
               display_name: 第 1 章：解決問題的流程
             lessonGroup-3:
               display_name: 替代課程
+            lessonGroup-4:
+              display_name: 問卷
           name: 聚焦在社會中的影響力 1-2023
           student_description: 問題解決和計算是對計算機科學領域的高度互動性和協作性的介紹，框架在解決問題的更廣泛追求中。您將練習使用問題解決過程來解決一系列難題，挑戰和現實世界場景。接下來，您將瞭解電腦如何輸入、輸出、儲存和處理資訊，以協助人類解決問題。該單元結束了一個項目，您在其中設計了一個應用程序，有助於解決您選擇的問題。
           title: 問題解決與計算 ('23-'24)
@@ -7082,6 +7081,113 @@ zh-TW:
           description_short: 學習有關網際網路的工作原理。
           student_description: 學習有關網際網路的工作原理。
           title: 網路模擬器
+        nevada-standards-aligned-fifth-grade-2023:
+          description: 我們為五年級的學生創建了 F 課程。課程從研究使用者如何在他們使用的應用程式中做出選擇開始。然後，學生學習製作各種 Sprite
+            Lab 應用程序，這些應用程序也為用戶提供選擇。在課程後期的課程中，學生將學習各種情境中的變數。在整個課程中，學生將獲得更大的自主權和更多選擇。在課程結束時，學生將創建互動項目，與他們的朋友和家人分享。
+          description_audience: 年齡 9-13
+          description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 角色
+            lessonGroup-3:
+              display_name: 條件判斷（Conditionals）
+            lessonGroup-4:
+              display_name: 資料與模擬
+            lessonGroup-5:
+              display_name: 變數
+            lessonGroup-6:
+              display_name: 運算的影響
+            lessonGroup-7:
+              display_name: 課程結束專案
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description: 我們為五年級的學生創建了 F 課程。課程從研究使用者如何在他們使用的應用程式中做出選擇開始。然後，學生學習製作各種 Sprite
+            Lab 應用程序，這些應用程序也為用戶提供選擇。在課程後期的課程中，學生將學習各種情境中的變數。在整個課程中，學生將獲得更大的自主權和更多選擇。在課程結束時，學生將創建互動項目，與他們的朋友和家人分享。
+          description_audience: 年齡 9-13
+          description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 角色
+          student_description: 學習使用精靈和變量進行編碼，並討論計算和互聯網對社會的影響。在本課程結束時，設計並創建一個可以與朋友和家人分享的項目。
+        nevada-standards-aligned-first-grade-2023:
+          description: 我們開發了課程 B，考慮到一年級學生。雖然 B 課程中的概念與 A 課程中的概念相同，但學生可以學習更複雜的不插電活動，並通過更多種類的謎題進行工作。學生將學習編程的基礎知識，協作技巧，調查和批判性思維能力，面對困難的堅持和互聯網安全。在本課程結束時，學生在
+            Play Lab 編程環境中創建遊戲。
+          description_audience: 年齡 5-8
+          description_short: 為學前兒童準備的電腦科學介紹。類似課程 A，但採用更深入的概念。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 數位公民
+            lessonGroup-3:
+              display_name: 序列
+            lessonGroup-4:
+              display_name: 迴圈
+            lessonGroup-5:
+              display_name: 運算的影響
+            lessonGroup-6:
+              display_name: 事件
+            lessonGroup-7:
+              display_name: 課程結束專案
+        nevada-standards-aligned-fourth-grade-2023:
+          description: 我們為四年級的學生創建了 E 課程。課程從 Sprite 實驗室程式設計工具的簡介開始。學生將學習製作有趣的互動項目，以強化他們將學習到的在線安全知識。在這些課程之後，學生將參與更複雜的編碼。學生將學習嵌套循環，函數和條件。在課程結束時，學生將結合這些概念來解決具有挑戰性的難題。課程以開放式專案結束，學生可以在其中創作遊戲或繪圖。
+          description_audience: 年齡 8-12
+          description_short: 學習精靈，嵌套循環和函數的基礎知識。
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 巢狀迴圈
+            lessonGroup-4:
+              display_name: 函式
+            lessonGroup-5:
+              display_name: 資料與模擬
+            lessonGroup-6:
+              display_name: 課程結束專案
+        nevada-standards-aligned-kindergarten-2023:
+          description: 課程 A 為初學者提供計算機科學課程，包括幼稚園學生。學生將學習使用循環和事件等命令進行編程。本課程的課程還教導學生與他人進行有意義的合作，研究不同的解決問題的技巧，堅持面對具有挑戰性的任務，並了解互聯網安全。
+          description_audience: 年齡：4-7
+          description_short: 為學齡前兒童設計的計算機科學指引。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 數位公民
+            lessonGroup-3:
+              display_name: 序列
+            lessonGroup-4:
+              display_name: 迴圈
+            lessonGroup-5:
+              display_name: 運算的影響
+            lessonGroup-6:
+              display_name: 數據
+          lessons:
+            lesson-1:
+              name: 數據
+        nevada-standards-aligned-second-grade-2023:
+          description: 我們為二年級的學生開發了 C 課程。學生將創建包含排序，循環和事件的程序。他們將研究解決問題的技術並制定策略，以建立在線和離線積極的社區。在課程結束時，學生將創建可以分享的互動遊戲。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 數位公民
+            lessonGroup-3:
+              display_name: 序列
+            lessonGroup-4:
+              display_name: 迴圈
+            lessonGroup-5:
+              display_name: 事件
+            lessonGroup-6:
+              display_name: 數據
+        nevada-standards-aligned-third-grade-2023:
+          description: 我們為三年級的學生創建了 D 課程。該課程從早期課程中找到的概念開始，包括循環和事件。之後，學生將發展他們對算法，嵌套循環，while
+            循環，條件等的理解。
+          description_audience: 年齡 7-11
+          description_short: 學習條件式陳述句。你可製作自己的藝術品、遊戲，甚至舞蹈派對！
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 數位公民
+            lessonGroup-3:
+              display_name: 序列
+            lessonGroup-4:
+              display_name: 運算的影響
+            lessonGroup-6:
+              display_name: 迴圈
+            lessonGroup-7:
+              display_name: 數據
+            lessonGroup-8:
+              display_name: 課程結束專案
         new-d:
           title: 新課程 D 腳本
         new-e:
@@ -8008,6 +8114,17 @@ zh-TW:
           name: tessplayground
         tesstest921:
           name: tesstest921
+        test-nv-coursea-2023:
+          description_audience: 年齡：4-7
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 數位公民
+            lessonGroup-3:
+              display_name: 序列
+            lessonGroup-4:
+              display_name: 迴圈
+            lessonGroup-5:
+              display_name: 運算的影響
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:

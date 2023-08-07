@@ -13,8 +13,6 @@
           "Make me red!": "Uczyń mnie czerwonym!",
           "Write code to change my text!": "Napisz kod, aby zmienić mój tekst!"
         },
-        "AppLab Intro 7 - onEvent intro": {
-        },
         "AppLab Intro 7 - onEvent twoButtons": {
           "Off": "Wyłącz",
           "On": "Włącz"
@@ -911,10 +909,6 @@
           "Click on an image below to learn more about each person": "Kliknij obrazek poniżej, aby dowiedzieć się więcej o każdej osobie",
           "Pioneers in Electronics": "Pionierzy elektroniki"
         },
-        "CSD U6 - Accelerometer - ChalA_2222": {
-        },
-        "CSD U6 - Accelerometer - ChalC_2222": {
-        },
         "CSD U6 - Accelerometer - PA_2222": {
           "Game Over": "Koniec gry"
         },
@@ -930,10 +924,6 @@
           "0": "0",
           "Target Number": "Docelowa liczba",
           "Your Number": "Twoja liczba"
-        },
-        "CSD U6 - Accelerometer - P_2222": {
-        },
-        "CSD U6 - Accelerometer - SB1_2222": {
         },
         "CSD U6 - Accelerometer - SB3_2222": {
           "????": "????"
@@ -982,8 +972,6 @@
         "CSD U6 - Board Outputs - PracA_2222": {
           "Off": "Wyłącz",
           "On": "Włącz"
-        },
-        "CSD U6 - Board Outputs - PracB_2222": {
         },
         "CSD U6 - Board Outputs - PracC_2222": {
           "Light Off": "Światło wyłączone",
@@ -1065,13 +1053,9 @@
           "LED 8": "LED 8",
           "LED 9": "LED 9"
         },
-        "CSD U6 - Color LEDs - PracC_2222": {
-        },
         "CSD U6 - Color LEDs - PracD_2222": {
           "Left": "W lewo",
           "Right": "W prawo"
-        },
-        "CSD U6 - Color LEDs - SB1_2222": {
         },
         "CSD U6 - Color LEDs - SB2_2222": {
           "Refresh this page and try again": "Odśwież stronę i spróbuj jeszcze raz.",
@@ -1179,20 +1163,12 @@
         "CSD U6 - Functions - P_2222": {
           "0": "0"
         },
-        "CSD U6 - Functions - SB6_2222": {
-        },
         "CSD U6 - Functions - SB7_2222": {
           "0": "0",
           "Score:": "Wynik:"
         },
         "CSD U6 - Functions - SB_2222": {
           "Light Show!": "Pokaz świateł!"
-        },
-        "CSD U6 - If Variables - A_2222": {
-        },
-        "CSD U6 - If Variables - ChalA_2222": {
-        },
-        "CSD U6 - If Variables - ChalB_2222": {
         },
         "CSD U6 - If Variables - ChalC_2222": {
           "Blue Player Wins!": "Niebieski gracz wygrywa!",
@@ -1448,8 +1424,6 @@
           "Name:": "Nazwisko:",
           "Your Name": "Twoje imię"
         },
-        "CSD U6 - Screen Inputs - ChalA_2222": {
-        },
         "CSD U6 - Screen Inputs - ChalB_2222": {
           "Blue": "Niebieska/Niebieskie",
           "Green": "Zielona/Zielone",
@@ -1545,8 +1519,6 @@
           "Height:": "Wysokość:",
           "Width:": "Szerokość:"
         },
-        "CSD U6 - Screen Outputs - A_2222": {
-        },
         "CSD U6 - Screen Outputs - ChalA_2222": {
           "Alarm:": "Alarm:"
         },
@@ -1585,13 +1557,9 @@
           "right": "w prawo",
           "up": "do góry"
         },
-        "CSD U6 - Screen Outputs - PracC_2222": {
-        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "Hello": "Witaj",
           "name": "nazwa"
-        },
-        "CSD U6 - Screen Outputs - SB1_2222": {
         },
         "CSD U6 - Sensors - A_2222": {
           "0": "0",
@@ -1599,18 +1567,12 @@
           "Sound Value": "Siła dźwięku",
           "Temperature": "Temperatura"
         },
-        "CSD U6 - Sensors - ChalC_2222": {
-        },
         "CSD U6 - Sensors - PA_2222": {
           "Current Temperature in Fahrenheit and Celsius": "Aktualna temperatura w stopniach Fahrenheita i Celsjusza"
-        },
-        "CSD U6 - Sensors - PB_2222": {
         },
         "CSD U6 - Sensors - PC_2222": {
           "off": "off",
           "on": "na"
-        },
-        "CSD U6 - Sensors - PD_2222": {
         },
         "CSD U6 - Sensors - P_2222": {
           "Sensor 1": "Czujnik 1",
@@ -1928,14 +1890,6 @@
           "LED Control": "Sterowanie LED",
           "long": "długi",
           "short": "krótki"
-        },
-        "CSD U6 colorLED on": {
-        },
-        "CSD U6 colorLED on_2018": {
-        },
-        "CSD U6 colorLED on_2019": {
-        },
-        "CSD U6 colorLED on_2021": {
         },
         "CSD U6 colorLeds intensity": {
           "Bright": "Jasny",
@@ -2381,14 +2335,6 @@
           "long": "długi",
           "short": "krótki"
         },
-        "CSD U6 investigate orientation": {
-        },
-        "CSD U6 investigate orientation_2018": {
-        },
-        "CSD U6 investigate orientation_2019": {
-        },
-        "CSD U6 investigate orientation_2021": {
-        },
         "CSD U6 light pattern challenge_2018": {
           "Design 1": "Projekt 1",
           "Design 2": "Projekt 2",
@@ -2635,8 +2581,6 @@
           "Click me!": "Kliknij mnie!",
           "I'm a button!": "Jestem przyciskiem!",
           "Red Button!": "Czerwony przycisk!"
-        },
-        "CSDU4 - Design Mode - 18": {
         },
         "CSDU4 Connecting Screens": {
           "Blue": "Niebieska/Niebieskie",
@@ -3199,28 +3143,6 @@
         },
         "Escape Room Example": {
           "1205": "1205"
-        },
-        "Final Room Escape App": {
-        },
-        "Room Escape Workshop - 1": {
-        },
-        "Room Escape Workshop - 10": {
-        },
-        "Room Escape Workshop - 10 - 2": {
-        },
-        "Room Escape Workshop - 3": {
-        },
-        "Room Escape Workshop - 3-2": {
-        },
-        "Room Escape Workshop - 4": {
-        },
-        "Room Escape Workshop - 5": {
-        },
-        "Room Escape Workshop - 7": {
-        },
-        "Room Escape Workshop - 8": {
-        },
-        "Room Escape Workshop - 9-2": {
         },
         "allthethings design mode elements": {
           "Button": "Przycisk",

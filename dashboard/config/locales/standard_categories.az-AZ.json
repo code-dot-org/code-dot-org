@@ -74,18 +74,6 @@
         "EE": {
           "description": "İfadələr və Bərabərliklər"
         },
-        "ESS": {
-        },
-        "ESS1": {
-        },
-        "ESS2": {
-        },
-        "ESS3": {
-        },
-        "ETS": {
-        },
-        "ETS1": {
-        },
         "F": {
           "description": "Funksiyalar"
         },
@@ -110,16 +98,6 @@
         "LE": {
           "description": "Xətti, kvadratik və Üstlü Funksiyaların Modelləri "
         },
-        "LS": {
-        },
-        "LS1": {
-        },
-        "LS2": {
-        },
-        "LS3": {
-        },
-        "LS4": {
-        },
         "MP": {
           "description": "Riyaziyyat təcrübələri"
         },
@@ -128,16 +106,6 @@
         },
         "NS": {
           "description": "Say Sistemi"
-        },
-        "PS": {
-        },
-        "PS1": {
-        },
-        "PS2": {
-        },
-        "PS3": {
-        },
-        "PS4": {
         },
         "Q": {
           "description": "Miqdarlar"
