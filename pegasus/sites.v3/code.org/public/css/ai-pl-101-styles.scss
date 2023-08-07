@@ -210,12 +210,23 @@
     margin-bottom: 32px;
     background: $neutral_white;
 
+
     img {
       object-fit: cover;
       object-position: center;
-      @media (min-width: 971px) {
+    }
+
+    @media (min-width: 971px) {
+      .video_caption_link {
+        display: none;
+      }
+      .videothumbnail {
         margin: 20px 0 20px 20px;
         width: calc(50% - 20px);
+      }
+      img {
+        //margin: 20px 0 20px 20px;
+        //width: calc(50% - 20px);
       }
     }
   }
