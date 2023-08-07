@@ -61,6 +61,7 @@ class Courses extends Component {
           subHeadingText={subHeadingText}
           description={description}
           backgroundUrl={backgroundUrl}
+          backgroundImageStyling={{backgroundPosition: '40% 40%'}}
         >
           {isSignedOut && (
             <Button
