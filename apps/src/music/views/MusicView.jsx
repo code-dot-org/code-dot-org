@@ -752,10 +752,10 @@ const MusicView = connect(
     currentScriptId: state.progress.scriptId,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
     initialSources: state.lab.initialSources,
-    levelData: state.lab.levelData,
+    levelData: state.lab.levelProperties?.levelData,
     labReadyForReload: state.lab.labReadyForReload,
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
-    appName: state.lab.appName,
+    appName: state.lab.levelProperties?.appName,
     startingPlayheadPosition: state.music.startingPlayheadPosition,
   }),
   dispatch => ({
