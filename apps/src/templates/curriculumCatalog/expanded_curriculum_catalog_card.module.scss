@@ -4,22 +4,20 @@
 $container-width: 960px;
 
 .expandedCardContainer {
-  position: absolute;
-  background-color: #f9f9f9;
+  position: relative;
+  background-color: #fff;
   color: #333;
   border: 1px solid #ccc;
   border-color: #333;
   border-radius: 4px;
-  padding: 16px;
   width: $container-width;
-  height: 25em;
   box-sizing: border-box;
 }
 
 .iconWithDescription {
   display: flex;
   align-items: center;
-  column-gap: 0.5em;
+  column-gap: 8px;
   margin: 0 0 0.5em 0;
 
   > p {
@@ -36,5 +34,59 @@ $container-width: 960px;
 .infoContainer {
   display: flex;
   align-items: center;
-  column-gap: 1em;
+  column-gap: 20px;
+}
+
+.flexDivider {
+  display: flex;
+}
+.courseOfferingContainer {
+  width: 736px;
+  padding: 16px 32px 16px 16px;
+  box-sizing: border-box;
+}
+.relatedCurriculaContainer {
+  background-color: #f7f8fa;
+  width: 224px;
+}
+
+.horizontalDivider {
+  border-top: 1px solid #d4d5d7;
+}
+
+.centerContentContainer {
+  display: flex;
+  column-gap: 48px;
+}
+
+.descriptionVideoContainer {
+  width: 440px;
+}
+
+.resourcesContainer {
+  width: 200px;
+  margin-bottom: 40px;
+
+  hr {
+    margin: 8px 0;
+  }
+}
+
+.bodyText {
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.linksContainer {
+  hr {
+    margin: 8px 0;
+  }
+
+  i {
+    margin-left: 8px;
+  }
+}
+.thickDivider {
+  border-top: 2px solid #d4d5d7;
 }
