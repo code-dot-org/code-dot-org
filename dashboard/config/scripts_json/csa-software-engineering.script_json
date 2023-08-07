@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2023-08-02 22:10:22 UTC",
+    "serialized_at": "2023-08-05 01:59:55 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -26,9 +26,21 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 1,
+      "properties": {
+        "display_name": "Pre-Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
       "properties": {
         "display_name": "Chapter 1: GitHub and Copilot"
       },
@@ -40,7 +52,7 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
         "display_name": "Chapter 2: Computer Vision"
       },
@@ -48,13 +60,41 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa-software-engineering"
       }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Post-Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-software-engineering"
+      }
     }
   ],
   "lessons": [
     {
+      "key": "lesson-7",
+      "name": "Software Engineering and Computer Vision Pre-Survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
       "key": "lesson-1",
       "name": "Intro to GitHub",
-      "absolute_position": 1,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
@@ -72,7 +112,7 @@
     {
       "key": "lesson-2",
       "name": "Intro to Copilot",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
@@ -90,7 +130,7 @@
     {
       "key": "lesson-3",
       "name": "Build with Copilot",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
@@ -108,7 +148,7 @@
     {
       "key": "lesson-4",
       "name": "Intro to AI Models",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
@@ -123,7 +163,7 @@
     {
       "key": "lesson-5",
       "name": "Training Your Model",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
@@ -138,7 +178,7 @@
     {
       "key": "lesson-6",
       "name": "Using Your Model",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
@@ -149,9 +189,37 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa-software-engineering"
       }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Software Engineering and Computer Vision Post-Survey",
+      "absolute_position": 8,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-software-engineering"
+      }
     }
   ],
   "lesson_activities": [
+    {
+      "key": "9f549c81-09f7-43f1-b880-eeb1f816e21a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9f549c81-09f7-43f1-b880-eeb1f816e21a",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-software-engineering"
+      }
+    },
     {
       "key": "550d737e-3a95-481b-9475-c7981e1168b3",
       "position": 1,
@@ -290,9 +358,56 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-software-engineering"
       }
+    },
+    {
+      "key": "9c6ed412-64c9-493a-baf6-80502d7c8663",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9c6ed412-64c9-493a-baf6-80502d7c8663",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "95719263-6508-423b-b80b-37faf9391bca",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "818ec827-6a97-4ee5-b6d2-a5abbc40a2d5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "818ec827-6a97-4ee5-b6d2-a5abbc40a2d5",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-software-engineering"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "31416248-8ec1-4a17-a7dc-b1a4dc9be6e7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Pre-Survey and Assessment: Software Engineering and Computer Vision"
+      },
+      "seeding_key": {
+        "activity_section.key": "31416248-8ec1-4a17-a7dc-b1a4dc9be6e7",
+        "lesson_activity.key": "9f549c81-09f7-43f1-b880-eeb1f816e21a"
+      }
+    },
     {
       "key": "08793d33-c868-4dbf-8f33-a9db2f6ca60d",
       "position": 1,
@@ -574,6 +689,19 @@
       }
     },
     {
+      "key": "36e4f44c-fe8b-4e34-8754-7ee8e82a0703",
+      "position": 7,
+      "properties": {
+        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Lesson Survey",
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "36e4f44c-fe8b-4e34-8754-7ee8e82a0703",
+        "lesson_activity.key": "a912b9ea-ac38-45d0-a692-07d597ba708f"
+      }
+    },
+    {
       "key": "65657eda-1150-4c3b-ba56-6dbcffd6ddc0",
       "position": 1,
       "properties": {
@@ -805,6 +933,19 @@
       }
     },
     {
+      "key": "993673a6-454d-40bb-ac9d-99b2afc5a3bf",
+      "position": 5,
+      "properties": {
+        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Lesson Survey",
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "993673a6-454d-40bb-ac9d-99b2afc5a3bf",
+        "lesson_activity.key": "9ff23134-1f0e-4e27-8cd0-b8b8be83d08e"
+      }
+    },
+    {
       "key": "6e848181-cb92-42c7-ab04-a86704ec76e6",
       "position": 1,
       "properties": {
@@ -966,6 +1107,52 @@
         "activity_section.key": "55cd4ba3-76ce-4fac-808f-2bf90cf4b19f",
         "lesson_activity.key": "de529ace-1001-4ac5-9d65-ba63a32883f0"
       }
+    },
+    {
+      "key": "c0ae7433-1d5f-4437-b237-180ba3644467",
+      "position": 5,
+      "properties": {
+        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Lesson Survey",
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "c0ae7433-1d5f-4437-b237-180ba3644467",
+        "lesson_activity.key": "de529ace-1001-4ac5-9d65-ba63a32883f0"
+      }
+    },
+    {
+      "key": "b524bfa6-e5a3-4fef-934e-ed6996080f5b",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b524bfa6-e5a3-4fef-934e-ed6996080f5b",
+        "lesson_activity.key": "9c6ed412-64c9-493a-baf6-80502d7c8663"
+      }
+    },
+    {
+      "key": "4740f9e6-a3b7-407b-a28f-625ab45aea89",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "4740f9e6-a3b7-407b-a28f-625ab45aea89",
+        "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca"
+      }
+    },
+    {
+      "key": "e3f1e541-4faf-43e5-833c-4d5ab1168ea2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Survey and Assessment: Software Engineering and Computer Vision"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3f1e541-4faf-43e5-833c-4d5ab1168ea2",
+        "lesson_activity.key": "818ec827-6a97-4ee5-b6d2-a5abbc40a2d5"
+      }
     }
   ],
   "script_levels": [
@@ -973,8 +1160,33 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Pre-Survey and Assessment: Software Engineering and Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-CV-PreSurvey-and-Assessment"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "31416248-8ec1-4a17-a7dc-b1a4dc9be6e7"
+      },
+      "level_keys": [
+        "CSA-SE-CV-PreSurvey-and-Assessment"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L1-Repo"
+        ],
         "progression": "GitHub Scavenger Hunt"
       },
       "bonus": false,
@@ -992,7 +1204,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -1017,11 +1229,36 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-L1-Survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "36e4f44c-fe8b-4e34-8754-7ee8e82a0703"
+      },
+      "level_keys": [
+        "CSA-SE-L1-Survey"
+      ]
+    },
+    {
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-SE-Copilot-Navigator"
+        ],
         "progression": "Copilot as the Navigator"
       },
       "bonus": false,
@@ -1039,11 +1276,14 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-SE-Copilot-Driver"
+        ],
         "progression": "Copilot as the Driver"
       },
       "bonus": false,
@@ -1061,11 +1301,14 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L2L1"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1083,11 +1326,36 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-L2-Survey"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "993673a6-454d-40bb-ac9d-99b2afc5a3bf"
+      },
+      "level_keys": [
+        "CSA-SE-L2-Survey"
+      ]
+    },
+    {
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L3-L1"
+        ],
         "progression": "Copilot as a Dev Tool"
       },
       "bonus": false,
@@ -1105,11 +1373,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L3-L2"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1125,9 +1396,109 @@
       "level_keys": [
         "CSA-SE-L3-L2"
       ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-L3-Survey"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "c0ae7433-1d5f-4437-b237-180ba3644467"
+      },
+      "level_keys": [
+        "CSA-SE-L3-Survey"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L2-Survey"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "b524bfa6-e5a3-4fef-934e-ed6996080f5b"
+      },
+      "level_keys": [
+        "CSA-CV-L2-Survey"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L3-Survey"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "4740f9e6-a3b7-407b-a28f-625ab45aea89"
+      },
+      "level_keys": [
+        "CSA-CV-L3-Survey"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Post-Survey and Assessment: Software Engineering and Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-SE-CV-PostSurvey-and-Assessment"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "e3f1e541-4faf-43e5-833c-4d5ab1168ea2"
+      },
+      "level_keys": [
+        "CSA-SE-CV-PostSurvey-and-Assessment"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-CV-PreSurvey-and-Assessment",
+        "script_level.level_keys": [
+          "CSA-SE-CV-PreSurvey-and-Assessment"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "31416248-8ec1-4a17-a7dc-b1a4dc9be6e7"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSA-SE-L1-Repo",
@@ -1150,6 +1521,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-software-engineering",
         "activity_section.key": "0afebfd4-fe10-48ea-9505-69a6b155944b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-L1-Survey",
+        "script_level.level_keys": [
+          "CSA-SE-L1-Survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "36e4f44c-fe8b-4e34-8754-7ee8e82a0703"
       }
     },
     {
@@ -1190,6 +1573,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA-SE-L2-Survey",
+        "script_level.level_keys": [
+          "CSA-SE-L2-Survey"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "993673a6-454d-40bb-ac9d-99b2afc5a3bf"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA-SE-L3-L1",
         "script_level.level_keys": [
           "CSA-SE-L3-L1"
@@ -1210,6 +1605,54 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-software-engineering",
         "activity_section.key": "55cd4ba3-76ce-4fac-808f-2bf90cf4b19f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-L3-Survey",
+        "script_level.level_keys": [
+          "CSA-SE-L3-Survey"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "c0ae7433-1d5f-4437-b237-180ba3644467"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L2-Survey",
+        "script_level.level_keys": [
+          "CSA-CV-L2-Survey"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "b524bfa6-e5a3-4fef-934e-ed6996080f5b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L3-Survey",
+        "script_level.level_keys": [
+          "CSA-CV-L3-Survey"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "4740f9e6-a3b7-407b-a28f-625ab45aea89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-SE-CV-PostSurvey-and-Assessment",
+        "script_level.level_keys": [
+          "CSA-SE-CV-PostSurvey-and-Assessment"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "e3f1e541-4faf-43e5-833c-4d5ab1168ea2"
       }
     }
   ],

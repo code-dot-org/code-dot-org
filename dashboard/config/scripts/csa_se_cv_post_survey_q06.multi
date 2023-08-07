@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-Post-Survey-Q06'
+
+question 'How comfortable are you now with applying the tools or skills you\'ve used or learned in your computer science classes to real-world situations?'
+
+right 'Not at all comfortable: I do not feel comfortable at all applying the tools or skills I\'ve learned in my computer science classes to real-world situations.'
+right 'Slightly comfortable: I have a basic understanding and can apply some skills, but I am mostly unsure of how to apply them to real-world situations.'
+right 'Moderately comfortable: I can apply several skills from my classes, but I still feel uncertain when faced with complex or unfamiliar real-world situations.'
+right 'Mostly comfortable: I feel confident applying most of the tools and skills I\'ve learned to a wide range of real-world situations, though there might be a few complex scenarios where I need more practice.'
+right 'Very comfortable: I am fully confident and comfortable in applying the tools or skills I\'ve learned in my computer science classes to any real-world situation.'
+
+allow_multiple_attempts false
