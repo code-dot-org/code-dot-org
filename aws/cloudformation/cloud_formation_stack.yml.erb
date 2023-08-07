@@ -522,7 +522,7 @@ Resources:
         # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-blockdevicemappings
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: <%= rack_env?(:production) ? 128 : 64 %>
+            VolumeSize: <%= rack_env?(:production, :test) ? 128 : 64 %>
             VolumeType: gp2
       UserData:
         Fn::Base64: !Sub |
