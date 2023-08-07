@@ -214,7 +214,7 @@ RUN \
 # at handling the "exporting image" step at the end of a build, possibly/probably due
 # to a file-by-file diffing step (instead of relying on nanosecond filesystem timestamps)
 #
-# Here is an issue with somebody having a similar problem:
+# Here is an issue with somebody having a similar problem with the containerd differ:
 # https://github.com/moby/buildkit/issues/1704
 #
 # This was reported to be fixed by:
