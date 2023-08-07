@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 21:06:59 UTC",
+    "serialized_at": "2023-08-06 18:22:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4133,10 +4133,120 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "api",
+      "word": "API",
+      "definition": "Application Program Interface - specifications for how functions in a library behave and can be used",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "api"
+      }
+    },
+    {
+      "key": "argument",
+      "word": "Argument",
+      "definition": "the value passed to the parameter",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "argument"
+      }
+    },
+    {
+      "key": "library",
+      "word": "Library",
+      "definition": "a group of functions (procedures) that may be used in creating new programs",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "library"
+      }
+    },
+    {
+      "key": "modularity",
+      "word": "Modularity",
+      "definition": "the subdivision of a computer program into separate subprograms",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "modularity"
+      }
+    },
+    {
+      "key": "parameter",
+      "word": "Parameter",
+      "definition": "a variable in a function definition. Used as a placeholder for values that will be passed through the function",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "key": "procedural_abstraction",
+      "word": "Procedural Abstraction",
+      "definition": "a process and allows a procedure to be used only knowing what it does, not how it does it. Procedural abstraction allows a solution to a large problem to be based on the solution of smaller subproblems. This is accomplished by creating procedures to solve each of the subproblems.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "procedural_abstraction"
+      }
+    },
+    {
+      "key": "return",
+      "word": "Return",
+      "definition": "used to return the flow of control to the point where the procedure (also known as a function) was called and to return the value of expression",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "return"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "vocabulary.key": "api"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "vocabulary.key": "library"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "vocabulary.key": "modularity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "vocabulary.key": "argument"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "vocabulary.key": "return"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "vocabulary.key": "procedural_abstraction"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
