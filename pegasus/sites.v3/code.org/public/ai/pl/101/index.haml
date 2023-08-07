@@ -41,7 +41,8 @@ theme: responsive_full_width
 
     - video_101_index.times do |index|
       .action-block.action-block--two-col
-        %img{src: "/images/ai/pl/101/coming-soon.jpg", alt: hoc_s("ai_pl_101_video_title_#{index + 1}"), class: "col-50"}
+        .video-101__image
+          %img{src: "/images/ai/pl/101/coming-soon.jpg", alt: hoc_s("ai_pl_101_video_title_#{index + 1}"), class: "col-50"}
         .text-wrapper.col-50
           %p.overline=video_101_tags[index]
           %h2=hoc_s("ai_pl_101_video_title_#{index + 1}")
@@ -51,9 +52,6 @@ theme: responsive_full_width
               = hoc_s(:call_to_action_notify_available)
 
       .clear
-
-
-
 
 %section.newsletter-signup#newsletter-signup
   .wrapper

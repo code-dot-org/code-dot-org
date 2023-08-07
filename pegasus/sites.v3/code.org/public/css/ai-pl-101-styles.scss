@@ -209,14 +209,15 @@
   .action-block {
     margin-bottom: 32px;
     background: $neutral_white;
+  }
+  &__image {
 
+    @media (min-width: 971px) {
+      margin: 20px 0 20px 20px;
+      width: calc(50% - 20px);
+    }
     img {
-      object-fit: cover;
-      object-position: center;
-      @media (min-width: 971px) {
-        margin: 20px 0 20px 20px;
-        width: calc(50% - 20px);
-      }
+      width: 100%;
     }
   }
 }
