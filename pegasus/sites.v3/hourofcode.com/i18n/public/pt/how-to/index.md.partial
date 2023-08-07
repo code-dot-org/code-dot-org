@@ -113,7 +113,7 @@ Não tem problema se você e os seus alunos são novos na ciência da computaç�
 
 Guie os alunos para a atividade
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Escreva o link do tutorial em um quadro branco. Localize o link relacionado nas [informações do tutorial selecionado]({{ urls/learn }}).
 
 Quando seus alunos tiverem dificuldades, sinta-se livre para responder:
 
@@ -138,7 +138,7 @@ E se os alunos terminarem mais cedo?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Imprima os certificados]({{ urls/certificates }}) para os alunos.
 - [Imprima adesivos "Fiz uma Hora do Código!"]({{ urls/promote_stickers }}) para os alunos.
 - Compartilhe fotos e vídeos do seu evento da Hora do Código nas mídias sociais. Use #HoraDoCodigo e @codeorg, assim podemos divulgar sua experiência de sucesso também!
 
@@ -153,6 +153,6 @@ E se os alunos terminarem mais cedo?
 
 ### O que vem depois da Hora do Código?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+A ciência da computação não se encerra ao final do Hour of Code! [Saiba como](/beyond) inserir o CC na sua escola, para os seus alunos.
 
 {{ signup_button }}

@@ -1,5 +1,5 @@
 ---
-title: Whole School Participation
+title: การมีส่วนร่วมทั้งโรงเรียน
 ---
 
 {{ signup_button }}
