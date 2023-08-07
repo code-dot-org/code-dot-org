@@ -17,8 +17,6 @@
 class LearningGoalEvidenceLevel < ApplicationRecord
   belongs_to :learning_goal
 
-  validates :understanding, presence: true, inclusion: {in: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.values}
-
   def seeding_key(seed_context)
     my_learning_goal = seed_context.learning_goals.find {|lg| lg.id == learning_goal_id}
     my_key = {

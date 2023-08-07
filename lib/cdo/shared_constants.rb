@@ -597,13 +597,4 @@ module SharedConstants
     # An unhandleable error that results in a program crash.
     FATAL: 4
   }.freeze
-
-  RUBRIC_UNDERSTANDING_LEVELS = OpenStruct.new(
-    {
-      EXTENSIVE: 3,
-      CONVINCING: 2,
-      LIMITED: 1,
-      NONE: 0
-    }
-  ).freeze
 end

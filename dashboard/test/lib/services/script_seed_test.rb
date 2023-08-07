@@ -709,7 +709,7 @@ module Services
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         rubric = script.lessons.first.rubric
         rubric.learning_goals.first.learning_goal_evidence_levels.first.update!(teacher_description: 'Updated Evidence Level')
-        rubric.learning_goals.first.learning_goal_evidence_levels.create!(teacher_description: 'New Evidence Level', understanding: 2)
+        rubric.learning_goals.first.learning_goal_evidence_levels.create!(teacher_description: 'New Evidence Level', understanding: 4)
       end
 
       ScriptSeed.seed_from_json(json)
@@ -1548,7 +1548,7 @@ module Services
           rubric = create :rubric, lesson: lesson, level: lesson.levels.last
           (1..num_learning_goals_per_rubric).each do |lg|
             learning_goal = create :learning_goal, rubric: rubric, key: "#{lesson.name}-learning-goal-#{lg}"
-            (0...num_learning_goal_evidence_levels_per_learning_goal).each do |lge|
+            (1..num_learning_goal_evidence_levels_per_learning_goal).each do |lge|
               create :learning_goal_evidence_level, learning_goal: learning_goal, understanding: lge
             end
           end
