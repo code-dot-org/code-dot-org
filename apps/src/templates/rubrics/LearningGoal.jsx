@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
+import {learningGoalShape} from './rubricShapes';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 
@@ -51,7 +52,7 @@ export default function LearningGoal({
 }
 
 LearningGoal.propTypes = {
-  learningGoal: PropTypes.object,
+  learningGoal: learningGoalShape.isRequired,
   teacherHasEnabledAi: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
 };

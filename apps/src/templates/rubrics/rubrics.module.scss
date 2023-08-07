@@ -67,6 +67,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  font-family: $gotham-bold;
 
   span {
     font-size: 14px;
@@ -85,10 +86,7 @@
   align-items: center;
   gap: 16px;
   font-weight: 325;
-
-  p {
-    margin-bottom: 0;
-  }
+  line-height: 154%;
 }
 
 .aiToken {
@@ -106,7 +104,7 @@
 
   text-align: center;
   font-feature-settings: 'clig' off, 'liga' off;
-  font-family: $gotham-regular;
+  font-family: $gotham-extra-bold;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px; /* 150% */
