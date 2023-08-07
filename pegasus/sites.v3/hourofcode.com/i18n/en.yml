@@ -187,6 +187,7 @@
   call_to_action_see_course_details: "See course details"
   call_to_action_learn_about_approach: "Learn more about our approach"
   call_to_action_try_java_lab: "Try Java Lab"
+  call_to_action_notify_available: "Notify me when available"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -309,6 +310,8 @@
   module_label_student_tool: "Student tool"
   module_label_student_product: "Product"
   module_label_student_content_resources: "Content & resources"
+  module_label_new: "New"
+  module_label_coming_soon: "Coming soon"
 
   module_ages_5_10: "5-10"
   module_ages_11_18: "11-18"
@@ -448,7 +451,7 @@
   teachai_launch_blog_desc_02: "TeachAI aims to integrate AI education into primary and secondary curricula around the world through new reports, policy recommendations, and public engagement opportunities."
 
   ai_pl_callout_title: "AI 101 for Teachers"
-  ai_pl_callout_desc_01: "Discover the groundbreaking world of artificial intelligence (AI) and its transformative potential in education with our comprehensive online learning series for teachers."
+  ai_pl_callout_desc_01: "This is a free, foundational online learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education. Partners Code.org, ETS, ISTE and Khan Academyare offering engaging sessions with renowned experts that will demystify AI, explore responsible implementation, address bias, and showcase how AI-powered learning can revolutionize student outcomes. Join us on this journey of exploration and empowerment, and unlock the future of teaching with and about AI."
   ai_pl_callout_desc_02: "Code.org, ETS, ISTE and Khan Academy are partnering to bring educators a professional learning series that supports teachers as they adapt to AI’s impacts on the classroom."
 
   ai_hero_heading: "Artificial intelligence isn't magic… It's just code!"
@@ -532,6 +535,18 @@
   ai_pl_101_explore_title_4: "ETS’s Criterion Interactive"
   ai_pl_101_explore__desc_4: "This guided five-paragraph writing platform coaches learners through five critical phases of the writing process: Prepare/Plan, Write, Revise, Edit, Reflect. ETS personalizes the writing experience by leveraging cutting-edge scoring models and AI, assisting teachers in providing iterative feedback and formative assessment throughout the writing experience."
   ai_pl_101_explore__button_4: "Explore tool"
+  ai_pl_101_video_title_1: "Fireside Chat with Sal Khan and Hadi Partovi"
+  ai_pl_101_video_desc_1: "Join Sal Khan (Khan Academy) and Hadi Partovi (Code.org) for a fireside chat on embracing artificial intelligence in the classroom. Expect a lively discussion including some of the most controversial topics 	surrounding AI today."
+  ai_pl_101_video_title_2: "Demystifying AI for Educators Demystifying AI for Educators "
+  ai_pl_101_video_desc_2: "Introduction to the fundamentals of Artificial Intelligence which will equip you with the foundational knowledge to understand the profound impact of AI in our society and its increasing relevance to the field of education. You will gain practical insights into leveraging AI for tasks in the classroom, and saving time on administrative tasks."
+  ai_pl_101_video_title_3: "Transforming Learning with AI"
+  ai_pl_101_video_desc_3: "Explore the intersection of AI and education. This session explores how AI can be combined with pedagogy to enhance student learning. It is a must-attend for educators seeking to leverage AI to transform their teaching practices to enrich their students’ learning experiences. "
+  ai_pl_101_video_title_4: "Ensuring a Responsible Approach to AI"
+  ai_pl_101_video_desc_4: "Explore the ethical considerations and best practices for incorporating artificial intelligence in educational environments.  This session will provide concrete strategies, resources, and real-world examples, all aimed at understanding the potential biases of AI, and the ethical considerations that come with it."
+  ai_pl_101_video_title_5: "Bringing AI to the Classroom"
+  ai_pl_101_video_desc_5: "This session focuses on teaching about AI, evaluating and utilizing AI educational tools, and leveraging AI for student assessment. With a rich blend of theory, practical examples, and resources, it aims to empower educators to navigate the AI landscape and enhance student learning experiences."
+
+
 
   ai_vid_intro_caption: "Introducing How AI Works"
   ai_vid_chatbots_caption: "How Chatbots and Large Language Models Work"
