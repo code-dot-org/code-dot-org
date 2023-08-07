@@ -1005,8 +1005,6 @@ es:
         options:
           INPUT1:
             '1': jugo de limón
-            '3': baking soda
-            '5': both
         text: El microscopio tiene {INPUT1}
       DansBlocks_setForegroundEffect2:
         options:
@@ -1024,8 +1022,6 @@ es:
         options:
           INPUT1:
             '1': jugo de limón
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Comunicarse {VAR1} con {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1420,15 +1416,11 @@ es:
         options:
           INPUT1:
             '1': jugo de limón
-            '3': baking soda
-            '5': both
         text: El microscopio tiene {INPUT1}
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': jugo de limón
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1980,7 +1972,6 @@ es:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'
