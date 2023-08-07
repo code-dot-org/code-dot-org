@@ -66,7 +66,7 @@ const CurriculumCatalogCard = ({
     quickViewButtonDescription={i18n.quickViewDescription({
       course_name: courseDisplayName,
     })}
-    quickViewButtonText={i18n.learnMore()}
+    quickViewButtonText={i18n.quickView()}
     imageAltText={imageAltText}
     translationIconTitle={i18n.courseInYourLanguage()}
     pathToCourse={pathToCourse + '?viewAs=Instructor'}
@@ -225,7 +225,7 @@ const CustomizableCurriculumCatalogCard = ({
                 type="button"
                 onClick={handleQuickView}
                 aria-label={quickViewButtonDescription}
-                text={'Quick View'}
+                text={quickViewButtonText}
               />
             ) : (
               <Button
