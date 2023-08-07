@@ -107,7 +107,7 @@
     "LISTS_GET_INDEX_GET": "យក",
     "LISTS_GET_INDEX_GET_REMOVE": "យក និង ដក​ចេញ",
     "LISTS_GET_INDEX_LAST": "ចុង​ក្រោយ",
-    "LISTS_GET_INDEX_RANDOM": "ព្រាវ",
+    "LISTS_GET_INDEX_RANDOM": "ចៃដន្យ",
     "LISTS_GET_INDEX_REMOVE": "ដក​ចេញ",
     "LISTS_GET_INDEX_TOOLTIP_GET_FIRST": "ត្រឡប់​មក​វិញ​នូវ​ធាតុ​ដំបូង​ក្នុង​បញ្ជី​មួយ។",
     "LISTS_GET_INDEX_TOOLTIP_GET_FROM_END": "ត្រឡប់​មក​វិញ​នូវ​ធាតុ​ត្រង់​ទីតាំង​ជាក់លាក់​មួយ​ក្នុង​បញ្ជី។ #1 គឺ​ជា​ធាតុ​ចុង​ក្រោយ។",
