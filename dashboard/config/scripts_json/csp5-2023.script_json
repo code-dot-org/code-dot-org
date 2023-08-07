@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 21:04:44 UTC",
+    "serialized_at": "2023-08-06 18:11:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3970,10 +3970,136 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "citizen_science",
+      "word": "Citizen Science",
+      "definition": "scientific research conducted in whole or part by distributed individuals, many of whom may not be scientists, who contribute relevant data to research using their own computing devices.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "citizen_science"
+      }
+    },
+    {
+      "key": "cleaning_data",
+      "word": "Cleaning Data",
+      "definition": "a process that makes the data uniform without changing its meaning (e.g., replacing all equivalent abbreviations, spellings, and capitalizations with the same word).",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "cleaning_data"
+      }
+    },
+    {
+      "key": "correlation",
+      "word": "Correlation",
+      "definition": "a relationship between two pieces of data, typically referring to the amount that one varies in relation to the other.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "correlation"
+      }
+    },
+    {
+      "key": "crowdsourcing",
+      "word": "Crowdsourcing",
+      "definition": "the practice of obtaining input or information from a large number of people via the Internet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "crowdsourcing"
+      }
+    },
+    {
+      "key": "data_bias",
+      "word": "Data Bias",
+      "definition": "the practice of obtaining input or information from a large number of people via the Internet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_bias"
+      }
+    },
+    {
+      "key": "data_filtering",
+      "word": "Data Filtering",
+      "definition": "choosing a smaller subset of a data set to use for analysis, for example by eliminating / keeping only certain rows in a table",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_filtering"
+      }
+    },
+    {
+      "key": "information",
+      "word": "Information",
+      "definition": "the collection of facts and patterns extracted from data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "information"
+      }
+    },
+    {
+      "key": "metadata",
+      "word": "Metadata",
+      "definition": "data about data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "metadata"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithmic Bias",
+        "vocabulary.key": "data_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big, Open, and Crowdsourced Data",
+        "vocabulary.key": "citizen_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big, Open, and Crowdsourced Data",
+        "vocabulary.key": "crowdsourcing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "vocabulary.key": "correlation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "vocabulary.key": "cleaning_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "vocabulary.key": "data_filtering"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning from Data",
+        "vocabulary.key": "information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning from Data",
+        "vocabulary.key": "metadata"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 

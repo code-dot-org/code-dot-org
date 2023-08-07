@@ -12284,11 +12284,19 @@ en:
               name: Training Your Model
             lesson-6:
               name: Using Your Model
+            lesson-7:
+              name: Software Engineering and Computer Vision Pre-Survey
+            lesson-8:
+              name: Software Engineering and Computer Vision Post-Survey
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: GitHub and Copilot'
             lessonGroup-3:
               display_name: 'Chapter 2: Computer Vision'
+            lessonGroup-4:
+              display_name: Pre-Survey
+            lessonGroup-5:
+              display_name: Post-Survey
           name: csa-software-engineering
           title: Software Engineering & Computer Vision
           description_audience: ''
