@@ -50,6 +50,7 @@ export default class StudentHomepage extends Component {
         <HeaderBanner
           headingText={i18n.homepageHeading()}
           backgroundUrl={backgroundUrl}
+          backgroundImageStyling={{backgroundPosition: '90% 30%'}}
         />
         <div className={'container main'}>
           <ProtectedStatefulDiv ref="flashes" />
