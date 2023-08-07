@@ -332,6 +332,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
   };
   blocklyWrapper.customBlocks = customBlocks;
+
+  // Pointer block behavior is handled in the cdo blockly repo,
+  // so we can safely return an empty string here.
+  blocklyWrapper.getPointerBlockImageUrl = () => {
+    return '';
+  };
+
   return blocklyWrapper;
 }
 

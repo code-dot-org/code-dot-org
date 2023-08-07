@@ -1,0 +1,18 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2023-08-02T16:14:27.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "link_title": "TextTrekkers",
+    "url": "https://github.com/jamjamgobambam/texttrekkers",
+    "long_instructions": "## TextTrekkers\r\n\r\n*Welcome to TextTrekkers, where your words shape your adventure! Traverse through exciting landscapes, solve riddles, and engage in quests using just your text commands.*\r\n\r\n✅ **Do This:** Clone the repository and use Copilot as the Driver to implement a method to process the user's input and return a response.\r\n\r\n### Using Copilot as the Driver\r\n\r\n**Step 1:** Enter this prompt in the chat to prime Copilot to act as the driver:\r\n\r\n<p style=\"background-color: #E5E4E2; color: black; font-size: 1.2em; line-height: 1.5em; padding: 20px;\">\r\nCan you act as a pair programmer for me while I work on this project? I'd like you to act as the driver while I act as the navigator. You will suggest code a few lines at a time and also explain what the code does. I will keep track of the bigger picture and check your code to make sure it's doing what we want it to do.\r\n</p>\r\n\r\n**Step 2:** Write your code to complete the program. Every **1-2 minutes**, check in with Copilot like you would if your driver was one of your peers. For example, you could:\r\n\r\n* Have it decompose the problem into steps\r\n\r\n* Prompt Copilot for code for a specific step and enter it into your editor\r\n\r\n* Provide feedback to Copilot on code that it generated to improve the solution or suggest a different way to write the code\r\n\r\n* Suggest fixes to Copilot for any syntax or logic errors\r\n\r\n* Make sure that the code it suggests will solve the problem",
+    "display_name": "TextTrekkers",
+    "bubble_choice_description": "Welcome to TextTrekkers, where your words shape your adventure! Traverse through exciting landscapes, solve riddles, and engage in quests using just your text commands."
+  },
+  "audit_log": "[{\"changed_at\":\"2023-08-02T16:14:27.846+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L2-L2c\\\"\"],\"cloned_from\":\"CSA-SE-L2-L2c\"},{\"changed_at\":\"2023-08-02 16:15:03 +0000\",\"changed\":[\"link_title\",\"url\",\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</ExternalLink>
