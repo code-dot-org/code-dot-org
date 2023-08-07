@@ -131,6 +131,15 @@
     }
   }
 
+- if current_user.teacher?
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |form|
+    %hr
+    %h2= 'AI Settings'
+    .field
+      = form.label :ai_rubrics_disabled, 'AI Rubric Assessment Disabled', class: "label-bold"
+      = form.check_box :ai_rubrics_disabled
+    %div= form.submit t('crud.update'), id: 'edit-ai-settings', class: 'btn btn-warning'
+
 - if current_user.migrated?
   -# Mount point for React ManageLinkedAccounts component.
   %div#manage-linked-accounts
