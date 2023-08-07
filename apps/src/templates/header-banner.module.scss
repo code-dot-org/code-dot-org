@@ -7,6 +7,14 @@
   position: relative;
   padding: 2rem 1rem;
   box-sizing: border-box;
+
+  /*
+    The banner background image leaves an open space for text on the left. Therefore, in Right-to-Left languages, the
+    banner needs to be flipped horizontally so the background image empty space is on the right.
+   */
+  html[dir="rtl"] & {
+    transform: scaleX(-1);
+  }
 }
 
 .contentWrapper {
@@ -16,6 +24,14 @@
   max-width: 960px;
   min-height: 100px;
   margin: 0 auto;
+
+  /*
+    Since the whole banner was flipped horizontally, we need to un-flip all the content in the header so that the text
+    and layout are not backwards
+   */
+  html[dir="rtl"] & {
+    transform: scaleX(-1);
+  }
 
   figure {
     @media screen and (min-width: $width-sm) {
