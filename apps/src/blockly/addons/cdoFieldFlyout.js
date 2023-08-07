@@ -27,6 +27,10 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     return new CdoFieldFlyout(options.flyoutKey, options);
   }
 
+  static getFlyoutId(block) {
+    return `flyout_${block.type}_${block.id}`;
+  }
+
   EDITABLE = false;
   CURSOR = 'default';
 
@@ -36,6 +40,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @param {Object} [config] - A map of options used to configure the field.
    * @param {number} [config.minWidth] - The minimum width of the field.
    * @param {number} [config.maxWidth] - The maximum width of the field.
+   * @override
    */
   configure_(config) {
     if (config) {
@@ -46,6 +51,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
 
   /**
    * Create the block UI for this field.
+   * @override
    */
   initView() {
     this.workspace_ = this.getSourceBlock().workspace;
@@ -63,6 +69,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
 
   /**
    * This is the Blockly hook to create an editor for the field.
+   * @override
    */
   showEditor_() {
     this.setFlyoutVisible(!this.isFlyoutVisible());
@@ -74,6 +81,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * This should *in general* be the only place render_ gets called from.
    *
    * @returns {Blockly.utils.Size} Height and width.
+   * @override
    */
   getSize() {
     if (!this.isVisible()) {
@@ -93,11 +101,13 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
 
     return this.size_;
   }
+
   /**
    * Used by getSize() to move/resize any DOM elements, and get the new size.
    *
    * All rendering that has an effect on the size/shape of the block should be
    * done here, and should be triggered by getSize().
+   * @override
    */
   render_() {
     this.showEditor_();
@@ -125,7 +135,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
       this.flyout_.init(this.workspace_);
     }
     isVisible
-      ? this.flyout_.show(`flyout_${this.sourceBlock_.type}`)
+      ? this.flyout_.show(CdoFieldFlyout.getFlyoutId(this.sourceBlock_))
       : this.flyout_.hide();
     this.forceRerender();
   }

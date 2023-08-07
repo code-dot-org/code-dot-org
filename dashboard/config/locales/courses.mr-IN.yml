@@ -3,34 +3,34 @@ mr:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: 'संगणक विज्ञान तत्त्वे:'
         csd-2017:
           assignment_family_title: संगणक विज्ञान शोध
         csd-2018:
           assignment_family_title: संगणक विज्ञान शोध
+        csd-2023:
+          title: संगणक विज्ञान शोध
+        csp-2017:
+          assignment_family_title: 'संगणक विज्ञान तत्त्वे:'
         csp-2018:
           assignment_family_title: 'संगणक विज्ञान तत्त्वे:'
         mike-test:
           title: संगणक शास्त्राची मूलतत्त्वे
-        csd-2023:
-          title: संगणक विज्ञान शोध
     resources:
-      curriculum/csd/2020:
-        name: अभ्यासक्रम
-      teacher_forum/csd/2020:
-        name: शिक्षक फोरम
       curriculum/csd/2017:
         name: अभ्यासक्रम
-      teacher_forum_6/csd/2017:
-        name: शिक्षक फोरम
-      curriculum/csd/2019:
-        name: अभ्यासक्रम
-      teacher_forum/csd/2019:
-        name: शिक्षक फोरम
-      getting_started_with_csd/csd/2021:
-        name: CSD सह सुरुवात करणे
       curriculum/csd/2018:
         name: अभ्यासक्रम
+      curriculum/csd/2019:
+        name: अभ्यासक्रम
+      curriculum/csd/2020:
+        name: अभ्यासक्रम
+      getting_started_with_csd/csd/2021:
+        name: CSD सह सुरुवात करणे
+      teacher_forum/csd/2019:
+        name: शिक्षक फोरम
+      teacher_forum/csd/2020:
+        name: शिक्षक फोरम
+      teacher_forum_6/csd/2017:
+        name: शिक्षक फोरम
       teacher_forum_6/csd/2018:
         name: शिक्षक फोरम

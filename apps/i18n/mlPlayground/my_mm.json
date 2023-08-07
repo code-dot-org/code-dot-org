@@ -1,57 +1,9 @@
 {
-  "navigateForward": "ဆက်လုပ်ပါ",
-  "tryAgain": "ပြန်လည်ကြိုးစားပါ",
-  "navigateDone": "ပြီးဆုံးပြီ",
-  "modelCardPossibleValuesMinimum": "အနည်းဆုံး",
-  "modelCardPossibleValuesMaximum": "အများဆုံး",
-  "columnInspectorDescription": "ဖော်ပြချက်",
-  "columnDetailsMinimumValue": "အနည်းဆုံး",
   "columnDetailsMaximumValue": "အများဆုံး",
+  "columnDetailsMinimumValue": "အနည်းဆုံး",
+  "columnInspectorDescription": "ဖော်ပြချက်",
   "dataCardLastUpdated": "​နောက်ဆုံးမွမ်းမံထား​သော",
-  "uniqueOptionsWarningNotice": "မှတ်ချက်",
   "datasets": {
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "အသက်"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "မိုး​လေဝသ"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "အသက်"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "ဖော်ပြချက်"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "အရွယ်အစား"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ကြက်ကလေး"
-        }
-      }
-    },
     "billionaires": {
       "fields": {
         "Age": {
@@ -62,17 +14,10 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "age": {
-          "id": "အသက်"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ကြက်ကလေး"
+        "banana": {
+          "id": "ငှက်ပျောသီး"
         }
       }
     },
@@ -83,48 +28,65 @@
         }
       }
     },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "အသက်"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "အသက်"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "နိုင်ငံ"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "အသက်"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "အမှတ်"
-        },
         "Country": {
           "id": "နိုင်ငံ"
         },
         "Name": {
           "id": "အမည္"
+        },
+        "Score": {
+          "id": "အမှတ်"
         }
       }
     },
-    "student_survey": {
+    "naan_toy": {
       "fields": {
-        "Country": {
-          "id": "နိုင်ငံ"
-        },
-        "Achievements": {
-          "id": "တိုးတက်မှုများ"
-        },
-        "Age": {
-          "id": "အသက်",
-          "description": "အသက်"
-        },
-        "Gender": {
-          "id": "က်ား/မ",
-          "description": "က်ား/မ"
+        "chicken": {
+          "id": "ကြက်ကလေး"
         }
       }
     },
-    "boba_toy": {
+    "nutrition": {
       "fields": {
-        "banana": {
-          "id": "ငှက်ပျောသီး"
+        "Description": {
+          "id": "ဖော်ပြချက်"
         }
       }
     },
-    "heart": {
+    "salad_toy": {
       "fields": {
-        "Age": {
-          "id": "အသက်"
+        "chicken": {
+          "id": "ကြက်ကလေး"
         }
       }
     },
@@ -135,12 +97,50 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
+        "size": {
+          "id": "အရွယ်အစား"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "weather": {
+          "id": "မိုး​လေဝသ"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "အသက်"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "တိုးတက်မှုများ"
+        },
+        "Age": {
+          "description": "အသက်",
+          "id": "အသက်"
+        },
         "Country": {
           "id": "နိုင်ငံ"
+        },
+        "Gender": {
+          "description": "က်ား/မ",
+          "id": "က်ား/မ"
         }
       }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "အများဆုံး",
+  "modelCardPossibleValuesMinimum": "အနည်းဆုံး",
+  "navigateDone": "ပြီးဆုံးပြီ",
+  "navigateForward": "ဆက်လုပ်ပါ",
+  "tryAgain": "ပြန်လည်ကြိုးစားပါ",
+  "uniqueOptionsWarningNotice": "မှတ်ချက်"
 }

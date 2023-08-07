@@ -58,7 +58,7 @@ fr:
       Building an App: Fabriquer une application
       'Bunny ': 'Lapin
 
-'
+        '
       Bunny Jumper: Saut de lapin
       Button Circuits: Circuits de bouton
       Buttons and Switch: Boutons et interrupteur
@@ -112,12 +112,12 @@ fr:
       Course E Artist Project: Cours E Projet Artiste
       Course E Sprite Lab Project: 'Cours E Projet du Labo des Lutins
 
-'
+        '
       'Course E: Play Lab Project': 'Cours E : Projet Play Lab'
       Course F Artist Project: Cours E Projet Artistique
       Course F Sprite Lab Project: 'Cours F Projet d''Artiste
 
-'
+        '
       'Course F: Artist Project': 'Cours F : Projet Artiste'
       'Course F: Artist Project - Revise': 'Cours F : Projet Artiste - Révision'
       'Course F: Play Lab Project': 'Cours F : Projet Play Lab'
@@ -148,7 +148,7 @@ fr:
       Digital Sharing - Unplugged Activity: Partage numérique - Activité déconnectée
       Dogger Example: 'Exemple de Dogger
 
-'
+        '
       Drawing: Dessiner
       Drawing Shapes: Dessiner des formes
       Editing Images: Modifier les images
@@ -326,13 +326,13 @@ fr:
       'Review: HTML': 'Révision : HTML'
       Revise Artist Project: 'Réviser le Projet d''Artiste
 
-'
+        '
       Revise Sprite Lab Project: 'Réviser le Projet du Labo des Lutins
 
-'
+        '
       Robot Doodle: 'Gribouillis de Robot
 
-'
+        '
       Run a simulation: Lancer une simulation
       Sample App: Appli d’exemple
       Sample Game: Jeu d’exemple
@@ -353,7 +353,7 @@ fr:
       Sprite Interactions Review: Révision des interactions de sprite
       Sprite Lab Example Project: 'Exemple de Projet du Labo des Lutins
 
-'
+        '
       Sprite Lab Project: Projet Labo du Lutin
       Sprite Movement: Le Déplacement du Lutin
       Sprite Properties: Propriétés du sprite

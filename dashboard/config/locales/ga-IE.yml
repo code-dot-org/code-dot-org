@@ -1,49 +1,14 @@
 ---
 ga:
-  errors:
-    messages:
-      not_saved: 'Ceartaigh na hearráidí seo a leanas:'
-      too_young: Teorainn aoise ar an ábhar seo; níl sé ar fáil do dhaltaí óga.
-      teacher_must_accept_terms: Teorainn aoise ar an ábhar seo; níl sé ar fáil do
-        dhaltaí óga. Iarr ar do mhúinteoir glacadh leis na Téarmaí Seirbhíse nua chun
-        teacht ar an ábhar seo. Is féidir le do mhúinteoir é seo a dhéanamh trí logáil
-        isteach sa Stiúideo Códála agus an cnaipe "Léigh na téarmaí seirbhíse nua"
-        a chliceáil i ngar do bharr leathanach baile an Stiúideo Códála.
-      pair_programmer: Tá tú ag déanamh códáil bheirte in éineacht le dalta nach bhfuil
-        rochtain aige/aici ar an ábhar seo. Stop an chódáil bheirte ar dtús, ansin
-        déan iarracht eile teacht ar an ábhar seo.
   activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            reset_password_token:
-              invalid: neamhbhailí. Ní féidir an nasc a úsáid níos mó ná uair amháin
-                chun d'fhocal faire a athshocrú, agus is é an nasc is déanaí amháin
-                a fheidhmeoidh.
-      messages:
-        blank: Riachtanach
-        blank_plural: Riachtanach
-        invalid: Neamhbhailí
-        invalid_plural: Neamhbhailí
     attributes:
       user:
-        name: Ainm Taispeána
-        name_example: Ainm Taispeána (m.sh. Sárchódálaí nó Sinéad S.)
-        email: Ríomhphost
-        parent_email: Seoladh ríomhphoist do thuismitheoir
-        personal_email: Seoladh ríomhphoist pearsanta <a href="%{url}">(cliceáil anseo
-          mura bhfuil seoladh ríomhphoist agat)</a>
-        personal_email_markdown: Seoladh ríomhphoist pearsanta [(cliceáil anseo mura
-          bhfuil seoladh ríomhphoist agat)](%{url})
-        username: Ainm úsáideora
-        password: Focal faire
-        password_confirmation: Deimhniú an fhocail faire
-        current_password: Focal faire faoi láthair
-        locale: Teanga
         age: Aois
-        gender: Inscne
+        current_password: Focal faire faoi láthair
         edit_header: Cuir Sonraí an Chuntais in Eagar
+        email: Ríomhphost
+        error:
+          future: earráid - dáta sa todhchaí
         finish_sign_up_header: Críochnaigh an próiseas cláraithe
         finish_sign_up_subheader: Líon isteach an t-eolas seo a leanas chun cuntas
           Code.org a chruthú le haghaidh <strong>%{email}</strong>.
@@ -53,618 +18,222 @@ ga:
           cuntas Code.org a chruthú le <strong>%{provider}</strong> le haghaidh <strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: Líon isteach an t-eolas seo a
           leanas chun cuntas Code.org a chruthú le **%{provider}** le haghaidh **%{email}**.
+        gender: Inscne
+        locale: Teanga
+        name: Ainm Taispeána
+        name_example: Ainm Taispeána (m.sh. Sárchódálaí nó Sinéad S.)
+        parent_email: Seoladh ríomhphoist do thuismitheoir
+        password: Focal faire
+        password_confirmation: Deimhniú an fhocail faire
+        personal_email: Seoladh ríomhphoist pearsanta <a href="%{url}">(cliceáil anseo
+          mura bhfuil seoladh ríomhphoist agat)</a>
+        personal_email_markdown: Seoladh ríomhphoist pearsanta [(cliceáil anseo mura
+          bhfuil seoladh ríomhphoist agat)](%{url})
         reset_password_token: Tá an nasc a chliceáil tú chun d'fhocal faire a athshocrú
-        error:
-          future: earráid - dáta sa todhchaí
         us_state: Stát
-  beta: béite
-  hello: Dia dhuit a dhomhain
-  welcome_back: Fáilte ar ais a %{name}
-  your_professional_learning_plan: Do phlean foghlamtha proifisiúnta
-  see_your_learning_plan: Féach ar do phlean foghlamtha
-  submit: Seol
-  unsubmit: Dísheol
-  previous_page: An leathanach roimhe seo
-  next_page: An chéad leathanach eile
-  next_resource: An chéad acmhainn eile
-  cancel: Cealaigh
-  okay: Ceart go leor
-  or: nó
-  heading_x_of_y: "%{heading} (leathanach %{x} as %{y})"
-  join_section:
-    code:
-      title: Glac páirt i rannán ar Code.org
-      placeholder: Cód an Rannáin (ABCDEF)
-      instructions: 'Cuir isteach an cód 6-litir a thug do mhúinteoir duit (mar shampla:
-        "ABCDEF") chun páirt a ghlacadh ina rannán.'
-      instructions_short: Cuir isteach cód an rannáin le 6 litir
-      submit: Glac Páirt
+        username: Ainm úsáideora
+    errors:
+      messages:
+        blank: Riachtanach
+        blank_plural: Riachtanach
+        invalid: Neamhbhailí
+        invalid_plural: Neamhbhailí
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: neamhbhailí. Ní féidir an nasc a úsáid níos mó ná uair amháin
+                chun d'fhocal faire a athshocrú, agus is é an nasc is déanaí amháin
+                a fheidhmeoidh.
   add_hint_form:
     placeholder: Cuir do leid isteach anseo
     submit: Cuir leid leis
-  appname: Code.org
-  stage: Céim
-  stage_number: Ceacht %{number}
-  puzzle: Dúshlán
-  trophies: Duaiseanna
-  courses: Cúrsaí
-  courses_page:
-    title_student: Foghlaim an Ríomheolaíocht
-    title_teacher: An Ríomheolaíocht a Mhúineadh
-  unplugged_activity: Gníomhaíocht Dhíphlugáilte
-  of: as
-  more: NÍOS MÓ
-  less: NÍOS LÚ
-  try_hoc: 'Bain triail as an Uair Chódála; cliceáil anseo >> '
-  try_k8intro: Bain triail as ár gCúrsa Bhuntús na Ríomheolaíochta do Bhunscoileanna
-    agus Mheánscoileanna (15-25 uair an chloig)
-  k8intro: Cúrsa Bhuntús na Ríomheolaíochta do Bhunscoileanna agus Mheánscoileanna
-    (15-25 uair an chloig)
+  age_interstitial:
+    age: Cén aois thú?
+    disclaimer: Ní chuirfidh code.org an t-eolas seo ar fáil d'aon tríú páirtí riamh,
+      ar díol, ar cíos, nó ar aon bhealach eile.
+    header: Nuashonrú an Chuntais
+    sign_out_markdown: Mura bhfuil tú sásta d'aois a nocht, fáilte romhat [logáil
+      amach](%{url}) anois.
+    warning: Táimid i mbun oibre ar eispéireas nua a sholáthróidh cosaint príobháideachas
+      níos fearr duit. Dá bharr sin, ní mór do gach úsáideoir a aois a chur isteach
+      anseo.
   already_started: 'Ar thosaigh tú cheana? Lean ar aghaidh anseo >> '
-  demos: 'Riarthóir: Gach Taispeántas'
-  continue: Ar aghaidh
-  prize: duais
-  more_info: Tuilleadh eolais
+  appname: Code.org
   auth:
-    continue_with: Lean ar aghaidh le %{provider}
-    sign_in_with: Logáil isteach trí %{provider}
-    signed_in: Logáilte isteach!
-    signed_out_markdown: "### Tá tú logáilte amach as [Code.org](%{url}) anois."
-    sign_out_of_markdown: "#### Bhain tú úsáid as %{provider} le logáil isteach. [Cliceáil
-      anseo](%{url}) chun logáil amach as %{provider}."
-    already_signedup: Cláraithe cheana?
-    notyet_signedup: Níl cuntas agat?
-    google_oauth2: Cuntas Google
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Cuntas Microsoft
-    microsoft_v2_auth: Cuntas Microsoft
-    clever: Clever
-    powerschool: Powerschool
-    forgot_password: Focal faire dearmadta?
-    migration_success: D'éirigh leat athrú go dtí an t-eispéireas nua cuntais.
-    demigration_success: D'éirigh leat filleadh ar an seanleagan amach don chuntas.
-    need_confirmation: Nach bhfuair tú na treoracha deimhnithe?
-    need_unlock: Nach bhfuair tú na treoracha díghlasála?
-    not_linked: Níl do chuntas Code.org ceangailte le do chuntas %{provider}. Caithfidh
-      tú d'fhocal faire a chur isteach thíos.
-    use_clever: Ár leithscéal, ach níl do chuntas Code.org nasctha le %{provider}.
-      Ní mór duit logáil isteach trí do thairseach Clever.
-    invalid_provider: Gabh ár leithscéal, ní fhéadtar cuntais %{provider} a cheangail
-      le cuntais Code.org.
-    unable_to_connect_provider: Níorbh fhéidir linn do chuntas Code.org a cheangal
-      le do chuntas %{provider}. Bain triail eile as.
     already_in_use: Tá do chuntas %{provider} ceangailte le cuntas eile Code.org cheana.
     already_linked: Tá do chuntas %{provider} ceangailte le do chuntas Code.org cheana.
+    already_signedup: Cláraithe cheana?
+    clever: Clever
+    continue_with: Lean ar aghaidh le %{provider}
+    demigration_success: D'éirigh leat filleadh ar an seanleagan amach don chuntas.
     existing_account:
       account_exists: Dea-scéal! Tá cuntas Code.org agat cheana féin a úsáideann %{email}
       sign_in: Logáil isteach agus ceanglóimid do chuntas %{provider}.
       sign_up: Nach é seo do sheoladh r-phoist? Ar mhaith leat cuntas nua a chruthú
         le seoladh r-phoist difriúil? Nascfaimid do phróifíl %{provider} freisin má
         chruthaíonn tú cuntas nua.
-  signup_form:
-    email_signup: Cláraigh le do sheoladh ríomhphoist
-    student_count: Tá %{count} dalta cláraithe cheana.
-    teacher_count: Tá %{count} múinteoir cláraithe cheana.
-    overview: Cruthaigh cuntas le do sheomra ranga a bhainistiú nó do dhul chun cinn
-      a leanúint. Is féidir leat <a href="/">na cúrsaí agus na dúshláin éagsúla</a>
-      a bhrabhsáil gan chuntas, ach ní mór duit clárú chun do chuid tograí agus do
-      dhul chun cinn a shábháil.
-    overview_markdown: Cruthaigh cuntas le do sheomra ranga a bhainistiú nó do dhul
-      chun cinn nó dul chun cinn do pháiste a leanúint. Is féidir leat [na cúrsaí
-      agus na dúshláin éagsúla](/) a bhrabhsáil gan chuntas, ach ní mór duit clárú
-      chun do chuid tionscadal agus do dhul chun cinn a shábháil.
-    hoc_already_signed_up_heading: Tosú gan logáil isteach
-    hoc_already_signed_up_content: Chláraigh tú chun Uair Chódála a mhúineadh! Ní
-      gá duitse ná do na daltaí logáil isteach sa Stiúideo Códála chun páirt a ghlacadh
-      san ócáid seo. Ar dtús, <a href="%{learn_url}">roghnaigh cúrsa teagaisc</a>
-      don seomra ranga agus tabhair an nasc do na daltaí.<br/><br/>Má thaitin an Uair
-      Chódála leat agus má tá tú ag iarraidh níos mó a dhéanamh, is féidir cuntas
-      ar an Stiúideo Códála a chruthú thíos, agus do chuid daltaí a chlárú le haon
-      cheann de na <a href="%{educate_url}">cúrsaí níos faide</a> atá againn.
-    hoc_already_signed_up_content_post_hoc: Go raibh maith agat as Uair Chódála a
-      óstáil. Ní mór duit focal faire a shocrú chun logáil isteach sa Stiúideo Códála.
-      Sa chaoi seo beidh tú in ann do dhul chun cinn a shábháil agus do sheomra ranga
-      a bhainistiú. Beidh tú in ann cúrsaí a shannadh agus dul chun cinn na ndaltaí
-      a leanúint. Nó más fearr leat, is féidir <a href="%{studio_url}">na céimeanna
-      agus na dúshláin éagsúla a bhrabhsáil</a> gan cuntas a chruthú.
-    hoc_already_signed_up_content_post_hoc_markdown: Go raibh maith agat as Uair Chódála
-      a óstáil. Ní mór duit focal faire a shocrú chun logáil isteach sa Stiúideo Códála.
-      Sa chaoi seo beidh tú in ann do dhul chun cinn a shábháil agus do sheomra ranga
-      a bhainistiú. Beidh tú in ann cúrsaí a shannadh agus dul chun cinn na ndaltaí
-      a leanúint. Nó más fearr leat, is féidir [na céimeanna agus na dúshláin éagsúla
-      a bhrabhsáil](%{studio_url}) gan cuntas a chruthú.
-    teacher_educator_guide: Féach an lámhleabhar do mhúinteoirí
-    title: Cláraigh le Code.org
-    school_name: Ainm do Scoile (roghnach)
-    school_address: Seoladh do Scoile (roghnach)
-    address_placeholder: seoladh, cathair, stát, cód poist
-    gender: Inscne (roghnach)
-    birthday: Breithlá (roghnach)
-    age: Aois
-    user_type: An dalta nó múinteoir thú?
-    submit: Cláraigh
-    go_to_account: Téigh go dtí mo chuntas
-    teacher: An múinteoir thú?
-    valid_username: Ar fáil!
-    invalid_username: Ní mór ar a laghad 5 charachtar a bheith in ainm úsáideora
-    taken_username: Ainm úsáideora in úsáid cheana
-    valid_password: Focal faire bailí!
-    invalid_password: Ní mór ar a laghad 6 charachtar a bheith i bhfocal faire
-    mismatch_password: Ní ionann an dá fhocal faire a chuir tú isteach
-    student_consent: Dearbhaím gur thug tuismitheoir nó caomhnóir dlíthiúil cead dom
-      seirbhísí Code.org a úsáid.
-    agree_us_data_transfer_student: "**Aontaím go bhféadfaidh Code.org sonraí (lena
-      n-áirítear sonraí pearsanta) a aistriú chuig na Stáit Aontaithe** de bharr gur
-      úsáid mé an suíomh seo chun críche amhail sonraí a óstáil agus a phróiseáil."
-    data_collection_us: Is suíomh gréasáin neamhbhrabúis é Code.org atá bunaithe sna
-      SAM, agus d'fhéadfadh na dlíthe lena rialaítear bailiú sonraí sna SAM a bheith
-      difriúil ó na dlíthe i do thír féin.
-    visit_privacy: Tabhair cuairt ar [Pholasaí Príobháideachais](%{privacy_url}) chun
-      tuilleadh a fhoghlaim.
-    student_terms_markdown: Ní stórálaimid seoltaí ríomhphoist ar bhealach a ligfeadh
-      dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí aon ríomhphost ó Code.org
-      seachas chun focal faire a athshocrú. Féach ár [bpolasaí príobháideachais](http://code.org/privacy)
-      chun tuilleadh eolais a fháil.
-    user_type_button: Athraigh Cineál an Chuntais
-    user_type_label: Cineál Cuntais
-    user_type_student: Dalta
-    user_type_teacher: Múinteoir
-    field_is_required: Riachtanach
-    accept_terms: Caithfidh tú glacadh leis chun cuntas a chruthú
-    error: Tharla earráid.
-    email_preference_question: An bhfuil cead againn ríomhphost a sheoladh chugat
-      maidir lenár gcúrsaí, deiseanna foghlamtha áitiúla, nó nuacht eile faoin ríomheolaíocht?
-      (uair amháin sa mhí, nó thart air sin)
-    email_preference_privacy: "(Féach ár bpolasaí príobháideachais)"
-    email_preference_yes: Tá
-    email_preference_no: Níl
-    email_preference_required: Caithfidh tú an cheist seo a fhreagairt.
-    share_teacher_email_reg_partner_preference_yes: Tá
-    share_teacher_email_reg_partner_preference_no: Níl
-    share_teacher_email_reg_partner_preference_required: Caithfidh tú an cheist seo
-      a fhreagairt.
-    parent_account_checkbox: Is tuismitheoir/caomhnóir mé agus tá mé ag clárú ar son
-      mo pháiste
-    parent_account_email_progress_permission: An bhfuil cead againn ríomhphost a sheoladh
-      chugat anois is arís le heolas faoi dhul chun cinn do pháiste, faoin chúrsa,
-      agus faoin ríomheolaíocht go ginearálta? [(Féach ár bpolasaí príobháideachais)](%{privacy_policy_url})
-    parent_account_email_label: Seoladh R-Phoist Tuismitheora/Caomhnóra
-    us_state: Stát
-  school_info:
-    title: Eolas faoin scoil (roghnach)
-    school_country: Tír na Scoile
-    select_school_type: Cineál na Scoile
-    charter: Cairtscoil
-    private: Príobháideach
-    public: Poiblí
-    homeschool: Scoil bhaile
-    after_school: Iarscoil
-    other: Eile
-    state: Stát
-    district: Ceantar
-    other_district_not_listed: Ceantar eile nach bhfuil luaite
-    district_name: Ainm an Cheantair
-    school: Scoil
-    other_school_not_listed: Scoil eile nach bhfuil luaite
-    school_name: Ainm na Scoile
-    school_zip: Cód Poist na Scoile
-    school_address: Seoladh na Scoile
-    school_organization_name: Ainm na Scoile/Eagraíochta
-    school_organization_zip: Cód Poist na Scoile/Eagraíochta
-  signin_form:
-    title: An bhfuil cuntas agat cheana? Logáil isteach
-    login: Ríomhphost
-    login_username: Seoladh ríomhphoist nó ainm úsáideora
-    password: Focal faire
-    remember: Cuimhnigh orm
-    submit: Logáil isteach
-  signin:
-    try_heading: An bhfuil fonn ort triail a bhaint as gan clárú?
-    try_hoc: Bain triail as Uair Chódála ar dtús
-    try_20hours: Bain triail as ár mbunchúrsa 20 uair an chloig ar an ríomheolaíocht
-  signinsection:
-    welcome: Fáilte go dtí %{section_name}
-    name: Cuir isteach d'ainm
-    picture: Anois, aimsigh do phictiúr rúnda
-    words: Anois, cuir isteach na focail rúnda atá agat
-    login: Logáil isteach
-    invalid_login: Theip ar an logáil isteach, bain triail eile as
-    pair_programming: Tá comhpháirtí in éineacht liom anseo
-    student_privacy_markdown: Foghlaim cén fáth nach bhfeiceann tú d'ainm iomlán [anseo](%{student_privacy_blog}).
-  password:
-    reset_form:
-      title: Focal faire dearmadta?
-      instructions: Cuir isteach do sheoladh ríomhphoist thíos agus seolfaimid treoracha
-        duit chun d'fhocal faire a athshocrú.
-      email: Seoladh ríomhphoist
-      submit: Seol
-    reset_errors:
-      captcha_required: Líon isteach an CAPTCHA chun d'fhocal faire a athshocrú.
-      invalid_email: Dealraíonn sé gur chláraigh tú le seoladh ríomhphoist neamhbhailí.
-        Cuir ríomhphost chugainn ag support@code.org agus seolfaimid nasc chugat lenar
-        féidir d'fhocal faire a athshocrú.
-    change_form:
-      title: Athraigh d'fhocal faire
-      new_password: Focal faire nua
-      confirm_password: Deimhnigh an focal faire nua
-      submit: Athraigh m'fhocal faire
-  welcome_email:
-    subject: Téigh isteach i mo sheomra ranga (ar Code.org)
-    body: |
-      Cliceáil an nasc thíos chun clárú le cúrsaí ar an ríomheolaíocht ar Code.org (liomsa mar "mhúinteoir"):
-
-      %{link}
-
-      Tá na cúrsaí teagaisc taitneamhach agus tarraingteach, agus múineann siad buntús na ríomheolaíochta trí chomhéadan simplí treoraithe cosúil le cluiche. Foghlaim códáil ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies! :-)
-
-      %{name}
-  parent_mailer:
-    student_associated_subject: Eolas logála isteach do Code.org
-    parent_email_added_subject: Fáilte go dtí Code.org!
-  teacher_mailer:
-    new_teacher_subject: Fáilte go dtí Code.org!
-    delete_teacher_subject: 'Fógra ó Code.org: Scriosadh do chuntas'
-  section:
-    your_section:
-      one: 'Do rannán:'
-      other: 'Do chuid rannán:'
-    code_with_teacher: "%{section_code} le %{teacher_name}"
-    confirm:
-      remove: An bhfuil tú cinnte gur mhaith leat an rannán seo a fhágáil?
-    default_name: Rannán Gan Teideal
-    remove: "(bain rannán)"
-    type:
-      picture: Pictiúr mar Fhocal Faire
-      word: Focail Rúnda
-      email: Ríomhphost
-      google_classroom: Google Classroom
-      clever: Clever
-  follower:
-    invite_sent: Seoladh an cuireadh
-    added_teacher: Is é/í %{name} do mhúinteoir anois
-    registered: Chláraigh tú le %{section_name}.
-    already_exists: Tá tú cláraithe le rannán %{section_name} cheana.
-    error:
-      signed_in: Ba chóir duit logáil amach ar dtús
-      username_not_found: Úsáideoir %{username} gan aimsiú
-      username_in_use: Tá an t-ainm %{username} in úsáid cheana. Roghnaigh ainm eile
-      no_teacher: Níor aimsíodh aon duine cláraithe le '%{teacher_email_or_code}'.
-        Iarr ar do mhúinteoir clárú anseo, ansin déan iarracht eile
-      section_not_found: Níor aimsíodh aon rannán le cód '%{section_code}'.
-      blank_code: Cuir isteach cód an rannáin
-      cant_join_own_section: Ár leithscéal, níl cead agat dul isteach i do rannán
-        féin.
-      provider_managed_section: Tá an rannán seo faoi stiúir soláthraí eile agus ní
-        féidir leat dul ann. Iarr ar do mhúinteoir tusa a chur leis trí %{provider}
-        agus an rannán a shioncronú arís.
-    mail:
-      student_disassociated:
-        subject: 'Fógra ó Code.org: D''fhág %{student_name} do rang.'
-  reports:
-    error:
-      access_denied: Níl cead agat staitisticí a bhaineann leis an duine seo a fheiceáil
+    facebook: Facebook
+    forgot_password: Focal faire dearmadta?
+    google_oauth2: Cuntas Google
+    invalid_provider: Gabh ár leithscéal, ní fhéadtar cuntais %{provider} a cheangail
+      le cuntais Code.org.
+    microsoft_v2_auth: Cuntas Microsoft
+    migration_success: D'éirigh leat athrú go dtí an t-eispéireas nua cuntais.
+    need_confirmation: Nach bhfuair tú na treoracha deimhnithe?
+    need_unlock: Nach bhfuair tú na treoracha díghlasála?
+    not_linked: Níl do chuntas Code.org ceangailte le do chuntas %{provider}. Caithfidh
+      tú d'fhocal faire a chur isteach thíos.
+    notyet_signedup: Níl cuntas agat?
+    powerschool: Powerschool
+    sign_in_with: Logáil isteach trí %{provider}
+    sign_out_of_markdown: "#### Bhain tú úsáid as %{provider} le logáil isteach. [Cliceáil
+      anseo](%{url}) chun logáil amach as %{provider}."
+    signed_in: Logáilte isteach!
+    signed_out_markdown: "### Tá tú logáilte amach as [Code.org](%{url}) anois."
+    twitter: Twitter
+    unable_to_connect_provider: Níorbh fhéidir linn do chuntas Code.org a cheangal
+      le do chuntas %{provider}. Bain triail eile as.
+    use_clever: Ár leithscéal, ach níl do chuntas Code.org nasctha le %{provider}.
+      Ní mór duit logáil isteach trí do thairseach Clever.
+    windowslive: Cuntas Microsoft
+  beta: béite
+  builder:
+    back: Fill ar na scripteanna
+    created: Scríobh tú script nua.
+    destroyed: Scrios tú script.
+    level:
+      create: Cruthaigh leibhéal nua
+      current: Na leibhéil faoi láthair
+      unused: Leibhéil Gan Úsáid
+    manage: Tóg Leibhéil
+    success: D'éirigh leat na blocanna a chur in eagar.
+    view: Féach
+  cancel: Cealaigh
+  certificate_hour_of_code: An Uair Chódála
+  certificate_sponsor_message: Is é %{sponsor_name} a rinne urraíocht ar na ceachtanna
+    seo.
+  compatibility:
+    upgrade:
+      applab_unsupported_tablet: Is fearr a fheidhmíonn an tSaotharlann Aipeanna ar
+        ríomhaire deisce nó ar ríomhaire glúine le luch agus méarchlár. Seans go mbeidh
+        fadhbanna agat ar an ngléas seo.
+      gamelab_unsupported_tablet: Is fearr a fheidhmíonn an tSaotharlann Cluichíochta
+        ar ríomhaire deisce nó ar ríomhaire glúine le luch agus méarchlár. Seans go
+        mbeidh fadhbanna agat ar an ngléas seo.
+      link: Tuilleadh eolais
+      unsupported_message: Ní thacaímid le do bhrabhsálaí. Ba chóir duit [ceann de
+        na brabhsálaithe tacaithe](%{supported_browsers_url}) a shuiteáil. Nó is féidir
+        leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe ar an leathanach
+        briste.
+      weblab_unsupported_locale_storage: Seans go mbeidh fadhbanna agat le Saotharlann
+        an Ghréasáin i bhfuinneog phríobháideach. Ba chóir duit an togra a athlódáil
+        i ngnáthfhuinneog. Gabh ár leithscéal.
+  continue: Ar aghaidh
+  contract_match:
+    baddomainname: Ainm mícheart ar mhír nó ar mhíreanna i d'fhearann.
+    baddomainsize: Tá líon mícheart míreanna i bhfearann do chonartha.
+    baddomaintype: Cineál mícheart ar mhír nó ar mhíreanna i d'fhearann, nó tá siad
+      san ord mícheart.
+    badname: Ainm mícheart ar do chonradh.
+    badname_case: Tá ainm na feidhme cásíogair. Déan iarracht cás ainm an chonartha
+      a athrú.
+    badrange: Raon mícheart ar do chonradh.
+    wrong_title: Freagra mícheart
+  cookie_banner:
+    accept: Glacaim leis
+    message: Má chliceálann tú "Glacaim leis" nó má leanann tú ar aghaidh ag brabhsáil,
+      glacfaidh tú le stóráil fianán ar do ríomhaire nó gléas soghluaiste.
+    more_information: Polasaí Príobháideachais Code.org.
+  copy: Cóipeáil
+  course_offering:
+    headers:
+      csf: Buntús na Ríomheolaíochta
+      minecraft: Minecraft
+      sports: Spórt
+  courses: Cúrsaí
+  courses_category: Cúrsaí Iomlána
+  courses_page:
+    title_student: Foghlaim an Ríomheolaíocht
+    title_teacher: An Ríomheolaíocht a Mhúineadh
   crud:
-    new_model: "%{model} nua"
-    show: Taispeáin
-    edit: Eagar
-    edit_model: Cuir %{model} in eagar
-    update: Nuashonraigh
-    submit: Seol
-    destroy: Scrios
+    access_denied: Níl cead agat teacht ar an %{model} seo.
     back: Ar ais
     confirm: An bhfuil tú cinnte?
     created: Cruthaíodh %{model}.
-    updated: Nuashonraíodh %{model}.
+    destroy: Scrios
     destroyed: Scriosadh %{model}.
-    access_denied: Níl cead agat teacht ar an %{model} seo.
+    edit: Eagar
+    edit_model: Cuir %{model} in eagar
+    new_model: "%{model} nua"
+    show: Taispeáin
+    submit: Seol
+    update: Nuashonraigh
+    updated: Nuashonraíodh %{model}.
+  demos: 'Riarthóir: Gach Taispeántas'
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: Ní ionann an seoladh ríomhphoist a thug tú
-          agus an ceann atá nasctha leis an gcuntas seo
         personal_login_created_email: D'éirigh leat cuntas pearsanta a chruthú. Anois
           is féidir leat logáil isteach le do sheoladh ríomhphoist agus focal faire
         personal_login_created_username: D'éirigh leat cuntas pearsanta a chruthú.
           Anois is féidir leat logáil isteach le d'ainm úsáideora (%{username}) agus
           focal faire
-  nav:
-    header:
-      finished_hoc: Tá mé críochnaithe!
-      sign_in_to_save: Logáil isteach le do dhul chun cinn a shábháil
-      my_dashboard: Mo Phainéal
-      course_catalog: Cúrsaí
-      project_gallery: Tograí
-      sections: Rannáin
-      help_support: Cabhair agus tacaíocht
-      report_bug: Déan tuairisc ar fhadhb
-      teacher_community: Comhphobal múinteoirí
-      professional_learning: Oideachas Proifisiúnta
-      documentation: Doiciméadú
-      tutorials: Cúrsaí Teagaisc
-      app_lab_documentation: 'Saotharlann Aipeanna: Doiciméadú'
-      app_lab_tutorials: 'Saotharlann Aipeanna: Cúrsaí Teagaisc'
-      game_lab_documentation: 'Saotharlann Cluichíochta: Doiciméadú'
-      game_lab_tutorials: 'Saotharlann Cluichíochta: Cúrsaí Teagaisc'
-      sprite_lab_documentation: 'Saotharlann na Sprideanna: Doiciméadú'
-      sprite_lab_tutorials: 'Saotharlann na Sprideanna: Cúrsaí Teagaisc'
-      educate_overview: Foramharc do Mhúinteoirí
-      educate_elementary: Bunscoil
-      educate_middle: Meánscoil
-      educate_high: Scoil dara leibhéal
-      educate_hoc: An Uair Chódála
-      educate_partner: Comhoibriú Linn
-      educate_beyond: Tar éis Code.org
-      educate_inspire: Spreag Dalta
-      educate_community: Comhphobal Ar Líne
-      educate_tools: Uirlisí agus Físeáin
-      about_us: Maidir Linn
-      about_leadership: Lucht Ceannais
-      about_donors: Deontóirí
-      about_partners: Comhpháirtithe
-      about_team: An Fhoireann Iomlán
-      about_news: Seomra Nuachta
-      about_evaluation: Measúnú
-      about_jobs: Postanna
-      about_contact: Déan Teagmháil Linn
-      about_faqs: CCanna
-      learn: Foghlaim
-      stats: Staitisticí
-      help_us: Cabhraigh Linn
-      teach: Múineadh
-      about: Maidir Linn
-      legal_privacy: Polasaí Príobháideachais
-      legal_tos: Téarmaí Seirbhíse
-    user:
-      classroom: Leathanach Baile do Mhúinteoirí
-      district_dashboard: Painéal an Scoilcheantair
-      label: Dia dhuit a %{username}
-      stats: An Stiúideo Códála
-      my_projects: Mo chuid tionscadal
-      settings: Mo chuntas
-      logout: Logáil amach
-      signin: Logáil isteach
-      signup: Cruthaigh cuntas
-      already_registered: Cláraithe cheana?
-      pair_programming: Códáil bheirte
-      team: Foireann
-      driver: Logáilte isteach
-      navigator: Comhpháirtí
-      create: Cruthaigh
-      algebra_game: Ailgéabar
-      applab: Saotharlann Aipeanna
-      artist: Ealaíontóir
-      artist_k1: Ealaíontóir (Réamhléitheoir)
-      basketball: Cispheil
-      bounce: Preabadh
-      calc: Áireamh
-      dance: Cóisir Dhamhsa
-      eval: Luacháil
-      flappy: Flappy
-      frozen: Frozen
-      gamelab: An tSaotharlann Cluichíochta
-      gamelab_jr: An tSaotharlann Cluichíochta (béite)
-      gumball: Saol Iontach Gumball
-      iceage: Ice Age
-      infinity: Éigríoch
-      makerlab: Uirlisí do Dhéantóirí
-      minecraft_adventurer: Eachtránaí Minecraft
-      minecraft_aquatic: Minecraft Uisceach
-      minecraft_codebuilder: 'Minecraft: Ceangal Cóid'
-      minecraft_designer: Minecraft
-      minecraft_hero: Laoch Minecraft
-      playlab: Spraotharlann
-      playlab_k1: Spraotharlann (Réamhléitheoir)
-      scratch: Scratch
-      sports: Spórt
-      spritelab: Saotharlann na Sprideanna
-      starwars: Star Wars
-      starwarsblocks: Star Wars (Blocanna)
-      starwarsblocks_hour: Star Wars (Blocanna)
-      loading: Á lódáil...
-      weblab: Saotharlann an Ghréasáin
-      view_all: Gach Tionscadal...
-    popup:
-      progress_for_user: Dul chun cinn %{name}
-      progress: Do dhul chun cinn
-      close: DÚN
-      mastery: Coincheapa
-      puzzle_map: Céimeanna
-      prizes: Bailigh na %{total_trophies} duais go léir agus faigh bronntanais!
-      prize_earned: Bhailigh tú na %{total_trophies} duais go léir. Thuill tú bronntanas!
-      prize_us_only: "(Daltaí sna Stáit Aontaithe amháin)"
-      prizes_link: tuilleadh eolais
-  teacher:
-    answer: Freagra
-    dashboard: Painéal na Múinteoirí
-    for_teachers_only: Do Mhúinteoirí Amháin
-    title:
-      one: 'Do mhúinteoir:'
-      other: 'Do mhúinteoirí:'
-    remove: "(bain múinteoir)"
-    confirm:
-      remove: An bhfuil tú cinnte gur mhaith leat an múinteoir seo a bhaint?
-    students:
-      dashboard: Féach ar Phainéal na Múinteoirí
-    user_not_found: Níor aimsíodh an múinteoir seo.
-    student_teacher_disassociated: D'fhág tú rannán %{section_code} le %{teacher_name}.
-    panel:
-      answer_viewer: Painéal an Mhúinteora
-      student: Dalta
-      viewing_solution: Réiteach á Thaispeáint
-      try_it_yourself: Bain triail as
-      section: Rannán
-      example: Réiteach Samplach
-      example_with_number: Réiteach Samplach a %{solution_number}
-      submitted_on: 'Seolta:'
-      last_updated: 'Nuashonrú Is déanaí:'
-      unsubmit: Dísheol
-      worked_with: In éineacht le
-      update_lock_settings: Athraigh na socruithe glasála anseo.
-      clear_response: Bánaigh an freagra
-  user:
-    email_confirm_needed: 'Seoladh ríomhphoist gan deimhniú:'
-    email_confirm_needed_required: 'Níl do sheoladh ríomhphoist %{email} deimhnithe:'
-    email_confirm_wrong_email: "(Seoladh ríomhphoist mícheart?)"
-    email_resend_confirm: Seol na treoracha deimhnithe arís
-    new_email_hint: "(deimhnigh gur féidir leat glacadh le ríomhphost ag an seoladh
-      seo)"
-    new_password_hint: "(fág bán é mura bhfuil tú ag iarraidh é a athrú)"
-    current_password_hint: "(ní mór duit an focal faire atá agat faoi láthair a chur
-      isteach leis an athrú a dheimhniú)"
-    delete: Scrios an Cuntas
-    delete_text: Má scriosann tú do chuntas, caillfidh tú aon fhaisnéis agus aon dul
-      chun cinn ceangailte leis an gcuntas seo.
-    delete_text_teacher_managed_note: Níl cead agat an cuntas seo a scriosadh toisc
-      go bhfuil do mhúinteoir i gceannas air. Caithfidh do mhúinteoir(í) tusa a bhaint
-      dá rannán sularbh fhéidir leat an cuntas a scriosadh.
-    delete_text_teacher_note: 'Nóta: má scriosann tú do chuntas-sa, ní scriosfar cuntais
-      do chuid daltaí.'
-    delete_confirm: An bhfuil tú cinnte gur mhaith leat do chuntas a scriosadh?
-    deleted_user: úsáideoir scriosta
-    no_password_because_oauth: Ní gá focal faire a roghnú. Logálfaidh tú isteach trí
-      sholáthraí tríú páirtí.
-    no_password_because_sponsored: Cabhróidh do mhúinteoir leat d'fhocal faire a bhainistiú.
-    create_personal_login: Cruthaigh focal faire pearsanta
-    create_personal_login_under_13_info: Más mian leat Code.org a úsáid fiú tar éis
-      dheireadh na scoilbhliana, iarr ar thuismitheoir cabhrú leat do chuntas pearsanta
-      féin a chruthú thíos.
-    create_personal_login_under_13_username: Ainm úsáideora (ná húsáid d'fhíorainm!)
-    create_personal_login_under_13_parent_email: Seoladh ríomhphoist do thuismitheoir
-    create_personal_login_info: Más mian leat Code.org a úsáid fiú tar éis dheireadh
-      na scoilbhliana, is féidir leat do chuntas féin a chruthú thíos.
-    create_personal_login_link_account: Nó, is féidir leat ceangal a bhunú le cuntas
-      pearsanta sa rannán “Bainistigh Cuntais Nasctha”.
-    create_personal_login_terms: Má chruthaíonn tú cuntas pearsanta, glacann tú le
-      <a href='%{terms_of_service_url}', target='_blank'>téarmaí seirbhíse Code.org</a>.
-      Má tá tú níos óige ná 13 bliain d'aois, deimhníonn tú go bhfuair tú cead ó thuismitheoir
-      nó ó chaomhnóir dlíthiúil seirbhísí Code.org a úsáid fiú gan múinteoir i láthair.
-    create_personal_login_terms_markdown: Má chruthaíonn tú cuntas pearsanta, glacann
-      tú le [téarmaí seirbhíse Code.org](%{terms_of_service_url}). Má tá tú níos óige
-      ná 13 bliain d'aois, deimhníonn tú go bhfuair tú cead ó thuismitheoir nó ó chaomhnóir
-      dlíthiúil seirbhísí Code.org a úsáid fiú gan múinteoir i láthair.
-    create_personal_login_email_note: 'Nóta: Ní stórálaimid seoltaí ríomhphoist ar
-      bhealach a ligfeadh dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí aon
-      ríomhphost ó Code.org seachas chun focal faire a athshocrú. Féach ár <a href=''%{privacy_policy_url}'',
-      target=''_blank''>bpolasaí príobháideachais</a> chun tuilleadh eolais a fháil.'
-    create_personal_login_email_note_markdown: 'Nóta: Ní stórálaimid seoltaí ríomhphoist
-      ar bhealach a ligfeadh dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí
-      aon ríomhphost ó Code.org seachas chun focal faire a athshocrú. Féach ár [bpolasaí
-      príobháideachais](%{privacy_policy_url}) chun tuilleadh eolais a fháil.'
-    enter_new_login_info: Tabhair do shonraí nua logála isteach
-    confirm_secret_words: Deimhnigh gur tusa atá ann trí na focail rúnda atá agat
-      a chur isteach
-    parent_email_label: Seoladh ríomhphoist do thuismitheoir (roghnach)
-    parent_email_hint: "(is féidir é seo a úsáid má chailleann tú d'fhocal faire)"
-    enter_parent_email: Cuir isteach seoladh ríomhphoist do thuismitheora (i gcás
-      gur gá duit d'fhocal faire a athshocrú)
-    update: Nuashonraigh an Cuntas
-    account_successfully_updated: Nuashonraíodh an cuntas.
-    auth_option_saved: D'éirigh leat do chuntas %{provider} a nascadh leis an seoladh
-      ríomhphoist %{email}.
-    auth_option_saved_no_email: D'éirigh leat do chuntas %{provider} a nascadh.
-    update_email: Nuashonraigh
-    for_parents_and_guardians: Do thuismitheoirí agus do chaomhnóirí
-    link_a_parent_email: Ceangail do sheoladh r-phoist leis an gcuntas seo chun fanacht
-      cothrom le dáta le dul chun cinn do pháiste
-    parent_guardian_email_label: Seoladh ríomhphoist do thuismitheoir
-    remove_parent_email_label: Bain
-    none: Dada
-    only_one_parent_email_supported_warning: 'Aire: ní féidir linn glacadh le níos
-      mó ná seoladh r-phoist amháin do thuismitheoir nó caomhnóir.'
-    encrypted: criptithe
-  user_level:
-    completed: Críochnaithe
-    tried: Iarracht déanta
-  home:
-    title: An Stiúideo Códála
-    all_courses: Foramharc ar Chúrsaí 1, 2, agus 3
-    lesson_plans: Pleananna ceachta
-    signin_message: Cláraithe cheana? %{link}
-    student_reg_link: Clárú mar Dhalta
-    teacher_reg_link: Clárú mar Mhúinteoir
-    signin_directions: Cruthaigh cuntas chun do dhul chun cinn a shábháil.<br/> Tá
-      múinteoirí in ann a seomra ranga iomlán a rianú.
-    teacher_dashboard: Féach ar an dul chun cinn
-    teacher_student_count_one: Tá %{count} dalta amháin agat.
-    teacher_student_count: Tá %{count} dalta agat.
-    teacher_averages: Ar an meán, bhailigh do chuid daltaí %{trophy_average} as %{trophy_max}
-      duais "Máistreachta".
-    teacher_print_certificates: Priontáil teastais do na daltaí a chríochnaigh an
-      cúrsa
-    teacher_read_blog: Nuacht agus fógraí maidir le hábhar nua ar ár mblag le haghaidh
-      múinteoirí
-    classroom: Do sheomra ranga
-    student_progress: Do dhul chun cinn
-    student_stats: Bhailigh tú %{trophy_count} as %{trophy_max} duais "Máistreachta".
-    student_left_off: 'An áit ar stop tú:'
-    student_finished: Chríochnaigh tú na cúrsaí teagaisc go léir ar Code.org. Roghnaigh
-      rang eile %{online_link} nó i do %{local_school_link}.
-    local_school: scoil áitiúil
-    online: ar líne
-    see_details: Mionsonraí
-    view_course: Féach ar an gcúrsa
-    prize_info: 'Duaiseanna as páirt a ghlacadh (múinteoirí i scoileanna poiblí SAM
-      amháin): Suas le luach $1,000 de dhuaiseanna don seomra ranga.'
-    tryfirst: 'Nó, bain triail as ar dtús, agus cláraigh níos déanaí:'
-    trynow: Bain triail as anois
-    add_hint_help: Cabhraigh linn leideanna cliste a chur leis na cúrsaí ar Code.org
-    20hour_overview: Múineann an cúrsa 20 uair an chloig seo bunchoincheapa na ríomheolaíochta
-      agus an ríomhchlárú. Tá an cúrsa dírithe ar dhaltaí bunscoile agus meánscoile,
-      ach bhainfeadh daltaí níos sine nó fiú daoine fásta taitneamh as freisin.
-    test_videos_help: Bain triail as ár seinnteoir nua físeán i do scoil
-    try_beta_courses: Úrnua! Bain triail as na cúrsaí béite dírithe ar dhaltaí bunscoile
-    use_as_teacher: Úsáid an suíomh seo mar mhúinteoir
-    heading_elementary_markdown: |-
-      ## Cúrsaí 20 uair an chloig ar
-
-      # Bhuntús na Ríomheolaíochta (gach aois)
-    your_gallery: Gailearaí
-    no_primary_course: Bain triail as cúrsa sa Stiúideo Códála
-    choose_next_course: Bain triail as cúrsa sa Stiúideo Códála ón liosta thíos
-    print_certificate: Priontáil Teastas
-  certificate_sponsor_message: Is é %{sponsor_name} a rinne urraíocht ar na ceachtanna
-    seo.
-  certificate_hour_of_code: An Uair Chódála
-  move_students:
-    new_section_dne: Níl rannán %{new_section_code} ann. Cuir isteach cód rannáin
-      eile.
-    section_code_cant_be_current_section: Is ionann iad an rannán reatha agus an rannán
-      nua.
-    current_section_dne: Níl rannán %{current_section_code} ann. Cuir isteach cód
-      rannáin eile.
-    student_ids_not_entered: Tabhair uimhreacha aitheantais.
-    student_not_found: Níor aimsíodh dalta nó daltaí de do chuid.
-    all_students_must_be_in_current_section: Ní mór do na daltaí go léir a bheith
-      cláraithe le do rannánsa.
-    already_enrolled_in_new_section: Ní féidir leat na daltaí seo a bhogadh toisc
-      go bhfuil siad sa rannán nua cheana.
-    third_party_login: Ní féidir leat daltaí a chur le rannán atá sioncrónaithe ag
-      uirlis tríú páirtí.
-  share:
-    title: Foghlaim sa Stiúideo Códála
-    description: Is féidir le haon duine an ríomheolaíocht a fhoghlaim. Déan cluichí,
-      aipeanna, agus ealaín as cód.
-    try_hour_of_code: Bain triail as an Uair Chódála!
-  gender:
-    male: Fireannach
-    female: Baineannach
-    non_binary: Neamh-dhénártha
-    not_listed: Níl an téarma is fearr liom anseo
-    none: B'fhearr liom gan freagra a thabhairt
-  user_type:
-    student: Dalta
-    teacher: Múinteoir
+        user_type_change_email_mismatch: Ní ionann an seoladh ríomhphoist a thug tú
+          agus an ceann atá nasctha leis an gcuntas seo
+  dialog:
+    ok: OK
+    startover_body: Cuirfear an puzal ar ais go dtí an tosach agus athshocrófar na
+      sonraí go léir a d'athraigh tú.
+    startover_cancel: Cealaigh
+    startover_ok: Tosaigh Arís
+    startover_title: An bhfuil tú cinnte gur mhaith leat tosú arís?
+  download_coming_soon: Gníomhaíocht in-íoslódáilte le teacht go luath.
+  download_pdf: Oscail an Plean Ceachta
+  errors:
+    messages:
+      not_saved: 'Ceartaigh na hearráidí seo a leanas:'
+      pair_programmer: Tá tú ag déanamh códáil bheirte in éineacht le dalta nach bhfuil
+        rochtain aige/aici ar an ábhar seo. Stop an chódáil bheirte ar dtús, ansin
+        déan iarracht eile teacht ar an ábhar seo.
+      teacher_must_accept_terms: Teorainn aoise ar an ábhar seo; níl sé ar fáil do
+        dhaltaí óga. Iarr ar do mhúinteoir glacadh leis na Téarmaí Seirbhíse nua chun
+        teacht ar an ábhar seo. Is féidir le do mhúinteoir é seo a dhéanamh trí logáil
+        isteach sa Stiúideo Códála agus an cnaipe "Léigh na téarmaí seirbhíse nua"
+        a chliceáil i ngar do bharr leathanach baile an Stiúideo Códála.
+      too_young: Teorainn aoise ar an ábhar seo; níl sé ar fáil do dhaltaí óga.
+  external_links:
+    disclaimer: Séanadh
+    disclaimer_text: Seans nach ionann na polasaithe príobháideachais ar an suíomh
+      seo agus ar Code.org. Roghnaigh muid na hacmhainní tríú páirtí seo toisc go
+      gceapaimid go mbainfidh tú tairbhe astu. Cé nach bhfuilimid freagrach as an
+      ábhar atá ar an suíomh, bheadh fáilte romhat <a href='%{support_url}'>dul i
+      dteagmháil linn</a> dá mbeadh ábhar gránna nó maslach air, nó dá mbeadh an nasc
+      leis an suíomh briste.
+    leaving_domain: Tá tú ar tí an fearann seo a fhágáil, agus cuairt a thabhairt
+      ar shuíomh nach bhfuil faoi stiúir Code.org.
+  follower:
+    added_teacher: Is é/í %{name} do mhúinteoir anois
+    already_exists: Tá tú cláraithe le rannán %{section_name} cheana.
+    error:
+      blank_code: Cuir isteach cód an rannáin
+      cant_join_own_section: Ár leithscéal, níl cead agat dul isteach i do rannán
+        féin.
+      no_teacher: Níor aimsíodh aon duine cláraithe le '%{teacher_email_or_code}'.
+        Iarr ar do mhúinteoir clárú anseo, ansin déan iarracht eile
+      provider_managed_section: Tá an rannán seo faoi stiúir soláthraí eile agus ní
+        féidir leat dul ann. Iarr ar do mhúinteoir tusa a chur leis trí %{provider}
+        agus an rannán a shioncronú arís.
+      section_not_found: Níor aimsíodh aon rannán le cód '%{section_code}'.
+      signed_in: Ba chóir duit logáil amach ar dtús
+      username_in_use: Tá an t-ainm %{username} in úsáid cheana. Roghnaigh ainm eile
+      username_not_found: Úsáideoir %{username} gan aimsiú
+    invite_sent: Seoladh an cuireadh
+    mail:
+      student_disassociated:
+        subject: 'Fógra ó Code.org: D''fhág %{student_name} do rang.'
+    registered: Chláraigh tú le %{section_name}.
   footer:
-    thank_you: Táimid buíoch dár <a href="https://code.org/about/donors">dtacadóirí</a>,
-      dár <a href="https://code.org/about/partners">gcomhpháirtithe</a>, dár <a href="https://code.org/about/team">bhfoireann
-      fhorleathan</a>, d'fhoireann na bhfíseán, agus dár <a href="https://code.org/about/advisors">gcomhairleoirí
-      oideachasúla</a> as an tacaíocht go léir a thugadar dúinn agus an Stiúideo Códála
-      á chruthú.
-    help_from_html: Ba mhaith linn creidiúint a thabhairt go háirithe do na hinnealtóirí
-      in Amazon, Google, agus Microsoft a chabhraigh linn an t-ábhar seo a chruthú.
-    help_from_html_old: Chabhraigh innealtóirí in Amazon, Google, agus Microsoft linn
-      an t-ábhar seo a chruthú.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Gach Ceart Ar
       Cosaint.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
       Gach Ceart Ar Cosaint.<br />Frozen&#8482; &copy; %{current_year} Disney. Gach
@@ -682,472 +251,51 @@ ga:
       Ltd. Gach Ceart ar Cosaint. Plants vs. Zombies&#8482; &copy; %{current_year}
       Electronic Arts Inc. Gach Ceart ar Cosaint. Is trádmharc de chuid Cartoon Network
       é The Amazing World of Gumball agus &copy; 2015 Cartoon Network.
+    built_on_code_studio: Tógtha sa Stiúideo Códála
     code_from_html: Baineann Code.org úsáid as p5.play, ar fáil faoin <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
+    copyright: Cóipcheart
+    feedback: Aiseolas
+    help_from_html: Ba mhaith linn creidiúint a thabhairt go háirithe do na hinnealtóirí
+      in Amazon, Google, agus Microsoft a chabhraigh linn an t-ábhar seo a chruthú.
+    help_from_html_old: Chabhraigh innealtóirí in Amazon, Google, agus Microsoft linn
+      an t-ábhar seo a chruthú.
+    how_it_works: Conas a oibríonn sé (Féach an Cód)
+    make_my_own_app: Déan m'aip féin
+    more: Tuilleadh
     powered_by_aws: Á chumhachtú ag Amazon Web Services
+    privacy: Polasaí Príobháideachais
+    report_abuse: Déan Tuairisc ar Mhí-Úsáid
+    secure: Leagan Slán
+    support: Cabhair
+    thank_you: Táimid buíoch dár <a href="https://code.org/about/donors">dtacadóirí</a>,
+      dár <a href="https://code.org/about/partners">gcomhpháirtithe</a>, dár <a href="https://code.org/about/team">bhfoireann
+      fhorleathan</a>, d'fhoireann na bhfíseán, agus dár <a href="https://code.org/about/advisors">gcomhairleoirí
+      oideachasúla</a> as an tacaíocht go léir a thugadar dúinn agus an Stiúideo Códála
+      á chruthú.
+    tos: Téarmaí Seirbhíse
+    tos_short: Téarmaí
     trademark: "&copy; Code.org, %{current_year}. Is trádmharcanna de chuid Code.org
       iad Code.org&reg;, lógó CODE agus Hour of Code&reg;."
-    copyright: Cóipcheart
-    more: Tuilleadh
-    feedback: Aiseolas
     translate: Cabhraigh linn Gaeilge a chur ar an suíomh seo
-    support: Cabhair
-    tos_short: Téarmaí
-    tos: Téarmaí Seirbhíse
-    privacy: Polasaí Príobháideachais
-    secure: Leagan Slán
-    report_abuse: Déan Tuairisc ar Mhí-Úsáid
-    built_on_code_studio: Tógtha sa Stiúideo Códála
-    make_my_own_app: Déan m'aip féin
-    how_it_works: Conas a oibríonn sé (Féach an Cód)
     try_hour_of_code: Bain triail as an Uair Chódála!
-  reference_area:
-    title: An bhfuil cabhair uait?
-    subtitle: Féach ar na físeáin agus leideanna seo
-    teacher: Féach ar réiteach
-    teacher_no_solution: Ná taispeáin an freagra
-    auth_error: Níl cead agat an réiteach a fheiceáil.
-    submit: Athraigh Suíomh an Ealaíontóra
-    direction: Treo Tosaigh (céimeanna)
-  video:
-    tab: Físeán.
-    notes: Níl seinnteoir físe agat? Taispeáin nótaí.
-    notes_coming_soon: Beidh nótaí don fhíseán seo ar fáil go luath.
-    autoplay_option: Seinn físeáin go huathoibríoch
-    download: Íoslódáil an Físeán
-    show_notes: Taispeáin Nótaí
-    show_video: Taispeáin an Físeán
-    label: Físeán
-  compatibility:
-    upgrade:
-      unsupported_message: Ní thacaímid le do bhrabhsálaí. Ba chóir duit [ceann de
-        na brabhsálaithe tacaithe](%{supported_browsers_url}) a shuiteáil. Nó is féidir
-        leat dul ar aghaidh ar aon nós, ach seans go mbeidh roinnt gnéithe ar an leathanach
-        briste.
-      link: Tuilleadh eolais
-      applab_unsupported_tablet: Is fearr a fheidhmíonn an tSaotharlann Aipeanna ar
-        ríomhaire deisce nó ar ríomhaire glúine le luch agus méarchlár. Seans go mbeidh
-        fadhbanna agat ar an ngléas seo.
-      gamelab_unsupported_tablet: Is fearr a fheidhmíonn an tSaotharlann Cluichíochta
-        ar ríomhaire deisce nó ar ríomhaire glúine le luch agus méarchlár. Seans go
-        mbeidh fadhbanna agat ar an ngléas seo.
-      weblab_unsupported_locale_storage: Seans go mbeidh fadhbanna agat le Saotharlann
-        an Ghréasáin i bhfuinneog phríobháideach. Ba chóir duit an togra a athlódáil
-        i ngnáthfhuinneog. Gabh ár leithscéal.
-  slow_loading: Moill as an ngnáth air seo...
-  try_reloading: Déan iarracht an leathanach a lódáil arís
-  next_stage: Críochnaithe! Ar aghaidh go dtí an chéad chéim eile
-  download_pdf: Oscail an Plean Ceachta
-  lesson_plan: Plean Ceachta
-  view_lesson_plan: Féach ar an bPlean Ceachta
-  pdf_download: Íoslódáil PDF
-  download_coming_soon: Gníomhaíocht in-íoslódáilte le teacht go luath.
-  video_coming_soon: Físeán le teacht go luath!
-  share_code:
-    title: Cliceáil 'Rith' chun mo ríomhchlár a fheiceáil
-    bounce_og_title: Féach ar mo Chluiche Liathróide
-    flappy_og_title: Féach ar mo Chluiche Flappy
-    studio_og_title: Féach ar an aip a rinne mé sa Spraotharlann
-    check_out_what_i_made: Féach an rud a rinne mé
-    og_description: Mise féin a scríobh an cód ar Code.org
-    phone_number_not_allowed: Dealraíonn sé go bhfuil uimhir ghutháin ann. Déan iarracht
-      an téacs a athrú.
-    address_not_allowed: Dealraíonn sé go bhfuil seoladh ann. Déan iarracht an téacs
-      a athrú.
-    email_not_allowed: Dealraíonn sé go bhfuil seoladh ríomhphoist ann. Déan iarracht
-      an téacs a athrú.
-    profanity_not_allowed: Dealraíonn sé go bhfuil eascaine ann. Déan iarracht an
-      téacs a athrú.
-  builder:
-    created: Scríobh tú script nua.
-    destroyed: Scrios tú script.
-    manage: Tóg Leibhéil
-    view: Féach
-    back: Fill ar na scripteanna
-    success: D'éirigh leat na blocanna a chur in eagar.
-    level:
-      create: Cruthaigh leibhéal nua
-      current: Na leibhéil faoi láthair
-      unused: Leibhéil Gan Úsáid
-  upsell:
-    applab:
-      title: Saotharlann Aipeanna
-      body: Is timpeallacht ríomhchláraithe é an tSaotharlann Aipeanna lenar féidir
-        aipeanna simplí a chruthú. Dear d'aip, scríobh le blocanna nó le JavaScript
-        í, ansin foilsigh an aip ar an toirt.
-      body_short: Dear d'aip, códáil le blocanna nó le JavaScript í, ansin foilsigh
-        an aip ar an toirt.
-      audience: Aois 13+
-      cta: Foghlaim anois
-    aquatic:
-      title: Minecraft
-    dance-2019:
-      title: Cóisir Dhamhsa
-    dance:
-      title: Cóisir Dhamhsa
-    flappy:
-      title: Cód Flappy
-      body: Ar mhaith leat do chluiche féin a scríobh i gceann 10 nóiméad? Bain triail
-        as ár gcúrsa Flappy Code!
-    frozen:
-      title: Frozen
-    gallery:
-      title: Gailearaí
-      body: Féach ar phictiúir d'aipeanna agus ar obair ealaíne déanta ag úsáideoirí
-    gamelab:
-      title: An tSaotharlann Cluichíochta
-      body: Is timpeallacht ríomhchláraithe é an tSaotharlann Cluichíochta lenar féidir
-        leat beochaintí agus cluichí simplí a chruthú le rudaí agus carachtair a dhéanann
-        idirghníomhaíocht lena chéile.
-      audience: Aois 13+
-      cta: Foghlaim anois
-    hero:
-      title: Minecraft
-      body: Tá Minecraft ar ais le gníomhaíocht úrnua ar an Uair Chódála! Téigh ar
-        aistear trí Minecraft le cód.
-    hoc-encryption:
-      title: Criptiú Simplí
-      body: Foghlaimeoidh na daltaí teicnící a chabhróidh leo teachtaireachtaí criptithe
-        a chruthú agus a dhíchódú.
-    hoc:
-      title: Cathair Ghríobháin Chlasaiceach
-      body: Bí leis na milliúin a bhain triail as buntús na ríomheolaíochta.
-    hoc2014:
-      try_new_tutorial: Bain triail as an gcúrsa teagaisc nua don Uair Chódála (béite)
-      try_frozen: An tEalaíontóir, le hAnna agus Elsa ó Frozen
-    infinity:
-      title: 'Infinity: Spraotharlann'
-      body: Úsáid an Spraotharlann chun scéal nó cluiche a chruthú ina bhfuil carachtair
-        Disney Infinity.
-    minecraft:
-      title: Minecraft
-      body: Taiscéal domhan Minecraft le cód.
-    minecraft2016:
-      title: Minecraft
-      body: Códáil ainmhithe agus créatúir eile i do leagan féin de Minecraft.
-    sports:
-      title: Spórt
-      body: Is féidir leat cluiche cispheile a chruthú nó spóirt éagsúla a mheascadh.
-    starwars:
-      title: Star Wars
-    text-compression:
-      body: Sa cheacht seo, úsáidfidh na daltaí an Ghiuirléid Chomhbhrúite Téacs chun
-        téacs a chomhbhrú trí shiombailí a chur in áit patrún áirithe.
-    weblab:
-      title: Saotharlann an Ghréasáin (béite)
-      body: Is éard atá i Saotharlann an Ghréasáin ná timpeallacht ríomhchláraithe
-        lenar féidir leathanaigh Ghréasáin shimplí a chruthú in HTML agus CSS. Dear
-        do leathanaigh féin agus foilsigh do shuíomh ar an bpointe.
-      audience: Aois 13+
-      cta: Foghlaim anois
-    widgets:
-      title: Giuirléidí
-      body: Is féidir le daltaí na huirlisí digiteacha seo a úsáid chun coincheapa
-        ó Fhoras Feasa na Ríomheolaíochta a fhoghlaim. Úsáid na giuirléidí ina n-aonar,
-        nó cruthaigh ceacht a chlúdaíonn coincheap amháin.
-      audience: Aois 14+
-      cta: Foghlaim anois
-    unplugged_conditionals:
-      title: Coinníollacha
-      body: Foghlaim faoi algartaim agus faoi ráitis choinníollacha sa ghníomhaíocht
-        "dhíphlugáilte" seo a úsáideann deic cártaí.
-    unplugged:
-      title: Ceachtanna Díphlugáilte
-      audience: Aois 4+
-      body: Bhailíomar liosta de cheachtanna díphlugáilte is féidir a úsáid i do sheomra
-        ranga. Anois, beidh tú in ann buntús na ríomheolaíochta a mhúineadh, is cuma
-        mura bhfuil ríomhairí i do sheomra ranga! Bain úsáid as na ceachtanna seo
-        mar chúrsa saorsheasaimh nó mar chomhlánú ar aon chúrsa ríomheolaíochta.
-      body_short: Mura bhfuil ríomhairí agat, bain triail as na ceachtanna "díphlugáilte"
-        seo i do sheomra ranga.
-    20-hour:
-      title: Cúrsa Luathaithe
-      body: Is cúrsa 20 uair an chloig é seo a chlúdaíonn bunchoincheapa ríomheolaíochta
-        agus ríomhchláraithe ó chúrsaí 2-4. Tá sé dírithe ar dhaltaí idir 10 agus
-        18 bliain d'aois. Féach ar chúrsaí 2-4 chun eolas níos cuimsithí a fháil!
-      body_short: Foghlaim buntús na ríomheolaíochta i leagan luathaithe de chúrsaí
-        2-4.
-  landing:
-    prerelease_tutorial: Is cúrsa teagaisc **béite** é seo. Seans go bhfeabhsófar
-      é amach anseo, bunaithe ar aiseolas ón phobal.
-    report_bug: Déan Tuairisc ar Fhadhb
-    support: Cabhair
-    help_resources: Cabhair agus Acmhainní
-    help_support: Cabhair agus tacaíocht
-    documentation: Doiciméadú
-    tutorials: Cúrsaí Teagaisc
   free_response:
     placeholder: Cuir do fhreagra anseo
-  multi:
-    wrong_title: Freagra mícheart
-    wrong_body: Faraor, ní é sin an freagra ceart. Déan iarracht eile!
-    correct_title: Ceart
-    correct_body: Maith thú! Sin é an freagra ceart.
-  multi-submittable:
-    wrong_title: Go raibh maith agat
-    wrong_body: Go raibh maith agat as do fhreagra.
-    correct_title: Go raibh maith agat
-    correct_body: Go raibh maith agat as do fhreagra.
-  level_group:
-    wrong_title: Go raibh maith agat
-    wrong_body: Go raibh maith agat as do fhreagraí.
-    correct_title: Go raibh maith agat
-    correct_body: Go raibh maith agat as do fhreagraí.
-    hide_survey_last_answer: Suirbhé gan ainm é seo. Tabhair cuairt ar phainéal na
-      múinteoirí chun torthaí comhbhailithe a fháil. Ní bheidh na torthaí ar fáil
-      go dtí go ndéanfaidh ar a laghad cúigear daltaí an suirbhé.
-    survey_submission_thankyou: Go raibh maith agat as páirt a ghlacadh sa suirbhé
-      seo! Glanadh an suirbhé sa chaoi nach mbeidh do chuid freagraí ceangailte leatsa
-      go pearsanta. Beidh do mhúinteoir in ann na freagraí ón rang iomlán a fheiceáil,
-      ach gan ainmneacha leo.
-  level_group-submittable:
-    wrong_title: Go raibh maith agat
-    wrong_body: Go raibh maith agat as do fhreagraí.
-    correct_title: Go raibh maith agat
-    correct_body: Go raibh maith agat as do fhreagraí.
-    unsubmit-title: Dísheol do mheasúnú
-    unsubmit-body: Athshocrófar an dáta seolta má dhísheolann tú do mheasúnú. An bhfuil
-      tú cinnte?
-    submit-incomplete-title: Seol do mheasúnú
-    submit-incomplete-body: D'fhág tú roinnt freagraí bán. Ní féidir leat do mheasúnú
-      a chur in eagar tar éis duit é a sheoladh. An bhfuil tú cinnte?
-    submit-complete-title: Seol do mheasúnú
-    submit-complete-body: Ní féidir leat do mheasúnú a chur in eagar tar éis duit
-      é a sheoladh. An bhfuil tú cinnte?
-  match:
-    wrong_title: Réiteach mícheart
-    wrong_body: Chuir tú réiteach mícheart isteach. Déan iarracht eile!
-    correct_title: Ceart
-    correct_body: Maith thú! Sin é an freagra ceart.
-  contract_match:
-    wrong_title: Freagra mícheart
-    badname: Ainm mícheart ar do chonradh.
-    badname_case: Tá ainm na feidhme cásíogair. Déan iarracht cás ainm an chonartha
-      a athrú.
-    badrange: Raon mícheart ar do chonradh.
-    baddomainsize: Tá líon mícheart míreanna i bhfearann do chonartha.
-    baddomainname: Ainm mícheart ar mhír nó ar mhíreanna i d'fhearann.
-    baddomaintype: Cineál mícheart ar mhír nó ar mhíreanna i d'fhearann, nó tá siad
-      san ord mícheart.
-  text_match:
-    placeholder: Cuir do fhreagra anseo
-    open_response_title: Go raibh maith agat
-    open_response_body: Go raibh maith agat as do fhreagra!
-    correct_title: Ceart
-    correct_body: Maith thú! Sin é an freagra ceart.
-  dialog:
-    ok: OK
-    startover_title: An bhfuil tú cinnte gur mhaith leat tosú arís?
-    startover_body: Cuirfear an puzal ar ais go dtí an tosach agus athshocrófar na
-      sonraí go léir a d'athraigh tú.
-    startover_ok: Tosaigh Arís
-    startover_cancel: Cealaigh
-  time:
-    hour: Uair an chloig
-    day: lá
-    week: seachtain
-  age_interstitial:
-    age: Cén aois thú?
-    header: Nuashonrú an Chuntais
-    warning: Táimid i mbun oibre ar eispéireas nua a sholáthróidh cosaint príobháideachas
-      níos fearr duit. Dá bharr sin, ní mór do gach úsáideoir a aois a chur isteach
-      anseo.
-    disclaimer: Ní chuirfidh code.org an t-eolas seo ar fáil d'aon tríú páirtí riamh,
-      ar díol, ar cíos, nó ar aon bhealach eile.
-    sign_out_markdown: Mura bhfuil tú sásta d'aois a nocht, fáilte romhat [logáil
-      amach](%{url}) anois.
-  terms_interstitial:
-    title: Téarmaí Seirbhíse agus Polasaí Príobháideachais Nua
-    intro_desc: 'Táimid tar éis na Téarmaí Seirbhíse agus an Polasaí Príobháideachais
-      a leasú, mar a léirítear thíos. Chuaigh na hathruithe seo i bhfeidhm ar 24 Lúnasa
-      2016. An t-athrú is mó: <i>ní stórálfaimid seoltaí ríomhphoist mar chuid de
-      chuntais dalta sa Stiúideo Códála.</i> Is mór an rud é seo, agus tá súil againn
-      go leagfaidh sé síos caighdeán nua maidir le príobháideachas i dteicneolaíocht
-      an oideachais. Sheolamar achoimre ar na hathruithe eile i dteachtaireacht r-phoist.'
-    intro_desc_markdown: 'Táimid tar éis na Téarmaí Seirbhíse agus an Polasaí Príobháideachais
-      a leasú, mar a léirítear thíos. Chuaigh na hathruithe seo i bhfeidhm ar 24 Lúnasa
-      2016. An t-athrú is mó: *ní stórálfaimid seoltaí ríomhphoist mar chuid de chuntais
-      dalta sa Stiúideo Códála.* Is mór an rud é seo, agus tá súil againn go leagfaidh
-      sé síos caighdeán nua maidir le príobháideachas i dteicneolaíocht an oideachais.
-      Sheolamar achoimre ar na hathruithe eile i dteachtaireacht r-phoist.'
-    intro_instructions: Caithfidh tú glacadh leis na téarmaí nua a bhaineann le daltaí
-      i do sheomra ranga atá níos óige ná 13 bliana d'aois chun teacht ar na gnéithe
-      nua sa Stiúideo Códála. Nuair a chláróidh tú cuntas le haghaidh dalta atá níos
-      óige ná 13, iarrfar ort deimhniú gur thug tuismitheoir cead do do scoil faisnéis
-      phearsanta a bhailiú ón dalta ar mhaithe leis an scoil, cláracha oideachasúla
-      cosúil leis an Stiúideo Códála san áireamh.
-    tos: Téarmaí Seirbhíse
-    privacy: Polasaí Príobháideachais
-    privacy_notice: Polasaí Príobháideachais
-    accept_label: Glacaim leis na <a href="%{tos_url}" target="_blank">Téarmaí Seirbhíse</a>
-      agus leis <a href="%{privacy_url}" target="_blank">an bPolasaí Príobháideachais</a>.
-    accept_label_markdown: Glacaim leis na [Téarmaí Seirbhíse](%{tos_url}) agus leis
-      [an bPolasaí Príobháideachais](%{privacy_url}).
-    accept_tos: Trí chlárú le Code.org, glacann tú leis na [Téarmaí Seirbhíse](%{tos_url})
-      agus leis an [Pholasaí Príobháideachais](%{privacy_url}).
-    accept: Glacaim Leo
-    print: Priontáil
-    reminder_desc: Rinneamar leasú ar <a href="%{tos_url}" target="_blank">na Téarmaí
-      Seirbhíse</a> agus ar <a href="%{privacy_url}" target="_blank">an bPolasaí Príobháideachais</a>.
-      Léigh na cáipéisí seo go cúramach sula nglacfaidh tú leo. Go dtí go nglacfaidh
-      tú leis an téarmaí nua, seans nach mbeidh do chuid daltaí in ann tairbhe a bhaint
-      as na hacmhainní atá againn a mhúineann JavaScript.
-    reminder_desc_markdown: Rinneamar leasú ar [na Téarmaí Seirbhíse](%{tos_url})
-      agus ar [an bPolasaí Príobháideachais](%{privacy_url}). Léigh na cáipéisí seo
-      go cúramach sula nglacfaidh tú leo. Go dtí go nglacfaidh tú leis an téarmaí
-      nua, seans nach mbeidh do chuid daltaí in ann tairbhe a bhaint as na hacmhainní
-      atá againn a mhúineann JavaScript.
-    review_terms: Léigh na téarmaí seirbhíse nua
-  school_info_interstitial:
-    title: Ba mhaith linn deis a thabhairt do gach dalta an Ríomheolaíocht a fhoghlaim
-      - cabhraigh linn súil a choinneáil ar an dul chun cinn!
-    message: Cuir isteach eolas maidir le do scoil thíos.
-    message_with_suggestion: Deimhnigh go bhfuil an t-eolas thíos ceart, nó nuashonraigh
-      é más gá.
-    save: Sábháil
-  race_interstitial:
-    title: 'Roghnach: Cabhraigh linn dul chun cinn i dtreo na hilchineálachta sa ríomheolaíocht
-      a rianú'
-    message: Cad é do chine (cuir tic le gach a mbaineann leatsa)
-    races:
-      white: Den chine geal
-      black: Den chine gorm nó Afra-Mheiriceánach
-      hispanic: Easpáinneach nó Latinx
-      asian: Áiseach
-      hawaiian: Haváíoch Dúchasach nó Oileánach an Aigéin Chiúin
-      american_indian: Bundúchasach Meiriceánach/Alascach
-      other: Eile
-      opt_out: B'fhearr liom gan freagra a thabhairt
-    submit: Seol
-    decline: Dún
-  zendesk_too_young_message: Ár leithscéal, ach níl cead ag úsáideoirí óga logáil
-    isteach sa suíomh tacaíochta. Is féidir leat cuairt a thabhairt ar <a href="http://support.code.org">support.code.org</a>
-    gan logáil isteach, nó iarr ar thuismitheoir nó ar mhúinteoir dul i dteagmháil
-    linn ar do shon.
-  zendesk_too_young_message_markdown: Ár leithscéal, ach níl cead ag úsáideoirí óga
-    logáil isteach sa suíomh tacaíochta. Is féidir leat cuairt a thabhairt ar [support.code.org](http://support.code.org)
-    gan logáil isteach, nó iarr ar thuismitheoir nó ar mhúinteoir dul i dteagmháil
-    linn ar do shon.
-  progress:
-    not_started: gan tosú
-    in_progress: idir lámha
-    completed_too_many_blocks: críochnaithe, an iomarca blocanna
-    completed_perfect: críochnaithe, foirfe
-    furthest_level_attempted: an leibhéal is airde
-    assessment: measúnú
-    submitted: seolta
-  studio:
-    courses_working_on: Cúrsaí idir lámha
-    completed_courses: Cúrsaí críochnaithe
-    all_courses: Gach cúrsa
-  project:
-    projects: Tograí
-    create: Cruthaigh Togra
-    create_a_project: 'Cruthaigh togra nua:'
-    new: Cruthaigh Togra Nua
-    exit: Fill ar an gCúrsa
-    project_gallery: Tograí
-    publish: Foilsigh
-    unpublish: Dífhoilsigh
-    share_title: Comhroinn do thogra
-    share_copy_link: 'Cóipeáil an nasc:'
-    share_embed_description: Is féidir an cód leabaithe a ghreamú isteach i leathanach
-      HTML chun an togra a chur ar taispeáint ar leathanach Gréasáin.
-    share_u13_warning: Lorg cead ó do mhúinteoir sula bhfoilseoidh tú é. Ná comhroinn
-      é ach le daoine eile i do scoil.
-    embed: Leabaigh
-    advanced_share: Taispeáin na hardroghanna
-    no_projects: Níl aon togra agat faoi láthair. Cliceáil ceann de na cnaipí thuas
-      le togra nua a thosú.
-    name: Ainm
-    updated: Nuashonraithe
-    project_type: Cineál an Togra
-    help_text: Cliceáil <strong>Déan aip</strong> nó <strong>Tarraing pictiúr</strong>
-      thíos chun togra nua a thosú!<br/>Is féidir leat filleadh anseo agus tuilleadh
-      oibre a dhéanamh ar do chuid tograí am ar bith.
-    need_help: Bain triail as na cúrsaí seo chun cabhrú linn tosú amach le do thogra
-      nua
-    thumbnail_help: Nach bhfeiceann tú an mionphictiúr ceart le do thogra? Rith d'aip
-      chun mionphictiúr nua a ghiniúint. Uaireanta tógann sé cúpla uair an chloig
-      sula mbeidh an mionphictiúr ar fáil chuile áit.
-    saved: Sábháilte
-    not_saved: Gan sábháil
-    view_all: Mo Chuid Tograí
-    edit_project: Cuir an Togra in Eagar
-    sharing_disabled: Ár leithscéal, ach níl an togra seo ar fáil le foilsiú. Más
-      leatsa nó le dalta de do chuid é, <a href='https://studio.code.org/users/sign_in'>logáil
-      isteach</a> i do chuntas le breathnú air.
-    abuse:
-      tos: Tuairiscíodh an togra seo agus dúradh go sáraíonn sé <a href='http://code.org/tos'>Téarmaí
-        Seirbhíse</a> Code.org. Dá bharr sin, ní féidir é a chomhroinnt.
-      policy_violation: Tá eolas sa togra seo nach féidir comhroinnt le daoine eile.
-        Téigh i dteagmháil le húinéir na haipe leis an ábhar seo a réiteach.
-      contact_us: Má chreideann tú gur botún é seo, <a href='https://code.org/contact'>téigh
-        i dteagmháil linn.</a>
-      go_to_code_studio: Téigh go dtí an Stiúideo Códála
-      report_abuse_form:
-        intro: Má thagann tú ar ábhar gránna, bagairtí, cibearbhulaíocht, ciapadh,
-          nó sárú cóipchirt le linn aip a rinneadh sa Stiúideo Códála a úsáid, ba
-          chóir duit an fhoirm thíos a líonadh. Déanfaimid ár seacht ndícheall do
-          thuairisc a iniúchadh agus gníomhú feiliúnach a dhéanamh.
-        validation:
-          email: Cuir isteach do sheoladh ríomhphoist
-          age: Cuir isteach d'aois
-          abuse_type: Inis dúinn cén chaoi a sáraíonn an t-ábhar seo na Téarmaí Seirbhíse
-          abuse_detail: Tabhair mionsonraí maidir leis an ábhar á thuairisciú
-        abusive_url: URL an ábhair
-        abuse_type:
-          question: Cén chaoi a sáraíonn an t-ábhar seo na %{link_start}Téarmaí Seirbhíse%{link_end}?
-          harassment: Bagairtí, cibearbhulaíocht, ciapadh
-          offensive: Ábhar gránna
-          infringement: Sárú Cóipchirt
-          other: Eile
-        detail: Tabhair dúinn an méid is féidir mionsonraí maidir leis an ábhar á
-          thuairisciú.
-        acknowledge: Agus na sonraí seo á seoladh, glacaim leis go n-úsáidfear iad
-          de réir théarmaí %{link_start_privacy}an Pholasaí Príobháideachais%{link_end}
-          agus de réir na %{link_start_tos}dTéarmaí Seirbhíse%{link_end}
-  peer_review:
-    accepted:
-      name: Glactha
-      description_markdown: "**Tá**, comhlíonann sé na riachtanais"
-    rejected:
-      name: Diúltaithe
-      description_markdown: "**Níl**, ní chomhlíonann sé na riachtanais"
-    escalated:
-      name: Ardaithe
-      description: Ba mhaith liom é seo a chur faoi bhráid múinteora
-    instructor_feedback: Aiseolas ó Mhúinteoir
-    peer_feedback: Aiseolas ó Scoláirí Eile
-    outdated: Baineann an t-aiseolas seo le seanleagan
-    peer_review: Athbhreithniú Comhghleacaithe
-  external_links:
-    disclaimer: Séanadh
-    leaving_domain: Tá tú ar tí an fearann seo a fhágáil, agus cuairt a thabhairt
-      ar shuíomh nach bhfuil faoi stiúir Code.org.
-    disclaimer_text: Seans nach ionann na polasaithe príobháideachais ar an suíomh
-      seo agus ar Code.org. Roghnaigh muid na hacmhainní tríú páirtí seo toisc go
-      gceapaimid go mbainfidh tú tairbhe astu. Cé nach bhfuilimid freagrach as an
-      ábhar atá ar an suíomh, bheadh fáilte romhat <a href='%{support_url}'>dul i
-      dteagmháil linn</a> dá mbeadh ábhar gránna nó maslach air, nó dá mbeadh an nasc
-      leis an suíomh briste.
+  gender:
+    female: Baineannach
+    male: Fireannach
+    non_binary: Neamh-dhénártha
+    none: B'fhearr liom gan freagra a thabhairt
+    not_listed: Níl an téarma is fearr liom anseo
+  heading_x_of_y: "%{heading} (leathanach %{x} as %{y})"
+  hello: Dia dhuit a dhomhain
+  hidden_script: Níor cheap do mhúinteoir go mbeifeá anseo. Fiafraigh de do mhúinteoir
+    cad é an chéad leibhéal eile ba chóir duit a dhéanamh.
+  hidden_stage: Níor cheap do mhúinteoir go mbeifeá anseo. Fiafraigh de do mhúinteoir
+    cad é an chéad leibhéal eile ba chóir duit a dhéanamh.
   hoc_download:
-    title: 'Íoslódálacha: An Uair Chódála'
-    capsule_title: An bhfuil tú ceangailte leis an Idirlíon?
     capsule_desc: Bain triail as an acmhainn ar líne [%{app_name}](%{url}).
-    instructions_headline: Gan ceangal Idirlín?
-    instructions: 'Treoracha do mhúinteoirí: mura bhfuil do cheangal Idirlín thar
-      mholadh beirte, is féidir leat na cúrsaí teagaisc seo a íoslódáil agus a shuiteáil
-      len iad a úsáid as líne. Roghnaigh do theanga agus d''ardán, íoslódáil an pacáiste,
-      agus suiteáil ar na ríomhairí i do sheomra ranga é. Is furasta é a íoslódáil
-      uair amháin ar chipín USB, ansin a shuiteáil ar gach ríomhaire. Tabhair faoi
-      deara nach mbeidh na daltaí ábalta logáil isteach sa Stiúideo Códála, dul chun
-      cinn a shábháil, nó teastais a phriontáil. Is féidir le múinteoirí na teastais
-      a phriontáil roimh ré [here](%{url}).'
-    minecraft_name: An Uair Chódála Minecraft
-    starwars_blocks_name: 'Star Wars: Tóg do Réaltra Féin le Cód (Blocanna)'
-    starwars_javascript_name: 'Star Wars: Tóg do Réaltra Féin le Cód (JavaScript)'
-    download_message: Íoslódáil %{app_name} lena úsáid as líne (136MB)
+    capsule_title: An bhfuil tú ceangailte leis an Idirlíon?
     download_in_Albanian: 'Íoslódáil in Albáinis:'
     download_in_Arabic: 'Íoslódáil in Araibis:'
     download_in_Azerbaijani: 'Íoslódáil in Asarbaiseáinis:'
@@ -1155,8 +303,8 @@ ga:
     download_in_Bosnian: 'Íoslódáil i mBoisnis:'
     download_in_Bulgarian: 'Íoslódáil i mBulgáiris:'
     download_in_Catalan: 'Íoslódáil i gCatalóinis:'
-    download_in_Chinese-Taiwan: 'Íoslódáil i Sínis na Téaváine:'
     download_in_Chinese: 'Íoslódáil i Sínis:'
+    download_in_Chinese-Taiwan: 'Íoslódáil i Sínis na Téaváine:'
     download_in_Croatian: 'Íoslódáil i gCróitis:'
     download_in_Czech: 'Íoslódáil i Seicis:'
     download_in_Danish: 'Íoslódáil i nDanmhairgis:'
@@ -1179,8 +327,8 @@ ga:
     download_in_Norwegian: 'Íoslódáil in Ioruais:'
     download_in_Norwegian-Nynorsk: 'Íoslódáil in Ioruais-Nynorsk:'
     download_in_Polish: 'Íoslódáil i bPolainnis:'
-    download_in_Portuguese-Brazil: 'Íoslódáil i bPortaingéilis na Brasaíle:'
     download_in_Portuguese: 'Íoslódáil i bPortaingéilis:'
+    download_in_Portuguese-Brazil: 'Íoslódáil i bPortaingéilis na Brasaíle:'
     download_in_Romanian: 'Íoslódáil i Rómáinis:'
     download_in_Russian: 'Íoslódáil i Rúisis:'
     download_in_Serbian: 'Íoslódáil i Seirbis:'
@@ -1190,15 +338,273 @@ ga:
     download_in_Turkish: 'Íoslódáil i dTuircis:'
     download_in_Ukrainian: 'Íoslódáil in Úcráinis:'
     download_in_Vietnamese: 'Íoslódáil i Vítneaimis:'
-    windows: Windows (64-giotán)
+    download_message: Íoslódáil %{app_name} lena úsáid as líne (136MB)
+    instructions: 'Treoracha do mhúinteoirí: mura bhfuil do cheangal Idirlín thar
+      mholadh beirte, is féidir leat na cúrsaí teagaisc seo a íoslódáil agus a shuiteáil
+      len iad a úsáid as líne. Roghnaigh do theanga agus d''ardán, íoslódáil an pacáiste,
+      agus suiteáil ar na ríomhairí i do sheomra ranga é. Is furasta é a íoslódáil
+      uair amháin ar chipín USB, ansin a shuiteáil ar gach ríomhaire. Tabhair faoi
+      deara nach mbeidh na daltaí ábalta logáil isteach sa Stiúideo Códála, dul chun
+      cinn a shábháil, nó teastais a phriontáil. Is féidir le múinteoirí na teastais
+      a phriontáil roimh ré [here](%{url}).'
+    instructions_headline: Gan ceangal Idirlín?
     mac: Mac OS X
+    minecraft_name: An Uair Chódála Minecraft
+    starwars_blocks_name: 'Star Wars: Tóg do Réaltra Féin le Cód (Blocanna)'
+    starwars_javascript_name: 'Star Wars: Tóg do Réaltra Féin le Cód (JavaScript)'
+    title: 'Íoslódálacha: An Uair Chódála'
+    windows: Windows (64-giotán)
+  home:
+    20hour_overview: Múineann an cúrsa 20 uair an chloig seo bunchoincheapa na ríomheolaíochta
+      agus an ríomhchlárú. Tá an cúrsa dírithe ar dhaltaí bunscoile agus meánscoile,
+      ach bhainfeadh daltaí níos sine nó fiú daoine fásta taitneamh as freisin.
+    add_hint_help: Cabhraigh linn leideanna cliste a chur leis na cúrsaí ar Code.org
+    all_courses: Foramharc ar Chúrsaí 1, 2, agus 3
+    choose_next_course: Bain triail as cúrsa sa Stiúideo Códála ón liosta thíos
+    classroom: Do sheomra ranga
+    heading_elementary_markdown: |-
+      ## Cúrsaí 20 uair an chloig ar
+
+      # Bhuntús na Ríomheolaíochta (gach aois)
+    lesson_plans: Pleananna ceachta
+    local_school: scoil áitiúil
+    no_primary_course: Bain triail as cúrsa sa Stiúideo Códála
+    online: ar líne
+    print_certificate: Priontáil Teastas
+    prize_info: 'Duaiseanna as páirt a ghlacadh (múinteoirí i scoileanna poiblí SAM
+      amháin): Suas le luach $1,000 de dhuaiseanna don seomra ranga.'
+    see_details: Mionsonraí
+    signin_directions: Cruthaigh cuntas chun do dhul chun cinn a shábháil.<br/> Tá
+      múinteoirí in ann a seomra ranga iomlán a rianú.
+    signin_message: Cláraithe cheana? %{link}
+    student_finished: Chríochnaigh tú na cúrsaí teagaisc go léir ar Code.org. Roghnaigh
+      rang eile %{online_link} nó i do %{local_school_link}.
+    student_left_off: 'An áit ar stop tú:'
+    student_progress: Do dhul chun cinn
+    student_reg_link: Clárú mar Dhalta
+    student_stats: Bhailigh tú %{trophy_count} as %{trophy_max} duais "Máistreachta".
+    teacher_averages: Ar an meán, bhailigh do chuid daltaí %{trophy_average} as %{trophy_max}
+      duais "Máistreachta".
+    teacher_dashboard: Féach ar an dul chun cinn
+    teacher_print_certificates: Priontáil teastais do na daltaí a chríochnaigh an
+      cúrsa
+    teacher_read_blog: Nuacht agus fógraí maidir le hábhar nua ar ár mblag le haghaidh
+      múinteoirí
+    teacher_reg_link: Clárú mar Mhúinteoir
+    teacher_student_count: Tá %{count} dalta agat.
+    teacher_student_count_one: Tá %{count} dalta amháin agat.
+    test_videos_help: Bain triail as ár seinnteoir nua físeán i do scoil
+    title: An Stiúideo Códála
+    try_beta_courses: Úrnua! Bain triail as na cúrsaí béite dírithe ar dhaltaí bunscoile
+    tryfirst: 'Nó, bain triail as ar dtús, agus cláraigh níos déanaí:'
+    trynow: Bain triail as anois
+    use_as_teacher: Úsáid an suíomh seo mar mhúinteoir
+    view_course: Féach ar an gcúrsa
+    your_gallery: Gailearaí
+  join_section:
+    code:
+      instructions: 'Cuir isteach an cód 6-litir a thug do mhúinteoir duit (mar shampla:
+        "ABCDEF") chun páirt a ghlacadh ina rannán.'
+      instructions_short: Cuir isteach cód an rannáin le 6 litir
+      placeholder: Cód an Rannáin (ABCDEF)
+      submit: Glac Páirt
+      title: Glac páirt i rannán ar Code.org
+  k8intro: Cúrsa Bhuntús na Ríomheolaíochta do Bhunscoileanna agus Mheánscoileanna
+    (15-25 uair an chloig)
+  landing:
+    documentation: Doiciméadú
+    help_resources: Cabhair agus Acmhainní
+    help_support: Cabhair agus tacaíocht
+    prerelease_tutorial: Is cúrsa teagaisc **béite** é seo. Seans go bhfeabhsófar
+      é amach anseo, bunaithe ar aiseolas ón phobal.
+    report_bug: Déan Tuairisc ar Fhadhb
+    support: Cabhair
+    tutorials: Cúrsaí Teagaisc
+  less: NÍOS LÚ
+  lesson_plan: Plean Ceachta
+  level_group:
+    correct_body: Go raibh maith agat as do fhreagraí.
+    correct_title: Go raibh maith agat
+    hide_survey_last_answer: Suirbhé gan ainm é seo. Tabhair cuairt ar phainéal na
+      múinteoirí chun torthaí comhbhailithe a fháil. Ní bheidh na torthaí ar fáil
+      go dtí go ndéanfaidh ar a laghad cúigear daltaí an suirbhé.
+    survey_submission_thankyou: Go raibh maith agat as páirt a ghlacadh sa suirbhé
+      seo! Glanadh an suirbhé sa chaoi nach mbeidh do chuid freagraí ceangailte leatsa
+      go pearsanta. Beidh do mhúinteoir in ann na freagraí ón rang iomlán a fheiceáil,
+      ach gan ainmneacha leo.
+    wrong_body: Go raibh maith agat as do fhreagraí.
+    wrong_title: Go raibh maith agat
+  level_group-submittable:
+    correct_body: Go raibh maith agat as do fhreagraí.
+    correct_title: Go raibh maith agat
+    submit-complete-body: Ní féidir leat do mheasúnú a chur in eagar tar éis duit
+      é a sheoladh. An bhfuil tú cinnte?
+    submit-complete-title: Seol do mheasúnú
+    submit-incomplete-body: D'fhág tú roinnt freagraí bán. Ní féidir leat do mheasúnú
+      a chur in eagar tar éis duit é a sheoladh. An bhfuil tú cinnte?
+    submit-incomplete-title: Seol do mheasúnú
+    unsubmit-body: Athshocrófar an dáta seolta má dhísheolann tú do mheasúnú. An bhfuil
+      tú cinnte?
+    unsubmit-title: Dísheol do mheasúnú
+    wrong_body: Go raibh maith agat as do fhreagraí.
+    wrong_title: Go raibh maith agat
   locked_stage: Níl cead agat an t-ábhar sa gcéim seo a fheiceáil faoi láthair toisc
     bhfuil an chéim faoi ghlas. Beidh do mhúinteoir in ann an chéim seo a dhíghlasáil
     nuair a bheidh sé in am obair a dhéanamh air, nó do chuid freagraí a athbhreithniú.
-  hidden_stage: Níor cheap do mhúinteoir go mbeifeá anseo. Fiafraigh de do mhúinteoir
-    cad é an chéad leibhéal eile ba chóir duit a dhéanamh.
-  hidden_script: Níor cheap do mhúinteoir go mbeifeá anseo. Fiafraigh de do mhúinteoir
-    cad é an chéad leibhéal eile ba chóir duit a dhéanamh.
+  maker:
+    google_oauth:
+      copy_code: Cóipeáil agus greamaigh an cód seo isteach sa Maker App chun logáil
+        isteach i Code.org.
+      enter_code: Cuir isteach an cód a tugadh duit nuair a logáil tú isteach trí
+        Google i do bhrabhsálaí réamhshocraithe
+      error_invalid_user: ID úsáideora neamhbhailí. Bain triail as logáil isteach
+        arís.
+      error_no_code: Cuir isteach do chód logála isteach.
+      error_token_expired: Tá an ceadchomhartha as feidhm. Logáil isteach arís chun
+        ceadchomhartha nua a fháil.
+      error_wrong_provider: Soláthraí mícheart. Ní mór duit logáil isteach trí Google.
+      login_with_google: Logáil isteach sa Maker App le Google
+  match:
+    correct_body: Maith thú! Sin é an freagra ceart.
+    correct_title: Ceart
+    wrong_body: Chuir tú réiteach mícheart isteach. Déan iarracht eile!
+    wrong_title: Réiteach mícheart
+  more: NÍOS MÓ
+  more_info: Tuilleadh eolais
+  move_students:
+    all_students_must_be_in_current_section: Ní mór do na daltaí go léir a bheith
+      cláraithe le do rannánsa.
+    already_enrolled_in_new_section: Ní féidir leat na daltaí seo a bhogadh toisc
+      go bhfuil siad sa rannán nua cheana.
+    current_section_dne: Níl rannán %{current_section_code} ann. Cuir isteach cód
+      rannáin eile.
+    new_section_dne: Níl rannán %{new_section_code} ann. Cuir isteach cód rannáin
+      eile.
+    section_code_cant_be_current_section: Is ionann iad an rannán reatha agus an rannán
+      nua.
+    student_ids_not_entered: Tabhair uimhreacha aitheantais.
+    student_not_found: Níor aimsíodh dalta nó daltaí de do chuid.
+    third_party_login: Ní féidir leat daltaí a chur le rannán atá sioncrónaithe ag
+      uirlis tríú páirtí.
+  multi:
+    correct_body: Maith thú! Sin é an freagra ceart.
+    correct_title: Ceart
+    wrong_body: Faraor, ní é sin an freagra ceart. Déan iarracht eile!
+    wrong_title: Freagra mícheart
+  multi-submittable:
+    correct_body: Go raibh maith agat as do fhreagra.
+    correct_title: Go raibh maith agat
+    wrong_body: Go raibh maith agat as do fhreagra.
+    wrong_title: Go raibh maith agat
+  nav:
+    header:
+      about: Maidir Linn
+      about_contact: Déan Teagmháil Linn
+      about_donors: Deontóirí
+      about_evaluation: Measúnú
+      about_faqs: CCanna
+      about_jobs: Postanna
+      about_leadership: Lucht Ceannais
+      about_news: Seomra Nuachta
+      about_partners: Comhpháirtithe
+      about_team: An Fhoireann Iomlán
+      about_us: Maidir Linn
+      app_lab_documentation: 'Saotharlann Aipeanna: Doiciméadú'
+      app_lab_tutorials: 'Saotharlann Aipeanna: Cúrsaí Teagaisc'
+      course_catalog: Cúrsaí
+      documentation: Doiciméadú
+      educate_beyond: Tar éis Code.org
+      educate_community: Comhphobal Ar Líne
+      educate_elementary: Bunscoil
+      educate_high: Scoil dara leibhéal
+      educate_hoc: An Uair Chódála
+      educate_inspire: Spreag Dalta
+      educate_middle: Meánscoil
+      educate_overview: Foramharc do Mhúinteoirí
+      educate_partner: Comhoibriú Linn
+      educate_tools: Uirlisí agus Físeáin
+      finished_hoc: Tá mé críochnaithe!
+      game_lab_documentation: 'Saotharlann Cluichíochta: Doiciméadú'
+      game_lab_tutorials: 'Saotharlann Cluichíochta: Cúrsaí Teagaisc'
+      help_support: Cabhair agus tacaíocht
+      help_us: Cabhraigh Linn
+      learn: Foghlaim
+      legal_privacy: Polasaí Príobháideachais
+      legal_tos: Téarmaí Seirbhíse
+      my_dashboard: Mo Phainéal
+      professional_learning: Oideachas Proifisiúnta
+      project_gallery: Tograí
+      report_bug: Déan tuairisc ar fhadhb
+      sections: Rannáin
+      sign_in_to_save: Logáil isteach le do dhul chun cinn a shábháil
+      sprite_lab_documentation: 'Saotharlann na Sprideanna: Doiciméadú'
+      sprite_lab_tutorials: 'Saotharlann na Sprideanna: Cúrsaí Teagaisc'
+      stats: Staitisticí
+      teach: Múineadh
+      teacher_community: Comhphobal múinteoirí
+      tutorials: Cúrsaí Teagaisc
+    popup:
+      close: DÚN
+      mastery: Coincheapa
+      prize_earned: Bhailigh tú na %{total_trophies} duais go léir. Thuill tú bronntanas!
+      prize_us_only: "(Daltaí sna Stáit Aontaithe amháin)"
+      prizes: Bailigh na %{total_trophies} duais go léir agus faigh bronntanais!
+      prizes_link: tuilleadh eolais
+      progress: Do dhul chun cinn
+      progress_for_user: Dul chun cinn %{name}
+      puzzle_map: Céimeanna
+    user:
+      algebra_game: Ailgéabar
+      already_registered: Cláraithe cheana?
+      applab: Saotharlann Aipeanna
+      artist: Ealaíontóir
+      artist_k1: Ealaíontóir (Réamhléitheoir)
+      basketball: Cispheil
+      bounce: Preabadh
+      calc: Áireamh
+      classroom: Leathanach Baile do Mhúinteoirí
+      create: Cruthaigh
+      dance: Cóisir Dhamhsa
+      district_dashboard: Painéal an Scoilcheantair
+      driver: Logáilte isteach
+      eval: Luacháil
+      flappy: Flappy
+      frozen: Frozen
+      gamelab: An tSaotharlann Cluichíochta
+      gamelab_jr: An tSaotharlann Cluichíochta (béite)
+      gumball: Saol Iontach Gumball
+      iceage: Ice Age
+      infinity: Éigríoch
+      label: Dia dhuit a %{username}
+      loading: Á lódáil...
+      logout: Logáil amach
+      makerlab: Uirlisí do Dhéantóirí
+      minecraft_adventurer: Eachtránaí Minecraft
+      minecraft_aquatic: Minecraft Uisceach
+      minecraft_codebuilder: 'Minecraft: Ceangal Cóid'
+      minecraft_designer: Minecraft
+      minecraft_hero: Laoch Minecraft
+      my_projects: Mo chuid tionscadal
+      navigator: Comhpháirtí
+      pair_programming: Códáil bheirte
+      playlab: Spraotharlann
+      playlab_k1: Spraotharlann (Réamhléitheoir)
+      scratch: Scratch
+      settings: Mo chuntas
+      signin: Logáil isteach
+      signup: Cruthaigh cuntas
+      sports: Spórt
+      spritelab: Saotharlann na Sprideanna
+      starwars: Star Wars
+      starwarsblocks: Star Wars (Blocanna)
+      starwarsblocks_hour: Star Wars (Blocanna)
+      stats: An Stiúideo Códála
+      team: Foireann
+      view_all: Gach Tionscadal...
+      weblab: Saotharlann an Ghréasáin
+  next_page: An chéad leathanach eile
+  next_resource: An chéad acmhainn eile
+  next_stage: Críochnaithe! Ar aghaidh go dtí an chéad chéim eile
   no_course_access_student: Níl cead agat an cúrsa seo a dhéanamh faoi láthair. Cuir
     ceist ar do mhúinteoir cén cúrsa ba chóir duit a dhéanamh.
   no_course_access_teacher: Níl cead agat an cúrsa seo a dhéanamh faoi láthair. Má
@@ -1209,34 +615,115 @@ ga:
   no_script_access_teacher: Níl cead agat an t-aonad seo a dhéanamh faoi láthair.
     Má cheapann tú gur chóir rochtain a bheith agat ar an aonad seo, cuir teachtaireacht
     chuig support@code.org agus réiteoimid an fhadhb.
-  return_unit_overview: Féach ar fhoramharc an aonaid
-  return_course_overview: Féach ar fhoramharc an aonaid
-  view_all_units: Gach aonad
-  view_teacher_guide: Eolas do mhúinteoirí
+  of: as
+  okay: Ceart go leor
+  or: nó
+  page_not_found_button: Baile
+  page_not_found_description: Níl aon leathanach ag an seoladh seo. Deimhnigh go bhfuil
+    an seoladh ceart agat agus bain triail eile as. Nó, fill ar an leathanach baile.
+  page_not_found_header: '404: Níor aimsíodh an leathanach'
+  page_not_found_title: Níor aimsíodh an leathanach
+  parent_email_banner:
+    link_your_email: Ceangail do sheoladh r-phoist
+    not_now: Ná ceangail anois
+    text: "**An tuismitheoir nó caomhnóir thú?** Ceangail do sheoladh r-phoist leis
+      an gcuntas seo chun fanacht cothrom le dáta le dul chun cinn do pháiste!"
+  parent_mailer:
+    parent_email_added_subject: Fáilte go dtí Code.org!
+    student_associated_subject: Eolas logála isteach do Code.org
+  password:
+    change_form:
+      confirm_password: Deimhnigh an focal faire nua
+      new_password: Focal faire nua
+      submit: Athraigh m'fhocal faire
+      title: Athraigh d'fhocal faire
+    reset_errors:
+      captcha_required: Líon isteach an CAPTCHA chun d'fhocal faire a athshocrú.
+      invalid_email: Dealraíonn sé gur chláraigh tú le seoladh ríomhphoist neamhbhailí.
+        Cuir ríomhphost chugainn ag support@code.org agus seolfaimid nasc chugat lenar
+        féidir d'fhocal faire a athshocrú.
+    reset_form:
+      email: Seoladh ríomhphoist
+      instructions: Cuir isteach do sheoladh ríomhphoist thíos agus seolfaimid treoracha
+        duit chun d'fhocal faire a athshocrú.
+      submit: Seol
+      title: Focal faire dearmadta?
   pd:
+    form_entries:
+      ages:
+        ages_11_12: 11-12 bliain d'aois
+        ages_13_14: 13-14 bliain d'aois
+        ages_15_16: 15-16 bliain d'aois
+        ages_17_18: 17-18 bliain d'aois
+        ages_19_over: 19+ bliain d'aois
+        ages_7_8: 7-8 mbliana d'aois
+        ages_9_10: 9-10 mbliana d'aois
+        ages_under_6: "< 6 bliana d'aois"
+      email_opt_in:
+        opt_in_no: Níl
+        opt_in_yes: Tá
+      gender:
+        female: Baineannach
+        male: Fireannach
+        non_binary: Neamh-dhénártha
+        none: B'fhearr liom gan freagra a thabhairt
+        not_listed: Níl an téarma is fearr liom anseo
+      resources:
+        bootstrap: Bootstrap
+        codecademy: CodeCademy
+        csfirst: Google CS First
+        khan: Khan Academy
+        kodable: Kodable
+        lightbot: Lightbot
+        other: Eile
+        scratch: Scratch
+        tynker: Tynker
+      robotics:
+        grok: Grok Learning
+        kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        other: Eile
+        ozobot: Ozobot
+        raspberry: Raspberry Pi
+        sphero: Sphero
+        wonder: Wonder Workshop
+      school_country:
+        canada: Ceanada
+        chile: An tSile
+        israel: Iosrael
+        malaysia: An Mhalaeisia
+        mexico: Meicsiceo
+        thailand: An Téalainn
+      subjects:
+        art: Ealaín
+        cs: Ríomheolaíocht
+        efl: Béarla mar Theanga Iasachta
+        history: Stair / Staidéar Sóisialta
+        ict: TFC (ICT)
+        la: Ealaíona Teanga
+        math: Matamaitic
+        music: Ceol
+        other: 'Eile:'
+        science: Eolaíocht
+      workshop_course:
+        csd: Fionnachtana sa Ríomheolaíocht
+        csf_af: Buntús na Ríomheolaíochta (Cúrsaí A-F)
+        csf_express: Buntús na Ríomheolaíochta (Réamh-luathchúrsa nó luathchúrsa)
+        csp: Foras Feasa ar an Ríomheolaíocht
+        other: Eile
     form_labels:
-      first_name: Ainm
-      first_name_preferred: An tAinm is fearr leat
-      last_name: Sloinne
+      ages: Cad iad na haoiseanna atá tú ag múineadh i mbliana?
+      colombian_chilean_school_name: Ainm na Scoile
+      colombian_school_city: Cathair na Scoile
       email: Ríomhphost
       email_alternate: Seoladh r-phoist malartach
-      gender: Féiniúlacht Inscne
-      school: Scoil
-      school_name: Ainm na Scoile
-      school_city: Cathair na Scoile
-      school_country: Tír na Scoile
-      colombian_school_city: Cathair na Scoile
-      colombian_chilean_school_name: Ainm na Scoile
-      ages: Cad iad na haoiseanna atá tú ag múineadh i mbliana?
-      subjects: Cad iad na hábhair atá tú ag múineadh i mbliana?
-      resources: Cé acu de na hacmhainní ríomheolaíochta seo a leanas a úsáideann
-        tú?
-      robotics: Cé acu de na hacmhainní róbaitice seo a leanas a úsáideann tú?
-      workshop_organizer: Eagraí Ceardlainne
-      workshop_facilitator: Éascaitheoir Ceardlainne
-      workshop_course: Cúrsa Ceardlainne
       email_opt_in: An bhfuil cead againn ríomhphost a sheoladh chugat maidir le clár
         idirnáisiúnta Code.org, nuashonruithe ar na cúrsaí, nó nuacht eile faoin ríomheolaíocht?
+      first_name: Ainm
+      first_name_preferred: An tAinm is fearr leat
+      gender: Féiniúlacht Inscne
+      last_name: Sloinne
       legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to
         share information on how you use Code.org and the Professional Learning resources
         with the Code.org International Partner(s) in your country, school district,
@@ -1248,89 +735,41 @@ ga:
         will be de-identified and aggregated. Our International Partners and facilitators
         are contractually obliged to treat this information with the same level of
         confidentiality as Code.org.'
-    form_entries:
-      gender:
-        male: Fireannach
-        female: Baineannach
-        non_binary: Neamh-dhénártha
-        not_listed: Níl an téarma is fearr liom anseo
-        none: B'fhearr liom gan freagra a thabhairt
-      school_country:
-        canada: Ceanada
-        chile: An tSile
-        israel: Iosrael
-        malaysia: An Mhalaeisia
-        mexico: Meicsiceo
-        thailand: An Téalainn
-      ages:
-        ages_under_6: "< 6 bliana d'aois"
-        ages_7_8: 7-8 mbliana d'aois
-        ages_9_10: 9-10 mbliana d'aois
-        ages_11_12: 11-12 bliain d'aois
-        ages_13_14: 13-14 bliain d'aois
-        ages_15_16: 15-16 bliain d'aois
-        ages_17_18: 17-18 bliain d'aois
-        ages_19_over: 19+ bliain d'aois
-      subjects:
-        cs: Ríomheolaíocht
-        ict: TFC (ICT)
-        math: Matamaitic
-        science: Eolaíocht
-        history: Stair / Staidéar Sóisialta
-        la: Ealaíona Teanga
-        efl: Béarla mar Theanga Iasachta
-        music: Ceol
-        art: Ealaín
-        other: 'Eile:'
-      resources:
-        bootstrap: Bootstrap
-        codecademy: CodeCademy
-        csfirst: Google CS First
-        khan: Khan Academy
-        kodable: Kodable
-        lightbot: Lightbot
-        scratch: Scratch
-        tynker: Tynker
-        other: Eile
-      robotics:
-        grok: Grok Learning
-        kodable: Kodable
-        lego: LEGO Education
-        microbit: Microbit
-        ozobot: Ozobot
-        sphero: Sphero
-        raspberry: Raspberry Pi
-        wonder: Wonder Workshop
-        other: Eile
-      workshop_course:
-        csf_af: Buntús na Ríomheolaíochta (Cúrsaí A-F)
-        csf_express: Buntús na Ríomheolaíochta (Réamh-luathchúrsa nó luathchúrsa)
-        csd: Fionnachtana sa Ríomheolaíocht
-        csp: Foras Feasa ar an Ríomheolaíocht
-        other: Eile
-      email_opt_in:
-        opt_in_yes: Tá
-        opt_in_no: Níl
+      resources: Cé acu de na hacmhainní ríomheolaíochta seo a leanas a úsáideann
+        tú?
+      robotics: Cé acu de na hacmhainní róbaitice seo a leanas a úsáideann tú?
+      school: Scoil
+      school_city: Cathair na Scoile
+      school_country: Tír na Scoile
+      school_name: Ainm na Scoile
+      subjects: Cad iad na hábhair atá tú ag múineadh i mbliana?
+      workshop_course: Cúrsa Ceardlainne
+      workshop_facilitator: Éascaitheoir Ceardlainne
+      workshop_organizer: Eagraí Ceardlainne
     international_opt_in:
-      title: Freastal ar Cheardlann
-      intro: Go raibh maith agat as traenáil a dhéanamh ar churaclam Code.org. An
-        sprioc atá againn ná deiseanna oideachais ríomheolaíochta a chur ar fáil do
-        gach dalta i ngach scoil timpeall an domhain, agus ní bheimis in ann an sprioc
-        seo a bhaint amach de d'uireasa.
       instructions: Líon isteach an fhoirm seo le cur in iúl dúinn 1) gur fhreastail
         tú ar cheardlann a d'eagraigh páirtnéir idirnáisiúnta de chuid Code.org, agus
         2) go bhfuil tú sásta do chuid eolais phearsanta a roinnt lenár bpáirtnéir
         i do thír sa chaoi go mbeidh siad in ann tacaíocht a thabhairt duit ar do
         thuras ríomheolaíochta.
+      intro: Go raibh maith agat as traenáil a dhéanamh ar churaclam Code.org. An
+        sprioc atá againn ná deiseanna oideachais ríomheolaíochta a chur ar fáil do
+        gach dalta i ngach scoil timpeall an domhain, agus ní bheimis in ann an sprioc
+        seo a bhaint amach de d'uireasa.
       thanks_markdown: Go raibh maith agat! Táimid ag súil go mór le tacaíocht a thabhairt
         duit agus tusa ag dul i ngleic le curaclam agus le huirlisí Code.org. Fearaimid
         fáilte roimh cheisteanna agus roimh aiseolas, trí ríomhphost ag [support@code.org](%{support_email_url}),
         nó ar [fhóram na múinteoirí](%{teacher_forum_url})!
+      title: Freastal ar Cheardlann
     logged_out:
-      heading: Go raibh maith as spéis a léiriú sa Chlár Oideachais Ghairmiúil!
       body: I dtús báire, ní mór duit a bheith logáilte isteach i do chuntas Code.org.
         Má tá tú ag lorg níos mó eolais faoin chlár sula dtosóidh tú iarratas, féach
         an <a href="%{url}">foramharc ar an gClár Oideachais Ghairmiúil</a>.
+      heading: Go raibh maith as spéis a léiriú sa Chlár Oideachais Ghairmiúil!
+    no_teacher_email:
+      body_markdown: Níl aon seoladh ríomhphoist ceangailte le do chuntas. Ní mór
+        duit seoladh ríomhphoist a chur le do chuntas sna [socruithe](%{user_registration})
+        sula líonfaidh tú an fhoirm seo isteach.
     not_teacher:
       body_markdown: Go raibh maith as spéis a léiriú sa Chlár Oideachais Ghairmiúil
         ar Code.org! Tá tú logáilte isteach mar dhalta faoi láthair. Ní mór duit logáil
@@ -1338,45 +777,606 @@ ga:
         [socruithe](%{user_settings}).
       more_markdown: Má tá tú ag lorg níos mó eolais faoin chlár sula dtosóidh tú
         iarratas, féach an [foramharc ar an gClár Oideachais Ghairmiúil](%{pl_overview}).
-    no_teacher_email:
-      body_markdown: Níl aon seoladh ríomhphoist ceangailte le do chuntas. Ní mór
-        duit seoladh ríomhphoist a chur le do chuntas sna [socruithe](%{user_registration})
-        sula líonfaidh tú an fhoirm seo isteach.
-  courses_category: Cúrsaí Iomlána
-  course_offering:
-    headers:
-      minecraft: Minecraft
-      sports: Spórt
-      csf: Buntús na Ríomheolaíochta
-  cookie_banner:
-    message: Má chliceálann tú "Glacaim leis" nó má leanann tú ar aghaidh ag brabhsáil,
-      glacfaidh tú le stóráil fianán ar do ríomhaire nó gléas soghluaiste.
-    more_information: Polasaí Príobháideachais Code.org.
-    accept: Glacaim leis
-  page_not_found_title: Níor aimsíodh an leathanach
-  page_not_found_header: '404: Níor aimsíodh an leathanach'
-  page_not_found_description: Níl aon leathanach ag an seoladh seo. Deimhnigh go bhfuil
-    an seoladh ceart agat agus bain triail eile as. Nó, fill ar an leathanach baile.
-  page_not_found_button: Baile
-  copy: Cóipeáil
-  maker:
-    google_oauth:
-      login_with_google: Logáil isteach sa Maker App le Google
-      enter_code: Cuir isteach an cód a tugadh duit nuair a logáil tú isteach trí
-        Google i do bhrabhsálaí réamhshocraithe
-      copy_code: Cóipeáil agus greamaigh an cód seo isteach sa Maker App chun logáil
-        isteach i Code.org.
-      error_token_expired: Tá an ceadchomhartha as feidhm. Logáil isteach arís chun
-        ceadchomhartha nua a fháil.
-      error_wrong_provider: Soláthraí mícheart. Ní mór duit logáil isteach trí Google.
-      error_invalid_user: ID úsáideora neamhbhailí. Bain triail as logáil isteach
-        arís.
-      error_no_code: Cuir isteach do chód logála isteach.
-  parent_email_banner:
-    text: "**An tuismitheoir nó caomhnóir thú?** Ceangail do sheoladh r-phoist leis
-      an gcuntas seo chun fanacht cothrom le dáta le dul chun cinn do pháiste!"
-    link_your_email: Ceangail do sheoladh r-phoist
-    not_now: Ná ceangail anois
-  teacher_feedback: Aiseolas ó Mhúinteoirí
+  pdf_download: Íoslódáil PDF
+  peer_review:
+    accepted:
+      description_markdown: "**Tá**, comhlíonann sé na riachtanais"
+      name: Glactha
+    escalated:
+      description: Ba mhaith liom é seo a chur faoi bhráid múinteora
+      name: Ardaithe
+    instructor_feedback: Aiseolas ó Mhúinteoir
+    outdated: Baineann an t-aiseolas seo le seanleagan
+    peer_feedback: Aiseolas ó Scoláirí Eile
+    peer_review: Athbhreithniú Comhghleacaithe
+    rejected:
+      description_markdown: "**Níl**, ní chomhlíonann sé na riachtanais"
+      name: Diúltaithe
   pixelation:
     binary: Dénártha
+  previous_page: An leathanach roimhe seo
+  prize: duais
+  progress:
+    assessment: measúnú
+    completed_perfect: críochnaithe, foirfe
+    completed_too_many_blocks: críochnaithe, an iomarca blocanna
+    furthest_level_attempted: an leibhéal is airde
+    in_progress: idir lámha
+    not_started: gan tosú
+    submitted: seolta
+  project:
+    abuse:
+      contact_us: Má chreideann tú gur botún é seo, <a href='https://code.org/contact'>téigh
+        i dteagmháil linn.</a>
+      go_to_code_studio: Téigh go dtí an Stiúideo Códála
+      policy_violation: Tá eolas sa togra seo nach féidir comhroinnt le daoine eile.
+        Téigh i dteagmháil le húinéir na haipe leis an ábhar seo a réiteach.
+      report_abuse_form:
+        abuse_type:
+          harassment: Bagairtí, cibearbhulaíocht, ciapadh
+          infringement: Sárú Cóipchirt
+          offensive: Ábhar gránna
+          other: Eile
+          question: Cén chaoi a sáraíonn an t-ábhar seo na %{link_start}Téarmaí Seirbhíse%{link_end}?
+        abusive_url: URL an ábhair
+        acknowledge: Agus na sonraí seo á seoladh, glacaim leis go n-úsáidfear iad
+          de réir théarmaí %{link_start_privacy}an Pholasaí Príobháideachais%{link_end}
+          agus de réir na %{link_start_tos}dTéarmaí Seirbhíse%{link_end}
+        detail: Tabhair dúinn an méid is féidir mionsonraí maidir leis an ábhar á
+          thuairisciú.
+        intro: Má thagann tú ar ábhar gránna, bagairtí, cibearbhulaíocht, ciapadh,
+          nó sárú cóipchirt le linn aip a rinneadh sa Stiúideo Códála a úsáid, ba
+          chóir duit an fhoirm thíos a líonadh. Déanfaimid ár seacht ndícheall do
+          thuairisc a iniúchadh agus gníomhú feiliúnach a dhéanamh.
+        validation:
+          abuse_detail: Tabhair mionsonraí maidir leis an ábhar á thuairisciú
+          abuse_type: Inis dúinn cén chaoi a sáraíonn an t-ábhar seo na Téarmaí Seirbhíse
+          age: Cuir isteach d'aois
+          email: Cuir isteach do sheoladh ríomhphoist
+      tos: Tuairiscíodh an togra seo agus dúradh go sáraíonn sé <a href='http://code.org/tos'>Téarmaí
+        Seirbhíse</a> Code.org. Dá bharr sin, ní féidir é a chomhroinnt.
+    advanced_share: Taispeáin na hardroghanna
+    create: Cruthaigh Togra
+    create_a_project: 'Cruthaigh togra nua:'
+    edit_project: Cuir an Togra in Eagar
+    embed: Leabaigh
+    exit: Fill ar an gCúrsa
+    help_text: Cliceáil <strong>Déan aip</strong> nó <strong>Tarraing pictiúr</strong>
+      thíos chun togra nua a thosú!<br/>Is féidir leat filleadh anseo agus tuilleadh
+      oibre a dhéanamh ar do chuid tograí am ar bith.
+    name: Ainm
+    need_help: Bain triail as na cúrsaí seo chun cabhrú linn tosú amach le do thogra
+      nua
+    new: Cruthaigh Togra Nua
+    no_projects: Níl aon togra agat faoi láthair. Cliceáil ceann de na cnaipí thuas
+      le togra nua a thosú.
+    not_saved: Gan sábháil
+    project_gallery: Tograí
+    project_type: Cineál an Togra
+    projects: Tograí
+    publish: Foilsigh
+    saved: Sábháilte
+    share_copy_link: 'Cóipeáil an nasc:'
+    share_embed_description: Is féidir an cód leabaithe a ghreamú isteach i leathanach
+      HTML chun an togra a chur ar taispeáint ar leathanach Gréasáin.
+    share_title: Comhroinn do thogra
+    share_u13_warning: Lorg cead ó do mhúinteoir sula bhfoilseoidh tú é. Ná comhroinn
+      é ach le daoine eile i do scoil.
+    sharing_disabled: Ár leithscéal, ach níl an togra seo ar fáil le foilsiú. Más
+      leatsa nó le dalta de do chuid é, <a href='https://studio.code.org/users/sign_in'>logáil
+      isteach</a> i do chuntas le breathnú air.
+    thumbnail_help: Nach bhfeiceann tú an mionphictiúr ceart le do thogra? Rith d'aip
+      chun mionphictiúr nua a ghiniúint. Uaireanta tógann sé cúpla uair an chloig
+      sula mbeidh an mionphictiúr ar fáil chuile áit.
+    unpublish: Dífhoilsigh
+    updated: Nuashonraithe
+    view_all: Mo Chuid Tograí
+  puzzle: Dúshlán
+  race_interstitial:
+    decline: Dún
+    message: Cad é do chine (cuir tic le gach a mbaineann leatsa)
+    races:
+      american_indian: Bundúchasach Meiriceánach/Alascach
+      asian: Áiseach
+      black: Den chine gorm nó Afra-Mheiriceánach
+      hawaiian: Haváíoch Dúchasach nó Oileánach an Aigéin Chiúin
+      hispanic: Easpáinneach nó Latinx
+      opt_out: B'fhearr liom gan freagra a thabhairt
+      other: Eile
+      white: Den chine geal
+    submit: Seol
+    title: 'Roghnach: Cabhraigh linn dul chun cinn i dtreo na hilchineálachta sa ríomheolaíocht
+      a rianú'
+  reference_area:
+    auth_error: Níl cead agat an réiteach a fheiceáil.
+    direction: Treo Tosaigh (céimeanna)
+    submit: Athraigh Suíomh an Ealaíontóra
+    subtitle: Féach ar na físeáin agus leideanna seo
+    teacher: Féach ar réiteach
+    teacher_no_solution: Ná taispeáin an freagra
+    title: An bhfuil cabhair uait?
+  reports:
+    error:
+      access_denied: Níl cead agat staitisticí a bhaineann leis an duine seo a fheiceáil
+  return_course_overview: Féach ar fhoramharc an aonaid
+  return_unit_overview: Féach ar fhoramharc an aonaid
+  school_info:
+    after_school: Iarscoil
+    charter: Cairtscoil
+    district: Ceantar
+    district_name: Ainm an Cheantair
+    homeschool: Scoil bhaile
+    other: Eile
+    other_district_not_listed: Ceantar eile nach bhfuil luaite
+    other_school_not_listed: Scoil eile nach bhfuil luaite
+    private: Príobháideach
+    public: Poiblí
+    school: Scoil
+    school_address: Seoladh na Scoile
+    school_country: Tír na Scoile
+    school_name: Ainm na Scoile
+    school_organization_name: Ainm na Scoile/Eagraíochta
+    school_organization_zip: Cód Poist na Scoile/Eagraíochta
+    school_zip: Cód Poist na Scoile
+    select_school_type: Cineál na Scoile
+    state: Stát
+    title: Eolas faoin scoil (roghnach)
+  school_info_interstitial:
+    message: Cuir isteach eolas maidir le do scoil thíos.
+    message_with_suggestion: Deimhnigh go bhfuil an t-eolas thíos ceart, nó nuashonraigh
+      é más gá.
+    save: Sábháil
+    title: Ba mhaith linn deis a thabhairt do gach dalta an Ríomheolaíocht a fhoghlaim
+      - cabhraigh linn súil a choinneáil ar an dul chun cinn!
+  section:
+    code_with_teacher: "%{section_code} le %{teacher_name}"
+    confirm:
+      remove: An bhfuil tú cinnte gur mhaith leat an rannán seo a fhágáil?
+    default_name: Rannán Gan Teideal
+    remove: "(bain rannán)"
+    type:
+      clever: Clever
+      email: Ríomhphost
+      google_classroom: Google Classroom
+      picture: Pictiúr mar Fhocal Faire
+      word: Focail Rúnda
+    your_section:
+      one: 'Do rannán:'
+      other: 'Do chuid rannán:'
+  see_your_learning_plan: Féach ar do phlean foghlamtha
+  share:
+    description: Is féidir le haon duine an ríomheolaíocht a fhoghlaim. Déan cluichí,
+      aipeanna, agus ealaín as cód.
+    title: Foghlaim sa Stiúideo Códála
+    try_hour_of_code: Bain triail as an Uair Chódála!
+  share_code:
+    address_not_allowed: Dealraíonn sé go bhfuil seoladh ann. Déan iarracht an téacs
+      a athrú.
+    bounce_og_title: Féach ar mo Chluiche Liathróide
+    check_out_what_i_made: Féach an rud a rinne mé
+    email_not_allowed: Dealraíonn sé go bhfuil seoladh ríomhphoist ann. Déan iarracht
+      an téacs a athrú.
+    flappy_og_title: Féach ar mo Chluiche Flappy
+    og_description: Mise féin a scríobh an cód ar Code.org
+    phone_number_not_allowed: Dealraíonn sé go bhfuil uimhir ghutháin ann. Déan iarracht
+      an téacs a athrú.
+    profanity_not_allowed: Dealraíonn sé go bhfuil eascaine ann. Déan iarracht an
+      téacs a athrú.
+    studio_og_title: Féach ar an aip a rinne mé sa Spraotharlann
+    title: Cliceáil 'Rith' chun mo ríomhchlár a fheiceáil
+  signin:
+    try_20hours: Bain triail as ár mbunchúrsa 20 uair an chloig ar an ríomheolaíocht
+    try_heading: An bhfuil fonn ort triail a bhaint as gan clárú?
+    try_hoc: Bain triail as Uair Chódála ar dtús
+  signin_form:
+    login: Ríomhphost
+    login_username: Seoladh ríomhphoist nó ainm úsáideora
+    password: Focal faire
+    remember: Cuimhnigh orm
+    submit: Logáil isteach
+    title: An bhfuil cuntas agat cheana? Logáil isteach
+  signinsection:
+    invalid_login: Theip ar an logáil isteach, bain triail eile as
+    login: Logáil isteach
+    name: Cuir isteach d'ainm
+    pair_programming: Tá comhpháirtí in éineacht liom anseo
+    picture: Anois, aimsigh do phictiúr rúnda
+    student_privacy_markdown: Foghlaim cén fáth nach bhfeiceann tú d'ainm iomlán [anseo](%{student_privacy_blog}).
+    welcome: Fáilte go dtí %{section_name}
+    words: Anois, cuir isteach na focail rúnda atá agat
+  signup_form:
+    accept_terms: Caithfidh tú glacadh leis chun cuntas a chruthú
+    address_placeholder: seoladh, cathair, stát, cód poist
+    age: Aois
+    agree_us_data_transfer_student: "**Aontaím go bhféadfaidh Code.org sonraí (lena
+      n-áirítear sonraí pearsanta) a aistriú chuig na Stáit Aontaithe** de bharr gur
+      úsáid mé an suíomh seo chun críche amhail sonraí a óstáil agus a phróiseáil."
+    birthday: Breithlá (roghnach)
+    data_collection_us: Is suíomh gréasáin neamhbhrabúis é Code.org atá bunaithe sna
+      SAM, agus d'fhéadfadh na dlíthe lena rialaítear bailiú sonraí sna SAM a bheith
+      difriúil ó na dlíthe i do thír féin.
+    email_preference_no: Níl
+    email_preference_privacy: "(Féach ár bpolasaí príobháideachais)"
+    email_preference_question: An bhfuil cead againn ríomhphost a sheoladh chugat
+      maidir lenár gcúrsaí, deiseanna foghlamtha áitiúla, nó nuacht eile faoin ríomheolaíocht?
+      (uair amháin sa mhí, nó thart air sin)
+    email_preference_required: Caithfidh tú an cheist seo a fhreagairt.
+    email_preference_yes: Tá
+    email_signup: Cláraigh le do sheoladh ríomhphoist
+    error: Tharla earráid.
+    field_is_required: Riachtanach
+    gender: Inscne (roghnach)
+    go_to_account: Téigh go dtí mo chuntas
+    hoc_already_signed_up_content: Chláraigh tú chun Uair Chódála a mhúineadh! Ní
+      gá duitse ná do na daltaí logáil isteach sa Stiúideo Códála chun páirt a ghlacadh
+      san ócáid seo. Ar dtús, <a href="%{learn_url}">roghnaigh cúrsa teagaisc</a>
+      don seomra ranga agus tabhair an nasc do na daltaí.<br/><br/>Má thaitin an Uair
+      Chódála leat agus má tá tú ag iarraidh níos mó a dhéanamh, is féidir cuntas
+      ar an Stiúideo Códála a chruthú thíos, agus do chuid daltaí a chlárú le haon
+      cheann de na <a href="%{educate_url}">cúrsaí níos faide</a> atá againn.
+    hoc_already_signed_up_content_post_hoc: Go raibh maith agat as Uair Chódála a
+      óstáil. Ní mór duit focal faire a shocrú chun logáil isteach sa Stiúideo Códála.
+      Sa chaoi seo beidh tú in ann do dhul chun cinn a shábháil agus do sheomra ranga
+      a bhainistiú. Beidh tú in ann cúrsaí a shannadh agus dul chun cinn na ndaltaí
+      a leanúint. Nó más fearr leat, is féidir <a href="%{studio_url}">na céimeanna
+      agus na dúshláin éagsúla a bhrabhsáil</a> gan cuntas a chruthú.
+    hoc_already_signed_up_content_post_hoc_markdown: Go raibh maith agat as Uair Chódála
+      a óstáil. Ní mór duit focal faire a shocrú chun logáil isteach sa Stiúideo Códála.
+      Sa chaoi seo beidh tú in ann do dhul chun cinn a shábháil agus do sheomra ranga
+      a bhainistiú. Beidh tú in ann cúrsaí a shannadh agus dul chun cinn na ndaltaí
+      a leanúint. Nó más fearr leat, is féidir [na céimeanna agus na dúshláin éagsúla
+      a bhrabhsáil](%{studio_url}) gan cuntas a chruthú.
+    hoc_already_signed_up_heading: Tosú gan logáil isteach
+    invalid_password: Ní mór ar a laghad 6 charachtar a bheith i bhfocal faire
+    invalid_username: Ní mór ar a laghad 5 charachtar a bheith in ainm úsáideora
+    mismatch_password: Ní ionann an dá fhocal faire a chuir tú isteach
+    overview: Cruthaigh cuntas le do sheomra ranga a bhainistiú nó do dhul chun cinn
+      a leanúint. Is féidir leat <a href="/">na cúrsaí agus na dúshláin éagsúla</a>
+      a bhrabhsáil gan chuntas, ach ní mór duit clárú chun do chuid tograí agus do
+      dhul chun cinn a shábháil.
+    overview_markdown: Cruthaigh cuntas le do sheomra ranga a bhainistiú nó do dhul
+      chun cinn nó dul chun cinn do pháiste a leanúint. Is féidir leat [na cúrsaí
+      agus na dúshláin éagsúla](/) a bhrabhsáil gan chuntas, ach ní mór duit clárú
+      chun do chuid tionscadal agus do dhul chun cinn a shábháil.
+    parent_account_checkbox: Is tuismitheoir/caomhnóir mé agus tá mé ag clárú ar son
+      mo pháiste
+    parent_account_email_label: Seoladh R-Phoist Tuismitheora/Caomhnóra
+    parent_account_email_progress_permission: An bhfuil cead againn ríomhphost a sheoladh
+      chugat anois is arís le heolas faoi dhul chun cinn do pháiste, faoin chúrsa,
+      agus faoin ríomheolaíocht go ginearálta? [(Féach ár bpolasaí príobháideachais)](%{privacy_policy_url})
+    school_address: Seoladh do Scoile (roghnach)
+    school_name: Ainm do Scoile (roghnach)
+    share_teacher_email_reg_partner_preference_no: Níl
+    share_teacher_email_reg_partner_preference_required: Caithfidh tú an cheist seo
+      a fhreagairt.
+    share_teacher_email_reg_partner_preference_yes: Tá
+    student_consent: Dearbhaím gur thug tuismitheoir nó caomhnóir dlíthiúil cead dom
+      seirbhísí Code.org a úsáid.
+    student_count: Tá %{count} dalta cláraithe cheana.
+    student_terms_markdown: Ní stórálaimid seoltaí ríomhphoist ar bhealach a ligfeadh
+      dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí aon ríomhphost ó Code.org
+      seachas chun focal faire a athshocrú. Féach ár [bpolasaí príobháideachais](http://code.org/privacy)
+      chun tuilleadh eolais a fháil.
+    submit: Cláraigh
+    taken_username: Ainm úsáideora in úsáid cheana
+    teacher: An múinteoir thú?
+    teacher_count: Tá %{count} múinteoir cláraithe cheana.
+    teacher_educator_guide: Féach an lámhleabhar do mhúinteoirí
+    title: Cláraigh le Code.org
+    us_state: Stát
+    user_type: An dalta nó múinteoir thú?
+    user_type_button: Athraigh Cineál an Chuntais
+    user_type_label: Cineál Cuntais
+    user_type_student: Dalta
+    user_type_teacher: Múinteoir
+    valid_password: Focal faire bailí!
+    valid_username: Ar fáil!
+    visit_privacy: Tabhair cuairt ar [Pholasaí Príobháideachais](%{privacy_url}) chun
+      tuilleadh a fhoghlaim.
+  slow_loading: Moill as an ngnáth air seo...
+  stage: Céim
+  stage_number: Ceacht %{number}
+  studio:
+    all_courses: Gach cúrsa
+    completed_courses: Cúrsaí críochnaithe
+    courses_working_on: Cúrsaí idir lámha
+  submit: Seol
+  teacher:
+    answer: Freagra
+    confirm:
+      remove: An bhfuil tú cinnte gur mhaith leat an múinteoir seo a bhaint?
+    dashboard: Painéal na Múinteoirí
+    for_teachers_only: Do Mhúinteoirí Amháin
+    panel:
+      answer_viewer: Painéal an Mhúinteora
+      clear_response: Bánaigh an freagra
+      example: Réiteach Samplach
+      example_with_number: Réiteach Samplach a %{solution_number}
+      last_updated: 'Nuashonrú Is déanaí:'
+      section: Rannán
+      student: Dalta
+      submitted_on: 'Seolta:'
+      try_it_yourself: Bain triail as
+      unsubmit: Dísheol
+      update_lock_settings: Athraigh na socruithe glasála anseo.
+      viewing_solution: Réiteach á Thaispeáint
+      worked_with: In éineacht le
+    remove: "(bain múinteoir)"
+    student_teacher_disassociated: D'fhág tú rannán %{section_code} le %{teacher_name}.
+    students:
+      dashboard: Féach ar Phainéal na Múinteoirí
+    title:
+      one: 'Do mhúinteoir:'
+      other: 'Do mhúinteoirí:'
+    user_not_found: Níor aimsíodh an múinteoir seo.
+  teacher_feedback: Aiseolas ó Mhúinteoirí
+  teacher_mailer:
+    delete_teacher_subject: 'Fógra ó Code.org: Scriosadh do chuntas'
+    new_teacher_subject: Fáilte go dtí Code.org!
+  terms_interstitial:
+    accept: Glacaim Leo
+    accept_label: Glacaim leis na <a href="%{tos_url}" target="_blank">Téarmaí Seirbhíse</a>
+      agus leis <a href="%{privacy_url}" target="_blank">an bPolasaí Príobháideachais</a>.
+    accept_label_markdown: Glacaim leis na [Téarmaí Seirbhíse](%{tos_url}) agus leis
+      [an bPolasaí Príobháideachais](%{privacy_url}).
+    accept_tos: Trí chlárú le Code.org, glacann tú leis na [Téarmaí Seirbhíse](%{tos_url})
+      agus leis an [Pholasaí Príobháideachais](%{privacy_url}).
+    intro_desc: 'Táimid tar éis na Téarmaí Seirbhíse agus an Polasaí Príobháideachais
+      a leasú, mar a léirítear thíos. Chuaigh na hathruithe seo i bhfeidhm ar 24 Lúnasa
+      2016. An t-athrú is mó: <i>ní stórálfaimid seoltaí ríomhphoist mar chuid de
+      chuntais dalta sa Stiúideo Códála.</i> Is mór an rud é seo, agus tá súil againn
+      go leagfaidh sé síos caighdeán nua maidir le príobháideachas i dteicneolaíocht
+      an oideachais. Sheolamar achoimre ar na hathruithe eile i dteachtaireacht r-phoist.'
+    intro_desc_markdown: 'Táimid tar éis na Téarmaí Seirbhíse agus an Polasaí Príobháideachais
+      a leasú, mar a léirítear thíos. Chuaigh na hathruithe seo i bhfeidhm ar 24 Lúnasa
+      2016. An t-athrú is mó: *ní stórálfaimid seoltaí ríomhphoist mar chuid de chuntais
+      dalta sa Stiúideo Códála.* Is mór an rud é seo, agus tá súil againn go leagfaidh
+      sé síos caighdeán nua maidir le príobháideachas i dteicneolaíocht an oideachais.
+      Sheolamar achoimre ar na hathruithe eile i dteachtaireacht r-phoist.'
+    intro_instructions: Caithfidh tú glacadh leis na téarmaí nua a bhaineann le daltaí
+      i do sheomra ranga atá níos óige ná 13 bliana d'aois chun teacht ar na gnéithe
+      nua sa Stiúideo Códála. Nuair a chláróidh tú cuntas le haghaidh dalta atá níos
+      óige ná 13, iarrfar ort deimhniú gur thug tuismitheoir cead do do scoil faisnéis
+      phearsanta a bhailiú ón dalta ar mhaithe leis an scoil, cláracha oideachasúla
+      cosúil leis an Stiúideo Códála san áireamh.
+    print: Priontáil
+    privacy: Polasaí Príobháideachais
+    privacy_notice: Polasaí Príobháideachais
+    reminder_desc: Rinneamar leasú ar <a href="%{tos_url}" target="_blank">na Téarmaí
+      Seirbhíse</a> agus ar <a href="%{privacy_url}" target="_blank">an bPolasaí Príobháideachais</a>.
+      Léigh na cáipéisí seo go cúramach sula nglacfaidh tú leo. Go dtí go nglacfaidh
+      tú leis an téarmaí nua, seans nach mbeidh do chuid daltaí in ann tairbhe a bhaint
+      as na hacmhainní atá againn a mhúineann JavaScript.
+    reminder_desc_markdown: Rinneamar leasú ar [na Téarmaí Seirbhíse](%{tos_url})
+      agus ar [an bPolasaí Príobháideachais](%{privacy_url}). Léigh na cáipéisí seo
+      go cúramach sula nglacfaidh tú leo. Go dtí go nglacfaidh tú leis an téarmaí
+      nua, seans nach mbeidh do chuid daltaí in ann tairbhe a bhaint as na hacmhainní
+      atá againn a mhúineann JavaScript.
+    review_terms: Léigh na téarmaí seirbhíse nua
+    title: Téarmaí Seirbhíse agus Polasaí Príobháideachais Nua
+    tos: Téarmaí Seirbhíse
+  text_match:
+    correct_body: Maith thú! Sin é an freagra ceart.
+    correct_title: Ceart
+    open_response_body: Go raibh maith agat as do fhreagra!
+    open_response_title: Go raibh maith agat
+    placeholder: Cuir do fhreagra anseo
+  time:
+    day: lá
+    hour: Uair an chloig
+    week: seachtain
+  trophies: Duaiseanna
+  try_hoc: 'Bain triail as an Uair Chódála; cliceáil anseo >> '
+  try_k8intro: Bain triail as ár gCúrsa Bhuntús na Ríomheolaíochta do Bhunscoileanna
+    agus Mheánscoileanna (15-25 uair an chloig)
+  try_reloading: Déan iarracht an leathanach a lódáil arís
+  unplugged_activity: Gníomhaíocht Dhíphlugáilte
+  unsubmit: Dísheol
+  upsell:
+    20-hour:
+      body: Is cúrsa 20 uair an chloig é seo a chlúdaíonn bunchoincheapa ríomheolaíochta
+        agus ríomhchláraithe ó chúrsaí 2-4. Tá sé dírithe ar dhaltaí idir 10 agus
+        18 bliain d'aois. Féach ar chúrsaí 2-4 chun eolas níos cuimsithí a fháil!
+      body_short: Foghlaim buntús na ríomheolaíochta i leagan luathaithe de chúrsaí
+        2-4.
+      title: Cúrsa Luathaithe
+    applab:
+      audience: Aois 13+
+      body: Is timpeallacht ríomhchláraithe é an tSaotharlann Aipeanna lenar féidir
+        aipeanna simplí a chruthú. Dear d'aip, scríobh le blocanna nó le JavaScript
+        í, ansin foilsigh an aip ar an toirt.
+      body_short: Dear d'aip, códáil le blocanna nó le JavaScript í, ansin foilsigh
+        an aip ar an toirt.
+      cta: Foghlaim anois
+      title: Saotharlann Aipeanna
+    aquatic:
+      title: Minecraft
+    dance:
+      title: Cóisir Dhamhsa
+    dance-2019:
+      title: Cóisir Dhamhsa
+    flappy:
+      body: Ar mhaith leat do chluiche féin a scríobh i gceann 10 nóiméad? Bain triail
+        as ár gcúrsa Flappy Code!
+      title: Cód Flappy
+    frozen:
+      title: Frozen
+    gallery:
+      body: Féach ar phictiúir d'aipeanna agus ar obair ealaíne déanta ag úsáideoirí
+      title: Gailearaí
+    gamelab:
+      audience: Aois 13+
+      body: Is timpeallacht ríomhchláraithe é an tSaotharlann Cluichíochta lenar féidir
+        leat beochaintí agus cluichí simplí a chruthú le rudaí agus carachtair a dhéanann
+        idirghníomhaíocht lena chéile.
+      cta: Foghlaim anois
+      title: An tSaotharlann Cluichíochta
+    hero:
+      body: Tá Minecraft ar ais le gníomhaíocht úrnua ar an Uair Chódála! Téigh ar
+        aistear trí Minecraft le cód.
+      title: Minecraft
+    hoc:
+      body: Bí leis na milliúin a bhain triail as buntús na ríomheolaíochta.
+      title: Cathair Ghríobháin Chlasaiceach
+    hoc-encryption:
+      body: Foghlaimeoidh na daltaí teicnící a chabhróidh leo teachtaireachtaí criptithe
+        a chruthú agus a dhíchódú.
+      title: Criptiú Simplí
+    hoc2014:
+      try_frozen: An tEalaíontóir, le hAnna agus Elsa ó Frozen
+      try_new_tutorial: Bain triail as an gcúrsa teagaisc nua don Uair Chódála (béite)
+    infinity:
+      body: Úsáid an Spraotharlann chun scéal nó cluiche a chruthú ina bhfuil carachtair
+        Disney Infinity.
+      title: 'Infinity: Spraotharlann'
+    minecraft:
+      body: Taiscéal domhan Minecraft le cód.
+      title: Minecraft
+    minecraft2016:
+      body: Códáil ainmhithe agus créatúir eile i do leagan féin de Minecraft.
+      title: Minecraft
+    sports:
+      body: Is féidir leat cluiche cispheile a chruthú nó spóirt éagsúla a mheascadh.
+      title: Spórt
+    starwars:
+      title: Star Wars
+    text-compression:
+      body: Sa cheacht seo, úsáidfidh na daltaí an Ghiuirléid Chomhbhrúite Téacs chun
+        téacs a chomhbhrú trí shiombailí a chur in áit patrún áirithe.
+    unplugged:
+      audience: Aois 4+
+      body: Bhailíomar liosta de cheachtanna díphlugáilte is féidir a úsáid i do sheomra
+        ranga. Anois, beidh tú in ann buntús na ríomheolaíochta a mhúineadh, is cuma
+        mura bhfuil ríomhairí i do sheomra ranga! Bain úsáid as na ceachtanna seo
+        mar chúrsa saorsheasaimh nó mar chomhlánú ar aon chúrsa ríomheolaíochta.
+      body_short: Mura bhfuil ríomhairí agat, bain triail as na ceachtanna "díphlugáilte"
+        seo i do sheomra ranga.
+      title: Ceachtanna Díphlugáilte
+    unplugged_conditionals:
+      body: Foghlaim faoi algartaim agus faoi ráitis choinníollacha sa ghníomhaíocht
+        "dhíphlugáilte" seo a úsáideann deic cártaí.
+      title: Coinníollacha
+    weblab:
+      audience: Aois 13+
+      body: Is éard atá i Saotharlann an Ghréasáin ná timpeallacht ríomhchláraithe
+        lenar féidir leathanaigh Ghréasáin shimplí a chruthú in HTML agus CSS. Dear
+        do leathanaigh féin agus foilsigh do shuíomh ar an bpointe.
+      cta: Foghlaim anois
+      title: Saotharlann an Ghréasáin (béite)
+    widgets:
+      audience: Aois 14+
+      body: Is féidir le daltaí na huirlisí digiteacha seo a úsáid chun coincheapa
+        ó Fhoras Feasa na Ríomheolaíochta a fhoghlaim. Úsáid na giuirléidí ina n-aonar,
+        nó cruthaigh ceacht a chlúdaíonn coincheap amháin.
+      cta: Foghlaim anois
+      title: Giuirléidí
+  user:
+    account_successfully_updated: Nuashonraíodh an cuntas.
+    auth_option_saved: D'éirigh leat do chuntas %{provider} a nascadh leis an seoladh
+      ríomhphoist %{email}.
+    auth_option_saved_no_email: D'éirigh leat do chuntas %{provider} a nascadh.
+    confirm_secret_words: Deimhnigh gur tusa atá ann trí na focail rúnda atá agat
+      a chur isteach
+    create_personal_login: Cruthaigh focal faire pearsanta
+    create_personal_login_email_note: 'Nóta: Ní stórálaimid seoltaí ríomhphoist ar
+      bhealach a ligfeadh dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí aon
+      ríomhphost ó Code.org seachas chun focal faire a athshocrú. Féach ár <a href=''%{privacy_policy_url}'',
+      target=''_blank''>bpolasaí príobháideachais</a> chun tuilleadh eolais a fháil.'
+    create_personal_login_email_note_markdown: 'Nóta: Ní stórálaimid seoltaí ríomhphoist
+      ar bhealach a ligfeadh dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí
+      aon ríomhphost ó Code.org seachas chun focal faire a athshocrú. Féach ár [bpolasaí
+      príobháideachais](%{privacy_policy_url}) chun tuilleadh eolais a fháil.'
+    create_personal_login_info: Más mian leat Code.org a úsáid fiú tar éis dheireadh
+      na scoilbhliana, is féidir leat do chuntas féin a chruthú thíos.
+    create_personal_login_link_account: Nó, is féidir leat ceangal a bhunú le cuntas
+      pearsanta sa rannán “Bainistigh Cuntais Nasctha”.
+    create_personal_login_terms: Má chruthaíonn tú cuntas pearsanta, glacann tú le
+      <a href='%{terms_of_service_url}', target='_blank'>téarmaí seirbhíse Code.org</a>.
+      Má tá tú níos óige ná 13 bliain d'aois, deimhníonn tú go bhfuair tú cead ó thuismitheoir
+      nó ó chaomhnóir dlíthiúil seirbhísí Code.org a úsáid fiú gan múinteoir i láthair.
+    create_personal_login_terms_markdown: Má chruthaíonn tú cuntas pearsanta, glacann
+      tú le [téarmaí seirbhíse Code.org](%{terms_of_service_url}). Má tá tú níos óige
+      ná 13 bliain d'aois, deimhníonn tú go bhfuair tú cead ó thuismitheoir nó ó chaomhnóir
+      dlíthiúil seirbhísí Code.org a úsáid fiú gan múinteoir i láthair.
+    create_personal_login_under_13_info: Más mian leat Code.org a úsáid fiú tar éis
+      dheireadh na scoilbhliana, iarr ar thuismitheoir cabhrú leat do chuntas pearsanta
+      féin a chruthú thíos.
+    create_personal_login_under_13_parent_email: Seoladh ríomhphoist do thuismitheoir
+    create_personal_login_under_13_username: Ainm úsáideora (ná húsáid d'fhíorainm!)
+    current_password_hint: "(ní mór duit an focal faire atá agat faoi láthair a chur
+      isteach leis an athrú a dheimhniú)"
+    delete: Scrios an Cuntas
+    delete_confirm: An bhfuil tú cinnte gur mhaith leat do chuntas a scriosadh?
+    delete_text: Má scriosann tú do chuntas, caillfidh tú aon fhaisnéis agus aon dul
+      chun cinn ceangailte leis an gcuntas seo.
+    delete_text_teacher_managed_note: Níl cead agat an cuntas seo a scriosadh toisc
+      go bhfuil do mhúinteoir i gceannas air. Caithfidh do mhúinteoir(í) tusa a bhaint
+      dá rannán sularbh fhéidir leat an cuntas a scriosadh.
+    delete_text_teacher_note: 'Nóta: má scriosann tú do chuntas-sa, ní scriosfar cuntais
+      do chuid daltaí.'
+    deleted_user: úsáideoir scriosta
+    email_confirm_needed: 'Seoladh ríomhphoist gan deimhniú:'
+    email_confirm_needed_required: 'Níl do sheoladh ríomhphoist %{email} deimhnithe:'
+    email_confirm_wrong_email: "(Seoladh ríomhphoist mícheart?)"
+    email_resend_confirm: Seol na treoracha deimhnithe arís
+    encrypted: criptithe
+    enter_new_login_info: Tabhair do shonraí nua logála isteach
+    enter_parent_email: Cuir isteach seoladh ríomhphoist do thuismitheora (i gcás
+      gur gá duit d'fhocal faire a athshocrú)
+    for_parents_and_guardians: Do thuismitheoirí agus do chaomhnóirí
+    link_a_parent_email: Ceangail do sheoladh r-phoist leis an gcuntas seo chun fanacht
+      cothrom le dáta le dul chun cinn do pháiste
+    new_email_hint: "(deimhnigh gur féidir leat glacadh le ríomhphost ag an seoladh
+      seo)"
+    new_password_hint: "(fág bán é mura bhfuil tú ag iarraidh é a athrú)"
+    no_password_because_oauth: Ní gá focal faire a roghnú. Logálfaidh tú isteach trí
+      sholáthraí tríú páirtí.
+    no_password_because_sponsored: Cabhróidh do mhúinteoir leat d'fhocal faire a bhainistiú.
+    none: Dada
+    only_one_parent_email_supported_warning: 'Aire: ní féidir linn glacadh le níos
+      mó ná seoladh r-phoist amháin do thuismitheoir nó caomhnóir.'
+    parent_email_hint: "(is féidir é seo a úsáid má chailleann tú d'fhocal faire)"
+    parent_email_label: Seoladh ríomhphoist do thuismitheoir (roghnach)
+    parent_guardian_email_label: Seoladh ríomhphoist do thuismitheoir
+    remove_parent_email_label: Bain
+    update: Nuashonraigh an Cuntas
+    update_email: Nuashonraigh
+  user_level:
+    completed: Críochnaithe
+    tried: Iarracht déanta
+  user_type:
+    student: Dalta
+    teacher: Múinteoir
+  video:
+    autoplay_option: Seinn físeáin go huathoibríoch
+    download: Íoslódáil an Físeán
+    label: Físeán
+    notes: Níl seinnteoir físe agat? Taispeáin nótaí.
+    notes_coming_soon: Beidh nótaí don fhíseán seo ar fáil go luath.
+    show_notes: Taispeáin Nótaí
+    show_video: Taispeáin an Físeán
+    tab: Físeán.
+  video_coming_soon: Físeán le teacht go luath!
+  view_all_units: Gach aonad
+  view_lesson_plan: Féach ar an bPlean Ceachta
+  view_teacher_guide: Eolas do mhúinteoirí
+  welcome_back: Fáilte ar ais a %{name}
+  welcome_email:
+    body: |
+      Cliceáil an nasc thíos chun clárú le cúrsaí ar an ríomheolaíocht ar Code.org (liomsa mar "mhúinteoir"):
+
+      %{link}
+
+      Tá na cúrsaí teagaisc taitneamhach agus tarraingteach, agus múineann siad buntús na ríomheolaíochta trí chomhéadan simplí treoraithe cosúil le cluiche. Foghlaim códáil ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies! :-)
+
+      %{name}
+    subject: Téigh isteach i mo sheomra ranga (ar Code.org)
+  your_professional_learning_plan: Do phlean foghlamtha proifisiúnta
+  zendesk_too_young_message: Ár leithscéal, ach níl cead ag úsáideoirí óga logáil
+    isteach sa suíomh tacaíochta. Is féidir leat cuairt a thabhairt ar <a href="http://support.code.org">support.code.org</a>
+    gan logáil isteach, nó iarr ar thuismitheoir nó ar mhúinteoir dul i dteagmháil
+    linn ar do shon.
+  zendesk_too_young_message_markdown: Ár leithscéal, ach níl cead ag úsáideoirí óga
+    logáil isteach sa suíomh tacaíochta. Is féidir leat cuairt a thabhairt ar [support.code.org](http://support.code.org)
+    gan logáil isteach, nó iarr ar thuismitheoir nó ar mhúinteoir dul i dteagmháil
+    linn ar do shon.

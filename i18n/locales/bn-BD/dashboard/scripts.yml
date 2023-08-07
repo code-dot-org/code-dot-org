@@ -961,3 +961,39 @@ bn:
           lesson_groups:
             lessonGroup-4:
               display_name: চলকগুলো
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+            lessonGroup-6:
+              display_name: ঘটনাবলী
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+            lessonGroup-5:
+              display_name: ঘটনাবলী
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: চক্র
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: নেষ্টেড লুপ
+            lessonGroup-4:
+              display_name: ফাংশনগুলি
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: শর্তযুক্ত
+            lessonGroup-5:
+              display_name: চলকগুলো

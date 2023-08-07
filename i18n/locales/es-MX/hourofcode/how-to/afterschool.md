@@ -8,7 +8,7 @@ title: Guía práctica de la Hora del Código para después de la escuela
 
 ### Únete al movimiento e introduce a tus estudiantes en las ciencias de la computación con estos pasos.
 
-El pensamiento computacional ayuda a fomentar las habilidades de resolución de problemas, la lógica y la creatividad. Y la tecnología está transformando todas las industrias del planeta. Los estudiantes de hoy deben aprender a crear tecnología, no solo a usarla. Al comenzar en etapas tempranas, tendrán una base para el éxito en cualquier trayectoria profesional del siglo XXI.
+El pensamiento computacional ayuda a fomentar las habilidades de resolución de problemas, la lógica y la creatividad. Y la tecnología está transformando todas las industrias del planeta. Los estudiantes de hoy deben aprender a crear tecnología, no solo a usarla. Si empiezan pronto, tendrán una base para prosperar en cualquier carrera del siglo XXI.
 
 Probar una Hora del Código es una forma sencilla y divertida de introducir a los estudiantes en las ciencias de la computación, quizás por primera vez. Si deseas un par de manos adicionales para ayudar, puedes encontrar un [voluntario local]({{ urls/volunteer_local }}) para ayudar a ejecutar una Hora del Código en tu clase o club después de la escuela.
 
@@ -37,7 +37,7 @@ Promociona tu Hora del Código [con estas herramientas]({{ urls/promote }}) y an
 
 Para tener una mejor experiencia con la Hora del Código, se recomienda contar con computadoras con conexión a Internet. Pero **no** necesitas una computadora para cada niño, e incluso puedes hacer la Hora del Código sin una computadora.
 
-Asegúrate de probar los tutoriales en las computadoras o los dispositivos de los estudiantes para garantizar que el sonido y el video funcionen bien en los navegadores. **¿Tienes poco ancho de banda?** Planea mostrar videos al frente de la clase, para que cada alumno no descargue sus propios videos. O prueba los tutoriales desconectados/fuera de línea.
+Asegúrate de probar los tutoriales en las computadoras o los dispositivos de los estudiantes para garantizar que el sonido y el video funcionen bien en los navegadores. **¿Tienes poco ancho de banda?** Planea mostrar videos al frente de la clase, para que cada alumno no descargue sus propios videos. O prueba las tutoriales desconectadas/sin conexión.
 
 Entrega auriculares, o pide a los estudiantes que traigan los suyos, en caso de que el tutorial que elijas funcione mejor con sonido.
 
@@ -54,7 +54,7 @@ Para dar inicio a la Hora del Código, inspira a los participantes y habla acerc
 - [El presidente Obama alienta a todos los estudiantes a aprender ciencias de la computación](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Encuentra más videos inspiradores [aquí](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**Está bien si eres completamente nuevo en las ciencias de la computación. A continuación, se ofrecen algunas ideas para presentar la actividad de la Hora del Código:**
+**Está bien si todos ustedes son completamente nuevos en las ciencias de la computación. Aquí tienes algunas ideas para introducir tu actividad de la Hora del Código: **
 
 - Explica diversas formas en que la tecnología impacta en nuestras vidas, con ejemplos interesantes para niñas y niños (habla de aplicaciones y tecnología que se usan para salvar vidas, ayudar y conectarse con las personas, etc.).
 - Haz una lista de cosas para las que se usa la programación en la vida cotidiana.
@@ -64,13 +64,13 @@ Para dar inicio a la Hora del Código, inspira a los participantes y habla acerc
 
 ## 6. ¡A Programar!
 
-**Dirige a los participantes a la actividad** - Escriba el enlace del tutorial en una pizarra. Encuentra el enlace en la [información para el tutorial seleccionado]({{ urls/learn }}) debajo del número de participantes.
+**Dirige a los participantes a la actividad** - Escriba el enlace del tutorial en la pizarra blanca. Encuentra el enlace en la [información para el tutorial seleccionado]({{ urls/learn }}) debajo del número de participantes.
 
 **Cuando alguien encuentra dificultades, está bien responder:** - "No lo sé. Vamos a resolverlo juntos”. - “La tecnología no siempre trabaja de la forma en que nosotros queremos”. - “Aprender a programar es como aprender un nuevo idioma; no vas a poder aplicarlo de forma perfecta de inmediato”.
 
 **¿Qué hacer si alguien termina antes?** - Anima a los participantes a probar otra actividad de la Hora del Código en [ horadelcodigo.com/aprender]({{ urls/learn }}) - O pide a los que terminan temprano que ayuden a otros que están teniendo problemas.
 
-## 7. Celébralo
+## 5. Celebra
 
 - [Imprime certificados]({{ urls/certificates }}) para tus estudiantes.
 - [Imprime etiquetas adhesivas de "¡Yo hice una Hora del Código!"]({{ promote/resources_stickers }}) para tus estudiantes.

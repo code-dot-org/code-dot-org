@@ -2,33 +2,6 @@
   "es-ES": {
     "data": {
       "mini_rubric": {
-        "CSD U6 for loop led color_2019": {
-          "rubric_key_concept": "Utiliza un bucle `for` para iterar sobre un array"
-        },
-        "CSD U6 for loop led color_2021": {
-          "rubric_key_concept": "Utiliza un bucle `for` para iterar sobre un array"
-        },
-        "CSD U6 for loop led personalize_2019": {
-          "rubric_key_concept": "Utiliza un bucle `for` para iterar sobre un array",
-          "rubric_performance_level_1": "Los cinco botones funcionan como se describe utilizando bucles for, y los bucles utilizan la longitud del array como condición de salida, sin errores ni código innecesario.",
-          "rubric_performance_level_2": "Los botones de encendido y apagado funcionan como se describe utilizando bucles for, y no hay errores en el código.",
-          "rubric_performance_level_3": "Los bucles For se utilizan para encender y apagar los LEDs, pero puede haber errores que impidan que los botones funcionen como se describe.",
-          "rubric_performance_level_4": "No hay bucles \"for\" en el código."
-        },
-        "CSD U6 for loop led personalize_2021": {
-          "rubric_key_concept": "Utiliza un bucle `for` para iterar sobre un array",
-          "rubric_performance_level_1": "Los cinco botones funcionan como se describe utilizando bucles for, y los bucles utilizan la longitud del array como condición de salida, sin errores ni código innecesario.",
-          "rubric_performance_level_2": "Los botones de encendido y apagado funcionan como se describe utilizando bucles for, y no hay errores en el código.",
-          "rubric_performance_level_3": "Los bucles For se utilizan para encender y apagar los LEDs, pero puede haber errores que impidan que los botones funcionen como se describe.",
-          "rubric_performance_level_4": "No hay bucles \"for\" en el código."
-        },
-        "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "Concepto clave",
-          "rubric_performance_level_1": "Hice x, y, y z.",
-          "rubric_performance_level_2": "Hice `x` e `y`",
-          "rubric_performance_level_3": "Hice `x` o `y`",
-          "rubric_performance_level_4": "No hice `x`, `y` o `z`"
-        },
         "CDU U6 Playground Sound Board_2019": {
           "rubric_key_concept": "Crear y modificar arrays, desarrollar software para controlar una variedad de dispositivos físicos.",
           "rubric_performance_level_1": "El programa funciona como se describe, con al menos cuatro eventos de la placa, cada uno de los cuales activa una serie diferente de notas. ",
@@ -57,6 +30,62 @@
           "rubric_performance_level_3": "Los sprites han sido redimensionados, pero siguen siendo demasiado grandes para caber dentro del círculo.",
           "rubric_performance_level_4": "El código es el mismo o se ha modificado de forma ajena a la asignación."
         },
+        "CSD U2 HTML Adding Paragraphs pt 2_2019": {
+          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya títulos jerárquicos, párrafos, listas e imágenes; comprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
+          "rubric_performance_level_1": "Todo el texto está contenido en etiquetas de párrafo.  Hay al menos dos párrafos creados mediante el uso correcto de las etiquetas de párrafo.",
+          "rubric_performance_level_2": "Al menos se ha separado parte del texto en un párrafo mediante el uso adecuado de las etiquetas de párrafo.",
+          "rubric_performance_level_3": "Hay al menos una etiqueta de párrafo en el texto, pero puede que no se utilice correctamente (por ejemplo, falta la etiqueta de cierre, párrafos creados fuera del elemento body).",
+          "rubric_performance_level_4": "No hay etiquetas de párrafo en el texto."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2021": {
+          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya títulos jerárquicos, párrafos, listas e imágenes; comprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
+          "rubric_performance_level_1": "Todo el texto está contenido en etiquetas de párrafo.  Hay al menos dos párrafos creados mediante el uso correcto de las etiquetas de párrafo.",
+          "rubric_performance_level_2": "Al menos se ha separado parte del texto en un párrafo mediante el uso adecuado de las etiquetas de párrafo.",
+          "rubric_performance_level_3": "Hay al menos una etiqueta de párrafo en el texto, pero puede que no se utilice correctamente (por ejemplo, falta la etiqueta de cierre, párrafos creados fuera del elemento body).",
+          "rubric_performance_level_4": "No hay etiquetas de párrafo en el texto."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2022": {
+          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya títulos jerárquicos, párrafos, listas e imágenes; comprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
+          "rubric_performance_level_1": "Todo el texto está contenido en etiquetas de párrafo.  Hay al menos dos párrafos creados mediante el uso correcto de las etiquetas de párrafo.",
+          "rubric_performance_level_2": "Al menos se ha separado parte del texto en un párrafo mediante el uso adecuado de las etiquetas de párrafo.",
+          "rubric_performance_level_3": "Hay al menos una etiqueta de párrafo en el texto, pero puede que no se utilice correctamente (por ejemplo, falta la etiqueta de cierre, párrafos creados fuera del elemento body).",
+          "rubric_performance_level_4": "No hay etiquetas de párrafo en el texto."
+        },
+        "CSD U2 Heading Test_2018": {
+          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya encabezados jerárquicos, párrafos, listas e imágenes.\n\nComprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
+          "rubric_performance_level_1": "Todo el contenido está incluido en las etiquetas, utiliza etiquetas de párrafo y encabezados de múltiples tamaños de una manera lógicamente coherente.",
+          "rubric_performance_level_2": "Todo el contenido está incluido en etiquetas, utiliza las etiquetas de párrafo y de cabecera de forma lógica.",
+          "rubric_performance_level_3": "La mayor parte del contenido está contenido en etiquetas.  Se utiliza al menos una etiqueta de cabecera.",
+          "rubric_performance_level_4": "Las etiquetas tienen poco o ningún contenido."
+        },
+        "CSD U2 Heading Test_2019": {
+          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya encabezados jerárquicos, párrafos, listas e imágenes.\n\nComprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
+          "rubric_performance_level_1": "Todo el contenido está incluido en las etiquetas, utiliza etiquetas de párrafo y encabezados de múltiples tamaños de una manera lógicamente coherente.",
+          "rubric_performance_level_2": "Todo el contenido está incluido en etiquetas, utiliza etiquetas de párrafo y de encabezamiento de forma razonable.",
+          "rubric_performance_level_3": "La mayor parte del contenido está contenido en etiquetas.  Se utiliza al menos una etiqueta de cabecera.",
+          "rubric_performance_level_4": "Las etiquetas tienen poco o ningún contenido."
+        },
+        "CSD U2 Heading Test_2021": {
+          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya encabezados jerárquicos, párrafos, listas e imágenes.\n\nComprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
+          "rubric_performance_level_1": "Todo el contenido está incluido en las etiquetas, utiliza etiquetas de párrafo y encabezados de múltiples tamaños de una manera lógicamente coherente.",
+          "rubric_performance_level_2": "Todo el contenido está incluido en etiquetas, utiliza etiquetas de párrafo y de encabezamiento de forma razonable.",
+          "rubric_performance_level_3": "La mayor parte del contenido está contenido en etiquetas.  Se utiliza al menos una etiqueta de cabecera.",
+          "rubric_performance_level_4": "Las etiquetas tienen poco o ningún contenido."
+        },
+        "CSD U2 Heading Test_2022": {
+          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya encabezados jerárquicos, párrafos, listas e imágenes.\n\nComprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
+          "rubric_performance_level_1": "Todo el contenido está incluido en las etiquetas, utiliza etiquetas de párrafo y encabezados de múltiples tamaños de una manera lógicamente coherente.",
+          "rubric_performance_level_2": "Todo el contenido está incluido en etiquetas, utiliza etiquetas de párrafo y de encabezamiento de forma razonable.",
+          "rubric_performance_level_3": "La mayor parte del contenido está contenido en etiquetas.  Se utiliza al menos una etiqueta de cabecera.",
+          "rubric_performance_level_4": "Las etiquetas tienen poco o ningún contenido."
+        },
+        "CSD U2 Image Tag 2_2019": {
+          "rubric_key_concept": "Estructurar el contenido de una página web utilizando HTML. (Añadir una imagen a una página web).",
+          "rubric_performance_level_1": "La imagen se muestra correctamente y el atributo `alt` ofrece una descripción de prueba razonable de la imagen.  No se incluye ningún código innecesario en la etiqueta `img`.",
+          "rubric_performance_level_2": "La imagen se muestra correctamente.",
+          "rubric_performance_level_3": "Se utiliza la etiqueta `img` y se proporciona una dirección de origen para la imagen, pero puede haber pequeños errores de sintaxis o faltas de ortografía que impiden que la imagen se muestre correctamente.",
+          "rubric_performance_level_4": "La etiqueta `img` no se utiliza o no se indica una dirección de origen para la imagen."
+        },
         "CSD U2 Image assessment_2021": {
           "rubric_key_concept": "Estructurar el contenido de una página web utilizando HTML (añadir una imagen a una página web).  Mencionar con precisión a otros cuando se utiliza su trabajo.",
           "rubric_performance_level_1": "La imagen se muestra correctamente y el atributo `alt` ofrece una descripción de prueba razonable de la imagen.  No se incluye código innecesario en la etiqueta `img`.  La mención de la imagen es correcta y su nombre es adecuado.",
@@ -70,6 +99,27 @@
           "rubric_performance_level_2": "La imagen se muestra correctamente y se utiliza de acuerdo con la descripción de su licencia de copyright.",
           "rubric_performance_level_3": "Se utiliza la etiqueta `img` y se proporciona una dirección de origen para la imagen, pero puede haber pequeños errores de sintaxis o faltas de ortografía que impiden que la imagen se muestre correctamente.  La imagen puede no estar disponible para su uso legal en la página web.",
           "rubric_performance_level_4": "No se utiliza la etiqueta `img` o no se indica la dirección de origen de la imagen."
+        },
+        "CSD U2 add style_2019": {
+          "rubric_key_concept": "Crear reglas que afecten a grupos enteros de elementos; aplicar formato en una página web utilizando CSS.",
+          "rubric_performance_level_1": "Al fondo, las imágenes y el texto se les ha aplicado el estilo descrito en las instrucciones.  No hay errores de sintaxis ni código extra (que no funcione) en la hoja de estilos.",
+          "rubric_performance_level_2": "Al fondo, las imágenes y el texto se les ha aplicado el estilo descrito en las instrucciones, pero puede haber errores mínimos o código que no funcione en la hoja de estilos.",
+          "rubric_performance_level_3": "Se han creado conjuntos de reglas en la hoja de estilo para dar estilo al fondo, las imágenes y el texto, pero hay errores importantes que impiden que el código funcione correctamente.",
+          "rubric_performance_level_4": "No hay conjuntos de reglas en la hoja de estilos, o los conjuntos de reglas no tienen los selectores necesarios para dar estilo al fondo o a las imágenes de las páginas."
+        },
+        "CSD U2 add style_2021": {
+          "rubric_key_concept": "Crear reglas que afecten a grupos enteros de elementos; aplicar formato en una página web utilizando CSS.",
+          "rubric_performance_level_1": "Al fondo, las imágenes y el texto se les ha aplicado el estilo descrito en las instrucciones.  No hay errores de sintaxis ni código extra (que no funcione) en la hoja de estilos.",
+          "rubric_performance_level_2": "Al fondo, las imágenes y el texto se les ha aplicado el estilo descrito en las instrucciones, pero puede haber errores mínimos o código que no funcione en la hoja de estilos.",
+          "rubric_performance_level_3": "Se han creado conjuntos de reglas en la hoja de estilo para dar estilo al fondo, las imágenes y el texto, pero hay errores importantes que impiden que el código funcione correctamente.",
+          "rubric_performance_level_4": "No hay conjuntos de reglas en la hoja de estilos, o los conjuntos de reglas no tienen los selectores necesarios para dar estilo al fondo o a las imágenes de las páginas."
+        },
+        "CSD U2 add style_2022": {
+          "rubric_key_concept": "Crear reglas que afecten a grupos enteros de elementos; aplicar formato en una página web utilizando CSS.",
+          "rubric_performance_level_1": "Al fondo, las imágenes y el texto se les ha aplicado el estilo descrito en las instrucciones.  No hay errores de sintaxis ni código extra (que no funcione) en la hoja de estilos.",
+          "rubric_performance_level_2": "Al fondo, las imágenes y el texto se les ha aplicado el estilo descrito en las instrucciones, pero puede haber errores mínimos o código que no funcione en la hoja de estilos.",
+          "rubric_performance_level_3": "Se han creado conjuntos de reglas en la hoja de estilo para dar estilo al fondo, las imágenes y el texto, pero hay errores importantes que impiden que el código funcione correctamente.",
+          "rubric_performance_level_4": "No hay conjuntos de reglas en la hoja de estilos, o los conjuntos de reglas no tienen los selectores necesarios para dar estilo al fondo o a las imágenes de las páginas."
         },
         "CSD U2 adding pages_2021": {
           "rubric_key_concept": "Creación de un artefacto digital, con enlaces dentro de un sitio de varias páginas\n",
@@ -86,18 +136,53 @@
           "rubric_performance_level_4": "No se ha creado ninguna página nueva y no hay enlaces\n"
         },
         "CSD U2 classes haikus_2021": {
+          "rubric_key_concept": "Crear clases que puedan ser referenciadas y afectadas como un grupo.",
           "rubric_performance_level_1": "La clase y el conjunto de reglas se han creado correctamente, se han incluido todos los elementos del haiku elegido y hay al menos tres reglas en el conjunto de reglas.",
           "rubric_performance_level_2": "Se ha creado una clase, un conjunto de reglas y la mayoría de los elementos de la sección de haiku elegida en el sitio web se ven afectados por esta clase, pero puede haber algunos errores menores para algunas partes del texto, o puede haber menos de tres reglas en el conjunto de reglas.",
           "rubric_performance_level_3": "La clase y el conjunto de reglas están creados, y al menos algunos elementos del sitio web están en esa clase, pero puede haber errores importantes que impiden que el texto sea estilizado.",
-          "rubric_performance_level_4": "Ninguna clase o conjunto de reglas se han creado, o no se han puesto elementos del sitio web en la clase.",
-          "rubric_key_concept": "Crear clases que puedan ser referenciadas y afectadas como un grupo."
+          "rubric_performance_level_4": "Ninguna clase o conjunto de reglas se han creado, o no se han puesto elementos del sitio web en la clase."
         },
         "CSD U2 classes haikus_2022": {
+          "rubric_key_concept": "Crear clases que puedan ser referenciadas y afectadas como un grupo.",
           "rubric_performance_level_1": "La clase y el conjunto de reglas se han creado correctamente, se han incluido todos los elementos del haiku elegido y hay al menos tres reglas en el conjunto de reglas.",
           "rubric_performance_level_2": "Se ha creado una clase, un conjunto de reglas y la mayoría de los elementos de la sección de haiku elegida en el sitio web se ven afectados por esta clase, pero puede haber algunos errores menores para algunas partes del texto, o puede haber menos de tres reglas en el conjunto de reglas.",
           "rubric_performance_level_3": "Se crean una clase y un conjunto de reglas, y al menos algunos elementos del sitio web están en esa clase, pero puede haber errores importantes que impidan aplicar estilo al texto.",
-          "rubric_performance_level_4": "Ninguna clase o conjunto de reglas se han creado, o no se han puesto elementos del sitio web en la clase.",
-          "rubric_key_concept": "Crear clases que puedan ser referenciadas y afectadas como un grupo."
+          "rubric_performance_level_4": "Ninguna clase o conjunto de reglas se han creado, o no se han puesto elementos del sitio web en la clase."
+        },
+        "CSD U2 classes summer_2019": {
+          "rubric_key_concept": "Crear clases que puedan ser referenciadas y afectadas como un grupo.",
+          "rubric_performance_level_1": "La clase verano, así como el conjunto de reglas, se han creado correctamente y todo el texto de la sección verano de la página web tiene el color elegido, tal y como indica el código RGB.",
+          "rubric_performance_level_2": "La clase verano, así como el conjunto de reglas, han sido creados y la mayor parte del texto de la sección de verano del sitio web está afectado por esta clase, pero puede haber algunos errores menores en algunas partes del texto.",
+          "rubric_performance_level_3": "La clase verano, así como el conjunto de reglas, están creados y al menos algunos elementos de la página web están en esa clase, pero puede haber errores importantes que impidan que el texto tenga estilo.",
+          "rubric_performance_level_4": "La clase verano o el conjunto de reglas no se han creado, o no se han puesto elementos del sitio web en la clase."
+        },
+        "CSD U2 text style h3_2019": {
+          "rubric_key_concept": "Aplicar formato en una página web mediante CSS",
+          "rubric_performance_level_1": "Las cabeceras `h3` tienen un nuevo color (no negro).  No hay código extra en la hoja de estilos, y no hay errores de sintaxis en el código.",
+          "rubric_performance_level_2": "Las cabeceras `h3` tienen un nuevo color (no negro).",
+          "rubric_performance_level_3": "Las cabeceras `h3` tienen una regla especial en la hoja de estilos, y se utiliza la propiedad color, pero hay suficientes errores como para que el texto no cambie de color.",
+          "rubric_performance_level_4": "No hay un conjunto de reglas especial para las cabeceras `h3` o la propiedad de color no se utiliza en el conjunto de reglas."
+        },
+        "CSD U2 text style h3_2021": {
+          "rubric_key_concept": "Aplicar formato en una página web mediante CSS",
+          "rubric_performance_level_1": "Las cabeceras `h3` tienen un nuevo color (no negro).  No hay código extra en la hoja de estilos, y no hay errores de sintaxis en el código.",
+          "rubric_performance_level_2": "Las cabeceras `h3` tienen un nuevo color (no negro).",
+          "rubric_performance_level_3": "Las cabeceras `h3` tienen una regla especial en la hoja de estilos, y se utiliza la propiedad color, pero hay suficientes errores como para que el texto no cambie de color.",
+          "rubric_performance_level_4": "No hay un conjunto de reglas especial para las cabeceras `h3` o la propiedad de color no se utiliza en el conjunto de reglas."
+        },
+        "CSD U2 text style h3_2022": {
+          "rubric_key_concept": "Aplicar formato en una página web mediante CSS",
+          "rubric_performance_level_1": "Las cabeceras `h3` tienen un nuevo color (no negro).  No hay código extra en la hoja de estilos, y no hay errores de sintaxis en el código.",
+          "rubric_performance_level_2": "Las cabeceras `h3` tienen un nuevo color (no negro).",
+          "rubric_performance_level_3": "Las cabeceras `h3` tienen una regla especial en la hoja de estilos, y se utiliza la propiedad color, pero hay suficientes errores como para que el texto no cambie de color.",
+          "rubric_performance_level_4": "No hay un conjunto de reglas especial para las cabeceras `h3` o la propiedad de color no se utiliza en el conjunto de reglas."
+        },
+        "CSD U2 un_ordered lists": {
+          "rubric_key_concept": "Estructurar el contenido de una página web mediante HTML. (Utiliza las etiquetas `<ol>`, `<ul>`, y `<li>` para crear listas ordenadas y desordenadas en una página HTML).",
+          "rubric_performance_level_1": "Todos los contenidos de la lista están incluidos en las etiquetas correspondientes para que las listas se muestren como en la imagen del ejemplo.  Las etiquetas '<li>' están anidadas dentro de las etiquetas  '<ul>' u '<ol>' y no se utilizan números en el código para simular el comportamiento de una lista ordenada.",
+          "rubric_performance_level_2": "Las etiquetas `<ul>`, `<ol>` y `<li>` se utilizan para que algunos elementos aparezcan en una lista desordenada y otros en una lista ordenada.",
+          "rubric_performance_level_3": "Al menos dos etiquetas `<li>` están anidadas dentro de una etiqueta `<ul>` u `<ol>` para que el contenido aparezca en una lista.",
+          "rubric_performance_level_4": "Las etiquetas de lista no se utilizan, o se utilizan de forma incorrecta de manera que no aparece ningún contenido en una lista."
         },
         "CSD U3 Conditionals Apple 2_2018_2019": {
           "rubric_key_concept": "Utiliza condicionales para controlar el flujo de un programa.",
@@ -240,11 +325,11 @@
           "rubric_performance_level_4": "No hay patrón de contador."
         },
         "CSD U3 Random Debug Cloud_2018_2019": {
+          "rubric_key_concept": "Utiliza los parámetros para cambiar la forma en que se ejecuta un método o comando. ",
           "rubric_performance_level_1": "El dibujo del programa aparece exactamente como en el ejemplo.",
           "rubric_performance_level_2": "El dibujo del programa es aproximadamente el mismo que el de la imagen, y se ha modificado la anchura y la altura de la nube.",
           "rubric_performance_level_3": "La altura, la anchura o la posición de la nube ha sido modificada, pero no puede ser más ancha que alta, o puede ser desplazada a otro lugar de la pantalla.",
-          "rubric_performance_level_4": "No se han realizado cambios en el código, o los cambios no están relacionados con las instrucciones.",
-          "rubric_key_concept": "Utiliza los parámetros para cambiar la forma en que se ejecuta un método o comando. "
+          "rubric_performance_level_4": "No se han realizado cambios en el código, o los cambios no están relacionados con las instrucciones."
         },
         "CSD U3 Random Debug Cloud_2021": {
           "rubric_key_concept": "Utiliza los parámetros para cambiar la forma en que se ejecuta un método o comando. ",
@@ -295,6 +380,13 @@
           "rubric_performance_level_3": "Se ha creado al menos un sprite con una animación que se dibuja en el lienzo.",
           "rubric_performance_level_4": "No se han creado sprites o se han creado sin animación, lo que se muestra con un cuadrado gris."
         },
+        "CSD U3 Sprites scene sprites_2019": {
+          "rubric_key_concept": "Crear y modificar objetos (sprites) para gestionar la complejidad de los elementos en pantalla.  Utilizar la notación de punto para obtener y establecer las propiedades de los sprites.",
+          "rubric_performance_level_1": "Se crea al menos un sprite, se le da una animación, se escala a un buen tamaño y se dibuja en la pantalla.  La variable sprite tiene un nombre adecuado.  Se llama a `drawSprites` después de que se hayan actualizado todas las propiedades del sprite.",
+          "rubric_performance_level_2": "Se ha creado al menos un sprite, se le ha dado una animación y se ha dibujado en la pantalla.  Se ha cambiado el nombre de la variable sprite.",
+          "rubric_performance_level_3": "Se ha creado al menos un sprite y se ha dibujado en la pantalla.  Puede haber problemas con la animación o conflictos por utilizar el mismo nombre de variable para varios sprites.",
+          "rubric_performance_level_4": "No se ha creado ningún sprite."
+        },
         "CSD U3 Variables assessment_2021": {
           "rubric_key_concept": "Utiliza variables para almacenar y actualizar información",
           "rubric_performance_level_1": "La variable eyeSize se utiliza de manera que los dos ojos tienen el mismo tamaño definido por eyeSize, sin otros cambios inesperados. El programa no tiene errores de sintaxis.",
@@ -311,9 +403,9 @@
         },
         "CSD U3 Variables random with assignment_2019": {
           "rubric_key_concept": "Utiliza variables para almacenar y actualizar información",
-          "rubric_performance_level_3": "La variable eyeSize se ha utilizado en alguna parte del programa, pero no de forma que se ejecute según las instrucciones.",
           "rubric_performance_level_1": "La variable eyeSize se utiliza de manera que los dos ojos tienen el mismo tamaño aleatorio según las instrucciones, sin otros cambios inesperados.",
           "rubric_performance_level_2": "La variable eyeSize se utiliza para que los dos ojos tengan el mismo tamaño aleatorio, pero otros cambios en el código pueden haber introducido otros comportamientos inesperados.",
+          "rubric_performance_level_3": "La variable eyeSize se ha utilizado en alguna parte del programa, pero no de forma que se ejecute según las instrucciones.",
           "rubric_performance_level_4": "No hay cambios en el código, o los cambios parecen no estar relacionados con la variable eyeSize, o la variable se utiliza de una manera que impide que el programa se ejecute."
         },
         "CSD U3 abstraction decelerateY_2019": {
@@ -428,6 +520,118 @@
           "rubric_performance_level_3": "La guía de proyecto menciona algunas características del programa con sus funciones y sprites asociados, pero hay partes importantes del programa que faltan en la guía.",
           "rubric_performance_level_4": "La guía de proyecto está incompleta o no parece describir el programa."
         },
+        "CSD U4 - Design Mode Project_2019": {
+          "rubric_key_concept": "Crea un prototipo digital para una pantalla de aplicación",
+          "rubric_performance_level_1": "El prototipo digital es una buena recreación del prototipo en papel, con sólo pequeñas incoherencias.",
+          "rubric_performance_level_2": "La mayoría de los elementos del prototipo en papel se han recreado en el prototipo digital, pero puede haber algunas incoherencias en el diseño, el tamaño o algunos elementos menores que faltan.  Las incoherencias no afectan a la funcionalidad del prototipo.",
+          "rubric_performance_level_3": "Algunos elementos del prototipo en papel se han recreado en el prototipo digital, pero hay suficientes incoherencias que afectan a la funcionalidad del prototipo.",
+          "rubric_performance_level_4": "No hay elementos en el prototipo digital, o los elementos no son coherentes con el prototipo en papel."
+        },
+        "CSD U4 - Design Mode Project_2021": {
+          "rubric_key_concept": "Crea un prototipo digital para una pantalla de aplicación",
+          "rubric_performance_level_1": "El prototipo digital es una buena recreación del prototipo en papel, con sólo pequeñas incoherencias.",
+          "rubric_performance_level_2": "La mayoría de los elementos del prototipo en papel se han recreado en el prototipo digital, pero puede haber algunas incoherencias en el diseño, el tamaño o algunos elementos menores que faltan.  Las incoherencias no afectan a la funcionalidad del prototipo.",
+          "rubric_performance_level_3": "Algunos elementos del prototipo en papel se han recreado en el prototipo digital, pero hay suficientes incoherencias que afectan a la funcionalidad del prototipo.",
+          "rubric_performance_level_4": "No hay elementos en el prototipo digital, o los elementos no son coherentes con el prototipo en papel."
+        },
+        "CSD U4 - Design Mode Project_2022": {
+          "rubric_key_concept": "Crea un prototipo digital para una pantalla de aplicación",
+          "rubric_performance_level_1": "El prototipo digital es una buena recreación del prototipo en papel, con sólo pequeñas incoherencias.",
+          "rubric_performance_level_2": "La mayoría de los elementos del prototipo en papel se han recreado en el prototipo digital, pero puede haber algunas incoherencias en el diseño, el tamaño o algunos elementos menores que faltan.  Las incoherencias no afectan a la funcionalidad del prototipo.",
+          "rubric_performance_level_3": "Algunos elementos del prototipo en papel se han recreado en el prototipo digital, pero hay suficientes incoherencias que afectan a la funcionalidad del prototipo.",
+          "rubric_performance_level_4": "No hay elementos en el prototipo digital, o los elementos no son coherentes con el prototipo en papel."
+        },
+        "CSD U6 - Accelerometer - A_2222": {
+          "rubric_key_concept": "Utiliza el acelerómetro en un evento y con datos para crear una aplicación",
+          "rubric_performance_level_1": "La aplicación se ajusta a la descripción, utilizando un onBoardEvent para detectar el movimiento del acelerómetro y utiliza variables y bloques getOrientation para realizar cambios en las posiciones `x` e `y`",
+          "rubric_performance_level_2": "La aplicación utiliza un onBoardEvent, pero no realiza cambios en las posiciones `x` e `y` del puntero",
+          "rubric_performance_level_3": "La aplicación no utiliza el bloque de eventos correcto y no realiza cambios en la posición del puntero",
+          "rubric_performance_level_4": "La aplicación no ha sido inicializada"
+        },
+        "CSD U6 - Board Inputs - A_2222": {
+          "rubric_key_concept": "Utiliza los botones y el conmutador en el Circuit Playground para crear una aplicación",
+          "rubric_performance_level_1": "La aplicación funciona tal y como se describe, y los emojis cambian en función de las entradas del usuario\n",
+          "rubric_performance_level_2": "La mayor parte de la aplicación funciona como se describe, pero algunas de las acciones no coinciden con la descripción, como el cambio de tamaño o el cambio de los emojis",
+          "rubric_performance_level_3": "La aplicación cambia los elementos en la pantalla, pero no coincide con la descripción del programa",
+          "rubric_performance_level_4": "La aplicación no se ha actualizado para que coincida con la descripción"
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "rubric_key_concept": "Responde a la entrada del usuario mediante el LED y el zumbador del Circuit Playground\n\n",
+          "rubric_performance_level_1": "Cada botón coincide correctamente con la descripción de su emoción, utilizando tanto los bloques de leds como los de sonidos en cada botón.\n",
+          "rubric_performance_level_2": "Cada botón utiliza tanto los bloques de leds como los de sonidos, pero los parámetros pueden no coincidir con la descripción correcta (por ejemplo: que todos tengan la misma duración)",
+          "rubric_performance_level_3": "En algunos botones faltan bloques enteros de leds o sonidos",
+          "rubric_performance_level_4": "No se han añadido bloques adicionales de leds o sonidos al programa "
+        },
+        "CSD U6 - Color LEDs - A_2222": {
+          "rubric_key_concept": "Utiliza los LEDs de colores para crear un patrón en el Circuit Playground",
+          "rubric_performance_level_1": "El patrón de luz utiliza al menos 3 colores diferentes y cambia la intensidad de algunos de los LEDs",
+          "rubric_performance_level_2": "El patrón de luz sólo utiliza 2 colores, o utiliza 3 colores pero no cambia la intensidad de los LEDs",
+          "rubric_performance_level_3": "El patrón de luz utiliza 1 color, o utiliza 2 colores pero no cambia la intensidad de los LEDs",
+          "rubric_performance_level_4": "No se ha utilizado ningún patrón"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "rubric_key_concept": "Combinando los elementos de entrada y salida del Circuit Playground y de la pantalla para crear una aplicación",
+          "rubric_performance_level_1": "La aplicación funciona como se describe, con variables que se utilizan para obtener los valores de la pantalla y para encender los LEDs del Circuit Playground en la dirección correcta.",
+          "rubric_performance_level_2": "La aplicación puede encender los LEDs, pero una de las entradas (dirección, color o brillo) no está funcionando correctamente",
+          "rubric_performance_level_3": "Los LEDs se encienden, pero no reaccionan a los valores que el usuario introduce. Las variables no se utilizan correctamente en el programa.",
+          "rubric_performance_level_4": "La aplicación no se ha modificado."
+        },
+        "CSD U6 - Functions - A_2222": {
+          "rubric_key_concept": "Utiliza funciones con parámetros para organizar las aplicaciones",
+          "rubric_performance_level_1": "La aplicación utiliza una función con dos parámetros que corresponden al nombre y a la cantidad a mover. Los parámetros sustituyen correctamente cada nombre y valor de la cantidad de nieve original. Los 10 elementos de nieve se mueven cuando se mueve el Circuit Playground.",
+          "rubric_performance_level_2": "La aplicación utiliza una función con un solo parámetro, o la aplicación utiliza una función con dos parámetros, pero no todos los valores se actualizan mediante parámetros. Los 10 elementos de nieve se mueven cuando se mueve el Circuit Playground.",
+          "rubric_performance_level_3": "La aplicación utiliza una función, pero no utiliza parámetros, o no todos los elementos de la nieve se mueven en la pantalla",
+          "rubric_performance_level_4": "El código no ha cambiado con respecto a la aplicación original"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "rubric_key_concept": "Utiliza variables y sentencias `if` para crear una aplicación que utilice el Circuit Playground",
+          "rubric_performance_level_1": "El programa funciona como se ha descrito, utilizando variables para llevar la cuenta del tamaño y una sentencia `if` para hacer sonar el zumbador en el momento correcto",
+          "rubric_performance_level_2": "Las variables se utilizan para controlar el tamaño del elemento, pero el zumbador no suena una vez que alcanza el tamaño correcto",
+          "rubric_performance_level_3": "Las variables se utilizan para el tamaño, pero no aumentan cuando se pulsa el botón",
+          "rubric_performance_level_4": "El código no ha cambiado"
+        },
+        "CSD U6 - Music - A_2222": {
+          "rubric_key_concept": "Crea aplicaciones que reproduzcan música con el Circuit Playground",
+          "rubric_performance_level_1": "La aplicación tiene dos bloques playSong() que reproducen diferentes canciones. Cada canción tiene al menos cuatro notas e incluye al menos un silencio",
+          "rubric_performance_level_2": "La aplicación tiene dos bloques playSong() que reproducen diferentes canciones. Cada canción tiene al menos cuatro notas e incluye al menos un silencio",
+          "rubric_performance_level_3": "La aplicación tiene un bloque playSong() para uno de los emojis, pero no para ambos emojis",
+          "rubric_performance_level_4": "La aplicación no tiene bloques playSong()"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "rubric_key_concept": "Conecta botones externos al Circuit Playground y crea aplicaciones que utilicen botones externos",
+          "rubric_performance_level_1": "El programa coincide en la descripción con 3 eventos que ocultan los cuadrados azules en la aplicación. Los botones están conectados correctamente usando un cable de tierra para señalar cada botón",
+          "rubric_performance_level_2": "Algunos de los botones ocultan los cuadrados azules, pero no todos funcionan correctamente. O bien, los botones están conectados correctamente pero pueden utilizar varios cables de tierra en lugar de uno solo.",
+          "rubric_performance_level_3": "Los botones están enganchados, pero los cuadrados azules no se ocultan al pulsar los botones",
+          "rubric_performance_level_4": "La aplicación no se ha puesto en marcha o no hay botones conectados al Circuit Playground"
+        },
+        "CSD U6 - Physical Output - A_2222": {
+          "rubric_key_concept": "Conecta los LEDs externos al Circuit Playground y crea aplicaciones que utilicen los LEDs externos",
+          "rubric_performance_level_1": "El programa coincide con la descripción de la aplicación utilizando los bloques on(), blink(), pulse() y off() en la ubicación correcta. Los LEDs están cableados correctamente",
+          "rubric_performance_level_2": "El programa casi coincide con la descripción de la aplicación, pero uno de los bloques puede estar emparejado con el evento equivocado. Los LEDs están cableados correctamente.\n",
+          "rubric_performance_level_3": "Al programa le faltan algunos de los bloques necesarios o los LEDs no están cableados correctamente.",
+          "rubric_performance_level_4": "El programa no se ha iniciado o no hay LEDs"
+        },
+        "CSD U6 - Screen Inputs - A_2222": {
+          "rubric_key_concept": "Obtención de la información del usuario en la pantalla y su utilización para actualizar una aplicación",
+          "rubric_performance_level_1": "Cada elemento de diseño se ha personalizado correctamente de acuerdo con la descripción de la aplicación, y el código obtiene la entrada del usuario y la utiliza para actualizar la aplicación",
+          "rubric_performance_level_2": "El código obtiene la entrada del usuario y la utiliza para actualizar la aplicación, pero los elementos de diseño pueden no estar correctamente personalizados de acuerdo con la descripción de la aplicación",
+          "rubric_performance_level_3": "Hay errores al intentar obtener valores de la entrada de texto, del desplegable o del deslizador; o la aplicación está incompleta y no obtiene todos los elementos de entrada.",
+          "rubric_performance_level_4": "La aplicación no recibe información de ninguno de los elementos de la pantalla."
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "rubric_key_concept": "Actualiza las propiedades y el texto de los elementos de diseño mediante código",
+          "rubric_performance_level_1": "La aplicación terminada coincide con la descripción, y cada botón actualiza correctamente el icono y el texto",
+          "rubric_performance_level_2": "La aplicación terminada es similar a la descripción, pero tiene al menos un elemento incompleto (por ejemplo, no actualiza el texto o no actualiza el color del icono)",
+          "rubric_performance_level_3": "La aplicación terminada puede tener algunos elementos que parecen correctos, pero la mayoría de los elementos no se actualizan correctamente o la aplicación está sólo parcialmente terminada.\n",
+          "rubric_performance_level_4": "La aplicación no se ha actualizado para que coincida con la descripción"
+        },
+        "CSD U6 - Sensors - A_2222": {
+          "rubric_key_concept": "Utiliza los sensores del Circuit Playground para crear una aplicación",
+          "rubric_performance_level_1": "La aplicación muestra el valor de cada sensor en tiempo real, y los sensores de luz y sonido se gradúan de 0 a 10",
+          "rubric_performance_level_2": "La aplicación muestra el valor de cada sensor, pero puede que no sea en tiempo real o que los sensores sean de 0-1023 en lugar de 0-10",
+          "rubric_performance_level_3": "A la aplicación le falta al menos uno de los valores del sensor",
+          "rubric_performance_level_4": "La aplicación no ha sido inicializada"
+        },
         "CSD U6 LED all_2019": {
           "rubric_key_concept": "Desarrollar software para controlar una variedad de dispositivos físicos.",
           "rubric_performance_level_1": "El programa funciona tal y como se describe en las instrucciones, con los botones activando el LED para que se encienda, parpadee, pulse o se apague.  No hay ningún código innecesario.",
@@ -511,6 +715,26 @@
           "rubric_performance_level_2": "El programa tiene tres botones, y el programa responde de alguna manera a cada clic del botón, pero la respuesta puede no ser exactamente como se describe en las instrucciones.",
           "rubric_performance_level_3": "Al menos un botón que no sea el de \"Feliz\" responde al ser pulsado de alguna manera.",
           "rubric_performance_level_4": "Ningún otro botón que no sea el de \"Feliz\" responde al ser pulsado."
+        },
+        "CSD U6 for loop led color_2019": {
+          "rubric_key_concept": "Utiliza un bucle `for` para iterar sobre un array"
+        },
+        "CSD U6 for loop led color_2021": {
+          "rubric_key_concept": "Utiliza un bucle `for` para iterar sobre un array"
+        },
+        "CSD U6 for loop led personalize_2019": {
+          "rubric_key_concept": "Utiliza un bucle `for` para iterar sobre un array",
+          "rubric_performance_level_1": "Los cinco botones funcionan como se describe utilizando bucles for, y los bucles utilizan la longitud del array como condición de salida, sin errores ni código innecesario.",
+          "rubric_performance_level_2": "Los botones de encendido y apagado funcionan como se describe utilizando bucles for, y no hay errores en el código.",
+          "rubric_performance_level_3": "Los bucles For se utilizan para encender y apagar los LEDs, pero puede haber errores que impidan que los botones funcionen como se describe.",
+          "rubric_performance_level_4": "No hay bucles \"for\" en el código."
+        },
+        "CSD U6 for loop led personalize_2021": {
+          "rubric_key_concept": "Utiliza un bucle `for` para iterar sobre un array",
+          "rubric_performance_level_1": "Los cinco botones funcionan como se describe utilizando bucles for, y los bucles utilizan la longitud del array como condición de salida, sin errores ni código innecesario.",
+          "rubric_performance_level_2": "Los botones de encendido y apagado funcionan como se describe utilizando bucles for, y no hay errores en el código.",
+          "rubric_performance_level_3": "Los bucles For se utilizan para encender y apagar los LEDs, pero puede haber errores que impidan que los botones funcionen como se describe.",
+          "rubric_performance_level_4": "No hay bucles \"for\" en el código."
         },
         "CSD U6 getProperty buzzer_2019": {
           "rubric_key_concept": "Utilizar los getters para acceder a las propiedades de los elementos de un sistema.",
@@ -692,6 +916,24 @@
           "rubric_performance_level_3": "El bloque de texto se utiliza, pero el texto no aparece completamente en la pantalla.",
           "rubric_performance_level_4": "No se utilizan bloques de texto, o contiene tantos errores que el programa no puede ejecutarse."
         },
+        "CSDU4 Project Events_2019": {
+          "rubric_performance_level_1": "Todas las pantallas de cada miembro del equipo se incluyen en el proyecto, y cada botón enlaza con la pantalla correspondiente.",
+          "rubric_performance_level_2": "Todas las pantallas de cada miembro del equipo están incluidas en el proyecto, y la mayoría de los botones enlazan con la pantalla correspondiente, pero puede haber pequeños errores que impidan que todos los botones funcionen.",
+          "rubric_performance_level_3": "Las pantallas de varios miembros del equipo se han incorporado al proyecto, y al menos un botón enlaza con otra pantalla.",
+          "rubric_performance_level_4": "Ningún botón enlaza con otras pantallas del proyecto."
+        },
+        "CSDU4 Project Events_2021": {
+          "rubric_performance_level_1": "Todas las pantallas de cada miembro del equipo se incluyen en el proyecto, y cada botón enlaza con la pantalla correspondiente.",
+          "rubric_performance_level_2": "Todas las pantallas de cada miembro del equipo están incluidas en el proyecto, y la mayoría de los botones enlazan con la pantalla correspondiente, pero puede haber pequeños errores que impidan que todos los botones funcionen.",
+          "rubric_performance_level_3": "Las pantallas de varios miembros del equipo se han incorporado al proyecto, y al menos un botón enlaza con otra pantalla.",
+          "rubric_performance_level_4": "Ningún botón enlaza con otras pantallas del proyecto."
+        },
+        "CSDU4 Project Events_2022": {
+          "rubric_performance_level_1": "Todas las pantallas de cada miembro del equipo se incluyen en el proyecto, y cada botón enlaza con la pantalla correspondiente.",
+          "rubric_performance_level_2": "Todas las pantallas de cada miembro del equipo están incluidas en el proyecto, y la mayoría de los botones enlazan con la pantalla correspondiente, pero puede haber pequeños errores que impidan que todos los botones funcionen.",
+          "rubric_performance_level_3": "Las pantallas de varios miembros del equipo se han incorporado al proyecto, y al menos un botón enlaza con otra pantalla.",
+          "rubric_performance_level_4": "Ningún botón enlaza con otras pantallas del proyecto."
+        },
         "CSDU6 - LED toggle buttonL up_2019": {
           "rubric_key_concept": "Desarrollar un programa que responda a una variedad de entradas de hardware.",
           "rubric_performance_level_1": "El programa funciona como se describe, con el LED que se enciende cuando el usuario presiona el botón y se apaga cuando el usuario suelta el botón.  No hay ningún código innecesario.",
@@ -755,6 +997,45 @@
           "rubric_performance_level_3": "Algunos de los elementos indicados se incluyen en la pantalla, incluyendo al menos un elemento de texto y un botón que no estaban en el proyecto inicial.",
           "rubric_performance_level_4": "Muy pocos de los elementos indicados se incluyen en la pantalla."
         },
+        "U4 Model Program 5_2019": {
+          "rubric_performance_level_1": "Cada botón enlaza con la pantalla correcta del prototipo.",
+          "rubric_performance_level_2": "Varios de los botones del prototipo enlazan con la pantalla correspondiente.",
+          "rubric_performance_level_3": "Hay al menos un evento en el prototipo que puede activarse para producir algún tipo de respuesta.",
+          "rubric_performance_level_4": "No hay eventos en el prototipo."
+        },
+        "U4 Model Program 5_2021": {
+          "rubric_performance_level_1": "Cada botón enlaza con la pantalla correcta del prototipo.",
+          "rubric_performance_level_2": "Varios de los botones del prototipo enlazan con la pantalla correspondiente.",
+          "rubric_performance_level_3": "Hay al menos un evento en el prototipo que puede activarse para producir algún tipo de respuesta.",
+          "rubric_performance_level_4": "No hay eventos en el prototipo."
+        },
+        "U4 Model Program 5_2022": {
+          "rubric_performance_level_1": "Cada botón enlaza con la pantalla correcta del prototipo.",
+          "rubric_performance_level_2": "Varios de los botones del prototipo enlazan con la pantalla correspondiente.",
+          "rubric_performance_level_3": "Hay al menos un evento en el prototipo que puede activarse para producir algún tipo de respuesta.",
+          "rubric_performance_level_4": "No hay eventos en el prototipo."
+        },
+        "allthethings-mini-rubric": {
+          "rubric_key_concept": "Este es el concepto clave de esta mini-rúbrica.",
+          "rubric_performance_level_1": "¡Lo has hecho muy bien!",
+          "rubric_performance_level_2": "Lo has hecho bien.",
+          "rubric_performance_level_3": "Lo hiciste bien.",
+          "rubric_performance_level_4": "No has hecho nada."
+        },
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "Concepto clave",
+          "rubric_performance_level_1": "Hice x, y, y z.",
+          "rubric_performance_level_2": "Hice `x` e `y`",
+          "rubric_performance_level_3": "Hice `x` o `y`",
+          "rubric_performance_level_4": "No hice `x`, `y` o `z`"
+        },
+        "allthethings-mini-rubric-weblab": {
+          "rubric_key_concept": "Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo.",
+          "rubric_performance_level_1": "Lo que hay que hacer para superarse.",
+          "rubric_performance_level_2": "Lo que hay que hacer para reunirse.",
+          "rubric_performance_level_3": "Lo que hay que hacer para acercarse.",
+          "rubric_performance_level_4": "En realidad no has hecho nada."
+        },
         "ml-club app-review submit": {
           "rubric_key_concept": "Creación de una aplicación fácil de usar que utiliza el aprendizaje automático",
           "rubric_performance_level_1": "El modelo se ha importado y la aplicación funciona correctamente. La aplicación tiene un tema y se ha editado el indicador de cada desplegable para que sea una pregunta. La aplicación tiene una pantalla de bienvenida y un botón que cambia correctamente de pantalla.",
@@ -796,287 +1077,6 @@
           "rubric_performance_level_2": "La pantalla de predicción tiene algunas frases completas, y se utilizan algunas sentencias \"if\" para cambiar la pantalla en función del valor predicho - sin embargo, la aplicación está incompleta.",
           "rubric_performance_level_3": "La pantalla de predicción no tiene frases completas o hay errores con las declaraciones \"if\" para cambiar la pantalla.",
           "rubric_performance_level_4": "La aplicación no se ha actualizado."
-        },
-        "CSD U2 HTML Adding Paragraphs pt 2_2019": {
-          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya títulos jerárquicos, párrafos, listas e imágenes; comprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
-          "rubric_performance_level_1": "Todo el texto está contenido en etiquetas de párrafo.  Hay al menos dos párrafos creados mediante el uso correcto de las etiquetas de párrafo.",
-          "rubric_performance_level_2": "Al menos se ha separado parte del texto en un párrafo mediante el uso adecuado de las etiquetas de párrafo.",
-          "rubric_performance_level_3": "Hay al menos una etiqueta de párrafo en el texto, pero puede que no se utilice correctamente (por ejemplo, falta la etiqueta de cierre, párrafos creados fuera del elemento body).",
-          "rubric_performance_level_4": "No hay etiquetas de párrafo en el texto."
-        },
-        "CSD U2 HTML Adding Paragraphs pt 2_2021": {
-          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya títulos jerárquicos, párrafos, listas e imágenes; comprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
-          "rubric_performance_level_1": "Todo el texto está contenido en etiquetas de párrafo.  Hay al menos dos párrafos creados mediante el uso correcto de las etiquetas de párrafo.",
-          "rubric_performance_level_2": "Al menos se ha separado parte del texto en un párrafo mediante el uso adecuado de las etiquetas de párrafo.",
-          "rubric_performance_level_3": "Hay al menos una etiqueta de párrafo en el texto, pero puede que no se utilice correctamente (por ejemplo, falta la etiqueta de cierre, párrafos creados fuera del elemento body).",
-          "rubric_performance_level_4": "No hay etiquetas de párrafo en el texto."
-        },
-        "CSD U2 HTML Adding Paragraphs pt 2_2022": {
-          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya títulos jerárquicos, párrafos, listas e imágenes; comprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
-          "rubric_performance_level_1": "Todo el texto está contenido en etiquetas de párrafo.  Hay al menos dos párrafos creados mediante el uso correcto de las etiquetas de párrafo.",
-          "rubric_performance_level_2": "Al menos se ha separado parte del texto en un párrafo mediante el uso adecuado de las etiquetas de párrafo.",
-          "rubric_performance_level_3": "Hay al menos una etiqueta de párrafo en el texto, pero puede que no se utilice correctamente (por ejemplo, falta la etiqueta de cierre, párrafos creados fuera del elemento body).",
-          "rubric_performance_level_4": "No hay etiquetas de párrafo en el texto."
-        },
-        "CSD U2 Heading Test_2018": {
-          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya encabezados jerárquicos, párrafos, listas e imágenes.\n\nComprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
-          "rubric_performance_level_1": "Todo el contenido está incluido en las etiquetas, utiliza etiquetas de párrafo y encabezados de múltiples tamaños de una manera lógicamente coherente.",
-          "rubric_performance_level_2": "Todo el contenido está incluido en etiquetas, utiliza las etiquetas de párrafo y de cabecera de forma lógica.",
-          "rubric_performance_level_3": "La mayor parte del contenido está contenido en etiquetas.  Se utiliza al menos una etiqueta de cabecera.",
-          "rubric_performance_level_4": "Las etiquetas tienen poco o ningún contenido."
-        },
-        "CSD U2 Heading Test_2019": {
-          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya encabezados jerárquicos, párrafos, listas e imágenes.\n\nComprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
-          "rubric_performance_level_1": "Todo el contenido está incluido en las etiquetas, utiliza etiquetas de párrafo y encabezados de múltiples tamaños de una manera lógicamente coherente.",
-          "rubric_performance_level_2": "Todo el contenido está incluido en etiquetas, utiliza etiquetas de párrafo y de encabezamiento de forma razonable.",
-          "rubric_performance_level_3": "La mayor parte del contenido está contenido en etiquetas.  Se utiliza al menos una etiqueta de cabecera.",
-          "rubric_performance_level_4": "Las etiquetas tienen poco o ningún contenido."
-        },
-        "CSD U2 Heading Test_2021": {
-          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya encabezados jerárquicos, párrafos, listas e imágenes.\n\nComprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
-          "rubric_performance_level_1": "Todo el contenido está incluido en las etiquetas, utiliza etiquetas de párrafo y encabezados de múltiples tamaños de una manera lógicamente coherente.",
-          "rubric_performance_level_2": "Todo el contenido está incluido en etiquetas, utiliza etiquetas de párrafo y de encabezamiento de forma razonable.",
-          "rubric_performance_level_3": "La mayor parte del contenido está contenido en etiquetas.  Se utiliza al menos una etiqueta de cabecera.",
-          "rubric_performance_level_4": "Las etiquetas tienen poco o ningún contenido."
-        },
-        "CSD U2 Heading Test_2022": {
-          "rubric_key_concept": "Utilizar el lenguaje HTML para crear una página web que incluya encabezados jerárquicos, párrafos, listas e imágenes.\n\nComprender la necesidad de precisión al utilizar lenguajes informáticos y utilizar la sintaxis adecuada.\n",
-          "rubric_performance_level_1": "Todo el contenido está incluido en las etiquetas, utiliza etiquetas de párrafo y encabezados de múltiples tamaños de una manera lógicamente coherente.",
-          "rubric_performance_level_2": "Todo el contenido está incluido en etiquetas, utiliza etiquetas de párrafo y de encabezamiento de forma razonable.",
-          "rubric_performance_level_3": "La mayor parte del contenido está contenido en etiquetas.  Se utiliza al menos una etiqueta de cabecera.",
-          "rubric_performance_level_4": "Las etiquetas tienen poco o ningún contenido."
-        },
-        "CSD U2 Image Tag 2_2019": {
-          "rubric_key_concept": "Estructurar el contenido de una página web utilizando HTML. (Añadir una imagen a una página web).",
-          "rubric_performance_level_1": "La imagen se muestra correctamente y el atributo `alt` ofrece una descripción de prueba razonable de la imagen.  No se incluye ningún código innecesario en la etiqueta `img`.",
-          "rubric_performance_level_2": "La imagen se muestra correctamente.",
-          "rubric_performance_level_3": "Se utiliza la etiqueta `img` y se proporciona una dirección de origen para la imagen, pero puede haber pequeños errores de sintaxis o faltas de ortografía que impiden que la imagen se muestre correctamente.",
-          "rubric_performance_level_4": "La etiqueta `img` no se utiliza o no se indica una dirección de origen para la imagen."
-        },
-        "CSD U2 add style_2019": {
-          "rubric_key_concept": "Crear reglas que afecten a grupos enteros de elementos; aplicar formato en una página web utilizando CSS.",
-          "rubric_performance_level_1": "Al fondo, las imágenes y el texto se les ha aplicado el estilo descrito en las instrucciones.  No hay errores de sintaxis ni código extra (que no funcione) en la hoja de estilos.",
-          "rubric_performance_level_2": "Al fondo, las imágenes y el texto se les ha aplicado el estilo descrito en las instrucciones, pero puede haber errores mínimos o código que no funcione en la hoja de estilos.",
-          "rubric_performance_level_3": "Se han creado conjuntos de reglas en la hoja de estilo para dar estilo al fondo, las imágenes y el texto, pero hay errores importantes que impiden que el código funcione correctamente.",
-          "rubric_performance_level_4": "No hay conjuntos de reglas en la hoja de estilos, o los conjuntos de reglas no tienen los selectores necesarios para dar estilo al fondo o a las imágenes de las páginas."
-        },
-        "CSD U2 add style_2021": {
-          "rubric_key_concept": "Crear reglas que afecten a grupos enteros de elementos; aplicar formato en una página web utilizando CSS.",
-          "rubric_performance_level_1": "Al fondo, las imágenes y el texto se les ha aplicado el estilo descrito en las instrucciones.  No hay errores de sintaxis ni código extra (que no funcione) en la hoja de estilos.",
-          "rubric_performance_level_2": "Al fondo, las imágenes y el texto se les ha aplicado el estilo descrito en las instrucciones, pero puede haber errores mínimos o código que no funcione en la hoja de estilos.",
-          "rubric_performance_level_3": "Se han creado conjuntos de reglas en la hoja de estilo para dar estilo al fondo, las imágenes y el texto, pero hay errores importantes que impiden que el código funcione correctamente.",
-          "rubric_performance_level_4": "No hay conjuntos de reglas en la hoja de estilos, o los conjuntos de reglas no tienen los selectores necesarios para dar estilo al fondo o a las imágenes de las páginas."
-        },
-        "CSD U2 add style_2022": {
-          "rubric_key_concept": "Crear reglas que afecten a grupos enteros de elementos; aplicar formato en una página web utilizando CSS.",
-          "rubric_performance_level_1": "Al fondo, las imágenes y el texto se les ha aplicado el estilo descrito en las instrucciones.  No hay errores de sintaxis ni código extra (que no funcione) en la hoja de estilos.",
-          "rubric_performance_level_2": "Al fondo, las imágenes y el texto se les ha aplicado el estilo descrito en las instrucciones, pero puede haber errores mínimos o código que no funcione en la hoja de estilos.",
-          "rubric_performance_level_3": "Se han creado conjuntos de reglas en la hoja de estilo para dar estilo al fondo, las imágenes y el texto, pero hay errores importantes que impiden que el código funcione correctamente.",
-          "rubric_performance_level_4": "No hay conjuntos de reglas en la hoja de estilos, o los conjuntos de reglas no tienen los selectores necesarios para dar estilo al fondo o a las imágenes de las páginas."
-        },
-        "CSD U2 classes summer_2019": {
-          "rubric_key_concept": "Crear clases que puedan ser referenciadas y afectadas como un grupo.",
-          "rubric_performance_level_1": "La clase verano, así como el conjunto de reglas, se han creado correctamente y todo el texto de la sección verano de la página web tiene el color elegido, tal y como indica el código RGB.",
-          "rubric_performance_level_2": "La clase verano, así como el conjunto de reglas, han sido creados y la mayor parte del texto de la sección de verano del sitio web está afectado por esta clase, pero puede haber algunos errores menores en algunas partes del texto.",
-          "rubric_performance_level_3": "La clase verano, así como el conjunto de reglas, están creados y al menos algunos elementos de la página web están en esa clase, pero puede haber errores importantes que impidan que el texto tenga estilo.",
-          "rubric_performance_level_4": "La clase verano o el conjunto de reglas no se han creado, o no se han puesto elementos del sitio web en la clase."
-        },
-        "CSD U2 text style h3_2019": {
-          "rubric_key_concept": "Aplicar formato en una página web mediante CSS",
-          "rubric_performance_level_1": "Las cabeceras `h3` tienen un nuevo color (no negro).  No hay código extra en la hoja de estilos, y no hay errores de sintaxis en el código.",
-          "rubric_performance_level_2": "Las cabeceras `h3` tienen un nuevo color (no negro).",
-          "rubric_performance_level_3": "Las cabeceras `h3` tienen una regla especial en la hoja de estilos, y se utiliza la propiedad color, pero hay suficientes errores como para que el texto no cambie de color.",
-          "rubric_performance_level_4": "No hay un conjunto de reglas especial para las cabeceras `h3` o la propiedad de color no se utiliza en el conjunto de reglas."
-        },
-        "CSD U2 text style h3_2021": {
-          "rubric_key_concept": "Aplicar formato en una página web mediante CSS",
-          "rubric_performance_level_1": "Las cabeceras `h3` tienen un nuevo color (no negro).  No hay código extra en la hoja de estilos, y no hay errores de sintaxis en el código.",
-          "rubric_performance_level_2": "Las cabeceras `h3` tienen un nuevo color (no negro).",
-          "rubric_performance_level_3": "Las cabeceras `h3` tienen una regla especial en la hoja de estilos, y se utiliza la propiedad color, pero hay suficientes errores como para que el texto no cambie de color.",
-          "rubric_performance_level_4": "No hay un conjunto de reglas especial para las cabeceras `h3` o la propiedad de color no se utiliza en el conjunto de reglas."
-        },
-        "CSD U2 text style h3_2022": {
-          "rubric_key_concept": "Aplicar formato en una página web mediante CSS",
-          "rubric_performance_level_1": "Las cabeceras `h3` tienen un nuevo color (no negro).  No hay código extra en la hoja de estilos, y no hay errores de sintaxis en el código.",
-          "rubric_performance_level_2": "Las cabeceras `h3` tienen un nuevo color (no negro).",
-          "rubric_performance_level_3": "Las cabeceras `h3` tienen una regla especial en la hoja de estilos, y se utiliza la propiedad color, pero hay suficientes errores como para que el texto no cambie de color.",
-          "rubric_performance_level_4": "No hay un conjunto de reglas especial para las cabeceras `h3` o la propiedad de color no se utiliza en el conjunto de reglas."
-        },
-        "CSD U2 un_ordered lists": {
-          "rubric_key_concept": "Estructurar el contenido de una página web mediante HTML. (Utiliza las etiquetas `<ol>`, `<ul>`, y `<li>` para crear listas ordenadas y desordenadas en una página HTML).",
-          "rubric_performance_level_1": "Todos los contenidos de la lista están incluidos en las etiquetas correspondientes para que las listas se muestren como en la imagen del ejemplo.  Las etiquetas '<li>' están anidadas dentro de las etiquetas  '<ul>' u '<ol>' y no se utilizan números en el código para simular el comportamiento de una lista ordenada.",
-          "rubric_performance_level_2": "Las etiquetas `<ul>`, `<ol>` y `<li>` se utilizan para que algunos elementos aparezcan en una lista desordenada y otros en una lista ordenada.",
-          "rubric_performance_level_3": "Al menos dos etiquetas `<li>` están anidadas dentro de una etiqueta `<ul>` u `<ol>` para que el contenido aparezca en una lista.",
-          "rubric_performance_level_4": "Las etiquetas de lista no se utilizan, o se utilizan de forma incorrecta de manera que no aparece ningún contenido en una lista."
-        },
-        "CSD U3 Sprites scene sprites_2019": {
-          "rubric_key_concept": "Crear y modificar objetos (sprites) para gestionar la complejidad de los elementos en pantalla.  Utilizar la notación de punto para obtener y establecer las propiedades de los sprites.",
-          "rubric_performance_level_1": "Se crea al menos un sprite, se le da una animación, se escala a un buen tamaño y se dibuja en la pantalla.  La variable sprite tiene un nombre adecuado.  Se llama a `drawSprites` después de que se hayan actualizado todas las propiedades del sprite.",
-          "rubric_performance_level_2": "Se ha creado al menos un sprite, se le ha dado una animación y se ha dibujado en la pantalla.  Se ha cambiado el nombre de la variable sprite.",
-          "rubric_performance_level_3": "Se ha creado al menos un sprite y se ha dibujado en la pantalla.  Puede haber problemas con la animación o conflictos por utilizar el mismo nombre de variable para varios sprites.",
-          "rubric_performance_level_4": "No se ha creado ningún sprite."
-        },
-        "CSD U6 - Board Outputs - A_2222": {
-          "rubric_key_concept": "Responde a la entrada del usuario mediante el LED y el zumbador del Circuit Playground\n\n",
-          "rubric_performance_level_1": "Cada botón coincide correctamente con la descripción de su emoción, utilizando tanto los bloques de leds como los de sonidos en cada botón.\n",
-          "rubric_performance_level_2": "Cada botón utiliza tanto los bloques de leds como los de sonidos, pero los parámetros pueden no coincidir con la descripción correcta (por ejemplo: que todos tengan la misma duración)",
-          "rubric_performance_level_3": "En algunos botones faltan bloques enteros de leds o sonidos",
-          "rubric_performance_level_4": "No se han añadido bloques adicionales de leds o sonidos al programa "
-        },
-        "CSD U6 - Board Inputs - A_2222": {
-          "rubric_key_concept": "Utiliza los botones y el conmutador en el Circuit Playground para crear una aplicación",
-          "rubric_performance_level_1": "La aplicación funciona tal y como se describe, y los emojis cambian en función de las entradas del usuario\n",
-          "rubric_performance_level_2": "La mayor parte de la aplicación funciona como se describe, pero algunas de las acciones no coinciden con la descripción, como el cambio de tamaño o el cambio de los emojis",
-          "rubric_performance_level_3": "La aplicación cambia los elementos en la pantalla, pero no coincide con la descripción del programa",
-          "rubric_performance_level_4": "La aplicación no se ha actualizado para que coincida con la descripción"
-        },
-        "CSD U6 - Color LEDs - A_2222": {
-          "rubric_key_concept": "Utiliza los LEDs de colores para crear un patrón en el Circuit Playground",
-          "rubric_performance_level_1": "El patrón de luz utiliza al menos 3 colores diferentes y cambia la intensidad de algunos de los LEDs",
-          "rubric_performance_level_2": "El patrón de luz sólo utiliza 2 colores, o utiliza 3 colores pero no cambia la intensidad de los LEDs",
-          "rubric_performance_level_3": "El patrón de luz utiliza 1 color, o utiliza 2 colores pero no cambia la intensidad de los LEDs",
-          "rubric_performance_level_4": "No se ha utilizado ningún patrón"
-        },
-        "CSD U6 - Combine Inputs - A_2222": {
-          "rubric_key_concept": "Combinando los elementos de entrada y salida del Circuit Playground y de la pantalla para crear una aplicación",
-          "rubric_performance_level_1": "La aplicación funciona como se describe, con variables que se utilizan para obtener los valores de la pantalla y para encender los LEDs del Circuit Playground en la dirección correcta.",
-          "rubric_performance_level_2": "La aplicación puede encender los LEDs, pero una de las entradas (dirección, color o brillo) no está funcionando correctamente",
-          "rubric_performance_level_3": "Los LEDs se encienden, pero no reaccionan a los valores que el usuario introduce. Las variables no se utilizan correctamente en el programa.",
-          "rubric_performance_level_4": "La aplicación no se ha modificado."
-        },
-        "CSD U6 - If Variables - A_2222": {
-          "rubric_key_concept": "Utiliza variables y sentencias `if` para crear una aplicación que utilice el Circuit Playground",
-          "rubric_performance_level_1": "El programa funciona como se ha descrito, utilizando variables para llevar la cuenta del tamaño y una sentencia `if` para hacer sonar el zumbador en el momento correcto",
-          "rubric_performance_level_2": "Las variables se utilizan para controlar el tamaño del elemento, pero el zumbador no suena una vez que alcanza el tamaño correcto",
-          "rubric_performance_level_3": "Las variables se utilizan para el tamaño, pero no aumentan cuando se pulsa el botón",
-          "rubric_performance_level_4": "El código no ha cambiado"
-        },
-        "CSD U6 - Screen Inputs - A_2222": {
-          "rubric_key_concept": "Obtención de la información del usuario en la pantalla y su utilización para actualizar una aplicación",
-          "rubric_performance_level_1": "Cada elemento de diseño se ha personalizado correctamente de acuerdo con la descripción de la aplicación, y el código obtiene la entrada del usuario y la utiliza para actualizar la aplicación",
-          "rubric_performance_level_2": "El código obtiene la entrada del usuario y la utiliza para actualizar la aplicación, pero los elementos de diseño pueden no estar correctamente personalizados de acuerdo con la descripción de la aplicación",
-          "rubric_performance_level_3": "Hay errores al intentar obtener valores de la entrada de texto, del desplegable o del deslizador; o la aplicación está incompleta y no obtiene todos los elementos de entrada.",
-          "rubric_performance_level_4": "La aplicación no recibe información de ninguno de los elementos de la pantalla."
-        },
-        "CSD U6 - Screen Outputs - ChalB_2222": {
-          "rubric_key_concept": "Actualiza las propiedades y el texto de los elementos de diseño mediante código",
-          "rubric_performance_level_1": "La aplicación terminada coincide con la descripción, y cada botón actualiza correctamente el icono y el texto",
-          "rubric_performance_level_2": "La aplicación terminada es similar a la descripción, pero tiene al menos un elemento incompleto (por ejemplo, no actualiza el texto o no actualiza el color del icono)",
-          "rubric_performance_level_3": "La aplicación terminada puede tener algunos elementos que parecen correctos, pero la mayoría de los elementos no se actualizan correctamente o la aplicación está sólo parcialmente terminada.\n",
-          "rubric_performance_level_4": "La aplicación no se ha actualizado para que coincida con la descripción"
-        },
-        "CSD U4 - Design Mode Project_2019": {
-          "rubric_key_concept": "Crea un prototipo digital para una pantalla de aplicación",
-          "rubric_performance_level_1": "El prototipo digital es una buena recreación del prototipo en papel, con sólo pequeñas incoherencias.",
-          "rubric_performance_level_2": "La mayoría de los elementos del prototipo en papel se han recreado en el prototipo digital, pero puede haber algunas incoherencias en el diseño, el tamaño o algunos elementos menores que faltan.  Las incoherencias no afectan a la funcionalidad del prototipo.",
-          "rubric_performance_level_3": "Algunos elementos del prototipo en papel se han recreado en el prototipo digital, pero hay suficientes incoherencias que afectan a la funcionalidad del prototipo.",
-          "rubric_performance_level_4": "No hay elementos en el prototipo digital, o los elementos no son coherentes con el prototipo en papel."
-        },
-        "CSD U4 - Design Mode Project_2021": {
-          "rubric_key_concept": "Crea un prototipo digital para una pantalla de aplicación",
-          "rubric_performance_level_1": "El prototipo digital es una buena recreación del prototipo en papel, con sólo pequeñas incoherencias.",
-          "rubric_performance_level_2": "La mayoría de los elementos del prototipo en papel se han recreado en el prototipo digital, pero puede haber algunas incoherencias en el diseño, el tamaño o algunos elementos menores que faltan.  Las incoherencias no afectan a la funcionalidad del prototipo.",
-          "rubric_performance_level_3": "Algunos elementos del prototipo en papel se han recreado en el prototipo digital, pero hay suficientes incoherencias que afectan a la funcionalidad del prototipo.",
-          "rubric_performance_level_4": "No hay elementos en el prototipo digital, o los elementos no son coherentes con el prototipo en papel."
-        },
-        "CSD U4 - Design Mode Project_2022": {
-          "rubric_key_concept": "Crea un prototipo digital para una pantalla de aplicación",
-          "rubric_performance_level_1": "El prototipo digital es una buena recreación del prototipo en papel, con sólo pequeñas incoherencias.",
-          "rubric_performance_level_2": "La mayoría de los elementos del prototipo en papel se han recreado en el prototipo digital, pero puede haber algunas incoherencias en el diseño, el tamaño o algunos elementos menores que faltan.  Las incoherencias no afectan a la funcionalidad del prototipo.",
-          "rubric_performance_level_3": "Algunos elementos del prototipo en papel se han recreado en el prototipo digital, pero hay suficientes incoherencias que afectan a la funcionalidad del prototipo.",
-          "rubric_performance_level_4": "No hay elementos en el prototipo digital, o los elementos no son coherentes con el prototipo en papel."
-        },
-        "CSD U6 - Accelerometer - A_2222": {
-          "rubric_key_concept": "Utiliza el acelerómetro en un evento y con datos para crear una aplicación",
-          "rubric_performance_level_1": "La aplicación se ajusta a la descripción, utilizando un onBoardEvent para detectar el movimiento del acelerómetro y utiliza variables y bloques getOrientation para realizar cambios en las posiciones `x` e `y`",
-          "rubric_performance_level_2": "La aplicación utiliza un onBoardEvent, pero no realiza cambios en las posiciones `x` e `y` del puntero",
-          "rubric_performance_level_3": "La aplicación no utiliza el bloque de eventos correcto y no realiza cambios en la posición del puntero",
-          "rubric_performance_level_4": "La aplicación no ha sido inicializada"
-        },
-        "CSD U6 - Functions - A_2222": {
-          "rubric_key_concept": "Utiliza funciones con parámetros para organizar las aplicaciones",
-          "rubric_performance_level_1": "La aplicación utiliza una función con dos parámetros que corresponden al nombre y a la cantidad a mover. Los parámetros sustituyen correctamente cada nombre y valor de la cantidad de nieve original. Los 10 elementos de nieve se mueven cuando se mueve el Circuit Playground.",
-          "rubric_performance_level_2": "La aplicación utiliza una función con un solo parámetro, o la aplicación utiliza una función con dos parámetros, pero no todos los valores se actualizan mediante parámetros. Los 10 elementos de nieve se mueven cuando se mueve el Circuit Playground.",
-          "rubric_performance_level_3": "La aplicación utiliza una función, pero no utiliza parámetros, o no todos los elementos de la nieve se mueven en la pantalla",
-          "rubric_performance_level_4": "El código no ha cambiado con respecto a la aplicación original"
-        },
-        "CSD U6 - Music - A_2222": {
-          "rubric_key_concept": "Crea aplicaciones que reproduzcan música con el Circuit Playground",
-          "rubric_performance_level_1": "La aplicación tiene dos bloques playSong() que reproducen diferentes canciones. Cada canción tiene al menos cuatro notas e incluye al menos un silencio",
-          "rubric_performance_level_2": "La aplicación tiene dos bloques playSong() que reproducen diferentes canciones. Cada canción tiene al menos cuatro notas e incluye al menos un silencio",
-          "rubric_performance_level_3": "La aplicación tiene un bloque playSong() para uno de los emojis, pero no para ambos emojis",
-          "rubric_performance_level_4": "La aplicación no tiene bloques playSong()"
-        },
-        "CSD U6 - Physical Output - A_2222": {
-          "rubric_key_concept": "Conecta los LEDs externos al Circuit Playground y crea aplicaciones que utilicen los LEDs externos",
-          "rubric_performance_level_1": "El programa coincide con la descripción de la aplicación utilizando los bloques on(), blink(), pulse() y off() en la ubicación correcta. Los LEDs están cableados correctamente",
-          "rubric_performance_level_2": "El programa casi coincide con la descripción de la aplicación, pero uno de los bloques puede estar emparejado con el evento equivocado. Los LEDs están cableados correctamente.\n",
-          "rubric_performance_level_3": "Al programa le faltan algunos de los bloques necesarios o los LEDs no están cableados correctamente.",
-          "rubric_performance_level_4": "El programa no se ha iniciado o no hay LEDs"
-        },
-        "CSD U6 - Sensors - A_2222": {
-          "rubric_key_concept": "Utiliza los sensores del Circuit Playground para crear una aplicación",
-          "rubric_performance_level_1": "La aplicación muestra el valor de cada sensor en tiempo real, y los sensores de luz y sonido se gradúan de 0 a 10",
-          "rubric_performance_level_2": "La aplicación muestra el valor de cada sensor, pero puede que no sea en tiempo real o que los sensores sean de 0-1023 en lugar de 0-10",
-          "rubric_performance_level_3": "A la aplicación le falta al menos uno de los valores del sensor",
-          "rubric_performance_level_4": "La aplicación no ha sido inicializada"
-        },
-        "CSD U6 - Physical Input - A_2222": {
-          "rubric_key_concept": "Conecta botones externos al Circuit Playground y crea aplicaciones que utilicen botones externos",
-          "rubric_performance_level_1": "El programa coincide en la descripción con 3 eventos que ocultan los cuadrados azules en la aplicación. Los botones están conectados correctamente usando un cable de tierra para señalar cada botón",
-          "rubric_performance_level_2": "Algunos de los botones ocultan los cuadrados azules, pero no todos funcionan correctamente. O bien, los botones están conectados correctamente pero pueden utilizar varios cables de tierra en lugar de uno solo.",
-          "rubric_performance_level_3": "Los botones están enganchados, pero los cuadrados azules no se ocultan al pulsar los botones",
-          "rubric_performance_level_4": "La aplicación no se ha puesto en marcha o no hay botones conectados al Circuit Playground"
-        },
-        "CSDU4 Project Events_2019": {
-          "rubric_performance_level_1": "Todas las pantallas de cada miembro del equipo se incluyen en el proyecto, y cada botón enlaza con la pantalla correspondiente.",
-          "rubric_performance_level_2": "Todas las pantallas de cada miembro del equipo están incluidas en el proyecto, y la mayoría de los botones enlazan con la pantalla correspondiente, pero puede haber pequeños errores que impidan que todos los botones funcionen.",
-          "rubric_performance_level_3": "Las pantallas de varios miembros del equipo se han incorporado al proyecto, y al menos un botón enlaza con otra pantalla.",
-          "rubric_performance_level_4": "Ningún botón enlaza con otras pantallas del proyecto."
-        },
-        "CSDU4 Project Events_2021": {
-          "rubric_performance_level_1": "Todas las pantallas de cada miembro del equipo se incluyen en el proyecto, y cada botón enlaza con la pantalla correspondiente.",
-          "rubric_performance_level_2": "Todas las pantallas de cada miembro del equipo están incluidas en el proyecto, y la mayoría de los botones enlazan con la pantalla correspondiente, pero puede haber pequeños errores que impidan que todos los botones funcionen.",
-          "rubric_performance_level_3": "Las pantallas de varios miembros del equipo se han incorporado al proyecto, y al menos un botón enlaza con otra pantalla.",
-          "rubric_performance_level_4": "Ningún botón enlaza con otras pantallas del proyecto."
-        },
-        "CSDU4 Project Events_2022": {
-          "rubric_performance_level_1": "Todas las pantallas de cada miembro del equipo se incluyen en el proyecto, y cada botón enlaza con la pantalla correspondiente.",
-          "rubric_performance_level_2": "Todas las pantallas de cada miembro del equipo están incluidas en el proyecto, y la mayoría de los botones enlazan con la pantalla correspondiente, pero puede haber pequeños errores que impidan que todos los botones funcionen.",
-          "rubric_performance_level_3": "Las pantallas de varios miembros del equipo se han incorporado al proyecto, y al menos un botón enlaza con otra pantalla.",
-          "rubric_performance_level_4": "Ningún botón enlaza con otras pantallas del proyecto."
-        },
-        "U4 Model Program 5_2019": {
-          "rubric_performance_level_1": "Cada botón enlaza con la pantalla correcta del prototipo.",
-          "rubric_performance_level_2": "Varios de los botones del prototipo enlazan con la pantalla correspondiente.",
-          "rubric_performance_level_3": "Hay al menos un evento en el prototipo que puede activarse para producir algún tipo de respuesta.",
-          "rubric_performance_level_4": "No hay eventos en el prototipo."
-        },
-        "U4 Model Program 5_2021": {
-          "rubric_performance_level_1": "Cada botón enlaza con la pantalla correcta del prototipo.",
-          "rubric_performance_level_2": "Varios de los botones del prototipo enlazan con la pantalla correspondiente.",
-          "rubric_performance_level_3": "Hay al menos un evento en el prototipo que puede activarse para producir algún tipo de respuesta.",
-          "rubric_performance_level_4": "No hay eventos en el prototipo."
-        },
-        "U4 Model Program 5_2022": {
-          "rubric_performance_level_1": "Cada botón enlaza con la pantalla correcta del prototipo.",
-          "rubric_performance_level_2": "Varios de los botones del prototipo enlazan con la pantalla correspondiente.",
-          "rubric_performance_level_3": "Hay al menos un evento en el prototipo que puede activarse para producir algún tipo de respuesta.",
-          "rubric_performance_level_4": "No hay eventos en el prototipo."
-        },
-        "allthethings-mini-rubric": {
-          "rubric_key_concept": "Este es el concepto clave de esta mini-rúbrica.",
-          "rubric_performance_level_1": "¡Lo has hecho muy bien!",
-          "rubric_performance_level_2": "Lo has hecho bien.",
-          "rubric_performance_level_3": "Lo hiciste bien.",
-          "rubric_performance_level_4": "No has hecho nada."
-        },
-        "allthethings-mini-rubric-weblab": {
-          "rubric_key_concept": "Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo. Este va a ser un concepto clave realmente largo.",
-          "rubric_performance_level_1": "Lo que hay que hacer para superarse.",
-          "rubric_performance_level_2": "Lo que hay que hacer para reunirse.",
-          "rubric_performance_level_3": "Lo que hay que hacer para acercarse.",
-          "rubric_performance_level_4": "En realidad no has hecho nada."
         }
       }
     }

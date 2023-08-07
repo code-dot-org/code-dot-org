@@ -3,267 +3,335 @@ bn:
   data:
     script:
       name:
-        course1:
-          title: কোর্স ১
-          description_audience: বয়স ৪-৬
-        course2:
-          title: কোর্স ২
-          description_audience: বয়স ৬-১৮
-        course3:
-          title: কোর্স ২
-          description_audience: বয়স ৮-১৮
-        playlab:
-          title: প্লে ল্যাব
-        artist:
-          title: শিল্পী
-        frozen:
-          description_short: চলুন কোড ব্যবহার করে আনা এবং এলসার বরফের জাদু ও সৌন্দর্য
-            অনুসন্ধানে যোগ দেই।
-        course4:
-          title: কোর্স ৪
-          description_audience: বয়স ১০-১৮
-        algebra:
-          title: বীজগণিতে কম্পিউটার বিজ্ঞান
         20-hour:
           description_audience: বয়স ১০-১৮
-        edit-code:
-          title: কোড সম্পাদনা করুন
-          description: কোড সম্পাদনা করুন
-          description_short: কোড সম্পাদনা করুন
-          student_description: কোড সম্পাদনা করুন
-        events:
-          title: ঘটনাবলী
-          description: ঘটনাবলী
-          description_short: ঘটনাবলী
-          student_description: ঘটনাবলী
-        flappy:
-          title: ফ্লাপি কোড
-        jigsaw:
-          title: টুকরো কাঠের ধাঁধা
-        step:
-          title: ধাপ
-          description: ধাপ টিউটোরিয়াল
-          description_short: ধাপ টিউটোরিয়াল
-          student_description: ধাপ টিউটোরিয়াল
-        asUnplugged:
-          description_audience: বয়স 6-13
-        afterschool1:
-          description_audience: বয়স 7-13
-        Special Fun:
-          description_audience: বয়স ১০-১৮
-        SpecialSeries:
-          description_audience: বয়স ১০-১৮
-        starwars:
-          description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব
-            তারকা যুদ্ধ খেলা তৈরি করি।
-          description_short: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে
-            নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
-          student_description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে
-            নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
-        starwarsblocks:
-          description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব
-            তারকা যুদ্ধ খেলা তৈরি করি।
-          description_short: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে
-            নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
-          student_description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে
-            নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
-        mc:
-          title: মাইনক্র্যাফট এক ঘণ্টার কোড
-          description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে
-            যেতে কোড ব্লকগুলি ব্যবহার করুন।
-          student_description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের
-            নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: ভূমিকা
+            lessonGroup-3:
+              display_name: চলকগুলো
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: এক ঘন্টার কোড
         CSDU3-Draft:
-          description_short: প্রোগ্রামিং
-        TEMP CSD Unit 3:
           description_short: প্রোগ্রামিং
         CSF_Secret_Sample:
           description_audience: বয়স ৮-১৮
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
         CSF_Secret_Sample_Story:
           description_audience: বয়স ৮-১৮+
         MikeTest:
           description_audience: বয়স 8-98
-        artistExemplar:
-          description_audience: বয়স ৮-১৮
-        teachercon:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        gradeKinder:
-          description_audience: বয়স 5-18
-        grade4:
-          description_audience: বয়স 9-99
-        grade1:
-          description_audience: বয়স 5-18
-        grade5:
-          description_audience: বয়স 10-110
-        grade3:
-          description_audience: বয়স 5-18
+        Special Fun:
+          description_audience: বয়স ১০-১৮
+        SpecialSeries:
+          description_audience: বয়স ১০-১৮
+        TEMP CSD Unit 3:
+          description_short: প্রোগ্রামিং
+        afterschool1:
+          description_audience: বয়স 7-13
+        algebra:
+          title: বীজগণিতে কম্পিউটার বিজ্ঞান
         alltheplcthings:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        grade2:
-          description_audience: বয়স 5-18
-        csp-online-test:
+        andrea-test:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        csp1-support:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp3-support:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp4-support:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp5-support:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: মূল্যায়ন
+        artist:
+          title: শিল্পী
+        artistExemplar:
+          description_audience: বয়স ৮-১৮
+        asUnplugged:
+          description_audience: বয়স 6-13
+        course1:
+          description_audience: বয়স ৪-৬
+          title: কোর্স ১
+        course2:
+          description_audience: বয়স ৬-১৮
+          title: কোর্স ২
+        course3:
+          description_audience: বয়স ৮-১৮
+          title: কোর্স ২
+        course4:
+          description_audience: বয়স ১০-১৮
+          title: কোর্স ৪
         coursea-2017:
-          title: কোর্স A
           assignment_family_title: কোর্স A
-        courseb-2017:
-          title: কোর্স B
-          assignment_family_title: কোর্স B
-        coursec-2017:
-          title: কোর্স C
-          assignment_family_title: কোর্স C
-        coursed-2017:
-          title: কোর্স D
-          assignment_family_title: কোর্স D
-        coursee-2017:
-          title: কোর্স E
-          assignment_family_title: কোর্স E
-        coursef-2017:
-          title: কোর্স F
-          assignment_family_title: কোর্স F
-        cspnovice:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp1-dlp:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp2-dlp:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp3-dlp:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp4-dlp:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp5-dlp:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csd1-dlp:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csd6-dlp:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csd5-dlp:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csd4-dlp:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csd3-dlp:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csd2-dlp:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
+          title: কোর্স A
         coursea-2018:
           assignment_family_title: কোর্স A
+        coursea-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursea-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursea-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursea-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursea-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        courseb-2017:
+          assignment_family_title: কোর্স B
+          title: কোর্স B
         courseb-2018:
           assignment_family_title: কোর্স B
-        coursed-2018:
-          assignment_family_title: কোর্স D
+        courseb-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        courseb-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        courseb-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        courseb-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        courseb-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursec-2017:
+          assignment_family_title: কোর্স C
+          title: কোর্স C
         coursec-2018:
           assignment_family_title: কোর্স C
+        coursec-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: দ্বি-আঙ্কিক
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursec-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: দ্বি-আঙ্কিক
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursec-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: দ্বি-আঙ্কিক
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursec-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursec-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursed-2017:
+          assignment_family_title: কোর্স D
+          title: কোর্স D
+        coursed-2018:
+          assignment_family_title: কোর্স D
+        coursed-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: দ্বি-আঙ্কিক
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursed-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: দ্বি-আঙ্কিক
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursed-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: দ্বি-আঙ্কিক
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        coursee-2017:
+          assignment_family_title: কোর্স E
+          title: কোর্স E
         coursee-2018:
           assignment_family_title: কোর্স E
+        coursee-2019:
+          lesson_groups:
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_nested_loops:
+              display_name: নেষ্টেড লুপ
+        coursee-2020:
+          lesson_groups:
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_nested_loops:
+              display_name: নেষ্টেড লুপ
+        coursee-2021:
+          lesson_groups:
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_nested_loops:
+              display_name: শর্তযুক্ত
+            ramp_up:
+              display_name: নেষ্টেড লুপ
+        coursee-2022:
+          lesson_groups:
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_nested_loops:
+              display_name: শর্তযুক্ত
+            ramp_up:
+              display_name: নেষ্টেড লুপ
+        coursee-2023:
+          lesson_groups:
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_nested_loops:
+              display_name: শর্তযুক্ত
+            ramp_up:
+              display_name: নেষ্টেড লুপ
+        coursef-2017:
+          assignment_family_title: কোর্স F
+          title: কোর্স F
         coursef-2018:
           assignment_family_title: কোর্স F
-        csd1-dlp-18:
+        coursef-2019:
           lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csd2-dlp-18:
+            csf_for_loops:
+              display_name: ফর লুপ
+            csf_internet:
+              display_name: ইন্টারনেট
+            csf_variables:
+              display_name: চলকগুলো
+        coursef-2020:
           lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csd3-dlp-18:
+            csf_for_loops:
+              display_name: ফর লুপ
+            csf_variables:
+              display_name: চলকগুলো
+        coursef-2021:
           lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csd4-dlp-18:
+            csf_for_loops:
+              display_name: ফর লুপ
+            csf_variables:
+              display_name: ফর লুপ
+            lessonGroup-8:
+              display_name: চলকগুলো
+            lessonGroup-9:
+              display_name: সরান
+        coursef-2022:
           lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csd5-dlp-18:
+            lessonGroup-8:
+              display_name: চলকগুলো
+        coursef-2022-pilot:
           lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csd6-dlp-18:
+            lessonGroup-8:
+              display_name: চলকগুলো
+        coursef-2023:
           lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp1-dlp-18:
+            lessonGroup-4:
+              display_name: চলকগুলো
+        csa-videos:
           lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp-explore-dlp-18:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp-create-dlp-18:
+            lessonGroup-2:
+              display_name: ইউনিট 1
+            lessonGroup-4:
+              display_name: ইউনিট ২
+            lessonGroup-5:
+              display_name: ইউনিট 3
+            lessonGroup-6:
+              display_name: ইউনিট 4
+            lessonGroup-7:
+              display_name: ইউনিট 5
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: চক্র
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: চলকগুলো
+        csa3-2023:
+          lessons:
+            lesson-3:
+              name: ফর লুপ
+        csd-apprentice-18:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
@@ -271,7 +339,81 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        csd-apprentice-18:
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: চলকগুলো
+            ramp_up:
+              display_name: ভূমিকা
+            variables:
+              display_name: চলকগুলো
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: চলকগুলো
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp-explore-dlp-18:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
@@ -279,96 +421,32 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        csp-apprentice-18:
+        csp-online-test:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        fit-test:
+        csp1-2020:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
+        csp1-2021:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
+        csp1-2022:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
+        csp1-2023:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
+        csp1-dlp:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        cspplayground:
+        csp1-dlp-18:
           lesson_groups:
-            csp_variables:
-              display_name: চলকগুলো
-            csp_conditionals:
-              display_name: শর্তযুক্ত
-            csp_functions:
-              display_name: ফাংশনগুলি
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: চলকগুলো
-            csf_for_loops:
-              display_name: ফর লুপ
-            csf_internet:
-              display_name: ইন্টারনেট
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: ঘটনাবলী
-            csf_loops:
-              display_name: চক্র
-            csf_conditionals:
-              display_name: শর্তযুক্ত
-            csf_binary:
-              display_name: দ্বি-আঙ্কিক
-        coursee-2019:
-          lesson_groups:
-            csf_nested_loops:
-              display_name: নেষ্টেড লুপ
-            csf_functions:
-              display_name: ফাংশনগুলি
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_conditionals:
-              display_name: শর্তযুক্ত
-            csf_functions:
-              display_name: ফাংশনগুলি
-            csf_variables:
-              display_name: চলকগুলো
-            csf_for_loops:
-              display_name: ফর লুপ
-        andrea-test:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        coursec-2019:
-          lesson_groups:
-            csf_binary:
-              display_name: দ্বি-আঙ্কিক
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        coursea-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        courseb-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: চলকগুলো
-            csp_conditionals:
-              display_name: শর্তযুক্ত
-            csp_functions:
-              display_name: ফাংশনগুলি
             required:
               display_name: সংক্ষিপ্ত বিবরণ
         csp1-pilot:
@@ -377,67 +455,181 @@ bn:
               display_name: সংক্ষিপ্ত বিবরণ
         csp1-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: চলকগুলো
             csp_conditionals:
               display_name: শর্তযুক্ত
             csp_functions:
               display_name: ফাংশনগুলি
-        csp2-pilot-staging:
-          title: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
+            csp_variables:
+              display_name: চলকগুলো
+        csp1-support:
           lesson_groups:
-            csp_variables:
-              display_name: চলকগুলো
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp10-pilot-staging:
+          lesson_groups:
             csp_conditionals:
               display_name: শর্তযুক্ত
             csp_functions:
               display_name: ফাংশনগুলি
+            csp_variables:
+              display_name: চলকগুলো
+        csp2-2020:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
+        csp2-2021:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+            csp_variables:
+              display_name: চলকগুলো
+          title: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+            csp_variables:
+              display_name: চলকগুলো
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+            csp_variables:
+              display_name: চলকগুলো
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+            csp_variables:
+              display_name: চলকগুলো
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+            csp_variables:
+              display_name: চলকগুলো
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+            csp_variables:
+              display_name: চলকগুলো
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         csp4-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: চলকগুলো
             csp_conditionals:
               display_name: শর্তযুক্ত
             csp_functions:
               display_name: ফাংশনগুলি
-        csp5-pilot-staging:
+            csp_variables:
+              display_name: চলকগুলো
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+            csp_variables:
+              display_name: চলকগুলো
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: তালিকা
             csp_loops:
               display_name: চক্র
-        csp6-pilot-staging:
+        csp5-2021:
           lesson_groups:
-            csp_variables:
-              display_name: চলকগুলো
-            csp_conditionals:
-              display_name: শর্তযুক্ত
-            csp_functions:
-              display_name: ফাংশনগুলি
-        csp8-pilot-staging:
+            csp_lists:
+              display_name: তালিকা
+            csp_loops:
+              display_name: চক্র
+        csp5-2022:
           lesson_groups:
-            csp_variables:
-              display_name: চলকগুলো
-            csp_conditionals:
-              display_name: শর্তযুক্ত
-            csp_functions:
-              display_name: ফাংশনগুলি
-        csp9-pilot-staging:
+            csp_lists:
+              display_name: তালিকা
+            csp_loops:
+              display_name: চক্র
+        csp5-2023:
           lesson_groups:
-            csp_variables:
-              display_name: চলকগুলো
-            csp_conditionals:
-              display_name: শর্তযুক্ত
-            csp_functions:
-              display_name: ফাংশনগুলি
-        csp10-pilot-staging:
+            csp_loops:
+              display_name: চক্র
+        csp5-dlp:
           lesson_groups:
-            csp_variables:
-              display_name: চলকগুলো
-            csp_conditionals:
-              display_name: শর্তযুক্ত
-            csp_functions:
-              display_name: ফাংশনগুলি
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -446,29 +638,75 @@ bn:
               display_name: চক্র
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        fit2019-novice:
+        csp5-pilot-staging:
           lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp3-pilot:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csl-vn:
-          lesson_groups:
-            csf_loops:
+            csp_lists:
+              display_name: তালিকা
+            csp_loops:
               display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        dlp19-csd-mod-fit:
+        csp5-support:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        dlp19-csp-mod-fit:
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: অ্যালগরিদম
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: তালিকা
+            lessonGroup-3:
+              display_name: চক্র
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+            csp_variables:
+              display_name: চলকগুলো
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+            csp_variables:
+              display_name: চলকগুলো
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+            csp_variables:
+              display_name: চলকগুলো
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: শর্তযুক্ত
+            csp_functions:
+              display_name: ফাংশনগুলি
+            csp_variables:
+              display_name: চলকগুলো
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        dlp19-csd-mod-fit:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
@@ -488,6 +726,10 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
@@ -504,469 +746,263 @@ bn:
           lesson_groups:
             required:
               display_name: সংক্ষিপ্ত বিবরণ
-        csp2-pilot:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp6-pilot:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: চলকগুলো
-            csp_conditionals:
-              display_name: শর্তযুক্ত
-            csp_functions:
-              display_name: ফাংশনগুলি
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_conditionals:
-              display_name: শর্তযুক্ত
-            csf_nested_loops:
-              display_name: নেষ্টেড লুপ
-            csf_functions:
-              display_name: ফাংশনগুলি
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_conditionals:
-              display_name: শর্তযুক্ত
-            csf_events:
-              display_name: ঘটনাবলী
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_conditionals:
-              display_name: শর্তযুক্ত
-            csf_events:
-              display_name: ঘটনাবলী
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: সংক্ষিপ্ত বিবরণ
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: চলকগুলো
-            csp_conditionals:
-              display_name: শর্তযুক্ত
-            csp_functions:
-              display_name: ফাংশনগুলি
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: তালিকা
-            csp_loops:
-              display_name: চক্র
-        coursea-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        courseb-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        coursec-2020:
-          lesson_groups:
-            csf_binary:
-              display_name: দ্বি-আঙ্কিক
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: ঘটনাবলী
-            csf_loops:
-              display_name: চক্র
-            csf_conditionals:
-              display_name: শর্তযুক্ত
-            csf_binary:
-              display_name: দ্বি-আঙ্কিক
-        coursee-2020:
-          lesson_groups:
-            csf_nested_loops:
-              display_name: নেষ্টেড লুপ
-            csf_functions:
-              display_name: ফাংশনগুলি
-        coursef-2020:
-          lesson_groups:
-            csf_variables:
-              display_name: চলকগুলো
-            csf_for_loops:
-              display_name: ফর লুপ
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_conditionals:
-              display_name: শর্তযুক্ত
-            csf_functions:
-              display_name: ফাংশনগুলি
-            csf_variables:
-              display_name: চলকগুলো
-            csf_for_loops:
-              display_name: ফর লুপ
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        csp1-2020:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
-        csp2-2020:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
-        2021drafting:
-          lesson_groups:
-            introduction:
-              display_name: ভূমিকা
-            lessonGroup-3:
-              display_name: চলকগুলো
-        csp1-2021:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
-        csp2-2021:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: চলকগুলো
-            csp_conditionals:
-              display_name: শর্তযুক্ত
-            csp_functions:
-              display_name: ফাংশনগুলি
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: তালিকা
-            csp_loops:
-              display_name: চক্র
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: অ্যালগরিদম
-        coursea-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        courseb-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        coursec-2021:
-          lesson_groups:
-            csf_binary:
-              display_name: দ্বি-আঙ্কিক
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: ঘটনাবলী
-            csf_loops:
-              display_name: চক্র
-            csf_conditionals:
-              display_name: শর্তযুক্ত
-            csf_binary:
-              display_name: দ্বি-আঙ্কিক
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: নেষ্টেড লুপ
-            csf_nested_loops:
-              display_name: শর্তযুক্ত
-            csf_functions:
-              display_name: ফাংশনগুলি
-        coursef-2021:
-          lesson_groups:
-            csf_variables:
-              display_name: ফর লুপ
-            csf_for_loops:
-              display_name: ফর লুপ
-            lessonGroup-8:
-              display_name: চলকগুলো
-            lessonGroup-9:
-              display_name: সরান
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_conditionals:
-              display_name: শর্তযুক্ত
-            csf_functions:
-              display_name: ফাংশনগুলি
-            csf_variables:
-              display_name: চলকগুলো
-            csf_for_loops:
-              display_name: ফর লুপ
-            lessonGroup-9:
-              display_name: ঘটনাবলী
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: ভূমিকা
-            lessonGroup-3:
-              display_name: চলকগুলো
-            variables:
-              display_name: চলকগুলো
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: ভূমিকা
-            Introduction:
-              display_name: ভূমিকা
-        csa-videos:
+        dlp21-csd:
           lesson_groups:
             lessonGroup-2:
-              display_name: ইউনিট 1
-            lessonGroup-4:
-              display_name: ইউনিট ২
-            lessonGroup-5:
-              display_name: ইউনিট 3
-            lessonGroup-6:
-              display_name: ইউনিট 4
-            lessonGroup-7:
-              display_name: ইউনিট 5
+              description: পরীক্ষা
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
               display_name: ধাপ ১
             lessonGroup-3:
               display_name: ধাপ ২
-        dlp21-csd:
+        edit-code:
+          description: কোড সম্পাদনা করুন
+          description_short: কোড সম্পাদনা করুন
+          student_description: কোড সম্পাদনা করুন
+          title: কোড সম্পাদনা করুন
+        events:
+          description: ঘটনাবলী
+          description_short: ঘটনাবলী
+          student_description: ঘটনাবলী
+          title: ঘটনাবলী
+        express-2019:
           lesson_groups:
-            lessonGroup-2:
-              description: পরীক্ষা
-        spelling-bee:
-          title: বানান মৌমাছি
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: এক ঘন্টার কোড
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: চলকগুলো
-        coursea-2022:
-          lesson_groups:
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_for_loops:
+              display_name: ফর লুপ
+            csf_functions:
+              display_name: ফাংশনগুলি
             csf_loops:
               display_name: চক্র
-            csf_events:
+            csf_variables:
+              display_name: চলকগুলো
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_for_loops:
+              display_name: ফর লুপ
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_loops:
+              display_name: চক্র
+            csf_variables:
+              display_name: চলকগুলো
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_for_loops:
+              display_name: ফর লুপ
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_loops:
+              display_name: চক্র
+            csf_variables:
+              display_name: চলকগুলো
+            lessonGroup-9:
               display_name: ঘটনাবলী
         express-2022:
           lesson_groups:
-            lessonGroup-9:
-              display_name: ঘটনাবলী
-            csf_loops:
-              display_name: চক্র
             csf_conditionals:
               display_name: শর্তযুক্ত
-            csf_functions:
-              display_name: ফাংশনগুলি
-            csf_variables:
-              display_name: চলকগুলো
             csf_for_loops:
               display_name: ফর লুপ
-        csp1-2022:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
-        csp2-2022:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: চলকগুলো
-            csp_conditionals:
-              display_name: শর্তযুক্ত
-            csp_functions:
-              display_name: ফাংশনগুলি
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: তালিকা
-            csp_loops:
-              display_name: চক্র
-        courseb-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        coursec-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        coursed-2022:
-          lesson_groups:
-            csf_events:
-              display_name: ঘটনাবলী
-            csf_loops:
-              display_name: চক্র
-            csf_conditionals:
-              display_name: শর্তযুক্ত
-        coursee-2022:
-          lesson_groups:
-            ramp_up:
-              display_name: নেষ্টেড লুপ
             csf_functions:
               display_name: ফাংশনগুলি
-            csf_nested_loops:
-              display_name: শর্তযুক্ত
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: চলকগুলো
-        pre-express-2022:
-          lesson_groups:
             csf_loops:
               display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-8:
+            csf_variables:
               display_name: চলকগুলো
-        soccer:
-          name: ফুটবল খেলা
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: চক্র
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: চলকগুলো
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: ফর লুপ
-        csp1-2023:
-          lesson_groups:
-            csp_unit1_2020:
-              display_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
-        csp2-2023:
-          lesson_groups:
-            csp_unit2_2020:
-              display_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: চলকগুলো
-            csp_conditionals:
-              display_name: শর্তযুক্ত
-            csp_functions:
-              display_name: ফাংশনগুলি
-        csp5-2023:
-          lesson_groups:
-            csp_loops:
-              display_name: চক্র
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: তালিকা
-            lessonGroup-3:
-              display_name: চক্র
-        angelina-playground:
-          lessons:
-            lesson-5:
-              name: মূল্যায়ন
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
+            lessonGroup-9:
               display_name: ঘটনাবলী
         express-2023:
           lesson_groups:
-            lessonGroup-9:
-              display_name: ঘটনাবলী
-            csf_loops:
-              display_name: চক্র
             csf_conditionals:
               display_name: শর্তযুক্ত
-            csf_functions:
-              display_name: ফাংশনগুলি
-            csf_variables:
-              display_name: চলকগুলো
             csf_for_loops:
               display_name: ফর লুপ
-        coursea-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        courseb-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        coursec-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: চক্র
-            csf_events:
-              display_name: ঘটনাবলী
-        coursed-2023:
-          lesson_groups:
-            csf_events:
-              display_name: ঘটনাবলী
-            csf_loops:
-              display_name: চক্র
-            csf_conditionals:
-              display_name: শর্তযুক্ত
-        coursee-2023:
-          lesson_groups:
-            ramp_up:
-              display_name: নেষ্টেড লুপ
             csf_functions:
               display_name: ফাংশনগুলি
-            csf_nested_loops:
+            csf_loops:
+              display_name: চক্র
+            csf_variables:
+              display_name: চলকগুলো
+            lessonGroup-9:
+              display_name: ঘটনাবলী
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        flappy:
+          title: ফ্লাপি কোড
+        frozen:
+          description_short: চলুন কোড ব্যবহার করে আনা এবং এলসার বরফের জাদু ও সৌন্দর্য
+            অনুসন্ধানে যোগ দেই।
+        grade1:
+          description_audience: বয়স 5-18
+        grade2:
+          description_audience: বয়স 5-18
+        grade3:
+          description_audience: বয়স 5-18
+        grade4:
+          description_audience: বয়স 9-99
+        grade5:
+          description_audience: বয়স 10-110
+        gradeKinder:
+          description_audience: বয়স 5-18
+        jigsaw:
+          title: টুকরো কাঠের ধাঁধা
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: ভূমিকা
+            k5_getting_started_1:
+              display_name: ভূমিকা
+        mc:
+          description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে
+            যেতে কোড ব্লকগুলি ব্যবহার করুন।
+          student_description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের
+            নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
+          title: মাইনক্র্যাফট এক ঘণ্টার কোড
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
               display_name: শর্তযুক্ত
+            lessonGroup-5:
+              display_name: চলকগুলো
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+            lessonGroup-6:
+              display_name: ঘটনাবলী
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: নেষ্টেড লুপ
+            lessonGroup-4:
+              display_name: ফাংশনগুলি
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+            lessonGroup-5:
+              display_name: ঘটনাবলী
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: চক্র
         pl-csd-summer-day1:
           lessons:
             lesson-3:
               name: ভূমিকা
+        playlab:
+          title: প্লে ল্যাব
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        soccer:
+          name: ফুটবল খেলা
+        spelling-bee:
+          title: বানান মৌমাছি
+        starwars:
+          description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব
+            তারকা যুদ্ধ খেলা তৈরি করি।
+          description_short: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে
+            নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
+          student_description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে
+            নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
+        starwarsblocks:
+          description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে নিজস্ব
+            তারকা যুদ্ধ খেলা তৈরি করি।
+          description_short: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে
+            নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
+          student_description: ড্রয়েড প্রোগ্রাম করতে শেখি এবং অনেক দূরের একটি ছায়াপথে
+            নিজস্ব তারকা যুদ্ধ খেলা তৈরি করি।
+        step:
+          description: ধাপ টিউটোরিয়াল
+          description_short: ধাপ টিউটোরিয়াল
+          student_description: ধাপ টিউটোরিয়াল
+          title: ধাপ
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: চক্র
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: সংক্ষিপ্ত বিবরণ
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_functions:
+              display_name: ফাংশনগুলি
+            csf_nested_loops:
+              display_name: নেষ্টেড লুপ
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: শর্তযুক্ত
+            csf_events:
+              display_name: ঘটনাবলী
+            csf_loops:
+              display_name: চক্র
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
               name: ভূমিকা
-        coursef-2023:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: চলকগুলো

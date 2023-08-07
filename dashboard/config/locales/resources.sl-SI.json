@@ -2,235 +2,76 @@
   "sl-SI": {
     "data": {
       "resources": {
-        "implementation_guide/coursed/2022": {
-          "name": "Vodnik za implementacijo"
-        },
-        "graph_paper_programming/coursed/2022": {
-          "name": "Obarvajmo kvadratke"
-        },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "Obarvajmo kvadratke"
-        },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "Obarvajmo kvadratke"
-        },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "Obarvajmo kvadratke"
-        },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "Obarvajmo kvadratke"
-        },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "Obarvajmo kvadratke"
-        },
-        "pair_programming/coursed/2022": {
-          "name": "Programiranje parov"
-        },
-        "relay_programming/coursed/2022": {
-          "name": "Relejsko programiranje"
-        },
-        "relay_programming_1/coursed/2022": {
-          "name": "Relejsko programiranje"
-        },
-        "relay_programming_2/coursed/2022": {
-          "name": "Relejsko programiranje"
-        },
-        "relay_programming_3/coursed/2022": {
-          "name": "Relejsko programiranje"
-        },
-        "relay_programming_4/coursed/2022": {
-          "name": "Relejsko programiranje"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "Relejsko programiranje"
-        },
-        "conditionals_with_cards/coursed/2022": {
-          "name": "Pogojniki s kartami"
-        },
-        "conditionals_with_cards_1/coursed/2022": {
-          "name": "Pogojniki s kartami"
-        },
-        "conditionals_with_cards_2/coursed/2022": {
-          "name": "Pogojniki s kartami"
-        },
-        "conditionals_with_cards_3/coursed/2022": {
-          "name": "Pogojniki s kartami"
-        },
-        "conditionals_with_cards_4/coursed/2022": {
-          "name": "Pogojniki s kartami"
-        },
-        "implementation_guide/coursef/2022": {
-          "name": "Vodnik za implementacijo"
-        },
-        "internet/coursef/2022": {
-          "name": "Internet"
-        },
-        "internet_1/coursef/2022": {
-          "name": "Internet"
-        },
-        "the_internet/coursef/2022": {
-          "name": "Internet"
-        },
-        "implementation_guide/coursee/2022": {
-          "name": "Vodnik za implementacijo"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "Vodnik za implementacijo"
-        },
-        "move_it_move_it/courseb/2022": {
-          "name": "Premakni se, premakni"
-        },
-        "move_it_move_it_1/courseb/2022": {
-          "name": "Premakni se, premakni"
-        },
-        "move_it_move_it_2/courseb/2022": {
-          "name": "Premakni se, premakni"
-        },
-        "move_it_move_it_3/courseb/2022": {
-          "name": "Dajmo, dajmo"
-        },
-        "pair_programming/courseb/2022": {
-          "name": "Programiranje parov"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "Veliki dogodek"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "Veliki dogodek"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "Veliki dogodek"
-        },
-        "all_resources/express/2022": {
-          "url": "/s/express-2022/viri"
-        },
-        "all_standards/express/2022": {
-          "url": "/s/express-2022/standardi"
-        },
-        "all_vocabulary/express/2022": {
-          "url": "/s/express-2022/besedisce"
-        },
-        "pair_programming/express/2022": {
-          "name": "Programiranje parov"
-        },
-        "variables/express/2022": {
-          "name": "Spremenljivke"
-        },
-        "pair_programming/pre-express/2022": {
-          "name": "Programiranje parov"
-        },
-        "implementation_guide/coursea/2022": {
-          "name": "Vodnik za implementacijo"
-        },
-        "pair_programming/coursea/2022": {
-          "name": "Programiranje parov"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "Veseli zemljevidi"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "Veliki dogodek"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "Veliki dogodek"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "Veliki dogodek"
-        },
-        "all_resources/coursec/2022": {
-          "url": "/s/tecajc-2022/viri"
-        },
-        "all_standards/coursec/2022": {
-          "url": "/s/tecajc-2022/standardi"
-        },
-        "all_vocabulary/coursec/2022": {
-          "url": "/s/tecajc-2022/besedisce"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "Vodnik za implementacijo"
-        },
-        "my_robotic_friends/coursec/2022": {
-          "name": "Moji robotski prijatelji"
-        },
-        "my_robotic_friends_1/coursec/2022": {
-          "name": "Moji robotski prijatelji"
-        },
-        "my_robotic_friends_2/coursec/2022": {
-          "name": "Moji robotski prijatelji"
-        },
-        "my_robotic_friends_3/coursec/2022": {
-          "name": "Moji robotski prijatelji"
-        },
-        "my_robotic_friends_4/coursec/2022": {
-          "name": "Moji robotski prijatelji"
-        },
-        "pair_programming/coursec/2022": {
-          "name": "Programiranje parov"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "Veliki dogodek"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "Veliki dogodek"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "Veliki dogodek"
-        },
-        "the_big_event_course_c_/coursec/2022": {
-          "name": "Veliki dogodek (tečaj C)"
-        },
-        "variables/csd/2022": {
-          "name": "Spremenljivke"
-        },
-        "variables_3/csd/2022": {
-          "name": "Spremenljivke"
-        },
-        "sprites/csd/2022": {
-          "name": "liki"
-        },
-        "sprites_1/csd/2022": {
-          "name": "liki"
-        },
-        "text/csd/2022": {
-          "name": "Besedilo"
-        },
-        "conditionals/csd/2022": {
-          "name": "Pogoji"
-        },
-        "functions/csd/2022": {
-          "name": "Funkcije"
-        },
-        "functions_1/csd/2022": {
-          "name": "Funkcije"
-        },
-        "functions_4/csd/2022": {
-          "name": "Funkcije"
-        },
-        "lists/csd/2022": {
-          "name": "Seznami"
-        },
-        "variables_1/csd/2022": {
-          "name": "Spremenljivke"
-        },
-        "variables_2/csd/2022": {
-          "name": "Spremenljivke"
-        },
-        "functions_2/csd/2022": {
-          "name": "Funkcije"
-        },
-        "functions_3/csd/2022": {
-          "name": "Funkcije"
-        },
-        "functions_with_parameters/csd/2022": {
-          "name": "Funkcije s parametri"
-        },
-        "functions_5/csd/2022": {
-          "name": "Funkcije"
-        },
-        "lesson_plans/courseb/2018": {
+        "lesson_plans/csd/2017": {
           "name": "Učni načrti"
         },
-        "vocabulary/courseb/2018": {
+        "vocabulary/csd/2017": {
+          "name": "Slovar"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Učni načrti"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Slovar"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Učni načrti"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Slovar"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Učni načrti"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Slovar"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Učni načrti"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Slovar"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Učni načrti"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Slovar"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Učni načrti"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Slovar"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Učni načrti"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Slovar"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Učni načrti"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Slovar"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Učni načrti"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Slovar"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Učni načrti"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Slovar"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Učni načrti"
+        },
+        "vocabulary_5/csd/2018": {
           "name": "Slovar"
         },
         "lesson_plans/coursea/2018": {
@@ -239,10 +80,28 @@
         "vocabulary/coursea/2018": {
           "name": "Slovar"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Učni načrti"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Slovar"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Učni načrti"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Slovar"
+        },
         "lesson_plans/coursed/2018": {
           "name": "Učni načrti"
         },
         "vocabulary/coursed/2018": {
+          "name": "Slovar"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Učni načrti"
+        },
+        "vocabulary/coursee/2018": {
           "name": "Slovar"
         },
         "lesson_plans/coursef/2018": {
@@ -257,106 +116,22 @@
         "vocabulary/express/2018": {
           "name": "Slovar"
         },
-        "lesson_plans/coursee/2018": {
+        "lesson_plans/csd/2019": {
           "name": "Učni načrti"
         },
-        "vocabulary/coursee/2018": {
+        "vocabulary/csd/2019": {
           "name": "Slovar"
         },
-        "lesson_plans/coursec/2018": {
+        "lesson_plans_1/csd/2019": {
           "name": "Učni načrti"
         },
-        "vocabulary/coursec/2018": {
-          "name": "Slovar"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "Učni načrti"
-        },
-        "vocabulary_2/csd/2018": {
-          "name": "Slovar"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "Učni načrti"
-        },
-        "vocabulary_5/csd/2018": {
-          "name": "Slovar"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "Učni načrti"
-        },
-        "vocabulary_4/csd/2018": {
-          "name": "Slovar"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "Učni načrti"
-        },
-        "vocabulary_3/csd/2018": {
-          "name": "Slovar"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "Učni načrti"
-        },
-        "vocabulary_1/csd/2018": {
-          "name": "Slovar"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Učni načrti"
-        },
-        "vocabulary/csd/2018": {
-          "name": "Slovar"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "Učni načrti"
-        },
-        "vocabulary/coursea/2019": {
-          "name": "Slovar"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "Učni načrti"
-        },
-        "vocabulary/courseb/2019": {
-          "name": "Slovar"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "Učni načrti"
-        },
-        "vocabulary/coursed/2019": {
-          "name": "Slovar"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "Učni načrti"
-        },
-        "vocabulary/coursef/2019": {
-          "name": "Slovar"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "Učni načrti"
-        },
-        "vocabulary/coursee/2019": {
-          "name": "Slovar"
-        },
-        "lesson_plans/express/2019": {
-          "name": "Učni načrti"
-        },
-        "vocabulary/express/2019": {
-          "name": "Slovar"
-        },
-        "lesson_plans/coursec/2019": {
-          "name": "Učni načrti"
-        },
-        "vocabulary/coursec/2019": {
+        "vocabulary_1/csd/2019": {
           "name": "Slovar"
         },
         "lesson_plans_2/csd/2019": {
           "name": "Učni načrti"
         },
         "vocabulary_2/csd/2019": {
-          "name": "Slovar"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "Učni načrti"
-        },
-        "vocabulary_5/csd/2019": {
           "name": "Slovar"
         },
         "lesson_plans_3/csd/2019": {
@@ -371,85 +146,137 @@
         "vocabulary_4/csd/2019": {
           "name": "Slovar"
         },
-        "lesson_plans/csd/2019": {
+        "lesson_plans_5/csd/2019": {
           "name": "Učni načrti"
         },
-        "vocabulary/csd/2019": {
+        "vocabulary_5/csd/2019": {
           "name": "Slovar"
         },
-        "lesson_plans_1/csd/2019": {
+        "lesson_plans/coursea/2019": {
           "name": "Učni načrti"
         },
-        "vocabulary_1/csd/2019": {
+        "vocabulary/coursea/2019": {
           "name": "Slovar"
         },
-        "lesson_plans_2/csd/2017": {
+        "lesson_plans/courseb/2019": {
           "name": "Učni načrti"
         },
-        "vocabulary_2/csd/2017": {
+        "vocabulary/courseb/2019": {
           "name": "Slovar"
         },
-        "lesson_plans_5/csd/2017": {
+        "lesson_plans/coursec/2019": {
           "name": "Učni načrti"
         },
-        "vocabulary_5/csd/2017": {
+        "vocabulary/coursec/2019": {
           "name": "Slovar"
         },
-        "lesson_plans_1/csd/2017": {
+        "lesson_plans/coursed/2019": {
           "name": "Učni načrti"
         },
-        "vocabulary_1/csd/2017": {
+        "vocabulary/coursed/2019": {
           "name": "Slovar"
         },
-        "lesson_plans/csd/2017": {
+        "lesson_plans/coursee/2019": {
           "name": "Učni načrti"
         },
-        "vocabulary/csd/2017": {
+        "vocabulary/coursee/2019": {
           "name": "Slovar"
         },
-        "lesson_plans_4/csd/2017": {
+        "lesson_plans/coursef/2019": {
           "name": "Učni načrti"
         },
-        "vocabulary_4/csd/2017": {
+        "vocabulary/coursef/2019": {
           "name": "Slovar"
         },
-        "lesson_plans_3/csd/2017": {
+        "lesson_plans/express/2019": {
           "name": "Učni načrti"
         },
-        "vocabulary_3/csd/2017": {
+        "vocabulary/express/2019": {
           "name": "Slovar"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+        "lesson_plans/coursea/2020": {
+          "name": "Učni načrti"
         },
-        "implementation_guide/coursef/2021": {
+        "vocabulary/coursea/2020": {
+          "name": "Slovar"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Učni načrti"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Slovar"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Učni načrti"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Slovar"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Učni načrti"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Slovar"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Učni načrti"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Slovar"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Učni načrti"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Slovar"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Učni načrti"
+        },
+        "vocabulary/express/2020": {
+          "name": "Slovar"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Učni načrti"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Slovar"
+        },
+        "lists/csd/2021": {
+          "name": "Seznami"
+        },
+        "variables_1/csd/2021": {
+          "name": "Spremenljivke"
+        },
+        "sprites_1/csd/2021": {
+          "name": "liki"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funkcije"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funkcije"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funkcije"
+        },
+        "implementation_guide/coursea/2021": {
           "name": "Vodnik za implementacijo"
         },
-        "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Zabava s \"for\" zankami"
+        "pair-programming-vid/coursea/2021": {
+          "name": "Programiranje parov"
         },
-        "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Zabava s \"for\" zankami"
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Veseli zemljevidi"
         },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Zabava s \"for\" zankami"
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Veliki dogodek"
         },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Zabava s \"for\" zankami"
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Veliki dogodek"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Zabava s \"for\" zankami"
-        },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Internet"
-        },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "Internet"
-        },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "Internet"
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Veliki dogodek"
         },
         "implementation_guide/courseb/2021": {
           "name": "Vodnik za implementacijo"
@@ -476,24 +303,6 @@
           "name": "Veliki dogodek"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "Veliki dogodek"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "Vodnik za implementacijo"
-        },
-        "pair-programming-vid/coursea/2021": {
-          "name": "Programiranje parov"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Veseli zemljevidi"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "Veliki dogodek"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "Veliki dogodek"
-        },
-        "unplugged-video-big-event/coursea/2021": {
           "name": "Veliki dogodek"
         },
         "implementation_guide/coursec/2021": {
@@ -586,6 +395,36 @@
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Pogojniki s kartami"
         },
+        "implementation_guide/coursee/2021": {
+          "name": "Vodnik za implementacijo"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Vodnik za implementacijo"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Zabava s \"for\" zankami"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Zabava s \"for\" zankami"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Zabava s \"for\" zankami"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Zabava s \"for\" zankami"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Zabava s \"for\" zankami"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Internet"
+        },
         "pair_programming/express/2021": {
           "name": "Programiranje parov"
         },
@@ -595,74 +434,235 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Programiranje parov"
         },
-        "implementation_guide/coursee/2021": {
-          "name": "Vodnik za implementacijo"
-        },
-        "functions_2/csd/2021": {
-          "name": "Funkcije"
-        },
-        "variables_1/csd/2021": {
-          "name": "Spremenljivke"
-        },
-        "sprites_1/csd/2021": {
-          "name": "liki"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Funkcije"
-        },
-        "functions_1/csd/2021": {
-          "name": "Funkcije"
-        },
-        "lists/csd/2021": {
+        "lists/csd/2022": {
           "name": "Seznami"
         },
-        "lesson_plans/pre-express/2020": {
-          "name": "Učni načrti"
+        "variables/csd/2022": {
+          "name": "Spremenljivke"
         },
-        "vocabulary/pre-express/2020": {
-          "name": "Slovar"
+        "variables_3/csd/2022": {
+          "name": "Spremenljivke"
         },
-        "lesson_plans/express/2020": {
-          "name": "Učni načrti"
+        "sprites/csd/2022": {
+          "name": "liki"
         },
-        "vocabulary/express/2020": {
-          "name": "Slovar"
+        "sprites_1/csd/2022": {
+          "name": "liki"
         },
-        "lesson_plans/courseb/2020": {
-          "name": "Učni načrti"
+        "text/csd/2022": {
+          "name": "Besedilo"
         },
-        "vocabulary/courseb/2020": {
-          "name": "Slovar"
+        "conditionals/csd/2022": {
+          "name": "Pogoji"
         },
-        "lesson_plans/coursed/2020": {
-          "name": "Učni načrti"
+        "functions/csd/2022": {
+          "name": "Funkcije"
         },
-        "vocabulary/coursed/2020": {
-          "name": "Slovar"
+        "functions_1/csd/2022": {
+          "name": "Funkcije"
         },
-        "lesson_plans/coursec/2020": {
-          "name": "Učni načrti"
+        "functions_4/csd/2022": {
+          "name": "Funkcije"
         },
-        "vocabulary/coursec/2020": {
-          "name": "Slovar"
+        "variables_1/csd/2022": {
+          "name": "Spremenljivke"
         },
-        "lesson_plans/coursee/2020": {
-          "name": "Učni načrti"
+        "variables_2/csd/2022": {
+          "name": "Spremenljivke"
         },
-        "vocabulary/coursee/2020": {
-          "name": "Slovar"
+        "functions_2/csd/2022": {
+          "name": "Funkcije"
         },
-        "lesson_plans/coursea/2020": {
-          "name": "Učni načrti"
+        "functions_3/csd/2022": {
+          "name": "Funkcije"
         },
-        "vocabulary/coursea/2020": {
-          "name": "Slovar"
+        "functions_with_parameters/csd/2022": {
+          "name": "Funkcije s parametri"
         },
-        "lesson_plans/coursef/2020": {
-          "name": "Učni načrti"
+        "functions_5/csd/2022": {
+          "name": "Funkcije"
         },
-        "vocabulary/coursef/2020": {
-          "name": "Slovar"
+        "implementation_guide/coursea/2022": {
+          "name": "Vodnik za implementacijo"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Programiranje parov"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Veseli zemljevidi"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Veliki dogodek"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Veliki dogodek"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Veliki dogodek"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Vodnik za implementacijo"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Premakni se, premakni"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Premakni se, premakni"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Premakni se, premakni"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Dajmo, dajmo"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Programiranje parov"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Veliki dogodek"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Veliki dogodek"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Veliki dogodek"
+        },
+        "all_resources/coursec/2022": {
+          "url": "/s/tecajc-2022/viri"
+        },
+        "all_standards/coursec/2022": {
+          "url": "/s/tecajc-2022/standardi"
+        },
+        "all_vocabulary/coursec/2022": {
+          "url": "/s/tecajc-2022/besedisce"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Vodnik za implementacijo"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Moji robotski prijatelji"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Moji robotski prijatelji"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Moji robotski prijatelji"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Moji robotski prijatelji"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Moji robotski prijatelji"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Programiranje parov"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Veliki dogodek"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Veliki dogodek"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Veliki dogodek"
+        },
+        "the_big_event_course_c_/coursec/2022": {
+          "name": "Veliki dogodek (tečaj C)"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Vodnik za implementacijo"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Obarvajmo kvadratke"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Programiranje parov"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Relejsko programiranje"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Relejsko programiranje"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Relejsko programiranje"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Relejsko programiranje"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Relejsko programiranje"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Relejsko programiranje"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Pogojniki s kartami"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Pogojniki s kartami"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Pogojniki s kartami"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Pogojniki s kartami"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Pogojniki s kartami"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Vodnik za implementacijo"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Vodnik za implementacijo"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "all_resources/express/2022": {
+          "url": "/s/express-2022/viri"
+        },
+        "all_standards/express/2022": {
+          "url": "/s/express-2022/standardi"
+        },
+        "all_vocabulary/express/2022": {
+          "url": "/s/express-2022/besedisce"
+        },
+        "pair_programming/express/2022": {
+          "name": "Programiranje parov"
+        },
+        "variables/express/2022": {
+          "name": "Spremenljivke"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Programiranje parov"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         }
       }
     }

@@ -76,7 +76,7 @@ ru:
       Building an App: Создание приложения
       'Bunny ': 'Кролик
 
-'
+        '
       Button Circuits: Схемы кнопок
       CS Discoveries Post-Course Survey: 'Занимательная информатика: опрос по окончании
         курса'
@@ -124,7 +124,7 @@ ru:
       Course E Artist Project: Курс E. Проект "Художник"
       Course E Sprite Lab Project: 'Курс Д: проект в Лаборатории спрайтов
 
-'
+        '
       'Course E: Play Lab Project': 'Курс E: проект в Лаборатории игр'
       Course F Artist Project: 'Курс Е: проект в среде Художника'
       Course F Sprite Lab Project: 'Курс Е: проект в Лаборатории спрайтов'
@@ -163,7 +163,7 @@ ru:
         без компьютера
       Dogger Example: 'Пример доггера
 
-'
+        '
       Draw Your Background: Нарисовать Свой Фон
       Draw a Background: Нарисовать Фон
       Drawing: Рисование
@@ -228,7 +228,7 @@ ru:
       Functions with Parameters: Процедуры с параметрами
       Geometric Sun: 'Геометрическое солнце
 
-'
+        '
       Get In Formation: Давайте установим порядок
       Getters and Setters: Средства доступа для чтения и записи
       Getting Properties: Обретение свойств
@@ -423,7 +423,7 @@ ru:
       Revise Sprite Lab Project: Отредактируй проект в Лаборатории спрайтов
       Robot Doodle: 'Робот Дудль
 
-'
+        '
       Run a simulation: Запуск симуляции
       Safari App: Приложение Сафари
       Safari Model: Модель Сафари
@@ -526,7 +526,7 @@ ru:
         инструмент «Художник»'
       'Video: CS Matters': 'Видео: "Важность информатики"
 
-'
+        '
       'Video: Circuits and Logic': 'Видео: Схемы и Логика'
       'Video: Code Your Own Flappy Game': 'Видео: Создайте свою собственную игру «Порхающая
         птичка»'

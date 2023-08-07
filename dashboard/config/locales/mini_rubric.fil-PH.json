@@ -2,9 +2,6 @@
   "fil-PH": {
     "data": {
       "mini_rubric": {
-        "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "Pangunahing Konsepto"
-        },
         "CDU U6 Playground Sound Board_2019": {
           "rubric_key_concept": "Gumawa at baguhin ang mga hilera, bumuo ng software para makontrol ang iba't ibang pisikal na device.",
           "rubric_performance_level_1": "Gumagana ang program gaya ng inilarawan, na may hindi bababa sa apat na board ng kaganapan na bawat isa ay nagpapalitaw ng magkakaibang serye ng mga tala.",
@@ -252,6 +249,9 @@
           "rubric_performance_level_2": "Ang isang bagong hilera ay nilikha at iniimbak sa variable, ngunit maaaring may mga hindi nauugnay na mga error na pumipigil sa tala sa pag-play kapag pinindot ang kanang button.",
           "rubric_performance_level_3": "Ang bagong hilera ay nilikha, ngunit ito ay maaaring hindi naka-imbak sa elemento, o ito ay walang laman, kaya ang program ay hindi maaaring gumana tulad ng inilarawan.",
           "rubric_performance_level_4": "Walang mga hilera sa program."
+        },
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "Pangunahing Konsepto"
         }
       }
     }

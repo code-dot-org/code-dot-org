@@ -2,13 +2,6 @@
   "te-IN": {
     "data": {
       "title": {
-        "courseB_unplugged_MRF": "అన్‌ప్లగ్డ్ కార్యాచరణ",
-        "courseB_unplugged_loopyMRF": "అన్‌ప్లగ్డ్ కార్యాచరణ",
-        "courseC_Unplugged_ScreenOutTheMean": "అన్‌ప్లగ్డ్ కార్యాచరణ",
-        "courseC_Unplugged_ScreenOutTheMean_2018": "అన్‌ప్లగ్డ్ కార్యాచరణ",
-        "courseD_unplugged_digitalCitizenship": "అన్‌ప్లగ్డ్ కార్యాచరణ",
-        "courseD_unplugged_digitalCitizenship_2018": "అన్‌ప్లగ్డ్ కార్యాచరణ",
-        "courseF_unplugged_powerOfWords": "అన్‌ప్లగ్డ్ కార్యాచరణ",
         "BigEvent": "బిగ్ ఈవెంట్",
         "BigEvent_2018": "బిగ్ ఈవెంట్",
         "BinaryBracelets": "బైనరీ కంకణాలు",
@@ -57,8 +50,15 @@
         "courseA_unplugged_loops": "లూప్స్ అన్ప్లగ్డ్",
         "courseA_unplugged_loops_2018": "లూప్స్ అన్ప్లగ్డ్",
         "courseB_unplugged_CnC_2018": "ఫెయిర్ను సృష్టించడం మరియు ప్లే చేయడం చాలా బాగుంది",
+        "courseB_unplugged_MRF": "అన్‌ప్లగ్డ్ కార్యాచరణ",
+        "courseB_unplugged_loopyMRF": "అన్‌ప్లగ్డ్ కార్యాచరణ",
+        "courseC_Unplugged_ScreenOutTheMean": "అన్‌ప్లగ్డ్ కార్యాచరణ",
+        "courseC_Unplugged_ScreenOutTheMean_2018": "అన్‌ప్లగ్డ్ కార్యాచరణ",
+        "courseD_unplugged_digitalCitizenship": "అన్‌ప్లగ్డ్ కార్యాచరణ",
+        "courseD_unplugged_digitalCitizenship_2018": "అన్‌ప్లగ్డ్ కార్యాచరణ",
         "courseE_unplugged_CnC_2018": "డిజిటల్ షేరింగ్",
         "courseE_unplugged_privateInformation": "కామన్ సెన్స్ ఎడ్యుకేషన్: ప్రైవేట్ మరియు వ్యక్తిగత సమాచారం ",
+        "courseF_unplugged_powerOfWords": "అన్‌ప్లగ్డ్ కార్యాచరణ",
         "courseF_unplugged_powerOfWords_2018": "అనువాదం లేదు: en-us.data.unplugged.coursef_Unplugged_Powerofwords_2018.title"
       }
     }

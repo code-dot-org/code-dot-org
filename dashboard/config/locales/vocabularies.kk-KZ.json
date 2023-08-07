@@ -2,212 +2,34 @@
   "kk-KZ": {
     "data": {
       "vocabularies": {
-        "debugging/minecraft/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/hero/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "function/hero/unversioned": {
-          "word": "Функция"
-        },
-        "code/poem-art/2021": {
-          "word": "Код"
-        },
-        "debugging/flappy/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/hourofcode/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/frozen/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/iceage/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "code/artist/unversioned": {
-          "word": "Код"
-        },
-        "debugging/artist/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/gumball/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "conditionals/aquatic/unversioned": {
-          "word": "Шарттар"
-        },
-        "debugging/aquatic/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "loops/aquatic/unversioned": {
-          "word": "Ілмек"
-        },
-        "debugging/starwars/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/mc/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/playlab/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/starwarsblocks/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/sports/unversioned": {
-          "word": "Код"
-        },
-        "debugging/sports/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/infinity/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/basketball/unversioned": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "debugging/coursed/2022": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "programming/coursed/2022": {
-          "word": "Бағдарламалау"
-        },
-        "conditionals/coursed/2022": {
-          "word": "Шарттар"
-        },
-        "variable/coursef/2022": {
-          "word": "Айнымалы"
-        },
-        "internet/coursef/2022": {
-          "word": "Ғаламтор"
-        },
-        "define/coursef/2022": {
-          "word": "Анықта"
-        },
-        "function/coursee/2022": {
-          "word": "Функция"
-        },
-        "conditionals/coursee/2022": {
-          "word": "Шарттар"
-        },
-        "copyright/coursee/2022": {
+        "copyright/csd/2021": {
           "word": "Авторлық құқық"
         },
-        "define/coursee/2022": {
-          "word": "Анықта"
-        },
-        "debugging/courseb/2022": {
+        "debugging/csd/2021": {
           "word": "Бағдарламаны дұрыстау"
         },
-        "programming/courseb/2022": {
-          "word": "Бағдарламалау"
-        },
-        "debugging/express/2022": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "programming/express/2022": {
-          "word": "Бағдарламалау"
-        },
-        "conditionals/express/2022": {
-          "word": "Шарттар"
-        },
-        "function/express/2022": {
-          "word": "Функция"
-        },
-        "variable/express/2022": {
+        "variable/csd/2021": {
           "word": "Айнымалы"
         },
-        "define/express/2022": {
-          "word": "Анықта"
-        },
-        "debugging/pre-express/2022": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "programming/pre-express/2022": {
-          "word": "Бағдарламалау"
-        },
-        "debugging/coursea/2022": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "programming/coursea/2022": {
-          "word": "Бағдарламалау"
-        },
-        "debugging/coursec/2022": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "programming/coursec/2022": {
-          "word": "Бағдарламалау"
-        },
-        "binary/coursec/2022": {
-          "word": "Бинарлы"
-        },
-        "debugging/csd/2022": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "variable/csd/2022": {
-          "word": "Айнымалы"
-        },
-        "conditionals/csd/2022": {
+        "conditionals/csd/2021": {
           "word": "Шарттар"
         },
-        "abstraction/csd/2022": {
+        "abstraction/csd/2021": {
           "word": "Абстракция"
         },
-        "function/csd/2022": {
+        "function/csd/2021": {
           "word": "Функция"
-        },
-        "copyright/csd/2022": {
-          "word": "Авторлық құқық"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Код",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "variable/coursef/2021": {
-          "word": "Айнымалы"
-        },
-        "internet/coursef/2021": {
-          "word": "Ғаламтор"
-        },
-        "define/coursef/2021": {
-          "word": "Анықта"
-        },
-        "debugging/courseb/2021": {
-          "word": "Бағдарламаны дұрыстау"
-        },
-        "programming/courseb/2021": {
-          "word": "Бағдарламалау"
         },
         "debugging/coursea/2021": {
           "word": "Бағдарламаны дұрыстау"
         },
         "programming/coursea/2021": {
+          "word": "Бағдарламалау"
+        },
+        "debugging/courseb/2021": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/courseb/2021": {
           "word": "Бағдарламалау"
         },
         "debugging/coursec/2021": {
@@ -227,6 +49,27 @@
         },
         "conditionals/coursed/2021": {
           "word": "Шарттар"
+        },
+        "copyright/coursee/2021": {
+          "word": "Авторлық құқық"
+        },
+        "function/coursee/2021": {
+          "word": "Функция"
+        },
+        "conditionals/coursee/2021": {
+          "word": "Шарттар"
+        },
+        "define/coursee/2021": {
+          "word": "Анықта"
+        },
+        "variable/coursef/2021": {
+          "word": "Айнымалы"
+        },
+        "internet/coursef/2021": {
+          "word": "Ғаламтор"
+        },
+        "define/coursef/2021": {
+          "word": "Анықта"
         },
         "debugging/express/2021": {
           "word": "Бағдарламаны дұрыстау"
@@ -252,35 +95,192 @@
         "programming/pre-express/2021": {
           "word": "Бағдарламалау"
         },
-        "copyright/coursee/2021": {
+        "copyright/csd/2022": {
           "word": "Авторлық құқық"
         },
-        "function/coursee/2021": {
-          "word": "Функция"
-        },
-        "conditionals/coursee/2021": {
-          "word": "Шарттар"
-        },
-        "define/coursee/2021": {
-          "word": "Анықта"
-        },
-        "debugging/csd/2021": {
+        "debugging/csd/2022": {
           "word": "Бағдарламаны дұрыстау"
         },
-        "variable/csd/2021": {
+        "variable/csd/2022": {
           "word": "Айнымалы"
         },
-        "conditionals/csd/2021": {
+        "conditionals/csd/2022": {
           "word": "Шарттар"
         },
-        "abstraction/csd/2021": {
+        "abstraction/csd/2022": {
           "word": "Абстракция"
         },
-        "function/csd/2021": {
+        "function/csd/2022": {
           "word": "Функция"
         },
-        "copyright/csd/2021": {
+        "debugging/coursea/2022": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/coursea/2022": {
+          "word": "Бағдарламалау"
+        },
+        "debugging/courseb/2022": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/courseb/2022": {
+          "word": "Бағдарламалау"
+        },
+        "debugging/coursec/2022": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/coursec/2022": {
+          "word": "Бағдарламалау"
+        },
+        "binary/coursec/2022": {
+          "word": "Бинарлы"
+        },
+        "debugging/coursed/2022": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/coursed/2022": {
+          "word": "Бағдарламалау"
+        },
+        "conditionals/coursed/2022": {
+          "word": "Шарттар"
+        },
+        "function/coursee/2022": {
+          "word": "Функция"
+        },
+        "conditionals/coursee/2022": {
+          "word": "Шарттар"
+        },
+        "copyright/coursee/2022": {
           "word": "Авторлық құқық"
+        },
+        "define/coursee/2022": {
+          "word": "Анықта"
+        },
+        "variable/coursef/2022": {
+          "word": "Айнымалы"
+        },
+        "internet/coursef/2022": {
+          "word": "Ғаламтор"
+        },
+        "define/coursef/2022": {
+          "word": "Анықта"
+        },
+        "debugging/express/2022": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/express/2022": {
+          "word": "Бағдарламалау"
+        },
+        "conditionals/express/2022": {
+          "word": "Шарттар"
+        },
+        "function/express/2022": {
+          "word": "Функция"
+        },
+        "variable/express/2022": {
+          "word": "Айнымалы"
+        },
+        "define/express/2022": {
+          "word": "Анықта"
+        },
+        "debugging/pre-express/2022": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "programming/pre-express/2022": {
+          "word": "Бағдарламалау"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Шарттар"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Ілмек"
+        },
+        "code/artist/unversioned": {
+          "word": "Код"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "function/hero/unversioned": {
+          "word": "Функция"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "code/poem-art/2021": {
+          "word": "Код"
+        },
+        "code/sports/unversioned": {
+          "word": "Код"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Бағдарламаны дұрыстау"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Код",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         }
       }
     }

@@ -2,7 +2,8 @@
   "pages": {
     "/projects": "coldplay",
     "/certificates": "hoc-more",
-    "/courses": "ai-launch-2023"
+    "/courses": "ai-launch-2023",
+    "/home": "ai-pl-launch-2023"
   },
   "banners": {
     "csleadersprize": {
@@ -146,11 +147,19 @@
     },
     "ai-launch-2023": {
       "image": "/shared/images/announcement/announcement_special_ai-launch_2023.png",
-      "title": "AI education for the world ",
+      "title": "AI education for the world",
       "body": "See how we're planning to bring AI education to students around the world.",
       "buttonText": "Learn more",
       "buttonUrl": "https://code.org/ai",
       "buttonId": "ai-launch-2023"
+    },
+    "ai-pl-launch-2023": {
+      "image": "/shared/images/announcement/announcement_ai_pl_2023.png",
+      "title": "AI 101 for Teachers",
+      "body": "Discover the groundbreaking world of Artificial Intelligence (AI) and its transformative potential in education with our comprehensive online learning series for teachers.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/ai/pl/101",
+      "buttonId": "ai-pl-launch-2023"
     }
   }
 }

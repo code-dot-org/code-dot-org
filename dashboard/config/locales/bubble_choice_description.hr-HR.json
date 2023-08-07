@@ -2,9 +2,9 @@
   "hr-HR": {
     "data": {
       "bubble_choice_description": {
-        "spritelab_extras_repeat": "Složite brzo mnoštvo istovjetnih spriteova koristeći petlje!",
         "courseF_extras_sim": "Stvori i prilagodi osobnu simulaciju!",
-        "helloworld_emoji_location": "Neka sprite počne s novim ponašanjem nakon nekog vremena."
+        "helloworld_emoji_location": "Neka sprite počne s novim ponašanjem nakon nekog vremena.",
+        "spritelab_extras_repeat": "Složite brzo mnoštvo istovjetnih spriteova koristeći petlje!"
       }
     }
   }

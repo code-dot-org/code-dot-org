@@ -4064,6 +4064,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4254,3 +4256,102 @@ ru:
           lesson_groups:
             lessonGroup-5:
               display_name: Двумерные массивы
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифровое гражданство
+            lessonGroup-3:
+              display_name: Последовательность действий
+            lessonGroup-4:
+              display_name: Циклы
+            lessonGroup-5:
+              display_name: Воздействие компьютерной техники
+          description_audience: 'Возраст: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Данные
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифровое гражданство
+            lessonGroup-3:
+              display_name: Последовательность действий
+            lessonGroup-4:
+              display_name: Циклы
+            lessonGroup-5:
+              display_name: Воздействие компьютерной техники
+            lessonGroup-6:
+              display_name: Данные
+          description_audience: 'Возраст: 4-7'
+          description_short: Введение в компьютерные науки для детей, еще не умеющих читать.
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифровое гражданство
+            lessonGroup-3:
+              display_name: Последовательность действий
+            lessonGroup-4:
+              display_name: Циклы
+            lessonGroup-5:
+              display_name: Воздействие компьютерной техники
+            lessonGroup-6:
+              display_name: События
+            lessonGroup-7:
+              display_name: Завершение Курсового Проекта
+          description_audience: 'Возраст: 5-8'
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифровое гражданство
+            lessonGroup-3:
+              display_name: Последовательность действий
+            lessonGroup-4:
+              display_name: Циклы
+            lessonGroup-5:
+              display_name: События
+            lessonGroup-6:
+              display_name: Данные
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифровое гражданство
+            lessonGroup-3:
+              display_name: Последовательность действий
+            lessonGroup-4:
+              display_name: Воздействие компьютерной техники
+            lessonGroup-6:
+              display_name: Циклы
+            lessonGroup-7:
+              display_name: Данные
+            lessonGroup-8:
+              display_name: Завершение Курсового Проекта
+          description_audience: 'Возраст: 7-11'
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Вложенные циклы
+            lessonGroup-4:
+              display_name: функции
+            lessonGroup-6:
+              display_name: Завершение Курсового Проекта
+          description_audience: 'Возраст: 8-12'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайты
+          description_audience: 'Возраст: 9-13'
+          description_short: Изучи все понятия в Основах компьютерных наук и создай собственную картинку, игру или историю!
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайты
+            lessonGroup-3:
+              display_name: Условные команды
+            lessonGroup-5:
+              display_name: Переменные
+            lessonGroup-6:
+              display_name: Воздействие компьютерной техники
+            lessonGroup-7:
+              display_name: Завершение Курсового Проекта
+          description_audience: 'Возраст: 9-13'
+          description_short: Изучи все понятия в Основах компьютерных наук и создай собственную картинку, игру или историю!

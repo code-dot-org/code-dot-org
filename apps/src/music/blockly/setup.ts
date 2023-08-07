@@ -1,17 +1,12 @@
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DOCS_BASE_URL,
-  DYNAMIC_TRIGGER_EXTENSION,
   FIELD_CHORD_TYPE,
   FIELD_PATTERN_TYPE,
   FIELD_SOUNDS_TYPE,
   PLAY_MULTI_MUTATOR,
 } from './constants';
-import {
-  dynamicTriggerExtension,
-  getDefaultTrackNameExtension,
-  playMultiMutator,
-} from './extensions';
+import {getDefaultTrackNameExtension, playMultiMutator} from './extensions';
 import FieldChord from './FieldChord';
 import FieldPattern from './FieldPattern';
 import FieldSounds from './FieldSounds';
@@ -25,11 +20,6 @@ import {BlockConfig} from './types';
  * Blockly state.
  */
 export function setUpBlocklyForMusicLab() {
-  Blockly.Extensions.register(
-    DYNAMIC_TRIGGER_EXTENSION,
-    dynamicTriggerExtension
-  );
-
   Blockly.Extensions.register(
     DEFAULT_TRACK_NAME_EXTENSION,
     getDefaultTrackNameExtension()
@@ -51,6 +41,7 @@ export function setUpBlocklyForMusicLab() {
     Blockly.JavaScript[blockType] = blockConfig.generator;
   }
 
+  Blockly.cdoUtils.registerCustomProcedureBlocks();
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
   Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
   Blockly.fieldRegistry.register(FIELD_CHORD_TYPE, FieldChord);

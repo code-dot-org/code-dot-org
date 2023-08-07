@@ -3,31 +3,31 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Da",
-          "No": "Ne"
+          "No": "Ne",
+          "Yes": "Da"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Da",
-          "No": "Ne"
+          "No": "Ne",
+          "Yes": "Da"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Da",
-          "No": "Ne"
+          "No": "Ne",
+          "Yes": "Da"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Da",
-          "No": "Ne"
+          "No": "Ne",
+          "Yes": "Da"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Ime",
-          "Color": "Boja",
           "City": "Grad",
+          "Color": "Boja",
+          "Name": "Ime",
           "text": "tekst"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Ime",
-          "Color": "Boja",
           "City": "Grad",
+          "Color": "Boja",
+          "Name": "Ime",
           "text": "tekst"
         },
         "CSD U1 processing guess_2021": {
@@ -49,24 +49,24 @@
           "Back": "Nazad"
         },
         "CSD U1 storage movies_2021": {
+          "No": "Ne",
           "Star Wars": "Ratovi zvijezda",
           "Yes": "Da",
-          "No": "Ne",
           "text": "tekst"
         },
         "CSD U1 storage movies_2022": {
+          "No": "Ne",
           "Star Wars": "Ratovi zvijezda",
           "Yes": "Da",
-          "No": "Ne",
           "text": "tekst"
         },
         "CSD U1 storage outfit_2021": {
-          "green": "zelena",
-          "black": "crno"
+          "black": "crno",
+          "green": "zelena"
         },
         "CSD U1 storage outfit_2022": {
-          "green": "zelena",
-          "black": "crno"
+          "black": "crno",
+          "green": "zelena"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Uspio si!"
@@ -81,44 +81,44 @@
           "Medium": "Srednje"
         },
         "CSD U6 - Combine Inputs - A_2222": {
+          "green": "zelena",
           "left": "lijevo",
-          "right": "desno",
           "red": "crvena",
-          "green": "zelena"
+          "right": "desno"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "brzu",
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "Crvena",
+          "Blue": "Plava",
           "Green": "Zelena",
-          "Blue": "Plava"
+          "Red": "Crvena"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "lijevo",
           "right": "desno"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "zelena",
-          "blue": "plavo"
+          "blue": "plavo",
+          "green": "zelena"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "Crvena",
-          "Blue": "Plava"
+          "Blue": "Plava",
+          "Red": "Crvena"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
@@ -140,53 +140,53 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "Score": "Bodovi"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "Crvena",
+          "Blue": "Plava",
           "Green": "Zelena",
-          "Blue": "Plava"
+          "Red": "Crvena"
         },
         "CSD U6 - Screen Inputs - P_2222": {
-          "Red": "Crvena",
-          "Green": "Zelena",
           "Blue": "Plava",
+          "Green": "Zelena",
+          "Red": "Crvena",
           "Save": "Spremi"
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
@@ -202,16 +202,16 @@
           "title": "naslov"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "Bijela",
-          "Red": "Crvena",
+          "Blue": "Plava",
           "Green": "Zelena",
-          "Blue": "Plava"
+          "Red": "Crvena",
+          "White": "Bijela"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "gore",
           "down": "dolje",
           "left": "lijevo",
-          "right": "desno"
+          "right": "desno",
+          "up": "gore"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "ime"
@@ -259,40 +259,40 @@
           "Update": "Osvježi"
         },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "prvi"
@@ -307,20 +307,20 @@
           "first": "prvi"
         },
         "CSD U6 change": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 change_2018": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 change_2019": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 change_2021": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Srednje"
@@ -347,59 +347,59 @@
           "Happy": "Sretnu"
         },
         "CSD U6 frequency": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 frequency_2018": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 frequency_2019": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 frequency_2021": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 get toggle": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 get toggle_2018": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 get toggle_2019": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 get toggle_2021": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 getProperty Demo": {
-          "Red": "Crvena",
-          "Green": "Zelena",
           "Blue": "Plava",
+          "Green": "Zelena",
+          "Red": "Crvena",
           "Save": "Spremi"
         },
         "CSD U6 getProperty Demo_2018": {
-          "Red": "Crvena",
-          "Green": "Zelena",
           "Blue": "Plava",
+          "Green": "Zelena",
+          "Red": "Crvena",
           "Save": "Spremi"
         },
         "CSD U6 getProperty Demo_2019": {
-          "Red": "Crvena",
-          "Green": "Zelena",
           "Blue": "Plava",
+          "Green": "Zelena",
+          "Red": "Crvena",
           "Save": "Spremi"
         },
         "CSD U6 getProperty Demo_2021": {
-          "Red": "Crvena",
-          "Green": "Zelena",
           "Blue": "Plava",
+          "Green": "Zelena",
+          "Red": "Crvena",
           "Save": "Spremi"
         },
         "CSD U6 getProperty input": {
@@ -416,55 +416,55 @@
         },
         "CSD U6 getters debug": {
           "fast": "brzu",
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 getters debug_2018": {
           "fast": "brzu",
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 getters debug_2019": {
           "fast": "brzu",
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 getters debug_2021": {
           "fast": "brzu",
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 interval": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 interval_2018": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 interval_2019": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 interval_2021": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 params create colors": {
-          "Red": "Crvena",
-          "Blue": "Plava"
+          "Blue": "Plava",
+          "Red": "Crvena"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "Crvena",
-          "Blue": "Plava"
+          "Blue": "Plava",
+          "Red": "Crvena"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "Crvena",
-          "Blue": "Plava"
+          "Blue": "Plava",
+          "Red": "Crvena"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "Crvena",
-          "Blue": "Plava"
+          "Blue": "Plava",
+          "Red": "Crvena"
         },
         "CSD U6 sensor experiment embedded": {
           "text": "tekst"
@@ -491,78 +491,78 @@
           "title": "naslov"
         },
         "CSD U6 slider intro": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 slider intro_2018": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 slider intro_2019": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSD U6 slider intro_2021": {
-          "short": "kratko",
-          "long": "dugo"
+          "long": "dugo",
+          "short": "kratko"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "Crvena",
+          "Blue": "Plava",
           "Green": "Zelena",
-          "Blue": "Plava"
+          "Red": "Crvena"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "Crvena",
+          "Blue": "Plava",
           "Green": "Zelena",
-          "Blue": "Plava"
+          "Red": "Crvena"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "O",
           "About Us": "O nama",
-          "Cancel": "Odustani",
-          "Red": "Crvena",
-          "Green": "Zelena",
           "Blue": "Plava",
-          "Yes": "Da",
+          "Cancel": "Odustani",
+          "Green": "Zelena",
           "No": "Ne",
-          "Save": "Spremi"
+          "Red": "Crvena",
+          "Save": "Spremi",
+          "Yes": "Da"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "O",
           "About Us": "O nama",
-          "Cancel": "Odustani",
-          "Red": "Crvena",
-          "Green": "Zelena",
           "Blue": "Plava",
-          "Yes": "Da",
+          "Cancel": "Odustani",
+          "Green": "Zelena",
           "No": "Ne",
-          "Save": "Spremi"
+          "Red": "Crvena",
+          "Save": "Spremi",
+          "Yes": "Da"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "O",
           "About Us": "O nama",
-          "Cancel": "Odustani",
-          "Red": "Crvena",
-          "Green": "Zelena",
           "Blue": "Plava",
-          "Yes": "Da",
+          "Cancel": "Odustani",
+          "Green": "Zelena",
           "No": "Ne",
-          "Save": "Spremi"
+          "Red": "Crvena",
+          "Save": "Spremi",
+          "Yes": "Da"
         },
         "CSDU4 Decision App Demo": {
           "About": "O",
-          "When?": "Kada?",
-          "About Us": "O nama"
+          "About Us": "O nama",
+          "When?": "Kada?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "O",
-          "When?": "Kada?",
-          "About Us": "O nama"
+          "About Us": "O nama",
+          "When?": "Kada?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "O",
-          "When?": "Kada?",
-          "About Us": "O nama"
+          "About Us": "O nama",
+          "When?": "Kada?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Sakrij",
@@ -571,38 +571,38 @@
         "CSDU4 List App Demo": {
           "About": "O",
           "About Us": "O nama",
-          "Done": "Gotovo",
-          "Cancel": "Odustani"
+          "Cancel": "Odustani",
+          "Done": "Gotovo"
         },
         "CSDU4 List App Demo_2018": {
           "About": "O",
           "About Us": "O nama",
-          "Done": "Gotovo",
-          "Cancel": "Odustani"
+          "Cancel": "Odustani",
+          "Done": "Gotovo"
         },
         "CSDU4 List App Demo_2019": {
           "About": "O",
           "About Us": "O nama",
-          "Done": "Gotovo",
-          "Cancel": "Odustani"
+          "Cancel": "Odustani",
+          "Done": "Gotovo"
         },
         "CSDU4 Quiz App Demo": {
           "About": "O",
+          "About Us": "O nama",
           "Submit": "Pošalji",
-          "When?": "Kada?",
-          "About Us": "O nama"
+          "When?": "Kada?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "O",
+          "About Us": "O nama",
           "Submit": "Pošalji",
-          "When?": "Kada?",
-          "About Us": "O nama"
+          "When?": "Kada?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "O",
+          "About Us": "O nama",
           "Submit": "Pošalji",
-          "When?": "Kada?",
-          "About Us": "O nama"
+          "When?": "Kada?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -612,76 +612,76 @@
           "Back": "Nazad"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Istok",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "tekst"
@@ -741,12 +741,12 @@
           "Next": "Sljedeći"
         },
         "ml-customize-raspado-2021": {
-          "yes": "da",
-          "no": "ne"
+          "no": "ne",
+          "yes": "da"
         },
         "ml-customize-raspado_2022": {
-          "yes": "da",
-          "no": "ne"
+          "no": "ne",
+          "yes": "da"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Nastavi",
@@ -763,16 +763,16 @@
           "Silly": "Smiješnu"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "Zapad",
           "A": "A",
-          "yes": "da",
-          "no": "ne"
+          "W": "Zapad",
+          "no": "ne",
+          "yes": "da"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "Zapad",
           "A": "A",
-          "yes": "da",
-          "no": "ne"
+          "W": "Zapad",
+          "no": "ne",
+          "yes": "da"
         },
         "ml-model cards-book recommender model card": {
           "Silly": "Smiješnu"
@@ -787,34 +787,34 @@
           "Back": "Nazad"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Da",
+          "B": "B",
           "No": "Ne",
-          "B": "B"
+          "Yes": "Da"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Da",
+          "B": "B",
           "No": "Ne",
-          "B": "B"
+          "Yes": "Da"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Da",
-          "No": "Ne"
+          "No": "Ne",
+          "Yes": "Da"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Da",
-          "No": "Ne"
+          "No": "Ne",
+          "Yes": "Da"
         },
         "ml-use model card-example3A-2021": {
-          "rain": "kiša",
-          "snow": "snijeg",
           "cloudy": "oblaci",
-          "night": "noć"
+          "night": "noć",
+          "rain": "kiša",
+          "snow": "snijeg"
         },
         "ml-use model card-example3A_2022": {
-          "rain": "kiša",
-          "snow": "snijeg",
           "cloudy": "oblaci",
-          "night": "noć"
+          "night": "noć",
+          "rain": "kiša",
+          "snow": "snijeg"
         }
       }
     }

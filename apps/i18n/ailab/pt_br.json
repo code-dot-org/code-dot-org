@@ -1,15 +1,15 @@
 {
-  "selectDataset": "Selecione os tipos de eventos que você deseja usar",
-  "uploadedDataset": "Você acabou de fazer o upload de um conjunto de dados.",
-  "selectedDataset": "Você acabou de selecionar um conjunto de dados.",
-  "dataDisplayLabel": "Escolha uma coluna para ver",
   "dataDisplayFeatures": "Escolha uma ou mais colunas como entradas para ajudar a fazer a previsão.\n",
-  "selectedFeatureNumerical": "Você acabou de selecionar um recurso numérico.\n",
+  "dataDisplayLabel": "Escolha uma coluna para prever.",
+  "generateResults": "Seu modelo está sendo testado.",
+  "modelSummary": "Você treinou e salvou seu modelo com sucesso. Revise os detalhes do seu modelo e clique em FINALIZAR para usar seu modelo treinado no App Lab.\n",
+  "results": "Revise os resultados.",
+  "resultsDetails": "Detalhes dos resultados estão sendo mostrados.",
+  "saveModel": "Salve o modelo treinado para usar no App Lab.",
+  "selectDataset": "Selecione o conjunto de dados que você gostaria de usar.",
+  "selectedDataset": "Você acabou de selecionar um conjunto de dados.",
   "selectedFeatureCategorical": "Você acabou de selecionar um recurso categórico.\n",
+  "selectedFeatureNumerical": "Você acabou de selecionar um recurso numérico.\n",
   "trainModel": "Seu modelo está sendo treinado.\n",
-  "generateResults": "Seu modelo está sendo testado.\n",
-  "results": "Analise os resultados.\nAnalyse the results.",
-  "resultsDetails": "Detalhes dos resultados estão sendo mostrados.\n",
-  "saveModel": "Salve o modelo treinado para usar no App Lab.\n",
-  "modelSummary": "Você treinou e salvou seu modelo com sucesso. Revise os detalhes do seu modelo e clique em FINALIZAR para usar seu modelo treinado no App Lab.\n"
+  "uploadedDataset": "Você acabou de fazer o upload de um conjunto de dados."
 }

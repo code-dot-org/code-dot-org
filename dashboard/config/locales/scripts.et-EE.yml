@@ -3,161 +3,83 @@ et:
   data:
     script:
       name:
-        course1:
-          title: Kursus 1
-          description: Kui oled aeglane lugeja, siis alusta 1. kursusega. Õpilased
-            loovad arvutiprogramme, mis aitavad neil õppida teistega koostööd tegema,
-            arendada probleemi lahendamise oskust ning vastupidavust raskete ülesannete
-            lahendamisel. Selle kursuse lõpuks loovad õpilased päris oma mängu või
-            loo, mida nad saavad jagada. Soovitatav 5-8-aastastele.
-          description_short: Sissejuhatus arvutiteadusesse õpilastega, kes on just
-            õppisid lugema.
-          description_audience: Vanustele 4-6
-          student_description: Kui oled aeglane lugeja, siis alusta 1. kursusega.
-            Õpilased loovad arvutiprogramme, mis aitavad neil õppida teistega koostööd
-            tegema, arendada probleemi lahendamise oskust ning vastupidavust raskete
-            ülesannete lahendamisel. Selle kursuse lõpuks loovad õpilased päris oma
-            mängu või loo, mida nad saavad jagada. Soovitatav 5-8-aastastele.
-        course2:
-          title: Kursus 2
-          description: Kui oskad lugeda ja sul ei ole eelnevad programmeerimise kogemust,
-            siis alusta kursus 2-ga. Selles kursuses õpilased moodustavad programme
-            probleemide lahendamiseks ja arendavad interaktiivseid mänge või lugusid,
-            mida nad saavad jagada. Soovitav 2. klassist kuni 5. klassini.
-          description_short: Sissejuhatus arvutiteadusesse õpilastega, kes oskavad
-            lugeda.
-          description_audience: Vanusele 6+ (lugemisoskus vajalik)
-          student_description: Kui oskad lugeda ja sul ei ole eelnevad programmeerimise
-            kogemust, siis alusta kursus 2-ga. Selles kursuses õpilased moodustavad
-            programme probleemide lahendamiseks ja arendavad interaktiivseid mänge
-            või lugusid, mida nad saavad jagada. Soovitav 2. klassist kuni 5. klassini.
-        course3:
-          title: Kursus 3
-          description: Kursus 3 on loodud õpilastele, kes on läbinud kursuse 2. Õpilane
-            läheb sügavamale programmeerimise teemadesse, mida eelmises kursuses tutvustati,
-            ning loovad paindlike lahendusi veelgi keerulisematele probleemidele.
-            Kursuse lõpuks loovad õpilased interaktiivseid lugusid ja mänge, mida
-            nad saavad kõigiga jagada. Soovitatav 4.-5. klassile.
-          description_short: Kaevuma sügavamale programmeerises ehitades mänge ja
-            interaktiivseid lugusid. See on järg Kursusele 2.
-          description_audience: Vanustele 8-18
-          student_description: Kursus 3 on loodud õpilastele, kes on läbinud kursuse
-            2. Õpilane läheb sügavamale programmeerimise teemadesse, mida eelmises
-            kursuses tutvustati, ning loovad paindlike lahendusi veelgi keerulisematele
-            probleemidele. Kursuse lõpuks loovad õpilased interaktiivseid lugusid
-            ja mänge, mida nad saavad kõigiga jagada. Soovitatav 4.-5. klassile.
-        playlab:
-          title: Play Lab
-          description: Loo lugu või mäng "Play Lab"iga!
-          description_short: Loo lugu või mäng "Play Lab"iga!
-          student_description: Loo lugu või mäng "Play Lab"iga!
-        artist:
-          title: Kunstnik
-          description: Joonista lahedaid pilte ja kujundusi Kunstnikuga!
-          description_short: Joonista lahedaid pilte ja kujundusi Kunstnikuga!
-          student_description: Joonista lahedaid pilte ja kujundusi Kunstnikuga!
-        hourofcode:
-          title: Klassikaline labürint
-          description: Proovi programmeerimise põhitõdesid Angry Birds, Plants vs.
-            Zombies tegelaste ja Scratiga Jää-ajast!
-          description_short: Proovi programmeerimise põhitõdesid paljude lõbusate
-            tegelastega!
-          student_description: Proovi programmeerimise põhitõdesid Angry Birds, Plants
-            vs. Zombies tegelaste ja Scratiga Jää-ajast!
-        frozen:
-          title: Kirjuta koodi Anna ja Elsa'ga
-          description: Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega avastada
-            jää maagilisust ja iludust. Sa moodustad lumehelbeid ja taustasid uisutamise
-            ajal ning moodustad talvekuningriigi, mida saad jagada kõigi oma sõpradega!
-          description_short: Programmeerigem, et ühineda Anna ja Elsaga samal ajal,
-            kui nad avastavad jää võlu ja ilu.
-          student_description: Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega
-            avastada jää maagilisust ja iludust. Sa moodustad lumehelbeid ja taustasid
-            uisutamise ajal ning moodustad talvekuningriigi, mida saad jagada kõigi
-            oma sõpradega!
-        course4:
-          title: Kursus 4
-          description: 4.  kursus on mõeldud õpilastele, kes on läbinud kursused 2
-            ja 3. Õpilased õpivad, kuidas lahendada järjest keerulisemaid probleeme
-            ning nad õpivad iga ülesande lahendamisel, kuidas kombineerida mitut erinevat
-            kontseptsiooni. Kursuse lõppedes loovad õpilased programme, mis lubavad
-            neil demonstreerida mitmekülgseid oskusi, mille hulka kuuluvad oskus kasutada
-            tsükleid ja parameetritega funktsioone. Soovitatav 4.-6. klassidele.
-          description_short: Ehita keerulisemaid programme koos trüklite ja parameetritega
-            ja parameetritega funktsioonid. See on järg Kursus 3le.
+        20-hour:
+          description: See 20-tunnine kursus käsitleb peamisi arvutiteaduse ja programmeerimise
+            kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks vanuses 10-18
+            aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!
           description_audience: Vanustele 10-18
-          student_description: 4.  kursus on mõeldud õpilastele, kes on läbinud kursused
-            2 ja 3. Õpilased õpivad, kuidas lahendada järjest keerulisemaid probleeme
-            ning nad õpivad iga ülesande lahendamisel, kuidas kombineerida mitut erinevat
-            kontseptsiooni. Kursuse lõppedes loovad õpilased programme, mis lubavad
-            neil demonstreerida mitmekülgseid oskusi, mille hulka kuuluvad oskus kasutada
-            tsükleid ja parameetritega funktsioone. Soovitatav 4.-6. klassidele.
+          description_short: See 20-tunnine kursus hõlmab peamise arvutiteaduse ja
+            programmeerimise kontseptsiooni kursustel 2-4.
+          name: 20 tunnine
+          student_description: See 20-tunnine kursus käsitleb peamisi arvutiteaduse
+            ja programmeerimise kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks
+            vanuses 10-18 aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!
+          title: Kiire sissejuhatus CS kursusele
+        2021drafting:
+          lesson_groups:
+            debugging:
+              display_name: Debugimine
+            introduction:
+              display_name: Sissejuhatus
+            lessonGroup-3:
+              display_name: Muutujad
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: KoodiTund
+        CSDU5-Draft:
+          description_short: Andmed
+        CSF_Secret_Sample:
+          description_audience: Vanustele 8-18
+        CSF_Secret_Sample_Story:
+          description_audience: Vanustele 8-18+
         Course4pre:
-          title: Kursuse 4 Ettevalmistus
           description: Väike kokkuvõte Kursuse 2 ja 3 põhimõtetest, õpilastele kes
             pole neid võtnud veel.
           description_short: Väike kokkuvõte Kursuse 2 ja 3 põhimõtetest, õpilastele
             kes pole neid võtnud veel.
           student_description: Väike kokkuvõte Kursuse 2 ja 3 põhimõtetest, õpilastele
             kes pole neid võtnud veel.
-        algebra:
-          title: Arvutiteadus algebras
-        infinity:
-          title: Disney Infinity Play Lab
-          description: Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad
-            Disney Infinity tegelased.
-          description_short: Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad
-            Disney Infinity tegelased.
-          student_description: Kasuta Play Labi, et luua lugu või mäng, kus peaosa
-            mängivad Disney Infinity tegelased.
-        netsim:
-          title: Interneti simulaator
-        20-hour:
-          title: Kiire sissejuhatus CS kursusele
-          description: See 20-tunnine kursus käsitleb peamisi arvutiteaduse ja programmeerimise
-            kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks vanuses 10-18
-            aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!
-          description_short: See 20-tunnine kursus hõlmab peamise arvutiteaduse ja
-            programmeerimise kontseptsiooni kursustel 2-4.
-          description_audience: Vanustele 10-18
-          student_description: See 20-tunnine kursus käsitleb peamisi arvutiteaduse
-            ja programmeerimise kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks
-            vanuses 10-18 aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!
-          name: 20 tunnine
-        edit-code:
-          title: Muuda koodi
-          description: Muuda koodi
-          description_short: Muuda koodi
-          student_description: Muuda koodi
-        events:
-          title: Sündmused
-          description: Sündmused
-          description_short: Sündmused
-          student_description: Sündmused
-        flappy:
-          title: Flappy kood
-          description: Tahad kirjutada oma enda mängu vähem kui 10 minutiga? Proovi
-            meie Flappy Code õpetusvideot!
-          description_short: Loo oma Flappy mäng!
-          student_description: Tahad kirjutada oma enda mängu vähem kui 10 minutiga?
-            Proovi meie Flappy Code õpetusvideot!
-        jigsaw:
-          title: Pusle
-          description: Proovi meie pusle juhendajat
-          description_short: Proovi meie pusle juhendajat
-          student_description: Proovi meie pusle juhendajat
-        step:
-          title: samm
-          description: Samm-sammult juhendi
-          description_short: Samm-sammult juhendi
-          student_description: Samm-sammult juhendi
+          title: Kursuse 4 Ettevalmistus
+        ECSPD2:
+          description: 'Faas 2 online: Blended Summer Study'
+          description_short: 'Faas 2 online: Blended Summer Study'
+          student_description: 'Faas 2 online: Blended Summer Study'
+        ECSPD2-NexTech:
+          description: 'Faas 2 online: Blended Summer Study'
+          description_short: 'Faas 2 online: Blended Summer Study'
+          student_description: 'Faas 2 online: Blended Summer Study'
+        ECSPD2-iZone:
+          description: 'Faas 2 online: Blended Summer Study'
+          description_short: 'Faas 2 online: Blended Summer Study'
+          student_description: 'Faas 2 online: Blended Summer Study'
         Hour of Code:
-          title: KoodiTund 2013
           description: Proovi arvutiteadust Angry Birds and Plants vs Zombies tegelastega!
           description_short: Proovi programmeerimise põhitõdesid paljude lõbusate
             tegelastega!
           student_description: Proovi arvutiteadust Angry Birds and Plants vs Zombies
             tegelastega!
+          title: KoodiTund 2013
+        MikeTest:
+          description_audience: Vanustele 8-98
+        Special Fun:
+          description_audience: Vanustele 10-18
+        SpecialSeries:
+          description_audience: Vanustele 10-18
+        afterschool1:
+          description_audience: Vanusele 7-13
+        ai-ethics-2021:
+          description_audience: 6.-12. klassid
+        aiml-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Uuring
+        algebra:
+          title: Arvutiteadus algebras
         algebraPD2a:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
@@ -166,377 +88,709 @@ et:
           description: 'Faas 2 online: Blended Summer Study'
           description_short: 'Faas 2 online: Blended Summer Study'
           student_description: 'Faas 2 online: Blended Summer Study'
-        ECSPD2:
-          description: 'Faas 2 online: Blended Summer Study'
-          description_short: 'Faas 2 online: Blended Summer Study'
-          student_description: 'Faas 2 online: Blended Summer Study'
-        sciencePD2b:
-          description: 'Faas 2 online: Blended Summer Study'
-          description_short: 'Faas 2 online: Blended Summer Study'
-          student_description: 'Faas 2 online: Blended Summer Study'
-        sciencePD2b-iZone:
-          description: 'Faas 2 online: Blended Summer Study'
-          description_short: 'Faas 2 online: Blended Summer Study'
-          student_description: 'Faas 2 online: Blended Summer Study'
-        ECSPD2-iZone:
-          description: 'Faas 2 online: Blended Summer Study'
-          description_short: 'Faas 2 online: Blended Summer Study'
-          student_description: 'Faas 2 online: Blended Summer Study'
-        ECSPD2-NexTech:
-          description: 'Faas 2 online: Blended Summer Study'
-          description_short: 'Faas 2 online: Blended Summer Study'
-          student_description: 'Faas 2 online: Blended Summer Study'
-        asUnplugged:
-          description_audience: Vanusele 6-13
-        afterschool1:
-          description_audience: Vanusele 7-13
-        cspunit4draft:
-          description_short: Andmed
-        Special Fun:
-          description_audience: Vanustele 10-18
-        SpecialSeries:
-          description_audience: Vanustele 10-18
-        iceage:
-          title: Jääaja Play Lab
-          description: Loo lugu või mäng Jääaja Play Labiga!
-          description_short: Loo lugu või mäng Jääaja Play Labiga!
-          student_description: Loo lugu või mäng Jääaja Play Labiga!
-        gumball:
-          title: Gumballi Play Lab
-          description: Loo lugu või mäng Gumballi Play Labiga!
-          description_short: Loo lugu või mäng Gumballi Play Labiga!
-          student_description: Loo lugu või mäng Gumballi Play Labiga!
-        starwars:
-          description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
-            kauges galaktikas.
-          description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
-            kauges, kauges galaktikas.
-          student_description: Õpi programmeerima roboteid ja loo oma Star Wars’i
-            mäng kauges, kauges galaktikas.
-        starwarsblocks:
-          description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
-            kauges galaktikas.
-          description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
-            kauges, kauges galaktikas.
-          student_description: Õpi programmeerima roboteid ja loo oma Star Wars’i
-            mäng kauges, kauges galaktikas.
-        mc:
-          title: Minecrafti KoodiTund
-          description: Kasuta koodi plokke, et viia Steve või Alex seiklusele läbi
-            selle Minecrafti maailma.
-          description_short: Uuri Minecrafti maailma koodi kaudu.
-          student_description: Kasuta koodi plokke, et viia Steve või Alex seiklusele
-            läbi selle Minecrafti maailma.
-          name: mc
-        csp1-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp2-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp3-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp4-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp5-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        CSF_Secret_Sample:
-          description_audience: Vanustele 8-18
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-            practice:
-              display_name: Õpetamise tavad
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-            practice:
-              display_name: Õpetamise tavad
-        CSDU5-Draft:
-          description_short: Andmed
-        CSF_Secret_Sample_Story:
-          description_audience: Vanustele 8-18+
-        MikeTest:
-          description_audience: Vanustele 8-98
-        artistExemplar:
-          description_audience: Vanustele 8-18
-        teachercon:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-            practice:
-              display_name: Õpetamise tavad
-        gradeKinder:
-          description_audience: Vanustele 5-18
-        grade4:
-          description_audience: Vanusele 9-99
-        grade1:
-          description_audience: Vanustele 5-18
-        grade5:
-          description_audience: Vanuses 10-110
-        grade3:
-          description_audience: Vanustele 5-18
         alltheplcthings:
           lesson_groups:
-            required:
-              display_name: Ülevaade
             content:
               display_name: Sisu
             practice:
               display_name: Õpetamise tavad
-        csd3-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        grade2:
-          description_audience: Vanustele 5-18
-        csd1-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp-online-test:
-          lesson_groups:
             required:
               display_name: Ülevaade
+        andrea-test:
+          lesson_groups:
             content:
               display_name: Sisu
-            practice:
-              display_name: Õpetamise tavad
-        csp1-support:
-          lesson_groups:
             required:
               display_name: Ülevaade
-            content:
-              display_name: Sisu
-            practice:
-              display_name: Õpetamise tavad
+        aquatic:
+          description_short: Kasuta loomingulisust ja probleemi lahendamise oskuseid,
+            et uurida ja ehitada veealuseid maailmu koodi abil!
+          name: vee-
+          title: 'Minecraft: Voyage Aquatic'
+        artist:
+          description: Joonista lahedaid pilte ja kujundusi Kunstnikuga!
+          description_short: Joonista lahedaid pilte ja kujundusi Kunstnikuga!
+          student_description: Joonista lahedaid pilte ja kujundusi Kunstnikuga!
+          title: Kunstnik
+        artistExemplar:
+          description_audience: Vanustele 8-18
+        asUnplugged:
+          description_audience: Vanusele 6-13
         basketball:
-          title: Vali meeskond ja tee korvpallimäng
-          description_short: Vali meeskond ja tee korvpallimäng
           description: Vali meeskond ja tee korvpallimäng
-          student_description: Vali meeskond ja tee korvpallimäng
+          description_short: Vali meeskond ja tee korvpallimäng
           name: korvpall
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-            practice:
-              display_name: Õpetamise tavad
-        minecraft:
-          title: KoodiTund Minecraft Designer
-          description_short: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda
-            Minecrafti versioonis.
-          description: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda Minecrafti
-            versioonis.
-          student_description: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda
-            Minecrafti versioonis.
-        coursee-draft:
-          lesson_groups:
-            content:
-              display_name: Sisu
-        coursef-draft:
-          lesson_groups:
-            content:
-              display_name: Sisu
+          student_description: Vali meeskond ja tee korvpallimäng
+          title: Vali meeskond ja tee korvpallimäng
         classic-hoc-impact-study:
           description_short: Proovi programmeerimise põhitõdesid paljude lõbusate
             tegelastega!
-        hoc-impact-study:
-          description_short: Proovi programmeerimise põhitõdesid paljude lõbusate
-            tegelastega!
-        sports:
-          title: Tee oma spordimäng
-          description_short: Sega omavahel ja sobita kokku erinevaid spordialasid
-          description: Sega omavahel ja sobita kokku erinevaid spordialasid
-          student_description: Sega omavahel ja sobita kokku erinevaid spordialasid
-        csp3-support:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-            practice:
-              display_name: Õpetamise tavad
-        csp4-support:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-            practice:
-              display_name: Õpetamise tavad
-        csf2harvey:
-          lesson_groups:
-            content:
-              display_name: Sisu
-        csp5-support:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-            practice:
-              display_name: Õpetamise tavad
-        csppostap-2017:
-          lesson_groups:
-            content:
-              display_name: Sisu
-            cspSurvey:
-              display_name: Uuring
-        csp-post-survey:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        coursef-2017:
-          lesson_groups:
-            csf_f_2:
-              display_name: Kursuse F sisu
-        cspnovice:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp1-dlp:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp2-dlp:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp3-dlp:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp4-dlp:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp5-dlp:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csd1-dlp:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csd6-dlp:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csd5-dlp:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csd4-dlp:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csd3-dlp:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csd2-dlp:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        express-2017:
-          lesson_groups:
-            content:
-              display_name: Sisu
-        csp3-research-mxghyt:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        new-express:
-          lesson_groups:
-            content:
-              display_name: Sisu
-        new-f:
-          lesson_groups:
-            csf_f_2:
-              display_name: Kursuse F sisu
-        hero:
-          title: 'Minecraft: Kangelase teekond'
-          description_short: Minecraft on tagasi uhiuue tegevusega KoodiTunniks!
-          description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond
-            läbi Minecrafti koos koodiga.
-          student_description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega!
-            Teekond läbi Minecrafti koos koodiga.
-        csp-explore-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp-create-2017:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
         course-f-2018:
           lesson_groups:
             csf_f_2:
               display_name: Kursuse F sisu
-        csd3-1819draft:
+        course1:
+          description: Kui oled aeglane lugeja, siis alusta 1. kursusega. Õpilased
+            loovad arvutiprogramme, mis aitavad neil õppida teistega koostööd tegema,
+            arendada probleemi lahendamise oskust ning vastupidavust raskete ülesannete
+            lahendamisel. Selle kursuse lõpuks loovad õpilased päris oma mängu või
+            loo, mida nad saavad jagada. Soovitatav 5-8-aastastele.
+          description_audience: Vanustele 4-6
+          description_short: Sissejuhatus arvutiteadusesse õpilastega, kes on just
+            õppisid lugema.
+          student_description: Kui oled aeglane lugeja, siis alusta 1. kursusega.
+            Õpilased loovad arvutiprogramme, mis aitavad neil õppida teistega koostööd
+            tegema, arendada probleemi lahendamise oskust ning vastupidavust raskete
+            ülesannete lahendamisel. Selle kursuse lõpuks loovad õpilased päris oma
+            mängu või loo, mida nad saavad jagada. Soovitatav 5-8-aastastele.
+          title: Kursus 1
+        course2:
+          description: Kui oskad lugeda ja sul ei ole eelnevad programmeerimise kogemust,
+            siis alusta kursus 2-ga. Selles kursuses õpilased moodustavad programme
+            probleemide lahendamiseks ja arendavad interaktiivseid mänge või lugusid,
+            mida nad saavad jagada. Soovitav 2. klassist kuni 5. klassini.
+          description_audience: Vanusele 6+ (lugemisoskus vajalik)
+          description_short: Sissejuhatus arvutiteadusesse õpilastega, kes oskavad
+            lugeda.
+          student_description: Kui oskad lugeda ja sul ei ole eelnevad programmeerimise
+            kogemust, siis alusta kursus 2-ga. Selles kursuses õpilased moodustavad
+            programme probleemide lahendamiseks ja arendavad interaktiivseid mänge
+            või lugusid, mida nad saavad jagada. Soovitav 2. klassist kuni 5. klassini.
+          title: Kursus 2
+        course3:
+          description: Kursus 3 on loodud õpilastele, kes on läbinud kursuse 2. Õpilane
+            läheb sügavamale programmeerimise teemadesse, mida eelmises kursuses tutvustati,
+            ning loovad paindlike lahendusi veelgi keerulisematele probleemidele.
+            Kursuse lõpuks loovad õpilased interaktiivseid lugusid ja mänge, mida
+            nad saavad kõigiga jagada. Soovitatav 4.-5. klassile.
+          description_audience: Vanustele 8-18
+          description_short: Kaevuma sügavamale programmeerises ehitades mänge ja
+            interaktiivseid lugusid. See on järg Kursusele 2.
+          student_description: Kursus 3 on loodud õpilastele, kes on läbinud kursuse
+            2. Õpilane läheb sügavamale programmeerimise teemadesse, mida eelmises
+            kursuses tutvustati, ning loovad paindlike lahendusi veelgi keerulisematele
+            probleemidele. Kursuse lõpuks loovad õpilased interaktiivseid lugusid
+            ja mänge, mida nad saavad kõigiga jagada. Soovitatav 4.-5. klassile.
+          title: Kursus 3
+        course4:
+          description: 4.  kursus on mõeldud õpilastele, kes on läbinud kursused 2
+            ja 3. Õpilased õpivad, kuidas lahendada järjest keerulisemaid probleeme
+            ning nad õpivad iga ülesande lahendamisel, kuidas kombineerida mitut erinevat
+            kontseptsiooni. Kursuse lõppedes loovad õpilased programme, mis lubavad
+            neil demonstreerida mitmekülgseid oskusi, mille hulka kuuluvad oskus kasutada
+            tsükleid ja parameetritega funktsioone. Soovitatav 4.-6. klassidele.
+          description_audience: Vanustele 10-18
+          description_short: Ehita keerulisemaid programme koos trüklite ja parameetritega
+            ja parameetritega funktsioonid. See on järg Kursus 3le.
+          student_description: 4.  kursus on mõeldud õpilastele, kes on läbinud kursused
+            2 ja 3. Õpilased õpivad, kuidas lahendada järjest keerulisemaid probleeme
+            ning nad õpivad iga ülesande lahendamisel, kuidas kombineerida mitut erinevat
+            kontseptsiooni. Kursuse lõppedes loovad õpilased programme, mis lubavad
+            neil demonstreerida mitmekülgseid oskusi, mille hulka kuuluvad oskus kasutada
+            tsükleid ja parameetritega funktsioone. Soovitatav 4.-6. klassidele.
+          title: Kursus 4
+        coursea-2019:
           lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd3-2018:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        coursea-2020:
           lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd2-2018:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        coursea-2021:
           lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd6-2018:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        coursea-2022:
           lesson_groups:
-            cspSurvey:
-              display_name: Uuring
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        courseb-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        courseb-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        courseb-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        courseb-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        coursec-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Binaarne
+            csf_data:
+              display_name: Andmed
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        coursec-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: Binaarne
+            csf_data:
+              display_name: Andmed
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        coursec-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: Binaarne
+            csf_data:
+              display_name: Andmed
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        coursec-2022:
+          lesson_groups:
+            csf_data:
+              display_name: Andmed
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        coursec-2023:
+          lesson_groups:
+            csf_data:
+              display_name: Andmed
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        coursed-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Binaarne
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        coursed-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: Binaarne
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        coursed-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: Binaarne
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            lessonGroup-6:
+              display_name: Digitaalne kodakondsus
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            lessonGroup-6:
+              display_name: Digitaalne kodakondsus
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            lessonGroup-6:
+              display_name: Digitaalne kodakondsus
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_functions:
+              display_name: Funktsioonid
+            csf_nested_loops:
+              display_name: Korduvad tsüklid
+            csf_sprites:
+              display_name: Spraidid
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_functions:
+              display_name: Funktsioonid
+            csf_nested_loops:
+              display_name: Korduvad tsüklid
+            csf_sprites:
+              display_name: Spraidid
+        coursee-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_functions:
+              display_name: Funktsioonid
+            csf_nested_loops:
+              display_name: Tingimuslaused
+            csf_sprites:
+              display_name: Spraidid
+            ramp_up:
+              display_name: Korduvad tsüklid
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_functions:
+              display_name: Funktsioonid
+            csf_nested_loops:
+              display_name: Tingimuslaused
+            csf_sprites:
+              display_name: Spraidid
+            ramp_up:
+              display_name: Korduvad tsüklid
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_functions:
+              display_name: Funktsioonid
+            csf_nested_loops:
+              display_name: Tingimuslaused
+            csf_sprites:
+              display_name: Spraidid
+            ramp_up:
+              display_name: Korduvad tsüklid
+        coursee-draft:
+          lesson_groups:
+            content:
+              display_name: Sisu
+        coursef-2017:
+          lesson_groups:
+            csf_f_2:
+              display_name: Kursuse F sisu
         coursef-2018:
           lesson_groups:
             csf_f_2:
               display_name: Kursuse F sisu
-        csp1-2018:
+        coursef-2019:
+          lesson_groups:
+            csf_data:
+              display_name: Andmed
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_for_loops:
+              display_name: For tsükkel
+            csf_internet:
+              display_name: Internet
+            csf_sprites:
+              display_name: Spraidid
+            csf_variables:
+              display_name: Muutujad
+        coursef-2020:
+          lesson_groups:
+            csf_data:
+              display_name: Andmed
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_for_loops:
+              display_name: For tsükkel
+            csf_sprites:
+              display_name: Spraidid
+            csf_variables:
+              display_name: Muutujad
+        coursef-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_for_loops:
+              display_name: For tsükkel
+            csf_variables:
+              display_name: For tsükkel
+            lessonGroup-7:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-8:
+              display_name: Muutujad
+            lessonGroup-9:
+              display_name: eemalda
+            ramp_up:
+              display_name: Spraidid
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-8:
+              display_name: Muutujad
+            ramp_up:
+              display_name: Spraidid
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-8:
+              display_name: Muutujad
+            ramp_up:
+              display_name: Spraidid
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-3:
+              display_name: Spraidid
+            lessonGroup-4:
+              display_name: Muutujad
+        coursef-draft:
+          lesson_groups:
+            content:
+              display_name: Sisu
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Andmed
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Peatükk 1
+            lessonGroup-3:
+              display_name: Materjalid
+            lessonGroup-4:
+              display_name: Peatükk 2
+            lessonGroup-5:
+              display_name: Peatükk 3
+            lessonGroup-6:
+              display_name: Peatükk 4
+            lessonGroup-7:
+              display_name: Peatükk 5
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+            lessonGroup-5:
+              display_name: Uuring
+        csa1-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Uuring
+            lessonGroup-3:
+              display_name: Sisu
+          lessons:
+            lesson-6:
+              name: Tsüklid
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+            lessonGroup-5:
+              display_name: Uuring
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa2-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+          lessons:
+            lesson-4:
+              name: Muutujad
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Sisu
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Sisu
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+          lessons:
+            lesson-3:
+              name: For tsükkel
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa4-exemplars:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            lesson group:
+              display_name: Sisu
+            lessonGroup-2:
+              display_name: Sisu
+            lesson_group:
+              display_name: Sisu
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+            lessonGroup-5:
+              display_name: Uuring
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+            lessonGroup-4:
+              display_name: Uuring
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisu
+            lessonGroup-5:
+              display_name: Uuring
+        csd-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csd-novice-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csd-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd1-2017:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
@@ -544,600 +798,7 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
-        csd4-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd5-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp3-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp-explore-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp-create-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp4-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp5-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csppostap-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csd2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csd3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csd4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csd5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csd6-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp-explore-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp-create-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csd-novice-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csd-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp-novice-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        fit-test:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        dance:
-          name: tants
-        aquatic:
-          title: 'Minecraft: Voyage Aquatic'
-          description_short: Kasuta loomingulisust ja probleemi lahendamise oskuseid,
-            et uurida ja ehitada veealuseid maailmu koodi abil!
-          name: vee-
-        cspplayground:
-          lesson_groups:
-            csp_variables:
-              display_name: Muutujad
-            csp_conditionals:
-              display_name: Tingimuslaused
-            csp_functions:
-              display_name: Funktsioonid
-        dance-extras:
-          description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
-          student_description: Mine põhjalikumate projjektiideedega esimesest tunnist
-            edasi.
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: Muutujad
-            csf_data:
-              display_name: Andmed
-            csf_for_loops:
-              display_name: For tsükkel
-            csf_internet:
-              display_name: Internet
-            csf_sprites:
-              display_name: Spraidid
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: Sündmused
-            csf_loops:
-              display_name: Tsüklid
-            csf_conditionals:
-              display_name: Tingimuslaused
-            csf_binary:
-              display_name: Binaarne
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-        coursee-2019:
-          lesson_groups:
-            csf_sprites:
-              display_name: Spraidid
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_nested_loops:
-              display_name: Korduvad tsüklid
-            csf_functions:
-              display_name: Funktsioonid
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Tsüklid
-            csf_conditionals:
-              display_name: Tingimuslaused
-            csf_functions:
-              display_name: Funktsioonid
-            csf_variables:
-              display_name: Muutujad
-            csf_for_loops:
-              display_name: For tsükkel
-            csf_sprites:
-              display_name: Spraidid
         csd1-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        andrea-test:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        dance-extras-gallery:
-          title: Tantsi edasi
-          description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
-          student_description: Mine põhjalikumate projjektiideedega esimesest tunnist
-            edasi.
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_binary:
-              display_name: Binaarne
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-            csf_data:
-              display_name: Andmed
-        csp-mid-survey:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        gamelab:
-          title: Game Lab
-        coursea-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        csd2-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd3-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd4-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd5-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd6-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: Muutujad
-            csp_conditionals:
-              display_name: Tingimuslaused
-            csp_functions:
-              display_name: Funktsioonid
-            required:
-              display_name: Ülevaade
-        csp1-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp2-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp3-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp4-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp5-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp-explore-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp-create-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csppostap-2019:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp1-pilot:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-            required:
-              display_name: Ülevaade
-        time4csdemo:
-          lesson_groups:
-            csf_sprites:
-              display_name: Spraidid
-        csp1-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Muutujad
-            csp_conditionals:
-              display_name: Tingimuslaused
-            csp_functions:
-              display_name: Funktsioonid
-        csp2-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Muutujad
-            csp_conditionals:
-              display_name: Tingimuslaused
-            csp_functions:
-              display_name: Funktsioonid
-        csp4-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Muutujad
-            csp_conditionals:
-              display_name: Tingimuslaused
-            csp_functions:
-              display_name: Funktsioonid
-        csp5-pilot-staging:
-          lesson_groups:
-            csp_lists:
-              display_name: Loendid
-            csp_loops:
-              display_name: Tsüklid
-        csp6-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Muutujad
-            csp_conditionals:
-              display_name: Tingimuslaused
-            csp_functions:
-              display_name: Funktsioonid
-        csp8-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Muutujad
-            csp_conditionals:
-              display_name: Tingimuslaused
-            csp_functions:
-              display_name: Funktsioonid
-        csp9-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Muutujad
-            csp_conditionals:
-              display_name: Tingimuslaused
-            csp_functions:
-              display_name: Funktsioonid
-        csp10-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Muutujad
-            csp_conditionals:
-              display_name: Tingimuslaused
-            csp_functions:
-              display_name: Funktsioonid
-        csd-post-survey-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp-post-survey-2018:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp5-pilot:
-          lesson_groups:
-            csp_lists:
-              display_name: Loendid
-            csp_loops:
-              display_name: Tsüklid
-            required:
-              display_name: Ülevaade
-        fit2019-novice:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csd1-pilot:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd2-pilot:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd3-pilot:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp3-pilot:
-          lesson_groups:
-            content:
-              display_name: Sisu
-            required:
-              display_name: Ülevaade
-        csl-vn:
-          lesson_groups:
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        dlp19-csd-mod-fit:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        dlp19-csp-mod-fit:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        dlp19-csd-mod-w1:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        dlp19-csd-mod-w2:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        dlp19-csd-mod-w3:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        dlp19-csd-mod-w4:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        dlp19-csp-mod-w1:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        dlp19-csp-mod-w2:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        dlp19-csp-mod-w3:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        dlp19-csp-mod-w4:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-            content:
-              display_name: Sisu
-        csp2-pilot:
-          lesson_groups:
-            content:
-              display_name: Sisu
-            required:
-              display_name: Ülevaade
-        csp6-pilot:
-          lesson_groups:
-            content:
-              display_name: Sisu
-            required:
-              display_name: Ülevaade
-        dance-2019:
-          title: Tantsuõhtu
-        k5-onlinepd-2019:
-          lesson_groups:
-            k5_next_steps:
-              display_name: Järgmised sammud
-        dance-extras-2019:
-          title: Tantsi edasi
-          description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
-          student_description: Mine põhjalikumate projjektiideedega esimesest tunnist
-            edasi.
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: Muutujad
-            csp_conditionals:
-              display_name: Tingimuslaused
-            csp_functions:
-              display_name: Funktsioonid
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_conditionals:
-              display_name: Tingimuslaused
-            csf_nested_loops:
-              display_name: Korduvad tsüklid
-            csf_functions:
-              display_name: Funktsioonid
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Tsüklid
-            csf_conditionals:
-              display_name: Tingimuslaused
-            csf_events:
-              display_name: Sündmused
-            csf_sprites:
-              display_name: Spraidid
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Tsüklid
-            csf_conditionals:
-              display_name: Tingimuslaused
-            csf_events:
-              display_name: Sündmused
-            csf_sprites:
-              display_name: Spraidid
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: Ülevaade
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: Muutujad
-            csp_conditionals:
-              display_name: Tingimuslaused
-            csp_functions:
-              display_name: Funktsioonid
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Loendid
-            csp_loops:
-              display_name: Tsüklid
-        csd2-2020:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
@@ -1145,15 +806,79 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
-        csd4-2020:
+        csd1-2021:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
-        csd5-2020:
+        csd1-2022:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
-        csd6-2020:
+        csd1-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csd1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csd1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd2-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd2-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd2-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd2-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd2-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd2-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csd2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csd2-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd3-1819draft:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd3-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd3-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd3-2019:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
@@ -1161,101 +886,27 @@ et:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
-        coursea-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        courseb-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        coursec-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_binary:
-              display_name: Binaarne
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-            csf_data:
-              display_name: Andmed
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Sündmused
-            csf_loops:
-              display_name: Tsüklid
-            csf_conditionals:
-              display_name: Tingimuslaused
-            csf_binary:
-              display_name: Binaarne
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-        coursee-2020:
-          lesson_groups:
-            csf_sprites:
-              display_name: Spraidid
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_nested_loops:
-              display_name: Korduvad tsüklid
-            csf_functions:
-              display_name: Funktsioonid
-        coursef-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_variables:
-              display_name: Muutujad
-            csf_data:
-              display_name: Andmed
-            csf_for_loops:
-              display_name: For tsükkel
-            csf_sprites:
-              display_name: Spraidid
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Tsüklid
-            csf_conditionals:
-              display_name: Tingimuslaused
-            csf_functions:
-              display_name: Funktsioonid
-            csf_variables:
-              display_name: Muutujad
-            csf_for_loops:
-              display_name: For tsükkel
-            csf_sprites:
-              display_name: Spraidid
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        csp1-2020:
+        csd3-2021:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
-        virtual-holding-place:
+        csd3-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd3-dlp:
           lesson_groups:
             content:
               display_name: Sisu
-        k5-onlinepd-2020:
+            required:
+              display_name: Ülevaade
+        csd3-dlp-18:
           lesson_groups:
-            k5_next_steps_1:
-              display_name: Järgmised sammud
-        dani-june-2020-test:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csd3-pilot:
           lesson_groups:
             cspSurvey:
               display_name: Uuring
@@ -1267,6 +918,1172 @@ et:
               display_name: Sisu
             cspSurvey:
               display_name: Sisu
+        csd4-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd4-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd4-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd4-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd4-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd4-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csd4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csd4-preview-2021:
+          lesson_groups:
+            csdSurvey:
+              display_name: Uuring
+            cspSurvey:
+              display_name: Uuring
+        csd5-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd5-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd5-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd5-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd5-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd5-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csd5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csd5-preview-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd6-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd6-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd6-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd6-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csd6-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        csd6-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csd6-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csd7-2021:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        csf-2021-pilot:
+          lesson_groups:
+            Sprites:
+              display_name: Spraidid
+            lessonGroup-3:
+              display_name: Muutujad
+            ramp_up:
+              display_name: Sissejuhatus
+            variables:
+              display_name: Muutujad
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spraidid
+            lessonGroup-3:
+              display_name: Muutujad
+        csf2harvey:
+          lesson_groups:
+            content:
+              display_name: Sisu
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        csp-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp-create-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-create-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-create-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-create-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp-explore-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-explore-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-explore-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-explore-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp-mid-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-novice-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp-online-test:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
+            required:
+              display_name: Ülevaade
+        csp-post-survey:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-post-survey-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp-post-survey-2020:
+          lesson_groups:
+            cspSurvey2020:
+              display_name: Uuring
+        csp1-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp1-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp1-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp1-2020:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp1-2021:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp1-2023:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp1-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp1-pilot:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+            required:
+              display_name: Ülevaade
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            csp_variables:
+              display_name: Muutujad
+        csp1-support:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
+            required:
+              display_name: Ülevaade
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Uuring
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            csp_variables:
+              display_name: Muutujad
+        csp2-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp2-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp2-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Uuring
+        csp2-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            csp_variables:
+              display_name: Muutujad
+        csp2-support:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
+            required:
+              display_name: Ülevaade
+        csp3-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp3-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp3-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp3-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp3-research-mxghyt:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp3-support:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
+            required:
+              display_name: Ülevaade
+        csp4-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp4-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp4-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            csp_variables:
+              display_name: Muutujad
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            csp_variables:
+              display_name: Muutujad
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            csp_variables:
+              display_name: Muutujad
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            csp_variables:
+              display_name: Muutujad
+        csp4-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            csp_variables:
+              display_name: Muutujad
+            required:
+              display_name: Ülevaade
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            csp_variables:
+              display_name: Muutujad
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            csp_variables:
+              display_name: Muutujad
+        csp4-support:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
+            required:
+              display_name: Ülevaade
+        csp5-2017:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp5-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp5-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Loendid
+            csp_loops:
+              display_name: Tsüklid
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Loendid
+            csp_loops:
+              display_name: Tsüklid
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Loendid
+            csp_loops:
+              display_name: Tsüklid
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Andmed
+            csp_loops:
+              display_name: Tsüklid
+        csp5-dlp:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Loendid
+            csp_loops:
+              display_name: Tsüklid
+            required:
+              display_name: Ülevaade
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Loendid
+            csp_loops:
+              display_name: Tsüklid
+        csp5-support:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
+            required:
+              display_name: Ülevaade
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmid
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Loendid
+            lessonGroup-3:
+              display_name: Tsüklid
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            csp_variables:
+              display_name: Muutujad
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Uuring
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Ülevaade
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Uuring
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            csp_variables:
+              display_name: Muutujad
+        csp9-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Uuring
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            csp_variables:
+              display_name: Muutujad
+        cspnovice:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Tingimuslaused
+            csp_functions:
+              display_name: Funktsioonid
+            csp_variables:
+              display_name: Muutujad
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            cspSurvey:
+              display_name: Uuring
+        csppostap-2018:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        csppostap-2019:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        cspunit1-support:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
+            required:
+              display_name: Ülevaade
+        cspunit4draft:
+          description_short: Andmed
+        dance:
+          name: tants
+        dance-2019:
+          title: Tantsuõhtu
+        dance-extras:
+          description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
+          student_description: Mine põhjalikumate projjektiideedega esimesest tunnist
+            edasi.
+        dance-extras-2019:
+          description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
+          student_description: Mine põhjalikumate projjektiideedega esimesest tunnist
+            edasi.
+          title: Tantsi edasi
+        dance-extras-gallery:
+          description: Mine põhjalikumate projjektiideedega esimesest tunnist edasi.
+          student_description: Mine põhjalikumate projjektiideedega esimesest tunnist
+            edasi.
+          title: Tantsi edasi
+        dani-june-2020-test:
+          lesson_groups:
+            cspSurvey:
+              display_name: Uuring
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        devices-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Uuring
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Etapp 1
+            lessonGroup-3:
+              display_name: Etapp 2
+        edit-code:
+          description: Muuda koodi
+          description_short: Muuda koodi
+          student_description: Muuda koodi
+          title: Muuda koodi
+        events:
+          description: Sündmused
+          description_short: Sündmused
+          student_description: Sündmused
+          title: Sündmused
+        express-2017:
+          lesson_groups:
+            content:
+              display_name: Sisu
+        express-2019:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_for_loops:
+              display_name: For tsükkel
+            csf_functions:
+              display_name: Funktsioonid
+            csf_loops:
+              display_name: Tsüklid
+            csf_sprites:
+              display_name: Spraidid
+            csf_variables:
+              display_name: Muutujad
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_for_loops:
+              display_name: For tsükkel
+            csf_functions:
+              display_name: Funktsioonid
+            csf_loops:
+              display_name: Tsüklid
+            csf_sprites:
+              display_name: Spraidid
+            csf_variables:
+              display_name: Muutujad
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_for_loops:
+              display_name: For tsükkel
+            csf_functions:
+              display_name: Funktsioonid
+            csf_loops:
+              display_name: Tsüklid
+            csf_sprites:
+              display_name: Spraidid
+            csf_variables:
+              display_name: Muutujad
+            csf_warmup:
+              display_name: Soojendus
+            lessonGroup-9:
+              display_name: Sündmused
+        express-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_for_loops:
+              display_name: For tsükkel
+            csf_functions:
+              display_name: Funktsioonid
+            csf_loops:
+              display_name: Tsüklid
+            csf_sprites:
+              display_name: Spraidid
+            csf_variables:
+              display_name: Muutujad
+            lessonGroup-9:
+              display_name: Sündmused
+        express-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_for_loops:
+              display_name: For tsükkel
+            csf_functions:
+              display_name: Funktsioonid
+            csf_loops:
+              display_name: Tsüklid
+            csf_sprites:
+              display_name: Spraidid
+            csf_variables:
+              display_name: Muutujad
+            lessonGroup-9:
+              display_name: Sündmused
+        fit-test:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        fit2019-apprentice:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        fit2019-novice:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            required:
+              display_name: Ülevaade
+        flappy:
+          description: Tahad kirjutada oma enda mängu vähem kui 10 minutiga? Proovi
+            meie Flappy Code õpetusvideot!
+          description_short: Loo oma Flappy mäng!
+          student_description: Tahad kirjutada oma enda mängu vähem kui 10 minutiga?
+            Proovi meie Flappy Code õpetusvideot!
+          title: Flappy kood
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        frozen:
+          description: Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega avastada
+            jää maagilisust ja iludust. Sa moodustad lumehelbeid ja taustasid uisutamise
+            ajal ning moodustad talvekuningriigi, mida saad jagada kõigi oma sõpradega!
+          description_short: Programmeerigem, et ühineda Anna ja Elsaga samal ajal,
+            kui nad avastavad jää võlu ja ilu.
+          student_description: Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega
+            avastada jää maagilisust ja iludust. Sa moodustad lumehelbeid ja taustasid
+            uisutamise ajal ning moodustad talvekuningriigi, mida saad jagada kõigi
+            oma sõpradega!
+          title: Kirjuta koodi Anna ja Elsa'ga
+        gamelab:
+          title: Game Lab
+        grade1:
+          description_audience: Vanustele 5-18
+        grade2:
+          description_audience: Vanustele 5-18
+        grade3:
+          description_audience: Vanustele 5-18
+        grade4:
+          description_audience: Vanusele 9-99
+        grade5:
+          description_audience: Vanuses 10-110
+        gradeKinder:
+          description_audience: Vanustele 5-18
+        gumball:
+          description: Loo lugu või mäng Gumballi Play Labiga!
+          description_short: Loo lugu või mäng Gumballi Play Labiga!
+          student_description: Loo lugu või mäng Gumballi Play Labiga!
+          title: Gumballi Play Lab
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Õppetund 3
+            Lesson 4:
+              display_name: Õppetund 4
+            Lesson 5:
+              display_name: Õppetund 5
+        hero:
+          description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond
+            läbi Minecrafti koos koodiga.
+          description_short: Minecraft on tagasi uhiuue tegevusega KoodiTunniks!
+          student_description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega!
+            Teekond läbi Minecrafti koos koodiga.
+          title: 'Minecraft: Kangelase teekond'
+        hoc-impact-study:
+          description_short: Proovi programmeerimise põhitõdesid paljude lõbusate
+            tegelastega!
+        hourofcode:
+          description: Proovi programmeerimise põhitõdesid Angry Birds, Plants vs.
+            Zombies tegelaste ja Scratiga Jää-ajast!
+          description_short: Proovi programmeerimise põhitõdesid paljude lõbusate
+            tegelastega!
+          student_description: Proovi programmeerimise põhitõdesid Angry Birds, Plants
+            vs. Zombies tegelaste ja Scratiga Jää-ajast!
+          title: Klassikaline labürint
+        iceage:
+          description: Loo lugu või mäng Jääaja Play Labiga!
+          description_short: Loo lugu või mäng Jääaja Play Labiga!
+          student_description: Loo lugu või mäng Jääaja Play Labiga!
+          title: Jääaja Play Lab
+        infinity:
+          description: Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad
+            Disney Infinity tegelased.
+          description_short: Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad
+            Disney Infinity tegelased.
+          student_description: Kasuta Play Labi, et luua lugu või mäng, kus peaosa
+            mängivad Disney Infinity tegelased.
+          title: Disney Infinity Play Lab
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        jigsaw:
+          description: Proovi meie pusle juhendajat
+          description_short: Proovi meie pusle juhendajat
+          student_description: Proovi meie pusle juhendajat
+          title: Pusle
+        k5-onlinepd-2019:
+          lesson_groups:
+            k5_next_steps:
+              display_name: Järgmised sammud
+        k5-onlinepd-2020:
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Järgmised sammud
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: Sissejuhatus
+            k5_getting_started_1:
+              display_name: Sissejuhatus
+        mc:
+          description: Kasuta koodi plokke, et viia Steve või Alex seiklusele läbi
+            selle Minecrafti maailma.
+          description_short: Uuri Minecrafti maailma koodi kaudu.
+          name: mc
+          student_description: Kasuta koodi plokke, et viia Steve või Alex seiklusele
+            läbi selle Minecrafti maailma.
+          title: Minecrafti KoodiTund
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Uuring
+        minecraft:
+          description: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda Minecrafti
+            versioonis.
+          description_short: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda
+            Minecrafti versioonis.
+          student_description: Programmeeri loomi ja teisi Minecrafti tegelasi omaenda
+            Minecrafti versioonis.
+          title: KoodiTund Minecraft Designer
+        netsim:
+          title: Interneti simulaator
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spraidid
+            lessonGroup-3:
+              display_name: Tingimuslaused
+            lessonGroup-5:
+              display_name: Muutujad
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spraidid
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-4:
+              display_name: Tsüklid
+            lessonGroup-6:
+              display_name: Sündmused
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Korduvad tsüklid
+            lessonGroup-4:
+              display_name: Funktsioonid
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-4:
+              display_name: Tsüklid
+            lessonGroup-6:
+              display_name: Andmed
+          lessons:
+            lesson-1:
+              name: Andmed
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-4:
+              display_name: Tsüklid
+            lessonGroup-5:
+              display_name: Sündmused
+            lessonGroup-6:
+              display_name: Andmed
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-6:
+              display_name: Tsüklid
+            lessonGroup-7:
+              display_name: Andmed
+        new-express:
+          lesson_groups:
+            content:
+              display_name: Sisu
+        new-f:
+          lesson_groups:
+            csf_f_2:
+              display_name: Kursuse F sisu
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Sissejuhatus
+        playlab:
+          description: Loo lugu või mäng "Play Lab"iga!
+          description_short: Loo lugu või mäng "Play Lab"iga!
+          student_description: Loo lugu või mäng "Play Lab"iga!
+          title: Play Lab
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+        sciencePD2b:
+          description: 'Faas 2 online: Blended Summer Study'
+          description_short: 'Faas 2 online: Blended Summer Study'
+          student_description: 'Faas 2 online: Blended Summer Study'
+        sciencePD2b-iZone:
+          description: 'Faas 2 online: Blended Summer Study'
+          description_short: 'Faas 2 online: Blended Summer Study'
+          student_description: 'Faas 2 online: Blended Summer Study'
+        soccer:
+          name: jalgpall
+        spelling-bee:
+          title: Sõnamesilane
+        sports:
+          description: Sega omavahel ja sobita kokku erinevaid spordialasid
+          description_short: Sega omavahel ja sobita kokku erinevaid spordialasid
+          student_description: Sega omavahel ja sobita kokku erinevaid spordialasid
+          title: Tee oma spordimäng
+        starwars:
+          description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
+            kauges galaktikas.
+          description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
+            kauges, kauges galaktikas.
+          student_description: Õpi programmeerima roboteid ja loo oma Star Wars’i
+            mäng kauges, kauges galaktikas.
+          title: 'Star Wars: galaktika loomine koodiga – (JavaScript)'
+        starwarsblocks:
+          description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges,
+            kauges galaktikas.
+          description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
+            kauges, kauges galaktikas.
+          student_description: Õpi programmeerima roboteid ja loo oma Star Wars’i
+            mäng kauges, kauges galaktikas.
+        step:
+          description: Samm-sammult juhendi
+          description_short: Samm-sammult juhendi
+          student_description: Samm-sammult juhendi
+          title: samm
+        teachercon:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
+            required:
+              display_name: Ülevaade
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-4:
+              display_name: Tsüklid
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            content:
+              display_name: Sisu
+            practice:
+              display_name: Õpetamise tavad
+            required:
+              display_name: Ülevaade
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            csf_sprites:
+              display_name: Spraidid
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_functions:
+              display_name: Funktsioonid
+            csf_nested_loops:
+              display_name: Korduvad tsüklid
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Tingimuslaused
+            csf_digcit:
+              display_name: Digitaalne kodakondsus
+            csf_events:
+              display_name: Sündmused
+            csf_loops:
+              display_name: Tsüklid
+            csf_sprites:
+              display_name: Spraidid
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Spraidid
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -1283,766 +2100,15 @@ et:
           lesson_groups:
             lg_1:
               display_name: Sisu
-        2021drafting:
+        virtual-holding-place:
           lesson_groups:
-            introduction:
-              display_name: Sissejuhatus
-            lessonGroup-3:
-              display_name: Muutujad
-            debugging:
-              display_name: Debugimine
-        csd1-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd2-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd3-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd4-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd5-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd6-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp1-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp2-2021:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Uuring
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Muutujad
-            csp_conditionals:
-              display_name: Tingimuslaused
-            csp_functions:
-              display_name: Funktsioonid
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Loendid
-            csp_loops:
-              display_name: Tsüklid
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Algoritmid
-        csp7-2021:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Uuring
-        csp8-2021:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Uuring
-        csp9-2021:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Uuring
-        csp10-2021:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Uuring
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_binary:
-              display_name: Binaarne
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-            csf_data:
-              display_name: Andmed
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Sündmused
-            csf_loops:
-              display_name: Tsüklid
-            csf_conditionals:
-              display_name: Tingimuslaused
-            csf_binary:
-              display_name: Binaarne
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            lessonGroup-6:
-              display_name: Digitaalne kodakondsus
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Korduvad tsüklid
-            csf_sprites:
-              display_name: Spraidid
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_nested_loops:
-              display_name: Tingimuslaused
-            csf_functions:
-              display_name: Funktsioonid
-        coursef-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Spraidid
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_variables:
-              display_name: For tsükkel
-            csf_for_loops:
-              display_name: For tsükkel
-            lessonGroup-8:
-              display_name: Muutujad
-            lessonGroup-9:
-              display_name: eemalda
-            lessonGroup-7:
-              display_name: Digitaalne kodakondsus
-        express-2021:
-          lesson_groups:
-            csf_warmup:
-              display_name: Soojendus
-            csf_loops:
-              display_name: Tsüklid
-            csf_conditionals:
-              display_name: Tingimuslaused
-            csf_functions:
-              display_name: Funktsioonid
-            csf_variables:
-              display_name: Muutujad
-            csf_for_loops:
-              display_name: For tsükkel
-            csf_sprites:
-              display_name: Spraidid
-            lessonGroup-9:
-              display_name: Sündmused
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: Sissejuhatus
-            lessonGroup-3:
-              display_name: Muutujad
-            Sprites:
-              display_name: Spraidid
-            variables:
-              display_name: Muutujad
-        csd4-preview-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-            csdSurvey:
-              display_name: Uuring
-        csd5-preview-2021:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csa1-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa2-pilot:
-          lesson_groups:
-            lesson group:
-              display_name: Sisu
-        csa3-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa4-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa5-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa6-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa8-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: Sissejuhatus
-            Introduction:
-              display_name: Sissejuhatus
-        haikubot-pilot:
-          lesson_groups:
-            Lesson 3:
-              display_name: Õppetund 3
-            Lesson 4:
-              display_name: Õppetund 4
-            Lesson 5:
-              display_name: Õppetund 5
-        csp-post-survey-2020:
-          lesson_groups:
-            cspSurvey2020:
-              display_name: Uuring
-        aiml-2021:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Uuring
-        csd7-2021:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Uuring
-        csa1-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa2-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa-videos:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Materjalid
-            lessonGroup-2:
-              display_name: Peatükk 1
-            lessonGroup-4:
-              display_name: Peatükk 2
-            lessonGroup-5:
-              display_name: Peatükk 3
-            lessonGroup-6:
-              display_name: Peatükk 4
-            lessonGroup-7:
-              display_name: Peatükk 5
-        csa3-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        dlp21-csp-mod4:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Etapp 1
-            lessonGroup-3:
-              display_name: Etapp 2
-        dlp21-csd:
-          lesson_groups:
-            lessonGroup-2:
-              description: test
-        csa1-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa2-pilot-facilitator:
-          lesson_groups:
-            lesson group:
-              display_name: Sisu
-        csa3-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa4-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa5-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa4-exemplars:
-          lesson_groups:
-            lesson group:
-              display_name: Sisu
             content:
               display_name: Sisu
-            lesson_group:
-              display_name: Sisu
-            lessonGroup-2:
-              display_name: Sisu
-        spelling-bee:
-          title: Sõnamesilane
-        csa5-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa6-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        ai-ethics-2021:
-          description_audience: 6.-12. klassid
-        csa6-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: KoodiTund
-        csa7-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Spraidid
-            lessonGroup-3:
-              display_name: Muutujad
-        csa8-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa7-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa8-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        express-2022:
-          lesson_groups:
-            csf_sprites:
-              display_name: Spraidid
-            lessonGroup-9:
-              display_name: Sündmused
-            csf_loops:
-              display_name: Tsüklid
-            csf_conditionals:
-              display_name: Tingimuslaused
-            csf_functions:
-              display_name: Funktsioonid
-            csf_variables:
-              display_name: Muutujad
-            csf_for_loops:
-              display_name: For tsükkel
-        csp1-2022:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: Muutujad
-            csp_conditionals:
-              display_name: Tingimuslaused
-            csp_functions:
-              display_name: Funktsioonid
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Loendid
-            csp_loops:
-              display_name: Tsüklid
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-            csf_data:
-              display_name: Andmed
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digitaalne kodakondsus
-            csf_events:
-              display_name: Sündmused
-            csf_loops:
-              display_name: Tsüklid
-            csf_conditionals:
-              display_name: Tingimuslaused
-        coursee-2022:
-          lesson_groups:
-            csf_sprites:
-              display_name: Spraidid
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            ramp_up:
-              display_name: Korduvad tsüklid
-            csf_functions:
-              display_name: Funktsioonid
-            csf_nested_loops:
-              display_name: Tingimuslaused
-        coursef-2022:
-          lesson_groups:
-            ramp_up:
-              display_name: Spraidid
-            lessonGroup-7:
-              display_name: Digitaalne kodakondsus
-            lessonGroup-8:
-              display_name: Muutujad
-        csa1-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-            lessonGroup-5:
-              display_name: Uuring
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        csa2-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa3-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa4-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa5-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa1-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa7-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa8-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Digitaalne kodakondsus
-            ramp_up:
-              display_name: Spraidid
-            lessonGroup-8:
-              display_name: Muutujad
-        csa6-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa7-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa8-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-            lessonGroup-5:
-              display_name: Uuring
-        csa2-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csd1-2022:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd2-2022:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd3-2022:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd4-2022:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd5-2022:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csd7-2022:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Uuring
-        csd6-2022:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Uuring
-        soccer:
-          name: jalgpall
-        csa1-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: Uuring
-            lessonGroup-2:
-              display_name: Sisu
-        csa2-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa3-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa4-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa5-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa6-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa7-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa8-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-            lessonGroup-5:
-              display_name: Uuring
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: Tsüklid
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Uuring
-            lessonGroup-3:
-              display_name: Sisu
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Muutujad
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: For tsükkel
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa5-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa7-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-        csa8-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Sisu
-            lessonGroup-4:
-              display_name: Uuring
-        csp1-2023:
-          lesson_groups:
-            cspSurvey:
-              display_name: Uuring
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Muutujad
-            csp_conditionals:
-              display_name: Tingimuslaused
-            csp_functions:
-              display_name: Funktsioonid
-        csp5-2023:
-          lesson_groups:
-            csp_lists:
-              display_name: Andmed
-            csp_loops:
-              display_name: Tsüklid
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Loendid
-            lessonGroup-3:
-              display_name: Tsüklid
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        express-2023:
-          lesson_groups:
-            csf_sprites:
-              display_name: Spraidid
-            lessonGroup-9:
-              display_name: Sündmused
-            csf_loops:
-              display_name: Tsüklid
-            csf_conditionals:
-              display_name: Tingimuslaused
-            csf_functions:
-              display_name: Funktsioonid
-            csf_variables:
-              display_name: Muutujad
-            csf_for_loops:
-              display_name: For tsükkel
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        courseb-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_loops:
-              display_name: Tsüklid
-            csf_events:
-              display_name: Sündmused
-            csf_data:
-              display_name: Andmed
-        coursed-2023:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digitaalne kodakondsus
-            csf_events:
-              display_name: Sündmused
-            csf_loops:
-              display_name: Tsüklid
-            csf_conditionals:
-              display_name: Tingimuslaused
-        coursee-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitaalne kodakondsus
-            csf_sprites:
-              display_name: Spraidid
-            ramp_up:
-              display_name: Korduvad tsüklid
-            csf_functions:
-              display_name: Funktsioonid
-            csf_nested_loops:
-              display_name: Tingimuslaused
-        web-development-2023:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Uuring
-        interactive-games-animations-2023:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Uuring
-        design-process-2023:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Uuring
-        data-society-2023:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Uuring
-        aiml-2023:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: Uuring
-        microbit-2023:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: Uuring
-        devices-2023:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: Uuring
-        pl-csd-summer-day1:
-          lessons:
-            lesson-3:
-              name: Sissejuhatus
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
               name: Sissejuhatus
-        coursef-2023:
+        web-development-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: Digitaalne kodakondsus
-            lessonGroup-3:
-              display_name: Spraidid
             lessonGroup-4:
-              display_name: Muutujad
-        csa-frq-practice-2022:
-          lessons:
-            lesson-4:
-              name: Andmed
+              display_name: Uuring

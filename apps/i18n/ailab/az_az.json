@@ -1,15 +1,15 @@
 {
-  "selectDataset": "İstifadə etmək istədiyiniz məlumat dəstini seçin",
-  "uploadedDataset": "Siz indicə dataseti yüklədiniz.",
-  "selectedDataset": "Siz indicə data dəstini seçdiniz",
-  "dataDisplayLabel": "Proqnozlaşdırmaq üçün bir sütun seçin.",
   "dataDisplayFeatures": "Proqnoz verməyə kömək etmək üçün verilənlər kimi bir və ya daha çox sütun seçin.",
-  "selectedFeatureNumerical": "Siz sadəcə bir ədədi xüsusiyyət seçdiniz.",
-  "selectedFeatureCategorical": "Siz sadəcə olaraq kateqoriyalı xüsusiyyət seçdiniz.",
-  "trainModel": "Modeliniz öyrədilməkdədir.",
+  "dataDisplayLabel": "Proqnozlaşdırmaq üçün bir sütun seçin.",
   "generateResults": "Modeliniz sınaqdan keçirilir.",
+  "modelSummary": "Modelinizi uğurla məşq etdiniz və yadda saxladınız. Model məlumatlarınızı nəzərdən keçirin və Tətbiq Laboratoriyasında təlim keçmiş modelinizi istifadə etmək üçün bitirib klikləyin",
   "results": "Nəticələri nəzərdən keçirin.",
   "resultsDetails": "Nəticələrin təfərrüatları göstərilir.",
   "saveModel": "Təlim edilmiş modeli Tətbiq Laboratoriyasında istifadə etmək üçün yadda saxlayın.",
-  "modelSummary": "Modelinizi uğurla məşq etdiniz və yadda saxladınız. Model məlumatlarınızı nəzərdən keçirin və Tətbiq Laboratoriyasında təlim keçmiş modelinizi istifadə etmək üçün bitirib klikləyin"
+  "selectDataset": "İstifadə etmək istədiyiniz məlumat dəstini seçin",
+  "selectedDataset": "Siz indicə data dəstini seçdiniz",
+  "selectedFeatureCategorical": "Siz sadəcə olaraq kateqoriyalı xüsusiyyət seçdiniz.",
+  "selectedFeatureNumerical": "Siz sadəcə bir ədədi xüsusiyyət seçdiniz.",
+  "trainModel": "Modeliniz öyrədilməkdədir.",
+  "uploadedDataset": "Siz indicə dataseti yüklədiniz."
 }

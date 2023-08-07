@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import classnames from 'classnames';
 
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
@@ -222,15 +221,13 @@ const MultipleSectionsAssigner = ({
                 )
             )}
         </div>
-        <a
-          className={classnames(
-            moduleStyle.selectAllOptions,
-            'select-all-sections'
-          )}
+        <Button
+          id="select-all-sections"
+          text={i18n.selectAll()}
           onClick={selectAllHandler}
-        >
-          {i18n.selectAll()}
-        </a>
+          styleAsText
+          color={Button.ButtonColor.brandSecondaryDefault}
+        />
       </div>
 
       <div className={moduleStyle.buttonContainer}>

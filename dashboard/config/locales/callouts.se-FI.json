@@ -11,19 +11,39 @@
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "Vállje dás makkár dánsár galgá leat."
         },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Vállje dás makkár dánsár galgá leat."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Vállje dás makkár dánsár galgá leat."
+        },
         "CourseD_Dance_2020_02": {
-          "dance_callout_11_a": "Lasit dán blohka iežat prográmmii.",
-          "arrow_buttons": "Deaddel njuollaboaluid go áiggut stivret iežat dánsára."
+          "arrow_buttons": "Deaddel njuollaboaluid go áiggut stivret iežat dánsára.",
+          "dance_callout_11_a": "Lasit dán blohka iežat prográmmii."
+        },
+        "CourseD_Dance_2020_022022": {
+          "arrow_buttons": "Deaddel njuollaboaluid go áiggut stivret iežat dánsára.",
+          "dance_callout_11_a": "Lasit dán blohka iežat prográmmii."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "arrow_buttons": "Deaddel njuollaboaluid go áiggut stivret iežat dánsára.",
+          "dance_callout_11_a": "Lasit dán blohka iežat prográmmii."
         },
         "CourseD_Dance_2020_05": {
+          "dance_callout_05": "Lasit ođđa dáhpáhusa du prográmmii."
+        },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Lasit ođđa dáhpáhusa du prográmmii."
+        },
+        "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Lasit ođđa dáhpáhusa du prográmmii."
         },
         "Dance_2019_01": {
           "dance_callout_01": "Vállje dás makkár dánsár galgá leat."
         },
         "Dance_2019_02": {
-          "dance_callout_11_a": "Lasit dán blohka iežat prográmmii.",
-          "arrow_buttons": "Deaddel njuollaboaluid go áiggut stivret iežat dánsára."
+          "arrow_buttons": "Deaddel njuollaboaluid go áiggut stivret iežat dánsára.",
+          "dance_callout_11_a": "Lasit dán blohka iežat prográmmii."
         },
         "Dance_2019_05": {
           "dance_callout_05": "Lasit ođđa dáhpáhusa du prográmmii."
@@ -44,20 +64,10 @@
           "New Play Lab Project_callout2": "Deaddel \"Bija mannat\" go áiggut vurket ja bidjat johtui iežat prográmma",
           "sign_in_to_save_project": "Áiggut go beassat iežat prošektii maŋŋil? Logge sisa vurket dán prošeavtta iežat kontoi!"
         },
-        "frozen line": {
-          "run": "Deaddel \"Bija mannat\" geahččalit iežat prográmma!"
-        },
-        "CourseD_Dance_2020_01_2021": {
-          "dance_callout_01": "Vállje dás makkár dánsár galgá leat."
-        },
-        "CourseD_Dance_2020_02_2021": {
-          "dance_callout_11_a": "Lasit dán blohka iežat prográmmii.",
-          "arrow_buttons": "Deaddel njuollaboaluid go áiggut stivret iežat dánsára."
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "dance_callout_05": "Lasit ođđa dáhpáhusa du prográmmii."
-        },
         "Overworld Move to Sheep": {
+          "craft_run_button_callout": "Deaddel \"Bija mannat\" geahččalit iežat prográmma"
+        },
+        "Overworld Move to Sheep2022": {
           "craft_run_button_callout": "Deaddel \"Bija mannat\" geahččalit iežat prográmma"
         },
         "Overworld Move to Sheep_2019": {
@@ -69,18 +79,8 @@
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Deaddel \"Bija mannat\" geahččalit iežat prográmma"
         },
-        "CourseD_Dance_2020_012022": {
-          "dance_callout_01": "Vállje dás makkár dánsár galgá leat."
-        },
-        "CourseD_Dance_2020_022022": {
-          "dance_callout_11_a": "Lasit dán blohka iežat prográmmii.",
-          "arrow_buttons": "Deaddel njuollaboaluid go áiggut stivret iežat dánsára."
-        },
-        "CourseD_Dance_2020_052022": {
-          "dance_callout_05": "Lasit ođđa dáhpáhusa du prográmmii."
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Deaddel \"Bija mannat\" geahččalit iežat prográmma"
+        "frozen line": {
+          "run": "Deaddel \"Bija mannat\" geahččalit iežat prográmma!"
         }
       }
     }

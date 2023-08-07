@@ -51,11 +51,15 @@ import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
-import {FUNCTION_BLOCK} from './addons/functionBlocks.js';
-import {FUNCTION_BLOCK_NO_FRAME} from './addons/functionBlocksNoFrame.js';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
+import CdoFieldImage from './addons/cdoFieldImage';
+import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
+import {
+  ObservableProcedureModel,
+  ObservableParameterModel,
+} from '@blockly/block-shareable-procedures';
 
 const options = {
   contextMenu: true,
@@ -168,6 +172,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('ConnectionType');
   blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
   blocklyWrapper.wrapReadOnlyProperty('contractEditor');
+  blocklyWrapper.wrapReadOnlyProperty('createBlockDefinitionsFromJsonArray');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
   blocklyWrapper.wrapReadOnlyProperty('DropDownDiv');
@@ -180,7 +185,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldColour');
   blocklyWrapper.wrapReadOnlyProperty('FieldColourDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldIcon');
-  blocklyWrapper.wrapReadOnlyProperty('FieldImage');
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
@@ -202,6 +206,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
   blocklyWrapper.wrapReadOnlyProperty('html');
   blocklyWrapper.wrapReadOnlyProperty('Input');
+  blocklyWrapper.wrapReadOnlyProperty('inputTypes');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
   blocklyWrapper.wrapReadOnlyProperty('MenuItem');
@@ -247,7 +252,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     ['field_number', 'FieldNumber', CdoFieldNumber],
     ['field_angle', 'FieldAngle', CdoFieldAngle],
     ['field_multilinetext', 'FieldMultilineInput', CdoFieldMultilineInput],
-    ['field_flyout', 'FieldFlyout', CdoFieldFlyout],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -257,8 +261,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   // Code.org custom fields
   blocklyWrapper.FieldButton = CdoFieldButton;
+  blocklyWrapper.FieldImage = CdoFieldImage;
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
   blocklyWrapper.FieldToggle = CdoFieldToggle;
+  blocklyWrapper.FieldFlyout = CdoFieldFlyout;
 
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
@@ -298,7 +304,22 @@ function initializeBlocklyWrapper(blocklyInstance) {
     true /* opt_allowOverrides */
   );
 
+  const procedureSerializer =
+    new blocklyWrapper.blockly_.serialization.procedures.ProcedureSerializer(
+      ObservableProcedureModel,
+      ObservableParameterModel
+    );
+
+  blocklyWrapper.procedureSerializer = procedureSerializer;
+  // Register the shareable procedures serializer, used for the modal function editor.
+  blocklyWrapper.blockly_.serialization.registry.unregister('procedures');
+  blocklyWrapper.blockly_.serialization.registry.register(
+    'procedures',
+    procedureSerializer
+  );
+
   registerAllContextMenuItems();
+
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
@@ -619,6 +640,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
+    if (options.noFunctionBlockFrame) {
+      workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
+    }
     workspace.addChangeListener(onBlockClickDragDelete);
 
     blocklyWrapper.navigationController.addWorkspace(workspace);
@@ -644,14 +668,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
         functionsFlyoutCategory
       );
     }
-    // Customize function definition blocks.
-    if (options.noFunctionBlockFrame) {
-      Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
-        FUNCTION_BLOCK_NO_FRAME.init;
-    } else {
-      Blockly.blockly_.Blocks['procedures_defnoreturn'].init =
-        FUNCTION_BLOCK.init;
-    }
 
     return workspace;
   };
@@ -675,6 +691,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.cdoUtils = cdoUtils;
   blocklyWrapper.customBlocks = customBlocks;
+  blocklyWrapper.getPointerBlockImageUrl = getPointerBlockImageUrl;
 
   return blocklyWrapper;
 }

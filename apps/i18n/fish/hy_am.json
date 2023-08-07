@@ -1,9 +1,9 @@
 {
-  "continue": "Շարունակել",
   "areYouSure": "Համոզված ես?",
   "cancel": "վերացնել",
-  "yes": "այո",
+  "continue": "Շարունակել",
+  "finish": "Finish",
   "no": "ոչ",
   "run": "Սկսել",
-  "finish": "Finish"
+  "yes": "այո"
 }

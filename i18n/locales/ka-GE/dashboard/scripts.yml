@@ -4971,6 +4971,8 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
+            lessonGroup-4:
+              display_name: გამოკითხვა
           student_description: პრობლემის გადაჭრა და გამოთვლა არის უაღრესად ინტერაქტიული და თანამშრომლობითი შესავალი კომპიუტერული მეცნიერების სფეროში, რომელიც ჩამოყალიბებულია პრობლემების გადაჭრის უფრო ფართო ძიებაში. თქვენ ივარჯიშებთ პრობლემის გადაჭრის პროცესის გამოყენებით თავსატეხების, გამოწვევებისა და რეალური სამყაროს სცენარების სერიის გადასაჭრელად. შემდეგი, თქვენ შეისწავლით თუ როგორ შეიტანენ კომპიუტერები ინფორმაციას, გამოაქვთ, ინახავენ და ამუშავებენ ინფორმაციას, რათა დაეხმარონ ადამიანებს პრობლემების გადაჭრაში. განყოფილება მთავრდება პროექტით, რომელშიც თქვენ შეიმუშავებთ პროგრამას, რომელიც დაგეხმარებათ თქვენი არჩევანის პრობლემის მოგვარებაში.
         focus-on-impact-in-society2-2023:
           lesson_groups:
@@ -5117,3 +5119,96 @@ ka:
           lesson_groups:
             lessonGroup-3:
               display_name: კლასები
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ციფრული მოქალაქეობა
+            lessonGroup-3:
+              display_name: თანმიმდევრობა
+            lessonGroup-4:
+              display_name: ციკლები
+            lessonGroup-5:
+              display_name: გამოთვლის ზემოქმედება
+          description_audience: 'ასაკი: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: მონაცემები
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ციფრული მოქალაქეობა
+            lessonGroup-3:
+              display_name: თანმიმდევრობა
+            lessonGroup-4:
+              display_name: ციკლები
+            lessonGroup-5:
+              display_name: გამოთვლის ზემოქმედება
+            lessonGroup-6:
+              display_name: მონაცემები
+          description_audience: 'ასაკი: 4-7'
+          description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა არ იცის.
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ციფრული მოქალაქეობა
+            lessonGroup-3:
+              display_name: თანმიმდევრობა
+            lessonGroup-4:
+              display_name: ციკლები
+            lessonGroup-5:
+              display_name: გამოთვლის ზემოქმედება
+            lessonGroup-6:
+              display_name: მოვლენები
+          description_audience: 'ასაკი: 5-8'
+          description_short: შესავალი კომპიუტერულ მეცნიერებაში წინასწარი მკითხველებისთვის. A კურსის მსგავსი, მაგრამ დამატებული კონცეფციის სიღრმით.
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ციფრული მოქალაქეობა
+            lessonGroup-3:
+              display_name: თანმიმდევრობა
+            lessonGroup-4:
+              display_name: ციკლები
+            lessonGroup-5:
+              display_name: მოვლენები
+            lessonGroup-6:
+              display_name: მონაცემები
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ციფრული მოქალაქეობა
+            lessonGroup-3:
+              display_name: თანმიმდევრობა
+            lessonGroup-4:
+              display_name: გამოთვლის ზემოქმედება
+            lessonGroup-6:
+              display_name: ციკლები
+            lessonGroup-7:
+              display_name: მონაცემები
+          description_audience: 'ასაკი: 7-11'
+          description_short: შეიტყვეთ პირობითი განცხადებების შესახებ. შექმენით თქვენი საკუთარი ხელოვნება, თამაშები და კიდევ საცეკვაო წვეულება.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: ჩასმული ციკლები
+            lessonGroup-4:
+              display_name: ფუნქციები
+          description_audience: 'ასაკი: 8-12'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: სპრაიტები
+          description_audience: 'ასაკი: 9-13'
+          description_short: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: სპრაიტები
+            lessonGroup-3:
+              display_name: პირობითი ბრძანებები
+            lessonGroup-5:
+              display_name: ცვლადები
+            lessonGroup-6:
+              display_name: გამოთვლის ზემოქმედება
+          description_audience: 'ასაკი: 9-13'
+          description_short: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.

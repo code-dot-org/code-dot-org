@@ -163,6 +163,7 @@ sq:
           description_short: Krijo një histori ose një lojë me laboratorin e Gumball!
           student_description: Krijo një histori ose një lojë me laboratorin e Gumball!
         starwars:
+          title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (JavaScript)'
           description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
           description_short: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
           student_description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
@@ -280,10 +281,14 @@ sq:
           lesson_groups:
             content:
               display_name: Përmbajtja
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursef-draft:
           lesson_groups:
             content:
               display_name: Përmbajtja
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         classic-hoc-impact-study:
           description_short: Provo bazat e shkencës kompjuterike me shumë karaktere zbavitëse!
         hoc-impact-study:
@@ -312,6 +317,8 @@ sq:
               display_name: Praktikat mësimore
         csf2harvey:
           lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
             content:
               display_name: Përmbajtja
         csp5-support:
@@ -326,6 +333,14 @@ sq:
           lesson_groups:
             content:
               display_name: Përmbajtja
+        coursee-2017:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursef-2017:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         cspnovice:
           lesson_groups:
             required:
@@ -402,12 +417,44 @@ sq:
           lesson_groups:
             content:
               display_name: Përmbajtja
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        e-f-ramp:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         new-express:
           lesson_groups:
             content:
               display_name: Përmbajtja
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        new-e:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        new-f:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         hero:
           name: hero
+        course-e-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        course-f-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursee-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+        coursef-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         csd1-dlp-18:
           lesson_groups:
             required:
@@ -541,6 +588,8 @@ sq:
               display_name: Internet
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursed-2019:
           lesson_groups:
             csf_events:
@@ -553,6 +602,8 @@ sq:
               display_name: Binare
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursee-2019:
           lesson_groups:
             csf_digcit:
@@ -561,6 +612,8 @@ sq:
               display_name: Përsëritjet e Mbivendosura
             csf_functions:
               display_name: funksione
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         express-2019:
           lesson_groups:
             csf_loops:
@@ -591,6 +644,8 @@ sq:
               display_name: Ngjarje
             csf_data:
               display_name: të dhëna
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursea-2019:
           lesson_groups:
             csf_digcit:
@@ -815,6 +870,8 @@ sq:
               display_name: Përsëritjet e Mbivendosura
             csf_functions:
               display_name: funksione
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -881,6 +938,8 @@ sq:
               display_name: Ngjarje
             csf_data:
               display_name: të dhëna
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursed-2020:
           lesson_groups:
             csf_events:
@@ -893,6 +952,8 @@ sq:
               display_name: Binare
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursee-2020:
           lesson_groups:
             csf_digcit:
@@ -901,6 +962,8 @@ sq:
               display_name: Përsëritjet e Mbivendosura
             csf_functions:
               display_name: funksione
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursef-2020:
           lesson_groups:
             csf_digcit:
@@ -911,6 +974,8 @@ sq:
               display_name: të dhëna
             csf_for_loops:
               display_name: Për Ciklet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         express-2020:
           lesson_groups:
             csf_loops:
@@ -923,6 +988,8 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -964,7 +1031,7 @@ sq:
         2021drafting:
           lesson_groups:
             introduction:
-              display_name: Hyrja
+              display_name: Hyrje
             lessonGroup-3:
               display_name: variabla
             debugging:
@@ -995,7 +1062,10 @@ sq:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
+            lessonGroup-5:
+              display_name: Përfundimi i projektit të kursit
         courseb-2021:
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
@@ -1003,6 +1073,8 @@ sq:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
         coursec-2021:
           lesson_groups:
             csf_digcit:
@@ -1015,6 +1087,8 @@ sq:
               display_name: Ngjarje
             csf_data:
               display_name: të dhëna
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursed-2021:
           lesson_groups:
             csf_events:
@@ -1027,6 +1101,8 @@ sq:
               display_name: Binare
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
             lessonGroup-6:
               display_name: Shtetësi Dixhitale
         coursee-2021:
@@ -1039,6 +1115,8 @@ sq:
               display_name: Kushtet
             csf_functions:
               display_name: funksione
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursef-2021:
           lesson_groups:
             csf_digcit:
@@ -1047,6 +1125,8 @@ sq:
               display_name: Për Ciklet
             csf_for_loops:
               display_name: Për Ciklet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
             lessonGroup-8:
               display_name: variabla
             lessonGroup-9:
@@ -1055,6 +1135,8 @@ sq:
               display_name: Shtetësi Dixhitale
         express-2021:
           lesson_groups:
+            csf_warmup:
+              display_name: Parapërgatitje
             csf_loops:
               display_name: cikle
             csf_conditionals:
@@ -1065,6 +1147,8 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
             lessonGroup-9:
               display_name: Ngjarje
         pre-express-2021:
@@ -1076,7 +1160,7 @@ sq:
         csf-2021-pilot:
           lesson_groups:
             ramp_up:
-              display_name: Hyrja
+              display_name: Hyrje
             lessonGroup-3:
               display_name: variabla
             variables:
@@ -1118,9 +1202,9 @@ sq:
         k5-onlinepd-2021:
           lesson_groups:
             k5_getting_started_1:
-              display_name: Hyrja
+              display_name: Hyrje
             Introduction:
-              display_name: Hyrja
+              display_name: Hyrje
         haikubot-pilot:
           lesson_groups:
             Lesson 3:
@@ -1219,6 +1303,8 @@ sq:
           lesson_groups:
             lessonGroup-3:
               display_name: variabla
+            lessonGroup-4:
+              display_name: Përfundimi i projektit të kursit
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1239,6 +1325,9 @@ sq:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
+            lessonGroup-5:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi A (2022)
         express-2022:
           lesson_groups:
             lessonGroup-9:
@@ -1253,6 +1342,8 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         csp4-2022:
           lesson_groups:
             csp_variables:
@@ -1270,11 +1361,17 @@ sq:
         courseb-2022:
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësi Digjitale
+            csf_sequencing:
+              display_name: Renditje
             csf_loops:
-              display_name: cikle
+              display_name: Loops
             csf_events:
               display_name: Ngjarje
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi B (2022)
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Nxënësit do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
         coursec-2022:
           lesson_groups:
             csf_digcit:
@@ -1285,6 +1382,9 @@ sq:
               display_name: Ngjarje
             csf_data:
               display_name: të dhëna
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi C (2022)
         coursed-2022:
           lesson_groups:
             lessonGroup-6:
@@ -1295,6 +1395,9 @@ sq:
               display_name: cikle
             csf_conditionals:
               display_name: Kushtet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
+          title: Kursi D (2022)
         coursee-2022:
           lesson_groups:
             csf_digcit:
@@ -1305,12 +1408,16 @@ sq:
               display_name: funksione
             csf_nested_loops:
               display_name: Kushtet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursef-2022:
           lesson_groups:
             lessonGroup-7:
               display_name: Shtetësi Dixhitale
             lessonGroup-8:
               display_name: variabla
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         csa1-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1355,6 +1462,8 @@ sq:
               display_name: Shtetësi Dixhitale
             lessonGroup-8:
               display_name: variabla
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         csa6-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1498,6 +1607,8 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursea-2023:
           lesson_groups:
             csf_digcit:
@@ -1506,6 +1617,8 @@ sq:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
+            lessonGroup-5:
+              display_name: Përfundimi i projektit të kursit
         courseb-2023:
           lesson_groups:
             csf_digcit:
@@ -1514,6 +1627,9 @@ sq:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
         coursec-2023:
           lesson_groups:
             csf_digcit:
@@ -1524,6 +1640,8 @@ sq:
               display_name: Ngjarje
             csf_data:
               display_name: të dhëna
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursed-2023:
           lesson_groups:
             lessonGroup-6:
@@ -1534,6 +1652,8 @@ sq:
               display_name: cikle
             csf_conditionals:
               display_name: Kushtet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         coursee-2023:
           lesson_groups:
             csf_digcit:
@@ -1544,10 +1664,12 @@ sq:
               display_name: funksione
             csf_nested_loops:
               display_name: Kushtet
+            end_of_course_project:
+              display_name: Përfundimi i projektit të kursit
         pl-csd-summer-day1:
           lessons:
             lesson-3:
-              name: Hyrja
+              name: Hyrje
         pl-csd-summer-day2:
           lessons:
             lesson-10:
@@ -1559,7 +1681,7 @@ sq:
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
-              name: Hyrja
+              name: Hyrje
             lesson-12:
               name: Mbyll
         virtual-pl-csd-summer-day2:
@@ -1580,7 +1702,73 @@ sq:
               display_name: Shtetësi Dixhitale
             lessonGroup-4:
               display_name: variabla
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
         csa-frq-practice-2022:
           lessons:
             lesson-4:
               name: të dhëna
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-4:
+              display_name: cikle
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: të dhëna
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-4:
+              display_name: cikle
+            lessonGroup-6:
+              display_name: të dhëna
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-4:
+              display_name: cikle
+            lessonGroup-6:
+              display_name: Ngjarje
+            lessonGroup-7:
+              display_name: Përfundimi i projektit të kursit
+          description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-4:
+              display_name: cikle
+            lessonGroup-5:
+              display_name: Ngjarje
+            lessonGroup-6:
+              display_name: të dhëna
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-6:
+              display_name: cikle
+            lessonGroup-7:
+              display_name: të dhëna
+            lessonGroup-8:
+              display_name: Përfundimi i projektit të kursit
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Përsëritjet e Mbivendosura
+            lessonGroup-4:
+              display_name: funksione
+            lessonGroup-6:
+              display_name: Përfundimi i projektit të kursit
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kushtet
+            lessonGroup-5:
+              display_name: variabla
+            lessonGroup-7:
+              display_name: Përfundimi i projektit të kursit

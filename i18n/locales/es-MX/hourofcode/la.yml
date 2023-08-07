@@ -35,14 +35,14 @@ la:
   africa_campaign_date_full: Octubre 1-31
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: Octubre 1-31, 2020
-  hoc2022_header: "¡Explora, juega y crea!"
+  hoc2022_header: "¡Explora, Juega y Crea!"
   social_hoc2022_explore_play_create: "¡Utiliza las ciencias de la computación para
     explorar, jugar y crear!"
   codeorg_homepage_hoc2022_body: 'Explora el universo, anota un gol, crea tu propia
     coreografía: hay muchas maneras de probar las ciencias de la computación.'
   hoc2022_codeorg_title: Celebra la Hora del Código con la NASA y más
-  hoc2022_codeorg_description: "¡La décima edición de la Hora del Código es algo fuera
-    de serie! Ven a explorar, jugar y crear con nosotros."
+  hoc2022_codeorg_description: "¡La 10ª Hora del Código es algo fuera de lo común!
+    Ven a explorar, jugar y crear con nosotros."
   social_hoc2022_dance: "¡Con música de Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena
     Gomez, la película de Disney «Encanto» y más!"
   social_hoc2023_dance: ¡Con música de Beyoncé, BTS, Harry Styles, Lizzo, Lil Nas
@@ -113,7 +113,7 @@ la:
     el papel que podrían desempeñar las ciencias de la computación en la creación
     de un mundo más equitativo.
   oceans_landing_videos: Videos sobre IA y aprendizaje automático
-  oceans_behind_the_scenes: 'IA para océanos: detrás de escena'
+  oceans_behind_the_scenes: 'IA para Océanos: detrás de escena'
   oceans_behind_the_scenes_1: Los niveles 2-4 una modelo predefinido provisto por
     el proyecto <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
     MobileNet</a>. El modelo de MobileNet es un <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">red
@@ -164,47 +164,60 @@ la:
   social_coldplay_title: Crea con Coldplay y Code.org
   social_coldplay_desc: "¡Muéstranos tus mejores movimientos! Programa, baila, comparte
     con el mundo y podrás ganar."
-  social_maker_title: I'm a Maker!
+  social_maker_title: "¡Soy un/a creador/a!"
   social_maker_desc: Code.org physical computing and maker resources for grades 6-12.
-  social_blockchain_title: How Blockchain Works
-  social_blockchain_desc: Videos and lessons that explore what blockchain is and why
-    it's important.
-  social_ai_title: Learn about artificial intelligence (AI) | Code.org
-  social_ai_desc: Tools to help students and teachers bring AI into the classroom.
-  pl_superhero_title: Help students become superheroes!
+  social_blockchain_title: Cómo funciona la Blockchain
+  social_blockchain_desc: Videos y lecciones que exploran lo que es la blockchain
+    y su importancia.
+  social_ai_title: Aprende sobre la inteligencia artificial (IA) | Code.org
+  social_ai_desc: Recursos para ayudar a estudiantes y docentes a usar la IA en la
+    escuela.
+  pl_superhero_title: "¡Desarrolla el potencial de tus estudiantes!"
   pl_superhero_desc: Join our highly supportive Professional Learning Program for
     middle and high school educators.
   teach_ai_homepage_banner_title: Educación en IA para el mundo
   teach_ai_homepage_banner_desc: Code.org es parte de TeachAI, dedicada a capacitar
     a los educadores de todo el mundo para que enseñen con IA y sobre IA.
-  curriculum_launch_2023_title: Introducing incredible updates to our curriculum
-  curriculum_launch_2023_desc: Updates to CSC, CSP, CSD, and more — plus a new Curriculum
-    Catalog and redesigned Teach page to help you find it all!
+  curriculum_launch_2023_title: Mira las nuevas actualizaciones de nuestro currículum
+  curriculum_launch_2023_desc: 'Hemos actualizado CSC, CSP, CSD, y más - además creamos
+    un nuevo Catálogo Curricular y rediseñamos la página de docentes para puedas encontrarlo
+    todo en un solo lugar. '
+  in_partnership_with: En colaboración con
+  afe_partnership_logo_alt: Logo de Amazon Future Engineers
+  afe_partnership_thanks_desc: Amazon Future Engineer* es un programa que abarca desde
+    la niñez hasta la carrera profesional, diseñado para inspirar, educar y formar
+    a niños y jóvenes de bajos recursos y con otras necesidades, y ayudarlos a seguir
+    una carrera en ciencias de la computación. [Aprende más](%{afe_url})
+  grade_level: Grade level
   grade_level_label_elementary: Primaria
   grade_level_label_middle: Secundaria
   grade_level_label_high: Preparatoria
-  teacher_label_csd: CS Discoveries Teacher
-  teacher_label_csp: CS Principles Teacher
-  teacher_label_csc: CS Connections Teacher
-  required_materials: 'Required Materials:'
-  optional_materials: 'Optional Materials:'
+  teacher_label_csf: Profesor de CS Fundamentals
+  teacher_label_csd: Docente en CS Discoveries
+  teacher_label_csp: Docente en CS Principles
+  teacher_label_csc: Docente en CS Connections
+  teacher_label_csa: AP® Computer Science A Teacher
+  required_materials: 'Materiales requeridos:'
+  optional_materials: 'Materiales opcionales:'
   call_to_action_learn_more: Conoce más
-  call_to_action_watch_now: Watch now
-  call_to_action_try_activity: Try activity
-  call_to_action_explore_unit: Explore unit
+  call_to_action_watch_now: Mira
+  call_to_action_try_activity: Prueba la actividad
+  call_to_action_explore_unit: Explora la unidad
   call_to_action_explore_curriculum: Explora el currículum
-  call_to_action_explore_curriculum_options: Explore curriculum options
-  call_to_action_explore_modules: Explore modules
-  call_to_action_explore_workshops: Explore workshops
-  call_to_action_explore_course: Explore course
-  call_to_action_explore_full_course: Explore full course
-  call_to_action_explore_widgets: Explore widgets
-  call_to_action_explore_choice_level: Explore example choice level
-  call_to_action_explore_collection: Explore collection
-  call_to_action_try_app_lab: Try App Lab
-  call_to_action_view_lesson_plan: View lesson plan
-  call_to_action_self_paced_pl: Start self-paced professional learning
-  call_to_action_apply_for_pl: Apply for Professional Learning
+  call_to_action_explore_curriculum_options: Explora las opciones curriculares
+  call_to_action_explore_modules: Explora los módulos
+  call_to_action_explore_workshops: Explora los talleres
+  call_to_action_explore_course: Explora los cursos
+  call_to_action_explore_courses: Explora los cursos
+  call_to_action_explore_full_course: Explora un curso por completo
+  call_to_action_explore_widgets: Explora los widgets
+  call_to_action_explore_choice_level: Explora los níveles de ejemplo
+  call_to_action_explore_collection: Explore la colección
+  call_to_action_explore_unplugged_lesson: Explora las actividades sin conexión
+  call_to_action_try_app_lab: Prueba el Laboratorio de Apps
+  call_to_action_view_lesson_plan: Ver el plan de lección
+  call_to_action_self_paced_pl: Comenzar el aprendizaje profesional autodidáctico
+  call_to_action_apply_for_pl: Postula al Aprendizaje Profesional
   call_to_action_watch_panel: Watch panel
   call_to_action_learn_about_challenge: Learn about challenge
   call_to_action_explore_website: Explore website
@@ -227,16 +240,19 @@ la:
   call_to_action_see_full_curriculum_catalog: Ver el Catálogo Currícular
   call_to_action_find_self_paced_modules: Módulos de aprendizaje autodidacta
   call_to_action_join_teacher_forums: Únete al foro de docentes
-  call_to_action_explore_teacher_forums: Explore teacher forums
+  call_to_action_explore_teacher_forums: Explora el foro de docentes
   call_to_action_explore_career_resources: Explora los recursos de desarrollo profesional
   call_to_action_watch_videos: Mira los videos
   call_to_action_download_posters: Descargar pósteres
-  call_to_action_contact_support: Contact Code.org support
-  call_to_action_pick_units: Pick units
-  call_to_action_focus_on_topic: Focus on a topic
-  call_to_action_teach_full_intro_course: Teach a full intro course
-  call_to_action_see_module_details: See module details
-  call_to_action_start_modules: Start modules
+  call_to_action_contact_support: Solicita Apoyo Técnico
+  call_to_action_pick_units: Elegir unidades
+  call_to_action_focus_on_topic: Enfoque en una materia
+  call_to_action_teach_full_intro_course: Enseña un curso de introducción completo
+  call_to_action_see_module_details: Ver detalles del módulo
+  call_to_action_start_modules: Empezar módulos
+  call_to_action_see_course_details: Ver detalles del curso
+  call_to_action_learn_about_approach: Aprende más sobre nuestro método
+  call_to_action_try_java_lab: Prueba Java Lab
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -254,6 +270,10 @@ la:
     with Devices (micro:bit) professional learning program
   aria_label_call_to_action_curriculum_csf: Explora los Fundamentos de las Ciencias
     de la Computación
+  aria_label_call_to_action_curriculum_csf_express: Explora el curso Express de CS
+    Fundamentals
+  aria_label_call_to_action_curriculum_csf_express_pre_reader: Explora el curso Express
+    para pre-lectores de CS Fundamentals
   aria_label_call_to_action_curriculum_csd: Explora los Descubrimientos en las Ciencias
     de la Computación
   aria_label_call_to_action_curriculum_csp: Explora los Principios de las Ciencias
@@ -266,60 +286,103 @@ la:
     (Circuit Playground)
   aria_label_call_to_action_curriculum_maker_microbit: Explora Cómo Crear Apps con
     Dispositivos (micro:bit)
-  aria_label_call_to_action_curriculum_creating_apps_with_devices: Explore the Creating
-    Apps with Devices unit
-  aria_label_call_to_action_curriculum_problem_solving_computing: Explore the Problem
-    Solving and Computing unit
-  aria_label_call_to_action_curriculum_web_development: Explore the Web Development
-    unit
-  aria_label_call_to_action_curriculum_interactive_animations_games: Explore the Interactive
-    Animations and Games unit
-  aria_label_call_to_action_curriculum_design_process: Explore the Design Process
-    unit
-  aria_label_call_to_action_curriculum_data_society: Explore the Data and Society
-    unit
-  aria_label_call_to_action_collection_hardware: Explore the Hardware collection
-  aria_label_call_to_action_collection_design_purpose: Explore the Design with Purpose
-    collection
-  aria_label_call_to_action_collection_impact_society: Explore the Impact in Society
-    collection
-  aria_label_call_to_action_collection_creativity: Explore the Creativity collection
-  aria_label_call_to_action_collection_coding: Explore the Coding collection
-  aria_label_call_to_action_collection_data: Explore the Data collection
-  aria_label_call_to_action_module_coding_w_poetry: See the Coding with Poetry module
-    details
-  aria_label_call_to_action_module_coding_time_capsule: See the Coding a Time Capsule
-    module details
-  aria_label_call_to_action_module_simulating_marine_ecosystem: See the Simulating
-    a Marine Ecosystem module details
-  aria_label_call_to_action_module_coding_geometric_star_quilt: See the Coding a Geometric
-    Star Quilt module details
-  aria_label_call_to_action_module_modeling_animal_adaptations: See the Modeling Animal
-    Adaptations module details
-  aria_label_call_to_action_module_coding_book_covers: See the Coding Book Covers
-    module details
-  aria_label_call_to_action_module_coding_interactive_maps: See the Coding Interactive
-    Maps module details
+  aria_label_call_to_action_curriculum_creating_apps_with_devices: 'Explora la unidad:
+    Crea Apps con Dispositivos'
+  aria_label_call_to_action_curriculum_problem_solving_computing: 'Explora la unidad:
+    Resolución de problemas y la Computación'
+  aria_label_call_to_action_curriculum_web_development: 'Explora la unidad: Desarrollo
+    Web'
+  aria_label_call_to_action_curriculum_interactive_animations_games: 'Explora la unidad:
+    Animaciones Interactivas y Juegos'
+  aria_label_call_to_action_curriculum_design_process: 'Explora la unidad: El Proceso
+    de Diseño'
+  aria_label_call_to_action_curriculum_data_society: 'Explora la unidad: La Información
+    y la Sociedad'
+  aria_label_call_to_action_collection_hardware: Explora la colección de Hardware
+  aria_label_call_to_action_collection_design_purpose: Explora la colección de Diseño
+    con Propósito
+  aria_label_call_to_action_collection_impact_society: Explora la colección de Impacto
+    en la Sociedad
+  aria_label_call_to_action_collection_creativity: Explora la colección de Creatividad
+  aria_label_call_to_action_collection_coding: Explora la colección de Programación
+  aria_label_call_to_action_collection_data: Explora la colección de Información
+  aria_label_call_to_action_module_coding_w_poetry: 'Ver detalles del módulo: Programación
+    con Poesía'
+  aria_label_call_to_action_module_coding_time_capsule: 'Ver detalles del módulo:
+    Cómo programar una Capsula de Tiempo'
+  aria_label_call_to_action_module_simulating_marine_ecosystem: 'Ver detalles del
+    módulo: Cómo programar un Ecosistema Marino'
+  aria_label_call_to_action_module_coding_geometric_star_quilt: 'Ver detalles del
+    módulo: Cómo programar una Colcha Estrellada'
+  aria_label_call_to_action_module_modeling_animal_adaptations: 'Ver detalles del
+    módulo: Cómo modelar la Adaptación Animal'
+  aria_label_call_to_action_module_coding_book_covers: 'Ver detalles del módulo: Cómo
+    programar portadas de libros'
+  aria_label_call_to_action_module_coding_interactive_maps: 'Ver detalles: Cómo programar
+    mapas interactivos'
+  aria_label_call_to_action_csf_course_a: 'Ver detalles: Curso A'
+  aria_label_call_to_action_csf_course_b: 'Ver detalles: Curso B'
+  aria_label_call_to_action_csf_course_c: 'Ver detalles: Curso C'
+  aria_label_call_to_action_csf_course_d: 'Ver detalles: Curso D'
+  aria_label_call_to_action_csf_course_e: 'Ver detalles: Curso E'
+  aria_label_call_to_action_csf_course_f: 'Ver detalles: Curso F'
   video_title_professional_learning_program: Code.org's Professional Learning Program
   curriculum_name_csf: Computer Science Fundamentals
   curriculum_name_csf_02: Any CS Fundamentals (Course A-F)
   curriculum_name_csf_a_f: Fundamentos de Ciencias de la Computación A-F
+  curriculum_name_csf_express: Express
+  curriculum_name_csf_express_pre_reader: Express para pre-lectores
+  curriculum_name_csf_course_a: Curso A
+  curriculum_name_csf_course_b: Curso B
+  curriculum_name_csf_course_c: Curso C
+  curriculum_name_csf_course_d: Curso D
+  curriculum_name_csf_course_e: Curso E
+  curriculum_name_csf_course_f: Curso F
+  curriculum_name_csf_no_device: Sin dispositivo ó conexión
+  curriculum_name_csf_self_paced: Lecciones autoguiadas
+  curriculum_name_csf_teacher_led: Teacher led lesson
   curriculum_name_csd: Computer Science Discoveries
   curriculum_name_csp: Computer Science Principles
   curriculum_name_csc: Conexiones a las Ciencias de la Computación
+  curriculum_name_csa: AP® Computer Science A
   curriculum_name_csc_02: Any CS Connections Module
-  curriculum_name_csa: Computer Science A
   curriculum_name_ai: IA y aprendizaje automático
   curriculum_name_maker_cp: Creating Apps with Devices (Circuit Playground)
   curriculum_name_maker_microbit: Creating Apps with Devices (micro:bit)
-  curriculum_name_creating_apps_with_devices: Creating Apps with Devices
+  curriculum_name_creating_apps_with_devices: Crear Apps con Dispositivos
   curriculum_name_poetry: Programación con poesía
   curriculum_name_dance_party: Fiesta de baile
-  curriculum_name_problem_solving_computing: Problem Solving & Computing
-  curriculum_name_web_development: Web Development
-  curriculum_name_interactive_animations_games: Interactive Animations & Games
-  curriculum_name_design_process: The Design Process
-  curriculum_name_data_society: Data & Society
+  curriculum_name_problem_solving_computing: Resolución de Problemas y Computación
+  curriculum_name_web_development: Desarrollo Web
+  curriculum_name_interactive_animations_games: Animaciones Interactivas y Juegos
+  curriculum_name_design_process: El Proceso de Diseño
+  curriculum_name_data_society: La información y la sociedad
+  curriculum_desc_csf_express: Learn to create computer programs, develop problem-solving
+    skills, and work through fun challenges! Make games and creative projects to share
+    with friends, family, and teachers.
+  curriculum_desc_csf_express_pre_reader: Learn the basics of drag-and-drop block
+    coding by solving puzzles and creating animated scenes. Make art and simple games
+    to share with friends, family, and teachers.
+  curriculum_desc_csf_course_a: Program using commands like loops and events. Teach
+    students to collaborate with others, investigate different problem-solving techniques,
+    persist in the face of challenging tasks, and learn about internet safety.
+  curriculum_desc_csf_course_b: Through unplugged activities and a variety of puzzles,
+    students will learn the basics of programming, collaboration techniques, investigation
+    and critical thinking skills, persistence in the face of difficulty, and internet
+    safety.
+  curriculum_desc_csf_course_c: Create programs with sequencing, loops, and events.
+    Investigate problem-solving techniques and develop strategies for building positive
+    communities both online and offline. Create interactive games that students can
+    share.
+  curriculum_desc_csf_course_d: Review of the concepts found in earlier courses, including
+    loops and events. Afterward, students will develop their understanding of algorithms,
+    nested loops, while loops, conditionals, and more.
+  curriculum_desc_csf_course_e: Make fun, interactive projects that reinforce learning
+    about online safety. Engage in more complex coding such as nested loops, functions,
+    and conditionals.
+  curriculum_desc_csf_course_f: Look at how users make choices in the apps they use.
+    Make a variety of Sprite Lab apps that also offer choices for the user. Learn
+    more advanced concepts, including variables and “for” loops.
   curriculum_desc_problem_solving_computing: Use a problem-solving process to tackle
     puzzles, challenges, and real-world scenarios. Learn about computer input, output,
     storage, and processing to aid in problem-solving.
@@ -357,6 +420,7 @@ la:
   module_label_ages: 'Edades:'
   module_label_grades: 'Grados:'
   module_label_curriculum: 'Curriculum:'
+  module_label_curriculum_pure: Curriculum
   module_label_duration: 'Duration:'
   module_label_prerequisites: 'Prerequisites:'
   module_label_level: 'Level:'
@@ -366,18 +430,33 @@ la:
   module_label_professional_learning: 'Professional Learning:'
   module_label_languages: 'Languages Supported:'
   module_label_accessibility_features: 'Accessibility:'
-  module_ages_5_10: 5-10
-  module_ages_11_18: 11-18
-  module_ages_7_18: 7-18
+  module_label_educator_tool: Educator tool
+  module_label_educator_course: Educator course
+  module_label_student_tool: Student tool
+  module_label_student_product: Product
+  module_label_student_content_resources: Content & resources
+  module_ages_5_10: de 5 a 10
+  module_ages_11_18: de 11 a18
+  module_ages_7_18: de 7 a 18
+  module_grade_k_5: K-5
+  module_grade_k_1: K-1
+  module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
+  module_grade_kindergarten: Kindergarten
+  module_grade_grade_01: Grade 1
+  module_grade_grade_02: Grade 2
+  module_grade_grade_03: Grade 3
+  module_grade_grade_04: Grade 4
+  module_grade_grade_05: Grade 5
   module_grade_k_5_teachers: Docentes de escuela primaria
   module_grade_6_10_teachers: Docentes de escuela secundaria
   module_grade_9_12_teachers: Docentes de preparatoria
   module_level_beginner: Beginner
+  module_level_intermediate: Intermediate
   module_duration_2_hrs: 2 hours
   module_duration_3_hrs: 3 hours
   module_duration_8_hrs: 8 hours
@@ -388,6 +467,7 @@ la:
   module_duration_quarter: Trimestre
   module_duration_semester: Semester
   module_duration_school_year: Año Escolar
+  module_duration_month_quarter: Month or Quarter
   module_duration_month_semester_year: Month, Semester, or Year
   module_prerequisites_none: Ninguno
   module_prerequisites_maker_cp: Access to a Circuit Playground
@@ -445,8 +525,13 @@ la:
   heading_flexible_units: Flexible units
   heading_collections: Collections
   heading_find_a_module: Find a module for your classroom
+  heading_no_devices: No devices? We have you covered
+  heading_java_lab: Java Lab
+  heading_objects_first: Objects first
   professional_learning_section_desc: Get the support you need as you prepare to teach.
     Teachers love it, with over 90% ranking it the best professional development ever!
+  professional_learning_section_desc_short: Get the support you need as you prepare
+    to teach.
   professional_learning_section_desc_self_paced: Just in time support that allows
     you to prepare to teach with confidence on your schedule.
   professional_learning_section_block_facilitator_led_workshops: Our highly supportive
@@ -454,12 +539,26 @@ la:
     to learn from each other as well as expert facilitators as you take on the first
     year of teaching the free curriculum to your students. In-person and virtual workshops
     are starting this summer.
+  professional_learning_section_block_facilitator_led_workshops_csf: Join local teachers
+    for inspiring and hands-on support to implement computer science in your classroom.
+    Our Regional Partners offer high-quality, one-day Code.org workshops for individual
+    teachers or for schoolwide PD. Sign up for a professional development workshop
+    near you!
+  professional_learning_section_block_csa: Our highly supportive Professional Learning
+    Program will bring you together with a group of teachers to learn from each other
+    as well as expert facilitators as you take on the first year of teaching the free
+    CSA curriculum to your students.
+  professional_learning_section_workshops_starting: In-person and virtual workshops
+    starting this summer.
+  no_devices_section_subhead: Go ahead, cut the cord (for a while)!
+  no_devices_section_desc: CS education does not always need to be in front of a screen
+    and device access shouldn't be a barrier to learning computer science concepts.
   support_and_questions_section_subhead: Still have questions? Reach out to us! We
     are here to help.
   support_and_questions_section_desc: Our support team is here to answer any questions
     you may have about starting teaching with Code.org. You can also ask other teachers
     about their experience on our teacher forums.
-  blockchain_hero_heading: How Blockchain Works
+  blockchain_hero_heading: Cómo funciona la Blockchain
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
   blockchain_intro_heading: See how blockchain works
@@ -533,7 +632,7 @@ la:
   ai_curricula_heading: AI Curricula
   ai_curricula_desc: Explore the different AI curriculum offerings which meet diverse
     classroom needs.
-  ai_curriculum_title_01: IA y aprendizaje automático
+  ai_curriculum_title_01: IA y Aprendizaje Automático
   ai_curriculum_desc_01: Explore how computers learn from data. Develop machine learning
     projects around real-world data. Design a machine learning app to solve a personally
     relevant problem.
@@ -591,6 +690,51 @@ la:
     throughout K-12. Offer free professional development, webinars, conference presentations,
     and peer-to-peer learning opportunities.
   ai_resources_btn_aria_label_03: Explore the AI for Teachers website
+  ai_pl_101_hero_heading: AI 101 for Teachers
+  ai_pl_101_hero_desc: Discover the transformative potential of artificial intelligence
+    (AI) in education with our free online learning series for educators.
+  ai_pl_101_hero_presented: Presented by
+  ai_pl_101_intro_heading: What is AI 101 for Teachers?
+  ai_pl_101_intro_text: AI 101 for Teachers is a free, foundational online professional
+    learning series for any teacher and educator interested in the groundbreaking
+    world of artificial intelligence (AI) and its transformative potential in education.
+    Partners Code.org, ETS, ISTE, Khan Academy are offering engaging sessions with
+    renowned experts that will demystify AI, explore responsible implementation, address
+    bias, and showcase how AI-powered learning can revolutionize student outcomes.
+    Join us on this journey of exploration and empowerment, and unlock the future
+    of teaching with and about AI.
+  ai_pl_101_partnership_between: A partnership between
+  ai_pl_101_join_email_title: Sign up for early access to AI 101 for Teachers
+  ai_pl_101_pro_join_email_desc: Be the first to hear when each session launches.
+    Get updates on AI resources from Code.org, ETS, ISTE and Khan Academy.
+  ai_pl_101_explore_title: AI-related resources
+  ai_pl_101_explore_desc: We have a variety of additional resources for you from Code.org,
+    ETS, ISTE and Khan Academy to support teachers in this new and growing field.
+    Check them out below.
+  ai_pl_101_explore_title_1: Khanmigo
+  ai_pl_101_explore__desc_1: Khan Academy’s AI-powered teaching aid allows teachers
+    to stop spending time on prep tasks they don’t love, and focus on what they do
+    love—teaching.
+  ai_pl_101_explore__button_1: Try Khanmigo
+  ai_pl_101_explore_title_2: Artificial Intelligence Explorations for Educators
+  ai_pl_101_explore__desc_2: For six years, this 15-hour online course from ISTE has
+    been guiding K-12 educators on the essentials of AI for teaching and learning.
+    The course is offered three times per year and is fully asynchronous with the
+    ongoing support of an expert instructor.
+  ai_pl_101_explore__button_2: Start the course
+  ai_pl_101_explore_title_3: AI Curriculum
+  ai_pl_101_explore__desc_3: In Code.org’s AI Curriculum for grades 3-12, students
+    use fun activities to see how computers learn from data. The curriculum also invites
+    students to investigate machine learning and data while reflecting on the ethical
+    implications of AI.
+  ai_pl_101_explore__button_3: Explore curricula
+  ai_pl_101_explore_title_4: ETS’s Criterion Interactive
+  ai_pl_101_explore__desc_4: 'This guided five-paragraph writing platform coaches
+    learners through five critical phases of the writing process: Prepare/Plan, Write,
+    Revise, Edit, Reflect. ETS personalizes the writing experience by leveraging cutting-edge
+    scoring models and AI, assisting teachers in providing iterative feedback and
+    formative assessment throughout the writing experience.'
+  ai_pl_101_explore__button_4: Explore tool
   ai_vid_intro_caption: Introducing How AI Works
   ai_vid_chatbots_caption: How Chatbots and Large Language Models Work
   ai_vid_creativity_caption: Does AI Have Creativity and Imagination?
@@ -791,33 +935,34 @@ la:
   resources_tabs_tab_label_slides: Diapositivas
   resources_tabs_tab_label_assessments: Evaluaciones
   resources_tabs_tab_label_tools: Herramientas
-  resources_tabs_lesson_plans_subhead: Get step-by-step guidance, learning objectives,
-    and assessment strategies for effective teaching.
+  resources_tabs_lesson_plans_subhead: Ofrecemos instrucciones paso a paso, metas
+    de aprendizaje, y estrategias de evaluación para apoyar el enseñamiento.
   resources_tabs_lesson_plans_desc: Nuestros recursos incluyen diapositivas, guías
     de implementación y evaluación, y más - todo en un solo lugar. Cada plan de lección
     contiene sugerencias para enseñar los conceptos en clases de cualquier tipo.
   resources_tabs_videos_heading: Videos de instrucción
   resources_tabs_videos_subhead: Estos recursos te ayudarán a entender conceptos de
     programación e informática.
-  resources_tabs_videos_desc: Code.org video series are designed specifically to support
-    your classroom and are engaging and fun to watch.
-  resources_tabs_slides_heading: Slide Decks
-  resources_tabs_slides_subhead: We offer educators an organized, visually engaging,
-    and pedagogically sound framework to deliver computer science lessons.
-  resources_tabs_slides_desc: Code.org slide decks provide step-by-step instructions,
-    examples, and interactive activities that align with curricular objectives.
-  resources_tabs_assessments_subhead: Our curricula includes a comprehensive system
-    of formative and summative assessment resources.
-  resources_tabs_assessments_desc: These include rubrics, checklists, mini-projects,
-    end-of-chapter projects, student-facing rubrics, sample projects, and post-project
-    tests — all designed to support teachers in measuring student growth, providing
-    feedback, and evaluating student understanding.
-  resources_tabs_tools_subhead: Code.org's integrated development environments (IDEs)
-    cater to students of all skill levels.
-  resources_tabs_tools_desc: We offer a versatile and user-friendly platform that
-    supports a variety of programming paradigms. This enables learners to seamlessly
-    transition from block-based coding to text-based languages, and fosters creativity
-    and innovation.
+  resources_tabs_videos_desc: Los videos de Code.org fueron diseñados para apoyar
+    la enseñanza. ¡Además son muy entretenido!
+  resources_tabs_slides_heading: Diapositivas
+  resources_tabs_slides_subhead: Ofrecemos a los educadores un marco bién organizado,
+    visualmente atractivo y pedagógicamente sólido para impartir clases de informática.
+  resources_tabs_slides_desc: Las diapositivas de Code.org contienen instrucciones
+    de paso a paso, ejemplos, y actividades interactivas que se adaptan a tus metas
+    curriculares.
+  resources_tabs_assessments_subhead: Nuestro currículum incluye un completo sistema
+    de recursos de evaluación formativa y sumativa.
+  resources_tabs_assessments_desc: Incluyen rúbricas, listas de control, miniproyectos,
+    proyectos de fin de capítulo, rúbricas para los alumnos, ejemplos y exámenes que
+    fueron diseñados para ayudar a los profesores a medir el progreso de los alumnos,
+    proporcionarles información y evaluar su comprensión.
+  resources_tabs_tools_subhead: Los entornos de desarrollo integrados (IDE) de Code.org
+    fueron diseñados para estudiantes de todos los niveles.
+  resources_tabs_tools_desc: Ofrecemos una plataforma versátil y fácil de usar para
+    exponer los diversos paradigmas de la programación. Esto permite a los estudiantes
+    pasar sin problemas de la programación basada en bloques a la programación basada
+    en texto, y fomenta la creatividad y la innovación.
   teach_page_top_heading: Enseña las ciencias de la computación & crea posibilidades
   teach_page_top_desc_01: Desarrolla todo el potencial de tus estudiantes con el currículo
     gratuito de Ciencias de la Computación (CS) de Code.org.
@@ -908,10 +1053,10 @@ la:
   teach_page_additional_materials_list_heading_03: Posteres
   teach_page_additional_materials_list_desc_03: Imprime estos posteres para ponerlos
     en tu clase e inspira a que tus estudiantes tomen clases de CS.
-  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
-    concepts of computer science and challenges them to explore how computing and
-    technology can impact the world. Can be taught as an introductory class and as
-    an AP course.
+  csp_page_top_desc: Free set of elementary curricula that introduces students to
+    the foundational concepts of computer science and challenges them to explore how
+    computing and technology can impact the world. Can be taught as an introductory
+    class and as an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1144,9 +1289,9 @@ la:
   csc_page_curriculum_glance_professional_languages: Inglés
   csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csc_page_quote: I loved the engagement [my students had with the module] and the
-    opportunities for choice and creativity. I loved hearing a student say, 'This
-    helped me see what we had been reading about in science.'
+  csc_page_quote: I greatly appreciate how thorough and well paced the lessons are.
+    I am not familiar with computer science, but with the lessons you provide I feel
+    confident in helping my students grasp the concepts and tie them into our curriculum.
   csc_page_find_a_module_desc: Our current CS Connections offerings are for 3rd to
     5th grade classrooms and are designed to take 1 week of 45-minute lessons each
     day.
@@ -1169,6 +1314,159 @@ la:
   csc_page_faq_question_05: What materials do I need for CS Connections?
   csc_page_faq_answer_05: Ideally, each student will have their own computer and teachers
     will have a projector to display the slideshow that corresponds with each lesson.
+  csf_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world.
+  csf_page_intro_heading: Free, and fun, elementary courses for each grade
+  csf_page_intro_list_01: Six courses, one for each elementary grade
+  csf_page_intro_list_02: Equitable introductory CS courses
+  csf_page_intro_list_03: Use the same course for all students in the same grade,
+    regardless of their experience
+  csf_page_intro_list_04: All courses make suitable entry points for students
+  csf_page_quote: I've been teaching the course since the Monday after the workshop.
+    The students and I LOVE it (and so do their classroom teachers!!!)
+  csf_page_curriculum_glance_topics: Programming, Internet, Games and Animation, Art
+    and Design, App Design
+  csf_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
+  csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
+  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
+    Modules
+  csf_page_curriculum_glance_languages: Arabic, Bahasa Indonesian, Catalán, Chinese
+    Simplified, Chinese Traditional, Czech, French, German, Hindi, Italian, Japanese,
+    Korean, Kannada, Malay, Marathi, Mongolian, Polish, Portuguese-BR, Romanian, Russian,
+    Slovak, Tagalog, Tamil, Thai, Turkish, Ukrainian, Spanish Latam, Urdu, Spanish-ES,
+    Uzbek, Vietnamese
+  csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
+    Immersive reader
+  csf_page_pick_a_course_heading: Picking the right CS Fundamentals course for your
+    classroom
+  csf_page_pick_a_course_desc: With the diverse set of options offered for CS Fundamentals,
+    there is a course for all different needs.
+  csf_page_pick_a_course_heading_02: How will your students engage with the content?
+  csf_page_courses_heading: Courses specifically designed for your elementary classroom
+  csf_page_courses_desc: Find the course for the grade you teach. Each course is approximately
+    a month long.
+  csf_page_courses_self_paced_heading: Self-paced elementary curriculums
+  csf_page_courses_self_paced_desc: Teachers play a critical role in student learning
+    by teaching our unplugged activities and leading whole class discussions, however,
+    we recognize that CS Fundamentals isn't always taught in a traditional classroom
+    setting. We provide two self-paced express courses alongside Courses A-F. These
+    express courses are designed for situations where teachers allow each student
+    to work at their own pace independently.
+  csf_page_faq_question_01: Is CS Fundamentals mapped to standards?
+  csf_page_faq_answer_01_01: 'CS Fundamentals was written using both the K-12 Framework
+    for Computer Science and the CSTA standards as guidance. Currently, every lesson
+    in CS Fundamentals contains mappings to the relevant CSTA standards. The summary
+    of all CSTA mappings for each course can be found at:'
+  csf_page_faq_answer_01_list_01: "[Course A Standards](%{course_a_url})"
+  csf_page_faq_answer_01_list_02: "[Course B Standards](%{course_b_url})"
+  csf_page_faq_answer_01_list_03: "[Course C Standards](%{course_c_url})"
+  csf_page_faq_answer_01_list_04: "[Course D Standards](%{course_d_url})"
+  csf_page_faq_answer_01_list_05: "[Course E Standards](%{course_e_url})"
+  csf_page_faq_answer_01_list_06: "[Course F Standards](%{course_f_url})"
+  csf_page_faq_answer_01_02: A Google Sheets version of the standards can be found
+    at [CSF Standards](%{csf_standards_url}).
+  csf_page_faq_question_02: How can I bring CS Fundamentals to my whole school?
+  csf_page_faq_answer_02: The leading K-12 CS curriculum in the United States, our
+    elementary program has been proven effective in major urban school districts like
+    Dallas, as well as small rural districts in Iowa. There is no need to hire specialists
+    to teach CS. Our program is uniquely designed to support teachers new to CS while
+    offering the flexibility to evolve lessons to fit student needs. [Share this brochure](%{brochure_url})
+    with your school and district administrators, or [suggest they take a look at
+    our administrators page](%{admins_url}) specially designed to answer administrators'
+    most common questions.
+  csf_page_faq_question_03: How much does it cost to teach CS Fundamentals?
+  csf_page_faq_question_04: How/Where can I get professional development for CS Fundamentals?
+  csf_page_faq_answer_04_01: New to teaching computer science? No worries! Most of
+    our teachers have never taught computer science before. Join local teachers for
+    inspiring and hands-on support to implement computer science in your classroom.
+    Our Regional Partners offer high-quality, one-day Code.org workshops for individual
+    teachers or for schoolwide PD. [Sign up for a professional development workshop
+    near you](%{sign_up_url})!
+  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
+    workshops. The majority of our workshop attendees say, 'It's the best professional
+    development I've ever attended.' In fact, [90% of attendees would recommend our
+    program to other teachers](%{rec_url})!
+  csf_page_faq_question_05: What is the recommended timing for teaching CS Fundamentals?
+  csf_page_faq_answer_05: Each CSF course includes 13-17 lessons designed for 45-minute
+    periods. We recommend all students move from lesson to lesson at a pace set by
+    the teacher. There are many teacher-led project levels designed to be experienced
+    in unison while the skill-building lessons can be completed by students at their
+    own pace.
+  csf_page_faq_question_06: What materials do I need for CS Fundamentals?
+  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
+    These resources can be printed or assigned digitally. Some lessons call for typical
+    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csa_page_top_desc: Introduce students to software engineering and object-oriented
+    design while they learn the Java programming language in this free curriculum
+    for [AP® Computer Science A (AP® CSA)](%{csa_url}).
+  csa_page_intro_heading: A new approach to AP® CSA
+  csa_page_intro_list_01: Culturally responsive pedagogy
+  csa_page_intro_list_02: Real-world problem investigation
+  csa_page_intro_list_03: Explainer videos with diverse presenters
+  csa_page_intro_list_04: Open-ended projects for more personalized learning
+  csa_page_intro_list_05: Student-friendly code review tool
+  csa_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
+    Animation
+  csa_page_curriculum_glance_devices: Laptop, Chromebook
+  csa_page_curriculum_glance_tools: Java Lab
+  csa_page_curriculum_glance_professional_learning: Facilitator-led Workshops
+  csa_page_curriculum_glance_languages: Inglés
+  csa_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
+    Immersive reader
+  csa_page_quote: I could tell last year how different and better this curriculum
+    and resources were than anything else out there... but this year, these past few
+    weeks preparing students for the exam have been some of my most fun teaching.
+    And I'm hardly doing anything! Kids understand the material and are talking with
+    each other at such a high level and it's a direct reflection of the lessons and
+    activities throughout the year. Thank you, thank you.
+  csa_page_projects_java_lab: Java Lab is a programming environment where you can
+    make Java programs using The Neighborhood, The Theater, or the console.
+  csa_page_projects_objects_first: Students learn the fundamentals of object-oriented
+    programming (OOP) first, giving them a foundation for the rest of the course while
+    encouraging them to consider the overall design of their programs.
+  csa_page_faq_question_01: Is CSA mapped to standards?
+  csa_page_faq_answer_01: Yes, Code.org's CSA curriculum is mapped to the College
+    Board Course and Exam Description for AP® CSA.
+  csa_page_faq_question_02: How much does it cost to teach CSA?
+  csa_page_faq_question_03: How/Where can I get professional development for CSA?
+  csa_page_faq_answer_03: Professional learning workshops for Code.org's CSA curriculum
+    start each summer. [Click here to apply](%{apply_url}).
+  csa_page_faq_question_04: What is the recommended timing for teaching CSA?
+  csa_page_faq_answer_04: A minimum of 140 class hours; should be taught as a full-year
+    course. Contains nine units, which includes an AP® Exam Prep unit.
+  csa_page_faq_question_05: What materials do I need for this course?
+  csa_page_faq_answer_05: This curriculum requires that students have access to computers
+    with a modern web browser. At this time, our curriculum is not optimized for tablets
+    or mobile devices. For more details, [check out our technology requirements](%{it_url}).
+    In addition to technology, typical classroom supplies like scissors and sticky
+    notes will also be used throughout the curriculum.
+  csa_page_faq_question_06: Why do I need to become a verified teacher to teach CSA
+    and run code in Java Lab?
+  csa_page_faq_answer_06: Java Lab is a unique environment from all other Code.org
+    programming environments and requires additional measures to ensure network security
+    for all. [Read more about it here](%{read_more_url}).
+  csa_page_faq_question_07: How can I access answer keys?
+  csa_page_faq_answer_07_01: With an approved teacher account, you can find answer
+    keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
+  csa_page_faq_answer_07_02: Teachers in our Professional Learning Program will automatically
+    be approved to view answer keys. If you need an approved teacher account, you
+    can apply for access to protected teacher-only materials (answer keys, etc) through
+    [this form](%{form_url}). Please keep in mind that it may take 3-5 business days
+    to verify your account.
+  csa_page_faq_question_08: How was the curriculum developed?
+  csa_page_faq_answer_08_01: 'Our CSA curriculum was written by teachers, for teachers
+    and was designed with our Curriculum Values in mind. In particular, we focused
+    on expanding access to those who historically have been denied opportunities to
+    learn about the exciting and impactful field of computing. The following goals
+    guided the creation of the CSA curriculum:'
+  csa_page_faq_answer_08_list_01: 'Goal 1: Develop an Equitable Course'
+  csa_page_faq_answer_08_list_02: 'Goal 2: Prepare Students for Higher Ed and Industry'
+  csa_page_faq_answer_08_list_03: 'Goal 3: Design Relevant, Engaging Activities'
+  csa_page_faq_answer_08_list_04: 'Goal 4: Incorporate Best Practices from the Field'
+  csa_page_faq_answer_08_02: For more information about the values that guided our
+    work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
+    learning values](%{pl_values_url}).
   hoc_live: Hora del Código En Vivo
   hoc_live_sign_up_title: Regístrate para la Hora del Código En Vivo
   hoc_live_learn_title: Aprende con la Hora del Código En Vivo
@@ -1205,7 +1503,7 @@ la:
     grandes, pequeños y espinosos'
   ai_video_title_ethics_of_ai: Ética de la IA
   ai_video_title_ml_human_bias: Aprendizaje automático y prejuicios humanos
-  ai_video_title_seeing_ai: 'Ver IA: hacer que el mundo visual sea más accesible'
+  ai_video_title_seeing_ai: 'Ver IA: Hacer que el mundo visual sea más accesible'
   activity: Actividad
   name: Nombre
   description: Descripción
@@ -1233,7 +1531,7 @@ la:
   ai_audience_k12: K-12 (se requiere saber leer)
   ai_audience_hs: Escuela secundaria
   ai_activity_header: Actividades impulsadas por IA y ML
-  ai_activity_seeing_ai: Ver IA
+  ai_activity_seeing_ai: Viendo IA
   ai_activity_seeing_ai_desc: Una aplicación gratuita que narra el mundo que te rodea
     en una variedad de idiomas.
   ai_activity_quick_draw: Rápido, ¡a dibujar!
@@ -1244,7 +1542,7 @@ la:
   ai_activity_experiments: Experimentos de IA con Google
   ai_activity_experiments_desc: Comienza a explorar el aprendizaje automático a través
     de imágenes, dibujos, lenguaje, música y más.
-  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_activity_zooniverse: Zooniverso - Snapshot Cebra de Montaña
   ai_activity_zooniverse_desc: Ayuda a proteger a la Cebra de Montaña de El Cabo en
     peligro de extinción identificando los diferentes animales en las imágenes.
   codeorg_homepage_hoc2018_curriculum: Avanza con los <a href="%{studio_url}/courses"
@@ -1267,25 +1565,22 @@ la:
   codeorg_homepage_hoc_is_coming: La Hora del Código está llegando.
   codeorg_homepage_celebrate_cse: "¡Celebremos las Ciencias de la Computación en todas
     partes!"
-  codeorg_homepage_csc: "¡Descubre cómo los conceptos de las ciencias de la computación
-    se pueden aplicar transversalmente a otras disciplinas como la literatura y las
-    matemáticas, entre otros, en nuestro plan de estudios!"
+  codeorg_homepage_csc: Las ciencias de la computación se unen a las artes del lenguaje,
+    las matemáticas y mucho más en CC Conexiones.
   codeorg_homepage_csc_long: "¡Descubre cómo los conceptos de las ciencias de la computación
     se pueden aplicar transversalmente a otras disciplinas como la literatura y las
     matemáticas, entre otros, en nuestro plan de estudios!"
   codeorg_homepage_csc_title: Conexiones a las Ciencias de la Computación
   hoc2018_tutorial_mchoc_description: "¡Minecraft está de vuelta para la Hora del
     Código con una actividad nueva! Viaja a través de Minecraft con el código."
-  codeorg_homepage_hoc2019_dance_heading: Prueba la nueva <span class="highlight-word">Fiesta
-    de&nbsp;Baile!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Prueba la nueva **Fiesta&nbsp;de
-    Baile**
+  codeorg_homepage_hoc2019_dance_heading: Codifica una <span class="highlight-word">¡Fiesta
+    de baile!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Codifica una **¡Fiesta de baile!**
   codeorg_homepage_special2020_body1: Apoyo para padres y profesores que enfrentan
     cierres de escuelas.
   codeorg_homepage_special2020_body2: Mira nuestros recursos de aprendizaje sugeridos.
-  codeorg_homepage_special2020_body: "¿Tu escuela está cerrada? Aprende desde casa.
-    Toma un descanso con código, o ve los recursos para estudiantes, padres de familia,
-    y educadores. "
+  codeorg_homepage_special2020_body: "¡Sigue aprendiendo este verano! Echa un vistazo
+    a nuestros recursos para aprender en casa."
   codeorg_homepage_remote2020_body: "¿Estás enseñando en un aula remota o socialmente
     distanciada este semestre? Mira nuestros recursos."
   codeorg_homepage_special2020_link_text: Comenzar
@@ -1611,10 +1906,10 @@ la:
   signup_special_event_details_placeholder: Describe por qué este evento es especial
   signup_send_posters_address_placeholder: No compartiremos esta dirección en nuestro
     mapa
-  signup_event_type_in_school: En una escuela
+  signup_event_type_in_school: Escuela
   signup_event_type_after_school: After school program
-  signup_event_type_out_of_school: Fuera de la escuela
-  signup_event_type_at_home: Página principal
+  signup_event_type_out_of_school: Organización/Empresa
+  signup_event_type_at_home: En casa
   signup_submit_census_label: Enviar
   signup_submit_census_error_message: Lo sentimos. Se produjo un error. Intenta enviar
     el formulario otra vez.
@@ -1761,12 +2056,12 @@ la:
     nos ocupamos del resto. También tenemos opciones para todas las edades y niveles
     de experiencia, desde jardín de infantes en adelante. Lee nuestra <a href='/how-to'>guía</a>
     y comienza a planificar tu evento.
-  hoc_faq_host_a_markdown: Por supuesto. Las actividades de la Hora del Código son
-    autoguiadas. Todo lo que tienes que hacer es [prueba nuestros tutoriales](%{codeorg_url}/learn)
-    seleccionar el tutorial que quieras y elegir una hora; nosotros nos ocupamos del
+  hoc_faq_host_a_markdown: Por supuesto. Las actividades de La Hora del Código son
+    autoguiadas. Todo lo que tienes que hacer es [probar nuestros tutoriales actuales](%{codeorg_url}/learn),
+    elegir el tutorial que quieras y escoger una hora; nosotros nos encargamos del
     resto. También tenemos opciones para todas las edades y niveles de experiencia,
-    desde jardín de niños en adelante. Lee nuestra [guía](%{howto}) y comienza a planificar
-    tu evento.
+    desde preescolar en adelante. Empieza a planificar tu evento leyendo nuestra [guía
+    práctica](%{howto}).
   hoc_faq_devices_q: "¿Qué dispositivos debería utilizar para mis estudiantes?"
   hoc_faq_devices_a: Los tutoriales de Code.org funcionan en todos los dispositivos
     y navegadores. Puedes ver más información sobre la tecnología compatible con los
@@ -1778,7 +2073,7 @@ la:
     y navegadores. Puedes ver más información sobre las necesidades tecnológicas de
     los tutoriales de Code.org [aquí](%{codeorg_url}/educate/it). Las necesidades
     tecnológicas de los tutoriales que no son de Code.org pueden encontrarse en [%{partner_url}/learn])
-    en la descripción específica del tutorial. ¡No olvides que también ofrecemos [actividades
+    la descripción específica del tutorial. ¡No olvides que también ofrecemos [actividades
     sin conexión](%{unplugged_url}) si tu escuela no puede acceder a los tutoriales!
   hoc_faq_need_computers_q: "¿Necesito computadoras para todos los participantes?"
   hoc_faq_need_computers_a: No. Tenemos tutoriales de la Hora del Código que funcionan
@@ -1796,7 +2091,7 @@ la:
     que funcionan en PCs, smartphones y tablets, ¡ y algunos que no requieren computadoras!
     Puedes unirte donde sea que estés, con lo que sea que tengas.\n\n_Estas son algunas
     opciones:_\n\n-**Trabajar en parejas.** [La investigación muestra que](%{pair_programming_research})
-    los estudiantes aprenden mejor con la [programación en parejas](%{pair_programming_video}),
+    los estudiantes aprenden mejor cuando [programación en parejas](%{pair_programming_video}),
     compartiendo una computadora y trabajando juntos. Anima a tus alumnos a que se
     junten.\n-**Usa una pantalla proyectada.** Si tienes un proyector y una pantalla
     con una computadora conectada a Internet, todos pueden hacer una Hora del Código
@@ -1852,10 +2147,11 @@ la:
     y están aprendiendo a leer, pueden utilizar la aplicación ScratchJR para iPad.
     En <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, puedes encontrar otros
     tutoriales de Code.org, Tynker, Lightbot o CodeSpark que funcionan en iPad.
-  hoc_faq_scratch_a_markdown: Scratch no funciona en tabletas. Si tus estudiantes
-    son jóvenes, puden usar la aplicación ScratchJR para iPad. Si buscas en los tutoriales
-    en [%{partner_url}/learn](%{codeorg_url}/learn), podrás encontrar otros que funcionan
-    en iPads - de Code.org, Tynker, Lightbot o CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch no funciona en tabletas. Si tus alumnos son
+    jóvenes, pueden utilizar la aplicación ScratchJR para iPad (para primeros lectores).
+    Si echas un vistazo a los tutoriales en [%{partner_url}/learn](%{codeorg_url}/learn),
+    puedes encontrar otros tutoriales que funcionan en iPads - de Code.org, Tynker,
+    Lightbot, o CodeSpark.
   hoc_faq_count_hoc_q: "¿Cómo se cuentan las Horas del Código?"
   hoc_faq_map_q: "¿Por qué no puedo ver mi punto en el mapa?"
   hoc_faq_map_a: Sentimos que no puedas ver tu evento en el mapa de la Hora del Código.
@@ -1880,12 +2176,23 @@ la:
     porque no requerimos que los estudiantes inicien sesión o se registren. Como resultado,
     no podemos contar la cantidad de participantes que trabajan al mismo tiempo. Conoce
     todos los detalles <a href='%{codeorg_url}/loc'> aquí</a>.
-  hoc_faq_count_hoc_a_markdown: El seguimiento de la Hora del Código no es una medición
-    exacta del uso. No contamos las identificaciones únicas de los estudiantes con
-    precisión cuando hacemos seguimiento de la participación en la Hora del Código,
-    sobre todo porque no requerimos que los estudiantes inicien sesión o se registren.
-    Como resultado, no podemos contar la cantidad de participantes que trabajan al
-    mismo tiempo. Conoce todos los detalles [aquí](%{codeorg_url}/loc).
+  hoc_faq_count_hoc_a_markdown: 'No contamos perfectamente las identificaciones únicas
+    de los estudiantes cuando hacemos el seguimiento de la participación en la Hora
+    del Código. ¿Por qué? En parte porque no queremos la fricción que supone pedir
+    a un alumno o a un aula que inicie sesión o se registre antes de intentar aprender
+    por primera vez, y en parte porque hay actividades que no podemos seguir en línea.
+    Tomamos ciertas medidas para reducir la doble contabilización, pero sin un aviso
+    de inicio de sesión, esto no puede funcionar perfectamente. Al mismo tiempo, hay
+    MUCHAS actividades de los estudiantes en la Hora del Código que no se siguen.
+    Por ejemplo: (1) los estudiantes que utilizan una aplicación de móvil/tablet para
+    probar la Hora del Código no suelen contabilizarse (2) los estudiantes que comparten
+    una pantalla para programar en parejas o en grupo pueden contabilizarse como uno
+    (3) los estudiantes que prueban una actividad de aula desconectada no pueden contabilizarse
+    en línea (4) los docentes que crean sus propias actividades de la Hora del Código.
+    Como resultado, hay un cierto subregistro y un cierto doble recuento, por lo que
+    no consideramos que el rastreador de La Hora del Código sea una medida exacta
+    del uso. Sin embargo, es correcto desde el punto de vista de la dirección y muestra
+    que han participado decenas de millones de estudiantes.'
   hoc_faq_one_hour_q: "¿Cuánto se puede aprender en una hora?"
   hoc_faq_one_hour_a: La meta de la Hora del Código no es enseñar a cualquiera para
     que se convierta en un científico de computación experto en una hora. Una hora
@@ -1942,8 +2249,8 @@ la:
     uso, pero sí asegurarnos de que quede dentro de ciertos límites. Consulta <a href='%{logo_url}'>esta
     guía de uso</a>.
   hoc_faq_logo_a_markdown: La Hora del Código es una marca registrada. No queremos
-    evitar su uso, pero sí asegurarnos de que quede dentro de ciertos límites. Consulta
-    [esta guía de uso](%{logo_url}).
+    impedir su uso, pero queremos asegurarnos de que se ajusta a unos límites. Consulta
+    [estas directrices de uso](%{logo_url}).
   stats_hoc_2013_image_alt: Estadísticas de la Hora del Código 2013
   stats_growth: Fue la más rápida en alcanzar los 15 millones de usuarios.
   stats_i18n: Los estudiantes aprenden en más de 45 idiomas
@@ -2084,8 +2391,9 @@ la:
   highlights_constant_athletes_short_heading: Esfuérzate
   footer_copyright_message: Copyright %{current_year} Code.org. Todos los derechos
     reservados.
-  footer_trademark_message: Hora del código ™ es una marca registrada de Code.org.
-  footer_built_on_github: Cómo crear en GitHub de Microsoft
+  footer_trademark_message: Hour of Code® y Hora del Código® son marcas registradas
+    de Code.org.
+  footer_built_on_github: Construido en GitHub de Microsoft
   footer_menu_partners: Socios y asesores
   footer_menu_contact: Contáctanos
   footer_menu_support: Soporte
@@ -2108,8 +2416,8 @@ la:
     hora](%{url})"
   learn_banner_teachers: 'Profesores: <a id=''teacher_banner_host''>Organiza una Hora
     del Código</a> o <a id=''teacher_banner_howto''>lee la Guía para hacerlo</a>.'
-  learn_banner_teachers_markdown: 'Para profesores: [Organiza una hora](%{host_url})
-    o [lee la Guía Práctica](%{howto_url})'
+  learn_banner_teachers_markdown: 'Docentes: [Organizar una hora](%{host_url}) o [leer
+    la Guía práctica](%{howto_url})'
   tutorial_dance2019_name: Fiesta de Baile 2019
   tutorial_danceparty_name: Fiesta de baile
   tutorial_chibitronics_name: 'Chibitronics: Historia ilustrada'
@@ -2175,7 +2483,7 @@ la:
   tutorial_tynkercm_name: Code Monsters
   tutorial_codesterswintergreet_name: Saludos de invierno
   tutorial_codestersc_name: El plano de coordenadas
-  tutorial_codestersturtle_name: Dibujar una tortuga
+  tutorial_codestersturtle_name: 'Codesters: Tráfico de tortugas'
   tutorial_penjee_name: Aprende Python con Penjee el Pingüino
   tutorial_trinket_name: Hora de Python con Trinket
   tutorial_frogger_name: Crea tu propio juego de Frogger en 3D
@@ -2538,12 +2846,12 @@ la:
   tutorial_bcjs2_name: Mundo de JavaScript 2
   tutorial_3dbearmars_name: Los pioneros de Martes
   tutorial_bitsboxyak_name: "¡Yak ataca! Haz una tarjeta con código escrito"
-  tutorial_blockscadbargraphs_name: Gráficos de barras
-  tutorial_blockscadbirdhouses_name: Casas de Aves
-  tutorial_blockscadclock_name: Reloj Análogo
-  tutorial_blockscaddinner_name: Robot Cena
-  tutorial_blockscadicecream_name: Maquina de helados
-  tutorial_blockscadpizza_name: Impresora de pizza
+  tutorial_blockscadbargraphs_name: BlocksCAD Gráficos de barras
+  tutorial_blockscadbirdhouses_name: BlocksCAD Casas de Aves
+  tutorial_blockscadclock_name: BlocksCAD Reloj Análogo
+  tutorial_blockscaddinner_name: BlocksCAD Robot Cena
+  tutorial_blockscadicecream_name: BlocksCAD Maquina de helados
+  tutorial_blockscadpizza_name: BlocksCAD Impresora de pizza
   tutorial_blockscadsugar_name: Cubos de azúcar
   tutorial_bsgridlight_name: 'GridLight: Hola, mundo'
   tutorial_bpartscratch_name: 'Arte y música: Color (Scratch)'
@@ -2687,25 +2995,26 @@ la:
     en Blockly'
   tutorial_n2y_name: Bitt Bott explora la Tierra
   tutorial_microsoftarcade_name: Juega, diseña y codifica juegos de arcade retro
-  tutorial_csfirstunplugged_name: Actividades de CS First Unplugged
+  tutorial_csfirstunplugged_name: " CC Primer Desconectado"
   tutorial_toxicodepython_name: Descubra Python con Silent Teacher
   tutorial_codecombatozaria_name: 'Ozaria: Comienza tu viaje'
   tutorial_vidcodedate_name: Reloj climático
   tutorial_codemonkeyspace_name: 'Aventura espacial: ¡Escribe código y atrapa plátanos!'
-  tutorial_codespeakhappy_name: Codifique una aplicación de meditación de lugar feliz
+  tutorial_codespeakhappy_name: Codifica una Aplicación de Meditación en un Lugar
+    Feliz
   tutorial_grokimage_name: Magia de imágenes con Python
   tutorial_icomputelearn_name: Aprende a codificar con iCompute
-  tutorial_rpstress_name: Pelota antiestrés
+  tutorial_rpstress_name: 'Pelota de Estrés: Codifica una pelota de estrés en pantalla
+    que se pueda pulsar'
   tutorial_bsdcause_name: Apoya mi causa
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
   tutorial_bsdinspire_name: Personas que me inspiran
   tutorial_tttractor_name: Travesía del tractor
-  tutorial_codeillusionmickey_name: 'Disney Codeillusion: Media Art Adventure con
-    Mickey'
+  tutorial_codeillusionmickey_name: 'Disney Codeillusion: Aventura artística con Mickey'
   tutorial_scigirlsquest_name: 'SciGirls: Code Quest'
   tutorial_codespeakbreathe_name: Codifica una aplicación de respiración de meditación
-  tutorial_vidcodeface_name: Detección de rostro
+  tutorial_vidcodeface_name: Seguimiento facial
   tutorial_educodemaze_name: Diseña tu propio laberinto
   tutorial_educoderace_name: Programa tu propio juego de carreras
   tutorial_codespeakchatbot_name: Codifica un chatbot con las pioneras de las Ciencias
@@ -2725,21 +3034,21 @@ la:
   tutorial_vidcodemagic_name: SFX Magic
   tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Codifica una aplicación de comidas saludables
-  tutorial_itchfish_name: 'iTCHcode: Juego scratch de peces'
+  tutorial_itchfish_name: 'iTCHcode: Juego de Peces con Scratch'
   tutorial_bsdwebsite_name: Mi sitio web favorito
   tutorial_codespeaktime_name: Codificar una cápsula del tiempo en Scratch
-  tutorial_itchwebcam_name: 'iTCHcode: Realidad aumentada de cámara web'
-  tutorial_itchball_name: 'iTCHcode: Bola que rebota'
-  tutorial_ttrace_name: Condicional de carrera
+  tutorial_itchwebcam_name: 'iTCHcode:  Realidad Aumentada con Webcam '
+  tutorial_itchball_name: 'iTCHcode: Pelota saltarina'
+  tutorial_ttrace_name: Condición de Carrera
   tutorial_plethora_name: 'Plethora: Causa y efecto'
-  tutorial_educodesecret_name: "¡Descubre los secretos de la agencia!"
-  tutorial_itchshapes_name: 'iTCHcode: formas y ángulos'
+  tutorial_educodesecret_name: "¡Descubre los Secretos de la Agencia!"
+  tutorial_itchshapes_name: 'iTCHcode: Formas y Ángulos'
   tutorial_codeguppytext_name: Introducción a la codificación basada en texto
   tutorial_vidcodeplastiche_name: Polución de plásticos PSA
   tutorial_educativechatbot_name: Construye tu propio chatbot en Python
   tutorial_educodebasics_name: Aprende los conceptos básicos
-  tutorial_codehsdesign_name: Apoyando a los artistas con código
-  tutorial_htmlacademyphp_name: 'Introducción a PHP: Crea una tienda en línea desde
+  tutorial_codehsdesign_name: Apoyando a los Artistas con Código
+  tutorial_htmlacademyphp_name: 'Introducción a PHP: Crea una Tienda Online desde
     cero'
   tutorial_gamefrootdistance_name: 'Simulador COVID-19: Aprende sobre el distanciamiento
     social a través de las ciencias de la computación.'
@@ -2796,13 +3105,13 @@ la:
   tutorial_irobotsimulator_name: Simulator Code Break
   tutorial_irobotkind_name: 'Sentimientos de Robot: El Patio de Recreo Amable'
   tutorial_firiavirtual_name: 'CodeSpace: Robótica Virtual con Python'
-  tutorial_irobotguesscode_name: Adivina el código
-  tutorial_ozobotnouns_name: Seleccionar sustantivos plurales irregulares
+  tutorial_irobotguesscode_name: Adivina el Código
+  tutorial_ozobotnouns_name: Identificar los Sustantivos Plurales Irregulares
   tutorial_nasa3d_name: 'Universo en 3D: modelado e impresión de objetos cósmicos'
-  tutorial_blupants_name: 'BluPants: Aprenda a codificar con robots reales'
+  tutorial_blupants_name: 'BluPants: Aprende a Codificar con Robots Reales'
   tutorial_legodance_name: Break Dance
   tutorial_nearpodcoding_name: 'Tema Spark: Codificación'
-  tutorial_kcjplastic_name: 'Desafíos plásticos de #niños2030 '
+  tutorial_kcjplastic_name: 'Desafío de los Plásticos #niños2030'
   tutorial_legojourney_name: Crea un viaje con LEGO Education
   tutorial_legohopper_name: Carrera de tolva
   tutorial_catrobatembroidery_name: Bordado codificado
@@ -4470,7 +4779,7 @@ la:
     programadores nuevos tienen sobre estos temas, ya que ofrecen muchas oportunidades
     para la práctica, además de sugerencias y comentarios específicos.
 
-'
+    '
   tutorial_zulama_longdescription: En esta actividad, aprendes a editar el código
     JavaScript a través de un divertido juego de acción y a dominar conceptos de ciencias
     de la computación como variables y funciones. Vuelve a mezclar y ampliar el código
@@ -4808,7 +5117,7 @@ la:
     abiertas; los niños pueden usarlos como punto de partida para sus propias creaciones
     de aplicaciones. ¡Principiantes bienvenidos!
 
-'
+    '
   tutorial_tlcemo_longdescription: Los estudiantes crean y programan un robot 2D hecho
     de tarjetas para mostrar diferentes emociones. Crean una tabla que puede usarse
     para traducir emociones (comandos de alto nivel) en instrucciones de máquina de
@@ -5788,7 +6097,7 @@ la:
     pública. Si ya has hecho algunos códigos con bloques, lleva tus habilidades al
     siguiente nivel.
 
-'
+    '
   tutorial_cslartist_longdescription: "¿Sabías que hay un pequeño artista que vive
     dentro de cada computadora? Este PDF contiene una historia divertida con crucigramas
     que enseñará a los alumnos los fundamentos del arte digital, ya que crean sus
@@ -6532,34 +6841,33 @@ la:
   tutorial_astropi_longdescription: Codifica un mensaje y verifica la temperatura
     ambiente del aire abordo del ISS usando un simulador en línea del Sense HAT de
     la computadora de Astro Pi.
-  tutorial_rgart_longdescription: "¿Buscas una manera fácil e intuitiva de enseñar
-    a tus alumnos a codificar? RoboGarden STEAM Activities ha fusionado la práctica
-    de códigos con el aprendizaje de CTIM y las misiones ludificadas en múltiples
-    actividades. En la actividad artística, el alumno comprende conceptos de mezcla
-    de colores mientras usa bloques de codificación para resolver desafíos en la fiesta
-    de cumpleaños."
-  tutorial_rgengineer_longdescription: "¿Busca una manera fácil e intuitiva de enseñar
-    a tus alumnos a codificar? RoboGarden STEAM Activities ha fusionado la práctica
-    de códigos con el aprendizaje de CTIM y las misiones ludificadas en múltiples
-    actividades. En la actividad de ingeniería, el estudiante aprende robótica básica
-    mientras usa bloques de codificación para resolver desafíos en la fiesta de Navidad."
-  tutorial_rgmath_longdescription: "¿Busca una manera fácil e intuitiva de enseñar
-    a tus alumnos a codificar? RoboGarden STEAM Activities ha fusionado la práctica
-    de códigos con el aprendizaje de CTIM y las misiones ludificadas en múltiples
-    actividades. En la actividad matemática, el alumno practica el conteo, la suma
-    y la resta mientras resuelve algunos desafíos de codificación."
-  tutorial_rgscience_longdescription: "¿Busca una manera fácil e intuitiva de enseñar
-    a tus alumnos a codificar? RoboGarden STEAM Activities ha fusionado la práctica
-    de códigos con el aprendizaje de CTIM y las misiones ludificadas en múltiples
-    actividades. En la actividad de ciencia, el estudiante realiza un viaje al espacio
-    resolviendo múltiples desafíos de codificación y aprende más sobre elementos espaciales
+  tutorial_rgart_longdescription: "¿Buscas una forma fácil e intuitiva de enseñar
+    a tus alumnos a codificar? RoboGarden STEAM ha fusionado la práctica del código
+    con el aprendizaje STEAM y las misiones gamificadas en múltiples actividades.
+    En la actividad de arte, el alumno aprende a mezclar colores mientras que utiliza
+    bloques de código para resolver los desafíos de la fiesta de cumpleaños."
+  tutorial_rgengineer_longdescription: "¿Buscas una forma fácil e intuitiva de enseñar
+    a tus alumnos a programar? RoboGarden STEAM ha fusionado la práctica del código
+    con el aprendizaje STEAM y las misiones gamificadas en múltiples actividades.
+    En la actividad de ingeniería, el alumno aprende robótica básica mientras utiliza
+    bloques de codificación para resolver desafíos en la fiesta de Navidad."
+  tutorial_rgmath_longdescription: "¿Buscas una forma fácil e intuitiva de enseñar
+    a tus alumnos a programar? RoboGarden STEAM ha fusionado la práctica del código
+    con el aprendizaje STEAM y las misiones gamificadas en múltiples actividades.
+    En la actividad de matemáticas, el alumno practica el conteo, la suma y la resta
+    mientras resuelve algunos desafíos de codificación."
+  tutorial_rgscience_longdescription: "¿Buscas una forma fácil e intuitiva de enseñar
+    a tus alumnos a programar? RoboGarden STEAM ha fusionado la práctica del código
+    con el aprendizaje STEAM y las misiones gamificadas en múltiples actividades.
+    En la actividad de ciencias, el alumno realiza un viaje al espacio resolviendo
+    múltiples desafíos de codificación y aprendiendo más sobre elementos espaciales
     y datos científicos."
-  tutorial_rgtech_longdescription: "¿Busca una manera fácil e intuitiva de enseñar
-    a tus alumnos a codificar? RoboGarden STEAM Activities ha fusionado la práctica
-    de códigos con el aprendizaje de CTIM y las misiones ludificadas en múltiples
-    actividades. En la actividad de tecnología, el estudiante realiza un viaje a las
-    islas volcánicas resolviendo múltiples desafíos de codificación mediante la comprensión
-    de conceptos básicos de la tecnología."
+  tutorial_rgtech_longdescription: "¿Buscas una forma fácil e intuitiva de enseñar
+    a tus alumnos a programar? RoboGarden STEAM ha fusionado la práctica del código
+    con el aprendizaje STEAM y las misiones gamificadas en múltiples actividades.
+    En la actividad de tecnología, el alumno realiza un viaje a las islas volcánicas
+    resolviendo múltiples desafíos de codificación a través del aprendizaje de conceptos
+    básicos de Tecnología."
   tutorial_robotmagic3d_longdescription: Usa tu imaginación para crear un logotipo
     animado en 3D de tu nombre, tu equipo deportivo favorito o lo que quieras. Usa
     el código para hacer que los modelos y letras en 3D cobren vida con diversión.
@@ -6761,25 +7069,27 @@ la:
   tutorial_microsoftarcade_longdescription: Juega divertidos juegos de arcade, diseña
     tus propios sprites y aprende los conceptos básicos para programar tu propio juego
     con MakeCode Arcade.
-  tutorial_csfirstunplugged_longdescription: Haz estas actividades sin conexión y
-    conoce cómo la tecnología y la informática pueden ayudar a las personas a mantenerse
-    conectadas.
+  tutorial_csfirstunplugged_longdescription: ¿No tienes computadora ni Internet? No
+    hay problema. Prueba las actividades de CC Primera Desconectada para explorar
+    cómo las ciencias de la computación pueden resolver problemas como ayudar a las
+    personas a mantenerse conectadas mientras están separadas. También hay disponibles
+    actividades de Scratch " Conectada".
   tutorial_toxicodepython_longdescription: Descubra los conceptos básicos de Python
     sin ninguna palabra ni explicación. Nuestro profesor silencioso te dará una serie
     de desafíos que te llevarán a adivinar algunas reglas y aprender de tus propios
     errores.
   tutorial_codecombatozaria_longdescription: Entra en el mundo de Ozaria, donde te
-    convertirás en héroe en una aventura épica. ¡Debes usar el poder de la programación
-    para derrotar a la oscuridad que se ha apoderado del mundo! En el camino, conocerás
-    a personajes interesantes y practicarás muchos conceptos de programación, como
-    bucles y depuración. Al final, diseñarás un juego completamente funcional que
-    podrás compartir con tus amigos.
+    convertirás en un héroe en una aventura épica. Deberás utilizar el poder de la
+    programación para derrotar a una oscuridad que se ha apoderado del mundo. En el
+    camino, conocerás a personajes interesantes y viajarás a diferentes tierras, practicando
+    conceptos de codificación como secuencias, bucles (loops), depuración y descomposición.
+    Al final, diseñarás un juego que podrás compartir con tus amigos.
   tutorial_vidcodedate_longdescription: El proyecto Reloj Climático es una intersección
     culturalmente relevante de matemáticas, ciencias ambientales y ciencias de la
     computación. En esta actividad de la Hora del Código, los estudiantes serán guiados
     a través de la construcción de su propio reloj climático. Se relacionarán con
-    objetos, propiedades, variables, funciones y bucles, y personalizarán su mensaje
-    para transmitir su mensaje al mundo y sus esperanzas para el futuro.
+    objetos, propiedades, variables, funciones y bucles (loops), y personalizarán
+    su mensaje para transmitir su mensaje al mundo y sus esperanzas para el futuro.
   tutorial_codemonkeyspace_longdescription: "¡Escribe código real para ayudar al astronauta
     mono a atrapar plátanos en el espacio!"
   tutorial_codespeakhappy_longdescription: Aprende a programar una aplicación de meditación
@@ -6868,8 +7178,8 @@ la:
     al glosario de código. El Trivia Game Maker se centra en la construcción de un
     juego de trivia interactivo en el que tú también puedes idear las preguntas de
     trivia. #codeisyourvoice'
-  tutorial_csfirstdialogue_longdescription: Aprenda sobre informática y Scratch, y
-    luego cree un proyecto que explore el diálogo.
+  tutorial_csfirstdialogue_longdescription: Programa una conversación entre dos sprites.
+    ¡Sé creativo mientras te comunicas con código en Scratch con CC Primera!
   tutorial_codemonkeybeaver_longdescription: "¡Ayuda a un castor a alcanzar sus objetivos!
     Sumérgete en el hábitat natural de este castor con una actividad de codificación
     llena de diversión que pondrá en marcha tu educación en codificación. Los castores
@@ -7212,8 +7522,8 @@ la:
     áreas como los idiomas, las ciencias y las artes. "
   tutorial_legohopper_longdescription: Diseñar múltiples prototipos para encontrar
     la forma más eficaz de mover un robot sin utilizar ruedas.
-  tutorial_catrobatembroidery_longdescription: Codifique su diseño en su teléfono
-    Android y cóstelo en su camiseta, pantalones, bolsa de deporte o zapatos.
+  tutorial_catrobatembroidery_longdescription: Codifique tu diseño en tu teléfono
+    Android y cóstelo en tu camiseta, pantalones, bolsa de deporte o zapatos.
   tutorial_irobotphone_longdescription: En este desafío de codificación, los estudiantes
     trabajarán juntos a distancia para crear un programa colectivo que dibuje una
     imagen. Siguiendo el modelo del clásico juego del teléfono, los estudiantes recibirán,
@@ -7227,11 +7537,11 @@ la:
     lección gira en torno a los mensajes de bondad hacia los demás. Esta lección se
     ha diseñado específicamente para que sea accesible a los alumnos con discapacidades
     visuales.
-  tutorial_meeempathy_longdescription: Durante varios siglos, los aldeanos e illanos
-    compartieron el mismo espacio, pero interactuaban muy poco entre ellos. Ahora
-    puedes usar el poder del código para unir las dos aldeas. Los jugadores sentirán
-    empatía y compasión por sus vecinos, aprenderán sobre cooperación e inclusión,
-    y celebrarán la diversidad que nos hace a todos únicos y especiales.
+  tutorial_meeempathy_longdescription: Durante siglos, los Villagers y los Illagers
+    compartieron el mismo espacio, pero interactuaron muy poco entre ellos. Ahora
+    puedes utilizar el poder del código para unir a los dos pueblos. Los jugadores
+    sentirán empatía y compasión por sus vecinos, aprenderán cooperación e inclusión
+    y abrazarán la diversidad que nos hace a todos únicos y especiales.
   tutorial_dance2019_string_detail_grades: A partir de Grado 2
   tutorial_danceparty_string_detail_grades: A partir de Grado 2
   tutorial_chibitronics_string_detail_grades: Prelector - Grado 5
@@ -8589,13 +8899,13 @@ la:
   tutorial_mbbuttons_string_platforms: Windows, Mac OS, Linux o Chromebook
   tutorial_meteor_string_platforms: Windows, Mac OS, Linux o Chromebook
   tutorial_ballbounce_string_platforms: Chrome, Firefox, Safari, tablet Android, teléfono
-    Android
+    Android, iPad, iPhone
   tutorial_mitcodi_string_platforms: Chrome, Firefox, Safari, tablet Android, teléfono
-    Android
+    Android, iPad, iPhone
   tutorial_mitdoodle_string_platforms: Chrome, Firefox, Safari, tablet Android, teléfono
-    Android
+    Android, iPad, iPhone
   tutorial_talktome_string_platforms: Chrome, Firefox, Safari, tablet Android, teléfono
-    Android
+    Android, iPad, iPhone
   tutorial_mobilecspmap_string_platforms: Chrome, Firefox, tablet Android, teléfono
     Android
   tutorial_ozorandom_string_platforms: ''
@@ -8821,11 +9131,12 @@ la:
   tutorial_kcjplastic_string_platforms: Todos los navegadores modernos
   tutorial_legojourney_string_platforms: Todos los navegadores modernos
   tutorial_legohopper_string_platforms: Todos los navegadores modernos
-  tutorial_catrobatembroidery_string_platforms: Androide
+  tutorial_catrobatembroidery_string_platforms: Teléfono Android, Lector de pantalla
   tutorial_irobotphone_string_platforms: Todos los navegadores modernos
   tutorial_codeguppydraw_string_platforms: Todos los navegadores modernos
   tutorial_codejumper_string_platforms: Sin conexión, Lector de pantalla
-  tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
+  tutorial_meeempathy_string_platforms: Todos los navegadores modernos, Mac, Windows,
+    Chromebook, iPhone, iPad, teléfono Android, tableta Android
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chip Chibitronics Chibi y LEDs Circuit
@@ -10123,8 +10434,8 @@ la:
   tutorial_allcancodeapps_string_detail_programming_languages: Bloques
   tutorial_n2y_string_detail_programming_languages: Sin conexión
   tutorial_microsoftarcade_string_detail_programming_languages: Bloques
-  tutorial_csfirstunplugged_string_detail_programming_languages: Independiente del
-    idioma
+  tutorial_csfirstunplugged_string_detail_programming_languages: Bloques, Sin conexión,
+    Scratch
   tutorial_toxicodepython_string_detail_programming_languages: Python
   tutorial_codecombatozaria_string_detail_programming_languages: JavaScript, Python
   tutorial_vidcodedate_string_detail_programming_languages: JavaScript
@@ -10344,9 +10655,9 @@ la:
   tutorial_microbit15_name: 'micro: bit: programación hacia el Objetivo Global 15,
     La vida en la tierra'
   tutorial_unity_name: 'Kit para desarrolladores de juegos de Unity: código para principiantes'
-  tutorial_blockscadtarget_name: Práctica de transformación
+  tutorial_blockscadtarget_name: BlocksCAD Práctica de Transformación
   tutorial_tcadicicles_name: Diseño de carámbanos con bloques de código en Tinkercad
-  tutorial_blockscadscale_name: Ciudad a escala
+  tutorial_blockscadscale_name: BlocksCAD Ciudad a Escala
   tutorial_tcadloops_name: Uso de bucles en Tinkercad para diseñar una estrella explosiva
   tutorial_phidgets_name: Un Theremin de Phidgets con procesamiento
   tutorial_modvariables_name: Investigación de variables y valores de bloque con Cubelets
@@ -10354,7 +10665,7 @@ la:
   tutorial_codestersdata_name: 'Programadores: programar y graficar datos de micro:bit'
   tutorial_ikodexmas_name: Navidad de iKode
   tutorial_rpisensehat_name: Colector de datos de Sense HAT
-  tutorial_mee_name: 'La Hora del Código de Minecraft: AI for Good '
+  tutorial_mee_name: 'La Hora del Código de Minecraft: IA para el bien'
   tutorial_kuborobo_name: Rutas de programación de robótica de KUBO
   tutorial_ai-oceans_name: AI para océanos
   tutorial_scratchimagine_longdescription: Imagina un mundo donde todo es posible,
@@ -10400,8 +10711,9 @@ la:
     y Tyrell mientras aprenden sobre números binarios, luz, color y más para desentrañar
     el acertijo de color de la profesora Fotón y restaurar el color en los dispositivos
     del mundo.
-  tutorial_kodablebeach_longdescription: Aprende a programar con comandos básicos
-    y limpia la playa para proteger la vida del océano.
+  tutorial_kodablebeach_longdescription: "¡Salva a los bebés de la playa! Aprende
+    a programar utilizando comandos básicos y limpia la playa para proteger la vida
+    oceánica."
   tutorial_tynkeren_longdescription: 'Este mensaje de programación, que es parte del
     proyecto de los Objetivos de Desarrollo Sostenible de la ONU, muestra proyectos
     que exploran las energías renovables, la eficiencia energética y el acceso a la
@@ -10533,10 +10845,10 @@ la:
     hacia la Montaña del cielo, a través del cual aprenderás a escribir código real,
     deberás superar 15 niveles y diseñarás tu propio videojuego para ayudar a salvar
     el mundo de Ozaria.
-  tutorial_ttovum_longdescription: "¿Puedes controlar el caos? Ábrete camino en el
-    mundo ciberpunk de Ovum City. Depura el código roto, resuelve desafíos y actualiza
-    tu hardware mientras exploras el mundo abierto autoguiado. ¡No te dejes atrapar
-    por los drones! Depende de ti cómo evoluciona Ovum City."
+  tutorial_ttovum_longdescription: "¿Puedes controlar el caos? Hackea tu camino en
+    el mundo ciberpunk de Ovun City. Depura códigos rotos, resuelve puzles y mejora
+    tu hardware mientras exploras un mundo abierto autoguiado. ¡No te dejes atrapar
+    por los drones! De ti depende cómo evolucione Ovun City."
   tutorial_ttpassage_longdescription: Sumérgete en un mundo extraño para ayudar a
     Ada a escapar de peligros desconocidos. Juega a esta aventura autoguiada de plataformas
     en 2D y aprende técnicas de programación en el camino. Los jugadores se familiarizarán
@@ -10738,10 +11050,10 @@ la:
   tutorial_rpisensehat_longdescription: Aprende a usar el hardware Sense HAT para
     construir un dispositivo de registro de datos que pueda capturar una variedad
     de información sobre tu entorno inmediato.
-  tutorial_mee_longdescription: "¡El fuego amenaza una aldea y debes programar una
-    solución! Conoce a tu ayudante programador, el Minecraft Agent, y prográmalo para
-    que navegue por el bosque y reúna datos sobre las condiciones que contribuyen
-    a los incendios. "
+  tutorial_mee_longdescription: Programa el Agente Minecraft para recoger datos sobre
+    incendios forestales. A continuación, escribe código para ayudar a prevenir la
+    propagación del fuego, salvar el pueblo y recuperar la vida en el bosque. Aprende
+    conceptos básicos de programación y explora un ejemplo real de inteligencia artificial.
   tutorial_kuborobo_longdescription: Con esta actividad, los estudiantes prueban sus
     habilidades lógicas y de secuencias mediante el uso de fichas (TagTiles) para
     programar a su robot KUBO para que viaje a varios lugares en un mapa impreso.
@@ -10894,7 +11206,7 @@ la:
     Android, iPad, teléfonos Windows, teléfonos Android, iPhone
   tutorial_codehstriangle_string_platforms: Todos los navegadores modernos
   tutorial_ttwhitehouse_string_platforms: Chrome, Firefox
-  tutorial_modulo_string_platforms: Todos los navegadores modernos
+  tutorial_modulo_string_platforms: Computadoras
   tutorial_codingtown_string_platforms: Todos los navegadores modernos
   tutorial_kanoart_string_platforms: Microsoft Edge, Chrome, tablet Android, iPad
   tutorial_dragonscript_string_platforms: Chrome
@@ -10960,7 +11272,8 @@ la:
   tutorial_codestersdata_string_platforms: 'Todos los navegadores modernos '
   tutorial_ikodexmas_string_platforms: Todos los navegadores modernos
   tutorial_rpisensehat_string_platforms: Todos los navegadores modernos
-  tutorial_mee_string_platforms: Windows, iPad, MacOS
+  tutorial_mee_string_platforms: Todos los navegadores modernos, Mac, Windows, Chromebook,
+    iPhone, iPad, teléfono Android, tableta Android
   tutorial_kuborobo_string_platforms: Sin conexión
   tutorial_ai-oceans_string_platforms: Todos los navegadores modernos, tabletas Android
     modernas, iPad, teléfonos Android modernos, iPhone
@@ -11173,7 +11486,7 @@ la:
   tutorial_mee_string_detail_programming_languages: Bloques
   tutorial_kuborobo_string_detail_programming_languages: Fichas que los estudiantes
     reconstruyen
-  tutorial_ai-oceans_string_detail_programming_languages: IA y aprendizaje automático
+  tutorial_ai-oceans_string_detail_programming_languages: IA y Aprendizaje Automático
   tutorial_hello_name: Hola Mundo
   tutorial_raspispace_name: 'Conversación espacial: Comienza a programar en Scratch'
   tutorial_codemonkeyjump_name: 'Blocks Jumper: Creación de Juegos'
@@ -11269,10 +11582,10 @@ la:
   tutorial_hello_longdescription: Aprende los fundamentos de la informática programando
     en el Laboratorio de Sprite. Crearás y animarás sprites, y harás tus propias escenas
     interactivas.
-  tutorial_raspispace_longdescription: "\"Crea una escena espacial con personajes
-    que reaccionan para compartir sus pensamientos o sentimientos usando sonidos,
-    colores y acciones. \n\nUsa bloques de Scratch para programar tus personajes con
-    efectos gráficos, burbujas de diálogo y efectos de sonido.\""
+  tutorial_raspispace_longdescription: '"Crea una escena espacial con personajes que
+    reaccionan para compartir sus pensamientos o sentimientos usando sonidos, colores
+    y acciones. Usa bloques de Scratch para programar tus personajes con efectos gráficos,
+    animación de disfraces, burbujas de diálogo y efectos de sonido."'
   tutorial_codemonkeyjump_longdescription: "¡Crea juegos y proyectos con la codificación
     por bloques! En este breve curso los estudiantes aprenderán a crear un sencillo
     juego de saltos utilizando bloques de eventos y funciones básicas."
@@ -11305,10 +11618,10 @@ la:
     tu avión cisterna contra incendios para rociar agua y apagar las llamas!
   tutorial_blackbirdscreen_longdescription: Aprende a utilizar las sentencias condicionales
     para crear un protector de pantalla al estilo de los 90.
-  tutorial_toxicodecompute2_longdescription: Cambiemos de roles. ¡Esta vez TÚ eres
-    la computadora! Lea e interprete los programas para encontrar la trayectoria correcta
-    y ganar los desafíos. Tendrá que concentrarse y utilizar sus habilidades intuitivas
-    para comprender algunos conceptos básicos de Python.
+  tutorial_toxicodecompute2_longdescription: Cambiemos los roles. ¡Esta vez TÚ eres
+    la computadora! Lee e interpreta programas en Python para encontrar la trayectoria
+    correcta y ganar los desafíos. Tendrás que concentrarte y utilizar tus habilidades
+    intuitivas para comprender algunos conceptos básicos de Python.
   tutorial_minecrafttimecraft_longdescription: 'Viaja en el tiempo para salvar el
     futuro en esta lección gratuita de la Hora del Código en Minecraft: Education
     Edition. Los estudiantes elegirán su propia aventura y aprenderán conceptos básicos
@@ -11382,11 +11695,11 @@ la:
     siempre cambiantes, y ningún héroe ha conseguido llegar al último piso todavía.
     Como campeón de los Caballeros del Índice, ¿tienes lo que hay que tener para encontrar
     y derrotar a Nullonor?
-  tutorial_ccai_longdescription: "¡Programar y competir nunca fue tan épico! ¿No tienes
-    experiencia? ¡No hay problema! Ingresa al calabozo, donde aprenderás estrategias
-    y tácticas de programación que necesitarás para mejorar tus habilidades informáticas
-    y competir. Una vez que hayas superado el calabozo, ¡podrás competir contra programadores
-    de todo el mundo en la arena de esports de la Liga IA de CodeCombat!"
+  tutorial_ccai_longdescription: "¡La codificación competitiva nunca ha sido tan épica!
+    Sin experiencia en programación... no hay problema. Ingresa al calabozo donde
+    subirás de nivel aprendiendo las estrategias y tácticas de programación que necesitarás
+    para competir. Una vez que hayas superado el calabozo, ¡estarás listo para enfrentarte
+    a programadores de todo el mundo en la arena esports CodeCombat AI League!"
   tutorial_bsdai_longdescription: Existe un conjunto específico de redes neuronales
     y algoritmos que llamamos aprendizaje automático. En este proyecto, exploraremos
     una herramienta de reconocimiento de imágenes de la Inteligencia Artificial (IA)
@@ -11503,9 +11816,8 @@ la:
   tutorial_milnedash_longdescription: "¡Dash quiere aprender a bailar! ¿Puedes ayudarla
     a entrar y salir y enseñarle cosas en el medio? Esta actividad está dirigida por
     el alumno y le enseñará las secuencias y los bucles."
-  tutorial_microbitpet_longdescription: Programa tu propia mascota electrónica y personalízala
-    para que sea la tuya. El nuevo altavoz integrado del micro:bit lo hace aún más
-    divertido con los nuevos sonidos expresivos.
+  tutorial_microbitpet_longdescription: Codifica tu propia mascota electrónica y personalízala
+    para hacerla tuya.
   tutorial_spherotriad_longdescription: 'Explora lo que significa cada uno de los
     principios fundamentales de la ciberseguridad y aprende a encontrar un equilibrio
     para lograr un sistema seguro que funcione para todos los usuarios. '
@@ -11627,8 +11939,8 @@ la:
     Francés, Georgiano, Indonesio, Inglés (Reino Unido), Islandés, Irlandés, Japonés,
     Nepalí, Noruego (Bokmål), Noruego (Nynorsk), Otros, Pastún, Portugués (Portugal),
     Rumano, Serbio (cirílico), Turco, Vietnamita
-  tutorial_raspispace_language: Árabe, holandés, inglés, francés, griego, español,
-    polaco, japonés
+  tutorial_raspispace_language: Árabe, holandés, inglés, inglés (Reino Unido), francés,
+    griego
   tutorial_codemonkeyjump_language: Inglés
   tutorial_poemart_language: Alemán, Búlgaro, Corso, Danés, Estonio, Francés, Georgiano,
     Inglés, Húngaro, Islandés, Indonesio, Irlandés, Japonés, Nepalí, Noruego (Bokmål),
@@ -11655,13 +11967,14 @@ la:
   tutorial_shelly_language: Inglés, Polaco
   tutorial_weavly_language: Inglés
   tutorial_codespeakpassword_language: Inglés
-  tutorial_codecombatozaria_language: Inglés, inglés (Reino Unido), Español (España),
-    Español (México), Chino
+  tutorial_codecombatozaria_language: Inglés, inglés (Reino Unido), español (España),
+    español (México)
   tutorial_kodableshapes_language: Inglés
   tutorial_nasabinary_language: Inglés
   tutorial_3dmaker_language: Inglés
   tutorial_itchstart_language: Inglés
-  tutorial_hopsub_language: Inglés, Chino Simplificado, Español
+  tutorial_hopsub_language: Chino (Simplificado), Inglés, Español (España), Español
+    (México)
   tutorial_itchmundos_language: Español (México)
   tutorial_itchtenacity_language: Español (México)
   tutorial_kcjskiing_language: Inglés, Francés
@@ -11669,12 +11982,12 @@ la:
   tutorial_creaticode_language: Chino (Simplificado), Chino (Tradicional), Inglés
   tutorial_kcjhockey_language: Inglés, Francés
   tutorial_ttdungeon_language: Inglés
-  tutorial_ccai_language: Alemán, árabe, búlgaro, catalán, chino (simplificado), chino
-    (tradicional), checo, coreano, danés, esloveno, español (España), español (México),
-    holandés, inglés, inglés (Reino Unido), finlandés, francés, gallego, griego, hebreo,
-    húngaro, indonesio, italiano, japonés, lituano, macedonio (FRYOM), malayo, noruego
-    (bokmål), noruego (nynorsk), polaco, portugués (Brasil), portugués (Portugal),
-    rumano, ruso, serbio (cirílico), sueco, tailandés, turco, ucraniano, vietnamita
+  tutorial_ccai_language: Árabe, búlgaro, catalán, chino (simplificado), chino (tradicional),
+    checo, danés, neerlandés, inglés, inglés (RU), finés, francés, gallego, alemán,
+    griego, hebreo, húngaro, indonesio, italiano, japonés, coreano, lituano, macedonio
+    (FRYOM), malayo, noruego (Bokmål), noruego (Nynorsk), polaco, portugués (Brasil),
+    portugués (Portugal), rumano, ruso, serbio (cirílico), esloveno, español (España),
+    español (México), sueco, tailandés, turco, ucraniano y vietnamita.
   tutorial_bsdai_language: Inglés, Inglés (Reino Unido)
   tutorial_stemdata_language: Inglés
   tutorial_thunkableinfo_language: Inglés
@@ -11701,14 +12014,15 @@ la:
   tutorial_carnegieslime_language: Inglés
   tutorial_ozotown_language: Inglés
   tutorial_milnedash_language: Inglés
-  tutorial_microbitpet_language: Ingles, Español, Frances, Croata, Coreano, Portugues,
-    Serbio, Chino (Simplificado)
+  tutorial_microbitpet_language: Inglés, español (México), francés, croata, coreano,
+    portugués (Brasil), portugués (Portugal), serbio, chino (simplificado)
   tutorial_spherotriad_language: Inglés
   tutorial_spheropassword_language: Inglés
   tutorial_codequilt_language: Inglés
   tutorial_ozoshape1_language: Inglés
   tutorial_ozoshape2_language: Inglés
-  tutorial_hopescape_language: Inglés, Chino Simplificado, Español
+  tutorial_hopescape_language: Chino (Simplificado), Inglés, Español (España), Español
+    (México)
   tutorial_ozorace_language: Inglés
   tutorial_ozoequestrian_language: Inglés
   tutorial_irobotpizza_language: Inglés
@@ -11838,7 +12152,8 @@ la:
   tutorial_microsoftforest_string_platforms: Todos los navegadores modernos
   tutorial_blackbirdscreen_string_platforms: Chrome
   tutorial_toxicodecompute2_string_platforms: Todos los navegadores modernos
-  tutorial_minecrafttimecraft_string_platforms: Windows, iPad, MacOS
+  tutorial_minecrafttimecraft_string_platforms: Todos los navegadores modernos, Mac,
+    Windows, Chromebook, iPhone, iPad, teléfono Android, tableta Android
   tutorial_blackbirdtether_string_platforms: Chrome
   tutorial_ob_string_platforms: Todos los navegadores modernos
   tutorial_codeartportrait_string_platforms: Todos los navegadores modernos, tablets
@@ -11939,7 +12254,8 @@ la:
   tutorial_hatchmario_string_detail_platforms: ''
   tutorial_microsoftforest_string_detail_platforms: ''
   tutorial_blackbirdscreen_string_detail_platforms: ''
-  tutorial_toxicodecompute2_string_detail_platforms: Todos los navegadores modernos
+  tutorial_toxicodecompute2_string_detail_platforms: Microsoft Edge, Chrome, Firefox,
+    Safari
   tutorial_minecrafttimecraft_string_detail_platforms: ''
   tutorial_blackbirdtether_string_detail_platforms: ''
   tutorial_ob_string_detail_platforms: ''
@@ -11976,7 +12292,8 @@ la:
   tutorial_codespeakroad_string_detail_platforms: ''
   tutorial_educodelair_string_detail_platforms: ''
   tutorial_ibmhourofz_string_detail_platforms: ''
-  tutorial_gamefrootbacteria_string_detail_platforms: Todos los navegadores modernos
+  tutorial_gamefrootbacteria_string_detail_platforms: Microsoft Edge, Chrome, Firefox,
+    Safari
   tutorial_educodeforest_string_detail_platforms: ''
   tutorial_educodehorus_string_detail_platforms: ''
   tutorial_codespeakpokemon_string_detail_platforms: ''
@@ -12082,14 +12399,13 @@ la:
   tutorial_carnegieslime_string_detail_programming_languages: Bloques
   tutorial_ozotown_string_detail_programming_languages: Bloques
   tutorial_milnedash_string_detail_programming_languages: Bloques
-  tutorial_microbitpet_string_detail_programming_languages: Editor de MakeCode o de
-    Python
+  tutorial_microbitpet_string_detail_programming_languages: " Python,  MakeCode"
   tutorial_spherotriad_string_detail_programming_languages: Bloques
   tutorial_spheropassword_string_detail_programming_languages: Bloques
   tutorial_codequilt_string_detail_programming_languages: Bloques
   tutorial_ozoshape1_string_detail_programming_languages: Bloques
   tutorial_ozoshape2_string_detail_programming_languages: Bloques
-  tutorial_hopescape_string_detail_programming_languages: Hopscotch
+  tutorial_hopescape_string_detail_programming_languages: Bloques, Hopscotch
   tutorial_ozorace_string_detail_programming_languages: Códigos de Color Ozobot
   tutorial_ozoequestrian_string_detail_programming_languages: Códigos de Color
   tutorial_irobotpizza_string_detail_programming_languages: Bloques
@@ -12810,7 +13126,8 @@ la:
   tutorial_nasaorbit_string_platforms: Todos los navegadores modernos
   tutorial_nasapackage_string_platforms: Todos los navegadores modernos
   tutorial_nasalunar_string_platforms: Todos los navegadores modernos, iPad, iPhone
-  tutorial_meeestate_string_platforms: Windows, iPad, MacOS
+  tutorial_meeestate_string_platforms: Todos los navegadores modernos, Mac, Windows,
+    Chromebook, iPhone, iPad, teléfono Android, tableta Android
   tutorial_imagipixelart_string_platforms: All modern browsers, iPad, Android tablets,
     Windows phone, Android phone, iPhone
   tutorial_kcjhealth_string_platforms: Todos los navegadores modernos
@@ -13026,7 +13343,7 @@ la:
   school_state: Estado de la escuela
   school_zip: Código postal
   school_zip_error: Se requiere el código postal de la escuela.
-  census_thanks: "¡Gracias por registrarse!"
+  census_thanks: "¡Gracias por registrarte!"
   census_header: Por favor tómate unos minutos para contarnos sobre tu escuela (opcional).
   census_heading: Por favor comparte cuánta programación se enseña en esta escuela.
     Asume, a los efectos de las siguientes preguntas, que la programación no incluye
@@ -13075,7 +13392,7 @@ la:
   none: Ninguno
   some: Algunos
   all: Todos
-  dont_know: No sé
+  dont_know: No lo sé
   language_label: Idioma
   team_page_full_team_alt_text: Nearly 100 Code.org employees in matching blue and
     yellow t-shirts pose in a hotel conference room for the company's summer 2022
@@ -13084,6 +13401,91 @@ la:
     holding the ends of a Code.org-branded rainbow banner. Behind them, several people
     are wearing Code.org shirts and waving rainbow flags while walking alongside a
     multi-colored Volkswagen bug.
+  accessibility_hero_heading: Accessibility at Code.org
+  accessibility_hero_desc: We are dedicated to eliminating barriers that prevent the
+    inclusion and full participation of students and educators with disabilities,
+    ensuring that EVERY student has access to computer science.
+  accessibility_efforts_title: Our Efforts for 2023
+  accessibility_efforts_desc: 'To achieve our goal of a fully accessible platform,
+    we’re implementing a comprehensive action plan that includes:'
+  accessibility_efforts_card_title_1: Internal accessibility training
+  accessibility_efforts_card_desc_1: Our product and engineering teams will complete
+    comprehensive accessibility training by December 2023.
+  accessibility_efforts_card_title_2: VPAT Analysis
+  accessibility_efforts_card_desc_2: Completing [Voluntary Product Accessibility Template](%{voluntary_url})
+    to establish a baseline and measure progress annually. Results available on this
+    page by September 2023.
+  accessibility_efforts_card_title_3: Tools that support accessible design
+  accessibility_efforts_card_desc_3: 'Team members will have access to tools that
+    ensure all new features are designed and built with accessibility in mind. '
+  accessibility_efforts_card_title_4: Accessible curriculum
+  accessibility_efforts_card_desc_4: We will achieve [WCAG Level AA compliance](%{wcag_url})
+    for the first few units of Computer Science Principles and Computer Science Discoveries
+    by December 2023.
+  accessibility_explore_title: Explore Code.org’s accessibility resources
+  accessibility_explore_text: Our accessibility resources page provides comprehensive
+    documentation and guidance for our features and tools, including accessible Hour
+    of Code lessons, immersive readers, keyboard navigation, and customization options.
+  accessibility_explore_button: View accessibility resources page
+  accessibility_help_us_title: Help Us Improve
+  accessibility_help_us_text: At Code.org, we are agile and responsive to feedback.
+    If you have recommendations to help us improve the accessibility of our tools
+    and resources, please reach out. Thank you for helping us make computer science
+    available for all students!
+  accessibility_help_us_button: Tell us how we can improve
+  accessibility_commit_title: Code.org’s Commitment to Accessibility
+  accessibility_commit_text_1: Code.org believes that computer science is foundational
+    for all students and we're committed to ensuring equity, access, and opportunity
+    on our platform and in our curriculum.
+  accessibility_commit_text_2: We're taking a holistic approach to support the learning
+    needs of all students and working to close gaps in access to computer science
+    education for students with disabilities.
+  accessibility_commit_text_3: We’re starting small, but will measure our progress
+    and continuously iterate until we can address even the most complex accessibility
+    challenges.
+  accessibility_commit_text_4: At Code.org, we're committed to continually improving
+    the accessibility of our tools, and we're excited to take this important step
+    towards greater equity, access, and opportunity for all students and educators.
+  accessibility_partner_title: Our Partners and Recommendations
+  accessibility_partner_desc: We recommend the following resources for students and
+    teachers who are looking for more accessible computer science content.
+  accessibility_card_title_1: AccessCSForAll
+  accessibility_card_text_1: Resources for teachers to bring accessible computing
+    to secondary schools and for high school students with disabilities to connect
+    with mentors in the technology space.
+  accessibility_card_title_2: Blocks4All
+  accessibility_card_text_2: A block-based programming environment for iPad that teaches
+    basic programming concepts using the Dash robot. Accessible with VoiceOver, Switch
+    Control, and Voice Control.
+  accessibility_card_title_3: Code Jumper
+  accessibility_card_text_3: A physical coding aid/resource for students with visual
+    impairments.
+  accessibility_card_title_4: CSForAll
+  accessibility_card_text_4: An organization that coordinates projects and programs
+    with different organizations across the United States.
+  accessibility_card_title_5: Deaf Kids Code
+  accessibility_card_text_5: Promotes computer science and technology education to
+    empower students who are deaf or hard of hearing.
+  accessibility_card_title_6: Everyone Can Code
+  accessibility_card_text_6: A curriculum designed by Apple for Swift Playgrounds
+    that provides VoiceOver (modified TTS) and adapted curriculum for students with
+    accessibility needs.
+  accessibility_card_title_7: Khan Academy
+  accessibility_card_text_7: A curriculum provider with various accommodations, including
+    captions, transcripts, and the ability to reduce animation motion and hide visually
+    dependent content. Hosts some Code.org curricula, plus additional computing curricula.
+  accessibility_card_title_8: Snap Circuits
+  accessibility_card_text_8: An educational product that teaches electronics with
+    solderless snap-together electronic components. Can include an access pack for
+    students with visual impairments.
+  accessibility_card_title_9: Sphero
+  accessibility_card_text_9: An interactive coding robotic ball and STEM education
+    kit for students with intellectual disabilities. Needs to be paired with an appropriate
+    application.
+  accessibility_card_title_10: 'Quorum '
+  accessibility_card_text_10: An adaptation of Code.org’s AP Computer Science Principles
+    curriculum using Quorum, an evidence-based language originally designed to provide
+    accessibility for blind or visually-impaired students.
   language_code:
     ar: Árabe
     az: Azerí

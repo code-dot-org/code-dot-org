@@ -3,236 +3,38 @@ km:
   data:
     script:
       name:
-        artist:
-          title: សិល្បករ
-        frozen:
-          description_short: តោះប្រើកូដ ដើម្បីចូលរួមជាមួយ Anna និងElsa នៅពេលពួកគេស្វែងយល់ពីវេទមន្តនិងសម្រស់នៃទឹកកក។
-        events:
-          title: ព្រឹត្តិការណ៍
-          description: ព្រឹត្តិការណ៍
-          description_short: ព្រឹត្តិការណ៍
-          student_description: ព្រឹត្តិការណ៍
-        flappy:
-          title: Flappy កូដ
-          description: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ?
-            សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
-          student_description: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង
-            10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
-        step:
-          title: ជំហាន
-        mc:
-          title: Minecraft Hour of Code
-          description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព
-            Minecraft នេះ។
-          student_description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព
-            Minecraft នេះ។
-        cspunit1-support:
+        2021drafting:
           lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        test-teaching-ap-cs-unit-1:
+            debugging:
+              display_name: ការបំបាត់កំហុស (Debugging)
+            lessonGroup-3:
+              display_name: អ​ថេរ
+        2022drafting:
           lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        teachercon:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
+            lessonGroup-8:
+              display_name: កម្មវិធី Hour of Code
+        ai-ethics-2021:
+          description_audience: ថ្នាក់ទី ៦ដល់ទី១២
         alltheplcthings:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        csp-online-test:
+        andrea-test:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        csp1-support:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: ការវាយតម្លៃ
+        artist:
+          title: សិល្បករ
         basketball:
-          title: បង្កើតហ្គេមបោះបាល់
-          description_short: បង្កើតហ្គេមបោះបាល់
           description: បង្កើតហ្គេមបោះបាល់
-          student_description: បង្កើតហ្គេមបោះបាល់
+          description_short: បង្កើតហ្គេមបោះបាល់
           name: បាល់បោះ
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        coursee-draft:
-          lesson_groups:
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursef-draft:
-          lesson_groups:
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        csp3-support:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp4-support:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csf2harvey:
-          lesson_groups:
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        csp5-support:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        coursea-2017:
-          title: វគ្គសិក្សា A
-          assignment_family_title: វគ្គសិក្សា A
-          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
-          name: វគ្គសិក្សាអា -២០១៧
-        courseb-2017:
-          title: វគ្គសិក្សា B
-          assignment_family_title: វគ្គសិក្សា B
-          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
-            (ស្រដៀងគ្នាទៅនឹង វគ្គសិក្សា A ប៉ុន្ដែមានភាពខុសគ្នាច្រើនសម្រាប់សិស្សថ្នាក់ធំ)។
-          name: វគ្គសិក្សាប៊ី-2017
-        coursec-2017:
-          title: វគ្គសិក្សា C
-          assignment_family_title: វគ្គសិក្សា C
-          name: វគ្គសិក្សាស៊ី-2017
-        coursed-2017:
-          title: វគ្គសិក្សា D
-          assignment_family_title: វគ្គសិក្សា D
-          description_short: ការណែនាំខ្លីៗពីវគ្គសិក្សា C បន្ទាប់មកទៅមុខទៀតជាមួយ ក្បួនដោះស្រាយ
-            រង្វិលជុំជាន់គ្នា លក្ខខណ្ឌ និងច្រើនទៀត។
-          description: ស្វែងយល់ពីគំនិតសរសេរកូដថ្មីរួមមានក្បួនដោះស្រាយរង្វិលជុំដែលដាក់ក្នុងខណៈពេលរង្វិលជុំលក្ខខណ្ឌនិងព្រឹត្តិការណ៍។
-            ទទួលបានការណែនាំអំពីសញ្ជាតិឌីជីថលមុនពេលបង្កើតហ្គេមឬរឿងផ្ទាល់ខ្លួនរបស់អ្នកដែលអ្នកអាចចែករំលែកបាន។
-          student_description: ស្វែងយល់ពីគំនិតសរសេរកូដថ្មីរួមមានក្បួនដោះស្រាយរង្វិលជុំដែលដាក់ក្នុងខណៈពេលរង្វិលជុំលក្ខខណ្ឌនិងព្រឹត្តិការណ៍។
-            ទទួលបានការណែនាំអំពីសញ្ជាតិឌីជីថលមុនពេលបង្កើតហ្គេមឬរឿងផ្ទាល់ខ្លួនរបស់អ្នកដែលអ្នកអាចចែករំលែកបាន។
-          name: វគ្គសិក្សាឌី-2017
-        coursee-2017:
-          title: វគ្គសិក្សា E
-          assignment_family_title: វគ្គសិក្សា E
-          description_short: ការណែនាំខ្លីៗពីវគ្គសិក្សា Cនិង D បន្ទាប់មកទៅមុខទៀតជាមួយ
-            អនុគមន៍។
-          lesson_groups:
-            csf_e_1:
-              display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
-            csf_e_2:
-              display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-          name: វគ្គសិក្សាអ៊ី៝​-២០១៧
-        coursef-2017:
-          title: វគ្គសិក្សា F
-          assignment_family_title: វគ្គសិក្សា F
-          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
-            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
-          lesson_groups:
-            csf_f_1:
-              display_name: ដំឡើងទៅមេរៀន ច (ជាជម្រើសរបស់អ្នក)
-            csf_f_2:
-              display_name: មាតិកានៃមេរៀន ច
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-          name: វគ្គសិក្សាអេហ្វ-២០១៧
-        cspnovice:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp1-dlp:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp2-dlp:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp3-dlp:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp4-dlp:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp5-dlp:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csd1-dlp:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csd6-dlp:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csd5-dlp:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csd4-dlp:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csd3-dlp:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csd2-dlp:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        express-2017:
-          description_audience: 'អាយុ: ៩- ១៨'
-          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
-          lesson_groups:
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-          name: អុិចប្រេស-2017
-        pre-express-2017:
-          title: វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
-          assignment_family_title: វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
-          description_audience: 'អាយុ: ៤-៨'
-          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
-            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
-          name: ព្រី-អុិចប្រេស-2017
-        e-f-ramp:
-          lesson_groups:
-            csf_e_1:
-              display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
-            csf_e_2:
-              display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        new-express:
-          lesson_groups:
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        new-e:
-          lesson_groups:
-            csf_e_1:
-              display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
-            csf_e_2:
-              display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        new-f:
-          lesson_groups:
-            csf_f_1:
-              display_name: ដំឡើងទៅមេរៀន ច (ជាជម្រើសរបស់អ្នក)
-            csf_f_2:
-              display_name: មាតិកានៃមេរៀន ច
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        hero:
-          title: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
-          description_short: Minecraft បានត្រលប់មកវិញជាមួយហ្នឹងសកម្មភាពថ្មីសំរាប់
-            Hour of Code!
-          description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌!
-            ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
-          student_description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code
-            ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
+          student_description: បង្កើតហ្គេមបោះបាល់
+          title: បង្កើតហ្គេមបោះបាល់
         course-e-2018:
           lesson_groups:
             csf_e_1:
@@ -249,18 +51,261 @@ km:
               display_name: មាតិកានៃមេរៀន ច
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursea-2017:
+          assignment_family_title: វគ្គសិក្សា A
+          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
+          name: វគ្គសិក្សាអា -២០១៧
+          title: វគ្គសិក្សា A
         coursea-2018:
           assignment_family_title: វគ្គសិក្សា A
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
-        express-2018:
-          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
-          description_audience: 'អាយុ: ៩- ១៨'
+        coursea-2019:
+          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+        coursea-2020:
+          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+        coursea-2021:
+          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            lessonGroup-5:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursea-2022:
+          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            lessonGroup-5:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursea-2023:
+          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            lessonGroup-5:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        courseb-2017:
+          assignment_family_title: វគ្គសិក្សា B
+          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
+            (ស្រដៀងគ្នាទៅនឹង វគ្គសិក្សា A ប៉ុន្ដែមានភាពខុសគ្នាច្រើនសម្រាប់សិស្សថ្នាក់ធំ)។
+          name: វគ្គសិក្សាប៊ី-2017
+          title: វគ្គសិក្សា B
         courseb-2018:
           assignment_family_title: វគ្គសិក្សា B
-        coursed-2018:
-          assignment_family_title: វគ្គសិក្សា D
+        courseb-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+        courseb-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+        courseb-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            lessonGroup-6:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        courseb-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            lessonGroup-6:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        courseb-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            lessonGroup-6:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursec-2017:
+          assignment_family_title: វគ្គសិក្សា C
+          name: វគ្គសិក្សាស៊ី-2017
+          title: វគ្គសិក្សា C
         coursec-2018:
           assignment_family_title: វគ្គសិក្សា C
+        coursec-2019:
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursec-2020:
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursec-2021:
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+          name: វគ្គសិក្សាស៊ី-2021
+        coursec-2022:
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursec-2023:
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursed-2017:
+          assignment_family_title: វគ្គសិក្សា D
+          description: ស្វែងយល់ពីគំនិតសរសេរកូដថ្មីរួមមានក្បួនដោះស្រាយរង្វិលជុំដែលដាក់ក្នុងខណៈពេលរង្វិលជុំលក្ខខណ្ឌនិងព្រឹត្តិការណ៍។
+            ទទួលបានការណែនាំអំពីសញ្ជាតិឌីជីថលមុនពេលបង្កើតហ្គេមឬរឿងផ្ទាល់ខ្លួនរបស់អ្នកដែលអ្នកអាចចែករំលែកបាន។
+          description_short: ការណែនាំខ្លីៗពីវគ្គសិក្សា C បន្ទាប់មកទៅមុខទៀតជាមួយ ក្បួនដោះស្រាយ
+            រង្វិលជុំជាន់គ្នា លក្ខខណ្ឌ និងច្រើនទៀត។
+          name: វគ្គសិក្សាឌី-2017
+          student_description: ស្វែងយល់ពីគំនិតសរសេរកូដថ្មីរួមមានក្បួនដោះស្រាយរង្វិលជុំដែលដាក់ក្នុងខណៈពេលរង្វិលជុំលក្ខខណ្ឌនិងព្រឹត្តិការណ៍។
+            ទទួលបានការណែនាំអំពីសញ្ជាតិឌីជីថលមុនពេលបង្កើតហ្គេមឬរឿងផ្ទាល់ខ្លួនរបស់អ្នកដែលអ្នកអាចចែករំលែកបាន។
+          title: វគ្គសិក្សា D
+        coursed-2018:
+          assignment_family_title: វគ្គសិក្សា D
+        coursed-2019:
+          lesson_groups:
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursed-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursed-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursee-2017:
+          assignment_family_title: វគ្គសិក្សា E
+          description_short: ការណែនាំខ្លីៗពីវគ្គសិក្សា Cនិង D បន្ទាប់មកទៅមុខទៀតជាមួយ
+            អនុគមន៍។
+          lesson_groups:
+            csf_e_1:
+              display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
+            csf_e_2:
+              display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+          name: វគ្គសិក្សាអ៊ី៝​-២០១៧
+          title: វគ្គសិក្សា E
         coursee-2018:
           assignment_family_title: វគ្គសិក្សា E
           lesson_groups:
@@ -270,6 +315,79 @@ km:
               display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursee-2019:
+          lesson_groups:
+            csf_functions:
+              display_name: អនុ​គមន៍
+            csf_nested_loops:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursee-2020:
+          lesson_groups:
+            csf_functions:
+              display_name: អនុ​គមន៍
+            csf_nested_loops:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursee-2021:
+          lesson_groups:
+            csf_functions:
+              display_name: អនុ​គមន៍
+            csf_nested_loops:
+              display_name: លក្ខខណ្ឌ
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+            ramp_up:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
+        coursee-2022:
+          lesson_groups:
+            csf_functions:
+              display_name: អនុ​គមន៍
+            csf_nested_loops:
+              display_name: លក្ខខណ្ឌ
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+            ramp_up:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
+        coursee-2023:
+          lesson_groups:
+            csf_functions:
+              display_name: អនុ​គមន៍
+            csf_nested_loops:
+              display_name: លក្ខខណ្ឌ
+            csf_sprites:
+              display_name: Sprites
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+            ramp_up:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
+        coursee-draft:
+          lesson_groups:
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursef-2017:
+          assignment_family_title: វគ្គសិក្សា F
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
+            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+          lesson_groups:
+            csf_f_1:
+              display_name: ដំឡើងទៅមេរៀន ច (ជាជម្រើសរបស់អ្នក)
+            csf_f_2:
+              display_name: មាតិកានៃមេរៀន ច
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+          name: វគ្គសិក្សាអេហ្វ-២០១៧
+          title: វគ្គសិក្សា F
         coursef-2018:
           assignment_family_title: វគ្គសិក្សា F
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
@@ -281,55 +399,85 @@ km:
               display_name: មាតិកានៃមេរៀន ច
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
-        csd1-dlp-18:
+        coursef-2019:
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
+            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csd2-dlp-18:
+            csf_sprites:
+              display_name: Sprites
+            csf_variables:
+              display_name: អ​ថេរ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursef-2020:
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
+            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csd3-dlp-18:
+            csf_sprites:
+              display_name: Sprites
+            csf_variables:
+              display_name: អ​ថេរ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursef-2021:
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
+            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csd4-dlp-18:
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+            lessonGroup-8:
+              display_name: អ​ថេរ
+            lessonGroup-9:
+              display_name: ដក​ចេញ
+            ramp_up:
+              display_name: Sprites
+        coursef-2022:
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
+            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csd5-dlp-18:
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+            lessonGroup-8:
+              display_name: អ​ថេរ
+            ramp_up:
+              display_name: Sprites
+        coursef-2022-pilot:
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
+            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csd6-dlp-18:
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+            lessonGroup-8:
+              display_name: អ​ថេរ
+            ramp_up:
+              display_name: Sprites
+        coursef-2023:
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
+            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp1-dlp-18:
+            lessonGroup-3:
+              display_name: Sprites
+            lessonGroup-4:
+              display_name: អ​ថេរ
+            lessonGroup-6:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        coursef-draft:
           lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp2-dlp-18:
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        csa-videos:
           lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp-explore-dlp-18:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp-create-dlp-18:
+            lessonGroup-3:
+              display_name: ប្រភពមេរៀន
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: ប្រតិបត្តិដដែលៗ
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: អ​ថេរ
+        csd-apprentice-18:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
@@ -337,7 +485,91 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        csd-apprentice-18:
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csf-2021-pilot:
+          lesson_groups:
+            Sprites:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: អ​ថេរ
+            variables:
+              display_name: អ​ថេរ
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: អ​ថេរ
+            lessonGroup-4:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        csf2harvey:
+          lesson_groups:
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp-explore-dlp-18:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
@@ -345,128 +577,16 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        csp-apprentice-18:
+        csp-online-test:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        pre-express-2018:
-          assignment_family_title: វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
-          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
-            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
-          description_audience: 'អាយុ: ៤-៨'
-        fit-test:
+        csp1-dlp:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        cspplayground:
+        csp1-dlp-18:
           lesson_groups:
-            csp_variables:
-              display_name: អ​ថេរ
-            csp_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csp_functions:
-              display_name: អនុ​គមន៍
-        dance-extras:
-          description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
-          student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
-        coursef-2019:
-          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
-            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
-          lesson_groups:
-            csf_variables:
-              display_name: អ​ថេរ
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursed-2019:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_conditionals:
-              display_name: លក្ខខណ្ឌ
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursee-2019:
-          lesson_groups:
-            csf_functions:
-              display_name: អនុ​គមន៍
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        express-2019:
-          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
-          description_audience: 'អាយុ: ៩- ១៨'
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csf_functions:
-              display_name: អនុ​គមន៍
-            csf_variables:
-              display_name: អ​ថេរ
-          name: អុិចប្រេស-2019
-        andrea-test:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        dance-extras-gallery:
-          title: Keep On Dancing
-          description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
-          student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
-        coursec-2019:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        gamelab:
-          title: មន្ទីរពិសោធន៍ហ្គេម
-        coursea-2019:
-          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-        courseb-2019:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-        pre-express-2019:
-          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
-            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
-          description_audience: 'អាយុ: ៤-៨'
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-          name: ព្រី-អុិចប្រេស-2019
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: អ​ថេរ
-            csp_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csp_functions:
-              display_name: អនុ​គមន៍
             required:
               display_name: ទិដ្ឋភាពទូទៅ
         csp1-pilot:
@@ -475,66 +595,164 @@ km:
               display_name: ទិដ្ឋភាពទូទៅ
         csp1-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: អ​ថេរ
             csp_conditionals:
               display_name: លក្ខខណ្ឌ
             csp_functions:
               display_name: អនុ​គមន៍
+            csp_variables:
+              display_name: អ​ថេរ
+        csp1-support:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+            csp_variables:
+              display_name: អ​ថេរ
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
         csp2-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: អ​ថេរ
             csp_conditionals:
               display_name: លក្ខខណ្ឌ
             csp_functions:
               display_name: អនុ​គមន៍
+            csp_variables:
+              display_name: អ​ថេរ
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+            csp_variables:
+              display_name: អ​ថេរ
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+            csp_variables:
+              display_name: អ​ថេរ
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+            csp_variables:
+              display_name: អ​ថេរ
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+            csp_variables:
+              display_name: អ​ថេរ
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+            csp_variables:
+              display_name: អ​ថេរ
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
         csp4-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: អ​ថេរ
             csp_conditionals:
               display_name: លក្ខខណ្ឌ
             csp_functions:
               display_name: អនុ​គមន៍
-        csp5-pilot-staging:
+            csp_variables:
+              display_name: អ​ថេរ
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+            csp_variables:
+              display_name: អ​ថេរ
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: បញ្ជី
             csp_loops:
               display_name: ប្រតិបត្តិដដែលៗ
-        csp6-pilot-staging:
+        csp5-2021:
           lesson_groups:
-            csp_variables:
-              display_name: អ​ថេរ
-            csp_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csp_functions:
-              display_name: អនុ​គមន៍
-        csp8-pilot-staging:
+            csp_lists:
+              display_name: បញ្ជី
+            csp_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+        csp5-2022:
           lesson_groups:
-            csp_variables:
-              display_name: អ​ថេរ
-            csp_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csp_functions:
-              display_name: អនុ​គមន៍
-        csp9-pilot-staging:
+            csp_lists:
+              display_name: បញ្ជី
+            csp_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+        csp5-2023:
           lesson_groups:
-            csp_variables:
-              display_name: អ​ថេរ
-            csp_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csp_functions:
-              display_name: អនុ​គមន៍
-        csp10-pilot-staging:
+            csp_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+        csp5-dlp:
           lesson_groups:
-            csp_variables:
-              display_name: អ​ថេរ
-            csp_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csp_functions:
-              display_name: អនុ​គមន៍
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -543,31 +761,84 @@ km:
               display_name: ប្រតិបត្តិដដែលៗ
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        fit2019-novice:
+        csp5-pilot-staging:
           lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp3-pilot:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csl-vn:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
+            csp_lists:
+              display_name: បញ្ជី
+            csp_loops:
               display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-        dlp19-csd-mod-fit:
+        csp5-support:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        dlp19-csp-mod-fit:
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: បញ្ជី
+            lessonGroup-3:
+              display_name: ប្រតិបត្តិដដែលៗ
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+            csp_variables:
+              display_name: អ​ថេរ
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+            csp_variables:
+              display_name: អ​ថេរ
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+            csp_variables:
+              display_name: អ​ថេរ
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csp_functions:
+              display_name: អនុ​គមន៍
+            csp_variables:
+              display_name: អ​ថេរ
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        dance-2019:
+          title: Dance Party
+        dance-extras:
+          description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
+          student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
+        dance-extras-2019:
+          description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
+          student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
+          title: Keep On Dancing
+        dance-extras-gallery:
+          description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
+          student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
+          title: Keep On Dancing
+        dlp19-csd-mod-fit:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
@@ -587,6 +858,10 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
@@ -603,524 +878,371 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
-        csp2-pilot:
+        dlp21-csd:
           lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp6-pilot:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        dance-2019:
-          title: Dance Party
-        dance-extras-2019:
-          title: Keep On Dancing
-          description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
-          student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: អ​ថេរ
-            csp_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csp_functions:
-              display_name: អនុ​គមន៍
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csf_functions:
-              display_name: អនុ​គមន៍
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: ទិដ្ឋភាពទូទៅ
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: អ​ថេរ
-            csp_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csp_functions:
-              display_name: អនុ​គមន៍
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: បញ្ជី
-            csp_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-        coursea-2020:
-          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-        courseb-2020:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-        coursec-2020:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursed-2020:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_conditionals:
-              display_name: លក្ខខណ្ឌ
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursee-2020:
-          lesson_groups:
-            csf_functions:
-              display_name: អនុ​គមន៍
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursef-2020:
-          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
-            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
-          lesson_groups:
-            csf_variables:
-              display_name: អ​ថេរ
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        express-2020:
-          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
-          description_audience: 'អាយុ: ៩- ១៨'
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csf_functions:
-              display_name: អនុ​គមន៍
-            csf_variables:
-              display_name: អ​ថេរ
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        pre-express-2020:
-          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
-            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
-          description_audience: 'អាយុ: ៤-៨'
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-        2021drafting:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: អ​ថេរ
-            debugging:
-              display_name: ការបំបាត់កំហុស (Debugging)
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: អ​ថេរ
-            csp_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csp_functions:
-              display_name: អនុ​គមន៍
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: បញ្ជី
-            csp_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-        coursea-2021:
-          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-            lessonGroup-5:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        courseb-2021:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-            lessonGroup-6:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursec-2021:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-          name: វគ្គសិក្សាស៊ី-2021
-        coursed-2021:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_conditionals:
-              display_name: លក្ខខណ្ឌ
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursee-2021:
-          lesson_groups:
-            csf_nested_loops:
-              display_name: លក្ខខណ្ឌ
-            csf_functions:
-              display_name: អនុ​គមន៍
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursef-2021:
-          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
-            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
-          lesson_groups:
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-            lessonGroup-8:
-              display_name: អ​ថេរ
-            lessonGroup-9:
-              display_name: ដក​ចេញ
-        express-2021:
-          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
-          description_audience: 'អាយុ: ៩- ១៨'
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csf_functions:
-              display_name: អនុ​គមន៍
-            csf_variables:
-              display_name: អ​ថេរ
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-            lessonGroup-9:
-              display_name: ព្រឹត្តិការណ៍
-        pre-express-2021:
-          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
-            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
-          description_audience: 'អាយុ: ៤-៨'
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-        csf-2021-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: អ​ថេរ
-            variables:
-              display_name: អ​ថេរ
-        csa-videos:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: ប្រភពមេរៀន
+            lessonGroup-2:
+              description: សាក​ល្បង
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
               display_name: ដំណាក់កាល 1
             lessonGroup-3:
               display_name: ដំណាក់កាល 2
-        dlp21-csd:
+        e-f-ramp:
+          lesson_groups:
+            csf_e_1:
+              display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
+            csf_e_2:
+              display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        events:
+          description: ព្រឹត្តិការណ៍
+          description_short: ព្រឹត្តិការណ៍
+          student_description: ព្រឹត្តិការណ៍
+          title: ព្រឹត្តិការណ៍
+        express-2017:
+          description_audience: 'អាយុ: ៩- ១៨'
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
+          lesson_groups:
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+          name: អុិចប្រេស-2017
+        express-2018:
+          description_audience: 'អាយុ: ៩- ១៨'
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
+        express-2019:
+          description_audience: 'អាយុ: ៩- ១៨'
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
+          lesson_groups:
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_functions:
+              display_name: អនុ​គមន៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            csf_sprites:
+              display_name: Sprites
+            csf_variables:
+              display_name: អ​ថេរ
+          name: អុិចប្រេស-2019
+        express-2020:
+          description_audience: 'អាយុ: ៩- ១៨'
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
+          lesson_groups:
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_functions:
+              display_name: អនុ​គមន៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            csf_sprites:
+              display_name: Sprites
+            csf_variables:
+              display_name: អ​ថេរ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        express-2021:
+          description_audience: 'អាយុ: ៩- ១៨'
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
+          lesson_groups:
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_functions:
+              display_name: អនុ​គមន៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            csf_sprites:
+              display_name: Sprites
+            csf_variables:
+              display_name: អ​ថេរ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+            lessonGroup-9:
+              display_name: ព្រឹត្តិការណ៍
+        express-2022:
+          description_audience: 'អាយុ: ៩- ១៨'
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
+          lesson_groups:
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_functions:
+              display_name: អនុ​គមន៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            csf_sprites:
+              display_name: Sprites
+            csf_variables:
+              display_name: អ​ថេរ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+            lessonGroup-9:
+              display_name: ព្រឹត្តិការណ៍
+          title: វគ្គសិក្សារហ័ស (2022)
+        express-2023:
+          description_audience: 'អាយុ: ៩- ១៨'
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
+          lesson_groups:
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_functions:
+              display_name: អនុ​គមន៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            csf_sprites:
+              display_name: Sprites
+            csf_variables:
+              display_name: អ​ថេរ
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+            lessonGroup-9:
+              display_name: ព្រឹត្តិការណ៍
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        flappy:
+          description: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង 10 នាទី​ដែរ​ឬ​ទេ?
+            សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
+          student_description: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង
+            10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
+          title: Flappy កូដ
+        frozen:
+          description_short: តោះប្រើកូដ ដើម្បីចូលរួមជាមួយ Anna និងElsa នៅពេលពួកគេស្វែងយល់ពីវេទមន្តនិងសម្រស់នៃទឹកកក។
+        gamelab:
+          title: មន្ទីរពិសោធន៍ហ្គេម
+        hero:
+          description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌!
+            ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
+          description_short: Minecraft បានត្រលប់មកវិញជាមួយហ្នឹងសកម្មភាពថ្មីសំរាប់
+            Hour of Code!
+          student_description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code
+            ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
+          title: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
+        mc:
+          description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព
+            Minecraft នេះ។
+          student_description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព
+            Minecraft នេះ។
+          title: Minecraft Hour of Code
+        nevada-standards-aligned-fifth-grade-2023:
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
+            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
             lessonGroup-2:
-              description: សាក​ល្បង
-        ai-ethics-2021:
-          description_audience: ថ្នាក់ទី ៦ដល់ទី១២
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: កម្មវិធី Hour of Code
-        csf-2022-pilot:
-          lesson_groups:
+              display_name: Sprites
             lessonGroup-3:
-              display_name: អ​ថេរ
-            lessonGroup-4:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursea-2022:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
+              display_name: លក្ខខណ្ឌ
             lessonGroup-5:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
-        express-2022:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            lessonGroup-9:
-              display_name: ព្រឹត្តិការណ៍
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csf_functions:
-              display_name: អនុ​គមន៍
-            csf_variables:
               display_name: អ​ថេរ
-            end_of_course_project:
+            lessonGroup-7:
               display_name: ចុងបញ្ចប់នៃគម្រោង
-          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
-          description_audience: 'អាយុ: ៩- ១៨'
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: អ​ថេរ
-            csp_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csp_functions:
-              display_name: អនុ​គមន៍
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: បញ្ជី
-            csp_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-        courseb-2022:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-            lessonGroup-6:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursec-2022:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursed-2022:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_conditionals:
-              display_name: លក្ខខណ្ឌ
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursee-2022:
-          lesson_groups:
-            csf_functions:
-              display_name: អនុ​គមន៍
-            csf_nested_loops:
-              display_name: លក្ខខណ្ឌ
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: អ​ថេរ
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
+        nevada-standards-aligned-fifth-grade-2023-2023:
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
             និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
-        pre-express-2022:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+            lessonGroup-6:
+              display_name: ព្រឹត្តិការណ៍
+            lessonGroup-7:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
+            lessonGroup-4:
+              display_name: អនុ​គមន៍
+            lessonGroup-6:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        nevada-standards-aligned-kindergarten-2023:
+          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+            lessonGroup-5:
+              display_name: ព្រឹត្តិការណ៍
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-6:
+              display_name: ប្រតិបត្តិដដែលៗ
+            lessonGroup-8:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        new-e:
+          lesson_groups:
+            csf_e_1:
+              display_name: ដំឡើងទៅវគ្គសិក្សាអ៊ី (តាមជម្រើសរបស់អ្នក)
+            csf_e_2:
+              display_name: មាតិកានៃវគ្គសិក្សា អ៊ី
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        new-express:
+          lesson_groups:
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        new-f:
+          lesson_groups:
+            csf_f_1:
+              display_name: ដំឡើងទៅមេរៀន ច (ជាជម្រើសរបស់អ្នក)
+            csf_f_2:
+              display_name: មាតិកានៃមេរៀន ច
+            end_of_course_project:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        pre-express-2017:
+          assignment_family_title: វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
+          description_audience: 'អាយុ: ៤-៨'
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
+            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
+          name: ព្រី-អុិចប្រេស-2017
+          title: វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
+        pre-express-2018:
+          assignment_family_title: វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
+          description_audience: 'អាយុ: ៤-៨'
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
+            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
+        pre-express-2019:
+          description_audience: 'អាយុ: ៤-៨'
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
+            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់លំដោយ
+              display_name: លំដាប់
+          name: ព្រី-អុិចប្រេស-2019
+        pre-express-2020:
+          description_audience: 'អាយុ: ៤-៨'
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
+            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+        pre-express-2021:
+          description_audience: 'អាយុ: ៤-៨'
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
+            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+        pre-express-2022:
+          description_audience: 'អាយុ: ៤-៨'
+          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
+            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
+          lesson_groups:
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
             csf_loops:
               display_name: ប្រតិបត្តិការដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
+            csf_sequencing:
+              display_name: លំដាប់លំដោយ
+        pre-express-2023:
           description_audience: 'អាយុ: ៤-៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
             ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
-        coursef-2022-pilot:
           lesson_groups:
-            lessonGroup-8:
-              display_name: អ​ថេរ
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
-            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
         soccer:
           name: បាល់ទាត់
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: ប្រតិបត្តិដដែលៗ
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: អ​ថេរ
-        csp4-2023:
+        step:
+          title: ជំហាន
+        teachercon:
           lesson_groups:
-            csp_variables:
-              display_name: អ​ថេរ
-            csp_conditionals:
-              display_name: លក្ខខណ្ឌ
-            csp_functions:
-              display_name: អនុ​គមន៍
-        csp5-2023:
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        test-nv-coursea-2023:
           lesson_groups:
-            csp_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: បញ្ជី
             lessonGroup-3:
-              display_name: ប្រតិបត្តិដដែលៗ
-        angelina-playground:
-          lessons:
-            lesson-5:
-              name: ការវាយតម្លៃ
-        pre-express-2023:
-          lesson_groups:
-            csf_sequencing:
               display_name: លំដាប់
-            csf_loops:
+            lessonGroup-4:
               display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
-            ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
-          description_audience: 'អាយុ: ៤-៨'
-        express-2023:
+        test-teaching-ap-cs-unit-1:
           lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            lessonGroup-9:
-              display_name: ព្រឹត្តិការណ៍
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
+            required:
+              display_name: ទិដ្ឋភាពទូទៅ
+        time4cs-control-unit-1:
+          lesson_groups:
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
-            csf_functions:
-              display_name: អនុ​គមន៍
-            csf_variables:
-              display_name: អ​ថេរ
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-          description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
-          description_audience: 'អាយុ: ៩- ១៨'
-        coursea-2023:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-            lessonGroup-5:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
-        courseb-2023:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-            lessonGroup-6:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursec-2023:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
-            csf_loops:
-              display_name: ប្រតិបត្តិដដែលៗ
-            csf_events:
-              display_name: ព្រឹត្តិការណ៍
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursed-2023:
-          lesson_groups:
-            csf_sequencing:
-              display_name: លំដាប់
             csf_events:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            csf_sprites:
+              display_name: Sprites
+        time4cs-control-unit-2:
+          lesson_groups:
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
-            end_of_course_project:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursee-2023:
-          lesson_groups:
             csf_functions:
               display_name: អនុ​គមន៍
             csf_nested_loops:
-              display_name: លក្ខខណ្ឌ
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
-        coursef-2023:
+        time4cs-experiment-unit-1:
           lesson_groups:
-            lessonGroup-4:
-              display_name: អ​ថេរ
-            lessonGroup-6:
-              display_name: ចុងបញ្ចប់នៃគម្រោង
-          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
-            និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+            csf_conditionals:
+              display_name: លក្ខខណ្ឌ
+            csf_events:
+              display_name: ព្រឹត្តិការណ៍
+            csf_loops:
+              display_name: ប្រតិបត្តិដដែលៗ
+            csf_sequencing:
+              display_name: លំដាប់
+            csf_sprites:
+              display_name: Sprites
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites

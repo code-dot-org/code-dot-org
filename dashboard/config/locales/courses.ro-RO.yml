@@ -3,54 +3,42 @@ ro:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Principiile științei calculatoarelor
-          title: Principiile ştiinţei calculatoarelor ('17-'18)
-          version_title: "'17-'18"
-          description_student: În toamna lui 2016, College Board și-a lansat cel mai
-            recent curs cu credite pentru universitate (AP®), Principiile științei
-            calculatoarelor curs AP. Cursul introduce elevii în conceptele fundamentale
-            ale științei calculatoarelor și îi provoacă să descopere cum afectează
-            calculatoarele și tehnologia lumea. Programul AP a dezvoltat cursul Principiile
-            științei calculatoarelor cu scopul de a crea lideri în domeniul științei
-            calculatoarelor precum și atragerea și implicarea celor care sunt în general
-            slab reprezentați prin instrumente de calcul esențiale și oportunități
-            multidisciplinare.
-          description_teacher: În toamna lui 2016, College Board și-a lansat cel mai
-            recent curs cu credite pentru universitate (AP®), Principiile științei
-            calculatoarelor curs AP. Cursul introduce elevii în conceptele fundamentale
-            ale științei calculatoarelor și îi provoacă să descopere cum afectează
-            calculatoarele și tehnologia lumea. Programul AP a dezvoltat cursul Principiile
-            științei calculatoarelor cu scopul de a crea lideri în domeniul științei
-            calculatoarelor precum și atragerea și implicarea celor care sunt în general
-            slab reprezentați prin instrumente de calcul esențiale și oportunități
-            multidisciplinare.
-          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
-        csd-2017:
-          assignment_family_title: Descoperiri în știința calculatoarelor
-          title: Descoperiri în ştiinţa calculatoarelor ('17-'18)
-          version_title: "'17-'18"
-          description_student: Descoperiri în știința calculatoarelor (Descoperiri
-            în CS) este un curs introductiv care le permite elevilor să creeze artefacte
-            autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
-            de creativitate, comunicare, rezolvare a problemelor și amuzament.
-          description_teacher: Descoperiri în știința calculatoarelor (Descoperiri
-            în CS) este un curs introductiv care le permite elevilor să creeze artefacte
-            autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
-            de creativitate, comunicare, rezolvare a problemelor și amuzament.
-          description_short: Un curs introductiv în știința calculatoarelor care permite
-            elevilor să creeze artefacte autentice.
         allthethingscourse:
-          title: cursulpentrutoatelucrurile
           description_short: Acesta este un curs pentru toatelucrurile
           description_student: Acesta este un curs pentru toatelucrurile şi are o
             descriere pentru studenţi
           description_teacher: Acesta este un curs pentru toatelucrurile şi are o
             descriere mai lungă pentru profesori
+          title: cursulpentrutoatelucrurile
+        csd-2017:
+          assignment_family_title: Descoperiri în știința calculatoarelor
+          description_short: Un curs introductiv în știința calculatoarelor care permite
+            elevilor să creeze artefacte autentice.
+          description_student: Descoperiri în știința calculatoarelor (Descoperiri
+            în CS) este un curs introductiv care le permite elevilor să creeze artefacte
+            autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
+            de creativitate, comunicare, rezolvare a problemelor și amuzament.
+          description_teacher: Descoperiri în știința calculatoarelor (Descoperiri
+            în CS) este un curs introductiv care le permite elevilor să creeze artefacte
+            autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
+            de creativitate, comunicare, rezolvare a problemelor și amuzament.
+          title: Descoperiri în ştiinţa calculatoarelor ('17-'18)
+          version_title: "'17-'18"
         csd-2018:
           assignment_family_title: Descoperiri în știința calculatoarelor
+          description_short: Un curs introductiv în știința calculatoarelor care permite
+            elevilor să creeze artefacte autentice.
+          description_student: Descoperiri în știința calculatoarelor (Descoperiri
+            în CS) este un curs introductiv care le permite elevilor să creeze artefacte
+            autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
+            de creativitate, comunicare, rezolvare a problemelor și amuzament.
+          description_teacher: Descoperiri în știința calculatoarelor (Descoperiri
+            în CS) este un curs introductiv care le permite elevilor să creeze artefacte
+            autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
+            de creativitate, comunicare, rezolvare a problemelor și amuzament.
           title: Descoperiri în știința calculatoarelor ('18-'19)
           version_title: "'18-'19"
+        csd-2019:
           description_short: Un curs introductiv în știința calculatoarelor care permite
             elevilor să creeze artefacte autentice.
           description_student: Descoperiri în știința calculatoarelor (Descoperiri
@@ -61,71 +49,8 @@ ro:
             în CS) este un curs introductiv care le permite elevilor să creeze artefacte
             autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
             de creativitate, comunicare, rezolvare a problemelor și amuzament.
-        csp-2018:
-          assignment_family_title: Principiile științei calculatoarelor
-          title: Principiile științei calculatoarelor ('18-'19)
-          version_title: "'18-'19"
-          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
-          description_student: În toamna lui 2016, College Board și-a lansat cel mai
-            recent curs cu credite pentru universitate (AP®), Principiile științei
-            calculatoarelor curs AP. Cursul introduce elevii în conceptele fundamentale
-            ale științei calculatoarelor și îi provoacă să descopere cum afectează
-            calculatoarele și tehnologia lumea. Programul AP a dezvoltat cursul Principiile
-            științei calculatoarelor cu scopul de a crea lideri în domeniul științei
-            calculatoarelor precum și atragerea și implicarea celor care sunt în general
-            slab reprezentați prin instrumente de calcul esențiale și oportunități
-            multidisciplinare.
-          description_teacher: În toamna lui 2016, College Board și-a lansat cel mai
-            recent curs cu credite pentru universitate (AP®), Principiile științei
-            calculatoarelor curs AP. Cursul introduce elevii în conceptele fundamentale
-            ale științei calculatoarelor și îi provoacă să descopere cum afectează
-            calculatoarele și tehnologia lumea. Programul AP a dezvoltat cursul Principiile
-            științei calculatoarelor cu scopul de a crea lideri în domeniul științei
-            calculatoarelor precum și atragerea și implicarea celor care sunt în general
-            slab reprezentați prin instrumente de calcul esențiale și oportunități
-            multidisciplinare.
-        csp-2019:
-          title: Principiile științei calculatoarelor ('19-'20)
-          version_title: "'19-'20"
-          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
-          description_student: În toamna lui 2016, College Board și-a lansat cel mai
-            recent curs cu credite pentru universitate (AP®), Principiile științei
-            calculatoarelor curs AP. Cursul introduce elevii în conceptele fundamentale
-            ale științei calculatoarelor și îi provoacă să descopere cum afectează
-            calculatoarele și tehnologia lumea. Programul AP a dezvoltat cursul Principiile
-            științei calculatoarelor cu scopul de a crea lideri în domeniul științei
-            calculatoarelor precum și atragerea și implicarea celor care sunt în general
-            slab reprezentați prin instrumente de calcul esențiale și oportunități
-            multidisciplinare.
-          description_teacher: În toamna lui 2016, College Board și-a lansat cel mai
-            recent curs cu credite pentru universitate (AP®), Principiile științei
-            calculatoarelor curs AP. Cursul introduce elevii în conceptele fundamentale
-            ale științei calculatoarelor și îi provoacă să descopere cum afectează
-            calculatoarele și tehnologia lumea. Programul AP a dezvoltat cursul Principiile
-            științei calculatoarelor cu scopul de a crea lideri în domeniul științei
-            calculatoarelor precum și atragerea și implicarea celor care sunt în general
-            slab reprezentați prin instrumente de calcul esențiale și oportunități
-            multidisciplinare.
-        csd-2019:
           title: Descoperiri în știința calculatoarelor ('19-'20)
           version_title: "'19-'20"
-          description_short: Un curs introductiv în știința calculatoarelor care permite
-            elevilor să creeze artefacte autentice.
-          description_student: Descoperiri în știința calculatoarelor (Descoperiri
-            în CS) este un curs introductiv care le permite elevilor să creeze artefacte
-            autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
-            de creativitate, comunicare, rezolvare a problemelor și amuzament.
-          description_teacher: Descoperiri în știința calculatoarelor (Descoperiri
-            în CS) este un curs introductiv care le permite elevilor să creeze artefacte
-            autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
-            de creativitate, comunicare, rezolvare a problemelor și amuzament.
-        csd-pilot:
-          description_student: Descoperiri în știința calculatoarelor (Descoperiri
-            în CS) este un curs introductiv care le permite elevilor să creeze artefacte
-            autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
-            de creativitate, comunicare, rezolvare a problemelor și amuzament.
-        csp-2020:
-          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
         csd-2020:
           description_short: Un curs introductiv în știința calculatoarelor care permite
             elevilor să creeze artefacte autentice.
@@ -137,16 +62,89 @@ ro:
             în CS) este un curs introductiv care le permite elevilor să creeze artefacte
             autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
             de creativitate, comunicare, rezolvare a problemelor și amuzament.
+        csd-2023:
+          title: Descoperiri în știința calculatoarelor
+        csd-pilot:
+          description_student: Descoperiri în știința calculatoarelor (Descoperiri
+            în CS) este un curs introductiv care le permite elevilor să creeze artefacte
+            autentice și să-i antreneze în știința calculatoarelor la un nivel mediu
+            de creativitate, comunicare, rezolvare a problemelor și amuzament.
+        csp-2017:
+          assignment_family_title: Principiile științei calculatoarelor
+          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
+          description_student: În toamna lui 2016, College Board și-a lansat cel mai
+            recent curs cu credite pentru universitate (AP®), Principiile științei
+            calculatoarelor curs AP. Cursul introduce elevii în conceptele fundamentale
+            ale științei calculatoarelor și îi provoacă să descopere cum afectează
+            calculatoarele și tehnologia lumea. Programul AP a dezvoltat cursul Principiile
+            științei calculatoarelor cu scopul de a crea lideri în domeniul științei
+            calculatoarelor precum și atragerea și implicarea celor care sunt în general
+            slab reprezentați prin instrumente de calcul esențiale și oportunități
+            multidisciplinare.
+          description_teacher: În toamna lui 2016, College Board și-a lansat cel mai
+            recent curs cu credite pentru universitate (AP®), Principiile științei
+            calculatoarelor curs AP. Cursul introduce elevii în conceptele fundamentale
+            ale științei calculatoarelor și îi provoacă să descopere cum afectează
+            calculatoarele și tehnologia lumea. Programul AP a dezvoltat cursul Principiile
+            științei calculatoarelor cu scopul de a crea lideri în domeniul științei
+            calculatoarelor precum și atragerea și implicarea celor care sunt în general
+            slab reprezentați prin instrumente de calcul esențiale și oportunități
+            multidisciplinare.
+          title: Principiile ştiinţei calculatoarelor ('17-'18)
+          version_title: "'17-'18"
+        csp-2018:
+          assignment_family_title: Principiile științei calculatoarelor
+          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
+          description_student: În toamna lui 2016, College Board și-a lansat cel mai
+            recent curs cu credite pentru universitate (AP®), Principiile științei
+            calculatoarelor curs AP. Cursul introduce elevii în conceptele fundamentale
+            ale științei calculatoarelor și îi provoacă să descopere cum afectează
+            calculatoarele și tehnologia lumea. Programul AP a dezvoltat cursul Principiile
+            științei calculatoarelor cu scopul de a crea lideri în domeniul științei
+            calculatoarelor precum și atragerea și implicarea celor care sunt în general
+            slab reprezentați prin instrumente de calcul esențiale și oportunități
+            multidisciplinare.
+          description_teacher: În toamna lui 2016, College Board și-a lansat cel mai
+            recent curs cu credite pentru universitate (AP®), Principiile științei
+            calculatoarelor curs AP. Cursul introduce elevii în conceptele fundamentale
+            ale științei calculatoarelor și îi provoacă să descopere cum afectează
+            calculatoarele și tehnologia lumea. Programul AP a dezvoltat cursul Principiile
+            științei calculatoarelor cu scopul de a crea lideri în domeniul științei
+            calculatoarelor precum și atragerea și implicarea celor care sunt în general
+            slab reprezentați prin instrumente de calcul esențiale și oportunități
+            multidisciplinare.
+          title: Principiile științei calculatoarelor ('18-'19)
+          version_title: "'18-'19"
+        csp-2019:
+          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
+          description_student: În toamna lui 2016, College Board și-a lansat cel mai
+            recent curs cu credite pentru universitate (AP®), Principiile științei
+            calculatoarelor curs AP. Cursul introduce elevii în conceptele fundamentale
+            ale științei calculatoarelor și îi provoacă să descopere cum afectează
+            calculatoarele și tehnologia lumea. Programul AP a dezvoltat cursul Principiile
+            științei calculatoarelor cu scopul de a crea lideri în domeniul științei
+            calculatoarelor precum și atragerea și implicarea celor care sunt în general
+            slab reprezentați prin instrumente de calcul esențiale și oportunități
+            multidisciplinare.
+          description_teacher: În toamna lui 2016, College Board și-a lansat cel mai
+            recent curs cu credite pentru universitate (AP®), Principiile științei
+            calculatoarelor curs AP. Cursul introduce elevii în conceptele fundamentale
+            ale științei calculatoarelor și îi provoacă să descopere cum afectează
+            calculatoarele și tehnologia lumea. Programul AP a dezvoltat cursul Principiile
+            științei calculatoarelor cu scopul de a crea lideri în domeniul științei
+            calculatoarelor precum și atragerea și implicarea celor care sunt în general
+            slab reprezentați prin instrumente de calcul esențiale și oportunități
+            multidisciplinare.
+          title: Principiile științei calculatoarelor ('19-'20)
+          version_title: "'19-'20"
+        csp-2020:
+          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
         csp-2021:
           description_short: Învățați concepte fundamentale ale științei calculatoarelor.
-        mike-test:
-          title: Fundamentele informaticii
         csp-2022:
           description_short: Învățați concepte fundamentale ale științei calculatoarelor.
         csp-2023:
           description_short: Învățați concepte fundamentale ale științei calculatoarelor.
-        csd-2023:
-          title: Descoperiri în știința calculatoarelor
         focus-on-creativity-2023:
           title: Centrare pe Creativitate (Descoperirile Informaticii)
         focus-on-data-2023:
@@ -155,22 +153,24 @@ ro:
           title: Centrare pe Desenarea cu un Scop (Descoperirile Informaticii)
         focus-on-impact-in-society-2023:
           title: Centrare pe Impactul în Societate (Descoperirile Informaticii)
+        mike-test:
+          title: Fundamentele informaticii
     resources:
-      curriculum/csd/2020:
-        name: Curriculum
-      teacher_forum/csd/2020:
-        name: Forum profesori
       curriculum/csd/2017:
         name: Curriculum
-      teacher_forum_6/csd/2017:
-        name: Forum profesori
-      curriculum/csd/2019:
-        name: Curriculum
-      teacher_forum/csd/2019:
-        name: Forum profesori
-      getting_started_with_csd/csd/2021:
-        name: Cum să Începi cu CSD
       curriculum/csd/2018:
         name: Curriculum
+      curriculum/csd/2019:
+        name: Curriculum
+      curriculum/csd/2020:
+        name: Curriculum
+      getting_started_with_csd/csd/2021:
+        name: Cum să Începi cu CSD
+      teacher_forum/csd/2019:
+        name: Forum profesori
+      teacher_forum/csd/2020:
+        name: Forum profesori
+      teacher_forum_6/csd/2017:
+        name: Forum profesori
       teacher_forum_6/csd/2018:
         name: Forum profesori

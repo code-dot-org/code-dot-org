@@ -2,6 +2,8 @@
 km:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: បង្កើត ថ្មី {ANIMATION_NAME} sprite នៅ {LOCATION}
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
@@ -43,15 +45,16 @@ km:
       Dancelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': ទំហំ
             '"height"': កម្ពស់
+            '"scale"': ទំហំ
+        text: ផ្លាស់ប្តូរ {SPRITE} {PROPERTY} ទៅជា {VAL}
       Dancelab_changePropEachBy:
         options:
           GROUP:
             sprites: ទាំងអស់
           PROPERTY:
-            '"scale"': ទំហំ
             '"height"': កម្ពស់
+            '"scale"': ទំហំ
       Dancelab_doMoveEachLR:
         options:
           GROUP:
@@ -69,8 +72,8 @@ km:
       Dancelab_getProp:
         options:
           PROPERTY:
-            '"scale"': ទំហំ
             '"height"': កម្ពស់
+            '"scale"': ទំហំ
       Dancelab_getTime:
         options:
           UNIT:
@@ -99,11 +102,11 @@ km:
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ព្រាវ
       Dancelab_layoutSprites:
         options:
-          GROUP:
-            sprites: ទាំងអស់
           FORMAT:
             '"diamond"': គ្រាប់ពេជ្រ
             '"random"': ព្រាវ
+          GROUP:
+            sprites: ទាំងអស់
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
@@ -137,6 +140,8 @@ km:
             '"random"': ព្រាវ
       Dancelab_randomColor:
         text: ពណ៌​ព្រាវ
+      Dancelab_setBackground:
+        text: កំណត់ ពណ៌ផ្ទៃខាងក្រោយ {COLOR}
       Dancelab_setBackgroundEffect:
         options:
           EFFECT:
@@ -148,21 +153,21 @@ km:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
+            '0.25': very slow
+            '0.5': slow
             '1': ធម្មតា
             '2': លឿន
             '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
             sprites: ទាំងអស់
           SPEED:
+            '0.25': very slow
+            '0.5': slow
             '1': ធម្មតា
             '2': លឿន
             '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -174,27 +179,28 @@ km:
       Dancelab_setProp:
         options:
           PROPERTY:
-            '"scale"': ទំហំ
             '"height"': កម្ពស់
+            '"scale"': ទំហំ
+        text: 'កំណត់ {SPRITE} {PROPERTY} ទៅជា {VAL} '
       Dancelab_setPropEach:
         options:
           GROUP:
             sprites: ទាំងអស់
           PROPERTY:
-            '"scale"': ទំហំ
             '"height"': កម្ពស់
+            '"scale"': ទំហំ
       Dancelab_setPropRandom:
         options:
           PROPERTY:
-            '"scale"': ទំហំ
             '"height"': កម្ពស់
+            '"scale"': ទំហំ
       Dancelab_setPropRandomEach:
         options:
           GROUP:
             sprites: ទាំងអស់
           PROPERTY:
-            '"scale"': ទំហំ
             '"height"': កម្ពស់
+            '"scale"': ទំហំ
       Dancelab_setTintEach:
         options:
           THIS:
@@ -216,27 +222,27 @@ km:
       Dancelab_startMapping:
         options:
           PROPERTY:
-            '"scale"': ទំហំ
             '"height"': កម្ពស់
+            '"scale"': ទំហំ
       Dancelab_startMappingEach:
         options:
           GROUP:
             sprites: ទាំងអស់
           PROPERTY:
-            '"scale"': ទំហំ
             '"height"': កម្ពស់
+            '"scale"': ទំហំ
       Dancelab_stopMapping:
         options:
           PROPERTY:
-            '"scale"': ទំហំ
             '"height"': កម្ពស់
+            '"scale"': ទំហំ
       Dancelab_stopMappingEach:
         options:
           GROUP:
             sprites: ទាំងអស់
           PROPERTY:
-            '"scale"': ទំហំ
             '"height"': កម្ពស់
+            '"scale"': ទំហំ
       Dancelab_translateStrings:
         options:
           STRING:
@@ -246,192 +252,27 @@ km:
       Dancelab_whenKey:
         options:
           KEY:
-            '"up"': ឡើង
-            '"left"': ឆ្វេង
             '"down"': ចុះ
+            '"left"': ឆ្វេង
             '"right"': ស្តាំ
             '"space"': លំហ​អាកាស
+            '"up"': ឡើង
             '"x"': x
             '"y"': y
+        text: នៅពេល {KEY} បានចុច
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
             '"hearts"': បេះដូង
             '"rain"': ភ្លៀង
-      gamelab_atTime:
-        options:
-          UNIT:
-            '"seconds"': វិ​នាទី
-      gamelab_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-            '"speed"': ល្បឿន
-      gamelab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': នៅ​ពេល
-            '"while"': នៅ​ពេល
-      gamelab_everyInterval:
-        options:
-          UNIT:
-            '"seconds"': វិ​នាទី
-      gamelab_getProp:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-            '"speed"': ល្បឿន
-      gamelab_getThisSprite:
-        options:
-          CHOICE:
-            '"other"': ផ្សេងៗ
-      gamelab_getTime:
-        options:
-          UNIT:
-            '"seconds"': វិ​នាទី
-      gamelab_isKeyPressed:
-        options:
-          KEY:
-            '"up"': ឡើង
-            '"down"': ចុះ
-            '"left"': ឆ្វេង
-            '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
-            '"x"': x
-            '"y"': y
-      gamelab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': នៅ​ពេល
-            '"while"': នៅ​ពេល
-          KEY:
-            '"up"': ឡើង
-            '"down"': ចុះ
-            '"left"': ឆ្វេង
-            '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
-            '"x"': x
-            '"y"': y
-      gamelab_makeBurst:
-        options:
-          EFFECT:
-            '"rain"': ភ្លៀង
-      gamelab_makeProjectile:
-        options:
-          DIRECTION:
-            '0': ស្តាំ
-            '90': ចុះ
-            '180': ឆ្វេង
-            '270': ឡើង
-      gamelab_makeSpritesWithSize:
-        options:
-          SIZE:
-            '30': small
-            '50': មធ្យម
-            '100': large
-      gamelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': ស្តាំ
-            '"left"': ឆ្វេង
-      gamelab_playSoundOptions:
-        options:
-          SOUND:
-            "'sound://category_collect/clicky_crunch.mp3'": ខាំ
-            "'sound://category_animals/cat.mp3'": ឆ្មា
-            "'sound://category_animals/cow.mp3'": មេគោ
-            "'sound://category_animals/sheep.mp3'": ចៀម
-            "'sound://category_animals/chicken.mp3'": មេមាន់
-            "'sound://category_animals/dog.mp3'": ឆ្កែ
-            "'sound://category_digital/jump_7.mp3'": លោត
-      gamelab_randColor:
-        text: ពណ៌​ព្រាវ
-      gamelab_randomColor:
-        text: ពណ៌​ព្រាវ
-      gamelab_repeatForever:
-        text: ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត
-      gamelab_setBackgroundImage:
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': រូង​ភ្នំ
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ទីក្រុង
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': វាលខ្សាច់
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ឥន្ទធនូ
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ក្រោម​ទឹក
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': រដូវរងារ
-            undefined: គ្មាន
-      gamelab_setDefaultSpriteSize:
-        options:
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': មធ្យម
-            '100': large
-      gamelab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"x"': គូល​x
-            '"y"': គូល​y
-            '"speed"': ល្បឿន
-      gamelab_setProp_dropdown:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': មធ្យម
-            '100': large
-      gamelab_setSizes:
-        options:
-          PROPERTY:
-            '"scale"': ទំហំ
-            '"height"': កម្ពស់
-      gamelab_setSpeed_dropdown:
-        options:
-          SIZE:
-            '1': extra slow
-            '3': slow
-            '5': ធម្មតា
-            '7': លឿន
-            '9': extra fast
-      gamelab_spriteClicked:
-        options:
-          CONDITION:
-            '"when"': នៅ​ពេល
-            '"while"': នៅ​ពេល
-      gamelab_turn:
-        options:
-          DIRECTION:
-            '"right"': ស្តាំ
-            '"left"': ឆ្វេង
-      gamelab_whenKey:
-        options:
-          KEY:
-            '"up"': ឡើង
-            '"down"': ចុះ
-            '"left"': ឆ្វេង
-            '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
-      gamelab_whileKey:
-        options:
-          KEY:
-            '"up"': ឡើង
-            '"down"': ចុះ
-            '"left"': ឆ្វេង
-            '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
+      Mikelab_addBehaviorSimple:
+        text: sprite {SPRITE} ចាប់ផ្តើម {BEHAVIOR}
       Mikelab_addTrainingData:
         options:
-          NAME:
-            "{x: 200, y: 100}": ត្រី
           LOCATION:
             "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": ត្រី
+          NAME:
+            "{x: 200, y: 100}": ត្រី
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -455,12 +296,12 @@ km:
             '"all"': ទាំងអស់
       Mikelab_groupChangePropBy:
         options:
-          SELECT:
-            '"all"': ទាំងអស់
           PROPERTY:
             '"scale"': ទំហំ
             '"x"': គូល​x
             '"y"': គូល​y
+          SELECT:
+            '"all"': ទាំងអស់
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -490,16 +331,20 @@ km:
             '"all"': ទាំងអស់
       Mikelab_groupSetProp:
         options:
-          SELECT:
-            '"all"': ទាំងអស់
           PROPERTY:
             '"scale"': ទំហំ
             '"x"': គូល​x
             '"y"': គូល​y
+          SELECT:
+            '"all"': ទាំងអស់
       Mikelab_groupSetTint:
         options:
           SELECT:
             '"all"': ទាំងអស់
+      Mikelab_groupWhenClickedOn:
+        text: នៅពេល {COSTUME} ចុច
+      Mikelab_groupWhileClicked:
+        text: ខណៈពេលចុច នៅលើ {COSTUME}
       Mikelab_hideFish:
         options:
           TRASH:
@@ -522,6 +367,8 @@ km:
             MOVES.ClapHigh: ត្រី
       Mikelab_randomColor:
         text: ពណ៌​ព្រាវ
+      Mikelab_removeBehaviorSimple:
+        text: sprite {SPRITE} បញ្ឃប់ {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត
       Mikelab_setBG:
@@ -537,47 +384,53 @@ km:
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': ស្តាំ
             '"left"': ឆ្វេង
+            '"right"': ស្តាំ
       Mikelab_sprite:
         options:
           LOCATION:
             "{x: 100, y: 200}": ឆ្វេង
             "{x: 300, y: 200}": ស្តាំ
+      Mikelab_whenClickedOn:
+        text: នៅពេល {SPRITE} ចុច
       Mikelab_whenKeyPressed:
         options:
           KEY:
-            '"up"': ព្រួញឡើងលើ
+            '"a"': A
+            '"d"': D
             '"down"': ព្រួញចុះក្រោម
             '"left"': ព្រួញខាងឆ្វេង
             '"right"': ព្រួញខាងស្តាំ
-            '"w"': ខាងលិច
-            '"a"': A
             '"s"': ខាងត្បូង
-            '"d"': D
+            '"up"': ព្រួញឡើងលើ
+            '"w"': ខាងលិច
+        text: នៅពេល {KEY} បានចុច
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': ព្រួញឡើងលើ
+            '"a"': A
+            '"d"': D
             '"down"': ព្រួញចុះក្រោម
             '"left"': ព្រួញខាងឆ្វេង
             '"right"': ព្រួញខាងស្តាំ
-            '"w"': ខាងលិច
-            '"a"': A
             '"s"': ខាងត្បូង
-            '"d"': D
+            '"up"': ព្រួញឡើងលើ
+            '"w"': ខាងលិច
+      Mikelab_whenMouseClicked:
+        text: នៅពេល mouse បានចុច
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': យល់ព្រម
             '"no"': ទេ
+            '"yes"': យល់ព្រម
+        text: នៅពេល {KEY} ចុច
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': ព្រួញឡើងលើ
             '"down"': ព្រួញចុះក្រោម
             '"left"': ព្រួញខាងឆ្វេង
             '"right"': ព្រួញខាងស្តាំ
+            '"up"': ព្រួញឡើងលើ
       Poetry_addFrame:
         options:
           BRUSH:
@@ -587,6 +440,8 @@ km:
         options:
           EFFECT:
             '"rain"': ភ្លៀង
+      Poetry_makeNewSpriteAnon:
+        text: បង្កើត ថ្មី {ANIMATION_NAME} sprite នៅ {LOCATION}
       Poetry_playMusic:
         options:
           SOUND:
@@ -595,6 +450,9 @@ km:
         options:
           SOUND:
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': លោត
+        text: ចាក់សំឡេង {SOUND}
+      Poetry_playSoundOptionsSpace:
+        text: ចាក់សំឡេង {SOUND}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -604,17 +462,43 @@ km:
           PALETTE:
             '"rainbow"': ឥន្ទធនូ
             '"winter"': រដូវរងារ
+      Poetry_setBackgroundImageAs:
+        text: កំណត់ ផ្ទៃខាងក្រោយ ជា {IMG}
       Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"hearts"': បេះដូង
             '"rain"': ភ្លៀង
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            '"fluttering"': ញ័រ
+            '"growing"': រីកមាឌ
+            '"jittering"': ភ័យ
+            '"shrinking"': រួមមាឌ
+            '"spinning_left"': បង្វិលឆ្វេង
+            '"spinning_right"': បង្វិលស្តាំ
+            '"wandering"': វង្វេង
+            '"wobbling"': អង្រួន
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            '"fluttering"': ញ័រ
+            '"growing"': រីកមាឌ
+            '"jittering"': ភ័យ
+            '"shrinking"': រួមមាឌ
+            '"spinning_left"': បង្វិលឆ្វេង
+            '"spinning_right"': បង្វិលស្តាំ
+            '"wandering"': វង្វេង
+            '"wobbling"': អង្រួន
       RyanLab_moveForward:
-        text: រំកិល​ទៅមុខ
+        text: ផ្លាស់ទីទៅមុខ
       RyanLab_turnLeft:
         text: បត់​ឆ្វេង
       RyanLab_turnRight:
         text: បត់​ស្ដាំ
+      Vector_randomLocation:
+        text: ទីតាំងចៃដន្យ
       Vector_where:
         options:
           PROPERTY:
@@ -626,32 +510,43 @@ km:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '1': ទាំងអស់
-            '0.75': most
-            '0.5': half of
             '0.25': few
+            '0.5': half of
+            '0.75': most
+            '1': ទាំងអស់
       aalab_someStartIntervention:
         options:
           PORTION:
-            '1': ទាំងអស់
-            '0.75': most
-            '0.5': half of
             '0.25': few
+            '0.5': half of
+            '0.75': most
+            '1': ទាំងអស់
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(fluttering, []): ញ័រ
+            new Behavior(jittering, []): ភ័យ
+            new Behavior(patrolling, []): ដើរល្បាត
+            new Behavior(spinning_left, []): បង្វិលឆ្វេង
+            new Behavior(spinning_right, []): បង្វិលស្តាំ
+            new Behavior(wandering, []): វង្វេង
+            new Behavior(wobbling, []): អង្រួន
       binary_move:
         options:
           DIR:
-            '"up"': ឡើង
             '"down"': ចុះ
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
+            '"up"': ឡើង
       binary_whenKey:
         options:
           KEY:
-            '"up"': ឡើង
             '"down"': ចុះ
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
             '"space"': លំហ​អាកាស
+            '"up"': ឡើង
+        text: នៅពេល {KEY} បានចុច
       craft_ifPath:
         options:
           DIR:
@@ -659,16 +554,263 @@ km:
       craft_ifStandingOn:
         options:
           TYPE:
-            "'sand'": ខ្សាច់
             "'planksOak'": ក្តារឈើសែន
+            "'sand'": ខ្សាច់
       craft_ifStandingOnLimit:
         options:
           TYPE:
             "'sand'": ខ្សាច់
       craft_moveForward:
-        text: រំកិល​ទៅមុខ
+        text: ផ្លាស់ទីទៅមុខ
       craft_placeTorch:
         text: ដាក់ភ្លើងគប់
+      gamelab_addBehaviorSimple:
+        text: sprite {SPRITE} ចាប់ផ្តើម {BEHAVIOR}
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
+        text: នៅ {N} {UNIT}
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"speed"': ល្បឿន
+            '"x"': គូល​x
+            '"y"': គូល​y
+        text: ផ្លាស់ប្តូរ {SPRITE} {PROPERTY} ទៅជា {VAL}
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': នៅ​ពេល
+            '"while"': ខណៈពេល
+        text: "{CONDITION} {SPRITE1} ប៉ះ {SPRITE2}"
+      gamelab_clickedOn:
+        text: នៅពេល {SPRITE} ចុច
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(fluttering, []): ញ័រ
+            new Behavior(jittering, []): ភ័យ
+            new Behavior(moving_east_and_looping, []): ផ្លាស់ទីទៅទិសខាងកើតនិងបង្វិលជុំ
+            new Behavior(moving_north_and_looping, []): ផ្លាស់ទីទៅខាងជើង ហើយ looping
+            new Behavior(moving_south_and_looping, []): ផ្លាស់ទីទៅខាងត្បូង ហើយ looping
+            new Behavior(moving_west_and_looping, []): ផ្លាស់ទីទៅខាងលិច ហើយ looping
+            new Behavior(patrolling, []): ដើរល្បាត
+            new Behavior(spinning_left, []): បង្វិលឆ្វេង
+            new Behavior(spinning_right, []): បង្វិលស្តាំ
+            new Behavior(wandering, []): វង្វេង
+            new Behavior(wobbling, []): អង្រួន
+      gamelab_comment:
+        text: 'កំណត់សម្គាល់: {COMMENT}'
+      gamelab_destroy:
+        text: ដកចេញ {THIS}
+      gamelab_draggable:
+        text: អាចអូសបាន
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"speed"': ល្បឿន
+            '"x"': គូល​x
+            '"y"': គូល​y
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': ផ្សេងៗ
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+            '"up"': ឡើង
+            '"x"': x
+            '"y"': y
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': នៅ​ពេល
+            '"while"': ខណៈពេល
+          KEY:
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+            '"up"': ឡើង
+            '"x"': x
+            '"y"': y
+        text: "{CONDITION} {KEY} បានចុច"
+      gamelab_locationMouse:
+        text: ទីតាំង ទស្សន៍ទ្រនិច
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': ភ្លៀង
+      gamelab_makeNewSpriteAnon:
+        text: បង្កើត ថ្មី {ANIMATION_NAME} sprite នៅ {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ស្តាំ
+            '180': ឆ្វេង
+            '270': ឡើង
+            '90': ចុះ
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '100': large
+            '30': small
+            '50': មធ្យម
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+        text: "{SPRITE} ប្រឈមមុខ {DIRECTION}"
+      gamelab_mouseLocation:
+        text: ទីតាំង ទស្សន៍ទ្រនិច
+      gamelab_moveInDirection:
+        text: ផ្លាស់ទី {SPRITE} {DISTANCE} ភីកសែល {DIRECTION}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_playSound:
+        text: ចាក់សំឡេង {SOUND}
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_animals/cat.mp3'": ឆ្មា
+            "'sound://category_animals/chicken.mp3'": មេមាន់
+            "'sound://category_animals/cow.mp3'": មេគោ
+            "'sound://category_animals/dog.mp3'": ឆ្កែ
+            "'sound://category_animals/sheep.mp3'": ចៀម
+            "'sound://category_collect/clicky_crunch.mp3'": ខាំ
+            "'sound://category_digital/jump_7.mp3'": លោត
+        text: ចាក់សំឡេង {SOUND}
+      gamelab_playSoundOptionsSoccer:
+        text: ចាក់សំឡេង {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: ចាក់សំឡេង {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): អាចអូសបាន
+            new Behavior(driving_with_arrow_keys, []): បើកបរដោយប្រើគ្រាប់ចុចព្រួញ
+            new Behavior(moving_with_arrow_keys, []): ផ្លាស់ទីដោយប្រើគ្រាប់ ចុចព្រួញ
+      gamelab_pointInDirection:
+        text: ចង្អុល {SPRITE} {DIRECTION}
+      gamelab_randColor:
+        text: ពណ៌​ព្រាវ
+      gamelab_randomColor:
+        text: ពណ៌​ព្រាវ
+      gamelab_randomLocation:
+        text: ទីតាំងចៃដន្យ
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} បញ្ឈប់ទាំងអស់"
+      gamelab_removeBehaviorSimple:
+        text: sprite {SPRITE} បញ្ឃប់ {BEHAVIOR}
+      gamelab_removeTint:
+        text: យកពណ៌ចេញពី {THIS}
+      gamelab_repeatForever:
+        text: ធ្វើ​ឡើង​វិញ​ជា​រៀង​រហូត
+      gamelab_setBackground:
+        text: កំណត់ ពណ៌ផ្ទៃខាងក្រោយ {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ទីក្រុង
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': រូង​ភ្នំ
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': វាលខ្សាច់
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ឥន្ទធនូ
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ក្រោម​ទឹក
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': រដូវរងារ
+            undefined: គ្មាន
+        text: កំណត់ ផ្ទៃខាងក្រោយ ជា {IMG}
+      gamelab_setBackgroundImageAs:
+        text: កំណត់ ផ្ទៃខាងក្រោយ ជា {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '100': large
+            '25': extra small
+            '50': small
+            '75': មធ្យម
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+            '"speed"': ល្បឿន
+            '"x"': គូល​x
+            '"y"': គូល​y
+        text: កំណត់ {SPRITE} {PROPERTY} ទៅជា {VAL}
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': ទំហំ
+          SIZE:
+            '100': large
+            '25': extra small
+            '50': small
+            '75': មធ្យម
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': កម្ពស់
+            '"scale"': ទំហំ
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': ធម្មតា
+            '7': លឿន
+            '9': extra fast
+      gamelab_setTint:
+        text: ផ្លាស់ប្តូរពណ៌ {THIS} ទៅជា {COLOR}
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': នៅ​ពេល
+            '"while"': ខណៈពេល
+        text: "{CONDITION} {SPRITE} ចុច"
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+        text: បង្វែទិស {SPRITE} {DIRECTION} {N} ដឺក្រេ
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+            '"up"': ឡើង
+        text: នៅពេល {KEY} បានចុច
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"down"': ចុះ
+            '"left"': ឆ្វេង
+            '"right"': ស្តាំ
+            '"space"': លំហ​អាកាស
+            '"up"': ឡើង
       storylab_setForegroundEffect2:
         options:
           EFFECT:

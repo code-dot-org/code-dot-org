@@ -1,28 +1,28 @@
 ---
 zu:
+  cancel: Hoxisa
+  continue: Qhubeka
+  copy: Kopisha
+  dialog:
+    ok: Kulungile
+    startover_cancel: Hoxisa
+    startover_ok: Qala phansi
+    startover_title: Ingabe uqinisekile ufuna ukuqala phansi?
   errors:
     messages:
       not_saved: 'Please correct the following errors:'
-  cancel: Hoxisa
-  continue: Qhubeka
-  signup_form:
-    email_preference_no: Cha
-    share_teacher_email_reg_partner_preference_no: Cha
   nav:
     user:
       infinity: Akugcini noma utalagu
-  dialog:
-    ok: Kulungile
-    startover_title: Ingabe uqinisekile ufuna ukuqala phansi?
-    startover_ok: Qala phansi
-    startover_cancel: Hoxisa
-  terms_interstitial:
-    print: Khiphela ephepheni
   pd:
     form_entries:
+      email_opt_in:
+        opt_in_no: Cha
       subjects:
         cs: Isayensi yekhompyutha
         math: Izibalo
-      email_opt_in:
-        opt_in_no: Cha
-  copy: Kopisha
+  signup_form:
+    email_preference_no: Cha
+    share_teacher_email_reg_partner_preference_no: Cha
+  terms_interstitial:
+    print: Khiphela ephepheni

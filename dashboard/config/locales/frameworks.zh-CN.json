@@ -2,35 +2,35 @@
   "zh-CN": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "CSTA K-12计算机科学标准（2017）"
-        },
-        "csp2021": {
-          "name": "CSP概念框架"
-        },
-        "csta2011": {
-          "name": "CSTA K-12计算机科学标准（2011）"
-        },
-        "ccela": {
-          "name": "共同核心英语言能力标准"
-        },
-        "ngss": {
-          "name": "新一代科学标准"
-        },
-        "ccmath": {
-          "name": "共同核心数学标准"
-        },
-        "iste": {
-          "name": "ISTE学生标准"
+        "ai4k12-2021": {
+          "name": "AI4K12 2021 年国家指南"
         },
         "c3ss": {
           "name": "C3 社会研究标准"
         },
+        "ccela": {
+          "name": "共同核心英语言能力标准"
+        },
+        "ccmath": {
+          "name": "共同核心数学标准"
+        },
         "csa": {
           "name": "CSA 概念框架"
         },
-        "ai4k12-2021": {
-          "name": "AI4K12 2021 年国家指南"
+        "csp2021": {
+          "name": "CSP概念框架"
+        },
+        "csta": {
+          "name": "CSTA K-12计算机科学标准（2017）"
+        },
+        "csta2011": {
+          "name": "CSTA K-12计算机科学标准（2011）"
+        },
+        "iste": {
+          "name": "ISTE学生标准"
+        },
+        "ngss": {
+          "name": "新一代科学标准"
         }
       }
     }

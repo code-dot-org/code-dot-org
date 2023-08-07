@@ -2,22 +2,103 @@
   "km-KH": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "បន្ទប់វេប"
-        },
-        "gamelab": {
-          "name": "មន្ទីរពិសោធន៍ហ្គេម",
+        "applab": {
           "categories": {
-            "game_lab": {
-              "name": "មន្ទីរពិសោធន៍ហ្គេម",
+            "advanced": {
+              "name": "ជម្រើស​កម្រិត​ខ្ពស់"
+            },
+            "control": {
               "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "អនុគមន៍"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "អនុគមន៍"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "អនុ​គមន៍"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "លេខអតិបរមាត្រូវបានត្រឡប់មកវិញ"
+                    },
+                    "min": {
+                      "description": "លេខអប្បបរមាត្រូវបានត្រឡប់មកវិញ"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "លេខអតិបរមាត្រូវបានត្រឡប់មកវិញ"
+                    },
+                    "min": {
+                      "description": "លេខអប្បបរមាត្រូវបានត្រឡប់មកវិញ"
+                    }
+                  }
+                }
+              },
+              "name": "គណិត​វិទ្យា"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "អនុគមន៍"
+                    }
+                  }
+                },
                 "playSound": {
                   "short_description": "ចាក់ឯកសារសំឡេង MP3 ពី URL ដែលបានបញ្ជាក់។"
                 }
               }
             },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "គ្មាន"
+                }
+              },
+              "name": "អ​ថេរ"
+            }
+          },
+          "name": "មន្ទីរពិសោធន៍កម្មវិធី​"
+        },
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "name": "គំនូរ"
+            },
+            "functions": {
+              "name": "អនុ​គមន៍"
+            },
+            "game_lab": {
+              "expressions": {
+                "playSound": {
+                  "short_description": "ចាក់ឯកសារសំឡេង MP3 ពី URL ដែលបានបញ្ជាក់។"
+                }
+              },
+              "name": "មន្ទីរពិសោធន៍ហ្គេម"
+            },
             "groups": {
-              "name": "ក្រុម",
               "expressions": {
                 "setColorEach": {
                   "palette_params": {
@@ -33,164 +114,86 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "name": "គំនូរ"
+              },
+              "name": "ក្រុម"
             },
             "math": {
-              "name": "គណិត​វិទ្យា",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "លេខអប្បបរមាត្រូវបានត្រឡប់មកវិញ"
-                    },
                     "max": {
                       "description": "លេខអតិបរមាត្រូវបានត្រឡប់មកវិញ"
+                    },
+                    "min": {
+                      "description": "លេខអប្បបរមាត្រូវបានត្រឡប់មកវិញ"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "លេខអប្បបរមាត្រូវបានត្រឡប់មកវិញ"
-                    },
                     "max": {
                       "description": "លេខអតិបរមាត្រូវបានត្រឡប់មកវិញ"
+                    },
+                    "min": {
+                      "description": "លេខអប្បបរមាត្រូវបានត្រឡប់មកវិញ"
                     }
                   }
                 }
-              }
+              },
+              "name": "គណិត​វិទ្យា"
+            },
+            "sprites": {
+              "name": "Sprites"
             },
             "variables": {
               "name": "អ​ថេរ"
-            },
-            "functions": {
-              "name": "អនុ​គមន៍"
             }
-          }
-        },
-        "applab": {
-          "name": "មន្ទីរពិសោធន៍កម្មវិធី​",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "អនុគមន៍"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "ចាក់ឯកសារសំឡេង MP3 ពី URL ដែលបានបញ្ជាក់។"
-                }
-              }
-            },
-            "data": {
-              "expressions": {
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "អនុគមន៍"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "អនុគមន៍"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "គណិត​វិទ្យា",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "លេខអប្បបរមាត្រូវបានត្រឡប់មកវិញ"
-                    },
-                    "max": {
-                      "description": "លេខអតិបរមាត្រូវបានត្រឡប់មកវិញ"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "លេខអប្បបរមាត្រូវបានត្រឡប់មកវិញ"
-                    },
-                    "max": {
-                      "description": "លេខអតិបរមាត្រូវបានត្រឡប់មកវិញ"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "អ​ថេរ",
-              "expressions": {
-                "addPair": {
-                  "return_value": "គ្មាន"
-                }
-              }
-            },
-            "functions": {
-              "name": "អនុ​គមន៍"
-            },
-            "advanced": {
-              "name": "ជម្រើស​កម្រិត​ខ្ពស់"
-            }
-          }
+          },
+          "name": "មន្ទីរពិសោធន៍ហ្គេម"
         },
         "spritelab": {
-          "name": "Sprite Lab",
           "categories": {
-            "world": {
-              "name": "ពិភពលោក"
-            },
-            "location": {
-              "name": "ទីតាំង"
-            },
             "actions": {
               "name": "សកម្មភាព"
-            },
-            "events": {
-              "name": "ព្រឹត្តិការណ៍"
             },
             "behaviors": {
               "name": "ឥរិយាបទ"
             },
-            "loops": {
-              "name": "រង្វិល​ជុំ"
+            "comments": {
+              "name": "មតិយោបល់"
             },
-            "variables": {
-              "name": "អ​ថេរ"
-            },
-            "math": {
-              "name": "គណិត​វិទ្យា"
-            },
-            "logic": {
-              "name": "តក្ក"
+            "events": {
+              "name": "ព្រឹត្តិការណ៍"
             },
             "functions": {
               "name": "អនុ​គមន៍"
             },
+            "location": {
+              "name": "ទីតាំង"
+            },
+            "logic": {
+              "name": "តក្ក"
+            },
+            "loops": {
+              "name": "រង្វិល​ជុំ"
+            },
+            "math": {
+              "name": "គណិត​វិទ្យា"
+            },
             "text": {
               "name": "អត្ថ​​បទ"
             },
-            "comments": {
-              "name": "មតិយោបល់"
+            "variables": {
+              "name": "អ​ថេរ"
+            },
+            "world": {
+              "name": "ពិភពលោក"
             }
-          }
+          },
+          "name": "Sprite Lab"
+        },
+        "weblab": {
+          "name": "បន្ទប់វេប"
         }
       }
     }

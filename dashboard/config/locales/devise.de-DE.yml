@@ -64,6 +64,28 @@ de:
       unlocked: Dein Konto wurde erfolgreich freigeschaltet. Bitte melde dich an,
         um fortzufahren.
   errors:
+    invitations:
+      edit:
+        header: Wähle dein Passwort
+        submit_button: Mein Passwort festlegen
+      invitation_removed: Deine Einladung wurde entfernt.
+      invitation_token_invalid: Das Einladungs-Token ist ungültig!
+      new:
+        header: Einladung senden
+        submit_button: Schicke eine Einladung
+      no_invitations_remaining: Keine Einladungen übrig
+      send_instructions: Eine Einladungs-E-Mail wurde an %{E-Mail} gesendet.
+      updated: Dein Passwort wurde erfolgreich gespeichert. Du bist jetzt angemeldet.
+    mailer:
+      invitation_instructions:
+        accept: Einladung Annehmen
+        hello: Hallo %{E-Mail}
+        ignore: Wenn du diese Einladung nicht annehmen möchtest, ignoriere diese E-Mail
+          einfach. <br /> Ein Konto für dich wird nur erstellt, wenn du auf den Link
+          oben klickst und dein Passwort festlegst.
+        someone_invited_you: Jemand hat dich zu %{url} eingeladen. Akzeptiere die
+          Einladung über den Link unten.
+        subject: Einladungs-Anweisungen
     messages:
       already_confirmed: wurde bereits bestätigt, bitte versuche dich anzumelden
       confirmation_period_expired: muss innerhalb von %{period} bestätigt werden,
@@ -71,25 +93,3 @@ de:
       expired: ist abgelaufen, bitte fordern Sie einen Neuen an
       not_found: nicht gefunden
       not_locked: war nicht gesperrt
-    invitations:
-      send_instructions: Eine Einladungs-E-Mail wurde an %{E-Mail} gesendet.
-      invitation_token_invalid: Das Einladungs-Token ist ungültig!
-      updated: Dein Passwort wurde erfolgreich gespeichert. Du bist jetzt angemeldet.
-      no_invitations_remaining: Keine Einladungen übrig
-      invitation_removed: Deine Einladung wurde entfernt.
-      new:
-        header: Einladung senden
-        submit_button: Schicke eine Einladung
-      edit:
-        header: Wähle dein Passwort
-        submit_button: Mein Passwort festlegen
-    mailer:
-      invitation_instructions:
-        subject: Einladungs-Anweisungen
-        hello: Hallo %{E-Mail}
-        someone_invited_you: Jemand hat dich zu %{url} eingeladen. Akzeptiere die
-          Einladung über den Link unten.
-        accept: Einladung Annehmen
-        ignore: Wenn du diese Einladung nicht annehmen möchtest, ignoriere diese E-Mail
-          einfach. <br /> Ein Konto für dich wird nur erstellt, wenn du auf den Link
-          oben klickst und dein Passwort festlegst.

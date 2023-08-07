@@ -2,16 +2,12 @@
   "my-MM": {
     "data": {
       "display_name": {
-        "CSD U3 Variables Map": "Variables",
-        "CSD U3 Variables Map_2018": "Variables",
-        "CSD U3 Variables Map_2019": "Variables",
-        "courseF_bee_for5_2021": "Variables",
-        "AppLab Intro 7 - Change Screen Color": "စကရင် အရောင်ကို ချိန်းမယ်",
         "App Lab Intro 8 - Video Design Mode": "ဗီဒီယို: ဒီဇိုင်:ပုံစံ",
         "App Lab Intro 8 - Video Getting Started": "Video: ဘယ်လိုစမလဲ။ ",
         "App Lab Intro 8 - Video Images and Sounds": "ဗီဒီယို- ရုပ်ပုံများနှင့် အသံများ",
         "App Lab Intro 8 - Video Make It Interactive": "ဗီဒီယို- interactive အောင်လုပ်ပါ။",
         "App Lab Intro 8 - Video Share Your App": "သင့်ရဲ့ Application ကို မျှ​ဝေနိုင်ပါပြီ ။",
+        "AppLab Intro 7 - Change Screen Color": "စကရင် အရောင်ကို ချိန်းမယ်",
         "AppLab Intro 7 - Change Text 2": "Text size ပြောင်းခြင်း ",
         "AppLab Intro 7 - Full Text": "ခလုတ်နှစ်ခု",
         "AppLab Intro 7 - onEvent intro": "ခလုတ်များ အလုပ် လုပ်အောင် လုပ် ပါ",
@@ -25,7 +21,11 @@
         "CSD U3 - Interactive Card - Example2_2022": "ဥပမာ",
         "CSD U3 - Interactive Card - Example3_2022": "ဥပမာ",
         "CSD U3 - Interactive Card - Example4_2022": "ဥပမာ",
-        "courseF_bee_for52022": "Variables"
+        "CSD U3 Variables Map": "Variables",
+        "CSD U3 Variables Map_2018": "Variables",
+        "CSD U3 Variables Map_2019": "Variables",
+        "courseF_bee_for52022": "Variables",
+        "courseF_bee_for5_2021": "Variables"
       }
     }
   }

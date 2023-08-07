@@ -5,6 +5,18 @@
         "2-3 Artist Debugging 1": {
           "2-3_Artist_Debugging_1_a": "Umělec nemá tlačítko \"Krok\". Můžete však potáhnout posuvník rychlosti doleva, abyste mohli pečlivěji sledovat průběh programu."
         },
+        "2-3 Bee Conditionals 5": {
+          "Bee_Cond_5_1a": "Fialová květinka může obsahovat buď 1 nebo 0 nektaru. Počet ale zjistíš až po spuštění kódu!"
+        },
+        "4-5 Bee Conditionals 2": {
+          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "Změnila se barva obrazovky na zelenou? Pokud ano, stiskni 'Dokončit'. Pokud ne, stiskni 'Reset',  uprav svůj kód a znovu stiskni 'Spustit'."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Teď jsi v dizajnovém módu."
+        },
         "CSD U3 Variables Predict Where XY": {
           "grid": "K zobrazení mřížky klikněte zde."
         },
@@ -12,6 +24,12 @@
           "grid": "K zobrazení mřížky klikněte zde."
         },
         "CSD U3 Variables Predict Where XY_2019": {
+          "grid": "K zobrazení mřížky klikněte zde."
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "K zobrazení mřížky klikněte zde."
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
           "grid": "K zobrazení mřížky klikněte zde."
         },
         "Course 4 Artist 4": {
@@ -53,23 +71,69 @@
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "Přidej do svého programu tento blok!"
         },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Přidej do svého programu tento blok!"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Přidej do svého programu tento blok!"
+        },
         "CourseD_Dance_2020_02": {
-          "dance_callout_11_a": "Přidej tento blok do svého programu.",
-          "arrow_buttons": "Mačkej klávesy se šipkami a ovládej tak svého tanečníka."
+          "arrow_buttons": "Mačkej klávesy se šipkami a ovládej tak svého tanečníka.",
+          "dance_callout_11_a": "Přidej tento blok do svého programu."
+        },
+        "CourseD_Dance_2020_022022": {
+          "arrow_buttons": "Mačkej klávesy se šipkami a ovládej tak svého tanečníka.",
+          "dance_callout_11_a": "Přidej tento blok do svého programu."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "arrow_buttons": "Mačkej klávesy se šipkami a ovládej tak svého tanečníka.",
+          "dance_callout_11_a": "Přidej tento blok do svého programu."
         },
         "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Přidej do svého programu tento blok!"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Přidej do svého programu tento blok!"
+        },
+        "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "Přidej do svého programu tento blok!"
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "Přidejte do svého programu novou událost."
         },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Přidejte do svého programu novou událost."
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Přidejte do svého programu novou událost."
+        },
         "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Nový blok!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Nový blok!"
+        },
+        "CourseD_Dance_2020_06_2021": {
           "dance_party_11_5_groups": "Nový blok!"
         },
         "CourseD_Dance_2020_07": {
           "setprop_hint": "Nový blok!"
         },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Nový blok!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Nový blok!"
+        },
         "CourseD_Dance_2020_09": {
+          "new_block_3": "Nový blok!",
+          "new_block_4": "Nový blok!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Nový blok!",
+          "new_block_4": "Nový blok!"
+        },
+        "CourseD_Dance_2020_09_2021": {
           "new_block_3": "Nový blok!",
           "new_block_4": "Nový blok!"
         },
@@ -92,12 +156,26 @@
         "CourseD_Dance_Party_11_5": {
           "dance_party_11_5_groups": "Pro bloky „všechny kachny“ se podívej sem"
         },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Kliknutím sem rozšíříte blok.",
+          "pointerlocation": "Přetáhněte blok předmětu sem."
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Kliknutím sem rozšíříte blok.",
+          "pointerlocation": "Přetáhněte blok předmětu sem."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Kliknutím vytvořte nový kostým"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
+        },
         "Dance_2019_01": {
           "dance_callout_01": "Přidej do svého programu tento blok!"
         },
         "Dance_2019_02": {
-          "dance_callout_11_a": "Přidej tento blok do svého programu.",
-          "arrow_buttons": "Mačkej klávesy se šipkami a ovládej tak svého tanečníka."
+          "arrow_buttons": "Mačkej klávesy se šipkami a ovládej tak svého tanečníka.",
+          "dance_callout_11_a": "Přidej tento blok do svého programu."
         },
         "Dance_2019_04": {
           "dance_callout_02": "Přidej do svého programu tento blok!"
@@ -134,13 +212,31 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "Pro bloky „všechny kachny“ se podívej sem"
         },
+        "Fish Tank 3-validated2022": {
+          "spritelab_comment": "Do tohoto bloku napiš poznámku (pro sebe nebo učitele), jak kód funguje."
+        },
+        "Fish Tank 3-validated_2019": {
+          "spritelab_comment": "Do tohoto bloku napiš poznámku (pro sebe nebo učitele), jak kód funguje."
+        },
+        "Fish Tank 3-validated_2020": {
+          "spritelab_comment": "Do tohoto bloku napiš poznámku (pro sebe nebo učitele), jak kód funguje."
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Do tohoto bloku napiš poznámku (pro sebe nebo učitele), jak kód funguje."
+        },
         "Function intro Ryan": {
+          "Function_intro_Ryan_1": "Tento malý pokyn říká počítači, aby spustil VELKÝ kus kódu se stejným názvem v pracovním prostoru."
+        },
+        "Function intro Ryan2022": {
           "Function_intro_Ryan_1": "Tento malý pokyn říká počítači, aby spustil VELKÝ kus kódu se stejným názvem v pracovním prostoru."
         },
         "Function intro Ryan_2019": {
           "Function_intro_Ryan_1": "Tento malý pokyn říká počítači, aby spustil VELKÝ kus kódu se stejným názvem v pracovním prostoru."
         },
         "Function intro Ryan_2020": {
+          "Function_intro_Ryan_1": "Tento malý pokyn říká počítači, aby spustil VELKÝ kus kódu se stejným názvem v pracovním prostoru."
+        },
+        "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "Tento malý pokyn říká počítači, aby spustil VELKÝ kus kódu se stejným názvem v pracovním prostoru."
         },
         "Infinity_move_collide": {
@@ -165,13 +261,22 @@
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_1": "Toto je cyklus „opakovat“! Klikněte na pracovní prostor a vložte kód, který chcete pořád opakovat."
         },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Toto je cyklus „opakovat“! Klikněte na pracovní prostor a vložte kód, který chcete pořád opakovat."
+        },
         "MC_HOC_2017_03_Cole_2019": {
           "MC_HOC_2017_03_Cole_1": "Toto je cyklus „opakovat“! Klikněte na pracovní prostor a vložte kód, který chcete pořád opakovat."
         },
         "MC_HOC_2017_03_Cole_2020": {
           "MC_HOC_2017_03_Cole_1": "Toto je cyklus „opakovat“! Klikněte na pracovní prostor a vložte kód, který chcete pořád opakovat."
         },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Toto je cyklus „opakovat“! Klikněte na pracovní prostor a vložte kód, který chcete pořád opakovat."
+        },
         "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Agent se dokáže vznášet nad vodou, ale hráč ne!"
+        },
+        "MC_HOC_2017_04_Cole2022": {
           "MC_HOC_2017_04_Cole_a": "Agent se dokáže vznášet nad vodou, ale hráč ne!"
         },
         "MC_HOC_2017_04_Cole_2019": {
@@ -180,7 +285,13 @@
         "MC_HOC_2017_04_Cole_2020": {
           "MC_HOC_2017_04_Cole_a": "Agent se dokáže vznášet nad vodou, ale hráč ne!"
         },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent se dokáže vznášet nad vodou, ale hráč ne!"
+        },
         "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "Tyto bloky nemůžete zahodit, ale můžete je upravit."
+        },
+        "MC_HOC_2017_06_Cole2022": {
           "MC_HOC_2017_06_Cole_1": "Tyto bloky nemůžete zahodit, ale můžete je upravit."
         },
         "MC_HOC_2017_06_Cole_2019": {
@@ -189,13 +300,22 @@
         "MC_HOC_2017_06_Cole_2020": {
           "MC_HOC_2017_06_Cole_1": "Tyto bloky nemůžete zahodit, ale můžete je upravit."
         },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Tyto bloky nemůžete zahodit, ale můžete je upravit."
+        },
         "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_1": "Agent se dokáže vznášet nad lávou, ale hráč ne!"
+        },
+        "MC_HOC_2017_Ali2022": {
           "MC_HOC_2017_08_RY_1": "Agent se dokáže vznášet nad lávou, ale hráč ne!"
         },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_1": "Agent se dokáže vznášet nad lávou, ale hráč ne!"
         },
         "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_1": "Agent se dokáže vznášet nad lávou, ale hráč ne!"
+        },
+        "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "Agent se dokáže vznášet nad lávou, ale hráč ne!"
         },
         "NEW Course 4 Artist Functions 7": {
@@ -208,8 +328,8 @@
           "create_function": "Klepnutím sem se otevře vysouvací \"Funkce\", pak klepni na tlačítko \"Vytvoř funkci\"."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Klepni na tlačítko Upravit k přidání parametru do funkce",
-          "add_and_drag_parameter": "Napiš jméno tvého parametru, klepni na tlačítko Přidat a přetáhni jej do definice funkce"
+          "add_and_drag_parameter": "Napiš jméno tvého parametru, klepni na tlačítko Přidat a přetáhni jej do definice funkce",
+          "edit_add_parameter": "Klepni na tlačítko Upravit k přidání parametru do funkce"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Přetáhni proměnnou délku k nahrazení otazníků"
@@ -220,7 +340,23 @@
         "New Frozen Project": {
           "snowflake_dropdown": "Použij tento drop-down k vytváření různých sněhových vloček!"
         },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy.",
+          "make_sprite": "Pomocí těchto bloků vytvoř sprajta."
+        },
+        "OPD-K5-forloops-5": {
+          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
+        },
+        "OPD-K5-projects-4": {
+          "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
+        },
+        "OPD-K5-spritelab-3": {
+          "spritelab_comment": "Do tohoto bloku napiš poznámku (pro sebe nebo učitele), jak kód funguje."
+        },
         "Overworld Chop Trees": {
+          "craft_callout_preplaced": "Už jsme sem umístnili určité bloky, které ti pomohou začít"
+        },
+        "Overworld Chop Trees2022": {
           "craft_callout_preplaced": "Už jsme sem umístnili určité bloky, které ti pomohou začít"
         },
         "Overworld Chop Trees_2019": {
@@ -229,7 +365,13 @@
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "Už jsme sem umístnili určité bloky, které ti pomohou začít"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Už jsme sem umístnili určité bloky, které ti pomohou začít"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Tento kód zahájí budování tvého domu. Umíš to dokončit?"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "Tento kód zahájí budování tvého domu. Umíš to dokončit?"
         },
         "Overworld House Frame Chosen_2019": {
@@ -238,19 +380,33 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "Tento kód zahájí budování tvého domu. Umíš to dokončit?"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Tento kód zahájí budování tvého domu. Umíš to dokončit?"
+        },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program",
-          "craft_drag_block_callout": "Přetáhni blok „posuň se vpřed“ a připoj ho pod druhý blok"
+          "craft_drag_block_callout": "Přetáhni blok „posuň se vpřed“ a připoj ho pod druhý blok",
+          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_drag_block_callout": "Přetáhni blok „posuň se vpřed“ a připoj ho pod druhý blok",
+          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program",
-          "craft_drag_block_callout": "Přetáhni blok „posuň se vpřed“ a připoj ho pod druhý blok"
+          "craft_drag_block_callout": "Přetáhni blok „posuň se vpřed“ a připoj ho pod druhý blok",
+          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program",
-          "craft_drag_block_callout": "Přetáhni blok „posuň se vpřed“ a připoj ho pod druhý blok"
+          "craft_drag_block_callout": "Přetáhni blok „posuň se vpřed“ a připoj ho pod druhý blok",
+          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_drag_block_callout": "Přetáhni blok „posuň se vpřed“ a připoj ho pod druhý blok",
+          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program"
         },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "Opakuj akce umístěním bloků zde"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "Opakuj akce umístěním bloků zde"
         },
         "Overworld Place Wall_2019": {
@@ -259,7 +415,13 @@
         "Overworld Place Wall_2020": {
           "craft_inside_repeat": "Opakuj akce umístěním bloků zde"
         },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Opakuj akce umístěním bloků zde"
+        },
         "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Tento kód kontroluje lávu, umíš přidat povel k posunu dopředu?"
+        },
+        "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "Tento kód kontroluje lávu, umíš přidat povel k posunu dopředu?"
         },
         "Underground Avoiding Lava_2019": {
@@ -268,7 +430,13 @@
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "Tento kód kontroluje lávu, umíš přidat povel k posunu dopředu?"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Tento kód kontroluje lávu, umíš přidat povel k posunu dopředu?"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "Vytěž toto železo!"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "Vytěž toto železo!"
         },
         "Underground Iron_2019": {
@@ -277,841 +445,26 @@
         "Underground Iron_2020": {
           "craft_what_is_iron": "Vytěž toto železo!"
         },
-        "courseA_collector_preLoops1": {
-          "courseA_collector_preLoops1_1": "Klikni sem, abys viděl pracovat kód!"
-        },
-        "courseA_maze_ramp2_2019": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseA_maze_ramp2_2020": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseA_maze_ramp3a_2018": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseB_Scrat_ramp1_2018": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseB_Scrat_ramp1_2019": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseB_Scrat_ramp1_2020": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseB_Scrat_ramp3a_2019": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseB_Scrat_ramp3a_2020": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseC_maze_programming1": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseC_maze_programming1_2018": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseC_maze_programming1_2019": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseC_maze_programming1_2020": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseC_maze_programming2": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseC_maze_programming2_2018": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseC_maze_programming2_2019": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseC_maze_programming2_2020": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseC_maze_programming5": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseC_maze_programming5_2018": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseC_maze_programming5_2019": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseC_maze_programming5_2020": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseD_artist_ramp11": {
-          "courseD_artist_ramp11_1": "Tohle číslo můžeš změnit.",
-          "courseD_artist_ramp11_2": "Klikni sem, abys napsal(a) počet opakování svého kódu."
-        },
-        "courseD_bee_conditionals2": {
-          "4_5_Bee_Conditionals_2_2": "Potřebuješ pomoc? Klikni sem pro VIDEO nápovědu!",
-          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
-        },
-        "courseD_bee_conditionals2_copy": {
-          "4_5_Bee_Conditionals_2_2": "Potřebuješ pomoc? Klikni sem pro VIDEO nápovědu!",
-          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
-        },
-        "courseD_farmer_while7_2018": {
-          "courseD_farmer_while7_2018_PathAhead": "Abys vyřešil tuto úlohu, budeš muset použít blok `pokud je cesta vpřed`."
-        },
-        "courseD_farmer_while7_2019": {
-          "courseD_farmer_while7_2018_PathAhead": "Abys vyřešil tuto úlohu, budeš muset použít blok `pokud je cesta vpřed`."
-        },
-        "courseD_farmer_while7_2020": {
-          "courseD_farmer_while7_2018_PathAhead": "Abys vyřešil tuto úlohu, budeš muset použít blok `pokud je cesta vpřed`."
-        },
-        "courseD_maze_intro5a_2019": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseD_maze_intro5a_2020": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseD_maze_ramp1": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseD_maze_ramp1_2018": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseD_maze_ramp1_2019": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseD_maze_ramp1_2020": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseD_maze_ramp2": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseD_maze_ramp2_2018": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseD_maze_ramp2_2019": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseD_maze_ramp2_2020": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseD_maze_ramp3_2019": {
-          "stone_block_2": "Šedé bloky není možné zahodit.",
-          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit."
-        },
-        "courseD_maze_ramp3_2020": {
-          "stone_block_2": "Šedé bloky není možné zahodit.",
-          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit."
-        },
-        "courseD_maze_ramp5": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseD_maze_ramp5_2018": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseD_maze_ramp5_2019": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseD_maze_ramp5_2020": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseD_maze_ramp5a": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseD_maze_ramp5a_2018": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseD_maze_ramp5a_2019": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseD_maze_ramp5a_2020": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseD_scrat_ramp1": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseD_scrat_ramp2": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseD_scrat_ramp5": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseE_artist_ramp8": {
-          "courseE_artist_ramp8_1": "Tohle číslo můžeš změnit.",
-          "courseE_artist_ramp8_2": "Klikni sem, abys napsal(a) počet opakování svého kódu."
-        },
-        "courseE_artist_ramp8_2": {
-          "courseE_artist_ramp8_1": "Tohle číslo můžeš změnit.",
-          "courseE_artist_ramp8_2": "Klikni sem, abys napsal(a) počet opakování svého kódu."
-        },
-        "frozen circle function with parameter": {
-          "frozen_circle_function_with_parameter_circle": "Použij blok \"vytvořit kruh\" a změň velikost."
-        },
-        "frozen cross": {
-          "repeat_blocks_1": "(1) Použij tento blok a polož je kolem šedých bloků v pracovním prostoru",
-          "repeat_blocks_2": "(2) Přesuň blok \"Opakovat\" sem a umísti šedé bloky dovnitř"
-        },
-        "frozen cross rotate": {
-          "replace_questions_degree": "Použij drop-down k nahrazení \"???\" číslem"
-        },
-        "frozen diamond": {
-          "frozen_diamond_repeat": "Použij k vytvoření tohoto tvaru bloku opakování."
-        },
-        "frozen diamond snowflake": {
-          "frozen_diamond_repeat": "Použij k vytvoření tohoto tvaru bloku opakování."
-        },
-        "frozen freeplay": {
-          "snowflake_dropdown": "Použij tento drop-down k vytváření různých sněhových vloček!"
-        },
-        "frozen line": {
-          "run": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program!",
-          "move_elsa_forward": "Přetáhni blok \"Posunout vpřed\" a umístěte ho pod blok \"Při spuštění\", aby se Elsa posunula vpřed"
-        },
-        "frozen perpendicular": {
-          "turn_elsa": "Použij blok \"Turn\" k otočení Elsy. Číslo v drop-down určuje, kolikrát se Elsa otočí"
-        },
-        "frozen snowflake branch": {
-          "frozen_snowflake_branch": "Použij blok \"vytvoř rameno vločky\""
-        },
-        "frozen square iterative": {
-          "frozen_create_square": "Přidej více bloků k vytvoření čtverce"
-        },
-        "frozen square loop": {
-          "replace_questions": "Použij drop-down k nahrazení \"???\" číslem"
-        },
-        "frozen square loop 3x": {
-          "replace_questions": "Použij drop-down k nahrazení \"???\" číslem"
-        },
-        "frozen square snowflake": {
-          "replace_questions": "Použij drop-down k nahrazení \"???\" číslem"
-        },
-        "2-3 Bee Conditionals 5": {
-          "Bee_Cond_5_1a": "Fialová květinka může obsahovat buď 1 nebo 0 nektaru. Počet ale zjistíš až po spuštění kódu!"
-        },
-        "courseD_video_nestedLoopsArtist": {
-          "courseE_artist_ramp8_1": "Tohle číslo můžeš změnit.",
-          "courseE_artist_ramp8_2": "Klikni sem, abys napsal(a) počet opakování svého kódu."
-        },
-        "outbreak2": {
-          "minitoolbox": "Kliknutím sem rozšíříte blok.",
-          "pointerlocation": "Přetáhněte blok předmětu sem."
-        },
-        "outbreak7": {
-          "costumes_callout": "Kliknutím vytvořte nový kostým"
-        },
-        "AppLab Intro 7 - Change Screen Color": {
-          "applab_hoc_finish": "Změnila se barva obrazovky na zelenou? Pokud ano, stiskni 'Dokončit'. Pokud ne, stiskni 'Reset',  uprav svůj kód a znovu stiskni 'Spustit'."
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-          "AppLabHoCFinal11": "Teď jsi v dizajnovém módu."
-        },
-        "Fish Tank 3-validated_2019": {
-          "spritelab_comment": "Do tohoto bloku napiš poznámku (pro sebe nebo učitele), jak kód funguje."
-        },
-        "Fish Tank 3-validated_2020": {
-          "spritelab_comment": "Do tohoto bloku napiš poznámku (pro sebe nebo učitele), jak kód funguje."
-        },
-        "OPD-K5-spritelab-3": {
-          "spritelab_comment": "Do tohoto bloku napiš poznámku (pro sebe nebo učitele), jak kód funguje."
-        },
-        "courseC_artist_loops1a_2019": {
-          "jumpto_callout": "Tento blok bude v našem projektu velmi důležitý. Určitě jej použij!"
-        },
-        "courseC_artist_loops1a_2020": {
-          "jumpto_callout": "Tento blok bude v našem projektu velmi důležitý. Určitě jej použij!"
-        },
-        "courseC_artist_loops1b_2019": {
-          "sticker2": "Toto vlož doprostřed svého programu."
-        },
-        "courseC_artist_loops1b_2020": {
-          "sticker2": "Toto vlož doprostřed svého programu."
-        },
-        "courseC_maze_debugging5_2019": {
-          "courseC_maze_debugging5_1": "Tyto bloky jsou uzamčeny a nelze je smazat."
-        },
-        "courseC_maze_debugging5_2020": {
-          "courseC_maze_debugging5_1": "Tyto bloky jsou uzamčeny a nelze je smazat."
-        },
-        "courseC_maze_debugging9_2019": {
-          "courseC_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
-        },
-        "courseC_maze_debugging9_2020": {
-          "courseC_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
-        },
-        "courseC_maze_debugging9_copy_2020": {
-          "courseC_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
-        },
-        "express_maze_debugging9_2019": {
-          "express_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
-        },
-        "express_maze_debugging9_2020": {
-          "express_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
-        },
-        "CourseF_outbreak2": {
-          "minitoolbox": "Kliknutím sem rozšíříte blok.",
-          "pointerlocation": "Přetáhněte blok předmětu sem."
-        },
-        "CourseF_outbreak7": {
-          "costumes_callout": "Kliknutím vytvořte nový kostým"
-        },
-        "courseA_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseB_Scrat_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseB_Scrat_ramp3a_2021": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseC_artist_loops1a_2021": {
-          "jumpto_callout": "Tento blok bude v našem projektu velmi důležitý. Určitě jej použij!"
-        },
-        "courseC_artist_loops1b_2021": {
-          "sticker2": "Toto vlož doprostřed svého programu."
-        },
-        "courseC_maze_debugging5_2021": {
-          "courseC_maze_debugging5_1": "Tyto bloky jsou uzamčeny a nelze je smazat."
-        },
-        "courseC_maze_debugging9_2021": {
-          "courseC_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
-        },
-        "courseC_maze_programming1_2021": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseC_maze_programming2_2021": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseC_maze_programming5_2021": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseD_bee_conditionals2_dani": {
-          "4_5_Bee_Conditionals_2_2": "Potřebuješ pomoc? Klikni sem pro VIDEO nápovědu!",
-          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
-        },
-        "CourseD_Dance_2020_01_2021": {
-          "dance_callout_01": "Přidej do svého programu tento blok!"
-        },
-        "CourseD_Dance_2020_02_2021": {
-          "dance_callout_11_a": "Přidej tento blok do svého programu.",
-          "arrow_buttons": "Mačkej klávesy se šipkami a ovládej tak svého tanečníka."
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "Přidej do svého programu tento blok!"
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "dance_callout_05": "Přidejte do svého programu novou událost."
-        },
-        "CourseD_Dance_2020_06_2021": {
-          "dance_party_11_5_groups": "Nový blok!"
-        },
-        "CourseD_Dance_2020_07_2021": {
-          "setprop_hint": "Nový blok!"
-        },
-        "CourseD_Dance_2020_09_2021": {
-          "new_block_3": "Nový blok!",
-          "new_block_4": "Nový blok!"
-        },
-        "Fish Tank 3-validated_2021": {
-          "spritelab_comment": "Do tohoto bloku napiš poznámku (pro sebe nebo učitele), jak kód funguje."
-        },
-        "Function intro Ryan_2021": {
-          "Function_intro_Ryan_1": "Tento malý pokyn říká počítači, aby spustil VELKÝ kus kódu se stejným názvem v pracovním prostoru."
-        },
-        "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "Toto je cyklus „opakovat“! Klikněte na pracovní prostor a vložte kód, který chcete pořád opakovat."
-        },
-        "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Agent se dokáže vznášet nad vodou, ale hráč ne!"
-        },
-        "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_1": "Tyto bloky nemůžete zahodit, ale můžete je upravit."
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "MC_HOC_2017_08_RY_1": "Agent se dokáže vznášet nad lávou, ale hráč ne!"
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Už jsme sem umístnili určité bloky, které ti pomohou začít"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Tento kód zahájí budování tvého domu. Umíš to dokončit?"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program",
-          "craft_drag_block_callout": "Přetáhni blok „posuň se vpřed“ a připoj ho pod druhý blok"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Opakuj akce umístěním bloků zde"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Tento kód kontroluje lávu, umíš přidat povel k posunu dopředu?"
-        },
         "Underground Iron_2021": {
           "craft_what_is_iron": "Vytěž toto železo!"
         },
-        "Virtual Pet 2_2021": {
+        "Virtual Pet 2_-2022-2": {
           "vp_costumes": "Kliknutím sem přidejte ke svému projektu nové kostýmy!"
-        },
-        "Virtual Pet 6_2021": {
-          "vp_costumes": "Kliknutím sem přidejte ke svému projektu nové kostýmy!"
-        },
-        "courseA_EOC_playlab_animals": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_fantasy": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_people": {
-          "question_mark": "?"
-        },
-        "courseC_artist_prog2_2021": {
-          "slider": "Tady můžete svůj program zpomalit."
-        },
-        "courseC_starWars_loops2": {
-          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
-        },
-        "courseC_starWars_loops2_2018": {
-          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
-        },
-        "courseC_starWars_loops2_2019": {
-          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
-        },
-        "courseC_starWars_loops2_2020": {
-          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
-        },
-        "courseC_starWars_loops2_2021": {
-          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
-        },
-        "courseC_starWars_loops2_copy": {
-          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
-        },
-        "courseC_starWars_loops2_dani": {
-          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
-        },
-        "courseD_bee_nestedLoops1a_2021": {
-          "stepButton": "Snažte se procházet svůj kód blok po bloku."
-        },
-        "courseD_farmer_while7_2021": {
-          "courseD_farmer_while7_2018_PathAhead": "Abys vyřešil tuto úlohu, budeš muset použít blok `pokud je cesta vpřed`."
-        },
-        "courseD_maze_intro5a_2021": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseD_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseD_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseD_maze_ramp3_2021": {
-          "stone_block_2": "Šedé bloky není možné zahodit.",
-          "courseC_maze_programming3_2": "Přebytečné bloky můžeš přesouvat do sady nástrojů, když je chceš vyhodit."
-        },
-        "courseD_maze_ramp5_2021": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseF_apps_aquarium": {
-          "run_button": "Nejprve stiskněte tlačítko Spustit!",
-          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
-        },
-        "courseF_apps_card": {
-          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
-        },
-        "courseF_apps_chatbot": {
-          "run_button": "Nejprve stiskněte tlačítko Spustit!",
-          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
-        },
-        "courseF_apps_collector": {
-          "run_button": "Nejprve stiskněte tlačítko Spustit!",
-          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
-        },
-        "courseF_apps_madlib": {
-          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
-        },
-        "courseF_apps_pet": {
-          "run_button": "Nejprve stiskněte tlačítko Spustit!",
-          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
-        },
-        "courseF_editable_card": {
-          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
-        },
-        "courseF_editable_chatbot": {
-          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
-        },
-        "courseF_editable_madlib": {
-          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
-        },
-        "courseF_events_choice_penguin": {
-          "whenToWhile": "Zkuste změnit „když“ na „zatímco“."
-        },
-        "courseF_events_conflict": {
-          "stops_block": "Tady jsou nové bloky!"
-        },
-        "courseF_events_key": {
-          "whenKey": "Použijte nový blok události nacházející se tady."
-        },
-        "courseF_events_practice_reorder": {
-          "stopAllBug": "Tento blok je v nesprávném pořadí."
-        },
-        "courseF_events_time": {
-          "events_category": "Kliknutím sem otevřete kategorii Události."
-        },
-        "courseF_label_predict": {
-          "variablesPredict": "Podívejte se podrobněji na kód pod tímto bodem."
-        },
-        "courseF_sprites_behaviors": {
-          "behaviors_category": "Kliknutím sem můžete otevřít kategorii Chování."
-        },
-        "courseF_sprites_make": {
-          "sprites_category": "Kliknutím sem otevřete kategorii Sprajty."
-        },
-        "courseF_sprites_positioning": {
-          "locations_category": "Kliknutím sem můžete otevřít kategorii Místa."
-        },
-        "courseF_sprites_properties": {
-          "sprites_category2": "Tady hledejte nový blok."
-        },
-        "courseF_text_answer": {
-          "answered_block": "Tady hledejte nový blok!"
-        },
-        "courseF_text_choice_color": {
-          "text_color_finish": "Změnila se barva pozadí, když jste odpověděli na otázku? Jestliže ano, stiskněte 'Dokončit'. Jestliže ne, stiskněte 'Reset', změňte kód a opět stiskněte 'Spustit'."
-        },
-        "courseF_text_choice_conversation": {
-          "text_generic_finish": "Skončili jste? Jestliže je tomu tak, klikněte na 'Dokončit'. Jestliže ne, dotkněte se tlačítka 'Reset', změňte kód a opět stiskněte 'Spustit'."
-        },
-        "courseF_text_choice_title": {
-          "title_block": "Tady se poohlížejte po dvou nových blocích!",
-          "text_answer_finish": "Zobrazovala se 3 sekundy titulní obrazovka? Jestliže je tomu tak, klikněte na 'Dokončit'. Jestliže ne, stiskněte 'Reset', změňte svůj kóde a znovu stiskněte 'Spustit'."
-        },
-        "courseF_text_concat": {
-          "join_blocks": "Tady hledejte nové bloky!"
-        },
-        "courseF_text_events": {
-          "events_category": "Kliknutím sem otevřete kategorii Události."
-        },
-        "courseF_text_print": {
-          "print_block": "Tady najdete tiskový blok!",
-          "text_print_finish": "Vytiskla se Vám Vaše zpráva výše? Jestliže ano, klikněte na 'Dokončit'. Jestliže ne, stiskněte 'Reset', změňte svůj kód a znovu stiskněte 'Spustit'."
-        },
-        "courseF_text_prompts": {
-          "prompt_block": "Tady najdete blok výzvy!"
-        },
-        "courseF_variables_predict": {
-          "variablesPredict": "Podívejte se podrobněji na kód pod tímto bodem."
-        },
-        "express_maze_debugging9_2021": {
-          "express_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
-        },
-        "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
-        },
-        "helloworld_animals_costumes": {
-          "hello_world_new": "Nový blok!"
-        },
-        "helloworld_animals_sizes": {
-          "hello_world_new": "Nový blok!",
-          "hello_world_new_block": "Nový blok!!!!"
-        },
-        "helloworld_animals_sounds": {
-          "hello_world_new": "Nový blok!"
-        },
-        "helloworld_emoji_costumes": {
-          "hello_world_new": "Nový blok!"
-        },
-        "helloworld_emoji_sizes": {
-          "hello_world_new": "Nový blok!",
-          "hello_world_new_block": "Nový blok!"
-        },
-        "helloworld_emoji_sounds": {
-          "hello_world_new": "Nový blok!"
-        },
-        "helloworld_food_costumes": {
-          "hello_world_new": "Nový blok!"
-        },
-        "helloworld_food_sizes": {
-          "hello_world_new": "Nový blok!",
-          "hello_world_new_block": "Nový blok!"
-        },
-        "helloworld_food_sounds": {
-          "hello_world_new": "Nový blok!"
-        },
-        "helloworld_retro_costumes": {
-          "hello_world_new": "Nový blok!"
-        },
-        "helloworld_retro_sizes": {
-          "hello_world_new": "Nový blok!",
-          "hello_world_new_block": "Nový blok!"
-        },
-        "helloworld_retro_sounds": {
-          "hello_world_new": "Nový blok!"
-        },
-        "poetry_hoc_addSprites": {
-          "poetry_sprite": "Nový blok!"
-        },
-        "poetry_hoc_events1": {
-          "poetry_event": "Nový blok!",
-          "poetry_foreground": "Nový blok!"
-        },
-        "poetry_hoc_freeplay": {
-          "poetry_burst": "Nový blok!",
-          "poetry_multiple_sprites": "Nový blok!",
-          "poetry_new_block": "Nový blok!",
-          "poetry_selector": "Vyberte jakoukoli báseň nebo zadejte svou vlastní!"
-        },
-        "poetry_hoc_sounds": {
-          "poetry_sound": "Nový blok!",
-          "poetry_music": "Nový blok!"
-        },
-        "poetry_hoc_spriteBehaviors": {
-          "poetry_sprite_begins": "Nový blok!",
-          "poetry_sprite_stops": "Nový blok!"
-        },
-        "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "Nový blok!",
-          "poetry_remove_sprite": "Nový blok!"
-        },
-        "courseA_collector_loops1_2021": {
-          "courseA_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
-        },
-        "courseA_collector_loops3_2021": {
-          "gradek_adventurer_loops2_1": "Toto číslo Vám říká, kolik těchto bloků můžete v tomto hlavolamu použít."
-        },
-        "coursea_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
-        },
-        "helloworld_animals_behaviors": {
-          "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
-        },
-        "helloworld_animals_click": {
-          "hw_Run": "Kód můžete spustit kliknutím sem."
-        },
-        "helloworld_animals_events": {
-          "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
-        },
-        "helloworld_animals_freeplay": {
-          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
-        },
-        "helloworld_animals_location": {
-          "pin": "kolík"
-        },
-        "helloworld_animals_multi": {
-          "pin": "kolík"
-        },
-        "helloworld_animals_say": {
-          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit.",
-          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt."
-        },
-        "helloworld_emoji_behaviors": {
-          "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
-        },
-        "helloworld_emoji_click": {
-          "hw_Run": "Kód můžete spustit kliknutím sem."
-        },
-        "helloworld_emoji_events": {
-          "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
-        },
-        "helloworld_emoji_freeplay": {
-          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
-        },
-        "helloworld_emoji_location": {
-          "pin": "kolík"
-        },
-        "helloworld_emoji_multi": {
-          "pin": "kolík"
-        },
-        "helloworld_emoji_say": {
-          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit.",
-          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt."
-        },
-        "helloworld_food_behaviors": {
-          "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
-        },
-        "helloworld_food_click": {
-          "hw_Run": "Kód můžete spustit kliknutím sem."
-        },
-        "helloworld_food_events": {
-          "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
-        },
-        "helloworld_food_freeplay": {
-          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
-        },
-        "helloworld_food_location": {
-          "pin": "kolík"
-        },
-        "helloworld_food_multi": {
-          "pin": "kolík"
-        },
-        "helloworld_food_say": {
-          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit.",
-          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt."
-        },
-        "helloworld_retro_behaviors": {
-          "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
-        },
-        "helloworld_retro_click": {
-          "hw_Run": "Kód můžete spustit kliknutím sem."
-        },
-        "helloworld_retro_events": {
-          "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
-        },
-        "helloworld_retro_freeplay": {
-          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
-        },
-        "helloworld_retro_location": {
-          "pin": "kolík"
-        },
-        "helloworld_retro_multi": {
-          "pin": "kolík"
-        },
-        "helloworld_retro_say": {
-          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit.",
-          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt."
-        },
-        "helloworld_animals_backgrounds": {
-          "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
-        },
-        "helloworld_emoji_backgrounds": {
-          "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
-        },
-        "helloworld_food_backgrounds": {
-          "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
-        },
-        "helloworld_retro_backgrounds": {
-          "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
-        },
-        "poetry_hoc_backgroundEffects": {
-          "poetry_background": "Tady najdete bloky kódu.",
-          "pause_button": "Svou animaci vyzkoušejte tímto tlačítkem. ",
-          "run_button": "Svou animaci vyzkoušejte tímto tlačítkem. "
-        },
-        "courseA_artist_loops4_2021": {
-          "courseA_artist_loops4_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
-        },
-        "courseA_artist_loops7_2021": {
-          "courseA_artist_loops7_1": "Tohle číslo znamená, že v konečné odpovědi je možné použít jen jeden blok tohoto druhu."
-        },
-        "courseA_artist_loops8_2021": {
-          "courseA_artist_loops8_1": "Víš, že se můžeš s tužkou v ruce kdykoli vrátit po čáře, kterou už máš nakreslenou?"
-        },
-        "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_1": "Když budeš potřebovat nápovědu, klikni na žárovku."
-        },
-        "courseA_playLab_events4_2021": {
-          "courseA_playlab_events4_callout1": "Toto je volání"
-        },
-        "courseA_playLab_events5_2021": {
-          "courseA_playLab_events5_1": "Kliknutím sem můžeš změnit směr šipky události."
-        },
-        "courseA_playLab_events6_2021": {
-          "courseA_playLab_events6_1": "Tady můžeš nastavit přehrání náhodného zvuku – to znamená, že předem nikdy nevíš, co uslyšíš."
-        },
-        "courseB_artist_loops3_2021": {
-          "courseB_artist_loops3_1": "V sadě nástrojů je jen jeden takový blok. Jak ho použiješ?"
-        },
-        "courseB_collector_loops1_2021": {
-          "courseB_collector_loops1_1": "Pomocí tohoto bloku můžeš sebrat poklad."
-        },
-        "courseB_playlab_events6_2021": {
-          "courseB_playlab_events6_a": "Po kliknutí na zelenou šipku rozevírací nabídky můžeš změnit směr."
-        },
-        "courseC_PlayLab_events8_2021": {
-          "courseC_PlayLab_events8_callout1": "Použij tenhle blok pro okamžik, kdy Valda narazí do dinosaura."
-        },
-        "courseC_PlayLab_events_challenge1_2021": {
-          "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
-        },
-        "courseC_collector_prog1_2021": {
-          "courseC_collector_prog1_1": "Vidíš v sadě nástrojů nějaké nové bloky? Žádný strach, v další lekci se dozvíš, jak je používat."
-        },
-        "courseC_collector_prog7_2021": {
-          "courseC_collector_prog7_1": "Pokud potřebuješ, můžeš si z nástrojové sady vzít víc bloků."
-        },
-        "courseC_harvester_loops1_2021": {
-          "courseC_harvester_loops1_callout1": "Číslice 4 na dýni značí, že jsou k dispozici 4 dýně, které můžeš posbírat."
-        },
-        "courseC_maze_programming3_2021": {
-          "courseC_maze_programming3_2": "Nepotřebných bloků se můžeš zbavit tak,  že je přetáhneš do nástrojové sady.",
-          "courseC_maze_programming3_3": "Tyto bloky jsou z kamene a nelze je zahodit."
-        },
-        "courseC_maze_programming4_2021": {
-          "courseC_maze_programming4_1": "Tohle je tvůj limit bloků. Sděluje ti, kolik těchto bloků ti ještě zbývá k použití."
-        },
-        "courseC_maze_programming7_2021": {
-          "courseC_maze_programming7_1": "Tohle je tvoje první úloha s výzvou. Je záměrně náročná a možná ji vyřešíš až na několikátý pokus.",
-          "courseC_maze_programming7_2": "Tyto bloky jsou vyrobeny z kamene a nelze je zahodit."
-        },
-        "courseD_artist_nestedLoops1a_2021": {
-          "courseD_artist_nestedLoops1a_1": "K vyřešení téhle úlohy není potřeba používat barvy. Pokud ale barvy chceš, můžeš je nastavit jednoduše tímto blokem „náhodná barva“."
-        },
-        "courseD_bee_conditionals2_2021": {
-          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
-        },
-        "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge2_1": "Pomocí tohoto cyklu sesbírej veškerý nektar (nebo med) z jednoho květu (nebo plástve)."
-        },
-        "courseD_maze_intro4_2021": {
-          "courseC_maze_programming4_1": "Tohle je tvůj limit bloků. Sděluje ti, kolik těchto bloků ti ještě zbývá k použití."
-        },
-        "courseE_aboutme_2_2021": {
-          "": "Klikni sem."
-        },
-        "courseE_artist_functions2_2021": {
-          "courseD_artist_functions2_1": "Když se spustí tento zelený kód, proběhne veškerý kód obsažený ve funkci. Co by měl umělec udělat po nakreslení prvního čtverce?"
-        },
-        "courseE_artist_functions8a_2021": {
-          "courseD_artist_functions8_1": "Bloky na vytváření funkcí byly v nástrojové sadě přesunuty pod tenhle štítek."
-        },
-        "courseE_artist_functions_challenge1_2021": {
-          "courseE_artist_functions_challenge1_callout1": "Prodluž tenhle program – přidej na konec další kód.",
-          "courseE_artist_functions_challenge1_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
-        },
-        "courseE_artist_functions_challenge2_2021": {
-          "courseE_artist_functions_challenge2_callout1": "Prodluž tenhle program – přidej na konec další kód.",
-          "courseE_artist_functions_challenge2_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
-        },
-        "courseE_farmer_functions13_2021": {
-          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
-        },
-        "courseE_farmer_functions1_2021": {
-          "courseE_farmer_functions1_2": "Sada nástrojů je tentokrát uspořádaná trochu jinak. Proklikej si různé kategorie, ať víš, jaké bloky máš k dispozici."
-        },
-        "courseE_farmer_functions1a_2021": {
-          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
-        },
-        "courseE_farmer_functions2b_2021": {
-          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
-        },
-        "courseF_artist_for1_2021": {
-          "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
-        },
-        "courseF_bee_for4_2021": {
-          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
-        },
-        "courseF_bee_for9_2021": {
-          "courseF_bee_for9_1": "Tady najdeš blok „math“."
-        },
-        "courseF_bee_variables_1a_2021": {
-          "courseF_bee_functions_1_2018_1": "Tady najdeš svoje proměnné."
-        },
-        "courseF_events_predict": {
-          "behaviors_edit": "Kliknutím sem zobrazíš, jak toto chování funguje."
-        },
-        "CSD U3 Variables Predict Where XY_2021": {
-          "grid": "K zobrazení mřížky klikněte zde."
-        },
-        "4-5 Bee Conditionals 2": {
-          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
-        },
-        "OPD-K5-forloops-5": {
-          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
-        },
-        "OPD-K5-projects-4": {
-          "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
         },
         "Virtual Pet 2_2019": {
           "": "Klikni sem."
         },
         "Virtual Pet 2_2020": {
           "": "Klikni sem."
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Kliknutím sem přidejte ke svému projektu nové kostýmy!"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "Kliknutím sem přidejte ke svému projektu nové kostýmy!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Kliknutím sem přidejte ke svému projektu nové kostýmy!"
         },
         "behaviors 1": {
           "behaviors_edit": "Kliknutím sem zobrazíš, jak toto chování funguje."
@@ -1143,7 +496,28 @@
           "courseE_artist_functions_challenge2_callout1": "Prodluž tenhle program – přidej na konec další kód.",
           "courseE_artist_functions_challenge2_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
         },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
         "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
+        },
+        "courseA_artist_loops42022": {
           "courseA_artist_loops4_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
         },
         "courseA_artist_loops4_2018": {
@@ -1155,7 +529,13 @@
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
         },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
+        },
         "courseA_artist_loops7": {
+          "courseA_artist_loops7_1": "Tohle číslo znamená, že v konečné odpovědi je možné použít jen jeden blok tohoto druhu."
+        },
+        "courseA_artist_loops72022": {
           "courseA_artist_loops7_1": "Tohle číslo znamená, že v konečné odpovědi je možné použít jen jeden blok tohoto druhu."
         },
         "courseA_artist_loops7_2018": {
@@ -1167,7 +547,13 @@
         "courseA_artist_loops7_2020": {
           "courseA_artist_loops7_1": "Tohle číslo znamená, že v konečné odpovědi je možné použít jen jeden blok tohoto druhu."
         },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Tohle číslo znamená, že v konečné odpovědi je možné použít jen jeden blok tohoto druhu."
+        },
         "courseA_artist_loops8": {
+          "courseA_artist_loops8_1": "Víš, že se můžeš s tužkou v ruce kdykoli vrátit po čáře, kterou už máš nakreslenou?"
+        },
+        "courseA_artist_loops82022": {
           "courseA_artist_loops8_1": "Víš, že se můžeš s tužkou v ruce kdykoli vrátit po čáře, kterou už máš nakreslenou?"
         },
         "courseA_artist_loops8_2018": {
@@ -1179,13 +565,25 @@
         "courseA_artist_loops8_2020": {
           "courseA_artist_loops8_1": "Víš, že se můžeš s tužkou v ruce kdykoli vrátit po čáře, kterou už máš nakreslenou?"
         },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "Víš, že se můžeš s tužkou v ruce kdykoli vrátit po čáře, kterou už máš nakreslenou?"
+        },
+        "courseA_collector_loops12022": {
+          "courseA_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
+        },
         "courseA_collector_loops1_2019": {
           "courseA_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
         },
         "courseA_collector_loops1_2020": {
           "courseA_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
         },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
+        },
         "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
+        },
+        "courseA_collector_loops32022": {
           "gradek_adventurer_loops2_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
         },
         "courseA_collector_loops3_2018": {
@@ -1197,7 +595,31 @@
         "courseA_collector_loops3_2020": {
           "gradek_adventurer_loops2_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
         },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Toto číslo Vám říká, kolik těchto bloků můžete v tomto hlavolamu použít."
+        },
+        "courseA_collector_preLoops1": {
+          "courseA_collector_preLoops1_1": "Klikni sem, abys viděl pracovat kód!"
+        },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseA_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseA_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseA_maze_ramp3a_2018": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
         "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
+        },
+        "courseA_maze_seq12022": {
           "courseA_maze_seq1_1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
         },
         "courseA_maze_seq1_2018": {
@@ -1209,7 +631,13 @@
         "courseA_maze_seq1_2020": {
           "courseA_maze_seq1_1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
         },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Když budeš potřebovat nápovědu, klikni na žárovku."
+        },
         "courseA_playLab_events4": {
+          "courseA_playlab_events4_callout1": "Toto je volání"
+        },
+        "courseA_playLab_events42022": {
           "courseA_playlab_events4_callout1": "Toto je volání"
         },
         "courseA_playLab_events4_2018": {
@@ -1221,7 +649,13 @@
         "courseA_playLab_events4_2020": {
           "courseA_playlab_events4_callout1": "Toto je volání"
         },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Toto je volání"
+        },
         "courseA_playLab_events5": {
+          "courseA_playLab_events5_1": "Kliknutím sem můžeš změnit směr šipky události."
+        },
+        "courseA_playLab_events52022": {
           "courseA_playLab_events5_1": "Kliknutím sem můžeš změnit směr šipky události."
         },
         "courseA_playLab_events5_2018": {
@@ -1233,7 +667,13 @@
         "courseA_playLab_events5_2020": {
           "courseA_playLab_events5_1": "Kliknutím sem můžeš změnit směr šipky události."
         },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Kliknutím sem můžeš změnit směr šipky události."
+        },
         "courseA_playLab_events6": {
+          "courseA_playLab_events6_1": "Tady můžeš nastavit přehrání náhodného zvuku – to znamená, že předem nikdy nevíš, co uslyšíš."
+        },
+        "courseA_playLab_events62022": {
           "courseA_playLab_events6_1": "Tady můžeš nastavit přehrání náhodného zvuku – to znamená, že předem nikdy nevíš, co uslyšíš."
         },
         "courseA_playLab_events6_2018": {
@@ -1245,7 +685,40 @@
         "courseA_playLab_events6_2020": {
           "courseA_playLab_events6_1": "Tady můžeš nastavit přehrání náhodného zvuku – to znamená, že předem nikdy nevíš, co uslyšíš."
         },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "Tady můžeš nastavit přehrání náhodného zvuku – to znamená, že předem nikdy nevíš, co uslyšíš."
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
         "courseB_artist_loops3": {
+          "courseB_artist_loops3_1": "V krabičce nástrojů je jen jeden z těchto bloků. Jak jej použijete?"
+        },
+        "courseB_artist_loops32022": {
           "courseB_artist_loops3_1": "V krabičce nástrojů je jen jeden z těchto bloků. Jak jej použijete?"
         },
         "courseB_artist_loops3_2018": {
@@ -1257,6 +730,12 @@
         "courseB_artist_loops3_2020": {
           "courseB_artist_loops3_1": "V krabičce nástrojů je jen jeden z těchto bloků. Jak jej použijete?"
         },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "V sadě nástrojů je jen jeden takový blok. Jak ho použiješ?"
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
+        },
         "courseB_collector_loops1_2018": {
           "courseB_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
         },
@@ -1266,7 +745,13 @@
         "courseB_collector_loops1_2020": {
           "courseB_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
         },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "Pomocí tohoto bloku můžeš sebrat poklad."
+        },
         "courseB_maze_seq1": {
+          "courseB_maze_seq1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
+        },
+        "courseB_maze_seq12022": {
           "courseB_maze_seq1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
         },
         "courseB_maze_seq1_2018": {
@@ -1278,7 +763,13 @@
         "courseB_maze_seq1_2020": {
           "courseB_maze_seq1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
         },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
+        },
         "courseB_playlab_events6": {
+          "courseB_playlab_events6_a": "Pro změnu směru používejte zelenou rozbalovací šipku."
+        },
+        "courseB_playlab_events62022": {
           "courseB_playlab_events6_a": "Pro změnu směru používejte zelenou rozbalovací šipku."
         },
         "courseB_playlab_events6_2018": {
@@ -1290,13 +781,25 @@
         "courseB_playlab_events6_2020": {
           "courseB_playlab_events6_a": "Pro změnu směru používejte zelenou rozbalovací šipku."
         },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Po kliknutí na zelenou šipku rozevírací nabídky můžeš změnit směr."
+        },
         "courseC19_playLab_EOC3": {
+          "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
+        },
+        "courseC19_playLab_EOC32022": {
           "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
         },
         "courseC19_playLab_EOC3_2020": {
           "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
         },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
+        },
         "courseC_PlayLab_events8": {
+          "courseC_PlayLab_events8_callout1": "Použij tenhle blok pro okamžik, kdy Valda narazí do dinosaura."
+        },
+        "courseC_PlayLab_events82022": {
           "courseC_PlayLab_events8_callout1": "Použij tenhle blok pro okamžik, kdy Valda narazí do dinosaura."
         },
         "courseC_PlayLab_events8_2018": {
@@ -1308,7 +811,13 @@
         "courseC_PlayLab_events8_2020": {
           "courseC_PlayLab_events8_callout1": "Použij tenhle blok pro okamžik, kdy Valda narazí do dinosaura."
         },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Použij tenhle blok pro okamžik, kdy Valda narazí do dinosaura."
+        },
         "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
+        },
+        "courseC_PlayLab_events_challenge12022": {
           "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
         },
         "courseC_PlayLab_events_challenge1_2018": {
@@ -1320,6 +829,45 @@
         "courseC_PlayLab_events_challenge1_2020": {
           "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
         },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
+        },
+        "courseC_artist_loops1a2022": {
+          "jumpto_callout": "Tento blok bude v našem projektu velmi důležitý. Určitě jej použij!"
+        },
+        "courseC_artist_loops1a_2019": {
+          "jumpto_callout": "Tento blok bude v našem projektu velmi důležitý. Určitě jej použij!"
+        },
+        "courseC_artist_loops1a_2020": {
+          "jumpto_callout": "Tento blok bude v našem projektu velmi důležitý. Určitě jej použij!"
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Tento blok bude v našem projektu velmi důležitý. Určitě jej použij!"
+        },
+        "courseC_artist_loops1b2022": {
+          "sticker2": "Toto vlož doprostřed svého programu."
+        },
+        "courseC_artist_loops1b_2019": {
+          "sticker2": "Toto vlož doprostřed svého programu."
+        },
+        "courseC_artist_loops1b_2020": {
+          "sticker2": "Toto vlož doprostřed svého programu."
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Toto vlož doprostřed svého programu."
+        },
+        "courseC_artist_prog22022": {
+          "slider": "Tady můžete svůj program zpomalit."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Tady můžete svůj program zpomalit."
+        },
+        "courseC_collector_prog12022": {
+          "courseC_collector_prog1_1": "Vidíte v nástrojové krabičce nějaké nové bloky? Nemějte starosti, v další lekci Vám ukážeme, jak je používat."
+        },
         "courseC_collector_prog1_2018": {
           "courseC_collector_prog1_1": "Vidíte v nástrojové krabičce nějaké nové bloky? Nemějte starosti, v další lekci Vám ukážeme, jak je používat."
         },
@@ -1329,7 +877,13 @@
         "courseC_collector_prog1_2020": {
           "courseC_collector_prog1_1": "Vidíte v nástrojové krabičce nějaké nové bloky? Nemějte starosti, v další lekci Vám ukážeme, jak je používat."
         },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Vidíš v sadě nástrojů nějaké nové bloky? Žádný strach, v další lekci se dozvíš, jak je používat."
+        },
         "courseC_collector_prog7": {
+          "courseC_collector_prog7_1": "Jestliže potřebujete nějaké bloky, můžete je nabrat z nástrojové krabičky!"
+        },
+        "courseC_collector_prog72022": {
           "courseC_collector_prog7_1": "Jestliže potřebujete nějaké bloky, můžete je nabrat z nástrojové krabičky!"
         },
         "courseC_collector_prog7_2018": {
@@ -1341,7 +895,13 @@
         "courseC_collector_prog7_2020": {
           "courseC_collector_prog7_1": "Jestliže potřebujete nějaké bloky, můžete je nabrat z nástrojové krabičky!"
         },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Pokud potřebuješ, můžeš si z nástrojové sady vzít víc bloků."
+        },
         "courseC_harvester_loops1": {
+          "courseC_harvester_loops1_callout1": "Číslice 4 na dýni značí, že jsou k dispozici 4 dýně, které můžeš posbírat."
+        },
+        "courseC_harvester_loops12022": {
           "courseC_harvester_loops1_callout1": "Číslice 4 na dýni značí, že jsou k dispozici 4 dýně, které můžeš posbírat."
         },
         "courseC_harvester_loops1_2018": {
@@ -1353,7 +913,77 @@
         "courseC_harvester_loops1_2020": {
           "courseC_harvester_loops1_callout1": "Číslice 4 na dýni značí, že jsou k dispozici 4 dýně, které můžeš posbírat."
         },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Číslice 4 na dýni značí, že jsou k dispozici 4 dýně, které můžeš posbírat."
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_1": "Tyto bloky jsou uzamčeny a nelze je smazat."
+        },
+        "courseC_maze_debugging5_2019": {
+          "courseC_maze_debugging5_1": "Tyto bloky jsou uzamčeny a nelze je smazat."
+        },
+        "courseC_maze_debugging5_2020": {
+          "courseC_maze_debugging5_1": "Tyto bloky jsou uzamčeny a nelze je smazat."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Tyto bloky jsou uzamčeny a nelze je smazat."
+        },
+        "courseC_maze_debugging92022": {
+          "courseC_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "courseC_maze_debugging9_2019": {
+          "courseC_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "courseC_maze_debugging9_2020": {
+          "courseC_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "courseC_maze_debugging9_copy_2020": {
+          "courseC_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "courseC_maze_programming1": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseC_maze_programming12022": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseC_maze_programming1_2018": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseC_maze_programming1_2019": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseC_maze_programming1_2020": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseC_maze_programming22022": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseC_maze_programming2_2018": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseC_maze_programming2_2019": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseC_maze_programming2_2020": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
         "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit.",
+          "courseC_maze_programming3_3": "Tyto bloky jsou kamenné a nelze je zahodit."
+        },
+        "courseC_maze_programming32022": {
           "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit.",
           "courseC_maze_programming3_3": "Tyto bloky jsou kamenné a nelze je zahodit."
         },
@@ -1369,7 +999,14 @@
           "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit.",
           "courseC_maze_programming3_3": "Tyto bloky jsou kamenné a nelze je zahodit."
         },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Nepotřebných bloků se můžeš zbavit tak,  že je přetáhneš do nástrojové sady.",
+          "courseC_maze_programming3_3": "Tyto bloky jsou z kamene a nelze je zahodit."
+        },
         "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
+        },
+        "courseC_maze_programming42022": {
           "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
         },
         "courseC_maze_programming4_2018": {
@@ -1381,7 +1018,32 @@
         "courseC_maze_programming4_2020": {
           "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
         },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Tohle je tvůj limit bloků. Sděluje ti, kolik těchto bloků ti ještě zbývá k použití."
+        },
+        "courseC_maze_programming5": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseC_maze_programming52022": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseC_maze_programming5_2018": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseC_maze_programming5_2019": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseC_maze_programming5_2020": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseC_maze_programming5_2021": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
         "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "Toto je Váš první výzvový hlavolam! Ty jsou míněny tak, aby byly obtížné, a může být potřeba zkoušet je několikrát.",
+          "courseC_maze_programming7_2": "Tyto bloky jsou vyrobeny z kamene a nelze je vyhodit."
+        },
+        "courseC_maze_programming72022": {
           "courseC_maze_programming7_1": "Toto je Váš první výzvový hlavolam! Ty jsou míněny tak, aby byly obtížné, a může být potřeba zkoušet je několikrát.",
           "courseC_maze_programming7_2": "Tyto bloky jsou vyrobeny z kamene a nelze je vyhodit."
         },
@@ -1397,7 +1059,38 @@
           "courseC_maze_programming7_1": "Toto je Váš první výzvový hlavolam! Ty jsou míněny tak, aby byly obtížné, a může být potřeba zkoušet je několikrát.",
           "courseC_maze_programming7_2": "Tyto bloky jsou vyrobeny z kamene a nelze je vyhodit."
         },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "Tohle je tvoje první úloha s výzvou. Je záměrně náročná a možná ji vyřešíš až na několikátý pokus.",
+          "courseC_maze_programming7_2": "Tyto bloky jsou vyrobeny z kamene a nelze je zahodit."
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
+        "courseC_starWars_loops22022": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
+        },
         "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "K vyřešení téhle úlohy není potřeba používat barvy. Pokud ale barvy chceš, můžeš je nastavit jednoduše tímto blokem „náhodná barva“."
+        },
+        "courseD_artist_nestedLoops1a2022": {
           "courseD_artist_nestedLoops1a_1": "K vyřešení téhle úlohy není potřeba používat barvy. Pokud ale barvy chceš, můžeš je nastavit jednoduše tímto blokem „náhodná barva“."
         },
         "courseD_artist_nestedLoops1a_2018": {
@@ -1409,6 +1102,20 @@
         "courseD_artist_nestedLoops1a_2020": {
           "courseD_artist_nestedLoops1a_1": "K vyřešení téhle úlohy není potřeba používat barvy. Pokud ale barvy chceš, můžeš je nastavit jednoduše tímto blokem „náhodná barva“."
         },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "K vyřešení téhle úlohy není potřeba používat barvy. Pokud ale barvy chceš, můžeš je nastavit jednoduše tímto blokem „náhodná barva“."
+        },
+        "courseD_artist_ramp11": {
+          "courseD_artist_ramp11_1": "Tohle číslo můžeš změnit.",
+          "courseD_artist_ramp11_2": "Klikni sem, abys napsal(a) počet opakování svého kódu."
+        },
+        "courseD_bee_conditionals2": {
+          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec.",
+          "4_5_Bee_Conditionals_2_2": "Potřebuješ pomoc? Klikni sem pro VIDEO nápovědu!"
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
+        },
         "courseD_bee_conditionals2_2018": {
           "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
         },
@@ -1418,7 +1125,21 @@
         "courseD_bee_conditionals2_2020": {
           "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
         },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
+        },
+        "courseD_bee_conditionals2_copy": {
+          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec.",
+          "4_5_Bee_Conditionals_2_2": "Potřebuješ pomoc? Klikni sem pro VIDEO nápovědu!"
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec.",
+          "4_5_Bee_Conditionals_2_2": "Potřebuješ pomoc? Klikni sem pro VIDEO nápovědu!"
+        },
         "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "Pomocí tohoto cyklu sesbírej veškerý nektar (nebo med) z jednoho květu (nebo plástve)."
+        },
+        "courseD_bee_conditionals_challenge22022": {
           "courseD_bee_conditionals_challenge2_1": "Pomocí tohoto cyklu sesbírej veškerý nektar (nebo med) z jednoho květu (nebo plástve)."
         },
         "courseD_bee_conditionals_challenge2_2018": {
@@ -1430,17 +1151,111 @@
         "courseD_bee_conditionals_challenge2_2020": {
           "courseD_bee_conditionals_challenge2_1": "Pomocí tohoto cyklu sesbírej veškerý nektar (nebo med) z jednoho květu (nebo plástve)."
         },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Pomocí tohoto cyklu sesbírej veškerý nektar (nebo med) z jednoho květu (nebo plástve)."
+        },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "Snažte se procházet svůj kód blok po bloku."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Snažte se procházet svůj kód blok po bloku."
+        },
+        "courseD_farmer_while72022": {
+          "courseD_farmer_while7_2018_PathAhead": "Abys vyřešil tuto úlohu, budeš muset použít blok `pokud je cesta vpřed`."
+        },
+        "courseD_farmer_while7_2018": {
+          "courseD_farmer_while7_2018_PathAhead": "Abys vyřešil tuto úlohu, budeš muset použít blok `pokud je cesta vpřed`."
+        },
+        "courseD_farmer_while7_2019": {
+          "courseD_farmer_while7_2018_PathAhead": "Abys vyřešil tuto úlohu, budeš muset použít blok `pokud je cesta vpřed`."
+        },
+        "courseD_farmer_while7_2020": {
+          "courseD_farmer_while7_2018_PathAhead": "Abys vyřešil tuto úlohu, budeš muset použít blok `pokud je cesta vpřed`."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Abys vyřešil tuto úlohu, budeš muset použít blok `pokud je cesta vpřed`."
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
+        },
         "courseD_maze_intro4_2019": {
           "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
         },
         "courseD_maze_intro4_2020": {
           "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
         },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Tohle je tvůj limit bloků. Sděluje ti, kolik těchto bloků ti ještě zbývá k použití."
+        },
+        "courseD_maze_intro5a2022": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_maze_intro5a_2019": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_maze_intro5a_2020": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseD_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseD_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseD_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseD_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseD_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseD_maze_ramp2_2018": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseD_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseD_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit."
         },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit.",
+          "stone_block_2": "Šedé bloky není možné zahodit."
+        },
         "courseD_maze_ramp3_2018": {
           "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit."
+        },
+        "courseD_maze_ramp3_2019": {
+          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit.",
+          "stone_block_2": "Šedé bloky není možné zahodit."
+        },
+        "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit.",
+          "stone_block_2": "Šedé bloky není možné zahodit."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Přebytečné bloky můžeš přesouvat do sady nástrojů, když je chceš vyhodit.",
+          "stone_block_2": "Šedé bloky není možné zahodit."
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
@@ -1454,22 +1269,74 @@
         "courseD_maze_ramp4_2020": {
           "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
         },
+        "courseD_maze_ramp5": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_maze_ramp52022": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_maze_ramp5_2018": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_maze_ramp5_2019": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_maze_ramp5_2020": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_maze_ramp5a": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_maze_ramp5a_2018": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_maze_ramp5a_2019": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_maze_ramp5a_2020": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
+        "courseD_scrat_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
+        },
+        "courseD_scrat_ramp2": {
+          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
+        },
         "courseD_scrat_ramp3": {
           "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit."
         },
         "courseD_scrat_ramp4": {
           "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
         },
+        "courseD_scrat_ramp5": {
+          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
+        },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_1": "Toto je Váš první výzvový hlavolam! Ty jsou míněny tak, aby byly obtížné, a může být potřeba zkoušet je několikrát."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Tohle číslo můžeš změnit.",
+          "courseE_artist_ramp8_2": "Klikni sem, abys napsal(a) počet opakování svého kódu."
         },
         "courseE_aboutme_2": {
           "": "Klikni sem."
         },
+        "courseE_aboutme_22022": {
+          "": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
+        },
         "courseE_aboutme_2_2020": {
           "": "Klikni sem."
         },
+        "courseE_aboutme_2_2021": {
+          "": "Klikni sem."
+        },
         "courseE_artist_functions2": {
+          "courseD_artist_functions2_1": "Když se spustí tento zelený kód, proběhne veškerý kód obsažený ve funkci. Co by měl umělec udělat po nakreslení prvního čtverce?"
+        },
+        "courseE_artist_functions22022": {
           "courseD_artist_functions2_1": "Když se spustí tento zelený kód, proběhne veškerý kód obsažený ve funkci. Co by měl umělec udělat po nakreslení prvního čtverce?"
         },
         "courseE_artist_functions2_2018": {
@@ -1481,6 +1348,9 @@
         "courseE_artist_functions2_2020": {
           "courseD_artist_functions2_1": "Když se spustí tento zelený kód, proběhne veškerý kód obsažený ve funkci. Co by měl umělec udělat po nakreslení prvního čtverce?"
         },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Když se spustí tento zelený kód, proběhne veškerý kód obsažený ve funkci. Co by měl umělec udělat po nakreslení prvního čtverce?"
+        },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_1": "Když se spustí tento zelený kód, proběhne veškerý kód obsažený ve funkci. Co by měl umělec udělat po nakreslení prvního čtverce?"
         },
@@ -1488,6 +1358,9 @@
           "courseD_artist_functions2_1": "Když se spustí tento zelený kód, proběhne veškerý kód obsažený ve funkci. Co by měl umělec udělat po nakreslení prvního čtverce?"
         },
         "courseE_artist_functions8": {
+          "courseD_artist_functions8_1": "Bloky na vytváření funkcí byly v nástrojové sadě přesunuty pod tenhle štítek."
+        },
+        "courseE_artist_functions8a2022": {
           "courseD_artist_functions8_1": "Bloky na vytváření funkcí byly v nástrojové sadě přesunuty pod tenhle štítek."
         },
         "courseE_artist_functions8a_2018": {
@@ -1499,7 +1372,14 @@
         "courseE_artist_functions8a_2020": {
           "courseD_artist_functions8_1": "Bloky na vytváření funkcí byly v nástrojové sadě přesunuty pod tenhle štítek."
         },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Bloky na vytváření funkcí byly v nástrojové sadě přesunuty pod tenhle štítek."
+        },
         "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge1_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
+        "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_callout1": "Prodluž tenhle program – přidej na konec další kód.",
           "courseE_artist_functions_challenge1_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
         },
@@ -1515,7 +1395,15 @@
           "courseE_artist_functions_challenge1_callout1": "Prodluž tenhle program – přidej na konec další kód.",
           "courseE_artist_functions_challenge1_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
         },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge1_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
         "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge2_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
+        "courseE_artist_functions_challenge22022": {
           "courseE_artist_functions_challenge2_callout1": "Prodluž tenhle program – přidej na konec další kód.",
           "courseE_artist_functions_challenge2_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
         },
@@ -1531,8 +1419,26 @@
           "courseE_artist_functions_challenge2_callout1": "Prodluž tenhle program – přidej na konec další kód.",
           "courseE_artist_functions_challenge2_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
         },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Prodluž tenhle program – přidej na konec další kód.",
+          "courseE_artist_functions_challenge2_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
+        },
+        "courseE_artist_ramp8": {
+          "courseE_artist_ramp8_1": "Tohle číslo můžeš změnit.",
+          "courseE_artist_ramp8_2": "Klikni sem, abys napsal(a) počet opakování svého kódu."
+        },
+        "courseE_artist_ramp8_2": {
+          "courseE_artist_ramp8_1": "Tohle číslo můžeš změnit.",
+          "courseE_artist_ramp8_2": "Klikni sem, abys napsal(a) počet opakování svého kódu."
+        },
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_2": "Sada nástrojů je tentokrát uspořádaná trochu jinak. Proklikej si různé kategorie, ať víš, jaké bloky máš k dispozici."
+        },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_2": "Sada nástrojů je tentokrát uspořádaná trochu jinak. Proklikej si různé kategorie, ať víš, jaké bloky máš k dispozici."
+        },
+        "courseE_farmer_functions132022": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
         },
         "courseE_farmer_functions13_2018": {
           "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
@@ -1541,6 +1447,9 @@
           "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
         },
         "courseE_farmer_functions13_2020": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
+        "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
         },
         "courseE_farmer_functions1_2018": {
@@ -1552,7 +1461,13 @@
         "courseE_farmer_functions1_2020": {
           "courseE_farmer_functions1_2": "Sada nástrojů je tentokrát uspořádaná trochu jinak. Proklikej si různé kategorie, ať víš, jaké bloky máš k dispozici."
         },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Sada nástrojů je tentokrát uspořádaná trochu jinak. Proklikej si různé kategorie, ať víš, jaké bloky máš k dispozici."
+        },
         "courseE_farmer_functions1a": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
+        "courseE_farmer_functions1a2022": {
           "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
         },
         "courseE_farmer_functions1a_2018": {
@@ -1564,7 +1479,13 @@
         "courseE_farmer_functions1a_2020": {
           "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
         },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
         "courseE_farmer_functions2b": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
+        "courseE_farmer_functions2b2022": {
           "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
         },
         "courseE_farmer_functions2b_2018": {
@@ -1576,324 +1497,18 @@
         "courseE_farmer_functions2b_2020": {
           "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
         },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        },
         "courseE_playLab_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
         },
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
         },
-        "courseF_artist_for1": {
-          "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
-        },
-        "courseF_artist_for1_2018": {
-          "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
-        },
-        "courseF_artist_for1_2019": {
-          "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
-        },
-        "courseF_artist_for1_2020": {
-          "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
-        },
-        "courseF_bee_for4": {
-          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
-        },
-        "courseF_bee_for4_2018": {
-          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
-        },
-        "courseF_bee_for4_2019": {
-          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
-        },
-        "courseF_bee_for4_2020": {
-          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
-        },
-        "courseF_bee_for9": {
-          "courseF_bee_for9_1": "Tady najdeš blok „math“."
-        },
-        "courseF_bee_for9_2018": {
-          "courseF_bee_for9_1": "Tady najdeš blok „math“."
-        },
-        "courseF_bee_for9_2019": {
-          "courseF_bee_for9_1": "Tady najdeš blok „math“."
-        },
-        "courseF_bee_for9_2020": {
-          "courseF_bee_for9_1": "Tady najdeš blok „math“."
-        },
-        "courseF_bee_variables_1_2018": {
-          "courseF_bee_functions_1_2018_1": "Tady najdeš svoje proměnné."
-        },
-        "courseF_bee_variables_1_2019": {
-          "courseF_bee_functions_1_2018_1": "Tady najdeš svoje proměnné."
-        },
-        "courseF_bee_variables_1_2020": {
-          "courseF_bee_functions_1_2018_1": "Tady najdeš svoje proměnné."
-        },
-        "coursea_maze_ramp1_2018": {
-          "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
-        },
-        "coursea_maze_ramp1_2019": {
-          "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
-        },
-        "coursea_maze_ramp1_2020": {
-          "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
-        },
-        "New Sprite Lab Project": {
-          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy.",
-          "make_sprite": "Pomocí těchto bloků vytvoř sprajta."
-        },
-        "CSD U3 Variables Predict Where XY_2022": {
-          "grid": "K zobrazení mřížky klikněte zde."
-        },
-        "CourseD_Dance_2020_012022": {
-          "dance_callout_01": "Přidej do svého programu tento blok!"
-        },
-        "CourseD_Dance_2020_022022": {
-          "dance_callout_11_a": "Přidej tento blok do svého programu.",
-          "arrow_buttons": "Mačkej klávesy se šipkami a ovládej tak svého tanečníka."
-        },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "Přidej do svého programu tento blok!"
-        },
-        "CourseD_Dance_2020_052022": {
-          "dance_callout_05": "Přidejte do svého programu novou událost."
-        },
-        "CourseD_Dance_2020_062022": {
-          "dance_party_11_5_groups": "Nový blok!"
-        },
-        "CourseD_Dance_2020_072022": {
-          "setprop_hint": "Nový blok!"
-        },
-        "CourseD_Dance_2020_092022": {
-          "new_block_3": "Nový blok!",
-          "new_block_4": "Nový blok!"
-        },
-        "CourseF_outbreak2_-2022-2": {
-          "minitoolbox": "Kliknutím sem rozšíříte blok.",
-          "pointerlocation": "Přetáhněte blok předmětu sem."
-        },
-        "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
-        },
-        "Fish Tank 3-validated2022": {
-          "spritelab_comment": "Do tohoto bloku napiš poznámku (pro sebe nebo učitele), jak kód funguje."
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_1": "Tento malý pokyn říká počítači, aby spustil VELKÝ kus kódu se stejným názvem v pracovním prostoru."
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_1": "Toto je cyklus „opakovat“! Klikněte na pracovní prostor a vložte kód, který chcete pořád opakovat."
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "Agent se dokáže vznášet nad vodou, ale hráč ne!"
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_1": "Tyto bloky nemůžete zahodit, ale můžete je upravit."
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_1": "Agent se dokáže vznášet nad lávou, ale hráč ne!"
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Už jsme sem umístnili určité bloky, které ti pomohou začít"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Tento kód zahájí budování tvého domu. Umíš to dokončit?"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program",
-          "craft_drag_block_callout": "Přetáhni blok „posuň se vpřed“ a připoj ho pod druhý blok"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Opakuj akce umístěním bloků zde"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Tento kód kontroluje lávu, umíš přidat povel k posunu dopředu?"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Vytěž toto železo!"
-        },
-        "Virtual Pet 2_-2022-2": {
-          "vp_costumes": "Kliknutím sem přidejte ke svému projektu nové kostýmy!"
-        },
-        "Virtual Pet 6_-2022-2": {
-          "vp_costumes": "Kliknutím sem přidejte ke svému projektu nové kostýmy!"
-        },
-        "courseA_EOC_playlab_animals2022": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_fantasy2022": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_people2022": {
-          "question_mark": "?"
-        },
-        "courseA_artist_loops42022": {
-          "courseA_artist_loops4_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
-        },
-        "courseA_artist_loops72022": {
-          "courseA_artist_loops7_1": "Tohle číslo znamená, že v konečné odpovědi je možné použít jen jeden blok tohoto druhu."
-        },
-        "courseA_artist_loops82022": {
-          "courseA_artist_loops8_1": "Víš, že se můžeš s tužkou v ruce kdykoli vrátit po čáře, kterou už máš nakreslenou?"
-        },
-        "courseA_collector_loops12022": {
-          "courseA_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
-        },
-        "courseA_collector_loops32022": {
-          "gradek_adventurer_loops2_1": "Tohle číslo vyjadřuje, kolik těchto bloků můžeš v úloze použít."
-        },
-        "courseA_maze_ramp22022": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseA_maze_seq12022": {
-          "courseA_maze_seq1_1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
-        },
-        "courseA_playLab_events42022": {
-          "courseA_playlab_events4_callout1": "Toto je volání"
-        },
-        "courseA_playLab_events52022": {
-          "courseA_playLab_events5_1": "Kliknutím sem můžeš změnit směr šipky události."
-        },
-        "courseA_playLab_events62022": {
-          "courseA_playLab_events6_1": "Tady můžeš nastavit přehrání náhodného zvuku – to znamená, že předem nikdy nevíš, co uslyšíš."
-        },
-        "courseB_Scrat_ramp12022": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseB_Scrat_ramp3a2022": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseB_artist_loops32022": {
-          "courseB_artist_loops3_1": "V krabičce nástrojů je jen jeden z těchto bloků. Jak jej použijete?"
-        },
-        "courseB_collector_loops12022": {
-          "courseB_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
-        },
-        "courseB_maze_seq12022": {
-          "courseB_maze_seq1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
-        },
-        "courseB_playlab_events62022": {
-          "courseB_playlab_events6_a": "Pro změnu směru používejte zelenou rozbalovací šipku."
-        },
-        "courseC19_playLab_EOC32022": {
-          "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
-        },
-        "courseC_PlayLab_events82022": {
-          "courseC_PlayLab_events8_callout1": "Použij tenhle blok pro okamžik, kdy Valda narazí do dinosaura."
-        },
-        "courseC_PlayLab_events_challenge12022": {
-          "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
-        },
-        "courseC_PlayLab_events_lesson_extras": {
-          "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
-        },
-        "courseC_artist_loops1a2022": {
-          "jumpto_callout": "Tento blok bude v našem projektu velmi důležitý. Určitě jej použij!"
-        },
-        "courseC_artist_loops1b2022": {
-          "sticker2": "Toto vlož doprostřed svého programu."
-        },
-        "courseC_artist_prog22022": {
-          "slider": "Tady můžete svůj program zpomalit."
-        },
-        "courseC_collector_prog12022": {
-          "courseC_collector_prog1_1": "Vidíte v nástrojové krabičce nějaké nové bloky? Nemějte starosti, v další lekci Vám ukážeme, jak je používat."
-        },
-        "courseC_collector_prog72022": {
-          "courseC_collector_prog7_1": "Jestliže potřebujete nějaké bloky, můžete je nabrat z nástrojové krabičky!"
-        },
-        "courseC_harvester_loops12022": {
-          "courseC_harvester_loops1_callout1": "Číslice 4 na dýni značí, že jsou k dispozici 4 dýně, které můžeš posbírat."
-        },
-        "courseC_maze_debugging52022": {
-          "courseC_maze_debugging5_1": "Tyto bloky jsou uzamčeny a nelze je smazat."
-        },
-        "courseC_maze_debugging92022": {
-          "courseC_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
-        },
-        "courseC_maze_programming12022": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseC_maze_programming22022": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseC_maze_programming32022": {
-          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit.",
-          "courseC_maze_programming3_3": "Tyto bloky jsou kamenné a nelze je zahodit."
-        },
-        "courseC_maze_programming42022": {
-          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
-        },
-        "courseC_maze_programming52022": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseC_maze_programming72022": {
-          "courseC_maze_programming7_1": "Toto je Váš první výzvový hlavolam! Ty jsou míněny tak, aby byly obtížné, a může být potřeba zkoušet je několikrát.",
-          "courseC_maze_programming7_2": "Tyto bloky jsou vyrobeny z kamene a nelze je vyhodit."
-        },
-        "courseC_starWars_loops22022": {
-          "courseC_starWars_loops2": "V tomto hlavolamu je k dispozici jen jeden z těchto  bloků."
-        },
-        "courseD_artist_nestedLoops1a2022": {
-          "courseD_artist_nestedLoops1a_1": "K vyřešení téhle úlohy není potřeba používat barvy. Pokud ale barvy chceš, můžeš je nastavit jednoduše tímto blokem „náhodná barva“."
-        },
-        "courseD_bee_conditionals22022": {
-          "4_5_Bee_Conditionals_2_1": "Nezapomeň zkontrolovat přítomnost KVĚTU pod KAŽDÝM mrakem. Přítomnost pláství nemusíš kontrolovat vůbec."
-        },
-        "courseD_bee_conditionals_challenge22022": {
-          "courseD_bee_conditionals_challenge2_1": "Pomocí tohoto cyklu sesbírej veškerý nektar (nebo med) z jednoho květu (nebo plástve)."
-        },
-        "courseD_bee_nestedLoops1a2022": {
-          "stepButton": "Snažte se procházet svůj kód blok po bloku."
-        },
-        "courseD_farmer_while72022": {
-          "courseD_farmer_while7_2018_PathAhead": "Abys vyřešil tuto úlohu, budeš muset použít blok `pokud je cesta vpřed`."
-        },
-        "courseD_maze_intro42022": {
-          "courseC_maze_programming4_1": "Toto je Váš limit bloků. Sděluje Vám, kolik těchto bloků Vám zbývá k použití."
-        },
-        "courseD_maze_intro5a2022": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseD_maze_ramp12022": {
-          "grade2_CaringForNewPet_0_1": "Poté co spojíš všechny bloky, zmáčkni \"Spustit\" pro spuštění svého programu."
-        },
-        "courseD_maze_ramp22022": {
-          "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
-        },
-        "courseD_maze_ramp32022": {
-          "courseC_maze_programming3_2": "Do nástrojové krabičky můžete přetahovat další bloky, abyste je mohli vyhodit.",
-          "stone_block_2": "Šedé bloky není možné zahodit."
-        },
-        "courseD_maze_ramp52022": {
-          "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
-        },
-        "courseE_aboutme_22022": {
-          "": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
-        },
-        "courseE_artist_functions22022": {
-          "courseD_artist_functions2_1": "Když se spustí tento zelený kód, proběhne veškerý kód obsažený ve funkci. Co by měl umělec udělat po nakreslení prvního čtverce?"
-        },
-        "courseE_artist_functions8a2022": {
-          "courseD_artist_functions8_1": "Bloky na vytváření funkcí byly v nástrojové sadě přesunuty pod tenhle štítek."
-        },
-        "courseE_artist_functions_challenge12022": {
-          "courseE_artist_functions_challenge1_callout1": "Prodluž tenhle program – přidej na konec další kód.",
-          "courseE_artist_functions_challenge1_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
-        },
-        "courseE_artist_functions_challenge22022": {
-          "courseE_artist_functions_challenge2_callout1": "Prodluž tenhle program – přidej na konec další kód.",
-          "courseE_artist_functions_challenge2_callout2": "Pokud se ti tenhle design nelíbí, můžeš ho libovolně přetvořit."
-        },
-        "courseE_farmer_functions12022": {
-          "courseE_farmer_functions1_2": "Sada nástrojů je tentokrát uspořádaná trochu jinak. Proklikej si různé kategorie, ať víš, jaké bloky máš k dispozici."
-        },
-        "courseE_farmer_functions132022": {
-          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
-        },
-        "courseE_farmer_functions1a2022": {
-          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
-        },
-        "courseE_farmer_functions2b2022": {
-          "courseE_farmer_functions1a_1": "Tohle je neznámá zelenina. Při každém spuštění kódu se mění."
+        "courseF_apps_aquarium": {
+          "run_button": "Nejprve stiskněte tlačítko Spustit!",
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
         },
         "courseF_apps_aquarium2022": {
           "run_button": "Nejprve stiskněte tlačítko Spustit!",
@@ -1903,10 +1518,17 @@
           "run_button": "Nejprve stiskněte tlačítko Spustit!",
           "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
         },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
         "courseF_apps_card2022": {
           "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Nejprve stiskněte tlačítko Spustit!",
           "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
         },
         "courseF_apps_chatbot2022": {
@@ -1914,6 +1536,10 @@
           "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Nejprve stiskněte tlačítko Spustit!",
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
+        "courseF_apps_collector": {
           "run_button": "Nejprve stiskněte tlačítko Spustit!",
           "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
         },
@@ -1937,10 +1563,17 @@
         "courseF_apps_collector_move_-2022-2": {
           "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
         },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
         "courseF_apps_madlib2022": {
           "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
         },
         "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Nejprve stiskněte tlačítko Spustit!",
           "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
         },
         "courseF_apps_pet2022": {
@@ -1951,82 +1584,207 @@
           "run_button": "Nejprve stiskněte tlačítko Spustit!",
           "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
         },
+        "courseF_artist_for1": {
+          "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
+        },
         "courseF_artist_for12022": {
           "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
+        },
+        "courseF_artist_for1_2018": {
+          "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
+        },
+        "courseF_artist_for1_2019": {
+          "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
+        },
+        "courseF_artist_for1_2020": {
+          "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "Panel nástrojů je v režimu „category“, aby bylo víc místa na tvůj kód. Tady jsou umístěné cykly „for“."
+        },
+        "courseF_bee_for4": {
+          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
         },
         "courseF_bee_for42022": {
           "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
         },
+        "courseF_bee_for4_2018": {
+          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
+        },
+        "courseF_bee_for4_2019": {
+          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
+        },
+        "courseF_bee_for4_2020": {
+          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
+        },
+        "courseF_bee_for9": {
+          "courseF_bee_for9_1": "Tady najdeš blok „math“."
+        },
         "courseF_bee_for92022": {
           "courseF_bee_for9_1": "Tady najdeš blok „math“."
+        },
+        "courseF_bee_for9_2018": {
+          "courseF_bee_for9_1": "Tady najdeš blok „math“."
+        },
+        "courseF_bee_for9_2019": {
+          "courseF_bee_for9_1": "Tady najdeš blok „math“."
+        },
+        "courseF_bee_for9_2020": {
+          "courseF_bee_for9_1": "Tady najdeš blok „math“."
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "Tady najdeš blok „math“."
+        },
+        "courseF_bee_variables_1_2018": {
+          "courseF_bee_functions_1_2018_1": "Tady najdeš svoje proměnné."
+        },
+        "courseF_bee_variables_1_2019": {
+          "courseF_bee_functions_1_2018_1": "Tady najdeš svoje proměnné."
+        },
+        "courseF_bee_variables_1_2020": {
+          "courseF_bee_functions_1_2018_1": "Tady najdeš svoje proměnné."
         },
         "courseF_bee_variables_1a2022": {
           "courseF_bee_functions_1_2018_1": "Tady najdeš svoje proměnné."
         },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "Tady najdeš svoje proměnné."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
         "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
+        "courseF_editable_chatbot": {
           "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
         },
         "courseF_editable_chatbot_-2022-2": {
           "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
         },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
         "courseF_editable_madlib_-2022-2": {
           "visualizationResizeBar": "Přetažením tří teček změňte velikost hrací plochy."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Zkuste změnit „když“ na „zatímco“."
         },
         "courseF_events_choice_penguin_-2022-2": {
           "whenToWhile": "Zkuste změnit „když“ na „zatímco“."
         },
+        "courseF_events_conflict": {
+          "stops_block": "Tady jsou nové bloky!"
+        },
         "courseF_events_conflict_-2022-2": {
           "stops_block": "Tady jsou nové bloky!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Použijte nový blok události nacházející se tady."
         },
         "courseF_events_key_-2022-2": {
           "whenKey": "Použijte nový blok události nacházející se tady."
         },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Tento blok je v nesprávném pořadí."
+        },
         "courseF_events_practice_reorder_-2022-2": {
           "stopAllBug": "Tento blok je v nesprávném pořadí."
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Kliknutím sem zobrazíš, jak toto chování funguje."
         },
         "courseF_events_predict_-2022-2": {
           "behaviors_edit": "Kliknutím sem zobrazíš, jak toto chování funguje."
         },
+        "courseF_events_time": {
+          "events_category": "Kliknutím sem otevřete kategorii Události."
+        },
         "courseF_events_time_-2022-2": {
           "events_category": "Kliknutím sem otevřete kategorii Události."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Podívejte se podrobněji na kód pod tímto bodem."
         },
         "courseF_label_predict_-2022-2": {
           "variablesPredict": "Podívejte se podrobněji na kód pod tímto bodem."
         },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Kliknutím sem můžete otevřít kategorii Chování."
+        },
         "courseF_sprites_behaviors_-2022-2": {
           "behaviors_category": "Kliknutím sem můžete otevřít kategorii Chování."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Kliknutím sem otevřete kategorii Sprajty."
         },
         "courseF_sprites_make_-2022-2": {
           "sprites_category": "Kliknutím sem otevřete kategorii Sprajty."
         },
+        "courseF_sprites_positioning": {
+          "locations_category": "Kliknutím sem můžete otevřít kategorii Místa."
+        },
         "courseF_sprites_positioning_-2022-2": {
           "locations_category": "Kliknutím sem můžete otevřít kategorii Místa."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Tady hledejte nový blok."
         },
         "courseF_sprites_properties_-2022-2": {
           "sprites_category2": "Tady hledejte nový blok."
         },
+        "courseF_text_answer": {
+          "answered_block": "Tady hledejte nový blok!"
+        },
         "courseF_text_answer_-2022-2": {
           "answered_block": "Tady hledejte nový blok!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Změnila se barva pozadí, když jste odpověděli na otázku? Jestliže ano, stiskněte 'Dokončit'. Jestliže ne, stiskněte 'Reset', změňte kód a opět stiskněte 'Spustit'."
         },
         "courseF_text_choice_color_-2022-2": {
           "text_color_finish": "Změnila se barva pozadí, když jste odpověděli na otázku? Jestliže ano, stiskněte 'Dokončit'. Jestliže ne, stiskněte 'Reset', změňte kód a opět stiskněte 'Spustit'."
         },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Skončili jste? Jestliže je tomu tak, klikněte na 'Dokončit'. Jestliže ne, dotkněte se tlačítka 'Reset', změňte kód a opět stiskněte 'Spustit'."
+        },
         "courseF_text_choice_conversation_-2022-2": {
           "text_generic_finish": "Skončili jste? Jestliže je tomu tak, klikněte na 'Dokončit'. Jestliže ne, dotkněte se tlačítka 'Reset', změňte kód a opět stiskněte 'Spustit'."
         },
+        "courseF_text_choice_title": {
+          "text_answer_finish": "Zobrazovala se 3 sekundy titulní obrazovka? Jestliže je tomu tak, klikněte na 'Dokončit'. Jestliže ne, stiskněte 'Reset', změňte svůj kóde a znovu stiskněte 'Spustit'.",
+          "title_block": "Tady se poohlížejte po dvou nových blocích!"
+        },
         "courseF_text_choice_title_-2022-2": {
-          "title_block": "Tady se poohlížejte po dvou nových blocích!",
-          "text_answer_finish": "Zobrazovala se 3 sekundy titulní obrazovka? Jestliže je tomu tak, klikněte na 'Dokončit'. Jestliže ne, stiskněte 'Reset', změňte svůj kóde a znovu stiskněte 'Spustit'."
+          "text_answer_finish": "Zobrazovala se 3 sekundy titulní obrazovka? Jestliže je tomu tak, klikněte na 'Dokončit'. Jestliže ne, stiskněte 'Reset', změňte svůj kóde a znovu stiskněte 'Spustit'.",
+          "title_block": "Tady se poohlížejte po dvou nových blocích!"
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Tady hledejte nové bloky!"
         },
         "courseF_text_concat_-2022-2": {
           "join_blocks": "Tady hledejte nové bloky!"
         },
+        "courseF_text_events": {
+          "events_category": "Kliknutím sem otevřete kategorii Události."
+        },
         "courseF_text_events_-2022-2": {
           "events_category": "Kliknutím sem otevřete kategorii Události."
+        },
+        "courseF_text_print": {
+          "print_block": "Tady najdete tiskový blok!",
+          "text_print_finish": "Vytiskla se Vám Vaše zpráva výše? Jestliže ano, klikněte na 'Dokončit'. Jestliže ne, stiskněte 'Reset', změňte svůj kód a znovu stiskněte 'Spustit'."
         },
         "courseF_text_print_-2022-2": {
           "print_block": "Tady najdete tiskový blok!",
           "text_print_finish": "Vytiskla se Vám Vaše zpráva výše? Jestliže ano, klikněte na 'Dokončit'. Jestliže ne, stiskněte 'Reset', změňte svůj kód a znovu stiskněte 'Spustit'."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Tady najdete blok výzvy!"
         },
         "courseF_text_prompts_-2022-2": {
           "prompt_block": "Tady najdete blok výzvy!"
@@ -2034,10 +1792,25 @@
         "courseF_variables2_predict_-2022-2": {
           "variablesPredict": "Podívejte se podrobněji na kód pod tímto bodem."
         },
+        "courseF_variables_predict": {
+          "variablesPredict": "Podívejte se podrobněji na kód pod tímto bodem."
+        },
         "courseF_variables_predict_-2022-2": {
           "variablesPredict": "Podívejte se podrobněji na kód pod tímto bodem."
         },
         "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
+        },
+        "coursea_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
+        },
+        "coursea_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
+        },
+        "coursea_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
+        },
+        "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
         },
         "coursee_helloworld_events": {
@@ -2047,11 +1820,134 @@
           "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
         },
         "coursee_helloworld_say": {
-          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit.",
-          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt."
+          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt.",
+          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit."
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "express_maze_debugging9_2019": {
+          "express_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "Použij blok \"vytvořit kruh\" a změň velikost."
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) Použij tento blok a polož je kolem šedých bloků v pracovním prostoru",
+          "repeat_blocks_2": "(2) Přesuň blok \"Opakovat\" sem a umísti šedé bloky dovnitř"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "Použij drop-down k nahrazení \"???\" číslem"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "Použij k vytvoření tohoto tvaru bloku opakování."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "Použij k vytvoření tohoto tvaru bloku opakování."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "Použij tento drop-down k vytváření různých sněhových vloček!"
+        },
+        "frozen line": {
+          "move_elsa_forward": "Přetáhni blok \"Posunout vpřed\" a umístěte ho pod blok \"Při spuštění\", aby se Elsa posunula vpřed",
+          "run": "Stisknutím tlačítka \"Spustit\" si vyzkoušíš program!"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "Použij blok \"Turn\" k otočení Elsy. Číslo v drop-down určuje, kolikrát se Elsa otočí"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "Použij blok \"vytvoř rameno vločky\""
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "Přidej více bloků k vytvoření čtverce"
+        },
+        "frozen square loop": {
+          "replace_questions": "Použij drop-down k nahrazení \"???\" číslem"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "Použij drop-down k nahrazení \"???\" číslem"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "Použij drop-down k nahrazení \"???\" číslem"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Kód můžete spustit kliknutím sem."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
+        },
+        "helloworld_animals_location": {
+          "pin": "kolík"
+        },
+        "helloworld_animals_multi": {
+          "pin": "kolík"
+        },
+        "helloworld_animals_say": {
+          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt.",
+          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit."
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Nový blok!",
+          "hello_world_new_block": "Nový blok!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Kód můžete spustit kliknutím sem."
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
+        },
+        "helloworld_emoji_location": {
+          "pin": "kolík"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "kolík"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt.",
+          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit."
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Nový blok!",
+          "hello_world_new_block": "Nový blok!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
         },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
@@ -2059,14 +1955,26 @@
         "helloworld_food_backgrounds_space-2022": {
           "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
         },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
+        },
         "helloworld_food_behaviors_soccer-2022": {
           "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
         },
         "helloworld_food_behaviors_space-2022": {
           "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
         },
+        "helloworld_food_click": {
+          "hw_Run": "Kód můžete spustit kliknutím sem."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "Kód můžete spustit kliknutím sem."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Nejprve klikněte sem!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Nový blok!"
         },
         "helloworld_food_costumes_soccer-2022": {
           "hello_world_new": "Nový blok!"
@@ -2074,11 +1982,17 @@
         "helloworld_food_costumes_space-2022": {
           "hello_world_new": "Nový blok!"
         },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
+        },
         "helloworld_food_events_soccer-2022": {
           "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
         },
         "helloworld_food_events_space-2022": {
           "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
         },
         "helloworld_food_freeplay_soccer-2022": {
           "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
@@ -2086,10 +2000,16 @@
         "helloworld_food_freeplay_space-2022": {
           "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
         },
+        "helloworld_food_location": {
+          "pin": "kolík"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "kolík"
         },
         "helloworld_food_location_space-2022": {
+          "pin": "kolík"
+        },
+        "helloworld_food_multi": {
           "pin": "kolík"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -2098,13 +2018,21 @@
         "helloworld_food_multi_space-2022": {
           "pin": "kolík"
         },
+        "helloworld_food_say": {
+          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt.",
+          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit."
+        },
         "helloworld_food_say_soccer-2022": {
-          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit.",
-          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt."
+          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt.",
+          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit."
         },
         "helloworld_food_say_space-2022": {
-          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit.",
-          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt."
+          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt.",
+          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit."
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Nový blok!",
+          "hello_world_new_block": "Nový blok!"
         },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "Nový blok!",
@@ -2114,14 +2042,86 @@
           "hello_world_new": "Nový blok!",
           "hello_world_new_block": "Nový blok!"
         },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Nový blok!"
+        },
         "helloworld_food_sounds_soccer-2022": {
           "hello_world_new": "Nový blok!"
         },
         "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Nový blok!"
         },
-        "helloworld_food_click_space-2022": {
-          "hw_Run": "Nejprve klikněte sem!"
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Tento blok použijte k nastavení nového pozadí."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Použijte tohoto bloku s jedním z níže uvedených chování."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Kód můžete spustit kliknutím sem."
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Přidejte do svého pracovního prostoru tento blok událostí."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Kliknutím sem můžete ke svému projektu přidat kostýmy."
+        },
+        "helloworld_retro_location": {
+          "pin": "kolík"
+        },
+        "helloworld_retro_multi": {
+          "pin": "kolík"
+        },
+        "helloworld_retro_say": {
+          "hello_world_make_sprite": "Pomocí tohoto bloku můžete vytvořit sprajt.",
+          "hello_world_say": "Pomocí tohoto bloku přimějete sprajty mluvit."
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Nový blok!",
+          "hello_world_new_block": "Nový blok!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Nový blok!"
+        },
+        "outbreak2": {
+          "minitoolbox": "Kliknutím sem rozšíříte blok.",
+          "pointerlocation": "Přetáhněte blok předmětu sem."
+        },
+        "outbreak7": {
+          "costumes_callout": "Kliknutím vytvořte nový kostým"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Nový blok!"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "pause_button": "Svou animaci vyzkoušejte tímto tlačítkem. ",
+          "poetry_background": "Tady najdete bloky kódu.",
+          "run_button": "Svou animaci vyzkoušejte tímto tlačítkem. "
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Nový blok!",
+          "poetry_foreground": "Nový blok!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Nový blok!",
+          "poetry_multiple_sprites": "Nový blok!",
+          "poetry_new_block": "Nový blok!",
+          "poetry_selector": "Vyberte jakoukoli báseň nebo zadejte svou vlastní!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_music": "Nový blok!",
+          "poetry_sound": "Nový blok!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Nový blok!",
+          "poetry_sprite_stops": "Nový blok!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Nový blok!",
+          "poetry_set_sprite": "Nový blok!"
         }
       }
     }

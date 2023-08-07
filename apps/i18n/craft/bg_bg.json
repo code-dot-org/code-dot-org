@@ -1,9 +1,9 @@
 {
   "absolute": "абсолютна стойност",
+  "agentDiamondPathCongrats": "Поздравления, намерихте диамантената пътека! Досега сте събрали {count, plural, one {1 diamond} other {# diamonds}}!",
   "agentGenericFailureMessage": "Продължавайте да пишете код! Не забравяйте да използвате Agent за помощ.",
   "agentTooFewBlocksFailureMessage": "Пробвайте да добавите един блок, за да придвижвате Agent до правилното място.",
   "at": "в",
-  "agentDiamondPathCongrats": "Поздравления, намерихте диамантената пътека! Досега сте събрали {count, plural, one {1 diamond} other {# diamonds}}!",
   "blockActionAdd": "добавяне",
   "blockActionAttack": "атака",
   "blockActionClone": "клониране на блокове",

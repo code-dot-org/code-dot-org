@@ -3,54 +3,46 @@ pt:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Princípios da Ciência de Computação
-          title: Princípios da Ciência de Computação ('17-'18)
-          version_title: "'17-'18"
-          description_student: No outono de 2016, o College Board lançou o seu curso
-            AP® mais recente, Princípios da Ciência de Computação AP. Este curso introduz
-            aos estudantes os conceitos fundamentais da ciência de computação e desafia-los
-            a explorarem como a computação e a tecnologia podem impactar o mundo.
-            O Programa AP projetou o Princípios da Ciência de Computação AP com o
-            objetivo de criar líderes em campos da ciência de computação e atrair
-            e envolver aqueles que são tradicionalmente sub-representados com ferramentas
-            essenciais de computação e oportunidades multidisciplinares.
-          description_teacher: No outono de 2016, o College Board lançou o seu curso
-            AP® mais recente, Princípios da Ciência de Computação AP. Este curso introduz
-            aos estudantes os conceitos fundamentais da ciência de computação e desafia-los
-            a explorarem como a computação e a tecnologia podem impactar o mundo.
-            O Programa AP projetou o Princípios da Ciência de Computação AP com o
-            objetivo de criar líderes em campos da ciência de computação e atrair
-            e envolver aqueles que são tradicionalmente sub-representados com ferramentas
-            essenciais de computação e oportunidades multidisciplinares.
-          description_short: Aprende os conceitos fundamentais da ciência de computação.
-        csd-2017:
-          assignment_family_title: Descobertas da Ciência de Computação
-          title: Descobertas da Ciência de Computação ('17-'18)
-          version_title: "'17-'18"
-          description_student: O Descobertas da Ciência de Computação (Descobertas
-            CS) é um curso introdutório da ciência de computação que fortalece os
-            estudantes a criarem artefactos autênticos e a envolverem-se com a ciência
-            de computação como um meio para a criatividade, comunicação, solucionamento
-            de problema e diversão.
-          description_teacher: O Descobertas da Ciência de Computação (Descobertas
-            CS) é um curso introdutório da ciência de computação que fortalece os
-            estudantes a criarem artefactos autênticos e a envolverem-se com a ciência
-            de computação como um meio para a criatividade, comunicação, solucionamento
-            de problema e diversão.
-          description_short: Um curso introdutório da ciência de computação que fortalece
-            os estudantes a criarem artefactos autênticos.
         allthethingscourse:
-          title: cursodetodasascoisas
           description_short: Isto é um curso para todasascoisas
           description_student: Isto é um curso para todasascoisas e que possui uma
             descrição mais longa para os estudantes
           description_teacher: Isto é um curso para todasascoisas e que possui uma
             descrição mais longa para os professores
+          title: cursodetodasascoisas
+        csd-2017:
+          assignment_family_title: Descobertas da Ciência de Computação
+          description_short: Um curso introdutório da ciência de computação que fortalece
+            os estudantes a criarem artefactos autênticos.
+          description_student: O Descobertas da Ciência de Computação (Descobertas
+            CS) é um curso introdutório da ciência de computação que fortalece os
+            estudantes a criarem artefactos autênticos e a envolverem-se com a ciência
+            de computação como um meio para a criatividade, comunicação, solucionamento
+            de problema e diversão.
+          description_teacher: O Descobertas da Ciência de Computação (Descobertas
+            CS) é um curso introdutório da ciência de computação que fortalece os
+            estudantes a criarem artefactos autênticos e a envolverem-se com a ciência
+            de computação como um meio para a criatividade, comunicação, solucionamento
+            de problema e diversão.
+          title: Descobertas da Ciência de Computação ('17-'18)
+          version_title: "'17-'18"
         csd-2018:
           assignment_family_title: Descobertas da Ciência de Computação
+          description_short: Um curso introdutório da ciência de computação que fortalece
+            os estudantes a criarem artefactos autênticos.
+          description_student: O Descobertas da Ciência de Computação (Descobertas
+            CS) é um curso introdutório da ciência de computação que fortalece os
+            estudantes a criarem artefactos autênticos e a envolverem-se com a ciência
+            de computação como um meio para a criatividade, comunicação, solucionamento
+            de problema e diversão.
+          description_teacher: O Descobertas da Ciência de Computação (Descobertas
+            CS) é um curso introdutório da ciência de computação que fortalece os
+            estudantes a criarem artefactos autênticos e a envolverem-se com a ciência
+            de computação como um meio para a criatividade, comunicação, solucionamento
+            de problema e diversão.
           title: Descobertas da Ciência de Computação ('18-'19)
           version_title: "'18-'19"
+        csd-2019:
           description_short: Um curso introdutório da ciência de computação que fortalece
             os estudantes a criarem artefactos autênticos.
           description_student: O Descobertas da Ciência de Computação (Descobertas
@@ -63,71 +55,8 @@ pt:
             estudantes a criarem artefactos autênticos e a envolverem-se com a ciência
             de computação como um meio para a criatividade, comunicação, solucionamento
             de problema e diversão.
-        csp-2018:
-          assignment_family_title: Princípios da Ciência de Computação
-          title: Princípios da Ciência de Computação ('18-'19)
-          version_title: "'18-'19"
-          description_short: Aprende os conceitos fundamentais da ciência de computação.
-          description_student: No outono de 2016, o College Board lançou o seu curso
-            AP® mais recente, Princípios da Ciência de Computação AP. Este curso introduz
-            aos estudantes os conceitos fundamentais da ciência de computação e desafia-los
-            a explorarem como a computação e a tecnologia podem impactar o mundo.
-            O Programa AP projetou o Princípios da Ciência de Computação AP com o
-            objetivo de criar líderes em campos da ciência de computação e atrair
-            e envolver aqueles que são tradicionalmente sub-representados com ferramentas
-            essenciais de computação e oportunidades multidisciplinares.
-          description_teacher: No outono de 2016, o College Board lançou o seu curso
-            AP® mais recente, Princípios da Ciência de Computação AP. Este curso introduz
-            aos estudantes os conceitos fundamentais da ciência de computação e desafia-los
-            a explorarem como a computação e a tecnologia podem impactar o mundo.
-            O Programa AP projetou o Princípios da Ciência de Computação AP com o
-            objetivo de criar líderes em campos da ciência de computação e atrair
-            e envolver aqueles que são tradicionalmente sub-representados com ferramentas
-            essenciais de computação e oportunidades multidisciplinares.
-        csp-2019:
-          title: Princípios da Ciência de Computação ('19-'20)
-          version_title: "'19-'20"
-          description_short: Aprende os conceitos fundamentais da ciência de computação.
-          description_student: No outono de 2016, o College Board lançou o seu curso
-            AP® mais recente, Princípios da Ciência de Computação AP. Este curso introduz
-            aos estudantes os conceitos fundamentais da ciência de computação e desafia-los
-            a explorarem como a computação e a tecnologia podem impactar o mundo.
-            O Programa AP projetou o Princípios da Ciência de Computação AP com o
-            objetivo de criar líderes em campos da ciência de computação e atrair
-            e envolver aqueles que são tradicionalmente sub-representados com ferramentas
-            essenciais de computação e oportunidades multidisciplinares.
-          description_teacher: No outono de 2016, o College Board lançou o seu curso
-            AP® mais recente, Princípios da Ciência de Computação AP. Este curso introduz
-            aos estudantes os conceitos fundamentais da ciência de computação e desafia-los
-            a explorarem como a computação e a tecnologia podem impactar o mundo.
-            O Programa AP projetou o Princípios da Ciência de Computação AP com o
-            objetivo de criar líderes em campos da ciência de computação e atrair
-            e envolver aqueles que são tradicionalmente sub-representados com ferramentas
-            essenciais de computação e oportunidades multidisciplinares.
-        csd-2019:
           title: Descobertas da Ciência de Computação ('19'-20)
           version_title: "'19-'20"
-          description_short: Um curso introdutório da ciência de computação que fortalece
-            os estudantes a criarem artefactos autênticos.
-          description_student: O Descobertas da Ciência de Computação (Descobertas
-            CS) é um curso introdutório da ciência de computação que fortalece os
-            estudantes a criarem artefactos autênticos e a envolverem-se com a ciência
-            de computação como um meio para a criatividade, comunicação, solucionamento
-            de problema e diversão.
-          description_teacher: O Descobertas da Ciência de Computação (Descobertas
-            CS) é um curso introdutório da ciência de computação que fortalece os
-            estudantes a criarem artefactos autênticos e a envolverem-se com a ciência
-            de computação como um meio para a criatividade, comunicação, solucionamento
-            de problema e diversão.
-        csd-pilot:
-          title: CSD Curso Piloto
-          description_student: O Descobertas da Ciência de Computação (Descobertas
-            CS) é um curso introdutório da ciência de computação que fortalece os
-            estudantes a criarem artefactos autênticos e a envolverem-se com a ciência
-            de computação como um meio para a criatividade, comunicação, solucionamento
-            de problema e diversão.
-        csp-2020:
-          description_short: Aprende os conceitos fundamentais da ciência de computação.
         csd-2020:
           description_short: Um curso introdutório da ciência de computação que fortalece
             os estudantes a criarem artefactos autênticos.
@@ -141,30 +70,101 @@ pt:
             estudantes a criarem artefactos autênticos e a envolverem-se com a ciência
             de computação como um meio para a criatividade, comunicação, solucionamento
             de problema e diversão.
+        csd-2023:
+          title: Descobertas da Ciência de Computação
+        csd-pilot:
+          description_student: O Descobertas da Ciência de Computação (Descobertas
+            CS) é um curso introdutório da ciência de computação que fortalece os
+            estudantes a criarem artefactos autênticos e a envolverem-se com a ciência
+            de computação como um meio para a criatividade, comunicação, solucionamento
+            de problema e diversão.
+          title: CSD Curso Piloto
+        csp-2017:
+          assignment_family_title: Princípios da Ciência de Computação
+          description_short: Aprende os conceitos fundamentais da ciência de computação.
+          description_student: No outono de 2016, o College Board lançou o seu curso
+            AP® mais recente, Princípios da Ciência de Computação AP. Este curso introduz
+            aos estudantes os conceitos fundamentais da ciência de computação e desafia-los
+            a explorarem como a computação e a tecnologia podem impactar o mundo.
+            O Programa AP projetou o Princípios da Ciência de Computação AP com o
+            objetivo de criar líderes em campos da ciência de computação e atrair
+            e envolver aqueles que são tradicionalmente sub-representados com ferramentas
+            essenciais de computação e oportunidades multidisciplinares.
+          description_teacher: No outono de 2016, o College Board lançou o seu curso
+            AP® mais recente, Princípios da Ciência de Computação AP. Este curso introduz
+            aos estudantes os conceitos fundamentais da ciência de computação e desafia-los
+            a explorarem como a computação e a tecnologia podem impactar o mundo.
+            O Programa AP projetou o Princípios da Ciência de Computação AP com o
+            objetivo de criar líderes em campos da ciência de computação e atrair
+            e envolver aqueles que são tradicionalmente sub-representados com ferramentas
+            essenciais de computação e oportunidades multidisciplinares.
+          title: Princípios da Ciência de Computação ('17-'18)
+          version_title: "'17-'18"
+        csp-2018:
+          assignment_family_title: Princípios da Ciência de Computação
+          description_short: Aprende os conceitos fundamentais da ciência de computação.
+          description_student: No outono de 2016, o College Board lançou o seu curso
+            AP® mais recente, Princípios da Ciência de Computação AP. Este curso introduz
+            aos estudantes os conceitos fundamentais da ciência de computação e desafia-los
+            a explorarem como a computação e a tecnologia podem impactar o mundo.
+            O Programa AP projetou o Princípios da Ciência de Computação AP com o
+            objetivo de criar líderes em campos da ciência de computação e atrair
+            e envolver aqueles que são tradicionalmente sub-representados com ferramentas
+            essenciais de computação e oportunidades multidisciplinares.
+          description_teacher: No outono de 2016, o College Board lançou o seu curso
+            AP® mais recente, Princípios da Ciência de Computação AP. Este curso introduz
+            aos estudantes os conceitos fundamentais da ciência de computação e desafia-los
+            a explorarem como a computação e a tecnologia podem impactar o mundo.
+            O Programa AP projetou o Princípios da Ciência de Computação AP com o
+            objetivo de criar líderes em campos da ciência de computação e atrair
+            e envolver aqueles que são tradicionalmente sub-representados com ferramentas
+            essenciais de computação e oportunidades multidisciplinares.
+          title: Princípios da Ciência de Computação ('18-'19)
+          version_title: "'18-'19"
+        csp-2019:
+          description_short: Aprende os conceitos fundamentais da ciência de computação.
+          description_student: No outono de 2016, o College Board lançou o seu curso
+            AP® mais recente, Princípios da Ciência de Computação AP. Este curso introduz
+            aos estudantes os conceitos fundamentais da ciência de computação e desafia-los
+            a explorarem como a computação e a tecnologia podem impactar o mundo.
+            O Programa AP projetou o Princípios da Ciência de Computação AP com o
+            objetivo de criar líderes em campos da ciência de computação e atrair
+            e envolver aqueles que são tradicionalmente sub-representados com ferramentas
+            essenciais de computação e oportunidades multidisciplinares.
+          description_teacher: No outono de 2016, o College Board lançou o seu curso
+            AP® mais recente, Princípios da Ciência de Computação AP. Este curso introduz
+            aos estudantes os conceitos fundamentais da ciência de computação e desafia-los
+            a explorarem como a computação e a tecnologia podem impactar o mundo.
+            O Programa AP projetou o Princípios da Ciência de Computação AP com o
+            objetivo de criar líderes em campos da ciência de computação e atrair
+            e envolver aqueles que são tradicionalmente sub-representados com ferramentas
+            essenciais de computação e oportunidades multidisciplinares.
+          title: Princípios da Ciência de Computação ('19-'20)
+          version_title: "'19-'20"
+        csp-2020:
+          description_short: Aprende os conceitos fundamentais da ciência de computação.
         csp-2021:
           description_short: Aprende os conceitos fundamentais da ciência de computação.
-        mike-test:
-          title: Fundamentos de Ciência da Computação
         csp-2022:
           description_short: Aprende os conceitos fundamentais da ciência de computação.
         csp-2023:
           description_short: Aprende os conceitos fundamentais da ciência de computação.
-        csd-2023:
-          title: Descobertas da Ciência de Computação
+        mike-test:
+          title: Fundamentos de Ciência da Computação
     resources:
-      curriculum/csd/2020:
-        name: Currículo
-      teacher_forum/csd/2020:
-        name: Fórum do professor
       curriculum/csd/2017:
         name: Currículo
-      teacher_forum_6/csd/2017:
-        name: Fórum do professor
+      curriculum/csd/2018:
+        name: Currículo
       curriculum/csd/2019:
+        name: Currículo
+      curriculum/csd/2020:
         name: Currículo
       teacher_forum/csd/2019:
         name: Fórum do professor
-      curriculum/csd/2018:
-        name: Currículo
+      teacher_forum/csd/2020:
+        name: Fórum do professor
+      teacher_forum_6/csd/2017:
+        name: Fórum do professor
       teacher_forum_6/csd/2018:
         name: Fórum do professor

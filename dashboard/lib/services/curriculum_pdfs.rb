@@ -121,6 +121,39 @@ module Services
       end
     end
 
+    def self.regenerate_pdfs(scripts)
+      scripts.each do |script|
+        Dir.mktmpdir("pdf_generation") do |dir|
+          any_pdf_generated = false
+
+          script.lessons.select(&:has_lesson_plan).each do |lesson|
+            puts "Regenerating Lesson PDFs for #{lesson.key} (from #{script.name})"
+            generate_lesson_pdf(lesson, dir)
+            any_pdf_generated = true
+          end
+
+          if should_generate_overview_pdf?(script)
+            puts "Regenerating Unit Overview PDF for #{script.name}"
+            generate_script_overview_pdf(script, dir)
+            any_pdf_generated = true
+          end
+
+          # Generating resource PDFs is currently broken
+          # See https://codedotorg.atlassian.net/browse/TEACH-601
+          #if should_generate_resource_pdf?(script)
+          #  puts "Regenerating Unit Resources PDF for #{script.name}"
+          #  generate_script_resources_pdf(script, dir)
+          #  any_pdf_generated = true
+          #end
+
+          if any_pdf_generated
+            puts "Uploading generated PDFs to S3"
+            upload_generated_pdfs_to_s3(dir)
+          end
+        end
+      end
+    end
+
     def self.generate_missing_pdfs
       get_pdf_enabled_scripts.each do |script|
         Dir.mktmpdir("pdf_generation") do |dir|
@@ -139,11 +172,13 @@ module Services
             any_pdf_generated = true
           end
 
-          if !script_resources_pdf_exists_for?(script) && should_generate_resource_pdf?(script)
-            puts "Generating missing Unit Resources PDF for #{script.name}"
-            generate_script_resources_pdf(script, dir)
-            any_pdf_generated = true
-          end
+          # Generating resource PDFs is currently broken
+          # See https://codedotorg.atlassian.net/browse/TEACH-601
+          #if !script_resources_pdf_exists_for?(script) && should_generate_resource_pdf?(script)
+          #  puts "Generating missing Unit Resources PDF for #{script.name}"
+          #  generate_script_resources_pdf(script, dir)
+          #  any_pdf_generated = true
+          #end
 
           if any_pdf_generated
             puts "Generated all missing PDFs for #{script.name}; uploading results to S3"

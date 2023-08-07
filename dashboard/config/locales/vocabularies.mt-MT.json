@@ -2,22 +2,47 @@
   "mt-MT": {
     "data": {
       "vocabularies": {
-        "function/hero/unversioned": {
-          "word": "Funzjoni"
+        "copyright/csd/2021": {
+          "word": "Drittijiet tal-Awtur"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "variable/coursef/2022": {
+        "variable/csd/2021": {
           "word": "Varjabbli"
         },
-        "define/coursef/2022": {
+        "function/csd/2021": {
+          "word": "Funzjoni"
+        },
+        "copyright/coursee/2021": {
+          "word": "Drittijiet tal-Awtur"
+        },
+        "function/coursee/2021": {
+          "word": "Funzjoni"
+        },
+        "define/coursee/2021": {
           "word": "Idefinixxi"
+        },
+        "variable/coursef/2021": {
+          "word": "Varjabbli"
+        },
+        "define/coursef/2021": {
+          "word": "Idefinixxi"
+        },
+        "function/express/2021": {
+          "word": "Funzjoni"
+        },
+        "variable/express/2021": {
+          "word": "Varjabbli"
+        },
+        "define/express/2021": {
+          "word": "Idefinixxi"
+        },
+        "copyright/csd/2022": {
+          "word": "Drittijiet tal-Awtur"
+        },
+        "variable/csd/2022": {
+          "word": "Varjabbli"
+        },
+        "function/csd/2022": {
+          "word": "Funzjoni"
         },
         "function/coursee/2022": {
           "word": "Funzjoni"
@@ -26,6 +51,12 @@
           "word": "Drittijiet tal-Awtur"
         },
         "define/coursee/2022": {
+          "word": "Idefinixxi"
+        },
+        "variable/coursef/2022": {
+          "word": "Varjabbli"
+        },
+        "define/coursef/2022": {
           "word": "Idefinixxi"
         },
         "function/express/2022": {
@@ -37,14 +68,16 @@
         "define/express/2022": {
           "word": "Idefinixxi"
         },
-        "variable/csd/2022": {
-          "word": "Varjabbli"
-        },
-        "function/csd/2022": {
+        "function/hero/unversioned": {
           "word": "Funzjoni"
         },
-        "copyright/csd/2022": {
-          "word": "Drittijiet tal-Awtur"
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "code/poem-art/unversioned": {
           "word": "",
@@ -65,39 +98,6 @@
         "line/poem-art/unversioned": {
           "word": "",
           "definition": ""
-        },
-        "variable/coursef/2021": {
-          "word": "Varjabbli"
-        },
-        "define/coursef/2021": {
-          "word": "Idefinixxi"
-        },
-        "function/express/2021": {
-          "word": "Funzjoni"
-        },
-        "variable/express/2021": {
-          "word": "Varjabbli"
-        },
-        "define/express/2021": {
-          "word": "Idefinixxi"
-        },
-        "copyright/coursee/2021": {
-          "word": "Drittijiet tal-Awtur"
-        },
-        "function/coursee/2021": {
-          "word": "Funzjoni"
-        },
-        "define/coursee/2021": {
-          "word": "Idefinixxi"
-        },
-        "variable/csd/2021": {
-          "word": "Varjabbli"
-        },
-        "function/csd/2021": {
-          "word": "Funzjoni"
-        },
-        "copyright/csd/2021": {
-          "word": "Drittijiet tal-Awtur"
         }
       }
     }

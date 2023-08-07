@@ -14,6 +14,18 @@
         "4-5 Bee Conditionals 2": {
           "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
         },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "Екран став зеленим? Якщо так, натисніть \"Кінець\". Якщо ні, натисніть \"Скидання\", змініть свій код і знову натисніть \"Запустити\". "
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "Тепер ви в режимі Дизайну."
+        },
+        "CSD U3 Random add_2021": {
+          "CSD_U3_butterfly": "Уважно переглянь цей код."
+        },
+        "CSD U3 Random add_2022": {
+          "CSD_U3_butterfly": "Уважно переглянь цей код."
+        },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "Зміни номер тут"
         },
@@ -21,6 +33,12 @@
           "CSD_U3_variables": "Зміни номер тут"
         },
         "CSD U3 Variables Predict Where X_2019": {
+          "CSD_U3_variables": "Зміни номер тут"
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Зміни номер тут"
+        },
+        "CSD U3 Variables Predict Where X_2022": {
           "CSD_U3_variables": "Зміни номер тут"
         },
         "CSD U3 debug": {
@@ -32,6 +50,42 @@
         "CSD U3 debug_2019": {
           "CSD_U3_rect_c1": "Ось код"
         },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 drawing practice 3_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
         "CSD U3 ellipse": {
           "CSD_U3_rect_c1": "Ось код"
         },
@@ -39,6 +93,12 @@
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 ellipse_2019": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 ellipse_2022": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 fill": {
@@ -50,6 +110,24 @@
         "CSD U3 fill_2019": {
           "CSD_U3_rect_c1": "Ось код"
         },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
         "CSD U3 rect": {
           "CSD_U3_rect_c1": "Ось код"
         },
@@ -57,6 +135,12 @@
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 rect_2019": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 rect_2022": {
           "CSD_U3_rect_c1": "Ось код"
         },
         "CSD U3 sequence": {
@@ -68,6 +152,63 @@
         "CSD U3 sequence_2019": {
           "CSD_U3_rect_c1": "Ось код"
         },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Ось код"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "CSDU6L10_rainbow": "Додай свій код тут"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "CSD U6L9.7 - if-statement": "Додай сюди команду умови "
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - If": "Додай сюди команду умови "
+        },
         "CSD U6 colorLeds intensity": {
           "CSDU6L10_rainbow": "Додай свій код тут"
         },
@@ -76,6 +217,15 @@
         },
         "CSD U6 colorLeds intensity_2019": {
           "CSDU6L10_rainbow": "Додай свій код тут"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Додай свій код тут"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Зміни номер тут"
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "Зміни номер тут"
         },
         "Course 4 Artist 4": {
           "repeat_full_circle": "Вкажи, скільки разів Зомбі має переміститись для утворення кола"
@@ -120,23 +270,69 @@
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "Оберіть тип танцівника тут."
         },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Оберіть тип танцівника тут."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Оберіть тип танцівника тут."
+        },
         "CourseD_Dance_2020_02": {
-          "dance_callout_11_a": "Додайте цей блок до своєї програми.",
-          "arrow_buttons": "Натискайте клавіші зі стрілками, щоб управляти своїм танцівником."
+          "arrow_buttons": "Натискайте клавіші зі стрілками, щоб управляти своїм танцівником.",
+          "dance_callout_11_a": "Додайте цей блок до своєї програми."
+        },
+        "CourseD_Dance_2020_022022": {
+          "arrow_buttons": "Натискайте клавіші зі стрілками, щоб управляти своїм танцівником.",
+          "dance_callout_11_a": "Додайте цей блок до своєї програми."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "arrow_buttons": "Натискайте клавіші зі стрілками, щоб управляти своїм танцівником.",
+          "dance_callout_11_a": "Додайте цей блок до своєї програми."
         },
         "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Додайте цей блок до своєї програми!"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Додайте цей блок до своєї програми!"
+        },
+        "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "Додайте цей блок до своєї програми!"
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "Додайте нову подію до програми."
         },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Додайте нову подію до програми."
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Додайте нову подію до програми."
+        },
         "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Новий блок!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Новий блок!"
+        },
+        "CourseD_Dance_2020_06_2021": {
           "dance_party_11_5_groups": "Новий блок!"
         },
         "CourseD_Dance_2020_07": {
           "setprop_hint": "Новий блок!"
         },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Новий блок!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Новий блок!"
+        },
         "CourseD_Dance_2020_09": {
+          "new_block_3": "Новий блок!",
+          "new_block_4": "Новий блок!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Новий блок!",
+          "new_block_4": "Новий блок!"
+        },
+        "CourseD_Dance_2020_09_2021": {
           "new_block_3": "Новий блок!",
           "new_block_4": "Новий блок!"
         },
@@ -159,12 +355,26 @@
         "CourseD_Dance_Party_11_5": {
           "dance_party_11_5_groups": "Шукайте блок \"усі качки\" тут"
         },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Клацніть тут, щоб розгорнути блок.",
+          "pointerlocation": "Перетягніть блок суб'єкта сюди."
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Клацніть тут, щоб розгорнути блок.",
+          "pointerlocation": "Перетягніть блок суб'єкта сюди."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Клацніть, щоб створити новий костюм"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
+        },
         "Dance_2019_01": {
           "dance_callout_01": "Оберіть тип танцівника тут."
         },
         "Dance_2019_02": {
-          "dance_callout_11_a": "Додайте цей блок до своєї програми.",
-          "arrow_buttons": "Натискайте клавіші зі стрілками, щоб управляти своїм танцівником."
+          "arrow_buttons": "Натискайте клавіші зі стрілками, щоб управляти своїм танцівником.",
+          "dance_callout_11_a": "Додайте цей блок до своєї програми."
         },
         "Dance_2019_04": {
           "dance_callout_02": "Додайте цей блок до своєї програми!"
@@ -201,13 +411,22 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "Шукайте блок \"усі качки\" тут"
         },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Використовуй цей блок для приміток для себе або викладача, як працює твій код."
+        },
         "Function intro Ryan": {
+          "Function_intro_Ryan_1": "Ця інструкція каже комп’ютеру запустити ВЕЛИКИЙ фрагмент програмного коду з тим самим іменем у робочій області."
+        },
+        "Function intro Ryan2022": {
           "Function_intro_Ryan_1": "Ця інструкція каже комп’ютеру запустити ВЕЛИКИЙ фрагмент програмного коду з тим самим іменем у робочій області."
         },
         "Function intro Ryan_2019": {
           "Function_intro_Ryan_1": "Ця інструкція каже комп’ютеру запустити ВЕЛИКИЙ фрагмент програмного коду з тим самим іменем у робочій області."
         },
         "Function intro Ryan_2020": {
+          "Function_intro_Ryan_1": "Ця інструкція каже комп’ютеру запустити ВЕЛИКИЙ фрагмент програмного коду з тим самим іменем у робочій області."
+        },
+        "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "Ця інструкція каже комп’ютеру запустити ВЕЛИКИЙ фрагмент програмного коду з тим самим іменем у робочій області."
         },
         "Geometric Sun": {
@@ -229,7 +448,16 @@
         "Infinity_repeat": {
           "Infinity_repeat_callout": "Помісти блоки руху всередину"
         },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Коли будете готові, натисніть \"Запустити\", щоб спробувати програму."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Натисни \"Запустити\", щоб почати рух."
+        },
         "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_1": "Це цикл \"повтор\"!  Перемістіть його до робочої області та додайте код, який потрібно виконати кілька разів."
+        },
+        "MC_HOC_2017_03_Cole2022": {
           "MC_HOC_2017_03_Cole_1": "Це цикл \"повтор\"!  Перемістіть його до робочої області та додайте код, який потрібно виконати кілька разів."
         },
         "MC_HOC_2017_03_Cole_2019": {
@@ -238,7 +466,13 @@
         "MC_HOC_2017_03_Cole_2020": {
           "MC_HOC_2017_03_Cole_1": "Це цикл \"повтор\"!  Перемістіть його до робочої області та додайте код, який потрібно виконати кілька разів."
         },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Це цикл \"повтор\"!  Перемістіть його до робочої області та додайте код, який потрібно виконати кілька разів."
+        },
         "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Agent може ходити над водою, а гравець – ні!"
+        },
+        "MC_HOC_2017_04_Cole2022": {
           "MC_HOC_2017_04_Cole_a": "Agent може ходити над водою, а гравець – ні!"
         },
         "MC_HOC_2017_04_Cole_2019": {
@@ -247,7 +481,13 @@
         "MC_HOC_2017_04_Cole_2020": {
           "MC_HOC_2017_04_Cole_a": "Agent може ходити над водою, а гравець – ні!"
         },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent може ходити над водою, а гравець – ні!"
+        },
         "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "Ці блоки не можна відкинути, але можна змінити!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
           "MC_HOC_2017_06_Cole_1": "Ці блоки не можна відкинути, але можна змінити!"
         },
         "MC_HOC_2017_06_Cole_2019": {
@@ -256,13 +496,22 @@
         "MC_HOC_2017_06_Cole_2020": {
           "MC_HOC_2017_06_Cole_1": "Ці блоки не можна відкинути, але можна змінити!"
         },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Ці блоки не можна відкинути, але можна змінити!"
+        },
         "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_1": "Agent може ходити над лавою, а гравець – ні!  "
+        },
+        "MC_HOC_2017_Ali2022": {
           "MC_HOC_2017_08_RY_1": "Agent може ходити над лавою, а гравець – ні!  "
         },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_1": "Agent може ходити над лавою, а гравець – ні!  "
         },
         "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_1": "Agent може ходити над лавою, а гравець – ні!  "
+        },
+        "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "Agent може ходити над лавою, а гравець – ні!  "
         },
         "NEW Course 4 Artist Functions 7": {
@@ -275,8 +524,8 @@
           "create_function": "Клацни тут, щоб відкрити спливаюче вікно \"Функції\", а тоді клацни кнопку \"Створити функцію\"."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Клацни, щоб додати параметр у свою функцію",
-          "add_and_drag_parameter": "Запиши назву параметра, клацни \"додати\" та перетягни його у визначення свої функції"
+          "add_and_drag_parameter": "Запиши назву параметра, клацни \"додати\" та перетягни його у визначення свої функції",
+          "edit_add_parameter": "Клацни, щоб додати параметр у свою функцію"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Перетягни сюди змінну довжини, для заміни знаків питання"
@@ -284,10 +533,26 @@
         "NEW Course 4 Bee For Loops 5": {
           "actions_category": "Панель інструментів тепер виглядає інакше! Блоки \"Дії\" тепер знаходяться тут."
         },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Клацніть на категорії, щоб побачити блоки у вашому наборі інструментів! Перетягніть блоки в робочу область, щоб додати їх до своєї програми ",
+          "New Artist Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
+          "sign_in_to_save_project": "Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти проект у своєму обліковому записі!"
+        },
         "New Frozen Project": {
           "snowflake_dropdown": "Скористайтесь розкривним списком, щоб створювати різні сніжинки!"
         },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Клацніть на категорії, щоб побачити блоки у вашому наборі інструментів! Перетягніть блоки в робочу область, щоб додати їх до своєї програми",
+          "New Play Lab Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
+          "sign_in_to_save_project": "Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти проект у своєму обліковому записі!"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
+        },
         "Overworld Chop Trees": {
+          "craft_callout_preplaced": "Ми вже розмістили деякі блоки в заготовці"
+        },
+        "Overworld Chop Trees2022": {
           "craft_callout_preplaced": "Ми вже розмістили деякі блоки в заготовці"
         },
         "Overworld Chop Trees_2019": {
@@ -296,7 +561,13 @@
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "Ми вже розмістили деякі блоки в заготовці"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Ми вже розмістили деякі блоки в заготовці"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Цей код розпочне побудову будинку. Можеш його завершити?"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "Цей код розпочне побудову будинку. Можеш його завершити?"
         },
         "Overworld House Frame Chosen_2019": {
@@ -305,7 +576,13 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "Цей код розпочне побудову будинку. Можеш його завершити?"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Цей код розпочне побудову будинку. Можеш його завершити?"
+        },
         "Overworld Move to Sheep": {
+          "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму"
+        },
+        "Overworld Move to Sheep2022": {
           "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму"
         },
         "Overworld Move to Sheep_2019": {
@@ -314,7 +591,14 @@
         "Overworld Move to Sheep_2020": {
           "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму"
         },
+        "Overworld Move to Sheep_2021": {
+          "craft_drag_block_callout": "Перетягни блок 'рухатися вперед' та прикріпи його під іншим блоком",
+          "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму"
+        },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "Повторюй дії, розміщуючи тут блоки"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "Повторюй дії, розміщуючи тут блоки"
         },
         "Overworld Place Wall_2019": {
@@ -323,7 +607,13 @@
         "Overworld Place Wall_2020": {
           "craft_inside_repeat": "Повторюй дії, розміщуючи тут блоки"
         },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Повторюй дії, розміщуючи тут блоки"
+        },
         "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Цей код перевіряє наявність лави, можеш додати команду, щоб рухатися вперед?"
+        },
+        "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "Цей код перевіряє наявність лави, можеш додати команду, щоб рухатися вперед?"
         },
         "Underground Avoiding Lava_2019": {
@@ -332,7 +622,13 @@
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "Цей код перевіряє наявність лави, можеш додати команду, щоб рухатися вперед?"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Цей код перевіряє наявність лави, можеш додати команду, щоб рухатися вперед?"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "Добувай це залізо!"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "Добувай це залізо!"
         },
         "Underground Iron_2019": {
@@ -341,7 +637,53 @@
         "Underground Iron_2020": {
           "craft_what_is_iron": "Добувай це залізо!"
         },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Добувай це залізо!"
+        },
+        "Virtual Pet 2_-2022-2": {
+          "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
+        },
+        "course3_bee_debugging_challenge1": {
+          "courseD_bee_debugging_challenge1_callout1": "Використовуйте цю команду, щоб перемістити бджолу назад."
+        },
+        "course3_bee_functions_challenge3": {
+          "courseF_bee_functions_challenge1_1": "Який код потрібно ввести в цю функцію?",
+          "courseF_bee_functions_challenge1_2": "Тут можна використовувати функцію \"перевірити нектар чи мед\", якщо відредагувати її, щоб зробити мед кілька разів."
+        },
+        "course3_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
         "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
+        },
+        "courseA_artist_loops42022": {
           "courseA_artist_loops4_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
         },
         "courseA_artist_loops4_2018": {
@@ -353,7 +695,19 @@
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
         },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Ця цифра означає, що лише один блок такого типу може бути використаний у кінцевій відповіді."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "Ти знаєш, що можна малювати поверх лінії, якщо буде потрібно?"
+        },
         "courseA_collector_loops1": {
+          "courseA_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
+        },
+        "courseA_collector_loops12022": {
           "courseA_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
         },
         "courseA_collector_loops1_2019": {
@@ -362,7 +716,13 @@
         "courseA_collector_loops1_2020": {
           "courseA_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
         },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
+        },
         "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
+        },
+        "courseA_collector_loops32022": {
           "gradek_adventurer_loops2_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
         },
         "courseA_collector_loops3_2018": {
@@ -372,6 +732,9 @@
           "gradek_adventurer_loops2_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
         },
         "courseA_collector_loops3_2020": {
+          "gradek_adventurer_loops2_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
+        },
+        "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
         },
         "courseA_collector_preLoops2": {
@@ -389,7 +752,13 @@
         "courseA_collector_preLoops6": {
           "courseA_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
         },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Це панель інструментів. Тут ти знайдеш додаткові блоки для розв'язання завдань."
+        },
         "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "Натисніть лампочку, коли вам потрібна підказка!"
+        },
+        "courseA_maze_seq12022": {
           "courseA_maze_seq1_1": "Натисніть лампочку, коли вам потрібна підказка!"
         },
         "courseA_maze_seq1_2018": {
@@ -401,754 +770,11 @@
         "courseA_maze_seq1_2020": {
           "courseA_maze_seq1_1": "Натисніть лампочку, коли вам потрібна підказка!"
         },
-        "courseA_maze_seq2": {
-          "courseA_maze_seqA_callout1": "Використовуйте кнопку \"крок\", щоб поступово проходити через програму. Це допоможе вам знайти помилку!"
-        },
-        "courseB_collector_loops1": {
-          "courseB_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
-        },
-        "courseB_collector_loops1_2018": {
-          "courseB_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
-        },
-        "courseB_collector_loops1_2019": {
-          "courseB_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
-        },
-        "courseB_collector_loops1_2020": {
-          "courseB_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
-        },
-        "courseB_maze_seq1": {
-          "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
-        },
-        "courseB_maze_seq1_2018": {
-          "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
-        },
-        "courseB_maze_seq1_2019": {
-          "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
-        },
-        "courseB_maze_seq1_2020": {
-          "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
-        },
-        "courseB_maze_seq2": {
-          "courseB_maze_seq2_callout1": "Використовуйте кнопку \"крок\", щоб поступово проходити через програму. Це допоможе вам знайти помилку!"
-        },
-        "courseC_collector_prog1": {
-          "courseC_collector_prog1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
-        },
-        "courseC_maze_programming7": {
-          "courseC_maze_programming7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.",
-          "courseC_maze_programming7_2": "Ці блоки виробленні з каміння та не можуть бути викинутими."
-        },
-        "courseC_maze_programming7_2018": {
-          "courseC_maze_programming7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.",
-          "courseC_maze_programming7_2": "Ці блоки виробленні з каміння та не можуть бути викинутими."
-        },
-        "courseC_maze_programming7_2019": {
-          "courseC_maze_programming7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.",
-          "courseC_maze_programming7_2": "Ці блоки виробленні з каміння та не можуть бути викинутими."
-        },
-        "courseC_maze_programming7_2020": {
-          "courseC_maze_programming7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.",
-          "courseC_maze_programming7_2": "Ці блоки виробленні з каміння та не можуть бути викинутими."
-        },
-        "courseD_bee_conditionals2": {
-          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
-        },
-        "courseD_bee_conditionals2_2018": {
-          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
-        },
-        "courseD_bee_conditionals2_2019": {
-          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
-        },
-        "courseD_bee_conditionals2_2020": {
-          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
-        },
-        "courseD_bee_conditionals2_copy": {
-          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
-        },
-        "courseD_scrat_ramp8": {
-          "courseD_maze_ramp7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб."
-        },
-        "frozen circle function with parameter": {
-          "frozen_circle_function_with_parameter_circle": "Використай блок \"створити коло\" та зміни розмір фігури."
-        },
-        "frozen cross": {
-          "repeat_blocks_1": "(1) Використай цей блок, і розмісти його біля сірих блоків у робочій області",
-          "repeat_blocks_2": "(2) Перемісти сюди блок \"повторити\", і розмісти у ньому сірі блоки"
-        },
-        "frozen cross rotate": {
-          "replace_questions_degree": "Скористайтесь розкривним списком, щоб змінити \"???\" на число"
-        },
-        "frozen diamond": {
-          "frozen_diamond_repeat": "Скористайтесь блоком повторення для створення цієї фігури."
-        },
-        "frozen diamond snowflake": {
-          "frozen_diamond_repeat": "Скористайтесь блоком повторення для створення цієї фігури."
-        },
-        "frozen freeplay": {
-          "snowflake_dropdown": "Скористайтесь розкривним списком, щоб створювати різні сніжинки!"
-        },
-        "frozen line": {
-          "run": "Натисни \"Запустити\", щоб випробувати програму!",
-          "move_elsa_forward": "Перемісти блок \"Рухатися вперед\" та прикріпи його під блоком \"Коли гра починається\", щоб змусити Ельзу рухатися вперед"
-        },
-        "frozen perpendicular": {
-          "turn_elsa": "Використайте блок \"Повернути\", щоб змусити Ельзу розвернутись. Число у розкривному списку визначає, наскільки повернеться Ельза"
-        },
-        "frozen snowflake branch": {
-          "frozen_snowflake_branch": "Скористайтесь блоком \"створити гілочку сніжинки\""
-        },
-        "frozen square iterative": {
-          "frozen_create_square": "Додайте більше блоків, щоб вийшов квадрат"
-        },
-        "frozen square loop": {
-          "replace_questions": "Скористайтесь розкривним списком, щоб змінити \"???\" на число"
-        },
-        "frozen square loop 3x": {
-          "replace_questions": "Скористайтесь розкривним списком, щоб змінити \"???\" на число"
-        },
-        "frozen square snowflake": {
-          "replace_questions": "Скористайтесь розкривним списком, щоб змінити \"???\" на число"
-        },
-        "outbreak2": {
-          "minitoolbox": "Клацніть тут, щоб розгорнути блок.",
-          "pointerlocation": "Перетягніть блок суб'єкта сюди."
-        },
-        "outbreak7": {
-          "costumes_callout": "Клацніть, щоб створити новий костюм"
-        },
-        "AppLab Intro 7 - Change Screen Color": {
-          "applab_hoc_finish": "Екран став зеленим? Якщо так, натисніть \"Кінець\". Якщо ні, натисніть \"Скидання\", змініть свій код і знову натисніть \"Запустити\". "
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-          "AppLabHoCFinal11": "Тепер ви в режимі Дизайну."
-        },
-        "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "Коли будете готові, натисніть \"Запустити\", щоб спробувати програму."
-        },
-        "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "Натисни \"Запустити\", щоб почати рух."
-        },
-        "CourseD_Dance_2020_01_2021": {
-          "dance_callout_01": "Оберіть тип танцівника тут."
-        },
-        "CourseD_Dance_2020_02_2021": {
-          "dance_callout_11_a": "Додайте цей блок до своєї програми.",
-          "arrow_buttons": "Натискайте клавіші зі стрілками, щоб управляти своїм танцівником."
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "Додайте цей блок до своєї програми!"
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "dance_callout_05": "Додайте нову подію до програми."
-        },
-        "CourseD_Dance_2020_06_2021": {
-          "dance_party_11_5_groups": "Новий блок!"
-        },
-        "CourseD_Dance_2020_07_2021": {
-          "setprop_hint": "Новий блок!"
-        },
-        "CourseD_Dance_2020_09_2021": {
-          "new_block_3": "Новий блок!",
-          "new_block_4": "Новий блок!"
-        },
-        "CourseF_outbreak2": {
-          "minitoolbox": "Клацни тут, щоб розгорнути блок.",
-          "pointerlocation": "Перетягніть блок суб'єкта сюди."
-        },
-        "CourseF_outbreak7": {
-          "costumes_callout": "Клацніть, щоб створити новий костюм"
-        },
-        "Function intro Ryan_2021": {
-          "Function_intro_Ryan_1": "Ця інструкція каже комп’ютеру запустити ВЕЛИКИЙ фрагмент програмного коду з тим самим іменем у робочій області."
-        },
-        "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "Це цикл \"повтор\"!  Перемістіть його до робочої області та додайте код, який потрібно виконати кілька разів."
-        },
-        "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Agent може ходити над водою, а гравець – ні!"
-        },
-        "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_1": "Ці блоки не можна відкинути, але можна змінити!"
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "MC_HOC_2017_08_RY_1": "Agent може ходити над лавою, а гравець – ні!  "
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Ми вже розмістили деякі блоки в заготовці"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Цей код розпочне побудову будинку. Можеш його завершити?"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму",
-          "craft_drag_block_callout": "Перетягни блок \"рух вперед\" та прикріпи його під іншим блоком"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Повторюй дії, розміщуючи тут блоки"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Цей код перевіряє наявність лави, можеш додати команду, щоб рухатися вперед?"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "Добувай це залізо!"
-        },
-        "courseA_artist_loops4_2021": {
-          "courseA_artist_loops4_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
-        },
-        "courseA_collector_loops1_2021": {
-          "courseA_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
-        },
-        "courseA_collector_loops3_2021": {
-          "gradek_adventurer_loops2_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
-        },
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "Натисніть лампочку, коли вам потрібна підказка!"
         },
-        "courseB_collector_loops1_2021": {
-          "courseB_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
-        },
-        "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
-        },
-        "courseC_maze_programming7_2021": {
-          "courseC_maze_programming7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.",
-          "courseC_maze_programming7_2": "Ці блоки виробленні з каміння та не можуть бути викинутими."
-        },
-        "courseD_bee_conditionals2_2021": {
-          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
-        },
-        "courseD_bee_conditionals2_dani": {
-          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
-        },
-        "helloworld_animals_costumes": {
-          "hello_world_new": "Новий блок!"
-        },
-        "helloworld_animals_sizes": {
-          "hello_world_new": "Новий блок!",
-          "hello_world_new_block": "Новий блок!!!!"
-        },
-        "helloworld_animals_sounds": {
-          "hello_world_new": "Новий блок!"
-        },
-        "helloworld_emoji_costumes": {
-          "hello_world_new": "Новий блок!"
-        },
-        "helloworld_emoji_sizes": {
-          "hello_world_new": "Новий блок!",
-          "hello_world_new_block": "Новий блок!"
-        },
-        "helloworld_emoji_sounds": {
-          "hello_world_new": "Новий блок!"
-        },
-        "helloworld_food_costumes": {
-          "hello_world_new": "Новий блок!"
-        },
-        "helloworld_food_sizes": {
-          "hello_world_new": "Новий блок!",
-          "hello_world_new_block": "Новий блок!"
-        },
-        "helloworld_food_sounds": {
-          "hello_world_new": "Новий блок!"
-        },
-        "helloworld_retro_costumes": {
-          "hello_world_new": "Новий блок!"
-        },
-        "helloworld_retro_sizes": {
-          "hello_world_new": "Новий блок!",
-          "hello_world_new_block": "Новий блок!"
-        },
-        "helloworld_retro_sounds": {
-          "hello_world_new": "Новий блок!"
-        },
-        "poetry_hoc_addSprites": {
-          "poetry_sprite": "Новий блок!"
-        },
-        "poetry_hoc_events1": {
-          "poetry_event": "Новий блок!",
-          "poetry_foreground": "Новий блок!"
-        },
-        "poetry_hoc_freeplay": {
-          "poetry_burst": "Новий блок!",
-          "poetry_multiple_sprites": "Новий блок!",
-          "poetry_new_block": "Новий блок!"
-        },
-        "poetry_hoc_sounds": {
-          "poetry_sound": "Новий блок!",
-          "poetry_music": "Новий блок!"
-        },
-        "poetry_hoc_spriteBehaviors": {
-          "poetry_sprite_begins": "Новий блок!",
-          "poetry_sprite_stops": "Новий блок!"
-        },
-        "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "Новий блок!",
-          "poetry_remove_sprite": "Новий блок!"
-        },
-        "New Artist Project": {
-          "New Artist Project_callout1": "Клацніть на категорії, щоб побачити блоки у вашому наборі інструментів! Перетягніть блоки в робочу область, щоб додати їх до своєї програми ",
-          "New Artist Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
-          "sign_in_to_save_project": "Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти проект у своєму обліковому записі!"
-        },
-        "New Play Lab Project": {
-          "New Play Lab Project_callout1": "Клацніть на категорії, щоб побачити блоки у вашому наборі інструментів! Перетягніть блоки в робочу область, щоб додати їх до своєї програми",
-          "New Play Lab Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
-          "sign_in_to_save_project": "Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти проект у своєму обліковому записі!"
-        },
-        "CSD U3 Variables Predict Where X_2021": {
-          "CSD_U3_variables": "Зміни номер тут"
-        },
-        "CSD U3 debug_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 drawing challenge 2_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 drawing challenge 3_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 drawing practice 1_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 drawing practice 2_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 drawing practice 3_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 ellipse_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 fill_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 properties depth_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 properties tint_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 rect_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 sequence_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 shapes arc_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 shapes behind_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 shapes line_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 shapes missing_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 shapes polygon_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 shapes scene_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 shapes_2021": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U6 colorLeds intensity_2021": {
-          "CSDU6L10_rainbow": "Додай свій код тут"
-        },
-        "CSD web text explore_2021": {
-          "CSD_U3_variables": "Зміни номер тут"
-        },
-        "course3_bee_debugging_challenge1": {
-          "courseD_bee_debugging_challenge1_callout1": "Використовуйте цю команду, щоб перемістити бджолу назад."
-        },
-        "course3_bee_functions_challenge3": {
-          "courseF_bee_functions_challenge1_1": "Який код потрібно ввести в цю функцію?",
-          "courseF_bee_functions_challenge1_2": "Тут можна використовувати функцію \"перевірити нектар чи мед\", якщо відредагувати її, щоб зробити мед кілька разів."
-        },
-        "course3_playLab_challenge1": {
-          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
-        },
-        "courseC_PlayLab_events_challenge1": {
-          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
-        },
-        "courseC_PlayLab_events_challenge1_2018": {
-          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
-        },
-        "courseC_PlayLab_events_challenge1_2019": {
-          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
-        },
-        "courseC_PlayLab_events_challenge1_2020": {
-          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
-        },
-        "courseC_PlayLab_events_challenge1_2021": {
-          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати виконавців у різні частини ігрового простору.\n"
-        },
-        "courseD_bee_debugging_challenge1": {
-          "courseD_bee_debugging_challenge1_callout1": "Використовуйте цю команду, щоб перемістити бджолу назад."
-        },
-        "courseD_bee_debugging_challenge1a": {
-          "courseD_bee_debugging_challenge1_callout1": "Використовуйте цю команду, щоб перемістити бджолу назад."
-        },
-        "courseE_playLab_challenge1": {
-          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
-        },
-        "courseF_bee_functions_challenge1": {
-          "courseF_bee_functions_challenge1_1": "Який код потрібно ввести в цю функцію?",
-          "courseF_bee_functions_challenge1_2": "Тут можна використовувати функцію \"перевірити нектар чи мед\", якщо відредагувати її, щоб зробити мед кілька разів."
-        },
-        "CSD U3 Variables Predict Where X_2022": {
-          "CSD_U3_variables": "Зміни номер тут"
-        },
-        "CSD U3 debug_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 drawing challenge 2_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 drawing challenge 3_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 drawing practice 1_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 drawing practice 2_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 drawing practice 3_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 ellipse_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 fill_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 properties depth_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 properties tint_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 rect_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 sequence_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 shapes arc_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 shapes behind_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 shapes line_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 shapes missing_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 shapes polygon_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 shapes scene_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U3 shapes_2022": {
-          "CSD_U3_rect_c1": "Ось код"
-        },
-        "CSD U6 - Color LEDs - SB4_2222": {
-          "CSDU6L10_rainbow": "Додай свій код тут"
-        },
-        "CSD web text explore_2022": {
-          "CSD_U3_variables": "Зміни номер тут"
-        },
-        "CourseD_Dance_2020_012022": {
-          "dance_callout_01": "Оберіть тип танцівника тут."
-        },
-        "CourseD_Dance_2020_022022": {
-          "dance_callout_11_a": "Додайте цей блок до своєї програми.",
-          "arrow_buttons": "Натискайте клавіші зі стрілками, щоб управляти своїм танцівником."
-        },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "Додайте цей блок до своєї програми!"
-        },
-        "CourseD_Dance_2020_052022": {
-          "dance_callout_05": "Додайте нову подію до програми."
-        },
-        "CourseD_Dance_2020_062022": {
-          "dance_party_11_5_groups": "Новий блок!"
-        },
-        "CourseD_Dance_2020_072022": {
-          "setprop_hint": "Новий блок!"
-        },
-        "CourseD_Dance_2020_092022": {
-          "new_block_3": "Новий блок!",
-          "new_block_4": "Новий блок!"
-        },
-        "CourseF_outbreak2_-2022-2": {
-          "minitoolbox": "Клацніть тут, щоб розгорнути блок.",
-          "pointerlocation": "Перетягніть блок суб'єкта сюди."
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_1": "Ця інструкція каже комп’ютеру запустити ВЕЛИКИЙ фрагмент програмного коду з тим самим іменем у робочій області."
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_1": "Це цикл \"повтор\"!  Перемістіть його до робочої області та додайте код, який потрібно виконати кілька разів."
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "Agent може ходити над водою, а гравець – ні!"
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_1": "Ці блоки не можна відкинути, але можна змінити!"
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_1": "Agent може ходити над лавою, а гравець – ні!  "
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Ми вже розмістили деякі блоки в заготовці"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Цей код розпочне побудову будинку. Можеш його завершити?"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Повторюй дії, розміщуючи тут блоки"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Цей код перевіряє наявність лави, можеш додати команду, щоб рухатися вперед?"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Добувай це залізо!"
-        },
-        "courseA_artist_loops42022": {
-          "courseA_artist_loops4_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
-        },
-        "courseA_collector_loops12022": {
-          "courseA_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
-        },
-        "courseA_collector_loops32022": {
-          "gradek_adventurer_loops2_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
-        },
-        "courseA_maze_seq12022": {
-          "courseA_maze_seq1_1": "Натисніть лампочку, коли вам потрібна підказка!"
-        },
-        "courseB_collector_loops12022": {
-          "courseB_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
-        },
-        "courseB_maze_seq12022": {
-          "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
-        },
-        "courseC_PlayLab_events_challenge12022": {
-          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
-        },
-        "courseC_PlayLab_events_lesson_extras": {
-          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
-        },
-        "courseC_maze_programming72022": {
-          "courseC_maze_programming7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.",
-          "courseC_maze_programming7_2": "Ці блоки виробленні з каміння та не можуть бути викинутими."
-        },
-        "courseD_bee_conditionals22022": {
-          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
-        },
-        "helloworld_food_costumes_soccer-2022": {
-          "hello_world_new": "Новий блок!"
-        },
-        "helloworld_food_costumes_space-2022": {
-          "hello_world_new": "Новий блок!"
-        },
-        "helloworld_food_sizes_soccer-2022": {
-          "hello_world_new": "Новий блок!",
-          "hello_world_new_block": "Новий блок!"
-        },
-        "helloworld_food_sizes_space-2022": {
-          "hello_world_new": "Новий блок!",
-          "hello_world_new_block": "Новий блок!"
-        },
-        "helloworld_food_sounds_soccer-2022": {
-          "hello_world_new": "Новий блок!"
-        },
-        "helloworld_food_sounds_space-2022": {
-          "hello_world_new": "Новий блок!"
-        },
-        "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
-        },
-        "New Sprite Lab Project": {
-          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
-        },
-        "courseE_aboutme_22022": {
-          "": "Натисніть тут, щоб додати костюми до вашого проекту."
-        },
-        "coursee_helloworld_events": {
-          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
-        },
-        "coursee_helloworld_freeplay": {
-          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
-        },
-        "coursee_helloworld_say": {
-          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили.",
-          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт."
-        },
-        "helloworld_animals_backgrounds": {
-          "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
-        },
-        "helloworld_animals_behaviors": {
-          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
-        },
-        "helloworld_animals_click": {
-          "hw_Run": "Натисніть тут, щоб запустити код."
-        },
-        "helloworld_animals_events": {
-          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
-        },
-        "helloworld_animals_freeplay": {
-          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
-        },
-        "helloworld_animals_location": {
-          "pin": "шпилька"
-        },
-        "helloworld_animals_multi": {
-          "pin": "шпилька"
-        },
-        "helloworld_animals_say": {
-          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили.",
-          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт."
-        },
-        "helloworld_emoji_backgrounds": {
-          "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
-        },
-        "helloworld_emoji_behaviors": {
-          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
-        },
-        "helloworld_emoji_click": {
-          "hw_Run": "Натисніть тут, щоб запустити код."
-        },
-        "helloworld_emoji_events": {
-          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
-        },
-        "helloworld_emoji_freeplay": {
-          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
-        },
-        "helloworld_emoji_location": {
-          "pin": "шпилька"
-        },
-        "helloworld_emoji_multi": {
-          "pin": "шпилька"
-        },
-        "helloworld_emoji_say": {
-          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили.",
-          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт."
-        },
-        "helloworld_food_backgrounds": {
-          "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
-        },
-        "helloworld_food_backgrounds_soccer-2022": {
-          "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
-        },
-        "helloworld_food_backgrounds_space-2022": {
-          "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
-        },
-        "helloworld_food_behaviors": {
-          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
-        },
-        "helloworld_food_behaviors_soccer-2022": {
-          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
-        },
-        "helloworld_food_behaviors_space-2022": {
-          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
-        },
-        "helloworld_food_click": {
-          "hw_Run": "Натисніть тут, щоб запустити код."
-        },
-        "helloworld_food_click_soccer-2022": {
-          "hw_Run": "Натисніть тут, щоб запустити код."
-        },
-        "helloworld_food_click_space-2022": {
-          "hw_Run": "Клацніть тут спочатку!"
-        },
-        "helloworld_food_events": {
-          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
-        },
-        "helloworld_food_events_soccer-2022": {
-          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
-        },
-        "helloworld_food_events_space-2022": {
-          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
-        },
-        "helloworld_food_freeplay": {
-          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
-        },
-        "helloworld_food_freeplay_soccer-2022": {
-          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
-        },
-        "helloworld_food_freeplay_space-2022": {
-          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
-        },
-        "helloworld_food_location": {
-          "pin": "шпилька"
-        },
-        "helloworld_food_location_soccer-2022": {
-          "pin": "шпилька"
-        },
-        "helloworld_food_location_space-2022": {
-          "pin": "шпилька"
-        },
-        "helloworld_food_multi": {
-          "pin": "шпилька"
-        },
-        "helloworld_food_multi_soccer-2022": {
-          "pin": "шпилька"
-        },
-        "helloworld_food_multi_space-2022": {
-          "pin": "шпилька"
-        },
-        "helloworld_food_say": {
-          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили.",
-          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт."
-        },
-        "helloworld_food_say_soccer-2022": {
-          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили.",
-          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт."
-        },
-        "helloworld_food_say_space-2022": {
-          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили.",
-          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт."
-        },
-        "helloworld_retro_backgrounds": {
-          "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
-        },
-        "helloworld_retro_behaviors": {
-          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
-        },
-        "helloworld_retro_click": {
-          "hw_Run": "Натисніть тут, щоб запустити код."
-        },
-        "helloworld_retro_events": {
-          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
-        },
-        "helloworld_retro_freeplay": {
-          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
-        },
-        "helloworld_retro_location": {
-          "pin": "шпилька"
-        },
-        "helloworld_retro_multi": {
-          "pin": "шпилька"
-        },
-        "helloworld_retro_say": {
-          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили.",
-          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт."
-        },
-        "courseA_artist_loops7_2021": {
-          "courseA_artist_loops7_1": "Ця цифра означає, що лише один блок такого типу може бути використаний у кінцевій відповіді."
-        },
-        "courseA_artist_loops8_2021": {
-          "courseA_artist_loops8_1": "Ти знаєш, що можна малювати поверх лінії, якщо буде потрібно?"
+        "courseA_maze_seq2": {
+          "courseA_maze_seqA_callout1": "Використовуйте кнопку \"крок\", щоб поступово проходити через програму. Це допоможе вам знайти помилку!"
         },
         "courseA_playLab_events4_2021": {
           "courseA_playlab_events4_callout1": "Це заклик"
@@ -1168,17 +794,256 @@
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_1": "У наборі інструментів є лише один з цих блоків.  Як ти будеш його використовувати?"
         },
+        "courseB_collector_loops1": {
+          "courseB_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
+        },
+        "courseB_collector_loops12022": {
+          "courseB_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
+        },
+        "courseB_collector_loops1_2018": {
+          "courseB_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
+        },
+        "courseB_collector_loops1_2019": {
+          "courseB_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
+        },
+        "courseB_collector_loops1_2020": {
+          "courseB_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
+        },
+        "courseB_maze_seq1": {
+          "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
+        },
+        "courseB_maze_seq1_2018": {
+          "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
+        },
+        "courseB_maze_seq1_2019": {
+          "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
+        },
+        "courseB_maze_seq1_2020": {
+          "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
+        },
+        "courseB_maze_seq2": {
+          "courseB_maze_seq2_callout1": "Використовуйте кнопку \"крок\", щоб поступово проходити через програму. Це допоможе вам знайти помилку!"
+        },
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "Використовуй зелену стрілку розкривного списку для зміни напрямків."
         },
-        "Fish Tank 3-validated_2021": {
-          "spritelab_comment": "Використовуй цей блок для приміток про те, як працює твій код для себе або для вчителя."
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Перемісти персонажа до цього прапора, щоб перейти на наступний рівень."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Використовуй ей блок, коли Веддлз і Чомп торкаються один одного!"
+        },
+        "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseC_PlayLab_events_challenge12022": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseC_PlayLab_events_challenge1_2018": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseC_PlayLab_events_challenge1_2019": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseC_PlayLab_events_challenge1_2020": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати виконавців у різні частини ігрового простору.\n"
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Цей блок дуже важливий у цьому проєкті. Обов'язково використай його!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Додай це в середину своєї програми."
+        },
+        "courseC_artist_prog22022": {
+          "slider": "Тут ти можеш уповільнити свою програму."
         },
         "courseC_artist_prog2_2021": {
           "slider": "Тут ти можеш уповільнити свою програму."
         },
+        "courseC_collector_prog1": {
+          "courseC_collector_prog1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Бачиш нові блоки у скриньці інструментів?  Не хвилюйся, ми покажемо тобі, як ними користуватися на наступному уроці."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Ти можеш використовувати більше блоків з панелі інструментів, якщо вони тобі потрібні!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Цифра 4 на гарбузі означає, що на цій клітинці є чотири гарбузи, які можна зібрати."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Ці блоки заблоковані, ти не зможеш їх видалити!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Перетягуй блоки з панелі інструментів у робочу область."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Після з'єднання усіх блоків натисни \"Запустити\" та запусти програму."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Це скринька з інструментами. Тут ти знайдеш додаткові блоки для завершення завдань."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Ти можеш перетягнути зайві блоки у скриньку з інструментами та викинути їх.",
+          "courseC_maze_programming3_3": "Ці блоки виробленні з каміння та не можуть бути викинутими."
+        },
+        "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseC_maze_programming42022": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseC_maze_programming4_2018": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseC_maze_programming4_2019": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseC_maze_programming4_2020": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "На цих блоках немає чисел. Ти можеш використовувати їх стільки, скільки захочеш!"
+        },
+        "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.",
+          "courseC_maze_programming7_2": "Ці блоки виробленні з каміння та не можуть бути викинутими."
+        },
+        "courseC_maze_programming72022": {
+          "courseC_maze_programming7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.",
+          "courseC_maze_programming7_2": "Ці блоки виробленні з каміння та не можуть бути викинутими."
+        },
+        "courseC_maze_programming7_2018": {
+          "courseC_maze_programming7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.",
+          "courseC_maze_programming7_2": "Ці блоки виробленні з каміння та не можуть бути викинутими."
+        },
+        "courseC_maze_programming7_2019": {
+          "courseC_maze_programming7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.",
+          "courseC_maze_programming7_2": "Ці блоки виробленні з каміння та не можуть бути викинутими."
+        },
+        "courseC_maze_programming7_2020": {
+          "courseC_maze_programming7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.",
+          "courseC_maze_programming7_2": "Ці блоки виробленні з каміння та не можуть бути викинутими."
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.",
+          "courseC_maze_programming7_2": "Ці блоки виробленні з каміння та не можуть бути викинутими."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "У цьому завданні тобі доступний лише один такий блок."
+        },
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "Тобі не обов'язково використовувати кольори, щоб правильно виконати це завдання. Якщо хочеш, використай блок `випадкових кольорів`, щоб зробити це простіше простого!"
+        },
+        "courseD_bee_conditionals2": {
+          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
+        },
+        "courseD_bee_conditionals2_2018": {
+          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
+        },
+        "courseD_bee_conditionals2_2019": {
+          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
+        },
+        "courseD_bee_conditionals2_2020": {
+          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
+        },
+        "courseD_bee_conditionals2_copy": {
+          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Використовуй цей цикл, щоб зібрати весь нектар (або мед) з однієї квітки (або стільника)."
+        },
+        "courseD_bee_debugging_challenge1": {
+          "courseD_bee_debugging_challenge1_callout1": "Використовуйте цю команду, щоб перемістити бджолу назад."
+        },
+        "courseD_bee_debugging_challenge1a": {
+          "courseD_bee_debugging_challenge1_callout1": "Використовуйте цю команду, щоб перемістити бджолу назад."
+        },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "Спробуй проходити код по одному блоку за раз."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Спробуй проходити код по одному блоку за раз."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Для виконання цього завдання тобі потрібно використати блок `поки є шлях вперед`."
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_intro4_2019": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_intro4_2020": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "На цих блоках немає чисел. Ти можеш використовувати стільки, скільки захочеш!"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Після з'єднання усіх блоків натисни \"Запустити\" щоб випробувати свою програму."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Це панель інструментів. Тут ти знайдеш додаткові блоки для розв'язання завдань."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Ти можеш перетягувати зайві блоки на панель інструментів і залишати їх там.",
+          "stone_block_2": "Сірі блоки не можна видалити."
+        },
+        "courseD_maze_ramp4": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_ramp4_2018": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_ramp4_2019": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_ramp4_2020": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "На цих блоках немає чисел. Ти можеш використовувати стільки, скільки захочеш!"
+        },
+        "courseD_scrat_ramp4": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_scrat_ramp8": {
+          "courseD_maze_ramp7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб."
+        },
+        "courseE_aboutme_22022": {
+          "": "Натисніть тут, щоб додати костюми до вашого проекту."
         },
         "courseE_aboutme_2_2021": {
           "": "Клацни тут!"
@@ -1209,118 +1074,8 @@
         "courseE_farmer_functions2b_2021": {
           "courseE_farmer_functions1a_1": "Цей овоч невідомий.  Він змінюється кожного разу, коли ти запускаєш програму."
         },
-        "Virtual Pet 2_-2022-2": {
-          "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
-        },
-        "Virtual Pet 2_2021": {
-          "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
-        },
-        "Virtual Pet 6_-2022-2": {
-          "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
-        },
-        "Virtual Pet 6_2021": {
-          "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
-        },
-        "courseA_EOC_playlab_animals": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_animals2022": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_fantasy": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_fantasy2022": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_people": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_people2022": {
-          "question_mark": "?"
-        },
-        "courseA_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "Це панель інструментів. Тут ти знайдеш додаткові блоки для розв'язання завдань."
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "courseE_playLab_scaffold3_1": "Перемісти персонажа до цього прапора, щоб перейти на наступний рівень."
-        },
-        "courseC_PlayLab_events8_2021": {
-          "courseC_PlayLab_events8_callout1": "Використовуй ей блок, коли Веддлз і Чомп торкаються один одного!"
-        },
-        "courseC_artist_loops1a_2021": {
-          "jumpto_callout": "Цей блок дуже важливий для цього проєкту. Обов'язково використовуй його!"
-        },
-        "courseC_artist_loops1b_2021": {
-          "sticker2": "Додай це в середину своєї програми."
-        },
-        "courseC_artist_prog22022": {
-          "slider": "Тут ти можеш уповільнити свою програму."
-        },
-        "courseC_collector_prog1_2021": {
-          "courseC_collector_prog1_1": "Бачиш нові блоки у скриньці інструментів?  Не хвилюйся, ми покажемо тобі, як ними користуватися на наступному уроці."
-        },
-        "courseC_collector_prog7_2021": {
-          "courseC_collector_prog7_1": "Ти можеш використовувати більше блоків зі скриньки інструментів, якщо вони тобі потрібні!"
-        },
-        "courseC_harvester_loops1_2021": {
-          "courseC_harvester_loops1_callout1": "Цифра 4 на гарбузі означає, що на цій клітинці є чотири гарбузи, які можна зібрати."
-        },
-        "courseC_maze_debugging5_2021": {
-          "courseC_maze_debugging5_1": "Ці блоки заблоковані, ти не зможеш їх видалити!"
-        },
-        "courseC_maze_debugging9_2021": {
-          "courseC_maze_debugging9_2019_1": "Перетягуй блоки з панелі інструментів у робочу область."
-        },
-        "courseC_maze_programming1_2021": {
-          "grade2_CaringForNewPet_0_1": "Після з'єднання усіх блоків натисни \"Запустити\" та запусти програму."
-        },
-        "courseC_maze_programming2_2021": {
-          "courseC_maze_programming2_1": "Це скринька з інструментами. Тут ти знайдеш додаткові блоки для завершення завдань."
-        },
-        "courseC_maze_programming3_2021": {
-          "courseC_maze_programming3_2": "Ти можеш перетягнути зайві блоки у скриньку з інструментами та викинути їх.",
-          "courseC_maze_programming3_3": "Ці блоки виробленні з каміння та не можуть бути викинутими."
-        },
-        "courseC_maze_programming4_2021": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки блоків тобі залишилося використати."
-        },
-        "courseC_maze_programming5_2021": {
-          "": "На цих блоках немає номерів. Ти можеш використовувати стільки, скільки захочеш!"
-        },
-        "courseC_starWars_loops2_2021": {
-          "courseC_starWars_loops2": "У цьому завданні тобі доступний лише один з цих блоків."
-        },
-        "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge2_1": "Використовуй цей цикл, щоб зібрати весь нектар (або мед) з однієї квітки (або стільника)."
-        },
-        "courseD_bee_nestedLoops1a2022": {
-          "stepButton": "Спробуй проходити код по одному блоку за раз."
-        },
-        "courseD_bee_nestedLoops1a_2021": {
-          "stepButton": "Спробуй проходити код по одному блоку за раз."
-        },
-        "courseD_farmer_while7_2021": {
-          "courseD_farmer_while7_2018_PathAhead": "Для виконання цього завдання тобі потрібно використати блок `поки шлях попереду`."
-        },
-        "courseD_maze_intro4_2021": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
-        },
-        "courseD_maze_intro5a_2021": {
-          "": "На цих блоках немає чисел. Ти можеш використовувати стільки, скільки захочеш!"
-        },
-        "courseD_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Після з'єднання усіх блоків натисни \"Запустити\" щоб випробувати свою програму."
-        },
-        "courseD_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "Це панель інструментів. Тут ти знайдеш додаткові блоки для розв'язання завдань."
-        },
-        "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_2": "Ти можеш перетягувати зайві блоки на панель інструментів і залишати їх там.",
-          "stone_block_2": "Сірі блоки не можна видалити."
-        },
-        "courseD_maze_ramp5_2021": {
-          "": "На цих блоках немає чисел. Ти можеш використовувати стільки, скільки захочеш!"
+        "courseE_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
         },
         "courseF_apps_aquarium": {
           "run_button": "Спочатку натисни кнопку \"Запустити\"!",
@@ -1401,13 +1156,17 @@
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_artist_for1_2021": {
-          "courseF_artist_for1_1": "Панель інструментів знаходиться у режимі \"категорії\", що дає більше місця для написання коду.  Цикли `for` знаходяться тут."
+          "courseF_artist_for1_1": "Панель інструментів знаходиться у режимі \"категорії\", що дає більше місця для написання коду.  Цикли `для кожного` знаходяться тут."
         },
         "courseF_bee_for4_2021": {
-          "courseF_bee_for4_1": "Тут ти знайдеш цикл `for`!"
+          "courseF_bee_for4_1": "Тут ти знайдеш цикл `для кожного`!"
         },
         "courseF_bee_for9_2021": {
-          "courseF_bee_for9_1": "Тут ти знайдеш цикл `математика`!"
+          "courseF_bee_for9_1": "Тут ти знайдеш блоки `математики`!"
+        },
+        "courseF_bee_functions_challenge1": {
+          "courseF_bee_functions_challenge1_1": "Який код потрібно ввести в цю функцію?",
+          "courseF_bee_functions_challenge1_2": "Тут можна використовувати функцію \"перевірити нектар чи мед\", якщо відредагувати її, щоб зробити мед кілька разів."
         },
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "Ти можеш знайти свої змінні тут!"
@@ -1455,7 +1214,7 @@
           "stopAllBug": "Цей блок знаходиться в неправильному порядку."
         },
         "courseF_events_predict": {
-          "behaviors_edit": "Натисни, щоб побачити, як працює ця модель поведінки."
+          "behaviors_edit": "Клацни тут, щоб побачити, як працює ця модель поведінки."
         },
         "courseF_events_time": {
           "events_category": "Клацни тут, щоб відкрити категорію Події."
@@ -1500,24 +1259,24 @@
           "answered_block": "Шукай новий блок тут!"
         },
         "courseF_text_choice_color": {
-          "text_color_finish": "Чи змінювався колір фону, коли ти відповідав на питання? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
+          "text_color_finish": "Чи змінювався колір фону після відповіді на питання? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
         },
         "courseF_text_choice_color_-2022-2": {
-          "text_color_finish": "Чи змінювався колір фону, коли ти відповідав на питання? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
+          "text_color_finish": "Чи змінювався колір фону після відповіді на питання? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
         },
         "courseF_text_choice_conversation": {
-          "text_generic_finish": "Ти закінчив? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
+          "text_generic_finish": "Готово? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
         },
         "courseF_text_choice_conversation_-2022-2": {
-          "text_generic_finish": "Ти закінчив? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
+          "text_generic_finish": "Готово? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
         },
         "courseF_text_choice_title": {
-          "title_block": "Шукай два нові блоки тут!",
-          "text_answer_finish": "Титульний екран відображається протягом 3 секунд? Якщо так, натисни \"Кінець\". Якщо ні, натисни \"Скидання\", зміни свій код та знову натисни \"Запустити\". "
+          "text_answer_finish": "Титульний екран відображається протягом 3 секунд? Якщо так, натисни \"Кінець\". Якщо ні, натисни \"Скидання\", зміни свій код та знову натисни \"Запустити\". ",
+          "title_block": "Шукай два нові блоки тут!"
         },
         "courseF_text_choice_title_-2022-2": {
-          "title_block": "Шукай два нові блоки тут!",
-          "text_answer_finish": "Титульний екран відображається протягом 3 секунд? Якщо так, натисни \"Кінець\". Якщо ні, натисни \"Скидання\", зміни свій код та знову натисни \"Запустити\". "
+          "text_answer_finish": "Титульний екран відображається протягом 3 секунд? Якщо так, натисни \"Кінець\". Якщо ні, натисни \"Скидання\", зміни свій код та знову натисни \"Запустити\". ",
+          "title_block": "Шукай два нові блоки тут!"
         },
         "courseF_text_concat": {
           "join_blocks": "Шукай нові блоки тут!"
@@ -1532,18 +1291,18 @@
           "events_category": "Клацни тут, щоб відкрити категорію Події."
         },
         "courseF_text_print": {
-          "print_block": "Знайди блок друку тут!",
+          "print_block": "Знайди блок друкування тут!",
           "text_print_finish": "Чи надрукувалося твоє повідомлення вище? Якщо так, натисни \"Завершити\". Якщо ні, натисни \"Скинути\", зміни свій код та знову натисни \"Запустити\"."
         },
         "courseF_text_print_-2022-2": {
-          "print_block": "Знайди блок друку тут!",
+          "print_block": "Знайди блок друкування тут!",
           "text_print_finish": "Чи надрукувалося твоє повідомлення вище? Якщо так, натисни \"Завершити\". Якщо ні, натисни \"Скинути\", зміни свій код та знову натисни \"Запустити\"."
         },
         "courseF_text_prompts": {
-          "prompt_block": "Знайди блок підказки тут!"
+          "prompt_block": "Знайди блок питання тут!"
         },
         "courseF_text_prompts_-2022-2": {
-          "prompt_block": "Знайди блок підказки тут!"
+          "prompt_block": "Знайди блок питання тут!"
         },
         "courseF_variables2_predict_-2022-2": {
           "variablesPredict": "Подивись уважно на код нижче."
@@ -1557,74 +1316,323 @@
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Після з'єднання усіх блоків натисни \"Запустити\" щоб запустити програму."
         },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт.",
+          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили."
+        },
         "express_maze_debugging9_2021": {
-          "express_maze_debugging9_2019_1": "Перетягни блоки зі скриньки інструментів у робочу зону."
+          "express_maze_debugging9_2019_1": "Перетягуй блоки з панелі інструментів у робочу область."
         },
-        "CSD U3 Random add_2021": {
-          "CSD_U3_butterfly": "Уважно подивися на цей код."
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "Використай блок \"створити коло\" та зміни розмір фігури."
         },
-        "CSD U3 Random add_2022": {
-          "CSD_U3_butterfly": "Уважно подивися на цей код."
+        "frozen cross": {
+          "repeat_blocks_1": "(1) Використай цей блок, і розмісти його біля сірих блоків у робочій області",
+          "repeat_blocks_2": "(2) Перемісти сюди блок \"повторити\", і розмісти у ньому сірі блоки"
         },
-        "CSD U6 - Combine Inputs - PracD_2222": {
-          "CSD U6L9.7 - if-statement": "Додай команду умови тут"
+        "frozen cross rotate": {
+          "replace_questions_degree": "Скористайтесь розкривним списком, щоб змінити \"???\" на число"
         },
-        "CSD U6 - If Variables - A_2222": {
-          "U6L6.4 - If": "Додай команду умови тут"
+        "frozen diamond": {
+          "frozen_diamond_repeat": "Скористайтесь блоком повторення для створення цієї фігури."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "Скористайтесь блоком повторення для створення цієї фігури."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "Скористайтесь розкривним списком, щоб створювати різні сніжинки!"
+        },
+        "frozen line": {
+          "move_elsa_forward": "Перемісти блок \"Рухатися вперед\" та прикріпи його під блоком \"Коли гра починається\", щоб змусити Ельзу рухатися вперед",
+          "run": "Натисни \"Запустити\", щоб випробувати програму!"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "Використайте блок \"Повернути\", щоб змусити Ельзу розвернутись. Число у розкривному списку визначає, наскільки повернеться Ельза"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "Скористайтесь блоком \"створити гілочку сніжинки\""
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "Додайте більше блоків, щоб вийшов квадрат"
+        },
+        "frozen square loop": {
+          "replace_questions": "Скористайтесь розкривним списком, щоб змінити \"???\" на число"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "Скористайтесь розкривним списком, щоб змінити \"???\" на число"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "Скористайтесь розкривним списком, щоб змінити \"???\" на число"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Натисніть тут, щоб запустити код."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
+        },
+        "helloworld_animals_location": {
+          "pin": "шпилька"
+        },
+        "helloworld_animals_multi": {
+          "pin": "шпилька"
+        },
+        "helloworld_animals_say": {
+          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт.",
+          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили."
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Новий блок!",
+          "hello_world_new_block": "Новий блок!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Натисніть тут, щоб запустити код."
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
+        },
+        "helloworld_emoji_location": {
+          "pin": "шпилька"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "шпилька"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт.",
+          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили."
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Новий блок!",
+          "hello_world_new_block": "Новий блок!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Натисніть тут, щоб запустити код."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Натисніть тут, щоб запустити код."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Клацніть тут спочатку!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
+        },
+        "helloworld_food_location": {
+          "pin": "шпилька"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "шпилька"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "шпилька"
+        },
+        "helloworld_food_multi": {
+          "pin": "шпилька"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "шпилька"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "шпилька"
+        },
+        "helloworld_food_say": {
+          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт.",
+          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили."
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт.",
+          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт.",
+          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили."
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Новий блок!",
+          "hello_world_new_block": "Новий блок!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Новий блок!",
+          "hello_world_new_block": "Новий блок!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Новий блок!",
+          "hello_world_new_block": "Новий блок!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Натисніть тут, щоб запустити код."
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
+        },
+        "helloworld_retro_location": {
+          "pin": "шпилька"
+        },
+        "helloworld_retro_multi": {
+          "pin": "шпилька"
+        },
+        "helloworld_retro_say": {
+          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт.",
+          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили."
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Новий блок!",
+          "hello_world_new_block": "Новий блок!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Новий блок!"
         },
         "ml-customize apps-choice3": {
-          "CSD_AI_L10_predict": "Додай команду умови сюди"
+          "CSD_AI_L10_predict": "Додай сюди команду умови "
         },
         "ml-customize apps-choice3_2022": {
-          "CSD_AI_L10_predict": "Додай команду умови сюди"
+          "CSD_AI_L10_predict": "Додай сюди команду умови "
         },
         "ml-customize apps-choice5": {
-          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+          "CSD_AI_L11_top": "Розмісти блок над цим рядком"
         },
         "ml-customize apps-choice5_2022": {
-          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+          "CSD_AI_L11_top": "Розмісти блок над цим рядком"
         },
         "ml-intro app lab-book recommender 5C-2021": {
-          "CSD_AI_L7_event": "Додай сюди блок 'відворитиЗвук'"
+          "CSD_AI_L7_event": "Додай сюди блок 'playSound'"
         },
         "ml-intro app lab-book recommender 5C_2022": {
-          "CSD_AI_L7_event": "Додай сюди блок 'відворитиЗвук'"
+          "CSD_AI_L7_event": "Додай сюди блок 'playSound'"
         },
         "ml-intro app lab-book recommender 5E-2021": {
-          "CSD_AI_L7_top": "Помісти блок над цим рядком"
+          "CSD_AI_L7_top": "Розмісти блок над цим рядком"
         },
         "ml-intro app lab-book recommender 5E_2022": {
-          "CSD_AI_L7_top": "Помісти блок над цим рядком"
+          "CSD_AI_L7_top": "Розмісти блок над цим рядком"
         },
         "ml-models in applab-screens-1-2021": {
-          "CSD_AI_L10_ifstatement": "Додай команду умови сюди"
+          "CSD_AI_L10_ifstatement": "Додай сюди команду умови "
         },
         "ml-models in applab-screens-1_2022": {
-          "CSD_AI_L10_ifstatement": "Додай команду умови сюди"
+          "CSD_AI_L10_ifstatement": "Додай сюди команду умови "
         },
         "ml-models in applab-screens-3-2021": {
-          "CSD_AI_L7_ifstatement": "Додай команду умови тут"
+          "CSD_AI_L7_ifstatement": "Додай сюди команду умови "
         },
         "ml-models in applab-screens-3_2022": {
-          "CSD_AI_L7_ifstatement": "Додай команду умови тут"
+          "CSD_AI_L7_ifstatement": "Додай сюди команду умови "
         },
         "ml-use model card-choice3": {
-          "CSD_AI_L10_predict": "Додай команду умови сюди"
+          "CSD_AI_L10_predict": "Додай сюди команду умови "
         },
         "ml-use model card-choice3_2022": {
-          "CSD_AI_L10_predict": "Додай команду умови сюди"
+          "CSD_AI_L10_predict": "Додай сюди команду умови "
         },
         "ml-use model card-choice5": {
-          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+          "CSD_AI_L11_top": "Розмісти блок над цим рядком"
         },
         "ml-use model card-choice5_2022": {
-          "CSD_AI_L11_top": "Помісти блок над цим рядком"
+          "CSD_AI_L11_top": "Розмісти блок над цим рядком"
         },
         "ml-use model card-example3C-2021": {
-          "CSD_AI_L11_temp": "Це функція температури"
+          "CSD_AI_L11_temp": "Це функція \"Температура\""
         },
         "ml-use model card-example3C_2022": {
-          "CSD_AI_L11_temp": "Це функція температури"
+          "CSD_AI_L11_temp": "Це функція \"Температура\""
         },
         "ml-use model card-example3D-2021": {
           "CSD_AI_L11_time": "Це функція \"Час доби\""
@@ -1633,10 +1641,10 @@
           "CSD_AI_L11_time": "Це функція \"Час доби\""
         },
         "ml-use model card-example3_EditB-2021": {
-          "CSD_AI_L11_cars": "Це ознака \"Кількість автомобілів\""
+          "CSD_AI_L11_cars": "Це функція \"Кількість автомобілів\""
         },
         "ml-use model card-example3_EditB_2022": {
-          "CSD_AI_L11_cars": "Це ознака \"Кількість автомобілів\""
+          "CSD_AI_L11_cars": "Це функція \"Кількість автомобілів\""
         },
         "ml-use model card-example3_EditC-2021": {
           "CSD_AI_L11_weather": "Це функція \"Погода\""
@@ -1644,44 +1652,36 @@
         "ml-use model card-example3_EditC_2022": {
           "CSD_AI_L11_weather": "Це функція \"Погода\""
         },
-        "courseC_maze_programming4": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        "outbreak2": {
+          "minitoolbox": "Клацніть тут, щоб розгорнути блок.",
+          "pointerlocation": "Перетягніть блок суб'єкта сюди."
         },
-        "courseC_maze_programming42022": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        "outbreak7": {
+          "costumes_callout": "Клацніть, щоб створити новий костюм"
         },
-        "courseC_maze_programming4_2018": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Новий блок!"
         },
-        "courseC_maze_programming4_2019": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        "poetry_hoc_events1": {
+          "poetry_event": "Новий блок!",
+          "poetry_foreground": "Новий блок!"
         },
-        "courseC_maze_programming4_2020": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Новий блок!",
+          "poetry_multiple_sprites": "Новий блок!",
+          "poetry_new_block": "Новий блок!"
         },
-        "courseD_maze_intro42022": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        "poetry_hoc_sounds": {
+          "poetry_music": "Новий блок!",
+          "poetry_sound": "Новий блок!"
         },
-        "courseD_maze_intro4_2019": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Новий блок!",
+          "poetry_sprite_stops": "Новий блок!"
         },
-        "courseD_maze_intro4_2020": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
-        },
-        "courseD_maze_ramp4": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
-        },
-        "courseD_maze_ramp4_2018": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
-        },
-        "courseD_maze_ramp4_2019": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
-        },
-        "courseD_maze_ramp4_2020": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
-        },
-        "courseD_scrat_ramp4": {
-          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Новий блок!",
+          "poetry_set_sprite": "Новий блок!"
         }
       }
     }

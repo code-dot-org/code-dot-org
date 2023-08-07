@@ -3,43 +3,35 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Tá",
-          "No": "Níl"
+          "No": "Níl",
+          "Yes": "Tá"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Tá",
-          "No": "Níl"
+          "No": "Níl",
+          "Yes": "Tá"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Tá",
-          "No": "Níl"
+          "No": "Níl",
+          "Yes": "Tá"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Tá",
-          "No": "Níl"
+          "No": "Níl",
+          "Yes": "Tá"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Ainm",
-          "Color": "Dath",
           "City": "Cathair",
+          "Color": "Dath",
+          "Name": "Ainm",
           "text": "téacs"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Ainm",
-          "Color": "Dath",
           "City": "Cathair",
+          "Color": "Dath",
+          "Name": "Ainm",
           "text": "téacs"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -50,18 +42,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -72,28 +64,28 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -104,19 +96,19 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
           "text": "téacs"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -127,7 +119,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
           "text": "téacs"
         },
         "CSD U1 processing live_2021": {
@@ -144,14 +144,6 @@
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -162,18 +154,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -184,7 +176,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Ar ais"
@@ -193,24 +193,24 @@
           "Back": "Ar ais"
         },
         "CSD U1 storage movies_2021": {
+          "No": "Níl",
           "Star Wars": "Star Wars",
           "Yes": "Tá",
-          "No": "Níl",
           "text": "téacs"
         },
         "CSD U1 storage movies_2022": {
+          "No": "Níl",
           "Star Wars": "Star Wars",
           "Yes": "Tá",
-          "No": "Níl",
           "text": "téacs"
         },
         "CSD U1 storage outfit_2021": {
-          "green": "uaine",
-          "black": "dubh"
+          "black": "dubh",
+          "green": "uaine"
         },
         "CSD U1 storage outfit_2022": {
-          "green": "uaine",
-          "black": "dubh"
+          "black": "dubh",
+          "green": "uaine"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -296,46 +296,46 @@
           "Medium": "Meánleibhéal"
         },
         "CSD U6 - Combine Inputs - A_2222": {
+          "green": "uaine",
           "left": "ar chlé",
-          "right": "ar dheis",
           "red": "dearg",
-          "green": "uaine"
+          "right": "ar dheis"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "ann",
           "fast": "sciobtha",
-          "slow": "mall",
+          "long": "tamall fada",
+          "on": "ann",
           "short": "tamall gairid",
-          "long": "tamall fada"
+          "slow": "mall"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "Dearg",
+          "Blue": "Gorm",
           "Green": "Uaine",
-          "Blue": "Gorm"
+          "Red": "Dearg"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "ar chlé",
           "right": "ar dheis"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "uaine",
-          "blue": "gorm"
+          "blue": "gorm",
+          "green": "uaine"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "Dearg",
-          "Blue": "Gorm"
+          "Blue": "Gorm",
+          "Red": "Dearg"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -344,9 +344,9 @@
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Ainm"
@@ -367,40 +367,40 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "D'éirigh leis!"
@@ -419,8 +419,8 @@
           "Success!": "D'éirigh leis!"
         },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "Scór",
-          "0": "0"
+          "0": "0",
+          "Score": "Scór"
         },
         "CSD U6 - Physical Input - PC_2222": {
           "Success!": "D'éirigh leis!"
@@ -462,15 +462,15 @@
           "Name:": "Ainm:"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "Dearg",
+          "Blue": "Gorm",
           "Green": "Uaine",
-          "Blue": "Gorm"
+          "Red": "Dearg"
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "Gorm",
+          "Green": "Uaine",
           "Name:": "Ainm:",
           "Red": "Dearg",
-          "Green": "Uaine",
-          "Blue": "Gorm",
           "Save": "Sábháil"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
@@ -489,16 +489,16 @@
           "title": "teideal"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "Den chine geal",
-          "Red": "Dearg",
+          "Blue": "Gorm",
           "Green": "Uaine",
-          "Blue": "Gorm"
+          "Red": "Dearg",
+          "White": "Den chine geal"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "suas",
           "down": "síos",
           "left": "ar chlé",
-          "right": "ar dheis"
+          "right": "ar dheis",
+          "up": "suas"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "ainm"
@@ -601,56 +601,56 @@
           "Update": "Nuashonraigh"
         },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 change": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 change_2018": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 change_2019": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 change_2021": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Meánleibhéal"
@@ -677,63 +677,63 @@
           "Happy": "Sona Sásta"
         },
         "CSD U6 frequency": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 frequency_2018": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 frequency_2019": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 frequency_2021": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 get toggle": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 get toggle_2018": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 get toggle_2019": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 get toggle_2021": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "Gorm",
+          "Green": "Uaine",
           "Name:": "Ainm:",
           "Red": "Dearg",
-          "Green": "Uaine",
-          "Blue": "Gorm",
           "Save": "Sábháil"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "Gorm",
+          "Green": "Uaine",
           "Name:": "Ainm:",
           "Red": "Dearg",
-          "Green": "Uaine",
-          "Blue": "Gorm",
           "Save": "Sábháil"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "Gorm",
+          "Green": "Uaine",
           "Name:": "Ainm:",
           "Red": "Dearg",
-          "Green": "Uaine",
-          "Blue": "Gorm",
           "Save": "Sábháil"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "Gorm",
+          "Green": "Uaine",
           "Name:": "Ainm:",
           "Red": "Dearg",
-          "Green": "Uaine",
-          "Blue": "Gorm",
           "Save": "Sábháil"
         },
         "CSD U6 getProperty input": {
@@ -749,76 +749,76 @@
           "Submit": "Seol"
         },
         "CSD U6 getters debug": {
-          "slow": "mall",
           "fast": "sciobtha",
+          "long": "tamall fada",
           "short": "tamall gairid",
-          "long": "tamall fada"
+          "slow": "mall"
         },
         "CSD U6 getters debug_2018": {
           "fast": "sciobtha",
-          "slow": "mall",
+          "long": "tamall fada",
           "short": "tamall gairid",
-          "long": "tamall fada"
+          "slow": "mall"
         },
         "CSD U6 getters debug_2019": {
           "fast": "sciobtha",
-          "slow": "mall",
+          "long": "tamall fada",
           "short": "tamall gairid",
-          "long": "tamall fada"
+          "slow": "mall"
         },
         "CSD U6 getters debug_2021": {
           "fast": "sciobtha",
-          "slow": "mall",
+          "long": "tamall fada",
           "short": "tamall gairid",
-          "long": "tamall fada"
+          "slow": "mall"
         },
         "CSD U6 interval": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 interval_2018": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 interval_2019": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 interval_2021": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 light show": {
-          "on": "ann",
-          "off": "as"
+          "off": "as",
+          "on": "ann"
         },
         "CSD U6 light show_2018": {
-          "on": "ann",
-          "off": "as"
+          "off": "as",
+          "on": "ann"
         },
         "CSD U6 light show_2019": {
-          "on": "ann",
-          "off": "as"
+          "off": "as",
+          "on": "ann"
         },
         "CSD U6 light show_2021": {
-          "on": "ann",
-          "off": "as"
+          "off": "as",
+          "on": "ann"
         },
         "CSD U6 params create colors": {
-          "Red": "Dearg",
-          "Blue": "Gorm"
+          "Blue": "Gorm",
+          "Red": "Dearg"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "Dearg",
-          "Blue": "Gorm"
+          "Blue": "Gorm",
+          "Red": "Dearg"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "Dearg",
-          "Blue": "Gorm"
+          "Blue": "Gorm",
+          "Red": "Dearg"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "Dearg",
-          "Blue": "Gorm"
+          "Blue": "Gorm",
+          "Red": "Dearg"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -869,20 +869,20 @@
           "title": "teideal"
         },
         "CSD U6 slider intro": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 slider intro_2018": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 slider intro_2019": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 slider intro_2021": {
-          "short": "tamall gairid",
-          "long": "tamall fada"
+          "long": "tamall fada",
+          "short": "tamall gairid"
         },
         "CSD U6 test LED": {
           "Success!": "D'éirigh leis!"
@@ -897,68 +897,68 @@
           "Success!": "D'éirigh leis!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "Dearg",
+          "Blue": "Gorm",
           "Green": "Uaine",
-          "Blue": "Gorm"
+          "Red": "Dearg"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "Dearg",
+          "Blue": "Gorm",
           "Green": "Uaine",
-          "Blue": "Gorm"
+          "Red": "Dearg"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "Maidir Linn",
           "About Us": "Maidir Linn",
-          "Cancel": "Cealaigh",
-          "Name:": "Ainm:",
-          "Red": "Dearg",
-          "Green": "Uaine",
           "Blue": "Gorm",
-          "Yes": "Tá",
+          "Cancel": "Cealaigh",
+          "Green": "Uaine",
+          "Name:": "Ainm:",
           "No": "Níl",
-          "Save": "Sábháil"
+          "Red": "Dearg",
+          "Save": "Sábháil",
+          "Yes": "Tá"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Maidir Linn",
           "About Us": "Maidir Linn",
-          "Cancel": "Cealaigh",
-          "Name:": "Ainm:",
-          "Red": "Dearg",
-          "Green": "Uaine",
           "Blue": "Gorm",
-          "Yes": "Tá",
+          "Cancel": "Cealaigh",
+          "Green": "Uaine",
+          "Name:": "Ainm:",
           "No": "Níl",
-          "Save": "Sábháil"
+          "Red": "Dearg",
+          "Save": "Sábháil",
+          "Yes": "Tá"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Maidir Linn",
           "About Us": "Maidir Linn",
-          "Cancel": "Cealaigh",
-          "Name:": "Ainm:",
-          "Red": "Dearg",
-          "Green": "Uaine",
           "Blue": "Gorm",
-          "Yes": "Tá",
+          "Cancel": "Cealaigh",
+          "Green": "Uaine",
+          "Name:": "Ainm:",
           "No": "Níl",
-          "Save": "Sábháil"
+          "Red": "Dearg",
+          "Save": "Sábháil",
+          "Yes": "Tá"
         },
         "CSDU4 Decision App Demo": {
           "About": "Maidir Linn",
+          "About Us": "Maidir Linn",
           "I don't know": "Níl a fhios agam",
-          "When?": "Cathain?",
-          "About Us": "Maidir Linn"
+          "When?": "Cathain?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Maidir Linn",
+          "About Us": "Maidir Linn",
           "I don't know": "Níl a fhios agam",
-          "When?": "Cathain?",
-          "About Us": "Maidir Linn"
+          "When?": "Cathain?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Maidir Linn",
+          "About Us": "Maidir Linn",
           "I don't know": "Níl a fhios agam",
-          "When?": "Cathain?",
-          "About Us": "Maidir Linn"
+          "When?": "Cathain?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Folaigh",
@@ -967,38 +967,38 @@
         "CSDU4 List App Demo": {
           "About": "Maidir Linn",
           "About Us": "Maidir Linn",
-          "Done": "Déanta",
-          "Cancel": "Cealaigh"
+          "Cancel": "Cealaigh",
+          "Done": "Déanta"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Maidir Linn",
           "About Us": "Maidir Linn",
-          "Done": "Déanta",
-          "Cancel": "Cealaigh"
+          "Cancel": "Cealaigh",
+          "Done": "Déanta"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Maidir Linn",
           "About Us": "Maidir Linn",
-          "Done": "Déanta",
-          "Cancel": "Cealaigh"
+          "Cancel": "Cealaigh",
+          "Done": "Déanta"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Maidir Linn",
+          "About Us": "Maidir Linn",
           "Submit": "Seol",
-          "When?": "Cathain?",
-          "About Us": "Maidir Linn"
+          "When?": "Cathain?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Maidir Linn",
+          "About Us": "Maidir Linn",
           "Submit": "Seol",
-          "When?": "Cathain?",
-          "About Us": "Maidir Linn"
+          "When?": "Cathain?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Maidir Linn",
+          "About Us": "Maidir Linn",
           "Submit": "Seol",
-          "When?": "Cathain?",
-          "About Us": "Maidir Linn"
+          "When?": "Cathain?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1023,76 +1023,76 @@
           "Success!": "D'éirigh leis!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "téacs"
@@ -1113,12 +1113,12 @@
           "Start": "Tosaigh"
         },
         "csd-apps for good-2": {
-          "Next": "Ar Aghaidh",
-          "Home": "Baile"
+          "Home": "Baile",
+          "Next": "Ar Aghaidh"
         },
         "csd-apps for good-2_2022": {
-          "Next": "Ar Aghaidh",
-          "Home": "Baile"
+          "Home": "Baile",
+          "Next": "Ar Aghaidh"
         },
         "csd-apps for good-3": {
           "1": "1",
@@ -1133,23 +1133,15 @@
           "4": "4"
         },
         "csd-explore ui-2": {
-          "Next": "Ar Aghaidh",
-          "Home": "Baile"
+          "Home": "Baile",
+          "Next": "Ar Aghaidh"
         },
         "csd-explore ui-2_2022": {
-          "Next": "Ar Aghaidh",
-          "Home": "Baile"
+          "Home": "Baile",
+          "Next": "Ar Aghaidh"
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1160,18 +1152,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1182,7 +1174,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Sorry!": "Mo leithscéal!"
@@ -1192,14 +1192,6 @@
         },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1210,18 +1202,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1232,7 +1224,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "Ar Aghaidh"
@@ -1255,12 +1255,12 @@
           "Next": "Ar Aghaidh"
         },
         "ml-customize-raspado-2021": {
-          "yes": "tá",
-          "no": "níl"
+          "no": "níl",
+          "yes": "tá"
         },
         "ml-customize-raspado_2022": {
-          "yes": "tá",
-          "no": "níl"
+          "no": "níl",
+          "yes": "tá"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Ar aghaidh",
@@ -1277,16 +1277,16 @@
           "Silly": "Pleidhciúil"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "I",
           "A": "A",
-          "yes": "tá",
-          "no": "níl"
+          "W": "I",
+          "no": "níl",
+          "yes": "tá"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "I",
           "A": "A",
-          "yes": "tá",
-          "no": "níl"
+          "W": "I",
+          "no": "níl",
+          "yes": "tá"
         },
         "ml-model cards-book recommender model card": {
           "Silly": "Pleidhciúil"
@@ -1295,64 +1295,64 @@
           "Silly": "Pleidhciúil"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Back": "Ar ais"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Back": "Ar ais"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Tá",
+          "B": "B",
           "No": "Níl",
-          "B": "B"
+          "Yes": "Tá"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Tá",
+          "B": "B",
           "No": "Níl",
-          "B": "B"
+          "Yes": "Tá"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Tá",
-          "No": "Níl"
+          "No": "Níl",
+          "Yes": "Tá"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Tá",
-          "No": "Níl"
+          "No": "Níl",
+          "Yes": "Tá"
         },
         "ml-models-shoes decision tree-2021": {
           "Sports": "Spórt"
@@ -1361,16 +1361,16 @@
           "Sports": "Spórt"
         },
         "ml-use model card-example3A-2021": {
-          "rain": "báisteach",
-          "snow": "sneachta",
           "cloudy": "scamallach",
-          "night": "oíche"
+          "night": "oíche",
+          "rain": "báisteach",
+          "snow": "sneachta"
         },
         "ml-use model card-example3A_2022": {
-          "rain": "báisteach",
-          "snow": "sneachta",
           "cloudy": "scamallach",
-          "night": "oíche"
+          "night": "oíche",
+          "rain": "báisteach",
+          "snow": "sneachta"
         }
       }
     }

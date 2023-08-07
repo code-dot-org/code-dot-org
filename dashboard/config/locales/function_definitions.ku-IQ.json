@@ -15,13 +15,13 @@
           }
         },
         "2-3 Artist Debugging 10": {
+          "draw a circle": {
+            "name": "بازنێك دروست بكە"
+          },
           "draw square": {
             "parameters": {
               "width": "پانی"
             }
-          },
-          "draw a circle": {
-            "name": "بازنێك دروست بكە"
           }
         },
         "2-3 Artist Functions 11": {
@@ -89,6 +89,110 @@
             "name": "شەش لا دروست بكە"
           }
         },
+        "Course E: Frozen Project_examples2022": {
+          "draw a circle": {
+            "name": "بازنێك دروست بكە"
+          },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "دووبارە بکەوە"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "draw a circle": {
+            "name": "بازنێك دروست بكە"
+          },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "دووبارە بکەوە"
+            }
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a circle": {
+            "name": "بازنێك دروست بكە"
+          },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "دووبارە بکەوە"
+            }
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a circle": {
+            "name": "بازنێك دروست بكە"
+          },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "دووبارە بکەوە"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a circle": {
+            "name": "بازنێك دروست بكە"
+          },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "دووبارە بکەوە"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a circle": {
+            "name": "بازنێك دروست بكە"
+          },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "دووبارە بکەوە"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a circle": {
+            "name": "بازنێك دروست بكە"
+          },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "دووبارە بکەوە"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "name": "بازنێك دروست بكە"
+          },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "دووبارە بکەوە"
+            }
+          }
+        },
         "Geometric Sun": {
           "draw a house": {
             "name": "ماڵێك دروست بكە"
@@ -108,13 +212,13 @@
           "draw a circle": {
             "name": "بازنێك دروست بكە"
           },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          },
           "draw a pinwheel": {
             "parameters": {
               "repeat": "دووبارە بکەوە"
             }
-          },
-          "draw a house": {
-            "name": "ماڵێك دروست بكە"
           }
         },
         "NEW Course 4 Artist Params 6": {
@@ -138,13 +242,13 @@
           "draw a circle": {
             "name": "بازنێك دروست بكە"
           },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          },
           "draw a pinwheel": {
             "parameters": {
               "repeat": "دووبارە بکەوە"
             }
-          },
-          "draw a house": {
-            "name": "ماڵێك دروست بكە"
           }
         },
         "New Play Lab Project": {
@@ -196,6 +300,21 @@
             "name": "ماڵێك دروست بكە"
           }
         },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "یارییەکە تەواو بکە"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "یارییەکە تەواو بکە"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "یارییەکە تەواو بکە"
+          }
+        },
         "courseF_artist_fwp1": {
           "checker": {
             "parameters": {
@@ -221,13 +340,13 @@
           "draw a circle": {
             "name": "بازنێك دروست بكە"
           },
+          "draw a house": {
+            "name": "ماڵێك دروست بكە"
+          },
           "draw a pinwheel": {
             "parameters": {
               "repeat": "دووبارە بکەوە"
             }
-          },
-          "draw a house": {
-            "name": "ماڵێك دروست بكە"
           }
         },
         "courseF_artist_fwp_challenge1": {
@@ -300,125 +419,6 @@
         "courseF_bee_variables_8_2020": {
           "collect": {
             "name": "كۆبكەوە/خركەوە"
-          }
-        },
-        "CourseD_EOC_artist": {
-          "draw a circle": {
-            "name": "بازنێك دروست بكە"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "دووبارە بکەوە"
-            }
-          },
-          "draw a house": {
-            "name": "ماڵێك دروست بكە"
-          }
-        },
-        "Course E: Frozen Project_examples_2021": {
-          "draw a circle": {
-            "name": "بازنێك دروست بكە"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "دووبارە بکەوە"
-            }
-          },
-          "draw a house": {
-            "name": "ماڵێك دروست بكە"
-          }
-        },
-        "Course F: Artist Project_Flowers_examples_2021": {
-          "draw a circle": {
-            "name": "بازنێك دروست بكە"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "دووبارە بکەوە"
-            }
-          },
-          "draw a house": {
-            "name": "ماڵێك دروست بكە"
-          }
-        },
-        "CourseD_EOC_artist_2021": {
-          "draw a circle": {
-            "name": "بازنێك دروست بكە"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "دووبارە بکەوە"
-            }
-          },
-          "draw a house": {
-            "name": "ماڵێك دروست بكە"
-          }
-        },
-        "CourseD_EOC_artist_example2021": {
-          "draw a circle": {
-            "name": "بازنێك دروست بكە"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "دووبارە بکەوە"
-            }
-          },
-          "draw a house": {
-            "name": "ماڵێك دروست بكە"
-          }
-        },
-        "courseF_apps_collector": {
-          "end game": {
-            "name": "یارییەکە تەواو بکە"
-          }
-        },
-        "Course E: Frozen Project_examples2022": {
-          "draw a circle": {
-            "name": "بازنێك دروست بكە"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "دووبارە بکەوە"
-            }
-          },
-          "draw a house": {
-            "name": "ماڵێك دروست بكە"
-          }
-        },
-        "CourseD_EOC_artist2022": {
-          "draw a circle": {
-            "name": "بازنێك دروست بكە"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "دووبارە بکەوە"
-            }
-          },
-          "draw a house": {
-            "name": "ماڵێك دروست بكە"
-          }
-        },
-        "CourseD_EOC_artist_example20212022": {
-          "draw a circle": {
-            "name": "بازنێك دروست بكە"
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "دووبارە بکەوە"
-            }
-          },
-          "draw a house": {
-            "name": "ماڵێك دروست بكە"
-          }
-        },
-        "courseF_apps_collector2022": {
-          "end game": {
-            "name": "یارییەکە تەواو بکە"
-          }
-        },
-        "courseF_apps_collector_-2022-2": {
-          "end game": {
-            "name": "یارییەکە تەواو بکە"
           }
         }
       }

@@ -2,24 +2,1382 @@
   "ru-RU": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Веб-лаборатория",
-          "description": "Веб-редактор HTML/CSS.",
+        "applab": {
           "categories": {
-            "html_tags": {
-              "name": "HTML тэги"
+            "advanced": {
+              "expressions": {
+                "setStyle": {
+                  "palette_params": {
+                    "css": {
+                      "type": "Строка"
+                    },
+                    "id": {
+                      "type": "Строка"
+                    }
+                  }
+                }
+              },
+              "name": "Расширенный"
             },
-            "css_properties": {
-              "name": "Свойства CSS"
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Радиус круга в пикселях.",
+                      "type": "number"
+                    },
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "createCanvas": {
+                  "palette_params": {
+                    "[height]": {
+                      "type": "number"
+                    },
+                    "[width]": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "[height]": {
+                      "type": "number"
+                    },
+                    "[width]": {
+                      "type": "number"
+                    },
+                    "id": {
+                      "description": "Положение x в пикселях верхнего левого угла рисуемого изображения."
+                    },
+                    "x": {
+                      "description": "Положение x в пикселях верхнего левого угла рисуемого изображения.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Положение y в пикселях верхнего левого угла рисуемого изображения.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    }
+                  },
+                  "short_description": "Возвращает значение альфы (непрозрачности) (от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "Высота ограничивающего прямоугольника для захвата данных изображения.",
+                      "type": "number"
+                    },
+                    "width": {
+                      "description": "Ширина ограничивающего прямоугольника для захвата данных изображения.",
+                      "type": "number"
+                    },
+                    "x": {
+                      "description": "Позиция x в пикселях для начала съемки.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Позиция y в пикселях для начала съемки.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "number"
+                    },
+                    "x2": {
+                      "type": "number"
+                    },
+                    "y1": {
+                      "type": "number"
+                    },
+                    "y2": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения, для размещения данных на холсте.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения, для размещения данных на холсте.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "Вертикальная высота прямоугольника в пикселях.",
+                      "type": "number"
+                    },
+                    "width": {
+                      "description": "Горизонтальная ширина прямоугольника в пикселях.",
+                      "type": "number"
+                    },
+                    "x": {
+                      "description": "Положение x в пикселях верхнего левого угла прямоугольника.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Положение y в пикселях верхнего левого угла прямоугольника.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "Заданное значение альфы (непрозрачности) (от 0 до 255) в пикселе.",
+                      "type": "number"
+                    },
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    }
+                  },
+                  "short_description": "Задает значение альфы (непрозрачности) (в диапазоне от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "Количество синего (от 0 до 255), заданное в пикселе.",
+                      "type": "number"
+                    },
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    }
+                  },
+                  "short_description": "Задает количество синего (в диапазоне от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения, на входное значение BlueValue."
+                },
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "Количество зеленого (от 0 до 255), заданное в пикселе.",
+                      "type": "number"
+                    },
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "x": {
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    }
+                  },
+                  "short_description": "Задает количество зеленого (в диапазоне от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения, на значение входного значения GreenValue."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "Опционально. Степень непрозрачности (от 0 до 255), заданная в пикселе. По умолчанию 255 (полная непрозрачность).",
+                      "type": "number"
+                    },
+                    "blue": {
+                      "description": "Количество синего (от 0 до 255), заданное в пикселе.",
+                      "type": "number"
+                    },
+                    "green": {
+                      "description": "Количество зеленого (от 0 до 255), заданное в пикселе.",
+                      "type": "number"
+                    },
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "red": {
+                      "description": "Количество красного (от 0 до 255), заданное в пикселе.",
+                      "type": "number"
+                    },
+                    "x": {
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "Объекта"
+                    },
+                    "redValue": {
+                      "description": "Количество красного (от 0 до 255), заданное в пикселе.",
+                      "type": "number"
+                    },
+                    "x": {
+                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения.",
+                      "type": "number"
+                    }
+                  },
+                  "short_description": "Задает количество красного (в диапазоне от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения, на входное значение RedValue."
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "setStrokeWidth": {
+                  "palette_params": {
+                    "width": {
+                      "type": "number"
+                    }
+                  }
+                }
+              },
+              "name": "Холст"
+            },
+            "circuit": {
+              "expressions": {
+                "blink": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "buzzer.frequency": {
+                  "palette_params": {
+                    "duration": {
+                      "type": "number"
+                    },
+                    "frequency": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "buzzer.note": {
+                  "palette_params": {
+                    "duration": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "color": {
+                  "palette_params": {
+                    "blue": {
+                      "type": "number"
+                    },
+                    "green": {
+                      "type": "number"
+                    },
+                    "red": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "intensity": {
+                  "palette_params": {
+                    "brightness": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "isPressed": {
+                  "return_value": "Булево выражение"
+                },
+                "led.blink": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "led.pulse": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "pulse": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Булево выражение"
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearInterval": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Значение, возвращаемое функцией setTimeout для отмены.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Количество миллисекунд между каждым выполнением функции.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Количество миллисекунд ожидания перед выполнением функции.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функция"
+                    },
+                    "ms": {
+                      "type": "Число"
+                    }
+                  }
+                }
+              },
+              "name": "Управление"
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "Объекта"
+                    }
+                  }
+                },
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "Объекта"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "Объекта"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "Объекта"
+                    },
+                    "tableName": {
+                      "description": "Имя таблицы для извлечения записей."
+                    }
+                  }
+                },
+                "getColumn": {
+                  "palette_params": {
+                    "column": {
+                      "type": "Строка"
+                    },
+                    "table": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Имя ключа, который нужно получить."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функция"
+                    },
+                    "id": {
+                      "type": "Строка"
+                    },
+                    "name": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Получает уникальный идентификатор текущего пользователя этого приложения."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Имя таблицы, к которой применяется этот обработчик событий."
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "Объекта"
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Имя ключа, который нужно сохранить."
+                    },
+                    "value": {
+                      "description": "Данные, которые должны быть сохранены."
+                    }
+                  },
+                  "short_description": "Сохраняет пару ключ/значение в хранилище данных ключ/значение App Lab и вызывает функцию обратного вызова по завершении действия."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Веб-адрес службы, возвращающей данные."
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "Объекта"
+                    }
+                  }
+                }
+              },
+              "name": "Данные"
+            },
+            "functions": {
+              "name": "функции"
+            },
+            "maker": {
+              "expressions": {
+                "createButton": {
+                  "palette_params": {
+                    "Pin": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "createLed": {
+                  "palette_params": {
+                    "Pin": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "pinMode": {
+                  "palette_params": {
+                    "mode": {
+                      "type": "Строка"
+                    },
+                    "pin": {
+                      "type": "Число"
+                    }
+                  }
+                }
+              },
+              "name": "Изготовитель"
+            },
+            "math": {
+              "expressions": {
+                "mathAbs": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathMax": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathMin": {
+                  "palette_params": {
+                    "n1, n2,..., nX": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "mathRound": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Возвращено максимальное число",
+                      "type": "number"
+                    },
+                    "min": {
+                      "description": "Возвращено минимальное число",
+                      "type": "number"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Возвращено максимальное число",
+                      "type": "number"
+                    },
+                    "min": {
+                      "description": "Возвращено минимальное число",
+                      "type": "number"
+                    }
+                  }
+                }
+              },
+              "name": "Математика"
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    },
+                    "radius": {
+                      "type": "number"
+                    }
+                  },
+                  "short_description": "Перемещает черепаху вперед и влево по плавной круговой дуге."
+                },
+                "arcRight": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    },
+                    "radius": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "dot": {
+                  "palette_params": {
+                    "radius": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "getX": {
+                  "short_description": "Получает текущую координату x черепахи в пикселях."
+                },
+                "getY": {
+                  "short_description": "Получает текущую координату y черепахи в пикселях."
+                },
+                "hide": {
+                  "short_description": "Делает черепаху невидимой в ее текущем местоположении."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Количество пикселей для перемещения черепахи вправо.",
+                      "type": "number"
+                    },
+                    "y": {
+                      "description": "Количество пикселей для перемещения черепахи вниз.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "number"
+                    }
+                  },
+                  "short_description": "Перемещает черепаху назад на заданное количество пикселей от текущего направления."
+                },
+                "moveForward": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "number"
+                    }
+                  },
+                  "short_description": "Перемещает черепаху вперед на заданное количество пикселей в текущем направлении."
+                },
+                "moveTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    }
+                  },
+                  "short_description": "Перемещает черепаху в определенное положение (x, y) на экране."
+                },
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Строка"
+                    }
+                  },
+                  "short_description": "Задает цвет ручки, используемой черепахой для рисования линий и точек."
+                },
+                "penDown": {
+                  "short_description": "Опустите ручку так, чтобы черепаха во время движения рисовала за ней линию."
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "a": {
+                      "type": "number"
+                    },
+                    "b": {
+                      "type": "number"
+                    },
+                    "g": {
+                      "type": "number"
+                    },
+                    "r": {
+                      "type": "Число"
+                    }
+                  },
+                  "short_description": "Используя значения RGBA, задает цвет пера, используемого черепахой для рисования линий и точек."
+                },
+                "penUp": {
+                  "short_description": "Поднимает ручку вверх, чтобы черепаха не рисовала линию во время движения."
+                },
+                "penWidth": {
+                  "palette_params": {
+                    "width": {
+                      "type": "number"
+                    }
+                  },
+                  "short_description": "Задает ширину линии в пикселях, которую черепаха рисует за собой при движении."
+                },
+                "show": {
+                  "short_description": "Делает черепаху видимой в ее текущем местоположении."
+                },
+                "speed": {
+                  "palette_params": {
+                    "value": {
+                      "type": "number"
+                    }
+                  },
+                  "short_description": "Задает скорость выполнения приложения, включая скорость черепахи."
+                },
+                "turnLeft": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    }
+                  },
+                  "short_description": "Поворачивает черепаху влево на заданный угол. Положение черепахи осталось прежним."
+                },
+                "turnRight": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    }
+                  },
+                  "short_description": "Поворачивает черепаху вправо на заданный угол. Положение черепахи осталось прежним."
+                },
+                "turnTo": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "number"
+                    }
+                  },
+                  "short_description": "Изменяет направление черепахи на определенный угол. 0 — вверх, 90 — вправо, 180 — вниз и 270 — влево."
+                }
+              },
+              "name": "Черепаха"
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "Создает кнопку на экране, отображающую текст, указанный и на который ссылается данный идентификатор, в месте по умолчанию (0,0)."
+                },
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Строка"
+                    },
+                    "property": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Сжатие и рост"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функция"
+                    },
+                    "id": {
+                      "type": "Строка"
+                    },
+                    "type": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Булево выражение"
+                    }
+                  },
+                  "short_description": "Воспроизводит звуковой файл MP3, находящийся по указанному URL-адресу."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "Строка"
+                    },
+                    "language": {
+                      "type": "Строка"
+                    },
+                    "text": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Число"
+                    },
+                    "b": {
+                      "type": "Число"
+                    },
+                    "g": {
+                      "type": "Число"
+                    },
+                    "r": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setPosition": {
+                  "palette_params": {
+                    "height": {
+                      "type": "number"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "x": {
+                      "type": "number"
+                    },
+                    "y": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Строка"
+                    },
+                    "property": {
+                      "description": "Свойство, которое нужно изменить.",
+                      "type": "Строка"
+                    }
+                  },
+                  "short_description": "Присваивает свойству новое значение для указанного элемента."
+                },
+                "setScreen": {
+                  "short_description": "Устанавливает экран на заданный ScreenID."
+                },
+                "setSize": {
+                  "palette_params": {
+                    "height": {
+                      "type": "number"
+                    },
+                    "width": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "showElement": {
+                  "short_description": "Показывает элемент с указанным идентификатором."
+                },
+                "textLabel": {
+                  "short_description": "Создает текстовую метку на экране, отображающую текст, указанный и на который ссылается данный идентификатор, в месте по умолчанию (0,0)."
+                }
+              },
+              "name": "Элементы управления интерфейса пользователя"
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Строка"
+                    }
+                  },
+                  "return_value": "Нет"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "Объявление и присвоение массива переменной"
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Выбери свое собственное приключение"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "Объявляет переменную с данным именем после \" Var \", и присваивает его значение на правой части выражения"
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Строка для поиска."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Строка для поиска."
+                    }
+                  }
+                },
+                "insertItem": {
+                  "palette_params": {
+                    "index": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Длина строки"
+                },
+                "removeItem": {
+                  "palette_params": {
+                    "index": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "substring": {
+                  "palette_params": {
+                    "end": {
+                      "type": "number"
+                    },
+                    "start": {
+                      "type": "number"
+                    }
+                  }
+                }
+              },
+              "name": "Переменные"
             }
-          }
+          },
+          "description": "App Lab является средой программирования, в которой можно создавать простые приложения. Создавай дизайн, пиши код с помощью блоков или JavaScript и смотри результат. После этого в считанные секунды приложением можно поделиться.",
+          "name": "Лаборатория приложений"
         },
         "gamelab": {
-          "name": "Лаборатория игр",
-          "description": "Лаборатория Игр - это среда программирования, в которой вы можете создавать захватывающие игры и анимацию. Нарисуйте своих персонажей, напишите рабочий код с помощью блоков или JavaScript, а затем поделитесь своей игрой за считанные секунды.",
           "categories": {
+            "control": {
+              "expressions": {
+                "clearInterval": {
+                  "palette_params": {
+                    "interval": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Количество миллисекунд между каждым выполнением функции.",
+                      "type": "number"
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Количество миллисекунд ожидания перед выполнением функции.",
+                      "type": "number"
+                    }
+                  }
+                }
+              },
+              "name": "Управление"
+            },
+            "drawing": {
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Число"
+                    },
+                    "start": {
+                      "type": "Число"
+                    },
+                    "stop": {
+                      "type": "Число"
+                    },
+                    "w": {
+                      "type": "Число"
+                    },
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "background": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Число"
+                    },
+                    "w": {
+                      "type": "Число"
+                    },
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Число"
+                    },
+                    "x2": {
+                      "type": "Число"
+                    },
+                    "y1": {
+                      "type": "Число"
+                    },
+                    "y2": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Число"
+                    },
+                    "w": {
+                      "type": "Число"
+                    },
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "sides": {
+                      "type": "Число"
+                    },
+                    "size": {
+                      "type": "Число"
+                    },
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Число"
+                    },
+                    "b": {
+                      "type": "Число"
+                    },
+                    "g": {
+                      "type": "Число"
+                    },
+                    "r": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Звезда"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "Число"
+                    },
+                    "x2": {
+                      "type": "Число"
+                    },
+                    "y1": {
+                      "type": "Число"
+                    },
+                    "y2": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Число"
+                    },
+                    "str": {
+                      "type": "Строка"
+                    },
+                    "width": {
+                      "type": "Число"
+                    },
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "Строка"
+                    },
+                    "vert": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Число"
+                    }
+                  }
+                }
+              },
+              "name": "Рисование"
+            },
+            "functions": {
+              "name": "функции"
+            },
             "game_lab": {
-              "name": "Лаборатория игр",
               "expressions": {
                 "keyDown": {
                   "palette_params": {
@@ -84,24 +1442,24 @@
                 },
                 "playSound": {
                   "palette_params": {
-                    "url": {
-                      "type": "Строка"
-                    },
                     "loop": {
                       "type": "Булево выражение"
+                    },
+                    "url": {
+                      "type": "Строка"
                     }
                   },
                   "short_description": "Воспроизводит звуковой файл MP3, находящийся по указанному URL-адресу."
                 },
                 "playSpeech": {
                   "palette_params": {
-                    "text": {
-                      "type": "Строка"
-                    },
                     "gender": {
                       "type": "Строка"
                     },
                     "language": {
+                      "type": "Строка"
+                    },
+                    "text": {
                       "type": "Строка"
                     }
                   }
@@ -109,16 +1467,16 @@
                 "showMobileControls": {
                   "content": "Изменяет элементы управления на мобильном устройстве, видимые под игровым пространством.",
                   "palette_params": {
-                    "spaceButtonVisible": {
+                    "dpadFourWay": {
                       "type": "Булево выражение"
                     },
                     "dpadVisible": {
                       "type": "Булево выражение"
                     },
-                    "dpadFourWay": {
+                    "mobileOnly": {
                       "type": "Булево выражение"
                     },
-                    "mobileOnly": {
+                    "spaceButtonVisible": {
                       "type": "Булево выражение"
                     }
                   },
@@ -131,124 +1489,10 @@
                     }
                   }
                 }
-              }
-            },
-            "sprites": {
-              "name": "Спрайты",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Спираль"
-                    }
-                  }
-                },
-                "sprite.height": {
-                  "return_value": "Высота спрайта."
-                },
-                "mirrorX": {
-                  "palette_params": {
-                    "dir": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "mirrorY": {
-                  "palette_params": {
-                    "dir": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "pointTo": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Число"
-                    },
-                    "y": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "setAnimation": {
-                  "palette_params": {
-                    "label": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "setCollider": {
-                  "palette_params": {
-                    "type": {
-                      "type": "Строка"
-                    },
-                    "xOffset": {
-                      "type": "Число"
-                    },
-                    "yOffset": {
-                      "type": "Число"
-                    },
-                    "width/radius": {
-                      "type": "Число"
-                    },
-                    "height": {
-                      "type": "Число"
-                    },
-                    "rotationOffset": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "setFrame": {
-                  "palette_params": {
-                    "frame": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "setSpeedAndDirection": {
-                  "palette_params": {
-                    "speed": {
-                      "type": "Число"
-                    },
-                    "angle": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "setVelocity": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Число"
-                    },
-                    "y": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "sprite.width": {
-                  "return_value": "Ширина спрайта."
-                },
-                "createSprite": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Число"
-                    },
-                    "width": {
-                      "type": "Число"
-                    },
-                    "y": {
-                      "type": "Число"
-                    },
-                    "height": {
-                      "type": "Число"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Лаборатория игр"
             },
             "groups": {
-              "name": "Группы",
               "expressions": {
                 "add": {
                   "palette_params": {
@@ -297,19 +1541,19 @@
                 },
                 "setColliderEach": {
                   "palette_params": {
-                    "type": {
-                      "type": "Строка"
-                    },
-                    "yOffset": {
-                      "type": "Число"
-                    },
-                    "width/radius": {
-                      "type": "Число"
-                    },
                     "height": {
                       "type": "Число"
                     },
                     "rotationOffset": {
+                      "type": "Число"
+                    },
+                    "type": {
+                      "type": "Строка"
+                    },
+                    "width/radius": {
+                      "type": "Число"
+                    },
+                    "yOffset": {
                       "type": "Число"
                     }
                   }
@@ -379,10 +1623,10 @@
                 },
                 "setSpeedAndDirectionEach": {
                   "palette_params": {
-                    "speed": {
+                    "angle": {
                       "type": "Число"
                     },
-                    "angle": {
+                    "speed": {
                       "type": "Число"
                     }
                   }
@@ -432,254 +1676,10 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "name": "Рисование",
-              "expressions": {
-                "arc": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Число"
-                    },
-                    "y": {
-                      "type": "Число"
-                    },
-                    "w": {
-                      "type": "Число"
-                    },
-                    "h": {
-                      "type": "Число"
-                    },
-                    "start": {
-                      "type": "Число"
-                    },
-                    "stop": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "background": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "ellipse": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Число"
-                    },
-                    "y": {
-                      "type": "Число"
-                    },
-                    "w": {
-                      "type": "Число"
-                    },
-                    "h": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "fill": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "line": {
-                  "palette_params": {
-                    "x1": {
-                      "type": "Число"
-                    },
-                    "y1": {
-                      "type": "Число"
-                    },
-                    "x2": {
-                      "type": "Число"
-                    },
-                    "y2": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "point": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Число"
-                    },
-                    "y": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "rect": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Число"
-                    },
-                    "y": {
-                      "type": "Число"
-                    },
-                    "w": {
-                      "type": "Число"
-                    },
-                    "h": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "regularPolygon": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Число"
-                    },
-                    "y": {
-                      "type": "Число"
-                    },
-                    "sides": {
-                      "type": "Число"
-                    },
-                    "size": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "rgb": {
-                  "palette_params": {
-                    "r": {
-                      "type": "Число"
-                    },
-                    "g": {
-                      "type": "Число"
-                    },
-                    "b": {
-                      "type": "Число"
-                    },
-                    "a": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Звезда"
-                    }
-                  },
-                  "palette_params": {
-                    "x1": {
-                      "type": "Число"
-                    },
-                    "y1": {
-                      "type": "Число"
-                    },
-                    "x2": {
-                      "type": "Число"
-                    },
-                    "y2": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "stroke": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "strokeWeight": {
-                  "palette_params": {
-                    "size": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "text": {
-                  "palette_params": {
-                    "str": {
-                      "type": "Строка"
-                    },
-                    "x": {
-                      "type": "Число"
-                    },
-                    "y": {
-                      "type": "Число"
-                    },
-                    "width": {
-                      "type": "Число"
-                    },
-                    "height": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "textAlign": {
-                  "palette_params": {
-                    "horiz": {
-                      "type": "Строка"
-                    },
-                    "vert": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "textFont": {
-                  "palette_params": {
-                    "font": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "textSize": {
-                  "palette_params": {
-                    "pixels": {
-                      "type": "Число"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "name": "Управление",
-              "expressions": {
-                "clearInterval": {
-                  "palette_params": {
-                    "interval": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "type": "number",
-                      "description": "Количество миллисекунд между каждым выполнением функции."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "type": "number",
-                      "description": "Количество миллисекунд ожидания перед выполнением функции."
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Группы"
             },
             "math": {
-              "name": "Математика",
               "expressions": {
                 "mathAbs": {
                   "palette_params": {
@@ -728,32 +1728,146 @@
                 },
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "type": "number",
-                      "description": "Возвращено минимальное число"
-                    },
                     "max": {
-                      "type": "number",
-                      "description": "Возвращено максимальное число"
+                      "description": "Возвращено максимальное число",
+                      "type": "number"
+                    },
+                    "min": {
+                      "description": "Возвращено минимальное число",
+                      "type": "number"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "type": "number",
-                      "description": "Возвращено минимальное число"
-                    },
                     "max": {
-                      "type": "number",
-                      "description": "Возвращено максимальное число"
+                      "description": "Возвращено максимальное число",
+                      "type": "number"
+                    },
+                    "min": {
+                      "description": "Возвращено минимальное число",
+                      "type": "number"
                     }
                   }
                 }
-              }
+              },
+              "name": "Математика"
+            },
+            "sprites": {
+              "expressions": {
+                "createSprite": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Число"
+                    },
+                    "width": {
+                      "type": "Число"
+                    },
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Спираль"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Строка"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Число"
+                    },
+                    "rotationOffset": {
+                      "type": "Число"
+                    },
+                    "type": {
+                      "type": "Строка"
+                    },
+                    "width/radius": {
+                      "type": "Число"
+                    },
+                    "xOffset": {
+                      "type": "Число"
+                    },
+                    "yOffset": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Число"
+                    },
+                    "speed": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Число"
+                    },
+                    "y": {
+                      "type": "Число"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "Высота спрайта."
+                },
+                "sprite.width": {
+                  "return_value": "Ширина спрайта."
+                }
+              },
+              "name": "Спрайты"
             },
             "variables": {
-              "name": "Переменные",
               "expressions": {
                 "assign_x": {
                   "short_description": "Присваивает значение существующей переменной. Например, x = 0;"
@@ -780,1203 +1894,43 @@
                 },
                 "substring": {
                   "palette_params": {
-                    "start": {
-                      "type": "number"
-                    },
                     "end": {
                       "type": "number"
-                    }
-                  }
-                }
-              }
-            },
-            "functions": {
-              "name": "функции"
-            }
-          }
-        },
-        "applab": {
-          "name": "Лаборатория приложений",
-          "description": "App Lab является средой программирования, в которой можно создавать простые приложения. Создавай дизайн, пиши код с помощью блоков или JavaScript и смотри результат. После этого в считанные секунды приложением можно поделиться.",
-          "categories": {
-            "ui_controls": {
-              "name": "Элементы управления интерфейса пользователя",
-              "expressions": {
-                "button": {
-                  "short_description": "Создает кнопку на экране, отображающую текст, указанный и на который ссылается данный идентификатор, в месте по умолчанию (0,0)."
-                },
-                "getProperty": {
-                  "palette_params": {
-                    "id": {
-                      "type": "Строка"
                     },
-                    "property": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "Сжатие и рост"
-                    }
-                  },
-                  "palette_params": {
-                    "type": {
-                      "type": "Строка"
-                    },
-                    "id": {
-                      "type": "Строка"
-                    },
-                    "callback": {
-                      "type": "Функция"
-                    }
-                  }
-                },
-                "playSound": {
-                  "palette_params": {
-                    "loop": {
-                      "type": "Булево выражение"
-                    }
-                  },
-                  "short_description": "Воспроизводит звуковой файл MP3, находящийся по указанному URL-адресу."
-                },
-                "playSpeech": {
-                  "palette_params": {
-                    "text": {
-                      "type": "Строка"
-                    },
-                    "gender": {
-                      "type": "Строка"
-                    },
-                    "language": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "rgb": {
-                  "palette_params": {
-                    "r": {
-                      "type": "Число"
-                    },
-                    "g": {
-                      "type": "Число"
-                    },
-                    "b": {
-                      "type": "Число"
-                    },
-                    "a": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "setNumber": {
-                  "palette_params": {
-                    "number": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "setPosition": {
-                  "palette_params": {
-                    "x": {
-                      "type": "number"
-                    },
-                    "y": {
-                      "type": "number"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "id": {
-                      "type": "Строка"
-                    },
-                    "property": {
-                      "type": "Строка",
-                      "description": "Свойство, которое нужно изменить."
-                    }
-                  },
-                  "short_description": "Присваивает свойству новое значение для указанного элемента."
-                },
-                "setScreen": {
-                  "short_description": "Устанавливает экран на заданный ScreenID."
-                },
-                "setSize": {
-                  "palette_params": {
-                    "height": {
-                      "type": "number"
-                    },
-                    "width": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "showElement": {
-                  "short_description": "Показывает элемент с указанным идентификатором."
-                },
-                "textLabel": {
-                  "short_description": "Создает текстовую метку на экране, отображающую текст, указанный и на который ссылается данный идентификатор, в месте по умолчанию (0,0)."
-                }
-              }
-            },
-            "canvas": {
-              "name": "Холст",
-              "expressions": {
-                "circle": {
-                  "palette_params": {
-                    "x": {
-                      "type": "number"
-                    },
-                    "y": {
-                      "type": "number"
-                    },
-                    "radius": {
-                      "type": "number",
-                      "description": "Радиус круга в пикселях."
-                    }
-                  }
-                },
-                "createCanvas": {
-                  "palette_params": {
-                    "[width]": {
-                      "type": "number"
-                    },
-                    "[height]": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "drawImage": {
-                  "palette_params": {
-                    "id": {
-                      "description": "Положение x в пикселях верхнего левого угла рисуемого изображения."
-                    },
-                    "x": {
-                      "type": "number",
-                      "description": "Положение x в пикселях верхнего левого угла рисуемого изображения."
-                    },
-                    "y": {
-                      "type": "number",
-                      "description": "Положение y в пикселях верхнего левого угла рисуемого изображения."
-                    },
-                    "[width]": {
-                      "type": "number"
-                    },
-                    "[height]": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "getAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "Объекта"
-                    },
-                    "x": {
-                      "type": "number",
-                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
-                    },
-                    "y": {
-                      "type": "number",
-                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
-                    }
-                  },
-                  "short_description": "Возвращает значение альфы (непрозрачности) (от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения."
-                },
-                "getBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "Объекта"
-                    },
-                    "x": {
-                      "type": "number",
-                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
-                    },
-                    "y": {
-                      "type": "number",
-                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
-                    }
-                  }
-                },
-                "getGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "Объекта"
-                    },
-                    "x": {
-                      "type": "number",
-                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
-                    },
-                    "y": {
-                      "type": "number",
-                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
-                    }
-                  }
-                },
-                "getImageData": {
-                  "palette_params": {
-                    "x": {
-                      "type": "number",
-                      "description": "Позиция x в пикселях для начала съемки."
-                    },
-                    "y": {
-                      "type": "number",
-                      "description": "Позиция y в пикселях для начала съемки."
-                    },
-                    "width": {
-                      "type": "number",
-                      "description": "Ширина ограничивающего прямоугольника для захвата данных изображения."
-                    },
-                    "height": {
-                      "type": "number",
-                      "description": "Высота ограничивающего прямоугольника для захвата данных изображения."
-                    }
-                  }
-                },
-                "getRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "Объекта"
-                    },
-                    "x": {
-                      "type": "number",
-                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
-                    },
-                    "y": {
-                      "type": "number",
-                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
-                    }
-                  }
-                },
-                "line": {
-                  "palette_params": {
-                    "x1": {
-                      "type": "number"
-                    },
-                    "y1": {
-                      "type": "number"
-                    },
-                    "x2": {
-                      "type": "number"
-                    },
-                    "y2": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "putImageData": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "Объекта"
-                    },
-                    "x": {
-                      "type": "number",
-                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения, для размещения данных на холсте."
-                    },
-                    "y": {
-                      "type": "number",
-                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения, для размещения данных на холсте."
-                    }
-                  }
-                },
-                "rect": {
-                  "palette_params": {
-                    "x": {
-                      "type": "number",
-                      "description": "Положение x в пикселях верхнего левого угла прямоугольника."
-                    },
-                    "y": {
-                      "type": "number",
-                      "description": "Положение y в пикселях верхнего левого угла прямоугольника."
-                    },
-                    "width": {
-                      "type": "number",
-                      "description": "Горизонтальная ширина прямоугольника в пикселях."
-                    },
-                    "height": {
-                      "type": "number",
-                      "description": "Вертикальная высота прямоугольника в пикселях."
-                    }
-                  }
-                },
-                "setAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "Объекта"
-                    },
-                    "x": {
-                      "type": "number",
-                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
-                    },
-                    "y": {
-                      "type": "number",
-                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
-                    },
-                    "alphaValue": {
-                      "type": "number",
-                      "description": "Заданное значение альфы (непрозрачности) (от 0 до 255) в пикселе."
-                    }
-                  },
-                  "short_description": "Задает значение альфы (непрозрачности) (в диапазоне от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения."
-                },
-                "setBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "Объекта"
-                    },
-                    "x": {
-                      "type": "number",
-                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
-                    },
-                    "y": {
-                      "type": "number",
-                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
-                    },
-                    "blueValue": {
-                      "type": "number",
-                      "description": "Количество синего (от 0 до 255), заданное в пикселе."
-                    }
-                  },
-                  "short_description": "Задает количество синего (в диапазоне от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения, на входное значение BlueValue."
-                },
-                "setFillColor": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "setGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "Объекта"
-                    },
-                    "x": {
-                      "type": "number",
-                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
-                    },
-                    "y": {
-                      "type": "number",
-                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
-                    },
-                    "greenValue": {
-                      "type": "number",
-                      "description": "Количество зеленого (от 0 до 255), заданное в пикселе."
-                    }
-                  },
-                  "short_description": "Задает количество зеленого (в диапазоне от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения, на значение входного значения GreenValue."
-                },
-                "setRGB": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "Объекта"
-                    },
-                    "x": {
-                      "type": "number",
-                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
-                    },
-                    "y": {
-                      "type": "number",
-                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
-                    },
-                    "red": {
-                      "type": "number",
-                      "description": "Количество красного (от 0 до 255), заданное в пикселе."
-                    },
-                    "green": {
-                      "type": "number",
-                      "description": "Количество зеленого (от 0 до 255), заданное в пикселе."
-                    },
-                    "blue": {
-                      "type": "number",
-                      "description": "Количество синего (от 0 до 255), заданное в пикселе."
-                    },
-                    "alpha": {
-                      "type": "number",
-                      "description": "Опционально. Степень непрозрачности (от 0 до 255), заданная в пикселе. По умолчанию 255 (полная непрозрачность)."
-                    }
-                  }
-                },
-                "setRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "Объекта"
-                    },
-                    "x": {
-                      "type": "number",
-                      "description": "Положение x в пикселях, начиная с верхнего левого угла изображения."
-                    },
-                    "y": {
-                      "type": "number",
-                      "description": "Позиция y в пикселях, начиная с верхнего левого угла изображения."
-                    },
-                    "redValue": {
-                      "type": "number",
-                      "description": "Количество красного (от 0 до 255), заданное в пикселе."
-                    }
-                  },
-                  "short_description": "Задает количество красного (в диапазоне от 0 до 255) в цвете пикселя, расположенного в заданной позиции x и y в данных изображения, на входное значение RedValue."
-                },
-                "setStrokeColor": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "setStrokeWidth": {
-                  "palette_params": {
-                    "width": {
-                      "type": "number"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "name": "Данные",
-              "expressions": {
-                "createRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "Объекта"
-                    }
-                  }
-                },
-                "createRecordSync": {
-                  "palette_params": {
-                    "table": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "deleteRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "Объекта"
-                    }
-                  }
-                },
-                "drawChart": {
-                  "palette_params": {
-                    "options": {
-                      "type": "Объекта"
-                    }
-                  }
-                },
-                "drawChartFromRecords": {
-                  "palette_params": {
-                    "tableName": {
-                      "description": "Имя таблицы для извлечения записей."
-                    },
-                    "options": {
-                      "type": "Объекта"
-                    }
-                  }
-                },
-                "getColumn": {
-                  "palette_params": {
-                    "table": {
-                      "type": "Строка"
-                    },
-                    "column": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "getKeyValue": {
-                  "palette_params": {
-                    "key": {
-                      "description": "Имя ключа, который нужно получить."
-                    }
-                  }
-                },
-                "getPrediction": {
-                  "palette_params": {
-                    "name": {
-                      "type": "Строка"
-                    },
-                    "id": {
-                      "type": "Строка"
-                    },
-                    "callback": {
-                      "type": "Функция"
-                    }
-                  }
-                },
-                "getUserId": {
-                  "short_description": "Получает уникальный идентификатор текущего пользователя этого приложения."
-                },
-                "onRecordEvent": {
-                  "palette_params": {
-                    "table": {
-                      "description": "Имя таблицы, к которой применяется этот обработчик событий."
-                    }
-                  }
-                },
-                "readRecords": {
-                  "palette_params": {
-                    "terms": {
-                      "type": "Объекта"
-                    }
-                  }
-                },
-                "readRecordsSync": {
-                  "palette_params": {
-                    "table": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "setKeyValue": {
-                  "palette_params": {
-                    "key": {
-                      "description": "Имя ключа, который нужно сохранить."
-                    },
-                    "value": {
-                      "description": "Данные, которые должны быть сохранены."
-                    }
-                  },
-                  "short_description": "Сохраняет пару ключ/значение в хранилище данных ключ/значение App Lab и вызывает функцию обратного вызова по завершении действия."
-                },
-                "startWebRequest": {
-                  "palette_params": {
-                    "url": {
-                      "description": "Веб-адрес службы, возвращающей данные."
-                    }
-                  }
-                },
-                "updateRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "Объекта"
-                    }
-                  }
-                }
-              }
-            },
-            "turtle": {
-              "name": "Черепаха",
-              "expressions": {
-                "arcLeft": {
-                  "palette_params": {
-                    "angle": {
-                      "type": "number"
-                    },
-                    "radius": {
-                      "type": "number"
-                    }
-                  },
-                  "short_description": "Перемещает черепаху вперед и влево по плавной круговой дуге."
-                },
-                "arcRight": {
-                  "palette_params": {
-                    "angle": {
-                      "type": "number"
-                    },
-                    "radius": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "dot": {
-                  "palette_params": {
-                    "radius": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "getX": {
-                  "short_description": "Получает текущую координату x черепахи в пикселях."
-                },
-                "getY": {
-                  "short_description": "Получает текущую координату y черепахи в пикселях."
-                },
-                "hide": {
-                  "short_description": "Делает черепаху невидимой в ее текущем местоположении."
-                },
-                "move": {
-                  "palette_params": {
-                    "x": {
-                      "type": "number",
-                      "description": "Количество пикселей для перемещения черепахи вправо."
-                    },
-                    "y": {
-                      "type": "number",
-                      "description": "Количество пикселей для перемещения черепахи вниз."
-                    }
-                  }
-                },
-                "moveBackward": {
-                  "palette_params": {
-                    "pixels": {
-                      "type": "number"
-                    }
-                  },
-                  "short_description": "Перемещает черепаху назад на заданное количество пикселей от текущего направления."
-                },
-                "moveForward": {
-                  "palette_params": {
-                    "pixels": {
-                      "type": "number"
-                    }
-                  },
-                  "short_description": "Перемещает черепаху вперед на заданное количество пикселей в текущем направлении."
-                },
-                "moveTo": {
-                  "palette_params": {
-                    "x": {
-                      "type": "number"
-                    },
-                    "y": {
-                      "type": "number"
-                    }
-                  },
-                  "short_description": "Перемещает черепаху в определенное положение (x, y) на экране."
-                },
-                "penColor": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Строка"
-                    }
-                  },
-                  "short_description": "Задает цвет ручки, используемой черепахой для рисования линий и точек."
-                },
-                "penDown": {
-                  "short_description": "Опустите ручку так, чтобы черепаха во время движения рисовала за ней линию."
-                },
-                "penRGB": {
-                  "palette_params": {
-                    "r": {
-                      "type": "Число"
-                    },
-                    "g": {
-                      "type": "number"
-                    },
-                    "b": {
-                      "type": "number"
-                    },
-                    "a": {
-                      "type": "number"
-                    }
-                  },
-                  "short_description": "Используя значения RGBA, задает цвет пера, используемого черепахой для рисования линий и точек."
-                },
-                "penUp": {
-                  "short_description": "Поднимает ручку вверх, чтобы черепаха не рисовала линию во время движения."
-                },
-                "penWidth": {
-                  "palette_params": {
-                    "width": {
-                      "type": "number"
-                    }
-                  },
-                  "short_description": "Задает ширину линии в пикселях, которую черепаха рисует за собой при движении."
-                },
-                "show": {
-                  "short_description": "Делает черепаху видимой в ее текущем местоположении."
-                },
-                "speed": {
-                  "palette_params": {
-                    "value": {
-                      "type": "number"
-                    }
-                  },
-                  "short_description": "Задает скорость выполнения приложения, включая скорость черепахи."
-                },
-                "turnLeft": {
-                  "palette_params": {
-                    "angle": {
-                      "type": "number"
-                    }
-                  },
-                  "short_description": "Поворачивает черепаху влево на заданный угол. Положение черепахи осталось прежним."
-                },
-                "turnRight": {
-                  "palette_params": {
-                    "angle": {
-                      "type": "number"
-                    }
-                  },
-                  "short_description": "Поворачивает черепаху вправо на заданный угол. Положение черепахи осталось прежним."
-                },
-                "turnTo": {
-                  "palette_params": {
-                    "angle": {
-                      "type": "number"
-                    }
-                  },
-                  "short_description": "Изменяет направление черепахи на определенный угол. 0 — вверх, 90 — вправо, 180 — вниз и 270 — влево."
-                }
-              }
-            },
-            "control": {
-              "name": "Управление",
-              "expressions": {
-                "clearInterval": {
-                  "palette_params": {
-                    "interval": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "type": "number",
-                      "description": "Значение, возвращаемое функцией setTimeout для отмены."
-                    }
-                  }
-                },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "type": "number",
-                      "description": "Количество миллисекунд между каждым выполнением функции."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "type": "number",
-                      "description": "Количество миллисекунд ожидания перед выполнением функции."
-                    }
-                  }
-                },
-                "stopTimedLoop": {
-                  "palette_params": {
-                    "loop": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "timedLoop": {
-                  "palette_params": {
-                    "ms": {
-                      "type": "Число"
-                    },
-                    "callback": {
-                      "type": "Функция"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Математика",
-              "expressions": {
-                "mathAbs": {
-                  "palette_params": {
-                    "x": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "mathMax": {
-                  "palette_params": {
-                    "n1, n2,..., nX": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "mathMin": {
-                  "palette_params": {
-                    "n1, n2,..., nX": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "mathPow": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Число"
-                    },
-                    "y": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "mathRound": {
-                  "palette_params": {
-                    "x": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "mathSqrt": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "moduloOperator": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Число"
-                    },
-                    "y": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "type": "number",
-                      "description": "Возвращено минимальное число"
-                    },
-                    "max": {
-                      "type": "number",
-                      "description": "Возвращено максимальное число"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "type": "number",
-                      "description": "Возвращено минимальное число"
-                    },
-                    "max": {
-                      "type": "number",
-                      "description": "Возвращено максимальное число"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Переменные",
-              "expressions": {
-                "declareAssign_object": {
-                  "examples": {
-                    "Choose Your Own Adventure": {
-                      "name": "Выбери свое собственное приключение"
-                    }
-                  }
-                },
-                "declareAssign_x": {
-                  "short_description": "Объявляет переменную с данным именем после \" Var \", и присваивает его значение на правой части выражения"
-                },
-                "declareAssign_list_123": {
-                  "short_description": "Объявление и присвоение массива переменной"
-                },
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "Строка для поиска."
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "Строка для поиска."
-                    }
-                  }
-                },
-                "substring": {
-                  "palette_params": {
                     "start": {
                       "type": "number"
-                    },
-                    "end": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "addPair": {
-                  "palette_params": {
-                    "key": {
-                      "type": "Строка"
-                    }
-                  },
-                  "return_value": "Нет"
-                },
-                "getValue": {
-                  "palette_params": {
-                    "key": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "insertItem": {
-                  "palette_params": {
-                    "index": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "Длина строки"
-                },
-                "removeItem": {
-                  "palette_params": {
-                    "index": {
-                      "type": "number"
                     }
                   }
                 }
-              }
-            },
-            "functions": {
-              "name": "функции"
-            },
-            "advanced": {
-              "name": "Расширенный",
-              "expressions": {
-                "setStyle": {
-                  "palette_params": {
-                    "id": {
-                      "type": "Строка"
-                    },
-                    "css": {
-                      "type": "Строка"
-                    }
-                  }
-                }
-              }
-            },
-            "maker": {
-              "name": "Изготовитель",
-              "expressions": {
-                "createButton": {
-                  "palette_params": {
-                    "Pin": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "createLed": {
-                  "palette_params": {
-                    "Pin": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "pinMode": {
-                  "palette_params": {
-                    "pin": {
-                      "type": "Число"
-                    },
-                    "mode": {
-                      "type": "Строка"
-                    }
-                  }
-                }
-              }
-            },
-            "circuit": {
-              "expressions": {
-                "isPressed": {
-                  "return_value": "Булево выражение"
-                },
-                "buzzer.frequency": {
-                  "palette_params": {
-                    "frequency": {
-                      "type": "number"
-                    },
-                    "duration": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "buzzer.note": {
-                  "palette_params": {
-                    "duration": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "buzzer.play": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "buzzer.playNotes": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "buzzer.playSong": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "blink": {
-                  "palette_params": {
-                    "interval": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "color": {
-                  "palette_params": {
-                    "red": {
-                      "type": "number"
-                    },
-                    "green": {
-                      "type": "number"
-                    },
-                    "blue": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "intensity": {
-                  "palette_params": {
-                    "brightness": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "pulse": {
-                  "palette_params": {
-                    "interval": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "led.blink": {
-                  "palette_params": {
-                    "interval": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "led.pulse": {
-                  "palette_params": {
-                    "interval": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "toggleSwitch.isOpen": {
-                  "return_value": "Булево выражение"
-                }
-              }
-            },
-            "micro_bit": {
-              "expressions": {
-                "ledScreen.off": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Число"
-                    },
-                    "y": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "ledScreen.on": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Число"
-                    },
-                    "y": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "ledScreen.scrollNumber": {
-                  "palette_params": {
-                    "number": {
-                      "type": "Число"
-                    }
-                  }
-                },
-                "ledScreen.scrollString": {
-                  "palette_params": {
-                    "String": {
-                      "type": "Строка"
-                    }
-                  }
-                },
-                "ledScreen.toggle": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Число"
-                    },
-                    "y": {
-                      "type": "Число"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "spritelab": {
-          "name": "Лаборатория Спрайтов",
-          "description": "Лаборатория Спрайтов - это блочная среда программирования, в которой вы можете создавать интерактивные проекты.",
-          "categories": {
-            "sprites": {
-              "name": "Спрайты"
-            },
-            "world": {
-              "name": "Мир"
-            },
-            "location": {
-              "name": "Места"
-            },
-            "actions": {
-              "name": "Действия"
-            },
-            "events": {
-              "name": "События"
-            },
-            "behaviors": {
-              "name": "Режимы работы"
-            },
-            "loops": {
-              "name": "Циклы"
-            },
-            "variables": {
+              },
               "name": "Переменные"
-            },
-            "math": {
-              "name": "Математика"
-            },
-            "logic": {
-              "name": "Логика"
-            },
-            "functions": {
-              "name": "функции"
-            },
-            "text": {
-              "name": "Текст"
-            },
-            "comments": {
-              "name": "Комментарии"
             }
-          }
+          },
+          "description": "Лаборатория Игр - это среда программирования, в которой вы можете создавать захватывающие игры и анимацию. Нарисуйте своих персонажей, напишите рабочий код с помощью блоков или JavaScript, а затем поделитесь своей игрой за считанные секунды.",
+          "name": "Лаборатория игр"
         },
         "javalab": {
-          "name": "Java Lab",
           "categories": {
-            "java_lab_shortcuts": {
-              "name": "Ярлыки Java Лаборатории "
+            "control_structures": {
+              "name": "Структуры Управления"
+            },
+            "data_structures": {
+              "name": "Структуры Данных"
             },
             "general": {
               "name": "Основы Java"
             },
-            "org_code_theater": {
-              "name": "org.code.theater"
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_lab_shortcuts": {
+              "name": "Ярлыки Java Лаборатории "
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "java_util": {
+              "name": "java.util"
             },
             "org_code_media": {
               "name": "org.code.media"
@@ -1984,22 +1938,68 @@
             "org_code_neighborhood": {
               "name": "org.code.neighborhood"
             },
-            "java_io": {
-              "name": "java.io"
-            },
-            "java_util": {
-              "name": "java.util"
-            },
-            "java_lang": {
-              "name": "java.lang"
-            },
-            "control_structures": {
-              "name": "Структуры Управления"
-            },
-            "data_structures": {
-              "name": "Структуры Данных"
+            "org_code_theater": {
+              "name": "org.code.theater"
             }
-          }
+          },
+          "name": "Java Lab"
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "Действия"
+            },
+            "behaviors": {
+              "name": "Режимы работы"
+            },
+            "comments": {
+              "name": "Комментарии"
+            },
+            "events": {
+              "name": "События"
+            },
+            "functions": {
+              "name": "функции"
+            },
+            "location": {
+              "name": "Места"
+            },
+            "logic": {
+              "name": "Логика"
+            },
+            "loops": {
+              "name": "Циклы"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "sprites": {
+              "name": "Спрайты"
+            },
+            "text": {
+              "name": "Текст"
+            },
+            "variables": {
+              "name": "Переменные"
+            },
+            "world": {
+              "name": "Мир"
+            }
+          },
+          "description": "Лаборатория Спрайтов - это блочная среда программирования, в которой вы можете создавать интерактивные проекты.",
+          "name": "Лаборатория Спрайтов"
+        },
+        "weblab": {
+          "categories": {
+            "css_properties": {
+              "name": "Свойства CSS"
+            },
+            "html_tags": {
+              "name": "HTML тэги"
+            }
+          },
+          "description": "Веб-редактор HTML/CSS.",
+          "name": "Веб-лаборатория"
         }
       }
     }

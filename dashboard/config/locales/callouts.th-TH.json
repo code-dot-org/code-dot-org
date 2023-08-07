@@ -11,29 +11,117 @@
         "4-5 Artist Patterns Free Play": {
           "4-5_Artist_Patterns_Free_Play_1": "บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!"
         },
+        "4-5 Bee Conditionals 2": {
+          "4_5_Bee_Conditionals_2_1": "อย่าลืมตรวจดูว่า เมฆทุกก้อนมีดอกไม้อยู่หรือไม่ แต่ไม่จำเป็นต้องตรวจสอบรังผึ้งนะ"
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "หน้าจอเปลี่ยนเป็นสีเขียวหรือไม่? ถ้าใช่ ให้กด 'เสร็จสิ้น' หากไม่เป็นเช่นนั้น ให้กด 'รีเซ็ต' เปลี่ยนโค้ดของคุณ แล้วกด 'เล่น' อีกครั้ง"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "ตอนนี้คุณอยู่ในโหมดการออกแบบ"
+        },
+        "Course 4 Artist 4": {
+          "repeat_full_circle": "ใส่จำนวนครั้งที่ผีดิบมีการย้ายเพื่อให้เป็นวงกลมเต็มรูปแบบ"
+        },
+        "Course 4 Artist 7": {
+          "repeat_blocks": "ใช้บล็อก “Repeat” และห่อหุ้มไว้รอบ ๆ บล็อกในพื้นที่ทำงาน"
+        },
+        "Course 4 Artist For Loops 4": {
+          "place_counter_variable": "ลากตัวแปรเคาน์เตอร์ของคุณภายในบล็อกนี้"
+        },
+        "Course 4 Artist Vars 1": {
+          "repeat_blocks": "ใช้บล็อก “Repeat” และห่อหุ้มไว้รอบ ๆ บล็อกในพื้นที่ทำงาน"
+        },
+        "Course 4 Artist Vars 12": {
+          "set_length": "ใช้บล็อกนี้เพื่อตั้งค่า “ความยาว” เป็นค่าที่ถูกต้อง"
+        },
+        "Course 4 Artist Vars 2": {
+          "set_length": "ใช้บล็อกนี้เพื่อตั้งค่า “ความยาว” เป็นค่าที่ถูกต้อง"
+        },
+        "Course 4 Artist Vars 6": {
+          "degrees_per_side": "หาร 360 ตามจำนวนด้านเพื่อให้ได้ขนาดของแต่ละมุมเป็นองศา"
+        },
+        "Course 4 Bee Params 2": {
+          "edit_get_nectar": "ใช้ปุ่มนี้เพื่อแก้ไขฟังก์ชั่นและเปลี่ยนทิศทางที่ผึ้งจะหันไปรับน้ำหวาน"
+        },
         "Course 4 Maze 4": {
           "repeat": "ใส่บล็อกไว้ข้างในลูปเพื่อทำซ้ำคำสั่งต่าง ๆ"
+        },
+        "Course 4 Play Lab Params 3": {
+          "edit_function": "คลิกที่นี่เพื่อแก้ไขฟังก์ชั่นของคุณ"
+        },
+        "Course 4 Play Lab Params 6": {
+          "edit_add_parameter": "คลิกแก้ไขเพื่อเพิ่มพารามิเตอร์ในฟังก์ชันของคุณ"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "arrows_move_actor": "ใช้ลูกศรเพื่อย้ายนักแสดง"
         },
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "เลือกประเภทนักเต้นได้ที่นี่"
         },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "เลือกประเภทนักเต้นได้ที่นี่"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "เลือกประเภทนักเต้นได้ที่นี่"
+        },
         "CourseD_Dance_2020_02": {
-          "dance_callout_11_a": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ",
-          "arrow_buttons": "กดปุ่มลูกศรเพื่อควบคุมนักเต้นของคุณ"
+          "arrow_buttons": "กดปุ่มลูกศรเพื่อควบคุมนักเต้นของคุณ",
+          "dance_callout_11_a": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ"
+        },
+        "CourseD_Dance_2020_022022": {
+          "arrow_buttons": "กดปุ่มลูกศรเพื่อควบคุมนักเต้นของคุณ",
+          "dance_callout_11_a": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ"
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "arrow_buttons": "กดปุ่มลูกศรเพื่อควบคุมนักเต้นของคุณ",
+          "dance_callout_11_a": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ"
         },
         "CourseD_Dance_2020_04": {
+          "dance_callout_02": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ!"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ!"
+        },
+        "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ!"
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "เพิ่มเหตุการณ์นี้ในโปรแกรมของคุณ"
         },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "เพิ่มเหตุการณ์นี้ในโปรแกรมของคุณ"
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "เพิ่มเหตุการณ์นี้ในโปรแกรมของคุณ"
+        },
         "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "บล็อกใหม่!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "บล็อกใหม่!"
+        },
+        "CourseD_Dance_2020_06_2021": {
           "dance_party_11_5_groups": "บล็อกใหม่!"
         },
         "CourseD_Dance_2020_07": {
           "setprop_hint": "บล็อกใหม่!"
         },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "บล็อกใหม่!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "บล็อกใหม่!"
+        },
         "CourseD_Dance_2020_09": {
+          "new_block_3": "บล็อกใหม่!",
+          "new_block_4": "บล็อกใหม่!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "บล็อกใหม่!",
+          "new_block_4": "บล็อกใหม่!"
+        },
+        "CourseD_Dance_2020_09_2021": {
           "new_block_3": "บล็อกใหม่!",
           "new_block_4": "บล็อกใหม่!"
         },
@@ -56,12 +144,26 @@
         "CourseD_Dance_Party_11_5": {
           "dance_party_11_5_groups": "ดูบล็อก “เป็ดทั้งหมด” ได้จากที่นี่"
         },
+        "CourseF_outbreak2": {
+          "minitoolbox": "คลิกที่นี่เพื่อขยายบล็อก",
+          "pointerlocation": "ลากบล็อคหัวเรื่องมาที่นี่"
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "คลิกที่นี่เพื่อขยายบล็อก",
+          "pointerlocation": "ลากบล็อคหัวเรื่องมาที่นี่"
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "คลิกเพื่อสร้างคอสตูมใหม่"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
+        },
         "Dance_2019_01": {
           "dance_callout_01": "เลือกประเภทนักเต้นได้ที่นี่"
         },
         "Dance_2019_02": {
-          "dance_callout_11_a": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ",
-          "arrow_buttons": "กดปุ่มลูกศรเพื่อควบคุมนักเต้นของคุณ"
+          "arrow_buttons": "กดปุ่มลูกศรเพื่อควบคุมนักเต้นของคุณ",
+          "dance_callout_11_a": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ"
         },
         "Dance_2019_04": {
           "dance_callout_02": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ!"
@@ -98,16 +200,107 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "ดูบล็อก “เป็ดทั้งหมด” ได้จากที่นี่"
         },
+        "Fish Tank 3-validated2022": {
+          "spritelab_comment": "ใช้บล็อกนี้เพื่อบอกตัวเองหรือผู้สอนของคุณถึงวิธีการทำงานของโค้ดของคุณ"
+        },
+        "Fish Tank 3-validated_2019": {
+          "spritelab_comment": "ใช้บล็อกนี้เพื่อบอกตัวเองหรือผู้สอนของคุณถึงวิธีการทำงานของโค้ดของคุณ"
+        },
+        "Fish Tank 3-validated_2020": {
+          "spritelab_comment": "ใช้บล็อกนี้เพื่อบอกตัวเองหรือผู้สอนของคุณถึงวิธีการทำงานของโค้ดของคุณ"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "ใช้บล็อกนี้เพื่อบอกตัวเองหรือผู้สอนของคุณถึงวิธีการทำงานของโค้ดของคุณ"
+        },
+        "Function intro Ryan": {
+          "Function_intro_Ryan_1": "คำแนะนำเล็กๆ น้อยๆ นี้บอกให้คอมพิวเตอร์เรียกใช้โค้ดก้อนใหญ่ที่มีชื่อเดียวกันในพื้นที่ทำงาน"
+        },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "คำแนะนำเล็กๆ น้อยๆ นี้บอกให้คอมพิวเตอร์เรียกใช้โค้ดก้อนใหญ่ที่มีชื่อเดียวกันในพื้นที่ทำงาน"
+        },
+        "Function intro Ryan_2019": {
+          "Function_intro_Ryan_1": "คำแนะนำเล็กๆ น้อยๆ นี้บอกให้คอมพิวเตอร์เรียกใช้โค้ดก้อนใหญ่ที่มีชื่อเดียวกันในพื้นที่ทำงาน"
+        },
+        "Function intro Ryan_2020": {
+          "Function_intro_Ryan_1": "คำแนะนำเล็กๆ น้อยๆ นี้บอกให้คอมพิวเตอร์เรียกใช้โค้ดก้อนใหญ่ที่มีชื่อเดียวกันในพื้นที่ทำงาน"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "คำแนะนำเล็กๆ น้อยๆ นี้บอกให้คอมพิวเตอร์เรียกใช้โค้ดก้อนใหญ่ที่มีชื่อเดียวกันในพื้นที่ทำงาน"
+        },
         "Geometric Sun": {
           "4-5_Artist_Patterns_Free_Play_1": "บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!"
         },
         "Geometric Sun_2018": {
           "4-5_Artist_Patterns_Free_Play_1": "บล็อกต่างๆุที่คุณชื่นชอบได้รับการจัดแบ่งตามหัวข้อ คุณสามารถคลิกที่คำเหล่านี้เพื่อดูว่ามีโค้ดอะไรบ้่างอยู่ภายใต้!"
         },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "เล่นเสียงเมื่อเหตุการณ์นี้เกิดขึ้น"
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "ซึ่งบล็อกจะทำให้ Baymax เลื่อนขึ้นเมื่อลูกศรขึ้นจะถูกกด?",
+          "Infinity_move_directions_callout_arrow": "ใช้ลูกศรเหล่านี้เพื่อคัดท้าย"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "เพิ่มบล็อกย้ายที่นี่"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "สถานที่ย้ายบล็อกภายในที่นี่"
+        },
         "MC HOC 2016 Level 2-2": {
           "craft2_run_button_callout": "เมื่อคุณพร้อม ให้กด \" เริ่ม \" เพื่อลองใช้งานโปรแกรมของคุณ"
         },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "กด \"เล่น\" เพื่อเคลื่อนที่"
+        },
+        "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_1": "นี่คือลูป 'ทำซ้ำ'! คลิกที่นี่ในพื้นที่ทำงานและเพิ่มโค้ดที่คุณต้องการทำซ้ำหลายๆครั้ง"
+        },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "นี่คือลูป 'ทำซ้ำ'! คลิกที่นี่ในพื้นที่ทำงานและเพิ่มโค้ดที่คุณต้องการทำซ้ำหลายๆครั้ง"
+        },
+        "MC_HOC_2017_03_Cole_2019": {
+          "MC_HOC_2017_03_Cole_1": "นี่คือลูป 'ทำซ้ำ'! คลิกที่นี่ในพื้นที่ทำงานและเพิ่มโค้ดที่คุณต้องการทำซ้ำหลายๆครั้ง"
+        },
+        "MC_HOC_2017_03_Cole_2020": {
+          "MC_HOC_2017_03_Cole_1": "นี่คือลูป 'ทำซ้ำ'! คลิกที่นี่ในพื้นที่ทำงานและเพิ่มโค้ดที่คุณต้องการทำซ้ำหลายๆครั้ง"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "นี่คือลูป 'ทำซ้ำ'! คลิกที่นี่ในพื้นที่ทำงานและเพิ่มโค้ดที่คุณต้องการทำซ้ำหลาย ๆ ครั้ง"
+        },
+        "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "เอเจนท์สามารถโฉบเหนือน้ำได้ แต่ผู้เล่นทำไม่ได้!"
+        },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "เอเจนท์สามารถโฉบเหนือน้ำได้ แต่ผู้เล่นทำไม่ได้!"
+        },
+        "MC_HOC_2017_04_Cole_2019": {
+          "MC_HOC_2017_04_Cole_a": "เอเจนท์สามารถโฉบเหนือน้ำได้ แต่ผู้เล่นทำไม่ได้!"
+        },
+        "MC_HOC_2017_04_Cole_2020": {
+          "MC_HOC_2017_04_Cole_a": "เอเจนท์สามารถโฉบเหนือน้ำได้ แต่ผู้เล่นทำไม่ได้!"
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "เอเจนท์สามารถโฉบเหนือน้ำได้ แต่ผู้เล่นทำไม่ได้!"
+        },
+        "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "คุณไม่สามารถทิ้งบล็อคเหล่านี้ได้ แต่คุณสามารถแก้ไขได้!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
+          "MC_HOC_2017_06_Cole_1": "คุณไม่สามารถทิ้งบล็อคเหล่านี้ได้ แต่คุณสามารถแก้ไขได้!"
+        },
+        "MC_HOC_2017_06_Cole_2019": {
+          "MC_HOC_2017_06_Cole_1": "คุณไม่สามารถทิ้งบล็อคเหล่านี้ได้ แต่คุณสามารถแก้ไขได้!"
+        },
+        "MC_HOC_2017_06_Cole_2020": {
+          "MC_HOC_2017_06_Cole_1": "คุณไม่สามารถทิ้งบล็อคเหล่านี้ได้ แต่คุณสามารถแก้ไขได้!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "คุณทิ้งบล็อกเหล่านี้ไม่ได้ แต่แก้ไขได้!"
+        },
         "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_1": "เอเจนท์สามารถลอยอยู่เหนือลาวา แต่สตีฟกับแอเล็กซ์ไม่สามารถทำเช่นนั้นได้!  "
+        },
+        "MC_HOC_2017_Ali2022": {
           "MC_HOC_2017_08_RY_1": "เอเจนท์สามารถลอยอยู่เหนือลาวา แต่สตีฟกับแอเล็กซ์ไม่สามารถทำเช่นนั้นได้!  "
         },
         "MC_HOC_2017_Ali_2019": {
@@ -116,7 +309,47 @@
         "MC_HOC_2017_Ali_2020": {
           "MC_HOC_2017_08_RY_1": "เอเจนท์สามารถลอยอยู่เหนือลาวา แต่สตีฟกับแอเล็กซ์ไม่สามารถทำเช่นนั้นได้!  "
         },
+        "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "เอเจนท์สามารถลอยอยู่เหนือลาวา แต่สตีฟกับแอเล็กซ์ไม่สามารถทำเช่นนั้นได้!  "
+        },
+        "NEW Course 4 Artist Functions 7": {
+          "edit_function": "คลิกที่นี่เพื่อแก้ไขฟังก์ชั่นของคุณ"
+        },
+        "NEW Course 4 Artist Functions 8": {
+          "edit_function": "คลิกที่นี่เพื่อแก้ไขฟังก์ชั่นของคุณ"
+        },
+        "NEW Course 4 Artist Params 10": {
+          "create_function": "คลิกที่นี่เพื่อเปิด “Functions” flyout จากนั้นคลิกปุ่ม “สร้างฟังก์ชั่น”"
+        },
+        "NEW Course 4 Artist Params 9": {
+          "add_and_drag_parameter": "เขียนชื่อของพารามิเตอร์ของคุณที่นี่คลิกเพิ่มแล้วลากลงในคำจำกัดความของฟังก์ชันของคุณ",
+          "edit_add_parameter": "คลิกแก้ไขเพื่อเพิ่มพารามิเตอร์ในฟังก์ชันของคุณ"
+        },
+        "NEW Course 4 Artist Vars 6": {
+          "place_length_variable": "ลากตัวแปรความยาวที่นี่เพื่อแทนที่เครื่องหมายคำถาม"
+        },
+        "NEW Course 4 Bee For Loops 5": {
+          "actions_category": "กล่องเครื่องมือมีรูปลักษณ์ใหม่!บล็อก “การกระทำ” อยู่ในที่นี่ในขณะนี้"
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "ใช้แบบเลื่อนลงนี้เพื่อสร้างเกล็ดหิมะที่แตกต่างกัน!"
+        },
+        "New Sprite Lab Project": {
+          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
+        },
+        "OPD-K5-forloops-5": {
+          "courseF_bee_for4_1": "คุณจะพบ `for` loop อยู่ในนี้!"
+        },
+        "OPD-K5-projects-4": {
+          "courseE_playLab_scaffold3_1": "นำตัวละครไปที่ธงนี้เพื่อเลื่อนไปยังเลเวลถัดไป"
+        },
+        "OPD-K5-spritelab-3": {
+          "spritelab_comment": "ใช้บล็อกนี้เพื่อบอกตัวเองหรือผู้สอนของคุณถึงวิธีการทำงานของโค้ดของคุณ"
+        },
         "Overworld Chop Trees": {
+          "craft_callout_preplaced": "เราได้วางบล็อกบางส่วนไว้ที่นี่เพื่อให้คุณเริ่มต้นเล่น"
+        },
+        "Overworld Chop Trees2022": {
           "craft_callout_preplaced": "เราได้วางบล็อกบางส่วนไว้ที่นี่เพื่อให้คุณเริ่มต้นเล่น"
         },
         "Overworld Chop Trees_2019": {
@@ -125,7 +358,13 @@
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "เราได้วางบล็อกบางส่วนไว้ที่นี่เพื่อให้คุณเริ่มต้นเล่น"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "เราได้วางบล็อกบางส่วนไว้ที่นี่เพื่อให้คุณเริ่มต้นเล่น"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม"
         },
         "Overworld House Frame Chosen_2019": {
@@ -134,19 +373,33 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม"
+        },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน",
-          "craft_drag_block_callout": "ลากบล็อก \"ไปข้างหน้า\" และติดบล็อกนั้นไว้ด้านล่างอีกบล็อกหนึ่ง"
+          "craft_drag_block_callout": "ลากบล็อก \"ไปข้างหน้า\" และติดบล็อกนั้นไว้ด้านล่างอีกบล็อกหนึ่ง",
+          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_drag_block_callout": "ลากบล็อก \"ไปข้างหน้า\" และติดบล็อกนั้นไว้ด้านล่างอีกบล็อกหนึ่ง",
+          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน",
-          "craft_drag_block_callout": "ลากบล็อก \"ไปข้างหน้า\" และติดบล็อกนั้นไว้ด้านล่างอีกบล็อกหนึ่ง"
+          "craft_drag_block_callout": "ลากบล็อก \"ไปข้างหน้า\" และติดบล็อกนั้นไว้ด้านล่างอีกบล็อกหนึ่ง",
+          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน",
-          "craft_drag_block_callout": "ลากบล็อก \"ไปข้างหน้า\" และติดบล็อกนั้นไว้ด้านล่างอีกบล็อกหนึ่ง"
+          "craft_drag_block_callout": "ลากบล็อก \"ไปข้างหน้า\" และติดบล็อกนั้นไว้ด้านล่างอีกบล็อกหนึ่ง",
+          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_drag_block_callout": "ลากบล็อก \"ขยับไปข้างหน้า\" และต่อเข้ากับด้านล่างของอีกบล็อกหนึ่ง",
+          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน"
         },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "ทำซ้ำโดยวางบล็อกไที่นี่"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "ทำซ้ำโดยวางบล็อกไที่นี่"
         },
         "Overworld Place Wall_2019": {
@@ -155,7 +408,13 @@
         "Overworld Place Wall_2020": {
           "craft_inside_repeat": "ทำซ้ำโดยวางบล็อกไที่นี่"
         },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "ทำซ้ำโดยวางบล็อกไที่นี่"
+        },
         "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม"
+        },
+        "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม"
         },
         "Underground Avoiding Lava_2019": {
@@ -164,7 +423,13 @@
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "ระเบิดเหล็กนี้!"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "ระเบิดเหล็กนี้!"
         },
         "Underground Iron_2019": {
@@ -173,10 +438,79 @@
         "Underground Iron_2020": {
           "craft_what_is_iron": "ระเบิดเหล็กนี้!"
         },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "ระเบิดเหล็กนี้!"
+        },
+        "Virtual Pet 2_-2022-2": {
+          "vp_costumes": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายชุดใหม่ให้กับโปรเจกต์ของคุณ!"
+        },
+        "Virtual Pet 2_2019": {
+          "": "คลิกที่นี่!"
+        },
+        "Virtual Pet 2_2020": {
+          "": "คลิกที่นี่!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายชุดใหม่ให้กับโปรเจกต์ของคุณ!"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายชุดใหม่ให้กับโปรเจกต์ของคุณ!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายชุดใหม่ให้กับโปรเจกต์ของคุณ!"
+        },
+        "behaviors 1": {
+          "behaviors_edit": "คลิกที่นี่เพื่อดูว่าพฤติกรรมนี้ทำงานอย่างไร"
+        },
+        "behaviors 1_2020": {
+          "behaviors_edit": "คลิกที่นี่เพื่อดูว่าพฤติกรรมนี้ทำงานอย่างไร"
+        },
+        "behaviors 4": {
+          "behaviors_edit": "คลิกที่นี่เพื่อดูว่าพฤติกรรมนี้ทำงานอย่างไร"
+        },
+        "behaviors 4_2020": {
+          "behaviors_edit": "คลิกที่นี่เพื่อดูว่าพฤติกรรมนี้ทำงานอย่างไร"
+        },
         "course2_bee_conditionals_challenge2": {
           "courseD_bee_conditionals_challenge2_1": "ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)"
         },
+        "course3_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
+          "courseE_artist_functions_challenge1_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
+        },
+        "course3_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
+          "courseE_artist_functions_challenge2_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
+        },
+        "course3_playLab_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
+        },
+        "course4_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
+          "courseE_artist_functions_challenge2_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
         "courseA_artist_loops4": {
+          "courseA_artist_loops4_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
+        },
+        "courseA_artist_loops42022": {
           "courseA_artist_loops4_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
         },
         "courseA_artist_loops4_2018": {
@@ -188,7 +522,49 @@
         "courseA_artist_loops4_2020": {
           "courseA_artist_loops4_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
         },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
+        },
+        "courseA_artist_loops7": {
+          "courseA_artist_loops7_1": "ตัวเลขนี้หมายความว่าใช้บล็อกได้แค่ประเภทเดียวในคำตอบสุดท้าย"
+        },
+        "courseA_artist_loops72022": {
+          "courseA_artist_loops7_1": "ตัวเลขนี้หมายความว่าใช้บล็อกได้แค่ประเภทเดียวในคำตอบสุดท้าย"
+        },
+        "courseA_artist_loops7_2018": {
+          "courseA_artist_loops7_1": "ตัวเลขนี้หมายความว่าใช้บล็อกได้แค่ประเภทเดียวในคำตอบสุดท้าย"
+        },
+        "courseA_artist_loops7_2019": {
+          "courseA_artist_loops7_1": "ตัวเลขนี้หมายความว่าใช้บล็อกได้แค่ประเภทเดียวในคำตอบสุดท้าย"
+        },
+        "courseA_artist_loops7_2020": {
+          "courseA_artist_loops7_1": "ตัวเลขนี้หมายความว่าใช้บล็อกได้แค่ประเภทเดียวในคำตอบสุดท้าย"
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "ตัวเลขนี้หมายความว่าใช้บล็อกได้แค่ประเภทเดียวในคำตอบสุดท้าย"
+        },
+        "courseA_artist_loops8": {
+          "courseA_artist_loops8_1": "คุณรู้หรือไม่ว่าคุณย้อนกลับได้ทุกเมื่อที่ต้องการ"
+        },
+        "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "คุณรู้หรือไม่ว่าคุณย้อนกลับได้ทุกเมื่อที่ต้องการ"
+        },
+        "courseA_artist_loops8_2018": {
+          "courseA_artist_loops8_1": "คุณรู้หรือไม่ว่าคุณย้อนกลับได้ทุกเมื่อที่ต้องการ"
+        },
+        "courseA_artist_loops8_2019": {
+          "courseA_artist_loops8_1": "คุณรู้หรือไม่ว่าคุณย้อนกลับได้ทุกเมื่อที่ต้องการ"
+        },
+        "courseA_artist_loops8_2020": {
+          "courseA_artist_loops8_1": "คุณรู้หรือไม่ว่าคุณย้อนกลับได้ทุกเมื่อที่ต้องการ"
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "คุณรู้หรือไม่ว่าคุณย้อนกลับได้ทุกเมื่อที่ต้องการ"
+        },
         "courseA_collector_loops1": {
+          "courseA_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
+        },
+        "courseA_collector_loops12022": {
           "courseA_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
         },
         "courseA_collector_loops1_2019": {
@@ -197,7 +573,13 @@
         "courseA_collector_loops1_2020": {
           "courseA_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
         },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
+        },
         "courseA_collector_loops3": {
+          "gradek_adventurer_loops2_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
+        },
+        "courseA_collector_loops32022": {
           "gradek_adventurer_loops2_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
         },
         "courseA_collector_loops3_2018": {
@@ -207,6 +589,9 @@
           "gradek_adventurer_loops2_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
         },
         "courseA_collector_loops3_2020": {
+          "gradek_adventurer_loops2_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
+        },
+        "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
         },
         "courseA_collector_preLoops2": {
@@ -224,7 +609,25 @@
         "courseA_collector_preLoops6": {
           "courseA_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
         },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
+        },
+        "courseA_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
+        },
+        "courseA_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
+        },
+        "courseA_maze_ramp3a_2018": {
+          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
+        },
         "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!"
+        },
+        "courseA_maze_seq12022": {
           "courseA_maze_seq1_1": "ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!"
         },
         "courseA_maze_seq1_2018": {
@@ -236,6 +639,66 @@
         "courseA_maze_seq1_2020": {
           "courseA_maze_seq1_1": "ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!"
         },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!"
+        },
+        "courseA_playLab_events4": {
+          "courseA_playlab_events4_callout1": "นี่คือคำบรรยาย"
+        },
+        "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "นี่คือคำบรรยาย"
+        },
+        "courseA_playLab_events4_2018": {
+          "courseA_playlab_events4_callout1": "นี่คือคำบรรยาย"
+        },
+        "courseA_playLab_events4_2019": {
+          "courseA_playlab_events4_callout1": "นี่คือคำบรรยาย"
+        },
+        "courseA_playLab_events4_2020": {
+          "courseA_playlab_events4_callout1": "นี่คือคำบรรยาย"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "นี่คือคำบรรยาย"
+        },
+        "courseA_playLab_events5": {
+          "courseA_playLab_events5_1": "คลิกที่นี่เพื่อเปลี่ยนทิศทางของลูกศรเหตุการณ์\n"
+        },
+        "courseA_playLab_events52022": {
+          "courseA_playLab_events5_1": "คลิกที่นี่เพื่อเปลี่ยนทิศทางของลูกศรเหตุการณ์\n"
+        },
+        "courseA_playLab_events5_2018": {
+          "courseA_playLab_events5_1": "คลิกที่นี่เพื่อเปลี่ยนทิศทางของลูกศรเหตุการณ์\n"
+        },
+        "courseA_playLab_events5_2019": {
+          "courseA_playLab_events5_1": "คลิกที่นี่เพื่อเปลี่ยนทิศทางของลูกศรเหตุการณ์\n"
+        },
+        "courseA_playLab_events5_2020": {
+          "courseA_playLab_events5_1": "คลิกที่นี่เพื่อเปลี่ยนทิศทางของลูกศรเหตุการณ์\n"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "คลิกที่นี่เพื่อเปลี่ยนทิศทางของลูกศรเหตุการณ์"
+        },
+        "courseA_playLab_events6": {
+          "courseA_playLab_events6_1": "คุณใช้ตัวเลือกนี้เพื่อเลือกเสียง \"สุ่ม\" ซึ่งหมายความว่าคุณจะไม่มีวันรู้ว่าได้เสียงอะไรจนกว่าจะได้ยิน!"
+        },
+        "courseA_playLab_events62022": {
+          "courseA_playLab_events6_1": "คุณใช้ตัวเลือกนี้เพื่อเลือกเสียง \"สุ่ม\" ซึ่งหมายความว่าคุณจะไม่มีวันรู้ว่าได้เสียงอะไรจนกว่าจะได้ยิน!"
+        },
+        "courseA_playLab_events6_2018": {
+          "courseA_playLab_events6_1": "คุณใช้ตัวเลือกนี้เพื่อเลือกเสียง \"สุ่ม\" ซึ่งหมายความว่าคุณจะไม่มีวันรู้ว่าได้เสียงอะไรจนกว่าจะได้ยิน!"
+        },
+        "courseA_playLab_events6_2019": {
+          "courseA_playLab_events6_1": "คุณใช้ตัวเลือกนี้เพื่อเลือกเสียง \"สุ่ม\" ซึ่งหมายความว่าคุณจะไม่มีวันรู้ว่าได้เสียงอะไรจนกว่าจะได้ยิน!"
+        },
+        "courseA_playLab_events6_2020": {
+          "courseA_playLab_events6_1": "คุณใช้ตัวเลือกนี้เพื่อเลือกเสียง \"สุ่ม\" ซึ่งหมายความว่าคุณจะไม่มีวันรู้ว่าได้เสียงอะไรจนกว่าจะได้ยิน!"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "คุณใช้ตัวเลือกนี้เพื่อเลือกเสียง \"สุ่ม\" ซึ่งหมายความว่าคุณจะไม่มีวันรู้ว่าได้เสียงอะไรจนกว่าจะได้ยิน!"
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
         },
@@ -245,7 +708,43 @@
         "courseB_Scrat_ramp1_2020": {
           "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
         },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
+        },
+        "courseB_artist_loops3": {
+          "courseB_artist_loops3_1": "มีบล็อกที่อยู่ในกล่องเครื่องมือนี้เพียงบล็อกเดียว คุณจะนำมาใช้ยังไง"
+        },
+        "courseB_artist_loops32022": {
+          "courseB_artist_loops3_1": "มีบล็อกที่อยู่ในกล่องเครื่องมือนี้เพียงบล็อกเดียว คุณจะนำมาใช้ยังไง"
+        },
+        "courseB_artist_loops3_2018": {
+          "courseB_artist_loops3_1": "มีบล็อกที่อยู่ในกล่องเครื่องมือนี้เพียงบล็อกเดียว คุณจะนำมาใช้ยังไง"
+        },
+        "courseB_artist_loops3_2019": {
+          "courseB_artist_loops3_1": "มีบล็อกที่อยู่ในกล่องเครื่องมือนี้เพียงบล็อกเดียว คุณจะนำมาใช้ยังไง"
+        },
+        "courseB_artist_loops3_2020": {
+          "courseB_artist_loops3_1": "มีบล็อกที่อยู่ในกล่องเครื่องมือนี้เพียงบล็อกเดียว คุณจะนำมาใช้ยังไง"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "มีบล็อกที่อยู่ในกล่องเครื่องมือนี้เพียงบล็อกเดียว คุณจะนำมาใช้ยังไง"
+        },
         "courseB_collector_loops1": {
+          "courseB_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
+        },
+        "courseB_collector_loops12022": {
           "courseB_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
         },
         "courseB_collector_loops1_2018": {
@@ -257,7 +756,13 @@
         "courseB_collector_loops1_2020": {
           "courseB_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
         },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
+        },
         "courseB_maze_seq1": {
+          "courseB_maze_seq1": "ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!"
+        },
+        "courseB_maze_seq12022": {
           "courseB_maze_seq1": "ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!"
         },
         "courseB_maze_seq1_2018": {
@@ -268,6 +773,102 @@
         },
         "courseB_maze_seq1_2020": {
           "courseB_maze_seq1": "ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!"
+        },
+        "courseB_playlab_events6": {
+          "courseB_playlab_events6_a": "ใช้ลูกศรแบบเลื่อนลงสีเขียวเพื่อเปลี่ยนทิศทาง"
+        },
+        "courseB_playlab_events62022": {
+          "courseB_playlab_events6_a": "ใช้ลูกศรแบบเลื่อนลงสีเขียวเพื่อเปลี่ยนทิศทาง"
+        },
+        "courseB_playlab_events6_2018": {
+          "courseB_playlab_events6_a": "ใช้ลูกศรแบบเลื่อนลงสีเขียวเพื่อเปลี่ยนทิศทาง"
+        },
+        "courseB_playlab_events6_2019": {
+          "courseB_playlab_events6_a": "ใช้ลูกศรแบบเลื่อนลงสีเขียวเพื่อเปลี่ยนทิศทาง"
+        },
+        "courseB_playlab_events6_2020": {
+          "courseB_playlab_events6_a": "ใช้ลูกศรแบบเลื่อนลงสีเขียวเพื่อเปลี่ยนทิศทาง"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "ใช้ลูกศรแบบเลื่อนลงสีเขียวเพื่อเปลี่ยนทิศทาง"
+        },
+        "courseC19_playLab_EOC3": {
+          "courseE_playLab_scaffold3_1": "นำตัวละครไปที่ธงนี้เพื่อเลื่อนไปยังเลเวลถัดไป"
+        },
+        "courseC19_playLab_EOC32022": {
+          "courseE_playLab_scaffold3_1": "นำตัวละครไปที่ธงนี้เพื่อเลื่อนไปยังเลเวลถัดไป"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "courseE_playLab_scaffold3_1": "นำตัวละครไปที่ธงนี้เพื่อเลื่อนไปยังเลเวลถัดไป"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "นำตัวละครไปที่ธงนี้เพื่อเลื่อนไปยังเลเวลถัดไป"
+        },
+        "courseC_PlayLab_events8": {
+          "courseC_PlayLab_events8_callout1": "ใช้บล็อกนี้เมื่อเจ้านกเพนกวินแวดเดิลและเจ้าไดโนจอมเขมือบสัมผัสกัน!"
+        },
+        "courseC_PlayLab_events82022": {
+          "courseC_PlayLab_events8_callout1": "ใช้บล็อกนี้เมื่อเจ้านกเพนกวินแวดเดิลและเจ้าไดโนจอมเขมือบสัมผัสกัน!"
+        },
+        "courseC_PlayLab_events8_2018": {
+          "courseC_PlayLab_events8_callout1": "ใช้บล็อกนี้เมื่อเจ้านกเพนกวินแวดเดิลและเจ้าไดโนจอมเขมือบสัมผัสกัน!"
+        },
+        "courseC_PlayLab_events8_2019": {
+          "courseC_PlayLab_events8_callout1": "ใช้บล็อกนี้เมื่อเจ้านกเพนกวินแวดเดิลและเจ้าไดโนจอมเขมือบสัมผัสกัน!"
+        },
+        "courseC_PlayLab_events8_2020": {
+          "courseC_PlayLab_events8_callout1": "ใช้บล็อกนี้เมื่อเจ้านกเพนกวินแวดเดิลและเจ้าไดโนจอมเขมือบสัมผัสกัน!"
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "ใช้บล็อกนี้เมื่อเจ้านกเพนกวินแวดเดิลและเจ้าไดโนจอมเขมือบสัมผัสกัน!"
+        },
+        "courseC_PlayLab_events_challenge1": {
+          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
+        },
+        "courseC_PlayLab_events_challenge12022": {
+          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
+        },
+        "courseC_PlayLab_events_challenge1_2018": {
+          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
+        },
+        "courseC_PlayLab_events_challenge1_2019": {
+          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
+        },
+        "courseC_PlayLab_events_challenge1_2020": {
+          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
+        },
+        "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
+        },
+        "courseC_artist_loops1a2022": {
+          "jumpto_callout": "บล็อกนี้มีความสำคัญมากสำหรับโปรเจ็กต์นี้ อย่าลืมใช้บล็อกนี้นะ!"
+        },
+        "courseC_artist_loops1a_2019": {
+          "jumpto_callout": "บล็อกนี้มีความสำคัญมากสำหรับโปรเจ็กต์นี้ อย่าลืมใช้บล็อกนี้นะ!"
+        },
+        "courseC_artist_loops1a_2020": {
+          "jumpto_callout": "บล็อกนี้มีความสำคัญมากสำหรับโปรเจ็กต์นี้ อย่าลืมใช้บล็อกนี้นะ!"
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "บล็อกนี้มีความสำคัญมากสำหรับโปรเจ็กต์นี้ อย่าลืมใช้บล็อกนี้นะ!"
+        },
+        "courseC_artist_loops1b2022": {
+          "sticker2": "เพิ่มบล็อกนี้ลงตรงกลางโปรแกรมของคุณ"
+        },
+        "courseC_artist_loops1b_2019": {
+          "sticker2": "เพิ่มบล็อกนี้ลงตรงกลางโปรแกรมของคุณ"
+        },
+        "courseC_artist_loops1b_2020": {
+          "sticker2": "เพิ่มบล็อกนี้ลงตรงกลางโปรแกรมของคุณ"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "เพิ่มบล็อกนี้ลงตรงกลางโปรแกรมของคุณ"
         },
         "courseC_artist_loopsPrePre1a": {
           "courseC_artist_loopsPrePre1a_1": "เริ่มต้นด้วยการใช้บล็อกอันนี้เพื่อส่งศิลปินไปที่ใจกลางของหน้าจอ"
@@ -281,839 +882,17 @@
         "courseC_artist_loopsPrePre1a_2020": {
           "courseC_artist_loopsPrePre1a_1": "เริ่มต้นด้วยการใช้บล็อกอันนี้เพื่อส่งศิลปินไปที่ใจกลางของหน้าจอ"
         },
-        "courseC_collector_prog1": {
-          "courseC_collector_prog1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
-        },
-        "courseC_maze_debugging5": {
-          "courseC_maze_debugging5_1": "คุณไม่สามารถลบ บล็อกสีเทาทิ้งไปได้"
-        },
-        "courseC_maze_programming1": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "courseC_maze_programming1_2018": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "courseC_maze_programming1_2019": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "courseC_maze_programming1_2020": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge2_1": "ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)"
-        },
-        "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge2_1": "ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)"
-        },
-        "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge2_1": "ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)"
-        },
-        "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge2_1": "ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)"
-        },
-        "courseD_maze_ramp1": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "courseD_maze_ramp1_2018": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "courseD_maze_ramp1_2019": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "courseD_maze_ramp1_2020": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "courseD_scrat_ramp1": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "coursea_maze_ramp1_2018": {
-          "grade2_CaringForNewPet_0_1": "หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด \" เริ่ม \" เพื่อให้โปรแกรมของคุณเริ่มทำงาน"
-        },
-        "coursea_maze_ramp1_2019": {
-          "grade2_CaringForNewPet_0_1": "หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด \" เริ่ม \" เพื่อให้โปรแกรมของคุณเริ่มทำงาน"
-        },
-        "coursea_maze_ramp1_2020": {
-          "grade2_CaringForNewPet_0_1": "หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด \" เริ่ม \" เพื่อให้โปรแกรมของคุณเริ่มทำงาน"
-        },
-        "outbreak2": {
-          "minitoolbox": "คลิกที่นี่เพื่อขยายบล็อก",
-          "pointerlocation": "ลากบล็อคหัวเรื่องมาที่นี่"
-        },
-        "outbreak7": {
-          "costumes_callout": "คลิกเพื่อสร้างคอสตูมใหม่"
-        },
-        "CourseD_Dance_2020_01_2021": {
-          "dance_callout_01": "เลือกประเภทนักเต้นได้ที่นี่"
-        },
-        "CourseD_Dance_2020_02_2021": {
-          "dance_callout_11_a": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ",
-          "arrow_buttons": "กดปุ่มลูกศรเพื่อควบคุมนักเต้นของคุณ"
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ!"
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "dance_callout_05": "เพิ่มเหตุการณ์นี้ในโปรแกรมของคุณ"
-        },
-        "CourseD_Dance_2020_06_2021": {
-          "dance_party_11_5_groups": "บล็อกใหม่!"
-        },
-        "CourseD_Dance_2020_07_2021": {
-          "setprop_hint": "บล็อกใหม่!"
-        },
-        "CourseD_Dance_2020_09_2021": {
-          "new_block_3": "บล็อกใหม่!",
-          "new_block_4": "บล็อกใหม่!"
-        },
-        "CourseF_outbreak2": {
-          "minitoolbox": "คลิกที่นี่เพื่อขยายบล็อก",
-          "pointerlocation": "ลากบล็อคหัวเรื่องมาที่นี่"
-        },
-        "CourseF_outbreak7": {
-          "costumes_callout": "คลิกเพื่อสร้างคอสตูมใหม่"
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "MC_HOC_2017_08_RY_1": "เอเจนท์สามารถลอยอยู่เหนือลาวา แต่สตีฟกับแอเล็กซ์ไม่สามารถทำเช่นนั้นได้!  "
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "เราได้วางบล็อกบางส่วนไว้ที่นี่เพื่อให้คุณเริ่มต้นเล่น"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน",
-          "craft_drag_block_callout": "ลากบล็อก \"ขยับไปข้างหน้า\" และต่อเข้ากับด้านล่างของอีกบล็อกหนึ่ง"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "ทำซ้ำโดยวางบล็อกไที่นี่"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "ระเบิดเหล็กนี้!"
-        },
-        "courseA_artist_loops4_2021": {
-          "courseA_artist_loops4_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
-        },
-        "courseA_collector_loops1_2021": {
-          "courseA_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
-        },
-        "courseA_collector_loops3_2021": {
-          "gradek_adventurer_loops2_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
-        },
-        "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_1": "ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!"
-        },
-        "courseB_Scrat_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "courseB_collector_loops1_2021": {
-          "courseB_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
-        },
-        "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1": "ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!"
-        },
-        "courseC_maze_programming1_2021": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge2_1": "ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)"
-        },
-        "courseD_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "coursea_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด \" เริ่ม \" เพื่อให้โปรแกรมของคุณเริ่มทำงาน"
-        },
-        "helloworld_animals_costumes": {
-          "hello_world_new": "บล็อกใหม่!"
-        },
-        "helloworld_animals_sizes": {
-          "hello_world_new": "บล็อกใหม่!",
-          "hello_world_new_block": "บล็อกใหม่!!!!"
-        },
-        "helloworld_animals_sounds": {
-          "hello_world_new": "บล็อกใหม่!"
-        },
-        "helloworld_emoji_costumes": {
-          "hello_world_new": "บล็อกใหม่!"
-        },
-        "helloworld_emoji_sizes": {
-          "hello_world_new": "บล็อกใหม่!",
-          "hello_world_new_block": "บล็อกใหม่!"
-        },
-        "helloworld_emoji_sounds": {
-          "hello_world_new": "บล็อกใหม่!"
-        },
-        "helloworld_food_costumes": {
-          "hello_world_new": "บล็อกใหม่!"
-        },
-        "helloworld_food_sizes": {
-          "hello_world_new": "บล็อกใหม่!",
-          "hello_world_new_block": "บล็อกใหม่!"
-        },
-        "helloworld_food_sounds": {
-          "hello_world_new": "บล็อกใหม่!"
-        },
-        "helloworld_retro_costumes": {
-          "hello_world_new": "บล็อกใหม่!"
-        },
-        "helloworld_retro_sizes": {
-          "hello_world_new": "บล็อกใหม่!",
-          "hello_world_new_block": "บล็อกใหม่!"
-        },
-        "helloworld_retro_sounds": {
-          "hello_world_new": "บล็อกใหม่!"
-        },
-        "poetry_hoc_addSprites": {
-          "poetry_sprite": "บล็อกใหม่!"
-        },
-        "poetry_hoc_events1": {
-          "poetry_event": "บล็อกใหม่!",
-          "poetry_foreground": "บล็อกใหม่!"
-        },
-        "poetry_hoc_freeplay": {
-          "poetry_burst": "บล็อกใหม่!",
-          "poetry_multiple_sprites": "บล็อกใหม่!",
-          "poetry_new_block": "บล็อกใหม่!",
-          "poetry_selector": "เลือกบทกวีหรือใส่บทกวีของตัวเองได้เลย!"
-        },
-        "poetry_hoc_sounds": {
-          "poetry_sound": "บล็อกใหม่!",
-          "poetry_music": "บล็อกใหม่!"
-        },
-        "poetry_hoc_spriteBehaviors": {
-          "poetry_sprite_begins": "บล็อกใหม่!",
-          "poetry_sprite_stops": "บล็อกใหม่!"
-        },
-        "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "บล็อกใหม่!",
-          "poetry_remove_sprite": "บล็อกใหม่!"
-        },
-        "helloworld_animals_backgrounds": {
-          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
-        },
-        "helloworld_animals_behaviors": {
-          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
-        },
-        "helloworld_animals_click": {
-          "hw_Run": "คลิกที่นี่เพื่อใช้งานโค้ด"
-        },
-        "helloworld_animals_events": {
-          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
-        },
-        "helloworld_animals_freeplay": {
-          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
-        },
-        "helloworld_animals_location": {
-          "pin": "ปักหมุด"
-        },
-        "helloworld_animals_multi": {
-          "pin": "ปักหมุด"
-        },
-        "helloworld_animals_say": {
-          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้",
-          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท"
-        },
-        "helloworld_emoji_backgrounds": {
-          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
-        },
-        "helloworld_emoji_behaviors": {
-          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
-        },
-        "helloworld_emoji_click": {
-          "hw_Run": "คลิกที่นี่เพื่อใช้งานโค้ด"
-        },
-        "helloworld_emoji_events": {
-          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
-        },
-        "helloworld_emoji_freeplay": {
-          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
-        },
-        "helloworld_emoji_location": {
-          "pin": "ปักหมุด"
-        },
-        "helloworld_emoji_multi": {
-          "pin": "ปักหมุด"
-        },
-        "helloworld_emoji_say": {
-          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้",
-          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท"
-        },
-        "helloworld_food_backgrounds": {
-          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
-        },
-        "helloworld_food_behaviors": {
-          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
-        },
-        "helloworld_food_click": {
-          "hw_Run": "คลิกที่นี่เพื่อใช้งานโค้ด"
-        },
-        "helloworld_food_events": {
-          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
-        },
-        "helloworld_food_freeplay": {
-          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
-        },
-        "helloworld_food_location": {
-          "pin": "ปักหมุด"
-        },
-        "helloworld_food_multi": {
-          "pin": "ปักหมุด"
-        },
-        "helloworld_food_say": {
-          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้",
-          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท"
-        },
-        "helloworld_retro_backgrounds": {
-          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
-        },
-        "helloworld_retro_behaviors": {
-          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
-        },
-        "helloworld_retro_click": {
-          "hw_Run": "คลิกที่นี่เพื่อใช้งานโค้ด"
-        },
-        "helloworld_retro_events": {
-          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
-        },
-        "helloworld_retro_freeplay": {
-          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
-        },
-        "helloworld_retro_location": {
-          "pin": "ปักหมุด"
-        },
-        "helloworld_retro_multi": {
-          "pin": "ปักหมุด"
-        },
-        "helloworld_retro_say": {
-          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้",
-          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท"
-        },
-        "poetry_hoc_backgroundEffects": {
-          "poetry_background": "ค้นหาบล็อกโค้ดที่นี่ ",
-          "run_button": "ทดสอบแอนิเมชั่นของคุณด้วยปุ่มนี้"
-        },
-        "AppLab Intro 7 - Change Screen Color": {
-          "applab_hoc_finish": "หน้าจอเปลี่ยนเป็นสีเขียวหรือไม่? ถ้าใช่ ให้กด 'เสร็จสิ้น' หากไม่เป็นเช่นนั้น ให้กด 'รีเซ็ต' เปลี่ยนโค้ดของคุณ แล้วกด 'เล่น' อีกครั้ง"
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-          "AppLabHoCFinal11": "ตอนนี้คุณอยู่ในโหมดการออกแบบ"
-        },
-        "Function intro Ryan": {
-          "Function_intro_Ryan_1": "คำแนะนำเล็กๆ น้อยๆ นี้บอกให้คอมพิวเตอร์เรียกใช้โค้ดก้อนใหญ่ที่มีชื่อเดียวกันในพื้นที่ทำงาน"
-        },
-        "Function intro Ryan_2019": {
-          "Function_intro_Ryan_1": "คำแนะนำเล็กๆ น้อยๆ นี้บอกให้คอมพิวเตอร์เรียกใช้โค้ดก้อนใหญ่ที่มีชื่อเดียวกันในพื้นที่ทำงาน"
-        },
-        "Function intro Ryan_2020": {
-          "Function_intro_Ryan_1": "คำแนะนำเล็กๆ น้อยๆ นี้บอกให้คอมพิวเตอร์เรียกใช้โค้ดก้อนใหญ่ที่มีชื่อเดียวกันในพื้นที่ทำงาน"
-        },
-        "Function intro Ryan_2021": {
-          "Function_intro_Ryan_1": "คำแนะนำเล็กๆ น้อยๆ นี้บอกให้คอมพิวเตอร์เรียกใช้โค้ดก้อนใหญ่ที่มีชื่อเดียวกันในพื้นที่ทำงาน"
-        },
-        "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "กด \"เล่น\" เพื่อเคลื่อนที่"
-        },
-        "MC_HOC_2017_03_Cole": {
-          "MC_HOC_2017_03_Cole_1": "นี่คือลูป 'ทำซ้ำ'! คลิกที่นี่ในพื้นที่ทำงานและเพิ่มโค้ดที่คุณต้องการทำซ้ำหลายๆครั้ง"
-        },
-        "MC_HOC_2017_03_Cole_2019": {
-          "MC_HOC_2017_03_Cole_1": "นี่คือลูป 'ทำซ้ำ'! คลิกที่นี่ในพื้นที่ทำงานและเพิ่มโค้ดที่คุณต้องการทำซ้ำหลายๆครั้ง"
-        },
-        "MC_HOC_2017_03_Cole_2020": {
-          "MC_HOC_2017_03_Cole_1": "นี่คือลูป 'ทำซ้ำ'! คลิกที่นี่ในพื้นที่ทำงานและเพิ่มโค้ดที่คุณต้องการทำซ้ำหลายๆครั้ง"
-        },
-        "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "นี่คือลูป 'ทำซ้ำ'! คลิกที่นี่ในพื้นที่ทำงานและเพิ่มโค้ดที่คุณต้องการทำซ้ำหลาย ๆ ครั้ง"
-        },
-        "MC_HOC_2017_04_Cole": {
-          "MC_HOC_2017_04_Cole_a": "เอเจนท์สามารถโฉบเหนือน้ำได้ แต่ผู้เล่นทำไม่ได้!"
-        },
-        "MC_HOC_2017_04_Cole_2019": {
-          "MC_HOC_2017_04_Cole_a": "เอเจนท์สามารถโฉบเหนือน้ำได้ แต่ผู้เล่นทำไม่ได้!"
-        },
-        "MC_HOC_2017_04_Cole_2020": {
-          "MC_HOC_2017_04_Cole_a": "เอเจนท์สามารถโฉบเหนือน้ำได้ แต่ผู้เล่นทำไม่ได้!"
-        },
-        "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "เอเจนท์สามารถโฉบเหนือน้ำได้ แต่ผู้เล่นทำไม่ได้!"
-        },
-        "MC_HOC_2017_06_Cole": {
-          "MC_HOC_2017_06_Cole_1": "คุณไม่สามารถทิ้งบล็อคเหล่านี้ได้ แต่คุณสามารถแก้ไขได้!"
-        },
-        "MC_HOC_2017_06_Cole_2019": {
-          "MC_HOC_2017_06_Cole_1": "คุณไม่สามารถทิ้งบล็อคเหล่านี้ได้ แต่คุณสามารถแก้ไขได้!"
-        },
-        "MC_HOC_2017_06_Cole_2020": {
-          "MC_HOC_2017_06_Cole_1": "คุณไม่สามารถทิ้งบล็อคเหล่านี้ได้ แต่คุณสามารถแก้ไขได้!"
-        },
-        "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_1": "คุณทิ้งบล็อกเหล่านี้ไม่ได้ แต่แก้ไขได้!"
-        },
-        "frozen line": {
-          "run": "กด \"เล่น\" เพื่อลองเล่นโปรแกรมของคุณ!",
-          "move_elsa_forward": "ลากบล็อก “ย้ายไปข้างหน้า” และสแนปมันด้านล่างบล็อก “เมื่อเรียกใช้” เพื่อให้ Elsa ก้าวไปข้างหน้า"
-        },
-        "Fish Tank 3-validated_2021": {
-          "spritelab_comment": "ใช้บล็อกนี้เพื่อบอกตัวเองหรือผู้สอนของคุณถึงวิธีการทำงานของโค้ดของคุณ"
-        },
-        "New Sprite Lab Project": {
-          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
-        },
-        "Virtual Pet 2_2021": {
-          "vp_costumes": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายชุดใหม่ให้กับโปรเจกต์ของคุณ!"
-        },
-        "Virtual Pet 6_2021": {
-          "vp_costumes": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายชุดใหม่ให้กับโปรเจกต์ของคุณ!"
-        },
-        "courseA_artist_loops7_2021": {
-          "courseA_artist_loops7_1": "ตัวเลขนี้หมายความว่าใช้บล็อกได้แค่ประเภทเดียวในคำตอบสุดท้าย"
-        },
-        "courseA_artist_loops8_2021": {
-          "courseA_artist_loops8_1": "คุณรู้หรือไม่ว่าคุณย้อนกลับได้ทุกเมื่อที่ต้องการ"
-        },
-        "courseA_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
-        },
-        "courseA_playLab_events4_2021": {
-          "courseA_playlab_events4_callout1": "นี่คือคำบรรยาย"
-        },
-        "courseA_playLab_events5_2021": {
-          "courseA_playLab_events5_1": "คลิกที่นี่เพื่อเปลี่ยนทิศทางของลูกศรเหตุการณ์"
-        },
-        "courseA_playLab_events6_2021": {
-          "courseA_playLab_events6_1": "คุณใช้ตัวเลือกนี้เพื่อเลือกเสียง \"สุ่ม\" ซึ่งหมายความว่าคุณจะไม่มีวันรู้ว่าได้เสียงอะไรจนกว่าจะได้ยิน!"
-        },
-        "courseB_Scrat_ramp3a_2021": {
-          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
-        },
-        "courseB_artist_loops3_2021": {
-          "courseB_artist_loops3_1": "มีบล็อกที่อยู่ในกล่องเครื่องมือนี้เพียงบล็อกเดียว คุณจะนำมาใช้ยังไง"
-        },
-        "courseB_playlab_events6_2021": {
-          "courseB_playlab_events6_a": "ใช้ลูกศรแบบเลื่อนลงสีเขียวเพื่อเปลี่ยนทิศทาง"
-        },
-        "courseC19_playLab_EOC3_2021": {
-          "courseE_playLab_scaffold3_1": "นำตัวละครไปที่ธงนี้เพื่อเลื่อนไปยังเลเวลถัดไป"
-        },
-        "courseC_PlayLab_events8_2021": {
-          "courseC_PlayLab_events8_callout1": "ใช้บล็อกนี้เมื่อเจ้านกเพนกวินแวดเดิลและเจ้าไดโนจอมเขมือบสัมผัสกัน!"
-        },
-        "courseC_PlayLab_events_challenge1_2021": {
-          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
-        },
-        "courseC_artist_loops1a_2021": {
-          "jumpto_callout": "บล็อกนี้มีความสำคัญมากสำหรับโปรเจ็กต์นี้ อย่าลืมใช้บล็อกนี้นะ!"
-        },
-        "courseC_artist_loops1b_2021": {
-          "sticker2": "เพิ่มบล็อกนี้ลงตรงกลางโปรแกรมของคุณ"
+        "courseC_artist_prog22022": {
+          "slider": "คุณทำให้โปรแกรมช้าลงได้จากที่นี่"
         },
         "courseC_artist_prog2_2021": {
           "slider": "คุณทำให้โปรแกรมช้าลงได้จากที่นี่"
         },
-        "courseC_collector_prog1_2021": {
+        "courseC_collector_prog1": {
+          "courseC_collector_prog1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
+        },
+        "courseC_collector_prog12022": {
           "courseC_collector_prog1_1": "คุณเห็นบล็อกใหม่ในกล่องเครื่องมือหรือเปล่า ไม่ต้องกังวล เราจะสาธิตให้ดูว่าจะใช้ยังไงในบทเรียนอื่น"
-        },
-        "courseC_collector_prog7_2021": {
-          "courseC_collector_prog7_1": "คุณใช้บล็อกเพิ่มเติมจากกล่องเครื่องมือได้นะหากต้องการ!"
-        },
-        "courseC_harvester_loops1_2021": {
-          "courseC_harvester_loops1_callout1": "หมายเลขสี่บนฟักทองบอกคุณว่ามีฟักทองสี่ลูกให้เก็บ"
-        },
-        "courseC_maze_debugging5_2021": {
-          "courseC_maze_debugging5_1": "บล็อกเหล่านี้ถูกล็อคและลบไม่ได้!"
-        },
-        "courseC_maze_debugging9_2021": {
-          "courseC_maze_debugging9_2019_1": "ลากบล็อกต่าง ๆ จากกล่องเครื่องมือไปยังพื้นที่ทำงาน"
-        },
-        "courseC_maze_programming2_2021": {
-          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
-        },
-        "courseC_maze_programming3_2021": {
-          "courseC_maze_programming3_2": "คุณสามารถลากบล็อกพิเศษไปไว้ที่กล่องเครื่องมือหากต้องการกำจัดทิ้ง",
-          "courseC_maze_programming3_3": "บล็อกเหล่านี้เป็นหินและโยนทิ้งไม่ได้"
-        },
-        "courseC_maze_programming4_2021": {
-          "courseC_maze_programming4_1": "นี่คือขีดจำกัดบล็อกของคุณ เพื่อบอกว่าคุณเหลือบล็อกเหล่านี้ที่นำมาใช้ได้อีกกี่บล็อก"
-        },
-        "courseC_maze_programming5_2021": {
-          "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
-        },
-        "courseC_maze_programming7_2021": {
-          "courseC_maze_programming7_1": "นี่เป็นปริศนาท้าทายแรกของคุณ! ยากนะและอาจต้องลองหลายครั้ง",
-          "courseC_maze_programming7_2": "บล็อกเหล่านี้ทำจากหินและโยนทิ้งไม่ได้"
-        },
-        "courseC_starWars_loops2_2021": {
-          "courseC_starWars_loops2": "คุณมีบล็อกแบบนี้แค่บล็อกเดียวในปริศนานี้"
-        },
-        "courseD_artist_nestedLoops1a_2021": {
-          "courseD_artist_nestedLoops1a_1": "คุณไม่จำเป็นต้องใช้สีเพื่อไขปริศนานี้ให้ถูกต้อง แต่ถ้าอยากจะไขปริศนานี้ บล็อก 'สุ่มสี' จะช่วยคุณได้!"
-        },
-        "courseD_bee_conditionals2_2021": {
-          "4_5_Bee_Conditionals_2_1": "อย่าลืมตรวจดูว่า เมฆทุกก้อนมีดอกไม้อยู่หรือไม่ แต่ไม่จำเป็นต้องตรวจสอบรังผึ้งนะ"
-        },
-        "courseD_bee_nestedLoops1a_2021": {
-          "stepButton": "ลองก้าวผ่านโค้ดของคุณทีละบล็อก"
-        },
-        "courseD_farmer_while7_2021": {
-          "courseD_farmer_while7_2018_PathAhead": "คุณจะต้องใช้บล็อก \"ในขณะที่มีทางอยู่ข้างหน้า\" เพื่อไขปริศนานี้"
-        },
-        "courseD_maze_intro4_2021": {
-          "courseC_maze_programming4_1": "นี่คือขีดจำกัดบล็อกของคุณ เพื่อบอกว่าคุณเหลือบล็อกเหล่านี้ที่นำมาใช้ได้อีกกี่บล็อก"
-        },
-        "courseD_maze_intro5a_2021": {
-          "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
-        },
-        "courseD_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
-        },
-        "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_2": "คุณสามารถลากบล็อกพิเศษไปไว้ที่กล่องเครื่องมือหากต้องการกำจัดทิ้ง",
-          "stone_block_2": "แต่จะไม่สามารถกำจัดบล็อกสีเทาได้"
-        },
-        "courseD_maze_ramp5_2021": {
-          "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
-        },
-        "courseE_aboutme_2_2021": {
-          "": "คลิกที่นี่!"
-        },
-        "courseE_artist_functions2_2021": {
-          "courseD_artist_functions2_1": "เมื่อบล็อกสีเขียวนี้ทำงาน โค้ดทั้งหมดในฟังก์ชันจะทำงาน ศิลปินควรทำอะไรหลังจากวาดสี่เหลี่ยมจัตุรัสอันแรกแล้ว"
-        },
-        "courseE_artist_functions8a_2021": {
-          "courseD_artist_functions8_1": "บล็อกของคุณเพื่อสร้างฟังก์ชันถูกย้ายไปอยู่ใต้ป้ายกำกับนี้ในกล่องเครื่องมือ"
-        },
-        "courseE_artist_functions_challenge1_2021": {
-          "courseE_artist_functions_challenge1_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
-          "courseE_artist_functions_challenge1_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
-        },
-        "courseE_artist_functions_challenge2_2021": {
-          "courseE_artist_functions_challenge2_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
-          "courseE_artist_functions_challenge2_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
-        },
-        "courseE_farmer_functions13_2021": {
-          "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
-        },
-        "courseE_farmer_functions1_2021": {
-          "courseE_farmer_functions1_2": "กล่องเครื่องมือถูกจัดวางต่างออกไปเล็กน้อยในครั้งนี้! คลิกที่หมวดหมู่ต่าง ๆ เพื่อดูว่าคุณมีบล็อกอะไรบ้าง"
-        },
-        "courseE_farmer_functions1a_2021": {
-          "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
-        },
-        "courseE_farmer_functions2b_2021": {
-          "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
-        },
-        "courseF_artist_for1_2021": {
-          "courseF_artist_for1_1": "กล่องเครื่องมืออยู่ในโหมด ‘หมวดหมู่’ เพื่อเพิ่มพื้นที่สำหรับโค้ดของคุณ โดย `for` loop ก็อยู่ในพื้นที่นี้"
-        },
-        "courseF_bee_for4_2021": {
-          "courseF_bee_for4_1": "คุณจะพบ `for` loop อยู่ในนี้!"
-        },
-        "courseF_bee_for9_2021": {
-          "courseF_bee_for9_1": "คุณจะพบบล็อก `คณิตศาสตร์` อยู่ในนี้!"
-        },
-        "courseF_bee_variables_1a_2021": {
-          "courseF_bee_functions_1_2018_1": "คุณหาตัวแปรของคุณได้ได้ที่นี่!"
-        },
-        "courseF_events_choice_penguin": {
-          "whenToWhile": "ลองเปลี่ยนเมื่อเป็นในขณะที่"
-        },
-        "courseF_events_conflict": {
-          "stops_block": "บล็อกใหม่อยู่ที่นี่!"
-        },
-        "courseF_events_key": {
-          "whenKey": "ใช้บล็อกเหตุการณ์ใหม่ที่พบที่นี่"
-        },
-        "courseF_events_practice_reorder": {
-          "stopAllBug": "บล็อกนี้อยู่ในลำดับที่ไม่ถูกต้อง"
-        },
-        "courseF_events_predict": {
-          "behaviors_edit": "คลิกที่นี่เพื่อดูว่าพฤติกรรมนี้ทำงานอย่างไร"
-        },
-        "courseF_events_time": {
-          "events_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่เหตุการณ์"
-        },
-        "courseF_sprites_behaviors": {
-          "behaviors_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่พฤติกรรม"
-        },
-        "courseF_sprites_make": {
-          "sprites_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่สไปร์ท"
-        },
-        "courseF_sprites_positioning": {
-          "locations_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่สถานที่ตั้ง"
-        },
-        "courseF_sprites_properties": {
-          "sprites_category2": "ค้นหาบล็อกใหม่ที่นี่"
-        },
-        "courseF_text_answer": {
-          "answered_block": "ค้นหาบล็อกใหม่ที่นี่!"
-        },
-        "courseF_text_choice_color": {
-          "text_color_finish": "สีพื้นหลังเปลี่ยนไปหรือไม่เมื่อคุณตอบคำถาม ถ้าเปลี่ยน ให้แตะ 'เสร็จสิ้น' ถ้าไม่เปลี่ยน ให้แตะ 'เริ่มใหม่' เปลี่ยนโค้ดของคุณ แล้วกด 'เริ่ม' อีกครั้ง"
-        },
-        "courseF_text_choice_conversation": {
-          "text_generic_finish": "เสร็จรึยัง ถ้าเสร็จแล้ว ให้กด 'เสร็จสิ้น' แต่ถ้ายังไม่เสร็จ ให้กด 'ตั้งค่าใหม่' เปลี่ยนโค้ดของคุณ แล้วกด 'เริ่ม' อีกครั้ง"
-        },
-        "courseF_text_choice_title": {
-          "title_block": "ค้นหาบล็อกใหม่สองบล็อกที่นี่!",
-          "text_answer_finish": "หน้าจอชื่อเรื่องแสดงเป็นเวลา 3 วินาทีหรือไม่ ถ้าใช่ ให้กด 'เสร็จสิ้น' ถ้าไม่ใช่ ให้กด 'ตั้งค่าใหม่' เปลี่ยนโค้ดของคุณ แล้วกด 'เริ่ม' อีกครั้ง"
-        },
-        "courseF_text_concat": {
-          "join_blocks": "ค้นหาบล็อกใหม่ที่นี่!"
-        },
-        "courseF_text_events": {
-          "events_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่เหตุการณ์"
-        },
-        "courseF_text_print": {
-          "print_block": "ค้นหาบล็อกพิมพ์ที่นี่!",
-          "text_print_finish": "ข้อความของคุณพิมพ์ด้านบนหรือไม่ ถ้าใช่ ให้กด 'เสร็จสิ้น' หากไม่เป็นเช่นนั้น ให้กด 'ตั้งค่าใหม่' เปลี่ยน\nโค้ดของคุณ แล้วกด 'เริ่ม' อีกครั้ง"
-        },
-        "courseF_text_prompts": {
-          "prompt_block": "ค้นหาบล็อกพรอมต์ที่นี่!"
-        },
-        "courseF_variables_predict": {
-          "variablesPredict": "พิจารณาเรื่องโค้ดด้านล่างนี้ให้ละเอียด"
-        },
-        "express_maze_debugging9_2021": {
-          "express_maze_debugging9_2019_1": "ลากบล็อกต่าง ๆ จากกล่องเครื่องมือไปยังพื้นที่ทำงาน"
-        },
-        "courseA_EOC_playlab_animals": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_fantasy": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_people": {
-          "question_mark": "?"
-        },
-        "courseF_apps_aquarium": {
-          "run_button": "กดที่ปุ่มเริ่มก่อน!",
-          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
-        },
-        "courseF_apps_card": {
-          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
-        },
-        "courseF_apps_chatbot": {
-          "run_button": "กดที่ปุ่มเริ่มก่อน!",
-          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
-        },
-        "courseF_apps_collector": {
-          "run_button": "กดที่ปุ่มเริ่มก่อน!",
-          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
-        },
-        "courseF_apps_madlib": {
-          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
-        },
-        "courseF_apps_pet": {
-          "run_button": "กดที่ปุ่มเริ่มก่อน!",
-          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
-        },
-        "courseF_editable_card": {
-          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
-        },
-        "courseF_editable_chatbot": {
-          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
-        },
-        "courseF_editable_madlib": {
-          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
-        },
-        "courseF_label_predict": {
-          "variablesPredict": "พิจารณาเรื่องโค้ดด้านล่างนี้ให้ละเอียด"
-        },
-        "4-5 Bee Conditionals 2": {
-          "4_5_Bee_Conditionals_2_1": "อย่าลืมตรวจดูว่า เมฆทุกก้อนมีดอกไม้อยู่หรือไม่ แต่ไม่จำเป็นต้องตรวจสอบรังผึ้งนะ"
-        },
-        "Fish Tank 3-validated_2019": {
-          "spritelab_comment": "ใช้บล็อกนี้เพื่อบอกตัวเองหรือผู้สอนของคุณถึงวิธีการทำงานของโค้ดของคุณ"
-        },
-        "Fish Tank 3-validated_2020": {
-          "spritelab_comment": "ใช้บล็อกนี้เพื่อบอกตัวเองหรือผู้สอนของคุณถึงวิธีการทำงานของโค้ดของคุณ"
-        },
-        "OPD-K5-forloops-5": {
-          "courseF_bee_for4_1": "คุณจะพบ `for` loop อยู่ในนี้!"
-        },
-        "OPD-K5-projects-4": {
-          "courseE_playLab_scaffold3_1": "นำตัวละครไปที่ธงนี้เพื่อเลื่อนไปยังเลเวลถัดไป"
-        },
-        "OPD-K5-spritelab-3": {
-          "spritelab_comment": "ใช้บล็อกนี้เพื่อบอกตัวเองหรือผู้สอนของคุณถึงวิธีการทำงานของโค้ดของคุณ"
-        },
-        "Virtual Pet 2_2019": {
-          "": "คลิกที่นี่!"
-        },
-        "Virtual Pet 2_2020": {
-          "": "คลิกที่นี่!"
-        },
-        "behaviors 1": {
-          "behaviors_edit": "คลิกที่นี่เพื่อดูว่าพฤติกรรมนี้ทำงานอย่างไร"
-        },
-        "behaviors 1_2020": {
-          "behaviors_edit": "คลิกที่นี่เพื่อดูว่าพฤติกรรมนี้ทำงานอย่างไร"
-        },
-        "behaviors 4": {
-          "behaviors_edit": "คลิกที่นี่เพื่อดูว่าพฤติกรรมนี้ทำงานอย่างไร"
-        },
-        "behaviors 4_2020": {
-          "behaviors_edit": "คลิกที่นี่เพื่อดูว่าพฤติกรรมนี้ทำงานอย่างไร"
-        },
-        "course3_artist_functions_challenge1": {
-          "courseE_artist_functions_challenge1_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
-          "courseE_artist_functions_challenge1_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
-        },
-        "course3_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge2_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
-          "courseE_artist_functions_challenge2_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
-        },
-        "course3_playLab_challenge1": {
-          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
-        },
-        "course4_artist_functions_challenge2": {
-          "courseE_artist_functions_challenge2_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
-          "courseE_artist_functions_challenge2_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
-        },
-        "courseA_artist_loops7": {
-          "courseA_artist_loops7_1": "ตัวเลขนี้หมายความว่าใช้บล็อกได้แค่ประเภทเดียวในคำตอบสุดท้าย"
-        },
-        "courseA_artist_loops7_2018": {
-          "courseA_artist_loops7_1": "ตัวเลขนี้หมายความว่าใช้บล็อกได้แค่ประเภทเดียวในคำตอบสุดท้าย"
-        },
-        "courseA_artist_loops7_2019": {
-          "courseA_artist_loops7_1": "ตัวเลขนี้หมายความว่าใช้บล็อกได้แค่ประเภทเดียวในคำตอบสุดท้าย"
-        },
-        "courseA_artist_loops7_2020": {
-          "courseA_artist_loops7_1": "ตัวเลขนี้หมายความว่าใช้บล็อกได้แค่ประเภทเดียวในคำตอบสุดท้าย"
-        },
-        "courseA_artist_loops8": {
-          "courseA_artist_loops8_1": "คุณรู้หรือไม่ว่าคุณย้อนกลับได้ทุกเมื่อที่ต้องการ"
-        },
-        "courseA_artist_loops8_2018": {
-          "courseA_artist_loops8_1": "คุณรู้หรือไม่ว่าคุณย้อนกลับได้ทุกเมื่อที่ต้องการ"
-        },
-        "courseA_artist_loops8_2019": {
-          "courseA_artist_loops8_1": "คุณรู้หรือไม่ว่าคุณย้อนกลับได้ทุกเมื่อที่ต้องการ"
-        },
-        "courseA_artist_loops8_2020": {
-          "courseA_artist_loops8_1": "คุณรู้หรือไม่ว่าคุณย้อนกลับได้ทุกเมื่อที่ต้องการ"
-        },
-        "courseA_maze_ramp2_2019": {
-          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
-        },
-        "courseA_maze_ramp2_2020": {
-          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
-        },
-        "courseA_maze_ramp3a_2018": {
-          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
-        },
-        "courseA_playLab_events4": {
-          "courseA_playlab_events4_callout1": "นี่คือคำบรรยาย"
-        },
-        "courseA_playLab_events4_2018": {
-          "courseA_playlab_events4_callout1": "นี่คือคำบรรยาย"
-        },
-        "courseA_playLab_events4_2019": {
-          "courseA_playlab_events4_callout1": "นี่คือคำบรรยาย"
-        },
-        "courseA_playLab_events4_2020": {
-          "courseA_playlab_events4_callout1": "นี่คือคำบรรยาย"
-        },
-        "courseA_playLab_events5": {
-          "courseA_playLab_events5_1": "คลิกที่นี่เพื่อเปลี่ยนทิศทางของลูกศรเหตุการณ์\n"
-        },
-        "courseA_playLab_events5_2018": {
-          "courseA_playLab_events5_1": "คลิกที่นี่เพื่อเปลี่ยนทิศทางของลูกศรเหตุการณ์\n"
-        },
-        "courseA_playLab_events5_2019": {
-          "courseA_playLab_events5_1": "คลิกที่นี่เพื่อเปลี่ยนทิศทางของลูกศรเหตุการณ์\n"
-        },
-        "courseA_playLab_events5_2020": {
-          "courseA_playLab_events5_1": "คลิกที่นี่เพื่อเปลี่ยนทิศทางของลูกศรเหตุการณ์\n"
-        },
-        "courseA_playLab_events6": {
-          "courseA_playLab_events6_1": "คุณใช้ตัวเลือกนี้เพื่อเลือกเสียง \"สุ่ม\" ซึ่งหมายความว่าคุณจะไม่มีวันรู้ว่าได้เสียงอะไรจนกว่าจะได้ยิน!"
-        },
-        "courseA_playLab_events6_2018": {
-          "courseA_playLab_events6_1": "คุณใช้ตัวเลือกนี้เพื่อเลือกเสียง \"สุ่ม\" ซึ่งหมายความว่าคุณจะไม่มีวันรู้ว่าได้เสียงอะไรจนกว่าจะได้ยิน!"
-        },
-        "courseA_playLab_events6_2019": {
-          "courseA_playLab_events6_1": "คุณใช้ตัวเลือกนี้เพื่อเลือกเสียง \"สุ่ม\" ซึ่งหมายความว่าคุณจะไม่มีวันรู้ว่าได้เสียงอะไรจนกว่าจะได้ยิน!"
-        },
-        "courseA_playLab_events6_2020": {
-          "courseA_playLab_events6_1": "คุณใช้ตัวเลือกนี้เพื่อเลือกเสียง \"สุ่ม\" ซึ่งหมายความว่าคุณจะไม่มีวันรู้ว่าได้เสียงอะไรจนกว่าจะได้ยิน!"
-        },
-        "courseB_Scrat_ramp3a_2019": {
-          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
-        },
-        "courseB_Scrat_ramp3a_2020": {
-          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
-        },
-        "courseB_artist_loops3": {
-          "courseB_artist_loops3_1": "มีบล็อกที่อยู่ในกล่องเครื่องมือนี้เพียงบล็อกเดียว คุณจะนำมาใช้ยังไง"
-        },
-        "courseB_artist_loops3_2018": {
-          "courseB_artist_loops3_1": "มีบล็อกที่อยู่ในกล่องเครื่องมือนี้เพียงบล็อกเดียว คุณจะนำมาใช้ยังไง"
-        },
-        "courseB_artist_loops3_2019": {
-          "courseB_artist_loops3_1": "มีบล็อกที่อยู่ในกล่องเครื่องมือนี้เพียงบล็อกเดียว คุณจะนำมาใช้ยังไง"
-        },
-        "courseB_artist_loops3_2020": {
-          "courseB_artist_loops3_1": "มีบล็อกที่อยู่ในกล่องเครื่องมือนี้เพียงบล็อกเดียว คุณจะนำมาใช้ยังไง"
-        },
-        "courseB_playlab_events6": {
-          "courseB_playlab_events6_a": "ใช้ลูกศรแบบเลื่อนลงสีเขียวเพื่อเปลี่ยนทิศทาง"
-        },
-        "courseB_playlab_events6_2018": {
-          "courseB_playlab_events6_a": "ใช้ลูกศรแบบเลื่อนลงสีเขียวเพื่อเปลี่ยนทิศทาง"
-        },
-        "courseB_playlab_events6_2019": {
-          "courseB_playlab_events6_a": "ใช้ลูกศรแบบเลื่อนลงสีเขียวเพื่อเปลี่ยนทิศทาง"
-        },
-        "courseB_playlab_events6_2020": {
-          "courseB_playlab_events6_a": "ใช้ลูกศรแบบเลื่อนลงสีเขียวเพื่อเปลี่ยนทิศทาง"
-        },
-        "courseC19_playLab_EOC3": {
-          "courseE_playLab_scaffold3_1": "นำตัวละครไปที่ธงนี้เพื่อเลื่อนไปยังเลเวลถัดไป"
-        },
-        "courseC19_playLab_EOC3_2020": {
-          "courseE_playLab_scaffold3_1": "นำตัวละครไปที่ธงนี้เพื่อเลื่อนไปยังเลเวลถัดไป"
-        },
-        "courseC_PlayLab_events8": {
-          "courseC_PlayLab_events8_callout1": "ใช้บล็อกนี้เมื่อเจ้านกเพนกวินแวดเดิลและเจ้าไดโนจอมเขมือบสัมผัสกัน!"
-        },
-        "courseC_PlayLab_events8_2018": {
-          "courseC_PlayLab_events8_callout1": "ใช้บล็อกนี้เมื่อเจ้านกเพนกวินแวดเดิลและเจ้าไดโนจอมเขมือบสัมผัสกัน!"
-        },
-        "courseC_PlayLab_events8_2019": {
-          "courseC_PlayLab_events8_callout1": "ใช้บล็อกนี้เมื่อเจ้านกเพนกวินแวดเดิลและเจ้าไดโนจอมเขมือบสัมผัสกัน!"
-        },
-        "courseC_PlayLab_events8_2020": {
-          "courseC_PlayLab_events8_callout1": "ใช้บล็อกนี้เมื่อเจ้านกเพนกวินแวดเดิลและเจ้าไดโนจอมเขมือบสัมผัสกัน!"
-        },
-        "courseC_PlayLab_events_challenge1": {
-          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
-        },
-        "courseC_PlayLab_events_challenge1_2018": {
-          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
-        },
-        "courseC_PlayLab_events_challenge1_2019": {
-          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
-        },
-        "courseC_PlayLab_events_challenge1_2020": {
-          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
-        },
-        "courseC_artist_loops1a_2019": {
-          "jumpto_callout": "บล็อกนี้มีความสำคัญมากสำหรับโปรเจ็กต์นี้ อย่าลืมใช้บล็อกนี้นะ!"
-        },
-        "courseC_artist_loops1a_2020": {
-          "jumpto_callout": "บล็อกนี้มีความสำคัญมากสำหรับโปรเจ็กต์นี้ อย่าลืมใช้บล็อกนี้นะ!"
-        },
-        "courseC_artist_loops1b_2019": {
-          "sticker2": "เพิ่มบล็อกนี้ลงตรงกลางโปรแกรมของคุณ"
-        },
-        "courseC_artist_loops1b_2020": {
-          "sticker2": "เพิ่มบล็อกนี้ลงตรงกลางโปรแกรมของคุณ"
         },
         "courseC_collector_prog1_2018": {
           "courseC_collector_prog1_1": "คุณเห็นบล็อกใหม่ในกล่องเครื่องมือหรือเปล่า ไม่ต้องกังวล เราจะสาธิตให้ดูว่าจะใช้ยังไงในบทเรียนอื่น"
@@ -1124,7 +903,13 @@
         "courseC_collector_prog1_2020": {
           "courseC_collector_prog1_1": "คุณเห็นบล็อกใหม่ในกล่องเครื่องมือหรือเปล่า ไม่ต้องกังวล เราจะสาธิตให้ดูว่าจะใช้ยังไงในบทเรียนอื่น"
         },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "คุณเห็นบล็อกใหม่ในกล่องเครื่องมือหรือเปล่า ไม่ต้องกังวล เราจะสาธิตให้ดูว่าจะใช้ยังไงในบทเรียนอื่น"
+        },
         "courseC_collector_prog7": {
+          "courseC_collector_prog7_1": "คุณใช้บล็อกเพิ่มเติมจากกล่องเครื่องมือได้นะหากต้องการ!"
+        },
+        "courseC_collector_prog72022": {
           "courseC_collector_prog7_1": "คุณใช้บล็อกเพิ่มเติมจากกล่องเครื่องมือได้นะหากต้องการ!"
         },
         "courseC_collector_prog7_2018": {
@@ -1136,7 +921,13 @@
         "courseC_collector_prog7_2020": {
           "courseC_collector_prog7_1": "คุณใช้บล็อกเพิ่มเติมจากกล่องเครื่องมือได้นะหากต้องการ!"
         },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "คุณใช้บล็อกเพิ่มเติมจากกล่องเครื่องมือได้นะหากต้องการ!"
+        },
         "courseC_harvester_loops1": {
+          "courseC_harvester_loops1_callout1": "หมายเลขสี่บนฟักทองบอกคุณว่ามีฟักทองสี่ลูกให้เก็บ"
+        },
+        "courseC_harvester_loops12022": {
           "courseC_harvester_loops1_callout1": "หมายเลขสี่บนฟักทองบอกคุณว่ามีฟักทองสี่ลูกให้เก็บ"
         },
         "courseC_harvester_loops1_2018": {
@@ -1148,11 +939,26 @@
         "courseC_harvester_loops1_2020": {
           "courseC_harvester_loops1_callout1": "หมายเลขสี่บนฟักทองบอกคุณว่ามีฟักทองสี่ลูกให้เก็บ"
         },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "หมายเลขสี่บนฟักทองบอกคุณว่ามีฟักทองสี่ลูกให้เก็บ"
+        },
+        "courseC_maze_debugging5": {
+          "courseC_maze_debugging5_1": "คุณไม่สามารถลบ บล็อกสีเทาทิ้งไปได้"
+        },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_1": "บล็อกเหล่านี้ถูกล็อคและลบไม่ได้!"
+        },
         "courseC_maze_debugging5_2019": {
           "courseC_maze_debugging5_1": "บล็อกเหล่านี้ถูกล็อคและลบไม่ได้!"
         },
         "courseC_maze_debugging5_2020": {
           "courseC_maze_debugging5_1": "บล็อกเหล่านี้ถูกล็อคและลบไม่ได้!"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "บล็อกเหล่านี้ถูกล็อคและลบไม่ได้!"
+        },
+        "courseC_maze_debugging92022": {
+          "courseC_maze_debugging9_2019_1": "ลากบล็อกต่าง ๆ จากกล่องเครื่องมือไปยังพื้นที่ทำงาน"
         },
         "courseC_maze_debugging9_2019": {
           "courseC_maze_debugging9_2019_1": "ลากบล็อกต่าง ๆ จากกล่องเครื่องมือไปยังพื้นที่ทำงาน"
@@ -1160,10 +966,34 @@
         "courseC_maze_debugging9_2020": {
           "courseC_maze_debugging9_2019_1": "ลากบล็อกต่าง ๆ จากกล่องเครื่องมือไปยังพื้นที่ทำงาน"
         },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "ลากบล็อกต่าง ๆ จากกล่องเครื่องมือไปยังพื้นที่ทำงาน"
+        },
         "courseC_maze_debugging9_copy_2020": {
           "courseC_maze_debugging9_2019_1": "ลากบล็อกต่าง ๆ จากกล่องเครื่องมือไปยังพื้นที่ทำงาน"
         },
+        "courseC_maze_programming1": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
+        "courseC_maze_programming12022": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
+        "courseC_maze_programming1_2018": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
+        "courseC_maze_programming1_2019": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
+        "courseC_maze_programming1_2020": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
         "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
+        },
+        "courseC_maze_programming22022": {
           "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
         },
         "courseC_maze_programming2_2018": {
@@ -1175,7 +1005,14 @@
         "courseC_maze_programming2_2020": {
           "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
         },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
+        },
         "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "คุณสามารถลากบล็อกพิเศษไปไว้ที่กล่องเครื่องมือหากต้องการกำจัดทิ้ง",
+          "courseC_maze_programming3_3": "บล็อกเหล่านี้เป็นหินและโยนทิ้งไม่ได้"
+        },
+        "courseC_maze_programming32022": {
           "courseC_maze_programming3_2": "คุณสามารถลากบล็อกพิเศษไปไว้ที่กล่องเครื่องมือหากต้องการกำจัดทิ้ง",
           "courseC_maze_programming3_3": "บล็อกเหล่านี้เป็นหินและโยนทิ้งไม่ได้"
         },
@@ -1191,7 +1028,14 @@
           "courseC_maze_programming3_2": "คุณสามารถลากบล็อกพิเศษไปไว้ที่กล่องเครื่องมือหากต้องการกำจัดทิ้ง",
           "courseC_maze_programming3_3": "บล็อกเหล่านี้เป็นหินและโยนทิ้งไม่ได้"
         },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "คุณสามารถลากบล็อกพิเศษไปไว้ที่กล่องเครื่องมือหากต้องการกำจัดทิ้ง",
+          "courseC_maze_programming3_3": "บล็อกเหล่านี้เป็นหินและโยนทิ้งไม่ได้"
+        },
         "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "นี่คือขีดจำกัดบล็อกของคุณ เพื่อบอกว่าคุณเหลือบล็อกเหล่านี้ที่นำมาใช้ได้อีกกี่บล็อก"
+        },
+        "courseC_maze_programming42022": {
           "courseC_maze_programming4_1": "นี่คือขีดจำกัดบล็อกของคุณ เพื่อบอกว่าคุณเหลือบล็อกเหล่านี้ที่นำมาใช้ได้อีกกี่บล็อก"
         },
         "courseC_maze_programming4_2018": {
@@ -1203,7 +1047,13 @@
         "courseC_maze_programming4_2020": {
           "courseC_maze_programming4_1": "นี่คือขีดจำกัดบล็อกของคุณ เพื่อบอกว่าคุณเหลือบล็อกเหล่านี้ที่นำมาใช้ได้อีกกี่บล็อก"
         },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "นี่คือขีดจำกัดบล็อกของคุณ เพื่อบอกว่าคุณเหลือบล็อกเหล่านี้ที่นำมาใช้ได้อีกกี่บล็อก"
+        },
         "courseC_maze_programming5": {
+          "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
+        },
+        "courseC_maze_programming52022": {
           "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
         },
         "courseC_maze_programming5_2018": {
@@ -1215,7 +1065,14 @@
         "courseC_maze_programming5_2020": {
           "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
         },
+        "courseC_maze_programming5_2021": {
+          "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
+        },
         "courseC_maze_programming7": {
+          "courseC_maze_programming7_1": "นี่เป็นปริศนาท้าทายแรกของคุณ! ยากนะและอาจต้องลองหลายครั้ง",
+          "courseC_maze_programming7_2": "บล็อกเหล่านี้ทำจากหินและโยนทิ้งไม่ได้"
+        },
+        "courseC_maze_programming72022": {
           "courseC_maze_programming7_1": "นี่เป็นปริศนาท้าทายแรกของคุณ! ยากนะและอาจต้องลองหลายครั้ง",
           "courseC_maze_programming7_2": "บล็อกเหล่านี้ทำจากหินและโยนทิ้งไม่ได้"
         },
@@ -1231,7 +1088,14 @@
           "courseC_maze_programming7_1": "นี่เป็นปริศนาท้าทายแรกของคุณ! ยากนะและอาจต้องลองหลายครั้ง",
           "courseC_maze_programming7_2": "บล็อกเหล่านี้ทำจากหินและโยนทิ้งไม่ได้"
         },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "นี่เป็นปริศนาท้าทายแรกของคุณ! ยากนะและอาจต้องลองหลายครั้ง",
+          "courseC_maze_programming7_2": "บล็อกเหล่านี้ทำจากหินและโยนทิ้งไม่ได้"
+        },
         "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "คุณมีบล็อกแบบนี้แค่บล็อกเดียวในปริศนานี้"
+        },
+        "courseC_starWars_loops22022": {
           "courseC_starWars_loops2": "คุณมีบล็อกแบบนี้แค่บล็อกเดียวในปริศนานี้"
         },
         "courseC_starWars_loops2_2018": {
@@ -1243,6 +1107,9 @@
         "courseC_starWars_loops2_2020": {
           "courseC_starWars_loops2": "คุณมีบล็อกแบบนี้แค่บล็อกเดียวในปริศนานี้"
         },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "คุณมีบล็อกแบบนี้แค่บล็อกเดียวในปริศนานี้"
+        },
         "courseC_starWars_loops2_copy": {
           "courseC_starWars_loops2": "คุณมีบล็อกแบบนี้แค่บล็อกเดียวในปริศนานี้"
         },
@@ -1250,6 +1117,9 @@
           "courseC_starWars_loops2": "คุณมีบล็อกแบบนี้แค่บล็อกเดียวในปริศนานี้"
         },
         "courseD_artist_nestedLoops1a": {
+          "courseD_artist_nestedLoops1a_1": "คุณไม่จำเป็นต้องใช้สีเพื่อไขปริศนานี้ให้ถูกต้อง แต่ถ้าอยากจะไขปริศนานี้ บล็อก 'สุ่มสี' จะช่วยคุณได้!"
+        },
+        "courseD_artist_nestedLoops1a2022": {
           "courseD_artist_nestedLoops1a_1": "คุณไม่จำเป็นต้องใช้สีเพื่อไขปริศนานี้ให้ถูกต้อง แต่ถ้าอยากจะไขปริศนานี้ บล็อก 'สุ่มสี' จะช่วยคุณได้!"
         },
         "courseD_artist_nestedLoops1a_2018": {
@@ -1261,7 +1131,13 @@
         "courseD_artist_nestedLoops1a_2020": {
           "courseD_artist_nestedLoops1a_1": "คุณไม่จำเป็นต้องใช้สีเพื่อไขปริศนานี้ให้ถูกต้อง แต่ถ้าอยากจะไขปริศนานี้ บล็อก 'สุ่มสี' จะช่วยคุณได้!"
         },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "คุณไม่จำเป็นต้องใช้สีเพื่อไขปริศนานี้ให้ถูกต้อง แต่ถ้าอยากจะไขปริศนานี้ บล็อก 'สุ่มสี' จะช่วยคุณได้!"
+        },
         "courseD_bee_conditionals2": {
+          "4_5_Bee_Conditionals_2_1": "อย่าลืมตรวจดูว่า เมฆทุกก้อนมีดอกไม้อยู่หรือไม่ แต่ไม่จำเป็นต้องตรวจสอบรังผึ้งนะ"
+        },
+        "courseD_bee_conditionals22022": {
           "4_5_Bee_Conditionals_2_1": "อย่าลืมตรวจดูว่า เมฆทุกก้อนมีดอกไม้อยู่หรือไม่ แต่ไม่จำเป็นต้องตรวจสอบรังผึ้งนะ"
         },
         "courseD_bee_conditionals2_2018": {
@@ -1273,11 +1149,41 @@
         "courseD_bee_conditionals2_2020": {
           "4_5_Bee_Conditionals_2_1": "อย่าลืมตรวจดูว่า เมฆทุกก้อนมีดอกไม้อยู่หรือไม่ แต่ไม่จำเป็นต้องตรวจสอบรังผึ้งนะ"
         },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "อย่าลืมตรวจดูว่า เมฆทุกก้อนมีดอกไม้อยู่หรือไม่ แต่ไม่จำเป็นต้องตรวจสอบรังผึ้งนะ"
+        },
         "courseD_bee_conditionals2_copy": {
           "4_5_Bee_Conditionals_2_1": "อย่าลืมตรวจดูว่า เมฆทุกก้อนมีดอกไม้อยู่หรือไม่ แต่ไม่จำเป็นต้องตรวจสอบรังผึ้งนะ"
         },
         "courseD_bee_conditionals2_dani": {
           "4_5_Bee_Conditionals_2_1": "อย่าลืมตรวจดูว่า เมฆทุกก้อนมีดอกไม้อยู่หรือไม่ แต่ไม่จำเป็นต้องตรวจสอบรังผึ้งนะ"
+        },
+        "courseD_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge2_1": "ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)"
+        },
+        "courseD_bee_conditionals_challenge22022": {
+          "courseD_bee_conditionals_challenge2_1": "ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)"
+        },
+        "courseD_bee_conditionals_challenge2_2018": {
+          "courseD_bee_conditionals_challenge2_1": "ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)"
+        },
+        "courseD_bee_conditionals_challenge2_2019": {
+          "courseD_bee_conditionals_challenge2_1": "ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)"
+        },
+        "courseD_bee_conditionals_challenge2_2020": {
+          "courseD_bee_conditionals_challenge2_1": "ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)"
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)"
+        },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "ลองก้าวผ่านโค้ดของคุณทีละบล็อก"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "ลองก้าวผ่านโค้ดของคุณทีละบล็อก"
+        },
+        "courseD_farmer_while72022": {
+          "courseD_farmer_while7_2018_PathAhead": "คุณจะต้องใช้บล็อก \"ในขณะที่มีทางอยู่ข้างหน้า\" เพื่อไขปริศนานี้"
         },
         "courseD_farmer_while7_2018": {
           "courseD_farmer_while7_2018_PathAhead": "คุณจะต้องใช้บล็อก \"ในขณะที่มีทางอยู่ข้างหน้า\" เพื่อไขปริศนานี้"
@@ -1288,11 +1194,23 @@
         "courseD_farmer_while7_2020": {
           "courseD_farmer_while7_2018_PathAhead": "คุณจะต้องใช้บล็อก \"ในขณะที่มีทางอยู่ข้างหน้า\" เพื่อไขปริศนานี้"
         },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "คุณจะต้องใช้บล็อก \"ในขณะที่มีทางอยู่ข้างหน้า\" เพื่อไขปริศนานี้"
+        },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "นี่คือขีดจำกัดบล็อกของคุณ เพื่อบอกว่าคุณเหลือบล็อกเหล่านี้ที่นำมาใช้ได้อีกกี่บล็อก"
+        },
         "courseD_maze_intro4_2019": {
           "courseC_maze_programming4_1": "นี่คือขีดจำกัดบล็อกของคุณ เพื่อบอกว่าคุณเหลือบล็อกเหล่านี้ที่นำมาใช้ได้อีกกี่บล็อก"
         },
         "courseD_maze_intro4_2020": {
           "courseC_maze_programming4_1": "นี่คือขีดจำกัดบล็อกของคุณ เพื่อบอกว่าคุณเหลือบล็อกเหล่านี้ที่นำมาใช้ได้อีกกี่บล็อก"
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "นี่คือขีดจำกัดบล็อกของคุณ เพื่อบอกว่าคุณเหลือบล็อกเหล่านี้ที่นำมาใช้ได้อีกกี่บล็อก"
+        },
+        "courseD_maze_intro5a2022": {
+          "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
         },
         "courseD_maze_intro5a_2019": {
           "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
@@ -1300,7 +1218,31 @@
         "courseD_maze_intro5a_2020": {
           "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
         },
+        "courseD_maze_intro5a_2021": {
+          "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
+        },
+        "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
+        "courseD_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
+        "courseD_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
+        "courseD_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
+        "courseD_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
+        },
         "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
+        },
+        "courseD_maze_ramp22022": {
           "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
         },
         "courseD_maze_ramp2_2018": {
@@ -1312,8 +1254,15 @@
         "courseD_maze_ramp2_2020": {
           "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
         },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
+        },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_2": "คุณสามารถลากบล็อกพิเศษไปไว้ที่กล่องเครื่องมือหากต้องการกำจัดทิ้ง"
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "คุณสามารถลากบล็อกพิเศษไปไว้ที่กล่องเครื่องมือหากต้องการกำจัดทิ้ง",
+          "stone_block_2": "แต่จะไม่สามารถกำจัดบล็อกสีเทาได้"
         },
         "courseD_maze_ramp3_2018": {
           "courseC_maze_programming3_2": "คุณสามารถลากบล็อกพิเศษไปไว้ที่กล่องเครื่องมือหากต้องการกำจัดทิ้ง"
@@ -1323,6 +1272,10 @@
           "stone_block_2": "แต่จะไม่สามารถกำจัดบล็อกสีเทาได้"
         },
         "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "คุณสามารถลากบล็อกพิเศษไปไว้ที่กล่องเครื่องมือหากต้องการกำจัดทิ้ง",
+          "stone_block_2": "แต่จะไม่สามารถกำจัดบล็อกสีเทาได้"
+        },
+        "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_2": "คุณสามารถลากบล็อกพิเศษไปไว้ที่กล่องเครื่องมือหากต้องการกำจัดทิ้ง",
           "stone_block_2": "แต่จะไม่สามารถกำจัดบล็อกสีเทาได้"
         },
@@ -1341,6 +1294,9 @@
         "courseD_maze_ramp5": {
           "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
         },
+        "courseD_maze_ramp52022": {
+          "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
+        },
         "courseD_maze_ramp5_2018": {
           "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
         },
@@ -1348,6 +1304,9 @@
           "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
         },
         "courseD_maze_ramp5_2020": {
+          "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
+        },
+        "courseD_maze_ramp5_2021": {
           "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
         },
         "courseD_maze_ramp5a": {
@@ -1361,6 +1320,9 @@
         },
         "courseD_maze_ramp5a_2020": {
           "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
+        },
+        "courseD_scrat_ramp1": {
+          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
         },
         "courseD_scrat_ramp2": {
           "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
@@ -1380,10 +1342,19 @@
         "courseE_aboutme_2": {
           "": "คลิกที่นี่!"
         },
+        "courseE_aboutme_22022": {
+          "": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
+        },
         "courseE_aboutme_2_2020": {
           "": "คลิกที่นี่!"
         },
+        "courseE_aboutme_2_2021": {
+          "": "คลิกที่นี่!"
+        },
         "courseE_artist_functions2": {
+          "courseD_artist_functions2_1": "เมื่อบล็อกสีเขียวนี้ทำงาน โค้ดทั้งหมดในฟังก์ชันจะทำงาน ศิลปินควรทำอะไรหลังจากวาดสี่เหลี่ยมจัตุรัสอันแรกแล้ว"
+        },
+        "courseE_artist_functions22022": {
           "courseD_artist_functions2_1": "เมื่อบล็อกสีเขียวนี้ทำงาน โค้ดทั้งหมดในฟังก์ชันจะทำงาน ศิลปินควรทำอะไรหลังจากวาดสี่เหลี่ยมจัตุรัสอันแรกแล้ว"
         },
         "courseE_artist_functions2_2018": {
@@ -1395,6 +1366,9 @@
         "courseE_artist_functions2_2020": {
           "courseD_artist_functions2_1": "เมื่อบล็อกสีเขียวนี้ทำงาน โค้ดทั้งหมดในฟังก์ชันจะทำงาน ศิลปินควรทำอะไรหลังจากวาดสี่เหลี่ยมจัตุรัสอันแรกแล้ว"
         },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "เมื่อบล็อกสีเขียวนี้ทำงาน โค้ดทั้งหมดในฟังก์ชันจะทำงาน ศิลปินควรทำอะไรหลังจากวาดสี่เหลี่ยมจัตุรัสอันแรกแล้ว"
+        },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_1": "เมื่อบล็อกสีเขียวนี้ทำงาน โค้ดทั้งหมดในฟังก์ชันจะทำงาน ศิลปินควรทำอะไรหลังจากวาดสี่เหลี่ยมจัตุรัสอันแรกแล้ว"
         },
@@ -1402,6 +1376,9 @@
           "courseD_artist_functions2_1": "เมื่อบล็อกสีเขียวนี้ทำงาน โค้ดทั้งหมดในฟังก์ชันจะทำงาน ศิลปินควรทำอะไรหลังจากวาดสี่เหลี่ยมจัตุรัสอันแรกแล้ว"
         },
         "courseE_artist_functions8": {
+          "courseD_artist_functions8_1": "บล็อกของคุณเพื่อสร้างฟังก์ชันถูกย้ายไปอยู่ใต้ป้ายกำกับนี้ในกล่องเครื่องมือ"
+        },
+        "courseE_artist_functions8a2022": {
           "courseD_artist_functions8_1": "บล็อกของคุณเพื่อสร้างฟังก์ชันถูกย้ายไปอยู่ใต้ป้ายกำกับนี้ในกล่องเครื่องมือ"
         },
         "courseE_artist_functions8a_2018": {
@@ -1413,7 +1390,14 @@
         "courseE_artist_functions8a_2020": {
           "courseD_artist_functions8_1": "บล็อกของคุณเพื่อสร้างฟังก์ชันถูกย้ายไปอยู่ใต้ป้ายกำกับนี้ในกล่องเครื่องมือ"
         },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "บล็อกของคุณเพื่อสร้างฟังก์ชันถูกย้ายไปอยู่ใต้ป้ายกำกับนี้ในกล่องเครื่องมือ"
+        },
         "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
+          "courseE_artist_functions_challenge1_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
+        },
+        "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
           "courseE_artist_functions_challenge1_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
         },
@@ -1429,7 +1413,15 @@
           "courseE_artist_functions_challenge1_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
           "courseE_artist_functions_challenge1_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
         },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
+          "courseE_artist_functions_challenge1_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
+        },
         "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
+          "courseE_artist_functions_challenge2_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
+        },
+        "courseE_artist_functions_challenge22022": {
           "courseE_artist_functions_challenge2_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
           "courseE_artist_functions_challenge2_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
         },
@@ -1445,8 +1437,18 @@
           "courseE_artist_functions_challenge2_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
           "courseE_artist_functions_challenge2_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
         },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
+          "courseE_artist_functions_challenge2_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
+        },
         "courseE_farmer_functions1": {
           "courseE_farmer_functions1_2": "กล่องเครื่องมือถูกจัดวางต่างออกไปเล็กน้อยในครั้งนี้! คลิกที่หมวดหมู่ต่าง ๆ เพื่อดูว่าคุณมีบล็อกอะไรบ้าง"
+        },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_2": "กล่องเครื่องมือถูกจัดวางต่างออกไปเล็กน้อยในครั้งนี้! คลิกที่หมวดหมู่ต่าง ๆ เพื่อดูว่าคุณมีบล็อกอะไรบ้าง"
+        },
+        "courseE_farmer_functions132022": {
+          "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
         },
         "courseE_farmer_functions13_2018": {
           "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
@@ -1455,6 +1457,9 @@
           "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
         },
         "courseE_farmer_functions13_2020": {
+          "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
+        },
+        "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
         },
         "courseE_farmer_functions1_2018": {
@@ -1466,7 +1471,13 @@
         "courseE_farmer_functions1_2020": {
           "courseE_farmer_functions1_2": "กล่องเครื่องมือถูกจัดวางต่างออกไปเล็กน้อยในครั้งนี้! คลิกที่หมวดหมู่ต่าง ๆ เพื่อดูว่าคุณมีบล็อกอะไรบ้าง"
         },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "กล่องเครื่องมือถูกจัดวางต่างออกไปเล็กน้อยในครั้งนี้! คลิกที่หมวดหมู่ต่าง ๆ เพื่อดูว่าคุณมีบล็อกอะไรบ้าง"
+        },
         "courseE_farmer_functions1a": {
+          "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
+        },
+        "courseE_farmer_functions1a2022": {
           "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
         },
         "courseE_farmer_functions1a_2018": {
@@ -1478,7 +1489,13 @@
         "courseE_farmer_functions1a_2020": {
           "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
         },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
+        },
         "courseE_farmer_functions2b": {
+          "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
+        },
+        "courseE_farmer_functions2b2022": {
           "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
         },
         "courseE_farmer_functions2b_2018": {
@@ -1490,314 +1507,18 @@
         "courseE_farmer_functions2b_2020": {
           "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
         },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
+        },
         "courseE_playLab_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
         },
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "นำตัวละครไปที่ธงนี้เพื่อเลื่อนไปยังเลเวลถัดไป"
         },
-        "courseF_artist_for1": {
-          "courseF_artist_for1_1": "กล่องเครื่องมืออยู่ในโหมด ‘หมวดหมู่’ เพื่อเพิ่มพื้นที่สำหรับโค้ดของคุณ โดย `for` loop ก็อยู่ในพื้นที่นี้"
-        },
-        "courseF_artist_for1_2018": {
-          "courseF_artist_for1_1": "กล่องเครื่องมืออยู่ในโหมด ‘หมวดหมู่’ เพื่อเพิ่มพื้นที่สำหรับโค้ดของคุณ โดย `for` loop ก็อยู่ในพื้นที่นี้"
-        },
-        "courseF_artist_for1_2019": {
-          "courseF_artist_for1_1": "กล่องเครื่องมืออยู่ในโหมด ‘หมวดหมู่’ เพื่อเพิ่มพื้นที่สำหรับโค้ดของคุณ โดย `for` loop ก็อยู่ในพื้นที่นี้"
-        },
-        "courseF_artist_for1_2020": {
-          "courseF_artist_for1_1": "กล่องเครื่องมืออยู่ในโหมด ‘หมวดหมู่’ เพื่อเพิ่มพื้นที่สำหรับโค้ดของคุณ โดย `for` loop ก็อยู่ในพื้นที่นี้"
-        },
-        "courseF_bee_for4": {
-          "courseF_bee_for4_1": "คุณจะพบ `for` loop อยู่ในนี้!"
-        },
-        "courseF_bee_for4_2018": {
-          "courseF_bee_for4_1": "คุณจะพบ `for` loop อยู่ในนี้!"
-        },
-        "courseF_bee_for4_2019": {
-          "courseF_bee_for4_1": "คุณจะพบ `for` loop อยู่ในนี้!"
-        },
-        "courseF_bee_for4_2020": {
-          "courseF_bee_for4_1": "คุณจะพบ `for` loop อยู่ในนี้!"
-        },
-        "courseF_bee_for9": {
-          "courseF_bee_for9_1": "คุณจะพบบล็อก `คณิตศาสตร์` อยู่ในนี้!"
-        },
-        "courseF_bee_for9_2018": {
-          "courseF_bee_for9_1": "คุณจะพบบล็อก `คณิตศาสตร์` อยู่ในนี้!"
-        },
-        "courseF_bee_for9_2019": {
-          "courseF_bee_for9_1": "คุณจะพบบล็อก `คณิตศาสตร์` อยู่ในนี้!"
-        },
-        "courseF_bee_for9_2020": {
-          "courseF_bee_for9_1": "คุณจะพบบล็อก `คณิตศาสตร์` อยู่ในนี้!"
-        },
-        "courseF_bee_variables_1_2018": {
-          "courseF_bee_functions_1_2018_1": "คุณหาตัวแปรของคุณได้ได้ที่นี่!"
-        },
-        "courseF_bee_variables_1_2019": {
-          "courseF_bee_functions_1_2018_1": "คุณหาตัวแปรของคุณได้ได้ที่นี่!"
-        },
-        "courseF_bee_variables_1_2020": {
-          "courseF_bee_functions_1_2018_1": "คุณหาตัวแปรของคุณได้ได้ที่นี่!"
-        },
-        "express_maze_debugging9_2019": {
-          "express_maze_debugging9_2019_1": "ลากบล็อกต่าง ๆ จากกล่องเครื่องมือไปยังพื้นที่ทำงาน"
-        },
-        "express_maze_debugging9_2020": {
-          "express_maze_debugging9_2019_1": "ลากบล็อกต่าง ๆ จากกล่องเครื่องมือไปยังพื้นที่ทำงาน"
-        },
-        "CourseD_Dance_2020_012022": {
-          "dance_callout_01": "เลือกประเภทนักเต้นได้ที่นี่"
-        },
-        "CourseD_Dance_2020_022022": {
-          "dance_callout_11_a": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ",
-          "arrow_buttons": "กดปุ่มลูกศรเพื่อควบคุมนักเต้นของคุณ"
-        },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "เพิ่มบล็อกนี้ในโปรแกรมของคุณ!"
-        },
-        "CourseD_Dance_2020_052022": {
-          "dance_callout_05": "เพิ่มเหตุการณ์นี้ในโปรแกรมของคุณ"
-        },
-        "CourseD_Dance_2020_062022": {
-          "dance_party_11_5_groups": "บล็อกใหม่!"
-        },
-        "CourseD_Dance_2020_072022": {
-          "setprop_hint": "บล็อกใหม่!"
-        },
-        "CourseD_Dance_2020_092022": {
-          "new_block_3": "บล็อกใหม่!",
-          "new_block_4": "บล็อกใหม่!"
-        },
-        "CourseF_outbreak2_-2022-2": {
-          "minitoolbox": "คลิกที่นี่เพื่อขยายบล็อก",
-          "pointerlocation": "ลากบล็อคหัวเรื่องมาที่นี่"
-        },
-        "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
-        },
-        "Fish Tank 3-validated2022": {
-          "spritelab_comment": "ใช้บล็อกนี้เพื่อบอกตัวเองหรือผู้สอนของคุณถึงวิธีการทำงานของโค้ดของคุณ"
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_1": "คำแนะนำเล็กๆ น้อยๆ นี้บอกให้คอมพิวเตอร์เรียกใช้โค้ดก้อนใหญ่ที่มีชื่อเดียวกันในพื้นที่ทำงาน"
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_1": "นี่คือลูป 'ทำซ้ำ'! คลิกที่นี่ในพื้นที่ทำงานและเพิ่มโค้ดที่คุณต้องการทำซ้ำหลายๆครั้ง"
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "เอเจนท์สามารถโฉบเหนือน้ำได้ แต่ผู้เล่นทำไม่ได้!"
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_1": "คุณไม่สามารถทิ้งบล็อคเหล่านี้ได้ แต่คุณสามารถแก้ไขได้!"
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_1": "เอเจนท์สามารถลอยอยู่เหนือลาวา แต่สตีฟกับแอเล็กซ์ไม่สามารถทำเช่นนั้นได้!  "
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "เราได้วางบล็อกบางส่วนไว้ที่นี่เพื่อให้คุณเริ่มต้นเล่น"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน",
-          "craft_drag_block_callout": "ลากบล็อก \"ไปข้างหน้า\" และติดบล็อกนั้นไว้ด้านล่างอีกบล็อกหนึ่ง"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "ทำซ้ำโดยวางบล็อกไที่นี่"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "รหัสนี้จะตรวจสอบลาวา คุณเพิ่มคำสั่งเดินหน้าต่อไปได้ไหม"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "ระเบิดเหล็กนี้!"
-        },
-        "Virtual Pet 2_-2022-2": {
-          "vp_costumes": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายชุดใหม่ให้กับโปรเจกต์ของคุณ!"
-        },
-        "Virtual Pet 6_-2022-2": {
-          "vp_costumes": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายชุดใหม่ให้กับโปรเจกต์ของคุณ!"
-        },
-        "courseA_EOC_playlab_animals2022": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_fantasy2022": {
-          "question_mark": "?"
-        },
-        "courseA_EOC_playlab_people2022": {
-          "question_mark": "?"
-        },
-        "courseA_artist_loops42022": {
-          "courseA_artist_loops4_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
-        },
-        "courseA_artist_loops72022": {
-          "courseA_artist_loops7_1": "ตัวเลขนี้หมายความว่าใช้บล็อกได้แค่ประเภทเดียวในคำตอบสุดท้าย"
-        },
-        "courseA_artist_loops82022": {
-          "courseA_artist_loops8_1": "คุณรู้หรือไม่ว่าคุณย้อนกลับได้ทุกเมื่อที่ต้องการ"
-        },
-        "courseA_collector_loops12022": {
-          "courseA_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
-        },
-        "courseA_collector_loops32022": {
-          "gradek_adventurer_loops2_1": "หมายเลขนี้ บอกให้คุณทราบจำนวนบล็อกที่คุณสามารถใช้ในปริศนานี้ได้"
-        },
-        "courseA_maze_ramp22022": {
-          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
-        },
-        "courseA_maze_seq12022": {
-          "courseA_maze_seq1_1": "ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!"
-        },
-        "courseA_playLab_events42022": {
-          "courseA_playlab_events4_callout1": "นี่คือคำบรรยาย"
-        },
-        "courseA_playLab_events52022": {
-          "courseA_playLab_events5_1": "คลิกที่นี่เพื่อเปลี่ยนทิศทางของลูกศรเหตุการณ์\n"
-        },
-        "courseA_playLab_events62022": {
-          "courseA_playLab_events6_1": "คุณใช้ตัวเลือกนี้เพื่อเลือกเสียง \"สุ่ม\" ซึ่งหมายความว่าคุณจะไม่มีวันรู้ว่าได้เสียงอะไรจนกว่าจะได้ยิน!"
-        },
-        "courseB_Scrat_ramp12022": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "courseB_Scrat_ramp3a2022": {
-          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
-        },
-        "courseB_artist_loops32022": {
-          "courseB_artist_loops3_1": "มีบล็อกที่อยู่ในกล่องเครื่องมือนี้เพียงบล็อกเดียว คุณจะนำมาใช้ยังไง"
-        },
-        "courseB_collector_loops12022": {
-          "courseB_collector_loops1_1": "คุณเห็นบล็อกที่คุณไม่คุ้นเคยมาก่อนในกล่องเครื่องมือใช่ไหม ไม่ต้องกังวลใจอะไร เราจะสาธิตใฟ้คุณเห็นวิธการใช้มันในด่านนี้ภายหลัง"
-        },
-        "courseB_maze_seq12022": {
-          "courseB_maze_seq1": "ให้คลิกที่หลอดไฟ เมื่อคุณต้องการคำบอกใบ้!"
-        },
-        "courseB_playlab_events62022": {
-          "courseB_playlab_events6_a": "ใช้ลูกศรแบบเลื่อนลงสีเขียวเพื่อเปลี่ยนทิศทาง"
-        },
-        "courseC19_playLab_EOC32022": {
-          "courseE_playLab_scaffold3_1": "นำตัวละครไปที่ธงนี้เพื่อเลื่อนไปยังเลเวลถัดไป"
-        },
-        "courseC_PlayLab_events82022": {
-          "courseC_PlayLab_events8_callout1": "ใช้บล็อกนี้เมื่อเจ้านกเพนกวินแวดเดิลและเจ้าไดโนจอมเขมือบสัมผัสกัน!"
-        },
-        "courseC_PlayLab_events_challenge12022": {
-          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
-        },
-        "courseC_PlayLab_events_lesson_extras": {
-          "courseC_PlayLab_events_challenge1_1": "คุณสามารถใช้บล็อกนี้เพื่อย้ายตัวละครไปยังส่วนต่างๆ ของพื้นที่เกม"
-        },
-        "courseC_artist_loops1a2022": {
-          "jumpto_callout": "บล็อกนี้มีความสำคัญมากสำหรับโปรเจ็กต์นี้ อย่าลืมใช้บล็อกนี้นะ!"
-        },
-        "courseC_artist_loops1b2022": {
-          "sticker2": "เพิ่มบล็อกนี้ลงตรงกลางโปรแกรมของคุณ"
-        },
-        "courseC_artist_prog22022": {
-          "slider": "คุณทำให้โปรแกรมช้าลงได้จากที่นี่"
-        },
-        "courseC_collector_prog12022": {
-          "courseC_collector_prog1_1": "คุณเห็นบล็อกใหม่ในกล่องเครื่องมือหรือเปล่า ไม่ต้องกังวล เราจะสาธิตให้ดูว่าจะใช้ยังไงในบทเรียนอื่น"
-        },
-        "courseC_collector_prog72022": {
-          "courseC_collector_prog7_1": "คุณใช้บล็อกเพิ่มเติมจากกล่องเครื่องมือได้นะหากต้องการ!"
-        },
-        "courseC_harvester_loops12022": {
-          "courseC_harvester_loops1_callout1": "หมายเลขสี่บนฟักทองบอกคุณว่ามีฟักทองสี่ลูกให้เก็บ"
-        },
-        "courseC_maze_debugging52022": {
-          "courseC_maze_debugging5_1": "บล็อกเหล่านี้ถูกล็อคและลบไม่ได้!"
-        },
-        "courseC_maze_debugging92022": {
-          "courseC_maze_debugging9_2019_1": "ลากบล็อกต่าง ๆ จากกล่องเครื่องมือไปยังพื้นที่ทำงาน"
-        },
-        "courseC_maze_programming12022": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "courseC_maze_programming22022": {
-          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
-        },
-        "courseC_maze_programming32022": {
-          "courseC_maze_programming3_2": "คุณสามารถลากบล็อกพิเศษไปไว้ที่กล่องเครื่องมือหากต้องการกำจัดทิ้ง",
-          "courseC_maze_programming3_3": "บล็อกเหล่านี้เป็นหินและโยนทิ้งไม่ได้"
-        },
-        "courseC_maze_programming42022": {
-          "courseC_maze_programming4_1": "นี่คือขีดจำกัดบล็อกของคุณ เพื่อบอกว่าคุณเหลือบล็อกเหล่านี้ที่นำมาใช้ได้อีกกี่บล็อก"
-        },
-        "courseC_maze_programming52022": {
-          "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
-        },
-        "courseC_maze_programming72022": {
-          "courseC_maze_programming7_1": "นี่เป็นปริศนาท้าทายแรกของคุณ! ยากนะและอาจต้องลองหลายครั้ง",
-          "courseC_maze_programming7_2": "บล็อกเหล่านี้ทำจากหินและโยนทิ้งไม่ได้"
-        },
-        "courseC_starWars_loops22022": {
-          "courseC_starWars_loops2": "คุณมีบล็อกแบบนี้แค่บล็อกเดียวในปริศนานี้"
-        },
-        "courseD_artist_nestedLoops1a2022": {
-          "courseD_artist_nestedLoops1a_1": "คุณไม่จำเป็นต้องใช้สีเพื่อไขปริศนานี้ให้ถูกต้อง แต่ถ้าอยากจะไขปริศนานี้ บล็อก 'สุ่มสี' จะช่วยคุณได้!"
-        },
-        "courseD_bee_conditionals22022": {
-          "4_5_Bee_Conditionals_2_1": "อย่าลืมตรวจดูว่า เมฆทุกก้อนมีดอกไม้อยู่หรือไม่ แต่ไม่จำเป็นต้องตรวจสอบรังผึ้งนะ"
-        },
-        "courseD_bee_conditionals_challenge22022": {
-          "courseD_bee_conditionals_challenge2_1": "ใช้ลูปอันนี้เพื่อเก็บรวบรวมเกสรน้ำหวาน (หรือน้ำผึ้ง) จากดอกไม้ (หรือรวงผึ้ง)"
-        },
-        "courseD_bee_nestedLoops1a2022": {
-          "stepButton": "ลองก้าวผ่านโค้ดของคุณทีละบล็อก"
-        },
-        "courseD_farmer_while72022": {
-          "courseD_farmer_while7_2018_PathAhead": "คุณจะต้องใช้บล็อก \"ในขณะที่มีทางอยู่ข้างหน้า\" เพื่อไขปริศนานี้"
-        },
-        "courseD_maze_intro42022": {
-          "courseC_maze_programming4_1": "นี่คือขีดจำกัดบล็อกของคุณ เพื่อบอกว่าคุณเหลือบล็อกเหล่านี้ที่นำมาใช้ได้อีกกี่บล็อก"
-        },
-        "courseD_maze_intro5a2022": {
-          "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
-        },
-        "courseD_maze_ramp12022": {
-          "grade2_CaringForNewPet_0_1": "หลังจากเชื่อมบล็อกทั้งหมดเข้าด้วยกัน กด \" เริ่ม \" เพื่อให้โปรแรมของคุณเริ่มทำงาน"
-        },
-        "courseD_maze_ramp22022": {
-          "courseC_maze_programming2_1": "นี่คือกล่องเครื่องมือ คุณจะพบบล็อกเพิ่มเติมเพื่อไขปริศนาของคุณได้จากกล่องเครื่องมือนี้"
-        },
-        "courseD_maze_ramp32022": {
-          "courseC_maze_programming3_2": "คุณสามารถลากบล็อกพิเศษไปไว้ที่กล่องเครื่องมือหากต้องการกำจัดทิ้ง",
-          "stone_block_2": "แต่จะไม่สามารถกำจัดบล็อกสีเทาได้"
-        },
-        "courseD_maze_ramp52022": {
-          "": "บล็อกเหล่านี้ไม่มีตัวเลขกำกับ คุณจึงใช้ได้มากเท่าที่ต้องการ!"
-        },
-        "courseE_aboutme_22022": {
-          "": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
-        },
-        "courseE_artist_functions22022": {
-          "courseD_artist_functions2_1": "เมื่อบล็อกสีเขียวนี้ทำงาน โค้ดทั้งหมดในฟังก์ชันจะทำงาน ศิลปินควรทำอะไรหลังจากวาดสี่เหลี่ยมจัตุรัสอันแรกแล้ว"
-        },
-        "courseE_artist_functions8a2022": {
-          "courseD_artist_functions8_1": "บล็อกของคุณเพื่อสร้างฟังก์ชันถูกย้ายไปอยู่ใต้ป้ายกำกับนี้ในกล่องเครื่องมือ"
-        },
-        "courseE_artist_functions_challenge12022": {
-          "courseE_artist_functions_challenge1_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
-          "courseE_artist_functions_challenge1_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
-        },
-        "courseE_artist_functions_challenge22022": {
-          "courseE_artist_functions_challenge2_callout1": "ลองใช้โปรแกรมนี้ไปเรื่อย ๆ ด้วยการเพิ่มโค้ดอื่นที่ด้านล่าง",
-          "courseE_artist_functions_challenge2_callout2": "ถ้าคุณไม่ชอบงานออกแบบนี้ ให้ลองเปลี่ยนเป็นอะไรก็ได้ที่คุณต้องการ!"
-        },
-        "courseE_farmer_functions12022": {
-          "courseE_farmer_functions1_2": "กล่องเครื่องมือถูกจัดวางต่างออกไปเล็กน้อยในครั้งนี้! คลิกที่หมวดหมู่ต่าง ๆ เพื่อดูว่าคุณมีบล็อกอะไรบ้าง"
-        },
-        "courseE_farmer_functions132022": {
-          "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
-        },
-        "courseE_farmer_functions1a2022": {
-          "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
-        },
-        "courseE_farmer_functions2b2022": {
-          "courseE_farmer_functions1a_1": "อันนี้ผักอะไรก็ไม่รู้ มันเปลี่ยนทุกครั้งที่คุณเรียกใช้โปรแกรม"
+        "courseF_apps_aquarium": {
+          "run_button": "กดที่ปุ่มเริ่มก่อน!",
+          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
         },
         "courseF_apps_aquarium2022": {
           "run_button": "กดที่ปุ่มเริ่มก่อน!",
@@ -1807,10 +1528,17 @@
           "run_button": "กดที่ปุ่มเริ่มก่อน!",
           "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
         },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
+        },
         "courseF_apps_card2022": {
           "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "กดที่ปุ่มเริ่มก่อน!",
           "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
         },
         "courseF_apps_chatbot2022": {
@@ -1818,6 +1546,10 @@
           "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "กดที่ปุ่มเริ่มก่อน!",
+          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
+        },
+        "courseF_apps_collector": {
           "run_button": "กดที่ปุ่มเริ่มก่อน!",
           "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
         },
@@ -1841,10 +1573,17 @@
         "courseF_apps_collector_move_-2022-2": {
           "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
         },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
+        },
         "courseF_apps_madlib2022": {
           "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
         },
         "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
+        },
+        "courseF_apps_pet": {
+          "run_button": "กดที่ปุ่มเริ่มก่อน!",
           "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
         },
         "courseF_apps_pet2022": {
@@ -1855,82 +1594,207 @@
           "run_button": "กดที่ปุ่มเริ่มก่อน!",
           "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
         },
+        "courseF_artist_for1": {
+          "courseF_artist_for1_1": "กล่องเครื่องมืออยู่ในโหมด ‘หมวดหมู่’ เพื่อเพิ่มพื้นที่สำหรับโค้ดของคุณ โดย `for` loop ก็อยู่ในพื้นที่นี้"
+        },
         "courseF_artist_for12022": {
           "courseF_artist_for1_1": "กล่องเครื่องมืออยู่ในโหมด ‘หมวดหมู่’ เพื่อเพิ่มพื้นที่สำหรับโค้ดของคุณ โดย `for` loop ก็อยู่ในพื้นที่นี้"
+        },
+        "courseF_artist_for1_2018": {
+          "courseF_artist_for1_1": "กล่องเครื่องมืออยู่ในโหมด ‘หมวดหมู่’ เพื่อเพิ่มพื้นที่สำหรับโค้ดของคุณ โดย `for` loop ก็อยู่ในพื้นที่นี้"
+        },
+        "courseF_artist_for1_2019": {
+          "courseF_artist_for1_1": "กล่องเครื่องมืออยู่ในโหมด ‘หมวดหมู่’ เพื่อเพิ่มพื้นที่สำหรับโค้ดของคุณ โดย `for` loop ก็อยู่ในพื้นที่นี้"
+        },
+        "courseF_artist_for1_2020": {
+          "courseF_artist_for1_1": "กล่องเครื่องมืออยู่ในโหมด ‘หมวดหมู่’ เพื่อเพิ่มพื้นที่สำหรับโค้ดของคุณ โดย `for` loop ก็อยู่ในพื้นที่นี้"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "กล่องเครื่องมืออยู่ในโหมด ‘หมวดหมู่’ เพื่อเพิ่มพื้นที่สำหรับโค้ดของคุณ โดย `for` loop ก็อยู่ในพื้นที่นี้"
+        },
+        "courseF_bee_for4": {
+          "courseF_bee_for4_1": "คุณจะพบ `for` loop อยู่ในนี้!"
         },
         "courseF_bee_for42022": {
           "courseF_bee_for4_1": "คุณจะพบ `for` loop อยู่ในนี้!"
         },
+        "courseF_bee_for4_2018": {
+          "courseF_bee_for4_1": "คุณจะพบ `for` loop อยู่ในนี้!"
+        },
+        "courseF_bee_for4_2019": {
+          "courseF_bee_for4_1": "คุณจะพบ `for` loop อยู่ในนี้!"
+        },
+        "courseF_bee_for4_2020": {
+          "courseF_bee_for4_1": "คุณจะพบ `for` loop อยู่ในนี้!"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "คุณจะพบ `for` loop อยู่ในนี้!"
+        },
+        "courseF_bee_for9": {
+          "courseF_bee_for9_1": "คุณจะพบบล็อก `คณิตศาสตร์` อยู่ในนี้!"
+        },
         "courseF_bee_for92022": {
           "courseF_bee_for9_1": "คุณจะพบบล็อก `คณิตศาสตร์` อยู่ในนี้!"
+        },
+        "courseF_bee_for9_2018": {
+          "courseF_bee_for9_1": "คุณจะพบบล็อก `คณิตศาสตร์` อยู่ในนี้!"
+        },
+        "courseF_bee_for9_2019": {
+          "courseF_bee_for9_1": "คุณจะพบบล็อก `คณิตศาสตร์` อยู่ในนี้!"
+        },
+        "courseF_bee_for9_2020": {
+          "courseF_bee_for9_1": "คุณจะพบบล็อก `คณิตศาสตร์` อยู่ในนี้!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "คุณจะพบบล็อก `คณิตศาสตร์` อยู่ในนี้!"
+        },
+        "courseF_bee_variables_1_2018": {
+          "courseF_bee_functions_1_2018_1": "คุณหาตัวแปรของคุณได้ได้ที่นี่!"
+        },
+        "courseF_bee_variables_1_2019": {
+          "courseF_bee_functions_1_2018_1": "คุณหาตัวแปรของคุณได้ได้ที่นี่!"
+        },
+        "courseF_bee_variables_1_2020": {
+          "courseF_bee_functions_1_2018_1": "คุณหาตัวแปรของคุณได้ได้ที่นี่!"
         },
         "courseF_bee_variables_1a2022": {
           "courseF_bee_functions_1_2018_1": "คุณหาตัวแปรของคุณได้ได้ที่นี่!"
         },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "คุณหาตัวแปรของคุณได้ได้ที่นี่!"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
+        },
         "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
+        },
+        "courseF_editable_chatbot": {
           "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
         },
         "courseF_editable_chatbot_-2022-2": {
           "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
         },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
+        },
         "courseF_editable_madlib_-2022-2": {
           "visualizationResizeBar": "ลากจุด 3 จุดเพื่อปรับขนาดพื้นที่เล่น"
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "ลองเปลี่ยนเมื่อเป็นในขณะที่"
         },
         "courseF_events_choice_penguin_-2022-2": {
           "whenToWhile": "ลองเปลี่ยนเมื่อเป็นในขณะที่"
         },
+        "courseF_events_conflict": {
+          "stops_block": "บล็อกใหม่อยู่ที่นี่!"
+        },
         "courseF_events_conflict_-2022-2": {
           "stops_block": "บล็อกใหม่อยู่ที่นี่!"
+        },
+        "courseF_events_key": {
+          "whenKey": "ใช้บล็อกเหตุการณ์ใหม่ที่พบที่นี่"
         },
         "courseF_events_key_-2022-2": {
           "whenKey": "ใช้บล็อกเหตุการณ์ใหม่ที่พบที่นี่"
         },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "บล็อกนี้อยู่ในลำดับที่ไม่ถูกต้อง"
+        },
         "courseF_events_practice_reorder_-2022-2": {
           "stopAllBug": "บล็อกนี้อยู่ในลำดับที่ไม่ถูกต้อง"
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "คลิกที่นี่เพื่อดูว่าพฤติกรรมนี้ทำงานอย่างไร"
         },
         "courseF_events_predict_-2022-2": {
           "behaviors_edit": "คลิกที่นี่เพื่อดูว่าพฤติกรรมนี้ทำงานอย่างไร"
         },
+        "courseF_events_time": {
+          "events_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่เหตุการณ์"
+        },
         "courseF_events_time_-2022-2": {
           "events_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่เหตุการณ์"
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "พิจารณาเรื่องโค้ดด้านล่างนี้ให้ละเอียด"
         },
         "courseF_label_predict_-2022-2": {
           "variablesPredict": "พิจารณาเรื่องโค้ดด้านล่างนี้ให้ละเอียด"
         },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่พฤติกรรม"
+        },
         "courseF_sprites_behaviors_-2022-2": {
           "behaviors_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่พฤติกรรม"
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่สไปร์ท"
         },
         "courseF_sprites_make_-2022-2": {
           "sprites_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่สไปร์ท"
         },
+        "courseF_sprites_positioning": {
+          "locations_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่สถานที่ตั้ง"
+        },
         "courseF_sprites_positioning_-2022-2": {
           "locations_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่สถานที่ตั้ง"
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "ค้นหาบล็อกใหม่ที่นี่"
         },
         "courseF_sprites_properties_-2022-2": {
           "sprites_category2": "ค้นหาบล็อกใหม่ที่นี่"
         },
+        "courseF_text_answer": {
+          "answered_block": "ค้นหาบล็อกใหม่ที่นี่!"
+        },
         "courseF_text_answer_-2022-2": {
           "answered_block": "ค้นหาบล็อกใหม่ที่นี่!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "สีพื้นหลังเปลี่ยนไปหรือไม่เมื่อคุณตอบคำถาม ถ้าเปลี่ยน ให้แตะ 'เสร็จสิ้น' ถ้าไม่เปลี่ยน ให้แตะ 'เริ่มใหม่' เปลี่ยนโค้ดของคุณ แล้วกด 'เริ่ม' อีกครั้ง"
         },
         "courseF_text_choice_color_-2022-2": {
           "text_color_finish": "สีพื้นหลังเปลี่ยนไปหรือไม่เมื่อคุณตอบคำถาม ถ้าเปลี่ยน ให้แตะ 'เสร็จสิ้น' ถ้าไม่เปลี่ยน ให้แตะ 'เริ่มใหม่' เปลี่ยนโค้ดของคุณ แล้วกด 'เริ่ม' อีกครั้ง"
         },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "เสร็จรึยัง ถ้าเสร็จแล้ว ให้กด 'เสร็จสิ้น' แต่ถ้ายังไม่เสร็จ ให้กด 'ตั้งค่าใหม่' เปลี่ยนโค้ดของคุณ แล้วกด 'เริ่ม' อีกครั้ง"
+        },
         "courseF_text_choice_conversation_-2022-2": {
           "text_generic_finish": "เสร็จรึยัง ถ้าเสร็จแล้ว ให้กด 'เสร็จสิ้น' แต่ถ้ายังไม่เสร็จ ให้กด 'ตั้งค่าใหม่' เปลี่ยนโค้ดของคุณ แล้วกด 'เริ่ม' อีกครั้ง"
         },
+        "courseF_text_choice_title": {
+          "text_answer_finish": "หน้าจอชื่อเรื่องแสดงเป็นเวลา 3 วินาทีหรือไม่ ถ้าใช่ ให้กด 'เสร็จสิ้น' ถ้าไม่ใช่ ให้กด 'ตั้งค่าใหม่' เปลี่ยนโค้ดของคุณ แล้วกด 'เริ่ม' อีกครั้ง",
+          "title_block": "ค้นหาบล็อกใหม่สองบล็อกที่นี่!"
+        },
         "courseF_text_choice_title_-2022-2": {
-          "title_block": "ค้นหาบล็อกใหม่สองบล็อกที่นี่!",
-          "text_answer_finish": "หน้าจอชื่อเรื่องแสดงเป็นเวลา 3 วินาทีหรือไม่ ถ้าใช่ ให้กด 'เสร็จสิ้น' ถ้าไม่ใช่ ให้กด 'ตั้งค่าใหม่' เปลี่ยนโค้ดของคุณ แล้วกด 'เริ่ม' อีกครั้ง"
+          "text_answer_finish": "หน้าจอชื่อเรื่องแสดงเป็นเวลา 3 วินาทีหรือไม่ ถ้าใช่ ให้กด 'เสร็จสิ้น' ถ้าไม่ใช่ ให้กด 'ตั้งค่าใหม่' เปลี่ยนโค้ดของคุณ แล้วกด 'เริ่ม' อีกครั้ง",
+          "title_block": "ค้นหาบล็อกใหม่สองบล็อกที่นี่!"
+        },
+        "courseF_text_concat": {
+          "join_blocks": "ค้นหาบล็อกใหม่ที่นี่!"
         },
         "courseF_text_concat_-2022-2": {
           "join_blocks": "ค้นหาบล็อกใหม่ที่นี่!"
         },
+        "courseF_text_events": {
+          "events_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่เหตุการณ์"
+        },
         "courseF_text_events_-2022-2": {
           "events_category": "คลิกที่นี่เพื่อเปิดหมวดหมู่เหตุการณ์"
+        },
+        "courseF_text_print": {
+          "print_block": "ค้นหาบล็อกพิมพ์ที่นี่!",
+          "text_print_finish": "ข้อความของคุณพิมพ์ด้านบนหรือไม่ ถ้าใช่ ให้กด 'เสร็จสิ้น' หากไม่เป็นเช่นนั้น ให้กด 'ตั้งค่าใหม่' เปลี่ยน\nโค้ดของคุณ แล้วกด 'เริ่ม' อีกครั้ง"
         },
         "courseF_text_print_-2022-2": {
           "print_block": "ค้นหาบล็อกพิมพ์ที่นี่!",
           "text_print_finish": "ข้อความของคุณพิมพ์ด้านบนหรือไม่ ถ้าใช่ ให้กด 'เสร็จสิ้น' หากไม่เป็นเช่นนั้น ให้กด 'ตั้งค่าใหม่' เปลี่ยน\nโค้ดของคุณ แล้วกด 'เริ่ม' อีกครั้ง"
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "ค้นหาบล็อกพรอมต์ที่นี่!"
         },
         "courseF_text_prompts_-2022-2": {
           "prompt_block": "ค้นหาบล็อกพรอมต์ที่นี่!"
@@ -1938,10 +1802,25 @@
         "courseF_variables2_predict_-2022-2": {
           "variablesPredict": "พิจารณาเรื่องโค้ดด้านล่างนี้ให้ละเอียด"
         },
+        "courseF_variables_predict": {
+          "variablesPredict": "พิจารณาเรื่องโค้ดด้านล่างนี้ให้ละเอียด"
+        },
         "courseF_variables_predict_-2022-2": {
           "variablesPredict": "พิจารณาเรื่องโค้ดด้านล่างนี้ให้ละเอียด"
         },
         "coursea_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด \" เริ่ม \" เพื่อให้โปรแกรมของคุณเริ่มทำงาน"
+        },
+        "coursea_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด \" เริ่ม \" เพื่อให้โปรแกรมของคุณเริ่มทำงาน"
+        },
+        "coursea_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด \" เริ่ม \" เพื่อให้โปรแกรมของคุณเริ่มทำงาน"
+        },
+        "coursea_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด \" เริ่ม \" เพื่อให้โปรแกรมของคุณเริ่มทำงาน"
+        },
+        "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด \" เริ่ม \" เพื่อให้โปรแกรมของคุณเริ่มทำงาน"
         },
         "coursee_helloworld_events": {
@@ -1951,149 +1830,20 @@
           "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
         },
         "coursee_helloworld_say": {
-          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้",
-          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท"
+          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท",
+          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้"
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "ลากบล็อกต่าง ๆ จากกล่องเครื่องมือไปยังพื้นที่ทำงาน"
         },
-        "helloworld_food_backgrounds_soccer-2022": {
-          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
+        "express_maze_debugging9_2019": {
+          "express_maze_debugging9_2019_1": "ลากบล็อกต่าง ๆ จากกล่องเครื่องมือไปยังพื้นที่ทำงาน"
         },
-        "helloworld_food_backgrounds_space-2022": {
-          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
+        "express_maze_debugging9_2020": {
+          "express_maze_debugging9_2019_1": "ลากบล็อกต่าง ๆ จากกล่องเครื่องมือไปยังพื้นที่ทำงาน"
         },
-        "helloworld_food_behaviors_soccer-2022": {
-          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
-        },
-        "helloworld_food_behaviors_space-2022": {
-          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
-        },
-        "helloworld_food_click_soccer-2022": {
-          "hw_Run": "คลิกที่นี่เพื่อใช้งานโค้ด"
-        },
-        "helloworld_food_costumes_soccer-2022": {
-          "hello_world_new": "บล็อกใหม่!"
-        },
-        "helloworld_food_costumes_space-2022": {
-          "hello_world_new": "บล็อกใหม่!"
-        },
-        "helloworld_food_events_soccer-2022": {
-          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
-        },
-        "helloworld_food_events_space-2022": {
-          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
-        },
-        "helloworld_food_freeplay_soccer-2022": {
-          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
-        },
-        "helloworld_food_freeplay_space-2022": {
-          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
-        },
-        "helloworld_food_location_soccer-2022": {
-          "pin": "ปักหมุด"
-        },
-        "helloworld_food_location_space-2022": {
-          "pin": "ปักหมุด"
-        },
-        "helloworld_food_multi_soccer-2022": {
-          "pin": "ปักหมุด"
-        },
-        "helloworld_food_multi_space-2022": {
-          "pin": "ปักหมุด"
-        },
-        "helloworld_food_say_soccer-2022": {
-          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้",
-          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท"
-        },
-        "helloworld_food_say_space-2022": {
-          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้",
-          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท"
-        },
-        "helloworld_food_sizes_soccer-2022": {
-          "hello_world_new": "บล็อกใหม่!",
-          "hello_world_new_block": "บล็อกใหม่!"
-        },
-        "helloworld_food_sizes_space-2022": {
-          "hello_world_new": "บล็อกใหม่!",
-          "hello_world_new_block": "บล็อกใหม่!"
-        },
-        "helloworld_food_sounds_soccer-2022": {
-          "hello_world_new": "บล็อกใหม่!"
-        },
-        "helloworld_food_sounds_space-2022": {
-          "hello_world_new": "บล็อกใหม่!"
-        },
-        "helloworld_food_click_space-2022": {
-          "hw_Run": "คลิกที่นี่ก่อน!"
-        },
-        "Course 4 Artist 4": {
-          "repeat_full_circle": "ใส่จำนวนครั้งที่ผีดิบมีการย้ายเพื่อให้เป็นวงกลมเต็มรูปแบบ"
-        },
-        "Course 4 Artist 7": {
-          "repeat_blocks": "ใช้บล็อก “Repeat” และห่อหุ้มไว้รอบ ๆ บล็อกในพื้นที่ทำงาน"
-        },
-        "Course 4 Artist For Loops 4": {
-          "place_counter_variable": "ลากตัวแปรเคาน์เตอร์ของคุณภายในบล็อกนี้"
-        },
-        "Course 4 Artist Vars 1": {
-          "repeat_blocks": "ใช้บล็อก “Repeat” และห่อหุ้มไว้รอบ ๆ บล็อกในพื้นที่ทำงาน"
-        },
-        "Course 4 Artist Vars 12": {
-          "set_length": "ใช้บล็อกนี้เพื่อตั้งค่า “ความยาว” เป็นค่าที่ถูกต้อง"
-        },
-        "Course 4 Artist Vars 2": {
-          "set_length": "ใช้บล็อกนี้เพื่อตั้งค่า “ความยาว” เป็นค่าที่ถูกต้อง"
-        },
-        "Course 4 Artist Vars 6": {
-          "degrees_per_side": "หาร 360 ตามจำนวนด้านเพื่อให้ได้ขนาดของแต่ละมุมเป็นองศา"
-        },
-        "Course 4 Bee Params 2": {
-          "edit_get_nectar": "ใช้ปุ่มนี้เพื่อแก้ไขฟังก์ชั่นและเปลี่ยนทิศทางที่ผึ้งจะหันไปรับน้ำหวาน"
-        },
-        "Course 4 Play Lab Params 3": {
-          "edit_function": "คลิกที่นี่เพื่อแก้ไขฟังก์ชั่นของคุณ"
-        },
-        "Course 4 Play Lab Params 6": {
-          "edit_add_parameter": "คลิกแก้ไขเพื่อเพิ่มพารามิเตอร์ในฟังก์ชันของคุณ"
-        },
-        "Course 4 Play Lab Vars 1": {
-          "arrows_move_actor": "ใช้ลูกศรเพื่อย้ายนักแสดง"
-        },
-        "Infinity_move_collide": {
-          "Infinity_move_collide_callout": "เล่นเสียงเมื่อเหตุการณ์นี้เกิดขึ้น"
-        },
-        "Infinity_move_directions": {
-          "Infinity_move_directions_callout": "ซึ่งบล็อกจะทำให้ Baymax เลื่อนขึ้นเมื่อลูกศรขึ้นจะถูกกด?",
-          "Infinity_move_directions_callout_arrow": "ใช้ลูกศรเหล่านี้เพื่อคัดท้าย"
-        },
-        "Infinity_move_right": {
-          "Infinity_move_right_runbutton": "เพิ่มบล็อกย้ายที่นี่"
-        },
-        "Infinity_repeat": {
-          "Infinity_repeat_callout": "สถานที่ย้ายบล็อกภายในที่นี่"
-        },
-        "NEW Course 4 Artist Functions 7": {
-          "edit_function": "คลิกที่นี่เพื่อแก้ไขฟังก์ชั่นของคุณ"
-        },
-        "NEW Course 4 Artist Functions 8": {
-          "edit_function": "คลิกที่นี่เพื่อแก้ไขฟังก์ชั่นของคุณ"
-        },
-        "NEW Course 4 Artist Params 10": {
-          "create_function": "คลิกที่นี่เพื่อเปิด “Functions” flyout จากนั้นคลิกปุ่ม “สร้างฟังก์ชั่น”"
-        },
-        "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "คลิกแก้ไขเพื่อเพิ่มพารามิเตอร์ในฟังก์ชันของคุณ",
-          "add_and_drag_parameter": "เขียนชื่อของพารามิเตอร์ของคุณที่นี่คลิกเพิ่มแล้วลากลงในคำจำกัดความของฟังก์ชันของคุณ"
-        },
-        "NEW Course 4 Artist Vars 6": {
-          "place_length_variable": "ลากตัวแปรความยาวที่นี่เพื่อแทนที่เครื่องหมายคำถาม"
-        },
-        "NEW Course 4 Bee For Loops 5": {
-          "actions_category": "กล่องเครื่องมือมีรูปลักษณ์ใหม่!บล็อก “การกระทำ” อยู่ในที่นี่ในขณะนี้"
-        },
-        "New Frozen Project": {
-          "snowflake_dropdown": "ใช้แบบเลื่อนลงนี้เพื่อสร้างเกล็ดหิมะที่แตกต่างกัน!"
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "ลากบล็อกต่าง ๆ จากกล่องเครื่องมือไปยังพื้นที่ทำงาน"
         },
         "frozen circle function with parameter": {
           "frozen_circle_function_with_parameter_circle": "ใช้บล็อก “สร้างวงกลม” และเปลี่ยนขนาด"
@@ -2114,6 +1864,10 @@
         "frozen freeplay": {
           "snowflake_dropdown": "ใช้แบบเลื่อนลงนี้เพื่อสร้างเกล็ดหิมะที่แตกต่างกัน!"
         },
+        "frozen line": {
+          "move_elsa_forward": "ลากบล็อก “ย้ายไปข้างหน้า” และสแนปมันด้านล่างบล็อก “เมื่อเรียกใช้” เพื่อให้ Elsa ก้าวไปข้างหน้า",
+          "run": "กด \"เล่น\" เพื่อลองเล่นโปรแกรมของคุณ!"
+        },
         "frozen perpendicular": {
           "turn_elsa": "ใช้บล็อก “เปิด” เพื่อให้ Elsa เปิดตัวเลขในแบบเลื่อนลงจะเป็นตัวกำหนดเท่าใด Elsa เปลี่ยน"
         },
@@ -2131,6 +1885,252 @@
         },
         "frozen square snowflake": {
           "replace_questions": "ใช้ดรอปดาวน์เพื่อแทนที่ “???”ด้วยตัวเลข"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "คลิกที่นี่เพื่อใช้งานโค้ด"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
+        },
+        "helloworld_animals_location": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_animals_multi": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_animals_say": {
+          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท",
+          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "บล็อกใหม่!",
+          "hello_world_new_block": "บล็อกใหม่!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "คลิกที่นี่เพื่อใช้งานโค้ด"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
+        },
+        "helloworld_emoji_location": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท",
+          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "บล็อกใหม่!",
+          "hello_world_new_block": "บล็อกใหม่!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
+        },
+        "helloworld_food_click": {
+          "hw_Run": "คลิกที่นี่เพื่อใช้งานโค้ด"
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "คลิกที่นี่เพื่อใช้งานโค้ด"
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "คลิกที่นี่ก่อน!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
+        },
+        "helloworld_food_location": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_food_multi": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_food_say": {
+          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท",
+          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท",
+          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท",
+          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "บล็อกใหม่!",
+          "hello_world_new_block": "บล็อกใหม่!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "บล็อกใหม่!",
+          "hello_world_new_block": "บล็อกใหม่!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "บล็อกใหม่!",
+          "hello_world_new_block": "บล็อกใหม่!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "คลิกที่นี่เพื่อใช้งานโค้ด"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
+        },
+        "helloworld_retro_location": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_retro_multi": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_retro_say": {
+          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท",
+          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "บล็อกใหม่!",
+          "hello_world_new_block": "บล็อกใหม่!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "outbreak2": {
+          "minitoolbox": "คลิกที่นี่เพื่อขยายบล็อก",
+          "pointerlocation": "ลากบล็อคหัวเรื่องมาที่นี่"
+        },
+        "outbreak7": {
+          "costumes_callout": "คลิกเพื่อสร้างคอสตูมใหม่"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "บล็อกใหม่!"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "ค้นหาบล็อกโค้ดที่นี่ ",
+          "run_button": "ทดสอบแอนิเมชั่นของคุณด้วยปุ่มนี้"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "บล็อกใหม่!",
+          "poetry_foreground": "บล็อกใหม่!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "บล็อกใหม่!",
+          "poetry_multiple_sprites": "บล็อกใหม่!",
+          "poetry_new_block": "บล็อกใหม่!",
+          "poetry_selector": "เลือกบทกวีหรือใส่บทกวีของตัวเองได้เลย!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_music": "บล็อกใหม่!",
+          "poetry_sound": "บล็อกใหม่!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "บล็อกใหม่!",
+          "poetry_sprite_stops": "บล็อกใหม่!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "บล็อกใหม่!",
+          "poetry_set_sprite": "บล็อกใหม่!"
         }
       }
     }

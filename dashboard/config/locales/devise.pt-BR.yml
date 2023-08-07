@@ -60,6 +60,27 @@ pt:
         poucos minutos, com instruções sobre como desbloqueá-la.
       unlocked: Sua conta foi desbloqueada com sucesso. Faça a autenticação para continuar.
   errors:
+    invitations:
+      edit:
+        header: Escolha uma senha
+        submit_button: Definir minha senha
+      invitation_removed: Seu convite foi removido.
+      invitation_token_invalid: A chave de convite fornecida não é válida!
+      new:
+        header: Enviar convite
+        submit_button: Enviar um convite
+      no_invitations_remaining: Nenhum convite restante
+      send_instructions: Foi enviado um e-mail de convite para %{email}.
+      updated: Sua senha foi salva com êxito. Agora você está conectado.
+    mailer:
+      invitation_instructions:
+        accept: Aceitar convite
+        hello: Olá %{email}
+        ignore: Se você não quiser aceitar o convite, ignore este e-mail.<br />Sua
+          conta não será criada até que você acesse o link acima e defina sua senha.
+        someone_invited_you: Alguém o convidou para %{url}, você pode aceitar o convite
+          por meio do link abaixo.
+        subject: Instruções de convite
     messages:
       already_confirmed: já confirmado, tente se conectar
       confirmation_period_expired: precisa ser confirmado dentro de %{period}, faça
@@ -67,24 +88,3 @@ pt:
       expired: expirou, faça uma nova solicitação
       not_found: não encontrado
       not_locked: não foi bloqueado
-    invitations:
-      send_instructions: Foi enviado um e-mail de convite para %{email}.
-      invitation_token_invalid: A chave de convite fornecida não é válida!
-      updated: Sua senha foi salva com êxito. Agora você está conectado.
-      no_invitations_remaining: Nenhum convite restante
-      invitation_removed: Seu convite foi removido.
-      new:
-        header: Enviar convite
-        submit_button: Enviar um convite
-      edit:
-        header: Escolha uma senha
-        submit_button: Definir minha senha
-    mailer:
-      invitation_instructions:
-        subject: Instruções de convite
-        hello: Olá %{email}
-        someone_invited_you: Alguém o convidou para %{url}, você pode aceitar o convite
-          por meio do link abaixo.
-        accept: Aceitar convite
-        ignore: Se você não quiser aceitar o convite, ignore este e-mail.<br />Sua
-          conta não será criada até que você acesse o link acima e defina sua senha.

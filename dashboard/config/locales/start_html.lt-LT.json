@@ -3,31 +3,31 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Taip",
-          "No": "Ne"
+          "No": "Ne",
+          "Yes": "Taip"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Taip",
-          "No": "Ne"
+          "No": "Ne",
+          "Yes": "Taip"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Taip",
-          "No": "Ne"
+          "No": "Ne",
+          "Yes": "Taip"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Taip",
-          "No": "Ne"
+          "No": "Ne",
+          "Yes": "Taip"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Vardas",
-          "Color": "Spalva",
           "City": "Miestas",
+          "Color": "Spalva",
+          "Name": "Vardas",
           "text": "tekstas"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Vardas",
-          "Color": "Spalva",
           "City": "Miestas",
+          "Color": "Spalva",
+          "Name": "Vardas",
           "text": "tekstas"
         },
         "CSD U1 processing guess_2021": {
@@ -49,57 +49,57 @@
           "Back": "Atgal"
         },
         "CSD U1 storage movies_2021": {
+          "No": "Ne",
           "Star Wars": "Žvaigždžių karai",
           "Yes": "Taip",
-          "No": "Ne",
           "text": "tekstas"
         },
         "CSD U1 storage movies_2022": {
+          "No": "Ne",
           "Star Wars": "Žvaigždžių karai",
           "Yes": "Taip",
-          "No": "Ne",
           "text": "tekstas"
         },
         "CSD U1 storage outfit_2021": {
-          "green": "žalia spalva",
-          "black": "juoda"
+          "black": "juoda",
+          "green": "žalia spalva"
         },
         "CSD U1 storage outfit_2022": {
-          "green": "žalia spalva",
-          "black": "juoda"
+          "black": "juoda",
+          "green": "žalia spalva"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Vidutinis"
         },
         "CSD U6 - Combine Inputs - A_2222": {
+          "green": "žalia spalva",
           "left": "kairėn",
-          "right": "dešinėn",
           "red": "raudona spalva",
-          "green": "žalia spalva"
+          "right": "dešinėn"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "kairėn",
           "right": "dešinėn"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "žalia spalva",
-          "blue": "mėlyna"
+          "blue": "mėlyna",
+          "green": "žalia spalva"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
@@ -118,40 +118,40 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "Score": "Rezultatas"
@@ -172,10 +172,10 @@
           "White": "Baltasis"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "aukštyn",
           "down": "žemyn",
           "left": "kairėn",
-          "right": "dešinėn"
+          "right": "dešinėn",
+          "up": "aukštyn"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "pavadinimas"
@@ -199,40 +199,40 @@
           "Update": "Atnaujinti"
         },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "pirmasis"
@@ -247,20 +247,20 @@
           "first": "pirmasis"
         },
         "CSD U6 change": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 change_2018": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 change_2019": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 change_2021": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Vidutinis"
@@ -275,36 +275,36 @@
           "Medium": "Vidutinis"
         },
         "CSD U6 frequency": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 frequency_2018": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 frequency_2019": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 frequency_2021": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 get toggle": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 get toggle_2018": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 get toggle_2019": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 get toggle_2021": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 getProperty Demo": {
           "Save": "Išsaugoti"
@@ -331,36 +331,36 @@
           "Submit": "Pateikti"
         },
         "CSD U6 getters debug": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 getters debug_2018": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 getters debug_2019": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 getters debug_2021": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 interval": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 interval_2018": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 interval_2019": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 interval_2021": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 sensor experiment embedded": {
           "text": "tekstas"
@@ -387,38 +387,38 @@
           "title": "pavadinimas"
         },
         "CSD U6 slider intro": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 slider intro_2018": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 slider intro_2019": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSD U6 slider intro_2021": {
-          "short": "trumpai",
-          "long": "ilgai"
+          "long": "ilgai",
+          "short": "trumpai"
         },
         "CSDU4 Crowdsource App Demo": {
           "Cancel": "Atšaukti",
-          "Yes": "Taip",
           "No": "Ne",
-          "Save": "Išsaugoti"
+          "Save": "Išsaugoti",
+          "Yes": "Taip"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "Cancel": "Atšaukti",
-          "Yes": "Taip",
           "No": "Ne",
-          "Save": "Išsaugoti"
+          "Save": "Išsaugoti",
+          "Yes": "Taip"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "Cancel": "Atšaukti",
-          "Yes": "Taip",
           "No": "Ne",
-          "Save": "Išsaugoti"
+          "Save": "Išsaugoti",
+          "Yes": "Taip"
         },
         "CSDU4 Decision App Demo": {
           "I don't know": "Nežinau",
@@ -436,16 +436,16 @@
           "Show": "Rodyti"
         },
         "CSDU4 List App Demo": {
-          "Done": "Baigta",
-          "Cancel": "Atšaukti"
+          "Cancel": "Atšaukti",
+          "Done": "Baigta"
         },
         "CSDU4 List App Demo_2018": {
-          "Done": "Baigta",
-          "Cancel": "Atšaukti"
+          "Cancel": "Atšaukti",
+          "Done": "Baigta"
         },
         "CSDU4 List App Demo_2019": {
-          "Done": "Baigta",
-          "Cancel": "Atšaukti"
+          "Cancel": "Atšaukti",
+          "Done": "Baigta"
         },
         "CSDU4 Quiz App Demo": {
           "Submit": "Pateikti",
@@ -466,76 +466,76 @@
           "Back": "Atgal"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "R",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "tekstas"
@@ -553,20 +553,20 @@
           "Start": "Pradėti"
         },
         "csd-apps for good-2": {
-          "Next": "Kitas",
-          "Home": "Pradžia"
+          "Home": "Pradžia",
+          "Next": "Kitas"
         },
         "csd-apps for good-2_2022": {
-          "Next": "Kitas",
-          "Home": "Pradžia"
+          "Home": "Pradžia",
+          "Next": "Kitas"
         },
         "csd-explore ui-2": {
-          "Next": "Kitas",
-          "Home": "Pradžia"
+          "Home": "Pradžia",
+          "Next": "Kitas"
         },
         "csd-explore ui-2_2022": {
-          "Next": "Kitas",
-          "Home": "Pradžia"
+          "Home": "Pradžia",
+          "Next": "Kitas"
         },
         "csd-explore ui-4": {
           "Sorry!": "Atsiprašau!"
@@ -595,12 +595,12 @@
           "Next": "Kitas"
         },
         "ml-customize-raspado-2021": {
-          "yes": "taip",
-          "no": "ne"
+          "no": "ne",
+          "yes": "taip"
         },
         "ml-customize-raspado_2022": {
-          "yes": "taip",
-          "no": "ne"
+          "no": "ne",
+          "yes": "taip"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Tęsti",
@@ -611,16 +611,16 @@
           "Loading...": "Kraunama..."
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "V",
           "A": "A",
-          "yes": "taip",
-          "no": "ne"
+          "W": "V",
+          "no": "ne",
+          "yes": "taip"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "V",
           "A": "A",
-          "yes": "taip",
-          "no": "ne"
+          "W": "V",
+          "no": "ne",
+          "yes": "taip"
         },
         "ml-models in applab-choice intended warnings": {
           "Back": "Atgal"
@@ -629,22 +629,22 @@
           "Back": "Atgal"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Taip",
+          "B": "B",
           "No": "Ne",
-          "B": "B"
+          "Yes": "Taip"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Taip",
+          "B": "B",
           "No": "Ne",
-          "B": "B"
+          "Yes": "Taip"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Taip",
-          "No": "Ne"
+          "No": "Ne",
+          "Yes": "Taip"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Taip",
-          "No": "Ne"
+          "No": "Ne",
+          "Yes": "Taip"
         },
         "ml-models-shoes decision tree-2021": {
           "Sports": "Sportas"

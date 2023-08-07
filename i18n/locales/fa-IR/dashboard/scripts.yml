@@ -186,11 +186,11 @@ fa:
         cspunit1-support:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         CSDU1-Draft:
           description_short: حل مسأله
         CSDU2-Draft:
@@ -206,7 +206,7 @@ fa:
         teachercon:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         gradeKinder:
           description_audience: سنین 5 به بالا (خواندن لازم است)
         grade4:
@@ -224,17 +224,17 @@ fa:
         alltheplcthings:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         grade2:
           description_audience: سنین 5 به بالا (خواندن لازم است)
         csp-online-test:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp1-support:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         basketball:
           title: تیم خود را انتخاب کنید و یک بازی بسکتبال بسازید
           description_short: تیم خود را انتخاب کنید و یک بازی بسکتبال بسازید
@@ -244,7 +244,7 @@ fa:
         csp2-support:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         minecraft:
           description_short: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی ماینکرافت شما
           description: جانواران برنامه و دیگر موجودات ماینکرافت در نسخه‌ی ماینکرافت شما
@@ -276,11 +276,11 @@ fa:
         csp3-support:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp4-support:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csf2harvey:
           lesson_groups:
             end_of_course_project:
@@ -288,7 +288,7 @@ fa:
         csp5-support:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         coursed-ramp:
           title: 'مبانی علوم کامپیوتر: دوره‌ D'
         csd2-old:
@@ -313,51 +313,51 @@ fa:
         cspnovice:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp1-dlp:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp2-dlp:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp3-dlp:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp4-dlp:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp5-dlp:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csd1-dlp:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csd6-dlp:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csd5-dlp:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csd4-dlp:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csd3-dlp:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csd2-dlp:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         express-2017:
           description: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
           lesson_groups:
@@ -420,78 +420,78 @@ fa:
         csd1-dlp-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csd2-dlp-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csd3-dlp-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csd4-dlp-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csd5-dlp-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csd6-dlp-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp1-dlp-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp2-dlp-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp3-dlp-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp4-dlp-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp5-dlp-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp-explore-dlp-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp-create-dlp-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csd-novice-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csd-apprentice-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp-novice-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp-apprentice-18:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         pre-express-2018:
           description: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
           student_description: مبانی علم کامپیوتر و ایمنی اینترنت را بیاموزید. در پایان دوره، بازی خودتان را بسازید یا تجربه‌ای برای هم‌رسانی با دیگران داشته باشید.
         fit-test:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         dance:
           title: مهمانی رقص (2018)
           name: رقص
@@ -558,6 +558,8 @@ fa:
         express-2019:
           description: علوم کامپیوتر را با امتحان کردن دروس زیر با سرعت خودتان بیاموزید! یاد بگیرید که برنامه‌های کامپیوتری بسازید، مهارت‌های حل مسئله را پرورش دهید و چالش‌های سرگرم‌کننده‌ای را پشت سر بگذارید! بازی‌ها و پروژه‌های خلاقانه‌ای بسازید تا با دوستان، خانواده و معلمان به اشتراک بگذارید.
           lesson_groups:
+            csf_warmup:
+              display_name: آماده شوید
             csf_sequencing:
               display_name: دنباله
             csf_loops:
@@ -576,7 +578,7 @@ fa:
         andrea-test:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         coursec-2019:
           description: با استفاده از توالی، حلقه و رویدادها برنامه بسازید. حروف اول خود را به باینری برگردانید، فنون مختلف حل مسئله را بررسی کنید و یاد بگیرید که چه واکنشی به مزاحمت اینترنتی نشان دهید. در پایان دوره، بازی یا داستان خود را بسازید که بتوانید آن را به اشتراک بگذارید!
           lesson_groups:
@@ -644,11 +646,11 @@ fa:
             csp_project:
               display_name: پروژه
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp1-pilot:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         time4csdemo:
           lesson_groups:
             csf_sprites:
@@ -742,19 +744,19 @@ fa:
             csp_project:
               display_name: پروژه
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         fit2019-novice:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         fit2019-apprentice:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp3-pilot:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csl-vn:
           lesson_groups:
             csf_sequencing:
@@ -766,51 +768,51 @@ fa:
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         dlp19-csd-mod-w1:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         dlp19-csd-mod-w2:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         dlp19-csd-mod-w3:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         dlp19-csd-mod-w4:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         dlp19-csp-mod-w1:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         dlp19-csp-mod-w2:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         dlp19-csp-mod-w3:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         dlp19-csp-mod-w4:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp2-pilot:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp6-pilot:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         dance-2019:
           title: جشن و رقص
           description_short: یک Dance Party را کدنویسی کرده و با دوستان خود به اشتراک بگذارید. دوره‌ای با همراهی Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez همراه با موسیقی فیلم انکانتو کمپانی دیزنی و کلی چیز دیگه!
@@ -871,7 +873,7 @@ fa:
         csp7-pilot:
           lesson_groups:
             required:
-              display_name: بررسی اجمالی
+              display_name: مرور کلی
         csp4-2020:
           lesson_groups:
             csp_variables:
@@ -981,6 +983,8 @@ fa:
         express-2020:
           description: علوم کامپیوتر را با امتحان کردن دروس زیر با سرعت خودتان بیاموزید! یاد بگیرید که برنامه‌های کامپیوتری بسازید، مهارت‌های حل مسئله را پرورش دهید و چالش‌های سرگرم‌کننده‌ای را پشت سر بگذارید! بازی‌ها و پروژه‌های خلاقانه‌ای بسازید تا با دوستان، خانواده و معلمان به اشتراک بگذارید.
           lesson_groups:
+            csf_warmup:
+              display_name: آماده شوید
             csf_sequencing:
               display_name: دنباله
             csf_loops:
@@ -1023,7 +1027,7 @@ fa:
             outbreak:
               display_name: شبیه‌ساز شیوع
             debugging:
-              display_name: اشکال‌زدایی
+              display_name: رفع اشکال
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -1732,3 +1736,101 @@ fa:
           lessons:
             lesson-4:
               name: داده‌ها
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: شهروندی دیجیتالی
+            lessonGroup-3:
+              display_name: دنباله
+            lessonGroup-4:
+              display_name: حلقه‌ها
+            lessonGroup-5:
+              display_name: تاثیرات محاسبات
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: داده‌ها
+          lesson_groups:
+            lessonGroup-2:
+              display_name: شهروندی دیجیتالی
+            lessonGroup-3:
+              display_name: دنباله
+            lessonGroup-4:
+              display_name: حلقه‌ها
+            lessonGroup-5:
+              display_name: تاثیرات محاسبات
+            lessonGroup-6:
+              display_name: داده‌ها
+          description: دوره A ارائه‌دهنده برنامه درسی علوم کامپیوتر به خوانندگان مبتدی، از جمله دانش‌آموزان مهدکودک است. دانش‌آموزان می‌آموزند که با استفاده از دستورات مانند حلقه‌ها و رویدادها برنامه‌نویسی کنند. همچنین، دروس ارائه‌شده در این دوره به دانش‌آموزان می‌آموزد که با دیگران همکاری معناداری داشته باشند، فنون مختلف حل مسئله را بررسی کنند، در مواجهه با امور چالش‌برانگیز مقاومت کنند و از مسائل ایمنی اینترنت آگاه شوند. 
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: شهروندی دیجیتالی
+            lessonGroup-3:
+              display_name: دنباله
+            lessonGroup-4:
+              display_name: حلقه‌ها
+            lessonGroup-5:
+              display_name: تاثیرات محاسبات
+            lessonGroup-6:
+              display_name: رویدادها
+            lessonGroup-7:
+              display_name: پایان پروژه دوره
+          description: ما دوره B را با در نظر گرفتن کلاس اولی‌ها طراحی کردیم. اگرچه مفاهیم دوره B به موازات مفاهیم دوره A است، دانش‌آموزان فعالیت‌های پیچیده‌تری را فرا می‌گیرند و با پازل‌های بسیار متنوعی کار می‌کنند. دانش‌آموزان اصول برنامه‌نویسی، فنون همکاری، مهارت‌های تحقیق و تفکر انتقادی، مقاومت در برابر مشکلات و ایمنی اینترنت را خواهند آموخت. در پایان این دوره، دانش‌آموزان در محیط برنامه‌نویسی Play Lab اقدام به ساخت بازی می‌کنند.
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: شهروندی دیجیتالی
+            lessonGroup-3:
+              display_name: دنباله
+            lessonGroup-4:
+              display_name: حلقه‌ها
+            lessonGroup-5:
+              display_name: رویدادها
+            lessonGroup-6:
+              display_name: داده‌ها
+          description: ما دوره C را برای دانش‌آموزان کلاس دوم طراحی کردیم. دانش‌آموزان برنامه‌هایی را با استفاده از توالی، حلقه‌ها و رویدادها می‌سازند. آنها فنون حل مسئله را بررسی و راهکارهایی برای ایجاد جوامع مثبت، هم به صورت آنلاین و هم آفلاین، تولید می‌کنند. در پایان دوره، دانش‌آموزان بازی‌هایی تعاملی می‌سازند که می‌توانند به اشتراک بگذارند.
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: شهروندی دیجیتالی
+            lessonGroup-3:
+              display_name: دنباله
+            lessonGroup-4:
+              display_name: تاثیرات محاسبات
+            lessonGroup-6:
+              display_name: حلقه‌ها
+            lessonGroup-7:
+              display_name: داده‌ها
+            lessonGroup-8:
+              display_name: پایان پروژه دوره
+          description: ما دوره D را برای دانش‌آموزان کلاس سوم طراحی کرده‌ایم. این دوره با مروری بر مفاهیم موجود در دوره‌های قبلی، از جمله حلقه‌ها و رویدادها، آغاز می‌شود. پس از آن، دانش‌آموزان دانش خود را درباره الگوریتم‌ها، حلقه‌های تودرتو، حلقه‌های «در حالیکه»، شرطی‌ها و موارد دیگر افزایش خواهند داد.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: حلقه های تو در تو
+            lessonGroup-4:
+              display_name: توابع
+            lessonGroup-5:
+              display_name: داده ها و شبیه سازی ها
+            lessonGroup-6:
+              display_name: پایان پروژه دوره
+          description: ما دوره E را برای دانش‌آموزان کلاس چهارم طراحی کرده‌ایم. این دوره با مقدمه‌ای بر ابزار برنامه‌نویسی «آزمایشگاه اسپرایت» آغاز می‌شود. دانش‌آموزان یاد خواهند گرفت که پروژه‌های تعاملی و سرگرم‌کننده‌ای بسازند که آموخته‌های آنان درباره ایمنی آنلاین را تقویت می‌کند. پس از این دروس، دانش‌آموزان به کدنویسی پیچیده‌تری می‌پردازند. دانش‌آموزان حلقه‌های تودرتو، توابع و شرطی‌ها را خواهند آموخت. در پایان دوره، دانش‌آموزان این مفاهیم را برای حل پازل‌های چالش‌برانگیز ترکیب می‌کنند. این دوره با یک پروژه آزاد پایان می‌یابد که در آن دانش‌آموزان بازی یا نقاشی طراحی می‌کنند.
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: اسپرایت
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: اسپرایت
+            lessonGroup-3:
+              display_name: شرطی ها
+            lessonGroup-4:
+              display_name: داده ها و شبیه سازی ها
+            lessonGroup-5:
+              display_name: متغیرها
+            lessonGroup-6:
+              display_name: تاثیرات محاسبات
+            lessonGroup-7:
+              display_name: پایان پروژه دوره

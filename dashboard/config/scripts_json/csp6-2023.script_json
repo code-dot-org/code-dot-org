@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-03 15:04:11 UTC",
+    "serialized_at": "2023-08-06 18:16:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1039,8 +1039,25 @@
       }
     },
     {
-      "key": "c5179cab-9b3b-4e11-893f-c400984f97f2",
+      "key": "aa0882bc-baa7-44c0-8b40-b1e06bc9cd9d",
       "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the Unit 6 Journal ([Digital](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit?usp=drive_link)/[Interactive Notebook](https://docs.google.com/presentation/d/1tqcSleg0s5dO8VQw2mBq9HdWE5pbxFQ9EjG9T632oRY/edit?usp=drive_link)) or have students set up this unit's section in their CSP journals.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Journaling:** Journaling can take many different forms, but in general, it’s a tool for individual processing and reflection in a form that can be revisited as students develop their skills and understandings. The medium used for journaling can vary depending on classroom needs. \n\nFor more guidance and examples, check out the [**CSP Guide to Journaling**](https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/edit?usp=sharing)\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "aa0882bc-baa7-44c0-8b40-b1e06bc9cd9d",
+        "lesson_activity.key": "d060c736-ed40-41c9-932a-29a9e374069d"
+      }
+    },
+    {
+      "key": "c5179cab-9b3b-4e11-893f-c400984f97f2",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Discuss:** *With a partner, brainstorm lists of information that you encounter on a daily basis. Why are lists useful?*",
         "name": "Preview Lists\r"
@@ -1052,7 +1069,7 @@
     },
     {
       "key": "2177d218-8739-4277-aff9-ac5b867b8bea",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "Have students discuss with a partner and then have a few students share out their responses.\n\n**Discussion Goal:** \n\n* Lists help us group together like information\n* We can go through a list item by item to check off things we have completed\n* Lists help us stay organized\n\n"
       },
@@ -3052,7 +3069,7 @@
       "key": "16178cf7-5642-4ad7-96dc-85a1af64229e",
       "position": 9,
       "properties": {
-        "description": "####Assessment: Grading the Project\n\n**Project:** Use the Scoring Guidelines on the final page of the Planning Guide to assess student projects. The Written Response portion is individual, while the Overall Project portion is a group grade."
+        "description": "####Assessment: Grading the Project\n\n**Project:** Use the Scoring Guidelines on the final page of the Planning Guide to assess student projects. The Written Response portion is individual, while the Overall Project portion is a group grade.\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "16178cf7-5642-4ad7-96dc-85a1af64229e",
@@ -3060,8 +3077,42 @@
       }
     },
     {
-      "key": "43b45e1c-b5ab-4af2-998b-fc2ebcf6cd5d",
+      "key": "ed5457f8-483a-4e84-ba98-611c6fb6041d",
       "position": 10,
+      "properties": {
+        "description": "#### CSP Vocabulary Bingo"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed5457f8-483a-4e84-ba98-611c6fb6041d",
+        "lesson_activity.key": "18af6994-fc26-433d-96d7-1f20ad4b5929"
+      }
+    },
+    {
+      "key": "84c8008f-74fd-43a4-8e15-353cce8d1024",
+      "position": 11,
+      "properties": {
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "84c8008f-74fd-43a4-8e15-353cce8d1024",
+        "lesson_activity.key": "18af6994-fc26-433d-96d7-1f20ad4b5929"
+      }
+    },
+    {
+      "key": "a729ebcb-1921-4fce-833d-2b41e0d33976",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Six in order to generate clues for the students."
+      },
+      "seeding_key": {
+        "activity_section.key": "a729ebcb-1921-4fce-833d-2b41e0d33976",
+        "lesson_activity.key": "18af6994-fc26-433d-96d7-1f20ad4b5929"
+      }
+    },
+    {
+      "key": "43b45e1c-b5ab-4af2-998b-fc2ebcf6cd5d",
+      "position": 13,
       "properties": {
         "progression_name": "End-of-Unit Survey"
       },
@@ -5233,24 +5284,24 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp6-2022/resources",
-      "key": "all_resources_5",
+      "url": "/s/csp6-2023/resources",
+      "key": "all_resources_17",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_5"
+        "resource.key": "all_resources_17"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp6-2022/standards",
-      "key": "all_standards_5",
+      "url": "/s/csp6-2023/standards",
+      "key": "all_standards_17",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_5"
+        "resource.key": "all_standards_17"
       }
     },
     {
@@ -5267,14 +5318,37 @@
     },
     {
       "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "CSP Bingo Cards - Unit Six",
+      "url": "https://drive.google.com/file/d/1KBVdeq9cajlPQOcNb8xhFyfxxgV4VnYD/view?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_six",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1KBVdeq9cajlPQOcNb8xhFyfxxgV4VnYD",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_six"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
       "properties": {
         "audience": "Teacher",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "course_vocabulary"
+        "resource.key": "csp_bingo_generator"
       }
     },
     {
@@ -5615,6 +5689,18 @@
       }
     },
     {
+      "name": "Lists, Loops, and Traversals",
+      "url": "https://docs.google.com/presentation/d/1E2Zw5ta3nR4MfF49uQyXJwyfLklxAjI4ZVIUcfn3rCA/edit?usp=sharing",
+      "key": "lists_loops_and_traversals",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "lists_loops_and_traversals"
+      }
+    },
+    {
       "name": "Loops Game Board",
       "url": "https://docs.google.com/document/d/1tvAqNjn1ktrzMROtHAxOZDfHHMOn367Fdpnp9sbWghM/view",
       "key": "loops_game_board",
@@ -5771,6 +5857,30 @@
       }
     },
     {
+      "name": "Unit 6 Journal (Digital)",
+      "url": "https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit?usp=drive_link",
+      "key": "unit_6_journal_digital_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_journal_digital_"
+      }
+    },
+    {
+      "name": "Unit 6 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/1tqcSleg0s5dO8VQw2mBq9HdWE5pbxFQ9EjG9T632oRY/edit?usp=drive_link",
+      "key": "unit_6_journal_interactive_notebook_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_journal_interactive_notebook_"
+      }
+    },
+    {
       "name": "Using Loops",
       "url": "https://youtu.be/G8hfAk4PfOM",
       "key": "using_loops",
@@ -5807,6 +5917,24 @@
       "seeding_key": {
         "lesson.key": "Lists Explore",
         "resource.key": "introduction_to_lists_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "resource.key": "lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "resource.key": "unit_6_journal_digital_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "resource.key": "unit_6_journal_interactive_notebook_"
       }
     },
     {
@@ -5903,6 +6031,18 @@
       "seeding_key": {
         "lesson.key": "Loops Practice",
         "resource.key": "csp_unit_6_-_lesson_7_-_loops_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Hackathon Part 1",
+        "resource.key": "csp_bingo_cards_-_unit_six"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Hackathon Part 1",
+        "resource.key": "csp_bingo_generator"
       }
     },
     {
@@ -6017,13 +6157,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_5",
+        "resource.key": "all_resources_17",
         "script.name": "csp6-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_5",
+        "resource.key": "all_standards_17",
         "script.name": "csp6-2023"
       }
     },
@@ -6050,16 +6190,138 @@
         "resource.key": "teacher_forum",
         "script.name": "csp6-2023"
       }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_journal_digital_",
+        "script.name": "csp6-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_journal_interactive_notebook_",
+        "script.name": "csp6-2023"
+      }
     }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "data_abstraction",
+      "word": "Data Abstraction",
+      "definition": "manage complexity in programs by giving a collection of data a name without referencing the specific details of the representation",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_abstraction"
+      }
+    },
+    {
+      "key": "element",
+      "word": "Element",
+      "definition": "an individual value in a list that is assigned a unique index",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "element"
+      }
+    },
+    {
+      "key": "index",
+      "word": "Index",
+      "definition": " a common method for referencing the elements in a list or string using numbers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "index"
+      }
+    },
+    {
+      "key": "infinite_loop",
+      "word": "Infinite Loop",
+      "definition": "occurs when the ending condition will never evaluate to true",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "infinite_loop"
+      }
+    },
+    {
+      "key": "iteration",
+      "word": "Iteration",
+      "definition": "a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "iteration"
+      }
+    },
+    {
+      "key": "list",
+      "word": "List",
+      "definition": "an ordered collection of elements",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "list"
+      }
+    },
+    {
+      "key": "traversal",
+      "word": "Traversal",
+      "definition": "the process of accessing each item in a list one at a time",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "traversal"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "vocabulary.key": "data_abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "vocabulary.key": "element"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "vocabulary.key": "index"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "vocabulary.key": "list"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "vocabulary.key": "infinite_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "vocabulary.key": "iteration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
+        "vocabulary.key": "traversal"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -7028,6 +7290,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

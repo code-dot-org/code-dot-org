@@ -2,50 +2,78 @@
   "de-DE": {
     "data": {
       "start_html": {
+        "AppLab Intro 7 - Change Text 2": {
+          "Make me bigger and blue!": "Mach mich größer und blau!"
+        },
+        "AppLab Intro 7 - Full Text": {
+          "Make me blue!": "Mach mich blau!",
+          "Make me red!": "Mach mich rot!",
+          "Write code to change my text!": "Schreibe Code, um meinen Text zu ändern!"
+        },
+        "AppLab Intro 7 - onEvent intro": {
+          "Green-ify!": "Grüner!"
+        },
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "Flashlight App": "Taschenlampen App"
+        },
+        "AppLab Intro 7 - playSound": {
+          "Animal Sound Board!!!": "Tiergeräusche Board!!!",
+          "Horse!": "Pferd!",
+          "Monkey!": "Affe!",
+          "Tiger!": "Tiger!",
+          "You Choose!": "Du wählst!"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "This or That?!": "Dies oder Das?!",
+          "This!": "Das!",
+          "You clicked this!": "Du hast dies angeklickt!"
+        },
+        "AppLab Intro 7 - thisOrThatPersonalize": {
+          "This or That?!": "Dies oder Das?!",
+          "This!": "Das!",
+          "You clicked this!": "Du hast dies angeklickt!"
+        },
+        "AppLab Intro 7 - thisOrThatSetScreen": {
+          "This or That?!": "Dies oder Das?!",
+          "This!": "Das!",
+          "You clicked this!": "Du hast dies angeklickt!"
+        },
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Ja",
           "No": "Nein",
+          "Yes": "Ja",
           "cute": "süß"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Ja",
           "No": "Nein",
+          "Yes": "Ja",
           "cute": "süß"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Ja",
           "No": "Nein",
+          "Yes": "Ja",
           "cute": "süß"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Ja",
           "No": "Nein",
+          "Yes": "Ja",
           "cute": "süß"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Name",
+          "City": "Stadt",
           "Color": "Farbe",
           "Food": "Essen",
-          "City": "Stadt",
+          "Name": "Name",
           "text": "Text"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Name",
+          "City": "Stadt",
           "Color": "Farbe",
           "Food": "Essen",
-          "City": "Stadt",
+          "Name": "Name",
           "text": "Text"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -56,18 +84,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -78,29 +106,28 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
-          "?": "?",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -111,20 +138,20 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
           "text": "Text"
         },
         "CSD U1 processing guess_2022": {
-          "?": "?",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -135,18 +162,27 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
           "text": "Text"
         },
         "CSD U1 processing live_2021": {
-          "walking": "Gehen",
           "bear": "Bär",
-          "rat": "Ratte"
+          "rat": "Ratte",
+          "walking": "Gehen"
         },
         "CSD U1 processing live_2022": {
-          "walking": "Gehen",
           "bear": "Bär",
-          "rat": "Ratte"
+          "rat": "Ratte",
+          "walking": "Gehen"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "Richtig!",
@@ -158,14 +194,6 @@
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -176,18 +204,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -198,7 +226,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Zurück"
@@ -207,32 +243,32 @@
           "Back": "Zurück"
         },
         "CSD U1 storage movies_2021": {
+          "No": "Nein",
           "Star Wars": "Star Wars",
           "Yes": "Ja",
-          "No": "Nein",
           "text": "Text"
         },
         "CSD U1 storage movies_2022": {
+          "No": "Nein",
           "Star Wars": "Star Wars",
           "Yes": "Ja",
-          "No": "Nein",
           "text": "Text"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "Löschen",
-          "white": "weiß",
-          "pink": "rosa",
-          "green": "grün",
           "black": "schwarz",
-          "purple": "lila"
+          "green": "grün",
+          "pink": "rosa",
+          "purple": "lila",
+          "white": "weiß"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Löschen",
-          "white": "weiß",
-          "pink": "rosa",
-          "green": "grün",
           "black": "schwarz",
-          "purple": "lila"
+          "green": "grün",
+          "pink": "rosa",
+          "purple": "lila",
+          "white": "weiß"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -306,9 +342,9 @@
           "Success!": "Geschafft!"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "Ost",
           "North": "Nord",
           "South": "Süd",
-          "East": "Ost",
           "West": "West"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
@@ -324,58 +360,58 @@
           "Medium": "Mittel"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "links",
-          "right": "rechts",
-          "red": "rot",
-          "yellow": "gelb",
           "green": "grün",
-          "purple": "lila"
+          "left": "links",
+          "purple": "lila",
+          "red": "rot",
+          "right": "rechts",
+          "yellow": "gelb"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "an",
           "fast": "schnell",
-          "slow": "langsam",
-          "short": "kurz",
+          "high": "hoch",
           "long": "lang",
           "low": "niedrig",
-          "high": "hoch"
+          "on": "an",
+          "short": "kurz",
+          "slow": "langsam"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "Rot",
+          "Blue": "Blau",
           "Green": "Grün",
-          "Blue": "Blau"
+          "Red": "Rot"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "links",
           "right": "rechts"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "gelb",
-          "green": "grün",
           "blue": "blau",
-          "orange": "orange"
+          "green": "grün",
+          "orange": "orange",
+          "yellow": "gelb"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "quiet": "ruhig",
-          "Test": "Test"
+          "Test": "Test",
+          "quiet": "ruhig"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "kurz",
-          "long": "lang"
+          "long": "lang",
+          "short": "kurz"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "kurz",
+          "high": "hoch",
           "long": "lang",
           "low": "niedrig",
-          "high": "hoch"
+          "short": "kurz"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "kurz",
-          "long": "lang"
+          "long": "lang",
+          "short": "kurz"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "Rot",
-          "Blue": "Blau"
+          "Blue": "Blau",
+          "Red": "Rot"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -384,9 +420,9 @@
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Name"
@@ -407,41 +443,41 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
           "G": "G",
-          "A": "A",
-          "B": "B",
           "Note:": "Hinweis:"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Geschafft!"
@@ -460,8 +496,8 @@
           "Success!": "Geschafft!"
         },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "Punktzahl",
-          "0": "0"
+          "0": "0",
+          "Score": "Punktzahl"
         },
         "CSD U6 - Physical Input - PC_2222": {
           "Success!": "Geschafft!"
@@ -503,15 +539,15 @@
           "Name:": "Name:"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "Rot",
+          "Blue": "Blau",
           "Green": "Grün",
-          "Blue": "Blau"
+          "Red": "Rot"
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "Blau",
+          "Green": "Grün",
           "Name:": "Name:",
           "Red": "Rot",
-          "Green": "Grün",
-          "Blue": "Blau",
           "Save": "Speichern"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
@@ -529,23 +565,23 @@
           "white": "weiß"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "Glücklich",
-          "?": "?"
+          "?": "?",
+          "Happy": "Glücklich"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "Titel"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "Weiß",
-          "Red": "Rot",
+          "Blue": "Blau",
           "Green": "Grün",
-          "Blue": "Blau"
+          "Red": "Rot",
+          "White": "Weiß"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "hoch",
           "down": "runter",
           "left": "links",
-          "right": "rechts"
+          "right": "rechts",
+          "up": "hoch"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "Name"
@@ -558,12 +594,24 @@
           "on": "an"
         },
         "CSD U6 - Sensors - P_2222": {
-          "text": "Text",
           "high": "hoch",
-          "low": "niedrig"
+          "low": "niedrig",
+          "text": "Text"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "Wert"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "Aktualisieren",
+          "value": "Wert"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "Wert"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "Wert"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
           "value": "Wert"
         },
         "CSD U6 Driver pt 2": {
@@ -638,6 +686,30 @@
         "CSD U6 add LED button_2021": {
           "Success!": "Geschafft!"
         },
+        "CSD U6 analog change": {
+          "value": "Wert"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "Wert"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "Wert"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "Wert"
+        },
+        "CSD U6 analog data": {
+          "value": "Wert"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "Wert"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "Wert"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "Wert"
+        },
         "CSD U6 analog light": {
           "Update": "Aktualisieren",
           "value": "Wert"
@@ -654,41 +726,53 @@
           "Update": "Aktualisieren",
           "value": "Wert"
         },
+        "CSD U6 analog sound": {
+          "value": "Wert"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "Wert"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "Wert"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "Wert"
+        },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "erste"
@@ -703,20 +787,20 @@
           "first": "erste"
         },
         "CSD U6 change": {
-          "short": "kurz",
-          "long": "lang"
+          "long": "lang",
+          "short": "kurz"
         },
         "CSD U6 change_2018": {
-          "short": "kurz",
-          "long": "lang"
+          "long": "lang",
+          "short": "kurz"
         },
         "CSD U6 change_2019": {
-          "short": "kurz",
-          "long": "lang"
+          "long": "lang",
+          "short": "kurz"
         },
         "CSD U6 change_2021": {
-          "short": "kurz",
-          "long": "lang"
+          "long": "lang",
+          "short": "kurz"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Mittel"
@@ -731,95 +815,95 @@
           "Medium": "Mittel"
         },
         "CSD U6 emotion machine example": {
-          "Happy": "Glücklich",
-          "?": "?"
+          "?": "?",
+          "Happy": "Glücklich"
         },
         "CSD U6 emotion machine example_2018": {
-          "Happy": "Glücklich",
-          "?": "?"
+          "?": "?",
+          "Happy": "Glücklich"
         },
         "CSD U6 emotion machine example_2019": {
-          "Happy": "Glücklich",
-          "?": "?"
+          "?": "?",
+          "Happy": "Glücklich"
         },
         "CSD U6 emotion machine example_2021": {
-          "Happy": "Glücklich",
-          "?": "?"
+          "?": "?",
+          "Happy": "Glücklich"
         },
         "CSD U6 frequency": {
-          "short": "kurz",
+          "high": "hoch",
           "long": "lang",
           "low": "niedrig",
-          "high": "hoch"
+          "short": "kurz"
         },
         "CSD U6 frequency_2018": {
-          "short": "kurz",
+          "high": "hoch",
           "long": "lang",
           "low": "niedrig",
-          "high": "hoch"
+          "short": "kurz"
         },
         "CSD U6 frequency_2019": {
-          "short": "kurz",
+          "high": "hoch",
           "long": "lang",
           "low": "niedrig",
-          "high": "hoch"
+          "short": "kurz"
         },
         "CSD U6 frequency_2021": {
-          "short": "kurz",
+          "high": "hoch",
           "long": "lang",
           "low": "niedrig",
-          "high": "hoch"
+          "short": "kurz"
         },
         "CSD U6 get toggle": {
-          "short": "kurz",
+          "high": "hoch",
           "long": "lang",
           "low": "niedrig",
-          "high": "hoch"
+          "short": "kurz"
         },
         "CSD U6 get toggle_2018": {
-          "short": "kurz",
+          "high": "hoch",
           "long": "lang",
           "low": "niedrig",
-          "high": "hoch"
+          "short": "kurz"
         },
         "CSD U6 get toggle_2019": {
-          "short": "kurz",
+          "high": "hoch",
           "long": "lang",
           "low": "niedrig",
-          "high": "hoch"
+          "short": "kurz"
         },
         "CSD U6 get toggle_2021": {
-          "short": "kurz",
+          "high": "hoch",
           "long": "lang",
           "low": "niedrig",
-          "high": "hoch"
+          "short": "kurz"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "Blau",
+          "Green": "Grün",
           "Name:": "Name:",
           "Red": "Rot",
-          "Green": "Grün",
-          "Blue": "Blau",
           "Save": "Speichern"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "Blau",
+          "Green": "Grün",
           "Name:": "Name:",
           "Red": "Rot",
-          "Green": "Grün",
-          "Blue": "Blau",
           "Save": "Speichern"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "Blau",
+          "Green": "Grün",
           "Name:": "Name:",
           "Red": "Rot",
-          "Green": "Grün",
-          "Blue": "Blau",
           "Save": "Speichern"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "Blau",
+          "Green": "Grün",
           "Name:": "Name:",
           "Red": "Rot",
-          "Green": "Grün",
-          "Blue": "Blau",
           "Save": "Speichern"
         },
         "CSD U6 getProperty input": {
@@ -835,84 +919,84 @@
           "Submit": "Absenden"
         },
         "CSD U6 getters debug": {
-          "slow": "langsam",
           "fast": "schnell",
-          "short": "kurz",
+          "high": "hoch",
           "long": "lang",
           "low": "niedrig",
-          "high": "hoch"
+          "short": "kurz",
+          "slow": "langsam"
         },
         "CSD U6 getters debug_2018": {
           "fast": "schnell",
-          "slow": "langsam",
-          "short": "kurz",
+          "high": "hoch",
           "long": "lang",
           "low": "niedrig",
-          "high": "hoch"
+          "short": "kurz",
+          "slow": "langsam"
         },
         "CSD U6 getters debug_2019": {
           "fast": "schnell",
-          "slow": "langsam",
-          "short": "kurz",
+          "high": "hoch",
           "long": "lang",
           "low": "niedrig",
-          "high": "hoch"
+          "short": "kurz",
+          "slow": "langsam"
         },
         "CSD U6 getters debug_2021": {
           "fast": "schnell",
-          "slow": "langsam",
-          "short": "kurz",
+          "high": "hoch",
           "long": "lang",
           "low": "niedrig",
-          "high": "hoch"
+          "short": "kurz",
+          "slow": "langsam"
         },
         "CSD U6 interval": {
-          "short": "kurz",
-          "long": "lang"
+          "long": "lang",
+          "short": "kurz"
         },
         "CSD U6 interval_2018": {
-          "short": "kurz",
-          "long": "lang"
+          "long": "lang",
+          "short": "kurz"
         },
         "CSD U6 interval_2019": {
-          "short": "kurz",
-          "long": "lang"
+          "long": "lang",
+          "short": "kurz"
         },
         "CSD U6 interval_2021": {
-          "short": "kurz",
-          "long": "lang"
+          "long": "lang",
+          "short": "kurz"
         },
         "CSD U6 light show": {
-          "on": "an",
-          "off": "aus"
+          "off": "aus",
+          "on": "an"
         },
         "CSD U6 light show_2018": {
-          "on": "an",
-          "off": "aus"
+          "off": "aus",
+          "on": "an"
         },
         "CSD U6 light show_2019": {
-          "on": "an",
-          "off": "aus"
+          "off": "aus",
+          "on": "an"
         },
         "CSD U6 light show_2021": {
-          "on": "an",
-          "off": "aus"
+          "off": "aus",
+          "on": "an"
         },
         "CSD U6 params create colors": {
-          "Red": "Rot",
-          "Blue": "Blau"
+          "Blue": "Blau",
+          "Red": "Rot"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "Rot",
-          "Blue": "Blau"
+          "Blue": "Blau",
+          "Red": "Rot"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "Rot",
-          "Blue": "Blau"
+          "Blue": "Blau",
+          "Red": "Rot"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "Rot",
-          "Blue": "Blau"
+          "Blue": "Blau",
+          "Red": "Rot"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -939,24 +1023,24 @@
           "Success!": "Geschafft!"
         },
         "CSD U6 sensor experiment embedded": {
-          "text": "Text",
           "high": "hoch",
-          "low": "niedrig"
+          "low": "niedrig",
+          "text": "Text"
         },
         "CSD U6 sensor experiment embedded_2018": {
-          "text": "Text",
           "high": "hoch",
-          "low": "niedrig"
+          "low": "niedrig",
+          "text": "Text"
         },
         "CSD U6 sensor experiment embedded_2019": {
-          "text": "Text",
           "high": "hoch",
-          "low": "niedrig"
+          "low": "niedrig",
+          "text": "Text"
         },
         "CSD U6 sensor experiment embedded_2021": {
-          "text": "Text",
           "high": "hoch",
-          "low": "niedrig"
+          "low": "niedrig",
+          "text": "Text"
         },
         "CSD U6 setProperty predict app": {
           "title": "Titel"
@@ -971,20 +1055,20 @@
           "title": "Titel"
         },
         "CSD U6 slider intro": {
-          "short": "kurz",
-          "long": "lang"
+          "long": "lang",
+          "short": "kurz"
         },
         "CSD U6 slider intro_2018": {
-          "short": "kurz",
-          "long": "lang"
+          "long": "lang",
+          "short": "kurz"
         },
         "CSD U6 slider intro_2019": {
-          "short": "kurz",
-          "long": "lang"
+          "long": "lang",
+          "short": "kurz"
         },
         "CSD U6 slider intro_2021": {
-          "short": "kurz",
-          "long": "lang"
+          "long": "lang",
+          "short": "kurz"
         },
         "CSD U6 test LED": {
           "Success!": "Geschafft!"
@@ -999,74 +1083,74 @@
           "Success!": "Geschafft!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "Rot",
+          "Blue": "Blau",
           "Green": "Grün",
-          "Blue": "Blau"
+          "Red": "Rot"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "Rot",
+          "Blue": "Blau",
           "Green": "Grün",
-          "Blue": "Blau"
+          "Red": "Rot"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "Über",
           "About Us": "Über uns ",
-          "User": "Benutzer",
-          "Cancel": "Abbrechen",
-          "Name:": "Name:",
-          "Red": "Rot",
-          "Green": "Grün",
           "Blue": "Blau",
-          "Yes": "Ja",
+          "Cancel": "Abbrechen",
+          "Green": "Grün",
+          "Name:": "Name:",
           "No": "Nein",
-          "Save": "Speichern"
+          "Red": "Rot",
+          "Save": "Speichern",
+          "User": "Benutzer",
+          "Yes": "Ja"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Über",
           "About Us": "Über uns ",
-          "User": "Benutzer",
-          "Cancel": "Abbrechen",
-          "Name:": "Name:",
-          "Red": "Rot",
-          "Green": "Grün",
           "Blue": "Blau",
-          "Yes": "Ja",
+          "Cancel": "Abbrechen",
+          "Green": "Grün",
+          "Name:": "Name:",
           "No": "Nein",
-          "Save": "Speichern"
+          "Red": "Rot",
+          "Save": "Speichern",
+          "User": "Benutzer",
+          "Yes": "Ja"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Über",
           "About Us": "Über uns ",
-          "User": "Benutzer",
-          "Cancel": "Abbrechen",
-          "Name:": "Name:",
-          "Red": "Rot",
-          "Green": "Grün",
           "Blue": "Blau",
-          "Yes": "Ja",
+          "Cancel": "Abbrechen",
+          "Green": "Grün",
+          "Name:": "Name:",
           "No": "Nein",
-          "Save": "Speichern"
+          "Red": "Rot",
+          "Save": "Speichern",
+          "User": "Benutzer",
+          "Yes": "Ja"
         },
         "CSDU4 Decision App Demo": {
           "About": "Über",
-          "Why?": "Warum?",
+          "About Us": "Über uns ",
           "I don't know": "Ich weiß nicht",
           "When?": "Wann?",
-          "About Us": "Über uns "
+          "Why?": "Warum?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Über",
-          "Why?": "Warum?",
+          "About Us": "Über uns ",
           "I don't know": "Ich weiß nicht",
           "When?": "Wann?",
-          "About Us": "Über uns "
+          "Why?": "Warum?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Über",
-          "Why?": "Warum?",
+          "About Us": "Über uns ",
           "I don't know": "Ich weiß nicht",
           "When?": "Wann?",
-          "About Us": "Über uns "
+          "Why?": "Warum?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Verstecken",
@@ -1075,49 +1159,49 @@
         "CSDU4 List App Demo": {
           "About": "Über",
           "About Us": "Über uns ",
-          "Done": "Fertig",
-          "Cancel": "Abbrechen"
+          "Cancel": "Abbrechen",
+          "Done": "Fertig"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Über",
           "About Us": "Über uns ",
-          "Done": "Fertig",
-          "Cancel": "Abbrechen"
+          "Cancel": "Abbrechen",
+          "Done": "Fertig"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Über",
           "About Us": "Über uns ",
-          "Done": "Fertig",
-          "Cancel": "Abbrechen"
+          "Cancel": "Abbrechen",
+          "Done": "Fertig"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Über",
-          "Submit": "Absenden",
-          "Why?": "Warum?",
-          "When?": "Wann?",
           "About Us": "Über uns ",
-          "Correct!": "Richtig!"
+          "Correct!": "Richtig!",
+          "Submit": "Absenden",
+          "When?": "Wann?",
+          "Why?": "Warum?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Über",
-          "Submit": "Absenden",
-          "Why?": "Warum?",
-          "When?": "Wann?",
           "About Us": "Über uns ",
-          "Correct!": "Richtig!"
+          "Correct!": "Richtig!",
+          "Submit": "Absenden",
+          "When?": "Wann?",
+          "Why?": "Warum?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Über",
-          "Submit": "Absenden",
-          "Why?": "Warum?",
-          "When?": "Wann?",
           "About Us": "Über uns ",
-          "Correct!": "Richtig!"
+          "Correct!": "Richtig!",
+          "Submit": "Absenden",
+          "When?": "Wann?",
+          "Why?": "Warum?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
-          "???": "???",
-          "=": "="
+          "=": "=",
+          "???": "???"
         },
         "CSDU6 - UI and Inputs - setScreen": {
           "Back": "Zurück"
@@ -1138,76 +1222,76 @@
           "Success!": "Geschafft!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "O",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "Text"
@@ -1232,12 +1316,12 @@
           "flying": "fliegend"
         },
         "csd-apps for good-2": {
-          "Next": "Weiter",
-          "Home": "Home"
+          "Home": "Home",
+          "Next": "Weiter"
         },
         "csd-apps for good-2_2022": {
-          "Next": "Weiter",
-          "Home": "Home"
+          "Home": "Home",
+          "Next": "Weiter"
         },
         "csd-apps for good-3": {
           "1": "1",
@@ -1254,23 +1338,15 @@
           "???": "???"
         },
         "csd-explore ui-2": {
-          "Next": "Weiter",
-          "Home": "Home"
+          "Home": "Home",
+          "Next": "Weiter"
         },
         "csd-explore ui-2_2022": {
-          "Next": "Weiter",
-          "Home": "Home"
+          "Home": "Home",
+          "Next": "Weiter"
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1281,18 +1357,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1303,7 +1379,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Correct!": "Richtig!",
@@ -1315,14 +1399,6 @@
         },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1333,18 +1409,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1355,7 +1431,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "Weiter"
@@ -1364,13 +1448,13 @@
           "Next": "Weiter"
         },
         "ml-L2 supervised - green glass door-2021": {
-          "Green Glass Door": "Grüne Glastür",
           "Accepted": "Akzeptiert",
+          "Green Glass Door": "Grüne Glastür",
           "Rejected": "Abgelehnt"
         },
         "ml-L2 supervised - green glass door_2022": {
-          "Green Glass Door": "Grüne Glastür",
           "Accepted": "Akzeptiert",
+          "Green Glass Door": "Grüne Glastür",
           "Rejected": "Abgelehnt"
         },
         "ml-L2 unsupervised - 1-2021": {
@@ -1380,16 +1464,16 @@
           "Next": "Weiter"
         },
         "ml-customize-raspado-2021": {
-          "yes": "ja",
-          "no": "nein",
+          "Predict": "Vorhersage",
           "Raspado Recommender": "Raspado-Empfehlungsgeber",
-          "Predict": "Vorhersage"
+          "no": "nein",
+          "yes": "ja"
         },
         "ml-customize-raspado_2022": {
-          "yes": "ja",
-          "no": "nein",
+          "Predict": "Vorhersage",
           "Raspado Recommender": "Raspado-Empfehlungsgeber",
-          "Predict": "Vorhersage"
+          "no": "nein",
+          "yes": "ja"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Weiter",
@@ -1400,106 +1484,106 @@
           "Loading...": "Wird geladen..."
         },
         "ml-intro app lab-book recommender demo-2021": {
-          "Silly": "Albern",
-          "Predict": "Vorhersage"
+          "Predict": "Vorhersage",
+          "Silly": "Albern"
         },
         "ml-intro app lab-book recommender demo_2022": {
-          "Silly": "Albern",
-          "Predict": "Vorhersage"
+          "Predict": "Vorhersage",
+          "Silly": "Albern"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "W",
           "A": "A",
-          "yes": "ja",
+          "W": "W",
+          "head": "Kopf",
           "no": "nein",
-          "head": "Kopf"
+          "yes": "ja"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "W",
           "A": "A",
-          "yes": "ja",
+          "W": "W",
+          "head": "Kopf",
           "no": "nein",
-          "head": "Kopf"
+          "yes": "ja"
         },
         "ml-model cards-book recommender model card": {
-          "Silly": "Albern",
-          "Predict": "Vorhersage"
+          "Predict": "Vorhersage",
+          "Silly": "Albern"
         },
         "ml-model cards-book recommender model card_2022": {
-          "Silly": "Albern",
-          "Predict": "Vorhersage"
+          "Predict": "Vorhersage",
+          "Silly": "Albern"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Vorhersage"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Vorhersage"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Vorhersage"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Vorhersage"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "Vorhersage",
-          "Back": "Zurück"
+          "2": "2",
+          "3": "3",
+          "Back": "Zurück",
+          "Predict": "Vorhersage"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "Vorhersage",
-          "Back": "Zurück"
+          "2": "2",
+          "3": "3",
+          "Back": "Zurück",
+          "Predict": "Vorhersage"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Vorhersage"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Vorhersage"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Ja",
-          "No": "Nein",
           "B": "B",
-          "Predict": "Vorhersage"
+          "No": "Nein",
+          "Predict": "Vorhersage",
+          "Yes": "Ja"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Ja",
-          "No": "Nein",
           "B": "B",
-          "Predict": "Vorhersage"
+          "No": "Nein",
+          "Predict": "Vorhersage",
+          "Yes": "Ja"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Ja",
           "No": "Nein",
-          "Predict": "Vorhersage"
+          "Predict": "Vorhersage",
+          "Yes": "Ja"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Ja",
           "No": "Nein",
-          "Predict": "Vorhersage"
+          "Predict": "Vorhersage",
+          "Yes": "Ja"
         },
         "ml-models-shoes decision tree-2021": {
           "Improved Shoe Recommender": "Verbesserter Schuhempfehlungsdienst",
@@ -1523,105 +1607,21 @@
         },
         "ml-use model card-example3A-2021": {
           "Driver Alert System": "Fahrer-Warnsystem",
-          "rain": "Regen",
-          "snow": "Schnee",
+          "Predict": "Vorhersage",
           "cloudy": "bewölkt",
-          "night": "Nacht",
           "dusk": "Abend",
-          "Predict": "Vorhersage"
+          "night": "Nacht",
+          "rain": "Regen",
+          "snow": "Schnee"
         },
         "ml-use model card-example3A_2022": {
           "Driver Alert System": "Fahrer-Warnsystem",
-          "rain": "Regen",
-          "snow": "Schnee",
+          "Predict": "Vorhersage",
           "cloudy": "bewölkt",
-          "night": "Nacht",
           "dusk": "Abend",
-          "Predict": "Vorhersage"
-        },
-        "AppLab Intro 7 - Change Text 2": {
-          "Make me bigger and blue!": "Mach mich größer und blau!"
-        },
-        "AppLab Intro 7 - Full Text": {
-          "Make me red!": "Mach mich rot!",
-          "Make me blue!": "Mach mich blau!",
-          "Write code to change my text!": "Schreibe Code, um meinen Text zu ändern!"
-        },
-        "AppLab Intro 7 - onEvent intro": {
-          "Green-ify!": "Grüner!"
-        },
-        "AppLab Intro 7 - onEvent twoButtons": {
-          "Flashlight App": "Taschenlampen App"
-        },
-        "AppLab Intro 7 - playSound": {
-          "Horse!": "Pferd!",
-          "You Choose!": "Du wählst!",
-          "Animal Sound Board!!!": "Tiergeräusche Board!!!",
-          "Monkey!": "Affe!",
-          "Tiger!": "Tiger!"
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-          "This!": "Das!",
-          "This or That?!": "Dies oder Das?!",
-          "You clicked this!": "Du hast dies angeklickt!"
-        },
-        "AppLab Intro 7 - thisOrThatPersonalize": {
-          "This!": "Das!",
-          "This or That?!": "Dies oder Das?!",
-          "You clicked this!": "Du hast dies angeklickt!"
-        },
-        "AppLab Intro 7 - thisOrThatSetScreen": {
-          "This!": "Das!",
-          "This or That?!": "Dies oder Das?!",
-          "You clicked this!": "Du hast dies angeklickt!"
-        },
-        "CSD U6 - Sensors - SB1_2222": {
-          "value": "Wert"
-        },
-        "CSD U6 - Sensors - SB3_2222": {
-          "value": "Wert"
-        },
-        "CSD U6 - Sensors - SB4.1_2222": {
-          "value": "Wert"
-        },
-        "CSD U6 - Sensors - SB4_2222": {
-          "value": "Wert"
-        },
-        "CSD U6 analog change": {
-          "value": "Wert"
-        },
-        "CSD U6 analog change_2018": {
-          "value": "Wert"
-        },
-        "CSD U6 analog change_2019": {
-          "value": "Wert"
-        },
-        "CSD U6 analog change_2021": {
-          "value": "Wert"
-        },
-        "CSD U6 analog data": {
-          "value": "Wert"
-        },
-        "CSD U6 analog data_2018": {
-          "value": "Wert"
-        },
-        "CSD U6 analog data_2019": {
-          "value": "Wert"
-        },
-        "CSD U6 analog data_2021": {
-          "value": "Wert"
-        },
-        "CSD U6 analog sound": {
-          "value": "Wert"
-        },
-        "CSD U6 analog sound_2018": {
-          "value": "Wert"
-        },
-        "CSD U6 analog sound_2019": {
-          "value": "Wert"
-        },
-        "CSD U6 analog sound_2021": {
-          "value": "Wert"
+          "night": "Nacht",
+          "rain": "Regen",
+          "snow": "Schnee"
         }
       }
     }

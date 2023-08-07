@@ -23,6 +23,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   /**
    * @returns True if this flyout may be scrolled with a scrollbar or
    *     by dragging.
+   * @override
    */
   isScrollable() {
     return false;
@@ -36,6 +37,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @param tagName The type of tag to
    *     put the flyout in. This should be <svg> or <g>.
    * @returns The flyout's SVG group.
+   * @override
    */
   createDom(tagName) {
     super.createDom(tagName);
@@ -67,6 +69,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
   /**
    * Compute height of flyout.  Position mat under each block.
    * For RTL: Lay out the blocks right-aligned.
+   * @override
    */
   reflowInternal_() {
     this.height_ = 0;
@@ -115,6 +118,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
 
   /**
    * Position the flyout.
+   * @override
    */
   position() {
     this.isVisible() &&
@@ -131,6 +135,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    *
    * @param {number} width The width of the flyout, not including the rounded corners.
    * @param {number} height The height of the flyout, not including rounded corners.
+   * @override
    */
   setBackgroundPath_(width, height) {
     const path = [];
@@ -163,6 +168,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    *     It should be in the format 'dx,dy' representing the relative
    *     coordinates from the current position, ex. (8,-8).
    * @returns {string} The SVG arc path command string, ex. 'a 8 8 0,0,1 8,-8'
+   * @private
    */
   createCornerPath(cornerEndPosition) {
     return svgPaths.arc('a', '0,0,1', this.CORNER_RADIUS, cornerEndPosition);
@@ -171,6 +177,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * Attach this field to a block.
    *
    * @param block The block containing this field.
+   * @private
    */
   setSourceBlock_(block) {
     this.sourceBlock_ = block;
@@ -186,6 +193,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @param couldConnect Whether the element could could connect to another.
    * @returns Whether the element provided would be deleted if dropped on this
    *     area.
+   * @override
    */
   wouldDelete(element, _couldConnect) {
     return false;

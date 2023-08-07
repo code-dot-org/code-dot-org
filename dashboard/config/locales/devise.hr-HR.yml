@@ -58,6 +58,28 @@ hr:
         e-mail sa uputama kako ga otključati.
       unlocked: Tvoj korisnički račun je uspješno otključan. Molimo prijavi se ponovo.
   errors:
+    invitations:
+      edit:
+        header: Postavi lozinku
+        submit_button: Postavi moju lozinku
+      invitation_removed: Tvoja pozivnica je uklonjena.
+      invitation_token_invalid: Token pozivnice nije valjan!
+      new:
+        header: Pošalji pozivnicu
+        submit_button: Pošalji pozivnicu
+      no_invitations_remaining: Nema više preostalih pozivnica
+      send_instructions: E-mail pozivnica je poslana na %{email}.
+      updated: Tvoja lozinka je uspješno postavljena. Sada si prijavljen.
+    mailer:
+      invitation_instructions:
+        accept: Prihvati pozivnicu
+        hello: Pozdrav %{email}
+        ignore: Ako ne želiš prihvatiti pozivnicu, molimo ignoriraj ovaj e-mail.<br
+          />Tvoj korisnički račun neće biti stvoren sve dok ne klikneš na gornju poveznicu
+          i ne postaviš lozinku.
+        someone_invited_you: Netko te je pozvao na %{url}, možeš prihvatiti poziv
+          klikom na niže navedenu poveznicu.
+        subject: Upute pozivnice
     messages:
       already_confirmed: je već potvrđen, molimo probaj se prijaviti
       confirmation_period_expired: mora biti potvrđen unutar %{period}, molimo zatraži
@@ -65,25 +87,3 @@ hr:
       expired: istekao je, molimo zatraži novi
       not_found: nije pronađeno
       not_locked: nije zaključan
-    invitations:
-      send_instructions: E-mail pozivnica je poslana na %{email}.
-      invitation_token_invalid: Token pozivnice nije valjan!
-      updated: Tvoja lozinka je uspješno postavljena. Sada si prijavljen.
-      no_invitations_remaining: Nema više preostalih pozivnica
-      invitation_removed: Tvoja pozivnica je uklonjena.
-      new:
-        header: Pošalji pozivnicu
-        submit_button: Pošalji pozivnicu
-      edit:
-        header: Postavi lozinku
-        submit_button: Postavi moju lozinku
-    mailer:
-      invitation_instructions:
-        subject: Upute pozivnice
-        hello: Pozdrav %{email}
-        someone_invited_you: Netko te je pozvao na %{url}, možeš prihvatiti poziv
-          klikom na niže navedenu poveznicu.
-        accept: Prihvati pozivnicu
-        ignore: Ako ne želiš prihvatiti pozivnicu, molimo ignoriraj ovaj e-mail.<br
-          />Tvoj korisnički račun neće biti stvoren sve dok ne klikneš na gornju poveznicu
-          i ne postaviš lozinku.

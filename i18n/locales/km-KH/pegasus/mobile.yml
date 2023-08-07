@@ -932,6 +932,7 @@
   pre-express-2018_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០១៨)
   pre-express-2019_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០១៩)
   pre-express-2020_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០២០)
+  express-2022_name: វគ្គសិក្សារហ័ស (2022)
   csd2_name: 'មេរៀនទី២៖ ការអភិវឌ្ឍគេហទំព័រ'
   csd3_name: 'មេរៀនទី៣៖ ស្វែងយល់អំពីចលនានិងល្បែង'
   pre-express_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
@@ -1498,7 +1499,7 @@
   hoc2018_mc_download_adventurer: "ទាញយក Minecraft Adventurer ដែលជាប្រភេទមិនត្រូវការអ៊ីនធើណែត។"
   hoc2018_mc_educators: "សម្រាប់អ្នកបង្រៀន"
   hoc2018_mc_educators_box1_title: "សរសេរកូដជាមួយ Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition ផ្តល់នូវកម្មវិធីសិក្សាស្របតាមក្រមស្តង់ដារការបណ្តុះបណ្តាល និងការសរសេរកូដជាមួយ Minecraft។'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Education Edition ផ្តល់នូវកម្មវិធីសិក្សាស្របតាមក្រមស្តង់ដារការបណ្តុះបណ្តាល និងការសរសេរកូដជាមួយ Minecraft។"
   hoc2018_mc_educators_box1_button: "ចាប់ផ្ដើម"
   hoc2018_mc_educators_box2_title: "ទាញយកមគ្គុទេសក៍អ្នកសម្របសម្រួល"
   hoc2018_mc_educators_box2_desc: "ប្រអប់ឧបករណ៍នេះនឹងជួយអ្នកឲ្យធ្វើជាបង្កើត Hour of Code និងចូលរួមជាមួយសិស្សអ្នកក្នុងផ្នែកវិទ្យាសាស្ត្រកុំព្យូទ័រ។"
@@ -1595,7 +1596,7 @@
   hoc2018_mc_with_microsoft: "ជាដៃគូសហការជាមួយ"
   hoc2018_mc_thank_microsoft: "យើងសូមថ្លែងអំណរគុណដល់ក្រុមហ៊ុន Microsoft ដែលគាំទ្រទស្សនវិស័យ និងបេសកកម្មរបស់យើង ដើម្បីធានាថាកុមារគ្រប់រូបមានឱកាសរៀនវិទ្យាសាស្ត្រកុំព្យូទ័រ និងជំនាញនេះ ដើម្បីទទួលបានជោគជ័យនៅសតវត្សរ៍ទី ២១ ។"
   hoc2019_mc_mee_title: "ប្រើប្រាស់ភាពវៃឆ្លាតសិប្បនិម្មិតរបស់ Minecraft ក្នុងគោលបំណងល្អ"
-  hoc2019_mc_mee_description1: 'មេរៀនថ្មី Minecraft Hour of Code ឥឡូវនេះ មាននៅក្នុង Minecraft: Education Edition សម្រាប់ Windows, Mac និង iPad។ សិក្សាមូលដ្ឋានគ្រឹះនៃការសរសេរកូដ និងស្វែងយល់អំពីAI ជាមួយសិស្សអ្នក!'
+  hoc2019_mc_mee_description1: "មេរៀនថ្មី Minecraft Hour of Code ឥឡូវនេះ មាននៅក្នុង Minecraft: Education Edition សម្រាប់ Windows, Mac និង iPad។ សិក្សាមូលដ្ឋានគ្រឹះនៃការសរសេរកូដ និងស្វែងយល់អំពីAI ជាមួយសិស្សអ្នក!"
   hoc2019_mc_mee_description2: "ទាញយកបានធនធានឥតគិតថ្លៃរួមមាន ផែនការមេរៀន វីដេអូ កម្មវិធីសិក្សាវិទ្យាសាស្ត្រកុំព្យូទ័រ និងការបណ្តុះបណ្តាលគ្រូ។"
   hoc2019_mc_more_coding_resources: "ធនធានច្រើនទៀតសម្រាប់ការរៀនសរសេរកូដ"
   hoc2019_dance_previous_versions: "រកមើលកំណែមុនរបស់ Dance Party? ចុចទីនេះដើម្បីចាប់ផ្ដើម [ផ្នែកទី១]%{dance_2018_link}និង[ផ្នែកទី២]%{dance_extras_2018_link}ចាប់ពីឆ្នាំ ២០១៨។"
@@ -1608,9 +1609,9 @@
   page_not_available_description: "យើងសូមអភ័យទោស ទំព័រដែលអ្នកបានស្នើលែងមាននៅក្នុងអាសយដ្ឋាននេះទៀតហើយ។ ប្រសិនបើអ្នកនៅតែត្រូវការចូលវា សូមអ៊ីម៉ែលមកកាន់  [support@code.org]%{support_email_link}"
   page_not_available_button: "ត្រឡប់ទៅទំព័រដើម"
   hoc2020_mc_available_code_org: "អាចរកបានលើគេហទំព័រ Code.org"
-  hoc2020_mc_available_mee: 'អាចរកបាននៅក្នុង Minecraft: Education Edition'
+  hoc2020_mc_available_mee: "អាចរកបាននៅក្នុង Minecraft: Education Edition"
   hoc2020_mc_mee_title: "Minecraft Tale of Two Villages"
-  hoc2020_mc_mee_description: 'មេរៀនថ្មី Minecraft Hour of Code ឥឡូវនេះ មាននៅក្នុង Minecraft: Education Edition សម្រាប់ Windows, Mac និង iPad។ សិក្សាមូលដ្ឋានគ្រឹះនៃការសរសេរកូដ និងស្វែងយល់ពីភាពចម្រុះ និងការដាក់បញ្ចូលជាមួយសិស្សរបស់អ្នក! សូមទាញយកធនធានដោយឥតគិតថ្លៃរួមមាន ផែនការមេរៀន វីដេអូ កម្មវិធីសិក្សាវិទ្យាសាស្ត្រកុំព្យូទ័រ មេរៀនសមធម៌ និងការបណ្តុះបណ្តាលសម្រាប់គ្រូ។'
+  hoc2020_mc_mee_description: "មេរៀនថ្មី Minecraft Hour of Code ឥឡូវនេះ មាននៅក្នុង Minecraft: Education Edition សម្រាប់ Windows, Mac និង iPad។ សិក្សាមូលដ្ឋានគ្រឹះនៃការសរសេរកូដ និងស្វែងយល់ពីភាពចម្រុះ និងការដាក់បញ្ចូលជាមួយសិស្សរបស់អ្នក! សូមទាញយកធនធានដោយឥតគិតថ្លៃរួមមាន ផែនការមេរៀន វីដេអូ កម្មវិធីសិក្សាវិទ្យាសាស្ត្រកុំព្យូទ័រ មេរៀនសមធម៌ និងការបណ្តុះបណ្តាលសម្រាប់គ្រូ។"
   footer_powered_by_aws: "Amazon Web Services ដែល “Powered by AWS” គឺជាពាណិជ្ជសញ្ញារបស់ Amazon.com, Inc. ឬសាខារបស់ខ្លួន នៅសហរដ្ឋអាមេរិក និង ប្រទេសផ្សេងទៀត។"
   footer_built_on_github: "បង្កើតឡើងលើ GitHub ដោយ Microsoft"
   codebytes_skinny_banner_title: "ចូលរួមជាមួយយើងនៅថ្ងៃទី ៧-១១ ខែធ្នូសម្រាប់មេរៀនខ្លីៗរបស់ CodeBytes!"

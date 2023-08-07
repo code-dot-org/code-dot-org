@@ -1,10 +1,10 @@
 {
   "dropletBlock_createSprite_param2": "bredde",
   "dropletBlock_createSprite_param3": "højde",
-  "dropletBlock_setCollider_param0": "type",
-  "dropletBlock_setCollider_param4": "højde",
   "dropletBlock_setColliderEach_param0": "type",
   "dropletBlock_setColliderEach_param4": "højde",
+  "dropletBlock_setCollider_param0": "type",
+  "dropletBlock_setCollider_param4": "højde",
   "reinfFeedbackMsg": "Du er færdig. Klik på fortsætte til næste level.",
   "shareGame": "Del dit spil:"
 }

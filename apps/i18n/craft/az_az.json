@@ -1,9 +1,9 @@
 {
   "absolute": "modul",
+  "agentDiamondPathCongrats": "Təbriklər siz almaz yolunu tapdınız!Siz indiyə qədər {count, plural, one {1 diamond} other {# diamonds}} toplamısınız.",
   "agentGenericFailureMessage": "Kodlamağa davam edin! Kömək etmək üçün Agentdən istifadə etməyi unutmayın. ",
   "agentTooFewBlocksFailureMessage": "Agenti lazımi yerə gətirmək üçün hər dəfə yalnız bir blok əlavə etməyə çalışın. ",
   "at": "-da ",
-  "agentDiamondPathCongrats": "Təbriklər siz almaz yolunu tapdınız!Siz indiyə qədər {count, plural, one {1 diamond} other {# diamonds}} toplamısınız.",
   "blockActionAdd": "əlavə edin",
   "blockActionAttack": "hücum ",
   "blockActionClone": "klon blokları ",

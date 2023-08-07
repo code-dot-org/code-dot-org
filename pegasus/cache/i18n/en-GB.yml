@@ -1,146 +1,170 @@
 ---
 en-GB:
-  hour_of_code: The Hour of Code
-  hello: Hello World
-  'yes': 'Yes'
-  'no': 'No'
-  select_language: Please select your language
-  en: Computer Science
+  accelerated_gradelevel: Ages 10-18
+  ai_activity: Activity
+  ai_description: Description
+  all_ages: All ages
+  allcancode_gradelevel: Ages 5-10
+  anybody_can_learn: Anybody can learn.
+  artist_gradelevel: Ages 8-108
+  beginner: Beginner
+  beyond_hoc: Beyond an Hour
+  blockly_gradelevel: All ages
+  blockly_name: Blockly
+  boy: Boy
+  california_button: Learn More
+  california_heading: Ask your school to teach computer science
+  california_text: Any teacher can offer our <a href='http://studio.code.org/'>free
+    courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
+    computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
+    with us.
+  cargobot_beyond_gradelevel: Ages 8+
+  cded_try_it: Try it
+  city: city
+  codea_beyond_longdescription: Codea for iPad lets you create games and simulations
+    &mdash; or just about any visual idea you have. Turn your thoughts into interactive
+    creations that make use of iPad features like Multi-Touch and the accelerometer.
+    We think Codea is the most beautiful code editor you'll use, and it's easy. Codea
+    is designed to let you touch your code. Want to change a number? Just tap and
+    drag it. How about a colour, or an image? Tapping will bring up visual editors
+    that let you choose exactly what you want.
+  codeintl_gradelevel: Ages 4-104
+  codeorg_beyond_gradelevel: Ages 4-104
+  codeorg_gradelevel: Ages 4-104
+  codesters_gradelevel: Ages 12-14
   computer_science_edweek: Computer Science Education Week
-  csedweek_dates: December 8-14, 2014
+  condcards_gradelevel: Ages 8-12
+  congratulations: Congratulations!
+  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
+  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
+    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
+    help students learn an Hour of Code!'
+  contact_form_topic_press: Press/media (interview or speaking engagement)
+  course1_gradelevel: Ages 4-6
+  course1_name: Course 1
+  course2_name: Course 2
+  course3_gradelevel: Ages 8-18
+  course3_name: Course 3
+  course4_gradelevel: Ages 10-18
+  course4_name: Course 4
+  coursea-2017_gradelevel: Ages 4-7
+  coursea-2018_gradelevel: Ages 4-7
+  coursea-2019_gradelevel: Ages 4-7
+  coursea-2020_gradelevel: Ages 4-7
+  coursea-2021_gradelevel: Ages 4-7
+  coursea-2022_gradelevel: Ages 4-7
+  coursea_gradelevel: Ages 4-7
+  courseb-2017_gradelevel: Ages 5-8
+  courseb-2018_gradelevel: Ages 5-8
+  courseb-2019_gradelevel: Ages 5-8
+  courseb-2020_gradelevel: Ages 5-8
+  courseb-2021_gradelevel: Ages 5-8
+  courseb-2022_gradelevel: Ages 5-8
+  courseb_gradelevel: Ages 5-8
+  coursed-2017_gradelevel: Ages 7-11
+  coursed-2018_gradelevel: Ages 7-11
+  coursed-2019_gradelevel: Ages 7-11
+  coursed-2020_gradelevel: Ages 7-11
+  coursed-2021_gradelevel: Ages 7-11
+  coursed-2022_gradelevel: Ages 7-11
+  coursed_gradelevel: Ages 7-11
+  coursee-2017_gradelevel: Ages 8-12
+  coursee-2018_gradelevel: Ages 8-12
+  coursee-2019_gradelevel: Ages 8-12
+  coursee-2020_gradelevel: Ages 8-12
+  coursee-2021_gradelevel: Ages 8-12
+  coursee-2022_gradelevel: Ages 8-12
+  coursee_gradelevel: Ages 8-12
+  coursef-2017_gradelevel: Ages 9-13
+  coursef-2018_gradelevel: Ages 9-13
+  coursef-2019_gradelevel: Ages 9-13
+  coursef-2020_gradelevel: Ages 9-13
+  coursef-2021_gradelevel: Ages 9-13
+  coursef-2022_gradelevel: Ages 9-13
+  coursef_gradelevel: Ages 9-13
   csedweek_banner_hoc: 'The <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Hour of Code</a> is coming. Calling all teachers and organizers,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">plan your Hour of Code</a>'
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>'
-  n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
-  anybody_can_learn: Anybody can learn.
-  learn_now: Learn Now
-  petition_message: Every student in every school should have the opportunity to learn
-    computer science
-  petition_sign_message: 'If you agree, sign your name.  Join # others.'
-  petition_join_others: 'Join # others'
-  name: Name
-  email: Email
-  zipcode: ZIP code or country
-  submit: Submit
-  twentyhours_heading: Try our Intro to Computer Science Course
-  twentyhours_text: Finished your first Hour of Code? Learn more core computer science
-    and programming concepts in this follow-up course.
-  og_title_soon: Computer Science Education Week
-  csedweek_og_title: Computer Science Education Week
-  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
-    8 - 14, 2014<br/>
-  hoc2014_try: Try it
-  hoc2014_teachers: Teachers
-  hoc2014_host: Host it
-  hoc2014_everyone: Everyone
-  hoc2014_support: Support it &#x25BE;
-  hoc2014_whatishoc: What is the Hour of Code?
+  csedweek_dates: December 8-14, 2014
   csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
-  csedweek_map_signup: Sign up your event
-  csedweek_map_search_placeholder: Search for Hour of Code events
-  csedweek_map_search_search: Search
-  csedweek_map_search_reset: Reset
-  csedweek_map_legend_title: Legend
-  csedweek_map_legend_event: Hour of Code Event
   csedweek_map_legend_cs_tech_jam: Special Event
-  cded_try_it: Try it
-  try_now: Try now
-  california_heading: Ask your school to teach computer science
-  california_text: Any teacher can offer our <a href='http://studio.code.org/'>free
-    courses</a>.  Any elementary school can <a href='http://code.org/educate/k5'>teach
-    computer science</a>. Ask high schools to <a href='http://code.org/educate/districts'>partner
-    with us.
-  california_button: Learn More
+  csedweek_map_legend_event: Hour of Code Event
+  csedweek_map_legend_title: Legend
+  csedweek_map_search_placeholder: Search for Hour of Code events
+  csedweek_map_search_reset: Reset
+  csedweek_map_search_search: Search
+  csedweek_map_signup: Sign up your event
+  csedweek_og_title: Computer Science Education Week
+  csfirst_gradelevel: Ages 9-14
+  dashboard_action_cancel: Cancel
+  dashboard_action_delete_no: 'No'
+  dashboard_action_delete_yes: 'Yes'
+  dashboard_course1: 'Course 1:'
+  dashboard_course2: 'Course 2:'
+  dashboard_course3: 'Course 3:'
+  dashboard_login_none: Email
+  dashboard_students_add_multiple: 'Type or paste the names of your students, one
+    per line:'
+  dashboard_students_name: Name
+  email: Email
+  en: Computer Science
+  finch_beyond_gradelevel: Ages 8+
   flappy_heading: Flappy Birthday to Code.org
+  flappy_shortcode: flap
   flappy_text: Code.org just turned 1 year old.<br/><br/> Celebrate with us by making
     your own custom <b>Flappy</b> game. Code your own rules, and share it with friends!
-  view_english_site: View English site
-  non_english_tutorials: 'Tutorials translated into multiple languages:'
-  write_your_first_program: Write your first computer program
-  learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop
-    programming. This is a game-like tutorial starring video lectures by Bill Gates,
-    Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then
-    statements, and basic algorithms.
-  all_ages: All ages
-  beginner: Beginner
-  n_participants: "# participants"
-  go: Go
-  thank_you_: Thank you!
-  congratulations: Congratulations!
-  congratulations_on_completing_hoc: Congratulations on completing one Hour of Code
-  congratulations_volunteer: 'Congratulations: Now that you’ve tried the Hour of Code,
-    <a href="https://code.org/volunteer">sign up to volunteer in a classroom</a> and
-    help students learn an Hour of Code!'
-  third_party_khan_desc: |2-
-
-    Text for Translation
-    Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!
-  third_party_khan_btn_forum: Khan Academy CS Forum
-  support_url: http://support.code.org/
-  city: city
+  footer_donate: Donate
+  frozen_gradelevel: Ages 8-108
   gender: Gender
-  just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
-  learn_hoc: Learn an Hour of Code
-  beyond_hoc: Beyond an Hour
-  what_gender: What gender are you?
   girl: Girl
-  boy: Boy
-  help_recruit_coders: Help us recruit more coders to your team!
+  go: Go
+  header_educate_hoc: The Hour of Code
+  hello: Hello World
   help_recruit: Help us recruit more coders!
-  lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
-  lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
-  who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
+  help_recruit_coders: Help us recruit more coders to your team!
+  hoc2014_everyone: Everyone
+  hoc2014_heading: Join the <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_host: Host it
+  hoc2014_support: Support it &#x25BE;
+  hoc2014_teachers: Teachers
+  hoc2014_try: Try it
+  hoc2014_whatishoc: What is the Hour of Code?
+  hoc2018_creativity_create: Create
+  hoc2018_mc_homepage_try_it: Try it
+  hoc2022_landing_page_create_title: Create
   hoc_leaderboards: The Hour of Code Leaderboards
-  students_and_lines: "%{students} students have done the Hour of Code and written
-    %{lines} lines of code."
-  start_hoc: Start the Hour of Code now
-  contact_form_topic_press: Press/media (interview or speaking engagement)
-  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
-    - Nina Nichols Peery, Teacher'
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
-  studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_title_nolink: Explore Code Studio
-  studiobar_elementary_title: Elementary courses
-  studiobar_elementary_body: Our three new courses for K&#8209;5
-  studiobar_hoc_title: The Hour of Code
-  studiobar_hoc_body: Learn to code with Angry Birds
-  studiobar_flappy_body: Make and share your own Flappy game
-  studiobar_teacher_title: Made for teachers
-  studiobar_teacher_body: Introduce Code Studio in your classroom
-  studiobar_frozen_title: The Hour of Code
-  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
-  studiobar_donate_title: Donate
-  studiobar_donate_body: One child learns for each dollar you donate
-  studiobar_shop_title: Shop
-  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
-  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
-    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner"
-  homepage_hero_text_susan: |-
-    &ldquo;If you can change technology,
-    you can change the world.&rdquo;
-    Susan, CEO of YouTube
-  homepage_hero_text_fistbump: |-
-    &ldquo;Don't just play on your phone,
-    program it.&rdquo;
-    President Barack Obama
-  homepage_hero_text_sheryl: |-
-    &ldquo;Our children &mdash; including our girls &mdash;
-    need the opportunity to learn computer science.&rdquo;
-    Sheryl, COO of Facebook
-  homepage_hero_text_satya: |-
-    &ldquo;Computer science can unlock
-    the best opportunities in the world.&rdquo;
-    Satya, CEO of Microsoft
+  homepage_action_text_try_it: Try it
+  homepage_below_hero_announcement_text: We care about your privacy and are making
+    some updates to our privacy policy, effective May 25.
+  homepage_diversity_pledge: Take the diversity pledge
+  homepage_donors_donate: Donate
+  homepage_hero_hoc_is_coming: Computer Science Education Week
+  homepage_hero_hoc_is_here: Computer Science Education Week
   homepage_hero_text_bosh: |-
     &ldquo;If you code, you can pick and choose
     the course of your life.&rdquo;
     Chris Bosh
+  homepage_hero_text_fistbump: |-
+    &ldquo;Don't just play on your phone,
+    program it.&rdquo;
+    President Barack Obama
+  homepage_hero_text_malala: "&ldquo;I challenge girls in every single country\nto
+    learn one Hour of Code&rdquo; \nMalala, Nobel Peace Prize winner"
+  homepage_hero_text_satya: |-
+    &ldquo;Computer science can unlock
+    the best opportunities in the world.&rdquo;
+    Satya, CEO of Microsoft
+  homepage_hero_text_sheryl: |-
+    &ldquo;Our children &mdash; including our girls &mdash;
+    need the opportunity to learn computer science.&rdquo;
+    Sheryl, COO of Facebook
+  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
+  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
+  homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
   homepage_hero_text_student1: |-
     &ldquo;These skills have changed my future.
     Not to mention, it's just plain fun.&rdquo;
@@ -157,151 +181,127 @@ en-GB:
     with programming.&rdquo; \nMaya, 2nd grade"
   homepage_hero_text_student5: "&ldquo;Computer science isn't for someone\nelse. It's
     for you, here, now.&rdquo; \nGeraldo, teacher"
+  homepage_hero_text_susan: |-
+    &ldquo;If you can change technology,
+    you can change the world.&rdquo;
+    Susan, CEO of YouTube
   homepage_hero_text_teacher1: "&ldquo;Coding sparks creativity, inspiration and innovation
     &mdash; \nall of which are essential in any career.&rdquo;\nFloresa, teacher"
   homepage_hero_text_teacher2: |-
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
-  homepage_hero_text_stat_loc: 2.5 million girls are enrolled to learn on Code Studio
-  homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
-  homepage_hero_text_stat_served: 'The Hour of Code: #served served'
-  homepage_hero_hoc_is_coming: Computer Science Education Week
-  homepage_hero_hoc_is_here: Computer Science Education Week
-  homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Shop
-  homepage_action_text_try_it: Try it
-  homepage_diversity_pledge: Take the diversity pledge
-  homepage_slot_text_title_hoc: The Hour of Code
-  homepage_slot_text_link_hoc: Try the Hour of Code
+  homepage_slot_text_hoc: The Hour of Code
   homepage_slot_text_link_donate: Donate
-  homepage_donors_donate: Donate
-  homepage_below_hero_announcement_text: We care about your privacy and are making
-    some updates to our privacy policy, effective May 25.
-  starwars_blocks_title: Blocks
-  volunteer_engineer_submission_field_name: Name
-  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: Description
-  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
-  volunteer_engineer_submission_field_email_preference_no: 'No'
-  volunteer_engineer_submission_submit: Submit
-  volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
-  petition_age: Age
-  dashboard_action_cancel: Cancel
-  dashboard_action_delete_yes: 'Yes'
-  dashboard_action_delete_no: 'No'
-  dashboard_students_add_multiple: 'Type or paste the names of your students, one
-    per line:'
-  dashboard_students_name: Name
-  dashboard_course1: 'Course 1:'
-  dashboard_course2: 'Course 2:'
-  dashboard_course3: 'Course 3:'
-  dashboard_login_none: Email
-  learn_more: Try now
+  homepage_slot_text_link_hoc: Try the Hour of Code
+  homepage_slot_text_shop: Shop
+  homepage_slot_text_title_hoc: The Hour of Code
+  hour_of_code: The Hour of Code
+  hourofcode_longdescription: Write your first computer program
+  just_did_hoc: 'I just did the #HourOfCode - check it out! @codeorg'
+  kidsruby_beyond_gradelevel: Ages 12+
+  kodableunplugged_gradelevel: Ages 8-13
+  kodu_beyond_gradelevel: Ages 8+
+  learn_cs_concepts: Learn the basic concepts of Computer Science with drag and drop
+    programming. This is a game-like tutorial starring video lectures by Bill Gates,
+    Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, if-then
+    statements, and basic algorithms.
+  learn_hoc: Learn an Hour of Code
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Learn more</a> about the
     prizes for every educator.
-  blockly_name: Blockly
-  course1_name: Course 1
-  course2_name: Course 2
-  course3_name: Course 3
-  course4_name: Course 4
-  codeorg_gradelevel: Ages 4-104
-  codeintl_gradelevel: Ages 4-104
-  tynker_gradelevel: Ages 5-13
-  scratch_gradelevel: Ages 8+
+  learn_more: Try now
+  learn_now: Learn Now
+  lightbot_beyond_gradelevel: All ages
   lightbot_gradelevel: All ages
-  thinkersmith_gradelevel: All ages
-  condcards_gradelevel: Ages 8-12
   lightbotintl_gradelevel: All ages
-  robomind_gradelevel: Ages 8-13
-  tynkerapp_gradelevel: Ages 5-13
-  robomindnl_gradelevel: Ages 8-13
-  blockly_gradelevel: All ages
-  thinkersmith2_gradelevel: Ages 8+
-  kodableunplugged_gradelevel: Ages 8-13
-  projguts_gradelevel: Ages 10-13
-  frozen_gradelevel: Ages 8-108
-  artist_gradelevel: Ages 8-108
+  lines_of_code: OVER <b># LINES OF CODE</b> WRITTEN TO DATE.
+  lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
   monstercoding_gradelevel: Ages 5-13
-  allcancode_gradelevel: Ages 5-10
-  csfirst_gradelevel: Ages 9-14
-  codesters_gradelevel: Ages 12-14
-  texasinstruments_gradelevel: Ages 13-16
-  teacherled_gradelevel: Ages 5+
-  course1_gradelevel: Ages 4-6
-  course3_gradelevel: Ages 8-18
-  course4_gradelevel: Ages 10-18
-  coursea_gradelevel: Ages 4-7
-  courseb_gradelevel: Ages 5-8
-  coursed_gradelevel: Ages 7-11
-  coursee_gradelevel: Ages 8-12
-  coursef_gradelevel: Ages 9-13
-  coursea-2017_gradelevel: Ages 4-7
-  courseb-2017_gradelevel: Ages 5-8
-  coursed-2017_gradelevel: Ages 7-11
-  coursee-2017_gradelevel: Ages 8-12
-  coursef-2017_gradelevel: Ages 9-13
-  coursea-2018_gradelevel: Ages 4-7
-  courseb-2018_gradelevel: Ages 5-8
-  coursed-2018_gradelevel: Ages 7-11
-  coursee-2018_gradelevel: Ages 8-12
-  coursef-2018_gradelevel: Ages 9-13
-  coursea-2019_gradelevel: Ages 4-7
-  courseb-2019_gradelevel: Ages 5-8
-  coursed-2019_gradelevel: Ages 7-11
-  coursee-2019_gradelevel: Ages 8-12
-  coursef-2019_gradelevel: Ages 9-13
-  coursea-2020_gradelevel: Ages 4-7
-  courseb-2020_gradelevel: Ages 5-8
-  coursed-2020_gradelevel: Ages 7-11
-  coursee-2020_gradelevel: Ages 8-12
-  coursef-2020_gradelevel: Ages 9-13
-  coursea-2021_gradelevel: Ages 4-7
-  courseb-2021_gradelevel: Ages 5-8
-  coursed-2021_gradelevel: Ages 7-11
-  coursee-2021_gradelevel: Ages 8-12
-  coursef-2021_gradelevel: Ages 9-13
-  coursea-2022_gradelevel: Ages 4-7
-  courseb-2022_gradelevel: Ages 5-8
-  coursed-2022_gradelevel: Ages 7-11
-  coursee-2022_gradelevel: Ages 8-12
-  coursef-2022_gradelevel: Ages 9-13
-  accelerated_gradelevel: Ages 10-18
-  monsterocding_shortdescription: A colourful self-guided programming adventure for
-    children.
-  hourofcode_longdescription: Write your first computer program
   monstercoding_longdescription: The Mystery Island Coding Quest by Monster Coding
     offers a fun filled self guided adventure that teaches several key programming
     concepts to children. Each block based activity builds on the previous, introducing
     kids to Functions, Boolean Values, Loops, If/Else Statements, and Arrays, using
     colourful animated graphics, audio instructions.
-  codeorg_beyond_gradelevel: Ages 4-104
-  tynker_beyond_gradelevel: Ages 5-13
-  scratch_beyond_gradelevel: Ages 8+
-  lightbot_beyond_gradelevel: All ages
-  robomind_beyond_gradelevel: Ages 8-13
-  kodu_beyond_gradelevel: Ages 8+
-  cargobot_beyond_gradelevel: Ages 8+
-  kidsruby_beyond_gradelevel: Ages 12+
-  w3schools_beyond_gradelevel: Ages 12+
+  monsterocding_shortdescription: A colourful self-guided programming adventure for
+    children.
   mozilla_beyond_gradelevel: Ages 12+
-  finch_beyond_gradelevel: Ages 8+
+  n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
+  n_participants: "# participants"
+  name: Name
+  'no': 'No'
+  non_english_tutorials: 'Tutorials translated into multiple languages:'
+  og_title_soon: Computer Science Education Week
+  petition_age: Age
+  petition_join_others: 'Join # others'
+  petition_message: Every student in every school should have the opportunity to learn
+    computer science
+  petition_sign_message: 'If you agree, sign your name.  Join # others.'
+  projguts_gradelevel: Ages 10-13
+  robomind_beyond_gradelevel: Ages 8-13
+  robomind_gradelevel: Ages 8-13
+  robomindnl_gradelevel: Ages 8-13
+  scratch_beyond_gradelevel: Ages 8+
+  scratch_gradelevel: Ages 8+
+  select_language: Please select your language
   sphero_beyond_gradelevel: Ages 8+
-  codea_beyond_longdescription: Codea for iPad lets you create games and simulations
-    &mdash; or just about any visual idea you have. Turn your thoughts into interactive
-    creations that make use of iPad features like Multi-Touch and the accelerometer.
-    We think Codea is the most beautiful code editor you'll use, and it's easy. Codea
-    is designed to let you touch your code. Want to change a number? Just tap and
-    drag it. How about a colour, or an image? Tapping will bring up visual editors
-    that let you choose exactly what you want.
-  flappy_shortcode: flap
-  header_educate_hoc: The Hour of Code
+  start_hoc: Start the Hour of Code now
+  starwars_blocks_title: Blocks
+  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
+    - Michael Clark, Teacher'
+  stats_nina: '"Every single day yielded the same results&mdash; 100% engagement."
+    - Nina Nichols Peery, Teacher'
+  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
+    Alzate, 5th grader'
+  students_and_lines: "%{students} students have done the Hour of Code and written
+    %{lines} lines of code."
+  studiobar_donate_body: One child learns for each dollar you donate
+  studiobar_donate_title: Donate
+  studiobar_elementary_body: Our three new courses for K&#8209;5
+  studiobar_elementary_title: Elementary courses
+  studiobar_flappy_body: Make and share your own Flappy game
+  studiobar_frozen_body: Create a winter wonderland with Anna and Elsa
+  studiobar_frozen_title: The Hour of Code
+  studiobar_hoc_body: Learn to code with Angry Birds
+  studiobar_hoc_title: The Hour of Code
+  studiobar_shop_body: Break stereotypes. Wear our logo with pride.
+  studiobar_shop_title: Shop
+  studiobar_teacher_body: Introduce Code Studio in your classroom
+  studiobar_teacher_title: Made for teachers
+  studiobar_title: Explore <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_title_nolink: Explore Code Studio
+  submit: Submit
+  support_url: http://support.code.org/
+  teacherled_gradelevel: Ages 5+
+  texasinstruments_gradelevel: Ages 13-16
+  thank_you_: Thank you!
+  thinkersmith2_gradelevel: Ages 8+
+  thinkersmith_gradelevel: All ages
+  third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_khan_desc: |2-
+
+    Text for Translation
+    Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!
+  try_now: Try now
+  twentyhours_heading: Try our Intro to Computer Science Course
+  twentyhours_text: Finished your first Hour of Code? Learn more core computer science
+    and programming concepts in this follow-up course.
+  tynker_beyond_gradelevel: Ages 5-13
+  tynker_gradelevel: Ages 5-13
+  tynkerapp_gradelevel: Ages 5-13
   user_header_create: 'Create '
-  hoc2018_creativity_create: Create
-  hoc2018_mc_homepage_try_it: Try it
-  footer_donate: Donate
-  ai_activity: Activity
-  ai_description: Description
-  hoc2022_landing_page_create_title: Create
+  view_english_site: View English site
+  volunteer_engineer_submission_commitment_one_hr_per_week: 1 hour per week
+  volunteer_engineer_submission_field_description: Description
+  volunteer_engineer_submission_field_email_preference_no: 'No'
+  volunteer_engineer_submission_field_email_preference_yes: 'Yes'
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_name: Name
+  volunteer_engineer_submission_submit: Submit
+  w3schools_beyond_gradelevel: Ages 12+
+  what_gender: What gender are you?
+  who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
+  write_your_first_program: Write your first computer program
+  'yes': 'Yes'
+  zipcode: ZIP code or country

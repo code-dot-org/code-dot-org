@@ -3,55 +3,33 @@ mk:
   data:
     script:
       name:
-        cspunit4draft:
-          description_short: Податоци
+        2021drafting:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Променливи
         CSDU5-Draft:
           description_short: Податоци
-        sports:
-          name: спортови
-        hero:
-          name: херој
-        dance:
-          name: танц
+        ai-ethics-2021:
+          description_audience: 6-12 одделение (од 11-13 години)
         aquatic:
           name: водно
-        cspplayground:
-          lesson_groups:
-            csp_variables:
-              display_name: Променливи
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: Променливи
-            csf_data:
-              display_name: Податоци
-            csf_sprites:
-              display_name: Сприти
-        coursed-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        coursee-2019:
-          lesson_groups:
-            csf_sprites:
-              display_name: Сприти
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-            csf_variables:
-              display_name: Променливи
-            csf_sprites:
-              display_name: Сприти
-        coursec-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-            csf_data:
-              display_name: Податоци
-        gamelab:
-          title: Работилница за апликации
         coursea-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursea-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursea-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursea-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursea-2023:
           lesson_groups:
             csf_loops:
               display_name: Лупови
@@ -59,19 +37,169 @@ mk:
           lesson_groups:
             csf_loops:
               display_name: Лупови
-        pre-express-2019:
+        courseb-2020:
           lesson_groups:
             csf_loops:
               display_name: Лупови
-        csp4-pilot:
+        courseb-2021:
           lesson_groups:
-            csp_variables:
-              display_name: Променливи
-        time4csdemo:
+            csf_loops:
+              display_name: Лупови
+        courseb-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        courseb-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursec-2019:
+          lesson_groups:
+            csf_data:
+              display_name: Податоци
+            csf_loops:
+              display_name: Лупови
+        coursec-2020:
+          lesson_groups:
+            csf_data:
+              display_name: Податоци
+            csf_loops:
+              display_name: Лупови
+        coursec-2021:
+          lesson_groups:
+            csf_data:
+              display_name: Податоци
+            csf_loops:
+              display_name: Лупови
+        coursec-2022:
+          lesson_groups:
+            csf_data:
+              display_name: Податоци
+            csf_loops:
+              display_name: Лупови
+        coursec-2023:
+          lesson_groups:
+            csf_data:
+              display_name: Податоци
+            csf_loops:
+              display_name: Лупови
+        coursed-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursed-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursed-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursed-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursed-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        coursee-2019:
           lesson_groups:
             csf_sprites:
               display_name: Сприти
+        coursee-2020:
+          lesson_groups:
+            csf_sprites:
+              display_name: Сприти
+        coursee-2021:
+          lesson_groups:
+            csf_sprites:
+              display_name: Сприти
+        coursee-2022:
+          lesson_groups:
+            csf_sprites:
+              display_name: Сприти
+        coursee-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Сприти
+        coursef-2019:
+          lesson_groups:
+            csf_data:
+              display_name: Податоци
+            csf_sprites:
+              display_name: Сприти
+            csf_variables:
+              display_name: Променливи
+        coursef-2020:
+          lesson_groups:
+            csf_data:
+              display_name: Податоци
+            csf_sprites:
+              display_name: Сприти
+            csf_variables:
+              display_name: Променливи
+        coursef-2021:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Променливи
+            lessonGroup-9:
+              display_name: отстрани
+            ramp_up:
+              display_name: Сприти
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Променливи
+            ramp_up:
+              display_name: Сприти
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Променливи
+            ramp_up:
+              display_name: Сприти
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Сприти
+            lessonGroup-4:
+              display_name: Променливи
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Податоци
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Лупови
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Променливи
+        csf-2021-pilot:
+          lesson_groups:
+            Sprites:
+              display_name: Сприти
+            lessonGroup-3:
+              display_name: Променливи
+            variables:
+              display_name: Променливи
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сприти
+            lessonGroup-3:
+              display_name: Променливи
+        csl-vn:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
         csp1-pilot-staging:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+        csp10-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: Променливи
@@ -79,15 +207,75 @@ mk:
           lesson_groups:
             csp_variables:
               display_name: Променливи
+        csp4-2020:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+        csp4-2021:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+        csp4-2023:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+        csp4-pilot:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
               display_name: Променливи
+        csp4-preview:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Листи
+            csp_loops:
+              display_name: Лупови
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Листи
+            csp_loops:
+              display_name: Лупови
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Листи
+            csp_loops:
+              display_name: Лупови
+        csp5-2023:
+          lesson_groups:
+            csp_lists:
+              display_name: Податоци
+            csp_loops:
+              display_name: Лупови
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Листи
+            csp_loops:
+              display_name: Лупови
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Листи
             csp_loops:
+              display_name: Лупови
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Листи
+            lessonGroup-3:
               display_name: Лупови
         csp6-pilot-staging:
           lesson_groups:
@@ -101,24 +289,123 @@ mk:
           lesson_groups:
             csp_variables:
               display_name: Променливи
-        csp10-pilot-staging:
+        cspplayground:
           lesson_groups:
             csp_variables:
               display_name: Променливи
-        csp5-pilot:
+        cspunit4draft:
+          description_short: Податоци
+        dance:
+          name: танц
+        dlp21-csd:
           lesson_groups:
-            csp_lists:
-              display_name: Листи
-            csp_loops:
-              display_name: Лупови
-        csl-vn:
+            lessonGroup-2:
+              description: тест
+        express-2019:
           lesson_groups:
             csf_loops:
               display_name: Лупови
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
+            csf_sprites:
+              display_name: Сприти
+            csf_variables:
               display_name: Променливи
+        express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+            csf_sprites:
+              display_name: Сприти
+            csf_variables:
+              display_name: Променливи
+        express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+            csf_sprites:
+              display_name: Сприти
+            csf_variables:
+              display_name: Променливи
+        express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+            csf_sprites:
+              display_name: Сприти
+            csf_variables:
+              display_name: Променливи
+        express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+            csf_sprites:
+              display_name: Сприти
+            csf_variables:
+              display_name: Променливи
+        gamelab:
+          title: Работилница за апликации
+        hero:
+          name: херој
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сприти
+            lessonGroup-5:
+              display_name: Променливи
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сприти
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Лупови
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Лупови
+            lessonGroup-6:
+              display_name: Податоци
+          lessons:
+            lesson-1:
+              name: Податоци
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Лупови
+            lessonGroup-6:
+              display_name: Податоци
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Лупови
+            lessonGroup-7:
+              display_name: Податоци
+        pre-express-2019:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        pre-express-2020:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        pre-express-2021:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Лупови
+        sports:
+          name: спортови
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Лупови
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -131,255 +418,7 @@ mk:
               display_name: Лупови
             csf_sprites:
               display_name: Сприти
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: Променливи
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Листи
-            csp_loops:
-              display_name: Лупови
-        coursea-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        courseb-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        coursec-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-            csf_data:
-              display_name: Податоци
-        coursed-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        coursee-2020:
+        time4csdemo:
           lesson_groups:
             csf_sprites:
               display_name: Сприти
-        coursef-2020:
-          lesson_groups:
-            csf_variables:
-              display_name: Променливи
-            csf_data:
-              display_name: Податоци
-            csf_sprites:
-              display_name: Сприти
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-            csf_variables:
-              display_name: Променливи
-            csf_sprites:
-              display_name: Сприти
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        2021drafting:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Променливи
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Променливи
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Листи
-            csp_loops:
-              display_name: Лупови
-        coursea-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        courseb-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        coursec-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-            csf_data:
-              display_name: Податоци
-        coursed-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        coursee-2021:
-          lesson_groups:
-            csf_sprites:
-              display_name: Сприти
-        coursef-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Сприти
-            lessonGroup-8:
-              display_name: Променливи
-            lessonGroup-9:
-              display_name: отстрани
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-            csf_variables:
-              display_name: Променливи
-            csf_sprites:
-              display_name: Сприти
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        csf-2021-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Променливи
-            Sprites:
-              display_name: Сприти
-            variables:
-              display_name: Променливи
-        dlp21-csd:
-          lesson_groups:
-            lessonGroup-2:
-              description: тест
-        ai-ethics-2021:
-          description_audience: 6-12 одделение (од 11-13 години)
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Сприти
-            lessonGroup-3:
-              display_name: Променливи
-        coursea-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        express-2022:
-          lesson_groups:
-            csf_sprites:
-              display_name: Сприти
-            csf_loops:
-              display_name: Лупови
-            csf_variables:
-              display_name: Променливи
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: Променливи
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Листи
-            csp_loops:
-              display_name: Лупови
-        courseb-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        coursec-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-            csf_data:
-              display_name: Податоци
-        coursed-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        coursee-2022:
-          lesson_groups:
-            csf_sprites:
-              display_name: Сприти
-        coursef-2022:
-          lesson_groups:
-            ramp_up:
-              display_name: Сприти
-            lessonGroup-8:
-              display_name: Променливи
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        coursef-2022-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: Сприти
-            lessonGroup-8:
-              display_name: Променливи
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: Лупови
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Променливи
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Променливи
-        csp5-2023:
-          lesson_groups:
-            csp_lists:
-              display_name: Податоци
-            csp_loops:
-              display_name: Лупови
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Листи
-            lessonGroup-3:
-              display_name: Лупови
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        express-2023:
-          lesson_groups:
-            csf_sprites:
-              display_name: Сприти
-            csf_loops:
-              display_name: Лупови
-            csf_variables:
-              display_name: Променливи
-        coursea-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        courseb-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        coursec-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-            csf_data:
-              display_name: Податоци
-        coursed-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Лупови
-        coursee-2023:
-          lesson_groups:
-            csf_sprites:
-              display_name: Сприти
-        coursef-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Сприти
-            lessonGroup-4:
-              display_name: Променливи
-        csa-frq-practice-2022:
-          lessons:
-            lesson-4:
-              name: Податоци

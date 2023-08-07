@@ -159,6 +159,7 @@
           description_short: Lag en historie eller lag et spill med Gumball spill-lab!
           student_description: Lag en historie eller lag et spill med Gumball spill-lab!
         starwars:
+          title: 'Star Wars: Bygg en galakse med kode (JavaScript)'
           description: Lær å programmere droner og skap ditt eget Star Wars-spill i en galakse langt, langt borte.
           description_short: Lær å programmere droner og skap ditt eget Star Wars-spill i en galakse langt, langt borte.
           student_description: Lær å programmere droner og skap ditt eget Star Wars-spill i en galakse langt, langt borte.
@@ -2488,6 +2489,8 @@
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøkelse
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2527,5 +2530,55 @@
             lessonGroup-2:
               display_name: Digitalt statsborgerskap
             lessonGroup-4:
+              display_name: Variabler
+          description_short: Lær alle konsepter i Datavitenskap fundamenter og lag din egen kunst, historier og spill.
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-4:
+              display_name: Løkker
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-4:
+              display_name: Løkker
+          description_short: En introduksjon til datavitenskap for førskolebarn.
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-4:
+              display_name: Løkker
+            lessonGroup-6:
+              display_name: Hendelser
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-4:
+              display_name: Løkker
+            lessonGroup-5:
+              display_name: Hendelser
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-6:
+              display_name: Løkker
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Løkker i løkker
+            lessonGroup-4:
+              display_name: Funksjoner
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_short: Lær alle konsepter i Datavitenskap fundamenter og lag din egen kunst, historier og spill.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Betingelser
+            lessonGroup-5:
               display_name: Variabler
           description_short: Lær alle konsepter i Datavitenskap fundamenter og lag din egen kunst, historier og spill.

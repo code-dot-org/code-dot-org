@@ -5,11 +5,11 @@
         "CT": {
           "description": "ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ"
         },
-        "L": {
-          "description": "ភាសា"
-        },
         "F": {
           "description": "អនុ​គមន៍"
+        },
+        "L": {
+          "description": "ភាសា"
         }
       }
     }

@@ -143,34 +143,65 @@ it:
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+        cspfacilitator:
+          description: Workshop online per lo Sviluppo Professionale
+          description_short: Workshop online per lo Sviluppo Professionale
+          student_description: Workshop online per lo Sviluppo Professionale
         K5-OnlinePD:
           title: Fondamenti di Informatica - Corso per insegnanti
           description: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
           description_short: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
           student_description: 'Guida online gratuita per imparare autonomamente come insegnare l''informatica usando il corso di Code.org "Fondamenti di informatica" (titolo originale: CSF - Computer Science Fundamentals).'
+          name: K5-OnlinePD
         ECSPD2:
+          title: 'Esplorando gli Sviluppi Professionali in informatica: Sessione estiva di Blender'
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+        equityPD:
+          title: Condurre una discussione sull'Equità
+          description: Come condurre una discussione sull'equità nello Sviluppo Professionale su Code.org
+          description_short: Come condurre una discussione sull'equità nello Sviluppo Professionale su Code.org
+          student_description: Come condurre una discussione sull'equità nello Sviluppo Professionale su Code.org
         algebraPD2:
           title: Informatica nell'algebra Parte 2
+          description: Supporto dell'anno accademico
+          description_short: Supporto dell'anno accademico
+          student_description: Supporto dell'anno accademico
         sciencePD2b:
+          title: Informatica nello Sviluppo Professionale scientifico fase 2b
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+        equity-pd:
+          title: Condurre una discussione sull'Equità
+          description: Come condurre una discussione sull'equità nello Sviluppo Professionale su Code.org
+          description_short: Come condurre una discussione sull'equità nello Sviluppo Professionale su Code.org
+          student_description: Come condurre una discussione sull'equità nello Sviluppo Professionale su Code.org
+        science-PD2:
+          title: Informatica nello Sviluppo Professionale scientifico fase 2b
         sciencePD2b-iZone:
+          title: Informatica nello Sviluppo Professionale scientifico fase 2b
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
         ECSPD2-iZone:
+          title: 'Esplorando gli Sviluppi Professionali in informatica: Sessione estiva di Blender'
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
         ECSPD2-NexTech:
+          title: 'Esplorando gli Sviluppi Professionali in informatica: Sessione estiva di Blender'
           description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           description_short: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
           student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended learning)'
+        odometer:
+          title: Widget contachilometri
+          description: Usa il widget Contachilometri per controllare i contachilometri con varie basi numeriche. Binario, decimale ed esadecimale sono i sistemi numerici più comuni che puoi trovare nell'informatica.
+          description_short: Usa il widget Odometro per controllare i contachilometri con varie basi numeriche.
+          student_description: Usa il widget Contachilometri per controllare i contachilometri con varie basi numeriche. Binario, decimale ed esadecimale sono i sistemi numerici più comuni che puoi trovare nell'informatica.
         asUnplugged:
+          title: Dopo scuola scollegato
           description_audience: Da 6 a 13 anni
         afterschool1:
           description_audience: Da 7 a 13 anni
@@ -2688,10 +2719,10 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Capitolo 1 - Comprendere l'apprendimento automatico
-              description: Gli studenti imparano le basi dell'apprendimento automatico e utilizzano uno strumento chiamato Laboratorio IA per creare modelli di machine learning che possono essere utilizzati in Sviluppo App. L'unità inizia con una panoramica dell'apprendimento automatico e di come i computer possono utilizzare i modelli nei dati per prendere decisioni e previsioni. Quindi, gli studenti imparano come utilizzare Laboratorio IA per addestrare modelli a partire da dati tabulari esplorando al contempo i problemi di pregiudizio. Le lezioni seguono uno schema ripetuto «Lezione tradizionale - Laboratorio IA - Sviluppo App» in modo che gli studenti vengano costantemente esposti ai concetti e agli strumenti dell'apprendimento automatico. Il capitolo si conclude con un progetto in cui gli studenti selezionano da una serie di insiemi di dati appartenenti al mondo reale per addestrare un modello di apprendimento automatico e creare un'app.
+              description: Gli studenti imparano le basi dell'apprendimento automatico e utilizzano uno strumento chiamato Laboratorio IA per creare modelli di machine learning che possono essere utilizzati in Sviluppo App. L'unità inizia con una panoramica dell'apprendimento automatico e di come i computer possono utilizzare i modelli nei dati per prendere decisioni e previsioni. Quindi, gli studenti imparano come utilizzare Laboratorio IA per addestrare modelli a partire da dati tabulari esplorando al contempo i problemi di pregiudizio e distorsioni. Le lezioni seguono uno schema ripetuto «Lezione tradizionale - Laboratorio IA - Sviluppo App» in modo che gli studenti vengano costantemente esposti ai concetti e agli strumenti dell'apprendimento automatico. Il capitolo si conclude con un progetto in cui gli studenti selezionano da una serie di insiemi di dati appartenenti al mondo reale per addestrare un modello di apprendimento automatico e creare un'app.
               big_questions: |-
                 -   In che modo l'apprendimento automatico trova modelli nei dati per prendere decisioni?
-                -   Come possiamo evitare i pregiudizi durante l'addestramento di un modello di apprendimento automatico?
+                -   Come possiamo evitare distorsioni (bias) durante l'addestramento di un modello di apprendimento automatico?
             lessonGroup-3:
               display_name: Capitolo 2 - Progettazione di un'app di apprendimento automatico
               big_questions: "-   Come si può utilizzare l'apprendimento automatico per risolvere i problemi della nostra comunità?"
@@ -2704,8 +2735,8 @@ it:
               display_name: Capitolo 1 - Comprendere l'apprendimento automatico
               big_questions: |-
                 -   In che modo l'apprendimento automatico trova modelli nei dati per prendere decisioni?
-                -   Come possiamo evitare i pregiudizi durante l'addestramento di un modello di apprendimento automatico?
-              description: Gli studenti imparano le basi dell'apprendimento automatico e utilizzano uno strumento chiamato Laboratorio IA per creare modelli di machine learning che possono essere utilizzati in Sviluppo App. L'unità inizia con una panoramica dell'apprendimento automatico e di come i computer possono utilizzare i modelli nei dati per prendere decisioni e previsioni. Quindi, gli studenti imparano come utilizzare Laboratorio IA per addestrare modelli a partire da dati tabulari esplorando al contempo i problemi di pregiudizio. Le lezioni seguono uno schema ripetuto «Lezione tradizionale - Laboratorio IA - Sviluppo App» in modo che gli studenti vengano costantemente esposti ai concetti e agli strumenti dell'apprendimento automatico. Il capitolo si conclude con un progetto in cui gli studenti selezionano da una serie di insiemi di dati appartenenti al mondo reale per addestrare un modello di apprendimento automatico e creare un'app.
+                -   Come possiamo evitare distorsioni (bias) durante l'addestramento di un modello di apprendimento automatico?
+              description: Gli studenti imparano le basi dell'apprendimento automatico e utilizzano uno strumento chiamato Laboratorio IA per creare modelli di machine learning che possono essere utilizzati in Sviluppo App. L'unità inizia con una panoramica dell'apprendimento automatico e di come i computer possono utilizzare i modelli nei dati per prendere decisioni e previsioni. Quindi, gli studenti imparano come utilizzare Laboratorio IA per addestrare modelli a partire da dati tabulari esplorando al contempo i problemi di pregiudizio e distorsioni. Le lezioni seguono uno schema ripetuto «Lezione tradizionale - Laboratorio IA - Sviluppo App» in modo che gli studenti vengano costantemente esposti ai concetti e agli strumenti dell'apprendimento automatico. Il capitolo si conclude con un progetto in cui gli studenti selezionano da una serie di insiemi di dati appartenenti al mondo reale per addestrare un modello di apprendimento automatico e creare un'app.
             lessonGroup-3:
               display_name: Capitolo 2 - Progettazione di un'app di apprendimento automatico
               big_questions: "-   Come si può utilizzare l'apprendimento automatico per risolvere i problemi della nostra comunità?"
@@ -3343,6 +3374,7 @@ it:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
             csd1_3:
               display_name: Lezioni alternative
+          title: Risoluzione dei problemi e informatica ('22-'23)
           student_description: Risoluzione dei problemi e informatica è un'introduzione all'informatica con un'elevata componente interattiva e collaborativa e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare una serie di problemi, sfide e scenari del mondo reale. Successivamente, imparerai come i computer inseriscono, emettono, archiviano ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si conclude con un progetto in cui si progetta un'applicazione che aiuta a risolvere un problema a scelta.
         csd2-2022:
           lesson_groups:
@@ -3387,6 +3419,8 @@ it:
               display_name: Capitolo 2 - Progettazione di un'app di apprendimento automatico
             lessonGroup-4:
               display_name: Sondaggio
+          title: IA e apprendimento automatico ('22-'23)
+          description: "Questa Unità è un'introduzione pratica allo sviluppo di un modello di apprendimento automatico con dati tabulari. Gli studenti esplorano il modo in cui i computer apprendono dai dati per prendere decisioni, quindi sviluppano progetti di apprendimento automatico riguardanti dati del mondo reale. L'unità culmina nella progettazione di un'app di apprendimento automatico per risolvere un problema rilevante a livello personale.\n\n**Guida all'implementazione per l'Unità IA e apprendimento automatico**\n\n-   Completa le prime tre lezioni dell'unità Risoluzione dei problemi e informatica prima di iniziare\n-   Questa unità presuppone che gli studenti abbiano familiarità con Sviluppo App, in particolare utilizzando la modalità interfaccia per creare un'interfaccia utente e utilizzando gli eventi per cambiare le schermate quando si fa clic su un pulsante. Ciò può essere ottenuto chiedendo agli studenti di completare l'[Sviluppo App - L'ora del codice](https://studio.code.org/s/applab-intro/reset) prima di iniziare questa unità.\n-   Una guida su come supportare gli studenti negli esercizi di programmazione e differenziare le attività è disponibile nella [Guida agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) e nella [Guida alla differenziazione](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n-   È possibile visualizzare l'intera [Guida al piano di studi](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) e la [Guida all'implementazione](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) per ulteriori informazioni su questa unità\n\n**Sviluppo professionale:** se sei interessato a insegnare questo corso, ti consigliamo di completare il [Modulo di sviluppo professionale personalizzato AI/ML](https://studio.code.org/s/self-paced-pl-csd5-2021) gratuito. Il modulo è progettato per richiedere 2 ore per essere completato. Non si presume alcuna precedente esperienza con la programmazione o l'intelligenza artificiale.\n\n## Hai finito di svolgere le lezioni questa unità?\n\nRispondi a questo [\\*\\*breve sondaggio\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) per far sapere al gruppo del piano di studi di Code.org come si sono svolte le lezioni di questa unità."
         csd6-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3396,6 +3430,8 @@ it:
             lessonGroup-4:
               display_name: Sondaggio
           title: Informatica e dispositivi fisici ('22-'23)
+          description: "Nell'unità Informatica e dispositivi fisici, gli studenti esplorano il ruolo dei dispositivi fisici nell'informatica. Utilizzando Sviluppo App e Circuit Playground di Adafruit, gli studenti sviluppano programmi che utilizzano gli stessi input e output hardware che si vedono nei dispositivi intelligenti, osservando come un semplice prototipo approssimativo può portare a un prodotto finito. Quindi, gli studenti esplorano come i dispositivi fisici possono essere utilizzati per reagire al mondo che li circonda utilizzando una mentalità da «maker» per creare prototipi con materiali di uso quotidiano.\n\n**Guida all'implementazione dell'Informatica dei dispositivi fisici**\n\n-   Completa le prime tre lezioni dell'unità \"Risoluzione dei problemi e informatica\" prima di iniziare\n-   Questa unità presuppone che gli studenti abbiano familiarità con Sviluppo App, in particolare l'utilizzo della Modalità Interfaccia per creare un'interfaccia utente e l'uso di Eventi per cambiare lo schermo quando si fa clic su un pulsante. Ciò può essere ottenuto chiedendo agli studenti di completare [Sviluppo - App Ora del codice](https://studio.code.org/s/applab-intro/reset) prima di iniziare questa unità.\n-   Questa unità richiede che gli studenti abbiano accesso a Circuit Playground - [clicca qui](https://code.org/circuitplayground) per ulteriori informazioni sull'uso di Circuit Playground in classe\n-   Le linee guida su come supportare gli studenti negli esercizi di programmazione e differenziare le attività sono disponibili nella [Guida agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) e [Guida alla differenziazione](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n-   È possibile visualizzare la [Guida al piano di studi] completa[4] e [Guida all'implementazione](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) per ulteriori informazioni su questa unità\n\n## Hai finito di insegnare questa unità?\n\nRispondi a questo [\\*\\*breve sondaggio\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) per far sapere al team didattico di Code.org come si è svolta l'unità."
+          student_description: Questa unità esplora il ruolo delle piattaforme hardware nell'informatica e come diversi sensori possono fornire input e output più efficaci rispetto alla tastiera, al mouse e al monitor tradizionali. Utilizzando Sviluppo App e Circuit Playground di Adafruit, svilupperai programmi che utilizzano gli stessi input e output hardware che vedi nei dispositivi intelligenti, osservando come un semplice prototipo approssimativo può portare a un prodotto finito. L'unità si conclude con una sfida progettuale per utilizzare il Circuit Playground come base per un'innovazione di propria progettazione.
         csd-post-survey-2022:
           title: Sondaggio Post-corso di Alla Scoperta dell'Informatica
           description: Questa unità contiene il sondaggio post-corso Alla scoperta dell'informatica. Questa unità può essere assegnata dopo che gli studenti hanno completato la loro unità finale in Alla scoperta dell'informatica.
@@ -3584,6 +3620,7 @@ it:
               display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-3:
               display_name: 'Capitolo 2: costruire prototipi fisici'
+          student_description: Questa unità esplora il ruolo delle piattaforme hardware nell'informatica e come diversi sensori possono fornire input e output più efficaci rispetto alla tastiera, al mouse e al monitor tradizionali. Utilizzando Sviluppo App e Circuit Playground di Adafruit, svilupperai programmi che utilizzano gli stessi input e output hardware che vedi nei dispositivi intelligenti, osservando come un semplice prototipo approssimativo può portare a un prodotto finito. L'unità si conclude con una sfida progettuale per utilizzare il Circuit Playground come base per un'innovazione di propria progettazione.
         csc-function-machines-pilot:
           lessons:
             lesson-1:
@@ -3669,6 +3706,7 @@ it:
             lessonGroup-4:
               display_name: 'Capitolo 2: costruire prototipi fisici'
           title: Creazione di app con dispositivi (Circuit Playground)
+          student_description: Questa unità esplora il ruolo delle piattaforme hardware nell'informatica e come diversi sensori possono fornire input e output più efficaci rispetto alla tastiera, al mouse e al monitor tradizionali. Utilizzando Sviluppo App e Circuit Playground di Adafruit, svilupperai programmi che utilizzano gli stessi input e output hardware che vedi nei dispositivi intelligenti, osservando come un semplice prototipo approssimativo può portare a un prodotto finito. L'unità si conclude con una sfida progettuale per utilizzare il Circuit Playground come base per un'innovazione di propria progettazione.
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -3904,6 +3942,7 @@ it:
               display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-4:
               display_name: 'Capitolo 2: costruire prototipi fisici'
+          student_description: Questa unità esplora il ruolo delle piattaforme hardware nell'informatica e come diversi sensori possono fornire input e output più efficaci rispetto alla tastiera, al mouse e al monitor tradizionali. Utilizzando Sviluppo App e Circuit Playground di Adafruit, svilupperai programmi che utilizzano gli stessi input e output hardware che vedi nei dispositivi intelligenti, osservando come un semplice prototipo approssimativo può portare a un prodotto finito. L'unità si conclude con una sfida progettuale per utilizzare il Circuit Playground come base per un'innovazione di propria progettazione.
         focus-on-hardware1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3923,6 +3962,7 @@ it:
               display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-4:
               display_name: 'Capitolo 2: costruire prototipi fisici'
+          student_description: Questa unità esplora il ruolo delle piattaforme hardware nell'informatica e come diversi sensori possono fornire input e output più efficaci rispetto alla tastiera, al mouse e al monitor tradizionali. Utilizzando Sviluppo App e Circuit Playground di Adafruit, svilupperai programmi che utilizzano gli stessi input e output hardware che vedi nei dispositivi intelligenti, osservando come un semplice prototipo approssimativo può portare a un prodotto finito. L'unità si conclude con una sfida progettuale per utilizzare il Circuit Playground come base per un'innovazione di propria progettazione.
         focus-on-data1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3969,6 +4009,7 @@ it:
               display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-4:
               display_name: 'Capitolo 2: costruire prototipi fisici'
+          student_description: Questa unità esplora il ruolo delle piattaforme hardware nell'informatica e come diversi sensori possono fornire input e output più efficaci rispetto alla tastiera, al mouse e al monitor tradizionali. Utilizzando Sviluppo App e Circuit Playground di Adafruit, svilupperai programmi che utilizzano gli stessi input e output hardware che vedi nei dispositivi intelligenti, osservando come un semplice prototipo approssimativo può portare a un prodotto finito. L'unità si conclude con una sfida progettuale per utilizzare il Circuit Playground come base per un'innovazione di propria progettazione.
         focus-on-coding1-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3992,10 +4033,13 @@ it:
               display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-4:
               display_name: 'Capitolo 2: costruire prototipi fisici'
+          student_description: Questa unità esplora il ruolo delle piattaforme hardware nell'informatica e come diversi sensori possono fornire input e output più efficaci rispetto alla tastiera, al mouse e al monitor tradizionali. Utilizzando Sviluppo App e Circuit Playground di Adafruit, svilupperai programmi che utilizzano gli stessi input e output hardware che vedi nei dispositivi intelligenti, osservando come un semplice prototipo approssimativo può portare a un prodotto finito. L'unità si conclude con una sfida progettuale per utilizzare il Circuit Playground come base per un'innovazione di propria progettazione.
         focus-on-impact-in-society1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione all'informatica con un'elevata componente interattiva e collaborativa e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare una serie di problemi, sfide e scenari del mondo reale. Successivamente, imparerai come i computer inseriscono, emettono, archiviano ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si conclude con un progetto in cui si progetta un'applicazione che aiuta a risolvere un problema a scelta.
         focus-on-impact-in-society2-2023:
           lesson_groups:
@@ -4023,6 +4067,7 @@ it:
               display_name: 'Capitolo 1: Ingressi e uscite'
             lessonGroup-3:
               display_name: 'Capitolo 2: costruire prototipi fisici'
+          student_description: Questa unità esplora il ruolo delle piattaforme hardware nell'informatica e come diversi sensori possono fornire input e output più efficaci rispetto alla tastiera, al mouse e al monitor tradizionali. Utilizzando Sviluppo App e Circuit Playground di Adafruit, svilupperai programmi che utilizzano gli stessi input e output hardware che vedi nei dispositivi intelligenti, osservando come un semplice prototipo approssimativo può portare a un prodotto finito. L'unità si conclude con una sfida progettuale per utilizzare il Circuit Playground come base per un'innovazione di propria progettazione.
         microbit-2023:
           lesson_groups:
             lessonGroup-3:
@@ -4070,6 +4115,7 @@ it:
               display_name: 'Capitolo 2: costruire prototipi fisici'
             lessonGroup-5:
               display_name: Sondaggio
+          student_description: Questa unità esplora il ruolo delle piattaforme hardware nell'informatica e come diversi sensori possono fornire input e output più efficaci rispetto alla tastiera, al mouse e al monitor tradizionali. Utilizzando Sviluppo App e Circuit Playground di Adafruit, svilupperai programmi che utilizzano gli stessi input e output hardware che vedi nei dispositivi intelligenti, osservando come un semplice prototipo approssimativo può portare a un prodotto finito. L'unità si conclude con una sfida progettuale per utilizzare il Circuit Playground come base per un'innovazione di propria progettazione.
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -4208,3 +4254,112 @@ it:
           lesson_groups:
             lessonGroup-3:
               display_name: Classi
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cittadinanza digitale
+            lessonGroup-3:
+              display_name: Sequenze di istruzioni
+            lessonGroup-4:
+              display_name: Cicli
+            lessonGroup-5:
+              display_name: Impatti dell'informatica
+          description_audience: 'Età: da 4 a 7 anni'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Dati
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cittadinanza digitale
+            lessonGroup-3:
+              display_name: Sequenze di istruzioni
+            lessonGroup-4:
+              display_name: Cicli
+            lessonGroup-5:
+              display_name: Impatti dell'informatica
+            lessonGroup-6:
+              display_name: Dati
+          description_audience: 'Età: da 4 a 7 anni'
+          description_short: Introduzione all'informatica per bambini che non leggono ancora.
+          description: Il corso A offre un piano di studi di informatica per i bambini che hanno appena iniziato a leggere, inclusi gli alunni della scuola dell'infanzia. Gli alunni impareranno a programmare usando istruzioni come cicli ed eventi. Le lezioni presentate in questo corso insegnano anche agli alunni a collaborare in modo proficuo con gli altri, indagare su diverse tecniche di risoluzione dei problemi, perseverare di fronte a compiti impegnativi e conoscere le questioni di sicurezza legate a Internet.
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cittadinanza digitale
+            lessonGroup-3:
+              display_name: Sequenze di istruzioni
+            lessonGroup-4:
+              display_name: Cicli
+            lessonGroup-5:
+              display_name: Impatti dell'informatica
+            lessonGroup-6:
+              display_name: Eventi
+            lessonGroup-7:
+              display_name: Progetto di fine corso
+          description_audience: Da 5 a 8 anni
+          description_short: Introduzione all'informatica per alunni che devono imparare a leggere. Simile al Corso A, ma con maggior approfondimento dei concetti.
+          description: Il Corso B è stato sviluppato pensando ad alunni della 1° classe della scuola primaria. Il Corso B è sostanzialmente allineato con il Corso A, ma offre lezioni tradizionali più complesse e una maggiore varietà di esercizi. Gli alunni imparano le basi della programmazione, tecniche di collaborazione, indagine e pensiero critico, perseveranza di fronte alle difficoltà e le basi della sicurezza su Internet. Alla fine del corso gli alunni possono condividere con un link il proprio gioco personalizzato creato nell'ambiente del Laboratorio.
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cittadinanza digitale
+            lessonGroup-3:
+              display_name: Sequenze di istruzioni
+            lessonGroup-4:
+              display_name: Cicli
+            lessonGroup-5:
+              display_name: Eventi
+            lessonGroup-6:
+              display_name: Dati
+          description: Abbiamo realizzato il Corso C per gli alunni della seconda primaria. Gli alunni creano programmi con sequenze di istruzioni, cicli ed eventi. Indagano tecniche di risoluzione dei problemi e sviluppano strategie per collaborare positivamente sia online che offline. Entro la fine del corso, gli alunni creano giochi interattivi da condividere con amici e conoscenti.
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cittadinanza digitale
+            lessonGroup-3:
+              display_name: Sequenze di istruzioni
+            lessonGroup-4:
+              display_name: Impatti dell'informatica
+            lessonGroup-6:
+              display_name: Cicli
+            lessonGroup-7:
+              display_name: Dati
+            lessonGroup-8:
+              display_name: Progetto di fine corso
+          description_audience: Da 7 a 11 anni
+          description: Abbiamo creato il corso D per gli alunni della terza primaria. Il corso inizia con una rassegna dei concetti trovati nei corsi precedenti, inclusi cicli ed eventi. In seguito, gli alunni sviluppano la loro comprensione di algoritmi, cicli annidati, cicli, istruzioni condizionali e altro ancora.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Cicli annidati
+            lessonGroup-4:
+              display_name: Funzioni
+            lessonGroup-5:
+              display_name: Dati e simulazioni
+            lessonGroup-6:
+              display_name: Progetto di fine corso
+          description_audience: Da 8 a 12 anni
+          description: Abbiamo creato il Corso E per gli alunni della quarta primaria. Il corso inizia con un'introduzione allo ambiente di programmazione denominato Laboratorio dei personaggi. Gli alunni imparano a realizzare divertenti progetti interattivi che consolidano ciò che hanno imparato sulla sicurezza online. Dopo queste lezioni, gli alunni si impegnano in una programmazione più complessa. Gli alunni imparano i cicli annidati, le funzioni e le istruzioni condizionali. Entro la fine del corso, gli alunni uniscono questi concetti per risolvere esercizi impegnativi. Il corso si conclude con un progetto senza limiti di tempo in cui gli alunni creano un gioco o un disegno.
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Personaggi
+          description_audience: Da 9 a 13 anni
+          description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Personaggi
+            lessonGroup-3:
+              display_name: Istruzioni condizionali
+            lessonGroup-4:
+              display_name: Dati e simulazioni
+            lessonGroup-5:
+              display_name: Variabili
+            lessonGroup-6:
+              display_name: Impatti dell'informatica
+            lessonGroup-7:
+              display_name: Progetto di fine corso
+          description_audience: Da 9 a 13 anni
+          description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.

@@ -164,7 +164,9 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
 
       // query selector for uncategorized toolbox contents
       document
-        .querySelectorAll('.blocklyFlyout .blocklyWorkspace')
+        .querySelectorAll(
+          '.blocklyFlyout:not(.blockFieldFlyout) .blocklyWorkspace'
+        )
         .forEach(x => {
           x.style.visibility = toolboxVisibility;
         });

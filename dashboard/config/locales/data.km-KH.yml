@@ -1,41 +1,36 @@
 ---
 km:
   data:
-    game:
-      name:
-        Unplug1: សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
-        Unplug2: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
-        Artist: វិចិត្រករ
-        Unplug5: អនុគមន៍
-        Farmer: កសិករ
-        Unplug6: លក្ខខណ្ឌ
-        Unplug10: អ៊ីនធឺណិត
-        Bounce: បាល់​លោត
-        Flappy: Flappy Bird
-        Webapp: មន្ទីរពិសោធន៍កម្មវិធី​
-        ArtistEC: វិចិត្រករ
-        Applab: មន្ទីរពិសោធន៍កម្មវិធី​
-        Custom: សិល្បករ
-        Gamelab: មន្ទីរពិសោធន៍ហ្គេម
-        Spritelab: មន្ទីរពិសោធន៍ Sprite
-    trophy:
-      name:
-        Bronze: សំរឹទ្ធ
-        Silver: ប្រាក់
-        Gold: មាស
+    callout:
+      text:
+        craft_run_button_callout: ចុច "ដំណើរការ" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!
+        run: ចុច "ដំណើរការ" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!
     concept:
       description:
         function: អនុ​គមន៍
+    game:
+      name:
+        Applab: មន្ទីរពិសោធន៍កម្មវិធី​
+        Artist: វិចិត្រករ
+        ArtistEC: វិចិត្រករ
+        Bounce: បាល់​លោត
+        Custom: សិល្បករ
+        Farmer: កសិករ
+        Flappy: Flappy Bird
+        Gamelab: មន្ទីរពិសោធន៍ហ្គេម
+        Spritelab: មន្ទីរពិសោធន៍ Sprite
+        Unplug1: សេចក្ដី​ណែនាំ​អំពី​វិទ្យាសាស្ត្រ​កុំព្យូទ័រ
+        Unplug10: អ៊ីនធឺណិត
+        Unplug2: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
+        Unplug5: អនុគមន៍
+        Unplug6: លក្ខខណ្ឌ
+        Webapp: មន្ទីរពិសោធន៍កម្មវិធី​
     level:
       instructions:
-        maze_2_13: "Use the `if` block to help me decide\nwhen to turn. \\\r\n"
-        maze_2_14: នេះ​ដូច​ទៅ​នឹង​ល្បែង​ប្រាជ្ញា​មុន​ដែរ ប៉ុន្តែ​អ្នក​ត្រូវ​ចងចាំ​អំពី​របៀប​ដែល​អ្នក​ប្រើ​ប្លុក
-          "បើ" និង​ប្លុក "ធ្វើ​ឡើង​វិញ" ជាមួយ​គ្នា។
-        maze_2_17: "The `if/else` block checks a condition,\nand then does one thing
-          OR another. \\\r\n\\\r\nUse this new block to get me to\nthe sunflower."
-        maze_2_18: "One more practice puzzle with the `if/else`\nblock!\\\r\n\\\r\nTrace
-          it with your finger to see if you can figure it out on\nyour first try."
         jigsaw_1: ចុចលើប្លុក
+        jigsaw_10: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
+        jigsaw_11: ដាក់ប្លុកទាំងនេះ តាមលំដាប់លំដោយលេខរៀង
+        jigsaw_12: ដាក់ប្លុកទាំងនេះ តាមលំដាប់លំដោយលេខរៀង
         jigsaw_2: អូសប្លុកទៅរកគោលដៅ
         jigsaw_3: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
         jigsaw_4: ចូលអ្នកផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
@@ -44,18 +39,22 @@ km:
         jigsaw_7: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
         jigsaw_8: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
         jigsaw_9: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
-        jigsaw_10: ចូលផ្គុំប្លុក ដើម្បីបង្កើតរូបភាព
-        jigsaw_11: ដាក់ប្លុកទាំងនេះ តាមលំដាប់លំដោយលេខរៀង
-        jigsaw_12: ដាក់ប្លុកទាំងនេះ តាមលំដាប់លំដោយលេខរៀង
+        maze_2_13: "Use the `if` block to help me decide\nwhen to turn. \\\r\n"
+        maze_2_14: នេះ​ដូច​ទៅ​នឹង​ល្បែង​ប្រាជ្ញា​មុន​ដែរ ប៉ុន្តែ​អ្នក​ត្រូវ​ចងចាំ​អំពី​របៀប​ដែល​អ្នក​ប្រើ​ប្លុក
+          "បើ" និង​ប្លុក "ធ្វើ​ឡើង​វិញ" ជាមួយ​គ្នា។
+        maze_2_17: "The `if/else` block checks a condition,\nand then does one thing
+          OR another. \\\r\n\\\r\nUse this new block to get me to\nthe sunflower."
+        maze_2_18: "One more practice puzzle with the `if/else`\nblock!\\\r\n\\\r\nTrace
+          it with your finger to see if you can figure it out on\nyour first try."
+        studio_c2_10: "Add blocks to the `when run` event\nto change the background
+          and the speed of Waddles.\\\r\n\\\r\nPlay the game and\nmove Waddles with
+          the arrows until you score."
         studio_c2_8: "Can you have Waddles (actor 1) say\n\"Ouch!\" and play a \"hit\"
           sound if he runs into Chomp? \\\r\n\\\r\nWhen you're\ndone, play the game
           to make that happen."
         studio_c2_9: "Can you add a block to score a point\nwhen Waddles runs into
           Octavia (actor 3)? \\\r\nPlay the game and move Waddles\nwith the arrows
           until you score!"
-        studio_c2_10: "Add blocks to the `when run` event\nto change the background
-          and the speed of Waddles.\\\r\n\\\r\nPlay the game and\nmove Waddles with
-          the arrows until you score."
         studio_c3_game_4: "Can you have Waddles (actor 1) say\n\"Ouch!\" and play
           a \"hit\" sound if he runs into Chomp? \\\r\n\\\r\nWhen you're\ndone, play
           the game to make that happen."
@@ -65,61 +64,80 @@ km:
         studio_c3_game_6: "Add blocks to the `when run` event\nto change the background
           and the speed of Waddles.\\\r\n\\\r\nPlay the game and\nmove Waddles with
           the arrows until you score."
+    trophy:
+      name:
+        Bronze: សំរឹទ្ធ
+        Gold: មាស
+        Silver: ប្រាក់
     video:
       name:
-        artist_intro: សិល្បះដោយប្រើកូដប្លុក
-        loop_until: ធ្វើឡើងវិញរហូតដល់ប្លុក
-        function: អនុគមន៍
-        Unplug2: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
-        Unplug5: អនុគមន៍
-        Unplug6: លក្ខខណ្ឌ
+        C1_artist_intro: ការណែនាំពីវិចិត្រករ
         C1_bigevent_unplugged: ព្រឹត្តិការណ៍ធំ
-        C1_artist_intro: សិល្បះដោយប្រើកូដប្លុក
-        C2_artist_intro: សិល្បះដោយប្រើកូដប្លុក
+        C2_artist_intro: ការណែនាំពីវិចិត្រករ
         C2_conditionals_with_cards: លក្ខខណ្ឌ
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
-        C3_artist_intro: សិល្បះដោយប្រើកូដប្លុក
+        C3_artist_intro: ការណែនាំពីវិចិត្រករ
+        C3_artist_nested_loops: បណ្ដុំប្រតិបត្តិដដែលៗ
+        C3_bee_nested_loops: បណ្ដុំប្រតិបត្តិដដែលៗ
         C3_bounce: បាល់​លោត
         C3_computational_thinking: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
-        C4_loops_zombie: ប្រតិបត្តិដដែលៗ
         C4_conditionals: លក្ខខណ្ឌ
+        C4_loops_zombie: ប្រតិបត្តិដដែលៗ
+        C4_variables_artist: អថេរ - សិល្បករ
+        CDEF_Video_SpritesInAction: កំណត់សកម្មភាពឱ្យ Sprites
+        CSF_SpriteLab_Intro_v2: សេចក្ដីណែនាំពី Sprite Lab
+        CSF_SpriteLab_SpritesInAction_CDEF: កំណត់សកម្មភាពឱ្យ Sprites
+        CSF_SpriteLab_SpritesInAction_v2: កំណត់សកម្មភាពឱ្យ Sprites
+        CSF_Spritelab_MakeSprite_v2: របៀបបង្កើត SPRITE
         CSF_a_b_artist_loops: សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)
+        CSF_bb8_loops_C-F: ការធ្វើដដែលៗជាមួយ​ BB-8
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
         CSF_collector_k1_blocks: 'មូលដ្ធានគ្រឹះ វិទ្យាសាស្រ្តកុំព្យូទ័រ : អ្នកប្រមូលកំណប់'
         CSF_collector_repeat_loops: ការប្រើប្រាស់កូដប្លុក ធ្វើឡើងវិញ​​ (loops)
         CSF_collector_text_blocks: 'មូលដ្ធានគ្រឹះ វិទ្យាសាស្រ្តកុំព្យូទ័រ : អ្នកប្រមូលកំណប់'
         CSF_debugging_k1_blocks: ការបំបាត់កំហុស (Debugging)
         CSF_debugging_text_blocks: ការបំបាត់កំហុស (Debugging)
+        CSF_harvester_skinOverview_K-1: អ្នកប្រមូលផល
+        CSF_loops_AB: ប្រតិបត្តិដដែលៗ
         CSF_maze_intro_k1_blocks: ការណែនាំអំពីកូដស្ទូឌីយោ (Code studio)
         CSF_maze_intro_text_blocks: ការណែនាំអំពីកូដស្ទូឌីយោ (Code studio)
         CSF_my_robotic_friends: មិត្តរ៉ូបូតរបស់ខ្ញុំ
+        CSF_scrat_loops_CF: រង្វិលជុំក្នុងយុគសម័យទឹកកក
+        CSF_scrat_loops_K1: ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក
+        CSF_skinOverview_Harvester: អ្នកប្រមូលផល
         CSF_stevie_big_project: Stevie and the Big Project
         CSF_unspotted_bugs: កំហុសដែលមិនបានគ្រោងទុក
-        playlab_intro: ការណែនាំអំពីការអនុវត្តលើ Play Lab
+        MC_2018_loops: 'Minecraft: ដំណើរកម្សាន្តក្នុងទឹក (ធ្វើសារឡើងវិញ)'
+        Unplug2: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
+        Unplug5: អនុគមន៍
+        Unplug6: លក្ខខណ្ឌ
+        artist_intro: ការណែនាំពីវិចិត្រករ
+        csd_debugging: ការបំបាត់កំហុស (Debugging)
+        csd_sprite_properties: លក្ខណៈសម្បត្តិនៃ sprite
+        csf21pilot_events: កំណត់សកម្មភាពឱ្យ Sprites
         csp_applab_loops: ប្រតិបត្តិដដែលៗ
+        function: អនុគមន៍
+        hoc_dance_events: ព្រឹត្ដិការណ៍ - Dance Party
+        hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - ជប់លៀងរាំ
+        hoc_dance_properties: លក្ខណៈសម្បត្តិ - Dance Party
+        hoc_dance_properties_2019: លក្ខណៈសម្បត្តិ - Dance Party
+        loop_until: ធ្វើឡើងវិញរហូតដល់ប្លុក
         mc_2016_congrats: Minecraft Hour of Code - អបអរសាទរ
         mc_2017_agent_intro: Minecraft Hour of Code - The Agent
-        mc_2017_repeat: Minecraft Hour of Code - រង្វិលជុំ
-        mc_2017_functions: Minecraft Hour of Code - មុខងារ
         mc_2017_congratulations: Minecraft Hour of Code - អបអរសាទរ
+        mc_2017_functions: Minecraft Hour of Code - មុខងារ
         mc_2017_puzzle_1: Minecraft Hour of Code - The Agent
+        mc_2017_puzzle_12: Minecraft Hour of Code - លេងដោយសេរី
         mc_2017_puzzle_3: Minecraft Hour of Code - រង្វិលជុំ
         mc_2017_puzzle_8: Minecraft Hour of Code - មុខងារ
-        mc_2017_puzzle_12: Minecraft Hour of Code - លេងដោយសេរី
-        CSF_skinOverview_Harvester: អ្នកប្រមូលផល
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: ការធ្វើដដែលៗជាមួយ​ BB-8
-        CSF_harvester_skinOverview_K-1: អ្នកប្រមូលផល
-        CSF_scrat_loops_K1: ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក
-        CSF_scrat_loops_CF: រង្វិលជុំក្នុងយុគសម័យទឹកកក
-        CSF_loops_AB: ប្រតិបត្តិដដែលៗ
-        hoc_dance_events: ព្រឹត្ដិការណ៍ - Dance Party
-        hoc_dance_properties: លក្ខណៈសម្បត្តិ - Dance Party
-        CSF_SpriteLab_Intro_v2: សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍
-        csd_debugging: ការបំបាត់កំហុស (Debugging)
-        hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - Dance Party
-        hoc_dance_properties_2019: លក្ខណៈសម្បត្តិ - Dance Party
+        mc_2017_repeat: Minecraft Hour of Code - រង្វិលជុំ
+        mc_2018_closing: 'Minecraft: សូមអបអរសាទរដំណើរកម្សាន្តក្នុងទឹក'
+        mc_2018_conditionals: 'Minecraft: លក្ខខណ្ឌនៃការធ្វើដំណើរកម្សាន្តក្នុងទឹក'
+        mc_2018_intro: 'Minecraft: ការណែនាំអំពីដំណើរកម្សាន្តក្នុងទឹក'
+        mc_intro: ការណែនាំពី Minecraft
+        mc_repeat: ការប្រើប្រាស់ ប្រតិបត្តិដដែលៗ ក្នុង Minecraft
         playlab_2021: ការណែនាំអំពីការអនុវត្តលើ Play Lab
         playlab_2021_reader: ការណែនាំអំពីការអនុវត្តលើ Play Lab
-        csd_sprite_properties: លក្ខណៈសម្បត្តិនៃ sprite
+        playlab_intro: ការណែនាំអំពីការអនុវត្តលើ Play Lab

@@ -3,48 +3,41 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "ใช่",
           "No": "ไม่ใช่",
+          "Yes": "ใช่",
           "cute": "น่ารัก"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "ใช่",
           "No": "ไม่ใช่",
+          "Yes": "ใช่",
           "cute": "น่ารัก"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "ใช่",
           "No": "ไม่ใช่",
+          "Yes": "ใช่",
           "cute": "น่ารัก"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "ใช่",
           "No": "ไม่ใช่",
+          "Yes": "ใช่",
           "cute": "น่ารัก"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "ชื่อ",
+          "City": "เมือง",
           "Color": "สี",
           "Food": "อาหาร",
-          "City": "เมือง",
+          "Name": "ชื่อ",
           "text": "ข้อความ"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "ชื่อ",
+          "City": "เมือง",
           "Color": "สี",
           "Food": "อาหาร",
-          "City": "เมือง",
+          "Name": "ชื่อ",
           "text": "ข้อความ"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -55,17 +48,17 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -76,28 +69,27 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
-          "?": "?",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -108,19 +100,19 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
           "text": "ข้อความ"
         },
         "CSD U1 processing guess_2022": {
-          "?": "?",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -131,18 +123,26 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
           "text": "ข้อความ"
         },
         "CSD U1 processing live_2021": {
-          "walking": "การเดิน",
           "bear": "หมี",
-          "rat": "หนู"
+          "rat": "หนู",
+          "walking": "การเดิน"
         },
         "CSD U1 processing live_2022": {
-          "walking": "การเดิน",
           "bear": "หมี",
-          "rat": "หนู"
+          "rat": "หนู",
+          "walking": "การเดิน"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "ถูกต้อง!",
@@ -154,13 +154,6 @@
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -171,17 +164,17 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -192,7 +185,14 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "กลับ"
@@ -201,32 +201,32 @@
           "Back": "กลับ"
         },
         "CSD U1 storage movies_2021": {
+          "No": "ไม่ใช่",
           "Star Wars": "สตาร์วอร์ส",
           "Yes": "ใช่",
-          "No": "ไม่ใช่",
           "text": "ข้อความ"
         },
         "CSD U1 storage movies_2022": {
+          "No": "ไม่ใช่",
           "Star Wars": "สตาร์วอร์ส",
           "Yes": "ใช่",
-          "No": "ไม่ใช่",
           "text": "ข้อความ"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "ล้าง",
-          "white": "สีขาว",
-          "pink": "สีชมพู",
-          "green": "สีเขียว",
           "black": "สีดำ",
-          "purple": "สีม่วง"
+          "green": "สีเขียว",
+          "pink": "สีชมพู",
+          "purple": "สีม่วง",
+          "white": "สีขาว"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "ล้าง",
-          "white": "สีขาว",
-          "pink": "สีชมพู",
-          "green": "สีเขียว",
           "black": "สีดำ",
-          "purple": "สีม่วง"
+          "green": "สีเขียว",
+          "pink": "สีชมพู",
+          "purple": "สีม่วง",
+          "white": "สีขาว"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -295,9 +295,9 @@
           "Success!": "สำเร็จ!"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "ตะวันออก",
           "North": "เหนือ",
           "South": "ใต้",
-          "East": "ตะวันออก",
           "West": "ตะวันตก"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
@@ -313,57 +313,57 @@
           "Medium": "ปานกลาง"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "ซ้าย",
-          "right": "ขวา",
-          "red": "สีแดง",
-          "yellow": "สีเหลือง",
           "green": "สีเขียว",
-          "purple": "สีม่วง"
+          "left": "ซ้าย",
+          "purple": "สีม่วง",
+          "red": "สีแดง",
+          "right": "ขวา",
+          "yellow": "สีเหลือง"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "บน",
           "fast": "เร็ว",
-          "slow": "ช้า",
-          "short": "สั้น",
+          "high": "สูง",
           "long": "ยาว",
           "low": "ต่ำ",
-          "high": "สูง"
+          "on": "บน",
+          "short": "สั้น",
+          "slow": "ช้า"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "สีแดง",
+          "Blue": "สีฟ้า",
           "Green": "สีเขียว",
-          "Blue": "สีฟ้า"
+          "Red": "สีแดง"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "ซ้าย",
           "right": "ขวา"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "สีเหลือง",
-          "green": "สีเขียว",
           "blue": "สีน้ำเงิน",
-          "orange": "ส้ม"
+          "green": "สีเขียว",
+          "orange": "ส้ม",
+          "yellow": "สีเหลือง"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "quiet": "เงียบ"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "สั้น",
-          "long": "ยาว"
+          "long": "ยาว",
+          "short": "สั้น"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "สั้น",
+          "high": "สูง",
           "long": "ยาว",
           "low": "ต่ำ",
-          "high": "สูง"
+          "short": "สั้น"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "สั้น",
-          "long": "ยาว"
+          "long": "ยาว",
+          "short": "สั้น"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "สีแดง",
-          "Blue": "สีฟ้า"
+          "Blue": "สีฟ้า",
+          "Red": "สีแดง"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -372,9 +372,9 @@
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "ชื่อ"
@@ -395,41 +395,41 @@
           "G": "ฉ"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
           "G": "ฉ",
-          "A": "ก",
-          "B": "ข",
           "Note:": "หมายเหตุ:"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "สำเร็จ!"
@@ -448,8 +448,8 @@
           "Success!": "สำเร็จ!"
         },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "คะแนน",
-          "0": "0"
+          "0": "0",
+          "Score": "คะแนน"
         },
         "CSD U6 - Physical Input - PC_2222": {
           "Success!": "สำเร็จ!"
@@ -491,15 +491,15 @@
           "Name:": "ชื่อ:"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "สีแดง",
+          "Blue": "สีฟ้า",
           "Green": "สีเขียว",
-          "Blue": "สีฟ้า"
+          "Red": "สีแดง"
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "สีฟ้า",
+          "Green": "สีเขียว",
           "Name:": "ชื่อ:",
           "Red": "สีแดง",
-          "Green": "สีเขียว",
-          "Blue": "สีฟ้า",
           "Save": "บันทึก"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
@@ -514,23 +514,23 @@
           "white": "สีขาว"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "มีความสุข",
-          "?": "?"
+          "?": "?",
+          "Happy": "มีความสุข"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "ชื่อเรื่อง"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "ผิวขาว",
-          "Red": "สีแดง",
+          "Blue": "สีฟ้า",
           "Green": "สีเขียว",
-          "Blue": "สีฟ้า"
+          "Red": "สีแดง",
+          "White": "ผิวขาว"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "ขึ้นข้างบน",
           "down": "เป็นตำแหน่ง",
           "left": "ซ้าย",
-          "right": "ขวา"
+          "right": "ขวา",
+          "up": "ขึ้นข้างบน"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "ชื่อ"
@@ -543,12 +543,24 @@
           "on": "บน"
         },
         "CSD U6 - Sensors - P_2222": {
-          "text": "ข้อความ",
           "high": "สูง",
-          "low": "ต่ำ"
+          "low": "ต่ำ",
+          "text": "ข้อความ"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "มูลค่า"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "อัพเดท",
+          "value": "มูลค่า"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
           "value": "มูลค่า"
         },
         "CSD U6 Driver pt 2": {
@@ -623,6 +635,30 @@
         "CSD U6 add LED button_2021": {
           "Success!": "สำเร็จ!"
         },
+        "CSD U6 analog change": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog data": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "มูลค่า"
+        },
         "CSD U6 analog light": {
           "Update": "อัพเดท",
           "value": "มูลค่า"
@@ -639,41 +675,53 @@
           "Update": "อัพเดท",
           "value": "มูลค่า"
         },
+        "CSD U6 analog sound": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "มูลค่า"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "มูลค่า"
+        },
         "CSD U6 array piano": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "CSD U6 array piano_2018": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "CSD U6 array piano_2019": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "CSD U6 array piano_2021": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "CSD U6 arrays select predict": {
           "first": "แรก"
@@ -688,20 +736,20 @@
           "first": "แรก"
         },
         "CSD U6 change": {
-          "short": "สั้น",
-          "long": "ยาว"
+          "long": "ยาว",
+          "short": "สั้น"
         },
         "CSD U6 change_2018": {
-          "short": "สั้น",
-          "long": "ยาว"
+          "long": "ยาว",
+          "short": "สั้น"
         },
         "CSD U6 change_2019": {
-          "short": "สั้น",
-          "long": "ยาว"
+          "long": "ยาว",
+          "short": "สั้น"
         },
         "CSD U6 change_2021": {
-          "short": "สั้น",
-          "long": "ยาว"
+          "long": "ยาว",
+          "short": "สั้น"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "ปานกลาง"
@@ -716,95 +764,95 @@
           "Medium": "ปานกลาง"
         },
         "CSD U6 emotion machine example": {
-          "Happy": "มีความสุข",
-          "?": "?"
+          "?": "?",
+          "Happy": "มีความสุข"
         },
         "CSD U6 emotion machine example_2018": {
-          "Happy": "มีความสุข",
-          "?": "?"
+          "?": "?",
+          "Happy": "มีความสุข"
         },
         "CSD U6 emotion machine example_2019": {
-          "Happy": "มีความสุข",
-          "?": "?"
+          "?": "?",
+          "Happy": "มีความสุข"
         },
         "CSD U6 emotion machine example_2021": {
-          "Happy": "มีความสุข",
-          "?": "?"
+          "?": "?",
+          "Happy": "มีความสุข"
         },
         "CSD U6 frequency": {
-          "short": "สั้น",
+          "high": "สูง",
           "long": "ยาว",
           "low": "ต่ำ",
-          "high": "สูง"
+          "short": "สั้น"
         },
         "CSD U6 frequency_2018": {
-          "short": "สั้น",
+          "high": "สูง",
           "long": "ยาว",
           "low": "ต่ำ",
-          "high": "สูง"
+          "short": "สั้น"
         },
         "CSD U6 frequency_2019": {
-          "short": "สั้น",
+          "high": "สูง",
           "long": "ยาว",
           "low": "ต่ำ",
-          "high": "สูง"
+          "short": "สั้น"
         },
         "CSD U6 frequency_2021": {
-          "short": "สั้น",
+          "high": "สูง",
           "long": "ยาว",
           "low": "ต่ำ",
-          "high": "สูง"
+          "short": "สั้น"
         },
         "CSD U6 get toggle": {
-          "short": "สั้น",
+          "high": "สูง",
           "long": "ยาว",
           "low": "ต่ำ",
-          "high": "สูง"
+          "short": "สั้น"
         },
         "CSD U6 get toggle_2018": {
-          "short": "สั้น",
+          "high": "สูง",
           "long": "ยาว",
           "low": "ต่ำ",
-          "high": "สูง"
+          "short": "สั้น"
         },
         "CSD U6 get toggle_2019": {
-          "short": "สั้น",
+          "high": "สูง",
           "long": "ยาว",
           "low": "ต่ำ",
-          "high": "สูง"
+          "short": "สั้น"
         },
         "CSD U6 get toggle_2021": {
-          "short": "สั้น",
+          "high": "สูง",
           "long": "ยาว",
           "low": "ต่ำ",
-          "high": "สูง"
+          "short": "สั้น"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "สีฟ้า",
+          "Green": "สีเขียว",
           "Name:": "ชื่อ:",
           "Red": "สีแดง",
-          "Green": "สีเขียว",
-          "Blue": "สีฟ้า",
           "Save": "บันทึก"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "สีฟ้า",
+          "Green": "สีเขียว",
           "Name:": "ชื่อ:",
           "Red": "สีแดง",
-          "Green": "สีเขียว",
-          "Blue": "สีฟ้า",
           "Save": "บันทึก"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "สีฟ้า",
+          "Green": "สีเขียว",
           "Name:": "ชื่อ:",
           "Red": "สีแดง",
-          "Green": "สีเขียว",
-          "Blue": "สีฟ้า",
           "Save": "บันทึก"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "สีฟ้า",
+          "Green": "สีเขียว",
           "Name:": "ชื่อ:",
           "Red": "สีแดง",
-          "Green": "สีเขียว",
-          "Blue": "สีฟ้า",
           "Save": "บันทึก"
         },
         "CSD U6 getProperty input": {
@@ -820,84 +868,84 @@
           "Submit": "ส่ง"
         },
         "CSD U6 getters debug": {
-          "slow": "ช้า",
           "fast": "เร็ว",
-          "short": "สั้น",
+          "high": "สูง",
           "long": "ยาว",
           "low": "ต่ำ",
-          "high": "สูง"
+          "short": "สั้น",
+          "slow": "ช้า"
         },
         "CSD U6 getters debug_2018": {
           "fast": "เร็ว",
-          "slow": "ช้า",
-          "short": "สั้น",
+          "high": "สูง",
           "long": "ยาว",
           "low": "ต่ำ",
-          "high": "สูง"
+          "short": "สั้น",
+          "slow": "ช้า"
         },
         "CSD U6 getters debug_2019": {
           "fast": "เร็ว",
-          "slow": "ช้า",
-          "short": "สั้น",
+          "high": "สูง",
           "long": "ยาว",
           "low": "ต่ำ",
-          "high": "สูง"
+          "short": "สั้น",
+          "slow": "ช้า"
         },
         "CSD U6 getters debug_2021": {
           "fast": "เร็ว",
-          "slow": "ช้า",
-          "short": "สั้น",
+          "high": "สูง",
           "long": "ยาว",
           "low": "ต่ำ",
-          "high": "สูง"
+          "short": "สั้น",
+          "slow": "ช้า"
         },
         "CSD U6 interval": {
-          "short": "สั้น",
-          "long": "ยาว"
+          "long": "ยาว",
+          "short": "สั้น"
         },
         "CSD U6 interval_2018": {
-          "short": "สั้น",
-          "long": "ยาว"
+          "long": "ยาว",
+          "short": "สั้น"
         },
         "CSD U6 interval_2019": {
-          "short": "สั้น",
-          "long": "ยาว"
+          "long": "ยาว",
+          "short": "สั้น"
         },
         "CSD U6 interval_2021": {
-          "short": "สั้น",
-          "long": "ยาว"
+          "long": "ยาว",
+          "short": "สั้น"
         },
         "CSD U6 light show": {
-          "on": "บน",
-          "off": "ปิด"
+          "off": "ปิด",
+          "on": "บน"
         },
         "CSD U6 light show_2018": {
-          "on": "บน",
-          "off": "ปิด"
+          "off": "ปิด",
+          "on": "บน"
         },
         "CSD U6 light show_2019": {
-          "on": "บน",
-          "off": "ปิด"
+          "off": "ปิด",
+          "on": "บน"
         },
         "CSD U6 light show_2021": {
-          "on": "บน",
-          "off": "ปิด"
+          "off": "ปิด",
+          "on": "บน"
         },
         "CSD U6 params create colors": {
-          "Red": "สีแดง",
-          "Blue": "สีฟ้า"
+          "Blue": "สีฟ้า",
+          "Red": "สีแดง"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "สีแดง",
-          "Blue": "สีฟ้า"
+          "Blue": "สีฟ้า",
+          "Red": "สีแดง"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "สีแดง",
-          "Blue": "สีฟ้า"
+          "Blue": "สีฟ้า",
+          "Red": "สีแดง"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "สีแดง",
-          "Blue": "สีฟ้า"
+          "Blue": "สีฟ้า",
+          "Red": "สีแดง"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -924,24 +972,24 @@
           "Success!": "สำเร็จ!"
         },
         "CSD U6 sensor experiment embedded": {
-          "text": "ข้อความ",
           "high": "สูง",
-          "low": "ต่ำ"
+          "low": "ต่ำ",
+          "text": "ข้อความ"
         },
         "CSD U6 sensor experiment embedded_2018": {
-          "text": "ข้อความ",
           "high": "สูง",
-          "low": "ต่ำ"
+          "low": "ต่ำ",
+          "text": "ข้อความ"
         },
         "CSD U6 sensor experiment embedded_2019": {
-          "text": "ข้อความ",
           "high": "สูง",
-          "low": "ต่ำ"
+          "low": "ต่ำ",
+          "text": "ข้อความ"
         },
         "CSD U6 sensor experiment embedded_2021": {
-          "text": "ข้อความ",
           "high": "สูง",
-          "low": "ต่ำ"
+          "low": "ต่ำ",
+          "text": "ข้อความ"
         },
         "CSD U6 setProperty predict app": {
           "title": "ชื่อเรื่อง"
@@ -956,20 +1004,20 @@
           "title": "ชื่อเรื่อง"
         },
         "CSD U6 slider intro": {
-          "short": "สั้น",
-          "long": "ยาว"
+          "long": "ยาว",
+          "short": "สั้น"
         },
         "CSD U6 slider intro_2018": {
-          "short": "สั้น",
-          "long": "ยาว"
+          "long": "ยาว",
+          "short": "สั้น"
         },
         "CSD U6 slider intro_2019": {
-          "short": "สั้น",
-          "long": "ยาว"
+          "long": "ยาว",
+          "short": "สั้น"
         },
         "CSD U6 slider intro_2021": {
-          "short": "สั้น",
-          "long": "ยาว"
+          "long": "ยาว",
+          "short": "สั้น"
         },
         "CSD U6 test LED": {
           "Success!": "สำเร็จ!"
@@ -984,74 +1032,74 @@
           "Success!": "สำเร็จ!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "สีแดง",
+          "Blue": "สีฟ้า",
           "Green": "สีเขียว",
-          "Blue": "สีฟ้า"
+          "Red": "สีแดง"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "สีแดง",
+          "Blue": "สีฟ้า",
           "Green": "สีเขียว",
-          "Blue": "สีฟ้า"
+          "Red": "สีแดง"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "เกี่ยวกับ",
           "About Us": "เกี่ยวกับเรา",
-          "User": "ผู้ใช้",
-          "Cancel": "ยกเลิก",
-          "Name:": "ชื่อ:",
-          "Red": "สีแดง",
-          "Green": "สีเขียว",
           "Blue": "สีฟ้า",
-          "Yes": "ใช่",
+          "Cancel": "ยกเลิก",
+          "Green": "สีเขียว",
+          "Name:": "ชื่อ:",
           "No": "ไม่ใช่",
-          "Save": "บันทึก"
+          "Red": "สีแดง",
+          "Save": "บันทึก",
+          "User": "ผู้ใช้",
+          "Yes": "ใช่"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "เกี่ยวกับ",
           "About Us": "เกี่ยวกับเรา",
-          "User": "ผู้ใช้",
-          "Cancel": "ยกเลิก",
-          "Name:": "ชื่อ:",
-          "Red": "สีแดง",
-          "Green": "สีเขียว",
           "Blue": "สีฟ้า",
-          "Yes": "ใช่",
+          "Cancel": "ยกเลิก",
+          "Green": "สีเขียว",
+          "Name:": "ชื่อ:",
           "No": "ไม่ใช่",
-          "Save": "บันทึก"
+          "Red": "สีแดง",
+          "Save": "บันทึก",
+          "User": "ผู้ใช้",
+          "Yes": "ใช่"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "เกี่ยวกับ",
           "About Us": "เกี่ยวกับเรา",
-          "User": "ผู้ใช้",
-          "Cancel": "ยกเลิก",
-          "Name:": "ชื่อ:",
-          "Red": "สีแดง",
-          "Green": "สีเขียว",
           "Blue": "สีฟ้า",
-          "Yes": "ใช่",
+          "Cancel": "ยกเลิก",
+          "Green": "สีเขียว",
+          "Name:": "ชื่อ:",
           "No": "ไม่ใช่",
-          "Save": "บันทึก"
+          "Red": "สีแดง",
+          "Save": "บันทึก",
+          "User": "ผู้ใช้",
+          "Yes": "ใช่"
         },
         "CSDU4 Decision App Demo": {
           "About": "เกี่ยวกับ",
-          "Why?": "ทำไม?",
+          "About Us": "เกี่ยวกับเรา",
           "I don't know": "ฉันไม่รู้",
           "When?": "เมื่อไหร่นะ?",
-          "About Us": "เกี่ยวกับเรา"
+          "Why?": "ทำไม?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "เกี่ยวกับ",
-          "Why?": "ทำไม?",
+          "About Us": "เกี่ยวกับเรา",
           "I don't know": "ฉันไม่รู้",
           "When?": "เมื่อไหร่นะ?",
-          "About Us": "เกี่ยวกับเรา"
+          "Why?": "ทำไม?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "เกี่ยวกับ",
-          "Why?": "ทำไม?",
+          "About Us": "เกี่ยวกับเรา",
           "I don't know": "ฉันไม่รู้",
           "When?": "เมื่อไหร่นะ?",
-          "About Us": "เกี่ยวกับเรา"
+          "Why?": "ทำไม?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "ซ่อน",
@@ -1060,44 +1108,44 @@
         "CSDU4 List App Demo": {
           "About": "เกี่ยวกับ",
           "About Us": "เกี่ยวกับเรา",
-          "Done": "เรียบร้อย",
-          "Cancel": "ยกเลิก"
+          "Cancel": "ยกเลิก",
+          "Done": "เรียบร้อย"
         },
         "CSDU4 List App Demo_2018": {
           "About": "เกี่ยวกับ",
           "About Us": "เกี่ยวกับเรา",
-          "Done": "เรียบร้อย",
-          "Cancel": "ยกเลิก"
+          "Cancel": "ยกเลิก",
+          "Done": "เรียบร้อย"
         },
         "CSDU4 List App Demo_2019": {
           "About": "เกี่ยวกับ",
           "About Us": "เกี่ยวกับเรา",
-          "Done": "เรียบร้อย",
-          "Cancel": "ยกเลิก"
+          "Cancel": "ยกเลิก",
+          "Done": "เรียบร้อย"
         },
         "CSDU4 Quiz App Demo": {
           "About": "เกี่ยวกับ",
-          "Submit": "ส่ง",
-          "Why?": "ทำไม?",
-          "When?": "เมื่อไหร่นะ?",
           "About Us": "เกี่ยวกับเรา",
-          "Correct!": "ถูกต้อง!"
+          "Correct!": "ถูกต้อง!",
+          "Submit": "ส่ง",
+          "When?": "เมื่อไหร่นะ?",
+          "Why?": "ทำไม?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "เกี่ยวกับ",
-          "Submit": "ส่ง",
-          "Why?": "ทำไม?",
-          "When?": "เมื่อไหร่นะ?",
           "About Us": "เกี่ยวกับเรา",
-          "Correct!": "ถูกต้อง!"
+          "Correct!": "ถูกต้อง!",
+          "Submit": "ส่ง",
+          "When?": "เมื่อไหร่นะ?",
+          "Why?": "ทำไม?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "เกี่ยวกับ",
-          "Submit": "ส่ง",
-          "Why?": "ทำไม?",
-          "When?": "เมื่อไหร่นะ?",
           "About Us": "เกี่ยวกับเรา",
-          "Correct!": "ถูกต้อง!"
+          "Correct!": "ถูกต้อง!",
+          "Submit": "ส่ง",
+          "When?": "เมื่อไหร่นะ?",
+          "Why?": "ทำไม?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1122,76 +1170,76 @@
           "Success!": "สำเร็จ!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "CSDU6 piano with notes": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "ก",
+          "B": "ข",
           "C": "ค",
           "D": "ง",
           "E": "E",
           "F": "จ",
-          "G": "ฉ",
-          "A": "ก",
-          "B": "ข"
+          "G": "ฉ"
         },
         "allthethings design mode elements": {
           "text": "ข้อความ"
@@ -1237,13 +1285,6 @@
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1254,17 +1295,17 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1275,7 +1316,14 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Correct!": "ถูกต้อง!",
@@ -1287,13 +1335,6 @@
         },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1304,17 +1345,17 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1325,13 +1366,28 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "ถัดไป"
         },
         "csd-explore ui-6_2022": {
           "Next": "ถัดไป"
+        },
+        "ml-L2 supervised - green glass door-2021": {
+          "Accepted": "ได้รับการยอมรับ",
+          "Rejected": "ถูกปฏิเสธ"
+        },
+        "ml-L2 supervised - green glass door_2022": {
+          "Accepted": "ได้รับการยอมรับ",
+          "Rejected": "ถูกปฏิเสธ"
         },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "ถัดไป"
@@ -1340,12 +1396,12 @@
           "Next": "ถัดไป"
         },
         "ml-customize-raspado-2021": {
-          "yes": "ใช่",
-          "no": "ไม่ใช่"
+          "no": "ไม่ใช่",
+          "yes": "ใช่"
         },
         "ml-customize-raspado_2022": {
-          "yes": "ใช่",
-          "no": "ไม่ใช่"
+          "no": "ไม่ใช่",
+          "yes": "ใช่"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "\nไปต่อ",
@@ -1362,18 +1418,18 @@
           "Silly": "ทึ่ม"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "W",
           "A": "ก",
-          "yes": "ใช่",
+          "W": "W",
+          "head": "หัว",
           "no": "ไม่ใช่",
-          "head": "หัว"
+          "yes": "ใช่"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "W",
           "A": "ก",
-          "yes": "ใช่",
+          "W": "W",
+          "head": "หัว",
           "no": "ไม่ใช่",
-          "head": "หัว"
+          "yes": "ใช่"
         },
         "ml-model cards-book recommender model card": {
           "Silly": "ทึ่ม"
@@ -1382,64 +1438,64 @@
           "Silly": "ทึ่ม"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Back": "กลับ"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Back": "กลับ"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "ใช่",
+          "B": "ข",
           "No": "ไม่ใช่",
-          "B": "ข"
+          "Yes": "ใช่"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "ใช่",
+          "B": "ข",
           "No": "ไม่ใช่",
-          "B": "ข"
+          "Yes": "ใช่"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "ใช่",
-          "No": "ไม่ใช่"
+          "No": "ไม่ใช่",
+          "Yes": "ใช่"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "ใช่",
-          "No": "ไม่ใช่"
+          "No": "ไม่ใช่",
+          "Yes": "ใช่"
         },
         "ml-models-shoes decision tree-2021": {
           "Sports": "กีฬา"
@@ -1448,74 +1504,18 @@
           "Sports": "กีฬา"
         },
         "ml-use model card-example3A-2021": {
-          "rain": "มีฝน",
-          "snow": "หิมะ",
           "cloudy": "มีเมฆมาก",
+          "dusk": "อัสดง",
           "night": "กลางคืน",
-          "dusk": "อัสดง"
+          "rain": "มีฝน",
+          "snow": "หิมะ"
         },
         "ml-use model card-example3A_2022": {
-          "rain": "มีฝน",
-          "snow": "หิมะ",
           "cloudy": "มีเมฆมาก",
+          "dusk": "อัสดง",
           "night": "กลางคืน",
-          "dusk": "อัสดง"
-        },
-        "CSD U6 - Sensors - SB1_2222": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 - Sensors - SB3_2222": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 - Sensors - SB4.1_2222": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 - Sensors - SB4_2222": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 analog change": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 analog change_2018": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 analog change_2019": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 analog change_2021": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 analog data": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 analog data_2018": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 analog data_2019": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 analog data_2021": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 analog sound": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 analog sound_2018": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 analog sound_2019": {
-          "value": "มูลค่า"
-        },
-        "CSD U6 analog sound_2021": {
-          "value": "มูลค่า"
-        },
-        "ml-L2 supervised - green glass door-2021": {
-          "Accepted": "ได้รับการยอมรับ",
-          "Rejected": "ถูกปฏิเสธ"
-        },
-        "ml-L2 supervised - green glass door_2022": {
-          "Accepted": "ได้รับการยอมรับ",
-          "Rejected": "ถูกปฏิเสธ"
+          "rain": "มีฝน",
+          "snow": "หิมะ"
         }
       }
     }

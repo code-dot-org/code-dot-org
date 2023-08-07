@@ -2,274 +2,76 @@
   "fi-FI": {
     "data": {
       "resources": {
-        "implementation_guide/coursed/2022": {
-          "name": "Toteutusopas"
-        },
-        "graph_paper_programming/coursed/2022": {
-          "name": "Ruutupaperiohjelmointi"
-        },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "Ruutupaperiohjelmointi"
-        },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "Ruutupaperiohjelmointi"
-        },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "Ruutupaperiohjelmointi"
-        },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "Ruutupaperiohjelmointi"
-        },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "Ruutupaperiohjelmointi"
-        },
-        "pair_programming/coursed/2022": {
-          "name": "Pariohjelmointi"
-        },
-        "relay_programming/coursed/2022": {
-          "name": "Releohjelmointi"
-        },
-        "relay_programming_1/coursed/2022": {
-          "name": "Releohjelmointi"
-        },
-        "relay_programming_2/coursed/2022": {
-          "name": "Releohjelmointi"
-        },
-        "relay_programming_3/coursed/2022": {
-          "name": "Releohjelmointi"
-        },
-        "relay_programming_4/coursed/2022": {
-          "name": "Releohjelmointi"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "Releohjelmointi"
-        },
-        "conditionals_with_cards/coursed/2022": {
-          "name": "Ehtolauseet pelikorteilla"
-        },
-        "conditionals_with_cards_1/coursed/2022": {
-          "name": "Ehtolauseet pelikorteilla"
-        },
-        "conditionals_with_cards_2/coursed/2022": {
-          "name": "Ehtolauseet pelikorteilla"
-        },
-        "conditionals_with_cards_3/coursed/2022": {
-          "name": "Ehtolauseet pelikorteilla"
-        },
-        "conditionals_with_cards_4/coursed/2022": {
-          "name": "Ehtolauseet pelikorteilla"
-        },
-        "implementation_guide/coursef/2022": {
-          "name": "Toteutusopas"
-        },
-        "sprite_lab_documentation/coursef/2022": {
-          "name": "Sprite-labra dokumentaatio"
-        },
-        "internet/coursef/2022": {
-          "name": "Internet"
-        },
-        "internet_1/coursef/2022": {
-          "name": "Internet"
-        },
-        "the_internet/coursef/2022": {
-          "name": "Internetti"
-        },
-        "implementation_guide/coursee/2022": {
-          "name": "Toteutusopas"
-        },
-        "sprite_lab_documentation/coursee/2022": {
-          "name": "Sprite-labra dokumentaatio"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "Toteutusopas"
-        },
-        "move_it_move_it/courseb/2022": {
-          "name": "Liikuta, liikuta"
-        },
-        "move_it_move_it_1/courseb/2022": {
-          "name": "Liikuta, liikuta"
-        },
-        "move_it_move_it_2/courseb/2022": {
-          "name": "Liikuta, liikuta"
-        },
-        "move_it_move_it_3/courseb/2022": {
-          "name": "Liikuta, liikuta"
-        },
-        "pair_programming/courseb/2022": {
-          "name": "Pariohjelmointi"
-        },
-        "stevie_and_the_big_project/courseb/2022": {
-          "name": "Stevie ja iso projekti"
-        },
-        "unspotted_bugs/courseb/2022": {
-          "name": "Huomaamattomia vikoja"
-        },
-        "getting_loopy/courseb/2022": {
-          "name": "Mennään silmukoille"
-        },
-        "getting_loopy_1/courseb/2022": {
-          "name": "Mennään silmukoille"
-        },
-        "getting_loopy_2/courseb/2022": {
-          "name": "Mennään silmukoille"
-        },
-        "getting_loopy_3/courseb/2022": {
-          "name": "Mennään silmukoille"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "Suuri tapahtuma"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "Suuri tapahtuma"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "Suuri tapahtuma"
-        },
-        "pair_programming/express/2022": {
-          "name": "Pariohjelmointi"
-        },
-        "sprite_lab_documentation/express/2022": {
-          "name": "Sprite-labra dokumentaatio"
-        },
-        "variables/express/2022": {
-          "name": "Muuttujat"
-        },
-        "pair_programming/pre-express/2022": {
-          "name": "Pariohjelmointi"
-        },
-        "implementation_guide/coursea/2022": {
-          "name": "Toteutusopas"
-        },
-        "pair_programming/coursea/2022": {
-          "name": "Pariohjelmointi"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "Iloiset kartat"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "Suuri tapahtuma"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "Suuri tapahtuma"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "Suuri tapahtuma"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "Toteutusopas"
-        },
-        "my_robotic_friends/coursec/2022": {
-          "name": "Robottiystäväni"
-        },
-        "my_robotic_friends_1/coursec/2022": {
-          "name": "Robottiystäväni"
-        },
-        "my_robotic_friends_2/coursec/2022": {
-          "name": "Robottiystäväni"
-        },
-        "my_robotic_friends_3/coursec/2022": {
-          "name": "Robottiystäväni"
-        },
-        "my_robotic_friends_4/coursec/2022": {
-          "name": "Robottiystäväni"
-        },
-        "pair_programming/coursec/2022": {
-          "name": "Pariohjelmointi"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "Suuri tapahtuma"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "Suuri tapahtuma"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "Suuri tapahtuma"
-        },
-        "binary_bracelets/coursec/2022": {
-          "name": "Binäärikorut"
-        },
-        "binary_bracelets_1/coursec/2022": {
-          "name": "Binäärikorut"
-        },
-        "binary_bracelets_2/coursec/2022": {
-          "name": "Binäärikorut"
-        },
-        "binary_bracelets_3/coursec/2022": {
-          "name": "Binäärikorut"
-        },
-        "binary_bracelets_4/coursec/2022": {
-          "name": "Binäärikorut"
-        },
-        "video_machine_learning/csd/2022": {
-          "name": "Video: Koneoppiminen"
-        },
-        "variables/csd/2022": {
-          "name": "Muuttujat"
-        },
-        "variables_3/csd/2022": {
-          "name": "Muuttujat"
-        },
-        "the_animation_tab/csd/2022": {
-          "name": "Animaatio-välilehti"
-        },
-        "text/csd/2022": {
-          "name": "teksti"
-        },
-        "conditionals/csd/2022": {
-          "name": "Ehtolausekkeet"
-        },
-        "velocity/csd/2022": {
-          "name": "Nopeus"
-        },
-        "velocity_1/csd/2022": {
-          "name": "Nopeus"
-        },
-        "velocity_2/csd/2022": {
-          "name": "Nopeus"
-        },
-        "functions/csd/2022": {
-          "name": "Funktiot"
-        },
-        "functions_1/csd/2022": {
-          "name": "Funktiot"
-        },
-        "functions_4/csd/2022": {
-          "name": "Funktiot"
-        },
-        "lists/csd/2022": {
-          "name": "Listat"
-        },
-        "intro_to_css_-_part_1/csd/2022": {
-          "name": "Johdanto TK:n - Osa 1"
-        },
-        "intro_to_css_-_part_2/csd/2022": {
-          "name": "Johdanto TK:n - Osa 2"
-        },
-        "design_mode/csd/2022": {
-          "name": "Suunnittelutila"
-        },
-        "variables_1/csd/2022": {
-          "name": "Muuttujat"
-        },
-        "variables_2/csd/2022": {
-          "name": "Muuttujat"
-        },
-        "functions_2/csd/2022": {
-          "name": "Funktiot"
-        },
-        "functions_3/csd/2022": {
-          "name": "Funktiot"
-        },
-        "functions_with_parameters/csd/2022": {
-          "name": "Parametrilliset funktiot"
-        },
-        "functions_5/csd/2022": {
-          "name": "Funktiot"
-        },
-        "lesson_plans/courseb/2018": {
+        "lesson_plans/csd/2017": {
           "name": "Tuntisuunnitelma"
         },
-        "vocabulary/courseb/2018": {
+        "vocabulary/csd/2017": {
+          "name": "Sanasto"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Sanasto"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Sanasto"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Sanasto"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Sanasto"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Sanasto"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Sanasto"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Sanasto"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Sanasto"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Sanasto"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Sanasto"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary_5/csd/2018": {
           "name": "Sanasto"
         },
         "lesson_plans/coursea/2018": {
@@ -278,10 +80,28 @@
         "vocabulary/coursea/2018": {
           "name": "Sanasto"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Sanasto"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Sanasto"
+        },
         "lesson_plans/coursed/2018": {
           "name": "Tuntisuunnitelma"
         },
         "vocabulary/coursed/2018": {
+          "name": "Sanasto"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary/coursee/2018": {
           "name": "Sanasto"
         },
         "lesson_plans/coursef/2018": {
@@ -296,106 +116,22 @@
         "vocabulary/express/2018": {
           "name": "Sanasto"
         },
-        "lesson_plans/coursee/2018": {
+        "lesson_plans/csd/2019": {
           "name": "Tuntisuunnitelma"
         },
-        "vocabulary/coursee/2018": {
+        "vocabulary/csd/2019": {
           "name": "Sanasto"
         },
-        "lesson_plans/coursec/2018": {
+        "lesson_plans_1/csd/2019": {
           "name": "Tuntisuunnitelma"
         },
-        "vocabulary/coursec/2018": {
-          "name": "Sanasto"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "Tuntisuunnitelma"
-        },
-        "vocabulary_2/csd/2018": {
-          "name": "Sanasto"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "Tuntisuunnitelma"
-        },
-        "vocabulary_5/csd/2018": {
-          "name": "Sanasto"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "Tuntisuunnitelma"
-        },
-        "vocabulary_4/csd/2018": {
-          "name": "Sanasto"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "Tuntisuunnitelma"
-        },
-        "vocabulary_3/csd/2018": {
-          "name": "Sanasto"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "Tuntisuunnitelma"
-        },
-        "vocabulary_1/csd/2018": {
-          "name": "Sanasto"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Tuntisuunnitelma"
-        },
-        "vocabulary/csd/2018": {
-          "name": "Sanasto"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "Tuntisuunnitelma"
-        },
-        "vocabulary/coursea/2019": {
-          "name": "Sanasto"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "Tuntisuunnitelma"
-        },
-        "vocabulary/courseb/2019": {
-          "name": "Sanasto"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "Tuntisuunnitelma"
-        },
-        "vocabulary/coursed/2019": {
-          "name": "Sanasto"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "Tuntisuunnitelma"
-        },
-        "vocabulary/coursef/2019": {
-          "name": "Sanasto"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "Tuntisuunnitelma"
-        },
-        "vocabulary/coursee/2019": {
-          "name": "Sanasto"
-        },
-        "lesson_plans/express/2019": {
-          "name": "Tuntisuunnitelma"
-        },
-        "vocabulary/express/2019": {
-          "name": "Sanasto"
-        },
-        "lesson_plans/coursec/2019": {
-          "name": "Tuntisuunnitelma"
-        },
-        "vocabulary/coursec/2019": {
+        "vocabulary_1/csd/2019": {
           "name": "Sanasto"
         },
         "lesson_plans_2/csd/2019": {
           "name": "Tuntisuunnitelma"
         },
         "vocabulary_2/csd/2019": {
-          "name": "Sanasto"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "Tuntisuunnitelma"
-        },
-        "vocabulary_5/csd/2019": {
           "name": "Sanasto"
         },
         "lesson_plans_3/csd/2019": {
@@ -410,91 +146,164 @@
         "vocabulary_4/csd/2019": {
           "name": "Sanasto"
         },
-        "lesson_plans/csd/2019": {
+        "lesson_plans_5/csd/2019": {
           "name": "Tuntisuunnitelma"
         },
-        "vocabulary/csd/2019": {
+        "vocabulary_5/csd/2019": {
           "name": "Sanasto"
         },
-        "lesson_plans_1/csd/2019": {
+        "lesson_plans/coursea/2019": {
           "name": "Tuntisuunnitelma"
         },
-        "vocabulary_1/csd/2019": {
+        "vocabulary/coursea/2019": {
           "name": "Sanasto"
         },
-        "lesson_plans_2/csd/2017": {
+        "lesson_plans/courseb/2019": {
           "name": "Tuntisuunnitelma"
         },
-        "vocabulary_2/csd/2017": {
+        "vocabulary/courseb/2019": {
           "name": "Sanasto"
         },
-        "lesson_plans_5/csd/2017": {
+        "lesson_plans/coursec/2019": {
           "name": "Tuntisuunnitelma"
         },
-        "vocabulary_5/csd/2017": {
+        "vocabulary/coursec/2019": {
           "name": "Sanasto"
         },
-        "lesson_plans_1/csd/2017": {
+        "lesson_plans/coursed/2019": {
           "name": "Tuntisuunnitelma"
         },
-        "vocabulary_1/csd/2017": {
+        "vocabulary/coursed/2019": {
           "name": "Sanasto"
         },
-        "lesson_plans/csd/2017": {
+        "lesson_plans/coursee/2019": {
           "name": "Tuntisuunnitelma"
         },
-        "vocabulary/csd/2017": {
+        "vocabulary/coursee/2019": {
           "name": "Sanasto"
         },
-        "lesson_plans_4/csd/2017": {
+        "lesson_plans/coursef/2019": {
           "name": "Tuntisuunnitelma"
         },
-        "vocabulary_4/csd/2017": {
+        "vocabulary/coursef/2019": {
           "name": "Sanasto"
         },
-        "lesson_plans_3/csd/2017": {
+        "lesson_plans/express/2019": {
           "name": "Tuntisuunnitelma"
         },
-        "vocabulary_3/csd/2017": {
+        "vocabulary/express/2019": {
           "name": "Sanasto"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+        "lesson_plans/coursea/2020": {
+          "name": "Tuntisuunnitelma"
         },
-        "implementation_guide/coursef/2021": {
+        "vocabulary/coursea/2020": {
+          "name": "Sanasto"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Sanasto"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Sanasto"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Sanasto"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Sanasto"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Sanasto"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary/express/2020": {
+          "name": "Sanasto"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Tuntisuunnitelma"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Sanasto"
+        },
+        "lists/csd/2021": {
+          "name": "Listat"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Johdanto TK:n - Osa 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Johdanto TK:n - Osa 2"
+        },
+        "variables_1/csd/2021": {
+          "name": "Muuttujat"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Animaatio-välilehti"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Nopeus"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Nopeus"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funktiot"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funktiot"
+        },
+        "design_mode/csd/2021": {
+          "name": "Suunnittelutila"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Suunnittelutila"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Koneoppiminen"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funktiot"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Silmukat"
+        },
+        "for_loops/csd/2021": {
+          "name": "Silmukat"
+        },
+        "implementation_guide/coursea/2021": {
           "name": "Toteutusopas"
         },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "Sprite-labra dokumentaatio"
+        "pair-programming-vid/coursea/2021": {
+          "name": "Pariohjelmointi"
         },
-        "sprite_lab_documentation/coursef/2021": {
-          "name": "Sprite-labra dokumentaatio"
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Iloiset kartat"
         },
-        "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Silmukkahupia"
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Suuri tapahtuma"
         },
-        "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Silmukkahupia"
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Suuri tapahtuma"
         },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Silmukkahupia"
-        },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Silmukkahupia"
-        },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Silmukkahupia"
-        },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Internet"
-        },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "Internet"
-        },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "Internetti"
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Suuri tapahtuma"
         },
         "implementation_guide/courseb/2021": {
           "name": "Toteutusopas"
@@ -539,24 +348,6 @@
           "name": "Suuri tapahtuma"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "Suuri tapahtuma"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "Toteutusopas"
-        },
-        "pair-programming-vid/coursea/2021": {
-          "name": "Pariohjelmointi"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Iloiset kartat"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "Suuri tapahtuma"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "Suuri tapahtuma"
-        },
-        "unplugged-video-big-event/coursea/2021": {
           "name": "Suuri tapahtuma"
         },
         "implementation_guide/coursec/2021": {
@@ -661,6 +452,48 @@
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Ehtolauseet pelikorteilla"
         },
+        "implementation_guide/coursee/2021": {
+          "name": "Toteutusopas"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Sprite-labra dokumentaatio"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Sprite-labra dokumentaatio"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Toteutusopas"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Sprite-labra dokumentaatio"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Sprite-labra dokumentaatio"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "Silmukkahupia"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "Silmukkahupia"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "Silmukkahupia"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "Silmukkahupia"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "Silmukkahupia"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Internetti"
+        },
         "pair_programming/express/2021": {
           "name": "Pariohjelmointi"
         },
@@ -676,107 +509,274 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Pariohjelmointi"
         },
-        "implementation_guide/coursee/2021": {
-          "name": "Toteutusopas"
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "Sprite-labra dokumentaatio"
-        },
-        "sprite_lab_documentation/coursee/2021": {
-          "name": "Sprite-labra dokumentaatio"
-        },
-        "design_mode/csd/2021": {
-          "name": "Suunnittelutila"
-        },
-        "design_mode_1/csd/2021": {
-          "name": "Suunnittelutila"
-        },
-        "functions_2/csd/2021": {
-          "name": "Funktiot"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "Silmukat"
-        },
-        "for_loops/csd/2021": {
-          "name": "Silmukat"
-        },
-        "video_machine_learning/csd/2021": {
-          "name": "Video: Koneoppiminen"
-        },
-        "variables_1/csd/2021": {
-          "name": "Muuttujat"
-        },
-        "the_animation_tab/csd/2021": {
-          "name": "Animaatio-välilehti"
-        },
-        "velocity_1/csd/2021": {
-          "name": "Nopeus"
-        },
-        "velocity_2/csd/2021": {
-          "name": "Nopeus"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Funktiot"
-        },
-        "functions_1/csd/2021": {
-          "name": "Funktiot"
-        },
-        "lists/csd/2021": {
+        "lists/csd/2022": {
           "name": "Listat"
         },
-        "intro_to_css_-_part_1/csd/2021": {
+        "intro_to_css_-_part_1/csd/2022": {
           "name": "Johdanto TK:n - Osa 1"
         },
-        "intro_to_css_-_part_2/csd/2021": {
+        "intro_to_css_-_part_2/csd/2022": {
           "name": "Johdanto TK:n - Osa 2"
         },
-        "lesson_plans/pre-express/2020": {
-          "name": "Tuntisuunnitelma"
+        "variables/csd/2022": {
+          "name": "Muuttujat"
         },
-        "vocabulary/pre-express/2020": {
-          "name": "Sanasto"
+        "variables_3/csd/2022": {
+          "name": "Muuttujat"
         },
-        "lesson_plans/express/2020": {
-          "name": "Tuntisuunnitelma"
+        "the_animation_tab/csd/2022": {
+          "name": "Animaatio-välilehti"
         },
-        "vocabulary/express/2020": {
-          "name": "Sanasto"
+        "text/csd/2022": {
+          "name": "teksti"
         },
-        "lesson_plans/courseb/2020": {
-          "name": "Tuntisuunnitelma"
+        "conditionals/csd/2022": {
+          "name": "Ehtolausekkeet"
         },
-        "vocabulary/courseb/2020": {
-          "name": "Sanasto"
+        "velocity/csd/2022": {
+          "name": "Nopeus"
         },
-        "lesson_plans/coursed/2020": {
-          "name": "Tuntisuunnitelma"
+        "velocity_1/csd/2022": {
+          "name": "Nopeus"
         },
-        "vocabulary/coursed/2020": {
-          "name": "Sanasto"
+        "velocity_2/csd/2022": {
+          "name": "Nopeus"
         },
-        "lesson_plans/coursec/2020": {
-          "name": "Tuntisuunnitelma"
+        "functions/csd/2022": {
+          "name": "Funktiot"
         },
-        "vocabulary/coursec/2020": {
-          "name": "Sanasto"
+        "functions_1/csd/2022": {
+          "name": "Funktiot"
         },
-        "lesson_plans/coursee/2020": {
-          "name": "Tuntisuunnitelma"
+        "functions_4/csd/2022": {
+          "name": "Funktiot"
         },
-        "vocabulary/coursee/2020": {
-          "name": "Sanasto"
+        "design_mode/csd/2022": {
+          "name": "Suunnittelutila"
         },
-        "lesson_plans/coursea/2020": {
-          "name": "Tuntisuunnitelma"
+        "video_machine_learning/csd/2022": {
+          "name": "Video: Koneoppiminen"
         },
-        "vocabulary/coursea/2020": {
-          "name": "Sanasto"
+        "variables_1/csd/2022": {
+          "name": "Muuttujat"
         },
-        "lesson_plans/coursef/2020": {
-          "name": "Tuntisuunnitelma"
+        "variables_2/csd/2022": {
+          "name": "Muuttujat"
         },
-        "vocabulary/coursef/2020": {
-          "name": "Sanasto"
+        "functions_2/csd/2022": {
+          "name": "Funktiot"
+        },
+        "functions_3/csd/2022": {
+          "name": "Funktiot"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Parametrilliset funktiot"
+        },
+        "functions_5/csd/2022": {
+          "name": "Funktiot"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Toteutusopas"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Pariohjelmointi"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Iloiset kartat"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Suuri tapahtuma"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Suuri tapahtuma"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Suuri tapahtuma"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Toteutusopas"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Liikuta, liikuta"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Liikuta, liikuta"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Liikuta, liikuta"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Liikuta, liikuta"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Pariohjelmointi"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie ja iso projekti"
+        },
+        "unspotted_bugs/courseb/2022": {
+          "name": "Huomaamattomia vikoja"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Mennään silmukoille"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Mennään silmukoille"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Mennään silmukoille"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Mennään silmukoille"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Suuri tapahtuma"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Suuri tapahtuma"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Suuri tapahtuma"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Toteutusopas"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Robottiystäväni"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Robottiystäväni"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Robottiystäväni"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Robottiystäväni"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Robottiystäväni"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Pariohjelmointi"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Suuri tapahtuma"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Suuri tapahtuma"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Suuri tapahtuma"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binäärikorut"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binäärikorut"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binäärikorut"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binäärikorut"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binäärikorut"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Toteutusopas"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Pariohjelmointi"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Releohjelmointi"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Releohjelmointi"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Releohjelmointi"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Releohjelmointi"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Releohjelmointi"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Releohjelmointi"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Toteutusopas"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "Sprite-labra dokumentaatio"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Toteutusopas"
+        },
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "Sprite-labra dokumentaatio"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Internetti"
+        },
+        "pair_programming/express/2022": {
+          "name": "Pariohjelmointi"
+        },
+        "sprite_lab_documentation/express/2022": {
+          "name": "Sprite-labra dokumentaatio"
+        },
+        "variables/express/2022": {
+          "name": "Muuttujat"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Pariohjelmointi"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         }
       }
     }
