@@ -510,7 +510,8 @@
   ai_resources_btn_aria_label_03: "Explore the AI for Teachers website"
 
   ai_pl_101_hero_heading: "AI 101 for Teachers"
-  ai_pl_101_hero_desc: "Discover the transformative potential of artificial intelligence (AI) in education with our free online learning series for educators."
+  ai_pl_101_hero_desc: "Discover the groundbreaking world of artificial intelligence (AI) and its transformative potential in education with our foundational online learning series for teachers."
+  ai_pl_101_hero_desc_02: "A comprehensive online learning series for teachers."
   ai_pl_101_hero_presented: "Presented by"
   ai_pl_101_intro_heading: "What is AI 101 for Teachers?"
   ai_pl_101_intro_text: "AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education. Partners Code.org, ETS, ISTE, Khan Academy are offering engaging sessions with renowned experts that will demystify AI, explore responsible implementation, address bias, and showcase how AI-powered learning can revolutionize student outcomes. Join us on this journey of exploration and empowerment, and unlock the future of teaching with and about AI."
@@ -526,7 +527,7 @@
   ai_pl_101_explore__desc_2: "For six years, this 15-hour online course from ISTE has been guiding K-12 educators on the essentials of AI for teaching and learning. The course is offered three times per year and is fully asynchronous with the ongoing support of an expert instructor."
   ai_pl_101_explore__button_2: "Start the course"
   ai_pl_101_explore_title_3: "AI Curriculum"
-  ai_pl_101_explore__desc_3: "In Code.org’s AI Curriculum for grades 3-12, students use fun activities to see how computers learn from data. The curriculum also invites students to investigate machine learning and data while reflecting on the ethical implications of AI."
+  ai_pl_101_explore__desc_3: "In Code.org’s AI How to Use AI videos and curriculum for grades 3-12, students learn  basic principles about AI and use fun activities to see how computers learn from data. The videos and curriculum also invite students to investigate machine learning and data while reflecting on the ethical implications of AI."
   ai_pl_101_explore__button_3: "Explore curricula"
   ai_pl_101_explore_title_4: "ETS’s Criterion Interactive"
   ai_pl_101_explore__desc_4: "This guided five-paragraph writing platform coaches learners through five critical phases of the writing process: Prepare/Plan, Write, Revise, Edit, Reflect. ETS personalizes the writing experience by leveraging cutting-edge scoring models and AI, assisting teachers in providing iterative feedback and formative assessment throughout the writing experience."
@@ -703,7 +704,7 @@
   teach_page_additional_materials_list_heading_03: "Classroom Posters"
   teach_page_additional_materials_list_desc_03: "Print these posters of diverse role models to hang in your school and inspire your students to try computer science."
 
-  csp_page_top_desc: "Free set of elementary curricula that introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. Can be taught as an introductory class and as an AP course."
+  csp_page_top_desc: "Free year-long curriculum that introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. Can be taught as an introductory class and as an AP course."
   csp_page_intro_heading: "Free, AP® CSP endorsed, high school introductory course"
   csp_page_intro_list_01: "Culturally responsive pedagogy"
   csp_page_intro_list_02: "Real-world problem investigation"
@@ -824,7 +825,7 @@
   csc_page_faq_question_05: "What materials do I need for CS Connections?"
   csc_page_faq_answer_05: "Ideally, each student will have their own computer and teachers will have a projector to display the slideshow that corresponds with each lesson."
 
-  csf_page_top_desc: "Free year-long curriculum that introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world."
+  csf_page_top_desc: "Free set of elementary curricula that introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world."
   csf_page_intro_heading: "Free, and fun, elementary courses for each grade"
   csf_page_intro_list_01: "Six courses, one for each elementary grade"
   csf_page_intro_list_02: "Equitable introductory CS courses"
@@ -1014,6 +1015,7 @@
   not_found_desc: 'The requested page was not found'
   not_found_instructions: 'Check the web address and resubmit or choose a link from the list below.'
 
+  company_code_dot_org: "Code.org"
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -1067,6 +1069,7 @@
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
+  company_ets: ETS
   company_everettsd: Everette Public Schools
   company_fsusd: Fairfield-Suisun Unified School District
   company_fayettecountypublicschools: Fayette County Public Schools
@@ -1088,6 +1091,7 @@
   company_houstonisd: Houston Independent School District
   company_hcpss: Howard County Public Schools
   company_idla: Idaho Digital Learning Academy
+  company_iste: ISTE
   company_janesvilleschooldistrict: Janesville School District
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School
@@ -2103,7 +2107,7 @@
   tutorial_duckrace_name: "The Big Duck Race"
   tutorial_allcancodeapps_name: "Allcancode Platform: Build web and mobile apps in Blockly"
   tutorial_n2y_name: "Bitt Bott Explores Earth"
-  tutorial_microsoftarcade_name: "Play, Design & Code Retro Arcade Games"
+  tutorial_microsoftarcade_name: "Play, Design, & Code with MakeCode Arcade"
   tutorial_csfirstunplugged_name: "CS First Unplugged"
   tutorial_toxicodepython_name: "Discover Python with Silent Teacher"
   tutorial_codecombatozaria_name: "Ozaria: Your Journey Begins"
@@ -2121,7 +2125,7 @@
   tutorial_codeillusionmickey_name: "Disney Codeillusion: Media Art Adventure with Mickey"
   tutorial_scigirlsquest_name: "SciGirls: Code Quest"
   tutorial_codespeakbreathe_name: "Code a Meditation Breathing App"
-  tutorial_vidcodeface_name: "Facetracking"
+  tutorial_vidcodeface_name: "Facetracker"
   tutorial_educodemaze_name: "Design Your Own Maze!"
   tutorial_educoderace_name: "Code your own racing game!"
   tutorial_codespeakchatbot_name: "Code a Chatbot with the Female CS Pioneers"
@@ -2220,7 +2224,7 @@
   tutorial_codejumper_name: "Networks: Messages of Kindness"
   tutorial_meeempathy_name: "A Minecraft Tale of Two Villages"
 
-  tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
+  tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's 'Encanto', and more!"
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
@@ -2787,8 +2791,8 @@
   tutorial_allcancodeapps_shortdescription: "Use the Allcancode Platform to create web and mobile apps from design to delivery."
   tutorial_n2y_shortdescription: "Help Bitt Bott explore Earth using direction arrows."
 
-  tutorial_dance2019_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers, and many more!"
-  tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
+  tutorial_dance2019_longdescription: "Code a Dance Party to share with your friends. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's 'Encanto', and more!"
+  tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's 'Encanto', and more!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
@@ -6792,7 +6796,7 @@
   tutorial_cacloud_name: "Operation Cloud"
   tutorial_blocksmithbot_name: "Bot is sus?!"
   tutorial_hatchmario_name: "Mario's Secret Adventure: Build Your Own 3D Mario Game"
-  tutorial_microsoftforest_name: "Save the Forest!"
+  tutorial_microsoftforest_name: "Save the Forest with MakeCode Arcade"
   tutorial_blackbirdscreen_name: "Screen Saver"
   tutorial_toxicodecompute2_name: "Discover Python with Compute it"
   tutorial_minecrafttimecraft_name: "Minecraft Timecraft"
@@ -7062,7 +7066,7 @@
   tutorial_cacloud_string_detail_grades: "Grades 6+"
   tutorial_blocksmithbot_string_detail_grades: "Grades 2-8"
   tutorial_hatchmario_string_detail_grades: "Grades 2+"
-  tutorial_microsoftforest_string_detail_grades: "Grades 2+"
+  tutorial_microsoftforest_string_detail_grades: "Grades 5+"
   tutorial_blackbirdscreen_string_detail_grades: "Grades 6+"
   tutorial_toxicodecompute2_string_detail_grades: "Grades 2+"
   tutorial_minecrafttimecraft_string_detail_grades: "Grades 2+"
@@ -7215,8 +7219,8 @@
   tutorial_ai4alldance_string_platforms: "All modern browsers"
   tutorial_ai4allneural_string_platforms: "All modern browsers"
   tutorial_spheroinout_string_platforms: "Unplugged"
-  tutorial_edisonblueprint_string_platforms: "All modern browsers"
-  tutorial_edisonmaze_string_platforms: "All modern browsers"
+  tutorial_edisonblueprint_string_platforms: "All modern browsers, Android tablet, iPad"
+  tutorial_edisonmaze_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_milnefunctions_string_platforms: "All modern browsers, Screen reader"
   tutorial_sasmap_string_platforms: "All modern browsers, iPad, Screen reader"
   tutorial_firstrobotics_string_platforms: "All modern browsers"
