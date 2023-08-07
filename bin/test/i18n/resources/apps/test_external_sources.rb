@@ -7,10 +7,6 @@ class I18n::Resources::Apps::ExternalSourcesTest < Minitest::Test
 
     FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/external-sources')).in_sequence(exec_seq)
 
-    expected_labs_dir = CDO.dir('i18n/locales/source/blockly-mooc')
-    FileUtils.expects(:mkdir_p).with(expected_labs_dir).in_sequence(exec_seq)
-    FileUtils.expects(:cp).with(CDO.dir('apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json'), File.join(expected_labs_dir, 'fish.json')).in_sequence(exec_seq)
-
     expected_ml_playground_dir = CDO.dir('i18n/locales/source/external-sources/ml-playground')
     FileUtils.expects(:mkdir_p).with(expected_ml_playground_dir).in_sequence(exec_seq)
     FileUtils.expects(:cp).with(CDO.dir('apps/node_modules/@code-dot-org/ml-playground/i18n/mlPlayground.json'), expected_ml_playground_dir).in_sequence(exec_seq)
