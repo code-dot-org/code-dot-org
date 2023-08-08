@@ -8,7 +8,7 @@
   "marketing_initiative": null,
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "teacher_led",
-  "image": null,
+  "image": "https://images.code.org/42f0dfaf01365b6b9284ea4bab61aa2d-How AI Works.png",
   "cs_topic": "artificial_intelligence,data",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"not_recommended\"}",
