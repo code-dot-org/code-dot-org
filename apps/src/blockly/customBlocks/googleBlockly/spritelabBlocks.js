@@ -10,25 +10,30 @@ export const blocks = {
   // Creates and returns a toggle button field. This field should be
   // added to the block after other inputs have been created.
   initializeMiniToolbox() {
-    // Function to toggle the flyout visibility
-    const createFlyoutField = function (block) {
+    // Function to create and show the flyout
+    const createAndShowFlyoutField = function (block) {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
       const flyoutField = new Blockly.FieldFlyout(_, {
         flyoutKey: flyoutKey,
         sizingBehavior: 'fitContent',
         name: 'FLYOUT',
+        isFlyoutVisible: true,
       });
       block
         .appendDummyInput('flyout_input')
         .appendField(flyoutField, flyoutKey);
+      console.log('created flyout!');
       return flyoutField;
     };
 
+    // Function to toggle the flyout visibility, which actually creates or
+    // deletes the flyout depending on the current visibility.
     const toggleFlyout = function () {
+      console.log('in toggleFlyout');
       const block = this.getSourceBlock();
       if (!block.getInput('flyout_input')) {
-        const flyoutField = createFlyoutField(block);
-        flyoutField.showEditor_();
+        const flyoutField = createAndShowFlyoutField(block);
+        flyoutField.showEditor();
         flyoutField.render_();
       } else {
         block.removeInput('flyout_input');
@@ -53,7 +58,7 @@ export const blocks = {
       defaultIcon,
       alternateIcon,
       useDefaultIcon: true,
-      callback: createFlyoutField,
+      callback: createAndShowFlyoutField,
       colorOverrides,
     });
 
