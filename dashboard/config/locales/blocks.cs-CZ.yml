@@ -15,7 +15,6 @@ cs:
             '0.75': malý
             '1.00': středně
             '2.00': velký
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,7 +22,6 @@ cs:
             '0.75': malý
             '1.00': středně
             '2.00': velký
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -473,28 +471,8 @@ cs:
             '19': '19'
             '2': '2'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
             '3': '3'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
             '4': '4'
-            '40': '40'
             '5': '5'
             '6': '6'
             '7': '7'
@@ -994,8 +972,6 @@ cs:
         options:
           INPUT1:
             '1': citronová šťáva
-            '3': baking soda
-            '5': both
         text: Mikroskop má {INPUT1}
       DansBlocks_setForegroundEffect2:
         options:
@@ -1013,8 +989,6 @@ cs:
         options:
           INPUT1:
             '1': citronová šťáva
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Komunikujte {VAR1} s {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1385,15 +1359,11 @@ cs:
         options:
           INPUT1:
             '1': citronová šťáva
-            '3': baking soda
-            '5': both
         text: Mikroskop má {INPUT1}
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': citronová šťáva
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1677,16 +1647,10 @@ cs:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': vše
       aalab_someStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': vše
       aalab_spriteSayChoices:
         text: "{SPRITE} říká {SPEECH}"
@@ -1846,7 +1810,6 @@ cs:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'
@@ -2363,11 +2326,9 @@ cs:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': pomalá
             '5': normální
             '7': rychlá
-            '9': extra fast
       gamelab_setTint:
         text: změň barvu {THIS} na {COLOR}
       gamelab_setupScoreboard:

@@ -1,5 +1,10 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 58,
+  "created_at": "2022-09-19T21:30:36.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
@@ -7,7 +12,7 @@
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <h1>Types of Chocolate<\\/h1>\\r\\n    <p>This page will explain differences between milk, dark, and Ruby chocolate.<\\/>\\r\\n    <ul>\\r\\n   <li> <h2>Milk<\\/h2><\\/li>\\r\\n    <p>Milk chocolate is solid chocolate made with either liquid milk, powdered milk, or condensed milk. <\\/p>\\r\\n    <li> <h2>Dark<\\/h2><\\li>\\r\\n    <p>Unlike milk chocolate, dark chocolate contains no milk in it, instead using more cocoa, giving it a darker color and making it more bitter.<\\/p>\\r\\n    <\\li><h2>Ruby<\\/h2><\\/>\\r\\n    <p>Ruby chocolate is made from a different cocoa bean altogether. It is made from the ruby cocoa bean, which has a red color and different flavor.<\\/p.\\r\\n  <\\ul>    <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <h1>Types of Chocolate<\\/h1>\\r\\n    <p>This page will explain differences between milk, dark, and Ruby chocolate.<\\/>\\r\\n    <ul>\\r\\n   <li> <h2>Milk<\\/h2><\\/li>\\r\\n    <p>Milk chocolate is solid chocolate made with either liquid milk, powdered milk, or condensed milk. <\\/p>\\r\\n    <li> <h2>Dark<\\/h2><\\/li>\\r\\n    <p>Unlike milk chocolate, dark chocolate contains no milk in it, instead using more cocoa, giving it a darker color and making it more bitter.<\\/p>\\r\\n    <\\/li><h2>Ruby<\\/h2><\\/>\\r\\n    <p>Ruby chocolate is made from a different cocoa bean altogether. It is made from the ruby cocoa bean, which has a red color and different flavor.<\\/p.\\r\\n  <\\/ul>    <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
     "display_name": "Debug the pink tags",
     "bubble_choice_description": "Use your debugging skills to figure out why the tags are pink.",
     "parent_level_id": 18823,
@@ -24,12 +29,7 @@
     "validation_enabled": "false",
     "video_key": "csd_debugging"
   },
-  "game_id": 58,
-  "published": true,
-  "created_at": "2022-09-19T21:30:36.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T21:30:36.244+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Headings challenge debug 2_2022\\\"\"],\"cloned_from\":\"CSD U2 Headings challenge debug 2_2022\"},{\"changed_at\":\"2022-09-20 18:11:46 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 18:14:18 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 18:17:06 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 18:21:26 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 18:26:26 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-17 23:10:49 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\",\"map_reference\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-15 17:47:43 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T21:30:36.244+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Headings challenge debug 2_2022\\\"\"],\"cloned_from\":\"CSD U2 Headings challenge debug 2_2022\"},{\"changed_at\":\"2022-09-20 18:11:46 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 18:14:18 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 18:17:06 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 18:21:26 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-09-20 18:26:26 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-17 23:10:49 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"reference_links\",\"map_reference\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-03-15 17:47:43 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-07 17:42:12 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab>

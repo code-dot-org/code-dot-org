@@ -4231,6 +4231,8 @@ ja:
               display_name: '第 1章: 問題解決プロセス'
             lessonGroup-3:
               display_name: 第 2 章コンピューターと問題解決
+            lessonGroup-5:
+              display_name: アンケート
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4582,6 +4584,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-4:
+              display_name: アンケート
         focus-on-creativity2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4607,6 +4611,8 @@ ja:
               display_name: '第 1章: 問題解決プロセス'
             lessonGroup-3:
               display_name: 第 2 章コンピューターと問題解決
+            lessonGroup-5:
+              display_name: アンケート
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4624,6 +4630,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-4:
+              display_name: アンケート
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4650,6 +4658,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-4:
+              display_name: アンケート
         focus-on-design-with-purpose2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4673,6 +4683,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-4:
+              display_name: アンケート
         focus-on-coding2-2023:
           lesson_groups:
             lessonGroup-2:

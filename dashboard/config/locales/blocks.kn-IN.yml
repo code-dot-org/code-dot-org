@@ -16,7 +16,6 @@ kn:
             '0.75': ಸಣ್ಣ
             '1.00': ಮಧ್ಯಮ
             '2.00': ದೊಡ್ಡ
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -24,7 +23,6 @@ kn:
             '0.75': ಸಣ್ಣ
             '1.00': ಮಧ್ಯಮ
             '2.00': ದೊಡ್ಡ
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -191,11 +189,8 @@ kn:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '0.25': very slow
-            '0.5': slow
             '1': ಸಾಮಾನ್ಯ
             '2': ತ್ವರಿತ
-            '4': very fast
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
@@ -204,11 +199,8 @@ kn:
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
             sprites: ಎಲ್ಲ
           SPEED:
-            '0.25': very slow
-            '0.5': slow
             '1': ಸಾಮಾನ್ಯ
             '2': ತ್ವರಿತ
-            '4': very fast
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -320,8 +312,6 @@ kn:
         options:
           INPUT1:
             '1': ನಿಂಬೆ ರಸ
-            '3': baking soda
-            '5': both
         text: ಸೂಕ್ಷ್ಮದರ್ಶಕದ {INPUT1} ಹೊಂದಿದೆ
       DansBlocks_setForegroundEffect2:
         options:
@@ -336,8 +326,6 @@ kn:
         options:
           INPUT1:
             '1': ನಿಂಬೆ ರಸ
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: "{VAR1} ಅನ್ನು {SPRITE1COSTUME} ಜೊತೆ ಸಂವಹನ ಮಾಡಿ"
       FunctionBlocks_makeManipulative2:
@@ -569,15 +557,11 @@ kn:
         options:
           INPUT1:
             '1': ನಿಂಬೆ ರಸ
-            '3': baking soda
-            '5': both
         text: ಸೂಕ್ಷ್ಮದರ್ಶಕದ {INPUT1} ಹೊಂದಿದೆ
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': ನಿಂಬೆ ರಸ
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -787,22 +771,7 @@ kn:
       Poetry_whenLineShows:
         options:
           N:
-            '0': "???"
             '1': '1'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
         text: ಸಾಲು {N} ತೋರಿಸಿದಾಗ
       Poetry_whenPromptAnswered:
         text: "{VAR} ಉತ್ತರಿಸಿದಾಗ"
@@ -822,16 +791,10 @@ kn:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': ಎಲ್ಲ
       aalab_someStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': ಎಲ್ಲ
       aalab_spriteSayChoices:
         text: "{SPRITE} ಹೇಳಿ {SPEECH}"
@@ -915,17 +878,7 @@ kn:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
-            '10': '10'
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
       gamelab_addBehaviorSimple:
         text: ಸ್ಪ್ರೈಟ್ {SPRITE} ಆರಂಭ {BEHAVIOR}
       gamelab_addTarget:
@@ -1041,15 +994,6 @@ kn:
         options:
           VALUE:
             '1': '1'
-            '10': '10'
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
       gamelab_isCostumeEqual:
         text: "{SPRITE} ಕಾಸ್ಟ್ಯೂಮ್‌ {COSTUME}"
       gamelab_isKeyPressed:
@@ -1356,11 +1300,8 @@ kn:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
-            '3': slow
             '5': ಸಾಮಾನ್ಯ
             '7': ತ್ವರಿತ
-            '9': extra fast
       gamelab_setTint:
         text: "{THIS} ಬಣ್ಣವನ್ನು {COLOR} ಗೆ ಬದಲಿಸಿ"
       gamelab_setupScoreboard:

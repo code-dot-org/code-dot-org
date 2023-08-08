@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
+title: Como organizar uma Hora do Código - Empresas
 ---
 
 {{ signup_button }}

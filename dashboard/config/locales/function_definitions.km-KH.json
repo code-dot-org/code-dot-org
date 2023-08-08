@@ -20,7 +20,8 @@
         "2-3 Artist 7": {
           "draw_rect": {
             "parameters": {
-              "height": "កម្ពស់"
+              "height": "កម្ពស់",
+              "width": "ទទឹង"
             }
           }
         },
@@ -30,7 +31,8 @@
           },
           "draw square": {
             "parameters": {
-              "height": "កម្ពស់"
+              "height": "កម្ពស់",
+              "width": "ទទឹង"
             }
           }
         },
@@ -2039,19 +2041,42 @@
             }
           }
         },
+        "courseF_bee_fwp5": {
+          "rowOfNectar": {
+            "parameters": {
+              "width": "ទទឹង"
+            }
+          }
+        },
+        "courseF_bee_fwp6": {
+          "rowOfNectar": {
+            "parameters": {
+              "width": "ទទឹង"
+            }
+          }
+        },
         "courseF_bee_fwp7": {
           "rowOfNectarOrHoney": {
-            "name": "rowOfNectarOrHoney"
+            "name": "rowOfNectarOrHoney",
+            "parameters": {
+              "width": "ទទឹង"
+            }
           }
         },
         "courseF_bee_fwp8": {
           "rowOfNectarOrHoney": {
-            "name": "rowOfNectarOrHoney"
+            "name": "rowOfNectarOrHoney",
+            "parameters": {
+              "width": "ទទឹង"
+            }
           }
         },
         "courseF_bee_fwp9_predict1": {
           "rowOfNectarOrHoney": {
-            "name": "rowOfNectarOrHoney"
+            "name": "rowOfNectarOrHoney",
+            "parameters": {
+              "width": "ទទឹង"
+            }
           }
         },
         "courseF_bee_fwp_challenge1": {

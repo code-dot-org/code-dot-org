@@ -167,6 +167,18 @@
       }
     },
     {
+      "name": "Tech Requirements and Required Materials",
+      "url": "https://docs.google.com/document/d/1bz9KZcgb92D2-DZZdfghQy_HyTG7FRkOE4us3pwpRHY/edit?usp=sharing",
+      "key": "tech_requirements_and_required_materials",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "tech_requirements_and_required_materials"
+      }
+    },
+    {
       "name": "Unplugged and Plugged",
       "url": "https://docs.google.com/document/d/12ZvJzA0Owyq_HCDJ73M1nhPrnAX3hpNdWHvWCVd_bGc/view",
       "key": "unplugged_and_plugged",
