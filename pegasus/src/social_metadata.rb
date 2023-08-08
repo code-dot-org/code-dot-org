@@ -14,6 +14,7 @@
 #   code.org/blockchain
 #   code.org/ai
 #   code.org/ai/pl/101
+#   code.org/ai/how-ai-works
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -59,6 +60,7 @@ def get_social_metadata_for_page(request)
     blockchain: {path: "/shared/images/social-media/blockchain-social.png", width: 1200, height: 630},
     ai: {path: "/shared/images/social-media/ai-social.png", width: 1200, height: 630},
     ai_101: {path: "/shared/images/social-media/ai-101-social.png", width: 1200, height: 630},
+    ai_how_ai_works: {path: "/shared/images/social-media/ai-how-ai-works-social.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -209,6 +211,13 @@ def get_social_metadata_for_page(request)
         image: images[:ai_101]
       }
     },
+    "ai_how_ai_works" => {
+      "default" => {
+        title: hoc_s(:how_ai_works_hero_heading),
+        description: hoc_s(:how_ai_works_hero_desc),
+        image: images[:ai_how_ai_works]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -243,6 +252,8 @@ def get_social_metadata_for_page(request)
     page = "ai"
   elsif request.path == "/ai/pl/101" && request.site == "code.org"
     page = "ai_101"
+  elsif request.path == "/ai/how-ai-works" && request.site == "code.org"
+    page = "ai_how_ai_works"
   else
     return {}
   end
