@@ -16,7 +16,19 @@ jobs:
           echo "GITHUB_WORKFLOW=${GITHUB_WORKFLOW}"
         env:
           SKAFFOLD_DEFAULT_REPO: ${{ vars.K8S_DOCKEHUB_REPOSITORY }}
-  # build:
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ secrets.K8S_DOCKEHUB_REPOSITORY }}
+          username: ${{ secrets.K8S_DOCKERHUB_USERNAME }}
+          password: ${{ secrets.K8S_DOCKERHUB_TOKEN }}
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ secrets.K8S_DOCKEHUB_REPOSITORY }}
+          username: thisshouldfail
+          password: ${{ secrets.K8S_DOCKERHUB_TOKEN }}
+  build:
   #   name: Skaffold Build
   #   runs-on: ubuntu-22.04
   #   container:
