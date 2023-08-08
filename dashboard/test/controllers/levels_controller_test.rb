@@ -8,7 +8,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    Services::LevelFiles.stubs(:write_to_file?).returns(false) # don't write to level files
+    Policies::LevelFiles.stubs(:write_to_file?).returns(false) # don't write to level files
 
     @level = create(:level)
     @partner_level = create :level, editor_experiment: 'platformization-partners'
@@ -509,7 +509,6 @@ class LevelsControllerTest < ActionController::TestCase
       delete :destroy, params: {id: level}
       assert_equal false, file_path && File.exist?(file_path)
     ensure
-      file_path = Policies::LevelFiles.level_file_path(Level.find_by(name: level_name))
       File.delete(file_path) if file_path && File.exist?(file_path)
     end
   end
