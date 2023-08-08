@@ -14,7 +14,7 @@ jobs:
       #   - my_docker_volume:/volume_mount
       # options: --cpus 1
     env:
-      SKAFFOLD_DEFAULT_REPO: docker.io/snickellcdo/code.org
+      SKAFFOLD_DEFAULT_REPO: docker.io/snickellcdo
     steps:
       - run: |
           echo hi
@@ -42,13 +42,14 @@ jobs:
 
 
 
-  # quicktest:
-  #   name: Quick Test
-  #   runs-on: ubuntu-22.04
-  #   # container: 
-  #   #   image: alpine
-  #   steps:
-  #     - run: |
+  quicktest:
+    name: Quick Test
+    runs-on: ubuntu-22.04
+    # container: 
+    #   image: alpine
+    steps:
+      - run: |
+          git clone git@github.com:code-dot-org/code-dot-org.git
   #         env
   #         echo hi
   #         echo "DIRECT K8S_DOCKERHUB_REPOSITORY=$K8S_DOCKERHUB_REPOSITORY"
