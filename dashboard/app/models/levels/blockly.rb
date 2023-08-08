@@ -464,7 +464,7 @@ class Blockly < Level
   end
 
   def localized_failure_message_override
-    get_localized_property("failure_message_overrides")
+    get_localized_property('failure_message_override')
   end
 
   def localized_long_instructions
