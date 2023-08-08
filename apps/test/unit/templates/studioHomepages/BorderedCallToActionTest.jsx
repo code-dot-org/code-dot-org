@@ -85,7 +85,7 @@ describe('BorderedCallToAction', () => {
       );
       const button = borderedCtA.findOne('Button');
       expect(button.props.text).to.equal(buttonText);
-      expect(button.props.color).to.equal('orange');
+      expect(button.props.color).to.equal('brandSecondaryDefault');
     });
 
     it('can use a custom onClick, which ignores buttonUrl', () => {
