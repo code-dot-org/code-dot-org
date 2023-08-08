@@ -362,8 +362,8 @@ body.modal-open .supreme-container{
   height: 40px;
   padding: 0 30px;
   margin: 10px 5px 0 0;
-  background-color: #ffa400;
-  border-color: #ffa400;
+  background-color: var(--orange);
+  border-color: var(--orange);
 }
 
 #homepage #actions .herolink-white {
@@ -415,8 +415,8 @@ body.modal-open .supreme-container{
 }
 
 #homepage #actions .herohocbutton-solid-yellow {
-  background-color: #FFA400;
-  border-color: #FFA400;
+  background-color: var(--orange);
+  border-color: var(--orange);
 }
 
 #homepage #actions #hero-video {

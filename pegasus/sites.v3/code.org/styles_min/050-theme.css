@@ -19,6 +19,7 @@
   --neutral_dark80: #54595E;
   --neutral_dark90: #3F444B;
   --neutral_dark: #292F36;
+  --orange: #ffa400; /* legacy color */
 }
 
 html {
