@@ -8,7 +8,7 @@ module Services
     # than our new default, move that file into the new default location.
     #
     # TODO: move all existing levels into new directory structure and remove
-    def self.reorganize_level_files_into_subdirectories(level)
+    def self.reorganize_level_file_into_subdirectory(level)
       current_path = Policies::LevelFiles.level_file_path(level)
       desired_path = Policies::LevelFiles.default_level_file_path(level)
       if current_path != desired_path
@@ -27,9 +27,9 @@ module Services
       return unless Policies::LevelFiles.write_to_file?(level) && level.published
 
       # TODO: Once we've verified we can successfully invoke this method on old
-      # stale levels, uncomment this line so we can begin applying it to levels
+      # stable levels, uncomment this line so we can begin applying it to levels
       # under active development.
-      #Services::LevelFiles.reorganize_level_files_into_subdirectories(level)
+      #Services::LevelFiles.reorganize_level_file_into_subdirectory(level)
 
       file_path = Policies::LevelFiles.level_file_path(level)
       FileUtils.mkdir_p(File.dirname(file_path))
