@@ -145,7 +145,6 @@ pl:
             MOVES.Rest: Żaden
           DIR:
             '1': "→"
-            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} rób {MOVE} {DIR} bez końca"
         options:
@@ -167,7 +166,6 @@ pl:
             MOVES.Rest: Żaden
           DIR:
             '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: zamień {SPRITE} {PROPERTY} przez {VAL}
         options:
@@ -2720,7 +2718,6 @@ pl:
         text: "{VALUE}"
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

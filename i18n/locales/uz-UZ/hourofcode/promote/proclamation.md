@@ -4,55 +4,55 @@ title: Namunaviy echim, kompyuter fanlari bo‘yicha ta'lim haftaligi va soat so
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Kompyuter Fanlari Ta'limi Haftasi qarori namunasi
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Quyida shtat va mahalliy qonun chiqaruvchilar foydalanishi mumkin boʻlgan Kompyuter Fanlari Taʼlim Haftasi va uning maqsadlarini qoʻllab-quvvatlovchi namunaviy qaror matni keltirilgan.
 
 * * *
 
-#### **RESOLUTION**  
+#### **QAROR**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### “Kompyuter Fanlari Ta’lim Haftasi”ning maqsad va g‘oyalarini qo‘llab-quvvatlash
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+Kompyuter Fanlari Ta'lim Haftasi jamiyatimizni oʻzgartirishda kompyuter fanlarining muhim rol oʻynashini va kompyuter fanlari innovatsiyalarga imkoniyat yaratishi va iqtisodiy imkoniyatlarni yaratishini taʼkidlashini hisobga olgan holda;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Hisoblash texnikasi zamonaviy madaniyatning ajralmas qismi bo'lib, odamlarning bir-birlari va ularning atrofidagi dunyo bilan o'zaro munosabatlarini o'zgartirayotganini hisobga olgan holda;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Kompyuter fanlari sanoatni o'zgartirib, tijoratning yangi sohalarini yaratib, fanning barcha sohalarida innovatsiyalarni harakatga keltirayotgan va tashkil etilgan iqtisodiyot tarmoqlarida samaradorlikni oshirayotganligi hisobga olgan holda;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Qo'shma Shtatlar iqtisodiy samaradorligiga sezilarli hissa qo'shayotgan, Kompyuter fanlari sohasi iqtisodiyotimizning axborot texnologiyalari sektorini qo'llab -quvvatlashini hisobga olgan holda;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Kompyuter fanlari sohasi raqamli asr uchun asosiy fan ekanligini hisobga olgan holda;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Axborot texnologiyalari sektori yangi innovatsiyalarni tadqiq qilish va rivojlantirish orqali iqtisodiyotni tiklashga yordam beruvchi noyob imkoniyatlarini hisobga olgan holda;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Butun davlat bo'ylab 500 000 dan ortiq kompyuter sohasiga oid ochiq ish o'rinlariga ega kompyuter fanlari bo'yicha ish-o'rinlarining istiqbollari porloqligini hisobga olgan holda;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+O'quvchilarga yuqori sifatli kompyuter fanlari bo'yicha mashg'ulotlarda qatnashish imkoniyatini berish ularni ushbu soha taqdim etadigan boy imkoniyatlarni ochib berishi va ularga butun hayoti davomida xizmat qiladigan tanqidiy fikrlash qobiliyatlarini berishini hisobga olgan holda;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Barcha o'quvchilar kompyuter fanlari taʼlimida puxta tayyorgarlik koʻrishga, jumladan, ta'limning boshlangʻich va oʻrta bosqichlarida kompyuter fanlarini oʻrganish uchun zarur boʻlgan malakali oʻqituvchilar, texnologiya va yoshga mos oʻquv dasturlariga ega boʻlishlarini hisobga olgan holda;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Kompyuter fanlari ta'limida kompyuter fanlari darslarini maktabning bitiruv talablari darajasida nazarda tutish va kompyuter fanlari o'qituvchilarini professional rivojlantirilishini ta'minlash kabi masalalarini hal qilish maqsadini hisobga olgan holda;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Kompyuter Fanlari Ta'lim Haftasi davomida “Dasturlash soati”da qatnashish kompyuter fanlari haqida afsonalarni ochib tashlashga va koʻproq talabalarni kompyuter fanlari boʻyicha keyingi ta'limga undashi mumkinligini hisobga olgan holda;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Kompyuter fanlari sohasi barcha darajalar va sohalardagi ayollar va yetarlicha tanishtirilmagan ozchilikning ko'proq jalb etilishini o'z ichiga olgan holda, hal qilinishi kerak bo'lgan jiddiy tengsizlik to'siqlari mavjudligini hisobga olgan holda:
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Kompyuter fanlari sohasidagi birinchi ayollardan biri bo'lgan Greys Myurrey Xopper yangi dasturlash tillarini yaratgani va kompyuter fanlaridagi ko'plab yutuqlarga asos bo'lgan kompyuter tizimlari uchun kashshof standartlarini yaratganligini hisobga olgan holda; va
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+Greys Xopperning tug'ilgan kuni sharafiga {{ campaign_date/start_long }} haftasi "Kompyuter Fanlari Ta'lim Haftasi" sifatida belgilanganlini hisobga olgan holda: yuqoridagilarni hisobga olga holda, qaror qilinadi<br />
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+(DEPUTATLAR PALATASI YOKI SENAT, SHTAT, TUMAN, SHAHAR YOKI MAKTAB ORGANI) quyidagi qarorni qabul qilindi --
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+(1) Kompyuter Fanlari Taʼlim Haftasini belgilash qoʻllab-quvvatlasin ({{ kampanya_date/full }});
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) maktablar, o'qituvchilar, ota-onalar va siyosatni amalga oshiruvchilarni o'z o'quvchilariga Dasturlash soatida qatnashish imkoniyatini berish orqali Kompyuter Fanlari Ta'lim haftaligida ishtirok etishini qo'llab-quvvatlansin;
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) maktablar, o'qituvchilar, tadqiqotchilar, universitetlar, biznes liderlari va siyosatchilarni barcha ta'lim darajalarida kompyuter fanlari bo'yicha barqaror ta'lim olish tajribasini ta'minlash uchun o'qituvchilarning ilg'or kasbiy rivojlanish mexanizmlarini aniqlashi qo'llab quvvatlansin va o'quvchilarni kompyuter fanlari tushunchalari bilan tanishishini qo'llab-quvvatlansin;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(4) siyosatchilarni kompyuter fanlari darslarini bitiruv talablari bo‘yicha matematika yoki tabiiy fanlar kreditlari sifatida hisoblashga to‘sqinlik qiluvchi to‘siqlarni olib tashlash qo'llab-quvvatlansin;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(5) kompyuter fanlarida ayollar va yetarlicha tanishtirilmagan ozchilik uchun imkoniyatlar, jumladan, mavjud dasturlar orqali, qo'llab-quvvatlansin.
 
 {{ signup_button }}

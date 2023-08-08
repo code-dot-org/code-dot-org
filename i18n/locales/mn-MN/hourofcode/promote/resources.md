@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: Нөөц
 ---
 
 {{ signup_button }}

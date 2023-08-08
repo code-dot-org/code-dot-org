@@ -59,6 +59,47 @@ export const blocks = {
   // This is just needed by block_utils when using the Google Blockly Wrapper.
   appendMiniToolboxToggle() {},
 
+  // Set up this block to shadow an image source block's image, if needed.
+  setUpBlockShadowing() {
+    switch (this.type) {
+      case 'gamelab_clickedSpritePointer':
+        this.setBlockToShadow(
+          root =>
+            root.type === 'gamelab_spriteClicked' &&
+            root.getConnections_()[1] &&
+            root.getConnections_()[1].targetBlock()
+        );
+        break;
+      case 'gamelab_newSpritePointer':
+        this.setBlockToShadow(
+          root =>
+            root.type === 'gamelab_whenSpriteCreated' &&
+            root.getConnections_()[1] &&
+            root.getConnections_()[1].targetBlock()
+        );
+        break;
+      case 'gamelab_subjectSpritePointer':
+        this.setBlockToShadow(
+          root =>
+            root.type === 'gamelab_checkTouching' &&
+            root.getConnections_()[1] &&
+            root.getConnections_()[1].targetBlock()
+        );
+        break;
+      case 'gamelab_objectSpritePointer':
+        this.setBlockToShadow(
+          root =>
+            root.type === 'gamelab_checkTouching' &&
+            root.getConnections_()[2] &&
+            root.getConnections_()[2].targetBlock()
+        );
+        break;
+      default:
+        // Not a pointer block, so no block to shadow
+        break;
+    }
+  },
+
   installBehaviorBlocks(behaviorEditor) {
     const generator = Blockly.getGenerator();
     Blockly.Blocks.gamelab_behavior_get = {

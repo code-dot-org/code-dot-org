@@ -1,10 +1,8 @@
 name 'CSD U2 MC Q4_2023'
 title ''
 type 'multi'
-question 'Given the following website, what would you add to the CSS file so the images of clouds and rainbows have a height of 50 px?
+question ' '
 
-
-![](https://images.code.org/38a38bae67a6e5649ea73a2764789caa-Q4Q.png)'
 wrong '![](https://images.code.org/d49981e345a88ce58647add3ba6807bc-Q4A.png)'
 right '![](https://images.code.org/540bb99c455f60eef6b53dbc2a331800-Q4B.png)'
 wrong '![](https://images.code.org/190cfc23694120427d44f5906d8010f6-Q4C.png)'
@@ -19,3 +17,9 @@ The image of clouds and the image of rainbows both have the class weather. To wr
 MARKDOWN
 
 allow_multiple_attempts true
+markdown <<MARKDOWN
+Given the following website, what would you add to the CSS file so the images of clouds and rainbows have a height of 50 px?
+
+
+![](https://images.code.org/38a38bae67a6e5649ea73a2764789caa-Q4Q.png)
+MARKDOWN

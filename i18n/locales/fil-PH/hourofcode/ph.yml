@@ -179,44 +179,48 @@ ph:
   teach_ai_homepage_banner_title: AI edukasyon para sa mundo
   teach_ai_homepage_banner_desc: Code.org ay bahagi ng TeachAI, na nakatuon sa pagpapalakas
     ng mga guro sa lahat ng dako upang magturo sa AI at tungkol sa AI.
-  curriculum_launch_2023_title: Introducing incredible updates to our curriculum
-  curriculum_launch_2023_desc: Updates to CSC, CSP, CSD, and more — plus a new Curriculum
-    Catalog and redesigned Teach page to help you find it all!
-  in_partnership_with: In partnership with
-  afe_partnership_logo_alt: Amazon Future Engineer logo
-  afe_partnership_thanks_desc: Amazon Future Engineer is a comprehensive childhood-to-career
-    program to inspire, educate, and train low-income and other disadvantaged children
-    and young people to pursue careers in computer science. [Learn about our partnership](%{afe_url}).
-  grade_level: Grade level
+  curriculum_launch_2023_title: Ipinapakilala ang kahanga-hangang mga update sa kurikulum
+    namin
+  curriculum_launch_2023_desc: Mga update sa CSC, CSP, CSD, at higit pa — kasama ang
+    bagong Katalogo ng Kurikulum at muling dinisenyong pahina ng Ituro upang matulungan
+    kang mahanap ang lahat!
+  in_partnership_with: Sa pakikipagtulungan sa
+  afe_partnership_logo_alt: Logo ng Amazon Future Engineer
+  afe_partnership_thanks_desc: Ang Amazon Future Engineer ay komprehensibong programa
+    mula pagkabata hanggang sa karera paglaki upang magbigay ng inspirasyon, edukasyon,
+    at pagsasanay sa mga batang may mababang kita at iba pang mga mahihirap na bata
+    at kabataan upang magpatuloy sa mga karera sa computer science. [Alamin ang tungkol
+    sa aming pakikipagtulungan](%{afe_url}).
+  grade_level: Baitang
   grade_level_label_elementary: Elementary School
   grade_level_label_middle: Middle School
   grade_level_label_high: High School
-  teacher_label_csf: CS Fundamentals Teacher
+  teacher_label_csf: Guro sa Mga Batayan ng CS
   teacher_label_csd: Guro ng CS Discoveries
-  teacher_label_csp: CS Principles Teacher
-  teacher_label_csc: CS Connections Teacher
+  teacher_label_csp: Guro sa Mga Prinsipyo ng CS
+  teacher_label_csc: Guro sa Mga Koneksiyon sa CS
   teacher_label_csa: AP® Computer Science A Teacher
-  required_materials: 'Required Materials:'
-  optional_materials: 'Optional Materials:'
+  required_materials: 'Kinakailangang Mga Materyales:'
+  optional_materials: 'Opsyonal na Mga Materyales:'
   call_to_action_learn_more: Matuto ng higit pa
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
   call_to_action_explore_unit: Explore unit
   call_to_action_explore_curriculum: Explore curriculum
-  call_to_action_explore_curriculum_options: Explore curriculum options
+  call_to_action_explore_curriculum_options: Tuklasin ang mga opsyon sa kurikulum
   call_to_action_explore_modules: Explore modules
   call_to_action_explore_workshops: Tuklasin ang mga workshop
-  call_to_action_explore_course: Explore course
-  call_to_action_explore_courses: Explore courses
-  call_to_action_explore_full_course: Explore full course
-  call_to_action_explore_widgets: Explore widgets
-  call_to_action_explore_choice_level: Explore example choice level
-  call_to_action_explore_collection: Explore collection
-  call_to_action_explore_unplugged_lesson: Explore unplugged lessons
-  call_to_action_try_app_lab: Try App Lab
+  call_to_action_explore_course: Tuklasin ang kurso
+  call_to_action_explore_courses: Tuklasin ang mga kurso
+  call_to_action_explore_full_course: Tuklasin ang buong kurso
+  call_to_action_explore_widgets: Tuklasin ang mga widget
+  call_to_action_explore_choice_level: Tuklasin ang antas ng pagpili ng halimbawa
+  call_to_action_explore_collection: Tuklasin ang koleksiyon
+  call_to_action_explore_unplugged_lesson: Tuklasin ang hindi naka-plug na mga aralin
+  call_to_action_try_app_lab: Subukan ang App Lab
   call_to_action_view_lesson_plan: View lesson plan
   call_to_action_self_paced_pl: Start self-paced professional learning
-  call_to_action_apply_for_pl: Apply for Professional Learning
+  call_to_action_apply_for_pl: Mag-apply sa Propesyonal na Pag-aaral
   call_to_action_watch_panel: Watch panel
   call_to_action_learn_about_challenge: Learn about challenge
   call_to_action_explore_website: Explore website
@@ -224,6 +228,7 @@ ph:
   call_to_action_donate_online: Donate online
   call_to_action_get_updates: Get updates
   call_to_action_special_announcement: See special announcement
+  call_to_action_learning_opportunity: New Professional Learning Opportunity
   call_to_action_start_pl: Start professional learning
   call_to_action_contact_regional_partner: Contact your Regional Partner
   call_to_action_join_csta: Join CSTA
@@ -239,19 +244,19 @@ ph:
   call_to_action_see_full_curriculum_catalog: Tingnan ang buong Catalog ng Kurikulum
   call_to_action_find_self_paced_modules: Hanapin ang mga sariling bilis na module
   call_to_action_join_teacher_forums: Sumali sa mga forum ng guro
-  call_to_action_explore_teacher_forums: Explore teacher forums
+  call_to_action_explore_teacher_forums: Tuklasin ang mga forum ng guro
   call_to_action_explore_career_resources: Tuklasin ang mga mapagkukunan sa karera
   call_to_action_watch_videos: Manood ng mga video
   call_to_action_download_posters: I-download ang mga poster
-  call_to_action_contact_support: Contact Code.org support
-  call_to_action_pick_units: Pick units
-  call_to_action_focus_on_topic: Focus on a topic
-  call_to_action_teach_full_intro_course: Teach a full intro course
-  call_to_action_see_module_details: See module details
-  call_to_action_start_modules: Start modules
-  call_to_action_see_course_details: See course details
-  call_to_action_learn_about_approach: Learn more about our approach
-  call_to_action_try_java_lab: Try Java Lab
+  call_to_action_contact_support: Makipag-ugnay sa suporta ng Code.org
+  call_to_action_pick_units: Pumili ng mga yunit
+  call_to_action_focus_on_topic: Magpokus sa isang paksa.
+  call_to_action_teach_full_intro_course: Magturo ng buong kurso ng introduksiyon
+  call_to_action_see_module_details: Tingnan ang mga detalye ng module
+  call_to_action_start_modules: Simulan ang mga module
+  call_to_action_see_course_details: Tingnan ang mga detalye ng kurso
+  call_to_action_learn_about_approach: Matuto nang higit pa tungkol sa paraan namin
+  call_to_action_try_java_lab: Subukan ang Java Lab
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -691,7 +696,7 @@ ph:
     throughout K-12. Offer free professional development, webinars, conference presentations,
     and peer-to-peer learning opportunities.
   ai_resources_btn_aria_label_03: Explore the AI for Teachers website
-  ai_pl_101_hero_heading: AI 101 for Teachers
+  ai_pl_101_hero_heading: Sumali sa amin sa AI EmpowerED!
   ai_pl_101_hero_desc: Tuklasin ang pagbabagong potensyal ng artificial intelligence
     (AI) sa edukasyon sa aming libreng serye ng online na pag-aaral sa mga tagapagturo.
   ai_pl_101_hero_presented: Presented by
@@ -1944,6 +1949,7 @@ ph:
   signup_submit_census_error_message: Humihingi kami ng tawad. Isang mali ang naganap.
     Muling subukang i-sumite muli ang form.
   signup_submit_label: Magpalista
+  signup_submit_explore: Explore sessions
   signup_submit_error_message: Nagkaroon ng antala ang iyong ginagawa. Maaring pakitignan
     lamang kung nalagyan ang lahat ng mga mahalagang impormasyon.
   signup_submit_and_continue_label: I-sumite at magpatuloy

@@ -606,7 +606,7 @@ km:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
         dance-2019:
-          title: Dance Party
+          title: កម្មវិធីរាំ
         dance-extras-2019:
           title: Keep On Dancing
           description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
@@ -1038,6 +1038,10 @@ km:
           lessons:
             lesson-4:
               name: អ​ថេរ
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: ចៃដន្យ
         csp4-2023:
           lesson_groups:
             csp_variables:

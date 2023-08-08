@@ -1,6 +1,9 @@
 import _ from 'lodash';
 import {SVG_NS} from '@cdo/apps/constants';
 import Button from '@cdo/apps/templates/Button';
+import {updatePointerBlockImage} from '@cdo/apps/blockly/addons/cdoSpritePointer';
+import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
+import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 import {blocks as behaviorBlocks} from './behaviorBlocks';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
@@ -11,14 +14,15 @@ export const blocks = {
   initializeMiniToolbox() {
     // Function to toggle the flyout visibility
     const createFlyoutField = function (block) {
+      const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
       const flyoutField = new Blockly.FieldFlyout(_, {
-        flyoutKey: `flyout_${block.type}`,
+        flyoutKey: flyoutKey,
         sizingBehavior: 'fitContent',
         name: 'FLYOUT',
       });
       block
         .appendDummyInput('flyout_input')
-        .appendField(flyoutField, `flyout_${block.type}`);
+        .appendField(flyoutField, flyoutKey);
       return flyoutField;
     };
 
@@ -75,12 +79,19 @@ export const blocks = {
     }
 
     if (this.workspace.rendered) {
+      const imageSourceId = this.id;
       this.workspace.registerToolboxCategoryCallback(
-        `flyout_${this.type}`,
+        CdoFieldFlyout.getFlyoutId(this),
         function (workspace) {
           let blocks = [];
           miniToolboxBlocks.forEach(blockType =>
-            blocks.push(Blockly.Xml.textToDom(`<block type="${blockType}"/>`))
+            blocks.push({
+              kind: 'block',
+              type: blockType,
+              extraState: {
+                imageSourceId: imageSourceId,
+              },
+            })
           );
           return blocks;
         }
@@ -119,6 +130,67 @@ export const blocks = {
         xmlElement.getAttribute('useDefaultIcon') === 'true';
       flyoutToggleButton.setIcon(useDefaultIcon);
     };
+  },
+
+  // Set up this block to shadow a image source block's image, if needed. This will also
+  // deserialize the image source id from the block configuration, if it exists.
+  setUpBlockShadowing() {
+    // We only set up block shadowing for blocks that have a type in spriteLabPointers.
+    if (Object.keys(spriteLabPointers).includes(this.type)) {
+      // saveExtraState is used to serialize the image source block ID.
+      this.saveExtraState = function () {
+        return {
+          imageSourceId: this.imageSourceId,
+        };
+      };
+
+      // loadExtraState is used to deserialize the image source block ID.
+      // We use this id to set the initial pointer block image.
+      this.loadExtraState = function (state) {
+        this.imageSourceId = state['imageSourceId'];
+        if (this.imageSourceId) {
+          updatePointerBlockImage(this, spriteLabPointers, this.imageSourceId);
+        }
+      };
+
+      // When the block's parent workspace changes, we check to see if
+      // we need to update the shadowed block image.
+      this.onchange = function (event) {
+        const imagePreview = this.inputList && this.inputList[0].fieldRow[1];
+        if (!imagePreview) {
+          return;
+        }
+        if (
+          event.type === Blockly.Events.BLOCK_DRAG &&
+          event.blockId === this.id
+        ) {
+          // If this is a start event, prevent image changes.
+          // If it is an end event, allow image changes again.
+          imagePreview.setAllowImageChange(!event.isStart);
+        }
+        if (
+          (event.type === Blockly.Events.BLOCK_CREATE &&
+            event.blockId === this.id) ||
+          (event.type === Blockly.Events.BLOCK_CHANGE &&
+            event.blockId === this.id)
+        ) {
+          // We can skip the following events:
+          // This block's create event, as we handle setting the image on block creation
+          // in src/p5lab/spritelab/blocks.
+          // This block's change event, as that means we just changed the image due to
+          // some other event.
+          return;
+        }
+        if (
+          imagePreview.shouldAllowImageChange() &&
+          (event.type === Blockly.Events.BLOCK_CREATE ||
+            event.type === Blockly.Events.BLOCK_CHANGE ||
+            event.type === Blockly.Events.BLOCK_DRAG)
+        ) {
+          updatePointerBlockImage(this, spriteLabPointers);
+        }
+      };
+    }
   },
 
   installBehaviorBlocks() {
