@@ -1,157 +1,27 @@
 {
-  "navigateForward": "次へ",
-  "navigateBack": "戻る",
-  "tryAgain": "もう　いっかい　やってごらん",
-  "navigateDone": "おわり",
-  "saveProgress": "保存",
-  "correctAnswer": "正解",
-  "incorrectAnswer": "不正解",
-  "modelCardPossibleValuesMinimum": "最小（さいしょう）",
-  "modelCardPossibleValuesMaximum": "最大（さいだい）",
-  "columnInspectorDescription": "説明",
-  "columnDetailsMinimumValue": "最小（さいしょう）",
   "columnDetailsMaximumValue": "最大（さいだい）",
+  "columnDetailsMinimumValue": "最小（さいしょう）",
+  "columnInspectorDescription": "説明",
+  "correctAnswer": "正解",
   "dataCardLastUpdated": "最終更新日",
-  "predictButton": "予測",
-  "uniqueOptionsWarningNotice": "注記",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "年齢"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "天気"
+        "Height": {
+          "id": "高さ"
         },
-        "day": {
-          "id": "日"
-        },
-        "shoe": {
-          "id": "靴"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "玉ねぎ"
-        },
-        "avocado": {
-          "id": "アボカド"
-        },
-        "corn": {
-          "id": "トウモロコシ"
-        },
-        "beans": {
-          "id": "マメ"
-        },
-        "lime": {
-          "id": "ライム"
+        "Length": {
+          "id": "長さ"
         }
       }
     },
     "bike_sharing": {
       "fields": {
-        "index": {
-          "id": "目次（インデックス）"
-        },
         "Month": {
           "id": "月"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "キノコ"
         },
-        "lobster": {
-          "id": "ロブスター"
-        },
-        "bacon": {
-          "id": "ベーコン"
-        },
-        "cheese": {
-          "id": "チーズ"
-        },
-        "meat": {
-          "id": "肉"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "色"
-        },
-        "music": {
-          "id": "音楽"
-        },
-        "food": {
-          "id": "食物\n"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "年齢"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "カテゴリー"
-        },
-        "Description": {
-          "id": "説明"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "イチゴ"
-        },
-        "lime": {
-          "id": "ライム"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "辺"
-        },
-        "size": {
-          "id": "大きさ"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "トマト"
-        },
-        "avocado": {
-          "id": "アボカド"
-        },
-        "chicken": {
-          "id": "ニワトリ"
-        },
-        "fruit": {
-          "id": "フルーツ"
-        },
-        "beans": {
-          "id": "マメ"
-        },
-        "cheese": {
-          "id": "チーズ"
+        "index": {
+          "id": "目次（インデックス）"
         }
       }
     },
@@ -165,36 +35,41 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "学校"
-        },
-        "age": {
-          "id": "年齢"
-        },
-        "health": {
-          "id": "健康"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ニワトリ"
-        },
-        "lamb": {
-          "id": "仔羊"
-        },
-        "onion": {
-          "id": "玉ねぎ"
-        },
-        "cheese": {
-          "id": "チーズ"
+        "banana": {
+          "id": "バナナ"
         }
       }
     },
     "census_part": {
+      "fields": {
+        "age": {
+          "id": "年齢"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "色"
+        },
+        "food": {
+          "id": "食物\n"
+        },
+        "music": {
+          "id": "音楽"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "年齢"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "年齢"
@@ -211,63 +86,65 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "国"
+        },
+        "Dance": {
+          "id": "ダンス"
+        },
+        "Music": {
+          "id": "音楽"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "年齢"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "スコア"
-        },
         "Country": {
           "id": "国"
         },
         "Name": {
           "id": "名前"
         },
+        "Score": {
+          "id": "スコア"
+        },
         "Star": {
           "id": "星"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "アーティスト"
+        "cheese": {
+          "id": "チーズ"
+        },
+        "chicken": {
+          "id": "ニワトリ"
+        },
+        "lamb": {
+          "id": "仔羊"
+        },
+        "onion": {
+          "id": "玉ねぎ"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "人々"
+        "Category": {
+          "id": "カテゴリー"
         },
-        "rhino": {
-          "id": "サイ"
-        },
-        "elephant": {
-          "id": "ゾウ"
-        },
-        "alligator": {
-          "id": "ワニ"
-        },
-        "trees": {
-          "id": "木"
-        }
-      },
-      "name": "サファリ"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "長さ"
-        },
-        "Height": {
-          "id": "高さ"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "アクアティック"
+        "Description": {
+          "id": "説明"
         }
       }
     },
@@ -276,59 +153,101 @@
         "avocado": {
           "id": "アボカド"
         },
-        "onion": {
-          "id": "玉ねぎ"
-        },
         "ginger": {
           "id": "しょうが"
+        },
+        "onion": {
+          "id": "玉ねぎ"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "音楽"
+        "bacon": {
+          "id": "ベーコン"
         },
-        "Dance": {
-          "id": "ダンス"
+        "cheese": {
+          "id": "チーズ"
         },
-        "Country": {
-          "id": "国"
+        "lobster": {
+          "id": "ロブスター"
         },
-        "Internet": {
-          "id": "インターネット"
+        "meat": {
+          "id": "肉"
         },
-        "Writing": {
-          "id": "ライティング"
-        },
-        "Achievements": {
-          "id": "実績（じっせき）"
-        },
-        "Age": {
-          "id": "年齢",
-          "description": "年齢"
-        },
-        "Height": {
-          "id": "高さ",
-          "description": "高さ"
-        },
-        "Gender": {
-          "id": "性別",
-          "description": "性別"
+        "mushrooms": {
+          "id": "キノコ"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "バナナ"
+        "lime": {
+          "id": "ライム"
+        },
+        "strawberry": {
+          "id": "イチゴ"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "年齢"
+        "alligator": {
+          "id": "ワニ"
+        },
+        "elephant": {
+          "id": "ゾウ"
+        },
+        "people": {
+          "id": "人々"
+        },
+        "rhino": {
+          "id": "サイ"
+        },
+        "trees": {
+          "id": "木"
+        }
+      },
+      "name": "サファリ"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "アボカド"
+        },
+        "beans": {
+          "id": "マメ"
+        },
+        "cheese": {
+          "id": "チーズ"
+        },
+        "chicken": {
+          "id": "ニワトリ"
+        },
+        "fruit": {
+          "id": "フルーツ"
+        },
+        "tomato": {
+          "id": "トマト"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "アボカド"
+        },
+        "beans": {
+          "id": "マメ"
+        },
+        "corn": {
+          "id": "トウモロコシ"
+        },
+        "lime": {
+          "id": "ライム"
+        },
+        "onion": {
+          "id": "玉ねぎ"
         }
       }
     },
@@ -342,18 +261,99 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "音楽"
+        "sides": {
+          "id": "辺"
+        },
+        "size": {
+          "id": "大きさ"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "日"
+        },
+        "shoe": {
+          "id": "靴"
+        },
+        "weather": {
+          "id": "天気"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "アーティスト"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "年齢"
+        },
+        "health": {
+          "id": "健康"
+        },
+        "school": {
+          "id": "学校"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "実績（じっせき）"
+        },
+        "Age": {
+          "description": "年齢",
+          "id": "年齢"
+        },
+        "Country": {
+          "id": "国"
         },
         "Dance": {
           "id": "ダンス"
         },
-        "Country": {
-          "id": "国"
+        "Gender": {
+          "description": "性別",
+          "id": "性別"
+        },
+        "Height": {
+          "description": "高さ",
+          "id": "高さ"
+        },
+        "Internet": {
+          "id": "インターネット"
+        },
+        "Music": {
+          "id": "音楽"
+        },
+        "Writing": {
+          "id": "ライティング"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "アクアティック"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "不正解",
+  "modelCardPossibleValuesMaximum": "最大（さいだい）",
+  "modelCardPossibleValuesMinimum": "最小（さいしょう）",
+  "navigateBack": "戻る",
+  "navigateDone": "おわり",
+  "navigateForward": "次へ",
+  "predictButton": "予測",
+  "saveProgress": "保存",
+  "tryAgain": "もう　いっかい　やってごらん",
+  "uniqueOptionsWarningNotice": "注記"
 }

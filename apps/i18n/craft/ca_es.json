@@ -1,9 +1,9 @@
 {
   "absolute": "valor absolut",
+  "agentDiamondPathCongrats": "Enhorabona, has trobat el camí dels diamants! Ja has recollit {count, plural, one {1 diamant} other {# diamants}}!",
   "agentGenericFailureMessage": "Segueix programant! Recorda fer servir l'Agent perquè t'ajudi.",
   "agentTooFewBlocksFailureMessage": "Prova d'afegir només un bloc cada vegada per portar l'Agent allà on toca.",
   "at": "a",
-  "agentDiamondPathCongrats": "Enhorabona, has trobat el camí dels diamants! Ja has recollit {count, plural, one {1 diamant} other {# diamants}}!",
   "blockActionAdd": "afegir",
   "blockActionAttack": "ataca",
   "blockActionClone": "clonar blocs",

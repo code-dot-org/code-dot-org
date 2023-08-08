@@ -7,9 +7,9 @@
   "blockly_toolboxCategoryLogic": "যুক্তি",
   "blockly_toolboxCategoryMath": "গণিত",
   "blockly_toolboxCategoryVariables": "চলকগুলো",
-  "share": "শেয়ার",
-  "startOver": "প্রথম থেকে শুরু কর",
+  "continue": "চালিয়ে যান",
   "panelHeaderInstructions": "নির্দেশনা",
   "panelHeaderWorkspace": "কর্মপরিসর:",
-  "continue": "চালিয়ে যান"
+  "share": "শেয়ার",
+  "startOver": "প্রথম থেকে শুরু কর"
 }

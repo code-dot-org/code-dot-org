@@ -2,8 +2,82 @@
   "si-LK": {
     "data": {
       "programming_environments": {
+        "applab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ශ්‍රිතය"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ශ්‍රිතය"
+                    }
+                  }
+                }
+              },
+              "name": "දත්ත"
+            },
+            "functions": {
+              "name": "ශ්‍රිතයන්"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "නැවත පැමිණි වැඩිතම සංක්‍යාව"
+                    },
+                    "min": {
+                      "description": "ආපසු පැමිණි අවම සංක්‍යාව"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "නැවත පැමිණි වැඩිතම සංක්‍යාව"
+                    },
+                    "min": {
+                      "description": "ආපසු පැමිණි අවම සංක්‍යාව"
+                    }
+                  }
+                }
+              },
+              "name": "ගණිත"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ශ්‍රිතය"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "විචල්‍යන්"
+            }
+          },
+          "description": "App Lab යනු වැඩ සටහන් සම්පාදක පරිසරයකි. එය භාවිතා කර යෙදුම් නිර්මාණය කලහැක . යෙදුම් සැලසුම් කිරීම, JavaScript භාවිතා කර කේතනය කිරීම මෙය මගින් සිදුකල හැක. පසුව තත්පර කිහිපයකින් ඔබගේ යෙදුම බෙදාහැරීම සිදුකල හැක.",
+          "name": "මෘදුකාංග විද්‍යාගාරය"
+        },
         "gamelab": {
           "categories": {
+            "functions": {
+              "name": "ශ්‍රිතයන්"
+            },
             "groups": {
               "expressions": {
                 "setColorEach": {
@@ -23,106 +97,32 @@
               }
             },
             "math": {
-              "name": "ගණිත",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "ආපසු පැමිණි අවම සංක්‍යාව"
-                    },
                     "max": {
                       "description": "නැවත පැමිණි වැඩිතම සංක්‍යාව"
+                    },
+                    "min": {
+                      "description": "ආපසු පැමිණි අවම සංක්‍යාව"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "ආපසු පැමිණි අවම සංක්‍යාව"
-                    },
                     "max": {
                       "description": "නැවත පැමිණි වැඩිතම සංක්‍යාව"
+                    },
+                    "min": {
+                      "description": "ආපසු පැමිණි අවම සංක්‍යාව"
                     }
                   }
                 }
-              }
+              },
+              "name": "ගණිත"
             },
             "variables": {
               "name": "විචල්‍යන්"
-            },
-            "functions": {
-              "name": "ශ්‍රිතයන්"
-            }
-          }
-        },
-        "applab": {
-          "name": "මෘදුකාංග විද්‍යාගාරය",
-          "description": "App Lab යනු වැඩ සටහන් සම්පාදක පරිසරයකි. එය භාවිතා කර යෙදුම් නිර්මාණය කලහැක . යෙදුම් සැලසුම් කිරීම, JavaScript භාවිතා කර කේතනය කිරීම මෙය මගින් සිදුකල හැක. පසුව තත්පර කිහිපයකින් ඔබගේ යෙදුම බෙදාහැරීම සිදුකල හැක.",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "ශ්‍රිතය"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "name": "දත්ත",
-              "expressions": {
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "ශ්‍රිතය"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "ශ්‍රිතය"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "ගණිත",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "ආපසු පැමිණි අවම සංක්‍යාව"
-                    },
-                    "max": {
-                      "description": "නැවත පැමිණි වැඩිතම සංක්‍යාව"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "ආපසු පැමිණි අවම සංක්‍යාව"
-                    },
-                    "max": {
-                      "description": "නැවත පැමිණි වැඩිතම සංක්‍යාව"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "විචල්‍යන්"
-            },
-            "functions": {
-              "name": "ශ්‍රිතයන්"
             }
           }
         },
@@ -134,23 +134,23 @@
             "events": {
               "name": "වැඩසටහන්"
             },
-            "loops": {
-              "name": "ලූපයන්"
-            },
-            "variables": {
-              "name": "විචල්‍යන්"
-            },
-            "math": {
-              "name": "ගණිත"
+            "functions": {
+              "name": "ශ්‍රිතයන්"
             },
             "logic": {
               "name": "තර්කය"
             },
-            "functions": {
-              "name": "ශ්‍රිතයන්"
+            "loops": {
+              "name": "ලූපයන්"
+            },
+            "math": {
+              "name": "ගණිත"
             },
             "text": {
               "name": "පෙළ"
+            },
+            "variables": {
+              "name": "විචල්‍යන්"
             }
           }
         }

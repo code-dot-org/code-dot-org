@@ -2,28 +2,29 @@
   "ne-NP": {
     "data": {
       "course_offerings": {
-        "csp": "AP® Computer Science Principles",
         "20-hour": "Accelerated Intro to CS Course",
-        "flappy": "Flappy Code",
-        "jigsaw": "Jigsaw",
         "algebra": "Computer Science in Algebra",
         "artist": "Artist",
         "course1": "Course 1",
         "course2": "Course 2",
         "course3": "Course 3",
         "course4": "Course 4",
+        "csp": "AP® Computer Science Principles",
         "dance-2019": "डान्स पार्टी (२०१९)",
+        "flappy": "Flappy Code",
         "frozen": "Code with Anna and Elsa",
         "gumball": "Gumball Play Lab",
         "hourofcode": "Classic Maze",
         "iceage": "Ice Age Play Lab",
         "infinity": "Disney Infinity Play Lab",
+        "jigsaw": "Jigsaw",
         "mc": "Minecraft Hour of Code",
         "minecraft": "Minecraft Hour of Code Designer",
         "oceans": "महासागरका लागि A.I",
         "playlab": "Play Lab",
-        "step": "step",
-        "soccer": "प्राप्तांक"
+        "soccer": "प्राप्तांक",
+        "starwars": "Star Wars: Building a Galaxy With Code (JavaScript)",
+        "step": "step"
       }
     }
   }

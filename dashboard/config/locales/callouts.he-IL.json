@@ -20,6 +20,18 @@
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "אתם עכשיו במצב עיצוב."
         },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
+          "": " "
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
+          "": " "
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
+          "": " "
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
+          "": " "
+        },
         "CSD U3 Variables Predict Where X": {
           "CSD_U3_variables": "שנו את המספר כאן"
         },
@@ -32,10 +44,22 @@
         "CSD U3 Variables Predict Where XY_2019": {
           "grid": "לחצו כאן על מנת להציג את הרשת."
         },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "לחצו כאן על מנת להציג את הרשת."
+        },
+        "CSD U3 Variables Predict Where XY_2022": {
+          "grid": "לחצו כאן על מנת להציג את הרשת."
+        },
         "CSD U3 Variables Predict Where X_2018": {
           "CSD_U3_variables": "שנו את המספר כאן"
         },
         "CSD U3 Variables Predict Where X_2019": {
+          "CSD_U3_variables": "שנו את המספר כאן"
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "שנו את המספר כאן"
+        },
+        "CSD U3 Variables Predict Where X_2022": {
           "CSD_U3_variables": "שנו את המספר כאן"
         },
         "CSD U3 debug": {
@@ -47,6 +71,54 @@
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
         "CSD U3 debug_2019": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 drawing practice 3_2022": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
@@ -62,6 +134,14 @@
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
         "CSD U3 fill": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
@@ -74,6 +154,30 @@
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 properties tint_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
         "CSD U3 rect": {
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "כאן מופיע כפתור 'הרץ'."
@@ -82,6 +186,12 @@
           "CSD_U3_rect_c1": "הנה הקוד"
         },
         "CSD U3 rect_2019": {
+          "CSD_U3_rect_c1": "הנה הקוד"
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד"
+        },
+        "CSD U3 rect_2022": {
           "CSD_U3_rect_c1": "הנה הקוד"
         },
         "CSD U3 sequence": {
@@ -96,6 +206,73 @@
           "CSD_U3_rect_c1": "הנה הקוד",
           "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
         },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "הנה הקוד",
+          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "CSDU6L10_rainbow": "הוסיפו את הקוד שלכם כאן"
+        },
         "CSD U6 colorLeds intensity": {
           "CSDU6L10_rainbow": "הוסיפו את הקוד שלכם כאן"
         },
@@ -103,6 +280,9 @@
           "CSDU6L10_rainbow": "הוסיפו את הקוד שלכם כאן"
         },
         "CSD U6 colorLeds intensity_2019": {
+          "CSDU6L10_rainbow": "הוסיפו את הקוד שלכם כאן"
+        },
+        "CSD U6 colorLeds intensity_2021": {
           "CSDU6L10_rainbow": "הוסיפו את הקוד שלכם כאן"
         },
         "CSD U6 light show": {
@@ -114,6 +294,9 @@
         "CSD U6 light show_2019": {
           "CSDUDL03P09": "מה עושה השורה הזאת?"
         },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "מה עושה השורה הזאת?"
+        },
         "CSD U6 tugowar variables 3": {
           "CSD_U6_checkWin": "בדוק אם השחקן ניצח"
         },
@@ -122,6 +305,15 @@
         },
         "CSD U6 tugowar variables 3_2019": {
           "CSD_U6_checkWin": "בדוק אם השחקן ניצח"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "בדוק אם השחקן ניצח"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "שנו את המספר כאן"
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "שנו את המספר כאן"
         },
         "Course 4 Bee 1": {
           "if_bee_nectar": "השתמשו בפקודה \"If\" כדי להחליט אם הדבורה צריכה לקבל צוף או להכין דבש"
@@ -132,23 +324,69 @@
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "בחרו כאן את סוג הרקדן."
         },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "בחרו כאן את סוג הרקדן."
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "בחרו כאן את סוג הרקדן."
+        },
         "CourseD_Dance_2020_02": {
-          "dance_callout_11_a": "הוסיפו את הבלוק הזה לתוכנה שלכם.",
-          "arrow_buttons": "לחצו על מקשי החיצים כדי לשלוט ברקדן שלכם."
+          "arrow_buttons": "לחצו על מקשי החיצים כדי לשלוט ברקדן שלכם.",
+          "dance_callout_11_a": "הוסיפו את הבלוק הזה לתוכנה שלכם."
+        },
+        "CourseD_Dance_2020_022022": {
+          "arrow_buttons": "לחצו על מקשי החיצים כדי לשלוט ברקדן שלכם.",
+          "dance_callout_11_a": "הוסיפו את הבלוק הזה לתוכנה שלכם."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "arrow_buttons": "לחצו על מקשי החיצים כדי לשלוט ברקדן שלכם.",
+          "dance_callout_11_a": "הוסיפו את הבלוק הזה לתוכנה שלכם."
         },
         "CourseD_Dance_2020_04": {
+          "dance_callout_02": "הוסיפו את הבלוק הזה לתוכנה שלכם!"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "הוסיפו את הבלוק הזה לתוכנה שלכם!"
+        },
+        "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "הוסיפו את הבלוק הזה לתוכנה שלכם!"
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "הוסיפו אירוע חדש לתוכנה שלכם."
         },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "הוסיפו אירוע חדש לתוכנה שלכם."
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "הוסיפו אירוע חדש לתוכנה שלכם."
+        },
         "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "בלוק חדש!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "בלוק חדש!"
+        },
+        "CourseD_Dance_2020_06_2021": {
           "dance_party_11_5_groups": "בלוק חדש!"
         },
         "CourseD_Dance_2020_07": {
           "setprop_hint": "בלוק חדש!"
         },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "בלוק חדש!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "בלוק חדש!"
+        },
         "CourseD_Dance_2020_09": {
+          "new_block_3": "בלוק חדש!",
+          "new_block_4": "בלוק חדש!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "בלוק חדש!",
+          "new_block_4": "בלוק חדש!"
+        },
+        "CourseD_Dance_2020_09_2021": {
           "new_block_3": "בלוק חדש!",
           "new_block_4": "בלוק חדש!"
         },
@@ -171,12 +409,26 @@
         "CourseD_Dance_Party_11_5": {
           "dance_party_11_5_groups": "חפשו פה בלוקים של \"כל הברווזים\""
         },
+        "CourseF_outbreak2": {
+          "minitoolbox": "לחצו כאן כדי להרחיב את הבלוק.",
+          "pointerlocation": "גררו בלוק נושא לכאן."
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "לחצו כאן כדי להרחיב את הבלוק.",
+          "pointerlocation": "גררו בלוק נושא לכאן."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "הקישו כדי ליצור תחפושת חדשה"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "לחצו פה כדי להוסיף תחפושות לפרויקט שלכם."
+        },
         "Dance_2019_01": {
           "dance_callout_01": "בחרו כאן את סוג הרקדן."
         },
         "Dance_2019_02": {
-          "dance_callout_11_a": "הוסיפו את הבלוק הזה לתוכנה שלכם.",
-          "arrow_buttons": "לחצו על מקשי החיצים כדי לשלוט ברקדן שלכם."
+          "arrow_buttons": "לחצו על מקשי החיצים כדי לשלוט ברקדן שלכם.",
+          "dance_callout_11_a": "הוסיפו את הבלוק הזה לתוכנה שלכם."
         },
         "Dance_2019_04": {
           "dance_callout_02": "הוסיפו את הבלוק הזה לתוכנה שלכם!"
@@ -213,301 +465,10 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "חפשו פה בלוקים של \"כל הברווזים\""
         },
-        "Geometric Sun": {
-          "4-5_Artist_Patterns_Free_Play_1": "כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!"
-        },
-        "Geometric Sun_2018": {
-          "4-5_Artist_Patterns_Free_Play_1": "כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!"
-        },
-        "Overworld Chop Trees": {
-          "craft_callout_preplaced": "הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל"
-        },
-        "Overworld Chop Trees_2019": {
-          "craft_callout_preplaced": "הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל"
-        },
-        "Overworld Chop Trees_2020": {
-          "craft_callout_preplaced": "הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל"
-        },
-        "Overworld House Frame Chosen": {
-          "craft_callout_preplaced_house": "הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו לסיים אותו?"
-        },
-        "Overworld House Frame Chosen_2019": {
-          "craft_callout_preplaced_house": "הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו לסיים אותו?"
-        },
-        "Overworld House Frame Chosen_2020": {
-          "craft_callout_preplaced_house": "הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו לסיים אותו?"
-        },
-        "Overworld Move to Sheep": {
-          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם",
-          "craft_drag_block_callout": "גררו את הבלוק \"זוז קדימה\" וחברו אותו מתחת לבלוק הקודם"
-        },
-        "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם",
-          "craft_drag_block_callout": "גררו את הבלוק \"זוז קדימה\" וחברו אותו מתחת לבלוק הקודם"
-        },
-        "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם",
-          "craft_drag_block_callout": "גררו את הבלוק \"זוז קדימה\" וחברו אותו מתחת לבלוק הקודם"
-        },
-        "Overworld Place Wall": {
-          "craft_inside_repeat": "חזרו על הפעולות באמצעות הצבת בלוקים כאן"
-        },
-        "Overworld Place Wall_2019": {
-          "craft_inside_repeat": "חזרו על הפעולות באמצעות הצבת בלוקים כאן"
-        },
-        "Overworld Place Wall_2020": {
-          "craft_inside_repeat": "חזרו על הפעולות באמצעות הצבת בלוקים כאן"
-        },
-        "Underground Avoiding Lava": {
-          "craft_callout_moveforward": "הקוד הזה יבדוק אם יש לבה. האם תוכלו להוסיף פקודה כדי לנוע קדימה?"
-        },
-        "Underground Avoiding Lava_2019": {
-          "craft_callout_moveforward": "הקוד הזה יבדוק אם יש לבה. האם תוכלו להוסיף פקודה כדי לנוע קדימה?"
-        },
-        "Underground Avoiding Lava_2020": {
-          "craft_callout_moveforward": "הקוד הזה יבדוק אם יש לבה. האם תוכלו להוסיף פקודה כדי לנוע קדימה?"
-        },
-        "Underground Iron": {
-          "craft_what_is_iron": "כרו את הברזל הזה!"
-        },
-        "Underground Iron_2019": {
-          "craft_what_is_iron": "כרו את הברזל הזה!"
-        },
-        "Underground Iron_2020": {
-          "craft_what_is_iron": "כרו את הברזל הזה!"
-        },
-        "courseA_maze_seq1": {
-          "courseA_maze_seq1_1": "לחצו על הנורה כשתזדקקו לרמז! "
-        },
-        "courseA_maze_seq1_2018": {
-          "courseA_maze_seq1_1": "לחצו על הנורה כשתזדקקו לרמז! "
-        },
-        "courseA_maze_seq1_2019": {
-          "courseA_maze_seq1_1": "לחצו על הנורה כשתזדקקו לרמז! "
-        },
-        "courseA_maze_seq1_2020": {
-          "courseA_maze_seq1_1": "לחצו על הנורה כשתזדקקו לרמז! "
-        },
-        "courseA_maze_seq2": {
-          "courseA_maze_seqA_callout1": "השתמשו בכפתור צעד כדי לעקוב צעד-אחר-צעד בתוך הקוד. זה יעזור לכם למצוא את הבאג! "
-        },
-        "courseB_maze_seq1": {
-          "courseB_maze_seq1": "לחצו על הנורה כשתזדקקו לרמז! "
-        },
-        "courseB_maze_seq1_2018": {
-          "courseB_maze_seq1": "לחצו על הנורה כשתזדקקו לרמז! "
-        },
-        "courseB_maze_seq1_2019": {
-          "courseB_maze_seq1": "לחצו על הנורה כשתזדקקו לרמז! "
-        },
-        "courseB_maze_seq1_2020": {
-          "courseB_maze_seq1": "לחצו על הנורה כשתזדקקו לרמז! "
-        },
-        "courseB_maze_seq2": {
-          "courseB_maze_seq2_callout1": "השתמשו בכפתור צעד כדי לעקוב צעד-אחר-צעד בתוך הקוד. זה יעזור לכם למצוא את הבאג! "
-        },
-        "courseC_maze_programming3": {
-          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
-        },
-        "courseC_maze_programming3_2018": {
-          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
-        },
-        "courseC_maze_programming3_2019": {
-          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
-        },
-        "courseC_maze_programming3_2020": {
-          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
-        },
-        "courseD_bee_conditionals2": {
-          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
-        },
-        "courseD_bee_conditionals2_2018": {
-          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
-        },
-        "courseD_bee_conditionals2_2019": {
-          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
-        },
-        "courseD_bee_conditionals2_2020": {
-          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
-        },
-        "courseD_bee_conditionals2_copy": {
-          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
-        },
-        "courseD_farmer_while7_2018": {
-          "courseD_farmer_while7_2018_PathAhead": "תצטרך להשתמש בבלוק \"כל עוד דרך לפניך\" כדי לפתור את החידה."
-        },
-        "courseD_farmer_while7_2019": {
-          "courseD_farmer_while7_2018_PathAhead": "תצטרך להשתמש בבלוק \"כל עוד דרך לפניך\" כדי לפתור את החידה."
-        },
-        "courseD_farmer_while7_2020": {
-          "courseD_farmer_while7_2018_PathAhead": "תצטרך להשתמש בבלוק \"כל עוד דרך לפניך\" כדי לפתור את החידה."
-        },
-        "courseD_maze_ramp3": {
-          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
-        },
-        "courseD_maze_ramp3_2018": {
-          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
-        },
-        "courseD_maze_ramp3_2019": {
-          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
-        },
-        "courseD_maze_ramp3_2020": {
-          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
-        },
-        "courseD_scrat_ramp3": {
-          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
-        },
-        "frozen line": {
-          "move_elsa_forward": "גרור בלוק \"הזז קדימה\" והצמד מתחת לבלוק \"מתי לרוץ\", בשביל שאלזה תזוז קדימה",
-          "run": "לחץ על \"הרץ\" כדי לנסות את התוכנה שלך!"
-        },
-        "frozen snowflake branch": {
-          "frozen_snowflake_branch": "השתמש בבלוק \"צור ענף של פתית שלג\""
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
-          "": " "
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
-          "": " "
-        },
-        "outbreak2": {
-          "minitoolbox": "לחצו כאן כדי להרחיב את הבלוק.",
-          "pointerlocation": "גררו בלוק נושא לכאן."
-        },
-        "CourseD_Dance_2020_01_2021": {
-          "dance_callout_01": "בחרו כאן את סוג הרקדן."
-        },
-        "CourseD_Dance_2020_02_2021": {
-          "dance_callout_11_a": "הוסיפו את הבלוק הזה לתוכנה שלכם.",
-          "arrow_buttons": "לחצו על מקשי החיצים כדי לשלוט ברקדן שלכם."
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "הוסיפו את הבלוק הזה לתוכנה שלכם!"
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "dance_callout_05": "הוסיפו אירוע חדש לתוכנה שלכם."
-        },
-        "CourseD_Dance_2020_06_2021": {
-          "dance_party_11_5_groups": "בלוק חדש!"
-        },
-        "CourseD_Dance_2020_07_2021": {
-          "setprop_hint": "בלוק חדש!"
-        },
-        "CourseD_Dance_2020_09_2021": {
-          "new_block_3": "בלוק חדש!",
-          "new_block_4": "בלוק חדש!"
-        },
-        "CourseF_outbreak2": {
-          "minitoolbox": "לחצו כאן כדי להרחיב את הבלוק.",
-          "pointerlocation": "גררו בלוק נושא לכאן."
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו לסיים אותו?"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם",
-          "craft_drag_block_callout": "גררו את הבלוק \"זוז קדימה\" וחברו אותו מתחת לבלוק הקודם"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "חזרו על הפעולות באמצעות הצבת בלוקים כאן"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "הקוד הזה יבדוק אם יש לבה. האם תוכלו להוסיף פקודה כדי לנוע קדימה?"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "כרו את הברזל הזה!"
-        },
-        "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_1": "לחצו על הנורה כשתזדקקו לרמז! "
-        },
-        "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1": "לחצו על הנורה כשתזדקקו לרמז! "
-        },
-        "courseC_maze_programming3_2021": {
-          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
-        },
-        "courseD_bee_conditionals2_2021": {
-          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
-        },
-        "courseD_bee_conditionals2_dani": {
-          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
-        },
-        "courseD_farmer_while7_2021": {
-          "courseD_farmer_while7_2018_PathAhead": "תצטרך להשתמש בבלוק \"כל עוד דרך לפניך\" כדי לפתור את החידה."
-        },
-        "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם.",
-          "stone_block_2": "לא ניתן להפיל את הבלוקים האפורים."
-        },
-        "helloworld_animals_costumes": {
-          "hello_world_new": "בלוק חדש!"
-        },
-        "helloworld_animals_sizes": {
-          "hello_world_new": "בלוק חדש!",
-          "hello_world_new_block": "בלוק חדש!!!"
-        },
-        "helloworld_animals_sounds": {
-          "hello_world_new": "בלוק חדש!"
-        },
-        "helloworld_emoji_costumes": {
-          "hello_world_new": "בלוק חדש!"
-        },
-        "helloworld_emoji_sizes": {
-          "hello_world_new": "בלוק חדש!",
-          "hello_world_new_block": "בלוק חדש!"
-        },
-        "helloworld_emoji_sounds": {
-          "hello_world_new": "בלוק חדש!"
-        },
-        "helloworld_food_costumes": {
-          "hello_world_new": "בלוק חדש!"
-        },
-        "helloworld_food_sizes": {
-          "hello_world_new": "בלוק חדש!",
-          "hello_world_new_block": "בלוק חדש!"
-        },
-        "helloworld_food_sounds": {
-          "hello_world_new": "בלוק חדש!"
-        },
-        "helloworld_retro_costumes": {
-          "hello_world_new": "בלוק חדש!"
-        },
-        "helloworld_retro_sizes": {
-          "hello_world_new": "בלוק חדש!",
-          "hello_world_new_block": "בלוק חדש!"
-        },
-        "helloworld_retro_sounds": {
-          "hello_world_new": "בלוק חדש!"
-        },
-        "poetry_hoc_addSprites": {
-          "poetry_sprite": "בלוק חדש!"
-        },
-        "poetry_hoc_events1": {
-          "poetry_event": "בלוק חדש!",
-          "poetry_foreground": "בלוק חדש!"
-        },
-        "poetry_hoc_freeplay": {
-          "poetry_burst": "בלוק חדש!",
-          "poetry_multiple_sprites": "בלוק חדש!",
-          "poetry_new_block": "בלוק חדש!",
-          "poetry_selector": "בחרו כל שיר שתרצו, או הוסיפו שיר משלכם!"
-        },
-        "poetry_hoc_sounds": {
-          "poetry_sound": "בלוק חדש!",
-          "poetry_music": "בלוק חדש!"
-        },
-        "poetry_hoc_spriteBehaviors": {
-          "poetry_sprite_begins": "בלוק חדש!",
-          "poetry_sprite_stops": "בלוק חדש!"
-        },
-        "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "בלוק חדש!",
-          "poetry_remove_sprite": "בלוק חדש!"
-        },
         "Function intro Ryan": {
+          "Function_intro_Ryan_1": "ההוראה הקטנטנה אומרת למחשב להריץ את ערמת הקוד הענקית הזאת בסביבת העבודה, באותו השם."
+        },
+        "Function intro Ryan2022": {
           "Function_intro_Ryan_1": "ההוראה הקטנטנה אומרת למחשב להריץ את ערמת הקוד הענקית הזאת בסביבת העבודה, באותו השם."
         },
         "Function intro Ryan_2019": {
@@ -519,7 +480,25 @@
         "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "ההוראה הקטנטנה אומרת למחשב להריץ את ערמת הקוד הענקית הזאת בסביבת העבודה, באותו השם."
         },
+        "Geometric Sun": {
+          "4-5_Artist_Patterns_Free_Play_1": "כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!"
+        },
+        "Geometric Sun_2018": {
+          "4-5_Artist_Patterns_Free_Play_1": "כל הבלוקים המועדפים עליך עכשיו מאורגנים בתוך קטגוריות. לחץ על המילים האלו לאן כל הבלוקים הלכו!"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "הוסיפו את הבלוקים שלכם כאן"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "כשאתם מוכנים, לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "לחצו על \"הרץ\" כדי להתחיל לזוז."
+        },
         "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_1": "זוהי לולאת ה\"חזור\"! הכניסו אותה לסביבת העבודה והוסיפו קוד שתרצו להריץ שוב ושוב."
+        },
+        "MC_HOC_2017_03_Cole2022": {
           "MC_HOC_2017_03_Cole_1": "זוהי לולאת ה\"חזור\"! הכניסו אותה לסביבת העבודה והוסיפו קוד שתרצו להריץ שוב ושוב."
         },
         "MC_HOC_2017_03_Cole_2019": {
@@ -534,6 +513,9 @@
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "הסוכן יכול ללכת על המים, אך השחקן לא יכול!"
         },
+        "MC_HOC_2017_04_Cole2022": {
+          "MC_HOC_2017_04_Cole_a": "הסוכן יכול ללכת על המים, אך השחקן לא יכול!"
+        },
         "MC_HOC_2017_04_Cole_2019": {
           "MC_HOC_2017_04_Cole_a": "הסוכן יכול ללכת על המים, אך השחקן לא יכול!"
         },
@@ -544,6 +526,9 @@
           "MC_HOC_2017_04_Cole_a": "הסוכן יכול ללכת על המים, אך השחקן לא יכול!"
         },
         "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "אתם לא יכולים לזרוק את הבלוקים האלה, אבל אתם יכולים לערוך אותם!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
           "MC_HOC_2017_06_Cole_1": "אתם לא יכולים לזרוק את הבלוקים האלה, אבל אתם יכולים לערוך אותם!"
         },
         "MC_HOC_2017_06_Cole_2019": {
@@ -558,6 +543,9 @@
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "הסוכן יכול לרחף מעל הלבה, אך סטיב ואלכס לא יכולים."
         },
+        "MC_HOC_2017_Ali2022": {
+          "MC_HOC_2017_08_RY_1": "הסוכן יכול לרחף מעל הלבה, אך סטיב ואלכס לא יכולים."
+        },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_1": "הסוכן יכול לרחף מעל הלבה, אך סטיב ואלכס לא יכולים."
         },
@@ -567,14 +555,265 @@
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "הסוכן יכול לרחף מעל הלבה, אך סטיב ואלכס לא יכולים."
         },
-        "Infinity_move_right": {
-          "Infinity_move_right_runbutton": "הוסיפו את הבלוקים שלכם כאן"
+        "New Sprite Lab Project": {
+          "costumes_tab": "לחצו פה כדי להוסיף תחפושות לפרויקט שלכם."
         },
-        "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "כשאתם מוכנים, לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם."
+        "Overworld Chop Trees": {
+          "craft_callout_preplaced": "הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל"
         },
-        "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "לחצו על \"הרץ\" כדי להתחיל לזוז."
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל"
+        },
+        "Overworld Chop Trees_2019": {
+          "craft_callout_preplaced": "הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל"
+        },
+        "Overworld Chop Trees_2020": {
+          "craft_callout_preplaced": "הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל"
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל"
+        },
+        "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו לסיים אותו?"
+        },
+        "Overworld House Frame Chosen2022": {
+          "craft_callout_preplaced_house": "הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו לסיים אותו?"
+        },
+        "Overworld House Frame Chosen_2019": {
+          "craft_callout_preplaced_house": "הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו לסיים אותו?"
+        },
+        "Overworld House Frame Chosen_2020": {
+          "craft_callout_preplaced_house": "הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו לסיים אותו?"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו לסיים אותו?"
+        },
+        "Overworld Move to Sheep": {
+          "craft_drag_block_callout": "גררו את הבלוק \"זוז קדימה\" וחברו אותו מתחת לבלוק הקודם",
+          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_drag_block_callout": "גררו את הבלוק \"זוז קדימה\" וחברו אותו מתחת לבלוק הקודם",
+          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם"
+        },
+        "Overworld Move to Sheep_2019": {
+          "craft_drag_block_callout": "גררו את הבלוק \"זוז קדימה\" וחברו אותו מתחת לבלוק הקודם",
+          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם"
+        },
+        "Overworld Move to Sheep_2020": {
+          "craft_drag_block_callout": "גררו את הבלוק \"זוז קדימה\" וחברו אותו מתחת לבלוק הקודם",
+          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_drag_block_callout": "גררו את הבלוק \"זוז קדימה\" וחברו אותו מתחת לבלוק הקודם",
+          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם"
+        },
+        "Overworld Place Wall": {
+          "craft_inside_repeat": "חזרו על הפעולות באמצעות הצבת בלוקים כאן"
+        },
+        "Overworld Place Wall2022": {
+          "craft_inside_repeat": "חזרו על הפעולות באמצעות הצבת בלוקים כאן"
+        },
+        "Overworld Place Wall_2019": {
+          "craft_inside_repeat": "חזרו על הפעולות באמצעות הצבת בלוקים כאן"
+        },
+        "Overworld Place Wall_2020": {
+          "craft_inside_repeat": "חזרו על הפעולות באמצעות הצבת בלוקים כאן"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "חזרו על הפעולות באמצעות הצבת בלוקים כאן"
+        },
+        "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "הקוד הזה יבדוק אם יש לבה. האם תוכלו להוסיף פקודה כדי לנוע קדימה?"
+        },
+        "Underground Avoiding Lava2022": {
+          "craft_callout_moveforward": "הקוד הזה יבדוק אם יש לבה. האם תוכלו להוסיף פקודה כדי לנוע קדימה?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "craft_callout_moveforward": "הקוד הזה יבדוק אם יש לבה. האם תוכלו להוסיף פקודה כדי לנוע קדימה?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "craft_callout_moveforward": "הקוד הזה יבדוק אם יש לבה. האם תוכלו להוסיף פקודה כדי לנוע קדימה?"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "הקוד הזה יבדוק אם יש לבה. האם תוכלו להוסיף פקודה כדי לנוע קדימה?"
+        },
+        "Underground Iron": {
+          "craft_what_is_iron": "כרו את הברזל הזה!"
+        },
+        "Underground Iron2022": {
+          "craft_what_is_iron": "כרו את הברזל הזה!"
+        },
+        "Underground Iron_2019": {
+          "craft_what_is_iron": "כרו את הברזל הזה!"
+        },
+        "Underground Iron_2020": {
+          "craft_what_is_iron": "כרו את הברזל הזה!"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "כרו את הברזל הזה!"
+        },
+        "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "לחצו על הנורה כשתזדקקו לרמז! "
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "לחצו על הנורה כשתזדקקו לרמז! "
+        },
+        "courseA_maze_seq1_2018": {
+          "courseA_maze_seq1_1": "לחצו על הנורה כשתזדקקו לרמז! "
+        },
+        "courseA_maze_seq1_2019": {
+          "courseA_maze_seq1_1": "לחצו על הנורה כשתזדקקו לרמז! "
+        },
+        "courseA_maze_seq1_2020": {
+          "courseA_maze_seq1_1": "לחצו על הנורה כשתזדקקו לרמז! "
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "לחצו על הנורה כשתזדקקו לרמז! "
+        },
+        "courseA_maze_seq2": {
+          "courseA_maze_seqA_callout1": "השתמשו בכפתור צעד כדי לעקוב צעד-אחר-צעד בתוך הקוד. זה יעזור לכם למצוא את הבאג! "
+        },
+        "courseB_maze_seq1": {
+          "courseB_maze_seq1": "לחצו על הנורה כשתזדקקו לרמז! "
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "לחצו על הנורה כשתזדקקו לרמז! "
+        },
+        "courseB_maze_seq1_2018": {
+          "courseB_maze_seq1": "לחצו על הנורה כשתזדקקו לרמז! "
+        },
+        "courseB_maze_seq1_2019": {
+          "courseB_maze_seq1": "לחצו על הנורה כשתזדקקו לרמז! "
+        },
+        "courseB_maze_seq1_2020": {
+          "courseB_maze_seq1": "לחצו על הנורה כשתזדקקו לרמז! "
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "לחצו על הנורה כשתזדקקו לרמז! "
+        },
+        "courseB_maze_seq2": {
+          "courseB_maze_seq2_callout1": "השתמשו בכפתור צעד כדי לעקוב צעד-אחר-צעד בתוך הקוד. זה יעזור לכם למצוא את הבאג! "
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "לאחר שחיברתם את כל הבלוקים, הקישו על \"הרץ\" להתחיל את התוכנה שלכם."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "זה ארגז הכלים. כאן תמצאו את הבלוקים הדרושים להשלים את החידות שלכם."
+        },
+        "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+        },
+        "courseC_maze_programming32022": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+        },
+        "courseC_maze_programming3_2018": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+        },
+        "courseC_maze_programming3_2019": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+        },
+        "courseC_maze_programming3_2020": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+        },
+        "courseD_bee_conditionals2": {
+          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
+        },
+        "courseD_bee_conditionals22022": {
+          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
+        },
+        "courseD_bee_conditionals2_2018": {
+          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
+        },
+        "courseD_bee_conditionals2_2019": {
+          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
+        },
+        "courseD_bee_conditionals2_2020": {
+          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
+        },
+        "courseD_bee_conditionals2_copy": {
+          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
+        },
+        "courseD_bee_conditionals2_dani": {
+          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
+        },
+        "courseD_farmer_while72022": {
+          "courseD_farmer_while7_2018_PathAhead": "תצטרך להשתמש בבלוק \"כל עוד דרך לפניך\" כדי לפתור את החידה."
+        },
+        "courseD_farmer_while7_2018": {
+          "courseD_farmer_while7_2018_PathAhead": "תצטרך להשתמש בבלוק \"כל עוד דרך לפניך\" כדי לפתור את החידה."
+        },
+        "courseD_farmer_while7_2019": {
+          "courseD_farmer_while7_2018_PathAhead": "תצטרך להשתמש בבלוק \"כל עוד דרך לפניך\" כדי לפתור את החידה."
+        },
+        "courseD_farmer_while7_2020": {
+          "courseD_farmer_while7_2018_PathAhead": "תצטרך להשתמש בבלוק \"כל עוד דרך לפניך\" כדי לפתור את החידה."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "תצטרך להשתמש בבלוק \"כל עוד דרך לפניך\" כדי לפתור את החידה."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "זו מגבלת הבלוקים שלך. זה אומר לך כמה מהבלוקים האלה נותרו לך להשתמש."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "על הבלוקים האלה אין מספרים. אתה יכול להשתמש בכמה שאתה רוצה!"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "לאחר שחיברתם את כל הבלוקים, הקישו על \"הרץ\" להתחיל את התוכנה שלכם."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "זה ארגז הכלים. כאן תמצאו את הבלוקים הנוספים כדי להשלים את החידות שלכם."
+        },
+        "courseD_maze_ramp3": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+        },
+        "courseD_maze_ramp3_2018": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+        },
+        "courseD_maze_ramp3_2019": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+        },
+        "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם.",
+          "stone_block_2": "לא ניתן להפיל את הבלוקים האפורים."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "על הבלוקים האלה אין מספרים. אתה יכול להשתמש בכמה שאתה רוצה!"
+        },
+        "courseD_scrat_ramp3": {
+          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
+        },
+        "courseE_aboutme_22022": {
+          "": "לחצו פה כדי להוסיף תחפושות לפרויקט שלכם."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "הוסיפו את בלוק האירוע הזה אל סביבת העבודה שלכם."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "לחצו פה כדי להוסיף תחפושות לפרויקט שלכם."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות",
+          "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר"
+        },
+        "frozen line": {
+          "move_elsa_forward": "גרור בלוק \"הזז קדימה\" והצמד מתחת לבלוק \"מתי לרוץ\", בשביל שאלזה תזוז קדימה",
+          "run": "לחץ על \"הרץ\" כדי לנסות את התוכנה שלך!"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "השתמש בבלוק \"צור ענף של פתית שלג\""
         },
         "helloworld_animals_backgrounds": {
           "hw_background_location": "השתמשו בבלוק הזה כדי לקבוע רקע חדש"
@@ -584,6 +823,9 @@
         },
         "helloworld_animals_click": {
           "hw_Run": "הקישו כאן כדי להריץ את הקוד."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "בלוק חדש!"
         },
         "helloworld_animals_events": {
           "hello_world_click_hint": "הוסיפו את בלוק האירוע הזה אל סביבת העבודה שלכם."
@@ -598,8 +840,15 @@
           "pin": "סיכה"
         },
         "helloworld_animals_say": {
-          "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר",
-          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות"
+          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות",
+          "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "בלוק חדש!",
+          "hello_world_new_block": "בלוק חדש!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "בלוק חדש!"
         },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "השתמשו בבלוק הזה כדי לקבוע רקע חדש"
@@ -609,6 +858,9 @@
         },
         "helloworld_emoji_click": {
           "hw_Run": "הקישו כאן כדי להריץ את הקוד."
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "בלוק חדש!"
         },
         "helloworld_emoji_events": {
           "hello_world_click_hint": "הוסיפו את בלוק האירוע הזה אל סביבת העבודה שלכם."
@@ -623,33 +875,120 @@
           "pin": "סיכה"
         },
         "helloworld_emoji_say": {
-          "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר",
-          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות"
+          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות",
+          "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "בלוק חדש!",
+          "hello_world_new_block": "בלוק חדש!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "בלוק חדש!"
         },
         "helloworld_food_backgrounds": {
+          "hw_background_location": "השתמשו בבלוק הזה כדי לקבוע רקע חדש"
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "השתמשו בבלוק הזה כדי לקבוע רקע חדש"
+        },
+        "helloworld_food_backgrounds_space-2022": {
           "hw_background_location": "השתמשו בבלוק הזה כדי לקבוע רקע חדש"
         },
         "helloworld_food_behaviors": {
           "hello_world_behavior_blocks": "השתמשו בבלוק זה בשילוב אחת מההתנהגויות שמתחת"
         },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "השתמשו בבלוק זה בשילוב אחת מההתנהגויות שמתחת"
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "השתמשו בבלוק זה בשילוב אחת מההתנהגויות שמתחת"
+        },
         "helloworld_food_click": {
           "hw_Run": "הקישו כאן כדי להריץ את הקוד."
         },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "הקישו כאן כדי להריץ את הקוד."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "לחץ כאן ראשון!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "בלוק חדש!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "בלוק חדש!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "בלוק חדש!"
+        },
         "helloworld_food_events": {
+          "hello_world_click_hint": "הוסיפו את בלוק האירוע הזה אל סביבת העבודה שלכם."
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "הוסיפו את בלוק האירוע הזה אל סביבת העבודה שלכם."
+        },
+        "helloworld_food_events_space-2022": {
           "hello_world_click_hint": "הוסיפו את בלוק האירוע הזה אל סביבת העבודה שלכם."
         },
         "helloworld_food_freeplay": {
           "costumes_tab": "לחצו פה כדי להוסיף תחפושות לפרויקט שלכם."
         },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "לחצו פה כדי להוסיף תחפושות לפרויקט שלכם."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "לחצו פה כדי להוסיף תחפושות לפרויקט שלכם."
+        },
         "helloworld_food_location": {
+          "pin": "סיכה"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "סיכה"
+        },
+        "helloworld_food_location_space-2022": {
           "pin": "סיכה"
         },
         "helloworld_food_multi": {
           "pin": "סיכה"
         },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "סיכה"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "סיכה"
+        },
         "helloworld_food_say": {
-          "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר",
-          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות"
+          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות",
+          "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר"
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות",
+          "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר"
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות",
+          "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "בלוק חדש!",
+          "hello_world_new_block": "בלוק חדש!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "בלוק חדש!",
+          "hello_world_new_block": "בלוק חדש!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "בלוק חדש!",
+          "hello_world_new_block": "בלוק חדש!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "בלוק חדש!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "בלוק חדש!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "בלוק חדש!"
         },
         "helloworld_retro_backgrounds": {
           "hw_background_location": "השתמשו בבלוק הזה כדי לקבוע רקע חדש"
@@ -659,6 +998,9 @@
         },
         "helloworld_retro_click": {
           "hw_Run": "הקישו כאן כדי להריץ את הקוד."
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "בלוק חדש!"
         },
         "helloworld_retro_events": {
           "hello_world_click_hint": "הוסיפו את בלוק האירוע הזה אל סביבת העבודה שלכם."
@@ -673,378 +1015,48 @@
           "pin": "סיכה"
         },
         "helloworld_retro_say": {
-          "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר",
-          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות"
+          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות",
+          "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "בלוק חדש!",
+          "hello_world_new_block": "בלוק חדש!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "בלוק חדש!"
+        },
+        "outbreak2": {
+          "minitoolbox": "לחצו כאן כדי להרחיב את הבלוק.",
+          "pointerlocation": "גררו בלוק נושא לכאן."
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "בלוק חדש!"
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "מצאו בלוקים של קוד פה.",
           "run_button": "נסו את האנימציה שלכם עם הכפתור הזה."
         },
-        "CourseF_outbreak7": {
-          "costumes_callout": "הקישו כדי ליצור תחפושת חדשה"
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
-          "": " "
-        },
-        "CSD U3 Variables Predict Where XY_2021": {
-          "grid": "לחצו כאן על מנת להציג את הרשת."
-        },
-        "CSD U3 Variables Predict Where X_2021": {
-          "CSD_U3_variables": "שנו את המספר כאן"
-        },
-        "CSD U3 debug_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 drawing challenge 2_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 drawing challenge 3_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 drawing practice 1_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 drawing practice 2_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 drawing practice 3_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 ellipse_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 fill_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 properties depth_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 properties tint_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 rect_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד"
-        },
-        "CSD U3 sequence_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 shapes arc_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 shapes behind_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 shapes line_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 shapes missing_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 shapes polygon_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 shapes scene_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 shapes_2021": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U6 colorLeds intensity_2021": {
-          "CSDU6L10_rainbow": "הוסיפו את הקוד שלכם כאן"
-        },
-        "CSD U6 light show_2021": {
-          "CSDUDL03P09": "מה עושה השורה הזאת?"
-        },
-        "CSD U6 tugowar variables 3_2021": {
-          "CSD_U6_checkWin": "בדוק אם השחקן ניצח"
-        },
-        "CSD web text explore_2021": {
-          "CSD_U3_variables": "שנו את המספר כאן"
-        },
-        "courseC_maze_programming1_2021": {
-          "grade2_CaringForNewPet_0_1": "לאחר שחיברתם את כל הבלוקים, הקישו על \"הרץ\" להתחיל את התוכנה שלכם."
-        },
-        "courseC_maze_programming2_2021": {
-          "courseC_maze_programming2_1": "זה ארגז הכלים. כאן תמצאו את הבלוקים הדרושים להשלים את החידות שלכם."
-        },
-        "New Sprite Lab Project": {
-          "costumes_tab": "לחצו פה כדי להוסיף תחפושות לפרויקט שלכם."
-        },
-        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
-          "": " "
-        },
-        "CSD U3 Variables Predict Where XY_2022": {
-          "grid": "לחצו כאן על מנת להציג את הרשת."
-        },
-        "CSD U3 Variables Predict Where X_2022": {
-          "CSD_U3_variables": "שנו את המספר כאן"
-        },
-        "CSD U3 debug_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 drawing challenge 2_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 drawing challenge 3_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 drawing practice 1_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 drawing practice 2_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 drawing practice 3_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 ellipse_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 fill_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 properties depth_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 properties tint_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 rect_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד"
-        },
-        "CSD U3 sequence_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 shapes arc_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 shapes behind_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 shapes line_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 shapes missing_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 shapes polygon_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 shapes scene_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U3 shapes_2022": {
-          "CSD_U3_rect_c1": "הנה הקוד",
-          "CSD_U3_rect_c2": "גררו את הבלוק הזה לתוך איזור הקוד."
-        },
-        "CSD U6 - Color LEDs - SB4_2222": {
-          "CSDU6L10_rainbow": "הוסיפו את הקוד שלכם כאן"
-        },
-        "CSD web text explore_2022": {
-          "CSD_U3_variables": "שנו את המספר כאן"
-        },
-        "CourseD_Dance_2020_012022": {
-          "dance_callout_01": "בחרו כאן את סוג הרקדן."
-        },
-        "CourseD_Dance_2020_022022": {
-          "dance_callout_11_a": "הוסיפו את הבלוק הזה לתוכנה שלכם.",
-          "arrow_buttons": "לחצו על מקשי החיצים כדי לשלוט ברקדן שלכם."
-        },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "הוסיפו את הבלוק הזה לתוכנה שלכם!"
-        },
-        "CourseD_Dance_2020_052022": {
-          "dance_callout_05": "הוסיפו אירוע חדש לתוכנה שלכם."
-        },
-        "CourseD_Dance_2020_062022": {
-          "dance_party_11_5_groups": "בלוק חדש!"
-        },
-        "CourseD_Dance_2020_072022": {
-          "setprop_hint": "בלוק חדש!"
-        },
-        "CourseD_Dance_2020_092022": {
-          "new_block_3": "בלוק חדש!",
-          "new_block_4": "בלוק חדש!"
-        },
-        "CourseF_outbreak2_-2022-2": {
-          "minitoolbox": "לחצו כאן כדי להרחיב את הבלוק.",
-          "pointerlocation": "גררו בלוק נושא לכאן."
-        },
-        "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "לחצו פה כדי להוסיף תחפושות לפרויקט שלכם."
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_1": "ההוראה הקטנטנה אומרת למחשב להריץ את ערמת הקוד הענקית הזאת בסביבת העבודה, באותו השם."
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_1": "זוהי לולאת ה\"חזור\"! הכניסו אותה לסביבת העבודה והוסיפו קוד שתרצו להריץ שוב ושוב."
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "הסוכן יכול ללכת על המים, אך השחקן לא יכול!"
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_1": "אתם לא יכולים לזרוק את הבלוקים האלה, אבל אתם יכולים לערוך אותם!"
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_1": "הסוכן יכול לרחף מעל הלבה, אך סטיב ואלכס לא יכולים."
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "הצבנו מספר בלוקים כאן על מנת לסייע לכם להתחיל"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "הקוד הזה יתחיל לבנות את הבית שלכם. האם תוכלו לסיים אותו?"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "לחצו על \"הרץ\" כדי לנסות את התוכנית שלכם",
-          "craft_drag_block_callout": "גררו את הבלוק \"זוז קדימה\" וחברו אותו מתחת לבלוק הקודם"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "חזרו על הפעולות באמצעות הצבת בלוקים כאן"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "הקוד הזה יבדוק אם יש לבה. האם תוכלו להוסיף פקודה כדי לנוע קדימה?"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "כרו את הברזל הזה!"
-        },
-        "courseA_maze_seq12022": {
-          "courseA_maze_seq1_1": "לחצו על הנורה כשתזדקקו לרמז! "
-        },
-        "courseB_maze_seq12022": {
-          "courseB_maze_seq1": "לחצו על הנורה כשתזדקקו לרמז! "
-        },
-        "courseC_maze_programming32022": {
-          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
-        },
-        "courseD_bee_conditionals22022": {
-          "4_5_Bee_Conditionals_2_1": "זכור, עליך לבדוק *כל* ענן האם הוא מכיל *פרח*. אין צורך לבדוק את הכוורות כלל."
-        },
-        "courseD_farmer_while72022": {
-          "courseD_farmer_while7_2018_PathAhead": "תצטרך להשתמש בבלוק \"כל עוד דרך לפניך\" כדי לפתור את החידה."
-        },
-        "courseD_maze_ramp32022": {
-          "courseC_maze_programming3_2": "תוכל לגרור את הבלוקים העודפים בחזרה את תיבת הכלים כדי להיפטר מהם."
-        },
-        "courseE_aboutme_22022": {
-          "": "לחצו פה כדי להוסיף תחפושות לפרויקט שלכם."
-        },
-        "coursee_helloworld_events": {
-          "hello_world_click_hint": "הוסיפו את בלוק האירוע הזה אל סביבת העבודה שלכם."
-        },
-        "coursee_helloworld_freeplay": {
-          "costumes_tab": "לחצו פה כדי להוסיף תחפושות לפרויקט שלכם."
-        },
-        "coursee_helloworld_say": {
-          "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר",
-          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות"
-        },
-        "helloworld_food_backgrounds_soccer-2022": {
-          "hw_background_location": "השתמשו בבלוק הזה כדי לקבוע רקע חדש"
-        },
-        "helloworld_food_backgrounds_space-2022": {
-          "hw_background_location": "השתמשו בבלוק הזה כדי לקבוע רקע חדש"
-        },
-        "helloworld_food_behaviors_soccer-2022": {
-          "hello_world_behavior_blocks": "השתמשו בבלוק זה בשילוב אחת מההתנהגויות שמתחת"
-        },
-        "helloworld_food_behaviors_space-2022": {
-          "hello_world_behavior_blocks": "השתמשו בבלוק זה בשילוב אחת מההתנהגויות שמתחת"
-        },
-        "helloworld_food_click_soccer-2022": {
-          "hw_Run": "הקישו כאן כדי להריץ את הקוד."
-        },
-        "helloworld_food_costumes_soccer-2022": {
-          "hello_world_new": "בלוק חדש!"
-        },
-        "helloworld_food_costumes_space-2022": {
-          "hello_world_new": "בלוק חדש!"
-        },
-        "helloworld_food_events_soccer-2022": {
-          "hello_world_click_hint": "הוסיפו את בלוק האירוע הזה אל סביבת העבודה שלכם."
-        },
-        "helloworld_food_events_space-2022": {
-          "hello_world_click_hint": "הוסיפו את בלוק האירוע הזה אל סביבת העבודה שלכם."
-        },
-        "helloworld_food_freeplay_soccer-2022": {
-          "costumes_tab": "לחצו פה כדי להוסיף תחפושות לפרויקט שלכם."
-        },
-        "helloworld_food_freeplay_space-2022": {
-          "costumes_tab": "לחצו פה כדי להוסיף תחפושות לפרויקט שלכם."
-        },
-        "helloworld_food_location_soccer-2022": {
-          "pin": "סיכה"
-        },
-        "helloworld_food_location_space-2022": {
-          "pin": "סיכה"
-        },
-        "helloworld_food_multi_soccer-2022": {
-          "pin": "סיכה"
-        },
-        "helloworld_food_multi_space-2022": {
-          "pin": "סיכה"
-        },
-        "helloworld_food_say_soccer-2022": {
-          "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר",
-          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות"
-        },
-        "helloworld_food_say_space-2022": {
-          "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר",
-          "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות"
-        },
-        "helloworld_food_sizes_soccer-2022": {
-          "hello_world_new": "בלוק חדש!",
-          "hello_world_new_block": "בלוק חדש!"
-        },
-        "helloworld_food_sizes_space-2022": {
-          "hello_world_new": "בלוק חדש!",
-          "hello_world_new_block": "בלוק חדש!"
-        },
-        "helloworld_food_sounds_soccer-2022": {
-          "hello_world_new": "בלוק חדש!"
-        },
-        "helloworld_food_sounds_space-2022": {
-          "hello_world_new": "בלוק חדש!"
-        },
-        "helloworld_food_click_space-2022": {
-          "hw_Run": "לחץ כאן ראשון!"
-        },
-        "courseD_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "לאחר שחיברתם את כל הבלוקים, הקישו על \"הרץ\" להתחיל את התוכנה שלכם."
+        "poetry_hoc_events1": {
+          "poetry_event": "בלוק חדש!",
+          "poetry_foreground": "בלוק חדש!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "בלוק חדש!",
+          "poetry_multiple_sprites": "בלוק חדש!",
+          "poetry_new_block": "בלוק חדש!",
+          "poetry_selector": "בחרו כל שיר שתרצו, או הוסיפו שיר משלכם!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_music": "בלוק חדש!",
+          "poetry_sound": "בלוק חדש!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "בלוק חדש!",
+          "poetry_sprite_stops": "בלוק חדש!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "בלוק חדש!",
+          "poetry_set_sprite": "בלוק חדש!"
         }
       }
     }

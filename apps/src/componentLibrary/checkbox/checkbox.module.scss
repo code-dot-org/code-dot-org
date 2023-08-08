@@ -2,6 +2,10 @@
 
 // Checkbox common styles
 .label {
+  display: flex;
+  gap: 8px;
+  align-items: start;
+
   i {
     vertical-align: bottom;
 
@@ -15,7 +19,7 @@
   }
 
   span {
-    margin-left: 8px;
+    margin-bottom: 0;
   }
 
   input[type="checkbox"] {

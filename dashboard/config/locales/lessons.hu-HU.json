@@ -2,463 +2,350 @@
   "hu-HU": {
     "data": {
       "lessons": {
-        "dance-extras/Dance Party - Go Further": {
-          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére.",
-          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével).",
-          "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére."
+        "csd1-2017/Intro to Problem Solving": {
+          "name": "Bevezetés a problémamegoldásba"
         },
-        "minecraft/Minecraft Hour of Code Designer": {
-          "name": "Minecraft Kódolás órája tervező",
-          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra.",
-          "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra."
-        },
-        "hero/Minecraft Hour of Code": {
-          "name": "Minecraft: Hős utazás",
-          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra."
-        },
-        "poem-art-2021/Poem Art": {
-          "name": "Versművészet",
-          "overview": "Ebben az új kódolók számára készült, az IT-t és az angol nyelvet integráló leckében a vers hangulatának illusztrálására a diákok kód segítségével animálnak egy verset. A tanulók elolvasnak egy verset és megismerik annak hangulatát. Ezután megfelelő effekteket és képeket keresnek a vers hangulatának illusztrálására. Végül a tanulók eseményeket (kódot) használnak a hangulatváltozás illusztrálására vagy új képeket animálának egy vershez. \n\nEz a lecke 1 órás önálló leckeként is elvégezhető. Ezt a leckét lehet a [Kódolás költészettel](http://studio.code.org/s/poetry-2021) című több leckéből álló modul első leckéjeként is használni.",
-          "preparation": "-   Tekintsd át és töltsd ki az online oktatóprogramot: [Versművészet](http://studio.code.org/s/poem-art).\n\n-   Először feltétlenül próbáld ki a tevékenységeket, mielőtt megkérnéd a diákokat, hogy végezzék el azokat. \n\n-   Ellenőrizd a technikai felszerelést, és nézd meg, hogy szükség van-e valamilyen előzetes hibaelhárításra.\n\n-   Néhány szint lejátszásához hang szükséges. Adjál ki előre fejhallgatókat. \n\n-   [Választható] Tanulónként 2 öntapadós jegyzetlap az értékeléshez."
-        },
-        "flappy/Flappy Code": {
-          "name": "Flappy kód"
-        },
-        "hello-world-soccer-2022/Hello World: Food": {
-          "name": "Helló Világ: Labdarúgás",
-          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak sprite-okat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
-          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
-          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
-        },
-        "hourofcode/Maze": {
-          "name": "Labirintus",
-          "overview": "Ebben a leckében a tanulók egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ezt a leckét 4-10 éves fiatal tanulók számára terveztük, de bármely korosztályba tartozók elvégezhetik, mert a megadott differenciálási javaslatok segítségével az idősebb tanulók számára is adaptálható.",
-          "student_overview": "Ebben a leckében a tanulók egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ezt a leckét 4-10 éves fiatal tanulók számára terveztük, de bármely korosztályba tartozók elvégezhetik, mert a megadott differenciálási javaslatok segítségével az idősebb tanulók számára is adaptálható."
-        },
-        "frozen/Artist": {
-          "name": "Kódolás Annával és Elsával",
-          "overview": "Ebben a leckében a tanulók egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ezt a leckét 10-13 éves felsőtagozatosok tanulók számára terveztük, de a megadott differenciálási javaslatok segítségével fiatalabb és idősebb tanulók számára is adaptálható. A diákoknak ismerniük kell a geometria és szögrajzolás alapjait.",
-          "student_overview": "Ebben a leckében a tanulók egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ezt a leckét 10-13 éves felsőtagozatosok tanulók számára terveztük, de a megadott differenciálási javaslatok segítségével fiatalabb és idősebb tanulók számára is adaptálható. A diákoknak ismerniük kell a geometria és szögrajzolás alapjait."
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "Jégkorszak játéklabor",
-          "student_overview": "Ebben a leckében a tanulók az informatikával ismerkednek, és egy játékot készítenek alapvető blokkkódok felhasználásával."
-        },
-        "hello-world-emoji-2021/Hello World": {
-          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak sprite-okat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
-          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
-          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
-        },
-        "artist/Artist": {
-          "name": "Művész"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "Gumball Játéklabor"
-        },
-        "dance/Dance Party": {
-          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére.",
-          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével).",
-          "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére."
-        },
-        "hello-world-food-2021/Hello World": {
-          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak sprite-okat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
-          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
-          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
-        },
-        "aquatic/Aquatic": {
-          "name": "Minecraft: Tengeri utazás",
-          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra."
-        },
-        "hoc-encryption/Simple Encryption": {
-          "name": "Egyszerű titkosítás",
-          "overview": "Ebben a leckében a diákok megismerkednek a titkosítás fontosságával és a titkos üzenetek felfedésének (vagy feltörésének) egyszerű technikáival.  A diákok saját kezűleg próbálnak meg feltörni egy klasszikus Caesar-kódolású üzenetet, valamint egy véletlenszerű helyettesítéses rejtjelet.  A tanulóknak meg kell ismerkedniük azzal a gondolattal, hogy a nagy teljesítményű számítási eszközök korában a titkosítási technikáknak egyre kifinomultabbnak kell lenniük.  A lecke legfontosabb üzenete, hogy megértsék, hogyan és miért játszik szerepet a titkosítás mindannyiunk mindennapi életében az interneten, és hogy a jó titkosítás nem egyszerű feladat.  A diákok megismerkednek azzal is, hogy mit kell figyelembe venniük erős titkosítás készítésekor, ha nagy teljesítményű számítási eszközökkel állnak szemben. Aki az internetet használja és biteket küld, annak a titkosításra szüksége van.",
-          "student_overview": "Ebben a leckében a diákok megismerkednek a titkosítás fontosságával és a titkos üzenetek felfedésének (vagy feltörésének) egyszerű technikáival.  A diákok saját kezűleg próbálnak meg feltörni egy klasszikus Caesar-kódolású üzenetet, valamint egy véletlenszerű helyettesítéses rejtjelet.  A tanulóknak meg kell ismerkedniük azzal a gondolattal, hogy a nagy teljesítményű számítási eszközök korában a titkosítási technikáknak egyre kifinomultabbnak kell lenniük.  A lecke legfontosabb üzenete, hogy megértsék, hogyan és miért játszik szerepet a titkosítás mindannyiunk mindennapi életében az interneten, és hogy a jó titkosítás nem egyszerű feladat.  A diákok megismerkednek azzal is, hogy mit kell figyelembe venniük erős titkosítás készítésekor, ha nagy teljesítményű számítási eszközökkel állnak szemben. Aki az internetet használja és biteket küld, annak a titkosításra szüksége van."
-        },
-        "hello-world-space-2022/Hello World: Food": {
-          "name": "Helló Világ: Space",
-          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak sprite-okat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
-          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
-          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
-        },
-        "hello-world-animals-2021/Hello World": {
-          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak sprite-okat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
-          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
-          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
-        },
-        "starwars/Hour of Code 2015": {
-          "name": "Star Wars: Egy galaxis építése kóddal (JavaScript)",
-          "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ennek a leckének két változata van. "
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Minecraft Kódolás Órája",
-          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra.",
-          "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra."
-        },
-        "playlab/Play Lab": {
-          "name": "Játéklabor",
-          "student_overview": "Ebben a leckében a tanulók az informatikával ismerkednek, és egy játékot készítenek alapvető blokkkódok felhasználásával."
-        },
-        "applab-intro/Intro to App Lab": {
-          "student_overview": "Az oktatócsomag végén a diákok képesek lesznek egy korábban elkezdett projektet egy „Válassz saját kalandot”, „Üdvözlőkártya” vagy „Személyiségkvíz” alkalmazássá fejleszteni. A code.org/applab oldalon bemutatott további projektek építését is lehet folytatni.\n\nJó szórakozást az App Lab segítségével elvégzendő Kódolás órájához!"
-        },
-        "hello-world-retro-2021/Hello World": {
-          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak sprite-okat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
-          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
-          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
-        },
-        "starwarsblocks/Hour of Code 2015": {
-          "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ennek a leckének két változata van. "
-        },
-        "text-compression/Text Compression": {
-          "name": "Szöveg tömörítése",
-          "student_overview": "Egy bizonyos ponton elérjük a fizikai határát annak, hogy milyen gyorsan tudunk biteket küldeni, és ezért, ha szeretnénk nagyobb információ mennyiséget gyorsabban küldeni, akkor meg kell próbálni ugyanannyi információt kevesebb biten tárolni - tömöríteni kell az adatokat.  "
-        },
-        "outbreak/Outbreak": {
-          "overview": "Ez a leckében az események köré épülő **készségfejlesztést** kombináljuk egy **miniprojekttel**, ahol a diákok saját számítógépes szimulációt készíthetnek a Sprite Lab program segítségével. A diákok tanulmányozva a szimulációt megértik, hogy milyen gyorsan terjed egy vírus, és hogy mit lehet tenni a terjedés lassítása érdekében. ",
-          "preparation": "- Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n- Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti.",
-          "purpose": "Az előző leckében a diákok egy egyszerű szimulációból származó adatokat gyűjtöttek és értelmeztek.  Ebben a leckében a diákok az utasításokat követve saját szimulációs modelljüket programozzák. A diákok a valós világban előforduló vírusjárványokról szerzett előzetes ismereteiket egy fiktív forgatókönyvre fogják alkalmazni. ",
-          "student_overview": "Egy vírus elérte Szörnyvárost! Tanulj meg vírusszimulátort készíteni, és segíts a szörnyeknek, hogy újra egészségesek legyenek."
-        },
-        "infinity/Infinity": {
-          "name": "Disney Infinity játéklabor",
-          "student_overview": "Ebben a leckében a tanulók az informatikával ismerkednek, és egy játékot készítenek alapvető blokkkódok felhasználásával."
-        },
-        "dance-extras-2019/Dance Party - Go Further": {
-          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Kódolás órája 2013"
-        },
-        "dance-2019/Dance Party": {
-          "name": "Táncos buli",
-          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére.",
-          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével).",
-          "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére."
-        },
-        "oceans/Oceans": {
-          "name": "AI óceánok",
-          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Először a diákok szemetet próbálnak eltávolítani az óceánból és a tárgyakat \"hal\" vagy \"nem hal\" kategóriába sorolják. Ezután a tanulóknak ki kell bővíteniük az adathalmazt más tengeri élőlénnyel. A foglalkozás második részében a tanulók maguk választanak címkéket, amelyeket a véletlenszerűen generált halak képeire helyeznek. Ezeket az adatokat egy gépi tanuló modellben használják, amely ezután képes lesz arra, hogy önállóan címkézzen fel új képeket."
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Ciklusok"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Események"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "Feltételek"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "Függvények"
-        },
-        "k5-onlinepd-2019/Variables": {
-          "name": "változók"
-        },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "Számláló ciklusok"
-        },
-        "k5-onlinepd-2019/Sprite Lab": {
-          "name": "Sprite labor"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Hangulat tanulmányozása"
-        },
-        "K5-OnlinePD/Getting Started": {
-          "name": "Első lépések"
-        },
-        "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "A számítógép-tudomány alapjai"
-        },
-        "K5-OnlinePD/Planning": {
-          "name": "Tervezés"
-        },
-        "kodea-pd-2021/Getting Started": {
-          "name": "Első lépések"
-        },
-        "kodea-pd-2021/Computer Science Fundamentals": {
-          "name": "A számítógép-tudomány alapjai"
-        },
-        "kodea-pd-2021/Planning": {
-          "name": "Tervezés"
-        },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "Grafikus programozás"
-        },
-        "coursed-2022/Relay Programming": {
-          "name": "Váltó programozás"
-        },
-        "coursed-2022/Dance Party": {
-          "name": "Táncos buli",
-          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
-        },
-        "coursed-2022/Conditionals with Cards": {
-          "name": "Feltételek kártyákkal"
-        },
-        "coursed-2022/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "coursef-2022/Mini-Project: Virtual Pet": {
-          "name": "Miniprojekt: Virtuális kisállat",
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursef-2022/Mini-Project: User Input Programs": {
-          "name": "Miniprojekt: Felhasználói adatbeviteli programok"
-        },
-        "coursef-2022/Outbreak": {
-          "overview": "Ez a leckében az események köré épülő **készségfejlesztést** kombináljuk egy **miniprojekttel**, ahol a diákok saját számítógépes szimulációt készíthetnek a Sprite Lab program segítségével. A diákok tanulmányozva a szimulációt megértik, hogy milyen gyorsan terjed egy vírus, és hogy mit lehet tenni a terjedés lassítása érdekében. ",
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti.",
-          "purpose": "Az előző leckében a diákok egy egyszerű szimulációból származó adatokat gyűjtöttek és értelmeztek.  Ebben a leckében a diákok az utasításokat követve saját szimulációs modelljüket programozzák. A diákok a valós világban előforduló vírusjárványokról szerzett előzetes ismereteiket egy fiktív forgatókönyvre fogják alkalmazni. ",
-          "student_overview": "Egy vírus elérte Szörnyvárost! Tanulj meg vírusszimulátort készíteni, és segíts a szörnyeknek, hogy újra egészségesek legyenek."
-        },
-        "coursef-2022/The Internet": {
-          "name": "Az internet"
-        },
-        "coursef-2022/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "coursee-2022/Private and Personal Information": {
-          "name": "Magán és személyes információk",
-          "preparation": "-   Az oktatási anyagok áttekintése.\n-   Egyes tanulók szórólapjának nyomtatása."
-        },
-        "coursee-2022/Swimming Fish with Sprite Lab": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursee-2022/Hello World: Food": {
-          "name": "Helló világ"
-        },
-        "coursee-2022/Mini-Project: About Me": {
-          "name": "Miniprojekt: Rólam"
-        },
-        "coursee-2022/Drawing with Loops": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursee-2022/Songwriting": {
-          "name": "Dalszerzés paraméterekkel"
-        },
-        "coursee-2022/Functions in Minecraft": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursee-2022/Functions with Artist": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursee-2022/Conditionals with the Farmer": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursee-2022/Functions with Harvester": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursee-2022/Designing for Accessibility": {
-          "name": "Hozzáférhetőség tervezése"
-        },
-        "coursee-2022/Digital Sharing": {
-          "name": "Digitális megosztás"
-        },
-        "coursee-2022/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "courseb-2022/Digital Trails": {
-          "name": "Digitális útonalak",
-          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEzt a leckét eredetileg a Common Sense Education készítette. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAmit online csinálsz, az mindig online marad? A diákok megtanulják, hogy az általuk online megosztott információk digitális lábnyomot hagynak maguk után. Az, hogy ez az útvonal egy keskeny ösvény lesz-e, vagy egy széles út, káros lesz-e számukra, vagy hasznos, attól függ, hogy hogyan kezelik ezt a lábnyomot. A tanulók összehasonlíthatják a különféle nyomvonalakat, és elsajátíthatják a kritikus gondolkodást, ami alapján képesek lesznek megfelelő döntéseket hozni arról, hogy milyen információkat hagynak maguk után a digiális úton.",
-          "preparation": "-   Az oktatási anyagok áttekintése.\n-   Egyes tanulók szórólapjának nyomtatása.",
-          "purpose": "A Common Sense digitális állampolgársági tanterve a gyermekekkel, a médiával és a technológiával kapcsolatos legújabb kitatások alapján hat fő témakörrel foglalkozik. Ez a lecke a digitális lábnyomra és identitásra összpontosít. A tanulók megismerik az online megosztás előnyeit és kockázatait, és felfedezik, hogy a digitális személyiség hogyan befolyásolhatja az önismeretet, hírnevet, és a kapcsolatokat.",
-          "student_overview": "A digitális lábnyom megismerése, valamint a biztonság megteremtése a webhelyek látogatása során. "
-        },
-        "courseb-2022/Move It, Move It": {
-          "name": "Gyerünk, gyerünk!"
-        },
-        "courseb-2022/Programming with Harvester": {
-          "name": "Programozás az aratóval"
-        },
-        "courseb-2022/Getting Loopy": {
-          "name": "Ciklikusság"
-        },
-        "courseb-2022/The Right App": {
-          "name": "A megfelelő alkalmazás"
-        },
-        "courseb-2022/The Big Event Jr": {
-          "name": "Az ifjabbik Nagy Esemény"
-        },
-        "courseb-2022/Mini-Project: A Royal Battle with Events": {
-          "name": "Mini-projekt: Királyi csata eseményekkel"
-        },
-        "courseb-2022/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "express-2022/Dance Party": {
-          "name": "Táncos buli",
-          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
-        },
-        "express-2022/Loops with Rey and BB-8": {
-          "name": "Ciklusok Reyjel és BB-8-tel",
-          "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
-        },
-        "express-2022/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "pre-express-2022/Learn to Drag and Drop": {
-          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
-        },
-        "pre-express-2022/Programming with Rey and BB-8": {
-          "name": "Programozás Rey és BB-8 segítségével",
-          "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva."
-        },
-        "pre-express-2022/Programming with Harvester": {
-          "name": "Programozás az aratóval"
-        },
-        "pre-express-2022/A Royal Battle with Events": {
-          "name": "Királyi csata eseményekkel"
-        },
-        "coursea-2022/Learn to Drag and Drop": {
-          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
-        },
-        "coursea-2022/Happy Maps": {
-          "name": "Vidám térképek"
-        },
-        "coursea-2022/Programming with Rey and BB-8": {
-          "name": "Programozás Rey és BB-8 segítségével",
-          "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.",
-          "student_overview": "Segíts BB-8-nek begyűjteni a fémdarabokat"
-        },
-        "coursea-2022/The Big Event Jr": {
-          "name": "Az ifjabbik Nagy Esemény"
-        },
-        "coursea-2022/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "coursec-2022/Loops with Rey and BB-8": {
-          "name": "Ciklusok Reyjel és BB-8-tel",
-          "overview": "A „Getting Loopy” című utasítások ismétlődésének koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak, amiben BB-8 lesz a segítségükre.",
-          "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
-        },
-        "coursec-2022/The Big Event": {
-          "name": "A nagy esemény"
-        },
-        "coursec-2022/Picturing Data": {
-          "name": "Az adatok leképezése"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "Bináris karkötők"
-        },
-        "coursec-2022/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "csd5-2022/Representing Images": {
-          "name": "Képek ábrázolása"
-        },
-        "csd5-2022/Combining Representations": {
-          "name": "Ábrázolások kombinálása"
-        },
-        "csd5-2022/Keeping Data Secret": {
-          "name": "Adatok titokban tartása"
-        },
-        "csd5-2022/CS Discoveries Post-Course Survey": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
-        },
-        "csd1-2022/Intro to Problem Solving": {
-          "name": "Bevezetés a problémamegoldásba",
-          "preparation": "**Minden csoportnak**\n\n-   2 lap aufólia, mindkettő 13x13 cm méretben.\n-   1 tároló, amiben elfér 7-13 cm víz\n-   Több papírtörlő vagy rongyok, amiket a tárol alá lehet helyezni\n-   15 penny\n-   1 másolat a tevékenységi útmutatóról\n\n**A tanároknak**\n\n-   1 tároló, amiben elfér 7-13 cm víz\n-   50 penny\n-   Extra papírtörlő vagy rongyok\n-   Nézze meg a [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) fórumot az ellenőrzött tanárok számára, hogy további stratégiákat vagy forrásokat találjon, amelyeket tanártársaik is megosztottak.\n-   Ha virtuálisan tanít, fontolja meg a [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)-ünk megnézését."
-        },
-        "csd1-2022/The Problem Solving Process": {
+        "csd1-2017/The Problem Solving Process": {
           "name": "A probléma-megoldási folyamat"
         },
-        "csd1-2022/Exploring Problem Solving": {
+        "csd1-2017/Exploring Problem Solving": {
           "name": "A Problémamegoldás Felfedezése"
         },
-        "csd1-2022/What is a Computer?": {
+        "csd1-2017/What is a Computer?": {
           "name": "Mi az a számítógép?"
         },
-        "csd1-2022/Input and Output": {
+        "csd1-2017/Input and Output": {
           "name": "Bemenet és Kimenet"
         },
-        "csd1-2022/Processing": {
+        "csd1-2017/Processing": {
           "name": "Feldolgozás"
         },
-        "csd1-2022/Storage": {
+        "csd1-2017/Storage": {
           "name": "Tárhely"
         },
-        "csd1-2022/Project - Propose an App": {
+        "csd1-2017/Apps and Problem Solving": {
+          "name": "Appok és Problémamegoldás"
+        },
+        "csd1-2017/Project - Propose an App": {
           "name": "Projekt - Javasolj egy Alkalmazást"
         },
-        "csd3-2022/Variables": {
-          "name": "változók"
+        "csd2-2017/Exploring Websites": {
+          "name": "Weboldalak Felfedezése"
         },
-        "csd3-2022/Random Numbers": {
-          "name": "Véletlen számok"
+        "csd2-2017/Websites for Expression ": {
+          "name": "Weboldalak a Kifejezéshez "
         },
-        "csd3-2022/Sprites": {
-          "name": "sprite-ok"
-        },
-        "csd3-2022/Sprite Properties": {
-          "name": "Sprite tulajdonságok"
-        },
-        "csd3-2022/Text": {
-          "name": "szöveg"
-        },
-        "csd3-2022/Conditionals": {
-          "name": "Feltételek"
-        },
-        "csd3-2022/Keyboard Input": {
-          "name": "Billentyűzetbemenet"
-        },
-        "csd3-2022/Velocity": {
-          "name": "Sebesség"
-        },
-        "csd3-2022/Collisions": {
-          "name": "Ütközések"
-        },
-        "csd3-2022/Functions": {
-          "name": "Függvények"
-        },
-        "csd3-2022/CS Discoveries Post-Course Survey": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
-        },
-        "csd2-2022/Intro to HTML": {
+        "csd2-2017/Intro to HTML": {
           "name": "Bevezetés a HTML-be"
         },
-        "csd2-2022/Headings": {
+        "csd2-2017/Headings": {
           "name": "Címsorok"
         },
-        "csd2-2022/Digital Footprint": {
+        "csd2-2017/Digital Footprint": {
           "name": "Digitális Lábnyom"
         },
-        "csd2-2022/Styling Text with CSS": {
+        "csd2-2017/Lists": {
+          "name": "Listák"
+        },
+        "csd2-2017/Intellectual Property and Images": {
+          "name": "Szellemi Tulajdon és Képek"
+        },
+        "csd2-2017/Clean Code and Debugging": {
+          "name": "Tiszta Kód és Debugolás"
+        },
+        "csd2-2017/Project - Multi-Page Websites": {
+          "name": "Projekt - Több Oldalas Weboldal"
+        },
+        "csd2-2017/Styling Text with CSS": {
           "name": "Szöveg Stilizálása CSS-ben"
         },
-        "csd2-2022/Styling Elements with CSS": {
+        "csd2-2017/Styling Elements with CSS": {
           "name": "Elemek stilizálása CSS-el"
         },
-        "csd2-2022/CSS Classes": {
-          "name": "CSS osztályok"
+        "csd2-2017/Sources and Search Engines": {
+          "name": "Források és Keresőmotorok"
         },
-        "csd2-2022/Linking Pages": {
-          "name": "Oldalak összekapcsolása"
+        "csd2-2017/RGB Colors and Classes": {
+          "name": "RGB Színek és Osztályok"
         },
-        "csd2-2022/CS Discoveries Post-Course Survey": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        "csd2-2017/Project - Personal Portfolio Website": {
+          "name": "Projekt - Személyes Portfólió Weboldal"
         },
-        "csd4-2022/CS Discoveries Post-Course Survey": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        "csd3-2017/Variables": {
+          "name": "változók"
         },
-        "csd6-2022/Board Events": {
-          "name": "Táblás események"
+        "csd3-2017/Sprites": {
+          "name": "sprite-ok"
         },
-        "csd6-2022/Color LEDs": {
-          "name": "Színes LED-ek"
+        "csd3-2017/Conditionals": {
+          "name": "Feltételek"
         },
-        "csd6-2022/Making Music": {
-          "name": "Zene Készítése"
+        "csd3-2017/Keyboard Input": {
+          "name": "Billentyűzetbemenet"
         },
-        "csd6-2022/Functions": {
+        "csd3-2017/Velocity": {
+          "name": "Sebesség"
+        },
+        "csd3-2017/Collisions": {
+          "name": "Ütközések"
+        },
+        "csd3-2017/Functions": {
           "name": "Függvények"
         },
-        "csd6-2022/CS Discoveries Post-Course Survey": {
+        "csd4-2017/Linking Screens": {
+          "name": "Képernyők összekapcsolása"
+        },
+        "csd5-2017/Representing Images": {
+          "name": "Képek ábrázolása"
+        },
+        "csd5-2017/Keeping Data Secret": {
+          "name": "Adatok titokban tartása"
+        },
+        "csd5-2017/Combining Representations": {
+          "name": "Ábrázolások kombinálása"
+        },
+        "csd6-2017/Board Events_": {
+          "name": "Táblás események"
+        },
+        "csd6-2017/Getting Properties_": {
+          "name": "Tulajdonságok szerzése"
+        },
+        "csd6-2017/Making Music_": {
+          "name": "Zene Készítése"
+        },
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Paraméteres függvények"
+        },
+        "coursea-2017/Debugging: Unspotted Bugs": {
+          "name": "Hibakeresés: Észrevétlen hibák"
+        },
+        "coursea-2017/Persistence & Frustration: Stevie and the Marbles": {
+          "name": "Kitartás: Stevie és a nagy projekt"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Valós algoritmusok: Ültess el egy magot!"
+        },
+        "coursea-2017/Learn to Drag and Drop": {
+          "name": "Sorba rendezés húzással"
+        },
+        "coursea-2017/Loops in Collector": {
+          "name": "Ciklusok a gyűjtővel"
+        },
+        "courseb-2017/Debugging: Unspotted Bugs": {
+          "name": "Hibakeresés: Észrevétlen hibák"
+        },
+        "courseb-2017/Persistence & Frustration: Stevie and the Marbles": {
+          "name": "Kitartás: Stevie és a nagy projekt"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Valós algoritmusok: Ültess el egy magot!"
+        },
+        "courseb-2017/Learn to Drag and Drop": {
+          "name": "Sorba rendezés húzással"
+        },
+        "courseb-2017/Your Digital Footprint": {
+          "name": "Digitális állampolgárság: Digitális lábnyomom"
+        },
+        "courseb-2017/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével"
+        },
+        "courseb-2017/Loops in Collector": {
+          "name": "Ciklusok a gyűjtővel"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Hétköznapi algoritmusok: Papírrepülők"
+        },
+        "coursec-2017/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Egymásba ágyazott ciklusok"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Az alap megépítése"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Egymásba ágyazott ciklusok"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Az alap megépítése"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Algoritmusok: tangram"
+        },
+        "express-2017/Introduction": {
+          "name": "Bevezető"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Az alap megépítése"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Egymásba ágyazott ciklusok"
+        },
+        "pre-express-2017/Debugging: Unspotted Bugs": {
+          "name": "Hibakeresés: Észrevétlen hibák"
+        },
+        "pre-express-2017/Persistence & Frustration: Stevie and the Marbles": {
+          "name": "Kitartás: Stevie és a nagy projekt"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Valós algoritmusok: Ültess el egy magot!"
+        },
+        "pre-express-2017/Learn to Drag and Drop": {
+          "name": "Sorba rendezés húzással"
+        },
+        "pre-express-2017/Online Safety: Your Digital Footprint": {
+          "name": "Digitális állampolgárság: Digitális lábnyomom"
+        },
+        "pre-express-2017/Programming: Star Wars": {
+          "name": "Programozás: Star Wars"
+        },
+        "pre-express-2017/Loops in Collector": {
+          "name": "Ciklusok a gyűjtővel"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Betüző méh"
+        },
+        "csd1-2018/Intro to Problem Solving": {
+          "name": "Bevezetés a problémamegoldásba"
+        },
+        "csd1-2018/The Problem Solving Process": {
+          "name": "A probléma-megoldási folyamat"
+        },
+        "csd1-2018/Exploring Problem Solving": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
+        "csd1-2018/What is a Computer?": {
+          "name": "Mi az a számítógép?"
+        },
+        "csd1-2018/Input and Output": {
+          "name": "Bemenet és Kimenet"
+        },
+        "csd1-2018/Processing": {
+          "name": "Feldolgozás"
+        },
+        "csd1-2018/Project - Propose an App": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
+        },
+        "csd2-2018/Exploring Websites": {
+          "name": "Weboldalak Felfedezése"
+        },
+        "csd2-2018/Websites for Expression ": {
+          "name": "Weboldalak a Kifejezéshez "
+        },
+        "csd2-2018/Intro to HTML": {
+          "name": "Bevezetés a HTML-be"
+        },
+        "csd2-2018/Headings": {
+          "name": "Címsorok"
+        },
+        "csd2-2018/Digital Footprint": {
+          "name": "Digitális Lábnyom"
+        },
+        "csd2-2018/Lists": {
+          "name": "Listák"
+        },
+        "csd2-2018/Intellectual Property and Images": {
+          "name": "Szellemi Tulajdon és Képek"
+        },
+        "csd2-2018/Clean Code and Debugging": {
+          "name": "Tiszta Kód és Debugolás"
+        },
+        "csd2-2018/Project - Multi-Page Websites": {
+          "name": "Projekt - Több Oldalas Weboldal"
+        },
+        "csd2-2018/Styling Text with CSS": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "csd2-2018/Styling Elements with CSS": {
+          "name": "Elemek stilizálása CSS-el"
+        },
+        "csd2-2018/Sources and Search Engines": {
+          "name": "Források és Keresőmotorok"
+        },
+        "csd2-2018/RGB Colors and Classes": {
+          "name": "RGB Színek és Osztályok"
+        },
+        "csd2-2018/Project - Personal Portfolio Website": {
+          "name": "Projekt - Személyes Portfólió Weboldal"
+        },
+        "csd2-2018/CS Discoveries Post-Course Survey": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
         },
-        "csd7-2022/CS Discoveries Post-Course Survey": {
+        "csd3-2018/Variables": {
+          "name": "változók"
+        },
+        "csd3-2018/Sprites": {
+          "name": "sprite-ok"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Feltételek"
+        },
+        "csd3-2018/Keyboard Input": {
+          "name": "Billentyűzetbemenet"
+        },
+        "csd3-2018/Velocity": {
+          "name": "Sebesség"
+        },
+        "csd3-2018/Collisions": {
+          "name": "Ütközések"
+        },
+        "csd3-2018/Functions": {
+          "name": "Függvények"
+        },
+        "csd3-2018/CS Discoveries Post-Course Survey": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd4-2018/Linking Screens": {
+          "name": "Képernyők összekapcsolása"
+        },
+        "csd4-2018/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd5-2018/Representing Images": {
+          "name": "Képek ábrázolása"
+        },
+        "csd5-2018/Keeping Data Secret": {
+          "name": "Adatok titokban tartása"
+        },
+        "csd5-2018/Combining Representations": {
+          "name": "Ábrázolások kombinálása"
+        },
+        "csd5-2018/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd6-2018/Board Events": {
+          "name": "Táblás események"
+        },
+        "csd6-2018/Getting Properties": {
+          "name": "Tulajdonságok szerzése"
+        },
+        "csd6-2018/Making Music": {
+          "name": "Zene Készítése"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Paraméteres függvények"
+        },
+        "csd6-2018/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "Vidám térképek"
+        },
+        "coursea-2018/Programming in Harvester": {
+          "name": "Programozás az aratóval"
+        },
+        "coursea-2018/Going Places Safely": {
+          "name": "Biztonságos utazás"
+        },
+        "coursea-2018/Events: The Big Event": {
+          "name": "Az ifjabbik Nagy Esemény"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Gyerünk, gyerünk!"
+        },
+        "courseb-2018/Sequencing with Scrat": {
+          "name": "Szekvenciák a Motkánnyal"
         },
         "courseb-2018/Your Digital Footprint": {
           "name": "A digitális lábnyomod"
@@ -475,17 +362,20 @@
         "courseb-2018/Events in Play Lab": {
           "name": "Királyi csata eseményekkel"
         },
-        "coursea-2018/Programming: Happy Maps": {
-          "name": "Vidám térképek"
+        "coursec-2018/Building a Foundation": {
+          "name": "Az alap megépítése"
         },
-        "coursea-2018/Programming in Harvester": {
-          "name": "Programozás az aratóval"
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Ciklikusság"
         },
-        "coursea-2018/Going Places Safely": {
-          "name": "Biztonságos utazás"
+        "coursec-2018/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel"
         },
-        "coursea-2018/Events: The Big Event": {
-          "name": "Az ifjabbik Nagy Esemény"
+        "coursec-2018/Events: The Big Event": {
+          "name": "A nagy esemény"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Bináris karkötők"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Grafikus programozás"
@@ -501,6 +391,33 @@
         },
         "coursed-2018/Unplugged: Binary": {
           "name": "Bináris képek"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "A robot barátaim"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Az alap megépítése"
+        },
+        "coursee-2018/Loops: My Loopy Robotic Friends": {
+          "name": "Ciklusos robot barátim"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Feltételek kártyákkal"
+        },
+        "coursee-2018/Private and Personal Information": {
+          "name": "Magán és személyes információk"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Dalszerzés paraméterekkel"
+        },
+        "coursee-2018/Copyright and Creativity": {
+          "name": "Digitális megosztás"
+        },
+        "coursee-2018/Internet": {
+          "name": "Az internet"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Csoportos megoldás"
         },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "A robot barátaim"
@@ -562,50 +479,11 @@
         "express-2018/Crowdsourcing": {
           "name": "Csoportos megoldás"
         },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "A robot barátaim"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "Az alap megépítése"
-        },
-        "coursee-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Ciklusos robot barátim"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "Feltételek kártyákkal"
-        },
-        "coursee-2018/Private and Personal Information": {
-          "name": "Magán és személyes információk"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "Dalszerzés paraméterekkel"
-        },
-        "coursee-2018/Copyright and Creativity": {
-          "name": "Digitális megosztás"
-        },
-        "coursee-2018/Internet": {
-          "name": "Az internet"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Csoportos megoldás"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "Az alap megépítése"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Ciklikusság"
-        },
-        "coursec-2018/Loops with Rey and BB-8": {
-          "name": "Ciklusok Reyjel és BB-8-tel"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "A nagy esemény"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Bináris karkötők"
-        },
         "pre-express-2018/Move It, Move It": {
           "name": "Gyerünk, gyerünk!"
+        },
+        "pre-express-2018/Sequencing with Scrat": {
+          "name": "Szekvenciák a Motkánnyal"
         },
         "pre-express-2018/Your Digital Footprint": {
           "name": "A digitális lábnyomod"
@@ -624,300 +502,6 @@
         },
         "pre-express-2018/Spelling Bee": {
           "name": "Betüző méh"
-        },
-        "csd3-2018/Variables": {
-          "name": "változók"
-        },
-        "csd3-2018/Sprites": {
-          "name": "sprite-ok"
-        },
-        "csd3-2018/Conditionals": {
-          "name": "Feltételek"
-        },
-        "csd3-2018/Keyboard Input": {
-          "name": "Billentyűzetbemenet"
-        },
-        "csd3-2018/Velocity": {
-          "name": "Sebesség"
-        },
-        "csd3-2018/Collisions": {
-          "name": "Ütközések"
-        },
-        "csd3-2018/Functions": {
-          "name": "Függvények"
-        },
-        "csd3-2018/CS Discoveries Post-Course Survey": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
-        },
-        "csd6-2018/Board Events": {
-          "name": "Táblás események"
-        },
-        "csd6-2018/Getting Properties": {
-          "name": "Tulajdonságok szerzése"
-        },
-        "csd6-2018/Making Music": {
-          "name": "Zene Készítése"
-        },
-        "csd6-2018/Functions with Parameters": {
-          "name": "Paraméteres függvények"
-        },
-        "csd6-2018/CS Discoveries Post-Course Survey": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
-        },
-        "csd5-2018/Representing Images": {
-          "name": "Képek ábrázolása"
-        },
-        "csd5-2018/Keeping Data Secret": {
-          "name": "Adatok titokban tartása"
-        },
-        "csd5-2018/Combining Representations": {
-          "name": "Ábrázolások kombinálása"
-        },
-        "csd5-2018/CS Discoveries Post-Course Survey": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
-        },
-        "csd4-2018/Linking Screens": {
-          "name": "Képernyők összekapcsolása"
-        },
-        "csd4-2018/CS Discoveries Post-Course Survey": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
-        },
-        "csd2-2018/Exploring Websites": {
-          "name": "Weboldalak Felfedezése"
-        },
-        "csd2-2018/Websites for Expression ": {
-          "name": "Weboldalak a Kifejezéshez "
-        },
-        "csd2-2018/Intro to HTML": {
-          "name": "Bevezetés a HTML-be"
-        },
-        "csd2-2018/Headings": {
-          "name": "Címsorok"
-        },
-        "csd2-2018/Digital Footprint": {
-          "name": "Digitális Lábnyom"
-        },
-        "csd2-2018/Lists": {
-          "name": "Listák"
-        },
-        "csd2-2018/Intellectual Property and Images": {
-          "name": "Szellemi Tulajdon és Képek"
-        },
-        "csd2-2018/Clean Code and Debugging": {
-          "name": "Tiszta Kód és Debugolás"
-        },
-        "csd2-2018/Project - Multi-Page Websites": {
-          "name": "Projekt - Több Oldalas Weboldal"
-        },
-        "csd2-2018/Styling Text with CSS": {
-          "name": "Szöveg Stilizálása CSS-ben"
-        },
-        "csd2-2018/Styling Elements with CSS": {
-          "name": "Elemek stilizálása CSS-el"
-        },
-        "csd2-2018/Sources and Search Engines": {
-          "name": "Források és Keresőmotorok"
-        },
-        "csd2-2018/RGB Colors and Classes": {
-          "name": "RGB Színek és Osztályok"
-        },
-        "csd2-2018/Project - Personal Portfolio Website": {
-          "name": "Projekt - Személyes Portfólió Weboldal"
-        },
-        "csd2-2018/CS Discoveries Post-Course Survey": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
-        },
-        "csd1-2018/Intro to Problem Solving": {
-          "name": "Bevezetés a problémamegoldásba"
-        },
-        "csd1-2018/The Problem Solving Process": {
-          "name": "A probléma-megoldási folyamat"
-        },
-        "csd1-2018/Exploring Problem Solving": {
-          "name": "A Problémamegoldás Felfedezése"
-        },
-        "csd1-2018/What is a Computer?": {
-          "name": "Mi az a számítógép?"
-        },
-        "csd1-2018/Input and Output": {
-          "name": "Bemenet és Kimenet"
-        },
-        "csd1-2018/Processing": {
-          "name": "Feldolgozás"
-        },
-        "csd1-2018/Project - Propose an App": {
-          "name": "Projekt - Javasolj egy Alkalmazást"
-        },
-        "coursea-2019/Going Places Safely": {
-          "name": "Biztonságos utazás"
-        },
-        "coursea-2019/Programming: Happy Maps": {
-          "name": "Vidám térképek"
-        },
-        "coursea-2019/Programming with Rey and BB-8": {
-          "name": "Programozás Rey és BB-8 segítségével"
-        },
-        "coursea-2019/Events: The Big Event": {
-          "name": "Az ifjabbik Nagy Esemény"
-        },
-        "courseb-2019/Your Digital Footprint": {
-          "name": "A digitális lábnyomod"
-        },
-        "courseb-2019/Move It, Move It": {
-          "name": "Gyerünk, gyerünk!"
-        },
-        "courseb-2019/Programming in Harvester": {
-          "name": "Programozás az aratóval"
-        },
-        "courseb-2019/Loops: Getting Loopy": {
-          "name": "Ciklikusság"
-        },
-        "courseb-2019/The Right App": {
-          "name": "A megfelelő alkalmazás"
-        },
-        "courseb-2019/Events: The Big Event": {
-          "name": "Az ifjabbik Nagy Esemény"
-        },
-        "courseb-2019/Events in Play Lab": {
-          "name": "Királyi csata eseményekkel"
-        },
-        "coursed-2019/Algorithms: Graph Paper Programming": {
-          "name": "Grafikus programozás"
-        },
-        "coursed-2019/Relay Programming": {
-          "name": "Váltó programozás"
-        },
-        "coursed-2019/Conditionals with Cards": {
-          "name": "Feltételek kártyákkal"
-        },
-        "coursed-2019/Unplugged: Binary": {
-          "name": "Bináris képek"
-        },
-        "coursed-2019/Digital Citizenship": {
-          "name": "Digitális állampolgárság"
-        },
-        "coursed-2019/Dance Party": {
-          "name": "Táncos buli"
-        },
-        "coursef-2019/Envelope Variables": {
-          "name": "Boríték változók"
-        },
-        "coursef-2019/For Loop Fun": {
-          "name": "Szórakozás a For ciklussal"
-        },
-        "coursef-2019/Internet": {
-          "name": "Az internet"
-        },
-        "coursef-2019/Crowdsourcing": {
-          "name": "Csoportos megoldás"
-        },
-        "coursef-2019/Digital Sharing": {
-          "name": "Digitális megosztás"
-        },
-        "coursef-2019/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "coursee-2019/Simon Says": {
-          "name": "Simon mondja"
-        },
-        "coursee-2019/Private and Personal Information": {
-          "name": "Magán és személyes információk"
-        },
-        "coursee-2019/Access Ability": {
-          "name": "Hozzáférhetőség tervezése"
-        },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "Dalszerzés paraméterekkel"
-        },
-        "coursee-2019/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "express-2019/Dance Party": {
-          "name": "Táncos buli"
-        },
-        "express-2019/Loops with Rey and BB-8": {
-          "name": "Ciklusok Reyjel és BB-8-tel"
-        },
-        "express-2019/While Loops in Farmer": {
-          "name": "Videó: While hurkok a farmerrel"
-        },
-        "express-2019/Build A Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "coursec-2019/Powerful Passwords": {
-          "name": "Erős jelszavak"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Bináris karkötők"
-        },
-        "coursec-2019/Loops with Rey and BB-8": {
-          "name": "Ciklusok Reyjel és BB-8-tel"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "A nagy esemény"
-        },
-        "coursec-2019/Picturing Data": {
-          "name": "Az adatok leképezése"
-        },
-        "coursec-2019/End of Course Project: Create a Play Lab Game": {
-          "name": "Kurzus Projekt vége"
-        },
-        "pre-express-2019/Programming with Rey and BB-8": {
-          "name": "Programozás Rey és BB-8 segítségével"
-        },
-        "pre-express-2019/Programming in Harvester": {
-          "name": "Programozás az aratóval"
-        },
-        "pre-express-2019/Spelling Bee": {
-          "name": "Betüző méh"
-        },
-        "pre-express-2019/Make a Game in Play Lab": {
-          "name": "Királyi csata eseményekkel"
-        },
-        "csd3-2019/Variables": {
-          "name": "változók"
-        },
-        "csd3-2019/Sprites": {
-          "name": "sprite-ok"
-        },
-        "csd3-2019/Conditionals": {
-          "name": "Feltételek"
-        },
-        "csd3-2019/Keyboard Input": {
-          "name": "Billentyűzetbemenet"
-        },
-        "csd3-2019/Velocity": {
-          "name": "Sebesség"
-        },
-        "csd3-2019/Collisions": {
-          "name": "Ütközések"
-        },
-        "csd3-2019/Functions": {
-          "name": "Függvények"
-        },
-        "csd6-2019/Board Events": {
-          "name": "Táblás események"
-        },
-        "csd6-2019/Getting Properties": {
-          "name": "Tulajdonságok szerzése"
-        },
-        "csd6-2019/Making Music": {
-          "name": "Zene Készítése"
-        },
-        "csd6-2019/Functions with Parameters": {
-          "name": "Paraméteres függvények"
-        },
-        "csd4-2019/Linking Screens": {
-          "name": "Képernyők összekapcsolása"
-        },
-        "csd5-2019/Representing Images": {
-          "name": "Képek ábrázolása"
-        },
-        "csd5-2019/Keeping Data Secret": {
-          "name": "Adatok titokban tartása"
-        },
-        "csd5-2019/Combining Representations": {
-          "name": "Ábrázolások kombinálása"
         },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Bevezetés a problémamegoldásba"
@@ -982,275 +566,1162 @@
         "csd2-2019/Project - Personal Portfolio Website": {
           "name": "Projekt - Személyes Portfólió Weboldal"
         },
-        "coursef-2017/Building a Foundation": {
-          "name": "Az alap megépítése"
-        },
-        "coursef-2017/Algorithms: Tangrams": {
-          "name": "Algoritmusok: tangram"
-        },
-        "coursea-2017/Debugging: Unspotted Bugs": {
-          "name": "Hibakeresés: Észrevétlen hibák"
-        },
-        "coursea-2017/Persistence & Frustration: Stevie and the Marbles": {
-          "name": "Kitartás: Stevie és a nagy projekt"
-        },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Valós algoritmusok: Ültess el egy magot!"
-        },
-        "coursea-2017/Learn to Drag and Drop": {
-          "name": "Sorba rendezés húzással"
-        },
-        "coursea-2017/Loops in Collector": {
-          "name": "Ciklusok a gyűjtővel"
-        },
-        "pre-express-2017/Debugging: Unspotted Bugs": {
-          "name": "Hibakeresés: Észrevétlen hibák"
-        },
-        "pre-express-2017/Persistence & Frustration: Stevie and the Marbles": {
-          "name": "Kitartás: Stevie és a nagy projekt"
-        },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Valós algoritmusok: Ültess el egy magot!"
-        },
-        "pre-express-2017/Learn to Drag and Drop": {
-          "name": "Sorba rendezés húzással"
-        },
-        "pre-express-2017/Online Safety: Your Digital Footprint": {
-          "name": "Digitális állampolgárság: Digitális lábnyomom"
-        },
-        "pre-express-2017/Programming: Star Wars": {
-          "name": "Programozás: Star Wars"
-        },
-        "pre-express-2017/Loops in Collector": {
-          "name": "Ciklusok a gyűjtővel"
-        },
-        "pre-express-2017/Spelling Bee": {
-          "name": "Betüző méh"
-        },
-        "coursee-2017/Building a Foundation": {
-          "name": "Az alap megépítése"
-        },
-        "coursee-2017/Nested Loops": {
-          "name": "Egymásba ágyazott ciklusok"
-        },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Hétköznapi algoritmusok: Papírrepülők"
-        },
-        "coursec-2017/Loops with Rey and BB-8": {
-          "name": "Ciklusok Reyjel és BB-8-tel"
-        },
-        "courseb-2017/Debugging: Unspotted Bugs": {
-          "name": "Hibakeresés: Észrevétlen hibák"
-        },
-        "courseb-2017/Persistence & Frustration: Stevie and the Marbles": {
-          "name": "Kitartás: Stevie és a nagy projekt"
-        },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Valós algoritmusok: Ültess el egy magot!"
-        },
-        "courseb-2017/Learn to Drag and Drop": {
-          "name": "Sorba rendezés húzással"
-        },
-        "courseb-2017/Your Digital Footprint": {
-          "name": "Digitális állampolgárság: Digitális lábnyomom"
-        },
-        "courseb-2017/Programming with Rey and BB-8": {
-          "name": "Programozás Rey és BB-8 segítségével"
-        },
-        "courseb-2017/Loops in Collector": {
-          "name": "Ciklusok a gyűjtővel"
-        },
-        "coursed-2017/Nested Loops": {
-          "name": "Egymásba ágyazott ciklusok"
-        },
-        "express-2017/Introduction": {
-          "name": "Bevezető"
-        },
-        "express-2017/Building a Foundation": {
-          "name": "Az alap megépítése"
-        },
-        "express-2017/Nested Loops": {
-          "name": "Egymásba ágyazott ciklusok"
-        },
-        "csd3-2017/Variables": {
+        "csd3-2019/Variables": {
           "name": "változók"
         },
-        "csd3-2017/Sprites": {
+        "csd3-2019/Sprites": {
           "name": "sprite-ok"
         },
-        "csd3-2017/Conditionals": {
+        "csd3-2019/Conditionals": {
           "name": "Feltételek"
         },
-        "csd3-2017/Keyboard Input": {
+        "csd3-2019/Keyboard Input": {
           "name": "Billentyűzetbemenet"
         },
-        "csd3-2017/Velocity": {
+        "csd3-2019/Velocity": {
           "name": "Sebesség"
         },
-        "csd3-2017/Collisions": {
+        "csd3-2019/Collisions": {
           "name": "Ütközések"
         },
-        "csd3-2017/Functions": {
+        "csd3-2019/Functions": {
           "name": "Függvények"
         },
-        "csd6-2017/Board Events_": {
-          "name": "Táblás események"
-        },
-        "csd6-2017/Getting Properties_": {
-          "name": "Tulajdonságok szerzése"
-        },
-        "csd6-2017/Making Music_": {
-          "name": "Zene Készítése"
-        },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "Paraméteres függvények"
-        },
-        "csd2-2017/Exploring Websites": {
-          "name": "Weboldalak Felfedezése"
-        },
-        "csd2-2017/Websites for Expression ": {
-          "name": "Weboldalak a Kifejezéshez "
-        },
-        "csd2-2017/Intro to HTML": {
-          "name": "Bevezetés a HTML-be"
-        },
-        "csd2-2017/Headings": {
-          "name": "Címsorok"
-        },
-        "csd2-2017/Digital Footprint": {
-          "name": "Digitális Lábnyom"
-        },
-        "csd2-2017/Lists": {
-          "name": "Listák"
-        },
-        "csd2-2017/Intellectual Property and Images": {
-          "name": "Szellemi Tulajdon és Képek"
-        },
-        "csd2-2017/Clean Code and Debugging": {
-          "name": "Tiszta Kód és Debugolás"
-        },
-        "csd2-2017/Project - Multi-Page Websites": {
-          "name": "Projekt - Több Oldalas Weboldal"
-        },
-        "csd2-2017/Styling Text with CSS": {
-          "name": "Szöveg Stilizálása CSS-ben"
-        },
-        "csd2-2017/Styling Elements with CSS": {
-          "name": "Elemek stilizálása CSS-el"
-        },
-        "csd2-2017/Sources and Search Engines": {
-          "name": "Források és Keresőmotorok"
-        },
-        "csd2-2017/RGB Colors and Classes": {
-          "name": "RGB Színek és Osztályok"
-        },
-        "csd2-2017/Project - Personal Portfolio Website": {
-          "name": "Projekt - Személyes Portfólió Weboldal"
-        },
-        "csd1-2017/Intro to Problem Solving": {
-          "name": "Bevezetés a problémamegoldásba"
-        },
-        "csd1-2017/The Problem Solving Process": {
-          "name": "A probléma-megoldási folyamat"
-        },
-        "csd1-2017/Exploring Problem Solving": {
-          "name": "A Problémamegoldás Felfedezése"
-        },
-        "csd1-2017/What is a Computer?": {
-          "name": "Mi az a számítógép?"
-        },
-        "csd1-2017/Input and Output": {
-          "name": "Bemenet és Kimenet"
-        },
-        "csd1-2017/Processing": {
-          "name": "Feldolgozás"
-        },
-        "csd1-2017/Storage": {
-          "name": "Tárhely"
-        },
-        "csd1-2017/Apps and Problem Solving": {
-          "name": "Appok és Problémamegoldás"
-        },
-        "csd1-2017/Project - Propose an App": {
-          "name": "Projekt - Javasolj egy Alkalmazást"
-        },
-        "csd5-2017/Representing Images": {
-          "name": "Képek ábrázolása"
-        },
-        "csd5-2017/Keeping Data Secret": {
-          "name": "Adatok titokban tartása"
-        },
-        "csd5-2017/Combining Representations": {
-          "name": "Ábrázolások kombinálása"
-        },
-        "csd4-2017/Linking Screens": {
+        "csd4-2019/Linking Screens": {
           "name": "Képernyők összekapcsolása"
         },
-        "course4/Unplugged: Tangrams": {
-          "name": "Gép nélküli feladatok: Tangram"
+        "csd5-2019/Representing Images": {
+          "name": "Képek ábrázolása"
         },
-        "course4/Maze and Bee": {
-          "name": "Labirintus és a méh"
+        "csd5-2019/Keeping Data Secret": {
+          "name": "Adatok titokban tartása"
         },
-        "course4/Artist": {
+        "csd5-2019/Combining Representations": {
+          "name": "Ábrázolások kombinálása"
+        },
+        "csd6-2019/Board Events": {
+          "name": "Táblás események"
+        },
+        "csd6-2019/Getting Properties": {
+          "name": "Tulajdonságok szerzése"
+        },
+        "csd6-2019/Making Music": {
+          "name": "Zene Készítése"
+        },
+        "csd6-2019/Functions with Parameters": {
+          "name": "Paraméteres függvények"
+        },
+        "coursea-2019/Going Places Safely": {
+          "name": "Biztonságos utazás"
+        },
+        "coursea-2019/Learn to Drag and Drop": {
+          "name": "Ismerkedés a Fogd és Vidd technikával"
+        },
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "Vidám térképek"
+        },
+        "coursea-2019/Sequencing with Scrat": {
+          "name": "Szekvenciák a Motkánnyal"
+        },
+        "coursea-2019/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével"
+        },
+        "coursea-2019/Events: The Big Event": {
+          "name": "Az ifjabbik Nagy Esemény"
+        },
+        "courseb-2019/Your Digital Footprint": {
+          "name": "A digitális lábnyomod"
+        },
+        "courseb-2019/Move It, Move It": {
+          "name": "Gyerünk, gyerünk!"
+        },
+        "courseb-2019/Programming in Harvester": {
+          "name": "Programozás az aratóval"
+        },
+        "courseb-2019/Loops: Getting Loopy": {
+          "name": "Ciklikusság"
+        },
+        "courseb-2019/The Right App": {
+          "name": "A megfelelő alkalmazás"
+        },
+        "courseb-2019/Events: The Big Event": {
+          "name": "Az ifjabbik Nagy Esemény"
+        },
+        "courseb-2019/Events in Play Lab": {
+          "name": "Királyi csata eseményekkel"
+        },
+        "coursec-2019/Powerful Passwords": {
+          "name": "Erős jelszavak"
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Bináris karkötők"
+        },
+        "coursec-2019/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "A nagy esemény"
+        },
+        "coursec-2019/Picturing Data": {
+          "name": "Az adatok leképezése"
+        },
+        "coursec-2019/End of Course Project: Create a Play Lab Game": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursed-2019/Algorithms: Graph Paper Programming": {
+          "name": "Grafikus programozás"
+        },
+        "coursed-2019/Relay Programming": {
+          "name": "Váltó programozás"
+        },
+        "coursed-2019/Conditionals with Cards": {
+          "name": "Feltételek kártyákkal"
+        },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "Bináris képek"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "Digitális állampolgárság"
+        },
+        "coursed-2019/Dance Party": {
+          "name": "Táncos buli"
+        },
+        "coursee-2019/Simon Says": {
+          "name": "Simon mondja"
+        },
+        "coursee-2019/Private and Personal Information": {
+          "name": "Magán és személyes információk"
+        },
+        "coursee-2019/Access Ability": {
+          "name": "Hozzáférhetőség tervezése"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Dalszerzés paraméterekkel"
+        },
+        "coursee-2019/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursef-2019/Envelope Variables": {
+          "name": "Boríték változók"
+        },
+        "coursef-2019/For Loop Fun": {
+          "name": "Szórakozás a For ciklussal"
+        },
+        "coursef-2019/Internet": {
+          "name": "Az internet"
+        },
+        "coursef-2019/Crowdsourcing": {
+          "name": "Csoportos megoldás"
+        },
+        "coursef-2019/Digital Sharing": {
+          "name": "Digitális megosztás"
+        },
+        "coursef-2019/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "express-2019/Dance Party": {
+          "name": "Táncos buli"
+        },
+        "express-2019/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel"
+        },
+        "express-2019/While Loops in Farmer": {
+          "name": "Videó: While hurkok a farmerrel"
+        },
+        "express-2019/Build A Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "pre-express-2019/Learn to Drag and Drop": {
+          "name": "Ismerkedés a Fogd és Vidd technikával"
+        },
+        "pre-express-2019/Sequencing with Scrat": {
+          "name": "Szekvenciák a Motkánnyal"
+        },
+        "pre-express-2019/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével"
+        },
+        "pre-express-2019/Programming in Harvester": {
+          "name": "Programozás az aratóval"
+        },
+        "pre-express-2019/Spelling Bee": {
+          "name": "Betüző méh"
+        },
+        "pre-express-2019/Make a Game in Play Lab": {
+          "name": "Királyi csata eseményekkel"
+        },
+        "coursea-2020/Safety in My Online Neighborhood": {
+          "name": "Online környezetem biztonsága"
+        },
+        "coursea-2020/Learn to Drag and Drop": {
+          "name": "Ismerkedés a Fogd és Vidd technikával"
+        },
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Vidám térképek"
+        },
+        "coursea-2020/Sequencing with Scrat": {
+          "name": "Szekvenciák a Motkánnyal"
+        },
+        "coursea-2020/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével"
+        },
+        "coursea-2020/Events: The Big Event": {
+          "name": "Az ifjabbik Nagy Esemény"
+        },
+        "courseb-2020/Digital Trails": {
+          "name": "Digitális útonalak"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "Gyerünk, gyerünk!"
+        },
+        "courseb-2020/Programming in Harvester": {
+          "name": "Programozás az aratóval"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Ciklikusság"
+        },
+        "courseb-2020/The Right App": {
+          "name": "A megfelelő alkalmazás"
+        },
+        "courseb-2020/Events: The Big Event": {
+          "name": "Az ifjabbik Nagy Esemény"
+        },
+        "courseb-2020/Events in Play Lab": {
+          "name": "Királyi csata eseményekkel"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Bináris karkötők"
+        },
+        "coursec-2020/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "A nagy esemény"
+        },
+        "coursec-2020/Picturing Data": {
+          "name": "Az adatok leképezése"
+        },
+        "coursec-2020/End of Course Project: Create a Play Lab Game": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Grafikus programozás"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Váltó programozás"
+        },
+        "coursed-2020/Dance Party": {
+          "name": "Táncos buli"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Feltételek kártyákkal"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Bináris képek"
+        },
+        "coursed-2020/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursee-2020/Simon Says": {
+          "name": "Simon mondja"
+        },
+        "coursee-2020/Private and Personal Information": {
+          "name": "Magán és személyes információk"
+        },
+        "coursee-2020/Digital Sharing": {
+          "name": "Digitális megosztás"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Dalszerzés paraméterekkel"
+        },
+        "coursee-2020/Designing for Accessibility": {
+          "name": "Hozzáférhetőség tervezése"
+        },
+        "coursee-2020/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Boríték változók"
+        },
+        "coursef-2020/AI for Oceans": {
+          "name": "AI óceánok"
+        },
+        "coursef-2020/Internet": {
+          "name": "Az internet"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "Szórakozás a For ciklussal"
+        },
+        "coursef-2020/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "express-2020/Dance Party": {
+          "name": "Táncos buli"
+        },
+        "express-2020/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel"
+        },
+        "express-2020/While Loops with the Farmer": {
+          "name": "Videó: While hurkok a farmerrel"
+        },
+        "express-2020/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "pre-express-2020/Learn to Drag and Drop": {
+          "name": "Ismerkedés a Fogd és Vidd technikával"
+        },
+        "pre-express-2020/Sequencing with Scrat": {
+          "name": "Szekvenciák a Motkánnyal"
+        },
+        "pre-express-2020/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével"
+        },
+        "pre-express-2020/A Royal Battle with Events": {
+          "name": "Királyi csata eseményekkel"
+        },
+        "csd1-2021/Intro to Problem Solving": {
+          "name": "Bevezetés a problémamegoldásba"
+        },
+        "csd1-2021/The Problem Solving Process": {
+          "name": "A probléma-megoldási folyamat"
+        },
+        "csd1-2021/Exploring Problem Solving": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
+        "csd1-2021/What is a Computer?": {
+          "name": "Mi az a számítógép?"
+        },
+        "csd1-2021/Input and Output": {
+          "name": "Bemenet és Kimenet"
+        },
+        "csd1-2021/Processing": {
+          "name": "Feldolgozás"
+        },
+        "csd1-2021/Storage": {
+          "name": "Tárhely"
+        },
+        "csd1-2021/Project - Propose an App": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
+        },
+        "csd2-2021/Intro to HTML": {
+          "name": "Bevezetés a HTML-be"
+        },
+        "csd2-2021/Headings": {
+          "name": "Címsorok"
+        },
+        "csd2-2021/Digital Footprint": {
+          "name": "Digitális Lábnyom"
+        },
+        "csd2-2021/Styling Text with CSS": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "csd2-2021/Styling Elements with CSS": {
+          "name": "Elemek stilizálása CSS-el"
+        },
+        "csd2-2021/CSS Classes": {
+          "name": "CSS osztályok"
+        },
+        "csd2-2021/Linking Pages": {
+          "name": "Oldalak összekapcsolása"
+        },
+        "csd2-2021/lesson-1": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd3-2021/Variables": {
+          "name": "változók"
+        },
+        "csd3-2021/Random Numbers": {
+          "name": "Véletlen számok"
+        },
+        "csd3-2021/Sprites": {
+          "name": "sprite-ok"
+        },
+        "csd3-2021/Sprite Properties": {
+          "name": "Sprite tulajdonságok"
+        },
+        "csd3-2021/Text": {
+          "name": "szöveg"
+        },
+        "csd3-2021/Conditionals": {
+          "name": "Feltételek"
+        },
+        "csd3-2021/Keyboard Input": {
+          "name": "Billentyűzetbemenet"
+        },
+        "csd3-2021/Velocity": {
+          "name": "Sebesség"
+        },
+        "csd3-2021/Collisions": {
+          "name": "Ütközések"
+        },
+        "csd3-2021/Functions": {
+          "name": "Függvények"
+        },
+        "csd3-2021/lesson-1": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd4-2021/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd5-2021/Representing Images": {
+          "name": "Képek ábrázolása"
+        },
+        "csd5-2021/Combining Representations": {
+          "name": "Ábrázolások kombinálása"
+        },
+        "csd5-2021/Keeping Data Secret": {
+          "name": "Adatok titokban tartása"
+        },
+        "csd5-2021/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd6-2021/Board Events": {
+          "name": "Táblás események"
+        },
+        "csd6-2021/Getting Properties": {
+          "name": "Tulajdonságok szerzése"
+        },
+        "csd6-2021/Making Music": {
+          "name": "Zene Készítése"
+        },
+        "csd6-2021/Functions with Parameters": {
+          "name": "Paraméteres függvények"
+        },
+        "csd6-2021/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd7-2021/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "coursea-2021/Safety in My Online Neighborhood": {
+          "name": "Online környezetem biztonsága",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEredetileg a leckét a Common Sense Education készítette. [Tudj meg többet róla.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAz internet ereje által a diákok megtapasztalják és meg is láthathatják azokat a helyeket, amelyeket esetleg személyesen nem kereshetnek fel. De csakúgy, mint a való világban való utazás során, itt is fontos, hogy az utazás során biztonságban legyenek. Ezen a virtuális kirándoláson a gyerekek gyakorolhatják, hogy hogyan maradjanak biztonságban az online kalandozásaik során."
+        },
+        "coursea-2021/Learn to Drag and Drop": {
+          "name": "Ismerkedés a Fogd és Vidd technikával",
+          "overview": "Ez a **készségfejlesztő** lecke képet ad a hallgatóknak arról, hogy mire számíthatnak, amikor a számítógépes laborba indulnak. Egy rövid beszélgetéssel kezdődik, amelyben megismerik a a számítógépes laborban való viselkedést, majd áttérnek a számítógép használatára, és online rejtvényeket oldanak meg.",
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Vidám térképek",
+          "overview": "Ez a **kontextusbeállító** lecke összehozza a csapatokat egy egyszerű feladattal: juttasd el a \"Flurb” -öt a gyümölcshöz. A diákok gyakorolják a pontos utasítások megadását, miközben azon dolgoznak, hogy az utasításokat lefordítsák a megadott szimbólumokra."
+        },
+        "coursea-2021/Sequencing with Scrat": {
+          "name": "Szekvenciák a Motkánnyal",
+          "overview": "Ebben a **készségépítő** leckében a diákok szekvenciális algoritmusokat dolgoznak ki, amelyek segítségével a mókusszerű karaktert a labirintus egyik oldaláról a másik oldalon lévő makkhoz mozgatják. Ehhez lineáris sorrendben rakják össze a kódblokkokat."
+        },
+        "coursea-2021/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével",
+          "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.",
+          "student_overview": "Segíts BB-8-nek begyűjteni a fémdarabokat"
+        },
+        "coursea-2021/Events: The Big Event": {
+          "name": "Az ifjabbik Nagy Esemény"
+        },
+        "coursea-2021/lesson-1": {
+          "name": "Kurzus Projekt vége"
+        },
+        "courseb-2021/Digital Trails": {
+          "name": "Digitális nyomvonalak",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEzt a leckét eredetileg a Common Sense Education készítette. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAmit online csinálsz, az mindig online marad? A diákok megtanulják, hogy az általuk online megosztott információk digitális lábnyomot hagynak maguk után. Az, hogy ez az útvonal egy keskeny ösvény lesz-e, vagy egy széles út, káros lesz-e számukra, vagy hasznos, attól függ, hogy hogyan kezelik ezt a lábnyomot. A tanulók összehasonlíthatják a különféle nyomvonalakat, és elsajátíthatják a kritikus gondolkodást, ami alapján képesek lesznek megfelelő döntéseket hozni arról, hogy milyen információkat hagynak maguk után a digiális úton.",
+          "preparation": "-   Az oktatási anyagok áttekintése.\n-   Egyes tanulók szórólapjának nyomtatása.",
+          "purpose": "A Common Sense digitális állampolgársági tanterve a gyermekekkel, a médiával és a technológiával kapcsolatos legújabb kitatások alapján hat fő témakörrel foglalkozik. Ez a lecke a digitális lábnyomra és identitásra összpontosít. A tanulók megismerik az online megosztás előnyeit és kockázatait, és felfedezik, hogy a digitális személyiség hogyan befolyásolhatja az önismeretet, hírnevet, és a kapcsolatokat.",
+          "student_overview": "A digitális lábnyom megismerése, valamint a biztonság megteremtése a webhelyek látogatása során. "
+        },
+        "courseb-2021/Move It, Move It": {
+          "name": "Gyerünk, gyerünk!"
+        },
+        "courseb-2021/Programming in Harvester": {
+          "name": "Programozás az aratóval"
+        },
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Ciklikusság"
+        },
+        "courseb-2021/The Right App": {
+          "name": "A megfelelő alkalmazás"
+        },
+        "courseb-2021/Events: The Big Event": {
+          "name": "Az ifjabbik Nagy Esemény"
+        },
+        "courseb-2021/Events in Play Lab": {
+          "name": "Mini-projekt: Királyi csata eseményekkel"
+        },
+        "courseb-2021/lesson-1": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursec-2021/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel",
+          "overview": "A „Getting Loopy” című utasítások ismétlődésének koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak, amiben BB-8 lesz a segítségükre.",
+          "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
+        },
+        "coursec-2021/Loops in Harvester": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursec-2021/Events: The Big Event": {
+          "name": "A nagy esemény"
+        },
+        "coursec-2021/Build a Flappy Game": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursec-2021/Events in Play Lab": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursec-2021/Picturing Data": {
+          "name": "Az adatok leképezése"
+        },
+        "coursec-2021/Binary Bracelets": {
+          "name": "Bináris karkötők"
+        },
+        "coursec-2021/End of Course Project: Create a Play Lab Game": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Grafikus programozás"
+        },
+        "coursed-2021/Introduction to Online Puzzles": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursed-2021/Relay Programming": {
+          "name": "Váltó programozás"
+        },
+        "coursed-2021/Debugging in Collector": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursed-2021/Dance Party": {
+          "name": "Táncos buli",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
+        },
+        "coursed-2021/Loops in Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursed-2021/Nested Loops in Bee": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursed-2021/Conditionals with Cards": {
+          "name": "Feltételek kártyákkal"
+        },
+        "coursed-2021/Conditionals in Bee": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursed-2021/While Loops in Farmer": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursed-2021/Until Loops in Maze": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursed-2021/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursee-2021/Simon Says": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2021/Learning Sprites with Sprite Lab": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2021/Alien Dance Party with Sprite Lab": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2021/Private and Personal Information": {
+          "name": "Magán és személyes információk",
+          "preparation": "-   Az oktatási anyagok áttekintése.\n-   Egyes tanulók szórólapjának nyomtatása."
+        },
+        "coursee-2021/About Me": {
+          "name": "Miniprojekt: Rólam"
+        },
+        "coursee-2021/Digital Sharing": {
+          "name": "Digitális megosztás"
+        },
+        "coursee-2021/Programming and Loops with the Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Dalszerzés paraméterekkel"
+        },
+        "coursee-2021/Functions in Minecraft": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2021/Functions in Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2021/Conditionals": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2021/Functions in Harvester": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2021/lesson-1": {
+          "name": "Hozzáférhetőség tervezése"
+        },
+        "coursee-2021/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursef-2021/Virtual Pet": {
+          "name": "Miniprojekt: Virtuális kisállat",
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2021/lesson-11": {
+          "name": "Miniprojekt: Felhasználói adatbeviteli programok"
+        },
+        "coursef-2021/Loops with the Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2021/Variables that Change in Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2021/Nested Loops in the Maze": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2021/Variables that Change in Bee": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2021/For Loop Fun": {
+          "name": "Szórakozás a For ciklussal"
+        },
+        "coursef-2021/For Loops in Bee": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2021/For Loops in Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2021/lesson-5": {
+          "overview": "Ez a leckében az események köré épülő **készségfejlesztést** kombináljuk egy **miniprojekttel**, ahol a diákok saját számítógépes szimulációt készíthetnek a Sprite Lab program segítségével. A diákok tanulmányozva a szimulációt megértik, hogy milyen gyorsan terjed egy vírus, és hogy mit lehet tenni a terjedés lassítása érdekében. ",
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti.",
+          "purpose": "Az előző leckében a diákok egy egyszerű szimulációból származó adatokat gyűjtöttek és értelmeztek.  Ebben a leckében a diákok az utasításokat követve saját szimulációs modelljüket programozzák. A diákok a valós világban előforduló vírusjárványokról szerzett előzetes ismereteiket egy fiktív forgatókönyvre fogják alkalmazni. ",
+          "student_overview": "Egy vírus elérte Szörnyvárost! Tanulj meg vírusszimulátort készíteni, és segíts a szörnyeknek, hogy újra egészségesek legyenek."
+        },
+        "coursef-2021/Internet": {
+          "name": "Az internet"
+        },
+        "coursef-2021/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "express-2021/lesson-1": {
+          "name": "Táncos buli",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
+        },
+        "express-2021/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel",
+          "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
+        },
+        "express-2021/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "pre-express-2021/Learn to Drag and Drop": {
+          "name": "Ismerkedés a Fogd és Vidd technikával",
+          "overview": "Ez a **készségfejlesztő** lecke képet ad a hallgatóknak arról, hogy mire számíthatnak, amikor a számítógépes laborba indulnak. Egy rövid beszélgetéssel kezdődik, amelyben megismerik a a számítógépes laborban való viselkedést, majd áttérnek a számítógép használatára, és online rejtvényeket oldanak meg.",
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
+        },
+        "pre-express-2021/Sequencing with Scrat": {
+          "name": "Szekvenciák a Motkánnyal",
+          "overview": "Ebben a **készségépítő** leckében a diákok szekvenciális algoritmusokat dolgoznak ki, amelyek segítségével a mókusszerű karaktert a labirintus egyik oldaláról a másik oldalon lévő makkhoz mozgatják. Ehhez lineáris sorrendben rakják össze a kódblokkokat."
+        },
+        "pre-express-2021/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével",
+          "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva."
+        },
+        "pre-express-2021/Programming in Harvester": {
+          "name": "Programozás az aratóval"
+        },
+        "pre-express-2021/A Royal Battle with Events": {
+          "name": "Királyi csata eseményekkel"
+        },
+        "csd1-2022/Intro to Problem Solving": {
+          "name": "Bevezetés a problémamegoldásba",
+          "preparation": "**Minden csoportnak**\n\n-   2 lap aufólia, mindkettő 13x13 cm méretben.\n-   1 tároló, amiben elfér 7-13 cm víz\n-   Több papírtörlő vagy rongyok, amiket a tárol alá lehet helyezni\n-   15 penny\n-   1 másolat a tevékenységi útmutatóról\n\n**A tanároknak**\n\n-   1 tároló, amiben elfér 7-13 cm víz\n-   50 penny\n-   Extra papírtörlő vagy rongyok\n-   Nézze meg a [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) fórumot az ellenőrzött tanárok számára, hogy további stratégiákat vagy forrásokat találjon, amelyeket tanártársaik is megosztottak.\n-   Ha virtuálisan tanít, fontolja meg a [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)-ünk megnézését."
+        },
+        "csd1-2022/The Problem Solving Process": {
+          "name": "A probléma-megoldási folyamat"
+        },
+        "csd1-2022/Exploring Problem Solving": {
+          "name": "A Problémamegoldás Felfedezése"
+        },
+        "csd1-2022/What is a Computer?": {
+          "name": "Mi az a számítógép?"
+        },
+        "csd1-2022/Input and Output": {
+          "name": "Bemenet és Kimenet"
+        },
+        "csd1-2022/Processing": {
+          "name": "Feldolgozás"
+        },
+        "csd1-2022/Storage": {
+          "name": "Tárhely"
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "Projekt - Javasolj egy Alkalmazást"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "Bevezetés a HTML-be"
+        },
+        "csd2-2022/Headings": {
+          "name": "Címsorok"
+        },
+        "csd2-2022/Digital Footprint": {
+          "name": "Digitális Lábnyom"
+        },
+        "csd2-2022/Styling Text with CSS": {
+          "name": "Szöveg Stilizálása CSS-ben"
+        },
+        "csd2-2022/Styling Elements with CSS": {
+          "name": "Elemek stilizálása CSS-el"
+        },
+        "csd2-2022/CSS Classes": {
+          "name": "CSS osztályok"
+        },
+        "csd2-2022/Linking Pages": {
+          "name": "Oldalak összekapcsolása"
+        },
+        "csd2-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd3-2022/Variables": {
+          "name": "változók"
+        },
+        "csd3-2022/Random Numbers": {
+          "name": "Véletlen számok"
+        },
+        "csd3-2022/Sprites": {
+          "name": "sprite-ok"
+        },
+        "csd3-2022/Sprite Properties": {
+          "name": "Sprite tulajdonságok"
+        },
+        "csd3-2022/Text": {
+          "name": "szöveg"
+        },
+        "csd3-2022/Conditionals": {
+          "name": "Feltételek"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "Billentyűzetbemenet"
+        },
+        "csd3-2022/Velocity": {
+          "name": "Sebesség"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Ütközések"
+        },
+        "csd3-2022/Functions": {
+          "name": "Függvények"
+        },
+        "csd3-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd4-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd5-2022/Representing Images": {
+          "name": "Képek ábrázolása"
+        },
+        "csd5-2022/Combining Representations": {
+          "name": "Ábrázolások kombinálása"
+        },
+        "csd5-2022/Keeping Data Secret": {
+          "name": "Adatok titokban tartása"
+        },
+        "csd5-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd6-2022/Board Events": {
+          "name": "Táblás események"
+        },
+        "csd6-2022/Color LEDs": {
+          "name": "Színes LED-ek"
+        },
+        "csd6-2022/Making Music": {
+          "name": "Zene Készítése"
+        },
+        "csd6-2022/Functions": {
+          "name": "Függvények"
+        },
+        "csd6-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "csd7-2022/CS Discoveries Post-Course Survey": {
+          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
+        },
+        "coursea-2022/Safety in My Online Neighborhood": {
+          "name": "Online környezetem biztonsága",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEredetileg a leckét a Common Sense Education készítette. [Tudj meg többet róla.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAz internet ereje által a diákok megtapasztalják és meg is láthathatják azokat a helyeket, amelyeket esetleg személyesen nem kereshetnek fel. De csakúgy, mint a való világban való utazás során, itt is fontos, hogy az utazás során biztonságban legyenek. Ezen a virtuális kirándoláson a gyerekek gyakorolhatják, hogy hogyan maradjanak biztonságban az online kalandozásaik során."
+        },
+        "coursea-2022/Learn to Drag and Drop": {
+          "name": "Ismerkedés a Fogd és Vidd technikával",
+          "overview": "Ez a **készségfejlesztő** lecke képet ad a hallgatóknak arról, hogy mire számíthatnak, amikor a számítógépes laborba indulnak. Egy rövid beszélgetéssel kezdődik, amelyben megismerik a a számítógépes laborban való viselkedést, majd áttérnek a számítógép használatára, és online rejtvényeket oldanak meg.",
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Vidám térképek",
+          "overview": "Ez a **kontextusbeállító** lecke összehozza a csapatokat egy egyszerű feladattal: juttasd el a \"Flurb” -öt a gyümölcshöz. A diákok gyakorolják a pontos utasítások megadását, miközben azon dolgoznak, hogy az utasításokat lefordítsák a megadott szimbólumokra."
+        },
+        "coursea-2022/Sequencing with Scrat": {
+          "name": "Szekvenciák a Motkánnyal",
+          "overview": "Ebben a **készségépítő** leckében a diákok szekvenciális algoritmusokat dolgoznak ki, amelyek segítségével a mókusszerű karaktert a labirintus egyik oldaláról a másik oldalon lévő makkhoz mozgatják. Ehhez lineáris sorrendben rakják össze a kódblokkokat."
+        },
+        "coursea-2022/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével",
+          "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.",
+          "student_overview": "Segíts BB-8-nek begyűjteni a fémdarabokat"
+        },
+        "coursea-2022/The Big Event Jr": {
+          "name": "Az ifjabbik Nagy Esemény"
+        },
+        "coursea-2022/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "courseb-2022/Digital Trails": {
+          "name": "Digitális útonalak",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEzt a leckét eredetileg a Common Sense Education készítette. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAmit online csinálsz, az mindig online marad? A diákok megtanulják, hogy az általuk online megosztott információk digitális lábnyomot hagynak maguk után. Az, hogy ez az útvonal egy keskeny ösvény lesz-e, vagy egy széles út, káros lesz-e számukra, vagy hasznos, attól függ, hogy hogyan kezelik ezt a lábnyomot. A tanulók összehasonlíthatják a különféle nyomvonalakat, és elsajátíthatják a kritikus gondolkodást, ami alapján képesek lesznek megfelelő döntéseket hozni arról, hogy milyen információkat hagynak maguk után a digiális úton.",
+          "preparation": "-   Az oktatási anyagok áttekintése.\n-   Egyes tanulók szórólapjának nyomtatása.",
+          "purpose": "A Common Sense digitális állampolgársági tanterve a gyermekekkel, a médiával és a technológiával kapcsolatos legújabb kitatások alapján hat fő témakörrel foglalkozik. Ez a lecke a digitális lábnyomra és identitásra összpontosít. A tanulók megismerik az online megosztás előnyeit és kockázatait, és felfedezik, hogy a digitális személyiség hogyan befolyásolhatja az önismeretet, hírnevet, és a kapcsolatokat.",
+          "student_overview": "A digitális lábnyom megismerése, valamint a biztonság megteremtése a webhelyek látogatása során. "
+        },
+        "courseb-2022/Move It, Move It": {
+          "name": "Gyerünk, gyerünk!"
+        },
+        "courseb-2022/Programming with Harvester": {
+          "name": "Programozás az aratóval"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Ciklikusság"
+        },
+        "courseb-2022/The Right App": {
+          "name": "A megfelelő alkalmazás"
+        },
+        "courseb-2022/The Big Event Jr": {
+          "name": "Az ifjabbik Nagy Esemény"
+        },
+        "courseb-2022/Mini-Project: A Royal Battle with Events": {
+          "name": "Mini-projekt: Királyi csata eseményekkel"
+        },
+        "courseb-2022/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursec-2022/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel",
+          "overview": "A „Getting Loopy” című utasítások ismétlődésének koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak, amiben BB-8 lesz a segítségükre.",
+          "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
+        },
+        "coursec-2022/The Big Event": {
+          "name": "A nagy esemény"
+        },
+        "coursec-2022/Picturing Data": {
+          "name": "Az adatok leképezése"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Bináris karkötők"
+        },
+        "coursec-2022/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Grafikus programozás"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Váltó programozás"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Táncos buli",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Feltételek kártyákkal"
+        },
+        "coursed-2022/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursee-2022/Private and Personal Information": {
+          "name": "Magán és személyes információk",
+          "preparation": "-   Az oktatási anyagok áttekintése.\n-   Egyes tanulók szórólapjának nyomtatása."
+        },
+        "coursee-2022/Swimming Fish with Sprite Lab": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2022/Hello World: Food": {
+          "name": "Helló világ"
+        },
+        "coursee-2022/Mini-Project: About Me": {
+          "name": "Miniprojekt: Rólam"
+        },
+        "coursee-2022/Drawing with Loops": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Dalszerzés paraméterekkel"
+        },
+        "coursee-2022/Functions in Minecraft": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2022/Functions with Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2022/Conditionals with the Farmer": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2022/Functions with Harvester": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2022/Designing for Accessibility": {
+          "name": "Hozzáférhetőség tervezése"
+        },
+        "coursee-2022/Digital Sharing": {
+          "name": "Digitális megosztás"
+        },
+        "coursee-2022/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursef-2022/Mini-Project: Virtual Pet": {
+          "name": "Miniprojekt: Virtuális kisállat",
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2022/Mini-Project: User Input Programs": {
+          "name": "Miniprojekt: Felhasználói adatbeviteli programok"
+        },
+        "coursef-2022/Outbreak": {
+          "overview": "Ez a leckében az események köré épülő **készségfejlesztést** kombináljuk egy **miniprojekttel**, ahol a diákok saját számítógépes szimulációt készíthetnek a Sprite Lab program segítségével. A diákok tanulmányozva a szimulációt megértik, hogy milyen gyorsan terjed egy vírus, és hogy mit lehet tenni a terjedés lassítása érdekében. ",
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti.",
+          "purpose": "Az előző leckében a diákok egy egyszerű szimulációból származó adatokat gyűjtöttek és értelmeztek.  Ebben a leckében a diákok az utasításokat követve saját szimulációs modelljüket programozzák. A diákok a valós világban előforduló vírusjárványokról szerzett előzetes ismereteiket egy fiktív forgatókönyvre fogják alkalmazni. ",
+          "student_overview": "Egy vírus elérte Szörnyvárost! Tanulj meg vírusszimulátort készíteni, és segíts a szörnyeknek, hogy újra egészségesek legyenek."
+        },
+        "coursef-2022/The Internet": {
+          "name": "Az internet"
+        },
+        "coursef-2022/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "express-2022/Dance Party": {
+          "name": "Táncos buli",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
+        },
+        "express-2022/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel",
+          "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
+        },
+        "express-2022/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "pre-express-2022/Learn to Drag and Drop": {
+          "name": "Ismerkedés a Fogd és Vidd technikával",
+          "overview": "Ez a **készségfejlesztő** lecke képet ad a hallgatóknak arról, hogy mire számíthatnak, amikor a számítógépes laborba indulnak. Egy rövid beszélgetéssel kezdődik, amelyben megismerik a a számítógépes laborban való viselkedést, majd áttérnek a számítógép használatára, és online rejtvényeket oldanak meg.",
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
+        },
+        "pre-express-2022/Sequencing with Scrat": {
+          "name": "Szekvenciák a Motkánnyal",
+          "overview": "Ebben a **készségépítő** leckében a diákok szekvenciális algoritmusokat dolgoznak ki, amelyek segítségével a mókusszerű karaktert a labirintus egyik oldaláról a másik oldalon lévő makkhoz mozgatják. Ehhez lineáris sorrendben rakják össze a kódblokkokat."
+        },
+        "pre-express-2022/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével",
+          "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva."
+        },
+        "pre-express-2022/Programming with Harvester": {
+          "name": "Programozás az aratóval"
+        },
+        "pre-express-2022/A Royal Battle with Events": {
+          "name": "Királyi csata eseményekkel"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kódolás órája 2013"
+        },
+        "applab-intro/Intro to App Lab": {
+          "student_overview": "Az oktatócsomag végén a diákok képesek lesznek egy korábban elkezdett projektet egy „Válassz saját kalandot”, „Üdvözlőkártya” vagy „Személyiségkvíz” alkalmazássá fejleszteni. A code.org/applab oldalon bemutatott további projektek építését is lehet folytatni.\n\nJó szórakozást az App Lab segítségével elvégzendő Kódolás órájához!"
+        },
+        "aquatic/Aquatic": {
+          "name": "Minecraft: Tengeri utazás",
+          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra."
+        },
+        "artist/Artist": {
           "name": "Művész"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Gép nélküli feladatok: Űrlap változók"
+        "dance-2019/Dance Party": {
+          "name": "Táncos buli",
+          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére.",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével).",
+          "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére."
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "Gép nélküli feladatok: Madlibs"
+        "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
         },
-        "course4/Artist: Variables": {
-          "name": "Művész: változók"
+        "dance-extras/Dance Party - Go Further": {
+          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére.",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével).",
+          "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére."
         },
-        "course4/Play Lab: Variables": {
-          "name": "Játéklabor: változók"
+        "dance/Dance Party": {
+          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére.",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével).",
+          "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke valamennyi korosztály számára készült, de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az eszköz úgy lett megépítve, hogy reagáljon a zenére."
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Gép nélküli feladatok: Számlálóciklusos móka"
+        "flappy/Flappy Code": {
+          "name": "Flappy kód"
         },
-        "course4/Bee: For Loops": {
-          "name": "Méh: számláló ciklusok"
+        "frozen/Artist": {
+          "name": "Kódolás Annával és Elsával",
+          "overview": "Ebben a leckében a tanulók egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ezt a leckét 10-13 éves felsőtagozatosok tanulók számára terveztük, de a megadott differenciálási javaslatok segítségével fiatalabb és idősebb tanulók számára is adaptálható. A diákoknak ismerniük kell a geometria és szögrajzolás alapjait.",
+          "student_overview": "Ebben a leckében a tanulók egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ezt a leckét 10-13 éves felsőtagozatosok tanulók számára terveztük, de a megadott differenciálási javaslatok segítségével fiatalabb és idősebb tanulók számára is adaptálható. A diákoknak ismerniük kell a geometria és szögrajzolás alapjait."
         },
-        "course4/Artist: For Loops": {
-          "name": "Művész: számláló ciklusok"
+        "gumball/Gumball Play Lab": {
+          "name": "Gumball Játéklabor"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "Játéklabor: ciklusok"
+        "hello-world-animals-2021/Hello World": {
+          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak sprite-okat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
+          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
+          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
         },
-        "course4/Artist: Functions": {
-          "name": "Művész: függvények"
+        "hello-world-emoji-2021/Hello World": {
+          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak sprite-okat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
+          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
+          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
         },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Gép nélküli feladatok: Dalszerzés paraméterekkel"
+        "hello-world-food-2021/Hello World": {
+          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak sprite-okat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
+          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
+          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Művész: paraméteres függvények"
+        "hello-world-retro-2021/Hello World": {
+          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak sprite-okat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
+          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
+          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Játéklabor: függvények paraméterekkel"
+        "hello-world-soccer-2022/Hello World: Food": {
+          "name": "Helló Világ: Labdarúgás",
+          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak sprite-okat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
+          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
+          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Méh: függvények paraméterekkel"
+        "hello-world-space-2022/Hello World: Food": {
+          "name": "Helló Világ: Space",
+          "overview": "Ebben a leckében a diákok programozásán keresztül ismerkednek meg az informatika alapjaival a Sprite Lab honlapon. A Sprite Lab egy olyan eszköz, amelynek felhasználásával a diákok fantáziadús és szórakoztató projekteket készíthetnek. A diákok megtanulnak sprite-okat létrehozni és animálni, és eseményeket használva interaktívvá tenni őket. \n\nEnnek a leckének több változata is létezik. Mindegyik változat ugyanazokat a fogalmakat tanítja, de más-más képekkel, hogy különböző diákokat szólítson meg. További információkért látogasson el a [Hello World landing page](https://code.org/helloworld)[0] honlapra.",
+          "preparation": "-   Menjen végig a feadatokon, hogy megtalálja azokat a területeket, amelyek az osztályában esetleg problémát okozhatnak.\n-   A [CS Connections](https://code.org/educate/csc) oldalon található források felhasználásával a bevezető bemutató után készítsen tervet további informatikai tanuláshoz.",
+          "purpose": "A lecke célja, hogy felkészítse a tanulókat egyszerű programozási projektek készítésére a Sprite Lab segítségével. Ennek a készségnek a birtokában a tanulók ezután már más témájú projekteket is létre tudnak hozni, például egy másik iskolai témában vagy más őket személyesen érintő témában. A [CS Connections](https://code.org/educate/csc) oldalon vannak ötleteket arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni."
         },
-        "course4/Unplugged: Binary": {
-          "name": "Gép nélküli feladatok: kettes számrendszer"
+        "hero/Minecraft Hour of Code": {
+          "name": "Minecraft: Hős utazás",
+          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra."
         },
-        "course4/Artist Binary": {
-          "name": "Művész: a kettes számrendszer"
+        "hoc-encryption/Simple Encryption": {
+          "name": "Egyszerű titkosítás",
+          "overview": "Ebben a leckében a diákok megismerkednek a titkosítás fontosságával és a titkos üzenetek felfedésének (vagy feltörésének) egyszerű technikáival.  A diákok saját kezűleg próbálnak meg feltörni egy klasszikus Caesar-kódolású üzenetet, valamint egy véletlenszerű helyettesítéses rejtjelet.  A tanulóknak meg kell ismerkedniük azzal a gondolattal, hogy a nagy teljesítményű számítási eszközök korában a titkosítási technikáknak egyre kifinomultabbnak kell lenniük.  A lecke legfontosabb üzenete, hogy megértsék, hogyan és miért játszik szerepet a titkosítás mindannyiunk mindennapi életében az interneten, és hogy a jó titkosítás nem egyszerű feladat.  A diákok megismerkednek azzal is, hogy mit kell figyelembe venniük erős titkosítás készítésekor, ha nagy teljesítményű számítási eszközökkel állnak szemben. Aki az internetet használja és biteket küld, annak a titkosításra szüksége van.",
+          "student_overview": "Ebben a leckében a diákok megismerkednek a titkosítás fontosságával és a titkos üzenetek felfedésének (vagy feltörésének) egyszerű technikáival.  A diákok saját kezűleg próbálnak meg feltörni egy klasszikus Caesar-kódolású üzenetet, valamint egy véletlenszerű helyettesítéses rejtjelet.  A tanulóknak meg kell ismerkedniük azzal a gondolattal, hogy a nagy teljesítményű számítási eszközök korában a titkosítási technikáknak egyre kifinomultabbnak kell lenniük.  A lecke legfontosabb üzenete, hogy megértsék, hogyan és miért játszik szerepet a titkosítás mindannyiunk mindennapi életében az interneten, és hogy a jó titkosítás nem egyszerű feladat.  A diákok megismerkednek azzal is, hogy mit kell figyelembe venniük erős titkosítás készítésekor, ha nagy teljesítményű számítási eszközökkel állnak szemben. Aki az internetet használja és biteket küld, annak a titkosításra szüksége van."
         },
-        "course4/Super Challenge - Variables": {
-          "name": "Szuper kihívás: változók"
+        "hourofcode/Maze": {
+          "name": "Labirintus",
+          "overview": "Ebben a leckében a tanulók egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ezt a leckét 4-10 éves fiatal tanulók számára terveztük, de bármely korosztályba tartozók elvégezhetik, mert a megadott differenciálási javaslatok segítségével az idősebb tanulók számára is adaptálható.",
+          "student_overview": "Ebben a leckében a tanulók egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ezt a leckét 4-10 éves fiatal tanulók számára terveztük, de bármely korosztályba tartozók elvégezhetik, mert a megadott differenciálási javaslatok segítségével az idősebb tanulók számára is adaptálható."
         },
-        "course4/Super Challenge - For Loops": {
-          "name": "Szuper kihívás - For Loops (számláló ciklus)"
+        "iceage/Ice Age Play Lab": {
+          "name": "Jégkorszak játéklabor",
+          "student_overview": "Ebben a leckében a tanulók az informatikával ismerkednek, és egy játékot készítenek alapvető blokkkódok felhasználásával."
         },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Szuper kihívás - Funkciók és Paraméterek"
+        "infinity/Infinity": {
+          "name": "Disney Infinity játéklabor",
+          "student_overview": "Ebben a leckében a tanulók az informatikával ismerkednek, és egy játékot készítenek alapvető blokkkódok felhasználásával."
         },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Extrém kihívás - Átfogó"
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft Kódolás Órája",
+          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra.",
+          "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra."
+        },
+        "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Minecraft Kódolás órája tervező",
+          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra.",
+          "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ez a lecke jól használható minden olvasni tudó diák számára (6 éves kor felett). Fiatalabb tanulók valószínűleg nem érnek a tananyag végére, de nagyon jól fogják érezni magukat, amikor egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük is lesz egy kis szabad játékra."
+        },
+        "oceans/Oceans": {
+          "name": "AI óceánok",
+          "overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Először a diákok szemetet próbálnak eltávolítani az óceánból és a tárgyakat \"hal\" vagy \"nem hal\" kategóriába sorolják. Ezután a tanulóknak ki kell bővíteniük az adathalmazt más tengeri élőlénnyel. A foglalkozás második részében a tanulók maguk választanak címkéket, amelyeket a véletlenszerűen generált halak képeire helyeznek. Ezeket az adatokat egy gépi tanuló modellben használják, amely ezután képes lesz arra, hogy önállóan címkézzen fel új képeket."
+        },
+        "outbreak/Outbreak": {
+          "overview": "Ez a leckében az események köré épülő **készségfejlesztést** kombináljuk egy **miniprojekttel**, ahol a diákok saját számítógépes szimulációt készíthetnek a Sprite Lab program segítségével. A diákok tanulmányozva a szimulációt megértik, hogy milyen gyorsan terjed egy vírus, és hogy mit lehet tenni a terjedés lassítása érdekében. ",
+          "preparation": "- Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n- Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti.",
+          "purpose": "Az előző leckében a diákok egy egyszerű szimulációból származó adatokat gyűjtöttek és értelmeztek.  Ebben a leckében a diákok az utasításokat követve saját szimulációs modelljüket programozzák. A diákok a valós világban előforduló vírusjárványokról szerzett előzetes ismereteiket egy fiktív forgatókönyvre fogják alkalmazni. ",
+          "student_overview": "Egy vírus elérte Szörnyvárost! Tanulj meg vírusszimulátort készíteni, és segíts a szörnyeknek, hogy újra egészségesek legyenek."
+        },
+        "playlab/Play Lab": {
+          "name": "Játéklabor",
+          "student_overview": "Ebben a leckében a tanulók az informatikával ismerkednek, és egy játékot készítenek alapvető blokkkódok felhasználásával."
+        },
+        "poem-art-2021/Poem Art": {
+          "name": "Versművészet",
+          "overview": "Ebben az új kódolók számára készült, az IT-t és az angol nyelvet integráló leckében a vers hangulatának illusztrálására a diákok kód segítségével animálnak egy verset. A tanulók elolvasnak egy verset és megismerik annak hangulatát. Ezután megfelelő effekteket és képeket keresnek a vers hangulatának illusztrálására. Végül a tanulók eseményeket (kódot) használnak a hangulatváltozás illusztrálására vagy új képeket animálának egy vershez. \n\nEz a lecke 1 órás önálló leckeként is elvégezhető. Ezt a leckét lehet a [Kódolás költészettel](http://studio.code.org/s/poetry-2021) című több leckéből álló modul első leckéjeként is használni.",
+          "preparation": "-   Tekintsd át és töltsd ki az online oktatóprogramot: [Versművészet](http://studio.code.org/s/poem-art).\n\n-   Először feltétlenül próbáld ki a tevékenységeket, mielőtt megkérnéd a diákokat, hogy végezzék el azokat. \n\n-   Ellenőrizd a technikai felszerelést, és nézd meg, hogy szükség van-e valamilyen előzetes hibaelhárításra.\n\n-   Néhány szint lejátszásához hang szükséges. Adjál ki előre fejhallgatókat. \n\n-   [Választható] Tanulónként 2 öntapadós jegyzetlap az értékeléshez."
+        },
+        "starwars/Hour of Code 2015": {
+          "name": "Star Wars: Egy galaxis építése kóddal (JavaScript)",
+          "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ennek a leckének két változata van. "
+        },
+        "starwarsblocks/Hour of Code 2015": {
+          "student_overview": "Ebben a leckében a tanulók, korosztálytól függetlenül, egy biztonságos, támogató környezetben ismerkednek meg a kódolással és az informatikával. Ennek a leckének két változata van. "
+        },
+        "text-compression/Text Compression": {
+          "name": "Szöveg tömörítése",
+          "student_overview": "Egy bizonyos ponton elérjük a fizikai határát annak, hogy milyen gyorsan tudunk biteket küldeni, és ezért, ha szeretnénk nagyobb információ mennyiséget gyorsabban küldeni, akkor meg kell próbálni ugyanannyi információt kevesebb biten tárolni - tömöríteni kell az adatokat.  "
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Hangulat tanulmányozása"
+        },
+        "allthethings/Jigsaw": {
+          "name": "Kirakós játék"
+        },
+        "allthethings/Maze": {
+          "name": "Labirintus"
+        },
+        "allthethings/Artist": {
+          "name": "Művész"
+        },
+        "allthethings/Bee": {
+          "name": "Méh"
+        },
+        "allthethings/Farmer": {
+          "name": "Farmer"
+        },
+        "allthethings/Flappy": {
+          "name": "Flappy"
+        },
+        "allthethings/Bounce": {
+          "name": "Ugrál"
+        },
+        "allthethings/Multi": {
+          "name": "Feleletválasztás"
+        },
+        "allthethings/Multi2": {
+          "name": "Multi2"
+        },
+        "allthethings/Match": {
+          "name": "Párosítás"
+        },
+        "allthethings/Netsim": {
+          "name": "Netsim"
+        },
+        "allthethings/Text Compression": {
+          "name": "Szöveg tömörítése"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Star wars": {
+          "name": "Star Wars"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Web Lab": {
+          "name": "Web-Lab"
+        },
+        "allthethings/Sprite Lab": {
+          "name": "Sprite labor"
+        },
+        "allthethings/Dance Lab": {
+          "name": "Tánc Labor"
+        },
+        "allthethings/Java Lab": {
+          "name": "Java laboratórium"
+        },
+        "allthethings/lesson-48": {
+          "name": "Költészet"
+        },
+        "allthethings/lesson-49": {
+          "name": "Zene"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Bevezetés a számítógép tudományába"
@@ -1311,6 +1782,60 @@
         },
         "20-hour/Wrap-up": {
           "name": "Összefoglaló"
+        },
+        "course1/Happy Maps": {
+          "name": "Vidám térképek"
+        },
+        "course1/Move it, Move it": {
+          "name": "Gyerünk, gyerünk!"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Kirakós játék: Tanuld meg a vonszolást"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Labirintus: sorozat"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Labirintus: hibakeresés"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Valós algoritmusok: Ültess el egy magot!"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Méh: sorozat"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Művész: sorozat"
+        },
+        "course1/Building a Foundation": {
+          "name": "Az alap megépítése"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Művész: alakzatok"
+        },
+        "course1/Spelling Bee": {
+          "name": "Betüző méh"
+        },
+        "course1/Getting Loopy": {
+          "name": "Ciklikusság"
+        },
+        "course1/Maze: Loops": {
+          "name": "Labirintus: ciklusok"
+        },
+        "course1/Bee: Loops": {
+          "name": "Méh: ciklusok"
+        },
+        "course1/The Big Event": {
+          "name": "A nagy esemény"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Játéklabor: hozz létre egy történetet"
+        },
+        "course1/Going Places Safely": {
+          "name": "Biztonságos utazás"
+        },
+        "course1/Artist: Loops": {
+          "name": "Művész: ciklusok"
         },
         "course2/Graph Paper Programming": {
           "name": "Grafikus programozás"
@@ -1432,59 +1957,71 @@
         "course3/Artist: Patterns": {
           "name": "Művész: minták"
         },
-        "course1/Happy Maps": {
-          "name": "Vidám térképek"
+        "course4/Unplugged: Tangrams": {
+          "name": "Gép nélküli feladatok: Tangram"
         },
-        "course1/Move it, Move it": {
-          "name": "Gyerünk, gyerünk!"
+        "course4/Maze and Bee": {
+          "name": "Labirintus és a méh"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Kirakós játék: Tanuld meg a vonszolást"
+        "course4/Artist": {
+          "name": "Művész"
         },
-        "course1/Maze: Sequence": {
-          "name": "Labirintus: sorozat"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Gép nélküli feladatok: Űrlap változók"
         },
-        "course1/Maze: Debugging": {
-          "name": "Labirintus: hibakeresés"
+        "course4/Unplugged: Madlibs": {
+          "name": "Gép nélküli feladatok: Madlibs"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Valós algoritmusok: Ültess el egy magot!"
+        "course4/Artist: Variables": {
+          "name": "Művész: változók"
         },
-        "course1/Bee: Sequence": {
-          "name": "Méh: sorozat"
+        "course4/Play Lab: Variables": {
+          "name": "Játéklabor: változók"
         },
-        "course1/Artist: Sequence": {
-          "name": "Művész: sorozat"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Gép nélküli feladatok: Számlálóciklusos móka"
         },
-        "course1/Building a Foundation": {
-          "name": "Az alap megépítése"
+        "course4/Bee: For Loops": {
+          "name": "Méh: számláló ciklusok"
         },
-        "course1/Artist: Shapes": {
-          "name": "Művész: alakzatok"
+        "course4/Artist: For Loops": {
+          "name": "Művész: számláló ciklusok"
         },
-        "course1/Spelling Bee": {
-          "name": "Betüző méh"
+        "course4/Play Lab: For Loops": {
+          "name": "Játéklabor: ciklusok"
         },
-        "course1/Getting Loopy": {
-          "name": "Ciklikusság"
+        "course4/Artist: Functions": {
+          "name": "Művész: függvények"
         },
-        "course1/Maze: Loops": {
-          "name": "Labirintus: ciklusok"
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Gép nélküli feladatok: Dalszerzés paraméterekkel"
         },
-        "course1/Bee: Loops": {
-          "name": "Méh: ciklusok"
+        "course4/Artist: Functions with Parameters": {
+          "name": "Művész: paraméteres függvények"
         },
-        "course1/The Big Event": {
-          "name": "A nagy esemény"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Játéklabor: függvények paraméterekkel"
         },
-        "course1/Studio: Create a Story": {
-          "name": "Játéklabor: hozz létre egy történetet"
+        "course4/Bee: Functions with Parameters": {
+          "name": "Méh: függvények paraméterekkel"
         },
-        "course1/Going Places Safely": {
-          "name": "Biztonságos utazás"
+        "course4/Unplugged: Binary": {
+          "name": "Gép nélküli feladatok: kettes számrendszer"
         },
-        "course1/Artist: Loops": {
-          "name": "Művész: ciklusok"
+        "course4/Artist Binary": {
+          "name": "Művész: a kettes számrendszer"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Szuper kihívás: változók"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Szuper kihívás - For Loops (számláló ciklus)"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Szuper kihívás - Funkciók és Paraméterek"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Extrém kihívás - Átfogó"
         },
         "jigsaw/Jigsaw": {
           "name": "Kirakós játék",
@@ -1492,515 +2029,6 @@
           "preparation": "-   A [Mindennapi tudás iskolája](https://www.commonsense.org/education/digital-citizenship) webhelyen további tartalmak találhatók az online biztonságról.",
           "purpose": "A lecke fő célja, hogy a diákok némi számítógépes tapasztalatot szerezzenek. Megismerkednek a legalapvetőbb számítógépes funkciókkal, mint a kattintás, a húzás és dobás, és ezzel az osztályban a diákok lényegében azonos szintre kerülnek, amikor majd feladványokat kell megoldaniuk. Ez a lecke remek lehetőséget nyújt arra is, hogy megismerjék a számítógépes hardver alapvető kifejezéseit, többek között az \"egér\", az \"érintőpad\" vagy az \"érintőképernyő\" kifejezéseket, attól függően, hogy milyen eszközt használnak.",
           "student_overview": "A feladvány befejezéséhez kattints és húzd át"
-        },
-        "allthethings/Jigsaw": {
-          "name": "Kirakós játék"
-        },
-        "allthethings/Maze": {
-          "name": "Labirintus"
-        },
-        "allthethings/Artist": {
-          "name": "Művész"
-        },
-        "allthethings/Bee": {
-          "name": "Méh"
-        },
-        "allthethings/Farmer": {
-          "name": "Farmer"
-        },
-        "allthethings/Flappy": {
-          "name": "Flappy"
-        },
-        "allthethings/Bounce": {
-          "name": "Ugrál"
-        },
-        "allthethings/Multi": {
-          "name": "Feleletválasztás"
-        },
-        "allthethings/Multi2": {
-          "name": "Multi2"
-        },
-        "allthethings/Match": {
-          "name": "Párosítás"
-        },
-        "allthethings/Netsim": {
-          "name": "Netsim"
-        },
-        "allthethings/Text Compression": {
-          "name": "Szöveg tömörítése"
-        },
-        "allthethings/AppLab": {
-          "name": "AppLab"
-        },
-        "allthethings/Studio": {
-          "name": "Studio"
-        },
-        "allthethings/Star wars": {
-          "name": "Star Wars"
-        },
-        "allthethings/Minecraft": {
-          "name": "Minecraft"
-        },
-        "allthethings/Web Lab": {
-          "name": "Web-Lab"
-        },
-        "allthethings/Sprite Lab": {
-          "name": "Sprite labor"
-        },
-        "allthethings/Dance Lab": {
-          "name": "Tánc Labor"
-        },
-        "allthethings/Java Lab": {
-          "name": "Java laboratórium"
-        },
-        "allthethings/lesson-48": {
-          "name": "Költészet"
-        },
-        "allthethings/lesson-49": {
-          "name": "Zene"
-        },
-        "coursef-2021/Virtual Pet": {
-          "name": "Miniprojekt: Virtuális kisállat",
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursef-2021/lesson-11": {
-          "name": "Miniprojekt: Felhasználói adatbeviteli programok"
-        },
-        "coursef-2021/Loops with the Artist": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursef-2021/Variables that Change in Artist": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursef-2021/Nested Loops in the Maze": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursef-2021/Variables that Change in Bee": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursef-2021/For Loop Fun": {
-          "name": "Szórakozás a For ciklussal"
-        },
-        "coursef-2021/For Loops in Bee": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursef-2021/For Loops in Artist": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursef-2021/lesson-5": {
-          "overview": "Ez a leckében az események köré épülő **készségfejlesztést** kombináljuk egy **miniprojekttel**, ahol a diákok saját számítógépes szimulációt készíthetnek a Sprite Lab program segítségével. A diákok tanulmányozva a szimulációt megértik, hogy milyen gyorsan terjed egy vírus, és hogy mit lehet tenni a terjedés lassítása érdekében. ",
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti.",
-          "purpose": "Az előző leckében a diákok egy egyszerű szimulációból származó adatokat gyűjtöttek és értelmeztek.  Ebben a leckében a diákok az utasításokat követve saját szimulációs modelljüket programozzák. A diákok a valós világban előforduló vírusjárványokról szerzett előzetes ismereteiket egy fiktív forgatókönyvre fogják alkalmazni. ",
-          "student_overview": "Egy vírus elérte Szörnyvárost! Tanulj meg vírusszimulátort készíteni, és segíts a szörnyeknek, hogy újra egészségesek legyenek."
-        },
-        "coursef-2021/Internet": {
-          "name": "Az internet"
-        },
-        "coursef-2021/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "courseb-2021/Digital Trails": {
-          "name": "Digitális nyomvonalak",
-          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEzt a leckét eredetileg a Common Sense Education készítette. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAmit online csinálsz, az mindig online marad? A diákok megtanulják, hogy az általuk online megosztott információk digitális lábnyomot hagynak maguk után. Az, hogy ez az útvonal egy keskeny ösvény lesz-e, vagy egy széles út, káros lesz-e számukra, vagy hasznos, attól függ, hogy hogyan kezelik ezt a lábnyomot. A tanulók összehasonlíthatják a különféle nyomvonalakat, és elsajátíthatják a kritikus gondolkodást, ami alapján képesek lesznek megfelelő döntéseket hozni arról, hogy milyen információkat hagynak maguk után a digiális úton.",
-          "preparation": "-   Az oktatási anyagok áttekintése.\n-   Egyes tanulók szórólapjának nyomtatása.",
-          "purpose": "A Common Sense digitális állampolgársági tanterve a gyermekekkel, a médiával és a technológiával kapcsolatos legújabb kitatások alapján hat fő témakörrel foglalkozik. Ez a lecke a digitális lábnyomra és identitásra összpontosít. A tanulók megismerik az online megosztás előnyeit és kockázatait, és felfedezik, hogy a digitális személyiség hogyan befolyásolhatja az önismeretet, hírnevet, és a kapcsolatokat.",
-          "student_overview": "A digitális lábnyom megismerése, valamint a biztonság megteremtése a webhelyek látogatása során. "
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "Gyerünk, gyerünk!"
-        },
-        "courseb-2021/Programming in Harvester": {
-          "name": "Programozás az aratóval"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "Ciklikusság"
-        },
-        "courseb-2021/The Right App": {
-          "name": "A megfelelő alkalmazás"
-        },
-        "courseb-2021/Events: The Big Event": {
-          "name": "Az ifjabbik Nagy Esemény"
-        },
-        "courseb-2021/Events in Play Lab": {
-          "name": "Mini-projekt: Királyi csata eseményekkel"
-        },
-        "courseb-2021/lesson-1": {
-          "name": "Kurzus Projekt vége"
-        },
-        "coursea-2021/Learn to Drag and Drop": {
-          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "Vidám térképek"
-        },
-        "coursea-2021/Programming with Rey and BB-8": {
-          "name": "Programozás Rey és BB-8 segítségével",
-          "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.",
-          "student_overview": "Segíts BB-8-nek begyűjteni a fémdarabokat"
-        },
-        "coursea-2021/Events: The Big Event": {
-          "name": "Az ifjabbik Nagy Esemény"
-        },
-        "coursea-2021/lesson-1": {
-          "name": "Kurzus Projekt vége"
-        },
-        "coursec-2021/Loops with Rey and BB-8": {
-          "name": "Ciklusok Reyjel és BB-8-tel",
-          "overview": "A „Getting Loopy” című utasítások ismétlődésének koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak, amiben BB-8 lesz a segítségükre.",
-          "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
-        },
-        "coursec-2021/Loops in Harvester": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "A nagy esemény"
-        },
-        "coursec-2021/Build a Flappy Game": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursec-2021/Events in Play Lab": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursec-2021/Picturing Data": {
-          "name": "Az adatok leképezése"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "Bináris karkötők"
-        },
-        "coursec-2021/End of Course Project: Create a Play Lab Game": {
-          "name": "Kurzus Projekt vége"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "Grafikus programozás"
-        },
-        "coursed-2021/Introduction to Online Puzzles": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "Váltó programozás"
-        },
-        "coursed-2021/Debugging in Collector": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursed-2021/Dance Party": {
-          "name": "Táncos buli",
-          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
-        },
-        "coursed-2021/Loops in Artist": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursed-2021/Nested Loops in Bee": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursed-2021/Conditionals with Cards": {
-          "name": "Feltételek kártyákkal"
-        },
-        "coursed-2021/Conditionals in Bee": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursed-2021/While Loops in Farmer": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursed-2021/Until Loops in Maze": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursed-2021/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "express-2021/lesson-1": {
-          "name": "Táncos buli",
-          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
-        },
-        "express-2021/Loops with Rey and BB-8": {
-          "name": "Ciklusok Reyjel és BB-8-tel",
-          "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
-        },
-        "express-2021/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "pre-express-2021/Learn to Drag and Drop": {
-          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
-        },
-        "pre-express-2021/Programming with Rey and BB-8": {
-          "name": "Programozás Rey és BB-8 segítségével",
-          "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva."
-        },
-        "pre-express-2021/Programming in Harvester": {
-          "name": "Programozás az aratóval"
-        },
-        "pre-express-2021/A Royal Battle with Events": {
-          "name": "Királyi csata eseményekkel"
-        },
-        "coursee-2021/Simon Says": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursee-2021/Learning Sprites with Sprite Lab": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursee-2021/Alien Dance Party with Sprite Lab": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursee-2021/Private and Personal Information": {
-          "name": "Magán és személyes információk",
-          "preparation": "-   Az oktatási anyagok áttekintése.\n-   Egyes tanulók szórólapjának nyomtatása."
-        },
-        "coursee-2021/About Me": {
-          "name": "Miniprojekt: Rólam"
-        },
-        "coursee-2021/Digital Sharing": {
-          "name": "Digitális megosztás"
-        },
-        "coursee-2021/Programming and Loops with the Artist": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "Dalszerzés paraméterekkel"
-        },
-        "coursee-2021/Functions in Minecraft": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursee-2021/Functions in Artist": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursee-2021/Conditionals": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursee-2021/Functions in Harvester": {
-          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
-        },
-        "coursee-2021/lesson-1": {
-          "name": "Hozzáférhetőség tervezése"
-        },
-        "coursee-2021/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "csd7-2021/CS Discoveries Post-Course Survey": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
-        },
-        "csd4-2021/CS Discoveries Post-Course Survey": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
-        },
-        "csd6-2021/Board Events": {
-          "name": "Táblás események"
-        },
-        "csd6-2021/Getting Properties": {
-          "name": "Tulajdonságok szerzése"
-        },
-        "csd6-2021/Making Music": {
-          "name": "Zene Készítése"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "Paraméteres függvények"
-        },
-        "csd6-2021/CS Discoveries Post-Course Survey": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
-        },
-        "csd5-2021/Representing Images": {
-          "name": "Képek ábrázolása"
-        },
-        "csd5-2021/Combining Representations": {
-          "name": "Ábrázolások kombinálása"
-        },
-        "csd5-2021/Keeping Data Secret": {
-          "name": "Adatok titokban tartása"
-        },
-        "csd5-2021/CS Discoveries Post-Course Survey": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
-        },
-        "csd3-2021/Variables": {
-          "name": "változók"
-        },
-        "csd3-2021/Random Numbers": {
-          "name": "Véletlen számok"
-        },
-        "csd3-2021/Sprites": {
-          "name": "sprite-ok"
-        },
-        "csd3-2021/Sprite Properties": {
-          "name": "Sprite tulajdonságok"
-        },
-        "csd3-2021/Text": {
-          "name": "szöveg"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "Feltételek"
-        },
-        "csd3-2021/Keyboard Input": {
-          "name": "Billentyűzetbemenet"
-        },
-        "csd3-2021/Velocity": {
-          "name": "Sebesség"
-        },
-        "csd3-2021/Collisions": {
-          "name": "Ütközések"
-        },
-        "csd3-2021/Functions": {
-          "name": "Függvények"
-        },
-        "csd3-2021/lesson-1": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
-        },
-        "csd1-2021/Intro to Problem Solving": {
-          "name": "Bevezetés a problémamegoldásba"
-        },
-        "csd1-2021/The Problem Solving Process": {
-          "name": "A probléma-megoldási folyamat"
-        },
-        "csd1-2021/Exploring Problem Solving": {
-          "name": "A Problémamegoldás Felfedezése"
-        },
-        "csd1-2021/What is a Computer?": {
-          "name": "Mi az a számítógép?"
-        },
-        "csd1-2021/Input and Output": {
-          "name": "Bemenet és Kimenet"
-        },
-        "csd1-2021/Processing": {
-          "name": "Feldolgozás"
-        },
-        "csd1-2021/Storage": {
-          "name": "Tárhely"
-        },
-        "csd1-2021/Project - Propose an App": {
-          "name": "Projekt - Javasolj egy Alkalmazást"
-        },
-        "csd2-2021/Intro to HTML": {
-          "name": "Bevezetés a HTML-be"
-        },
-        "csd2-2021/Headings": {
-          "name": "Címsorok"
-        },
-        "csd2-2021/Digital Footprint": {
-          "name": "Digitális Lábnyom"
-        },
-        "csd2-2021/Styling Text with CSS": {
-          "name": "Szöveg Stilizálása CSS-ben"
-        },
-        "csd2-2021/Styling Elements with CSS": {
-          "name": "Elemek stilizálása CSS-el"
-        },
-        "csd2-2021/CSS Classes": {
-          "name": "CSS osztályok"
-        },
-        "csd2-2021/Linking Pages": {
-          "name": "Oldalak összekapcsolása"
-        },
-        "csd2-2021/lesson-1": {
-          "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
-        },
-        "pre-express-2020/Programming with Rey and BB-8": {
-          "name": "Programozás Rey és BB-8 segítségével"
-        },
-        "pre-express-2020/A Royal Battle with Events": {
-          "name": "Királyi csata eseményekkel"
-        },
-        "express-2020/Dance Party": {
-          "name": "Táncos buli"
-        },
-        "express-2020/Loops with Rey and BB-8": {
-          "name": "Ciklusok Reyjel és BB-8-tel"
-        },
-        "express-2020/While Loops with the Farmer": {
-          "name": "Videó: While hurkok a farmerrel"
-        },
-        "express-2020/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "courseb-2020/Digital Trails": {
-          "name": "Digitális útonalak"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "Gyerünk, gyerünk!"
-        },
-        "courseb-2020/Programming in Harvester": {
-          "name": "Programozás az aratóval"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "Ciklikusság"
-        },
-        "courseb-2020/The Right App": {
-          "name": "A megfelelő alkalmazás"
-        },
-        "courseb-2020/Events: The Big Event": {
-          "name": "Az ifjabbik Nagy Esemény"
-        },
-        "courseb-2020/Events in Play Lab": {
-          "name": "Királyi csata eseményekkel"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Grafikus programozás"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Váltó programozás"
-        },
-        "coursed-2020/Dance Party": {
-          "name": "Táncos buli"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "Feltételek kártyákkal"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "Bináris képek"
-        },
-        "coursed-2020/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Bináris karkötők"
-        },
-        "coursec-2020/Loops with Rey and BB-8": {
-          "name": "Ciklusok Reyjel és BB-8-tel"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "A nagy esemény"
-        },
-        "coursec-2020/Picturing Data": {
-          "name": "Az adatok leképezése"
-        },
-        "coursec-2020/End of Course Project: Create a Play Lab Game": {
-          "name": "Kurzus Projekt vége"
-        },
-        "coursee-2020/Simon Says": {
-          "name": "Simon mondja"
-        },
-        "coursee-2020/Private and Personal Information": {
-          "name": "Magán és személyes információk"
-        },
-        "coursee-2020/Digital Sharing": {
-          "name": "Digitális megosztás"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "Dalszerzés paraméterekkel"
-        },
-        "coursee-2020/Designing for Accessibility": {
-          "name": "Hozzáférhetőség tervezése"
-        },
-        "coursee-2020/End of Course Project": {
-          "name": "Kurzus Projekt vége"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Vidám térképek"
-        },
-        "coursea-2020/Programming with Rey and BB-8": {
-          "name": "Programozás Rey és BB-8 segítségével"
-        },
-        "coursea-2020/Events: The Big Event": {
-          "name": "Az ifjabbik Nagy Esemény"
-        },
-        "coursef-2020/Envelope Variables": {
-          "name": "Boríték változók"
-        },
-        "coursef-2020/AI for Oceans": {
-          "name": "AI óceánok"
-        },
-        "coursef-2020/Internet": {
-          "name": "Az internet"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "Szórakozás a For ciklussal"
-        },
-        "coursef-2020/End of Course Project": {
-          "name": "Kurzus Projekt vége"
         }
       }
     }

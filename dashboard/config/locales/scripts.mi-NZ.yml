@@ -3,436 +3,659 @@ mi:
   data:
     script:
       name:
-        course1:
-          title: Akoranga 1
-          description: Mō ngā kaipānui hou, me tīmata i Akoranga 1. Mā ngā akonga
-            e hanga ngā papatono rorohiko hei āwhina i a rātou ki te ako ki te mahi
-            tahi, me te whanake i ā rātou pukenga rapanga, me te manawanui ki te whakaoti
-            i ngā mahi uaua. Hei te mutunga o te Akoranga ka hangaia e ngā akonga
-            i ō rātou ake kēmu, kōrero paki rānei, ka taea hoki te tuari atu. Pai
-            mō ngā tamariki tau 1-2 i te kura.
-          description_short: Tīmataria ki te Akoranga 1 mō ngā kaipānui pīpī.
-          description_audience: Ngā Tau 4-6
-          student_description: Mō ngā kaipānui hou, me tīmata i Akoranga 1. Mā ngā
-            akonga e hanga ngā papatono rorohiko hei āwhina i a rātou ki te ako ki
-            te mahi tahi, me te whanake i ā rātou pukenga rapanga, me te manawanui
-            ki te whakaoti i ngā mahi uaua. Hei te mutunga o te Akoranga ka hangaia
-            e ngā akonga i ō rātou ake kēmu, kōrero paki rānei, ka taea hoki te tuari
-            atu. Pai mō ngā tamariki tau 1-2 i te kura.
-        course2:
-          title: Akoranga 2
-          description: Mō ngā ākonga e taea ana te pānui, ā, kāore ā rātou wheako
-            tuhiwaehere, me tīmata ki te Akoranga 2. I tēnei akoranga, ka waihangahia
-            e ngā ākonga ngā papatono kia whakaoti rapanga, kia whakawhanake kēmu
-            pāhekoheko, pūrākau rānei hei tiritiri. E manakohia ana mō ngā taumata
-            2-5.
-          description_short: Tīmataria ki te Akoranga 2 mō ngā ākonga e taea ana te
-            pānui.
-          description_audience: Ngā Tau 6+ (me mātua pānui)
-          student_description: Mō ngā ākonga e taea ana te pānui, ā, kāore ā rātou
-            wheako tuhiwaehere, me tīmata ki te Akoranga 2. I tēnei akoranga, ka waihangahia
-            e ngā ākonga ngā papatono kia whakaoti rapanga, kia whakawhanake kēmu
-            pāhekoheko, pūrākau rānei hei tiritiri. E manakohia ana mō ngā taumata
-            2-5.
-        course3:
-          title: Akoranga 3
-          description: I hoahoa ai te Akoranga 3 mō ngā ākonga kua puta kē i te Akoranga
-            2. Ka whakawhānuitia te titiro a ngā ākonga ki ngā kaupapa tuhiwaehere
-            i tirohia i ngā akoranga o muri kia waihanga i ngā otinga hangore mō ngā
-            rapanga matatini. Kia tae ki te paunga o tēnei ākoranga, ka waihangahia
-            e ngā ākonga ngā pūrākau pāhekoheko me ngā kēmu hei tiritiri ki te tangata
-            ahakoa ko wai. E manakohia ana mō ngā taumata 4-5.
-          description_short: Ka whai-ake te Akoranga 3 i te Akoranga 2.
+        20-hour:
+          description: Ka whakaakona i tēnei akoranga 10-haora te roa i ngā ariā uho
+            o te pūtaiao rorohiko me te tuhiwaehere i ngā akoranga 2-4. I whakahoahoatia
+            tēnei akoranga hei mahi mā ngā tau 10-18 te pakeke. Tirohia ngā akoranga
+            2-4 kia whānui ake te wheako!
+          description_audience: Ngā Tau 10-18
+          description_short: Ka whakaakona i tēnei akoranga 20-haora te roa ngā ariā
+            uho o te pūtaiao rorohiko me te tuhiwaehere i ngā akoranga 2-4.
+          student_description: Ka whakaakona i tēnei akoranga 10-haora te roa i ngā
+            ariā uho o te pūtaiao rorohiko me te tuhiwaehere i ngā akoranga 2-4. I
+            whakahoahoatia tēnei akoranga hei mahi mā ngā tau 10-18 te pakeke. Tirohia
+            ngā akoranga 2-4 kia whānui ake te wheako!
+          title: Whakataki Whakatere ki te Akoranga CS
+        2021drafting:
+          lesson_groups:
+            introduction:
+              display_name: Kupu Whakataki
+            lessonGroup-3:
+              display_name: Ngā Taurangi
+        CSF_Secret_Sample:
           description_audience: Ngā Tau 8-18
-          student_description: I hoahoa ai te Akoranga 3 mō ngā ākonga kua puta kē
-            i te Akoranga 2. Ka whakawhānuitia te titiro a ngā ākonga ki ngā kaupapa
-            tuhiwaehere i tirohia i ngā akoranga o muri kia waihanga i ngā otinga
-            hangore mō ngā rapanga matatini. Kia tae ki te paunga o tēnei ākoranga,
-            ka waihangahia e ngā ākonga ngā pūrākau pāhekoheko me ngā kēmu hei tiritiri
-            ki te tangata ahakoa ko wai. E manakohia ana mō ngā taumata 4-5.
-        playlab:
-          title: Taiwhanga Tākaro
-          description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
-            Tākaro!
-          description_short: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
-            Tākaro!
-          student_description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te
-            Taiwhanga Tākaro!
-        artist:
-          title: Rehetoi
-          description: Tātuhia ngā pikitia me ngā hoahoa rawe me te Rehetoi!
-          description_short: Tātuhia ngā pikitia me ngā hoahoa rawe me te Rehetoi!
-          student_description: Tātuhia ngā pikitia me ngā hoahoa rawe me te Rehetoi!
-        hourofcode:
-          title: Rīrapa Tauhira
-          description: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko me ngā
-            pūāhua o Angry Birds, Plants vs. zombies, me Scrat nō Ice Age!
-          description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
-            me ngā tini pūāhua ngahau!
-          student_description: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
-            me ngā pūāhua o Angry Birds, Plants vs. zombies, me Scrat nō Ice Age!
-        frozen:
-          title: Tuhia te waehere ki tō Anna me Elsa taha
-          description: Me whakamahi i te tuhiwaehere kia hono atu ki a Anna rāua ko
-            Elsa i a rāua e tūhura ana i te wana me te ihi o te tio. Ka waihangahia
-            e koe ngā whā hukarere me ngā tauira i a koe e reti hukapapa ana, ā, ka
-            waihangahia tētahi ao hōtoke hei tiritiri atu ki ō hoa!
-          student_description: Me whakamahi i te tuhiwaehere kia hono atu ki a Anna
-            rāua ko Elsa i a rāua e tūhura ana i te wana me te ihi o te tio. Ka waihangahia
-            e koe ngā whā hukarere me ngā tauira i a koe e reti hukapapa ana, ā, ka
-            waihangahia tētahi ao hōtoke hei tiritiri atu ki ō hoa!
-        course4:
-          title: Akoranga 4
-          description: I hoahoa ai te Akoranga 4 mō ngā ākonga kua puta kē i ngā Akoranga
-            2 me te 3. Ka ako ngā ākonga me pēhea te whakaoti rapanga matatini rawa
-            i a rātou e ako ana ki te tōpū i ngā tini ariā ina whakaoti ana i ia wero.
-            Kia mutu te Akoranga nei, ka taea e ngā ākonga te waihanga papatono hei
-            whakaatu i ngā tini pūkenga, tae atu ki ngā koromeke me ngā taumahi whai
-            tawhā. E manakohia ana mō ngā taumata 4-8.
-          description_short: Me puta kē ngā ihu o ngā ākonga i ngā Akoranga 2 me te
-            3 i mua i te whai Akoranga 4.
-          description_audience: Ngā Tau 9-18
-          student_description: I hoahoa ai te Akoranga 4 mō ngā ākonga kua puta kē
-            i ngā Akoranga 2 me te 3. Ka ako ngā ākonga me pēhea te whakaoti rapanga
-            matatini rawa i a rātou e ako ana ki te tōpū i ngā tini ariā ina whakaoti
-            ana i ia wero. Kia mutu te Akoranga nei, ka taea e ngā ākonga te waihanga
-            papatono hei whakaatu i ngā tini pūkenga, tae atu ki ngā koromeke me ngā
-            taumahi whai tawhā. E manakohia ana mō ngā taumata 4-8.
+        CSF_Secret_Sample_Story:
+          description_audience: Ngā Tau 8-18+
         Course4pre:
-          title: Akoranga 4 Tōmua
           description: He akoranga poto o ngā ariā mā ngā ākonga kāore anō kia whāia
             te Akoranga 2 me te 3.
           description_short: He akoranga poto o ngā ariā mā ngā ākonga kāore anō kia
             whāia te Akoranga 2 me te 3.
           student_description: He akoranga poto o ngā ariā mā ngā ākonga kāore anō
             kia whāia te Akoranga 2 me te 3.
-        infinity:
-          title: Taiwhanga Tākaro Disney Infinity
-          description: Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi pūrākau,
-            kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity.
-          description_short: Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi
-            pūrākau, kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity.
-          student_description: Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi
-            pūrākau, kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity.
-        netsim:
-          title: Pūtaruna ā-Ipurangi
-        20-hour:
-          title: Whakataki Whakatere ki te Akoranga CS
-          description: Ka whakaakona i tēnei akoranga 10-haora te roa i ngā ariā uho
-            o te pūtaiao rorohiko me te tuhiwaehere i ngā akoranga 2-4. I whakahoahoatia
-            tēnei akoranga hei mahi mā ngā tau 10-18 te pakeke. Tirohia ngā akoranga
-            2-4 kia whānui ake te wheako!
-          description_short: Ka whakaakona i tēnei akoranga 20-haora te roa ngā ariā
-            uho o te pūtaiao rorohiko me te tuhiwaehere i ngā akoranga 2-4.
-          description_audience: Ngā Tau 10-18
-          student_description: Ka whakaakona i tēnei akoranga 10-haora te roa i ngā
-            ariā uho o te pūtaiao rorohiko me te tuhiwaehere i ngā akoranga 2-4. I
-            whakahoahoatia tēnei akoranga hei mahi mā ngā tau 10-18 te pakeke. Tirohia
-            ngā akoranga 2-4 kia whānui ake te wheako!
-        events:
-          title: Ngā Takunetanga
-          description: Ngā Takunetanga
-          description_short: Ngā Takunetanga
-          student_description: Ngā Takunetanga
-        flappy:
-          title: Waehere Flappy
-          description: E hiahia ana koe te ki te tuhi i tō ake kēmu i roto iho i te
-            tekau miniti? Whakamātauria tā mātou whakaakoranga Waehere Flappy!
-          description_short: Tuhia tō ake kēmu Flappy i te 10 meneti iti iho!
-          student_description: E hiahia ana koe te ki te tuhi i tō ake kēmu i roto
-            iho i te tekau miniti? Whakamātauria tā mātou whakaakoranga Waehere Flappy!
-        jigsaw:
-          title: Pangahono
-          description: Whakamātauhia tā mātou akoranga Pangahono.
-          description_short: Whakamātauhia tā mātou akoranga Pangahono.
-          student_description: Whakamātauhia tā mātou akoranga Pangahono.
-        step:
-          title: Hipanga
-          description: Akoranga Hātepe
-          description_short: Akoranga Hātepe
-          student_description: Akoranga Hātepe
+          title: Akoranga 4 Tōmua
         Hour of Code:
-          title: Hour of Code 2013
           description: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko me ngā
             pūāhua o Angry Birds me Plants vs. Zombies!
           description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
             me ngā tini pūāhua ngahau!
           student_description: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
             me ngā pūāhua o Angry Birds me Plants vs. Zombies!
-        asUnplugged:
-          description_audience: Ngā Tau 6-13
-        afterschool1:
-          description_audience: Ngā Tau 7-13
+          title: Hour of Code 2013
+        MikeTest:
+          description_audience: Ngā Tau 8-98
         Special Fun:
           description_audience: Ngā Tau 10-18
         SpecialSeries:
           description_audience: Ngā Tau 10-18
-        iceage:
-          title: Taiwhanga Tākaro Ice Age
-          description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
-            Tākaro Ice Age!
-          description_short: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
-            Tākaro Ice Age!
-          student_description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te
-            Taiwhanga Tākaro Ice Age!
-        gumball:
-          title: Taiwhanga Tākaro Gumball
-          description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
-            Tākaro Gumball!
-          description_short: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
-            Tākaro Gumball!
-          student_description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te
-            Taiwhanga Tākaro Gumball!
-        starwars:
-          description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake
-            kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
-          description_short: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
-            ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
-          student_description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
-            ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
-        starwarsblocks:
-          description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake
-            kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
-          description_short: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
-            ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
-          student_description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
-            ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
-        mc:
-          title: Hour of Code Mahimaina
-          description: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve, i a Alex
-            rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
-          description_short: Tūhura i te Minecraft ao i roto i te tohu pūmanawa
-          student_description: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve,
-            i a Alex rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
-        CSF_Secret_Sample:
-          description_audience: Ngā Tau 8-18
-        cspunit1-support:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
-        CSF_Secret_Sample_Story:
-          description_audience: Ngā Tau 8-18+
-        MikeTest:
-          description_audience: Ngā Tau 8-98
-        artistExemplar:
-          description_audience: Ngā Tau 8-18
-        teachercon:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
-        gradeKinder:
-          description_audience: Ngā Tau 5-18
-        grade4:
-          description_audience: Ngā Tau 9-99
-        grade1:
-          description_audience: Ngā Tau 5-18
-        grade5:
-          description_audience: Ngā Tau 10-110
-        grade3:
-          description_audience: Ngā Tau 5-18
+        afterschool1:
+          description_audience: Ngā Tau 7-13
         alltheplcthings:
           lesson_groups:
             content:
               display_name: Ihirangi
             practice:
               display_name: Huarahi Whakaako
-        grade2:
-          description_audience: Ngā Tau 5-18
-        csp-online-test:
+        andrea-test:
           lesson_groups:
             content:
               display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
-        csp1-support:
-          lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
+        aquatic:
+          description_short: Me whakamahi i to whakaaro hangarau me nga pukenga whakaoti
+            ki te torotoro, ki te hanga ao ki raro moana i te waehere!
+          title: 'Mahimaina: Rerenga Moana'
+        artist:
+          description: Tātuhia ngā pikitia me ngā hoahoa rawe me te Rehetoi!
+          description_short: Tātuhia ngā pikitia me ngā hoahoa rawe me te Rehetoi!
+          student_description: Tātuhia ngā pikitia me ngā hoahoa rawe me te Rehetoi!
+          title: Rehetoi
+        artistExemplar:
+          description_audience: Ngā Tau 8-18
+        asUnplugged:
+          description_audience: Ngā Tau 6-13
         basketball:
-          title: Hangaia tētahi kēmu poitūkohu
-          description_short: Hangaia tētahi kēmu poitūkohu
           description: Hangaia tētahi kēmu poitūkohu
-          student_description: Hangaia tētahi kēmu poitūkohu
+          description_short: Hangaia tētahi kēmu poitūkohu
           name: poitūkohu
-        csp2-support:
+          student_description: Hangaia tētahi kēmu poitūkohu
+          title: Hangaia tētahi kēmu poitūkohu
+        classic-hoc-impact-study:
+          description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
+            me ngā tini pūāhua ngahau!
+        course1:
+          description: Mō ngā kaipānui hou, me tīmata i Akoranga 1. Mā ngā akonga
+            e hanga ngā papatono rorohiko hei āwhina i a rātou ki te ako ki te mahi
+            tahi, me te whanake i ā rātou pukenga rapanga, me te manawanui ki te whakaoti
+            i ngā mahi uaua. Hei te mutunga o te Akoranga ka hangaia e ngā akonga
+            i ō rātou ake kēmu, kōrero paki rānei, ka taea hoki te tuari atu. Pai
+            mō ngā tamariki tau 1-2 i te kura.
+          description_audience: Ngā Tau 4-6
+          description_short: Tīmataria ki te Akoranga 1 mō ngā kaipānui pīpī.
+          student_description: Mō ngā kaipānui hou, me tīmata i Akoranga 1. Mā ngā
+            akonga e hanga ngā papatono rorohiko hei āwhina i a rātou ki te ako ki
+            te mahi tahi, me te whanake i ā rātou pukenga rapanga, me te manawanui
+            ki te whakaoti i ngā mahi uaua. Hei te mutunga o te Akoranga ka hangaia
+            e ngā akonga i ō rātou ake kēmu, kōrero paki rānei, ka taea hoki te tuari
+            atu. Pai mō ngā tamariki tau 1-2 i te kura.
+          title: Akoranga 1
+        course2:
+          description: Mō ngā ākonga e taea ana te pānui, ā, kāore ā rātou wheako
+            tuhiwaehere, me tīmata ki te Akoranga 2. I tēnei akoranga, ka waihangahia
+            e ngā ākonga ngā papatono kia whakaoti rapanga, kia whakawhanake kēmu
+            pāhekoheko, pūrākau rānei hei tiritiri. E manakohia ana mō ngā taumata
+            2-5.
+          description_audience: Ngā Tau 6+ (me mātua pānui)
+          description_short: Tīmataria ki te Akoranga 2 mō ngā ākonga e taea ana te
+            pānui.
+          student_description: Mō ngā ākonga e taea ana te pānui, ā, kāore ā rātou
+            wheako tuhiwaehere, me tīmata ki te Akoranga 2. I tēnei akoranga, ka waihangahia
+            e ngā ākonga ngā papatono kia whakaoti rapanga, kia whakawhanake kēmu
+            pāhekoheko, pūrākau rānei hei tiritiri. E manakohia ana mō ngā taumata
+            2-5.
+          title: Akoranga 2
+        course3:
+          description: I hoahoa ai te Akoranga 3 mō ngā ākonga kua puta kē i te Akoranga
+            2. Ka whakawhānuitia te titiro a ngā ākonga ki ngā kaupapa tuhiwaehere
+            i tirohia i ngā akoranga o muri kia waihanga i ngā otinga hangore mō ngā
+            rapanga matatini. Kia tae ki te paunga o tēnei ākoranga, ka waihangahia
+            e ngā ākonga ngā pūrākau pāhekoheko me ngā kēmu hei tiritiri ki te tangata
+            ahakoa ko wai. E manakohia ana mō ngā taumata 4-5.
+          description_audience: Ngā Tau 8-18
+          description_short: Ka whai-ake te Akoranga 3 i te Akoranga 2.
+          student_description: I hoahoa ai te Akoranga 3 mō ngā ākonga kua puta kē
+            i te Akoranga 2. Ka whakawhānuitia te titiro a ngā ākonga ki ngā kaupapa
+            tuhiwaehere i tirohia i ngā akoranga o muri kia waihanga i ngā otinga
+            hangore mō ngā rapanga matatini. Kia tae ki te paunga o tēnei ākoranga,
+            ka waihangahia e ngā ākonga ngā pūrākau pāhekoheko me ngā kēmu hei tiritiri
+            ki te tangata ahakoa ko wai. E manakohia ana mō ngā taumata 4-5.
+          title: Akoranga 3
+        course4:
+          description: I hoahoa ai te Akoranga 4 mō ngā ākonga kua puta kē i ngā Akoranga
+            2 me te 3. Ka ako ngā ākonga me pēhea te whakaoti rapanga matatini rawa
+            i a rātou e ako ana ki te tōpū i ngā tini ariā ina whakaoti ana i ia wero.
+            Kia mutu te Akoranga nei, ka taea e ngā ākonga te waihanga papatono hei
+            whakaatu i ngā tini pūkenga, tae atu ki ngā koromeke me ngā taumahi whai
+            tawhā. E manakohia ana mō ngā taumata 4-8.
+          description_audience: Ngā Tau 9-18
+          description_short: Me puta kē ngā ihu o ngā ākonga i ngā Akoranga 2 me te
+            3 i mua i te whai Akoranga 4.
+          student_description: I hoahoa ai te Akoranga 4 mō ngā ākonga kua puta kē
+            i ngā Akoranga 2 me te 3. Ka ako ngā ākonga me pēhea te whakaoti rapanga
+            matatini rawa i a rātou e ako ana ki te tōpū i ngā tini ariā ina whakaoti
+            ana i ia wero. Kia mutu te Akoranga nei, ka taea e ngā ākonga te waihanga
+            papatono hei whakaatu i ngā tini pūkenga, tae atu ki ngā koromeke me ngā
+            taumahi whai tawhā. E manakohia ana mō ngā taumata 4-8.
+          title: Akoranga 4
+        coursea-2019:
           lesson_groups:
-            content:
-              display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
-        minecraft:
-          title: Pūhoahoa Hour of Code Mahimaina
-          description_short: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina
-            i tāu ake whakaputanga Mahimaina.
-          description: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i
-            tāu ake whakaputanga Mahimaina.
-          student_description: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina
-            i tāu ake whakaputanga Mahimaina.
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        coursea-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        coursea-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        coursea-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        courseb-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        courseb-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        courseb-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        courseb-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        coursec-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Tāhūrua
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        coursec-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: Tāhūrua
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        coursec-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: Tāhūrua
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        coursec-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        coursed-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Tāhūrua
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        coursed-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: Tāhūrua
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        coursed-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: Tāhūrua
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+            lessonGroup-6:
+              display_name: Te Kirirarautanga Matihiko
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+            lessonGroup-6:
+              display_name: Te Kirirarautanga Matihiko
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+            lessonGroup-6:
+              display_name: Te Kirirarautanga Matihiko
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_functions:
+              display_name: Ngā Taumahi
+            csf_nested_loops:
+              display_name: Ngā Koromeke Tauroto
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_functions:
+              display_name: Ngā Taumahi
+            csf_nested_loops:
+              display_name: Ngā Koromeke Tauroto
+        coursee-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_functions:
+              display_name: Ngā Taumahi
+            csf_nested_loops:
+              display_name: Ngā Here
+            ramp_up:
+              display_name: Ngā Koromeke Tauroto
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_functions:
+              display_name: Ngā Taumahi
+            csf_nested_loops:
+              display_name: Ngā Here
+            ramp_up:
+              display_name: Ngā Koromeke Tauroto
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_functions:
+              display_name: Ngā Taumahi
+            csf_nested_loops:
+              display_name: Ngā Here
+            ramp_up:
+              display_name: Ngā Koromeke Tauroto
         coursee-draft:
           lesson_groups:
             content:
               display_name: Ihirangi
+        coursef-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_for_loops:
+              display_name: Mō Ngā Koromeke
+            csf_internet:
+              display_name: Te Ipurangi
+            csf_variables:
+              display_name: Ngā Taurangi
+        coursef-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_for_loops:
+              display_name: Mō Ngā Koromeke
+            csf_variables:
+              display_name: Ngā Taurangi
+        coursef-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_for_loops:
+              display_name: Mō Ngā Koromeke
+            csf_variables:
+              display_name: Mō Ngā Koromeke
+            lessonGroup-7:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-8:
+              display_name: Ngā Taurangi
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-8:
+              display_name: Ngā Taurangi
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-8:
+              display_name: Ngā Taurangi
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-4:
+              display_name: Ngā Taurangi
         coursef-draft:
           lesson_groups:
             content:
               display_name: Ihirangi
-        classic-hoc-impact-study:
-          description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
-            me ngā tini pūāhua ngahau!
-        hoc-impact-study:
-          description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
-            me ngā tini pūāhua ngahau!
-        sports:
-          title: Ngā Hākinakina
-          description_short: Tuhia te waehere o tō ake hākinakina
-          description: Tuhia te waehere o tō ake hākinakina
-          student_description: Tuhia te waehere o tō ake hākinakina
-        csp3-support:
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa1-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa1-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ihirangi
+          lessons:
+            lesson-6:
+              name: Ngā Koromeke
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa2-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+          lessons:
+            lesson-4:
+              name: Ngā Taurangi
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Ihirangi
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Ihirangi
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+          lessons:
+            lesson-3:
+              name: Mō Ngā Koromeke
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa4-exemplars:
           lesson_groups:
             content:
               display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
-        csp4-support:
-          lesson_groups:
-            content:
+            lesson group:
               display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
-        csf2harvey:
-          lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csp5-support:
-          lesson_groups:
-            content:
+            lesson_group:
               display_name: Ihirangi
-            practice:
-              display_name: Huarahi Whakaako
-        csppostap-2017:
+        csa4-pilot:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        cspnovice:
+        csa4-pilot-facilitator:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csp1-dlp:
+        csa4-validation-pilot-2022:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csp2-dlp:
+        csa5-2022:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csp3-dlp:
+        csa5-2023:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csp4-dlp:
+        csa5-exemplars:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csp5-dlp:
+        csa5-pilot:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csd1-dlp:
+        csa5-pilot-facilitator:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csd6-dlp:
+        csa5-validation-pilot-2022:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csd5-dlp:
+        csa6-2022:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csd4-dlp:
+        csa6-2023:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csd3-dlp:
+        csa6-exemplars:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csd2-dlp:
+        csa6-pilot:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        express-2017:
+        csa6-pilot-facilitator:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        new-express:
+        csa6-validation-pilot-2022:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        hero:
-          description_short: Kua hoki mai a  Te Mahimaina me tetahi mahi hou mo te
-            Haora Waehere!
-        csd1-dlp-18:
+        csa7-2022:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csd2-dlp-18:
+        csa7-2023:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csd3-dlp-18:
+        csa7-exemplars:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csd4-dlp-18:
+        csa7-pilot:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csd5-dlp-18:
+        csa7-pilot-extra:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csd6-dlp-18:
+        csa7-pilot-facilitator:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csp1-dlp-18:
+        csa7-validation-pilot-2022:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csp2-dlp-18:
+        csa8-2022:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csp3-dlp-18:
+        csa8-2023:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csp4-dlp-18:
+        csa8-exemplars:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csp5-dlp-18:
+        csa8-pilot:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csp-explore-dlp-18:
+        csa8-pilot-extra:
           lesson_groups:
-            content:
+            lessonGroup-2:
               display_name: Ihirangi
-        csp-create-dlp-18:
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi
+        csd-apprentice-18:
           lesson_groups:
             content:
               display_name: Ihirangi
@@ -440,7 +663,93 @@ mi:
           lesson_groups:
             content:
               display_name: Ihirangi
-        csd-apprentice-18:
+        csd1-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd2-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd3-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd3-virtual:
+          lesson_groups:
+            csd3_1:
+              display_name: Ihirangi
+            csd3_2:
+              display_name: Ihirangi
+            cspSurvey:
+              display_name: Ihirangi
+        csd4-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd5-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd6-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csd6-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ngā Taurangi
+            ramp_up:
+              display_name: Kupu Whakataki
+            variables:
+              display_name: Ngā Taurangi
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ngā Taurangi
+        csf2harvey:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        csp-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp-create-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp-explore-dlp-18:
           lesson_groups:
             content:
               display_name: Ihirangi
@@ -448,195 +757,73 @@ mi:
           lesson_groups:
             content:
               display_name: Ihirangi
-        csp-apprentice-18:
+        csp-online-test:
           lesson_groups:
             content:
               display_name: Ihirangi
-        fit-test:
+            practice:
+              display_name: Huarahi Whakaako
+        csp1-dlp:
           lesson_groups:
             content:
               display_name: Ihirangi
-        dance:
-          description_short: Me ngā waiata a Katy Perry, Madonna, J. Balvin, Keith
-            Urban, Ciara me etahi atu!
-        aquatic:
-          title: 'Mahimaina: Rerenga Moana'
-          description_short: Me whakamahi i to whakaaro hangarau me nga pukenga whakaoti
-            ki te torotoro, ki te hanga ao ki raro moana i te waehere!
-        cspplayground:
-          lesson_groups:
-            csp_variables:
-              display_name: Ngā Taurangi
-            csp_conditionals:
-              display_name: Ngā Here
-            csp_functions:
-              display_name: Ngā Taumahi
-        dance-extras:
-          description: Neke atu i te kotahi haora, anei ethahi wero ano.
-          student_description: Neke atu i te kotahi haora, anei ethahi wero ano.
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: Ngā Taurangi
-            csf_for_loops:
-              display_name: Mō Ngā Koromeke
-            csf_internet:
-              display_name: Te Ipurangi
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: Ngā Takunetanga
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_conditionals:
-              display_name: Ngā Here
-            csf_binary:
-              display_name: Tāhūrua
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-        coursee-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_nested_loops:
-              display_name: Ngā Koromeke Tauroto
-            csf_functions:
-              display_name: Ngā Taumahi
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_conditionals:
-              display_name: Ngā Here
-            csf_functions:
-              display_name: Ngā Taumahi
-            csf_variables:
-              display_name: Ngā Taurangi
-            csf_for_loops:
-              display_name: Mō Ngā Koromeke
-        andrea-test:
+        csp1-dlp-18:
           lesson_groups:
             content:
               display_name: Ihirangi
-        dance-extras-gallery:
-          title: Me Kanikani Tonu
-          description: Neke atu i te kotahi haora, anei ethahi wero ano.
-          student_description: Neke atu i te kotahi haora, anei ethahi wero ano.
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_binary:
-              display_name: Tāhūrua
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        coursea-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: Ngā Taurangi
-            csp_conditionals:
-              display_name: Ngā Here
-            csp_functions:
-              display_name: Ngā Taumahi
         csp1-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Ngā Taurangi
             csp_conditionals:
               display_name: Ngā Here
             csp_functions:
               display_name: Ngā Taumahi
-        csp2-pilot-staging:
-          lesson_groups:
             csp_variables:
               display_name: Ngā Taurangi
-            csp_conditionals:
-              display_name: Ngā Here
-            csp_functions:
-              display_name: Ngā Taumahi
-        csp4-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Ngā Taurangi
-            csp_conditionals:
-              display_name: Ngā Here
-            csp_functions:
-              display_name: Ngā Taumahi
-        csp5-pilot-staging:
-          lesson_groups:
-            csp_lists:
-              display_name: Ngā Rārangi
-            csp_loops:
-              display_name: Ngā Koromeke
-        csp6-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Ngā Taurangi
-            csp_conditionals:
-              display_name: Ngā Here
-            csp_functions:
-              display_name: Ngā Taumahi
-        csp8-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Ngā Taurangi
-            csp_conditionals:
-              display_name: Ngā Here
-            csp_functions:
-              display_name: Ngā Taumahi
-        csp9-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Ngā Taurangi
-            csp_conditionals:
-              display_name: Ngā Here
-            csp_functions:
-              display_name: Ngā Taumahi
-        csp10-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Ngā Taurangi
-            csp_conditionals:
-              display_name: Ngā Here
-            csp_functions:
-              display_name: Ngā Taumahi
-        csp5-pilot:
-          lesson_groups:
-            csp_lists:
-              display_name: Ngā Rārangi
-            csp_loops:
-              display_name: Ngā Koromeke
-        fit2019-novice:
+        csp1-support:
           lesson_groups:
             content:
               display_name: Ihirangi
-        fit2019-apprentice:
+            practice:
+              display_name: Huarahi Whakaako
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
+        csp2-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
+        csp2-support:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
+        csp3-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp3-dlp-18:
           lesson_groups:
             content:
               display_name: Ihirangi
@@ -644,17 +831,207 @@ mi:
           lesson_groups:
             content:
               display_name: Ihirangi
-        csl-vn:
-          lesson_groups:
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        dlp19-csd-mod-fit:
+        csp3-support:
           lesson_groups:
             content:
               display_name: Ihirangi
-        dlp19-csp-mod-fit:
+            practice:
+              display_name: Huarahi Whakaako
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
+        csp4-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
+        csp4-support:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Ngā Rārangi
+            csp_loops:
+              display_name: Ngā Koromeke
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Ngā Rārangi
+            csp_loops:
+              display_name: Ngā Koromeke
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Ngā Rārangi
+            csp_loops:
+              display_name: Ngā Koromeke
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Ngā Koromeke
+        csp5-dlp:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Ngā Rārangi
+            csp_loops:
+              display_name: Ngā Koromeke
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Ngā Rārangi
+            csp_loops:
+              display_name: Ngā Koromeke
+        csp5-support:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Ngā Hātepe
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Ngā Rārangi
+            lessonGroup-3:
+              display_name: Ngā Koromeke
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
+        cspnovice:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Ngā Here
+            csp_functions:
+              display_name: Ngā Taumahi
+            csp_variables:
+              display_name: Ngā Taurangi
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+        cspunit1-support:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
+        dance:
+          description_short: Me ngā waiata a Katy Perry, Madonna, J. Balvin, Keith
+            Urban, Ciara me etahi atu!
+        dance-2019:
+          title: Te Pāti Kanikani
+        dance-extras:
+          description: Neke atu i te kotahi haora, anei ethahi wero ano.
+          student_description: Neke atu i te kotahi haora, anei ethahi wero ano.
+        dance-extras-2019:
+          description: Neke atu i te kotahi haora, anei ethahi wero ano.
+          student_description: Neke atu i te kotahi haora, anei ethahi wero ano.
+          title: Me Kanikani Tonu
+        dance-extras-gallery:
+          description: Neke atu i te kotahi haora, anei ethahi wero ano.
+          student_description: Neke atu i te kotahi haora, anei ethahi wero ano.
+          title: Me Kanikani Tonu
+        dlp19-csd-mod-fit:
           lesson_groups:
             content:
               display_name: Ihirangi
@@ -674,6 +1051,10 @@ mi:
           lesson_groups:
             content:
               display_name: Ihirangi
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
         dlp19-csp-mod-w1:
           lesson_groups:
             content:
@@ -690,156 +1071,355 @@ mi:
           lesson_groups:
             content:
               display_name: Ihirangi
-        csp2-pilot:
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: whakamātautau
+        events:
+          description: Ngā Takunetanga
+          description_short: Ngā Takunetanga
+          student_description: Ngā Takunetanga
+          title: Ngā Takunetanga
+        express-2017:
           lesson_groups:
             content:
               display_name: Ihirangi
-        csp6-pilot:
+        express-2019:
           lesson_groups:
-            content:
-              display_name: Ihirangi
-        dance-2019:
-          title: Te Pāti Kanikani
-        dance-extras-2019:
-          title: Me Kanikani Tonu
-          description: Neke atu i te kotahi haora, anei ethahi wero ano.
-          student_description: Neke atu i te kotahi haora, anei ethahi wero ano.
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: Ngā Taurangi
-            csp_conditionals:
-              display_name: Ngā Here
-            csp_functions:
-              display_name: Ngā Taumahi
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
             csf_conditionals:
               display_name: Ngā Here
-            csf_nested_loops:
-              display_name: Ngā Koromeke Tauroto
-            csf_functions:
-              display_name: Ngā Taumahi
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_conditionals:
-              display_name: Ngā Here
-            csf_events:
-              display_name: Ngā Takunetanga
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_conditionals:
-              display_name: Ngā Here
-            csf_events:
-              display_name: Ngā Takunetanga
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: Ngā Taurangi
-            csp_conditionals:
-              display_name: Ngā Here
-            csp_functions:
-              display_name: Ngā Taumahi
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Ngā Rārangi
-            csp_loops:
-              display_name: Ngā Koromeke
-        coursea-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        courseb-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        coursec-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_binary:
-              display_name: Tāhūrua
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Ngā Takunetanga
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_conditionals:
-              display_name: Ngā Here
-            csf_binary:
-              display_name: Tāhūrua
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-        coursee-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_nested_loops:
-              display_name: Ngā Koromeke Tauroto
-            csf_functions:
-              display_name: Ngā Taumahi
-        coursef-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_variables:
-              display_name: Ngā Taurangi
             csf_for_loops:
               display_name: Mō Ngā Koromeke
+            csf_functions:
+              display_name: Ngā Taumahi
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_variables:
+              display_name: Ngā Taurangi
         express-2020:
           lesson_groups:
-            csf_loops:
-              display_name: Ngā Koromeke
             csf_conditionals:
               display_name: Ngā Here
-            csf_functions:
-              display_name: Ngā Taumahi
-            csf_variables:
-              display_name: Ngā Taurangi
             csf_for_loops:
               display_name: Mō Ngā Koromeke
-        pre-express-2020:
-          lesson_groups:
+            csf_functions:
+              display_name: Ngā Taumahi
             csf_loops:
               display_name: Ngā Koromeke
-            csf_events:
+            csf_variables:
+              display_name: Ngā Taurangi
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_for_loops:
+              display_name: Mō Ngā Koromeke
+            csf_functions:
+              display_name: Ngā Taumahi
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_variables:
+              display_name: Ngā Taurangi
+            lessonGroup-9:
               display_name: Ngā Takunetanga
-        virtual-holding-place:
+        express-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_for_loops:
+              display_name: Mō Ngā Koromeke
+            csf_functions:
+              display_name: Ngā Taumahi
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_variables:
+              display_name: Ngā Taurangi
+            lessonGroup-9:
+              display_name: Ngā Takunetanga
+        express-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_for_loops:
+              display_name: Mō Ngā Koromeke
+            csf_functions:
+              display_name: Ngā Taumahi
+            csf_loops:
+              display_name: Ngā Koromeke
+            csf_variables:
+              display_name: Ngā Taurangi
+            lessonGroup-9:
+              display_name: Ngā Takunetanga
+        fit-test:
           lesson_groups:
             content:
               display_name: Ihirangi
-        csd3-virtual:
+        fit2019-apprentice:
           lesson_groups:
-            csd3_1:
+            content:
               display_name: Ihirangi
-            csd3_2:
+        fit2019-novice:
+          lesson_groups:
+            content:
               display_name: Ihirangi
-            cspSurvey:
+        flappy:
+          description: E hiahia ana koe te ki te tuhi i tō ake kēmu i roto iho i te
+            tekau miniti? Whakamātauria tā mātou whakaakoranga Waehere Flappy!
+          description_short: Tuhia tō ake kēmu Flappy i te 10 meneti iti iho!
+          student_description: E hiahia ana koe te ki te tuhi i tō ake kēmu i roto
+            iho i te tekau miniti? Whakamātauria tā mātou whakaakoranga Waehere Flappy!
+          title: Waehere Flappy
+        frozen:
+          description: Me whakamahi i te tuhiwaehere kia hono atu ki a Anna rāua ko
+            Elsa i a rāua e tūhura ana i te wana me te ihi o te tio. Ka waihangahia
+            e koe ngā whā hukarere me ngā tauira i a koe e reti hukapapa ana, ā, ka
+            waihangahia tētahi ao hōtoke hei tiritiri atu ki ō hoa!
+          student_description: Me whakamahi i te tuhiwaehere kia hono atu ki a Anna
+            rāua ko Elsa i a rāua e tūhura ana i te wana me te ihi o te tio. Ka waihangahia
+            e koe ngā whā hukarere me ngā tauira i a koe e reti hukapapa ana, ā, ka
+            waihangahia tētahi ao hōtoke hei tiritiri atu ki ō hoa!
+          title: Tuhia te waehere ki tō Anna me Elsa taha
+        grade1:
+          description_audience: Ngā Tau 5-18
+        grade2:
+          description_audience: Ngā Tau 5-18
+        grade3:
+          description_audience: Ngā Tau 5-18
+        grade4:
+          description_audience: Ngā Tau 9-99
+        grade5:
+          description_audience: Ngā Tau 10-110
+        gradeKinder:
+          description_audience: Ngā Tau 5-18
+        gumball:
+          description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
+            Tākaro Gumball!
+          description_short: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
+            Tākaro Gumball!
+          student_description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te
+            Taiwhanga Tākaro Gumball!
+          title: Taiwhanga Tākaro Gumball
+        hero:
+          description_short: Kua hoki mai a  Te Mahimaina me tetahi mahi hou mo te
+            Haora Waehere!
+        hoc-impact-study:
+          description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
+            me ngā tini pūāhua ngahau!
+        hourofcode:
+          description: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko me ngā
+            pūāhua o Angry Birds, Plants vs. zombies, me Scrat nō Ice Age!
+          description_short: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
+            me ngā tini pūāhua ngahau!
+          student_description: Whakamātauhia ngā mahi taketake o te pūtaiao rorohiko
+            me ngā pūāhua o Angry Birds, Plants vs. zombies, me Scrat nō Ice Age!
+          title: Rīrapa Tauhira
+        iceage:
+          description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
+            Tākaro Ice Age!
+          description_short: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
+            Tākaro Ice Age!
+          student_description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te
+            Taiwhanga Tākaro Ice Age!
+          title: Taiwhanga Tākaro Ice Age
+        infinity:
+          description: Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi pūrākau,
+            kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity.
+          description_short: Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi
+            pūrākau, kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity.
+          student_description: Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi
+            pūrākau, kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity.
+          title: Taiwhanga Tākaro Disney Infinity
+        jigsaw:
+          description: Whakamātauhia tā mātou akoranga Pangahono.
+          description_short: Whakamātauhia tā mātou akoranga Pangahono.
+          student_description: Whakamātauhia tā mātou akoranga Pangahono.
+          title: Pangahono
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: Kupu Whakataki
+            k5_getting_started_1:
+              display_name: Kupu Whakataki
+        mc:
+          description: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve, i a Alex
+            rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
+          description_short: Tūhura i te Minecraft ao i roto i te tohu pūmanawa
+          student_description: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve,
+            i a Alex rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
+          title: Hour of Code Mahimaina
+        minecraft:
+          description: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i
+            tāu ake whakaputanga Mahimaina.
+          description_short: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina
+            i tāu ake whakaputanga Mahimaina.
+          student_description: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina
+            i tāu ake whakaputanga Mahimaina.
+          title: Pūhoahoa Hour of Code Mahimaina
+        netsim:
+          title: Pūtaruna ā-Ipurangi
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ngā Here
+            lessonGroup-5:
+              display_name: Ngā Taurangi
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-4:
+              display_name: Ngā Koromeke
+            lessonGroup-6:
+              display_name: Ngā Takunetanga
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ngā Koromeke Tauroto
+            lessonGroup-4:
+              display_name: Ngā Taumahi
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-4:
+              display_name: Ngā Koromeke
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-4:
+              display_name: Ngā Koromeke
+            lessonGroup-5:
+              display_name: Ngā Takunetanga
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-6:
+              display_name: Ngā Koromeke
+        new-express:
+          lesson_groups:
+            content:
               display_name: Ihirangi
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Kupu Whakataki
+        playlab:
+          description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
+            Tākaro!
+          description_short: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
+            Tākaro!
+          student_description: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te
+            Taiwhanga Tākaro!
+          title: Taiwhanga Tākaro
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        soccer:
+          name: poiwhana
+        spelling-bee:
+          title: Ohu Takikupu
+        sports:
+          description: Tuhia te waehere o tō ake hākinakina
+          description_short: Tuhia te waehere o tō ake hākinakina
+          student_description: Tuhia te waehere o tō ake hākinakina
+          title: Ngā Hākinakina
+        starwars:
+          description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake
+            kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
+          description_short: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
+            ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
+          student_description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
+            ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
+          title: 'Star Wars: Te Hanga Ikarangi me te Waehere (JavaScript)'
+        starwarsblocks:
+          description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake
+            kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
+          description_short: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
+            ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
+          student_description: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
+            ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
+        step:
+          description: Akoranga Hātepe
+          description_short: Akoranga Hātepe
+          student_description: Akoranga Hātepe
+          title: Hipanga
+        teachercon:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Te Kirirarautanga Matihiko
+            lessonGroup-4:
+              display_name: Ngā Koromeke
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            content:
+              display_name: Ihirangi
+            practice:
+              display_name: Huarahi Whakaako
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_functions:
+              display_name: Ngā Taumahi
+            csf_nested_loops:
+              display_name: Ngā Koromeke Tauroto
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Ngā Here
+            csf_digcit:
+              display_name: Te Kirirarautanga Matihiko
+            csf_events:
+              display_name: Ngā Takunetanga
+            csf_loops:
+              display_name: Ngā Koromeke
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -856,544 +1436,11 @@ mi:
           lesson_groups:
             lg_1:
               display_name: Ihirangi
-        2021drafting:
+        virtual-holding-place:
           lesson_groups:
-            introduction:
-              display_name: Kupu Whakataki
-            lessonGroup-3:
-              display_name: Ngā Taurangi
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Ngā Taurangi
-            csp_conditionals:
-              display_name: Ngā Here
-            csp_functions:
-              display_name: Ngā Taumahi
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Ngā Rārangi
-            csp_loops:
-              display_name: Ngā Koromeke
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Ngā Hātepe
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_binary:
-              display_name: Tāhūrua
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Ngā Takunetanga
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_conditionals:
-              display_name: Ngā Here
-            csf_binary:
-              display_name: Tāhūrua
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            lessonGroup-6:
-              display_name: Te Kirirarautanga Matihiko
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Ngā Koromeke Tauroto
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_nested_loops:
-              display_name: Ngā Here
-            csf_functions:
-              display_name: Ngā Taumahi
-        coursef-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_variables:
-              display_name: Mō Ngā Koromeke
-            csf_for_loops:
-              display_name: Mō Ngā Koromeke
-            lessonGroup-8:
-              display_name: Ngā Taurangi
-            lessonGroup-7:
-              display_name: Te Kirirarautanga Matihiko
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_conditionals:
-              display_name: Ngā Here
-            csf_functions:
-              display_name: Ngā Taumahi
-            csf_variables:
-              display_name: Ngā Taurangi
-            csf_for_loops:
-              display_name: Mō Ngā Koromeke
-            lessonGroup-9:
-              display_name: Ngā Takunetanga
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: Kupu Whakataki
-            lessonGroup-3:
-              display_name: Ngā Taurangi
-            variables:
-              display_name: Ngā Taurangi
-        csa1-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa2-pilot:
-          lesson_groups:
-            lesson group:
-              display_name: Ihirangi
-        csa3-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa4-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa5-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa6-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa8-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: Kupu Whakataki
-            Introduction:
-              display_name: Kupu Whakataki
-        csa1-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa2-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa3-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        dlp21-csd:
-          lesson_groups:
-            lessonGroup-2:
-              description: whakamātautau
-        csa1-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa2-pilot-facilitator:
-          lesson_groups:
-            lesson group:
-              display_name: Ihirangi
-        csa3-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa4-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa5-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa4-exemplars:
-          lesson_groups:
-            lesson group:
-              display_name: Ihirangi
             content:
               display_name: Ihirangi
-            lesson_group:
-              display_name: Ihirangi
-            lessonGroup-2:
-              display_name: Ihirangi
-        spelling-bee:
-          title: Ohu Takikupu
-        csa5-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa6-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa6-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa7-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Ngā Taurangi
-        csa8-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa7-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa8-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        express-2022:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: Ngā Takunetanga
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_conditionals:
-              display_name: Ngā Here
-            csf_functions:
-              display_name: Ngā Taumahi
-            csf_variables:
-              display_name: Ngā Taurangi
-            csf_for_loops:
-              display_name: Mō Ngā Koromeke
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: Ngā Taurangi
-            csp_conditionals:
-              display_name: Ngā Here
-            csp_functions:
-              display_name: Ngā Taumahi
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Ngā Rārangi
-            csp_loops:
-              display_name: Ngā Koromeke
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Te Kirirarautanga Matihiko
-            csf_events:
-              display_name: Ngā Takunetanga
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_conditionals:
-              display_name: Ngā Here
-        coursee-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            ramp_up:
-              display_name: Ngā Koromeke Tauroto
-            csf_functions:
-              display_name: Ngā Taumahi
-            csf_nested_loops:
-              display_name: Ngā Here
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Te Kirirarautanga Matihiko
-            lessonGroup-8:
-              display_name: Ngā Taurangi
-        csa1-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        csa2-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa3-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa4-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa5-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa1-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa7-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa8-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Te Kirirarautanga Matihiko
-            lessonGroup-8:
-              display_name: Ngā Taurangi
-        csa6-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa7-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa8-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa2-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        soccer:
-          name: poiwhana
-        csa1-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa2-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa3-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa4-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa5-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa6-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa7-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa8-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: Ngā Koromeke
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Ihirangi
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Ngā Taurangi
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: Mō Ngā Koromeke
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa5-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa7-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csa8-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Ihirangi
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Ngā Taurangi
-            csp_conditionals:
-              display_name: Ngā Here
-            csp_functions:
-              display_name: Ngā Taumahi
-        csp5-2023:
-          lesson_groups:
-            csp_loops:
-              display_name: Ngā Koromeke
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Ngā Rārangi
-            lessonGroup-3:
-              display_name: Ngā Koromeke
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        express-2023:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: Ngā Takunetanga
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_conditionals:
-              display_name: Ngā Here
-            csf_functions:
-              display_name: Ngā Taumahi
-            csf_variables:
-              display_name: Ngā Taurangi
-            csf_for_loops:
-              display_name: Mō Ngā Koromeke
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        courseb-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_events:
-              display_name: Ngā Takunetanga
-        coursed-2023:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Te Kirirarautanga Matihiko
-            csf_events:
-              display_name: Ngā Takunetanga
-            csf_loops:
-              display_name: Ngā Koromeke
-            csf_conditionals:
-              display_name: Ngā Here
-        coursee-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Te Kirirarautanga Matihiko
-            ramp_up:
-              display_name: Ngā Koromeke Tauroto
-            csf_functions:
-              display_name: Ngā Taumahi
-            csf_nested_loops:
-              display_name: Ngā Here
-        pl-csd-summer-day1:
-          lessons:
-            lesson-3:
-              name: Kupu Whakataki
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
               name: Kupu Whakataki
-        coursef-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Te Kirirarautanga Matihiko
-            lessonGroup-4:
-              display_name: Ngā Taurangi

@@ -1,40 +1,13 @@
 {
-  "navigateForward": "Nastavi",
-  "navigateBack": "Nazad",
-  "tryAgain": "Pokušaj ponovno",
-  "navigateDone": "Kraj",
-  "saveProgress": "Spremi",
-  "correctAnswer": "Ispravno",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Opis",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Opis",
+  "correctAnswer": "Ispravno",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "godine"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "vrijeme"
-        },
-        "day": {
-          "id": "dan"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "corn": {
-          "id": "kukuruz"
+        "Length": {
+          "id": "Trajanje"
         }
       }
     },
@@ -42,51 +15,6 @@
       "fields": {
         "index": {
           "id": "indeks"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "slanina"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "boja"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "godine"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "Opis"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "veličina"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "chicken": {
-          "id": "kokoš"
         }
       }
     },
@@ -100,21 +28,35 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banana"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "godine"
         }
       }
     },
-    "naan_toy": {
+    "club_random_toy": {
       "fields": {
-        "chicken": {
-          "id": "kokoš"
+        "color": {
+          "id": "boja"
         }
       }
     },
-    "census_part": {
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Godine"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "godine"
@@ -128,37 +70,47 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Država"
+        },
+        "Music": {
+          "id": "Glazba"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "godine"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Bodovi"
-        },
         "Country": {
           "id": "Država"
         },
         "Name": {
           "id": "Ime"
+        },
+        "Score": {
+          "id": "Bodovi"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Umjetnik"
+        "chicken": {
+          "id": "kokoš"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "alligator": {
-          "id": "krokodil"
-        }
-      }
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Trajanje"
+        "Description": {
+          "id": "Opis"
         }
       }
     },
@@ -169,38 +121,37 @@
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "Glazba"
-        },
-        "Country": {
-          "id": "Država"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Age": {
-          "id": "Godine",
-          "description": "Godine"
-        },
-        "Gender": {
-          "id": "Spol",
-          "description": "Spol"
+        "bacon": {
+          "id": "slanina"
         }
       }
     },
-    "boba_toy": {
+    "safari_toy": {
       "fields": {
-        "banana": {
-          "id": "banana"
+        "alligator": {
+          "id": "krokodil"
         }
       }
     },
-    "heart": {
+    "salad_toy": {
       "fields": {
-        "Age": {
-          "id": "Godine"
+        "avocado": {
+          "id": "avokado"
+        },
+        "chicken": {
+          "id": "kokoš"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokado"
+        },
+        "corn": {
+          "id": "kukuruz"
         }
       }
     },
@@ -211,15 +162,64 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "Glazba"
+        "size": {
+          "id": "veličina"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "dan"
+        },
+        "weather": {
+          "id": "vrijeme"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Umjetnik"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "godine"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Age": {
+          "description": "Godine",
+          "id": "Godine"
         },
         "Country": {
           "id": "Država"
+        },
+        "Gender": {
+          "description": "Spol",
+          "id": "Spol"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Music": {
+          "id": "Glazba"
         }
       }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Nazad",
+  "navigateDone": "Kraj",
+  "navigateForward": "Nastavi",
+  "saveProgress": "Spremi",
+  "tryAgain": "Pokušaj ponovno"
 }

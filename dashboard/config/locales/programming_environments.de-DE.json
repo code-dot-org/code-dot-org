@@ -2,243 +2,10 @@
   "de-DE": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web Lab",
-          "description": "Web basierter HTML/CSS-Editor.",
-          "categories": {
-            "html_tags": {
-              "name": "HTML-Tags"
-            }
-          }
-        },
-        "gamelab": {
-          "name": "Spielelabor",
-          "categories": {
-            "game_lab": {
-              "name": "Spielelabor",
-              "expressions": {
-                "mouseIsOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Sprite"
-                    }
-                  }
-                },
-                "mousePressedOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Sprite"
-                    }
-                  }
-                },
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "Schwarzweiß"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Musik machen"
-                    }
-                  },
-                  "short_description": "Spielt eine MP3-Audio-Datei von der angegebenen URL."
-                },
-                "showMobileControls": {
-                  "content": "Ändert die mobilen Steuerelemente, die unter dem Spielfeld sichtbar sind.",
-                  "short_description": "Ändert die mobilen Steuerelemente, die unter dem Spielfeld sichtbar sind."
-                }
-              }
-            },
-            "sprites": {
-              "name": "Sprites",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Spirale"
-                    }
-                  }
-                },
-                "sprite.height": {
-                  "return_value": "Die Höhe des Sprites."
-                },
-                "sprite.width": {
-                  "return_value": "Die Breite des Sprites."
-                }
-              }
-            },
-            "groups": {
-              "name": "Gruppen",
-              "expressions": {
-                "add": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Sprite"
-                    }
-                  }
-                },
-                "contains": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Sprite"
-                    }
-                  }
-                },
-                "remove": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Sprite"
-                    }
-                  }
-                },
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Farbe"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Farbe"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "Zeichnung",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Stern"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Die Anzahl der Millisekunden zwischen jeder Ausführung der Funktion."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Die Anzahl der Millisekunden, die gewartet werden muss, bevor die Funktion ausgeführt wird."
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Mathematik",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Der kleinste Rückgabewert"
-                    },
-                    "max": {
-                      "description": "Der größte Rückgabewert"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Der kleinste Rückgabewert"
-                    },
-                    "max": {
-                      "description": "Der größte Rückgabewert"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Variablen",
-              "expressions": {
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "Die Zeichenfolge, nach der gesucht werden soll."
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "Die Zeichenfolge, nach der gesucht werden soll."
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "Die Länge der Zeichenfolge"
-                }
-              }
-            },
-            "functions": {
-              "name": "Funktionen"
-            }
-          }
-        },
         "applab": {
-          "name": "App-Labor",
-          "description": "App-Lab ist eine Programmierumgebung, wo man einfache apps machen kann. Entwerfe eine Anwendung/App, Code mit Blöcken oder JavaScript damit es funktioniert, dann teile die App in Sekunden.",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "button": {
-                  "short_description": "Erstellt eine Schaltfläche auf dem Bildschirm, auf der ein Text an der Standardposition (0,0) angezeigt wird, welcher von der angegebenen ID bereitgestellt und referenziert wurde."
-                },
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "Vergrößern und verkleinern"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funktion"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Musik machen"
-                    }
-                  },
-                  "short_description": "Spielt eine MP3-Audio-Datei von der angegebenen URL."
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "property": {
-                      "description": "Die Eigenschaft, die geändert wird."
-                    }
-                  },
-                  "short_description": "Setzt eine Eigenschaft auf einen neuen Wert für das angegebene Element."
-                },
-                "setScreen": {
-                  "short_description": "Setzt den Bildschirm auf die angegebene ScreenID."
-                },
-                "showElement": {
-                  "short_description": "Zeigt das Element mit der angegebenen ID an."
-                },
-                "textLabel": {
-                  "short_description": "Erstellt eine Textbeschriftung auf dem Bildschirm an der Standardposition (0,0), in der der von der angegebenen ID bereitgestellte und referenzierte Text angezeigt wird."
-                }
-              }
+            "advanced": {
+              "name": "Erweitert"
             },
             "canvas": {
               "expressions": {
@@ -309,17 +76,17 @@
                     }
                   },
                   "palette_params": {
+                    "height": {
+                      "description": "Die Höhe des umgebenden Rechtecks zur Erfassung der Bilddaten."
+                    },
+                    "width": {
+                      "description": "Die Breite des umgebenden Rechtecks zur Erfassung der Bilddaten."
+                    },
                     "x": {
                       "description": "Die X-Position in Pixeln, um die Aufnahme zu starten."
                     },
                     "y": {
                       "description": "Die Y-Position in Pixeln, um die Aufnahme zu starten."
-                    },
-                    "width": {
-                      "description": "Die Breite des umgebenden Rechtecks zur Erfassung der Bilddaten."
-                    },
-                    "height": {
-                      "description": "Die Höhe des umgebenden Rechtecks zur Erfassung der Bilddaten."
                     }
                   }
                 },
@@ -358,22 +125,25 @@
                 },
                 "rect": {
                   "palette_params": {
+                    "height": {
+                      "description": "Die vertikale Höhe des Rechtecks in Pixeln."
+                    },
+                    "width": {
+                      "description": "Die horizontale Breite des Rechtecks in Pixeln."
+                    },
                     "x": {
                       "description": "Die X-Position in Pixeln der oberen linken Ecke des Rechtecks."
                     },
                     "y": {
                       "description": "Die Y-Position in Pixeln der oberen linken Ecke des Rechtecks."
-                    },
-                    "width": {
-                      "description": "Die horizontale Breite des Rechtecks in Pixeln."
-                    },
-                    "height": {
-                      "description": "Die vertikale Höhe des Rechtecks in Pixeln."
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
+                    "alphaValue": {
+                      "description": "Die Menge an Alpha (Opazität) (von 0 bis 255), die im Pixel festgelegt werden soll."
+                    },
                     "imageData": {
                       "type": "Objekt"
                     },
@@ -382,15 +152,15 @@
                     },
                     "y": {
                       "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
-                    },
-                    "alphaValue": {
-                      "description": "Die Menge an Alpha (Opazität) (von 0 bis 255), die im Pixel festgelegt werden soll."
                     }
                   },
                   "short_description": "Legt den Alphawert (Opazität) (im Bereich von 0 bis 255) in der Farbe des Pixels fest, das sich an der angegebenen X- und Y-Position in den angegebenen Bilddaten befindet."
                 },
                 "setBlue": {
                   "palette_params": {
+                    "blueValue": {
+                      "description": "Die Menge an Blau (von 0 bis 255), die im Pixel eingestellt werden soll."
+                    },
                     "imageData": {
                       "type": "Objekt"
                     },
@@ -399,15 +169,15 @@
                     },
                     "y": {
                       "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
-                    },
-                    "blueValue": {
-                      "description": "Die Menge an Blau (von 0 bis 255), die im Pixel eingestellt werden soll."
                     }
                   },
                   "short_description": "Setzt den Blauanteil (im Bereich von 0 bis 255) in der Farbe des Pixels, das sich an der angegebenen X- und Y-Position in den angegebenen Bilddaten befindet, auf den BlueValue-Eingabebetrag."
                 },
                 "setGreen": {
                   "palette_params": {
+                    "greenValue": {
+                      "description": "Die Menge an Grün (von 0 bis 255), die im Pixel eingestellt werden soll."
+                    },
                     "imageData": {
                       "type": "Objekt"
                     },
@@ -416,35 +186,32 @@
                     },
                     "y": {
                       "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
-                    },
-                    "greenValue": {
-                      "description": "Die Menge an Grün (von 0 bis 255), die im Pixel eingestellt werden soll."
                     }
                   },
                   "short_description": "Setzt den Grünanteil (im Bereich von 0 bis 255) in der Farbe des Pixels, das sich an der angegebenen X- und Y-Position in den angegebenen Bilddaten befindet, auf den GreenValue-Eingabewert."
                 },
                 "setRGB": {
                   "palette_params": {
+                    "alpha": {
+                      "description": "Optional. Der Grad der Opazität (von 0 bis 255), der im Pixel eingestellt werden soll. Der Standardwert ist 255 (volle Opazität). (Opazität = Lichtundurchlässigkeit)"
+                    },
+                    "blue": {
+                      "description": "Die Menge an Blau (von 0 bis 255), die im Pixel eingestellt werden soll."
+                    },
+                    "green": {
+                      "description": "Die Menge an Grün (von 0 bis 255), die im Pixel eingestellt werden soll."
+                    },
                     "imageData": {
                       "type": "Objekt"
+                    },
+                    "red": {
+                      "description": "Die Anteil der Farbe Rot (von 0 bis 255), die im Pixel eingestellt werden soll."
                     },
                     "x": {
                       "description": "Die X-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
                     },
                     "y": {
                       "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
-                    },
-                    "red": {
-                      "description": "Die Anteil der Farbe Rot (von 0 bis 255), die im Pixel eingestellt werden soll."
-                    },
-                    "green": {
-                      "description": "Die Menge an Grün (von 0 bis 255), die im Pixel eingestellt werden soll."
-                    },
-                    "blue": {
-                      "description": "Die Menge an Blau (von 0 bis 255), die im Pixel eingestellt werden soll."
-                    },
-                    "alpha": {
-                      "description": "Optional. Der Grad der Opazität (von 0 bis 255), der im Pixel eingestellt werden soll. Der Standardwert ist 255 (volle Opazität). (Opazität = Lichtundurchlässigkeit)"
                     }
                   }
                 },
@@ -453,22 +220,101 @@
                     "imageData": {
                       "type": "Objekt"
                     },
+                    "redValue": {
+                      "description": "Die Anteil der Farbe Rot (von 0 bis 255), die im Pixel eingestellt werden soll."
+                    },
                     "x": {
                       "description": "Die X-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
                     },
                     "y": {
                       "description": "Die Y-Position in Pixeln, beginnend mit der oberen linken Ecke des Bildes."
-                    },
-                    "redValue": {
-                      "description": "Die Anteil der Farbe Rot (von 0 bis 255), die im Pixel eingestellt werden soll."
                     }
                   },
                   "short_description": "Setzt den Rotanteil (im Bereich von 0 bis 255) in der Farbe des Pixels, das sich an der angegebenen X- und Y-Position in den angegebenen Bilddaten befindet, auf den  Eingabe für redValue."
                 }
               }
             },
+            "circuit": {
+              "expressions": {
+                "buzzer.play": {
+                  "palette_params": {
+                    "notes": {
+                      "type": "Liste"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "notes": {
+                      "type": "Liste"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "notes": {
+                      "type": "Liste"
+                    }
+                  }
+                },
+                "lightSensor.start": {
+                  "short_description": "lightSensor.start"
+                },
+                "lightSensor.value": {
+                  "short_description": "lightSensor.value"
+                },
+                "soundSensor.value": {
+                  "short_description": "soundSensor.value"
+                },
+                "tempSensor": {
+                  "examples": {
+                    "Thermometer": {
+                      "name": "Thermometer"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Der Wert, der von der setTimeout-Funktion zum Abbrechen zurückgegeben wird."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Die Anzahl der Millisekunden zwischen jeder Ausführung der Funktion."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Die Anzahl der Millisekunden, die gewartet werden muss, bevor die Funktion ausgeführt wird."
+                    }
+                  }
+                },
+                "stopTimedLoop": {
+                  "examples": {
+                    "Countdown": {
+                      "name": "Countdown"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funktion"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Daten",
               "expressions": {
                 "createRecord": {
                   "palette_params": {
@@ -493,11 +339,11 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
-                    "tableName": {
-                      "description": "Der Name der Tabelle, aus der Datensätze abgerufen werden sollen."
-                    },
                     "options": {
                       "type": "Objekt"
+                    },
+                    "tableName": {
+                      "description": "Der Name der Tabelle, aus der Datensätze abgerufen werden sollen."
                     }
                   }
                 },
@@ -557,7 +403,50 @@
                     }
                   }
                 }
+              },
+              "name": "Daten"
+            },
+            "functions": {
+              "name": "Funktionen"
+            },
+            "maker": {
+              "expressions": {
+                "createLed": {
+                  "return_value": "Neues LED-Objekt"
+                }
               }
+            },
+            "math": {
+              "expressions": {
+                "moduloOperator": {
+                  "examples": {
+                    "Odd or Even?": {
+                      "name": "Gerade oder ungerade?"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Der größte Rückgabewert"
+                    },
+                    "min": {
+                      "description": "Der kleinste Rückgabewert"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Der größte Rückgabewert"
+                    },
+                    "min": {
+                      "description": "Der kleinste Rückgabewert"
+                    }
+                  }
+                }
+              },
+              "name": "Mathematik"
             },
             "turtle": {
               "expressions": {
@@ -629,80 +518,55 @@
                 }
               }
             },
-            "control": {
+            "ui_controls": {
               "expressions": {
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "description": "Der Wert, der von der setTimeout-Funktion zum Abbrechen zurückgegeben wird."
-                    }
-                  }
+                "button": {
+                  "short_description": "Erstellt eine Schaltfläche auf dem Bildschirm, auf der ein Text an der Standardposition (0,0) angezeigt wird, welcher von der angegebenen ID bereitgestellt und referenziert wurde."
                 },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Die Anzahl der Millisekunden zwischen jeder Ausführung der Funktion."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Die Anzahl der Millisekunden, die gewartet werden muss, bevor die Funktion ausgeführt wird."
-                    }
-                  }
-                },
-                "stopTimedLoop": {
+                "onEvent": {
                   "examples": {
-                    "Countdown": {
-                      "name": "Countdown"
+                    "Shrink and Grow": {
+                      "name": "Vergrößern und verkleinern"
                     }
-                  }
-                },
-                "timedLoop": {
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "Funktion"
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "Mathematik",
-              "expressions": {
-                "moduloOperator": {
+                },
+                "playSound": {
                   "examples": {
-                    "Odd or Even?": {
-                      "name": "Gerade oder ungerade?"
+                    "Making Music": {
+                      "name": "Musik machen"
                     }
-                  }
+                  },
+                  "short_description": "Spielt eine MP3-Audio-Datei von der angegebenen URL."
                 },
-                "randomNumber_min_max": {
+                "setProperty": {
                   "palette_params": {
-                    "min": {
-                      "description": "Der kleinste Rückgabewert"
-                    },
-                    "max": {
-                      "description": "Der größte Rückgabewert"
+                    "property": {
+                      "description": "Die Eigenschaft, die geändert wird."
                     }
-                  }
+                  },
+                  "short_description": "Setzt eine Eigenschaft auf einen neuen Wert für das angegebene Element."
                 },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Der kleinste Rückgabewert"
-                    },
-                    "max": {
-                      "description": "Der größte Rückgabewert"
-                    }
-                  }
+                "setScreen": {
+                  "short_description": "Setzt den Bildschirm auf die angegebene ScreenID."
+                },
+                "showElement": {
+                  "short_description": "Zeigt das Element mit der angegebenen ID an."
+                },
+                "textLabel": {
+                  "short_description": "Erstellt eine Textbeschriftung auf dem Bildschirm an der Standardposition (0,0), in der der von der angegebenen ID bereitgestellte und referenzierte Text angezeigt wird."
                 }
               }
             },
             "variables": {
-              "name": "Variablen",
               "expressions": {
+                "addPair": {
+                  "return_value": "Keiner"
+                },
                 "assign_x": {
                   "examples": {
                     "Fibonacci": {
@@ -710,15 +574,15 @@
                     }
                   }
                 },
+                "declareAssign_list_123": {
+                  "short_description": "Deklariere ein Array und weise es einer Variablen zu"
+                },
                 "declareAssign_object": {
                   "examples": {
                     "Choose Your Own Adventure": {
                       "name": "Wähle dein eigenes Abenteuer"
                     }
                   }
-                },
-                "declareAssign_list_123": {
-                  "short_description": "Deklariere ein Array und weise es einer Variablen zu"
                 },
                 "includes": {
                   "palette_params": {
@@ -734,116 +598,252 @@
                     }
                   }
                 },
-                "addPair": {
-                  "return_value": "Keiner"
+                "length": {
+                  "return_value": "Die Länge der Zeichenfolge"
+                }
+              },
+              "name": "Variablen"
+            }
+          },
+          "description": "App-Lab ist eine Programmierumgebung, wo man einfache apps machen kann. Entwerfe eine Anwendung/App, Code mit Blöcken oder JavaScript damit es funktioniert, dann teile die App in Sekunden.",
+          "name": "App-Labor"
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Die Anzahl der Millisekunden zwischen jeder Ausführung der Funktion."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Die Anzahl der Millisekunden, die gewartet werden muss, bevor die Funktion ausgeführt wird."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Stern"
+                    }
+                  }
+                }
+              },
+              "name": "Zeichnung"
+            },
+            "functions": {
+              "name": "Funktionen"
+            },
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Schwarzweiß"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Musik machen"
+                    }
+                  },
+                  "short_description": "Spielt eine MP3-Audio-Datei von der angegebenen URL."
+                },
+                "showMobileControls": {
+                  "content": "Ändert die mobilen Steuerelemente, die unter dem Spielfeld sichtbar sind.",
+                  "short_description": "Ändert die mobilen Steuerelemente, die unter dem Spielfeld sichtbar sind."
+                }
+              },
+              "name": "Spielelabor"
+            },
+            "groups": {
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Farbe"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Farbe"
+                    }
+                  }
+                }
+              },
+              "name": "Gruppen"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Der größte Rückgabewert"
+                    },
+                    "min": {
+                      "description": "Der kleinste Rückgabewert"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Der größte Rückgabewert"
+                    },
+                    "min": {
+                      "description": "Der kleinste Rückgabewert"
+                    }
+                  }
+                }
+              },
+              "name": "Mathematik"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirale"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "Die Höhe des Sprites."
+                },
+                "sprite.width": {
+                  "return_value": "Die Breite des Sprites."
+                }
+              },
+              "name": "Sprites"
+            },
+            "variables": {
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Die Zeichenfolge, nach der gesucht werden soll."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Die Zeichenfolge, nach der gesucht werden soll."
+                    }
+                  }
                 },
                 "length": {
                   "return_value": "Die Länge der Zeichenfolge"
                 }
-              }
-            },
-            "functions": {
-              "name": "Funktionen"
-            },
-            "advanced": {
-              "name": "Erweitert"
-            },
-            "maker": {
-              "expressions": {
-                "createLed": {
-                  "return_value": "Neues LED-Objekt"
-                }
-              }
-            },
-            "circuit": {
-              "expressions": {
-                "buzzer.play": {
-                  "palette_params": {
-                    "notes": {
-                      "type": "Liste"
-                    }
-                  }
-                },
-                "buzzer.playNotes": {
-                  "palette_params": {
-                    "notes": {
-                      "type": "Liste"
-                    }
-                  }
-                },
-                "buzzer.playSong": {
-                  "palette_params": {
-                    "notes": {
-                      "type": "Liste"
-                    }
-                  }
-                },
-                "lightSensor.start": {
-                  "short_description": "lightSensor.start"
-                },
-                "lightSensor.value": {
-                  "short_description": "lightSensor.value"
-                },
-                "soundSensor.value": {
-                  "short_description": "soundSensor.value"
-                },
-                "tempSensor": {
-                  "examples": {
-                    "Thermometer": {
-                      "name": "Thermometer"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Variablen"
             }
-          }
+          },
+          "name": "Spielelabor"
+        },
+        "javalab": {
+          "name": "Java-Labor"
         },
         "spritelab": {
-          "name": "Sprite Lab",
           "categories": {
-            "sprites": {
-              "name": "Sprites"
-            },
-            "world": {
-              "name": "Welt"
-            },
-            "location": {
-              "name": "Orte"
-            },
             "actions": {
               "name": "Aktionen"
-            },
-            "events": {
-              "name": "Ereignisse"
             },
             "behaviors": {
               "name": "Verhaltensweisen"
             },
-            "loops": {
-              "name": "Schleifen"
+            "comments": {
+              "name": "Kommentare"
             },
-            "variables": {
-              "name": "Variablen"
-            },
-            "math": {
-              "name": "Mathematik"
-            },
-            "logic": {
-              "name": "Logik"
+            "events": {
+              "name": "Ereignisse"
             },
             "functions": {
               "name": "Funktionen"
             },
+            "location": {
+              "name": "Orte"
+            },
+            "logic": {
+              "name": "Logik"
+            },
+            "loops": {
+              "name": "Schleifen"
+            },
+            "math": {
+              "name": "Mathematik"
+            },
+            "sprites": {
+              "name": "Sprites"
+            },
             "text": {
               "name": "Text"
             },
-            "comments": {
-              "name": "Kommentare"
+            "variables": {
+              "name": "Variablen"
+            },
+            "world": {
+              "name": "Welt"
             }
-          }
+          },
+          "name": "Sprite Lab"
         },
-        "javalab": {
-          "name": "Java-Labor"
+        "weblab": {
+          "categories": {
+            "html_tags": {
+              "name": "HTML-Tags"
+            }
+          },
+          "description": "Web basierter HTML/CSS-Editor.",
+          "name": "Web Lab"
         }
       }
     }

@@ -1,39 +1,14 @@
 {
-  "navigateForward": "Fortsæt",
-  "navigateBack": "Tilbage",
-  "tryAgain": "Prøv igen",
-  "navigateDone": "Færdig",
-  "saveProgress": "Gem",
-  "correctAnswer": "Rigtigt",
-  "incorrectAnswer": "Ukorrekt",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Beskrivelse",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Beskrivelse",
+  "correctAnswer": "Rigtigt",
   "dataCardLastUpdated": "Sidst opdateret",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "alder"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "vejr"
-        },
-        "day": {
-          "id": "dag"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "majs"
+        "Length": {
+          "id": "Længde"
         }
       }
     },
@@ -41,41 +16,6 @@
       "fields": {
         "index": {
           "id": "indeks"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "farve"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "alder"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "Beskrivelse"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "størrelse"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "kylling"
         }
       }
     },
@@ -89,21 +29,35 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banan"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "alder"
         }
       }
     },
-    "naan_toy": {
+    "club_random_toy": {
       "fields": {
-        "chicken": {
-          "id": "kylling"
+        "color": {
+          "id": "farve"
         }
       }
     },
-    "census_part": {
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Alder"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "alder"
@@ -117,78 +71,64 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Land"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "alder"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Score"
-        },
         "Country": {
           "id": "Land"
         },
         "Name": {
           "id": "Navn"
         },
+        "Score": {
+          "id": "Score"
+        },
         "Star": {
           "id": "Stjerne"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Kunstner"
+        "chicken": {
+          "id": "kylling"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "Beskrivelse"
         }
       }
     },
     "safari_toy": {
       "name": "Safari"
     },
-    "abalone": {
+    "salad_toy": {
       "fields": {
-        "Length": {
-          "id": "Længde"
+        "chicken": {
+          "id": "kylling"
         }
       }
     },
-    "zoo": {
+    "salsa_toy": {
       "fields": {
-        "Aquatic": {
-          "id": "Akvatisk"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Country": {
-          "id": "Land"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Achievements": {
-          "id": "Bedrifter"
-        },
-        "Age": {
-          "id": "Alder",
-          "description": "Alder"
-        },
-        "Gender": {
-          "id": "Køn",
-          "description": "Køn"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "banan"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "Alder"
+        "corn": {
+          "id": "majs"
         }
       }
     },
@@ -199,12 +139,72 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
+        "size": {
+          "id": "størrelse"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "dag"
+        },
+        "weather": {
+          "id": "vejr"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Kunstner"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "alder"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Bedrifter"
+        },
+        "Age": {
+          "description": "Alder",
+          "id": "Alder"
+        },
         "Country": {
           "id": "Land"
+        },
+        "Gender": {
+          "description": "Køn",
+          "id": "Køn"
+        },
+        "Internet": {
+          "id": "Internet"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Akvatisk"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Ukorrekt",
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Tilbage",
+  "navigateDone": "Færdig",
+  "navigateForward": "Fortsæt",
+  "saveProgress": "Gem",
+  "tryAgain": "Prøv igen"
 }

@@ -2,184 +2,55 @@
   "bn-BD": {
     "data": {
       "resources": {
-        "implementation_guide/coursed/2022": {
-          "name": "বাস্তবায়নের নির্দেশ"
+        "lesson_plans/csd/2017": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "graph_paper_programming/coursed/2022": {
-          "name": "ছক-কাগজে প্রোগ্রামিং"
+        "lesson_plans_1/csd/2017": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "ছক-কাগজে প্রোগ্রামিং"
+        "lesson_plans_2/csd/2017": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "ছক-কাগজে প্রোগ্রামিং"
+        "lesson_plans_3/csd/2017": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "ছক-কাগজে প্রোগ্রামিং"
+        "lesson_plans_4/csd/2017": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "ছক-কাগজে প্রোগ্রামিং"
+        "lesson_plans_5/csd/2017": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "ছক-কাগজে প্রোগ্রামিং"
+        "lesson_plans/csd/2018": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "relay_programming/coursed/2022": {
-          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        "lesson_plans_1/csd/2018": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "relay_programming_1/coursed/2022": {
-          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        "lesson_plans_2/csd/2018": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "relay_programming_2/coursed/2022": {
-          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        "lesson_plans_3/csd/2018": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "relay_programming_3/coursed/2022": {
-          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        "lesson_plans_4/csd/2018": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "relay_programming_4/coursed/2022": {
-          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
-        },
-        "conditionals_with_cards/coursed/2022": {
-          "name": "কার্ড সঙ্গে শর্ত"
-        },
-        "conditionals_with_cards_1/coursed/2022": {
-          "name": "কার্ড সঙ্গে শর্ত"
-        },
-        "conditionals_with_cards_2/coursed/2022": {
-          "name": "কার্ড সঙ্গে শর্ত"
-        },
-        "conditionals_with_cards_3/coursed/2022": {
-          "name": "কার্ড সঙ্গে শর্ত"
-        },
-        "conditionals_with_cards_4/coursed/2022": {
-          "name": "কার্ড সঙ্গে শর্ত"
-        },
-        "implementation_guide/coursef/2022": {
-          "name": "বাস্তবায়নের নির্দেশ"
-        },
-        "internet/coursef/2022": {
-          "name": "ইন্টারনেট"
-        },
-        "internet_1/coursef/2022": {
-          "name": "ইন্টারনেট"
-        },
-        "the_internet/coursef/2022": {
-          "name": "ইন্টারনেট"
-        },
-        "implementation_guide/coursee/2022": {
-          "name": "বাস্তবায়নের নির্দেশ"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "বাস্তবায়নের নির্দেশ"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "বড় ঘটনা"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "বড় ঘটনা"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "বড় ঘটনা"
-        },
-        "variables/express/2022": {
-          "name": "চলকগুলো"
-        },
-        "implementation_guide/coursea/2022": {
-          "name": "বাস্তবায়নের নির্দেশ"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "আনন্দের মানচিত্র"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "বড় ঘটনা"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "বড় ঘটনা"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "বড় ঘটনা"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "বাস্তবায়নের নির্দেশ"
-        },
-        "my_robotic_friends/coursec/2022": {
-          "name": "আমার রোবোটিক্স বন্ধুরা"
-        },
-        "my_robotic_friends_1/coursec/2022": {
-          "name": "আমার রোবোটিক্স বন্ধুরা"
-        },
-        "my_robotic_friends_2/coursec/2022": {
-          "name": "আমার রোবোটিক্স বন্ধুরা"
-        },
-        "my_robotic_friends_3/coursec/2022": {
-          "name": "আমার রোবোটিক্স বন্ধুরা"
-        },
-        "my_robotic_friends_4/coursec/2022": {
-          "name": "আমার রোবোটিক্স বন্ধুরা"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "বড় ঘটনা"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "বড় ঘটনা"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "বড় ঘটনা"
-        },
-        "variables/csd/2022": {
-          "name": "চলকগুলো"
-        },
-        "variables_3/csd/2022": {
-          "name": "চলকগুলো"
-        },
-        "text/csd/2022": {
-          "name": "পাঠ"
-        },
-        "conditionals/csd/2022": {
-          "name": "শর্তযুক্ত"
-        },
-        "functions/csd/2022": {
-          "name": "ফাংশনগুলি"
-        },
-        "functions_1/csd/2022": {
-          "name": "ফাংশনগুলি"
-        },
-        "functions_4/csd/2022": {
-          "name": "ফাংশনগুলি"
-        },
-        "lists/csd/2022": {
-          "name": "তালিকা"
-        },
-        "design_mode/csd/2022": {
-          "name": "Design Mode"
-        },
-        "variables_1/csd/2022": {
-          "name": "চলকগুলো"
-        },
-        "variables_2/csd/2022": {
-          "name": "চলকগুলো"
-        },
-        "functions_2/csd/2022": {
-          "name": "ফাংশনগুলি"
-        },
-        "functions_3/csd/2022": {
-          "name": "ফাংশনগুলি"
-        },
-        "functions_with_parameters/csd/2022": {
-          "name": "বৈশিষ্ট্য-যুক্ত ফাংশনগুলি"
-        },
-        "functions_5/csd/2022": {
-          "name": "ফাংশনগুলি"
-        },
-        "lesson_plans/courseb/2018": {
+        "lesson_plans_5/csd/2018": {
           "name": "পাঠ পরিকল্পনা"
         },
         "lesson_plans/coursea/2018": {
           "name": "পাঠ পরিকল্পনা"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "পাঠ পরিকল্পনা"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "পাঠ পরিকল্পনা"
+        },
         "lesson_plans/coursed/2018": {
+          "name": "পাঠ পরিকল্পনা"
+        },
+        "lesson_plans/coursee/2018": {
           "name": "পাঠ পরিকল্পনা"
         },
         "lesson_plans/coursef/2018": {
@@ -188,55 +59,13 @@
         "lesson_plans/express/2018": {
           "name": "পাঠ পরিকল্পনা"
         },
-        "lesson_plans/coursee/2018": {
+        "lesson_plans/csd/2019": {
           "name": "পাঠ পরিকল্পনা"
         },
-        "lesson_plans/coursec/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/express/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans/coursec/2019": {
+        "lesson_plans_1/csd/2019": {
           "name": "পাঠ পরিকল্পনা"
         },
         "lesson_plans_2/csd/2019": {
-          "name": "পাঠ পরিকল্পনা"
-        },
-        "lesson_plans_5/csd/2019": {
           "name": "পাঠ পরিকল্পনা"
         },
         "lesson_plans_3/csd/2019": {
@@ -245,58 +74,80 @@
         "lesson_plans_4/csd/2019": {
           "name": "পাঠ পরিকল্পনা"
         },
-        "lesson_plans/csd/2019": {
+        "lesson_plans_5/csd/2019": {
           "name": "পাঠ পরিকল্পনা"
         },
-        "lesson_plans_1/csd/2019": {
+        "lesson_plans/coursea/2019": {
           "name": "পাঠ পরিকল্পনা"
         },
-        "lesson_plans_2/csd/2017": {
+        "lesson_plans/courseb/2019": {
           "name": "পাঠ পরিকল্পনা"
         },
-        "lesson_plans_5/csd/2017": {
+        "lesson_plans/coursec/2019": {
           "name": "পাঠ পরিকল্পনা"
         },
-        "lesson_plans_1/csd/2017": {
+        "lesson_plans/coursed/2019": {
           "name": "পাঠ পরিকল্পনা"
         },
-        "lesson_plans/csd/2017": {
+        "lesson_plans/coursee/2019": {
           "name": "পাঠ পরিকল্পনা"
         },
-        "lesson_plans_4/csd/2017": {
+        "lesson_plans/coursef/2019": {
           "name": "পাঠ পরিকল্পনা"
         },
-        "lesson_plans_3/csd/2017": {
+        "lesson_plans/express/2019": {
           "name": "পাঠ পরিকল্পনা"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+        "lesson_plans/coursea/2020": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "implementation_guide/coursef/2021": {
-          "name": "বাস্তবায়নের নির্দেশ"
+        "lesson_plans/courseb/2020": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "ইন্টারনেট"
+        "lesson_plans/coursec/2020": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "ইন্টারনেট"
+        "lesson_plans/coursed/2020": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "ইন্টারনেট"
+        "lesson_plans/coursee/2020": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "implementation_guide/courseb/2021": {
-          "name": "বাস্তবায়নের নির্দেশ"
+        "lesson_plans/coursef/2020": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "বড় ঘটনা"
+        "lesson_plans/express/2020": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "csf-the-big-event-assessment/courseb/2021": {
-          "name": "বড় ঘটনা"
+        "lesson_plans/pre-express/2020": {
+          "name": "পাঠ পরিকল্পনা"
         },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "বড় ঘটনা"
+        "lists/csd/2021": {
+          "name": "তালিকা"
+        },
+        "variables_1/csd/2021": {
+          "name": "চলকগুলো"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "ফাংশনগুলি"
+        },
+        "functions_1/csd/2021": {
+          "name": "ফাংশনগুলি"
+        },
+        "design_mode/csd/2021": {
+          "name": "Design Mode"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Design Mode"
+        },
+        "functions_2/csd/2021": {
+          "name": "ফাংশনগুলি"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "ফর লুপ"
+        },
+        "for_loops/csd/2021": {
+          "name": "ফর লুপ"
         },
         "implementation_guide/coursea/2021": {
           "name": "বাস্তবায়নের নির্দেশ"
@@ -311,6 +162,18 @@
           "name": "বড় ঘটনা"
         },
         "unplugged-video-big-event/coursea/2021": {
+          "name": "বড় ঘটনা"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "বাস্তবায়নের নির্দেশ"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "বড় ঘটনা"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "বড় ঘটনা"
+        },
+        "unplugged-video-big-event/courseb/2021": {
           "name": "বড় ঘটনা"
         },
         "implementation_guide/coursec/2021": {
@@ -394,62 +257,199 @@
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "কার্ড সঙ্গে শর্ত"
         },
-        "variables_video/express/2021": {
-          "name": "চলকগুলো"
-        },
         "implementation_guide/coursee/2021": {
           "name": "বাস্তবায়নের নির্দেশ"
         },
-        "design_mode/csd/2021": {
-          "name": "Design Mode"
+        "implementation_guide/coursef/2021": {
+          "name": "বাস্তবায়নের নির্দেশ"
         },
-        "design_mode_1/csd/2021": {
-          "name": "Design Mode"
+        "assessment-answer-internet/coursef/2021": {
+          "name": "ইন্টারনেট"
         },
-        "functions_2/csd/2021": {
-          "name": "ফাংশনগুলি"
+        "csf-internet-assessment/coursef/2021": {
+          "name": "ইন্টারনেট"
         },
-        "loops_in_app_lab/csd/2021": {
-          "name": "ফর লুপ"
+        "unplugged-video-internet/coursef/2021": {
+          "name": "ইন্টারনেট"
         },
-        "for_loops/csd/2021": {
-          "name": "ফর লুপ"
-        },
-        "variables_1/csd/2021": {
+        "variables_video/express/2021": {
           "name": "চলকগুলো"
         },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "ফাংশনগুলি"
-        },
-        "functions_1/csd/2021": {
-          "name": "ফাংশনগুলি"
-        },
-        "lists/csd/2021": {
+        "lists/csd/2022": {
           "name": "তালিকা"
         },
-        "lesson_plans/pre-express/2020": {
-          "name": "পাঠ পরিকল্পনা"
+        "variables/csd/2022": {
+          "name": "চলকগুলো"
         },
-        "lesson_plans/express/2020": {
-          "name": "পাঠ পরিকল্পনা"
+        "variables_3/csd/2022": {
+          "name": "চলকগুলো"
         },
-        "lesson_plans/courseb/2020": {
-          "name": "পাঠ পরিকল্পনা"
+        "text/csd/2022": {
+          "name": "পাঠ"
         },
-        "lesson_plans/coursed/2020": {
-          "name": "পাঠ পরিকল্পনা"
+        "conditionals/csd/2022": {
+          "name": "শর্তযুক্ত"
         },
-        "lesson_plans/coursec/2020": {
-          "name": "পাঠ পরিকল্পনা"
+        "functions/csd/2022": {
+          "name": "ফাংশনগুলি"
         },
-        "lesson_plans/coursee/2020": {
-          "name": "পাঠ পরিকল্পনা"
+        "functions_1/csd/2022": {
+          "name": "ফাংশনগুলি"
         },
-        "lesson_plans/coursea/2020": {
-          "name": "পাঠ পরিকল্পনা"
+        "functions_4/csd/2022": {
+          "name": "ফাংশনগুলি"
         },
-        "lesson_plans/coursef/2020": {
-          "name": "পাঠ পরিকল্পনা"
+        "design_mode/csd/2022": {
+          "name": "Design Mode"
+        },
+        "variables_1/csd/2022": {
+          "name": "চলকগুলো"
+        },
+        "variables_2/csd/2022": {
+          "name": "চলকগুলো"
+        },
+        "functions_2/csd/2022": {
+          "name": "ফাংশনগুলি"
+        },
+        "functions_3/csd/2022": {
+          "name": "ফাংশনগুলি"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "বৈশিষ্ট্য-যুক্ত ফাংশনগুলি"
+        },
+        "functions_5/csd/2022": {
+          "name": "ফাংশনগুলি"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "বাস্তবায়নের নির্দেশ"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "আনন্দের মানচিত্র"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "বড় ঘটনা"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "বড় ঘটনা"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "বড় ঘটনা"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "বাস্তবায়নের নির্দেশ"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "বড় ঘটনা"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "বড় ঘটনা"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "বড় ঘটনা"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "বাস্তবায়নের নির্দেশ"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "আমার রোবোটিক্স বন্ধুরা"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "আমার রোবোটিক্স বন্ধুরা"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "আমার রোবোটিক্স বন্ধুরা"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "আমার রোবোটিক্স বন্ধুরা"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "আমার রোবোটিক্স বন্ধুরা"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "বড় ঘটনা"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "বড় ঘটনা"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "বড় ঘটনা"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "বাস্তবায়নের নির্দেশ"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "ছক-কাগজে প্রোগ্রামিং"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "রিলে-স্যুইচ প্রোগ্রামিং"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "কার্ড সঙ্গে শর্ত"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "বাস্তবায়নের নির্দেশ"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "বাস্তবায়নের নির্দেশ"
+        },
+        "internet/coursef/2022": {
+          "name": "ইন্টারনেট"
+        },
+        "internet_1/coursef/2022": {
+          "name": "ইন্টারনেট"
+        },
+        "the_internet/coursef/2022": {
+          "name": "ইন্টারনেট"
+        },
+        "variables/express/2022": {
+          "name": "চলকগুলো"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         }
       }
     }

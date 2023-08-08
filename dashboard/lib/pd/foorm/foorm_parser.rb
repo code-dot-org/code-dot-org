@@ -154,9 +154,9 @@ module Pd::Foorm
     def self.flatten_choices(choices)
       choices_obj = {}
       choices.each do |choice_hash|
-        if choice_hash.class == Hash && choice_hash.key?(:value) && choice_hash.key?(:text)
+        if choice_hash.instance_of?(Hash) && choice_hash.key?(:value) && choice_hash.key?(:text)
           choices_obj[choice_hash[:value]] = fill_question_placeholders(choice_hash[:text])
-        elsif choice_hash.class == String
+        elsif choice_hash.instance_of?(String)
           choices_obj[choice_hash] = fill_question_placeholders(choice_hash)
           Honeybadger.notify(
             "Foorm configuration contains question without key-value choice. Choice is '#{choice_hash}'. Please update the survey configuration."

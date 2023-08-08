@@ -5,11 +5,11 @@
         "CT": {
           "description": "গণিতিক চিন্তা-ভাবনা"
         },
-        "L": {
-          "description": "ভাষা"
-        },
         "F": {
           "description": "ফাংশনগুলি"
+        },
+        "L": {
+          "description": "ভাষা"
         }
       }
     }

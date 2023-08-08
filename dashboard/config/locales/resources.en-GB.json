@@ -2,8 +2,17 @@
   "en-GB": {
     "data": {
       "resources": {
-        "variables/express/2022": {
+        "lists/csd/2021": {
+          "name": "Lists"
+        },
+        "variables_1/csd/2021": {
           "name": "Variables"
+        },
+        "variables_video/express/2021": {
+          "name": "Variables"
+        },
+        "lists/csd/2022": {
+          "name": "Lists"
         },
         "variables/csd/2022": {
           "name": "Variables"
@@ -14,28 +23,19 @@
         "text/csd/2022": {
           "name": "Text"
         },
-        "lists/csd/2022": {
-          "name": "Lists"
-        },
         "variables_1/csd/2022": {
           "name": "Variables"
         },
         "variables_2/csd/2022": {
           "name": "Variables"
         },
+        "variables/express/2022": {
+          "name": "Variables"
+        },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "",
           "url": "",
           "type": ""
-        },
-        "variables_video/express/2021": {
-          "name": "Variables"
-        },
-        "variables_1/csd/2021": {
-          "name": "Variables"
-        },
-        "lists/csd/2021": {
-          "name": "Lists"
         }
       }
     }

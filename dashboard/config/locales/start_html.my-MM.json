@@ -2,14 +2,35 @@
   "my-MM": {
     "data": {
       "start_html": {
+        "AppLab Intro 7 - playSound": {
+          "Horse!": "မြင်း",
+          "Monkey!": "မျောက်",
+          "Tiger!": "ကျား",
+          "You Choose!": "သင်ရွေးချယ်ပါ။"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "This or That?!": "ဒီဟာလား၊ဟိုဟာလား (သို့မဟုတ်) ဤအရာလား၊ ထိုအရာလား",
+          "This!": "ဒီအရာ၊ ဤအရာ",
+          "You clicked this!": "သင်ဒါကိုနှိပ်ခဲ့တယ်။"
+        },
+        "AppLab Intro 7 - thisOrThatPersonalize": {
+          "This or That?!": "ဒီဟာလား၊ဟိုဟာလား (သို့မဟုတ်) ဤအရာလား၊ ထိုအရာလား",
+          "This!": "ဒီအရာ၊ ဤအရာ",
+          "You clicked this!": "သင်ဒါကိုနှိပ်ခဲ့တယ်။"
+        },
+        "AppLab Intro 7 - thisOrThatSetScreen": {
+          "This or That?!": "ဒီဟာလား၊ဟိုဟာလား (သို့မဟုတ်) ဤအရာလား၊ ထိုအရာလား",
+          "This!": "ဒီအရာ၊ ဤအရာ",
+          "You clicked this!": "သင်ဒါကိုနှိပ်ခဲ့တယ်။"
+        },
         "CSD U1 IO Story_2021": {
-          "Name": "အမည္",
           "City": "မြို့",
+          "Name": "အမည္",
           "text": "text"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "အမည္",
           "City": "မြို့",
+          "Name": "အမည္",
           "text": "text"
         },
         "CSD U1 processing guess_2021": {
@@ -17,6 +38,12 @@
         },
         "CSD U1 processing guess_2022": {
           "text": "text"
+        },
+        "CSD U1 processing npark_2021": {
+          "Sorry!": "တောင်းပန်ပါတယ်!"
+        },
+        "CSD U1 processing npark_2022": {
+          "Sorry!": "တောင်းပန်ပါတယ်!"
         },
         "CSD U1 storage movies_2021": {
           "Star Wars": "Star Wars",
@@ -27,12 +54,12 @@
           "text": "text"
         },
         "CSD U1 storage outfit_2021": {
-          "green": "အစိမ်း",
-          "black": "အနက်ရောင်"
+          "black": "အနက်ရောင်",
+          "green": "အစိမ်း"
         },
         "CSD U1 storage outfit_2022": {
-          "green": "အစိမ်း",
-          "black": "အနက်ရောင်"
+          "black": "အနက်ရောင်",
+          "green": "အစိမ်း"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "သင်လုပ်နိုင်ခဲ့ပြီ!"
@@ -46,6 +73,9 @@
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "​အောင်မြင်ပါတယ်!"
         },
+        "CSD U6 - Board Outputs - A_2222": {
+          "Happy": "ပျော်ရွှင်သော"
+        },
         "CSD U6 - Board Outputs - P_2222": {
           "Success!": "​အောင်မြင်ပါတယ်!"
         },
@@ -54,6 +84,9 @@
         },
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "​အောင်မြင်ပါတယ်!"
+        },
+        "CSD U6 - Board Outputs - SB4_2222": {
+          "Fish": "ငါး"
         },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "​အောင်မြင်ပါတယ်!"
@@ -71,30 +104,34 @@
           "Medium": "မခက်တခက်"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "red": "အနီ",
           "green": "အစိမ်း",
           "left": "ဘယ်ဘက်သို့",
+          "red": "အနီ",
           "right": "ညာဘက်သို့"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
+        },
+        "CSD U6 - Combine Inputs - PracA_2222": {
+          "left": "ဘယ်ဘက်သို့",
+          "right": "ညာဘက်သို့"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "အစိမ်း",
-          "blue": "အပြာရောင်"
+          "blue": "အပြာရောင်",
+          "green": "အစိမ်း"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
@@ -102,6 +139,9 @@
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "အမည္"
+        },
+        "CSD U6 - Music - A_2222": {
+          "Happy": "ပျော်ရွှင်သော"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "က",
@@ -112,36 +152,36 @@
           "G": "စ"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "​အောင်မြင်ပါတယ်!"
@@ -194,8 +234,44 @@
         "CSD U6 - Physical Output - SB2_2222": {
           "Success!": "​အောင်မြင်ပါတယ်!"
         },
+        "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "အနက်ရောင်"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "black": "အနက်ရောင်"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "Happy": "ပျော်ရွှင်သော"
+        },
+        "CSD U6 - Screen Outputs - P_2222": {
+          "title": "ခေါင်းစဉ်"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "down": "အောက်သို့",
+          "left": "ဘယ်ဘက်သို့",
+          "right": "ညာဘက်သို့",
+          "up": "အပေါ်သို့"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "name": "နာမည်"
+        },
         "CSD U6 - Sensors - P_2222": {
           "text": "text"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "တန်ဖိုး"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "သင်လုပ်နိုင်ခဲ့ပြီ!"
@@ -245,53 +321,101 @@
         "CSD U6 add LED button_2021": {
           "Success!": "​အောင်မြင်ပါတယ်!"
         },
+        "CSD U6 analog change": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog data": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog light": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog light_2018": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog light_2019": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog light_2021": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog sound": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "တန်ဖိုး"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "တန်ဖိုး"
+        },
         "CSD U6 array piano": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSD U6 array piano_2018": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSD U6 array piano_2019": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSD U6 array piano_2021": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSD U6 change": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 change_2018": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 change_2019": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 change_2021": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "မခက်တခက်"
@@ -305,37 +429,49 @@
         "CSD U6 colorLeds intensity_2021": {
           "Medium": "မခက်တခက်"
         },
+        "CSD U6 emotion machine example": {
+          "Happy": "ပျော်ရွှင်သော"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "Happy": "ပျော်ရွှင်သော"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "Happy": "ပျော်ရွှင်သော"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "Happy": "ပျော်ရွှင်သော"
+        },
         "CSD U6 frequency": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 frequency_2018": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 frequency_2019": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 frequency_2021": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 get toggle": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 get toggle_2018": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 get toggle_2019": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 get toggle_2021": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 getProperty input": {
           "Submit": "ပေးပို့ပါ"
@@ -350,36 +486,36 @@
           "Submit": "ပေးပို့ပါ"
         },
         "CSD U6 getters debug": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 getters debug_2018": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 getters debug_2019": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 getters debug_2021": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 interval": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 interval_2018": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 interval_2019": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 interval_2021": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 predict LED button": {
           "Success!": "​အောင်မြင်ပါတယ်!"
@@ -405,21 +541,33 @@
         "CSD U6 sensor experiment embedded_2021": {
           "text": "text"
         },
+        "CSD U6 setProperty predict app": {
+          "title": "ခေါင်းစဉ်"
+        },
+        "CSD U6 setProperty predict app_2018": {
+          "title": "ခေါင်းစဉ်"
+        },
+        "CSD U6 setProperty predict app_2019": {
+          "title": "ခေါင်းစဉ်"
+        },
+        "CSD U6 setProperty predict app_2021": {
+          "title": "ခေါင်းစဉ်"
+        },
         "CSD U6 slider intro": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 slider intro_2018": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 slider intro_2019": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 slider intro_2021": {
-          "short": "တို​သော",
-          "long": "ကြာသည်"
+          "long": "ကြာသည်",
+          "short": "တို​သော"
         },
         "CSD U6 test LED": {
           "Success!": "​အောင်မြင်ပါတယ်!"
@@ -497,71 +645,77 @@
           "Success!": "​အောင်မြင်ပါတယ်!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSDU6 piano with notes": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "က",
+          "B": "ခ",
           "C": "ဂ",
           "D": "ဃ",
           "F": "င",
-          "G": "စ",
-          "A": "က",
-          "B": "ခ"
+          "G": "စ"
         },
         "allthethings design mode elements": {
           "text": "text"
+        },
+        "csd-explore ui-4": {
+          "Sorry!": "တောင်းပန်ပါတယ်!"
+        },
+        "csd-explore ui-4_2022": {
+          "Sorry!": "တောင်းပန်ပါတယ်!"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "ဆက်လုပ်ပါ"
@@ -569,11 +723,23 @@
         "ml-intro ai lab- fruit veggie widget_2022": {
           "Continue": "ဆက်လုပ်ပါ"
         },
+        "ml-intro app lab-book recommender demo-2021": {
+          "Silly": "စဉ်းစားဉာဏ်မရှိသော"
+        },
+        "ml-intro app lab-book recommender demo_2022": {
+          "Silly": "စဉ်းစားဉာဏ်မရှိသော"
+        },
         "ml-model card-medical app v2 2021-2": {
           "A": "က"
         },
         "ml-model card-medical app v2 2021-2_2022": {
           "A": "က"
+        },
+        "ml-model cards-book recommender model card": {
+          "Silly": "စဉ်းစားဉာဏ်မရှိသော"
+        },
+        "ml-model cards-book recommender model card_2022": {
+          "Silly": "စဉ်းစားဉာဏ်မရှိသော"
         },
         "ml-models in applab-zoo assessment": {
           "B": "ခ"
@@ -582,182 +748,16 @@
           "B": "ခ"
         },
         "ml-use model card-example3A-2021": {
-          "rain": "မိုးရွာသည်",
-          "snow": "နှင်း",
           "cloudy": "တိမ်ထူထပ်သောပုံစံ",
-          "night": "ညအမှောင်"
+          "night": "ညအမှောင်",
+          "rain": "မိုးရွာသည်",
+          "snow": "နှင်း"
         },
         "ml-use model card-example3A_2022": {
-          "rain": "မိုးရွာသည်",
-          "snow": "နှင်း",
           "cloudy": "တိမ်ထူထပ်သောပုံစံ",
-          "night": "ညအမှောင်"
-        },
-        "AppLab Intro 7 - playSound": {
-          "Horse!": "မြင်း",
-          "You Choose!": "သင်ရွေးချယ်ပါ။",
-          "Monkey!": "မျောက်",
-          "Tiger!": "ကျား"
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-          "This!": "ဒီအရာ၊ ဤအရာ",
-          "This or That?!": "ဒီဟာလား၊ဟိုဟာလား (သို့မဟုတ်) ဤအရာလား၊ ထိုအရာလား",
-          "You clicked this!": "သင်ဒါကိုနှိပ်ခဲ့တယ်။"
-        },
-        "AppLab Intro 7 - thisOrThatPersonalize": {
-          "This!": "ဒီအရာ၊ ဤအရာ",
-          "This or That?!": "ဒီဟာလား၊ဟိုဟာလား (သို့မဟုတ်) ဤအရာလား၊ ထိုအရာလား",
-          "You clicked this!": "သင်ဒါကိုနှိပ်ခဲ့တယ်။"
-        },
-        "AppLab Intro 7 - thisOrThatSetScreen": {
-          "This!": "ဒီအရာ၊ ဤအရာ",
-          "This or That?!": "ဒီဟာလား၊ဟိုဟာလား (သို့မဟုတ်) ဤအရာလား၊ ထိုအရာလား",
-          "You clicked this!": "သင်ဒါကိုနှိပ်ခဲ့တယ်။"
-        },
-        "CSD U6 - Board Outputs - A_2222": {
-          "Happy": "ပျော်ရွှင်သော"
-        },
-        "CSD U6 - Board Outputs - SB4_2222": {
-          "Fish": "ငါး"
-        },
-        "CSD U6 - Combine Inputs - PracA_2222": {
-          "left": "ဘယ်ဘက်သို့",
-          "right": "ညာဘက်သို့"
-        },
-        "CSD U6 - Music - A_2222": {
-          "Happy": "ပျော်ရွှင်သော"
-        },
-        "CSD U6 - Screen Inputs - SB2.1_2022": {
-          "black": "အနက်ရောင်"
-        },
-        "CSD U6 - Screen Inputs - SB2.2_2022": {
-          "black": "အနက်ရောင်"
-        },
-        "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "ပျော်ရွှင်သော"
-        },
-        "CSD U6 - Screen Outputs - P_2222": {
-          "title": "ခေါင်းစဉ်"
-        },
-        "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "အပေါ်သို့",
-          "down": "အောက်သို့",
-          "left": "ဘယ်ဘက်သို့",
-          "right": "ညာဘက်သို့"
-        },
-        "CSD U6 - Screen Outputs - SB1.1_2222": {
-          "name": "နာမည်"
-        },
-        "CSD U6 - Sensors - SB1_2222": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 - Sensors - SB2_2222": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 - Sensors - SB3_2222": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 - Sensors - SB4.1_2222": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 - Sensors - SB4_2222": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog change": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog change_2018": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog change_2019": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog change_2021": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog data": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog data_2018": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog data_2019": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog data_2021": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog light": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog light_2018": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog light_2019": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog light_2021": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog sound": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog sound_2018": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog sound_2019": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 analog sound_2021": {
-          "value": "တန်ဖိုး"
-        },
-        "CSD U6 emotion machine example": {
-          "Happy": "ပျော်ရွှင်သော"
-        },
-        "CSD U6 emotion machine example_2018": {
-          "Happy": "ပျော်ရွှင်သော"
-        },
-        "CSD U6 emotion machine example_2019": {
-          "Happy": "ပျော်ရွှင်သော"
-        },
-        "CSD U6 emotion machine example_2021": {
-          "Happy": "ပျော်ရွှင်သော"
-        },
-        "CSD U6 setProperty predict app": {
-          "title": "ခေါင်းစဉ်"
-        },
-        "CSD U6 setProperty predict app_2018": {
-          "title": "ခေါင်းစဉ်"
-        },
-        "CSD U6 setProperty predict app_2019": {
-          "title": "ခေါင်းစဉ်"
-        },
-        "CSD U6 setProperty predict app_2021": {
-          "title": "ခေါင်းစဉ်"
-        },
-        "ml-intro app lab-book recommender demo-2021": {
-          "Silly": "စဉ်းစားဉာဏ်မရှိသော"
-        },
-        "ml-intro app lab-book recommender demo_2022": {
-          "Silly": "စဉ်းစားဉာဏ်မရှိသော"
-        },
-        "ml-model cards-book recommender model card": {
-          "Silly": "စဉ်းစားဉာဏ်မရှိသော"
-        },
-        "ml-model cards-book recommender model card_2022": {
-          "Silly": "စဉ်းစားဉာဏ်မရှိသော"
-        },
-        "CSD U1 processing npark_2021": {
-          "Sorry!": "တောင်းပန်ပါတယ်!"
-        },
-        "CSD U1 processing npark_2022": {
-          "Sorry!": "တောင်းပန်ပါတယ်!"
-        },
-        "csd-explore ui-4": {
-          "Sorry!": "တောင်းပန်ပါတယ်!"
-        },
-        "csd-explore ui-4_2022": {
-          "Sorry!": "တောင်းပန်ပါတယ်!"
+          "night": "ညအမှောင်",
+          "rain": "မိုးရွာသည်",
+          "snow": "နှင်း"
         }
       }
     }

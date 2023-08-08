@@ -23,10 +23,7 @@ import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
-import {
-  CdoRendererThrasos,
-  CdoRendererThrasosIRS,
-} from './addons/cdoRendererThrasos';
+import {CdoRendererThrasos} from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import CdoTheme from './themes/cdoTheme';
 import CdoDarkTheme from './themes/cdoDark';
@@ -289,12 +286,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   );
   blocklyWrapper.blockly_.registry.register(
     blocklyWrapper.blockly_.registry.Type.RENDERER,
-    Renderers.THRASOS_IRS,
-    CdoRendererThrasosIRS,
-    true /* opt_allowOverrides */
-  );
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.RENDERER,
     Renderers.ZELOS,
     CdoRendererZelos,
     true /* opt_allowOverrides */
@@ -443,6 +434,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
   blocklyWrapper.Block.prototype.setStrictOutput = function (isOutput, check) {
     return this.setOutput(isOutput, check);
+  };
+
+  const originalSetOutput = blocklyWrapper.Block.prototype.setOutput;
+  blocklyWrapper.Block.prototype.setOutput = function (isOutput, check) {
+    if (check === 'None') {
+      return originalSetOutput.call(this, isOutput, null);
+    } else {
+      return originalSetOutput.call(this, isOutput, check);
+    }
   };
 
   // Block fields are referred to as titles in CDO Blockly.

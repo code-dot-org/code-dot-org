@@ -166,10 +166,7 @@ function updateBlockPreview() {
   });
   const block = `<block type="${blockName}" />`;
   Blockly.mainBlockSpace.clear();
-  Blockly.cdoUtils.loadBlocksToWorkspace(
-    Blockly.mainBlockSpace,
-    Blockly.Xml.domToText(block)
-  );
+  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, block);
   Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
 }
 

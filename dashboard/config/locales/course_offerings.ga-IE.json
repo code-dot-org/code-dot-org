@@ -2,36 +2,37 @@
   "ga-IE": {
     "data": {
       "course_offerings": {
-        "csd": "Fionnachtana sa Ríomheolaíocht",
-        "csp": "Foras Feasa ar an Ríomheolaíocht",
         "20-hour": "Bunchúrsa Luathaithe Ríomheolaíochta",
-        "flappy": "Cód Flappy",
-        "jigsaw": "Míreanna Mearaí",
         "algebra": "An Ríomheolaíocht san Ailgéabar",
+        "allthethingscourse": "cúrsauilechuimsitheach",
         "applab-intro": "Buneolas ar an tSaotharlann Aipeanna",
         "artist": "Ealaíontóir",
         "course1": "Cúrsa 1",
         "course2": "Cúrsa 2",
         "course3": "Cúrsa 3",
         "course4": "Cúrsa 4",
-        "dance-2019": "Cóisir Dhamhsa (2019)",
-        "dance-extras-2019": "Lean ort ag damhsa (2019)",
-        "dance-extras": "Lean ort a damhsa (2018)",
+        "csd": "Fionnachtana sa Ríomheolaíocht",
+        "csp": "Foras Feasa ar an Ríomheolaíocht",
         "dance": "Cóisir Dhamhsa (2018)",
+        "dance-2019": "Cóisir Dhamhsa (2019)",
+        "dance-extras": "Lean ort a damhsa (2018)",
+        "dance-extras-2019": "Lean ort ag damhsa (2019)",
+        "edit-code": "Cuir an Cód in Eagar",
+        "flappy": "Cód Flappy",
         "frozen": "Códáil in éindí le hAnna agus Elsa",
         "gumball": "Spraotharlann: Gumball",
         "hoc-encryption": "An Uair Chódála: Criptiú Simplí",
         "hourofcode": "Cathair Ghríobháin Chlasaiceach",
         "iceage": "Spraotharlann: Ice Age",
         "infinity": "Spraotharlann Disney Infinity",
+        "jigsaw": "Míreanna Mearaí",
         "mc": "An Uair Chódála Minecraft",
         "minecraft": "Uair Chódála Minecraft - Dearthóir",
         "oceans": "AI ar son an Aigéin",
         "playlab": "Spraotharlann",
-        "edit-code": "Cuir an Cód in Eagar",
-        "allthethingscourse": "cúrsauilechuimsitheach",
-        "step": "céim",
-        "soccer": "sacar"
+        "soccer": "sacar",
+        "starwars": "Star Wars: Tóg do Réaltra Féin le Cód (JavaScript)",
+        "step": "céim"
       }
     }
   }

@@ -2,257 +2,970 @@
   "km-KH": {
     "data": {
       "resources": {
-        "poem_art_celebration/poem-art/2021": {
-          "type": "វីដេអូ"
+        "lesson_plans/csd/2017": {
+          "name": "ផែនការ​មេរៀន"
         },
-        "poem_art_events/poem-art/2021": {
-          "type": "វីដេអូ"
+        "standard_mappings/csd/2017": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
         },
-        "poem_art_imagery/poem-art/2021": {
-          "type": "វីដេអូ"
-        },
-        "poem_art_introduction/poem-art/2021": {
-          "type": "វីដេអូ"
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "type": "វីដេអូ"
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "type": "វីដេអូ"
-        },
-        "ai-ml/oceans/unversioned": {
-          "type": "វីដេអូ"
-        },
-        "ai-societal/oceans/unversioned": {
-          "type": "វីដេអូ"
-        },
-        "ai-training/oceans/unversioned": {
-          "type": "វីដេអូ"
-        },
-        "implementation_guide/coursed/2022": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
-        },
-        "teacher_forum/coursed/2022": {
+        "teacher_forum/csd/2017": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "pause_and_think_online/coursed/2022": {
-          "type": "វីដេអូ"
+        "vocabulary/csd/2017": {
+          "name": "ពាក្យពិបាក"
         },
-        "conditionals_with_cards/coursed/2022": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        "code_introduced/csd/2017": {
+          "name": "សេចក្តីណែនាំពីកូដ"
         },
-        "conditionals_with_cards_1/coursed/2022": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        "lesson_plans_1/csd/2017": {
+          "name": "ផែនការ​មេរៀន"
         },
-        "conditionals_with_cards_2/coursed/2022": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        "standard_mappings_1/csd/2017": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
         },
-        "conditionals_with_cards_3/coursed/2022": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
-        },
-        "conditionals_with_cards_4/coursed/2022": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
-        },
-        "implementation_guide/coursef/2022": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
-        },
-        "sprite_lab_documentation/coursef/2022": {
-          "name": "ឯកសារ Sprite Lab"
-        },
-        "teacher_forum/coursef/2022": {
+        "teacher_forum_1/csd/2017": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "the_power_of_words_the_power_of_words/coursef/2022": {
-          "type": "វីដេអូ"
+        "vocabulary_1/csd/2017": {
+          "name": "ពាក្យពិបាក"
         },
-        "introducing_sprite_lab_1/coursef/2022": {
-          "name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍",
-          "type": "វីដេអូ"
+        "code_introduced_1/csd/2017": {
+          "name": "សេចក្តីណែនាំពីកូដ"
         },
-        "ai_impact_on_society/coursef/2022": {
-          "type": "វីដេអូ"
+        "lesson_plans_2/csd/2017": {
+          "name": "ផែនការ​មេរៀន"
         },
-        "ai_machine_learning/coursef/2022": {
-          "type": "វីដេអូ"
+        "standard_mappings_2/csd/2017": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
         },
-        "ai_training_data_bias/coursef/2022": {
-          "type": "វីដេអូ"
-        },
-        "the_internet/coursef/2022": {
-          "name": "អ៊ីនធឺណិត"
-        },
-        "implementation_guide/coursee/2022": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
-        },
-        "sprite_lab_documentation/coursee/2022": {
-          "name": "ឯកសារ Sprite Lab"
-        },
-        "teacher_forum/coursee/2022": {
+        "teacher_forum_2/csd/2017": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "pause_and_think_online/coursee/2022": {
-          "type": "វីដេអូ"
+        "vocabulary_2/csd/2017": {
+          "name": "ពាក្យពិបាក"
         },
-        "digital_sharing_ethics_video_/coursee/2022": {
-          "type": "វីដេអូ"
+        "code_introduced_2/csd/2017": {
+          "name": "សេចក្តីណែនាំពីកូដ"
         },
-        "implementation_guide/courseb/2022": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        "lesson_plans_3/csd/2017": {
+          "name": "ផែនការ​មេរៀន"
         },
-        "teacher_forum/courseb/2022": {
+        "standard_mappings_3/csd/2017": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum_3/csd/2017": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "wiggles_-_gonoodle/courseb/2022": {
+        "vocabulary_3/csd/2017": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "ពាក្យពិបាក"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "សេចក្តីណែនាំពីកូដ"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/csd/2018": {
+          "name": "ពាក្យពិបាក"
+        },
+        "code_introduced/csd/2018": {
+          "name": "សេចក្តីណែនាំពីកូដ"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "ពាក្យពិបាក"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "សេចក្តីណែនាំពីកូដ"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "ពាក្យពិបាក"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "សេចក្តីណែនាំពីកូដ"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "ពាក្យពិបាក"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "សេចក្តីណែនាំពីកូដ"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/express/2018": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/express/2018": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/express/2018": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/express/2018": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/csd/2019": {
+          "name": "ពាក្យពិបាក"
+        },
+        "code_introduced/csd/2019": {
+          "name": "សេចក្តីណែនាំពីកូដ"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "ពាក្យពិបាក"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "សេចក្តីណែនាំពីកូដ"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "ពាក្យពិបាក"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "សេចក្តីណែនាំពីកូដ"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "ពាក្យពិបាក"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "សេចក្តីណែនាំពីកូដ"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/express/2019": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/express/2019": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/express/2019": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/express/2019": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/express/2020": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/express/2020": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/express/2020": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/express/2020": {
+          "name": "ពាក្យពិបាក"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "ផែនការ​មេរៀន"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "ពាក្យពិបាក"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "problem-solving-process-1/csd/2021": {
           "type": "វីដេអូ"
         },
-        "stevie_and_the_big_project/courseb/2022": {
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "video_pair_programming/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "video_debugging/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "lists/csd/2021": {
+          "name": "បញ្ជី"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "publishing_your_website/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "drawing-shapes-exemplar-2020/csd/2021": {
+          "name": "គំនូរគូរជារាង"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "drawing_shapes/csd/2021": {
+          "name": "គំនូរគូរជារាង"
+        },
+        "shapes_and_parameters_-_map_level/csd/2021": {
+          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
+        },
+        "shapes_and_parameters/csd/2021": {
+          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "naming_variables/csd/2021": {
+          "name": "ការដាក់ឈ្មោះអថេរ"
+        },
+        "variables_1/csd/2021": {
+          "name": "អ​ថេរ"
+        },
+        "random_numbers/csd/2021": {
+          "name": "លេខចៃដន្យ"
+        },
+        "introduction_to_sprites/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "the_animation_tab/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Sprites"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "លក្ខណៈសម្បត្តិនៃ sprite"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "ការគូររង្វិលជុំដដែលៗ"
+        },
+        "animating-sprites/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "boolean_expressions/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "conditional_statements/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "if_else_statements/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "velocity_1/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "collision_detection/csd/2021": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "ល្បឿននិងលំនាំរាប់"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "អនុ​គមន៍",
+          "type": "វីដេអូ"
+        },
+        "functions_1/csd/2021": {
+          "name": "អនុ​គមន៍"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "វីដេអូ៖ ម៉ាស៊ីនចេះរៀន",
+          "type": "វីដេអូ"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "designing_screens_with_code/csd/2021": {
+          "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "លេខចៃដន្យ"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "functions_2/csd/2021": {
+          "name": "អនុ​គមន៍"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "circuits-logic-video/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "seeing_ai/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "វីដេអូ"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum_1/coursea/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "type": "វីដេអូ"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "type": "វីដេអូ"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "type": "វីដេអូ"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "type": "វីដេអូ"
+        },
+        "pair-programming/coursea/2021": {
+          "type": "វីដេអូ"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "type": "វីដេអូ"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum_1/courseb/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "type": "វីដេអូ"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie and the Big Project"
         },
-        "unspotted_bugs/courseb/2022": {
+        "unspotted_bugs/courseb/2021": {
           "name": "កំហុសដែលមិនបានគ្រោងទុក",
           "type": "វីដេអូ"
         },
-        "pause_and_think_online/courseb/2022": {
+        "common-sense-media-pause-think/courseb/2021": {
           "type": "វីដេអូ"
         },
-        "the_big_event/courseb/2022": {
+        "assessment-answer-big-event/courseb/2021": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
-        "the_big_event_1/courseb/2022": {
+        "csf-the-big-event-assessment/courseb/2021": {
           "name": "ព្រឹត្តិការណ៍ធំ"
         },
-        "the_big_event_2/courseb/2022": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ",
+          "type": "វីដេអូ"
         },
-        "teacher_forum/express/2022": {
+        "implementation_guide/coursec/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum_1/coursec/2021": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "pair_programming/express/2022": {
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "pair-programming-vid/coursec/2021": {
           "type": "វីដេអូ"
         },
-        "artist_introduction/express/2022": {
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "pause_and_think_online/coursec/2021": {
           "type": "វីដេអូ"
         },
-        "turns_angles/express/2022": {
+        "implementation_guide/coursed/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum_1/coursed/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "pause_and_think_online/coursed/2021": {
           "type": "វីដេអូ"
         },
-        "sprite_lab_documentation/express/2022": {
+        "pause_and_think_online_1/coursed/2021": {
+          "type": "វីដេអូ"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
           "name": "ឯកសារ Sprite Lab"
         },
-        "pause_and_think_online/express/2022": {
+        "teacher_forum_1/coursee/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
           "type": "វីដេអូ"
         },
-        "pair_programming_video/express/2022": {
+        "digital-sharing-video/coursee/2021": {
           "type": "វីដេអូ"
         },
-        "variables/express/2022": {
+        "implementation_guide/coursef/2021": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "teacher_forum_1/coursef/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "សេចក្ដីណែនាំពី Sprite Lab"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "សេចក្ដីណែនាំពី Sprite Lab",
+          "type": "វីដេអូ"
+        },
+        "making_sprites/coursef/2021": {
+          "name": "ការបង្កើត Sprites"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "type": "វីដេអូ"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "type": "វីដេអូ"
+        },
+        "ai-ml/coursef/2021": {
+          "type": "វីដេអូ"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "វីដេអូ"
+        },
+        "ai-training/coursef/2021": {
+          "type": "វីដេអូ"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "អ៊ីនធឺណិត"
+        },
+        "teacher_forum_1/express/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "pair_programming/express/2021": {
+          "type": "វីដេអូ"
+        },
+        "artist_introduction/express/2021": {
+          "type": "វីដេអូ"
+        },
+        "turns_angles/express/2021": {
+          "type": "វីដេអូ"
+        },
+        "sprite_lab_documentation/express/2021": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "making_sprites/express/2021": {
+          "name": "ការបង្កើត Sprites"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "sprites_in_action/express/2021": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
+        },
+        "pause_and_think_online/express/2021": {
+          "type": "វីដេអូ"
+        },
+        "pair_programming_video/express/2021": {
+          "type": "វីដេអូ"
+        },
+        "variables_video/express/2021": {
           "name": "អ​ថេរ"
         },
-        "teacher_forum/pre-express/2022": {
+        "teacher_forum_1/pre-express/2021": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "20_20_20_rule/pre-express/2022": {
+        "20_20_20_rule/pre-express/2021": {
           "type": "វីដេអូ"
         },
-        "wiggles_-_go_noodle/pre-express/2022": {
+        "wiggles_-_go_noodle/pre-express/2021": {
           "type": "វីដេអូ"
         },
-        "pause_and_think_online/pre-express/2022": {
-          "type": "វីដេអូ"
-        },
-        "implementation_guide/coursea/2022": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
-        },
-        "teacher_forum/coursea/2022": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "getting_started_-_creating_a_class_section/coursea/2022": {
-          "type": "វីដេអូ"
-        },
-        "wiggles-go_noodle/coursea/2022": {
-          "type": "វីដេអូ"
-        },
-        "wiggles_-_gonoodle/coursea/2022": {
-          "type": "វីដេអូ"
-        },
-        "debugging_with_the_step_button/coursea/2022": {
-          "type": "វីដេអូ"
-        },
-        "pair-programming/coursea/2022": {
-          "type": "វីដេអូ"
-        },
-        "pause_and_think_online/coursea/2022": {
-          "type": "វីដេអូ"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
-        },
-        "teacher_forum/coursec/2022": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "my_robotic_friends/coursec/2022": {
-          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
-        },
-        "my_robotic_friends_1/coursec/2022": {
-          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
-        },
-        "my_robotic_friends_2/coursec/2022": {
-          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
-        },
-        "my_robotic_friends_3/coursec/2022": {
-          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
-        },
-        "my_robotic_friends_4/coursec/2022": {
-          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
-        },
-        "pair_programming/coursec/2022": {
-          "type": "វីដេអូ"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "pause_and_think_online/coursec/2022": {
+        "common-sense-media-pause-think/pre-express/2021": {
           "type": "វីដេអូ"
         },
         "teacher_forum/csd/2022": {
           "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "binary_and_data/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "amazon_and_data/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "netflix_and_data/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "waze_and_data/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "video_impact_on_society/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "video_machine_learning/csd/2022": {
-          "name": "វីដេអូ៖ ម៉ាស៊ីនចេះរៀន",
-          "type": "វីដេអូ"
-        },
-        "video_training_data_and_bias/csd/2022": {
-          "type": "វីដេអូ"
         },
         "problem_solving_process_1/csd/2022": {
           "type": "វីដេអូ"
@@ -261,6 +974,42 @@
           "type": "វីដេអូ"
         },
         "what_do_computers_do/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "intro_to_web_lab_part_2/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_intro_to_web_lab_part_1/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_debugging/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_pair_programming/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "lists/csd/2022": {
+          "name": "បញ្ជី"
+        },
+        "intro_to_css_-_part_1/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "intro_to_css_-_part_2/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "creative_commons_overview/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "publishing_your_website/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_managing_disagreement/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_teamwork/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_how_search_works/csd/2022": {
           "type": "វីដេអូ"
         },
         "drawing_shapes/csd/2022": {
@@ -302,8 +1051,14 @@
         "introduction_to_sprites/csd/2022": {
           "type": "វីដេអូ"
         },
+        "sprites/csd/2022": {
+          "name": "Sprites"
+        },
         "the_animation_tab/csd/2022": {
           "type": "វីដេអូ"
+        },
+        "sprites_1/csd/2022": {
+          "name": "Sprites"
         },
         "sprite_properties/csd/2022": {
           "name": "លក្ខណៈសម្បត្តិនៃ sprite"
@@ -366,42 +1121,6 @@
         "functions_4/csd/2022": {
           "name": "អនុ​គមន៍"
         },
-        "intro_to_web_lab_part_2/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "video_intro_to_web_lab_part_1/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "video_debugging/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "video_pair_programming/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "lists/csd/2022": {
-          "name": "បញ្ជី"
-        },
-        "intro_to_css_-_part_1/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "intro_to_css_-_part_2/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "creative_commons_overview/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "publishing_your_website/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "video_managing_disagreement/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "video_teamwork/csd/2022": {
-          "type": "វីដេអូ"
-        },
-        "video_how_search_works/csd/2022": {
-          "type": "វីដេអូ"
-        },
         "the_design_thinking_process/csd/2022": {
           "type": "វីដេអូ"
         },
@@ -412,6 +1131,28 @@
           "type": "វីដេអូ"
         },
         "events_in_app_lab_1/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "binary_and_data/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "amazon_and_data/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "netflix_and_data/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "waze_and_data/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_impact_on_society/csd/2022": {
+          "type": "វីដេអូ"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "វីដេអូ៖ ម៉ាស៊ីនចេះរៀន",
+          "type": "វីដេអូ"
+        },
+        "video_training_data_and_bias/csd/2022": {
           "type": "វីដេអូ"
         },
         "computer_science_is_changing_everything/csd/2022": {
@@ -500,957 +1241,243 @@
         "view_and_download_survey_data/csd/2022": {
           "type": "វីដេអូ"
         },
-        "lesson_plans/courseb/2018": {
-          "name": "ផែនការ​មេរៀន"
+        "implementation_guide/coursea/2022": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
         },
-        "standard_mappings/courseb/2018": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/courseb/2018": {
+        "teacher_forum/coursea/2022": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "vocabulary/courseb/2018": {
-          "name": "ពាក្យពិបាក"
+        "getting_started_-_creating_a_class_section/coursea/2022": {
+          "type": "វីដេអូ"
         },
-        "lesson_plans/coursea/2018": {
-          "name": "ផែនការ​មេរៀន"
+        "wiggles-go_noodle/coursea/2022": {
+          "type": "វីដេអូ"
         },
-        "standard_mappings/coursea/2018": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        "wiggles_-_gonoodle/coursea/2022": {
+          "type": "វីដេអូ"
         },
-        "teacher_forum/coursea/2018": {
+        "debugging_with_the_step_button/coursea/2022": {
+          "type": "វីដេអូ"
+        },
+        "pair-programming/coursea/2022": {
+          "type": "វីដេអូ"
+        },
+        "pause_and_think_online/coursea/2022": {
+          "type": "វីដេអូ"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum/courseb/2022": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "vocabulary/coursea/2018": {
-          "name": "ពាក្យពិបាក"
+        "wiggles_-_gonoodle/courseb/2022": {
+          "type": "វីដេអូ"
         },
-        "lesson_plans/coursed/2018": {
-          "name": "ផែនការ​មេរៀន"
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stevie and the Big Project"
         },
-        "standard_mappings/coursed/2018": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        "unspotted_bugs/courseb/2022": {
+          "name": "កំហុសដែលមិនបានគ្រោងទុក",
+          "type": "វីដេអូ"
         },
-        "teacher_forum/coursed/2018": {
+        "pause_and_think_online/courseb/2022": {
+          "type": "វីដេអូ"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum/coursec/2022": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "vocabulary/coursed/2018": {
-          "name": "ពាក្យពិបាក"
+        "my_robotic_friends/coursec/2022": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
         },
-        "lesson_plans/coursef/2018": {
-          "name": "ផែនការ​មេរៀន"
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
         },
-        "standard_mappings/coursef/2018": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
         },
-        "teacher_forum/coursef/2018": {
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "pair_programming/coursec/2022": {
+          "type": "វីដេអូ"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "pause_and_think_online/coursec/2022": {
+          "type": "វីដេអូ"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum/coursed/2022": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "vocabulary/coursef/2018": {
-          "name": "ពាក្យពិបាក"
+        "pause_and_think_online/coursed/2022": {
+          "type": "វីដេអូ"
         },
-        "lesson_plans/express/2018": {
-          "name": "ផែនការ​មេរៀន"
+        "conditionals_with_cards/coursed/2022": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
-        "standard_mappings/express/2018": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
         },
-        "teacher_forum/express/2018": {
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "sprite_lab_documentation/coursee/2022": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "teacher_forum/coursee/2022": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "vocabulary/express/2018": {
-          "name": "ពាក្យពិបាក"
+        "pause_and_think_online/coursee/2022": {
+          "type": "វីដេអូ"
         },
-        "lesson_plans/coursee/2018": {
-          "name": "ផែនការ​មេរៀន"
+        "digital_sharing_ethics_video_/coursee/2022": {
+          "type": "វីដេអូ"
         },
-        "standard_mappings/coursee/2018": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        "implementation_guide/coursef/2022": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
         },
-        "teacher_forum/coursee/2018": {
+        "sprite_lab_documentation/coursef/2022": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "teacher_forum/coursef/2022": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "vocabulary/coursee/2018": {
-          "name": "ពាក្យពិបាក"
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "type": "វីដេអូ"
         },
-        "lesson_plans/coursec/2018": {
-          "name": "ផែនការ​មេរៀន"
+        "introducing_sprite_lab_1/coursef/2022": {
+          "name": "សេចក្ដីណែនាំពី Sprite Lab",
+          "type": "វីដេអូ"
         },
-        "standard_mappings/coursec/2018": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        "making_sprites/coursef/2022": {
+          "name": "ការបង្កើត Sprites"
         },
-        "teacher_forum/coursec/2018": {
+        "ai_impact_on_society/coursef/2022": {
+          "type": "វីដេអូ"
+        },
+        "ai_machine_learning/coursef/2022": {
+          "type": "វីដេអូ"
+        },
+        "ai_training_data_bias/coursef/2022": {
+          "type": "វីដេអូ"
+        },
+        "the_internet/coursef/2022": {
+          "name": "អ៊ីនធឺណិត"
+        },
+        "teacher_forum/express/2022": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "vocabulary/coursec/2018": {
-          "name": "ពាក្យពិបាក"
+        "pair_programming/express/2022": {
+          "type": "វីដេអូ"
         },
-        "code_introduced_1/csd/2018": {
-          "name": "សេចក្តីណែនាំពីកូដ"
+        "artist_introduction/express/2022": {
+          "type": "វីដេអូ"
         },
-        "lesson_plans_2/csd/2018": {
-          "name": "ផែនការ​មេរៀន"
+        "turns_angles/express/2022": {
+          "type": "វីដេអូ"
         },
-        "standard_mappings_2/csd/2018": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        "sprite_lab_documentation/express/2022": {
+          "name": "ឯកសារ Sprite Lab"
         },
-        "teacher_forum_2/csd/2018": {
+        "sprites_in_action/express/2022": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
+        },
+        "pause_and_think_online/express/2022": {
+          "type": "វីដេអូ"
+        },
+        "pair_programming_video/express/2022": {
+          "type": "វីដេអូ"
+        },
+        "variables/express/2022": {
+          "name": "អ​ថេរ"
+        },
+        "teacher_forum/pre-express/2022": {
           "name": "វេទិការគ្រូបង្រៀន"
         },
-        "vocabulary_2/csd/2018": {
-          "name": "ពាក្យពិបាក"
+        "20_20_20_rule/pre-express/2022": {
+          "type": "វីដេអូ"
         },
-        "code_introduced_3/csd/2018": {
-          "name": "សេចក្តីណែនាំពីកូដ"
+        "wiggles_-_go_noodle/pre-express/2022": {
+          "type": "វីដេអូ"
         },
-        "lesson_plans_5/csd/2018": {
-          "name": "ផែនការ​មេរៀន"
+        "pause_and_think_online/pre-express/2022": {
+          "type": "វីដេអូ"
         },
-        "standard_mappings_5/csd/2018": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "វីដេអូ"
         },
-        "teacher_forum_5/csd/2018": {
-          "name": "វេទិការគ្រូបង្រៀន"
+        "ai-ml/oceans/unversioned": {
+          "type": "វីដេអូ"
         },
-        "vocabulary_5/csd/2018": {
-          "name": "ពាក្យពិបាក"
+        "ai-societal/oceans/unversioned": {
+          "type": "វីដេអូ"
         },
-        "lesson_plans_4/csd/2018": {
-          "name": "ផែនការ​មេរៀន"
+        "ai-training/oceans/unversioned": {
+          "type": "វីដេអូ"
         },
-        "standard_mappings_4/csd/2018": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
+        "poem_art_celebration/poem-art/2021": {
+          "type": "វីដេអូ"
         },
-        "teacher_forum_4/csd/2018": {
-          "name": "វេទិការគ្រូបង្រៀន"
+        "poem_art_events/poem-art/2021": {
+          "type": "វីដេអូ"
         },
-        "vocabulary_4/csd/2018": {
-          "name": "ពាក្យពិបាក"
+        "poem_art_imagery/poem-art/2021": {
+          "type": "វីដេអូ"
         },
-        "code_introduced_2/csd/2018": {
-          "name": "សេចក្តីណែនាំពីកូដ"
+        "poem_art_introduction/poem-art/2021": {
+          "type": "វីដេអូ"
         },
-        "lesson_plans_3/csd/2018": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings_3/csd/2018": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum_3/csd/2018": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary_3/csd/2018": {
-          "name": "ពាក្យពិបាក"
-        },
-        "code_introduced/csd/2018": {
-          "name": "សេចក្តីណែនាំពីកូដ"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings_1/csd/2018": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum_1/csd/2018": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary_1/csd/2018": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/csd/2018": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/csd/2018": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/csd/2018": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/coursea/2019": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/coursea/2019": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/coursea/2019": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/courseb/2019": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/courseb/2019": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/courseb/2019": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/coursed/2019": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/coursed/2019": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/coursed/2019": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/coursef/2019": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/coursef/2019": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/coursef/2019": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/coursee/2019": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/coursee/2019": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/coursee/2019": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/express/2019": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/express/2019": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/express/2019": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/express/2019": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/coursec/2019": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/coursec/2019": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/coursec/2019": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/coursec/2019": {
-          "name": "ពាក្យពិបាក"
-        },
-        "teacher_forum/csd/2019": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "code_introduced_1/csd/2019": {
-          "name": "សេចក្តីណែនាំពីកូដ"
-        },
-        "lesson_plans_2/csd/2019": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings_2/csd/2019": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "vocabulary_2/csd/2019": {
-          "name": "ពាក្យពិបាក"
-        },
-        "code_introduced_3/csd/2019": {
-          "name": "សេចក្តីណែនាំពីកូដ"
-        },
-        "lesson_plans_5/csd/2019": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings_5/csd/2019": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "vocabulary_5/csd/2019": {
-          "name": "ពាក្យពិបាក"
-        },
-        "code_introduced_2/csd/2019": {
-          "name": "សេចក្តីណែនាំពីកូដ"
-        },
-        "lesson_plans_3/csd/2019": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings_3/csd/2019": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "vocabulary_3/csd/2019": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans_4/csd/2019": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings_4/csd/2019": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "vocabulary_4/csd/2019": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/csd/2019": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/csd/2019": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "vocabulary/csd/2019": {
-          "name": "ពាក្យពិបាក"
-        },
-        "code_introduced/csd/2019": {
-          "name": "សេចក្តីណែនាំពីកូដ"
-        },
-        "lesson_plans_1/csd/2019": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings_1/csd/2019": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "vocabulary_1/csd/2019": {
-          "name": "ពាក្យពិបាក"
-        },
-        "code_introduced_1/csd/2017": {
-          "name": "សេចក្តីណែនាំពីកូដ"
-        },
-        "lesson_plans_2/csd/2017": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings_2/csd/2017": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum_2/csd/2017": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary_2/csd/2017": {
-          "name": "ពាក្យពិបាក"
-        },
-        "code_introduced_3/csd/2017": {
-          "name": "សេចក្តីណែនាំពីកូដ"
-        },
-        "lesson_plans_5/csd/2017": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings_5/csd/2017": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum_5/csd/2017": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary_5/csd/2017": {
-          "name": "ពាក្យពិបាក"
-        },
-        "code_introduced/csd/2017": {
-          "name": "សេចក្តីណែនាំពីកូដ"
-        },
-        "lesson_plans_1/csd/2017": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings_1/csd/2017": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum_1/csd/2017": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary_1/csd/2017": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/csd/2017": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/csd/2017": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/csd/2017": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/csd/2017": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans_4/csd/2017": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings_4/csd/2017": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum_4/csd/2017": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary_4/csd/2017": {
-          "name": "ពាក្យពិបាក"
-        },
-        "code_introduced_2/csd/2017": {
-          "name": "សេចក្តីណែនាំពីកូដ"
-        },
-        "lesson_plans_3/csd/2017": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings_3/csd/2017": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum_3/csd/2017": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary_3/csd/2017": {
-          "name": "ពាក្យពិបាក"
+        "video-text-compression/text-compression/unversioned": {
+          "type": "វីដេអូ"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "",
           "url": "",
           "type": ""
-        },
-        "implementation_guide/coursef/2021": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
-        },
-        "sprite_lab_documentation_1/coursef/2021": {
-          "name": "ឯកសារ Sprite Lab"
-        },
-        "teacher_forum_1/coursef/2021": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "introducing_sprite_lab/coursef/2021": {
-          "name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍"
-        },
-        "introducing_sprite_lab_1/coursef/2021": {
-          "name": "សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍",
-          "type": "វីដេអូ"
-        },
-        "sprite_lab_documentation/coursef/2021": {
-          "name": "ឯកសារ Sprite Lab"
-        },
-        "the_power_of_words_the_power_of_words/coursef/2021": {
-          "type": "វីដេអូ"
-        },
-        "pause_and_think_online/coursef/2021": {
-          "type": "វីដេអូ"
-        },
-        "ai-ml/coursef/2021": {
-          "type": "វីដេអូ"
-        },
-        "ai-societal/coursef/2021": {
-          "type": "វីដេអូ"
-        },
-        "ai-training/coursef/2021": {
-          "type": "វីដេអូ"
-        },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "អ៊ីនធឺណិត"
-        },
-        "implementation_guide/courseb/2021": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
-        },
-        "teacher_forum_1/courseb/2021": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "wiggles_-_gonoodle/courseb/2021": {
-          "type": "វីដេអូ"
-        },
-        "stevie_and_the_big_project/courseb/2021": {
-          "name": "Stevie and the Big Project"
-        },
-        "unspotted_bugs/courseb/2021": {
-          "name": "កំហុសដែលមិនបានគ្រោងទុក",
-          "type": "វីដេអូ"
-        },
-        "common-sense-media-pause-think/courseb/2021": {
-          "type": "វីដេអូ"
-        },
-        "assessment-answer-big-event/courseb/2021": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "csf-the-big-event-assessment/courseb/2021": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "unplugged-video-big-event/courseb/2021": {
-          "name": "ព្រឹត្តិការណ៍ធំ",
-          "type": "វីដេអូ"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
-        },
-        "teacher_forum_1/coursea/2021": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "type": "វីដេអូ"
-        },
-        "wiggles-go_noodle/coursea/2021": {
-          "type": "វីដេអូ"
-        },
-        "wiggles_-_gonoodle/coursea/2021": {
-          "type": "វីដេអូ"
-        },
-        "csf_debugging_k1_blocks/coursea/2021": {
-          "type": "វីដេអូ"
-        },
-        "pair-programming/coursea/2021": {
-          "type": "វីដេអូ"
-        },
-        "common-sense-media-pause-think/coursea/2021": {
-          "type": "វីដេអូ"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "unplugged-video-big-event/coursea/2021": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "implementation_guide/coursec/2021": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
-        },
-        "teacher_forum_1/coursec/2021": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
-        },
-        "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
-        },
-        "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
-        },
-        "csf-mrf-symbol-key/coursec/2021": {
-          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
-        },
-        "unplugged-video-robotic-friends/coursec/2021": {
-          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
-        },
-        "pair-programming-vid/coursec/2021": {
-          "type": "វីដេអូ"
-        },
-        "assessment-answer-big-event/coursec/2021": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "csf-the-big-event-assessment/coursec/2021": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "unplugged-video-big-event/coursec/2021": {
-          "name": "ព្រឹត្តិការណ៍ធំ"
-        },
-        "pause_and_think_online/coursec/2021": {
-          "type": "វីដេអូ"
-        },
-        "implementation_guide/coursed/2021": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
-        },
-        "teacher_forum_1/coursed/2021": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "pause_and_think_online/coursed/2021": {
-          "type": "វីដេអូ"
-        },
-        "pause_and_think_online_1/coursed/2021": {
-          "type": "វីដេអូ"
-        },
-        "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
-        },
-        "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
-        },
-        "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
-        },
-        "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
-        },
-        "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
-        },
-        "teacher_forum_1/express/2021": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "pair_programming/express/2021": {
-          "type": "វីដេអូ"
-        },
-        "artist_introduction/express/2021": {
-          "type": "វីដេអូ"
-        },
-        "turns_angles/express/2021": {
-          "type": "វីដេអូ"
-        },
-        "sprite_lab_documentation/express/2021": {
-          "name": "ឯកសារ Sprite Lab"
-        },
-        "sprite_lab_documentation_1/express/2021": {
-          "name": "ឯកសារ Sprite Lab"
-        },
-        "pause_and_think_online/express/2021": {
-          "type": "វីដេអូ"
-        },
-        "pair_programming_video/express/2021": {
-          "type": "វីដេអូ"
-        },
-        "variables_video/express/2021": {
-          "name": "អ​ថេរ"
-        },
-        "teacher_forum_1/pre-express/2021": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "20_20_20_rule/pre-express/2021": {
-          "type": "វីដេអូ"
-        },
-        "wiggles_-_go_noodle/pre-express/2021": {
-          "type": "វីដេអូ"
-        },
-        "common-sense-media-pause-think/pre-express/2021": {
-          "type": "វីដេអូ"
-        },
-        "implementation_guide/coursee/2021": {
-          "name": "សៀវភៅណែនាំការអនុវត្ត"
-        },
-        "sprite_lab_documentation_1/coursee/2021": {
-          "name": "ឯកសារ Sprite Lab"
-        },
-        "teacher_forum_1/coursee/2021": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "sprite_lab_documentation/coursee/2021": {
-          "name": "ឯកសារ Sprite Lab"
-        },
-        "common-sense-media-pause-think/coursee/2021": {
-          "type": "វីដេអូ"
-        },
-        "digital-sharing-video/coursee/2021": {
-          "type": "វីដេអូ"
-        },
-        "ai_what_is_machine_learning_/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "seeing_ai/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "finding_patterns_in_data/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "introduction_to_ai_lab_1/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "training_and_testing_in_ai_lab/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "ai_training_data_bias/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "model_cards_in_ai_lab/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "if-statements_in_app_lab/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "numerical_data_in_ai_lab_2/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "cleaning_survey_data/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "view_and_download_survey_data/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "teacher_forum/csd/2021": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "the-design-thinking-process/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "whats-for-lunch-testing/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "intro_to_design_mode/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "internet-of-things-video/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "innovation-video-1-1/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "designing_screens_with_code/csd/2021": {
-          "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
-        },
-        "random_numbers_1/csd/2021": {
-          "name": "លេខចៃដន្យ"
-        },
-        "how_computers_word_hardware_software/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "analog-digital-video/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "functions_2/csd/2021": {
-          "name": "អនុ​គមន៍"
-        },
-        "introduction_to_arrays/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "circuits-logic-video/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "how-computers-work-data-and-binary/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "video_impact_on_society/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "video_machine_learning/csd/2021": {
-          "name": "វីដេអូ៖ ម៉ាស៊ីនចេះរៀន",
-          "type": "វីដេអូ"
-        },
-        "video_training_data_and_bias/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "teacher_forum_1/csd/2021": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "drawing-shapes-exemplar-2020/csd/2021": {
-          "name": "គំនូរគូរជារាង"
-        },
-        "drawing_in_game_lab_-_part_1/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "drawing_in_game_lab_-_part_2/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "drawing_shapes/csd/2021": {
-          "name": "គំនូរគូរជារាង"
-        },
-        "shapes_and_parameters_-_map_level/csd/2021": {
-          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
-        },
-        "shapes_and_parameters/csd/2021": {
-          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
-        },
-        "introduction-to-variables/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "naming_variables/csd/2021": {
-          "name": "ការដាក់ឈ្មោះអថេរ"
-        },
-        "variables_1/csd/2021": {
-          "name": "អ​ថេរ"
-        },
-        "random_numbers/csd/2021": {
-          "name": "លេខចៃដន្យ"
-        },
-        "introduction_to_sprites/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "the_animation_tab/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "sprite_properties/csd/2021": {
-          "name": "លក្ខណៈសម្បត្តិនៃ sprite"
-        },
-        "youtube-flipbook/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "introduction_to_the_draw_loop/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "the_draw_loop/csd/2021": {
-          "name": "ការគូររង្វិលជុំដដែលៗ"
-        },
-        "animating-sprites/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "boolean_expressions/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "conditional_statements/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "if_else_statements/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "velocity_1/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "collision-detection-exemplar-2020/csd/2021": {
-          "name": "ការរកឃើញការប៉ះទង្គិច"
-        },
-        "collision_detection/csd/2021": {
-          "name": "ការរកឃើញការប៉ះទង្គិច"
-        },
-        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
-          "name": "ល្បឿននិងលំនាំរាប់"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "អនុ​គមន៍",
-          "type": "វីដេអូ"
-        },
-        "functions_1/csd/2021": {
-          "name": "អនុ​គមន៍"
-        },
-        "problem-solving-process-1/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "what-is-a-computer-1-2-3/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "what-do-computers-do/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "intro_to_web_lab_part_2/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "video_intro_to_web_lab_part_1/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "video_pair_programming/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "video_debugging/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "lists/csd/2021": {
-          "name": "បញ្ជី"
-        },
-        "intro_to_css_-_part_1/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "intro_to_css_-_part_2/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "creative-commons-video/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "publishing_your_website/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "teamwork-dealing-with-disagreement/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "how-teamwork-works/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "how-search-works-video/csd/2021": {
-          "type": "វីដេអូ"
-        },
-        "lesson_plans/pre-express/2020": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/pre-express/2020": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/pre-express/2020": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/pre-express/2020": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/express/2020": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/express/2020": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/express/2020": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/express/2020": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/courseb/2020": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/courseb/2020": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/courseb/2020": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/courseb/2020": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/coursed/2020": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/coursed/2020": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/coursed/2020": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/coursed/2020": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/coursec/2020": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/coursec/2020": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/coursec/2020": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/coursec/2020": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/coursee/2020": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/coursee/2020": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/coursee/2020": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/coursee/2020": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/coursea/2020": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/coursea/2020": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/coursea/2020": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/coursea/2020": {
-          "name": "ពាក្យពិបាក"
-        },
-        "lesson_plans/coursef/2020": {
-          "name": "ផែនការ​មេរៀន"
-        },
-        "standard_mappings/coursef/2020": {
-          "name": "ការផ្គូផ្គងស្តង់ដារ"
-        },
-        "teacher_forum/coursef/2020": {
-          "name": "វេទិការគ្រូបង្រៀន"
-        },
-        "vocabulary/coursef/2020": {
-          "name": "ពាក្យពិបាក"
         }
       }
     }

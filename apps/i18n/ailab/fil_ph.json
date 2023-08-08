@@ -1,15 +1,15 @@
 {
-  "selectDataset": "Piliin ang set ng data na gusto mong gamitin.",
-  "uploadedDataset": "Kaka-upload mo lang ng dataset.",
-  "selectedDataset": "Kakapili mo lang ng dataset.",
-  "dataDisplayLabel": "Pumili ng isang column na huhulaan.",
   "dataDisplayFeatures": "Pumili ng isa o higit pang column bilang mga input para makatulong sa paghula.",
-  "selectedFeatureNumerical": "Pinili mo lang ang isang numerikal na katangian.",
-  "selectedFeatureCategorical": "Pinili mo lang ang isang categorical feature.",
-  "trainModel": "Ang modelo mo ay sinasanay.",
+  "dataDisplayLabel": "Pumili ng isang column na huhulaan.",
   "generateResults": "Sinusubukan ang modelo mo.",
+  "modelSummary": "Matagumpay mong nasanay at na-save ang modelo mo. Suriin ang mga detalye ng iyong modelo at i-click ang Tapusin upang gamitin ang sinanay mong modelo sa App Lab.",
   "results": "Suriin ang mga resulta.",
   "resultsDetails": "Ipinapakita na ang mga detalye ng mga resulta.",
   "saveModel": "I-save ang sinanay na modelo para magamit sa App Lab.",
-  "modelSummary": "Matagumpay mong nasanay at na-save ang modelo mo. Suriin ang mga detalye ng iyong modelo at i-click ang Tapusin upang gamitin ang sinanay mong modelo sa App Lab."
+  "selectDataset": "Piliin ang set ng data na gusto mong gamitin.",
+  "selectedDataset": "Kakapili mo lang ng dataset.",
+  "selectedFeatureCategorical": "Pinili mo lang ang isang categorical feature.",
+  "selectedFeatureNumerical": "Pinili mo lang ang isang numerikal na katangian.",
+  "trainModel": "Ang modelo mo ay sinasanay.",
+  "uploadedDataset": "Kaka-upload mo lang ng dataset."
 }

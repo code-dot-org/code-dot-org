@@ -2,131 +2,59 @@
   "de-DE": {
     "data": {
       "standard_categories": {
-        "AP": {
-          "description": "Algorithmen und Programmierung"
-        },
-        "CS": {
-          "description": "Computersysteme"
-        },
-        "DA": {
-          "description": "Daten und Analyse"
-        },
-        "NI": {
-          "description": "Netzwerke und das Internet"
-        },
-        "DAT-1": {
-          "description": "Der Computer stellt die Daten anders dar, als sie für den Benutzer interpretiert und ihm angezeigt. Die Daten des Computers werden von Programmen in eine Darstellung übersetzt, die für uns leicht verständlich ist."
-        },
-        "IOC-2": {
-          "description": "Die Nutzung innovativer Computer-Tools kann mit Risiken für Ihre persönliche Sicherheit und Identität verbunden sein."
-        },
-        "DAT-1.D": {
-          "description": "Vergleichen Sie den Algorithmus der Datenkomprimierung, der am besten in einen bestimmten Kontext passt."
-        },
-        "IOC-2.B": {
-          "description": "Erklären Sie, wie Computerressourcen geschützt und wie sie missbraucht werden können."
-        },
-        "CD": {
-          "description": "Computer und Kommunikationsgeräte"
-        },
-        "CI": {
-          "description": "Gesellschaftliche, globale und ethische Auswirkungen"
-        },
-        "CL": {
-          "description": "Zusammenarbeit"
-        },
-        "CPP": {
-          "description": "Praxis und Programmierung in der Datenverarbeitung"
-        },
-        "CT": {
-          "description": "Computerorientiertes Denken"
-        },
-        "L": {
-          "description": "Sprache"
-        },
-        "RI": {
-          "description": "Lesen von informativen"
-        },
-        "RL": {
-          "description": "Lesen von Literatur"
-        },
-        "SL": {
-          "description": "Sprechen und zuhören"
-        },
-        "W": {
-          "description": "Schreiben"
-        },
-        "ETS": {
-          "description": "Konstruktion in der Wissenschaft"
-        },
-        "ETS1": {
-          "description": "Konstruktive Gestaltung"
-        },
-        "C": {
-          "description": "Tunnel"
-        },
-        "F": {
-          "description": "Funktionen"
-        },
-        "G": {
-          "description": "Geometrie"
-        },
-        "MD": {
-          "description": "Entscheidungsfindung mithilfe der Wahrscheinlichkeitsrechnung"
-        },
-        "MP": {
-          "description": "Mathematische Übungen"
-        },
-        "NBT": {
-          "description": "Zahlen und Operationen im Dezimalsystem"
-        },
-        "OA": {
-          "description": "Operationen und mathematisches Denken"
-        },
         "1": {
           "description": "Unter Einsatz von Technologie Zeigen Studenten kreative Denkweisen, bauen Wissen auf und entwickeln innovative Produkte und Prozesse."
         },
         "2": {
           "description": "Um ein individuelles Lernen zu unterstützen, und um einen Beitrag zu dem Wissen von anderen zu erbringen, benutzen Studenten digitale Medien und Umgebungen in der Kommunikation und der gemeinsamen Arbeit."
         },
+        "3": {
+          "description": "Die Studierenden wenden digitale Tools an, um Informationen zu sammeln, auszuwerten und zu nutzen."
+        },
+        "3-A-i": {
+          "description": "Die Natur des Lernens — Menschen gegen Maschinen"
+        },
+        "3-A-ii": {
+          "description": "Die Natur des Lernens — Muster in Daten finden"
+        },
+        "3-A-iii": {
+          "description": "Natur des Lernens — Training eines Modells"
+        },
+        "3-A-iv": {
+          "description": "Art des Lernens — Konstruktion oder Verwendung eines Argumentators"
+        },
+        "3-A-v": {
+          "description": "Natur des Lernens — Anpassung interner Repräsentationen"
+        },
+        "3-A-vi": {
+          "description": "Die Natur des Lernens — aus Erfahrung lernen"
+        },
+        "3-B-i": {
+          "description": "Neuronale Netzwerke - Struktur eines neuronalen Netzes"
+        },
+        "3-B-ii": {
+          "description": "Neuronale Netzwerke — Gewichtsanpassung"
+        },
+        "3-C-i": {
+          "description": "Datensätze — Feature-Sets"
+        },
+        "3-C-ii": {
+          "description": "Datensätze — große Datensätze"
+        },
+        "3-C-iii": {
+          "description": "Datensätze — Bias"
+        },
         "4": {
           "description": "Studenten benutzen kritische Denkfähigkeiten in der Planung und Ausführung von Forschungsarbeiten, dem Management von Projekten, der Lösung von Problemen und dem Treffen von unterbauten Entscheidungen, unter Einsatz von geeigneten digitalen Werkzeugen und Ressourcen.."
+        },
+        "5": {
+          "description": "Die Studierenden verstehen menschliche, kulturelle und gesellschaftliche Probleme im Zusammenhang mit Technologie und praktizieren rechtliches und ethisches Verhalten."
         },
         "6": {
           "description": "Schüler zeigen ein gesundes Verständnis von technologischen Konzepten, Systemen und Operationen."
         },
-        "IC": {
-          "description": "Schlüsse ziehen und Schlussfolgerungen begründen"
-        },
         "AAP-1": {
           "description": "Um spezifische Lösungen für generalisierbare Probleme zu finden, repräsentieren und organisieren Programmierer Daten auf verschiedene Arten."
-        },
-        "AAP-2": {
-          "description": "Die Art und Weise, wie Anweisungen in einem Programm sequenziert und kombiniert werden, bestimmt das berechnete Ergebnis. Programme beinhalten Iterations- und Auswahlkonstrukte, um Wiederholungen darzustellen und Entscheidungen für den Umgang mit unterschiedlichen Eingabewerten zu treffen."
-        },
-        "AAP-3": {
-          "description": "Programmierer zerlegen Probleme in kleinere und überschaubarere Teile. Durch die Erstellung von Prozeduren und die Nutzung von Parametern verallgemeinern Programmierer Prozesse, die wiederverwendet werden können. Verfahren ermöglichen es Programmierern, auf vorhandenen Code zurückzugreifen, der bereits getestet wurde, sodass Programmierer Programme schneller und sicherer schreiben können."
-        },
-        "AAP-4": {
-          "description": "Es gibt Probleme, die der Computer nicht lösen kann, und selbst wenn der Computer ein Problem lösen kann, ist er möglicherweise nicht in der Lage, dies in einer angemessenen Zeit zu tun."
-        },
-        "CRD-1": {
-          "description": "Die Einbeziehung mehrerer Perspektiven durch Zusammenarbeit verbessert die entwickelten Computerinnovationen."
-        },
-        "CRD-2": {
-          "description": "Entwickler entwickeln und innovieren mithilfe eines iterativen Designprozesses, der benutzerorientiert ist, Implementierungs-/Feedback-Zyklen beinhaltet und ausreichend Raum für Experimente und Risikobereitschaft lässt."
-        },
-        "CSN-1": {
-          "description": "Computersysteme und Netzwerke erleichtern die Übertragung von Daten."
-        },
-        "CSN-2": {
-          "description": "Parallele und verteilte Datenverarbeitung nutzt mehrere Computer, um komplexe Probleme schneller zu lösen oder große Datensätze zu verarbeiten."
-        },
-        "DAT-2": {
-          "description": "Programme können zur Verarbeitung von Daten verwendet werden, sodass Benutzer Informationen entdecken und neues Wissen gewinnen können."
-        },
-        "IOC-1": {
-          "description": "Programme sind zwar in der Regel darauf ausgelegt, einen bestimmten Zweck zu erreichen, können jedoch unbeabsichtigte Folgen haben."
         },
         "AAP-1.A": {
           "description": "Stellt einen Wert mit einer Variablen dar."
@@ -139,6 +67,9 @@
         },
         "AAP-1.D": {
           "description": "Für die Datenabstraktion: \na. Entwickeln Sie eine Datenabstraktion mithilfe von Listen, um mehrere Elemente zu speichern.\nb. Erklären Sie, wie die Verwendung von Datenabstraktion die Komplexität des Programmcodes steuert."
+        },
+        "AAP-2": {
+          "description": "Die Art und Weise, wie Anweisungen in einem Programm sequenziert und kombiniert werden, bestimmt das berechnete Ergebnis. Programme beinhalten Iterations- und Auswahlkonstrukte, um Wiederholungen darzustellen und Entscheidungen für den Umgang mit unterschiedlichen Eingabewerten zu treffen."
         },
         "AAP-2.A": {
           "description": "Exprimiert einen Algorithmus, der Sequenzierung verwendet, ohne eine Programmiersprache zu verwenden."
@@ -176,6 +107,9 @@
         "AAP-2.O": {
           "description": "Für Algorithmen, die Elemente einer Liste beinhalten:\na. Stellen Sie dar, dass Sie iterative Anweisungen verwenden, um eine Liste zu durchqueren.\nb. Ermitteln Sie das Ergebnis eines Algorithmus mit Listendurchgängen."
         },
+        "AAP-3": {
+          "description": "Programmierer zerlegen Probleme in kleinere und überschaubarere Teile. Durch die Erstellung von Prozeduren und die Nutzung von Parametern verallgemeinern Programmierer Prozesse, die wiederverwendet werden können. Verfahren ermöglichen es Programmierern, auf vorhandenen Code zurückzugreifen, der bereits getestet wurde, sodass Programmierer Programme schneller und sicherer schreiben können."
+        },
         "AAP-3.C": {
           "description": "Entwickeln Sie prozedurale Abstraktionen, um die Komplexität eines Programms zu bewältigen, indem Sie Prozeduren schreiben."
         },
@@ -188,323 +122,65 @@
         "AAP-3.F": {
           "description": "Für Simulationen:\na. Erklären Sie, wie Computer verwendet werden können, um reale Phänomene oder Ergebnisse darzustellen. \nb. Vergleichen Sie die Verwendung von Simulationen mit realen Kontexten."
         },
+        "AAP-4": {
+          "description": "Es gibt Probleme, die der Computer nicht lösen kann, und selbst wenn der Computer ein Problem lösen kann, ist er möglicherweise nicht in der Lage, dies in einer angemessenen Zeit zu tun."
+        },
         "AAP-4.A": {
           "description": "Zur Bestimmung der Effizienz eines Algorithmus:\na. Erläutern Sie den Unterschied zwischen Algorithmen, die in angemessener Zeit ausgeführt werden, und Algorithmen, die nicht in angemessener Zeit ausgeführt werden. \nb. Identifizieren Sie Situationen, in denen eine heuristische Lösung besser geeignet sein könnte."
         },
         "AAP-4.B": {
           "description": "Erläutern Sie die Existenz unentscheidbarer Probleme in der Informatik."
         },
-        "CRD-1.A": {
-          "description": "Erläutern Sie, wie Computerinnovationen durch Zusammenarbeit verbessert werden."
+        "AP": {
+          "description": "Algorithmen und Programmierung"
         },
-        "CRD-1.B": {
-          "description": "Erklären Sie, wie Computerinnovationen von Personengruppen entwickelt werden."
+        "APR": {
+          "description": "Arithmetik mit Polynomen und rationalen Ausdrücken"
         },
-        "CRD-1.C": {
-          "description": "Demonstrieren Sie während der Zusammenarbeit effektive zwischenmenschliche Fähigkeiten."
+        "BF": {
+          "description": "Funktionen bauen"
         },
-        "CRD-2.A": {
-          "description": "Beschreiben Sie den Zweck einer Computerinnovation."
+        "BI-1": {
+          "description": "Computer nehmen die Welt mithilfe von Sensoren wahr"
         },
-        "CRD-2.B": {
-          "description": "Erklären Sie, wie ein Programm oder Codesegment funktioniert."
+        "BI-2": {
+          "description": "Agenten pflegen Repräsentationen der Welt und verwenden sie zum Nachdenken"
         },
-        "CRD-2.C": {
-          "description": "Identifizieren Sie Eingaben für ein Programm."
+        "BI-3": {
+          "description": "Computer können aus Daten lernen"
         },
-        "CRD-2.D": {
-          "description": "Identifizieren Sie die von einem Programm erzeugte (n) Ausgabe (en)."
+        "BI-4": {
+          "description": "Intelligente Agenten benötigen viele Arten von Wissen, um auf natürliche Weise mit Menschen zu interagieren."
         },
-        "CRD-2.E": {
-          "description": "Entwickeln Sie ein Programm mithilfe eines Entwicklungsprozesses."
+        "BI-5": {
+          "description": "KI kann die Gesellschaft sowohl positiv als auch negativ beeinflussen"
         },
-        "CRD-2.F": {
-          "description": "Entwerfen Sie ein Programm und seine Benutzeroberfläche."
+        "C": {
+          "description": "Tunnel"
         },
-        "CRD-2.G": {
-          "description": "Beschreiben Sie den Zweck eines Codesegments oder Programms, indem Sie eine Dokumentation schreiben."
+        "CC": {
+          "description": "Zählen und Kardinalität"
         },
-        "CRD-2.H": {
-          "description": "Bestätigen Sie Codesegmente, die aus anderen Quellen verwendet wurden."
+        "CD": {
+          "description": "Computer und Kommunikationsgeräte"
         },
-        "CRD-2.J": {
-          "description": "Identifizieren Sie Eingaben und die entsprechenden erwarteten Ausgaben oder Verhaltensweisen, anhand derer die Richtigkeit eines Algorithmus oder Programms überprüft werden kann."
+        "CED": {
+          "description": "Gleichungen erstellen"
         },
-        "CSN-1.A": {
-          "description": "Erklären Sie, wie Computergeräte in einem Netzwerk zusammenarbeiten."
+        "CI": {
+          "description": "Gesellschaftliche, globale und ethische Auswirkungen"
         },
-        "CSN-1.B": {
-          "description": "Erkläre, wie das Internet funktioniert."
+        "CL": {
+          "description": "Zusammenarbeit"
         },
-        "CSN-1.C": {
-          "description": "Erläutern Sie, wie Daten über Pakete über das Internet gesendet werden."
+        "CN": {
+          "description": "Das komplexe Zahlensystem"
         },
-        "CSN-1.D": {
-          "description": "Beschreiben Sie die Unterschiede zwischen dem Internet und dem World Wide Web."
-        },
-        "CSN-1.E": {
-          "description": "Für fehlertolerante Systeme wie das Internet:\na. Beschreiben Sie die Vorteile der Fehlertoleranz\nb. Erklären Sie, wie ein bestimmtes System fehlertolerant ist\nc. Identifizieren Sie Sicherheitslücken in einem System."
-        },
-        "CSN-2.A": {
-          "description": "Vergleichen Sie Problemlösungen, die sequentielles, paralleles und verteiltes Rechnen verwenden."
-        },
-        "CSN-2.B": {
-          "description": "Ermitteln Sie die Effizienz sequentieller und paralleler Lösungen."
-        },
-        "CSN-2.C": {
-          "description": "Beschreiben Sie die Vorteile und Herausforderungen paralleler und verteilter Datenverarbeitung."
-        },
-        "DAT-1.A": {
-          "description": "Erklären Sie, wie Daten mithilfe von Bits dargestellt werden können."
-        },
-        "DAT-1.B": {
-          "description": "Erläutern Sie die Konsequenzen der Verwendung von Bits zur Darstellung von Daten."
-        },
-        "DAT-1.C": {
-          "description": "Für Binärzahlen:\na. Berechne das binäre Äquivalent (Basis 2) einer positiven Ganzzahl (Basis 10) und umgekehrt. \nb. Vergleiche und ordne Binärzahlen."
-        },
-        "DAT-2.A": {
-          "description": "Beschreiben Sie, welche Informationen aus Daten extrahiert werden können."
-        },
-        "DAT-2.B": {
-          "description": "Beschreiben Sie, welche Informationen aus Metadaten extrahiert werden können."
-        },
-        "DAT-2.C": {
-          "description": "Identifizieren Sie die Herausforderungen, die mit der Verarbeitung von Daten verbunden sind."
-        },
-        "DAT-2.D": {
-          "description": "Extrahieren Sie Informationen aus Daten mit einem Programm."
-        },
-        "DAT-2.E": {
-          "description": "Erläutern Sie, wie Programme verwendet werden können, um Erkenntnisse und Wissen aus Daten zu gewinnen."
-        },
-        "IOC-1.A": {
-          "description": "Erläutern Sie die ethischen und sozialen Auswirkungen von Computersystemen"
-        },
-        "IOC-1.B": {
-          "description": "Erläutern Sie die Risiken für den Datenschutz, die durch das Sammeln und Speichern personenbezogener Daten auf Computersystemen entstehen."
-        },
-        "IOC-1.C": {
-          "description": "Beschreiben Sie Probleme, die zur digitalen Kluft beitragen."
-        },
-        "IOC-1.D": {
-          "description": "Erklären Sie, wie Vorurteile bei Computerinnovationen bestehen."
-        },
-        "IOC-1.E": {
-          "description": "Erklären Sie, wie Menschen an Problemlösungsprozessen in großem Maßstab teilnehmen."
-        },
-        "IOC-1.F": {
-          "description": "Erläutern Sie, wie der Einsatz von Computern rechtliche und ethische Bedenken aufwerfen kann."
-        },
-        "IOC-2.A": {
-          "description": "Beschreiben Sie die Risiken für den Datenschutz, die mit der Erfassung und Speicherung personenbezogener Daten auf einem Computersystem verbunden sind."
-        },
-        "IOC-2.C": {
-          "description": "Erläutern Sie, wie unbefugter Zugriff auf Computerressourcen erlangt wird."
-        },
-        "D1": {
-          "description": "Fragen entwickeln und Anfragen planen"
-        },
-        "D3.Sources": {
-          "description": "Quellen sammeln und auswerten"
-        },
-        "D3.Claims": {
-          "description": "Behauptungen entwickeln und Beweise verwenden"
-        },
-        "D4.Conclusions": {
-          "description": "Schlussfolgerungen kommunizieren und kritisieren"
-        },
-        "D4.Action": {
-          "description": "Informierte Maßnahmen ergreifen"
-        },
-        "D2.Civ": {
-          "description": "Staatsbürgerkunde"
-        },
-        "D2.Eco": {
-          "description": "Wirtschaftswissenschaften"
-        },
-        "RF": {
-          "description": "Grundlegende Fähigkeiten des Lesens"
-        },
-        "RH": {
-          "description": "Lesen von Geschichte/Sozialkunde"
-        },
-        "RST": {
-          "description": "Wissenschaftliches/Technisches Lesen"
-        },
-        "WHST": {
-          "description": "HS/S/T schreiben"
-        },
-        "ESS": {
-          "description": "Erd- und Weltraumwissenschaften"
-        },
-        "LS": {
-          "description": "Biowissenschaften"
-        },
-        "PS": {
-          "description": "Physikalische Wissenschaft"
-        },
-        "ESS1": {
-          "description": "Der Platz der Erde im Universum"
-        },
-        "ESS2": {
-          "description": "Systeme der Erde"
-        },
-        "ESS3": {
-          "description": "Erde und menschliche Aktivität"
-        },
-        "LS1": {
-          "description": "Von Molekülen zu Organismen: Strukturen und Prozesse"
-        },
-        "LS2": {
-          "description": "Ökosysteme: Interaktionen, Energie und Dynamik"
-        },
-        "LS3": {
-          "description": "Vererbung: Vererbung und Variation von Merkmalen"
-        },
-        "LS4": {
-          "description": "Biologische Evolution: Einheit und Vielfalt"
-        },
-        "PS1": {
-          "description": "Materie und ihre Wechselwirkungen"
-        },
-        "PS2": {
-          "description": "Bewegung und Stabilität: Kräfte und Wechselwirkungen"
-        },
-        "PS3": {
-          "description": "Energie"
-        },
-        "PS4": {
-          "description": "Wellen und ihre Anwendungen in Technologien des Informationstransfers"
-        },
-        "MOD-1": {
-          "description": "Einige Objekte oder Konzepte sind so häufig vertreten, dass Programmierer auf vorhandenen Code zurückgreifen können, der bereits getestet wurde, sodass sie schneller und mit größerer Sicherheit Lösungen schreiben können."
-        },
-        "MOD-2": {
-          "description": "Programmierer verwenden Code, um ein physisches Objekt oder ein nichtphysisches Konzept, ob real oder imaginär, darzustellen, indem sie eine Klasse definieren, die auf den Attributen und/oder Verhaltensweisen des Objekts oder Konzepts basiert"
-        },
-        "MOD-3": {
-          "description": "Wenn mehrere Klassen gemeinsame Attribute und Verhaltensweisen enthalten, erstellen Programmierer eine neue Klasse, die die gemeinsamen Attribute und Verhaltensweisen enthält und eine Hierarchie bildet. Änderungen, die auf der höchsten Ebene der Hierarchie vorgenommen wurden, gelten für die Unterklassen."
-        },
-        "VAR-1": {
-          "description": "Um spezifische Lösungen für verallgemeinerbare Probleme zu finden, nehmen Programmierer Variablen in ihren Code auf, sodass derselbe Algorithmus mit unterschiedlichen Eingabewerten ausgeführt wird."
-        },
-        "VAR-2": {
-          "description": "Um große Datenmengen oder komplexe Datenbeziehungen zu verwalten, schreiben Programmierer Code, der die Daten in einer einzigen Datenstruktur gruppiert, ohne für jeden Wert individuelle Variablen zu erstellen."
+        "CO": {
+          "description": "Kongruenz"
         },
         "CON-1": {
           "description": "Die Art und Weise, wie Variablen und Operatoren in einem Ausdruck sequenziert und kombiniert werden, bestimmt das berechnete Ergebnis."
-        },
-        "CON-2": {
-          "description": "Programmierer integrieren Iteration und Auswahl in den Code, um dem Computer Anweisungen zur Verarbeitung der vielen möglichen Eingabewerte zu geben."
-        },
-        "MOD-1.A": {
-          "description": "Rufen Sie Methoden der Systemklasse auf, um eine Ausgabe an die Konsole zu generieren."
-        },
-        "MOD-1.B": {
-          "description": "Erläutern Sie die Beziehung zwischen einer Klasse und einem Objekt."
-        },
-        "MOD-1.C": {
-          "description": "Identifizieren Sie anhand seiner Signatur den richtigen Konstruktor, der aufgerufen wird."
-        },
-        "MOD-1.D": {
-          "description": "Zum Erstellen von Objekten: a. Erstellen Sie Objekte, indem Sie Konstruktoren ohne Parameter aufrufen. b. Erstellen Sie Objekte, indem Sie Konstruktoren mit Parametern aufrufen."
-        },
-        "MOD-1.E": {
-          "description": "Ruft nicht-statische Void-Methoden ohne Parameter auf."
-        },
-        "MOD-1.F": {
-          "description": "Rufen Sie nichtstatische Void-Methoden mit Parametern auf"
-        },
-        "MOD-1.G": {
-          "description": "Rufen Sie nichtstatische, nichtige Methoden mit oder ohne Parameter auf"
-        },
-        "MOD-1.H": {
-          "description": "Rufen Sie statische Methoden auf."
-        },
-        "MOD-2.A": {
-          "description": "Legen Sie Zugriffs- und Sichtbarkeitsbeschränkungen für Klassen, Daten, Konstruktoren und Methoden fest."
-        },
-        "MOD-2.B": {
-          "description": "Definieren Sie Instanzvariablen für die Attribute, die durch die Konstruktoren einer Klasse initialisiert werden sollen."
-        },
-        "MOD-2.C": {
-          "description": "Beschreiben Sie die Funktionalität und Verwendung von Programmcode durch Kommentare."
-        },
-        "MOD-2.D": {
-          "description": "Definieren Sie das Verhalten eines Objekts mithilfe nichtiger Methoden, ohne dass Parameter in eine Klasse geschrieben werden."
-        },
-        "MOD-2.E": {
-          "description": "Definieren Sie das Verhalten eines Objekts durch ungültige Methoden mit oder ohne in eine Klasse geschriebene Parameter."
-        },
-        "MOD-2.F": {
-          "description": "Definieren Sie das Verhalten eines Objekts mithilfe nichtiger Methoden mit in eine Klasse geschriebenen Parametern."
-        },
-        "MOD-2.G": {
-          "description": "Definieren Sie das Verhalten einer Klasse durch statische Methoden."
-        },
-        "MOD-2.H": {
-          "description": "Definieren Sie die statischen Variablen, die zur Klasse gehören."
-        },
-        "MOD-3.A": {
-          "description": "Definieren Sie die private Sichtbarkeit von Instanzvariablen, um die Attribute eines Objekts zu kapseln."
-        },
-        "MOD-3.B": {
-          "description": "Erstellen Sie eine Erbschaftsbeziehung von einer Unterklasse zur Oberklasse."
-        },
-        "MOD-3.C": {
-          "description": "Definieren Sie Referenzvariablen einer Oberklasse, die einem Objekt einer Unterklasse in derselben Hierarchie zugewiesen werden."
-        },
-        "MOD-3.D": {
-          "description": "Rufen Sie Methoden in einer Erbschaftsbeziehung auf."
-        },
-        "MOD-3.E": {
-          "description": "Rufen Sie Methoden der Objektklasse durch Vererbung auf."
-        },
-        "VAR-1.A": {
-          "description": "Zeichenkettenliterale erstellen"
-        },
-        "VAR-1.B": {
-          "description": "Identifizieren Sie die am besten geeignete Datentypkategorie für eine bestimmte Spezifikation"
-        },
-        "VAR-1.C": {
-          "description": "Deklarieren Sie Variablen der richtigen Typen, um primitive Daten darzustellen"
-        },
-        "VAR-1.D": {
-          "description": "Definieren Sie Variablen der richtigen Typen, um Referenzdaten darzustellen."
-        },
-        "VAR-1.E": {
-          "description": "Für die String-Klasse: a. Erstellen Sie String-Objekte. b. Rufen Sie String-Methoden auf."
-        },
-        "VAR-1.F": {
-          "description": "Für Wrapper-Klassen: a. Erstellen Sie Integer-Objekte. b. Rufen Sie Integer-Methoden auf. c. Erstellen Sie Double-Objekte. d. Rufen Sie Double-Methoden auf."
-        },
-        "VAR-1.G": {
-          "description": "Erklären Sie, wo Variablen im Programmcode verwendet werden können."
-        },
-        "VAR-1.H": {
-          "description": "Bewerten Sie Objektreferenzausdrücke, die das Schlüsselwort this verwenden."
-        },
-        "VAR-2.A": {
-          "description": "Stellen Sie Sammlungen verwandter Primitiv- oder Objektreferenzdaten mithilfe von eindimensionalen (1D) Array-Objekten dar."
-        },
-        "VAR-2.B": {
-          "description": "Durchquere die Elemente in einem 1D-Array."
-        },
-        "VAR-2.C": {
-          "description": "Durchqueren Sie die Elemente in einem 1D-Array-Objekt mithilfe einer erweiterten For-Schleife."
-        },
-        "VAR-2.D": {
-          "description": "Stellen Sie Sammlungen verwandter Objektreferenzdaten mithilfe von ArrayList-Objekten dar."
-        },
-        "VAR-2.E": {
-          "description": "Für ArrayList-Objekte: • Traversiere mithilfe einer for- oder while-Schleife. • Traversiere mithilfe einer erweiterten For-Schleife."
-        },
-        "VAR-2.F": {
-          "description": "Stellen Sie Sammlungen verwandter Primitiv- oder Objektreferenzdaten mithilfe von zweidimensionalen (2D) Array-Objekten dar."
-        },
-        "VAR-2.G": {
-          "description": "Für 2D-Array-Objekte: • Traversieren Sie mithilfe von verschachtelter Form für Schleifen. • Traversieren Sie mithilfe von verschachtelter Anordnung, verbessert für Schleifen."
         },
         "CON-1.A": {
           "description": "Arithmetische Ausdrücke in einem Programmcode auswerten"
@@ -529,6 +205,9 @@
         },
         "CON-1.H": {
           "description": "Vergleichen Sie Objektreferenzen mithilfe boolescher Ausdrücke im Programmcode."
+        },
+        "CON-2": {
+          "description": "Programmierer integrieren Iteration und Auswahl in den Code, um dem Computer Anweisungen zur Verarbeitung der vielen möglichen Eingabewerte zu geben."
         },
         "CON-2.A": {
           "description": "Stellen Sie verzweigte logische Prozesse dar, indem Sie Bedingungsanweisungen verwenden."
@@ -581,29 +260,173 @@
         "CON-2.Q": {
           "description": "Wenden Sie rekursive Algorithmen an, um Elemente von Array- oder ArrayList-Objekten zu sortieren."
         },
-        "APR": {
-          "description": "Arithmetik mit Polynomen und rationalen Ausdrücken"
-        },
-        "BF": {
-          "description": "Funktionen bauen"
-        },
-        "CC": {
-          "description": "Zählen und Kardinalität"
-        },
-        "CED": {
-          "description": "Gleichungen erstellen"
-        },
-        "CN": {
-          "description": "Das komplexe Zahlensystem"
-        },
-        "CO": {
-          "description": "Kongruenz"
-        },
         "CP": {
           "description": "Bedingte Wahrscheinlichkeit und die Wahrscheinlichkeitsregeln"
         },
+        "CPP": {
+          "description": "Praxis und Programmierung in der Datenverarbeitung"
+        },
+        "CRD-1": {
+          "description": "Die Einbeziehung mehrerer Perspektiven durch Zusammenarbeit verbessert die entwickelten Computerinnovationen."
+        },
+        "CRD-1.A": {
+          "description": "Erläutern Sie, wie Computerinnovationen durch Zusammenarbeit verbessert werden."
+        },
+        "CRD-1.B": {
+          "description": "Erklären Sie, wie Computerinnovationen von Personengruppen entwickelt werden."
+        },
+        "CRD-1.C": {
+          "description": "Demonstrieren Sie während der Zusammenarbeit effektive zwischenmenschliche Fähigkeiten."
+        },
+        "CRD-2": {
+          "description": "Entwickler entwickeln und innovieren mithilfe eines iterativen Designprozesses, der benutzerorientiert ist, Implementierungs-/Feedback-Zyklen beinhaltet und ausreichend Raum für Experimente und Risikobereitschaft lässt."
+        },
+        "CRD-2.A": {
+          "description": "Beschreiben Sie den Zweck einer Computerinnovation."
+        },
+        "CRD-2.B": {
+          "description": "Erklären Sie, wie ein Programm oder Codesegment funktioniert."
+        },
+        "CRD-2.C": {
+          "description": "Identifizieren Sie Eingaben für ein Programm."
+        },
+        "CRD-2.D": {
+          "description": "Identifizieren Sie die von einem Programm erzeugte (n) Ausgabe (en)."
+        },
+        "CRD-2.E": {
+          "description": "Entwickeln Sie ein Programm mithilfe eines Entwicklungsprozesses."
+        },
+        "CRD-2.F": {
+          "description": "Entwerfen Sie ein Programm und seine Benutzeroberfläche."
+        },
+        "CRD-2.G": {
+          "description": "Beschreiben Sie den Zweck eines Codesegments oder Programms, indem Sie eine Dokumentation schreiben."
+        },
+        "CRD-2.H": {
+          "description": "Bestätigen Sie Codesegmente, die aus anderen Quellen verwendet wurden."
+        },
+        "CRD-2.J": {
+          "description": "Identifizieren Sie Eingaben und die entsprechenden erwarteten Ausgaben oder Verhaltensweisen, anhand derer die Richtigkeit eines Algorithmus oder Programms überprüft werden kann."
+        },
+        "CS": {
+          "description": "Computersysteme"
+        },
+        "CSN-1": {
+          "description": "Computersysteme und Netzwerke erleichtern die Übertragung von Daten."
+        },
+        "CSN-1.A": {
+          "description": "Erklären Sie, wie Computergeräte in einem Netzwerk zusammenarbeiten."
+        },
+        "CSN-1.B": {
+          "description": "Erkläre, wie das Internet funktioniert."
+        },
+        "CSN-1.C": {
+          "description": "Erläutern Sie, wie Daten über Pakete über das Internet gesendet werden."
+        },
+        "CSN-1.D": {
+          "description": "Beschreiben Sie die Unterschiede zwischen dem Internet und dem World Wide Web."
+        },
+        "CSN-1.E": {
+          "description": "Für fehlertolerante Systeme wie das Internet:\na. Beschreiben Sie die Vorteile der Fehlertoleranz\nb. Erklären Sie, wie ein bestimmtes System fehlertolerant ist\nc. Identifizieren Sie Sicherheitslücken in einem System."
+        },
+        "CSN-2": {
+          "description": "Parallele und verteilte Datenverarbeitung nutzt mehrere Computer, um komplexe Probleme schneller zu lösen oder große Datensätze zu verarbeiten."
+        },
+        "CSN-2.A": {
+          "description": "Vergleichen Sie Problemlösungen, die sequentielles, paralleles und verteiltes Rechnen verwenden."
+        },
+        "CSN-2.B": {
+          "description": "Ermitteln Sie die Effizienz sequentieller und paralleler Lösungen."
+        },
+        "CSN-2.C": {
+          "description": "Beschreiben Sie die Vorteile und Herausforderungen paralleler und verteilter Datenverarbeitung."
+        },
+        "CT": {
+          "description": "Computerorientiertes Denken"
+        },
+        "D1": {
+          "description": "Fragen entwickeln und Anfragen planen"
+        },
+        "D2.Civ": {
+          "description": "Staatsbürgerkunde"
+        },
+        "D2.Eco": {
+          "description": "Wirtschaftswissenschaften"
+        },
+        "D3.Claims": {
+          "description": "Behauptungen entwickeln und Beweise verwenden"
+        },
+        "D3.Sources": {
+          "description": "Quellen sammeln und auswerten"
+        },
+        "D4.Action": {
+          "description": "Informierte Maßnahmen ergreifen"
+        },
+        "D4.Conclusions": {
+          "description": "Schlussfolgerungen kommunizieren und kritisieren"
+        },
+        "DA": {
+          "description": "Daten und Analyse"
+        },
+        "DAT-1": {
+          "description": "Der Computer stellt die Daten anders dar, als sie für den Benutzer interpretiert und ihm angezeigt. Die Daten des Computers werden von Programmen in eine Darstellung übersetzt, die für uns leicht verständlich ist."
+        },
+        "DAT-1.A": {
+          "description": "Erklären Sie, wie Daten mithilfe von Bits dargestellt werden können."
+        },
+        "DAT-1.B": {
+          "description": "Erläutern Sie die Konsequenzen der Verwendung von Bits zur Darstellung von Daten."
+        },
+        "DAT-1.C": {
+          "description": "Für Binärzahlen:\na. Berechne das binäre Äquivalent (Basis 2) einer positiven Ganzzahl (Basis 10) und umgekehrt. \nb. Vergleiche und ordne Binärzahlen."
+        },
+        "DAT-1.D": {
+          "description": "Vergleichen Sie den Algorithmus der Datenkomprimierung, der am besten in einen bestimmten Kontext passt."
+        },
+        "DAT-2": {
+          "description": "Programme können zur Verarbeitung von Daten verwendet werden, sodass Benutzer Informationen entdecken und neues Wissen gewinnen können."
+        },
+        "DAT-2.A": {
+          "description": "Beschreiben Sie, welche Informationen aus Daten extrahiert werden können."
+        },
+        "DAT-2.B": {
+          "description": "Beschreiben Sie, welche Informationen aus Metadaten extrahiert werden können."
+        },
+        "DAT-2.C": {
+          "description": "Identifizieren Sie die Herausforderungen, die mit der Verarbeitung von Daten verbunden sind."
+        },
+        "DAT-2.D": {
+          "description": "Extrahieren Sie Informationen aus Daten mit einem Programm."
+        },
+        "DAT-2.E": {
+          "description": "Erläutern Sie, wie Programme verwendet werden können, um Erkenntnisse und Wissen aus Daten zu gewinnen."
+        },
         "EE": {
           "description": "Ausdrücke und Gleichungen"
+        },
+        "ESS": {
+          "description": "Erd- und Weltraumwissenschaften"
+        },
+        "ESS1": {
+          "description": "Der Platz der Erde im Universum"
+        },
+        "ESS2": {
+          "description": "Systeme der Erde"
+        },
+        "ESS3": {
+          "description": "Erde und menschliche Aktivität"
+        },
+        "ETS": {
+          "description": "Konstruktion in der Wissenschaft"
+        },
+        "ETS1": {
+          "description": "Konstruktive Gestaltung"
+        },
+        "F": {
+          "description": "Funktionen"
+        },
+        "G": {
+          "description": "Geometrie"
         },
         "GMD": {
           "description": "Geometrische Messung und Abmessung"
@@ -611,23 +434,179 @@
         "GPE": {
           "description": "Geometrische Eigenschaften mit Gleichungen ausdrücken"
         },
+        "IC": {
+          "description": "Auswirkungen der Datenverarbeitung"
+        },
         "ID": {
           "description": "Interpretation kategorischer und quantitativer Daten"
         },
         "IF": {
           "description": "Funktionen dolmetschen"
         },
+        "IOC-1": {
+          "description": "Computerinnovationen sind zwar in der Regel darauf ausgelegt, einen bestimmten Zweck zu erreichen, können jedoch unbeabsichtigte Folgen haben."
+        },
+        "IOC-1.A": {
+          "description": "Erläutern Sie, wie sich eine Computerinnovation sowohl positiv als auch schädlich auswirken kann."
+        },
+        "IOC-1.B": {
+          "description": "Erläutern Sie, wie eine Computerinnovation Auswirkungen haben kann, die über ihren beabsichtigten Zweck hinausgehen."
+        },
+        "IOC-1.C": {
+          "description": "Beschreiben Sie Probleme, die zur digitalen Kluft beitragen."
+        },
+        "IOC-1.D": {
+          "description": "Erklären Sie, wie Vorurteile bei Computerinnovationen bestehen."
+        },
+        "IOC-1.E": {
+          "description": "Erklären Sie, wie Menschen an Problemlösungsprozessen in großem Maßstab teilnehmen."
+        },
+        "IOC-1.F": {
+          "description": "Erläutern Sie, wie der Einsatz von Computern rechtliche und ethische Bedenken aufwerfen kann."
+        },
+        "IOC-2": {
+          "description": "Die Nutzung innovativer Computer-Tools kann mit Risiken für Ihre persönliche Sicherheit und Identität verbunden sein."
+        },
+        "IOC-2.A": {
+          "description": "Beschreiben Sie die Risiken für den Datenschutz, die mit der Erfassung und Speicherung personenbezogener Daten auf einem Computersystem verbunden sind."
+        },
+        "IOC-2.B": {
+          "description": "Erklären Sie, wie Computerressourcen geschützt und wie sie missbraucht werden können."
+        },
+        "IOC-2.C": {
+          "description": "Erläutern Sie, wie unbefugter Zugriff auf Computerressourcen erlangt wird."
+        },
+        "L": {
+          "description": "Sprache"
+        },
         "LE": {
           "description": "Lineare, quadratische und exponentielle Modelle ★"
+        },
+        "LS": {
+          "description": "Biowissenschaften"
+        },
+        "LS1": {
+          "description": "Von Molekülen zu Organismen: Strukturen und Prozesse"
+        },
+        "LS2": {
+          "description": "Ökosysteme: Interaktionen, Energie und Dynamik"
+        },
+        "LS3": {
+          "description": "Vererbung: Vererbung und Variation von Merkmalen"
+        },
+        "LS4": {
+          "description": "Biologische Evolution: Einheit und Vielfalt"
+        },
+        "MD": {
+          "description": "Entscheidungsfindung mithilfe der Wahrscheinlichkeitsrechnung"
         },
         "MG": {
           "description": "Modellieren mit Geometrie"
         },
+        "MOD-1": {
+          "description": "Einige Objekte oder Konzepte sind so häufig vertreten, dass Programmierer auf vorhandenen Code zurückgreifen können, der bereits getestet wurde, sodass sie schneller und mit größerer Sicherheit Lösungen schreiben können."
+        },
+        "MOD-1.A": {
+          "description": "Rufen Sie Methoden der Systemklasse auf, um eine Ausgabe an die Konsole zu generieren."
+        },
+        "MOD-1.B": {
+          "description": "Erläutern Sie die Beziehung zwischen einer Klasse und einem Objekt."
+        },
+        "MOD-1.C": {
+          "description": "Identifizieren Sie anhand seiner Signatur den richtigen Konstruktor, der aufgerufen wird."
+        },
+        "MOD-1.D": {
+          "description": "Zum Erstellen von Objekten: a. Erstellen Sie Objekte, indem Sie Konstruktoren ohne Parameter aufrufen. b. Erstellen Sie Objekte, indem Sie Konstruktoren mit Parametern aufrufen."
+        },
+        "MOD-1.E": {
+          "description": "Ruft nicht-statische Void-Methoden ohne Parameter auf."
+        },
+        "MOD-1.F": {
+          "description": "Rufen Sie nichtstatische Void-Methoden mit Parametern auf"
+        },
+        "MOD-1.G": {
+          "description": "Rufen Sie nichtstatische, nichtige Methoden mit oder ohne Parameter auf"
+        },
+        "MOD-1.H": {
+          "description": "Rufen Sie statische Methoden auf."
+        },
+        "MOD-2": {
+          "description": "Programmierer verwenden Code, um ein physisches Objekt oder ein nichtphysisches Konzept, ob real oder imaginär, darzustellen, indem sie eine Klasse definieren, die auf den Attributen und/oder Verhaltensweisen des Objekts oder Konzepts basiert"
+        },
+        "MOD-2.A": {
+          "description": "Legen Sie Zugriffs- und Sichtbarkeitsbeschränkungen für Klassen, Daten, Konstruktoren und Methoden fest."
+        },
+        "MOD-2.B": {
+          "description": "Definieren Sie Instanzvariablen für die Attribute, die durch die Konstruktoren einer Klasse initialisiert werden sollen."
+        },
+        "MOD-2.C": {
+          "description": "Beschreiben Sie die Funktionalität und Verwendung von Programmcode durch Kommentare."
+        },
+        "MOD-2.D": {
+          "description": "Definieren Sie das Verhalten eines Objekts mithilfe nichtiger Methoden, ohne dass Parameter in eine Klasse geschrieben werden."
+        },
+        "MOD-2.E": {
+          "description": "Definieren Sie das Verhalten eines Objekts durch ungültige Methoden mit oder ohne in eine Klasse geschriebene Parameter."
+        },
+        "MOD-2.F": {
+          "description": "Definieren Sie das Verhalten eines Objekts mithilfe nichtiger Methoden mit in eine Klasse geschriebenen Parametern."
+        },
+        "MOD-2.G": {
+          "description": "Definieren Sie das Verhalten einer Klasse durch statische Methoden."
+        },
+        "MOD-2.H": {
+          "description": "Definieren Sie die statischen Variablen, die zur Klasse gehören."
+        },
+        "MOD-3": {
+          "description": "Wenn mehrere Klassen gemeinsame Attribute und Verhaltensweisen enthalten, erstellen Programmierer eine neue Klasse, die die gemeinsamen Attribute und Verhaltensweisen enthält und eine Hierarchie bildet. Änderungen, die auf der höchsten Ebene der Hierarchie vorgenommen wurden, gelten für die Unterklassen."
+        },
+        "MOD-3.A": {
+          "description": "Definieren Sie die private Sichtbarkeit von Instanzvariablen, um die Attribute eines Objekts zu kapseln."
+        },
+        "MOD-3.B": {
+          "description": "Erstellen Sie eine Erbschaftsbeziehung von einer Unterklasse zur Oberklasse."
+        },
+        "MOD-3.C": {
+          "description": "Definieren Sie Referenzvariablen einer Oberklasse, die einem Objekt einer Unterklasse in derselben Hierarchie zugewiesen werden."
+        },
+        "MOD-3.D": {
+          "description": "Rufen Sie Methoden in einer Erbschaftsbeziehung auf."
+        },
+        "MOD-3.E": {
+          "description": "Rufen Sie Methoden der Objektklasse durch Vererbung auf."
+        },
+        "MP": {
+          "description": "Mathematische Übungen"
+        },
+        "NBT": {
+          "description": "Zahlen und Operationen im Dezimalsystem"
+        },
         "NF": {
           "description": "Zahl und Operationen — Brüche"
         },
+        "NI": {
+          "description": "Netzwerke und das Internet"
+        },
         "NS": {
           "description": "Das Zahlensystem"
+        },
+        "OA": {
+          "description": "Operationen und mathematisches Denken"
+        },
+        "PS": {
+          "description": "Physikalische Wissenschaft"
+        },
+        "PS1": {
+          "description": "Materie und ihre Wechselwirkungen"
+        },
+        "PS2": {
+          "description": "Bewegung und Stabilität: Kräfte und Wechselwirkungen"
+        },
+        "PS3": {
+          "description": "Energie"
+        },
+        "PS4": {
+          "description": "Wellen und ihre Anwendungen in Technologien des Informationstransfers"
         },
         "Q": {
           "description": "Mengen"
@@ -635,11 +614,29 @@
         "REI": {
           "description": "Argumentieren mit Gleichungen und Ungleichheiten"
         },
+        "RF": {
+          "description": "Grundlegende Fähigkeiten des Lesens"
+        },
+        "RH": {
+          "description": "Lesen von Geschichte/Sozialkunde"
+        },
+        "RI": {
+          "description": "Lesen von informativen"
+        },
+        "RL": {
+          "description": "Lesen von Literatur"
+        },
         "RN": {
           "description": "Das System der reellen Zahlen"
         },
         "RP": {
           "description": "Verhältnisse und proportionale Beziehungen"
+        },
+        "RST": {
+          "description": "Wissenschaftliches/Technisches Lesen"
+        },
+        "SL": {
+          "description": "Sprechen und zuhören"
         },
         "SP": {
           "description": "Statistik und Wahrscheinlichkeit"
@@ -653,62 +650,65 @@
         "TF": {
           "description": "Trigonometrische Funktionen"
         },
+        "VAR-1": {
+          "description": "Um spezifische Lösungen für verallgemeinerbare Probleme zu finden, nehmen Programmierer Variablen in ihren Code auf, sodass derselbe Algorithmus mit unterschiedlichen Eingabewerten ausgeführt wird."
+        },
+        "VAR-1.A": {
+          "description": "Zeichenkettenliterale erstellen"
+        },
+        "VAR-1.B": {
+          "description": "Identifizieren Sie die am besten geeignete Datentypkategorie für eine bestimmte Spezifikation"
+        },
+        "VAR-1.C": {
+          "description": "Deklarieren Sie Variablen der richtigen Typen, um primitive Daten darzustellen"
+        },
+        "VAR-1.D": {
+          "description": "Definieren Sie Variablen der richtigen Typen, um Referenzdaten darzustellen."
+        },
+        "VAR-1.E": {
+          "description": "Für die String-Klasse: a. Erstellen Sie String-Objekte. b. Rufen Sie String-Methoden auf."
+        },
+        "VAR-1.F": {
+          "description": "Für Wrapper-Klassen: a. Erstellen Sie Integer-Objekte. b. Rufen Sie Integer-Methoden auf. c. Erstellen Sie Double-Objekte. d. Rufen Sie Double-Methoden auf."
+        },
+        "VAR-1.G": {
+          "description": "Erklären Sie, wo Variablen im Programmcode verwendet werden können."
+        },
+        "VAR-1.H": {
+          "description": "Bewerten Sie Objektreferenzausdrücke, die das Schlüsselwort this verwenden."
+        },
+        "VAR-2": {
+          "description": "Um große Datenmengen oder komplexe Datenbeziehungen zu verwalten, schreiben Programmierer Code, der die Daten in einer einzigen Datenstruktur gruppiert, ohne für jeden Wert individuelle Variablen zu erstellen."
+        },
+        "VAR-2.A": {
+          "description": "Stellen Sie Sammlungen verwandter Primitiv- oder Objektreferenzdaten mithilfe von eindimensionalen (1D) Array-Objekten dar."
+        },
+        "VAR-2.B": {
+          "description": "Durchquere die Elemente in einem 1D-Array."
+        },
+        "VAR-2.C": {
+          "description": "Durchqueren Sie die Elemente in einem 1D-Array-Objekt mithilfe einer erweiterten For-Schleife."
+        },
+        "VAR-2.D": {
+          "description": "Stellen Sie Sammlungen verwandter Objektreferenzdaten mithilfe von ArrayList-Objekten dar."
+        },
+        "VAR-2.E": {
+          "description": "Für ArrayList-Objekte: • Traversiere mithilfe einer for- oder while-Schleife. • Traversiere mithilfe einer erweiterten For-Schleife."
+        },
+        "VAR-2.F": {
+          "description": "Stellen Sie Sammlungen verwandter Primitiv- oder Objektreferenzdaten mithilfe von zweidimensionalen (2D) Array-Objekten dar."
+        },
+        "VAR-2.G": {
+          "description": "Für 2D-Array-Objekte: • Traversieren Sie mithilfe von verschachtelter Form für Schleifen. • Traversieren Sie mithilfe von verschachtelter Anordnung, verbessert für Schleifen."
+        },
         "VM": {
           "description": "Vektor- und Matrixgrößen"
         },
-        "BI-1": {
-          "description": "Computer nehmen die Welt mithilfe von Sensoren wahr"
+        "W": {
+          "description": "Schreiben"
         },
-        "BI-2": {
-          "description": "Agenten pflegen Repräsentationen der Welt und verwenden sie zum Nachdenken"
-        },
-        "BI-3": {
-          "description": "Computer können aus Daten lernen"
-        },
-        "BI-4": {
-          "description": "Intelligente Agenten benötigen viele Arten von Wissen, um auf natürliche Weise mit Menschen zu interagieren."
-        },
-        "BI-5": {
-          "description": "KI kann die Gesellschaft sowohl positiv als auch negativ beeinflussen"
-        },
-        "3-A-i": {
-          "description": "Die Natur des Lernens — Menschen gegen Maschinen"
-        },
-        "3-A-ii": {
-          "description": "Die Natur des Lernens — Muster in Daten finden"
-        },
-        "3-A-iii": {
-          "description": "Natur des Lernens — Training eines Modells"
-        },
-        "3-A-iv": {
-          "description": "Art des Lernens — Konstruktion oder Verwendung eines Argumentators"
-        },
-        "3-A-v": {
-          "description": "Natur des Lernens — Anpassung interner Repräsentationen"
-        },
-        "3-A-vi": {
-          "description": "Die Natur des Lernens — aus Erfahrung lernen"
-        },
-        "3-B-i": {
-          "description": "Neuronale Netzwerke - Struktur eines neuronalen Netzes"
-        },
-        "3-B-ii": {
-          "description": "Neuronale Netzwerke — Gewichtsanpassung"
-        },
-        "3-C-i": {
-          "description": "Datensätze — Feature-Sets"
-        },
-        "3-C-ii": {
-          "description": "Datensätze — große Datensätze"
-        },
-        "3-C-iii": {
-          "description": "Datensätze — Bias"
-        },
-        "3": {
-          "description": "Die Studierenden wenden digitale Tools an, um Informationen zu sammeln, auszuwerten und zu nutzen."
-        },
-        "5": {
-          "description": "Die Studierenden verstehen menschliche, kulturelle und gesellschaftliche Probleme im Zusammenhang mit Technologie und praktizieren rechtliches und ethisches Verhalten."
+        "WHST": {
+          "description": "HS/S/T schreiben"
         }
       }
     }

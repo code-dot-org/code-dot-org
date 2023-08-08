@@ -1,9 +1,9 @@
 {
   "absolute": "絕對值",
+  "agentDiamondPathCongrats": "太厲害了，除了完成關卡，你還拿到了鑽石！（目前你已收集到 {count, plural, one {1 顆鑽石} other {# 顆鑽石}} ！",
   "agentGenericFailureMessage": "繼續設定代碼！記得使用 Agent 來助您一臂之力。",
   "agentTooFewBlocksFailureMessage": "請嘗試一次只新增一個方塊，讓 Agent 可前往正確的位置。",
   "at": "在",
-  "agentDiamondPathCongrats": "太厲害了，除了完成關卡，你還拿到了鑽石！（目前你已收集到 {count, plural, one {1 顆鑽石} other {# 顆鑽石}} ！",
   "blockActionAdd": "添加",
   "blockActionAttack": "攻擊",
   "blockActionClone": "複製方塊",

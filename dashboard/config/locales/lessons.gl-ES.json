@@ -2,110 +2,80 @@
   "gl-ES": {
     "data": {
       "lessons": {
-        "flappy/Flappy Code": {
-          "name": "Código do Flappy bird"
+        "csd2-2017/Lists": {
+          "name": "Listas"
         },
-        "hourofcode/Maze": {
-          "name": "Labirinto"
-        },
-        "frozen/Artist": {
-          "name": "Programa con Ana e Elsa"
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "O xogo de laboratorio da Idade de xeo"
-        },
-        "artist/Artist": {
-          "name": "Artista"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "Laboratorio de xogo de Gumball"
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Hora do Código Minecraft"
-        },
-        "playlab/Play Lab": {
-          "name": "Laboratorio de Xogos"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "Laboratorio de Xogo Disney Infinity"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hora de Código 2013"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Bucles"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Eventos"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "Condicionais"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "Funcións"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "Variables"
         },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "Bucles \"Para\" (For)"
+        "csd3-2017/Conditionals": {
+          "name": "Condicionais"
         },
-        "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "Fundamentos de Informática"
+        "csd3-2017/Functions": {
+          "name": "Funcións"
         },
-        "kodea-pd-2021/Computer Science Fundamentals": {
-          "name": "Fundamentos de Informática"
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Funcións con parámetros"
         },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "Programación en Papel Cadriculado"
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmos da Vida Real: Planta unha Semente"
         },
-        "coursed-2022/Relay Programming": {
-          "name": "Programación por relevos"
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmos da Vida Real: Planta unha Semente"
         },
-        "coursed-2022/Conditionals with Cards": {
-          "name": "Condicionais con cartas"
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Algoritmos da vida real: avión de papel"
         },
-        "coursef-2022/The Internet": {
-          "name": "A Internet"
+        "coursed-2017/Nested Loops": {
+          "name": "Bucles aniñados"
         },
-        "coursee-2022/Songwriting": {
-          "name": "Composición"
+        "coursee-2017/Building a Foundation": {
+          "name": "Construíndo unha base"
         },
-        "courseb-2022/Move It, Move It": {
-          "name": "Creando camiños"
+        "coursee-2017/Nested Loops": {
+          "name": "Bucles aniñados"
         },
-        "courseb-2022/Getting Loopy": {
-          "name": "Bucleándose"
+        "coursef-2017/Building a Foundation": {
+          "name": "Construíndo unha base"
         },
-        "coursea-2022/Happy Maps": {
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Algoritmos: Tangrams"
+        },
+        "express-2017/Introduction": {
+          "name": "Introdución"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Construíndo unha base"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Bucles aniñados"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmos da Vida Real: Planta unha Semente"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Abella que Soletrea"
+        },
+        "csd2-2018/Lists": {
+          "name": "Listas"
+        },
+        "csd3-2018/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Condicionais"
+        },
+        "csd3-2018/Functions": {
+          "name": "Funcións"
+        },
+        "csd6-2018/Functions with Parameters": {
+          "name": "Funcións con parámetros"
+        },
+        "coursea-2018/Programming: Happy Maps": {
           "name": "Mapas Felices"
         },
-        "coursec-2022/The Big Event": {
-          "name": "O Gran Evento"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "Pulseiras Binarias"
-        },
-        "csd3-2022/Variables": {
-          "name": "Variables"
-        },
-        "csd3-2022/Text": {
-          "name": "Texto"
-        },
-        "csd3-2022/Conditionals": {
-          "name": "Condicionais"
-        },
-        "csd3-2022/Functions": {
-          "name": "Funcións"
-        },
-        "csd6-2022/Functions": {
-          "name": "Funcións"
+        "coursea-2018/Going Places Safely": {
+          "name": "Ir a Sitios en modo Seguro"
         },
         "courseb-2018/Move It, Move It": {
           "name": "Creando camiños"
@@ -113,11 +83,17 @@
         "courseb-2018/Your Digital Footprint": {
           "name": "A túa pegada dixital"
         },
-        "coursea-2018/Programming: Happy Maps": {
-          "name": "Mapas Felices"
+        "coursec-2018/Building a Foundation": {
+          "name": "Construíndo unha base"
         },
-        "coursea-2018/Going Places Safely": {
-          "name": "Ir a Sitios en modo Seguro"
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Bucleándose"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "O Gran Evento"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Pulseiras Binarias"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Programación en Papel Cadriculado"
@@ -133,6 +109,24 @@
         },
         "coursed-2018/Unplugged: Binary": {
           "name": "Imaxes binárias"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Os meus amigos robóticos"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Construíndo unha base"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Condicionais con cartas"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Composición"
+        },
+        "coursee-2018/Internet": {
+          "name": "A Internet"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Colaboración Aberta"
         },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "Os meus amigos robóticos"
@@ -185,36 +179,6 @@
         "express-2018/Crowdsourcing": {
           "name": "Colaboración Aberta"
         },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "Os meus amigos robóticos"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "Construíndo unha base"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "Condicionais con cartas"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "Composición"
-        },
-        "coursee-2018/Internet": {
-          "name": "A Internet"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Colaboración Aberta"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "Construíndo unha base"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Bucleándose"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "O Gran Evento"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Pulseiras Binarias"
-        },
         "pre-express-2018/Move It, Move It": {
           "name": "Creando camiños"
         },
@@ -224,20 +188,20 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Abella que Soletrea"
         },
-        "csd3-2018/Variables": {
+        "csd2-2019/Lists": {
+          "name": "Listas"
+        },
+        "csd3-2019/Variables": {
           "name": "Variables"
         },
-        "csd3-2018/Conditionals": {
+        "csd3-2019/Conditionals": {
           "name": "Condicionais"
         },
-        "csd3-2018/Functions": {
+        "csd3-2019/Functions": {
           "name": "Funcións"
         },
-        "csd6-2018/Functions with Parameters": {
+        "csd6-2019/Functions with Parameters": {
           "name": "Funcións con parámetros"
-        },
-        "csd2-2018/Lists": {
-          "name": "Listas"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Ir a Sitios en modo Seguro"
@@ -254,6 +218,12 @@
         "courseb-2019/Loops: Getting Loopy": {
           "name": "Bucleándose"
         },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Pulseiras Binarias"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "O Gran Evento"
+        },
         "coursed-2019/Algorithms: Graph Paper Programming": {
           "name": "Programación en Papel Cadriculado"
         },
@@ -269,6 +239,9 @@
         "coursed-2019/Digital Citizenship": {
           "name": "Cidadanía dixital"
         },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Composición"
+        },
         "coursef-2019/Envelope Variables": {
           "name": "Variábeis de sobre"
         },
@@ -281,152 +254,197 @@
         "coursef-2019/Crowdsourcing": {
           "name": "Colaboración Aberta"
         },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "Composición"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Pulseiras Binarias"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "O Gran Evento"
-        },
         "pre-express-2019/Spelling Bee": {
           "name": "Abella que Soletrea"
         },
-        "csd3-2019/Variables": {
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Mapas Felices"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "Creando camiños"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Bucleándose"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Pulseiras Binarias"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "O Gran Evento"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Programación por relevos"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Condicionais con cartas"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Imaxes binárias"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Composición"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Variábeis de sobre"
+        },
+        "coursef-2020/Internet": {
+          "name": "A Internet"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "Diversión con bucles \"para\" (for)"
+        },
+        "csd3-2021/Variables": {
           "name": "Variables"
         },
-        "csd3-2019/Conditionals": {
+        "csd3-2021/Text": {
+          "name": "Texto"
+        },
+        "csd3-2021/Conditionals": {
           "name": "Condicionais"
         },
-        "csd3-2019/Functions": {
+        "csd3-2021/Functions": {
           "name": "Funcións"
         },
-        "csd6-2019/Functions with Parameters": {
+        "csd6-2021/Functions with Parameters": {
           "name": "Funcións con parámetros"
         },
-        "csd2-2019/Lists": {
-          "name": "Listas"
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Mapas Felices"
         },
-        "coursef-2017/Building a Foundation": {
-          "name": "Construíndo unha base"
+        "courseb-2021/Move It, Move It": {
+          "name": "Creando camiños"
         },
-        "coursef-2017/Algorithms: Tangrams": {
-          "name": "Algoritmos: Tangrams"
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Bucleándose"
         },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmos da Vida Real: Planta unha Semente"
+        "coursec-2021/Events: The Big Event": {
+          "name": "O Gran Evento"
         },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmos da Vida Real: Planta unha Semente"
+        "coursec-2021/Binary Bracelets": {
+          "name": "Pulseiras Binarias"
         },
-        "pre-express-2017/Spelling Bee": {
-          "name": "Abella que Soletrea"
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Programación en Papel Cadriculado"
         },
-        "coursee-2017/Building a Foundation": {
-          "name": "Construíndo unha base"
+        "coursed-2021/Relay Programming": {
+          "name": "Programación por relevos"
         },
-        "coursee-2017/Nested Loops": {
-          "name": "Bucles aniñados"
+        "coursed-2021/Conditionals with Cards": {
+          "name": "Condicionais con cartas"
         },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Algoritmos da vida real: avión de papel"
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Composición"
         },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmos da Vida Real: Planta unha Semente"
+        "coursef-2021/For Loop Fun": {
+          "name": "Diversión con bucles \"para\" (for)"
         },
-        "coursed-2017/Nested Loops": {
-          "name": "Bucles aniñados"
+        "coursef-2021/Internet": {
+          "name": "A Internet"
         },
-        "express-2017/Introduction": {
-          "name": "Introdución"
-        },
-        "express-2017/Building a Foundation": {
-          "name": "Construíndo unha base"
-        },
-        "express-2017/Nested Loops": {
-          "name": "Bucles aniñados"
-        },
-        "csd3-2017/Variables": {
+        "csd3-2022/Variables": {
           "name": "Variables"
         },
-        "csd3-2017/Conditionals": {
+        "csd3-2022/Text": {
+          "name": "Texto"
+        },
+        "csd3-2022/Conditionals": {
           "name": "Condicionais"
         },
-        "csd3-2017/Functions": {
+        "csd3-2022/Functions": {
           "name": "Funcións"
         },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "Funcións con parámetros"
+        "csd6-2022/Functions": {
+          "name": "Funcións"
         },
-        "csd2-2017/Lists": {
-          "name": "Listas"
+        "coursea-2022/Happy Maps": {
+          "name": "Mapas Felices"
         },
-        "course4/Unplugged: Tangrams": {
-          "name": "Desconectado: Tangrams"
+        "courseb-2022/Move It, Move It": {
+          "name": "Creando camiños"
         },
-        "course4/Maze and Bee": {
-          "name": "O labirinto e a abella"
+        "courseb-2022/Getting Loopy": {
+          "name": "Bucleándose"
         },
-        "course4/Artist": {
+        "coursec-2022/The Big Event": {
+          "name": "O Gran Evento"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Pulseiras Binarias"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Programación por relevos"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Condicionais con cartas"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Composición"
+        },
+        "coursef-2022/The Internet": {
+          "name": "A Internet"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hora de Código 2013"
+        },
+        "artist/Artist": {
           "name": "Artista"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Desconectado: Variábeis de Sobre"
+        "flappy/Flappy Code": {
+          "name": "Código do Flappy bird"
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "Desconectado: Madlibs"
+        "frozen/Artist": {
+          "name": "Programa con Ana e Elsa"
         },
-        "course4/Artist: Variables": {
-          "name": "Artista: Variábeis"
+        "gumball/Gumball Play Lab": {
+          "name": "Laboratorio de xogo de Gumball"
         },
-        "course4/Play Lab: Variables": {
-          "name": "Laboratorio de xogos: Variábeis"
+        "hourofcode/Maze": {
+          "name": "Labirinto"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Desconectado: Bucles \"Para\" (For) divertidos"
+        "iceage/Ice Age Play Lab": {
+          "name": "O xogo de laboratorio da Idade de xeo"
         },
-        "course4/Bee: For Loops": {
-          "name": "Abella: Bucles \"Para\" (For)"
+        "infinity/Infinity": {
+          "name": "Laboratorio de Xogo Disney Infinity"
         },
-        "course4/Artist: For Loops": {
-          "name": "Artista Bucles \"Para\" (for)"
+        "mc/Hour of Code 2015": {
+          "name": "Hora do Código Minecraft"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "Laboratorio de Xogos: Bucles \"Para\" (For)"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
-        "course4/Artist: Functions": {
-          "name": "Artista: Funcio\\*ns"
+        "playlab/Play Lab": {
+          "name": "Laboratorio de Xogos"
         },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Desconectado: Composicio_n de cancio_ns con para\\*metros"
+        "allthethings/Jigsaw": {
+          "name": "Crebacabezas"
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Artista: Funcio_ns con Para_metros"
+        "allthethings/Maze": {
+          "name": "Labirinto"
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Laboratorio de xogos: Funcio_ns con para_metros"
+        "allthethings/Artist": {
+          "name": "Artista"
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Abella: Funcio_ns con para_metros"
+        "allthethings/Bee": {
+          "name": "Abella"
         },
-        "course4/Unplugged: Binary": {
-          "name": "Desconectado: binario"
+        "allthethings/Flappy": {
+          "name": "Flappy bird"
         },
-        "course4/Artist Binary": {
-          "name": "Artista binario"
+        "allthethings/Bounce": {
+          "name": "Rebote"
         },
-        "course4/Super Challenge - Variables": {
-          "name": "Super desafío - Variábeis"
-        },
-        "course4/Super Challenge - For Loops": {
-          "name": "Super reto - bucles \"Para\" (for)"
-        },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Super reto - funcio_ns e para_metros"
-        },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Desafío extremo - completo"
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Introdución á informática"
@@ -487,6 +505,60 @@
         },
         "20-hour/Wrap-up": {
           "name": "Sumario"
+        },
+        "course1/Happy Maps": {
+          "name": "Mapas Felices"
+        },
+        "course1/Move it, Move it": {
+          "name": "Móveo, móveo"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Crebacabezas: aprende a arrastrar e soltar"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Labirinto: Secuencia"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Labirinto: Depuración (Debug)"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Algoritmos da Vida Real: Planta unha Semente"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Abella: Secuencia"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Artista: Secuencia"
+        },
+        "course1/Building a Foundation": {
+          "name": "Construíndo unha base"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Artista: Formas"
+        },
+        "course1/Spelling Bee": {
+          "name": "Abella que Soletrea"
+        },
+        "course1/Getting Loopy": {
+          "name": "Bucleándose"
+        },
+        "course1/Maze: Loops": {
+          "name": "Labirinto: Bucles"
+        },
+        "course1/Bee: Loops": {
+          "name": "Abella: Bucle"
+        },
+        "course1/The Big Event": {
+          "name": "O Gran Evento"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Laboratorio de Xogo: Crea unha Historia"
+        },
+        "course1/Going Places Safely": {
+          "name": "Ir a Sitios en modo Seguro"
+        },
+        "course1/Artist: Loops": {
+          "name": "Artista: Bucles"
         },
         "course2/Graph Paper Programming": {
           "name": "Programación en Papel Cadriculado"
@@ -608,170 +680,74 @@
         "course3/Artist: Patterns": {
           "name": "Artista: Padróns"
         },
-        "course1/Happy Maps": {
-          "name": "Mapas Felices"
+        "course4/Unplugged: Tangrams": {
+          "name": "Desconectado: Tangrams"
         },
-        "course1/Move it, Move it": {
-          "name": "Móveo, móveo"
+        "course4/Maze and Bee": {
+          "name": "O labirinto e a abella"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Crebacabezas: aprende a arrastrar e soltar"
+        "course4/Artist": {
+          "name": "Artista"
         },
-        "course1/Maze: Sequence": {
-          "name": "Labirinto: Secuencia"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Desconectado: Variábeis de Sobre"
         },
-        "course1/Maze: Debugging": {
-          "name": "Labirinto: Depuración (Debug)"
+        "course4/Unplugged: Madlibs": {
+          "name": "Desconectado: Madlibs"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Algoritmos da Vida Real: Planta unha Semente"
+        "course4/Artist: Variables": {
+          "name": "Artista: Variábeis"
         },
-        "course1/Bee: Sequence": {
-          "name": "Abella: Secuencia"
+        "course4/Play Lab: Variables": {
+          "name": "Laboratorio de xogos: Variábeis"
         },
-        "course1/Artist: Sequence": {
-          "name": "Artista: Secuencia"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Desconectado: Bucles \"Para\" (For) divertidos"
         },
-        "course1/Building a Foundation": {
-          "name": "Construíndo unha base"
+        "course4/Bee: For Loops": {
+          "name": "Abella: Bucles \"Para\" (For)"
         },
-        "course1/Artist: Shapes": {
-          "name": "Artista: Formas"
+        "course4/Artist: For Loops": {
+          "name": "Artista Bucles \"Para\" (for)"
         },
-        "course1/Spelling Bee": {
-          "name": "Abella que Soletrea"
+        "course4/Play Lab: For Loops": {
+          "name": "Laboratorio de Xogos: Bucles \"Para\" (For)"
         },
-        "course1/Getting Loopy": {
-          "name": "Bucleándose"
+        "course4/Artist: Functions": {
+          "name": "Artista: Funcio\\*ns"
         },
-        "course1/Maze: Loops": {
-          "name": "Labirinto: Bucles"
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Desconectado: Composicio_n de cancio_ns con para\\*metros"
         },
-        "course1/Bee: Loops": {
-          "name": "Abella: Bucle"
+        "course4/Artist: Functions with Parameters": {
+          "name": "Artista: Funcio_ns con Para_metros"
         },
-        "course1/The Big Event": {
-          "name": "O Gran Evento"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Laboratorio de xogos: Funcio_ns con para_metros"
         },
-        "course1/Studio: Create a Story": {
-          "name": "Laboratorio de Xogo: Crea unha Historia"
+        "course4/Bee: Functions with Parameters": {
+          "name": "Abella: Funcio_ns con para_metros"
         },
-        "course1/Going Places Safely": {
-          "name": "Ir a Sitios en modo Seguro"
+        "course4/Unplugged: Binary": {
+          "name": "Desconectado: binario"
         },
-        "course1/Artist: Loops": {
-          "name": "Artista: Bucles"
+        "course4/Artist Binary": {
+          "name": "Artista binario"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Super desafío - Variábeis"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Super reto - bucles \"Para\" (for)"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Super reto - funcio_ns e para_metros"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Desafío extremo - completo"
         },
         "jigsaw/Jigsaw": {
           "name": "Crebacabezas"
-        },
-        "allthethings/Jigsaw": {
-          "name": "Crebacabezas"
-        },
-        "allthethings/Maze": {
-          "name": "Labirinto"
-        },
-        "allthethings/Artist": {
-          "name": "Artista"
-        },
-        "allthethings/Bee": {
-          "name": "Abella"
-        },
-        "allthethings/Flappy": {
-          "name": "Flappy bird"
-        },
-        "allthethings/Bounce": {
-          "name": "Rebote"
-        },
-        "allthethings/Minecraft": {
-          "name": "Minecraft"
-        },
-        "coursef-2021/For Loop Fun": {
-          "name": "Diversión con bucles \"para\" (for)"
-        },
-        "coursef-2021/Internet": {
-          "name": "A Internet"
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "Creando camiños"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "Bucleándose"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "Mapas Felices"
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "O Gran Evento"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "Pulseiras Binarias"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "Programación en Papel Cadriculado"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "Programación por relevos"
-        },
-        "coursed-2021/Conditionals with Cards": {
-          "name": "Condicionais con cartas"
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "Composición"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "Funcións con parámetros"
-        },
-        "csd3-2021/Variables": {
-          "name": "Variables"
-        },
-        "csd3-2021/Text": {
-          "name": "Texto"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "Condicionais"
-        },
-        "csd3-2021/Functions": {
-          "name": "Funcións"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "Creando camiños"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "Bucleándose"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Programación en Papel Cadriculado"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Programación por relevos"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "Condicionais con cartas"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "Imaxes binárias"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Pulseiras Binarias"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "O Gran Evento"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "Composición"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Mapas Felices"
-        },
-        "coursef-2020/Envelope Variables": {
-          "name": "Variábeis de sobre"
-        },
-        "coursef-2020/Internet": {
-          "name": "A Internet"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "Diversión con bucles \"para\" (for)"
         }
       }
     }

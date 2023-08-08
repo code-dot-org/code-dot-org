@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "csc-bookcovers",
-    "serialized_at": "2023-06-30 15:48:41 UTC",
+    "serialized_at": "2023-07-25 20:27:39 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1981,6 +1981,17 @@
       }
     },
     {
+      "name": "CS Connections Landing Page",
+      "url": "https://code.org/educate/csc",
+      "key": "cs_connections_landing_page",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page"
+      }
+    },
+    {
       "name": "Helpful Hints",
       "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
       "key": "helpful_hints",
@@ -2020,6 +2031,17 @@
       }
     },
     {
+      "name": "Helpful Hints for teachers and learners",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\t",
+      "key": "helpful_hints_for_teachers_and_learners",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners"
+      }
+    },
+    {
       "name": "Planning Guide",
       "url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview",
       "key": "planning_guide",
@@ -2056,6 +2078,39 @@
       },
       "seeding_key": {
         "resource.key": "planning_your_own_book_cover_-_answer_key"
+      }
+    },
+    {
+      "name": "Resource List for All Lessons",
+      "url": "/s/csc-bookcovers-2023/resources",
+      "key": "resource_list_for_all_lessons",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons"
+      }
+    },
+    {
+      "name": "Standards in Coding a Book Cover",
+      "url": "/s/csc-bookcovers-2023/standards",
+      "key": "standards_in_coding_a_book_cover",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "standards_in_coding_a_book_cover"
+      }
+    },
+    {
+      "name": "Vocabulary in Coding a Book Cover",
+      "url": "/s/csc-bookcovers-2023/vocab",
+      "key": "vocabulary_in_coding_a_book_cover",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_in_coding_a_book_cover"
       }
     }
   ],
@@ -2164,7 +2219,36 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page",
+        "script.name": "csc-bookcovers-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners",
+        "script.name": "csc-bookcovers-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons",
+        "script.name": "csc-bookcovers-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standards_in_coding_a_book_cover",
+        "script.name": "csc-bookcovers-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_in_coding_a_book_cover",
+        "script.name": "csc-bookcovers-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

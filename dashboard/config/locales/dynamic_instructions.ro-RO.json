@@ -3,118 +3,118 @@
     "data": {
       "dynamic_instructions": {
         "ml-bad data-club investigations": {
-          "uploadedDataset": "[șir gol]",
+          "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]",
-          "modelSummary": "[șir gol]"
+          "uploadedDataset": "[șir gol]"
         },
         "ml-bad data-club investigations_2022": {
-          "uploadedDataset": "[șir gol]",
+          "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]",
-          "modelSummary": "[șir gol]"
+          "uploadedDataset": "[șir gol]"
         },
         "ml-bad data-loneliness all": {
-          "uploadedDataset": "[șir gol]",
+          "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]",
-          "modelSummary": "[șir gol]"
+          "uploadedDataset": "[șir gol]"
         },
         "ml-bad data-loneliness all_2022": {
-          "uploadedDataset": "[șir gol]",
+          "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]",
-          "modelSummary": "[șir gol]"
+          "uploadedDataset": "[șir gol]"
         },
         "ml-data decisions-zoo1-2021": {
           "selectDataset": "[șir gol]",
-          "uploadedDataset": "[șir gol]",
           "selectedDataset": "[șir gol]",
-          "selectedFeatureNumerical": "[șir gol]"
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
         },
         "ml-data decisions-zoo1_2022": {
           "selectDataset": "[șir gol]",
-          "uploadedDataset": "[șir gol]",
           "selectedDataset": "[șir gol]",
-          "selectedFeatureNumerical": "[șir gol]"
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
         },
         "ml-data decisions-zoo2-2021": {
           "selectDataset": "[șir gol]",
-          "uploadedDataset": "[șir gol]",
           "selectedDataset": "[șir gol]",
-          "selectedFeatureNumerical": "[șir gol]"
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
         },
         "ml-data decisions-zoo2_2022": {
           "selectDataset": "[șir gol]",
-          "uploadedDataset": "[șir gol]",
           "selectedDataset": "[șir gol]",
-          "selectedFeatureNumerical": "[șir gol]"
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
         },
         "ml-data decisions-zoo3-2021": {
           "selectDataset": "[șir gol]",
-          "uploadedDataset": "[șir gol]",
           "selectedDataset": "[șir gol]",
-          "selectedFeatureNumerical": "[șir gol]"
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
         },
         "ml-data decisions-zoo3_2022": {
           "selectDataset": "[șir gol]",
-          "uploadedDataset": "[șir gol]",
           "selectedDataset": "[șir gol]",
-          "selectedFeatureNumerical": "[șir gol]"
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
         },
         "ml-good data-upload isaac csv": {
-          "saveModel": "[șir gol]",
-          "modelSummary": "[șir gol]"
+          "modelSummary": "[șir gol]",
+          "saveModel": "[șir gol]"
         },
         "ml-good data-upload isaac csv_2022": {
-          "saveModel": "[șir gol]",
-          "modelSummary": "[șir gol]"
+          "modelSummary": "[șir gol]",
+          "saveModel": "[șir gol]"
         },
         "ml-intro ai lab-shapes v1": {
-          "selectDataset": "[șir gol]",
-          "uploadedDataset": "[șir gol]",
-          "selectedDataset": "[șir gol]",
           "dataDisplayLabel": "[șir gol]",
-          "selectedFeatureNumerical": "[șir gol]",
+          "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]",
-          "modelSummary": "[șir gol]"
+          "selectDataset": "[șir gol]",
+          "selectedDataset": "[șir gol]",
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
         },
         "ml-intro ai lab-shapes v1_2022": {
-          "selectDataset": "[șir gol]",
-          "uploadedDataset": "[șir gol]",
-          "selectedDataset": "[șir gol]",
           "dataDisplayLabel": "[șir gol]",
-          "selectedFeatureNumerical": "[șir gol]",
+          "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]",
-          "modelSummary": "[șir gol]"
+          "selectDataset": "[șir gol]",
+          "selectedDataset": "[șir gol]",
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
         },
         "ml-intro categorical-food choices-2021": {
-          "uploadedDataset": "[șir gol]",
           "dataDisplayLabel": "[șir gol]",
-          "selectedFeatureNumerical": "[șir gol]",
+          "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]",
-          "modelSummary": "[șir gol]"
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
         },
         "ml-intro categorical-food choices_2022": {
-          "uploadedDataset": "[șir gol]",
           "dataDisplayLabel": "[șir gol]",
-          "selectedFeatureNumerical": "[șir gol]",
+          "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]",
-          "modelSummary": "[șir gol]"
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
         },
         "ml-intro categorical-pizza-2021": {
-          "selectDataset": "[șir gol]",
-          "uploadedDataset": "[șir gol]",
-          "selectedDataset": "[șir gol]",
           "dataDisplayLabel": "[șir gol]",
-          "selectedFeatureNumerical": "[șir gol]",
+          "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]",
-          "modelSummary": "[șir gol]"
+          "selectDataset": "[șir gol]",
+          "selectedDataset": "[șir gol]",
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
         },
         "ml-intro categorical-pizza_2022": {
-          "selectDataset": "[șir gol]",
-          "uploadedDataset": "[șir gol]",
-          "selectedDataset": "[șir gol]",
           "dataDisplayLabel": "[șir gol]",
-          "selectedFeatureNumerical": "[șir gol]",
+          "modelSummary": "[șir gol]",
           "saveModel": "[șir gol]",
-          "modelSummary": "[șir gol]"
+          "selectDataset": "[șir gol]",
+          "selectedDataset": "[șir gol]",
+          "selectedFeatureNumerical": "[șir gol]",
+          "uploadedDataset": "[șir gol]"
         },
         "ml-mini project-ai lab 2": {
           "uploadedDataset": "[șir gol]"
@@ -123,16 +123,16 @@
           "uploadedDataset": "[șir gol]"
         },
         "ml-numerical ai lab-safari 1-2021": {
+          "dataDisplayLabel": "[șir gol]",
           "selectDataset": "[șir gol]",
-          "uploadedDataset": "[șir gol]",
           "selectedDataset": "[șir gol]",
-          "dataDisplayLabel": "[șir gol]"
+          "uploadedDataset": "[șir gol]"
         },
         "ml-numerical ai lab-safari 1_2022": {
+          "dataDisplayLabel": "[șir gol]",
           "selectDataset": "[șir gol]",
-          "uploadedDataset": "[șir gol]",
           "selectedDataset": "[șir gol]",
-          "dataDisplayLabel": "[șir gol]"
+          "uploadedDataset": "[șir gol]"
         }
       }
     }

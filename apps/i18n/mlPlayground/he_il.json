@@ -1,54 +1,29 @@
 {
-  "navigateForward": "המשך לשלב הבא",
-  "navigateBack": "חזור",
-  "tryAgain": "נסה שוב",
-  "navigateDone": "סיים",
-  "saveProgress": "שמור",
-  "correctAnswer": "נכון",
-  "modelCardPossibleValuesMinimum": "מינימום",
-  "modelCardPossibleValuesMaximum": "מקסימום",
-  "columnInspectorDescription": "תיאור",
-  "columnDetailsMinimumValue": "מינימום",
   "columnDetailsMaximumValue": "מקסימום",
+  "columnDetailsMinimumValue": "מינימום",
+  "columnInspectorDescription": "תיאור",
+  "correctAnswer": "נכון",
   "dataCardLastUpdated": "עודכן לאחרונה",
-  "uniqueOptionsWarningNotice": "הערה",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
+      },
       "fields": {
-        "age": {
-          "id": "גיל"
+        "Height": {
+          "id": "גובה"
+        },
+        "Length": {
+          "id": "אורך"
         }
       }
     },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "מזג אוויר"
-        },
-        "day": {
-          "id": "יום"
-        },
-        "shoe": {
-          "id": "פרסה"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "בצל"
-        },
-        "avocado": {
-          "id": "אבוקדו"
-        },
-        "corn": {
-          "id": "תירס"
-        },
-        "beans": {
-          "id": "שעועית"
-        },
-        "lime": {
-          "id": "ליים"
+    "basketball_shots": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },
@@ -56,104 +31,6 @@
       "card": {
         "context": {
           "potentialMisuses": " "
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "פטריות"
-        },
-        "lobster": {
-          "id": "לובסטר"
-        },
-        "bacon": {
-          "id": "בייקון"
-        },
-        "cheese": {
-          "id": "גבינה"
-        },
-        "meat": {
-          "id": "בשר"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "צבע"
-        },
-        "music": {
-          "id": "מוסיקה"
-        },
-        "food": {
-          "id": "אוכל"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "גיל"
-        }
-      },
-      "card": {
-        "context": {
-          "potentialMisuses": " "
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "קטגוריה"
-        },
-        "Description": {
-          "id": "תיאור"
-        }
-      },
-      "card": {
-        "context": {
-          "potentialMisuses": " "
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "תות שדה"
-        },
-        "lime": {
-          "id": "ליים"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "גודל"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "עגבנייה"
-        },
-        "avocado": {
-          "id": "אבוקדו"
-        },
-        "chicken": {
-          "id": "תרנגולת"
-        },
-        "fruit": {
-          "id": "פרי"
-        },
-        "beans": {
-          "id": "שעועית"
-        },
-        "cheese": {
-          "id": "גבינה"
         }
       }
     },
@@ -167,38 +44,10 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "בית ספר"
-        },
-        "age": {
-          "id": "גיל"
-        },
-        "health": {
-          "id": "בריאות"
-        }
-      },
-      "card": {
-        "context": {
-          "potentialUses": " ",
-          "potentialMisuses": " "
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "תרנגולת"
-        },
-        "lamb": {
-          "id": "טלה"
-        },
-        "onion": {
-          "id": "בצל"
-        },
-        "cheese": {
-          "id": "גבינה"
+        "banana": {
+          "id": "בננה"
         }
       }
     },
@@ -206,6 +55,50 @@
       "fields": {
         "age": {
           "id": "גיל"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "צבע"
+        },
+        "food": {
+          "id": "אוכל"
+        },
+        "music": {
+          "id": "מוסיקה"
+        }
+      }
+    },
+    "heart": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
+      },
+      "fields": {
+        "Age": {
+          "id": "גיל"
+        }
+      }
+    },
+    "insurance_cost": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
+      },
+      "fields": {
+        "age": {
+          "id": "גיל"
+        }
+      }
+    },
+    "jeans": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
         }
       }
     },
@@ -219,75 +112,72 @@
         }
       }
     },
-    "movies": {
+    "loneliness_music": {
       "fields": {
-        "Score": {
-          "id": "ניקוד"
+        "Country": {
+          "id": "מדינה"
         },
+        "Music": {
+          "id": "מוסיקה"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "גיל"
+        }
+      }
+    },
+    "movies": {
+      "card": {
+        "context": {
+          "potentialMisuses": " "
+        }
+      },
+      "fields": {
         "Country": {
           "id": "מדינה"
         },
         "Name": {
           "id": "שם"
         },
+        "Score": {
+          "id": "ניקוד"
+        },
         "Star": {
           "id": "כוכב"
         }
-      },
-      "card": {
-        "context": {
-          "potentialMisuses": " "
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "גבינה"
+        },
+        "chicken": {
+          "id": "תרנגולת"
+        },
+        "lamb": {
+          "id": "טלה"
+        },
+        "onion": {
+          "id": "בצל"
         }
       }
     },
-    "songs": {
-      "fields": {
-        "Artist": {
-          "id": "אומן"
-        }
-      },
+    "nutrition": {
       "card": {
         "context": {
           "potentialMisuses": " "
         }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "people": {
-          "id": "אנשים"
-        },
-        "rhino": {
-          "id": "קרנף"
-        },
-        "elephant": {
-          "id": "פיל"
-        },
-        "alligator": {
-          "id": "תנין"
-        },
-        "trees": {
-          "id": "עצים"
-        }
       },
-      "name": "ספארי"
-    },
-    "abalone": {
       "fields": {
-        "Length": {
-          "id": "אורך"
-        }
-      },
-      "card": {
-        "context": {
-          "potentialMisuses": " "
-        }
-      }
-    },
-    "basketball_shots": {
-      "card": {
-        "context": {
-          "potentialMisuses": " "
+        "Category": {
+          "id": "קטגוריה"
+        },
+        "Description": {
+          "id": "תיאור"
         }
       }
     },
@@ -296,57 +186,101 @@
         "avocado": {
           "id": "אבוקדו"
         },
-        "onion": {
-          "id": "בצל"
-        },
         "ginger": {
           "id": "ג'ינג'ר"
+        },
+        "onion": {
+          "id": "בצל"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "מוסיקה"
+        "bacon": {
+          "id": "בייקון"
         },
-        "Country": {
-          "id": "מדינה"
+        "cheese": {
+          "id": "גבינה"
         },
-        "Internet": {
-          "id": "אינטרנט"
+        "lobster": {
+          "id": "לובסטר"
         },
-        "Writing": {
-          "id": "כתיבה"
+        "meat": {
+          "id": "בשר"
         },
-        "Achievements": {
-          "id": "הישגים"
-        },
-        "Age": {
-          "id": "גיל",
-          "description": "גיל"
-        },
-        "Gender": {
-          "id": "מין",
-          "description": "מין"
+        "mushrooms": {
+          "id": "פטריות"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "בננה"
+        "lime": {
+          "id": "ליים"
+        },
+        "strawberry": {
+          "id": "תות שדה"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "גיל"
+        "alligator": {
+          "id": "תנין"
+        },
+        "elephant": {
+          "id": "פיל"
+        },
+        "people": {
+          "id": "אנשים"
+        },
+        "rhino": {
+          "id": "קרנף"
+        },
+        "trees": {
+          "id": "עצים"
         }
       },
-      "card": {
-        "context": {
-          "potentialMisuses": " "
+      "name": "ספארי"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "אבוקדו"
+        },
+        "beans": {
+          "id": "שעועית"
+        },
+        "cheese": {
+          "id": "גבינה"
+        },
+        "chicken": {
+          "id": "תרנגולת"
+        },
+        "fruit": {
+          "id": "פרי"
+        },
+        "tomato": {
+          "id": "עגבנייה"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "אבוקדו"
+        },
+        "beans": {
+          "id": "שעועית"
+        },
+        "corn": {
+          "id": "תירס"
+        },
+        "lime": {
+          "id": "ליים"
+        },
+        "onion": {
+          "id": "בצל"
         }
       }
     },
@@ -357,22 +291,95 @@
         }
       }
     },
-    "jeans": {
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "גודל"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "יום"
+        },
+        "shoe": {
+          "id": "פרסה"
+        },
+        "weather": {
+          "id": "מזג אוויר"
+        }
+      }
+    },
+    "songs": {
       "card": {
         "context": {
           "potentialMisuses": " "
         }
+      },
+      "fields": {
+        "Artist": {
+          "id": "אומן"
+        }
       }
     },
-    "loneliness_music": {
+    "student_alcohol_consumption": {
+      "card": {
+        "context": {
+          "potentialMisuses": " ",
+          "potentialUses": " "
+        }
+      },
       "fields": {
-        "Music": {
-          "id": "מוסיקה"
+        "age": {
+          "id": "גיל"
+        },
+        "health": {
+          "id": "בריאות"
+        },
+        "school": {
+          "id": "בית ספר"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "הישגים"
+        },
+        "Age": {
+          "description": "גיל",
+          "id": "גיל"
         },
         "Country": {
           "id": "מדינה"
+        },
+        "Gender": {
+          "description": "מין",
+          "id": "מין"
+        },
+        "Height": {
+          "description": "גובה",
+          "id": "גובה"
+        },
+        "Internet": {
+          "id": "אינטרנט"
+        },
+        "Music": {
+          "id": "מוסיקה"
+        },
+        "Writing": {
+          "id": "כתיבה"
         }
       }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "מקסימום",
+  "modelCardPossibleValuesMinimum": "מינימום",
+  "navigateBack": "חזור",
+  "navigateDone": "סיים",
+  "navigateForward": "המשך לשלב הבא",
+  "saveProgress": "שמור",
+  "tryAgain": "נסה שוב",
+  "uniqueOptionsWarningNotice": "הערה"
 }

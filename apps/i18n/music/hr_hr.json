@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "pusti zvuk",
   "blockly_blockPlaySoundAtMeasureTooltip": "pusti zvuk",
+  "blockly_blockPlaySoundTooltip": "pusti zvuk",
   "blockly_blockRepeatTooltip": "ponovi",
   "blockly_blockWhenRun": "pri pokretanju",
   "blockly_blockWhenRunTooltip": "pri pokretanju",
@@ -12,9 +12,9 @@
   "blockly_toolboxCategoryMath": "Matematika",
   "blockly_toolboxCategoryPlay": "Zvukovi",
   "blockly_toolboxCategoryVariables": "Varijable",
-  "share": "Podijeli",
-  "startOver": "Počni ispočetka",
+  "continue": "Nastavi",
   "panelHeaderInstructions": "Upute",
   "panelHeaderWorkspace": "Radna površina: ",
-  "continue": "Nastavi"
+  "share": "Podijeli",
+  "startOver": "Počni ispočetka"
 }

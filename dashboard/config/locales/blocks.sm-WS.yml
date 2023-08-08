@@ -21,10 +21,10 @@ sm:
       Dancelab_alternateMoves:
         options:
           GROUP:
-            sprites: uma
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+            sprites: uma
           MOVE1:
             MOVES.Rest: E leai se mea
           MOVE2:
@@ -36,10 +36,10 @@ sm:
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
-            sprites: uma
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+            sprites: uma
           MOVE:
             MOVES.Rest: E leai se mea
       Dancelab_changeMoveLR:
@@ -49,25 +49,25 @@ sm:
       Dancelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': lapoa
             '"height"': maualuga
+            '"scale"': lapoa
       Dancelab_changePropEachBy:
         options:
           GROUP:
-            sprites: uma
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+            sprites: uma
           PROPERTY:
-            '"scale"': lapoa
             '"height"': maualuga
+            '"scale"': lapoa
       Dancelab_doMoveEachLR:
         options:
           GROUP:
-            sprites: uma
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+            sprites: uma
           MOVE:
             MOVES.Rest: E leai se mea
       Dancelab_doMoveLR:
@@ -81,8 +81,8 @@ sm:
       Dancelab_getProp:
         options:
           PROPERTY:
-            '"scale"': lapoa
             '"height"': maualuga
+            '"scale"': lapoa
       Dancelab_getTime:
         options:
           UNIT:
@@ -104,26 +104,26 @@ sm:
       Dancelab_jumpToEach:
         options:
           GROUP:
-            sprites: uma
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+            sprites: uma
           LOCATION:
             "{x: 100, y: 200}": agavale
             "{x: 300, y: 200}": taumatau
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": le faatulagaina
       Dancelab_layoutSprites:
         options:
-          GROUP:
-            sprites: uma
-            '"ALIEN"': tagata ese
-            '"MOOSE"': aila lapoa
-            '"ROBOT"': masina faatagata
           FORMAT:
             '"diamond"': taimane
             '"grid"': poloka
-            '"spiral"': taamilomilo
             '"random"': le faatulagaina
+            '"spiral"': taamilomilo
+          GROUP:
+            '"ALIEN"': tagata ese
+            '"MOOSE"': aila lapoa
+            '"ROBOT"': masina faatagata
+            sprites: uma
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
@@ -169,8 +169,8 @@ sm:
           LAYOUT:
             '"diamond"': taimane
             '"grid"': poloka
-            '"spiral"': taamilomilo
             '"random"': le faatulagaina
+            '"spiral"': taamilomilo
       Dancelab_randomColor:
         text: soo se lanu
       Dancelab_setBackgroundEffect:
@@ -184,24 +184,24 @@ sm:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
+            '0.25': very slow
+            '0.5': slow
             '1': masani
             '2': fast
             '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
-            sprites: uma
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+            sprites: uma
           SPEED:
+            '0.25': very slow
+            '0.5': slow
             '1': masani
             '2': fast
             '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -213,84 +213,84 @@ sm:
       Dancelab_setProp:
         options:
           PROPERTY:
-            '"scale"': lapoa
             '"height"': maualuga
+            '"scale"': lapoa
       Dancelab_setPropEach:
         options:
           GROUP:
-            sprites: uma
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+            sprites: uma
           PROPERTY:
-            '"scale"': lapoa
             '"height"': maualuga
+            '"scale"': lapoa
       Dancelab_setPropRandom:
         options:
           PROPERTY:
-            '"scale"': lapoa
             '"height"': maualuga
+            '"scale"': lapoa
       Dancelab_setPropRandomEach:
         options:
           GROUP:
-            sprites: uma
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+            sprites: uma
           PROPERTY:
-            '"scale"': lapoa
             '"height"': maualuga
+            '"scale"': lapoa
       Dancelab_setTintEach:
         options:
           THIS:
-            sprites: uma
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+            sprites: uma
       Dancelab_setTintEachInline:
         options:
           THIS:
-            sprites: uma
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+            sprites: uma
       Dancelab_setVisibleEach:
         options:
           THIS:
-            sprites: uma
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+            sprites: uma
       Dancelab_startMapping:
         options:
           PROPERTY:
-            '"scale"': lapoa
             '"height"': maualuga
+            '"scale"': lapoa
       Dancelab_startMappingEach:
         options:
           GROUP:
-            sprites: uma
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+            sprites: uma
           PROPERTY:
-            '"scale"': lapoa
             '"height"': maualuga
+            '"scale"': lapoa
       Dancelab_stopMapping:
         options:
           PROPERTY:
-            '"scale"': lapoa
             '"height"': maualuga
+            '"scale"': lapoa
       Dancelab_stopMappingEach:
         options:
           GROUP:
-            sprites: uma
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+            sprites: uma
           PROPERTY:
-            '"scale"': lapoa
             '"height"': maualuga
+            '"scale"': lapoa
       Dancelab_translateStrings:
         options:
           STRING:
@@ -300,11 +300,11 @@ sm:
       Dancelab_whenKey:
         options:
           KEY:
-            '"up"': luga
-            '"left"': agavale
             '"down"': lalo
+            '"left"': agavale
             '"right"': taumatau
             '"space"': vateatea
+            '"up"': luga
             '"x"': x
             '"y"': y
       DansBlocks_setForegroundEffect2:
@@ -312,203 +312,6 @@ sm:
           EFFECT:
             '"hearts"': fatu
             '"rain"': timu
-      gamelab_atTime:
-        options:
-          UNIT:
-            '"seconds"': sekone
-      gamelab_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': lapoa
-            '"x"': tulaga x
-            '"y"': tulaga y
-            '"speed"': vave
-      gamelab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': anafea
-            '"while"': a o loo
-      gamelab_everyInterval:
-        options:
-          UNIT:
-            '"seconds"': sekone
-      gamelab_getProp:
-        options:
-          PROPERTY:
-            '"scale"': lapoa
-            '"x"': tulaga x
-            '"y"': tulaga y
-            '"speed"': vave
-      gamelab_getTime:
-        options:
-          UNIT:
-            '"seconds"': sekone
-      gamelab_isKeyPressed:
-        options:
-          KEY:
-            '"up"': luga
-            '"down"': lalo
-            '"left"': agavale
-            '"right"': taumatau
-            '"space"': vateatea
-            '"x"': x
-            '"y"': y
-      gamelab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': anafea
-            '"while"': a o loo
-          KEY:
-            '"up"': luga
-            '"down"': lalo
-            '"left"': agavale
-            '"right"': taumatau
-            '"space"': vateatea
-            '"x"': x
-            '"y"': y
-      gamelab_layoutSprites:
-        options:
-          FORMAT:
-            '"grid"': poloka
-      gamelab_makeBurst:
-        options:
-          EFFECT:
-            '"burst"': pa
-            '"rain"': timu
-            '"spiral"': taamilomilo
-      gamelab_makeNewSpriteGroup:
-        options:
-          FORMAT:
-            '"grid"': poloka
-      gamelab_makeProjectile:
-        options:
-          DIRECTION:
-            '0': taumatau
-            '90': lalo
-            '180': agavale
-            '270': luga
-      gamelab_makeSpritesWithSize:
-        options:
-          SIZE:
-            '30': small
-            '50': feoloolo
-            '100': large
-      gamelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': taumatau
-            '"left"': agavale
-      gamelab_playSoundOptions:
-        options:
-          SOUND:
-            "'sound://category_app/app_button_1.mp3'": ki
-            "'sound://category_collect/clicky_crunch.mp3'": nunumi
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": lio
-            "'sound://category_animals/bear.mp3'": urosa
-            "'sound://category_animals/cat.mp3'": pusi
-            "'sound://category_animals/cow.mp3'": povi
-            "'sound://category_animals/pig.mp3'": puaa
-            "'sound://category_animals/sheep.mp3'": mamoe
-            "'sound://category_animals/goat.mp3'": oti
-            "'sound://category_animals/chicken.mp3'": moa
-            "'sound://category_animals/rooster.mp3'": toa
-            "'sound://category_animals/elephant.mp3'": elefane
-            "'sound://category_animals/dolphin.mp3'": mumua
-            "'sound://category_animals/chick.mp3'": tamai moa
-            "'sound://category_animals/dog.mp3'": maile
-            "'sound://category_animals/tiger.mp3'": taika
-            "'sound://category_instrumental/harpe_pluck_1.mp3'": kitara
-            "'sound://category_retro/retro_game_ui_select_6.mp3'": filifili
-            "'sound://category_digital/jump_7.mp3'": oso
-      gamelab_randColor:
-        text: soo se lanu
-      gamelab_randomColor:
-        text: soo se lanu
-      gamelab_repeatForever:
-        text: toe fai taimi uma
-      gamelab_setBackgroundImage:
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ana
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': taulaga
-            '"https://studio.code.org/blockly/media/skins/studio/background.png"': fale
-              faamasino
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': toafa
-            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': vateatea
-            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': poloka
-            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': mutiatele
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': nuanua
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': vaega
-            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': fetu
-            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': nofoaafi
-              lalo o auala
-            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': lalo
-              atu o le laueleele
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': lalo
-              o le sami
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': taumalulu
-      gamelab_setDefaultSpriteSize:
-        options:
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': feoloolo
-            '100': large
-      gamelab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': lapoa
-            '"x"': tulaga x
-            '"y"': tulaga y
-            '"speed"': vave
-      gamelab_setProp_dropdown:
-        options:
-          PROPERTY:
-            '"scale"': lapoa
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': feoloolo
-            '100': large
-      gamelab_setSizes:
-        options:
-          PROPERTY:
-            '"scale"': lapoa
-            '"height"': maualuga
-      gamelab_setSpeed_dropdown:
-        options:
-          SIZE:
-            '1': extra slow
-            '3': slow
-            '5': masani
-            '7': fast
-            '9': extra fast
-      gamelab_spriteClicked:
-        options:
-          CONDITION:
-            '"when"': anafea
-            '"while"': a o loo
-      gamelab_turn:
-        options:
-          DIRECTION:
-            '"right"': taumatau
-            '"left"': agavale
-      gamelab_whenKey:
-        options:
-          KEY:
-            '"up"': luga
-            '"down"': lalo
-            '"left"': agavale
-            '"right"': taumatau
-            '"space"': vateatea
-      gamelab_whileKey:
-        options:
-          KEY:
-            '"up"': luga
-            '"down"': lalo
-            '"left"': agavale
-            '"right"': taumatau
-            '"space"': vateatea
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -532,12 +335,12 @@ sm:
             '"all"': uma
       Mikelab_groupChangePropBy:
         options:
-          SELECT:
-            '"all"': uma
           PROPERTY:
             '"scale"': lapoa
             '"x"': tulaga x
             '"y"': tulaga y
+          SELECT:
+            '"all"': uma
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -567,12 +370,12 @@ sm:
             '"all"': uma
       Mikelab_groupSetProp:
         options:
-          SELECT:
-            '"all"': uma
           PROPERTY:
             '"scale"': lapoa
             '"x"': tulaga x
             '"y"': tulaga y
+          SELECT:
+            '"all"': uma
       Mikelab_groupSetTint:
         options:
           SELECT:
@@ -589,12 +392,12 @@ sm:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': taulaga
-            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': mutiatele
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': vaega
-            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': nofoaafi
-              lalo o auala
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': lalo
               atu o le laueleele
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': nofoaafi
+              lalo o auala
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': vaega
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': mutiatele
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -604,8 +407,8 @@ sm:
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': taumatau
             '"left"': agavale
+            '"right"': taumatau
       Mikelab_sprite:
         options:
           LOCATION:
@@ -614,32 +417,32 @@ sm:
       Mikelab_whenKeyPressed:
         options:
           KEY:
-            '"up"': au i luga
+            '"a"': a
+            '"d"': D
             '"down"': au i lalo
             '"left"': au agavale
             '"right"': au taumatau
-            '"w"': W
-            '"a"': a
             '"s"': S
-            '"d"': D
+            '"up"': au i luga
+            '"w"': W
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': au i luga
+            '"a"': a
+            '"d"': D
             '"down"': au i lalo
             '"left"': au agavale
             '"right"': au taumatau
-            '"w"': W
-            '"a"': a
             '"s"': S
-            '"d"': D
+            '"up"': au i luga
+            '"w"': W
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': au i luga
             '"down"': au i lalo
             '"left"': au agavale
             '"right"': au taumatau
+            '"up"': au i luga
       Poetry_addFrame:
         options:
           BRUSH:
@@ -660,19 +463,19 @@ sm:
       Poetry_playMusic:
         options:
           SOUND:
-            '"sound://category_nature/steady_campfire_loop.mp3"': tafunai
-            '"sound://category_nature/forest_woodland_ambience_2.mp3"': vaomatua
-            '"sound://category_nature/summer_night_loop.mp3"': po
             '"sound://category_background/ocean_waves.mp3"': moana
             '"sound://category_background/rainforest_ambient_sound.mp3"': vaomatua
             '"sound://category_background/wavering_wind.mp3"': fia moe
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': vaomatua
+            '"sound://category_nature/steady_campfire_loop.mp3"': tafunai
+            '"sound://category_nature/summer_night_loop.mp3"': po
       Poetry_playSound:
         options:
           SOUND:
-            '"sound://category_bell/long_bell_notification.mp3"': logo
-            '"sound://category_pop/bubble_pop_cluster_2.mp3"': lio
-            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': oso
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': moli
+            '"sound://category_bell/long_bell_notification.mp3"': logo
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': oso
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': lio
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -711,32 +514,32 @@ sm:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '1': uma
-            '0.75': most
-            '0.5': half of
             '0.25': few
+            '0.5': half of
+            '0.75': most
+            '1': uma
       aalab_someStartIntervention:
         options:
           PORTION:
-            '1': uma
-            '0.75': most
-            '0.5': half of
             '0.25': few
+            '0.5': half of
+            '0.75': most
+            '1': uma
       binary_move:
         options:
           DIR:
-            '"up"': luga
             '"down"': lalo
             '"left"': agavale
             '"right"': taumatau
+            '"up"': luga
       binary_whenKey:
         options:
           KEY:
-            '"up"': luga
             '"down"': lalo
             '"left"': agavale
             '"right"': taumatau
             '"space"': vateatea
+            '"up"': luga
       craft_ifPath:
         options:
           DIR:
@@ -744,8 +547,8 @@ sm:
       craft_ifStandingOn:
         options:
           TYPE:
-            "'sand'": oneone
             "'planksOak'": laupapa umi tapeneto
+            "'sand'": oneone
       craft_ifStandingOnLimit:
         options:
           TYPE:
@@ -759,6 +562,203 @@ sm:
           ENTITY:
             '"dolphin"': mumua
             '"squid"': tamai fee
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': sekone
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"scale"': lapoa
+            '"speed"': vave
+            '"x"': tulaga x
+            '"y"': tulaga y
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': anafea
+            '"while"': a o loo
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': sekone
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': lapoa
+            '"speed"': vave
+            '"x"': tulaga x
+            '"y"': tulaga y
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': sekone
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"down"': lalo
+            '"left"': agavale
+            '"right"': taumatau
+            '"space"': vateatea
+            '"up"': luga
+            '"x"': x
+            '"y"': y
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': anafea
+            '"while"': a o loo
+          KEY:
+            '"down"': lalo
+            '"left"': agavale
+            '"right"': taumatau
+            '"space"': vateatea
+            '"up"': luga
+            '"x"': x
+            '"y"': y
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': poloka
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': pa
+            '"rain"': timu
+            '"spiral"': taamilomilo
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"grid"': poloka
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': taumatau
+            '180': agavale
+            '270': luga
+            '90': lalo
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '100': large
+            '30': small
+            '50': feoloolo
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"left"': agavale
+            '"right"': taumatau
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_animals/bear.mp3'": urosa
+            "'sound://category_animals/cat.mp3'": pusi
+            "'sound://category_animals/chick.mp3'": tamai moa
+            "'sound://category_animals/chicken.mp3'": moa
+            "'sound://category_animals/cow.mp3'": povi
+            "'sound://category_animals/dog.mp3'": maile
+            "'sound://category_animals/dolphin.mp3'": mumua
+            "'sound://category_animals/elephant.mp3'": elefane
+            "'sound://category_animals/goat.mp3'": oti
+            "'sound://category_animals/pig.mp3'": puaa
+            "'sound://category_animals/rooster.mp3'": toa
+            "'sound://category_animals/sheep.mp3'": mamoe
+            "'sound://category_animals/tiger.mp3'": taika
+            "'sound://category_app/app_button_1.mp3'": ki
+            "'sound://category_collect/clicky_crunch.mp3'": nunumi
+            "'sound://category_digital/jump_7.mp3'": oso
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": kitara
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": lio
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": filifili
+      gamelab_randColor:
+        text: soo se lanu
+      gamelab_randomColor:
+        text: soo se lanu
+      gamelab_repeatForever:
+        text: toe fai taimi uma
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': taulaga
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': lalo
+              atu o le laueleele
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': nofoaafi
+              lalo o auala
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': vaega
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': mutiatele
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': fale
+              faamasino
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ana
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': toafa
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': poloka
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': nuanua
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': fetu
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': vateatea
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': lalo
+              o le sami
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': taumalulu
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '100': large
+            '25': extra small
+            '50': small
+            '75': feoloolo
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"scale"': lapoa
+            '"speed"': vave
+            '"x"': tulaga x
+            '"y"': tulaga y
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': lapoa
+          SIZE:
+            '100': large
+            '25': extra small
+            '50': small
+            '75': feoloolo
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': maualuga
+            '"scale"': lapoa
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': masani
+            '7': fast
+            '9': extra fast
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': anafea
+            '"while"': a o loo
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"left"': agavale
+            '"right"': taumatau
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"down"': lalo
+            '"left"': agavale
+            '"right"': taumatau
+            '"space"': vateatea
+            '"up"': luga
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"down"': lalo
+            '"left"': agavale
+            '"right"': taumatau
+            '"space"': vateatea
+            '"up"': luga
       storylab_setForegroundEffect2:
         options:
           EFFECT:

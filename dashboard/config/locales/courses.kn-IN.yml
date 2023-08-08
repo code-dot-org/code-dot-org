@@ -3,26 +3,26 @@ kn:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಸಿದ್ಧಾಂತಗಳು
         csd-2017:
           assignment_family_title: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಅನ್ವೇಷಣೆಗಳು
         csd-2018:
           assignment_family_title: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಅನ್ವೇಷಣೆಗಳು
+        csd-2023:
+          title: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಅನ್ವೇಷಣೆಗಳು
+        csp-2017:
+          assignment_family_title: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಸಿದ್ಧಾಂತಗಳು
         csp-2018:
           assignment_family_title: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಸಿದ್ಧಾಂತಗಳು
         mike-test:
           title: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್
-        csd-2023:
-          title: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ ಅನ್ವೇಷಣೆಗಳು
     resources:
+      getting_started_with_csd/csd/2021:
+        name: CSD ಯೊಂದಿಗೆ ಪ್ರಾರಂಭಿಸುವುದು
+      teacher_forum/csd/2019:
+        name: ಶಿಕ್ಷಕರ ವೇದಿಕೆ
       teacher_forum/csd/2020:
         name: ಶಿಕ್ಷಕರ ವೇದಿಕೆ
       teacher_forum_6/csd/2017:
         name: ಶಿಕ್ಷಕರ ವೇದಿಕೆ
-      teacher_forum/csd/2019:
-        name: ಶಿಕ್ಷಕರ ವೇದಿಕೆ
-      getting_started_with_csd/csd/2021:
-        name: CSD ಯೊಂದಿಗೆ ಪ್ರಾರಂಭಿಸುವುದು
       teacher_forum_6/csd/2018:
         name: ಶಿಕ್ಷಕರ ವೇದಿಕೆ

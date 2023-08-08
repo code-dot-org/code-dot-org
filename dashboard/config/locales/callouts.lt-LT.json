@@ -30,6 +30,12 @@
         "Infinity_repeat": {
           "Infinity_repeat_callout": "Padėkite judėjimo blokelius viduje"
         },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Kai jūs pasiruošę, paspauskite \"Paleisti\" kad išbandyti jūsų programą"
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Paspauskite \"Paleisti\" kad pradėtumete jūdėti"
+        },
         "NEW Course 4 Artist Functions 7": {
           "edit_function": "Spausk čia, kad paredaguotum funkciją."
         },
@@ -45,13 +51,22 @@
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Mes padėjome kelis blokelius, kad tau būtų nuo ko pradėti"
         },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Mes padėjome kelis blokelius, kad tau būtų nuo ko pradėti"
+        },
         "Overworld Chop Trees_2019": {
           "craft_callout_preplaced": "Mes padėjome kelis blokelius, kad tau būtų nuo ko pradėti"
         },
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "Mes padėjome kelis blokelius, kad tau būtų nuo ko pradėti"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Mes padėjome kelis blokelius, kad tau būtų nuo ko pradėti"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Šis kodas pradės statyti tavo namą. Ar tu gali jį pabaigti?"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "Šis kodas pradės statyti tavo namą. Ar tu gali jį pabaigti?"
         },
         "Overworld House Frame Chosen_2019": {
@@ -60,7 +75,13 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "Šis kodas pradės statyti tavo namą. Ar tu gali jį pabaigti?"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Šis kodas pradės statyti tavo namą. Ar tu gali jį pabaigti?"
+        },
         "Overworld Move to Sheep": {
+          "craft_run_button_callout": "Paspausk „Paleisti\" ir išmėgink savo programą"
+        },
+        "Overworld Move to Sheep2022": {
           "craft_run_button_callout": "Paspausk „Paleisti\" ir išmėgink savo programą"
         },
         "Overworld Move to Sheep_2019": {
@@ -69,7 +90,13 @@
         "Overworld Move to Sheep_2020": {
           "craft_run_button_callout": "Paspausk „Paleisti\" ir išmėgink savo programą"
         },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Paspausk „Paleisti\" ir išmėgink savo programą"
+        },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "Kartok veiksmus, įdėdamas čia blokelius"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "Kartok veiksmus, įdėdamas čia blokelius"
         },
         "Overworld Place Wall_2019": {
@@ -78,7 +105,13 @@
         "Overworld Place Wall_2020": {
           "craft_inside_repeat": "Kartok veiksmus, įdėdamas čia blokelius"
         },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Kartok veiksmus, įdėdamas čia blokelius"
+        },
         "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Šis kodas tikrins ar yra lava, ar gali pridėti komandą, kad pajudėtum pirmyn?"
+        },
+        "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "Šis kodas tikrins ar yra lava, ar gali pridėti komandą, kad pajudėtum pirmyn?"
         },
         "Underground Avoiding Lava_2019": {
@@ -87,13 +120,22 @@
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "Šis kodas tikrins ar yra lava, ar gali pridėti komandą, kad pajudėtum pirmyn?"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Šis kodas tikrins ar yra lava, ar gali pridėti komandą, kad pajudėtum pirmyn?"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "Iškask šią geležį!"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "Iškask šią geležį!"
         },
         "Underground Iron_2019": {
           "craft_what_is_iron": "Iškask šią geležį!"
         },
         "Underground Iron_2020": {
+          "craft_what_is_iron": "Iškask šią geležį!"
+        },
+        "Underground Iron_2021": {
           "craft_what_is_iron": "Iškask šią geležį!"
         },
         "frozen circle function with parameter": {
@@ -123,48 +165,6 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Nuspausk rodyklę, kad pakeistum „???“ skaičiumi"
-        },
-        "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "Kai jūs pasiruošę, paspauskite \"Paleisti\" kad išbandyti jūsų programą"
-        },
-        "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "Paspauskite \"Paleisti\" kad pradėtumete jūdėti"
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Mes padėjome kelis blokelius, kad tau būtų nuo ko pradėti"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Šis kodas pradės statyti tavo namą. Ar tu gali jį pabaigti?"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Paspausk „Paleisti\" ir išmėgink savo programą"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Kartok veiksmus, įdėdamas čia blokelius"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Šis kodas tikrins ar yra lava, ar gali pridėti komandą, kad pajudėtum pirmyn?"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "Iškask šią geležį!"
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Mes padėjome kelis blokelius, kad tau būtų nuo ko pradėti"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Šis kodas pradės statyti tavo namą. Ar tu gali jį pabaigti?"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Paspausk „Paleisti\" ir išmėgink savo programą"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Kartok veiksmus, įdėdamas čia blokelius"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Šis kodas tikrins ar yra lava, ar gali pridėti komandą, kad pajudėtum pirmyn?"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Iškask šią geležį!"
         }
       }
     }

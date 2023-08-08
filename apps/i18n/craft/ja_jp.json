@@ -1,9 +1,9 @@
 {
   "absolute": "絶対値",
+  "agentDiamondPathCongrats": "なんと、ダイヤモンドの道を見つけました! これまでに {count, plural, one {1 diamond} other {# diamonds}} 個集めました!",
   "agentGenericFailureMessage": "コードを書きつづけましょう! Agent が手伝ってくれることも忘れずに。",
   "agentTooFewBlocksFailureMessage": "Agent が ただしい 場所（ばしょ）にたどりつけるように、1 つのブロックを いちどだけ 追加（ついか）してみましょう。",
   "at": "で",
-  "agentDiamondPathCongrats": "なんと、ダイヤモンドの道を見つけました! これまでに {count, plural, one {1 diamond} other {# diamonds}} 個集めました!",
   "blockActionAdd": "ふやす",
   "blockActionAttack": "攻撃(こうげき)",
   "blockActionClone": "ブロックをコピー",

@@ -3,267 +3,35 @@ sv:
   data:
     script:
       name:
-        course1:
-          title: Kurs 1
-          description: Börja med Kurs 1 för dem som börjat lära sig läsa. Eleverna
-            kommer att skapa datorprogram som hjälper dem att lära sig att samarbeta
-            med andra, utveckla förmågan att lösa problem och vara uthålliga vid svåra
-            uppgifter. I slutet av kursen skapar eleverna ett eget spel eller en berättelse
-            som de kan dela med andra. Rekommenderas för förskolan-årskurs 1.
-          description_short: Börja med kurs 1 för nybörjar-läsare.
-          description_audience: Från 4 år (icke-läsare)
-          student_description: Börja med Kurs 1 för dem som börjat lära sig läsa.
-            Eleverna kommer att skapa datorprogram som hjälper dem att lära sig att
-            samarbeta med andra, utveckla förmågan att lösa problem och vara uthålliga
-            vid svåra uppgifter. I slutet av kursen skapar eleverna ett eget spel
-            eller en berättelse som de kan dela med andra. Rekommenderas för förskolan-årskurs
-            1.
-        course2:
-          title: Kurs 2
-          description: Kurs 2 är utformad för elever som kan läsa och inte har tidigare
-            erfarenhet av programmering. I kursen kommer eleverna skapa program för
-            att lösa problem och utveckla interaktiva spel eller berättelser som de
-            kan dela. Rekommenderas för årskurserna 2-5.
-          description_short: Kurs 2 är utformad för elever som kan läsa.
-          description_audience: Åldrar 6 + (läsförmåga krävs)
-          student_description: Kurs 2 är utformad för elever som kan läsa och inte
-            har tidigare erfarenhet av programmering. I kursen kommer eleverna skapa
-            program för att lösa problem och utveckla interaktiva spel eller berättelser
-            som de kan dela. Rekommenderas för årskurserna 2-5.
-        course3:
-          title: Kurs 3
-          description: Kurs 3 är utformad för elever som har gått kurs 2. Eleverna
-            kommer att fördjupa sig i de programmeringsområden som introducerats i
-            föregående kurser för att skapa flexibla lösningar till mer komplexa problem.
-            I slutet av kursen skapar eleverna interaktiva berättelser och spel som
-            de kan dela. Rekommenderas för årskurs 4-5.
-          description_short: Kurs 3 är en uppföljning till kurs 2.
-          description_audience: Åldrar 8 + (efter kurs 2)
-          student_description: Kurs 3 är utformad för elever som har gått kurs 2.
-            Eleverna kommer att fördjupa sig i de programmeringsområden som introducerats
-            i föregående kurser för att skapa flexibla lösningar till mer komplexa
-            problem. I slutet av kursen skapar eleverna interaktiva berättelser och
-            spel som de kan dela. Rekommenderas för årskurs 4-5.
-        playlab:
-          title: Spel-labb
-          description: Skapa en berättelse eller gör ett spel med Spel-labbet!
-          description_short: Skapa en berättelse eller gör ett spel med Spel-labbet!
-          student_description: Skapa en berättelse eller gör ett spel med Spel-labbet!
-        artist:
-          title: Konstnären
-          description: Rita häftiga bilder och mönster med konstnären!
-          description_short: Rita häftiga bilder och mönster med konstnären!
-          student_description: Rita häftiga bilder och mönster med konstnären!
-        hourofcode:
-          title: Klassisk labyrint
-          description: Prova grunderna i datavetenskap med figurer från Angry Birds,
-            Plants vs. Zombies och Scrat från Ice Age!
-          description_short: Prova grunderna i datavetenskap med många roliga figurer!
-          student_description: Prova grunderna i datavetenskap med figurer från Angry
-            Birds, Plants vs. Zombies och Scrat från Ice Age!
-        frozen:
-          title: Koda med Anna och Elsa
-          description: Vi kan använda kod för att följa Anna och Elsa när de utforskar
-            isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom
-            skridskoåkning och skapa ett underbart vinterland som du kan dela med
-            dina vänner!
-          description_short: Vi kan använda kod för att följa Anna och Elsa när de
-            utforskar isens magi och skönhet.
-          student_description: Vi kan använda kod för att följa Anna och Elsa när
-            de utforskar isens magi och skönhet. Du kommer att skapa snöflingor och
-            mönster genom skridskoåkning och skapa ett underbart vinterland som du
-            kan dela med dina vänner!
-        course4:
-          title: Kurs 4
-          description: Kurs 4 är utformad för elever som har gjort kurserna 2 och
-            3. Eleverna lär sig att ta itu med pussel med ökad komplexitet medan de
-            lär sig hur man kombinerar flera begrepp genom att lösa varje utmaning.
-            När kursen är klar, kommer eleverna att skapa program som låter dem visa
-            upp flera färdigheter, inklusive för loopar och funktioner med parametrar.
-            Rekommenderas för årskurs 4-8.
-          description_short: Elever som går kurs 4 bör ha gått kurs 2 och 3 innan.
-          description_audience: Åldrar 10 + (efter kurs 3)
-          student_description: Kurs 4 är utformad för elever som har gjort kurserna
-            2 och 3. Eleverna lär sig att ta itu med pussel med ökad komplexitet medan
-            de lär sig hur man kombinerar flera begrepp genom att lösa varje utmaning.
-            När kursen är klar, kommer eleverna att skapa program som låter dem visa
-            upp flera färdigheter, inklusive för loopar och funktioner med parametrar.
-            Rekommenderas för årskurs 4-8.
-        Course4pre:
-          title: Kurs 4 förutsättning
-          description: En kort sammanfattning av begrepp för elever som inte har tagit
-            kurs 2 och 3.
-          description_short: En kort sammanfattning av begrepp för elever som inte
-            har tagit kurs 2 och 3.
-          student_description: En kort sammanfattning av begrepp för elever som inte
-            har tagit kurs 2 och 3.
-        usability:
-          title: Användbarhetstest
-          description: Ett urval av kurs 4 nivåer för användartester.
-          student_description: Ett urval av kurs 4 nivåer för användartester.
-        algebra:
-          title: Datavetenskap i Algebra
-          description: Lär dig funktionell programmering genom algebra.
-          description_short: Lär dig funktionell programmering genom algebra.
-          student_description: Lär dig funktionell programmering genom algebra.
-        infinity:
-          title: Disney Infinity Play Lab
-          description: Använd Play Lab för att skapa en berättelse eller ett spel
-            med Disney Infinity karaktärer i huvudrollen .
-          description_short: Använd Play Lab för att skapa en berättelse eller ett
-            spel med Disney Infinity karaktärer i huvudrollen .
-          student_description: Använd Play Lab för att skapa en berättelse eller ett
-            spel med Disney Infinity karaktärer i huvudrollen .
-        algebrademo:
-          title: Algebra Demo
-          description: En handfull pussel för att demonstrera miljön och programmeringsspråket
-            som används i Code.org CS i Algebra
-          description_short: En handfull pussel för att demonstrera miljön och programmeringsspråket
-            som används i Code.org CS i Algebra
-          student_description: En handfull pussel för att demonstrera miljön och programmeringsspråket
-            som används i Code.org CS i Algebra
-        netsim:
-          title: Internet Simulator
-        pixelation:
-          title: Pixelering
         20-hour:
-          title: 20 timmars Intro kurs
           description: Denna 20-timmars kurs introducerar grundläggande datavetenskap
             och programmeringsbegrepp. Kursen är utformad för användning i klassrummet
             från förskoleklass till årskurs 8, men det är roligt att lära sig i alla
             åldrar.
+          description_audience: Åldrar 10 + (efter kurs 3)
           description_short: Denna 20-timmars kurs omfattar ren dator vetenskap och
             programmeringsbegrepp i kurserna 2-4.
-          description_audience: Åldrar 10 + (efter kurs 3)
           student_description: Denna 20-timmars kurs introducerar grundläggande datavetenskap
             och programmeringsbegrepp. Kursen är utformad för användning i klassrummet
             från förskoleklass till årskurs 8, men det är roligt att lära sig i alla
             åldrar.
-        edit-code:
-          title: Redigera kod
-          description: Redigera kod
-          description_short: Redigera kod
-          student_description: Redigera kod
-        events:
-          title: Händelser
-          description: Händelser
-          description_short: Händelser
-          student_description: Händelser
-        flappy:
-          title: Flappy kod
-          description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova
-            vår Flappy Code övning!
-          description_short: Skriv ditt eget Flappy spel på mindre än 10 minuter!
-          student_description: Vill du skriva ditt egna spel på mindre än 10 minuter?
-            Prova vår Flappy Code övning!
-        jigsaw:
-          title: Pussel
-          description: Prova vår Jigsaw handledning.
-          description_short: Prova vår Jigsaw handledning.
-          student_description: Prova vår Jigsaw handledning.
-        step:
-          title: Steg
-          description: Steg handledning
-          description_short: Steg handledning
-          student_description: Steg handledning
-        Hour of Code:
-          title: Timme av Kod 2013
-          description: Prova grunderna i datavetenskap med karaktärerna från Angry
-            Birds och Plants vs. Zombies!
-          description_short: Prova grunderna i datavetenskap med många roliga figurer!
-          student_description: Prova grunderna i datavetenskap med karaktärerna från
-            Angry Birds och Plants vs. Zombies!
-        CodeStudioPuzzleChallenge:
-          title: Kod Studio pussel utmaning
-          description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
-          description_short: Utmana dig själv!
-          student_description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
-        Tutorial Video - Code Studio Puzzle Challenge:
-          title: Tutorial - Kod Studio pussel utmaning
-          description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
-          description_short: Utmana dig själv!
-          student_description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
-        cspunit1:
-          title: CSP enhet 1 - Digital Information
-        algebraPD:
-          title: Datavetenskap i Algebra PD
-        algPDmiami:
-          title: Datavetenskap i Algebra PD
-          description: Undervisa i algebra genom funktionell programmering
-          description_short: Undervisa i algebra genom funktionell programmering
-          student_description: Undervisa i algebra genom funktionell programmering
-        text-compression:
-          title: Text komprimering
-          description: Komprimera text genom att identifiera upprepade mönster.
-          description_short: Komprimera text genom att identifiera upprepade mönster.
-          student_description: Komprimera text genom att identifiera upprepade mönster.
-        CSPLessonSamples:
-          title: CSP lektionsexempel
-        algebraPD-NexTech:
-          title: Datavetenskap i Algebra PD
-        algebraPD-iZone:
-          title: Datavetenskap i Algebra PD
-        algebraPD2a:
-          title: Datavetenskap i Algebra PD
-        allthethings:
-          title: Allt!
-          description: Alla typer av nivå för UI-tester
-          description_short: Alla typer av nivå för UI-tester
-          student_description: Alla typer av nivå för UI-tester
-          lessons:
-            lesson-49:
-              name: Musik
-        algebraPD2b:
-          title: Datavetenskap i Algebra PD
-        asUnplugged:
-          description_audience: Åldrarna 6-13
-        afterschool1:
-          description_audience: Åldrarna 7-13
-        algebraPD3a:
-          title: Datavetenskap i Algebra PD
-        cspunit4draft:
-          description_short: Data
-        algebraPD3b:
-          title: Datavetenskap i Algebra PD
-        Special Fun:
-          description_audience: Åldrar 10 + (efter kurs 3)
-        SpecialSeries:
-          description_audience: Åldrar 10 + (efter kurs 3)
-        iceage:
-          title: Ice Age Play Lab
-          description: Skapa en berättelse eller gör ett spel med Ice Age Play Lab!
-          description_short: Skapa en berättelse eller gör ett spel med Ice Age Play
-            Lab!
-          student_description: Skapa en berättelse eller gör ett spel med Ice Age
-            Play Lab!
-        gumball:
-          title: Gumball Play Lab
-          description: Skapa en berättelse eller gör ett spel med Gumball Play Lab!
-          description_short: Skapa en berättelse eller gör ett spel med Gumball Play
-            Lab!
-          student_description: Skapa en berättelse eller gör ett spel med Gumball
-            Play Lab!
-        starwars:
-          description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel
-            i en galax långt, långt borta.
-          description_short: Lär dig att programmera droider och skapa ditt eget Star
-            Wars-spel i en galax långt, långt borta.
-          student_description: Lär dig att programmera droider och skapa ditt eget
-            Star Wars-spel i en galax långt, långt borta.
-        starwarsblocks:
-          description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel
-            i en galax långt, långt borta.
-          description_short: Lär dig att programmera droider och skapa ditt eget Star
-            Wars-spel i en galax långt, långt borta.
-          student_description: Lär dig att programmera droider och skapa ditt eget
-            Star Wars-spel i en galax långt, långt borta.
-        mc:
-          title: Minecraft Hour of Code
-          description: Använd block av kod för att ta Steve eller Alex på ett äventyr
-            genom denna Minecraft-värld.
-          description_short: Utforska en Minecraft-värld genom kod
-          student_description: Använd block av kod för att ta Steve eller Alex på
-            ett äventyr genom denna Minecraft-värld.
+          title: 20 timmars Intro kurs
+        2021drafting:
+          lesson_groups:
+            Argentina:
+              display_name: Argentina
+            debugging:
+              display_name: Felsökning
+            introduction:
+              display_name: Introduktion
+            lessonGroup-3:
+              display_name: variabler
+            outbreak:
+              display_name: Utbrottssimulator
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Timmen med Kod
         AlgebraA:
           description: Lär dig funktionell programmering genom algebra
           description_short: Lär dig funktionell programmering genom algebra
@@ -272,283 +40,988 @@ sv:
           description: Lär dig funktionell programmering genom algebra
           description_short: Lär dig funktionell programmering genom algebra
           student_description: Lär dig funktionell programmering genom algebra
-        algebraPD1:
-          description: Undervisa i algebra genom funktionell programmering
-          student_description: Undervisa i algebra genom funktionell programmering
-        algebraPD3c:
-          title: Datavetenskap i Algebra PD
-        csp1-2017:
-          lesson_groups:
-            csp1_2:
-              display_name: 'Kapitel 2: Uppfinna Internet'
+        CSDU5-Draft:
+          description_short: Data
         CSF_Secret_Sample:
           description_audience: Åldrar 8 + (efter kurs 2)
+        CSF_Secret_Sample_Story:
+          description_audience: Åldrarna 8-18+
+        CSPLessonSamples:
+          title: CSP lektionsexempel
+        CodeStudioPuzzleChallenge:
+          description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
+          description_short: Utmana dig själv!
+          student_description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
+          title: Kod Studio pussel utmaning
+        Course4pre:
+          description: En kort sammanfattning av begrepp för elever som inte har tagit
+            kurs 2 och 3.
+          description_short: En kort sammanfattning av begrepp för elever som inte
+            har tagit kurs 2 och 3.
+          student_description: En kort sammanfattning av begrepp för elever som inte
+            har tagit kurs 2 och 3.
+          title: Kurs 4 förutsättning
+        Hour of Code:
+          description: Prova grunderna i datavetenskap med karaktärerna från Angry
+            Birds och Plants vs. Zombies!
+          description_short: Prova grunderna i datavetenskap med många roliga figurer!
+          student_description: Prova grunderna i datavetenskap med karaktärerna från
+            Angry Birds och Plants vs. Zombies!
+          title: Timme av Kod 2013
+        MikeTest:
+          description_audience: Åldrarna 8-98
+        Special Fun:
+          description_audience: Åldrar 10 + (efter kurs 3)
+        SpecialSeries:
+          description_audience: Åldrar 10 + (efter kurs 3)
+        Tutorial Video - Code Studio Puzzle Challenge:
+          description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
+          description_short: Utmana dig själv!
+          student_description: Prova dessa roliga kodnings- pusslen. Gör ditt bästa!
+          title: Tutorial - Kod Studio pussel utmaning
+        afterschool1:
+          description_audience: Åldrarna 7-13
+        ai-temp:
+          title: Hur AI fungerar
+        aiml-2021:
+          name: aiml-2021
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+        algPDmiami:
+          description: Undervisa i algebra genom funktionell programmering
+          description_short: Undervisa i algebra genom funktionell programmering
+          student_description: Undervisa i algebra genom funktionell programmering
+          title: Datavetenskap i Algebra PD
+        algebra:
+          description: Lär dig funktionell programmering genom algebra.
+          description_short: Lär dig funktionell programmering genom algebra.
+          student_description: Lär dig funktionell programmering genom algebra.
+          title: Datavetenskap i Algebra
         algebraFacilitator:
           description: Undervisa i algebra genom funktionell programmering
           description_short: Undervisa i algebra genom funktionell programmering
           student_description: Undervisa i algebra genom funktionell programmering
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-            practice:
-              display_name: Undervisningsmetoder
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-            practice:
-              display_name: Undervisningsmetoder
-        CSDU5-Draft:
-          description_short: Data
-        CSF_Secret_Sample_Story:
-          description_audience: Åldrarna 8-18+
-        MikeTest:
-          description_audience: Åldrarna 8-98
-        artistExemplar:
-          description_audience: Åldrar 8 + (efter kurs 2)
-        teachercon:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-            practice:
-              display_name: Undervisningsmetoder
-        gradeKinder:
-          title: Förskola
-          description_audience: Åldrar 5 + (läsförmåga krävs)
-        grade4:
-          description_audience: Ålder 9-99
-        grade1:
-          description_audience: Åldrar 5 + (läsförmåga krävs)
-        grade5:
-          description_audience: Åldrarna 10-110
-        grade3:
-          description_audience: Åldrar 5 + (läsförmåga krävs)
-        alltheplcthings:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-            practice:
-              display_name: Undervisningsmetoder
-        csd3-2017:
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapitel 1: Bilder och Animationer'
-            csd3_2:
-              display_name: 'Kapitel 2: Bygga Spel'
-        grade2:
-          description_audience: Åldrar 5 + (läsförmåga krävs)
+        algebraPD:
+          title: Datavetenskap i Algebra PD
+        algebraPD-NexTech:
+          title: Datavetenskap i Algebra PD
+        algebraPD-iZone:
+          title: Datavetenskap i Algebra PD
+        algebraPD1:
+          description: Undervisa i algebra genom funktionell programmering
+          student_description: Undervisa i algebra genom funktionell programmering
+        algebraPD2a:
+          title: Datavetenskap i Algebra PD
+        algebraPD2b:
+          title: Datavetenskap i Algebra PD
+        algebraPD3a:
+          title: Datavetenskap i Algebra PD
+        algebraPD3b:
+          title: Datavetenskap i Algebra PD
+        algebraPD3c:
+          title: Datavetenskap i Algebra PD
+        algebrademo:
+          description: En handfull pussel för att demonstrera miljön och programmeringsspråket
+            som används i Code.org CS i Algebra
+          description_short: En handfull pussel för att demonstrera miljön och programmeringsspråket
+            som används i Code.org CS i Algebra
+          student_description: En handfull pussel för att demonstrera miljön och programmeringsspråket
+            som används i Code.org CS i Algebra
+          title: Algebra Demo
         algebrapdnext:
           description: Undervisa i algebra genom funktionell programmering
           student_description: Undervisa i algebra genom funktionell programmering
+        alltheplcthings:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+            required:
+              display_name: Översikt
+        allthethings:
+          description: Alla typer av nivå för UI-tester
+          description_short: Alla typer av nivå för UI-tester
+          lessons:
+            lesson-49:
+              name: Musik
+          student_description: Alla typer av nivå för UI-tester
+          title: Allt!
+        andrea-test:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Bedömningar
+        aquatic:
+          description_short: Minecraft är tillbaka med en helt ny aktivitet för “Hour
+            of Code”!
+          name: Vattenlevande
+          title: 'Minecraft: Resande vattenlevande'
+        artist:
+          description: Rita häftiga bilder och mönster med konstnären!
+          description_short: Rita häftiga bilder och mönster med konstnären!
+          student_description: Rita häftiga bilder och mönster med konstnären!
+          title: Konstnären
+        artistExemplar:
+          description_audience: Åldrar 8 + (efter kurs 2)
+        asUnplugged:
+          description_audience: Åldrarna 6-13
+        basketball:
+          description: Göra en basketmatch
+          description_short: Göra en basketmatch
+          name: basket
+          student_description: Göra en basketmatch
+          title: Göra en basketmatch
+        classic-hoc-impact-study:
+          description_short: Prova grunderna i datavetenskap med många roliga figurer!
+        contagion-pilot:
+          description: Använd Sprite Lab för att programmera en simulering av ett
+            virusutbrott.
+          description_short: Använd Sprite Lab för att programmera en simulering av
+            ett virusutbrott.
+          student_description: Använd Sprite Lab för att programmera en simulering
+            av ett virusutbrott.
+        course1:
+          description: Börja med Kurs 1 för dem som börjat lära sig läsa. Eleverna
+            kommer att skapa datorprogram som hjälper dem att lära sig att samarbeta
+            med andra, utveckla förmågan att lösa problem och vara uthålliga vid svåra
+            uppgifter. I slutet av kursen skapar eleverna ett eget spel eller en berättelse
+            som de kan dela med andra. Rekommenderas för förskolan-årskurs 1.
+          description_audience: Från 4 år (icke-läsare)
+          description_short: Börja med kurs 1 för nybörjar-läsare.
+          student_description: Börja med Kurs 1 för dem som börjat lära sig läsa.
+            Eleverna kommer att skapa datorprogram som hjälper dem att lära sig att
+            samarbeta med andra, utveckla förmågan att lösa problem och vara uthålliga
+            vid svåra uppgifter. I slutet av kursen skapar eleverna ett eget spel
+            eller en berättelse som de kan dela med andra. Rekommenderas för förskolan-årskurs
+            1.
+          title: Kurs 1
+        course2:
+          description: Kurs 2 är utformad för elever som kan läsa och inte har tidigare
+            erfarenhet av programmering. I kursen kommer eleverna skapa program för
+            att lösa problem och utveckla interaktiva spel eller berättelser som de
+            kan dela. Rekommenderas för årskurserna 2-5.
+          description_audience: Åldrar 6 + (läsförmåga krävs)
+          description_short: Kurs 2 är utformad för elever som kan läsa.
+          student_description: Kurs 2 är utformad för elever som kan läsa och inte
+            har tidigare erfarenhet av programmering. I kursen kommer eleverna skapa
+            program för att lösa problem och utveckla interaktiva spel eller berättelser
+            som de kan dela. Rekommenderas för årskurserna 2-5.
+          title: Kurs 2
+        course3:
+          description: Kurs 3 är utformad för elever som har gått kurs 2. Eleverna
+            kommer att fördjupa sig i de programmeringsområden som introducerats i
+            föregående kurser för att skapa flexibla lösningar till mer komplexa problem.
+            I slutet av kursen skapar eleverna interaktiva berättelser och spel som
+            de kan dela. Rekommenderas för årskurs 4-5.
+          description_audience: Åldrar 8 + (efter kurs 2)
+          description_short: Kurs 3 är en uppföljning till kurs 2.
+          student_description: Kurs 3 är utformad för elever som har gått kurs 2.
+            Eleverna kommer att fördjupa sig i de programmeringsområden som introducerats
+            i föregående kurser för att skapa flexibla lösningar till mer komplexa
+            problem. I slutet av kursen skapar eleverna interaktiva berättelser och
+            spel som de kan dela. Rekommenderas för årskurs 4-5.
+          title: Kurs 3
+        course4:
+          description: Kurs 4 är utformad för elever som har gjort kurserna 2 och
+            3. Eleverna lär sig att ta itu med pussel med ökad komplexitet medan de
+            lär sig hur man kombinerar flera begrepp genom att lösa varje utmaning.
+            När kursen är klar, kommer eleverna att skapa program som låter dem visa
+            upp flera färdigheter, inklusive för loopar och funktioner med parametrar.
+            Rekommenderas för årskurs 4-8.
+          description_audience: Åldrar 10 + (efter kurs 3)
+          description_short: Elever som går kurs 4 bör ha gått kurs 2 och 3 innan.
+          student_description: Kurs 4 är utformad för elever som har gjort kurserna
+            2 och 3. Eleverna lär sig att ta itu med pussel med ökad komplexitet medan
+            de lär sig hur man kombinerar flera begrepp genom att lösa varje utmaning.
+            När kursen är klar, kommer eleverna att skapa program som låter dem visa
+            upp flera färdigheter, inklusive för loopar och funktioner med parametrar.
+            Rekommenderas för årskurs 4-8.
+          title: Kurs 4
+        coursea-2017:
+          assignment_family_title: Kurs A
+          title: Kurs A
+        coursea-2018:
+          assignment_family_title: Kurs A
+        coursea-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        coursea-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        coursea-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        coursea-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        courseb-2017:
+          assignment_family_title: Kurs B
+          title: Kurs B
+        courseb-2018:
+          assignment_family_title: Kurs B
+        courseb-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        courseb-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        courseb-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            lessonGroup-6:
+              description: "![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)"
+        courseb-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        coursec-2017:
+          assignment_family_title: Kurs C
+          title: Kurs C
+        coursec-2018:
+          assignment_family_title: Kurs C
+        coursec-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Binära
+            csf_data:
+              display_name: Data
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        coursec-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: Binära
+            csf_data:
+              display_name: Data
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        coursec-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: Binära
+            csf_data:
+              display_name: Data
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        coursec-2022:
+          lesson_groups:
+            csf_data:
+              display_name: Data
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        coursec-2023:
+          lesson_groups:
+            csf_data:
+              display_name: Data
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        coursed-2017:
+          assignment_family_title: Kurs D
+          title: Kurs D
+        coursed-2018:
+          assignment_family_title: Kurs D
+        coursed-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Binära
+            csf_conditionals:
+              display_name: Villkor
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        coursed-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: Binära
+            csf_conditionals:
+              display_name: Villkor
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        coursed-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: Binära
+            csf_conditionals:
+              display_name: Villkor
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            lessonGroup-6:
+              display_name: Digitalt medborgarskap
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Villkor
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            lessonGroup-6:
+              display_name: Digitalt medborgarskap
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Villkor
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            lessonGroup-6:
+              display_name: Digitalt medborgarskap
+        coursee-2017:
+          assignment_family_title: Kurs E
+          title: Kurs E
+        coursee-2018:
+          assignment_family_title: Kurs E
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_functions:
+              display_name: funktioner
+            csf_nested_loops:
+              display_name: Kapslade slingor(loopar)
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_functions:
+              display_name: funktioner
+            csf_nested_loops:
+              display_name: Kapslade slingor(loopar)
+        coursee-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_functions:
+              display_name: funktioner
+            csf_nested_loops:
+              display_name: Villkor
+            lessonGroup-8:
+              display_name: Borttagen
+            ramp_up:
+              display_name: Kapslade slingor(loopar)
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_functions:
+              display_name: funktioner
+            csf_nested_loops:
+              display_name: Villkor
+            ramp_up:
+              display_name: Kapslade slingor(loopar)
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_functions:
+              display_name: funktioner
+            csf_nested_loops:
+              display_name: Villkor
+            ramp_up:
+              display_name: Kapslade slingor(loopar)
+        coursee-draft:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+        coursef-2017:
+          assignment_family_title: Kurs F
+          title: Kurs F
+        coursef-2018:
+          assignment_family_title: Kurs F
+        coursef-2019:
+          lesson_groups:
+            csf_data:
+              display_name: Data
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_for_loops:
+              display_name: "'För' loopar"
+            csf_internet:
+              display_name: Internet
+            csf_variables:
+              display_name: variabler
+        coursef-2020:
+          lesson_groups:
+            csf_data:
+              display_name: Data
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_for_loops:
+              display_name: "'För' loopar"
+            csf_variables:
+              display_name: variabler
+        coursef-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_for_loops:
+              display_name: "'För' loopar"
+            csf_variables:
+              display_name: "'För' loopar"
+            lessonGroup-7:
+              display_name: Digitalt medborgarskap
+            lessonGroup-8:
+              display_name: variabler
+            lessonGroup-9:
+              display_name: ta bort
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalt medborgarskap
+            lessonGroup-8:
+              display_name: variabler
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalt medborgarskap
+            lessonGroup-8:
+              display_name: variabler
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: variabler
+        coursef-draft:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasser
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasser
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasser
+        csa-frq-practice-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasser
+          lessons:
+            lesson-4:
+              name: Data
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasser
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasser
+        csa-pl-module-1-test:
+          title: Introduktion till Code.org och CSA
+        csa-pl-module-2-test:
+          title: Navigera bland verktygen på Code.org
+        csa-pl-module-3-test:
+          title: Stöd med textbaserad programmering
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lektioner
+            lessonGroup-3:
+              display_name: Projekt
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lektioner
+            lessonGroup-3:
+              display_name: Projekt
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Enhet 1
+            lessonGroup-3:
+              display_name: Resurser
+            lessonGroup-4:
+              display_name: Enhet 2
+            lessonGroup-5:
+              display_name: Enhet 3
+            lessonGroup-6:
+              display_name: Enhet 4
+            lessonGroup-7:
+              display_name: Enhet 5
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+          name: csa1-2022
+        csa1-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa1-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Innehåll
+          lessons:
+            lesson-6:
+              name: loopar
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+          name: csa2-2022
+        csa2-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+          lessons:
+            lesson-4:
+              name: variabler
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Innehåll
+            lessonGroup-4:
+              display_name: Sandlåda
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Innehåll
+            lessonGroup-4:
+              display_name: Sandlåda
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+          name: csa3-2022
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+          lessons:
+            lesson-3:
+              name: "'För' loopar"
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+          name: csa4-2022
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa4-exemplars:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            lesson group:
+              display_name: Innehåll
+            lessonGroup-2:
+              display_name: Innehåll
+            lesson_group:
+              display_name: Innehåll
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-4:
+              display_name: Sandlåda
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-4:
+              display_name: Sandlåda
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+          name: csa5-2022
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-4:
+              display_name: Sandlåda
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-4:
+              display_name: Sandlåda
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+            lessonGroup-5:
+              display_name: Sandlåda
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csd-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csd-novice-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csd-post-survey-2021:
+          description: Den här enheten innehåller CS Discoveries undersökning efter
+            kursen. Denna enhet kan tilldelas efter att eleverna har slutfört sin
+            sista enhet i CS Discoveries.
+          student_description: Den här enheten innehåller en undersökning för när
+            din klass är klar med enheterna i CS Discoveries. Din lärare kommer att
+            tala om för dig när det är dags att svara på den här undersökningen.
+        csd-post-survey-2022:
+          description: Den här enheten innehåller CS Discoveries undersökning efter
+            kursen. Denna enhet kan tilldelas efter att eleverna har slutfört sin
+            sista enhet i CS Discoveries.
+          student_description: Den här enheten innehåller en undersökning för när
+            din klass är klar med enheterna i CS Discoveries. Din lärare kommer att
+            tala om för dig när det är dags att svara på den här undersökningen.
         csd1-2017:
           lesson_groups:
             csd1_1:
               display_name: 'Kapitel 1: Problemlösnings-processen'
             csd1_2:
               display_name: 'Kapitel 2: Datorer och Problemlösning'
-        csp-online-test:
+        csd1-2018:
           lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-            practice:
-              display_name: Undervisningsmetoder
-        csp1-support:
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        csd1-2019:
           lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-            practice:
-              display_name: Undervisningsmetoder
-        basketball:
-          title: Göra en basketmatch
-          description_short: Göra en basketmatch
-          description: Göra en basketmatch
-          student_description: Göra en basketmatch
-          name: basket
-        csp2-support:
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        csd1-2020:
           lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-            practice:
-              display_name: Undervisningsmetoder
-        minecraft:
-          title: Minecraft Hour of Code Designer
-          description_short: Programmera djur och andra Minecraft varelser i din egen
-            version av Minecraft.
-          description: Programmera djur och andra Minecraft varelser i din egen version
-            av Minecraft.
-          student_description: Programmera djur och andra Minecraft varelser i din
-            egen version av Minecraft.
-        coursee-draft:
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        csd1-2021:
           lesson_groups:
-            content:
-              display_name: Innehåll
-        coursef-draft:
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+          name: csd1-2021
+        csd1-2022:
           lesson_groups:
-            content:
-              display_name: Innehåll
-        classic-hoc-impact-study:
-          description_short: Prova grunderna i datavetenskap med många roliga figurer!
-        hoc-impact-study:
-          description_short: Prova grunderna i datavetenskap med många roliga figurer!
-        sports:
-          title: Sport
-          description_short: Koda din egen sport
-          description: Koda din egen sport
-          student_description: Koda din egen sport
-        csp3-support:
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        csd1-2023:
           lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-            practice:
-              display_name: Undervisningsmetoder
-        csp4-support:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-            practice:
-              display_name: Undervisningsmetoder
-        csf2harvey:
-          lesson_groups:
-            content:
-              display_name: Innehåll
-        csp5-support:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-            practice:
-              display_name: Undervisningsmetoder
-        csppostap-2017:
-          lesson_groups:
-            content:
-              display_name: Innehåll
-        csd3-draft:
-          description_short: Animationer och spel
-        coursea-2017:
-          title: Kurs A
-          assignment_family_title: Kurs A
-        courseb-2017:
-          title: Kurs B
-          assignment_family_title: Kurs B
-        coursec-2017:
-          title: Kurs C
-          assignment_family_title: Kurs C
-        coursed-2017:
-          title: Kurs D
-          assignment_family_title: Kurs D
-        coursee-2017:
-          title: Kurs E
-          assignment_family_title: Kurs E
-        coursef-2017:
-          title: Kurs F
-          assignment_family_title: Kurs F
-        cspnovice:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csp1-dlp:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csp2-dlp:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csp3-dlp:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csp4-dlp:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csp5-dlp:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
         csd1-dlp:
           lesson_groups:
-            required:
-              display_name: Översikt
             content:
               display_name: Innehåll
-        csd6-dlp:
+            required:
+              display_name: Översikt
+        csd1-dlp-18:
           lesson_groups:
-            required:
-              display_name: Översikt
             content:
               display_name: Innehåll
-        csd5-dlp:
+            required:
+              display_name: Översikt
+          name: csd1-dlp-18
+        csd1-pilot:
           lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csd4-dlp:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csd3-dlp:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
+            csd1_1:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        csd2-2020:
+          name: csd2-2020
+        csd2-2021:
+          name: csd2-2021
         csd2-dlp:
           lesson_groups:
+            content:
+              display_name: Innehåll
             required:
               display_name: Översikt
-            content:
-              display_name: Innehåll
-        express-2017:
+        csd2-dlp-18:
           lesson_groups:
             content:
               display_name: Innehåll
-        new-express:
-          lesson_groups:
-            content:
-              display_name: Innehåll
-        hero:
-          description: Minecraft är tillbaka för Hour of Code med en helt ny aktivitet!
-            Res genom Minecraft via koden.
-          student_description: Minecraft är tillbaka för Hour of Code med en helt
-            ny aktivitet! Res genom Minecraft via koden.
-          name: hjälte
+            required:
+              display_name: Översikt
+          name: csd2-dlp-18
         csd3-1819draft:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
+        csd3-2017:
           lesson_groups:
             csd3_1:
               display_name: 'Kapitel 1: Bilder och Animationer'
@@ -560,327 +1033,427 @@ sv:
               display_name: 'Kapitel 1: Bilder och Animationer'
             csd3_2:
               display_name: 'Kapitel 2: Bygga Spel'
-        coursea-2018:
-          assignment_family_title: Kurs A
-        courseb-2018:
-          assignment_family_title: Kurs B
-        coursed-2018:
-          assignment_family_title: Kurs D
-        coursec-2018:
-          assignment_family_title: Kurs C
-        coursee-2018:
-          assignment_family_title: Kurs E
-        coursef-2018:
-          assignment_family_title: Kurs F
-        csp1-2018:
-          lesson_groups:
-            csp1_2:
-              display_name: 'Kapitel 2: Uppfinna Internet'
-        csd1-2018:
-          lesson_groups:
-            csd1_1:
-              display_name: 'Kapitel 1: Problemlösnings-processen'
-            csd1_2:
-              display_name: 'Kapitel 2: Datorer och Problemlösning'
-        csp3-2018:
-          name: csp3-2018
-        csd1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-          name: csd1-dlp-18
-        csd2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-          name: csd2-dlp-18
-        csd3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-          name: csd3-dlp-18
-        csd4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-          name: csd4-dlp-18
-        csd5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-          name: csd5-dlp-18
-        csd6-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-          name: csd6-dlp-18
-        csp1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-          name: csp1-dlp-18
-        csp2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-          name: csp2-dlp-18
-        csp3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csp4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csp5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csp-explore-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csp-create-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csd-novice-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csd-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csp-novice-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csp-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        fit-test:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        dance:
-          description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
-            Ciara och 25 andra!
-          description: Koda ditt egna dansparty som du kan dela med dina vänner.
-          student_description: Koda ditt egna dansparty som du kan dela med dina vänner.
-          name: dans
-        aquatic:
-          title: 'Minecraft: Resande vattenlevande'
-          description_short: Minecraft är tillbaka med en helt ny aktivitet för “Hour
-            of Code”!
-          name: Vattenlevande
-        cspplayground:
-          lesson_groups:
-            csp_variables:
-              display_name: variabler
-            csp_conditionals:
-              display_name: Villkor
-            csp_functions:
-              display_name: funktioner
-            csp_project:
-              display_name: Projekt
-        dance-extras:
-          description: Med ytterligare projektidéer kan du fortsätta efter den första
-            timmen.
-          student_description: Med ytterligare projektidéer kan du fortsätta efter
-            den första timmen.
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: variabler
-            csf_data:
-              display_name: Data
-            csf_for_loops:
-              display_name: "'För' loopar"
-            csf_internet:
-              display_name: Internet
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: Händelser
-            csf_loops:
-              display_name: loopar
-            csf_conditionals:
-              display_name: Villkor
-            csf_binary:
-              display_name: Binära
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-        coursee-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_nested_loops:
-              display_name: Kapslade slingor(loopar)
-            csf_functions:
-              display_name: funktioner
-        express-2019:
-          lesson_groups:
-            csf_warmup:
-              display_name: Uppvärmning
-            csf_loops:
-              display_name: loopar
-            csf_conditionals:
-              display_name: Villkor
-            csf_functions:
-              display_name: funktioner
-            csf_variables:
-              display_name: variabler
-            csf_for_loops:
-              display_name: "'För' loopar"
-        csd1-2019:
-          lesson_groups:
-            csd1_1:
-              display_name: 'Kapitel 1: Problemlösnings-processen'
-            csd1_2:
-              display_name: 'Kapitel 2: Datorer och Problemlösning'
-        andrea-test:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        dance-extras-gallery:
-          title: Fortsätt att dansa
-          description: Med ytterligare projektidéer kan du fortsätta efter den första
-            timmen.
-          student_description: Med ytterligare projektidéer kan du fortsätta efter
-            den första timmen.
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_binary:
-              display_name: Binära
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-            csf_data:
-              display_name: Data
-        coursea-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
         csd3-2019:
           lesson_groups:
             csd3_1:
               display_name: 'Kapitel 1: Bilder och Animationer'
             csd3_2:
               display_name: 'Kapitel 2: Bygga Spel'
-        csp4-pilot:
+        csd3-2020:
           lesson_groups:
-            csp_variables:
-              display_name: variabler
-            csp_conditionals:
-              display_name: Villkor
-            csp_functions:
-              display_name: funktioner
-            csp_project:
-              display_name: Projekt
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
+          name: csd3-2020
+        csd3-2021:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
+          name: csd3-2021
+        csd3-2022:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
+        csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Bygga Spel'
+        csd3-dlp:
+          lesson_groups:
+            content:
+              display_name: Innehåll
             required:
               display_name: Översikt
+        csd3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+          name: csd3-dlp-18
+        csd3-draft:
+          description_short: Animationer och spel
+        csd3-pilot:
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            csd3_2:
+              display_name: 'Kapitel 2: Bygga Spel'
+        csd3-virtual:
+          lesson_groups:
+            csd3_1:
+              display_name: Innehåll
+            csd3_2:
+              display_name: Innehåll
+            cspSurvey:
+              display_name: Innehåll
+        csd4-2020:
+          name: csd4-2020
+        csd4-2021:
+          name: csd4-2021
+        csd4-dlp:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csd4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+          name: csd4-dlp-18
+        csd4-pilot:
+          lesson_groups:
+            csd1_2:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        csd5-2021:
+          name: csd5-2021
+        csd5-dlp:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csd5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+          name: csd5-dlp-18
+        csd6-2021:
+          name: csd6-2021
+        csd6-dlp:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csd6-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+          name: csd6-dlp-18
+        csd6-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+        csd7-2021:
+          name: csd7-2021
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+        csdu6-playground:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Mallar
+            lessonGroup-4:
+              display_name: Kapitel 2
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: variabler
+            outbreak:
+              display_name: Utbrottssimulering
+            ramp_up:
+              display_name: Introduktion
+            variables:
+              display_name: variabler
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: variabler
+        csf2harvey:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        csp-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csp-create-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csp-explore-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csp-novice-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csp-online-test:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+            required:
+              display_name: Översikt
+        csp1-2017:
+          lesson_groups:
+            csp1_2:
+              display_name: 'Kapitel 2: Uppfinna Internet'
+        csp1-2018:
+          lesson_groups:
+            csp1_2:
+              display_name: 'Kapitel 2: Uppfinna Internet'
         csp1-2019:
           lesson_groups:
             csp1_2:
               display_name: 'Kapitel 2: Uppfinna Internet'
+        csp1-2020:
+          name: csp1-2020
+        csp1-2021:
+          name: csp1-2021
+        csp1-dlp:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csp1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+          name: csp1-dlp-18
         csp1-pilot:
           lesson_groups:
             required:
               display_name: Översikt
         csp1-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: variabler
             csp_conditionals:
               display_name: Villkor
             csp_functions:
               display_name: funktioner
             csp_project:
               display_name: Projekt
+            csp_variables:
+              display_name: variabler
+        csp1-support:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+            required:
+              display_name: Översikt
+        csp10-2020:
+          name: csp10-2020
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabler
+        csp2-2020:
+          name: csp2-2020
+        csp2-2021:
+          name: csp2-2021
+        csp2-dlp:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csp2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+          name: csp2-dlp-18
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
         csp2-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: variabler
             csp_conditionals:
               display_name: Villkor
             csp_functions:
               display_name: funktioner
             csp_project:
               display_name: Projekt
+            csp_variables:
+              display_name: variabler
+        csp2-support:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+            required:
+              display_name: Översikt
+        csp3-2018:
+          name: csp3-2018
+        csp3-2020:
+          name: csp3-2020
+        csp3-2021:
+          name: csp3-2021
+        csp3-dlp:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csp3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csp3-support:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+            required:
+              display_name: Översikt
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabler
+          name: csp4-2020
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabler
+          name: csp4-2021
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabler
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabler
+        csp4-dlp:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csp4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabler
+            required:
+              display_name: Översikt
         csp4-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: variabler
             csp_conditionals:
               display_name: Villkor
             csp_functions:
               display_name: funktioner
             csp_project:
               display_name: Projekt
-        csp5-pilot-staging:
+            csp_variables:
+              display_name: variabler
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabler
+        csp4-support:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+            required:
+              display_name: Översikt
+        csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Listor
@@ -888,52 +1461,44 @@ sv:
               display_name: loopar
             csp_project:
               display_name: Projekt
-            csp_libraries:
-              display_name: Bibliotek
-        csp6-pilot-staging:
+          name: csp5-2020
+        csp5-2021:
           lesson_groups:
-            csp_variables:
-              display_name: variabler
-            csp_conditionals:
-              display_name: Villkor
-            csp_functions:
-              display_name: funktioner
+            csp_lists:
+              display_name: Listor
+            csp_loops:
+              display_name: loopar
             csp_project:
               display_name: Projekt
-        csp7-pilot-staging:
+          name: csp5-2021
+        csp5-2022:
           lesson_groups:
-            csp_libraries:
-              display_name: Bibliotek
-        csp8-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: variabler
-            csp_conditionals:
-              display_name: Villkor
-            csp_functions:
-              display_name: funktioner
+            csp_lists:
+              display_name: Listor
+            csp_loops:
+              display_name: loopar
             csp_project:
               display_name: Projekt
-        csp9-pilot-staging:
+        csp5-2023:
           lesson_groups:
-            csp_variables:
-              display_name: variabler
-            csp_conditionals:
-              display_name: Villkor
-            csp_functions:
-              display_name: funktioner
+            csp_lists:
+              display_name: Data
+            csp_loops:
+              display_name: loopar
             csp_project:
               display_name: Projekt
-        csp10-pilot-staging:
+        csp5-dlp:
           lesson_groups:
-            csp_variables:
-              display_name: variabler
-            csp_conditionals:
-              display_name: Villkor
-            csp_functions:
-              display_name: funktioner
-            csp_project:
-              display_name: Projekt
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csp5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -944,338 +1509,788 @@ sv:
               display_name: Projekt
             required:
               display_name: Översikt
-        fit2019-novice:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csd1-pilot:
-          lesson_groups:
-            csd1_1:
-              display_name: 'Kapitel 1: Problemlösnings-processen'
-            csd1_2:
-              display_name: 'Kapitel 2: Datorer och Problemlösning'
-        csd3-pilot:
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapitel 1: Bilder och Animationer'
-            csd3_2:
-              display_name: 'Kapitel 2: Bygga Spel'
-        csp3-pilot:
-          lesson_groups:
-            content:
-              display_name: Innehåll
-            required:
-              display_name: Översikt
-        csl-vn:
-          lesson_groups:
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-        dlp19-csd-mod-fit:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        dlp19-csp-mod-fit:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        dlp19-csd-mod-w1:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        dlp19-csd-mod-w2:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        dlp19-csd-mod-w3:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        dlp19-csd-mod-w4:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        dlp19-csp-mod-w1:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        dlp19-csp-mod-w2:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        dlp19-csp-mod-w3:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        dlp19-csp-mod-w4:
-          lesson_groups:
-            required:
-              display_name: Översikt
-            content:
-              display_name: Innehåll
-        csd4-pilot:
-          lesson_groups:
-            csd1_2:
-              display_name: 'Kapitel 2: Datorer och Problemlösning'
-        csp2-pilot:
-          lesson_groups:
-            content:
-              display_name: Innehåll
-            required:
-              display_name: Översikt
-        csp6-pilot:
-          lesson_groups:
-            content:
-              display_name: Innehåll
-            required:
-              display_name: Översikt
-        dance-2019:
-          title: Dansparty
-          description: Koda ditt egna dansparty som du kan dela med dina vänner.
-          student_description: Koda ditt egna dansparty som du kan dela med dina vänner.
-        k5-onlinepd-2019:
-          lesson_groups:
-            k5_next_steps:
-              display_name: Nästa steg
-        dance-extras-2019:
-          title: Fortsätt att dansa
-          description: Med ytterligare projektidéer kan du fortsätta efter den första
-            timmen.
-          student_description: Med ytterligare projektidéer kan du fortsätta efter
-            den första timmen.
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: variabler
-            csp_conditionals:
-              display_name: Villkor
-            csp_functions:
-              display_name: funktioner
-            csp_project:
-              display_name: Projekt
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_conditionals:
-              display_name: Villkor
-            csf_nested_loops:
-              display_name: Kapslade slingor(loopar)
-            csf_functions:
-              display_name: funktioner
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: loopar
-            csf_conditionals:
-              display_name: Villkor
-            csf_events:
-              display_name: Händelser
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: loopar
-            csf_conditionals:
-              display_name: Villkor
-            csf_events:
-              display_name: Händelser
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-        csp7-pilot:
+        csp5-pilot-staging:
           lesson_groups:
             csp_libraries:
               display_name: Bibliotek
-            required:
-              display_name: Översikt
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: variabler
-            csp_conditionals:
-              display_name: Villkor
-            csp_functions:
-              display_name: funktioner
-            csp_project:
-              display_name: Projekt
-          name: csp4-2020
-        csp5-2020:
-          lesson_groups:
             csp_lists:
               display_name: Listor
             csp_loops:
               display_name: loopar
             csp_project:
               display_name: Projekt
-          name: csp5-2020
+        csp5-support:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+            required:
+              display_name: Översikt
+        csp6-2020:
+          name: csp6-2020
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmer
+          name: csp6-2021
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Listor
+            lessonGroup-3:
+              display_name: loopar
+            lessonGroup-5:
+              display_name: Projekt
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabler
         csp7-2020:
           lesson_groups:
             csp_libraries:
               display_name: Bibliotek
           name: csp7-2020
-        csd2-2020:
-          name: csd2-2020
-        csd1-2020:
+        csp7-2021:
           lesson_groups:
-            csd1_1:
-              display_name: 'Kapitel 1: Problemlösnings-processen'
-            csd1_2:
-              display_name: 'Kapitel 2: Datorer och Problemlösning'
-        csd4-2020:
-          name: csd4-2020
-        csd3-2020:
+            csp_libraries:
+              display_name: Bibliotek
+          name: csp7-2021
+        csp7-2022:
           lesson_groups:
-            csd3_1:
-              display_name: 'Kapitel 1: Bilder och Animationer'
-            csd3_2:
-              display_name: 'Kapitel 2: Bygga Spel'
-          name: csd3-2020
-        coursea-2020:
+            csp_libraries:
+              display_name: Bibliotek
+        csp7-2023:
           lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-        courseb-2020:
+            csp_libraries:
+              display_name: Bibliotek
+        csp7-pilot:
           lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-        coursec-2020:
+            csp_libraries:
+              display_name: Bibliotek
+            required:
+              display_name: Översikt
+        csp7-pilot-staging:
           lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_binary:
-              display_name: Binära
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-            csf_data:
-              display_name: Data
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Händelser
-            csf_loops:
-              display_name: loopar
-            csf_conditionals:
-              display_name: Villkor
-            csf_binary:
-              display_name: Binära
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-        coursee-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_nested_loops:
-              display_name: Kapslade slingor(loopar)
-            csf_functions:
-              display_name: funktioner
-        coursef-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_variables:
-              display_name: variabler
-            csf_data:
-              display_name: Data
-            csf_for_loops:
-              display_name: "'För' loopar"
-        express-2020:
-          lesson_groups:
-            csf_warmup:
-              display_name: Uppvärmning
-            csf_loops:
-              display_name: loopar
-            csf_conditionals:
-              display_name: Villkor
-            csf_functions:
-              display_name: funktioner
-            csf_variables:
-              display_name: variabler
-            csf_for_loops:
-              display_name: "'För' loopar"
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-        csp1-2020:
-          name: csp1-2020
-        csp2-2020:
-          name: csp2-2020
-        csp3-2020:
-          name: csp3-2020
-        csp6-2020:
-          name: csp6-2020
+            csp_libraries:
+              display_name: Bibliotek
         csp8-2020:
           name: csp8-2020
+        csp8-2021:
+          name: csp8-2021
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabler
         csp9-2020:
           name: csp9-2020
-        csp10-2020:
-          name: csp10-2020
-        virtual-holding-place:
+        csp9-2021:
+          name: csp9-2021
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabler
+        cspnovice:
           lesson_groups:
             content:
               display_name: Innehåll
-            csd3_2:
-              display_name: 'Kapitel 2: Bygga Spel'
-        k5-onlinepd-2020:
+            required:
+              display_name: Översikt
+        cspplayground:
           lesson_groups:
-            k5_next_steps_1:
-              display_name: Nästa steg
-        dani-test-2020:
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+            csp_variables:
+              display_name: variabler
+        csppostap-2017:
           lesson_groups:
-            lesson group:
-              display_name: visningsnamn
+            content:
+              display_name: Innehåll
+        cspunit1:
+          title: CSP enhet 1 - Digital Information
+        cspunit1-support:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+            required:
+              display_name: Översikt
+        cspunit4draft:
+          description_short: Data
+        dance:
+          description: Koda ditt egna dansparty som du kan dela med dina vänner.
+          description_short: Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+            Ciara och 25 andra!
+          name: dans
+          student_description: Koda ditt egna dansparty som du kan dela med dina vänner.
+        dance-2019:
+          description: Koda ditt egna dansparty som du kan dela med dina vänner.
+          student_description: Koda ditt egna dansparty som du kan dela med dina vänner.
+          title: Dansparty
+        dance-extras:
+          description: Med ytterligare projektidéer kan du fortsätta efter den första
+            timmen.
+          student_description: Med ytterligare projektidéer kan du fortsätta efter
+            den första timmen.
+        dance-extras-2019:
+          description: Med ytterligare projektidéer kan du fortsätta efter den första
+            timmen.
+          student_description: Med ytterligare projektidéer kan du fortsätta efter
+            den första timmen.
+          title: Fortsätt att dansa
+        dance-extras-gallery:
+          description: Med ytterligare projektidéer kan du fortsätta efter den första
+            timmen.
+          student_description: Med ytterligare projektidéer kan du fortsätta efter
+            den första timmen.
+          title: Fortsätt att dansa
         dani-june-2020-test:
           lesson_groups:
             lesson group:
               display_name: visningsnamn
-        csd3-virtual:
+        dani-test-2020:
           lesson_groups:
-            csd3_1:
+            lesson group:
+              display_name: visningsnamn
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            content:
               display_name: Innehåll
-            csd3_2:
+            required:
+              display_name: Översikt
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            content:
               display_name: Innehåll
-            cspSurvey:
+            required:
+              display_name: Översikt
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            content:
               display_name: Innehåll
+            required:
+              display_name: Översikt
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: test
+              display_name: Modul 1
+            lessonGroup-3:
+              display_name: Modul 2
+            lessonGroup-4:
+              display_name: Modul 3
+            lessonGroup-5:
+              display_name: Modul 4
+          name: dlp21-csd
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Steg 1
+            lessonGroup-3:
+              display_name: Steg 2
+        edit-code:
+          description: Redigera kod
+          description_short: Redigera kod
+          student_description: Redigera kod
+          title: Redigera kod
+        events:
+          description: Händelser
+          description_short: Händelser
+          student_description: Händelser
+          title: Händelser
+        express-2017:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+        express-2019:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Villkor
+            csf_for_loops:
+              display_name: "'För' loopar"
+            csf_functions:
+              display_name: funktioner
+            csf_loops:
+              display_name: loopar
+            csf_variables:
+              display_name: variabler
+            csf_warmup:
+              display_name: Uppvärmning
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Villkor
+            csf_for_loops:
+              display_name: "'För' loopar"
+            csf_functions:
+              display_name: funktioner
+            csf_loops:
+              display_name: loopar
+            csf_variables:
+              display_name: variabler
+            csf_warmup:
+              display_name: Uppvärmning
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Villkor
+            csf_for_loops:
+              display_name: "'För' loopar"
+            csf_functions:
+              display_name: funktioner
+            csf_loops:
+              display_name: loopar
+            csf_variables:
+              display_name: variabler
+            lessonGroup-9:
+              display_name: Händelser
+        express-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Villkor
+            csf_for_loops:
+              display_name: "'För' loopar"
+            csf_functions:
+              display_name: funktioner
+            csf_loops:
+              display_name: loopar
+            csf_variables:
+              display_name: variabler
+            lessonGroup-9:
+              display_name: Händelser
+        express-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Villkor
+            csf_for_loops:
+              display_name: "'För' loopar"
+            csf_functions:
+              display_name: funktioner
+            csf_loops:
+              display_name: loopar
+            csf_variables:
+              display_name: variabler
+            lessonGroup-9:
+              display_name: Händelser
+        fit-test:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        fit2019-apprentice:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        fit2019-novice:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            required:
+              display_name: Översikt
+        flappy:
+          description: Vill du skriva ditt egna spel på mindre än 10 minuter? Prova
+            vår Flappy Code övning!
+          description_short: Skriv ditt eget Flappy spel på mindre än 10 minuter!
+          student_description: Vill du skriva ditt egna spel på mindre än 10 minuter?
+            Prova vår Flappy Code övning!
+          title: Flappy kod
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Bygga Spel'
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Bygga Spel'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+        frozen:
+          description: Vi kan använda kod för att följa Anna och Elsa när de utforskar
+            isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom
+            skridskoåkning och skapa ett underbart vinterland som du kan dela med
+            dina vänner!
+          description_short: Vi kan använda kod för att följa Anna och Elsa när de
+            utforskar isens magi och skönhet.
+          student_description: Vi kan använda kod för att följa Anna och Elsa när
+            de utforskar isens magi och skönhet. Du kommer att skapa snöflingor och
+            mönster genom skridskoåkning och skapa ett underbart vinterland som du
+            kan dela med dina vänner!
+          title: Koda med Anna och Elsa
+        grade1:
+          description_audience: Åldrar 5 + (läsförmåga krävs)
+        grade2:
+          description_audience: Åldrar 5 + (läsförmåga krävs)
+        grade3:
+          description_audience: Åldrar 5 + (läsförmåga krävs)
+        grade4:
+          description_audience: Ålder 9-99
+        grade5:
+          description_audience: Åldrarna 10-110
+        gradeKinder:
+          description_audience: Åldrar 5 + (läsförmåga krävs)
+          title: Förskola
+        gumball:
+          description: Skapa en berättelse eller gör ett spel med Gumball Play Lab!
+          description_short: Skapa en berättelse eller gör ett spel med Gumball Play
+            Lab!
+          student_description: Skapa en berättelse eller gör ett spel med Gumball
+            Play Lab!
+          title: Gumball Play Lab
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 1:
+              display_name: Lektion 1
+            Lesson 2:
+              display_name: Lektion 2
+            Lesson 3:
+              display_name: Lektion 3
+            Lesson 4:
+              display_name: Lektion 4
+            Lesson 5:
+              display_name: Lektion 5
+            write a haikut:
+              display_name: Skriv en Haiku
+        hero:
+          description: Minecraft är tillbaka för Hour of Code med en helt ny aktivitet!
+            Res genom Minecraft via koden.
+          name: hjälte
+          student_description: Minecraft är tillbaka för Hour of Code med en helt
+            ny aktivitet! Res genom Minecraft via koden.
+        hoc-impact-study:
+          description_short: Prova grunderna i datavetenskap med många roliga figurer!
+        hourofcode:
+          description: Prova grunderna i datavetenskap med figurer från Angry Birds,
+            Plants vs. Zombies och Scrat från Ice Age!
+          description_short: Prova grunderna i datavetenskap med många roliga figurer!
+          student_description: Prova grunderna i datavetenskap med figurer från Angry
+            Birds, Plants vs. Zombies och Scrat från Ice Age!
+          title: Klassisk labyrint
+        iceage:
+          description: Skapa en berättelse eller gör ett spel med Ice Age Play Lab!
+          description_short: Skapa en berättelse eller gör ett spel med Ice Age Play
+            Lab!
+          student_description: Skapa en berättelse eller gör ett spel med Ice Age
+            Play Lab!
+          title: Ice Age Play Lab
+        infinity:
+          description: Använd Play Lab för att skapa en berättelse eller ett spel
+            med Disney Infinity karaktärer i huvudrollen .
+          description_short: Använd Play Lab för att skapa en berättelse eller ett
+            spel med Disney Infinity karaktärer i huvudrollen .
+          student_description: Använd Play Lab för att skapa en berättelse eller ett
+            spel med Disney Infinity karaktärer i huvudrollen .
+          title: Disney Infinity Play Lab
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Bygga Spel'
+        jigsaw:
+          description: Prova vår Jigsaw handledning.
+          description_short: Prova vår Jigsaw handledning.
+          student_description: Prova vår Jigsaw handledning.
+          title: Pussel
+        k5-onlinepd-2019:
+          lesson_groups:
+            k5_next_steps:
+              display_name: Nästa steg
+        k5-onlinepd-2020:
+          lesson_groups:
+            k5_next_steps_1:
+              display_name: Nästa steg
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: Introduktion
+            k5_getting_started_1:
+              display_name: Introduktion
+        kaitie-test-script:
+          lesson_groups:
+            lesson group:
+              display_name: visningsnamn
+        mc:
+          description: Använd block av kod för att ta Steve eller Alex på ett äventyr
+            genom denna Minecraft-värld.
+          description_short: Utforska en Minecraft-värld genom kod
+          student_description: Använd block av kod för att ta Steve eller Alex på
+            ett äventyr genom denna Minecraft-värld.
+          title: Minecraft Hour of Code
+        minecraft:
+          description: Programmera djur och andra Minecraft varelser i din egen version
+            av Minecraft.
+          description_short: Programmera djur och andra Minecraft varelser i din egen
+            version av Minecraft.
+          student_description: Programmera djur och andra Minecraft varelser i din
+            egen version av Minecraft.
+          title: Minecraft Hour of Code Designer
+        netsim:
+          title: Internet Simulator
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Villkor
+            lessonGroup-5:
+              display_name: variabler
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: loopar
+            lessonGroup-6:
+              display_name: Händelser
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kapslade slingor(loopar)
+            lessonGroup-4:
+              display_name: funktioner
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: loopar
+            lessonGroup-6:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: loopar
+            lessonGroup-5:
+              display_name: Händelser
+            lessonGroup-6:
+              display_name: Data
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-6:
+              display_name: loopar
+            lessonGroup-7:
+              display_name: Data
+        new-express:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+        outbreak:
+          description: Använd Sprite Lab för att programmera en simulering av ett
+            virusutbrott.
+          description_short: Använd Sprite Lab för att programmera en simulering av
+            ett virusutbrott.
+          lesson_groups:
+            outbreak:
+              display_name: Utbrottssimulering
+          name: utbrott
+          student_description: Använd Sprite Lab för att programmera en simulering
+            av ett virusutbrott.
+          title: Utbrottssimulator
+        outbreak-csc:
+          title: Utbrott
+        outbreak-module:
+          title: Utbrott
+        pixelation:
+          title: Pixelering
+        pl-csd-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 1
+          lessons:
+            lesson-3:
+              name: Introduktion
+          title: Dag 1
+        pl-csd-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 2
+          title: Dag 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 3
+          title: Dag 3
+        pl-csd-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dag 4
+          title: Dag 4
+        playlab:
+          description: Skapa en berättelse eller gör ett spel med Spel-labbet!
+          description_short: Skapa en berättelse eller gör ett spel med Spel-labbet!
+          student_description: Skapa en berättelse eller gör ett spel med Spel-labbet!
+          title: Spel-labb
+        pltess:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: kurs
+        poetry:
+          name: poesi
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        sb-pt-exp:
+          name: sb-pt-exp
+        self-paced-pl-csd1-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Välkommen
+        self-paced-pl-csd1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Välkommen
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Välkommen
+        soccer:
+          name: fotboll
+        spelling-bee:
+          title: Stavnings-bi
+        sports:
+          description: Koda din egen sport
+          description_short: Koda din egen sport
+          student_description: Koda din egen sport
+          title: Sport
+        starwars:
+          description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel
+            i en galax långt, långt borta.
+          description_short: Lär dig att programmera droider och skapa ditt eget Star
+            Wars-spel i en galax långt, långt borta.
+          student_description: Lär dig att programmera droider och skapa ditt eget
+            Star Wars-spel i en galax långt, långt borta.
+          title: 'Star Wars: Bygg en galax med kod i JavaScript'
+        starwarsblocks:
+          description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel
+            i en galax långt, långt borta.
+          description_short: Lär dig att programmera droider och skapa ditt eget Star
+            Wars-spel i en galax långt, långt borta.
+          student_description: Lär dig att programmera droider och skapa ditt eget
+            Star Wars-spel i en galax långt, långt borta.
+        step:
+          description: Steg handledning
+          description_short: Steg handledning
+          student_description: Steg handledning
+          title: Steg
+        teachercon:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+            required:
+              display_name: Översikt
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt medborgarskap
+            lessonGroup-4:
+              display_name: loopar
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            content:
+              display_name: Innehåll
+            practice:
+              display_name: Undervisningsmetoder
+            required:
+              display_name: Översikt
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+        text-compression:
+          description: Komprimera text genom att identifiera upprepade mönster.
+          description_short: Komprimera text genom att identifiera upprepade mönster.
+          student_description: Komprimera text genom att identifiera upprepade mönster.
+          title: Text komprimering
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Villkor
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Villkor
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_functions:
+              display_name: funktioner
+            csf_nested_loops:
+              display_name: Kapslade slingor(loopar)
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Villkor
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -1292,279 +2307,33 @@ sv:
           lesson_groups:
             lg_1:
               display_name: Innehåll
-        kaitie-test-script:
+        usability:
+          description: Ett urval av kurs 4 nivåer för användartester.
+          student_description: Ett urval av kurs 4 nivåer för användartester.
+          title: Användbarhetstest
+        virtual-holding-place:
           lesson_groups:
-            lesson group:
-              display_name: visningsnamn
-        virustest:
-          title: Simulera ett utbrott
-          description_short: Använd Sprite Lab för att skapa en simulering av ett
-            virusutbrott.
-        outbreak:
-          lesson_groups:
-            outbreak:
-              display_name: Utbrottssimulering
-          title: Utbrottssimulator
-          description_short: Använd Sprite Lab för att programmera en simulering av
-            ett virusutbrott.
-          description: Använd Sprite Lab för att programmera en simulering av ett
-            virusutbrott.
-          name: utbrott
-          student_description: Använd Sprite Lab för att programmera en simulering
-            av ett virusutbrott.
-        2021drafting:
-          lesson_groups:
-            introduction:
-              display_name: Introduktion
-            lessonGroup-3:
-              display_name: variabler
-            outbreak:
-              display_name: Utbrottssimulator
-            debugging:
-              display_name: Felsökning
-            Argentina:
-              display_name: Argentina
-        csd1-2021:
-          lesson_groups:
-            csd1_1:
-              display_name: 'Kapitel 1: Problemlösnings-processen'
-            csd1_2:
-              display_name: 'Kapitel 2: Datorer och Problemlösning'
-          name: csd1-2021
-        csd2-2021:
-          name: csd2-2021
-        csd3-2021:
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapitel 1: Bilder och Animationer'
+            content:
+              display_name: Innehåll
             csd3_2:
               display_name: 'Kapitel 2: Bygga Spel'
-          name: csd3-2021
-        csd4-2021:
-          name: csd4-2021
-        csd5-2021:
-          name: csd5-2021
-        csd6-2021:
-          name: csd6-2021
-        csp1-2021:
-          name: csp1-2021
-        csp2-2021:
-          name: csp2-2021
-        csp3-2021:
-          name: csp3-2021
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: variabler
-            csp_conditionals:
-              display_name: Villkor
-            csp_functions:
-              display_name: funktioner
-            csp_project:
-              display_name: Projekt
-          name: csp4-2021
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Listor
-            csp_loops:
-              display_name: loopar
-            csp_project:
-              display_name: Projekt
-          name: csp5-2021
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Algoritmer
-          name: csp6-2021
-        csp7-2021:
-          lesson_groups:
-            csp_libraries:
-              display_name: Bibliotek
-          name: csp7-2021
-        csp8-2021:
-          name: csp8-2021
-        csp9-2021:
-          name: csp9-2021
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-            lessonGroup-6:
-              description: "![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)"
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_binary:
-              display_name: Binära
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-            csf_data:
-              display_name: Data
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Händelser
-            csf_loops:
-              display_name: loopar
-            csf_conditionals:
-              display_name: Villkor
-            csf_binary:
-              display_name: Binära
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            lessonGroup-6:
-              display_name: Digitalt medborgarskap
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Kapslade slingor(loopar)
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_nested_loops:
-              display_name: Villkor
-            csf_functions:
-              display_name: funktioner
-            lessonGroup-8:
-              display_name: Borttagen
-        coursef-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_variables:
-              display_name: "'För' loopar"
-            csf_for_loops:
-              display_name: "'För' loopar"
-            lessonGroup-8:
-              display_name: variabler
-            lessonGroup-9:
-              display_name: ta bort
-            lessonGroup-7:
-              display_name: Digitalt medborgarskap
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: loopar
-            csf_conditionals:
-              display_name: Villkor
-            csf_functions:
-              display_name: funktioner
-            csf_variables:
-              display_name: variabler
-            csf_for_loops:
-              display_name: "'För' loopar"
-            lessonGroup-9:
-              display_name: Händelser
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: Introduktion
-            outbreak:
-              display_name: Utbrottssimulering
-            lessonGroup-3:
-              display_name: variabler
-            variables:
-              display_name: variabler
-        contagion-pilot:
-          description_short: Använd Sprite Lab för att programmera en simulering av
-            ett virusutbrott.
-          description: Använd Sprite Lab för att programmera en simulering av ett
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introduktion
+          title: Dag 1
+        virtual-pl-csd-summer-day2:
+          title: Dag 2
+        virtual-pl-csd-summer-day3:
+          title: Dag 3
+        virtual-pl-csd-summer-day4:
+          title: Dag 4
+        virtual-pl-csd-summer-day5:
+          title: Dag 5
+        virustest:
+          description_short: Använd Sprite Lab för att skapa en simulering av ett
             virusutbrott.
-          student_description: Använd Sprite Lab för att programmera en simulering
-            av ett virusutbrott.
-        csa1-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-5:
-              display_name: Sandlåda
-        csa2-pilot:
-          lesson_groups:
-            lesson group:
-              display_name: Innehåll
-            lessonGroup-4:
-              display_name: Sandlåda
-        csa3-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-5:
-              display_name: Sandlåda
-        csa4-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-4:
-              display_name: Sandlåda
-        csa5-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-4:
-              display_name: Sandlåda
-        csa6-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-5:
-              display_name: Sandlåda
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-5:
-              display_name: Sandlåda
-        csa8-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-5:
-              display_name: Sandlåda
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: Introduktion
-            Introduction:
-              display_name: Introduktion
-        haikubot-pilot:
-          lesson_groups:
-            write a haikut:
-              display_name: Skriv en Haiku
-            Lesson 1:
-              display_name: Lektion 1
-            Lesson 2:
-              display_name: Lektion 2
-            Lesson 3:
-              display_name: Lektion 3
-            Lesson 4:
-              display_name: Lektion 4
-            Lesson 5:
-              display_name: Lektion 5
-        aiml-2021:
-          name: aiml-2021
-        csd7-2021:
-          name: csd7-2021
+          title: Simulera ett utbrott
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -1583,716 +2352,3 @@ sv:
               display_name: Modul 7
             CSD_Module 8:
               display_name: Modul 8
-        self-paced-pl-csd1-2021:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Välkommen
-        outbreak-module:
-          title: Utbrott
-        csa1-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa2-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa-videos:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Resurser
-            lessonGroup-2:
-              display_name: Enhet 1
-            lessonGroup-4:
-              display_name: Enhet 2
-            lessonGroup-5:
-              display_name: Enhet 3
-            lessonGroup-6:
-              display_name: Enhet 4
-            lessonGroup-7:
-              display_name: Enhet 5
-        csa3-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        sb-pt-exp:
-          name: sb-pt-exp
-        dlp21-csp-mod4:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Steg 1
-            lessonGroup-3:
-              display_name: Steg 2
-        dlp21-csd:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Modul 1
-              description: test
-            lessonGroup-3:
-              display_name: Modul 2
-            lessonGroup-4:
-              display_name: Modul 3
-            lessonGroup-5:
-              display_name: Modul 4
-          name: dlp21-csd
-        csa-u6-dev:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Lektioner
-            lessonGroup-3:
-              display_name: Projekt
-        csa1-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-5:
-              display_name: Sandlåda
-        csa2-pilot-facilitator:
-          lesson_groups:
-            lesson group:
-              display_name: Innehåll
-            lessonGroup-4:
-              display_name: Sandlåda
-        csa3-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-5:
-              display_name: Sandlåda
-        csa4-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-4:
-              display_name: Sandlåda
-        csa5-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-4:
-              display_name: Sandlåda
-        csdu6-playground:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Mallar
-            lessonGroup-2:
-              display_name: Kapitel 1
-            lessonGroup-4:
-              display_name: Kapitel 2
-        csa-u7-dev:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Lektioner
-            lessonGroup-3:
-              display_name: Projekt
-        csa4-exemplars:
-          lesson_groups:
-            lesson group:
-              display_name: Innehåll
-            content:
-              display_name: Innehåll
-            lesson_group:
-              display_name: Innehåll
-            lessonGroup-2:
-              display_name: Innehåll
-        poetry:
-          name: poesi
-        spelling-bee:
-          title: Stavnings-bi
-        outbreak-csc:
-          title: Utbrott
-        csa5-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csd-post-survey-2021:
-          description: Den här enheten innehåller CS Discoveries undersökning efter
-            kursen. Denna enhet kan tilldelas efter att eleverna har slutfört sin
-            sista enhet i CS Discoveries.
-          student_description: Den här enheten innehåller en undersökning för när
-            din klass är klar med enheterna i CS Discoveries. Din lärare kommer att
-            tala om för dig när det är dags att svara på den här undersökningen.
-        csa-pl-module-1-test:
-          title: Introduktion till Code.org och CSA
-        csa-pl-module-2-test:
-          title: Navigera bland verktygen på Code.org
-        csa-pl-module-3-test:
-          title: Stöd med textbaserad programmering
-        csa6-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-5:
-              display_name: Sandlåda
-        csa6-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Timmen med Kod
-        csa7-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: variabler
-        csd6-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Kapitel 1
-            lessonGroup-3:
-              display_name: Kapitel 2
-        csa8-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa7-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-5:
-              display_name: Sandlåda
-        csa8-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-5:
-              display_name: Sandlåda
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-        express-2022:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: Händelser
-            csf_loops:
-              display_name: loopar
-            csf_conditionals:
-              display_name: Villkor
-            csf_functions:
-              display_name: funktioner
-            csf_variables:
-              display_name: variabler
-            csf_for_loops:
-              display_name: "'För' loopar"
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: variabler
-            csp_conditionals:
-              display_name: Villkor
-            csp_functions:
-              display_name: funktioner
-            csp_project:
-              display_name: Projekt
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Listor
-            csp_loops:
-              display_name: loopar
-            csp_project:
-              display_name: Projekt
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-            csf_data:
-              display_name: Data
-        csp7-2022:
-          lesson_groups:
-            csp_libraries:
-              display_name: Bibliotek
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digitalt medborgarskap
-            csf_events:
-              display_name: Händelser
-            csf_loops:
-              display_name: loopar
-            csf_conditionals:
-              display_name: Villkor
-        coursee-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            ramp_up:
-              display_name: Kapslade slingor(loopar)
-            csf_functions:
-              display_name: funktioner
-            csf_nested_loops:
-              display_name: Villkor
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Digitalt medborgarskap
-            lessonGroup-8:
-              display_name: variabler
-        csa1-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-          name: csa1-2022
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-        csa2-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-          name: csa2-2022
-        csa3-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-          name: csa3-2022
-        csa4-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-          name: csa4-2022
-        csa5-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-          name: csa5-2022
-        csa1-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        pltess:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: kurs
-        csa7-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-5:
-              display_name: Sandlåda
-        csa8-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-5:
-              display_name: Sandlåda
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Digitalt medborgarskap
-            lessonGroup-8:
-              display_name: variabler
-        csa6-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-5:
-              display_name: Sandlåda
-        csa7-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-            lessonGroup-5:
-              display_name: Sandlåda
-        csa8-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa2-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csd1-2022:
-          lesson_groups:
-            csd1_1:
-              display_name: 'Kapitel 1: Problemlösnings-processen'
-            csd1_2:
-              display_name: 'Kapitel 2: Datorer och Problemlösning'
-        csd3-2022:
-          lesson_groups:
-            csd3_1:
-              display_name: 'Kapitel 1: Bilder och Animationer'
-            csd3_2:
-              display_name: 'Kapitel 2: Bygga Spel'
-        csd-post-survey-2022:
-          description: Den här enheten innehåller CS Discoveries undersökning efter
-            kursen. Denna enhet kan tilldelas efter att eleverna har slutfört sin
-            sista enhet i CS Discoveries.
-          student_description: Den här enheten innehåller en undersökning för när
-            din klass är klar med enheterna i CS Discoveries. Din lärare kommer att
-            tala om för dig när det är dags att svara på den här undersökningen.
-        self-paced-pl-csd1-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Välkommen
-        soccer:
-          name: fotboll
-        csa1-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa2-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa3-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa4-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa5-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa6-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa7-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa8-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: loopar
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Innehåll
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: variabler
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: "'För' loopar"
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa5-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa7-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csa8-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Innehåll
-        csd1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapitel 1: Problemlösnings-processen'
-            lessonGroup-3:
-              display_name: 'Kapitel 2: Datorer och Problemlösning'
-        csd3-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapitel 1: Bilder och Animationer'
-            lessonGroup-3:
-              display_name: 'Kapitel 2: Bygga Spel'
-        csd7-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Kapitel 1
-            lessonGroup-3:
-              display_name: Kapitel 2
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: variabler
-            csp_conditionals:
-              display_name: Villkor
-            csp_functions:
-              display_name: funktioner
-            csp_project:
-              display_name: Projekt
-        csp5-2023:
-          lesson_groups:
-            csp_lists:
-              display_name: Data
-            csp_loops:
-              display_name: loopar
-            csp_project:
-              display_name: Projekt
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Listor
-            lessonGroup-3:
-              display_name: loopar
-            lessonGroup-5:
-              display_name: Projekt
-        csp7-2023:
-          lesson_groups:
-            csp_libraries:
-              display_name: Bibliotek
-        angelina-playground:
-          lessons:
-            lesson-5:
-              name: Bedömningar
-        tess-testing-problem-solving-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Kapitel 1
-            lessonGroup-3:
-              display_name: Kapitel 2
-        testing-focus-on-creativity1:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Kapitel 1
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-        express-2023:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: Händelser
-            csf_loops:
-              display_name: loopar
-            csf_conditionals:
-              display_name: Villkor
-            csf_functions:
-              display_name: funktioner
-            csf_variables:
-              display_name: variabler
-            csf_for_loops:
-              display_name: "'För' loopar"
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-        courseb-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            csf_loops:
-              display_name: loopar
-            csf_events:
-              display_name: Händelser
-            csf_data:
-              display_name: Data
-        coursed-2023:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digitalt medborgarskap
-            csf_events:
-              display_name: Händelser
-            csf_loops:
-              display_name: loopar
-            csf_conditionals:
-              display_name: Villkor
-        coursee-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalt medborgarskap
-            ramp_up:
-              display_name: Kapslade slingor(loopar)
-            csf_functions:
-              display_name: funktioner
-            csf_nested_loops:
-              display_name: Villkor
-        problem-solving-computing-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapitel 1: Problemlösnings-processen'
-            lessonGroup-3:
-              display_name: 'Kapitel 2: Datorer och Problemlösning'
-        interactive-games-animations-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapitel 1: Bilder och Animationer'
-            lessonGroup-3:
-              display_name: 'Kapitel 2: Bygga Spel'
-        aiml-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Kapitel 1
-            lessonGroup-4:
-              display_name: Kapitel 2
-        focus-on-creativity1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapitel 1: Problemlösnings-processen'
-        focus-on-creativity3-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapitel 1: Bilder och Animationer'
-            lessonGroup-3:
-              display_name: 'Kapitel 2: Bygga Spel'
-        focus-on-hardware1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapitel 1: Problemlösnings-processen'
-            lessonGroup-3:
-              display_name: 'Kapitel 2: Datorer och Problemlösning'
-        focus-on-data1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapitel 1: Problemlösnings-processen'
-        focus-on-data3-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Kapitel 1
-            lessonGroup-4:
-              display_name: Kapitel 2
-        focus-on-design-with-purpose1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapitel 1: Problemlösnings-processen'
-        focus-on-coding1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapitel 1: Problemlösnings-processen'
-        focus-on-coding3-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapitel 1: Bilder och Animationer'
-            lessonGroup-3:
-              display_name: 'Kapitel 2: Bygga Spel'
-        focus-on-impact-in-society1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapitel 1: Problemlösnings-processen'
-        focus-on-impact-in-society4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Kapitel 1
-            lessonGroup-4:
-              display_name: Kapitel 2
-        ai-temp:
-          title: Hur AI fungerar
-        self-paced-pl-csd1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Välkommen
-        pl-csd-summer-day1:
-          lessons:
-            lesson-3:
-              name: Introduktion
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Dag 1
-          title: Dag 1
-        pl-csd-summer-day2:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Dag 2
-          title: Dag 2
-        pl-csd-summer-day3:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Dag 3
-          title: Dag 3
-        pl-csd-summer-day4:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Dag 4
-          title: Dag 4
-        virtual-pl-csd-summer-day1:
-          lessons:
-            lesson-1:
-              name: Introduktion
-          title: Dag 1
-        virtual-pl-csd-summer-day2:
-          title: Dag 2
-        virtual-pl-csd-summer-day3:
-          title: Dag 3
-        virtual-pl-csd-summer-day4:
-          title: Dag 4
-        virtual-pl-csd-summer-day5:
-          title: Dag 5
-        coursef-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Digitalt medborgarskap
-            lessonGroup-4:
-              display_name: variabler
-        csa-frq-practice:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Klasser
-        csa-frq-practice-2019:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Klasser
-        csa-frq-practice-2021:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Klasser
-        csa-frq-practice-2022:
-          lessons:
-            lesson-4:
-              name: Data
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Klasser
-        csa-frq-practice-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Klasser
-        csa-frq-practice-pre2019:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Klasser

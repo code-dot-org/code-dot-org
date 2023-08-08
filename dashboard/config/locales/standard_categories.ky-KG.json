@@ -5,11 +5,11 @@
         "CT": {
           "description": "Эсептөөчү ой жүгүртүү"
         },
-        "L": {
-          "description": "Тили"
-        },
         "F": {
           "description": "Функциялар"
+        },
+        "L": {
+          "description": "Тили"
         }
       }
     }

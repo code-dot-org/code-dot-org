@@ -1,0 +1,11 @@
+name 'Sample Likert Level'
+title 'Sample Likert Level'
+description '  '
+question 'Rate your thoughts along this scale'
+right 'Strongly Agree'
+right 'Agree'
+right 'Slightly Agree'
+right 'Slightly Disagree'
+right 'Disagree'
+right 'Strongly Disagree'
+allow_multiple_attempts true

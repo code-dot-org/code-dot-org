@@ -1,8 +1,8 @@
 {
   "dropletBlock_createSprite_param3": "augstums",
-  "dropletBlock_setCollider_param0": "veids",
-  "dropletBlock_setCollider_param4": "augstums",
   "dropletBlock_setColliderEach_param0": "veids",
   "dropletBlock_setColliderEach_param4": "augstums",
+  "dropletBlock_setCollider_param0": "veids",
+  "dropletBlock_setCollider_param4": "augstums",
   "shareGame": "Iesaki savu speli:"
 }

@@ -1,9 +1,9 @@
 {
   "absolute": "absoluttverdi",
+  "agentDiamondPathCongrats": "Gratulerer, fant du diamantstien! Du har samlet {count, plural, one {1 diamant} other {# diamanter}} så langt!",
   "agentGenericFailureMessage": "Fortsett å kode! Husk å bruke agenten for hjelp.",
   "agentTooFewBlocksFailureMessage": "Prøv å legge til en blokk om gangen for å få agenten til riktig sted.",
   "at": "ved",
-  "agentDiamondPathCongrats": "Gratulerer, fant du diamantstien! Du har samlet {count, plural, one {1 diamant} other {# diamanter}} så langt!",
   "blockActionAdd": "legg til",
   "blockActionAttack": "angrip",
   "blockActionClone": "klone blokker",

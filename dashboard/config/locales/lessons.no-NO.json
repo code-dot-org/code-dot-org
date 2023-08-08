@@ -2,149 +2,89 @@
   "no-NO": {
     "data": {
       "lessons": {
-        "minecraft/Minecraft Hour of Code Designer": {
-          "name": "Kodetimens Minecraft-designer"
+        "csd2-2017/Lists": {
+          "name": "Lister"
         },
-        "hero/Minecraft Hour of Code": {
-          "name": "Minecraft: Heltens reise"
-        },
-        "flappy/Flappy Code": {
-          "name": "Flappy kode"
-        },
-        "hourofcode/Maze": {
-          "name": "Labyrint"
-        },
-        "frozen/Artist": {
-          "name": "Kode med Anna og Elsa"
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "Istid Spill-lab"
-        },
-        "artist/Artist": {
-          "name": "Kunstner"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "Gumball Spill-lab"
-        },
-        "hoc-encryption/Simple Encryption": {
-          "name": "Enkel kryptering"
-        },
-        "starwars/Hour of Code 2015": {
-          "name": "Star Wars: Bygg en galakse med kode (JavaScript)"
-        },
-        "mc/Hour of Code 2015": {
-          "name": "Kodetimen med Minecraft"
-        },
-        "playlab/Play Lab": {
-          "name": "Spill-lab"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "Disney Infinity Spill-Lab"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Kodetimen 2013"
-        },
-        "dance-2019/Dance Party": {
-          "name": "Dansefest"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Løkker"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Hendelser"
-        },
-        "k5-onlinepd-2019/Conditionals": {
-          "name": "Betingelser"
-        },
-        "k5-onlinepd-2019/Functions": {
-          "name": "Funksjoner"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "Variabler"
         },
-        "k5-onlinepd-2019/For Loops": {
-          "name": "For-løkker"
-        },
-        "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "Grunnleggende informatikk"
-        },
-        "K5-OnlinePD/Next Steps": {
-          "name": "De Neste Trinnene"
-        },
-        "kodea-pd-2021/Computer Science Fundamentals": {
-          "name": "Grunnleggende informatikk"
-        },
-        "kodea-pd-2021/Next Steps": {
-          "name": "De Neste Trinnene"
-        },
-        "coursed-2022/Graph Paper Programming": {
-          "name": "Millimeterpapirprogrammering"
-        },
-        "coursed-2022/Relay Programming": {
-          "name": "Relé programmering"
-        },
-        "coursed-2022/Dance Party": {
-          "name": "Dansefest"
-        },
-        "coursed-2022/Conditionals with Cards": {
-          "name": "Betingelser med kort"
-        },
-        "coursef-2022/The Internet": {
-          "name": "Internett"
-        },
-        "coursee-2022/Songwriting": {
-          "name": "Låtskriving"
-        },
-        "courseb-2022/Move It, Move It": {
-          "name": "Flytt den, flytt den"
-        },
-        "courseb-2022/Getting Loopy": {
-          "name": "Gå i spinn"
-        },
-        "express-2022/Dance Party": {
-          "name": "Dansefest"
-        },
-        "coursea-2022/Happy Maps": {
-          "name": "Glade Kart"
-        },
-        "coursec-2022/The Big Event": {
-          "name": "Den store begivenheten"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "Binær armbånd"
-        },
-        "csd3-2022/Variables": {
-          "name": "Variabler"
-        },
-        "csd3-2022/Sprite Properties": {
-          "name": "Figuregenskaper"
-        },
-        "csd3-2022/Text": {
-          "name": "tekst"
-        },
-        "csd3-2022/Conditionals": {
+        "csd3-2017/Conditionals": {
           "name": "Betingelser"
         },
-        "csd3-2022/Velocity": {
+        "csd3-2017/Velocity": {
           "name": "Hastighet"
         },
-        "csd3-2022/Functions": {
+        "csd3-2017/Functions": {
           "name": "Funksjoner"
         },
-        "csd6-2022/Functions": {
+        "csd6-2017/Functions with Parameters_": {
+          "name": "Funksjoner med parametre"
+        },
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Virkelige algoritmer: Plante et frø"
+        },
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Virkelige algoritmer: Plante et frø"
+        },
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Algoritmer fra virkeligheten: Papirfly"
+        },
+        "coursed-2017/Nested Loops": {
+          "name": "Løkker i løkker"
+        },
+        "coursee-2017/Building a Foundation": {
+          "name": "Bygg ett grunnlag"
+        },
+        "coursee-2017/Nested Loops": {
+          "name": "Løkker i løkker"
+        },
+        "coursef-2017/Building a Foundation": {
+          "name": "Bygg ett grunnlag"
+        },
+        "coursef-2017/Nested Loops in Bee/Zombie": {
+          "name": "Løkker i løkker i Bie/Zombie"
+        },
+        "coursef-2017/Algorithms: Tangrams": {
+          "name": "Algoritmer: Tangram"
+        },
+        "coursef-2017/Conditionals in Minecraft": {
+          "name": "Betingelser i Minecraft"
+        },
+        "express-2017/Introduction": {
+          "name": "Introduksjon"
+        },
+        "express-2017/Building a Foundation": {
+          "name": "Bygg ett grunnlag"
+        },
+        "express-2017/Nested Loops": {
+          "name": "Løkker i løkker"
+        },
+        "express-2017/Conditionals in Minecraft": {
+          "name": "Betingelser i Minecraft"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Virkelige algoritmer: Plante et frø"
+        },
+        "pre-express-2017/Spelling Bee": {
+          "name": "Stavekonkurranse"
+        },
+        "csd2-2018/Lists": {
+          "name": "Lister"
+        },
+        "csd3-2018/Variables": {
+          "name": "Variabler"
+        },
+        "csd3-2018/Conditionals": {
+          "name": "Betingelser"
+        },
+        "csd3-2018/Velocity": {
+          "name": "Hastighet"
+        },
+        "csd3-2018/Functions": {
           "name": "Funksjoner"
         },
-        "courseb-2018/Move It, Move It": {
-          "name": "Flytt den, flytt den"
-        },
-        "courseb-2018/Your Digital Footprint": {
-          "name": "Dine digitale fotavtrykk"
+        "csd6-2018/Functions with Parameters": {
+          "name": "Funksjoner med parametre"
         },
         "coursea-2018/Debugging: Unspotted Bugs": {
           "name": "Uoppdagede feil"
@@ -157,6 +97,24 @@
         },
         "coursea-2018/Going Places Safely": {
           "name": "Trygg reise"
+        },
+        "courseb-2018/Move It, Move It": {
+          "name": "Flytt den, flytt den"
+        },
+        "courseb-2018/Your Digital Footprint": {
+          "name": "Dine digitale fotavtrykk"
+        },
+        "coursec-2018/Building a Foundation": {
+          "name": "Bygg ett grunnlag"
+        },
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Gå i spinn"
+        },
+        "coursec-2018/Events: The Big Event": {
+          "name": "Den store begivenheten"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Binær armbånd"
         },
         "coursed-2018/Algorithms: Graph Paper Programming": {
           "name": "Millimeterpapirprogrammering"
@@ -172,6 +130,24 @@
         },
         "coursed-2018/Unplugged: Binary": {
           "name": "Binære Bilder"
+        },
+        "coursee-2018/Programming: My Robotic Friends": {
+          "name": "Mine robotliknende venner"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Bygg ett grunnlag"
+        },
+        "coursee-2018/Conditionals with Cards": {
+          "name": "Betingelser med kort"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Låtskriving"
+        },
+        "coursee-2018/Internet": {
+          "name": "Internett"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Crowdsourcing"
         },
         "coursef-2018/Programming: My Robotic Friends": {
           "name": "Mine robotliknende venner"
@@ -224,36 +200,6 @@
         "express-2018/Crowdsourcing": {
           "name": "Crowdsourcing"
         },
-        "coursee-2018/Programming: My Robotic Friends": {
-          "name": "Mine robotliknende venner"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "Bygg ett grunnlag"
-        },
-        "coursee-2018/Conditionals with Cards": {
-          "name": "Betingelser med kort"
-        },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "Låtskriving"
-        },
-        "coursee-2018/Internet": {
-          "name": "Internett"
-        },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Crowdsourcing"
-        },
-        "coursec-2018/Building a Foundation": {
-          "name": "Bygg ett grunnlag"
-        },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Gå i spinn"
-        },
-        "coursec-2018/Events: The Big Event": {
-          "name": "Den store begivenheten"
-        },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Binær armbånd"
-        },
         "pre-express-2018/Debugging: Unspotted Bugs": {
           "name": "Uoppdagede feil"
         },
@@ -269,23 +215,23 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Stavekonkurranse"
         },
-        "csd3-2018/Variables": {
+        "csd2-2019/Lists": {
+          "name": "Lister"
+        },
+        "csd3-2019/Variables": {
           "name": "Variabler"
         },
-        "csd3-2018/Conditionals": {
+        "csd3-2019/Conditionals": {
           "name": "Betingelser"
         },
-        "csd3-2018/Velocity": {
+        "csd3-2019/Velocity": {
           "name": "Hastighet"
         },
-        "csd3-2018/Functions": {
+        "csd3-2019/Functions": {
           "name": "Funksjoner"
         },
-        "csd6-2018/Functions with Parameters": {
+        "csd6-2019/Functions with Parameters": {
           "name": "Funksjoner med parametre"
-        },
-        "csd2-2018/Lists": {
-          "name": "Lister"
         },
         "coursea-2019/Going Places Safely": {
           "name": "Trygg reise"
@@ -301,6 +247,12 @@
         },
         "courseb-2019/Loops: Getting Loopy": {
           "name": "Gå i spinn"
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Binær armbånd"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "Den store begivenheten"
         },
         "coursed-2019/Algorithms: Graph Paper Programming": {
           "name": "Millimeterpapirprogrammering"
@@ -320,6 +272,9 @@
         "coursed-2019/Dance Party": {
           "name": "Dansefest"
         },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Låtskriving"
+        },
         "coursef-2019/Envelope Variables": {
           "name": "Konvolutt variabler"
         },
@@ -332,170 +287,269 @@
         "coursef-2019/Crowdsourcing": {
           "name": "Crowdsourcing"
         },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "Låtskriving"
-        },
         "express-2019/Dance Party": {
           "name": "Dansefest"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Binær armbånd"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "Den store begivenheten"
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Stavekonkurranse"
         },
-        "csd3-2019/Variables": {
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Glade Kart"
+        },
+        "courseb-2020/Move It, Move It": {
+          "name": "Flytt den, flytt den"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Gå i spinn"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Binær armbånd"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "Den store begivenheten"
+        },
+        "coursed-2020/Algorithms: Graph Paper Programming": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "coursed-2020/Relay Programming": {
+          "name": "Relé programmering"
+        },
+        "coursed-2020/Dance Party": {
+          "name": "Dansefest"
+        },
+        "coursed-2020/Conditionals with Cards": {
+          "name": "Betingelser med kort"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Binære Bilder"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Låtskriving"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Konvolutt variabler"
+        },
+        "coursef-2020/Internet": {
+          "name": "Internett"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "Morro med for løkker"
+        },
+        "express-2020/Dance Party": {
+          "name": "Dansefest"
+        },
+        "csd3-2021/Variables": {
           "name": "Variabler"
         },
-        "csd3-2019/Conditionals": {
+        "csd3-2021/Sprite Properties": {
+          "name": "Figuregenskaper"
+        },
+        "csd3-2021/Text": {
+          "name": "tekst"
+        },
+        "csd3-2021/Conditionals": {
           "name": "Betingelser"
         },
-        "csd3-2019/Velocity": {
+        "csd3-2021/Velocity": {
           "name": "Hastighet"
         },
-        "csd3-2019/Functions": {
+        "csd3-2021/Functions": {
           "name": "Funksjoner"
         },
-        "csd6-2019/Functions with Parameters": {
+        "csd6-2021/Functions with Parameters": {
           "name": "Funksjoner med parametre"
         },
-        "csd2-2019/Lists": {
-          "name": "Lister"
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Glade Kart"
         },
-        "coursef-2017/Building a Foundation": {
-          "name": "Bygg ett grunnlag"
+        "courseb-2021/Move It, Move It": {
+          "name": "Flytt den, flytt den"
         },
-        "coursef-2017/Nested Loops in Bee/Zombie": {
-          "name": "Løkker i løkker i Bie/Zombie"
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Gå i spinn"
         },
-        "coursef-2017/Algorithms: Tangrams": {
-          "name": "Algoritmer: Tangram"
+        "coursec-2021/Events: The Big Event": {
+          "name": "Den store begivenheten"
         },
-        "coursef-2017/Conditionals in Minecraft": {
-          "name": "Betingelser i Minecraft"
+        "coursec-2021/Binary Bracelets": {
+          "name": "Binær armbånd"
         },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Virkelige algoritmer: Plante et frø"
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "name": "Millimeterpapirprogrammering"
         },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Virkelige algoritmer: Plante et frø"
+        "coursed-2021/Relay Programming": {
+          "name": "Relé programmering"
         },
-        "pre-express-2017/Spelling Bee": {
-          "name": "Stavekonkurranse"
+        "coursed-2021/Dance Party": {
+          "name": "Dansefest"
         },
-        "coursee-2017/Building a Foundation": {
-          "name": "Bygg ett grunnlag"
+        "coursed-2021/Conditionals with Cards": {
+          "name": "Betingelser med kort"
         },
-        "coursee-2017/Nested Loops": {
-          "name": "Løkker i løkker"
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Låtskriving"
         },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Algoritmer fra virkeligheten: Papirfly"
+        "coursef-2021/For Loop Fun": {
+          "name": "Morro med for løkker"
         },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Virkelige algoritmer: Plante et frø"
+        "coursef-2021/Internet": {
+          "name": "Internett"
         },
-        "coursed-2017/Nested Loops": {
-          "name": "Løkker i løkker"
+        "express-2021/lesson-1": {
+          "name": "Dansefest"
         },
-        "express-2017/Introduction": {
-          "name": "Introduksjon"
-        },
-        "express-2017/Building a Foundation": {
-          "name": "Bygg ett grunnlag"
-        },
-        "express-2017/Nested Loops": {
-          "name": "Løkker i løkker"
-        },
-        "express-2017/Conditionals in Minecraft": {
-          "name": "Betingelser i Minecraft"
-        },
-        "csd3-2017/Variables": {
+        "csd3-2022/Variables": {
           "name": "Variabler"
         },
-        "csd3-2017/Conditionals": {
+        "csd3-2022/Sprite Properties": {
+          "name": "Figuregenskaper"
+        },
+        "csd3-2022/Text": {
+          "name": "tekst"
+        },
+        "csd3-2022/Conditionals": {
           "name": "Betingelser"
         },
-        "csd3-2017/Velocity": {
+        "csd3-2022/Velocity": {
           "name": "Hastighet"
         },
-        "csd3-2017/Functions": {
+        "csd3-2022/Functions": {
           "name": "Funksjoner"
         },
-        "csd6-2017/Functions with Parameters_": {
-          "name": "Funksjoner med parametre"
+        "csd6-2022/Functions": {
+          "name": "Funksjoner"
         },
-        "csd2-2017/Lists": {
-          "name": "Lister"
+        "coursea-2022/Happy Maps": {
+          "name": "Glade Kart"
         },
-        "course4/Unplugged: Tangrams": {
-          "name": "Frakoblet: Tangram"
+        "courseb-2022/Move It, Move It": {
+          "name": "Flytt den, flytt den"
         },
-        "course4/Maze and Bee": {
-          "name": "Labyrint og Bie"
+        "courseb-2022/Getting Loopy": {
+          "name": "Gå i spinn"
         },
-        "course4/Artist": {
+        "coursec-2022/The Big Event": {
+          "name": "Den store begivenheten"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binær armbånd"
+        },
+        "coursed-2022/Graph Paper Programming": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "coursed-2022/Relay Programming": {
+          "name": "Relé programmering"
+        },
+        "coursed-2022/Dance Party": {
+          "name": "Dansefest"
+        },
+        "coursed-2022/Conditionals with Cards": {
+          "name": "Betingelser med kort"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Låtskriving"
+        },
+        "coursef-2022/The Internet": {
+          "name": "Internett"
+        },
+        "express-2022/Dance Party": {
+          "name": "Dansefest"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kodetimen 2013"
+        },
+        "artist/Artist": {
           "name": "Kunstner"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Frakoblet: Konvoluttvariabler"
+        "dance-2019/Dance Party": {
+          "name": "Dansefest"
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "Frakoblet: Ordlek"
+        "flappy/Flappy Code": {
+          "name": "Flappy kode"
         },
-        "course4/Artist: Variables": {
-          "name": "Artist: Variabler"
+        "frozen/Artist": {
+          "name": "Kode med Anna og Elsa"
         },
-        "course4/Play Lab: Variables": {
-          "name": "Spill Lab: Variabler"
+        "gumball/Gumball Play Lab": {
+          "name": "Gumball Spill-lab"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Frakoblet: Gøy med For-løkker"
+        "hero/Minecraft Hour of Code": {
+          "name": "Minecraft: Heltens reise"
         },
-        "course4/Bee: For Loops": {
-          "name": "Bie: For-løkker"
+        "hoc-encryption/Simple Encryption": {
+          "name": "Enkel kryptering"
         },
-        "course4/Artist: For Loops": {
-          "name": "Kunstner: For-løkker"
+        "hourofcode/Maze": {
+          "name": "Labyrint"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "Spill-Lab: For-løkker"
+        "iceage/Ice Age Play Lab": {
+          "name": "Istid Spill-lab"
         },
-        "course4/Artist: Functions": {
-          "name": "Kunstner: Funksjoner"
+        "infinity/Infinity": {
+          "name": "Disney Infinity Spill-Lab"
         },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Uten datamaskin: Låtskriving med parametere"
+        "mc/Hour of Code 2015": {
+          "name": "Kodetimen med Minecraft"
         },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Kunstner: Funksjoner med parametere"
+        "minecraft/Minecraft Hour of Code Designer": {
+          "name": "Kodetimens Minecraft-designer"
         },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Spill-Lab: Funksjoner med parametere"
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
         },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Bee: Funksjoner med parametere"
+        "playlab/Play Lab": {
+          "name": "Spill-lab"
         },
-        "course4/Unplugged: Binary": {
-          "name": "Frakoblet: Binær"
+        "starwars/Hour of Code 2015": {
+          "name": "Star Wars: Bygg en galakse med kode (JavaScript)"
         },
-        "course4/Artist Binary": {
-          "name": "Kunstner Binær"
+        "allthethings/Jigsaw": {
+          "name": "Puslespill"
         },
-        "course4/Super Challenge - Variables": {
-          "name": "Super-utfordring - Variabler"
+        "allthethings/Maze": {
+          "name": "Labyrint"
         },
-        "course4/Super Challenge - For Loops": {
-          "name": "Superutfordring - for-løkker"
+        "allthethings/Artist": {
+          "name": "Kunstner"
         },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Superutfordring - Funksjoner og parametere"
+        "allthethings/Bee": {
+          "name": "Bie"
         },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Ekstrem utfordring - Omfattende"
+        "allthethings/Farmer": {
+          "name": "Bonde"
+        },
+        "allthethings/Flappy": {
+          "name": "Flakse"
+        },
+        "allthethings/Bounce": {
+          "name": "sprett"
+        },
+        "allthethings/Multi": {
+          "name": "Multi"
+        },
+        "allthethings/Match": {
+          "name": "Kamp"
+        },
+        "allthethings/Odometer": {
+          "name": "Kilometerteller"
+        },
+        "allthethings/AppLab": {
+          "name": "AppLab"
+        },
+        "allthethings/Studio": {
+          "name": "Studio"
+        },
+        "allthethings/Minecraft": {
+          "name": "Minecraft"
+        },
+        "allthethings/Web Lab": {
+          "name": "Weblaboratoriet"
+        },
+        "allthethings/lesson-49": {
+          "name": "Musikk"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Introduksjon til informatikk"
@@ -556,6 +610,60 @@
         },
         "20-hour/Wrap-up": {
           "name": "Oppsummering"
+        },
+        "course1/Happy Maps": {
+          "name": "Glade Kart"
+        },
+        "course1/Move it, Move it": {
+          "name": "Flytt den, flytt den"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Puslespill: Lær å dra og slippe"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Labyrint: sekvens"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Labyrint: Feilsøking"
+        },
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Virkelige algoritmer: Plante et frø"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Bier: rekkefølge"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Kunstner: rekkefølge"
+        },
+        "course1/Building a Foundation": {
+          "name": "Bygg ett grunnlag"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Kunstner: former"
+        },
+        "course1/Spelling Bee": {
+          "name": "Stavekonkurranse"
+        },
+        "course1/Getting Loopy": {
+          "name": "Gå i spinn"
+        },
+        "course1/Maze: Loops": {
+          "name": "Labyrint: Løkker"
+        },
+        "course1/Bee: Loops": {
+          "name": "Bie: Løkker"
+        },
+        "course1/The Big Event": {
+          "name": "Den store begivenheten"
+        },
+        "course1/Studio: Create a Story": {
+          "name": "Spill-Lab: Lage en historie"
+        },
+        "course1/Going Places Safely": {
+          "name": "Trygg reise"
+        },
+        "course1/Artist: Loops": {
+          "name": "Kunstner: Løkker"
         },
         "course2/Graph Paper Programming": {
           "name": "Millimeterpapirprogrammering"
@@ -677,212 +785,74 @@
         "course3/Artist: Patterns": {
           "name": "Kunstner: Mønstre"
         },
-        "course1/Happy Maps": {
-          "name": "Glade Kart"
+        "course4/Unplugged: Tangrams": {
+          "name": "Frakoblet: Tangram"
         },
-        "course1/Move it, Move it": {
-          "name": "Flytt den, flytt den"
+        "course4/Maze and Bee": {
+          "name": "Labyrint og Bie"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Puslespill: Lær å dra og slippe"
+        "course4/Artist": {
+          "name": "Kunstner"
         },
-        "course1/Maze: Sequence": {
-          "name": "Labyrint: sekvens"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Frakoblet: Konvoluttvariabler"
         },
-        "course1/Maze: Debugging": {
-          "name": "Labyrint: Feilsøking"
+        "course4/Unplugged: Madlibs": {
+          "name": "Frakoblet: Ordlek"
         },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Virkelige algoritmer: Plante et frø"
+        "course4/Artist: Variables": {
+          "name": "Artist: Variabler"
         },
-        "course1/Bee: Sequence": {
-          "name": "Bier: rekkefølge"
+        "course4/Play Lab: Variables": {
+          "name": "Spill Lab: Variabler"
         },
-        "course1/Artist: Sequence": {
-          "name": "Kunstner: rekkefølge"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Frakoblet: Gøy med For-løkker"
         },
-        "course1/Building a Foundation": {
-          "name": "Bygg ett grunnlag"
+        "course4/Bee: For Loops": {
+          "name": "Bie: For-løkker"
         },
-        "course1/Artist: Shapes": {
-          "name": "Kunstner: former"
+        "course4/Artist: For Loops": {
+          "name": "Kunstner: For-løkker"
         },
-        "course1/Spelling Bee": {
-          "name": "Stavekonkurranse"
+        "course4/Play Lab: For Loops": {
+          "name": "Spill-Lab: For-løkker"
         },
-        "course1/Getting Loopy": {
-          "name": "Gå i spinn"
+        "course4/Artist: Functions": {
+          "name": "Kunstner: Funksjoner"
         },
-        "course1/Maze: Loops": {
-          "name": "Labyrint: Løkker"
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Uten datamaskin: Låtskriving med parametere"
         },
-        "course1/Bee: Loops": {
-          "name": "Bie: Løkker"
+        "course4/Artist: Functions with Parameters": {
+          "name": "Kunstner: Funksjoner med parametere"
         },
-        "course1/The Big Event": {
-          "name": "Den store begivenheten"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Spill-Lab: Funksjoner med parametere"
         },
-        "course1/Studio: Create a Story": {
-          "name": "Spill-Lab: Lage en historie"
+        "course4/Bee: Functions with Parameters": {
+          "name": "Bee: Funksjoner med parametere"
         },
-        "course1/Going Places Safely": {
-          "name": "Trygg reise"
+        "course4/Unplugged: Binary": {
+          "name": "Frakoblet: Binær"
         },
-        "course1/Artist: Loops": {
-          "name": "Kunstner: Løkker"
+        "course4/Artist Binary": {
+          "name": "Kunstner Binær"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Super-utfordring - Variabler"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Superutfordring - for-løkker"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Superutfordring - Funksjoner og parametere"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Ekstrem utfordring - Omfattende"
         },
         "jigsaw/Jigsaw": {
           "name": "Puslespill"
-        },
-        "allthethings/Jigsaw": {
-          "name": "Puslespill"
-        },
-        "allthethings/Maze": {
-          "name": "Labyrint"
-        },
-        "allthethings/Artist": {
-          "name": "Kunstner"
-        },
-        "allthethings/Bee": {
-          "name": "Bie"
-        },
-        "allthethings/Farmer": {
-          "name": "Bonde"
-        },
-        "allthethings/Flappy": {
-          "name": "Flakse"
-        },
-        "allthethings/Bounce": {
-          "name": "sprett"
-        },
-        "allthethings/Multi": {
-          "name": "Multi"
-        },
-        "allthethings/Match": {
-          "name": "Kamp"
-        },
-        "allthethings/Odometer": {
-          "name": "Kilometerteller"
-        },
-        "allthethings/AppLab": {
-          "name": "AppLab"
-        },
-        "allthethings/Studio": {
-          "name": "Studio"
-        },
-        "allthethings/Minecraft": {
-          "name": "Minecraft"
-        },
-        "allthethings/Web Lab": {
-          "name": "Weblaboratoriet"
-        },
-        "allthethings/lesson-49": {
-          "name": "Musikk"
-        },
-        "coursef-2021/For Loop Fun": {
-          "name": "Morro med for løkker"
-        },
-        "coursef-2021/Internet": {
-          "name": "Internett"
-        },
-        "courseb-2021/Move It, Move It": {
-          "name": "Flytt den, flytt den"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "Gå i spinn"
-        },
-        "coursea-2021/Programming: Happy Maps": {
-          "name": "Glade Kart"
-        },
-        "coursec-2021/Events: The Big Event": {
-          "name": "Den store begivenheten"
-        },
-        "coursec-2021/Binary Bracelets": {
-          "name": "Binær armbånd"
-        },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "name": "Millimeterpapirprogrammering"
-        },
-        "coursed-2021/Relay Programming": {
-          "name": "Relé programmering"
-        },
-        "coursed-2021/Dance Party": {
-          "name": "Dansefest"
-        },
-        "coursed-2021/Conditionals with Cards": {
-          "name": "Betingelser med kort"
-        },
-        "express-2021/lesson-1": {
-          "name": "Dansefest"
-        },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "Låtskriving"
-        },
-        "csd6-2021/Functions with Parameters": {
-          "name": "Funksjoner med parametre"
-        },
-        "csd3-2021/Variables": {
-          "name": "Variabler"
-        },
-        "csd3-2021/Sprite Properties": {
-          "name": "Figuregenskaper"
-        },
-        "csd3-2021/Text": {
-          "name": "tekst"
-        },
-        "csd3-2021/Conditionals": {
-          "name": "Betingelser"
-        },
-        "csd3-2021/Velocity": {
-          "name": "Hastighet"
-        },
-        "csd3-2021/Functions": {
-          "name": "Funksjoner"
-        },
-        "express-2020/Dance Party": {
-          "name": "Dansefest"
-        },
-        "courseb-2020/Move It, Move It": {
-          "name": "Flytt den, flytt den"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
-          "name": "Gå i spinn"
-        },
-        "coursed-2020/Algorithms: Graph Paper Programming": {
-          "name": "Millimeterpapirprogrammering"
-        },
-        "coursed-2020/Relay Programming": {
-          "name": "Relé programmering"
-        },
-        "coursed-2020/Dance Party": {
-          "name": "Dansefest"
-        },
-        "coursed-2020/Conditionals with Cards": {
-          "name": "Betingelser med kort"
-        },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "Binære Bilder"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Binær armbånd"
-        },
-        "coursec-2020/Events: The Big Event": {
-          "name": "Den store begivenheten"
-        },
-        "coursee-2020/Functions: Songwriting": {
-          "name": "Låtskriving"
-        },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Glade Kart"
-        },
-        "coursef-2020/Envelope Variables": {
-          "name": "Konvolutt variabler"
-        },
-        "coursef-2020/Internet": {
-          "name": "Internett"
-        },
-        "coursef-2020/For Loop Fun": {
-          "name": "Morro med for løkker"
         }
       }
     }

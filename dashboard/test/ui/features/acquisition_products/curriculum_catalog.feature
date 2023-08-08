@@ -1,5 +1,6 @@
 Feature: Curriculum Catalog Page
 
+  # English version
   @eyes
   Scenario: Signed-out user sees the curriculum catalog with offerings and can filter
     Given I am on "http://studio.code.org/catalog"
@@ -21,8 +22,30 @@ Feature: Curriculum Catalog Page
     And I see no difference for "Curriculum Catalog: No Offerings"
     And I close my eyes
 
-  # Assign button scenarios
+  # Spanish version
+  @eyes
+  Scenario: Signed-out user sees the curriculum catalog with offerings and can filter
+    Given I am on "http://studio.code.org/catalog/lang/es"
+    Then I wait until I am on "http://studio.code.org/catalog?lang=es"
+    And I open my eyes to test "Curriculum Catalog in Spanish"
+    Then I wait until element "#topic-dropdown" is visible
+    And I wait until element "h4:contains(Inteligencia Artificial para Océanos)" is visible
+    And I see no difference for "Curriculum Catalog: All Offerings in Spanish"
 
+    Then I click selector "#topic-dropdown-button"
+    And I wait until element "span:contains(Alfabetización digital)" is visible
+    Then I click selector "span:contains(Alfabetización digital)"
+    And I wait until element "h4:contains(Inteligencia Artificial para Océanos)" is not visible
+    And I see no difference for "Curriculum Catalog: One Offering in Spanish"
+
+    Then I click selector "#grade-dropdown-button"
+    And I wait until element "span:contains(Grado 12)" is visible
+    Then I click selector "span:contains(Grado 12)"
+    And I wait until element "img ~ h5" is visible
+    And I see no difference for "Curriculum Catalog: No Offerings in Spanish"
+    And I close my eyes
+
+  # Assign button scenarios
   Scenario: Signed-out user is redirected to sign-in page when clicking Assign
     Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
@@ -80,6 +103,7 @@ Feature: Curriculum Catalog Page
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is selected
     And I click selector "button:contains(Confirm section assignments)"
+    And element "p:contains(You have successfully assigned)" is visible
 
     # Confirm assignment
     Then I am on "http://studio.code.org"
@@ -111,6 +135,7 @@ Feature: Curriculum Catalog Page
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is not selected
     And I click selector "button:contains(Confirm section assignments)"
+    And element "p:contains(You have successfully assigned)" is not visible
 
     # Confirm unassign
     Then I am on "http://studio.code.org"

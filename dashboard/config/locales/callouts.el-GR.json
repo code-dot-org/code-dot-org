@@ -29,6 +29,9 @@
         "Course 4 Artist Vars 6": {
           "degrees_per_side": "Διαίρεσε το 360 με το πλήθος των πλευρών για να βρεις τη γωνία σε μοίρες."
         },
+        "Course 4 Bee 1": {
+          "if_bee_nectar": "Χρησιμοποιήστε το μπλοκ «αν» για να αποφασίσετε αν η μέλισσα πρέπει να πάρει νέκταρ ή να κάνει μέλι"
+        },
         "Course 4 Bee 3": {
           "if_else_bee": "Χρησιμοποιήστε το \"εάν/αλλιώς\" μπλοκ, έτσι ώστε η μέλισσα να παίρνει νέκταρ από ένα λουλούδι, και να κάνει μέλι αν δεν είναι λουλούδι"
         },
@@ -50,23 +53,69 @@
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!"
         },
+        "CourseD_Dance_2020_012022": {
+          "dance_callout_01": "Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!"
+        },
+        "CourseD_Dance_2020_01_2021": {
+          "dance_callout_01": "Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!"
+        },
         "CourseD_Dance_2020_02": {
-          "dance_callout_11_a": "Προσθέστε αυτό το μπλοκ στο πρόγραμμά σας.",
-          "arrow_buttons": "Πατήστε τα κουμπιά βέλους για να ελέγξετε τον χορευτή σας."
+          "arrow_buttons": "Πατήστε τα κουμπιά βέλους για να ελέγξετε τον χορευτή σας.",
+          "dance_callout_11_a": "Προσθέστε αυτό το μπλοκ στο πρόγραμμά σας."
+        },
+        "CourseD_Dance_2020_022022": {
+          "arrow_buttons": "Πατήστε τα κουμπιά βέλους για να ελέγξετε τον χορευτή σας.",
+          "dance_callout_11_a": "Προσθέστε αυτό το μπλοκ στο πρόγραμμά σας."
+        },
+        "CourseD_Dance_2020_02_2021": {
+          "arrow_buttons": "Πατήστε τα κουμπιά βέλους για να ελέγξετε τον χορευτή σας.",
+          "dance_callout_11_a": "Προσθέστε αυτό το μπλοκ στο πρόγραμμά σας."
         },
         "CourseD_Dance_2020_04": {
+          "dance_callout_02": "Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!"
+        },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!"
+        },
+        "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!"
         },
         "CourseD_Dance_2020_05": {
           "dance_callout_05": "Προσθέστε ένα νέο συμβάν στο πρόγραμμά σας."
         },
+        "CourseD_Dance_2020_052022": {
+          "dance_callout_05": "Προσθέστε ένα νέο συμβάν στο πρόγραμμά σας."
+        },
+        "CourseD_Dance_2020_05_2021": {
+          "dance_callout_05": "Προσθέστε ένα νέο συμβάν στο πρόγραμμά σας."
+        },
         "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Νέο μπλοκ*!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Νέο μπλοκ*!"
+        },
+        "CourseD_Dance_2020_06_2021": {
           "dance_party_11_5_groups": "Νέο μπλοκ*!"
         },
         "CourseD_Dance_2020_07": {
           "setprop_hint": "Νέο μπλοκ*!"
         },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Νέο μπλοκ*!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Νέο μπλοκ*!"
+        },
         "CourseD_Dance_2020_09": {
+          "new_block_3": "Νέο μπλοκ*!",
+          "new_block_4": "Νέο μπλοκ*!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Νέο μπλοκ*!",
+          "new_block_4": "Νέο μπλοκ*!"
+        },
+        "CourseD_Dance_2020_09_2021": {
           "new_block_3": "Νέο μπλοκ*!",
           "new_block_4": "Νέο μπλοκ*!"
         },
@@ -89,12 +138,26 @@
         "CourseD_Dance_Party_11_5": {
           "dance_party_11_5_groups": "Αναζητήστε εδώ τα μπλοκ «όλες τις πάπιες»"
         },
+        "CourseF_outbreak2": {
+          "minitoolbox": "Κάντε κλικ εδώ για να επεκτείνετε το κομμάτι παζλ.",
+          "pointerlocation": "Σύρετε ένα κομμάτι παζλ υποκειμένου εδώ."
+        },
+        "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Κάντε κλικ εδώ για να επεκτείνετε το κομμάτι παζλ.",
+          "pointerlocation": "Σύρετε ένα κομμάτι παζλ υποκειμένου εδώ."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Κάντε κλικ για να φτιάξετε νέα εμφάνιση"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
+        },
         "Dance_2019_01": {
           "dance_callout_01": "Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!"
         },
         "Dance_2019_02": {
-          "dance_callout_11_a": "Προσθέστε αυτό το μπλοκ στο πρόγραμμά σας.",
-          "arrow_buttons": "Πατήστε τα κουμπιά βέλους για να ελέγξετε τον χορευτή σας."
+          "arrow_buttons": "Πατήστε τα κουμπιά βέλους για να ελέγξετε τον χορευτή σας.",
+          "dance_callout_11_a": "Προσθέστε αυτό το μπλοκ στο πρόγραμμά σας."
         },
         "Dance_2019_04": {
           "dance_callout_02": "Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!"
@@ -134,10 +197,16 @@
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "Αυτή η μικρή οδηγία \"λέει\" στον υπολογιστή να εκτελέσει το ΜΕΓΑΛΟ κομμάτι του κώδικα με το ίδιο όνομα στο χώρο εργασίας."
         },
+        "Function intro Ryan2022": {
+          "Function_intro_Ryan_1": "Αυτή η μικρή οδηγία \"λέει\" στον υπολογιστή να εκτελέσει το ΜΕΓΑΛΟ κομμάτι του κώδικα με το ίδιο όνομα στο χώρο εργασίας."
+        },
         "Function intro Ryan_2019": {
           "Function_intro_Ryan_1": "Αυτή η μικρή οδηγία \"λέει\" στον υπολογιστή να εκτελέσει το ΜΕΓΑΛΟ κομμάτι του κώδικα με το ίδιο όνομα στο χώρο εργασίας."
         },
         "Function intro Ryan_2020": {
+          "Function_intro_Ryan_1": "Αυτή η μικρή οδηγία \"λέει\" στον υπολογιστή να εκτελέσει το ΜΕΓΑΛΟ κομμάτι του κώδικα με το ίδιο όνομα στο χώρο εργασίας."
+        },
+        "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "Αυτή η μικρή οδηγία \"λέει\" στον υπολογιστή να εκτελέσει το ΜΕΓΑΛΟ κομμάτι του κώδικα με το ίδιο όνομα στο χώρο εργασίας."
         },
         "Infinity_move_collide": {
@@ -162,13 +231,22 @@
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_1": "Αυτός είναι ένας βρόχος \"επανάλαβε\"!  Τοποθέτησέ τον στο χώρο εργασίας και πρόσθεσε τον κώδικα που θέλεις να επαναληφθεί ξανά και ξανά."
         },
+        "MC_HOC_2017_03_Cole2022": {
+          "MC_HOC_2017_03_Cole_1": "Αυτός είναι ένας βρόχος \"επανάλαβε\"!  Τοποθέτησέ τον στο χώρο εργασίας και πρόσθεσε τον κώδικα που θέλεις να επαναληφθεί ξανά και ξανά."
+        },
         "MC_HOC_2017_03_Cole_2019": {
           "MC_HOC_2017_03_Cole_1": "Αυτός είναι ένας βρόχος \"επανάλαβε\"!  Τοποθέτησέ τον στο χώρο εργασίας και πρόσθεσε τον κώδικα που θέλεις να επαναληφθεί ξανά και ξανά."
         },
         "MC_HOC_2017_03_Cole_2020": {
           "MC_HOC_2017_03_Cole_1": "Αυτός είναι ένας βρόχος \"επανάλαβε\"!  Τοποθέτησέ τον στο χώρο εργασίας και πρόσθεσε τον κώδικα που θέλεις να επαναληφθεί ξανά και ξανά."
         },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "Αυτός είναι ένας βρόχος \"επανάλαβε\"!  Τοποθέτησέ τον στο χώρο εργασίας και πρόσθεσε τον κώδικα που θέλεις να επαναληφθεί ξανά και ξανά."
+        },
         "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "Ο Agent μπορεί να αιωρηθεί πάνω από το νερό, αλλά ο παίκτης όχι!"
+        },
+        "MC_HOC_2017_04_Cole2022": {
           "MC_HOC_2017_04_Cole_a": "Ο Agent μπορεί να αιωρηθεί πάνω από το νερό, αλλά ο παίκτης όχι!"
         },
         "MC_HOC_2017_04_Cole_2019": {
@@ -177,7 +255,13 @@
         "MC_HOC_2017_04_Cole_2020": {
           "MC_HOC_2017_04_Cole_a": "Ο Agent μπορεί να αιωρηθεί πάνω από το νερό, αλλά ο παίκτης όχι!"
         },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Ο Agent μπορεί να αιωρηθεί πάνω από το νερό, αλλά ο παίκτης όχι!"
+        },
         "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "Δεν μπορείς να ξεφορτωθείς αυτούς τους κύβους, αλλά μπορείς να τους επεξεργαστείς!"
+        },
+        "MC_HOC_2017_06_Cole2022": {
           "MC_HOC_2017_06_Cole_1": "Δεν μπορείς να ξεφορτωθείς αυτούς τους κύβους, αλλά μπορείς να τους επεξεργαστείς!"
         },
         "MC_HOC_2017_06_Cole_2019": {
@@ -186,13 +270,22 @@
         "MC_HOC_2017_06_Cole_2020": {
           "MC_HOC_2017_06_Cole_1": "Δεν μπορείς να ξεφορτωθείς αυτούς τους κύβους, αλλά μπορείς να τους επεξεργαστείς!"
         },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "Δεν μπορείς να ξεφορτωθείς αυτούς τους κύβους, αλλά μπορείς να τους επεξεργαστείς!"
+        },
         "MC_HOC_2017_Ali": {
+          "MC_HOC_2017_08_RY_1": "Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης όχι!  "
+        },
+        "MC_HOC_2017_Ali2022": {
           "MC_HOC_2017_08_RY_1": "Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης όχι!  "
         },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_1": "Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης όχι!  "
         },
         "MC_HOC_2017_Ali_2020": {
+          "MC_HOC_2017_08_RY_1": "Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης όχι!  "
+        },
+        "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης όχι!  "
         },
         "NEW Course 4 Artist Functions 7": {
@@ -205,8 +298,8 @@
           "create_function": "Πάτα εδώ να ανοίξει το μενού \"Συναρτήσεις\", μετά πάτα την επιλογή \"Δημιουργία Συνάρτησης\"."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Πάτα \"επεξεργασία\" για να προσθέσεις μία μια παράμετρο στην συνάρτή σου",
-          "add_and_drag_parameter": "Γράψε το όνομα παραμέτρου σου εδώ, κάνε κλικ στο κουμπί \"Προσθήκη\", και στη συνέχεια σύρε το στον ορισμό της συνάρτησης"
+          "add_and_drag_parameter": "Γράψε το όνομα παραμέτρου σου εδώ, κάνε κλικ στο κουμπί \"Προσθήκη\", και στη συνέχεια σύρε το στον ορισμό της συνάρτησης",
+          "edit_add_parameter": "Πάτα \"επεξεργασία\" για να προσθέσεις μία μια παράμετρο στην συνάρτή σου"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Σύρετε εδώ την μεταβλητή μήκους για να αντικαταστήσει τα ερωτηματικά"
@@ -227,7 +320,14 @@
           "New Play Lab Project_callout2": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου",
           "sign_in_to_save_project": "Θες να επεξεργαστείς το έργο σου κάποια άλλη στιγμή; Συνδέσου για να σώσεις αυτό το έργο στον λογαριασμό σου."
         },
+        "New Sprite Lab Project": {
+          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας.",
+          "make_sprite": "Χρησιμοποιήστε τα κυβάκια εδώ για να δημιουργήσετε ένα χαρακτήρα ήρωα!"
+        },
         "Overworld Chop Trees": {
+          "craft_callout_preplaced": "Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις"
+        },
+        "Overworld Chop Trees2022": {
           "craft_callout_preplaced": "Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις"
         },
         "Overworld Chop Trees_2019": {
@@ -236,7 +336,13 @@
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι σου. Μπορείς να τον ολοκληρώσεις;"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι σου. Μπορείς να τον ολοκληρώσεις;"
         },
         "Overworld House Frame Chosen_2019": {
@@ -245,19 +351,33 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι σου. Μπορείς να τον ολοκληρώσεις;"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι σου. Μπορείς να τον ολοκληρώσεις;"
+        },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου",
-          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών"
+          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών",
+          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου"
+        },
+        "Overworld Move to Sheep2022": {
+          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών",
+          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου",
-          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών"
+          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών",
+          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου",
-          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών"
+          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών",
+          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών",
+          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου"
         },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ"
         },
         "Overworld Place Wall_2019": {
@@ -266,7 +386,13 @@
         "Overworld Place Wall_2020": {
           "craft_inside_repeat": "Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ"
         },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ"
+        },
         "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να προσθέσεις μία εντολή για να προχωρήσεις μπροστά;"
+        },
+        "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να προσθέσεις μία εντολή για να προχωρήσεις μπροστά;"
         },
         "Underground Avoiding Lava_2019": {
@@ -275,7 +401,13 @@
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να προσθέσεις μία εντολή για να προχωρήσεις μπροστά;"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να προσθέσεις μία εντολή για να προχωρήσεις μπροστά;"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "Εξόρυξε αυτόν τον σίδηρο!"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "Εξόρυξε αυτόν τον σίδηρο!"
         },
         "Underground Iron_2019": {
@@ -284,534 +416,8 @@
         "Underground Iron_2020": {
           "craft_what_is_iron": "Εξόρυξε αυτόν τον σίδηρο!"
         },
-        "frozen circle function with parameter": {
-          "frozen_circle_function_with_parameter_circle": "Χρησιμοποιήστε το μπλοκ \"Δημιουργία κύκλου\" και αλλάξτε το μέγεθος."
-        },
-        "frozen cross": {
-          "repeat_blocks_1": "(1) Χρησιμοποίησε αυτό το μπλοκ και βάλε το γύρω από τα γκρι μπλοκ στο χώρο εργασίας",
-          "repeat_blocks_2": "(2) μετακίνησε το μπλοκ «Επανάλαβε» εδώ, και τοποθέτησε μέσα τα γκρι μπλοκ"
-        },
-        "frozen cross rotate": {
-          "replace_questions_degree": "Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το \"???\" με έναν αριθμό"
-        },
-        "frozen diamond": {
-          "frozen_diamond_repeat": "Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη."
-        },
-        "frozen diamond snowflake": {
-          "frozen_diamond_repeat": "Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη."
-        },
-        "frozen freeplay": {
-          "snowflake_dropdown": "Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις διαφορετικές χιονονιφάδες!"
-        },
-        "frozen line": {
-          "run": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου!",
-          "move_elsa_forward": "Πιάσε το \"Πήγαινε μπροστά\" μπλοκ και φέρ'το κάτω από το \"Όταν Εκτελείται\" μπλοκ για να κάνεις την Έλσα να πάει μπροστά"
-        },
-        "frozen perpendicular": {
-          "turn_elsa": "Χρησιμοποίησε το \"Γύρισε\" μπλοκ για να κάνεις την Έλσα να γυρίσει. Ο αριθμός στο αναδυόμενο μενού δείχνει πόσες φορές γυρίζει η Έλσα"
-        },
-        "frozen snowflake branch": {
-          "frozen_snowflake_branch": "Χρησιμοποιήστε το μπλοκ \"δημιουργία κλαδιού νιφάδας χιονιού\""
-        },
-        "frozen square iterative": {
-          "frozen_create_square": "Βάλτε και άλλα μπλοκ εδώ για να φτιάξετε τετράγωνο"
-        },
-        "frozen square loop": {
-          "replace_questions": "Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το \"???\" με έναν αριθμό"
-        },
-        "frozen square loop 3x": {
-          "replace_questions": "Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το \"???\" με έναν αριθμό"
-        },
-        "frozen square snowflake": {
-          "replace_questions": "Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το \"???\" με έναν αριθμό"
-        },
-        "outbreak2": {
-          "minitoolbox": "Κάντε κλικ εδώ για να επεκτείνετε το κομμάτι παζλ.",
-          "pointerlocation": "Σύρετε ένα κομμάτι παζλ υποκειμένου εδώ."
-        },
-        "outbreak7": {
-          "costumes_callout": "Κάντε κλικ για να φτιάξετε νέα εμφάνιση"
-        },
-        "CourseD_Dance_2020_01_2021": {
-          "dance_callout_01": "Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!"
-        },
-        "CourseD_Dance_2020_02_2021": {
-          "dance_callout_11_a": "Προσθέστε αυτό το μπλοκ στο πρόγραμμά σας.",
-          "arrow_buttons": "Πατήστε τα κουμπιά βέλους για να ελέγξετε τον χορευτή σας."
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!"
-        },
-        "CourseD_Dance_2020_05_2021": {
-          "dance_callout_05": "Προσθέστε ένα νέο συμβάν στο πρόγραμμά σας."
-        },
-        "CourseD_Dance_2020_06_2021": {
-          "dance_party_11_5_groups": "Νέο μπλοκ*!"
-        },
-        "CourseD_Dance_2020_07_2021": {
-          "setprop_hint": "Νέο μπλοκ*!"
-        },
-        "CourseD_Dance_2020_09_2021": {
-          "new_block_3": "Νέο μπλοκ*!",
-          "new_block_4": "Νέο μπλοκ*!"
-        },
-        "CourseF_outbreak2": {
-          "minitoolbox": "Κάντε κλικ εδώ για να επεκτείνετε το κομμάτι παζλ.",
-          "pointerlocation": "Σύρετε ένα κομμάτι παζλ υποκειμένου εδώ."
-        },
-        "CourseF_outbreak7": {
-          "costumes_callout": "Κάντε κλικ για να φτιάξετε νέα εμφάνιση"
-        },
-        "Function intro Ryan_2021": {
-          "Function_intro_Ryan_1": "Αυτή η μικρή οδηγία \"λέει\" στον υπολογιστή να εκτελέσει το ΜΕΓΑΛΟ κομμάτι του κώδικα με το ίδιο όνομα στο χώρο εργασίας."
-        },
-        "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "Αυτός είναι ένας βρόχος \"επανάλαβε\"!  Τοποθέτησέ τον στο χώρο εργασίας και πρόσθεσε τον κώδικα που θέλεις να επαναληφθεί ξανά και ξανά."
-        },
-        "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Ο Agent μπορεί να αιωρηθεί πάνω από το νερό, αλλά ο παίκτης όχι!"
-        },
-        "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_1": "Δεν μπορείς να ξεφορτωθείς αυτούς τους κύβους, αλλά μπορείς να τους επεξεργαστείς!"
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "MC_HOC_2017_08_RY_1": "Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης όχι!  "
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι σου. Μπορείς να τον ολοκληρώσεις;"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου",
-          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να προσθέσεις μία εντολή για να προχωρήσεις μπροστά;"
-        },
         "Underground Iron_2021": {
           "craft_what_is_iron": "Εξόρυξε αυτόν τον σίδηρο!"
-        },
-        "helloworld_animals_costumes": {
-          "hello_world_new": "Νέο μπλοκ*!"
-        },
-        "helloworld_animals_sizes": {
-          "hello_world_new": "Νέο μπλοκ*!",
-          "hello_world_new_block": "Νέο μπλοκ!!!!"
-        },
-        "helloworld_animals_sounds": {
-          "hello_world_new": "Νέο μπλοκ*!"
-        },
-        "helloworld_emoji_costumes": {
-          "hello_world_new": "Νέο μπλοκ*!"
-        },
-        "helloworld_emoji_sizes": {
-          "hello_world_new": "Νέο μπλοκ*!",
-          "hello_world_new_block": "Νέο μπλοκ*!"
-        },
-        "helloworld_emoji_sounds": {
-          "hello_world_new": "Νέο μπλοκ*!"
-        },
-        "helloworld_food_costumes": {
-          "hello_world_new": "Νέο μπλοκ*!"
-        },
-        "helloworld_food_sizes": {
-          "hello_world_new": "Νέο μπλοκ*!",
-          "hello_world_new_block": "Νέο μπλοκ*!"
-        },
-        "helloworld_food_sounds": {
-          "hello_world_new": "Νέο μπλοκ*!"
-        },
-        "helloworld_retro_costumes": {
-          "hello_world_new": "Νέο μπλοκ*!"
-        },
-        "helloworld_retro_sizes": {
-          "hello_world_new": "Νέο μπλοκ*!",
-          "hello_world_new_block": "Νέο μπλοκ*!"
-        },
-        "helloworld_retro_sounds": {
-          "hello_world_new": "Νέο μπλοκ*!"
-        },
-        "poetry_hoc_addSprites": {
-          "poetry_sprite": "Νέο μπλοκ*!"
-        },
-        "poetry_hoc_events1": {
-          "poetry_event": "Νέο μπλοκ*!",
-          "poetry_foreground": "Νέο μπλοκ*!"
-        },
-        "poetry_hoc_freeplay": {
-          "poetry_burst": "Νέο μπλοκ*!",
-          "poetry_multiple_sprites": "Νέο μπλοκ*!",
-          "poetry_new_block": "Νέο μπλοκ*!"
-        },
-        "poetry_hoc_sounds": {
-          "poetry_sound": "Νέο μπλοκ*!",
-          "poetry_music": "Νέο μπλοκ*!"
-        },
-        "poetry_hoc_spriteBehaviors": {
-          "poetry_sprite_begins": "Νέο μπλοκ*!",
-          "poetry_sprite_stops": "Νέο μπλοκ*!"
-        },
-        "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "Νέο μπλοκ*!",
-          "poetry_remove_sprite": "Νέο μπλοκ*!"
-        },
-        "New Sprite Lab Project": {
-          "make_sprite": "Χρησιμοποιήστε τα κυβάκια εδώ για να δημιουργήσετε ένα χαρακτήρα ήρωα!",
-          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
-        },
-        "CourseD_Dance_2020_012022": {
-          "dance_callout_01": "Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!"
-        },
-        "CourseD_Dance_2020_022022": {
-          "dance_callout_11_a": "Προσθέστε αυτό το μπλοκ στο πρόγραμμά σας.",
-          "arrow_buttons": "Πατήστε τα κουμπιά βέλους για να ελέγξετε τον χορευτή σας."
-        },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "Προσθέστε αυτό το μπλοκ* στο πρόγραμμά σας!"
-        },
-        "CourseD_Dance_2020_052022": {
-          "dance_callout_05": "Προσθέστε ένα νέο συμβάν στο πρόγραμμά σας."
-        },
-        "CourseD_Dance_2020_062022": {
-          "dance_party_11_5_groups": "Νέο μπλοκ*!"
-        },
-        "CourseD_Dance_2020_072022": {
-          "setprop_hint": "Νέο μπλοκ*!"
-        },
-        "CourseD_Dance_2020_092022": {
-          "new_block_3": "Νέο μπλοκ*!",
-          "new_block_4": "Νέο μπλοκ*!"
-        },
-        "CourseF_outbreak2_-2022-2": {
-          "minitoolbox": "Κάντε κλικ εδώ για να επεκτείνετε το κομμάτι παζλ.",
-          "pointerlocation": "Σύρετε ένα κομμάτι παζλ υποκειμένου εδώ."
-        },
-        "Function intro Ryan2022": {
-          "Function_intro_Ryan_1": "Αυτή η μικρή οδηγία \"λέει\" στον υπολογιστή να εκτελέσει το ΜΕΓΑΛΟ κομμάτι του κώδικα με το ίδιο όνομα στο χώρο εργασίας."
-        },
-        "MC_HOC_2017_03_Cole2022": {
-          "MC_HOC_2017_03_Cole_1": "Αυτός είναι ένας βρόχος \"επανάλαβε\"!  Τοποθέτησέ τον στο χώρο εργασίας και πρόσθεσε τον κώδικα που θέλεις να επαναληφθεί ξανά και ξανά."
-        },
-        "MC_HOC_2017_04_Cole2022": {
-          "MC_HOC_2017_04_Cole_a": "Ο Agent μπορεί να αιωρηθεί πάνω από το νερό, αλλά ο παίκτης όχι!"
-        },
-        "MC_HOC_2017_06_Cole2022": {
-          "MC_HOC_2017_06_Cole_1": "Δεν μπορείς να ξεφορτωθείς αυτούς τους κύβους, αλλά μπορείς να τους επεξεργαστείς!"
-        },
-        "MC_HOC_2017_Ali2022": {
-          "MC_HOC_2017_08_RY_1": "Ο Agent μπορεί να αιωρηθεί πάνω από λάβα, αλλά ο παίκτης όχι!  "
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Έχουμε βάλει κάποια μπλοκ εδώ για να ξεκινήσεις"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Αυτός ο κώδικας θα ξεκινήσει να κτίζει το σπίτι σου. Μπορείς να τον ολοκληρώσεις;"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου",
-          "craft_drag_block_callout": "Σύρε ένα μπλοκ \"moveForward();\" (προχώρησε μπροστά) και κόλλησέ το κάτω από τα άλλα μπλοκ εντολών"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Επανάλαβε ενέργειες βάζοντας μπλοκ εδώ"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Αυτός ο κώδικας θα εξετάσει για λάβα, μπορείς να προσθέσεις μία εντολή για να προχωρήσεις μπροστά;"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Εξόρυξε αυτόν τον σίδηρο!"
-        },
-        "helloworld_food_costumes_soccer-2022": {
-          "hello_world_new": "Νέο μπλοκ*!"
-        },
-        "helloworld_food_costumes_space-2022": {
-          "hello_world_new": "Νέο μπλοκ*!"
-        },
-        "helloworld_food_sizes_soccer-2022": {
-          "hello_world_new": "Νέο μπλοκ*!",
-          "hello_world_new_block": "Νέο μπλοκ*!"
-        },
-        "helloworld_food_sizes_space-2022": {
-          "hello_world_new": "Νέο μπλοκ*!",
-          "hello_world_new_block": "Νέο μπλοκ*!"
-        },
-        "helloworld_food_sounds_soccer-2022": {
-          "hello_world_new": "Νέο μπλοκ*!"
-        },
-        "helloworld_food_sounds_space-2022": {
-          "hello_world_new": "Νέο μπλοκ*!"
-        },
-        "CourseF_outbreak7_-2022-2": {
-          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
-        },
-        "courseE_aboutme_22022": {
-          "": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
-        },
-        "coursee_helloworld_events": {
-          "hello_world_click_hint": "Προσθέστε αυτό το μπλοκ συμβάντων στο χώρο εργασίας σας."
-        },
-        "coursee_helloworld_freeplay": {
-          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
-        },
-        "coursee_helloworld_say": {
-          "hello_world_say": "Χρησιμοποιήστε αυτό το μπλοκ για να κάνετε sprites μιλήσει.",
-          "hello_world_make_sprite": "Χρησιμοποιήστε αυτό το μπλοκ για να δημιουργήσετε ένα sprite."
-        },
-        "helloworld_animals_backgrounds": {
-          "hw_background_location": "Χρησιμοποιήστε αυτό το μπλοκ για να ορίσετε ένα νέο φόντο."
-        },
-        "helloworld_animals_behaviors": {
-          "hello_world_behavior_blocks": "Χρησιμοποιήστε αυτό το μπλοκ με μία από τις παρακάτω συμπεριφορές."
-        },
-        "helloworld_animals_click": {
-          "hw_Run": "Κάντε κλικ εδώ για να εκτελέσετε τον κώδικα."
-        },
-        "helloworld_animals_events": {
-          "hello_world_click_hint": "Προσθέστε αυτό το μπλοκ συμβάντων στο χώρο εργασίας σας."
-        },
-        "helloworld_animals_freeplay": {
-          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
-        },
-        "helloworld_animals_location": {
-          "pin": "καρφίτσα"
-        },
-        "helloworld_animals_multi": {
-          "pin": "καρφίτσα"
-        },
-        "helloworld_animals_say": {
-          "hello_world_say": "Χρησιμοποιήστε αυτό το μπλοκ για να κάνετε sprites μιλήσει.",
-          "hello_world_make_sprite": "Χρησιμοποιήστε αυτό το μπλοκ για να δημιουργήσετε ένα sprite."
-        },
-        "helloworld_emoji_backgrounds": {
-          "hw_background_location": "Χρησιμοποιήστε αυτό το μπλοκ για να ορίσετε ένα νέο φόντο."
-        },
-        "helloworld_emoji_behaviors": {
-          "hello_world_behavior_blocks": "Χρησιμοποιήστε αυτό το μπλοκ με μία από τις παρακάτω συμπεριφορές."
-        },
-        "helloworld_emoji_click": {
-          "hw_Run": "Κάντε κλικ εδώ για να εκτελέσετε τον κώδικα."
-        },
-        "helloworld_emoji_events": {
-          "hello_world_click_hint": "Προσθέστε αυτό το μπλοκ συμβάντων στο χώρο εργασίας σας."
-        },
-        "helloworld_emoji_freeplay": {
-          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
-        },
-        "helloworld_emoji_location": {
-          "pin": "καρφίτσα"
-        },
-        "helloworld_emoji_multi": {
-          "pin": "καρφίτσα"
-        },
-        "helloworld_emoji_say": {
-          "hello_world_say": "Χρησιμοποιήστε αυτό το μπλοκ για να κάνετε sprites μιλήσει.",
-          "hello_world_make_sprite": "Χρησιμοποιήστε αυτό το μπλοκ για να δημιουργήσετε ένα sprite."
-        },
-        "helloworld_food_backgrounds": {
-          "hw_background_location": "Χρησιμοποιήστε αυτό το μπλοκ για να ορίσετε ένα νέο φόντο."
-        },
-        "helloworld_food_backgrounds_soccer-2022": {
-          "hw_background_location": "Χρησιμοποιήστε αυτό το μπλοκ για να ορίσετε ένα νέο φόντο."
-        },
-        "helloworld_food_backgrounds_space-2022": {
-          "hw_background_location": "Χρησιμοποιήστε αυτό το μπλοκ για να ορίσετε ένα νέο φόντο."
-        },
-        "helloworld_food_behaviors": {
-          "hello_world_behavior_blocks": "Χρησιμοποιήστε αυτό το μπλοκ με μία από τις παρακάτω συμπεριφορές."
-        },
-        "helloworld_food_behaviors_soccer-2022": {
-          "hello_world_behavior_blocks": "Χρησιμοποιήστε αυτό το μπλοκ με μία από τις παρακάτω συμπεριφορές."
-        },
-        "helloworld_food_behaviors_space-2022": {
-          "hello_world_behavior_blocks": "Χρησιμοποιήστε αυτό το μπλοκ με μία από τις παρακάτω συμπεριφορές."
-        },
-        "helloworld_food_click": {
-          "hw_Run": "Κάντε κλικ εδώ για να εκτελέσετε τον κώδικα."
-        },
-        "helloworld_food_click_soccer-2022": {
-          "hw_Run": "Κάντε κλικ εδώ για να εκτελέσετε τον κώδικα."
-        },
-        "helloworld_food_click_space-2022": {
-          "hw_Run": "Κάντε κλικ εδώ πρώτα!"
-        },
-        "helloworld_food_events": {
-          "hello_world_click_hint": "Προσθέστε αυτό το μπλοκ συμβάντων στο χώρο εργασίας σας."
-        },
-        "helloworld_food_events_soccer-2022": {
-          "hello_world_click_hint": "Προσθέστε αυτό το μπλοκ συμβάντων στο χώρο εργασίας σας."
-        },
-        "helloworld_food_events_space-2022": {
-          "hello_world_click_hint": "Προσθέστε αυτό το μπλοκ συμβάντων στο χώρο εργασίας σας."
-        },
-        "helloworld_food_freeplay": {
-          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
-        },
-        "helloworld_food_freeplay_soccer-2022": {
-          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
-        },
-        "helloworld_food_freeplay_space-2022": {
-          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
-        },
-        "helloworld_food_location": {
-          "pin": "καρφίτσα"
-        },
-        "helloworld_food_location_soccer-2022": {
-          "pin": "καρφίτσα"
-        },
-        "helloworld_food_location_space-2022": {
-          "pin": "καρφίτσα"
-        },
-        "helloworld_food_multi": {
-          "pin": "καρφίτσα"
-        },
-        "helloworld_food_multi_soccer-2022": {
-          "pin": "καρφίτσα"
-        },
-        "helloworld_food_multi_space-2022": {
-          "pin": "καρφίτσα"
-        },
-        "helloworld_food_say": {
-          "hello_world_say": "Χρησιμοποιήστε αυτό το μπλοκ για να κάνετε sprites μιλήσει.",
-          "hello_world_make_sprite": "Χρησιμοποιήστε αυτό το μπλοκ για να δημιουργήσετε ένα sprite."
-        },
-        "helloworld_food_say_soccer-2022": {
-          "hello_world_say": "Χρησιμοποιήστε αυτό το μπλοκ για να κάνετε sprites μιλήσει.",
-          "hello_world_make_sprite": "Χρησιμοποιήστε αυτό το μπλοκ για να δημιουργήσετε ένα sprite."
-        },
-        "helloworld_food_say_space-2022": {
-          "hello_world_say": "Χρησιμοποιήστε αυτό το μπλοκ για να κάνετε sprites μιλήσει.",
-          "hello_world_make_sprite": "Χρησιμοποιήστε αυτό το μπλοκ για να δημιουργήσετε ένα sprite."
-        },
-        "helloworld_retro_backgrounds": {
-          "hw_background_location": "Χρησιμοποιήστε αυτό το μπλοκ για να ορίσετε ένα νέο φόντο."
-        },
-        "helloworld_retro_behaviors": {
-          "hello_world_behavior_blocks": "Χρησιμοποιήστε αυτό το μπλοκ με μία από τις παρακάτω συμπεριφορές."
-        },
-        "helloworld_retro_click": {
-          "hw_Run": "Κάντε κλικ εδώ για να εκτελέσετε τον κώδικα."
-        },
-        "helloworld_retro_events": {
-          "hello_world_click_hint": "Προσθέστε αυτό το μπλοκ συμβάντων στο χώρο εργασίας σας."
-        },
-        "helloworld_retro_freeplay": {
-          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
-        },
-        "helloworld_retro_location": {
-          "pin": "καρφίτσα"
-        },
-        "helloworld_retro_multi": {
-          "pin": "καρφίτσα"
-        },
-        "helloworld_retro_say": {
-          "hello_world_say": "Χρησιμοποιήστε αυτό το μπλοκ για να κάνετε sprites μιλήσει.",
-          "hello_world_make_sprite": "Χρησιμοποιήστε αυτό το μπλοκ για να δημιουργήσετε ένα sprite."
-        },
-        "courseF_apps_aquarium": {
-          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
-        },
-        "courseF_apps_aquarium2022": {
-          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
-        },
-        "courseF_apps_aquarium_-2022-2": {
-          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
-        },
-        "courseF_apps_chatbot": {
-          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
-        },
-        "courseF_apps_chatbot2022": {
-          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
-        },
-        "courseF_apps_chatbot_-2022-2": {
-          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
-        },
-        "courseF_apps_collector": {
-          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
-        },
-        "courseF_apps_collector2022": {
-          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
-        },
-        "courseF_apps_collector_-2022-2": {
-          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
-        },
-        "courseF_apps_pet": {
-          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
-        },
-        "courseF_apps_pet2022": {
-          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
-        },
-        "courseF_apps_pet_-2022-2": {
-          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
-        },
-        "Course 4 Bee 1": {
-          "if_bee_nectar": "Χρησιμοποιήστε το μπλοκ «αν» για να αποφασίσετε αν η μέλισσα πρέπει να πάρει νέκταρ ή να κάνει μέλι"
-        },
-        "courseC_maze_programming12022": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσετε όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσετε το πρόγραμμά σας."
-        },
-        "courseF_groups_size_-2022-2": {
-          "mini-toolbox-blue-button": "Κάνε κλικ στο μπλε κουμπί για να ανοίξει ή να κλείσει."
-        },
-        "courseA_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseB_Scrat_ramp12022": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseB_Scrat_ramp1_2018": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseB_Scrat_ramp1_2019": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseB_Scrat_ramp1_2020": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseB_Scrat_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseC_maze_programming1": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseC_maze_programming1_2018": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseC_maze_programming1_2019": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseC_maze_programming1_2020": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseC_maze_programming1_2021": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseD_maze_ramp1": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseD_maze_ramp12022": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseD_maze_ramp1_2018": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseD_maze_ramp1_2019": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseD_maze_ramp1_2020": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseD_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "courseD_scrat_ramp1": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
-        },
-        "coursea_maze_ramp1_2021": {
-          "grade2_CaringForNewPet_0_1": "Αφού συνδέσετε όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσετε το πρόγραμμά σας."
         },
         "courseA_maze_ramp22022": {
           "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
@@ -822,58 +428,10 @@
         "courseA_maze_ramp2_2020": {
           "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
         },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
         "courseA_maze_ramp3a_2018": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseB_Scrat_ramp3a2022": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseB_Scrat_ramp3a_2019": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseB_Scrat_ramp3a_2020": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseB_Scrat_ramp3a_2021": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseC_maze_programming2": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseC_maze_programming22022": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseC_maze_programming2_2018": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseC_maze_programming2_2019": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseC_maze_programming2_2020": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseC_maze_programming2_2021": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseD_maze_ramp2": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseD_maze_ramp22022": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseD_maze_ramp2_2018": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseD_maze_ramp2_2019": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseD_maze_ramp2_2020": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseD_maze_ramp2_2021": {
-          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
-        },
-        "courseD_scrat_ramp2": {
           "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
         },
         "courseA_maze_seq1": {
@@ -894,6 +452,33 @@
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "Κάντε κλικ στη λάμπα όταν χρειάζεστε μια βοήθεια!"
         },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
         "courseB_maze_seq1": {
           "courseB_maze_seq1": "Κάντε κλικ στη λάμπα όταν χρειάζεστε μια βοήθεια!"
         },
@@ -911,6 +496,60 @@
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1": "Κάντε κλικ στη λάμπα όταν χρειάζεστε μια βοήθεια!"
+        },
+        "courseC_harvester_loops1": {
+          "courseC_harvester_loops1_callout1": "Ο αριθμός τέσσερα στην κολοκύθα σας λέει ότι υπάρχουν τέσσερις κολοκύθες διαθέσιμες για να συλλέξετε."
+        },
+        "courseC_harvester_loops12022": {
+          "courseC_harvester_loops1_callout1": "Ο αριθμός τέσσερα στην κολοκύθα σας λέει ότι υπάρχουν τέσσερις κολοκύθες διαθέσιμες για να συλλέξετε."
+        },
+        "courseC_harvester_loops1_2018": {
+          "courseC_harvester_loops1_callout1": "Ο αριθμός τέσσερα στην κολοκύθα σας λέει ότι υπάρχουν τέσσερις κολοκύθες διαθέσιμες για να συλλέξετε."
+        },
+        "courseC_harvester_loops1_2019": {
+          "courseC_harvester_loops1_callout1": "Ο αριθμός τέσσερα στην κολοκύθα σας λέει ότι υπάρχουν τέσσερις κολοκύθες διαθέσιμες για να συλλέξετε."
+        },
+        "courseC_harvester_loops1_2020": {
+          "courseC_harvester_loops1_callout1": "Ο αριθμός τέσσερα στην κολοκύθα σας λέει ότι υπάρχουν τέσσερις κολοκύθες διαθέσιμες για να συλλέξετε."
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Ο αριθμός τέσσερα στην κολοκύθα σας λέει ότι υπάρχουν τέσσερις κολοκύθες διαθέσιμες για να συλλέξετε."
+        },
+        "courseC_maze_programming1": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseC_maze_programming12022": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseC_maze_programming1_2018": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseC_maze_programming1_2019": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseC_maze_programming1_2020": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
+        "courseC_maze_programming22022": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
+        "courseC_maze_programming2_2018": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
+        "courseC_maze_programming2_2019": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
+        "courseC_maze_programming2_2020": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
         },
         "courseC_maze_programming3": {
           "courseC_maze_programming3_2": "Μπορείτε να σύρετε τα επιπλέον μπλοκ στην εργαλειοθήκη για να τα σβήσετε."
@@ -966,6 +605,42 @@
         "courseD_maze_intro5a_2021": {
           "": "Αυτά τα μπλοκ δεν έχουν αριθμούς πάνω τους. Μπορείτε να χρησιμοποιήσετε όσα θέλετε!"
         },
+        "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseD_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseD_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseD_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseD_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
+        "courseD_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
+        "courseD_maze_ramp2_2018": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
+        "courseD_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
+        "courseD_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_2": "Μπορείτε να σύρετε τα επιπλέον μπλοκ στην εργαλειοθήκη για να τα σβήσετε."
         },
@@ -1018,29 +693,354 @@
         "courseD_maze_ramp5a_2020": {
           "": "Αυτά τα μπλοκ δεν έχουν αριθμούς πάνω τους. Μπορείτε να χρησιμοποιήσετε όσα θέλετε!"
         },
+        "courseD_scrat_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσεις όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσει το πρόγραμμά σας."
+        },
+        "courseD_scrat_ramp2": {
+          "courseC_maze_programming2_1": "Αυτή είναι η εργαλειοθήκη. Εκεί θα βρείτε επιπλέον τουβλάκια για να ολοκληρώσετε τους γρίφους σας."
+        },
         "courseD_scrat_ramp3": {
           "courseC_maze_programming3_2": "Μπορείτε να σύρετε τα επιπλέον μπλοκ στην εργαλειοθήκη για να τα σβήσετε."
         },
         "courseD_scrat_ramp5": {
           "": "Αυτά τα μπλοκ δεν έχουν αριθμούς πάνω τους. Μπορείτε να χρησιμοποιήσετε όσα θέλετε!"
         },
-        "courseC_harvester_loops1": {
-          "courseC_harvester_loops1_callout1": "Ο αριθμός τέσσερα στην κολοκύθα σας λέει ότι υπάρχουν τέσσερις κολοκύθες διαθέσιμες για να συλλέξετε."
+        "courseE_aboutme_22022": {
+          "": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
         },
-        "courseC_harvester_loops12022": {
-          "courseC_harvester_loops1_callout1": "Ο αριθμός τέσσερα στην κολοκύθα σας λέει ότι υπάρχουν τέσσερις κολοκύθες διαθέσιμες για να συλλέξετε."
+        "courseF_apps_aquarium": {
+          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
         },
-        "courseC_harvester_loops1_2018": {
-          "courseC_harvester_loops1_callout1": "Ο αριθμός τέσσερα στην κολοκύθα σας λέει ότι υπάρχουν τέσσερις κολοκύθες διαθέσιμες για να συλλέξετε."
+        "courseF_apps_aquarium2022": {
+          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
         },
-        "courseC_harvester_loops1_2019": {
-          "courseC_harvester_loops1_callout1": "Ο αριθμός τέσσερα στην κολοκύθα σας λέει ότι υπάρχουν τέσσερις κολοκύθες διαθέσιμες για να συλλέξετε."
+        "courseF_apps_aquarium_-2022-2": {
+          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
         },
-        "courseC_harvester_loops1_2020": {
-          "courseC_harvester_loops1_callout1": "Ο αριθμός τέσσερα στην κολοκύθα σας λέει ότι υπάρχουν τέσσερις κολοκύθες διαθέσιμες για να συλλέξετε."
+        "courseF_apps_chatbot": {
+          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
         },
-        "courseC_harvester_loops1_2021": {
-          "courseC_harvester_loops1_callout1": "Ο αριθμός τέσσερα στην κολοκύθα σας λέει ότι υπάρχουν τέσσερις κολοκύθες διαθέσιμες για να συλλέξετε."
+        "courseF_apps_chatbot2022": {
+          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
+        },
+        "courseF_apps_collector": {
+          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
+        },
+        "courseF_apps_collector2022": {
+          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
+        },
+        "courseF_apps_pet": {
+          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
+        },
+        "courseF_apps_pet2022": {
+          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
+        },
+        "courseF_apps_pet_-2022-2": {
+          "run_button": "Πιέστε πρώτα το κουμπί «Εκτέλεση»!"
+        },
+        "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "Κάνε κλικ στο μπλε κουμπί για να ανοίξει ή να κλείσει."
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Αφού συνδέσετε όλα τα μπλοκ, πατήστε «Εκτέλεση» για να ξεκινήσετε το πρόγραμμά σας."
+        },
+        "coursee_helloworld_events": {
+          "hello_world_click_hint": "Προσθέστε αυτό το μπλοκ συμβάντων στο χώρο εργασίας σας."
+        },
+        "coursee_helloworld_freeplay": {
+          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
+        },
+        "coursee_helloworld_say": {
+          "hello_world_make_sprite": "Χρησιμοποιήστε αυτό το μπλοκ για να δημιουργήσετε ένα sprite.",
+          "hello_world_say": "Χρησιμοποιήστε αυτό το μπλοκ για να κάνετε sprites μιλήσει."
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "Χρησιμοποιήστε το μπλοκ \"Δημιουργία κύκλου\" και αλλάξτε το μέγεθος."
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) Χρησιμοποίησε αυτό το μπλοκ και βάλε το γύρω από τα γκρι μπλοκ στο χώρο εργασίας",
+          "repeat_blocks_2": "(2) μετακίνησε το μπλοκ «Επανάλαβε» εδώ, και τοποθέτησε μέσα τα γκρι μπλοκ"
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το \"???\" με έναν αριθμό"
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "Φτιάξτε αυτό το σχήμα με το μπλοκ Επανάληψη."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "Χρησιμοποίησε το αναδυόμενο μενού για να δημιουργήσεις διαφορετικές χιονονιφάδες!"
+        },
+        "frozen line": {
+          "move_elsa_forward": "Πιάσε το \"Πήγαινε μπροστά\" μπλοκ και φέρ'το κάτω από το \"Όταν Εκτελείται\" μπλοκ για να κάνεις την Έλσα να πάει μπροστά",
+          "run": "Πάτησε \"Εκτέλεση\" για να δοκιμάσεις το πρόγραμμά σου!"
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "Χρησιμοποίησε το \"Γύρισε\" μπλοκ για να κάνεις την Έλσα να γυρίσει. Ο αριθμός στο αναδυόμενο μενού δείχνει πόσες φορές γυρίζει η Έλσα"
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "Χρησιμοποιήστε το μπλοκ \"δημιουργία κλαδιού νιφάδας χιονιού\""
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "Βάλτε και άλλα μπλοκ εδώ για να φτιάξετε τετράγωνο"
+        },
+        "frozen square loop": {
+          "replace_questions": "Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το \"???\" με έναν αριθμό"
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το \"???\" με έναν αριθμό"
+        },
+        "frozen square snowflake": {
+          "replace_questions": "Χρησιμοποίησε το αναδυόμενο μενού για να αντικαταστήσεις το \"???\" με έναν αριθμό"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Χρησιμοποιήστε αυτό το μπλοκ για να ορίσετε ένα νέο φόντο."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Χρησιμοποιήστε αυτό το μπλοκ με μία από τις παρακάτω συμπεριφορές."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Κάντε κλικ εδώ για να εκτελέσετε τον κώδικα."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Προσθέστε αυτό το μπλοκ συμβάντων στο χώρο εργασίας σας."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
+        },
+        "helloworld_animals_location": {
+          "pin": "καρφίτσα"
+        },
+        "helloworld_animals_multi": {
+          "pin": "καρφίτσα"
+        },
+        "helloworld_animals_say": {
+          "hello_world_make_sprite": "Χρησιμοποιήστε αυτό το μπλοκ για να δημιουργήσετε ένα sprite.",
+          "hello_world_say": "Χρησιμοποιήστε αυτό το μπλοκ για να κάνετε sprites μιλήσει."
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Νέο μπλοκ*!",
+          "hello_world_new_block": "Νέο μπλοκ!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Χρησιμοποιήστε αυτό το μπλοκ για να ορίσετε ένα νέο φόντο."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Χρησιμοποιήστε αυτό το μπλοκ με μία από τις παρακάτω συμπεριφορές."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Κάντε κλικ εδώ για να εκτελέσετε τον κώδικα."
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Προσθέστε αυτό το μπλοκ συμβάντων στο χώρο εργασίας σας."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
+        },
+        "helloworld_emoji_location": {
+          "pin": "καρφίτσα"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "καρφίτσα"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_make_sprite": "Χρησιμοποιήστε αυτό το μπλοκ για να δημιουργήσετε ένα sprite.",
+          "hello_world_say": "Χρησιμοποιήστε αυτό το μπλοκ για να κάνετε sprites μιλήσει."
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Νέο μπλοκ*!",
+          "hello_world_new_block": "Νέο μπλοκ*!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Χρησιμοποιήστε αυτό το μπλοκ για να ορίσετε ένα νέο φόντο."
+        },
+        "helloworld_food_backgrounds_soccer-2022": {
+          "hw_background_location": "Χρησιμοποιήστε αυτό το μπλοκ για να ορίσετε ένα νέο φόντο."
+        },
+        "helloworld_food_backgrounds_space-2022": {
+          "hw_background_location": "Χρησιμοποιήστε αυτό το μπλοκ για να ορίσετε ένα νέο φόντο."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Χρησιμοποιήστε αυτό το μπλοκ με μία από τις παρακάτω συμπεριφορές."
+        },
+        "helloworld_food_behaviors_soccer-2022": {
+          "hello_world_behavior_blocks": "Χρησιμοποιήστε αυτό το μπλοκ με μία από τις παρακάτω συμπεριφορές."
+        },
+        "helloworld_food_behaviors_space-2022": {
+          "hello_world_behavior_blocks": "Χρησιμοποιήστε αυτό το μπλοκ με μία από τις παρακάτω συμπεριφορές."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Κάντε κλικ εδώ για να εκτελέσετε τον κώδικα."
+        },
+        "helloworld_food_click_soccer-2022": {
+          "hw_Run": "Κάντε κλικ εδώ για να εκτελέσετε τον κώδικα."
+        },
+        "helloworld_food_click_space-2022": {
+          "hw_Run": "Κάντε κλικ εδώ πρώτα!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Προσθέστε αυτό το μπλοκ συμβάντων στο χώρο εργασίας σας."
+        },
+        "helloworld_food_events_soccer-2022": {
+          "hello_world_click_hint": "Προσθέστε αυτό το μπλοκ συμβάντων στο χώρο εργασίας σας."
+        },
+        "helloworld_food_events_space-2022": {
+          "hello_world_click_hint": "Προσθέστε αυτό το μπλοκ συμβάντων στο χώρο εργασίας σας."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
+        },
+        "helloworld_food_freeplay_soccer-2022": {
+          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
+        },
+        "helloworld_food_freeplay_space-2022": {
+          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
+        },
+        "helloworld_food_location": {
+          "pin": "καρφίτσα"
+        },
+        "helloworld_food_location_soccer-2022": {
+          "pin": "καρφίτσα"
+        },
+        "helloworld_food_location_space-2022": {
+          "pin": "καρφίτσα"
+        },
+        "helloworld_food_multi": {
+          "pin": "καρφίτσα"
+        },
+        "helloworld_food_multi_soccer-2022": {
+          "pin": "καρφίτσα"
+        },
+        "helloworld_food_multi_space-2022": {
+          "pin": "καρφίτσα"
+        },
+        "helloworld_food_say": {
+          "hello_world_make_sprite": "Χρησιμοποιήστε αυτό το μπλοκ για να δημιουργήσετε ένα sprite.",
+          "hello_world_say": "Χρησιμοποιήστε αυτό το μπλοκ για να κάνετε sprites μιλήσει."
+        },
+        "helloworld_food_say_soccer-2022": {
+          "hello_world_make_sprite": "Χρησιμοποιήστε αυτό το μπλοκ για να δημιουργήσετε ένα sprite.",
+          "hello_world_say": "Χρησιμοποιήστε αυτό το μπλοκ για να κάνετε sprites μιλήσει."
+        },
+        "helloworld_food_say_space-2022": {
+          "hello_world_make_sprite": "Χρησιμοποιήστε αυτό το μπλοκ για να δημιουργήσετε ένα sprite.",
+          "hello_world_say": "Χρησιμοποιήστε αυτό το μπλοκ για να κάνετε sprites μιλήσει."
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Νέο μπλοκ*!",
+          "hello_world_new_block": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Νέο μπλοκ*!",
+          "hello_world_new_block": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Νέο μπλοκ*!",
+          "hello_world_new_block": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_sounds_space-2022": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Χρησιμοποιήστε αυτό το μπλοκ για να ορίσετε ένα νέο φόντο."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Χρησιμοποιήστε αυτό το μπλοκ με μία από τις παρακάτω συμπεριφορές."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Κάντε κλικ εδώ για να εκτελέσετε τον κώδικα."
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Προσθέστε αυτό το μπλοκ συμβάντων στο χώρο εργασίας σας."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Κάντε κλικ εδώ για να προσθέσετε κοστούμια στο έργο σας."
+        },
+        "helloworld_retro_location": {
+          "pin": "καρφίτσα"
+        },
+        "helloworld_retro_multi": {
+          "pin": "καρφίτσα"
+        },
+        "helloworld_retro_say": {
+          "hello_world_make_sprite": "Χρησιμοποιήστε αυτό το μπλοκ για να δημιουργήσετε ένα sprite.",
+          "hello_world_say": "Χρησιμοποιήστε αυτό το μπλοκ για να κάνετε sprites μιλήσει."
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Νέο μπλοκ*!",
+          "hello_world_new_block": "Νέο μπλοκ*!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "outbreak2": {
+          "minitoolbox": "Κάντε κλικ εδώ για να επεκτείνετε το κομμάτι παζλ.",
+          "pointerlocation": "Σύρετε ένα κομμάτι παζλ υποκειμένου εδώ."
+        },
+        "outbreak7": {
+          "costumes_callout": "Κάντε κλικ για να φτιάξετε νέα εμφάνιση"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Νέο μπλοκ*!",
+          "poetry_foreground": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Νέο μπλοκ*!",
+          "poetry_multiple_sprites": "Νέο μπλοκ*!",
+          "poetry_new_block": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_music": "Νέο μπλοκ*!",
+          "poetry_sound": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Νέο μπλοκ*!",
+          "poetry_sprite_stops": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Νέο μπλοκ*!",
+          "poetry_set_sprite": "Νέο μπλοκ*!"
         }
       }
     }

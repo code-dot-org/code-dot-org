@@ -2,389 +2,254 @@
   "se-FI": {
     "data": {
       "lessons": {
-        "flappy/Flappy Code": {
-          "name": "Flappy Koda"
-        },
-        "hourofcode/Maze": {
-          "name": "Labirynta"
-        },
-        "frozen/Artist": {
-          "name": "Kode Annain ja Elsain"
-        },
-        "iceage/Ice Age Play Lab": {
-          "name": "Jiekŋaáiggi Speallan-lab"
-        },
-        "artist/Artist": {
-          "name": "Dáiddár"
-        },
-        "gumball/Gumball Play Lab": {
-          "name": "Gumball Speallan-lab"
-        },
-        "starwars/Hour of Code 2015": {
-          "name": "Náste Soahti: Hukse Galáksa Kodemiin (JavaScript)"
-        },
-        "playlab/Play Lab": {
-          "name": "Speallan-lab"
-        },
-        "text-compression/Text Compression": {
-          "name": "TeakstaKomprimeren"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "infinity/Infinity": {
-          "name": "Disney Infinitiija Speallan-lab"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Kodendiibmu 2013"
-        },
-        "oceans/Oceans": {
-          "name": "AI Mearaide"
-        },
-        "k5-onlinepd-2019/Events": {
-          "name": "Dáhpáhusaid"
-        },
-        "k5-onlinepd-2019/Sprite Lab": {
-          "name": "Sprite-lab"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Dáhpáhus Stivrejuvvon Prográmmeren"
-        },
-        "K5-OnlinePD/Getting Started": {
-          "name": "Álgge"
-        },
-        "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "DihtorDiehtaga Vuođut"
-        },
-        "K5-OnlinePD/Looking Ahead": {
-          "name": "Geahča Ovddasguvlui"
-        },
-        "K5-OnlinePD/Mastering the Basics: Sequencing": {
-          "name": "Hálddašit Vuođđoáššiid: Sekveanssaiguin"
-        },
-        "K5-OnlinePD/Mastering the Basics: Loops": {
-          "name": "Hálddašit Vuođđoáššiid: Mohkit"
-        },
-        "K5-OnlinePD/Mastering the Basics: Conditionals": {
-          "name": "Hálddašit Vuođđoáššiid: Eavttut"
-        },
-        "K5-OnlinePD/Mastering the Basics: Functions": {
-          "name": "Hálddašit Vuođđoáššiid: Funkšuvnnat"
-        },
-        "K5-OnlinePD/Mastering the Basics: Events": {
-          "name": "Hálddašit Vuođđoáššiid: Dáhpáhusat"
-        },
-        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
-          "name": "Buoremus Práksisat Oahpahit DihtorDiehtaga"
-        },
-        "K5-OnlinePD/Planning": {
-          "name": "Pláne"
-        },
-        "K5-OnlinePD/Next Steps": {
-          "name": "Boahttevaš Lávkkit"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Várddus ja Bajásbidjan Instrukšuvnnat"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Oahppis Oahppái - Sáddet Bihtáid juhkkojuvvon Wire mielde"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Oahppis Oahppái - Sáddet Nummariid"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Oahppis Oahppái - Sáddet Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Njuolggosádde dieđuid"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Routarat ja čujuhusat"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Páhkat ja Luohttevašvuohta"
-        },
-        "netsim/Manual DNS": {
-          "name": "DNS Manuála"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Automahtalaš DNS-noda"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Friddjaspeallan Interneahtta Simulator"
-        },
-        "kodea-pd-2021/Getting Started": {
-          "name": "Álgge"
-        },
-        "kodea-pd-2021/Computer Science Fundamentals": {
-          "name": "DihtorDiehtaga Vuođut"
-        },
-        "kodea-pd-2021/Looking Ahead": {
-          "name": "Geahča Ovddasguvlui"
-        },
-        "kodea-pd-2021/Mastering the Basics: Sequencing": {
-          "name": "Hálddašit Vuođđoáššiid: Sekveanssaiguin"
-        },
-        "kodea-pd-2021/Mastering the Basics: Loops": {
-          "name": "Hálddašit Vuođđoáššiid: Mohkit"
-        },
-        "kodea-pd-2021/Mastering the Basics: Conditionals": {
-          "name": "Hálddašit Vuođđoáššiid: Eavttut"
-        },
-        "kodea-pd-2021/Mastering the Basics: Functions": {
-          "name": "Hálddašit Vuođđoáššiid: Funkšuvnnat"
-        },
-        "kodea-pd-2021/Mastering the Basics: Events": {
-          "name": "Hálddašit Vuođđoáššiid: Dáhpáhusat"
-        },
-        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
-          "name": "Buoremus Práksisat Oahpahit DihtorDiehtaga"
-        },
-        "kodea-pd-2021/Planning": {
-          "name": "Pláne"
-        },
-        "kodea-pd-2021/Next Steps": {
-          "name": "Boahttevaš Lávkkit"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Frekveansa Analysa"
-        },
-        "coursed-2022/Build a Star Wars Game": {
-          "name": "Ráhkat Náste Soahti Spealu"
-        },
-        "coursef-2022/AI For Oceans": {
-          "name": "AI Mearaide"
-        },
-        "coursee-2022/Private and Personal Information": {
-          "name": "Priváhta ja Persovnnlaš Dieđut"
-        },
-        "coursee-2022/Songwriting": {
-          "name": "Lávlagiid čállit"
-        },
-        "coursee-2022/Digital Sharing": {
-          "name": "Digitála Juohkin"
-        },
-        "courseb-2022/Getting Loopy": {
-          "name": "Šaddat Gáiggasin"
-        },
-        "courseb-2022/The Right App": {
-          "name": "Dat Rievttes App:a"
-        },
-        "coursea-2022/Happy Maps": {
-          "name": "Movttegis Kárttat"
-        },
-        "coursec-2022/The Big Event": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "coursec-2022/Picturing Data": {
-          "name": "Presenteret Dátaid"
-        },
-        "coursec-2022/Binary Bracelets": {
-          "name": "Binára Giehtabáttit"
-        },
-        "csd1-2022/Intro to Problem Solving": {
+        "csd1-2017/Intro to Problem Solving": {
           "name": "Láidehus ČuolbmaČoavdimii"
         },
-        "csd1-2022/Exploring Problem Solving": {
+        "csd1-2017/Exploring Problem Solving": {
           "name": "Vásihit ČuolbmaČoavdima"
         },
-        "csd1-2022/Input and Output": {
+        "csd1-2017/Input and Output": {
           "name": "Input ja Output"
         },
-        "csd1-2022/Processing": {
+        "csd1-2017/Processing": {
           "name": "Gieđahallan"
         },
-        "csd1-2022/Storage": {
+        "csd1-2017/Storage": {
           "name": "Vuorká"
         },
-        "csd1-2022/Project - Propose an App": {
+        "csd1-2017/Apps and Problem Solving": {
+          "name": "App:at ja ČuolbmaČoavdin"
+        },
+        "csd1-2017/Project - Propose an App": {
           "name": "Prošeakta - Evttohit App:a"
         },
-        "csd3-2022/Programming for Entertainment": {
-          "name": "Programmere Guoimmuheami"
+        "csd2-2017/Exploring Websites": {
+          "name": "Suokkardallat Neahttasiidduid"
         },
-        "csd3-2022/Plotting Shapes": {
-          "name": "Plottet Hámiid"
+        "csd2-2017/Websites for Expression ": {
+          "name": "Neahttasiiddut Dadjamiidda"
         },
-        "csd3-2022/Drawing in Game Lab": {
-          "name": "Tevdnet SpeallanLáb:as"
-        },
-        "csd3-2022/Sprites": {
-          "name": "Sprite:at"
-        },
-        "csd3-2022/Sprite Movement": {
-          "name": "Sprite Lihkadeapmi"
-        },
-        "csd3-2022/Keyboard Input": {
-          "name": "Boallobeavddi Input"
-        },
-        "csd3-2022/Project - Interactive Card": {
-          "name": "Prošeakta  - Interaktiivva Koarta"
-        },
-        "csd3-2022/Complex Sprite Movement": {
-          "name": "Kompleaksa Sprite Lihkastagat"
-        },
-        "csd3-2022/Collisions": {
-          "name": "Oktiibeaškkeheamit"
-        },
-        "csd3-2022/The Game Design Process": {
-          "name": "Spealu Designa Proseassa"
-        },
-        "csd3-2022/Using the Game Design Process": {
-          "name": "Geavat Spealu Designa Proseassa"
-        },
-        "csd3-2022/Project - Design a Game": {
-          "name": "Prošeakta  - Designe Spealu"
-        },
-        "csd2-2022/Intro to HTML": {
+        "csd2-2017/Intro to HTML": {
           "name": "Láidehus HTML:ii"
         },
-        "csd2-2022/Headings": {
+        "csd2-2017/Headings": {
           "name": "Bajilčállagat"
         },
-        "csd2-2022/Digital Footprint": {
+        "csd2-2017/Digital Footprint": {
           "name": "Digitála Luodda"
         },
-        "csd2-2022/Styling Text with CSS": {
+        "csd2-2017/Intellectual Property and Images": {
+          "name": "Dahkkivuoigatvuohta ja Govat"
+        },
+        "csd2-2017/Clean Code and Debugging": {
+          "name": "Ráidne Koda ja Vihkeohcama"
+        },
+        "csd2-2017/Project - Multi-Page Websites": {
+          "name": "Prošeakta - Máŋgga-Siidosaš Neahttasiiddut"
+        },
+        "csd2-2017/Styling Text with CSS": {
           "name": "Stylet Teavstta CSS:ain"
         },
-        "csd2-2022/Styling Elements with CSS": {
+        "csd2-2017/Styling Elements with CSS": {
           "name": "Stylet Elemeanttaid CSS:ain"
         },
-        "csd4-2022/Understanding Your User": {
+        "csd2-2017/Sources and Search Engines": {
+          "name": "Gáldut ja OhcanMutuvrrat"
+        },
+        "csd2-2017/RGB Colors and Classes": {
+          "name": "RGB Ivnnit ja Klássat"
+        },
+        "csd2-2017/Project - Personal Portfolio Website": {
+          "name": "Prošeakta - Persovnnalaš Portefolie Neahttasiidu"
+        },
+        "csd3-2017/Programming for Entertainment": {
+          "name": "Programmere Guoimmuheami"
+        },
+        "csd3-2017/Plotting Shapes": {
+          "name": "Plottet Hámiid"
+        },
+        "csd3-2017/Drawing in Game Lab": {
+          "name": "Tevdnet SpeallanLáb:as"
+        },
+        "csd3-2017/Shapes and Randomization": {
+          "name": "Hámit ja  ja Sahtedohko"
+        },
+        "csd3-2017/Sprites": {
+          "name": "Sprite:at"
+        },
+        "csd3-2017/The Counter Pattern Unplugged": {
+          "name": "Lohkan Minsttar Neahtahaga"
+        },
+        "csd3-2017/Sprite Movement": {
+          "name": "Sprite Lihkadeapmi"
+        },
+        "csd3-2017/Booleans Unplugged": {
+          "name": "Boolána Neahtahaga"
+        },
+        "csd3-2017/Keyboard Input": {
+          "name": "Boallobeavddi Input"
+        },
+        "csd3-2017/Other Forms of Input": {
+          "name": "Eará Input vuogit"
+        },
+        "csd3-2017/Project - Interactive Card": {
+          "name": "Prošeakta  - Interaktiivva Koarta"
+        },
+        "csd3-2017/Complex Sprite Movement": {
+          "name": "Kompleaksa Sprite Lihkastagat"
+        },
+        "csd3-2017/Collisions": {
+          "name": "Oktiibeaškkeheamit"
+        },
+        "csd3-2017/The Game Design Process": {
+          "name": "Spealu Designa Proseassa"
+        },
+        "csd3-2017/Using the Game Design Process": {
+          "name": "Geavat Spealu Designa Proseassa"
+        },
+        "csd3-2017/Project - Design a Game": {
+          "name": "Prošeakta  - Designe Spealu"
+        },
+        "csd4-2017/Analysis of Design": {
+          "name": "Analyseret Designa"
+        },
+        "csd4-2017/Understanding Your User": {
           "name": "Ipmirdit Du Geavaheaddji"
         },
-        "csd4-2022/Designing Apps for Good": {
+        "csd4-2017/User-Centered Design Micro Activity": {
+          "name": "GeavaheaddjeStivrejuvvon Designa Mikrodoaibma"
+        },
+        "csd4-2017/Designing Apps for Good": {
           "name": "Designet App:aid Buorrin"
         },
-        "csd4-2022/Market Research": {
+        "csd4-2017/Market Research": {
           "name": "MárkanIskkadeapmi"
         },
-        "csd4-2022/Prototype Testing": {
+        "csd4-2017/Paper Prototypes": {
+          "name": "BáberPrototyhpat"
+        },
+        "csd4-2017/Prototype Testing": {
           "name": "Prototyhpa Teasten"
         },
-        "csd6-2022/Making Music": {
+        "csd6-2017/Project: Make a Game__": {
+          "name": "Prošeakta: Ráhkat Spealu"
+        },
+        "csd6-2017/Making Music_": {
           "name": "Ráhkat Musihka"
         },
-        "csd7-2022/Survey Planning": {
-          "name": "Designe Data Čoakkaldaga"
+        "coursea-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Duohta-máilmmi Algoritmmat: Gilvve Siepmana"
         },
-        "courseb-2018/Your Digital Footprint": {
-          "name": "Du Digitála Luodda"
+        "courseb-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Duohta-máilmmi Algoritmmat: Gilvve Siepmana"
         },
-        "courseb-2018/Copyright and Creativity": {
-          "name": "Lea Buorre Ráhkadit ja Speallat Vuoiggalaččat"
+        "courseb-2017/Loops: My Loopy Robotic Friends": {
+          "name": "Mohkit: Mu Mohkke Robota Olbmát"
         },
-        "coursea-2018/Programming: Happy Maps": {
-          "name": "Movttegis Kárttat"
+        "coursec-2017/Real-life Algorithms: Paper Planes": {
+          "name": "Duohta-máilmmi Algoritmmat: BáberGirdit"
         },
-        "coursea-2018/Going Places Safely": {
-          "name": "Mannat Sihkkaris Sajiide "
+        "coursed-2017/Algorithms: Graph Paper Programming": {
+          "name": "Programmeren: Gráfa Bábir Programmeren"
         },
-        "coursed-2018/Digital Citizenship": {
-          "name": "Digitála Stáhtaborgárvuohta"
-        },
-        "coursed-2018/Unplugged: Binary": {
-          "name": "Binára Govat"
-        },
-        "coursef-2018/Building a Foundation": {
+        "coursee-2017/Building a Foundation": {
           "name": "Hukset Vuođu"
         },
-        "coursef-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Mu Mohkke Robota Olbmát"
+        "coursee-2017/Loops: My Loopy Robotic Friends": {
+          "name": "Mohkit: Mu Mohkke Robota Olbmát"
         },
-        "coursef-2018/Envelope Variables": {
-          "name": "Konvoluhtta Variábelat"
-        },
-        "coursef-2018/For Loop Fun": {
-          "name": "Suohttasat Mohkiid váste"
-        },
-        "coursef-2018/Explore Project Ideas": {
-          "name": "Suokkardala ProšeaktaIdeaid"
-        },
-        "express-2018/Loops: Getting Loopy": {
-          "name": "Šaddat Gáiggasin"
-        },
-        "express-2018/Functions: Songwriting": {
-          "name": "Lávlagiid čállit"
-        },
-        "express-2018/Determine the Concept": {
-          "name": "Mearrit Konseaptta"
-        },
-        "express-2018/Events: The Big Event": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "express-2018/Envelope Variables": {
-          "name": "Konvoluhtta Variábelat"
-        },
-        "express-2018/For Loop Fun": {
-          "name": "Suohttasat Mohkiid váste"
-        },
-        "express-2018/Explore Project Ideas": {
-          "name": "Suokkardala ProšeaktaIdeaid"
-        },
-        "express-2018/Binary Bracelets": {
-          "name": "Binára Giehtabáttit"
-        },
-        "express-2018/Unplugged: Binary": {
-          "name": "Binára Govat"
-        },
-        "express-2018/Crowdsourcing": {
-          "name": "Joavkočohkken"
-        },
-        "coursee-2018/Building a Foundation": {
-          "name": "Hukset Vuođu"
-        },
-        "coursee-2018/Loops: My Loopy Robotic Friends": {
-          "name": "Mu Mohkke Robota Olbmát"
-        },
-        "coursee-2018/Private and Personal Information": {
-          "name": "Priváhta ja Persovnnlaš Dieđut"
-        },
-        "coursee-2018/Build a Star Wars Game": {
+        "coursee-2017/Build a Star Wars Game": {
           "name": "Ráhkat Náste Soahti Spealu"
         },
-        "coursee-2018/Functions: Songwriting": {
-          "name": "Lávlagiid čállit"
-        },
-        "coursee-2018/Copyright and Creativity": {
-          "name": "Digitála Juohkin"
-        },
-        "coursee-2018/Determine the Concept": {
+        "coursee-2017/Determine the Concept": {
           "name": "Mearrit Konseaptta"
         },
-        "coursee-2018/Explore Project Ideas": {
+        "coursee-2017/Explore Project Ideas": {
           "name": "Suokkardala ProšeaktaIdeaid"
         },
-        "coursee-2018/Crowdsourcing": {
-          "name": "Joavkočohkken"
-        },
-        "coursec-2018/Building a Foundation": {
+        "coursef-2017/Building a Foundation": {
           "name": "Hukset Vuođu"
         },
-        "coursec-2018/Loops: Getting Loopy": {
-          "name": "Šaddat Gáiggasin"
+        "coursef-2017/Loops: My Loopy Robotic Friends": {
+          "name": "Mohkit: Mu Mohkke Robota Olbmát"
         },
-        "coursec-2018/Events: The Big Event": {
-          "name": "Stuora Dáhpáhus"
+        "coursef-2017/Explore Project Ideas": {
+          "name": "Suokkardala ProšeaktaIdeaid"
         },
-        "coursec-2018/Binary Bracelets": {
-          "name": "Binára Giehtabáttit"
+        "express-2017/Algorithms: Graph Paper Programming": {
+          "name": "Programmeren: Gráfa Bábir Programmeren"
         },
-        "pre-express-2018/Your Digital Footprint": {
-          "name": "Du Digitála Luodda"
+        "express-2017/Building a Foundation": {
+          "name": "Hukset Vuođu"
         },
-        "pre-express-2018/Copyright and Creativity": {
-          "name": "Lea Buorre Ráhkadit ja Speallat Vuoiggalaččat"
+        "express-2017/Loops: My Loopy Robotic Friends": {
+          "name": "Mohkit: Mu Mohkke Robota Olbmát"
         },
-        "pre-express-2018/Spelling Bee": {
+        "express-2017/Explore Project Ideas": {
+          "name": "Suokkardala ProšeaktaIdeaid"
+        },
+        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
+          "name": "Duohta-máilmmi Algoritmmat: Gilvve Siepmana"
+        },
+        "pre-express-2017/Loops: My Loopy Robotic Friends": {
+          "name": "Mohkit: Mu Mohkke Robota Olbmát"
+        },
+        "pre-express-2017/Spelling Bee": {
           "name": "Stávengilvu"
+        },
+        "csd1-2018/Intro to Problem Solving": {
+          "name": "Láidehus ČuolbmaČoavdimii"
+        },
+        "csd1-2018/Exploring Problem Solving": {
+          "name": "Vásihit ČuolbmaČoavdima"
+        },
+        "csd1-2018/Input and Output": {
+          "name": "Input ja Output"
+        },
+        "csd1-2018/Processing": {
+          "name": "Gieđahallan"
+        },
+        "csd1-2018/Project - Propose an App": {
+          "name": "Prošeakta - Evttohit App:a"
+        },
+        "csd2-2018/Exploring Websites": {
+          "name": "Suokkardallat Neahttasiidduid"
+        },
+        "csd2-2018/Websites for Expression ": {
+          "name": "Neahttasiiddut Dadjamiidda"
+        },
+        "csd2-2018/Intro to HTML": {
+          "name": "Láidehus HTML:ii"
+        },
+        "csd2-2018/Headings": {
+          "name": "Bajilčállagat"
+        },
+        "csd2-2018/Digital Footprint": {
+          "name": "Digitála Luodda"
+        },
+        "csd2-2018/Intellectual Property and Images": {
+          "name": "Dahkkivuoigatvuohta ja Govat"
+        },
+        "csd2-2018/Clean Code and Debugging": {
+          "name": "Ráidne Koda ja Vihkeohcama"
+        },
+        "csd2-2018/Project - Multi-Page Websites": {
+          "name": "Prošeakta - Máŋgga-Siidosaš Neahttasiiddut"
+        },
+        "csd2-2018/Styling Text with CSS": {
+          "name": "Stylet Teavstta CSS:ain"
+        },
+        "csd2-2018/Styling Elements with CSS": {
+          "name": "Stylet Elemeanttaid CSS:ain"
+        },
+        "csd2-2018/Sources and Search Engines": {
+          "name": "Gáldut ja OhcanMutuvrrat"
+        },
+        "csd2-2018/RGB Colors and Classes": {
+          "name": "RGB Ivnnit ja Klássat"
+        },
+        "csd2-2018/Project - Personal Portfolio Website": {
+          "name": "Prošeakta - Persovnnalaš Portefolie Neahttasiidu"
         },
         "csd3-2018/Programming for Entertainment": {
           "name": "Programmere Guoimmuheami"
@@ -434,12 +299,6 @@
         "csd3-2018/Project - Design a Game": {
           "name": "Prošeakta  - Designe Spealu"
         },
-        "csd6-2018/Project: Make a Game": {
-          "name": "Prošeakta: Ráhkat Spealu"
-        },
-        "csd6-2018/Making Music": {
-          "name": "Ráhkat Musihka"
-        },
         "csd4-2018/Analysis of Design": {
           "name": "Analyseret Designa"
         },
@@ -461,194 +320,122 @@
         "csd4-2018/Prototype Testing": {
           "name": "Prototyhpa Teasten"
         },
-        "csd2-2018/Exploring Websites": {
-          "name": "Suokkardallat Neahttasiidduid"
-        },
-        "csd2-2018/Websites for Expression ": {
-          "name": "Neahttasiiddut Dadjamiidda"
-        },
-        "csd2-2018/Intro to HTML": {
-          "name": "Láidehus HTML:ii"
-        },
-        "csd2-2018/Headings": {
-          "name": "Bajilčállagat"
-        },
-        "csd2-2018/Digital Footprint": {
-          "name": "Digitála Luodda"
-        },
-        "csd2-2018/Intellectual Property and Images": {
-          "name": "Dahkkivuoigatvuohta ja Govat"
-        },
-        "csd2-2018/Clean Code and Debugging": {
-          "name": "Ráidne Koda ja Vihkeohcama"
-        },
-        "csd2-2018/Project - Multi-Page Websites": {
-          "name": "Prošeakta - Máŋgga-Siidosaš Neahttasiiddut"
-        },
-        "csd2-2018/Styling Text with CSS": {
-          "name": "Stylet Teavstta CSS:ain"
-        },
-        "csd2-2018/Styling Elements with CSS": {
-          "name": "Stylet Elemeanttaid CSS:ain"
-        },
-        "csd2-2018/Sources and Search Engines": {
-          "name": "Gáldut ja OhcanMutuvrrat"
-        },
-        "csd2-2018/RGB Colors and Classes": {
-          "name": "RGB Ivnnit ja Klássat"
-        },
-        "csd2-2018/Project - Personal Portfolio Website": {
-          "name": "Prošeakta - Persovnnalaš Portefolie Neahttasiidu"
-        },
-        "csd1-2018/Intro to Problem Solving": {
-          "name": "Láidehus ČuolbmaČoavdimii"
-        },
-        "csd1-2018/Exploring Problem Solving": {
-          "name": "Vásihit ČuolbmaČoavdima"
-        },
-        "csd1-2018/Input and Output": {
-          "name": "Input ja Output"
-        },
-        "csd1-2018/Processing": {
-          "name": "Gieđahallan"
-        },
-        "csd1-2018/Project - Propose an App": {
-          "name": "Prošeakta - Evttohit App:a"
-        },
-        "coursea-2019/Going Places Safely": {
-          "name": "Mannat Sihkkaris Sajiide "
-        },
-        "coursea-2019/Programming: Happy Maps": {
-          "name": "Movttegis Kárttat"
-        },
-        "courseb-2019/Your Digital Footprint": {
-          "name": "Du Digitála Luodda"
-        },
-        "courseb-2019/Loops: Getting Loopy": {
-          "name": "Šaddat Gáiggasin"
-        },
-        "courseb-2019/The Right App": {
-          "name": "Dat Rievttes App:a"
-        },
-        "coursed-2019/Build a Star Wars Game": {
-          "name": "Ráhkat Náste Soahti Spealu"
-        },
-        "coursed-2019/Unplugged: Binary": {
-          "name": "Binára Govat"
-        },
-        "coursed-2019/Digital Citizenship": {
-          "name": "Digitála Stáhtaborgárvuohta"
-        },
-        "coursef-2019/Envelope Variables": {
-          "name": "Konvoluhtta Variábelat"
-        },
-        "coursef-2019/For Loop Fun": {
-          "name": "Suohttasat Mohkiid váste"
-        },
-        "coursef-2019/Crowdsourcing": {
-          "name": "Joavkočohkken"
-        },
-        "coursef-2019/Digital Sharing": {
-          "name": "Digitála Juohkin"
-        },
-        "coursee-2019/Simon Says": {
-          "name": "Simmon Sihtá"
-        },
-        "coursee-2019/Private and Personal Information": {
-          "name": "Priváhta ja Persovnnlaš Dieđut"
-        },
-        "coursee-2019/Functions: Songwriting": {
-          "name": "Lávlagiid čállit"
-        },
-        "coursec-2019/Powerful Passwords": {
-          "name": "Vuoibmás Čoavddasánit"
-        },
-        "coursec-2019/Binary Bracelets": {
-          "name": "Binára Giehtabáttit"
-        },
-        "coursec-2019/Events: The Big Event": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "coursec-2019/Picturing Data": {
-          "name": "Presenteret Dátaid"
-        },
-        "pre-express-2019/Spelling Bee": {
-          "name": "Stávengilvu"
-        },
-        "csd3-2019/Programming for Entertainment": {
-          "name": "Programmere Guoimmuheami"
-        },
-        "csd3-2019/Plotting Shapes": {
-          "name": "Plottet Hámiid"
-        },
-        "csd3-2019/Drawing in Game Lab": {
-          "name": "Tevdnet SpeallanLáb:as"
-        },
-        "csd3-2019/Shapes and Randomization": {
-          "name": "Hámit ja  ja Sahtedohko"
-        },
-        "csd3-2019/Sprites": {
-          "name": "Sprite:at"
-        },
-        "csd3-2019/The Counter Pattern Unplugged": {
-          "name": "Lohkan Minsttar Neahtahaga"
-        },
-        "csd3-2019/Sprite Movement": {
-          "name": "Sprite Lihkadeapmi"
-        },
-        "csd3-2019/Booleans Unplugged": {
-          "name": "Boolána Neahtahaga"
-        },
-        "csd3-2019/Keyboard Input": {
-          "name": "Boallobeavddi Input"
-        },
-        "csd3-2019/Other Forms of Input": {
-          "name": "Eará Input vuogit"
-        },
-        "csd3-2019/Project - Interactive Card": {
-          "name": "Prošeakta  - Interaktiivva Koarta"
-        },
-        "csd3-2019/Complex Sprite Movement": {
-          "name": "Kompleaksa Sprite Lihkastagat"
-        },
-        "csd3-2019/Collisions": {
-          "name": "Oktiibeaškkeheamit"
-        },
-        "csd3-2019/The Game Design Process": {
-          "name": "Spealu Designa Proseassa"
-        },
-        "csd3-2019/Using the Game Design Process": {
-          "name": "Geavat Spealu Designa Proseassa"
-        },
-        "csd3-2019/Project - Design a Game": {
-          "name": "Prošeakta  - Designe Spealu"
-        },
-        "csd6-2019/Project: Make a Game": {
+        "csd6-2018/Project: Make a Game": {
           "name": "Prošeakta: Ráhkat Spealu"
         },
-        "csd6-2019/Making Music": {
+        "csd6-2018/Making Music": {
           "name": "Ráhkat Musihka"
         },
-        "csd4-2019/Analysis of Design": {
-          "name": "Analyseret Designa"
+        "coursea-2018/Programming: Happy Maps": {
+          "name": "Movttegis Kárttat"
         },
-        "csd4-2019/Understanding Your User": {
-          "name": "Ipmirdit Du Geavaheaddji"
+        "coursea-2018/Going Places Safely": {
+          "name": "Mannat Sihkkaris Sajiide "
         },
-        "csd4-2019/User-Centered Design Micro Activity": {
-          "name": "GeavaheaddjeStivrejuvvon Designa Mikrodoaibma"
+        "courseb-2018/Your Digital Footprint": {
+          "name": "Du Digitála Luodda"
         },
-        "csd4-2019/Designing Apps for Good": {
-          "name": "Designet App:aid Buorrin"
+        "courseb-2018/Copyright and Creativity": {
+          "name": "Lea Buorre Ráhkadit ja Speallat Vuoiggalaččat"
         },
-        "csd4-2019/Market Research": {
-          "name": "MárkanIskkadeapmi"
+        "coursec-2018/Building a Foundation": {
+          "name": "Hukset Vuođu"
         },
-        "csd4-2019/Paper Prototypes": {
-          "name": "BáberPrototyhpat"
+        "coursec-2018/Loops: Getting Loopy": {
+          "name": "Šaddat Gáiggasin"
         },
-        "csd4-2019/Prototype Testing": {
-          "name": "Prototyhpa Teasten"
+        "coursec-2018/Events: The Big Event": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "coursec-2018/Binary Bracelets": {
+          "name": "Binára Giehtabáttit"
+        },
+        "coursed-2018/Digital Citizenship": {
+          "name": "Digitála Stáhtaborgárvuohta"
+        },
+        "coursed-2018/Unplugged: Binary": {
+          "name": "Binára Govat"
+        },
+        "coursee-2018/Building a Foundation": {
+          "name": "Hukset Vuođu"
+        },
+        "coursee-2018/Loops: My Loopy Robotic Friends": {
+          "name": "Mu Mohkke Robota Olbmát"
+        },
+        "coursee-2018/Private and Personal Information": {
+          "name": "Priváhta ja Persovnnlaš Dieđut"
+        },
+        "coursee-2018/Build a Star Wars Game": {
+          "name": "Ráhkat Náste Soahti Spealu"
+        },
+        "coursee-2018/Functions: Songwriting": {
+          "name": "Lávlagiid čállit"
+        },
+        "coursee-2018/Copyright and Creativity": {
+          "name": "Digitála Juohkin"
+        },
+        "coursee-2018/Determine the Concept": {
+          "name": "Mearrit Konseaptta"
+        },
+        "coursee-2018/Explore Project Ideas": {
+          "name": "Suokkardala ProšeaktaIdeaid"
+        },
+        "coursee-2018/Crowdsourcing": {
+          "name": "Joavkočohkken"
+        },
+        "coursef-2018/Building a Foundation": {
+          "name": "Hukset Vuođu"
+        },
+        "coursef-2018/Loops: My Loopy Robotic Friends": {
+          "name": "Mu Mohkke Robota Olbmát"
+        },
+        "coursef-2018/Envelope Variables": {
+          "name": "Konvoluhtta Variábelat"
+        },
+        "coursef-2018/For Loop Fun": {
+          "name": "Suohttasat Mohkiid váste"
+        },
+        "coursef-2018/Explore Project Ideas": {
+          "name": "Suokkardala ProšeaktaIdeaid"
+        },
+        "express-2018/Loops: Getting Loopy": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "express-2018/Functions: Songwriting": {
+          "name": "Lávlagiid čállit"
+        },
+        "express-2018/Determine the Concept": {
+          "name": "Mearrit Konseaptta"
+        },
+        "express-2018/Events: The Big Event": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "express-2018/Envelope Variables": {
+          "name": "Konvoluhtta Variábelat"
+        },
+        "express-2018/For Loop Fun": {
+          "name": "Suohttasat Mohkiid váste"
+        },
+        "express-2018/Explore Project Ideas": {
+          "name": "Suokkardala ProšeaktaIdeaid"
+        },
+        "express-2018/Binary Bracelets": {
+          "name": "Binára Giehtabáttit"
+        },
+        "express-2018/Unplugged: Binary": {
+          "name": "Binára Govat"
+        },
+        "express-2018/Crowdsourcing": {
+          "name": "Joavkočohkken"
+        },
+        "pre-express-2018/Your Digital Footprint": {
+          "name": "Du Digitála Luodda"
+        },
+        "pre-express-2018/Copyright and Creativity": {
+          "name": "Lea Buorre Ráhkadit ja Speallat Vuoiggalaččat"
+        },
+        "pre-express-2018/Spelling Bee": {
+          "name": "Stávengilvu"
         },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Láidehus ČuolbmaČoavdimii"
@@ -704,437 +491,509 @@
         "csd2-2019/Project - Personal Portfolio Website": {
           "name": "Prošeakta - Persovnnalaš Portefolie Neahttasiidu"
         },
-        "coursef-2017/Building a Foundation": {
-          "name": "Hukset Vuođu"
-        },
-        "coursef-2017/Loops: My Loopy Robotic Friends": {
-          "name": "Mohkit: Mu Mohkke Robota Olbmát"
-        },
-        "coursef-2017/Explore Project Ideas": {
-          "name": "Suokkardala ProšeaktaIdeaid"
-        },
-        "coursea-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Duohta-máilmmi Algoritmmat: Gilvve Siepmana"
-        },
-        "pre-express-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Duohta-máilmmi Algoritmmat: Gilvve Siepmana"
-        },
-        "pre-express-2017/Loops: My Loopy Robotic Friends": {
-          "name": "Mohkit: Mu Mohkke Robota Olbmát"
-        },
-        "pre-express-2017/Spelling Bee": {
-          "name": "Stávengilvu"
-        },
-        "coursee-2017/Building a Foundation": {
-          "name": "Hukset Vuođu"
-        },
-        "coursee-2017/Loops: My Loopy Robotic Friends": {
-          "name": "Mohkit: Mu Mohkke Robota Olbmát"
-        },
-        "coursee-2017/Build a Star Wars Game": {
-          "name": "Ráhkat Náste Soahti Spealu"
-        },
-        "coursee-2017/Determine the Concept": {
-          "name": "Mearrit Konseaptta"
-        },
-        "coursee-2017/Explore Project Ideas": {
-          "name": "Suokkardala ProšeaktaIdeaid"
-        },
-        "coursec-2017/Real-life Algorithms: Paper Planes": {
-          "name": "Duohta-máilmmi Algoritmmat: BáberGirdit"
-        },
-        "courseb-2017/Real-life Algorithms: Plant a Seed": {
-          "name": "Duohta-máilmmi Algoritmmat: Gilvve Siepmana"
-        },
-        "courseb-2017/Loops: My Loopy Robotic Friends": {
-          "name": "Mohkit: Mu Mohkke Robota Olbmát"
-        },
-        "coursed-2017/Algorithms: Graph Paper Programming": {
-          "name": "Programmeren: Gráfa Bábir Programmeren"
-        },
-        "express-2017/Algorithms: Graph Paper Programming": {
-          "name": "Programmeren: Gráfa Bábir Programmeren"
-        },
-        "express-2017/Building a Foundation": {
-          "name": "Hukset Vuođu"
-        },
-        "express-2017/Loops: My Loopy Robotic Friends": {
-          "name": "Mohkit: Mu Mohkke Robota Olbmát"
-        },
-        "express-2017/Explore Project Ideas": {
-          "name": "Suokkardala ProšeaktaIdeaid"
-        },
-        "csd3-2017/Programming for Entertainment": {
+        "csd3-2019/Programming for Entertainment": {
           "name": "Programmere Guoimmuheami"
         },
-        "csd3-2017/Plotting Shapes": {
+        "csd3-2019/Plotting Shapes": {
           "name": "Plottet Hámiid"
         },
-        "csd3-2017/Drawing in Game Lab": {
+        "csd3-2019/Drawing in Game Lab": {
           "name": "Tevdnet SpeallanLáb:as"
         },
-        "csd3-2017/Shapes and Randomization": {
+        "csd3-2019/Shapes and Randomization": {
           "name": "Hámit ja  ja Sahtedohko"
         },
-        "csd3-2017/Sprites": {
+        "csd3-2019/Sprites": {
           "name": "Sprite:at"
         },
-        "csd3-2017/The Counter Pattern Unplugged": {
+        "csd3-2019/The Counter Pattern Unplugged": {
           "name": "Lohkan Minsttar Neahtahaga"
         },
-        "csd3-2017/Sprite Movement": {
+        "csd3-2019/Sprite Movement": {
           "name": "Sprite Lihkadeapmi"
         },
-        "csd3-2017/Booleans Unplugged": {
+        "csd3-2019/Booleans Unplugged": {
           "name": "Boolána Neahtahaga"
         },
-        "csd3-2017/Keyboard Input": {
+        "csd3-2019/Keyboard Input": {
           "name": "Boallobeavddi Input"
         },
-        "csd3-2017/Other Forms of Input": {
+        "csd3-2019/Other Forms of Input": {
           "name": "Eará Input vuogit"
         },
-        "csd3-2017/Project - Interactive Card": {
+        "csd3-2019/Project - Interactive Card": {
           "name": "Prošeakta  - Interaktiivva Koarta"
         },
-        "csd3-2017/Complex Sprite Movement": {
+        "csd3-2019/Complex Sprite Movement": {
           "name": "Kompleaksa Sprite Lihkastagat"
         },
-        "csd3-2017/Collisions": {
+        "csd3-2019/Collisions": {
           "name": "Oktiibeaškkeheamit"
         },
-        "csd3-2017/The Game Design Process": {
+        "csd3-2019/The Game Design Process": {
           "name": "Spealu Designa Proseassa"
         },
-        "csd3-2017/Using the Game Design Process": {
+        "csd3-2019/Using the Game Design Process": {
           "name": "Geavat Spealu Designa Proseassa"
         },
-        "csd3-2017/Project - Design a Game": {
+        "csd3-2019/Project - Design a Game": {
           "name": "Prošeakta  - Designe Spealu"
         },
-        "csd6-2017/Project: Make a Game__": {
-          "name": "Prošeakta: Ráhkat Spealu"
-        },
-        "csd6-2017/Making Music_": {
-          "name": "Ráhkat Musihka"
-        },
-        "csd2-2017/Exploring Websites": {
-          "name": "Suokkardallat Neahttasiidduid"
-        },
-        "csd2-2017/Websites for Expression ": {
-          "name": "Neahttasiiddut Dadjamiidda"
-        },
-        "csd2-2017/Intro to HTML": {
-          "name": "Láidehus HTML:ii"
-        },
-        "csd2-2017/Headings": {
-          "name": "Bajilčállagat"
-        },
-        "csd2-2017/Digital Footprint": {
-          "name": "Digitála Luodda"
-        },
-        "csd2-2017/Intellectual Property and Images": {
-          "name": "Dahkkivuoigatvuohta ja Govat"
-        },
-        "csd2-2017/Clean Code and Debugging": {
-          "name": "Ráidne Koda ja Vihkeohcama"
-        },
-        "csd2-2017/Project - Multi-Page Websites": {
-          "name": "Prošeakta - Máŋgga-Siidosaš Neahttasiiddut"
-        },
-        "csd2-2017/Styling Text with CSS": {
-          "name": "Stylet Teavstta CSS:ain"
-        },
-        "csd2-2017/Styling Elements with CSS": {
-          "name": "Stylet Elemeanttaid CSS:ain"
-        },
-        "csd2-2017/Sources and Search Engines": {
-          "name": "Gáldut ja OhcanMutuvrrat"
-        },
-        "csd2-2017/RGB Colors and Classes": {
-          "name": "RGB Ivnnit ja Klássat"
-        },
-        "csd2-2017/Project - Personal Portfolio Website": {
-          "name": "Prošeakta - Persovnnalaš Portefolie Neahttasiidu"
-        },
-        "csd1-2017/Intro to Problem Solving": {
-          "name": "Láidehus ČuolbmaČoavdimii"
-        },
-        "csd1-2017/Exploring Problem Solving": {
-          "name": "Vásihit ČuolbmaČoavdima"
-        },
-        "csd1-2017/Input and Output": {
-          "name": "Input ja Output"
-        },
-        "csd1-2017/Processing": {
-          "name": "Gieđahallan"
-        },
-        "csd1-2017/Storage": {
-          "name": "Vuorká"
-        },
-        "csd1-2017/Apps and Problem Solving": {
-          "name": "App:at ja ČuolbmaČoavdin"
-        },
-        "csd1-2017/Project - Propose an App": {
-          "name": "Prošeakta - Evttohit App:a"
-        },
-        "csd4-2017/Analysis of Design": {
+        "csd4-2019/Analysis of Design": {
           "name": "Analyseret Designa"
         },
-        "csd4-2017/Understanding Your User": {
+        "csd4-2019/Understanding Your User": {
           "name": "Ipmirdit Du Geavaheaddji"
         },
-        "csd4-2017/User-Centered Design Micro Activity": {
+        "csd4-2019/User-Centered Design Micro Activity": {
           "name": "GeavaheaddjeStivrejuvvon Designa Mikrodoaibma"
         },
-        "csd4-2017/Designing Apps for Good": {
+        "csd4-2019/Designing Apps for Good": {
           "name": "Designet App:aid Buorrin"
         },
-        "csd4-2017/Market Research": {
+        "csd4-2019/Market Research": {
           "name": "MárkanIskkadeapmi"
         },
-        "csd4-2017/Paper Prototypes": {
+        "csd4-2019/Paper Prototypes": {
           "name": "BáberPrototyhpat"
         },
-        "csd4-2017/Prototype Testing": {
+        "csd4-2019/Prototype Testing": {
           "name": "Prototyhpa Teasten"
         },
-        "pixelation/Black & White Pixelation Tutorial": {
-          "name": "Čáhppes ja Vilges Neavvagat"
+        "csd6-2019/Project: Make a Game": {
+          "name": "Prošeakta: Ráhkat Spealu"
         },
-        "pixelation/Black & White Pixelation Freeplay": {
-          "name": "Čáhppes ja Vilges Pikseleren Friddjaspeallan"
+        "csd6-2019/Making Music": {
+          "name": "Ráhkat Musihka"
         },
-        "pixelation/Color Pixelation Tutorial": {
-          "name": "Ivdne Pikseleren Neavvagat"
-        },
-        "pixelation/Color Pixelation Examples": {
-          "name": "Ivdne Pikseleren Ovdamearkkat"
-        },
-        "pixelation/Color Pixelation Freeplay": {
-          "name": "Ivdne Pikseleren Friddjaspeallan"
-        },
-        "course4/Unplugged: Tangrams": {
-          "name": "Neahtahaga: Tangrámmat"
-        },
-        "course4/Maze and Bee": {
-          "name": "Labirynta ja Uvlu"
-        },
-        "course4/Artist": {
-          "name": "Dáiddár"
-        },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Neahtahaga: Konvoluhtta Variábelat"
-        },
-        "course4/Unplugged: Madlibs": {
-          "name": "Neahtahaga: Sátnestoahkan"
-        },
-        "course4/Artist: Variables": {
-          "name": "Dáiddár: Variábelat"
-        },
-        "course4/Play Lab: Variables": {
-          "name": "Speallan-lab: Variábelat"
-        },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Neahtahaga: Suohttasat Mohkiid vaste"
-        },
-        "course4/Bee: For Loops": {
-          "name": "Uvlu: Mohkiid vaste"
-        },
-        "course4/Artist: For Loops": {
-          "name": "Dáiddár: Mohkiid vaste"
-        },
-        "course4/Play Lab: For Loops": {
-          "name": "Speallan-lab: Mohkiide"
-        },
-        "course4/Artist: Functions": {
-          "name": "Dáiddár: Funkšuvnnat"
-        },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Neahtahaga: Lávlagiid čállit Paramehteriiguin"
-        },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Dáiddár: Funkšuvnnat main leat paramehterat"
-        },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Speallan-lab: Funkšuvnnat main leat paramehterat"
-        },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Uvlu: Funkšuvnnat main leat paramehterat"
-        },
-        "course4/Unplugged: Binary": {
-          "name": "Neahtahaga - Binára"
-        },
-        "course4/Artist Binary": {
-          "name": "Dáiddár Binára"
-        },
-        "course4/Super Challenge - Variables": {
-          "name": "Super Hástalus - Variábelat"
-        },
-        "course4/Super Challenge - For Loops": {
-          "name": "Super Hástalus - Mohkiid vaste"
-        },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Super Hástalus - Funkšuvnnat ja Paramehterat"
-        },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Ekstrema Hástalus - Viiddis"
-        },
-        "course2/Real-life Algorithms: Paper Planes": {
-          "name": "Duohta-máilmmi Algoritmmat: BáberGirdit"
-        },
-        "course2/Maze: Sequence": {
-          "name": "Labirynta: Sekveansa"
-        },
-        "course2/Artist: Sequence": {
-          "name": "Dáiddár: Sekveansa"
-        },
-        "course2/Getting Loopy": {
-          "name": "Šaddat Gáiggasin"
-        },
-        "course2/Maze: Loops": {
-          "name": "Labirynta: Mohkit"
-        },
-        "course2/Artist: Loops": {
-          "name": "Dáiddár: Mohkit"
-        },
-        "course2/Bee: Loops": {
-          "name": "Uvlu: Mohkit"
-        },
-        "course2/Bee: Debugging": {
-          "name": "Uvlu: Vihkeohcan"
-        },
-        "course2/Artist: Debugging": {
-          "name": "Dáiddár: Vihkeohcan"
-        },
-        "course2/Bee: Conditionals": {
-          "name": "Uvlu: Eavttut"
-        },
-        "course2/Binary Bracelets": {
-          "name": "Binára Giehtabáttit"
-        },
-        "course2/The Big Event": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "course2/Flappy": {
-          "name": "Flappy"
-        },
-        "course2/Studio: Create a Story": {
-          "name": "Speallan-lab: Ráhkat Muitalusa"
-        },
-        "course2/Your Digital Footprint": {
-          "name": "Du Digitála Luodda"
-        },
-        "course2/Artist: Nested Loops": {
-          "name": "Dáiddár: Mohkit Mohkiin"
-        },
-        "course3/Maze": {
-          "name": "Labirynta"
-        },
-        "course3/Artist": {
-          "name": "Dáiddár"
-        },
-        "course3/Functional Suncatchers": {
-          "name": "Doaibmi Beaivváščoaggit"
-        },
-        "course3/Artist: Functions": {
-          "name": "Dáiddár: Funkšuvnnat"
-        },
-        "course3/Bee: Functions": {
-          "name": "Uvlu: Funkšuvnnat"
-        },
-        "course3/Bee: Conditionals": {
-          "name": "Uvlu: Eavttut"
-        },
-        "course3/Maze: Conditionals": {
-          "name": "Labirynta: Eavttut"
-        },
-        "course3/Songwriting": {
-          "name": "Lávlagiid čállit"
-        },
-        "course3/Artist: Nested Loops": {
-          "name": "Dáiddár: Mohkit Mohkiin"
-        },
-        "course3/Farmer: While Loops": {
-          "name": "Boanda: Geardduhit-mohkiid"
-        },
-        "course3/Bee: Nested Loops": {
-          "name": "Uvlu: Mohkit Mohkiin"
-        },
-        "course3/Bee: Debugging": {
-          "name": "Uvlu: Vihkeohcan"
-        },
-        "course3/Studio: Create a Story": {
-          "name": "Speallan-lab: Ráhkat Muitalusa"
-        },
-        "course3/Studio: Create a Game": {
-          "name": "Speallan-lab: Ráhkat Spealu"
-        },
-        "course3/Internet": {
-          "name": "Interneahtta"
-        },
-        "course3/Crowdsourcing": {
-          "name": "Joavkočohkken"
-        },
-        "course3/Digital Citizenship": {
-          "name": "Digitála Stáhtaborgárvuohta"
-        },
-        "course3/Artist: Patterns": {
-          "name": "Dáiddár: Minsttarat"
-        },
-        "course1/Happy Maps": {
-          "name": "Movttegis Kárttat"
-        },
-        "course1/Move it, Move it": {
-          "name": "Sirdde, Sirdde"
-        },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Bihttáspeallu: Oahpa movt geassit ja luoitit"
-        },
-        "course1/Maze: Sequence": {
-          "name": "Labirynta: Sekveansa"
-        },
-        "course1/Maze: Debugging": {
-          "name": "Labirynta: Vihkeohcan"
-        },
-        "course1/Real-life Algorithms: Plant a Seed": {
-          "name": "Duohta-máilmmi Algoritmmat: Gilvve Siepmana"
-        },
-        "course1/Bee: Sequence": {
-          "name": "Uvlu: Sekveansa"
-        },
-        "course1/Artist: Sequence": {
-          "name": "Dáiddár: Sekveansa"
-        },
-        "course1/Building a Foundation": {
-          "name": "Hukset Vuođu"
-        },
-        "course1/Artist: Shapes": {
-          "name": "Dáiddár: Hámit"
-        },
-        "course1/Spelling Bee": {
-          "name": "Stávengilvu"
-        },
-        "course1/Getting Loopy": {
-          "name": "Šaddat Gáiggasin"
-        },
-        "course1/Maze: Loops": {
-          "name": "Labirynta: Mohkit"
-        },
-        "course1/Bee: Loops": {
-          "name": "Uvlu: Mohkit"
-        },
-        "course1/The Big Event": {
-          "name": "Stuora Dáhpáhus"
-        },
-        "course1/Studio: Create a Story": {
-          "name": "Speallan-lab: Ráhkat Muitalusa"
-        },
-        "course1/Going Places Safely": {
+        "coursea-2019/Going Places Safely": {
           "name": "Mannat Sihkkaris Sajiide "
         },
-        "course1/Artist: Loops": {
-          "name": "Dáiddár: Mohkit"
+        "coursea-2019/Programming: Happy Maps": {
+          "name": "Movttegis Kárttat"
+        },
+        "courseb-2019/Your Digital Footprint": {
+          "name": "Du Digitála Luodda"
+        },
+        "courseb-2019/Loops: Getting Loopy": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "courseb-2019/The Right App": {
+          "name": "Dat Rievttes App:a"
+        },
+        "coursec-2019/Powerful Passwords": {
+          "name": "Vuoibmás Čoavddasánit"
+        },
+        "coursec-2019/Binary Bracelets": {
+          "name": "Binára Giehtabáttit"
+        },
+        "coursec-2019/Events: The Big Event": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "coursec-2019/Picturing Data": {
+          "name": "Presenteret Dátaid"
+        },
+        "coursed-2019/Build a Star Wars Game": {
+          "name": "Ráhkat Náste Soahti Spealu"
+        },
+        "coursed-2019/Unplugged: Binary": {
+          "name": "Binára Govat"
+        },
+        "coursed-2019/Digital Citizenship": {
+          "name": "Digitála Stáhtaborgárvuohta"
+        },
+        "coursee-2019/Simon Says": {
+          "name": "Simmon Sihtá"
+        },
+        "coursee-2019/Private and Personal Information": {
+          "name": "Priváhta ja Persovnnlaš Dieđut"
+        },
+        "coursee-2019/Functions: Songwriting": {
+          "name": "Lávlagiid čállit"
+        },
+        "coursef-2019/Envelope Variables": {
+          "name": "Konvoluhtta Variábelat"
+        },
+        "coursef-2019/For Loop Fun": {
+          "name": "Suohttasat Mohkiid váste"
+        },
+        "coursef-2019/Crowdsourcing": {
+          "name": "Joavkočohkken"
+        },
+        "coursef-2019/Digital Sharing": {
+          "name": "Digitála Juohkin"
+        },
+        "pre-express-2019/Spelling Bee": {
+          "name": "Stávengilvu"
+        },
+        "coursea-2020/Programming: Happy Maps": {
+          "name": "Movttegis Kárttat"
+        },
+        "courseb-2020/Loops: Getting Loopy": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "courseb-2020/The Right App": {
+          "name": "Dat Rievttes App:a"
+        },
+        "coursec-2020/Binary Bracelets": {
+          "name": "Binára Giehtabáttit"
+        },
+        "coursec-2020/Events: The Big Event": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "coursec-2020/Picturing Data": {
+          "name": "Presenteret Dátaid"
+        },
+        "coursed-2020/Build a Star Wars Game": {
+          "name": "Ráhkat Náste Soahti Spealu"
+        },
+        "coursed-2020/Unplugged: Binary": {
+          "name": "Binára Govat"
+        },
+        "coursee-2020/Simon Says": {
+          "name": "Simmon Sihtá"
+        },
+        "coursee-2020/Private and Personal Information": {
+          "name": "Priváhta ja Persovnnlaš Dieđut"
+        },
+        "coursee-2020/Digital Sharing": {
+          "name": "Digitála Juohkin"
+        },
+        "coursee-2020/Functions: Songwriting": {
+          "name": "Lávlagiid čállit"
+        },
+        "coursef-2020/Envelope Variables": {
+          "name": "Konvoluhtta Variábelat"
+        },
+        "coursef-2020/AI for Oceans": {
+          "name": "AI Mearaide"
+        },
+        "coursef-2020/For Loop Fun": {
+          "name": "Suohttasat Mohkiid váste"
+        },
+        "csd1-2021/Intro to Problem Solving": {
+          "name": "Láidehus ČuolbmaČoavdimii"
+        },
+        "csd1-2021/Exploring Problem Solving": {
+          "name": "Vásihit ČuolbmaČoavdima"
+        },
+        "csd1-2021/Input and Output": {
+          "name": "Input ja Output"
+        },
+        "csd1-2021/Processing": {
+          "name": "Gieđahallan"
+        },
+        "csd1-2021/Storage": {
+          "name": "Vuorká"
+        },
+        "csd1-2021/Project - Propose an App": {
+          "name": "Prošeakta - Evttohit App:a"
+        },
+        "csd2-2021/Intro to HTML": {
+          "name": "Láidehus HTML:ii"
+        },
+        "csd2-2021/Headings": {
+          "name": "Bajilčállagat"
+        },
+        "csd2-2021/Digital Footprint": {
+          "name": "Digitála Luodda"
+        },
+        "csd2-2021/Styling Text with CSS": {
+          "name": "Stylet Teavstta CSS:ain"
+        },
+        "csd2-2021/Styling Elements with CSS": {
+          "name": "Stylet Elemeanttaid CSS:ain"
+        },
+        "csd3-2021/Programming for Entertainment": {
+          "name": "Programmere Guoimmuheami"
+        },
+        "csd3-2021/Plotting Shapes": {
+          "name": "Plottet Hámiid"
+        },
+        "csd3-2021/Drawing in Game Lab": {
+          "name": "Tevdnet SpeallanLáb:as"
+        },
+        "csd3-2021/Sprites": {
+          "name": "Sprite:at"
+        },
+        "csd3-2021/Sprite Movement": {
+          "name": "Sprite Lihkadeapmi"
+        },
+        "csd3-2021/Keyboard Input": {
+          "name": "Boallobeavddi Input"
+        },
+        "csd3-2021/Project - Interactive Card": {
+          "name": "Prošeakta  - Interaktiivva Koarta"
+        },
+        "csd3-2021/Complex Sprite Movement": {
+          "name": "Kompleaksa Sprite Lihkastagat"
+        },
+        "csd3-2021/Collisions": {
+          "name": "Oktiibeaškkeheamit"
+        },
+        "csd3-2021/The Game Design Process": {
+          "name": "Spealu Designa Proseassa"
+        },
+        "csd3-2021/Using the Game Design Process": {
+          "name": "Geavat Spealu Designa Proseassa"
+        },
+        "csd3-2021/Project - Design a Game": {
+          "name": "Prošeakta  - Designe Spealu"
+        },
+        "csd4-2021/Understanding Your User": {
+          "name": "Ipmirdit Du Geavaheaddji"
+        },
+        "csd4-2021/Designing Apps for Good": {
+          "name": "Designet App:aid Buorrin"
+        },
+        "csd4-2021/Market Research": {
+          "name": "MárkanIskkadeapmi"
+        },
+        "csd4-2021/Prototype Testing": {
+          "name": "Prototyhpa Teasten"
+        },
+        "csd6-2021/Making Music": {
+          "name": "Ráhkat Musihka"
+        },
+        "csd7-2021/Survey Planning": {
+          "name": "Designe Data Čoakkaldaga"
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "name": "Movttegis Kárttat"
+        },
+        "courseb-2021/Loops: Getting Loopy": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "courseb-2021/The Right App": {
+          "name": "Dat Rievttes App:a"
+        },
+        "coursec-2021/Events: The Big Event": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "coursec-2021/Picturing Data": {
+          "name": "Presenteret Dátaid"
+        },
+        "coursec-2021/Binary Bracelets": {
+          "name": "Binára Giehtabáttit"
+        },
+        "coursed-2021/Build a Star Wars Game": {
+          "name": "Ráhkat Náste Soahti Spealu"
+        },
+        "coursee-2021/Private and Personal Information": {
+          "name": "Priváhta ja Persovnnlaš Dieđut"
+        },
+        "coursee-2021/Digital Sharing": {
+          "name": "Digitála Juohkin"
+        },
+        "coursee-2021/Functions: Songwriting": {
+          "name": "Lávlagiid čállit"
+        },
+        "coursef-2021/For Loop Fun": {
+          "name": "Suohttasat Mohkiid váste"
+        },
+        "coursef-2021/AI for Oceans": {
+          "name": "AI Mearaide"
+        },
+        "csd1-2022/Intro to Problem Solving": {
+          "name": "Láidehus ČuolbmaČoavdimii"
+        },
+        "csd1-2022/Exploring Problem Solving": {
+          "name": "Vásihit ČuolbmaČoavdima"
+        },
+        "csd1-2022/Input and Output": {
+          "name": "Input ja Output"
+        },
+        "csd1-2022/Processing": {
+          "name": "Gieđahallan"
+        },
+        "csd1-2022/Storage": {
+          "name": "Vuorká"
+        },
+        "csd1-2022/Project - Propose an App": {
+          "name": "Prošeakta - Evttohit App:a"
+        },
+        "csd2-2022/Intro to HTML": {
+          "name": "Láidehus HTML:ii"
+        },
+        "csd2-2022/Headings": {
+          "name": "Bajilčállagat"
+        },
+        "csd2-2022/Digital Footprint": {
+          "name": "Digitála Luodda"
+        },
+        "csd2-2022/Styling Text with CSS": {
+          "name": "Stylet Teavstta CSS:ain"
+        },
+        "csd2-2022/Styling Elements with CSS": {
+          "name": "Stylet Elemeanttaid CSS:ain"
+        },
+        "csd3-2022/Programming for Entertainment": {
+          "name": "Programmere Guoimmuheami"
+        },
+        "csd3-2022/Plotting Shapes": {
+          "name": "Plottet Hámiid"
+        },
+        "csd3-2022/Drawing in Game Lab": {
+          "name": "Tevdnet SpeallanLáb:as"
+        },
+        "csd3-2022/Sprites": {
+          "name": "Sprite:at"
+        },
+        "csd3-2022/Sprite Movement": {
+          "name": "Sprite Lihkadeapmi"
+        },
+        "csd3-2022/Keyboard Input": {
+          "name": "Boallobeavddi Input"
+        },
+        "csd3-2022/Project - Interactive Card": {
+          "name": "Prošeakta  - Interaktiivva Koarta"
+        },
+        "csd3-2022/Complex Sprite Movement": {
+          "name": "Kompleaksa Sprite Lihkastagat"
+        },
+        "csd3-2022/Collisions": {
+          "name": "Oktiibeaškkeheamit"
+        },
+        "csd3-2022/The Game Design Process": {
+          "name": "Spealu Designa Proseassa"
+        },
+        "csd3-2022/Using the Game Design Process": {
+          "name": "Geavat Spealu Designa Proseassa"
+        },
+        "csd3-2022/Project - Design a Game": {
+          "name": "Prošeakta  - Designe Spealu"
+        },
+        "csd4-2022/Understanding Your User": {
+          "name": "Ipmirdit Du Geavaheaddji"
+        },
+        "csd4-2022/Designing Apps for Good": {
+          "name": "Designet App:aid Buorrin"
+        },
+        "csd4-2022/Market Research": {
+          "name": "MárkanIskkadeapmi"
+        },
+        "csd4-2022/Prototype Testing": {
+          "name": "Prototyhpa Teasten"
+        },
+        "csd6-2022/Making Music": {
+          "name": "Ráhkat Musihka"
+        },
+        "csd7-2022/Survey Planning": {
+          "name": "Designe Data Čoakkaldaga"
+        },
+        "coursea-2022/Happy Maps": {
+          "name": "Movttegis Kárttat"
+        },
+        "courseb-2022/Getting Loopy": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "courseb-2022/The Right App": {
+          "name": "Dat Rievttes App:a"
+        },
+        "coursec-2022/The Big Event": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "coursec-2022/Picturing Data": {
+          "name": "Presenteret Dátaid"
+        },
+        "coursec-2022/Binary Bracelets": {
+          "name": "Binára Giehtabáttit"
+        },
+        "coursed-2022/Build a Star Wars Game": {
+          "name": "Ráhkat Náste Soahti Spealu"
+        },
+        "coursee-2022/Private and Personal Information": {
+          "name": "Priváhta ja Persovnnlaš Dieđut"
+        },
+        "coursee-2022/Songwriting": {
+          "name": "Lávlagiid čállit"
+        },
+        "coursee-2022/Digital Sharing": {
+          "name": "Digitála Juohkin"
+        },
+        "coursef-2022/AI For Oceans": {
+          "name": "AI Mearaide"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kodendiibmu 2013"
+        },
+        "artist/Artist": {
+          "name": "Dáiddár"
+        },
+        "flappy/Flappy Code": {
+          "name": "Flappy Koda"
+        },
+        "frozen/Artist": {
+          "name": "Kode Annain ja Elsain"
+        },
+        "gumball/Gumball Play Lab": {
+          "name": "Gumball Speallan-lab"
+        },
+        "hourofcode/Maze": {
+          "name": "Labirynta"
+        },
+        "iceage/Ice Age Play Lab": {
+          "name": "Jiekŋaáiggi Speallan-lab"
+        },
+        "infinity/Infinity": {
+          "name": "Disney Infinitiija Speallan-lab"
+        },
+        "oceans/Oceans": {
+          "name": "AI Mearaide"
+        },
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "playlab/Play Lab": {
+          "name": "Speallan-lab"
+        },
+        "starwars/Hour of Code 2015": {
+          "name": "Náste Soahti: Hukse Galáksa Kodemiin (JavaScript)"
+        },
+        "text-compression/Text Compression": {
+          "name": "TeakstaKomprimeren"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Dáhpáhus Stivrejuvvon Prográmmeren"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Frekveansa Analysa"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Várddus ja Bajásbidjan Instrukšuvnnat"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Oahppis Oahppái - Sáddet Bihtáid juhkkojuvvon Wire mielde"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Oahppis Oahppái - Sáddet Nummariid"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Oahppis Oahppái - Sáddet Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Njuolggosádde dieđuid"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routarat ja čujuhusat"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Páhkat ja Luohttevašvuohta"
+        },
+        "netsim/Manual DNS": {
+          "name": "DNS Manuála"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Automahtalaš DNS-noda"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Friddjaspeallan Interneahtta Simulator"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
         },
         "allthethings/Maze": {
           "name": "Labirynta"
@@ -1253,173 +1112,242 @@
         "allthethings/lesson-49": {
           "name": "Musihkka"
         },
-        "coursef-2021/For Loop Fun": {
-          "name": "Suohttasat Mohkiid váste"
-        },
-        "coursef-2021/AI for Oceans": {
-          "name": "AI Mearaide"
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "name": "Šaddat Gáiggasin"
-        },
-        "courseb-2021/The Right App": {
-          "name": "Dat Rievttes App:a"
-        },
-        "coursea-2021/Programming: Happy Maps": {
+        "course1/Happy Maps": {
           "name": "Movttegis Kárttat"
         },
-        "coursec-2021/Events: The Big Event": {
-          "name": "Stuora Dáhpáhus"
+        "course1/Move it, Move it": {
+          "name": "Sirdde, Sirdde"
         },
-        "coursec-2021/Picturing Data": {
-          "name": "Presenteret Dátaid"
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Bihttáspeallu: Oahpa movt geassit ja luoitit"
         },
-        "coursec-2021/Binary Bracelets": {
-          "name": "Binára Giehtabáttit"
+        "course1/Maze: Sequence": {
+          "name": "Labirynta: Sekveansa"
         },
-        "coursed-2021/Build a Star Wars Game": {
-          "name": "Ráhkat Náste Soahti Spealu"
+        "course1/Maze: Debugging": {
+          "name": "Labirynta: Vihkeohcan"
         },
-        "coursee-2021/Private and Personal Information": {
-          "name": "Priváhta ja Persovnnlaš Dieđut"
+        "course1/Real-life Algorithms: Plant a Seed": {
+          "name": "Duohta-máilmmi Algoritmmat: Gilvve Siepmana"
         },
-        "coursee-2021/Digital Sharing": {
-          "name": "Digitála Juohkin"
+        "course1/Bee: Sequence": {
+          "name": "Uvlu: Sekveansa"
         },
-        "coursee-2021/Functions: Songwriting": {
-          "name": "Lávlagiid čállit"
+        "course1/Artist: Sequence": {
+          "name": "Dáiddár: Sekveansa"
         },
-        "csd7-2021/Survey Planning": {
-          "name": "Designe Data Čoakkaldaga"
+        "course1/Building a Foundation": {
+          "name": "Hukset Vuođu"
         },
-        "csd4-2021/Understanding Your User": {
-          "name": "Ipmirdit Du Geavaheaddji"
+        "course1/Artist: Shapes": {
+          "name": "Dáiddár: Hámit"
         },
-        "csd4-2021/Designing Apps for Good": {
-          "name": "Designet App:aid Buorrin"
+        "course1/Spelling Bee": {
+          "name": "Stávengilvu"
         },
-        "csd4-2021/Market Research": {
-          "name": "MárkanIskkadeapmi"
-        },
-        "csd4-2021/Prototype Testing": {
-          "name": "Prototyhpa Teasten"
-        },
-        "csd6-2021/Making Music": {
-          "name": "Ráhkat Musihka"
-        },
-        "csd3-2021/Programming for Entertainment": {
-          "name": "Programmere Guoimmuheami"
-        },
-        "csd3-2021/Plotting Shapes": {
-          "name": "Plottet Hámiid"
-        },
-        "csd3-2021/Drawing in Game Lab": {
-          "name": "Tevdnet SpeallanLáb:as"
-        },
-        "csd3-2021/Sprites": {
-          "name": "Sprite:at"
-        },
-        "csd3-2021/Sprite Movement": {
-          "name": "Sprite Lihkadeapmi"
-        },
-        "csd3-2021/Keyboard Input": {
-          "name": "Boallobeavddi Input"
-        },
-        "csd3-2021/Project - Interactive Card": {
-          "name": "Prošeakta  - Interaktiivva Koarta"
-        },
-        "csd3-2021/Complex Sprite Movement": {
-          "name": "Kompleaksa Sprite Lihkastagat"
-        },
-        "csd3-2021/Collisions": {
-          "name": "Oktiibeaškkeheamit"
-        },
-        "csd3-2021/The Game Design Process": {
-          "name": "Spealu Designa Proseassa"
-        },
-        "csd3-2021/Using the Game Design Process": {
-          "name": "Geavat Spealu Designa Proseassa"
-        },
-        "csd3-2021/Project - Design a Game": {
-          "name": "Prošeakta  - Designe Spealu"
-        },
-        "csd1-2021/Intro to Problem Solving": {
-          "name": "Láidehus ČuolbmaČoavdimii"
-        },
-        "csd1-2021/Exploring Problem Solving": {
-          "name": "Vásihit ČuolbmaČoavdima"
-        },
-        "csd1-2021/Input and Output": {
-          "name": "Input ja Output"
-        },
-        "csd1-2021/Processing": {
-          "name": "Gieđahallan"
-        },
-        "csd1-2021/Storage": {
-          "name": "Vuorká"
-        },
-        "csd1-2021/Project - Propose an App": {
-          "name": "Prošeakta - Evttohit App:a"
-        },
-        "csd2-2021/Intro to HTML": {
-          "name": "Láidehus HTML:ii"
-        },
-        "csd2-2021/Headings": {
-          "name": "Bajilčállagat"
-        },
-        "csd2-2021/Digital Footprint": {
-          "name": "Digitála Luodda"
-        },
-        "csd2-2021/Styling Text with CSS": {
-          "name": "Stylet Teavstta CSS:ain"
-        },
-        "csd2-2021/Styling Elements with CSS": {
-          "name": "Stylet Elemeanttaid CSS:ain"
-        },
-        "courseb-2020/Loops: Getting Loopy": {
+        "course1/Getting Loopy": {
           "name": "Šaddat Gáiggasin"
         },
-        "courseb-2020/The Right App": {
-          "name": "Dat Rievttes App:a"
+        "course1/Maze: Loops": {
+          "name": "Labirynta: Mohkit"
         },
-        "coursed-2020/Build a Star Wars Game": {
-          "name": "Ráhkat Náste Soahti Spealu"
+        "course1/Bee: Loops": {
+          "name": "Uvlu: Mohkit"
         },
-        "coursed-2020/Unplugged: Binary": {
-          "name": "Binára Govat"
-        },
-        "coursec-2020/Binary Bracelets": {
-          "name": "Binára Giehtabáttit"
-        },
-        "coursec-2020/Events: The Big Event": {
+        "course1/The Big Event": {
           "name": "Stuora Dáhpáhus"
         },
-        "coursec-2020/Picturing Data": {
-          "name": "Presenteret Dátaid"
+        "course1/Studio: Create a Story": {
+          "name": "Speallan-lab: Ráhkat Muitalusa"
         },
-        "coursee-2020/Simon Says": {
-          "name": "Simmon Sihtá"
+        "course1/Going Places Safely": {
+          "name": "Mannat Sihkkaris Sajiide "
         },
-        "coursee-2020/Private and Personal Information": {
-          "name": "Priváhta ja Persovnnlaš Dieđut"
+        "course1/Artist: Loops": {
+          "name": "Dáiddár: Mohkit"
         },
-        "coursee-2020/Digital Sharing": {
-          "name": "Digitála Juohkin"
+        "course2/Real-life Algorithms: Paper Planes": {
+          "name": "Duohta-máilmmi Algoritmmat: BáberGirdit"
         },
-        "coursee-2020/Functions: Songwriting": {
+        "course2/Maze: Sequence": {
+          "name": "Labirynta: Sekveansa"
+        },
+        "course2/Artist: Sequence": {
+          "name": "Dáiddár: Sekveansa"
+        },
+        "course2/Getting Loopy": {
+          "name": "Šaddat Gáiggasin"
+        },
+        "course2/Maze: Loops": {
+          "name": "Labirynta: Mohkit"
+        },
+        "course2/Artist: Loops": {
+          "name": "Dáiddár: Mohkit"
+        },
+        "course2/Bee: Loops": {
+          "name": "Uvlu: Mohkit"
+        },
+        "course2/Bee: Debugging": {
+          "name": "Uvlu: Vihkeohcan"
+        },
+        "course2/Artist: Debugging": {
+          "name": "Dáiddár: Vihkeohcan"
+        },
+        "course2/Bee: Conditionals": {
+          "name": "Uvlu: Eavttut"
+        },
+        "course2/Binary Bracelets": {
+          "name": "Binára Giehtabáttit"
+        },
+        "course2/The Big Event": {
+          "name": "Stuora Dáhpáhus"
+        },
+        "course2/Flappy": {
+          "name": "Flappy"
+        },
+        "course2/Studio: Create a Story": {
+          "name": "Speallan-lab: Ráhkat Muitalusa"
+        },
+        "course2/Your Digital Footprint": {
+          "name": "Du Digitála Luodda"
+        },
+        "course2/Artist: Nested Loops": {
+          "name": "Dáiddár: Mohkit Mohkiin"
+        },
+        "course3/Maze": {
+          "name": "Labirynta"
+        },
+        "course3/Artist": {
+          "name": "Dáiddár"
+        },
+        "course3/Functional Suncatchers": {
+          "name": "Doaibmi Beaivváščoaggit"
+        },
+        "course3/Artist: Functions": {
+          "name": "Dáiddár: Funkšuvnnat"
+        },
+        "course3/Bee: Functions": {
+          "name": "Uvlu: Funkšuvnnat"
+        },
+        "course3/Bee: Conditionals": {
+          "name": "Uvlu: Eavttut"
+        },
+        "course3/Maze: Conditionals": {
+          "name": "Labirynta: Eavttut"
+        },
+        "course3/Songwriting": {
           "name": "Lávlagiid čállit"
         },
-        "coursea-2020/Programming: Happy Maps": {
-          "name": "Movttegis Kárttat"
+        "course3/Artist: Nested Loops": {
+          "name": "Dáiddár: Mohkit Mohkiin"
         },
-        "coursef-2020/Envelope Variables": {
-          "name": "Konvoluhtta Variábelat"
+        "course3/Farmer: While Loops": {
+          "name": "Boanda: Geardduhit-mohkiid"
         },
-        "coursef-2020/AI for Oceans": {
-          "name": "AI Mearaide"
+        "course3/Bee: Nested Loops": {
+          "name": "Uvlu: Mohkit Mohkiin"
         },
-        "coursef-2020/For Loop Fun": {
-          "name": "Suohttasat Mohkiid váste"
+        "course3/Bee: Debugging": {
+          "name": "Uvlu: Vihkeohcan"
+        },
+        "course3/Studio: Create a Story": {
+          "name": "Speallan-lab: Ráhkat Muitalusa"
+        },
+        "course3/Studio: Create a Game": {
+          "name": "Speallan-lab: Ráhkat Spealu"
+        },
+        "course3/Internet": {
+          "name": "Interneahtta"
+        },
+        "course3/Crowdsourcing": {
+          "name": "Joavkočohkken"
+        },
+        "course3/Digital Citizenship": {
+          "name": "Digitála Stáhtaborgárvuohta"
+        },
+        "course3/Artist: Patterns": {
+          "name": "Dáiddár: Minsttarat"
+        },
+        "course4/Unplugged: Tangrams": {
+          "name": "Neahtahaga: Tangrámmat"
+        },
+        "course4/Maze and Bee": {
+          "name": "Labirynta ja Uvlu"
+        },
+        "course4/Artist": {
+          "name": "Dáiddár"
+        },
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Neahtahaga: Konvoluhtta Variábelat"
+        },
+        "course4/Unplugged: Madlibs": {
+          "name": "Neahtahaga: Sátnestoahkan"
+        },
+        "course4/Artist: Variables": {
+          "name": "Dáiddár: Variábelat"
+        },
+        "course4/Play Lab: Variables": {
+          "name": "Speallan-lab: Variábelat"
+        },
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Neahtahaga: Suohttasat Mohkiid vaste"
+        },
+        "course4/Bee: For Loops": {
+          "name": "Uvlu: Mohkiid vaste"
+        },
+        "course4/Artist: For Loops": {
+          "name": "Dáiddár: Mohkiid vaste"
+        },
+        "course4/Play Lab: For Loops": {
+          "name": "Speallan-lab: Mohkiide"
+        },
+        "course4/Artist: Functions": {
+          "name": "Dáiddár: Funkšuvnnat"
+        },
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Neahtahaga: Lávlagiid čállit Paramehteriiguin"
+        },
+        "course4/Artist: Functions with Parameters": {
+          "name": "Dáiddár: Funkšuvnnat main leat paramehterat"
+        },
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Speallan-lab: Funkšuvnnat main leat paramehterat"
+        },
+        "course4/Bee: Functions with Parameters": {
+          "name": "Uvlu: Funkšuvnnat main leat paramehterat"
+        },
+        "course4/Unplugged: Binary": {
+          "name": "Neahtahaga - Binára"
+        },
+        "course4/Artist Binary": {
+          "name": "Dáiddár Binára"
+        },
+        "course4/Super Challenge - Variables": {
+          "name": "Super Hástalus - Variábelat"
+        },
+        "course4/Super Challenge - For Loops": {
+          "name": "Super Hástalus - Mohkiid vaste"
+        },
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Super Hástalus - Funkšuvnnat ja Paramehterat"
+        },
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Ekstrema Hástalus - Viiddis"
+        },
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Čáhppes ja Vilges Neavvagat"
+        },
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Čáhppes ja Vilges Pikseleren Friddjaspeallan"
+        },
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Ivdne Pikseleren Neavvagat"
+        },
+        "pixelation/Color Pixelation Examples": {
+          "name": "Ivdne Pikseleren Ovdamearkkat"
+        },
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Ivdne Pikseleren Friddjaspeallan"
         }
       }
     }

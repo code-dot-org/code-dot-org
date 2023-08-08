@@ -8,6 +8,8 @@ import {
   toggleBeatPad,
   toggleInstructions,
   toggleTimelinePosition,
+  moveStartPlayheadPositionBackward,
+  moveStartPlayheadPositionForward,
 } from '../redux/musicRedux';
 
 interface KeyHandlerProps {
@@ -71,6 +73,12 @@ const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
       if (event.key === 'b') {
         reportKeyPress('toggle-beat-pad');
         dispatch(toggleBeatPad());
+      }
+      if (event.key === ',') {
+        dispatch(moveStartPlayheadPositionBackward());
+      }
+      if (event.key === '.') {
+        dispatch(moveStartPlayheadPositionForward());
       }
       Triggers.map(trigger => {
         if (event.key === trigger.keyboardKey) {

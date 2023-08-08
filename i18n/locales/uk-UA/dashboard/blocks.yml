@@ -3,7 +3,7 @@ uk:
   data:
     blocks:
       AmysBlocks_setPromptWithChoices:
-        text: запитати користувача {QUESTION} значення змінної {VAR} з варіантами {A}{B}{C}
+        text: запитати користувача {QUESTION} для значення змінної {VAR} з варіантів {A}{B}{C}
       AmysBlocks_spriteSayVar:
         text: "{SPRITE}скажи{TEXT1}"
       BadGuys_makeNewBadGuysSprite:
@@ -1437,9 +1437,9 @@ uk:
             '75': середньо
             '100': великий
       gamelab_setPrompt:
-        text: запитати користувача {QUESTION} значення змінної {VAR}
+        text: запитати користувача {QUESTION} для значення змінної {VAR}
       gamelab_setPromptWithChoices:
-        text: запитати користувача {QUESTION} значення змінної {VAR} з варіантами {A}{B}{C}
+        text: запитати користувача {QUESTION} для значення змінної {VAR} з варіантів {A}{B}{C}
       gamelab_setProp:
         text: встановити {SPRITE} властивість {PROPERTY} у {VAL}
         options:
@@ -1492,6 +1492,10 @@ uk:
           CONDITION:
             '"when"': коли
             '"while"': поки
+      gamelab_spriteThink_fables4:
+        options:
+          THOUGHT:
+            '"I''ll trick everyone into giving me their food."': Я обману всіх, щоб отримати їжу.
       gamelab_stopAvoiding:
         text: "{SPRITE} припиняє уникати інших спрайтів"
       gamelab_stopCollectingData:
@@ -1534,11 +1538,11 @@ uk:
       gamelab_whenLeftArrow:
         text: коли натиснуто стрілку ліворуч
       gamelab_whenPromptAnswered:
-        text: коли відповідь {VAR}
+        text: коли отримано відповідь {VAR}
       gamelab_whenRightArrow:
         text: при натисканні стрілки праворуч
       gamelab_whenSpriteCreated:
-        text: коли {SPRITE} створили
+        text: коли створено {SPRITE}
       gamelab_whenTouching:
         text: коли {SPRITE1} торкається {SPRITE2}
       gamelab_whenUpArrow:
@@ -1592,7 +1596,7 @@ uk:
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       Mikelab_beginDataCollection:
-        text: запитати користувача {QUESTION} значення змінної {VAR} з варіантами {A}{B}{C}
+        text: запитати користувача {QUESTION} для значення змінної {VAR} з варіантів {A}{B}{C}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1750,24 +1754,24 @@ uk:
             MOVES.Rest: Немає
       Mikelab_ifLabel:
         text: |-
-          Якщо {DANCE}
-          Зробити {DO1} Ще {DO2}
+          якщо {DANCE}
+          то виконати {DO1} інакше {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: риби
             MOVES.Clown: мітка
       Mikelab_ifRecognizeLabel:
         text: |-
-          Якщо розпізнати об'єкт як {DANCE}
-          Зробити {DO1} Ще {DO2}
+          якщо розпізнати об'єкт як {DANCE}
+          то виконати {DO1} інакше {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: риби
             MOVES.Clown: мітка
       Mikelab_ifRecognizeLabelOnly:
         text: |-
-          Якщо розпізнати об'єкт як {DANCE}
-          Зробити {DO1}
+          якщо розпізнати об'єкт як {DANCE}
+          то виконати {DO1}
         options:
           DANCE:
             MOVES.ClapHigh: риби
@@ -2044,7 +2048,7 @@ uk:
             '14': '14'
             '15': '15'
       Poetry_whenPromptAnswered:
-        text: коли відповідь {VAR}
+        text: коли отримано відповідь {VAR}
       RyanLab_moveForward:
         text: рухатись вперед
       RyanLab_turnLeft:

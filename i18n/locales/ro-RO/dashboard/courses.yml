@@ -102,21 +102,21 @@ ro:
         self-paced-pl-csp-2023: {}
         self-paced-pl-aiml-2023: {}
     resources:
-      curriculum/csd/2020:
-        name: Curriculum
-      teacher_forum/csd/2020:
-        name: Forum profesori
       curriculum/csd/2017:
         name: Curriculum
       teacher_forum_6/csd/2017:
+        name: Forum profesori
+      curriculum/csd/2018:
+        name: Curriculum
+      teacher_forum_6/csd/2018:
         name: Forum profesori
       curriculum/csd/2019:
         name: Curriculum
       teacher_forum/csd/2019:
         name: Forum profesori
+      curriculum/csd/2020:
+        name: Curriculum
+      teacher_forum/csd/2020:
+        name: Forum profesori
       getting_started_with_csd/csd/2021:
         name: Cum să Începi cu CSD
-      curriculum/csd/2018:
-        name: Curriculum
-      teacher_forum_6/csd/2018:
-        name: Forum profesori

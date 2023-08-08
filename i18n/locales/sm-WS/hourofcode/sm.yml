@@ -171,12 +171,20 @@ sm:
   curriculum_launch_2023_title: Introducing incredible updates to our curriculum
   curriculum_launch_2023_desc: Updates to CSC, CSP, CSD, and more — plus a new Curriculum
     Catalog and redesigned Teach page to help you find it all!
+  in_partnership_with: In partnership with
+  afe_partnership_logo_alt: Amazon Future Engineer logo
+  afe_partnership_thanks_desc: Amazon Future Engineer is a comprehensive childhood-to-career
+    program to inspire, educate, and train low-income and other disadvantaged children
+    and young people to pursue careers in computer science. [Learn about our partnership](%{afe_url}).
+  grade_level: Grade level
   grade_level_label_elementary: Elementary School
   grade_level_label_middle: Middle School
   grade_level_label_high: High School
+  teacher_label_csf: CS Fundamentals Teacher
   teacher_label_csd: CS Discoveries Teacher
   teacher_label_csp: CS Principles Teacher
   teacher_label_csc: CS Connections Teacher
+  teacher_label_csa: AP® Computer Science A Teacher
   required_materials: 'Required Materials:'
   optional_materials: 'Optional Materials:'
   call_to_action_learn_more: Learn more
@@ -188,10 +196,12 @@ sm:
   call_to_action_explore_modules: Explore modules
   call_to_action_explore_workshops: Explore workshops
   call_to_action_explore_course: Explore course
+  call_to_action_explore_courses: Explore courses
   call_to_action_explore_full_course: Explore full course
   call_to_action_explore_widgets: Explore widgets
   call_to_action_explore_choice_level: Explore example choice level
   call_to_action_explore_collection: Explore collection
+  call_to_action_explore_unplugged_lesson: Explore unplugged lessons
   call_to_action_try_app_lab: Try App Lab
   call_to_action_view_lesson_plan: View lesson plan
   call_to_action_self_paced_pl: Start self-paced professional learning
@@ -228,6 +238,9 @@ sm:
   call_to_action_teach_full_intro_course: Teach a full intro course
   call_to_action_see_module_details: See module details
   call_to_action_start_modules: Start modules
+  call_to_action_see_course_details: See course details
+  call_to_action_learn_about_approach: Learn more about our approach
+  call_to_action_try_java_lab: Try Java Lab
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -245,6 +258,10 @@ sm:
     with Devices (micro:bit) professional learning program
   aria_label_call_to_action_curriculum_csf: Explore the Computer Science Fundamentals
     curriculum
+  aria_label_call_to_action_curriculum_csf_express: Explore the Computer Science Fundamentals
+    Express course
+  aria_label_call_to_action_curriculum_csf_express_pre_reader: Explore the Computer
+    Science Fundamentals Pre-Reader Express course
   aria_label_call_to_action_curriculum_csd: Explore the Computer Science Discoveries
     curriculum
   aria_label_call_to_action_curriculum_csp: Explore the Computer Science Principles
@@ -290,15 +307,32 @@ sm:
     module details
   aria_label_call_to_action_module_coding_interactive_maps: See the Coding Interactive
     Maps module details
+  aria_label_call_to_action_csf_course_a: See Course A details
+  aria_label_call_to_action_csf_course_b: See Course B details
+  aria_label_call_to_action_csf_course_c: See Course C details
+  aria_label_call_to_action_csf_course_d: See Course D details
+  aria_label_call_to_action_csf_course_e: See Course E details
+  aria_label_call_to_action_csf_course_f: See Course F details
   video_title_professional_learning_program: Code.org's Professional Learning Program
   curriculum_name_csf: Computer Science Fundamentals
   curriculum_name_csf_02: Any CS Fundamentals (Course A-F)
   curriculum_name_csf_a_f: CS Fundamentals A-F
+  curriculum_name_csf_express: Express
+  curriculum_name_csf_express_pre_reader: Pre-Reader Express
+  curriculum_name_csf_course_a: Course A
+  curriculum_name_csf_course_b: Course B
+  curriculum_name_csf_course_c: Course C
+  curriculum_name_csf_course_d: Course D
+  curriculum_name_csf_course_e: Course E
+  curriculum_name_csf_course_f: Course F
+  curriculum_name_csf_no_device: No Device/Unplugged
+  curriculum_name_csf_self_paced: Self-paced lesson
+  curriculum_name_csf_teacher_led: Teacher led lesson
   curriculum_name_csd: Computer Science Discoveries
   curriculum_name_csp: Computer Science Principles
   curriculum_name_csc: Computer Science Connections
+  curriculum_name_csa: AP® Computer Science A
   curriculum_name_csc_02: Any CS Connections Module
-  curriculum_name_csa: Computer Science A
   curriculum_name_ai: AI & Machine Learning
   curriculum_name_maker_cp: Creating Apps with Devices (Circuit Playground)
   curriculum_name_maker_microbit: Creating Apps with Devices (micro:bit)
@@ -310,6 +344,32 @@ sm:
   curriculum_name_interactive_animations_games: Interactive Animations & Games
   curriculum_name_design_process: The Design Process
   curriculum_name_data_society: Data & Society
+  curriculum_desc_csf_express: Learn to create computer programs, develop problem-solving
+    skills, and work through fun challenges! Make games and creative projects to share
+    with friends, family, and teachers.
+  curriculum_desc_csf_express_pre_reader: Learn the basics of drag-and-drop block
+    coding by solving puzzles and creating animated scenes. Make art and simple games
+    to share with friends, family, and teachers.
+  curriculum_desc_csf_course_a: Program using commands like loops and events. Teach
+    students to collaborate with others, investigate different problem-solving techniques,
+    persist in the face of challenging tasks, and learn about internet safety.
+  curriculum_desc_csf_course_b: Through unplugged activities and a variety of puzzles,
+    students will learn the basics of programming, collaboration techniques, investigation
+    and critical thinking skills, persistence in the face of difficulty, and internet
+    safety.
+  curriculum_desc_csf_course_c: Create programs with sequencing, loops, and events.
+    Investigate problem-solving techniques and develop strategies for building positive
+    communities both online and offline. Create interactive games that students can
+    share.
+  curriculum_desc_csf_course_d: Review of the concepts found in earlier courses, including
+    loops and events. Afterward, students will develop their understanding of algorithms,
+    nested loops, while loops, conditionals, and more.
+  curriculum_desc_csf_course_e: Make fun, interactive projects that reinforce learning
+    about online safety. Engage in more complex coding such as nested loops, functions,
+    and conditionals.
+  curriculum_desc_csf_course_f: Look at how users make choices in the apps they use.
+    Make a variety of Sprite Lab apps that also offer choices for the user. Learn
+    more advanced concepts, including variables and “for” loops.
   curriculum_desc_problem_solving_computing: Use a problem-solving process to tackle
     puzzles, challenges, and real-world scenarios. Learn about computer input, output,
     storage, and processing to aid in problem-solving.
@@ -347,6 +407,7 @@ sm:
   module_label_ages: 'Ages:'
   module_label_grades: 'Grades:'
   module_label_curriculum: 'Curriculum:'
+  module_label_curriculum_pure: Curriculum
   module_label_duration: 'Duration:'
   module_label_prerequisites: 'Prerequisites:'
   module_label_level: 'Level:'
@@ -356,18 +417,33 @@ sm:
   module_label_professional_learning: 'Professional Learning:'
   module_label_languages: 'Languages Supported:'
   module_label_accessibility_features: 'Accessibility:'
+  module_label_educator_tool: Educator tool
+  module_label_educator_course: Educator course
+  module_label_student_tool: Student tool
+  module_label_student_product: Product
+  module_label_student_content_resources: Content & resources
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
+  module_grade_k_5: K-5
+  module_grade_k_1: K-1
+  module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
+  module_grade_kindergarten: Kindergarten
+  module_grade_grade_01: Grade 1
+  module_grade_grade_02: Grade 2
+  module_grade_grade_03: Grade 3
+  module_grade_grade_04: Grade 4
+  module_grade_grade_05: Grade 5
   module_grade_k_5_teachers: K-5 Teachers
   module_grade_6_10_teachers: 6-10 Teachers
   module_grade_9_12_teachers: 9-12 Teachers
   module_level_beginner: Beginner
+  module_level_intermediate: Intermediate
   module_duration_2_hrs: 2 hours
   module_duration_3_hrs: 3 hours
   module_duration_8_hrs: 8 hours
@@ -378,6 +454,7 @@ sm:
   module_duration_quarter: Quarter
   module_duration_semester: Semester
   module_duration_school_year: School Year
+  module_duration_month_quarter: Month or Quarter
   module_duration_month_semester_year: Month, Semester, or Year
   module_prerequisites_none: None
   module_prerequisites_maker_cp: Access to a Circuit Playground
@@ -435,8 +512,13 @@ sm:
   heading_flexible_units: Flexible units
   heading_collections: Collections
   heading_find_a_module: Find a module for your classroom
+  heading_no_devices: No devices? We have you covered
+  heading_java_lab: Java Lab
+  heading_objects_first: Objects first
   professional_learning_section_desc: Get the support you need as you prepare to teach.
     Teachers love it, with over 90% ranking it the best professional development ever!
+  professional_learning_section_desc_short: Get the support you need as you prepare
+    to teach.
   professional_learning_section_desc_self_paced: Just in time support that allows
     you to prepare to teach with confidence on your schedule.
   professional_learning_section_block_facilitator_led_workshops: Our highly supportive
@@ -444,6 +526,20 @@ sm:
     to learn from each other as well as expert facilitators as you take on the first
     year of teaching the free curriculum to your students. In-person and virtual workshops
     are starting this summer.
+  professional_learning_section_block_facilitator_led_workshops_csf: Join local teachers
+    for inspiring and hands-on support to implement computer science in your classroom.
+    Our Regional Partners offer high-quality, one-day Code.org workshops for individual
+    teachers or for schoolwide PD. Sign up for a professional development workshop
+    near you!
+  professional_learning_section_block_csa: Our highly supportive Professional Learning
+    Program will bring you together with a group of teachers to learn from each other
+    as well as expert facilitators as you take on the first year of teaching the free
+    CSA curriculum to your students.
+  professional_learning_section_workshops_starting: In-person and virtual workshops
+    starting this summer.
+  no_devices_section_subhead: Go ahead, cut the cord (for a while)!
+  no_devices_section_desc: CS education does not always need to be in front of a screen
+    and device access shouldn't be a barrier to learning computer science concepts.
   support_and_questions_section_subhead: Still have questions? Reach out to us! We
     are here to help.
   support_and_questions_section_desc: Our support team is here to answer any questions
@@ -581,6 +677,51 @@ sm:
     throughout K-12. Offer free professional development, webinars, conference presentations,
     and peer-to-peer learning opportunities.
   ai_resources_btn_aria_label_03: Explore the AI for Teachers website
+  ai_pl_101_hero_heading: AI 101 for Teachers
+  ai_pl_101_hero_desc: Discover the transformative potential of artificial intelligence
+    (AI) in education with our free online learning series for educators.
+  ai_pl_101_hero_presented: Presented by
+  ai_pl_101_intro_heading: What is AI 101 for Teachers?
+  ai_pl_101_intro_text: AI 101 for Teachers is a free, foundational online professional
+    learning series for any teacher and educator interested in the groundbreaking
+    world of artificial intelligence (AI) and its transformative potential in education.
+    Partners Code.org, ETS, ISTE, Khan Academy are offering engaging sessions with
+    renowned experts that will demystify AI, explore responsible implementation, address
+    bias, and showcase how AI-powered learning can revolutionize student outcomes.
+    Join us on this journey of exploration and empowerment, and unlock the future
+    of teaching with and about AI.
+  ai_pl_101_partnership_between: A partnership between
+  ai_pl_101_join_email_title: Sign up for early access to AI 101 for Teachers
+  ai_pl_101_pro_join_email_desc: Be the first to hear when each session launches.
+    Get updates on AI resources from Code.org, ETS, ISTE and Khan Academy.
+  ai_pl_101_explore_title: AI-related resources
+  ai_pl_101_explore_desc: We have a variety of additional resources for you from Code.org,
+    ETS, ISTE and Khan Academy to support teachers in this new and growing field.
+    Check them out below.
+  ai_pl_101_explore_title_1: Khanmigo
+  ai_pl_101_explore__desc_1: Khan Academy’s AI-powered teaching aid allows teachers
+    to stop spending time on prep tasks they don’t love, and focus on what they do
+    love—teaching.
+  ai_pl_101_explore__button_1: Try Khanmigo
+  ai_pl_101_explore_title_2: Artificial Intelligence Explorations for Educators
+  ai_pl_101_explore__desc_2: For six years, this 15-hour online course from ISTE has
+    been guiding K-12 educators on the essentials of AI for teaching and learning.
+    The course is offered three times per year and is fully asynchronous with the
+    ongoing support of an expert instructor.
+  ai_pl_101_explore__button_2: Start the course
+  ai_pl_101_explore_title_3: AI Curriculum
+  ai_pl_101_explore__desc_3: In Code.org’s AI Curriculum for grades 3-12, students
+    use fun activities to see how computers learn from data. The curriculum also invites
+    students to investigate machine learning and data while reflecting on the ethical
+    implications of AI.
+  ai_pl_101_explore__button_3: Explore curricula
+  ai_pl_101_explore_title_4: ETS’s Criterion Interactive
+  ai_pl_101_explore__desc_4: 'This guided five-paragraph writing platform coaches
+    learners through five critical phases of the writing process: Prepare/Plan, Write,
+    Revise, Edit, Reflect. ETS personalizes the writing experience by leveraging cutting-edge
+    scoring models and AI, assisting teachers in providing iterative feedback and
+    formative assessment throughout the writing experience.'
+  ai_pl_101_explore__button_4: Explore tool
   ai_vid_intro_caption: Introducing How AI Works
   ai_vid_chatbots_caption: How Chatbots and Large Language Models Work
   ai_vid_creativity_caption: Does AI Have Creativity and Imagination?
@@ -906,10 +1047,10 @@ sm:
   teach_page_additional_materials_list_heading_03: Classroom Posters
   teach_page_additional_materials_list_desc_03: Print these posters of diverse role
     models to hang in your school and inspire your students to try computer science.
-  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
-    concepts of computer science and challenges them to explore how computing and
-    technology can impact the world. Can be taught as an introductory class and as
-    an AP course.
+  csp_page_top_desc: Free set of elementary curricula that introduces students to
+    the foundational concepts of computer science and challenges them to explore how
+    computing and technology can impact the world. Can be taught as an introductory
+    class and as an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1142,9 +1283,9 @@ sm:
   csc_page_curriculum_glance_professional_languages: English
   csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csc_page_quote: I loved the engagement [my students had with the module] and the
-    opportunities for choice and creativity. I loved hearing a student say, 'This
-    helped me see what we had been reading about in science.'
+  csc_page_quote: I greatly appreciate how thorough and well paced the lessons are.
+    I am not familiar with computer science, but with the lessons you provide I feel
+    confident in helping my students grasp the concepts and tie them into our curriculum.
   csc_page_find_a_module_desc: Our current CS Connections offerings are for 3rd to
     5th grade classrooms and are designed to take 1 week of 45-minute lessons each
     day.
@@ -1167,6 +1308,159 @@ sm:
   csc_page_faq_question_05: What materials do I need for CS Connections?
   csc_page_faq_answer_05: Ideally, each student will have their own computer and teachers
     will have a projector to display the slideshow that corresponds with each lesson.
+  csf_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world.
+  csf_page_intro_heading: Free, and fun, elementary courses for each grade
+  csf_page_intro_list_01: Six courses, one for each elementary grade
+  csf_page_intro_list_02: Equitable introductory CS courses
+  csf_page_intro_list_03: Use the same course for all students in the same grade,
+    regardless of their experience
+  csf_page_intro_list_04: All courses make suitable entry points for students
+  csf_page_quote: I've been teaching the course since the Monday after the workshop.
+    The students and I LOVE it (and so do their classroom teachers!!!)
+  csf_page_curriculum_glance_topics: Programming, Internet, Games and Animation, Art
+    and Design, App Design
+  csf_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
+  csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
+  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
+    Modules
+  csf_page_curriculum_glance_languages: Arabic, Bahasa Indonesian, Catalán, Chinese
+    Simplified, Chinese Traditional, Czech, French, German, Hindi, Italian, Japanese,
+    Korean, Kannada, Malay, Marathi, Mongolian, Polish, Portuguese-BR, Romanian, Russian,
+    Slovak, Tagalog, Tamil, Thai, Turkish, Ukrainian, Spanish Latam, Urdu, Spanish-ES,
+    Uzbek, Vietnamese
+  csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
+    Immersive reader
+  csf_page_pick_a_course_heading: Picking the right CS Fundamentals course for your
+    classroom
+  csf_page_pick_a_course_desc: With the diverse set of options offered for CS Fundamentals,
+    there is a course for all different needs.
+  csf_page_pick_a_course_heading_02: How will your students engage with the content?
+  csf_page_courses_heading: Courses specifically designed for your elementary classroom
+  csf_page_courses_desc: Find the course for the grade you teach. Each course is approximately
+    a month long.
+  csf_page_courses_self_paced_heading: Self-paced elementary curriculums
+  csf_page_courses_self_paced_desc: Teachers play a critical role in student learning
+    by teaching our unplugged activities and leading whole class discussions, however,
+    we recognize that CS Fundamentals isn't always taught in a traditional classroom
+    setting. We provide two self-paced express courses alongside Courses A-F. These
+    express courses are designed for situations where teachers allow each student
+    to work at their own pace independently.
+  csf_page_faq_question_01: Is CS Fundamentals mapped to standards?
+  csf_page_faq_answer_01_01: 'CS Fundamentals was written using both the K-12 Framework
+    for Computer Science and the CSTA standards as guidance. Currently, every lesson
+    in CS Fundamentals contains mappings to the relevant CSTA standards. The summary
+    of all CSTA mappings for each course can be found at:'
+  csf_page_faq_answer_01_list_01: "[Course A Standards](%{course_a_url})"
+  csf_page_faq_answer_01_list_02: "[Course B Standards](%{course_b_url})"
+  csf_page_faq_answer_01_list_03: "[Course C Standards](%{course_c_url})"
+  csf_page_faq_answer_01_list_04: "[Course D Standards](%{course_d_url})"
+  csf_page_faq_answer_01_list_05: "[Course E Standards](%{course_e_url})"
+  csf_page_faq_answer_01_list_06: "[Course F Standards](%{course_f_url})"
+  csf_page_faq_answer_01_02: A Google Sheets version of the standards can be found
+    at [CSF Standards](%{csf_standards_url}).
+  csf_page_faq_question_02: How can I bring CS Fundamentals to my whole school?
+  csf_page_faq_answer_02: The leading K-12 CS curriculum in the United States, our
+    elementary program has been proven effective in major urban school districts like
+    Dallas, as well as small rural districts in Iowa. There is no need to hire specialists
+    to teach CS. Our program is uniquely designed to support teachers new to CS while
+    offering the flexibility to evolve lessons to fit student needs. [Share this brochure](%{brochure_url})
+    with your school and district administrators, or [suggest they take a look at
+    our administrators page](%{admins_url}) specially designed to answer administrators'
+    most common questions.
+  csf_page_faq_question_03: How much does it cost to teach CS Fundamentals?
+  csf_page_faq_question_04: How/Where can I get professional development for CS Fundamentals?
+  csf_page_faq_answer_04_01: New to teaching computer science? No worries! Most of
+    our teachers have never taught computer science before. Join local teachers for
+    inspiring and hands-on support to implement computer science in your classroom.
+    Our Regional Partners offer high-quality, one-day Code.org workshops for individual
+    teachers or for schoolwide PD. [Sign up for a professional development workshop
+    near you](%{sign_up_url})!
+  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
+    workshops. The majority of our workshop attendees say, 'It's the best professional
+    development I've ever attended.' In fact, [90% of attendees would recommend our
+    program to other teachers](%{rec_url})!
+  csf_page_faq_question_05: What is the recommended timing for teaching CS Fundamentals?
+  csf_page_faq_answer_05: Each CSF course includes 13-17 lessons designed for 45-minute
+    periods. We recommend all students move from lesson to lesson at a pace set by
+    the teacher. There are many teacher-led project levels designed to be experienced
+    in unison while the skill-building lessons can be completed by students at their
+    own pace.
+  csf_page_faq_question_06: What materials do I need for CS Fundamentals?
+  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
+    These resources can be printed or assigned digitally. Some lessons call for typical
+    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csa_page_top_desc: Introduce students to software engineering and object-oriented
+    design while they learn the Java programming language in this free curriculum
+    for [AP® Computer Science A (AP® CSA)](%{csa_url}).
+  csa_page_intro_heading: A new approach to AP® CSA
+  csa_page_intro_list_01: Culturally responsive pedagogy
+  csa_page_intro_list_02: Real-world problem investigation
+  csa_page_intro_list_03: Explainer videos with diverse presenters
+  csa_page_intro_list_04: Open-ended projects for more personalized learning
+  csa_page_intro_list_05: Student-friendly code review tool
+  csa_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
+    Animation
+  csa_page_curriculum_glance_devices: Laptop, Chromebook
+  csa_page_curriculum_glance_tools: Java Lab
+  csa_page_curriculum_glance_professional_learning: Facilitator-led Workshops
+  csa_page_curriculum_glance_languages: English
+  csa_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
+    Immersive reader
+  csa_page_quote: I could tell last year how different and better this curriculum
+    and resources were than anything else out there... but this year, these past few
+    weeks preparing students for the exam have been some of my most fun teaching.
+    And I'm hardly doing anything! Kids understand the material and are talking with
+    each other at such a high level and it's a direct reflection of the lessons and
+    activities throughout the year. Thank you, thank you.
+  csa_page_projects_java_lab: Java Lab is a programming environment where you can
+    make Java programs using The Neighborhood, The Theater, or the console.
+  csa_page_projects_objects_first: Students learn the fundamentals of object-oriented
+    programming (OOP) first, giving them a foundation for the rest of the course while
+    encouraging them to consider the overall design of their programs.
+  csa_page_faq_question_01: Is CSA mapped to standards?
+  csa_page_faq_answer_01: Yes, Code.org's CSA curriculum is mapped to the College
+    Board Course and Exam Description for AP® CSA.
+  csa_page_faq_question_02: How much does it cost to teach CSA?
+  csa_page_faq_question_03: How/Where can I get professional development for CSA?
+  csa_page_faq_answer_03: Professional learning workshops for Code.org's CSA curriculum
+    start each summer. [Click here to apply](%{apply_url}).
+  csa_page_faq_question_04: What is the recommended timing for teaching CSA?
+  csa_page_faq_answer_04: A minimum of 140 class hours; should be taught as a full-year
+    course. Contains nine units, which includes an AP® Exam Prep unit.
+  csa_page_faq_question_05: What materials do I need for this course?
+  csa_page_faq_answer_05: This curriculum requires that students have access to computers
+    with a modern web browser. At this time, our curriculum is not optimized for tablets
+    or mobile devices. For more details, [check out our technology requirements](%{it_url}).
+    In addition to technology, typical classroom supplies like scissors and sticky
+    notes will also be used throughout the curriculum.
+  csa_page_faq_question_06: Why do I need to become a verified teacher to teach CSA
+    and run code in Java Lab?
+  csa_page_faq_answer_06: Java Lab is a unique environment from all other Code.org
+    programming environments and requires additional measures to ensure network security
+    for all. [Read more about it here](%{read_more_url}).
+  csa_page_faq_question_07: How can I access answer keys?
+  csa_page_faq_answer_07_01: With an approved teacher account, you can find answer
+    keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
+  csa_page_faq_answer_07_02: Teachers in our Professional Learning Program will automatically
+    be approved to view answer keys. If you need an approved teacher account, you
+    can apply for access to protected teacher-only materials (answer keys, etc) through
+    [this form](%{form_url}). Please keep in mind that it may take 3-5 business days
+    to verify your account.
+  csa_page_faq_question_08: How was the curriculum developed?
+  csa_page_faq_answer_08_01: 'Our CSA curriculum was written by teachers, for teachers
+    and was designed with our Curriculum Values in mind. In particular, we focused
+    on expanding access to those who historically have been denied opportunities to
+    learn about the exciting and impactful field of computing. The following goals
+    guided the creation of the CSA curriculum:'
+  csa_page_faq_answer_08_list_01: 'Goal 1: Develop an Equitable Course'
+  csa_page_faq_answer_08_list_02: 'Goal 2: Prepare Students for Higher Ed and Industry'
+  csa_page_faq_answer_08_list_03: 'Goal 3: Design Relevant, Engaging Activities'
+  csa_page_faq_answer_08_list_04: 'Goal 4: Incorporate Best Practices from the Field'
+  csa_page_faq_answer_08_02: For more information about the values that guided our
+    work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
+    learning values](%{pl_values_url}).
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -4247,7 +4541,7 @@ sm:
     to address common misconceptions that new programmers have about these topics
     by offering many opportunities for practice, as well as targeted hints and feedback.
 
-'
+    '
   tutorial_zulama_longdescription: In this activity you will learn to edit JavaScript
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
@@ -4546,7 +4840,7 @@ sm:
     completely open-ended; kids can use them as a starting point for their own app
     creations. Beginners welcome!
 
-'
+    '
   tutorial_tlcemo_longdescription: Students create and program a 2D robot made of
     card to show different emotions. They create a table that can be used to translate
     emotions (high level commands) into low level machine instructions.
@@ -12378,6 +12672,91 @@ sm:
     holding the ends of a Code.org-branded rainbow banner. Behind them, several people
     are wearing Code.org shirts and waving rainbow flags while walking alongside a
     multi-colored Volkswagen bug.
+  accessibility_hero_heading: Accessibility at Code.org
+  accessibility_hero_desc: We are dedicated to eliminating barriers that prevent the
+    inclusion and full participation of students and educators with disabilities,
+    ensuring that EVERY student has access to computer science.
+  accessibility_efforts_title: Our Efforts for 2023
+  accessibility_efforts_desc: 'To achieve our goal of a fully accessible platform,
+    we’re implementing a comprehensive action plan that includes:'
+  accessibility_efforts_card_title_1: Internal accessibility training
+  accessibility_efforts_card_desc_1: Our product and engineering teams will complete
+    comprehensive accessibility training by December 2023.
+  accessibility_efforts_card_title_2: VPAT Analysis
+  accessibility_efforts_card_desc_2: Completing [Voluntary Product Accessibility Template](%{voluntary_url})
+    to establish a baseline and measure progress annually. Results available on this
+    page by September 2023.
+  accessibility_efforts_card_title_3: Tools that support accessible design
+  accessibility_efforts_card_desc_3: 'Team members will have access to tools that
+    ensure all new features are designed and built with accessibility in mind. '
+  accessibility_efforts_card_title_4: Accessible curriculum
+  accessibility_efforts_card_desc_4: We will achieve [WCAG Level AA compliance](%{wcag_url})
+    for the first few units of Computer Science Principles and Computer Science Discoveries
+    by December 2023.
+  accessibility_explore_title: Explore Code.org’s accessibility resources
+  accessibility_explore_text: Our accessibility resources page provides comprehensive
+    documentation and guidance for our features and tools, including accessible Hour
+    of Code lessons, immersive readers, keyboard navigation, and customization options.
+  accessibility_explore_button: View accessibility resources page
+  accessibility_help_us_title: Help Us Improve
+  accessibility_help_us_text: At Code.org, we are agile and responsive to feedback.
+    If you have recommendations to help us improve the accessibility of our tools
+    and resources, please reach out. Thank you for helping us make computer science
+    available for all students!
+  accessibility_help_us_button: Tell us how we can improve
+  accessibility_commit_title: Code.org’s Commitment to Accessibility
+  accessibility_commit_text_1: Code.org believes that computer science is foundational
+    for all students and we're committed to ensuring equity, access, and opportunity
+    on our platform and in our curriculum.
+  accessibility_commit_text_2: We're taking a holistic approach to support the learning
+    needs of all students and working to close gaps in access to computer science
+    education for students with disabilities.
+  accessibility_commit_text_3: We’re starting small, but will measure our progress
+    and continuously iterate until we can address even the most complex accessibility
+    challenges.
+  accessibility_commit_text_4: At Code.org, we're committed to continually improving
+    the accessibility of our tools, and we're excited to take this important step
+    towards greater equity, access, and opportunity for all students and educators.
+  accessibility_partner_title: Our Partners and Recommendations
+  accessibility_partner_desc: We recommend the following resources for students and
+    teachers who are looking for more accessible computer science content.
+  accessibility_card_title_1: AccessCSForAll
+  accessibility_card_text_1: Resources for teachers to bring accessible computing
+    to secondary schools and for high school students with disabilities to connect
+    with mentors in the technology space.
+  accessibility_card_title_2: Blocks4All
+  accessibility_card_text_2: A block-based programming environment for iPad that teaches
+    basic programming concepts using the Dash robot. Accessible with VoiceOver, Switch
+    Control, and Voice Control.
+  accessibility_card_title_3: Code Jumper
+  accessibility_card_text_3: A physical coding aid/resource for students with visual
+    impairments.
+  accessibility_card_title_4: CSForAll
+  accessibility_card_text_4: An organization that coordinates projects and programs
+    with different organizations across the United States.
+  accessibility_card_title_5: Deaf Kids Code
+  accessibility_card_text_5: Promotes computer science and technology education to
+    empower students who are deaf or hard of hearing.
+  accessibility_card_title_6: Everyone Can Code
+  accessibility_card_text_6: A curriculum designed by Apple for Swift Playgrounds
+    that provides VoiceOver (modified TTS) and adapted curriculum for students with
+    accessibility needs.
+  accessibility_card_title_7: Khan Academy
+  accessibility_card_text_7: A curriculum provider with various accommodations, including
+    captions, transcripts, and the ability to reduce animation motion and hide visually
+    dependent content. Hosts some Code.org curricula, plus additional computing curricula.
+  accessibility_card_title_8: Snap Circuits
+  accessibility_card_text_8: An educational product that teaches electronics with
+    solderless snap-together electronic components. Can include an access pack for
+    students with visual impairments.
+  accessibility_card_title_9: Sphero
+  accessibility_card_text_9: An interactive coding robotic ball and STEM education
+    kit for students with intellectual disabilities. Needs to be paired with an appropriate
+    application.
+  accessibility_card_title_10: 'Quorum '
+  accessibility_card_text_10: An adaptation of Code.org’s AP Computer Science Principles
+    curriculum using Quorum, an evidence-based language originally designed to provide
+    accessibility for blind or visually-impaired students.
   language_code:
     ar: Arabic
     az: Azerbaijani

@@ -1,35 +1,42 @@
 ---
 sm:
+  auth:
+    clever: Atamai
   beta: peta
   cancel: Taofi
-  okay: ua lelei
-  or: poo
+  continue: Faaauau
+  copy: Kopi
+  course_offering:
+    headers:
+      csf: Vaega tauamata
+      sports: Taaloga
+  dialog:
+    ok: OK
+    startover_cancel: Taofi
+    startover_ok: Toe Amata
+    startover_title: O e mautinoa lou manao e toe fai ma amata mai le amataga?
   join_section:
     code:
       placeholder: Vaega o le Faailo (AEIOUF)
-  continue: Faaauau
-  auth:
-    clever: Atamai
-  signup_form:
-    email_preference_privacy: "(Silasila i aiaiga faaletulafono e uiga i mataupu faalilolilo)"
-    email_preference_yes: Ioe
-    email_preference_no: Leai
-    share_teacher_email_reg_partner_preference_yes: Ioe
-    share_teacher_email_reg_partner_preference_no: Leai
-  section:
-    type:
-      google_classroom: Polokalame a le Google Classroom
-      clever: Atamai
+  level_group:
+    correct_title: Faafetai
+    wrong_title: Faafetai
+  level_group-submittable:
+    correct_title: Faafetai
+    wrong_title: Faafetai
+  multi-submittable:
+    correct_title: Faafetai
+    wrong_title: Faafetai
   nav:
     header:
       my_dashboard: O la'u laupapa o faamaumauga
       professional_learning: Aoaoga Faafaiaoga
     user:
-      create: Fai
       algebra_game: Algebra
       artist_k1: Tusiata (Faitau muamua)
       basketball: Paseketipolo
       calc: Calc
+      create: Fai
       eval: Eva;
       flappy: Flappy
       gamelab_jr: Game Lab (beta)
@@ -40,54 +47,47 @@ sm:
       poetry: Solo
       sports: Taaloga
       weblab: Web Lab
+  okay: ua lelei
+  or: poo
+  pd:
+    form_entries:
+      email_opt_in:
+        opt_in_no: Leai
+        opt_in_yes: Ioe
+      subjects:
+        la: Faatufugaga o Gagana
+        math: numera
+        science: Saienisi
+    form_labels:
+      colombian_school_city: Aai o loo iai le aoga
+      school_city: Aai o loo iai le aoga
+  project:
+    saved: ua teu
+  race_interstitial:
+    decline: tapuni
+  school_info_interstitial:
+    save: Teu
+  section:
+    type:
+      clever: Atamai
+      google_classroom: Polokalame a le Google Classroom
+  signup_form:
+    email_preference_no: Leai
+    email_preference_privacy: "(Silasila i aiaiga faaletulafono e uiga i mataupu faalilolilo)"
+    email_preference_yes: Ioe
+    share_teacher_email_reg_partner_preference_no: Leai
+    share_teacher_email_reg_partner_preference_yes: Ioe
   teacher:
     panel:
       answer_viewer: Laulau a Faiaoga
-  user:
-    none: E leai se mea
-    encrypted: tusitusiga faailo
-  video:
-    label: Ata faasolo
+  teacher_feedback: manatu faaalia o le faiaoga
+  terms_interstitial:
+    print: Lolomi
   upsell:
     sports:
       title: Taaloga
-  multi-submittable:
-    wrong_title: Faafetai
-    correct_title: Faafetai
-  level_group:
-    wrong_title: Faafetai
-    correct_title: Faafetai
-  level_group-submittable:
-    wrong_title: Faafetai
-    correct_title: Faafetai
-  dialog:
-    ok: OK
-    startover_title: O e mautinoa lou manao e toe fai ma amata mai le amataga?
-    startover_ok: Toe Amata
-    startover_cancel: Taofi
-  terms_interstitial:
-    print: Lolomi
-  school_info_interstitial:
-    save: Teu
-  race_interstitial:
-    decline: tapuni
-  project:
-    saved: ua teu
-  pd:
-    form_labels:
-      school_city: Aai o loo iai le aoga
-      colombian_school_city: Aai o loo iai le aoga
-    form_entries:
-      subjects:
-        math: numera
-        science: Saienisi
-        la: Faatufugaga o Gagana
-      email_opt_in:
-        opt_in_yes: Ioe
-        opt_in_no: Leai
-  course_offering:
-    headers:
-      sports: Taaloga
-      csf: Vaega tauamata
-  copy: Kopi
-  teacher_feedback: manatu faaalia o le faiaoga
+  user:
+    encrypted: tusitusiga faailo
+    none: E leai se mea
+  video:
+    label: Ata faasolo

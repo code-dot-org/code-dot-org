@@ -3,390 +3,385 @@ ky:
   data:
     script:
       name:
-        course1:
-          title: Курс 1
-          description_audience: 4-6 жаштагылар
-        course2:
-          title: Курс 2
-        course3:
-          title: Курс 3
-          description_audience: 8-18 жаштагылар
-        artist:
-          title: Сүрөтчү
-          description: Сүрөтчү менен сонун сүрөттөрдү жана дизайндарды жараткыла!
-          description_short: Сүрөтчү менен сонун сүрөттөрдү жана дизайндарды жараткыла!
-          student_description: Сүрөтчү менен сонун сүрөттөрдү жана дизайндарды жараткыла!
-        hourofcode:
-          title: Классикалык лабиринт
-          description: Angry Birds, Plants vs. Zombies каармандары жана "Муз доорундагы"
-            Скрат менен компүтердик илимдин негиздерин ачкыла!
-          description_short: Компүтердик илимдин негиздерин кызыктуу каармандар менен
-            ачкыла!
-          student_description: Angry Birds, Plants vs. Zombies каармандары жана "Муз
-            доорундагы" Скрат менен компүтердик илимдин негиздерин ачкыла!
-        frozen:
-          title: Анна жана Элза менен код жазгыла
-          description: Муз сыйкырын жана кооздугун изилдеген Анна менен Элзага кошулуу
-            үчүн кодду колдонобуз. Коньки тээп, карчалардан жана аяз саймаларынан
-            кереметтүү кыш өлкөсүн жаратып, досторуңар менен бөлүшкүлө!
-          student_description: Муз сыйкырын жана кооздугун изилдеген Анна менен Элзага
-            кошулуу үчүн кодду колдонобуз. Коньки тээп, карчалардан жана аяз саймаларынан
-            кереметтүү кыш өлкөсүн жаратып, досторуңар менен бөлүшкүлө!
-        course4:
-          title: Курс 4
-          description_audience: 9-18 жаштагылар
-        infinity:
-          title: Disney Infinity оюн лабораториясы
-          description: Play Lab колдонуп, Disney Infinity каармандары катышкан окуя
-            же оюн түзгүлө.
-          description_short: Play Lab колдонуп, Disney Infinity каармандары катышкан
-            окуя же оюн түзгүлө.
-          student_description: Play Lab колдонуп, Disney Infinity каармандары катышкан
-            окуя же оюн түзгүлө.
-        netsim:
-          title: Интернет симулятор
         20-hour:
           description_audience: 10-18 жаштагылар
-        events:
-          title: Окуялар
-          description: Окуялар
-          description_short: Окуялар
-          student_description: Окуялар
-        flappy:
-          title: Flappy Code
-        jigsaw:
-          title: Jigsaw
-        step:
-          title: Кадам
+        2021drafting:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Өзгөрмөлөр
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Код сааты
+        CSF_Secret_Sample:
+          description_audience: 8-18 жаштагылар
+        CSF_Secret_Sample_Story:
+          description_audience: 8-18 жаштагылар+
         Hour of Code:
-          title: Код сааты 2013
           description: Angry Birds, Plants vs. Zombies каармандары менен компүтердик
             илимдин негиздерин ачкыла!
           description_short: Компүтердик илимдин негиздерин кызыктуу каармандар менен
             ачкыла!
           student_description: Angry Birds, Plants vs. Zombies каармандары менен компүтердик
             илимдин негиздерин ачкыла!
-        asUnplugged:
-          description_audience: 6-13 жаштагылар
-        afterschool1:
-          description_audience: 7-13 жаштагылар
+          title: Код сааты 2013
+        MikeTest:
+          description_audience: 8-98 жаштагылар
         Special Fun:
           description_audience: 10-18 жаштагылар
         SpecialSeries:
           description_audience: 10-18 жаштагылар
-        mc:
-          title: Minecraft код сааты
-        CSF_Secret_Sample:
-          description_audience: 8-18 жаштагылар
-        CSF_Secret_Sample_Story:
-          description_audience: 8-18 жаштагылар+
-        MikeTest:
-          description_audience: 8-98 жаштагылар
+        afterschool1:
+          description_audience: 7-13 жаштагылар
+        ai-ethics-2021:
+          description_audience: 6-12-класстар
+        artist:
+          description: Сүрөтчү менен сонун сүрөттөрдү жана дизайндарды жараткыла!
+          description_short: Сүрөтчү менен сонун сүрөттөрдү жана дизайндарды жараткыла!
+          student_description: Сүрөтчү менен сонун сүрөттөрдү жана дизайндарды жараткыла!
+          title: Сүрөтчү
         artistExemplar:
           description_audience: 8-18 жаштагылар
-        gradeKinder:
-          description_audience: 5-18 жаштагылар
-        grade4:
-          description_audience: 9-99 жаштагылар
-        grade1:
-          description_audience: 5-18 жаштагылар
-        grade5:
-          description_audience: 10-110 жаштагылар
-        grade3:
-          description_audience: 5-18 жаштагылар
-        grade2:
-          description_audience: 5-18 жаштагылар
+        asUnplugged:
+          description_audience: 6-13 жаштагылар
         basketball:
           name: баскетбол
-        hoc-encryption:
-          title: 'Код сааты: кадимки шифрлөө'
-        minecraft:
-          title: Код сааты, Minecraft дизайнери
-        flappy-impact-study:
-          description: 10 мүнөттө өз оюнуңду жазгың келеби? Биздин Серпме кодубузду
-            байкап көргүлө! Бул версияда Код саатын жакшыртуу максатында ага чейин
-            жана кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөрүнө 10
-            мүнөт калганда жыйыныктыктоочу сурамжылоого убакыт бөлүшүн сурангыла.
-          student_description: 10 мүнөттө өз оюнуңду жазгың келеби? Биздин Серпме
-            кодубузду байкап көргүлө! Бул версияда Код саатын жакшыртуу максатында
-            ага чейин жана кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөрүнө
-            10 мүнөт калганда жыйыныктыктоочу сурамжылоого убакыт бөлүшүн сурангыла.
         classic-hoc-impact-study:
+          description: 10 мүнөттө өз оюнуңду жазгың келеби? Биздин Серпме кодубузду
+            байкап көргүлө! Бул версияда Код саатын жакшыртуу максатында чейин жана
+            кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөрүнө 10 мүнөт
+            калганда жыйынытыктоочу сурамжылоого убакыт бөлүшүн сурангыла.
+          description_short: Компүтердик илимдин негиздерин кызыктуу каармандар менен
+            ачкыла!
           title: Код сааты сурамжылоосу менен
-          description_short: Компүтердик илимдин негиздерин кызыктуу каармандар менен
-            ачкыла!
-          description: 10 мүнөттө өз оюнуңду жазгың келеби? Биздин Серпме кодубузду
-            байкап көргүлө! Бул версияда Код саатын жакшыртуу максатында чейин жана
-            кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөрүнө 10 мүнөт
-            калганда жыйынытыктоочу сурамжылоого убакыт бөлүшүн сурангыла.
-        hoc-impact-study:
-          description_short: Компүтердик илимдин негиздерин кызыктуу каармандар менен
-            ачкыла!
-          description: 10 мүнөттө өз оюнуңду жазгың келеби? Биздин Серпме кодубузду
-            байкап көргүлө! Бул версияда Код саатын жакшыртуу максатында чейин жана
-            кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөрүнө 10 мүнөт
-            калганда жыйынытыктоочу сурамжылоого убакыт бөлүшүн сурангыла.
-          student_description: 10 мүнөттө өз оюнуңду жазгың келеби? Биздин Серпме
-            кодубузду байкап көргүлө! Бул версияда Код саатын жакшыртуу максатында
-            чейин жана кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөрүнө
-            10 мүнөт калганда жыйынытыктоочу сурамжылоого убакыт бөлүшүн сурангыла.
-        k1hoc2017:
-          title: Код сааты 2017, баштапкы класстар
-        hero:
-          description_short: Minecraft Код саатына жаңы тапшырма менен кайтып келди!
-          description: Minecraft Код саатына жаңы тапшырма менен кайтып келди! Код
-            жазып Minecraft өткүлө.
-          student_description: Minecraft Код саатына жаңы тапшырма менен кайтып келди!
-            Код жазып Minecraft өткүлө.
-        cspplayground:
-          lesson_groups:
-            csp_variables:
-              display_name: Өзгөрмөлөр
-            csp_conditionals:
-              display_name: Шартуулар
-            csp_functions:
-              display_name: Функциялар
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: Өзгөрмөлөр
-        coursed-2019:
+        course1:
+          description_audience: 4-6 жаштагылар
+          title: Курс 1
+        course2:
+          title: Курс 2
+        course3:
+          description_audience: 8-18 жаштагылар
+          title: Курс 3
+        course4:
+          description_audience: 9-18 жаштагылар
+          title: Курс 4
+        coursea-2019:
           lesson_groups:
             csf_events:
               display_name: Окуялар
             csf_loops:
               display_name: Циклдер
+        coursea-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        coursea-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        coursea-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        coursea-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        courseb-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        courseb-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        courseb-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        courseb-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        courseb-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        coursec-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        coursec-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        coursec-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        coursec-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        coursec-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        coursed-2019:
+          lesson_groups:
             csf_conditionals:
               display_name: Шартуулар
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        coursed-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        coursed-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
         coursee-2019:
           lesson_groups:
             csf_functions:
               display_name: Функциялар
-        express-2019:
+        coursee-2020:
           lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_conditionals:
-              display_name: Шартуулар
             csf_functions:
               display_name: Функциялар
+        coursee-2021:
+          lesson_groups:
+            csf_functions:
+              display_name: Функциялар
+            csf_nested_loops:
+              display_name: Шартуулар
+        coursee-2022:
+          lesson_groups:
+            csf_functions:
+              display_name: Функциялар
+            csf_nested_loops:
+              display_name: Шартуулар
+        coursee-2023:
+          lesson_groups:
+            csf_functions:
+              display_name: Функциялар
+            csf_nested_loops:
+              display_name: Шартуулар
+        coursef-2019:
+          lesson_groups:
             csf_variables:
               display_name: Өзгөрмөлөр
-        coursec-2019:
+        coursef-2020:
           lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        gamelab:
-          title: Оюн лабы
-        coursea-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        courseb-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
+            csf_variables:
               display_name: Өзгөрмөлөр
-            csp_conditionals:
-              display_name: Шартуулар
-            csp_functions:
-              display_name: Функциялар
-        csp1-pilot-staging:
+        coursef-2021:
           lesson_groups:
-            csp_variables:
+            lessonGroup-8:
               display_name: Өзгөрмөлөр
-            csp_conditionals:
-              display_name: Шартуулар
-            csp_functions:
-              display_name: Функциялар
-        csp2-pilot-staging:
+        coursef-2022:
           lesson_groups:
-            csp_variables:
+            lessonGroup-8:
               display_name: Өзгөрмөлөр
-            csp_conditionals:
-              display_name: Шартуулар
-            csp_functions:
-              display_name: Функциялар
-        csp4-pilot-staging:
+        coursef-2022-pilot:
           lesson_groups:
-            csp_variables:
+            lessonGroup-8:
               display_name: Өзгөрмөлөр
-            csp_conditionals:
-              display_name: Шартуулар
-            csp_functions:
-              display_name: Функциялар
-        csp5-pilot-staging:
+        coursef-2023:
           lesson_groups:
-            csp_lists:
-              display_name: Тизмелер
-            csp_loops:
-              display_name: Циклдер
-        csp6-pilot-staging:
-          lesson_groups:
-            csp_variables:
+            lessonGroup-4:
               display_name: Өзгөрмөлөр
-            csp_conditionals:
-              display_name: Шартуулар
-            csp_functions:
-              display_name: Функциялар
-        csp8-pilot-staging:
+        csa-videos:
           lesson_groups:
-            csp_variables:
+            lessonGroup-3:
+              display_name: Булактар
+        csa1-2023:
+          lessons:
+            lesson-6:
+              name: Циклдер
+        csa2-2023:
+          lessons:
+            lesson-4:
+              name: Өзгөрмөлөр
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
               display_name: Өзгөрмөлөр
-            csp_conditionals:
-              display_name: Шартуулар
-            csp_functions:
-              display_name: Функциялар
-        csp9-pilot-staging:
-          lesson_groups:
-            csp_variables:
+            variables:
               display_name: Өзгөрмөлөр
-            csp_conditionals:
-              display_name: Шартуулар
-            csp_functions:
-              display_name: Функциялар
-        csp10-pilot-staging:
+        csf-2022-pilot:
           lesson_groups:
-            csp_variables:
+            lessonGroup-3:
               display_name: Өзгөрмөлөр
-            csp_conditionals:
-              display_name: Шартуулар
-            csp_functions:
-              display_name: Функциялар
-        csp5-pilot:
-          lesson_groups:
-            csp_lists:
-              display_name: Тизмелер
-            csp_loops:
-              display_name: Циклдер
         csl-vn:
           lesson_groups:
-            csf_loops:
-              display_name: Циклдер
             csf_events:
               display_name: Окуялар
-        csp4-preview:
+            csf_loops:
+              display_name: Циклдер
+        csp1-pilot-staging:
           lesson_groups:
-            csp_variables:
-              display_name: Өзгөрмөлөр
             csp_conditionals:
               display_name: Шартуулар
             csp_functions:
               display_name: Функциялар
-        time4cs-control-unit-2:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+        csp10-pilot-staging:
           lesson_groups:
-            csf_conditionals:
+            csp_conditionals:
               display_name: Шартуулар
-            csf_functions:
+            csp_functions:
               display_name: Функциялар
-        time4cs-control-unit-1:
+            csp_variables:
+              display_name: Өзгөрмөлөр
+        csp2-pilot-staging:
           lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_conditionals:
+            csp_conditionals:
               display_name: Шартуулар
-            csf_events:
-              display_name: Окуялар
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_conditionals:
-              display_name: Шартуулар
-            csf_events:
-              display_name: Окуялар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Өзгөрмөлөр
         csp4-2020:
           lesson_groups:
-            csp_variables:
-              display_name: Өзгөрмөлөр
             csp_conditionals:
               display_name: Шартуулар
             csp_functions:
               display_name: Функциялар
+            csp_variables:
+              display_name: Өзгөрмөлөр
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Өзгөрмөлөр
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Өзгөрмөлөр
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Өзгөрмөлөр
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Өзгөрмөлөр
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Өзгөрмөлөр
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Өзгөрмөлөр
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Тизмелер
             csp_loops:
               display_name: Циклдер
-        coursea-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        courseb-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        coursec-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Окуялар
-            csf_loops:
-              display_name: Циклдер
-            csf_conditionals:
-              display_name: Шартуулар
-        coursee-2020:
-          lesson_groups:
-            csf_functions:
-              display_name: Функциялар
-        coursef-2020:
-          lesson_groups:
-            csf_variables:
-              display_name: Өзгөрмөлөр
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_conditionals:
-              display_name: Шартуулар
-            csf_functions:
-              display_name: Функциялар
-            csf_variables:
-              display_name: Өзгөрмөлөр
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        2021drafting:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Өзгөрмөлөр
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Өзгөрмөлөр
-            csp_conditionals:
-              display_name: Шартуулар
-            csp_functions:
-              display_name: Функциялар
         csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Тизмелер
+            csp_loops:
+              display_name: Циклдер
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Тизмелер
+            csp_loops:
+              display_name: Циклдер
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Циклдер
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Тизмелер
+            csp_loops:
+              display_name: Циклдер
+        csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Тизмелер
@@ -396,237 +391,276 @@ ky:
           lesson_groups:
             csp_unit6_2020:
               display_name: Алгоритмдер
-        coursea-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        courseb-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        coursec-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Окуялар
-            csf_loops:
-              display_name: Циклдер
-            csf_conditionals:
-              display_name: Шартуулар
-        coursee-2021:
-          lesson_groups:
-            csf_nested_loops:
-              display_name: Шартуулар
-            csf_functions:
-              display_name: Функциялар
-        coursef-2021:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Өзгөрмөлөр
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_conditionals:
-              display_name: Шартуулар
-            csf_functions:
-              display_name: Функциялар
-            csf_variables:
-              display_name: Өзгөрмөлөр
-            lessonGroup-9:
-              display_name: Окуялар
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        csf-2021-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Өзгөрмөлөр
-            variables:
-              display_name: Өзгөрмөлөр
-        csa-videos:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Булактар
-        dlp21-csd:
-          lesson_groups:
-            lessonGroup-2:
-              description: текшерүү
-        spelling-bee:
-          title: Spelling Bee
-        ai-ethics-2021:
-          description_audience: 6-12-класстар
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Код сааты
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Өзгөрмөлөр
-        coursea-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        express-2022:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: Окуялар
-            csf_loops:
-              display_name: Циклдер
-            csf_conditionals:
-              display_name: Шартуулар
-            csf_functions:
-              display_name: Функциялар
-            csf_variables:
-              display_name: Өзгөрмөлөр
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: Өзгөрмөлөр
-            csp_conditionals:
-              display_name: Шартуулар
-            csp_functions:
-              display_name: Функциялар
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Тизмелер
-            csp_loops:
-              display_name: Циклдер
-        courseb-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        coursec-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        coursed-2022:
-          lesson_groups:
-            csf_events:
-              display_name: Окуялар
-            csf_loops:
-              display_name: Циклдер
-            csf_conditionals:
-              display_name: Шартуулар
-        coursee-2022:
-          lesson_groups:
-            csf_functions:
-              display_name: Функциялар
-            csf_nested_loops:
-              display_name: Шартуулар
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Өзгөрмөлөр
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Өзгөрмөлөр
-        soccer:
-          name: футбол
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: Циклдер
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Өзгөрмөлөр
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Өзгөрмөлөр
-            csp_conditionals:
-              display_name: Шартуулар
-            csp_functions:
-              display_name: Функциялар
-        csp5-2023:
-          lesson_groups:
-            csp_loops:
-              display_name: Циклдер
         csp6-2023:
           lesson_groups:
             csp_unit6_2020:
               display_name: Тизмелер
             lessonGroup-3:
               display_name: Циклдер
-        pre-express-2023:
+        csp6-pilot-staging:
           lesson_groups:
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Өзгөрмөлөр
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Өзгөрмөлөр
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Өзгөрмөлөр
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шартуулар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Өзгөрмөлөр
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: текшерүү
+        events:
+          description: Окуялар
+          description_short: Окуялар
+          student_description: Окуялар
+          title: Окуялар
+        express-2019:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_functions:
+              display_name: Функциялар
             csf_loops:
               display_name: Циклдер
-            csf_events:
+            csf_variables:
+              display_name: Өзгөрмөлөр
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_functions:
+              display_name: Функциялар
+            csf_loops:
+              display_name: Циклдер
+            csf_variables:
+              display_name: Өзгөрмөлөр
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_functions:
+              display_name: Функциялар
+            csf_loops:
+              display_name: Циклдер
+            csf_variables:
+              display_name: Өзгөрмөлөр
+            lessonGroup-9:
+              display_name: Окуялар
+        express-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_functions:
+              display_name: Функциялар
+            csf_loops:
+              display_name: Циклдер
+            csf_variables:
+              display_name: Өзгөрмөлөр
+            lessonGroup-9:
               display_name: Окуялар
         express-2023:
           lesson_groups:
-            lessonGroup-9:
-              display_name: Окуялар
-            csf_loops:
-              display_name: Циклдер
             csf_conditionals:
               display_name: Шартуулар
             csf_functions:
               display_name: Функциялар
+            csf_loops:
+              display_name: Циклдер
             csf_variables:
               display_name: Өзгөрмөлөр
-        coursea-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
+            lessonGroup-9:
               display_name: Окуялар
-        courseb-2023:
+        flappy:
+          title: Flappy Code
+        flappy-impact-study:
+          description: 10 мүнөттө өз оюнуңду жазгың келеби? Биздин Серпме кодубузду
+            байкап көргүлө! Бул версияда Код саатын жакшыртуу максатында ага чейин
+            жана кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөрүнө 10
+            мүнөт калганда жыйыныктыктоочу сурамжылоого убакыт бөлүшүн сурангыла.
+          student_description: 10 мүнөттө өз оюнуңду жазгың келеби? Биздин Серпме
+            кодубузду байкап көргүлө! Бул версияда Код саатын жакшыртуу максатында
+            ага чейин жана кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөрүнө
+            10 мүнөт калганда жыйыныктыктоочу сурамжылоого убакыт бөлүшүн сурангыла.
+        frozen:
+          description: Муз сыйкырын жана кооздугун изилдеген Анна менен Элзага кошулуу
+            үчүн кодду колдонобуз. Коньки тээп, карчалардан жана аяз саймаларынан
+            кереметтүү кыш өлкөсүн жаратып, досторуңар менен бөлүшкүлө!
+          student_description: Муз сыйкырын жана кооздугун изилдеген Анна менен Элзага
+            кошулуу үчүн кодду колдонобуз. Коньки тээп, карчалардан жана аяз саймаларынан
+            кереметтүү кыш өлкөсүн жаратып, досторуңар менен бөлүшкүлө!
+          title: Анна жана Элза менен код жазгыла
+        gamelab:
+          title: Оюн лабы
+        grade1:
+          description_audience: 5-18 жаштагылар
+        grade2:
+          description_audience: 5-18 жаштагылар
+        grade3:
+          description_audience: 5-18 жаштагылар
+        grade4:
+          description_audience: 9-99 жаштагылар
+        grade5:
+          description_audience: 10-110 жаштагылар
+        gradeKinder:
+          description_audience: 5-18 жаштагылар
+        hero:
+          description: Minecraft Код саатына жаңы тапшырма менен кайтып келди! Код
+            жазып Minecraft өткүлө.
+          description_short: Minecraft Код саатына жаңы тапшырма менен кайтып келди!
+          student_description: Minecraft Код саатына жаңы тапшырма менен кайтып келди!
+            Код жазып Minecraft өткүлө.
+        hoc-encryption:
+          title: 'Код сааты: кадимки шифрлөө'
+        hoc-impact-study:
+          description: 10 мүнөттө өз оюнуңду жазгың келеби? Биздин Серпме кодубузду
+            байкап көргүлө! Бул версияда Код саатын жакшыртуу максатында чейин жана
+            кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөрүнө 10 мүнөт
+            калганда жыйынытыктоочу сурамжылоого убакыт бөлүшүн сурангыла.
+          description_short: Компүтердик илимдин негиздерин кызыктуу каармандар менен
+            ачкыла!
+          student_description: 10 мүнөттө өз оюнуңду жазгың келеби? Биздин Серпме
+            кодубузду байкап көргүлө! Бул версияда Код саатын жакшыртуу максатында
+            чейин жана кийин жүргүзүлүүчү сурамжылоо бар. Классыңардан сабак бүтөрүнө
+            10 мүнөт калганда жыйынытыктоочу сурамжылоого убакыт бөлүшүн сурангыла.
+        hourofcode:
+          description: Angry Birds, Plants vs. Zombies каармандары жана "Муз доорундагы"
+            Скрат менен компүтердик илимдин негиздерин ачкыла!
+          description_short: Компүтердик илимдин негиздерин кызыктуу каармандар менен
+            ачкыла!
+          student_description: Angry Birds, Plants vs. Zombies каармандары жана "Муз
+            доорундагы" Скрат менен компүтердик илимдин негиздерин ачкыла!
+          title: Классикалык лабиринт
+        infinity:
+          description: Play Lab колдонуп, Disney Infinity каармандары катышкан окуя
+            же оюн түзгүлө.
+          description_short: Play Lab колдонуп, Disney Infinity каармандары катышкан
+            окуя же оюн түзгүлө.
+          student_description: Play Lab колдонуп, Disney Infinity каармандары катышкан
+            окуя же оюн түзгүлө.
+          title: Disney Infinity оюн лабораториясы
+        jigsaw:
+          title: Jigsaw
+        k1hoc2017:
+          title: Код сааты 2017, баштапкы класстар
+        mc:
+          title: Minecraft код сааты
+        minecraft:
+          title: Код сааты, Minecraft дизайнери
+        netsim:
+          title: Интернет симулятор
+        nevada-standards-aligned-fifth-grade-2023:
           lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        coursec-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Циклдер
-            csf_events:
-              display_name: Окуялар
-        coursed-2023:
-          lesson_groups:
-            csf_events:
-              display_name: Окуялар
-            csf_loops:
-              display_name: Циклдер
-            csf_conditionals:
+            lessonGroup-3:
               display_name: Шартуулар
-        coursee-2023:
-          lesson_groups:
-            csf_functions:
-              display_name: Функциялар
-            csf_nested_loops:
-              display_name: Шартуулар
-        coursef-2023:
+            lessonGroup-5:
+              display_name: Өзгөрмөлөр
+        nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-4:
-              display_name: Өзгөрмөлөр
+              display_name: Циклдер
+            lessonGroup-6:
+              display_name: Окуялар
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Функциялар
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Циклдер
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Циклдер
+            lessonGroup-5:
+              display_name: Окуялар
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Циклдер
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        soccer:
+          name: футбол
+        spelling-bee:
+          title: Spelling Bee
+        step:
+          title: Кадам
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Циклдер
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_functions:
+              display_name: Функциялар
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шартуулар
+            csf_events:
+              display_name: Окуялар
+            csf_loops:
+              display_name: Циклдер

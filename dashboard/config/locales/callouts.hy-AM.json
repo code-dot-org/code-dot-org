@@ -61,8 +61,8 @@
           "create_function": "Սեղմեք այստեղ բացել \"գործում\" դուրս թռչող, ապա սեղմեք «Ստեղծել գործառույթ» կոճակը:"
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Սեղմեք խմբագրել է ավելացնել պարամետր ձեր գործառույթը",
-          "add_and_drag_parameter": "Գրեք անունով ձեր պարամետր այստեղ, սեղմեք ավելացնել, ապա քաշել այն Ձեր ֆունկցիայի"
+          "add_and_drag_parameter": "Գրեք անունով ձեր պարամետր այստեղ, սեղմեք ավելացնել, ապա քաշել այն Ձեր ֆունկցիայի",
+          "edit_add_parameter": "Սեղմեք խմբագրել է ավելացնել պարամետր ձեր գործառույթը"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Քաշեք երկարությունը փոփոխականի այստեղ փոխարինել հարցականներով"
@@ -76,13 +76,22 @@
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Weve put some blocks here to get you started"
         },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Weve put some blocks here to get you started"
+        },
         "Overworld Chop Trees_2019": {
           "craft_callout_preplaced": "Weve put some blocks here to get you started"
         },
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "Weve put some blocks here to get you started"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Weve put some blocks here to get you started"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Այս կոդը պետք է սկսել կառուցել ձեր տունը. Կարող եք ավարտել այն."
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "Այս կոդը պետք է սկսել կառուցել ձեր տունը. Կարող եք ավարտել այն."
         },
         "Overworld House Frame Chosen_2019": {
@@ -91,7 +100,13 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "Այս կոդը պետք է սկսել կառուցել ձեր տունը. Կարող եք ավարտել այն."
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Այս կոդը պետք է սկսել կառուցել ձեր տունը. Կարող եք ավարտել այն."
+        },
         "Overworld Move to Sheep": {
+          "craft_run_button_callout": "Մանրամասն «Run» է փորձեք ձեր ծրագիրը"
+        },
+        "Overworld Move to Sheep2022": {
           "craft_run_button_callout": "Մանրամասն «Run» է փորձեք ձեր ծրագիրը"
         },
         "Overworld Move to Sheep_2019": {
@@ -100,7 +115,13 @@
         "Overworld Move to Sheep_2020": {
           "craft_run_button_callout": "Մանրամասն «Run» է փորձեք ձեր ծրագիրը"
         },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Մանրամասն «Run» է փորձեք ձեր ծրագիրը"
+        },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "Կրկնել գործողությունները դնելով արգելափակում այստեղ"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "Կրկնել գործողությունները դնելով արգելափակում այստեղ"
         },
         "Overworld Place Wall_2019": {
@@ -109,7 +130,13 @@
         "Overworld Place Wall_2020": {
           "craft_inside_repeat": "Կրկնել գործողությունները դնելով արգելափակում այստեղ"
         },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Կրկնել գործողությունները դնելով արգելափակում այստեղ"
+        },
         "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Այս կոդը պետք է ստուգելու համար լավա, կարող եք ավելացնել հրաման է առաջ շարժվել:"
+        },
+        "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "Այս կոդը պետք է ստուգելու համար լավա, կարող եք ավելացնել հրաման է առաջ շարժվել:"
         },
         "Underground Avoiding Lava_2019": {
@@ -118,13 +145,22 @@
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "Այս կոդը պետք է ստուգելու համար լավա, կարող եք ավելացնել հրաման է առաջ շարժվել:"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Այս կոդը պետք է ստուգելու համար լավա, կարող եք ավելացնել հրաման է առաջ շարժվել:"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "Mine այս երկաթ."
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "Mine այս երկաթ."
         },
         "Underground Iron_2019": {
           "craft_what_is_iron": "Mine այս երկաթ."
         },
         "Underground Iron_2020": {
+          "craft_what_is_iron": "Mine այս երկաթ."
+        },
+        "Underground Iron_2021": {
           "craft_what_is_iron": "Mine այս երկաթ."
         },
         "frozen circle function with parameter": {
@@ -166,42 +202,6 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Օգտագործեք իջնող է փոխարինել «???» մի շարք"
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Weve put some blocks here to get you started"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Այս կոդը պետք է սկսել կառուցել ձեր տունը. Կարող եք ավարտել այն."
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Մանրամասն «Run» է փորձեք ձեր ծրագիրը"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Կրկնել գործողությունները դնելով արգելափակում այստեղ"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Այս կոդը պետք է ստուգելու համար լավա, կարող եք ավելացնել հրաման է առաջ շարժվել:"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "Mine այս երկաթ."
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Weve put some blocks here to get you started"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Այս կոդը պետք է սկսել կառուցել ձեր տունը. Կարող եք ավարտել այն."
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Մանրամասն «Run» է փորձեք ձեր ծրագիրը"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Կրկնել գործողությունները դնելով արգելափակում այստեղ"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Այս կոդը պետք է ստուգելու համար լավա, կարող եք ավելացնել հրաման է առաջ շարժվել:"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Mine այս երկաթ."
         }
       }
     }

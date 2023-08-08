@@ -2,11 +2,107 @@
   "mr-IN": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "वेब लॅब"
+        "applab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "फंक्शन"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "फंक्शन"
+                    }
+                  }
+                }
+              },
+              "name": "डेटा"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "रिटर्न केलेली कमाल संख्या"
+                    },
+                    "min": {
+                      "description": "रिटर्न केलेली किमान संख्या"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "रिटर्न केलेली कमाल संख्या"
+                    },
+                    "min": {
+                      "description": "रिटर्न केलेली किमान संख्या"
+                    }
+                  }
+                }
+              },
+              "name": "गणित"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "आकार कमी करा आणि वाढवा"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "फंक्शन"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "दिलेल्या URL वरील MP3 साऊंड फाईल प्ले करते."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "कुठलेच नाही"
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "आपले स्वतःचे  ॲडव्हेंचर निवडा"
+                    }
+                  }
+                }
+              },
+              "name": "व्हेरीएबल्स"
+            }
+          },
+          "description": "अॅप लॅब एक प्रोग्रामिंग वातावरण आहे जिथे तुम्ही साधे अॅप्स बनवू शकता. एखादे अॅप डिझाइन करा, ब्लॉक्ससह कोड किंवा JavaScript ते कार्य करण्यासाठी, नंतर तुमचा अॅप काही सेकंदात शेअर करा."
         },
         "gamelab": {
           "categories": {
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "स्टार"
+                    }
+                  }
+                }
+              },
+              "name": "चित्र काढणे"
+            },
             "game_lab": {
               "expressions": {
                 "mouseIsOver": {
@@ -32,17 +128,6 @@
                 },
                 "playSound": {
                   "short_description": "दिलेल्या URL वरील MP3 साऊंड फाईल प्ले करते."
-                }
-              }
-            },
-            "sprites": {
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "नागमोडी"
-                    }
-                  }
                 }
               }
             },
@@ -85,38 +170,37 @@
                 }
               }
             },
-            "drawing": {
-              "name": "चित्र काढणे",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "स्टार"
-                    }
-                  }
-                }
-              }
-            },
             "math": {
-              "name": "गणित",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "रिटर्न केलेली किमान संख्या"
-                    },
                     "max": {
                       "description": "रिटर्न केलेली कमाल संख्या"
+                    },
+                    "min": {
+                      "description": "रिटर्न केलेली किमान संख्या"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "रिटर्न केलेली किमान संख्या"
-                    },
                     "max": {
                       "description": "रिटर्न केलेली कमाल संख्या"
+                    },
+                    "min": {
+                      "description": "रिटर्न केलेली किमान संख्या"
+                    }
+                  }
+                }
+              },
+              "name": "गणित"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "नागमोडी"
                     }
                   }
                 }
@@ -127,95 +211,10 @@
             }
           }
         },
-        "applab": {
-          "description": "अॅप लॅब एक प्रोग्रामिंग वातावरण आहे जिथे तुम्ही साधे अॅप्स बनवू शकता. एखादे अॅप डिझाइन करा, ब्लॉक्ससह कोड किंवा JavaScript ते कार्य करण्यासाठी, नंतर तुमचा अॅप काही सेकंदात शेअर करा.",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "आकार कमी करा आणि वाढवा"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "फंक्शन"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "दिलेल्या URL वरील MP3 साऊंड फाईल प्ले करते."
-                }
-              }
-            },
-            "data": {
-              "name": "डेटा",
-              "expressions": {
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "फंक्शन"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "फंक्शन"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "गणित",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "रिटर्न केलेली किमान संख्या"
-                    },
-                    "max": {
-                      "description": "रिटर्न केलेली कमाल संख्या"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "रिटर्न केलेली किमान संख्या"
-                    },
-                    "max": {
-                      "description": "रिटर्न केलेली कमाल संख्या"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "व्हेरीएबल्स",
-              "expressions": {
-                "declareAssign_object": {
-                  "examples": {
-                    "Choose Your Own Adventure": {
-                      "name": "आपले स्वतःचे  ॲडव्हेंचर निवडा"
-                    }
-                  }
-                },
-                "addPair": {
-                  "return_value": "कुठलेच नाही"
-                }
-              }
-            }
-          }
+        "javalab": {
+          "name": "जावा लॅब"
         },
         "spritelab": {
-          "name": "स्प्राइट लॅब",
           "categories": {
             "actions": {
               "name": "कृती"
@@ -223,25 +222,26 @@
             "events": {
               "name": "ईव्हेंट्स"
             },
+            "logic": {
+              "name": "लॉजिक"
+            },
             "loops": {
               "name": "लूप्स"
-            },
-            "variables": {
-              "name": "व्हेरीएबल्स"
             },
             "math": {
               "name": "गणित"
             },
-            "logic": {
-              "name": "लॉजिक"
-            },
             "text": {
               "name": "टेक्स्ट"
+            },
+            "variables": {
+              "name": "व्हेरीएबल्स"
             }
-          }
+          },
+          "name": "स्प्राइट लॅब"
         },
-        "javalab": {
-          "name": "जावा लॅब"
+        "weblab": {
+          "name": "वेब लॅब"
         }
       }
     }

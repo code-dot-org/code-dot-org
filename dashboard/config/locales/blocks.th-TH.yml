@@ -27,66 +27,64 @@ th:
             '2.00': ใหญ่
             '3.00': extra large
       Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"ALIEN"': มนุษย์ต่างดาว
+            '"BEAR"': หมี
+            '"CAT"': แมวทั้งหมด
+            '"DOG"': สุนัขทั้งหมด
+            '"DUCK"': เป็ด
+            '"FROG"': กบ
+            '"MOOSE"': กวางมูส
+            '"PINEAPPLE"': สับปะรด
+            '"ROBOT"': หุ่นยนต์
+            '"SHARK"': ฉลาม
+            '"SLOTH"': สล็อต
+            '"UNICORN"': ยูนิคอร์น
+            sprites: ทั้งหมด
+          MOVE1:
+            MOVES.ClapHigh: ปรบมือสูง
+            MOVES.Clown: กังนัม
+            MOVES.Dab: ตบเบา ๆ
+            MOVES.DoubleJam: ดับเบิ้ลดาวน์
+            MOVES.Drop: ทิ้งตัว
+            MOVES.Floss: ท่าฟลอส
+            MOVES.Fresh: ท่าเต้นเฟรช
+            MOVES.Kick: สตาร์
+            MOVES.Rest: ไม่มี
+            MOVES.Roll: บอดี้โรล
+            MOVES.ThisOrThat: ท่าเต้น This or That
+          MOVE2:
+            MOVES.ClapHigh: ปรบมือสูง
+            MOVES.Clown: กังนัม
+            MOVES.Dab: ตบเบา ๆ
+            MOVES.DoubleJam: ดับเบิ้ลดาวน์
+            MOVES.Drop: ทิ้งตัว
+            MOVES.Floss: ท่าฟลอส
+            MOVES.Fresh: ท่าเต้นเฟรช
+            MOVES.Kick: สตาร์
+            MOVES.Rest: ไม่มี
+            MOVES.Roll: บอดี้โรล
+            MOVES.ThisOrThat: ท่าเต้น This or That
         text: |-
           {GROUP} สลับทุกๆ {N} ห้องดนตรีร
           ะหว่าง {MOVE1} และ {MOVE2}
-        options:
-          GROUP:
-            sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาว
-            '"BEAR"': หมี
-            '"CAT"': แมวทั้งหมด
-            '"DOG"': สุนัขทั้งหมด
-            '"DUCK"': เป็ด
-            '"FROG"': กบ
-            '"MOOSE"': กวางมูส
-            '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์
-            '"SHARK"': ฉลาม
-            '"SLOTH"': สล็อต
-            '"UNICORN"': ยูนิคอร์น
-          MOVE1:
-            MOVES.Roll: บอดี้โรล
-            MOVES.ClapHigh: ปรบมือสูง
-            MOVES.Dab: ตบเบา ๆ
-            MOVES.DoubleJam: ดับเบิ้ลดาวน์
-            MOVES.Drop: ทิ้งตัว
-            MOVES.Floss: ท่าฟลอส
-            MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Clown: กังนัม
-            MOVES.Kick: สตาร์
-            MOVES.ThisOrThat: ท่าเต้น This or That
-            MOVES.Rest: ไม่มี
-          MOVE2:
-            MOVES.Roll: บอดี้โรล
-            MOVES.ClapHigh: ปรบมือสูง
-            MOVES.Dab: ตบเบา ๆ
-            MOVES.DoubleJam: ดับเบิ้ลดาวน์
-            MOVES.Drop: ทิ้งตัว
-            MOVES.Floss: ท่าฟลอส
-            MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Clown: กังนัม
-            MOVES.Kick: สตาร์
-            MOVES.ThisOrThat: ท่าเต้น This or That
-            MOVES.Rest: ไม่มี
       Dancelab_atTimestamp:
-        text: หลังจาก {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': ห้องดนตรี
             '"seconds"': วินาที
+        text: หลังจาก {TIMESTAMP} {UNIT}
       Dancelab_changeColorBy:
-        text: เปลี่ยน {COLOR} {METHOD} จำนวน {AMOUNT}
         options:
           METHOD:
+            '"brightness"': ความสว่าง
             '"hue"': สีสัน
             '"saturation"': ความอิ่มตัวของสี
-            '"brightness"': ความสว่าง
+        text: เปลี่ยน {COLOR} {METHOD} จำนวน {AMOUNT}
       Dancelab_changeMoveEachLR:
-        text: "{GROUP} ทำ {MOVE} {DIR} ตลอดไป"
         options:
           GROUP:
-            sprites: ทั้งหมด
             '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
@@ -99,54 +97,54 @@ th:
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
+            sprites: ทั้งหมด
           MOVE:
             '"next"': "(ถัดไป)"
             '"prev"': "(ก่อนหน้า)"
             '"rand"': "(สุ่ม)"
-            MOVES.Roll: บอดี้โรล
             MOVES.ClapHigh: ปรบมือสูง
+            MOVES.Clown: กังนัม
             MOVES.Dab: ตบเบา ๆ
             MOVES.DoubleJam: ดับเบิ้ลดาวน์
             MOVES.Drop: ทิ้งตัว
             MOVES.Floss: ท่าฟลอส
             MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Clown: กังนัม
             MOVES.Kick: สตาร์
-            MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
+            MOVES.Roll: บอดี้โรล
+            MOVES.ThisOrThat: ท่าเต้น This or That
+        text: "{GROUP} ทำ {MOVE} {DIR} ตลอดไป"
       Dancelab_changeMoveLR:
-        text: "{SPRITE} ทำ {MOVE} {DIR} ตลอดไป"
         options:
           MOVE:
             '"next"': "(ถัดไป)"
             '"prev"': "(ก่อนหน้า)"
             '"rand"': "(สุ่ม)"
-            MOVES.Roll: บอดี้โรล
             MOVES.ClapHigh: ปรบมือสูง
+            MOVES.Clown: กังนัม
             MOVES.Dab: ตบเบา ๆ
             MOVES.DoubleJam: ดับเบิ้ลดาวน์
             MOVES.Drop: ทิ้งตัว
             MOVES.Floss: ท่าฟลอส
             MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Clown: กังนัม
             MOVES.Kick: สตาร์
-            MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
+            MOVES.Roll: บอดี้โรล
+            MOVES.ThisOrThat: ท่าเต้น This or That
+        text: "{SPRITE} ทำ {MOVE} {DIR} ตลอดไป"
       Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"height"': ความสูง
+            '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"width"': ความกว้าง
+            '"x"': ตำแหน่งแนวนอน
+            '"y"': ตำแหน่งแนวตั้ง
         text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"width"': ความกว้าง
-            '"height"': ความสูง
-            '"rotation"': การหมุน
-            '"x"': ตำแหน่งแนวนอน
-            '"y"': ตำแหน่งแนวตั้ง
       Dancelab_changePropEachBy:
-        text: เปลี่ยน {GROUP} {PROPERTY} ตาม {VAL}
         options:
           GROUP:
-            sprites: ทั้งหมด
             '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
@@ -159,18 +157,18 @@ th:
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
+            sprites: ทั้งหมด
           PROPERTY:
-            '"scale"': ขนาด
-            '"width"': ความกว้าง
             '"height"': ความสูง
             '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"width"': ความกว้าง
             '"x"': ตำแหน่งแนวนอน
             '"y"': ตำแหน่งแนวตั้ง
+        text: เปลี่ยน {GROUP} {PROPERTY} ตาม {VAL}
       Dancelab_doMoveEachLR:
-        text: "{GROUP} ทำ {MOVE} {DIR} ตลอดไป"
         options:
           GROUP:
-            sprites: ทั้งหมด
             '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
@@ -183,99 +181,98 @@ th:
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
+            sprites: ทั้งหมด
           MOVE:
             '"rand"': "(สุ่ม)"
-            MOVES.XBend: ก้ม
-            MOVES.Roll: บอดี้โรล
-            MOVES.XClapSide: ปรบมือสูง
             MOVES.ClapHigh: ปรบมือสูง
+            MOVES.Clown: กังนัม
             MOVES.Dab: ตบเบา ๆ
-            MOVES.XFever: ดิสโก้
             MOVES.DoubleJam: ดับเบิ้ลดาวน์
             MOVES.Drop: ทิ้งตัว
             MOVES.Floss: ท่าฟลอส
             MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Clown: กังนัม
+            MOVES.Kick: สตาร์
+            MOVES.Rest: ไม่มี
+            MOVES.Roll: บอดี้โรล
+            MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.XArmsSide: เอื้อม
+            MOVES.XArmsUp: กาง
+            MOVES.XBend: ก้ม
+            MOVES.XClapSide: ปรบมือสูง
+            MOVES.XFever: ดิสโก้
             MOVES.XHeadHips: ศีรษะ + สะโพก
-            MOVES.XHop: กระโดดขาเดียว
             MOVES.XHighKick: เตะ
+            MOVES.XHop: กระโดดขาเดียว
             MOVES.XKnee: เข่า
             MOVES.XKneel: คลาน
             MOVES.XOle: โอเล่
-            MOVES.XArmsSide: เอื้อม
             MOVES.XSlide: เลื่อน
-            MOVES.Kick: สตาร์
-            MOVES.XArmsUp: กาง
-            MOVES.ThisOrThat: ท่าเต้น This or That
-            MOVES.Rest: ไม่มี
+        text: "{GROUP} ทำ {MOVE} {DIR} ตลอดไป"
       Dancelab_doMoveLR:
-        text: "{SPRITE} ทำ {MOVE} {DIR} ครั้งเดียว"
         options:
           MOVE:
             '"rand"': "(สุ่ม)"
-            MOVES.XBend: ก้ม
-            MOVES.Roll: บอดี้โรล
-            MOVES.XClapSide: ปรบมือสูง
             MOVES.ClapHigh: ปรบมือสูง
+            MOVES.Clown: กังนัม
             MOVES.Dab: ตบเบา ๆ
-            MOVES.XFever: ดิสโก้
             MOVES.DoubleJam: ดับเบิ้ลดาวน์
             MOVES.Drop: ทิ้งตัว
             MOVES.Floss: ท่าฟลอส
             MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Clown: กังนัม
+            MOVES.Kick: สตาร์
+            MOVES.Rest: ไม่มี
+            MOVES.Roll: บอดี้โรล
+            MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.XArmsSide: เอื้อม
+            MOVES.XArmsUp: กาง
+            MOVES.XBend: ก้ม
+            MOVES.XClapSide: ปรบมือสูง
+            MOVES.XFever: ดิสโก้
             MOVES.XHeadHips: ศีรษะ + สะโพก
-            MOVES.XHop: กระโดดขาเดียว
             MOVES.XHighKick: เตะ
+            MOVES.XHop: กระโดดขาเดียว
             MOVES.XKnee: เข่า
             MOVES.XKneel: คลาน
             MOVES.XOle: โอเล่
-            MOVES.XArmsSide: เอื้อม
             MOVES.XSlide: เลื่อน
-            MOVES.Kick: สตาร์
-            MOVES.XArmsUp: กาง
-            MOVES.ThisOrThat: ท่าเต้น This or That
-            MOVES.Rest: ไม่มี
+        text: "{SPRITE} ทำ {MOVE} {DIR} ครั้งเดียว"
       Dancelab_everySeconds:
-        text: 'ทุกๆ {N} {UNIT} '
         options:
           UNIT:
             '"measures"': ห้องดนตรี
             '"seconds"': วินาที
+        text: 'ทุกๆ {N} {UNIT} '
       Dancelab_everyVerseChorus:
-        text: ทุก {UNIT}
         options:
           UNIT:
-            '"verse"': ท่อนร้อง
             '"chorus"': ประสานเสียง
+            '"verse"': ท่อนร้อง
+        text: ทุก {UNIT}
       Dancelab_getEnergy:
-        text: รับ {RANGE}
         options:
           RANGE:
+            '"high"': เสียงสูง
             '"low"': เสียงต่ำ
             '"mid"': เสียงกลาง
-            '"high"': เสียงสูง
+        text: รับ {RANGE}
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
-            '"scale"': ขนาด
-            '"width"': ความกว้าง
             '"height"': ความสูง
             '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"tint"': ระดับอ่อนสี
+            '"width"': ความกว้าง
             '"x"': ตำแหน่งแนวนอน
             '"y"': ตำแหน่งแนวตั้ง
-            '"tint"': ระดับอ่อนสี
+        text: "{SPRITE} {PROPERTY}"
       Dancelab_getTime:
-        text: "{UNIT} ล่วงผ่าน"
         options:
           UNIT:
             '"measures"': ห้องดนตรี
             '"seconds"': วินาที
+        text: "{UNIT} ล่วงผ่าน"
       Dancelab_ifDanceIs:
-        text: |-
-          ถ้า {SPRITE} กำลัง {DANCE}
-          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: ปรบมือสูง
@@ -285,41 +282,42 @@ th:
             MOVES.Drop: ทิ้งตัว
             MOVES.Floss: ท่าฟลอส
             MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Roll: บอดี้โรล
             MOVES.Kick: สตาร์
-            MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
-      Dancelab_ifTime:
+            MOVES.Roll: บอดี้โรล
+            MOVES.ThisOrThat: ท่าเต้น This or That
         text: |-
-          ถ้า {UNIT} คือ {OP} {N}
-           {DO1} {DO2}
+          ถ้า {SPRITE} กำลัง {DANCE}
+          {DO1} {DO2}
+      Dancelab_ifTime:
         options:
+          OP:
+            '"<"': "<"
+            '"="': "="
+            '">"': ">"
           UNIT:
             '"measures"': ห้องดนตรี
             '"seconds"': วินาที
-          OP:
-            '">"': ">"
-            '"<"': "<"
-            '"="': "="
+        text: |-
+          ถ้า {UNIT} คือ {OP} {N}
+           {DO1} {DO2}
       Dancelab_jumpTo:
-        text: "{SPRITE} ข้ามไปที่ {LOCATION}"
         options:
           LOCATION:
-            "{x: 200, y: 100}": ด้านบน
-            "{x: 200, y: 300}": ด้านล่าง
-            "{x: 100, y: 200}": ซ้าย
-            "{x: 300, y: 200}": ขวา
-            "{x: 200, y: 200}": ตรงกลาง
             "{x: 100, y: 100}": ซ้ายบน
-            "{x: 300, y: 100}": ขวาบน
+            "{x: 100, y: 200}": ซ้าย
             "{x: 100, y: 300}": ซ้ายล่าง
+            "{x: 200, y: 100}": ด้านบน
+            "{x: 200, y: 200}": ตรงกลาง
+            "{x: 200, y: 300}": ด้านล่าง
+            "{x: 300, y: 100}": ขวาบน
+            "{x: 300, y: 200}": ขวา
             "{x: 300, y: 300}": ขวาล่าง
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": สุ่ม
+        text: "{SPRITE} ข้ามไปที่ {LOCATION}"
       Dancelab_jumpToEach:
-        text: ข้าม {GROUP} ไปที่ {LOCATION}
         options:
           GROUP:
-            sprites: ทั้งหมด
             '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
@@ -332,22 +330,39 @@ th:
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
+            sprites: ทั้งหมด
           LOCATION:
-            "{x: 200, y: 100}": ด้านบน
-            "{x: 200, y: 300}": ด้านล่าง
-            "{x: 100, y: 200}": ซ้าย
-            "{x: 300, y: 200}": ขวา
-            "{x: 200, y: 200}": ตรงกลาง
             "{x: 100, y: 100}": ซ้ายบน
-            "{x: 300, y: 100}": ขวาบน
+            "{x: 100, y: 200}": ซ้าย
             "{x: 100, y: 300}": ซ้ายล่าง
+            "{x: 200, y: 100}": ด้านบน
+            "{x: 200, y: 200}": ตรงกลาง
+            "{x: 200, y: 300}": ด้านล่าง
+            "{x: 300, y: 100}": ขวาบน
+            "{x: 300, y: 200}": ขวา
             "{x: 300, y: 300}": ขวาล่าง
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": สุ่ม
+        text: ข้าม {GROUP} ไปที่ {LOCATION}
       Dancelab_layoutSprites:
-        text: วางผัง {GROUP} เป็น {FORMAT}
         options:
+          FORMAT:
+            '"border"': เส้นขอบ
+            '"bottom"': แถวล่างสุด
+            '"circle"': วงกลม
+            '"column"': คอลัมน์
+            '"diamond"': เพชร
+            '"grid"': ตาข่าย
+            '"infinity"': เส้นอนันต์
+            '"inner"': แถวจตุรัส
+            '"left"': คอลัมน์ซ้าย
+            '"plus"': เครื่องหมายบวก
+            '"random"': สุ่ม
+            '"right"': คอลัมน์ขวา
+            '"row"': แถว
+            '"spiral"': วงก้นหอย
+            '"top"': แถวบนสุด
+            '"x"': กากบาท
           GROUP:
-            sprites: ทั้งหมด
             '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
@@ -360,25 +375,9 @@ th:
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
-          FORMAT:
-            '"border"': เส้นขอบ
-            '"inner"': แถวจตุรัส
-            '"diamond"': เพชร
-            '"circle"': วงกลม
-            '"grid"': ตาข่าย
-            '"top"': แถวบนสุด
-            '"row"': แถว
-            '"bottom"': แถวล่างสุด
-            '"left"': คอลัมน์ซ้าย
-            '"column"': คอลัมน์
-            '"right"': คอลัมน์ขวา
-            '"x"': กากบาท
-            '"plus"': เครื่องหมายบวก
-            '"spiral"': วงก้นหอย
-            '"infinity"': เส้นอนันต์
-            '"random"': สุ่ม
+            sprites: ทั้งหมด
+        text: วางผัง {GROUP} เป็น {FORMAT}
       Dancelab_makeAnonymousDanceSprite:
-        text: ทำ {COSTUME} ใหม่ที่ {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': มนุษย์ต่างดาว
@@ -394,90 +393,48 @@ th:
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
           LOCATION:
-            "{x: 200, y: 100}": ด้านบน
-            "{x: 200, y: 300}": ด้านล่าง
-            "{x: 100, y: 200}": ซ้าย
-            "{x: 300, y: 200}": ขวา
-            "{x: 200, y: 200}": ตรงกลาง
             "{x: 100, y: 100}": ซ้ายบน
-            "{x: 300, y: 100}": ขวาบน
+            "{x: 100, y: 200}": ซ้าย
             "{x: 100, y: 300}": ซ้ายล่าง
+            "{x: 200, y: 100}": ด้านบน
+            "{x: 200, y: 200}": ตรงกลาง
+            "{x: 200, y: 300}": ด้านล่าง
+            "{x: 300, y: 100}": ขวาบน
+            "{x: 300, y: 200}": ขวา
             "{x: 300, y: 300}": ขวาล่าง
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": สุ่ม
+        text: ทำ {COSTUME} ใหม่ที่ {LOCATION}
       Dancelab_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': มนุษย์ต่างดาว
+            '"BEAR"': หมี
+            '"CAT"': แมว
+            '"DOG"': สุนัข
+            '"DUCK"': เป็ด
+            '"FROG"': กบ
+            '"MOOSE"': กวางมูส
+            '"PINEAPPLE"': สับปะรด
+            '"ROBOT"': หุ่นยนต์
+            '"SHARK"': ฉลาม
+            '"SLOTH"': สล็อต
+            '"UNICORN"': ยูนิคอร์น
+          LOCATION:
+            "{x: 100, y: 100}": ซ้ายบน
+            "{x: 100, y: 200}": ซ้าย
+            "{x: 100, y: 300}": ซ้ายล่าง
+            "{x: 200, y: 100}": ด้านบน
+            "{x: 200, y: 200}": ตรงกลาง
+            "{x: 200, y: 300}": ด้านล่าง
+            "{x: 300, y: 100}": ขวาบน
+            "{x: 300, y: 200}": ขวา
+            "{x: 300, y: 300}": ขวาล่าง
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": สุ่ม
         text: |-
           ทำใหม่ {COSTUME}
           เรียก {NAME} ที่ {LOCATION}
-        options:
-          COSTUME:
-            '"ALIEN"': มนุษย์ต่างดาว
-            '"BEAR"': หมี
-            '"CAT"': แมว
-            '"DOG"': สุนัข
-            '"DUCK"': เป็ด
-            '"FROG"': กบ
-            '"MOOSE"': กวางมูส
-            '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์
-            '"SHARK"': ฉลาม
-            '"SLOTH"': สล็อต
-            '"UNICORN"': ยูนิคอร์น
-          LOCATION:
-            "{x: 200, y: 100}": ด้านบน
-            "{x: 200, y: 300}": ด้านล่าง
-            "{x: 100, y: 200}": ซ้าย
-            "{x: 300, y: 200}": ขวา
-            "{x: 200, y: 200}": ตรงกลาง
-            "{x: 100, y: 100}": ซ้ายบน
-            "{x: 300, y: 100}": ขวาบน
-            "{x: 100, y: 300}": ซ้ายล่าง
-            "{x: 300, y: 300}": ขวาล่าง
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": สุ่ม
       Dancelab_makeNewDanceSpriteGroup:
-        text: |-
-          ทำ {N} ใหม่ {COSTUME}
-          ใน {LAYOUT}
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
@@ -493,21 +450,64 @@ th:
             '"UNICORN"': ยูนิคอร์น
           LAYOUT:
             '"border"': เส้นขอบ
-            '"inner"': แถวจตุรัส
-            '"diamond"': เพชร
-            '"circle"': วงกลม
-            '"grid"': ตาข่าย
-            '"top"': แถวบนสุด
-            '"row"': แถว
             '"bottom"': แถวล่างสุด
-            '"left"': คอลัมน์ซ้าย
+            '"circle"': วงกลม
             '"column"': คอลัมน์
-            '"right"': คอลัมน์ขวา
-            '"x"': กากบาท
-            '"plus"': เครื่องหมายบวก
-            '"spiral"': วงก้นหอย
+            '"diamond"': เพชร
+            '"grid"': ตาข่าย
             '"infinity"': เส้นอนันต์
+            '"inner"': แถวจตุรัส
+            '"left"': คอลัมน์ซ้าย
+            '"plus"': เครื่องหมายบวก
             '"random"': สุ่ม
+            '"right"': คอลัมน์ขวา
+            '"row"': แถว
+            '"spiral"': วงก้นหอย
+            '"top"': แถวบนสุด
+            '"x"': กากบาท
+          N:
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '2': '2'
+            '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '3': '3'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '4': '4'
+            '40': '40'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+        text: |-
+          ทำ {N} ใหม่ {COSTUME}
+          ใน {LAYOUT}
       Dancelab_mixColors:
         text: ผสม{COLOR1} กับ {COLOR2}
       Dancelab_nMeasures:
@@ -523,93 +523,91 @@ th:
       Dancelab_setBackground:
         text: กำหนดสีแบ็กกราวนด์ {COLOR}
       Dancelab_setBackgroundEffect:
-        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"none"': ไม่มี
             '"circles"': อุโมงค์
             '"color_cycle"': สี
             '"diamonds"': เพชร
+            '"disco"': สี่เหลี่ยมจัตุรัส
             '"disco_ball"': บอลดิสโก้
             '"fireworks"': พลุ
-            '"swirl"': ฮิปโน
+            '"galaxy"': พื้นที่
             '"kaleidoscope"': ภาพลานตา
             '"lasers"': ฟลอร์เต้นรำเลเซอร์
-            '"splatter"': สาดสี
+            '"none"': ไม่มี
             '"rainbow"': สายรุ้ง
             '"snowflakes"': หิมะ
-            '"text"': ชื่อเพลง
-            '"galaxy"': พื้นที่
             '"sparkles"': ประกาย
             '"spiral"': วงก้นหอย
-            '"disco"': สี่เหลี่ยมจัตุรัส
+            '"splatter"': สาดสี
             '"stars"': ดาว
+            '"swirl"': ฮิปโน
+            '"text"': ชื่อเพลง
           PALETTE:
-            '"rave"': ขาวดำ
             '"cool"': น้ำเงิน
+            '"default"': อ่อน
             '"electronic"': ไฟฟ้า
             '"iceCream"': ไอศกรีม
-            '"default"': อ่อน
             '"neon"': นีออน
+            '"rave"': ขาวดำ
             '"tropical"': ทรอปิคอล
             '"vintage"': วินเทจ
             '"warm"': แดง
+        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {EFFECT} {PALETTE}
       Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"circles"': อุโมงค์
+            '"color_cycle"': สี
+            '"diamonds"': เพชร
+            '"disco"': สี่เหลี่ยมจัตุรัส
+            '"disco_ball"': บอลดิสโก้
+            '"fireworks"': พลุ
+            '"flowers"': ดอกไม้
+            '"galaxy"': พื้นที่
+            '"growing_stars"': ดาวเปล่งแสง
+            '"kaleidoscope"': ภาพลานตา
+            '"lasers"': ฟลอร์เต้นรำเลเซอร์
+            '"music_wave"': คลื่น
+            '"none"': ไม่มี
+            '"quads"': มุม
+            '"rainbow"': สายรุ้ง
+            '"rand"': "(สุ่ม)"
+            '"ripples"': ระลอกคลื่น
+            '"ripples_random"': สุ่มระลอกคลื่น
+            '"snowflakes"': หิมะ
+            '"sparkles"': ประกาย
+            '"spiral"': วงก้นหอย
+            '"splatter"': สาดสี
+            '"squiggles"': เส้นขะยุกขะยิก
+            '"stars"': ดาว
+            '"swirl"': ฮิปโน
+            '"text"': ชื่อเพลง
+          PALETTE:
+            '"cool"': น้ำเงิน
+            '"default"': อ่อน
+            '"electronic"': ไฟฟ้า
+            '"iceCream"': ไอศกรีม
+            '"neon"': นีออน
+            '"rave"': ขาวดำ
+            '"tropical"': ทรอปิคอล
+            '"vintage"': วินเทจ
+            '"warm"': แดง
         text: |-
           "กำหนดแบ็กกราวนด์เอฟเฟกต์
           {PALETTE} {EFFECT}"
-        options:
-          EFFECT:
-            '"none"': ไม่มี
-            '"rand"': "(สุ่ม)"
-            '"circles"': อุโมงค์
-            '"quads"': มุม
-            '"color_cycle"': สี
-            '"diamonds"': เพชร
-            '"disco_ball"': บอลดิสโก้
-            '"fireworks"': พลุ
-            '"flowers"': ดอกไม้
-            '"growing_stars"': ดาวเปล่งแสง
-            '"swirl"': ฮิปโน
-            '"kaleidoscope"': ภาพลานตา
-            '"lasers"': ฟลอร์เต้นรำเลเซอร์
-            '"splatter"': สาดสี
-            '"rainbow"': สายรุ้ง
-            '"ripples_random"': สุ่มระลอกคลื่น
-            '"ripples"': ระลอกคลื่น
-            '"snowflakes"': หิมะ
-            '"text"': ชื่อเพลง
-            '"squiggles"': เส้นขะยุกขะยิก
-            '"galaxy"': พื้นที่
-            '"sparkles"': ประกาย
-            '"spiral"': วงก้นหอย
-            '"disco"': สี่เหลี่ยมจัตุรัส
-            '"stars"': ดาว
-            '"music_wave"': คลื่น
-          PALETTE:
-            '"rave"': ขาวดำ
-            '"cool"': น้ำเงิน
-            '"electronic"': ไฟฟ้า
-            '"iceCream"': ไอศกรีม
-            '"default"': อ่อน
-            '"neon"': นีออน
-            '"tropical"': ทรอปิคอล
-            '"vintage"': วินเทจ
-            '"warm"': แดง
       Dancelab_setDanceSpeed:
-        text: เปลี่ยน {SPRITE} ความเร็วของการเต้นเป็น {SPEED}
         options:
           SPEED:
+            '0.25': ช้ามาก
+            '0.5': ช้า
             '1': ธรรมดา
             '2': เร็ว
             '4': เร็วมาก
-            '0.5': ช้า
-            '0.25': ช้ามาก
+        text: เปลี่ยน {SPRITE} ความเร็วของการเต้นเป็น {SPEED}
       Dancelab_setDanceSpeedEach:
-        text: กำหนด {GROUP} ความเร็วในการเต้นเป็น {SPEED}
         options:
           GROUP:
-            sprites: ทั้งหมด
             '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
@@ -622,104 +620,104 @@ th:
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
+            sprites: ทั้งหมด
           SPEED:
+            '0.25': ช้ามาก
+            '0.5': ช้า
             '1': ธรรมดา
             '2': เร็ว
             '4': เร็วมาก
-            '0.5': ช้า
-            '0.25': ช้ามาก
+        text: กำหนด {GROUP} ความเร็วในการเต้นเป็น {SPEED}
       Dancelab_setForegroundEffect:
-        text: กำหนดโฟร์กราวด์เอฟเฟค {EFFECT}
         options:
           EFFECT:
-            '"none"': ไม่มี
             '"bubbles"': ฟองสบู่
+            '"color_lights"': ไฟบนเวที
             '"confetti"': กระดาษสี
+            '"floating_rainbows"': สายรุ้ง
             '"hearts_red"': หัวใจ
             '"music_notes"': โน๊ตดนตรี
+            '"none"': ไม่มี
             '"pineapples"': สับปะรด
             '"pizzas"': พิซซ่า
-            '"smiling_poop"': อุนจิ
             '"rain"': ฝน
-            '"floating_rainbows"': สายรุ้ง
-            '"smile_face"': ยิ้ม
-            '"spotlight"': สปอตไลท์
-            '"color_lights"': ไฟบนเวที
             '"raining_tacos"': ทาโก้
-      Dancelab_setForegroundEffectExtended:
+            '"smile_face"': ยิ้ม
+            '"smiling_poop"': อุนจิ
+            '"spotlight"': สปอตไลท์
         text: กำหนดโฟร์กราวด์เอฟเฟค {EFFECT}
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
-            '"none"': ไม่มี
-            '"rand"': "(สุ่ม)"
             '"bubbles"': ฟองสบู่
-            '"hearts_colorful"': หัวใจหลากสี
+            '"color_lights"': ไฟบนเวที
             '"confetti"': กระดาษสี
             '"emojis"': อิโมจิ
+            '"exploding_stars"': ดาวกระจาย
+            '"floating_rainbows"': สายรุ้ง
+            '"hearts_colorful"': หัวใจหลากสี
             '"hearts_red"': หัวใจ
             '"music_notes"': โน๊ตดนตรี
+            '"none"': ไม่มี
             '"paint_drip"': สีจุ่ม
             '"pineapples"': สับปะรด
             '"pizzas"': พิซซ่า
-            '"smiling_poop"': อุนจิ
             '"rain"': ฝน
-            '"floating_rainbows"': สายรุ้ง
-            '"smile_face"': ยิ้ม
-            '"spotlight"': สปอตไลท์
-            '"color_lights"': ไฟบนเวที
-            '"exploding_stars"': ดาวกระจาย
             '"raining_tacos"': ทาโก้
+            '"rand"': "(สุ่ม)"
+            '"smile_face"': ยิ้ม
+            '"smiling_poop"': อุนจิ
+            '"spotlight"': สปอตไลท์
+        text: กำหนดโฟร์กราวด์เอฟเฟค {EFFECT}
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': ความสูง
+            '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"width"': ความกว้าง
+            '"x"': ตำแหน่งแนวนอน
+            '"y"': ตำแหน่งแนวตั้ง
         text: 'กำหนด {SPRITE} {PROPERTY} เป็น {VAL} '
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"width"': ความกว้าง
-            '"height"': ความสูง
-            '"rotation"': การหมุน
-            '"x"': ตำแหน่งแนวนอน
-            '"y"': ตำแหน่งแนวตั้ง
       Dancelab_setPropEach:
+        options:
+          GROUP:
+            '"ALIEN"': มนุษย์ต่างดาว
+            '"BEAR"': หมี
+            '"CAT"': แมวทั้งหมด
+            '"DOG"': สุนัขทั้งหมด
+            '"DUCK"': เป็ด
+            '"FROG"': กบ
+            '"MOOSE"': กวางมูส
+            '"PINEAPPLE"': สับปะรด
+            '"ROBOT"': หุ่นยนต์
+            '"SHARK"': ฉลาม
+            '"SLOTH"': สล็อต
+            '"UNICORN"': ยูนิคอร์น
+            sprites: ทั้งหมด
+          PROPERTY:
+            '"height"': ความสูง
+            '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"tint"': ระดับอ่อนสี
+            '"width"': ความกว้าง
+            '"x"': ตำแหน่งแนวนอน
+            '"y"': ตำแหน่งแนวตั้ง
         text: กำหนด {GROUP} {PROPERTY} เป็น {VAL}
-        options:
-          GROUP:
-            sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาว
-            '"BEAR"': หมี
-            '"CAT"': แมวทั้งหมด
-            '"DOG"': สุนัขทั้งหมด
-            '"DUCK"': เป็ด
-            '"FROG"': กบ
-            '"MOOSE"': กวางมูส
-            '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์
-            '"SHARK"': ฉลาม
-            '"SLOTH"': สล็อต
-            '"UNICORN"': ยูนิคอร์น
-          PROPERTY:
-            '"scale"': ขนาด
-            '"width"': ความกว้าง
-            '"height"': ความสูง
-            '"rotation"': การหมุน
-            '"x"': ตำแหน่งแนวนอน
-            '"y"': ตำแหน่งแนวตั้ง
-            '"tint"': ระดับอ่อนสี
       Dancelab_setPropRandom:
-        text: การสุ่ม {SPRITE} {PROPERTY}
         options:
           PROPERTY:
-            '"scale"': ขนาด
-            '"width"': ความกว้าง
             '"height"': ความสูง
             '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"tint"': ระดับอ่อนสี
+            '"width"': ความกว้าง
             '"x"': ตำแหน่งแนวนอน
             '"y"': ตำแหน่งแนวตั้ง
-            '"tint"': ระดับอ่อนสี
+        text: การสุ่ม {SPRITE} {PROPERTY}
       Dancelab_setPropRandomEach:
-        text: สุ่ม {GROUP} {PROPERTY}
         options:
           GROUP:
-            sprites: ทั้งหมด
             '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
@@ -732,21 +730,21 @@ th:
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
+            sprites: ทั้งหมด
           PROPERTY:
-            '"scale"': ขนาด
-            '"width"': ความกว้าง
             '"height"': ความสูง
             '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"tint"': ระดับอ่อนสี
+            '"width"': ความกว้าง
             '"x"': ตำแหน่งแนวนอน
             '"y"': ตำแหน่งแนวตั้ง
-            '"tint"': ระดับอ่อนสี
+        text: สุ่ม {GROUP} {PROPERTY}
       Dancelab_setTint:
         text: กำหนด {SPRITE} ระดับอ่อนสีเป็น {VAL}
       Dancelab_setTintEach:
-        text: กำหนดระดับอ่อนสี {THIS} นี้เป็น {VAL}
         options:
           THIS:
-            sprites: ทั้งหมด
             '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
@@ -759,11 +757,11 @@ th:
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
+            sprites: ทั้งหมด
+        text: กำหนดระดับอ่อนสี {THIS} นี้เป็น {VAL}
       Dancelab_setTintEachInline:
-        text: กำหนดระดับอ่อนสี {THIS} นี้เป็น {VAL}
         options:
           THIS:
-            sprites: ทั้งหมด
             '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
@@ -776,19 +774,19 @@ th:
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
+            sprites: ทั้งหมด
+        text: กำหนดระดับอ่อนสี {THIS} นี้เป็น {VAL}
       Dancelab_setTintInline:
         text: กำหนด {SPRITE} ระดับอ่อนสีเป็น {VAL}
       Dancelab_setVisible:
-        text: ตั้งค่า {SPRITE} การมองเห็นเป็น {VISIBILITY}
         options:
           VISIBILITY:
-            'true': มองเห็นได้
             'false': มองไม่เห็น
+            'true': มองเห็นได้
+        text: ตั้งค่า {SPRITE} การมองเห็นเป็น {VISIBILITY}
       Dancelab_setVisibleEach:
-        text: กำหนด {THIS} สภาพมองเห็นได้เป็น {VISIBILITY}
         options:
           THIS:
-            sprites: ทั้งหมด
             '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
@@ -801,74 +799,74 @@ th:
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
+            sprites: ทั้งหมด
           VISIBILITY:
-            'true': มองเห็นได้
             'false': มองไม่เห็น
+            'true': มองเห็นได้
+        text: กำหนด {THIS} สภาพมองเห็นได้เป็น {VISIBILITY}
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': ความสูง
+            '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"tint"': ระดับอ่อนสี
+            '"width"': ความกว้าง
+            '"x"': ตำแหน่งแนวนอน
+            '"y"': ตำแหน่งแนวตั้ง
+          RANGE:
+            '"bass"': เสียงต่ำ
+            '"mid"': เสียงกลาง
+            '"treble"': เสียงสูง
         text: "{SPRITE} เริ่ม {PROPERTY} หลังจาก {RANGE}"
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"width"': ความกว้าง
-            '"height"': ความสูง
-            '"rotation"': การหมุน
-            '"x"': ตำแหน่งแนวนอน
-            '"y"': ตำแหน่งแนวตั้ง
-            '"tint"': ระดับอ่อนสี
-          RANGE:
-            '"bass"': เสียงต่ำ
-            '"mid"': เสียงกลาง
-            '"treble"': เสียงสูง
       Dancelab_startMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': มนุษย์ต่างดาว
+            '"BEAR"': หมี
+            '"CAT"': แมวทั้งหมด
+            '"DOG"': สุนัขทั้งหมด
+            '"DUCK"': เป็ด
+            '"FROG"': กบ
+            '"MOOSE"': กวางมูส
+            '"PINEAPPLE"': สับปะรด
+            '"ROBOT"': หุ่นยนต์
+            '"SHARK"': ฉลาม
+            '"SLOTH"': สล็อต
+            '"UNICORN"': ยูนิคอร์น
+            sprites: ทั้งหมด
+          PROPERTY:
+            '"height"': ความสูง
+            '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"tint"': ระดับอ่อนสี
+            '"width"': ความกว้าง
+            '"x"': ตำแหน่งแนวนอน
+            '"y"': ตำแหน่งแนวตั้ง
+          RANGE:
+            '"bass"': เสียงต่ำ
+            '"mid"': เสียงกลาง
+            '"treble"': เสียงสูง
         text: "{GROUP} เริ่มต้น {PROPERTY} ตามด้วย {RANGE}"
-        options:
-          GROUP:
-            sprites: ทั้งหมด
-            '"ALIEN"': มนุษย์ต่างดาว
-            '"BEAR"': หมี
-            '"CAT"': แมวทั้งหมด
-            '"DOG"': สุนัขทั้งหมด
-            '"DUCK"': เป็ด
-            '"FROG"': กบ
-            '"MOOSE"': กวางมูส
-            '"PINEAPPLE"': สับปะรด
-            '"ROBOT"': หุ่นยนต์
-            '"SHARK"': ฉลาม
-            '"SLOTH"': สล็อต
-            '"UNICORN"': ยูนิคอร์น
-          PROPERTY:
-            '"scale"': ขนาด
-            '"width"': ความกว้าง
-            '"height"': ความสูง
-            '"rotation"': การหมุน
-            '"x"': ตำแหน่งแนวนอน
-            '"y"': ตำแหน่งแนวตั้ง
-            '"tint"': ระดับอ่อนสี
-          RANGE:
-            '"bass"': เสียงต่ำ
-            '"mid"': เสียงกลาง
-            '"treble"': เสียงสูง
       Dancelab_stopMapping:
-        text: "{SPRITE} หยุด {PROPERTY} หลังจาก {RANGE}"
         options:
           PROPERTY:
-            '"scale"': ขนาด
-            '"width"': ความกว้าง
+            '"direction"': ทิศทางการเคลื่อนไหว
             '"height"': ความสูง
             '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"tint"': ระดับอ่อนสี
+            '"width"': ความกว้าง
             '"x"': ตำแหน่งแนวนอน
             '"y"': ตำแหน่งแนวตั้ง
-            '"direction"': ทิศทางการเคลื่อนไหว
-            '"tint"': ระดับอ่อนสี
           RANGE:
             '"bass"': เสียงต่ำ
             '"mid"': เสียงกลาง
             '"treble"': เสียงสูง
+        text: "{SPRITE} หยุด {PROPERTY} หลังจาก {RANGE}"
       Dancelab_stopMappingEach:
-        text: "{GROUP} หยุด {PROPERTY} ตามด้วย {RANGE}"
         options:
           GROUP:
-            sprites: ทั้งหมด
             '"ALIEN"': มนุษย์ต่างดาว
             '"BEAR"': หมี
             '"CAT"': แมวทั้งหมด
@@ -881,55 +879,24 @@ th:
             '"SHARK"': ฉลาม
             '"SLOTH"': สล็อต
             '"UNICORN"': ยูนิคอร์น
+            sprites: ทั้งหมด
           PROPERTY:
-            '"scale"': ขนาด
-            '"width"': ความกว้าง
+            '"direction"': ทิศทางการเคลื่อนไหว
             '"height"': ความสูง
             '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"tint"': ระดับอ่อนสี
+            '"width"': ความกว้าง
             '"x"': ตำแหน่งแนวนอน
             '"y"': ตำแหน่งแนวตั้ง
-            '"direction"': ทิศทางการเคลื่อนไหว
-            '"tint"': ระดับอ่อนสี
           RANGE:
             '"bass"': เสียงต่ำ
             '"mid"': เสียงกลาง
             '"treble"': เสียงสูง
+        text: "{GROUP} หยุด {PROPERTY} ตามด้วย {RANGE}"
       Dancelab_translateStrings:
-        text: แปล {STRING}
         options:
           STRING:
-            '"music_wave"': คลื่น
-            '"ripples"': ระลอกคลื่น
-            '"ripples_random"': สุ่มระลอกคลื่น
-            '"quads"': มุม
-            '"flowers"': ดอกไม้
-            '"popsicles"': ไอศกรีมแท่ง
-            '"squiggles"': เส้นขะยุกขะยิก
-            '"growing_stars"': ดาวเปล่งแสง
-            '"emojis"': อิโมจิ
-            '"hearts_colorful"': หัวใจ
-            '"paint_drio"': สีจุ่ม
-            '"exploding_stars"': ดาวกระจาย
-            '"row_top"': แถวบนสุด
-            '"row_bottom"': แถวล่างสุด
-            '"column_left"': คอลัมน์ซ้าย
-            '"column_right"': คอลัมน์ขวา
-            '"diamond"': เพชร
-            '"mural"': จิตรกรรมฝาผนัง
-            '"safari"': ซาฟารี
-            '"network"': เครือข่าย
-            '"highway"': ทางหลวง
-            '"stream"': สตรีม
-            '"tile"': ไทล์
-            '"shadow"': เงา
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"x"': x
-            '"y"': y
-            '"z"': z
             '"0"': '0'
             '"1"': '1'
             '"2"': '2'
@@ -939,21 +906,58 @@ th:
             '"7"': '7'
             '"8"': '8'
             '"9"': '9'
+            '"column_left"': คอลัมน์ซ้าย
+            '"column_right"': คอลัมน์ขวา
+            '"diamond"': เพชร
+            '"emojis"': อิโมจิ
+            '"exploding_stars"': ดาวกระจาย
+            '"flowers"': ดอกไม้
+            '"growing_stars"': ดาวเปล่งแสง
+            '"hearts_colorful"': หัวใจ
+            '"highway"': ทางหลวง
+            '"mural"': จิตรกรรมฝาผนัง
+            '"music_wave"': คลื่น
+            '"network"': เครือข่าย
+            '"paint_drio"': สีจุ่ม
+            '"popsicles"': ไอศกรีมแท่ง
+            '"quads"': มุม
+            '"ripples"': ระลอกคลื่น
+            '"ripples_random"': สุ่มระลอกคลื่น
+            '"row_bottom"': แถวล่างสุด
+            '"row_top"': แถวบนสุด
+            '"s"': s
+            '"safari"': ซาฟารี
+            '"shadow"': เงา
+            '"squiggles"': เส้นขะยุกขะยิก
+            '"stream"': สตรีม
+            '"t"': t
+            '"tile"': ไทล์
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+        text: แปล {STRING}
       Dancelab_whenKey:
-        text: เมื่อ {KEY} ถูกกด
         options:
           KEY:
-            '"up"': ขึ้นข้างบน
-            '"left"': ซ้าย
-            '"down"': เป็นตำแหน่ง
-            '"right"': ขวา
-            '"space"': อวกาศ
-            '"enter"': ป้อน
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
             '"a"': a
             '"b"': b
             '"c"': c
             '"d"': d
+            '"down"': เป็นตำแหน่ง
             '"e"': e
+            '"enter"': ป้อน
             '"f"': f
             '"g"': g
             '"h"': h
@@ -961,59 +965,55 @@ th:
             '"j"': j
             '"k"': k
             '"l"': l
+            '"left"': ซ้าย
             '"m"': m
             '"n"': n
             '"o"': o
             '"p"': p
             '"q"': q
             '"r"': r
+            '"right"': ขวา
             '"s"': s
+            '"space"': อวกาศ
             '"t"': t
             '"u"': u
+            '"up"': ขึ้นข้างบน
             '"v"': v
             '"w"': w
             '"x"': x
             '"y"': y
             '"z"': z
-            '"0"': '0'
-            '"1"': '1'
-            '"2"': '2'
-            '"3"': '3'
-            '"4"': '4'
-            '"6"': '6'
-            '"7"': '7'
-            '"8"': '8'
-            '"9"': '9'
+        text: เมื่อ {KEY} ถูกกด
       Dancelab_whenPeak:
-        text: เมื่อ {RANGE} สูงสุด
         options:
           RANGE:
             '0': เสียงต่ำ
             '1': เสียงกลาง
             '2': เสียงสูง
+        text: เมื่อ {RANGE} สูงสุด
       Dancelab_whenSetup:
         text: การตั้งค่า
       Dancelab_whenSetup2:
         text: การตั้งค่า
       DansBlocks_getMicroscope:
-        text: กล้องจุลทรรศน์มี {INPUT1}
         options:
           INPUT1:
             '1': น้ำมะนาว
             '3': baking soda
             '5': both
+        text: กล้องจุลทรรศน์มี {INPUT1}
       DansBlocks_setForegroundEffect2:
-        text: ใช้เอฟเฟกต์ {EFFECT}
         options:
           EFFECT:
             '"bubbles"': ฟองสบู่
             '"confetti"': กระดาษสี
-            '"hearts"': หัวใจ
             '"emojis"': อีโมจิมีความสุข
+            '"glass"': กระจกแตก
+            '"hearts"': หัวใจ
             '"rain"': มีฝน
             '"starburst"': ดาวกระจาย
-            '"glass"': กระจกแตก
             '"twinkling"': ระยิบระยับ
+        text: ใช้เอฟเฟกต์ {EFFECT}
       DansBlocks_setMicroscope:
         options:
           INPUT1:
@@ -1028,626 +1028,6 @@ th:
         text: เป็นตัวแทน {NUM} ใหม่ {ANIMATION_NAME} สไปรต์ [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}พูด{TEXT1}"
-      gamelab_addBehaviorSimple:
-        text: "{SPRITE} เทพเจ้าเริ่มต้น {BEHAVIOR}"
-      gamelab_addTarget:
-        text: "{SPRITE} เข้าไปสู่เป้าหมาย {TARGET} ถึง {OPT}"
-        options:
-          OPT:
-            '"follow"': ตาม
-            '"avoid"': หลบ
-      gamelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
-      gamelab_atTime:
-        text: ที่ {N} {UNIT}
-        options:
-          UNIT:
-            '"seconds"': วินาที
-            '"frames"': กรอบ
-      gamelab_avoidingTargets:
-        text: หลบเป้าหมาย
-      gamelab_beginCollectingData:
-        text: เริ่มต้นเก็บข้อมูล {BREAK} ค่า {VALUE} ด้วยป้าย {LABEL}
-      gamelab_behaviorPicker:
-        text: "{BEHAVIOR}"
-      gamelab_bounceOff:
-        text: "{SPRITE} กระโดดไปที่ {TARGET}"
-      gamelab_changePropBy:
-        text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"rotation"': การหมุน
-            '"x"': ตำแหน่ง x
-            '"y"': ตำแหน่ง y
-            '"direction"': ทิศทางการเคลื่อนไหว
-            '"speed"': ความเร็ว
-      gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} สัมผัส {SPRITE2}"
-        options:
-          CONDITION:
-            '"when"': เมื่อ (สัมผัสกัน)
-            '"while"': ในขณะที่
-      gamelab_clickedOn:
-        text: เมื่อคลิก {SPRITE}
-      gamelab_clickedSpritePointer:
-        text: "{SPRITE}"
-      gamelab_collectibleBehaviors:
-        text: "{BEHAVIOR}"
-        options:
-          BEHAVIOR:
-            new Behavior(spinning_right, []): หมุนไปทางขวา
-            new Behavior(spinning_left, []): หมุนไปทางซ้าย
-            new Behavior(fluttering, []): กระพือปีก
-            new Behavior(jittering, []): กระสับกระส่าย
-            new Behavior(wobbling, []): โยกเยก
-            new Behavior(wandering, []): เคลื่อนที่
-            new Behavior(patrolling, []): เดินลาดตระเวน
-            new Behavior(moving_west_and_looping, []): เคลื่อนที่ไปทางตะวันตกและวนรอบ
-            new Behavior(moving_east_and_looping, []): เคลื่อนไปทางตะวันออกและวนรอบ
-            new Behavior(moving_north_and_looping, []): เคลื่อนไปทางทิศเหนือแล้วลูป
-            new Behavior(moving_south_and_looping, []): เคลื่อนไปทางทิศใต้แล้วลูป
-      gamelab_comment:
-        text: 'แสดงความคิดเห็น: {COMMENT}'
-      gamelab_costumeImage:
-        text: "{COSTUME}"
-      gamelab_countByAnimation:
-        text: จำนวนของ {SPRITE}
-      gamelab_createNewSprite:
-        text: "สร้างแบบเรียงใหม่ \n เรียก {NAME} \n พร้อมเครื่องแต่งกาย {COSTUME}
-          \n ที่ {LOCATION}"
-      gamelab_destroy:
-        text: ลบ {THIS}
-      gamelab_draggable:
-        text: ลากได้
-      gamelab_drawLine:
-        text: ลากเส้น {COLOR}  {LOC1}  {LOC2}
-      gamelab_edgesDisplace:
-        text: "[SPRITE]บล็อกขอบ[0] จากการย้าย"
-      gamelab_everyInterval:
-        text: 'ทุกๆ {N} {UNIT} '
-        options:
-          UNIT:
-            '"seconds"': วินาที
-            '"frames"': กรอบ
-      gamelab_followingTargets:
-        text: ติดตามเป้าหมาย
-      gamelab_getAllSprites:
-        text: สไปร์ททั้งหมด
-      gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"rotation"': การหมุน
-            '"x"': ตำแหน่ง x
-            '"y"': ตำแหน่ง y
-            '"direction"': ทิศทางการเคลื่อนไหว
-            '"tint"': ระดับอ่อนสี
-            '"speed"': ความเร็ว
-      gamelab_getThisSprite:
-        text: "{CHOICE} สไปรท์"
-        options:
-          CHOICE:
-            '"this"': นี้
-            '"other"': อย่างอื่น
-      gamelab_getTime:
-        text: เวลาเป็น {UNIT}
-        options:
-          UNIT:
-            '"seconds"': วินาที
-            '"frames"': กรอบ
-      gamelab_glideTo:
-        text: "{SPRITE} พุ่งไปที่ {LOCATION}"
-      gamelab_hideTitleScreen:
-        text: หน้าจอซ่อนชื่อเรื่อง
-      gamelab_ifVarEquals:
-        text: |-
-          หาก {NUM} ={VAL}
-          {STATEMENT}
-      gamelab_int10:
-        text: "{VALUE}"
-        options:
-          VALUE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-      gamelab_isCostumeEqual:
-        text: เครื่องแต่งกายของ {SPRITE} คือ {COSTUME}
-      gamelab_isKeyPressed:
-        text: กด {KEY}
-        options:
-          KEY:
-            '"up"': ขึ้นข้างบน
-            '"down"': เป็นตำแหน่ง
-            '"left"': ซ้าย
-            '"right"': ขวา
-            '"space"': อวกาศ
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
-            '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"x"': x
-            '"y"': y
-            '"z"': z
-      gamelab_isTouchingEdges:
-        text: "{SPRITE} สัมผัสขอบ"
-      gamelab_isTouchingSprite:
-        text: "{SPRITE} กำลังสัมผัส {TARGET}"
-      gamelab_jumpTo:
-        text: "{SPRITE} ข้ามไปที่ {LOCATION}"
-      gamelab_keyPressed:
-        text: "{CONDITION} {KEY} กด"
-        options:
-          CONDITION:
-            '"when"': เมื่อ (สัมผัสกัน)
-            '"while"': ในขณะที่
-          KEY:
-            '"up"': ขึ้นข้างบน
-            '"down"': เป็นตำแหน่ง
-            '"left"': ซ้าย
-            '"right"': ขวา
-            '"space"': อวกาศ
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
-            '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"x"': x
-            '"y"': y
-            '"z"': z
-      gamelab_layoutSprites:
-        text: วางผัง {GROUP} เป็น {FORMAT}
-        options:
-          FORMAT:
-            '"border"': เส้นขอบ
-            '"circle"': วงกลม
-            '"grid"': ตาข่าย
-            '"top"': แถวบนสุด
-            '"row"': แถว
-            '"bottom"': แถวล่างสุด
-            '"left"': คอลัมน์ซ้าย
-            '"column"': คอลัมน์
-            '"right"': คอลัมน์ขวา
-      gamelab_locationAt:
-        text: 'สถานที่ x: {X} Y: {Y}'
-      gamelab_locationModifier:
-        text: "{DISTANCE} พิกเซล {DIRECTION} ของ {LOCATION}"
-        options:
-          DIRECTION:
-            '"North"': เหนือ
-            '"East"': ตะวันออก
-            '"South"': ใต้
-            '"West"': ตะวันตก
-      gamelab_locationMouse:
-        text: ตำแหน่งเมาส์
-      gamelab_locationOf:
-        text: ที่ตั้งของ {SPRITE}
-      gamelab_location_picker:
-        text: "{LOCATION}"
-      gamelab_makeBurst:
-        text: สร้างเอฟเฟกต์ {EFFECT} ด้วยสไปร์ท {NUM} {ANIMATION_NAME}
-        options:
-          EFFECT:
-            '"burst"': ระเบิด
-            '"pop"': กระโดด
-            '"rain"': มีฝน
-            '"spiral"': วงก้นหอย
-      gamelab_makeNewSpriteAnon:
-        text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
-      gamelab_makeNewSpriteGroup:
-        options:
-          FORMAT:
-            '"border"': เส้นขอบ
-            '"circle"': วงกลม
-            '"grid"': ตาข่าย
-            '"top"': แถวบนสุด
-            '"row"': แถว
-            '"bottom"': แถวล่างสุด
-            '"left"': คอลัมน์ซ้าย
-            '"column"': คอลัมน์
-            '"right"': คอลัมน์ขวา
-      gamelab_makeNumSprites:
-        text: สร้างสไปร์ท [ANIMATION_NAME] ใหม่ [NUM] ตัว
-      gamelab_makeProjectile:
-        text: "สร้างจรวดยิง \n{ANIMATION_NAME} จาก {LOCATION} ด้วยความเร็ว {SPEED}ไปทาง{DIRECTION}"
-        options:
-          DIRECTION:
-            '0': ขวา
-            '90': เป็นตำแหน่ง
-            '180': ซ้าย
-            '270': ขึ้นข้างบน
-      gamelab_makeSpritesWithSize:
-        options:
-          SIZE:
-            '30': เล็ก
-            '50': ปานกลาง
-            '100': ใหญ่
-      gamelab_mirrorSprite:
-        text: "{SPRITE} หน้า {DIRECTION}"
-        options:
-          DIRECTION:
-            '"right"': ขวา
-            '"left"': ซ้าย
-      gamelab_mouseLocation:
-        text: ตำแหน่งเมาส์
-      gamelab_moveBackward:
-        text: เคลื่อนย้าย {SPRITE} ไปด้านหลัง {DISTANCE} พิกเซล
-      gamelab_moveForward:
-        text: ย้าย {SPRITE} {DISTANCE} พิกเซลไปข้างหน้า
-      gamelab_moveInDirection:
-        text: ย้าย {SPRITE} {DISTANCE} พิก เซล {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': เหนือ
-            '"East"': ตะวันออก
-            '"South"': ใต้
-            '"West"': ตะวันตก
-      gamelab_moveToward:
-        text: ย้าย {SPRITE} พิก เซล {DISTANCE} ไป ยัง {TARGET}
-      gamelab_newSpritePointer:
-        text: "{SPRITE}"
-      gamelab_objectSpritePointer:
-        text: "{SPRITE}"
-      gamelab_patrollingUpDown:
-        text: เลื่อนขึ้นและลง
-      gamelab_playSound:
-        text: เล่นเสียง {SOUND}
-      gamelab_playSoundOptions:
-        text: เล่นเสียง {SOUND}
-        options:
-          SOUND:
-            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": ลักษณะ
-            "'sound://category_digital/boing_2.mp3'": โบอิ้ง
-            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": กระโดด
-            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": ทวิงเกิล
-            "'sound://category_app/app_button_1.mp3'": ปุ่ม
-            "'sound://category_collect/clicky_crunch.mp3'": ครัชช์
-            "'sound://category_swish/quick_swing.mp3'": สวิง
-            "'sound://category_nature/summer_night_loop.mp3'": คืนฤดูร้อน
-            "'sound://category_background/ocean_waves.mp3'": คลื่นมหาสมุทร
-            "'sound://category_nature/south_carolina_beach_ripple.mp3'": คลื่นเบาๆที่ชายหาด
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": ฟองสบู่
-            "'sound://category_animals/bear.mp3'": หมี
-            "'sound://category_animals/cat.mp3'": แมว
-            "'sound://category_animals/cow.mp3'": วัว
-            "'sound://category_animals/pig.mp3'": หมู
-            "'sound://category_animals/sheep.mp3'": แกะ
-            "'sound://category_animals/goat.mp3'": แพะ
-            "'sound://category_animals/chicken.mp3'": ไก่
-            "'sound://category_animals/rooster.mp3'": ไก่ตัวผู้
-            "'sound://category_animals/elephant.mp3'": ช้าง
-            "'sound://category_animals/dolphin.mp3'": โลมา
-            "'sound://category_nature/thunderstorm_1.mp3'": พายุฟ้าคะนอง
-            "'sound://category_animals/chick.mp3'": ไก่
-            "'sound://category_animals/dog.mp3'": สุนัข
-            "'sound://category_animals/tiger.mp3'": เสือ
-            "'sound://category_collect/trill_stings.mp3'": ทริล
-            "'sound://category_instrumental/harpe_pluck_1.mp3'": พิณ
-            "'sound://category_tap/vibrant_positive_tap_1.mp3'": แท็ป
-            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": โทนอลฮิต
-            "'sound://category_transition/trippy_robotic_transition.mp3'": การแปลงร่างเป็นหุ่นยนต์
-            "'sound://category_transition/star_dust_particle_10.mp3'": ละอองดาว
-            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": จานบิน
-            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": มนตร์คาถา
-            "'sound://category_retro/retro_game_ui_select_6.mp3'": เลือก
-            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": เสียงทุ้มนุ่มลึก
-            "'sound://category_digital/jump_7.mp3'": กระโดดออกไปที่
-      gamelab_playSoundOptionsSoccer:
-        text: เล่นเสียง {SOUND}
-        options:
-          SOUND:
-            "'sound://category_sports/Airhorn_SFX.mp3'": แอร์ฮอร์น
-            "'sound://category_sports/Crowd_Applause_SFX.mp3'": เสียงปรบมือ
-            "'sound://category_sports/Crowd_Chant_SFX.mp3'": เสียงสวด
-            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": เสียงเชียร์
-            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": เตะ
-            "'sound://category_sports/Double_Whistle_SFX.mp3'": นกหวีดสองเสียง
-            "'sound://category_sports/One_Whistle_SFX.mp3'": นกหวีด
-      gamelab_playSoundOptionsSpace:
-        text: เล่นเสียง {SOUND}
-        options:
-          SOUND:
-            "'sound://category_space/Blackhole_SFX.mp3'": หลุมดำ
-            "'sound://category_space/Bullet_cluster_SFX.mp3'": กระจุกปืนรัว
-            "'sound://category_space/Carina_SFX.mp3'": คารินา
-            "'sound://category_space/Cassiopeia_SFX.mp3'": แคสสิโอเปีย
-            "'sound://category_space/Crab_nebula_SFX.mp3'": เนบิวลาปู
-            "'sound://category_space/Launch_SFX.mp3'": ปล่อย
-            "'sound://category_space/Lift_Off.mp3'": บินขึ้น
-            "'sound://category_space/Pillars_SFX.mp3'": เสาหลัก
-            "'sound://category_space/Southern_ring_SFX.mp3'": วงแหวนทางใต้
-            "'sound://category_space/Supernova_SFX.mp3'": ซุปเปอร์โนวา
-            "'sound://category_space/Tycho_SFX.mp3'": ไทโช
-      gamelab_playSpeech:
-        text: เล่นเสียงพูด {SOUND}
-      gamelab_playerBehaviors:
-        text: "{BEHAVIOR}"
-        options:
-          BEHAVIOR:
-            new Behavior(moving_with_arrow_keys, []): เคลื่อนไหวด้วยปุ่มลูกศร
-            new Behavior(driving_with_arrow_keys, []): ขับด้วยปุ่มลูกศร
-            draggable(): ลากได้
-      gamelab_pointInDirection:
-        text: จุด {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': เหนือ
-            '"East"': ตะวันออก
-            '"South"': ใต้
-            '"West"': ตะวันตก
-      gamelab_printText:
-        text: พิมพ์ {TEXT}
-      gamelab_randColor:
-        text: สุ่มสี
-      gamelab_randomColor:
-        text: สุ่มสี
-      gamelab_randomLocation:
-        text: ตำแหน่งแบบสุ่ม
-      gamelab_removeAllBehaviors:
-        text: "{SPRITE} หยุดทุกอย่าง"
-      gamelab_removeBehaviorSimple:
-        text: "[SPRITE]สไปรท์[0] หยุด {BEHAVIOR}"
-      gamelab_removeTint:
-        text: ลบสีจาก {THIS}
-      gamelab_repeatForever:
-        text: ทำซ้ำตลอดไป
-      gamelab_resetTimer:
-        text: รีเซ็ตตัวจับเวลา
-      gamelab_setAnimation:
-        text: เปลี่ยน {THIS} เครื่องแต่งกาย {ANIMATION}
-      gamelab_setBackground:
-        text: กำหนดสีแบ็กกราวนด์ {COLOR}
-      gamelab_setBackgroundImage:
-        text: ตั้งค่าพื้นหลังเป็น {IMG}
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ถ้ำ
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
-            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': พื้นหญ้ากว้างใหญ่
-            '"https://studio.code.org/blockly/media/skins/studio/background.png"': ศาล
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': ทะเลทราย
-            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': เส้นทางทะเลทราย
-            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': ฟาร์ม
-            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': พื้นหญ้าที่ล่องลอย
-            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': หน้าบ้าน
-            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': กาแล็คซี่
-            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ตาข่าย
-            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': ห้องครัว
-            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': ห้องนั่งเล่น
-            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': ทุ่งหญ้า
-            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': ทิวทัศน์สวน
-            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': ต้นสน
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': รุ้งกินน้ำ
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ไซไฟ
-            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': สนามฟุตบอล
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': ขั้นตอน
-            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ดาว
-            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': รถไฟใต้ดิน
-            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': ดวงอาทิตย์และสายรุ้ง
-            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': แสงอาทิตย์สาดส่อง
-            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': สนามเทนนิส
-            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': เกาะแห่งพืชพันธุ์
-            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': ใต้ดิน
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ใต้น้ำ
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ฤดูหนาว
-            undefined: ไม่เลย
-      gamelab_setBackgroundImageAs:
-        text: ตั้งค่าพื้นหลังเป็น {IMG}
-      gamelab_setDefaultSpriteSize:
-        text: ตั้งขนาดค่าเริ่มต้นของสไปร์ทตัวใหม่เป็น {SIZE}
-        options:
-          SIZE:
-            '25': เล็กมาก
-            '50': เล็ก
-            '75': ปานกลาง
-            '100': ใหญ่
-      gamelab_setPrompt:
-        text: ผู้ใช้พรอมต์ {QUESTION} สำหรับตัวแปร {VAR}
-      gamelab_setPromptWithChoices:
-        text: ผู้ใช้พรอมต์ {QUESTION} สำหรับตัวแปร {VAR} พร้อมตัวเลือก {A}{B}{C}
-      gamelab_setProp:
-        text: ตั้ง ค่า {SPRITE} {PROPERTY} ถึง {VAL}
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"rotation"': การหมุน
-            '"x"': ตำแหน่ง x
-            '"y"': ตำแหน่ง y
-            '"direction"': ทิศทางการเคลื่อนไหว
-            '"speed"': ความเร็ว
-      gamelab_setProp_dropdown:
-        text: กำหนด {SPRITE} {PROPERTY} เป็น {SIZE}
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-          SIZE:
-            '25': เล็กมาก
-            '50': เล็ก
-            '75': ปานกลาง
-            '100': ใหญ่
-      gamelab_setSizes:
-        text: ตั้งค่า {SPRITE} {PROPERTY} เป็น {N}%
-        options:
-          PROPERTY:
-            '"scale"': ขนาด
-            '"width"': ความกว้าง
-            '"height"': ความสูง
-      gamelab_setSpeed_dropdown:
-        options:
-          SIZE:
-            '1': extra slow
-            '3': ช้า
-            '5': ธรรมดา
-            '7': เร็ว
-            '9': extra fast
-      gamelab_setTint:
-        text: เปลี่ยนสีของ {THIS} {COLOR}
-      gamelab_setupScoreboard:
-        text: "วาดกระดานคะแนน \n{SPRITE1COSTUME}คะแนน{VAR1}{SPRITE2COSTUME}คะแนน{VAR2}เป้าหมาย{SPRITE3COSTUME}"
-      gamelab_setupSim:
-        text: |-
-          การจำลองการตั้งค่าที่มี
-          {SPRITE1N}{SPRITE1COSTUME}ความเร็ว{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}ความเร็ว{SPRITE2SPEED}
-          รวบ รวม
-          {SPRITE3N}{SPRITE3COSTUME}
-      gamelab_showTitleScreen:
-        text: แสดงหน้าจอชื่อเรื่อง {BREAK} {TITLE} ข้อความ {SUBTITLE} ข้อความ [2]
-          123_321
-      gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} คลิ ก"
-        options:
-          CONDITION:
-            '"when"': เมื่อ (สัมผัสกัน)
-            '"while"': ในขณะที่
-      gamelab_spriteSay:
-        text: "{SPRITE} พูด {SPEECH}"
-      gamelab_spriteSayTime:
-        text: "{SPRITE}พูด{TEXT1}นาน{NUM}วินาที"
-      gamelab_startAvoiding:
-        text: "{SPRITE} เริ่มหลบหลีก {TARGET}"
-      gamelab_startFollowing:
-        text: "{SPRITE} เริ่มตาม {TARGET}"
-      gamelab_startGliding:
-        text: "{SPRITE} เริ่มพุ่งตัว"
-      gamelab_stopAvoiding:
-        text: "{SPRITE} หยุดหลบหลีกสไปร์ทตัวอื่น"
-      gamelab_stopCollectingData:
-        text: หยุดเก็บข้อมูล
-      gamelab_stopFollowing:
-        text: "{SPRITE} หยุดติดตามสไปร์ทตัวอื่น"
-      gamelab_stopGliding:
-        text: "{SPRITE} หยุดพุ่งตัว"
-      gamelab_subjectSpritePointer:
-        text: "{SPRITE}"
-      gamelab_textJoin:
-        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
-      gamelab_textVariableJoin:
-        text: "{VAR}{TEXT2}"
-      gamelab_tumbling:
-        text: ตีลังกา
-      gamelab_turn:
-        text: เปิด {SPRITE} {DIRECTION} [1] {N} องศา
-        options:
-          DIRECTION:
-            '"right"': ขวา
-            '"left"': ซ้าย
-      gamelab_updateTitleWithColor:
-        text: แสดงหน้าจอชื่อเรื่อง {BREAK} ชื่อเรื่อง {TITLE} สี {COLOR}
-      gamelab_whenAllPromptsAnswered:
-        text: เมื่อพรอมต์ทั้งหมดให้คำตอบ
-      gamelab_whenDownArrow:
-        text: เมื่อลูกศรลงกด
-      gamelab_whenKey:
-        text: เมื่อ {KEY} ถูกกด
-        options:
-          KEY:
-            '"up"': ขึ้นข้างบน
-            '"down"': เป็นตำแหน่ง
-            '"left"': ซ้าย
-            '"right"': ขวา
-            '"space"': อวกาศ
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      gamelab_whenLeftArrow:
-        text: เมื่อลูกศรซ้ายกด
-      gamelab_whenPromptAnswered:
-        text: เมื่อ {VAR} ให้คำตอบ
-      gamelab_whenRightArrow:
-        text: เมื่อลูกศรขวากด
-      gamelab_whenSpriteCreated:
-        text: เมื่อ {SPRITE} ถูกสร้าง
-      gamelab_whenTouching:
-        text: เมื่อ {SPRITE1} สัมผัส {SPRITE2}
-      gamelab_whenUpArrow:
-        text: เมื่อลูกศรขึ้นกด
-      gamelab_whileDownArrow:
-        text: ขณะที่ลูกศรลงกด
-      gamelab_whileKey:
-        text: ในขณะที่กด {KEY}
-        options:
-          KEY:
-            '"up"': ขึ้นข้างบน
-            '"down"': เป็นตำแหน่ง
-            '"left"': ซ้าย
-            '"right"': ขวา
-            '"space"': อวกาศ
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      gamelab_whileLeftArrow:
-        text: ในขณะที่ลูกศรซ้ายกด
-      gamelab_whileRightArrow:
-        text: ในขณะที่ลูกศรขวากด
-      gamelab_whileTouching:
-        text: ในขณะที่ {SPRITE1} สัมผัส {SPRITE2}
-      gamelab_whileUpArrow:
-        text: ในขณะที่ลูกศรขึ้นกด
-      gamelab_withPercentChance:
-        text: |-
-          หากมีโอกาส {NUM}%
-          {STATEMENT}
-      gamelab_withPercentChanceDropdown:
-        text: "โอกาส {NUM} ครั้ง \n{STATEMENT}"
-        options:
-          NUM:
-            '10': ต่ำมาก
-            '25': ต่ำ
-            '50': 50/50
-            '75': สูง
-            '90': สูงมาก
-      gamelab_xLocationOf:
-        text: x พิกัดของ {SPRITE}
-      gamelab_yLocationOf:
-        text: พิกัด y ของ {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} พุ่งไปที่ {LOCATION}"
       KatiesBlocks_tumbling:
@@ -1655,16 +1035,16 @@ th:
       Mikelab_addBehaviorSimple:
         text: "{SPRITE} เทพเจ้าเริ่มต้น {BEHAVIOR}"
       Mikelab_addTrainingData:
-        text: 'เพิ่มข้อมูลการฝึกอบรม: {NAME}{LOCATION}'
         options:
-          NAME:
-            "{x: 201, y: 100}": วัตถุ
-            "{x: 200, y: 100}": ปลา
           LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ป้ายกำกับของ
             "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": ปลา
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": ไม่ใช่ปลา
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ป้ายกำกับของ
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": ไม่ใช่ป้ายกำกับของฉลาก
+          NAME:
+            "{x: 200, y: 100}": ปลา
+            "{x: 201, y: 100}": วัตถุ
+        text: 'เพิ่มข้อมูลการฝึกอบรม: {NAME}{LOCATION}'
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       Mikelab_beginDataCollection:
@@ -1672,121 +1052,121 @@ th:
       Mikelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': ขนาด
+            '"direction"': ทิศทางการเคลื่อนไหว
             '"rotation"': การหมุน
+            '"scale"': ขนาด
             '"x"': ตำแหน่ง x
             '"y"': ตำแหน่ง y
-            '"direction"': ทิศทางการเคลื่อนไหว
       Mikelab_createNewSprite:
         options:
           LOCATION:
-            "{x: 200, y: 100}": ด้านบน
-            "{x: 200, y: 300}": ด้านล่าง
-            "{x: 100, y: 200}": ซ้าย
-            "{x: 300, y: 200}": ขวา
-            "{x: 200, y: 200}": ตรงกลาง
             "{x: 100, y: 100}": ซ้ายบน
-            "{x: 300, y: 100}": ขวาบน
+            "{x: 100, y: 200}": ซ้าย
             "{x: 100, y: 300}": ซ้ายล่าง
+            "{x: 200, y: 100}": ด้านบน
+            "{x: 200, y: 200}": ตรงกลาง
+            "{x: 200, y: 300}": ด้านล่าง
+            "{x: 300, y: 100}": ขวาบน
+            "{x: 300, y: 200}": ขวา
             "{x: 300, y: 300}": ขวาล่าง
       Mikelab_getNext:
         text: ได้รับวัตถุต่อไป
       Mikelab_getProp:
         options:
           PROPERTY:
-            '"scale"': ขนาด
+            '"direction"': ทิศทางการเคลื่อนไหว
             '"rotation"': การหมุน
+            '"scale"': ขนาด
             '"x"': ตำแหน่ง x
             '"y"': ตำแหน่ง y
-            '"direction"': ทิศทางการเคลื่อนไหว
       Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': ทั้งหมด
+            '"this"': นี้
         text: เปลี่ยน {SELECT} {COSTUME} เป็น {COSTUME2}
-        options:
-          SELECT:
-            '"all"': ทั้งหมด
-            '"this"': นี้
       Mikelab_groupChangePropBy:
-        text: เปลี่ยน {PROPERTY} ของ {SELECT} {COSTUME} โดย {VAL}
         options:
-          SELECT:
-            '"all"': ทั้งหมด
-            '"this"': นี้
           PROPERTY:
-            '"scale"': ขนาด
+            '"direction"': ทิศทางการเคลื่อนไหว
             '"rotation"': การหมุน
+            '"scale"': ขนาด
             '"x"': ตำแหน่ง x
             '"y"': ตำแหน่ง y
-            '"direction"': ทิศทางการเคลื่อนไหว
+          SELECT:
+            '"all"': ทั้งหมด
+            '"this"': นี้
+        text: เปลี่ยน {PROPERTY} ของ {SELECT} {COSTUME} โดย {VAL}
       Mikelab_groupCreateNewSprite:
-        text: ทำ {COSTUME} ใหม่ที่ {LOCATION}
         options:
           LOCATION:
-            "{x: 200, y: 100}": ด้านบน
-            "{x: 200, y: 300}": ด้านล่าง
-            "{x: 100, y: 200}": ซ้าย
-            "{x: 300, y: 200}": ขวา
-            "{x: 200, y: 200}": ตรงกลาง
             "{x: 100, y: 100}": ซ้ายบน
-            "{x: 300, y: 100}": ขวาบน
+            "{x: 100, y: 200}": ซ้าย
             "{x: 100, y: 300}": ซ้ายล่าง
+            "{x: 200, y: 100}": ด้านบน
+            "{x: 200, y: 200}": ตรงกลาง
+            "{x: 200, y: 300}": ด้านล่าง
+            "{x: 300, y: 100}": ขวาบน
+            "{x: 300, y: 200}": ขวา
             "{x: 300, y: 300}": ขวาล่าง
+        text: ทำ {COSTUME} ใหม่ที่ {LOCATION}
       Mikelab_groupDestroy:
-        text: ลบ {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': ทั้งหมด
             '"this"': นี้
+        text: ลบ {SELECT} {COSTUME}
       Mikelab_groupDisplace:
         text: "{COSTUME} บล็อกทั้งหมด {COSTUME2} จากการย้าย"
       Mikelab_groupEdgesDisplace:
         text: "[COSTUME]บล็อกขอบ[0] จากการย้าย"
       Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"direction"': ทิศทางการเคลื่อนไหว
+            '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"x"': ตำแหน่ง x
+            '"y"': ตำแหน่ง y
+          SELECT:
+            '"this"': นี้
         text: "{SELECT} {COSTUME}[1] {PROPERTY}"
-        options:
-          SELECT:
-            '"this"': นี้
-          PROPERTY:
-            '"scale"': ขนาด
-            '"rotation"': การหมุน
-            '"x"': ตำแหน่ง x
-            '"y"': ตำแหน่ง y
-            '"direction"': ทิศทางการเคลื่อนไหว
       Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': ทั้งหมด
+            '"this"': นี้
         text: หยุด {SELECT} {COSTUME} พฤติกรรม
-        options:
-          SELECT:
-            '"all"': ทั้งหมด
-            '"this"': นี้
       Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': ทั้งหมด
+            '"this"': นี้
         text: "{SELECT} {COSTUME} หยุด {BEHAVIOR}"
-        options:
-          SELECT:
-            '"all"': ทั้งหมด
-            '"this"': นี้
       Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': ทั้งหมด
+            '"this"': นี้
         text: ลบสีจาก {SELECT} {COSTUME}
-        options:
-          SELECT:
-            '"all"': ทั้งหมด
-            '"this"': นี้
       Mikelab_groupSetProp:
-        text: ตั้ง ค่า {PROPERTY} ของ {SELECT} {COSTUME} ถึง {VAL}
         options:
-          SELECT:
-            '"all"': ทั้งหมด
-            '"this"': นี้
           PROPERTY:
-            '"scale"': ขนาด
+            '"direction"': ทิศทางการเคลื่อนไหว
             '"rotation"': การหมุน
+            '"scale"': ขนาด
             '"x"': ตำแหน่ง x
             '"y"': ตำแหน่ง y
-            '"direction"': ทิศทางการเคลื่อนไหว
+          SELECT:
+            '"all"': ทั้งหมด
+            '"this"': นี้
+        text: ตั้ง ค่า {PROPERTY} ของ {SELECT} {COSTUME} ถึง {VAL}
       Mikelab_groupSetTint:
-        text: เปลี่ยนสีของ {SELECT} {COSTUME} ถึง {COLOR}
         options:
           SELECT:
             '"all"': ทั้งหมด
             '"this"': นี้
+        text: เปลี่ยนสีของ {SELECT} {COSTUME} ถึง {COLOR}
       Mikelab_groupWhenClickedOn:
         text: เมื่อคลิก {COSTUME}
       Mikelab_groupWhenXTouchesY:
@@ -1800,15 +1180,12 @@ th:
       Mikelab_hasBehavior:
         text: "{SPRITE} ปัจจุบันคือ {BEHAVIOR}"
       Mikelab_hideFish:
-        text: ลบ {TRASH}
         options:
           TRASH:
-            object: วัตถุ
             fish: ปลา
+            object: วัตถุ
+        text: ลบ {TRASH}
       Mikelab_ifDanceIs:
-        text: |-
-          ถ้า {SPRITE} กำลัง {DANCE}
-          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: ปรบมือสูง
@@ -1818,34 +1195,37 @@ th:
             MOVES.Drop: ทิ้งตัว
             MOVES.Floss: ท่าฟลอส
             MOVES.Fresh: ท่าเต้นเฟรช
-            MOVES.Roll: บอดี้โรล
             MOVES.Kick: สตาร์
-            MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
+            MOVES.Roll: บอดี้โรล
+            MOVES.ThisOrThat: ท่าเต้น This or That
+        text: |-
+          ถ้า {SPRITE} กำลัง {DANCE}
+          {DO1} {DO2}
       Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: ปลา
+            MOVES.Clown: ป้ายกำกับของ
         text: |-
           ถ้า {DANCE}
           ทำ {DO1} อื่น {DO2}
+      Mikelab_ifRecognizeLabel:
         options:
           DANCE:
             MOVES.ClapHigh: ปลา
             MOVES.Clown: ป้ายกำกับของ
-      Mikelab_ifRecognizeLabel:
         text: |-
           ถ้ารู้จักวัตถุเป็น {DANCE}
           ทำ {DO1} อื่น {DO2} อื่น [2]
-        options:
-          DANCE:
-            MOVES.ClapHigh: ปลา
-            MOVES.Clown: ป้ายกำกับของ
       Mikelab_ifRecognizeLabelOnly:
-        text: |-
-          ถ้ารู้จักวัตถุเป็น {DANCE}
-          ทำ {DO1}
         options:
           DANCE:
             MOVES.ClapHigh: ปลา
             MOVES.Clown: ไม่ใช่ป้ายกำกับของฉลาก
+        text: |-
+          ถ้ารู้จักวัตถุเป็น {DANCE}
+          ทำ {DO1}
       Mikelab_locationAt:
         text: 'สถานที่ x: {X} Y: {Y}'
       Mikelab_location_picker:
@@ -1863,33 +1243,33 @@ th:
       Mikelab_setBG:
         options:
           BG:
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': สนามฟุตบอล
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': สนามเทนนิส
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
-            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': พื้นหญ้ากว้างใหญ่
-            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': เส้นทางทะเลทราย
-            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': ฟาร์ม
-            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': พื้นหญ้าที่ล่องลอย
-            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': หน้าบ้าน
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': ห้องครัว
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': ฟาร์ม
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': ห้องนั่งเล่น
-            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': ทุ่งหญ้า
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': ทิวทัศน์สวน
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': ต้นสน
-            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': สนามฟุตบอล
-            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': ขั้นตอน
-            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': รถไฟใต้ดิน
-            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': ดวงอาทิตย์และสายรุ้ง
-            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': แสงอาทิตย์สาดส่อง
-            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': สนามเทนนิส
-            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': เกาะแห่งพืชพันธุ์
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': ใต้ดิน
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': รถไฟใต้ดิน
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': ขั้นตอน
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': พื้นหญ้ากว้างใหญ่
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': ดวงอาทิตย์และสายรุ้ง
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': หน้าบ้าน
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': แสงอาทิตย์สาดส่อง
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': ทุ่งหญ้า
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': เส้นทางทะเลทราย
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': พื้นหญ้าที่ล่องลอย
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': เกาะแห่งพืชพันธุ์
       Mikelab_setProp:
         options:
           PROPERTY:
-            '"scale"': ขนาด
+            '"direction"': ทิศทางการเคลื่อนไหว
             '"rotation"': การหมุน
+            '"scale"': ขนาด
             '"x"': ตำแหน่ง x
             '"y"': ตำแหน่ง y
-            '"direction"': ทิศทางการเคลื่อนไหว
       Mikelab_setupSim:
         text: |-
           การจำลองการตั้งค่าที่มี
@@ -1900,61 +1280,61 @@ th:
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': ขวา
             '"left"': ซ้าย
+            '"right"': ขวา
       Mikelab_sprite:
-        text: "{COSTUME} สไปรท์ {LOCATION}"
         options:
           LOCATION:
-            "{x: 200, y: 100}": ด้านบน
-            "{x: 200, y: 300}": ด้านล่าง
-            "{x: 100, y: 200}": ซ้าย
-            "{x: 300, y: 200}": ขวา
-            "{x: 200, y: 200}": ตรงกลาง
             "{x: 100, y: 100}": ซ้ายบน
-            "{x: 300, y: 100}": ขวาบน
+            "{x: 100, y: 200}": ซ้าย
             "{x: 100, y: 300}": ซ้ายล่าง
+            "{x: 200, y: 100}": ด้านบน
+            "{x: 200, y: 200}": ตรงกลาง
+            "{x: 200, y: 300}": ด้านล่าง
+            "{x: 300, y: 100}": ขวาบน
+            "{x: 300, y: 200}": ขวา
             "{x: 300, y: 300}": ขวาล่าง
+        text: "{COSTUME} สไปรท์ {LOCATION}"
       Mikelab_whenClickedOn:
         text: เมื่อคลิก {SPRITE}
       Mikelab_whenKeyPressed:
-        text: เมื่อ {KEY} ถูกกด
         options:
           KEY:
-            '"up"': ลูกศรชี้ขึ้น
+            '"a"': ก
+            '"d"': ง
             '"down"': ลูกศรชี้ลง
             '"left"': ลูกศรชี้ทางซ้าย
             '"right"': ลูกศรชี้ทางขวา
-            '"w"': W
-            '"a"': ก
             '"s"': S
-            '"d"': ง
+            '"up"': ลูกศรชี้ขึ้น
+            '"w"': W
+        text: เมื่อ {KEY} ถูกกด
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': ลูกศรชี้ขึ้น
+            '"a"': ก
+            '"d"': ง
             '"down"': ลูกศรชี้ลง
             '"left"': ลูกศรชี้ทางซ้าย
             '"right"': ลูกศรชี้ทางขวา
-            '"w"': W
-            '"a"': ก
             '"s"': S
-            '"d"': ง
+            '"up"': ลูกศรชี้ขึ้น
+            '"w"': W
       Mikelab_whenMouseClicked:
         text: เมื่อคลิกเมาส์
       Mikelab_whenYesNoClicked:
-        text: เมื่อคลิก {KEY}
         options:
           KEY:
-            '"yes"': ใช่
             '"no"': ไม่ใช่
+            '"yes"': ใช่
+        text: เมื่อคลิก {KEY}
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': ลูกศรชี้ขึ้น
             '"down"': ลูกศรชี้ลง
             '"left"': ลูกศรชี้ทางซ้าย
             '"right"': ลูกศรชี้ทางขวา
+            '"up"': ลูกศรชี้ขึ้น
       Mikelab_xLocationOf:
         text: x พิกัดของ {SPRITE}
       Mikelab_yLocationOf:
@@ -1972,12 +1352,12 @@ th:
       Outbreak_stopMoving:
         text: สัตว์ประหลาดหยุดเคลื่อนไหว
       ParticlesBlocks_getMicroscope:
-        text: กล้องจุลทรรศน์มี {INPUT1}
         options:
           INPUT1:
             '1': น้ำมะนาว
             '3': baking soda
             '5': both
+        text: กล้องจุลทรรศน์มี {INPUT1}
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
@@ -1985,25 +1365,25 @@ th:
             '3': baking soda
             '5': both
       ParticlesBlocks_statesOfMatter:
-        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
-            new Behavior(solid, []): ของแข็ง
             new Behavior(liquid, []): ของเหลว
+            new Behavior(solid, []): ของแข็ง
             new Behavior(wandering, []): แก๊ส
+        text: "{BEHAVIOR}"
       ParticlesBlocks_statesOfMatter2:
-        text: ตั้งค่าพฤติกรรม {COSTUME} ถึง {BEHAVIOR}
         options:
           BEHAVIOR:
-            '"solid"': 'อนุภาคของแข็ง '
-            '"liquid"': อนุภาคของเหลว
             '"gas"': อนุภาคแก๊ส
+            '"liquid"': อนุภาคของเหลว
+            '"solid"': 'อนุภาคของแข็ง '
+        text: ตั้งค่าพฤติกรรม {COSTUME} ถึง {BEHAVIOR}
       ParticlesBlocks_statesOfMatter_testing:
         options:
           BEHAVIOR:
-            '"solid"': 'อนุภาคของแข็ง '
-            '"liquid"': อนุภาคของเหลว
             '"gas"': อนุภาคแก๊ส
+            '"liquid"': อนุภาคของเหลว
+            '"solid"': 'อนุภาคของแข็ง '
       Poetry_addFrame:
         options:
           BRUSH:
@@ -2027,13 +1407,13 @@ th:
       Poetry_hideText:
         text: ซ่อนข้อความ
       Poetry_makeBurst:
-        text: สร้างเอฟเฟกต์ {EFFECT} ด้วยสไปร์ท {NUM} {ANIMATION_NAME}
         options:
           EFFECT:
             '"burst"': ระเบิด
             '"pop"': กระโดด
             '"rain"': มีฝน
             '"spiral"': วงก้นหอย
+        text: สร้างเอฟเฟกต์ {EFFECT} ด้วยสไปร์ท {NUM} {ANIMATION_NAME}
       Poetry_makeNewSpriteAnon:
         text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
       Poetry_makeNumSprites:
@@ -2041,41 +1421,40 @@ th:
       Poetry_playMusic:
         options:
           SOUND:
-            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': สงบ
-            '"sound://category_nature/steady_campfire_loop.mp3"': แคมป์ไฟ
-            '"sound://category_nature/rain_loop.mp3"': ฝนพรำ
-            '"sound://category_nature/forest_woodland_ambience_2.mp3"': ป่า
-            '"sound://category_loops/faultering_desicion_loop1.mp3"': หลอน
             '"sound://category_background/inside_plane.mp3"': ฮัม
-            '"sound://category_loops/red_flag_loop1.mp3"': ภารกิจ
-            '"sound://category_nature/summer_night_loop.mp3"': กลางคืน
             '"sound://category_background/ocean_waves.mp3"': มหาสมุทร
             '"sound://category_background/rainforest_ambient_sound.mp3"': ป่าฝน
             '"sound://category_background/repitition.mp3"': ขี่
             '"sound://category_background/wavering_wind.mp3"': ง่วงนอน
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': หลอน
+            '"sound://category_loops/red_flag_loop1.mp3"': ภารกิจ
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': ช้า
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': สงบ
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': ป่า
+            '"sound://category_nature/rain_loop.mp3"': ฝนพรำ
+            '"sound://category_nature/steady_campfire_loop.mp3"': แคมป์ไฟ
+            '"sound://category_nature/summer_night_loop.mp3"': กลางคืน
       Poetry_playSound:
-        text: เล่นเสียง {SOUND}
         options:
           SOUND:
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': พูดพล่าม
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': แสงสว่าง
+            '"sound://category_achievements/peaceful_win_1.mp3"': ชนะ
+            '"sound://category_achievements/peaceful_win_6.mp3"': กระดิ่งลม
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': สแกน
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': สดใส
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': กระพือปีก
+            '"sound://category_background/typewriter.mp3"': พิมพ์ดีด
             '"sound://category_bell/long_bell_notification.mp3"': ระฆัง
             '"sound://category_digital/boing_2.mp3"': โบอิ้ง
-            '"sound://category_pop/bubble_pop_cluster_2.mp3"': ฟอง
-            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': พูดพล่าม
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': วน
             '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': ยุบ
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': ล้มเหลว
-            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': กระพือปีก
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': กระโดด
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': แสงสว่าง
             '"sound://category_poof/puzzle_game_poof_04.mp3"': กะเทย
-            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': สแกน
-            '"sound://category_background/typewriter.mp3"': พิมพ์ดีด
-            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': สดใส
-            '"sound://category_achievements/peaceful_win_1.mp3"': ชนะ
-            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': วน
-            '"sound://category_achievements/peaceful_win_6.mp3"': กระดิ่งลม
-      Poetry_playSoundOptionsSpace:
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': ฟอง
         text: เล่นเสียง {SOUND}
+      Poetry_playSoundOptionsSpace:
         options:
           SOUND:
             "'sound://category_space/Blackhole_SFX.mp3'": หลุมดำ
@@ -2089,31 +1468,29 @@ th:
             "'sound://category_space/Southern_ring_SFX.mp3'": วงแหวนทางใต้
             "'sound://category_space/Supernova_SFX.mp3'": ซุปเปอร์โนวา
             "'sound://category_space/Tycho_SFX.mp3'": ไทโช
+        text: เล่นเสียง {SOUND}
       Poetry_setAuthor:
         text: ตั้งชื่อผู้แต่ง {AUTHOR}
       Poetry_setBackground:
         text: กำหนดสีแบ็กกราวนด์ {COLOR}
       Poetry_setBackgroundEffect:
-        text: ตั้งค่าพื้นหลังเป็น {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"blooming"': เบ่งบาน
             '"bubbles"': ฟองสบู่
             '"clouds"': อึมครึม
+            '"colors"': สี
             '"confetti"': กระดาษสี
             '"darkCircles"': การจางหาย
             '"fadeColors"': เป็นฝ้า
             '"hearts"': หัวใจ
-            '"space"': พื้นที่
             '"rain"': มีฝน
             '"ripples"': ระลอกคลื่น
-            '"colors"': สี
-            '"stars"': ดาว
+            '"space"': พื้นที่
             '"squiggles"': เส้นขะยุกขะยิก
+            '"stars"': ดาว
           PALETTE:
             '"autumn"': ฤดูใบไม้ร่วง
-            '"sunrise"': รุ่งอรุณ
-            '"sunset"': อัสดง
             '"grayscale"': ขาวดำ
             '"ocean"': มหาสมุทร
             '"rainbow"': รุ้งกินน้ำ
@@ -2121,34 +1498,37 @@ th:
             '"sky"': ท้องฟ้า
             '"spring"': ฤดูใบไม้ผลิ
             '"summer"': ฤดูร้อน
+            '"sunrise"': รุ่งอรุณ
+            '"sunset"': อัสดง
             '"winter"': ฤดูหนาว
+        text: ตั้งค่าพื้นหลังเป็น {EFFECT} {PALETTE}
       Poetry_setBackgroundImageAs:
         text: ตั้งค่าพื้นหลังเป็น {IMG}
       Poetry_setFont:
-        text: ตั้งค่าเป็น {FONT}
         options:
           FONT:
-            '"Arial"': Arial
             '"Arial Black"': Arial Black
+            '"Arial"': Arial
             '"Courier"': Courier
             '"Cursive"': Handwriting
-            '"Impact"': Impact
             '"Georgia"': Georgia
+            '"Impact"': Impact
             '"Times"': Times
+        text: ตั้งค่าเป็น {FONT}
       Poetry_setFontColor:
         text: ตั้งสีข้อความ {FILL}
       Poetry_setForegroundEffect:
-        text: ใช้เอฟเฟกต์ {EFFECT}
         options:
           EFFECT:
             '"bubbles"': ฟองสบู่
             '"confetti"': กระดาษสี
-            '"hearts"': หัวใจ
             '"emojis"': อีโมจิมีความสุข
+            '"glass"': กระจกแตก
+            '"hearts"': หัวใจ
             '"rain"': มีฝน
             '"starburst"': ดาวกระจาย
-            '"glass"': กระจกแตก
             '"twinkling"': ระยิบระยับ
+        text: ใช้เอฟเฟกต์ {EFFECT}
       Poetry_setPrompt:
         text: ผู้ใช้พรอมต์ {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} สำหรับตัวแปร {VAR}
       Poetry_setPromptWithChoices:
@@ -2157,36 +1537,36 @@ th:
       Poetry_setSize:
         text: ตั้งค่าขนาด {SPRITE} เป็น {VAL}
       Poetry_setTextEffect:
-        text: ตั้งค่าเอฟเฟกต์ข้อความ {EFFECT}
         options:
           EFFECT:
             '"fade"': จางหาย
+            '"flyBottom"': ลอยจากด้านล่าง
             '"flyLeft"': ลอยจากด้านซ้าย
             '"flyRight"': ลอยจากด้านขวา
             '"flyTop"': ลอยจากด้านบน
-            '"flyBottom"': ลอยจากด้านล่าง
             '"typewriter"': พิมพ์ดีด
+        text: ตั้งค่าเอฟเฟกต์ข้อความ {EFFECT}
       Poetry_setTitle:
         text: ตั้งชื่อ {TITLE}
       Poetry_showText:
         text: แสดงข้อความ
       Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            '"fluttering"': กระพือปีก
+            '"growing"': ขยายตัว
+            '"jittering"': กระสับกระส่าย
+            '"shrinking"': หดตัว
+            '"spinning_left"': หมุนไปทางซ้าย
+            '"spinning_right"': หมุนไปทางขวา
+            '"swimming_left_and_right"': ว่ายน้ำ
+            '"wandering"': เคลื่อนที่
+            '"wobbling"': โยกเยก
         text: 'สไปร์ท {ANIMATION_NAME} เริ่ม {BEHAVIOR} '
-        options:
-          BEHAVIOR:
-            '"fluttering"': กระพือปีก
-            '"growing"': ขยายตัว
-            '"jittering"': กระสับกระส่าย
-            '"shrinking"': หดตัว
-            '"spinning_left"': หมุนไปทางซ้าย
-            '"spinning_right"': หมุนไปทางขวา
-            '"swimming_left_and_right"': ว่ายน้ำ
-            '"wandering"': เคลื่อนที่
-            '"wobbling"': โยกเยก
       Poetry_stopBehavior:
-        text: 'สไปร์ท {ANIMATION_NAME} หยุด {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"all"': "--ทุกพฤติกรรม--"
             '"fluttering"': กระพือปีก
             '"growing"': ขยายตัว
             '"jittering"': กระสับกระส่าย
@@ -2196,7 +1576,7 @@ th:
             '"swimming_left_and_right"': ว่ายน้ำ
             '"wandering"': เคลื่อนที่
             '"wobbling"': โยกเยก
-            '"all"': "--ทุกพฤติกรรม--"
+        text: 'สไปร์ท {ANIMATION_NAME} หยุด {BEHAVIOR} '
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       Poetry_textConcat:
@@ -2204,11 +1584,16 @@ th:
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
-        text: เมื่อแสดงบรรทัดที่ {N}
         options:
           N:
             '0': "???"
             '1': '1'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -2217,12 +1602,7 @@ th:
             '7': '7'
             '8': '8'
             '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
+        text: เมื่อแสดงบรรทัดที่ {N}
       Poetry_whenPromptAnswered:
         text: เมื่อ {VAR} ให้คำตอบ
       RyanLab_moveForward:
@@ -2252,44 +1632,44 @@ th:
       Vector_vectorNorth:
         text: ทิศเหนือ
       Vector_where:
-        text: แต่ละเทพเจ้าที่ {PROPERTY} {VALUE} ทำ{STATEMENT} ทำ [2]
         options:
           PROPERTY:
             "'shapeColor'": สี
+        text: แต่ละเทพเจ้าที่ {PROPERTY} {VALUE} ทำ{STATEMENT} ทำ [2]
       aalab_layoutSprites:
         options:
           FORMAT:
-            '"grid"': ตาข่าย
             '"border"': เส้นขอบ
-            '"row"': แถว
+            '"grid"': ตาข่าย
             '"random"': สุ่ม
+            '"row"': แถว
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '1': ทั้งหมด
-            '0.75': most
-            '0.5': half of
             '0.25': few
+            '0.5': half of
+            '0.75': most
+            '1': ทั้งหมด
       aalab_someStartIntervention:
         options:
           PORTION:
-            '1': ทั้งหมด
-            '0.75': most
-            '0.5': half of
             '0.25': few
+            '0.5': half of
+            '0.75': most
+            '1': ทั้งหมด
       aalab_spriteSayChoices:
         text: "{SPRITE} พูด {SPEECH}"
       adaptations_adaptationBehaviors:
-        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
-            new Behavior(spinning_right, []): หมุนไปทางขวา
-            new Behavior(spinning_left, []): หมุนไปทางซ้าย
             new Behavior(fluttering, []): กระพือปีก
             new Behavior(jittering, []): กระสับกระส่าย
-            new Behavior(wobbling, []): โยกเยก
-            new Behavior(wandering, []): เคลื่อนที่
             new Behavior(patrolling, []): เดินลาดตระเวน
+            new Behavior(spinning_left, []): หมุนไปทางซ้าย
+            new Behavior(spinning_right, []): หมุนไปทางขวา
+            new Behavior(wandering, []): เคลื่อนที่
+            new Behavior(wobbling, []): โยกเยก
+        text: "{BEHAVIOR}"
       adaptations_startFollowing:
         text: "{SPRITE} เริ่มตาม {TARGET}"
       binary_drawBin:
@@ -2308,11 +1688,11 @@ th:
       binary_drawDec:
         text: วาดทศนิยม {DEC} ทศนิยม
       binary_drawPixelHere:
-        text: ชุดพิกเซล {VAL}
         options:
           VAL:
             '0': ปิด
             '1': บน
+        text: ชุดพิกเซล {VAL}
       binary_drawString:
         text: วาดสตริง {STR}
       binary_goTo:
@@ -2322,89 +1702,89 @@ th:
       binary_gridSize:
         text: ชุดตารางขนาด {SIZE}
       binary_move:
-        text: ย้าย {DIR}
         options:
           DIR:
-            '"up"': ขึ้นข้างบน
             '"down"': เป็นตำแหน่ง
             '"left"': ซ้าย
             '"right"': ขวา
+            '"up"': ขึ้นข้างบน
+        text: ย้าย {DIR}
       binary_whenKey:
-        text: เมื่อ {KEY} ถูกกด
         options:
           KEY:
-            '"up"': ขึ้นข้างบน
+            '"a"': a
+            '"d"': d
             '"down"': เป็นตำแหน่ง
             '"left"': ซ้าย
             '"right"': ขวา
-            '"space"': อวกาศ
-            '"a"': a
-            '"w"': w
             '"s"': s
-            '"d"': d
+            '"space"': อวกาศ
+            '"up"': ขึ้นข้างบน
+            '"w"': w
+        text: เมื่อ {KEY} ถูกกด
       craft_ifPath:
-        text: |-
-          ถ้าเส้นทาง [DIR] [0]
-          {STATEMENT}
         options:
           DIR:
             "'ahead'": ข้างหน้า
-            "'right'": ไปทางขวา
             "'left'": ไปทางซ้าย
-      craft_ifStandingOn:
+            "'right'": ไปทางขวา
         text: |-
-          ถ้ายืนอยู่บน {TYPE}
+          ถ้าเส้นทาง [DIR] [0]
           {STATEMENT}
+      craft_ifStandingOn:
         options:
           TYPE:
             "'blueCoralBlock'": ปะการังสีฟ้า
+            "'planksOak'": ไม้กระดานต้นโอ๊ค
             "'redCoralBlock'": ปะการังสีแดง
             "'sand'": ทราย
-            "'wool_blue'": น้ำลึก
-            "'planksOak'": ไม้กระดานต้นโอ๊ค
             "'seaLantern'": โคมทะเล
-      craft_ifStandingOnLimit:
+            "'wool_blue'": น้ำลึก
         text: |-
           ถ้ายืนอยู่บน {TYPE}
           {STATEMENT}
+      craft_ifStandingOnLimit:
         options:
           TYPE:
-            "'sand'": ทราย
             "'darkPrismarine'": หินพริสมารีนสีคล้ำ
+            "'sand'": ทราย
             "'seaLantern'": โคมทะเล
+        text: |-
+          ถ้ายืนอยู่บน {TYPE}
+          {STATEMENT}
       craft_log:
         text: "[MESSAGE]ข้อความบันทึก[0]"
       craft_moveForward:
         text: ไปข้างหน้า
       craft_placeBlock:
-        text: วาง [blockType] [0]
         options:
           blockType:
-            '"strippedOak"': ชิ้นไม้โอ็ค
-            '"strippedDarkOak"': ชิ้นไม้โอ็คสีดำ
-            '"stoneBricks"': อิฐศิลา
-            '"mossyStoneBricks"': อิฐศิลามอสซี่
-            '"crackedStoneBricks"': อิฐศิลาร้าว
-            '"chiseledStoneBricks"': อิฐศิลาประดับ
-            '"blueCoralBlock"': บล็อกปะการังสีฟ้า
-            '"pinkCoralBlock"': บล็อกปะการังสีชมพู
-            '"magentaCoralBlock"': บล็อคปะการังสีมาเจ็นต้า
-            '"redCoralBlock"': บล็อกปะการังสีแดง
-            '"yellowCoralBlock"': บล็อกปะการังสีเหลือง
-            '"blueDeadCoralBlock"': บล็อกปะการังที่ตายแล้วสีฟ้า
-            '"pinkDeadCoralBlock"': บล็อกปะการังตายแล้วสีชมพู
-            '"magentaDeadCoralBlock"': บล็อกปะการังตายแล้วสีม่วงแดง
-            '"readDeadCoralBlock"': บล็อกปะการังที่ตายแล้วสีแดง
-            '"yellowDeadCoralBlock"': บล็อกปะการังตายแล้วสีเหลือง
-            '"prismarine"': หินพริสมารีน
-            '"darkPrismarine"': หินพริสมารีนสีคล้ำ
-            '"seaLantern"': โคมทะเล
-            '"packedIce"': น้ำแข็งอัดก้อน
-            '"blueIce"': น้ำแข็งสีฟ้า
             '"blackConcrete"': คอนกรีตสีดำ
-            '"seaGrass"': หญ้าทะเล
+            '"blueCoralBlock"': บล็อกปะการังสีฟ้า
+            '"blueDeadCoralBlock"': บล็อกปะการังที่ตายแล้วสีฟ้า
+            '"blueIce"': น้ำแข็งสีฟ้า
+            '"chiseledStoneBricks"': อิฐศิลาประดับ
+            '"crackedStoneBricks"': อิฐศิลาร้าว
+            '"darkPrismarine"': หินพริสมารีนสีคล้ำ
             '"kelp"': สาหร่ายทะเล
+            '"magentaCoralBlock"': บล็อคปะการังสีมาเจ็นต้า
+            '"magentaDeadCoralBlock"': บล็อกปะการังตายแล้วสีม่วงแดง
+            '"mossyStoneBricks"': อิฐศิลามอสซี่
+            '"packedIce"': น้ำแข็งอัดก้อน
+            '"pinkCoralBlock"': บล็อกปะการังสีชมพู
+            '"pinkDeadCoralBlock"': บล็อกปะการังตายแล้วสีชมพู
             '"polishedGranite"': หินแกรนิตขัดมัน
+            '"prismarine"': หินพริสมารีน
+            '"readDeadCoralBlock"': บล็อกปะการังที่ตายแล้วสีแดง
+            '"redCoralBlock"': บล็อกปะการังสีแดง
+            '"seaGrass"': หญ้าทะเล
+            '"seaLantern"': โคมทะเล
+            '"stoneBricks"': อิฐศิลา
+            '"strippedDarkOak"': ชิ้นไม้โอ็คสีดำ
+            '"strippedOak"': ชิ้นไม้โอ็ค
+            '"yellowCoralBlock"': บล็อกปะการังสีเหลือง
+            '"yellowDeadCoralBlock"': บล็อกปะการังตายแล้วสีเหลือง
+        text: วาง [blockType] [0]
       craft_placePrismarine:
         text: วางหินพริสมารีน
       craft_placeTorch:
@@ -2418,7 +1798,6 @@ th:
           ทำซ้ำจนกว่าถึงเป้าหมาย
           {STATEMENT}
       craft_spawnEntity:
-        text: แพร่พันธ์ุ {ENTITY}
         options:
           ENTITY:
             '"cod"': ปลาคอด
@@ -2427,18 +1806,19 @@ th:
             '"seaTurtle"': เต่าทะเล
             '"squid"': ปลาหมึก
             '"tropicalFish"': ปลาทรอปปิค
+        text: แพร่พันธ์ุ {ENTITY}
       craft_turn:
-        text: หัน {DIR}
         options:
           DIR:
-            right: ไปทางขวา ↻
             left: ไปทางซ้าย ↺
+            right: ไปทางขวา ↻
+        text: หัน {DIR}
       ecosystems_int10:
-        text: "{VALUE}"
         options:
           VALUE:
             '0': '0'
             '1': '1'
+            '10': '10'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -2447,11 +1827,630 @@ th:
             '7': '7'
             '8': '8'
             '9': '9'
+        text: "{VALUE}"
+      gamelab_addBehaviorSimple:
+        text: "{SPRITE} เทพเจ้าเริ่มต้น {BEHAVIOR}"
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': หลบ
+            '"follow"': ตาม
+        text: "{SPRITE} เข้าไปสู่เป้าหมาย {TARGET} ถึง {OPT}"
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"frames"': กรอบ
+            '"seconds"': วินาที
+        text: ที่ {N} {UNIT}
+      gamelab_avoidingTargets:
+        text: หลบเป้าหมาย
+      gamelab_beginCollectingData:
+        text: เริ่มต้นเก็บข้อมูล {BREAK} ค่า {VALUE} ด้วยป้าย {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
+      gamelab_bounceOff:
+        text: "{SPRITE} กระโดดไปที่ {TARGET}"
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"direction"': ทิศทางการเคลื่อนไหว
+            '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"speed"': ความเร็ว
+            '"x"': ตำแหน่ง x
+            '"y"': ตำแหน่ง y
+        text: เปลี่ยน {SPRITE} {PROPERTY} โดย {VAL}
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
+        text: "{CONDITION} {SPRITE1} สัมผัส {SPRITE2}"
+      gamelab_clickedOn:
+        text: เมื่อคลิก {SPRITE}
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(fluttering, []): กระพือปีก
+            new Behavior(jittering, []): กระสับกระส่าย
+            new Behavior(moving_east_and_looping, []): เคลื่อนไปทางตะวันออกและวนรอบ
+            new Behavior(moving_north_and_looping, []): เคลื่อนไปทางทิศเหนือแล้วลูป
+            new Behavior(moving_south_and_looping, []): เคลื่อนไปทางทิศใต้แล้วลูป
+            new Behavior(moving_west_and_looping, []): เคลื่อนที่ไปทางตะวันตกและวนรอบ
+            new Behavior(patrolling, []): เดินลาดตระเวน
+            new Behavior(spinning_left, []): หมุนไปทางซ้าย
+            new Behavior(spinning_right, []): หมุนไปทางขวา
+            new Behavior(wandering, []): เคลื่อนที่
+            new Behavior(wobbling, []): โยกเยก
+        text: "{BEHAVIOR}"
+      gamelab_comment:
+        text: 'แสดงความคิดเห็น: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: จำนวนของ {SPRITE}
+      gamelab_createNewSprite:
+        text: "สร้างแบบเรียงใหม่ \n เรียก {NAME} \n พร้อมเครื่องแต่งกาย {COSTUME}
+          \n ที่ {LOCATION}"
+      gamelab_destroy:
+        text: ลบ {THIS}
+      gamelab_draggable:
+        text: ลากได้
+      gamelab_drawLine:
+        text: ลากเส้น {COLOR}  {LOC1}  {LOC2}
+      gamelab_edgesDisplace:
+        text: "[SPRITE]บล็อกขอบ[0] จากการย้าย"
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"frames"': กรอบ
+            '"seconds"': วินาที
+        text: 'ทุกๆ {N} {UNIT} '
+      gamelab_followingTargets:
+        text: ติดตามเป้าหมาย
+      gamelab_getAllSprites:
+        text: สไปร์ททั้งหมด
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"direction"': ทิศทางการเคลื่อนไหว
+            '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"speed"': ความเร็ว
+            '"tint"': ระดับอ่อนสี
+            '"x"': ตำแหน่ง x
+            '"y"': ตำแหน่ง y
+        text: "{SPRITE} {PROPERTY}"
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': อย่างอื่น
+            '"this"': นี้
+        text: "{CHOICE} สไปรท์"
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"frames"': กรอบ
+            '"seconds"': วินาที
+        text: เวลาเป็น {UNIT}
+      gamelab_glideTo:
+        text: "{SPRITE} พุ่งไปที่ {LOCATION}"
+      gamelab_hideTitleScreen:
+        text: หน้าจอซ่อนชื่อเรื่อง
+      gamelab_ifVarEquals:
+        text: |-
+          หาก {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
             '10': '10'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+        text: "{VALUE}"
+      gamelab_isCostumeEqual:
+        text: เครื่องแต่งกายของ {SPRITE} คือ {COSTUME}
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"down"': เป็นตำแหน่ง
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"left"': ซ้าย
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"right"': ขวา
+            '"s"': s
+            '"space"': อวกาศ
+            '"t"': t
+            '"u"': u
+            '"up"': ขึ้นข้างบน
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+        text: กด {KEY}
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} สัมผัสขอบ"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} กำลังสัมผัส {TARGET}"
+      gamelab_jumpTo:
+        text: "{SPRITE} ข้ามไปที่ {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
+          KEY:
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"down"': เป็นตำแหน่ง
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"left"': ซ้าย
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"right"': ขวา
+            '"s"': s
+            '"space"': อวกาศ
+            '"t"': t
+            '"u"': u
+            '"up"': ขึ้นข้างบน
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+        text: "{CONDITION} {KEY} กด"
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': เส้นขอบ
+            '"bottom"': แถวล่างสุด
+            '"circle"': วงกลม
+            '"column"': คอลัมน์
+            '"grid"': ตาข่าย
+            '"left"': คอลัมน์ซ้าย
+            '"right"': คอลัมน์ขวา
+            '"row"': แถว
+            '"top"': แถวบนสุด
+        text: วางผัง {GROUP} เป็น {FORMAT}
+      gamelab_locationAt:
+        text: 'สถานที่ x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"East"': ตะวันออก
+            '"North"': เหนือ
+            '"South"': ใต้
+            '"West"': ตะวันตก
+        text: "{DISTANCE} พิกเซล {DIRECTION} ของ {LOCATION}"
+      gamelab_locationMouse:
+        text: ตำแหน่งเมาส์
+      gamelab_locationOf:
+        text: ที่ตั้งของ {SPRITE}
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': ระเบิด
+            '"pop"': กระโดด
+            '"rain"': มีฝน
+            '"spiral"': วงก้นหอย
+        text: สร้างเอฟเฟกต์ {EFFECT} ด้วยสไปร์ท {NUM} {ANIMATION_NAME}
+      gamelab_makeNewSpriteAnon:
+        text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': เส้นขอบ
+            '"bottom"': แถวล่างสุด
+            '"circle"': วงกลม
+            '"column"': คอลัมน์
+            '"grid"': ตาข่าย
+            '"left"': คอลัมน์ซ้าย
+            '"right"': คอลัมน์ขวา
+            '"row"': แถว
+            '"top"': แถวบนสุด
+      gamelab_makeNumSprites:
+        text: สร้างสไปร์ท [ANIMATION_NAME] ใหม่ [NUM] ตัว
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ขวา
+            '180': ซ้าย
+            '270': ขึ้นข้างบน
+            '90': เป็นตำแหน่ง
+        text: "สร้างจรวดยิง \n{ANIMATION_NAME} จาก {LOCATION} ด้วยความเร็ว {SPEED}ไปทาง{DIRECTION}"
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '100': ใหญ่
+            '30': เล็ก
+            '50': ปานกลาง
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"left"': ซ้าย
+            '"right"': ขวา
+        text: "{SPRITE} หน้า {DIRECTION}"
+      gamelab_mouseLocation:
+        text: ตำแหน่งเมาส์
+      gamelab_moveBackward:
+        text: เคลื่อนย้าย {SPRITE} ไปด้านหลัง {DISTANCE} พิกเซล
+      gamelab_moveForward:
+        text: ย้าย {SPRITE} {DISTANCE} พิกเซลไปข้างหน้า
+      gamelab_moveInDirection:
+        options:
+          DIRECTION:
+            '"East"': ตะวันออก
+            '"North"': เหนือ
+            '"South"': ใต้
+            '"West"': ตะวันตก
+        text: ย้าย {SPRITE} {DISTANCE} พิก เซล {DIRECTION}
+      gamelab_moveToward:
+        text: ย้าย {SPRITE} พิก เซล {DISTANCE} ไป ยัง {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_patrollingUpDown:
+        text: เลื่อนขึ้นและลง
+      gamelab_playSound:
+        text: เล่นเสียง {SOUND}
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": ลักษณะ
+            "'sound://category_animals/bear.mp3'": หมี
+            "'sound://category_animals/cat.mp3'": แมว
+            "'sound://category_animals/chick.mp3'": ไก่
+            "'sound://category_animals/chicken.mp3'": ไก่
+            "'sound://category_animals/cow.mp3'": วัว
+            "'sound://category_animals/dog.mp3'": สุนัข
+            "'sound://category_animals/dolphin.mp3'": โลมา
+            "'sound://category_animals/elephant.mp3'": ช้าง
+            "'sound://category_animals/goat.mp3'": แพะ
+            "'sound://category_animals/pig.mp3'": หมู
+            "'sound://category_animals/rooster.mp3'": ไก่ตัวผู้
+            "'sound://category_animals/sheep.mp3'": แกะ
+            "'sound://category_animals/tiger.mp3'": เสือ
+            "'sound://category_app/app_button_1.mp3'": ปุ่ม
+            "'sound://category_background/ocean_waves.mp3'": คลื่นมหาสมุทร
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": ทวิงเกิล
+            "'sound://category_collect/clicky_crunch.mp3'": ครัชช์
+            "'sound://category_collect/trill_stings.mp3'": ทริล
+            "'sound://category_digital/boing_2.mp3'": โบอิ้ง
+            "'sound://category_digital/jump_7.mp3'": กระโดดออกไปที่
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": พิณ
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": เสียงทุ้มนุ่มลึก
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": คลื่นเบาๆที่ชายหาด
+            "'sound://category_nature/summer_night_loop.mp3'": คืนฤดูร้อน
+            "'sound://category_nature/thunderstorm_1.mp3'": พายุฟ้าคะนอง
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": โทนอลฮิต
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": ฟองสบู่
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": กระโดด
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": มนตร์คาถา
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": เลือก
+            "'sound://category_swish/quick_swing.mp3'": สวิง
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": แท็ป
+            "'sound://category_transition/star_dust_particle_10.mp3'": ละอองดาว
+            "'sound://category_transition/trippy_robotic_transition.mp3'": การแปลงร่างเป็นหุ่นยนต์
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": จานบิน
+        text: เล่นเสียง {SOUND}
+      gamelab_playSoundOptionsSoccer:
+        options:
+          SOUND:
+            "'sound://category_sports/Airhorn_SFX.mp3'": แอร์ฮอร์น
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": เสียงปรบมือ
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": เสียงสวด
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": เสียงเชียร์
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": นกหวีดสองเสียง
+            "'sound://category_sports/Hitting_Soccer_Ball_SFX.mp3'": เตะ
+            "'sound://category_sports/One_Whistle_SFX.mp3'": นกหวีด
+        text: เล่นเสียง {SOUND}
+      gamelab_playSoundOptionsSpace:
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": หลุมดำ
+            "'sound://category_space/Bullet_cluster_SFX.mp3'": กระจุกปืนรัว
+            "'sound://category_space/Carina_SFX.mp3'": คารินา
+            "'sound://category_space/Cassiopeia_SFX.mp3'": แคสสิโอเปีย
+            "'sound://category_space/Crab_nebula_SFX.mp3'": เนบิวลาปู
+            "'sound://category_space/Launch_SFX.mp3'": ปล่อย
+            "'sound://category_space/Lift_Off.mp3'": บินขึ้น
+            "'sound://category_space/Pillars_SFX.mp3'": เสาหลัก
+            "'sound://category_space/Southern_ring_SFX.mp3'": วงแหวนทางใต้
+            "'sound://category_space/Supernova_SFX.mp3'": ซุปเปอร์โนวา
+            "'sound://category_space/Tycho_SFX.mp3'": ไทโช
+        text: เล่นเสียง {SOUND}
+      gamelab_playSpeech:
+        text: เล่นเสียงพูด {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): ลากได้
+            new Behavior(driving_with_arrow_keys, []): ขับด้วยปุ่มลูกศร
+            new Behavior(moving_with_arrow_keys, []): เคลื่อนไหวด้วยปุ่มลูกศร
+        text: "{BEHAVIOR}"
+      gamelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"East"': ตะวันออก
+            '"North"': เหนือ
+            '"South"': ใต้
+            '"West"': ตะวันตก
+        text: จุด {SPRITE} {DIRECTION}
+      gamelab_printText:
+        text: พิมพ์ {TEXT}
+      gamelab_randColor:
+        text: สุ่มสี
+      gamelab_randomColor:
+        text: สุ่มสี
+      gamelab_randomLocation:
+        text: ตำแหน่งแบบสุ่ม
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} หยุดทุกอย่าง"
+      gamelab_removeBehaviorSimple:
+        text: "[SPRITE]สไปรท์[0] หยุด {BEHAVIOR}"
+      gamelab_removeTint:
+        text: ลบสีจาก {THIS}
+      gamelab_repeatForever:
+        text: ทำซ้ำตลอดไป
+      gamelab_resetTimer:
+        text: รีเซ็ตตัวจับเวลา
+      gamelab_setAnimation:
+        text: เปลี่ยน {THIS} เครื่องแต่งกาย {ANIMATION}
+      gamelab_setBackground:
+        text: กำหนดสีแบ็กกราวนด์ {COLOR}
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': สนามฟุตบอล
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': สนามเทนนิส
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': เมือง
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': ห้องครัว
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': ฟาร์ม
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': ห้องนั่งเล่น
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': ทิวทัศน์สวน
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': ต้นสน
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': ใต้ดิน
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': รถไฟใต้ดิน
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': ขั้นตอน
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': พื้นหญ้ากว้างใหญ่
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': ดวงอาทิตย์และสายรุ้ง
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': หน้าบ้าน
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': แสงอาทิตย์สาดส่อง
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': ทุ่งหญ้า
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': เส้นทางทะเลทราย
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': พื้นหญ้าที่ล่องลอย
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': เกาะแห่งพืชพันธุ์
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': ศาล
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': ถ้ำ
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': ทะเลทราย
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ตาข่าย
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': รุ้งกินน้ำ
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ดาว
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ไซไฟ
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': กาแล็คซี่
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': ใต้น้ำ
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': ฤดูหนาว
+            undefined: ไม่เลย
+        text: ตั้งค่าพื้นหลังเป็น {IMG}
+      gamelab_setBackgroundImageAs:
+        text: ตั้งค่าพื้นหลังเป็น {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '100': ใหญ่
+            '25': เล็กมาก
+            '50': เล็ก
+            '75': ปานกลาง
+        text: ตั้งขนาดค่าเริ่มต้นของสไปร์ทตัวใหม่เป็น {SIZE}
+      gamelab_setPrompt:
+        text: ผู้ใช้พรอมต์ {QUESTION} สำหรับตัวแปร {VAR}
+      gamelab_setPromptWithChoices:
+        text: ผู้ใช้พรอมต์ {QUESTION} สำหรับตัวแปร {VAR} พร้อมตัวเลือก {A}{B}{C}
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"direction"': ทิศทางการเคลื่อนไหว
+            '"rotation"': การหมุน
+            '"scale"': ขนาด
+            '"speed"': ความเร็ว
+            '"x"': ตำแหน่ง x
+            '"y"': ตำแหน่ง y
+        text: ตั้ง ค่า {SPRITE} {PROPERTY} ถึง {VAL}
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': ขนาด
+          SIZE:
+            '100': ใหญ่
+            '25': เล็กมาก
+            '50': เล็ก
+            '75': ปานกลาง
+        text: กำหนด {SPRITE} {PROPERTY} เป็น {SIZE}
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': ความสูง
+            '"scale"': ขนาด
+            '"width"': ความกว้าง
+        text: ตั้งค่า {SPRITE} {PROPERTY} เป็น {N}%
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': ช้า
+            '5': ธรรมดา
+            '7': เร็ว
+            '9': extra fast
+      gamelab_setTint:
+        text: เปลี่ยนสีของ {THIS} {COLOR}
+      gamelab_setupScoreboard:
+        text: "วาดกระดานคะแนน \n{SPRITE1COSTUME}คะแนน{VAR1}{SPRITE2COSTUME}คะแนน{VAR2}เป้าหมาย{SPRITE3COSTUME}"
+      gamelab_setupSim:
+        text: |-
+          การจำลองการตั้งค่าที่มี
+          {SPRITE1N}{SPRITE1COSTUME}ความเร็ว{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}ความเร็ว{SPRITE2SPEED}
+          รวบ รวม
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: แสดงหน้าจอชื่อเรื่อง {BREAK} {TITLE} ข้อความ {SUBTITLE} ข้อความ [2]
+          123_321
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': เมื่อ (สัมผัสกัน)
+            '"while"': ในขณะที่
+        text: "{CONDITION} {SPRITE} คลิ ก"
+      gamelab_spriteSay:
+        text: "{SPRITE} พูด {SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}พูด{TEXT1}นาน{NUM}วินาที"
+      gamelab_startAvoiding:
+        text: "{SPRITE} เริ่มหลบหลีก {TARGET}"
+      gamelab_startFollowing:
+        text: "{SPRITE} เริ่มตาม {TARGET}"
+      gamelab_startGliding:
+        text: "{SPRITE} เริ่มพุ่งตัว"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} หยุดหลบหลีกสไปร์ทตัวอื่น"
+      gamelab_stopCollectingData:
+        text: หยุดเก็บข้อมูล
+      gamelab_stopFollowing:
+        text: "{SPRITE} หยุดติดตามสไปร์ทตัวอื่น"
+      gamelab_stopGliding:
+        text: "{SPRITE} หยุดพุ่งตัว"
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      gamelab_tumbling:
+        text: ตีลังกา
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"left"': ซ้าย
+            '"right"': ขวา
+        text: เปิด {SPRITE} {DIRECTION} [1] {N} องศา
+      gamelab_updateTitleWithColor:
+        text: แสดงหน้าจอชื่อเรื่อง {BREAK} ชื่อเรื่อง {TITLE} สี {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: เมื่อพรอมต์ทั้งหมดให้คำตอบ
+      gamelab_whenDownArrow:
+        text: เมื่อลูกศรลงกด
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"a"': a
+            '"d"': d
+            '"down"': เป็นตำแหน่ง
+            '"left"': ซ้าย
+            '"right"': ขวา
+            '"s"': s
+            '"space"': อวกาศ
+            '"up"': ขึ้นข้างบน
+            '"w"': w
+        text: เมื่อ {KEY} ถูกกด
+      gamelab_whenLeftArrow:
+        text: เมื่อลูกศรซ้ายกด
+      gamelab_whenPromptAnswered:
+        text: เมื่อ {VAR} ให้คำตอบ
+      gamelab_whenRightArrow:
+        text: เมื่อลูกศรขวากด
+      gamelab_whenSpriteCreated:
+        text: เมื่อ {SPRITE} ถูกสร้าง
+      gamelab_whenTouching:
+        text: เมื่อ {SPRITE1} สัมผัส {SPRITE2}
+      gamelab_whenUpArrow:
+        text: เมื่อลูกศรขึ้นกด
+      gamelab_whileDownArrow:
+        text: ขณะที่ลูกศรลงกด
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"a"': a
+            '"d"': d
+            '"down"': เป็นตำแหน่ง
+            '"left"': ซ้าย
+            '"right"': ขวา
+            '"s"': s
+            '"space"': อวกาศ
+            '"up"': ขึ้นข้างบน
+            '"w"': w
+        text: ในขณะที่กด {KEY}
+      gamelab_whileLeftArrow:
+        text: ในขณะที่ลูกศรซ้ายกด
+      gamelab_whileRightArrow:
+        text: ในขณะที่ลูกศรขวากด
+      gamelab_whileTouching:
+        text: ในขณะที่ {SPRITE1} สัมผัส {SPRITE2}
+      gamelab_whileUpArrow:
+        text: ในขณะที่ลูกศรขึ้นกด
+      gamelab_withPercentChance:
+        text: |-
+          หากมีโอกาส {NUM}%
+          {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        options:
+          NUM:
+            '10': ต่ำมาก
+            '25': ต่ำ
+            '50': 50/50
+            '75': สูง
+            '90': สูงมาก
+        text: "โอกาส {NUM} ครั้ง \n{STATEMENT}"
+      gamelab_xLocationOf:
+        text: x พิกัดของ {SPRITE}
+      gamelab_yLocationOf:
+        text: พิกัด y ของ {SPRITE}
       storylab_printText:
         text: พิมพ์ {TEXT}
       storylab_setForegroundEffect2:
-        text: ใช้เอฟเฟกต์ {EFFECT}
         options:
           EFFECT:
             '"bubbles"': ฟองสบู่
@@ -2460,6 +2459,7 @@ th:
             '"rain"': มีฝน
             '"starburst"': ดาวกระจาย
             '"twinkling"': ระยิบระยับ
+        text: ใช้เอฟเฟกต์ {EFFECT}
       storylab_setHeading:
         text: ตั้งค่าหัวเรื่อง {HEADING}
       storylab_setSubheading:

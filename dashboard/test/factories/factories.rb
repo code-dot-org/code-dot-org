@@ -156,6 +156,12 @@ FactoryBot.define do
           authorized_teacher.save
         end
       end
+      factory :ai_chat_access do
+        after(:create) do |ai_chat_access|
+          ai_chat_access.permission = UserPermission::AI_CHAT_ACCESS
+          ai_chat_access.save
+        end
+      end
       factory :facilitator do
         transient do
           course {nil}
@@ -1757,5 +1763,24 @@ FactoryBot.define do
     trait :granted do
       user {create :young_student, :with_parent_permission}
     end
+  end
+
+  factory :rubric do
+    association :lesson
+    association :level
+  end
+
+  factory :learning_goal do
+    association :rubric
+    sequence(:key) {|n| "lg_#{n}"}
+    position {0}
+    learning_goal {"Test Learning Goal"}
+    ai_enabled {false}
+  end
+
+  factory :learning_goal_evidence_level do
+    association :learning_goal
+    understanding {0}
+    teacher_description {"Description for teacher"}
   end
 end

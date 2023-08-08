@@ -11,6 +11,12 @@
         "CSD U3 Variables Predict Where X_2019": {
           "CSD_U3_variables": "Promjeni broj ovdje"
         },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Promjeni broj ovdje"
+        },
+        "CSD U3 Variables Predict Where X_2022": {
+          "CSD_U3_variables": "Promjeni broj ovdje"
+        },
         "CSD U3 debug": {
           "CSD_U3_rect_c1": "Ovdje je kod",
           "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
@@ -20,6 +26,54 @@
           "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
         },
         "CSD U3 debug_2019": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 debug_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing challenge 2_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing challenge 3_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing practice 1_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing practice 2_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 drawing practice 3_2022": {
           "CSD_U3_rect_c1": "Ovdje je kod",
           "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
         },
@@ -35,6 +89,14 @@
           "CSD_U3_rect_c1": "Ovdje je kod",
           "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
         },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 ellipse_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
         "CSD U3 fill": {
           "CSD_U3_rect_c1": "Ovdje je kod",
           "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
@@ -44,6 +106,30 @@
           "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
         },
         "CSD U3 fill_2019": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 fill_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 properties depth_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 properties tint_2022": {
           "CSD_U3_rect_c1": "Ovdje je kod",
           "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
         },
@@ -57,6 +143,12 @@
         "CSD U3 rect_2019": {
           "CSD_U3_rect_c1": "Ovdje je kod"
         },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod"
+        },
+        "CSD U3 rect_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod"
+        },
         "CSD U3 sequence": {
           "CSD_U3_rect_c1": "Ovdje je kod",
           "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
@@ -68,6 +160,76 @@
         "CSD U3 sequence_2019": {
           "CSD_U3_rect_c1": "Ovdje je kod",
           "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 sequence_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes arc_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes behind_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes line_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes missing_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes polygon_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes scene_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD U3 shapes_2022": {
+          "CSD_U3_rect_c1": "Ovdje je kod",
+          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Promjeni broj ovdje"
+        },
+        "CSD web text explore_2022": {
+          "CSD_U3_variables": "Promjeni broj ovdje"
         },
         "Course 4 Artist 4": {
           "repeat_full_circle": "Upiši broj koliko puta se zombi treba pomaknuti da načini puni krug"
@@ -108,13 +270,39 @@
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Dodajte ovaj blok u svoj program!"
         },
+        "CourseD_Dance_2020_042022": {
+          "dance_callout_02": "Dodajte ovaj blok u svoj program!"
+        },
+        "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Dodajte ovaj blok u svoj program!"
+        },
         "CourseD_Dance_2020_06": {
+          "dance_party_11_5_groups": "Novi blok!"
+        },
+        "CourseD_Dance_2020_062022": {
+          "dance_party_11_5_groups": "Novi blok!"
+        },
+        "CourseD_Dance_2020_06_2021": {
           "dance_party_11_5_groups": "Novi blok!"
         },
         "CourseD_Dance_2020_07": {
           "setprop_hint": "Novi blok!"
         },
+        "CourseD_Dance_2020_072022": {
+          "setprop_hint": "Novi blok!"
+        },
+        "CourseD_Dance_2020_07_2021": {
+          "setprop_hint": "Novi blok!"
+        },
         "CourseD_Dance_2020_09": {
+          "new_block_3": "Novi blok!",
+          "new_block_4": "Novi blok!"
+        },
+        "CourseD_Dance_2020_092022": {
+          "new_block_3": "Novi blok!",
+          "new_block_4": "Novi blok!"
+        },
+        "CourseD_Dance_2020_09_2021": {
           "new_block_3": "Novi blok!",
           "new_block_4": "Novi blok!"
         },
@@ -186,8 +374,8 @@
           "create_function": "Klikni ovdje da otvoriš opciju \"Funkcije\", a zatim klikni na \"Napravi funkciju\"."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Klikni na Uredi da bi dodao parametar u svoju funkciju",
-          "add_and_drag_parameter": "Ovdje napiši ime svog parametra, klikni na Dodaj, a zatim ga odvuci u definiciju svoje funkcije"
+          "add_and_drag_parameter": "Ovdje napiši ime svog parametra, klikni na Dodaj, a zatim ga odvuci u definiciju svoje funkcije",
+          "edit_add_parameter": "Klikni na Uredi da bi dodao parametar u svoju funkciju"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Dovuci ovdje varijablu dužine da bi zamijenio upitnike"
@@ -204,13 +392,22 @@
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Ovdje smo stavili neke blokove za tvoj lakši početak"
         },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Ovdje smo stavili neke blokove za tvoj lakši početak"
+        },
         "Overworld Chop Trees_2019": {
           "craft_callout_preplaced": "Ovdje smo stavili neke blokove za tvoj lakši početak"
         },
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "Ovdje smo stavili neke blokove za tvoj lakši početak"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Ovdje smo stavili neke blokove za tvoj lakši početak"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?"
         },
         "Overworld House Frame Chosen_2019": {
@@ -219,7 +416,13 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?"
+        },
         "Overworld Move to Sheep": {
+          "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
+        },
+        "Overworld Move to Sheep2022": {
           "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
         },
         "Overworld Move to Sheep_2019": {
@@ -228,7 +431,13 @@
         "Overworld Move to Sheep_2020": {
           "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
         },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
+        },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "Ponavljaj radnje postavljanjem blokova ovdje"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "Ponavljaj radnje postavljanjem blokova ovdje"
         },
         "Overworld Place Wall_2019": {
@@ -237,7 +446,13 @@
         "Overworld Place Wall_2020": {
           "craft_inside_repeat": "Ponavljaj radnje postavljanjem blokova ovdje"
         },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Ponavljaj radnje postavljanjem blokova ovdje"
+        },
         "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Ovaj kod će provjeriti postojanje lave. Možeš li dodati komandu za pokretanje naprijed?"
+        },
+        "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "Ovaj kod će provjeriti postojanje lave. Možeš li dodati komandu za pokretanje naprijed?"
         },
         "Underground Avoiding Lava_2019": {
@@ -246,13 +461,22 @@
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "Ovaj kod će provjeriti postojanje lave. Možeš li dodati komandu za pokretanje naprijed?"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Ovaj kod će provjeriti postojanje lave. Možeš li dodati komandu za pokretanje naprijed?"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "Iskopaj ovo željezo!"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "Iskopaj ovo željezo!"
         },
         "Underground Iron_2019": {
           "craft_what_is_iron": "Iskopaj ovo željezo!"
         },
         "Underground Iron_2020": {
+          "craft_what_is_iron": "Iskopaj ovo željezo!"
+        },
+        "Underground Iron_2021": {
           "craft_what_is_iron": "Iskopaj ovo željezo!"
         },
         "course3_artist_functions_challenge1": {
@@ -286,6 +510,9 @@
         "courseD_maze_ramp3": {
           "stone_block_2": "Sivi blokovi su napravljeni od kamena i ne mogu se baciti."
         },
+        "courseD_maze_ramp32022": {
+          "stone_block_2": "Sivi blokovi su napravljeni od kamena i ne mogu se baciti."
+        },
         "courseD_maze_ramp3_2018": {
           "stone_block_2": "Sivi blokovi su napravljeni od kamena i ne mogu se baciti."
         },
@@ -295,7 +522,17 @@
         "courseD_maze_ramp3_2020": {
           "stone_block_2": "Sivi blokovi su napravljeni od kamena i ne mogu se baciti."
         },
+        "courseD_maze_ramp3_2021": {
+          "stone_block_2": "Sivi blokovi su napravljeni od kamena i ne mogu se baciti."
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "Ovaj broj možete promijeniti.",
+          "courseE_artist_ramp8_2": "Kliknite ovdje za upis broja ponavljanja vašeg koda."
+        },
         "courseE_artist_functions_challenge1": {
+          "courseE_artist_functions_challenge1_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
+        },
+        "courseE_artist_functions_challenge12022": {
           "courseE_artist_functions_challenge1_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
         },
         "courseE_artist_functions_challenge1_2018": {
@@ -307,7 +544,13 @@
         "courseE_artist_functions_challenge1_2020": {
           "courseE_artist_functions_challenge1_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
         },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
+        },
         "courseE_artist_functions_challenge2": {
+          "courseE_artist_functions_challenge2_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
+        },
+        "courseE_artist_functions_challenge22022": {
           "courseE_artist_functions_challenge2_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
         },
         "courseE_artist_functions_challenge2_2018": {
@@ -317,6 +560,9 @@
           "courseE_artist_functions_challenge2_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
         },
         "courseE_artist_functions_challenge2_2020": {
+          "courseE_artist_functions_challenge2_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
           "courseE_artist_functions_challenge2_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
         },
         "courseE_artist_ramp8": {
@@ -330,6 +576,9 @@
         "courseF_bee_for4": {
           "courseF_bee_for4_1": "Ovdje ćeš naći `for`petlju!"
         },
+        "courseF_bee_for42022": {
+          "courseF_bee_for4_1": "Ovdje ćeš naći `for`petlju!"
+        },
         "courseF_bee_for4_2018": {
           "courseF_bee_for4_1": "Ovdje ćeš naći `for`petlju!"
         },
@@ -337,6 +586,9 @@
           "courseF_bee_for4_1": "Ovdje ćeš naći `for`petlju!"
         },
         "courseF_bee_for4_2020": {
+          "courseF_bee_for4_1": "Ovdje ćeš naći `for`petlju!"
+        },
+        "courseF_bee_for4_2021": {
           "courseF_bee_for4_1": "Ovdje ćeš naći `for`petlju!"
         },
         "courseF_bee_fwp_challenge2": {
@@ -362,8 +614,8 @@
           "snowflake_dropdown": "Koristi ovaj padajući meni za stvaranje različitih pahuljica!"
         },
         "frozen line": {
-          "run": "Klikni \"Run\" da pokrenete vas program!",
-          "move_elsa_forward": "Dovuci blok \"Idi Naprijed\" i zakači ga ispod bloka \"Pri Pokretanju\" da bi Elsa išla naprijed"
+          "move_elsa_forward": "Dovuci blok \"Idi Naprijed\" i zakači ga ispod bloka \"Pri Pokretanju\" da bi Elsa išla naprijed",
+          "run": "Klikni \"Run\" da pokrenete vas program!"
         },
         "frozen perpendicular": {
           "turn_elsa": "Koristi blok \"Okreni\" da bi se Elsa okrenula. Broj na padajućem meniju određuje za koliko će se Elsa okrenuti"
@@ -382,53 +634,6 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Koristi padajući meni za zamjenu \"???\" sa brojem"
-        },
-        "courseD_video_nestedLoopsArtist": {
-          "courseE_artist_ramp8_1": "Ovaj broj možete promijeniti.",
-          "courseE_artist_ramp8_2": "Kliknite ovdje za upis broja ponavljanja vašeg koda."
-        },
-        "courseF_bee_for4_2021": {
-          "courseF_bee_for4_1": "Ovdje ćeš naći `for`petlju!"
-        },
-        "CourseD_Dance_2020_04_2021": {
-          "dance_callout_02": "Dodajte ovaj blok u svoj program!"
-        },
-        "CourseD_Dance_2020_06_2021": {
-          "dance_party_11_5_groups": "Novi blok!"
-        },
-        "CourseD_Dance_2020_07_2021": {
-          "setprop_hint": "Novi blok!"
-        },
-        "CourseD_Dance_2020_09_2021": {
-          "new_block_3": "Novi blok!",
-          "new_block_4": "Novi blok!"
-        },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Ovdje smo stavili neke blokove za tvoj lakši početak"
-        },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Ponavljaj radnje postavljanjem blokova ovdje"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Ovaj kod će provjeriti postojanje lave. Možeš li dodati komandu za pokretanje naprijed?"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "Iskopaj ovo željezo!"
-        },
-        "courseD_maze_ramp3_2021": {
-          "stone_block_2": "Sivi blokovi su napravljeni od kamena i ne mogu se baciti."
-        },
-        "courseE_artist_functions_challenge1_2021": {
-          "courseE_artist_functions_challenge1_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
-        },
-        "courseE_artist_functions_challenge2_2021": {
-          "courseE_artist_functions_challenge2_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
         },
         "helloworld_animals_costumes": {
           "hello_world_new": "Novi blok!"
@@ -452,11 +657,31 @@
         "helloworld_food_costumes": {
           "hello_world_new": "Novi blok!"
         },
+        "helloworld_food_costumes_soccer-2022": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_food_costumes_space-2022": {
+          "hello_world_new": "Novi blok!"
+        },
         "helloworld_food_sizes": {
           "hello_world_new": "Novi blok!",
           "hello_world_new_block": "Novi blok!"
         },
+        "helloworld_food_sizes_soccer-2022": {
+          "hello_world_new": "Novi blok!",
+          "hello_world_new_block": "Novi blok!"
+        },
+        "helloworld_food_sizes_space-2022": {
+          "hello_world_new": "Novi blok!",
+          "hello_world_new_block": "Novi blok!"
+        },
         "helloworld_food_sounds": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_food_sounds_soccer-2022": {
+          "hello_world_new": "Novi blok!"
+        },
+        "helloworld_food_sounds_space-2022": {
           "hello_world_new": "Novi blok!"
         },
         "helloworld_retro_costumes": {
@@ -482,241 +707,16 @@
           "poetry_new_block": "Novi blok!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Novi blok!",
-          "poetry_music": "Novi blok!"
+          "poetry_music": "Novi blok!",
+          "poetry_sound": "Novi blok!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Novi blok!",
           "poetry_sprite_stops": "Novi blok!"
         },
         "poetry_hoc_spriteSizes": {
-          "poetry_set_sprite": "Novi blok!",
-          "poetry_remove_sprite": "Novi blok!"
-        },
-        "CSD U3 Variables Predict Where X_2021": {
-          "CSD_U3_variables": "Promjeni broj ovdje"
-        },
-        "CSD U3 debug_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 drawing challenge 2_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 drawing challenge 3_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 drawing practice 1_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 drawing practice 2_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 drawing practice 3_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 ellipse_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 fill_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 properties depth_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 properties tint_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 rect_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod"
-        },
-        "CSD U3 sequence_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 shapes arc_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 shapes behind_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 shapes line_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 shapes missing_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 shapes polygon_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 shapes scene_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 shapes_2021": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD web text explore_2021": {
-          "CSD_U3_variables": "Promjeni broj ovdje"
-        },
-        "CSD U3 Variables Predict Where X_2022": {
-          "CSD_U3_variables": "Promjeni broj ovdje"
-        },
-        "CSD U3 debug_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 drawing challenge 2_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 drawing challenge 3_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 drawing practice 1_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 drawing practice 2_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 drawing practice 3_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 ellipse_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 fill_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 properties depth_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 properties tint_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 rect_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod"
-        },
-        "CSD U3 sequence_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 shapes arc_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 shapes behind_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 shapes line_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 shapes missing_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 shapes polygon_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 shapes scene_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD U3 shapes_2022": {
-          "CSD_U3_rect_c1": "Ovdje je kod",
-          "CSD_U3_rect_c2": "Povucite ovaj blok u područje koda."
-        },
-        "CSD web text explore_2022": {
-          "CSD_U3_variables": "Promjeni broj ovdje"
-        },
-        "CourseD_Dance_2020_042022": {
-          "dance_callout_02": "Dodajte ovaj blok u svoj program!"
-        },
-        "CourseD_Dance_2020_062022": {
-          "dance_party_11_5_groups": "Novi blok!"
-        },
-        "CourseD_Dance_2020_072022": {
-          "setprop_hint": "Novi blok!"
-        },
-        "CourseD_Dance_2020_092022": {
-          "new_block_3": "Novi blok!",
-          "new_block_4": "Novi blok!"
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Ovdje smo stavili neke blokove za tvoj lakši početak"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Ovaj kod će početi graditi tvoju kuću. Možeš li ga završiti?"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Ponavljaj radnje postavljanjem blokova ovdje"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Ovaj kod će provjeriti postojanje lave. Možeš li dodati komandu za pokretanje naprijed?"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Iskopaj ovo željezo!"
-        },
-        "courseD_maze_ramp32022": {
-          "stone_block_2": "Sivi blokovi su napravljeni od kamena i ne mogu se baciti."
-        },
-        "courseE_artist_functions_challenge12022": {
-          "courseE_artist_functions_challenge1_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
-        },
-        "courseE_artist_functions_challenge22022": {
-          "courseE_artist_functions_challenge2_callout2": "Ako ti se ne sviđa ovaj dizajn, promijeni ga u šta želiš!"
-        },
-        "courseF_bee_for42022": {
-          "courseF_bee_for4_1": "Ovdje ćeš naći `for`petlju!"
-        },
-        "helloworld_food_costumes_soccer-2022": {
-          "hello_world_new": "Novi blok!"
-        },
-        "helloworld_food_costumes_space-2022": {
-          "hello_world_new": "Novi blok!"
-        },
-        "helloworld_food_sizes_soccer-2022": {
-          "hello_world_new": "Novi blok!",
-          "hello_world_new_block": "Novi blok!"
-        },
-        "helloworld_food_sizes_space-2022": {
-          "hello_world_new": "Novi blok!",
-          "hello_world_new_block": "Novi blok!"
-        },
-        "helloworld_food_sounds_soccer-2022": {
-          "hello_world_new": "Novi blok!"
-        },
-        "helloworld_food_sounds_space-2022": {
-          "hello_world_new": "Novi blok!"
+          "poetry_remove_sprite": "Novi blok!",
+          "poetry_set_sprite": "Novi blok!"
         }
       }
     }

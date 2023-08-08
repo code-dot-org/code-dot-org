@@ -358,6 +358,8 @@ km:
           lesson_groups:
             csf_variables:
               display_name: អ​ថេរ
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursed-2019:
@@ -374,6 +376,10 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            csf_nested_loops:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             csf_functions:
               display_name: អនុ​គមន៍
             end_of_course_project:
@@ -392,6 +398,8 @@ km:
               display_name: អនុ​គមន៍
             csf_variables:
               display_name: អ​ថេរ
+            csf_sprites:
+              display_name: Sprites
           name: អុិចប្រេស-2019
         andrea-test:
           lesson_groups:
@@ -455,6 +463,10 @@ km:
           lesson_groups:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -611,6 +623,8 @@ km:
           lesson_groups:
             csf_conditionals:
               display_name: លក្ខខណ្ឌ
+            csf_nested_loops:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             csf_functions:
               display_name: អនុ​គមន៍
             end_of_course_project:
@@ -625,6 +639,8 @@ km:
               display_name: លក្ខខណ្ឌ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            csf_sprites:
+              display_name: Sprites
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -635,6 +651,8 @@ km:
               display_name: លក្ខខណ្ឌ
             csf_events:
               display_name: ព្រឹត្តិការណ៍
+            csf_sprites:
+              display_name: Sprites
         csp7-pilot:
           lesson_groups:
             required:
@@ -694,6 +712,10 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            csf_nested_loops:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             csf_functions:
               display_name: អនុ​គមន៍
             end_of_course_project:
@@ -703,6 +725,8 @@ km:
           lesson_groups:
             csf_variables:
               display_name: អ​ថេរ
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         express-2020:
@@ -719,6 +743,8 @@ km:
               display_name: អនុ​គមន៍
             csf_variables:
               display_name: អ​ថេរ
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         pre-express-2020:
@@ -797,6 +823,10 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2021:
           lesson_groups:
+            ramp_up:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
+            csf_sprites:
+              display_name: Sprites
             csf_nested_loops:
               display_name: លក្ខខណ្ឌ
             csf_functions:
@@ -806,6 +836,8 @@ km:
         coursef-2021:
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
             lessonGroup-8:
@@ -826,6 +858,8 @@ km:
               display_name: អនុ​គមន៍
             csf_variables:
               display_name: អ​ថេរ
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
             lessonGroup-9:
@@ -844,6 +878,8 @@ km:
           lesson_groups:
             lessonGroup-3:
               display_name: អ​ថេរ
+            Sprites:
+              display_name: Sprites
             variables:
               display_name: អ​ថេរ
         csa-videos:
@@ -868,6 +904,8 @@ km:
               display_name: កម្មវិធី Hour of Code
         csf-2022-pilot:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
             lessonGroup-3:
               display_name: អ​ថេរ
             lessonGroup-4:
@@ -887,6 +925,8 @@ km:
           lesson_groups:
             csf_sequencing:
               display_name: លំដាប់
+            csf_sprites:
+              display_name: Sprites
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -899,6 +939,7 @@ km:
               display_name: អ​ថេរ
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
+          title: វគ្គសិក្សារហ័ស (2022)
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           description_audience: 'អាយុ: ៩- ១៨'
         csp4-2022:
@@ -949,6 +990,10 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2022:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             csf_functions:
               display_name: អនុ​គមន៍
             csf_nested_loops:
@@ -957,6 +1002,8 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursef-2022:
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             lessonGroup-8:
               display_name: អ​ថេរ
             end_of_course_project:
@@ -974,6 +1021,8 @@ km:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
         coursef-2022-pilot:
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             lessonGroup-8:
               display_name: អ​ថេរ
             end_of_course_project:
@@ -1025,6 +1074,8 @@ km:
           lesson_groups:
             csf_sequencing:
               display_name: លំដាប់
+            csf_sprites:
+              display_name: Sprites
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
             csf_loops:
@@ -1084,6 +1135,10 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2023:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
             csf_functions:
               display_name: អនុ​គមន៍
             csf_nested_loops:
@@ -1092,8 +1147,73 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursef-2023:
           lesson_groups:
+            lessonGroup-3:
+              display_name: Sprites
             lessonGroup-4:
               display_name: អ​ថេរ
             lessonGroup-6:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+          description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+            lessonGroup-6:
+              display_name: ព្រឹត្តិការណ៍
+            lessonGroup-7:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-4:
+              display_name: ប្រតិបត្តិដដែលៗ
+            lessonGroup-5:
+              display_name: ព្រឹត្តិការណ៍
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: លំដាប់
+            lessonGroup-6:
+              display_name: ប្រតិបត្តិដដែលៗ
+            lessonGroup-8:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: បណ្ដុំប្រតិបត្តិដដែលៗ
+            lessonGroup-4:
+              display_name: អនុ​គមន៍
+            lessonGroup-6:
+              display_name: ចុងបញ្ចប់នៃគម្រោង
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: លក្ខខណ្ឌ
+            lessonGroup-5:
+              display_name: អ​ថេរ
+            lessonGroup-7:
               display_name: ចុងបញ្ចប់នៃគម្រោង
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។

@@ -2,17 +2,17 @@
   "da-DK": {
     "data": {
       "standard_categories": {
-        "CT": {
-          "description": "Data-Tænkning"
-        },
-        "L": {
-          "description": "Sprog"
-        },
         "C": {
           "description": "Tunnel"
         },
+        "CT": {
+          "description": "Data-Tænkning"
+        },
         "F": {
           "description": "Funktioner"
+        },
+        "L": {
+          "description": "Sprog"
         }
       }
     }

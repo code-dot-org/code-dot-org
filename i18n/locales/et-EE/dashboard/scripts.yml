@@ -147,6 +147,7 @@ et:
           description_short: Loo lugu või mäng Gumballi Play Labiga!
           student_description: Loo lugu või mäng Gumballi Play Labiga!
         starwars:
+          title: 'Star Wars: galaktika loomine koodiga – (JavaScript)'
           description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
           description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
           student_description: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng kauges, kauges galaktikas.
@@ -1939,6 +1940,10 @@ et:
           lesson_groups:
             lessonGroup-5:
               display_name: Uuring
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
         microbit-2023:
           lesson_groups:
             lessonGroup-5:
@@ -1967,3 +1972,64 @@ et:
           lessons:
             lesson-4:
               name: Andmed
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-4:
+              display_name: Tsüklid
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Andmed
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-4:
+              display_name: Tsüklid
+            lessonGroup-6:
+              display_name: Andmed
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-4:
+              display_name: Tsüklid
+            lessonGroup-6:
+              display_name: Sündmused
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-4:
+              display_name: Tsüklid
+            lessonGroup-5:
+              display_name: Sündmused
+            lessonGroup-6:
+              display_name: Andmed
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalne kodakondsus
+            lessonGroup-6:
+              display_name: Tsüklid
+            lessonGroup-7:
+              display_name: Andmed
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Korduvad tsüklid
+            lessonGroup-4:
+              display_name: Funktsioonid
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spraidid
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spraidid
+            lessonGroup-3:
+              display_name: Tingimuslaused
+            lessonGroup-5:
+              display_name: Muutujad

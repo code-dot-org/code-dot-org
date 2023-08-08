@@ -19,6 +19,10 @@ body {
   color: $neutral-dark;
 }
 
+p {
+  @include body-two;
+}
+
 // Use these classes to change a section's background color
 section.bg-neutral-light { background-color: $neutral_light; }
 section.bg-neutral-dark { background-color: $neutral_dark; }
@@ -29,8 +33,8 @@ section.bg-primary-light {
   p {
     @include strong;
 
-    &.body-two {
-      @include body-two;
+    &.body-three {
+      @include body-three;
     }
   }
 
@@ -145,6 +149,7 @@ hr {
     border-top: 1px solid $neutral_dark60;
   }
 }
+
 // Text links
 p a,
 p a:visited,
@@ -254,6 +259,10 @@ a.link-button {
 ul {
   margin: 1rem;
 
+  li p {
+    @include body-three;
+  }
+
   // Lists that use icons next to content
   &.icon-bullet-list {
     margin: 1rem 0;
@@ -295,7 +304,7 @@ ul {
       }
 
       p {
-        @include body-two;
+        @include body-three;
       }
     }
   }
@@ -329,10 +338,6 @@ ul {
 
       h3 {
         @include heading-sm;
-      }
-
-      p {
-        @include body-two;
       }
 
       &:after {
@@ -521,7 +526,7 @@ ol.steps-list {
   }
 
   p {
-    @include body-two;
+    @include body-three;
   }
 }
 
@@ -572,7 +577,7 @@ details {
   }
 
   p {
-    @include body-two;
+    @include body-three;
   }
 }
 
@@ -642,10 +647,10 @@ form {
   }
 
   p {
-    @include body-two;
+    @include body-three;
 
     &.overline {
-      @include overline;
+      @include overline-two;
       color: $brand_primary_default;
       width: 100%;
     }
@@ -657,6 +662,7 @@ form {
 
   ul {
     margin: 0 1rem 1rem;
+    @include body-three;
   }
 
   &.secondary {
@@ -787,6 +793,10 @@ form {
 
       &.selected {
         background: $brand_primary_default;
+      }
+
+      &:focus {
+        @include focus-outline;
       }
     }
   }
@@ -1156,6 +1166,7 @@ section.quote {
       }
 
       p {
+        @include body-two;
         margin-bottom: 0;
         width: 100%;
       }
