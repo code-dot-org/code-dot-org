@@ -10,11 +10,11 @@ jobs:
       - run: |
           echo hi
           echo "DIRECT K8S_DOCKERHUB_REPOSITORY=$K8S_DOCKERHUB_REPOSITORY"
-          echo "K8S_DOCKEHUB_REPOSITORY=${{ env.K8S_DOCKEHUB_REPOSITORY }}"
+          echo "K8S_DOCKEHUB_REPOSITORY=${{ vars.K8S_DOCKEHUB_REPOSITORY }}"
           echo "SKAFFOLD_DEFAULT_REPO=$SKAFFOLD_DEFAULT_REPO"
           echo "GITHUB_WORKFLOW=${GITHUB_WORKFLOW}"
         env:
-          SKAFFOLD_DEFAULT_REPO: ${{ env.K8S_DOCKEHUB_REPOSITORY }}
+          SKAFFOLD_DEFAULT_REPO: ${{ vars.K8S_DOCKEHUB_REPOSITORY }}
   # build:
   #   name: Skaffold Build
   #   runs-on: ubuntu-22.04
