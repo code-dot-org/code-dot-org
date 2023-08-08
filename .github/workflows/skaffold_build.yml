@@ -17,6 +17,7 @@ jobs:
     steps:
       - run: |
           echo hi
+          echo "DIRECT K8S_DOCKERHUB_REPOSITORY=$K8S_DOCKERHUB_REPOSITORY"
           echo "K8S_DOCKEHUB_REPOSITORY=${{ env.K8S_DOCKEHUB_REPOSITORY }}"
           echo "SKAFFOLD_DEFAULT_REPO=$SKAFFOLD_DEFAULT_REPO"
           echo "GITHUB_WORKFLOW=${GITHUB_WORKFLOW}"
