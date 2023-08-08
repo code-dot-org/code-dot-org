@@ -17,7 +17,7 @@ jobs:
       - run: |
           echo hi
           echo "K8S_DOCKEHUB_REPOSITORY=${{ secrets.K8S_DOCKEHUB_REPOSITORY }}"
-          echo "SKAFFOLD_DEFAULT_REPO=${{ SKAFFOLD_DEFAULT_REPO }}"
+          echo "SKAFFOLD_DEFAULT_REPO=$SKAFFOLD_DEFAULT_REPO"
         # env:
         #   SKAFFOLD_DEFAULT_REPO: ${{ secrets.K8S_DOCKEHUB_REPOSITORY }}
       - name: Login to Docker Hub
