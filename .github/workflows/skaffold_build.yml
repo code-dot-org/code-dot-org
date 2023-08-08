@@ -1,92 +1,65 @@
 name: Skaffold
 on: [push]
 jobs:
-  quicktest:
-    name: Quick Test
+  build:
+    name: Skaffold Build
     runs-on: ubuntu-22.04
-    # container: 
-    #   image: alpine
+    container:
+      image: gcr.io/k8s-skaffold/skaffold:v2.6.3-lts
+      # env:
+      #   NODE_ENV: development
+      # ports:
+      #   - 80
+      # volumes:
+      #   - my_docker_volume:/volume_mount
+      # options: --cpus 1
+    env:
+      SKAFFOLD_DEFAULT_REPO: docker.io/snickellcdo/code.org
     steps:
       - run: |
-          env
           echo hi
-          echo "DIRECT K8S_DOCKERHUB_REPOSITORY=$K8S_DOCKERHUB_REPOSITORY"
-          echo "K8S_DOCKEHUB_REPOSITORY=${{ vars.K8S_DOCKEHUB_REPOSITORY }}"
           echo "SKAFFOLD_DEFAULT_REPO=$SKAFFOLD_DEFAULT_REPO"
           echo "GITHUB_WORKFLOW=${GITHUB_WORKFLOW}"
-        env:
-          SKAFFOLD_DEFAULT_REPO: ${{ vars.K8S_DOCKEHUB_REPOSITORY }}
       - name: Login to Docker Hub
         uses: docker/login-action@v2
         with:
           registry: ${{ secrets.K8S_DOCKEHUB_REPOSITORY }}
           username: ${{ secrets.K8S_DOCKERHUB_USERNAME }}
           password: ${{ secrets.K8S_DOCKERHUB_TOKEN }}
-      - name: Login to Docker Hub
-        uses: docker/login-action@v2
+      - name: Checkout sources
+        uses: actions/checkout@v3
+      - name: Skaffold Cache
+        uses: actions/cache@v3
         with:
-          registry: ${{ secrets.K8S_DOCKEHUB_REPOSITORY }}
-          username: thisshouldfail
-          password: ${{ secrets.K8S_DOCKERHUB_TOKEN }}
-  # build:
-  #   name: Skaffold Build
+          path: "${{ github.workspace }}/.skaffold/cache"
+          key: skaffold-${{ hashFiles('**/cache') }}
+          restore-keys: |
+            skaffold-
+      - run: |
+          skaffold build \
+            --push \
+          && true
+
+
+
+  # quicktest:
+  #   name: Quick Test
   #   runs-on: ubuntu-22.04
-  #   container:
-  #     image: gcr.io/k8s-skaffold/skaffold:v2.6.3-lts
-  #     # env:
-  #     #   NODE_ENV: development
-  #     # ports:
-  #     #   - 80
-  #     # volumes:
-  #     #   - my_docker_volume:/volume_mount
-  #     # options: --cpus 1
+  #   # container: 
+  #   #   image: alpine
   #   steps:
   #     - run: |
+  #         env
   #         echo hi
   #         echo "DIRECT K8S_DOCKERHUB_REPOSITORY=$K8S_DOCKERHUB_REPOSITORY"
-  #         echo "K8S_DOCKEHUB_REPOSITORY=${{ env.K8S_DOCKEHUB_REPOSITORY }}"
+  #         echo "K8S_DOCKEHUB_REPOSITORY=${{ vars.K8S_DOCKEHUB_REPOSITORY }}"
   #         echo "SKAFFOLD_DEFAULT_REPO=$SKAFFOLD_DEFAULT_REPO"
   #         echo "GITHUB_WORKFLOW=${GITHUB_WORKFLOW}"
   #       env:
-  #         SKAFFOLD_DEFAULT_REPO: ${{ env.K8S_DOCKEHUB_REPOSITORY }}
+  #         SKAFFOLD_DEFAULT_REPO: ${{ vars.K8S_DOCKEHUB_REPOSITORY }}
   #     - name: Login to Docker Hub
   #       uses: docker/login-action@v2
   #       with:
   #         registry: ${{ secrets.K8S_DOCKEHUB_REPOSITORY }}
   #         username: ${{ secrets.K8S_DOCKERHUB_USERNAME }}
   #         password: ${{ secrets.K8S_DOCKERHUB_TOKEN }}
-  #     - name: Checkout sources
-  #       uses: actions/checkout@v3
-  #     - name: Skaffold Cache
-  #       uses: actions/cache@v3
-  #       with:
-  #         path: "${{ github.workspace }}/.skaffold/cache"
-  #         key: skaffold-${{ hashFiles('**/cache') }}
-  #         restore-keys: |
-  #           skaffold-
-  #     - run: |
-  #         skaffold build \
-  #           --push \
-  #         && true
-  #       env:
-  #         SKAFFOLD_DEFAULT_REPO: ${{ secrets.K8S_DOCKEHUB_REPOSITORY }}
-
-
-# name: GitHub Actions Demo
-# run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-# on: [push]
-# jobs:
-#   Explore-GitHub-Actions:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-#       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-#       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-#       - name: Check out repository code
-#         uses: actions/checkout@v3
-#       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-#       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-#       - name: List files in the repository
-#         run: |
-#           ls ${{ github.workspace }}
-#       - run: echo "🍏 This job's status is ${{ job.status }}."
