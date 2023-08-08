@@ -112,6 +112,14 @@
   padding: 20px 16px;
 }
 
+.evidenceLevelSet {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+  align-self: stretch;
+}
+
 .evidenceLevelOption {
   display: flex;
   flex-direction: column;
@@ -119,7 +127,26 @@
   gap: 4px;
   align-self: stretch;
 
-  .evidenceLevelDescriptionIndented {
-    padding-left: 34px;
+  span {
+    font-size: 14px;
+    font-family: $gotham-bold;
+    line-height: 154%;
   }
+}
+
+.evidenceLevelLabel {
+  font-family: $gotham-bold;
+  font-size: 14px;
+  line-height: 154%;
+  margin-bottom: 0;
+}
+
+.evidenceLevelDescription {
+  font-family: $gotham-regular;
+  font-size: 14px;
+  line-height: 154%;
+}
+
+.evidenceLevelDescriptionIndented {
+  padding-left: 32px;
 }

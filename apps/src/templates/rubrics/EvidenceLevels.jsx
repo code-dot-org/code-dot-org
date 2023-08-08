@@ -1,45 +1,69 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import i18n from '@cdo/locale';
+import classNames from 'classnames';
+import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
 import RadioButton from '@cdo/apps/componentLibrary/radioButton/RadioButton';
 import {
   BodyTwoText,
   BodyThreeText,
+  Heading6,
 } from '@cdo/apps/componentLibrary/typography';
+import {UNDERSTAND_LEVEL_STRINGS} from './rubricHelpers';
 
 export default function EvidenceLevels({
   evidenceLevels,
   canProvideFeedback,
   learningGoalKey,
 }) {
-  const radioGroupName = `evidence-levels-${learningGoalKey}`;
-
-  const renderEvidenceLevel = evidenceLevel => {
-    if (canProvideFeedback) {
-      return (
-        <div key={evidenceLevel.id} className={style.evidenceLevelOption}>
-          <RadioButton
-            label="Extensive Evidence"
-            name={radioGroupName}
-            value={evidenceLevel.id}
-          />
-          <BodyThreeText className={style.evidenceLevelDescriptionIndented}>
-            {evidenceLevel.teacherDescription}
-          </BodyThreeText>
-        </div>
-      );
-    } else {
-      return (
-        <div key={evidenceLevel.id} className={style.evidenceLevelOption}>
-          <BodyTwoText>Extensive Evidence</BodyTwoText>
-          <BodyThreeText>{evidenceLevel.teacherDescription}</BodyThreeText>
-        </div>
-      );
-    }
-  };
-
-  return <div>{evidenceLevels.map(renderEvidenceLevel)}</div>;
+  if (canProvideFeedback) {
+    const radioGroupName = `evidence-levels-${learningGoalKey}`;
+    return (
+      <div className={style.evidenceLevelSet}>
+        <Heading6>{i18n.assignARubricScore()}</Heading6>
+        {evidenceLevels.map(evidenceLevel => (
+          <div
+            key={evidenceLevel.id}
+            className={classNames(
+              style.evidenceLevelOption,
+              style.evidenceLevelLabel
+            )}
+          >
+            {' '}
+            <RadioButton
+              label={UNDERSTAND_LEVEL_STRINGS[evidenceLevel.understanding]}
+              name={radioGroupName}
+              value={evidenceLevel.id}
+              size={'s'}
+            />
+            <BodyThreeText
+              className={classNames(
+                style.evidenceLevelDescription,
+                style.evidenceLevelDescriptionIndented
+              )}
+            >
+              {evidenceLevel.teacherDescription}
+            </BodyThreeText>
+          </div>
+        ))}
+      </div>
+    );
+  } else {
+    return (
+      <div className={style.evidenceLevelSet}>
+        {evidenceLevels.map(evidenceLevel => (
+          <div key={evidenceLevel.id} className={style.evidenceLevelOption}>
+            <BodyTwoText className={style.evidenceLevelLabel}>
+              {UNDERSTAND_LEVEL_STRINGS[evidenceLevel.understanding]}
+            </BodyTwoText>
+            <BodyThreeText className={style.evidenceLevelDescription}>
+              {evidenceLevel.teacherDescription}
+            </BodyThreeText>
+          </div>
+        ))}
+      </div>
+    );
+  }
 }
 
 EvidenceLevels.propTypes = {

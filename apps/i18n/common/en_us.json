@@ -180,6 +180,7 @@
   "assessmentSettings": "Assessment Settings",
   "assign": "Assign",
   "assignACourse": "Assign a course to your classroom or start your own course.",
+  "assignARubricScore": "Assign a Rubric Score",
   "assignCourse": "Assign Course",
   "assignConfirm": "Are you sure you want to assign \"{assignmentName}\" to \"{sectionName}\"?",
   "assignCurriculum": "Assign Curriculum",

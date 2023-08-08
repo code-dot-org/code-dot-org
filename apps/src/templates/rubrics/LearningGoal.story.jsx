@@ -1,4 +1,5 @@
 import React from 'react';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import LearningGoal from './LearningGoal';
 
 export default {
@@ -7,12 +8,17 @@ export default {
 };
 
 const defaultLearningGoal = {
-  learningGoal: 'Program Development',
+  learningGoal: 'Coding Proficiency',
   evidenceLevels: [
     {
       id: 1,
-      understanding: 4,
-      teacherDescription: 'Student is able to write code',
+      understanding: RubricUnderstandingLevels.EXTENSIVE,
+      teacherDescription: 'Student is able to write fully correct code',
+    },
+    {
+      id: 2,
+      understanding: 2,
+      teacherDescription: 'Student is able to write some correct code',
     },
   ],
 };
