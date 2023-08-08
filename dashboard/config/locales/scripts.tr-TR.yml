@@ -3376,6 +3376,8 @@ tr:
               display_name: 'Bölüm 1: Problem çözme süreci'
             lessonGroup-3:
               display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
+            lessonGroup-5:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme
             arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça
             etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı,
@@ -8291,6 +8293,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme
             arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça
             etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı,
@@ -8340,6 +8344,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme
             arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça
             etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı,
@@ -8389,6 +8395,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme
             arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça
             etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı,
@@ -8449,6 +8457,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme
             arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça
             etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı,
@@ -8501,6 +8511,8 @@ tr:
               display_name: 'Bölüm 1: Problem çözme süreci'
             lessonGroup-3:
               display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
+            lessonGroup-5:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme
             arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça
             etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı,
@@ -8541,6 +8553,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme
             arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça
             etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı,
@@ -9024,10 +9038,6 @@ tr:
               display_name: Bilişimin Etkileri
             lessonGroup-7:
               display_name: Ders Projesinin Sonu
-          student_description: Hareketli karakterler ve değişkenlerle kodlamayı öğrenin
-            ve bilgisayar ve internetin toplumsal etkilerini tartışın. Bu kursun sonunda
-            arkadaşlarınız ve ailenizle paylaşabileceğiniz bir proje tasarlayın ve
-            oluşturun.
         nevada-standards-aligned-fifth-grade-2023-2023:
           description: Beşinci sınıftaki öğrenciler için Kurs F'yi oluşturduk. Kurs,
             kullanıcıların kullandıkları uygulamalarda nasıl seçim yaptıklarına bakarak
@@ -9071,9 +9081,6 @@ tr:
               display_name: Olaylar
             lessonGroup-7:
               display_name: Ders Projesinin Sonu
-          student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
-            öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da
-            hikaye oluştur.
         nevada-standards-aligned-fourth-grade-2023:
           description: Dördüncü sınıftaki öğrenciler için Kurs E'yi oluşturduk. Kurs,
             Sprite Lab programlama aracına giriş ile başlar. Öğrenciler, çevrimiçi
@@ -9095,9 +9102,6 @@ tr:
               display_name: Veri ve simülasyonlar
             lessonGroup-6:
               display_name: Ders Projesinin Sonu
-          student_description: Algoritmalar, olaylar, döngüler, koşullar ve işlevlerle
-            kodlamaya başlayın! Bu kursun sonunda arkadaşlarınız ve ailenizle paylaşabileceğiniz
-            bir oyun veya çizim tasarlayın ve oluşturun.
         nevada-standards-aligned-kindergarten-2023:
           description: Kurs A, Anaokulu öğrencileri de dahil olmak üzere yeni başlayan
             okuyucular için bir bilgisayar bilimi müfredatı sunar. Öğrenciler, döngüler
@@ -9117,9 +9121,11 @@ tr:
               display_name: Döngüler
             lessonGroup-5:
               display_name: Bilişimin Etkileri
-          student_description: Bilgisayar bilimi ve internet güvenliğinin temellerini
-            öğren. Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da
-            hikaye oluştur.
+            lessonGroup-6:
+              display_name: Veri
+          lessons:
+            lesson-1:
+              name: Veri
         nevada-standards-aligned-second-grade-2023:
           description: Kurs C'yi ikinci sınıftaki öğrenciler için geliştirdik. Öğrenciler
             sıralama, döngüler ve olaylar içeren programlar oluşturacaktır. Problem
@@ -9137,11 +9143,6 @@ tr:
               display_name: Olaylar
             lessonGroup-6:
               display_name: Veri
-          student_description: Döngüler, olaylar ve koşullar içeren programlar oluştur.
-            İsminin baş harflerini binary kodlarına dönüştür, farklı problem çözme
-            tekniklerini araştır ve siber zorbalığa nasıl yanıt vereceğini öğren.
-            Kursun sonunda, kendine ait ve paylaşabileceğin bir oyun ya da hikaye
-            oluştur.
         nevada-standards-aligned-third-grade-2023:
           description: Üçüncü sınıftaki öğrenciler için D kursu oluşturduk. Kurs,
             döngüler ve olaylar da dahil olmak üzere önceki kurslarda bulunan kavramların
@@ -9164,8 +9165,6 @@ tr:
               display_name: Veri
             lessonGroup-8:
               display_name: Ders Projesinin Sonu
-          student_description: Döngüler, şartlar, ve olaylar hakkında bilgi edinin.
-            Kodlamanın ötesinde, dijital vatandaşlık hakkında bilgi edinin.
         new-d:
           title: Yeni Kurs D Senaryosu
         new-e:

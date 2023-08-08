@@ -2,24 +2,6 @@
   "is-IS": {
     "data": {
       "start_html": {
-        "AllTheThings Applab DesignModeDefault": {
-        },
-        "AppLab Intro 7 - Change Text 2": {
-        },
-        "AppLab Intro 7 - Full Text": {
-        },
-        "AppLab Intro 7 - onEvent intro": {
-        },
-        "AppLab Intro 7 - onEvent twoButtons": {
-        },
-        "AppLab Intro 7 - playSound": {
-        },
-        "AppLab Intro 7 - thisOrThatAddButton": {
-        },
-        "AppLab Intro 7 - thisOrThatPersonalize": {
-        },
-        "AppLab Intro 7 - thisOrThatSetScreen": {
-        },
         "CSD U1 IO Pet Chooser 2_2021": {
           "No": "Nei",
           "Yes": "Já",
@@ -95,10 +77,6 @@
           "7": "7",
           "8": "8",
           "9": "9"
-        },
-        "CSD U1 processing countries_2021": {
-        },
-        "CSD U1 processing countries_2022": {
         },
         "CSD U1 processing fastest_2021": {
           "0": "0",
@@ -287,32 +265,6 @@
           "4": "4",
           "5": "5"
         },
-        "CSD U2 RGB others": {
-        },
-        "CSD U2 RGB others_2018": {
-        },
-        "CSD U2 RGB others_2019": {
-        },
-        "CSD U2 RGB summer": {
-        },
-        "CSD U2 RGB summer_2018": {
-        },
-        "CSD U2 RGB summer_2019": {
-        },
-        "CSD U2 RGB winter": {
-        },
-        "CSD U2 RGB winter_2018": {
-        },
-        "CSD U2 RGB winter_2019": {
-        },
-        "CSD U6 - Accelerometer - A_2222": {
-        },
-        "CSD U6 - Accelerometer - ChalA_2222": {
-        },
-        "CSD U6 - Accelerometer - ChalC_2222": {
-        },
-        "CSD U6 - Accelerometer - PA_2222": {
-        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
         },
@@ -321,16 +273,6 @@
         },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
-        },
-        "CSD U6 - Accelerometer - P_2222": {
-        },
-        "CSD U6 - Accelerometer - SB1_2222": {
-        },
-        "CSD U6 - Accelerometer - SB3_2222": {
-        },
-        "CSD U6 - Board Inputs - A_2222": {
-        },
-        "CSD U6 - Board Inputs - PracA_2222": {
         },
         "CSD U6 - Board Inputs - SB1_2222": {
           "Success!": "Það tókst!"
@@ -341,25 +283,11 @@
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "Það tókst!"
         },
-        "CSD U6 - Board Inputs - SB4_2222": {
-        },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "Glaður"
         },
-        "CSD U6 - Board Outputs - P2_2222": {
-        },
         "CSD U6 - Board Outputs - P_2222": {
           "Success!": "Það tókst!"
-        },
-        "CSD U6 - Board Outputs - PracA_2222": {
-        },
-        "CSD U6 - Board Outputs - PracB_2222": {
-        },
-        "CSD U6 - Board Outputs - PracC_2222": {
-        },
-        "CSD U6 - Board Outputs - PracD_2222": {
-        },
-        "CSD U6 - Board Outputs - PracE_2222": {
         },
         "CSD U6 - Board Outputs - SB1_2222": {
           "Success!": "Það tókst!"
@@ -367,17 +295,11 @@
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "Það tókst!"
         },
-        "CSD U6 - Board Outputs - SB3_2222": {
-        },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Fiskur"
         },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "Það tókst!"
-        },
-        "CSD U6 - Color LEDs - A_2222": {
-        },
-        "CSD U6 - Color LEDs - CA_2222": {
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "East": "austur",
@@ -387,14 +309,6 @@
         },
         "CSD U6 - Color LEDs - PracA_2222": {
           "Success!": "Það tókst!"
-        },
-        "CSD U6 - Color LEDs - PracB_2222": {
-        },
-        "CSD U6 - Color LEDs - PracC_2222": {
-        },
-        "CSD U6 - Color LEDs - PracD_2222": {
-        },
-        "CSD U6 - Color LEDs - SB1_2222": {
         },
         "CSD U6 - Color LEDs - SB2_2222": {
           "Success!": "Það tókst!"
@@ -420,22 +334,14 @@
           "short": "stutt",
           "slow": "hægt"
         },
-        "CSD U6 - Combine Inputs - ChalA_2222": {
-        },
-        "CSD U6 - Combine Inputs - ChalC_2222": {
-        },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Blue": "Blár",
           "Green": "Grænn",
           "Red": "Rauður"
         },
-        "CSD U6 - Combine Inputs - P_2222": {
-        },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "vinstri",
           "right": "hægri"
-        },
-        "CSD U6 - Combine Inputs - PracB_2222": {
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "blár",
@@ -446,8 +352,6 @@
         "CSD U6 - Combine Inputs - PracD_2222": {
           "Test": "Próf",
           "quiet": "hljótt"
-        },
-        "CSD U6 - Combine Inputs - SB1_2222": {
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "long": "lengi",
@@ -468,20 +372,8 @@
         "CSD U6 - Functions - P_2222": {
           "0": "0"
         },
-        "CSD U6 - Functions - SB6_2222": {
-        },
         "CSD U6 - Functions - SB7_2222": {
           "0": "0"
-        },
-        "CSD U6 - Functions - SB_2222": {
-        },
-        "CSD U6 - If Variables - A_2222": {
-        },
-        "CSD U6 - If Variables - ChalA_2222": {
-        },
-        "CSD U6 - If Variables - ChalB_2222": {
-        },
-        "CSD U6 - If Variables - ChalC_2222": {
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
@@ -494,14 +386,8 @@
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
-        "CSD U6 - If Variables - SB7_2222": {
-        },
         "CSD U6 - Music - A_2222": {
           "Happy": "Glaður"
-        },
-        "CSD U6 - Music - ChalB_2222": {
-        },
-        "CSD U6 - Music - ChalC_2222": {
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "A",
@@ -511,8 +397,6 @@
           "E": "A",
           "F": "F",
           "G": "G"
-        },
-        "CSD U6 - Music - P_2222": {
         },
         "CSD U6 - Music - Piano_2222": {
           "A": "A",
@@ -532,10 +416,6 @@
           "F": "F",
           "G": "G"
         },
-        "CSD U6 - Music - SB2.1_2022": {
-        },
-        "CSD U6 - Music - SB2.2_2022": {
-        },
         "CSD U6 - Music - SB2.5_2222": {
           "A": "A",
           "B": "B",
@@ -544,8 +424,6 @@
           "E": "A",
           "F": "F",
           "G": "G"
-        },
-        "CSD U6 - Music - SB2_2222": {
         },
         "CSD U6 - Music - SB3_2222": {
           "A": "A",
@@ -558,8 +436,6 @@
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Það tókst!"
-        },
-        "CSD U6 - Music - SB5_2222": {
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
@@ -587,8 +463,6 @@
         "CSD U6 - Physical Input - SB1_2222": {
           "Success!": "Það tókst!"
         },
-        "CSD U6 - Physical Output - A_2222": {
-        },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "Það tókst!"
         },
@@ -597,8 +471,6 @@
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "Það tókst!"
-        },
-        "CSD U6 - Physical Output - PA_2222": {
         },
         "CSD U6 - Physical Output - PB_2222": {
           "Success!": "Það tókst!"
@@ -621,16 +493,10 @@
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Nafn:"
         },
-        "CSD U6 - Screen Inputs - ChalA_2222": {
-        },
         "CSD U6 - Screen Inputs - ChalB_2222": {
           "Blue": "Blár",
           "Green": "Grænn",
           "Red": "Rauður"
-        },
-        "CSD U6 - Screen Inputs - ChalC_2222": {
-        },
-        "CSD U6 - Screen Inputs - ChalD_2222": {
         },
         "CSD U6 - Screen Inputs - P_2222": {
           "Blue": "Blár",
@@ -639,16 +505,8 @@
           "Red": "Rauður",
           "Save": "Vista"
         },
-        "CSD U6 - Screen Inputs - PracA_2222": {
-        },
-        "CSD U6 - Screen Inputs - PracB_2222": {
-        },
-        "CSD U6 - Screen Inputs - PracC_2222": {
-        },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
-        },
-        "CSD U6 - Screen Inputs - SB1_2222": {
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
           "black": "svart",
@@ -658,23 +516,9 @@
           "black": "svart",
           "white": "hvítt"
         },
-        "CSD U6 - Screen Inputs - SB3_2222": {
-        },
-        "CSD U6 - Screen Inputs - SB4_2222": {
-        },
-        "CSD U6 - Screen Inputs - SB5_2222": {
-        },
-        "CSD U6 - Screen Outputs - A_2222": {
-        },
-        "CSD U6 - Screen Outputs - ChalA_2222": {
-        },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "?": "?",
           "Happy": "Glaður"
-        },
-        "CSD U6 - Screen Outputs - ChalC_2222": {
-        },
-        "CSD U6 - Screen Outputs - ChalD_2222": {
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "titill"
@@ -691,49 +535,21 @@
           "right": "hægri",
           "up": "upp"
         },
-        "CSD U6 - Screen Outputs - PracC_2222": {
-        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "heiti"
         },
-        "CSD U6 - Screen Outputs - SB1_2222": {
-        },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
-        },
-        "CSD U6 - Sensors - ChalC_2222": {
-        },
-        "CSD U6 - Sensors - PA_2222": {
-        },
-        "CSD U6 - Sensors - PB_2222": {
         },
         "CSD U6 - Sensors - PC_2222": {
           "off": "af",
           "on": "á"
         },
-        "CSD U6 - Sensors - PD_2222": {
-        },
         "CSD U6 - Sensors - P_2222": {
           "text": "texti"
         },
-        "CSD U6 - Sensors - SB1_2222": {
-        },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "Uppfæra"
-        },
-        "CSD U6 - Sensors - SB3_2222": {
-        },
-        "CSD U6 - Sensors - SB4.1_2222": {
-        },
-        "CSD U6 - Sensors - SB4_2222": {
-        },
-        "CSD U6 Catch the Mouse": {
-        },
-        "CSD U6 Catch the Mouse_2018": {
-        },
-        "CSD U6 Catch the Mouse_2019": {
-        },
-        "CSD U6 Catch the Mouse_2021": {
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Þú gast þetta!"
@@ -807,22 +623,6 @@
         "CSD U6 add LED button_2021": {
           "Success!": "Það tókst!"
         },
-        "CSD U6 analog change": {
-        },
-        "CSD U6 analog change_2018": {
-        },
-        "CSD U6 analog change_2019": {
-        },
-        "CSD U6 analog change_2021": {
-        },
-        "CSD U6 analog data": {
-        },
-        "CSD U6 analog data_2018": {
-        },
-        "CSD U6 analog data_2019": {
-        },
-        "CSD U6 analog data_2021": {
-        },
         "CSD U6 analog light": {
           "Update": "Uppfæra"
         },
@@ -834,14 +634,6 @@
         },
         "CSD U6 analog light_2021": {
           "Update": "Uppfæra"
-        },
-        "CSD U6 analog sound": {
-        },
-        "CSD U6 analog sound_2018": {
-        },
-        "CSD U6 analog sound_2019": {
-        },
-        "CSD U6 analog sound_2021": {
         },
         "CSD U6 array piano": {
           "A": "A",
@@ -907,14 +699,6 @@
           "long": "lengi",
           "short": "stutt"
         },
-        "CSD U6 colorLED on": {
-        },
-        "CSD U6 colorLED on_2018": {
-        },
-        "CSD U6 colorLED on_2019": {
-        },
-        "CSD U6 colorLED on_2021": {
-        },
         "CSD U6 colorLeds intensity": {
           "Medium": "Miðlungs"
         },
@@ -926,22 +710,6 @@
         },
         "CSD U6 colorLeds intensity_2021": {
           "Medium": "Miðlungs"
-        },
-        "CSD U6 directional LEDs roll": {
-        },
-        "CSD U6 directional LEDs roll_2018": {
-        },
-        "CSD U6 directional LEDs roll_2019": {
-        },
-        "CSD U6 directional LEDs roll_2021": {
-        },
-        "CSD U6 emoji race demo": {
-        },
-        "CSD U6 emoji race demo_2018": {
-        },
-        "CSD U6 emoji race demo_2019": {
-        },
-        "CSD U6 emoji race demo_2021": {
         },
         "CSD U6 emotion machine example": {
           "?": "?",
@@ -958,46 +726,6 @@
         "CSD U6 emotion machine example_2021": {
           "?": "?",
           "Happy": "Glaður"
-        },
-        "CSD U6 for loop button array": {
-        },
-        "CSD U6 for loop button array_2018": {
-        },
-        "CSD U6 for loop button array_2019": {
-        },
-        "CSD U6 for loop button array_2021": {
-        },
-        "CSD U6 for loop click exit": {
-        },
-        "CSD U6 for loop click exit_2018": {
-        },
-        "CSD U6 for loop click exit_2019": {
-        },
-        "CSD U6 for loop click exit_2021": {
-        },
-        "CSD U6 for loop click predict": {
-        },
-        "CSD U6 for loop click predict_2018": {
-        },
-        "CSD U6 for loop click predict_2019": {
-        },
-        "CSD U6 for loop click predict_2021": {
-        },
-        "CSD U6 for loop images": {
-        },
-        "CSD U6 for loop images_2018": {
-        },
-        "CSD U6 for loop images_2019": {
-        },
-        "CSD U6 for loop images_2021": {
-        },
-        "CSD U6 for loop list.length": {
-        },
-        "CSD U6 for loop list.length_2018": {
-        },
-        "CSD U6 for loop list.length_2019": {
-        },
-        "CSD U6 for loop list.length_2021": {
         },
         "CSD U6 frequency": {
           "long": "lengi",
@@ -1059,30 +787,6 @@
           "Red": "Rauður",
           "Save": "Vista"
         },
-        "CSD U6 getProperty board predict": {
-        },
-        "CSD U6 getProperty board predict_2018": {
-        },
-        "CSD U6 getProperty board predict_2019": {
-        },
-        "CSD U6 getProperty board predict_2021": {
-        },
-        "CSD U6 getProperty buzzer": {
-        },
-        "CSD U6 getProperty buzzer_2018": {
-        },
-        "CSD U6 getProperty buzzer_2019": {
-        },
-        "CSD U6 getProperty buzzer_2021": {
-        },
-        "CSD U6 getProperty dropdown": {
-        },
-        "CSD U6 getProperty dropdown_2018": {
-        },
-        "CSD U6 getProperty dropdown_2019": {
-        },
-        "CSD U6 getProperty dropdown_2021": {
-        },
         "CSD U6 getProperty input": {
           "Submit": "Staðfesta"
         },
@@ -1134,20 +838,6 @@
         "CSD U6 interval_2021": {
           "long": "lengi",
           "short": "stutt"
-        },
-        "CSD U6 investigate orientation": {
-        },
-        "CSD U6 investigate orientation_2018": {
-        },
-        "CSD U6 investigate orientation_2019": {
-        },
-        "CSD U6 investigate orientation_2021": {
-        },
-        "CSD U6 light pattern challenge_2018": {
-        },
-        "CSD U6 light pattern challenge_2019": {
-        },
-        "CSD U6 light pattern challenge_2021": {
         },
         "CSD U6 light show": {
           "off": "af",
@@ -1217,30 +907,6 @@
         "CSD U6 sensor experiment embedded_2021": {
           "text": "texti"
         },
-        "CSD U6 setProperty Text": {
-        },
-        "CSD U6 setProperty Text_2018": {
-        },
-        "CSD U6 setProperty Text_2019": {
-        },
-        "CSD U6 setProperty Text_2021": {
-        },
-        "CSD U6 setProperty hidden": {
-        },
-        "CSD U6 setProperty hidden 2": {
-        },
-        "CSD U6 setProperty hidden 2_2018": {
-        },
-        "CSD U6 setProperty hidden 2_2019": {
-        },
-        "CSD U6 setProperty hidden 2_2021": {
-        },
-        "CSD U6 setProperty hidden_2018": {
-        },
-        "CSD U6 setProperty hidden_2019": {
-        },
-        "CSD U6 setProperty hidden_2021": {
-        },
         "CSD U6 setProperty predict app": {
           "title": "titill"
         },
@@ -1269,14 +935,6 @@
           "long": "lengi",
           "short": "stutt"
         },
-        "CSD U6 stillness game predict code": {
-        },
-        "CSD U6 stillness game predict code_2018": {
-        },
-        "CSD U6 stillness game predict code_2019": {
-        },
-        "CSD U6 stillness game predict code_2021": {
-        },
         "CSD U6 test LED": {
           "Success!": "Það tókst!"
         },
@@ -1288,18 +946,6 @@
         },
         "CSD U6 test LED_2021": {
           "Success!": "Það tókst!"
-        },
-        "CSD U6 tugowar demo": {
-        },
-        "CSD U6 tugowar demo_2018": {
-        },
-        "CSD U6 tugowar demo_2019": {
-        },
-        "CSD U6 tugowar demo_2021": {
-        },
-        "CSDU4 - Design Mode - 17": {
-        },
-        "CSDU4 - Design Mode - 18": {
         },
         "CSDU4 Connecting Screens": {
           "Blue": "Blár",
@@ -1411,30 +1057,12 @@
           "Submit": "Staðfesta",
           "When?": "Hvenær?"
         },
-        "CSDU6 - UI and Inputs - get set with text input": {
-        },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
           "???": "???"
         },
-        "CSDU6 - UI and Inputs - getNumber practice": {
-        },
-        "CSDU6 - UI and Inputs - setProperty": {
-        },
-        "CSDU6 - UI and Inputs - setProperty first level": {
-        },
         "CSDU6 - UI and Inputs - setScreen": {
           "Back": "Til baka"
-        },
-        "CSDU6 - UI and Inputs - setText": {
-        },
-        "CSDU6 - toggleswitch state setProp": {
-        },
-        "CSDU6 - toggleswitch state setProp_2018": {
-        },
-        "CSDU6 - toggleswitch state setProp_2019": {
-        },
-        "CSDU6 - toggleswitch state setProp_2021": {
         },
         "CSDU6 Circuit Playground Test": {
           "Success!": "Það tókst!"
@@ -1450,14 +1078,6 @@
         },
         "CSDU6 Circuit Playground Test_2222": {
           "Success!": "Það tókst!"
-        },
-        "CSDU6 array select days": {
-        },
-        "CSDU6 array select days_2018": {
-        },
-        "CSDU6 array select days_2019": {
-        },
-        "CSDU6 array select days_2021": {
         },
         "CSDU6 circuit playground piano": {
           "A": "A",
@@ -1531,34 +1151,8 @@
           "F": "F",
           "G": "G"
         },
-        "Escape Room Example": {
-        },
-        "Final Room Escape App": {
-        },
-        "Room Escape Workshop - 1": {
-        },
-        "Room Escape Workshop - 10": {
-        },
-        "Room Escape Workshop - 10 - 2": {
-        },
-        "Room Escape Workshop - 3": {
-        },
-        "Room Escape Workshop - 3-2": {
-        },
-        "Room Escape Workshop - 4": {
-        },
-        "Room Escape Workshop - 5": {
-        },
-        "Room Escape Workshop - 7": {
-        },
-        "Room Escape Workshop - 8": {
-        },
-        "Room Escape Workshop - 9-2": {
-        },
         "allthethings design mode elements": {
           "text": "texti"
-        },
-        "allthethings_moviebot": {
         },
         "csa widget test2": {
           "8": "8"
@@ -1574,10 +1168,6 @@
         },
         "csd u5 recommender sample_2022": {
           "Start": "Byrja"
-        },
-        "csd-apps for good-1": {
-        },
-        "csd-apps for good-1_2022": {
         },
         "csd-apps for good-2": {
           "Home": "Forsíða",
@@ -1600,10 +1190,6 @@
           "3": "3",
           "4": "4",
           "???": "???"
-        },
-        "csd-explore ui-1": {
-        },
-        "csd-explore ui-1_2022": {
         },
         "csd-explore ui-2": {
           "Home": "Forsíða",
@@ -1854,14 +1440,6 @@
         },
         "ml-models-shoes decision tree_2022": {
           "Sports": "Íþróttir"
-        },
-        "ml-models-shoes points-2021": {
-        },
-        "ml-models-shoes points_2022": {
-        },
-        "ml-models-shoes random-2021": {
-        },
-        "ml-models-shoes random_2022": {
         },
         "ml-use model card-example3A-2021": {
           "Predict": "Spáðu",

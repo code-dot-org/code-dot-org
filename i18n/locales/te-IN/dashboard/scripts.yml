@@ -1018,11 +1018,16 @@ te:
             lessonGroup-4:
               display_name: ఉచ్చులు
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: డేటా
           lesson_groups:
             lessonGroup-2:
               display_name: డిజిటల్ పౌరసత్వం
             lessonGroup-4:
               display_name: ఉచ్చులు
+            lessonGroup-6:
+              display_name: డేటా
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:

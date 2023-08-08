@@ -3683,6 +3683,8 @@ ru:
               display_name: 'Глава 1: Процесс решения проблемы'
             lessonGroup-3:
               display_name: 'Глава 2: Компьютеры и решение проблем'
+            lessonGroup-5:
+              display_name: Опрос
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3984,6 +3986,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4000,6 +4004,8 @@ ru:
               display_name: 'Глава 1: Процесс решения проблемы'
             lessonGroup-3:
               display_name: 'Глава 2: Компьютеры и решение проблем'
+            lessonGroup-5:
+              display_name: Опрос
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4014,6 +4020,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4036,6 +4044,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4050,6 +4060,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4064,6 +4076,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4266,6 +4280,9 @@ ru:
               display_name: Воздействие компьютерной техники
           description_audience: 'Возраст: 4-7'
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Данные
           lesson_groups:
             lessonGroup-2:
               display_name: Цифровое гражданство
@@ -4275,9 +4292,10 @@ ru:
               display_name: Циклы
             lessonGroup-5:
               display_name: Воздействие компьютерной техники
+            lessonGroup-6:
+              display_name: Данные
           description_audience: 'Возраст: 4-7'
           description_short: Введение в компьютерные науки для детей, еще не умеющих читать.
-          student_description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4293,7 +4311,6 @@ ru:
             lessonGroup-7:
               display_name: Завершение Курсового Проекта
           description_audience: 'Возраст: 5-8'
-          student_description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4306,7 +4323,6 @@ ru:
               display_name: События
             lessonGroup-6:
               display_name: Данные
-          student_description: Создавайте программы с последовательностью, циклами и событиями. Переведите свои инициалы в двоичный код, изучите различные методы решения проблем и узнайте, как реагировать на киберугрозы. В конце курса создайте свою собственную игру или историю, которой вы сможете поделиться!
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

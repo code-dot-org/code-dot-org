@@ -323,6 +323,7 @@ pt:
           description_short: Crie uma história ou faça um jogo com o Laboratório do Gumball!
           student_description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
         starwars:
+          title: 'Star Wars: Construa uma galáxia com a programação (JavaScript)'
           description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           description_short: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           student_description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
@@ -4121,6 +4122,8 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+            lessonGroup-5:
+              display_name: Questionário
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4425,6 +4428,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4443,6 +4448,8 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+            lessonGroup-5:
+              display_name: Questionário
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4460,6 +4467,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4486,6 +4495,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4502,6 +4513,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4518,6 +4531,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4842,6 +4857,9 @@ pt:
               display_name: Impacto da computação
           description_audience: 'Idade: de 4 a 7 anos'
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Dados
           lesson_groups:
             lessonGroup-2:
               display_name: Cidadania digital
@@ -4851,9 +4869,10 @@ pt:
               display_name: Ciclos
             lessonGroup-5:
               display_name: Impacto da computação
+            lessonGroup-6:
+              display_name: Dados
           description_audience: 'Idade: de 4 a 7 anos'
           description_short: Uma introdução à ciência da computação para pré-leitores.
-          student_description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4868,7 +4887,6 @@ pt:
               display_name: Eventos
           description_audience: 'Idades: 5-8'
           description_short: Uma introdução à ciência da computação na alfabetização Semelhante ao curso A, mas com conceitos mais aprofundados.
-          student_description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4881,7 +4899,6 @@ pt:
               display_name: Eventos
             lessonGroup-6:
               display_name: Dados
-          student_description: Crie programas com sequenciamento, loops e eventos. Traduza suas iniciais em binário, investigue diferentes técnicas de solução de problemas e aprenda a responder ao cyberbullying. No final do curso, crie seu próprio jogo ou história que você pode compartilhar!
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

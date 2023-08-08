@@ -258,6 +258,7 @@ is:
           description_short: Búðu til sögu eða leik með Gumball Leikjasmiðju!
           student_description: Búðu til sögu eða leik með Gumball Leikjasmiðju!
         starwars:
+          title: 'Star Wars: Gerð Vetrarbrautar með Kóða - JavaScript'
           description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
           description_short: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
           student_description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
@@ -2966,6 +2967,8 @@ is:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
             lessonGroup-3:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
+            lessonGroup-5:
+              display_name: Könnun
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3234,6 +3237,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3250,6 +3255,8 @@ is:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
             lessonGroup-3:
               display_name: 'Kafli 2: Tölvur og lausn vandamála'
+            lessonGroup-5:
+              display_name: Könnun
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3265,6 +3272,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -3281,6 +3290,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3295,6 +3306,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3309,6 +3322,8 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kafli 1: Lausn vandamála sem ferli'
+            lessonGroup-4:
+              display_name: Könnun
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3433,6 +3448,9 @@ is:
               display_name: Lykkjur
           description_audience: 'Aldur: 4-7'
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Gögn
           lesson_groups:
             lessonGroup-2:
               display_name: Stafrænn borgari
@@ -3440,9 +3458,10 @@ is:
               display_name: Skipanaröð
             lessonGroup-4:
               display_name: Lykkjur
+            lessonGroup-6:
+              display_name: Gögn
           description_audience: 'Aldur: 4-7'
           description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
-          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3456,7 +3475,6 @@ is:
             lessonGroup-7:
               display_name: Lokaverkefni námskeiðs
           description_audience: 'Aldur: 5 - 8'
-          student_description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun. Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:

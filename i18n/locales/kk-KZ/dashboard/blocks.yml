@@ -5,19 +5,11 @@ kk:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': орта
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': орта
-            '2.00': large
-            '3.00': extra large
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -206,9 +198,7 @@ kk:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': орта
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -240,10 +230,7 @@ kk:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': орта
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -254,10 +241,7 @@ kk:
           PROPERTY:
             '"scale"': шама
           SIZE:
-            '25': extra small
-            '50': small
             '75': орта
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:

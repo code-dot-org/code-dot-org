@@ -382,6 +382,7 @@ sq:
               display_name: cikle
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
+          title: Kursi C (2022)
         coursec-2023:
           lesson_groups:
             csf_data:
@@ -450,6 +451,7 @@ sq:
               display_name: Përfundimi i projektit të kursit
             lessonGroup-6:
               display_name: Shtetësi Dixhitale
+          title: Kursi D (2022)
         coursed-2023:
           lesson_groups:
             csf_conditionals:
@@ -514,6 +516,7 @@ sq:
               display_name: Përfundimi i projektit të kursit
             ramp_up:
               display_name: Përsëritjet e Mbivendosura
+          title: Kursi E (2022)
         coursee-2023:
           lesson_groups:
             csf_digcit:
@@ -1655,6 +1658,11 @@ sq:
               display_name: Shtetësi Dixhitale
             lessonGroup-4:
               display_name: cikle
+            lessonGroup-6:
+              display_name: të dhëna
+          lessons:
+            lesson-1:
+              name: të dhëna
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1766,6 +1774,7 @@ sq:
             Wars në një galaksi shumë, shumë larg.
           student_description: Mësoni të programoni robotë, dhe krijoni lojën tuaj
             Star Wars në një galaksi shumë, shumë larg.
+          title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (JavaScript)'
         starwarsblocks:
           description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars
             në një galaksi shumë, shumë larg.

@@ -5,19 +5,11 @@ sr:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': средње
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': средње
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -224,8 +216,6 @@ sr:
             '"row"': ред
       Dancelab_randomColor:
         text: насумична боја
-      Dancelab_setBackgroundEffect:
-        options: {}
       Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
@@ -233,11 +223,7 @@ sr:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '0.25': very slow
-            '0.5': slow
             '1': нормално
-            '2': fast
-            '4': very fast
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
@@ -253,13 +239,7 @@ sr:
             '"SHARK"': ајкуле
             sprites: све
           SPEED:
-            '0.25': very slow
-            '0.5': slow
             '1': нормално
-            '2': fast
-            '4': very fast
-      Dancelab_setForegroundEffect:
-        options: {}
       Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
@@ -610,16 +590,10 @@ sr:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': све
       aalab_someStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': све
       binary_move:
         options:
@@ -729,8 +703,6 @@ sr:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '100': large
-            '30': small
             '50': средње
       gamelab_mirrorSprite:
         options:
@@ -764,9 +736,6 @@ sr:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '100': large
-            '25': extra small
-            '50': small
             '75': средње
       gamelab_setProp:
         options:
@@ -778,9 +747,6 @@ sr:
           PROPERTY:
             '"scale"': величина
           SIZE:
-            '100': large
-            '25': extra small
-            '50': small
             '75': средње
       gamelab_setSizes:
         options:
@@ -791,11 +757,7 @@ sr:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
-            '3': slow
             '5': нормално
-            '7': fast
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

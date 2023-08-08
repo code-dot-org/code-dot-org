@@ -3798,6 +3798,8 @@ hi:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
             lessonGroup-3:
               display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
+            lessonGroup-5:
+              display_name: सर्वेक्षण
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4119,6 +4121,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4137,6 +4141,8 @@ hi:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
             lessonGroup-3:
               display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
+            lessonGroup-5:
+              display_name: सर्वेक्षण
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4154,6 +4160,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4180,6 +4188,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4196,6 +4206,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4212,6 +4224,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4610,6 +4624,9 @@ hi:
               display_name: कंप्यूटिंग के प्रभाव
           description_audience: 'आयु: 4-7'
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: डेटा
           lesson_groups:
             lessonGroup-2:
               display_name: डिजीटल नागरिकता
@@ -4619,9 +4636,10 @@ hi:
               display_name: फंदे
             lessonGroup-5:
               display_name: कंप्यूटिंग के प्रभाव
+            lessonGroup-6:
+              display_name: डेटा
           description_audience: 'आयु: 4-7'
           description_short: प्री-रीडर्स के लिए कंप्यूटर विज्ञान का परिचय।
-          student_description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में मूल तत्व सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे आप साझा कर सकते हैं।
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4638,7 +4656,6 @@ hi:
               display_name: कोर्स समाप्ति प्रोजेक्ट
           description_audience: 'उम्र: 5-8'
           description_short: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय। कोर्स A से मिलता-जुलता, लेकिन इसमें अवधारणा को गहराई से शामिल किया गया है।
-          student_description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में मूल तत्व सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे आप साझा कर सकते हैं।
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4651,7 +4668,6 @@ hi:
               display_name: घटनाएँ
             lessonGroup-6:
               display_name: डेटा
-          student_description: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स और सापेक्षों का उपयोग करना सीखें। अपने आद्याक्षरों को युग्मक में रूपांतरित करें, सवाल हल करने की विभिन्न तकनीकों का निरीक्षण करें और जानें कि साइबर बदमाशी का जवाब कैसे देना है। कोर्स के अंत में, अपनी खुद की गेम या कहानी तैयार करें, जिसे आप साझा कर सकें।
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

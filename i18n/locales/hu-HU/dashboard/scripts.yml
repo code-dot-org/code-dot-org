@@ -157,6 +157,7 @@ hu:
           description_short: írj egy történetet vagy készíts egy játékot a Gumball Játéklaborban!
           student_description: írj egy történetet vagy készíts egy játékot a Gumball Játéklaborban!
         starwars:
+          title: 'Star Wars: Egy galaxis építése kóddal (JavaScript)'
           description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
           description_short: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
           student_description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
@@ -2608,6 +2609,8 @@ hu:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
             lessonGroup-3:
               display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+            lessonGroup-5:
+              display_name: Kérdőív
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2812,16 +2815,22 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-hardware1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
             lessonGroup-3:
               display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+            lessonGroup-5:
+              display_name: Kérdőív
         focus-on-data1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2832,14 +2841,20 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-coding1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-impact-in-society1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2904,14 +2919,18 @@ hu:
             lessonGroup-4:
               display_name: Ciklusok
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Adat
           lesson_groups:
             lessonGroup-2:
               display_name: Digitális állampolgárság
             lessonGroup-4:
               display_name: Ciklusok
+            lessonGroup-6:
+              display_name: Adat
           description_short: Bevezetés a számítástechnikába az előolvasók számára.
-          description: 'Az A kurzus számítástechnikai tantervet kínál azoknak az olvasással épp csak ismerkedő gyerekek számára, beleértve akár az óvodásokat is. A diákok megtanulnak programozni olyan parancsokkal, mint a ciklusok és az események. Az ebben a kurzusban bemutatott leckék arra is megtanítják a diákokat, hogy értelmesen együttműködjenek másokkal, vizsgálják meg a különböző problémamegoldó technikákat, a kihívást jelentő feladatok megoldásával kitartóak legyenek, és megismerjék az internetbiztonságot. '
-          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
+          description: Az A kurzus számítástechnikai tantervet kínál azoknak az olvasással épp csak ismerkedő gyerekek számára, beleértve akár az óvodásokat is. A diákok megtanulnak programozni olyan parancsokkal, mint a ciklusok és az események. Az ebben a kurzusban bemutatott leckék arra is megtanítják a diákokat, hogy értelmesen együttműködjenek másokkal, vizsgálják meg a különböző problémamegoldó technikákat, a kihívást jelentő feladatok megoldásával kitartóak legyenek, és megismerjék az internetbiztonságot.
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2922,7 +2941,6 @@ hu:
               display_name: Események
             lessonGroup-7:
               display_name: Kurzus Projekt vége
-          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2933,7 +2951,6 @@ hu:
               display_name: Események
             lessonGroup-6:
               display_name: Adat
-          student_description: Hozzon létre programokat szekvenálással, hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

@@ -121,6 +121,7 @@ si:
           description_short: ගම්බෝල් ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක් හදන්න!
           student_description: ගම්බෝල් ක්‍රීඩා පරීක්ෂණාගාරය සමඟ කථාවක් සාදන්න හෝ ගේම් එකක් හදන්න!
         starwars:
+          title: 'Star Wars: කේත හරහා මන්දාකිනිය ගොඩනගන්න (JavaScript)'
           description: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
           description_short: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
           student_description: ඩ්‍රොයිඩ් වරු ක්‍රමලේකණය කිරීමට ඉගෙනගන්න ඉන්පසු ඈත එපිට මන්දාකිණියක ඔබේම ස්ටාර් වෝස් ක්‍රීඩාවක් නිර්මාණය කරන්න.
@@ -1550,11 +1551,16 @@ si:
             lessonGroup-4:
               display_name: ලූපයන්
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: දත්ත
           lesson_groups:
             lessonGroup-2:
               display_name: ඩිජිටල් පුරවැසිකම
             lessonGroup-4:
               display_name: ලූපයන්
+            lessonGroup-6:
+              display_name: දත්ත
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:

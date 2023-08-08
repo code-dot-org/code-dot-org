@@ -133,6 +133,7 @@ mn:
           description_short: Гамболл тоглоомын лаборатори дээр түүх бүтээж, тоглоом хийе!
           student_description: Гамболл тоглоомын лаборатори дээр түүх бүтээж, тоглоом хийе!
         starwars:
+          title: 'Оддын дайн: Галаксиг кодоор бүтээх (JavaScript)'
           description: Дройд програмыг сурч, алс холын галактикт өөрийн Оддын дайны тоглоомыг зохиоорой.
           description_short: Дройд програмыг сурч, алс холын галактикт өөрийн Оддын дайны тоглоомыг зохиоорой.
           student_description: Дройд програмыг сурч, алс холын галактикт өөрийн Оддын дайны тоглоомыг зохиоорой.
@@ -3125,6 +3126,8 @@ mn:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
             lessonGroup-3:
               display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
+            lessonGroup-5:
+              display_name: Судалгаа
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3403,6 +3406,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3421,6 +3426,8 @@ mn:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
             lessonGroup-3:
               display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
+            lessonGroup-5:
+              display_name: Судалгаа
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3438,6 +3445,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -3460,6 +3469,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3476,6 +3487,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3492,6 +3505,8 @@ mn:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3670,6 +3685,9 @@ mn:
               display_name: Тооцооллын нөлөө
           description_audience: 4-7 насныхан
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Өгөгдөл
           lesson_groups:
             lessonGroup-2:
               display_name: Дижитал иргэншил
@@ -3679,9 +3697,10 @@ mn:
               display_name: Гогцоонууд
             lessonGroup-5:
               display_name: Тооцооллын нөлөө
+            lessonGroup-6:
+              display_name: Өгөгдөл
           description_audience: 4-7 насныхан
           description_short: Анхлан сурагчдын компьютерын шинжлэх ухааны танилцуулга.
-          student_description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг мэдэж аваарай. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго.
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3696,7 +3715,6 @@ mn:
               display_name: Үйл явдлууд
           description_audience: 5-8 насныхан
           description_short: Урьдчилан уншигчдад зориулсан компьютерийн шинжлэх ухааны танилцуулга. Курс А-тай адилхан боловч нэмэлт ойлголтын гүнтэй.
-          student_description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг мэдэж аваарай. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго.
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3709,7 +3727,6 @@ mn:
               display_name: Үйл явдлууд
             lessonGroup-6:
               display_name: Өгөгдөл
-          student_description: Дараалал, гогцоо, үйл явдал бүхий програмууд үүсгэ. Эх үсгээ хоёртын хэл рүү орчуулж, асуудлыг шийдэх өөр арга техникийг судалж, кибер дайралтад хэрхэн хариу үйлдэл үзүүлэхээ сур. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго!
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

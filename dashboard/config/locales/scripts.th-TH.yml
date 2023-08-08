@@ -1270,6 +1270,10 @@ th:
           lesson_groups:
             cspSurvey:
               display_name: แบบสำรวจ
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ
         csd1-dlp:
           lesson_groups:
             required:
@@ -2286,18 +2290,30 @@ th:
           student_description: อยากจะลองเขียนเกมในแบบของคุณโดยใช้เวลาไม่ถึง 10 นาทีรึเปล่า
             แนะนำให้อ่านบทช่วยสอน "แฟลปปี้โค้ด" ดูนะ
           title: แฟลปปี้โค้ด
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
             lessonGroup-3:
               display_name: 'บทที่ 2: การสร้างเกม'
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
             lessonGroup-3:
               display_name: 'บทที่ 2: การสร้างเกม'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2306,6 +2322,18 @@ th:
               display_name: ตอนที่ 1
             lessonGroup-4:
               display_name: ตอนที่ 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2462,8 +2490,6 @@ th:
               display_name: เหตุการณ์
             lessonGroup-7:
               display_name: โปรเจกต์ปิดท้ายหลักสูตร
-          student_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
-            ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'อายุ: 8-12 ปี'
           lesson_groups:
@@ -2485,8 +2511,11 @@ th:
               display_name: ลูป
             lessonGroup-5:
               display_name: ผลกระทบจากการใช้คอมพิวเตอร์
-          student_description: เรียนรู้พื้นฐานของวิทยาการคอมพิวเตอร์และความปลอดภัยในการใช้อินเทอร์เน็ต
-            ในตอนท้ายของหลักสูตร สร้างเกมที่เป็นของคุณเอง หรือเป็นเรื่องราวที่คุณสามารถแบ่งปันได้
+            lessonGroup-6:
+              display_name: ข้อมูล
+          lessons:
+            lesson-1:
+              name: ข้อมูล
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2499,9 +2528,6 @@ th:
               display_name: เหตุการณ์
             lessonGroup-6:
               display_name: ข้อมูล
-          student_description: ใช้การจัดลำดับ ลูปและเหตุการณ์สร้างโปรแกรม แปลความคิดสร้างสรรเป็นไบนารี
-            สำรวจเทคนิคการแก้ไขปัญหาในแบบต่าง ๆ และศึกษาวิธีตอบโต้การเหยียดบนโลกไซเบอร์
-            และในตอนท้ายของหลักสูตร คุณจะได้สร้างเกมหรือเรื่องราวของคุณก่อนนำมาแชร์!
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'อายุ: 7-11 ปี'
           description_short: เรียนรู้คำสั่งแบบมีเงื่อนไข ก่อนคิดงานศิลปะ เกม และแม้แต่ปาร์ตี้เต้นรำของคุณเอง

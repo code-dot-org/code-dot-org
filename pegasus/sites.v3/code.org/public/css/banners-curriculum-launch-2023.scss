@@ -115,6 +115,7 @@
   height: 130px;
   background: url("/images/banners/banner-bg-school-supplies-dark-black.png") center repeat;
   background-size: cover;
+  margin: 0 5px 16px;
 
   @media screen and (max-width: $width-lg) {
     padding: 0 1.5em;

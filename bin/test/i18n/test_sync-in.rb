@@ -6,7 +6,7 @@ class I18n::SyncInTest < Minitest::Test
     exec_seq = sequence('execution')
 
     Services::I18n::CurriculumSyncUtils.expects(:sync_in).in_sequence(exec_seq)
-    HocSyncUtils.expects(:sync_in).in_sequence(exec_seq)
+    I18n::Resources::Pegasus::HourOfCode.expects(:sync_in).in_sequence(exec_seq)
     I18n::SyncIn.expects(:localize_level_and_project_content).in_sequence(exec_seq)
     I18n::Resources::Dashboard::Blocks.expects(:sync_in).in_sequence(exec_seq)
     I18n::Resources::Apps::Animations.expects(:sync_in).in_sequence(exec_seq)
@@ -15,12 +15,12 @@ class I18n::SyncInTest < Minitest::Test
     I18n::Resources::Dashboard::Standards.expects(:sync_in).in_sequence(exec_seq)
     I18n::Resources::Dashboard::Docs.expects(:sync_in).in_sequence(exec_seq)
     I18n::Resources::Apps::ExternalSources.expects(:sync_in).in_sequence(exec_seq)
+    I18n::Resources::Dashboard::Scripts.expects(:sync_in).in_sequence(exec_seq)
+    I18n::Resources::Dashboard::Courses.expects(:sync_in).in_sequence(exec_seq)
     I18n::Resources::Apps::Labs.expects(:sync_in).in_sequence(exec_seq)
+    I18n::Resources::Pegasus::Markdown.expects(:sync_in).in_sequence(exec_seq)
     I18nScriptUtils.expects(:run_bash_script).with('bin/i18n-codeorg/in.sh').in_sequence(exec_seq)
-    I18n::SyncIn.expects(:localize_course_resources).in_sequence(exec_seq)
     I18n::SyncIn.expects(:redact_level_content).in_sequence(exec_seq)
-    I18n::SyncIn.expects(:redact_script_and_course_content).in_sequence(exec_seq)
-    I18n::SyncIn.expects(:localize_markdown_content).in_sequence(exec_seq)
 
     I18n::SyncIn.perform
   end

@@ -3359,6 +3359,8 @@ az:
               display_name: 'Fəsil 2: Kompüterlər və Problemlərin Həlli'
             lessonGroup-4:
               display_name: Alternativ Dərslər
+            lessonGroup-5:
+              display_name: Sorğu
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3635,6 +3637,8 @@ az:
               display_name: 'Fəsil 1: Problemin Həlli Prosesi'
             lessonGroup-3:
               display_name: Alternativ Dərslər
+            lessonGroup-4:
+              display_name: Sorğu
         focus-on-creativity2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3654,12 +3658,16 @@ az:
               display_name: 'Fəsil 2: Kompüterlər və Problemlərin Həlli'
             lessonGroup-4:
               display_name: Alternativ Dərslər
+            lessonGroup-5:
+              display_name: Sorğu
         focus-on-data1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Fəsil 1: Problemin Həlli Prosesi'
             lessonGroup-3:
               display_name: Alternativ Dərslər
+            lessonGroup-4:
+              display_name: Sorğu
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3674,6 +3682,8 @@ az:
               display_name: 'Fəsil 1: Problemin Həlli Prosesi'
             lessonGroup-3:
               display_name: Alternativ Dərslər
+            lessonGroup-4:
+              display_name: Sorğu
         focus-on-design-with-purpose2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3684,6 +3694,8 @@ az:
               display_name: 'Fəsil 1: Problemin Həlli Prosesi'
             lessonGroup-3:
               display_name: Alternativ Dərslər
+            lessonGroup-4:
+              display_name: Sorğu
         focus-on-coding2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3701,6 +3713,8 @@ az:
               display_name: 'Fəsil 1: Problemin Həlli Prosesi'
             lessonGroup-3:
               display_name: Alternativ Dərslər
+            lessonGroup-4:
+              display_name: Sorğu
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3871,6 +3885,9 @@ az:
               display_name: dövrlər
           description_audience: 'Yaşlar: 4-7'
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: məlumat
           lesson_groups:
             lessonGroup-2:
               display_name: Rəqəmsal vətəndaşlıq
@@ -3878,9 +3895,10 @@ az:
               display_name: Ardıcıllıq qurmaq
             lessonGroup-4:
               display_name: dövrlər
+            lessonGroup-6:
+              display_name: məlumat
           description_audience: 'Yaşlar: 4-7'
           description_short: Ön-oxucular üçün kompüter elmlərinə giriş.
-          student_description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın.
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3894,7 +3912,6 @@ az:
             lessonGroup-7:
               display_name: Kurs layihələrinin sonu!
           description_audience: 'Yaşlar: 5-8'
-          student_description: Kompüter elminin və internet təhlükəsizliyinin əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın.
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3907,7 +3924,6 @@ az:
               display_name: Tədbirlər
             lessonGroup-6:
               display_name: məlumat
-          student_description: Ardıcıllıq, döngələr və hadisələrlə proqramlar yaradın. Baş hərflərinizi binar hərflərə tərcümə edin, müxtəlif problemlərin həlli üsullarını araşdırın və kiber zorakılığa necə cavab verməyi öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın!
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

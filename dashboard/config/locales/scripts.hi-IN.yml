@@ -1601,6 +1601,8 @@ hi:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
             lessonGroup-3:
               display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
+            lessonGroup-5:
+              display_name: सर्वेक्षण
         csd1-dlp:
           description: 'यह प्रशिक्षण में Code.org CS अन्वेषण समन्वयकों के लिए गहन
             प्रशिक्षण योजना की इकाई 1 है। यहां आप Code.org CS अन्वेषण पाठ्यक्रम की
@@ -4675,6 +4677,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4702,6 +4706,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4729,6 +4735,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-data2:
           description_short: जानें कि डेटा संबंधी समस्याएं हल करने के लिए लोग कंप्यूटर
             का कैसे उपयोग करते हैं।
@@ -4775,6 +4783,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4806,6 +4816,8 @@ hi:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
             lessonGroup-3:
               display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
+            lessonGroup-5:
+              display_name: सर्वेक्षण
         focus-on-hardware2-2023:
           description_short: जानें कि डेटा संबंधी समस्याएं हल करने के लिए लोग कंप्यूटर
             का कैसे उपयोग करते हैं।
@@ -4838,6 +4850,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5123,9 +5137,6 @@ hi:
               display_name: घटनाएँ
             lessonGroup-7:
               display_name: कोर्स समाप्ति प्रोजेक्ट
-          student_description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में मूल तत्व
-            सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे आप साझा
-            कर सकते हैं।
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'उम्र: 8-12'
           lesson_groups:
@@ -5147,9 +5158,11 @@ hi:
               display_name: फंदे
             lessonGroup-5:
               display_name: कंप्यूटिंग के प्रभाव
-          student_description: कंप्यूटर साइंस और इंटरनेट सुरक्षा के बारे में मूल तत्व
-            सीखें। कोर्स के अंत में, अपनी खुद की गेम या कहानी बनाएं, जिसे आप साझा
-            कर सकते हैं।
+            lessonGroup-6:
+              display_name: डेटा
+          lessons:
+            lesson-1:
+              name: डेटा
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5162,11 +5175,6 @@ hi:
               display_name: घटनाएँ
             lessonGroup-6:
               display_name: डेटा
-          student_description: विभिन्न प्रकार की लूप्स, इवेंट्स, फंक्शन्स और सापेक्षों
-            का उपयोग करना सीखें। अपने आद्याक्षरों को युग्मक में रूपांतरित करें, सवाल
-            हल करने की विभिन्न तकनीकों का निरीक्षण करें और जानें कि साइबर बदमाशी का
-            जवाब कैसे देना है। कोर्स के अंत में, अपनी खुद की गेम या कहानी तैयार करें,
-            जिसे आप साझा कर सकें।
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'उम्र: 7-11'
           description_short: सापेक्ष स्टेटमेंट्स के बारे में सीखें और अपनी खुद की

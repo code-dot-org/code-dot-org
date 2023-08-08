@@ -9054,6 +9054,8 @@ en:
               display_name: 'Chapter 2: Computers and Problem Solving'
             lessonGroup-4:
               display_name: Alternative Lessons
+            lessonGroup-5:
+              display_name: Survey
           name: csd1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10319,6 +10321,8 @@ en:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: Alternative Lessons
+            lessonGroup-4:
+              display_name: Survey
           name: focus-on-creativity1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10358,7 +10362,7 @@ en:
           title: Coding a Geometric Star Quilt (2023)
           description_audience: ''
           description_short: ''
-          description: "## Suggested Pre-Work for this Module\n\n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song][0] (2:47 minutes) and [Angles & Lines][1] (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n\n-   [A Trapezoid is Not a Dinosaur][2] by Suzanne Morris \n-   [The Greedy Triangle][3] by Marilyn Burns\n-   Any of these [Geometry Read Alouds][4]\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson][5] (50 minutes) for a basic introduction to the tool. "
+          description: "## Suggested Pre-Work for this Module\n\n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song][0] (2:47 minutes) and [Angles & Lines][1] (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n\n-   [Shota and the Star Quilt][2] Picture book about the tradition of quilting and how traditions can change over time\n-   [Rainbow Weavers][3] This picture book is about weaving, not quilting, but it could deepen students' understanding of how indigenous traditions evolve.\n-   [A Trapezoid is Not a Dinosaur][4] by Suzanne Morris \n-   [The Greedy Triangle][5] by Marilyn Burns\n-   Any of these [Geometry Read Alouds][6]\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson][7] (50 minutes) for a basic introduction to the tool. "
           student_description: ''
         focus-on-creativity4-2023:
           lessons: {}
@@ -10387,6 +10391,8 @@ en:
               display_name: 'Chapter 2: Computers and Problem Solving'
             lessonGroup-4:
               display_name: Alternative Lessons
+            lessonGroup-5:
+              display_name: Survey
           name: focus-on-hardware1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10434,6 +10440,8 @@ en:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: Alternative Lessons
+            lessonGroup-4:
+              display_name: Survey
           name: focus-on-data1-2023
           title: Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10501,6 +10509,8 @@ en:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: Alternative Lessons
+            lessonGroup-4:
+              display_name: Survey
           name: focus-on-design-with-purpose1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -10573,6 +10583,8 @@ en:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: Alternative Lessons
+            lessonGroup-4:
+              display_name: Survey
           name: focus-on-coding1-2023
           title: Unit 1 - Problem Solving and Computing ('23-'24)
           description_audience: ''
@@ -11578,17 +11590,25 @@ en:
               name: Training Your Model
             lesson-6:
               name: Using Your Model
+            lesson-7:
+              name: Software Engineering and Computer Vision Pre-Survey
+            lesson-8:
+              name: Software Engineering and Computer Vision Post-Survey
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: GitHub and Copilot'
             lessonGroup-3:
               display_name: 'Chapter 2: Computer Vision'
+            lessonGroup-4:
+              display_name: Pre-Survey
+            lessonGroup-5:
+              display_name: Post-Survey
           name: csa-software-engineering
           title: Software Engineering & Computer Vision
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: This two-chapter post-AP CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program. Students will gain practical knowledge, learn industry-standard practices, and cultivate critical thinking through discussions and problem-solving centered around AI tools and models. These lessons aim not only to bolster their understanding of AI and its applications but also foster creativity and collaboration, equipping students with the set of skills and the beginning of a software development portfolio they can take with them beyond high school.
+          student_description: This two-part module lets you explore pro-level tools like GitHub and GitHub Copilot and teaches you how to create your own computer vision program. You'll be solving real-world AI problems and tinkering with cutting-edge models, learning industry-standard practices along the way. This isn't just about understanding AI better - it's about sparking your creativity, improving your teamwork skills, and starting to build your own software development portfolio.
         csa-frq-practice:
           lessons:
             lesson-1:
@@ -11890,7 +11910,9 @@ en:
           description: This course offers a computer science curriculum for beginning readers in kindergarten. Students will learn to program using commands with sequencing and loops. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety.
           student_description: ''
         nevada-standards-aligned-first-grade-2023:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Data
           lesson_groups:
             lessonGroup-2:
               display_name: Digital Citizenship
@@ -11904,6 +11926,8 @@ en:
               display_name: Events
             lessonGroup-7:
               display_name: End of Course Project
+            lessonGroup-8:
+              display_name: Data
           name: nevada-standards-aligned-first-grade-2023
           title: Nevada Standards Aligned First Grade Course
           description_audience: 'Ages: 5-8'
@@ -11911,7 +11935,9 @@ en:
           description: This course for first graders moves students to learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation, critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
           student_description: ''
         nevada-standards-aligned-second-grade-2023:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Computing Systems
           lesson_groups:
             lessonGroup-2:
               display_name: Digital Citizenship
@@ -11925,6 +11951,8 @@ en:
               display_name: Data
             lessonGroup-7:
               display_name: End of Group Project
+            lessonGroup-8:
+              display_name: Computing Systems
           name: nevada-standards-aligned-second-grade-2023
           title: Nevada Standards Aligned Second Grade Course
           description_audience: ''
@@ -12004,4 +12032,287 @@ en:
           description_audience: 'Ages: 9-13'
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description: Fifth graders begin this course by learning to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about conditionals and variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+          student_description: ''
+        vpl-csp-2023-m1:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m1
+          title: Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m2:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m2
+          title: Module 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m3:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m3
+          title: Module 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m4:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m4
+          title: Module 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m5:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m5
+          title: Module 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m6:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m6
+          title: Module 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m7:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m7
+          title: Module 7
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csp-2023-m8:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2023-m8
+          title: Module 8
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m1:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m1
+          title: Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        how-ai-works-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: how-ai-works-2023
+          title: How AI Works
+          description_audience: ''
+          description_short: ''
+          description: |-
+            These lessons supplement the [How AI Works][0] video series. Each lesson is paired with a single video from the series, diving-deeper into the concepts introduced in the videos. Lessons focus on creating an exciting first experience for students, where students engage in an activity or simulation and then reflect on the experience as a way to build understanding around AI and build empathy with those impacted by it. Some lessons focus more on the technology behind AI, while other lessons focus on the societal impacts and ethical considerations of AI.
+
+            **Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers series][1]. AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.
+
+            **Implementation Options:** Click one of the options below to expand and view more details.
+
+            ::: details [<span style="font-size: 1em; font-weight: bold;">"I want to teach them all!"</spa>]
+            Lessons 1-7 can be taught as a 7-day sequence, where each day focuses on an individual video from the video series and dives deeper into the concepts introduced. Classrooms that go this direction should hide Lesson 8, which does not fit in this sequence. [Click here to learn more about hiding lesson][2]
+            :::
+
+            ::: details [<span style="font-size: 1em; font-weight: bold;">"I want to teach a specific lesson or integrate into another class"</span>]
+            Each lesson can stand on its own and be taught independently from the others. This is especially useful if you would like to integrate a lesson into another subject or an existing computer science, artificial intelligence, or general education class. Classrooms that go this direction should hide all lessons except the one you want to teach. [Click here to learn more about hiding lesson][3]
+            :::
+            ::: details [<span style="font-size: 1em; font-weight: bold;">"I Only Have a Day"</span>]
+            Lesson 8 is designed for classrooms that want to introduce AI to students, but only have a day to do so. This lesson provides a notetaker for students as the class watches the entire video sequence. Classrooms that go this direction should hide all lessons except for Lesson 8. [Click here to learn more about hiding lesson][4]
+            :::
+            <br />
+            <br />
+          student_description: |-
+            Learn how AI works by participating in different experiences and watching the [How AI Works][0] video series!
+
+            **Looking to teach these lessons?** [Click here to view the lesson plans for these lessons][1]
+        vpl-csa-2023-m2:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m2
+          title: Module 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m3:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m3
+          title: Module 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m4:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m4
+          title: Module 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m5:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m5
+          title: Module 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m6:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m6
+          title: Module 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m7:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m7
+          title: Module 7
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csa-2023-m8:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2023-m8
+          title: Module 8
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-csd-2023-m1:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-csd-2023-m1
+          title: 'Module 1 '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m1:
+          lessons:
+            lesson-2:
+              name: CSD Module 1 Synchronous
+            lesson-3:
+              name: 'Synchronous Session 2: Model Lesson'
+            lesson-4:
+              name: 'Synchronous Session 3: Wrap Up'
+          lesson_groups: {}
+          name: vpl-csd-2023-m1
+          title: Module 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m2:
+          lessons:
+            lesson-2:
+              name: CSD Module 2 Synchronous
+            lesson-3:
+              name: 'Synchronous Session 5: Review of the Curriculum Investigation'
+            lesson-4:
+              name: 'Synchronous Session 6: Assessment'
+            lesson-5:
+              name: 'Synchronous Session 7: Inclusion Scenarios'
+            lesson-6:
+              name: 'Synchronous Session 8: Wrap Up'
+          lesson_groups: {}
+          name: vpl-csd-2023-m2
+          title: Module 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m3:
+          lessons:
+            lesson-2:
+              name: CSD Module 3 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m3
+          title: Module 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m4:
+          lessons:
+            lesson-2:
+              name: CSD Module 4 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m4
+          title: Module 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m5:
+          lessons:
+            lesson-2:
+              name: CSD Module 5 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m5
+          title: Module 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m6:
+          lessons:
+            lesson-2:
+              name: CSD Module 6 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m6
+          title: Module 6
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m7:
+          lessons:
+            lesson-2:
+              name: CSD Module 7 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m7
+          title: Module 7
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        vpl-csd-2023-m8:
+          lessons:
+            lesson-2:
+              name: CSD Module 8 Synchronous
+          lesson_groups: {}
+          name: vpl-csd-2023-m8
+          title: Module 8
+          description_audience: ''
+          description_short: ''
+          description: ''
           student_description: ''

@@ -10,7 +10,6 @@ require 'fileutils'
 require 'json'
 require 'digest/md5'
 
-require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 
@@ -21,7 +20,7 @@ module I18n
     def self.perform
       puts "Sync in starting"
       Services::I18n::CurriculumSyncUtils.sync_in
-      HocSyncUtils.sync_in
+      I18n::Resources::Pegasus::HourOfCode.sync_in
       localize_level_and_project_content
       I18n::Resources::Dashboard::Blocks.sync_in
       I18n::Resources::Apps::Animations.sync_in
@@ -30,13 +29,13 @@ module I18n
       I18n::Resources::Dashboard::Standards.sync_in
       I18n::Resources::Dashboard::Docs.sync_in
       I18n::Resources::Apps::ExternalSources.sync_in
+      I18n::Resources::Dashboard::Scripts.sync_in
+      I18n::Resources::Dashboard::Courses.sync_in
       I18n::Resources::Apps::Labs.sync_in
+      I18n::Resources::Pegasus::Markdown.sync_in
       puts "Copying source files"
       I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
-      localize_course_resources
       redact_level_content
-      redact_script_and_course_content
-      localize_markdown_content
       puts "Sync in completed successfully"
     rescue => exception
       puts "Sync in failed from the error: #{exception}"
@@ -377,49 +376,6 @@ module I18n
       end
     end
 
-    # Merging dashboard/config/courses/*.course with courses.yml
-    # These files contain resources used by UnitGroup (used in the landing pages of full courses).
-    # https://studio.code.org/courses/csd-2021
-    # All other resources used in Unit come from scrip_json files (used in the landing pages for each Unit).
-    # https://studio.code.org/s/csd1-2021
-    def self.localize_course_resources
-      puts "Preparing course resources"
-
-      # Currently, csd is the only fully translatable course that has resources in this directory
-      translatable_courses = %w(csd)
-      resources = {}
-      Dir.glob(File.join('dashboard', 'config', 'courses', '*.course')).each do |file|
-        course_json = JSON.parse(File.read(file))
-        course_properties = course_json['properties']
-        next unless translatable_courses.include?(course_properties['family_name'])
-
-        course_resources = course_json['resources']
-        next if course_resources.empty?
-        course_resources.each do |resource|
-          # resoruce.rb uses Services::GloballyUniqueIdentifiers.build_resource_key to create resource keys as follow
-          # resource.key / resource.course_version.course_offering.key / resource.course_version.key
-          # resource_key is used to localize the resources.
-          resource_key = [resource['key'], course_properties['family_name'], course_properties['version_year']].join('/')
-          resources.store(resource_key, {'name' => resource['name'], 'url' => resource['url']})
-        end
-      end
-      courses_source = File.join(I18N_SOURCE_DIR, 'dashboard', 'courses.yml')
-      courses_yaml = YAML.load_file(courses_source)
-      courses_data = courses_yaml['en']['data']
-      # Merging resources if courses already contain resources
-      courses_data['resources'] ? courses_data['resources'].merge!(resources) : courses_data.store('resources', resources)
-      File.write(courses_source, I18nScriptUtils.to_crowdin_yaml(courses_yaml))
-    end
-
-    def self.localize_animation_library
-      spritelab_animation_source_file = "#{I18N_SOURCE_DIR}/animations/spritelab_animation_library.json"
-      FileUtils.mkdir_p(File.dirname(spritelab_animation_source_file))
-      File.open(spritelab_animation_source_file, "w") do |file|
-        animation_strings = ManifestBuilder.new({spritelab: true, quiet: true}).get_animation_strings
-        file.write(JSON.pretty_generate(animation_strings))
-      end
-    end
-
     def self.select_redactable(i18n_strings)
       redactable_content = %w(
         authored_hints
@@ -468,79 +424,6 @@ module I18n
 
       Dir.glob(File.join(I18N_SOURCE_DIR, "course_content/**/*.json")).each do |source_path|
         redact_level_file(source_path)
-      end
-    end
-
-    def self.redact_script_and_course_content
-      plugins = %w(resourceLink vocabularyDefinition)
-      fields = %w(description student_description description_student description_teacher)
-
-      %w(script course).each do |type|
-        puts "Redacting #{type} content"
-        source = File.join(I18N_SOURCE_DIR, "dashboard/#{type}s.yml")
-
-        # Save the original data, for restoration
-        original = source.sub("source", "original")
-        FileUtils.mkdir_p(File.dirname(original))
-        FileUtils.cp(source, original)
-
-        # Redact the specific subset of fields within each script that we care about.
-        data = YAML.load_file(source)
-        data['en']['data'][type]['name'].values.each do |datum|
-          markdown_data = datum.slice(*fields)
-          redacted_data = RedactRestoreUtils.redact_data(markdown_data, plugins, 'md')
-          datum.merge!(redacted_data)
-        end
-
-        # Overwrite source file with redacted data
-        File.write(source, I18nScriptUtils.to_crowdin_yaml(data))
-      end
-    end
-
-    def self.localize_markdown_content
-      markdown_files_to_localize = %w[
-        athome.md.partial
-        break.md.partial
-        coldplay.md.partial
-        csforgood.md
-        curriculum/unplugged.md.partial
-        educate/csc.md.partial
-        educate/curriculum/csf-transition-guide.md
-        educate/it.md
-        helloworld.md.partial
-        hourofcode/artist.md.partial
-        hourofcode/flappy.md.partial
-        hourofcode/frozen.md.partial
-        hourofcode/hourofcode.md.partial
-        hourofcode/infinity.md.partial
-        hourofcode/mc.md.partial
-        hourofcode/playlab.md.partial
-        hourofcode/starwars.md.partial
-        hourofcode/unplugged-conditionals-with-cards.md.partial
-        international/about.md.partial
-        poetry.md.partial
-        ../views/hoc2022_create_activities.md.partial
-        ../views/hoc2022_play_activities.md.partial
-        ../views/hoc2022_explore_activities.md.partial
-      ]
-      markdown_files_to_localize.each do |path|
-        original_path = File.join('pegasus/sites.v3/code.org/public', path)
-        original_path_exists = File.exist?(original_path)
-        puts "#{original_path} does not exist" unless original_path_exists
-        next unless original_path_exists
-        # This reforms the `../` relative paths so they appear as though they are
-        # within the `public` path. This is a legacy solution to keep things clean
-        # when viewed by the translators in crowdin.
-        path = path[3...] if path.start_with? "../"
-        # Remove the .partial if it exists
-        source_path = File.join(I18N_SOURCE_DIR, 'markdown/public', File.dirname(path), File.basename(path, '.partial'))
-        FileUtils.mkdir_p(File.dirname(source_path))
-        FileUtils.cp(original_path, source_path)
-      end
-      Dir.glob(File.join(I18N_SOURCE_DIR, "markdown/**/*.md")).each do |path|
-        header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-        I18nScriptUtils.sanitize_header!(header)
-        I18nScriptUtils.write_markdown_with_header(content, header, path)
       end
     end
   end

@@ -179,43 +179,48 @@ ph:
   teach_ai_homepage_banner_title: AI edukasyon para sa mundo
   teach_ai_homepage_banner_desc: Code.org ay bahagi ng TeachAI, na nakatuon sa pagpapalakas
     ng mga guro sa lahat ng dako upang magturo sa AI at tungkol sa AI.
-  curriculum_launch_2023_title: Introducing incredible updates to our curriculum
-  curriculum_launch_2023_desc: Updates to CSC, CSP, CSD, and more — plus a new Curriculum
-    Catalog and redesigned Teach page to help you find it all!
-  in_partnership_with: In partnership with
-  afe_partnership_logo_alt: Amazon Future Engineer logo
-  afe_partnership_thanks_desc: Amazon Future Engineer is a comprehensive childhood-to-career
-    program to inspire, educate, and train low-income and other disadvantaged children
-    and young people to pursue careers in computer science. [Learn about our partnership](%{afe_url}).
+  curriculum_launch_2023_title: Ipinapakilala ang kahanga-hangang mga update sa kurikulum
+    namin
+  curriculum_launch_2023_desc: Mga update sa CSC, CSP, CSD, at higit pa — kasama ang
+    bagong Katalogo ng Kurikulum at muling dinisenyong pahina ng Ituro upang matulungan
+    kang mahanap ang lahat!
+  in_partnership_with: Sa pakikipagtulungan sa
+  afe_partnership_logo_alt: Logo ng Amazon Future Engineer
+  afe_partnership_thanks_desc: Ang Amazon Future Engineer ay komprehensibong programa
+    mula pagkabata hanggang sa karera paglaki upang magbigay ng inspirasyon, edukasyon,
+    at pagsasanay sa mga batang may mababang kita at iba pang mga mahihirap na bata
+    at kabataan upang magpatuloy sa mga karera sa computer science. [Alamin ang tungkol
+    sa aming pakikipagtulungan](%{afe_url}).
+  grade_level: Baitang
   grade_level_label_elementary: Elementary School
   grade_level_label_middle: Middle School
   grade_level_label_high: High School
-  teacher_label_csf: CS Fundamentals Teacher
+  teacher_label_csf: Guro sa Mga Batayan ng CS
   teacher_label_csd: Guro ng CS Discoveries
-  teacher_label_csp: CS Principles Teacher
-  teacher_label_csc: CS Connections Teacher
+  teacher_label_csp: Guro sa Mga Prinsipyo ng CS
+  teacher_label_csc: Guro sa Mga Koneksiyon sa CS
   teacher_label_csa: AP® Computer Science A Teacher
-  required_materials: 'Required Materials:'
-  optional_materials: 'Optional Materials:'
+  required_materials: 'Kinakailangang Mga Materyales:'
+  optional_materials: 'Opsyonal na Mga Materyales:'
   call_to_action_learn_more: Matuto ng higit pa
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
   call_to_action_explore_unit: Explore unit
   call_to_action_explore_curriculum: Explore curriculum
-  call_to_action_explore_curriculum_options: Explore curriculum options
+  call_to_action_explore_curriculum_options: Tuklasin ang mga opsyon sa kurikulum
   call_to_action_explore_modules: Explore modules
   call_to_action_explore_workshops: Tuklasin ang mga workshop
-  call_to_action_explore_course: Explore course
-  call_to_action_explore_courses: Explore courses
-  call_to_action_explore_full_course: Explore full course
-  call_to_action_explore_widgets: Explore widgets
-  call_to_action_explore_choice_level: Explore example choice level
-  call_to_action_explore_collection: Explore collection
-  call_to_action_explore_unplugged_lesson: Explore unplugged lessons
-  call_to_action_try_app_lab: Try App Lab
+  call_to_action_explore_course: Tuklasin ang kurso
+  call_to_action_explore_courses: Tuklasin ang mga kurso
+  call_to_action_explore_full_course: Tuklasin ang buong kurso
+  call_to_action_explore_widgets: Tuklasin ang mga widget
+  call_to_action_explore_choice_level: Tuklasin ang antas ng pagpili ng halimbawa
+  call_to_action_explore_collection: Tuklasin ang koleksiyon
+  call_to_action_explore_unplugged_lesson: Tuklasin ang hindi naka-plug na mga aralin
+  call_to_action_try_app_lab: Subukan ang App Lab
   call_to_action_view_lesson_plan: View lesson plan
   call_to_action_self_paced_pl: Start self-paced professional learning
-  call_to_action_apply_for_pl: Apply for Professional Learning
+  call_to_action_apply_for_pl: Mag-apply sa Propesyonal na Pag-aaral
   call_to_action_watch_panel: Watch panel
   call_to_action_learn_about_challenge: Learn about challenge
   call_to_action_explore_website: Explore website
@@ -223,6 +228,7 @@ ph:
   call_to_action_donate_online: Donate online
   call_to_action_get_updates: Get updates
   call_to_action_special_announcement: See special announcement
+  call_to_action_learning_opportunity: New Professional Learning Opportunity
   call_to_action_start_pl: Start professional learning
   call_to_action_contact_regional_partner: Contact your Regional Partner
   call_to_action_join_csta: Join CSTA
@@ -238,19 +244,19 @@ ph:
   call_to_action_see_full_curriculum_catalog: Tingnan ang buong Catalog ng Kurikulum
   call_to_action_find_self_paced_modules: Hanapin ang mga sariling bilis na module
   call_to_action_join_teacher_forums: Sumali sa mga forum ng guro
-  call_to_action_explore_teacher_forums: Explore teacher forums
+  call_to_action_explore_teacher_forums: Tuklasin ang mga forum ng guro
   call_to_action_explore_career_resources: Tuklasin ang mga mapagkukunan sa karera
   call_to_action_watch_videos: Manood ng mga video
   call_to_action_download_posters: I-download ang mga poster
-  call_to_action_contact_support: Contact Code.org support
-  call_to_action_pick_units: Pick units
-  call_to_action_focus_on_topic: Focus on a topic
-  call_to_action_teach_full_intro_course: Teach a full intro course
-  call_to_action_see_module_details: See module details
-  call_to_action_start_modules: Start modules
-  call_to_action_see_course_details: See course details
-  call_to_action_learn_about_approach: Learn more about our approach
-  call_to_action_try_java_lab: Try Java Lab
+  call_to_action_contact_support: Makipag-ugnay sa suporta ng Code.org
+  call_to_action_pick_units: Pumili ng mga yunit
+  call_to_action_focus_on_topic: Magpokus sa isang paksa.
+  call_to_action_teach_full_intro_course: Magturo ng buong kurso ng introduksiyon
+  call_to_action_see_module_details: Tingnan ang mga detalye ng module
+  call_to_action_start_modules: Simulan ang mga module
+  call_to_action_see_course_details: Tingnan ang mga detalye ng kurso
+  call_to_action_learn_about_approach: Matuto nang higit pa tungkol sa paraan namin
+  call_to_action_try_java_lab: Subukan ang Java Lab
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -430,6 +436,8 @@ ph:
   module_label_educator_tool: Educator tool
   module_label_educator_course: Educator course
   module_label_student_tool: Student tool
+  module_label_student_product: Product
+  module_label_student_content_resources: Content & resources
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -688,22 +696,23 @@ ph:
     throughout K-12. Offer free professional development, webinars, conference presentations,
     and peer-to-peer learning opportunities.
   ai_resources_btn_aria_label_03: Explore the AI for Teachers website
-  ai_pl_101_hero_heading: AI 101 for Teachers
+  ai_pl_101_hero_heading: Sumali sa amin sa AI EmpowerED!
   ai_pl_101_hero_desc: Tuklasin ang pagbabagong potensyal ng artificial intelligence
     (AI) sa edukasyon sa aming libreng serye ng online na pag-aaral sa mga tagapagturo.
   ai_pl_101_hero_presented: Presented by
   ai_pl_101_intro_heading: What is AI 101 for Teachers?
-  ai_pl_101_intro_text: This is a comprehensive online learning series for any teacher
-    and educator interested in the groundbreaking world of artificial intelligence
-    (AI) and its transformative potential in education. Partners Code.org, Khan Academy,
-    ISTE and ETSI are offering engaging sessions with renowned experts that will demystify
-    AI, explore responsible implementation, address bias, and showcase how AI-powered
-    learning can revolutionize student outcomes. Join us on this journey of exploration
-    and empowerment, and unlock the future of teaching with and about AI.
+  ai_pl_101_intro_text: AI 101 for Teachers is a free, foundational online professional
+    learning series for any teacher and educator interested in the groundbreaking
+    world of artificial intelligence (AI) and its transformative potential in education.
+    Partners Code.org, ETS, ISTE, Khan Academy are offering engaging sessions with
+    renowned experts that will demystify AI, explore responsible implementation, address
+    bias, and showcase how AI-powered learning can revolutionize student outcomes.
+    Join us on this journey of exploration and empowerment, and unlock the future
+    of teaching with and about AI.
   ai_pl_101_partnership_between: A partnership between
   ai_pl_101_join_email_title: Sign up for early access to AI 101 for Teachers
   ai_pl_101_pro_join_email_desc: Be the first to hear when each session launches.
-    Get updates on AI resources from Code.org, Khan Academy, ISTE, and ETS.
+    Get updates on AI resources from Code.org, ETS, ISTE and Khan Academy.
   ai_pl_101_explore_title: AI-related resources
   ai_pl_101_explore_desc: We have a variety of additional resources for you from Code.org,
     ETS, ISTE and Khan Academy to support teachers in this new and growing field.
@@ -1940,6 +1949,7 @@ ph:
   signup_submit_census_error_message: Humihingi kami ng tawad. Isang mali ang naganap.
     Muling subukang i-sumite muli ang form.
   signup_submit_label: Magpalista
+  signup_submit_explore: Explore sessions
   signup_submit_error_message: Nagkaroon ng antala ang iyong ginagawa. Maaring pakitignan
     lamang kung nalagyan ang lahat ng mga mahalagang impormasyon.
   signup_submit_and_continue_label: I-sumite at magpatuloy
@@ -13356,6 +13366,91 @@ ph:
     holding the ends of a Code.org-branded rainbow banner. Behind them, several people
     are wearing Code.org shirts and waving rainbow flags while walking alongside a
     multi-colored Volkswagen bug.
+  accessibility_hero_heading: Accessibility at Code.org
+  accessibility_hero_desc: We are dedicated to eliminating barriers that prevent the
+    inclusion and full participation of students and educators with disabilities,
+    ensuring that EVERY student has access to computer science.
+  accessibility_efforts_title: Our Efforts for 2023
+  accessibility_efforts_desc: 'To achieve our goal of a fully accessible platform,
+    we’re implementing a comprehensive action plan that includes:'
+  accessibility_efforts_card_title_1: Internal accessibility training
+  accessibility_efforts_card_desc_1: Our product and engineering teams will complete
+    comprehensive accessibility training by December 2023.
+  accessibility_efforts_card_title_2: VPAT Analysis
+  accessibility_efforts_card_desc_2: Completing [Voluntary Product Accessibility Template](%{voluntary_url})
+    to establish a baseline and measure progress annually. Results available on this
+    page by September 2023.
+  accessibility_efforts_card_title_3: Tools that support accessible design
+  accessibility_efforts_card_desc_3: 'Team members will have access to tools that
+    ensure all new features are designed and built with accessibility in mind. '
+  accessibility_efforts_card_title_4: Accessible curriculum
+  accessibility_efforts_card_desc_4: We will achieve [WCAG Level AA compliance](%{wcag_url})
+    for the first few units of Computer Science Principles and Computer Science Discoveries
+    by December 2023.
+  accessibility_explore_title: Explore Code.org’s accessibility resources
+  accessibility_explore_text: Our accessibility resources page provides comprehensive
+    documentation and guidance for our features and tools, including accessible Hour
+    of Code lessons, immersive readers, keyboard navigation, and customization options.
+  accessibility_explore_button: View accessibility resources page
+  accessibility_help_us_title: Help Us Improve
+  accessibility_help_us_text: At Code.org, we are agile and responsive to feedback.
+    If you have recommendations to help us improve the accessibility of our tools
+    and resources, please reach out. Thank you for helping us make computer science
+    available for all students!
+  accessibility_help_us_button: Tell us how we can improve
+  accessibility_commit_title: Code.org’s Commitment to Accessibility
+  accessibility_commit_text_1: Code.org believes that computer science is foundational
+    for all students and we're committed to ensuring equity, access, and opportunity
+    on our platform and in our curriculum.
+  accessibility_commit_text_2: We're taking a holistic approach to support the learning
+    needs of all students and working to close gaps in access to computer science
+    education for students with disabilities.
+  accessibility_commit_text_3: We’re starting small, but will measure our progress
+    and continuously iterate until we can address even the most complex accessibility
+    challenges.
+  accessibility_commit_text_4: At Code.org, we're committed to continually improving
+    the accessibility of our tools, and we're excited to take this important step
+    towards greater equity, access, and opportunity for all students and educators.
+  accessibility_partner_title: Our Partners and Recommendations
+  accessibility_partner_desc: We recommend the following resources for students and
+    teachers who are looking for more accessible computer science content.
+  accessibility_card_title_1: AccessCSForAll
+  accessibility_card_text_1: Resources for teachers to bring accessible computing
+    to secondary schools and for high school students with disabilities to connect
+    with mentors in the technology space.
+  accessibility_card_title_2: Blocks4All
+  accessibility_card_text_2: A block-based programming environment for iPad that teaches
+    basic programming concepts using the Dash robot. Accessible with VoiceOver, Switch
+    Control, and Voice Control.
+  accessibility_card_title_3: Code Jumper
+  accessibility_card_text_3: A physical coding aid/resource for students with visual
+    impairments.
+  accessibility_card_title_4: CSForAll
+  accessibility_card_text_4: An organization that coordinates projects and programs
+    with different organizations across the United States.
+  accessibility_card_title_5: Deaf Kids Code
+  accessibility_card_text_5: Promotes computer science and technology education to
+    empower students who are deaf or hard of hearing.
+  accessibility_card_title_6: Everyone Can Code
+  accessibility_card_text_6: A curriculum designed by Apple for Swift Playgrounds
+    that provides VoiceOver (modified TTS) and adapted curriculum for students with
+    accessibility needs.
+  accessibility_card_title_7: Akademya ng Khan
+  accessibility_card_text_7: A curriculum provider with various accommodations, including
+    captions, transcripts, and the ability to reduce animation motion and hide visually
+    dependent content. Hosts some Code.org curricula, plus additional computing curricula.
+  accessibility_card_title_8: Snap Circuits
+  accessibility_card_text_8: An educational product that teaches electronics with
+    solderless snap-together electronic components. Can include an access pack for
+    students with visual impairments.
+  accessibility_card_title_9: Sphero
+  accessibility_card_text_9: An interactive coding robotic ball and STEM education
+    kit for students with intellectual disabilities. Needs to be paired with an appropriate
+    application.
+  accessibility_card_title_10: 'Quorum '
+  accessibility_card_text_10: An adaptation of Code.org’s AP Computer Science Principles
+    curriculum using Quorum, an evidence-based language originally designed to provide
+    accessibility for blind or visually-impaired students.
   language_code:
     ar: Arabic
     az: Azerbaijani

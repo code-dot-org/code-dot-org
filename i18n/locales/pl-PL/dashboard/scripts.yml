@@ -147,6 +147,8 @@ pl:
           lessons:
             lesson-49:
               name: Muzyka
+            lesson-50:
+              name: Czat AI
         algebraPD2b:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -5483,6 +5485,8 @@ pl:
               display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
             lessonGroup-4:
               display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Ankieta
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6143,6 +6147,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-creativity1-2023
         focus-on-creativity2-2023:
           lesson_groups:
@@ -6181,6 +6187,8 @@ pl:
               display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
             lessonGroup-4:
               display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Ankieta
           name: focus-on-hardware1-2023
         focus-on-hardware2-2023:
           lesson_groups:
@@ -6206,6 +6214,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-data1-2023
         focus-on-data2:
           lesson_groups:
@@ -6243,6 +6253,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-design-with-purpose1-2023
         self-paced-pl-k5-getting-started:
           name: self-paced-pl-k5-getting-started
@@ -6280,6 +6292,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-coding1-2023
         focus-on-coding2-2023:
           lesson_groups:
@@ -6313,6 +6327,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-impact-in-society1-2023
         focus-on-impact-in-society2-2023:
           lesson_groups:
@@ -7116,6 +7132,9 @@ pl:
           title: 'Nevada Kurs A '
           description_audience: W wieku 4-7
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Dane
           lesson_groups:
             lessonGroup-2:
               display_name: Cyfrowe obywatelstwo
@@ -7125,10 +7144,11 @@ pl:
               display_name: Pętle
             lessonGroup-5:
               display_name: Wplywy informatyki
+            lessonGroup-6:
+              display_name: Dane
           name: nevada-standards-aligned-kindergarten-2023
           description_audience: W wieku 4-7
           description_short: Wprowadzenie do informatyki dla nie umiejących czytać.
-          student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -7146,7 +7166,6 @@ pl:
           name: nevada-standards-aligned-first-grade-2023
           description_audience: W wieku 5-8
           description_short: Wprowadzenie do informatyki dla nieumiejących jeszcze czytać. Podobne do Kursu A, ale z pogłębieniem pojęć.
-          student_description: Poznaj podstawy informatyki i bezpieczeństwa w Internecie. Pod koniec kursu twórz swoją własną grę lub opowiadanie, które możesz udostępnić.
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -7160,7 +7179,6 @@ pl:
             lessonGroup-6:
               display_name: Dane
           name: nevada-standards-aligned-second-grade-2023
-          student_description: Twórz programy z sekwencjami, pętlami i zdarzeniami. Przekładaj swoje inicjały na zapis binarny, badaj różne techniki rozwiązywania problemów i ucz się, jak reagować na cyberprzemoc. Pod koniec kursu utwórz swoją własną grą lub historyjkę, którą będziesz mógł udostępnić!
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -7220,4 +7238,3 @@ pl:
           description_audience: W wieku 9-13
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
           description: Stworzyliśmy Kurs F dla uczniów piątej klasy. Kurs rozpoczyna się od przyjrzenia się, w jaki sposób użytkownicy dokonują wyboru w aplikacjach, z których korzystają. Następnie uczniowie uczą się tworzyć różne aplikacje w Sprite Lab, które również oferują użytkownikowi wybór. Na późniejszych lekcjach kursu uczniowie poznają zmienne w różnych kontekstach. W trakcie tego kursu, mają większą autonomię i większy wybór. Pod koniec kursu uczniowie utworzą interaktywne projekty, którymi będą mogli dzielić się z przyjaciółmi i rodziną.
-          student_description: Naucz się kodować z duszkami i zmiennymi, oraz omów wpływ komputerów i internetu na społeczeństwo. Pod koniec tego kursu zaprojektuj i stwórz projekt, którym możesz podzielić się z przyjaciółmi i rodziną.

@@ -156,6 +156,12 @@ FactoryBot.define do
           authorized_teacher.save
         end
       end
+      factory :ai_chat_access do
+        after(:create) do |ai_chat_access|
+          ai_chat_access.permission = UserPermission::AI_CHAT_ACCESS
+          ai_chat_access.save
+        end
+      end
       factory :facilitator do
         transient do
           course {nil}
@@ -1765,6 +1771,7 @@ FactoryBot.define do
   end
 
   factory :learning_goal do
+    association :rubric
     sequence(:key) {|n| "lg_#{n}"}
     position {0}
     learning_goal {"Test Learning Goal"}

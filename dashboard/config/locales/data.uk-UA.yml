@@ -805,18 +805,24 @@ uk:
         csd_external_netflix_data: Як Netflix створює рекомендації передач та фільмів?
         csd_external_waze_data: Чому так багато користувачів обманюють Waze?
         csd_gamelab_animation_tab: Анімація
-        csd_gamelab_booleans: Булеві вирази
-        csd_gamelab_conditional_statements: Умовні твердження
+        csd_gamelab_booleans: Логічні вирази
+        csd_gamelab_conditional_statements: Умовні конструкції
         csd_gamelab_draw_1: Малювання в Ігровій Лабораторії - Частина 1
         csd_gamelab_draw_2: Малювання в Ігровій Лабораторії - Частина 2
+        csd_gamelab_drawloop: Знайомство з циклом малювання
         csd_gamelab_functions: Виклик та визначення функцій
-        csd_gamelab_if_else: Якщо/Інші Твердження
+        csd_gamelab_if_else: Команди Якщо/Інакше
+        csd_gamelab_sprites_1: Знайомство зі спрайтами
+        csd_gamelab_sprites_2: Анімація спрайтів
         csd_gamelab_variables_1: Вступ до змінних - Частина 1
         csd_gamelab_velocity: Швидкість
+        csd_ml_intro_ai_lab_july2021: Вступ до Лабораторії ШІ
+        csd_ml_intro_to_ai_lab: Вступ до Лабораторії ШІ
+        csd_ml_numerical_ai_lab: Числові дані в Лабораторії ШІ
         csd_pair_programming: Парне програмування
         csd_problem_solving_process: Процес вирішення проблем
         csd_sprite_properties: Властивості спрайтів
-        csd_u6_circuit_playground: Фізична інформатика
+        csd_u6_circuit_playground: Програмування пристроїв
         csd_u6_input_output: Вхідні та вихідні дані
         csd_weblab_css_1: Основи CSS - частина 1
         csd_weblab_css_2: Основи CSS - частина 2

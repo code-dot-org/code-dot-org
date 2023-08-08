@@ -1123,6 +1123,11 @@ ur:
               display_name: ڈیجیٹل شہریت
             lessonGroup-4:
               display_name: لوپس
+            lessonGroup-6:
+              display_name: ڈیٹا
+          lessons:
+            lesson-1:
+              name: ڈیٹا
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:

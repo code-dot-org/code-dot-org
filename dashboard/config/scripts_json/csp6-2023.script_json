@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-18 20:54:50 UTC",
+    "serialized_at": "2023-08-07 22:42:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1447,7 +1447,13 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level three where they complete the Reminder App. An optional Activity Guide is provided if students would like guidance in creating the app. The most relevant programming pattern is displayed on a slide. Review this pattern quickly with students, if needed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
-        "progression_name": "Make the Reminders App"
+        "progression_name": "Make the Reminders App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Adapting Make Lessons** - You may decide that you'd like to have your students write the code for a modified or entirely different app using the same skills. This might help you differentiate your instruction or provide you with a way to reassess students. Check out the [r customize_make_lessons_how-to-guide/csp/2023] for guidance on how to get started with this."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d53755dc-7187-4c02-bf2e-dae68997e621",
@@ -2112,7 +2118,13 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to level two where they complete the Lock Screen Maker app. Based on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually. Afterwards give them time to work on their projects and circulate the room to offer support. Students who finish early can work on the extensions suggested in the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
-        "progression_name": "Make the Lock Screen Maker"
+        "progression_name": "Make the Lock Screen Maker",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Adapting Make Lessons** - You may decide that you'd like to have your students write the code for a modified or entirely different app using the same skills. This might help you differentiate your instruction or provide you with a way to reassess students. Check out the [r customize_make_lessons_how-to-guide/csp/2023] for guidance on how to get started with this."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2799a099-1593-4c80-b3cf-36249d5e9114",
@@ -2519,7 +2531,13 @@
       "properties": {
         "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Have students explore the working Random Forecaster app in Level 1.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** If students are not working in pairs they should still discuss the prompts with a neighbor.\n\n* *What information is needed to create this app?*\n* *What list filtering patterns might be used?*\n\n**Discussion Goal:** \n* What information is needed to create this app?\n    * The weather forecast for tomorrow for random cities, including the weather condition, high and low temperatures, and a weather icon.\n* What list filtering patterns might be used?\n    * The List Filter Pattern: Filtering Multiple Lists is used.",
         "name": "Try the Random Forecaster App",
-        "progression_name": "Try the Random Forecaster App"
+        "progression_name": "Try the Random Forecaster App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Adapting Make Lessons** - You may decide that you'd like to have your students write the code for a modified or entirely different app using the same skills. This might help you differentiate your instruction or provide you with a way to reassess students. Check out the [r customize_make_lessons_how-to-guide/csp/2023] for guidance on how to get started with this."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c6861713-6c13-4fdb-ab64-7f95098c8f4e",
@@ -3069,7 +3087,7 @@
       "key": "16178cf7-5642-4ad7-96dc-85a1af64229e",
       "position": 9,
       "properties": {
-        "description": "####Assessment: Grading the Project\n\n**Project:** Use the Scoring Guidelines on the final page of the Planning Guide to assess student projects. The Written Response portion is individual, while the Overall Project portion is a group grade."
+        "description": "####Assessment: Grading the Project\n\n**Project:** Use the Scoring Guidelines on the final page of the Planning Guide to assess student projects. The Written Response portion is individual, while the Overall Project portion is a group grade.\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "16178cf7-5642-4ad7-96dc-85a1af64229e",
@@ -3077,8 +3095,42 @@
       }
     },
     {
-      "key": "43b45e1c-b5ab-4af2-998b-fc2ebcf6cd5d",
+      "key": "ed5457f8-483a-4e84-ba98-611c6fb6041d",
       "position": 10,
+      "properties": {
+        "description": "#### CSP Vocabulary Bingo"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed5457f8-483a-4e84-ba98-611c6fb6041d",
+        "lesson_activity.key": "18af6994-fc26-433d-96d7-1f20ad4b5929"
+      }
+    },
+    {
+      "key": "84c8008f-74fd-43a4-8e15-353cce8d1024",
+      "position": 11,
+      "properties": {
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "84c8008f-74fd-43a4-8e15-353cce8d1024",
+        "lesson_activity.key": "18af6994-fc26-433d-96d7-1f20ad4b5929"
+      }
+    },
+    {
+      "key": "a729ebcb-1921-4fce-833d-2b41e0d33976",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Six in order to generate clues for the students."
+      },
+      "seeding_key": {
+        "activity_section.key": "a729ebcb-1921-4fce-833d-2b41e0d33976",
+        "lesson_activity.key": "18af6994-fc26-433d-96d7-1f20ad4b5929"
+      }
+    },
+    {
+      "key": "43b45e1c-b5ab-4af2-998b-fc2ebcf6cd5d",
+      "position": 13,
       "properties": {
         "progression_name": "End-of-Unit Survey"
       },
@@ -5293,6 +5345,31 @@
       }
     },
     {
+      "name": "CSP Bingo Cards - Unit Six",
+      "url": "https://drive.google.com/file/d/1KBVdeq9cajlPQOcNb8xhFyfxxgV4VnYD/view?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_six",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1KBVdeq9cajlPQOcNb8xhFyfxxgV4VnYD",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_six"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
       "name": "CSP Lists Make - Reminder App",
       "url": "https://docs.google.com/document/d/1ASZv664TobGiKJA-ygRh24WVMP9zFqN59jF2q3F5yvo/edit?usp=share_link",
       "key": "csp_lists_make_-_reminder_app",
@@ -5540,6 +5617,18 @@
       }
     },
     {
+      "name": "Customize Make Lessons: How-To-Guide",
+      "url": "https://docs.google.com/document/d/1K33HqvpPwb8BYX7mvFD7m2d17RSGD7ASEG4UUA0ajOM/edit?usp=sharing",
+      "key": "customize_make_lessons_how-to-guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "customize_make_lessons_how-to-guide"
+      }
+    },
+    {
       "name": "Data Tab in App Lab",
       "url": "https://youtu.be/PNe3MSreQAA",
       "key": "data_tab_in_app_lab",
@@ -5627,6 +5716,18 @@
       },
       "seeding_key": {
         "resource.key": "introduction_to_traversal"
+      }
+    },
+    {
+      "name": "Lists, Loops, and Traversals",
+      "url": "https://docs.google.com/presentation/d/1E2Zw5ta3nR4MfF49uQyXJwyfLklxAjI4ZVIUcfn3rCA/edit?usp=sharing",
+      "key": "lists_loops_and_traversals",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "lists_loops_and_traversals"
       }
     },
     {
@@ -5851,6 +5952,12 @@
     {
       "seeding_key": {
         "lesson.key": "Lists Explore",
+        "resource.key": "lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
         "resource.key": "unit_6_journal_digital_"
       }
     },
@@ -5888,6 +5995,12 @@
       "seeding_key": {
         "lesson.key": "Lists Make",
         "resource.key": "csp_unit_6_-_lesson_4_-_lists_make"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Make",
+        "resource.key": "customize_make_lessons_how-to-guide"
       }
     },
     {
@@ -5952,8 +6065,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Loops Make",
+        "resource.key": "customize_make_lessons_how-to-guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Loops Practice",
         "resource.key": "csp_unit_6_-_lesson_7_-_loops_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Hackathon Part 1",
+        "resource.key": "csp_bingo_cards_-_unit_six"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Hackathon Part 1",
+        "resource.key": "csp_bingo_generator"
       }
     },
     {
@@ -6060,6 +6191,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Traversals Make",
+        "resource.key": "customize_make_lessons_how-to-guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Traversals Practice",
         "resource.key": "csp_unit_6_-_lesson_11_-_traversals_practice"
       }
@@ -6119,10 +6256,120 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "data_abstraction",
+      "word": "Data Abstraction",
+      "definition": "manage complexity in programs by giving a collection of data a name without referencing the specific details of the representation",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_abstraction"
+      }
+    },
+    {
+      "key": "element",
+      "word": "Element",
+      "definition": "an individual value in a list that is assigned a unique index",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "element"
+      }
+    },
+    {
+      "key": "index",
+      "word": "Index",
+      "definition": " a common method for referencing the elements in a list or string using numbers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "index"
+      }
+    },
+    {
+      "key": "infinite_loop",
+      "word": "Infinite Loop",
+      "definition": "occurs when the ending condition will never evaluate to true",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "infinite_loop"
+      }
+    },
+    {
+      "key": "iteration",
+      "word": "Iteration",
+      "definition": "a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "iteration"
+      }
+    },
+    {
+      "key": "list",
+      "word": "List",
+      "definition": "an ordered collection of elements",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "list"
+      }
+    },
+    {
+      "key": "traversal",
+      "word": "Traversal",
+      "definition": "the process of accessing each item in a list one at a time",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "traversal"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "vocabulary.key": "data_abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "vocabulary.key": "element"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "vocabulary.key": "index"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "vocabulary.key": "list"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "vocabulary.key": "infinite_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "vocabulary.key": "iteration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
+        "vocabulary.key": "traversal"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -7091,6 +7338,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -16,6 +16,7 @@ style_min: true
 =inline_css 'homepage.css'
 =inline_css '/generated/hoc-banner.css'
 =inline_css '/generated/banners-curriculum-launch-2023.css'
+=inline_css '/generated/banners-ai-pl-launch-2023.css'
 
 - cookie_key = environment_specific_cookie_name '_user_type'
 - user_type = request.cookies[cookie_key]
@@ -25,7 +26,6 @@ style_min: true
 
 #homepage.supreme-container
   = view :homepage_hero
-  = view :curriculum_launch_skinny_banner
 
   - if request.language == "en"
     = view :curriculum_banner
@@ -35,6 +35,7 @@ style_min: true
     = view :homepage_below_hero_announcement
 
   = view :homepage_tenth_anniversary
+  = view :curriculum_launch_skinny_banner
   = view :homepage_sections
   = view :homepage_gallery
   = view :homepage_supporters

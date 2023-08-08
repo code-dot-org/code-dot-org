@@ -35,8 +35,26 @@
         "381b89ab-336f-41cd-b755-78142a1f1f90": {
           "description": "Përmirëso kodin ekzistues duke gjetur zona të përsëritjes dhe duke i zhvendosur ato në struktura e loops"
         },
+        "632bd918-c124-4f4c-892e-980cdc07b3bf": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "ea6a44e1-0175-4ecc-a257-4489b703c063": {
+          "description": "Zbërthe një sekuencë të gjatë udhëzimesh në sekuencën më të vogël të mundshme të përsëritshme."
+        },
+        "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
+          "description": "Numëro sa herë duhet të përsëritet një veprim dhe prezantoje atë si një loop."
+        },
+        "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
+          "description": "Zbërthe një formë në sekuencën e saj më të madhe të përsëritshme."
+        },
+        "66267233-8532-4f63-aea5-3a214dac119a": {
+          "description": "Krijo një program që vizaton forma komplekse duke përsëritur sekuenca të thjeshta."
+        },
         "106c5668-bbc0-404b-8cb5-8ff2bd66eeef": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
+        },
+        "b366b41e-9396-4c1b-9d35-164052448c1c": {
+          "description": "Krijo një histori të animuar, interaktive duke përdorur sekuencën dhe event-handlers."
         },
         "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
           "description": "Ndani një objekt krijues me studentët e tjerë."
@@ -53,8 +71,35 @@
         "4576e06e-56f1-4e32-a81d-7bbfea125273": {
           "description": "Përktheni lëvizjet në një seri komandash."
         },
+        "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
+          "description": "Zbërthe një sekuencë të gjatë udhëzimesh në sekuencën më të vogël të mundshme të përsëritshme."
+        },
+        "8293f536-510e-44a0-880b-397b3f97deeb": {
+          "description": "Krijo një program për një detyrë të caktuar e cila hap një loops me sekuencë komandash."
+        },
+        "cb89ffb0-ef91-48ea-a77a-90e59e45c73e": {
+          "description": "Përdor një kombinim të komandave sekuencale dhe të përsëritura (loops) për të arritur në fund të një labirinti."
+        },
+        "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "b46842b6-02c4-4fd5-abff-6180d77a5c55": {
+          "description": "Zbërthe një sekuencë të gjatë udhëzimesh në sekuencën më të vogël të mundshme të përsëritshme."
+        },
+        "f7153703-ec15-4ce5-943e-02e2f2ebcfef": {
+          "description": "Numëro sa herë duhet të përsëritet një veprim dhe prezantoje atë si një loop."
+        },
+        "8b2f225a-f9d2-4ac4-9adf-bc978b347f34": {
+          "description": "Zbërthe një formë në sekuencën e saj më të madhe të përsëritshme."
+        },
+        "61329a99-1c0a-414f-9694-78f7f9c81372": {
+          "description": "Krijo një program që vizaton forma komplekse duke përsëritur sekuenca të thjeshta."
+        },
         "a1e2ab93-1f36-45df-b7f2-d936689e195c": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
           "description": "Ndani një objekt krijues me studentët e tjerë."
@@ -71,6 +116,15 @@
         "d47b51d2-9114-4dfd-ad21-810573d85543": {
           "description": "Zbërtheni format komplekse në pjesë të thjeshta."
         },
+        "46288097-dbab-437f-897c-4e14352ae388": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "8e76410f-b4db-446b-88c0-00013d9c05bd": {
+          "description": "Përdor një kombinim të komandave sekuencale dhe të përsëritura (loops) për të arritur në fund të një labirinti."
+        },
+        "bf154cd9-0914-43c2-b895-030de92d1427": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
         "6c461f48-eb24-4fee-94f3-eb987d8f4fe9": {
           "description": "Përputhni blloqet me mbajtësin e duhur të eventeve."
         },
@@ -78,19 +132,19 @@
           "description": "Ndani një objekt krijues me studentët e tjerë."
         },
         "c0757733-5e14-4797-9615-11b61d8d490f": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "Kapërceni pengesat të tilla si kufizimet kohore ose bugs."
         },
         "3b4a2468-e182-4060-861f-2a922730445b": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
           "description": "Ndani një objekt krijues me studentët e tjerë."
         },
         "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
           "description": "Zhvilloni programe që u përgjigjen ngjarjeve në kohë"
@@ -107,14 +161,32 @@
         "982d25cd-d5ff-491b-8505-be2606ba0a5e": {
           "description": "Përmirëso kodin ekzistues duke gjetur zona të përsëritjes dhe duke i zhvendosur ato në struktura e loops"
         },
+        "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "673ddc56-5217-45a9-919c-b42024f7de2b": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
         "92ad0a98-e2e5-4104-8a9f-1dee9409f300": {
           "description": "Kapërceni pengesat të tilla si kufizimet kohore ose bugs."
         },
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
+        },
+        "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
+          "description": "Numëro sa herë duhet të përsëritet një veprim dhe prezantoje atë si një loop."
         },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Deklaron një variabël"
+        },
+        "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
         },
         "f748f186-f152-468e-9f51-48bee23c44db": {
           "description": "Diskutoni rolin që luan inteligjenca artificiale në jetën e tyre."
@@ -143,6 +215,18 @@
         "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2": {
           "description": "Krijo animacione valle me kodin"
         },
+        "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656": {
+          "description": "Përdor një kombinim të komandave sekuencale dhe të përsëritura (loops) për të arritur në fund të një labirinti."
+        },
+        "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "Kapërceni pengesat të tilla si kufizimet kohore ose bugs."
         },
@@ -170,14 +254,41 @@
         "b6f41a7c-0967-4986-b7b6-910819b28396": {
           "description": "Përmirëso kodin ekzistues duke gjetur zona të përsëritjes dhe duke i zhvendosur ato në struktura e loops"
         },
+        "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
+          "description": "Zbërthe një sekuencë të gjatë udhëzimesh në sekuencën më të vogël të mundshme të përsëritshme."
+        },
+        "2ebb5323-fe4a-4611-9fbf-01444afb8720": {
+          "description": "Numëro sa herë duhet të përsëritet një veprim dhe prezantoje atë si një loop."
+        },
+        "6aac3c12-4427-43d1-877c-727d0665ab49": {
+          "description": "Zbërthe një formë në sekuencën e saj më të madhe të përsëritshme."
+        },
+        "6dbab2fb-7a17-4269-885e-84768be03a1f": {
+          "description": "Krijo një program që vizaton forma komplekse duke përsëritur sekuenca të thjeshta."
+        },
+        "57f261f3-7603-47fc-b704-9d99a4c4c00a": {
+          "description": "Numëro sa herë duhet të përsëritet një veprim dhe prezantoje atë si një loop."
+        },
+        "066b586a-0b6b-4a9f-875d-ce788d7f2197": {
+          "description": "Zbërthe një formë në sekuencën e saj më të madhe të përsëritshme."
+        },
+        "dc83123d-d493-40aa-a543-9daa1421c2c8": {
+          "description": "Krijo një program që vizaton forma komplekse duke përsëritur sekuenca të thjeshta."
+        },
         "15115c43-46c8-4ab4-93e4-947e2fd42703": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
+        },
+        "2fa04500-f1d4-4924-aa39-70292711d432": {
+          "description": "Krijo një histori të animuar, interaktive duke përdorur sekuencën dhe event-handlers."
         },
         "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
           "description": "Ndani një objekt krijues me studentët e tjerë."
         },
         "8295b4b6-f9ac-4b43-b271-b7bd9e6829f3": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Ndani një objekt krijues me studentët e tjerë."
@@ -266,20 +377,35 @@
         "eb0c126b-1a28-4a64-81a8-84713ba12efb": {
           "description": "Numëro sa herë duhet të përsëritet një veprim dhe përfaqësojeni atë si një loop."
         },
+        "11ae4f6e-9a22-4fe7-b476-d0251076f65b": {
+          "description": "Praktiko dallimin veprimeve paraprake dhe atyre të drejtuara nga evenet."
+        },
+        "699d524a-9ba6-430d-8ab4-fdce1b832b6f": {
+          "description": "Njih veprimet e mësimëdhënësve si sinjale për të filluar urdhrat."
+        },
+        "805cf72f-fb59-4003-b6b5-1879ced802b9": {
+          "description": "Përsërit komandat e dhëna nga instruktori."
+        },
+        "946d56ae-8a81-476c-93ab-6d5eff1f9633": {
+          "description": "Krijo një histori të animuar, interaktive duke përdorur sekuencën dhe event-handlers."
+        },
         "ab8e0f55-bcb7-4af5-813f-df7d9629e21f": {
-          "description": "Ndani një objekt krijues me studentët e tjerë."
+          "description": "Ndani një objekt krijues me nxënësit e tjerë."
         },
         "dddf548b-2b97-45fd-ad62-f4c633d3647d": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "12be98ac-b495-4379-94d1-6cdd7395776a": {
           "description": "Kapërceni pengesat të tilla si kufizimet kohore ose bugs."
+        },
+        "6619f367-009a-49ca-9d78-582a2ff9ad5e": {
+          "description": "Apliko konceptet e shkencave kompjuterike në një projekt të hapur."
         },
         "4bf451c9-a1ce-4e40-95a6-10c911a081bf": {
           "description": "Mësoni se informacioni që ata shpërndajnë në internet lë një gjurmë digjitale."
         },
         "7cc37ede-4e83-4881-9213-1746313de397": {
-          "description": "Eksplorojnë se çfarë informacioni është në rregull të shpërndahet në internet. "
+          "description": "Eksploro se çfarë informacioni është në rregull për t'u shpërndarë në internet."
         },
         "1fb2f469-060b-4caf-ab67-28747acc0f00": {
           "description": "Përkthejë një listë hapash në një sërë veprimesh fizike"
@@ -288,7 +414,7 @@
           "description": "Përcaktojë një listë hapash (algoritme) për të çuar një mik nga pozicioni fillestar në qëllimin e tij"
         },
         "ab239024-3c6d-4db1-8c7c-2572c316dc75": {
-          "description": "Identifikojë dhe rregullojë gabimet në ekzekutimin e një algoritmi"
+          "description": "Identifiko dhe rregullo gabimet në ekzekutimin e një algoritmi"
         },
         "9c04f7e1-5859-4e61-9ae0-630df254a9aa": {
           "description": "Modelimi i sjelljeve të duhura të laboratorit"
@@ -320,14 +446,65 @@
         "ad9095b2-5de7-41af-89b9-aac0f2fd0726": {
           "description": "Përsëritin veprimet e iniciuara nga instruktori."
         },
+        "2b7ac17e-7e3a-44b5-8c46-e28eec5af112": {
+          "description": "Zbërthe një sekuencë të gjatë udhëzimesh në sekuencën më të vogël të mundshme të përsëritshme."
+        },
+        "4d6affaa-f8b0-4dbc-a436-4dccf8c57fc1": {
+          "description": "Përdor një kombinim të komandave sekuencale dhe të përsëritura (loops) për të arritur në fund të një labirinti."
+        },
+        "be1a4163-770d-4fbd-85a1-4c18198d5c94": {
+          "description": "Krijo një program për një detyrë të caktuar e cila hap një loops me sekuencë komandash."
+        },
+        "dbb376e1-41ba-4f5f-8125-30a2de24cead": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "36786d0a-ce44-48d7-b557-a7e44c32c28d": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "6baba9ab-130e-4a58-bf30-7cee60bacb18": {
+          "description": "Zbërthe një sekuencë të gjatë udhëzimesh në sekuencën më të vogël të mundshme të përsëritshme."
+        },
+        "54ae27f7-71b5-41ce-a67a-61d15e520bc3": {
+          "description": "Numëro sa herë duhet të përsëritet një veprim dhe prezantoje atë si një loop."
+        },
+        "5f8621d2-481c-487d-a2e1-90d7fd15b929": {
+          "description": "Krijo një program që vizaton forma komplekse duke përsëritur sekuenca të thjeshta."
+        },
+        "b85981bf-b2e5-49f6-bf08-348f8d16ba2b": {
+          "description": "Zbërthe një formë në sekuencën e saj më të madhe të përsëritshme."
+        },
+        "28c09bb0-c9f4-44ab-ba0a-8c9cdb24e5f0": {
+          "description": "Rekomando teknologji për të tjerët bazuar në nevojat e tyre unike. "
+        },
+        "9e78b33b-39a6-4524-89e4-a26fdba11cb5": {
+          "description": "Aplikoni empati dhe kreativitet për të dizajnuar teknologji për të tjerët. "
+        },
+        "f854671c-b4c0-4bd7-8dd6-bf0094cd1733": {
+          "description": "Listo disa shembuj të ndryshëm të aplikacioneve për smartfonë."
+        },
+        "1275ac31-dcd9-49c5-92e2-68abd8aa9955": {
+          "description": "Përsërit komandat e dhëna nga instruktori."
+        },
+        "4dbb2bcf-bd83-4c90-a077-6261a6b2607c": {
+          "description": "Praktiko dallimin veprimeve paraprake dhe atyre të drejtuara nga evenet."
+        },
+        "ef1a9273-ff0e-4134-8456-9762728bed55": {
+          "description": "Njih veprimet e mësimëdhënësve si sinjale për të filluar urdhrat."
+        },
         "2583489b-c21a-415d-bd1f-c0fa1eca9ef0": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "a64618b3-e151-46ce-9670-cada1927a2db": {
           "description": "Ndani një objekt krijues me studentët e tjerë."
         },
         "3aa63e80-f3d8-4043-811d-5b275f168499": {
           "description": "Kapërceni pengesat të tilla si kufizimet kohore ose bugs."
+        },
+        "33b55b11-ca81-406f-be39-265e8f33d09d": {
+          "description": "Identifikojnë mënyrat për t'iu përgjigjur fjalëve me kuptim në internet, duke përdorur S-T-O-P."
+        },
+        "ce3ba860-7753-4c2c-a161-64d59903674a": {
+          "description": "Kuptojnë se si mund të duket padrejtësia në internet dhe si mund t'i bëjë njerëzit të ndihen."
         },
         "87841dc9-5cfa-4c68-9c56-9ca76b2668f8": {
           "description": "Kushtojini vëmendje saktësisë kur krijoni udhëzime"
@@ -353,6 +530,15 @@
         "e0ada5e4-a180-4691-9bd3-8b83763f9dd2": {
           "description": "Zbërtheni format komplekse në pjesë të thjeshta."
         },
+        "00417e59-53f6-4f10-9e17-ae69f9e5db7b": {
+          "description": "Përdor një kombinim të komandave sekuencale dhe të përsëritura (loops) për të arritur në fund të një labirinti."
+        },
+        "be258fd0-4790-440a-99ef-bb20ce2d3c8b": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "dda209ff-ec81-4914-93c0-2716153efce4": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
         "3070da76-01ca-461e-a251-7a0abd74ec8d": {
           "description": "Përsëritni komandat e dhëna nga instruktori."
         },
@@ -366,7 +552,7 @@
           "description": "Krijo një lojë duke përdorur mbajtësin e eventeve."
         },
         "36275ea8-84ac-4220-87ca-53d1b5eaac43": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "06e84ef1-68ef-4bce-adfe-fcd8c7e010c7": {
           "description": "Kapërceni pengesat të tilla si kufizimet kohore ose bugs."
@@ -374,14 +560,20 @@
         "5feb276e-2e95-4bd6-87b8-7bb9075d0d0a": {
           "description": "Përdorni një dizajn të planifikuar si një plan për krijimin."
         },
+        "1033b638-05a5-40c2-8e29-1efe1b5f3451": {
+          "description": "Përcaktojnë termin \"fjalëkalim\" dhe përshkruajnë qëllimin e një fjalëkalimi."
+        },
+        "c14cd5a0-312f-491c-aa00-73b82dd8e628": {
+          "description": "Praktikojnë krijimin e një fjalëkalimi të fortë dhe që mbahet lehtë në mend."
+        },
         "a7fe08e4-1943-4bbc-a18a-e10bd0942173": {
           "description": "Ndani një objekt krijues me studentët e tjerë."
         },
         "d2a9a010-d6c6-4ce1-9f70-cb5ceba6af8f": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "04cbf3cd-2cb7-451b-b4ed-1ccd70594cc5": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "4ed9cede-cc9a-409d-b433-781185b454b6": {
           "description": "Krijo animacione valle me kodin"
@@ -398,8 +590,20 @@
         "fcc0109d-8a25-4194-8a5c-69985bac106c": {
           "description": "Përmirëso kodin ekzistues duke gjetur zona të përsëritjes dhe duke i zhvendosur ato në struktura e loops"
         },
+        "f9dc8f2c-6f5a-4854-b0bb-296d0ca89233": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "f466b8aa-18bf-460d-9780-1abcb7f32589": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
         "bbd1a283-a817-4fd2-9335-651b698f63d2": {
           "description": "Kapërceni pengesat të tilla si kufizimet kohore ose bugs."
+        },
+        "62ffafea-c5f4-4942-b283-9462c41d52cd": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "3fac17b3-f27c-4f5c-98f1-a43e3e18d4e0": {
+          "description": "Numëro sa herë duhet të përsëritet një veprim dhe prezantoje atë si një loop."
         },
         "8805bb75-452c-4778-9cd2-6df020a13216": {
           "description": "Deklaron një variabël"
@@ -431,6 +635,18 @@
         "f6a45c87-6f01-4df0-8020-0a9be77f0d10": {
           "description": "Zhvilloni programe që i përgjigjen të dhënave të përdoruesit"
         },
+        "1d64ca6b-c3c3-41c5-b923-280bf46dbdc9": {
+          "description": "Përdor një kombinim të komandave sekuencale dhe të përsëritura (loops) për të arritur në fund të një labirinti."
+        },
+        "d1a8cfa4-2a01-4cd1-bf6b-7bdb85dfbba2": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "19f2a21b-7cd6-49c1-b058-a71afadfbf0f": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "a3d9c13d-e5d1-4c96-8605-b6c6968e446a": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
         "546d4a38-5abb-402c-9e61-bef13a71001d": {
           "description": "Kapërceni pengesat të tilla si kufizimet kohore ose bugs."
         },
@@ -458,8 +674,35 @@
         "65939b9f-ba0f-4834-8f54-24419c9391e5": {
           "description": "Përmirëso kodin ekzistues duke gjetur zona të përsëritjes dhe duke i zhvendosur ato në struktura e loops"
         },
+        "3a06cce8-584a-431c-8cca-05ad9b0df32d": {
+          "description": "Identifiko përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
+        },
+        "d7a5432f-6854-483b-8a5b-fcb1844dd603": {
+          "description": "Zbërthe një sekuencë të gjatë udhëzimesh në sekuencën më të vogël të mundshme të përsëritshme."
+        },
+        "356a5953-6822-4156-b54f-e5f2095156e1": {
+          "description": "Numëro sa herë duhet të përsëritet një veprim dhe prezantoje atë si një loop."
+        },
+        "e8114e57-1426-4241-9cbb-dc57a3edadab": {
+          "description": "Zbërthe një formë në sekuencën e saj më të madhe të përsëritshme."
+        },
+        "fcdb6a79-7043-4f4d-b4fe-04beeb339fea": {
+          "description": "Krijo një program që vizaton forma komplekse duke përsëritur sekuenca të thjeshta."
+        },
+        "416213df-e386-420c-aafe-40e05d790f59": {
+          "description": "Krijo një program që vizaton forma komplekse duke përsëritur sekuenca të thjeshta."
+        },
+        "448fabd8-2154-4840-9807-b0b79bab8c96": {
+          "description": "Numëro sa herë duhet të përsëritet një veprim dhe prezantoje atë si një loop."
+        },
+        "f2e5268e-cbce-4db0-abb3-e2b6a65684d8": {
+          "description": "Zbërthe një formë në sekuencën e saj më të madhe të përsëritshme."
+        },
         "35be46ad-58dd-4072-97a4-09a55c75e329": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
+        },
+        "37987315-bfd5-46fd-9faa-9e480ef816b2": {
+          "description": "Krijo një histori të animuar, interaktive duke përdorur sekuencën dhe event-handlers."
         },
         "fb6ff331-603c-4310-83e8-77e3e606edfe": {
           "description": "Ndani një objekt krijues me studentët e tjerë."
@@ -468,7 +711,7 @@
           "description": "Ndani një objekt krijues me studentët e tjerë."
         },
         "11e630e5-0551-49c9-9894-2db312a9f1df": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "50b1fb31-4471-433d-a5f1-74e38886d49f": {
           "description": "Ndërtoni dhe shpërndani aplikacionet e tyre në App Lab duke përdorur veçori si butonat, teksti, imazhet, zëri dhe ekranet."
@@ -492,7 +735,7 @@
           "description": "Zbërtheni format komplekse në pjesë të thjeshta."
         },
         "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
           "description": "Ndani një objekt krijues me studentët e tjerë."
@@ -672,7 +915,7 @@
           "description": "Identifikoni vende për të shkuar për të vazhduar mësimin e shkencave kompjuterike dhe kodimit"
         },
         "93e23857-027c-4711-9033-a41de9430672": {
-          "description": "Identifikoni veprimet që lidhen me ngjarjet hyrëse."
+          "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
           "description": "Ndani një objekt krijues me studentët e tjerë."

@@ -163,6 +163,7 @@ sq:
           description_short: Krijo një histori ose një lojë me laboratorin e Gumball!
           student_description: Krijo një histori ose një lojë me laboratorin e Gumball!
         starwars:
+          title: 'Lufta e yjeve: Ndërtimi i një Galaxy me kod (JavaScript)'
           description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
           description_short: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
           student_description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
@@ -1383,6 +1384,7 @@ sq:
               display_name: të dhëna
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
+          title: Kursi C (2022)
         coursed-2022:
           lesson_groups:
             lessonGroup-6:
@@ -1395,6 +1397,7 @@ sq:
               display_name: Kushtet
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
+          title: Kursi D (2022)
         coursee-2022:
           lesson_groups:
             csf_digcit:
@@ -1407,6 +1410,7 @@ sq:
               display_name: Kushtet
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
+          title: Kursi E (2022)
         coursef-2022:
           lesson_groups:
             lessonGroup-7:
@@ -1712,11 +1716,16 @@ sq:
             lessonGroup-4:
               display_name: cikle
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: të dhëna
           lesson_groups:
             lessonGroup-2:
               display_name: Shtetësi Dixhitale
             lessonGroup-4:
               display_name: cikle
+            lessonGroup-6:
+              display_name: të dhëna
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:

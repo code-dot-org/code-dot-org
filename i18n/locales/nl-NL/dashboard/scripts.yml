@@ -2486,6 +2486,10 @@ nl:
           title: 'Hallo World: Space'
         hello-world-soccer-2022:
           title: 'Hello World: Voetbal'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Vragenlijst
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2670,10 +2674,18 @@ nl:
               display_name: Hoofdstuk 2
             lessonGroup-5:
               display_name: Vragenlijst
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-creativity4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Vragenlijst
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2682,6 +2694,10 @@ nl:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -2696,14 +2712,26 @@ nl:
               display_name: Hoofdstuk 1
             lessonGroup-4:
               display_name: Hoofdstuk 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-design-with-purpose4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-coding4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-impact-in-society3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2834,14 +2862,18 @@ nl:
               display_name: Lussen
           description_audience: 'Leeftijden: 4-7'
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Data
           lesson_groups:
             lessonGroup-2:
               display_name: Digitaal Burgerschap
             lessonGroup-4:
               display_name: Lussen
+            lessonGroup-6:
+              display_name: Data
           description_audience: 'Leeftijden: 4-7'
           description_short: Een inleiding tot informatica voor pre-readers.
-          student_description: Leer de basisprincipes van informatica en internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen.
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2851,7 +2883,6 @@ nl:
             lessonGroup-6:
               display_name: Gebeurtenissen
           description_audience: 'Leeftijden: 5-8'
-          student_description: Leer de basisprincipes van informatica en internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen.
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2862,7 +2893,6 @@ nl:
               display_name: Gebeurtenissen
             lessonGroup-6:
               display_name: Data
-          student_description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen!
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

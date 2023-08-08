@@ -514,30 +514,20 @@ redshift_password:
 
 devinternal_db_writer: !Secret
 
-# Temporarily set in locals.yml until Stack Secrets are ready to deploy.
-db_cluster_id:
-
-# FOLLOW ON: Transition from the above naming convention to the `db_endpoint_[type]` convention below.
-db_endpoint_writer: PLACEHOLDER
-db_endpoint_proxy_writer: PLACEHOLDER
-db_endpoint_proxy_reader: PLACEHOLDER
-db_endpoint_proxy_reporting: PLACEHOLDER
+# Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
+db_cluster_id: !StackSecret
+db_endpoint_writer: !StackSecret
+db_endpoint_proxy_writer: !StackSecret
+db_endpoint_proxy_reader: !StackSecret
+db_endpoint_proxy_reporting: !StackSecret
 
 # Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
-db_credential_admin: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
-db_admin_user: master
-db_admin_password: !Secret
-db_credential_writer: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
-db_writer_user: application-writer
-db_writer_password: !Secret
-db_credential_reader: {"username":"PLACEHOLDER", "password":"PLACEHOLDER"}
-db_reader_user: readonly
-db_reader_password: !Secret
+db_credential_admin: !StackSecret
+db_credential_writer: !StackSecret
+db_credential_reader: !StackSecret
 
-# Legacy database configuration settings contain a complete URI (username, password, servername, and database).
-db_admin: !Secret
-reporting_db_admin:
+# mysql:// URI (including credentials) to connect to ProxySQL administrative interface (which emulates a MySQL server)
 db_proxy_admin:
 
 db_writer: !Secret
@@ -592,3 +582,14 @@ cdo_amplitude_api_key:
 
 # API Key for doublethedonation.com
 ddconf_api_key: !Secret
+
+# JSON Web Key Set and private key data
+jwks_data: <%=File.read("#{File.expand_path(File.dirname(__FILE__))}/dashboard/public/oauth/jwks.json")%>
+jwk_private_key_data: !Secret
+
+# EC2 Metadata endpoint
+ec2_instance_id_endpoint: 'http://169.254.169.254/latest/meta-data/instance-id'
+
+# Credentials for OpenAI API
+openai_chat_completion_api_key: !Secret
+openai_chat_completion_org_id: !Secret

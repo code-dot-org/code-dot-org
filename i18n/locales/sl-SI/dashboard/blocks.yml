@@ -5,19 +5,11 @@ sl:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': srednje
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': srednje
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -454,9 +446,7 @@ sl:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': srednje
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -502,10 +492,7 @@ sl:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': srednje
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -518,10 +505,7 @@ sl:
           PROPERTY:
             '"scale"': velikost
           SIZE:
-            '25': extra small
-            '50': small
             '75': srednje
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -738,16 +722,10 @@ sl:
         options:
           PORTION:
             '1': vse
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': vse
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:

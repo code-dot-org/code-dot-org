@@ -600,6 +600,9 @@ Dashboard::Application.routes.draw do
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
     post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
 
+    # OAuth endpoints
+    get '/oauth/jwks', to: 'oauth_jwks#jwks'
+
     get '/notes/:key', to: 'notes#index'
 
     resources :zendesk_session, only: [:index]
@@ -1061,6 +1064,8 @@ Dashboard::Application.routes.draw do
     post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'
 
     get '/get_token', to: 'authenticity_token#get_token'
+
+    post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:

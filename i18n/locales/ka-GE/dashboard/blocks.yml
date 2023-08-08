@@ -7,19 +7,11 @@ ka:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': საშუალო
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': საშუალო
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -223,37 +215,8 @@ ka:
             '7': '7'
             '8': '8'
             '9': '9'
-            '10': '10'
-            '11': '11'
             '12': '12'
-            '13': '13'
-            '14': '14'
             '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': უცხოპლანეტელები
             '"MOOSE"': Moose
@@ -287,9 +250,7 @@ ka:
           SPEED:
             '1': ჩვეულებრივი
             '2': ჩქარი
-            '4': very fast
             '0.5': ნელი
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
@@ -300,9 +261,7 @@ ka:
           SPEED:
             '1': ჩვეულებრივი
             '2': ჩქარი
-            '4': very fast
             '0.5': ნელი
-            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -514,8 +473,6 @@ ka:
         options:
           INPUT1:
             '1': ლიმონის წვენი
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -525,8 +482,6 @@ ka:
         options:
           INPUT1:
             '1': ლიმონის წვენი
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: კომუნიკაცია {VAR1} {SPRITE1COSTUME}-თან
       FunctionBlocks_makeManipulative2:
@@ -584,7 +539,6 @@ ka:
       gamelab_int10:
         options:
           VALUE:
-            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -593,7 +547,6 @@ ka:
             '7': '7'
             '8': '8'
             '9': '9'
-            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -692,9 +645,7 @@ ka:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': საშუალო
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -793,10 +744,7 @@ ka:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': საშუალო
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -811,10 +759,7 @@ ka:
           PROPERTY:
             '"scale"': ზომა
           SIZE:
-            '25': extra small
-            '50': small
             '75': საშუალო
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -824,11 +769,9 @@ ka:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': ნელი
             '5': ჩვეულებრივი
             '7': ჩქარი
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -883,11 +826,8 @@ ka:
       gamelab_withPercentChanceDropdown:
         options:
           NUM:
-            '10': very low
             '25': დაბალი
-            '50': 50/50
             '75': მაღალი
-            '90': very high
       Mikelab_addBehaviorSimple:
         text: სპრაიტი {SPRITE} იწყება {BEHAVIOR}
       Mikelab_changePropBy:
@@ -1064,14 +1004,10 @@ ka:
         options:
           INPUT1:
             '1': ლიმონის წვენი
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': ლიმონის წვენი
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1166,8 +1102,6 @@ ka:
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
-            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -1176,11 +1110,7 @@ ka:
             '7': '7'
             '8': '8'
             '9': '9'
-            '10': '10'
-            '11': '11'
             '12': '12'
-            '13': '13'
-            '14': '14'
             '15': '15'
       RyanLab_moveForward:
         text: წინ გადაადგილება
@@ -1208,16 +1138,10 @@ ka:
         options:
           PORTION:
             '1': ყველა
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': ყველა
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:
@@ -1299,8 +1223,6 @@ ka:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
-            '1': '1'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -1309,7 +1231,6 @@ ka:
             '7': '7'
             '8': '8'
             '9': '9'
-            '10': '10'
       storylab_setForegroundEffect2:
         options:
           EFFECT:

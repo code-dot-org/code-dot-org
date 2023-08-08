@@ -1508,6 +1508,7 @@
   header_stats: "Göstəricilər"
   header_help_us: "Bizə kömək edin"
   header_about: "Haqqımızda"
+  header_incubator: "İnkubator"
   header_teacher_community: "Müəllim icması"
   header_help_support: 'Kömək və texniki dəstək '
   header_report_bug: "Problemi bildirin"
@@ -1622,7 +1623,7 @@
   hoc2018_mc_download_adventurer: "Minecraft Macəranın oflayn versiyasını yüklə"
   hoc2018_mc_educators: "Təlimçilər üçün"
   hoc2018_mc_educators_box1_title: "Minecraft ilə kod"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition Minecraft-da standartlara uyğunlaşdırılmış kurikulum, təlim və kodlaşdırma təmin edir.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Education Edition Minecraft-da standartlara uyğunlaşdırılmış kurikulum, təlim və kodlaşdırma təmin edir."
   hoc2018_mc_educators_box1_button: "Başlayın"
   hoc2018_mc_educators_box2_title: "Fasilitator Bələdçisini yükləyin"
   hoc2018_mc_educators_box2_desc: "Bu alət dəsti sizə Kod Saatı keçirməyə və tələbələrinizi kompüter elminə cəlb etməyə kömək edəcək."
@@ -1730,7 +1731,7 @@
   hoc2018_mc_with_microsoft: "Tərəfdaşlarımız: "
   hoc2018_mc_thank_microsoft: "Hər bir uşağın 21-ci əsrdə kompüter elmini öyrənmək və uğur qazanmaq üçün bacarıqlara sahib olmasını təmin etmək üçün bizim vizyonumuzu və missiyamızı dəstəklədiyi üçün Microsoft-a təşəkkür edirik."
   hoc2019_mc_mee_title: "Yaxşılıq üçün Minecraft AI"
-  hoc2019_mc_mee_description1: 'Yeni Minecraft Hour of Code təlimatı indi Minecraft-da mövcuddur: Windows, Mac və iPad üçün Təhsil Nəşri. Kodlaşdırmanın əsaslarını öyrənin və tələbələrinizlə AI-ni araşdırın!'
+  hoc2019_mc_mee_description1: "Yeni Minecraft Hour of Code təlimatı indi Minecraft-da mövcuddur: Windows, Mac və iPad üçün Təhsil Nəşri. Kodlaşdırmanın əsaslarını öyrənin və tələbələrinizlə AI-ni araşdırın!"
   hoc2019_mc_mee_description2: "Dərs planı, videolar, informatika kurikulumu və müəllim təlimləri daxil olmaqla pulsuz resurslara daxil olun."
   hoc2019_mc_more_coding_resources: "Daha kodlaşdırma resursları"
   hoc2019_dance_previous_versions: "Dance Party-in əvvəlki versiyasını axtarırsınız?\n2018-ci ildən [1-ci hissə](%{dance_2018_link}) və [2-ci hissə](%{dance_extras_2018_link}) başlamaq üçün bura klikləyin."
@@ -1743,18 +1744,18 @@
   page_not_available_description: "Üzr istəyirik, sorğu etdiyiniz səhifə artıq bu ünvanda mövcud deyil. Hələ də girişə ehtiyacınız varsa, [support@code.org](%{support_email_link}) e-məktub göndərin."
   page_not_available_button: "İlk səhifəyə qayıt"
   hoc2020_mc_available_code_org: "code.org-da mövcuddur"
-  hoc2020_mc_available_mee: 'Minecraft-da Mpvcuddur: Təhsil Nəşri'
+  hoc2020_mc_available_mee: "Minecraft-da Mpvcuddur: Təhsil Nəşri"
   hoc2020_mc_mee_title: "Minecraft iki kəndin nağılı"
-  hoc2020_mc_mee_description: 'Yeni Minecraft Hour of Code məşğələsi artıq mövcuddur: Windows, Mac, Chromebook və Ipad üçün Education Eddition. Tələbələrinlə kodlaşdırmanın əsaslarını öyrən və müxtəlifliyi kəşf et. Ödənişsiz mənbələrə- dərs planı, videolar, kompüter elmləri programı, ədalətlilik dərsləri, və müəllim təlimlərinə giriş et'
+  hoc2020_mc_mee_description: "Yeni Minecraft Hour of Code məşğələsi artıq mövcuddur: Windows, Mac, Chromebook və Ipad üçün Education Eddition. Tələbələrinlə kodlaşdırmanın əsaslarını öyrən və müxtəlifliyi kəşf et. Ödənişsiz mənbələrə- dərs planı, videolar, kompüter elmləri programı, ədalətlilik dərsləri, və müəllim təlimlərinə giriş et"
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Keçmişə səyahət et və kodlaşdırmanı öyrən! Yeni Minecraft Hour of Code məşğələsi artıq mövcuddur: Windows, Mac, Chromebook və Ipad üçün Education Eddition. Ödənişsiz tədris mənbələri, təlimlərlə və videolarla başla.'
+  hoc2021_mc_mee_description: "Keçmişə səyahət et və kodlaşdırmanı öyrən! Yeni Minecraft Hour of Code məşğələsi artıq mövcuddur: Windows, Mac, Chromebook və Ipad üçün Education Eddition. Ödənişsiz tədris mənbələri, təlimlərlə və videolarla başla."
   hoc2021_mc_mee_villages_title: "2 kəndin hekayəsi"
-  hoc2021_mc_mee_villages_description: 'Tələbələrinlə Minecraft''da kodlaşdırmanın əsaslarını öyrən: Təhsil Buraxılışı'
+  hoc2021_mc_mee_villages_description: "Tələbələrinlə Minecraft'da kodlaşdırmanın əsaslarını öyrən: Təhsil Buraxılışı"
   hoc2021_mc_mee_ai_title: "Yaxşılıq üçün AI"
-  hoc2021_mc_mee_ai_description: 'Tələbələrinlə Al''ı kəşf et və kodlaşdırmanən əsaslarını öyrən: Education Eddition.'
+  hoc2021_mc_mee_ai_description: "Tələbələrinlə Al'ı kəşf et və kodlaşdırmanən əsaslarını öyrən: Education Eddition."
   hoc2022_mc_mee_title: "Minecraft Qurtuluş Əmlakı"
   hoc2022_mc_mee_description: 'Sübh tezdən sirli köşkdən qaçıb milyon zümrüd qazan! Yeni Minecraft Kod Saarı təlimatı hal-hazırda Minecraft: Education Edition-da Windows, Mac, Chromebook, Ipad və Mobile-da mövcuddur. Pulsuz tədris resursları, təlimlər və videolarla başlayın. '
-  hoc2022_mc_mee_timecraft_description: 'Minecraft: Education Edition adlı bu pulsuz kodlaşdırma dərsində gələcəyi xilas etmək üçün vaxtda geriyə səyahət edin.'
+  hoc2022_mc_mee_timecraft_description: "Minecraft: Education Edition adlı bu pulsuz kodlaşdırma dərsində gələcəyi xilas etmək üçün vaxtda geriyə səyahət edin."
   footer_powered_by_aws: "Amazon Veb Xidmətləri və “Powered by AWS” loqosu Amazon.com, Inc. və ya onun ABŞ və/və ya digər ölkələrdəki filiallarının ticarət nişanlarıdır."
   footer_built_on_github: "Microsoft tərəfindən GitHub-da qurulub"
   codebytes_skinny_banner_title: "7-11 dekabr CodeBytes canlı mini dərslərimizə qoşulun!"
@@ -1803,7 +1804,7 @@
   ai_zooniverse: "Zooniverse - Snapshot Mountain Zebra"
   ai_zooniverse_description: "Şəkillərdəki müxtəlif heyvanları müəyyən etməklə nəsli kəsilməkdə olan Cape Mountain Zebranın qorunmasına kömək edin."
   ai_audience: "İzləyici"
-  ai_minecraft_description: 'Dərs planı, videolar, informatika kurikulumu və müəllim təlimləri daxil olmaqla pulsuz resurslara daxil olun. (Minecraft: Təhsil Nəşri tələb olunur)'
+  ai_minecraft_description: "Dərs planı, videolar, informatika kurikulumu və müəllim təlimləri daxil olmaqla pulsuz resurslara daxil olun. (Minecraft: Təhsil Nəşri tələb olunur)"
   ai_k_12_audience: "K-12 (Oxumaq tələb olunur)"
   ai_microsoft_workshop: "Microsoft-dan pulsuz virtual seminarlar"
   ai_microsoft_workshop_description: "Pulsuz STEM və kodlaşdırma seminarları ilə maraq qığılcımı."

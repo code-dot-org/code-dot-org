@@ -1303,6 +1303,10 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
         csd1-dlp:
           lesson_groups:
             content:
@@ -2385,10 +2389,34 @@ el:
           description_short: 'Γράψτε το δικό σας παιχνίδι Flappy σε λιγότερο από 10
             λεπτά! '
           title: Κώδικας Flappy με Έρευνα
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Εισαγωγή στο App Lab
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2543,9 +2571,6 @@ el:
               display_name: Συμβάντα
             lessonGroup-7:
               display_name: Έργο Λήξη Μαθήματος
-          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
-            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
-            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2562,9 +2587,11 @@ el:
               display_name: Ψηφιακή υπηκοότητα
             lessonGroup-4:
               display_name: Βρόχοι
-          student_description: Μάθετε τα βασικά της επιστήμης της πληροφορικής και
-            της διαδικτυακής ασφάλειας. Στο τέλος του μαθήματος, δημιουργήστε το εξολοκλήρου
-            δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε.
+            lessonGroup-6:
+              display_name: Δεδομένα
+          lessons:
+            lesson-1:
+              name: Δεδομένα
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2575,11 +2602,6 @@ el:
               display_name: Συμβάντα
             lessonGroup-6:
               display_name: Δεδομένα
-          student_description: Δημιουργήστε προγράμματα με αλληλουχίες, κύβους βρόχων,
-            και γεγονότα. Μετατρέψτε τα αρχικά σας σε δυαδικούς αριθμούς, ερευνήστε
-            διαφορετικές τεχνικές επίλυσης προβλημάτων, και μάθετε πώς να απαντάτε
-            στον διαδικτυακό εκφοβισμό. Στο τέλος του μαθήματος, δημιουργήστε ένα
-            εξολοκλήρου δικό σας παιχνίδι ή ιστορία που μπορείτε να μοιραστείτε!
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3065,6 +3087,7 @@ el:
             δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           student_description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το
             δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
+          title: 'Πόλεμος των Άστρων: Κατασκευάζοντας έναν Γαλαξία με Κώδικα (JavaScript)'
         starwarsblocks:
           description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου
             Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.

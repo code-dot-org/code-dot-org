@@ -1867,11 +1867,16 @@ kn:
             lessonGroup-4:
               display_name: ಲೂಪ್‌ಗಳು
         nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: ಡೇಟಾ
           lesson_groups:
             lessonGroup-2:
               display_name: ಡಿಜಿಟಲ್ ಪೌರತ್ವ
             lessonGroup-4:
               display_name: ಲೂಪ್‌ಗಳು
+            lessonGroup-6:
+              display_name: ಡೇಟಾ
           description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:

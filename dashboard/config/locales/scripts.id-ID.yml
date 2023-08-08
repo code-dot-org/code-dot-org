@@ -1871,6 +1871,8 @@ id:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
             lessonGroup-3:
               display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            lessonGroup-5:
+              display_name: Survei
         csd1-dlp:
           description: 'Ini adalah Unit 1 dari Deeper Learning Plan bagi fasilitator
             pelatihan  CS Discoveries Code.org. Di sini Anda akan mendapati prompt
@@ -5230,6 +5232,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-coding2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
             membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten
@@ -5265,6 +5269,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-creativity2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
             membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten
@@ -5300,6 +5306,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-data2:
           description_short: Pelajari cara orang menggunakan komputer untuk memecahkan
             masalah data.
@@ -5344,6 +5352,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-design-with-purpose2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
             membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten
@@ -5382,6 +5392,8 @@ id:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
             lessonGroup-3:
               display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            lessonGroup-5:
+              display_name: Survei
         focus-on-hardware2-2023:
           description_short: Pelajari cara orang menggunakan komputer untuk memecahkan
             masalah data.
@@ -5413,6 +5425,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5733,8 +5747,6 @@ id:
               display_name: kegiatan
             lessonGroup-7:
               display_name: Proyek Akhir Kursus
-          student_description: Pelajari dasar-dasar ilmu komputer dan keamanan internet.
-            Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Usia: 8-12'
           lesson_groups:
@@ -5756,8 +5768,11 @@ id:
               display_name: Loop
             lessonGroup-5:
               display_name: Dampak dari Komputasi
-          student_description: Pelajari dasar-dasar ilmu komputer dan keamanan internet.
-            Pada akhir kursus, buat permainan atau cerita sendiri yang bisa Anda bagikan.
+            lessonGroup-6:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5770,10 +5785,6 @@ id:
               display_name: kegiatan
             lessonGroup-6:
               display_name: Data
-          student_description: Buat program dengan pengurutan, loop, dan event. Terjemahkan
-            inisial Anda menjadi binary, selidiki berbagai teknik pemecahan masalah,
-            dan pelajari cara menanggapi perundungan maya (cyberbullying). Pada akhir
-            kursus, buat permainan atau cerita Anda sendiri yang dapat dibagikan!
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'Usia: 7-11'
           description_short: Pelajari tentang pernyataan conditional. Buat karya seni,

@@ -324,7 +324,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursee/2021": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursee/2021": {
@@ -428,7 +428,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursef/2021": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursef/2021": {
@@ -527,7 +527,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/express/2021": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/express/2021": {
@@ -651,11 +651,11 @@
           "definition": "Um identificador que permite que vários elementos em um documento HTML sejam estilizados da mesma forma"
         },
         "bug/csd/2022": {
-          "word": "Bug",
+          "word": "Erro (Bug)",
           "definition": "Parte de um programa que não funciona corretamente."
         },
         "debugging/csd/2022": {
-          "word": "Depuração",
+          "word": "Depuração (Debugging)",
           "definition": "Encontrando e corrigindo problemas em um algoritmo ou programa."
         },
         "program/csd/2022": {
@@ -676,7 +676,7 @@
         },
         "sprite/csd/2022": {
           "word": "Sprite",
-          "definition": "Um caractere na tela com propriedades que descrevem sua localização, movimento e aparência."
+          "definition": "Um personagem ou objeto na tela com propriedades que descrevem sua localização, movimento e aparência."
         },
         "property/csd/2022": {
           "word": "Propriedade",
@@ -997,7 +997,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursee/2022": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursee/2022": {
@@ -1088,7 +1088,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursef/2022": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursef/2022": {
@@ -1187,7 +1187,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/express/2022": {
-          "word": "Refletir",
+          "word": "Reflita",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/express/2022": {

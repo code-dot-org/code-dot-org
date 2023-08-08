@@ -270,7 +270,7 @@
           "definition": "Një listë e hapave për të përfunduar një detyrë. "
         },
         "debugging/coursea/2022": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/coursea/2022": {
@@ -302,7 +302,7 @@
           "definition": "Arti i krijimit të një programi."
         },
         "loop/coursea/2022": {
-          "word": "Unazë përsëritëse",
+          "word": "Loop",
           "definition": "Veprimi i të bërit diçka pa pushim."
         },
         "repeat/coursea/2022": {
@@ -312,6 +312,14 @@
         "event/coursea/2022": {
           "word": "Event",
           "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "algorithm/courseb/2022": {
+          "word": "Algoritme",
+          "definition": "Një listë e hapave për të përfunduar një detyrë. "
+        },
+        "bug/courseb/2022": {
+          "word": "Bug",
+          "definition": "Pjesë e një programi që nuk funksionon si duhet."
         },
         "debugging/courseb/2022": {
           "word": "Rregullimi",
@@ -326,25 +334,24 @@
           "definition": "Shtypni butonin e mausit shumë shpejt"
         },
         "drag/courseb/2022": {
+          "word": "Tërhiq",
           "definition": "Kliko butonin e mausit dhe të mbajeni kur e lëvizni treguesin e mausit në një vend të ri"
         },
         "drop/courseb/2022": {
-          "definition": "Lëshoni butonin e mausit për të “lëshuar” artikullin që po zvarritni"
+          "word": "Lësho",
+          "definition": "Lësho butonin e mausit për të “lëshuar” artikullin që po tërhiqni"
         },
         "program/courseb/2022": {
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
-        "algorithm/courseb/2022": {
-          "word": "Algoritme",
-          "definition": "Një listë e hapave për të përfunduar një detyrë. "
-        },
-        "bug/courseb/2022": {
-          "definition": "Pjesë e një programi që nuk funksionon si duhet."
-        },
         "programming/courseb/2022": {
           "word": "Programim",
           "definition": "Arti i krijimit të një programi."
+        },
+        "persistence/courseb/2022": {
+          "word": "Vazhdim",
+          "definition": "Duke u përpjekur përsëri dhe përsëri, edhe kur diçka është shumë e vështirë."
         },
         "loop/courseb/2022": {
           "word": "Loop",
