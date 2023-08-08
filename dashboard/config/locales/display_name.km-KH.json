@@ -180,6 +180,8 @@
         "CSD U3 L9 Freeplay_2019": "លេងដោយសេរី",
         "CSD U3 L9 Freeplay_2021": "លេងដោយសេរី",
         "CSD U3 L9 Freeplay_2022": "លេងដោយសេរី",
+        "CSD U3 Movement Fish challenge2_2021": "ពពុះ",
+        "CSD U3 Movement Fish challenge2_2022": "ពពុះ",
         "CSD U3 Plotting Shapes Shape Lab": "គំនូរគូរជារាង",
         "CSD U3 Plotting Shapes Shape Lab_2018": "គំនូរគូរជារាង",
         "CSD U3 Plotting Shapes Shape Lab_2019": "គំនូរគូរជារាង",
@@ -552,7 +554,12 @@
         "courseB_video_Unspotted": "កំហុសដែលមិនបានគ្រោងទុក",
         "courseB_video_Unspotted_2018": "កំហុសដែលមិនបានគ្រោងទុក",
         "courseD_artist_nestedLoops32022": "Windows (ប្រភេទប្រព័ន្ធ​ប្រតិបត្តិការដែលដំណើរការនៅក្នុងកុំព្យូទ័រ)",
+        "courseD_artist_nestedLoops52022": "រង្វង់",
+        "courseD_artist_nestedLoops72022": "ការ៉េ",
         "courseD_artist_nestedLoops9_predict12022": "ការទស្សន៍ទាយ",
+        "courseF_apps_aquarium": "អាងចិញ្ចឹមត្រីនិម្មិត",
+        "courseF_apps_aquarium2022": "អាងចិញ្ចឹមត្រីនិម្មិត",
+        "courseF_apps_aquarium_-2022-2": "អាងចិញ្ចឹមត្រីនិម្មិត",
         "courseF_bee_for52022": "អ​ថេរ",
         "courseF_bee_for5_2021": "អ​ថេរ",
         "courseF_groups_video_-2022-2": "របៀបបង្កើត SPRITE",
@@ -575,7 +582,9 @@
         "helloworld_food_sizes": "ទំហំ",
         "helloworld_food_sizes_soccer-2022": "ទំហំ",
         "helloworld_food_sizes_space-2022": "ទំហំ",
-        "helloworld_retro_sizes": "ទំហំ"
+        "helloworld_retro_sizes": "ទំហំ",
+        "ramp_artist_loops42022": "ផ្កាយ",
+        "ramp_artist_loops4_2021": "ផ្កាយ"
       }
     }
   }

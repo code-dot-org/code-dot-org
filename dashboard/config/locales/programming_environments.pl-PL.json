@@ -677,6 +677,9 @@
                     },
                     "options": {
                       "type": "obiekt"
+                    },
+                    "tableName": {
+                      "description": "Nazwa tabeli, z której pobiera rekordy."
                     }
                   }
                 },
@@ -694,6 +697,9 @@
                   "palette_params": {
                     "callback": {
                       "type": "funkcja"
+                    },
+                    "key": {
+                      "description": "Nazwa klucza, który ma być pobrany."
                     }
                   }
                 },
@@ -723,6 +729,9 @@
                     },
                     "includeAll": {
                       "type": "wartość logiczna"
+                    },
+                    "table": {
+                      "description": "Nazwa tabeli, której dotyczy ten kontroler zdarzeń."
                     }
                   }
                 },
@@ -754,7 +763,8 @@
                     "value": {
                       "description": "Dane, które mają być przechowywane."
                     }
-                  }
+                  },
+                  "short_description": "Przechowuje parę klucz/wartość w magazynie danych klucz/wartość App Lab i wywołuje funckcję zwrotną po zakończeniu akcji."
                 },
                 "startWebRequest": {
                   "palette_params": {

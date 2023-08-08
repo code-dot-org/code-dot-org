@@ -8,6 +8,7 @@ km:
       actor: អ្នកសម្ដែង
       age: អាយុ
       answer: ចម្លើយ
+      cats: ឆ្មា
       color: ពណ៌
       counter: ចំនួន​រាប់
       height: កម្ពស់
@@ -18,7 +19,7 @@ km:
       name: ឈ្មោះ
       nectar: លម្អង
       points: ពិន្ទុ
-      random: ព្រាវ
+      random: ចៃដន្យ
       repeat: ធ្វើ​ឡើង​វិញ
       right: ស្តាំ
       score: ពិន្ទុ
@@ -26,5 +27,6 @@ km:
       speed: ល្បឿន
       type: វាយ
       variable: អ្វីៗដែលអាចផ្លាស់ប្ដូរបាន
+      width: ទទឹង
       wizard: មេធ្មប់ប្រុស
       x: x

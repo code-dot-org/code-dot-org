@@ -333,60 +333,40 @@ da:
         text: "For at få den der hen, må du markere retningen som den skal gå."
       4:
         text: "Opret din algoritme ved at lime pile ved siden af det kort, som du forsøger at løse. Den anden er den samme, men nedad."
-      5:
     C1_maze_debugging:
       1:
         text: "Debugging at finde og rette problemer. Der er masser af måder at fejlfinde problemer. En af de nemmeste er at gå det igennem trin for trin indtil du finder der hvor noget går galt. Jeg forsøger her at lave et kraftspring på bommen, men jeg falder hele tiden ned."
-      2:
-      3:
-      4:
     C1_going_places_safely:
-      1:
       2:
         text: "Jeg elsker min mors computer, fordi jeg kan gå på internettet. Internettet er lidt ligesom din by. Du kan besøge seje steder, du kan tale med familie og venner, og du kan lære en masse nye ting."
-      3:
       4:
         text: "Nogle gange taler jeg med folk jeg kender på internettet, f.eks. min bedstemor, der bor i en anden stat. Hej bedstemor! Hun laver småkager til mig, som hun vil sende til mig til min fødselsdag. \"Lækkert, jeg ville ønske man kunne sende dufte over internettet!\" Jeg kan tale med forskellige mennesker på internettet, f.eks. min fætter. Men jeg taler kun med folk jeg kender."
-      5:
-      6:
       7:
         text: "Wow, var det sjovt! Spisetid. Jeg vil logge af nu. Jeg glæder mig til at logge på igen for at se hvor jeg kan komme på besøge næste gang."
     C1_planting_seed:
-      1:
-      2:
       3:
         text: "I dag skal vi så vores egne frø, ved hjælp af en algoritme. Opret din egen algoritme ved at klippe billederne fra hinanden. Vælg de billeder, der viser trinene i at så frø, og arranger disse billeder i den korrekte rækkefølge."
-      4:
       5:
         text: "Når vi ønsker at lave chokolade, er der mange store trin i denne proces. Og hvert af disse store trin har sit eget sæt af mindre trin. Og der er forskellige opskrifter eller algoritmer, afhængigt af hvordan vi ønsker chokoladen skal smage. Hvert trin er vigtigt, selv de små. Så hvis man undlader et trin, kan resten af dem ikke fuldføres. At lave algoritmer, som andre kan forstå, er virkelig vigtigt. Det er derfor hvert trin må skrives ned, så uanset hvem der følger dem, er resultatet er det samme."
     C1_playlab_storytelling:
-      1:
       2:
         text: "Katten har altid været bange for hunden, og hvad nu hvis katten finder ud af at hunden prøver at være sød? \"Kør\"-blokken starter det hele. \"Flyt\"-blokken vil flytte din figur og \"sig\"-blokken vil få din figur til at sige, hvad du skriver."
-      3:
       4:
         text: "Jeg fik hunden til at komme og sige \"Hej\", men så blev katten bange og løb væk. \"Ahh\" Hvis der var mere tid, havde jeg lavet en lykkelig slutning. Slut!"
     C1_spelling_bee_intro:
-      1:
       2:
         text: "Prøv om du kan stave ordet de giver dig i boksen under banen. Men vær forsigtig! hvis du flytter i den forkerte retning, tilføjer du uønskede bogstaver."
     C2_bee_loops:
       1:
         text: "En løkke er en gentagelse af en aktivitet. Så når jeg går ind i et bistad og inspicerer, ser jeg på et billede og derefter sætter jeg det tilbage, så jeg gentager den samme aktivitet flere gange. Det kører i en løkke, og laver den samme aktivitet flere gange."
-      2:
     C2_maze_intro:
-      1:
-      2:
-      3:
       4:
         text: "Jeg har tænkt mig at vælge \"Drej til højre\" blokken, og jeg vil trække det under min \"Flyt\" blok, indtil den gule pil kommer frem. Derefter jeg vil slippe den, og de to blokke vil klikke sammen. Når jeg trykker på \"Kør\" igen, vil fuglen udføre de kommandoer, der er stablet fra top til bund på vores arbejdsplads."
       5:
         text: "Hvis du nogensinde ønsker at slette en blok, kan du bare fjerne den fra stakken og trække den til papirkurven. efter du har kørt programmet, kan du altid trykke på nulstillingsknappen for at få fuglen tilbage til start. Lad os nu få fanget de svin!"
     C2_paper_airplanes:
-      1:
       2:
         text: "I dag vil vi lave, oprette og teste en algoritme til en papirflyver. Men først må vi bryde dette store projekt ned i små trin, som er lette at følge. For at lave en papirflyver er vi nødt til at beslutte, hvilke trin vi skal udføre og i hvilken rækkefølge."
-      3:
       4:
         text: "Når vi ønsker at lave chokolade, er der mange store trin i denne proces. Og hvert af disse store trin har sit eget sæt af mindre trin. Og der er forskellige opskrifter eller algoritmer, afhængigt af hvordan vi ønsker chokoladen skal smage. Hvert trin er vigtigt, selv de små. Så hvis man undlader et trin, kan resten af dem ikke fuldføres. At lave algoritmer, som andre kan forstå, er virkelig vigtigt. Det er derfor hvert trin må skrives ned, så uanset hvem der følger dem, er resultatet er det samme."
     C2_playlab_createstory:
@@ -395,20 +375,14 @@ da:
       2:
         text: "Her er \"når pilen\"- og \"flyt figur\"-blokkene. Du kan sætte disse blokke sammen for at kunne flytte figurerne rundt med piletasterne."
     C2_relay_programming:
-      1:
       2:
         text: "Stafetprogrammering er et væddeløb hvor hold konkurrerer om at komme i mål i et program på ternet papir. Du skal tjekke din holdkammerats arbejde, eller debugge, rette det hvis der er en fejl, tilføje din pil, og løbe tilbage og overgive stafetten til din holdkammerat."
-      3:
-      4:
     C3_playlab_create_game:
       1:
         text: "Indtil nu har du lavet en animation eller en historie, der gør præcis det samme, hver gang du kører den. Nu kan du lave et interaktivt spil, som du rent faktisk kan spille."
       2:
         text: "Her er \"når pilen\"- og \"flyt figur\"-blokkene. Du kan sætte disse blokke sammen for at kunne flytte figurerne rundt med piletasterne."
     C4_intro:
-      1:
-      2:
-      3:
       4:
         text: "Jeg har tænkt mig at vælge \"Drej til højre\" blokken, og jeg vil trække det under min \"Flyt\" blok, indtil den gule pil kommer frem. Derefter jeg vil slippe den, og de to blokke vil klikke sammen. Når jeg trykker på \"Kør\" igen, vil fuglen udføre de kommandoer, der er stablet fra top til bund på vores arbejdsplads."
       5:
@@ -450,41 +424,22 @@ da:
       7:
         text: "Hvis du sidder fast, kan du altid starte forfra med start knappen og du kan skifte tilbage til bloktilstand når som helst ved at klikke i øverste højre hjørne. Ok, lad os prøve at skrive! Og hvis du laver fejl, blive ikke frustreret. Alle bruger et par forsøg for at få det rigtige."
     starwars_events:
-      1:
-      2:
-      3:
       4:
         text: "Eksempler på hændelser er at lytte efter et museklik, en piletast eller at der tappes på skærmen."
-      5:
-      6:
-      7:
-      8:
-      9:
     starwars_blocks_intro:
       1:
         text: "Hej, jeg er Kathleen Kennedy og jeg er producer på Star Wars, The Force Awakens. I dag skal du arbejde med en af vores stjerner, BB-8. BB-8 er en sfærisk droid. Alt, hvad han gør og hver bevægelse, som han gør styres af computerprogrammer. Computere påvirker alle brancher, fra markedsføring til sundhedspleje til film. Faktisk arbejdede hundredvis af computer ingeniører, sammen om at lave en film som The Force Awakens."
       2:
         text: "Hej jeg er Rachel Rose, jeg er en senior R&D ingeniør på ILM og jeg leder animation og væsen udviklingsteamet. I The Force Awakens, er jeg ansvarlig for at hjælpe kunstnere udvikle rigge, som er de dele af karakteren, som bevæger sig for at se meget troværdig ud i en galakse langt langt væk."
-      3:
-      4:
       5:
         text: "Denne miderste område er værktøjskassen og hver af disse blokke er en kommando, som BB-8 kan forstå."
       6:
         text: "Det tomme område til højre kaldes arbejdsområdet og det er hvor vi skal bygge vores program."
-      7:
-      8:
-      9:
       10:
         text: "Efter du har trykket Kør, kan du altid trykke på nulstillingsknappen for at få BB-8 tilbage til start. Lad os nu rulle!"
     starwars_blocks_events:
-      1:
-      2:
-      3:
       4:
         text: "Eksempler på hændelser er at lytte efter et museklik, en piletast eller at der tappes på skærmen."
-      5:
-      6:
-      7:
     mc_intro:
       1:
         text: "Jeg hedder Jens Bergensten, men jeg er bedre kendt som Jeb. Jeg er Lead Developer på Minecraft her hos Mojang i Stockholm. Jeg tror, at jeg var 11 eller måske 12, da jeg begyndte at programmere for at lave spil. En af min fars venner fortalte mig, at jeg skulle lære at programmere, hvis jeg ville lave spil. Så derfor kom jeg i gang. Jeg elsker at designe og planlægge opbygningen af spil. Det er det, jeg elsker ved Minecraft."
@@ -553,31 +508,19 @@ da:
       4:
         text: "Nu kan du bygge lige, hvad du vil. God fornøjelse!"
     gumball_intro:
-      1:
-      2:
-      3:
       4:
         text: "Skærmen er opdelt i tre hoveddele. Til venstre er den plads hvor dit program vil køre. Instruktioner til hvert trin er skrevet under."
-      5:
       6:
         text: "Det hvide område til højre kaldes arbejdsområdet, og det er her, vi bygger vores program."
       7:
         text: "Til at begynde med, skal du knytte dine blokke til den orange \"når kør\" blok. Du kan sammenkæde flere blokke ved at trække dem hen til hinanden, indtil du ser den gule linje. Derefter vil de snappe sammen af sig selv."
-      8:
-      9:
     iceage_intro:
-      1:
-      2:
-      3:
       4:
         text: "Skærmen er opdelt i tre hoveddele. Til venstre er den plads hvor dit program vil køre. Instruktioner til hvert trin er skrevet under."
-      5:
       6:
         text: "Det hvide område til højre kaldes arbejdsområdet, og det er her, vi bygger vores program."
       7:
         text: "Til at begynde med, skal du knytte dine blokke til den orange \"når kør\" blok. Du kan sammenkæde flere blokke ved at trække dem hen til hinanden, indtil du ser den gule linje. Derefter vil de snappe sammen af sig selv."
-      8:
-      9:
     hoc_dance_warmup:
       1:
         text: "Hour of Code | Dansefest: Opvarmning"

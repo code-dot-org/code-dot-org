@@ -4048,6 +4048,8 @@ fr:
               display_name: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
             lessonGroup-4:
               display_name: Leçons alternatives
+            lessonGroup-5:
+              display_name: Enquête
           student_description: Problem Solving and Computing est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
             le cadre plus large de la résolution de problèmes. Vous vous entraînerez
@@ -9629,6 +9631,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: concentrez-vous sur le codage 1-2023
           student_description: Problem Solving and Computing est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
@@ -9721,6 +9725,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: concentrez-vous sur la créativité1-2023
           student_description: Problem Solving and Computing est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
@@ -9813,6 +9819,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: focus sur les données-1-2023
           student_description: Problem Solving and Computing est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
@@ -9942,6 +9950,8 @@ fr:
               display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
             lessonGroup-3:
               display_name: Leçons alternatives
+            lessonGroup-4:
+              display_name: Enquête
           name: concentrez-vous sur la conception avec un but1-2023
           student_description: Problem Solving and Computing est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans
@@ -10085,6 +10095,8 @@ fr:
               display_name: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
             lessonGroup-4:
               display_name: Leçons alternatives
+            lessonGroup-5:
+              display_name: Enquête
           name: concentrez-vous sur le matériel1-2023
           student_description: Problem Solving and Computing est une introduction
             hautement interactive et collaborative au domaine de l'informatique, dans

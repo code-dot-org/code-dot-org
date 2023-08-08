@@ -611,6 +611,8 @@ fi:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
             lessonGroup-3:
               display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+            lessonGroup-5:
+              display_name: Kysely
         csd1-dlp:
           lesson_groups:
             required:
@@ -1666,6 +1668,8 @@ fi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-4:
+              display_name: Kysely
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1680,6 +1684,8 @@ fi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-4:
+              display_name: Kysely
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1694,6 +1700,8 @@ fi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-4:
+              display_name: Kysely
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -1708,6 +1716,8 @@ fi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-4:
+              display_name: Kysely
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1724,6 +1734,8 @@ fi:
               display_name: 'Luku 1: Ongelmanratkaisu prosessi'
             lessonGroup-3:
               display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+            lessonGroup-5:
+              display_name: Kysely
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:

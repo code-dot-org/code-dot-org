@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-07-28T17:41:09.000Z",
   "level_num": "custom",
@@ -14,7 +15,7 @@
     },
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "# Do This\r\n\r\n* Run this program. Watch the variables change values in the \"Watch\" area.\r\n* Discuss with a partner:\r\n    * On which lines is a variable being created? \r\n    * On which lines is a variable being assigned?\r\n* Change the number assigned to `myFavoriteNumber` and the string assigned to `myFavoriteFood` and run the program again.\r\n\r\n<span style=\"color:red\"><i>Note: This is the same level as U4L3 - Level 1 in the CS Principles Curriculum. It is not expected that you as a teacher discuss these with a partner, but rather think through the answers independently.</i></span>",
+    "long_instructions": "# Do This\r\n\r\n* Run this program. Watch the variables change values in the \"Watch\" area.\r\n* Discuss with a partner:\r\n    * On which lines is a variable being created? \r\n    * On which lines is a variable being assigned?\r\n* Change the number assigned to `myFavoriteNumber`(#e7e8ea) and the string assigned to `myFavoriteFood`(#e7e8ea) and run the program again.\r\n\r\n:::details [**Show Me How**]\r\nA variable is assigned a value using the `=`(#e7e8ea) assignment operator as shown below:\r\n\r\n![](https://images.code.org/5297afa8b804d43484cd0a484049a3e8-image-1650929893953.png)\r\n\r\nWhen assigning a value to a variable replace `myVariable`(#e7e8ea) with the name of the variable and `8`(#e7e8ea) with the value you want to assign.\r\n\r\n![](https://images.code.org/e335417ca3bebef8e7a971e5d6c18ed5-image-1650930219894.png)\r\n\r\nWhen assigning a value to a variable replace `variableName`(#e7e8ea) with the name of the variable and `\"value\"`(#e7e8ea) with the value you want to assign.\r\n\r\n:::\r\n____\r\n\r\n\r\n<span style=\"color:red\"><i>Note: This is the same level as U4L3 - Level 1 in the CS Principles Curriculum. It is not expected that you as a teacher discuss these with a partner, but rather think through the answers independently.</i></span>",
     "submittable": "false",
     "start_blocks": "var myFavoriteNumber;\r\nvar myFavoriteFood;\r\n\r\n// Change this line\r\nmyFavoriteNumber = 1;\r\n\r\n// Change this line\r\nmyFavoriteFood = \"pizza\";\r\n\r\nconsole.log(\"My favorite number is\");\r\nconsole.log(myFavoriteNumber);\r\n\r\nconsole.log(\"My favorite food is\");\r\nconsole.log(myFavoriteFood);",
     "never_autoplay_video": "false",
@@ -37,7 +38,6 @@
     "watchers_prepopulated": "[\"myFavoriteNumber\", \"myFavoriteFood\"]",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "true",
-    "makerlab_enabled": "false",
     "encrypted": "false",
     "mini_rubric": "false",
     "widget_mode": "false",
@@ -48,9 +48,8 @@
     "name_suffix": "_2023",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-07-28T17:41:09.526+00:00\",\"changed\":[\"cloned from \\\"CSP-PL - U4 L03 Variables numbers practice 1_2022\\\"\"],\"cloned_from\":\"CSP-PL - U4 L03 Variables numbers practice 1_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-07-28T17:41:09.526+00:00\",\"changed\":[\"cloned from \\\"CSP-PL - U4 L03 Variables numbers practice 1_2022\\\"\"],\"cloned_from\":\"CSP-PL - U4 L03 Variables numbers practice 1_2022\"},{\"changed_at\":\"2023-08-01 23:34:28 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

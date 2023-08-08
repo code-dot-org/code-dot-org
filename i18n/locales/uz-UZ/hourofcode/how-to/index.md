@@ -19,7 +19,7 @@ Dasturlash Soatini sinab ko'rish - bu talabalarni informatika bilan tanishtirish
 - [Dasturlash Soatini qattiy qanday boshlash kerak](#how-to-start)
 - [Dasturlashga kirishing](#code)
 - [Talabalaringiz muvaffaqiyatlarini nishonlang](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [O'qituvchilar uchun boshqa Dasturlash soati manbalari](#other-resources)
 
 * * *
 
@@ -136,9 +136,9 @@ Agar talaba erta tugatsa nima bo‘ladi?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- O'quvchilaringiz uchun [sertifikatlarni chop eting]({{ urls/certificates }}).
 - [O‘quvchilaringiz uchun "Men bir soatlik kodni qildim!"]({{ urls/promote_stickers }}) stikerlarini chop eting.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Ijtimoiy tarmoqlarda Dasturlash soati tadbiringizning fotosuratlari va videolarini baham ko'ring. Sizning muvaffaqiyatingizni namoish qila olishimiz uchun #HourOfCode va @codeorg xeshtegidan foydalaning.
 
 * * *
 
@@ -147,9 +147,9 @@ Agar talaba erta tugatsa nima bo‘ladi?
 ## O'qituvchilar uchun Dasturlash Soati bo'yicha boshqa manbalar:
 
 - Boshqa o‘qituvchilardan maslahat, tushuncha va qo‘llab-quvvatlash uchun [Kod soati o‘qituvchilari forumiga](http://forum.code.org/c/plc/hour-of-code) tashrif buyuring.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Dasturlash soati haqidagi tez-tez so'raladigan savollar [Kod soati haqida FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) bilan tanishib chiqing.
 
-### What comes after the Hour of Code?
+### Dasturlash soatidan keyin nima bo'ladi?
 
 Kompyuter fanlari Dasturlash Soatin tugamasligi kerak! Kompyuter fanlarini [qanday qilib maktabingiz va o‘quvchilaringizga olib kirishni bilib oling](/beyond).
 

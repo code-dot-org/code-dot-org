@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-18 20:52:53 UTC",
+    "serialized_at": "2023-08-02 21:03:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2051,7 +2051,6 @@
       "position": 1,
       "properties": {
         "description": "Your apps are almost done and soon will be ready to share with the world. Let's get back to work.",
-        "duration": "3",
         "name": "Warm Up",
         "remarks": true,
         "tips": [
@@ -2115,11 +2114,45 @@
       }
     },
     {
-      "key": "802420a1-59ae-4db9-9570-0fd029991bfd",
+      "key": "b5c8b737-3dbe-4909-b21a-dfad34946f18",
       "position": 6,
       "properties": {
-        "duration": "5",
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
+        "duration": "7",
         "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b5c8b737-3dbe-4909-b21a-dfad34946f18",
+        "lesson_activity.key": "1b0b7749-1b57-4d70-81f1-327326cc8a86"
+      }
+    },
+    {
+      "key": "c0c9a960-63ee-4214-b33b-79cf710b1257",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Three in order to generate clues for the students."
+      },
+      "seeding_key": {
+        "activity_section.key": "c0c9a960-63ee-4214-b33b-79cf710b1257",
+        "lesson_activity.key": "1b0b7749-1b57-4d70-81f1-327326cc8a86"
+      }
+    },
+    {
+      "key": "4c8a3261-7e83-4e5c-882a-d557c0347e91",
+      "position": 8,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c8a3261-7e83-4e5c-882a-d557c0347e91",
+        "lesson_activity.key": "1b0b7749-1b57-4d70-81f1-327326cc8a86"
+      }
+    },
+    {
+      "key": "802420a1-59ae-4db9-9570-0fd029991bfd",
+      "position": 9,
+      "properties": {
         "progression_name": "End-of-Unit Survey"
       },
       "seeding_key": {
@@ -3943,6 +3976,31 @@
       }
     },
     {
+      "name": "CSP Bingo Cards - Unit Three",
+      "url": "https://drive.google.com/file/d/16_HrE069VnL4vU7HzGFVs3-fCQwW4xSn/view?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_three",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=16_HrE069VnL4vU7HzGFVs3-fCQwW4xSn",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_three"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
       "name": "CSP Unit 3 Slides",
       "url": "https://docs.google.com/presentation/d/1LqpV9F_G2K97HbSywfMupo-HAnzCxP_TNR40hSyA9Hk/edit?usp=drive_link",
       "key": "csp_unit_3_slides",
@@ -4256,6 +4314,18 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Designing an App Part 3",
+        "resource.key": "csp_bingo_cards_-_unit_three"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Designing an App Part 3",
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Designing an App Part 3",
         "resource.key": "designing_an_app_-_days_3-5"
       }
     },
@@ -4320,10 +4390,200 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "comment",
+      "word": "Comment",
+      "definition": "form of program documentation written into the program to be read by people and which do not affect how a program runs",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "comment"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "development_process",
+      "word": "Development Process",
+      "definition": " the steps or phases used to create a piece of software. Typical phases include investigating, designing, prototyping, and testing.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "development_process"
+      }
+    },
+    {
+      "key": "documentation",
+      "word": "Documentation",
+      "definition": "a written description of how a command or piece of code works or was developed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "documentation"
+      }
+    },
+    {
+      "key": "event_driven_programming",
+      "word": "Event Driven Programming",
+      "definition": "some program statements run when triggered by an event, like a mouse click or a key press",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event_driven_programming"
+      }
+    },
+    {
+      "key": "input",
+      "word": "Input",
+      "definition": "data that are sent to a computer for processing by a program. Can come in a variety of forms, such as tactile interaction, audio, visuals, or text.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "key": "output",
+      "word": "Output",
+      "definition": "any data that are sent from a program to a device. Can come in a variety of forms, such as tactile interaction, audio, visuals, or text.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "output"
+      }
+    },
+    {
+      "key": "pair_programming",
+      "word": "Pair Programming",
+      "definition": "a collaborative programming style in which two programmers switch between the roles of writing code and tracking or planning high level progress",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pair_programming"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "a collection of program statements. Programs run (or “execute”) one command at a time.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "program_statement",
+      "word": "Program Statement",
+      "definition": "a command or instruction. Sometimes also referred to as a code statement.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program_statement"
+      }
+    },
+    {
+      "key": "sequential_programming",
+      "word": "Sequential Programming",
+      "definition": "program statements run in order, from top to bottom",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequential_programming"
+      }
+    },
+    {
+      "key": "user_interface",
+      "word": "User Interface",
+      "definition": "the inputs and outputs that allow a user to interact with a piece of software. User interfaces can include a variety of forms such as buttons, menus, images, text, and graphics.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "user_interface"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "vocabulary.key": "comment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "vocabulary.key": "documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "vocabulary.key": "event_driven_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "vocabulary.key": "program_statement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Programming",
+        "vocabulary.key": "sequential_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Apps",
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Apps",
+        "vocabulary.key": "output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Apps",
+        "vocabulary.key": "user_interface"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Designing an App Part 3",
+        "vocabulary.key": "development_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Designing an App Part 3",
+        "vocabulary.key": "pair_programming"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
@@ -4993,6 +5253,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

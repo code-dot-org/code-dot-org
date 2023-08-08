@@ -21,7 +21,7 @@
           "display_name": "Події плати"
         },
         "csd-2022/body-styling": {
-          "display_name": "Стилізація основної конструкції"
+          "display_name": "Стилізація тіла сторінки"
         },
         "csd-2022/booleans-and-comparison-operators": {
           "display_name": "Булеві та оператори порівняння"
@@ -87,7 +87,7 @@
           "display_name": "Огляд"
         },
         "csd-2022/html-tags": {
-          "display_name": "HTML Теги"
+          "display_name": "Теги HTML"
         },
         "csd-2022/hyperlinks": {
           "display_name": "Гіперпосилання"
@@ -162,7 +162,7 @@
           "display_name": "Спрайти"
         },
         "csd-2022/style-sheets": {
-          "display_name": "Таблиця стилів"
+          "display_name": "Аркуші стилів"
         },
         "csd-2022/taking-input-with-getproperty": {
           "display_name": "Отримання вхідних даних за допомогою getProperty"
@@ -192,7 +192,7 @@
           "display_name": "Швидкість"
         },
         "csd-2022/web-lab": {
-          "display_name": "Веб-лабораторія"
+          "display_name": "Веб Лабораторія"
         }
       }
     }

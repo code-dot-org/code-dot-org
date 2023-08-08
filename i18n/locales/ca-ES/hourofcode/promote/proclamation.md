@@ -1,5 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+title: Resolució de la mostra de suport de la Setmana de l'Educació de les Ciències de la Computació i Hora del Codi
 ---
 
 {{ signup_button }}
