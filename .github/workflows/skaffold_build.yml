@@ -15,6 +15,7 @@ jobs:
       # options: --cpus 1
     env:
       SKAFFOLD_DEFAULT_REPO: docker.io/snickellcdo
+      BASE_COMMIT: 1e5e6230c17e962fc49c8f0e6b833845db816a49
     steps:
       - run: |
           echo hi
@@ -26,8 +27,42 @@ jobs:
           registry: ${{ vars.K8S_DOCKEHUB_REPOSITORY }}
           username: ${{ vars.K8S_DOCKERHUB_USERNAME }}
           password: ${{ secrets.K8S_DOCKERHUB_TOKEN }}
+
+      # # Pin a base git commit, and cache it + fastforward to the current commit to
+      # # speedup git checkout
+      # 
+      # - name: Restore Cache of Git Fetch
+      #   id: cache-git-fetch-restore
+      #   uses: actions/cache/restore@v3
+      #   with:
+      #     path: "${{ github.workspace }}/.git"
+      #     key: git-fetch-${{ hashFiles('**/FETCH_HEAD') }}
+      # - run: |
+      #     # git clone --branch $DRONE_SOURCE_BRANCH  --depth 1 $DRONE_GIT_HTTP_URL .
+      #     git init
+      #     git remote origin add https://github.com/code-dot-org/code-dot-org.git
+      #     git fetch --depth=1 origin $BASE_COMMIT
+      #     git checkout $BASE_COMMIT
+      # - name: Save Cache of Git Fetch
+      #   id: cache-git-fetch-save
+      #   uses: actions/cache/save@v3
+      #   with:
+      #     path: "${{ github.workspace }}/.git"
+      #     key: git-fetch-${{ hashFiles('**/FETCH_HEAD') }}
+
+      # - run: |
+      #     # FIXME: here is where (instead of actions/checkout@v3) we would use our 
+      #     # existing .git/ checkout to $BASE_COMMIT, and fast-forward it to 
+      #     # $GITHUB_SHA or $GITHUB_WORKFLOW_SHA instead of doing a raw checkout of sources
+      #     #
+      #     # These commands are NOT right, they re-download everything.... what IS right?
+      #     git fetch --depth=1 origin $GITHUB_WORKFLOW_SHA
+      #     git checkout $GITHUB_WORKFLOW_SHA
+
+
       - name: Checkout sources
         uses: actions/checkout@v3
+
       - name: Skaffold Cache
         uses: actions/cache@v3
         with:
@@ -35,6 +70,7 @@ jobs:
           key: skaffold-${{ hashFiles('**/cache') }}
           restore-keys: |
             skaffold-
+
       - run: |
           skaffold build \
             --push \
@@ -42,15 +78,15 @@ jobs:
 
 
 
-  quicktest:
-    name: Quick Test
-    runs-on: ubuntu-22.04
-    # container: 
-    #   image: alpine
-    steps:
-      - run: |
-          env
-          git clone https://github.com/code-dot-org/code-dot-org.git
+  # quicktest:
+  #   name: Quick Test
+  #   runs-on: ubuntu-22.04
+  #   # container: 
+  #   #   image: alpine
+  #   steps:
+  #     - run: |
+  #         env
+  #         git clone https://github.com/code-dot-org/code-dot-org.git
   #         env
   #         echo hi
   #         echo "DIRECT K8S_DOCKERHUB_REPOSITORY=$K8S_DOCKERHUB_REPOSITORY"
