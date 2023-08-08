@@ -6,6 +6,26 @@
 # NOTE: after making changes to this file, you'll need to sign them using
 # `drone sign code-dot-org/code-dot-org --save`
 
+
+kind: pipeline
+type: docker
+name: skaffold build
+
+clone:
+  # disable: true
+  - name: skaffold build
+    image: gcr.io/k8s-skaffold/skaffold:v2.6.3-lts
+    commands:
+      - skaffold build
+
+trigger:
+  branch:
+    - "staging"
+    - "staging-next"
+  event:
+    - pull_request
+---
+
 kind: pipeline
 type: docker
 name: unit
@@ -210,6 +230,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 83134bebe48b9c0fb9ff12b8ef0fa324462208ae9802d027fc6e169c36ceac89
+hmac: 6d0b66acf975444e70fde2b2763cedfd6a7a5f17c537cba92cf506c39ace8e3f
 
 ...
