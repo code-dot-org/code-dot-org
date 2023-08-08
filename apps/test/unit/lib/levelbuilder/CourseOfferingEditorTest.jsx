@@ -36,6 +36,7 @@ describe('CourseOfferingEditor', () => {
         professional_learning: 'code.org/apply',
         self_paced_pl_course_offering_id: 1,
         video: 'https://www.youtube-nocookie.com/test_video',
+        published_date: '2019-07-16 14:00:00',
       },
       selfPacedPLCourseOfferings: [
         {
@@ -106,6 +107,7 @@ describe('CourseOfferingEditor', () => {
         description: 'An introductory course into computer science.',
         professional_learning: 'code.org/apply',
         video: 'https://www.youtube-nocookie.com/test_video',
+        published_date: '2019-07-16 14:00:00',
       };
       server.respondWith('PUT', '/course_offerings/test-course-offering', [
         200,
@@ -182,6 +184,7 @@ describe('CourseOfferingEditor', () => {
         description: 'An introductory course into computer science.',
         professional_learning: 'code.org/apply',
         video: 'https://www.youtube-nocookie.com/test_video',
+        published_date: '2019-07-16 14:00:00',
       };
 
       server.respondWith('PUT', '/course_offerings/test-course-offering', [

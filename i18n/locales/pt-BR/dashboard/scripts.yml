@@ -4222,7 +4222,7 @@ pt:
             lessonGroup-2:
               display_name: Capítulo 1 - Compreendendo o Aprendizado de Máquina
             lessonGroup-3:
-              display_name: Capítulo 2 - Crie um aplicativo de aprendizado de máquina
+              display_name: Capítulo 2 - Crie um aplicativo de Aprendizado de Máquina
             lessonGroup-4:
               display_name: Questionário
           title: Inteligência Artificial e Aprendizado de Máquina
@@ -4394,6 +4394,8 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+            lessonGroup-5:
+              display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
         csd2-2023:
           title: Unidade 2 - Desenvolvimento Web ('23-'24)
@@ -4740,6 +4742,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
         focus-on-creativity2-2023:
           title: Unidade 2 - Desenvolvimento Web ('23-'24)
@@ -4766,6 +4770,8 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+            lessonGroup-5:
+              display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
           description: "Resolução de Problemas e Computação é uma introdução altamente interativa e colaborativa ao campo da ciência da computação, pensada dentro de um escopo mais amplo da resolução de problemas. Você praticará o uso do processo de resolução de problemas para abordar uma séries de quebra-cabeças, desafios e cenários do mundo real. A seguir, você aprenderá como os computadores captam, enviam, amazenam e processam informações para ajudar nós humanos a resolver problemas. A unidade é concluída com um projeto na qual você desenvolve uma aplicação, visando solucionar um problema de sua escolha.\n\n::: details [**Capítulo 1 - Visão Geral**]\n**Descrição:** Este capítulo orienta os alunos a desenvolverem e a adotarem um processo de resolução de problemas formalmente estruturado, através da reflexão dos problemas com os quais se depararam, tanto na sala de aula quanto no dia a dia. Ao trabalhar com um conjunto diversificado de problemas, como quebra-cabeças lógicos, desafios de engenharia e planejamento de uma viagem, os alunos apredem a indentificar diferentes classes de problemas, descontruir problemas maiores, e desenvolver usas próprias habilidades de resolução de problemas.\n\n**Objetivos:**\n\n-   Aprender a como usar o processo estruturado  de resolução de problemas e aplicá-lo para resolver diversos problemas .\n-   Criar um ambiente colaborativo na sala de aula onde os alunos possam ter a ciência da computação como relevante, divertida e empoderadora.\n\n**Questão Norteadora:** \n\n-   Quais estratégias e processos posso usar para me tornar um solucionador de problemas mais eficaz?\n    :::\n\n::: details [**Capítulo 2 - Visão Geral**]\n**Descrição:** Este capítulo introduz os computadores como máquinas as quais solucionam problemas informacionais. Os alunos começam a desenvolver uma definição comum de um computador cujo foco baseia-se em sua funcionalidade em vez de meramente um conjunto de hardwares. Eles então exploram as maneiras com que os computadores abordam os problemas. Para seus projetos finais, os alunos propõem um aplicativo que pode ser utilizado para solucionar um problema de sua escolha.\n\n\\*\\*Objetivos:\n\n-   Identificar as características definidas de um computador e como usá-lo para solucionar problemas informacionais\n-   Usar um processo estruturado de resolução de problemas para projetar soluções que se utilizam da tecnologia da computação.\n-   Criar um ambiente de colaboração na sala de aula onde os alunos têm a ciência da computação como relevante, divertida, e empoderadora.\n\n**Questões Norteadoras:** \n\n-   Como os computadores auxiliam as pessoas na resolução de problemas?\n-   Como as pessoas e os computares destoam em suas abordagens na resolução de problemas?\n-   O que um computador precisa das pessoas para solucionar problemas efetivamente?\n    :::\n\n::: details [**Orientações de Implementação para Resolução de Problemas e Computação**]\n\n-   O primeiro capítulo desta unidade deverá se concluído antes de quaisquer outras unidades em Descobertas da CC.\n-   Aulas facultativas são oferecidas para algumas das aulas nesta unidade, dependendo do contexto de sua turma.\n-   Recursos adicionais estão disponíveis dentro do menu suspenso \"Recursos do Professor\" da unidade.\n    :::\n\n<br>\n<br>"
         focus-on-hardware2-2023:
@@ -4786,6 +4792,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4816,6 +4824,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
         focus-on-design-with-purpose2-2023:
           title: Unidade 2 - Desenvolvimento Web ('23-'24)
@@ -4840,6 +4850,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
         focus-on-coding2-2023:
           title: Unidade 2 - Desenvolvimento Web ('23-'24)
@@ -5013,7 +5025,7 @@ pt:
         pl-csd-summer-day2:
           lessons:
             lesson-10:
-              name: Conclusão
+              name: Fechamento
           lesson_groups:
             lessonGroup-2:
               display_name: Dia 2
@@ -5026,7 +5038,7 @@ pt:
         pl-csd-summer-day4:
           lessons:
             lesson-12:
-              name: Conclusão
+              name: Fechamento
           lesson_groups:
             lessonGroup-2:
               display_name: Dia 4
@@ -5036,22 +5048,22 @@ pt:
             lesson-1:
               name: Introdução
             lesson-12:
-              name: Conclusão
+              name: Fechamento
           title: Dia 1
         virtual-pl-csd-summer-day2:
           lessons:
             lesson-10:
-              name: Conclusão
+              name: Fechamento
           title: Dia 2
         virtual-pl-csd-summer-day3:
           lessons:
             lesson-12:
-              name: Conclusão
+              name: Fechamento
           title: Dia 3
         virtual-pl-csd-summer-day4:
           lessons:
             lesson-13:
-              name: Conclusão
+              name: Fechamento
           title: Dia 4
         virtual-pl-csd-summer-day5:
           lessons:

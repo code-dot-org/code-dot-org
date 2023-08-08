@@ -226,13 +226,6 @@ Security/MarshalLoad:
 Style/AccessModifierDeclarations:
   Enabled: false
 
-# Offense count: 27
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: IgnoredMethods.
-# IgnoredMethods: ==, equal?, eql?
-Style/ClassEqualityComparison:
-  Enabled: false
-
 # Offense count: 151
 Style/ClassVars:
   Enabled: false
@@ -405,11 +398,6 @@ Style/OptionalBooleanParameter:
 # Offense count: 14
 # This cop supports safe auto-correction (--auto-correct).
 Style/RedundantAssignment:
-  Enabled: false
-
-# Offense count: 6
-# This cop supports safe auto-correction (--auto-correct).
-Style/RedundantBegin:
   Enabled: false
 
 # Offense count: 29

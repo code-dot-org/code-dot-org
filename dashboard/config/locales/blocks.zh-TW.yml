@@ -17,7 +17,6 @@ zh-TW:
             '0.75': 小
             '1.00': 中
             '2.00': 大
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -25,7 +24,6 @@ zh-TW:
             '0.75': 小
             '1.00': 中
             '2.00': 大
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -491,28 +489,8 @@ zh-TW:
             '19': '19'
             '2': '2'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
             '3': '3'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
             '4': '4'
-            '40': '40'
             '5': '5'
             '6': '6'
             '7': '7'
@@ -1015,8 +993,6 @@ zh-TW:
         options:
           INPUT1:
             '1': 檸檬汁
-            '3': baking soda
-            '5': both
         text: 顯微鏡有{INPUT1}
       DansBlocks_setForegroundEffect2:
         options:
@@ -1034,8 +1010,6 @@ zh-TW:
         options:
           INPUT1:
             '1': 檸檬汁
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: 讓{VAR1}與{SPRITE1COSTUME}交流
       FunctionBlocks_makeManipulative2:
@@ -1428,15 +1402,11 @@ zh-TW:
         options:
           INPUT1:
             '1': 檸檬汁
-            '3': baking soda
-            '5': both
         text: 顯微鏡有{INPUT1}
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': 檸檬汁
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1719,16 +1689,10 @@ zh-TW:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': 全部
       aalab_someStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': 全部
       aalab_spriteSayChoices:
         text: "{SPRITE}說{SPEECH}"
@@ -1890,7 +1854,6 @@ zh-TW:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'
@@ -2396,11 +2359,9 @@ zh-TW:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': 慢
             '5': 普通
             '7': 快
-            '9': extra fast
       gamelab_setTint:
         text: 角色 {THIS} 顏色設為 {COLOR}
       gamelab_setupScoreboard:

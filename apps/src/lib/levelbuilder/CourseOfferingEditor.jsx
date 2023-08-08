@@ -5,7 +5,6 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import $ from 'jquery';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
-
 import {
   CourseOfferingCategories,
   CourseOfferingHeaders,
@@ -26,6 +25,8 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import ImageInput from './ImageInput';
 import Select from 'react-select';
+import moment from 'moment';
+import DatePicker from '../../code-studio/pd/workshop_dashboard/components/date_picker';
 import 'react-select/dist/react-select.css';
 
 const translatedNoneOption = `(${i18n.none()})`;
@@ -47,6 +48,9 @@ export default function CourseOfferingEditor(props) {
   const [isSaving, setIsSaving] = useState(false);
   const [lastSaved, setLastSaved] = useState(null);
   const [thumbnail, setThumbnail] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(
+    courseOffering.published_date ? moment(courseOffering.published_date) : null
+  );
 
   const handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
@@ -161,6 +165,11 @@ export default function CourseOfferingEditor(props) {
     return candidate.name === 'None'
       ? true
       : candidate.name.toLowerCase().includes(input.toLowerCase());
+  };
+
+  const handleDateChange = date => {
+    setSelectedDate(date);
+    updateCourseOffering('published_date', date);
   };
 
   return (
@@ -467,6 +476,15 @@ export default function CourseOfferingEditor(props) {
           ))}
         </select>
       </label>
+      <label>
+        <div style={styles.flexContainer}>
+          <h3>Published Date </h3>
+          <HelpTip>
+            <p>Select the Published Date of the course offering</p>
+          </HelpTip>
+        </div>
+        <DatePicker date={selectedDate} onChange={handleDateChange} clearable />
+      </label>
       <SaveBar
         handleSave={handleSave}
         error={error}
@@ -497,6 +515,7 @@ CourseOfferingEditor.propTypes = {
     professional_learning_program: PropTypes.string,
     self_paced_pl_course_offering_id: PropTypes.number,
     video: PropTypes.string,
+    published_date: PropTypes.string,
   }),
   selfPacedPLCourseOfferings: PropTypes.arrayOf(
     PropTypes.shape({
@@ -535,6 +554,10 @@ const styles = {
     paddingRight: '10px',
     cursor: 'pointer',
   },
+  flexContainer: {
+    display: 'flex',
+    alignItems: 'center',
+  },
   image: {
     width: 100,
     marginLeft: 5,
@@ -552,9 +575,5 @@ const styles = {
   },
   label: {
     paddingLeft: 4,
-  },
-  videoContainer: {
-    display: 'flex',
-    alignItems: 'center',
   },
 };

@@ -570,9 +570,11 @@
           "name": "Processo de resolução de problemas"
         },
         "solving-problems-exemplar-2020/csd/2021": {
+          "name": "Resolução de Problemas",
           "type": "Chave de resposta"
         },
         "solving-problems-activity-guide-2020/csd/2021": {
+          "name": "Resolução de Problemas",
           "type": "Guia de atividades"
         },
         "what-is-a-computer-2020/csd/2021": {
@@ -636,13 +638,18 @@
         "paper-planes/csd/2021": {
           "type": "Guia de atividades"
         },
+        "plane-how-to-videos/csd/2021": {
+          "name": "Vídeos de Instruções da Code.org"
+        },
         "solving-problems-tangrams-2020/csd/2021": {
           "type": "Recurso"
         },
         "solving-problems-activity-guide-animal-2020/csd/2021": {
+          "name": "Resolução de Problemas",
           "type": "Guia de atividades"
         },
         "solving-problems-activity-guide-game-2020/csd/2021": {
+          "name": "Resolução de Problemas",
           "type": "Guia de atividades"
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
@@ -3258,6 +3265,7 @@
           "type": "Slides"
         },
         "solving_problems/csd/2022": {
+          "name": "Resolução de Problemas",
           "type": "Chave de resposta"
         },
         "solving_problems_1/csd/2022": {
@@ -3367,11 +3375,15 @@
         "intro_to_problem_solving_spaghetti_/csd/2022": {
           "type": "Slides"
         },
+        "code_org_how-to_video_playlist/csd/2022": {
+          "name": "Vídeos de Instruções da Code.org"
+        },
         "paper_tower/csd/2022": {
           "name": "Torre de Papel",
           "type": "Guia de atividades"
         },
         "intro_to_problem_solving_paper_towels_/csd/2022": {
+          "name": "Introdução à Resolução de Problemas (Torre de Papel)",
           "type": "Slides"
         },
         "solving_problems_2/csd/2022": {

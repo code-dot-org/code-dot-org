@@ -2148,6 +2148,8 @@ it:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             lessonGroup-3:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            lessonGroup-5:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4515,6 +4517,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4561,6 +4565,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4607,6 +4613,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4640,6 +4648,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-4:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
@@ -4688,6 +4698,8 @@ it:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
             lessonGroup-3:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            lessonGroup-5:
+              display_name: Sondaggio
           student_description: Risoluzione dei problemi e informatica è un'introduzione
             all'informatica con un'elevata componente interattiva e collaborativa
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti

@@ -260,63 +260,29 @@ bs:
         text: "Ovo je blok \"ponavljaj zauvijek\". Sve što je unutar ovo bloka će se zauvijek ponavljati tijekom igre."
       2:
         text: "Ako želimo da lik nešto ponavlja, bez ikakvog utjecaja igrača, stavit ćemo to unutar bloka \"ponavljaj zauvijek\"."
-      3:
     C1_happy_maps_unplugged:
-      1:
-      2:
-      3:
-      4:
       5:
         text: "To je kao programiranje sa papirom. I to je to!"
     C1_going_places_safely:
       1:
         text: "Moje ime je Jeremija. Zdravo! Imam sedam godina. Volim se igrati na računaru moje mama ali uvijek moram prvo dobiti dozvolu.\"Mama, mogu li ići na računar? Naravno dušo!\""
-      2:
-      3:
-      4:
-      5:
-      6:
-      7:
     C2_conditionals_with_cards:
-      1:
-      2:
-      3:
-      4:
       5:
         text: "Razmisli o svojo najdražoj video igri. Dobivaš li više poena za jedne akcije nego za druge? Ovo se događa zato što računar koristi uslove. To je način na koji računar donosi odluku. Recimo, ako pogodiš metu, dobivaš deset poena. Ako ne, gubiš tri poena. Kada znaš kako funkcionišu uslovi, možeš kreirati sve vrste uzbudljivi igrica."
     starwars_events:
-      1:
-      2:
-      3:
       4:
         text: "Neki primjeri događaja su čekanje na klik mišem, pritisak na tipku sa strelicom ili dodir ekrana."
-      5:
-      6:
-      7:
-      8:
-      9:
     starwars_blocks_events:
-      1:
-      2:
-      3:
       4:
         text: "Neki primjeri događaja su čekanje na klik mišem, pritisak na tipku sa strelicom ili dodir ekrana."
-      5:
-      6:
-      7:
     mc_if_statements:
-      1:
-      2:
-      3:
       4:
         text: "U ovo slučaju, ne želimo da padnemo u lavu. Lako je izbjeći lavu. Možemo je vidjeti na ekranu. Ali šta je sa lavom ispod kamena koju ne možemo vidjeti?"
-      5:
     mc_congrats_share:
       1:
         text: "Čestitamo! Upravo ste naučili osnovne elemente računarstva."
       2:
         text: "Sad možete koristiti ove blokove da napravite vlastitu kreaciju. Nema više instrukcija i zagonetki da se riješe. Možete napraviti šta god želite. Izbor je Vaš."
-      3:
       4:
         text: "Kada si gotov sa pravljenjem svoje kreacije, izaberi opciju podijeli da dobiješ link da podijeliš sa svojim prijateljima. Zabavi se!"
     mc_congrats_no_share:
@@ -324,78 +290,33 @@ bs:
         text: "Čestitamo! Upravo ste naučili osnovne elemente računarstva."
       2:
         text: "Sad možete koristiti ove blokove da napravite vlastitu kreaciju. Nema više instrukcija i zagonetki da se riješe. Možete napraviti šta god želite. Izbor je Vaš."
-      3:
       4:
         text: "Sada možete napraviti što god želiš. uživaj!"
     gumball_intro:
       1:
         text: "Ako bi želio napraviti vlastitu igru, zaista je lako. Sve što trebaš je nekoliko osnova programiranja i možeš početi igrati igru koju si napravio."
-      2:
-      3:
       4:
         text: "Tvoj ekran je podijeljen u tri glavna dijela. Na lijevoj strani je prostor u kojem će se odvijati tvoj program. Upute su za svaki nivo napisane odmah ispod njega."
-      5:
-      6:
       7:
         text: "Za početak trebaš prikačiti svoje blokove za narandžast \"pri pokretanju\" blok. Možeš prikačiti više blokova zajedno tako da ih vučeš blizu dok se ne pokaže žuta linija, a tada će se oni zakačiti."
-      8:
-      9:
     iceage_intro:
       1:
         text: "Ako bi želio napraviti vlastitu igru, zaista je lako. Sve što trebaš je nekoliko osnova programiranja i možeš početi igrati igru koju si napravio."
-      2:
-      3:
       4:
         text: "Tvoj ekran je podijeljen u tri glavna dijela. Na lijevoj strani je prostor u kojem će se odvijati tvoj program. Upute su za svaki nivo napisane odmah ispod njega."
-      5:
-      6:
       7:
         text: "Za početak trebaš prikačiti svoje blokove za narandžast \"pri pokretanju\" blok. Možeš prikačiti više blokova zajedno tako da ih vučeš blizu dok se ne pokaže žuta linija, a tada će se oni zakačiti."
-      8:
-      9:
     mc_2016_intro:
-      1:
-      2:
-      3:
-      4:
-      5:
       6:
         text: "Ako zaboraviš šta treba uraditi, upute za svako razinu su na vrhu."
-      7:
-      8:
-      9:
     mc_2017_agent_intro:
-      1:
       2:
         text: "Čekaj malo - na pruzi ima rupa! (vrištanje)"
-      3:
-      4:
-      5:
-      6:
-      7:
-      8:
-      9:
-      10:
       11:
         text: "Ako zaboraviš šta treba uraditi, upute za svako razinu su na vrhu."
-      12:
     mc_2017_congratulations:
-      1:
-      2:
       3:
         text: "Stampi: Čestitam, uspio si!"
-      4:
-      5:
-      6:
-      7:
-      8:
     hoc_dance_events_2019:
-      1:
-      2:
-      3:
       4:
         text: "Neki primjeri događaja su čekanje na klik mišem, pritisak na tipku sa strelicom ili dodir ekrana."
-      5:
-      6:
-      7:
-      8:
