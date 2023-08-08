@@ -54,6 +54,8 @@ import {ToolboxType, Themes, Renderers} from './constants';
 import {flyoutCategory as functionsFlyoutCategory} from './addons/functionEditor.js';
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
+import CdoFieldImage from './addons/cdoFieldImage';
+import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import {
   ObservableProcedureModel,
   ObservableParameterModel,
@@ -183,7 +185,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldColour');
   blocklyWrapper.wrapReadOnlyProperty('FieldColourDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldIcon');
-  blocklyWrapper.wrapReadOnlyProperty('FieldImage');
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
@@ -260,6 +261,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   // Code.org custom fields
   blocklyWrapper.FieldButton = CdoFieldButton;
+  blocklyWrapper.FieldImage = CdoFieldImage;
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
   blocklyWrapper.FieldToggle = CdoFieldToggle;
   blocklyWrapper.FieldFlyout = CdoFieldFlyout;
@@ -689,6 +691,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.cdoUtils = cdoUtils;
   blocklyWrapper.customBlocks = customBlocks;
+  blocklyWrapper.getPointerBlockImageUrl = getPointerBlockImageUrl;
 
   return blocklyWrapper;
 }
