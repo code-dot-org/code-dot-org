@@ -2,13 +2,14 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 70,
-  "created_at": "2023-06-22T20:17:57.000Z",
+  "created_at": "2023-08-04T05:25:28.000Z",
   "level_num": "custom",
   "user_id": 976,
   "properties": {
     "encrypted": "false",
     "level_data": {
       "library": "happy",
+      "title": "Title Here!",
       "text": "# Let's Make a Mix\nNow it's time to make your first mix! You have the basic ingredients - including a new `lead`(#509919) function that you can use to make a full song.\n##Do This\nIn the toolbox, you'll notice a few new blocks: the \"play random\" block, which plays one of the blocks inside it at random each time it's played, and some `effect`(#7435b2) blocks that let you change the sound of each function.\nWhat can you make with these new tools?",
       "startSources": {
         "variables": [
@@ -266,9 +267,11 @@
       }
     },
     "hide_share_and_remix": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Let's Make a Mix\r\nNow it's time to make your first mix! You have the basic ingredients - including a new `lead`(#509919) function that you can use to make a full song.\r\n## Do This\r\nIn the toolbox, you'll notice a few new blocks: the \\\"play random\\\" block, which plays one of the blocks inside it at random each time it's played, and some `effect`(#7435b2) blocks that let you change the sound of each function.\r\nWhat can you make with these new tools?",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2023-06-22T20:17:57.588+00:00\",\"changed\":[\"cloned from \\\"music_lab_2023_5\\\"\"],\"cloned_from\":\"music_lab_2023_5\"},{\"changed_at\":\"2023-06-22 20:36:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-22 20:40:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:20:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:24:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:30:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:25:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-01 20:46:39 +0000\",\"changed\":[\"name\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-06-22T20:17:57.588+00:00\",\"changed\":[\"cloned from \\\"music_lab_2023_5\\\"\"],\"cloned_from\":\"music_lab_2023_5\"},{\"changed_at\":\"2023-06-22 20:36:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-22 20:40:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:20:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:24:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 21:30:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:25:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-08-01 20:46:39 +0000\",\"changed\":[\"name\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-07 15:28:51 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-07 15:31:07 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-08 10:56:08 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
