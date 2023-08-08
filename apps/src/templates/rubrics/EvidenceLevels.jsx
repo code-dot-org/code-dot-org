@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
+import {evidenceLevelShape} from './rubricShapes';
 import RadioButton from '@cdo/apps/componentLibrary/radioButton/RadioButton';
 import {
   BodyTwoText,
@@ -67,7 +68,7 @@ export default function EvidenceLevels({
 }
 
 EvidenceLevels.propTypes = {
-  evidenceLevels: PropTypes.arrayOf(PropTypes.object),
+  evidenceLevels: PropTypes.arrayOf(evidenceLevelShape).isRequired,
   canProvideFeedback: PropTypes.bool,
   learningGoalKey: PropTypes.string,
 };
