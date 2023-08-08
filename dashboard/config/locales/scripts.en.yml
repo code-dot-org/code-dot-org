@@ -12604,7 +12604,7 @@ en:
           title: " Nevada Standards Aligned Kindergarten Course"
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
-          description: 'This course offers a computer science curriculum for beginning readers in kindergarten. Students will learn to program using commands with sequencing and loops. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety.
+          description: 'Developed specifically for Nevada standards alignment. This course offers a computer science curriculum for beginning readers in kindergarten. Students will learn to program using commands with sequencing and loops. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety.
 
             '
           student_description: ''
@@ -12631,7 +12631,7 @@ en:
           title: Nevada Standards Aligned First Grade Course
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
-          description: This course for first graders moves students to learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation, critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
+          description: Developed specifically for Nevada standards alignment.  This course for first graders moves students to learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation, critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
           student_description: ''
         nevada-standards-aligned-second-grade-2023:
           lessons:
@@ -12656,7 +12656,7 @@ en:
           title: Nevada Standards Aligned Second Grade Course
           description_audience: ''
           description_short: " Learn the basics of computer science and create your own art, stories, and games."
-          description: In this course, second-grade students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
+          description: Developed specifically for Nevada standards alignment.  In this course, second-grade students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
           student_description: ''
         nevada-standards-aligned-third-grade-2023:
           lessons: {}
@@ -12679,7 +12679,7 @@ en:
           title: Nevada Standards Aligned Third Grade Course
           description_audience: 'Ages: 7-11'
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
-          description: In this course, students in third grade will increase their knowledge of some concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, and more.
+          description: Developed specifically for Nevada standards alignment.  In this course, students in third grade will increase their knowledge of some concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, and more.
           student_description: ''
         nevada-standards-aligned-fourth-grade-2023:
           lessons: {}
@@ -12698,7 +12698,7 @@ en:
           title: Nevada Standards Aligned Fourth Grade Course
           description_audience: 'Ages: 8-12'
           description_short: Learn the basics of sprites, nested loops, and functions.
-          description: Fourth graders begin this course with an introduction to the Sprite Lab programming tool. Following these lessons, students will engage in more complex coding. Students will learn about nested loops and functions. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
+          description: Developed specifically for Nevada standards alignment.  Fourth graders begin this course with an introduction to the Sprite Lab programming tool. Following these lessons, students will engage in more complex coding. Students will learn about nested loops and functions. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
           student_description: ''
         nevada-standards-aligned-fifth-grade-2023-2023:
           lessons: {}
