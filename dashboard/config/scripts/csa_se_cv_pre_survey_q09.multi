@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-Pre-Survey-Q09'
+
+question 'How confident are you in exploring new computer science and AI topics?'
+
+right 'Not at all confident: I do not feel confident about exploring new computer science and AI topics.'
+right 'Slightly confident: I feel a bit confident and am willing to explore, but I am often unsure about how to approach new topics in computer science and AI.'
+right 'Moderately confident: I feel somewhat confident and can handle some new topics, but I often feel hesitant or overwhelmed when faced with more complex or unfamiliar areas.'
+right 'Mostly confident: I feel quite confident and am able to explore most new topics in computer science and AI, though there might be a few complex areas that I find more challenging.'
+right 'Very confident: I am fully confident and eager to explore any new topic in computer science and AI, regardless of its complexity or unfamiliarity.'
+
+allow_multiple_attempts false

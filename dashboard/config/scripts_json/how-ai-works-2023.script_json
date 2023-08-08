@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "how-ai-works",
-    "serialized_at": "2023-07-31 20:46:58 UTC",
+    "serialized_at": "2023-08-03 21:31:54 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -46,7 +46,7 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - AI Bot - is learning how to detect patterns in fish.",
+        "overview": "This lesson centers around the [How AI Works: What is Machine Learning?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nIn this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - AI Bot - is learning how to detect patterns in fish.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](/s/how-ai-works).",
         "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n",
         "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean"
       },
@@ -64,7 +64,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "Students learn how computer vision works. They first look at optical illusions to identify the features of the drawing that their eyes noticed. Students watch a video explaining computer vision and how a computer \"sees\". They design an algorithm that uses a network to decide what number the seven segment display is displaying. Finally, students test their algorithm.",
+        "overview": "This lesson centers around the [How AI Works: Computer Vision](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nStudents learn how computer vision works. They first look at optical illusions to identify the features of the drawing that their eyes noticed. Students watch a video explaining computer vision and how a computer \"sees\". They design an algorithm that uses a network to decide what number the seven segment display is displaying. Finally, students test their algorithm.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](/s/how-ai-works).",
         "preparation": "- Print copies of the Computer Vision Network activity guide for each group\n- (Optional) Print copies of the Seven Segment Display Manipulative",
         "student_overview": "Learn how computer vision works by designing an algorithm to detect numbers."
       },
@@ -82,7 +82,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "Students learn how neural networks work. They first discuss an example of an experience that recommends things to you. They then use a widget that recommends videos based on one person. Students watch a video explaining neural networks. They use an updated widget to adjust the weights of each person. Finally, students discuss the need for diverse perspectives when creating recommendation systems.",
+        "overview": "This lesson centers around the [How AI Works: Neural Networks](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nStudents learn how neural networks work. They first discuss an example of an experience that recommends things to you. They then use a widget that recommends videos based on one person. Students watch a video explaining neural networks. They use an updated widget to adjust the weights of each person. Finally, students discuss the need for diverse perspectives when creating recommendation systems.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](/s/how-ai-works).",
         "preparation": "- Print copies of the WeTube Content Creators resource for each student\n- Print copies of the Neural Network activity guide for each student",
         "student_overview": "Learn how neural networks work by adjusting the weights of a recommendation system to adjust the outputs."
       },
@@ -100,7 +100,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "Large Language Models (LLMs) generate new text. The text LLMs generate looks like a human might have written it because large language models are built based on large bodies of text, such as Wikipedia.\n\nIn this lesson, students learn what an LLM is and how it works, then use an LLM to co-create a text with AI. Finally, the class wraps up with a discussion about whether or not LLMs are intelligent or creative.\n",
+        "overview": "This lesson centers around the [How AI Works: Chatbots and Large Language Models](https://youtu.be/T45kEEBzrT8) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nLarge Language Models (LLMs) generate new text. The text LLMs generate looks like a human might have written it because large language models are built based on large bodies of text, such as Wikipedia. In this lesson, students learn what an LLM is and how it works, then use an LLM to co-create a text with AI. Finally, the class wraps up with a discussion about whether or not LLMs are intelligent or creative.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](/s/how-ai-works).",
         "preparation": "- Print copies of the activity guide for each student",
         "student_overview": "Are Large Language Models (LLMs) intelligent or creative? Decide for yourself as you work with them to create something, and learn more about how they work!"
       },
@@ -118,7 +118,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "Diffusion models generate images. Diffusion AI converts an image to noise, and trains an AI to reverse the process.\n\nIn this lesson, students learn how AI can generate images, then explore a diffusion AI widget. Finally, the class wraps up with a discussion about whether or not these models are creative.\n",
+        "overview": "This lesson centers around the [How AI Works: Creativity and Imagination?](https://www.youtube.com/watch?v=gD1bEC9q54k) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nDiffusion models generate images. Diffusion AI converts an image to noise, and trains an AI to reverse the process. In this lesson, students learn how AI can generate images, then explore a diffusion AI widget. Finally, the class wraps up with a discussion about whether or not these models are creative.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](/s/how-ai-works).",
         "preparation": "- Print copies of the activity guide for each student",
         "student_overview": "Learn how AI can generate images by exploring a diffusion AI widget."
       },
@@ -136,7 +136,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "In this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.",
+        "overview": "This lesson centers around the [How AI Works: Equal Access and Algorithmic Bias](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nIn this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](/s/how-ai-works).",
         "preparation": "* Complete the cropping widget activity yourself so you can see what your students will experience with the widget will be and what questions or issues they may bring up.\n* Watch the parts of the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) referenced in the lesson plan.\n* Read the two articles from the links section below.",
         "student_overview": "In this lesson, you will work on cropping images and discuss the challenges and bias involved in teaching a machine how to crop an image."
       },
@@ -155,7 +155,7 @@
       "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.",
+        "overview": "This lesson centers around the [How AI Works: Privacy and the Future of Work](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video from the [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Watch this video first before exploring the lesson plan.\n\nIn small groups, students conduct research using articles and videos that expose ethical pitfalls in an artificial intelligence area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.\n\nThis lesson can be taught on its own, or as part of a 7-lesson sequence on How AI Works - [click here to view all lessons in this sequence](/s/how-ai-works).",
         "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.",
         "student_overview": "Collaboratively research about AI ethics and create a shareable code of conduct."
       },
@@ -173,7 +173,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "⚠️This lesson is intended for classrooms that want to show the entire How AI Works video series in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom.",
+        "overview": "⚠️This lesson is intended for classrooms that want to show the entire [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) in a **single day**. It is not intended to be taught in sequence with the other lessons in this unit, which introduces each video one day at a time.\n\nStudents follow along with each video by matching vocabulary from the video, then answering a reflection question about each video. The lesson plan and slides are very sparse and open-ended to allow for improvisation and customization to fit your classroom.",
         "preparation": "* Print out the activity guide\n* Project the slides on a video projector\n"
       },
       "seeding_key": {
@@ -831,8 +831,7 @@
       "key": "1e654402-405b-49ad-94a8-ac99524b7b63",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
-        "name": "Preparing for the Unit"
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers series](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education."
       },
       "seeding_key": {
         "activity_section.key": "1e654402-405b-49ad-94a8-ac99524b7b63",
@@ -1224,8 +1223,7 @@
       "key": "a7c37a28-46be-4a1a-b767-99482e8cf353",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
-        "name": "Preparing for the Unit"
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers series](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education."
       },
       "seeding_key": {
         "activity_section.key": "a7c37a28-46be-4a1a-b767-99482e8cf353",
@@ -1661,8 +1659,7 @@
       "key": "5a1c68ad-e858-4aa4-8a9d-b9edaef7dfde",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
-        "name": "Preparing for the Unit"
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers series](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education."
       },
       "seeding_key": {
         "activity_section.key": "5a1c68ad-e858-4aa4-8a9d-b9edaef7dfde",
@@ -2124,8 +2121,7 @@
       "key": "2913480b-0273-4c5a-95c8-23b002a842a0",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
-        "name": "Preparing for the Unit"
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers series](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education."
       },
       "seeding_key": {
         "activity_section.key": "2913480b-0273-4c5a-95c8-23b002a842a0",
@@ -2657,8 +2653,7 @@
       "key": "cb38f0db-8aa1-4d5f-81bf-5d3b19f52fdf",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
-        "name": "Preparing for the Unit"
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers series](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education."
       },
       "seeding_key": {
         "activity_section.key": "cb38f0db-8aa1-4d5f-81bf-5d3b19f52fdf",
@@ -2957,12 +2952,29 @@
       }
     },
     {
-      "key": "951bcfae-b43b-4783-81a2-3022a55bcf63",
+      "key": "b4aa3386-cb77-4253-89c8-2c255a7d620f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Pass out the [r _optional_gan_game_activity_guide/how-ai-works/2023]. Show students how to use the widget by playing one round of human guessing vs computer guessing. Feel free to use the slides at the end of the slide deck as a guide. Be sure to be clear to students that they have no information initially, and they do not have to over-think initial guesses. They'll get things wrong and that's ok! In fact, it's part of the model of the activity -- GANs are wildly guessing too until they have more information.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Students log into Code studio to explore a game where they act like generators.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Pass out the [r _optional_gan_game_activity_guide/how-ai-works/2023]. Show students how to use the widget by playing one round of human guessing vs computer guessing. Feel free to use the slides at the end of the slide deck as a guide. Be sure to be clear to students that they have no information initially, and they do not have to over-think initial guesses. They'll get things wrong and that's ok! In fact, it's part of the model of the activity -- GANs are wildly guessing too until they have more information.",
         "duration": "20",
-        "name": "Optional GAN Activity",
+        "name": "(Optional) GAN Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Exemplar:** You can find an exemplar of this activity guide here: [GAN Game Activity Guide Exemplar](https://docs.google.com/document/d/1pn0eptWyWC0zkX9DtV5fR7qTCw0h9AokkGgLt-8JNkY/)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b4aa3386-cb77-4253-89c8-2c255a7d620f",
+        "lesson_activity.key": "8e09a958-4202-48e1-bd2e-7d0afa3a0c6d"
+      }
+    },
+    {
+      "key": "951bcfae-b43b-4783-81a2-3022a55bcf63",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Code Studio:** Students log into Code studio to explore a game where they act like generators.",
         "progression_name": "(Optional) GAN Guess Widget",
         "tips": [
           {
@@ -2978,7 +2990,7 @@
     },
     {
       "key": "2bc8da2b-fdb5-4b36-a01e-9ca2d9aae2e3",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Help student stay on task, coming up with guesses with them. (Eventually Students should figure out that the rule is a password must have a red circle -- help students who are struggling figure this out by procedurally trying different shapes and colors with them."
       },
@@ -2989,7 +3001,7 @@
     },
     {
       "key": "bc9a34c9-7108-479b-ac07-604c87c08891",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Regroup:** Have students regroup for a synthesis discussion to help them further cement their understanding of generators and discriminators by connecting it to what they did in the activity."
       },
@@ -3000,7 +3012,7 @@
     },
     {
       "key": "371b03d3-6872-4368-b2a0-7528ccb6d2f1",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  When were you acting like a generator in this activity?"
       },
@@ -3011,7 +3023,7 @@
     },
     {
       "key": "cf90f879-7888-4c15-a3c8-a270a7ad8291",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  When students generated random passwords -- even when they weren't accepted -- they were acting like a generator. Generators generate random images that may or may not be accepted as real. "
       },
@@ -3022,7 +3034,7 @@
     },
     {
       "key": "9b5844df-8cd9-492c-8ff3-cd81721402a2",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:**  When were you acting like a discriminator in this activity? ",
         "tips": [
@@ -3039,7 +3051,7 @@
     },
     {
       "key": "4fd7624a-db55-47c0-9582-f66aba02cd69",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students acted like a discriminator when they guessed if the computer's generated password followed the rule or not. They didn't initially know, but got better as they got more data."
       },
@@ -3049,21 +3061,10 @@
       }
     },
     {
-      "key": "17e5f2a5-eb21-46e5-a3aa-d48786fc7912",
-      "position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "17e5f2a5-eb21-46e5-a3aa-d48786fc7912",
-        "lesson_activity.key": "8e09a958-4202-48e1-bd2e-7d0afa3a0c6d"
-      }
-    },
-    {
       "key": "d5c8ccb5-68e1-4044-932a-ac938f81d804",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
-        "name": "Preparing for the Unit"
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers series](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education."
       },
       "seeding_key": {
         "activity_section.key": "d5c8ccb5-68e1-4044-932a-ac938f81d804",
@@ -3320,8 +3321,7 @@
       "key": "17bd5635-8ba9-4318-96e4-d1e3bedf918b",
       "position": 1,
       "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.",
-        "name": "Preparing for the Unit"
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers series](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education."
       },
       "seeding_key": {
         "activity_section.key": "17bd5635-8ba9-4318-96e4-d1e3bedf918b",
@@ -3743,6 +3743,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_ai23"
+        ],
         "progression": "Recognizing Fish"
       },
       "bonus": false,
@@ -3765,6 +3768,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_ai23"
+        ],
         "progression": "Recognizing Fish Features"
       },
       "bonus": false,
@@ -3787,6 +3793,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_ai23"
+        ],
         "progression": "Recognizing Expressions"
       },
       "bonus": false,
@@ -3809,6 +3818,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neural Networks - Perceptron - Beta_ai23"
+        ],
         "progression": "WeTube Video Recommendations (Beta)"
       },
       "bonus": false,
@@ -3831,6 +3843,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Neural Networks - Perceptron - Full_ai23"
+        ],
         "progression": "WeTube Video Recommendations (2.0)"
       },
       "bonus": false,
@@ -3853,6 +3868,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "LLM - Written Voice Simulator_ai23"
+        ],
         "progression": "Written Voice Simulator Widget"
       },
       "bonus": false,
@@ -3875,6 +3893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "LLM - Eliza_ai23"
+        ],
         "progression": "Eliza Widget"
       },
       "bonus": false,
@@ -3897,6 +3918,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Noisy Image Widget_ai23"
+        ],
         "progression": "Noisy Image Widget"
       },
       "bonus": false,
@@ -3919,6 +3943,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GAN Guess Widget_ai23"
+        ],
         "progression": "(Optional) GAN Guess Widget"
       },
       "bonus": false,
@@ -3941,6 +3968,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U9L5 Cropping Widget_ai2023"
+        ],
         "progression": "Cropping Widget"
       },
       "bonus": false,
@@ -4094,6 +4124,18 @@
       }
     },
     {
+      "name": "[Key] Vocabulary Matching",
+      "url": "https://drive.google.com/file/d/1cF8MsKO_lCLziA5FisbcQc2-529j1HXZ/view",
+      "key": "_key_vocabulary_matching",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_vocabulary_matching"
+      }
+    },
+    {
       "name": "(Optional) GAN Game Activity Guide",
       "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
       "key": "_optional_gan_game_activity_guide",
@@ -4154,6 +4196,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/how-ai-works-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/how-ai-works-2023/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/how-ai-works-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Classifying Fish",
       "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view",
       "key": "classifying_fish",
@@ -4204,7 +4279,7 @@
       }
     },
     {
-      "name": "Eliza Activity Guide",
+      "name": "(Optional) Eliza Activity Guide",
       "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6",
       "key": "eliza_activity_guide",
       "properties": {
@@ -4213,18 +4288,6 @@
       },
       "seeding_key": {
         "resource.key": "eliza_activity_guide"
-      }
-    },
-    {
-      "name": "GAN Game Activity Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1pn0eptWyWC0zkX9DtV5fR7qTCw0h9AokkGgLt-8JNkY/",
-      "key": "gan_game_activity_guide_exemplar",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "gan_game_activity_guide_exemplar"
       }
     },
     {
@@ -4240,7 +4303,7 @@
       }
     },
     {
-      "name": "Generative Images Activity Guide",
+      "name": "[Key] Generative Images Activity Guide",
       "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
       "key": "generative_images_activity_guide",
       "properties": {
@@ -4474,7 +4537,7 @@
       }
     },
     {
-      "name": "LLM Vocab And Video Guide Answer Key",
+      "name": "[Key] Vocab And Video Guide",
       "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
       "key": "llm_vocab_and_video_guide_answer_key",
       "properties": {
@@ -4510,12 +4573,11 @@
       }
     },
     {
-      "name": "Noisy Image Activity Exemplar",
+      "name": "[Exemplar] Noisy Image Activity",
       "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/",
       "key": "noisy_image_activity_exemplar",
       "properties": {
         "audience": "Teacher",
-        "include_in_pdf": true,
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -4659,7 +4721,7 @@
       }
     },
     {
-      "name": "Written Voice Simulator Activity Guide Exemplar",
+      "name": "[Exemplar] Written Voice Simulator Activity Guide",
       "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/",
       "key": "written_voice_simulator_activity_guide_exemplar",
       "properties": {
@@ -4819,12 +4881,6 @@
     {
       "seeding_key": {
         "lesson.key": "Generative Images",
-        "resource.key": "gan_game_activity_guide_exemplar"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Generative Images",
         "resource.key": "generative_images"
       }
     },
@@ -4862,6 +4918,12 @@
       "seeding_key": {
         "lesson.key": "Generative Images",
         "resource.key": "video_and_vocabulary_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "How AI Works In a Day",
+        "resource.key": "_key_vocabulary_matching"
       }
     },
     {
@@ -5010,7 +5072,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "how-ai-works-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "how-ai-works-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "how-ai-works-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

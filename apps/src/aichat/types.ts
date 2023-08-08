@@ -7,3 +7,11 @@
 export type AichatLocale = {
   [key: string]: () => string;
 };
+
+export type ChatMessage = {
+  id: string;
+  name: string;
+  role: 'user' | 'assistant' | 'system';
+  chatMessageText: string;
+  status: 'ok' | 'inappropriate' | 'personal';
+};
