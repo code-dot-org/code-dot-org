@@ -50,7 +50,7 @@ jobs:
     steps:
       - run: |
           env
-          git clone git@github.com:code-dot-org/code-dot-org.git
+          git clone https://github.com/code-dot-org/code-dot-org.git
   #         env
   #         echo hi
   #         echo "DIRECT K8S_DOCKERHUB_REPOSITORY=$K8S_DOCKERHUB_REPOSITORY"
