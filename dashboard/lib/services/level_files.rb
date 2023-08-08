@@ -30,6 +30,7 @@ module Services
       Services::LevelFiles.reorganize_level_files_into_subdirectories(level)
 
       file_path = Policies::LevelFiles.level_file_path(level)
+      FileUtils.mkdir_p(File.dirname(file_path))
       File.write(file_path, level.to_xml)
       return file_path
     end
