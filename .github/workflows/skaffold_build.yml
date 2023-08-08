@@ -28,7 +28,7 @@ jobs:
           registry: ${{ secrets.K8S_DOCKEHUB_REPOSITORY }}
           username: thisshouldfail
           password: ${{ secrets.K8S_DOCKERHUB_TOKEN }}
-  build:
+  # build:
   #   name: Skaffold Build
   #   runs-on: ubuntu-22.04
   #   container:
