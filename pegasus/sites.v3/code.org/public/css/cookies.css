@@ -11,7 +11,7 @@
 }
 
 .cookies-settings-btn:hover {
-  background-color: #9660BF !important;
+  background-color: var(--brand_secondary_default) !important;
 }
 
 .cookies-consent-tool {

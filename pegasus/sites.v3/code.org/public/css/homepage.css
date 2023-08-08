@@ -9,13 +9,13 @@ a:hover {
 a.underscorehover:hover
 {
   text-decoration: underline;
-  color: white;
+  color: var(--neutral_white);
 }
 
 .underscorehover:hover
 {
   text-decoration: underline;
-  color: white;
+  color: var(--neutral_white);
 }
 
 a.nounderscorehover:hover
@@ -88,7 +88,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage #caption_container {
-  color: white;
+  color: var(--neutral_white);
   font-size: 20px;
 }
 
@@ -207,7 +207,7 @@ body.modal-open .supreme-container{
 @media screen and (min-width: 601px) {
   #homepage .hero-messages-ai .hero-super-message {
     font-size: 24px;
-    color: white;
+    color: var(--neutral_white);
     margin-bottom: 16px;
     margin-top: 30px;
   }
@@ -220,7 +220,7 @@ body.modal-open .supreme-container{
 
   #homepage .hero-messages-ai .hero-description {
     font-size: 18px;
-    color: white;
+    color: var(--neutral_white);
     max-width: 650px;
     margin-bottom: 16px;
   }
@@ -239,7 +239,7 @@ body.modal-open .supreme-container{
 @media screen and (min-width: 0px) and (max-width: 600px) {
   #homepage .hero-messages-ai .hero-super-message {
     font-size: 16px;
-    color: white;
+    color: var(--neutral_white);
     text-align: center;
     margin-bottom: 5px;
   }
@@ -252,7 +252,7 @@ body.modal-open .supreme-container{
 
   #homepage .hero-messages-ai .hero-description {
     font-size: 18px;
-    color: white;
+    color: var(--neutral_white);
   }
 
   #homepage .join_us_ai {
@@ -291,19 +291,19 @@ body.modal-open .supreme-container{
   width: 100%;
   background-color: rgb(118,101,160);
   text-align: center;
-  color: white;
+  color: var(--neutral_white);
   padding: 14px;
   font-size: 15px;
 }
 
 .curriculum-banner a {
-  color: white !important;
+  color: var(--neutral_white) !important;
   font-family: 'Gotham 4r', sans-serif !important;
   text-decoration: underline !important;
 }
 
 .curriculum-link {
-  color: white !important;
+  color: var(--neutral_white) !important;
   font-family: 'Gotham 4r', sans-serif !important;
   text-decoration: underline !important;
 }
@@ -319,14 +319,14 @@ body.modal-open .supreme-container{
 #homepage #actions #title {
   font-family: 'Gotham 5r', sans-serif;
   font-size: 26px;
-  color: white;
+  color: var(--neutral_white);
   line-height: 30px;
 }
 
 #homepage #actions #subtitle {
   font-family: 'Gotham 4r', sans-serif;
   font-size: 16px;
-  color: white;
+  color: var(--neutral_white);
   margin: 15px 0 5px 0;
 }
 
@@ -340,7 +340,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage #actions #herolearnlink {
-  color: white;
+  color: var(--neutral_white);
   font-size: 20px
 }
 
@@ -370,7 +370,7 @@ body.modal-open .supreme-container{
   font-family: 'Gotham 4r', sans-serif;
   font-weight: 500;
   font-size: 18px;
-  color: white;
+  color: var(--neutral_white);
   display: inline-block;
   margin-top: 24px
 }
@@ -387,8 +387,8 @@ body.modal-open .supreme-container{
 
 #homepage #actions .herohocbutton-solid-white {
   color: black;
-  background-color: white;
-  border-color: white;
+  background-color: var(--neutral_white);
+  border-color: var(--neutral_white);
 }
 
 #homepage #actions .herohocbutton-solid-grey {
@@ -398,7 +398,7 @@ body.modal-open .supreme-container{
 }
 
 #homepage #actions .herohocbutton-solid-black {
-  color: white;
+  color: var(--neutral_white);
   background-color: black;
   border-color: black;
 }
@@ -411,7 +411,7 @@ body.modal-open .supreme-container{
 
 #homepage #actions .herohocbutton-hollow-white {
   background-color: initial;
-  border-color: white;
+  border-color: var(--neutral_white);
 }
 
 #homepage #actions .herohocbutton-solid-yellow {
@@ -427,14 +427,14 @@ body.modal-open .supreme-container{
 #homepage #actions #volunteeraction {
   font-family: 'Gotham 4r', sans-serif;
   font-size: 16px;
-  color: white;
+  color: var(--neutral_white);
   margin-top: 30px;
 }
 
 #homepage #actions #volunteeraction a {
   font-family: 'Gotham 4r', sans-serif;
   font-size: 16px;
-  color: white;
+  color: var(--neutral_white);
   text-decoration: none;
 }
 
@@ -468,7 +468,7 @@ body.modal-open .supreme-container{
   position: absolute;
   bottom: 0px;
   left: 0px;
-  color: white;
+  color: var(--neutral_white);
   width: 100%;
   padding: 10px;
   font-size: 18px;
@@ -516,7 +516,7 @@ body.modal-open .supreme-container{
   position: absolute;
   bottom: 0px;
   left: 0px;
-  color: white;
+  color: var(--neutral_white);
   width: 100%;
   padding: 10px;
   font-size: 18px;
@@ -548,7 +548,7 @@ body.modal-open .supreme-container{
 #homepage .quarterslot-links .thelinks .link {
   font-size: 16px;
   font-family: 'Gotham 4r', sans-serif;
-  color: white;
+  color: var(--neutral_white);
   text-decoration: none;
 }
 
@@ -562,12 +562,12 @@ body.modal-open .supreme-container{
   margin-top: 40px;
   clear: both;
   overflow: hidden;
-  border: 5px solid white
+  border: 5px solid var(--neutral_white)
 }
 
 #homepage #gallerycolumn .headingbox {
   left: 0px;
-  color: white;
+  color: var(--neutral_white);
   width: 100%;
   padding: 10px;
   font-size: 20px;
@@ -642,7 +642,7 @@ body.modal-open .supreme-container{
 }
 
 .every-student {
-  color: #292F36;
+  color: var(--neutral_dark);
   font-size: 18px;
   text-align: center;
   margin-top: 20px;
@@ -673,7 +673,7 @@ body.modal-open .supreme-container{
 
 .statistics a .stats-number {
   text-align: center;
-  color: #292F36;
+  color: var(--neutral_dark);
   font-family: 'Gotham 4r', sans-serif;
   font-weight: 900;
   text-decoration: none;
@@ -684,12 +684,12 @@ body.modal-open .supreme-container{
   line-height: 1.2;
   text-align: center;
   padding-top: 12px;
-  color: #292F36;
+  color: var(--neutral_dark);
   font-family: 'Gotham 4r', sans-serif;
 }
 
 .statistics a .stats-number:hover {
-  color: #009EB0;
+  color: var(--brand_primary_default);
 }
 
 .below_hero_announcement {
@@ -757,7 +757,7 @@ body.modal-open .supreme-container{
   }
 
   #homepage .csa .text {
-    color: white;
+    color: var(--neutral_white);
     text-align: left;
     line-height: 1.3;
     max-width: 470px;

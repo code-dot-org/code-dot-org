@@ -14,7 +14,7 @@
 #infobox {
   text-align: center;
   float: right;
-  background-color: rgb(231,232,234);
+  background-color: var(--neutral_dark10);
   padding: 20px;
   text-align: center;
   overflow: hidden;
@@ -50,7 +50,7 @@
 }
 
 .info a:link, .info a:visited, .states-link a:link, .states-link a:visited {
-  color: white;
+  color: var(--neutral_white);
   cursor: pointer;
   text-decoration: underline;
 }
@@ -70,7 +70,7 @@
 }
 
 .icon-fact .fa-times-circle {
-  color: lightgray;
+  color: var(--neutral_dark20);
   font-size: 48px;
 }
 
@@ -101,7 +101,7 @@
 
 #state-title {
   font-family: 'Gotham 7r', sans-serif;
-  color: #0094a3;
+  color: var(--brand_primary_dark);
   font-size: 38px;
   line-height: 44px;
 }
@@ -115,6 +115,6 @@
   float: right;
   font-size: 12px;
   text-align: center;
-  color: #7F8286;
+  color: var(--neutral_dark60);
   padding-top: 10px;
 }

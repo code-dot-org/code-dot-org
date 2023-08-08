@@ -1,7 +1,7 @@
 .join-coalition-wrapper {
   display: flex;
   flex-direction: row;
-  border: 1px solid #D4D5D7;
+  border: 1px solid var(--neutral_dark20);
  }
 
 .left-side-image {
@@ -10,7 +10,7 @@
 }
 
 .join-coalition-wrapper .right {
-  background-color: #F7F8FA;
+  background-color: var(--neutral_light);
   padding: 30px;
   min-height: 200px;
   display: flex;
