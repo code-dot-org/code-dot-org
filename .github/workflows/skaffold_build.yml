@@ -15,12 +15,13 @@ jobs:
       # options: --cpus 1
     steps:
       - name: Try doing something in the container
-        run: ls -l
+        run: ls -l /
       # - name: Checkout sources
       #   uses: actions/checkout@v3
 
       - run: |
           which skaffold
+          skaffold version
 
     # gcr.io/k8s-skaffold/skaffold:v2.6.3-lts
 
