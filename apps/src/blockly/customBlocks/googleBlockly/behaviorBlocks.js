@@ -2,6 +2,7 @@ import * as GoogleBlockly from 'blockly/core';
 import BlockSvgFrame from '../../addons/blockSvgFrame';
 import msg from '@cdo/locale';
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
+import {createAndCenterNewDefBlock} from './proceduresBlocks';
 
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
@@ -88,6 +89,23 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     ],
     mutator: 'behavior_get_mutator',
   },
+  {
+    type: 'sprite_parameter_get',
+    message0: '%1',
+    args0: [
+      {
+        type: 'field_label',
+        name: 'VAR',
+        variable: '%{BKY_VARIABLES_DEFAULT_NAME}',
+        text: msg.thisSprite(),
+      },
+    ],
+    output: 'Sprite',
+    style: 'sprite_blocks',
+    helpUrl: '%{BKY_VARIABLES_GET_HELPURL}',
+    tooltip: '%{BKY_VARIABLES_GET_TOOLTIP}',
+    extensions: ['contextMenu_variableSetterGetter'],
+  },
 ]);
 
 // This extension adds an SVG frame around behavior definition blocks.
@@ -160,11 +178,13 @@ GoogleBlockly.Extensions.registerMutator(
 );
 
 const behaviorAddThisSpriteParam = function () {
-  if (!this.workspace.isFlyout) {
-    this.getProcedureModel().insertParameter(
-      new ObservableParameterModel(this.workspace, msg.thisSprite()),
-      0
-    );
+  if (this.workspace.rendered && !this.workspace.isFlyout) {
+    if (!this.getProcedureModel().getParameters().length) {
+      this.getProcedureModel().insertParameter(
+        new ObservableParameterModel(this.workspace, msg.thisSprite()),
+        0
+      );
+    }
   }
 
   this.doProcedureUpdate();
@@ -218,24 +238,8 @@ export function flyoutCategory(workspace) {
     // call to open the behavior editor with a new defintion block.
     // Until then, we just create a block under all existing blocks on the
     // main workspace.
-    const getLowestBlockBottomY = () => {
-      let lowestBlockBottom = 0;
-      Blockly.getMainWorkspace()
-        .getTopBlocks()
-        .forEach(block => {
-          const blockY = block.getRelativeToSurfaceXY().y;
-          const blockBottom = blockY + block.getHeightWidth().height;
-          if (blockBottom > lowestBlockBottom) {
-            lowestBlockBottom = blockBottom;
-          }
-        });
-      return lowestBlockBottom + 16;
-    };
-    Blockly.serialization.blocks.append(
-      {...behaviorDefinitionBlock, x: 16, y: getLowestBlockBottomY()},
-      Blockly.getMainWorkspace()
-    );
-    Blockly.getMainWorkspace().hideChaff();
+
+    createAndCenterNewDefBlock(behaviorDefinitionBlock);
   };
   if (useModalFunctionEditor) {
     workspace.registerButtonCallback('createNewBehavior', createNewBehavior);

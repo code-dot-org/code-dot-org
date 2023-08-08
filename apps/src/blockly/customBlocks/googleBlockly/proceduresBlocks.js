@@ -181,25 +181,9 @@ export function flyoutCategory(workspace) {
     // call to open the behavior editor with a new defintion block.
     // Until then, we just create a block under all existing blocks on the
     // main workspace.
-    const getLowestBlockBottomY = () => {
-      let lowestBlockBottom = 0;
-      Blockly.getMainWorkspace()
-        .getTopBlocks()
-        .forEach(block => {
-          const blockY = block.getRelativeToSurfaceXY().y;
-          const blockBottom = blockY + block.getHeightWidth().height;
-          if (blockBottom > lowestBlockBottom) {
-            lowestBlockBottom = blockBottom;
-          }
-        });
-      return lowestBlockBottom + 16;
-    };
-    Blockly.serialization.blocks.append(
-      {...functionDefinitionBlock, x: 16, y: getLowestBlockBottomY()},
-      Blockly.getMainWorkspace()
-    );
-    Blockly.getMainWorkspace().hideChaff();
+    createAndCenterNewDefBlock(functionDefinitionBlock);
   };
+
   if (useModalFunctionEditor) {
     workspace.registerButtonCallback('createNewFunction', createNewFunction);
     blockList.push(newFunctionButton);
@@ -247,3 +231,34 @@ function procedureIsBehavior(procedure) {
     procedure.parameters.some(param => param.name === msg.thisSprite())
   );
 }
+
+const getLowestBlockBottomY = () => {
+  let lowestBlockBottom = 0;
+  Blockly.getMainWorkspace()
+    .getTopBlocks()
+    .forEach(block => {
+      const blockY = block.getRelativeToSurfaceXY().y;
+      const blockBottom = blockY + block.getHeightWidth().height;
+      if (blockBottom > lowestBlockBottom) {
+        lowestBlockBottom = blockBottom;
+      }
+    });
+  return lowestBlockBottom + 16;
+};
+
+export const createAndCenterNewDefBlock = function (blockState) {
+  // Everything here is place-holder code that should be replaced with a
+  // call to open the behavior editor with a new defintion block.
+  // Until then, we just create a block under all existing blocks on the
+  // main workspace.
+
+  const newDefBlock = Blockly.serialization.blocks.append(
+    {...blockState, x: 16, y: getLowestBlockBottomY()},
+    Blockly.getMainWorkspace()
+  );
+  // Hide the open toolbox flyout
+  Blockly.getMainWorkspace().hideChaff();
+  // Scroll to the new block and select it.
+  Blockly.getMainWorkspace().centerOnBlock(newDefBlock.id);
+  newDefBlock.select();
+};

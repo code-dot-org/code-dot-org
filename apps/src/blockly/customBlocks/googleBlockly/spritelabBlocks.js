@@ -133,5 +133,6 @@ export const blocks = {
       );
       return [`new Behavior(${name}, [])`, Blockly.JavaScript.ORDER_ATOMIC];
     };
+    generator.sprite_parameter_get = generator.variables_get;
   },
 };

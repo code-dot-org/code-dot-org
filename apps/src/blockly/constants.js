@@ -73,4 +73,7 @@ export function stringIsXml(str) {
 // A list of block types that are procedure definitions. These are sorted
 // first when loading blocks so that we can set up the procedure map
 // correctly while using the shareable procedure blocks plugin.
-export const PROCEDURE_DEFINITION_TYPES = ['procedures_defnoreturn'];
+export const PROCEDURE_DEFINITION_TYPES = [
+  'behavior_definition',
+  'procedures_defnoreturn',
+];
