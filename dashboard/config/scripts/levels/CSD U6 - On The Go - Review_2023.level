@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:13:22.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Review Your App\r\n\r\nTake a moment to review your app. Double-check that it meets all the requirements in the rubric - [click here to see the rubric](https://docs.google.com/document/d/11wbS2tB6eOzkyY0Q-JFqpgR14XaY7wZBKhlRHrBBVQI/edit). Make any changes or updates you think are necessary, or you may decide that the app is fine.\r\n\r\nWhenever your finished, press Run and then the purple Submit button to submit your project. Once you submit it, you won't be able to edit it.",
+    "long_instructions": "# Review Your App\r\n\r\nTake a moment to review your app. Double-check that it meets all the requirements in the rubric - [click here to see the rubric](https://docs.google.com/document/d/11wbS2tB6eOzkyY0Q-JFqpgR14XaY7wZBKhlRHrBBVQI/edit). Make any changes or updates you think are necessary, or you may decide that the app is fine.\r\n\r\nWhenever you're finished, press Run and then the purple Submit button to submit your project. Once you submit it, you won't be able to edit it.",
     "instructions_important": "false",
     "submittable": "true",
     "is_k1": "false",
@@ -44,7 +45,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20376,
     "name_suffix": "_2023",
@@ -71,9 +72,8 @@
     "encrypted_examples": "tjPQ+wdvC1LC++ItyrgrMmhZu+YPt9W0C9t+DyNPHm+G/9rdsMkzaV68tZQK\nL0Ojb8KXov2nWig6i/exKldVrFJGn9hUFkbhUe6ZY7zB0In3S0JQALnL2ZNF\ncFKHLTtWLXJ38mNHQKcrbfX7z1nKGBphkr6+IG7fpRDCA+Vy5fXa3/RkpbaD\nZZwf18HqspwpNfRUbX66zizabZ5hE/HV8Q==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:13:22.351+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - On The Go - Review_2222\\\"\"],\"cloned_from\":\"CSD U6 - On The Go - Review_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:13:22.351+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - On The Go - Review_2222\\\"\"],\"cloned_from\":\"CSD U6 - On The Go - Review_2222\"},{\"changed_at\":\"2023-07-31 19:34:30 +0000\",\"changed\":[\"long_instructions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

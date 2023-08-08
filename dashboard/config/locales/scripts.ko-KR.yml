@@ -1763,6 +1763,8 @@ ko:
               display_name: '챕터 1: 문제 해결 과정'
             lessonGroup-3:
               display_name: '챕터 2: 컴퓨터와 문제 해결'
+            lessonGroup-5:
+              display_name: 설문조사
         csd1-dlp:
           description: 'Code.org CS 발견 교육 중인 진행자를 위한 심화 학습 계획의 단원 1입니다. 여기서 Code.org
             CS 발견 커리큘럼의 단원 1을 충분히 숙지했음을 입증하기 위한 성찰 프롬프트와 안내를 찾을 수 있습니다. 일단 이 단원에서
@@ -4621,6 +4623,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-coding2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4654,6 +4658,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-creativity2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4687,6 +4693,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-data2:
           description_short: 데이터 문제를 풀기 위해 사람들이 컴퓨터를 사용하는 방식에 대해 배우세요.
           lesson_groups:
@@ -4721,6 +4729,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-design-with-purpose2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4757,6 +4767,8 @@ ko:
               display_name: '챕터 1: 문제 해결 과정'
             lessonGroup-3:
               display_name: '챕터 2: 컴퓨터와 문제 해결'
+            lessonGroup-5:
+              display_name: 설문조사
         focus-on-hardware2-2023:
           description_short: 데이터 문제를 풀기 위해 사람들이 컴퓨터를 사용하는 방식에 대해 배우세요.
           lesson_groups:

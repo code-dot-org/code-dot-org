@@ -5,19 +5,11 @@ eu:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': ertaina
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': ertaina
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -281,10 +273,6 @@ eu:
         options:
           SPEED:
             '1': arrunta
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
@@ -295,10 +283,6 @@ eu:
             '"ROBOT"': robot guztiak
           SPEED:
             '1': arrunta
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setProp:
         options:
           PROPERTY:
@@ -463,9 +447,7 @@ eu:
       Dancelab_whenPeak:
         options:
           RANGE:
-            '0': bass
             '1': erdi
-            '2': treble
       Dancelab_whenSetupSong:
         options:
           SONG:
@@ -568,9 +550,7 @@ eu:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': ertaina
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -608,10 +588,7 @@ eu:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': ertaina
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -626,10 +603,7 @@ eu:
           PROPERTY:
             '"scale"': tamaina
           SIZE:
-            '25': extra small
-            '50': small
             '75': ertaina
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -638,11 +612,7 @@ eu:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
-            '3': slow
             '5': arrunta
-            '7': fast
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

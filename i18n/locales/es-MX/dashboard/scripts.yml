@@ -6589,6 +6589,8 @@ es-MX:
               display_name: 'Capítulo 2: Computadoras y resolución de problemas'
             lessonGroup-4:
               display_name: Lecciones Alternativas
+            lessonGroup-5:
+              display_name: Encuesta
           student_description: Resolución de Problemas y Computación es una iniciación altamente interactiva y colaborativa al campo de la informática, enmarcada dentro de la búsqueda más amplia de la resolución de problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de rompecabezas, desafíos y escenarios del mundo real. A continuación, aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan información para ayudar a los humanos a resolver problemas.  La unidad concluye con un proyecto en el que diseñarás una aplicación que ayude a resolver un problema de tu elección.
         csd2-2023:
           lesson_groups:
@@ -7171,6 +7173,8 @@ es-MX:
               display_name: 'Capítulo 1: El proceso de resolución de problemas'
             lessonGroup-3:
               display_name: Lecciones Alternativas
+            lessonGroup-4:
+              display_name: Encuesta
           student_description: Resolución de Problemas y Computación es una iniciación altamente interactiva y colaborativa al campo de la informática, enmarcada dentro de la búsqueda más amplia de la resolución de problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de rompecabezas, desafíos y escenarios del mundo real. A continuación, aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan información para ayudar a los humanos a resolver problemas.  La unidad concluye con un proyecto en el que diseñarás una aplicación que ayude a resolver un problema de tu elección.
         focus-on-creativity2-2023:
           lesson_groups:
@@ -7204,6 +7208,8 @@ es-MX:
               display_name: 'Capítulo 2: Computadoras y resolución de problemas'
             lessonGroup-4:
               display_name: Lecciones Alternativas
+            lessonGroup-5:
+              display_name: Encuesta
           student_description: Resolución de Problemas y Computación es una iniciación altamente interactiva y colaborativa al campo de la informática, enmarcada dentro de la búsqueda más amplia de la resolución de problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de rompecabezas, desafíos y escenarios del mundo real. A continuación, aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan información para ayudar a los humanos a resolver problemas.  La unidad concluye con un proyecto en el que diseñarás una aplicación que ayude a resolver un problema de tu elección.
         focus-on-hardware2-2023:
           lesson_groups:
@@ -7228,6 +7234,8 @@ es-MX:
               display_name: 'Capítulo 1: El proceso de resolución de problemas'
             lessonGroup-3:
               display_name: Lecciones Alternativas
+            lessonGroup-4:
+              display_name: Encuesta
           student_description: Resolución de Problemas y Computación es una iniciación altamente interactiva y colaborativa al campo de la informática, enmarcada dentro de la búsqueda más amplia de la resolución de problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de rompecabezas, desafíos y escenarios del mundo real. A continuación, aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan información para ayudar a los humanos a resolver problemas.  La unidad concluye con un proyecto en el que diseñarás una aplicación que ayude a resolver un problema de tu elección.
         focus-on-data2:
           lesson_groups:
@@ -7274,6 +7282,8 @@ es-MX:
               display_name: 'Capítulo 1: El proceso de resolución de problemas'
             lessonGroup-3:
               display_name: Lecciones Alternativas
+            lessonGroup-4:
+              display_name: Encuesta
           student_description: Resolución de Problemas y Computación es una iniciación altamente interactiva y colaborativa al campo de la informática, enmarcada dentro de la búsqueda más amplia de la resolución de problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de rompecabezas, desafíos y escenarios del mundo real. A continuación, aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan información para ayudar a los humanos a resolver problemas.  La unidad concluye con un proyecto en el que diseñarás una aplicación que ayude a resolver un problema de tu elección.
         focus-on-design-with-purpose2-2023:
           lesson_groups:
@@ -7304,6 +7314,8 @@ es-MX:
               display_name: 'Capítulo 1: El proceso de resolución de problemas'
             lessonGroup-3:
               display_name: Lecciones Alternativas
+            lessonGroup-4:
+              display_name: Encuesta
           student_description: Resolución de Problemas y Computación es una iniciación altamente interactiva y colaborativa al campo de la informática, enmarcada dentro de la búsqueda más amplia de la resolución de problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de rompecabezas, desafíos y escenarios del mundo real. A continuación, aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan información para ayudar a los humanos a resolver problemas.  La unidad concluye con un proyecto en el que diseñarás una aplicación que ayude a resolver un problema de tu elección.
         focus-on-coding2-2023:
           lesson_groups:

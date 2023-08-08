@@ -5510,33 +5510,49 @@
             null
           ]
         },
+        "ad03dcc6-515c-4a86-bf14-d0bb13c89769": {
+          "description": "## Antes da aula\n\n#### Certifique-se de que você está registrado no Code Studio como um professor \"autorizado\".\n\nQualquer pessoa pode criar uma conta de professor no Code Studio, o que significa que precisamos de uma camada extra de autorização para permitir que os professores do CS Discoveries possam visualizar as avaliações, as chaves de resposta, e qualquer outro material complementar que os alunos não deveriam acessar livremente. Se você participou de uma Conferência para Professores Code.org, você já deve ter esse acesso. \n\nPara verificar se você tem esse acesso: \n\n1.  Navegue até a [Página Principal do curso Unidade 1](https://studio.code.org/s/csd1-2021)\n2.  Você consegue visualizar a Pesquisa Pré-Curso do CS Discoveries como o primeiro \"passo\" do curso?\n3.  Se não, gentilmente preencha [este formulário](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Tenha em mente que pode demorar entre um e dois dias para que a sua conta de professor autorizado seja aprovada, então não demore a criar essa conta!\n\nSe você não foi um professor autorizado, você ainda assim pode criar uma seção para a sua turma, mas você não poderá aplicar a pesquisa pré-curso no primeiro dia.\n\n#### Crie uma seção para a sua turma no Code Studio.\n\nPara criar uma seção:\n\n1.  Navegue até a [Página dos Professores](https://studio.code.org/home)\n2.  Clique 'Nova seção' nas 'Seções de Salas de Aula'\n3.  Escolha 'Logins por Email' \n4.  No espaço reservado, dê um nome para a sua seção (exemplo: CSD Período 1), a série ou ano dos seus alunos, Curso: 'Descobertas da Ciência da Computação', Unidade atual: 'Unidade 1: Resolução de Problemas', e clique 'Salvar'\n5.  Assim que a seção tiver sido criada, clique no nome da seção\n6.  Na nova página, você verá um URL específico para Participar, que você deverá compartilhar com os seus alunos em aula. \n\nPara um guia em vídeo desses passos e para mais informações sobre como navega a sua conta Code.org, vá até o \n[r how-to-videos/csd/2021]"
+        },
         "32772c7d-26fd-4352-b09c-6a7331500a70": {
           "description": "## No início da aula\n\n1.  Peça aos alunos que criem uma conta do Code Studio em <https://studio.code.org> se ainda não tiverem uma\n2.  Compartilhe a URL de inscrição da seção com os alunos e peça que eles naveguem até ela para ingressar na seção\n    -   Você pode confirmar que um aluno entrou com sucesso na sua seção abrindo a página de progresso da seção na página inicial do professor e pressionando a tecla Atualizar quando os alunos entrarem. Os alunos devem ver uma pequena barra verde na parte superior da página que diz “Você ingressou com sucesso...” \n3.  De [studio.code.org]a[1] , peça aos alunos que localizem o quadro Descobertas da Ciência da Computação e cliquem em “Exibir curso” e, em seguida, vá para a Unidade 1.\n\nQuando os alunos acessarem a página de visão geral da Unidade 1, eles estarão prontos para responder à pesquisa pré-curso do CSD"
         },
         "1dca60be-eb7f-40ef-8b91-8ca231c1b14a": {
           "description": "#### Importante! Faça com que seus alunos respondam à Pesquisa Pré-Curso do CSD!\n\nOs alunos podem encontrar um link para a pesquisa no Code Studio como o primeiro item na página de visão geral da Unidade 1. Para garantir que os alunos respondam à pesquisa apenas no momento apropriado, ela é “bloqueada” e não pode ser visualizada por eles até que você “desbloqueie” a pesquisa. O artigo de suporte [Como administrar uma avaliação bloqueada](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys) fornece detalhes sobre como fazer isso quando estiver pronto. Observe que as instruções para administrar uma avaliação e uma pesquisa são as mesmas.    \n\n\\*\\*Quanto tempo demora? \\*\\* A pesquisa leva algum tempo - são cerca de 30 perguntas. Você pode considerar administrá-lo em um dia administrativo na escola ou como uma lição de casa dada no início do curso.\n\n\\*\\*Quando devo fazer a pesquisa? \\*\\* Por ser uma pesquisa pré-curso, é importante que os alunos a façam o mais cedo possível no curso, antes de terem muita (ou nenhuma) exposição às aulas, para que possamos avaliar com precisão as mudanças nas atitudes e crenças causadas pelo curso.",
           "tips": [
-            null
+            "-   Um dos principais objetivos do CS Discoveries é ampliar a participação da Ciência da Computação.  \n\n-   Portanto, é _crucial_ ter uma visão das atitudes e crenças dos alunos sobre a \n    Ciência da Computação _antes_ do curso, para que possamos medir a quantidade de mudanças que ocorreram _após_ o término do curso.\n\n-   Observe que esta pesquisa é **anônima para os alunos**\n\n-   Seu preenchimento também nos ajuda a entender os aperfeiçoamentos que podemos fazer no currículo para melhorar a experiência do professor e do aluno.\n\n\\*\\*Ajude, garantindo que seus alunos contribuam com este importante conjunto de dados . Suas vozes fazem a diferença! \\*\\*"
           ]
         },
         "1c951438-4727-4ea5-84d9-560f7dac9204": {
           "name": "Prepare o Cenário",
+          "description": "**Prompt:** O que faz de alguém um bom solucionador de problemas? Prepare-se para compartilhar três ideias com seu grupo.",
           "tips": [
-            null
+            "**Diário:** O registro no diário é uma prática fundamental nas descobertas de CS. Os alunos podem escrever um diário em folhas soltas, em cadernos ou digitalmente.\n\n**Slides:** Os slides desta unidade estão disponíveis na seção “Recursos para professores” do plano de aula. Você terá que fazer uma cópia, o que só precisará ser feito uma vez - depois disso, você poderá usar os slides de cada lição do currículo."
           ]
         },
         "37d397d0-785f-4dc7-b172-2b51e5757ba3": {
+          "description": "**Discuta:** Encoraje os alunos a compartilhem suas respostas com seus grupos ou com um parceiro e, em seguida, peça a voluntários que  compartilhem com toda a turma.",
           "tips": [
-            null
+            "O objetivo deste aquecimento é fazer com que os alunos comecem a pensar sobre como resolver problemas como uma forma de se prepararem para a atividade do dia. Destaque as respostas que reforçam as principais práticas da aula, como colaboração, persistência e criatividade. Esta também é uma chance de reforçar uma cultura positiva que incentiva os alunos a compartilharem e a se apoiarem mutuamente na discussão de suas ideias."
           ]
         },
+        "4ae4ed17-55d9-4ad4-837d-06cbcaa121d1": {
+          "description": "Todas essas são ótimas ideias! Na Ciência da Computação, temos que resolver problemas o tempo todo, então analisaremos todas essas habilidades de resolução de problemas hoje e durante o resto do curso. A maior parte da solução de problemas com que as pessoas se depararm na Ciência da Computação acontece em equipes. Hoje, vamos trabalhar em equipe para resolver um problema divertido que não precisa de computadores. Enquanto você trabalha nesse problema, aqui está uma pergunta sobre a qual você pode pensar."
+        },
+        "9eb792f3-b6ec-4e1b-a96e-f9bc4bda5247": {
+          "description": "**Exibição:** Mostre aos alunos a pergunta do dia\n\n\\*\\*Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe? \\*\\*"
+        },
+        "621b00e1-d6b6-4060-b0db-8dee8c8ebb6a": {
+          "description": "**Em grupos**: organize os alunos em grupos de 2 ou 3 participantes."
+        },
         "5166952d-961b-4ba8-b379-c4101d84b4de": {
+          "description": "**Material a ser distribuído**: Uma cópia do guia de atividades para cada grupo.",
           "tips": [
             null
           ]
         },
         "79ffacab-f428-4e4f-8f85-e9409b2e43a3": {
           "name": "Objetivo e Regras",
+          "description": "Com a turma toda, leia as seções Metas e Regras do guia de atividades e responda às perguntas.",
           "tips": [
             null
           ]
@@ -5552,19 +5568,28 @@
         },
         "e1fdc61e-61b5-4b5d-b46a-62a26f7cca05": {
           "tips": [
-            null
+            "Embora alguns alunos vejam essa etapa como uma competição, enfatize que cada grupo está procurando melhorar seu próprio design, não competindo com os outros grupos. Você está buscando que cada aluno desafie a si mesmo primeiro, não aos outros."
           ]
         },
         "fc1bd727-4c35-4405-a14f-a713bcd7e532": {
-          "name": "Reflita"
+          "name": "Reflita",
+          "description": "**Transição**: Peça à turma que volte para seus próprios lugares para refletir sobre a atividade."
         },
         "62597c94-0e74-4478-b491-9427a83a7a2a": {
-          "name": "Discuta o Desafio"
+          "name": "Discuta o Desafio",
+          "description": "\\*\\*Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe? \\*\\*"
+        },
+        "4a8474b0-c86b-4bc6-8813-1a47b5be09e8": {
+          "description": "**Prompt**: Você trabalhou em equipes para esta atividade. Como trabalhar em equipe tornou essa atividade mais fácil? Como tornou a atividade mais desafiadora? O que ajudou seu grupo a superar esses desafios?"
         },
         "82378234-dc3a-4578-a458-e237d6b9b729": {
+          "description": "**Discuta**: dê aos alunos tempo para que compartilhem suas ideias com a turma.",
           "tips": [
-            null
+            "Os alunos podem se dar conta de que a colaboração lhes permitiu refletir sobre suas ideias com mais profundidade ou que conseguiram dividir o trabalho que precisavam fazer. À medida que os alunos listam os desafios, certifique-se de que eles estão descobrindo maneiras de superá-los. Se você notou algum problema na dinâmica de grupo durante a atividade, convém usar esse tempo para questioná-los sobre como solucionar problemas potenciais de uma forma não conflituosa e ajudar os alunos a pensarem em estratégias para trabalharem juntos de forma mais eficaz em atividades futuras. Essas estratégias podem servir como regras de convívio na sala de aula para futuros trabalhos em grupos."
           ]
+        },
+        "3d5ff4dc-c2df-4b01-852e-2a3449801046": {
+          "description": "Todas as suas ideias sobre essas perguntas foram ótimas. Vamos realizar muitos trabalhos em equipe nas aulas. Você pode estar acostumado a pensar que a Ciência da Computação tem tudo a ver com computadores, mas, acima de tudo, ela trata de resolver problemas, e isso geralmente acontece em equipes. Muitas outras partes dessa atividade, como melhorar projetos e construir coisas, também serão uma parte significativa dessa aula. Espero que você esteja animado para o ano. Amanhã começaremos a nos aprofundar na resolução de problemas."
         },
         "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
           "tips": [
@@ -5605,8 +5630,11 @@
         "10aec291-0c45-453c-8609-5386783ff20e": {
           "description": "Permita que os alunos compartilhem individualmente.",
           "tips": [
-            null
+            "Essa discussão serve como uma revisão do processo de resolução de problemas e destaca quantos tipos diferentes de problemas podem existir. Incentive os alunos a serem criativos e a se divertirem com os diferentes “problemas” que eles poderão resolver."
           ]
+        },
+        "dc8e60ec-e4b4-4188-8064-085405ab0268": {
+          "description": "Com uma variedade tão grande de problemas e estratégias, é importante ser capaz de pensar na melhor forma de usar o processo de resolução de problemas. Hoje, vamos analisar alguns tipos diferentes de problemas, falar sobre o que os torna diferentes e refletir sobre como o processo de resolução de problemas nos ajudou a resolvê-los."
         },
         "199d8062-4c1e-4b7c-8c92-8aea7a3fcc21": {
           "description": "\\*\\*Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a muitos tipos diferentes de problemas? \\*\\*"
@@ -6066,65 +6094,103 @@
           "name": "Antes da Aula"
         },
         "7211ed44-e31e-47ce-926a-6b39c4a36f52": {
-          "name": "No início da Aula"
+          "name": "No início da Aula",
+          "description": "## No início da aula\n\n1.  Peça aos alunos que criem uma conta do Code Studio em <https://studio.code.org>, caso ainda não tenham uma.\n2.  Compartilhe a URL de inscrição da seção com os alunos e peça que eles naveguem até ela para realizarem o ingresso.\n    -   Você pode confirmar que um aluno entrou com sucesso na seção abrindo a página de progresso da seção na página inicial do professor e pressionando a tecla Atualizar quando os alunos entrarem. Os alunos devem ver uma pequena barra verde no canto superior da página dizendo: “Você ingressou com sucesso...” \n3.  Do [studio.code.org](https://studio.code.org) , peça aos alunos que localizem o quadro Descobertas da Ciência da Computação e cliquem em “Exibir curso” e que, em seguida, que acessem a Unidade 1.\n\nQuando os alunos acessarem a página de visão geral da Unidade 1, eles estarão prontos para responder à pesquisa pré-curso do CSD."
         },
         "7d3700c3-08ad-41e8-bee3-19384d50e4c4": {
+          "description": "#### Importante! Faça com que seus alunos respondam à Pesquisa Pré-Curso do CSD!\n\nOs alunos podem encontrar um link para a pesquisa no Code Studio como o primeiro item na página de visão geral da Unidade 1. Para garantir que os alunos respondam à pesquisa apenas no momento adequado, ela é “bloqueada” e não pode ser visualizada por eles até que você a “desbloqueie”. O documento [r how-to-administer-a-locked-assessment/csd/2021] fornece detalhes sobre como fazer isso quando você desejar. Observe que as instruções para aplicar uma avaliação e uma pesquisa são as mesmas.    \n\n**Quanto tempo demora?** A pesquisa leva algum tempo - são cerca de 30 perguntas. Você pode aplicá-la em um dia administrativo na escola ou como uma lição de casa logo no início do curso.\n\n**Quando devo aplicar a pesquisa?** Por ser uma pesquisa pré-curso, é importante que os alunos a respondam o mais cedo possível no curso, antes de terem muita (ou qualquer) exposição ao conteúdo, para que possamos avaliar com precisão as mudanças nas atitudes e nas crenças dos alunos causadas pelo curso.",
           "tips": [
-            null
+            "-   Um dos principais objetivos do CS Discoveries é ampliar a participação da Ciência da Computação.  \n\n-   Portanto, é _crucial_ ter uma visão das atitudes e crenças dos alunos sobre a \n    Ciência da Computação _antes_ do curso, para que possamos medir a quantidade de mudanças que ocorreram _após_ o término do curso.\n\n-   Observe que esta pesquisa é **anônima para os alunos**\n\n-   Seu preenchimento também nos ajuda a entender os aperfeiçoamentos que podemos fazer no currículo para melhorar a experiência do professor e do aluno.\n\n\\*\\*Ajude, garantindo que seus alunos contribuam com este importante conjunto de dados . Suas vozes fazem a diferença! \\*\\*"
           ]
         },
         "68d48a87-2999-499a-962e-a0a177e1c4e6": {
           "name": "Prepare o Cenário",
+          "description": "**Prompt:** O que faz de alguém um bom solucionador de problemas? Prepare-se para compartilhar três ideias com seu grupo.",
           "tips": [
-            null
+            "**Diário:** O registro no diário é uma prática fundamental nas descobertas de CS. Os alunos podem escrever um diário em folhas soltas, em cadernos ou digitalmente.\n\n**Slides:** Os slides desta unidade estão disponíveis na seção “Recursos para professores” do plano de aula. Você terá que fazer uma cópia, o que só precisará ser feito uma vez - depois disso, você poderá usar os slides de cada lição do currículo."
           ]
         },
         "f51c4e46-0b95-4035-bbef-921e12d33e3c": {
+          "description": "**Discuta:** Encoraje os alunos a compartilhem suas respostas com seus grupos ou com um parceiro e, em seguida, peça a voluntários que  compartilhem com toda a turma.",
           "tips": [
-            null
+            "O objetivo deste aquecimento é fazer com que os alunos comecem a pensar sobre como resolver problemas como uma forma de se prepararem para a atividade do dia. Destaque as respostas que reforçam as principais práticas da aula, como colaboração, persistência e criatividade. Esta também é uma chance de reforçar uma cultura positiva que incentiva os alunos a compartilharem e a se apoiarem mutuamente na discussão de suas ideias."
           ]
         },
+        "b7043c24-837d-4375-8abc-db97b39d5a86": {
+          "description": "Todas essas são ótimas ideias! Na Ciência da Computação, temos que resolver problemas o tempo todo, então analisaremos todas essas habilidades de resolução de problemas hoje e durante o resto do curso. A maior parte da solução de problemas com que as pessoas se depararm na Ciência da Computação acontece em equipes. Hoje, vamos trabalhar em equipe para resolver um problema divertido que não precisa de computadores. Enquanto você trabalha nesse problema, aqui está uma pergunta sobre a qual você pode pensar."
+        },
+        "1b6e47b3-1fff-4497-abb7-08eaea7bbd52": {
+          "description": "**Exibição:** Mostre aos alunos a pergunta do dia\n\n\\*\\*Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe? \\*\\*"
+        },
         "20c1bfc1-6514-49f7-8426-549f7bce2c3f": {
-          "name": "Construindo uma Mesa de Jornal"
+          "name": "Construindo uma Mesa de Jornal",
+          "description": "**Em grupos**: organize os alunos em grupos de 2 ou 3 participantes."
+        },
+        "fae1250c-e3ce-4abb-8d77-7ba1b4df7f05": {
+          "description": "Hoje vamos construir barcos de alumínio. Você terá a oportunidade de construir pelo menos dois barcos e usar sua experiência com cada um para melhorar seus projetos. Antes de começarmos, decida, com o seu grupo, que tipo de design você gostaria de aplicar ao seu primeiro barco. Registre suas ideias e quaisquer possíveis fraquezas desse design em seu guia de atividades."
         },
         "922ac8cd-6633-48ac-bcb7-85fb1d2e711a": {
+          "description": "**Material a ser distribuído**: Uma cópia do guia de atividades para cada grupo.",
           "tips": [
-            null
+            "\\*\\*Obtendo cópias do Google Docs: \\*\\* Os guias de atividades deste currículo estão disponíveis como Google Docs, Word Docs e PDFs. Se você quiser editar ou criar sua própria cópia de um documento do Google Doc, pode fazê-lo sem solicitar acesso. Basta fazer login com uma conta do Google, clicar em “Arquivo” e “Fazer uma cópia” no menu. Você poderá, então, compartilhar sua própria cópia com seus alunos."
           ]
         },
         "f3726d11-0690-46a9-b742-f48b4a80ab33": {
           "name": "Objetivo e Regras",
+          "description": "Com a turma toda, leia as seções Metas e Regras do guia de atividades e responda às perguntas.",
           "tips": [
-            null
+            "Essa atividade pode ocupar algum espaço. Você também pode considerar realizar essa atividade no corredor ou em algum outro espaço se a sua sala for pequena, ou estabelecer outras regras conforme necessário."
           ]
         },
         "6cd90ae5-5c64-45e8-a9c5-c1e01bdddd64": {
           "name": "Desenvolva um Plano",
+          "description": "Dê aos alunos alguns minutos para discutirem em grupos a abordagem que eles adotarão com este primeiro barco. Depois que os grupos registrarem suas ideias e algumas possíveis fraquezas do seu design, eles poderão pegar a folha de alumínio e começar a construir seus barcos.",
           "tips": [
-            null
+            "Não disponibilize o papel alumínio antes de os alunos apresentarem um plano para o barco. O objetivo não é atrasá-los muito, mas apenas dar-lhes a chance de refletirem brevemente sobre as possíveis abordagens que poderiam adotar. Esse é um dos motivos pelos quais essa atividade prefigura a etapa do planejamento do processo de resolução de problemas que os alunos verão nas aulas subsequentes."
           ]
         },
         "9ed66e94-d0f7-41c7-bcc6-0ad4280881ab": {
-          "name": "Teste sua Mesa"
+          "name": "Teste sua Mesa",
+          "description": "Quando os grupos estiverem prontos, peça-lhes que testem seus barcos depositando, uma a uma, moedas no barco. Lembre-os das regras, especificamente de que eles não podem tocar ou ajustar os barcos quando esses estiverem na água. Peça-lhes que registrem o número total de moedas suportadas pelo barco em seus guias de atividades."
         },
         "49050d16-5918-4c25-b43d-144649ad574c": {
-          "name": "Avalie e Aperfeiçoe"
+          "name": "Avalie e Aperfeiçoe",
+          "description": "Essa primeira tentativa de construir nossos barcos foi apenas para nos familiarizarmos com o desafio. Todos nós vamos construir um segundo barco e ver se podemos melhorar o número de moedas que nossos barcos aguentavam. Porém, antes de começarmos, vamos ver o que podemos aprender com esse teste."
         },
         "caf7880a-40b3-4252-865e-a81d22f30d07": {
+          "description": "**Compartilhe:** Peça aos alunos que compartilhem os resultados de sua primeira testagem com os outros grupos. Peça aos grupos que se concentrem especificamente em qual foi a eventual falha do barco (por exemplo, não era profundo o suficiente, era instável etc.) e pense em maneiras de contornar esses problemas.",
           "tips": [
-            null
+            "Embora alguns alunos vejam essa etapa como uma competição, enfatize que cada grupo está procurando melhorar seu próprio design, não competindo com os outros grupos. Você está buscando que cada aluno desafie a si mesmo primeiro, não aos outros."
           ]
+        },
+        "937e5140-1635-48fd-a02f-79fc0b208510": {
+          "description": "### Desenvolva um Plano"
+        },
+        "b5b18fcc-941a-43df-9a83-9967b566b043": {
+          "description": "Agora que você teve a chance de aprender com a primeira rodada de criação de mesas, vamos realizar a mesma atividade novamente. Primeiro, seu grupo deverá desenvolver um novo plano. Assim como antes, registre-o em seu guia de atividades e, quando estiver pronto, você receberá um novo jornal."
+        },
+        "0a0a6ac4-694b-4da2-95e5-5ad4662f0ca3": {
+          "description": "**Apoio**: Ao circular entre os grupos, faça perguntas sobre o foco do grupo no redesenho. Por exemplo: “Qual aspecto da sua mesa precisava de mais melhorias?” “Quais ideias de outros grupos você gostaria de incorporar às suas?” “Você sentiu a necessidade de reestruturar completamente sua mesa ou apenas fazer pequenas modificações?” \n\nDepois que os grupos prepararem seus novos planos, dê-lhes um novo jornal e peça a cada um que construa uma nova mesa.\n\n### Teste sua Mesa\n\nOs grupos podem testar seus projetos como antes e registrar os resultados em seus guias de atividades."
         },
         "17a60d00-0762-4796-8bb7-c953b2f53867": {
-          "name": "Reflita"
+          "name": "Reflita",
+          "description": "**Transição**: Peça à turma que volte para seus próprios lugares para refletir sobre a atividade."
         },
         "8da74910-a0c5-4983-a7be-0b370c20d612": {
-          "name": "Discuta o Desafio"
+          "name": "Discuta o Desafio",
+          "description": "\\*\\*Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe? \\*\\*"
+        },
+        "e2eaa19c-4ad1-42ea-a0ee-1186b3a986b7": {
+          "description": "**Prompt**: Você trabalhou em equipes para esta atividade. Como trabalhar em equipe tornou essa atividade mais fácil? Como tornou a atividade mais desafiadora? O que ajudou seu grupo a superar esses desafios?"
         },
         "04f7b740-ae5f-4f12-9867-27f7b08eff1e": {
+          "description": "**Discuta**: dê aos alunos tempo para que compartilhem suas ideias com a turma.",
           "tips": [
-            null
+            "Os alunos podem se dar conta de que a colaboração lhes permitiu refletir sobre suas ideias com mais profundidade ou que conseguiram dividir o trabalho que precisavam fazer. À medida que os alunos listam os desafios, certifique-se de que eles estão descobrindo maneiras de superá-los. Se você notou algum problema na dinâmica de grupo durante a atividade, convém usar esse tempo para questioná-los sobre como solucionar problemas potenciais de uma forma não conflituosa e ajudar os alunos a pensarem em estratégias para trabalharem juntos de forma mais eficaz em atividades futuras. Essas estratégias podem servir como regras de convívio na sala de aula para futuros trabalhos em grupos."
           ]
+        },
+        "84c36a0f-89da-46bf-a8c8-8ccaafb3146a": {
+          "description": "Todas as suas ideias sobre essas perguntas foram ótimas. Vamos realizar muitos trabalhos em equipe nas aulas. Você pode estar acostumado a pensar que a Ciência da Computação tem tudo a ver com computadores, mas, acima de tudo, ela trata de resolver problemas, e isso geralmente acontece em equipes. Muitas outras partes dessa atividade, como melhorar projetos e construir coisas, também serão uma parte significativa dessa aula. Espero que você esteja animado para o ano. Amanhã começaremos a nos aprofundar na resolução de problemas."
         },
         "805b87e8-c377-489d-84e2-8be6316309b1": {
           "description": "Durante todo o ano, para que você possa ver o trabalho dos alunos e acessar ferramentas e recursos online, todos os alunos precisam estar na mesma seção no Code Studio. Para ver as avaliações e as respostas fornecidas pela Code.org, você também precisa ser um professor autorizado."
@@ -6133,62 +6199,107 @@
           "name": "Antes da Aula"
         },
         "9f212653-f99f-40a5-aee5-1ce6ad6b9d86": {
-          "name": "No início da Aula"
+          "name": "No início da Aula",
+          "description": "## No início da aula\n\n1.  Peça aos alunos que criem uma conta do Code Studio em <https://studio.code.org>, caso ainda não tenham uma.\n2.  Compartilhe a URL de inscrição da seção com os alunos e peça que eles naveguem até ela para realizarem o ingresso.\n    -   Você pode confirmar que um aluno entrou com sucesso na seção abrindo a página de progresso da seção na página inicial do professor e pressionando a tecla Atualizar quando os alunos entrarem. Os alunos devem ver uma pequena barra verde no canto superior da página dizendo: “Você ingressou com sucesso...” \n3.  Do [studio.code.org](https://studio.code.org) , peça aos alunos que localizem o quadro Descobertas da Ciência da Computação e cliquem em “Exibir curso” e que, em seguida, que acessem a Unidade 1.\n\nQuando os alunos acessarem a página de visão geral da Unidade 1, eles estarão prontos para responder à pesquisa pré-curso do CSD."
         },
         "c55fae38-7795-4027-b469-a3238f34efe5": {
+          "description": "#### Importante! Faça com que seus alunos respondam à Pesquisa Pré-Curso do CSD!\n\nOs alunos podem encontrar um link para a pesquisa no Code Studio como o primeiro item na página de visão geral da Unidade 1. Para garantir que os alunos respondam à pesquisa apenas no momento adequado, ela é “bloqueada” e não pode ser visualizada por eles até que você a “desbloqueie”. O documento [r how-to-administer-a-locked-assessment/csd/2021] fornece detalhes sobre como fazer isso quando você desejar. Observe que as instruções para aplicar uma avaliação e uma pesquisa são as mesmas.    \n\n**Quanto tempo demora?** A pesquisa leva algum tempo - são cerca de 30 perguntas. Você pode aplicá-la em um dia administrativo na escola ou como uma lição de casa logo no início do curso.\n\n**Quando devo aplicar a pesquisa?** Por ser uma pesquisa pré-curso, é importante que os alunos a respondam o mais cedo possível no curso, antes de terem muita (ou qualquer) exposição ao conteúdo, para que possamos avaliar com precisão as mudanças nas atitudes e nas crenças dos alunos causadas pelo curso.",
           "tips": [
-            null
+            "-   Um dos principais objetivos do CS Discoveries é ampliar a participação da Ciência da Computação.  \n\n-   Portanto, é _crucial_ ter uma visão das atitudes e crenças dos alunos sobre a \n    Ciência da Computação _antes_ do curso, para que possamos medir a quantidade de mudanças que ocorreram _após_ o término do curso.\n\n-   Observe que esta pesquisa é **anônima para os alunos**\n\n-   Seu preenchimento também nos ajuda a entender os aperfeiçoamentos que podemos fazer no currículo para melhorar a experiência do professor e do aluno.\n\n\\*\\*Ajude, garantindo que seus alunos contribuam com este importante conjunto de dados . Suas vozes fazem a diferença! \\*\\*"
           ]
         },
         "418d731c-d516-4e49-8547-9313763526ca": {
           "name": "Prepare o Cenário",
+          "description": "**Prompt:** O que faz de alguém um bom solucionador de problemas? Prepare-se para compartilhar três ideias com seu grupo.",
           "tips": [
-            null
+            "**Diário:** O registro no diário é uma prática fundamental nas descobertas de CS. Os alunos podem escrever um diário em folhas soltas, em cadernos ou digitalmente.\n\n**Slides:** Os slides desta unidade estão disponíveis na seção “Recursos para professores” do plano de aula. Você terá que fazer uma cópia, o que só precisará ser feito uma vez - depois disso, você poderá usar os slides de cada lição do currículo."
           ]
         },
         "c941f0ac-38f6-4828-9ca4-e8b600868807": {
+          "description": "**Discuta:** Encoraje os alunos a compartilhem suas respostas com seus grupos ou com um parceiro e, em seguida, peça a voluntários que  compartilhem com toda a turma.",
           "tips": [
-            null
+            "O objetivo deste aquecimento é fazer com que os alunos comecem a pensar sobre como resolver problemas como uma forma de se prepararem para a atividade do dia. Destaque as respostas que reforçam as principais práticas da aula, como colaboração, persistência e criatividade. Esta também é uma chance de reforçar uma cultura positiva que incentiva os alunos a compartilharem e a se apoiarem mutuamente na discussão de suas ideias."
           ]
         },
+        "d4e42301-7a41-4d37-8f34-07e7d9562339": {
+          "description": "Todas essas são ótimas ideias! Na Ciência da Computação, temos que resolver problemas o tempo todo, então analisaremos todas essas habilidades de resolução de problemas hoje e durante o resto do curso. A maior parte da solução de problemas com que as pessoas se depararm na Ciência da Computação acontece em equipes. Hoje, vamos trabalhar em equipe para resolver um problema divertido que não precisa de computadores. Enquanto você trabalha nesse problema, aqui está uma pergunta sobre a qual você pode pensar."
+        },
+        "ae6365e1-e28d-4d30-846a-2ebef57b4afd": {
+          "description": "**Exibição:** Mostre aos alunos a pergunta do dia\n\n\\*\\*Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe? \\*\\*"
+        },
+        "d3cf10fd-68e0-46fd-8a4e-a82daa4e0f1c": {
+          "name": "Construindo uma Ponte de Espaguete",
+          "description": "**Em grupos**: organize os alunos em grupos de 2 ou 3 participantes."
+        },
+        "7962df65-9338-4d88-aff7-3e531f947173": {
+          "description": "Hoje vamos construir barcos de alumínio. Você terá a oportunidade de construir pelo menos dois barcos e usar sua experiência com cada um para melhorar seus projetos. Antes de começarmos, decida, com o seu grupo, que tipo de design você gostaria de aplicar ao seu primeiro barco. Registre suas ideias e quaisquer possíveis fraquezas desse design em seu guia de atividades."
+        },
         "c209191d-c268-4f8e-b40c-93a5de206b76": {
+          "description": "**Material a ser distribuído**: Uma cópia do guia de atividades para cada grupo.",
           "tips": [
-            null
+            "\\*\\*Obtendo cópias do Google Docs: \\*\\* Os guias de atividades deste currículo estão disponíveis como Google Docs, Word Docs e PDFs. Se você quiser editar ou criar sua própria cópia de um documento do Google Doc, pode fazê-lo sem solicitar acesso. Basta fazer login com uma conta do Google, clicar em “Arquivo” e “Fazer uma cópia” no menu. Você poderá, então, compartilhar sua própria cópia com seus alunos."
           ]
         },
         "09e4642c-bedd-44e7-a7a7-ed2f85ece6c1": {
           "name": "Objetivo e Regras",
+          "description": "Com a turma toda, leia as seções Metas e Regras do guia de atividades e responda às perguntas.",
           "tips": [
-            null
+            "Essa atividade pode exigir algum espaço. Você também pode considerar realizar essa atividade no corredor ou em algum outro espaço se a sua sala for pequena, ou estabelecer outras regras conforme necessário."
           ]
         },
         "740f2761-b6d0-4d82-97ec-2c97d92e2859": {
           "name": "Desenvolva um Plano",
+          "description": "Dê aos alunos alguns minutos para discutirem em grupos a abordagem que eles adotarão com este primeiro barco. Depois que os grupos registrarem suas ideias e algumas possíveis fraquezas do seu design, eles poderão pegar a folha de alumínio e começar a construir seus barcos.",
           "tips": [
-            null
+            "Não disponibilize o papel alumínio antes de os alunos apresentarem um plano para o barco. O objetivo não é atrasá-los muito, mas apenas dar-lhes a chance de refletirem brevemente sobre as possíveis abordagens que poderiam adotar. Esse é um dos motivos pelos quais essa atividade prefigura a etapa do planejamento do processo de resolução de problemas que os alunos verão nas aulas subsequentes."
           ]
+        },
+        "8ce3a7bc-8653-4f02-b3cd-21f88b8d2217": {
+          "name": "Teste sua Ponte",
+          "description": "Quando os grupos estiverem prontos, peça-lhes que testem seus barcos depositando, uma a uma, moedas no barco. Lembre-os das regras, especificamente de que eles não podem tocar ou ajustar os barcos quando esses estiverem na água. Peça-lhes que registrem o número total de moedas suportadas pelo barco em seus guias de atividades."
         },
         "e4c5a863-1f7b-4d7e-994a-a4750df74d0f": {
-          "name": "Avalie e Aperfeiçoe"
+          "name": "Avalie e Aperfeiçoe",
+          "description": "Essa primeira tentativa de construir nossos barcos foi apenas para nos familiarizarmos com o desafio. Todos nós vamos construir um segundo barco e ver se podemos aumentar o número de moedas que nossos barcos aguentam. Porém, antes de começarmos, vamos ver o que podemos aprender com esse teste."
         },
         "193961e8-e637-4d45-bb0b-014a3e8d1bbb": {
+          "description": "**Compartilhe:** Peça aos alunos que compartilhem os resultados de sua primeira testagem com os outros grupos. Peça aos grupos que se concentrem especificamente em qual foi a eventual falha do barco (por exemplo, não era profundo o suficiente, era instável etc.) e pense em maneiras de contornar esses problemas.",
           "tips": [
-            null
+            "Embora alguns alunos vejam essa etapa como uma competição, enfatize que cada grupo está procurando melhorar seu próprio design, não competindo com os outros grupos. Você está buscando que cada aluno desafie a si mesmo primeiro, não aos outros."
           ]
+        },
+        "4102495d-f93b-4b89-ba0d-044a44901c70": {
+          "description": "**Se decidir realizar esta atividade em dois encontros, você pode optar por parar aqui.**\n\n### Desenvolva um plano"
+        },
+        "5f6c0c4e-0216-4316-a1e7-82eaeb469b5e": {
+          "description": "Agora que você teve a chance de aprender com a primeira rodada de criação de mesas, vamos realizar a mesma atividade novamente. Primeiro, seu grupo deverá desenvolver um novo plano. Assim como antes, registre-o em seu guia de atividades e, quando estiver pronto, você receberá um novo jornal."
+        },
+        "a4db4016-ed32-427d-8a58-6b5119dc0070": {
+          "description": "**Apoio**: Ao circular entre os grupos, faça perguntas sobre o foco do grupo no redesenho. Por exemplo: “Qual aspecto da sua mesa precisava de mais melhorias?” “Quais ideias de outros grupos você gostaria de incorporar às suas?” “Você sentiu a necessidade de reestruturar completamente sua mesa ou apenas fazer pequenas modificações?” \n\nDepois que os grupos prepararem seus novos planos, dê-lhes um novo jornal e peça a cada um que construa uma nova mesa.\n\n### Teste sua Mesa\n\nOs grupos podem testar seus projetos como antes e registrar os resultados em seus guias de atividades."
         },
         "d1d70672-7b59-43f6-a03b-2b89b504e2fb": {
-          "name": "Teste sua Mesa"
+          "name": "Teste sua Mesa",
+          "description": "Os grupos podem testar seus designs da mesma forma que antes e registrar os resultados em seus guias de atividades."
         },
         "cebe2e73-7783-4bbf-9469-c2084423900d": {
-          "name": "Reflita"
+          "name": "Reflita",
+          "description": "**Transição**: Peça à turma que volte para seus próprios lugares para refletir sobre a atividade."
         },
         "a90c61ba-7aa3-4b9b-ba1c-081bb47c3230": {
-          "name": "Discuta o Desafio"
+          "name": "Discuta o Desafio",
+          "description": "\\*\\*Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe? \\*\\*"
+        },
+        "6977e8b1-edf5-4a77-b65d-561695544e26": {
+          "description": "**Prompt**: Você trabalhou em equipes para esta atividade. Como trabalhar em equipe tornou essa atividade mais fácil? Como tornou a atividade mais desafiadora? O que ajudou seu grupo a superar esses desafios?"
         },
         "01c916af-970c-4e2f-a98e-38cbc436eefc": {
+          "description": "**Discuta**: dê aos alunos tempo para que compartilhem suas ideias com a turma.",
           "tips": [
-            null
+            "Os alunos podem se dar conta de que a colaboração lhes permitiu refletir sobre suas ideias com mais profundidade ou que conseguiram dividir o trabalho que precisavam fazer. À medida que os alunos listam os desafios, certifique-se de que eles estão descobrindo maneiras de superá-los. Se você notou algum problema na dinâmica de grupo durante a atividade, convém usar esse tempo para questioná-los sobre como solucionar problemas potenciais de uma forma não conflituosa e ajudar os alunos a pensarem em estratégias para trabalharem juntos de forma mais eficaz em atividades futuras. Essas estratégias podem servir como regras de convívio na sala de aula para futuros trabalhos em grupos."
           ]
+        },
+        "f5e08562-db11-4323-80ed-4c719b6a6905": {
+          "description": "Todas as suas ideias sobre essas perguntas foram ótimas. Vamos realizar muitos trabalhos em equipe nas aulas. Você pode estar acostumado a pensar que a Ciência da Computação tem tudo a ver com computadores, mas, acima de tudo, ela trata de resolver problemas, e isso geralmente acontece em equipes. Muitas outras partes dessa atividade, como melhorar projetos e construir coisas, também serão uma parte significativa dessa aula. Espero que você esteja animado para o ano. Amanhã começaremos a nos aprofundar na resolução de problemas."
         },
         "7e2b0140-2517-4a48-89c6-2e51107ec2f2": {
           "description": "Durante todo o ano, para que você possa ver o trabalho dos alunos e acessar ferramentas e recursos online, todos os alunos precisam estar na mesma seção no Code Studio. Para ver as avaliações e as respostas fornecidas pela Code.org, você também precisa ser um professor autorizado."
@@ -6197,62 +6308,103 @@
           "name": "Antes da Aula"
         },
         "ca8d4fdf-1c4a-445e-b8bc-9bf50538cdb4": {
-          "name": "No início da Aula"
+          "name": "No início da Aula",
+          "description": "## No início da aula\n\n1.  Peça aos alunos que criem uma conta do Code Studio em <https://studio.code.org>, caso ainda não tenham uma.\n2.  Compartilhe a URL de inscrição da seção com os alunos e peça que eles naveguem até ela para realizarem o ingresso.\n    -   Você pode confirmar que um aluno entrou com sucesso na seção abrindo a página de progresso da seção na página inicial do professor e pressionando a tecla Atualizar quando os alunos entrarem. Os alunos devem ver uma pequena barra verde no canto superior da página dizendo: “Você ingressou com sucesso...” \n3.  Do [studio.code.org](https://studio.code.org) , peça aos alunos que localizem o quadro Descobertas da Ciência da Computação e cliquem em “Exibir curso” e que, em seguida, que acessem a Unidade 1.\n\nQuando os alunos acessarem a página de visão geral da Unidade 1, eles estarão prontos para responder à pesquisa pré-curso do CSD."
         },
         "163d7212-c083-4ba8-bb87-6150a37f8f0f": {
+          "description": "#### Importante! Faça com que seus alunos respondam à Pesquisa Pré-Curso do CSD!\n\nOs alunos podem encontrar um link para a pesquisa no Code Studio como o primeiro item na página de visão geral da Unidade 1. Para garantir que os alunos respondam à pesquisa apenas no momento adequado, ela é “bloqueada” e não pode ser visualizada por eles até que você a “desbloqueie”. O documento [r how-to-administer-a-locked-assessment/csd/2021] fornece detalhes sobre como fazer isso quando você desejar. Observe que as instruções para aplicar uma avaliação e uma pesquisa são as mesmas.    \n\n**Quanto tempo demora?** A pesquisa leva algum tempo - são cerca de 30 perguntas. Você pode aplicá-la em um dia administrativo na escola ou como uma lição de casa logo no início do curso.\n\n**Quando devo aplicar a pesquisa?** Por ser uma pesquisa pré-curso, é importante que os alunos a respondam o mais cedo possível no curso, antes de terem muita (ou qualquer) exposição ao conteúdo, para que possamos avaliar com precisão as mudanças nas atitudes e nas crenças dos alunos causadas pelo curso.",
           "tips": [
-            null
+            "-   Um dos principais objetivos do CS Discoveries é ampliar a participação da Ciência da Computação.  \n\n-   Portanto, é _crucial_ ter uma visão das atitudes e crenças dos alunos sobre a \n    Ciência da Computação _antes_ do curso, para que possamos medir a quantidade de mudanças que ocorreram _após_ o término do curso.\n\n-   Observe que esta pesquisa é **anônima para os alunos**\n\n-   Seu preenchimento também nos ajuda a entender os aperfeiçoamentos que podemos fazer no currículo para melhorar a experiência do professor e do aluno.\n\n\\*\\*Ajude, garantindo que seus alunos contribuam com este importante conjunto de dados . Suas vozes fazem a diferença! \\*\\*"
           ]
         },
         "9823b27f-66ca-4ea1-860d-3472e5317340": {
           "name": "Prepare o Cenário",
+          "description": "**Prompt:** O que faz de alguém um bom solucionador de problemas? Prepare-se para compartilhar três ideias com seu grupo.",
           "tips": [
-            null
+            "\\*\\*Diário: \\*\\* O registro no diário é uma prática fundamental nas descobertas de CS. Os alunos podem escrever um diário em folhas avulsas, em cadernos ou digitalmente. Consulte o Guia de Registro no Diário do CSD para obter mais informações.\n\n\\*\\*Slides: \\*\\* Os slides desta unidade estão disponíveis na seção “Recursos para professores” do plano de aula. Se você quiser editar sua própria cópia de um conjunto de slides, pode fazê-lo sem solicitar acesso. Basta fazer login com uma conta do Google, clicar em “Arquivo” e “Fazer uma cópia” a partir do menu."
           ]
         },
         "77c22840-b9e9-4426-9894-30f101f2c00e": {
+          "description": "**Discuta:** Encoraje os alunos a compartilhem suas respostas com seus grupos ou com um parceiro e, em seguida, peça a voluntários que  compartilhem com toda a turma.",
           "tips": [
-            null
+            "O objetivo deste aquecimento é fazer com que os alunos comecem a pensar sobre como resolver problemas como uma forma de se prepararem para a atividade do dia. Destaque as respostas que reforçam as principais práticas da aula, como colaboração, persistência e criatividade. Esta também é uma chance de reforçar uma cultura positiva que incentiva os alunos a compartilharem e a se apoiarem mutuamente na discussão de suas ideias."
           ]
         },
+        "c1a4e53a-2218-4c00-80d7-3505a462d81d": {
+          "description": "Todas essas são ótimas ideias! Na Ciência da Computação, temos que resolver problemas o tempo todo, então analisaremos todas essas habilidades de resolução de problemas hoje e durante o resto do curso. A maior parte da solução de problemas com que as pessoas se depararm na Ciência da Computação acontece em equipes. Hoje, vamos trabalhar em equipe para resolver um problema divertido que não precisa de computadores. Enquanto você trabalha nesse problema, aqui está uma pergunta sobre a qual você pode pensar."
+        },
+        "05812355-06bd-4750-9713-691134fd7a89": {
+          "description": "**Exibição:** Mostre aos alunos a pergunta do dia\n\n\\*\\*Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe? \\*\\*"
+        },
+        "241975ce-013e-4f72-a787-8800069fd731": {
+          "name": "Construindo uma Torre de Papel",
+          "description": "**Em grupos**: organize os alunos em grupos de 2 ou 3 participantes."
+        },
+        "65b2f259-5822-4187-8150-74f47cffc9e2": {
+          "description": "Hoje vamos construir torres de papel. Você terá a oportunidade de construir pelo menos duas torres e usar sua experiência com cada uma para aprimorar seus projetos. Antes de começarmos, decida em grupo que tipo de design você gostaria de fazer com sua primeira torre. Registre suas ideias e quaisquer possíveis fraquezas desse design em seu guia de atividades."
+        },
         "b452ecde-f660-4d52-9ab7-8b33989681f0": {
+          "description": "**Material a ser distribuído**: Uma cópia do guia de atividades para cada grupo.",
           "tips": [
-            null
+            "\\*\\*Obtendo cópias do Google Docs: \\*\\* Os guias de atividades deste currículo estão disponíveis como Google Docs, Word Docs e PDFs. Se você quiser editar ou criar sua própria cópia de um documento do Google Doc, pode fazê-lo sem solicitar acesso. Basta fazer login com uma conta do Google, clicar em “Arquivo” e “Fazer uma cópia” no menu. Você poderá, então, compartilhar sua própria cópia com seus alunos."
           ]
         },
         "f5570fab-fdee-464e-b569-ec19142fc35d": {
           "name": "Objetivo e Regras",
+          "description": "Com a turma toda, leia as seções Metas e Regras do guia de atividades e responda às perguntas.",
           "tips": [
-            null
+            "Esta atividade precisa de um espaço considerável. O ideal é que cada grupo tenha seu próprio espaço para realizar seus testes. Talvez você prefira desenvolver essa atividade no corredor ou em alguma outra área grande se a sua sala for muito pequena."
           ]
         },
         "661c94ca-9d68-45ee-afca-2ff357684bf3": {
           "name": "Desenvolva um Plano",
+          "description": "Dê aos alunos alguns minutos para discutirem em grupos a abordagem que eles adotarão com esta primeira torre. Depois que os grupos registrarem suas ideias e algumas possíveis fraquezas do seu design, eles poderão pegar seu papel e começar a construir suas torres.",
           "tips": [
-            null
+            "Não disponibilize o papel antes de os alunos apresentarem um plano para a torre. O objetivo não é atrasá-los muito, mas apenas dar-lhes a chance de refletirem brevemente sobre as possíveis abordagens que poderiam adotar. Esse é um dos motivos pelos quais essa atividade prefigura a etapa do planejamento do processo de resolução de problemas que os alunos verão nas aulas subsequentes."
           ]
         },
         "a6ec15d7-7a48-466b-b9a2-b312a529e47b": {
-          "name": "Teste sua Mesa"
+          "name": "Teste sua Mesa",
+          "description": "Quando os grupos estiverem prontos, peça-lhes que testem suas torres registrando sua altura e veja se elas conseguem se sustentar sozinhas. Lembre-os das regras, especificamente de que eles não poderão tocar ou ajustar as torres depois de soltá-las."
         },
         "185b70c9-2353-4632-aec9-7372f25cb1a6": {
-          "name": "Avalie e Aperfeiçoe"
+          "name": "Avalie e Aperfeiçoe",
+          "description": "Essa primeira tentativa de construir nossas torres foi apenas para nos familiarizarmos com o desafio. Todos nós vamos construir uma segunda torre e ver se podemos melhorar a altura da nossa torre sem deixar que ela caia. Porém, antes de começarmos, vamos ver o que podemos aprender com esse teste."
         },
         "bc8e4c54-e3ca-42f2-b613-2b383783dad8": {
+          "description": "**Compartilhe:** Peça aos alunos que compartilhem os resultados de sua primeira testagem com os outros grupos. Peça aos grupos que se concentrem especificamente em qual foi a eventual falha da torre (por exemplo, nera alta, mas não fica ereta sem apoio, fica ereta mas é muito baixa, etc.) e pense em maneiras de contornar esses problemas.",
           "tips": [
-            null
+            "Embora alguns alunos vejam essa etapa como uma competição, enfatize que cada grupo está procurando melhorar seu próprio design, não competindo com os outros grupos. Você está buscando que cada aluno desafie a si mesmo primeiro, não aos outros."
           ]
+        },
+        "653eab77-81ff-43eb-9ae6-e35f41a327b1": {
+          "description": "### Desenvolva um Plano"
+        },
+        "4e3954fe-a5a3-435d-ab87-3d03fb0e6351": {
+          "description": "Agora que você teve a chance de aprender com a primeira rodada de criação das torres, vamos realizar a mesma atividade novamente. Primeiro, seu grupo deverá desenvolver um novo plano. Assim como antes, registre-o em seu guia de atividades e, quando estiverem prontos, vocês receberão mais papel."
+        },
+        "47624ed7-f42e-49bd-adeb-2e4218b7d205": {
+          "description": "**Apoio**: Ao circular entre os grupos, faça perguntas sobre o foco do grupo no redesenho. Por exemplo: “Qual aspecto da sua torre precisava de mais melhorias?” “Quais ideias de outros grupos você gostaria de incorporar às suas?” “Você sentiu a necessidade de reestruturar completamente sua torre ou apenas fazer pequenas modificações?” \n\nDepois que os grupos prepararem seus novos planos, dê-lhes mais papel e peça que construam uma nova torre.\n\n### Teste sua Torre\n\nOs grupos podem testar seus projetos como antes e registrar os resultados em seus guias de atividades."
         },
         "ba9df800-646b-4324-9b35-b3f6564ba061": {
-          "name": "Reflita"
+          "name": "Reflita",
+          "description": "**Transição**: Peça à turma que volte para seus próprios lugares para refletir sobre a atividade."
         },
         "eb580d4d-4253-490a-9fe8-256885fb0ed8": {
-          "name": "Discuta o Desafio"
+          "name": "Discuta o Desafio",
+          "description": "\\*\\*Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe? \\*\\*"
+        },
+        "10f5ec1c-3957-422e-a1ee-3787a5df1dc7": {
+          "description": "**Prompt**: Você trabalhou em equipes para esta atividade. Como trabalhar em equipe tornou essa atividade mais fácil? Como tornou a atividade mais desafiadora? O que ajudou seu grupo a superar esses desafios?"
         },
         "f25bdc7d-2ab6-493a-a4e7-e46dbeaa01c4": {
+          "description": "**Discuta**: dê aos alunos tempo para que compartilhem suas ideias com a turma.",
           "tips": [
-            null
+            "Os alunos podem se dar conta de que a colaboração lhes permitiu refletir sobre suas ideias com mais profundidade ou que conseguiram dividir o trabalho que precisavam fazer. À medida que os alunos listam os desafios, certifique-se de que eles estão descobrindo maneiras de superá-los. Se você notou algum problema na dinâmica de grupo durante a atividade, convém usar esse tempo para questioná-los sobre como solucionar problemas potenciais de uma forma não conflituosa e ajudar os alunos a pensarem em estratégias para trabalharem juntos de forma mais eficaz em atividades futuras. Essas estratégias podem servir como regras de convívio na sala de aula para futuros trabalhos em grupos."
           ]
+        },
+        "32af4c30-b182-4d2e-9c46-e61ad93d6eb9": {
+          "description": "Todas as suas ideias sobre essas perguntas foram ótimas. Vamos realizar muitos trabalhos em equipe nas aulas. Você pode estar acostumado a pensar que a Ciência da Computação tem tudo a ver com computadores, mas, acima de tudo, ela trata de resolver problemas, e isso geralmente acontece em equipes. Muitas outras partes dessa atividade, como melhorar projetos e construir coisas, também serão uma parte significativa dessa aula. Espero que você esteja animado para o ano. Amanhã começaremos a nos aprofundar na resolução de problemas."
         },
         "144a51cf-3c4b-4bed-affb-763354cf3123": {
           "description": "\\*\\*Prompt de Registro no Diário: \\*\\* Pense no problema mais simples que o processo de resolução de problemas poderia resolver. Prepare-se para explicar como cada etapa do processo pode ser aplicada."
@@ -6260,20 +6412,30 @@
         "48dcb032-0dad-4177-89a7-066d60d785f5": {
           "description": "Permita que os alunos compartilhem individualmente.",
           "tips": [
-            null
+            "Essa discussão serve como uma revisão do processo de resolução de problemas e destaca quantos tipos diferentes de problemas podem existir. Incentive os alunos a serem criativos e a se divertirem com os diferentes “problemas” que eles poderão resolver."
           ]
+        },
+        "b78b02cc-1078-4788-acb8-1a9f616e5904": {
+          "description": "Com uma variedade tão grande de problemas e estratégias, é importante ser capaz de pensar na melhor forma de usar o processo de resolução de problemas. Hoje, vamos analisar alguns tipos diferentes de problemas, falar sobre o que os torna diferentes e refletir sobre como o processo de resolução de problemas nos ajudou a resolvê-los."
         },
         "b9d78148-7cc9-4625-998e-f58589c75a3f": {
           "description": "\\*\\*Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a muitos tipos diferentes de problemas? \\*\\*"
         },
+        "96af8b5e-a825-4e00-9a61-9695bef83520": {
+          "description": "\\*\\*Em grupos: \\*\\* Para todas as três atividades, os alunos devem trabalhar em grupos, mesmo que registrem seus resultados individualmente. Grupos de 2 a 4 integrantes provavelmente funcionarão melhor.\n\n\\*\\*Distribuir: \\*\\* Distribua uma cópia do guia de atividades para cada aluno. Por enquanto, os guias podem estar voltados para baixo, para que os tangrams não fiquem visíveis.\n\n## Resolvendo problemas"
+        },
         "7ce61da1-8486-4987-a971-d02802cf3223": {
+          "name": "Resolução de Problemas",
           "tips": [
-            null
+            "\\*\\*Integrando o Processo de Resolução de Problemas: \\*\\* Os tangrams podem levar vários minutos, especialmente se os alunos estiverem tentando resolvê-los sem algum tipo de estratégia. Lembre-os de que uma etapa é a Preparação, que deve ocorrer antes de começarem a jogar.\n\n\\*\\*Transforme numa Corrida: \\*\\* Transformar esse problema em uma corrida é uma boa maneira de impulsionar a motivação e também de garantir que os grupos não compartilhem as soluções depois de encontrá-las.\n\n\\*\\*Resposta: \\*\\* Uma chave de respostas mostrando possíveis soluções pode ser encontrada online seguindo o link fornecido acima."
           ]
+        },
+        "20605e84-9e6e-4eef-b9c2-f68fbe7cf880": {
+          "description": "Quando os alunos estiverem organizados em grupos, entregue-lhes as folhas com as peças do tangram. Peça-lhes que virem os guias de atividades e comecem o primeiro desafio. Eles criarão as imagens usando suas peças, que podem ser recortadas.\n\n\\*\\*Circule: \\*\\* Caminhe pela sala observando como os alunos estão resolvendo o problema. Certifique-se de que os grupos não estejam compartilhando respostas. Incentive-os a pensar em como o planejamento pode ajudá-los a realizar essa tarefa.\n\nQuando todos os grupos terminarem, reúna a turma novamente. Peça aos alunos que passem para a última página do guia de atividades, onde há uma tabela para registrarem suas experiências com o problema. Eles registrarão quais partes da solução desse problema se enquadram em cada etapa do processo da resolução de problemas.\n\n**Discuta:** Discuta brevemente com os alunos quais partes da atividade eles sentiram que se encaixavam em cada etapa do processo de resolução de problemas. Alguns pontos possíveis a serem destacados após o compartilhamento dos alunos estão abaixo.\n\n-   **Defina**: Esse problema já estava muito bem definido. No entanto, nem todos os problemas se apresentarão dessa forma.\n-   \\*\\*Prepare-se: Desenvolver um plano com uma equipe (como dividir as imagens ou simplesmente trabalhar em conjunto em cada imagem) torna esse problema muito mais fácil de ser resolvido do que colocar as peças aleatoriamente.\n-   **Experimente**: Paciência e persistência são importantes para concluir seu plano\n-   **Reflita**: Se seus planos iniciais não estiverem funcionando, você pode se reagrupar e reconfigurar seu plano"
         },
         "be784b81-94c2-46a8-9f54-6eb72fa47020": {
           "tips": [
-            null
+            "\\*\\*Integrando o processo de solução de problemas: \\*\\* Esse problema é particularmente desafiador se você não o definir bem. Se você desconsiderar esse passo, seu trabalho será adivinhar e verificar aleatoriamente onde colocar as opções individuais até encontrar uma solução. É muito mais fácil listar primeiro os animais de estimação possíveis para cada pessoa e, em seguida, escolher os animais de estimação para as pessoas mais exigentes.\n\nEssa não é a única abordagem para o problema, e você não deve se apressar em apresentá-la como tal. Em vez disso, incentive os alunos a discutirem uns com os outros o que eles sabem que precisa ser verdade no final e se abordagens diferentes podem ajudar.\n\n\\*\\*Estendendo o problema: \\*\\* Se um grupo terminar muito antes dos outros, você pode dar a eles uma folha de papel em branco e pedir que resolvam o problema novamente, mas com uma nova condição de sua escolha (por exemplo, escolha uma pessoa na solução e pergunte se ela pode resolver o problema com um requisito adicional)."
           ]
         },
         "90e3e011-8930-435c-8840-88bcb72a94b1": {
@@ -6308,13 +6470,17 @@
         "8e2e9def-edb6-462f-b068-2be956dcc3c0": {
           "description": "Permita que os alunos compartilhem individualmente.",
           "tips": [
-            null
+            "Essa discussão serve como uma revisão do processo de resolução de problemas e destaca quantos tipos diferentes de problemas podem existir. Incentive os alunos a serem criativos e a se divertirem com os diferentes “problemas” que eles poderão resolver."
           ]
+        },
+        "37ba1da2-a964-42fa-a40f-433569e7566e": {
+          "description": "Com uma variedade tão grande de problemas e estratégias, é importante ser capaz de pensar na melhor forma de usar o processo de resolução de problemas. Hoje, vamos analisar alguns tipos diferentes de problemas, falar sobre o que os torna diferentes e refletir sobre como o processo de resolução de problemas nos ajudou a resolvê-los."
         },
         "2194dc5a-79f0-4b48-9630-5dca26cb5b56": {
           "description": "\\*\\*Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a muitos tipos diferentes de problemas? \\*\\*"
         },
         "9844b63f-04a1-4011-87f7-eec3c63a5496": {
+          "name": "Resolução de Problemas",
           "tips": [
             null
           ]
@@ -9922,7 +10088,8 @@
         "35bd3261-9e58-490f-a4f7-6f6188cf278e": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Níveis de escolha: personalize seu aplicativo"
         },
         "7cc32c19-2a9a-423f-a8b7-90a739cd379c": {
           "name": "Diário",
@@ -9935,6 +10102,12 @@
           "tips": [
             null
           ]
+        },
+        "5930841f-14d4-4405-915f-abebc0c094fe": {
+          "name": "Aplicativo de Priorização Médica"
+        },
+        "a19cc9c3-8670-48e8-bcea-dcddf2581cfa": {
+          "progression_name": "Aplicativo de Priorização Médica"
         },
         "189848b1-8798-4d6b-ba64-c7e43f6aa84a": {
           "tips": [
@@ -9956,6 +10129,12 @@
             null
           ]
         },
+        "2f337322-f504-4ba7-9714-1c178eba4ca9": {
+          "progression_name": "Model Card de um Recomendador de livro"
+        },
+        "8a788853-2486-42f1-b0d0-572ad723f421": {
+          "progression_name": "Cartões-modelo de conjunto de dados médicos"
+        },
         "db8f4d62-af34-4871-993d-281cacf5ff29": {
           "name": "Diário",
           "tips": [
@@ -9968,20 +10147,35 @@
             null
           ]
         },
+        "d5f051bd-7a5c-464f-a830-e486187a0463": {
+          "name": "Previsões do zoológico",
+          "progression_name": "Previsões do zoológico"
+        },
         "6dc2399a-dad6-46a3-8124-e6b3d100d4fe": {
           "tips": [
             null
           ]
         },
         "0c250e92-85e3-4f85-8a99-44a79fb72c03": {
+          "name": "Importando seu modelo",
           "tips": [
             null
           ]
         },
+        "7d040814-9039-4b26-b0ef-29cb28227d53": {
+          "progression_name": "Importando seu modelo"
+        },
+        "1503235c-6a46-401d-85f0-1fa291901771": {
+          "progression_name": "Personalizando seu aplicativo"
+        },
+        "42abdf12-61c8-48a4-8118-6f0b713e28dc": {
+          "progression_name": "Exemplo de aplicativo: Classificação de zoológicos"
+        },
         "527dacdb-36d1-4e9e-ad42-b28aab54a395": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Recomendador de animais de estimação"
         },
         "91d7768c-2c1c-4b4b-bb3d-b7646f8144d6": {
           "tips": [
@@ -9991,7 +10185,11 @@
         "aedb156c-9f9c-4214-94aa-a664ce875b23": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Recomendador de animais de estimação"
+        },
+        "757e3c3a-8354-4b41-9b54-ad138d99c341": {
+          "progression_name": "Recomendador de animais de estimação"
         },
         "819a4c17-f05f-4298-9cfc-1cb2c0b00f5d": {
           "tips": [
@@ -10002,6 +10200,9 @@
           "tips": [
             null
           ]
+        },
+        "5c385108-484c-44cb-b688-858fc00e41df": {
+          "progression_name": "Adicionando novas telas"
         },
         "209eff96-d559-411e-b8cf-bd6a84923473": {
           "tips": [
@@ -10074,10 +10275,25 @@
         "9382a280-a542-46a5-932f-9f2258bbb2eb": {
           "name": "Diário"
         },
+        "6837e50f-be66-4db0-a31a-fff75d03b12b": {
+          "name": "Sistema de alerta de motorista"
+        },
+        "87b65d20-bf70-4db3-ae6f-2333f970ad8c": {
+          "progression_name": "Recomendador Raspado"
+        },
+        "1d2520a0-dcb3-41e9-b121-7bf0b221a87a": {
+          "progression_name": "Sistema de alerta de motorista"
+        },
+        "29dce9c5-577d-4e2c-9d4b-b8bf0e4b18e8": {
+          "progression_name": "Sistema de alerta de motorista"
+        },
         "4e10be5f-60ad-4bae-913d-7a157e519447": {
           "tips": [
             null
           ]
+        },
+        "9749fdb5-91ad-41b8-9b83-5198ab37cc38": {
+          "progression_name": "Você escolhe: Melhore seu aplicativo"
         },
         "85a0ec6f-c1c7-46f6-8e4f-f805984133dc": {
           "name": "Diário"
@@ -10093,6 +10309,9 @@
             null
           ]
         },
+        "77b2cc22-6c49-4ad9-8a76-a3e5cf4502ec": {
+          "progression_name": "Treine um modelo no IA Lab"
+        },
         "4efb646c-4ce2-45f5-bb76-f444af86a9b4": {
           "tips": [
             null
@@ -10102,6 +10321,9 @@
           "tips": [
             null
           ]
+        },
+        "e046ddd1-110a-4a23-8f5a-76f6ac86fe48": {
+          "progression_name": "Crie um aplicativo no App Lab"
         },
         "489ed446-aa78-47e3-b9f2-30bc9164d6c3": {
           "name": "Reflexão",
@@ -10136,6 +10358,9 @@
             null
           ]
         },
+        "8ae2778f-e311-4131-9116-8a2cb6ee5512": {
+          "progression_name": "Crie um formulário do Google"
+        },
         "0fac2a39-1a1e-4c53-a3eb-ef5ababb25f4": {
           "tips": [
             null
@@ -10148,17 +10373,25 @@
           ]
         },
         "bb917641-be8e-41f9-8ba5-bad758aeb8d5": {
-          "name": "Questionário"
+          "name": "Questionário",
+          "progression_name": "Pesquisa da Kim"
         },
         "9f17132f-2c2e-4f16-bead-88b852b9e33f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Dados da pesquisa da Kim"
         },
         "3c4c7d3e-338a-4934-bc9c-b9e01d0f14cd": {
           "tips": [
             null
           ]
+        },
+        "1223d000-8832-4645-b9ec-3a7563068eb1": {
+          "progression_name": "Laboratório de IA e dados da Kim"
+        },
+        "4ca8fcb7-141b-4201-976c-2bafbae0f7a7": {
+          "progression_name": "Dados da pesquisa do Isaac"
         },
         "7f4a57cb-7221-40f4-a60a-2026a13bcba2": {
           "tips": [
@@ -10169,10 +10402,14 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "Laboratório de IA e dados do Isaac"
         },
         "57e61086-a30b-47d8-ad65-af83a970d437": {
           "name": "Diário"
+        },
+        "8bc19694-99fb-4360-a3ac-2f7b9ff83365": {
+          "progression_name": "Conjuntos de dados do clube"
         },
         "0644a5d2-d3ae-4dea-8777-47a522955b21": {
           "tips": [
@@ -10183,6 +10420,9 @@
           "tips": [
             null
           ]
+        },
+        "920cf048-b5d3-4033-8705-25e47ba99238": {
+          "progression_name": "Conjuntos de dados alternativos"
         },
         "8da670fc-d91b-438b-af07-2227156fdbcd": {
           "tips": [
@@ -10195,13 +10435,20 @@
         "c4594eb3-a313-4824-a608-4558d7783967": {
           "name": "Diário"
         },
+        "373c20f4-965e-4cd1-9a60-6fbb186da8c9": {
+          "progression_name": "Importe seu modelo"
+        },
+        "f2a40f03-0400-4522-b5d6-8349034c6ebb": {
+          "progression_name": "Adicione uma tela de boas-vindas"
+        },
         "dfa4b1ec-4f9f-4ec1-9c42-613c82405096": {
           "progression_name": "Personalize seu aplicativo"
         },
         "1b28522d-bf63-4f09-94a2-a80833819a38": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Revise seu aplicativo"
         },
         "f1aefb0a-3a33-499b-9ea6-fc842ba895de": {
           "name": "Aquecimento"
@@ -10239,7 +10486,8 @@
         "dc5dddbb-40bf-41e0-be7e-51b41edf1337": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Crie um aplicativo de IA - IA Lab"
         },
         "065f7419-b028-4610-b0c4-671f2ec86590": {
           "name": "Fechamento"
@@ -10250,7 +10498,8 @@
         "4af3f898-21e4-4ed3-bbc6-ca4686c46f7a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Crie um aplicativo de IA - App Lab"
         },
         "2df922c9-a79a-4e9f-a4e5-003cee501451": {
           "name": "Fechamento"
@@ -15601,196 +15850,323 @@
           "description": "Durante todo o ano, para que você possa ver o trabalho dos alunos e acessar ferramentas e recursos online, todos os alunos precisam estar na mesma seção no Code Studio. Para ver as avaliações e as respostas fornecidas pela Code.org, você também precisa ser um professor autorizado."
         },
         "8ad71590-c0af-4272-9a76-0b3a771d8efb": {
-          "name": "Antes da Aula"
+          "name": "Antes da Aula",
+          "description": "#### Verifique que você tem uma conta de \"Professor Autorizado\" no  Code Studio\n\nQualquer pessoa pode criar uma conta de professor no Code Studio, o que nos obriga a ter uma camada extra de autorização para permitir que os professores do CS Discoveries consigam acessar as avaliações, as chaves de resposta, e quaisquer outros materiais complementares que os alunos não devem poder acessar livremente. Se você participou de uma Oficina de Aprendizagem da Code.org, você já deve ter esse acesso.\n\nPara verificar se você tem o acesso:\n\n1.  Navegue até a [Página principal do curso Unidade 1](https://studio.code.org/s/csd1-2018)\n2.  Você consegue visualizar a Pesquisa Pré-Curso do CS Discoveries como o primeiro \"passo\" do curso?\n3.  Se não, preencha [este formulário](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Observe que pode levar entre um e dois dias para você se tornar um professor autorizado, portanto providencie esse acesso com antecedência!\n\nMesmo que você não seja um professor autorizado, ainda assim é possível criar uma seção para sua turma, mas você não conseguirá aplicar a pesquisa pré-cuso no primeiro dia.\n\n#### Crie uma seção para a sua turma no Code Studio.\n\nPara criar uma seção:\n\n1.  Navegue até a [Página Principal do Professor](https://studio.code.org/home)\n2.  Clique 'Nova seção' em 'Seções de Salas de Aula'\n3.  Selecione 'Logins de Email' \n4.  No espaço reservado, nomeie sua seção (por exemplo: CSD Período 1), o ano ou série dos seus alunos, Curso: 'Descoberts da Ciência da Computação', Unidade Atual: 'Unidade 1: Resolução de Problemas', e clique 'Salvar'.\n5.  Assim que a seção for criada, clique o nome da seção \n6.  Na nova página, você verá um URL específico para Participar, o qual você compartilhará com seus alunos em aula.\n\nPara um guia em vídeo desses passos e para mais informações sobre como navegar a sua conta Code.org, visite o [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)"
         },
         "49e70311-3cb5-4843-9ee7-b8d3c369c0a3": {
-          "name": "No início da Aula"
+          "name": "No início da Aula",
+          "description": "## No início da aula\n\n1.  Peça aos alunos que criem uma conta do Code Studio em <https://studio.code.org>, caso ainda não tenham uma.\n2.  Compartilhe a URL de inscrição da seção com os alunos e peça que eles naveguem até ela para realizarem o ingresso.\n    -   Você pode confirmar que um aluno entrou com sucesso na seção abrindo a página de progresso da seção na página inicial do professor e pressionando a tecla Atualizar quando os alunos entrarem. Os alunos devem ver uma pequena barra verde no canto superior da página dizendo: “Você ingressou com sucesso...” \n3.  Do [studio.code.org](https://studio.code.org) , peça aos alunos que localizem o quadro Descobertas da Ciência da Computação e cliquem em “Exibir curso” e que, em seguida, que acessem a Unidade 1.\n\nQuando os alunos acessarem a página de visão geral da Unidade 1, eles estarão prontos para responder à pesquisa pré-curso do CSD."
         },
         "2b30cadb-489b-48a6-9412-77201cf56342": {
+          "description": "#### Importante! Faça com que seus alunos respondam à Pesquisa Pré-Curso do CSD!\n\nOs alunos podem encontrar um link para a pesquisa no Code Studio como o primeiro item na página de visão geral da Unidade 1. Para garantir que os alunos respondam à pesquisa apenas no momento adequado, ela é “bloqueada” e não pode ser visualizada por eles até que você a “desbloqueie”. O documento [r how-to-administer-a-locked-assessment/csd/2021] fornece detalhes sobre como fazer isso quando você desejar. Observe que as instruções para aplicar uma avaliação e uma pesquisa são as mesmas.    \n\n**Quanto tempo demora?** A pesquisa leva algum tempo - são cerca de 30 perguntas. Você pode aplicá-la em um dia administrativo na escola ou como uma lição de casa logo no início do curso.\n\n**Quando devo aplicar a pesquisa?** Por ser uma pesquisa pré-curso, é importante que os alunos a respondam o mais cedo possível no curso, antes de terem muita (ou qualquer) exposição ao conteúdo, para que possamos avaliar com precisão as mudanças nas atitudes e nas crenças dos alunos causadas pelo curso.",
           "tips": [
-            null
+            "-   Um dos principais objetivos do CS Discoveries é ampliar a participação da Ciência da Computação.  \n\n-   Portanto, é _crucial_ ter uma visão das atitudes e crenças dos alunos sobre a \n    Ciência da Computação _antes_ do curso, para que possamos medir a quantidade de mudanças que ocorreram _após_ o término do curso.\n\n-   Observe que esta pesquisa é **anônima para os alunos**\n\n-   Seu preenchimento também nos ajuda a entender os aperfeiçoamentos que podemos fazer no currículo para melhorar a experiência do professor e do aluno.\n\n\\*\\*Ajude, garantindo que seus alunos contribuam com este importante conjunto de dados . Suas vozes fazem a diferença! \\*\\*"
           ]
         },
         "e746898d-927d-4fc4-9055-ce26f22b274d": {
           "name": "Prepare o Cenário",
+          "description": "**Prompt:** O que faz de alguém um bom solucionador de problemas? Prepare-se para compartilhar três ideias com seu grupo.",
           "tips": [
-            null
+            "**Diário:** O registro no diário é uma prática fundamental nas descobertas de CS. Os alunos podem escrever um diário em folhas soltas, em cadernos ou digitalmente.\n\n**Slides:** Os slides desta unidade estão disponíveis na seção “Recursos para professores” do plano de aula. Você terá que fazer uma cópia, o que só precisará ser feito uma vez - depois disso, você poderá usar os slides de cada lição do currículo."
           ]
         },
         "9df30447-3817-4adb-8ccb-2fb54a6cc7b5": {
+          "description": "**Discuta:** Encoraje os alunos a compartilhem suas respostas com seus grupos ou com um parceiro e, em seguida, peça a voluntários que  compartilhem com toda a turma.",
           "tips": [
-            null
+            "O objetivo deste aquecimento é fazer com que os alunos comecem a pensar sobre como resolver problemas como uma forma de se prepararem para a atividade do dia. Destaque as respostas que reforçam as principais práticas da aula, como colaboração, persistência e criatividade. Esta também é uma chance de reforçar uma cultura positiva que incentiva os alunos a compartilharem e a se apoiarem mutuamente na discussão de suas ideias."
           ]
         },
+        "70f3c8cc-21a3-42d8-b143-c080dc00183c": {
+          "description": "Todas essas são ótimas ideias! Na Ciência da Computação, temos que resolver problemas o tempo todo, então analisaremos todas essas habilidades de resolução de problemas hoje e durante o resto do curso. A maior parte da solução de problemas com que as pessoas se depararm na Ciência da Computação acontece em equipes. Hoje, vamos trabalhar em equipe para resolver um problema divertido que não precisa de computadores. Enquanto você trabalha nesse problema, aqui está uma pergunta sobre a qual você pode pensar."
+        },
+        "fc2251bd-8842-4b8f-8fd0-026bab4454fd": {
+          "description": "**Exibição:** Mostre aos alunos a pergunta do dia\n\n\\*\\*Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe? \\*\\*"
+        },
         "0133c8b4-1bd0-40c9-a4f0-a5ebbfccddd5": {
-          "name": "Construindo uma Mesa de Jornal"
+          "name": "Construindo uma Mesa de Jornal",
+          "description": "**Em grupos**: organize os alunos em grupos de 2 ou 3 participantes."
+        },
+        "4245d32e-bb93-4422-b7e9-7139356b1e30": {
+          "description": "Hoje vamos construir barcos de alumínio. Você terá a oportunidade de construir pelo menos dois barcos e usar sua experiência com cada um para melhorar seus projetos. Antes de começarmos, decida, com o seu grupo, que tipo de design você gostaria de aplicar ao seu primeiro barco. Registre suas ideias e quaisquer possíveis fraquezas desse design em seu guia de atividades."
         },
         "9c55da28-8567-4354-83a7-d69f494cc553": {
+          "description": "**Material a ser distribuído**: Uma cópia do guia de atividades para cada grupo.",
           "tips": [
-            null
+            "\\*\\*Obtendo cópias do Google Docs: \\*\\* Os guias de atividades deste currículo estão disponíveis como Google Docs, Word Docs e PDFs. Se você quiser editar ou criar sua própria cópia de um documento do Google Doc, pode fazê-lo sem solicitar acesso. Basta fazer login com uma conta do Google, clicar em “Arquivo” e “Fazer uma cópia” no menu. Você poderá, então, compartilhar sua própria cópia com seus alunos."
           ]
         },
         "bb2ca753-9e20-4862-a5f8-b46453f8ce94": {
           "name": "Objetivo e Regras",
+          "description": "Com a turma toda, leia as seções Metas e Regras do guia de atividades e responda às perguntas.",
           "tips": [
-            null
+            "Essa atividade pode ocupar algum espaço. Você também pode considerar realizar essa atividade no corredor ou em algum outro espaço se a sua sala for pequena, ou estabelecer outras regras conforme necessário."
           ]
         },
         "8a9c7222-2421-496c-ad09-4d055cdcbca8": {
           "name": "Desenvolva um Plano",
+          "description": "Dê aos alunos alguns minutos para discutirem em grupos a abordagem que eles adotarão com este primeiro barco. Depois que os grupos registrarem suas ideias e algumas possíveis fraquezas do seu design, eles poderão pegar a folha de alumínio e começar a construir seus barcos.",
           "tips": [
-            null
+            "Não disponibilize o papel alumínio antes de os alunos apresentarem um plano para o barco. O objetivo não é atrasá-los muito, mas apenas dar-lhes a chance de refletirem brevemente sobre as possíveis abordagens que poderiam adotar. Esse é um dos motivos pelos quais essa atividade prefigura a etapa do planejamento do processo de resolução de problemas que os alunos verão nas aulas subsequentes."
           ]
         },
         "6d831e07-7474-41e7-bf22-e283aaa0ae50": {
-          "name": "Teste sua Mesa"
+          "name": "Teste sua Mesa",
+          "description": "Quando os grupos estiverem prontos, peça-lhes que testem seus barcos depositando, uma a uma, moedas no barco. Lembre-os das regras, especificamente de que eles não podem tocar ou ajustar os barcos quando esses estiverem na água. Peça-lhes que registrem o número total de moedas suportadas pelo barco em seus guias de atividades."
         },
         "e9de9293-1dea-417b-98d4-8046a6d2435a": {
-          "name": "Avalie e Aperfeiçoe"
+          "name": "Avalie e Aperfeiçoe",
+          "description": "Essa primeira tentativa de construir nossos barcos foi apenas para nos familiarizarmos com o desafio. Todos nós vamos construir um segundo barco e ver se podemos melhorar o número de moedas que nossos barcos aguentavam. Porém, antes de começarmos, vamos ver o que podemos aprender com esse teste."
         },
         "d816c1a5-90aa-4775-98f0-8325769bfcc0": {
+          "description": "**Compartilhe:** Peça aos alunos que compartilhem os resultados de sua primeira testagem com os outros grupos. Peça aos grupos que se concentrem especificamente em qual foi a eventual falha do barco (por exemplo, não era profundo o suficiente, era instável etc.) e pense em maneiras de contornar esses problemas.",
           "tips": [
-            null
+            "Embora alguns alunos vejam essa etapa como uma competição, enfatize que cada grupo está procurando melhorar seu próprio design, não competindo com os outros grupos. Você está buscando que cada aluno desafie a si mesmo primeiro, não aos outros."
           ]
+        },
+        "5ce85328-7117-45d5-830c-9c562ed78780": {
+          "description": "### Desenvolva um Plano"
+        },
+        "ad63d229-e13c-40bf-887b-09dc2c9041ad": {
+          "description": "Agora que você teve a chance de aprender com a primeira rodada de criação de mesas, vamos realizar a mesma atividade novamente. Primeiro, seu grupo deverá desenvolver um novo plano. Assim como antes, registre-o em seu guia de atividades e, quando estiver pronto, você receberá um novo jornal."
+        },
+        "c7dd14ab-d219-4004-9119-a8a159c797d4": {
+          "description": "**Apoio**: Ao circular entre os grupos, faça perguntas sobre o foco do grupo no redesenho. Por exemplo: “Qual aspecto da sua mesa precisava de mais melhorias?” “Quais ideias de outros grupos você gostaria de incorporar às suas?” “Você sentiu a necessidade de reestruturar completamente sua mesa ou apenas fazer pequenas modificações?” \n\nDepois que os grupos prepararem seus novos planos, dê-lhes um novo jornal e peça a cada um que construa uma nova mesa.\n\n### Teste sua Mesa\n\nOs grupos podem testar seus projetos como antes e registrar os resultados em seus guias de atividades."
         },
         "67a5d084-3fb2-41b1-b97a-e9ebf4009129": {
-          "name": "Reflita"
+          "name": "Reflita",
+          "description": "**Transição**: Peça à turma que volte para seus próprios lugares para refletir sobre a atividade."
         },
         "3aab281a-0e2e-41ac-9b5a-94aa6229b632": {
-          "name": "Discuta o Desafio"
+          "name": "Discuta o Desafio",
+          "description": "\\*\\*Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe? \\*\\*"
+        },
+        "3887d56c-e0af-436f-9a1a-23684d55ff13": {
+          "description": "**Prompt**: Você trabalhou em equipes para esta atividade. Como trabalhar em equipe tornou essa atividade mais fácil? Como tornou a atividade mais desafiadora? O que ajudou seu grupo a superar esses desafios?"
         },
         "6963316c-70d1-4a34-8ffc-dbe6db5307c9": {
+          "description": "**Discuta**: dê aos alunos tempo para que compartilhem suas ideias com a turma.",
           "tips": [
-            null
+            "Os alunos podem se dar conta de que a colaboração lhes permitiu refletir sobre suas ideias com mais profundidade ou que conseguiram dividir o trabalho que precisavam fazer. À medida que os alunos listam os desafios, certifique-se de que eles estão descobrindo maneiras de superá-los. Se você notou algum problema na dinâmica de grupo durante a atividade, convém usar esse tempo para questioná-los sobre como solucionar problemas potenciais de uma forma não conflituosa e ajudar os alunos a pensarem em estratégias para trabalharem juntos de forma mais eficaz em atividades futuras. Essas estratégias podem servir como regras de convívio na sala de aula para futuros trabalhos em grupos."
           ]
+        },
+        "e8f5e76f-8926-44d9-880e-a17bb3f798fc": {
+          "description": "Todas as suas ideias sobre essas perguntas foram ótimas. Vamos realizar muitos trabalhos em equipe nas aulas. Você pode estar acostumado a pensar que a Ciência da Computação tem tudo a ver com computadores, mas, acima de tudo, ela trata de resolver problemas, e isso geralmente acontece em equipes. Muitas outras partes dessa atividade, como melhorar projetos e construir coisas, também serão uma parte significativa dessa aula. Espero que você esteja animado para o ano. Amanhã começaremos a nos aprofundar na resolução de problemas."
         },
         "c2045954-0aa7-4467-86af-23b6f3067e70": {
           "description": "Durante todo o ano, para que você possa ver o trabalho dos alunos e acessar ferramentas e recursos online, todos os alunos precisam estar na mesma seção no Code Studio. Para ver as avaliações e as respostas fornecidas pela Code.org, você também precisa ser um professor autorizado."
         },
         "58b5ad32-dbdd-44a8-ba61-6172f83d2d34": {
-          "name": "Antes da Aula"
+          "name": "Antes da Aula",
+          "description": "Antes da Aula\n\n#### Verifique que você tem uma conta de \"Professor Autorizado\" no Code Studio\n\nQualquer pessoa pode criar uma conta de professor no Code Studio, o que nos obriga a ter uma camada extra de autorização para permitir que os professores do CS Discoveries consigam acessar as avaliações, as chaves de resposta, e quaisquer outros materiais complementares que os alunos não devem poder acessar livremente. Se você participou de uma Oficina de Aprendizagem da Code.org, você já deve ter esse acesso. \n\nPara verificar se você tem o acesso: \n\n1.  Navegue até a [Página principal do curso Unidade 1](https://studio.code.org/s/csd1-2018) \n2.  Você consegue visualizar a Pesquisa Pré-Curso do CS Discoveries como o primeiro \"passo\" do curso? \n3.  Se não, preencha [este formulário](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Observe que pode levar entre um e dois dias para você se tornar um professor autorizado, portanto providencie esse acesso com antecedência! \n\nMesmo que você não seja um professor autorizado, ainda assim é possível criar uma seção para sua turma, mas você não conseguirá aplicar a pesquisa pré-cuso no primeiro dia. \n\n#### Crie uma seção para a sua turma no Code Studio.\n\nPara criar uma seção: \n\n1.  Navegue até a [Página Principal do Professor](https://studio.code.org/home) \n2.  Clique 'Nova seção' em 'Seções de Salas de Aula' \n3.  Selecione 'Logins de Email' \n4.  No espaço reservado, nomeie sua seção (por exemplo: CSD Período 1), o ano ou série dos seus alunos, Curso: 'Descoberts da Ciência da Computação', Unidade Atual: 'Unidade 1: Resolução de Problemas', e clique 'Salvar'. \n5.  Assim que a seção for criada, clique o nome da seção \n6.  Na nova página, você verá um URL específico para Participar, o qual você compartilhará com seus alunos em aula. \n\nPara um guia em vídeo desses passos e para mais informações sobre como navegar a sua conta Code.org, visite o [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)"
         },
         "a9f9e7ec-6d94-43b9-939c-140fd99bce5d": {
-          "name": "No início da Aula"
+          "name": "No início da Aula",
+          "description": "## No início da aula\n\n1.  Peça aos alunos que criem uma conta do Code Studio em <https://studio.code.org>, caso ainda não tenham uma.\n2.  Compartilhe a URL de inscrição da seção com os alunos e peça que eles naveguem até ela para realizarem o ingresso.\n    -   Você pode confirmar que um aluno entrou com sucesso na seção abrindo a página de progresso da seção na página inicial do professor e pressionando a tecla Atualizar quando os alunos entrarem. Os alunos devem ver uma pequena barra verde no canto superior da página dizendo: “Você ingressou com sucesso...” \n3.  Do [studio.code.org](https://studio.code.org) , peça aos alunos que localizem o quadro Descobertas da Ciência da Computação e cliquem em “Exibir curso” e que, em seguida, que acessem a Unidade 1.\n\nQuando os alunos acessarem a página de visão geral da Unidade 1, eles estarão prontos para responder à pesquisa pré-curso do CSD."
         },
         "305aebd8-9daf-4d68-b332-ed969803bced": {
+          "description": "#### Importante! Faça com que seus alunos respondam à Pesquisa Pré-Curso do CSD!\n\nOs alunos podem encontrar um link para a pesquisa no Code Studio como o primeiro item na página de visão geral da Unidade 1. Para garantir que os alunos respondam à pesquisa apenas no momento adequado, ela é “bloqueada” e não pode ser visualizada por eles até que você a “desbloqueie”. O documento [r how-to-administer-a-locked-assessment/csd/2021] fornece detalhes sobre como fazer isso quando você desejar. Observe que as instruções para aplicar uma avaliação e uma pesquisa são as mesmas.    \n\n**Quanto tempo demora?** A pesquisa leva algum tempo - são cerca de 30 perguntas. Você pode aplicá-la em um dia administrativo na escola ou como uma lição de casa logo no início do curso.\n\n**Quando devo aplicar a pesquisa?** Por ser uma pesquisa pré-curso, é importante que os alunos a respondam o mais cedo possível no curso, antes de terem muita (ou qualquer) exposição ao conteúdo, para que possamos avaliar com precisão as mudanças nas atitudes e nas crenças dos alunos causadas pelo curso.",
           "tips": [
-            null
+            "-   Um dos principais objetivos do CS Discoveries é ampliar a participação da Ciência da Computação.  \n\n-   Portanto, é _crucial_ ter uma visão das atitudes e crenças dos alunos sobre a \n    Ciência da Computação _antes_ do curso, para que possamos medir a quantidade de mudanças que ocorreram _após_ o término do curso.\n\n-   Observe que esta pesquisa é **anônima para os alunos**\n\n-   Seu preenchimento também nos ajuda a entender os aperfeiçoamentos que podemos fazer no currículo para melhorar a experiência do professor e do aluno.\n\n\\*\\*Ajude, garantindo que seus alunos contribuam com este importante conjunto de dados . Suas vozes fazem a diferença! \\*\\*"
           ]
         },
         "a6bbc25d-26fa-460d-b468-24e907dfb666": {
           "name": "Prepare o Cenário",
+          "description": "**Prompt:** O que faz de alguém um bom solucionador de problemas? Prepare-se para compartilhar três ideias com seu grupo.",
           "tips": [
-            null
+            "**Diário:** O registro no diário é uma prática fundamental nas descobertas de CS. Os alunos podem escrever um diário em folhas soltas, em cadernos ou digitalmente.\n\n**Slides:** Os slides desta unidade estão disponíveis na seção “Recursos para professores” do plano de aula. Você terá que fazer uma cópia, o que só precisará ser feito uma vez - depois disso, você poderá usar os slides de cada lição do currículo."
           ]
         },
         "58bc8560-30ee-4e4b-8a41-fb60494c8e72": {
+          "description": "**Discuta:** Encoraje os alunos a compartilhem suas respostas com seus grupos ou com um parceiro e, em seguida, peça a voluntários que  compartilhem com toda a turma.",
           "tips": [
-            null
+            "O objetivo deste aquecimento é fazer com que os alunos comecem a pensar sobre como resolver problemas como uma forma de se prepararem para a atividade do dia. Destaque as respostas que reforçam as principais práticas da aula, como colaboração, persistência e criatividade. Esta também é uma chance de reforçar uma cultura positiva que incentiva os alunos a compartilharem e a se apoiarem mutuamente na discussão de suas ideias."
           ]
         },
+        "d04fa75d-7179-4dff-b318-8cb8e45a7481": {
+          "description": "Todas essas são ótimas ideias! Na Ciência da Computação, temos que resolver problemas o tempo todo, então analisaremos todas essas habilidades de resolução de problemas hoje e durante o resto do curso. A maior parte da solução de problemas com que as pessoas se depararm na Ciência da Computação acontece em equipes. Hoje, vamos trabalhar em equipe para resolver um problema divertido que não precisa de computadores. Enquanto você trabalha nesse problema, aqui está uma pergunta sobre a qual você pode pensar."
+        },
+        "3a9827ea-c126-4cb3-b186-361b49d9d4c1": {
+          "description": "**Exibição:** Mostre aos alunos a pergunta do dia\n\n\\*\\*Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe? \\*\\*"
+        },
+        "ca54fa06-4c7e-479f-b7cc-e9fec8605dc6": {
+          "name": "Construindo uma Ponte de Espaguete",
+          "description": "**Em grupos**: organize os alunos em grupos de 2 ou 3 participantes."
+        },
+        "3b2b1d4f-fd00-444f-8999-5ff784921445": {
+          "description": "Hoje vamos construir barcos de alumínio. Você terá a oportunidade de construir pelo menos dois barcos e usar sua experiência com cada um para melhorar seus projetos. Antes de começarmos, decida, com o seu grupo, que tipo de design você gostaria de aplicar ao seu primeiro barco. Registre suas ideias e quaisquer possíveis fraquezas desse design em seu guia de atividades."
+        },
         "3cade706-35ca-4591-8b03-b81c9b3ac155": {
+          "description": "**Material a ser distribuído**: Uma cópia do guia de atividades para cada grupo.",
           "tips": [
-            null
+            "\\*\\*Obtendo cópias do Google Docs: \\*\\* Os guias de atividades deste currículo estão disponíveis como Google Docs, Word Docs e PDFs. Se você quiser editar ou criar sua própria cópia de um documento do Google Doc, pode fazê-lo sem solicitar acesso. Basta fazer login com uma conta do Google, clicar em “Arquivo” e “Fazer uma cópia” no menu. Você poderá, então, compartilhar sua própria cópia com seus alunos."
           ]
         },
         "a115c9f0-e81d-4614-902b-013b48c73dd3": {
           "name": "Objetivo e Regras",
+          "description": "Com a turma toda, leia as seções Metas e Regras do guia de atividades e responda às perguntas.",
           "tips": [
-            null
+            "Essa atividade pode exigir algum espaço. Você também pode considerar realizar essa atividade no corredor ou em algum outro espaço se a sua sala for pequena, ou estabelecer outras regras conforme necessário."
           ]
         },
         "3ecc7174-3d61-48b2-b527-596c96b2d593": {
           "name": "Desenvolva um Plano",
+          "description": "Dê aos alunos alguns minutos para discutirem em grupos a abordagem que eles adotarão com este primeiro barco. Depois que os grupos registrarem suas ideias e algumas possíveis fraquezas do seu design, eles poderão pegar a folha de alumínio e começar a construir seus barcos.",
           "tips": [
-            null
+            "Não disponibilize o papel alumínio antes de os alunos apresentarem um plano para o barco. O objetivo não é atrasá-los muito, mas apenas dar-lhes a chance de refletirem brevemente sobre as possíveis abordagens que poderiam adotar. Esse é um dos motivos pelos quais essa atividade prefigura a etapa do planejamento do processo de resolução de problemas que os alunos verão nas aulas subsequentes."
           ]
+        },
+        "8c4c9e7c-6a3b-4708-bc1f-67f6a963732d": {
+          "name": "Teste sua Ponte",
+          "description": "Quando os grupos estiverem prontos, peça-lhes que testem seus barcos depositando, uma a uma, moedas no barco. Lembre-os das regras, especificamente de que eles não podem tocar ou ajustar os barcos quando esses estiverem na água. Peça-lhes que registrem o número total de moedas suportadas pelo barco em seus guias de atividades."
         },
         "71f7568f-7785-4e88-8d34-d9538bfa3963": {
-          "name": "Avalie e Aperfeiçoe"
+          "name": "Avalie e Aperfeiçoe",
+          "description": "Essa primeira tentativa de construir nossos barcos foi apenas para nos familiarizarmos com o desafio. Todos nós vamos construir um segundo barco e ver se podemos aumentar o número de moedas que nossos barcos aguentam. Porém, antes de começarmos, vamos ver o que podemos aprender com esse teste."
         },
         "b3e1e318-87e3-41cd-be33-643df5ac2ff1": {
+          "description": "**Compartilhe:** Peça aos alunos que compartilhem os resultados de sua primeira testagem com os outros grupos. Peça aos grupos que se concentrem especificamente em qual foi a eventual falha do barco (por exemplo, não era profundo o suficiente, era instável etc.) e pense em maneiras de contornar esses problemas.",
           "tips": [
-            null
+            "Embora alguns alunos vejam essa etapa como uma competição, enfatize que cada grupo está procurando melhorar seu próprio design, não competindo com os outros grupos. Você está buscando que cada aluno desafie a si mesmo primeiro, não aos outros."
           ]
+        },
+        "b58249f3-c4a0-4582-8862-dfa8e5416429": {
+          "description": "**Se decidir realizar esta atividade em dois encontros, você pode optar por parar aqui.**\n\n### Desenvolva um plano"
+        },
+        "ddbd078e-b201-4997-a60b-ee6f04ead75c": {
+          "description": "Agora que você teve a chance de aprender com a primeira rodada de criação de mesas, vamos realizar a mesma atividade novamente. Primeiro, seu grupo deverá desenvolver um novo plano. Assim como antes, registre-o em seu guia de atividades e, quando estiver pronto, você receberá um novo jornal."
+        },
+        "88502eb8-8e6e-46f3-aff1-e568261f31b9": {
+          "description": "**Apoio**: Ao circular entre os grupos, faça perguntas sobre o foco do grupo no redesenho. Por exemplo: “Qual aspecto da sua mesa precisava de mais melhorias?” “Quais ideias de outros grupos você gostaria de incorporar às suas?” “Você sentiu a necessidade de reestruturar completamente sua mesa ou apenas fazer pequenas modificações?” \n\nDepois que os grupos prepararem seus novos planos, dê-lhes um novo jornal e peça a cada um que construa uma nova mesa.\n\n### Teste sua Mesa\n\nOs grupos podem testar seus projetos como antes e registrar os resultados em seus guias de atividades."
         },
         "a6d62cfc-bf6e-420e-97fb-2d345e843eff": {
-          "name": "Teste sua Mesa"
+          "name": "Teste sua Mesa",
+          "description": "Os grupos podem testar seus designs da mesma forma que antes e registrar os resultados em seus guias de atividades."
         },
         "35e95c35-425b-44e2-9fe6-0c00d79237d6": {
-          "name": "Reflita"
+          "name": "Reflita",
+          "description": "**Transição**: Peça à turma que volte para seus próprios lugares para refletir sobre a atividade."
         },
         "2a182d2a-e1d7-4134-ab51-4a9309aa4308": {
-          "name": "Discuta o Desafio"
+          "name": "Discuta o Desafio",
+          "description": "\\*\\*Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe? \\*\\*"
+        },
+        "ea436e6e-1343-4717-bd58-a3030c9bd4a9": {
+          "description": "**Prompt**: Você trabalhou em equipes para esta atividade. Como trabalhar em equipe tornou essa atividade mais fácil? Como tornou a atividade mais desafiadora? O que ajudou seu grupo a superar esses desafios?"
         },
         "b235f058-8080-422e-98a8-8ec5bd825565": {
+          "description": "**Discuta**: dê aos alunos tempo para que compartilhem suas ideias com a turma.",
           "tips": [
-            null
+            "Os alunos podem se dar conta de que a colaboração lhes permitiu refletir sobre suas ideias com mais profundidade ou que conseguiram dividir o trabalho que precisavam fazer. À medida que os alunos listam os desafios, certifique-se de que eles estão descobrindo maneiras de superá-los. Se você notou algum problema na dinâmica de grupo durante a atividade, convém usar esse tempo para questioná-los sobre como solucionar problemas potenciais de uma forma não conflituosa e ajudar os alunos a pensarem em estratégias para trabalharem juntos de forma mais eficaz em atividades futuras. Essas estratégias podem servir como regras de convívio na sala de aula para futuros trabalhos em grupos."
           ]
+        },
+        "ee5969aa-60b7-48db-b559-e874035b97df": {
+          "description": "Todas as suas ideias sobre essas perguntas foram ótimas. Vamos realizar muitos trabalhos em equipe nas aulas. Você pode estar acostumado a pensar que a Ciência da Computação tem tudo a ver com computadores, mas, acima de tudo, ela trata de resolver problemas, e isso geralmente acontece em equipes. Muitas outras partes dessa atividade, como melhorar projetos e construir coisas, também serão uma parte significativa dessa aula. Espero que você esteja animado para o ano. Amanhã começaremos a nos aprofundar na resolução de problemas."
         },
         "c7d3976f-62e3-4a23-b332-d57a740908b3": {
           "description": "Durante todo o ano, para que você possa ver o trabalho dos alunos e acessar ferramentas e recursos online, todos os alunos precisam estar na mesma seção no Code Studio. Para ver as avaliações e as respostas fornecidas pela Code.org, você também precisa ser um professor autorizado."
         },
         "c5560ce8-1ca0-4b8b-b7ea-87b3a1618309": {
-          "name": "Antes da Aula"
+          "name": "Antes da Aula",
+          "description": "Antes da Aula\n\n#### Verifique que você tem uma conta de \"Professor Autorizado\" no Code Studio\n\nQualquer pessoa pode criar uma conta de professor no Code Studio, o que nos obriga a ter uma camada extra de autorização para permitir que os professores do CS Discoveries consigam acessar as avaliações, as chaves de resposta, e quaisquer outros materiais complementares que os alunos não devem poder acessar livremente. Se você participou de uma Oficina de Aprendizagem da Code.org, você já deve ter esse acesso. \n\nPara verificar se você tem o acesso: \n\n1.  Navegue até a [Página principal do curso Unidade 1](https://studio.code.org/s/csd1-2018) \n2.  Você consegue visualizar a Pesquisa Pré-Curso do CS Discoveries como o primeiro \"passo\" do curso? 3. Se não, preencha [este formulário](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Observe que pode levar entre um e dois dias para você se tornar um professor autorizado, portanto providencie esse acesso com antecedência! Mesmo que você não seja um professor autorizado, ainda assim é possível criar uma seção para sua turma, mas você não conseguirá aplicar a pesquisa pré-cuso no primeiro dia.\n\n#### Crie uma seção para a sua turma no Code Studio.\n\nPara criar uma seção: \n\n1.  Navegue até a [Página Principal do Professor](https://studio.code.org/home) \n2.  Clique 'Nova seção' em 'Seções de Salas de Aula' \n3.  Selecione 'Logins de Email' \n4.  No espaço reservado, nomeie sua seção (por exemplo: CSD Período 1), o ano ou série dos seus alunos, Curso: 'Descoberts da Ciência da Computação', Unidade Atual: 'Unidade 1: Resolução de Problemas', e clique 'Salvar'. \n5.  Assim que a seção for criada, clique o nome da seção \n6.  Na nova página, você verá um URL específico para Participar, o qual você compartilhará com seus alunos em aula. \n\nPara um guia em vídeo desses passos e para mais informações sobre como navegar a sua conta Code.org, visite o [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)"
         },
         "64c58616-3ba8-43cf-97f9-4b47a3c3cea2": {
-          "name": "No início da Aula"
+          "name": "No início da Aula",
+          "description": "## No início da aula\n\n1.  Peça aos alunos que criem uma conta do Code Studio em <https://studio.code.org>, caso ainda não tenham uma.\n2.  Compartilhe a URL de inscrição da seção com os alunos e peça que eles naveguem até ela para realizarem o ingresso.\n    -   Você pode confirmar que um aluno entrou com sucesso na seção abrindo a página de progresso da seção na página inicial do professor e pressionando a tecla Atualizar quando os alunos entrarem. Os alunos devem ver uma pequena barra verde no canto superior da página dizendo: “Você ingressou com sucesso...” \n3.  Do [studio.code.org](https://studio.code.org) , peça aos alunos que localizem o quadro Descobertas da Ciência da Computação e cliquem em “Exibir curso” e que, em seguida, que acessem a Unidade 1.\n\nQuando os alunos acessarem a página de visão geral da Unidade 1, eles estarão prontos para responder à pesquisa pré-curso do CSD."
         },
         "824d14f1-04c5-4ec9-af8b-8c6717ea9fd0": {
+          "description": "#### Importante! Faça com que seus alunos respondam à Pesquisa Pré-Curso do CSD!\n\nOs alunos podem encontrar um link para a pesquisa no Code Studio como o primeiro item na página de visão geral da Unidade 1. Para garantir que os alunos respondam à pesquisa apenas no momento adequado, ela é “bloqueada” e não pode ser visualizada por eles até que você a “desbloqueie”. O documento [r how-to-administer-a-locked-assessment/csd/2021] fornece detalhes sobre como fazer isso quando você desejar. Observe que as instruções para aplicar uma avaliação e uma pesquisa são as mesmas.    \n\n**Quanto tempo demora?** A pesquisa leva algum tempo - são cerca de 30 perguntas. Você pode aplicá-la em um dia administrativo na escola ou como uma lição de casa logo no início do curso.\n\n**Quando devo aplicar a pesquisa?** Por ser uma pesquisa pré-curso, é importante que os alunos a respondam o mais cedo possível no curso, antes de terem muita (ou qualquer) exposição ao conteúdo, para que possamos avaliar com precisão as mudanças nas atitudes e nas crenças dos alunos causadas pelo curso.",
           "tips": [
-            null
+            "-   Um dos principais objetivos do CS Discoveries é ampliar a participação da Ciência da Computação.  \n\n-   Portanto, é _crucial_ ter uma visão das atitudes e crenças dos alunos sobre a \n    Ciência da Computação _antes_ do curso, para que possamos medir a quantidade de mudanças que ocorreram _após_ o término do curso.\n\n-   Observe que esta pesquisa é **anônima para os alunos**\n\n-   Seu preenchimento também nos ajuda a entender os aperfeiçoamentos que podemos fazer no currículo para melhorar a experiência do professor e do aluno.\n\n\\*\\*Ajude, garantindo que seus alunos contribuam com este importante conjunto de dados . Suas vozes fazem a diferença! \\*\\*"
           ]
         },
         "cdd68f55-79bd-4117-9361-9e9fd0f60d72": {
           "name": "Prepare o Cenário",
+          "description": "**Prompt:** O que faz de alguém um bom solucionador de problemas? Prepare-se para compartilhar três ideias com seu grupo.",
           "tips": [
-            null
+            "\\*\\*Diário: \\*\\* O registro no diário é uma prática fundamental nas descobertas de CS. Os alunos podem escrever um diário em folhas avulsas, em cadernos ou digitalmente. Consulte o Guia de Registro no Diário do CSD para obter mais informações.\n\n\\*\\*Slides: \\*\\* Os slides desta unidade estão disponíveis na seção “Recursos para professores” do plano de aula. Se você quiser editar sua própria cópia de um conjunto de slides, pode fazê-lo sem solicitar acesso. Basta fazer login com uma conta do Google, clicar em “Arquivo” e “Fazer uma cópia” a partir do menu."
           ]
         },
         "bb076ec8-2777-4b87-8a6a-ce6f8348a5d5": {
+          "description": "**Discuta:** Encoraje os alunos a compartilhem suas respostas com seus grupos ou com um parceiro e, em seguida, peça a voluntários que  compartilhem com toda a turma.",
           "tips": [
-            null
+            "O objetivo deste aquecimento é fazer com que os alunos comecem a pensar sobre como resolver problemas como uma forma de se prepararem para a atividade do dia. Destaque as respostas que reforçam as principais práticas da aula, como colaboração, persistência e criatividade. Esta também é uma chance de reforçar uma cultura positiva que incentiva os alunos a compartilharem e a se apoiarem mutuamente na discussão de suas ideias."
           ]
         },
+        "1e851aea-3bb7-40b6-9aff-ed37d40b540e": {
+          "description": "Todas essas são ótimas ideias! Na Ciência da Computação, temos que resolver problemas o tempo todo, então analisaremos todas essas habilidades de resolução de problemas hoje e durante o resto do curso. A maior parte da solução de problemas com que as pessoas se depararm na Ciência da Computação acontece em equipes. Hoje, vamos trabalhar em equipe para resolver um problema divertido que não precisa de computadores. Enquanto você trabalha nesse problema, aqui está uma pergunta sobre a qual você pode pensar."
+        },
+        "f061f3ad-ce3a-44aa-8c32-002e71dd6edd": {
+          "description": "**Exibição:** Mostre aos alunos a pergunta do dia\n\n\\*\\*Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe? \\*\\*"
+        },
+        "40f54f12-c7cc-4289-a720-123df6af617a": {
+          "name": "Construindo uma Torre de Papel",
+          "description": "**Em grupos**: organize os alunos em grupos de 2 ou 3 participantes."
+        },
+        "eaad9b2c-3dff-44dc-b05c-7f3005dfc664": {
+          "description": "Hoje vamos construir torres de papel. Você terá a oportunidade de construir pelo menos duas torres e usar sua experiência com cada uma para aprimorar seus projetos. Antes de começarmos, decida em grupo que tipo de design você gostaria de fazer com sua primeira torre. Registre suas ideias e quaisquer possíveis fraquezas desse design em seu guia de atividades."
+        },
         "e129bba1-faba-47e0-8d48-8cb3d1be8c85": {
+          "description": "**Material a ser distribuído**: Uma cópia do guia de atividades para cada grupo.",
           "tips": [
-            null
+            "\\*\\*Obtendo cópias do Google Docs: \\*\\* Os guias de atividades deste currículo estão disponíveis como Google Docs, Word Docs e PDFs. Se você quiser editar ou criar sua própria cópia de um documento do Google Doc, pode fazê-lo sem solicitar acesso. Basta fazer login com uma conta do Google, clicar em “Arquivo” e “Fazer uma cópia” no menu. Você poderá, então, compartilhar sua própria cópia com seus alunos."
           ]
         },
         "cf837b19-bc57-4852-929b-cecbace3a881": {
           "name": "Objetivo e Regras",
+          "description": "Com a turma toda, leia as seções Metas e Regras do guia de atividades e responda às perguntas.",
           "tips": [
-            null
+            "Esta atividade precisa de um espaço considerável. O ideal é que cada grupo tenha seu próprio espaço para realizar seus testes. Talvez você prefira desenvolver essa atividade no corredor ou em alguma outra área grande se a sua sala for muito pequena."
           ]
         },
         "744ab806-f293-4bdb-b602-2f6f87f67fd7": {
           "name": "Desenvolva um Plano",
+          "description": "Dê aos alunos alguns minutos para discutirem em grupos a abordagem que eles adotarão com esta primeira torre. Depois que os grupos registrarem suas ideias e algumas possíveis fraquezas do seu design, eles poderão pegar seu papel e começar a construir suas torres.",
           "tips": [
-            null
+            "Não disponibilize o papel antes de os alunos apresentarem um plano para a torre. O objetivo não é atrasá-los muito, mas apenas dar-lhes a chance de refletirem brevemente sobre as possíveis abordagens que poderiam adotar. Esse é um dos motivos pelos quais essa atividade prefigura a etapa do planejamento do processo de resolução de problemas que os alunos verão nas aulas subsequentes."
           ]
         },
         "754fb49d-3180-440c-a906-599b41bad3b9": {
-          "name": "Teste sua Mesa"
+          "name": "Teste sua Mesa",
+          "description": "Quando os grupos estiverem prontos, peça-lhes que testem suas torres registrando sua altura e veja se elas conseguem se sustentar sozinhas. Lembre-os das regras, especificamente de que eles não poderão tocar ou ajustar as torres depois de soltá-las."
         },
         "95eca054-2c21-4cd1-a4c5-b405189227a7": {
-          "name": "Avalie e Aperfeiçoe"
+          "name": "Avalie e Aperfeiçoe",
+          "description": "Essa primeira tentativa de construir nossas torres foi apenas para nos familiarizarmos com o desafio. Todos nós vamos construir uma segunda torre e ver se podemos melhorar a altura da nossa torre sem deixar que ela caia. Porém, antes de começarmos, vamos ver o que podemos aprender com esse teste."
         },
         "7a9ae5b8-ad34-48a4-89eb-79178470dc69": {
+          "description": "**Compartilhe:** Peça aos alunos que compartilhem os resultados de sua primeira testagem com os outros grupos. Peça aos grupos que se concentrem especificamente em qual foi a eventual falha da torre (por exemplo, nera alta, mas não fica ereta sem apoio, fica ereta mas é muito baixa, etc.) e pense em maneiras de contornar esses problemas.",
           "tips": [
-            null
+            "Embora alguns alunos vejam essa etapa como uma competição, enfatize que cada grupo está procurando melhorar seu próprio design, não competindo com os outros grupos. Você está buscando que cada aluno desafie a si mesmo primeiro, não aos outros."
           ]
+        },
+        "ed007b73-ed30-411a-b574-4434d8290625": {
+          "description": "### Desenvolva um Plano"
+        },
+        "05394c92-4827-4049-92f7-320cba64d631": {
+          "description": "Agora que você teve a chance de aprender com a primeira rodada de criação das torres, vamos realizar a mesma atividade novamente. Primeiro, seu grupo deverá desenvolver um novo plano. Assim como antes, registre-o em seu guia de atividades e, quando estiverem prontos, vocês receberão mais papel."
+        },
+        "6bde36fd-73a0-417e-b01c-60bf665b4050": {
+          "description": "**Apoio**: Ao circular entre os grupos, faça perguntas sobre o foco do grupo no redesenho. Por exemplo: “Qual aspecto da sua torre precisava de mais melhorias?” “Quais ideias de outros grupos você gostaria de incorporar às suas?” “Você sentiu a necessidade de reestruturar completamente sua torre ou apenas fazer pequenas modificações?” \n\nDepois que os grupos prepararem seus novos planos, dê-lhes mais papel e peça que construam uma nova torre.\n\n### Teste sua Torre\n\nOs grupos podem testar seus projetos como antes e registrar os resultados em seus guias de atividades."
         },
         "215425a6-e4cf-4993-ad77-37a7a54933bd": {
-          "name": "Reflita"
+          "name": "Reflita",
+          "description": "**Transição**: Peça à turma que volte para seus próprios lugares para refletir sobre a atividade."
         },
         "52d5cbaa-de46-4d40-848a-c8feeadd2a94": {
-          "name": "Discuta o Desafio"
+          "name": "Discuta o Desafio",
+          "description": "\\*\\*Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe? \\*\\*"
+        },
+        "d758e2df-ca07-4835-b555-f4355f1ec4cb": {
+          "description": "**Prompt**: Você trabalhou em equipes para esta atividade. Como trabalhar em equipe tornou essa atividade mais fácil? Como tornou a atividade mais desafiadora? O que ajudou seu grupo a superar esses desafios?"
         },
         "7f606fd0-c7e7-4499-b1ea-e8d2682e69a4": {
+          "description": "**Discuta**: dê aos alunos tempo para que compartilhem suas ideias com a turma.",
           "tips": [
-            null
+            "Os alunos podem se dar conta de que a colaboração lhes permitiu refletir sobre suas ideias com mais profundidade ou que conseguiram dividir o trabalho que precisavam fazer. À medida que os alunos listam os desafios, certifique-se de que eles estão descobrindo maneiras de superá-los. Se você notou algum problema na dinâmica de grupo durante a atividade, convém usar esse tempo para questioná-los sobre como solucionar problemas potenciais de uma forma não conflituosa e ajudar os alunos a pensarem em estratégias para trabalharem juntos de forma mais eficaz em atividades futuras. Essas estratégias podem servir como regras de convívio na sala de aula para futuros trabalhos em grupos."
           ]
+        },
+        "d26d14b1-60d5-43db-bfa6-3db97d8176b7": {
+          "description": "Todas as suas ideias sobre essas perguntas foram ótimas. Vamos realizar muitos trabalhos em equipe nas aulas. Você pode estar acostumado a pensar que a Ciência da Computação tem tudo a ver com computadores, mas, acima de tudo, ela trata de resolver problemas, e isso geralmente acontece em equipes. Muitas outras partes dessa atividade, como melhorar projetos e construir coisas, também serão uma parte significativa dessa aula. Espero que você esteja animado para o ano. Amanhã começaremos a nos aprofundar na resolução de problemas."
         },
         "edbc17ab-0a25-4bd1-b61b-066485244424": {
           "description": "\\*\\*Prompt de Registro no Diário: \\*\\* Pense no problema mais simples que o processo de resolução de problemas poderia resolver. Prepare-se para explicar como cada etapa do processo pode ser aplicada."
@@ -15798,20 +16174,30 @@
         "50af75b9-1eb8-46bb-8075-8fbda21f911f": {
           "description": "Permita que os alunos compartilhem individualmente.",
           "tips": [
-            null
+            "Essa discussão serve como uma revisão do processo de resolução de problemas e destaca quantos tipos diferentes de problemas podem existir. Incentive os alunos a serem criativos e a se divertirem com os diferentes “problemas” que eles poderão resolver."
           ]
+        },
+        "9ae95992-1473-434f-85b6-8d6a9ec75c90": {
+          "description": "Com uma variedade tão grande de problemas e estratégias, é importante ser capaz de pensar na melhor forma de usar o processo de resolução de problemas. Hoje, vamos analisar alguns tipos diferentes de problemas, falar sobre o que os torna diferentes e refletir sobre como o processo de resolução de problemas nos ajudou a resolvê-los."
         },
         "db3d10c0-2427-4de7-a5f1-a6ed82c78ea2": {
           "description": "\\*\\*Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a muitos tipos diferentes de problemas? \\*\\*"
         },
+        "7ef11723-1840-4798-8fb4-ca27241e167f": {
+          "description": "\\*\\*Em grupos: \\*\\* Para todas as três atividades, os alunos devem trabalhar em grupos, mesmo que registrem seus resultados individualmente. Grupos de 2 a 4 integrantes provavelmente funcionarão melhor.\n\n\\*\\*Distribuir: \\*\\* Distribua uma cópia do guia de atividades para cada aluno. Por enquanto, os guias podem estar voltados para baixo, para que os tangrams não fiquem visíveis.\n\n## Resolvendo problemas"
+        },
         "dc7c50e6-5ba1-4ea8-b1c3-81ceda99b442": {
+          "name": "Resolução de Problemas",
           "tips": [
-            null
+            "\\*\\*Integrando o Processo de Resolução de Problemas: \\*\\* Os tangrams podem levar vários minutos, especialmente se os alunos estiverem tentando resolvê-los sem algum tipo de estratégia. Lembre-os de que uma etapa é a Preparação, que deve ocorrer antes de começarem a jogar.\n\n\\*\\*Transforme numa Corrida: \\*\\* Transformar esse problema em uma corrida é uma boa maneira de impulsionar a motivação e também de garantir que os grupos não compartilhem as soluções depois de encontrá-las.\n\n\\*\\*Resposta: \\*\\* Uma chave de respostas mostrando possíveis soluções pode ser encontrada online seguindo o link fornecido acima."
           ]
+        },
+        "1bd6c4e2-af2d-4787-8715-0214d443140a": {
+          "description": "Quando os alunos estiverem organizados em grupos, entregue-lhes as folhas com as peças do tangram. Peça-lhes que virem os guias de atividades e comecem o primeiro desafio. Eles criarão as imagens usando suas peças, que podem ser recortadas.\n\n\\*\\*Circule: \\*\\* Caminhe pela sala observando como os alunos estão resolvendo o problema. Certifique-se de que os grupos não estejam compartilhando respostas. Incentive-os a pensar em como o planejamento pode ajudá-los a realizar essa tarefa.\n\nQuando todos os grupos terminarem, reúna a turma novamente. Peça aos alunos que passem para a última página do guia de atividades, onde há uma tabela para registrarem suas experiências com o problema. Eles registrarão quais partes da solução desse problema se enquadram em cada etapa do processo da resolução de problemas.\n\n**Discuta:** Discuta brevemente com os alunos quais partes da atividade eles sentiram que se encaixavam em cada etapa do processo de resolução de problemas. Alguns pontos possíveis a serem destacados após o compartilhamento dos alunos estão abaixo.\n\n-   **Defina**: Esse problema já estava muito bem definido. No entanto, nem todos os problemas se apresentarão dessa forma.\n-   \\*\\*Prepare-se: Desenvolver um plano com uma equipe (como dividir as imagens ou simplesmente trabalhar em conjunto em cada imagem) torna esse problema muito mais fácil de ser resolvido do que colocar as peças aleatoriamente.\n-   **Experimente**: Paciência e persistência são importantes para concluir seu plano\n-   **Reflita**: Se seus planos iniciais não estiverem funcionando, você pode se reagrupar e reconfigurar seu plano"
         },
         "a43aa885-a12c-4665-b965-210bb4689a55": {
           "tips": [
-            null
+            "\\*\\*Integrando o processo de solução de problemas: \\*\\* Esse problema é particularmente desafiador se você não o definir bem. Se você desconsiderar esse passo, seu trabalho será adivinhar e verificar aleatoriamente onde colocar as opções individuais até encontrar uma solução. É muito mais fácil listar primeiro os animais de estimação possíveis para cada pessoa e, em seguida, escolher os animais de estimação para as pessoas mais exigentes.\n\nEssa não é a única abordagem para o problema, e você não deve se apressar em apresentá-la como tal. Em vez disso, incentive os alunos a discutirem uns com os outros o que eles sabem que precisa ser verdade no final e se abordagens diferentes podem ajudar.\n\n\\*\\*Estendendo o problema: \\*\\* Se um grupo terminar muito antes dos outros, você pode dar a eles uma folha de papel em branco e pedir que resolvam o problema novamente, mas com uma nova condição de sua escolha (por exemplo, escolha uma pessoa na solução e pergunte se ela pode resolver o problema com um requisito adicional)."
           ]
         },
         "61ebb096-2e84-47c6-b2b6-4365b65f19a0": {
@@ -15846,13 +16232,17 @@
         "f0f35c7a-bfa3-4db8-97a9-027c5eed74bd": {
           "description": "Permita que os alunos compartilhem individualmente.",
           "tips": [
-            null
+            "Essa discussão serve como uma revisão do processo de resolução de problemas e destaca quantos tipos diferentes de problemas podem existir. Incentive os alunos a serem criativos e a se divertirem com os diferentes “problemas” que eles poderão resolver."
           ]
+        },
+        "2dd9d460-ba69-4ada-b6f7-66fb4127d97c": {
+          "description": "Com uma variedade tão grande de problemas e estratégias, é importante ser capaz de pensar na melhor forma de usar o processo de resolução de problemas. Hoje, vamos analisar alguns tipos diferentes de problemas, falar sobre o que os torna diferentes e refletir sobre como o processo de resolução de problemas nos ajudou a resolvê-los."
         },
         "d6b94ea4-f92b-4eb8-848e-b7e3969519ff": {
           "description": "\\*\\*Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a muitos tipos diferentes de problemas? \\*\\*"
         },
         "9e1294b8-7e94-4ed2-858d-6d81f2764ff7": {
+          "name": "Resolução de Problemas",
           "tips": [
             null
           ]
@@ -20029,7 +20419,8 @@
         "aef97aca-4210-40f0-9cd3-58fe0a1d1a8f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Níveis de escolha: personalize seu aplicativo"
         },
         "880bcfe8-398b-4a55-89f0-27c407322832": {
           "name": "Diário",
@@ -20042,6 +20433,12 @@
           "tips": [
             null
           ]
+        },
+        "2da171ec-62fe-4090-8d73-8697e3affde5": {
+          "name": "Aplicativo de Priorização Médica"
+        },
+        "2096c82f-74bb-439b-968a-aa3cff4ed283": {
+          "progression_name": "Aplicativo de Priorização Médica"
         },
         "4994e528-7fbf-4cb3-827a-03e0e2dd6643": {
           "tips": [
@@ -20063,10 +20460,16 @@
             null
           ]
         },
+        "83caaee7-19f1-4098-ae8c-3a1957e51bb3": {
+          "progression_name": "Model Card de um Recomendador de livro"
+        },
         "42bd5517-9551-4ce8-a01e-6f9af21d8a48": {
           "tips": [
             null
           ]
+        },
+        "8b6a769a-85bf-4ca1-b4e9-9cbe64953552": {
+          "progression_name": "Cartões-modelo de conjunto de dados médicos"
         },
         "1bc3d3fb-c8f4-432c-99b3-1524c9d35a97": {
           "tips": [
@@ -20085,12 +20488,17 @@
             null
           ]
         },
+        "10c39c53-4572-4c3a-9b31-d43d44464248": {
+          "name": "Previsões do zoológico",
+          "progression_name": "Previsões do zoológico"
+        },
         "5cd39585-e8ab-48c0-a71e-5ea528d7ef7f": {
           "tips": [
             null
           ]
         },
         "63de58d5-8dcb-4fff-8335-5edfa4439eee": {
+          "name": "Importando seu modelo",
           "tips": [
             null
           ]
@@ -20098,12 +20506,20 @@
         "8fb15f05-d003-4a04-8cf3-d5962e8ae1f9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Importando seu modelo"
+        },
+        "6a504836-fcfe-40f8-b4a9-939ed5297fab": {
+          "progression_name": "Personalizando seu aplicativo"
+        },
+        "fece7415-7347-404a-b632-72882bdd9667": {
+          "progression_name": "Exemplo de aplicativo: Classificação de zoológicos"
         },
         "0f10e599-ee9e-41db-b062-13b2451fadd4": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Recomendador de animais de estimação"
         },
         "74cb2af2-07e0-47c7-9d1e-b7dd034f1488": {
           "tips": [
@@ -20113,7 +20529,11 @@
         "e7b2ce5f-e413-47e3-a322-d3c40c551321": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Recomendador de animais de estimação"
+        },
+        "66381205-df75-49c3-941e-264b29ddf776": {
+          "progression_name": "Recomendador de animais de estimação"
         },
         "00be23bf-0b85-4eb4-a7f4-bea96bb3ffc3": {
           "tips": [
@@ -20128,7 +20548,8 @@
         "6d9af5ce-913c-4c16-8a89-081c23545139": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Adicionando novas telas"
         },
         "9fdc77c9-e72c-4fbf-b6a8-bb80f4ad5116": {
           "tips": [
@@ -20201,15 +20622,28 @@
         "76ba426c-bbbc-4d62-90d4-de0d68e412f7": {
           "name": "Diário"
         },
+        "0328060d-b869-4515-9ff9-999120b9874d": {
+          "name": "Sistema de alerta de motorista"
+        },
         "4322eab8-e9e7-4df5-a2bd-076c47737f1c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Recomendador Raspado"
+        },
+        "0b4727eb-166b-41a1-91e1-43614e88e44c": {
+          "progression_name": "Sistema de alerta de motorista"
+        },
+        "01d4dc18-6d92-4c65-990e-5e5d9a209ff7": {
+          "progression_name": "Sistema de alerta de motorista"
         },
         "244ecc30-2351-4ebd-9596-220197f275fc": {
           "tips": [
             null
           ]
+        },
+        "0883f8f5-b645-4752-af39-e04642163932": {
+          "progression_name": "Você escolhe: Melhore seu aplicativo"
         },
         "2d0bad6d-f5d4-4d3d-91f2-7e0b359e80b4": {
           "name": "Diário"
@@ -20225,6 +20659,9 @@
             null
           ]
         },
+        "da4d1cd7-0f33-4581-aeae-7d298c19e09a": {
+          "progression_name": "Treine um modelo no IA Lab"
+        },
         "4343b013-98ab-4b31-b1f8-1d871a146116": {
           "tips": [
             null
@@ -20234,6 +20671,9 @@
           "tips": [
             null
           ]
+        },
+        "543c1356-b50b-4776-9462-4fabd0ab7f28": {
+          "progression_name": "Crie um aplicativo no App Lab"
         },
         "b436503e-9da5-42d9-b82b-ffd4344044ec": {
           "name": "Reflexão",
@@ -20271,7 +20711,8 @@
         "247783a6-f9ee-44e8-9954-6a58a7017c4b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Crie um formulário do Google"
         },
         "c2f776d1-241c-4718-91fc-4b1d9d12e750": {
           "tips": [
@@ -20285,17 +20726,25 @@
           ]
         },
         "08020742-2f96-4a09-8d5a-c3034a4b8962": {
-          "name": "Questionário"
+          "name": "Questionário",
+          "progression_name": "Pesquisa da Kim"
         },
         "218c7165-58fd-4f8f-b70d-52d564cb22a6": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Dados da pesquisa da Kim"
         },
         "50508b6f-ff85-4dff-bfd7-69f5851ac692": {
           "tips": [
             null
           ]
+        },
+        "e826b464-2d59-45e0-bed3-02cb13fe7729": {
+          "progression_name": "Laboratório de IA e dados da Kim"
+        },
+        "7a4ca3ea-4223-47f3-afc6-69584b737155": {
+          "progression_name": "Dados da pesquisa do Isaac"
         },
         "dd8082b5-0325-48e2-92c5-1cfa804d1452": {
           "tips": [
@@ -20306,10 +20755,14 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "Laboratório de IA e dados do Isaac"
         },
         "facdc92c-bb56-496c-9a0d-7f483f0d4c52": {
           "name": "Diário"
+        },
+        "d50a69ad-81f7-449a-ab1a-241f95e80193": {
+          "progression_name": "Conjuntos de dados do clube"
         },
         "6bf75b39-230b-41ad-9893-f130b220f997": {
           "tips": [
@@ -20320,6 +20773,9 @@
           "tips": [
             null
           ]
+        },
+        "9fbfbd48-7e75-4b54-8dae-d4aa36823cf3": {
+          "progression_name": "Conjuntos de dados alternativos"
         },
         "8c477f84-d013-4354-9462-10386c870b22": {
           "tips": [
@@ -20332,6 +20788,12 @@
         "5d73f27a-b5a4-4f10-938e-1960f88606d9": {
           "name": "Diário"
         },
+        "2c99edd9-27d0-4cf3-8ea2-63466bfe5aa0": {
+          "progression_name": "Importe seu modelo"
+        },
+        "7bfc84f7-0e36-4c21-9018-f7466303b041": {
+          "progression_name": "Adicione uma tela de boas-vindas"
+        },
         "bc909d4d-f7fd-4bc3-8caa-d366201d395f": {
           "tips": [
             null
@@ -20341,7 +20803,8 @@
         "4b58eb8b-402c-4927-abf9-52bcbde90aea": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Revise seu aplicativo"
         },
         "d6ee6aea-6b89-488f-b9ea-e3c53aaeedec": {
           "name": "Diário"
@@ -20385,7 +20848,8 @@
         "d3171373-c8fe-4eb1-9eca-cea927c6d1ba": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Crie um aplicativo de IA - IA Lab"
         },
         "62d8c1fd-083d-4e27-a12a-50ce87426ed8": {
           "name": "Fechamento"
@@ -20396,7 +20860,8 @@
         "389aa813-ae13-4198-a933-d98a175b109b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Crie um aplicativo de IA - App Lab"
         },
         "2fd8da1c-c18a-42c8-a248-841c97595686": {
           "name": "Fechamento"
@@ -21362,7 +21827,7 @@
           "description": "Aqui estão os recursos adicionais que você pode fornecer aos alunos para aprimorar seu aprendizado:\n\n-   [Atividade familiar](https://drive.google.com/open?id=1tsYWY76Y9BJpl_mHcxb0-BiLIHL2PrGBt3GqeeBNAD8)\n-   [Dicas para a família](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)"
         },
         "5fc2cc60-64ea-4c01-8c9e-21280799d17b": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "9f5921d9-6813-471c-8c16-40e622971021": {
           "name": "Vocabulário"
@@ -21392,7 +21857,7 @@
           ]
         },
         "3cb8c1e4-0403-4132-8933-b25bfb5c7985": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "f200bbb3-21c5-4805-ae91-c6418a1309b7": {
           "name": "Vocabulário"
@@ -21445,7 +21910,7 @@
           "description": "### Bugs, Bugs & More Bugs (45-60 minutos)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Ciência da Computação+Artes da Língua Inglesa + Matemático**\n\n[Bugs, Bugs & More Bugs](https://docs.google.com/document/d/1TdvVXM9Tf8lv9L3rgDqMJFTe-iG0PjTpMtBb2f4pXDo/edit#)  é um atividade opcional alinhada aos padrões ELA e matemática do Common Core, escrita por nossa comunidade de professores. Os alunos praticarão a depuração à medida que corrigem o código, corrigem um problema matemático e revisam amostras de escrita.\n\n_Padrões Endereçados_:\n\n-   \\*\\*CCSS.ELA-LITERACY.L.2.1.B: \\*\\* Forma e uso de substantivos plurais irregulares que ocorrem com frequência (por exemplo, pés, crianças, dentes, ratos, peixes).\n\n-   \\*\\*CCSS.ELA-LITERACY.L.2.2.A: \\*\\* Capitalize feriados, nomes de produtos e nomes geográficos.\n\n-   \\*\\*CCSS.ELA-LITERACY.L.2.2.C: \\*\\* Use um apóstrofo para formar contrações e possessivos frequentes.\n\n-   \\*\\*CCSS.MATH.CONTENT.2.OA.B.2: \\*\\* Adicione e subtraia fluentemente dentro de 20 usando estratégias mentais.\n\n-   \\*\\*CCSS.MATH.CONTENT.2.NBT.A.4: \\*\\* Compare dois números de três dígitos com base nos significados de centenas, dezenas e um dígitos, usando símbolos >, = e\\\\ \\< para registrar os resultados das comparações."
         },
         "ea522c1a-0f1d-4224-9a6c-25852564554a": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "0d59aa71-1a4e-4fd3-8a95-3f0f23933b47": {
           "name": "Vocabulário"
@@ -21482,7 +21947,7 @@
           "description": "Use estas atividades para reforçar o aprendizado dos alunos. Elas podem ser usadas como atividades extraclasse ou outro tipo de enriquecimento.\n\n**Introduzindo bugs**\n\nPeça aos alunos que voltem aos níveis anteriores, colocando bugs de propósito em suas soluções. Eles podem então pedir a outros alunos que depurem seu trabalho. Isso também pode ser feito com quebra-cabeças de papel.\n\nQuando outros alunos estiverem fazendo a depuração, é importante que as críticas sejam construtivas. Caso isso possa ser um problema para a turma, revise como fazer uma depuração respeitosa antes desta atividade, encenando com outro aluno."
         },
         "fb89a68d-3b84-40eb-8670-33a34ad4431b": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "7e073b00-f336-4d89-a848-f79ee9a8bc23": {
           "name": "Vocabulário"
@@ -21519,7 +21984,7 @@
           "name": "Reflexão"
         },
         "ea8d0dcc-28b3-440d-b100-c036b74d9499": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "7e945f73-76d3-4b83-817d-2b9af9789dd7": {
           "name": "Vocabulário"
@@ -21558,7 +22023,7 @@
           "description": "### Formas e Paisagens (45-60 minutos)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png)  **Ciência da Computação+ Artes da Língua Inglesa + Matemática + Ciência**\n\n[Formas e Paisagens](https://docs.google.com/document/d/1cPejd3i4v1A6iTMDtyOvlOfTVU9nlMg21bovwFThvvc/edit#) é uma atividade opcional alinhada ao Common Core ELA, Common Core Math e Next Generation Science Standards, escrito por nossa comunidade de professores. Os alunos devem projetar uma barragem para evitar inundações futuras. Usando o código, você criará um projeto para mostrar ao conselho municipal local como sua barragem ficará.\n\n_Padrões Endereçados:_\n\n-   \\*\\*CCSS.ELA-LITERACY.W.2.8: \\*\\* Recupere informações de experiências ou reúna informações de fontes fornecidas para responder a uma pergunta.\n\n-   \\*\\*CCSS.MATH.CONTENT.2.MD.A.3: \\*\\* Estime comprimentos usando unidades de polegadas, pés, centímetros e metros.\n\n-   \\*\\*NGSS.2-ESS2-1: \\*\\* Compare várias soluções projetadas para retardar ou impedir que o vento ou a água mudem a forma da terra."
         },
         "38f1faf6-557e-4278-8336-2ae0d394cce1": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "bcf1fc52-7c45-4c27-928d-9535649691dc": {
           "name": "Vocabulário"
@@ -21581,7 +22046,7 @@
           "description": "Use essas atividades para aprimorar o aprendizado dos alunos. Eles podem ser usados como atividades fora da classe ou outro enriquecimento.\n\n-   Peça aos alunos que desenhem suas próprias criações de empilhamento de copos para outra pessoa codificar.\n-   Forneça aos alunos algoritmos que utilizam repetições e, em seguida, faça com que eles expandam o programa de volta para uma versão completa passo a passo."
         },
         "6ad48bbf-6b60-4210-99ba-722ef48e2ea4": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "25f3c528-ac14-47ff-b254-cd071d8737ff": {
           "name": "Vocabulário"
@@ -21634,7 +22099,7 @@
           "description": "Use estas atividades para reforçar o aprendizado dos alunos. Elas podem ser usadas como atividades extraclasse ou outro tipo de enriquecimento.\n\n**É hora de se mexer**\n\n-   Dê aos alunos imagens de ações ou passos de dança que eles saibam fazer.\n-   Peça aos alunos que organizem movimentos e acrescentem laços para coreografar a própria dança.\n-   Compartilhe as danças com o restante da turma.\n\n**Conecte de volta**\n\n-   Encontre alguns vídeos no YouTube com danças famosas que se repetem.\n-   Sua turma consegue encontrar os laços?\n-   Tente a mesma coisa com músicas!"
         },
         "b57a66a7-3da1-4c20-8d0a-9b5da066c07e": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "3c79c590-2f48-4931-b8fa-736281002766": {
           "name": "Vocabulário"
@@ -21667,7 +22132,7 @@
           "description": "### Harvester's Farm (60-75 minutos)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Ciência da Computação+ Artes da Língua Inglesa + Matemática + Ciência**\n\n[\\*\\*Harvester's Farm\\*\\*](https://docs.google.com/document/d/1EgX8toSxV0gB-n2XTQVckeNhnYzsP7iYiO1H0vNGMKM/edit#heading=h.oa0z8i3xy1ys)  é uma atividade opcional alinhada aos Padrões Common Core ELA, Common Core Math e Next Generation Science Standards, escritos por nossa comunidade de professores. Os alunos usarão os organizadores gráficos fornecidos para classificar e descrever itens na Harvester's Farm. Os organizadores gráficos servirão como um componente de pré-escrita à medida que os alunos escrevem um texto informativo/explicativo para informar os leitores sobre o que a Colheitadeira faz em sua fazenda. \n\n_Padrões Endereçados:_\n\n-   \\*\\*CCSS.ELA-LITERACY.W.2.2: \\*\\* Escreva textos informativos/explicativos nos quais eles introduzem um tópico, usam fatos e definições para desenvolver pontos e fornecer uma declaração ou seção final.\n\n-   \\*\\*CCSS.ELA-LITERACY.W.2.5: \\*\\* Com orientação e apoio de adultos e colegas, concentre-se em um tópico e fortaleça a escrita conforme necessário, revisando e editando.\n\n-   \\*\\*CCSS.MATH.CONTENT.2.OA.B.2: \\*\\* Adicione e subtraia fluentemente dentro de 20 usando estratégias mentais.\n\n-   \\*\\*NGSS.2-PS1-1: \\*\\* Planeje e conduza uma investigação para descrever e classificar diferentes tipos de materiais por suas propriedades observáveis."
         },
         "9fde8e2d-856f-4b87-924a-15d076522654": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "305f3738-2a15-46f7-bef1-c405a63b948d": {
           "name": "Vocabulário"
@@ -21698,7 +22163,7 @@
           "description": "### Formas malucas e suas funções (45-60 minutos)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png)  **Ciência da Computação+Artes da Língua Inglesa + Matemática + Ciência**\n\n[\\*\\*Loopy Forms & Their Funções\\*\\*](https://docs.google.com/document/d/1F2wNw1yUfaob_-PXLN_A7k0mm0uSaa7fYtMhGJOC95U/edit) é uma atividade opcional alinhada aos Padrões Common Core ELA, Common Core Math e Next Generation Science Standards, escritos por nossa comunidade de professores. O artista precisa ajudar seus amigos a projetar sua casa desenhando plantas. É importante que os alunos entendam as formas básicas e como cada forma tem funções diferentes nas plantas da casa. Eles então escreverão artigos de opinião, fornecerão motivos e usarão palavras vinculadas para justificar suas escolhas de design.\n\n_Standards Addressed:_\n\n-   \\*\\*CCSS.ELA-LITERACY.W.2.1: \\*\\* Escreva artigos de opinião nos quais eles introduzam o tópico ou livro sobre o qual estão escrevendo, declare uma opinião, forneça razões que apóiem a opinião, use palavras vinculantes (por exemplo, porque, e, também) para conectar opiniões e motivos, e fornecer uma declaração ou seção final.\n\n-   \\*\\*CCSS.MATH.CONTENT.2.G.A.1: \\*\\* Reconhecer e desenhar formas com atributos especificados, como um determinado número de ângulos ou um determinado número de faces iguais.1 Identifique triângulos, quadriláteros, pentágonos, hexágonos e cubos.\n\n-   \\*\\*NGSS.K-2-ETS1-2: \\*\\* Desenvolva um esboço, desenho ou modelo físico simples para ilustrar como a forma de um objeto o ajuda a funcionar conforme necessário para resolver um determinado problema."
         },
         "1d2e55e1-c5d3-4689-a7ab-824bdc250f02": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "438866ae-0223-4f9f-badd-3457a85f7c7a": {
           "name": "Introdução"
@@ -21729,7 +22194,7 @@
           ]
         },
         "02b80534-5007-46a8-9992-3e0323c49a92": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "4184cd8d-7e62-44ac-91e2-fa4c825a3aa7": {
           "name": "Vocabulário"
@@ -21768,7 +22233,7 @@
           "description": "### Torne-se um Game Designer (45-135 minutos)\n\n![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Ciência da Computação + Matemática + Ciência**\n\n[\\*\\*Torne-se um Designer de Jogos\\*\\*](https://docs.google.com/document/d/1QfcYmWyn2U1X2IZO9Kpt2rH3uoxPpcEtp3ypVWcmBC8/edit?usp=sharing) é opcional atividade alinhada ao Common Core Math e Next Generation Science Standards, escrito por nossa comunidade de professores. Os alunos se tornarão Game Designers à medida que criam, criam e testam um jogo. Os alunos também registrarão pontuações, farão observações, criarão um gráfico de barras, analisarão os resultados e justificarão as mudanças que fariam no jogo.\n\n_Padrões Endereçados:_\n\n-   \\*\\*2.MD.D.10: \\*\\* Desenhe um gráfico de figuras e um gráfico de barras (com escala de unidade única) para representar um conjunto de dados com até quatro categorias. \n\n-   \\*\\*K-2 ETS1-1: \\*\\* Faça perguntas, faça observações e reúna informações sobre uma situação que as pessoas desejam alterar para definir um problema simples que pode ser resolvido através do desenvolvimento de um objeto ou ferramenta nova ou aprimorada.\n\n-   \\*\\*K-2 ETS1-3: \\*\\* Analise dados de testes de um objeto ou ferramenta para determinar se ele funciona como pretendido para comparar os pontos fortes e fracos de como cada um executa."
         },
         "a1420040-a891-4dd5-8aa7-127bac142431": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "8f34487c-1c94-4472-80bd-7e53befee5f6": {
           "name": "Vocabulário"
@@ -21798,7 +22263,7 @@
           "description": "Use estas atividades para reforçar o aprendizado dos alunos. Elas podem ser usadas como atividades extraclasse ou outro tipo de enriquecimento.\n\n**Observe o que há por trás**\n\nAo compartilhar um link para sua história, você também compartilha todo o código que está por trás dela. É uma ótima maneira de os alunos aprenderem uns com os outros.\n\n-   Publique links para histórias concluídas on-line.\n    -   Crie sua própria história para compartilhar também!\n-   Quando os alunos carregarem um link, peça-lhes que cliquem no botão “Como funciona”, para que vejam o código por trás da história.\n-   Discuta em grupo as diferentes maneiras como os colegas de classe programaram suas histórias.\n    -   O que surpreendeu você?\n    -   O que gostaria de tentar?\n-   Escolha a história de outra pessoa e clique em “Remix” para aproveitá-la (não se preocupe, a história original continuará segura)."
         },
         "0dd3008c-14b5-47c3-9913-65bd3bf87655": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "565fdda1-dbbe-4521-aacf-966c4aa204e3": {
           "name": "Vocabulário"
@@ -21819,7 +22284,7 @@
           "name": "Reflexão"
         },
         "a3f5e809-2960-4f58-92e2-42b5ddf0d058": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "ac8248ed-61d0-4366-876a-0c145094fa03": {
           "name": "Vocabulário"
@@ -21848,7 +22313,7 @@
           "description": "Use estas atividades para reforçar o aprendizado dos alunos. Elas podem ser usadas como atividades extraclasse ou outro tipo de enriquecimento.\n\n**Imagens binárias**\n\n-   Há excelentes recursos na web para levar esta atividade a um novo patamar.\n-   Se os alunos tiverem interesse em saber como imagens (ou até músicas) podem ser representadas no sistema binário, é possível encontrar mais informações em [Binary Baubles](http://code.org/files/CSEDbinary.pdf), da Thinkersmith."
         },
         "a373c46d-9bd4-493e-8f40-27654f2c0c62": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "eb8e74ca-2768-4a33-9c4d-0493db0c6aaa": {
           "name": "Planejamento"
@@ -21890,7 +22355,7 @@
           "description": "Aqui estão os recursos adicionais que você pode fornecer aos alunos para aprimorar seu aprendizado:\n\n-   [Atividade Familiar](https://drive.google.com/open?id=1jzZbfj0Y1GJa6WWTHp2EEzr7t0m-Hof-qIb-QLiAcpA)\n-   [Dicas para a Família](https://www.commonsense.org/education/family-tips/k-5-privacy-and-security)\n-   Facilitar um jogo BeakOutEdu relacionado que foi co-criado com a Common Sense Education, chamado [Lip Sync Revenge](https://platform.breakoutedu.com/game/lip-sync-revenge)! Você precisará criar uma conta gratuita para acessar o jogo e os recursos relacionados."
         },
         "0661508e-1aa3-488f-8064-beaec4c40e7a": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "835c16c0-8a24-43c1-889b-493814eb50d1": {
           "name": "Vocabulário"
@@ -21920,7 +22385,7 @@
           "description": "Use estas atividades para reforçar o aprendizado dos alunos. Elas podem ser usadas como atividades extraclasse ou outro tipo de enriquecimento.\n\n**Cada vez melhor**\n\n-   Peça à turma que tente criar suas próprias imagens.\n-   Os alunos conseguem descobrir como programar as imagens que eles criam?\n\n**Desafio para a turma**\n\n-   Como professor, desenhe uma imagem em uma grade 5x5.\n-   A turma consegue codificá-la junto com você?"
         },
         "96499db1-0002-4488-b370-2d718a5c90ec": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "c10c099e-fd94-4a79-9bd6-bfc55b2b1059": {
           "name": "Vocabulário"
@@ -21947,7 +22412,7 @@
           "name": "Reflexão"
         },
         "f5627332-703a-420b-ab72-660c350b87d9": {
-          "name": "Refletir",
+          "name": "Reflita",
           "tips": [
             null
           ]
@@ -22030,7 +22495,7 @@
           "description": "### Comentário do Dia do Jogo (45-60 minutos)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Ciência da Computação+Artes da Língua Inglesa + Matemática+Ciência**\n\n[Comentário do Dia do Jogo](https://docs.google.com/document/d/1wdBbcgvYXN3GgA1Y2nJjloGosfLxhhWKhUpbQtZPCP0/edit#) é uma atividade opcional alinhada aos Padrões Common Core ELA, Common Core Math e Next Generation Science Standards, escritos por nossa comunidade de professores. Nesta atividade, os alunos lerão as instruções em voz alta à medida que aprendem a programar com eventos no Bounce para fazer um jogo. Assim que o jogo estiver concluído, os alunos fornecerão comentários jogados a jogadas enquanto seus colegas preveem para que lado a bola saltará para marcar. Os alunos também completarão um modelo Frayer sobre gráficos de barras antes de criar um gráfico de barras dimensionado usando os dados coletados durante o jogo.\n\n_Padrões Endereçados:_\n\n-   \\*\\*CCSS.ELA-LITERACY.RF.3.4: \\*\\* Leia com precisão e fluência suficientes para apoiar a compreensão.\n\n-   \\*\\*CCSS.ELA-LITERACY.SL.3.4: \\*\\* Relate um tópico ou texto, conte uma história ou reconte uma experiência com fatos apropriados e detalhes descritivos relevantes, falando claramente em um ritmo compreensível.\n\n-   \\*\\*CCSS.MATH.CONTENT.3.MD.B.3: \\*\\* Desenhe um gráfico de imagem em escala e um gráfico de barras dimensionado para representar um conjunto de dados com várias categorias. Resolva problemas de um e dois passos de “quantos mais” e “quantos menos” usando as informações apresentadas em gráficos de barras dimensionados. \n\n-   \\*\\*NGSS.3-PS2-2: \\*\\* Faça observações e/ou medições do movimento de um objeto para fornecer evidências de que um padrão pode ser usado para prever movimentos futuros. "
         },
         "ea99adc6-d611-4d13-9da7-04fcb43c6df3": {
-          "name": "Refletir",
+          "name": "Reflita",
           "tips": [
             "Se você não tiver certeza se a resposta de um aluno descreve um evento, tente dividir a resposta. Existe uma ação e uma resposta?\n\nPor exemplo:\n\n-   Cruzar a linha de chegada e ter personagens na tela parabenizá-lo\n-   Encontrar um grande pote de tesouro (ou outro item) e ver seu inventário crescer\n-   Comprar novos itens na loja do jogo e ter o item para usar\n-   Pressionar os botões de um controle de jogo e fazer com que seu personagem faça algo legal"
           ]
@@ -22066,7 +22531,7 @@
           ]
         },
         "7c5f7ed0-8e92-4943-8403-033e846373a0": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "607ec054-729f-402a-9c5b-2adba3adb822": {
           "description": "Hoje faremos algo muito criativo. Qual é a sua forma favorita de expressar  a sua criatividade?"
@@ -22215,7 +22680,7 @@
           "name": "Reflexão"
         },
         "bde81c73-ab2e-4430-88c8-7b0a493c6a18": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "84144ea8-ec9f-40ad-925b-6170d47437ef": {
           "name": "Vocabulário"
@@ -22829,7 +23294,7 @@
           "description": "Os alunos continuarão a apresentar seus projetos de forma aprovada (escrita, oral ou usando multimídia). "
         },
         "9946dfc7-dce9-4ead-bbdc-aec0d224bbc9": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "5284ed91-ecd3-477a-8e48-cec21b3822f4": {
           "name": "Vocabulário-chave",
@@ -22921,7 +23386,7 @@
           "description": "Hoje você aprendeu a escrever código para criar programas no Sprite Lab. \n\n**Programa** - Um algoritmo que foi codificado em algo que pode ser executado por uma máquina.\n\n**Algoritmo** - Uma lista de etapas para concluir uma tarefa."
         },
         "fd1a19e9-0bde-448a-8dd0-8e3b9db03712": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "e270db37-e123-4995-8e60-a5d7e9f1e6f2": {
           "description": "**Faça isso: \\*\\* Revise ou introduza a palavra**algoritmo\\*\\*: uma lista de etapas para concluir uma tarefa."
@@ -22952,7 +23417,7 @@
           "progression_name": "Diversão Livre: monte uma cena interativa"
         },
         "ec95fadb-9235-4f39-b4f7-f9b02e2fecdb": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "c129fbec-8adf-45f8-9920-ccac97d6022f": {
           "name": "Introdução"
@@ -23100,7 +23565,7 @@
           "progression_name": "Atividade livre"
         },
         "95e83631-dfdc-4398-bde7-941a56206de6": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "7d525905-cfd3-47a7-b70a-2d2a28c13fac": {
           "name": "Introdução"
@@ -23133,7 +23598,7 @@
           "progression_name": "Desenvolvimento de Habilidades"
         },
         "30357f1e-97b8-43b2-9fa9-edace8299c36": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "37214efe-4044-4968-8924-71472b1d2725": {
           "name": "Introdução"
@@ -23145,7 +23610,7 @@
           "name": "Showcase"
         },
         "08a15ab5-ba6f-4d69-b493-cae09147c210": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "280458d7-1de1-46dc-b42c-2be014890b38": {
           "name": "Introdução"
@@ -24099,7 +24564,7 @@
           "progression_name": "Desenvolvimento de Habilidades"
         },
         "b8a87ad4-50ba-433f-8c86-27093af1fafd": {
-          "name": "Refletir"
+          "name": "Reflita"
         },
         "d87717c8-d527-450d-9bdb-e8932caba6a1": {
           "name": "Revisar",
@@ -26149,7 +26614,7 @@
           "name": "Atividade Principal (Nova)"
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Conclusão"
+          "name": "Fechamento"
         },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "Pesquisa Pós-curso do CS Discoveries",

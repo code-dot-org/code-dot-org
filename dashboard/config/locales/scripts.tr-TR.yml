@@ -3376,6 +3376,8 @@ tr:
               display_name: 'Bölüm 1: Problem çözme süreci'
             lessonGroup-3:
               display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
+            lessonGroup-5:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme
             arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça
             etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı,
@@ -8291,6 +8293,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme
             arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça
             etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı,
@@ -8340,6 +8344,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme
             arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça
             etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı,
@@ -8389,6 +8395,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme
             arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça
             etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı,
@@ -8449,6 +8457,8 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-4:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme
             arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça
             etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı,
@@ -8501,6 +8511,8 @@ tr:
               display_name: 'Bölüm 1: Problem çözme süreci'
             lessonGroup-3:
               display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
+            lessonGroup-5:
+              display_name: Anket
           student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme
             arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça
             etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı,

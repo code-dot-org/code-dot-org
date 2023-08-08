@@ -1,0 +1,29 @@
+name 'VPL - CSD - Module 8 - CI_2023'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+#Curriculum Investigation
+
+
+## Overview
+
+You will investigate one lesson in the Physical Computing unit. The investigation includes an investigation goal and task. After the lesson investigation, there is a reflection prompt to further your guide planning and implementation. You may want to write down ideas in your journal throughout the investigations. The time below is suggestion.  Feel free to take as much time as you need.
+
+## Lesson Investigation
+
+* Lesson 5:  Variables and If Statements
+* Lesson 8:  Getting Screen Inputs
+
+
+
+
+
+
+
+
+
+
+
+MARKDOWN

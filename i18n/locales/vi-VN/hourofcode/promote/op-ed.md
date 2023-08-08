@@ -1,5 +1,5 @@
 ---
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+title: Mẫu Op-ed Hỗ trợ Tuần giáo dục Khoa học Máy tính và Giờ lập trình
 ---
 
 {{ signup_button }}

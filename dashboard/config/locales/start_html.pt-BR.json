@@ -1897,11 +1897,13 @@
         },
         "ml-customize-raspado-2021": {
           "Predict": "Previsão",
+          "Raspado Recommender": "Recomendador Raspado",
           "no": "não",
           "yes": "sim"
         },
         "ml-customize-raspado_2022": {
           "Predict": "Previsão",
+          "Raspado Recommender": "Recomendador Raspado",
           "no": "não",
           "yes": "sim"
         },
@@ -2036,6 +2038,7 @@
           "Shoe Recommender": "Recomendador de sapato"
         },
         "ml-use model card-example3A-2021": {
+          "Driver Alert System": "Sistema de alerta de motorista",
           "Predict": "Previsão",
           "cloudy": "nublado",
           "dusk": "Crepúsculo",
@@ -2044,6 +2047,7 @@
           "snow": "neve"
         },
         "ml-use model card-example3A_2022": {
+          "Driver Alert System": "Sistema de alerta de motorista",
           "Predict": "Previsão",
           "cloudy": "nublado",
           "dusk": "Crepúsculo",

@@ -1,0 +1,834 @@
+{
+  "script": {
+    "name": "vpl-csd-2023-m2",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSD Virtual PL",
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2023-08-02 00:10:08 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "vpl-csd-2023-m2"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Module 2",
+      "name": "Asynchronous Pre-Work",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Synchronous Session 4: Welcome",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Synchronous Session 5: Review of the Curriculum Investigation",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Synchronous Session 6: Assessment",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Synchronous Session 7: Inclusion Scenarios",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Synchronous Session 8: Wrap Up",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "9544c002-31b7-43ea-921c-3457a2375ff8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9544c002-31b7-43ea-921c-3457a2375ff8",
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    },
+    {
+      "key": "476bdbf9-2952-4758-837f-623031cf41f4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "476bdbf9-2952-4758-837f-623031cf41f4",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "a5aef776-28cf-4005-a7d5-680e8b8a368b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 2 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5aef776-28cf-4005-a7d5-680e8b8a368b",
+        "lesson_activity.key": "9544c002-31b7-43ea-921c-3457a2375ff8"
+      }
+    },
+    {
+      "key": "00195f25-eb64-4f3d-8a1f-2c479adb398c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson Investigation (~ 60 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c",
+        "lesson_activity.key": "9544c002-31b7-43ea-921c-3457a2375ff8"
+      }
+    },
+    {
+      "key": "f96f9cee-6fa9-4943-99f0-71294648cf7f",
+      "position": 3,
+      "properties": {
+        "progression_name": "Conclusions and Connections (~ 20 mins)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f96f9cee-6fa9-4943-99f0-71294648cf7f",
+        "lesson_activity.key": "9544c002-31b7-43ea-921c-3457a2375ff8"
+      }
+    },
+    {
+      "key": "871e665f-29d5-4fda-8088-9c584b4a6de6",
+      "position": 4,
+      "properties": {
+        "name": "Module 2 Asynchronous Wrap Up (~ 10 mins)",
+        "progression_name": "Module 2 Asynchronous Wrap Up (~ 10 mins)"
+      },
+      "seeding_key": {
+        "activity_section.key": "871e665f-29d5-4fda-8088-9c584b4a6de6",
+        "lesson_activity.key": "9544c002-31b7-43ea-921c-3457a2375ff8"
+      }
+    },
+    {
+      "key": "d8267019-6fcb-45ed-b9d4-0eca22f8bee4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d8267019-6fcb-45ed-b9d4-0eca22f8bee4",
+        "lesson_activity.key": "476bdbf9-2952-4758-837f-623031cf41f4"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 2 Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 2 Overview_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "a5aef776-28cf-4005-a7d5-680e8b8a368b"
+      },
+      "level_keys": [
+        "VPL - CSD Module 2 Overview_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Investigation (~ 60 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 1 - CI_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 1 - CI_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Investigation (~ 60 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD: Introduction to the Draw Loop_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      },
+      "level_keys": [
+        "VPL - CSD: Introduction to the Draw Loop_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Investigation (~ 60 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD 2021 - Module 2 CI - Draw Loop_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      },
+      "level_keys": [
+        "VPL-CSD 2021 - Module 2 CI - Draw Loop_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Investigation (~ 60 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 2 CI The Draw Loop Reflection_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      },
+      "level_keys": [
+        "VPL - CSD Module 2 CI The Draw Loop Reflection_2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Investigation (~ 60 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD: Animating Sprite Movement_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      },
+      "level_keys": [
+        "VPL - CSD: Animating Sprite Movement_2023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Investigation (~ 60 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      },
+      "level_keys": [
+        "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Investigation (~ 60 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 2 CI Sprite Movement Reflection_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      },
+      "level_keys": [
+        "VPL - CSD Module 2 CI Sprite Movement Reflection_2023"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Investigation (~ 60 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD U3 - Booleans Video_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      },
+      "level_keys": [
+        "VPL - CSD U3 - Booleans Video_2023"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Investigation (~ 60 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Conditionals_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      },
+      "level_keys": [
+        "VPL-CSD 2020 - Module 2 CI - Conditionals_2023"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Investigation (~ 60 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD Module 2 CI Conditionals Reflection_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      },
+      "level_keys": [
+        "VPL - CSD Module 2 CI Conditionals Reflection_2023"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Conclusions and Connections (~ 20 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Conclusions and Connections_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "f96f9cee-6fa9-4943-99f0-71294648cf7f"
+      },
+      "level_keys": [
+        "VPL - CSD - Conclusions and Connections_2023"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Conclusions and Connections (~ 20 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD U3 Chapter 1 Project_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "f96f9cee-6fa9-4943-99f0-71294648cf7f"
+      },
+      "level_keys": [
+        "VPL - CSD U3 Chapter 1 Project_2023"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Conclusions and Connections (~ 20 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD: Sprite Velocity_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "f96f9cee-6fa9-4943-99f0-71294648cf7f"
+      },
+      "level_keys": [
+        "VPL - CSD: Sprite Velocity_2023"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Conclusions and Connections (~ 20 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD U3 collisions car intro_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "f96f9cee-6fa9-4943-99f0-71294648cf7f"
+      },
+      "level_keys": [
+        "VPL - CSD U3 collisions car intro_2023"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Conclusions and Connections (~ 20 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD U3 game intro_2018_2019_pilot_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "f96f9cee-6fa9-4943-99f0-71294648cf7f"
+      },
+      "level_keys": [
+        "VPL - CSD U3 game intro_2018_2019_pilot_2023"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Module 2 Asynchronous Wrap Up (~ 10 mins)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL - CSD - Module 2 Wrap Up_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "871e665f-29d5-4fda-8088-9c584b4a6de6"
+      },
+      "level_keys": [
+        "VPL - CSD - Module 2 Wrap Up_2023"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 2 Overview_2023",
+        "script_level.level_keys": [
+          "VPL - CSD Module 2 Overview_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "a5aef776-28cf-4005-a7d5-680e8b8a368b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 1 - CI_2023",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 1 - CI_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD: Introduction to the Draw Loop_2023",
+        "script_level.level_keys": [
+          "VPL - CSD: Introduction to the Draw Loop_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD 2021 - Module 2 CI - Draw Loop_2023",
+        "script_level.level_keys": [
+          "VPL-CSD 2021 - Module 2 CI - Draw Loop_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 2 CI The Draw Loop Reflection_2023",
+        "script_level.level_keys": [
+          "VPL - CSD Module 2 CI The Draw Loop Reflection_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD: Animating Sprite Movement_2023",
+        "script_level.level_keys": [
+          "VPL - CSD: Animating Sprite Movement_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2023",
+        "script_level.level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 2 CI Sprite Movement Reflection_2023",
+        "script_level.level_keys": [
+          "VPL - CSD Module 2 CI Sprite Movement Reflection_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD U3 - Booleans Video_2023",
+        "script_level.level_keys": [
+          "VPL - CSD U3 - Booleans Video_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD 2020 - Module 2 CI - Conditionals_2023",
+        "script_level.level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Conditionals_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD Module 2 CI Conditionals Reflection_2023",
+        "script_level.level_keys": [
+          "VPL - CSD Module 2 CI Conditionals Reflection_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "00195f25-eb64-4f3d-8a1f-2c479adb398c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Conclusions and Connections_2023",
+        "script_level.level_keys": [
+          "VPL - CSD - Conclusions and Connections_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "f96f9cee-6fa9-4943-99f0-71294648cf7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD U3 Chapter 1 Project_2023",
+        "script_level.level_keys": [
+          "VPL - CSD U3 Chapter 1 Project_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "f96f9cee-6fa9-4943-99f0-71294648cf7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD: Sprite Velocity_2023",
+        "script_level.level_keys": [
+          "VPL - CSD: Sprite Velocity_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "f96f9cee-6fa9-4943-99f0-71294648cf7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD U3 collisions car intro_2023",
+        "script_level.level_keys": [
+          "VPL - CSD U3 collisions car intro_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "f96f9cee-6fa9-4943-99f0-71294648cf7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD U3 game intro_2018_2019_pilot_2023",
+        "script_level.level_keys": [
+          "VPL - CSD U3 game intro_2018_2019_pilot_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "f96f9cee-6fa9-4943-99f0-71294648cf7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL - CSD - Module 2 Wrap Up_2023",
+        "script_level.level_keys": [
+          "VPL - CSD - Module 2 Wrap Up_2023"
+        ],
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2",
+        "activity_section.key": "871e665f-29d5-4fda-8088-9c584b4a6de6"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

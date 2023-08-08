@@ -488,27 +488,8 @@ it:
             '2': '2'
             '20': '20'
             '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
             '3': '3'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
             '4': '4'
-            '40': '40'
             '5': '5'
             '6': '6'
             '7': '7'
@@ -1697,16 +1678,10 @@ it:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': tutto
       aalab_someStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': tutto
       aalab_spriteSayChoices:
         text: "{SPRITE} dice {SPEECH}"
@@ -1868,7 +1843,6 @@ it:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'
@@ -2393,11 +2367,9 @@ it:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': lenta
             '5': normale
             '7': veloce
-            '9': extra fast
       gamelab_setTint:
         text: colora {THIS} di {COLOR}
       gamelab_setupScoreboard:

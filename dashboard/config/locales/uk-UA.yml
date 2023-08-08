@@ -618,7 +618,7 @@ uk:
       team: Команда
       thebadguys: Погані хлопці
       view_all: Переглянути всі проекти...
-      weblab: Веб-лабораторія
+      weblab: Веб Лабораторія
   next_level: Наступний рівень
   next_page: Наступна сторінка
   next_resource: Наступний ресурс
@@ -803,7 +803,7 @@ uk:
     instructor_feedback: Коментар вчителя
     outdated: Цей коментар стосується попередньої версії роботи
     peer_feedback: Коментар інших учнів
-    peer_review: Рецензування
+    peer_review: Взаємо-оцінювання
     rejected:
       description_markdown: "**Ні**, ця заявка **не відповідає** вимогам"
       name: Відхилено

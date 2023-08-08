@@ -58,7 +58,7 @@ sq-AL:
   arduino_beyond_name: Arduino me Sparkfun
   arduino_beyond_platformtext: Shfletues i faqeve të internetit, më pas bli Kit
   arduino_beyond_shortdescription: Mëso Arduino me Sparkfun's Digital Sandbox.
-  are_you_teacher: A jeni një mësues?
+  are_you_teacher: A jeni një mësimdhënës?
   artist_gradelevel: Moshat 8+
   artist_name: Artisti
   artist_shortdescription: Vizato figura të hatashme dhe dizenjo me Artistin!
@@ -122,7 +122,7 @@ sq-AL:
   carousel_heading_unplugged: Nuk ke pajisje ose internet? Provo shkencën kompjuterike
     'unplugged'
   carousel_heading_webpages: Mëso të bësh faqe interneti
-  cded_sign_up: Rregjistrohu
+  cded_sign_up: Regjistrohu
   cded_try_it: Provoje
   city: Qyteti
   class_submission_in_school: Në shkollë
@@ -381,6 +381,7 @@ sq-AL:
   coursee-2020_gradelevel: Moshat 8-12
   coursee-2021_gradelevel: Moshat 8-12
   coursee-2022_gradelevel: Moshat 8-12
+  coursee-2022_name: Kursi E (2022)
   coursee_gradelevel: Moshat 8-12
   coursef-2017_gradelevel: Moshat 9-13
   coursef-2018_gradelevel: Moshat 9-13
@@ -826,7 +827,7 @@ sq-AL:
   homepage_action_text_join_us: Na u bashko!
   homepage_action_text_learn: Fillo të mësosh
   homepage_action_text_num_served: "# e dorëzuar"
-  homepage_action_text_sign_up: Rregjistrohu
+  homepage_action_text_sign_up: Regjistrohu
   homepage_action_text_signpetition: Nënshkruaj peticionin
   homepage_action_text_teachervideo: Ndiq videon
   homepage_action_text_try_it: Provoje
@@ -1074,7 +1075,7 @@ sq-AL:
   learn_next_level: Provo një kurs tjetër nga Code Studio
   learn_now: Meso tani
   learn_online: Provo kurse të tjera online
-  learn_sign_up_button: Rregjistrohu
+  learn_sign_up_button: Regjistrohu
   learn_sign_up_description: Regjostrohuni që të bëheni pjesë e Orës së Kodimit gjatë
     Javës së Mësimdhënies së Shkencave Kompjuterike
   lego_beyond_gradelevel: Shkolla tetë vjeçare +

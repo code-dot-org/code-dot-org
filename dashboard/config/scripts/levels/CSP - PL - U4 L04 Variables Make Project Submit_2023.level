@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-07-28T17:41:13.000Z",
   "level_num": "custom",
@@ -32,7 +33,7 @@
     "embed": "false",
     "instructions_important": "false",
     "display_name": "Make, pt 1",
-    "long_instructions": "Build the Photo Liker app, using your activity guide to help you plan. When you're done, submit your work.\r\n\r\n<span style=\"color:red\"><i>*Note for workshop participants:  This is the same as U4L4 - Level 2 in the CS Principles Curriculum.  We want you to have a taste for what is expected in a Make task, but we do not expect you to finish the task at this point.  We recommend you limit yourself to spending ~5 minutes on this level.  You may start to make the project yourself or review the Example Solution found on the right hand side of the screen by on clicking the blue arrow.  </i></span>\r\n\r\n<span style=\"color:red\"><i>We know 5 minutes will not be enough to finish creating the app yourself, but the goal here is to have a high level understanding of the task by either starting it yourself or reviewing the Example Solution.*</i></span>",
+    "long_instructions": "Build the Photo Liker app, using your <a href=\"https://docs.google.com/document/d/1QqQxO2BRq27yJEo0SpE5ZCmqyM57SjzuSg6xEmGsKWY/edit?usp=sharing\" target=\"blank\">Activity Guide</a> to help you plan. Use the checklist below to make sure you are on track. When you're done, submit your work.\r\n\r\n:::details [**☑️ Checklist Rubric**]\r\n<br>\r\n\r\n| Category    | Checklist Item(s) |\r\n| -------- | ------- |\r\n| Code: Event Handlers Created &nbsp  | &nbsp<br>🔲 All required buttons have defined onEvents. <br> &nbsp  |\r\n| Code: Variables | 🔲 Variables store the number of likes and comments.<br> 🔲 Variables are named clearly and understandably.   <br> &nbsp  |\r\n| Code: Event Handlers Written    | &nbsp<br>🔲 All necessary variables are updated inside of the onEvents.   <br> &nbsp  |\r\n| Code: Output Information  | &nbsp<br>🔲 The screen correctly displays the number of likes and total <br> comments, and sound plays when different buttons are clicked.   <br> &nbsp  |\r\n| Code runs without errors | &nbsp<br>🔲 No errors are present in the code.   <br> &nbsp   |\r\n| Coding Comments    | &nbsp<br>🔲 Comments are used to correctly explain the purpose and <br> function of all onEvents.    |\r\n\r\n:::\r\n\r\n___\r\n\r\n<span style=\"color:red\"><i>**Note for workshop participants**:  This is the same as U4L4 - Level 2 in the CS Principles Curriculum.  We want you to have a taste for what is expected in a Make task, but we do not expect you to finish the task at this point.  We recommend you limit yourself to spending ~5 minutes on this level.  You may start to make the project yourself or review the Example Solution found on the right hand side of the screen by on clicking the blue arrow.  </i></span>\r\n\r\n<span style=\"color:red\"><i>We know 5 minutes will not be enough to finish creating the app yourself, but the goal here is to have a high level understanding of the task by either starting it yourself or reviewing the Example Solution.*</i></span>",
     "never_autoplay_video": "false",
     "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
@@ -52,7 +53,6 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
     "parent_level_id": 19929,
     "teacher_markdown": "Students add comments to their code to demonstrate their understanding of the purpose and function of their code. \r\n\r\n```\r\n// (purpose) When clicked decreases the likes by one`\r\n// (function) Uses the Counter Pattern with Event to subtract one from the likes variable\r\n// sets the text on the screen to display the new amount of likes\r\n// plays a sound when clicked\r\nonEvent(\"downButton\", \"click\", function(event) {\r\n  likes = likes - 1;\r\n  setText(\"likeCounter\",\"Likes: \" + likes);\r\n  playSound(\"sound://category_objects/sharp_switch.mp3\");\r\n});\r\n```",
     "mini_rubric": "false",
@@ -65,9 +65,8 @@
     "name_suffix": "_2023",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-07-28T17:41:13.092+00:00\",\"changed\":[\"cloned from \\\"CSP - PL - U4 L04 Variables Make Project Submit_2022\\\"\"],\"cloned_from\":\"CSP - PL - U4 L04 Variables Make Project Submit_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-07-28T17:41:13.092+00:00\",\"changed\":[\"cloned from \\\"CSP - PL - U4 L04 Variables Make Project Submit_2022\\\"\"],\"cloned_from\":\"CSP - PL - U4 L04 Variables Make Project Submit_2022\"},{\"changed_at\":\"2023-08-01 23:49:30 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-08-01 23:50:39 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -3729,6 +3729,8 @@ ca:
               display_name: 'Capítol 2: Ordinadors i resolució de problemes'
             lessonGroup-4:
               display_name: Lliçons alternatives
+            lessonGroup-5:
+              display_name: Enquesta
           student_description: Problem Solving and Computing és una introducció altament
             interactiva i col·laborativa al camp de la informàtica, emmarcada dins
             de la recerca més àmplia de la resolució de problemes. Practicareu utilitzant
@@ -8864,6 +8866,8 @@ ca:
               display_name: 'Capítol 1: El procés de resolució de problemes'
             lessonGroup-3:
               display_name: Lliçons alternatives
+            lessonGroup-4:
+              display_name: Enquesta
           name: focus en codificació1-2023
           student_description: Problem Solving and Computing és una introducció altament
             interactiva i col·laborativa al camp de la informàtica, emmarcada dins
@@ -8952,6 +8956,8 @@ ca:
               display_name: 'Capítol 1: El procés de resolució de problemes'
             lessonGroup-3:
               display_name: Lliçons alternatives
+            lessonGroup-4:
+              display_name: Enquesta
           name: enfocament-en-creativitat1-2023
           student_description: Problem Solving and Computing és una introducció altament
             interactiva i col·laborativa al camp de la informàtica, emmarcada dins
@@ -9039,6 +9045,8 @@ ca:
               display_name: 'Capítol 1: El procés de resolució de problemes'
             lessonGroup-3:
               display_name: Lliçons alternatives
+            lessonGroup-4:
+              display_name: Enquesta
           name: enfocament-en-da1-2023
           student_description: Problem Solving and Computing és una introducció altament
             interactiva i col·laborativa al camp de la informàtica, emmarcada dins
@@ -9162,6 +9170,8 @@ ca:
               display_name: 'Capítol 1: El procés de resolució de problemes'
             lessonGroup-3:
               display_name: Lliçons alternatives
+            lessonGroup-4:
+              display_name: Enquesta
           name: enfocament-en-disseny-amb-propòsit1-2023
           student_description: Problem Solving and Computing és una introducció altament
             interactiva i col·laborativa al camp de la informàtica, emmarcada dins
@@ -9301,6 +9311,8 @@ ca:
               display_name: 'Capítol 2: Ordinadors i resolució de problemes'
             lessonGroup-4:
               display_name: Lliçons alternatives
+            lessonGroup-5:
+              display_name: Enquesta
           name: focus en maquinari1-2023
           student_description: Problem Solving and Computing és una introducció altament
             interactiva i col·laborativa al camp de la informàtica, emmarcada dins

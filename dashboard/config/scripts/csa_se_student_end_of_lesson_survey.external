@@ -1,0 +1,10 @@
+name 'CSA SE Student End of Lesson Survey'
+markdown <<MARKDOWN
+###Please take a moment to respond to this short survey.
+
+Code.org takes your privacy seriously. Your responses here will be kept **anonymous**. Your teacher can see responses for the whole class but without names attached.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
