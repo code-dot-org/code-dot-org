@@ -4,9 +4,9 @@ module Services
   class LevelFilesTest < ActiveSupport::TestCase
     test 'can write custom level file' do
       Policies::LevelFiles.stubs(:write_to_file?).returns(true)
-      level = build(:level, name: "Testing Level File Writing", published: true)
+      level = build(:maze, name: "Testing Level File Writing", published: true)
       File.expects(:write).with do |path, _data|
-        assert_equal path, Rails.root.join("config/scripts/levels/#{level.name}.level")
+        assert_equal path, Rails.root.join("config/scripts/levels/maze/Testing Level File Writing.level")
       end
       Services::LevelFiles.write_custom_level_file(level)
     end
