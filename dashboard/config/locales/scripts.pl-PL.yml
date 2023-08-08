@@ -3102,6 +3102,8 @@ pl:
               display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
             lessonGroup-4:
               display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Ankieta
         csd1-dlp:
           description: 'To jest Dział 1 "Planu pogłębionej nauki" dla prowadzących
             "Odkrycia informatyki" Code.org w trakcie szkolenia. Tutaj znajdziesz
@@ -7243,6 +7245,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-coding1-2023
         focus-on-coding2-2023:
           lesson_groups:
@@ -7308,6 +7312,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-creativity1-2023
         focus-on-creativity2-2023:
           lesson_groups:
@@ -7373,6 +7379,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-data1-2023
         focus-on-data2:
           description_short: Dowiedz się, w jaki sposób ludzie używają komputerów,
@@ -7431,6 +7439,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-design-with-purpose1-2023
         focus-on-design-with-purpose2-2023:
           lesson_groups:
@@ -7498,6 +7508,8 @@ pl:
               display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
             lessonGroup-4:
               display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Ankieta
           name: focus-on-hardware1-2023
         focus-on-hardware2-2023:
           description_short: Dowiedz się, w jaki sposób ludzie używają komputerów,

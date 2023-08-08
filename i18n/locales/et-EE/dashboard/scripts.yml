@@ -1826,6 +1826,10 @@ et:
               display_name: Sisu
             lessonGroup-4:
               display_name: Uuring
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Uuring
         csp1-2023:
           lesson_groups:
             cspSurvey:
@@ -1939,6 +1943,26 @@ et:
         aiml-2023:
           lesson_groups:
             lessonGroup-5:
+              display_name: Uuring
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Uuring
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uuring
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
               display_name: Uuring
         focus-on-impact-in-society1-2023:
           lesson_groups:

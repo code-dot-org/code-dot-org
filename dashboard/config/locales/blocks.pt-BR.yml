@@ -18,7 +18,6 @@ pt:
             '0.75': pequeno
             '1.00': médio
             '2.00': grande
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -26,7 +25,6 @@ pt:
             '0.75': pequeno
             '1.00': médio
             '2.00': grande
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -477,28 +475,8 @@ pt:
             '19': '19'
             '2': '2'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
             '3': '3'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
             '4': '4'
-            '40': '40'
             '5': '5'
             '6': '6'
             '7': '7'
@@ -1004,8 +982,6 @@ pt:
         options:
           INPUT1:
             '1': suco de limão
-            '3': baking soda
-            '5': both
         text: O microscópio tem {INPUT1}
       DansBlocks_setForegroundEffect2:
         options:
@@ -1023,8 +999,6 @@ pt:
         options:
           INPUT1:
             '1': suco de limão
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Comunique {VAR1} com {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1382,15 +1356,11 @@ pt:
         options:
           INPUT1:
             '1': suco de limão
-            '3': baking soda
-            '5': both
         text: O microscópio tem {INPUT1}
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': suco de limão
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1619,7 +1589,6 @@ pt:
       Poetry_whenLineShows:
         options:
           N:
-            '0': "???"
             '1': '1'
             '10': '10'
             '11': '11'
@@ -1875,7 +1844,6 @@ pt:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'
@@ -2402,11 +2370,9 @@ pt:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': devagar
             '5': normal
             '7': rápido
-            '9': extra fast
       gamelab_setTint:
         text: mudar a cor de {THIS} para {COLOR}
       gamelab_setupScoreboard:

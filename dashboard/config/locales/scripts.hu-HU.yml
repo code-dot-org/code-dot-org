@@ -1433,6 +1433,8 @@ hu:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
             lessonGroup-3:
               display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+            lessonGroup-5:
+              display_name: Kérdőív
         csd1-dlp:
           lesson_groups:
             content:
@@ -3136,18 +3138,24 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-creativity-post-survey-2023:
           title: Tanfomlyam Utáni Felmérés
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-data-post-survey-2023:
           title: Tanfomlyam Utáni Felmérés
         focus-on-data1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-3:
@@ -3160,6 +3168,8 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
         focus-on-hardware-post-survey-2023:
           title: Tanfomlyam Utáni Felmérés
         focus-on-hardware1-2023:
@@ -3168,6 +3178,8 @@ hu:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
             lessonGroup-3:
               display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+            lessonGroup-5:
+              display_name: Kérdőív
         focus-on-impact-in-society-post-survey-2023:
           title: Tanfomlyam Utáni Felmérés
         focus-on-impact-in-society1-2023:

@@ -1303,6 +1303,10 @@ el:
           lesson_groups:
             cspSurvey:
               display_name: Έρευνα
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
         csd1-dlp:
           lesson_groups:
             content:
@@ -2385,10 +2389,30 @@ el:
           description_short: 'Γράψτε το δικό σας παιχνίδι Flappy σε λιγότερο από 10
             λεπτά! '
           title: Κώδικας Flappy με Έρευνα
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Εισαγωγή στο App Lab
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Έρευνα
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
         focus-on-impact-in-society1-2023:
           lesson_groups:
             lessonGroup-4:

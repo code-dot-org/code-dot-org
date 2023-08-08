@@ -114,7 +114,6 @@ pl:
       Dancelab_changeMoveEachLR:
         options:
           DIR:
-            "-1": "←"
             '1': "→"
           GROUP:
             '"ALIEN"': obcy
@@ -150,7 +149,6 @@ pl:
       Dancelab_changeMoveLR:
         options:
           DIR:
-            "-1": "←"
             '1': "→"
           MOVE:
             '"next"': "(Następny)"
@@ -2090,7 +2088,6 @@ pl:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'

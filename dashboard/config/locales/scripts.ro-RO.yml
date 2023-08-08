@@ -1655,6 +1655,8 @@ ro:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
             lessonGroup-3:
               display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+            lessonGroup-5:
+              display_name: Sondaj
         csd1-dlp:
           lesson_groups:
             content:
@@ -3183,6 +3185,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3195,6 +3199,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3207,6 +3213,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -3231,6 +3239,8 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-4:
+              display_name: Sondaj
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3245,6 +3255,8 @@ ro:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
             lessonGroup-3:
               display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+            lessonGroup-5:
+              display_name: Sondaj
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
