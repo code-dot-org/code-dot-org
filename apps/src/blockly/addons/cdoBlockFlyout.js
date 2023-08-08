@@ -86,14 +86,6 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
       }
     });
 
-    // We need to set the flyout width based on the block itself, excluding children.
-    // Using block.getHeightWidth() would include blocks connected to input and next
-    // connections, which could make the flyout wider than the block that contains it.
-    const topBlockWidth = this.sourceBlock_.svgGroup_
-      .querySelector('path')
-      .getBoundingClientRect().width;
-    const blockWidthMinusPadding = topBlockWidth - this.flyoutBlockPadding * 2;
-    this.width_ = Math.max(this.width_, blockWidthMinusPadding);
     this.setBackgroundPath_(this.width_, this.height_);
     this.position();
   }

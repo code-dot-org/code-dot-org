@@ -98,8 +98,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     }
     // Normally, Blockly skips rendering fields unless we've notified the
     // rendering system that they've changed (this.isDirty_), but in this
-    // case, we want to always re-render / resize the field so that it
-    // matches the width of the block.
+    // case, we want to always re-render / resize the field.
     this.isDirty_ = true;
     return super.getSize();
   }
@@ -112,19 +111,16 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @override
    */
   render_() {
-    const fieldGroupBBox = this.fieldGroup_.getBBox();
     if (this.flyout_.isVisible()) {
-      this.size_ = new Blockly.utils.Size(
-        this.flyout_.getMinimumWidthPlusPadding(),
-        fieldGroupBBox.height
-      );
       this.flyout_.reflowInternal_();
-    } else {
-      this.size_ = new Blockly.utils.Size(
-        fieldGroupBBox.width,
-        fieldGroupBBox.height
-      );
     }
+    const fieldGroupBBox = this.fieldGroup_.getBBox();
+    const height = fieldGroupBBox.height;
+    let width = fieldGroupBBox.width;
+    if (this.flyout_.isVisible()) {
+      width += this.flyout_.flyoutBlockPadding;
+    }
+    this.size_ = new Blockly.utils.Size(width, height);
   }
 
   /**
