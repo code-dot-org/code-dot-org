@@ -13,6 +13,7 @@
 #   code.org/maker
 #   code.org/blockchain
 #   code.org/ai
+#   code.org/ai/pl/101
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
@@ -57,6 +58,7 @@ def get_social_metadata_for_page(request)
     maker_physical_computing: {path: "/shared/images/social-media/maker_social.png", width: 1200, height: 630},
     blockchain: {path: "/shared/images/social-media/blockchain-social.png", width: 1200, height: 630},
     ai: {path: "/shared/images/social-media/ai-social.png", width: 1200, height: 630},
+    ai_101: {path: "/shared/images/social-media/ai-101-social.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -200,6 +202,13 @@ def get_social_metadata_for_page(request)
         image: images[:ai]
       }
     },
+    "ai_101" => {
+      "default" => {
+        title: hoc_s(:ai_pl_101_hero_heading),
+        description: hoc_s(:ai_pl_101_hero_desc),
+        image: images[:ai_101]
+      }
+    },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
@@ -232,6 +241,8 @@ def get_social_metadata_for_page(request)
     page = "blockchain"
   elsif request.path == "/ai" && request.site == "code.org"
     page = "ai"
+  elsif request.path == "/ai/pl/101" && request.site == "code.org"
+    page = "ai_101"
   else
     return {}
   end
