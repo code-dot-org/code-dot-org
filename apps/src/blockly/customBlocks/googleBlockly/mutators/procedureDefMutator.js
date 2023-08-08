@@ -7,8 +7,7 @@
  * TODO: Once we are on Blockly v10, remove this file.
  */
 
-import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
-
+import {CdoParameterModel} from './parameterModel';
 /**
  * A type guard which checks if the given block is a procedure block.
  * @param block The block to check for procedure-y-ness.
@@ -61,11 +60,12 @@ export const procedureDefMutator = {
       if (node.nodeName.toLowerCase() !== 'arg') continue;
       const varId = node.getAttribute('varid');
       this.getProcedureModel().insertParameter(
-        new ObservableParameterModel(
+        new CdoParameterModel(
           this.workspace,
           node.getAttribute('name'),
           undefined,
-          varId
+          varId,
+          node.getAttribute('type')
         ),
         i
       );
@@ -123,9 +123,9 @@ export const procedureDefMutator = {
 
     if (state['params'] && !this.getProcedureModel().getParameters().length) {
       for (let i = 0; i < state['params'].length; i++) {
-        const {name, id, paramId} = state['params'][i];
+        const {name, id, paramId, type} = state['params'][i];
         this.getProcedureModel().insertParameter(
-          new ObservableParameterModel(this.workspace, name, paramId, id),
+          new CdoParameterModel(this.workspace, name, paramId, id, type),
           i
         );
       }
@@ -212,7 +212,7 @@ export const procedureDefMutator = {
         model.getParameter(i).getId() !== paramBlock.id
       ) {
         model.insertParameter(
-          new ObservableParameterModel(
+          new CdoParameterModel(
             this.workspace,
             paramBlock.getFieldValue('NAME'),
             paramBlock.id

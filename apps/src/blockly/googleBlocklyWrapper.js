@@ -57,11 +57,8 @@ import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
 import CdoFieldImage from './addons/cdoFieldImage';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
-import {
-  ObservableProcedureModel,
-  ObservableParameterModel,
-} from '@blockly/block-shareable-procedures';
-
+import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
+import {CdoParameterModel} from './customBlocks/googleBlockly/mutators/parameterModel';
 const options = {
   contextMenu: true,
   shortcut: true,
@@ -308,7 +305,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   const procedureSerializer =
     new blocklyWrapper.blockly_.serialization.procedures.ProcedureSerializer(
       ObservableProcedureModel,
-      ObservableParameterModel
+      CdoParameterModel
     );
 
   blocklyWrapper.procedureSerializer = procedureSerializer;
@@ -648,6 +645,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       container.style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
     }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
+    blocklyWrapper.toolboxBlocks = options.toolbox;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
     if (options.noFunctionBlockFrame) {

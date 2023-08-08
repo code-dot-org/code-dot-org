@@ -1,8 +1,12 @@
 import * as GoogleBlockly from 'blockly/core';
 import BlockSvgFrame from '../../addons/blockSvgFrame';
 import msg from '@cdo/locale';
-import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
-import {createAndCenterNewDefBlock} from './proceduresBlocks';
+import {CdoParameterModel} from './mutators/parameterModel';
+import {
+  createAndCenterNewDefBlock,
+  sortProceduresByName,
+} from './proceduresBlocks';
+import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
 
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
@@ -181,7 +185,13 @@ const behaviorAddThisSpriteParam = function () {
   if (this.workspace.rendered && !this.workspace.isFlyout) {
     if (!this.getProcedureModel().getParameters().length) {
       this.getProcedureModel().insertParameter(
-        new ObservableParameterModel(this.workspace, msg.thisSprite()),
+        new CdoParameterModel(
+          this.workspace,
+          msg.thisSprite(),
+          undefined,
+          undefined,
+          'Sprite'
+        ),
         0
       );
     }
@@ -247,6 +257,7 @@ export function flyoutCategory(workspace) {
   } else {
     blockList.push(behaviorDefinitionBlock);
   }
+  blockList.push(...getCustomCategoryBlocksForFlyout('Behavior'));
   const allWorkspaceProcedures = Blockly.procedureSerializer.save(
     Blockly.getMainWorkspace()
   );
@@ -256,7 +267,8 @@ export function flyoutCategory(workspace) {
       procedureIsBehavior(procedure)
     );
   }
-  allWorkspaceBehaviors.forEach(procedure => {
+
+  allWorkspaceBehaviors.sort(sortProceduresByName).forEach(procedure => {
     blockList.push({
       kind: 'block',
       type: 'gamelab_behavior_get',
@@ -269,6 +281,7 @@ export function flyoutCategory(workspace) {
       },
     });
   });
+
   return blockList;
 }
 
@@ -279,4 +292,50 @@ function procedureIsBehavior(procedure) {
     procedure.parameters &&
     procedure.parameters.some(param => param.name === msg.thisSprite())
   );
+}
+
+function getCustomCategoryBlocksForFlyout(category) {
+  const parser = new DOMParser();
+  const xmlDoc = parser.parseFromString(Blockly.toolboxBlocks, 'text/xml');
+
+  const categoryNodes = xmlDoc.getElementsByTagName('category');
+  for (const categoryNode of categoryNodes) {
+    const categoryCustom = categoryNode.getAttribute('custom');
+
+    if (categoryCustom === category) {
+      const xmlRootElement = xmlDoc.createElement('xml'); // Create a new <xml> root element
+
+      const blockNodes = categoryNode.getElementsByTagName('block');
+      for (const blockNode of blockNodes) {
+        if (blockNode.parentElement === categoryNode) {
+          xmlRootElement.appendChild(blockNode.cloneNode(true)); // Append cloned block nodes
+        }
+      }
+
+      const jsonBlocks = convertXmlToJson(xmlRootElement);
+
+      const flyoutBlocks = jsonBlocks.blocks.blocks.map(block =>
+        simplifyBlockStateForFlyout(block)
+      );
+      return flyoutBlocks; // Return the new <xml> root element with block children
+    }
+  }
+
+  return null; // Return null if the desired category is not found
+}
+
+// Used to simplify block state for inclusion in the Behaviors category flyout.
+function simplifyBlockStateForFlyout(block) {
+  // Clone the original block object to avoid modifying it directly
+  const modifiedBlock = {...block};
+
+  // Remove id, x, and y properties
+  delete modifiedBlock.id;
+  delete modifiedBlock.x;
+  delete modifiedBlock.y;
+
+  // Add kind property with value 'block'
+  modifiedBlock.kind = 'block';
+
+  return modifiedBlock;
 }

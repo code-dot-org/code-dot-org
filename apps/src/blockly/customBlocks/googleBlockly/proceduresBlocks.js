@@ -202,6 +202,7 @@ export function flyoutCategory(workspace) {
   }
   allWorkspaceFunctions
     .filter(procedure => !procedureIsBehavior(procedure))
+    .sort(sortProceduresByName)
     .forEach(procedure => {
       const name = procedure.name;
 
@@ -262,3 +263,16 @@ export const createAndCenterNewDefBlock = function (blockState) {
   Blockly.getMainWorkspace().centerOnBlock(newDefBlock.id);
   newDefBlock.select();
 };
+
+export function sortProceduresByName(a, b) {
+  const nameA = a.name.toUpperCase(); // Convert to uppercase for case-insensitive sorting
+  const nameB = b.name.toUpperCase();
+
+  if (nameA < nameB) {
+    return -1; // Name A comes before Name B
+  }
+  if (nameA > nameB) {
+    return 1; // Name A comes after Name B
+  }
+  return 0; // Names are equal
+}
