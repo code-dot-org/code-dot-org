@@ -48,7 +48,7 @@
 .learningGoalRow {
   border-bottom: 1px solid $neutral_dark40;
   height: 40px;
-  :hover {
+  summary:hover {
     background: none;
   }
 }
@@ -69,6 +69,7 @@
   gap: 16px;
   font-family: $gotham-bold;
 
+  // TODO: [DES-321] remove span styles
   span {
     font-size: 14px;
     font-weight: 350;
@@ -100,14 +101,14 @@
   border-radius: 30px;
   border: 1px solid $product_affirmative_default;
   color: $product_affirmative_default;
-  background: $product_affirmative_100;
+  background: $light_affirmative_100;
 
   text-align: center;
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: $gotham-extra-bold;
   font-size: 12px;
   font-weight: 400;
-  line-height: 18px; /* 150% */
+  line-height: 150%;
 }
 
 .learningGoalExpanded {

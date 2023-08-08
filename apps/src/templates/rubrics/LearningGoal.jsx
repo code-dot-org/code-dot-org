@@ -36,6 +36,7 @@ export default function LearningGoal({
               className={style.arrowIcon}
             />
           )}
+          {/*TODO: [DES-321] Label-two styles here*/}
           <span>{learningGoal.learningGoal}</span>
         </div>
         <div className={style.learningGoalHeaderRightSide}>
