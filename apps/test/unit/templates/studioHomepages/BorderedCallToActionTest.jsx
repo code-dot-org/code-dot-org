@@ -80,7 +80,7 @@ describe('BorderedCallToAction', () => {
       const borderedCtA = isolateComponent(
         <BorderedCallToAction
           {...defaultProps}
-          buttonColor={Button.ButtonColor.orange}
+          buttonColor={Button.ButtonColor.brandSecondaryDefault}
         />
       );
       const button = borderedCtA.findOne('Button');
