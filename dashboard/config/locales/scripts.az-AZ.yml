@@ -1802,6 +1802,8 @@ az:
               display_name: 'Fəsil 2: Kompüterlər və Problemlərin Həlli'
             lessonGroup-4:
               display_name: Alternativ Dərslər
+            lessonGroup-5:
+              display_name: Sorğu
         csd1-dlp:
           lesson_groups:
             content:
@@ -3786,6 +3788,8 @@ az:
               display_name: 'Fəsil 1: Problemin Həlli Prosesi'
             lessonGroup-3:
               display_name: Alternativ Dərslər
+            lessonGroup-4:
+              display_name: Sorğu
         focus-on-coding2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3814,6 +3818,8 @@ az:
               display_name: 'Fəsil 1: Problemin Həlli Prosesi'
             lessonGroup-3:
               display_name: Alternativ Dərslər
+            lessonGroup-4:
+              display_name: Sorğu
         focus-on-creativity2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3842,6 +3848,8 @@ az:
               display_name: 'Fəsil 1: Problemin Həlli Prosesi'
             lessonGroup-3:
               display_name: Alternativ Dərslər
+            lessonGroup-4:
+              display_name: Sorğu
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3858,6 +3866,8 @@ az:
               display_name: 'Fəsil 1: Problemin Həlli Prosesi'
             lessonGroup-3:
               display_name: Alternativ Dərslər
+            lessonGroup-4:
+              display_name: Sorğu
         focus-on-design-with-purpose2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3876,6 +3886,8 @@ az:
               display_name: 'Fəsil 2: Kompüterlər və Problemlərin Həlli'
             lessonGroup-4:
               display_name: Alternativ Dərslər
+            lessonGroup-5:
+              display_name: Sorğu
         focus-on-hardware3b-2023:
           lesson_groups:
             lessonGroup-3:

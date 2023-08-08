@@ -5485,6 +5485,8 @@ pl:
               display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
             lessonGroup-4:
               display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Ankieta
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6145,6 +6147,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-creativity1-2023
         focus-on-creativity2-2023:
           lesson_groups:
@@ -6183,6 +6187,8 @@ pl:
               display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
             lessonGroup-4:
               display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Ankieta
           name: focus-on-hardware1-2023
         focus-on-hardware2-2023:
           lesson_groups:
@@ -6208,6 +6214,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-data1-2023
         focus-on-data2:
           lesson_groups:
@@ -6245,6 +6253,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-design-with-purpose1-2023
         self-paced-pl-k5-getting-started:
           name: self-paced-pl-k5-getting-started
@@ -6282,6 +6292,8 @@ pl:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
             lessonGroup-3:
               display_name: Lekcje alternatywne
+            lessonGroup-4:
+              display_name: Ankieta
           name: focus-on-coding1-2023
         focus-on-coding2-2023:
           lesson_groups:

@@ -13,8 +13,8 @@
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
   "description": null,
-  "professional_learning_program": null,
+  "professional_learning_program": "code.org/professional-development-workshops",
   "video": null,
-  "published_date": null,
-  "self_paced_pl_course_offering_id": null
+  "published_date": "2023-07-10 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": 93
 }

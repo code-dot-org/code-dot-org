@@ -2353,6 +2353,10 @@ bg:
               display_name: Съдържание
             lessonGroup-4:
               display_name: Проучване
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
         csd6-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2521,20 +2525,40 @@ bg:
             lessonGroup-5:
               display_name: Проучване
           title: AI и Машинно Обучение
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         focus-on-creativity4a-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Глава 1: Вход и Изход'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
         focus-on-hardware3a-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Глава 1: Вход и Изход'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         focus-on-data3-2023:
           title: AI и Машинно Обучение
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         focus-on-design-with-purpose4a-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Глава 1: Вход и Изход'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
         focus-on-coding4a-2023:
           lesson_groups:
             lessonGroup-3:

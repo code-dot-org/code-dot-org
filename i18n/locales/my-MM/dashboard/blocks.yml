@@ -5,19 +5,11 @@ my:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': အလယ်အလတ်
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': အလယ်အလတ်
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -138,20 +130,12 @@ my:
         options:
           SPEED:
             '1': ပုံမှန်
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
             sprites: အားလုံး
           SPEED:
             '1': ပုံမှန်
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -303,9 +287,7 @@ my:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': အလယ်အလတ်
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -339,10 +321,7 @@ my:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': အလယ်အလတ်
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -355,10 +334,7 @@ my:
           PROPERTY:
             '"scale"': အရွယ်အစား
           SIZE:
-            '25': extra small
-            '50': small
             '75': အလယ်အလတ်
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -366,11 +342,7 @@ my:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
-            '3': slow
             '5': ပုံမှန်
-            '7': fast
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -553,16 +525,10 @@ my:
         options:
           PORTION:
             '1': အားလုံး
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': အားလုံး
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:

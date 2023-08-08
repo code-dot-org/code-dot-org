@@ -17,7 +17,6 @@ ja:
             '0.75': 小
             '1.00': 普通
             '2.00': 大
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -25,7 +24,6 @@ ja:
             '0.75': 小
             '1.00': 普通
             '2.00': 大
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} は {MOVE1} と {MOVE2}
@@ -460,26 +458,6 @@ ja:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': すべてのエイリアン
             '"BEAR"': クマ
@@ -1010,8 +988,6 @@ ja:
         options:
           INPUT1:
             '1': レモンジュース
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: "{EFFECT} 前景エフェクトを実行する"
         options:
@@ -1028,8 +1004,6 @@ ja:
         options:
           INPUT1:
             '1': レモンジュース
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: "{VAR1}を{SPRITE1COSTUME}と通信します"
       FunctionBlocks_makeManipulative2:
@@ -1530,11 +1504,9 @@ ja:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': おそい
             '5': ノーマル
             '7': はやい
-            '9': extra fast
       gamelab_setTint:
         text: 色を変更する {THIS} 宛先 {COLOR}
       gamelab_setupScoreboard:
@@ -2067,14 +2039,10 @@ ja:
         options:
           INPUT1:
             '1': レモンジュース
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': レモンジュース
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
         options:
@@ -2585,7 +2553,6 @@ ja:
         text: "{VALUE}"
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'
