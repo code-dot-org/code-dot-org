@@ -8,6 +8,7 @@ jobs:
     #   image: alpine
     steps:
       - run: |
+          env
           echo hi
           echo "DIRECT K8S_DOCKERHUB_REPOSITORY=$K8S_DOCKERHUB_REPOSITORY"
           echo "K8S_DOCKEHUB_REPOSITORY=${{ vars.K8S_DOCKEHUB_REPOSITORY }}"
