@@ -1,18 +1,27 @@
-- name: Skaffold Github Action
-  uses: hiberbee/github-action-skaffold@1.27.0
-  on: [push]
-  jobs:
-  pipeline:
-    name: Skaffold Docker build
+name: Skaffold
+on: [push]
+jobs:
+  build:
+    name: Skaffold Build
     runs-on: ubuntu-22.04
+    container:
+      image: gcr.io/k8s-skaffold/skaffold:v2.6.3-lts
+      # env:
+      #   NODE_ENV: development
+      # ports:
+      #   - 80
+      # volumes:
+      #   - my_docker_volume:/volume_mount
+      options: --cpus 1
     steps:
-      - name: Build Docker images
-        uses: hiberbee/github-action-skaffold@1.20.0
-        with:
-          command: build
-          repository: ghcr.io/hiberbee/docker
-          image: nodejs
-          tag: ${{ github.sha }}
+      - name: Checkout sources
+        uses: actions/checkout@v3
+      - shell: bash
+        run: |
+          skaffold build
+
+    # gcr.io/k8s-skaffold/skaffold:v2.6.3-lts
+
 
 # name: GitHub Actions Demo
 # run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
