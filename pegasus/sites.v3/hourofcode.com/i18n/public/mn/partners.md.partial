@@ -1,5 +1,5 @@
 ---
-title: Partners
+title: Түншүүд
 ---
 
 The Hour of Code is driven by the Hour of Code Review Committee.
