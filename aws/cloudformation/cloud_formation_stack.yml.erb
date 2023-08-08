@@ -526,7 +526,7 @@ Resources:
           default_volume_size = 64
           volume_size_overrides = {
             production: 128,
-            test: 256
+            test: 257 # base of 256 + 1 extra attempt to fix a problem
           }
         %>
         - DeviceName: /dev/sda1
