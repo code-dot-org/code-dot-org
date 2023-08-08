@@ -49,6 +49,7 @@ jobs:
     #   image: alpine
     steps:
       - run: |
+          env
           git clone git@github.com:code-dot-org/code-dot-org.git
   #         env
   #         echo hi
