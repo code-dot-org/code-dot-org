@@ -5,7 +5,7 @@ module Policies
     test 'will provide a default if no file exists' do
       regular_level = create(:level)
       expected_file_path = Rails.root.join(
-        'config/scripts/levels',
+        'config/levels/custom',
         regular_level.game.app,
         "#{regular_level.name}.level"
       )
@@ -15,7 +15,7 @@ module Policies
       # can also provide a default for gameless levels, even though the regular
       # path includes the game name
       gameless_level = create(:level, game: nil)
-      expected_file_path = Rails.root.join("config/scripts/levels/#{gameless_level.name}.level")
+      expected_file_path = Rails.root.join("config/levels/custom/#{gameless_level.name}.level")
       refute(File.exist?(expected_file_path))
       assert_equal(Policies::LevelFiles.level_file_path(gameless_level), expected_file_path)
     end
@@ -23,11 +23,15 @@ module Policies
     test 'can find an existing level file from a variety of directories' do
       level = create(:level)
       level_files = [
-        # Check in the "default" location at the root of the levels dir
+        # Check in the old default location
         'config/scripts/levels',
-        # Also check nested and deeply-nested subdirectories of the levels dir
+        # Check in the new default location
+        'config/levels/custom',
+        # Also check nested and deeply-nested subdirectories
         'config/scripts/levels/foo',
         'config/scripts/levels/foo/bar/baz',
+        'config/levels/custom/foo',
+        'config/levels/custom/foo/bar/baz',
       ].map {|dir| Rails.root.join(dir, "#{level.name}.level").to_s}
 
       level_files.each do |level_file|
@@ -45,7 +49,7 @@ module Policies
       level = create(:level)
       level_files = [
         'config/scripts/levels',
-        'config/scripts/levels/foo',
+        'config/levels/custom',
       ].map {|dir| Rails.root.join(dir, "#{level.name}.level").to_s}
       level_files.each do |level_file|
         FileUtils.mkdir_p(File.dirname(level_file))
