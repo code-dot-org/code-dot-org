@@ -11,6 +11,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @param {Object} [opt_config] - A map of options used to configure the field.
    * @param {number} [opt_config.minWidth] - The minimum width of the field.
    * @param {number} [opt_config.maxWidth] - The maximum width of the field.
+   * @param {boolean} [opt_config.isFlyoutVisible] - Whether the flyout is visible.
    */
   constructor(value, opt_config) {
     super(value);
@@ -46,6 +47,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     if (config) {
       this.minWidth_ = config.minWidth;
       this.maxWidth_ = config.maxWidth;
+      this.flyoutShouldBeVisible = config.isFlyoutVisible;
     }
   }
 
@@ -54,6 +56,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @override
    */
   initView() {
+    console.log(`in initView`);
     this.workspace_ = this.getSourceBlock().workspace;
     this.flyout_ = new CdoBlockFlyout({
       ...Blockly.getMainWorkspace().options,
@@ -72,7 +75,11 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @override
    */
   showEditor_() {
-    this.setFlyoutVisible(!this.isFlyoutVisible());
+    this.setFlyoutVisible(true);
+  }
+
+  hideEditor() {
+    this.setFlyoutVisible(false);
   }
 
   /**
@@ -91,13 +98,19 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     // rendering system that they've changed (this.isDirty_), but in this
     // case, we want to always re-render / resize the field so that it
     // matches the width of the block.
+    console.log(
+      `before first render, this.visible_ = ${this.visible_}, width is ${this.size_.width}`
+    );
     this.render_();
 
-    if (this.visible_ && this.size_.width === 0) {
-      // If the field is not visible the width will be 0 as well, one of the
-      // problems with the old system.
-      this.render_();
-    }
+    // if (this.visible_ && this.size_.width === 0) {
+    //   // If the field is not visible the width will be 0 as well, one of the
+    //   // problems with the old system.
+    //   console.log(
+    //     `before second render, this.visible_ = ${this.visible_}, width is ${this.size_.width}`
+    //   );
+    //   this.render_();
+    // }
 
     return this.size_;
   }
@@ -110,7 +123,10 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @override
    */
   render_() {
-    this.showEditor_();
+    // this.showEditor_();
+    if (this.flyoutShouldBeVisible && !this.isFlyoutVisible()) {
+      this.setFlyoutVisible(true);
+    }
     const fieldGroupBBox = this.fieldGroup_.getBBox();
     if (this.flyout_.isVisible()) {
       this.size_ = new Blockly.utils.Size(
@@ -132,13 +148,19 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @param {boolean} isVisible Whether or not the flyout should be shown.
    */
   setFlyoutVisible(isVisible) {
+    console.log(`setting flyout visible to ${isVisible}`);
+    this.flyoutShouldBeVisible = isVisible;
     if (!this.flyout_.targetWorkspace) {
+      console.log('trying to initialize workspace');
       this.flyout_.init(this.workspace_);
+      console.log('initialized workspace');
     }
     isVisible
       ? this.flyout_.show(CdoFieldFlyout.getFlyoutId(this.sourceBlock_))
       : this.flyout_.hide();
-    this.forceRerender();
+    console.log('after setting flyout visible');
+    this.isDirty_ = true;
+    // this.forceRerender();
   }
 
   /**
