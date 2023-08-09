@@ -11,7 +11,7 @@ export const blocks = {
   // added to the block after other inputs have been created.
   initializeMiniToolbox() {
     // Function to create and show the flyout
-    const createAndShowFlyoutField = function (block) {
+    const createFlyoutField = function (block) {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
       const flyoutField = new Blockly.FieldFlyout(_, {
         flyoutKey: flyoutKey,
@@ -21,6 +21,7 @@ export const blocks = {
       });
       block
         .appendDummyInput('flyout_input')
+        .setAlign(Blockly.Input.Align.LEFT)
         .appendField(flyoutField, flyoutKey);
       return flyoutField;
     };
@@ -30,7 +31,7 @@ export const blocks = {
     const toggleFlyout = function () {
       const block = this.getSourceBlock();
       if (!block.getInput('flyout_input')) {
-        const flyoutField = createAndShowFlyoutField(block);
+        const flyoutField = createFlyoutField(block);
         flyoutField.showEditor();
         flyoutField.render_();
       } else {
@@ -56,7 +57,7 @@ export const blocks = {
       defaultIcon,
       alternateIcon,
       useDefaultIcon: true,
-      callback: createAndShowFlyoutField,
+      callback: createFlyoutField,
       colorOverrides,
     });
 
@@ -66,11 +67,13 @@ export const blocks = {
   // Adds a toggle button field to a block. Requires other inputs to already exist.
   appendMiniToolboxToggle(miniToolboxBlocks, flyoutToggleButton) {
     this.setInputsInline(true);
+    this.inputList.forEach(input => {
+      input.setAlign(Blockly.Input.Align.LEFT);
+    });
 
     // Insert the toggle field at the beginning for the first input row.
     const firstInput = this.inputList[0];
     firstInput.insertFieldAt(0, flyoutToggleButton, `button_${this.type}`);
-    firstInput.setAlign(Blockly.Input.Align.LEFT);
 
     // These blocks require a renderer that treats dummy inputs like row separators:
     // https://github.com/google/blockly-samples/tree/master/plugins/renderer-inline-row-separators
