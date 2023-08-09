@@ -64,7 +64,7 @@ module I18n
           bubble_choice_description
           short_instructions
           long_instructions
-          failure_message_override
+          failure_message_overrides
           teacher_markdown
           placeholder
           title
