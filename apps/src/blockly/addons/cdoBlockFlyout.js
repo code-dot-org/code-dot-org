@@ -117,7 +117,8 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
       this.positionAt_(
         this.width_,
         this.height_,
-        this.RTL ? -this.flyoutBlockPadding : 0,
+        0,
+        //this.RTL ? -this.flyoutBlockPadding : 0,
         0
       );
   }
