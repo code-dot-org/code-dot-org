@@ -463,8 +463,12 @@ class Blockly < Level
     end
   end
 
+  # due to some circumstances we refer to the property `failure_message_override` in the plural form,
+  # the plural form alias was added in order not to break the existing i18n business logic and existing translations
+  alias_attribute :failure_message_overrides, :failure_message_override
+
   def localized_failure_message_override
-    get_localized_property('failure_message_override')
+    get_localized_property("failure_message_overrides")
   end
 
   def localized_long_instructions
