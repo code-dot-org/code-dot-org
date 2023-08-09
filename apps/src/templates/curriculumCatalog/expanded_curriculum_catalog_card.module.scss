@@ -3,6 +3,66 @@
 
 $container-width: 960px;
 
+.bodyText {
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  text-align: center;
+  button,
+  a,
+  a:link,
+  a:visited {
+    margin: 0;
+    height: 40px;
+    font-size: 1em;
+    line-height: 36.5px;
+  }
+}
+
+.centerContentContainer {
+  display: flex;
+  column-gap: 48px;
+}
+
+.closeButton {
+  display: flex;
+  justify-content: right;
+
+  a {
+    text-decoration: none;
+    color: #54595e;
+  }
+  a:hover {
+    cursor: pointer; /* Change cursor to a pointer on hover */
+  }
+}
+
+.compatibilityContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.courseOfferingContainer {
+  width: 736px;
+  padding: 16px 32px 16px 16px;
+  box-sizing: border-box;
+}
+
+.descriptionContainer {
+  margin-bottom: 20px;
+}
+
+.descriptionVideoContainer {
+  width: 440px;
+}
+
 .expandedCardContainer {
   position: relative;
   background-color: #fff;
@@ -12,6 +72,14 @@ $container-width: 960px;
   border-radius: 4px;
   width: $container-width;
   box-sizing: border-box;
+}
+
+.flexDivider {
+  display: flex;
+}
+
+.horizontalDivider {
+  border-top: 1px solid #d4d5d7;
 }
 
 .iconWithDescription {
@@ -37,30 +105,33 @@ $container-width: 960px;
   column-gap: 20px;
 }
 
-.flexDivider {
-  display: flex;
+.linksContainer {
+  hr {
+    margin: 8px 0;
+  }
+
+  i {
+    margin-left: 8px;
+  }
 }
-.courseOfferingContainer {
-  width: 736px;
-  padding: 16px 32px 16px 16px;
-  box-sizing: border-box;
+
+.professionalLearningText {
+  font-size: 14px;
 }
+
+.relatedContainer {
+  margin-top: 36px;
+
+  hr {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+}
+
 .relatedCurriculaContainer {
   background-color: #f7f8fa;
   width: 224px;
-}
-
-.horizontalDivider {
-  border-top: 1px solid #d4d5d7;
-}
-
-.centerContentContainer {
-  display: flex;
-  column-gap: 48px;
-}
-
-.descriptionVideoContainer {
-  width: 440px;
+  padding: 16px;
 }
 
 .resourcesContainer {
@@ -72,21 +143,15 @@ $container-width: 960px;
   }
 }
 
-.bodyText {
-  font-size: 14px;
-  text-decoration: none;
-  color: black;
+.subjectsText {
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.linksContainer {
-  hr {
-    margin: 8px 0;
-  }
-
-  i {
-    margin-left: 8px;
-  }
-}
 .thickDivider {
   border-top: 2px solid #d4d5d7;
+}
+
+.videoContainer {
+  height: 246.5px;
 }
