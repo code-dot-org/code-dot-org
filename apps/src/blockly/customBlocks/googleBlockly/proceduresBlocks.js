@@ -191,46 +191,32 @@ export function flyoutCategory(workspace) {
     blockList.push(functionDefinitionBlock);
   }
 
-  const allWorkspaceProcedures = Blockly.procedureSerializer.save(
-    Blockly.getMainWorkspace()
+  const allWorkspaces = Blockly.Workspace.getAll().filter(
+    workspace => !workspace.isFlyout
   );
-  let allWorkspaceFunctions = [];
-  if (allWorkspaceProcedures) {
-    allWorkspaceFunctions = allWorkspaceProcedures.filter(
-      procedure => !procedureIsBehavior(procedure)
+  const allFunctionNames = [];
+  allWorkspaces.forEach(workspace => {
+    const behaviorBlocks = workspace
+      .getTopBlocks()
+      .filter(topBlock => topBlock.type === 'procedures_defnoreturn');
+    behaviorBlocks.forEach(block =>
+      allFunctionNames.push(block.getFieldValue('NAME'))
     );
-  }
-  allWorkspaceFunctions
-    .filter(procedure => !procedureIsBehavior(procedure))
-    .sort(sortProceduresByName)
-    .forEach(procedure => {
-      const name = procedure.name;
-
-      blockList.push({
-        kind: 'block',
-        type: 'procedures_callnoreturn',
-        extraState: {
-          name: name,
-        },
-        fields: {
-          NAME: name,
-        },
-        mutation: {
-          name: name,
-        },
-      });
+  });
+  allFunctionNames.sort().forEach(name => {
+    blockList.push({
+      kind: 'block',
+      type: 'procedures_callnoreturn',
+      extraState: {
+        name: name,
+      },
+      fields: {
+        NAME: name,
+      },
     });
+  });
 
   return blockList;
-}
-
-// Helper function to check if a procedure is a behavior.
-// Currently, this just looks for a "this sprite" parameter.
-function procedureIsBehavior(procedure) {
-  return (
-    procedure.parameters &&
-    procedure.parameters.some(param => param.name === msg.thisSprite())
-  );
 }
 
 const getLowestBlockBottomY = () => {

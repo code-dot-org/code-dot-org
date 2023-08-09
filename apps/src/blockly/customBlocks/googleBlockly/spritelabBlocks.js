@@ -5,6 +5,7 @@ import {updatePointerBlockImage} from '@cdo/apps/blockly/addons/cdoSpritePointer
 import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 import {blocks as behaviorBlocks} from './behaviorBlocks';
+import msg from '@cdo/locale';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 
@@ -197,13 +198,77 @@ export const blocks = {
     Blockly.common.defineBlocks(behaviorBlocks);
 
     const generator = Blockly.getGenerator();
-    generator.behavior_definition = generator.procedures_defnoreturn;
+    generator.behavior_definition = function (block) {
+      // Define a procedure with a return value.
+      const funcName = generator.nameDB_.getName(
+        block.getFieldValue('NAME'),
+        Blockly.Names.NameType.PROCEDURE
+      );
+      let xfix1 = '';
+      if (generator.STATEMENT_PREFIX) {
+        xfix1 += generator.injectId(generator.STATEMENT_PREFIX, block);
+      }
+      if (generator.STATEMENT_SUFFIX) {
+        xfix1 += generator.injectId(generator.STATEMENT_SUFFIX, block);
+      }
+      if (xfix1) {
+        xfix1 = generator.prefixLines(xfix1, generator.INDENT);
+      }
+      let loopTrap = '';
+      if (generator.INFINITE_LOOP_TRAP) {
+        loopTrap = generator.prefixLines(
+          generator.injectId(generator.INFINITE_LOOP_TRAP, block),
+          generator.INDENT
+        );
+      }
+      const branch = generator.statementToCode(block, 'STACK');
+      let returnValue =
+        generator.valueToCode(block, 'RETURN', generator.ORDER_NONE) || '';
+      let xfix2 = '';
+      if (branch && returnValue) {
+        // After executing the function body, revisit this block for the return.
+        xfix2 = xfix1;
+      }
+      if (returnValue) {
+        returnValue = generator.INDENT + 'return ' + returnValue + ';\n';
+      }
+      const args = [];
+      args.push(
+        generator.nameDB_.getName(
+          msg.thisSprite(),
+          Blockly.Names.NameType.VARIABLE
+        )
+      );
+      const variables = block.getVars();
+      for (let i = 0; i < variables.length; i++) {
+        args[i] = generator.nameDB_.getName(
+          variables[i],
+          Blockly.Names.NameType.VARIABLE
+        );
+      }
+      let code =
+        'function ' +
+        funcName +
+        '(' +
+        args.join(', ') +
+        ') {\n' +
+        xfix1 +
+        loopTrap +
+        branch +
+        xfix2 +
+        returnValue +
+        '}';
+      code = generator.scrub_(block, code);
+      // Add % so as not to collide with helper functions in definitions list.
+      generator.definitions_['%' + funcName] = code;
+      return null;
+    };
     generator.gamelab_behavior_get = function () {
-      const name = Blockly.JavaScript.nameDB_.getName(
+      const name = generator.nameDB_.getName(
         this.getFieldValue('NAME'),
         'PROCEDURE'
       );
-      return [`new Behavior(${name}, [])`, Blockly.JavaScript.ORDER_ATOMIC];
+      return [`new Behavior(${name}, [])`, generator.ORDER_ATOMIC];
     };
     generator.sprite_parameter_get = generator.variables_get;
   },

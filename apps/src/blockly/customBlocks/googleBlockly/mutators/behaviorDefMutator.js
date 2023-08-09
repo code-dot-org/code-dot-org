@@ -1,12 +1,4 @@
-/**
- * This is a direct copy of `procedureDefMutator` from @blockly/block-shareable-procedures
- * with the compose() and decompose() methods removed. These methods automatically
- * add a gear icon UI that we do not want. A future version of the plugin will
- * export this mutator (and other extensions), but this will require bumping to
- * Blockly v10.
- * TODO: Once we are on Blockly v10, remove this file.
- */
-
+// import {CdoParameterModel} from './parameterModel';
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
 /**
  * A type guard which checks if the given block is a procedure block.
@@ -21,7 +13,7 @@ function isProcedureBlock(block) {
   );
 }
 
-export const procedureDefMutator = {
+export const behaviorDefMutator = {
   hasStatements_: true,
 
   /**
@@ -49,27 +41,12 @@ export const procedureDefMutator = {
   },
 
   /**
-   * Parse XML to restore the argument inputs.
-   * Backwards compatible serialization implementation.
+   * Parse XML to set static behavior id, used for shared behaviors.
    * @param xmlElement XML storage element.
    * @this {Blockly.Block}
    */
   domToMutation: function (xmlElement) {
-    for (let i = 0; i < xmlElement.childNodes.length; i++) {
-      const node = xmlElement.childNodes[i];
-      if (node.nodeName.toLowerCase() !== 'arg') continue;
-      const varId = node.getAttribute('varid');
-      this.getProcedureModel().insertParameter(
-        new ObservableParameterModel(
-          this.workspace,
-          node.getAttribute('name'),
-          undefined,
-          varId
-        ),
-        i
-      );
-    }
-    this.setStatements_(xmlElement.getAttribute('statements') !== 'false');
+    this.behaviorId = xmlElement.nextElementSibling.getAttribute('id');
   },
 
   /**
@@ -79,6 +56,7 @@ export const procedureDefMutator = {
   saveExtraState: function () {
     const state = Object.create(null);
     state['procedureId'] = this.getProcedureModel().getId();
+    state['behaviorId'] = this.behaviorId;
 
     const params = this.getProcedureModel().getParameters();
     if (!params.length && this.hasStatements_) return state;
@@ -106,6 +84,7 @@ export const procedureDefMutator = {
    *     statements.
    */
   loadExtraState: function (state) {
+    this.behaviorId = state['behaviorId'];
     const map = this.workspace.getProcedureMap();
     const procedureId = state['procedureId'];
     if (
@@ -124,7 +103,7 @@ export const procedureDefMutator = {
       for (let i = 0; i < state['params'].length; i++) {
         const {name, id, paramId} = state['params'][i];
         this.getProcedureModel().insertParameter(
-          new ObservableParameterModel(this.workspace, name, paramId, id),
+          new ObservableParameterModel(this.workspace, name, paramId, id), //, type),
           i
         );
       }

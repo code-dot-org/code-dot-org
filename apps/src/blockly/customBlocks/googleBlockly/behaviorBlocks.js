@@ -1,12 +1,10 @@
 import * as GoogleBlockly from 'blockly/core';
 import BlockSvgFrame from '../../addons/blockSvgFrame';
 import msg from '@cdo/locale';
-import {CdoParameterModel} from './mutators/parameterModel';
-import {
-  createAndCenterNewDefBlock,
-  sortProceduresByName,
-} from './proceduresBlocks';
+import {createAndCenterNewDefBlock} from './proceduresBlocks';
 import {convertXmlToJson} from '../../addons/cdoSerializationHelpers';
+import {behaviorDefMutator} from './mutators/behaviorDefMutator';
+import {behaviorGetMutator} from './mutators/behaviorGetMutator';
 
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
@@ -21,7 +19,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     // Block for defining a behavior (a type of procedure) with no return value.
     // When using the modal function editor, the name field is an uneditable label.
     type: 'behavior_definition',
-    message0: '%1 %2 %3 %4',
+    message0: '%1 %2 %3 %4 %5',
     message1: '%1',
     args0: [
       {
@@ -33,6 +31,11 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
         name: 'NAME',
         text: '',
         spellcheck: false,
+      },
+      {
+        type: 'field_label',
+        name: 'THIS_SPRITE',
+        text: `with: ${msg.thisSprite()}`,
       },
       {
         type: 'field_label',
@@ -57,16 +60,14 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_def_get_def_mixin',
       'procedure_def_var_mixin',
       'procedure_def_update_shape_mixin',
-      'procedure_def_context_menu_mixin',
       'procedure_def_onchange_mixin',
       'procedure_def_validator_helper',
       'procedure_defnoreturn_get_caller_block_mixin',
       'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'behaviors_block_frame',
-      'behavior_add_this_sprite_param',
     ],
-    mutator: 'procedure_def_mutator',
+    mutator: 'behavior_def_mutator',
   },
   {
     type: 'gamelab_behavior_get',
@@ -89,7 +90,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
-      'behavior_update_params_mixin',
     ],
     mutator: 'behavior_get_mutator',
   },
@@ -112,6 +112,11 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
   },
 ]);
 
+GoogleBlockly.Extensions.registerMutator(
+  'behavior_def_mutator',
+  behaviorDefMutator
+);
+
 // This extension adds an SVG frame around behavior definition blocks.
 // Not used when the modal function is enabled.
 GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
@@ -130,92 +135,9 @@ GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
   }
 });
 
-const behaviorGetMutator = {
-  previousEnabledState_: true,
-
-  paramsFromSerializedState_: [],
-
-  /**
-   * Returns the state of this block as a JSON serializable object.
-   * @returns The state of
-   *     this block, ie the params and procedure name.
-   */
-  saveExtraState: function () {
-    const state = Object.create(null);
-    const model = this.getProcedureModel();
-    if (!model) return state;
-    state['name'] = model.getName();
-    if (model.getParameters().length) {
-      state['params'] = model.getParameters().map(p => p.getName());
-    }
-    return state;
-  },
-  /**
-   * Applies the given state to this block.
-   * @param state The state to apply to this block, ie the params and
-   *     procedure name.
-   */
-  loadExtraState: function (state) {
-    this.deserialize_(state['name'], state['params'] || []);
-  },
-  /**
-   * Applies the given name and params from the serialized state to the block.
-   * @param name The name to apply to the block.
-   * @param params The parameters to apply to the block.
-   */
-  deserialize_: function (name, params) {
-    this.setFieldValue(name, 'NAME');
-    if (!this.model_) this.model_ = this.findProcedureModel_(name, params);
-    if (this.getProcedureModel()) {
-      this.initBlockWithProcedureModel_();
-    } else {
-      // Create inputs based on the mutation so that children can be connected.
-      this.createArgInputs_(params);
-    }
-    this.paramsFromSerializedState_ = params;
-  },
-};
-
 GoogleBlockly.Extensions.registerMutator(
   'behavior_get_mutator',
   behaviorGetMutator
-);
-
-const behaviorAddThisSpriteParam = function () {
-  if (this.workspace.rendered && !this.workspace.isFlyout) {
-    if (!this.getProcedureModel().getParameters().length) {
-      this.getProcedureModel().insertParameter(
-        new CdoParameterModel(
-          this.workspace,
-          msg.thisSprite(),
-          undefined,
-          undefined,
-          'Sprite'
-        ),
-        0
-      );
-    }
-  }
-
-  this.doProcedureUpdate();
-};
-
-GoogleBlockly.Extensions.register(
-  'behavior_add_this_sprite_param',
-  behaviorAddThisSpriteParam
-);
-
-const behaviorUpdateParamsMixin = {
-  /**
-   * No-ops updateParameters_ so that behavior_get blocks do not have argument inputs.
-   * @override
-   */
-  updateParameters_: function () {},
-};
-
-GoogleBlockly.Extensions.registerMixin(
-  'behavior_update_params_mixin',
-  behaviorUpdateParamsMixin
 );
 
 /**
@@ -258,40 +180,33 @@ export function flyoutCategory(workspace) {
     blockList.push(behaviorDefinitionBlock);
   }
   blockList.push(...getCustomCategoryBlocksForFlyout('Behavior'));
-  const allWorkspaceProcedures = Blockly.procedureSerializer.save(
-    Blockly.getMainWorkspace()
-  );
-  let allWorkspaceBehaviors = [];
-  if (allWorkspaceProcedures) {
-    allWorkspaceBehaviors = allWorkspaceProcedures.filter(procedure =>
-      procedureIsBehavior(procedure)
-    );
-  }
 
-  allWorkspaceBehaviors.sort(sortProceduresByName).forEach(procedure => {
+  const allWorkspaces = Blockly.Workspace.getAll().filter(
+    workspace => !workspace.isFlyout
+  );
+  const allBehaviorNames = [];
+  allWorkspaces.forEach(workspace => {
+    const behaviorBlocks = workspace
+      .getTopBlocks()
+      .filter(topBlock => topBlock.type === 'behavior_definition');
+    behaviorBlocks.forEach(block =>
+      allBehaviorNames.push(block.getFieldValue('NAME'))
+    );
+  });
+  allBehaviorNames.sort().forEach(name => {
     blockList.push({
       kind: 'block',
       type: 'gamelab_behavior_get',
       extraState: {
-        name: procedure.name,
-        params: [msg.thisSprite()],
+        name: name,
       },
       fields: {
-        NAME: procedure.name,
+        NAME: name,
       },
     });
   });
 
   return blockList;
-}
-
-// Helper function to check if a procedure is a behavior.
-// Currently, this just looks for a "this sprite" parameter.
-function procedureIsBehavior(procedure) {
-  return (
-    procedure.parameters &&
-    procedure.parameters.some(param => param.name === msg.thisSprite())
-  );
 }
 
 function getCustomCategoryBlocksForFlyout(category) {

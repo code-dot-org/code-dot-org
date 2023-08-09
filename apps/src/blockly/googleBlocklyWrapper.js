@@ -57,8 +57,12 @@ import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
 import CdoFieldImage from './addons/cdoFieldImage';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
-import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
-import {CdoParameterModel} from './customBlocks/googleBlockly/mutators/parameterModel';
+import {
+  ObservableProcedureModel,
+  ObservableParameterModel,
+} from '@blockly/block-shareable-procedures';
+// import {CdoParameterModel} from './customBlocks/googleBlockly/mutators/parameterModel';
+
 const options = {
   contextMenu: true,
   shortcut: true,
@@ -305,7 +309,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   const procedureSerializer =
     new blocklyWrapper.blockly_.serialization.procedures.ProcedureSerializer(
       ObservableProcedureModel,
-      CdoParameterModel
+      ObservableParameterModel
     );
 
   blocklyWrapper.procedureSerializer = procedureSerializer;
