@@ -113,13 +113,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @override
    */
   position() {
-    this.isVisible() &&
-      this.positionAt_(
-        this.width_,
-        this.height_,
-        this.RTL ? -this.flyoutBlockPadding : 0,
-        0
-      );
+    this.isVisible() && this.positionAt_(this.width_, this.height_, 0, 0);
   }
 
   /**
@@ -197,6 +191,10 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @param contents The blocks and buttons to lay out.
    * @param gaps The visible gaps between blocks.
    */
+  // TODO: once we upgrade to v10 of blockly we should not need this anymore
+  // and can rely on the parent version of this function.
+  // This is copied here to include a fix from this PR on Blockly:
+  // https://github.com/google/blockly/pull/7333
   layout_(contents, gaps) {
     this.workspace_.scale = this.targetWorkspace?.scale;
     const margin = this.MARGIN;
