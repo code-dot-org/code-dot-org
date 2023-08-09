@@ -25,7 +25,7 @@ apt_package %w(
 )
 
 # Used by lesson plan generator
-if node.chef_environment == 'staging'
+if %w(staging test).include?(node.chef_environment)
   pdftk_file = 'pdftk-java_3.1.1-1_all.deb'
   pdftk_local_file = "#{Chef::Config[:file_cache_path]}/#{pdftk_file}"
   remote_file pdftk_local_file do
