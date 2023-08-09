@@ -10,7 +10,7 @@ export const blocks = {
   // Creates and returns a toggle button field. This field should be
   // added to the block after other inputs have been created.
   initializeMiniToolbox() {
-    // Function to create and show the flyout
+    // Function to create the flyout
     const createFlyoutField = function (block) {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
       const flyoutField = new Blockly.FieldFlyout(_, {
@@ -21,7 +21,6 @@ export const blocks = {
       });
       block
         .appendDummyInput('flyout_input')
-        .setAlign(Blockly.Input.Align.LEFT)
         .appendField(flyoutField, flyoutKey);
       return flyoutField;
     };
@@ -67,6 +66,8 @@ export const blocks = {
   // Adds a toggle button field to a block. Requires other inputs to already exist.
   appendMiniToolboxToggle(miniToolboxBlocks, flyoutToggleButton) {
     this.setInputsInline(true);
+    // We set the inputs to align left so that if the flyout is larger than the
+    // inputs will be aligned with the left edge of the block.
     this.inputList.forEach(input => {
       input.setAlign(Blockly.Input.Align.LEFT);
     });
