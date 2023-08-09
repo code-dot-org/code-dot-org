@@ -77,10 +77,6 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     this.setFlyoutVisible(true);
   }
 
-  hideEditor() {
-    this.setFlyoutVisible(false);
-  }
-
   /**
    * Returns the height and width of the field.
    *
@@ -112,16 +108,17 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    */
   render_() {
     if (this.flyout_.isVisible()) {
+      // Always reflow and re-show the flyout before re-sizing the field.
+      // This will ensure the flyout is reporting the correct size (reflowInteral_),
+      // and the blocks in the flyout are space correctly (show).
       this.flyout_.reflowInternal_();
       this.flyout_.show(CdoFieldFlyout.getFlyoutId(this.sourceBlock_));
     }
     const fieldGroupBBox = this.fieldGroup_.getBBox();
-    const height = fieldGroupBBox.height;
-    let width = fieldGroupBBox.width;
-    if (this.flyout_.isVisible()) {
-      width += this.flyout_.flyoutBlockPadding;
-    }
-    this.size_ = new Blockly.utils.Size(width, height);
+    this.size_ = new Blockly.utils.Size(
+      fieldGroupBBox.width,
+      fieldGroupBBox.height
+    );
   }
 
   /**
