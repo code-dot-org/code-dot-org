@@ -37,8 +37,8 @@ class ExpiredChildAccountPurger
     # The motivation of this limit is to protect ourselves from bugs where we
     # accidentally delete a large number of accounts we shouldn't be deleting.
     # We may need to adjust this over time as activity increases on our site.
-    # Default to 1000
-    @max_accounts_to_purge = options[:max_accounts_to_purge] || 1000
+    # Default to 200
+    @max_accounts_to_purge = options[:max_accounts_to_purge] || 200
     raise ArgumentError.new('max_accounts_to_purge must be Integer') unless @max_accounts_to_purge.is_a? Integer
 
     reset

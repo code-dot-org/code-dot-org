@@ -35,7 +35,7 @@ class ExpiredChildAccountPurgerTest < ActiveSupport::TestCase
     purger = ExpiredChildAccountPurger.new
     assert_equal false, purger.dry_run?
     assert_equal 7.days.ago, purger.lock_out_date
-    assert_equal 1000, purger.max_accounts_to_purge
+    assert_equal 200, purger.max_accounts_to_purge
   end
 
   test 'raises ArgumentError unless dry_run is boolean' do
