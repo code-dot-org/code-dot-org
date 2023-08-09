@@ -13,7 +13,6 @@ nl:
             '0.75': klein
             '1.00': middellang
             '2.00': groot
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -21,128 +20,125 @@ nl:
             '0.75': klein
             '1.00': middellang
             '2.00': groot
-            '3.00': extra large
       Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
+            '"SLOTH"': traagheid
+            '"UNICORN"': eenhoorns
+            sprites: alle
+          MOVE1:
+            MOVES.ClapHigh: Hoog klappen
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Naar de grond
+            MOVES.Floss: Floss
+            MOVES.Fresh: Vers
+            MOVES.Kick: Ster
+            MOVES.Rest: Geen
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Dit of dat.
+          MOVE2:
+            MOVES.ClapHigh: Hoog klappen
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Naar de grond
+            MOVES.Floss: Floss
+            MOVES.Fresh: Vers
+            MOVES.Kick: Ster
+            MOVES.Rest: Geen
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Dit of dat.
         text: |-
           {GROUP} wissel om de {N}
            maten tussen {MOVE1} en {MOVE2}
-        options:
-          GROUP:
-            sprites: alle
-            '"ALIEN"': aliens
-            '"BEAR"': beren
-            '"CAT"': katten
-            '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
-            '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
-            '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': eenhoorns
-          MOVE1:
-            MOVES.Roll: Body Roll
-            MOVES.ClapHigh: Hoog klappen
-            MOVES.Dab: Dab
-            MOVES.DoubleJam: Double down
-            MOVES.Drop: Naar de grond
-            MOVES.Floss: Floss
-            MOVES.Fresh: Vers
-            MOVES.Clown: Gangnam
-            MOVES.Kick: Ster
-            MOVES.ThisOrThat: Dit of dat.
-            MOVES.Rest: Geen
-          MOVE2:
-            MOVES.Roll: Body Roll
-            MOVES.ClapHigh: Hoog klappen
-            MOVES.Dab: Dab
-            MOVES.DoubleJam: Double down
-            MOVES.Drop: Naar de grond
-            MOVES.Floss: Floss
-            MOVES.Fresh: Vers
-            MOVES.Clown: Gangnam
-            MOVES.Kick: Ster
-            MOVES.ThisOrThat: Dit of dat.
-            MOVES.Rest: Geen
       Dancelab_atTimestamp:
-        text: na {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': maten
             '"seconds"': seconden
+        text: na {TIMESTAMP} {UNIT}
       Dancelab_changeColorBy:
-        text: verander {COLOR} {METHOD} met {AMOUNT}
         options:
           METHOD:
+            '"brightness"': helderheid
             '"hue"': tint
             '"saturation"': verzadiging
-            '"brightness"': helderheid
+        text: verander {COLOR} {METHOD} met {AMOUNT}
       Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
+            '"SLOTH"': traagheid
+            '"UNICORN"': eenhoorns
+            sprites: alle
+          MOVE:
+            '"next"': "(Volgende)"
+            '"prev"': "(Vorige)"
+            '"rand"': "(Willekeurig)"
+            MOVES.ClapHigh: Hoog klappen
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Naar de grond
+            MOVES.Floss: Floss
+            MOVES.Fresh: Vers
+            MOVES.Kick: Ster
+            MOVES.Rest: Geen
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Dit of dat.
         text: "{GROUP} doe {MOVE} {DIR} voor altijd"
-        options:
-          GROUP:
-            sprites: alle
-            '"ALIEN"': aliens
-            '"BEAR"': beren
-            '"CAT"': katten
-            '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
-            '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
-            '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': eenhoorns
-          MOVE:
-            '"next"': "(Volgende)"
-            '"prev"': "(Vorige)"
-            '"rand"': "(Willekeurig)"
-            MOVES.Roll: Body Roll
-            MOVES.ClapHigh: Hoog klappen
-            MOVES.Dab: Dab
-            MOVES.DoubleJam: Double down
-            MOVES.Drop: Naar de grond
-            MOVES.Floss: Floss
-            MOVES.Fresh: Vers
-            MOVES.Clown: Gangnam
-            MOVES.Kick: Ster
-            MOVES.ThisOrThat: Dit of dat.
-            MOVES.Rest: Geen
       Dancelab_changeMoveLR:
-        text: "{SPRITE} doe {MOVE} {DIR} voor altijd"
         options:
           MOVE:
             '"next"': "(Volgende)"
             '"prev"': "(Vorige)"
             '"rand"': "(Willekeurig)"
-            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Gangnam
             MOVES.Kick: Ster
-            MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Dit of dat.
+        text: "{SPRITE} doe {MOVE} {DIR} voor altijd"
       Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"height"': hoogte
+            '"rotation"': rotatie
+            '"scale"': grootte
+            '"width"': breedte
+            '"x"': horizontale positie
+            '"y"': verticale positie
         text: wijzig {SPRITE} {PROPERTY} met {VAL}
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"width"': breedte
-            '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
       Dancelab_changePropEachBy:
-        text: wissel {GROUP} {PROPERTY} met {VAL}
         options:
           GROUP:
-            sprites: alle
             '"ALIEN"': aliens
             '"BEAR"': beren
             '"CAT"': katten
@@ -155,18 +151,18 @@ nl:
             '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': eenhoorns
+            sprites: alle
           PROPERTY:
-            '"scale"': grootte
-            '"width"': breedte
             '"height"': hoogte
             '"rotation"': rotatie
+            '"scale"': grootte
+            '"width"': breedte
             '"x"': horizontale positie
             '"y"': verticale positie
+        text: wissel {GROUP} {PROPERTY} met {VAL}
       Dancelab_doMoveEachLR:
-        text: "{GROUP} doe {MOVE} {DIR} een keer"
         options:
           GROUP:
-            sprites: alle
             '"ALIEN"': aliens
             '"BEAR"': beren
             '"CAT"': katten
@@ -179,98 +175,97 @@ nl:
             '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': eenhoorns
+            sprites: alle
           MOVE:
             '"rand"': "(Willekeurig)"
-            MOVES.XBend: Buig
-            MOVES.Roll: Body Roll
-            MOVES.XClapSide: Klap
             MOVES.ClapHigh: Hoog klappen
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
-            MOVES.XFever: Disco
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Gangnam
+            MOVES.Kick: Ster
+            MOVES.Rest: Geen
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Dit of dat.
+            MOVES.XArmsSide: Reik
+            MOVES.XArmsUp: Rek
+            MOVES.XBend: Buig
+            MOVES.XClapSide: Klap
+            MOVES.XFever: Disco
             MOVES.XHeadHips: Hoofd + Heupen
-            MOVES.XHop: Hop
             MOVES.XHighKick: Trap
+            MOVES.XHop: Hop
             MOVES.XKnee: Knie
             MOVES.XKneel: Kniel
             MOVES.XOle: Ole
-            MOVES.XArmsSide: Reik
             MOVES.XSlide: Schuif
-            MOVES.Kick: Ster
-            MOVES.XArmsUp: Rek
-            MOVES.ThisOrThat: Dit of dat.
-            MOVES.Rest: Geen
+        text: "{GROUP} doe {MOVE} {DIR} een keer"
       Dancelab_doMoveLR:
-        text: "{SPRITE} doe {MOVE} {DIR} een keer"
         options:
           MOVE:
             '"rand"': "(Willekeurig)"
-            MOVES.XBend: Buig
-            MOVES.Roll: Body Roll
-            MOVES.XClapSide: Klap
             MOVES.ClapHigh: Hoog klappen
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
-            MOVES.XFever: Disco
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Gangnam
+            MOVES.Kick: Ster
+            MOVES.Rest: Geen
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Dit of dat.
+            MOVES.XArmsSide: Reik
+            MOVES.XArmsUp: Rek
+            MOVES.XBend: Buig
+            MOVES.XClapSide: Klap
+            MOVES.XFever: Disco
             MOVES.XHeadHips: Hoofd + Heupen
-            MOVES.XHop: Hop
             MOVES.XHighKick: Trap
+            MOVES.XHop: Hop
             MOVES.XKnee: Knie
             MOVES.XKneel: Kniel
             MOVES.XOle: Ole
-            MOVES.XArmsSide: Reik
             MOVES.XSlide: Schuif
-            MOVES.Kick: Ster
-            MOVES.XArmsUp: Rek
-            MOVES.ThisOrThat: Dit of dat.
-            MOVES.Rest: Geen
+        text: "{SPRITE} doe {MOVE} {DIR} een keer"
       Dancelab_everySeconds:
-        text: 'elke {N} {UNIT} '
         options:
           UNIT:
             '"measures"': maten
             '"seconds"': seconden
+        text: 'elke {N} {UNIT} '
       Dancelab_everyVerseChorus:
-        text: 'elke {UNIT} '
         options:
           UNIT:
-            '"verse"': couplet
             '"chorus"': refrein
+            '"verse"': couplet
+        text: 'elke {UNIT} '
       Dancelab_getEnergy:
-        text: krijg [RANGE] [0]
         options:
           RANGE:
+            '"high"': drievoudige
             '"low"': Bass
             '"mid"': midden
-            '"high"': drievoudige
+        text: krijg [RANGE] [0]
       Dancelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
-            '"scale"': grootte
-            '"width"': breedte
             '"height"': hoogte
             '"rotation"': rotatie
+            '"scale"': grootte
+            '"width"': breedte
             '"x"': horizontale positie
             '"y"': verticale positie
+        text: "{SPRITE} {PROPERTY}"
       Dancelab_getTime:
-        text: "{UNIT} verstreken"
         options:
           UNIT:
             '"measures"': maten
             '"seconds"': seconden
+        text: "{UNIT} verstreken"
       Dancelab_ifDanceIs:
-        text: |-
-          als {SPRITE} {DANCE} doet
-          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Hoog klappen
@@ -280,37 +275,38 @@ nl:
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Roll: Body Roll
             MOVES.Kick: Ster
-            MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Dit of dat.
+        text: |-
+          als {SPRITE} {DANCE} doet
+          {DO1} {DO2}
       Dancelab_ifTime:
-        text: als {UNIT} is {OP} {N} {DO1} {DO2}
         options:
+          OP:
+            '"<"': "<"
           UNIT:
             '"measures"': maten
             '"seconds"': seconden
-          OP:
-            '"<"': "<"
+        text: als {UNIT} is {OP} {N} {DO1} {DO2}
       Dancelab_jumpTo:
-        text: "{SPRITE} ga naar {LOCATION}"
         options:
           LOCATION:
-            "{x: 200, y: 100}": boven
-            "{x: 200, y: 300}": onder
-            "{x: 100, y: 200}": links
-            "{x: 300, y: 200}": rechts
-            "{x: 200, y: 200}": midden
             "{x: 100, y: 100}": linksboven
-            "{x: 300, y: 100}": rechtsboven
+            "{x: 100, y: 200}": links
             "{x: 100, y: 300}": linksonder
+            "{x: 200, y: 100}": boven
+            "{x: 200, y: 200}": midden
+            "{x: 200, y: 300}": onder
+            "{x: 300, y: 100}": rechtsboven
+            "{x: 300, y: 200}": rechts
             "{x: 300, y: 300}": rechtsonder
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": willekeurig
+        text: "{SPRITE} ga naar {LOCATION}"
       Dancelab_jumpToEach:
-        text: spring {GROUP} naar {LOCATION}
         options:
           GROUP:
-            sprites: alle
             '"ALIEN"': aliens
             '"BEAR"': beren
             '"CAT"': katten
@@ -323,22 +319,36 @@ nl:
             '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': eenhoorns
+            sprites: alle
           LOCATION:
-            "{x: 200, y: 100}": boven
-            "{x: 200, y: 300}": onder
-            "{x: 100, y: 200}": links
-            "{x: 300, y: 200}": rechts
-            "{x: 200, y: 200}": midden
             "{x: 100, y: 100}": linksboven
-            "{x: 300, y: 100}": rechtsboven
+            "{x: 100, y: 200}": links
             "{x: 100, y: 300}": linksonder
+            "{x: 200, y: 100}": boven
+            "{x: 200, y: 200}": midden
+            "{x: 200, y: 300}": onder
+            "{x: 300, y: 100}": rechtsboven
+            "{x: 300, y: 200}": rechts
             "{x: 300, y: 300}": rechtsonder
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": willekeurig
+        text: spring {GROUP} naar {LOCATION}
       Dancelab_layoutSprites:
-        text: "{GROUP} indelen als een {FORMAT}"
         options:
+          FORMAT:
+            '"border"': grens
+            '"bottom"': onderste rij
+            '"circle"': cirkel
+            '"column"': kolom
+            '"diamond"': diamant
+            '"grid"': raster
+            '"inner"': binnenkant vierkant
+            '"left"': linkerkolom
+            '"random"': willekeurig
+            '"right"': rechterkolom
+            '"row"': rij
+            '"top"': bovenste rij
+            '"x"': kriskras
           GROUP:
-            sprites: alle
             '"ALIEN"': aliens
             '"BEAR"': beren
             '"CAT"': katten
@@ -351,22 +361,9 @@ nl:
             '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': eenhoorns
-          FORMAT:
-            '"border"': grens
-            '"inner"': binnenkant vierkant
-            '"diamond"': diamant
-            '"circle"': cirkel
-            '"grid"': raster
-            '"top"': bovenste rij
-            '"row"': rij
-            '"bottom"': onderste rij
-            '"left"': linkerkolom
-            '"column"': kolom
-            '"right"': rechterkolom
-            '"x"': kriskras
-            '"random"': willekeurig
+            sprites: alle
+        text: "{GROUP} indelen als een {FORMAT}"
       Dancelab_makeAnonymousDanceSprite:
-        text: maak een nieuwe {COSTUME} op {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': buitenaards wezen
@@ -382,90 +379,48 @@ nl:
             '"SLOTH"': traagheid
             '"UNICORN"': eenhoorn
           LOCATION:
-            "{x: 200, y: 100}": boven
-            "{x: 200, y: 300}": onder
-            "{x: 100, y: 200}": links
-            "{x: 300, y: 200}": rechts
-            "{x: 200, y: 200}": midden
             "{x: 100, y: 100}": linksboven
-            "{x: 300, y: 100}": rechtsboven
+            "{x: 100, y: 200}": links
             "{x: 100, y: 300}": linksonder
+            "{x: 200, y: 100}": boven
+            "{x: 200, y: 200}": midden
+            "{x: 200, y: 300}": onder
+            "{x: 300, y: 100}": rechtsboven
+            "{x: 300, y: 200}": rechts
             "{x: 300, y: 300}": rechtsonder
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": willekeurig
+        text: maak een nieuwe {COSTUME} op {LOCATION}
       Dancelab_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': buitenaards wezen
+            '"BEAR"': Beer
+            '"CAT"': kat
+            '"DOG"': hond
+            '"DUCK"': eend
+            '"FROG"': Kikker
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': Ananas
+            '"ROBOT"': robot
+            '"SHARK"': Haai
+            '"SLOTH"': traagheid
+            '"UNICORN"': eenhoorn
+          LOCATION:
+            "{x: 100, y: 100}": linksboven
+            "{x: 100, y: 200}": links
+            "{x: 100, y: 300}": linksonder
+            "{x: 200, y: 100}": boven
+            "{x: 200, y: 200}": midden
+            "{x: 200, y: 300}": onder
+            "{x: 300, y: 100}": rechtsboven
+            "{x: 300, y: 200}": rechts
+            "{x: 300, y: 300}": rechtsonder
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": willekeurig
         text: |-
           maak een nieuw {COSTUME}
           genaamd {NAME} op {LOCATION}
-        options:
-          COSTUME:
-            '"ALIEN"': buitenaards wezen
-            '"BEAR"': Beer
-            '"CAT"': kat
-            '"DOG"': hond
-            '"DUCK"': eend
-            '"FROG"': Kikker
-            '"MOOSE"': elanden
-            '"PINEAPPLE"': Ananas
-            '"ROBOT"': robot
-            '"SHARK"': Haai
-            '"SLOTH"': traagheid
-            '"UNICORN"': eenhoorn
-          LOCATION:
-            "{x: 200, y: 100}": boven
-            "{x: 200, y: 300}": onder
-            "{x: 100, y: 200}": links
-            "{x: 300, y: 200}": rechts
-            "{x: 200, y: 200}": midden
-            "{x: 100, y: 100}": linksboven
-            "{x: 300, y: 100}": rechtsboven
-            "{x: 100, y: 300}": linksonder
-            "{x: 300, y: 300}": rechtsonder
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": willekeurig
       Dancelab_makeNewDanceSpriteGroup:
-        text: |-
-          Maak {N} nieuw {COSTUME}
-          in een {LAYOUT}
         options:
-          N:
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
-            '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': aliens
             '"BEAR"': beren
@@ -481,18 +436,41 @@ nl:
             '"UNICORN"': eenhoorns
           LAYOUT:
             '"border"': grens
-            '"inner"': binnenkant vierkant
-            '"diamond"': diamant
-            '"circle"': cirkel
-            '"grid"': raster
-            '"top"': bovenste rij
-            '"row"': rij
             '"bottom"': onderste rij
-            '"left"': linkerkolom
+            '"circle"': cirkel
             '"column"': kolom
-            '"right"': rechterkolom
-            '"x"': kriskras
+            '"diamond"': diamant
+            '"grid"': raster
+            '"inner"': binnenkant vierkant
+            '"left"': linkerkolom
             '"random"': willekeurig
+            '"right"': rechterkolom
+            '"row"': rij
+            '"top"': bovenste rij
+            '"x"': kriskras
+          N:
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '2': '2'
+            '20': '20'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+        text: |-
+          Maak {N} nieuw {COSTUME}
+          in een {LAYOUT}
       Dancelab_mixColors:
         text: Meng {COLOR1} en {COLOR2}
       Dancelab_nMeasures:
@@ -508,91 +486,89 @@ nl:
       Dancelab_setBackground:
         text: stel {COLOR} in als achtergrondkleur
       Dancelab_setBackgroundEffect:
-        text: stel {EFFECT} {PALETTE} in als achtergrondeffect
         options:
           EFFECT:
-            '"none"': Geen
             '"circles"': Tunnel
             '"color_cycle"': Kleuren
             '"diamonds"': Ruiten
+            '"disco"': Vierkanten
             '"disco_ball"': Discobal
             '"fireworks"': Vuurwerk
+            '"galaxy"': Ruimte
             '"kaleidoscope"': Caleidoscoop
             '"lasers"': Laser-dansvloer
-            '"splatter"': Verfspetters
+            '"none"': Geen
             '"rainbow"': Regenboog
             '"snowflakes"': Sneeuw
-            '"text"': Titel van het lied
-            '"galaxy"': Ruimte
             '"sparkles"': Twinkelingen
             '"spiral"': Spiraal
-            '"disco"': Vierkanten
+            '"splatter"': Verfspetters
             '"stars"': Sterren
+            '"text"': Titel van het lied
           PALETTE:
-            '"rave"': Zwart-wit
             '"cool"': Blauw
+            '"default"': Licht
             '"electronic"': Elektronisch
             '"iceCream"': Ijsco
-            '"default"': Licht
             '"neon"': Neon
+            '"rave"': Zwart-wit
             '"tropical"': Tropisch
             '"vintage"': Vintage
             '"warm"': Rood
+        text: stel {EFFECT} {PALETTE} in als achtergrondeffect
       Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"circles"': Tunnel
+            '"color_cycle"': Kleuren
+            '"diamonds"': Ruiten
+            '"disco"': Vierkanten
+            '"disco_ball"': Discobal
+            '"fireworks"': Vuurwerk
+            '"flowers"': Bloemen
+            '"galaxy"': Ruimte
+            '"growing_stars"': Groeiende sterren
+            '"kaleidoscope"': Caleidoscoop
+            '"lasers"': Laser-dansvloer
+            '"music_wave"': Golven
+            '"none"': Geen
+            '"quads"': Hoeken
+            '"rainbow"': Regenboog
+            '"rand"': "(Willekeurig)"
+            '"ripples"': Rimpelingen
+            '"ripples_random"': Willekeurige rimpelingen
+            '"snowflakes"': Sneeuw
+            '"sparkles"': Twinkelingen
+            '"spiral"': Spiraal
+            '"splatter"': Verfspetters
+            '"squiggles"': Kronkels
+            '"stars"': Sterren
+            '"text"': Titel van het lied
+          PALETTE:
+            '"cool"': Blauw
+            '"default"': Licht
+            '"electronic"': Elektronisch
+            '"iceCream"': Ijsco
+            '"neon"': Neon
+            '"rave"': Zwart-wit
+            '"tropical"': Tropisch
+            '"vintage"': Vintage
+            '"warm"': Rood
         text: |-
           "achtergrondeffect
           {PALETTE} {EFFECT} instellen"
-        options:
-          EFFECT:
-            '"none"': Geen
-            '"rand"': "(Willekeurig)"
-            '"circles"': Tunnel
-            '"quads"': Hoeken
-            '"color_cycle"': Kleuren
-            '"diamonds"': Ruiten
-            '"disco_ball"': Discobal
-            '"fireworks"': Vuurwerk
-            '"flowers"': Bloemen
-            '"growing_stars"': Groeiende sterren
-            '"kaleidoscope"': Caleidoscoop
-            '"lasers"': Laser-dansvloer
-            '"splatter"': Verfspetters
-            '"rainbow"': Regenboog
-            '"ripples_random"': Willekeurige rimpelingen
-            '"ripples"': Rimpelingen
-            '"snowflakes"': Sneeuw
-            '"text"': Titel van het lied
-            '"squiggles"': Kronkels
-            '"galaxy"': Ruimte
-            '"sparkles"': Twinkelingen
-            '"spiral"': Spiraal
-            '"disco"': Vierkanten
-            '"stars"': Sterren
-            '"music_wave"': Golven
-          PALETTE:
-            '"rave"': Zwart-wit
-            '"cool"': Blauw
-            '"electronic"': Elektronisch
-            '"iceCream"': Ijsco
-            '"default"': Licht
-            '"neon"': Neon
-            '"tropical"': Tropisch
-            '"vintage"': Vintage
-            '"warm"': Rood
       Dancelab_setDanceSpeed:
-        text: verander de danssnelheid van {SPRITE} naar {SPEED}
         options:
           SPEED:
+            '0.25': heel langzaam
+            '0.5': langzaam
             '1': normaal
             '2': snel
             '4': heel snel
-            '0.5': langzaam
-            '0.25': heel langzaam
+        text: verander de danssnelheid van {SPRITE} naar {SPEED}
       Dancelab_setDanceSpeedEach:
-        text: stel {GROUP} danssnelheid op {SPEED}
         options:
           GROUP:
-            sprites: alle
             '"ALIEN"': aliens
             '"BEAR"': beren
             '"CAT"': katten
@@ -605,102 +581,102 @@ nl:
             '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': eenhoorns
+            sprites: alle
           SPEED:
+            '0.25': heel langzaam
+            '0.5': langzaam
             '1': normaal
             '2': snel
             '4': heel snel
-            '0.5': langzaam
-            '0.25': heel langzaam
+        text: stel {GROUP} danssnelheid op {SPEED}
       Dancelab_setForegroundEffect:
-        text: stel {EFFECT} in als voorgrondeffect
         options:
           EFFECT:
-            '"none"': Geen
             '"bubbles"': Bubbels
+            '"color_lights"': Podiumverlichting
             '"confetti"': Confetti
+            '"floating_rainbows"': Regenboog
             '"hearts_red"': Hartjes
             '"music_notes"': Muzieknoten
+            '"none"': Geen
             '"pineapples"': Ananassen
             '"pizzas"': Pizza's
-            '"smiling_poop"': Poep
             '"rain"': Regen
-            '"floating_rainbows"': Regenboog
-            '"smile_face"': Smiles
-            '"spotlight"': Spotlight
-            '"color_lights"': Podiumverlichting
             '"raining_tacos"': Taco‘s
-      Dancelab_setForegroundEffectExtended:
+            '"smile_face"': Smiles
+            '"smiling_poop"': Poep
+            '"spotlight"': Spotlight
         text: stel {EFFECT} in als voorgrondeffect
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
-            '"none"': Geen
-            '"rand"': "(Willekeurig)"
             '"bubbles"': Bubbels
-            '"hearts_colorful"': Kleurrijke Harten
+            '"color_lights"': Podiumverlichting
             '"confetti"': Confetti
             '"emojis"': Emojis
+            '"exploding_stars"': Sterrenvorming
+            '"floating_rainbows"': Regenboog
+            '"hearts_colorful"': Kleurrijke Harten
             '"hearts_red"': Hartjes
             '"music_notes"': Muzieknoten
+            '"none"': Geen
             '"paint_drip"': Verfdruppelen
             '"pineapples"': Ananassen
             '"pizzas"': Pizza's
-            '"smiling_poop"': Poep
             '"rain"': Regen
-            '"floating_rainbows"': Regenboog
-            '"smile_face"': Smiles
-            '"spotlight"': Spotlight
-            '"color_lights"': Podiumverlichting
-            '"exploding_stars"': Sterrenvorming
             '"raining_tacos"': Taco‘s
+            '"rand"': "(Willekeurig)"
+            '"smile_face"': Smiles
+            '"smiling_poop"': Poep
+            '"spotlight"': Spotlight
+        text: stel {EFFECT} in als voorgrondeffect
       Dancelab_setProp:
+        options:
+          PROPERTY:
+            '"height"': hoogte
+            '"rotation"': rotatie
+            '"scale"': grootte
+            '"width"': breedte
+            '"x"': horizontale positie
+            '"y"': verticale positie
         text: 'stel {SPRITE} {PROPERTY} in op {VAL} '
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"width"': breedte
-            '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
       Dancelab_setPropEach:
+        options:
+          GROUP:
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
+            '"SLOTH"': traagheid
+            '"UNICORN"': eenhoorns
+            sprites: alle
+          PROPERTY:
+            '"height"': hoogte
+            '"rotation"': rotatie
+            '"scale"': grootte
+            '"width"': breedte
+            '"x"': horizontale positie
+            '"y"': verticale positie
         text: stel {GROUP} {PROPERTY} in op {VAL}
-        options:
-          GROUP:
-            sprites: alle
-            '"ALIEN"': aliens
-            '"BEAR"': beren
-            '"CAT"': katten
-            '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
-            '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
-            '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': eenhoorns
-          PROPERTY:
-            '"scale"': grootte
-            '"width"': breedte
-            '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
       Dancelab_setPropRandom:
-        text: maak {SPRITE} {PROPERTY} willekeurig
         options:
           PROPERTY:
-            '"scale"': grootte
-            '"width"': breedte
             '"height"': hoogte
             '"rotation"': rotatie
+            '"scale"': grootte
+            '"width"': breedte
             '"x"': horizontale positie
             '"y"': verticale positie
+        text: maak {SPRITE} {PROPERTY} willekeurig
       Dancelab_setPropRandomEach:
-        text: maak {GROUP} {PROPERTY} willekeurig
         options:
           GROUP:
-            sprites: alle
             '"ALIEN"': aliens
             '"BEAR"': beren
             '"CAT"': katten
@@ -713,20 +689,20 @@ nl:
             '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': eenhoorns
+            sprites: alle
           PROPERTY:
-            '"scale"': grootte
-            '"width"': breedte
             '"height"': hoogte
             '"rotation"': rotatie
+            '"scale"': grootte
+            '"width"': breedte
             '"x"': horizontale positie
             '"y"': verticale positie
+        text: maak {GROUP} {PROPERTY} willekeurig
       Dancelab_setTint:
         text: stel de tint van {SPRITE} in op {VAL}
       Dancelab_setTintEach:
-        text: stel {THIS} tint op {VAL}
         options:
           THIS:
-            sprites: alle
             '"ALIEN"': aliens
             '"BEAR"': beren
             '"CAT"': katten
@@ -739,11 +715,11 @@ nl:
             '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': eenhoorns
+            sprites: alle
+        text: stel {THIS} tint op {VAL}
       Dancelab_setTintEachInline:
-        text: stel {THIS} tint op {VAL}
         options:
           THIS:
-            sprites: alle
             '"ALIEN"': aliens
             '"BEAR"': beren
             '"CAT"': katten
@@ -756,19 +732,19 @@ nl:
             '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': eenhoorns
+            sprites: alle
+        text: stel {THIS} tint op {VAL}
       Dancelab_setTintInline:
         text: stel de tint van {SPRITE} in op {VAL}
       Dancelab_setVisible:
-        text: stel {SPRITE} zichtbaarheid in op {VISIBILITY}
         options:
           VISIBILITY:
-            'true': zichtbaar
             'false': onzichtbaar
+            'true': zichtbaar
+        text: stel {SPRITE} zichtbaarheid in op {VISIBILITY}
       Dancelab_setVisibleEach:
-        text: stel {THIS} zichtbaarheid in op {VISIBILITY}
         options:
           THIS:
-            sprites: alle
             '"ALIEN"': aliens
             '"BEAR"': beren
             '"CAT"': katten
@@ -781,71 +757,71 @@ nl:
             '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': eenhoorns
+            sprites: alle
           VISIBILITY:
-            'true': zichtbaar
             'false': onzichtbaar
+            'true': zichtbaar
+        text: stel {THIS} zichtbaarheid in op {VISIBILITY}
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': hoogte
+            '"rotation"': rotatie
+            '"scale"': grootte
+            '"width"': breedte
+            '"x"': horizontale positie
+            '"y"': verticale positie
+          RANGE:
+            '"bass"': Bass
+            '"mid"': midden
+            '"treble"': drievoudige
         text: "{SPRITE} begint {PROPERTY} volgens {RANGE}"
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"width"': breedte
-            '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
-          RANGE:
-            '"bass"': Bass
-            '"mid"': midden
-            '"treble"': drievoudige
       Dancelab_startMappingEach:
+        options:
+          GROUP:
+            '"ALIEN"': aliens
+            '"BEAR"': beren
+            '"CAT"': katten
+            '"DOG"': honden
+            '"DUCK"': eenden
+            '"FROG"': kikkers
+            '"MOOSE"': elanden
+            '"PINEAPPLE"': ananassen
+            '"ROBOT"': robots
+            '"SHARK"': haaien
+            '"SLOTH"': traagheid
+            '"UNICORN"': eenhoorns
+            sprites: alle
+          PROPERTY:
+            '"height"': hoogte
+            '"rotation"': rotatie
+            '"scale"': grootte
+            '"width"': breedte
+            '"x"': horizontale positie
+            '"y"': verticale positie
+          RANGE:
+            '"bass"': Bass
+            '"mid"': midden
+            '"treble"': drievoudige
         text: "{GROUP} begin {PROPERTY} volgen {RANGE}"
-        options:
-          GROUP:
-            sprites: alle
-            '"ALIEN"': aliens
-            '"BEAR"': beren
-            '"CAT"': katten
-            '"DOG"': honden
-            '"DUCK"': eenden
-            '"FROG"': kikkers
-            '"MOOSE"': elanden
-            '"PINEAPPLE"': ananassen
-            '"ROBOT"': robots
-            '"SHARK"': haaien
-            '"SLOTH"': traagheid
-            '"UNICORN"': eenhoorns
-          PROPERTY:
-            '"scale"': grootte
-            '"width"': breedte
-            '"height"': hoogte
-            '"rotation"': rotatie
-            '"x"': horizontale positie
-            '"y"': verticale positie
-          RANGE:
-            '"bass"': Bass
-            '"mid"': midden
-            '"treble"': drievoudige
       Dancelab_stopMapping:
-        text: "{SPRITE} stopt {PROPERTY} volgens {RANGE}"
         options:
           PROPERTY:
-            '"scale"': grootte
-            '"width"': breedte
+            '"direction"': bewegingsrichting
             '"height"': hoogte
             '"rotation"': rotatie
+            '"scale"': grootte
+            '"width"': breedte
             '"x"': horizontale positie
             '"y"': verticale positie
-            '"direction"': bewegingsrichting
           RANGE:
             '"bass"': Bass
             '"mid"': midden
             '"treble"': drievoudige
+        text: "{SPRITE} stopt {PROPERTY} volgens {RANGE}"
       Dancelab_stopMappingEach:
-        text: "{GROUP} stopt met {PROPERTY} volgen {RANGE}"
         options:
           GROUP:
-            sprites: alle
             '"ALIEN"': aliens
             '"BEAR"': beren
             '"CAT"': katten
@@ -858,54 +834,23 @@ nl:
             '"SHARK"': haaien
             '"SLOTH"': traagheid
             '"UNICORN"': eenhoorns
+            sprites: alle
           PROPERTY:
-            '"scale"': grootte
-            '"width"': breedte
+            '"direction"': bewegingsrichting
             '"height"': hoogte
             '"rotation"': rotatie
+            '"scale"': grootte
+            '"width"': breedte
             '"x"': horizontale positie
             '"y"': verticale positie
-            '"direction"': bewegingsrichting
           RANGE:
             '"bass"': Bass
             '"mid"': midden
             '"treble"': drievoudige
+        text: "{GROUP} stopt met {PROPERTY} volgen {RANGE}"
       Dancelab_translateStrings:
-        text: translate {STRING}
         options:
           STRING:
-            '"music_wave"': Golven
-            '"ripples"': Rimpelingen
-            '"ripples_random"': Willekeurige rimpelingen
-            '"quads"': Hoeken
-            '"flowers"': Bloemen
-            '"popsicles"': Ijslolly’s
-            '"squiggles"': Kronkels
-            '"growing_stars"': Groeiende sterren
-            '"emojis"': Emojis
-            '"hearts_colorful"': Hartjes
-            '"paint_drio"': Verfdruppelen
-            '"exploding_stars"': Sterrenvorming
-            '"row_top"': bovenste rij
-            '"row_bottom"': onderste rij
-            '"column_left"': linkerkolom
-            '"column_right"': rechterkolom
-            '"diamond"': diamant
-            '"mural"': Muurschildering
-            '"safari"': Safari
-            '"network"': Netwerk
-            '"highway"': Snelweg
-            '"stream"': Stroom
-            '"tile"': Tegel
-            '"shadow"': Schaduw
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"x"': x
-            '"y"': y
-            '"z"': z
             '"0"': '0'
             '"1"': '1'
             '"2"': '2'
@@ -916,21 +861,59 @@ nl:
             '"7"': '7'
             '"8"': '8'
             '"9"': '9'
+            '"column_left"': linkerkolom
+            '"column_right"': rechterkolom
+            '"diamond"': diamant
+            '"emojis"': Emojis
+            '"exploding_stars"': Sterrenvorming
+            '"flowers"': Bloemen
+            '"growing_stars"': Groeiende sterren
+            '"hearts_colorful"': Hartjes
+            '"highway"': Snelweg
+            '"mural"': Muurschildering
+            '"music_wave"': Golven
+            '"network"': Netwerk
+            '"paint_drio"': Verfdruppelen
+            '"popsicles"': Ijslolly’s
+            '"quads"': Hoeken
+            '"ripples"': Rimpelingen
+            '"ripples_random"': Willekeurige rimpelingen
+            '"row_bottom"': onderste rij
+            '"row_top"': bovenste rij
+            '"s"': s
+            '"safari"': Safari
+            '"shadow"': Schaduw
+            '"squiggles"': Kronkels
+            '"stream"': Stroom
+            '"t"': t
+            '"tile"': Tegel
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+        text: translate {STRING}
       Dancelab_whenKey:
-        text: als {KEY} ingedrukt
         options:
           KEY:
-            '"up"': omhoog
-            '"left"': links
-            '"down"': omlaag
-            '"right"': rechts
-            '"space"': ruimte
-            '"enter"': enter
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
             '"a"': a
             '"b"': b
             '"c"': c
             '"d"': d
+            '"down"': omlaag
             '"e"': e
+            '"enter"': enter
             '"f"': f
             '"g"': g
             '"h"': h
@@ -938,635 +921,48 @@ nl:
             '"j"': j
             '"k"': k
             '"l"': l
+            '"left"': links
             '"m"': m
             '"n"': n
             '"o"': o
             '"p"': p
             '"q"': q
             '"r"': r
+            '"right"': rechts
             '"s"': s
+            '"space"': ruimte
             '"t"': t
             '"u"': u
+            '"up"': omhoog
             '"v"': v
             '"w"': w
             '"x"': x
             '"y"': y
             '"z"': z
-            '"0"': '0'
-            '"1"': '1'
-            '"2"': '2'
-            '"3"': '3'
-            '"4"': '4'
-            '"5"': '5'
-            '"6"': '6'
-            '"7"': '7'
-            '"8"': '8'
-            '"9"': '9'
+        text: als {KEY} ingedrukt
       Dancelab_whenPeak:
-        text: als {RANGE} piek
         options:
           RANGE:
             '0': Bass
             '1': midden
             '2': drievoudige
+        text: als {RANGE} piek
       Dancelab_whenSetup:
         text: setup
       Dancelab_whenSetup2:
         text: setup
       DansBlocks_setForegroundEffect2:
-        text: Effect {EFFECT} uitvoeren
         options:
           EFFECT:
             '"bubbles"': Bubbels
             '"confetti"': Confetti
-            '"hearts"': hartjes
             '"emojis"': Vrolijke emojis
+            '"glass"': Brekend glas
+            '"hearts"': hartjes
             '"rain"': regen
             '"starburst"': Sterrenvorming
-            '"glass"': Brekend glas
             '"twinkling"': Fonkeling
-      gamelab_addBehaviorSimple:
-        text: sprite {SPRITE} begint {BEHAVIOR}
-      gamelab_addTarget:
-        text: "{SPRITE} krijgt doel {TARGET} op {OPT}"
-        options:
-          OPT:
-            '"follow"': volgen
-            '"avoid"': vermijd
-      gamelab_allSpritesWithAnimation:
-        text: "{ANIMATION}"
-      gamelab_atTime:
-        text: om {N} {UNIT}
-        options:
-          UNIT:
-            '"seconds"': seconden
-            '"frames"': frames
-      gamelab_avoidingTargets:
-        text: Doele vermijden
-      gamelab_beginCollectingData:
-        text: begin met het verzamelen van gegevens {BREAK} waarde {VALUE} met label
-          {LABEL}
-      gamelab_bounceOff:
-        text: "{SPRITE} stuitert weg {TARGET}"
-      gamelab_changePropBy:
-        text: wijzig {SPRITE} {PROPERTY} met {VAL}
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"rotation"': rotatie
-            '"x"': x positie
-            '"y"': y positie
-            '"direction"': bewegingsrichting
-            '"speed"': snelheid
-      gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} raakt {SPRITE2}"
-        options:
-          CONDITION:
-            '"when"': wanneer
-            '"while"': terwijl
-      gamelab_clickedOn:
-        text: wanneer {SPRITE} klikte
-      gamelab_clickedSpritePointer:
-        text: "{SPRITE}"
-      gamelab_collectibleBehaviors:
-        options:
-          BEHAVIOR:
-            new Behavior(moving_north_and_looping, []): Naar het noorden bewegen en
-              lussen
-            new Behavior(moving_south_and_looping, []): Naar het zuiden bewegen en
-              lussen
-      gamelab_comment:
-        text: 'commentaar: {COMMENT}'
-      gamelab_costumeImage:
-        text: "{COSTUME}"
-      gamelab_countByAnimation:
-        text: Aantal van {SPRITE}
-      gamelab_createNewSprite:
-        text: "maak een nieuwe sprite \n genaamd {NAME} \n met kostuum {COSTUME} \n
-          bij {LOCATION}"
-      gamelab_destroy:
-        text: "{THIS} verwijderen"
-      gamelab_draggable:
-        text: slepbaar
-      gamelab_drawLine:
-        text: Lijn tekenen {COLOR}  {LOC1}  {LOC2}
-      gamelab_edgesDisplace:
-        text: randen blok {SPRITE} van verplaatsen
-      gamelab_everyInterval:
-        text: 'elke {N} {UNIT} '
-        options:
-          UNIT:
-            '"seconds"': seconden
-            '"frames"': frames
-      gamelab_followingTargets:
-        text: Doelen volgen
-      gamelab_getAllSprites:
-        text: alle sprites
-      gamelab_getProp:
-        text: "{SPRITE} {PROPERTY}"
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"rotation"': rotatie
-            '"x"': x positie
-            '"y"': y positie
-            '"direction"': bewegingsrichting
-            '"speed"': snelheid
-      gamelab_getThisSprite:
-        text: "{CHOICE} sprite"
-        options:
-          CHOICE:
-            '"this"': dit
-            '"other"': anders
-      gamelab_getTime:
-        text: tijd in {UNIT}
-        options:
-          UNIT:
-            '"seconds"': seconden
-            '"frames"': frames
-      gamelab_glideTo:
-        text: "{SPRITE} glijdt naar {LOCATION}"
-      gamelab_hideTitleScreen:
-        text: titelscherm verbergen
-      gamelab_ifVarEquals:
-        text: |-
-          als {NUM} ={VAL}
-          {STATEMENT}
-      gamelab_int10:
-        options:
-          VALUE:
-            '1': '1'
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-      gamelab_isCostumeEqual:
-        text: "{SPRITE} kostuum is {COSTUME}"
-      gamelab_isKeyPressed:
-        text: "{KEY} wordt ingedrukt"
-        options:
-          KEY:
-            '"up"': omhoog
-            '"down"': omlaag
-            '"left"': links
-            '"right"': rechts
-            '"space"': ruimte
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
-            '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"x"': x
-            '"y"': y
-            '"z"': z
-      gamelab_isTouchingEdges:
-        text: "{SPRITE} raakt randen aan"
-      gamelab_isTouchingSprite:
-        text: "{SPRITE} raakt {TARGET}"
-      gamelab_jumpTo:
-        text: "{SPRITE} ga naar {LOCATION}"
-      gamelab_keyPressed:
-        text: "{CONDITION} {KEY} geperst"
-        options:
-          CONDITION:
-            '"when"': wanneer
-            '"while"': terwijl
-          KEY:
-            '"up"': omhoog
-            '"down"': omlaag
-            '"left"': links
-            '"right"': rechts
-            '"space"': ruimte
-            '"a"': a
-            '"b"': b
-            '"c"': c
-            '"d"': d
-            '"e"': e
-            '"f"': f
-            '"g"': g
-            '"h"': h
-            '"i"': i
-            '"j"': j
-            '"k"': k
-            '"l"': l
-            '"m"': m
-            '"n"': n
-            '"o"': o
-            '"p"': p
-            '"q"': q
-            '"r"': r
-            '"s"': s
-            '"t"': t
-            '"u"': u
-            '"v"': v
-            '"w"': w
-            '"x"': x
-            '"y"': y
-            '"z"': z
-      gamelab_layoutSprites:
-        text: "{GROUP} indelen als een {FORMAT}"
-        options:
-          FORMAT:
-            '"border"': grens
-            '"circle"': cirkel
-            '"grid"': raster
-            '"top"': bovenste rij
-            '"row"': rij
-            '"bottom"': onderste rij
-            '"left"': linkerkolom
-            '"column"': kolom
-            '"right"': rechterkolom
-      gamelab_locationAt:
-        text: 'locatie x: {X} y: {Y}'
-      gamelab_locationModifier:
-        text: "{DISTANCE} pixels {DIRECTION} van {LOCATION}"
-        options:
-          DIRECTION:
-            '"North"': Noorden
-            '"East"': Oosten
-            '"South"': Zuiden
-            '"West"': Westen
-      gamelab_locationMouse:
-        text: muis-locatie
-      gamelab_locationOf:
-        text: locatie van {SPRITE}
-      gamelab_location_picker:
-        text: "{LOCATION}"
-      gamelab_makeBurst:
-        text: creëer {EFFECT} effect met {NUM} {ANIMATION_NAME} sprites
-        options:
-          EFFECT:
-            '"pop"': pop
-            '"rain"': regen
-      gamelab_makeNewSpriteAnon:
-        text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
-      gamelab_makeNewSpriteGroup:
-        options:
-          FORMAT:
-            '"border"': grens
-            '"circle"': cirkel
-            '"grid"': raster
-            '"top"': bovenste rij
-            '"row"': rij
-            '"bottom"': onderste rij
-            '"left"': linkerkolom
-            '"column"': kolom
-            '"right"': rechterkolom
-      gamelab_makeNumSprites:
-        text: maak {NUM} nieuwe {ANIMATION_NAME} sprites
-      gamelab_makeProjectile:
-        text: "projectiel creëren \n{ANIMATION_NAME} vanaf {LOCATION} met snelheid
-          {SPEED}richting{DIRECTION}"
-        options:
-          DIRECTION:
-            '0': rechts
-            '90': omlaag
-            '180': links
-            '270': omhoog
-      gamelab_makeSpritesWithSize:
-        options:
-          SIZE:
-            '30': klein
-            '50': middellang
-            '100': groot
-      gamelab_mirrorSprite:
-        text: "{SPRITE} gezicht {DIRECTION}"
-        options:
-          DIRECTION:
-            '"right"': rechts
-            '"left"': links
-      gamelab_mouseLocation:
-        text: muis-locatie
-      gamelab_moveBackward:
-        text: verplaats {SPRITE} {DISTANCE} pixels achteruit
-      gamelab_moveForward:
-        text: "{SPRITE} {DISTANCE} pixels vooruit verplaatsen"
-      gamelab_moveInDirection:
-        text: "{SPRITE} {DISTANCE} pixels {DIRECTION}"
-        options:
-          DIRECTION:
-            '"North"': Noorden
-            '"East"': Oosten
-            '"South"': Zuiden
-            '"West"': Westen
-      gamelab_moveToward:
-        text: verplaats {SPRITE} pixels {DISTANCE} richting {TARGET}
-      gamelab_newSpritePointer:
-        text: "{SPRITE}"
-      gamelab_objectSpritePointer:
-        text: "{SPRITE}"
-      gamelab_patrollingUpDown:
-        text: omhoog en omlaag patrouilleren
-      gamelab_playSound:
-        text: PlaySound {SOUND}
-      gamelab_playSoundOptions:
-        text: PlaySound {SOUND}
-        options:
-          SOUND:
-            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": accent
-            "'sound://category_digital/boing_2.mp3'": boing
-            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
-            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": fonkelen
-            "'sound://category_collect/clicky_crunch.mp3'": kraak
-            "'sound://category_swish/quick_swing.mp3'": swingen
-            "'sound://category_nature/summer_night_loop.mp3'": Zomernacht
-            "'sound://category_background/ocean_waves.mp3'": golven
-            "'sound://category_nature/south_carolina_beach_ripple.mp3'": strandgolving
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bubbel
-            "'sound://category_animals/bear.mp3'": Beer
-            "'sound://category_animals/cat.mp3'": kat
-            "'sound://category_animals/cow.mp3'": koe
-            "'sound://category_animals/pig.mp3'": varken
-            "'sound://category_animals/sheep.mp3'": schaap
-            "'sound://category_animals/chicken.mp3'": kip
-            "'sound://category_animals/elephant.mp3'": oliefant
-            "'sound://category_animals/dolphin.mp3'": dolfijn
-            "'sound://category_nature/thunderstorm_1.mp3'": onweersbui
-            "'sound://category_animals/dog.mp3'": hond
-            "'sound://category_collect/trill_stings.mp3'": trillen
-            "'sound://category_tap/vibrant_positive_tap_1.mp3'": tikken
-            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": tonale
-              hit
-            "'sound://category_transition/trippy_robotic_transition.mp3'": robotische
-              overgang
-            "'sound://category_transition/star_dust_particle_10.mp3'": sterrenstof
-            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": buitenaards
-              schip
-            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": toverspreuk
-            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": Eigenzinnige
-              bass
-            "'sound://category_digital/jump_7.mp3'": spring
-      gamelab_playSoundOptionsSoccer:
-        text: PlaySound {SOUND}
-      gamelab_playSoundOptionsSpace:
-        text: PlaySound {SOUND}
-      gamelab_playSpeech:
-        text: Spraak afspelen {SOUND}
-      gamelab_playerBehaviors:
-        options:
-          BEHAVIOR:
-            new Behavior(moving_with_arrow_keys, []): bewegen met de pijtjestoetsen
-            draggable(): slepbaar
-      gamelab_pointInDirection:
-        text: punt {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': Noorden
-            '"East"': Oosten
-            '"South"': Zuiden
-            '"West"': Westen
-      gamelab_printText:
-        text: print {TEXT}
-      gamelab_randColor:
-        text: willekeurige kleur
-      gamelab_randomColor:
-        text: willekeurige kleur
-      gamelab_randomLocation:
-        text: willekeurige locatie
-      gamelab_removeAllBehaviors:
-        text: "{SPRITE} stopt alles"
-      gamelab_removeBehaviorSimple:
-        text: sprite {SPRITE} stopt {BEHAVIOR}
-      gamelab_removeTint:
-        text: kleur verwijderen van {THIS}
-      gamelab_repeatForever:
-        text: blijven herhalen
-      gamelab_setAnimation:
-        text: verandering {THIS} kostuum naar {ANIMATION}
-      gamelab_setBackground:
-        text: stel {COLOR} in als achtergrondkleur
-      gamelab_setBackgroundImage:
-        text: set achtergrond naar {IMG}
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': grot
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
-            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': Eindeloos
-              gras
-            '"https://studio.code.org/blockly/media/skins/studio/background.png"': rechtbank
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': woestijn
-            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': woestijnweg
-            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': akkerland
-            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': drijvend
-              gras
-            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': voorzijde
-              huis
-            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': Melkweg
-            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': raster
-            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'keuken '
-            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': woonkamer
-            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': uitzicht
-              op park
-            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pijnbomen
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regenboog
-            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
-            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': voetbalveld
-            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': sterren
-            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': zon
-              en regenboog
-            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': zonnestralen
-            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennisveld
-            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': bomeneiland
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': onder
-              water
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
-            undefined: Geen
-      gamelab_setBackgroundImageAs:
-        text: set achtergrond naar {IMG}
-      gamelab_setDefaultSpriteSize:
-        text: nieuwe standaard spritegrootte instellen op {SIZE}
-        options:
-          SIZE:
-            '25': extra klein
-            '50': klein
-            '75': middellang
-            '100': groot
-      gamelab_setPrompt:
-        text: vraag gebruiker {QUESTION} om variabele {VAR}
-      gamelab_setPromptWithChoices:
-        text: vraag gebruiker {QUESTION} om variabele {VAR} met de opties {A}{B}{C}
-      gamelab_setProp:
-        text: set {SPRITE} {PROPERTY} tot {VAL}
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"rotation"': rotatie
-            '"x"': x positie
-            '"y"': y positie
-            '"direction"': bewegingsrichting
-            '"speed"': snelheid
-      gamelab_setProp_dropdown:
-        text: stel {SPRITE} {PROPERTY} in op {SIZE}
-        options:
-          PROPERTY:
-            '"scale"': grootte
-          SIZE:
-            '25': extra klein
-            '50': klein
-            '75': middellang
-            '100': groot
-      gamelab_setSizes:
-        text: stel {SPRITE} {PROPERTY} in op {N}%
-        options:
-          PROPERTY:
-            '"scale"': grootte
-            '"width"': breedte
-            '"height"': hoogte
-      gamelab_setSpeed_dropdown:
-        options:
-          SIZE:
-            '1': extra slow
-            '3': langzaam
-            '5': normaal
-            '7': snel
-            '9': extra fast
-      gamelab_setTint:
-        text: kleur van {THIS} veranderen naar {COLOR}
-      gamelab_setupScoreboard:
-        text: "scorebord tekenen  \n{SPRITE1COSTUME}score{VAR1}{SPRITE2COSTUME}score{VAR2}doel{SPRITE3COSTUME}"
-      gamelab_setupSim:
-        text: |-
-          Setup-simulatie met
-          {SPRITE1N}{SPRITE1COSTUME}Snelheid{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}Snelheid{SPRITE2SPEED}
-          Verzamelen
-          {SPRITE3N}{SPRITE3COSTUME}
-      gamelab_showTitleScreen:
-        text: toon titelscherm {BREAK} titel {TITLE} tekst {SUBTITLE}
-      gamelab_spriteClicked:
-        text: "{CONDITION} {SPRITE} geklikt"
-        options:
-          CONDITION:
-            '"when"': wanneer
-            '"while"': terwijl
-      gamelab_spriteSay:
-        text: "{SPRITE} zegt {SPEECH}"
-      gamelab_spriteSayTime:
-        text: "{SPRITE}zegt{TEXT1}voor{NUM}seconden"
-      gamelab_startAvoiding:
-        text: "{SPRITE} begint {TARGET} te vermijden"
-      gamelab_startFollowing:
-        text: "{SPRITE} begint {TARGET} te volgen"
-      gamelab_startGliding:
-        text: "{SPRITE} begint te glijden"
-      gamelab_stopAvoiding:
-        text: "{SPRITE} stopt met het vermijden van andee sprites"
-      gamelab_stopCollectingData:
-        text: stop met het verzamelen van data
-      gamelab_stopFollowing:
-        text: "{SPRITE} stopt met het volgen van andere sprites"
-      gamelab_stopGliding:
-        text: "{SPRITE} stopt met glijden"
-      gamelab_subjectSpritePointer:
-        text: "{SPRITE}"
-      gamelab_textJoin:
-        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
-      gamelab_textVariableJoin:
-        text: "{VAR}{TEXT2}"
-      gamelab_tumbling:
-        text: tuimelen
-      gamelab_turn:
-        text: draai {SPRITE} {DIRECTION} {N} graden
-        options:
-          DIRECTION:
-            '"right"': rechts
-            '"left"': links
-      gamelab_updateTitleWithColor:
-        text: titelscherm weergeven {BREAK} titel {TITLE} kleur {COLOR}
-      gamelab_whenAllPromptsAnswered:
-        text: als alle vragen zijn beantwoord
-      gamelab_whenDownArrow:
-        text: wanneer pijl omlaag ingedrukt
-      gamelab_whenKey:
-        text: als {KEY} ingedrukt
-        options:
-          KEY:
-            '"up"': omhoog
-            '"down"': omlaag
-            '"left"': links
-            '"right"': rechts
-            '"space"': ruimte
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      gamelab_whenLeftArrow:
-        text: wanneer linker pijl ingedrukt
-      gamelab_whenPromptAnswered:
-        text: als {VAR} is beantwoord
-      gamelab_whenRightArrow:
-        text: wanneer pijl naar rechts ingedrukt
-      gamelab_whenSpriteCreated:
-        text: als {SPRITE} is gecreëerd
-      gamelab_whenTouching:
-        text: wanneer {SPRITE1} {SPRITE2}
-      gamelab_whenUpArrow:
-        text: wanneer pijl omhoog ingedrukt
-      gamelab_whileDownArrow:
-        text: zolang pijl omlaag ingedrukt
-      gamelab_whileKey:
-        text: zolang {KEY} ingedrukt
-        options:
-          KEY:
-            '"up"': omhoog
-            '"down"': omlaag
-            '"left"': links
-            '"right"': rechts
-            '"space"': ruimte
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      gamelab_whileLeftArrow:
-        text: zolang linker pijl ingedrukt
-      gamelab_whileRightArrow:
-        text: zolang pijl naar rechts ingedrukt is
-      gamelab_whileTouching:
-        text: zolang {SPRITE1} raakt {SPRITE2}
-      gamelab_whileUpArrow:
-        text: zolang pijl omhoog ingedrukt
-      gamelab_withPercentChance:
-        text: |-
-          als {NUM}% kans
-          {STATEMENT}
-      gamelab_withPercentChanceDropdown:
-        text: |2-
-           {NUM} kans
-           {STATEMENT}
-        options:
-          NUM:
-            '10': zeer klein
-            '25': klein
-            '50': 50/50
-            '75': groot
-            '90': zeer groot
-      gamelab_xLocationOf:
-        text: x coördinaat van {SPRITE}
-      gamelab_yLocationOf:
-        text: y coordinaat van {SPRITE}
+        text: Effect {EFFECT} uitvoeren
       KatiesBlocks_glideTo:
         text: "{SPRITE} glijdt naar {LOCATION}"
       KatiesBlocks_tumbling:
@@ -1574,16 +970,16 @@ nl:
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} begint {BEHAVIOR}
       Mikelab_addTrainingData:
-        text: 'trainingsgegevens toevoegen: {NAME},{LOCATION}'
         options:
-          NAME:
-            "{x: 201, y: 100}": object
-            "{x: 200, y: 100}": vis
           LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mijn-label
             "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": vis
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": geen vis
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": mijn-label
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": niet mijn-label
+          NAME:
+            "{x: 200, y: 100}": vis
+            "{x: 201, y: 100}": object
+        text: 'trainingsgegevens toevoegen: {NAME},{LOCATION}'
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       Mikelab_beginDataCollection:
@@ -1591,121 +987,121 @@ nl:
       Mikelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': grootte
+            '"direction"': bewegingsrichting
             '"rotation"': rotatie
+            '"scale"': grootte
             '"x"': x positie
             '"y"': y positie
-            '"direction"': bewegingsrichting
       Mikelab_createNewSprite:
         options:
           LOCATION:
-            "{x: 200, y: 100}": boven
-            "{x: 200, y: 300}": onder
-            "{x: 100, y: 200}": links
-            "{x: 300, y: 200}": rechts
-            "{x: 200, y: 200}": midden
             "{x: 100, y: 100}": linksboven
-            "{x: 300, y: 100}": rechtsboven
+            "{x: 100, y: 200}": links
             "{x: 100, y: 300}": linksonder
+            "{x: 200, y: 100}": boven
+            "{x: 200, y: 200}": midden
+            "{x: 200, y: 300}": onder
+            "{x: 300, y: 100}": rechtsboven
+            "{x: 300, y: 200}": rechts
             "{x: 300, y: 300}": rechtsonder
       Mikelab_getNext:
         text: volgend object ophalen
       Mikelab_getProp:
         options:
           PROPERTY:
-            '"scale"': grootte
+            '"direction"': bewegingsrichting
             '"rotation"': rotatie
+            '"scale"': grootte
             '"x"': x positie
             '"y"': y positie
-            '"direction"': bewegingsrichting
       Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': alle
+            '"this"': dit
         text: wijzig {SELECT} {COSTUME} in {COSTUME2}
-        options:
-          SELECT:
-            '"all"': alle
-            '"this"': dit
       Mikelab_groupChangePropBy:
-        text: verandering {PROPERTY} van {SELECT} {COSTUME} door {VAL}
         options:
-          SELECT:
-            '"all"': alle
-            '"this"': dit
           PROPERTY:
-            '"scale"': grootte
+            '"direction"': bewegingsrichting
             '"rotation"': rotatie
+            '"scale"': grootte
             '"x"': x positie
             '"y"': y positie
-            '"direction"': bewegingsrichting
+          SELECT:
+            '"all"': alle
+            '"this"': dit
+        text: verandering {PROPERTY} van {SELECT} {COSTUME} door {VAL}
       Mikelab_groupCreateNewSprite:
-        text: maak een nieuwe {COSTUME} op {LOCATION}
         options:
           LOCATION:
-            "{x: 200, y: 100}": boven
-            "{x: 200, y: 300}": onder
-            "{x: 100, y: 200}": links
-            "{x: 300, y: 200}": rechts
-            "{x: 200, y: 200}": midden
             "{x: 100, y: 100}": linksboven
-            "{x: 300, y: 100}": rechtsboven
+            "{x: 100, y: 200}": links
             "{x: 100, y: 300}": linksonder
+            "{x: 200, y: 100}": boven
+            "{x: 200, y: 200}": midden
+            "{x: 200, y: 300}": onder
+            "{x: 300, y: 100}": rechtsboven
+            "{x: 300, y: 200}": rechts
             "{x: 300, y: 300}": rechtsonder
+        text: maak een nieuwe {COSTUME} op {LOCATION}
       Mikelab_groupDestroy:
-        text: "{SELECT} {COSTUME} verwijderen"
         options:
           SELECT:
             '"all"': alle
             '"this"': dit
+        text: "{SELECT} {COSTUME} verwijderen"
       Mikelab_groupDisplace:
         text: alle {COSTUME} blok {COSTUME2}
       Mikelab_groupEdgesDisplace:
         text: randen blok {COSTUME} van verplaatsen
       Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"direction"': bewegingsrichting
+            '"rotation"': rotatie
+            '"scale"': grootte
+            '"x"': x positie
+            '"y"': y positie
+          SELECT:
+            '"this"': dit
         text: "{SELECT} {COSTUME} {PROPERTY}"
-        options:
-          SELECT:
-            '"this"': dit
-          PROPERTY:
-            '"scale"': grootte
-            '"rotation"': rotatie
-            '"x"': x positie
-            '"y"': y positie
-            '"direction"': bewegingsrichting
       Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': alle
+            '"this"': dit
         text: stop {SELECT} {COSTUME} gedragingen
-        options:
-          SELECT:
-            '"all"': alle
-            '"this"': dit
       Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': alle
+            '"this"': dit
         text: "{SELECT} {COSTUME} stops {BEHAVIOR}"
-        options:
-          SELECT:
-            '"all"': alle
-            '"this"': dit
       Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': alle
+            '"this"': dit
         text: verwijder kleur van {SELECT} {COSTUME}
-        options:
-          SELECT:
-            '"all"': alle
-            '"this"': dit
       Mikelab_groupSetProp:
-        text: set {PROPERTY} van {SELECT} {COSTUME} tot {VAL}
         options:
-          SELECT:
-            '"all"': alle
-            '"this"': dit
           PROPERTY:
-            '"scale"': grootte
+            '"direction"': bewegingsrichting
             '"rotation"': rotatie
+            '"scale"': grootte
             '"x"': x positie
             '"y"': y positie
-            '"direction"': bewegingsrichting
+          SELECT:
+            '"all"': alle
+            '"this"': dit
+        text: set {PROPERTY} van {SELECT} {COSTUME} tot {VAL}
       Mikelab_groupSetTint:
-        text: kleur van {SELECT} {COSTUME} naar {COLOR}
         options:
           SELECT:
             '"all"': alle
             '"this"': dit
+        text: kleur van {SELECT} {COSTUME} naar {COLOR}
       Mikelab_groupWhenClickedOn:
         text: wanneer {COSTUME} klikte
       Mikelab_groupWhenXTouchesY:
@@ -1719,15 +1115,12 @@ nl:
       Mikelab_hasBehavior:
         text: "{SPRITE} is momenteel {BEHAVIOR}"
       Mikelab_hideFish:
-        text: "{TRASH} verwijderen"
         options:
           TRASH:
-            object: object
             fish: vis
+            object: object
+        text: "{TRASH} verwijderen"
       Mikelab_ifDanceIs:
-        text: |-
-          als {SPRITE} {DANCE} doet
-          {DO1} {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: Hoog klappen
@@ -1737,34 +1130,37 @@ nl:
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Roll: Body Roll
             MOVES.Kick: Ster
-            MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Dit of dat.
+        text: |-
+          als {SPRITE} {DANCE} doet
+          {DO1} {DO2}
       Mikelab_ifLabel:
+        options:
+          DANCE:
+            MOVES.ClapHigh: vis
+            MOVES.Clown: mijn-label
         text: |-
           Als {DANCE}
           Doen {DO1} Anders {DO2}
+      Mikelab_ifRecognizeLabel:
         options:
           DANCE:
             MOVES.ClapHigh: vis
             MOVES.Clown: mijn-label
-      Mikelab_ifRecognizeLabel:
         text: |-
           als object herkennen als {DANCE}
           Doen {DO1} Anders {DO2}
-        options:
-          DANCE:
-            MOVES.ClapHigh: vis
-            MOVES.Clown: mijn-label
       Mikelab_ifRecognizeLabelOnly:
-        text: |-
-          als herkennen object als {DANCE}
-          doen {DO1}
         options:
           DANCE:
             MOVES.ClapHigh: vis
             MOVES.Clown: niet mijn-label
+        text: |-
+          als herkennen object als {DANCE}
+          doen {DO1}
       Mikelab_locationAt:
         text: 'locatie x: {X} y: {Y}'
       Mikelab_location_picker:
@@ -1782,34 +1178,34 @@ nl:
       Mikelab_setBG:
         options:
           BG:
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': voetbalveld
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennisveld
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
-            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': Eindeloos
-              gras
-            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': woestijnweg
-            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': akkerland
-            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': drijvend
-              gras
-            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': voorzijde
-              huis
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'keuken '
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': akkerland
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': woonkamer
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': uitzicht
               op park
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pijnbomen
-            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': voetbalveld
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': Eindeloos
+              gras
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': zon
               en regenboog
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': voorzijde
+              huis
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': zonnestralen
-            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennisveld
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': woestijnweg
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': drijvend
+              gras
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': bomeneiland
       Mikelab_setProp:
         options:
           PROPERTY:
-            '"scale"': grootte
+            '"direction"': bewegingsrichting
             '"rotation"': rotatie
+            '"scale"': grootte
             '"x"': x positie
             '"y"': y positie
-            '"direction"': bewegingsrichting
       Mikelab_setupSim:
         text: |-
           Setup-simulatie met
@@ -1820,65 +1216,65 @@ nl:
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': rechts
             '"left"': links
+            '"right"': rechts
       Mikelab_showText:
         options:
           PREPOSITION:
             '"below"': onder
       Mikelab_sprite:
-        text: nieuwe {COSTUME} sprite op {LOCATION}
         options:
           LOCATION:
-            "{x: 200, y: 100}": boven
-            "{x: 200, y: 300}": onder
-            "{x: 100, y: 200}": links
-            "{x: 300, y: 200}": rechts
-            "{x: 200, y: 200}": midden
             "{x: 100, y: 100}": linksboven
-            "{x: 300, y: 100}": rechtsboven
+            "{x: 100, y: 200}": links
             "{x: 100, y: 300}": linksonder
+            "{x: 200, y: 100}": boven
+            "{x: 200, y: 200}": midden
+            "{x: 200, y: 300}": onder
+            "{x: 300, y: 100}": rechtsboven
+            "{x: 300, y: 200}": rechts
             "{x: 300, y: 300}": rechtsonder
+        text: nieuwe {COSTUME} sprite op {LOCATION}
       Mikelab_whenClickedOn:
         text: wanneer {SPRITE} klikte
       Mikelab_whenKeyPressed:
-        text: als {KEY} ingedrukt
         options:
           KEY:
-            '"up"': pijltje naar boven
+            '"a"': A
+            '"d"': D
             '"down"': pijltje naar beneden
             '"left"': pijltje naar links
             '"right"': pijltje naar rechts
-            '"w"': W
-            '"a"': A
             '"s"': Z
-            '"d"': D
+            '"up"': pijltje naar boven
+            '"w"': W
+        text: als {KEY} ingedrukt
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': pijltje naar boven
+            '"a"': A
+            '"d"': D
             '"down"': pijltje naar beneden
             '"left"': pijltje naar links
             '"right"': pijltje naar rechts
-            '"w"': W
-            '"a"': A
             '"s"': Z
-            '"d"': D
+            '"up"': pijltje naar boven
+            '"w"': W
       Mikelab_whenMouseClicked:
         text: wanneer de muis klikte
       Mikelab_whenYesNoClicked:
-        text: wanneer {KEY} klikte
         options:
           KEY:
-            '"yes"': ja
             '"no"': nee
+            '"yes"': ja
+        text: wanneer {KEY} klikte
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': pijltje naar boven
             '"down"': pijltje naar beneden
             '"left"': pijltje naar links
             '"right"': pijltje naar rechts
+            '"up"': pijltje naar boven
       Mikelab_xLocationOf:
         text: x coördinaat van {SPRITE}
       Mikelab_yLocationOf:
@@ -1905,11 +1301,11 @@ nl:
       Poetry_hideText:
         text: Tekst verbergen
       Poetry_makeBurst:
-        text: creëer {EFFECT} effect met {NUM} {ANIMATION_NAME} sprites
         options:
           EFFECT:
             '"pop"': pop
             '"rain"': regen
+        text: creëer {EFFECT} effect met {NUM} {ANIMATION_NAME} sprites
       Poetry_makeNewSpriteAnon:
         text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
       Poetry_makeNumSprites:
@@ -1917,36 +1313,36 @@ nl:
       Poetry_playMusic:
         options:
           SOUND:
-            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Kalm
-            '"sound://category_nature/steady_campfire_loop.mp3"': Kampvuur
-            '"sound://category_nature/rain_loop.mp3"': Motregen
-            '"sound://category_nature/forest_woodland_ambience_2.mp3"': bos
-            '"sound://category_loops/faultering_desicion_loop1.mp3"': Spookachtig
             '"sound://category_background/inside_plane.mp3"': Gezoem
-            '"sound://category_loops/red_flag_loop1.mp3"': Missie
-            '"sound://category_nature/summer_night_loop.mp3"': nacht
             '"sound://category_background/ocean_waves.mp3"': oceaan
             '"sound://category_background/repitition.mp3"': Rijden
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Spookachtig
+            '"sound://category_loops/red_flag_loop1.mp3"': Missie
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': Langzaam
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Kalm
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': bos
+            '"sound://category_nature/rain_loop.mp3"': Motregen
+            '"sound://category_nature/steady_campfire_loop.mp3"': Kampvuur
+            '"sound://category_nature/summer_night_loop.mp3"': nacht
       Poetry_playSound:
-        text: PlaySound {SOUND}
         options:
           SOUND:
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Geklets
+            '"sound://category_achievements/peaceful_win_1.mp3"': Win
+            '"sound://category_achievements/peaceful_win_6.mp3"': Windklokken
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scan
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Levendig
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Fladderen
+            '"sound://category_background/typewriter.mp3"': Schrijfmachine
             '"sound://category_bell/long_bell_notification.mp3"': Bel
             '"sound://category_digital/boing_2.mp3"': Boing
-            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bubbel
-            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Geklets
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Kolk
             '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Leeglopen
             '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Mislukking
-            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Fladderen
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Springen
             '"sound://category_poof/puzzle_game_poof_04.mp3"': Poef
-            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scan
-            '"sound://category_background/typewriter.mp3"': Schrijfmachine
-            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Levendig
-            '"sound://category_achievements/peaceful_win_1.mp3"': Win
-            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Kolk
-            '"sound://category_achievements/peaceful_win_6.mp3"': Windklokken
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bubbel
+        text: PlaySound {SOUND}
       Poetry_playSoundOptionsSpace:
         text: PlaySound {SOUND}
       Poetry_setAuthor:
@@ -1954,26 +1350,23 @@ nl:
       Poetry_setBackground:
         text: stel {COLOR} in als achtergrondkleur
       Poetry_setBackgroundEffect:
-        text: Achtergrond instellen op {EFFECT}{PALETTE}
         options:
           EFFECT:
             '"blooming"': Bloeiend
             '"bubbles"': Bubbels
             '"clouds"': Bewolkt
+            '"colors"': Kleuren
             '"confetti"': Confetti
             '"darkCircles"': Vervagen
             '"fadeColors"': Berijpt
             '"hearts"': hartjes
-            '"space"': Ruimte
             '"rain"': regen
             '"ripples"': Rimpelingen
-            '"colors"': Kleuren
-            '"stars"': Sterren
+            '"space"': Ruimte
             '"squiggles"': Kronkels
+            '"stars"': Sterren
           PALETTE:
             '"autumn"': Herfst
-            '"sunrise"': Dageraad
-            '"sunset"': Schemering
             '"grayscale"': Grijstinten
             '"ocean"': oceaan
             '"rainbow"': regenboog
@@ -1981,34 +1374,37 @@ nl:
             '"sky"': Hemel
             '"spring"': Lente
             '"summer"': Zomer
+            '"sunrise"': Dageraad
+            '"sunset"': Schemering
             '"winter"': Winter
+        text: Achtergrond instellen op {EFFECT}{PALETTE}
       Poetry_setBackgroundImageAs:
         text: set achtergrond naar {IMG}
       Poetry_setFont:
-        text: font {FONT} instellen
         options:
           FONT:
-            '"Arial"': Arial
             '"Arial Black"': Arial Black
+            '"Arial"': Arial
             '"Courier"': Courier
             '"Cursive"': Handwriting
-            '"Impact"': Impact
             '"Georgia"': Georgia
+            '"Impact"': Impact
             '"Times"': Times
+        text: font {FONT} instellen
       Poetry_setFontColor:
         text: tekstkleur {FILL} instellen
       Poetry_setForegroundEffect:
-        text: Effect {EFFECT} uitvoeren
         options:
           EFFECT:
             '"bubbles"': Bubbels
             '"confetti"': Confetti
-            '"hearts"': hartjes
             '"emojis"': Vrolijke emojis
+            '"glass"': Brekend glas
+            '"hearts"': hartjes
             '"rain"': regen
             '"starburst"': Sterrenvorming
-            '"glass"': Brekend glas
             '"twinkling"': Fonkeling
+        text: Effect {EFFECT} uitvoeren
       Poetry_setPrompt:
         text: Vraag gebruiker {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} om variabele {VAR}
       Poetry_setPromptWithChoices:
@@ -2018,15 +1414,15 @@ nl:
       Poetry_setSize:
         text: Stel de grootte van {SPRITE} in op {VAL}
       Poetry_setTextEffect:
-        text: Teksteffect {EFFECT} instellen
         options:
           EFFECT:
             '"fade"': Vervagen
+            '"flyBottom"': Vlieg van onderen
             '"flyLeft"': Vlieg van links
             '"flyRight"': Vlieg van rechts
             '"flyTop"': Vlieg van boven
-            '"flyBottom"': Vlieg van onderen
             '"typewriter"': schrijfmachine
+        text: Teksteffect {EFFECT} instellen
       Poetry_setTitle:
         text: Titel {TITLE} instellen
       Poetry_showText:
@@ -2034,10 +1430,10 @@ nl:
       Poetry_startBehavior:
         text: Sprite {ANIMATION_NAME} begint met {BEHAVIOR}
       Poetry_stopBehavior:
-        text: sprite {ANIMATION_NAME} stopt met {BEHAVIOR}
         options:
           BEHAVIOR:
             '"all"': "--al het gedrag--"
+        text: sprite {ANIMATION_NAME} stopt met {BEHAVIOR}
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       Poetry_textConcat:
@@ -2045,11 +1441,15 @@ nl:
       Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
-        text: Als regel {N} verschijnt
         options:
           N:
-            '0': "???"
             '1': '1'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -2058,12 +1458,7 @@ nl:
             '7': '7'
             '8': '8'
             '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
+        text: Als regel {N} verschijnt
       Poetry_whenPromptAnswered:
         text: als {VAR} is beantwoord
       RyanLab_moveForward:
@@ -2093,31 +1488,25 @@ nl:
       Vector_vectorNorth:
         text: Noord
       Vector_where:
-        text: elke sprite waar {PROPERTY} {VALUE} do{STATEMENT}
         options:
           PROPERTY:
             "'shapeColor'": kleur
+        text: elke sprite waar {PROPERTY} {VALUE} do{STATEMENT}
       aalab_layoutSprites:
         options:
           FORMAT:
-            '"grid"': raster
             '"border"': grens
-            '"row"': rij
+            '"grid"': raster
             '"random"': willekeurig
+            '"row"': rij
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
             '1': alle
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': alle
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} zegt {SPEECH}"
       adaptations_startFollowing:
@@ -2138,11 +1527,11 @@ nl:
       binary_drawDec:
         text: decimaal {DEC} tekenen
       binary_drawPixelHere:
-        text: set pixel {VAL}
         options:
           VAL:
             '0': af
             '1': op
+        text: set pixel {VAL}
       binary_drawString:
         text: tekenreeks {STR}
       binary_goTo:
@@ -2152,89 +1541,89 @@ nl:
       binary_gridSize:
         text: set grid grootte {SIZE}
       binary_move:
-        text: "{DIR} verplaatsen"
         options:
           DIR:
-            '"up"': omhoog
             '"down"': omlaag
             '"left"': links
             '"right"': rechts
+            '"up"': omhoog
+        text: "{DIR} verplaatsen"
       binary_whenKey:
-        text: als {KEY} ingedrukt
         options:
           KEY:
-            '"up"': omhoog
+            '"a"': a
+            '"d"': d
             '"down"': omlaag
             '"left"': links
             '"right"': rechts
-            '"space"': ruimte
-            '"a"': a
-            '"w"': w
             '"s"': s
-            '"d"': d
+            '"space"': ruimte
+            '"up"': omhoog
+            '"w"': w
+        text: als {KEY} ingedrukt
       craft_ifPath:
-        text: |-
-          als pad {DIR}
-          {STATEMENT}
         options:
           DIR:
             "'ahead'": voor
-            "'right'": naar rechts
             "'left'": naar links
-      craft_ifStandingOn:
+            "'right'": naar rechts
         text: |-
-          als staande op {TYPE}
+          als pad {DIR}
           {STATEMENT}
+      craft_ifStandingOn:
         options:
           TYPE:
             "'blueCoralBlock'": blauw koraal
+            "'planksOak'": eikenhouten planken
             "'redCoralBlock'": rood koraal
             "'sand'": zand
-            "'wool_blue'": diep water
-            "'planksOak'": eikenhouten planken
             "'seaLantern'": zeelantaarn
-      craft_ifStandingOnLimit:
+            "'wool_blue'": diep water
         text: |-
           als staande op {TYPE}
           {STATEMENT}
+      craft_ifStandingOnLimit:
         options:
           TYPE:
-            "'sand'": zand
             "'darkPrismarine'": donkere prismarien
+            "'sand'": zand
             "'seaLantern'": zeelantaarn
+        text: |-
+          als staande op {TYPE}
+          {STATEMENT}
       craft_log:
         text: log bericht {MESSAGE}
       craft_moveForward:
         text: beweeg vooruit
       craft_placeBlock:
-        text: plaats {blockType}
         options:
           blockType:
-            '"strippedOak"': geschaafd eikenhout
-            '"strippedDarkOak"': donker geschaafd eikenhout
-            '"stoneBricks"': bakstenen
-            '"mossyStoneBricks"': mossige blokstenen
-            '"crackedStoneBricks"': gebarsten blokstenen
-            '"chiseledStoneBricks"': decoratieve blokstenen
-            '"blueCoralBlock"': blauw koraalblok
-            '"pinkCoralBlock"': roze koraalblok
-            '"magentaCoralBlock"': magenta koraalblok
-            '"redCoralBlock"': rood koraalblok
-            '"yellowCoralBlock"': geel koraalblok
-            '"blueDeadCoralBlock"': blauw dood koraalblok
-            '"pinkDeadCoralBlock"': roze dood koraalblok
-            '"magentaDeadCoralBlock"': magenta dood koraalblok
-            '"readDeadCoralBlock"': rood dood koraalblok
-            '"yellowDeadCoralBlock"': geel dood koraalblok
-            '"prismarine"': prismarien
-            '"darkPrismarine"': donkere prismarien
-            '"seaLantern"': zeelantaarn
-            '"packedIce"': pakijs
-            '"blueIce"': blauw ijs
             '"blackConcrete"': zwart beton
-            '"seaGrass"': zeegras
+            '"blueCoralBlock"': blauw koraalblok
+            '"blueDeadCoralBlock"': blauw dood koraalblok
+            '"blueIce"': blauw ijs
+            '"chiseledStoneBricks"': decoratieve blokstenen
+            '"crackedStoneBricks"': gebarsten blokstenen
+            '"darkPrismarine"': donkere prismarien
             '"kelp"': zeewier
+            '"magentaCoralBlock"': magenta koraalblok
+            '"magentaDeadCoralBlock"': magenta dood koraalblok
+            '"mossyStoneBricks"': mossige blokstenen
+            '"packedIce"': pakijs
+            '"pinkCoralBlock"': roze koraalblok
+            '"pinkDeadCoralBlock"': roze dood koraalblok
             '"polishedGranite"': gepolijst graniet
+            '"prismarine"': prismarien
+            '"readDeadCoralBlock"': rood dood koraalblok
+            '"redCoralBlock"': rood koraalblok
+            '"seaGrass"': zeegras
+            '"seaLantern"': zeelantaarn
+            '"stoneBricks"': bakstenen
+            '"strippedDarkOak"': donker geschaafd eikenhout
+            '"strippedOak"': geschaafd eikenhout
+            '"yellowCoralBlock"': geel koraalblok
+            '"yellowDeadCoralBlock"': geel dood koraalblok
+        text: plaats {blockType}
       craft_placePrismarine:
         text: plaats prismarien
       craft_placeTorch:
@@ -2248,7 +1637,6 @@ nl:
           herhalen tot doel
           {STATEMENT}
       craft_spawnEntity:
-        text: spawn {ENTITY}
         options:
           ENTITY:
             '"cod"': kabeljauw
@@ -2257,17 +1645,18 @@ nl:
             '"seaTurtle"': schildpad
             '"squid"': inktvis
             '"tropicalFish"': tropische vis
+        text: spawn {ENTITY}
       craft_turn:
-        text: draai {DIR}
         options:
           DIR:
-            right: rechtsom ↻
             left: linksom ↺
+            right: rechtsom ↻
+        text: draai {DIR}
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
+            '10': '10'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -2276,11 +1665,589 @@ nl:
             '7': '7'
             '8': '8'
             '9': '9'
+      gamelab_addBehaviorSimple:
+        text: sprite {SPRITE} begint {BEHAVIOR}
+      gamelab_addTarget:
+        options:
+          OPT:
+            '"avoid"': vermijd
+            '"follow"': volgen
+        text: "{SPRITE} krijgt doel {TARGET} op {OPT}"
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"frames"': frames
+            '"seconds"': seconden
+        text: om {N} {UNIT}
+      gamelab_avoidingTargets:
+        text: Doele vermijden
+      gamelab_beginCollectingData:
+        text: begin met het verzamelen van gegevens {BREAK} waarde {VALUE} met label
+          {LABEL}
+      gamelab_bounceOff:
+        text: "{SPRITE} stuitert weg {TARGET}"
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"direction"': bewegingsrichting
+            '"rotation"': rotatie
+            '"scale"': grootte
+            '"speed"': snelheid
+            '"x"': x positie
+            '"y"': y positie
+        text: wijzig {SPRITE} {PROPERTY} met {VAL}
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': wanneer
+            '"while"': terwijl
+        text: "{CONDITION} {SPRITE1} raakt {SPRITE2}"
+      gamelab_clickedOn:
+        text: wanneer {SPRITE} klikte
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): Naar het noorden bewegen en
+              lussen
+            new Behavior(moving_south_and_looping, []): Naar het zuiden bewegen en
+              lussen
+      gamelab_comment:
+        text: 'commentaar: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: Aantal van {SPRITE}
+      gamelab_createNewSprite:
+        text: "maak een nieuwe sprite \n genaamd {NAME} \n met kostuum {COSTUME} \n
+          bij {LOCATION}"
+      gamelab_destroy:
+        text: "{THIS} verwijderen"
+      gamelab_draggable:
+        text: slepbaar
+      gamelab_drawLine:
+        text: Lijn tekenen {COLOR}  {LOC1}  {LOC2}
+      gamelab_edgesDisplace:
+        text: randen blok {SPRITE} van verplaatsen
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"frames"': frames
+            '"seconds"': seconden
+        text: 'elke {N} {UNIT} '
+      gamelab_followingTargets:
+        text: Doelen volgen
+      gamelab_getAllSprites:
+        text: alle sprites
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"direction"': bewegingsrichting
+            '"rotation"': rotatie
+            '"scale"': grootte
+            '"speed"': snelheid
+            '"x"': x positie
+            '"y"': y positie
+        text: "{SPRITE} {PROPERTY}"
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': anders
+            '"this"': dit
+        text: "{CHOICE} sprite"
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"frames"': frames
+            '"seconds"': seconden
+        text: tijd in {UNIT}
+      gamelab_glideTo:
+        text: "{SPRITE} glijdt naar {LOCATION}"
+      gamelab_hideTitleScreen:
+        text: titelscherm verbergen
+      gamelab_ifVarEquals:
+        text: |-
+          als {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
             '10': '10'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} kostuum is {COSTUME}"
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"down"': omlaag
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"left"': links
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"right"': rechts
+            '"s"': s
+            '"space"': ruimte
+            '"t"': t
+            '"u"': u
+            '"up"': omhoog
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+        text: "{KEY} wordt ingedrukt"
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} raakt randen aan"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} raakt {TARGET}"
+      gamelab_jumpTo:
+        text: "{SPRITE} ga naar {LOCATION}"
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': wanneer
+            '"while"': terwijl
+          KEY:
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"down"': omlaag
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"left"': links
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"right"': rechts
+            '"s"': s
+            '"space"': ruimte
+            '"t"': t
+            '"u"': u
+            '"up"': omhoog
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+        text: "{CONDITION} {KEY} geperst"
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"border"': grens
+            '"bottom"': onderste rij
+            '"circle"': cirkel
+            '"column"': kolom
+            '"grid"': raster
+            '"left"': linkerkolom
+            '"right"': rechterkolom
+            '"row"': rij
+            '"top"': bovenste rij
+        text: "{GROUP} indelen als een {FORMAT}"
+      gamelab_locationAt:
+        text: 'locatie x: {X} y: {Y}'
+      gamelab_locationModifier:
+        options:
+          DIRECTION:
+            '"East"': Oosten
+            '"North"': Noorden
+            '"South"': Zuiden
+            '"West"': Westen
+        text: "{DISTANCE} pixels {DIRECTION} van {LOCATION}"
+      gamelab_locationMouse:
+        text: muis-locatie
+      gamelab_locationOf:
+        text: locatie van {SPRITE}
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"pop"': pop
+            '"rain"': regen
+        text: creëer {EFFECT} effect met {NUM} {ANIMATION_NAME} sprites
+      gamelab_makeNewSpriteAnon:
+        text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': grens
+            '"bottom"': onderste rij
+            '"circle"': cirkel
+            '"column"': kolom
+            '"grid"': raster
+            '"left"': linkerkolom
+            '"right"': rechterkolom
+            '"row"': rij
+            '"top"': bovenste rij
+      gamelab_makeNumSprites:
+        text: maak {NUM} nieuwe {ANIMATION_NAME} sprites
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': rechts
+            '180': links
+            '270': omhoog
+            '90': omlaag
+        text: "projectiel creëren \n{ANIMATION_NAME} vanaf {LOCATION} met snelheid
+          {SPEED}richting{DIRECTION}"
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '100': groot
+            '30': klein
+            '50': middellang
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"left"': links
+            '"right"': rechts
+        text: "{SPRITE} gezicht {DIRECTION}"
+      gamelab_mouseLocation:
+        text: muis-locatie
+      gamelab_moveBackward:
+        text: verplaats {SPRITE} {DISTANCE} pixels achteruit
+      gamelab_moveForward:
+        text: "{SPRITE} {DISTANCE} pixels vooruit verplaatsen"
+      gamelab_moveInDirection:
+        options:
+          DIRECTION:
+            '"East"': Oosten
+            '"North"': Noorden
+            '"South"': Zuiden
+            '"West"': Westen
+        text: "{SPRITE} {DISTANCE} pixels {DIRECTION}"
+      gamelab_moveToward:
+        text: verplaats {SPRITE} pixels {DISTANCE} richting {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_patrollingUpDown:
+        text: omhoog en omlaag patrouilleren
+      gamelab_playSound:
+        text: PlaySound {SOUND}
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": accent
+            "'sound://category_animals/bear.mp3'": Beer
+            "'sound://category_animals/cat.mp3'": kat
+            "'sound://category_animals/chicken.mp3'": kip
+            "'sound://category_animals/cow.mp3'": koe
+            "'sound://category_animals/dog.mp3'": hond
+            "'sound://category_animals/dolphin.mp3'": dolfijn
+            "'sound://category_animals/elephant.mp3'": oliefant
+            "'sound://category_animals/pig.mp3'": varken
+            "'sound://category_animals/sheep.mp3'": schaap
+            "'sound://category_background/ocean_waves.mp3'": golven
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": fonkelen
+            "'sound://category_collect/clicky_crunch.mp3'": kraak
+            "'sound://category_collect/trill_stings.mp3'": trillen
+            "'sound://category_digital/boing_2.mp3'": boing
+            "'sound://category_digital/jump_7.mp3'": spring
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": Eigenzinnige
+              bass
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": strandgolving
+            "'sound://category_nature/summer_night_loop.mp3'": Zomernacht
+            "'sound://category_nature/thunderstorm_1.mp3'": onweersbui
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": tonale
+              hit
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bubbel
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": toverspreuk
+            "'sound://category_swish/quick_swing.mp3'": swingen
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": tikken
+            "'sound://category_transition/star_dust_particle_10.mp3'": sterrenstof
+            "'sound://category_transition/trippy_robotic_transition.mp3'": robotische
+              overgang
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": buitenaards
+              schip
+        text: PlaySound {SOUND}
+      gamelab_playSoundOptionsSoccer:
+        text: PlaySound {SOUND}
+      gamelab_playSoundOptionsSpace:
+        text: PlaySound {SOUND}
+      gamelab_playSpeech:
+        text: Spraak afspelen {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): slepbaar
+            new Behavior(moving_with_arrow_keys, []): bewegen met de pijtjestoetsen
+      gamelab_pointInDirection:
+        options:
+          DIRECTION:
+            '"East"': Oosten
+            '"North"': Noorden
+            '"South"': Zuiden
+            '"West"': Westen
+        text: punt {SPRITE} {DIRECTION}
+      gamelab_printText:
+        text: print {TEXT}
+      gamelab_randColor:
+        text: willekeurige kleur
+      gamelab_randomColor:
+        text: willekeurige kleur
+      gamelab_randomLocation:
+        text: willekeurige locatie
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} stopt alles"
+      gamelab_removeBehaviorSimple:
+        text: sprite {SPRITE} stopt {BEHAVIOR}
+      gamelab_removeTint:
+        text: kleur verwijderen van {THIS}
+      gamelab_repeatForever:
+        text: blijven herhalen
+      gamelab_setAnimation:
+        text: verandering {THIS} kostuum naar {ANIMATION}
+      gamelab_setBackground:
+        text: stel {COLOR} in als achtergrondkleur
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': voetbalveld
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennisveld
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'keuken '
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': akkerland
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': woonkamer
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': uitzicht
+              op park
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pijnbomen
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': Eindeloos
+              gras
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': zon
+              en regenboog
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': voorzijde
+              huis
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': zonnestralen
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': woestijnweg
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': drijvend
+              gras
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': bomeneiland
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': rechtbank
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': grot
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': woestijn
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': raster
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regenboog
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': sterren
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': Melkweg
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': onder
+              water
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
+            undefined: Geen
+        text: set achtergrond naar {IMG}
+      gamelab_setBackgroundImageAs:
+        text: set achtergrond naar {IMG}
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '100': groot
+            '25': extra klein
+            '50': klein
+            '75': middellang
+        text: nieuwe standaard spritegrootte instellen op {SIZE}
+      gamelab_setPrompt:
+        text: vraag gebruiker {QUESTION} om variabele {VAR}
+      gamelab_setPromptWithChoices:
+        text: vraag gebruiker {QUESTION} om variabele {VAR} met de opties {A}{B}{C}
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"direction"': bewegingsrichting
+            '"rotation"': rotatie
+            '"scale"': grootte
+            '"speed"': snelheid
+            '"x"': x positie
+            '"y"': y positie
+        text: set {SPRITE} {PROPERTY} tot {VAL}
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': grootte
+          SIZE:
+            '100': groot
+            '25': extra klein
+            '50': klein
+            '75': middellang
+        text: stel {SPRITE} {PROPERTY} in op {SIZE}
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': hoogte
+            '"scale"': grootte
+            '"width"': breedte
+        text: stel {SPRITE} {PROPERTY} in op {N}%
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '3': langzaam
+            '5': normaal
+            '7': snel
+      gamelab_setTint:
+        text: kleur van {THIS} veranderen naar {COLOR}
+      gamelab_setupScoreboard:
+        text: "scorebord tekenen  \n{SPRITE1COSTUME}score{VAR1}{SPRITE2COSTUME}score{VAR2}doel{SPRITE3COSTUME}"
+      gamelab_setupSim:
+        text: |-
+          Setup-simulatie met
+          {SPRITE1N}{SPRITE1COSTUME}Snelheid{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}Snelheid{SPRITE2SPEED}
+          Verzamelen
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: toon titelscherm {BREAK} titel {TITLE} tekst {SUBTITLE}
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': wanneer
+            '"while"': terwijl
+        text: "{CONDITION} {SPRITE} geklikt"
+      gamelab_spriteSay:
+        text: "{SPRITE} zegt {SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}zegt{TEXT1}voor{NUM}seconden"
+      gamelab_startAvoiding:
+        text: "{SPRITE} begint {TARGET} te vermijden"
+      gamelab_startFollowing:
+        text: "{SPRITE} begint {TARGET} te volgen"
+      gamelab_startGliding:
+        text: "{SPRITE} begint te glijden"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} stopt met het vermijden van andee sprites"
+      gamelab_stopCollectingData:
+        text: stop met het verzamelen van data
+      gamelab_stopFollowing:
+        text: "{SPRITE} stopt met het volgen van andere sprites"
+      gamelab_stopGliding:
+        text: "{SPRITE} stopt met glijden"
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      gamelab_tumbling:
+        text: tuimelen
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"left"': links
+            '"right"': rechts
+        text: draai {SPRITE} {DIRECTION} {N} graden
+      gamelab_updateTitleWithColor:
+        text: titelscherm weergeven {BREAK} titel {TITLE} kleur {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: als alle vragen zijn beantwoord
+      gamelab_whenDownArrow:
+        text: wanneer pijl omlaag ingedrukt
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"a"': a
+            '"d"': d
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"s"': s
+            '"space"': ruimte
+            '"up"': omhoog
+            '"w"': w
+        text: als {KEY} ingedrukt
+      gamelab_whenLeftArrow:
+        text: wanneer linker pijl ingedrukt
+      gamelab_whenPromptAnswered:
+        text: als {VAR} is beantwoord
+      gamelab_whenRightArrow:
+        text: wanneer pijl naar rechts ingedrukt
+      gamelab_whenSpriteCreated:
+        text: als {SPRITE} is gecreëerd
+      gamelab_whenTouching:
+        text: wanneer {SPRITE1} {SPRITE2}
+      gamelab_whenUpArrow:
+        text: wanneer pijl omhoog ingedrukt
+      gamelab_whileDownArrow:
+        text: zolang pijl omlaag ingedrukt
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"a"': a
+            '"d"': d
+            '"down"': omlaag
+            '"left"': links
+            '"right"': rechts
+            '"s"': s
+            '"space"': ruimte
+            '"up"': omhoog
+            '"w"': w
+        text: zolang {KEY} ingedrukt
+      gamelab_whileLeftArrow:
+        text: zolang linker pijl ingedrukt
+      gamelab_whileRightArrow:
+        text: zolang pijl naar rechts ingedrukt is
+      gamelab_whileTouching:
+        text: zolang {SPRITE1} raakt {SPRITE2}
+      gamelab_whileUpArrow:
+        text: zolang pijl omhoog ingedrukt
+      gamelab_withPercentChance:
+        text: |-
+          als {NUM}% kans
+          {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        options:
+          NUM:
+            '10': zeer klein
+            '25': klein
+            '50': 50/50
+            '75': groot
+            '90': zeer groot
+        text: |2-
+           {NUM} kans
+           {STATEMENT}
+      gamelab_xLocationOf:
+        text: x coördinaat van {SPRITE}
+      gamelab_yLocationOf:
+        text: y coordinaat van {SPRITE}
       storylab_printText:
         text: print {TEXT}
       storylab_setForegroundEffect2:
-        text: Effect {EFFECT} uitvoeren
         options:
           EFFECT:
             '"bubbles"': Bubbels
@@ -2289,3 +2256,4 @@ nl:
             '"rain"': regen
             '"starburst"': Sterrenvorming
             '"twinkling"': Fonkeling
+        text: Effect {EFFECT} uitvoeren

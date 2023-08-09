@@ -4,9 +4,9 @@ fa:
     blocks:
       Dancelab_randomColor:
         text: رنگ تصادفی
+      Mikelab_randomColor:
+        text: رنگ تصادفی
       gamelab_randColor:
         text: رنگ تصادفی
       gamelab_randomColor:
-        text: رنگ تصادفی
-      Mikelab_randomColor:
         text: رنگ تصادفی

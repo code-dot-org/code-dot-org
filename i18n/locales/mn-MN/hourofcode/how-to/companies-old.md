@@ -1,5 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
+title: Кодын цагийг хэрхэн зохион байгуулах вэ - Компаниуд
 ---
 
 {{ signup_button }}

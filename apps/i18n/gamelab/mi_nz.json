@@ -1,9 +1,9 @@
 {
   "dropletBlock_createSprite_param2": "whānui",
   "dropletBlock_createSprite_param3": "teitei",
-  "dropletBlock_setCollider_param0": "momo",
-  "dropletBlock_setCollider_param4": "teitei",
   "dropletBlock_setColliderEach_param0": "momo",
   "dropletBlock_setColliderEach_param4": "teitei",
+  "dropletBlock_setCollider_param0": "momo",
+  "dropletBlock_setCollider_param4": "teitei",
   "shareGame": "Tiria tō kēmu:"
 }

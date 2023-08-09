@@ -2,274 +2,55 @@
   "bs-BA": {
     "data": {
       "resources": {
-        "implementation_guide/coursed/2022": {
-          "name": "Vodič za Implementaciju"
+        "lesson_plans/csd/2017": {
+          "name": "Nastavni Plan"
         },
-        "graph_paper_programming/coursed/2022": {
-          "name": "Papirno Programiranje Grafikona"
+        "lesson_plans_1/csd/2017": {
+          "name": "Nastavni Plan"
         },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "Papirno Programiranje Grafikona"
+        "lesson_plans_2/csd/2017": {
+          "name": "Nastavni Plan"
         },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "Papirno Programiranje Grafikona"
+        "lesson_plans_3/csd/2017": {
+          "name": "Nastavni Plan"
         },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "Papirno Programiranje Grafikona"
+        "lesson_plans_4/csd/2017": {
+          "name": "Nastavni Plan"
         },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "Papirno Programiranje Grafikona"
+        "lesson_plans_5/csd/2017": {
+          "name": "Nastavni Plan"
         },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "Papirno Programiranje Grafikona"
+        "lesson_plans/csd/2018": {
+          "name": "Nastavni Plan"
         },
-        "pair_programming/coursed/2022": {
-          "name": "Programiranje u Paru"
+        "lesson_plans_1/csd/2018": {
+          "name": "Nastavni Plan"
         },
-        "relay_programming/coursed/2022": {
-          "name": "Prijenos programiranja"
+        "lesson_plans_2/csd/2018": {
+          "name": "Nastavni Plan"
         },
-        "relay_programming_1/coursed/2022": {
-          "name": "Prijenos programiranja"
+        "lesson_plans_3/csd/2018": {
+          "name": "Nastavni Plan"
         },
-        "relay_programming_2/coursed/2022": {
-          "name": "Prijenos programiranja"
+        "lesson_plans_4/csd/2018": {
+          "name": "Nastavni Plan"
         },
-        "relay_programming_3/coursed/2022": {
-          "name": "Prijenos programiranja"
-        },
-        "relay_programming_4/coursed/2022": {
-          "name": "Prijenos programiranja"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "Prijenos programiranja"
-        },
-        "conditionals_with_cards/coursed/2022": {
-          "name": "Uvjeti s Kartama"
-        },
-        "conditionals_with_cards_1/coursed/2022": {
-          "name": "Uvjeti s Kartama"
-        },
-        "conditionals_with_cards_2/coursed/2022": {
-          "name": "Uvjeti s Kartama"
-        },
-        "conditionals_with_cards_3/coursed/2022": {
-          "name": "Uvjeti s Kartama"
-        },
-        "conditionals_with_cards_4/coursed/2022": {
-          "name": "Uvjeti s Kartama"
-        },
-        "implementation_guide/coursef/2022": {
-          "name": "Vodič za Implementaciju"
-        },
-        "exploring_apps/coursef/2022": {
-          "name": "Istraživanje aplikacija"
-        },
-        "exploring_apps_1/coursef/2022": {
-          "name": "Istraživanje aplikacija"
-        },
-        "internet/coursef/2022": {
-          "name": "Internet"
-        },
-        "internet_1/coursef/2022": {
-          "name": "Internet"
-        },
-        "the_internet/coursef/2022": {
-          "name": "Internet"
-        },
-        "implementation_guide/coursee/2022": {
-          "name": "Vodič za Implementaciju"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "Vodič za Implementaciju"
-        },
-        "move_it_move_it/courseb/2022": {
-          "name": "Pomakni, Pomakni"
-        },
-        "move_it_move_it_1/courseb/2022": {
-          "name": "Pomakni, Pomakni"
-        },
-        "move_it_move_it_2/courseb/2022": {
-          "name": "Pomakni, Pomakni"
-        },
-        "move_it_move_it_3/courseb/2022": {
-          "name": "Pomakni, pomakni"
-        },
-        "pair_programming/courseb/2022": {
-          "name": "Programiranje u Paru"
-        },
-        "stevie_and_the_big_project/courseb/2022": {
-          "name": "Stivi i veliki projekat"
-        },
-        "getting_loopy/courseb/2022": {
-          "name": "Zapetljavanje"
-        },
-        "getting_loopy_1/courseb/2022": {
-          "name": "Zapetljavanje"
-        },
-        "getting_loopy_2/courseb/2022": {
-          "name": "Zapetljavanje"
-        },
-        "getting_loopy_3/courseb/2022": {
-          "name": "Zapetljavanje"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "Veliki Događaj"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "Veliki Događaj"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "Veliki Događaj"
-        },
-        "pair_programming/express/2022": {
-          "name": "Programiranje u Paru"
-        },
-        "variables/express/2022": {
-          "name": "Varijable"
-        },
-        "pair_programming/pre-express/2022": {
-          "name": "Programiranje u Paru"
-        },
-        "implementation_guide/coursea/2022": {
-          "name": "Vodič za Implementaciju"
-        },
-        "pair_programming/coursea/2022": {
-          "name": "Programiranje u Paru"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "Vesele Mape"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "Veliki Događaj"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "Veliki Događaj"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "Veliki Događaj"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "Vodič za Implementaciju"
-        },
-        "my_robotic_friends/coursec/2022": {
-          "name": "Moji Prijatelji Roboti"
-        },
-        "my_robotic_friends_1/coursec/2022": {
-          "name": "Moji Prijatelji Roboti"
-        },
-        "my_robotic_friends_2/coursec/2022": {
-          "name": "Moji Prijatelji Roboti"
-        },
-        "my_robotic_friends_3/coursec/2022": {
-          "name": "Moji Prijatelji Roboti"
-        },
-        "my_robotic_friends_4/coursec/2022": {
-          "name": "Moji Prijatelji Roboti"
-        },
-        "pair_programming/coursec/2022": {
-          "name": "Programiranje u Paru"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "Veliki Događaj"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "Veliki Događaj"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "Veliki Događaj"
-        },
-        "binary_bracelets/coursec/2022": {
-          "name": "Binarne narukvice"
-        },
-        "binary_bracelets_1/coursec/2022": {
-          "name": "Binarne narukvice"
-        },
-        "binary_bracelets_2/coursec/2022": {
-          "name": "Binarne narukvice"
-        },
-        "binary_bracelets_3/coursec/2022": {
-          "name": "Binarne narukvice"
-        },
-        "binary_bracelets_4/coursec/2022": {
-          "name": "Binarne narukvice"
-        },
-        "apps_and_problem_solving/csd/2022": {
-          "name": "Aplikacije i riješavanje problema"
-        },
-        "apps_and_problem_solving_1/csd/2022": {
-          "name": "Aplikacije i riješavanje problema"
-        },
-        "apps_and_problem_solving_2/csd/2022": {
-          "name": "Aplikacije i riješavanje problema"
-        },
-        "variables/csd/2022": {
-          "name": "Varijable"
-        },
-        "variables_3/csd/2022": {
-          "name": "Varijable"
-        },
-        "text/csd/2022": {
-          "name": "Tekst"
-        },
-        "conditionals/csd/2022": {
-          "name": "Uvjeti"
-        },
-        "velocity/csd/2022": {
-          "name": "Brzina"
-        },
-        "velocity_1/csd/2022": {
-          "name": "Brzina"
-        },
-        "velocity_2/csd/2022": {
-          "name": "Brzina"
-        },
-        "functions/csd/2022": {
-          "name": "Funkcije"
-        },
-        "functions_1/csd/2022": {
-          "name": "Funkcije"
-        },
-        "functions_4/csd/2022": {
-          "name": "Funkcije"
-        },
-        "lists/csd/2022": {
-          "name": "Liste"
-        },
-        "classes/csd/2022": {
-          "name": "Razredi"
-        },
-        "design_mode/csd/2022": {
-          "name": "Način Dizajniranje"
-        },
-        "variables_1/csd/2022": {
-          "name": "Varijable"
-        },
-        "variables_2/csd/2022": {
-          "name": "Varijable"
-        },
-        "making_music/csd/2022": {
-          "name": "Pravljenje muzike"
-        },
-        "functions_2/csd/2022": {
-          "name": "Funkcije"
-        },
-        "functions_3/csd/2022": {
-          "name": "Funkcije"
-        },
-        "functions_with_parameters/csd/2022": {
-          "name": "Funkcije sa Parametrima"
-        },
-        "functions_5/csd/2022": {
-          "name": "Funkcije"
-        },
-        "lesson_plans/courseb/2018": {
+        "lesson_plans_5/csd/2018": {
           "name": "Nastavni Plan"
         },
         "lesson_plans/coursea/2018": {
           "name": "Nastavni Plan"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Nastavni Plan"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Nastavni Plan"
+        },
         "lesson_plans/coursed/2018": {
+          "name": "Nastavni Plan"
+        },
+        "lesson_plans/coursee/2018": {
           "name": "Nastavni Plan"
         },
         "lesson_plans/coursef/2018": {
@@ -278,55 +59,13 @@
         "lesson_plans/express/2018": {
           "name": "Nastavni Plan"
         },
-        "lesson_plans/coursee/2018": {
+        "lesson_plans/csd/2019": {
           "name": "Nastavni Plan"
         },
-        "lesson_plans/coursec/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/express/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans/coursec/2019": {
+        "lesson_plans_1/csd/2019": {
           "name": "Nastavni Plan"
         },
         "lesson_plans_2/csd/2019": {
-          "name": "Nastavni Plan"
-        },
-        "lesson_plans_5/csd/2019": {
           "name": "Nastavni Plan"
         },
         "lesson_plans_3/csd/2019": {
@@ -335,52 +74,116 @@
         "lesson_plans_4/csd/2019": {
           "name": "Nastavni Plan"
         },
-        "lesson_plans/csd/2019": {
+        "lesson_plans_5/csd/2019": {
           "name": "Nastavni Plan"
         },
-        "lesson_plans_1/csd/2019": {
+        "lesson_plans/coursea/2019": {
           "name": "Nastavni Plan"
         },
-        "lesson_plans_2/csd/2017": {
+        "lesson_plans/courseb/2019": {
           "name": "Nastavni Plan"
         },
-        "lesson_plans_5/csd/2017": {
+        "lesson_plans/coursec/2019": {
           "name": "Nastavni Plan"
         },
-        "lesson_plans_1/csd/2017": {
+        "lesson_plans/coursed/2019": {
           "name": "Nastavni Plan"
         },
-        "lesson_plans/csd/2017": {
+        "lesson_plans/coursee/2019": {
           "name": "Nastavni Plan"
         },
-        "lesson_plans_4/csd/2017": {
+        "lesson_plans/coursef/2019": {
           "name": "Nastavni Plan"
         },
-        "lesson_plans_3/csd/2017": {
+        "lesson_plans/express/2019": {
           "name": "Nastavni Plan"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+        "lesson_plans/coursea/2020": {
+          "name": "Nastavni Plan"
         },
-        "implementation_guide/coursef/2021": {
+        "lesson_plans/courseb/2020": {
+          "name": "Nastavni Plan"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Nastavni Plan"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Nastavni Plan"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Nastavni Plan"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Nastavni Plan"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Nastavni Plan"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Nastavni Plan"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "Aplikacije i riješavanje problema"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "Aplikacije i riješavanje problema"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "Aplikacije i riješavanje problema"
+        },
+        "lists/csd/2021": {
+          "name": "Liste"
+        },
+        "classes/csd/2021": {
+          "name": "Razredi"
+        },
+        "variables_1/csd/2021": {
+          "name": "Varijable"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Brzina"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Brzina"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funkcije"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funkcije"
+        },
+        "design_mode/csd/2021": {
+          "name": "Način Dizajniranje"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Način Dizajniranje"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funkcije"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Od-Do-Za Petlje"
+        },
+        "for_loops/csd/2021": {
+          "name": "Od-Do-Za Petlje"
+        },
+        "implementation_guide/coursea/2021": {
           "name": "Vodič za Implementaciju"
         },
-        "exploring_apps/coursef/2021": {
-          "name": "Istraživanje aplikacija"
+        "pair-programming-vid/coursea/2021": {
+          "name": "Programiranje u Paru"
         },
-        "exploring_apps_1/coursef/2021": {
-          "name": "Istraživanje aplikacija"
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "Vesele Mape"
         },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "Internet"
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Veliki Događaj"
         },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "Internet"
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Veliki Događaj"
         },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "Internet"
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Veliki Događaj"
         },
         "implementation_guide/courseb/2021": {
           "name": "Vodič za Implementaciju"
@@ -422,24 +225,6 @@
           "name": "Veliki Događaj"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "Veliki Događaj"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "Vodič za Implementaciju"
-        },
-        "pair-programming-vid/coursea/2021": {
-          "name": "Programiranje u Paru"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "Vesele Mape"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "Veliki Događaj"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "Veliki Događaj"
-        },
-        "unplugged-video-big-event/coursea/2021": {
           "name": "Veliki Događaj"
         },
         "implementation_guide/coursec/2021": {
@@ -544,6 +329,27 @@
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Uvjeti s Kartama"
         },
+        "implementation_guide/coursee/2021": {
+          "name": "Vodič za Implementaciju"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "Vodič za Implementaciju"
+        },
+        "exploring_apps/coursef/2021": {
+          "name": "Istraživanje aplikacija"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "Istraživanje aplikacija"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "Internet"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "Internet"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "Internet"
+        },
         "pair_programming/express/2021": {
           "name": "Programiranje u Paru"
         },
@@ -553,77 +359,271 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Programiranje u Paru"
         },
-        "implementation_guide/coursee/2021": {
-          "name": "Vodič za Implementaciju"
-        },
-        "design_mode/csd/2021": {
-          "name": "Način Dizajniranje"
-        },
-        "design_mode_1/csd/2021": {
-          "name": "Način Dizajniranje"
-        },
-        "functions_2/csd/2021": {
-          "name": "Funkcije"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "Od-Do-Za Petlje"
-        },
-        "for_loops/csd/2021": {
-          "name": "Od-Do-Za Petlje"
-        },
-        "variables_1/csd/2021": {
-          "name": "Varijable"
-        },
-        "velocity_1/csd/2021": {
-          "name": "Brzina"
-        },
-        "velocity_2/csd/2021": {
-          "name": "Brzina"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "Funkcije"
-        },
-        "functions_1/csd/2021": {
-          "name": "Funkcije"
-        },
-        "app-proposal-project/csd/2021": {
+        "apps_and_problem_solving/csd/2022": {
           "name": "Aplikacije i riješavanje problema"
         },
-        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+        "apps_and_problem_solving_1/csd/2022": {
           "name": "Aplikacije i riješavanje problema"
         },
-        "apps_and_problem_solving/csd/2021": {
+        "apps_and_problem_solving_2/csd/2022": {
           "name": "Aplikacije i riješavanje problema"
         },
-        "lists/csd/2021": {
+        "lists/csd/2022": {
           "name": "Liste"
         },
-        "classes/csd/2021": {
+        "classes/csd/2022": {
           "name": "Razredi"
         },
-        "lesson_plans/pre-express/2020": {
-          "name": "Nastavni Plan"
+        "variables/csd/2022": {
+          "name": "Varijable"
         },
-        "lesson_plans/express/2020": {
-          "name": "Nastavni Plan"
+        "variables_3/csd/2022": {
+          "name": "Varijable"
         },
-        "lesson_plans/courseb/2020": {
-          "name": "Nastavni Plan"
+        "text/csd/2022": {
+          "name": "Tekst"
         },
-        "lesson_plans/coursed/2020": {
-          "name": "Nastavni Plan"
+        "conditionals/csd/2022": {
+          "name": "Uvjeti"
         },
-        "lesson_plans/coursec/2020": {
-          "name": "Nastavni Plan"
+        "velocity/csd/2022": {
+          "name": "Brzina"
         },
-        "lesson_plans/coursee/2020": {
-          "name": "Nastavni Plan"
+        "velocity_1/csd/2022": {
+          "name": "Brzina"
         },
-        "lesson_plans/coursea/2020": {
-          "name": "Nastavni Plan"
+        "velocity_2/csd/2022": {
+          "name": "Brzina"
         },
-        "lesson_plans/coursef/2020": {
-          "name": "Nastavni Plan"
+        "functions/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_1/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_4/csd/2022": {
+          "name": "Funkcije"
+        },
+        "design_mode/csd/2022": {
+          "name": "Način Dizajniranje"
+        },
+        "variables_1/csd/2022": {
+          "name": "Varijable"
+        },
+        "variables_2/csd/2022": {
+          "name": "Varijable"
+        },
+        "making_music/csd/2022": {
+          "name": "Pravljenje muzike"
+        },
+        "functions_2/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_3/csd/2022": {
+          "name": "Funkcije"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "Funkcije sa Parametrima"
+        },
+        "functions_5/csd/2022": {
+          "name": "Funkcije"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "Vodič za Implementaciju"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "Programiranje u Paru"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "Vesele Mape"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "Veliki Događaj"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "Veliki Događaj"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "Veliki Događaj"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "Vodič za Implementaciju"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "Pomakni, Pomakni"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "Pomakni, Pomakni"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "Pomakni, Pomakni"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "Pomakni, pomakni"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "Programiranje u Paru"
+        },
+        "stevie_and_the_big_project/courseb/2022": {
+          "name": "Stivi i veliki projekat"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "Zapetljavanje"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "Zapetljavanje"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "Zapetljavanje"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "Zapetljavanje"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "Veliki Događaj"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "Veliki Događaj"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "Veliki Događaj"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "Vodič za Implementaciju"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "Moji Prijatelji Roboti"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "Moji Prijatelji Roboti"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "Moji Prijatelji Roboti"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "Moji Prijatelji Roboti"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "Moji Prijatelji Roboti"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "Programiranje u Paru"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "Veliki Događaj"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "Veliki Događaj"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "Veliki Događaj"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "Binarne narukvice"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "Binarne narukvice"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "Binarne narukvice"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "Binarne narukvice"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "Binarne narukvice"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "Vodič za Implementaciju"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "Papirno Programiranje Grafikona"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "Papirno Programiranje Grafikona"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "Papirno Programiranje Grafikona"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "Papirno Programiranje Grafikona"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "Papirno Programiranje Grafikona"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "Papirno Programiranje Grafikona"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "Programiranje u Paru"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "Prijenos programiranja"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "Prijenos programiranja"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "Prijenos programiranja"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "Prijenos programiranja"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "Prijenos programiranja"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "Prijenos programiranja"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "Uvjeti s Kartama"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "Uvjeti s Kartama"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "Uvjeti s Kartama"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "Uvjeti s Kartama"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "Uvjeti s Kartama"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "Vodič za Implementaciju"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "Vodič za Implementaciju"
+        },
+        "exploring_apps/coursef/2022": {
+          "name": "Istraživanje aplikacija"
+        },
+        "exploring_apps_1/coursef/2022": {
+          "name": "Istraživanje aplikacija"
+        },
+        "internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2022": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2022": {
+          "name": "Internet"
+        },
+        "pair_programming/express/2022": {
+          "name": "Programiranje u Paru"
+        },
+        "variables/express/2022": {
+          "name": "Varijable"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "Programiranje u Paru"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         }
       }
     }

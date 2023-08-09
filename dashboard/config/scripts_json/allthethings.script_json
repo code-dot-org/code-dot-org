@@ -769,6 +769,21 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "lesson-50",
+      "name": "AI Chat",
+      "absolute_position": 50,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 47,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "lesson_activities": [
@@ -1405,6 +1420,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "df85eaeb-e712-4d23-a0de-da19f1c0ef96",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "df85eaeb-e712-4d23-a0de-da19f1c0ef96",
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "activity_sections": [
@@ -1896,6 +1923,16 @@
       "seeding_key": {
         "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a",
         "lesson_activity.key": "e58ff15e-708f-4cd0-97cc-260c9929b0ca"
+      }
+    },
+    {
+      "key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231",
+        "lesson_activity.key": "df85eaeb-e712-4d23-a0de-da19f1c0ef96"
       }
     }
   ],
@@ -6121,6 +6158,27 @@
       "level_keys": [
         "Music Level 3"
       ]
+    },
+    {
+      "chapter": 174,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AI Chat Test Level"
+        ],
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
+      },
+      "level_keys": [
+        "AI Chat Test Level"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -8324,6 +8382,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings",
         "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AI Chat Test Level",
+        "script_level.level_keys": [
+          "AI Chat Test Level"
+        ],
+        "lesson.key": "lesson-50",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "84daf7f5-b7c6-4c69-9aa8-ca2417519231"
       }
     }
   ],

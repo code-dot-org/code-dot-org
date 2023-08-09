@@ -28,11 +28,13 @@ db_writer: 'mysql://root@localhost/'
 firebase_shared_secret: fake_firebase_shared_secret
 <% end -%>
 
-db_cluster_id: test-cluster
 netsim_enable_metrics: true
 stub_school_data: true
 daemon: true
 use_pusher: <%=!ci_test%>
+
+# Install i18n dependencies for i18n tests
+build_i18n: true
 
 # Since channel ids are derived from user id and other sequential integer ids
 # use a new S3 sources directory for each Test Build to prevent a UI test

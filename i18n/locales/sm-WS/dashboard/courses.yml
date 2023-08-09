@@ -6,11 +6,11 @@ sm:
         mike-test:
           title: vaega tauamata a le komepiuta faasaienisi
     resources:
-      teacher_forum/csd/2020:
-        name: Talanoaga a Faiaoga
       teacher_forum_6/csd/2017:
+        name: Talanoaga a Faiaoga
+      teacher_forum_6/csd/2018:
         name: Talanoaga a Faiaoga
       teacher_forum/csd/2019:
         name: Talanoaga a Faiaoga
-      teacher_forum_6/csd/2018:
+      teacher_forum/csd/2020:
         name: Talanoaga a Faiaoga

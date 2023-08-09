@@ -327,8 +327,18 @@ function initializeBlocklyWrapper(blocklyInstance) {
     resizeSvg(blockSpace) {
       return blockSpace.blockSpaceEditor.svgResize();
     },
+    registerCustomProcedureBlocks() {
+      // Google Blockly only. Registers custom blocks for modal function editor.
+    },
   };
   blocklyWrapper.customBlocks = customBlocks;
+
+  // Pointer block behavior is handled in the cdo blockly repo,
+  // so we can safely return an empty string here.
+  blocklyWrapper.getPointerBlockImageUrl = () => {
+    return '';
+  };
+
   return blocklyWrapper;
 }
 

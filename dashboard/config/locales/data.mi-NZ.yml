@@ -1,84 +1,205 @@
 ---
 mi:
   data:
-    game:
-      name:
-        Unplug1: Whakatakinga ki te Pūtaiao Rorohiko
-        Maze: Te Rīrapa
-        Multi: Momo Kōwhiringa Mahi
-        Unplug2: Whakaaro ā-Rorohiko
-        Unplug3: Papatono Pepa Kauwhata
-        Artist: Te Rehetoi
-        Unplug4: Ngā Hātepe
-        Artist2: Te Rehetoi 2
-        Unplug5: Ngā Taumahi
-        Farmer: Te Kaiahuwhenua
-        Unplug6: Ngā Here
-        Artist3: Te Rehetoi 3
-        Unplug7: Tito Waiata
-        Farmer2: Te Kaiahuwhenua 2
-        Unplug8: Te Whakawaitara
-        Artist4: Te Rehetoi 4
-        Unplug9: Papatonotanga ā-Tānga
-        Farmer3: Te Kaiahuwhenua 3
-        Unplug10: Te Ipurangi
-        Artist5: Te Rehetoi 5
-        Unplug11: Tākaia
-        MazeEC: Te Rīrapa
-        Bounce: Tupana
-        Flappy: Flappy Bird
-        Jigsaw: Pangahono
-        MazeStep: Aratau Hipanga Rīrapa
-        Wordsearch: Rapukupu
-        Webapp: Taiwhanga Taupānga
-        ArtistEC: Te Rehetoi
-        TextMatch: Whakaōrite Kuputuhi
-        StudioEC: Taiwhanga Tākaro
-        Applab: Taiwhanga Taupānga
-        NetSim: Pūtaruna ā-Ipurangi
-        Custom: Rehetoi
-        CustomStudio: Taiwhanga Tākaro
-    trophy:
-      name:
-        Bronze: Rauwhero
-        Silver: Hiriwa
-        Gold: Kōura
+    callout:
+      text:
+        Infinity_move_collide_callout: Whakatangihia mai tētahi oro ki te puta tēnei
+          āhuatanga.
+        Infinity_move_directions_callout: Mā tēhea paraka a Baymax ka neke ki runga
+          ina pēhia te pere runga?
+        Infinity_move_directions_callout_arrow: Whakamahia ēnei pere ki te whakatere
+        Infinity_move_right_runbutton: Tāpiritia he paraka whakaneke ki konei
+        Infinity_repeat_callout: Hoatu paraka Neke ki roto nei
+        actions_category: Kua hou katoa te hanga o te pouaka utauta! Kei reira hoki
+          ngā paraka "Ngā Hohenga" ināianei.
+        add_and_drag_parameter: Patotuhia te ingoa o tō tawhā ki konei, ā, pāwhiritia
+          te tāpiri kātahi ka tō atu ki roto i tō whakamahukitanga taumahi
+        arrows_move_actor: Whakamahia ngā pere ki te whakaneke i te kaiwhakaari
+        bee_for_loop: Tōia te nui o te waireka e hiahia e koe kia kohikohi e te pī
+          ki konei
+        category_explanation: He ōrite tonu āu paraka engari kei te noho ā-kāwai i
+          nāianei
+        change_here: Panonihia i konei
+        craft_callout_moveforward: Mā tēnei waehere e taki i te tahepuia. E taea ana
+          e koe tētahi tono neke ki mua te tāpiri?
+        craft_callout_preplaced: Kua hoatu e mātou ētahi paraka hei tīmatanga māu
+        craft_callout_preplaced_house: Ka tīmata te waehere ki te hanga i tō whare.
+          Ka taea e koe tēnā te whakamutu?
+        craft_drag_block_callout: Tōia tētahi paraka "nekeKimua();", kātahi me hoatu
+          ki raro i tērā atu paraka
+        craft_inside_repeat: Tōaitia ngā hohenga mā te hoatu i ngā paraka ki roto
+          nei
+        craft_run_button_callout: Pāwhiritia te "Whakahaerehia" ki te whakamātau i
+          tō papatono
+        craft_what_is_iron: Mainahia tēnei rino!
+        create_function: Pāwhiri i konei ki te whakatuwhera i te rereatu "Ngā Taumahi"
+          kātahi me pāwhiri i te pātene "Waihangahia he Taumahi".
+        degrees_per_side: Me whakawehe i te 360 mā te nui o ngā tapa kia kitea te
+          rahi o ia koki ā-putu.
+        drag_blocks: Tōia tētahi paraka "neke", kātahi me hoatu ki raro i tērā atu
+          paraka
+        draw_square_hint: 'Tīwhiri: Whakamahia te koromeke tapawhā kātahi anō koe
+          ka hanga i te panga o mua.'
+        edit_add_parameter: Pāwhiri i te whakatika ki te tāpiri i tētahi tawhā ki
+          tō taumahi
+        edit_draw_square: Whakamahia tēnei pātene ki te whakatika i te taumahi me
+          te tāpiri i te koromeke.
+        edit_function: Pāwhiri i konei ki te whakatika i tō taumahi.
+        edit_get_nectar: Whakamahia tēnei pātene ki te whakatika i te taumahi me te
+          panoni i te ahunga ka whaia e te Pī ki te tiki i te waireka.
+        fill_in_actor: Whakakīia te ??? ki ngā tau e hāngai ana ki ia kaitapere (1,
+          2, me te 3)
+        frozen_circle_function_in_circle_turn: Kia maumahara, me huri i muri mai i
+          te waihangatanga o ia porohita.
+        frozen_circle_function_with_parameter_circle: Whakamahia te paraka "waihangahia
+          he porohita", kātahi, me panoni i tōna rahi.
+        frozen_create_square: Whakapiri i ētahi atu paraka ki konei ki te waihanga
+          i tētahi tapawhā
+        frozen_diamond_repeat: Whakamahia te paraka tōai ki te waihanga i tēnei āhua.
+        frozen_snowflake_branch: Whakamahia te paraka "waihangahia he peka tarahīhuka"
+        function_editor_draw_square: Koinei tō whakamahukitanga taumahi. Ka rite tonu
+          te rere o ēnei paraka i ia wā ka whakamahia e koe te paraka "tāngia he tapawhā"
+        get_nectar: Whakamahia te paraka "tiki waireka" hou.
+        gray_block_explanation: Tē taea te muku i ngā paraka kiwikiwi. E āhei tonu
+          ana e koe te panga te whakaoti?
+        house_hint: Kei te pai noa iho mēnā kāore anō te hanga kia rite ki te whare.
+          Mā tātou e whakatika i te panga e haere ake nei.
+        if_bee_nectar: Whakamahia te paraka "mēnā" ki te whakatau āe rānei me tiki
+          te pī i te waireka
+        if_else_bee: Whakamahia te paraka "mēnā/kē" kia tiki te Pī i te waireka i
+          tētahi putiputi, ā, mēnā ehara i te putiputi ka mahi mīere kē
+        instructions_repeat_explanation: Kua tōaitia ngā tohutohu mō ia panga ki konei
+        jigsaw_click: Pāwhiritia tēnei paraka!
+        length_parameter: Māu tēnei taumahi e whakahou ki te whakamahi i te tawhā
+          "roanga"?
+        logic_category: Tuwheratia te rereatu "Ararau" ki te rapu i te paraka "mēnā/kē".
+        move_elsa_forward: Tōia te paraka "Neke ki Mua" ka whakpiri ki raro i te paraka
+          "Ina Whakahaerehia" kia neke a Elsa ki mua
+        name_function: Tuhia te ingoa o tō taumahi ki konei
+        place_counter_variable: Tōia tō taurangi pūtatau ki roto i tēnei paraka
+        place_length_variable: Tōia te taurangi roanga ki konei ki te whakakapi i
+          ngā tohu pātai
+        place_variable: Tōia tō taurangi ki roto i tēnei paraka
+        playlab_add_blocks: Tāpiritia ō paraka ki konei
+        playlab_add_move: Tāpiritia ngā paraka "neke" ki roto i tēnei paraka tōai
+        playlab_add_score: Tāpiritia he paraka piro ki konei
+        playlab_arrow_keys: Me maumahara ki te whakamahi i ēnei ki te neke i te Wahine
+          Wetiweti i muri mai i te pāwhiritanga o te Whakahaerehia
+        playlab_drag_say: Tōia te paraka "kōrero" ki konei, ā, patotuhia te kupu "kia
+          ora"
+        playlab_move_girl: Whakamahia te paraka "neke whakatematau" ki te neke i te
+          Kōtiro Tēnehi
+        playlab_play_sound: Tāpiritia te paraka "whakatangi oro" ki konei
+        playlab_use_twice: Whakamahia tēnei paraka kia rua ngā wā, ā, me maumahara
+          ki te panoni i te tau kaitapere
+        repeat: Hoatu i ngā paraka ki roto i te koromeke ki te tōai i ngā whakahau
+        repeat_blocks: Whakamahia te paraka "Tōai", ka tākai ki ērā atu paraka i te
+          papamahi
+        repeat_blocks_1: "(1) Whakamahia tēnei paraka, ā, hoatu kia karapotia ngā
+          paraka kiwikiwi i te papamahi"
+        repeat_blocks_2: (2) Nekehia te paraka "Tōai" ki konei ka hoatu ai he paraka
+          kiwikiwi ki roto
+        repeat_full_circle: Tāurutia te nui o ngā wā me neke te kairoro ki te waihanga
+          i tētahi porohita
+        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???"
+          ki tētahi tau
+        replace_questions_degree: Whakamahia te pouaka takaiho ki te whakakapi i te
+          "???" ki putu ka huri tika
+        right_arrow_fireball: Whakamahia te pere matau ki te puhi i ngā poiahi
+        run: Pāwhiritia te "Whakahaerehia" ki te whakamātau i tō papatono
+        set_length: Whakamahia tēnei paraka ki te tautuhi i te "roanga" ki te uara
+          tika.
+        set_sides: Whakamahia tēnei paraka ki te tautuhi i te "taha" ki te tau e tika
+          ana kia pai ai te whakaoti i te panga.
+        set_sprite_image: Me whakapiri i tētahi paraka "tautuhia te rehetoi ki te
+          atahanga" ki te paraka "ina tīmata te paki" kia whakahohea tētahi kaitapere
+          mō tēnei paki
+        set_variable: Tōia tētahi paraka tau ki konei ki te tautuhi i tō taurangi
+        show_code_explanation: Pāwhiritia i konei kia kitea te waehere mō te papatono
+          e hangaia ana e koe
+        snowflake_dropdown: Whakamahia te pouaka takaiho ki te waihanga i ngā tarahīhuka
+          rerekē!
+        studio_say_text: Patotuhia ngā kōrero ka kōrerotia e tō kaitapere ki waenganui
+          i ēnei pikorua
+        turn_elsa: Whakamahia te paraka "Huri" kia huri a Elsa. Mā te tau i te pouaka
+          takaiho e tohu ka pēhea te nui o tana huri
+        watch_again: Pāwhiritia i konei ki te mātakitaki anō i te ataata
+        which_equation: Mā tēhea whārite e poto ake ai ngā tapa mō ngā āhua he maha
+          ake ngā tapa?
+        write_draw_square_function: Tōia ngā paraka i te pouaka utauta ki konei ki
+          te tā i tētahi tapawhā
+        write_draw_triangle_function: Tōia ngā paraka i te pouaka utauta ki konei
+          ki te tā i tētahi tapatoru
     concept:
       description:
-        sequence: Raupapa
+        function: Ngā Taumahi
         if: paraka Mēnā
         if_else: paraka Mēnā-kē
+        loop_for: paraka Pūtatau
         loop_times: Paraka Tōai ngā wā
         loop_until: paraka Tōaitia kia
         loop_while: paraka I te
-        loop_for: paraka Pūtatau
-        function: Ngā Taumahi
         parameters: Ngā taumahi me ngā tawhā
+        sequence: Raupapa
+    game:
+      name:
+        Applab: Taiwhanga Taupānga
+        Artist: Te Rehetoi
+        Artist2: Te Rehetoi 2
+        Artist3: Te Rehetoi 3
+        Artist4: Te Rehetoi 4
+        Artist5: Te Rehetoi 5
+        ArtistEC: Te Rehetoi
+        Bounce: Tupana
+        Custom: Rehetoi
+        CustomStudio: Taiwhanga Tākaro
+        Farmer: Te Kaiahuwhenua
+        Farmer2: Te Kaiahuwhenua 2
+        Farmer3: Te Kaiahuwhenua 3
+        Flappy: Flappy Bird
+        Jigsaw: Pangahono
+        Maze: Te Rīrapa
+        MazeEC: Te Rīrapa
+        MazeStep: Aratau Hipanga Rīrapa
+        Multi: Momo Kōwhiringa Mahi
+        NetSim: Pūtaruna ā-Ipurangi
+        StudioEC: Taiwhanga Tākaro
+        TextMatch: Whakaōrite Kuputuhi
+        Unplug1: Whakatakinga ki te Pūtaiao Rorohiko
+        Unplug10: Te Ipurangi
+        Unplug11: Tākaia
+        Unplug2: Whakaaro ā-Rorohiko
+        Unplug3: Papatono Pepa Kauwhata
+        Unplug4: Ngā Hātepe
+        Unplug5: Ngā Taumahi
+        Unplug6: Ngā Here
+        Unplug7: Tito Waiata
+        Unplug8: Te Whakawaitara
+        Unplug9: Papatonotanga ā-Tānga
+        Webapp: Taiwhanga Taupānga
+        Wordsearch: Rapukupu
     level:
       instructions:
-        maze_2_2: 'E pai ana māu au e tautoko ki te hopu i te poaka kino? Whakaemihia
-          ētahi paraka "neke ki mua", ā, pāwhiritia te "Whakahaerehia" kia tae atu
-          au. '
+        Custom_builder: Tōia mai ētahi paraka i te pouaka utauta ki te papamahi ki
+          te tā i te taumata e hiahia ana koe ki te waihanga. Pāwhiritia te "Whakahaerehia"
+          kia rite koe.
+        applab_ec_simple: Waihanga i tō ake taupānga mā te whakamahi i ngā paraka
+          kei te pouaka utauta.
+        jigsaw_1: Pāwhiritia te paraka
+        jigsaw_10: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_11: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_12: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_13: Whakatikahia te panga!
+        jigsaw_2: Tōia te paraka ki te ūnga
+        jigsaw_3: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_4: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_5: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_6: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_7: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_8: Whakaraupapatia ngā paraka ki te hanga ata
+        jigsaw_9: Whakaraupapatia ngā paraka ki te hanga ata
         maze_2_1: E whakatakariri ana te poaka i ahau. Tēnā āwhinatia ahau ki te rapu
           i a ia!
-        maze_2_2_5: Whakatakina te ara kia tae atu ai au ki te poaka rorirori rā.
-          Karohia te TNT kei rere ngā raukura!
-        maze_2_3: Homai ki ahau te kino kākāriki! (Kia mataara i te TNT)
-        maze_2_4: Kia mauri tau, ā, āwhinatia ahau ki te rapu i te poaka kino. Kei
-          riri ahau!
-        maze_2_5: He ara e tae atu ai au ki te poaka mā te whakamahi i ngā paraka
-          e rua noa iho. E āhei ana koe te kite?
-        maze_2_6: Tēnā me ngana koe kia tae atu ahau ki te mūrere kākāriki me ngā
-          paraka e toru noa iho.
-        maze_2_7: Āwhinatia ahau ki te pei i tēnei poaka kino mā te whakamahi i te
-          itinga o ngā paraka e taea ana. Tēnā, whakamahia kia neke atu i te kotahi
-          paraka "tōaitia ngā wā".
-        maze_2_8: 'Me he kiwikiwi te paraka, he tohu tēnā kāore e āhei taua paraka
-          te muku. Whakaotihia tēnei panga mā te whakamahi i te paraka "tōai" ka tōai
-          i ngā wā e toru. Me ngana ki te hoatu i ēnei paraka e toru ki roto i te
-          paraka "tōai": neke, neke, huri.'
-        maze_2_9: Ka pai, tēnā whakamātauria te paraka hou "tōaitia i te" - ka tōai
-          tonu kia tae rawa atu au ki te poaka whakapōrearea.
         maze_2_10: Ka pai, kotahi anō te wā whakaharatau - ka taea e koe tēnei te
           whakaoti mā te whakamahi i ngā paraka e 4 noa iho?
         maze_2_11: Tēnā koe e te tangata. He kairoro ahau. E hiakai ana. Me... tae...
@@ -103,65 +224,46 @@ mi:
         maze_2_19: E āhei ana koe ki te tāpiri i ngā paraka e toru noa iho ki te āwhina
           i ahau ki te whakaoti i tētahi rīrapa uaua ake? Ki te tika i a koe, ka āhei
           ahau ki te hikoi i ngā ara kōpikopiko ahakoa te roanga.
-        turtle_1_1: Tēnā koe, he rehetoi ahau. Mā tō tuhi waehere ka meatia kia tāngia
-          e ahau te aha rānei. Whakamahia ētahi paraka kia tā ahau ki runga ngā rārangi
-          kiwikiwi kei te pikitia.
-        turtle_1_2: 'Na, me tā tapawhā i nāianei. KIA MAHARA: whakamahia tō tino tae
-          mā te whiriwhiri i taua tae ki te paraka "tautuhi tae" hou.'
-        turtle_1_3: Hangaia tētahi tapawhā me ngā paraka e 3 noa iho.
-        turtle_1_4: 'Tāngia he tapatoru he rerekē te tae o ōna tapa mā te whakamahi
-          i te kōwhiringa "tae matapōkere", tērā ka whiriwhiri i tētahi tae rerekē
-          i ia wā. Tīwhiri: māu anō e whiriwhiri me pēhea te roa o te huri mā te pāwhiri
-          i te tau kei te paraka huri.'
-        turtle_1_5: Na, hei whakaharatau, tāngia tētahi tapatoru, kātahi tētahi tapawhā
-          ki te tā i tētahi kōpaki.
-        turtle_1_6: 'E āhei ana koe ki te whiriwhiri me pēhea te tā i tēnei tapatoru
-          me tēnei tapawhā? Tīwhiri: Tāngia te tapatoru i te tuatahi, kātahi me whiriwhiri
-          e hia ngā huringa i mua i tānga o te tapawhā.'
-        turtle_1_7: Ka pai, ka mahi kua uaua ake - tēnā whakamātauria tō āheinga ki
-          te tā i ēnei mōhiti kākāriki. 100 pika te nui o ngā tapa katoa o ngā tapawhā,
-          e 50 pika te whānui i waenganui. Kei wareware ki te tā ki te tae kākāriki!
-        turtle_1_8: Ka pai, māu e matapae te hua ina koe ka whakahaere i tēnei waehere
-          (pāwhiritia rānei te "Whakahaerehia" ki te whakamātau). Kātahi ka tōaitia
-          kia oti rā anō te tānga. Ka rerekē ngā tae i ia wā.
-        turtle_1_9: Ka āhei koe te matapae ko tēhea tau ka tuhia hei whakakapi i ngā
-          tohu pātai ki te tā porohita?
-        turtle_1_10: 'Kua tutuki! Nā, tāngia mai tāu e hiahia ana. Anei ētahi whakaaro
-          ngahau: he tangata pekapeka, he tarahī huka, he tōrino rānei. Whakamātauria
-          hoki te paraka "tautuhi whānuitanga" hou. Kia ngahau!'
-        turtle_4_1: 'E taea ana e koe tētahi tapatoru (100 pika te nui o ōna tapa)
-          me ngā paraka e 3 noa iho? Tīwhiri: Whakamahia te paraka "tōai".'
-        turtle_4_2: Tāpiritia tētahi paraka "e huri whakatematau mā te 90 putu" ki
-          tētahi wāhi ki waenganui i te pūmanawa kei te wāhi mahi kē ki te tā i ēnei
-          tapatoru.
-        turtle_4_3: Ka pai, anei te waehere i tuhia e koe ki te tā i te tapatoru kotahi.
-          E āhei ana e koe tētahi paraka "tōai" me tētahi paraka "huri" te tāpiri
-          ki te hanga i tētahi putiputi ātaahua?
-        turtle_4_4: 'Anei anō te waehere nō te panga o mua, heoi anō, kua hurihia
-          noatia mā te 36 putu i muri mai i te tānga o ia tapatoru. E hia ngā wā e
-          tika ana kia tōaitia tēnei? (Tīwhiri: Kia hurihia mā te 360 putu ka huri
-          te tānga hei porohita pū)'
-        turtle_4_5: 'Anei anō te waehere nō te panga o mua, engari kua tōaitia mā
-          te 36 putu. Tōna tikanga, e hia putu te nui o ngā huringa? (Tīwhiri: Kia
-          hurihia mā te 360 putu ka huri te tānga hei porohita pū)'
-        turtle_4_6: Mā te whakamahi i ngā paraka e toru noa iho, e taea ana e koe
-          tētahi tapawhā te tā, ko ōna tapa e 20 pika te nui?
-        turtle_4_7: 'Anei te waehere mō te tā i te tapawhā nō te panga o mua. E āhei
-          ana e koe tēnei te tōai ki te tā i ngā tapawhā pātata pēnei i te arawhata?
-          Tīwhiri: e rua anō ngā paraka kia tutuki.'
-        turtle_4_8: Anei te urupare ki te panga o mua. E āhei ana koe e 2 paraka anō
-          te tāpiri ki te whakaoti i te tānga?
-        turtle_4_9: Anei te urupare ki te panga o mua. E hia putu te nui o te huringa
-          ki te whakaoti i te tānga? (E tika ana kia nui ake i te kotahi matapae)
-        turtle_4_10: Anei te urupare ki te panga o mua. E hia ngā wā e tika ana kia
-          tōaitia ki te whakaoti i te tānga?
-        turtle_4_11: Me ngana ki te panoni i ngā tau i te parak "huri' me te paraka
-          "tōai" ki te hanga tauira rerekē. Ka whakamātau rānei ki te tā i te aha
-          rānei ka hiahiatia mā te panoni i te toenga o te waehere.
+        maze_2_2: 'E pai ana māu au e tautoko ki te hopu i te poaka kino? Whakaemihia
+          ētahi paraka "neke ki mua", ā, pāwhiritia te "Whakahaerehia" kia tae atu
+          au. '
+        maze_2_2_5: Whakatakina te ara kia tae atu ai au ki te poaka rorirori rā.
+          Karohia te TNT kei rere ngā raukura!
+        maze_2_3: Homai ki ahau te kino kākāriki! (Kia mataara i te TNT)
+        maze_2_4: Kia mauri tau, ā, āwhinatia ahau ki te rapu i te poaka kino. Kei
+          riri ahau!
+        maze_2_5: He ara e tae atu ai au ki te poaka mā te whakamahi i ngā paraka
+          e rua noa iho. E āhei ana koe te kite?
+        maze_2_6: Tēnā me ngana koe kia tae atu ahau ki te mūrere kākāriki me ngā
+          paraka e toru noa iho.
+        maze_2_7: Āwhinatia ahau ki te pei i tēnei poaka kino mā te whakamahi i te
+          itinga o ngā paraka e taea ana. Tēnā, whakamahia kia neke atu i te kotahi
+          paraka "tōaitia ngā wā".
+        maze_2_8: 'Me he kiwikiwi te paraka, he tohu tēnā kāore e āhei taua paraka
+          te muku. Whakaotihia tēnei panga mā te whakamahi i te paraka "tōai" ka tōai
+          i ngā wā e toru. Me ngana ki te hoatu i ēnei paraka e toru ki roto i te
+          paraka "tōai": neke, neke, huri.'
+        maze_2_9: Ka pai, tēnā whakamātauria te paraka hou "tōaitia i te" - ka tōai
+          tonu kia tae rawa atu au ki te poaka whakapōrearea.
+        maze_3_1: Me whiwhi au ki taua poaka! Patotuhia ētahi karanga nekeneke();
+          kia pai ai taku whakahoki mai i aku hua.
+        maze_3_2: Tuhia mai tētahi papatono māku kia pai ai taku taenga atu ki te
+          poaka.
+        maze_3_3: Me pēhea taku tae atu ki te poaka? Kei tūpono atu ahau ki tētahi
+          pouaka TNT!
+        maze_3_4: Kātahi rā! Tuhia mai tētahi papatono māku hei karo i te TNT kia
+          tae atu ai au ki te poaka.
         maze_karel_1_1: Tēnā koe, he kaipāmu ahau. Me whai tautoko ana i a koe ki
           te whakapapatau i te whenua kei taku pāmu kia rite pai mō te whakatō. Tēnā
           nekehia ahau ki te pūkei oneone, ā, whakamahia te paraka "tangohia" ki te
           tango.
+        maze_karel_1_10: Kua roa taku noho ki te mahi, kua pōuri ki waho, ā, kāore
+          au i te paku mōhio he aha te nui o ngā pūkei. Kāore i au ngā kōwhiringa
+          katoa i au i mua i te paraka i te. Tēnā nekehia ahau i te whīra, me he pūkei,
+          tangohia.
+        maze_karel_1_11: 'E pōuri tonu ana i waho. Tēnā nekehia ahau i te whīra. Me
+          he pūkei, tangohia, ā, me he rua, whakakīia. Tīwhiri: whakamahia te tahua
+          takaiho o ngā kōwhiringa kei runga i te paraka "mēnā".'
         maze_karel_1_2: Whai muri ana, tēnā nekehia ahau ki te rua ka whakakīia ai
           ki ngā kārehu e RUA o te oneone mā te whakamahi i te paraka "whakakī".
         maze_karel_1_3: Tēnā nekehia ahau ki te pūkei oneone ka kōrero mai ai e hia
@@ -183,17 +285,291 @@ mi:
           mā te whakamahi i ngā paraka torutoru noa iho nei.
         maze_karel_1_9: 'Meatia kia tangohia e ahau ēnei pūkei oneone katoa. Me ngana
           me ngā paraka torutoru noa iho. Tīwhiri: whakamahia tētahi paraka "i te".'
-        maze_karel_1_10: Kua roa taku noho ki te mahi, kua pōuri ki waho, ā, kāore
-          au i te paku mōhio he aha te nui o ngā pūkei. Kāore i au ngā kōwhiringa
-          katoa i au i mua i te paraka i te. Tēnā nekehia ahau i te whīra, me he pūkei,
-          tangohia.
-        maze_karel_1_11: 'E pōuri tonu ana i waho. Tēnā nekehia ahau i te whīra. Me
-          he pūkei, tangohia, ā, me he rua, whakakīia. Tīwhiri: whakamahia te tahua
-          takaiho o ngā kōwhiringa kei runga i te paraka "mēnā".'
+        maze_karel_2_1: 'Me ngana ki te whakamahi i ngā paraka ki te tango i ngā pūkei
+          katoa, me te whakakī i ngā rua katoa kei te whenua. Whakamātauhia ngā koromeke
+          kē kia kaua e whakamahi i te nui o ngā paraka. Tīwhiri: e āhei ana te hoatu
+          koromeke ki roto i tētahi atu koromeke.'
+        maze_karel_2_10: Whakaneke hīpae ahau i te whīra, ā, whakamahia ēnei taumahi
+          e rua ki te āwhina i ahau ki te tango i ngā pūkei me te whakakī i ngā rua
+          katoa.
+        maze_karel_2_2: Kua tautuhia e mātou tō mātou ake paraka, "whakakīia kia 5",
+          ā, kei te kāwai Ngā Taumahi. Whakamahia ki te tautoko i ahau ki te whakakī
+          i tēnei rua.
+        maze_karel_2_3: Whakamahia te paraka taumahi hou "whakakīia kia 5" kia whakakīia
+          e au ngā rua katoa. Me tō koe i te paraka "whakakīia kia 5" i te kāwai Ngā
+          Taumahi.
+        maze_karel_2_4: Tautuhia tētahi taumahi hou ka tango i te 7 kārehukī ka whakamahia
+          ai ki te tuhi papatono hāpai i au ki te tango i ngā pūkei katoa.
+        maze_karel_2_5: Waihangahia he taumahi hou ka tango i te 6 kārehukī i te pūkei
+          ka whakamahia ai ki te āwhina i ahau ki te whakapapatahi i ngā pūkei.
+        maze_karel_2_6: Whakamahia ngā taumahi hou, "whakakīia kia 8" me te "tangohia
+          kia 8" ki te āwhina i ahau ki te whakapapatahi i te pūkei me te whakakī
+          i te rua.
+        maze_karel_2_7: He kau kei taku whīra! Tuhia tētahi taumahi hou ka hāpai i
+          taku karo i te kau me te tango i te pūkei. Hoatu ō paraka katoa ki taua
+          taumahi hou.
+        maze_karel_2_8: Whakamahia tēnei taumahi hou, "karohia te kau, tangohia 1",
+          ki te āwhina i ahau ki te tango i ngā pūkei katoa.
+        maze_karel_2_9: Ka pai, anei te taumahi ka tango i ngā pūkei oneone rerekē
+          e 4 i tētahi tīwae poutū. Me ngana ki te hoatu i tēnei taumahi ki roto i
+          te koromeke, ki te tango i ngā pūkei oneone katoa mā te whakamahi i ngā
+          paraka torutoru noa iho.
+        maze_karel_debug_function_1: He aha ngā mea o tēnei papatono hei panoni māu
+          ki te tautoko i ahau ki te tango i ngā pūkei?
+        maze_karel_debug_function_2: Ka taea e koe ngā iro o tēnei papatono te patu
+          mōku ki pai ai taku whakapapatahi i taku whīra?
+        maze_karel_debug_function_3: 'Whakatikahia tēnei papatono kia tangohia e au
+          te katoa o ngā pūkei kei taku whīra. '
+        maze_karel_debug_if: Āwhina mai! Whakatikaina te papatono kia papatahi rawa
+          ai taku whīra.
+        maze_karel_debug_if_else: Patuhia te iro o tēnei papatono mōku kia pai ai
+          taku whakakī i ngā rua ka tahi, ki te tango i ngā pūkei ka rua.
+        maze_karel_debug_repeat: Patuhia te iro o tēnei papatono mōku kia pai, kia
+          papatahi ai hoki taku whīra.
+        maze_karel_debug_seq_1: Nau mai ki te patuirotanga! Kei te hē te rere o taku
+          waehere. E kite ana koe i te mate, e taea ana hoki e koe tēnā mate te whakatika
+          kia āhei ai ahau ki te whakarite i taku whīra mō te whakatō?
+        maze_karel_debug_seq_2: He aha te mate me tēnei papatono? Me pēhea tō whakatika
+          kia āhei ai au tēnā te tango i taua pūkei?
+        maze_karel_debug_while: He aha ngā mea o tēnei papatono hei panoni māu kia
+          pai ai taku whakakī i te rua?
+        maze_wordsearch_k_1: Nekehia ahau kia pai ai taku tātaki i te kupu EAST
+        maze_wordsearch_k_13: Nekehia ahau mā tētahi ara, kātahi mā tētahi atu ara
+          ki te tātaki i te kupu DEBUG
+        maze_wordsearch_k_15: Nekehia ahau mā tētahi ara, kātahi mā tētahi atu ara
+          ki te tātaki i te kupu ABOVE
+        maze_wordsearch_k_16: Nekehia ahau mā tētahi ara, kātahi mā tētahi atu ara
+          ki te tātaki i te kupu BELOW
+        maze_wordsearch_k_2: Nekehia ahau kia pai ai taku tātaki i te kupu SOUTH
+        maze_wordsearch_k_20: He whakamātautau tēnei! Nekehia ahau mā tētahi ara,
+          kātahi mā tētahi atu ara ki te tātaki i te kupu STORY
+        maze_wordsearch_k_3: Nekehia ahau kia pai ai taku tātaki i te kupu WEST
+        maze_wordsearch_k_4: Nekehia ahau kia pai ai taku tātaki i te kupu NORTH
+        maze_wordsearch_k_6: Nekehia ahau ki te taha rāwhiti kātahi ki te tonga ki
+          te tātaki i te kupu JUMP
+        maze_wordsearch_k_9: Nekehia ahau mā tētahi ara, kātahi mā tētahi atu ara
+          ki te tātaki i te kupu CODE
+        mazestep_1: Whakaahuatanga tohutohu rīrapa ki konei
+        mazestep_2: Whakaahuatanga tohutohu rīrapa ki konei
+        mazestep_3: Whakaahuatanga tohutohu rīrapa ki konei
+        mazestep_4: Whakaahuatanga tohutohu rīrapa ki konei
+        mazestep_5: Whakaahuatanga tohutohu rīrapa ki konei
+        studio_c2_1: Māu rānei tēnei kurī e whakakōrero kia pēnei tana mihi "kia ora
+          e te ao"?
+        studio_c2_10: "E taea ana e koe ētahi paraka te tāpiri ki te panoni i te papamuri
+          \nme te tere o Waddles kātahi, ka whakaneke i a ia me ngā pere tae noa ki
+          te wā ka riro i ētahi piro?"
+        studio_c2_11: Waihangahia tō ake paki. Mutu ana, pāwhiritia te Mutu kia wātea
+          kia whakamātauria tō pūrākau e ō hoa ki ā rātou waea.
+        studio_c2_2: Māu te kurī e whakakōrero, ā, whai muri atu, māu te ngeru e whakakōrero?
+        studio_c2_3: E taea ana e koe tētahi papatono te tuhi ki te whakaneke i tēnei
+          kurī ki te ngeru?
+        studio_c2_4: E taea ana e koe tētahi papatono te tuhi ki te whakaneke i tēnei
+          kurī ki te ngeru, ā, ka mihi "kia ora" atu te ngeru ina tae atu te kurī
+          ki a ia?
+        studio_c2_5: E taea ana e koe tētahi papatono te tuhi kia mihi "kia ora" atu
+          te wheke ina pāwhititia?
+        studio_c2_6: E taea ana e koe tētahi papatono te tuhi ki te whakaneke i a
+          Waddles me ngā kī runga/raro/mauī/matau ki te tuki ki ngā ūnga katoa?
+        studio_c2_7: Mā te paraka "tōaitia āke, āke" ka rite tonu te rere o tō waehere.
+          Ka taea e koe ētahi paraka te whakapiri kia rite tonu te neke o te mokoweri
+          ki runga, ki raro, ki runga, ki raro?
+        studio_c2_8: E taea ana e koe a Waddles te whakakōrero me te kī "Kātahi rā!"
+          ki te tuki ia ki tētahi mokoweri, ki te whakatango oro "patu" hoki, ā, ka
+          whakaneke i a ia me ngā pere kia tutuki taua mahi?
+        studio_c2_9: E taea ana e koe tētahi paraka te tāpiri kia riro piro ina tuki
+          a Waddle ki te wheke kātahi, ka whakaneke i a ia me ngā pere tae noa ki
+          te wā ka riro i ētahi piro?
+        studio_c3_game_1: E taea ana e koe tētahi papatono te tuhi kia mihi "kia ora"
+          atu te wheke ina pāwhititia?
+        studio_c3_game_2: E taea ana e koe tētahi papatono te tuhi ki te whakaneke
+          i a Waddles me ngā kī runga/raro/mauī/matau ki te tuki ki ngā ūnga katoa?
+        studio_c3_game_3: Mā te paraka "tōaitia āke, āke" ka rite tonu te rere o tō
+          waehere. Ka taea e koe ētahi paraka te whakapiri kia rite tonu te neke o
+          te mokoweri ki runga, ki raro, ki runga, ki raro?
+        studio_c3_game_4: E taea ana e koe a Waddles te whakakōrero me te kī "Kātahi
+          rā!" ki te tuki ia ki tētahi mokoweri, ki te whakatango oro "patu" hoki,
+          ā, ka whakaneke i a ia me ngā pere kia tutuki taua mahi?
+        studio_c3_game_5: E taea ana e koe tētahi paraka te tāpiri kia riro piro ina
+          tuki a Waddle ki te wheke kātahi, ka whakaneke i a ia me ngā pere tae noa
+          ki te wā ka riro i ētahi piro?
+        studio_c3_game_6: "E taea ana e koe ētahi paraka te tāpiri ki te panoni i
+          te papamuri \nme te tere o Waddles kātahi, ka whakaneke i a ia me ngā pere
+          tae noa ki te wā ka riro i ētahi piro?"
+        studio_c3_game_7: Waihangahia tō ake kēmu. Mutu ana, pāwhiritia te Mutu kia
+          wātea kia whakamātauria tō kēmu e ō hoa ki ā rātou waea.
+        studio_c3_story_1: Māu rānei tēnei kurī e whakakōrero kia pēnei tana mihi
+          "kia ora e te ao"?
+        studio_c3_story_2: Māu te kurī e whakakōrero, ā, whai muri atu, māu te ngeru
+          e whakakōrero?
+        studio_c3_story_3: E taea ana e koe tētahi papatono te tuhi ki te whakaneke
+          i tēnei kurī ki te ngeru?
+        studio_c3_story_4: E taea ana e koe tētahi papatono te tuhi ki te whakaneke
+          i tēnei kurī ki te ngeru, ā, ka mihi "kia ora" atu te ngeru ina tae atu
+          te kurī ki a ia?
+        studio_c3_story_5: Māu tētahi paraka e tāpiri e harikoa ai te wheke?
+        studio_c3_story_6: Waihangahia tō ake paki. Mutu ana, pāwhiritia te Mutu kia
+          wātea kia whakamātauria tō pūrākau e ō hoa ki ā rātou waea.
+        studio_ec_sandbox: Waihangahia tō ake kēmu. Mutu ana, pāwhiritia te Mutu kia
+          wātea kia whakamātauria tō kēmu e ō hoa ki ā rātou waea.
+        studio_full_sandbox: Waihangahia tō ake kēmu. Mutu ana, pāwhiritia te Mutu
+          kia wātea kia whakamātauria tō kēmu e ō hoa ki ā rātou waea.
+        studio_gumball_click_hello: Māu a Anton e āwhina ki te whakapāoho i te tīmatanga
+          o te whakataetae mā te kī "Kia rite, kia mau, karawhiua!"? Kaua e wareware
+          ki te pāwhiri i a Anton i muri i tō pāwhiri i te Whakahaerehia ki te whakamātau
+          i tō papatono!
+        studio_gumball_free_play: Māu anō tāu ake kēmu, paki rānei e waihanga! Kia
+          tutuki i a koe, pāwhiritia te Mutu kia wātea tō kēmu ki ō hoa hei korikori
+          mā rātou i ā rātou waea, paparorohiko, rorohiko rānei!
+        studio_gumball_hello1: Kei te kimi hoa hou a Anais. Māu a ia e āwhina ki te
+          kī "kia ora" mā te tō i te paraka "kōrerohia" ki te papamahi ka patotuhia
+          ai te kupu "kia ora" ki roto?
+        studio_gumball_hello2: E haere ana a Darwin (kaitapere 1) rāua ko tana taina
+          Gumball (kaitapere 2) ki te kura. Māu rāua e āwhina mā te whakamahi i te
+          paraka "ka kōrero te kaitapere" e rua ngā wā, kia pai ai tā rāua mihi ki
+          a rāua anō.
+        studio_gumball_join_food_fight: E kuhu ki te whawhai kai! Whakamahia te whakahau
+          "makaia e te kaitapere te tuemi ki te taha matau" kia makaia e Panana Joe
+          (kaitapere 1) i te kai ki a Anton (kaitapere 2)! Tautuhia te wairua o Anton
+          ki riri ina patua me te kai.
+        studio_gumball_move_events: Ko Darwin kei te whakataetae kohikohi haki! Māu
+          ia e āwhina ki te omaoma haere mā te whakapiri i tētahi paraka "neke" ki
+          ia takahanga. Mutu ana, pāwhiritia te Whakahaerehia, ā, me ngana ki te kohikohi
+          i te katoa o ngā haki.
+        studio_gumball_move_to_actor: Kua tōmuri a Gumball (kaitapere 1) rāua ko Darwin
+          (kaitapere 2) mō te rā taiao! Āwhinatia a Gumball ki te neke ki raro mā
+          te 200 pika ki a Darwin mā te whakamahi i te paraka "nekehia te kaitapere".
+          Kātahi me whakahono i tētahi paraka ki te takahanga "ki te pāngia e te kaitapere"
+          kia tangi mai tētahi oro ina kite rāua i a rāua.
+        studio_gumball_move_to_flag: Kei te rapu a Scrat i tana kano oke! Āwhinatia
+          a ia ki te oma i ngā pika 200 noa iho e toe ana me te paraka "neke".
+        studio_gumball_repeat: Mā te paraka "tōaitia āke, āke" ka rite tonu te rere
+          o tō waehere. Ka taea e koe ētahi paraka te whakapiri kia rite tonu te neke
+          o Gumball ki te taha matau me te taha mauī ki rite pai ai tōna tinana ki
+          te oma?
+        studio_gumball_sound_and_points: Nā mātou te nuinga o te waehere mā reira
+          e neke tonu ai a Anton (kaitapere 2) ki te taha mauī me te taha matau. Nā
+          mātou hoki te waehere whakaneke i a Panana Joe (kaitapere 1) i te mata.
+          Māu te waehere e whakaoti, māu hoki e tāpiri i ngā paraka ki te takahanga
+          "ina pāngia e te kaitapere" kia tangi mai he oro, kia riro hoki ki tētahi
+          piro i te tukinga o Panana Joe rāua ko Anton? Pāwhiritia te Whakahaerehia
+          ki te tākaro i te kēmu.
+        studio_gumball_warn_food_fight: Kātahi nei a Darwin ka whakahore i tētahi
+          whawhai kai! Panonihia te papamuri ki te "kiripuaki", ā, tautuhia te tere
+          o Darwin ki te hohoro. Pāwhirita te Whakahaerehia me te neke i a ia ki a
+          Penny kia pai ai tana whakatūpato i a ia.
+        studio_iceage_click_hello: Māu a Sid e āwhina ki te tuku karanga whakamutunga
+          ki ōna hoa ina pāwhiritia ia? Kaua e wareware ki te pāwhiri i a ia i muri
+          i tō pāwhiri i te Whakahaerehia.
+        studio_iceage_free_play: Kua eke te wā māu anō tāu ake kēmu, paki rānei e
+          waihanga! Kia tutuki i a koe tēnā, pāwhiritia te Mutu kia wātea tō kēmu
+          ki ō hoa hei korikori mā rātou i ā rātou waea, paparorohiko, rorohiko rānei!
+        studio_iceage_hello1: E hiahia ana a Syd ki te whakarāmemene i te marea ki
+          te whai i tētahi mahi mātātoa hou. Māu ia e āwhina ki te kī "kia ora" mā
+          te tō i te paraka "kōrerohia" ki te papamahi ka patotuhia ai te kupu "kia
+          ora" ki roto?
+        studio_iceage_hello2: I kite a Manny (kaitapere 1) i a Sid (kaitapere 2),
+          ā, e hiahia ana ia ki te pōhiri i a ia ki tana mahi mātātoa. Māu rāua e
+          āwhina mā te whakamahi i te paraka "ka kōrero te kaitapere" e rua ngā wā,
+          kia pai ai tā rāua mihi ki a rāua anō.
+        studio_iceage_move_events: Kei te rapu tonu a Scrat i ngā kano oke! Āwhinatia
+          a ia ki te karapetapeta haere mā te whakapiri i tētahi paraka "neke" ki
+          ngā takahanga katoa, mā te panoni hoki i te ahunga kia tutuki pai ai me
+          ngā kī pere. Mutu ana, pāwhiritia te Whakahaerehia, kātahi me ngana ki te
+          kohikohi i ngā kano oke katoa.
+        studio_iceage_move_to_actor: Kei te rapu a Diego (kaitapere 1) i a Manny (kaitapere2).
+          Āwhinatia a Diego ki te neke ki raro e 200 pika ki a Manny me te paraka
+          "nekehia te kaitapere". Mutu ana, tūhonotia te paraka ki te takahanga "ina
+          pāngia e te kaitapere" kia tangi mai tētahi oro i te wā ka kite rāua i a
+          rāua.
+        studio_iceage_move_to_flag: Kei te rapu a Scrat i tana kano oke! Āwhinatia
+          a ia ki te koke i ngā pika 200 noa iho e toe ana me te paraka "neke".
+        studio_iceage_repeat: Mā te paraka "tōaitia āke, āke" ka rite tonu te rere
+          o tō waehere. Ka taea e koe ētahi paraka te whakapiri kia rite tonu te neke
+          o Karanimā ki te taha matau me te taha mauī ki pai ai tana korikori tinana?
+        studio_iceage_sound_and_points: Nā mātou te nuinga o te waehere whakaneke
+          i a Karanimā ki te taha mauī me te taha matau. Nā mātou hoki te waehere
+          whakaneke i a Sid i te mata. Māu te waehere e whakaoti, māu hoki e tāpiri
+          i ngā paraka ki te takahanga "ina pāngia e te kaitapere" kia tangi mai he
+          oro, kia riro hoki ki tētahi piro i te tukinga o Sid rāua ko Karanimā? Pāwhiritia
+          te Whakahaerehia ki te tākaro i te kēmu.
+        studio_iceage_throw_hearts: E hiahia ana a Sid kia mōhio tōna kuia, a Karanimā,
+          i te nui o tana aroha mōna. Whakamahia te whakahau "makaia e te kaitapere"
+          kia makaia e Sid (kaitapere 1) ngā manawa ki a Karanimā (kaitapere 2)! Tautuhia
+          te wairua o Karanimā kia harikoa ia ina patua me ngā manawa.
+        studio_iceage_warn_ice_age: Me horo ake te haere, nā te mea, e whakatata mai
+          ana te ao tio! Panonihia te papamuri kia tio te hanga, ā, tautuhia te tere
+          o Sid ki te hohoro. Mutu ana, me pāwhiri i te Whakahaerehia me te whakaneke
+          i a ia ki a Diego kia pai ai tana whakatūpato i a ia.
+        studio_k1_1: Māu rānei tēnei kurī e whakakōrero kia pēnei tana mihi "kia ora
+          e te ao"?
+        studio_k1_2: Māu te kurī e whakakōrero, ā, whai muri atu, māu te ngeru e whakakōrero?
+        studio_k1_3: E taea ana e koe tētahi papatono te tuhi ki te whakaneke i tēnei
+          kurī ki te ngeru?
+        studio_k1_4: Meatia kia neke te kurī ki te ngeru, ā, i tōna taenga atu ka
+          mihi "kia ora" atu te ngeru.
+        studio_k1_5: Māu tētahi paraka e tāpiri e harikoa ai te wheke?
+        studio_k1_6: Māu tāu ake paki e waihanga. Nekehia te ngeru me te kurī me te
+          whakakōrero i a rāua.
+        studio_playlab_1: E hiahia ana a Waddles ki te mihi "kia ora" - māu ia e āwhina?
+        studio_playlab_10: Waihangahia tō ake kēmu. Mutu ana, pāwhiritia te Mutu kia
+          wātea kia whakamātauria tō kēmu e ō hoa ki ā rātou waea.
+        studio_playlab_2: E hiahia ana a Cave Boy (kaiwhakaari 1) rāua ko Jasmine
+          (kaiwhakaari 2) ki te mihi "kia ora" rāua ki a rāua. Māu rāua e āwhina mā
+          te whakamahi i te paraka "kōrero" e rua ngā wā?
+        studio_playlab_3: Māu a Kōtiro Tēnehi e āwhina ki te tae atu ki te haki?
+        studio_playlab_4: Māu a Tama Tēnehi (kaiwhakaari 1) e āwhina kia tae atu ia
+          ki Kōtiro Tēnehi (kaiwhakaari 2) me te whakatangi i tētahi oro i tōna taenga
+          atu?
+        studio_playlab_5: Māu te Karetao Tuarangi e āwhina ki te kī "kia ora tangata
+          mā" ina pāwhiritia? Kaua e wareware ki te pāwhiri i a ia i muri i tō pāwhiri
+          i te Whakahaerehia
+        studio_playlab_6: Māu te Wahine Wetiweti e whakaneke mā te whakamahi i ngā
+          kī o ngā pere runga/raro/matau/mauī ki te tiki i ngā poiahi mīharo?
+        studio_playlab_7: Mā te paraka "tōaitia āke, āke" ka rite tonu te rere o tō
+          waehere. Ka taea e koe ētahi paraka te whakapiri kia rite tonu te neke o
+          te ruānuku ki te taha matau me te taha mauī?
+        studio_playlab_8: E taea ana e koe tētahi paraka te tāpiri kia riro ki tētahi
+          piro me tētahi paraka ki te whakatangi i tētahi oro ina tuki te ruānuku
+          ki te mairetahi, ka whakaneke i a ia me ngā pere tae noa ki te wā ka riro
+          i ētahi piro?
+        studio_playlab_9: Tautuhia te papamuri mō te whakaekenga o ngā kaituarangi,
+          kātahi me āwhina i te Karetao Tuarangi ki te tae tere atu ki te kaituarangi
+          mā te panoni i tōna tere. Tēnā, nekehia ia me ngā kī pere kia tae atu ki
+          te koiora tuarangi me te whakatūpato i te marea
+        turtle_1_1: Tēnā koe, he rehetoi ahau. Mā tō tuhi waehere ka meatia kia tāngia
+          e ahau te aha rānei. Whakamahia ētahi paraka kia tā ahau ki runga ngā rārangi
+          kiwikiwi kei te pikitia.
+        turtle_1_10: 'Kua tutuki! Nā, tāngia mai tāu e hiahia ana. Anei ētahi whakaaro
+          ngahau: he tangata pekapeka, he tarahī huka, he tōrino rānei. Whakamātauria
+          hoki te paraka "tautuhi whānuitanga" hou. Kia ngahau!'
+        turtle_1_2: 'Na, me tā tapawhā i nāianei. KIA MAHARA: whakamahia tō tino tae
+          mā te whiriwhiri i taua tae ki te paraka "tautuhi tae" hou.'
+        turtle_1_3: Hangaia tētahi tapawhā me ngā paraka e 3 noa iho.
+        turtle_1_4: 'Tāngia he tapatoru he rerekē te tae o ōna tapa mā te whakamahi
+          i te kōwhiringa "tae matapōkere", tērā ka whiriwhiri i tētahi tae rerekē
+          i ia wā. Tīwhiri: māu anō e whiriwhiri me pēhea te roa o te huri mā te pāwhiri
+          i te tau kei te paraka huri.'
+        turtle_1_5: Na, hei whakaharatau, tāngia tētahi tapatoru, kātahi tētahi tapawhā
+          ki te tā i tētahi kōpaki.
+        turtle_1_6: 'E āhei ana koe ki te whiriwhiri me pēhea te tā i tēnei tapatoru
+          me tēnei tapawhā? Tīwhiri: Tāngia te tapatoru i te tuatahi, kātahi me whiriwhiri
+          e hia ngā huringa i mua i tānga o te tapawhā.'
+        turtle_1_7: Ka pai, ka mahi kua uaua ake - tēnā whakamātauria tō āheinga ki
+          te tā i ēnei mōhiti kākāriki. 100 pika te nui o ngā tapa katoa o ngā tapawhā,
+          e 50 pika te whānui i waenganui. Kei wareware ki te tā ki te tae kākāriki!
+        turtle_1_8: Ka pai, māu e matapae te hua ina koe ka whakahaere i tēnei waehere
+          (pāwhiritia rānei te "Whakahaerehia" ki te whakamātau). Kātahi ka tōaitia
+          kia oti rā anō te tānga. Ka rerekē ngā tae i ia wā.
+        turtle_1_9: Ka āhei koe te matapae ko tēhea tau ka tuhia hei whakakapi i ngā
+          tohu pātai ki te tā porohita?
         turtle_2_1: 'Kia ora. Ko ahau tētahi rehetoi kairoro. Rata pai au ki te tā!
           Tēnā āwhinatia ahau ki te tā i tētahi tapawhā ki tētahi tae mīharo. Kia
           mahara ake: he rite tonu katoa āu ngā momo paraka, heoi anō, kua whakarōpūhia
           ki ngā momo kāwai ināianei.'
+        turtle_2_10: Anei he waehere hei whakamātau me ngā momo tōrino. He aha te
+          hua ki te panoni e koe te nui o te huringa? Ki te tautuhi rānei i tētahi
+          tae matapōkere ki te koromeke? Tāngia tāu e hiahia ana.
         turtle_2_2: Nau mai ki te wāhanga whakamahi taumahi, te momo ka hāpai i tō
           tautuhi paraka hou! Whakamātauria te paraka "tāngia he tapawhā", ka kitea
           i te kāwai "Ngā Taumahi" ki te tā i tētahi tapawhā kākāriki iti, he 50x50
@@ -223,42 +599,12 @@ mi:
         turtle_2_9: Whakamahia tētahi koromeke "tatau me" ki te tā i tētahi whānau
           tangata huka kia 110, 110, 90, 80 me te 70 te tāroaroa. Me 60 pika te whānuitanga
           o te āputa i waenganui i ngā tāngata huka katoa.
-        turtle_2_10: Anei he waehere hei whakamātau me ngā momo tōrino. He aha te
-          hua ki te panoni e koe te nui o te huringa? Ki te tautuhi rānei i tētahi
-          tae matapōkere ki te koromeke? Tāngia tāu e hiahia ana.
-        maze_karel_2_1: 'Me ngana ki te whakamahi i ngā paraka ki te tango i ngā pūkei
-          katoa, me te whakakī i ngā rua katoa kei te whenua. Whakamātauhia ngā koromeke
-          kē kia kaua e whakamahi i te nui o ngā paraka. Tīwhiri: e āhei ana te hoatu
-          koromeke ki roto i tētahi atu koromeke.'
-        maze_karel_2_2: Kua tautuhia e mātou tō mātou ake paraka, "whakakīia kia 5",
-          ā, kei te kāwai Ngā Taumahi. Whakamahia ki te tautoko i ahau ki te whakakī
-          i tēnei rua.
-        maze_karel_2_3: Whakamahia te paraka taumahi hou "whakakīia kia 5" kia whakakīia
-          e au ngā rua katoa. Me tō koe i te paraka "whakakīia kia 5" i te kāwai Ngā
-          Taumahi.
-        maze_karel_2_4: Tautuhia tētahi taumahi hou ka tango i te 7 kārehukī ka whakamahia
-          ai ki te tuhi papatono hāpai i au ki te tango i ngā pūkei katoa.
-        maze_karel_2_5: Waihangahia he taumahi hou ka tango i te 6 kārehukī i te pūkei
-          ka whakamahia ai ki te āwhina i ahau ki te whakapapatahi i ngā pūkei.
-        maze_karel_2_6: Whakamahia ngā taumahi hou, "whakakīia kia 8" me te "tangohia
-          kia 8" ki te āwhina i ahau ki te whakapapatahi i te pūkei me te whakakī
-          i te rua.
-        maze_karel_2_7: He kau kei taku whīra! Tuhia tētahi taumahi hou ka hāpai i
-          taku karo i te kau me te tango i te pūkei. Hoatu ō paraka katoa ki taua
-          taumahi hou.
-        maze_karel_2_8: Whakamahia tēnei taumahi hou, "karohia te kau, tangohia 1",
-          ki te āwhina i ahau ki te tango i ngā pūkei katoa.
-        maze_karel_2_9: Ka pai, anei te taumahi ka tango i ngā pūkei oneone rerekē
-          e 4 i tētahi tīwae poutū. Me ngana ki te hoatu i tēnei taumahi ki roto i
-          te koromeke, ki te tango i ngā pūkei oneone katoa mā te whakamahi i ngā
-          paraka torutoru noa iho.
-        maze_karel_2_10: Whakaneke hīpae ahau i te whīra, ā, whakamahia ēnei taumahi
-          e rua ki te āwhina i ahau ki te tango i ngā pūkei me te whakakī i ngā rua
-          katoa.
         turtle_3_1: E whakaatu ana tēnei panga te tautuhinga o te taumahi "tāngia
           he tapawhā" me te "tāngia he porohita". E kore te tautuhi taumahi e whakamahi
           i ōna paraka. Me tango rawa koe i te paraka "tāngia he tapawhā" ki te tā
           tapawhā.
+        turtle_3_10: Inā te nui o ngā mea kua ako! Whakamahia ināianei ki te tā i
+          tāu e hiahia ana. Me ngana ki te tā whetū, tōrino, tarahīhuka kounga rānei.
         turtle_3_2: Mā te whakamahi i te taumahi "tāngia he tapawhā" hei tauira, waihangahia
           tētahi taumahi "tāngia he tapatoru" ka whakamahia ai.
         turtle_3_3: 'Tāngia he taiapa tapatoru ka karapoti i ngā ngeru me tētahi taiapa
@@ -282,27 +628,35 @@ mi:
           te taumahi kua whakakētia ki te hanga i ngā whare e toru.
         turtle_3_9: E taea ana e koe te taumahi "tāngia he whare" te hangaia houhia
           me te kore tautoko? Whakamātauria, ā, tāngia tētahi rārangi whare.
-        turtle_3_10: Inā te nui o ngā mea kua ako! Whakamahia ināianei ki te tā i
-          tāu e hiahia ana. Me ngana ki te tā whetū, tōrino, tarahīhuka kounga rānei.
-        maze_karel_debug_seq_1: Nau mai ki te patuirotanga! Kei te hē te rere o taku
-          waehere. E kite ana koe i te mate, e taea ana hoki e koe tēnā mate te whakatika
-          kia āhei ai ahau ki te whakarite i taku whīra mō te whakatō?
-        maze_karel_debug_seq_2: He aha te mate me tēnei papatono? Me pēhea tō whakatika
-          kia āhei ai au tēnā te tango i taua pūkei?
-        maze_karel_debug_repeat: Patuhia te iro o tēnei papatono mōku kia pai, kia
-          papatahi ai hoki taku whīra.
-        maze_karel_debug_while: He aha ngā mea o tēnei papatono hei panoni māu kia
-          pai ai taku whakakī i te rua?
-        maze_karel_debug_if: Āwhina mai! Whakatikaina te papatono kia papatahi rawa
-          ai taku whīra.
-        maze_karel_debug_if_else: Patuhia te iro o tēnei papatono mōku kia pai ai
-          taku whakakī i ngā rua ka tahi, ki te tango i ngā pūkei ka rua.
-        maze_karel_debug_function_1: He aha ngā mea o tēnei papatono hei panoni māu
-          ki te tautoko i ahau ki te tango i ngā pūkei?
-        maze_karel_debug_function_2: Ka taea e koe ngā iro o tēnei papatono te patu
-          mōku ki pai ai taku whakapapatahi i taku whīra?
-        maze_karel_debug_function_3: 'Whakatikahia tēnei papatono kia tangohia e au
-          te katoa o ngā pūkei kei taku whīra. '
+        turtle_4_1: 'E taea ana e koe tētahi tapatoru (100 pika te nui o ōna tapa)
+          me ngā paraka e 3 noa iho? Tīwhiri: Whakamahia te paraka "tōai".'
+        turtle_4_10: Anei te urupare ki te panga o mua. E hia ngā wā e tika ana kia
+          tōaitia ki te whakaoti i te tānga?
+        turtle_4_11: Me ngana ki te panoni i ngā tau i te parak "huri' me te paraka
+          "tōai" ki te hanga tauira rerekē. Ka whakamātau rānei ki te tā i te aha
+          rānei ka hiahiatia mā te panoni i te toenga o te waehere.
+        turtle_4_2: Tāpiritia tētahi paraka "e huri whakatematau mā te 90 putu" ki
+          tētahi wāhi ki waenganui i te pūmanawa kei te wāhi mahi kē ki te tā i ēnei
+          tapatoru.
+        turtle_4_3: Ka pai, anei te waehere i tuhia e koe ki te tā i te tapatoru kotahi.
+          E āhei ana e koe tētahi paraka "tōai" me tētahi paraka "huri" te tāpiri
+          ki te hanga i tētahi putiputi ātaahua?
+        turtle_4_4: 'Anei anō te waehere nō te panga o mua, heoi anō, kua hurihia
+          noatia mā te 36 putu i muri mai i te tānga o ia tapatoru. E hia ngā wā e
+          tika ana kia tōaitia tēnei? (Tīwhiri: Kia hurihia mā te 360 putu ka huri
+          te tānga hei porohita pū)'
+        turtle_4_5: 'Anei anō te waehere nō te panga o mua, engari kua tōaitia mā
+          te 36 putu. Tōna tikanga, e hia putu te nui o ngā huringa? (Tīwhiri: Kia
+          hurihia mā te 360 putu ka huri te tānga hei porohita pū)'
+        turtle_4_6: Mā te whakamahi i ngā paraka e toru noa iho, e taea ana e koe
+          tētahi tapawhā te tā, ko ōna tapa e 20 pika te nui?
+        turtle_4_7: 'Anei te waehere mō te tā i te tapawhā nō te panga o mua. E āhei
+          ana e koe tēnei te tōai ki te tā i ngā tapawhā pātata pēnei i te arawhata?
+          Tīwhiri: e rua anō ngā paraka kia tutuki.'
+        turtle_4_8: Anei te urupare ki te panga o mua. E āhei ana koe e 2 paraka anō
+          te tāpiri ki te whakaoti i te tānga?
+        turtle_4_9: Anei te urupare ki te panga o mua. E hia putu te nui o te huringa
+          ki te whakaoti i te tānga? (E tika ana kia nui ake i te kotahi matapae)
         turtle_5_1: Whakamātauria tēnei papatono, ā, panonihia kia kitea ka aha. E
           mārama ana ki a koe te whakamahinga? (Mukua rānei, ā, whakakapia me tētahi
           mea rerekē noa atu)
@@ -321,258 +675,93 @@ mi:
         turtle_5_6: Whakamātauria tēnei papatono, ā, panonihia kia kitea ka aha. E
           mārama ana ki a koe te whakamahinga? (Mukua rānei, ā, whakakapia me tētahi
           mea rerekē noa atu)
-        maze_3_1: Me whiwhi au ki taua poaka! Patotuhia ētahi karanga nekeneke();
-          kia pai ai taku whakahoki mai i aku hua.
-        maze_3_2: Tuhia mai tētahi papatono māku kia pai ai taku taenga atu ki te
-          poaka.
-        maze_3_3: Me pēhea taku tae atu ki te poaka? Kei tūpono atu ahau ki tētahi
-          pouaka TNT!
-        maze_3_4: Kātahi rā! Tuhia mai tētahi papatono māku hei karo i te TNT kia
-          tae atu ai au ki te poaka.
-        Custom_builder: Tōia mai ētahi paraka i te pouaka utauta ki te papamahi ki
-          te tā i te taumata e hiahia ana koe ki te waihanga. Pāwhiritia te "Whakahaerehia"
-          kia rite koe.
-        jigsaw_1: Pāwhiritia te paraka
-        jigsaw_2: Tōia te paraka ki te ūnga
-        jigsaw_3: Whakaraupapatia ngā paraka ki te hanga ata
-        jigsaw_4: Whakaraupapatia ngā paraka ki te hanga ata
-        jigsaw_5: Whakaraupapatia ngā paraka ki te hanga ata
-        jigsaw_6: Whakaraupapatia ngā paraka ki te hanga ata
-        jigsaw_7: Whakaraupapatia ngā paraka ki te hanga ata
-        jigsaw_8: Whakaraupapatia ngā paraka ki te hanga ata
-        jigsaw_9: Whakaraupapatia ngā paraka ki te hanga ata
-        jigsaw_10: Whakaraupapatia ngā paraka ki te hanga ata
-        jigsaw_11: Whakaraupapatia ngā paraka ki te hanga ata
-        jigsaw_12: Whakaraupapatia ngā paraka ki te hanga ata
-        jigsaw_13: Whakatikahia te panga!
-        mazestep_1: Whakaahuatanga tohutohu rīrapa ki konei
-        mazestep_2: Whakaahuatanga tohutohu rīrapa ki konei
-        mazestep_3: Whakaahuatanga tohutohu rīrapa ki konei
-        mazestep_4: Whakaahuatanga tohutohu rīrapa ki konei
-        mazestep_5: Whakaahuatanga tohutohu rīrapa ki konei
-        studio_c2_1: Māu rānei tēnei kurī e whakakōrero kia pēnei tana mihi "kia ora
-          e te ao"?
-        studio_c2_2: Māu te kurī e whakakōrero, ā, whai muri atu, māu te ngeru e whakakōrero?
-        studio_c2_3: E taea ana e koe tētahi papatono te tuhi ki te whakaneke i tēnei
-          kurī ki te ngeru?
-        studio_c2_4: E taea ana e koe tētahi papatono te tuhi ki te whakaneke i tēnei
-          kurī ki te ngeru, ā, ka mihi "kia ora" atu te ngeru ina tae atu te kurī
-          ki a ia?
-        studio_c2_5: E taea ana e koe tētahi papatono te tuhi kia mihi "kia ora" atu
-          te wheke ina pāwhititia?
-        studio_c2_6: E taea ana e koe tētahi papatono te tuhi ki te whakaneke i a
-          Waddles me ngā kī runga/raro/mauī/matau ki te tuki ki ngā ūnga katoa?
-        studio_c2_7: Mā te paraka "tōaitia āke, āke" ka rite tonu te rere o tō waehere.
-          Ka taea e koe ētahi paraka te whakapiri kia rite tonu te neke o te mokoweri
-          ki runga, ki raro, ki runga, ki raro?
-        studio_c2_8: E taea ana e koe a Waddles te whakakōrero me te kī "Kātahi rā!"
-          ki te tuki ia ki tētahi mokoweri, ki te whakatango oro "patu" hoki, ā, ka
-          whakaneke i a ia me ngā pere kia tutuki taua mahi?
-        studio_c2_9: E taea ana e koe tētahi paraka te tāpiri kia riro piro ina tuki
-          a Waddle ki te wheke kātahi, ka whakaneke i a ia me ngā pere tae noa ki
-          te wā ka riro i ētahi piro?
-        studio_c2_10: "E taea ana e koe ētahi paraka te tāpiri ki te panoni i te papamuri
-          \nme te tere o Waddles kātahi, ka whakaneke i a ia me ngā pere tae noa ki
-          te wā ka riro i ētahi piro?"
-        studio_c2_11: Waihangahia tō ake paki. Mutu ana, pāwhiritia te Mutu kia wātea
-          kia whakamātauria tō pūrākau e ō hoa ki ā rātou waea.
-        studio_c3_story_1: Māu rānei tēnei kurī e whakakōrero kia pēnei tana mihi
-          "kia ora e te ao"?
-        studio_c3_story_2: Māu te kurī e whakakōrero, ā, whai muri atu, māu te ngeru
-          e whakakōrero?
-        studio_c3_story_3: E taea ana e koe tētahi papatono te tuhi ki te whakaneke
-          i tēnei kurī ki te ngeru?
-        studio_c3_story_4: E taea ana e koe tētahi papatono te tuhi ki te whakaneke
-          i tēnei kurī ki te ngeru, ā, ka mihi "kia ora" atu te ngeru ina tae atu
-          te kurī ki a ia?
-        studio_c3_story_5: Māu tētahi paraka e tāpiri e harikoa ai te wheke?
-        studio_c3_story_6: Waihangahia tō ake paki. Mutu ana, pāwhiritia te Mutu kia
-          wātea kia whakamātauria tō pūrākau e ō hoa ki ā rātou waea.
-        studio_c3_game_1: E taea ana e koe tētahi papatono te tuhi kia mihi "kia ora"
-          atu te wheke ina pāwhititia?
-        studio_c3_game_2: E taea ana e koe tētahi papatono te tuhi ki te whakaneke
-          i a Waddles me ngā kī runga/raro/mauī/matau ki te tuki ki ngā ūnga katoa?
-        studio_c3_game_3: Mā te paraka "tōaitia āke, āke" ka rite tonu te rere o tō
-          waehere. Ka taea e koe ētahi paraka te whakapiri kia rite tonu te neke o
-          te mokoweri ki runga, ki raro, ki runga, ki raro?
-        studio_c3_game_4: E taea ana e koe a Waddles te whakakōrero me te kī "Kātahi
-          rā!" ki te tuki ia ki tētahi mokoweri, ki te whakatango oro "patu" hoki,
-          ā, ka whakaneke i a ia me ngā pere kia tutuki taua mahi?
-        studio_c3_game_5: E taea ana e koe tētahi paraka te tāpiri kia riro piro ina
-          tuki a Waddle ki te wheke kātahi, ka whakaneke i a ia me ngā pere tae noa
-          ki te wā ka riro i ētahi piro?
-        studio_c3_game_6: "E taea ana e koe ētahi paraka te tāpiri ki te panoni i
-          te papamuri \nme te tere o Waddles kātahi, ka whakaneke i a ia me ngā pere
-          tae noa ki te wā ka riro i ētahi piro?"
-        studio_c3_game_7: Waihangahia tō ake kēmu. Mutu ana, pāwhiritia te Mutu kia
-          wātea kia whakamātauria tō kēmu e ō hoa ki ā rātou waea.
-        studio_playlab_1: E hiahia ana a Waddles ki te mihi "kia ora" - māu ia e āwhina?
-        studio_playlab_2: E hiahia ana a Cave Boy (kaiwhakaari 1) rāua ko Jasmine
-          (kaiwhakaari 2) ki te mihi "kia ora" rāua ki a rāua. Māu rāua e āwhina mā
-          te whakamahi i te paraka "kōrero" e rua ngā wā?
-        studio_playlab_3: Māu a Kōtiro Tēnehi e āwhina ki te tae atu ki te haki?
-        studio_playlab_4: Māu a Tama Tēnehi (kaiwhakaari 1) e āwhina kia tae atu ia
-          ki Kōtiro Tēnehi (kaiwhakaari 2) me te whakatangi i tētahi oro i tōna taenga
-          atu?
-        studio_playlab_5: Māu te Karetao Tuarangi e āwhina ki te kī "kia ora tangata
-          mā" ina pāwhiritia? Kaua e wareware ki te pāwhiri i a ia i muri i tō pāwhiri
-          i te Whakahaerehia
-        studio_playlab_6: Māu te Wahine Wetiweti e whakaneke mā te whakamahi i ngā
-          kī o ngā pere runga/raro/matau/mauī ki te tiki i ngā poiahi mīharo?
-        studio_playlab_7: Mā te paraka "tōaitia āke, āke" ka rite tonu te rere o tō
-          waehere. Ka taea e koe ētahi paraka te whakapiri kia rite tonu te neke o
-          te ruānuku ki te taha matau me te taha mauī?
-        studio_playlab_8: E taea ana e koe tētahi paraka te tāpiri kia riro ki tētahi
-          piro me tētahi paraka ki te whakatangi i tētahi oro ina tuki te ruānuku
-          ki te mairetahi, ka whakaneke i a ia me ngā pere tae noa ki te wā ka riro
-          i ētahi piro?
-        studio_playlab_9: Tautuhia te papamuri mō te whakaekenga o ngā kaituarangi,
-          kātahi me āwhina i te Karetao Tuarangi ki te tae tere atu ki te kaituarangi
-          mā te panoni i tōna tere. Tēnā, nekehia ia me ngā kī pere kia tae atu ki
-          te koiora tuarangi me te whakatūpato i te marea
-        studio_playlab_10: Waihangahia tō ake kēmu. Mutu ana, pāwhiritia te Mutu kia
-          wātea kia whakamātauria tō kēmu e ō hoa ki ā rātou waea.
-        studio_iceage_hello1: E hiahia ana a Syd ki te whakarāmemene i te marea ki
-          te whai i tētahi mahi mātātoa hou. Māu ia e āwhina ki te kī "kia ora" mā
-          te tō i te paraka "kōrerohia" ki te papamahi ka patotuhia ai te kupu "kia
-          ora" ki roto?
-        studio_iceage_hello2: I kite a Manny (kaitapere 1) i a Sid (kaitapere 2),
-          ā, e hiahia ana ia ki te pōhiri i a ia ki tana mahi mātātoa. Māu rāua e
-          āwhina mā te whakamahi i te paraka "ka kōrero te kaitapere" e rua ngā wā,
-          kia pai ai tā rāua mihi ki a rāua anō.
-        studio_iceage_move_to_flag: Kei te rapu a Scrat i tana kano oke! Āwhinatia
-          a ia ki te koke i ngā pika 200 noa iho e toe ana me te paraka "neke".
-        studio_iceage_move_to_actor: Kei te rapu a Diego (kaitapere 1) i a Manny (kaitapere2).
-          Āwhinatia a Diego ki te neke ki raro e 200 pika ki a Manny me te paraka
-          "nekehia te kaitapere". Mutu ana, tūhonotia te paraka ki te takahanga "ina
-          pāngia e te kaitapere" kia tangi mai tētahi oro i te wā ka kite rāua i a
-          rāua.
-        studio_iceage_repeat: Mā te paraka "tōaitia āke, āke" ka rite tonu te rere
-          o tō waehere. Ka taea e koe ētahi paraka te whakapiri kia rite tonu te neke
-          o Karanimā ki te taha matau me te taha mauī ki pai ai tana korikori tinana?
-        studio_iceage_click_hello: Māu a Sid e āwhina ki te tuku karanga whakamutunga
-          ki ōna hoa ina pāwhiritia ia? Kaua e wareware ki te pāwhiri i a ia i muri
-          i tō pāwhiri i te Whakahaerehia.
-        studio_iceage_move_events: Kei te rapu tonu a Scrat i ngā kano oke! Āwhinatia
-          a ia ki te karapetapeta haere mā te whakapiri i tētahi paraka "neke" ki
-          ngā takahanga katoa, mā te panoni hoki i te ahunga kia tutuki pai ai me
-          ngā kī pere. Mutu ana, pāwhiritia te Whakahaerehia, kātahi me ngana ki te
-          kohikohi i ngā kano oke katoa.
-        studio_iceage_sound_and_points: Nā mātou te nuinga o te waehere whakaneke
-          i a Karanimā ki te taha mauī me te taha matau. Nā mātou hoki te waehere
-          whakaneke i a Sid i te mata. Māu te waehere e whakaoti, māu hoki e tāpiri
-          i ngā paraka ki te takahanga "ina pāngia e te kaitapere" kia tangi mai he
-          oro, kia riro hoki ki tētahi piro i te tukinga o Sid rāua ko Karanimā? Pāwhiritia
-          te Whakahaerehia ki te tākaro i te kēmu.
-        studio_iceage_warn_ice_age: Me horo ake te haere, nā te mea, e whakatata mai
-          ana te ao tio! Panonihia te papamuri kia tio te hanga, ā, tautuhia te tere
-          o Sid ki te hohoro. Mutu ana, me pāwhiri i te Whakahaerehia me te whakaneke
-          i a ia ki a Diego kia pai ai tana whakatūpato i a ia.
-        studio_iceage_throw_hearts: E hiahia ana a Sid kia mōhio tōna kuia, a Karanimā,
-          i te nui o tana aroha mōna. Whakamahia te whakahau "makaia e te kaitapere"
-          kia makaia e Sid (kaitapere 1) ngā manawa ki a Karanimā (kaitapere 2)! Tautuhia
-          te wairua o Karanimā kia harikoa ia ina patua me ngā manawa.
-        studio_iceage_free_play: Kua eke te wā māu anō tāu ake kēmu, paki rānei e
-          waihanga! Kia tutuki i a koe tēnā, pāwhiritia te Mutu kia wātea tō kēmu
-          ki ō hoa hei korikori mā rātou i ā rātou waea, paparorohiko, rorohiko rānei!
-        studio_gumball_hello1: Kei te kimi hoa hou a Anais. Māu a ia e āwhina ki te
-          kī "kia ora" mā te tō i te paraka "kōrerohia" ki te papamahi ka patotuhia
-          ai te kupu "kia ora" ki roto?
-        studio_gumball_hello2: E haere ana a Darwin (kaitapere 1) rāua ko tana taina
-          Gumball (kaitapere 2) ki te kura. Māu rāua e āwhina mā te whakamahi i te
-          paraka "ka kōrero te kaitapere" e rua ngā wā, kia pai ai tā rāua mihi ki
-          a rāua anō.
-        studio_gumball_move_to_flag: Kei te rapu a Scrat i tana kano oke! Āwhinatia
-          a ia ki te oma i ngā pika 200 noa iho e toe ana me te paraka "neke".
-        studio_gumball_move_to_actor: Kua tōmuri a Gumball (kaitapere 1) rāua ko Darwin
-          (kaitapere 2) mō te rā taiao! Āwhinatia a Gumball ki te neke ki raro mā
-          te 200 pika ki a Darwin mā te whakamahi i te paraka "nekehia te kaitapere".
-          Kātahi me whakahono i tētahi paraka ki te takahanga "ki te pāngia e te kaitapere"
-          kia tangi mai tētahi oro ina kite rāua i a rāua.
-        studio_gumball_repeat: Mā te paraka "tōaitia āke, āke" ka rite tonu te rere
-          o tō waehere. Ka taea e koe ētahi paraka te whakapiri kia rite tonu te neke
-          o Gumball ki te taha matau me te taha mauī ki rite pai ai tōna tinana ki
-          te oma?
-        studio_gumball_click_hello: Māu a Anton e āwhina ki te whakapāoho i te tīmatanga
-          o te whakataetae mā te kī "Kia rite, kia mau, karawhiua!"? Kaua e wareware
-          ki te pāwhiri i a Anton i muri i tō pāwhiri i te Whakahaerehia ki te whakamātau
-          i tō papatono!
-        studio_gumball_move_events: Ko Darwin kei te whakataetae kohikohi haki! Māu
-          ia e āwhina ki te omaoma haere mā te whakapiri i tētahi paraka "neke" ki
-          ia takahanga. Mutu ana, pāwhiritia te Whakahaerehia, ā, me ngana ki te kohikohi
-          i te katoa o ngā haki.
-        studio_gumball_sound_and_points: Nā mātou te nuinga o te waehere mā reira
-          e neke tonu ai a Anton (kaitapere 2) ki te taha mauī me te taha matau. Nā
-          mātou hoki te waehere whakaneke i a Panana Joe (kaitapere 1) i te mata.
-          Māu te waehere e whakaoti, māu hoki e tāpiri i ngā paraka ki te takahanga
-          "ina pāngia e te kaitapere" kia tangi mai he oro, kia riro hoki ki tētahi
-          piro i te tukinga o Panana Joe rāua ko Anton? Pāwhiritia te Whakahaerehia
-          ki te tākaro i te kēmu.
-        studio_gumball_warn_food_fight: Kātahi nei a Darwin ka whakahore i tētahi
-          whawhai kai! Panonihia te papamuri ki te "kiripuaki", ā, tautuhia te tere
-          o Darwin ki te hohoro. Pāwhirita te Whakahaerehia me te neke i a ia ki a
-          Penny kia pai ai tana whakatūpato i a ia.
-        studio_gumball_join_food_fight: E kuhu ki te whawhai kai! Whakamahia te whakahau
-          "makaia e te kaitapere te tuemi ki te taha matau" kia makaia e Panana Joe
-          (kaitapere 1) i te kai ki a Anton (kaitapere 2)! Tautuhia te wairua o Anton
-          ki riri ina patua me te kai.
-        studio_gumball_free_play: Māu anō tāu ake kēmu, paki rānei e waihanga! Kia
-          tutuki i a koe, pāwhiritia te Mutu kia wātea tō kēmu ki ō hoa hei korikori
-          mā rātou i ā rātou waea, paparorohiko, rorohiko rānei!
-        studio_full_sandbox: Waihangahia tō ake kēmu. Mutu ana, pāwhiritia te Mutu
-          kia wātea kia whakamātauria tō kēmu e ō hoa ki ā rātou waea.
-        studio_k1_1: Māu rānei tēnei kurī e whakakōrero kia pēnei tana mihi "kia ora
-          e te ao"?
-        studio_k1_2: Māu te kurī e whakakōrero, ā, whai muri atu, māu te ngeru e whakakōrero?
-        studio_k1_3: E taea ana e koe tētahi papatono te tuhi ki te whakaneke i tēnei
-          kurī ki te ngeru?
-        studio_k1_4: Meatia kia neke te kurī ki te ngeru, ā, i tōna taenga atu ka
-          mihi "kia ora" atu te ngeru.
-        studio_k1_5: Māu tētahi paraka e tāpiri e harikoa ai te wheke?
-        studio_k1_6: Māu tāu ake paki e waihanga. Nekehia te ngeru me te kurī me te
-          whakakōrero i a rāua.
-        maze_wordsearch_k_1: Nekehia ahau kia pai ai taku tātaki i te kupu EAST
-        maze_wordsearch_k_2: Nekehia ahau kia pai ai taku tātaki i te kupu SOUTH
-        maze_wordsearch_k_3: Nekehia ahau kia pai ai taku tātaki i te kupu WEST
-        maze_wordsearch_k_4: Nekehia ahau kia pai ai taku tātaki i te kupu NORTH
-        maze_wordsearch_k_6: Nekehia ahau ki te taha rāwhiti kātahi ki te tonga ki
-          te tātaki i te kupu JUMP
-        maze_wordsearch_k_9: Nekehia ahau mā tētahi ara, kātahi mā tētahi atu ara
-          ki te tātaki i te kupu CODE
-        maze_wordsearch_k_13: Nekehia ahau mā tētahi ara, kātahi mā tētahi atu ara
-          ki te tātaki i te kupu DEBUG
-        maze_wordsearch_k_15: Nekehia ahau mā tētahi ara, kātahi mā tētahi atu ara
-          ki te tātaki i te kupu ABOVE
-        maze_wordsearch_k_16: Nekehia ahau mā tētahi ara, kātahi mā tētahi atu ara
-          ki te tātaki i te kupu BELOW
-        maze_wordsearch_k_20: He whakamātautau tēnei! Nekehia ahau mā tētahi ara,
-          kātahi mā tētahi atu ara ki te tātaki i te kupu STORY
-        applab_ec_simple: Waihanga i tō ake taupānga mā te whakamahi i ngā paraka
-          kei te pouaka utauta.
-        turtle_ec_1_2: 'Nā, me tā i tētahi tapawhā i nāianei. KIA MAHARA: whakamahia
-          tō tino tae mā te whiriwhiri i taua tae ki te paraka "taePene" hou.'
         turtle_ec_1_10: 'Kua tutuki! Tāngia mai tāu e hiahia ana. Anei ētahi whakaaro
           ngahau: he tangata pekapeka, he tarahīhuka, he tōrino rānei. Whakamātauria
           hoki te paraka "whānuitangaPene" hou. Kia ngahau!'
-        studio_ec_sandbox: Waihangahia tō ake kēmu. Mutu ana, pāwhiritia te Mutu kia
-          wātea kia whakamātauria tō kēmu e ō hoa ki ā rātou waea.
+        turtle_ec_1_2: 'Nā, me tā i tētahi tapawhā i nāianei. KIA MAHARA: whakamahia
+          tō tino tae mā te whiriwhiri i taua tae ki te paraka "taePene" hou.'
+    trophy:
+      name:
+        Bronze: Rauwhero
+        Gold: Kōura
+        Silver: Hiriwa
     video:
       name:
-        maze_intro: Tīmatanga Rīrapa
-        artist_intro: Tīmatanga Rehetoi
-        farmer_intro: Tīmatanga Kaiahuwhenua
-        flappy_intro: Tīmatanga Flappy
-        loop_times: Paraka Tōai Ngā Wā
-        loop_until: Paraka Tōaitia Kia
-        if: Paraka Mēnā
-        if_else: Paraka Mēnā/Kē
-        if_else_scrat: Paraka Mēnā/Kē
-        function: Ngā Taumahi
-        loop_while: Paraka I Te
-        loop_for: Paraka Pūtatau
-        parameters: Ngā Taumahi Whai Tawhā
-        hoc_wrapup: Whakamutunga o Hour of Code
+        C1_artist_intro: Tīmatanga Rehetoi
+        C1_bee_level_intro: Tīmatatanga - Taumata Pī
+        C1_bee_loops: Ngā Koromeke Pī
+        C1_bigevent_unplugged: Te Takahanga Nui
+        C1_building_foundation: Te Hanga Tūāpapa
+        C1_getting_loopy: Kia Koromeke
+        C1_going_places_safely: Te Karore Haumaru
+        C1_happy_maps_unplugged: Ngā Mahere Harikoa
+        C1_maze_debugging: Patuirotanga Rīrapa
+        C1_maze_intro_sequencing: Kupu Whakataki Whakaraupapa Rīrapa
+        C1_maze_loops: Ngā Koromeke Rīrapa
+        C1_moveitmoveit_unplugged: E Neke, E Neke
+        C1_pair_programming: Papatonotanga ā-Tānga
+        C1_planting_seed: Te Whakatō Kano
+        C1_playlab_storytelling: Taiwhanga Tākaro - Waihangahia tētahi Paki
+        C1_spelling_bee_intro: Tīmatanga Ohu Takikupu
+        C1_zuck_repeat_loop: Ngā Koromeke Rīrapa
+        C2_artist_debugging: Patuirotanga Rehetoi
+        C2_artist_intro: Tīmatanga Rehetoi
+        C2_artist_loops: Ngā Koromeke Rehetoi
+        C2_bee_conditionals: Ngā Here Pī
+        C2_bee_debugging: Patuirotanga Pī
+        C2_bee_loops: Ngā Koromeke Pī
+        C2_binary_bracelets: Kōmore Ā-Rua
+        C2_conditionals_with_cards: Ngā Here
+        C2_digital_footprint: Tō Tapuwae Matihiko
+        C2_digital_footprint_v2: Tō Tapuwae Matihiko
+        C2_graph_paper: Papatono Pepa Kauwhata
+        C2_maze_intro: Tīmatanga Rīrapa
+        C2_paper_airplanes: Waka Rererangi Pepa
+        C2_playlab_createstory: Taiwhanga Tākaro - Waihangahia tētahi Paki
+        C2_relay_programming: Papatonotanga ā-Tānga
+        C2_zuck_repeat_loop: Ngā Koromeke Rīrapa
+        C3_artist_functions: Ngā Taumahi Rehetoi
+        C3_artist_intro: Tīmatanga Rehetoi
+        C3_artist_nested_loops: Ngā Koromeke Tauroto
+        C3_bee_conditionals: Ngā Here Pī
+        C3_bee_debugging: Patuirotanga Pī
+        C3_bee_functions: Ngā Taumahi Pī
+        C3_bee_nested_loops: Ngā Koromeke Tauroto
+        C3_bounce: Tupana
+        C3_computational_thinking: Whakaaro ā-Rorohiko
+        C3_crowdsourcing: Te Mahi ā-Ohu
+        C3_dice_race: Whakataetae Mataono
+        C3_farmer_while: Ngā Koromeke I Te
+        C3_functional_suncatchers: Ngā Hopu Rā Taumahinga
+        C3_internet: Te Ipurangi
+        C3_maze_conditionals: Ngā Here Rīrapa
+        C3_maze_level_4: Ngā Koromeke Rīrapa
+        C3_playlab_create_game: 'Taiwhanga Tākaro: Waihangahia tētahi Kēmu'
+        C3_songwriting_with_parameters: Te Titowaiata me ngā Tawhā
+        C4_bee_conditional: Ngā Here Pī
+        C4_conditionals: Ngā Here
+        C4_for_loops: Mō Ngā Koromeke
+        C4_for_loops_bee: Mō Ngā Koromeke
+        C4_for_loops_no_bee: Mō Ngā Koromeke
+        C4_function_create: Te Waihanga Taumahi
+        C4_function_edit: Te Whakatika Taumahi
+        C4_function_parameters: Ngā Taumahi Whai Tawhā
+        C4_intro: Kupu Whakataki
+        C4_loops_zombie: Ngā Koromeke
+        C4_math_artist: Te Papatono i te Rehetoi me te Pāngarau
+        C4_unplugged_algorithms: Ngā Hātepe me ngā Hangawhitu
+        C4_unplugged_binary: Tāhūrua
+        C4_unplugged_forloops: Mō Ngā Koromeke
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_parameters: Te Titowaiata me ngā Tawhā
+        C4_unplugged_variables: Ngā Taurangi ki rō Kōpaki
+        C4_variables_artist: Ngā Taurangi - Rehetoi
+        C4_variables_playlab: Ngā Taurangi - Taiwhanga Tākaro
+        CSF_loops_AB: Ngā Koromeke
+        MC_2018_loops: 'Toihuke: Rerenga Moana Wakahoutia tonu ake'
         Unplug1: He aha te CS?
+        Unplug10: Te Ipurangi
+        Unplug11: Tākaia
         Unplug2: Whakaaro ā-Rorohiko
         Unplug3: Papatono Pepa Kauwhata
         Unplug4: Ngā Hātepe
@@ -581,258 +770,69 @@ mi:
         Unplug7: Te Tito Waiata
         Unplug8: Te Whakawaitara
         Unplug9: Papatonotanga ā-Tānga
-        Unplug10: Te Ipurangi
-        Unplug11: Tākaia
-        C1_happy_maps_unplugged: Ngā Mahere Harikoa
-        C1_moveitmoveit_unplugged: E Neke, E Neke
-        C1_bigevent_unplugged: Te Takahanga Nui
-        C1_getting_loopy: Kia Koromeke
-        C1_pair_programming: Papatonotanga ā-Tānga
-        C1_maze_intro_sequencing: Kupu Whakataki Whakaraupapa Rīrapa
-        C1_maze_debugging: Patuirotanga Rīrapa
-        C1_bee_level_intro: Tīmatatanga - Taumata Pī
-        C1_artist_intro: Tīmatanga Rehetoi
-        C1_spelling_bee_intro: Tīmatanga Ohu Takikupu
-        C1_zuck_repeat_loop: Ngā Koromeke Rīrapa
-        C1_bee_loops: Ngā Koromeke Pī
-        C1_maze_loops: Ngā Koromeke Rīrapa
-        C1_playlab_storytelling: Taiwhanga Tākaro - Waihangahia tētahi Paki
-        C1_planting_seed: Te Whakatō Kano
-        C1_building_foundation: Te Hanga Tūāpapa
-        C1_going_places_safely: Te Karore Haumaru
-        C2_maze_intro: Tīmatanga Rīrapa
-        C2_artist_intro: Tīmatanga Rehetoi
-        C2_zuck_repeat_loop: Ngā Koromeke Rīrapa
-        C2_artist_loops: Ngā Koromeke Rehetoi
-        C2_artist_debugging: Patuirotanga Rehetoi
-        C2_bee_loops: Ngā Koromeke Pī
-        C2_bee_debugging: Patuirotanga Pī
-        C2_bee_conditionals: Ngā Here Pī
-        C2_playlab_createstory: Taiwhanga Tākaro - Waihangahia tētahi Paki
-        C2_graph_paper: Papatono Pepa Kauwhata
-        C2_conditionals_with_cards: Ngā Here
-        C2_binary_bracelets: Kōmore Ā-Rua
-        C2_relay_programming: Papatonotanga ā-Tānga
-        C2_paper_airplanes: Waka Rererangi Pepa
-        C2_digital_footprint: Tō Tapuwae Matihiko
-        C2_digital_footprint_v2: Tō Tapuwae Matihiko
-        C3_maze_level_4: Ngā Koromeke Rīrapa
-        C3_artist_intro: Tīmatanga Rehetoi
-        C3_artist_functions: Ngā Taumahi Rehetoi
-        C3_bee_functions: Ngā Taumahi Pī
-        C3_bee_conditionals: Ngā Here Pī
-        C3_maze_conditionals: Ngā Here Rīrapa
-        C3_artist_nested_loops: Ngā Koromeke Tauroto
-        C3_farmer_while: Ngā Koromeke I Te
-        C3_bee_nested_loops: Ngā Koromeke Tauroto
-        C3_bee_debugging: Patuirotanga Pī
-        C3_bounce: Tupana
-        C3_playlab_create_game: 'Taiwhanga Tākaro: Waihangahia tētahi Kēmu'
-        C3_computational_thinking: Whakaaro ā-Rorohiko
-        C3_dice_race: Whakataetae Mataono
-        C3_internet: Te Ipurangi
-        C3_crowdsourcing: Te Mahi ā-Ohu
-        C3_functional_suncatchers: Ngā Hopu Rā Taumahinga
-        C3_songwriting_with_parameters: Te Titowaiata me ngā Tawhā
-        C4_intro: Kupu Whakataki
-        C4_loops_zombie: Ngā Koromeke
-        C4_bee_conditional: Ngā Here Pī
-        C4_variables_artist: Ngā Taurangi - Rehetoi
-        C4_variables_playlab: Ngā Taurangi - Taiwhanga Tākaro
-        C4_for_loops: Mō Ngā Koromeke
-        C4_for_loops_bee: Mō Ngā Koromeke
-        C4_for_loops_no_bee: Mō Ngā Koromeke
-        C4_math_artist: Te Papatono i te Rehetoi me te Pāngarau
-        C4_function_edit: Te Whakatika Taumahi
-        C4_function_create: Te Waihanga Taumahi
-        C4_function_parameters: Ngā Taumahi Whai Tawhā
-        C4_conditionals: Ngā Here
-        C4_unplugged_algorithms: Ngā Hātepe me ngā Hangawhitu
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Ngā Taurangi ki rō Kōpaki
-        C4_unplugged_forloops: Mō Ngā Koromeke
-        C4_unplugged_parameters: Te Titowaiata me ngā Tawhā
-        C4_unplugged_binary: Tāhūrua
-        frozen_intro: Te Kupu Whakataki mō Hour of Code
-        frozen_loops: Kupu Whakataki ki Ngā Koromeke
-        frozen_functions: Kupu Whakataki ki Ngā Taumahi
-        playlab_intro: Kupu Whakataki ki Taiwhanga Tākaro
-        playlab_events: Ngā Takahanga Taiwhanga Tākaro
-        playlab_repeat_forever: Taiwhanga Tākaro Tōai Āke Āke
-        tutorial_puzzle_challenge: Akoranga Panga Whakatara
-        infinity_playlab_intro: Taiwahanga Tākaro - Kupu Whakataki
-        infinity_playlab_events: Taiwhanga Tākaro - Ngā Takahanga
-        infinity_playlab_repeat_forever: Taiwhanga Tākaro - Tōai Āke Āke
+        artist_intro: Tīmatanga Rehetoi
+        csd_applab_parameters: Ngā Taumahi Whai Tawhā
+        csd_pair_programming: Papatonotanga ā-Tānga
         csp_applab_functions: Kupu Whakataki ki Ngā Taumahi
         csp_applab_functions_parameters: Ngā Taumahi Whai Tawhā
         csp_applab_loops: Ngā Koromeke
-        starwars_intro: 'Star Wars: Te Hanga Ikarangi me te Waehere - Kupu Whakataki'
-        starwars_typing: 'Star Wars: Te Hanga Ikarangi me te Waehere - JavaScript'
-        starwars_events: 'Star Wars: Te Hanga Ikarangi me te Waehere - Ngā Takahanga'
-        starwars_congrats: 'Star Wars: Te Hanga Ikarangi me te Waehere - Kupu Whakamiha'
-        starwars_blocks_intro: 'Star Wars: Te Hanga Ikarangi me te Waehere - Kupu
-          Whakataki'
-        starwars_blocks_events: 'Star Wars: Te Hanga Ikarangi me te Waehere - Ngā
-          Takahanga'
-        starwars_blocks_congrats: 'Star Wars: Te Hanga Ikarangi me te Waehere - Kupu
-          Whakamiha'
-        mc_intro: Mahimaina - Kupu Whakataki
-        mc_repeat: Mahimaina - Tōai
-        mc_if_statements: Mahimaina - Tauākī Menā
-        mc_congrats_share: Mahimaina - Kupu Whakamiha
-        mc_congrats_no_share: Mahimaina - Kupu Whakamiha
-        gumball_intro: Hour of Code Gumball - Kupu Whakataki
+        csp_applab_parameters: Ngā Taumahi Whai Tawhā
+        farmer_intro: Tīmatanga Kaiahuwhenua
+        flappy_intro: Tīmatanga Flappy
+        frozen_functions: Kupu Whakataki ki Ngā Taumahi
+        frozen_intro: Te Kupu Whakataki mō Hour of Code
+        frozen_loops: Kupu Whakataki ki Ngā Koromeke
+        function: Ngā Taumahi
         gumball_events: Hour of Code Gumball - Ngā Takahanga
+        gumball_intro: Hour of Code Gumball - Kupu Whakataki
         gumball_repeat: Hour of Code Gumball - Ngā Tauākī Tōai
-        iceage_intro: Hour of Code Ice Age - Kupu Whakataki
+        hoc_dance_events: Te Pāti Kanikani - Ngā Takunetanga
+        hoc_dance_events_2019: Te Pāti Kanikani - Ngā Takunetanga
+        hoc_dance_properties: Te Pāti Kanikani - Ngā Auaha
+        hoc_dance_properties_2019: Te Pāti Kanikani - Ngā Auaha
+        hoc_wrapup: Whakamutunga o Hour of Code
         iceage_events: Hour of Code Ice Age - Ngā Takahanga
+        iceage_intro: Hour of Code Ice Age - Kupu Whakataki
         iceage_repeat: Hour of Code Ice Age - Ngā Tauākī Tōai
+        if: Paraka Mēnā
+        if_else: Paraka Mēnā/Kē
+        if_else_scrat: Paraka Mēnā/Kē
+        infinity_playlab_events: Taiwhanga Tākaro - Ngā Takahanga
+        infinity_playlab_intro: Taiwahanga Tākaro - Kupu Whakataki
+        infinity_playlab_repeat_forever: Taiwhanga Tākaro - Tōai Āke Āke
+        loop_for: Paraka Pūtatau
+        loop_times: Paraka Tōai Ngā Wā
+        loop_until: Paraka Tōaitia Kia
+        loop_while: Paraka I Te
+        maze_intro: Tīmatanga Rīrapa
+        mc_2016_congrats: Hour of Code Mahimaina - Kupu Whakamiha
+        mc_2016_events: Hour of Code Mahimaina - Ngā Takahanga
         mc_2016_intro: Hour of Code Mahimaina - Kupu Whakataki
         mc_2016_loops: Hour of Code Mahimaina - Ngā Koromeke
-        mc_2016_events: Hour of Code Mahimaina - Ngā Takahanga
         mc_2016_spawn: Hour of Code Mahimaina - Te Whakaputa
-        mc_2016_congrats: Hour of Code Mahimaina - Kupu Whakamiha
         mc_2017_congratulations: Hour of Code Mahimaina - Kupu Whakamiha
-        CSF_loops_AB: Ngā Koromeke
-        mc_2018_intro: 'Toihuke: Rerenga Moana Timatanga kōrero'
-        MC_2018_loops: 'Toihuke: Rerenga Moana Wakahoutia tonu ake'
-        mc_2018_conditionals: 'Toihuke: Rerenga Moana Nga Tikanga'
         mc_2018_closing: 'Toihuke: Rerenga Moana Ngaa Mihi'
-        hoc_dance_events: Te Pāti Kanikani - Ngā Takunetanga
-        hoc_dance_properties: Te Pāti Kanikani - Ngā Auaha
-        csd_pair_programming: Papatonotanga ā-Tānga
-        csd_applab_parameters: Ngā Taumahi Whai Tawhā
-        hoc_dance_events_2019: Te Pāti Kanikani - Ngā Takunetanga
-        hoc_dance_properties_2019: Te Pāti Kanikani - Ngā Auaha
+        mc_2018_conditionals: 'Toihuke: Rerenga Moana Nga Tikanga'
+        mc_2018_intro: 'Toihuke: Rerenga Moana Timatanga kōrero'
+        mc_congrats_no_share: Mahimaina - Kupu Whakamiha
+        mc_congrats_share: Mahimaina - Kupu Whakamiha
+        mc_if_statements: Mahimaina - Tauākī Menā
+        mc_intro: Mahimaina - Kupu Whakataki
+        mc_repeat: Mahimaina - Tōai
+        parameters: Ngā Taumahi Whai Tawhā
         playlab_2021: Kupu Whakataki ki Taiwhanga Tākaro
         playlab_2021_reader: Kupu Whakataki ki Taiwhanga Tākaro
-        csp_applab_parameters: Ngā Taumahi Whai Tawhā
-    callout:
-      text:
-        drag_blocks: Tōia tētahi paraka "neke", kātahi me hoatu ki raro i tērā atu
-          paraka
-        run: Pāwhiritia te "Whakahaerehia" ki te whakamātau i tō papatono
-        watch_again: Pāwhiritia i konei ki te mātakitaki anō i te ataata
-        gray_block_explanation: Tē taea te muku i ngā paraka kiwikiwi. E āhei tonu
-          ana e koe te panga te whakaoti?
-        show_code_explanation: Pāwhiritia i konei kia kitea te waehere mō te papatono
-          e hangaia ana e koe
-        instructions_repeat_explanation: Kua tōaitia ngā tohutohu mō ia panga ki konei
-        category_explanation: He ōrite tonu āu paraka engari kei te noho ā-kāwai i
-          nāianei
-        set_sprite_image: Me whakapiri i tētahi paraka "tautuhia te rehetoi ki te
-          atahanga" ki te paraka "ina tīmata te paki" kia whakahohea tētahi kaitapere
-          mō tēnei paki
-        studio_say_text: Patotuhia ngā kōrero ka kōrerotia e tō kaitapere ki waenganui
-          i ēnei pikorua
-        jigsaw_click: Pāwhiritia tēnei paraka!
-        move_elsa_forward: Tōia te paraka "Neke ki Mua" ka whakpiri ki raro i te paraka
-          "Ina Whakahaerehia" kia neke a Elsa ki mua
-        turn_elsa: Whakamahia te paraka "Huri" kia huri a Elsa. Mā te tau i te pouaka
-          takaiho e tohu ka pēhea te nui o tana huri
-        replace_questions: Whakamahia te pouaka takaiho ki te whakakapi i te "???"
-          ki tētahi tau
-        replace_questions_degree: Whakamahia te pouaka takaiho ki te whakakapi i te
-          "???" ki putu ka huri tika
-        repeat_blocks: Whakamahia te paraka "Tōai", ka tākai ki ērā atu paraka i te
-          papamahi
-        repeat_blocks_1: "(1) Whakamahia tēnei paraka, ā, hoatu kia karapotia ngā
-          paraka kiwikiwi i te papamahi"
-        repeat_blocks_2: (2) Nekehia te paraka "Tōai" ki konei ka hoatu ai he paraka
-          kiwikiwi ki roto
-        snowflake_dropdown: Whakamahia te pouaka takaiho ki te waihanga i ngā tarahīhuka
-          rerekē!
-        degrees_per_side: Me whakawehe i te 360 mā te nui o ngā tapa kia kitea te
-          rahi o ia koki ā-putu.
-        set_sides: Whakamahia tēnei paraka ki te tautuhi i te "taha" ki te tau e tika
-          ana kia pai ai te whakaoti i te panga.
-        set_length: Whakamahia tēnei paraka ki te tautuhi i te "roanga" ki te uara
-          tika.
-        which_equation: Mā tēhea whārite e poto ake ai ngā tapa mō ngā āhua he maha
-          ake ngā tapa?
-        get_nectar: Whakamahia te paraka "tiki waireka" hou.
-        actions_category: Kua hou katoa te hanga o te pouaka utauta! Kei reira hoki
-          ngā paraka "Ngā Hohenga" ināianei.
-        draw_square_hint: 'Tīwhiri: Whakamahia te koromeke tapawhā kātahi anō koe
-          ka hanga i te panga o mua.'
-        edit_function: Pāwhiri i konei ki te whakatika i tō taumahi.
-        create_function: Pāwhiri i konei ki te whakatuwhera i te rereatu "Ngā Taumahi"
-          kātahi me pāwhiri i te pātene "Waihangahia he Taumahi".
-        house_hint: Kei te pai noa iho mēnā kāore anō te hanga kia rite ki te whare.
-          Mā tātou e whakatika i te panga e haere ake nei.
-        edit_draw_square: Whakamahia tēnei pātene ki te whakatika i te taumahi me
-          te tāpiri i te koromeke.
-        edit_get_nectar: Whakamahia tēnei pātene ki te whakatika i te taumahi me te
-          panoni i te ahunga ka whaia e te Pī ki te tiki i te waireka.
-        logic_category: Tuwheratia te rereatu "Ararau" ki te rapu i te paraka "mēnā/kē".
-        length_parameter: Māu tēnei taumahi e whakahou ki te whakamahi i te tawhā
-          "roanga"?
-        frozen_diamond_repeat: Whakamahia te paraka tōai ki te waihanga i tēnei āhua.
-        frozen_circle_function_in_circle_turn: Kia maumahara, me huri i muri mai i
-          te waihangatanga o ia porohita.
-        frozen_circle_function_with_parameter_circle: Whakamahia te paraka "waihangahia
-          he porohita", kātahi, me panoni i tōna rahi.
-        frozen_snowflake_branch: Whakamahia te paraka "waihangahia he peka tarahīhuka"
-        frozen_create_square: Whakapiri i ētahi atu paraka ki konei ki te waihanga
-          i tētahi tapawhā
-        playlab_drag_say: Tōia te paraka "kōrero" ki konei, ā, patotuhia te kupu "kia
-          ora"
-        playlab_use_twice: Whakamahia tēnei paraka kia rua ngā wā, ā, me maumahara
-          ki te panoni i te tau kaitapere
-        playlab_move_girl: Whakamahia te paraka "neke whakatematau" ki te neke i te
-          Kōtiro Tēnehi
-        playlab_play_sound: Tāpiritia te paraka "whakatangi oro" ki konei
-        playlab_arrow_keys: Me maumahara ki te whakamahi i ēnei ki te neke i te Wahine
-          Wetiweti i muri mai i te pāwhiritanga o te Whakahaerehia
-        playlab_add_move: Tāpiritia ngā paraka "neke" ki roto i tēnei paraka tōai
-        playlab_add_score: Tāpiritia he paraka piro ki konei
-        playlab_add_blocks: Tāpiritia ō paraka ki konei
-        set_variable: Tōia tētahi paraka tau ki konei ki te tautuhi i tō taurangi
-        place_variable: Tōia tō taurangi ki roto i tēnei paraka
-        bee_for_loop: Tōia te nui o te waireka e hiahia e koe kia kohikohi e te pī
-          ki konei
-        place_counter_variable: Tōia tō taurangi pūtatau ki roto i tēnei paraka
-        function_editor_draw_square: Koinei tō whakamahukitanga taumahi. Ka rite tonu
-          te rere o ēnei paraka i ia wā ka whakamahia e koe te paraka "tāngia he tapawhā"
-        change_here: Panonihia i konei
-        write_draw_square_function: Tōia ngā paraka i te pouaka utauta ki konei ki
-          te tā i tētahi tapawhā
-        write_draw_triangle_function: Tōia ngā paraka i te pouaka utauta ki konei
-          ki te tā i tētahi tapatoru
-        edit_add_parameter: Pāwhiri i te whakatika ki te tāpiri i tētahi tawhā ki
-          tō taumahi
-        add_and_drag_parameter: Patotuhia te ingoa o tō tawhā ki konei, ā, pāwhiritia
-          te tāpiri kātahi ka tō atu ki roto i tō whakamahukitanga taumahi
-        fill_in_actor: Whakakīia te ??? ki ngā tau e hāngai ana ki ia kaitapere (1,
-          2, me te 3)
-        repeat: Hoatu i ngā paraka ki roto i te koromeke ki te tōai i ngā whakahau
-        if_bee_nectar: Whakamahia te paraka "mēnā" ki te whakatau āe rānei me tiki
-          te pī i te waireka
-        if_else_bee: Whakamahia te paraka "mēnā/kē" kia tiki te Pī i te waireka i
-          tētahi putiputi, ā, mēnā ehara i te putiputi ka mahi mīere kē
-        repeat_full_circle: Tāurutia te nui o ngā wā me neke te kairoro ki te waihanga
-          i tētahi porohita
-        place_length_variable: Tōia te taurangi roanga ki konei ki te whakakapi i
-          ngā tohu pātai
-        arrows_move_actor: Whakamahia ngā pere ki te whakaneke i te kaiwhakaari
-        right_arrow_fireball: Whakamahia te pere matau ki te puhi i ngā poiahi
-        name_function: Tuhia te ingoa o tō taumahi ki konei
-        Infinity_move_right_runbutton: Tāpiritia he paraka whakaneke ki konei
-        Infinity_move_directions_callout: Mā tēhea paraka a Baymax ka neke ki runga
-          ina pēhia te pere runga?
-        Infinity_move_directions_callout_arrow: Whakamahia ēnei pere ki te whakatere
-        Infinity_move_collide_callout: Whakatangihia mai tētahi oro ki te puta tēnei
-          āhuatanga.
-        Infinity_repeat_callout: Hoatu paraka Neke ki roto nei
-        craft_run_button_callout: Pāwhiritia te "Whakahaerehia" ki te whakamātau i
-          tō papatono
-        craft_drag_block_callout: Tōia tētahi paraka "nekeKimua();", kātahi me hoatu
-          ki raro i tērā atu paraka
-        craft_callout_preplaced: Kua hoatu e mātou ētahi paraka hei tīmatanga māu
-        craft_inside_repeat: Tōaitia ngā hohenga mā te hoatu i ngā paraka ki roto
-          nei
-        craft_callout_preplaced_house: Ka tīmata te waehere ki te hanga i tō whare.
-          Ka taea e koe tēnā te whakamutu?
-        craft_what_is_iron: Mainahia tēnei rino!
-        craft_callout_moveforward: Mā tēnei waehere e taki i te tahepuia. E taea ana
-          e koe tētahi tono neke ki mua te tāpiri?
+        playlab_events: Ngā Takahanga Taiwhanga Tākaro
+        playlab_intro: Kupu Whakataki ki Taiwhanga Tākaro
+        playlab_repeat_forever: Taiwhanga Tākaro Tōai Āke Āke
+        starwars_blocks_congrats: 'Star Wars: Te Hanga Ikarangi me te Waehere - Kupu
+          Whakamiha'
+        starwars_blocks_events: 'Star Wars: Te Hanga Ikarangi me te Waehere - Ngā
+          Takahanga'
+        starwars_blocks_intro: 'Star Wars: Te Hanga Ikarangi me te Waehere - Kupu
+          Whakataki'
+        starwars_congrats: 'Star Wars: Te Hanga Ikarangi me te Waehere - Kupu Whakamiha'
+        starwars_events: 'Star Wars: Te Hanga Ikarangi me te Waehere - Ngā Takahanga'
+        starwars_intro: 'Star Wars: Te Hanga Ikarangi me te Waehere - Kupu Whakataki'
+        starwars_typing: 'Star Wars: Te Hanga Ikarangi me te Waehere - JavaScript'
+        tutorial_puzzle_challenge: Akoranga Panga Whakatara

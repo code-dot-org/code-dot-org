@@ -2,143 +2,26 @@
   "mk-MK": {
     "data": {
       "lessons": {
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "csd2-2017/Lists": {
+          "name": "Листи"
         },
-        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
-          "name": "Добредојдовте на “Предавање компјутерски науки - Основи”"
-        },
-        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
-          "name": "Разбирање на Курсевите за Основи на Компјутерските Науки"
-        },
-        "k5-onlinepd-2019/Loops": {
-          "name": "Лупови"
-        },
-        "k5-onlinepd-2019/End of Course projects": {
-          "name": "Крај на курсот проекти"
-        },
-        "k5-onlinepd-2019/Variables": {
+        "csd3-2017/Variables": {
           "name": "Променливи"
         },
-        "k5-onlinepd-2019/Reviewing your reflections": {
-          "name": "Разгледување на вашите рефлексии"
-        },
-        "k5-onlinepd-2019/Next steps": {
-          "name": "Следни чекори"
-        },
-        "vigenere/Vigenere": {
-          "name": "Вигенере"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Студија за расположение"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Програмирање управувано од настани"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Основна функционалност на апликацијата"
-        },
-        "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "Компјутерски науки Основи"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Преглед и упатства за поставување"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - Испраќање битови на заедничка жица"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Peer to Peer - Испраќање броеви"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - Испраќање броеви"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Емитување пораки"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Рутери и адреси"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Пакети и сигурност"
-        },
-        "netsim/Manual DNS": {
-          "name": "Прирачник DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Автоматски DNS јазол"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Интернет Симулатор Freeplay"
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Соба бегство"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Почетни и крајни екрани"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Почетни и крајни екрани2"
-        },
-        "kodea-pd-2021/Computer Science Fundamentals": {
-          "name": "Компјутерски науки Основи"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Колектор Час на кодот 2017"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Фреквенција Анализа"
-        },
-        "coursef-2022/The Power of Words": {
-          "name": "Моќта на зборовите"
-        },
-        "coursef-2022/Simulating Experiments": {
-          "name": "Симулирање експерименти"
-        },
-        "coursee-2022/Fancy Shapes using Nested Loops": {
-          "name": "Фенси форми користејќи вгнездени јамки"
-        },
-        "courseb-2022/Digital Trails": {
-          "name": "Дигитални патеки"
-        },
-        "courseb-2022/The Right App": {
-          "name": "Вистинската апликација"
-        },
-        "courseb-2022/The Big Event Jr": {
-          "name": "Големиот настан Џуниор"
-        },
-        "express-2022/Swimming Fish in Sprite Lab": {
-          "name": "Пливачка риба во Sprite Lab"
-        },
-        "express-2022/For Loops with Bee": {
-          "name": "За петелки со пчела"
-        },
-        "pre-express-2022/Sequencing with Scrat": {
-          "name": "Секвенционирање со Scrat"
-        },
-        "coursea-2022/Sequencing with Scrat": {
-          "name": "Секвенционирање со Scrat"
-        },
-        "coursea-2022/The Big Event Jr": {
-          "name": "Големиот настан Џуниор"
-        },
-        "coursec-2022/My Robotic Friends Jr": {
-          "name": "Моите роботски пријатели Џуниор"
-        },
-        "coursec-2022/My Loopy Robotic Friends Jr": {
-          "name": "Мој Loopy роботски пријатели Џуниор."
-        },
-        "csd3-2022/Variables": {
-          "name": "Променливи"
-        },
-        "csd3-2022/Sprites": {
+        "csd3-2017/Sprites": {
           "name": "Сприти"
         },
-        "csd3-2022/Text": {
-          "name": "Текст"
+        "csd2-2018/Lists": {
+          "name": "Листи"
+        },
+        "csd3-2018/Variables": {
+          "name": "Променливи"
+        },
+        "csd3-2018/Sprites": {
+          "name": "Сприти"
+        },
+        "coursea-2018/Events: The Big Event": {
+          "name": "Големиот настан Џуниор"
         },
         "courseb-2018/Sequencing with Scrat": {
           "name": "Секвенционирање со Scrat"
@@ -152,11 +35,14 @@
         "courseb-2018/Events: The Big Event": {
           "name": "Големиот настан Џуниор"
         },
-        "coursea-2018/Events: The Big Event": {
-          "name": "Големиот настан Џуниор"
+        "coursec-2018/Screen Out the Mean": {
+          "name": "Екран од средната вредност"
         },
         "coursed-2018/Nested Loops in Artist": {
           "name": "Фенси форми користејќи вгнездени јамки"
+        },
+        "coursee-2018/Alien Dance Party with Sprite Lab": {
+          "name": "Забава со вонземјани"
         },
         "coursef-2018/The Power of Words": {
           "name": "Моќта на зборовите"
@@ -197,12 +83,6 @@
         "express-2018/Alien Dance Party with Sprite Lab": {
           "name": "Забава со вонземјани"
         },
-        "coursee-2018/Alien Dance Party with Sprite Lab": {
-          "name": "Забава со вонземјани"
-        },
-        "coursec-2018/Screen Out the Mean": {
-          "name": "Екран од средната вредност"
-        },
         "pre-express-2018/Sequencing with Scrat": {
           "name": "Секвенционирање со Scrat"
         },
@@ -215,14 +95,14 @@
         "pre-express-2018/Events: The Big Event": {
           "name": "Големиот настан Џуниор"
         },
-        "csd3-2018/Variables": {
+        "csd2-2019/Lists": {
+          "name": "Листи"
+        },
+        "csd3-2019/Variables": {
           "name": "Променливи"
         },
-        "csd3-2018/Sprites": {
+        "csd3-2019/Sprites": {
           "name": "Сприти"
-        },
-        "csd2-2018/Lists": {
-          "name": "Листи"
         },
         "coursea-2019/Sequencing with Scrat": {
           "name": "Секвенционирање со Scrat"
@@ -235,6 +115,24 @@
         },
         "courseb-2019/Events: The Big Event": {
           "name": "Големиот настан Џуниор"
+        },
+        "coursec-2019/Screen Out the Mean": {
+          "name": "Екран од средната вредност"
+        },
+        "coursec-2019/Programming: My Robotic Friends": {
+          "name": "Моите роботски пријатели Џуниор"
+        },
+        "coursec-2019/Loops: My Loopy Robotic Friends": {
+          "name": "Мој Loopy роботски пријатели Џуниор."
+        },
+        "coursee-2019/Sequencing in the Maze": {
+          "name": "Секвенционирање во лавиринтот"
+        },
+        "coursee-2019/About Me": {
+          "name": "За мене со Sprite Lab"
+        },
+        "coursee-2019/Nested Loops in Artist": {
+          "name": "Фенси форми користејќи вгнездени јамки"
         },
         "coursef-2019/Variables as Constant in Artist": {
           "name": "Променливи со уметник"
@@ -257,15 +155,6 @@
         "coursef-2019/The Power of Words": {
           "name": "Моќта на зборовите"
         },
-        "coursee-2019/Sequencing in the Maze": {
-          "name": "Секвенционирање во лавиринтот"
-        },
-        "coursee-2019/About Me": {
-          "name": "За мене со Sprite Lab"
-        },
-        "coursee-2019/Nested Loops in Artist": {
-          "name": "Фенси форми користејќи вгнездени јамки"
-        },
         "express-2019/Variables as Constant in Artist": {
           "name": "Променливи со уметник"
         },
@@ -287,116 +176,284 @@
         "express-2019/Editing Behaviors": {
           "name": "Однесувања во Sprite Lab"
         },
-        "coursec-2019/Screen Out the Mean": {
-          "name": "Екран од средната вредност"
-        },
-        "coursec-2019/Programming: My Robotic Friends": {
-          "name": "Моите роботски пријатели Џуниор"
-        },
-        "coursec-2019/Loops: My Loopy Robotic Friends": {
-          "name": "Мој Loopy роботски пријатели Џуниор."
-        },
         "pre-express-2019/Sequencing with Scrat": {
           "name": "Секвенционирање со Scrat"
         },
-        "csd3-2019/Variables": {
+        "coursea-2020/Sequencing with Scrat": {
+          "name": "Секвенционирање со Scrat"
+        },
+        "coursea-2020/Events: The Big Event": {
+          "name": "Големиот настан Џуниор"
+        },
+        "courseb-2020/Digital Trails": {
+          "name": "Дигитални патеки"
+        },
+        "courseb-2020/The Right App": {
+          "name": "Вистинската апликација"
+        },
+        "courseb-2020/Events: The Big Event": {
+          "name": "Големиот настан Џуниор"
+        },
+        "coursec-2020/Programming: My Robotic Friends": {
+          "name": "Моите роботски пријатели Џуниор"
+        },
+        "coursec-2020/Loops: My Loopy Robotic Friends": {
+          "name": "Мој Loopy роботски пријатели Џуниор."
+        },
+        "coursee-2020/Sequencing in the Maze": {
+          "name": "Секвенционирање во лавиринтот"
+        },
+        "coursee-2020/About Me": {
+          "name": "За мене со Sprite Lab"
+        },
+        "coursee-2020/Nested Loops in Artist": {
+          "name": "Фенси форми користејќи вгнездени јамки"
+        },
+        "coursef-2020/The Power of Words": {
+          "name": "Моќта на зборовите"
+        },
+        "coursef-2020/Variables as Constant in Artist": {
+          "name": "Променливи со уметник"
+        },
+        "coursef-2020/Variables that Change in Bee": {
+          "name": "Менување на променливи со пчела"
+        },
+        "coursef-2020/Variables that Change in Artist": {
+          "name": "Менување на променливи со уметникот"
+        },
+        "coursef-2020/Simulating Experiments": {
+          "name": "Симулирање експерименти"
+        },
+        "coursef-2020/For Loops in Bee": {
+          "name": "За петелки со пчела"
+        },
+        "coursef-2020/Editing Behaviors": {
+          "name": "Однесувања во Sprite Lab"
+        },
+        "express-2020/Looking Ahead with Minecraft ": {
+          "name": "Гледајќи напред со Minecraft "
+        },
+        "express-2020/Variables with Artist": {
+          "name": "Променливи со уметник"
+        },
+        "express-2020/Changing Variables with Bee": {
+          "name": "Менување на променливи со пчела"
+        },
+        "express-2020/Changing Variables with Artist": {
+          "name": "Менување на променливи со уметникот"
+        },
+        "express-2020/For Loops with Bee": {
+          "name": "За петелки со пчела"
+        },
+        "express-2020/Swimming Fish in Sprite Lab": {
+          "name": "Пливачка риба во Sprite Lab"
+        },
+        "express-2020/Alien Dance Party": {
+          "name": "Забава со вонземјани"
+        },
+        "express-2020/Behaviors in Sprite Lab": {
+          "name": "Однесувања во Sprite Lab"
+        },
+        "pre-express-2020/Sequencing with Scrat": {
+          "name": "Секвенционирање со Scrat"
+        },
+        "pre-express-2020/Programming in with Angry Birds": {
+          "name": "Програмирање во со лути птици"
+        },
+        "pre-express-2020/Programming in Harvester": {
+          "name": "Програмирање во Harvester"
+        },
+        "csd3-2021/Variables": {
           "name": "Променливи"
         },
-        "csd3-2019/Sprites": {
+        "csd3-2021/Sprites": {
           "name": "Сприти"
         },
-        "csd2-2019/Lists": {
-          "name": "Листи"
+        "csd3-2021/Text": {
+          "name": "Текст"
         },
-        "csd3-2017/Variables": {
+        "coursea-2021/Sequencing with Scrat": {
+          "name": "Секвенционирање со Scrat"
+        },
+        "coursea-2021/Events: The Big Event": {
+          "name": "Големиот настан Џуниор"
+        },
+        "courseb-2021/Digital Trails": {
+          "name": "Дигитални патеки"
+        },
+        "courseb-2021/The Right App": {
+          "name": "Вистинската апликација"
+        },
+        "courseb-2021/Events: The Big Event": {
+          "name": "Големиот настан Џуниор"
+        },
+        "coursec-2021/Programming: My Robotic Friends": {
+          "name": "Моите роботски пријатели Џуниор"
+        },
+        "coursec-2021/Loops: My Loopy Robotic Friends": {
+          "name": "Мој Loopy роботски пријатели Џуниор."
+        },
+        "coursee-2021/Nested Loops in Artist": {
+          "name": "Фенси форми користејќи вгнездени јамки"
+        },
+        "coursef-2021/lesson-2": {
+          "name": "Моќта на зборовите"
+        },
+        "coursef-2021/For Loops in Bee": {
+          "name": "За петелки со пчела"
+        },
+        "coursef-2021/Simulating Experiments": {
+          "name": "Симулирање експерименти"
+        },
+        "express-2021/Swimming Fish in Sprite Lab": {
+          "name": "Пливачка риба во Sprite Lab"
+        },
+        "express-2021/For Loops with Bee": {
+          "name": "За петелки со пчела"
+        },
+        "pre-express-2021/Sequencing with Scrat": {
+          "name": "Секвенционирање со Scrat"
+        },
+        "csd3-2022/Variables": {
           "name": "Променливи"
         },
-        "csd3-2017/Sprites": {
+        "csd3-2022/Sprites": {
           "name": "Сприти"
         },
-        "csd2-2017/Lists": {
-          "name": "Листи"
+        "csd3-2022/Text": {
+          "name": "Текст"
         },
-        "deepdive-debugging/Debugging for AB Educators": {
-          "name": "Дебагирање за AB едукатори"
+        "coursea-2022/Sequencing with Scrat": {
+          "name": "Секвенционирање со Scrat"
         },
-        "deepdive-debugging/Debugging for CDEF Educators": {
-          "name": "Дебагирање за CDEF едукатори"
+        "coursea-2022/The Big Event Jr": {
+          "name": "Големиот настан Џуниор"
         },
-        "pixelation/Black & White Pixelation Tutorial": {
-          "name": "Црно-бело упатство за пикселација"
+        "courseb-2022/Digital Trails": {
+          "name": "Дигитални патеки"
         },
-        "pixelation/Black & White Pixelation Freeplay": {
-          "name": "Црно-бело упатство за пикселација"
+        "courseb-2022/The Right App": {
+          "name": "Вистинската апликација"
         },
-        "pixelation/Color Pixelation Tutorial": {
-          "name": "Упатство за пикселација во боја"
+        "courseb-2022/The Big Event Jr": {
+          "name": "Големиот настан Џуниор"
         },
-        "pixelation/Color Pixelation Examples": {
-          "name": "Примери за пикселација во боја"
+        "coursec-2022/My Robotic Friends Jr": {
+          "name": "Моите роботски пријатели Џуниор"
         },
-        "pixelation/Color Pixelation Freeplay": {
-          "name": "Фриплеј на пикселација во боја"
+        "coursec-2022/My Loopy Robotic Friends Jr": {
+          "name": "Мој Loopy роботски пријатели Џуниор."
         },
-        "course4/Unplugged: Tangrams": {
-          "name": "Откачен: Танграми"
+        "coursee-2022/Fancy Shapes using Nested Loops": {
+          "name": "Фенси форми користејќи вгнездени јамки"
         },
-        "course4/Maze and Bee": {
-          "name": "Лавиринт и пчела"
+        "coursef-2022/The Power of Words": {
+          "name": "Моќта на зборовите"
         },
-        "course4/Unplugged: Envelope Variables": {
-          "name": "Откачен: Променливи на пликови"
+        "coursef-2022/Simulating Experiments": {
+          "name": "Симулирање експерименти"
         },
-        "course4/Unplugged: Madlibs": {
-          "name": "Откачен: Мадлибс"
+        "express-2022/Swimming Fish in Sprite Lab": {
+          "name": "Пливачка риба во Sprite Lab"
         },
-        "course4/Play Lab: Variables": {
-          "name": "Игра Лабораторија: Променливи"
+        "express-2022/For Loops with Bee": {
+          "name": "За петелки со пчела"
         },
-        "course4/Unplugged: For Loop Fun": {
-          "name": "Откачен: За забава со јамка"
+        "pre-express-2022/Sequencing with Scrat": {
+          "name": "Секвенционирање со Scrat"
         },
-        "course4/Bee: For Loops": {
+        "outbreak/Outbreak": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Соба бегство"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Програмирање управувано од настани"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Основна функционалност на апликацијата"
+        },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Фреквенција Анализа"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Почетни и крајни екрани"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Почетни и крајни екрани2"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Колектор Час на кодот 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Преглед и упатства за поставување"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Испраќање битови на заедничка жица"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Испраќање броеви"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Испраќање броеви"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Емитување пораки"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Рутери и адреси"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Пакети и сигурност"
+        },
+        "netsim/Manual DNS": {
+          "name": "Прирачник DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Автоматски DNS јазол"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Интернет Симулатор Freeplay"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Студија за расположение"
+        },
+        "vigenere/Vigenere": {
+          "name": "Вигенере"
+        },
+        "course1/Jigsaw: Learn to drag and drop": {
+          "name": "Сложувалка: Научете како да влечете и испуштите"
+        },
+        "course1/Maze: Sequence": {
+          "name": "Лавиринт: секвенца"
+        },
+        "course1/Maze: Debugging": {
+          "name": "Лавиринт: Дебагирање"
+        },
+        "course1/Bee: Sequence": {
+          "name": "Пчела: секвенца"
+        },
+        "course1/Artist: Sequence": {
+          "name": "Уметник: секвенца"
+        },
+        "course1/Artist: Shapes": {
+          "name": "Уметник: Форми"
+        },
+        "course1/Maze: Loops": {
+          "name": "Лавиринт: петелки"
+        },
+        "course1/Bee: Loops": {
           "name": "Пчела: петелки"
         },
-        "course4/Artist: For Loops": {
-          "name": "Уметник: За петелки"
+        "course1/Studio: Create a Story": {
+          "name": "Игра Лабораторија: Креирај приказна"
         },
-        "course4/Play Lab: For Loops": {
-          "name": "Игра Лабораторија: За петелки"
-        },
-        "course4/Artist: Functions": {
-          "name": "Уметник: Функции"
-        },
-        "course4/Unplugged: Songwriting with Parameters": {
-          "name": "Откачен: Текстопис со параметри"
-        },
-        "course4/Artist: Functions with Parameters": {
-          "name": "Уметник: Функции со параметри"
-        },
-        "course4/Play Lab: Functions with Parameters": {
-          "name": "Играј лабораторија: Функции со параметри"
-        },
-        "course4/Bee: Functions with Parameters": {
-          "name": "Уметник: Функции со параметри"
-        },
-        "course4/Unplugged: Binary": {
-          "name": "Откачен: Бинарни"
-        },
-        "course4/Artist Binary": {
-          "name": "Бинарни уметник"
-        },
-        "course4/Super Challenge - Variables": {
-          "name": "Супер предизвик - променливи"
-        },
-        "course4/Super Challenge - For Loops": {
-          "name": "Супер предизвик - променливи"
-        },
-        "course4/Super Challenge - Functions and Parameters": {
-          "name": "Супер предизвик - Функции и параметри"
-        },
-        "course4/Extreme Challenge - Comprehensive": {
-          "name": "Екстремен предизвик - сеопфатен"
+        "course1/Artist: Loops": {
+          "name": "Уметник: Петелки"
         },
         "course2/Maze: Sequence": {
           "name": "Лавиринт: секвенца"
@@ -461,170 +518,86 @@
         "course3/Artist: Patterns": {
           "name": "Уметник: Шаблони"
         },
-        "course1/Jigsaw: Learn to drag and drop": {
-          "name": "Сложувалка: Научете како да влечете и испуштите"
+        "course4/Unplugged: Tangrams": {
+          "name": "Откачен: Танграми"
         },
-        "course1/Maze: Sequence": {
-          "name": "Лавиринт: секвенца"
+        "course4/Maze and Bee": {
+          "name": "Лавиринт и пчела"
         },
-        "course1/Maze: Debugging": {
-          "name": "Лавиринт: Дебагирање"
+        "course4/Unplugged: Envelope Variables": {
+          "name": "Откачен: Променливи на пликови"
         },
-        "course1/Bee: Sequence": {
-          "name": "Пчела: секвенца"
+        "course4/Unplugged: Madlibs": {
+          "name": "Откачен: Мадлибс"
         },
-        "course1/Artist: Sequence": {
-          "name": "Уметник: секвенца"
+        "course4/Play Lab: Variables": {
+          "name": "Игра Лабораторија: Променливи"
         },
-        "course1/Artist: Shapes": {
-          "name": "Уметник: Форми"
+        "course4/Unplugged: For Loop Fun": {
+          "name": "Откачен: За забава со јамка"
         },
-        "course1/Maze: Loops": {
-          "name": "Лавиринт: петелки"
-        },
-        "course1/Bee: Loops": {
+        "course4/Bee: For Loops": {
           "name": "Пчела: петелки"
         },
-        "course1/Studio: Create a Story": {
-          "name": "Игра Лабораторија: Креирај приказна"
+        "course4/Artist: For Loops": {
+          "name": "Уметник: За петелки"
         },
-        "course1/Artist: Loops": {
-          "name": "Уметник: Петелки"
+        "course4/Play Lab: For Loops": {
+          "name": "Игра Лабораторија: За петелки"
         },
-        "coursef-2021/lesson-2": {
-          "name": "Моќта на зборовите"
+        "course4/Artist: Functions": {
+          "name": "Уметник: Функции"
         },
-        "coursef-2021/For Loops in Bee": {
-          "name": "За петелки со пчела"
+        "course4/Unplugged: Songwriting with Parameters": {
+          "name": "Откачен: Текстопис со параметри"
         },
-        "coursef-2021/Simulating Experiments": {
-          "name": "Симулирање експерименти"
+        "course4/Artist: Functions with Parameters": {
+          "name": "Уметник: Функции со параметри"
         },
-        "courseb-2021/Digital Trails": {
-          "name": "Дигитални патеки"
+        "course4/Play Lab: Functions with Parameters": {
+          "name": "Играј лабораторија: Функции со параметри"
         },
-        "courseb-2021/The Right App": {
-          "name": "Вистинската апликација"
+        "course4/Bee: Functions with Parameters": {
+          "name": "Уметник: Функции со параметри"
         },
-        "courseb-2021/Events: The Big Event": {
-          "name": "Големиот настан Џуниор"
+        "course4/Unplugged: Binary": {
+          "name": "Откачен: Бинарни"
         },
-        "coursea-2021/Sequencing with Scrat": {
-          "name": "Секвенционирање со Scrat"
+        "course4/Artist Binary": {
+          "name": "Бинарни уметник"
         },
-        "coursea-2021/Events: The Big Event": {
-          "name": "Големиот настан Џуниор"
+        "course4/Super Challenge - Variables": {
+          "name": "Супер предизвик - променливи"
         },
-        "coursec-2021/Programming: My Robotic Friends": {
-          "name": "Моите роботски пријатели Џуниор"
+        "course4/Super Challenge - For Loops": {
+          "name": "Супер предизвик - променливи"
         },
-        "coursec-2021/Loops: My Loopy Robotic Friends": {
-          "name": "Мој Loopy роботски пријатели Џуниор."
+        "course4/Super Challenge - Functions and Parameters": {
+          "name": "Супер предизвик - Функции и параметри"
         },
-        "express-2021/Swimming Fish in Sprite Lab": {
-          "name": "Пливачка риба во Sprite Lab"
+        "course4/Extreme Challenge - Comprehensive": {
+          "name": "Екстремен предизвик - сеопфатен"
         },
-        "express-2021/For Loops with Bee": {
-          "name": "За петелки со пчела"
+        "deepdive-debugging/Debugging for AB Educators": {
+          "name": "Дебагирање за AB едукатори"
         },
-        "pre-express-2021/Sequencing with Scrat": {
-          "name": "Секвенционирање со Scrat"
+        "deepdive-debugging/Debugging for CDEF Educators": {
+          "name": "Дебагирање за CDEF едукатори"
         },
-        "coursee-2021/Nested Loops in Artist": {
-          "name": "Фенси форми користејќи вгнездени јамки"
+        "pixelation/Black & White Pixelation Tutorial": {
+          "name": "Црно-бело упатство за пикселација"
         },
-        "csd3-2021/Variables": {
-          "name": "Променливи"
+        "pixelation/Black & White Pixelation Freeplay": {
+          "name": "Црно-бело упатство за пикселација"
         },
-        "csd3-2021/Sprites": {
-          "name": "Сприти"
+        "pixelation/Color Pixelation Tutorial": {
+          "name": "Упатство за пикселација во боја"
         },
-        "csd3-2021/Text": {
-          "name": "Текст"
+        "pixelation/Color Pixelation Examples": {
+          "name": "Примери за пикселација во боја"
         },
-        "pre-express-2020/Sequencing with Scrat": {
-          "name": "Секвенционирање со Scrat"
-        },
-        "pre-express-2020/Programming in with Angry Birds": {
-          "name": "Програмирање во со лути птици"
-        },
-        "pre-express-2020/Programming in Harvester": {
-          "name": "Програмирање во Harvester"
-        },
-        "express-2020/Looking Ahead with Minecraft ": {
-          "name": "Гледајќи напред со Minecraft "
-        },
-        "express-2020/Variables with Artist": {
-          "name": "Променливи со уметник"
-        },
-        "express-2020/Changing Variables with Bee": {
-          "name": "Менување на променливи со пчела"
-        },
-        "express-2020/Changing Variables with Artist": {
-          "name": "Менување на променливи со уметникот"
-        },
-        "express-2020/For Loops with Bee": {
-          "name": "За петелки со пчела"
-        },
-        "express-2020/Swimming Fish in Sprite Lab": {
-          "name": "Пливачка риба во Sprite Lab"
-        },
-        "express-2020/Alien Dance Party": {
-          "name": "Забава со вонземјани"
-        },
-        "express-2020/Behaviors in Sprite Lab": {
-          "name": "Однесувања во Sprite Lab"
-        },
-        "courseb-2020/Digital Trails": {
-          "name": "Дигитални патеки"
-        },
-        "courseb-2020/The Right App": {
-          "name": "Вистинската апликација"
-        },
-        "courseb-2020/Events: The Big Event": {
-          "name": "Големиот настан Џуниор"
-        },
-        "coursec-2020/Programming: My Robotic Friends": {
-          "name": "Моите роботски пријатели Џуниор"
-        },
-        "coursec-2020/Loops: My Loopy Robotic Friends": {
-          "name": "Мој Loopy роботски пријатели Џуниор."
-        },
-        "coursee-2020/Sequencing in the Maze": {
-          "name": "Секвенционирање во лавиринтот"
-        },
-        "coursee-2020/About Me": {
-          "name": "За мене со Sprite Lab"
-        },
-        "coursee-2020/Nested Loops in Artist": {
-          "name": "Фенси форми користејќи вгнездени јамки"
-        },
-        "coursea-2020/Sequencing with Scrat": {
-          "name": "Секвенционирање со Scrat"
-        },
-        "coursea-2020/Events: The Big Event": {
-          "name": "Големиот настан Џуниор"
-        },
-        "coursef-2020/The Power of Words": {
-          "name": "Моќта на зборовите"
-        },
-        "coursef-2020/Variables as Constant in Artist": {
-          "name": "Променливи со уметник"
-        },
-        "coursef-2020/Variables that Change in Bee": {
-          "name": "Менување на променливи со пчела"
-        },
-        "coursef-2020/Variables that Change in Artist": {
-          "name": "Менување на променливи со уметникот"
-        },
-        "coursef-2020/Simulating Experiments": {
-          "name": "Симулирање експерименти"
-        },
-        "coursef-2020/For Loops in Bee": {
-          "name": "За петелки со пчела"
-        },
-        "coursef-2020/Editing Behaviors": {
-          "name": "Однесувања во Sprite Lab"
+        "pixelation/Color Pixelation Freeplay": {
+          "name": "Фриплеј на пикселација во боја"
         }
       }
     }

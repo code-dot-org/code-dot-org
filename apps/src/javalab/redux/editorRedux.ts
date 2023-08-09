@@ -1,14 +1,10 @@
 /**
  * Redux store for editor-specific Java Lab state.
  */
-
-// TODO: Can we fix our imports and no longer need to ignore this rule?
-/* eslint-disable @typescript-eslint/no-var-requires */
-
-const {
+import {
   fileMetadataForEditor,
   updateAllSourceFileOrders,
-} = require('@cdo/apps/javalab/JavalabFileHelper');
+} from '../JavalabFileHelper';
 import _ from 'lodash';
 import {createSelector, createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {JavalabEditorDialog} from '../types';
@@ -29,7 +25,7 @@ interface FileMetadata {
 // JavalabEditorDialog is an enum of possible open dialogs.
 // keyof typeof gives us the union type of the all the Enum keys as strings.
 // https://www.typescriptlang.org/docs/handbook/enums.html#enums-at-compile-time
-type JavlabEditorDialogOptions = keyof typeof JavalabEditorDialog;
+type JavalabEditorDialogOptions = keyof typeof JavalabEditorDialog;
 
 interface JavalabEditorState {
   fileMetadata: FileMetadata;
@@ -38,7 +34,7 @@ interface JavalabEditorState {
   lastTabKeyIndex: number;
   sources: EditorFilesMap;
   validation: EditorFilesMap;
-  editorOpenDialogName: JavlabEditorDialogOptions | null;
+  editorOpenDialogName: JavalabEditorDialogOptions | null;
   newFileError: string | null;
   renameFileError: string | null;
   editTabKey: string | null;
@@ -200,7 +196,7 @@ const javalabEditorSlice = createSlice({
       delete newSources[filename];
       state.sources = newSources;
     },
-    openEditorDialog(state, action: PayloadAction<JavlabEditorDialogOptions>) {
+    openEditorDialog(state, action: PayloadAction<JavalabEditorDialogOptions>) {
       if (Object.values(JavalabEditorDialog).includes(action.payload)) {
         state.editorOpenDialogName = action.payload;
       }

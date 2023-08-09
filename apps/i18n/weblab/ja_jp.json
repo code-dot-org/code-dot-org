@@ -1,7 +1,7 @@
 {
   "addCSSButton": "CSS の追加",
-  "addImageButton": "[イメージを追加]",
   "addHTMLButton": "HTML の追加",
+  "addImageButton": "[イメージを追加]",
   "closeFullscreenPreview": "全画面プレビューを閉じる",
   "currentProjectCapacity": "{totalMegabytes}メガバイトのうち {currentMegabytes}メガバイトが使用されました",
   "errorSavingProject": "プロジェクトの自動保存中に何かが機能しませんでした。インターネット接続を確認して、手動で保存してみてください。問題が解決しない場合は、ページをリロードして最初からやり直してください。",
@@ -13,8 +13,8 @@
   "reset": "Web ラボをリセット",
   "resetComplete": "Web ラボのリセット完了",
   "resetFailure": "Web ラボをリセットできませんでした: {message}。",
-  "toggleInspectorOn": "インスペクター:オフ",
   "toggleInspectorOff": "インスペクター:オン",
+  "toggleInspectorOn": "インスペクター:オフ",
   "troubleshootingSupport": "詳細については、サポート記事 [\"Web Lab の問題のトラブルシューティング\"]({url}) を参照してください。",
   "uploadError": "アップロードエラー"
 }

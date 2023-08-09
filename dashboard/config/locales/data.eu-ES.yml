@@ -1,81 +1,185 @@
 ---
 eu:
   data:
-    game:
-      name:
-        Unplug1: Konputazio zientzetarako sarrera
-        Maze: labirintoa
-        Multi: Aukera anitzeko gaiak
-        Unplug2: Pentsamendu konputazionala
-        Unplug3: Paper grafiko programazioa
-        Artist: Artista
-        Unplug4: Algoritmoak
-        Artist2: Artista 2
-        Unplug5: Funtzioak
-        Farmer: Baserritarra
-        Unplug6: Baldintzak
-        Artist3: Artista 3
-        Unplug7: Abestiak idazten
-        Farmer2: Baserritarra 2
-        Unplug8: Abstrakzioa
-        Artist4: Artista 4
-        Unplug9: Txandaka programatzen
-        Farmer3: Baserritarra 3
-        Unplug10: Internet
-        Artist5: Artista 5
-        Unplug11: Ixtea
-        MazeEC: labirintoa
-        Bounce: Errebotea
-        Flappy: Flappy Bird
-        Jigsaw: Buruhaustea
-        MazeStep: Labirinto urrats modua
-        Wordsearch: Hizki salda
-        Webapp: App laborategia
-        ArtistEC: Artista
-        TextMatch: Testua erlazionatu
-        StudioEC: Jolas Laborategia
-        Applab: App laborategia
-        NetSim: Internet simulagailua
-        Custom: Artista
-        CustomStudio: Jolas Laborategia
-        Gamelab: Jolas laborategia
-    trophy:
-      name:
-        Bronze: Brontzea
-        Silver: Zilarra
-        Gold: Urrea
+    callout:
+      text:
+        Infinity_move_collide_callout: Gertaera honetan hots bat egin.
+        Infinity_move_directions_callout: Ze blokek mugitu araziko du gora Baymax
+          gezia gora sakatzerakoan?
+        Infinity_move_directions_callout_arrow: Erabili gezi hauek gidatzeko
+        Infinity_move_right_runbutton: Gehitu "mugitu" blokea hemen
+        Infinity_repeat_callout: '"Mugitu" blokeak hemen kokatu'
+        actions_category: Tresna kutxak look berria dauka! "Akzioak" blokeak hemen
+          daude orain.
+        add_and_drag_parameter: Idatzi hemen zure parametroaren izena, klikatu "gehitu"
+          eta orduan arrastatu ezazu zure funtzioaren definiziora
+        arrows_move_actor: Geziak erabili aktorea mugitzeko.
+        bee_for_loop: Arrastatu hona erleak bildu behar duen nektar kantitaterik handiena
+        category_explanation: Bloke berberak dituzu baino oraingoan kategorietan antolatu
+          dira
+        change_here: Egin hemen zure aldaketa
+        craft_callout_moveforward: Kode honek laba bilatzen du. Gehitu dezakezu agindu
+          bat aurrera mugitzeko?
+        craft_callout_preplaced: Hona hemen hainbat bloke zu hasi ahal izateko
+        craft_callout_preplaced_house: Kode honen bitartez, zure etxea eraikitzen
+          hasiko da. Bukatu dezakezu zuk?
+        craft_drag_block_callout: Arrastatu "moveForward();" bloke bat eta kokatu
+          beste blokearen azpian
+        craft_inside_repeat: Errepikatu ekintzak blokeak hemen txertatuz
+        craft_run_button_callout: Sakatu "Hasi" zure programa probatzeko
+        craft_what_is_iron: Erauzi burdina!
+        create_function: Klik egin hemen "Funtzioak" zabalgarria irekitzeko, eta ondoren
+          "Funtzio bat sortu" botoian.
+        degrees_per_side: Kalkula ezazu 360 zati alde kopurua, angelu bakoitza lortzeko,
+          gradutan.
+        drag_blocks: Arrastatu "mugitu" blokea eta lotu beste blokearen azpian
+        draw_square_hint: 'Pista: erabili azken puzlean egin berri duzun karratuaren
+          begizta.'
+        edit_add_parameter: Klikatu "editatu" zure funtzioan parametro bat gehitzeko
+        edit_draw_square: Erabili botoi hau funtzioa editatu eta begizta gehitzeko.
+        edit_function: Hemen klikatu zure funtzioa editatzeko.
+        edit_get_nectar: Erabili botoi hau funtzioa editatzeko eta aldatu Erlearen
+          biraketa noranzkoa nektarra biltzeko.
+        fill_in_actor: Bete itzazu ??? aktoreei dagozkien zenbakiekin (1, 2 eta 3)
+        frozen_circle_function_in_circle_turn: Ez ahaztu biratzeaz zirkulu bakoitza
+          sortu ondoren.
+        frozen_circle_function_with_parameter_circle: Erabili "sortu zirkulua" blokea
+          eta aldatu tamaina.
+        frozen_create_square: Gehitu bloke gehiago hemen karratu bat sortzeko
+        frozen_diamond_repeat: Erabili "errepikatu" blokea irudi hau sortzeko.
+        frozen_snowflake_branch: Erabili "sortu elur-malutaren adarra" blokea
+        function_editor_draw_square: Hau da zure funtzioaren definizioa. Bloke hauek
+          egikaritzen dira "marraztu karratu bat" blokea erabiltzen duzun bakoitzean
+        get_nectar: Erabili "nektarra lortu" bloke berria.
+        gray_block_explanation: Bloke grisak ezin dira ezabatu. Ebatzi dezakezu ariketa
+          hala ere?
+        house_hint: Ondo da irudiak oraindik ez badu etxearen antza. Hurrengo puzlean
+          konponduko dugu.
+        if_bee_nectar: Erabili "baldin" blokea erleak nektarra behar duen erabakitzeko
+        if_else_bee: Erabili "baldin/bestela" blokea erleak lorearen nektarra lortzeko,
+          eta eztia egiteko ez bada lore bat
+        instructions_repeat_explanation: Puzzle bakoitzerako jarraibideak hemen daude
+          errepikatuta
+        jigsaw_click: Klikatu bloke hau!
+        length_parameter: Funtzio hau eguneratu dezakezu "luzera" parametroa erabiltzeko
+          moduan?
+        logic_category: Ireki "Logika" zabalgarria "baldin/bestela" blokea aurkitzeko.
+        move_elsa_forward: Arrastatu "Mugitu aurrera" blokea eta utzi "Martxan dagoenean"
+          blokearen azpian Elsa aurrera mugitzeko
+        name_function: Idatzi hemen zure funtzioaren izena.
+        place_counter_variable: Arrastatu zure kontaketa aldagaia bloke honen barrura
+        place_length_variable: Arrastatu "luzera" aldagaia hona galdera-ikurrak ordezkatzeko
+        place_variable: Arrastatu zure aldagaia bloke honen barrura
+        playlab_add_blocks: Gehitu zure blokeak hemen
+        playlab_add_move: Gehitu "mugitu" blokeak "errepikatu" bloke honen barruan
+        playlab_add_score: Gehitu puntuazio blokeak hemen
+        playlab_arrow_keys: Gogoratu hauek erabili behar dituzula sorgina mugi dadin
+          "Hasi" sakatu ondoren
+        playlab_drag_say: Arrastatu "esan" blokea hona eta tekleatu "kaixo"
+        playlab_move_girl: Erabili "mugitu eskuinerantz" blokea Neska Tenislaria mugitzeko
+        playlab_play_sound: Gehitu "erreproduzitu soinua" blokea hemen
+        playlab_use_twice: Erabili bloke hau bi aldiz eta gogoratu aktorearen zenbakia
+          aldatzeaz
+        repeat: Jarri blokeak begiztaren barruan komandoak errepikatzeko
+        repeat_blocks: Erabili "Errepikatu" blokea eta inguratu horrekin lan eremuko
+          blokeak
+        repeat_blocks_1: "(1) Erabili bloke hau eta inguratu berarekin lan eremuko
+          bloke grisak"
+        repeat_blocks_2: (2) Mugitu "Errepikatu" blokea hona, eta bloke grisak barruan
+          jarri
+        repeat_full_circle: Adierazi zenbatetan mugitu behar den zonbia biribil osoa
+          egiteko.
+        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
+        replace_questions_degree: Erabili menu zabalgarria "???" ordezkatzeko biratzea
+          nahi den angelu zehatzarekin
+        right_arrow_fireball: Eskuineko gezia erabili su-bolak jaurtikitzeko.
+        run: Sakatu "Hasi" zure programa probatzeko
+        set_length: Erabili bloke hau "luzera"-ren balio egokia ezartzeko.
+        set_sides: Erabili bloke hau ariketa osatzeko behar den zenbakia "aldeak"
+          aldagaiari esleitzeko.
+        set_sprite_image: Gehitu "ezarri aktorea irudiari" blokea "istorioa hasten
+          denean" blokeari aktore bat istorioan gaitzeko
+        set_variable: Arrastatu zenbakizko bloke bat hona zure aldagaiari balioa emateko
+        show_code_explanation: Klikatu hemen sortzen ari zaren programaren kodea ikusteko
+        snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!
+        studio_say_text: Kakots artean idatzi zure aktoreak esango duena
+        turn_elsa: Erabili "Biratu" blokea Elsari birarazteko. Menu zabalgarrian ageri
+          den zenbakiak adierazten du zenbat biratuko duen Elsak
+        watch_again: Klik egin hemen bideoa berriro ikusteko
+        which_equation: Zein ekuaziok egiten du alde bakoitza motzagoa alde gehiagoko
+          formak lortzeko?
+        write_draw_square_function: Arrastatu tresna-kutxatik hona karratu bat marrazten
+          duten blokeak
+        write_draw_triangle_function: Arrastatu tresna-kutxatik hona triangelu bat
+          marrazten duten blokeak
     concept:
       description:
-        sequence: Segida
+        function: Funtzioak
         if: '"baldin" blokea'
         if_else: '"baldin-bestela" blokea'
+        loop_for: '"Kontagailu" blokea'
         loop_times: '"Errepikatu aldiz" blokea'
         loop_until: '"Errepikatu arte" blokea'
         loop_while: '"Bitartean" blokea'
-        loop_for: '"Kontagailu" blokea'
-        function: Funtzioak
         parameters: Parametrodun funtzioak
+        sequence: Segida
+    game:
+      name:
+        Applab: App laborategia
+        Artist: Artista
+        Artist2: Artista 2
+        Artist3: Artista 3
+        Artist4: Artista 4
+        Artist5: Artista 5
+        ArtistEC: Artista
+        Bounce: Errebotea
+        Custom: Artista
+        CustomStudio: Jolas Laborategia
+        Farmer: Baserritarra
+        Farmer2: Baserritarra 2
+        Farmer3: Baserritarra 3
+        Flappy: Flappy Bird
+        Gamelab: Jolas laborategia
+        Jigsaw: Buruhaustea
+        Maze: labirintoa
+        MazeEC: labirintoa
+        MazeStep: Labirinto urrats modua
+        Multi: Aukera anitzeko gaiak
+        NetSim: Internet simulagailua
+        StudioEC: Jolas Laborategia
+        TextMatch: Testua erlazionatu
+        Unplug1: Konputazio zientzetarako sarrera
+        Unplug10: Internet
+        Unplug11: Ixtea
+        Unplug2: Pentsamendu konputazionala
+        Unplug3: Paper grafiko programazioa
+        Unplug4: Algoritmoak
+        Unplug5: Funtzioak
+        Unplug6: Baldintzak
+        Unplug7: Abestiak idazten
+        Unplug8: Abstrakzioa
+        Unplug9: Txandaka programatzen
+        Webapp: App laborategia
+        Wordsearch: Hizki salda
     level:
       instructions:
-        maze_2_2: 'Lagunduko didazu txerri zikina harrapatzen? Pilatu "mugitu aurrera"
-          bloke pare bat eta klikatu "Hasi" hara iristen laguntzeko. '
+        Custom_builder: Arrastatu blokeak tresna-kutxatik lan-ingurunera, sortu nahi
+          duzun maila marrazteko. Sakatu "Hasi" prest zaudenean.
+        applab_ec_simple: Sortu zure app-a tresna-kutxako blokeak erabiliz.
+        jigsaw_1: Klikatu blokea
+        jigsaw_10: Antolatu blokeak irudia osatzeko
+        jigsaw_11: Antolatu blokeak irudia osatzeko
+        jigsaw_12: Antolatu blokeak irudia osatzeko
+        jigsaw_13: Konpon ezazu ariketa!
+        jigsaw_2: Arrastatu blokea helburura
+        jigsaw_3: Antolatu blokeak irudia osatzeko
+        jigsaw_4: Antolatu blokeak irudia osatzeko
+        jigsaw_5: Antolatu blokeak irudia osatzeko
+        jigsaw_6: Antolatu blokeak irudia osatzeko
+        jigsaw_7: Antolatu blokeak irudia osatzeko
+        jigsaw_8: Antolatu blokeak irudia osatzeko
+        jigsaw_9: Antolatu blokeak irudia osatzeko
         maze_2_1: Txerri honek sutan jartzen nau. Lagundu bera aurkitzen!
-        maze_2_2_5: Egin bidea eta eraman nazazu txerri mozoloarengana. Ekidin dinamita
-          (TNT) edo lumarik gabe geratuko naiz!
-        maze_2_3: Gidatu nazazu gaizkile berdera! (Kontuz dinamitarekin)
-        maze_2_4: Lasai egon eta lagundu txerri gaiztoa topatzen. Bestela, haserretu
-          naiteke!
-        maze_2_5: Badago modua txerri mozolora iristeko bakarrik 2 bloke erabiliz.
-          Aurkitu dezakezu?
-        maze_2_6: Saiatu sudurluze berdea hiru bloke bakarrik erabiliz harrapatzen.
-        maze_2_7: Lagundu txerri gaiztoa kanporatzen ahalik eta bloke gutxien erabiliz.
-          Saiatu "errepikatu aldiz" bloke bat baino gehiago erabiltzen.
-        maze_2_8: 'Blokeak kolore grisa duenean, ezabatu ezin duzula esan nahi du.
-          Ebatzi ariketa "errepikatu" blokeak 3 aldiz errepikatzen duelarik. Saiatu
-          3 bloke hauek "errepikatu" bloke grisaren barruan sartzen: mugitu, mugitu,
-          biratu.'
-        maze_2_9: Ok, probatu "errepikatu arte" bloke berria- txerri nazkagarria harrapatu
-          arte errepikatuko du.
         maze_2_10: Ok, azken ariketa - ebaz dezakezu hau bakarrik 4 bloke erabiliz?
         maze_2_11: Kaixo, pertsona. Ni Zonbia. Ni gose. Ekilorera...iritsi...behar
           dut... Eramango nauzu haraino 5 bloke bakarrik erabiliz?
@@ -96,62 +200,41 @@ eu:
           saiakeran lor dezakezu?
         maze_2_19: Gehitu ditzakezu bakarrik 3 bloke labirinto zailagoa ebazten laguntzeko?
           Ondo egiten baduzu, edozein luzeratako ibilbide kurbatuak jarraitu ditzaket.
-        turtle_1_1: Kaixo, artista bat naiz. Kodea idatz dezakezu ia edozer gauza
-          marraz dezadan. Erabil itzazu bloke gutxi batzuk irudiko marra grisen gainetik
-          marraz dezadan.
-        turtle_1_2: 'Orain, marraztu karratu bat. OHARRA: aukeratu zure kolore gogokoena
-          "kolorea ezarri" bloke berrian.'
-        turtle_1_3: Egin karratu bat bakarrik 3 bloke erabiliz.
-        turtle_1_4: 'Marraztu kolore ezberdinetako aldeak dituen triangelu bat. Erabili
-          aldi bakoitzean kolore ezberdina hautatzen duen "ausazko kolorea" aukera.
-          Pista: zenbat biratu behar duzun asmatu beharko duzu "biratu" blokeko zebakian
-          klikatuz.'
-        turtle_1_5: Orain, praktikatzeko, marraztu hirukia eta ondoren karratua, gutun-azala
-          osatzeko.
-        turtle_1_6: 'Badakizu nola marraztu triangelu eta karratu hauek? Laguntza:
-          lehendabizi egin triangelua; ondoren, karratua marraztu baino lehen, aztertu
-          zenbat gradu biratu behar den.'
-        turtle_1_7: Ok, orain pixka bat zailagoa - ea betaurreko berde hauek marraz
-          ditzakezun. Karratuen alde bakoitzak 100 pixel dauzka, eta karratuen aretko
-          distantzia 50 pixelekoa da. Ez ahaztu berdez marraztu behar duzula!
-        turtle_1_8: Ongi, saiatu asmatzen zer gertatzen den kode hau exekutatuz gero
-          (edo sakatu "Hasi" probatzeko). Ondoren, errepikatu behar beste aldiz marrazkia
-          osatzeko. Koloreak ezberdinak izango dira aldi bakoitzean.
-        turtle_1_9: Asmatuko zenuke zein zenbaki jarri beharko litzatekeen galdera
-          ikurren ordez zirkulua marrazteko?
-        turtle_1_10: 'Lortu duzu! Orain, marraztu zuk nahi duzuna. Ideia dibertigarri
-          batzuk: marratxoz egindako panpintxo bat, elur maluta, edo espirala. "Ezarri
-          lodiera" bloke berria ere erabil dezakezu. Ondo pasa!'
-        turtle_4_1: 'Triangelu bat marraztu ahal duzu (100 pixeleko aldeekin) soilik
-          hiru bloke erabiliz? Laguntza: erabili "errepikatu" bloke bat.'
-        turtle_4_2: Gehitu "biratu eskuinera 90 gradu" blokea programaren erdialdean-edo,
-          triangelu hauek marrazteko (bloke hori jada lan-eremuan dago).
-        turtle_4_3: Ados, hau da triangelu bakarra marrazteko idatzi duzun kodea.
-          Gehitu ditzakezu "errepika" blokea eta "biratu" blokea, lore eder bat sortzeko?
-        turtle_4_4: 'Hau aurreko ariketako kode bera da, baina triangelu bakoitza
-          marraztu ondoren soilik 36 gradu biratu da. Zenbat aldiz errepikatu behar
-          da hau? (Argibidea: 360 gradu biratuta, zirkulu oso bat marraztuko du)'
-        turtle_4_5: |-
-          Aurreko ariketako kode bera duzu hau, birak 36 aldiz errepikatuta. Zenbat gradu izan beharko lituzke birak?
-          (Lagungarria: marrazkia 360º biratuz, biribil bihurtuko da)
-        turtle_4_6: 3 bloke bakarrik erabiliz, 20 pixeleko aldeak dituen karratu bat
-          marraztu dezakezu?
-        turtle_4_7: 'Hona hemen azken ariketako karratua marrazteko kodea. Errepikatu
-          dezakezu ondoz ondoko 10 karratu marrazteko, eskailera baten antzera? Pista:
-          bakarrik behar dituzu 2 bloke gehiago.'
-        turtle_4_8: Hona hemen aurreko ariketaren soluzioa. 2 bloke gehiago gehitu
-          ditzakezu marrazkia osatzeko?
-        turtle_4_9: Hona hemen aurreko ariketaren soluzioa. Zenbat graduko biraketa
-          egin beharko zenuke marrazkia osatzeko? (Agian hainbat aldiz probatu beharko
-          duzu)
-        turtle_4_10: Hona hemen aurreko ariketaren soluzioa. Zenbat aldiz errepikatu
-          beharko zenuke marrazkia osatzeko?
-        turtle_4_11: Aldatu zenbakiak "biratu" eta "errepikatu" blokeetan txantiloi
-          desberdinak egiteko. Edo egin esperimentuak eta aldatu kodearen gainontzekoa
-          zuk nahi duzun zerbait marrazteko.
+        maze_2_2: 'Lagunduko didazu txerri zikina harrapatzen? Pilatu "mugitu aurrera"
+          bloke pare bat eta klikatu "Hasi" hara iristen laguntzeko. '
+        maze_2_2_5: Egin bidea eta eraman nazazu txerri mozoloarengana. Ekidin dinamita
+          (TNT) edo lumarik gabe geratuko naiz!
+        maze_2_3: Gidatu nazazu gaizkile berdera! (Kontuz dinamitarekin)
+        maze_2_4: Lasai egon eta lagundu txerri gaiztoa topatzen. Bestela, haserretu
+          naiteke!
+        maze_2_5: Badago modua txerri mozolora iristeko bakarrik 2 bloke erabiliz.
+          Aurkitu dezakezu?
+        maze_2_6: Saiatu sudurluze berdea hiru bloke bakarrik erabiliz harrapatzen.
+        maze_2_7: Lagundu txerri gaiztoa kanporatzen ahalik eta bloke gutxien erabiliz.
+          Saiatu "errepikatu aldiz" bloke bat baino gehiago erabiltzen.
+        maze_2_8: 'Blokeak kolore grisa duenean, ezabatu ezin duzula esan nahi du.
+          Ebatzi ariketa "errepikatu" blokeak 3 aldiz errepikatzen duelarik. Saiatu
+          3 bloke hauek "errepikatu" bloke grisaren barruan sartzen: mugitu, mugitu,
+          biratu.'
+        maze_2_9: Ok, probatu "errepikatu arte" bloke berria- txerri nazkagarria harrapatu
+          arte errepikatuko du.
+        maze_3_1: Txerri horrengana iritsi beharra daukat! Birritan move() idatziz
+          berreskura ditzaket nire arrautzak.
+        maze_3_2: Idatzi programa bat niretzat, txerriarenganaino iritsi ahal izateko.
+        maze_3_3: Nola iritsiko naiz txerriarenganaino? Ziurtatu ez naizela TNT kaxatik
+          pasatuko!
+        maze_3_4: Ene! Idatz iezaidazu programa bat TNT sahiestu eta txerriarenganaino
+          iristeko
         maze_karel_1_1: Kaixo! Baserritarra naiz. Zure laguntza behar dut baserriko
           lurrak berdintzeko, erein ahal izateko prest egon daitezen. Eraman nazazu
           lur-metara eta erabil ezazu "ezabatu" blokea hori desegiteko.
+        maze_karel_1_10: Berandu egin zait lanean, eta ilundu du. Hala, ezin dut jakin
+          lur-metak handiak diren ala ez. Orain ezin ditut erabili "bitartean" blokean
+          eskuragarri nituen aukera guztiak. Mugi nazazu eremuan zehar eta meta bat
+          baldin badago desegin beharko dut.
+        maze_karel_1_11: 'Oraindik ilun dago kanpoan. Mugi nazazu eremuan zehar. Meta
+          bat baldin badago, desegin ezazu, eta zulo bat baldin badago, bete ezazu.
+          Pista: "baldin" blokearen menu zabalgarriko aukerak erabil ditzakezu.'
         maze_karel_1_2: Orain, eraman nazazu zulora eta, "bete" blokea erabiliz, bete
           ezazu zuloa BI paletakada lur botaz.
         maze_karel_1_3: Eraman nazazu lur-metara eta esadazu zenbat paletakada hartu
@@ -172,16 +255,262 @@ eu:
         maze_karel_1_9: 'Lortu behar duzu lur-meta hauek guztiak desegin ditzadan.
           Saia zaitez ahal den bloke-kopururik txikiena erabiltzen. Pista: saia zaitez
           "bitartean" bloke bat erabiltzen.'
-        maze_karel_1_10: Berandu egin zait lanean, eta ilundu du. Hala, ezin dut jakin
-          lur-metak handiak diren ala ez. Orain ezin ditut erabili "bitartean" blokean
-          eskuragarri nituen aukera guztiak. Mugi nazazu eremuan zehar eta meta bat
-          baldin badago desegin beharko dut.
-        maze_karel_1_11: 'Oraindik ilun dago kanpoan. Mugi nazazu eremuan zehar. Meta
-          bat baldin badago, desegin ezazu, eta zulo bat baldin badago, bete ezazu.
-          Pista: "baldin" blokearen menu zabalgarriko aukerak erabil ditzakezu.'
+        maze_karel_2_1: 'Saia zaitez blokeak erabiltzen niri laguntzeko meta guztiak
+          desegiten eta lurreko zulo guztiak betetzen. Saia zaitez errepikapenak edo
+          begiztak erabiltzen bloke gehiegi erabili beharrean. Pista: errepikapen
+          bat beste baten barruan jar dezakezu.'
+        maze_karel_2_10: Mugi nazazu eremuan zehar, eta erabil itzazu bi funtzio hauek
+          niri laguntzeko meta guztiak desegiten eta zulo guztiak betetzen.
+        maze_karel_2_2: Bloke bat definitu dugu "bete 5" izenarekin, eta orain "Funtzioak"
+          kategorian dago. Erabil ezazu niri laguntzeko zulo hau betetzen.
+        maze_karel_2_3: Erabil ezazu "bete 5" funtzio-bloke berria zulo guztiak bete
+          ditzadan. "bete 5" blokea "Funtzioak" kategoriatik kanpo arrastatu beharko
+          duzu.
+        maze_karel_2_4: Defini ezazu funtzio berri bat 7 paletakada kentzeko. Ondoren,
+          erabil ezazu funtzio hori programa bat idazteko meta guztiak desegiten lagundu
+          diezadan.
+        maze_karel_2_5: Idatz ezazu funtzio berri bat meta batetik 6 paletakada kentzeko
+          eta erabil ezazu meta guztiak desegiten lagundu diezadan.
+        maze_karel_2_6: Erabil itzazu bi funtzio berri, "bete 8" eta "ezabatu 8",
+          niri laguntzeko meta desegiten eta zuloa betetzen.
+        maze_karel_2_7: Badago behi bat nire larrean! Idatz ezazu funtzio berri bat
+          niri laguntzeko behia saihesten eta meta desegiten. Jar itzazu zure bloke
+          guztiak funtzio berriaren barruan.
+        maze_karel_2_8: Erabil ezazu funtzio berria, "saihestu behia eta ezabatu 1",
+          niri laguntzeko meta guztiak desegiten.
+        maze_karel_2_9: Ondo da. Hona hemen funtzio bat zutabe bertikal batean lerrokatuta
+          dauden 4 lur-meta desberdin desegiteko. Saia zaitez funtzio hori sartzen
+          begizta baten barruan, lur-meta guztiak desegiteko bloke berri gutxi batzuk
+          erabiliz.
+        maze_karel_debug_function_1: Zer aldatu beharko zenuke programa honetan niri
+          laguntzeko meta guztiak desegiten?
+        maze_karel_debug_function_2: Programa hau zuzendu dezakezu niretzat, nire
+          eremua berdindu ahal izan dezadan?
+        maze_karel_debug_function_3: 'Editatu programa hau nik nire eremuko meta guztiak
+          desegin ahal izateko. '
+        maze_karel_debug_if: Laguntza! Zuzendu programa nire eremua guztiz laua izan
+          dadin.
+        maze_karel_debug_if_else: Zuzendu programa hau nik zuloak bete eta meta guztiak
+          desegin ahal izateko.
+        maze_karel_debug_repeat: Zuzendu programa hau niretzat, nire eremua polita
+          eta laua gera dadin.
+        maze_karel_debug_seq_1: Ongi etorri erroreak zuzentzera! Nire kodea ez dabil
+          ongi. Arazoa aurkitu eta konpondu dezakezu? Konpontzen baduzu, nire eremua
+          berdindu ahal izango dut, eta horrela ereiteko prest utziko dut.
+        maze_karel_debug_seq_2: Zer dago gaizki programa honetan? Nola konponduko
+          zenuke nik meta desegin ahal izateko?
+        maze_karel_debug_while: Nola aldatu beharko zenuke programa hau niri zuloa
+          betetzen laguntzeko?
+        maze_wordsearch_k_1: Mugi nazazu "EAST" hitzaren gainean, letraz letra
+        maze_wordsearch_k_13: Mugi nazazu alde batera, eta ondoren bestera, "DEBUG"
+          hitzaren gainean, letraz letra
+        maze_wordsearch_k_15: Mugi nazazu alde batera, eta ondoren bestera, "ABOVE"
+          hitzaren gainean, letraz letra
+        maze_wordsearch_k_16: Mugi nazazu alde batera, eta ondoren bestera, "BELOW"
+          hitzaren gainean, letraz letra
+        maze_wordsearch_k_2: Mugi nazazu "SOUTH" hitzaren gainean, letraz letra
+        maze_wordsearch_k_20: Hau proba da! Mugi nazazu alde batera, eta ondoren bestera,
+          "STORY" hitzaren gainean, letraz letra
+        maze_wordsearch_k_3: Mugi nazazu "WEST" hitzaren gainean, letraz letra
+        maze_wordsearch_k_4: Mugi nazazu "NORTH" hitzaren gainean, letraz letra
+        maze_wordsearch_k_6: Mugi nazazu lehenik ekialdera eta ondoren hegoaldera
+          "JUMP" hitzaren letren gainean, letraz letra
+        maze_wordsearch_k_9: Mugi nazazu alde batera, eta ondoren bestera, "CODE"
+          hitzaren gainean, letraz letra
+        mazestep_1: Labirinto pausuaren deskribapena hemen
+        mazestep_2: Labirinto pausuaren deskribapena hemen
+        mazestep_3: Labirinto pausuaren deskribapena hemen
+        mazestep_4: Labirinto pausuaren deskribapena hemen
+        mazestep_5: Labirinto pausuaren deskribapena hemen
+        studio_c2_1: Esanarazi diezaiokezu txakurrari "Kaixo mundua"?
+        studio_c2_10: Gehitu al ditzakezu blokeak atzealdea eta pinguinoaren abiadura
+          aldatzeko? Mugi ezazu pinguinoa gezien bidez puntu bat lortu arte
+        studio_c2_11: Sortu zure istorioa. Bukatzean, egin klik Amaieran, zure lagunek
+          euren telefonoetan froga dezaten.
+        studio_c2_2: Lor dezakezu txakurrak zerbait esan eta katuak erantzutea?
+        studio_c2_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
+        studio_c2_4: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko
+          eta katuak "kaixo" esan dezala txakurra hurbiltzen denean?
+        studio_c2_5: Sor dezakezu programa bat, olagarroak "kaixo" esan dezan bere
+          gainean klik egitean?
+        studio_c2_6: Idatz al dezakezu programa bat pinguino hau mugiarazteko gora
+          / behera / ezker / eskuin gezi-teklen bidez helburu guztiak lortzeko?
+        studio_c2_7: '"Errepikatu betirako" blokeak ahalbidetzen du kodea modu jarraituan
+          exekutatzea. Elkartu al ditzakezu blokeak dinosauro hau etengabe mugitzeko
+          gora eta behera?'
+        studio_c2_8: Lor dezakezu pinguinoak "Ene!" esan eta kolpe baten soinua sortzea
+          dinosauroarekin topo egitean? Geziekin mugiarazi behar da, guzti hau gertatzeko.
+        studio_c2_9: Gehitu al dezakezu bloke bat puntu bat eskuratzeko pinguinoak
+          olagarroa harrapatzen duenean? Mugi ezazu pinguinoa gezien bidez puntua
+          lortu arte
+        studio_c3_game_1: Sor dezakezu programa bat, olagarroak "kaixo" esan dezan
+          bere gainean klik egitean?
+        studio_c3_game_2: Idatz al dezakezu programa bat pinguino hau mugiarazteko
+          gora / behera / ezker / eskuin gezi-teklen bidez helburu guztiak lortzeko?
+        studio_c3_game_3: '"Errepikatu betirako" blokeak ahalbidetzen du kodea modu
+          jarraituan exekutatzea. Elkartu al ditzakezu blokeak dinosauro hau etengabe
+          mugitzeko gora eta behera?'
+        studio_c3_game_4: Lor dezakezu pinguinoak "Ene!" esan eta kolpe baten soinua
+          sortzea dinosauroarekin topo egitean? Geziekin mugiarazi behar da, guzti
+          hau gertatzeko.
+        studio_c3_game_5: Gehitu al dezakezu bloke bat puntu bat eskuratzeko pinguinoak
+          olagarroa harrapatzen duenean? Mugi ezazu pinguinoa gezien bidez puntua
+          lortu arte
+        studio_c3_game_6: Gehitu al ditzakezu blokeak atzealdea eta pinguinoaren abiadura
+          aldatzeko? Mugi ezazu pinguinoa gezien bidez puntu bat lortu arte
+        studio_c3_game_7: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran
+          zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
+        studio_c3_story_1: Esanarazi diezaiokezu txakurrari "Kaixo mundua"?
+        studio_c3_story_2: Lor dezakezu txakurrak zerbait esan eta katuak erantzutea?
+        studio_c3_story_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
+        studio_c3_story_4: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko
+          eta katuak "kaixo" esan dezala txakurra hurbiltzen denean?
+        studio_c3_story_5: Erants dezakezu bloke bat, olagarroa pozik egon dadin?
+        studio_c3_story_6: Sortu zure istorioa. Bukatzean, egin klik Amaieran, zure
+          lagunek euren telefonoetan froga dezaten.
+        studio_ec_sandbox: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran
+          zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
+        studio_full_sandbox: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran
+          zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
+        studio_gumball_click_hello: Lagun diezaiokezu Antoni lasterketari hasiera
+          ematen "Gertu, adi, irten!"esanez? Zure programa probatzeko, ez ahaztu Antonen
+          gainean klikatu behar duzula "Hasi" sakatu ondoren!
+        studio_gumball_free_play: Sortu zure joko edo istorio propioa. Bukatutakoan,
+          klikatu "Amaiera" zure lagunek probatu ahal izan dezaten zure jokoa haien
+          telefono, tablet edo ordenagailuetan!
+        studio_gumball_hello1: Anaisek lagun berriak egin nahi ditu. Lagundu diezaiokezu
+          "kaixo" esaten "esan" blokea arrastatuz lan eremura eta horren barruan "kaixo"
+          idazten?
+        studio_gumball_hello2: Darwin (1. aktorea) eta haren neba Gumball (2. aktorea)
+          eskolarako bidean doaz. Lagun iezaiezu elkarri agurtzen "aktoreak esan"
+          blokea bi aldiz erabiliz.
+        studio_gumball_join_food_fight: Batu zaitez janariagatiko borrokara! Erabili
+          "aktoreak zerbait bota eskuinetik" agindua Banana Joek (1. aktorea) janaria
+          bota diezaiola Antoni (2. aktorea). Aldatu Antonen aldartea haserre egon
+          dadin janariak bere kontra jotzen duenean.
+        studio_gumball_move_events: Darwin parte hartzen ari da banderak biltzeko
+          lehiaketan. Lagun iezaiozu korrika egiten "mugitu" blokea itsasten gertaera
+          bakoitzari. Bukatutakoan, klikatu "Hasi" eta saiatu bandera guztiak biltzen.
+        studio_gumball_move_to_actor: Gumball (1. aktorea) eta Darwin (2. aktorea)
+          berandu dabiltza txango egunerako! Lagun iezaiozu Gumballi 200 pixel hurbiltzen
+          Darwinengana "mugitu aktorea" blokea erabiliz. Ondoren, konektatu bloke
+          bat "aktoreak ukitzean" gertaerari soinu bat ateratzeko bi aktoreak elkartzen
+          direnean.
+        studio_gumball_move_to_flag: Banana Joe txango eguneko lasterketa irabazteko
+          zorian dago. Lagun iezaiozu azken 200 pixelak ibiltzen "mugitu" blokea erabiliz.
+        studio_gumball_repeat: '"errepikatu betirako" blokeak ahalbidetzen dizu kodea
+          etengabe exekutatzea. Beste bloke batzuk gehitu ditzakezu bloke horren barruan,
+          Gumballi laguntzeko lasterketarako beroketa ariketak egiten, etengabe ezker
+          eta eskuin mugitzen?'
+        studio_gumball_sound_and_points: Eman dizugu Anton (2. aktorea) ezker-eskuin
+          mugitzeko behar den kode gehiena, eta baita Banana Joe (1. aktorea) pantailan
+          zehar mugitzeko behar dena ere. Kodea osatu dezakezu blokeak gehituz "aktoreak
+          ukitzean" gertaerari soinu bat erreproduzitzeko eta puntu bat eskuratzeko
+          Banana Joek eta Antonek talka egiten dutenean? Sakatu "Hasi" jolasteko.
+        studio_gumball_warn_food_fight: Darwinek ihes egin dio janariagatiko borroka
+          bati! Aldatu atzealdea "karaktereak" izan dadin eta ezarri Darwinen abiadura
+          azkarra izan dadin. Orduan, sakatu "Hasi" eta mugitu Darwin Pennyrengana,
+          honi abisatzeko.
+        studio_iceage_click_hello: Lagundu al diezaiokezu Sid-i lagunei azkeneko deia
+          egiten klik egiterakoan? Ez ahaztu bere gainean klik egin behar duzula "Hasi"
+          sakatu ondoren.
+        studio_iceage_free_play: Zure joko edo historioa sortzeko garaia! Amaitu duzunean,
+          sakatu "Amaitu" zure lagunei beraien telefono, tableta edo konputagailuetan
+          zure jokoa probatzeko aukera emateko!
+        studio_iceage_hello1: Sid-ek guztiak bildu nahi ditu abentura berri batean.
+          Lagundu diezaiokezu "kaixo" esaten, "esan" blokea lan-eremuan arrastatu
+          eta barruan "kaixo" idatziz?
+        studio_iceage_hello2: Sid-ek (1 aktoreak) Manny (2 aktorea) topatu du eta
+          abenturara gonbidatu nahi du. Lagundu iezaiezu elkarri agurtzen "aktoreak
+          dio" blokea birritan erabiliz.
+        studio_iceage_move_events: Scrat oraindik ezkurren bila dabil! Lagundu iezaiozu
+          noraezean ibiltzen "mugitu" blokea gertaera bakoitzari lotuz eta norabide
+          aldaketa eraginez gezidun tekla bakoitza sakatzerakoan, Amaitzen duzunean,
+          sakatu "Hasi" eta saiatu ezkur guztiak biltzen.
+        studio_iceage_move_to_actor: Diego (1 aktorea) Manny-ren (2 aktorearen) bilda
+          dabil. Lagundu iezaiozu Diegori 200 pixel behera egiten Manny-rengana "mugitu
+          aktorea" blokea erabiliz. Ondoren, konektatu bloke bat "aktoreak ikutzen
+          duenean" blokearekin elkar aurkitzen dutenean soinu bat jotzeko.
+        studio_iceage_move_to_flag: Scrat bere ezkurraren bila dabil! Lagundu iezaziozu
+          azken 200 pixeletan aurrera egiten "mugitu" blokea erabiliz.
+        studio_iceage_repeat: '"errepikatu betirako" blokearen bidez zure kodea modu
+          jarraituan exekutatzen da. Elkartu al ditzakezu blokeak Granny-k ariketa
+          fisikoa egin dezan ezkerrera eta eskuinera etengabe mugituz?'
+        studio_iceage_sound_and_points: Granny ezker eta eskuinera mugitzeko, eta
+          Sid pantailan zehar mugitzeko behar den kode gehiena eman dizugu. Amaitu
+          dezakezu kodea eta "aktoreak ikutzen duenean" gertaerari blokeak gehitu,
+          Sid-ek eta Granny-k tupust egiten dutenean hots bat egin eta puntu bat eskuratzeko?
+          Sakatu Hasi jokatzeko.
+        studio_iceage_throw_hearts: Sid-ek bere amona Granny-ri maite duela jakinarazi
+          nahi dio. Erabili "aktoreak bota" komandoa Sid-ek (1 aktoreak) Granny-ri
+          (2 aktoreari) bihotzak botatzeko! Ezarri Granny-ren aldartea onera bihotzekin
+          talka egiten duenean.
+        studio_iceage_warn_ice_age: Guztiak mugitu behar dira azkar izotz aldia datorrelako!
+          Jarri "izozmendiak" atzealdea eta ezarri "Sid"-en abiadura azkarra, ondoren
+          sakatu Hasi, eta mugitu Diegorengana jakinaren gainean jartzeko.
+        studio_k1_1: Esanarazi diezaiokezu txakurrari "Kaixo mundua"?
+        studio_k1_2: Lor dezakezu txakurrak zerbait esan eta katuak erantzutea?
+        studio_k1_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
+        studio_k1_4: Txakurra katuarengana mugi dadin agindu eta iristean "Kaixo"
+          esan dezala.
+        studio_k1_5: Erants dezakezu bloke bat, olagarroa pozik egon dadin?
+        studio_k1_6: Sortu ezazu zure istorioa! Mugi itzazu txakurra eta katua eta
+          lor ezazu gauzak esan ditzaten.
+        studio_playlab_1: Pinguinoak "kaixo" esan nahi du. Lagun diezaiokezu?
+        studio_playlab_10: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran
+          zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
+        studio_playlab_2: Haitzuloko mutilak (1. aktorea) eta neskak (2. aktorea)
+          "kaixo" esan nahi diote elkarri. Lagun diezaiekezu "esan" blokea bi aldiz
+          erabiliz?
+        studio_playlab_3: Lagun diezaiokezu tenislariari bandera heltzen?
+        studio_playlab_4: Lagun diezaiokezu mutil tenislariari (1. aktorea) neska
+          tenislariarengana (2. aktorea) iristen eta hori lortzean soinu bat egin?
+        studio_playlab_5: Lagunduko diozu espazioko Robotari "Agur lurtarrak" esaten
+          klikatzen dugunean? Ez ahaztu bere gainean klik egin beharko duzula "Hasi"
+          klikatu ondoren
+        studio_playlab_6: Lagun diezaiokezu sorginari su-bola guztietara iristen,
+          gora/behera/ezker/eskuin gezi-teklak erabiliz?
+        studio_playlab_7: '"Errepikatu betirako" blokeak kodea etengabe errepikatzea
+          ahalbidetzen du. Gehi ditzakezu blokeak aztia eskuin eta ezker behin eta
+          berriz mugi dadin?'
+        studio_playlab_8: Gehi dezakezu bloke bat puntu bat lortzeko eta bloke bat
+          soinu bat erreproduzitzeko adarbakarra aztiarenganaino iristean? Programa
+          martxan dagoenean, mugitu adarbakarra geziekin puntu bat lortu arte
+        studio_playlab_9: Ezarri atzealdea estralurtarren inbasio honetarako eta lagundu
+          espazioko robotari estralurtarrengana azkarrago iristen haren abiadura aldatuz.
+          Mugiarazi gezien bidez beste guztiei abisatzeko
+        turtle_1_1: Kaixo, artista bat naiz. Kodea idatz dezakezu ia edozer gauza
+          marraz dezadan. Erabil itzazu bloke gutxi batzuk irudiko marra grisen gainetik
+          marraz dezadan.
+        turtle_1_10: 'Lortu duzu! Orain, marraztu zuk nahi duzuna. Ideia dibertigarri
+          batzuk: marratxoz egindako panpintxo bat, elur maluta, edo espirala. "Ezarri
+          lodiera" bloke berria ere erabil dezakezu. Ondo pasa!'
+        turtle_1_2: 'Orain, marraztu karratu bat. OHARRA: aukeratu zure kolore gogokoena
+          "kolorea ezarri" bloke berrian.'
+        turtle_1_3: Egin karratu bat bakarrik 3 bloke erabiliz.
+        turtle_1_4: 'Marraztu kolore ezberdinetako aldeak dituen triangelu bat. Erabili
+          aldi bakoitzean kolore ezberdina hautatzen duen "ausazko kolorea" aukera.
+          Pista: zenbat biratu behar duzun asmatu beharko duzu "biratu" blokeko zebakian
+          klikatuz.'
+        turtle_1_5: Orain, praktikatzeko, marraztu hirukia eta ondoren karratua, gutun-azala
+          osatzeko.
+        turtle_1_6: 'Badakizu nola marraztu triangelu eta karratu hauek? Laguntza:
+          lehendabizi egin triangelua; ondoren, karratua marraztu baino lehen, aztertu
+          zenbat gradu biratu behar den.'
+        turtle_1_7: Ok, orain pixka bat zailagoa - ea betaurreko berde hauek marraz
+          ditzakezun. Karratuen alde bakoitzak 100 pixel dauzka, eta karratuen aretko
+          distantzia 50 pixelekoa da. Ez ahaztu berdez marraztu behar duzula!
+        turtle_1_8: Ongi, saiatu asmatzen zer gertatzen den kode hau exekutatuz gero
+          (edo sakatu "Hasi" probatzeko). Ondoren, errepikatu behar beste aldiz marrazkia
+          osatzeko. Koloreak ezberdinak izango dira aldi bakoitzean.
+        turtle_1_9: Asmatuko zenuke zein zenbaki jarri beharko litzatekeen galdera
+          ikurren ordez zirkulua marrazteko?
         turtle_2_1: 'Kaixo. Zonbi artista naiz. Marraztea gustatzen zait. Lagun nazazu
           kolore jakin bateko karratu bat marrazten. Ohar garrantzitsua: lehengo bloke
           berak dituzu, baina oraingo honetan hainbat kategoriatan antolatuta daude.'
+        turtle_2_10: Hona hemen kodea espiral desberdinekin esperimentatzen saiatzeko.
+          Zer gertatzen da biraketaren balioa aldatzen baduzu? Edo ausazko kolorea
+          ezartzen baduzu begiztan? Marraz ezazu nahi duzuna.
         turtle_2_2: Ongi etorria funtzioak erabiltzera! Horien bitartez bloke berriak
           definitu ahal izango dituzu. Erabil ezazu "Funtzioak" kategoriaren barruan
           dagoen "marraztu karratu bat" blokea 50x50 tamaina duen karratu berde txiki
@@ -211,40 +540,13 @@ eu:
         turtle_2_9: Erabili "kontatu honekin" begizta elur panpina batzuen familia
           marrazteko, haien altuerak 110, 100, 90, 80 eta 70 izanik. Elur panpinen
           arteko distantzia 60 pixelekoa izan behar da.
-        turtle_2_10: Hona hemen kodea espiral desberdinekin esperimentatzen saiatzeko.
-          Zer gertatzen da biraketaren balioa aldatzen baduzu? Edo ausazko kolorea
-          ezartzen baduzu begiztan? Marraz ezazu nahi duzuna.
-        maze_karel_2_1: 'Saia zaitez blokeak erabiltzen niri laguntzeko meta guztiak
-          desegiten eta lurreko zulo guztiak betetzen. Saia zaitez errepikapenak edo
-          begiztak erabiltzen bloke gehiegi erabili beharrean. Pista: errepikapen
-          bat beste baten barruan jar dezakezu.'
-        maze_karel_2_2: Bloke bat definitu dugu "bete 5" izenarekin, eta orain "Funtzioak"
-          kategorian dago. Erabil ezazu niri laguntzeko zulo hau betetzen.
-        maze_karel_2_3: Erabil ezazu "bete 5" funtzio-bloke berria zulo guztiak bete
-          ditzadan. "bete 5" blokea "Funtzioak" kategoriatik kanpo arrastatu beharko
-          duzu.
-        maze_karel_2_4: Defini ezazu funtzio berri bat 7 paletakada kentzeko. Ondoren,
-          erabil ezazu funtzio hori programa bat idazteko meta guztiak desegiten lagundu
-          diezadan.
-        maze_karel_2_5: Idatz ezazu funtzio berri bat meta batetik 6 paletakada kentzeko
-          eta erabil ezazu meta guztiak desegiten lagundu diezadan.
-        maze_karel_2_6: Erabil itzazu bi funtzio berri, "bete 8" eta "ezabatu 8",
-          niri laguntzeko meta desegiten eta zuloa betetzen.
-        maze_karel_2_7: Badago behi bat nire larrean! Idatz ezazu funtzio berri bat
-          niri laguntzeko behia saihesten eta meta desegiten. Jar itzazu zure bloke
-          guztiak funtzio berriaren barruan.
-        maze_karel_2_8: Erabil ezazu funtzio berria, "saihestu behia eta ezabatu 1",
-          niri laguntzeko meta guztiak desegiten.
-        maze_karel_2_9: Ondo da. Hona hemen funtzio bat zutabe bertikal batean lerrokatuta
-          dauden 4 lur-meta desberdin desegiteko. Saia zaitez funtzio hori sartzen
-          begizta baten barruan, lur-meta guztiak desegiteko bloke berri gutxi batzuk
-          erabiliz.
-        maze_karel_2_10: Mugi nazazu eremuan zehar, eta erabil itzazu bi funtzio hauek
-          niri laguntzeko meta guztiak desegiten eta zulo guztiak betetzen.
         turtle_3_1: Puzle honek erakusten dizu nola dauden definituta "marraztu karratu
           bat" eta "marraztu zirkulu bat" funtzioak. Funtzio bat definitzean, haren
           blokeak ez dira exekutatzen. "marraztu karratu bat" blokea erabili beharko
           duzu karratu bat marrazteko.
+        turtle_3_10: Asko ikasi duzu! Orain, erabil ezazu ikasitakoa, nahi duzuna
+          marrazteko. Saia zaitez marrazten izar bat, edo espiral bat, edo elur maluta
+          polit bat.
         turtle_3_2: '"marraztu karratu bat" funtzioa adibide gisa erabiliz, idatz
           ezazu "marraztu triangelu bat" funtzioa eta erabil ezazu.'
         turtle_3_3: 'Marraztu hesi triangeluarrak katuen inguruan eta hesi karratu
@@ -267,28 +569,33 @@ eu:
           marrazteko.
         turtle_3_9: '"marraztu etxe bat" funtzioa berriro idatz dezakezu laguntzarik
           gabe? Saia zaitez, eta orduan marraztu etxe ilara bat.'
-        turtle_3_10: Asko ikasi duzu! Orain, erabil ezazu ikasitakoa, nahi duzuna
-          marrazteko. Saia zaitez marrazten izar bat, edo espiral bat, edo elur maluta
-          polit bat.
-        maze_karel_debug_seq_1: Ongi etorri erroreak zuzentzera! Nire kodea ez dabil
-          ongi. Arazoa aurkitu eta konpondu dezakezu? Konpontzen baduzu, nire eremua
-          berdindu ahal izango dut, eta horrela ereiteko prest utziko dut.
-        maze_karel_debug_seq_2: Zer dago gaizki programa honetan? Nola konponduko
-          zenuke nik meta desegin ahal izateko?
-        maze_karel_debug_repeat: Zuzendu programa hau niretzat, nire eremua polita
-          eta laua gera dadin.
-        maze_karel_debug_while: Nola aldatu beharko zenuke programa hau niri zuloa
-          betetzen laguntzeko?
-        maze_karel_debug_if: Laguntza! Zuzendu programa nire eremua guztiz laua izan
-          dadin.
-        maze_karel_debug_if_else: Zuzendu programa hau nik zuloak bete eta meta guztiak
-          desegin ahal izateko.
-        maze_karel_debug_function_1: Zer aldatu beharko zenuke programa honetan niri
-          laguntzeko meta guztiak desegiten?
-        maze_karel_debug_function_2: Programa hau zuzendu dezakezu niretzat, nire
-          eremua berdindu ahal izan dezadan?
-        maze_karel_debug_function_3: 'Editatu programa hau nik nire eremuko meta guztiak
-          desegin ahal izateko. '
+        turtle_4_1: 'Triangelu bat marraztu ahal duzu (100 pixeleko aldeekin) soilik
+          hiru bloke erabiliz? Laguntza: erabili "errepikatu" bloke bat.'
+        turtle_4_10: Hona hemen aurreko ariketaren soluzioa. Zenbat aldiz errepikatu
+          beharko zenuke marrazkia osatzeko?
+        turtle_4_11: Aldatu zenbakiak "biratu" eta "errepikatu" blokeetan txantiloi
+          desberdinak egiteko. Edo egin esperimentuak eta aldatu kodearen gainontzekoa
+          zuk nahi duzun zerbait marrazteko.
+        turtle_4_2: Gehitu "biratu eskuinera 90 gradu" blokea programaren erdialdean-edo,
+          triangelu hauek marrazteko (bloke hori jada lan-eremuan dago).
+        turtle_4_3: Ados, hau da triangelu bakarra marrazteko idatzi duzun kodea.
+          Gehitu ditzakezu "errepika" blokea eta "biratu" blokea, lore eder bat sortzeko?
+        turtle_4_4: 'Hau aurreko ariketako kode bera da, baina triangelu bakoitza
+          marraztu ondoren soilik 36 gradu biratu da. Zenbat aldiz errepikatu behar
+          da hau? (Argibidea: 360 gradu biratuta, zirkulu oso bat marraztuko du)'
+        turtle_4_5: |-
+          Aurreko ariketako kode bera duzu hau, birak 36 aldiz errepikatuta. Zenbat gradu izan beharko lituzke birak?
+          (Lagungarria: marrazkia 360º biratuz, biribil bihurtuko da)
+        turtle_4_6: 3 bloke bakarrik erabiliz, 20 pixeleko aldeak dituen karratu bat
+          marraztu dezakezu?
+        turtle_4_7: 'Hona hemen azken ariketako karratua marrazteko kodea. Errepikatu
+          dezakezu ondoz ondoko 10 karratu marrazteko, eskailera baten antzera? Pista:
+          bakarrik behar dituzu 2 bloke gehiago.'
+        turtle_4_8: Hona hemen aurreko ariketaren soluzioa. 2 bloke gehiago gehitu
+          ditzakezu marrazkia osatzeko?
+        turtle_4_9: Hona hemen aurreko ariketaren soluzioa. Zenbat graduko biraketa
+          egin beharko zenuke marrazkia osatzeko? (Agian hainbat aldiz probatu beharko
+          duzu)
         turtle_5_1: Saia zaitez programa hau exekutatzen. Aldaketak egin, zer gertatzen
           den ikusteko. Asma dezakezu nola funtzionatzen duen? (edo ezabatu eta guztiz
           desberdina den zerbaitekin aldatu)
@@ -307,309 +614,91 @@ eu:
         turtle_5_6: Saia zaitez programa hau exekutatzen. Aldaketak egin, zer gertatzen
           den ikusteko. Asma dezakezu nola funtzionatzen duen? (edo ezabatu eta guztiz
           desberdina den zerbaitekin aldatu)
-        maze_3_1: Txerri horrengana iritsi beharra daukat! Birritan move() idatziz
-          berreskura ditzaket nire arrautzak.
-        maze_3_2: Idatzi programa bat niretzat, txerriarenganaino iritsi ahal izateko.
-        maze_3_3: Nola iritsiko naiz txerriarenganaino? Ziurtatu ez naizela TNT kaxatik
-          pasatuko!
-        maze_3_4: Ene! Idatz iezaidazu programa bat TNT sahiestu eta txerriarenganaino
-          iristeko
-        Custom_builder: Arrastatu blokeak tresna-kutxatik lan-ingurunera, sortu nahi
-          duzun maila marrazteko. Sakatu "Hasi" prest zaudenean.
-        jigsaw_1: Klikatu blokea
-        jigsaw_2: Arrastatu blokea helburura
-        jigsaw_3: Antolatu blokeak irudia osatzeko
-        jigsaw_4: Antolatu blokeak irudia osatzeko
-        jigsaw_5: Antolatu blokeak irudia osatzeko
-        jigsaw_6: Antolatu blokeak irudia osatzeko
-        jigsaw_7: Antolatu blokeak irudia osatzeko
-        jigsaw_8: Antolatu blokeak irudia osatzeko
-        jigsaw_9: Antolatu blokeak irudia osatzeko
-        jigsaw_10: Antolatu blokeak irudia osatzeko
-        jigsaw_11: Antolatu blokeak irudia osatzeko
-        jigsaw_12: Antolatu blokeak irudia osatzeko
-        jigsaw_13: Konpon ezazu ariketa!
-        mazestep_1: Labirinto pausuaren deskribapena hemen
-        mazestep_2: Labirinto pausuaren deskribapena hemen
-        mazestep_3: Labirinto pausuaren deskribapena hemen
-        mazestep_4: Labirinto pausuaren deskribapena hemen
-        mazestep_5: Labirinto pausuaren deskribapena hemen
-        studio_c2_1: Esanarazi diezaiokezu txakurrari "Kaixo mundua"?
-        studio_c2_2: Lor dezakezu txakurrak zerbait esan eta katuak erantzutea?
-        studio_c2_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
-        studio_c2_4: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko
-          eta katuak "kaixo" esan dezala txakurra hurbiltzen denean?
-        studio_c2_5: Sor dezakezu programa bat, olagarroak "kaixo" esan dezan bere
-          gainean klik egitean?
-        studio_c2_6: Idatz al dezakezu programa bat pinguino hau mugiarazteko gora
-          / behera / ezker / eskuin gezi-teklen bidez helburu guztiak lortzeko?
-        studio_c2_7: '"Errepikatu betirako" blokeak ahalbidetzen du kodea modu jarraituan
-          exekutatzea. Elkartu al ditzakezu blokeak dinosauro hau etengabe mugitzeko
-          gora eta behera?'
-        studio_c2_8: Lor dezakezu pinguinoak "Ene!" esan eta kolpe baten soinua sortzea
-          dinosauroarekin topo egitean? Geziekin mugiarazi behar da, guzti hau gertatzeko.
-        studio_c2_9: Gehitu al dezakezu bloke bat puntu bat eskuratzeko pinguinoak
-          olagarroa harrapatzen duenean? Mugi ezazu pinguinoa gezien bidez puntua
-          lortu arte
-        studio_c2_10: Gehitu al ditzakezu blokeak atzealdea eta pinguinoaren abiadura
-          aldatzeko? Mugi ezazu pinguinoa gezien bidez puntu bat lortu arte
-        studio_c2_11: Sortu zure istorioa. Bukatzean, egin klik Amaieran, zure lagunek
-          euren telefonoetan froga dezaten.
-        studio_c3_story_1: Esanarazi diezaiokezu txakurrari "Kaixo mundua"?
-        studio_c3_story_2: Lor dezakezu txakurrak zerbait esan eta katuak erantzutea?
-        studio_c3_story_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
-        studio_c3_story_4: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko
-          eta katuak "kaixo" esan dezala txakurra hurbiltzen denean?
-        studio_c3_story_5: Erants dezakezu bloke bat, olagarroa pozik egon dadin?
-        studio_c3_story_6: Sortu zure istorioa. Bukatzean, egin klik Amaieran, zure
-          lagunek euren telefonoetan froga dezaten.
-        studio_c3_game_1: Sor dezakezu programa bat, olagarroak "kaixo" esan dezan
-          bere gainean klik egitean?
-        studio_c3_game_2: Idatz al dezakezu programa bat pinguino hau mugiarazteko
-          gora / behera / ezker / eskuin gezi-teklen bidez helburu guztiak lortzeko?
-        studio_c3_game_3: '"Errepikatu betirako" blokeak ahalbidetzen du kodea modu
-          jarraituan exekutatzea. Elkartu al ditzakezu blokeak dinosauro hau etengabe
-          mugitzeko gora eta behera?'
-        studio_c3_game_4: Lor dezakezu pinguinoak "Ene!" esan eta kolpe baten soinua
-          sortzea dinosauroarekin topo egitean? Geziekin mugiarazi behar da, guzti
-          hau gertatzeko.
-        studio_c3_game_5: Gehitu al dezakezu bloke bat puntu bat eskuratzeko pinguinoak
-          olagarroa harrapatzen duenean? Mugi ezazu pinguinoa gezien bidez puntua
-          lortu arte
-        studio_c3_game_6: Gehitu al ditzakezu blokeak atzealdea eta pinguinoaren abiadura
-          aldatzeko? Mugi ezazu pinguinoa gezien bidez puntu bat lortu arte
-        studio_c3_game_7: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran
-          zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
-        studio_playlab_1: Pinguinoak "kaixo" esan nahi du. Lagun diezaiokezu?
-        studio_playlab_2: Haitzuloko mutilak (1. aktorea) eta neskak (2. aktorea)
-          "kaixo" esan nahi diote elkarri. Lagun diezaiekezu "esan" blokea bi aldiz
-          erabiliz?
-        studio_playlab_3: Lagun diezaiokezu tenislariari bandera heltzen?
-        studio_playlab_4: Lagun diezaiokezu mutil tenislariari (1. aktorea) neska
-          tenislariarengana (2. aktorea) iristen eta hori lortzean soinu bat egin?
-        studio_playlab_5: Lagunduko diozu espazioko Robotari "Agur lurtarrak" esaten
-          klikatzen dugunean? Ez ahaztu bere gainean klik egin beharko duzula "Hasi"
-          klikatu ondoren
-        studio_playlab_6: Lagun diezaiokezu sorginari su-bola guztietara iristen,
-          gora/behera/ezker/eskuin gezi-teklak erabiliz?
-        studio_playlab_7: '"Errepikatu betirako" blokeak kodea etengabe errepikatzea
-          ahalbidetzen du. Gehi ditzakezu blokeak aztia eskuin eta ezker behin eta
-          berriz mugi dadin?'
-        studio_playlab_8: Gehi dezakezu bloke bat puntu bat lortzeko eta bloke bat
-          soinu bat erreproduzitzeko adarbakarra aztiarenganaino iristean? Programa
-          martxan dagoenean, mugitu adarbakarra geziekin puntu bat lortu arte
-        studio_playlab_9: Ezarri atzealdea estralurtarren inbasio honetarako eta lagundu
-          espazioko robotari estralurtarrengana azkarrago iristen haren abiadura aldatuz.
-          Mugiarazi gezien bidez beste guztiei abisatzeko
-        studio_playlab_10: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran
-          zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
-        studio_iceage_hello1: Sid-ek guztiak bildu nahi ditu abentura berri batean.
-          Lagundu diezaiokezu "kaixo" esaten, "esan" blokea lan-eremuan arrastatu
-          eta barruan "kaixo" idatziz?
-        studio_iceage_hello2: Sid-ek (1 aktoreak) Manny (2 aktorea) topatu du eta
-          abenturara gonbidatu nahi du. Lagundu iezaiezu elkarri agurtzen "aktoreak
-          dio" blokea birritan erabiliz.
-        studio_iceage_move_to_flag: Scrat bere ezkurraren bila dabil! Lagundu iezaziozu
-          azken 200 pixeletan aurrera egiten "mugitu" blokea erabiliz.
-        studio_iceage_move_to_actor: Diego (1 aktorea) Manny-ren (2 aktorearen) bilda
-          dabil. Lagundu iezaiozu Diegori 200 pixel behera egiten Manny-rengana "mugitu
-          aktorea" blokea erabiliz. Ondoren, konektatu bloke bat "aktoreak ikutzen
-          duenean" blokearekin elkar aurkitzen dutenean soinu bat jotzeko.
-        studio_iceage_repeat: '"errepikatu betirako" blokearen bidez zure kodea modu
-          jarraituan exekutatzen da. Elkartu al ditzakezu blokeak Granny-k ariketa
-          fisikoa egin dezan ezkerrera eta eskuinera etengabe mugituz?'
-        studio_iceage_click_hello: Lagundu al diezaiokezu Sid-i lagunei azkeneko deia
-          egiten klik egiterakoan? Ez ahaztu bere gainean klik egin behar duzula "Hasi"
-          sakatu ondoren.
-        studio_iceage_move_events: Scrat oraindik ezkurren bila dabil! Lagundu iezaiozu
-          noraezean ibiltzen "mugitu" blokea gertaera bakoitzari lotuz eta norabide
-          aldaketa eraginez gezidun tekla bakoitza sakatzerakoan, Amaitzen duzunean,
-          sakatu "Hasi" eta saiatu ezkur guztiak biltzen.
-        studio_iceage_sound_and_points: Granny ezker eta eskuinera mugitzeko, eta
-          Sid pantailan zehar mugitzeko behar den kode gehiena eman dizugu. Amaitu
-          dezakezu kodea eta "aktoreak ikutzen duenean" gertaerari blokeak gehitu,
-          Sid-ek eta Granny-k tupust egiten dutenean hots bat egin eta puntu bat eskuratzeko?
-          Sakatu Hasi jokatzeko.
-        studio_iceage_warn_ice_age: Guztiak mugitu behar dira azkar izotz aldia datorrelako!
-          Jarri "izozmendiak" atzealdea eta ezarri "Sid"-en abiadura azkarra, ondoren
-          sakatu Hasi, eta mugitu Diegorengana jakinaren gainean jartzeko.
-        studio_iceage_throw_hearts: Sid-ek bere amona Granny-ri maite duela jakinarazi
-          nahi dio. Erabili "aktoreak bota" komandoa Sid-ek (1 aktoreak) Granny-ri
-          (2 aktoreari) bihotzak botatzeko! Ezarri Granny-ren aldartea onera bihotzekin
-          talka egiten duenean.
-        studio_iceage_free_play: Zure joko edo historioa sortzeko garaia! Amaitu duzunean,
-          sakatu "Amaitu" zure lagunei beraien telefono, tableta edo konputagailuetan
-          zure jokoa probatzeko aukera emateko!
-        studio_gumball_hello1: Anaisek lagun berriak egin nahi ditu. Lagundu diezaiokezu
-          "kaixo" esaten "esan" blokea arrastatuz lan eremura eta horren barruan "kaixo"
-          idazten?
-        studio_gumball_hello2: Darwin (1. aktorea) eta haren neba Gumball (2. aktorea)
-          eskolarako bidean doaz. Lagun iezaiezu elkarri agurtzen "aktoreak esan"
-          blokea bi aldiz erabiliz.
-        studio_gumball_move_to_flag: Banana Joe txango eguneko lasterketa irabazteko
-          zorian dago. Lagun iezaiozu azken 200 pixelak ibiltzen "mugitu" blokea erabiliz.
-        studio_gumball_move_to_actor: Gumball (1. aktorea) eta Darwin (2. aktorea)
-          berandu dabiltza txango egunerako! Lagun iezaiozu Gumballi 200 pixel hurbiltzen
-          Darwinengana "mugitu aktorea" blokea erabiliz. Ondoren, konektatu bloke
-          bat "aktoreak ukitzean" gertaerari soinu bat ateratzeko bi aktoreak elkartzen
-          direnean.
-        studio_gumball_repeat: '"errepikatu betirako" blokeak ahalbidetzen dizu kodea
-          etengabe exekutatzea. Beste bloke batzuk gehitu ditzakezu bloke horren barruan,
-          Gumballi laguntzeko lasterketarako beroketa ariketak egiten, etengabe ezker
-          eta eskuin mugitzen?'
-        studio_gumball_click_hello: Lagun diezaiokezu Antoni lasterketari hasiera
-          ematen "Gertu, adi, irten!"esanez? Zure programa probatzeko, ez ahaztu Antonen
-          gainean klikatu behar duzula "Hasi" sakatu ondoren!
-        studio_gumball_move_events: Darwin parte hartzen ari da banderak biltzeko
-          lehiaketan. Lagun iezaiozu korrika egiten "mugitu" blokea itsasten gertaera
-          bakoitzari. Bukatutakoan, klikatu "Hasi" eta saiatu bandera guztiak biltzen.
-        studio_gumball_sound_and_points: Eman dizugu Anton (2. aktorea) ezker-eskuin
-          mugitzeko behar den kode gehiena, eta baita Banana Joe (1. aktorea) pantailan
-          zehar mugitzeko behar dena ere. Kodea osatu dezakezu blokeak gehituz "aktoreak
-          ukitzean" gertaerari soinu bat erreproduzitzeko eta puntu bat eskuratzeko
-          Banana Joek eta Antonek talka egiten dutenean? Sakatu "Hasi" jolasteko.
-        studio_gumball_warn_food_fight: Darwinek ihes egin dio janariagatiko borroka
-          bati! Aldatu atzealdea "karaktereak" izan dadin eta ezarri Darwinen abiadura
-          azkarra izan dadin. Orduan, sakatu "Hasi" eta mugitu Darwin Pennyrengana,
-          honi abisatzeko.
-        studio_gumball_join_food_fight: Batu zaitez janariagatiko borrokara! Erabili
-          "aktoreak zerbait bota eskuinetik" agindua Banana Joek (1. aktorea) janaria
-          bota diezaiola Antoni (2. aktorea). Aldatu Antonen aldartea haserre egon
-          dadin janariak bere kontra jotzen duenean.
-        studio_gumball_free_play: Sortu zure joko edo istorio propioa. Bukatutakoan,
-          klikatu "Amaiera" zure lagunek probatu ahal izan dezaten zure jokoa haien
-          telefono, tablet edo ordenagailuetan!
-        studio_full_sandbox: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran
-          zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
-        studio_k1_1: Esanarazi diezaiokezu txakurrari "Kaixo mundua"?
-        studio_k1_2: Lor dezakezu txakurrak zerbait esan eta katuak erantzutea?
-        studio_k1_3: Sor dezakezu programa bat, txakurra katuarengana mugiarazteko?
-        studio_k1_4: Txakurra katuarengana mugi dadin agindu eta iristean "Kaixo"
-          esan dezala.
-        studio_k1_5: Erants dezakezu bloke bat, olagarroa pozik egon dadin?
-        studio_k1_6: Sortu ezazu zure istorioa! Mugi itzazu txakurra eta katua eta
-          lor ezazu gauzak esan ditzaten.
-        maze_wordsearch_k_1: Mugi nazazu "EAST" hitzaren gainean, letraz letra
-        maze_wordsearch_k_2: Mugi nazazu "SOUTH" hitzaren gainean, letraz letra
-        maze_wordsearch_k_3: Mugi nazazu "WEST" hitzaren gainean, letraz letra
-        maze_wordsearch_k_4: Mugi nazazu "NORTH" hitzaren gainean, letraz letra
-        maze_wordsearch_k_6: Mugi nazazu lehenik ekialdera eta ondoren hegoaldera
-          "JUMP" hitzaren letren gainean, letraz letra
-        maze_wordsearch_k_9: Mugi nazazu alde batera, eta ondoren bestera, "CODE"
-          hitzaren gainean, letraz letra
-        maze_wordsearch_k_13: Mugi nazazu alde batera, eta ondoren bestera, "DEBUG"
-          hitzaren gainean, letraz letra
-        maze_wordsearch_k_15: Mugi nazazu alde batera, eta ondoren bestera, "ABOVE"
-          hitzaren gainean, letraz letra
-        maze_wordsearch_k_16: Mugi nazazu alde batera, eta ondoren bestera, "BELOW"
-          hitzaren gainean, letraz letra
-        maze_wordsearch_k_20: Hau proba da! Mugi nazazu alde batera, eta ondoren bestera,
-          "STORY" hitzaren gainean, letraz letra
-        applab_ec_simple: Sortu zure app-a tresna-kutxako blokeak erabiliz.
-        turtle_ec_1_2: 'Orain, marraztu karratu bat. OHARRA: erabili zure kolore gustukoena
-          "bolaluma kolorea" bloke berrian aukeratuz.'
         turtle_ec_1_10: 'Lortu duzu! Orain, marraztu zuk nahi duzuna. Ideia dibertigarri
           batzuk: marratxoz egindako panpintxo bat, elur maluta, edo espirala. "Ezarri
           lodiera" bloke berria ere erabil dezakezu. Ondo pasa!'
-        studio_ec_sandbox: Sortu zeure jokoa. Bukatuta daukazunean, sakatu Amaieran
-          zure jokoa zure lagunek beraien telefonoetan froga egin dezaten.
+        turtle_ec_1_2: 'Orain, marraztu karratu bat. OHARRA: erabili zure kolore gustukoena
+          "bolaluma kolorea" bloke berrian aukeratuz.'
+    trophy:
+      name:
+        Bronze: Brontzea
+        Gold: Urrea
+        Silver: Zilarra
     video:
       name:
-        maze_intro: Labirintora sarrera
-        artist_intro: Artistara sarrera
-        farmer_intro: 'Sarrera: Baserritarra'
-        flappy_intro: 'Sarrera: Flappy txoria'
-        loop_times: '"Errepikatu Aldiz" Blokea'
-        loop_until: '"Errepikatu Arte" Blokea'
-        if: '"Baldin" Blokea'
-        if_else: '"baldin/bestela" blokea'
-        if_else_scrat: '"baldin/bestela" blokea'
-        function: Funtzioak
-        loop_while: '"Bitartean" Blokea'
-        loop_for: '"Kontagailu" Blokea'
-        parameters: Parametrodun funtzioak
-        hoc_wrapup: Kodetzeko Ordua errepasatzeko
-        Unplug1: Zer da Informatika?
-        Unplug2: Pentsamendu konputazionala
-        Unplug3: Paper grafiko programazioa
-        Unplug4: Algoritmoak
-        Unplug5: Funtzioak
-        Unplug6: Baldintzak
-        Unplug7: Musika idazten
-        Unplug8: Abstrakzioa
-        Unplug9: Txandaka programatzen
-        Unplug10: Internet
-        Unplug11: Ixtea
-        C1_happy_maps_unplugged: Mapa Zoriontsuak
-        C1_moveitmoveit_unplugged: Mugi ezazu, mugi ezazu!
-        C1_bigevent_unplugged: Gertaera Handia
-        C1_getting_loopy: Iteratzen
-        C1_pair_programming: Bikoteka programatzen
-        C1_maze_intro_sequencing: 'Sarrera: Labirintoaren sekuentziazioa'
-        C1_maze_debugging: Labirintoaren arazketa
-        C1_bee_level_intro: Erle maila - Sarrera
         C1_artist_intro: Artistara sarrera
+        C1_bee_level_intro: Erle maila - Sarrera
+        C1_bee_loops: 'Erlea: Begiztak'
+        C1_bigevent_unplugged: Gertaera Handia
+        C1_building_foundation: Oinarri bat Eraikitzen
+        C1_getting_loopy: Iteratzen
+        C1_going_places_safely: Joan segurtasunez
+        C1_happy_maps_unplugged: Mapa Zoriontsuak
+        C1_maze_debugging: Labirintoaren arazketa
+        C1_maze_intro_sequencing: 'Sarrera: Labirintoaren sekuentziazioa'
+        C1_maze_loops: 'Labirintoa: Begiztak'
+        C1_moveitmoveit_unplugged: Mugi ezazu, mugi ezazu!
+        C1_pair_programming: Bikoteka programatzen
+        C1_planting_seed: Hazi bat ereiten
+        C1_playlab_storytelling: Jolas laborategia. Istorio bat sortu
         C1_spelling_bee_intro: 'Sarrera: Letraz letra jolasa'
         C1_zuck_repeat_loop: 'Labirintoa: Begiztak'
-        C1_bee_loops: 'Erlea: Begiztak'
-        C1_maze_loops: 'Labirintoa: Begiztak'
-        C1_playlab_storytelling: Jolas laborategia. Istorio bat sortu
-        C1_planting_seed: Hazi bat ereiten
-        C1_building_foundation: Oinarri bat Eraikitzen
-        C1_going_places_safely: Joan segurtasunez
-        C2_maze_intro: Labirintora sarrera
-        C2_artist_intro: Artistara sarrera
-        C2_zuck_repeat_loop: 'Labirintoa: Begiztak'
-        C2_artist_loops: 'Artista: Begiztak'
         C2_artist_debugging: 'Artista: Arazketa'
-        C2_bee_loops: 'Erlea: Begiztak'
-        C2_bee_debugging: 'Erlea: Arazketa'
+        C2_artist_intro: Artistara sarrera
+        C2_artist_loops: 'Artista: Begiztak'
         C2_bee_conditionals: 'Erlea: Baldintzak'
-        C2_playlab_createstory: Jolas laborategia. Istorio bat sortu
-        C2_graph_paper: Paper grafiko programazioa
-        C2_conditionals_with_cards: Baldintzak
+        C2_bee_debugging: 'Erlea: Arazketa'
+        C2_bee_loops: 'Erlea: Begiztak'
         C2_binary_bracelets: Eskumuturreko bitarrak
-        C2_relay_programming: Errele programazioa
-        C2_paper_airplanes: Paperezko hegazkinak
+        C2_conditionals_with_cards: Baldintzak
         C2_digital_footprint: Zure aztarna digitala
         C2_digital_footprint_v2: Zure aztarna digitala
-        C3_maze_level_4: 'Labirintoa: Begiztak'
-        C3_artist_intro: Artistara sarrera
+        C2_graph_paper: Paper grafiko programazioa
+        C2_maze_intro: Labirintora sarrera
+        C2_paper_airplanes: Paperezko hegazkinak
+        C2_playlab_createstory: Jolas laborategia. Istorio bat sortu
+        C2_relay_programming: Errele programazioa
+        C2_zuck_repeat_loop: 'Labirintoa: Begiztak'
         C3_artist_functions: 'Artista: Funtzioak'
-        C3_bee_functions: 'Erlea: Funtzioak'
-        C3_bee_conditionals: 'Erlea: Baldintzak'
-        C3_maze_conditionals: Labirintoaren baldintzazkoak
+        C3_artist_intro: Artistara sarrera
         C3_artist_nested_loops: Kabiatutako begiztak
-        C3_farmer_while: '"Bitartean" begiztak'
-        C3_bee_nested_loops: Kabiatutako begiztak
+        C3_bee_conditionals: 'Erlea: Baldintzak'
         C3_bee_debugging: 'Erlea: Arazketa'
+        C3_bee_functions: 'Erlea: Funtzioak'
+        C3_bee_nested_loops: Kabiatutako begiztak
         C3_bounce: Errebotea
-        C3_playlab_create_game: Jolas laborategia - Jolas bat sortu
         C3_computational_thinking: Pentsamendu konputazionala
-        C3_dice_race: Dado lasterketa
-        C3_internet: Internet
         C3_crowdsourcing: Crowdsourcing
+        C3_dice_race: Dado lasterketa
+        C3_farmer_while: '"Bitartean" begiztak'
         C3_functional_suncatchers: Funtzioak aztertzen
+        C3_internet: Internet
+        C3_maze_conditionals: Labirintoaren baldintzazkoak
+        C3_maze_level_4: 'Labirintoa: Begiztak'
+        C3_playlab_create_game: Jolas laborategia - Jolas bat sortu
         C3_songwriting_with_parameters: Abestiak sortzen parametroekin
-        C4_intro: Sarrera
-        C4_loops_zombie: Itzuliak
         C4_bee_conditional: 'Erlea: Baldintzak'
-        C4_variables_artist: Aldagaiak - Artista
-        C4_variables_playlab: Aldaerak - Jolas laborategia
+        C4_conditionals: Baldintzak
         C4_for_loops: For begiztak
         C4_for_loops_bee: For begiztak
         C4_for_loops_no_bee: For begiztak
-        C4_math_artist: Artista programatzen matematikaren bidez
-        C4_function_edit: Funtzioak editatzen
         C4_function_create: Funtzioak sortzen
+        C4_function_edit: Funtzioak editatzen
         C4_function_parameters: Parametrodun funtzioak
-        C4_conditionals: Baldintzak
+        C4_intro: Sarrera
+        C4_loops_zombie: Itzuliak
+        C4_math_artist: Artista programatzen matematikaren bidez
         C4_unplugged_algorithms: Algoritmoak Tangramekin
-        C4_unplugged_madlibs: Liburutegi eroak
-        C4_unplugged_variables: Aldagaiak gutunazaletan
-        C4_unplugged_forloops: For begiztak
-        C4_unplugged_parameters: Abestiak idazten parametroekin
         C4_unplugged_binary: Bitarra
+        C4_unplugged_forloops: For begiztak
+        C4_unplugged_madlibs: Liburutegi eroak
+        C4_unplugged_parameters: Abestiak idazten parametroekin
+        C4_unplugged_variables: Aldagaiak gutunazaletan
+        C4_variables_artist: Aldagaiak - Artista
+        C4_variables_playlab: Aldaerak - Jolas laborategia
+        CSF_EF_cs_matters: Informatika Gaiak
+        CSF_Power_of_Words: Hitzen indarra
+        CSF_Super_Digital_Citizen: Super hiritar digitala
         CSF_a_b_artist_loops: Begiztak Artistan
         CSF_artist_angles: Angeluak Artistan
         CSF_collector_k1_blocks: 'Konputazio Zientzien oinarriak: Biltzailea'
@@ -618,93 +707,80 @@ eu:
         CSF_create_functions: Sortu funtzioak
         CSF_debugging_k1_blocks: Arazketa
         CSF_debugging_text_blocks: Arazketa
-        CSF_EF_cs_matters: Informatika Gaiak
+        CSF_loops_AB: Itzuliak
         CSF_maze_intro_k1_blocks: Code Studio sarrera
         CSF_maze_intro_text_blocks: Code Studio sarrera
         CSF_my_robotic_friends: Nire lagun robotikoak
-        CSF_Power_of_Words: Hitzen indarra
-        CSF_Super_Digital_Citizen: Super hiritar digitala
         CSF_stevie_big_project: Stevie eta Big Proiektua
         CSF_unspotted_bugs: Harrapatu gabeko akatsak
         CSF_zuck_loops_short: Errepikatu Loops
-        frozen_intro: 'Sarrera: Kodetzeko ordua'
-        frozen_loops: 'Sarrera: Begiztak'
-        frozen_functions: 'Sarrera: Funtzioak'
-        playlab_intro: 'Sarrera: Jolas Laborategia'
-        playlab_events: Jolas laborategiko gertaerak
-        playlab_repeat_forever: Jolas Laborategia "Errepikatu Betirako"
-        tutorial_puzzle_challenge: Gida-liburua Puzlearen Erronka
-        infinity_playlab_intro: Jolas Laborategia - Sarrera
-        infinity_playlab_events: Jolas Laborategia - Gertaerak
-        infinity_playlab_repeat_forever: Jolas Laborategia - "Errepikatu Betirako"
-        csd_concept_how_computers_work: Ordenagailuen funtzionamendua aurkezten
-        csd_concept_computer: 'Nola funtzionatzen dute ordenagailuek: zerk egiten
-          du ordenagailu bat?'
+        CS_Changing_Everything: Informatika dena aldatzen ari da
+        Unplug1: Zer da Informatika?
+        Unplug10: Internet
+        Unplug11: Ixtea
+        Unplug2: Pentsamendu konputazionala
+        Unplug3: Paper grafiko programazioa
+        Unplug4: Algoritmoak
+        Unplug5: Funtzioak
+        Unplug6: Baldintzak
+        Unplug7: Musika idazten
+        Unplug8: Abstrakzioa
+        Unplug9: Txandaka programatzen
+        applab_hoc_designmode: Aplikazioen Laborategiko Kodearen Ordua - Diseinu modua
+        applab_hoc_onevent: Aplikazioen Laborategiko Kodearen Ordua - onEvent
+        applab_hoc_setproperty: Aplikazioen Laborategiko Kodearen Ordua - setProperty
+        applab_hoc_share: Aplikazioen Laborategiko Kodearen Ordua - Partekatzea
+        applab_hoc_welcome: Aplikazioen Laborategiko Kodearen Ordua - Ongi etorri
+        applab_intro_designmode: Aplikazioen Laborategia - Diseinu modua
+        applab_intro_events: Aplikazioen Laborategia - Egin interaktiboa
+        applab_intro_share: Aplikazioen Laborategia - Partekatu zure aplikazioa
+        applab_intro_sounds: Aplikazioen Laborategia - Irudiak eta soinuak
+        applab_intro_welcome: Aplikazioen Laborategia - Lehen urratsak
+        artist_intro: Artistara sarrera
+        csd_applab_parameters: Parametrodun funtzioak
         csd_concept_binary_data: 'Nola funtzionatzen duten ordenagailuak: bitarrak
           eta datuak'
         csd_concept_circuits_logic: 'Nola funtzionatzen duten ordenagailuak: zirkuituak
           eta logika'
-        csd_concept_memory_cpu_input_output: 'Ordenagailuen funtzionamendua: memoria,
-          PUZ, sarrera eta irteera'
+        csd_concept_computer: 'Nola funtzionatzen dute ordenagailuek: zerk egiten
+          du ordenagailu bat?'
         csd_concept_hardware_software: 'Ordenagailuen funtzionamendua: Hardwarea eta
           softwarea'
+        csd_concept_how_computers_work: Ordenagailuen funtzionamendua aurkezten
+        csd_concept_memory_cpu_input_output: 'Ordenagailuen funtzionamendua: memoria,
+          PUZ, sarrera eta irteera'
         csd_concept_search: Nola funtzionatzen duen bilaketak
+        csd_debugging: Arazketa
         csd_external_amazon_data: Nola erabiltzen diren Big Data Amazonen gomendio
           sistemetan gure bizitzak aldatzeko
         csd_external_netflix_data: Nola egiten ditu Netflix-ek telesaio eta film iradokizunak?
         csd_external_waze_data: Zergatik daude hainbeste erabiltzaile Wazerekin obsesionatuta?
         csd_gamelab_animation_tab: Animazio fitxa
         csd_gamelab_velocity: Abiadura
-        csd_weblab_intro_1: Web Lab sarrera - 1. zatia
-        csd_weblab_intro_2: Web Lab sarrera - 2. zatia
+        csd_pair_programming: Bikoteka programatzen
+        csd_sprite_properties: Sprite-n Propietateak
         csd_weblab_css_1: CSS sarrera - 1. zatia
         csd_weblab_css_2: CSS sarrera - 2. zatia
+        csd_weblab_intro_1: Web Lab sarrera - 1. zatia
+        csd_weblab_intro_2: Web Lab sarrera - 2. zatia
         csd_weblab_intro_3: Web Lab sarrera - 3. zatia
         csp_applab_functions: 'Sarrera: Funtzioak'
         csp_applab_functions_parameters: Parametrodun funtzioak
         csp_applab_loops: Itzuliak
+        csp_applab_parameters: Parametrodun funtzioak
         csp_concept_rgb: Informazio pixka bat pixelei buruz
         csp_cs_is_changing_everything: Informatika dena aldatzen ari da
-        starwars_intro: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen - Sarrera'
-        starwars_typing: Star Wars - Code-ren bitartez galaxia bat eraikitzen - JavaScript
-        starwars_events: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen - Gertaerak'
-        starwars_congrats: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen -
-          Zorionak'
-        starwars_blocks_intro: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen
-          - Sarrera'
-        starwars_blocks_events: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen
-          - Gertaerak'
-        starwars_blocks_congrats: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen
-          - Zorionak'
-        mc_intro: Minecraft - Sarrera
-        mc_repeat: Minecraft - Errepikatu
-        mc_if_statements: Minecraft - Baldintzapeko aginduak
-        mc_congrats_share: Minecraft - Zorionak
-        mc_congrats_no_share: Minecraft - Zorionak
-        gumball_intro: Gumballen Kode Ordua - Sarrera
+        farmer_intro: 'Sarrera: Baserritarra'
+        flappy_intro: 'Sarrera: Flappy txoria'
+        frozen_functions: 'Sarrera: Funtzioak'
+        frozen_intro: 'Sarrera: Kodetzeko ordua'
+        frozen_loops: 'Sarrera: Begiztak'
+        function: Funtzioak
         gumball_events: Gumballen Kode Ordua - Gertaerak
+        gumball_intro: Gumballen Kode Ordua - Sarrera
         gumball_repeat: Gumballen Kode Ordua - "errepikatu" aginduak
-        iceage_intro: Ice Afe kode ordua - Sarrera
-        iceage_events: Ice Age kode ordua - Gertaerak
-        iceage_repeat: Ice Age kode ordua - Errepikatu aginduak
-        mc_2016_intro: Minecraft kode ordua - Sarrera
-        mc_2016_loops: Minecraft kode ordua - Begiztak
-        mc_2016_events: Minecraft kode ordua - Gertaerak
-        mc_2016_spawn: Minecraft kode ordua - Sortu
-        mc_2016_congrats: Minecraft kode ordua - Zorionak
-        applab_hoc_welcome: Aplikazioen Laborategiko Kodearen Ordua - Ongi etorri
-        applab_hoc_setproperty: Aplikazioen Laborategiko Kodearen Ordua - setProperty
-        applab_hoc_onevent: Aplikazioen Laborategiko Kodearen Ordua - onEvent
-        applab_hoc_designmode: Aplikazioen Laborategiko Kodearen Ordua - Diseinu modua
-        applab_hoc_share: Aplikazioen Laborategiko Kodearen Ordua - Partekatzea
-        mc_2017_agent_intro: Aplikazioen Laborategiko Kodearen Ordua - Agentea
-        mc_2017_repeat: Aplikazioen Laborategiko Kodearen Ordua - Errepikapen begiztak
-        mc_2017_functions: Aplikazioen Laborategiko Kodearen Ordua - Funtzioak
-        mc_2017_congratulations: Minecraft kode ordua - Zorionak
-        mc_2017_puzzle_1: Aplikazioen Laborategiko Kodearen Ordua - Agentea
-        mc_2017_puzzle_3: Aplikazioen Laborategiko Kodearen Ordua - Errepikapen begiztak
-        mc_2017_puzzle_8: Aplikazioen Laborategiko Kodearen Ordua - Funtzioak
-        mc_2017_puzzle_12: Aplikazioen Laborategiko Kodearen Ordua - Jolas librea
+        hint_videos_d_11_11_first: 'Gomendatutako bideoak: D.11.11 Lehenengoa'
+        hint_videos_d_11_11_last: 'Gomendatutako bideoak: D.11.11 Azkena'
         hint_videos_d_11_3_first: 'Gomendatutako bideoak: D.11.3 Lehenengoa'
         hint_videos_d_11_3_last: 'Gomendatutako bideoak: D.11.3 Azkena'
         hint_videos_d_11_4_first: 'Gomendatutako bideoak: D.11.4 Lehenengoa'
@@ -717,130 +793,54 @@ eu:
         hint_videos_d_11_7_last: 'Gomendatutako bideoak: D.11.7 Azkena'
         hint_videos_d_11_9_first: 'Gomendatutako bideoak: D.11.9 Lehenengoa'
         hint_videos_d_11_9_last: 'Gomendatutako bideoak: D.11.9 Azkena'
-        hint_videos_d_11_11_first: 'Gomendatutako bideoak: D.11.11 Lehenengoa'
-        hint_videos_d_11_11_last: 'Gomendatutako bideoak: D.11.11 Azkena'
-        applab_intro_welcome: Aplikazioen Laborategia - Lehen urratsak
-        applab_intro_events: Aplikazioen Laborategia - Egin interaktiboa
-        applab_intro_sounds: Aplikazioen Laborategia - Irudiak eta soinuak
-        applab_intro_designmode: Aplikazioen Laborategia - Diseinu modua
-        applab_intro_share: Aplikazioen Laborategia - Partekatu zure aplikazioa
-        CSF_loops_AB: Itzuliak
-        csd_pair_programming: Bikoteka programatzen
-        csd_applab_parameters: Parametrodun funtzioak
-        csd_debugging: Arazketa
+        hoc_wrapup: Kodetzeko Ordua errepasatzeko
+        iceage_events: Ice Age kode ordua - Gertaerak
+        iceage_intro: Ice Afe kode ordua - Sarrera
+        iceage_repeat: Ice Age kode ordua - Errepikatu aginduak
+        if: '"Baldin" Blokea'
+        if_else: '"baldin/bestela" blokea'
+        if_else_scrat: '"baldin/bestela" blokea'
+        infinity_playlab_events: Jolas Laborategia - Gertaerak
+        infinity_playlab_intro: Jolas Laborategia - Sarrera
+        infinity_playlab_repeat_forever: Jolas Laborategia - "Errepikatu Betirako"
+        loop_for: '"Kontagailu" Blokea'
+        loop_times: '"Errepikatu Aldiz" Blokea'
+        loop_until: '"Errepikatu Arte" Blokea'
+        loop_while: '"Bitartean" Blokea'
+        maze_intro: Labirintora sarrera
+        mc_2016_congrats: Minecraft kode ordua - Zorionak
+        mc_2016_events: Minecraft kode ordua - Gertaerak
+        mc_2016_intro: Minecraft kode ordua - Sarrera
+        mc_2016_loops: Minecraft kode ordua - Begiztak
+        mc_2016_spawn: Minecraft kode ordua - Sortu
+        mc_2017_agent_intro: Aplikazioen Laborategiko Kodearen Ordua - Agentea
+        mc_2017_congratulations: Minecraft kode ordua - Zorionak
+        mc_2017_functions: Aplikazioen Laborategiko Kodearen Ordua - Funtzioak
+        mc_2017_puzzle_1: Aplikazioen Laborategiko Kodearen Ordua - Agentea
+        mc_2017_puzzle_12: Aplikazioen Laborategiko Kodearen Ordua - Jolas librea
+        mc_2017_puzzle_3: Aplikazioen Laborategiko Kodearen Ordua - Errepikapen begiztak
+        mc_2017_puzzle_8: Aplikazioen Laborategiko Kodearen Ordua - Funtzioak
+        mc_2017_repeat: Aplikazioen Laborategiko Kodearen Ordua - Errepikapen begiztak
+        mc_congrats_no_share: Minecraft - Zorionak
+        mc_congrats_share: Minecraft - Zorionak
+        mc_if_statements: Minecraft - Baldintzapeko aginduak
+        mc_intro: Minecraft - Sarrera
+        mc_repeat: Minecraft - Errepikatu
+        parameters: Parametrodun funtzioak
         playlab_2021: 'Sarrera: Jolas Laborategia'
         playlab_2021_reader: 'Sarrera: Jolas Laborategia'
-        csp_applab_parameters: Parametrodun funtzioak
-        CS_Changing_Everything: Informatika dena aldatzen ari da
-        csd_sprite_properties: Sprite-n Propietateak
-    callout:
-      text:
-        drag_blocks: Arrastatu "mugitu" blokea eta lotu beste blokearen azpian
-        run: Sakatu "Hasi" zure programa probatzeko
-        watch_again: Klik egin hemen bideoa berriro ikusteko
-        gray_block_explanation: Bloke grisak ezin dira ezabatu. Ebatzi dezakezu ariketa
-          hala ere?
-        show_code_explanation: Klikatu hemen sortzen ari zaren programaren kodea ikusteko
-        instructions_repeat_explanation: Puzzle bakoitzerako jarraibideak hemen daude
-          errepikatuta
-        category_explanation: Bloke berberak dituzu baino oraingoan kategorietan antolatu
-          dira
-        set_sprite_image: Gehitu "ezarri aktorea irudiari" blokea "istorioa hasten
-          denean" blokeari aktore bat istorioan gaitzeko
-        studio_say_text: Kakots artean idatzi zure aktoreak esango duena
-        jigsaw_click: Klikatu bloke hau!
-        move_elsa_forward: Arrastatu "Mugitu aurrera" blokea eta utzi "Martxan dagoenean"
-          blokearen azpian Elsa aurrera mugitzeko
-        turn_elsa: Erabili "Biratu" blokea Elsari birarazteko. Menu zabalgarrian ageri
-          den zenbakiak adierazten du zenbat biratuko duen Elsak
-        replace_questions: Erabili menu zabalgarria "???" zenbaki batez ordezkatzeko
-        replace_questions_degree: Erabili menu zabalgarria "???" ordezkatzeko biratzea
-          nahi den angelu zehatzarekin
-        repeat_blocks: Erabili "Errepikatu" blokea eta inguratu horrekin lan eremuko
-          blokeak
-        repeat_blocks_1: "(1) Erabili bloke hau eta inguratu berarekin lan eremuko
-          bloke grisak"
-        repeat_blocks_2: (2) Mugitu "Errepikatu" blokea hona, eta bloke grisak barruan
-          jarri
-        snowflake_dropdown: Erabili menu zabalgarri hau elur maluta ezberdinak sortzeko!
-        degrees_per_side: Kalkula ezazu 360 zati alde kopurua, angelu bakoitza lortzeko,
-          gradutan.
-        set_sides: Erabili bloke hau ariketa osatzeko behar den zenbakia "aldeak"
-          aldagaiari esleitzeko.
-        set_length: Erabili bloke hau "luzera"-ren balio egokia ezartzeko.
-        which_equation: Zein ekuaziok egiten du alde bakoitza motzagoa alde gehiagoko
-          formak lortzeko?
-        get_nectar: Erabili "nektarra lortu" bloke berria.
-        actions_category: Tresna kutxak look berria dauka! "Akzioak" blokeak hemen
-          daude orain.
-        draw_square_hint: 'Pista: erabili azken puzlean egin berri duzun karratuaren
-          begizta.'
-        edit_function: Hemen klikatu zure funtzioa editatzeko.
-        create_function: Klik egin hemen "Funtzioak" zabalgarria irekitzeko, eta ondoren
-          "Funtzio bat sortu" botoian.
-        house_hint: Ondo da irudiak oraindik ez badu etxearen antza. Hurrengo puzlean
-          konponduko dugu.
-        edit_draw_square: Erabili botoi hau funtzioa editatu eta begizta gehitzeko.
-        edit_get_nectar: Erabili botoi hau funtzioa editatzeko eta aldatu Erlearen
-          biraketa noranzkoa nektarra biltzeko.
-        logic_category: Ireki "Logika" zabalgarria "baldin/bestela" blokea aurkitzeko.
-        length_parameter: Funtzio hau eguneratu dezakezu "luzera" parametroa erabiltzeko
-          moduan?
-        frozen_diamond_repeat: Erabili "errepikatu" blokea irudi hau sortzeko.
-        frozen_circle_function_in_circle_turn: Ez ahaztu biratzeaz zirkulu bakoitza
-          sortu ondoren.
-        frozen_circle_function_with_parameter_circle: Erabili "sortu zirkulua" blokea
-          eta aldatu tamaina.
-        frozen_snowflake_branch: Erabili "sortu elur-malutaren adarra" blokea
-        frozen_create_square: Gehitu bloke gehiago hemen karratu bat sortzeko
-        playlab_drag_say: Arrastatu "esan" blokea hona eta tekleatu "kaixo"
-        playlab_use_twice: Erabili bloke hau bi aldiz eta gogoratu aktorearen zenbakia
-          aldatzeaz
-        playlab_move_girl: Erabili "mugitu eskuinerantz" blokea Neska Tenislaria mugitzeko
-        playlab_play_sound: Gehitu "erreproduzitu soinua" blokea hemen
-        playlab_arrow_keys: Gogoratu hauek erabili behar dituzula sorgina mugi dadin
-          "Hasi" sakatu ondoren
-        playlab_add_move: Gehitu "mugitu" blokeak "errepikatu" bloke honen barruan
-        playlab_add_score: Gehitu puntuazio blokeak hemen
-        playlab_add_blocks: Gehitu zure blokeak hemen
-        set_variable: Arrastatu zenbakizko bloke bat hona zure aldagaiari balioa emateko
-        place_variable: Arrastatu zure aldagaia bloke honen barrura
-        bee_for_loop: Arrastatu hona erleak bildu behar duen nektar kantitaterik handiena
-        place_counter_variable: Arrastatu zure kontaketa aldagaia bloke honen barrura
-        function_editor_draw_square: Hau da zure funtzioaren definizioa. Bloke hauek
-          egikaritzen dira "marraztu karratu bat" blokea erabiltzen duzun bakoitzean
-        change_here: Egin hemen zure aldaketa
-        write_draw_square_function: Arrastatu tresna-kutxatik hona karratu bat marrazten
-          duten blokeak
-        write_draw_triangle_function: Arrastatu tresna-kutxatik hona triangelu bat
-          marrazten duten blokeak
-        edit_add_parameter: Klikatu "editatu" zure funtzioan parametro bat gehitzeko
-        add_and_drag_parameter: Idatzi hemen zure parametroaren izena, klikatu "gehitu"
-          eta orduan arrastatu ezazu zure funtzioaren definiziora
-        fill_in_actor: Bete itzazu ??? aktoreei dagozkien zenbakiekin (1, 2 eta 3)
-        repeat: Jarri blokeak begiztaren barruan komandoak errepikatzeko
-        if_bee_nectar: Erabili "baldin" blokea erleak nektarra behar duen erabakitzeko
-        if_else_bee: Erabili "baldin/bestela" blokea erleak lorearen nektarra lortzeko,
-          eta eztia egiteko ez bada lore bat
-        repeat_full_circle: Adierazi zenbatetan mugitu behar den zonbia biribil osoa
-          egiteko.
-        place_length_variable: Arrastatu "luzera" aldagaia hona galdera-ikurrak ordezkatzeko
-        arrows_move_actor: Geziak erabili aktorea mugitzeko.
-        right_arrow_fireball: Eskuineko gezia erabili su-bolak jaurtikitzeko.
-        name_function: Idatzi hemen zure funtzioaren izena.
-        Infinity_move_right_runbutton: Gehitu "mugitu" blokea hemen
-        Infinity_move_directions_callout: Ze blokek mugitu araziko du gora Baymax
-          gezia gora sakatzerakoan?
-        Infinity_move_directions_callout_arrow: Erabili gezi hauek gidatzeko
-        Infinity_move_collide_callout: Gertaera honetan hots bat egin.
-        Infinity_repeat_callout: '"Mugitu" blokeak hemen kokatu'
-        craft_run_button_callout: Sakatu "Hasi" zure programa probatzeko
-        craft_drag_block_callout: Arrastatu "moveForward();" bloke bat eta kokatu
-          beste blokearen azpian
-        craft_callout_preplaced: Hona hemen hainbat bloke zu hasi ahal izateko
-        craft_inside_repeat: Errepikatu ekintzak blokeak hemen txertatuz
-        craft_callout_preplaced_house: Kode honen bitartez, zure etxea eraikitzen
-          hasiko da. Bukatu dezakezu zuk?
-        craft_what_is_iron: Erauzi burdina!
-        craft_callout_moveforward: Kode honek laba bilatzen du. Gehitu dezakezu agindu
-          bat aurrera mugitzeko?
+        playlab_events: Jolas laborategiko gertaerak
+        playlab_intro: 'Sarrera: Jolas Laborategia'
+        playlab_repeat_forever: Jolas Laborategia "Errepikatu Betirako"
+        starwars_blocks_congrats: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen
+          - Zorionak'
+        starwars_blocks_events: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen
+          - Gertaerak'
+        starwars_blocks_intro: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen
+          - Sarrera'
+        starwars_congrats: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen -
+          Zorionak'
+        starwars_events: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen - Gertaerak'
+        starwars_intro: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen - Sarrera'
+        starwars_typing: Star Wars - Code-ren bitartez galaxia bat eraikitzen - JavaScript
+        tutorial_puzzle_challenge: Gida-liburua Puzlearen Erronka

@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "whakatangi oro",
   "blockly_blockPlaySoundAtMeasureTooltip": "whakatangi oro",
+  "blockly_blockPlaySoundTooltip": "whakatangi oro",
   "blockly_blockRepeatTooltip": "tōai",
   "blockly_blockWhenRun": "ina whakahaerehia",
   "blockly_blockWhenRunTooltip": "ina whakahaerehia",
@@ -9,9 +9,9 @@
   "blockly_toolboxCategoryLogic": "Ararau",
   "blockly_toolboxCategoryMath": "Pāngarau",
   "blockly_toolboxCategoryVariables": "Ngā Taurangi",
-  "share": "Tiri",
-  "startOver": "Tīmata Anō",
+  "continue": "Haere tonu",
   "panelHeaderInstructions": "Ngā Tohutohu",
   "panelHeaderWorkspace": "Papamahi: ",
-  "continue": "Haere tonu"
+  "share": "Tiri",
+  "startOver": "Tīmata Anō"
 }

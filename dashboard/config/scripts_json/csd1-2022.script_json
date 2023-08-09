@@ -34,13 +34,16 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "supported_locales": [
+        "es-MX"
+      ],
       "tts": true,
       "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-03 14:12:57 UTC",
+    "serialized_at": "2023-07-24 21:19:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

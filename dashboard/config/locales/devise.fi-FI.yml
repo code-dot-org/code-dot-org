@@ -57,6 +57,28 @@ fi:
         sähköpostitse ohjeet tilin lukituksen avaamiseen.
       unlocked: Tilisi lukitus on poistettu onnistuneesti. Kirjaudu sisään jatkaaksesi.
   errors:
+    invitations:
+      edit:
+        header: Aseta salasanasi
+        submit_button: Aseta salasanani
+      invitation_removed: Kutsusi poistettiin.
+      invitation_token_invalid: Käyttämäsi kutsuavain ei ole voimassa!
+      new:
+        header: Lähetä kutsu
+        submit_button: Lähetä kutsu
+      no_invitations_remaining: Ei kutsuja jäljellä
+      send_instructions: Sähköpostikutsu on lähetetty osoitteeseen %{email}.
+      updated: Salasanasi määritys onnistui. Olet nyt kirjautunut sisään.
+    mailer:
+      invitation_instructions:
+        accept: Hyväksy kutsu
+        hello: Hei %{email}
+        ignore: Jos et halua vastaanottaa kutsua, jätä email huomiotta.<br />Sinun
+          tilisi luodaan vasta, kun olet klikannut yllä olevaa linkkiä ja määrittänyt
+          salasanan.
+        someone_invited_you: Joku on kutsunut sinut %{url}. Voit hyväksyä kutsun oheisesta
+          linkistä klikkaamalla.
+        subject: Ohjeet kutsumiseen
     messages:
       already_confirmed: on jo vahvistettu; kokeile kirjautua sisään uudelleen
       confirmation_period_expired: täytyy vahvistaa %{period} sisällä; ole hyvä ja
@@ -64,25 +86,3 @@ fi:
       expired: on vanhentunut; ole hyvä ja pyydä uusi
       not_found: ei löytynyt
       not_locked: ei lukittu
-    invitations:
-      send_instructions: Sähköpostikutsu on lähetetty osoitteeseen %{email}.
-      invitation_token_invalid: Käyttämäsi kutsuavain ei ole voimassa!
-      updated: Salasanasi määritys onnistui. Olet nyt kirjautunut sisään.
-      no_invitations_remaining: Ei kutsuja jäljellä
-      invitation_removed: Kutsusi poistettiin.
-      new:
-        header: Lähetä kutsu
-        submit_button: Lähetä kutsu
-      edit:
-        header: Aseta salasanasi
-        submit_button: Aseta salasanani
-    mailer:
-      invitation_instructions:
-        subject: Ohjeet kutsumiseen
-        hello: Hei %{email}
-        someone_invited_you: Joku on kutsunut sinut %{url}. Voit hyväksyä kutsun oheisesta
-          linkistä klikkaamalla.
-        accept: Hyväksy kutsu
-        ignore: Jos et halua vastaanottaa kutsua, jätä email huomiotta.<br />Sinun
-          tilisi luodaan vasta, kun olet klikannut yllä olevaa linkkiä ja määrittänyt
-          salasanan.

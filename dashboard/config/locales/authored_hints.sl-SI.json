@@ -96,6 +96,9 @@
         "2-3 Artist Nested Loops 4": {
           "2-3_Artist_Nested_Loops_3_a": "Potrebuješ pomoč pri izračunu kota?\n\n**360/12=30**"
         },
+        "2-3 Artist Nested Loops 5": {
+          "2-3_Artist_Nested_Loops_5_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
+        },
         "2-3 Artist Nested Loops 7": {
           "2-3_Artist_Nested_Loops_7_a": "Za koliko stopinj se moraš obrniti v vsaki zanki?\n\nKoliko je 360 deljeno z 10?"
         },
@@ -165,6 +168,12 @@
         "2-3 Maze 16": {
           "2-3_Maze_16_a": "Če ne vidiš vzorca, ki se ponavlja, poskusi sprogramirati vso nalogo brez zanke. Zanko uporabi šele potem, ko vidiš kaj vse se ponavlja.",
           "2-3_Maze_16_b": "Če želiš postaviti veliko blokov znotraj zanke \"Ponovi\", preprosto povleci zanko v delovni prostor, nato pa vanjo povleci vse bloke iz programa.\n\nPriključi vse nazaj na blok \"Ob zagonu\" in že si pripravljen!"
+        },
+        "2-3 Maze 3": {
+          "2-3_Maze_6_a": "Obstajata dva načina kako rešiti nalogo!"
+        },
+        "2-3 Maze 6": {
+          "2-3_Maze_6_a": "Obstajata dva načina kako rešiti nalogo!"
         },
         "2-3 Maze Loops 17": {
           "2-3_Maze_Loops_17_a": "Če ne vidiš vzorca, ki se ponavlja, poskusi sprogramirati vso nalogo brez zanke. Zanko uporabi šele potem, ko vidiš kaj vse se ponavlja.",
@@ -264,6 +273,9 @@
         "4-5 While Loops 8": {
           "4-5_While_Loops_8_a": "Vsak element potrebuje lastno zanko `Dokler`."
         },
+        "Artist Autorun Test": {
+          "2-3_Artist_Functions_4_a": "Umetnik se mora obrniti za 120 stopinj med vsakim kvadratom za dokončanje vzorca."
+        },
         "Course 4 Artist 11": {
           "Course_4_Artist_11_a": "Pol-osemkotnik ima **dolžino 30** in se obrne desno za **60 stopinj**.",
           "Course_4_Artist_11_b": "2/3 trikotnik ima **dolžino 80** in se obrne desno za **120 stopinj**."
@@ -301,10 +313,70 @@
         "NEW Course 4 Bee For Loops 8": {
           "NEW_Course_4_Bee_For_Loops_8_a": "Če tvoja zanka šteje, se k tvojemu števcu vsakič doda prirastek.\n\nKaj moraš dodati vsaki številki, da dobiš naslednjo številko?"
         },
+        "course1_artist_loops_challenge1": {
+          "courseA_artist_loops_challenge1_a": "Uporabi \"ponovi\" zanko, da lahko narišeš zidove in streho.Poskusi ponavljati različne bloke. \n\n![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)\n\nOblikujte po svoje ali kliknite ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) za več idej. "
+        },
+        "course1_artist_loops_challenge2": {
+          "harvey_tictactoe": "Uporabi \"skoči\" bloke, da se premakneš na druga mesta."
+        },
+        "course1_artist_loops_challenge3": {
+          "courseA_artist_loops_challenge2_a": "Takšen blok <xml>  <block type=\"simple_move_up_left\"/></xml> bo risarja premaknil poševno.",
+          "courseA_artist_loops_challenge2_b": "Ko boš končal z eno ptičjo hišico, skoči na naslednjo.",
+          "courseA_artist_loops_challenge2_c": "V zanko ponovi boš moral dodati veliko blokov."
+        },
+        "course1_artist_loops_challenge4": {
+          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno.",
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
+        },
+        "course1_collector_loops_challenge1": {
+          "courseA_collector_loops_challenge1_a": "Če gre kaj narobe, poskusi spremeniti številke v vsaki zanki \"ponovi\".",
+          "courseA_collector_loops_challenge1_c": "Na desni strani votline je 6 zakladov, a ti se rabiš premakniti in pobrati samo 5-krat. Zakaj?"
+        },
+        "course1_collector_loops_challenge2": {
+          "courseA_collector_loops_challenge2_a": "Vrni se nazaj po isti poti po kateri greš desno.\n\n![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)",
+          "courseA_collector_loops_challenge2_b": "Rabiš samo en blok ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png>), da to rešiš."
+        },
+        "course1_collector_loops_challenge3": {
+          "courseB_collector_loops_challenge1_d": "Poskusi to!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "course1_collector_loops_challenge4": {
+          "courseB_collector_loops_challenge2_d": "Poskusi to!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "course1_maze_debugging_challenge1": {
+          "courseA_maze_seq_challenge1_a": "Če boš šel predaleč, se lahko zaletiš v TNT."
+        },
+        "course1_maze_debugging_challenge2": {
+          "courseB_maze_seq_challenge2_a": "Dodaj ali odstrani bloke, da rešiš ta nivo.",
+          "courseB_maze_seq_challenge2_b": "Preuredi bloke in pojdi po sredinski poti."
+        },
+        "course1_maze_seq_challenge1": {
+          "courseA_maze_seq_challenge2_a": "Poskusi prešteti polja s prstom. Zapomni si, da ne šteješ začetnega polja."
+        },
+        "course1_maze_seq_challenge2": {
+          "courseB_maze_seq_challenge1_a": "Mogoče najkrajša pot ni možna rešitev. ",
+          "courseB_maze_seq_challenge1_b": "Poskusi se najprej premakniti proti zahodu."
+        },
+        "course1_playlab_events_challenge1": {
+          "courseA_playlab_events_challenge1_a": "Naj se pingvin Waddles pokaže, ko klikneš taščico Robin.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Naj se duh Boo pokaže, ko klikneš na pingvina Waddlesa.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Naj se pošast Jayden pokaže, ko klikneš na duha Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Naj se taščica Robin pokaže, ko klikneš na pošast.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "Končno, naj se čarovnik Wendel pokaže, ko klikneš na robota Spifa!"
+        },
+        "course1_playlab_events_challenge2": {
+          "courseA_playlab_events_challenge2_a": "Lahko narediš, da ptička začivka. \n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "Lahko narediš, da robot zapiska.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "Lahko narediš, da jezna pošast zarenči.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+        },
         "course2_artist_nestedLoops_challenge1": {
           "courseD_artist_nestedLoops_challenge1_a": "Najprej uporabi ugnezdeno zanko, da narišeš 4 osemkotnikov. Obrni se za 45 stopinj, da narediš osemkotnik. Skoči in se obrni za 90 stopinj po vsakem osemkotniku.",
           "courseD_artist_nestedLoops_challenge1_b": "Dodaj kodo, da narišeš trikotnik znotraj tvoje ugnezdene zanke. Uporabi obrat za 120 stopinj za trikotnik",
           "courseD_artist_nestedLoops_challenge1_c": "Uporabi ugnezdeno zanko:\n\n-   Ponovi 8-krat\n-   nariši osemkotnik\n-   nariši trikotnik\n-   skoči naprej za 50 pikslov\n-   obrni se desno za 90 stopinj"
+        },
+        "course2_artist_nestedLoops_challenge2": {
+          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
+          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
         },
         "course2_artist_prog_challenge1": {
           "courseC_artist_prog_challenge1_a": "Pravokotnik je 200 pikslov širok in 100 pikslov visok."
@@ -333,6 +405,12 @@
           "courseC_harvester_loops_challenge1_a": "Sploh ne razmišljaj, da bi poskusil to brez zank!",
           "courseC_harvester_loops_challenge1_b": "Lahko ponoviš \"Premakni se naprej\" in \"Poberi koruzo\" tolikokrat, kot moraš, nato \"Obrni desno\" na vsakem vogalu",
           "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje prvih štirih koruze je uporabljen blok \"Ponovi\" znotraj drugega bloka \"Ponovi\". Ta vzorec lahko uporabiš tudi za preostalo sestavljanko!"
+        },
+        "course2_harvester_loops_challenge2": {
+          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
+          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
+          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
+          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
         },
         "course2_maze_loops_challenge1": {
           "courseC_maze_loops_challenge1_a": "Razmisli o tej poti kot o treh različnih delih. Vsak ima vzorec, ki ga lahko ponovite.",
@@ -366,278 +444,6 @@
         },
         "course4_harvester_nested_loops_challenge1": {
           "courseD_harvester_nested_loops_challenge1_a": "Verjetno si že uporabil zanko, da si ustvaril cik-cak vzorec. Ali se spomneš algoritma, ki si ga uporabil? Dodaj le še nekaj blokov, da dobiš rešitev."
-        },
-        "courseE_artist_concept_challenge1": {
-          "courseE_artist_concept_challenge1_a": "Pol-osemkotnik ima **dolžino 30** in se obrne desno za **60 stopinj**.",
-          "courseE_artist_concept_challenge1_b": "2/3 trikotnik ima **dolžino 80** in se obrne desno za **120 stopinj**."
-        },
-        "courseE_artist_concept_challenge1_2018": {
-          "courseE_artist_concept_challenge1_a": "Pol-osemkotnik ima **dolžino 30** in se obrne desno za **60 stopinj**.",
-          "courseE_artist_concept_challenge1_b": "2/3 trikotnik ima **dolžino 80** in se obrne desno za **120 stopinj**."
-        },
-        "courseF_artist_for4": {
-          "courseF_artist_for4_a": "\\*\\*Kakšno je najmanjše število, ki ga potrebukeš?\nKakšno pa je največje?\nKako velik je korak po?\n\nTo so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'."
-        },
-        "courseF_artist_for4_2018": {
-          "courseF_artist_for4_a": "\\*\\*Kakšno je najmanjše število, ki ga potrebukeš?\nKakšno pa je največje?\nKako velik je korak po?\n\nTo so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'."
-        },
-        "courseF_artist_for4_2019": {
-          "courseF_artist_for4_a": "\\*\\*Kakšno je najmanjše število, ki ga potrebukeš?\nKakšno pa je največje?\nKako velik je korak po?\n\nTo so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'."
-        },
-        "courseF_artist_for4_2020": {
-          "courseF_artist_for4_a": "\\*\\*Kakšno je najmanjše število, ki ga potrebukeš?\nKakšno pa je največje?\nKako velik je korak po?\n\nTo so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'."
-        },
-        "2-3 Artist Nested Loops 5": {
-          "2-3_Artist_Nested_Loops_5_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
-        },
-        "2-3 Maze 6": {
-          "2-3_Maze_6_a": "Obstajata dva načina kako rešiti nalogo!"
-        },
-        "course2_artist_nestedLoops_challenge2": {
-          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
-          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
-        },
-        "course2_harvester_loops_challenge2": {
-          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
-          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
-          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
-          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
-        },
-        "courseB_maze_seq8": {
-          "courseB_maze_seq8_b": "Obstajata dva načina kako rešiti nalogo!"
-        },
-        "courseC_collector_loops_challenge2": {
-          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
-        },
-        "courseC_collector_loops_challenge2_2018": {
-          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
-        },
-        "courseC_collector_loops_challenge2_2019": {
-          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
-        },
-        "courseC_collector_loops_challenge2_2020": {
-          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
-        },
-        "courseC_collector_loops_challenge2_2021": {
-          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
-        },
-        "courseC_harvester_loops_challenge2": {
-          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
-          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
-          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
-          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
-        },
-        "courseC_harvester_loops_challenge2_2018": {
-          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
-          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
-          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
-          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
-        },
-        "courseC_harvester_loops_challenge2_2019": {
-          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
-          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
-          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
-          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
-        },
-        "courseC_harvester_loops_challenge2_2020": {
-          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
-          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
-          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
-          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
-        },
-        "courseC_harvester_loops_challenge2_2021": {
-          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
-          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
-          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
-          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
-        },
-        "courseC_maze_programming6": {
-          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
-        },
-        "courseC_maze_programming6_2018": {
-          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
-        },
-        "courseC_maze_programming6_2019": {
-          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
-        },
-        "courseC_maze_programming6_2020": {
-          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
-        },
-        "courseC_maze_programming6_2021": {
-          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
-        },
-        "courseC_video_angles": {
-          "courseD_scrat_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
-        },
-        "courseD_artist_nestedLoops3": {
-          "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
-        },
-        "courseD_artist_nestedLoops3_2018": {
-          "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
-        },
-        "courseD_artist_nestedLoops3_2019": {
-          "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
-        },
-        "courseD_artist_nestedLoops3_2020": {
-          "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
-        },
-        "courseD_artist_nestedLoops3_2021": {
-          "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
-        },
-        "courseD_artist_nestedLoops_challenge2": {
-          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
-          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
-        },
-        "courseD_artist_nestedLoops_challenge2_2018": {
-          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
-          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
-        },
-        "courseD_artist_nestedLoops_challenge2_2019": {
-          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
-          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
-        },
-        "courseD_artist_nestedLoops_challenge2_2020": {
-          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
-          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
-        },
-        "courseD_artist_nestedLoops_challenge2_2021": {
-          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
-          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
-        },
-        "courseD_bee_conditionals_challenge1": {
-          "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
-        },
-        "courseD_bee_conditionals_challenge1_2018": {
-          "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
-        },
-        "courseD_bee_conditionals_challenge1_2019": {
-          "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
-        },
-        "courseD_bee_conditionals_challenge1_2020": {
-          "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
-        },
-        "courseD_bee_conditionals_challenge1_2021": {
-          "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
-        },
-        "courseD_maze_ramp6": {
-          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
-        },
-        "courseD_scrat_ramp7": {
-          "courseD_scrat_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
-        },
-        "2-3 Maze 3": {
-          "2-3_Maze_6_a": "Obstajata dva načina kako rešiti nalogo!"
-        },
-        "Artist Autorun Test": {
-          "2-3_Artist_Functions_4_a": "Umetnik se mora obrniti za 120 stopinj med vsakim kvadratom za dokončanje vzorca."
-        },
-        "courseC_collector_loops_challenge22022": {
-          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
-        },
-        "courseC_harvester_loops_challenge22022": {
-          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
-          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
-          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
-          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
-        },
-        "courseC_maze_programming62022": {
-          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
-        },
-        "courseD_artist_nestedLoops32022": {
-          "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
-        },
-        "courseD_artist_nestedLoops_challenge22022": {
-          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
-          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
-        },
-        "courseD_bee_conditionals_challenge12022": {
-          "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
-        },
-        "course1_artist_loops_challenge3": {
-          "courseA_artist_loops_challenge2_b": "Ko boš končal z eno ptičjo hišico, skoči na naslednjo.",
-          "courseA_artist_loops_challenge2_c": "V zanko ponovi boš moral dodati veliko blokov.",
-          "courseA_artist_loops_challenge2_a": "Takšen blok <xml>  <block type=\"simple_move_up_left\"/></xml> bo risarja premaknil poševno."
-        },
-        "course1_artist_loops_challenge4": {
-          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
-          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. ",
-          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno."
-        },
-        "courseB_artist_loops_challenge1": {
-          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
-          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. ",
-          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno."
-        },
-        "courseB_artist_loops_challenge12022": {
-          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
-          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. ",
-          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno."
-        },
-        "courseB_artist_loops_challenge1_2018": {
-          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
-          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. ",
-          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno."
-        },
-        "courseB_artist_loops_challenge1_2019": {
-          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
-          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. ",
-          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno."
-        },
-        "courseB_artist_loops_challenge1_2020": {
-          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
-          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. ",
-          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno."
-        },
-        "courseB_artist_loops_challenge1_2021": {
-          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
-          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. ",
-          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno."
-        },
-        "course1_artist_loops_challenge1": {
-          "courseA_artist_loops_challenge1_a": "Uporabi \"ponovi\" zanko, da lahko narišeš zidove in streho.Poskusi ponavljati različne bloke. \n\n![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)\n\nOblikujte po svoje ali kliknite ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) za več idej. "
-        },
-        "course1_artist_loops_challenge2": {
-          "harvey_tictactoe": "Uporabi \"skoči\" bloke, da se premakneš na druga mesta."
-        },
-        "course1_collector_loops_challenge1": {
-          "courseA_collector_loops_challenge1_a": "Če gre kaj narobe, poskusi spremeniti številke v vsaki zanki \"ponovi\".",
-          "courseA_collector_loops_challenge1_c": "Na desni strani votline je 6 zakladov, a ti se rabiš premakniti in pobrati samo 5-krat. Zakaj?"
-        },
-        "course1_collector_loops_challenge2": {
-          "courseA_collector_loops_challenge2_b": "Rabiš samo en blok ![](<https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png>), da to rešiš.",
-          "courseA_collector_loops_challenge2_a": "Vrni se nazaj po isti poti po kateri greš desno.\n\n![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)"
-        },
-        "course1_collector_loops_challenge3": {
-          "courseB_collector_loops_challenge1_d": "Poskusi to!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "course1_collector_loops_challenge4": {
-          "courseB_collector_loops_challenge2_d": "Poskusi to!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "course1_maze_debugging_challenge1": {
-          "courseA_maze_seq_challenge1_a": "Če boš šel predaleč, se lahko zaletiš v TNT."
-        },
-        "course1_maze_debugging_challenge2": {
-          "courseB_maze_seq_challenge2_a": "Dodaj ali odstrani bloke, da rešiš ta nivo.",
-          "courseB_maze_seq_challenge2_b": "Preuredi bloke in pojdi po sredinski poti."
-        },
-        "course1_maze_seq_challenge1": {
-          "courseA_maze_seq_challenge2_a": "Poskusi prešteti polja s prstom. Zapomni si, da ne šteješ začetnega polja."
-        },
-        "course1_maze_seq_challenge2": {
-          "courseB_maze_seq_challenge1_a": "Mogoče najkrajša pot ni možna rešitev. ",
-          "courseB_maze_seq_challenge1_b": "Poskusi se najprej premakniti proti zahodu."
-        },
-        "course1_playlab_events_challenge1": {
-          "courseA_playlab_events_challenge1_a": "Naj se pingvin Waddles pokaže, ko klikneš taščico Robin.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_b": "Naj se duh Boo pokaže, ko klikneš na pingvina Waddlesa.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_c": "Naj se pošast Jayden pokaže, ko klikneš na duha Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_d": "Naj se taščica Robin pokaže, ko klikneš na pošast.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge1_e": "Končno, naj se čarovnik Wendel pokaže, ko klikneš na robota Spifa!"
-        },
-        "course1_playlab_events_challenge2": {
-          "courseA_playlab_events_challenge2_a": "Lahko narediš, da ptička začivka. \n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge2_b": "Lahko narediš, da robot zapiska.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
-          "courseA_playlab_events_challenge2_c": "Lahko narediš, da jezna pošast zarenči.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_maze_seq_challenge2": {
           "courseA_maze_seq_challenge2_a": "Poskusi prešteti polja s prstom. Zapomni si, da ne šteješ začetnega polja."
@@ -723,6 +529,36 @@
           "courseA_playlab_events_challenge2_b": "Lahko narediš, da robot zapiska.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_c": "Lahko narediš, da jezna pošast zarenči.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
+        "courseB_artist_loops_challenge1": {
+          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno.",
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
+        },
+        "courseB_artist_loops_challenge12022": {
+          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno.",
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
+        },
+        "courseB_artist_loops_challenge1_2018": {
+          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno.",
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
+        },
+        "courseB_artist_loops_challenge1_2019": {
+          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno.",
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
+        },
+        "courseB_artist_loops_challenge1_2020": {
+          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno.",
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno.",
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
+        },
         "courseB_collector_loops_challenge1": {
           "courseB_collector_loops_challenge1_d": "Poskusi to!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -743,6 +579,9 @@
         },
         "courseB_collector_loops_challenge2": {
           "courseB_collector_loops_challenge2_d": "Poskusi to!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">4</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"collector_collect\">\n                <next>\n                  <block type=\"maze_moveWest\">\n                    <next>\n                      <block type=\"maze_moveWest\">\n                        <next>\n                          <block type=\"maze_moveSouth\"/>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"controls_repeat_simplified_dropdown\">\n            <title name=\"TIMES\" config=\"3-10\">6</title>\n            <statement name=\"DO\">\n              <block type=\"collector_collect\"/>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_maze_seq8": {
+          "courseB_maze_seq8_b": "Obstajata dva načina kako rešiti nalogo!"
         },
         "courseB_maze_seq_challenge1": {
           "courseB_maze_seq_challenge1_a": "Mogoče najkrajša pot ni možna rešitev. "
@@ -780,6 +619,70 @@
         "courseB_maze_seq_challenge2_2021": {
           "courseB_maze_seq_challenge2_a": "Dodaj ali odstrani bloke, da rešiš ta nivo."
         },
+        "courseC19_playLab_EOC1_2021": {
+          "courseE_playLab_scaffold1_a": "`Nastavi igralec 1 na??? sliko` blok se lahko uporablja za dodajanje igralca na oder.",
+          "courseE_playLab_scaffold1_b": "Postavite blok »nastavi igralca« pod \\`Ob zagonu', da se bo vaš igralec pojavil na začetku programa.",
+          "courseE_playLab_scaffold1_c": "Uporabite \\`Nastavi??? ozadje, da izberete ozadje za vašo sceno."
+        },
+        "courseC19_playLab_EOC22022": {
+          "playlab_down": "Da premaknete igralce navzdol, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "Da premaknete igralce levo, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "Da premaknete igralce desno, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> ",
+          "playlab_up": "Da premaknete igralce navzgor, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "courseE_playLab_scaffold1_b": "Morali bi imeti štiri bloke dogodkov »ko puščica«, s smerjo za premikanje pod vsakim.",
+          "courseE_playLab_scaffold1_c": "Ko končate, bi morali imeti možnost, da premaknete vašega junaka s puščicami!",
+          "playlab_down": "Da premaknete igralce navzdol, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "Da premaknete igralce levo, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "Da premaknete igralce desno, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> ",
+          "playlab_up": "Da premaknete igralce navzgor, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "courseE_playLab_scaffold4_a": "Za dodajanje točke uporabite »Dodaj točko« in »odstrani točko«, da jo odštejemo."
+        },
+        "courseC_PlayLab_events1_2021": {
+          "courseC_PlayLab_events1_a": "Pritrdi ta blok na 'Ob zagonu' blok.\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_events2_2021": {
+          "courseC_PlayLab_events2_a": "Pritrdi ta blok na 'Ob zagonu' blok.\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "Uporabite spustni meni v drugem bloku `actor __ say`, da spremenite, kateri igralec govori."
+        },
+        "courseC_PlayLab_events3_2021": {
+          "courseC_PlayLab_events3_a": "Za rešitev te uganke morate Jorgea premakniti v desno za približno 25 slikovnih pik.",
+          "courseC_PlayLab_events3_b": "Ali je v orodjarni blok, ki izgleda, kot da bi premaknil igralca?",
+          "courseC_PlayLab_events3_c": "Pritrdi ta blok na 'Ob zagonu' blok.\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_events4_2021": {
+          "courseC_PlayLab_events4_a": "Za rešitev te uganke boste morali priložiti blok `igralec __ say` na dogodek »ko se igralec dotakne«.",
+          "courseC_PlayLab_events4_b": "Ko kliknete gumb »Zaženi«, mora Jorge premakniti desno **100** slikovnih pik, da doseže Olive the Cat."
+        },
+        "courseC_PlayLab_events5_2021": {
+          "courseC_PlayLab_events5_a": "Če želite poiskati besedilo »Kaj je novega?«, boste morali klikniti spustni meni v bloku »Actor say\\`",
+          "courseC_PlayLab_events5_b": "Kliknite na Octavia, ko zaženete program, da preverite, ali deluje!"
+        },
+        "courseC_PlayLab_events6_2021": {
+          "courseC_PlayLab_events6_a": "Vsak zeleni blok »ko puščica« mora imeti eno dejanje pod njim.",
+          "courseC_PlayLab_events6_b": "Uporabite spustni meni na bloku `premakni igralec 1`, da spremenite smer, v katero smer se premika Waddles.",
+          "courseC_PlayLab_events6_c": "Ko končate, bi morali imeti možnost, da premaknete Waddlesa okrog s puščicami na vašem računalniku!"
+        },
+        "courseC_PlayLab_events7_2021": {
+          "courseC_PlayLab_events7_a": "Uporabite tako `move igralec 2 up 400 pixels` blok in `premakniti igralec 2 navzdol 400 slikovnih pik »blok znotraj`ponovite večno« zanko rešiti to uganko. ",
+          "courseC_PlayLab_events7_b": "Zanke »ponovite večno« ni treba povezati z nobenim drugim blokom dogodkov, temveč bo delovala sama."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_a": "Bloke boste morali povezati z blokom »ko se igralec dotakne«, da se to zgodi pravilno.",
+          "courseC_PlayLab_events8_b": "Bloki »igralec reči« in »predvajaj zvok« v orodjarni naj vam pomagajo!"
+        },
+        "courseC_PlayLab_events9_2021": {
+          "courseC_PlayLab_events9_a": "Blok »dodaj točkp« vam bo pomagal rešiti to uganko.",
+          "courseC_PlayLab_events9_b": "Prepričajte se, da vaš novi blok »ko se igralec dotakne« pravi igralec **1** in igralec **3**.",
+          "courseC_PlayLab_events9_c": "V vašem delovnem prostoru imate lahko več dogodkov, ko se igralec dotakne hkrati, zato vam prvega ni treba izbrisati!"
+        },
+        "courseC_PlayLab_eventsA_2021": {
+          "courseC_PlayLab_eventsA_a": "Uporabite »nastavi ozadje« blok in `nastavi igralec na ____ hitrosti` blok rešiti to nalogo.",
+          "courseC_PlayLab_eventsA_b": "Za rešitev te naloge boste morali posebej povleči dogodek »Ob zagonu« v delovni prostor."
+        },
         "courseC_PlayLab_eventsA_embed2022": {
           "courseC_PlayLab_eventsA_a": "Uporabi smerne tipke za premikanje pingvina. Za dokončanje te ravni ti ni treba napisati nobene kode."
         },
@@ -809,6 +712,11 @@
           "idea2": "\\_Potrebuješ idejo? \\_\n\n**Gremo na pustolovščino** - Spremeni ozadje, nato pa naj liki govorijo o tem, kje so zdaj.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
           "idea3": "\\_Potrebujete idejo? \\_\n\n**Pinball** - Naredite en znak premakniti s smernimi tipkami (uporabite »ko gor puščico«, `ko dol puščica` bloki), nato pa igrajo naključne zvoke, ko trči z drugimi znaki na zaslonu."
         },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge_a": "Lahko uporabiš ta blok, da premakneš igralce na različne lokacije znotraj igrišča.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "Poskusite uporabiti `nastavi igralec 1 v srednji levi položaj`, ko se dotakne katerega koli od drugih akterjev. To bo ponastavilo igro, da bo igralec lahko še naprej poskušal!",
+          "courseC_PlayLab_events_challenge_c": "Spremeni hitrost različnih igralcev, da narediš igro lažjo ali težjo.\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
+        },
         "courseC_artist_loops1b2022": {
           "courseC_artist_loops1b_a": "To je prvi blok, ki ga boš potreboval:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nIzbereš lahko levo ali desno in poljubno število stopinj."
         },
@@ -824,91 +732,23 @@
         "courseC_artist_loops7a2022": {
           "courseC_artist_loops7a_a": "Cel krog ima 360°. Pomnoži stopinje v tvojem obratu s številom ponovitev. Je produkt enak 360°?\nPreveri predlagane zasuke, da vidiš, če deluje.\n\nNekaj primerov za začetek:\n– poskusi se 6-krat zavrteti za 60°\n– poskusi se 8-krat zavrteti za 45°\n– poskusi se 12-krat zavrteti za 30°."
         },
-        "courseC_harvester_loops_challenge1a": {
-          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        "courseC_collector_loops_challenge2": {
+          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
         },
-        "courseC_harvester_loops_challenge1a2022": {
-          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        "courseC_collector_loops_challenge22022": {
+          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
         },
-        "courseC_harvester_loops_challenge1a_2019": {
-          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        "courseC_collector_loops_challenge2_2018": {
+          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
         },
-        "courseC_harvester_loops_challenge1a_2020": {
-          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        "courseC_collector_loops_challenge2_2019": {
+          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
         },
-        "courseC_harvester_loops_challenge1a_2021": {
-          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\".",
-          "courseC_harvester_loops_challenge1_a": "To je preveč težko brez zank!",
-          "courseC_harvester_loops_challenge1_b": "Lahko ponoviš \"Premakni se naprej\" in \"Poberi koruzo\" tolikokrat, kot moraš, nato \"Obrni desno\" na vsakem vogalu"
+        "courseC_collector_loops_challenge2_2020": {
+          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
         },
-        "courseC19_playLab_EOC1_2021": {
-          "courseE_playLab_scaffold1_a": "`Nastavi igralec 1 na??? sliko` blok se lahko uporablja za dodajanje igralca na oder.",
-          "courseE_playLab_scaffold1_b": "Postavite blok »nastavi igralca« pod \\`Ob zagonu', da se bo vaš igralec pojavil na začetku programa.",
-          "courseE_playLab_scaffold1_c": "Uporabite \\`Nastavi??? ozadje, da izberete ozadje za vašo sceno."
-        },
-        "courseC19_playLab_EOC22022": {
-          "playlab_up": "Da premaknete igralce navzgor, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_down": "Da premaknete igralce navzdol, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_left": "Da premaknete igralce levo, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_right": "Da premaknete igralce desno, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> "
-        },
-        "courseC19_playLab_EOC2_2021": {
-          "courseE_playLab_scaffold1_b": "Morali bi imeti štiri bloke dogodkov »ko puščica«, s smerjo za premikanje pod vsakim.",
-          "playlab_up": "Da premaknete igralce navzgor, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_down": "Da premaknete igralce navzdol, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_left": "Da premaknete igralce levo, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_right": "Da premaknete igralce desno, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> ",
-          "courseE_playLab_scaffold1_c": "Ko končate, bi morali imeti možnost, da premaknete vašega junaka s puščicami!"
-        },
-        "courseC19_playLab_EOC4_2021": {
-          "courseE_playLab_scaffold4_a": "Za dodajanje točke uporabite »Dodaj točko« in »odstrani točko«, da jo odštejemo."
-        },
-        "courseC_PlayLab_events1_2021": {
-          "courseC_PlayLab_events1_a": "Pritrdi ta blok na 'Ob zagonu' blok.\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
-        },
-        "courseC_PlayLab_events2_2021": {
-          "courseC_PlayLab_events2_a": "Pritrdi ta blok na 'Ob zagonu' blok.\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
-          "courseC_PlayLab_events2_b": "Uporabite spustni meni v drugem bloku `actor __ say`, da spremenite, kateri igralec govori."
-        },
-        "courseC_PlayLab_events3_2021": {
-          "courseC_PlayLab_events3_a": "Za rešitev te uganke morate Jorgea premakniti v desno za približno 25 slikovnih pik.",
-          "courseC_PlayLab_events3_b": "Ali je v orodjarni blok, ki izgleda, kot da bi premaknil igralca?",
-          "courseC_PlayLab_events3_c": "Pritrdi ta blok na 'Ob zagonu' blok.\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
-        },
-        "courseC_PlayLab_events4_2021": {
-          "courseC_PlayLab_events4_b": "Ko kliknete gumb »Zaženi«, mora Jorge premakniti desno **100** slikovnih pik, da doseže Olive the Cat.",
-          "courseC_PlayLab_events4_a": "Za rešitev te uganke boste morali priložiti blok `igralec __ say` na dogodek »ko se igralec dotakne«."
-        },
-        "courseC_PlayLab_events5_2021": {
-          "courseC_PlayLab_events5_a": "Če želite poiskati besedilo »Kaj je novega?«, boste morali klikniti spustni meni v bloku »Actor say\\`",
-          "courseC_PlayLab_events5_b": "Kliknite na Octavia, ko zaženete program, da preverite, ali deluje!"
-        },
-        "courseC_PlayLab_events6_2021": {
-          "courseC_PlayLab_events6_a": "Vsak zeleni blok »ko puščica« mora imeti eno dejanje pod njim.",
-          "courseC_PlayLab_events6_b": "Uporabite spustni meni na bloku `premakni igralec 1`, da spremenite smer, v katero smer se premika Waddles.",
-          "courseC_PlayLab_events6_c": "Ko končate, bi morali imeti možnost, da premaknete Waddlesa okrog s puščicami na vašem računalniku!"
-        },
-        "courseC_PlayLab_events7_2021": {
-          "courseC_PlayLab_events7_a": "Uporabite tako `move igralec 2 up 400 pixels` blok in `premakniti igralec 2 navzdol 400 slikovnih pik »blok znotraj`ponovite večno« zanko rešiti to uganko. ",
-          "courseC_PlayLab_events7_b": "Zanke »ponovite večno« ni treba povezati z nobenim drugim blokom dogodkov, temveč bo delovala sama."
-        },
-        "courseC_PlayLab_events8_2021": {
-          "courseC_PlayLab_events8_a": "Bloke boste morali povezati z blokom »ko se igralec dotakne«, da se to zgodi pravilno.",
-          "courseC_PlayLab_events8_b": "Bloki »igralec reči« in »predvajaj zvok« v orodjarni naj vam pomagajo!"
-        },
-        "courseC_PlayLab_events9_2021": {
-          "courseC_PlayLab_events9_a": "Blok »dodaj točkp« vam bo pomagal rešiti to uganko.",
-          "courseC_PlayLab_events9_b": "Prepričajte se, da vaš novi blok »ko se igralec dotakne« pravi igralec **1** in igralec **3**.",
-          "courseC_PlayLab_events9_c": "V vašem delovnem prostoru imate lahko več dogodkov, ko se igralec dotakne hkrati, zato vam prvega ni treba izbrisati!"
-        },
-        "courseC_PlayLab_eventsA_2021": {
-          "courseC_PlayLab_eventsA_a": "Uporabite »nastavi ozadje« blok in `nastavi igralec na ____ hitrosti` blok rešiti to nalogo.",
-          "courseC_PlayLab_eventsA_b": "Za rešitev te naloge boste morali posebej povleči dogodek »Ob zagonu« v delovni prostor."
-        },
-        "courseC_PlayLab_events_challenge1_2021": {
-          "courseC_PlayLab_events_challenge_a": "Lahko uporabiš ta blok, da premakneš igralce na različne lokacije znotraj igrišča.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
-          "courseC_PlayLab_events_challenge_b": "Poskusite uporabiti `nastavi igralec 1 v srednji levi položaj`, ko se dotakne katerega koli od drugih akterjev. To bo ponastavilo igro, da bo igralec lahko še naprej poskušal!",
-          "courseC_PlayLab_events_challenge_c": "Spremeni hitrost različnih igralcev, da narediš igro lažjo ali težjo.\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
+        "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
         },
         "courseC_flappy_events2_2021": {
           "courseC_flappy_events2_a": "Blok, ki ga morate dodati, se imenuje »nastavi hitrost«. ",
@@ -969,6 +809,166 @@
         "courseC_harvester_loops8_2021": {
           "courseC_harvester_loops8_a": "Ali je ta stopnišče videti znano iz drugih ugank? Premiki morajo biti podobni, samo ne pozabite zbrati pridelkov na poti.",
           "courseC_harvester_loops8_b": "Če želite poenostaviti kodo, lahko dejansko date eno zanko znotraj druge! To se imenuje \\*\\* ugnezdena zanka\\*\\*."
+        },
+        "courseC_harvester_loops_challenge1a": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        },
+        "courseC_harvester_loops_challenge1a2022": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        },
+        "courseC_harvester_loops_challenge1a_2019": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        },
+        "courseC_harvester_loops_challenge1a_2020": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_a": "To je preveč težko brez zank!",
+          "courseC_harvester_loops_challenge1_b": "Lahko ponoviš \"Premakni se naprej\" in \"Poberi koruzo\" tolikokrat, kot moraš, nato \"Obrni desno\" na vsakem vogalu",
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        },
+        "courseC_harvester_loops_challenge2": {
+          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
+          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
+          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
+          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
+        },
+        "courseC_harvester_loops_challenge22022": {
+          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
+          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
+          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
+          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
+        },
+        "courseC_harvester_loops_challenge2_2018": {
+          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
+          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
+          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
+          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
+        },
+        "courseC_harvester_loops_challenge2_2019": {
+          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
+          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
+          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
+          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
+        },
+        "courseC_harvester_loops_challenge2_2020": {
+          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
+          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
+          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
+          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
+        },
+        "courseC_harvester_loops_challenge2_2021": {
+          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
+          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
+          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
+          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
+        },
+        "courseC_maze_programming6": {
+          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
+        },
+        "courseC_maze_programming62022": {
+          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
+        },
+        "courseC_maze_programming6_2018": {
+          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
+        },
+        "courseC_maze_programming6_2019": {
+          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
+        },
+        "courseC_maze_programming6_2020": {
+          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
+        },
+        "courseC_video_angles": {
+          "courseD_scrat_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
+        },
+        "courseD_artist_nestedLoops3": {
+          "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
+        },
+        "courseD_artist_nestedLoops32022": {
+          "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
+        },
+        "courseD_artist_nestedLoops3_2018": {
+          "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
+        },
+        "courseD_artist_nestedLoops3_2019": {
+          "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
+        },
+        "courseD_artist_nestedLoops3_2020": {
+          "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
+        },
+        "courseD_artist_nestedLoops_challenge2": {
+          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
+          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
+        },
+        "courseD_artist_nestedLoops_challenge22022": {
+          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
+          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
+        },
+        "courseD_artist_nestedLoops_challenge2_2018": {
+          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
+          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
+        },
+        "courseD_artist_nestedLoops_challenge2_2019": {
+          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
+          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
+        },
+        "courseD_artist_nestedLoops_challenge2_2020": {
+          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
+          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
+        },
+        "courseD_artist_nestedLoops_challenge2_2021": {
+          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
+          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
+        },
+        "courseD_bee_conditionals_challenge1": {
+          "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
+        },
+        "courseD_bee_conditionals_challenge12022": {
+          "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
+        },
+        "courseD_bee_conditionals_challenge1_2018": {
+          "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
+        },
+        "courseD_bee_conditionals_challenge1_2019": {
+          "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
+        },
+        "courseD_bee_conditionals_challenge1_2020": {
+          "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
+        },
+        "courseD_bee_conditionals_challenge1_2021": {
+          "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
+        },
+        "courseD_maze_ramp6": {
+          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
+        },
+        "courseD_scrat_ramp7": {
+          "courseD_scrat_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
+        },
+        "courseE_artist_concept_challenge1": {
+          "courseE_artist_concept_challenge1_a": "Pol-osemkotnik ima **dolžino 30** in se obrne desno za **60 stopinj**.",
+          "courseE_artist_concept_challenge1_b": "2/3 trikotnik ima **dolžino 80** in se obrne desno za **120 stopinj**."
+        },
+        "courseE_artist_concept_challenge1_2018": {
+          "courseE_artist_concept_challenge1_a": "Pol-osemkotnik ima **dolžino 30** in se obrne desno za **60 stopinj**.",
+          "courseE_artist_concept_challenge1_b": "2/3 trikotnik ima **dolžino 80** in se obrne desno za **120 stopinj**."
+        },
+        "courseF_artist_for4": {
+          "courseF_artist_for4_a": "\\*\\*Kakšno je najmanjše število, ki ga potrebukeš?\nKakšno pa je največje?\nKako velik je korak po?\n\nTo so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'."
+        },
+        "courseF_artist_for4_2018": {
+          "courseF_artist_for4_a": "\\*\\*Kakšno je najmanjše število, ki ga potrebukeš?\nKakšno pa je največje?\nKako velik je korak po?\n\nTo so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'."
+        },
+        "courseF_artist_for4_2019": {
+          "courseF_artist_for4_a": "\\*\\*Kakšno je najmanjše število, ki ga potrebukeš?\nKakšno pa je največje?\nKako velik je korak po?\n\nTo so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'."
+        },
+        "courseF_artist_for4_2020": {
+          "courseF_artist_for4_a": "\\*\\*Kakšno je najmanjše število, ki ga potrebukeš?\nKakšno pa je največje?\nKako velik je korak po?\n\nTo so vprašanja, ki si jih moraš zastaviti, da boš lahko izpolnil polja v zanki 'za vsako število'."
         }
       }
     }

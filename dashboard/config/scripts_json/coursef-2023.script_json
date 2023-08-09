@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2023-06-28 15:09:11 UTC",
+    "serialized_at": "2023-07-25 23:05:54 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8015,6 +8015,18 @@
       }
     },
     {
+      "name": "CSF Course Syllabus",
+      "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
+      "key": "csf_course_syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_syllabus"
+      }
+    },
+    {
       "name": "Debugging Guide",
       "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
       "key": "debugging_guide",
@@ -8247,6 +8259,16 @@
       }
     },
     {
+      "name": "Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview",
+      "key": "teaching_and_learning_strategies",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teaching_and_learning_strategies"
+      }
+    },
+    {
       "name": "The Internet",
       "url": "https://youtu.be/mFOUbqYv1Sc",
       "key": "the_internet",
@@ -8329,6 +8351,18 @@
       },
       "seeding_key": {
         "resource.key": "user_input_programs"
+      }
+    },
+    {
+      "name": "Values and Philosophy",
+      "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview\t",
+      "key": "values_and_philosophy",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "values_and_philosophy"
       }
     }
   ],
@@ -8631,6 +8665,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csf_course_syllabus",
+        "script.name": "coursef-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "debugging_guide",
         "script.name": "coursef-2023"
       }
@@ -8662,6 +8702,18 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "coursef-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teaching_and_learning_strategies",
+        "script.name": "coursef-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "values_and_philosophy",
         "script.name": "coursef-2023"
       }
     }

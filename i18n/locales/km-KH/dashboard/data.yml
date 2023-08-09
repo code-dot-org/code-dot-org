@@ -52,22 +52,25 @@ km:
         studio_c3_game_6: "Add blocks to the `when run` event\nto change the background and the speed of Waddles.\\\\r\n\\\\r\nPlay the game and\nmove Waddles with the arrows until you score."
     video:
       name:
-        artist_intro: សិល្បះដោយប្រើកូដប្លុក
+        artist_intro: ការណែនាំពីវិចិត្រករ
         loop_until: ធ្វើឡើងវិញរហូតដល់ប្លុក
         function: អនុគមន៍
         Unplug2: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         Unplug5: អនុគមន៍
         Unplug6: លក្ខខណ្ឌ
         C1_bigevent_unplugged: ព្រឹត្តិការណ៍ធំ
-        C1_artist_intro: សិល្បះដោយប្រើកូដប្លុក
-        C2_artist_intro: សិល្បះដោយប្រើកូដប្លុក
+        C1_artist_intro: ការណែនាំពីវិចិត្រករ
+        C2_artist_intro: ការណែនាំពីវិចិត្រករ
         C2_conditionals_with_cards: លក្ខខណ្ឌ
         C2_digital_footprint: Your Digital Footprint
         C2_digital_footprint_v2: Your Digital Footprint
-        C3_artist_intro: សិល្បះដោយប្រើកូដប្លុក
+        C3_artist_intro: ការណែនាំពីវិចិត្រករ
+        C3_artist_nested_loops: បណ្ដុំប្រតិបត្តិដដែលៗ
+        C3_bee_nested_loops: បណ្ដុំប្រតិបត្តិដដែលៗ
         C3_bounce: បាល់​លោត
         C3_computational_thinking: ការ​គិត​តាម​លក្ខណៈ​កុំព្យូទ័រ
         C4_loops_zombie: ប្រតិបត្តិដដែលៗ
+        C4_variables_artist: អថេរ - សិល្បករ
         C4_conditionals: លក្ខខណ្ឌ
         CSF_a_b_artist_loops: សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)
         CSF_collector_k1_blocks: 'មូលដ្ធានគ្រឹះ វិទ្យាសាស្រ្តកុំព្យូទ័រ : អ្នកប្រមូលកំណប់'
@@ -82,6 +85,8 @@ km:
         CSF_unspotted_bugs: កំហុសដែលមិនបានគ្រោងទុក
         playlab_intro: ការណែនាំអំពីការអនុវត្តលើ Play Lab
         csp_applab_loops: ប្រតិបត្តិដដែលៗ
+        mc_intro: ការណែនាំពី Minecraft
+        mc_repeat: ការប្រើប្រាស់ ប្រតិបត្តិដដែលៗ ក្នុង Minecraft
         mc_2016_congrats: Minecraft Hour of Code - អបអរសាទរ
         mc_2017_agent_intro: Minecraft Hour of Code - The Agent
         mc_2017_repeat: Minecraft Hour of Code - រង្វិលជុំ
@@ -94,17 +99,37 @@ km:
         CSF_skinOverview_Harvester: អ្នកប្រមូលផល
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: ការធ្វើដដែលៗជាមួយ​ BB-8
+        CSF_bb8_loops_C-F: ប្រតិបត្តិដដែលៗជាមួយ​ BB-8
         CSF_harvester_skinOverview_K-1: អ្នកប្រមូលផល
         CSF_scrat_loops_K1: ប្រតិបត្តិដដែលៗ (loops) ក្នុងយុគសម័យទឹកកក
         CSF_scrat_loops_CF: រង្វិលជុំក្នុងយុគសម័យទឹកកក
+        CSF_if_allskins: ការណែនាំពី ប្លុក ប្រសិនបើ (if)
+        CSF_ifelse_allskins: របៀបប្រើប្រាស់ប្លុក If/Else
         CSF_loops_AB: ប្រតិបត្តិដដែលៗ
-        hoc_dance_events: ព្រឹត្ដិការណ៍ - Dance Party
-        hoc_dance_properties: លក្ខណៈសម្បត្តិ - Dance Party
-        CSF_SpriteLab_Intro_v2: សេចក្ដីណែនាំពីមន្ទីរពិសោធន៍
+        CDEF_Video_SpritesInAction: កំណត់សកម្មភាពឱ្យ Sprites
+        CSF_SpriteLab_SpritesInAction_CDEF: កំណត់សកម្មភាពឱ្យ Sprites
+        mc_2018_intro: 'Minecraft: ការណែនាំអំពីដំណើរកម្សាន្តក្នុងទឹក'
+        MC_2018_loops: 'Minecraft: ដំណើរកម្សាន្តក្នុងទឹក (ធ្វើសារឡើងវិញ)'
+        mc_2018_conditionals: 'Minecraft: លក្ខខណ្ឌនៃការធ្វើដំណើរកម្សាន្តក្នុងទឹក'
+        mc_2018_closing: 'Minecraft: សូមអបអរសាទរដំណើរកម្សាន្តក្នុងទឹក'
+        hoc_dance_warmup: កម្មវិធីរាំ - ការចាប់ផ្ដើម
+        hoc_dance_events: ព្រឹត្ដិការណ៍ - ពិធីជប់លៀងរាំកំសាន្ត
+        hoc_dance_properties: ជប់លៀងរាំ - លក្ខណៈសម្បត្តិ 
+        hoc_dance_congrats: កម្មវិធីរាំ - កម្មវិធីរីករាយ
+        CSF_SpriteLab_Intro_v2: សេចក្ដីណែនាំពី Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: របៀបបង្កើត SPRITE
+        CSF_SpriteLab_SpritesInAction_v2: កំណត់សកម្មភាពឱ្យ Sprites
         csd_debugging: ការបំបាត់កំហុស (Debugging)
-        hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - Dance Party
-        hoc_dance_properties_2019: លក្ខណៈសម្បត្តិ - Dance Party
+        hoc_dance_congrats_2019: កម្មវិធីរាំ - កម្មវិធីរីករាយ
+        hoc_dance_warmup_2019: កម្មវិធីរាំ - ការចាប់ផ្ដើម
+        hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - ពិធីជប់លៀងរាំកំសាន្ត
+        hoc_dance_measures_2019: ចង្វាក់ភ្លេង-ពិធីជួបលៀងរាំកំសាន្ត
+        hoc_dance_properties_2019: លក្ខណៈ​ (properties) - ពិធីជួបលៀងរាំកំសាន្ត
+        csf21pilot_events: 'កំណត់សកម្មភាពឱ្យ Sprites'
         playlab_2021: ការណែនាំអំពីការអនុវត្តលើ Play Lab
         playlab_2021_reader: ការណែនាំអំពីការអនុវត្តលើ Play Lab
         csd_sprite_properties: លក្ខណៈសម្បត្តិនៃ sprite
+    callout:
+      text:
+        run: ចុច "ដំណើរការ" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!
+        craft_run_button_callout: ចុច "ដំណើរការ" ដើម្បីសាកល្បងកម្មវិធីរបស់អ្នក!

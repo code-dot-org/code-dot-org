@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2023-07-12 16:32:52 UTC",
+    "serialized_at": "2023-08-02 17:33:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -10914,7 +10914,7 @@
     },
     {
       "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/1Mk9elfN5zVH2LLaY6Z5-c-97wt1k9qDCyMfxRBlB8qM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1ebaf_cmMsIxI0j_WGQL2xry4URBOMWzp-7KwqayMFFU/edit?usp=sharing",
       "key": "_warm_up_word_search",
       "properties": {
         "audience": "Student",
@@ -11937,7 +11937,7 @@
     },
     {
       "name": "The Counter Pattern",
-      "url": "https://youtu.be/sLIJNEIE0Rs",
+      "url": "https://youtu.be/G666sFzAg5g",
       "key": "the_counter_pattern",
       "properties": {
         "audience": "Student",
@@ -14174,6 +14174,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

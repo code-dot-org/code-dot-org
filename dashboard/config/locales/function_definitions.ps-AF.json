@@ -2,28 +2,7 @@
   "ps-AF": {
     "data": {
       "function_definitions": {
-        "NEW Course 4 Artist Params 15": {
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "تکرار"
-            }
-          }
-        },
-        "New Artist Project": {
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "تکرار"
-            }
-          }
-        },
-        "courseF_artist_fwp9": {
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "تکرار"
-            }
-          }
-        },
-        "CourseD_EOC_artist": {
+        "Course E: Frozen Project_examples2022": {
           "draw a pinwheel": {
             "parameters": {
               "repeat": "تکرار"
@@ -44,6 +23,20 @@
             }
           }
         },
+        "CourseD_EOC_artist": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        },
         "CourseD_EOC_artist_2021": {
           "draw a pinwheel": {
             "parameters": {
@@ -58,21 +51,28 @@
             }
           }
         },
-        "Course E: Frozen Project_examples2022": {
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "تکرار"
-            }
-          }
-        },
-        "CourseD_EOC_artist2022": {
-          "draw a pinwheel": {
-            "parameters": {
-              "repeat": "تکرار"
-            }
-          }
-        },
         "CourseD_EOC_artist_example20212022": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        },
+        "NEW Course 4 Artist Params 15": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        },
+        "New Artist Project": {
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "تکرار"
+            }
+          }
+        },
+        "courseF_artist_fwp9": {
           "draw a pinwheel": {
             "parameters": {
               "repeat": "تکرار"

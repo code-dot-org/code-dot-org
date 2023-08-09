@@ -64,6 +64,29 @@ ca:
       unlocked: El teu compte ha estat desbloquejat amb èxit. Si us plau, inicia sessió
         per continuar.
   errors:
+    invitations:
+      edit:
+        header: Estableix la teva contrasenya
+        submit_button: Establir la meva contrasenya
+      invitation_removed: La vostra invitació va ser eliminada.
+      invitation_token_invalid: El testimoni d'invitació proporcionat no és vàlid!
+      new:
+        header: Enviar invitació
+        submit_button: Enviar una invitació
+      no_invitations_remaining: No queden invitacions
+      send_instructions: S'ha enviat un correu electrònic d'invitació a %{email}.
+      updated: La vostra contrasenya s'ha definit correctament. Ara estàs iniciat
+        la sessió.
+    mailer:
+      invitation_instructions:
+        accept: Acceptar l' invitació
+        hello: Hola %{email}
+        ignore: Si vostè no vol acceptar la invitació, si us plau ignori aquest e-mail.
+          < br / > El seu compte no es crearà fins que no accedeixi a l'enllaç anterior
+          i generi la contrasenya.
+        someone_invited_you: Algú t'ha convidat a %{url}, pots acceptar mitjançant
+          el següent enllaç.
+        subject: Instruccions d'invitació
     messages:
       already_confirmed: ja estava confirmat, si us plau, intenta iniciar sessió
       confirmation_period_expired: té que ser confirmat dins el període %{period},
@@ -71,26 +94,3 @@ ca:
       expired: ha caducat, si us plau, sol·licita un nou
       not_found: no trobat
       not_locked: no estaba bloquejat
-    invitations:
-      send_instructions: S'ha enviat un correu electrònic d'invitació a %{email}.
-      invitation_token_invalid: El testimoni d'invitació proporcionat no és vàlid!
-      updated: La vostra contrasenya s'ha definit correctament. Ara estàs iniciat
-        la sessió.
-      no_invitations_remaining: No queden invitacions
-      invitation_removed: La vostra invitació va ser eliminada.
-      new:
-        header: Enviar invitació
-        submit_button: Enviar una invitació
-      edit:
-        header: Estableix la teva contrasenya
-        submit_button: Establir la meva contrasenya
-    mailer:
-      invitation_instructions:
-        subject: Instruccions d'invitació
-        hello: Hola %{email}
-        someone_invited_you: Algú t'ha convidat a %{url}, pots acceptar mitjançant
-          el següent enllaç.
-        accept: Acceptar l' invitació
-        ignore: Si vostè no vol acceptar la invitació, si us plau ignori aquest e-mail.
-          < br / > El seu compte no es crearà fins que no accedeixi a l'enllaç anterior
-          i generi la contrasenya.

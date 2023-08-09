@@ -2,14 +2,11 @@
   "ro-RO": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "CSTA K-12 Standarde informatică (2017)"
+        "ai4k12-2021": {
+          "name": "AI4K12 Orientări Naționale 2021"
         },
-        "csp2021": {
-          "name": "Cadru Conceptual CSP"
-        },
-        "csta2011": {
-          "name": "CSTA K-12 Standarde în Informatică"
+        "c3ss": {
+          "name": "Standarde de studii sociale C3"
         },
         "ccela": {
           "name": "Standarde Artistice Comune Principale pentru Limba Engleză"
@@ -17,20 +14,23 @@
         "ccmath": {
           "name": "Standarde Matematice Comune de Bază"
         },
-        "iste": {
-          "name": "Standarde ISTE pentru Elevi"
-        },
-        "c3ss": {
-          "name": "Standarde de studii sociale C3"
-        },
-        "ngss": {
-          "name": "Standarde științifice de generație următoare"
-        },
         "csa": {
           "name": "Cadrul conceptual CSA"
         },
-        "ai4k12-2021": {
-          "name": "AI4K12 Orientări Naționale 2021"
+        "csp2021": {
+          "name": "Cadru Conceptual CSP"
+        },
+        "csta": {
+          "name": "CSTA K-12 Standarde informatică (2017)"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 Standarde în Informatică"
+        },
+        "iste": {
+          "name": "Standarde ISTE pentru Elevi"
+        },
+        "ngss": {
+          "name": "Standarde științifice de generație următoare"
         }
       }
     }

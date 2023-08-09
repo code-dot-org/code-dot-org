@@ -2,30 +2,31 @@
   "no-NO": {
     "data": {
       "course_offerings": {
-        "csd": "Informatikkoppdagelser",
-        "csp": "Informatikkprinsipper",
         "20-hour": "20-timers introduksjonskurs",
-        "flappy": "Flappy kode",
-        "jigsaw": "Puslespill",
         "algebra": "Datavitenskap i Algebra",
+        "allthethingscourse": "allthethingscourse",
         "artist": "Kunstner",
         "course1": "Kurs 1",
         "course2": "Kurs 2",
         "course3": "Kurs 3",
         "course4": "Kurs 4",
+        "csd": "Informatikkoppdagelser",
+        "csp": "Informatikkprinsipper",
+        "edit-code": "Rediger kode",
+        "flappy": "Flappy kode",
         "frozen": "Kode med Anna og Elsa",
         "gumball": "Gumball Spill-lab",
         "hero": "Minecraft: Heltens reise",
         "hourofcode": "Klassisk labyrint",
         "iceage": "Istid Spill-lab",
         "infinity": "Disney Infinity Spill-Lab",
+        "jigsaw": "Puslespill",
         "mc": "Kodetimen med Minecraft",
         "minecraft": "Kodetimens Minecraft-designer",
         "playlab": "Spill-lab",
-        "edit-code": "Rediger kode",
-        "allthethingscourse": "allthethingscourse",
-        "step": "Trinn",
-        "soccer": "fotball"
+        "soccer": "fotball",
+        "starwars": "Star Wars: Bygg en galakse med kode (JavaScript)",
+        "step": "Trinn"
       }
     }
   }

@@ -1,9 +1,9 @@
 {
   "absolute": "модуль",
+  "agentDiamondPathCongrats": "Куттуктайбыз, алмаз жолун таптыңар! {count, plural, one {1 алмаз} other  {# алмаз}} чогулттуңар! ",
   "agentGenericFailureMessage": "Коддой бергиле! Жардам үчүн Агентти колдонгонду унутпагыла.",
   "agentTooFewBlocksFailureMessage": "Бир жолу бирден блок кошуп Агентти керектүү жерге жеткизгиле.",
   "at": "көздөй",
-  "agentDiamondPathCongrats": "Куттуктайбыз, алмаз жолун таптыңар! {count, plural, one {1 алмаз} other  {# алмаз}} чогулттуңар! ",
   "blockActionAdd": "кошуу",
   "blockActionAttack": "чабуул",
   "blockActionClone": "блокторду клондоо",

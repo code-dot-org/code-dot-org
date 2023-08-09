@@ -1,7 +1,7 @@
 {
   "dropletBlock_createSprite_param3": "бийиктиги",
-  "dropletBlock_setCollider_param0": "түрү",
-  "dropletBlock_setCollider_param4": "бийиктиги",
   "dropletBlock_setColliderEach_param0": "түрү",
-  "dropletBlock_setColliderEach_param4": "бийиктиги"
+  "dropletBlock_setColliderEach_param4": "бийиктиги",
+  "dropletBlock_setCollider_param0": "түрү",
+  "dropletBlock_setCollider_param4": "бийиктиги"
 }

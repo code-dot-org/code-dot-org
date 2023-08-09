@@ -3200,6 +3200,10 @@ vi:
           title: 'Xin chào Thế giới: vũ trụ'
         hello-world-soccer-2022:
           title: 'Hello World: Bóng đá'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Khảo sát
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3441,6 +3445,18 @@ vi:
               display_name: Chương 2
             lessonGroup-5:
               display_name: Khảo sát
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Khảo sát
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3449,6 +3465,18 @@ vi:
               display_name: Chương 1
             lessonGroup-4:
               display_name: Chương 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Khảo sát
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3689,3 +3717,104 @@ vi:
           lessons:
             lesson-4:
               name: Dữ liệu
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Công dân số
+            lessonGroup-3:
+              display_name: Chuỗi tuần tự
+            lessonGroup-4:
+              display_name: Vòng lặp
+            lessonGroup-5:
+              display_name: Tác động của máy tính
+          description_audience: 'Độ tuổi: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Dữ liệu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Công dân số
+            lessonGroup-3:
+              display_name: Chuỗi tuần tự
+            lessonGroup-4:
+              display_name: Vòng lặp
+            lessonGroup-5:
+              display_name: Tác động của máy tính
+            lessonGroup-6:
+              display_name: Dữ liệu
+          description_audience: 'Độ tuổi: 4-7'
+          description_short: Giới thiệu môn khoa học máy tính cho trẻ chưa biết đọc.
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Công dân số
+            lessonGroup-3:
+              display_name: Chuỗi tuần tự
+            lessonGroup-4:
+              display_name: Vòng lặp
+            lessonGroup-5:
+              display_name: Tác động của máy tính
+            lessonGroup-6:
+              display_name: Các sự kiện
+            lessonGroup-7:
+              display_name: Dự án tổng kết khóa học
+          description_audience: 'Độ tuổi: 5-8'
+          description_short: Giới thiệu môn khoa học máy tính cho trẻ chưa biết đọc. Tương tự như Khóa học A, nhưng bổ sung chiều sâu của khái niệm.
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Công dân số
+            lessonGroup-3:
+              display_name: Chuỗi tuần tự
+            lessonGroup-4:
+              display_name: Vòng lặp
+            lessonGroup-5:
+              display_name: Các sự kiện
+            lessonGroup-6:
+              display_name: Dữ liệu
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Công dân số
+            lessonGroup-3:
+              display_name: Chuỗi tuần tự
+            lessonGroup-4:
+              display_name: Tác động của máy tính
+            lessonGroup-6:
+              display_name: Vòng lặp
+            lessonGroup-7:
+              display_name: Dữ liệu
+            lessonGroup-8:
+              display_name: Dự án tổng kết khóa học
+          description_audience: 'Độ tuổi: 7-11'
+          description_short: Tìm hiểu về câu lệnh điều kiện. Sáng tạo tác phẩm nghệ thuật, game của riêng bạn và thậm chí là một bữa tiệc khiêu vũ.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vòng lặp lồng nhau
+            lessonGroup-4:
+              display_name: Các hàm
+            lessonGroup-6:
+              display_name: Dự án tổng kết khóa học
+          description_audience: 'Độ tuổi: 8-12'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nhân vật
+          description_audience: 'Độ tuổi: 9-13'
+          description_short: Tìm hiểu tất cả các khái niệm trong bài học Nguyên tắc cơ bản của khoa học máy tính và sáng tạo tác phẩm cũng như câu chuyện và game của riêng bạn.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nhân vật
+            lessonGroup-3:
+              display_name: Điều kiện
+            lessonGroup-5:
+              display_name: Các biến
+            lessonGroup-6:
+              display_name: Tác động của máy tính
+            lessonGroup-7:
+              display_name: Dự án tổng kết khóa học
+          description_audience: 'Độ tuổi: 9-13'
+          description_short: Tìm hiểu tất cả các khái niệm trong bài học Nguyên tắc cơ bản của khoa học máy tính và sáng tạo tác phẩm cũng như câu chuyện và game của riêng bạn.

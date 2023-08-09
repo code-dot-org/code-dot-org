@@ -1,0 +1,34 @@
+name 'CSA-SE-CV-PostSurvey-and-Assessment'
+title 'Post-Survey and Assessment: Software Engineering and Computer Vision'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'CSA SE-CV Student Post-Survey Preamble'
+level 'CSA-SE-CV-Post-Survey-Q01'
+level 'CSA-SE-CV-Post-Survey-Q02'
+level 'CSA-SE-CV-Post-Survey-Q03'
+level 'CSA-SE-CV-Post-Survey-Q04'
+level 'CSA-SE-CV-Post-Survey-Q05'
+level 'CSA-SE-CV-Post-Survey-Q06'
+level 'CSA-SE-CV-Post-Survey-Q07'
+level 'CSA-SE-CV-Post-Survey-Q08'
+level 'CSA-SE-CV-Post-Survey-Q09'
+
+page
+text 'CSA SE-CV Student Post-Assessment Preamble'
+level 'CSA-SE-CV-Post-Assessment-Q01'
+level 'CSA-SE-CV-Post-Assessment-Q02'
+level 'CSA-SE-CV-Post-Assessment-Q03'
+level 'CSA-SE-CV-Post-Assessment-Q04'
+level 'CSA-SE-CV-Post-Assessment-Q05'
+level 'CSA-SE-CV-Post-Assessment-Q06'
+level 'CSA-SE-CV-Post-Assessment-Q07'
+level 'CSA-SE-CV-Post-Assessment-Q08'
+
+page
+text 'CSA SE-CV Student Final Thoughts Preamble'
+level 'CSA-SE-CV-Final-Thoughts-Q01'
+level 'CSA-SE-CV-Final-Thoughts-Q02'
+level 'CSA-SE-CV-Final-Thoughts-Q03'
+level 'CSA-SE-CV-Final-Thoughts-Q04'

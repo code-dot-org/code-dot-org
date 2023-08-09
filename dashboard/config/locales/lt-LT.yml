@@ -1,410 +1,137 @@
 ---
 lt:
+  activerecord:
+    attributes:
+      user:
+        age: Amžius
+        current_password: Dabartinis slaptažodis
+        edit_header: Keisti paskyros duomenis
+        email: El. paštas
+        error:
+          future: negali būti ateitis
+        gender: Lytis
+        locale: Kalba
+        name: Tavo vardas
+        name_example: Tavo vardas (jį matys tavo mokytoja(-s))
+        password: Slaptažodis
+        password_confirmation: Slaptažodžio patvirtinimas
+        us_state: Valstija
+        username: Naudotojo vardas
+    errors:
+      messages:
+        blank: reikalingas
+  add_hint_form:
+    placeholder: Įvesk savo suflerį čia
+    submit: Pridėk suflerį
+  age_interstitial:
+    age: Tavo amžius
+    header: Paskyros informacijos atnaujinimas
+  already_started: 'Jau pradėjai? Tęsk čia >> '
+  appname: Code.org
+  auth:
+    already_signedup: Jau užsiregistravote?
+    facebook: Facebook
+    forgot_password: Užmiršai savo slaptažodį?
+    google_oauth2: Google paskyra
+    microsoft_v2_auth: Microsoft paskyra
+    need_confirmation: Negavai patvirtinimo instrukcijų?
+    need_unlock: Negavai atrakinimo instrukcijų?
+    notyet_signedup: Dar nesate užsiregistravę?
+    sign_in_with: Prisijungti naudojant %{provider}
+    signed_in: Prisijungta!
+    twitter: Twitter
+    windowslive: Microsoft paskyra
+  beta: beta
+  builder:
+    back: Atgal į scenarijus
+    created: Jūs sukūrėte naują scenarijų.
+    destroyed: Jūs sunaikinote scenarijų.
+    level:
+      create: Sukurti naują lygį
+      current: Dabartinis lygis
+      unused: Nepanaudoti lygiai
+    manage: Sukurti etapus
+    success: Tu sėkmingai redagavai blokus.
+    view: Žiūrėti
+  cancel: Atšaukti
+  certificate_hour_of_code: "„Programavimo valanda“"
+  compatibility:
+    upgrade:
+      link: Sužinok daugiau
+  continue: Tęsti
+  contract_match:
+    baddomainname: Vienas arba daugiau elementų turi netinkamą pavadinimą.
+    baddomainsize: Jūsų funkcijoje yra netinkamas elementų skaičius.
+    baddomaintype: Vienas arba daugiau elementų yra netinkamo tipo arba jų eiliškumas
+      yra netinkamas.
+    badname: Jūsų funkcijoje yra netinkamas vardas.
+    badname_case: Funkcijų pavadinimai reaguoja į didžiąsias ir mažąsias raides. Pamėginkite
+      pakeisti pavadinimą.
+    badrange: Jūsų funkcijoje yra netinkamas skaičius.
+    wrong_title: Neteisingas atsakymas
+  cookie_banner:
+    accept: Sutinku
+  copy: Kopijuoti
+  course_offering:
+    headers:
+      minecraft: Minecraft
+      sports: Sportas
+  courses: Kursai
+  courses_page:
+    title_student: Mokytis su „Code Studio“
+  crud:
+    access_denied: Neturite prieigos prie šio %{model}.
+    back: Atgal
+    confirm: Ar tikrai?
+    created: "%{model} buvo sėkmingai sukurtas."
+    destroy: Sunaikinti
+    destroyed: "%{model} buvo sėkmingai pašalintas."
+    edit: Redaguoti
+    edit_model: Redaguoti %{model}
+    new_model: Nauja %{model}
+    show: Rodyti
+    submit: Pateikti
+    update: Atnaujinti
+    updated: "%{model} buvo sėkmingai atnaujintas."
+  demos: 'Administratorius: Visos demonstracijos'
+  dialog:
+    ok: gerai
+    startover_body: Tavo visi pakeitimai išnyks ir užduotį galėsi atlikti iš naujo.
+    startover_cancel: Atšaukti
+    startover_ok: Pradėti iš naujo
+    startover_title: Ar tikrai norite pradėti iš naujo?
+  download_coming_soon: Jau netrukus bus galima parsisiųsti įvairias veiklas.
+  download_pdf: Atviros pamokos planas
   errors:
     messages:
       not_saved: 'Ištaisyk šias klaidas:'
-      too_young: Šis turinys turi amžiaus apribojimą ir yra neprieinamas jaunesniems
-        mokiniams.
+      pair_programmer: Šiuo metu jūs programuojate poroje su mokiniu, kuris neturi
+        prieigos prie šio turinio. Norint gauti prieigą prie šio turinio, nustokite
+        programuoti poroje ir pabandykite dar kartą.
       teacher_must_accept_terms: Šis turinys turi amžiaus apribojimą ir yra neprieinamas
         jaunesniems mokiniams. Paprašykite savo mokytojo priimti atnaujintas naudojimosi
         sąlygas, kad jums būtų suteikta prieiga prie šio turinio. Jūsų mokytojas tai
         gali padaryti prisijungęs prie Kodavimo studijos ir paspaudęs "Peržiūrėti
         antaujintas sąlygas" mygtuką, esantį Kodavimo studijos namų puslapio viršuje.
-      pair_programmer: Šiuo metu jūs programuojate poroje su mokiniu, kuris neturi
-        prieigos prie šio turinio. Norint gauti prieigą prie šio turinio, nustokite
-        programuoti poroje ir pabandykite dar kartą.
-  activerecord:
-    errors:
-      messages:
-        blank: reikalingas
-    attributes:
-      user:
-        name: Tavo vardas
-        name_example: Tavo vardas (jį matys tavo mokytoja(-s))
-        email: El. paštas
-        username: Naudotojo vardas
-        password: Slaptažodis
-        password_confirmation: Slaptažodžio patvirtinimas
-        current_password: Dabartinis slaptažodis
-        locale: Kalba
-        age: Amžius
-        gender: Lytis
-        edit_header: Keisti paskyros duomenis
-        error:
-          future: negali būti ateitis
-        us_state: Valstija
-  beta: beta
-  hello: Sveikas, pasauli
-  welcome_back: Sveiki sugrįžę, %{name}
-  your_professional_learning_plan: Tavo Profesionalus Mokymosi planas
-  see_your_learning_plan: Peržiūrėti savo mokymosi planą
-  submit: Pateikti
-  unsubmit: Atšaukti
-  previous_page: Ankstesnis puslapis
-  next_page: Sekantis puslapis
-  next_resource: Sekantis šaltinis
-  cancel: Atšaukti
-  okay: Gerai
-  or: arba
-  heading_x_of_y: "%{heading} (%{x} puslapis iš %{y})"
-  join_section:
-    code:
-      placeholder: Grupės kodas (ABCDEF)
-  add_hint_form:
-    placeholder: Įvesk savo suflerį čia
-    submit: Pridėk suflerį
-  appname: Code.org
-  stage: Etapas
-  stage_number: "%{number} etapas"
-  puzzle: Galvosūkis
-  trophies: Laimėjimai
-  courses: Kursai
-  courses_page:
-    title_student: Mokytis su „Code Studio“
-  unplugged_activity: Veikla be kompiuterių
-  of: iš
-  more: DAUGIAU
-  less: MAŽIAU
-  try_hoc: 'Išmėgink „Programavimo valandą“, spausk čia >> '
-  try_k8intro: Išmėgink mūsų programavimo įvado kursą (15-25 valandos)
-  k8intro: Programavimo įvadas 5-8 klasėms (15-25 valandos)
-  already_started: 'Jau pradėjai? Tęsk čia >> '
-  demos: 'Administratorius: Visos demonstracijos'
-  continue: Tęsti
-  prize: prizas
-  more_info: Daugiau informacijos
-  auth:
-    sign_in_with: Prisijungti naudojant %{provider}
-    signed_in: Prisijungta!
-    already_signedup: Jau užsiregistravote?
-    notyet_signedup: Dar nesate užsiregistravę?
-    google_oauth2: Google paskyra
-    twitter: Twitter
-    facebook: Facebook
-    windowslive: Microsoft paskyra
-    microsoft_v2_auth: Microsoft paskyra
-    forgot_password: Užmiršai savo slaptažodį?
-    need_confirmation: Negavai patvirtinimo instrukcijų?
-    need_unlock: Negavai atrakinimo instrukcijų?
-  signup_form:
-    student_count: Jau užsiregistravo %{count} mokinių(-iai).
-    teacher_count: Jau užsiregistravo %{count} mokytojų(-ai).
-    overview: Užsiregistruokite paskyrą, kad galėtumėte sekti savo pažangą arba valdyti
-      savo klasę. <a href="/">Galite naršyti įvairius etapus ir galvosūkius</a> be
-      paskyros, tačiau reikės užsiregistruoti, jei norėsite išsaugoti savo progresą
-      ir projektus.
-    overview_markdown: Užsiregistruokite paskyrą, kad galėtumėte sekti savo pažangą
-      arba valdyti savo klasę. [Galite naršyti įvairius etapus ir galvosūkius](/)
-      be paskyros, tačiau reikės užsiregistruoti, jei norėsite išsaugoti savo progresą
-      ir projektus.
-    hoc_already_signed_up_heading: Naudotis neprisijungus
-    teacher_educator_guide: Peržiūrėti pedagogo vadovą
-    title: Užsiregistruokite Code.org
-    school_name: Mokyklos pavadinimas (nebūtina)
-    school_address: Mokyklos adresas (nebūtina)
-    address_placeholder: adresas, miestas, rajonas, pašto indeksas
-    gender: Lytis (neprivaloma)
-    birthday: Gimimo data (neprivaloma)
-    age: Amžius
-    user_type: 'Kas tu: mokinys ar mokytojas?'
-    submit: Užsiregistruoti
-    teacher: Ar jūs mokytojas?
-    valid_username: Galima!
-    invalid_username: Naudotojo vardas turi būti ne trumpesnis nei 5 simboliai
-    taken_username: Naudotojo vardas jau užimtas
-    valid_password: Galiojantis slaptažodis!
-    invalid_password: Slaptažodį turi sudaryti mažiausiai 6 simboliai
-    mismatch_password: Slaptažodžiai nesutampa
-    agree_us_data_transfer_student: "**Sutinku, kad „Code.org“ perduotų duomenis (įskaitant
-      asmeninius duomenis), naudojantis šiuo tinklapiu Jungtinėse Valstijose** tokių
-      duomenų prieglobai ir apdorojimui."
-    agree_us_data_transfer_teacher: "**Sutinku, kad „Code.org“ perduotų duomenis (įskaitant
-      asmeninius duomenis), man (ir kaip studentui) naudojantis šiuo tinklapiu Jungtinėse
-      Valstijose** tokių duomenų prieglobai ir apdorojimui."
-    data_collection_us: Suprantu, kad „Code.org“ yra JAV esantis ne pelno siekiantis
-      tinklapis ir įstatymai, kuriais tvarkomas duomenų rinkimas JAV, gali skirtis
-      nuo jūsų šalies įstatymų.
-    visit_privacy: Apsilankykite „Code.org“ [Privatumo politika](%{privacy_url}),
-      kad sužinotumėte išsamiau.
-    user_type_label: Paskyros tipas
-    user_type_student: Mokinys
-    user_type_teacher: Mokytojas
-    field_is_required: reikalingas
-    accept_terms: Turite sutikti, norint sukurti paskyrą
-    email_preference_privacy: Tikrinti savo privatumą
-    email_preference_yes: Taip
-    email_preference_no: Ne
-    share_teacher_email_reg_partner_preference_yes: Taip
-    share_teacher_email_reg_partner_preference_no: Ne
-    us_state: Valstija
-  school_info:
-    title: Mokyklos informacija (neprivaloma)
-    select_school_type: Mokyklos tipas
-    private: Privati
-    public: Viešoji
-    homeschool: Mokymas namuose
-    after_school: Neformali
-    other: Kita
-    state: Valstija
-    district: Rajonas
-    other_district_not_listed: Kitas rajonas, jei nėra sąraše
-    district_name: Rajono pavadinimas
-    school: Mokykla
-    other_school_not_listed: Kita mokykla, jei nėra sąraše
-    school_name: Mokyklos pavadinimas
-    school_zip: Mokyklos pašto indeksas
-    school_address: Mokyklos adresas
-    school_organization_name: Mokyklos ar organizacijos pavadinimas
-    school_organization_zip: Mokyklos ar organizacijos pašto indeksas
-  signin_form:
-    title: Jau registravotės? Prisijunkite
-    login: El. paštas
-    login_username: El. paštas arba naudotojo vardas
-    password: Slaptažodis
-    remember: Prisiminti mane
-    submit: Prisijungti
-  signin:
-    try_heading: Nori išmėginti programavimą neprisiregistravęs?
-    try_hoc: Pirmiausia išmėgink „Programavimo valandą“
-    try_20hours: Išmėgink 20-ties valandų įvadą į informatiką
-  signinsection:
-    welcome: Sveiki atvykę į %{section_name}
-    name: Pasirink savo vardą
-    picture: Atrask savo prisijungimo paveikslėlį
-    words: Įvesk savo prisijungimo žodžius
-    login: Prisijungti
-    invalid_login: Netinkamas prisijungimas, mėginkite dar kartą
-    pair_programming: Kompiuteriu dalinuosi su klasioku
-  password:
-    reset_form:
-      title: Užmiršai savo slaptažodį?
-      instructions: Įveskite savo el. pašto adresą, ir atsiųsime jums slaptažodžio
-        keitimo nuorodą.
-      email: El. pašto adresas
-      submit: Pateikti
-    reset_errors:
-      invalid_email: Panašu, kad užsiregistravote su neegzistuojančiu el. pašto adresu.
-        Parašykite mums laišką adresu support@code.org, kad galėtumėte gauti slaptažodžio
-        keitimo nuorodą.
-    change_form:
-      title: Pasikeisti slaptažodį
-      new_password: Naujas slaptažodis
-      confirm_password: Patvirtinkite naują slaptažodį
-      submit: Pakeisti mano slaptažodį
-  welcome_email:
-    subject: Prisijunk prie mano klasės (Code.org svetainėje)
-    body: |
-      Nuspauskite žemiau esančią nuorodą, kad prisiregistruotumėte prie informatikos įvado Core.org svetainėję (aš būsiu Jūsų „mokytojas“):
-
-      %{link}
-
-      Pamokėlės yra linksmos, interaktyvios. Programavimo pagrindų galima išmokti tiesiog žaidžiant. Išmokite programuoti padedant Bilui Geitsui, Markui Zuckerbergui žaisdami su Angry Birds ir Plants vs. Zombies! :)
-
-      %{name}
-  section:
-    type:
-      word: Slaptas pasaulis
-      email: El. paštas
+      too_young: Šis turinys turi amžiaus apribojimą ir yra neprieinamas jaunesniems
+        mokiniams.
   follower:
-    invite_sent: Pakvietimas išsiųstas
     added_teacher: "%{name} pridėtas(-a) kaip tavo mokytojas(-a)"
-    registered: Jūs užsiregistravote į %{section_name}.
     error:
-      signed_in: Prieš tęsiant reikia atsijungti
-      username_not_found: Naudotojo vardas %{username} nerastas
-      username_in_use: "%{username} jau užimtas, prašome pasirinkti kitokį"
+      blank_code: Įveskite grupės kodą
+      cant_join_own_section: Atsiprašome, bet prie savo grupės prisijungti negalite.
       no_teacher: Nepavyko rasti nieko prisijungusio su '%{teacher_email_or_code}'.
         Prašome paprašyti to žmogaus prisiregistruoti čia, o tada mėginkite dar kartą
       section_not_found: Nepavyko rasti grupės su kodu '%{section_code}'.
-      blank_code: Įveskite grupės kodą
-      cant_join_own_section: Atsiprašome, bet prie savo grupės prisijungti negalite.
+      signed_in: Prieš tęsiant reikia atsijungti
+      username_in_use: "%{username} jau užimtas, prašome pasirinkti kitokį"
+      username_not_found: Naudotojo vardas %{username} nerastas
+    invite_sent: Pakvietimas išsiųstas
     mail:
       student_disassociated:
         subject: "%{student_name} nebėra Jūsų mokinys."
-  reports:
-    error:
-      access_denied: Jūs neturite prieigos prie šio asmens statistikos
-  crud:
-    new_model: Nauja %{model}
-    show: Rodyti
-    edit: Redaguoti
-    edit_model: Redaguoti %{model}
-    update: Atnaujinti
-    submit: Pateikti
-    destroy: Sunaikinti
-    back: Atgal
-    confirm: Ar tikrai?
-    created: "%{model} buvo sėkmingai sukurtas."
-    updated: "%{model} buvo sėkmingai atnaujintas."
-    destroyed: "%{model} buvo sėkmingai pašalintas."
-    access_denied: Neturite prieigos prie šio %{model}.
-  nav:
-    header:
-      finished_hoc: Aš jau užbaigiau savo „Programavimo valandą“
-      sign_in_to_save: Prisijunkite, kad išsaugotumėte savo pažangą
-      my_dashboard: Valdymo skydelis
-      course_catalog: Kurso katalogas
-      project_gallery: Projektai
-      report_bug: Pranešti apie klaidą
-      teacher_community: Mokytojų bendruomenė
-      educate_elementary: Pradinė mokykla
-      educate_middle: Vidurinė mokykla
-      educate_high: Gimnazija
-      educate_hoc: "„Programavimo valanda“"
-      educate_partner: Būkite mūsų partneriais
-      educate_beyond: Už Code.org ribų
-      educate_inspire: Įkvėpkite mokinius
-      educate_community: Virtuali bendruomenė
-      educate_tools: Įrankiai ir vaizdo įrašai
-      stats: Statistika
-      legal_privacy: Privatumo politika
-      legal_tos: Naudojimo taisyklės
-    user:
-      classroom: Mokytojo namų puslapis
-      district_dashboard: Prietaisų skydelis
-      label: Sveiki, %{username}
-      stats: Code Studio
-      settings: Mano paskyra
-      logout: Atsijungti
-      signin: Prisijungti
-      signup: Sukurti paskyrą
-      already_registered: Jau užsiregistravote?
-      team: Komanda
-      driver: Tvarkyklė
-      navigator: Navigatorius
-      create: Sukurti
-      applab: App Lab
-      artist: Menininkas
-      bounce: Bounce
-      calc: Skaič
-      eval: Įvert
-      flappy: Flappy
-      frozen: Ledo šalis
-      gamelab: Žaidimų laboratorija
-      iceage: Ledynmetis
-      infinity: Begalybė
-      minecraft_designer: Minecraft
-      playlab: Laboratorija
-      sports: Sportas
-      starwars: Žvaigždžių karai
-      loading: Kraunama...
-    popup:
-      progress_for_user: "%{name} pažanga"
-      progress: Jūsų pažanga
-      close: UŽDARYTI
-      mastery: Laimėjimai
-      puzzle_map: Etapai
-      prizes: Surink visus %{total_trophies} laimėjimus ir laimėk prizus!
-      prize_earned: Visi %{total_trophies} laimėjimai surinkti. Laimėjai prizą!
-      prize_us_only: "(Tik JAV mokiniams)"
-      prizes_link: daugiau informacijos
-  teacher:
-    answer: Atsakymas
-    dashboard: Mokytojo prietaisų skydelis
-    for_teachers_only: Tik mokytojams
-    title:
-      one: 'Tavo mokytojas:'
-      other: 'Tavo mokytojai:'
-    remove: "(pašalinti mokytoją)"
-    confirm:
-      remove: Ar tikrai nori pašalinti šį mokytoją?
-    students:
-      dashboard: Eiti į mokytojo puslapį
-    user_not_found: Mokytojas nerastas.
-    student_teacher_disassociated: Tu pašalinai savo mokytoją %{teacher_name}.
-    panel:
-      answer_viewer: Mokytojo Kampelis
-      student: Mokinys
-      viewing_solution: Peržiūrėti sprendimą
-      try_it_yourself: Išmėginkite patys
-      section: Grupė
-      example: Sprendimo pavyzdys
-      example_with_number: Sprendimo pavyzdys %{solution_number}
-      submitted_on: 'Pateiktas:'
-      unsubmit: Atšaukti
-      worked_with: Dirbo su
-  user:
-    email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
-    email_confirm_needed_required: 'Jūsų el. pašto adresas %{email} nebuvo patvirtintas:'
-    email_confirm_wrong_email: "(Klaidingas el. pašto adresas?)"
-    email_resend_confirm: Persiųsti iš naujo patvirtinimo instrukciją
-    new_password_hint: "(palikite tuščią, jei nenorite pakeisti)"
-    current_password_hint: "(įveskite dabartinį slaptažodį, kad išsaugoti pakeitimus)"
-    delete: Pašalinti savo paskyrą
-    delete_text: Nuspaudus mygtuką panaikinsite savo paskyrą.
-    delete_text_teacher_note: 'Pastaba: pašalinus Jūsų paskyrą, mokinių paskyros nebus
-      panaikintos.'
-    delete_confirm: Ar tikrai norite panaikinti savo paskyrą?
-    update_email: Atnaujinti
-    remove_parent_email_label: Pašalinti
-    none: Nė vienas
-  user_level:
-    completed: Baigta
-    tried: Išbandyta
-  home:
-    title: Code Studio
-    all_courses: 1, 2 ir 3 kursų apžvalga
-    lesson_plans: Pamokų planai
-    signin_message: Jau užsiregistravote? %{link}
-    student_reg_link: Mokinių registracija
-    teacher_reg_link: Mokytojų registracija
-    signin_directions: Naudokite savo paskyrą, kad stebėtumėte savo pažangą. <br/>
-      Mokytojai gali stebėti visos klasės pažangą.
-    teacher_dashboard: Peržiūrėti pažangą
-    teacher_student_count_one: Jūs turite %{count} mokinį.
-    teacher_student_count: Jūs turite %{count} mokinių.
-    teacher_averages: Vidutiniškai Jūsų mokiniai gavo %{trophy_average} iš %{trophy_max}
-      "Concept Mastery" laimėjimus(-ų).
-    teacher_print_certificates: Išspausdinkite sertifikatus mokiniams, kurie užbaigs
-      šias pamokėles
-    teacher_read_blog: Informaciją apie naujienas rasite Pedagogų Tinklaraštyje
-    classroom: Jūsų klasė
-    student_progress: Tavo mokymosi pažanga
-    student_stats: Tu gavai %{trophy_count} iš %{trophy_max} "Concept Mastery" laimėjimus(-ų).
-    student_left_off: 'Kur baigei paskutinį kartą:'
-    student_finished: Tu baigei visas Code.org pamokėles. Išmėgink kitus užsiėmimus
-      čia %{online_link} arba čia %{local_school_link}.
-    local_school: vietinėje mokykloje
-    online: internetu
-    see_details: Peržiūrėti informaciją
-    view_course: Peržiūrėti kursą
-    prize_info: 'Prizai už dalyvavimą (tik JAV mokytojams): iki 1000 dolerių vienai
-      klasei.'
-    tryfirst: 'Arba iš pradžių galite pamėginti, o prisiregistruoti vėliau:'
-    trynow: Išmėginkite dabar
-    add_hint_help: Padėkite mums sukurti gudrius suflerius Code.org pamokėlėms
-    20hour_overview: Šis 20-ties valandų informatikos kursas supažindina su programavimo
-      pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis
-      esant bet kurioje amžiaus grupėje.
-    test_videos_help: Išbandykite mūsų naują vaizdo grotuvą savo mokykloje
-    try_beta_courses: Naujiena! Išmėginkite testuojamus kursus pradinukams
-    use_as_teacher: Naudokite šią svetainę kaip mokytojas
-    your_gallery: Galerija
-    no_primary_course: Išmėgink „Code Studio“ kursą
-    choose_next_course: Išbandyk „Code Studio“ kursą, pasirink vieną iš pateiktų žemiau
-    print_certificate: Atsispausdinti sertifikatą
-  certificate_hour_of_code: "„Programavimo valanda“"
-  share:
-    title: Mokytis su „Code Studio“
-    description: Kiekvienas gali išmokti informatikos. Kurk žaidimus, programėles
-      ir piešinius programuodamas.
-    try_hour_of_code: Išmėgink „Programavimo valandą”!
-  gender:
-    male: Vyras
-    female: Moteris
-    none: Nenoriu atsakyti
-  user_type:
-    student: Mokinys
-    teacher: Mokytojas
+    registered: Jūs užsiregistravote į %{section_name}.
   footer:
-    thank_you: Mes dėkojame mūsų <a href="https://code.org/about/donors">rėmėjams</a>,
-      <a href="https://code.org/about/partners">partneriams</a>, mūsų <a href="https://code.org/about/team">
-      didelei komandai</a>, mūsų vaizdo įrašų grupei ir mūsų <a href="https://code.org/about/advisors">
-      patarėjams</a> už jų pagalbą kuriant „Code Studio“.
-    help_from_html: Dėkojame Google, Microsoft, Facebook, Twitter ir daugeliui kitų
-      inžinierių ir žmonių, kurie padėjo sukurti šias pamokėles.
-    help_from_html_old: Šią medžiagą padėjo sukurti inžinieriai iš Google, Microsoft,
-      Facebook ir Twitter.
     art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Visos teisės
       saugomos.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
       Visos teisės saugomos.<br />Frozen&#8482; &copy; %{current_year} Disney. Visos
@@ -421,220 +148,616 @@ lt:
       teisės saugomos. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic
       Arts Inc. Visos teisės saugomos. The Amazing World of Gumball is trademark and
       &copy; 2015 Cartoon Network.
-    powered_by_aws: 'Rėmėjas: Amazon Web Services'
-    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotipas ir
-      „Programavimo valanda“&reg; yra Code.org priklausantys prekės ženklai."
+    built_on_code_studio: Sukurta naudojant „Code Studio”
     copyright: Autorinės teisės
-    more: Daugiau
     feedback: Pateikti atsiliepimus
-    translate: Padėkite mums išversti į savo kalbą
+    help_from_html: Dėkojame Google, Microsoft, Facebook, Twitter ir daugeliui kitų
+      inžinierių ir žmonių, kurie padėjo sukurti šias pamokėles.
+    help_from_html_old: Šią medžiagą padėjo sukurti inžinieriai iš Google, Microsoft,
+      Facebook ir Twitter.
+    how_it_works: Kaip tai veikia
+    make_my_own_app: Sukurk savo programėlę
+    more: Daugiau
+    powered_by_aws: 'Rėmėjas: Amazon Web Services'
+    privacy: Privatumo politika
+    report_abuse: Praneškite apie piktnaudžiavimą
+    secure: Saugaus ryšio versija
     support: Pagalba
     support_url: http://support.code.org
-    tos_short: Sąlygos
+    thank_you: Mes dėkojame mūsų <a href="https://code.org/about/donors">rėmėjams</a>,
+      <a href="https://code.org/about/partners">partneriams</a>, mūsų <a href="https://code.org/about/team">
+      didelei komandai</a>, mūsų vaizdo įrašų grupei ir mūsų <a href="https://code.org/about/advisors">
+      patarėjams</a> už jų pagalbą kuriant „Code Studio“.
     tos: Naudojimo taisyklės
-    privacy: Privatumo politika
-    secure: Saugaus ryšio versija
-    report_abuse: Praneškite apie piktnaudžiavimą
-    built_on_code_studio: Sukurta naudojant „Code Studio”
-    make_my_own_app: Sukurk savo programėlę
-    how_it_works: Kaip tai veikia
+    tos_short: Sąlygos
+    trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logotipas ir
+      „Programavimo valanda“&reg; yra Code.org priklausantys prekės ženklai."
+    translate: Padėkite mums išversti į savo kalbą
     try_hour_of_code: Išmėgink „Programavimo valandą”!
+  free_response:
+    placeholder: Įveskite savo atsakymą čia
+  gender:
+    female: Moteris
+    male: Vyras
+    none: Nenoriu atsakyti
+  heading_x_of_y: "%{heading} (%{x} puslapis iš %{y})"
+  hello: Sveikas, pasauli
+  hoc_download:
+    capsule_title: Ar turite internetą?
+    download_in_English: 'Parsisiųsti anglų kalba:'
+    download_in_Spanish: 'Parsisiųsti ispanų kalba:'
+    download_message: Parsisiųsti %{app_name} naudojimui neprisijungus (136MB)
+    instructions_headline: Nėra interneto?
+    mac: Mac OS X
+    minecraft_name: Minecraft „Programavimo valanda”
+    starwars_blocks_name: 'Žvaigždžių karai: Programuojame galaktiką (Blokais)'
+    starwars_javascript_name: 'Žvaigždžių karai: Programuojame galaktiką (JavaScript
+      kalba)'
+    title: "„Programavimo valandos” parsisiuntimai"
+    windows: Windows (64-bitų)
+  home:
+    20hour_overview: Šis 20-ties valandų informatikos kursas supažindina su programavimo
+      pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis
+      esant bet kurioje amžiaus grupėje.
+    add_hint_help: Padėkite mums sukurti gudrius suflerius Code.org pamokėlėms
+    all_courses: 1, 2 ir 3 kursų apžvalga
+    choose_next_course: Išbandyk „Code Studio“ kursą, pasirink vieną iš pateiktų žemiau
+    classroom: Jūsų klasė
+    lesson_plans: Pamokų planai
+    local_school: vietinėje mokykloje
+    no_primary_course: Išmėgink „Code Studio“ kursą
+    online: internetu
+    print_certificate: Atsispausdinti sertifikatą
+    prize_info: 'Prizai už dalyvavimą (tik JAV mokytojams): iki 1000 dolerių vienai
+      klasei.'
+    see_details: Peržiūrėti informaciją
+    signin_directions: Naudokite savo paskyrą, kad stebėtumėte savo pažangą. <br/>
+      Mokytojai gali stebėti visos klasės pažangą.
+    signin_message: Jau užsiregistravote? %{link}
+    student_finished: Tu baigei visas Code.org pamokėles. Išmėgink kitus užsiėmimus
+      čia %{online_link} arba čia %{local_school_link}.
+    student_left_off: 'Kur baigei paskutinį kartą:'
+    student_progress: Tavo mokymosi pažanga
+    student_reg_link: Mokinių registracija
+    student_stats: Tu gavai %{trophy_count} iš %{trophy_max} "Concept Mastery" laimėjimus(-ų).
+    teacher_averages: Vidutiniškai Jūsų mokiniai gavo %{trophy_average} iš %{trophy_max}
+      "Concept Mastery" laimėjimus(-ų).
+    teacher_dashboard: Peržiūrėti pažangą
+    teacher_print_certificates: Išspausdinkite sertifikatus mokiniams, kurie užbaigs
+      šias pamokėles
+    teacher_read_blog: Informaciją apie naujienas rasite Pedagogų Tinklaraštyje
+    teacher_reg_link: Mokytojų registracija
+    teacher_student_count: Jūs turite %{count} mokinių.
+    teacher_student_count_one: Jūs turite %{count} mokinį.
+    test_videos_help: Išbandykite mūsų naują vaizdo grotuvą savo mokykloje
+    title: Code Studio
+    try_beta_courses: Naujiena! Išmėginkite testuojamus kursus pradinukams
+    tryfirst: 'Arba iš pradžių galite pamėginti, o prisiregistruoti vėliau:'
+    trynow: Išmėginkite dabar
+    use_as_teacher: Naudokite šią svetainę kaip mokytojas
+    view_course: Peržiūrėti kursą
+    your_gallery: Galerija
+  join_section:
+    code:
+      placeholder: Grupės kodas (ABCDEF)
+  k8intro: Programavimo įvadas 5-8 klasėms (15-25 valandos)
+  landing:
+    help_resources: Pagalba ir ištekliai
+    report_bug: Pranešti apie problemą
+    support: Pagalba
+    support_url: "//support.code.org"
+  less: MAŽIAU
+  lesson_plan: Pamokos planas
+  level_group:
+    correct_body: Ačiū už atsakymus.
+    correct_title: Ačiū
+    wrong_body: Ačiū už atsakymus.
+    wrong_title: Ačiū
+  level_group-submittable:
+    correct_body: Ačiū už atsakymus.
+    correct_title: Ačiū
+    wrong_body: Ačiū už atsakymus.
+    wrong_title: Ačiū
+  match:
+    correct_body: Tai yra teisingas atsakymas.
+    correct_title: Teisingai
+    wrong_body: Sprendimas, kurį įvedei, nėra teisingas. Pamėgink dar kartą!
+    wrong_title: Neteisingas sprendimas
+  more: DAUGIAU
+  more_info: Daugiau informacijos
+  multi:
+    correct_body: Tai yra teisingas atsakymas.
+    correct_title: Teisingai
+    wrong_body: Atsakymas, kurį įvedei, nėra teisingas. Pabandyk dar kartą!
+    wrong_title: Neteisingas atsakymas
+  multi-submittable:
+    correct_body: Ačiū už atsakymą.
+    correct_title: Ačiū
+    wrong_body: Ačiū už atsakymą.
+    wrong_title: Ačiū
+  nav:
+    header:
+      course_catalog: Kurso katalogas
+      educate_beyond: Už Code.org ribų
+      educate_community: Virtuali bendruomenė
+      educate_elementary: Pradinė mokykla
+      educate_high: Gimnazija
+      educate_hoc: "„Programavimo valanda“"
+      educate_inspire: Įkvėpkite mokinius
+      educate_middle: Vidurinė mokykla
+      educate_partner: Būkite mūsų partneriais
+      educate_tools: Įrankiai ir vaizdo įrašai
+      finished_hoc: Aš jau užbaigiau savo „Programavimo valandą“
+      legal_privacy: Privatumo politika
+      legal_tos: Naudojimo taisyklės
+      my_dashboard: Valdymo skydelis
+      project_gallery: Projektai
+      report_bug: Pranešti apie klaidą
+      sign_in_to_save: Prisijunkite, kad išsaugotumėte savo pažangą
+      stats: Statistika
+      teacher_community: Mokytojų bendruomenė
+    popup:
+      close: UŽDARYTI
+      mastery: Laimėjimai
+      prize_earned: Visi %{total_trophies} laimėjimai surinkti. Laimėjai prizą!
+      prize_us_only: "(Tik JAV mokiniams)"
+      prizes: Surink visus %{total_trophies} laimėjimus ir laimėk prizus!
+      prizes_link: daugiau informacijos
+      progress: Jūsų pažanga
+      progress_for_user: "%{name} pažanga"
+      puzzle_map: Etapai
+    user:
+      already_registered: Jau užsiregistravote?
+      applab: App Lab
+      artist: Menininkas
+      bounce: Bounce
+      calc: Skaič
+      classroom: Mokytojo namų puslapis
+      create: Sukurti
+      district_dashboard: Prietaisų skydelis
+      driver: Tvarkyklė
+      eval: Įvert
+      flappy: Flappy
+      frozen: Ledo šalis
+      gamelab: Žaidimų laboratorija
+      iceage: Ledynmetis
+      infinity: Begalybė
+      label: Sveiki, %{username}
+      loading: Kraunama...
+      logout: Atsijungti
+      minecraft_designer: Minecraft
+      navigator: Navigatorius
+      playlab: Laboratorija
+      settings: Mano paskyra
+      signin: Prisijungti
+      signup: Sukurti paskyrą
+      sports: Sportas
+      starwars: Žvaigždžių karai
+      stats: Code Studio
+      team: Komanda
+  next_page: Sekantis puslapis
+  next_resource: Sekantis šaltinis
+  next_stage: Baigta! Pereikite į kitą etapą
+  of: iš
+  okay: Gerai
+  or: arba
+  page_not_found_title: Puslapis nerastas
+  password:
+    change_form:
+      confirm_password: Patvirtinkite naują slaptažodį
+      new_password: Naujas slaptažodis
+      submit: Pakeisti mano slaptažodį
+      title: Pasikeisti slaptažodį
+    reset_errors:
+      invalid_email: Panašu, kad užsiregistravote su neegzistuojančiu el. pašto adresu.
+        Parašykite mums laišką adresu support@code.org, kad galėtumėte gauti slaptažodžio
+        keitimo nuorodą.
+    reset_form:
+      email: El. pašto adresas
+      instructions: Įveskite savo el. pašto adresą, ir atsiųsime jums slaptažodžio
+        keitimo nuorodą.
+      submit: Pateikti
+      title: Užmiršai savo slaptažodį?
+  pd:
+    form_entries:
+      email_opt_in:
+        opt_in_no: Ne
+        opt_in_yes: Taip
+      gender:
+        female: Moteris
+        male: Vyras
+        none: Nenoriu atsakyti
+      resources:
+        khan: Khan Akademija
+        other: Kita
+      robotics:
+        other: Kita
+      subjects:
+        cs: Informatika
+        la: Literatūra
+        math: Matematika
+        other: Kita
+        science: Gamtos mokslai
+      workshop_course:
+        other: Kita
+    form_labels:
+      colombian_chilean_school_name: Mokyklos pavadinimas
+      email: El. paštas
+      school: Mokykla
+      school_name: Mokyklos pavadinimas
+  pdf_download: Parsisiųsti PDF
+  peer_review:
+    accepted:
+      name: Priimta
+    escalated:
+      description: Norėčiau, kad instruktorius peržiūrėtų šią pateiktį
+    instructor_feedback: Instruktoriaus atsiliepimai
+    peer_review: Tarpusavio peržiūra
+    rejected:
+      name: Atmesta
+  pixelation:
+    binary: Dvejetainis
+  previous_page: Ankstesnis puslapis
+  prize: prizas
+  progress:
+    assessment: vertinimas
+    completed_perfect: puikiai išspręsta
+    completed_too_many_blocks: baigtas, panaudota per daug blokų
+    furthest_level_attempted: išmėgintas aukščiausias lygis
+    in_progress: pradėta
+    not_started: nepradėta
+    submitted: pateikta
+  project:
+    abuse:
+      contact_us: Jeigu manai, kad įvyko klaida, <a href='https://code.org/contact'>susisiek
+        su mumis.</a>
+      go_to_code_studio: Eiti į „Code Studio“
+      report_abuse_form:
+        abuse_type:
+          harassment: Grasinimai, patyčios, priekabiavimas
+          infringement: Autorinių teisių pažeidimas
+          offensive: Įžeidžiantis turinys
+          other: Kita
+          question: Kaip šis turinys pažeidžia %{link_start}Naudojimosi sąlygas%{link_end}?
+        abusive_url: Nuoroda į pranešamą turinį
+        acknowledge: Pateikdami šią informaciją Jūs sutinkate, kad ji bus naudojama
+          pagal %{link_start_privacy}Privatumo politiką%{link_end} ir %{link_start_tos}Naudojimosi
+          sąlygas%{link_end}
+        detail: Prašome nurodyti kuo daugiau informacijos dėl turinio, kurį Jūs pranešate.
+        intro: Jei, naudojantis su „Code Studio“ sukurtomis programėlėmis, Jūs aptikote
+          įžeidžiantį turinį, grasinimus, patyčias, priekabiavimą ar autorinių teisių
+          pažeidimą jums priklausančiam turiniui, prašome užpildyti formą esančią
+          žemiau. Į Jūsų pranešimą mes reaguosime labai rimtai, ištirsime numatyta
+          tvarka ir imsimės atitinkamų veiksmų.
+        validation:
+          abuse_detail: Prašom pateikti išsamią informaciją dėl turinio, apie kurį
+            tu nori pranešti
+          abuse_type: Pagrįsk, kaip šis turinys pažeidžia Naudojimosi sąlygas
+          age: Pasirink amžių
+          email: Įvesk el. pašto adresą
+      tos: Buvo pranešta, kad šis projektas pažeidė Code.org <a href='http://code.org/tos'>Naudojimosi
+        sąlygas</a>, todėl juo negalima dalintis su kitais.
+    advanced_share: Rodyti išplėstinius nustatymus
+    create: Sukurti projektą
+    create_a_project: 'Sukurti naują projektą:'
+    edit_project: Redaguoti projektą
+    exit: Grįžti prie kursų
+    help_text: Nuspausk<strong>Sukurti programėlę</strong> arba <strong>Kažką nupiešti</strong>
+      žemiau, kad sukurtum Žaidimo laboratorijos projektą!<br/>Bet kuriuo metu galėsi
+      sugrįžti ir pratęsti savo projektą.
+    name: Vardas
+    need_help: Išmėgink šiuos kursus, kurie tau padės sukurti naują projektą
+    new: Sukurti naują
+    not_saved: Neišsaugota
+    project_gallery: Projektai
+    project_type: Projekto rūšis
+    projects: Projektai
+    saved: Išsaugota
+    share_copy_link: 'Kopijuoti nuorodą:'
+    share_title: Bendrinti savo projektą
+    updated: Atnaujinta
+    view_all: Peržiūrėti mano projektus
+  puzzle: Galvosūkis
+  race_interstitial:
+    decline: Užverti
+    message: Nurodykite savo rasę (pažymėkite visus tinkamus variantus)
+    races:
+      american_indian: Amerikos indėnas/Aliaskos gyventojas
+      asian: Azijietis
+      black: Juodasis arba Afroamerikietis
+      hawaiian: Havajų arba kitų Ramiojo vandenyno salų gyventojas
+      hispanic: Ispanas arba Latino
+      opt_out: Nenoriu sakyti
+      other: Kita
+      white: Baltasis
+    submit: Pateikti
   reference_area:
-    title: Reikia pagalbos?
+    auth_error: Jums neleidžiama pamatyti sprendimo.
+    direction: Pradinė kryptis (laipsniais)
+    submit: Atnaujinti menininko padėtį
     subtitle: Peržiūrėkite šiuos vaizdo įrašus bei patarimus
     teacher: Peržiūrėti sprendimą
-    auth_error: Jums neleidžiama pamatyti sprendimo.
-    submit: Atnaujinti menininko padėtį
-    direction: Pradinė kryptis (laipsniais)
-  video:
-    tab: Vaizdo įrašas.
-    notes: Nerodo vaizdo? Rodyti tekstą.
-    notes_coming_soon: Šiam vaizdo įrašui dar nėra pastabų.
-    autoplay_option: Automatiškas vaizdo įrašų paleidimas
-    download: Atsisiųsti vaizdo įrašą
-  compatibility:
-    upgrade:
-      link: Sužinok daugiau
-  slow_loading: Tai trunka ilgiau nei įprasta...
-  try_reloading: Pabandykite perkrauti puslapį
-  next_stage: Baigta! Pereikite į kitą etapą
-  download_pdf: Atviros pamokos planas
-  lesson_plan: Pamokos planas
-  view_lesson_plan: Peržiūrėti pamokos planą
-  pdf_download: Parsisiųsti PDF
-  download_coming_soon: Jau netrukus bus galima parsisiųsti įvairias veiklas.
-  video_coming_soon: Vaizdo įrašas bus jau netrukus!
+    title: Reikia pagalbos?
+  reports:
+    error:
+      access_denied: Jūs neturite prieigos prie šio asmens statistikos
+  return_course_overview: Eiti į skyriaus apžvalgą
+  return_unit_overview: Eiti į skyriaus apžvalgą
+  school_info:
+    after_school: Neformali
+    district: Rajonas
+    district_name: Rajono pavadinimas
+    homeschool: Mokymas namuose
+    other: Kita
+    other_district_not_listed: Kitas rajonas, jei nėra sąraše
+    other_school_not_listed: Kita mokykla, jei nėra sąraše
+    private: Privati
+    public: Viešoji
+    school: Mokykla
+    school_address: Mokyklos adresas
+    school_name: Mokyklos pavadinimas
+    school_organization_name: Mokyklos ar organizacijos pavadinimas
+    school_organization_zip: Mokyklos ar organizacijos pašto indeksas
+    school_zip: Mokyklos pašto indeksas
+    select_school_type: Mokyklos tipas
+    state: Valstija
+    title: Mokyklos informacija (neprivaloma)
+  school_info_interstitial:
+    save: Išsaugoti
+  section:
+    type:
+      email: El. paštas
+      word: Slaptas pasaulis
+  see_your_learning_plan: Peržiūrėti savo mokymosi planą
+  share:
+    description: Kiekvienas gali išmokti informatikos. Kurk žaidimus, programėles
+      ir piešinius programuodamas.
+    title: Mokytis su „Code Studio“
+    try_hour_of_code: Išmėgink „Programavimo valandą”!
   share_code:
-    title: Nuspausk „Paleisti“, kad programa būtų įvykdyta
+    address_not_allowed: Panašu, kad yra parašytas kažkieno adresas. Pakeisk tekstą.
     bounce_og_title: Peržiūrėk mano Bounce žaidimą
-    flappy_og_title: Išmėginkite žaidimą my Flappy Game
-    studio_og_title: Peržiūrėk mano Žaidimų laboratorijos programėlę
     check_out_what_i_made: Pažiūrėkite, ką aš sukūriau
+    email_not_allowed: Panašu, kad yra įrašytas kažkieno el. pašto adresas. Pakeisk
+      tekstą.
+    flappy_og_title: Išmėginkite žaidimą my Flappy Game
     og_description: Aš pats parašiau kodą Code.org svetainėje
     phone_number_not_allowed: Panašu, kad yra įrašytas kažkieno telefono numeris.
       Pakeisk tekstą.
-    address_not_allowed: Panašu, kad yra parašytas kažkieno adresas. Pakeisk tekstą.
-    email_not_allowed: Panašu, kad yra įrašytas kažkieno el. pašto adresas. Pakeisk
-      tekstą.
     profanity_not_allowed: Panašu, kad yra parašyta negražių žodžių. Pakeisk juos.
-  builder:
-    created: Jūs sukūrėte naują scenarijų.
-    destroyed: Jūs sunaikinote scenarijų.
-    manage: Sukurti etapus
-    view: Žiūrėti
-    back: Atgal į scenarijus
-    success: Tu sėkmingai redagavai blokus.
-    level:
-      create: Sukurti naują lygį
-      current: Dabartinis lygis
-      unused: Nepanaudoti lygiai
+    studio_og_title: Peržiūrėk mano Žaidimų laboratorijos programėlę
+    title: Nuspausk „Paleisti“, kad programa būtų įvykdyta
+  signin:
+    try_20hours: Išmėgink 20-ties valandų įvadą į informatiką
+    try_heading: Nori išmėginti programavimą neprisiregistravęs?
+    try_hoc: Pirmiausia išmėgink „Programavimo valandą“
+  signin_form:
+    login: El. paštas
+    login_username: El. paštas arba naudotojo vardas
+    password: Slaptažodis
+    remember: Prisiminti mane
+    submit: Prisijungti
+    title: Jau registravotės? Prisijunkite
+  signinsection:
+    invalid_login: Netinkamas prisijungimas, mėginkite dar kartą
+    login: Prisijungti
+    name: Pasirink savo vardą
+    pair_programming: Kompiuteriu dalinuosi su klasioku
+    picture: Atrask savo prisijungimo paveikslėlį
+    welcome: Sveiki atvykę į %{section_name}
+    words: Įvesk savo prisijungimo žodžius
+  signup_form:
+    accept_terms: Turite sutikti, norint sukurti paskyrą
+    address_placeholder: adresas, miestas, rajonas, pašto indeksas
+    age: Amžius
+    agree_us_data_transfer_student: "**Sutinku, kad „Code.org“ perduotų duomenis (įskaitant
+      asmeninius duomenis), naudojantis šiuo tinklapiu Jungtinėse Valstijose** tokių
+      duomenų prieglobai ir apdorojimui."
+    agree_us_data_transfer_teacher: "**Sutinku, kad „Code.org“ perduotų duomenis (įskaitant
+      asmeninius duomenis), man (ir kaip studentui) naudojantis šiuo tinklapiu Jungtinėse
+      Valstijose** tokių duomenų prieglobai ir apdorojimui."
+    birthday: Gimimo data (neprivaloma)
+    data_collection_us: Suprantu, kad „Code.org“ yra JAV esantis ne pelno siekiantis
+      tinklapis ir įstatymai, kuriais tvarkomas duomenų rinkimas JAV, gali skirtis
+      nuo jūsų šalies įstatymų.
+    email_preference_no: Ne
+    email_preference_privacy: Tikrinti savo privatumą
+    email_preference_yes: Taip
+    field_is_required: reikalingas
+    gender: Lytis (neprivaloma)
+    hoc_already_signed_up_heading: Naudotis neprisijungus
+    invalid_password: Slaptažodį turi sudaryti mažiausiai 6 simboliai
+    invalid_username: Naudotojo vardas turi būti ne trumpesnis nei 5 simboliai
+    mismatch_password: Slaptažodžiai nesutampa
+    overview: Užsiregistruokite paskyrą, kad galėtumėte sekti savo pažangą arba valdyti
+      savo klasę. <a href="/">Galite naršyti įvairius etapus ir galvosūkius</a> be
+      paskyros, tačiau reikės užsiregistruoti, jei norėsite išsaugoti savo progresą
+      ir projektus.
+    overview_markdown: Užsiregistruokite paskyrą, kad galėtumėte sekti savo pažangą
+      arba valdyti savo klasę. [Galite naršyti įvairius etapus ir galvosūkius](/)
+      be paskyros, tačiau reikės užsiregistruoti, jei norėsite išsaugoti savo progresą
+      ir projektus.
+    school_address: Mokyklos adresas (nebūtina)
+    school_name: Mokyklos pavadinimas (nebūtina)
+    share_teacher_email_reg_partner_preference_no: Ne
+    share_teacher_email_reg_partner_preference_yes: Taip
+    student_count: Jau užsiregistravo %{count} mokinių(-iai).
+    submit: Užsiregistruoti
+    taken_username: Naudotojo vardas jau užimtas
+    teacher: Ar jūs mokytojas?
+    teacher_count: Jau užsiregistravo %{count} mokytojų(-ai).
+    teacher_educator_guide: Peržiūrėti pedagogo vadovą
+    title: Užsiregistruokite Code.org
+    us_state: Valstija
+    user_type: 'Kas tu: mokinys ar mokytojas?'
+    user_type_label: Paskyros tipas
+    user_type_student: Mokinys
+    user_type_teacher: Mokytojas
+    valid_password: Galiojantis slaptažodis!
+    valid_username: Galima!
+    visit_privacy: Apsilankykite „Code.org“ [Privatumo politika](%{privacy_url}),
+      kad sužinotumėte išsamiau.
+  slow_loading: Tai trunka ilgiau nei įprasta...
+  stage: Etapas
+  stage_number: "%{number} etapas"
+  studio:
+    all_courses: Visi kursai
+    completed_courses: Užbaigti kursai
+    courses_working_on: Kursai, kuriuose dalyvaujate
+  submit: Pateikti
+  teacher:
+    answer: Atsakymas
+    confirm:
+      remove: Ar tikrai nori pašalinti šį mokytoją?
+    dashboard: Mokytojo prietaisų skydelis
+    for_teachers_only: Tik mokytojams
+    panel:
+      answer_viewer: Mokytojo Kampelis
+      example: Sprendimo pavyzdys
+      example_with_number: Sprendimo pavyzdys %{solution_number}
+      section: Grupė
+      student: Mokinys
+      submitted_on: 'Pateiktas:'
+      try_it_yourself: Išmėginkite patys
+      unsubmit: Atšaukti
+      viewing_solution: Peržiūrėti sprendimą
+      worked_with: Dirbo su
+    remove: "(pašalinti mokytoją)"
+    student_teacher_disassociated: Tu pašalinai savo mokytoją %{teacher_name}.
+    students:
+      dashboard: Eiti į mokytojo puslapį
+    title:
+      one: 'Tavo mokytojas:'
+      other: 'Tavo mokytojai:'
+    user_not_found: Mokytojas nerastas.
+  terms_interstitial:
+    accept: Sutikti
+    print: Spausdinti
+    privacy: Privatumo politika
+    tos: Naudojimo taisyklės
+  text_match:
+    correct_body: Tai yra teisingas atsakymas.
+    correct_title: Teisingai
+    open_response_body: Ačiū už atsakymą!
+    open_response_title: Ačiū
+    placeholder: Įveskite savo atsakymą čia
+  time:
+    day: diena
+    hour: 1 val
+    week: savaitė
+  trophies: Laimėjimai
+  try_hoc: 'Išmėgink „Programavimo valandą“, spausk čia >> '
+  try_k8intro: Išmėgink mūsų programavimo įvado kursą (15-25 valandos)
+  try_reloading: Pabandykite perkrauti puslapį
+  unplugged_activity: Veikla be kompiuterių
+  unsubmit: Atšaukti
   upsell:
+    20-hour:
+      body: Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais.
+        Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet
+        kurioje amžiaus grupėje.
+      body_short: Išmok informatikos pagrindų pagreitintuose kursuose (panašiuose
+        į 2-4 kursus).
+      title: Pagreitintas kursas
     applab:
-      title: App Lab
+      audience: Amžius 13+
       body: App Lab yra programavimo aplinka, su kuria galima sukurti paprastas programėles.
         Kurti galima su blokeliais arba su JavaScript, o po to ja pasidalinti su draugais.
       body_short: Sukurk programėlę naudodamas blokelius arba Javascript ir pasidalink
         ja su draugais.
-      audience: Amžius 13+
       cta: Sužinok, kaip
+      title: App Lab
     aquatic:
       title: Minecraft
     flappy:
-      title: Flappy Kodas
       body: Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy
         Code pamokėles!
+      title: Flappy Kodas
     frozen:
       title: Ledo šalis
     gallery:
-      title: Galerija
       body: Peržiūrėkite su menininku sukurtų piešinių galeriją
+      title: Galerija
     gamelab:
-      title: Žaidimų laboratorija
       audience: Amžius 13+
       cta: Sužinok, kaip
+      title: Žaidimų laboratorija
     hero:
       title: Minecraft
     hoc:
-      title: Klasikinis labirintas
       body: Išmėginkite programavimo pagrindus. Juos išbandė jau milijonai žmonių.
+      title: Klasikinis labirintas
     hoc2014:
+      try_frozen: Piešimas su Ana ir Elze iš "Ledo šalies"
       try_new_tutorial: Išbandykite naująsias „Programavimo valandos“ pamokėles beta
         versijoje
-      try_frozen: Piešimas su Ana ir Elze iš "Ledo šalies"
     infinity:
-      title: Žaidimų laboratorija „Infinity“
       body: Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus
         Infinity personažai.
+      title: Žaidimų laboratorija „Infinity“
     minecraft:
-      title: Minecraft
       body: Tyrinėk Minecraft pasaulį koduodamas.
-    minecraft2016:
       title: Minecraft
+    minecraft2016:
       body: Programuok gyvūnus ir kitus Minecraft kūrinius savo asmeninėje Minecraft
         versijoje.
+      title: Minecraft
     sports:
       title: Sportas
     starwars:
       title: Žvaigždžių karai
+    unplugged:
+      audience: Amžius 4+
+      title: Papildomos pamokėlės
+    unplugged_conditionals:
+      title: Sąlyginiai sakiniai
     weblab:
       audience: Amžius 13+
       cta: Sužinok, kaip
     widgets:
       audience: Amžius 14+
       cta: Sužinok, kaip
-    unplugged_conditionals:
-      title: Sąlyginiai sakiniai
-    unplugged:
-      title: Papildomos pamokėlės
-      audience: Amžius 4+
-    20-hour:
-      title: Pagreitintas kursas
-      body: Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais.
-        Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet
-        kurioje amžiaus grupėje.
-      body_short: Išmok informatikos pagrindų pagreitintuose kursuose (panašiuose
-        į 2-4 kursus).
-  landing:
-    report_bug: Pranešti apie problemą
-    support: Pagalba
-    support_url: "//support.code.org"
-    help_resources: Pagalba ir ištekliai
-  free_response:
-    placeholder: Įveskite savo atsakymą čia
-  multi:
-    wrong_title: Neteisingas atsakymas
-    wrong_body: Atsakymas, kurį įvedei, nėra teisingas. Pabandyk dar kartą!
-    correct_title: Teisingai
-    correct_body: Tai yra teisingas atsakymas.
-  multi-submittable:
-    wrong_title: Ačiū
-    wrong_body: Ačiū už atsakymą.
-    correct_title: Ačiū
-    correct_body: Ačiū už atsakymą.
-  level_group:
-    wrong_title: Ačiū
-    wrong_body: Ačiū už atsakymus.
-    correct_title: Ačiū
-    correct_body: Ačiū už atsakymus.
-  level_group-submittable:
-    wrong_title: Ačiū
-    wrong_body: Ačiū už atsakymus.
-    correct_title: Ačiū
-    correct_body: Ačiū už atsakymus.
-  match:
-    wrong_title: Neteisingas sprendimas
-    wrong_body: Sprendimas, kurį įvedei, nėra teisingas. Pamėgink dar kartą!
-    correct_title: Teisingai
-    correct_body: Tai yra teisingas atsakymas.
-  contract_match:
-    wrong_title: Neteisingas atsakymas
-    badname: Jūsų funkcijoje yra netinkamas vardas.
-    badname_case: Funkcijų pavadinimai reaguoja į didžiąsias ir mažąsias raides. Pamėginkite
-      pakeisti pavadinimą.
-    badrange: Jūsų funkcijoje yra netinkamas skaičius.
-    baddomainsize: Jūsų funkcijoje yra netinkamas elementų skaičius.
-    baddomainname: Vienas arba daugiau elementų turi netinkamą pavadinimą.
-    baddomaintype: Vienas arba daugiau elementų yra netinkamo tipo arba jų eiliškumas
-      yra netinkamas.
-  text_match:
-    placeholder: Įveskite savo atsakymą čia
-    open_response_title: Ačiū
-    open_response_body: Ačiū už atsakymą!
-    correct_title: Teisingai
-    correct_body: Tai yra teisingas atsakymas.
-  dialog:
-    ok: gerai
-    startover_title: Ar tikrai norite pradėti iš naujo?
-    startover_body: Tavo visi pakeitimai išnyks ir užduotį galėsi atlikti iš naujo.
-    startover_ok: Pradėti iš naujo
-    startover_cancel: Atšaukti
-  time:
-    hour: 1 val
-    day: diena
-    week: savaitė
-  age_interstitial:
-    age: Tavo amžius
-    header: Paskyros informacijos atnaujinimas
-  terms_interstitial:
-    tos: Naudojimo taisyklės
-    privacy: Privatumo politika
-    accept: Sutikti
-    print: Spausdinti
-  school_info_interstitial:
-    save: Išsaugoti
-  race_interstitial:
-    message: Nurodykite savo rasę (pažymėkite visus tinkamus variantus)
-    races:
-      white: Baltasis
-      black: Juodasis arba Afroamerikietis
-      hispanic: Ispanas arba Latino
-      asian: Azijietis
-      hawaiian: Havajų arba kitų Ramiojo vandenyno salų gyventojas
-      american_indian: Amerikos indėnas/Aliaskos gyventojas
-      other: Kita
-      opt_out: Nenoriu sakyti
-    submit: Pateikti
-    decline: Užverti
+  user:
+    current_password_hint: "(įveskite dabartinį slaptažodį, kad išsaugoti pakeitimus)"
+    delete: Pašalinti savo paskyrą
+    delete_confirm: Ar tikrai norite panaikinti savo paskyrą?
+    delete_text: Nuspaudus mygtuką panaikinsite savo paskyrą.
+    delete_text_teacher_note: 'Pastaba: pašalinus Jūsų paskyrą, mokinių paskyros nebus
+      panaikintos.'
+    email_confirm_needed: 'El. pašto adresas nebuvo patvirtintas:'
+    email_confirm_needed_required: 'Jūsų el. pašto adresas %{email} nebuvo patvirtintas:'
+    email_confirm_wrong_email: "(Klaidingas el. pašto adresas?)"
+    email_resend_confirm: Persiųsti iš naujo patvirtinimo instrukciją
+    new_password_hint: "(palikite tuščią, jei nenorite pakeisti)"
+    none: Nė vienas
+    remove_parent_email_label: Pašalinti
+    update_email: Atnaujinti
+  user_level:
+    completed: Baigta
+    tried: Išbandyta
+  user_type:
+    student: Mokinys
+    teacher: Mokytojas
+  video:
+    autoplay_option: Automatiškas vaizdo įrašų paleidimas
+    download: Atsisiųsti vaizdo įrašą
+    notes: Nerodo vaizdo? Rodyti tekstą.
+    notes_coming_soon: Šiam vaizdo įrašui dar nėra pastabų.
+    tab: Vaizdo įrašas.
+  video_coming_soon: Vaizdo įrašas bus jau netrukus!
+  view_lesson_plan: Peržiūrėti pamokos planą
+  welcome_back: Sveiki sugrįžę, %{name}
+  welcome_email:
+    body: |
+      Nuspauskite žemiau esančią nuorodą, kad prisiregistruotumėte prie informatikos įvado Core.org svetainėję (aš būsiu Jūsų „mokytojas“):
+
+      %{link}
+
+      Pamokėlės yra linksmos, interaktyvios. Programavimo pagrindų galima išmokti tiesiog žaidžiant. Išmokite programuoti padedant Bilui Geitsui, Markui Zuckerbergui žaisdami su Angry Birds ir Plants vs. Zombies! :)
+
+      %{name}
+    subject: Prisijunk prie mano klasės (Code.org svetainėje)
+  your_professional_learning_plan: Tavo Profesionalus Mokymosi planas
   zendesk_too_young_message: Atsiprašome, jaunesnio amžiaus naudotojai negali prisijungti
     prie mūsų palaikymo svetainės. Galite peržiūrėti <a href="http://support.code.org">
     support.code.org</a> nesiregistruojant arba paklausti savo tėvų ar mokytojų, kad
@@ -643,126 +766,3 @@ lt:
     prisijungti prie mūsų palaikymo svetainės. Galite peržiūrėti [support.code.org](http://support.code.org)
     nesiregistruojant arba paklausti savo tėvų ar mokytojų, kad susisiektų su mumis
     už jus.
-  progress:
-    not_started: nepradėta
-    in_progress: pradėta
-    completed_too_many_blocks: baigtas, panaudota per daug blokų
-    completed_perfect: puikiai išspręsta
-    furthest_level_attempted: išmėgintas aukščiausias lygis
-    assessment: vertinimas
-    submitted: pateikta
-  studio:
-    courses_working_on: Kursai, kuriuose dalyvaujate
-    completed_courses: Užbaigti kursai
-    all_courses: Visi kursai
-  project:
-    projects: Projektai
-    create: Sukurti projektą
-    create_a_project: 'Sukurti naują projektą:'
-    new: Sukurti naują
-    exit: Grįžti prie kursų
-    project_gallery: Projektai
-    share_title: Bendrinti savo projektą
-    share_copy_link: 'Kopijuoti nuorodą:'
-    advanced_share: Rodyti išplėstinius nustatymus
-    name: Vardas
-    updated: Atnaujinta
-    project_type: Projekto rūšis
-    help_text: Nuspausk<strong>Sukurti programėlę</strong> arba <strong>Kažką nupiešti</strong>
-      žemiau, kad sukurtum Žaidimo laboratorijos projektą!<br/>Bet kuriuo metu galėsi
-      sugrįžti ir pratęsti savo projektą.
-    need_help: Išmėgink šiuos kursus, kurie tau padės sukurti naują projektą
-    saved: Išsaugota
-    not_saved: Neišsaugota
-    view_all: Peržiūrėti mano projektus
-    edit_project: Redaguoti projektą
-    abuse:
-      tos: Buvo pranešta, kad šis projektas pažeidė Code.org <a href='http://code.org/tos'>Naudojimosi
-        sąlygas</a>, todėl juo negalima dalintis su kitais.
-      contact_us: Jeigu manai, kad įvyko klaida, <a href='https://code.org/contact'>susisiek
-        su mumis.</a>
-      go_to_code_studio: Eiti į „Code Studio“
-      report_abuse_form:
-        intro: Jei, naudojantis su „Code Studio“ sukurtomis programėlėmis, Jūs aptikote
-          įžeidžiantį turinį, grasinimus, patyčias, priekabiavimą ar autorinių teisių
-          pažeidimą jums priklausančiam turiniui, prašome užpildyti formą esančią
-          žemiau. Į Jūsų pranešimą mes reaguosime labai rimtai, ištirsime numatyta
-          tvarka ir imsimės atitinkamų veiksmų.
-        validation:
-          email: Įvesk el. pašto adresą
-          age: Pasirink amžių
-          abuse_type: Pagrįsk, kaip šis turinys pažeidžia Naudojimosi sąlygas
-          abuse_detail: Prašom pateikti išsamią informaciją dėl turinio, apie kurį
-            tu nori pranešti
-        abusive_url: Nuoroda į pranešamą turinį
-        abuse_type:
-          question: Kaip šis turinys pažeidžia %{link_start}Naudojimosi sąlygas%{link_end}?
-          harassment: Grasinimai, patyčios, priekabiavimas
-          offensive: Įžeidžiantis turinys
-          infringement: Autorinių teisių pažeidimas
-          other: Kita
-        detail: Prašome nurodyti kuo daugiau informacijos dėl turinio, kurį Jūs pranešate.
-        acknowledge: Pateikdami šią informaciją Jūs sutinkate, kad ji bus naudojama
-          pagal %{link_start_privacy}Privatumo politiką%{link_end} ir %{link_start_tos}Naudojimosi
-          sąlygas%{link_end}
-  peer_review:
-    accepted:
-      name: Priimta
-    rejected:
-      name: Atmesta
-    escalated:
-      description: Norėčiau, kad instruktorius peržiūrėtų šią pateiktį
-    instructor_feedback: Instruktoriaus atsiliepimai
-    peer_review: Tarpusavio peržiūra
-  hoc_download:
-    title: "„Programavimo valandos” parsisiuntimai"
-    capsule_title: Ar turite internetą?
-    instructions_headline: Nėra interneto?
-    minecraft_name: Minecraft „Programavimo valanda”
-    starwars_blocks_name: 'Žvaigždžių karai: Programuojame galaktiką (Blokais)'
-    starwars_javascript_name: 'Žvaigždžių karai: Programuojame galaktiką (JavaScript
-      kalba)'
-    download_message: Parsisiųsti %{app_name} naudojimui neprisijungus (136MB)
-    download_in_English: 'Parsisiųsti anglų kalba:'
-    download_in_Spanish: 'Parsisiųsti ispanų kalba:'
-    windows: Windows (64-bitų)
-    mac: Mac OS X
-  return_unit_overview: Eiti į skyriaus apžvalgą
-  return_course_overview: Eiti į skyriaus apžvalgą
-  pd:
-    form_labels:
-      email: El. paštas
-      school: Mokykla
-      school_name: Mokyklos pavadinimas
-      colombian_chilean_school_name: Mokyklos pavadinimas
-    form_entries:
-      gender:
-        male: Vyras
-        female: Moteris
-        none: Nenoriu atsakyti
-      subjects:
-        cs: Informatika
-        math: Matematika
-        science: Gamtos mokslai
-        la: Literatūra
-        other: Kita
-      resources:
-        khan: Khan Akademija
-        other: Kita
-      robotics:
-        other: Kita
-      workshop_course:
-        other: Kita
-      email_opt_in:
-        opt_in_yes: Taip
-        opt_in_no: Ne
-  course_offering:
-    headers:
-      minecraft: Minecraft
-      sports: Sportas
-  cookie_banner:
-    accept: Sutinku
-  page_not_found_title: Puslapis nerastas
-  copy: Kopijuoti
-  pixelation:
-    binary: Dvejetainis

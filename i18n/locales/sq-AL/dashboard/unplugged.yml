@@ -239,7 +239,7 @@ sq:
         title: Të shkruarit këngë me Parametra
         desc: 'Një nga strukturat më madhështore në botën e shkencës kompjuterike është funksioni. Funksionet (ndonjëhere quhen proçedura) janë programe të vola që ti mund ti përdorësh herë pas here brenda programit më të madh. Ky mësim do të ndihmojë studentët në mënyrë logjike të kuptojnë pse duke kombinuar pjesët e kodit në funksione, është një praktikë kaq ndihmuese.  '
       courseB_unplugged_MRF_2018:
-        title: Miqtë e mi Robotikë
+        title: Shokët e mi robotik
       PlantASeed_2018:
         title: 'Algoritmet e jetës-Reale: Mbill një Farë'
         desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
@@ -282,7 +282,7 @@ sq:
       RelayProgramming_2018:
         title: Programimi i Besuar
       courseB_unplugged_MRF_2019:
-        title: Miqtë e mi Robotikë
+        title: Shokët e mi robotik
       Conditionals_2019:
         title: Kushtet
         desc: Për të mësuar rreth përcaktimeve të kushtoreve, studentët luajnë një lojë me karta dhe krijojnë rregulla si "Nëse vizatoj një kartë të kuqe, unë marr një pikë" dhe "Nëse unë vizatoj një kartë të zezë, ti merr një pikë."

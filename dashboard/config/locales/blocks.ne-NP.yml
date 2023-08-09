@@ -5,19 +5,11 @@ ne:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': medium
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': medium
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -29,93 +21,92 @@ ne:
             '"SLOTH"': स्लथ्स
             '"UNICORN"': घोडाहरु
           MOVE1:
-            MOVES.Roll: बडी रोल
             MOVES.ClapHigh: उच्च तालि
+            MOVES.Clown: गमनम
             MOVES.Dab: हात तेस्र्याउनु
             MOVES.DoubleJam: तलतिर दोहो¥याउनु
             MOVES.Drop: खसाल्नु
             MOVES.Floss: डोरीले मिलाउनु
             MOVES.Fresh: ताजा
-            MOVES.Clown: गमनम
             MOVES.Kick: तारा
+            MOVES.Roll: बडी रोल
             MOVES.ThisOrThat: यो वा त्यो
           MOVE2:
-            MOVES.Roll: बडी रोल
             MOVES.ClapHigh: उच्च तालि
+            MOVES.Clown: गमनम
             MOVES.Dab: हात तेस्र्याउनु
             MOVES.DoubleJam: तलतिर दोहो¥याउनु
             MOVES.Drop: खसाल्नु
             MOVES.Floss: डोरीले मिलाउनु
             MOVES.Fresh: ताजा
-            MOVES.Clown: गमनम
             MOVES.Kick: तारा
+            MOVES.Roll: बडी रोल
             MOVES.ThisOrThat: यो वा त्यो
       Dancelab_atTimestamp:
-        text: पछि
         options:
           UNIT:
             '"measures"': मापनहरु
             '"seconds"': seconds
+        text: पछि
       Dancelab_changeColorBy:
-        text: परिवर्तन
         options:
           METHOD:
+            '"brightness"': चम्किलो
             '"hue"': रंगीन चक्र
             '"saturation"': अतितृप्त
-            '"brightness"': चम्किलो
+        text: परिवर्तन
       Dancelab_changeMoveEachLR:
+        options:
+          GROUP:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
+          MOVE:
+            '"next"': अर्को
+            '"prev"': अघिल्लो
+            '"rand"': अनियमित
+            MOVES.ClapHigh: उच्च तालि
+            MOVES.Clown: गमनम
+            MOVES.Dab: हात तेस्र्याउनु
+            MOVES.DoubleJam: तलतिर दोहो¥याउनु
+            MOVES.Drop: खसाल्नु
+            MOVES.Floss: डोरीले मिलाउनु
+            MOVES.Fresh: ताजा
+            MOVES.Kick: तारा
+            MOVES.Roll: बडी रोल
+            MOVES.ThisOrThat: यो वा त्यो
         text: सधैंभरिलाई
-        options:
-          GROUP:
-            '"BEAR"': भालुहरु
-            '"DUCK"': हाँसहरु
-            '"FROG"': भ्यागुताहरु
-            '"PINEAPPLE"': भुइकटहरहरु
-            '"SHARK"': सार्कहरु
-            '"SLOTH"': स्लथ्स
-            '"UNICORN"': घोडाहरु
-          MOVE:
-            '"next"': अर्को
-            '"prev"': अघिल्लो
-            '"rand"': अनियमित
-            MOVES.Roll: बडी रोल
-            MOVES.ClapHigh: उच्च तालि
-            MOVES.Dab: हात तेस्र्याउनु
-            MOVES.DoubleJam: तलतिर दोहो¥याउनु
-            MOVES.Drop: खसाल्नु
-            MOVES.Floss: डोरीले मिलाउनु
-            MOVES.Fresh: ताजा
-            MOVES.Clown: गमनम
-            MOVES.Kick: तारा
-            MOVES.ThisOrThat: यो वा त्यो
       Dancelab_changeMoveLR:
-        text: सधैंलाई
         options:
           MOVE:
             '"next"': अर्को
             '"prev"': अघिल्लो
             '"rand"': अनियमित
-            MOVES.Roll: बडी रोल
             MOVES.ClapHigh: उच्च तालि
+            MOVES.Clown: गमनम
             MOVES.Dab: हात तेस्र्याउनु
             MOVES.DoubleJam: तलतिर दोहो¥याउनु
             MOVES.Drop: खसाल्नु
             MOVES.Floss: डोरीले मिलाउनु
             MOVES.Fresh: ताजा
-            MOVES.Clown: गमनम
             MOVES.Kick: तारा
+            MOVES.Roll: बडी रोल
             MOVES.ThisOrThat: यो वा त्यो
+        text: सधैंलाई
       Dancelab_changePropBy:
-        text: परिवर्तन
         options:
           PROPERTY:
-            '"scale"': size
             '"height"': height
             '"rotation"': परिक्रमण
+            '"scale"': size
             '"x"': क्षितिजीय स्थिति
             '"y"': ठाडो स्थिति
+        text: परिवर्तन
       Dancelab_changePropEachBy:
-        text: परिवर्तन
         options:
           GROUP:
             '"BEAR"': भालुहरु
@@ -126,13 +117,13 @@ ne:
             '"SLOTH"': स्लथ्स
             '"UNICORN"': घोडाहरु
           PROPERTY:
-            '"scale"': size
             '"height"': height
             '"rotation"': परिक्रमण
+            '"scale"': size
             '"x"': क्षितिजीय स्थिति
             '"y"': ठाडो स्थिति
+        text: परिवर्तन
       Dancelab_doMoveEachLR:
-        text: एकपटक
         options:
           GROUP:
             '"BEAR"': भालुहरु
@@ -144,67 +135,68 @@ ne:
             '"UNICORN"': घोडाहरु
           MOVE:
             '"rand"': अनियमित
-            MOVES.XBend: बेन्ड गर्नुहोस्
-            MOVES.Roll: बडी रोल
-            MOVES.XClapSide: तालि
             MOVES.ClapHigh: उच्च तालि
+            MOVES.Clown: गमनम
             MOVES.Dab: हात तेस्र्याउनु
-            MOVES.XFever: डिस्को
             MOVES.DoubleJam: तलतिर दोहो¥याउनु
             MOVES.Drop: खसाल्नु
             MOVES.Floss: डोरीले मिलाउनु
             MOVES.Fresh: ताजा
-            MOVES.Clown: गमनम
+            MOVES.Kick: तारा
+            MOVES.Roll: बडी रोल
+            MOVES.ThisOrThat: यो वा त्यो
+            MOVES.XArmsSide: पहुँच
+            MOVES.XArmsUp: तन्काउनुहोस्
+            MOVES.XBend: बेन्ड गर्नुहोस्
+            MOVES.XClapSide: तालि
+            MOVES.XFever: डिस्को
             MOVES.XHeadHips: टाउको + कम्मर
-            MOVES.XHop: हप
             MOVES.XHighKick: लात
+            MOVES.XHop: हप
             MOVES.XKnee: घुँडा
             MOVES.XKneel: घुँडा टेक्नु
             MOVES.XOle: औला ठड्याउनु
-            MOVES.XArmsSide: पहुँच
             MOVES.XSlide: सार्नु
-            MOVES.Kick: तारा
-            MOVES.XArmsUp: तन्काउनुहोस्
-            MOVES.ThisOrThat: यो वा त्यो
-      Dancelab_doMoveLR:
         text: एकपटक
+      Dancelab_doMoveLR:
         options:
           MOVE:
             '"rand"': अनियमित
-            MOVES.XBend: बेन्ड गर्नुहोस्
-            MOVES.Roll: बडी रोल
-            MOVES.XClapSide: तालि
             MOVES.ClapHigh: उच्च तालि
+            MOVES.Clown: गमनम
             MOVES.Dab: हात तेस्र्याउनु
-            MOVES.XFever: डिस्को
             MOVES.DoubleJam: तलतिर दोहो¥याउनु
             MOVES.Drop: खसाल्नु
             MOVES.Floss: डोरीले मिलाउनु
             MOVES.Fresh: ताजा
-            MOVES.Clown: गमनम
+            MOVES.Kick: तारा
+            MOVES.Roll: बडी रोल
+            MOVES.ThisOrThat: यो वा त्यो
+            MOVES.XArmsSide: पहुँच
+            MOVES.XArmsUp: तन्काउनुहोस्
+            MOVES.XBend: बेन्ड गर्नुहोस्
+            MOVES.XClapSide: तालि
+            MOVES.XFever: डिस्को
             MOVES.XHeadHips: टाउको + कम्मर
-            MOVES.XHop: हप
             MOVES.XHighKick: लात
+            MOVES.XHop: हप
             MOVES.XKnee: घुँडा
             MOVES.XKneel: घुँडा टेक्नु
             MOVES.XOle: औला ठड्याउनु
-            MOVES.XArmsSide: पहुँच
             MOVES.XSlide: सार्नु
-            MOVES.Kick: तारा
-            MOVES.XArmsUp: तन्काउनुहोस्
-            MOVES.ThisOrThat: यो वा त्यो
+        text: एकपटक
       Dancelab_everySeconds:
-        text: प्रत्येक {N} {UNIT}  दोहो¥याउनुहोस्
         options:
           UNIT:
             '"measures"': मापनहरु
             '"seconds"': seconds
+        text: प्रत्येक {N} {UNIT}  दोहो¥याउनुहोस्
       Dancelab_getProp:
         options:
           PROPERTY:
-            '"scale"': size
             '"height"': height
             '"rotation"': परिक्रमण
+            '"scale"': size
             '"x"': क्षितिजीय स्थिति
             '"y"': ठाडो स्थिति
       Dancelab_getTime:
@@ -222,8 +214,8 @@ ne:
             MOVES.Drop: खसाल्नु
             MOVES.Floss: डोरीले मिलाउनु
             MOVES.Fresh: ताजा
-            MOVES.Roll: बडी रोल
             MOVES.Kick: तारा
+            MOVES.Roll: बडी रोल
             MOVES.ThisOrThat: यो वा त्यो
       Dancelab_ifTime:
         options:
@@ -250,6 +242,8 @@ ne:
             "{x: 300, y: 200}": दाँया
       Dancelab_layoutSprites:
         options:
+          FORMAT:
+            '"diamond"': diamond
           GROUP:
             '"BEAR"': भालुहरु
             '"DUCK"': हाँसहरु
@@ -258,8 +252,6 @@ ne:
             '"SHARK"': सार्कहरु
             '"SLOTH"': स्लथ्स
             '"UNICORN"': घोडाहरु
-          FORMAT:
-            '"diamond"': diamond
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
@@ -319,9 +311,9 @@ ne:
       Dancelab_setProp:
         options:
           PROPERTY:
-            '"scale"': size
             '"height"': height
             '"rotation"': परिक्रमण
+            '"scale"': size
             '"x"': क्षितिजीय स्थिति
             '"y"': ठाडो स्थिति
       Dancelab_setPropEach:
@@ -335,17 +327,17 @@ ne:
             '"SLOTH"': स्लथ्स
             '"UNICORN"': घोडाहरु
           PROPERTY:
-            '"scale"': size
             '"height"': height
             '"rotation"': परिक्रमण
+            '"scale"': size
             '"x"': क्षितिजीय स्थिति
             '"y"': ठाडो स्थिति
       Dancelab_setPropRandom:
         options:
           PROPERTY:
-            '"scale"': size
             '"height"': height
             '"rotation"': परिक्रमण
+            '"scale"': size
             '"x"': क्षितिजीय स्थिति
             '"y"': ठाडो स्थिति
       Dancelab_setPropRandomEach:
@@ -359,9 +351,9 @@ ne:
             '"SLOTH"': स्लथ्स
             '"UNICORN"': घोडाहरु
           PROPERTY:
-            '"scale"': size
             '"height"': height
             '"rotation"': परिक्रमण
+            '"scale"': size
             '"x"': क्षितिजीय स्थिति
             '"y"': ठाडो स्थिति
       Dancelab_setTintEach:
@@ -403,9 +395,9 @@ ne:
       Dancelab_startMapping:
         options:
           PROPERTY:
-            '"scale"': size
             '"height"': height
             '"rotation"': परिक्रमण
+            '"scale"': size
             '"x"': क्षितिजीय स्थिति
             '"y"': ठाडो स्थिति
       Dancelab_startMappingEach:
@@ -419,17 +411,17 @@ ne:
             '"SLOTH"': स्लथ्स
             '"UNICORN"': घोडाहरु
           PROPERTY:
-            '"scale"': size
             '"height"': height
             '"rotation"': परिक्रमण
+            '"scale"': size
             '"x"': क्षितिजीय स्थिति
             '"y"': ठाडो स्थिति
       Dancelab_stopMapping:
         options:
           PROPERTY:
-            '"scale"': size
             '"height"': height
             '"rotation"': परिक्रमण
+            '"scale"': size
             '"x"': क्षितिजीय स्थिति
             '"y"': ठाडो स्थिति
       Dancelab_stopMappingEach:
@@ -443,9 +435,9 @@ ne:
             '"SLOTH"': स्लथ्स
             '"UNICORN"': घोडाहरु
           PROPERTY:
-            '"scale"': size
             '"height"': height
             '"rotation"': परिक्रमण
+            '"scale"': size
             '"x"': क्षितिजीय स्थिति
             '"y"': ठाडो स्थिति
       Dancelab_translateStrings:
@@ -456,170 +448,21 @@ ne:
       Dancelab_whenKey:
         options:
           KEY:
-            '"up"': माथि
-            '"left"': बाँया
             '"down"': तल
+            '"left"': बाँया
             '"right"': दाँया
             '"space"': space
+            '"up"': माथि
             '"x"': x
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
             '"hearts"': hearts
-      gamelab_atTime:
-        options:
-          UNIT:
-            '"seconds"': seconds
-      gamelab_changePropBy:
-        text: परिवर्तन
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"rotation"': परिक्रमण
-            '"speed"': speed
-      gamelab_checkTouching:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      gamelab_everyInterval:
-        text: प्रत्येक {N} {UNIT}  दोहो¥याउनुहोस्
-        options:
-          UNIT:
-            '"seconds"': seconds
-      gamelab_getProp:
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"rotation"': परिक्रमण
-            '"speed"': speed
-      gamelab_getTime:
-        options:
-          UNIT:
-            '"seconds"': seconds
-      gamelab_isKeyPressed:
-        options:
-          KEY:
-            '"up"': माथि
-            '"down"': तल
-            '"left"': बाँया
-            '"right"': दाँया
-            '"space"': space
-            '"x"': x
-      gamelab_keyPressed:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-          KEY:
-            '"up"': माथि
-            '"down"': तल
-            '"left"': बाँया
-            '"right"': दाँया
-            '"space"': space
-            '"x"': x
-      gamelab_makeProjectile:
-        options:
-          DIRECTION:
-            '0': दाँया
-            '90': तल
-            '180': बाँया
-            '270': माथि
-      gamelab_makeSpritesWithSize:
-        options:
-          SIZE:
-            '30': small
-            '50': medium
-            '100': large
-      gamelab_mirrorSprite:
-        options:
-          DIRECTION:
-            '"right"': दाँया
-            '"left"': बाँया
-      gamelab_playSoundOptions:
-        options:
-          SOUND:
-            "'sound://category_collect/clicky_crunch.mp3'": crunch
-            "'sound://category_animals/cat.mp3'": cat
-            "'sound://category_animals/cow.mp3'": cow
-            "'sound://category_animals/sheep.mp3'": sheep
-            "'sound://category_animals/chicken.mp3'": chicken
-            "'sound://category_animals/dog.mp3'": dog
-            "'sound://category_digital/jump_7.mp3'": jump
-      gamelab_randColor:
-        text: कुनै एक  रङ
-      gamelab_randomColor:
-        text: कुनै एक  रङ
-      gamelab_repeatForever:
-        text: repeat forever
-      gamelab_setBackgroundImage:
-        options:
-          IMG:
-            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': गुफा
-            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
-            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': मरुभूमि
-            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': इन्द्रणी
-            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': पनि
-              मुनि
-            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': चिसो
-      gamelab_setDefaultSpriteSize:
-        options:
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': medium
-            '100': large
-      gamelab_setProp:
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"rotation"': परिक्रमण
-            '"speed"': speed
-      gamelab_setProp_dropdown:
-        options:
-          PROPERTY:
-            '"scale"': size
-          SIZE:
-            '25': extra small
-            '50': small
-            '75': medium
-            '100': large
-      gamelab_setSizes:
-        options:
-          PROPERTY:
-            '"scale"': size
-            '"height"': height
-      gamelab_spriteClicked:
-        options:
-          CONDITION:
-            '"when"': when
-            '"while"': while
-      gamelab_turn:
-        options:
-          DIRECTION:
-            '"right"': दाँया
-            '"left"': बाँया
-      gamelab_whenKey:
-        options:
-          KEY:
-            '"up"': माथि
-            '"down"': तल
-            '"left"': बाँया
-            '"right"': दाँया
-            '"space"': space
-      gamelab_whileKey:
-        options:
-          KEY:
-            '"up"': माथि
-            '"down"': तल
-            '"left"': बाँया
-            '"right"': दाँया
-            '"space"': space
       Mikelab_changePropBy:
         options:
           PROPERTY:
-            '"scale"': size
             '"rotation"': परिक्रमण
+            '"scale"': size
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -628,13 +471,13 @@ ne:
       Mikelab_getProp:
         options:
           PROPERTY:
-            '"scale"': size
             '"rotation"': परिक्रमण
+            '"scale"': size
       Mikelab_groupChangePropBy:
         options:
           PROPERTY:
-            '"scale"': size
             '"rotation"': परिक्रमण
+            '"scale"': size
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -643,13 +486,13 @@ ne:
       Mikelab_groupGetProp:
         options:
           PROPERTY:
-            '"scale"': size
             '"rotation"': परिक्रमण
+            '"scale"': size
       Mikelab_groupSetProp:
         options:
           PROPERTY:
-            '"scale"': size
             '"rotation"': परिक्रमण
+            '"scale"': size
       Mikelab_ifDanceIs:
         options:
           DANCE:
@@ -660,8 +503,8 @@ ne:
             MOVES.Drop: खसाल्नु
             MOVES.Floss: डोरीले मिलाउनु
             MOVES.Fresh: ताजा
-            MOVES.Roll: बडी रोल
             MOVES.Kick: तारा
+            MOVES.Roll: बडी रोल
             MOVES.ThisOrThat: यो वा त्यो
       Mikelab_randomColor:
         text: कुनै एक  रङ
@@ -674,13 +517,13 @@ ne:
       Mikelab_setProp:
         options:
           PROPERTY:
-            '"scale"': size
             '"rotation"': परिक्रमण
+            '"scale"': size
       Mikelab_showScoreboard:
         options:
           CORNER:
-            '"right"': दाँया
             '"left"': बाँया
+            '"right"': दाँया
       Mikelab_sprite:
         options:
           LOCATION:
@@ -689,37 +532,37 @@ ne:
       Mikelab_whenKeyPressed:
         options:
           KEY:
-            '"up"': up arrow
+            '"a"': क
+            '"d"': 'घ '
             '"down"': down arrow
             '"left"': left arrow
             '"right"': right arrow
-            '"w"': प
-            '"a"': क
             '"s"': द
-            '"d"': 'घ '
+            '"up"': up arrow
+            '"w"': प
       Mikelab_whenKeyReleased:
         options:
           KEY:
-            '"up"': up arrow
+            '"a"': क
+            '"d"': 'घ '
             '"down"': down arrow
             '"left"': left arrow
             '"right"': right arrow
-            '"w"': प
-            '"a"': क
             '"s"': द
-            '"d"': 'घ '
+            '"up"': up arrow
+            '"w"': प
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': हो
             '"no"': होइन
+            '"yes"': हो
       Mikelab_whileKeyPressed:
         options:
           KEY:
-            '"up"': up arrow
             '"down"': down arrow
             '"left"': left arrow
             '"right"': right arrow
+            '"up"': up arrow
       Poetry_addFrame:
         options:
           BRUSH:
@@ -758,18 +601,18 @@ ne:
       binary_move:
         options:
           DIR:
-            '"up"': माथि
             '"down"': तल
             '"left"': बाँया
             '"right"': दाँया
+            '"up"': माथि
       binary_whenKey:
         options:
           KEY:
-            '"up"': माथि
             '"down"': तल
             '"left"': बाँया
             '"right"': दाँया
             '"space"': space
+            '"up"': माथि
       craft_ifPath:
         options:
           DIR:
@@ -777,8 +620,8 @@ ne:
       craft_ifStandingOn:
         options:
           TYPE:
-            "'sand'": sand
             "'planksOak'": oak planks
+            "'sand'": sand
       craft_ifStandingOnLimit:
         options:
           TYPE:
@@ -787,6 +630,147 @@ ne:
         text: move forward
       craft_placeTorch:
         text: place torch
+      gamelab_atTime:
+        options:
+          UNIT:
+            '"seconds"': seconds
+      gamelab_changePropBy:
+        options:
+          PROPERTY:
+            '"rotation"': परिक्रमण
+            '"scale"': size
+            '"speed"': speed
+        text: परिवर्तन
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+      gamelab_everyInterval:
+        options:
+          UNIT:
+            '"seconds"': seconds
+        text: प्रत्येक {N} {UNIT}  दोहो¥याउनुहोस्
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"rotation"': परिक्रमण
+            '"scale"': size
+            '"speed"': speed
+      gamelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': seconds
+      gamelab_isKeyPressed:
+        options:
+          KEY:
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
+            '"up"': माथि
+            '"x"': x
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+          KEY:
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
+            '"up"': माथि
+            '"x"': x
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': दाँया
+            '180': बाँया
+            '270': माथि
+            '90': तल
+      gamelab_makeSpritesWithSize:
+        options:
+          SIZE:
+            '50': medium
+      gamelab_mirrorSprite:
+        options:
+          DIRECTION:
+            '"left"': बाँया
+            '"right"': दाँया
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_animals/cat.mp3'": cat
+            "'sound://category_animals/chicken.mp3'": chicken
+            "'sound://category_animals/cow.mp3'": cow
+            "'sound://category_animals/dog.mp3'": dog
+            "'sound://category_animals/sheep.mp3'": sheep
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_digital/jump_7.mp3'": jump
+      gamelab_randColor:
+        text: कुनै एक  रङ
+      gamelab_randomColor:
+        text: कुनै एक  रङ
+      gamelab_repeatForever:
+        text: repeat forever
+      gamelab_setBackgroundImage:
+        options:
+          IMG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': गुफा
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': मरुभूमि
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': इन्द्रणी
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': पनि
+              मुनि
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': चिसो
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '75': medium
+      gamelab_setProp:
+        options:
+          PROPERTY:
+            '"rotation"': परिक्रमण
+            '"scale"': size
+            '"speed"': speed
+      gamelab_setProp_dropdown:
+        options:
+          PROPERTY:
+            '"scale"': size
+          SIZE:
+            '75': medium
+      gamelab_setSizes:
+        options:
+          PROPERTY:
+            '"height"': height
+            '"scale"': size
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+      gamelab_turn:
+        options:
+          DIRECTION:
+            '"left"': बाँया
+            '"right"': दाँया
+      gamelab_whenKey:
+        options:
+          KEY:
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
+            '"up"': माथि
+      gamelab_whileKey:
+        options:
+          KEY:
+            '"down"': तल
+            '"left"': बाँया
+            '"right"': दाँया
+            '"space"': space
+            '"up"': माथि
       storylab_setForegroundEffect2:
         options:
           EFFECT:

@@ -3,86 +3,32 @@ sl:
   data:
     script:
       name:
-        course1:
-          title: Tečaj 1
-          description: Začnite s Tečajom 1 za otroke, ki se še učijo brati. Učenci
-            bodo ustvarili programe, ki jim bodo pomagali se naučiti sodelovati z
-            drugimi, razvili bodo spretnost reševanja problemov ter vzstrajnosti pri
-            zahtevnih nalogah. Na koncu tega tečaja bo učenec naredil svojo lastno
-            igro ali zgodbo, ki jo bodo lahko delili z drugimi. Priporočljivo za otroke
-            prvega razreda osnovne šole.
-          description_short: Začnite pri Tečaju 1, če se otrok še uči brati.
-          description_audience: Starost 4-6
-          student_description: Začnite s Tečajom 1 za otroke, ki se še učijo brati.
-            Učenci bodo ustvarili programe, ki jim bodo pomagali se naučiti sodelovati
-            z drugimi, razvili bodo spretnost reševanja problemov ter vzstrajnosti
-            pri zahtevnih nalogah. Na koncu tega tečaja bo učenec naredil svojo lastno
-            igro ali zgodbo, ki jo bodo lahko delili z drugimi. Priporočljivo za otroke
-            prvega razreda osnovne šole.
-        course2:
-          title: Tečaj 2
-          description: Učenci, ki znajo brati in nimajo nobenih predhodnjih izkušen
-            s programiranjem, začnite s Tečajem 2. V tem tečaju bodo učenci naredili
-            programe, ki bodo reševali probleme in razvijali interaktivne igre ali
-            zgodbe, ki jih bodo lahko delili z drugimi. Priporočljivo za učence od
-            2. do 5. razreda osnovne šole.
-          description_short: Z učenci, ki že znajo brati, začnite pri 2. tečaju.
-          description_audience: Starost 6+ (potrebno je znanje branja)
-          student_description: Učenci, ki znajo brati in nimajo nobenih predhodnjih
-            izkušen s programiranjem, začnite s Tečajem 2. V tem tečaju bodo učenci
-            naredili programe, ki bodo reševali probleme in razvijali interaktivne
-            igre ali zgodbe, ki jih bodo lahko delili z drugimi. Priporočljivo za
-            učence od 2. do 5. razreda osnovne šole.
-        course3:
-          title: Tečaj 3
-          description: Tečaj 3 je namenjen učencem, ki so končali Tečaj 2. Učenci
-            se bodo poglobili v programerske teme, predstavljene v prejšnjih tečajih,
-            tako da bodo ustvarjali prilagodljive rešitve za bolj kompleksne probleme.
-            Ob koncu tega tečaja bodo učenci ustvarili interaktivne zgodbe in igre,
-            ki jih bodo lahko delili s komerkoli. Priporočljivo za učence 4. in 5.
-            razreda osnovne šole.
-          description_short: Tečaj 3 je nadaljevanje Tečaja 2.
+        20-hour:
+          description: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov
+            programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je
+            zabaven za učenje v vseh starostih.
+          description_audience: Starost 10-18
+          description_short: Ta 20-urni tečaj zajema bistvo računalnitšva in programerskih
+            konceptov v tečajih 2-4.
+          student_description: Ta 20-urni tečaj predstavlja bistvo računalništva in
+            konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8,
+            vendar je zabaven za učenje v vseh starostih.
+        2021drafting:
+          lesson_groups:
+            debugging:
+              display_name: Odpravljanje napak
+            introduction:
+              display_name: Uvod
+            lessonGroup-3:
+              display_name: Spremenljivke
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Ura kode
+        CSF_Secret_Sample:
           description_audience: Starost 8-18
-          student_description: Tečaj 3 je namenjen učencem, ki so končali Tečaj 2.
-            Učenci se bodo poglobili v programerske teme, predstavljene v prejšnjih
-            tečajih, tako da bodo ustvarjali prilagodljive rešitve za bolj kompleksne
-            probleme. Ob koncu tega tečaja bodo učenci ustvarili interaktivne zgodbe
-            in igre, ki jih bodo lahko delili s komerkoli. Priporočljivo za učence
-            4. in 5. razreda osnovne šole.
-        playlab:
-          title: Play Lab
-        artist:
-          title: Umetnik
-          description: Nariši kul slike in oblike z Umetnikom!
-          description_short: Nariši kul slike in oblike z Umetnikom!
-          student_description: Nariši kul slike in oblike z Umetnikom!
-        hourofcode:
-          title: Klasičen labirint
-        frozen:
-          title: Frozen (Ledeno kraljestvo) z Ano in Elso
-          description: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju
-            čarabnosti in lepote ledu.
-          description_short: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju
-            čarabnosti in lepote ledu.
-          student_description: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju
-            čarabnosti in lepote ledu.
-        course4:
-          title: Tečaj 4
-          description: Tečaj 4 je namenjen učencem, ki so končali Tečaj 2 in 3. Učenci
-            se bodo naučili, kako se spopasti z ugankami, ki so bolj kompleksne medtem
-            ko se bodo naučili kako združiti več konceptov med reševanjem vsakega
-            iziva. Ob koncu tega tečaja bodo učenci ustvarili programe, ki bodo pokazali
-            več znanj, vključno z zankami in funkcijamki s parametri. Priporočljivo
-            za učence med 4. in 8. razredom osnovne šole.
-          description_short: Učenci, ki delajo Tečaj 4 bi morali že narediti Tečaj
-            2 in 3.
-          description_audience: Starost 9-18
-          student_description: Tečaj 4 je namenjen učencem, ki so končali Tečaj 2
-            in 3. Učenci se bodo naučili, kako se spopasti z ugankami, ki so bolj
-            kompleksne medtem ko se bodo naučili kako združiti več konceptov med reševanjem
-            vsakega iziva. Ob koncu tega tečaja bodo učenci ustvarili programe, ki
-            bodo pokazali več znanj, vključno z zankami in funkcijamki s parametri.
-            Priporočljivo za učence med 4. in 8. razredom osnovne šole.
+        CSF_Secret_Sample_Story:
+          description_audience: Starost 8-18+
         Course4pre:
           description: Kratek povzetek konceptov za študente, ki niso končali Tečaja
             2 in 3.
@@ -90,765 +36,676 @@ sl:
             Tečaja 2 in 3.
           student_description: Kratek povzetek konceptov za študente, ki niso končali
             Tečaja 2 in 3.
-        algebra:
-          title: Računalništvo v računstvu
-        20-hour:
-          description: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov
-            programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je
-            zabaven za učenje v vseh starostih.
-          description_short: Ta 20-urni tečaj zajema bistvo računalnitšva in programerskih
-            konceptov v tečajih 2-4.
-          description_audience: Starost 10-18
-          student_description: Ta 20-urni tečaj predstavlja bistvo računalništva in
-            konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8,
-            vendar je zabaven za učenje v vseh starostih.
-        edit-code:
-          title: Uredi kodo
-          description: Uredi kodo
-          description_short: Uredi kodo
-          student_description: Uredi kodo
-        events:
-          title: Dogodki
-          description: Dogodki
-          description_short: Dogodki
-          student_description: Dogodki
-        flappy:
-          title: Program za Plahutača (Flappyja)
-          description: Bi hotel/a svojo igrico izdelati v manj kot 10 minutah? Pomagaj
-            si z priročnikom za Plahutača (Flappy-ja)!
-          student_description: Bi hotel/a svojo igrico izdelati v manj kot 10 minutah?
-            Pomagaj si z priročnikom za Plahutača (Flappy-ja)!
-        jigsaw:
-          title: Sestavljanka
-        step:
-          title: Korak
         Hour of Code:
           title: Hour of Code 2013
-        asUnplugged:
-          description_audience: Starost 6-13
-        afterschool1:
-          description_audience: Starost 7-13
+        MikeTest:
+          description_audience: Starost 8-98
         Special Fun:
           description_audience: Starost 10-18
         SpecialSeries:
           description_audience: Starost 10-18
-        mc:
-          title: Minecraft Ura za kodo
-          description: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
-            v svet Minecraft-a
-          description_short: Razišči svet Minecraft-a s pomočjo kode
-          student_description: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
-            v svet Minecraft-a
-        CSF_Secret_Sample:
-          description_audience: Starost 8-18
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        CSF_Secret_Sample_Story:
-          description_audience: Starost 8-18+
-        MikeTest:
-          description_audience: Starost 8-98
-        artistExemplar:
-          description_audience: Starost 8-18
-        teachercon:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        gradeKinder:
-          description_audience: Starost 5-18
-        grade4:
-          description_audience: Starost 9-99
-        grade1:
-          description_audience: Starost 5-18
-        grade5:
-          description_audience: Starost 10-110
-        grade3:
-          description_audience: Starost 5-18
+        afterschool1:
+          description_audience: Starost 7-13
+        algebra:
+          title: Računalništvo v računstvu
         alltheplcthings:
           lesson_groups:
+            content:
+              display_name: Vsebina
             required:
               display_name: Pregled
-            content:
-              display_name: Vsebina
-        grade2:
-          description_audience: Starost 5-18
-        csp-online-test:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp1-support:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        basketball:
-          name: žoga za košarko
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        minecraft:
-          title: Minecraft Ura za kodo Oblikovalec
-          description_short: Sprogramiraj živali in druga Minecraft bitja v svoji
-            lastni različici Minecrafta.
-          description: Sprogramiraj živali in druga Minecraft bitja v svoji lastni
-            različici Minecrafta.
-          student_description: Sprogramiraj živali in druga Minecraft bitja v svoji
-            lastni različici Minecrafta.
-        coursee-draft:
-          lesson_groups:
-            content:
-              display_name: Vsebina
-        coursef-draft:
-          lesson_groups:
-            content:
-              display_name: Vsebina
-        csp3-support:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp4-support:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csf2harvey:
-          lesson_groups:
-            content:
-              display_name: Vsebina
-        csp5-support:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csppostap-2017:
-          lesson_groups:
-            content:
-              display_name: Vsebina
-        cspnovice:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp1-dlp:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp2-dlp:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp3-dlp:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp4-dlp:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp5-dlp:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csd1-dlp:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csd6-dlp:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csd5-dlp:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csd4-dlp:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csd3-dlp:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csd2-dlp:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        express-2017:
-          lesson_groups:
-            content:
-              display_name: Vsebina
-        new-express:
-          lesson_groups:
-            content:
-              display_name: Vsebina
-        hero:
-          name: junak
-        csd1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csd2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csd3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csd4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csd5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csd6-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp-explore-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp-create-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csd-novice-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csd-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp-novice-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        fit-test:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        aquatic:
-          name: vodni
-        cspplayground:
-          lesson_groups:
-            csp_variables:
-              display_name: Spremenljivke
-            csp_conditionals:
-              display_name: Pogoji
-            csp_functions:
-              display_name: Funkcije
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: Spremenljivke
-            csf_internet:
-              display_name: Internet
-            csf_sprites:
-              display_name: liki
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: Dogodki
-            csf_loops:
-              display_name: Zanke
-            csf_conditionals:
-              display_name: Pogoji
-            csf_binary:
-              display_name: Binarno
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-        coursee-2019:
-          lesson_groups:
-            csf_sprites:
-              display_name: liki
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            csf_nested_loops:
-              display_name: Gnezdenje zank
-            csf_functions:
-              display_name: Funkcije
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Zanke
-            csf_conditionals:
-              display_name: Pogoji
-            csf_functions:
-              display_name: Funkcije
-            csf_variables:
-              display_name: Spremenljivke
-            csf_sprites:
-              display_name: liki
         andrea-test:
           lesson_groups:
-            required:
-              display_name: Pregled
             content:
               display_name: Vsebina
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            csf_binary:
-              display_name: Binarno
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
+            required:
+              display_name: Pregled
+        aquatic:
+          name: vodni
+        artist:
+          description: Nariši kul slike in oblike z Umetnikom!
+          description_short: Nariši kul slike in oblike z Umetnikom!
+          student_description: Nariši kul slike in oblike z Umetnikom!
+          title: Umetnik
+        artistExemplar:
+          description_audience: Starost 8-18
+        asUnplugged:
+          description_audience: Starost 6-13
+        basketball:
+          name: žoga za košarko
+        course1:
+          description: Začnite s Tečajom 1 za otroke, ki se še učijo brati. Učenci
+            bodo ustvarili programe, ki jim bodo pomagali se naučiti sodelovati z
+            drugimi, razvili bodo spretnost reševanja problemov ter vzstrajnosti pri
+            zahtevnih nalogah. Na koncu tega tečaja bo učenec naredil svojo lastno
+            igro ali zgodbo, ki jo bodo lahko delili z drugimi. Priporočljivo za otroke
+            prvega razreda osnovne šole.
+          description_audience: Starost 4-6
+          description_short: Začnite pri Tečaju 1, če se otrok še uči brati.
+          student_description: Začnite s Tečajom 1 za otroke, ki se še učijo brati.
+            Učenci bodo ustvarili programe, ki jim bodo pomagali se naučiti sodelovati
+            z drugimi, razvili bodo spretnost reševanja problemov ter vzstrajnosti
+            pri zahtevnih nalogah. Na koncu tega tečaja bo učenec naredil svojo lastno
+            igro ali zgodbo, ki jo bodo lahko delili z drugimi. Priporočljivo za otroke
+            prvega razreda osnovne šole.
+          title: Tečaj 1
+        course2:
+          description: Učenci, ki znajo brati in nimajo nobenih predhodnjih izkušen
+            s programiranjem, začnite s Tečajem 2. V tem tečaju bodo učenci naredili
+            programe, ki bodo reševali probleme in razvijali interaktivne igre ali
+            zgodbe, ki jih bodo lahko delili z drugimi. Priporočljivo za učence od
+            2. do 5. razreda osnovne šole.
+          description_audience: Starost 6+ (potrebno je znanje branja)
+          description_short: Z učenci, ki že znajo brati, začnite pri 2. tečaju.
+          student_description: Učenci, ki znajo brati in nimajo nobenih predhodnjih
+            izkušen s programiranjem, začnite s Tečajem 2. V tem tečaju bodo učenci
+            naredili programe, ki bodo reševali probleme in razvijali interaktivne
+            igre ali zgodbe, ki jih bodo lahko delili z drugimi. Priporočljivo za
+            učence od 2. do 5. razreda osnovne šole.
+          title: Tečaj 2
+        course3:
+          description: Tečaj 3 je namenjen učencem, ki so končali Tečaj 2. Učenci
+            se bodo poglobili v programerske teme, predstavljene v prejšnjih tečajih,
+            tako da bodo ustvarjali prilagodljive rešitve za bolj kompleksne probleme.
+            Ob koncu tega tečaja bodo učenci ustvarili interaktivne zgodbe in igre,
+            ki jih bodo lahko delili s komerkoli. Priporočljivo za učence 4. in 5.
+            razreda osnovne šole.
+          description_audience: Starost 8-18
+          description_short: Tečaj 3 je nadaljevanje Tečaja 2.
+          student_description: Tečaj 3 je namenjen učencem, ki so končali Tečaj 2.
+            Učenci se bodo poglobili v programerske teme, predstavljene v prejšnjih
+            tečajih, tako da bodo ustvarjali prilagodljive rešitve za bolj kompleksne
+            probleme. Ob koncu tega tečaja bodo učenci ustvarili interaktivne zgodbe
+            in igre, ki jih bodo lahko delili s komerkoli. Priporočljivo za učence
+            4. in 5. razreda osnovne šole.
+          title: Tečaj 3
+        course4:
+          description: Tečaj 4 je namenjen učencem, ki so končali Tečaj 2 in 3. Učenci
+            se bodo naučili, kako se spopasti z ugankami, ki so bolj kompleksne medtem
+            ko se bodo naučili kako združiti več konceptov med reševanjem vsakega
+            iziva. Ob koncu tega tečaja bodo učenci ustvarili programe, ki bodo pokazali
+            več znanj, vključno z zankami in funkcijamki s parametri. Priporočljivo
+            za učence med 4. in 8. razredom osnovne šole.
+          description_audience: Starost 9-18
+          description_short: Učenci, ki delajo Tečaj 4 bi morali že narediti Tečaj
+            2 in 3.
+          student_description: Tečaj 4 je namenjen učencem, ki so končali Tečaj 2
+            in 3. Učenci se bodo naučili, kako se spopasti z ugankami, ki so bolj
+            kompleksne medtem ko se bodo naučili kako združiti več konceptov med reševanjem
+            vsakega iziva. Ob koncu tega tečaja bodo učenci ustvarili programe, ki
+            bodo pokazali več znanj, vključno z zankami in funkcijamki s parametri.
+            Priporočljivo za učence med 4. in 8. razredom osnovne šole.
+          title: Tečaj 4
         coursea-2019:
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
-            csf_loops:
-              display_name: Zanke
             csf_events:
               display_name: Dogodki
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno državljanstvo
             csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: Spremenljivke
-            csp_conditionals:
-              display_name: Pogoji
-            csp_functions:
-              display_name: Funkcije
-            required:
-              display_name: Pregled
-        csp1-pilot:
-          lesson_groups:
-            required:
-              display_name: Pregled
-        time4csdemo:
-          lesson_groups:
-            csf_sprites:
-              display_name: liki
-        csp1-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Spremenljivke
-            csp_conditionals:
-              display_name: Pogoji
-            csp_functions:
-              display_name: Funkcije
-        csp2-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Spremenljivke
-            csp_conditionals:
-              display_name: Pogoji
-            csp_functions:
-              display_name: Funkcije
-        csp4-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Spremenljivke
-            csp_conditionals:
-              display_name: Pogoji
-            csp_functions:
-              display_name: Funkcije
-        csp5-pilot-staging:
-          lesson_groups:
-            csp_lists:
-              display_name: Seznami
-            csp_loops:
-              display_name: Zanke
-        csp6-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Spremenljivke
-            csp_conditionals:
-              display_name: Pogoji
-            csp_functions:
-              display_name: Funkcije
-        csp8-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Spremenljivke
-            csp_conditionals:
-              display_name: Pogoji
-            csp_functions:
-              display_name: Funkcije
-        csp9-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Spremenljivke
-            csp_conditionals:
-              display_name: Pogoji
-            csp_functions:
-              display_name: Funkcije
-        csp10-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Spremenljivke
-            csp_conditionals:
-              display_name: Pogoji
-            csp_functions:
-              display_name: Funkcije
-        csp5-pilot:
-          lesson_groups:
-            csp_lists:
-              display_name: Seznami
-            csp_loops:
-              display_name: Zanke
-            required:
-              display_name: Pregled
-        fit2019-novice:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp3-pilot:
-          lesson_groups:
-            content:
-              display_name: Vsebina
-            required:
-              display_name: Pregled
-        csl-vn:
-          lesson_groups:
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        dlp19-csd-mod-fit:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        dlp19-csp-mod-fit:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        dlp19-csd-mod-w1:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        dlp19-csd-mod-w2:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        dlp19-csd-mod-w3:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        dlp19-csd-mod-w4:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        dlp19-csp-mod-w1:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        dlp19-csp-mod-w2:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        dlp19-csp-mod-w3:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        dlp19-csp-mod-w4:
-          lesson_groups:
-            required:
-              display_name: Pregled
-            content:
-              display_name: Vsebina
-        csp2-pilot:
-          lesson_groups:
-            content:
-              display_name: Vsebina
-            required:
-              display_name: Pregled
-        csp6-pilot:
-          lesson_groups:
-            content:
-              display_name: Vsebina
-            required:
-              display_name: Pregled
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: Spremenljivke
-            csp_conditionals:
-              display_name: Pogoji
-            csp_functions:
-              display_name: Funkcije
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            csf_conditionals:
-              display_name: Pogoji
-            csf_nested_loops:
-              display_name: Gnezdenje zank
-            csf_functions:
-              display_name: Funkcije
-        time4cs-control-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Zanke
-            csf_conditionals:
-              display_name: Pogoji
-            csf_events:
-              display_name: Dogodki
-            csf_sprites:
-              display_name: liki
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-        time4cs-experiment-unit-1:
-          lesson_groups:
-            csf_loops:
-              display_name: Zanke
-            csf_conditionals:
-              display_name: Pogoji
-            csf_events:
-              display_name: Dogodki
-            csf_sprites:
-              display_name: liki
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: Pregled
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: Spremenljivke
-            csp_conditionals:
-              display_name: Pogoji
-            csp_functions:
-              display_name: Funkcije
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Seznami
-            csp_loops:
               display_name: Zanke
         coursea-2020:
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
-            csf_loops:
-              display_name: Zanke
             csf_events:
               display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        coursea-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        coursea-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        courseb-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
         courseb-2020:
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
-            csf_loops:
-              display_name: Zanke
             csf_events:
               display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        courseb-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        courseb-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        coursec-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Binarno
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
         coursec-2020:
           lesson_groups:
-            csf_digcit:
-              display_name: Digitalno državljanstvo
             csf_binary:
               display_name: Binarno
-            csf_loops:
-              display_name: Zanke
+            csf_digcit:
+              display_name: Digitalno državljanstvo
             csf_events:
               display_name: Dogodki
-        coursed-2020:
+            csf_loops:
+              display_name: Zanke
+        coursec-2021:
           lesson_groups:
+            csf_binary:
+              display_name: Binarno
+            csf_digcit:
+              display_name: Digitalno državljanstvo
             csf_events:
               display_name: Dogodki
             csf_loops:
               display_name: Zanke
+        coursec-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        coursed-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Binarno
             csf_conditionals:
               display_name: Pogoji
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        coursed-2020:
+          lesson_groups:
             csf_binary:
               display_name: Binarno
+            csf_conditionals:
+              display_name: Pogoji
             csf_digcit:
               display_name: Digitalno državljanstvo
-        coursee-2020:
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        coursed-2021:
           lesson_groups:
-            csf_sprites:
-              display_name: liki
+            csf_binary:
+              display_name: Binarno
+            csf_conditionals:
+              display_name: Pogoji
             csf_digcit:
               display_name: Digitalno državljanstvo
-            csf_nested_loops:
-              display_name: Gnezdenje zank
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+            lessonGroup-6:
+              display_name: Digitalno državljanstvo
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Pogoji
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+            lessonGroup-6:
+              display_name: Digitalno državljanstvo
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Pogoji
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+            lessonGroup-6:
+              display_name: Digitalno državljanstvo
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
             csf_functions:
               display_name: Funkcije
+            csf_nested_loops:
+              display_name: Gnezdenje zank
+            csf_sprites:
+              display_name: liki
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Gnezdenje zank
+            csf_sprites:
+              display_name: liki
+        coursee-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Pogoji
+            csf_sprites:
+              display_name: liki
+            ramp_up:
+              display_name: Gnezdenje zank
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Pogoji
+            csf_sprites:
+              display_name: liki
+            ramp_up:
+              display_name: Gnezdenje zank
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Pogoji
+            csf_sprites:
+              display_name: liki
+            ramp_up:
+              display_name: Gnezdenje zank
+        coursee-draft:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+        coursef-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_internet:
+              display_name: Internet
+            csf_sprites:
+              display_name: liki
+            csf_variables:
+              display_name: Spremenljivke
         coursef-2020:
           lesson_groups:
             csf_digcit:
               display_name: Digitalno državljanstvo
-            csf_variables:
-              display_name: Spremenljivke
             csf_sprites:
               display_name: liki
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Zanke
-            csf_conditionals:
-              display_name: Pogoji
-            csf_functions:
-              display_name: Funkcije
             csf_variables:
               display_name: Spremenljivke
-            csf_sprites:
-              display_name: liki
-        pre-express-2020:
+        coursef-2021:
           lesson_groups:
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        virtual-holding-place:
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            lessonGroup-7:
+              display_name: Digitalno državljanstvo
+            lessonGroup-8:
+              display_name: Spremenljivke
+            lessonGroup-9:
+              display_name: odstrani
+            ramp_up:
+              display_name: liki
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalno državljanstvo
+            lessonGroup-8:
+              display_name: Spremenljivke
+            ramp_up:
+              display_name: liki
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalno državljanstvo
+            lessonGroup-8:
+              display_name: Spremenljivke
+            ramp_up:
+              display_name: liki
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno državljanstvo
+            lessonGroup-3:
+              display_name: liki
+            lessonGroup-4:
+              display_name: Spremenljivke
+        coursef-draft:
           lesson_groups:
             content:
               display_name: Vsebina
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa1-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa1-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vsebina
+          lessons:
+            lesson-6:
+              name: Zanke
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa2-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+          lessons:
+            lesson-4:
+              name: Spremenljivke
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Vsebina
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Vsebina
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa4-exemplars:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            lesson group:
+              display_name: Vsebina
+            lessonGroup-2:
+              display_name: Vsebina
+            lesson_group:
+              display_name: Vsebina
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csd-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csd-novice-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csd1-dlp:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csd1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csd2-dlp:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csd2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csd3-dlp:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csd3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
         csd3-virtual:
           lesson_groups:
             csd3_1:
@@ -857,6 +714,759 @@ sl:
               display_name: Vsebina
             cspSurvey:
               display_name: Vsebina
+        csd4-dlp:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csd4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csd5-dlp:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csd5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csd6-dlp:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csd6-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csf-2021-pilot:
+          lesson_groups:
+            Sprites:
+              display_name: liki
+            lessonGroup-3:
+              display_name: Spremenljivke
+            ramp_up:
+              display_name: Uvod
+            variables:
+              display_name: Spremenljivke
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: liki
+            lessonGroup-3:
+              display_name: Spremenljivke
+        csf2harvey:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        csp-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp-create-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp-explore-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp-novice-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp-online-test:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp1-dlp:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Spremenljivke
+        csp1-support:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Spremenljivke
+        csp2-dlp:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Spremenljivke
+        csp2-support:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp3-dlp:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp3-support:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Spremenljivke
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Spremenljivke
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Spremenljivke
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Spremenljivke
+        csp4-dlp:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Spremenljivke
+            required:
+              display_name: Pregled
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Spremenljivke
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Spremenljivke
+        csp4-support:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznami
+            csp_loops:
+              display_name: Zanke
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznami
+            csp_loops:
+              display_name: Zanke
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznami
+            csp_loops:
+              display_name: Zanke
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Zanke
+        csp5-dlp:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznami
+            csp_loops:
+              display_name: Zanke
+            required:
+              display_name: Pregled
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Seznami
+            csp_loops:
+              display_name: Zanke
+        csp5-support:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmi
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Seznami
+            lessonGroup-3:
+              display_name: Zanke
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Spremenljivke
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Pregled
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Spremenljivke
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Spremenljivke
+        cspnovice:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Pogoji
+            csp_functions:
+              display_name: Funkcije
+            csp_variables:
+              display_name: Spremenljivke
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+        cspunit1-support:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: preizkus
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stopnja 1
+            lessonGroup-3:
+              display_name: Stopnja 2
+        edit-code:
+          description: Uredi kodo
+          description_short: Uredi kodo
+          student_description: Uredi kodo
+          title: Uredi kodo
+        events:
+          description: Dogodki
+          description_short: Dogodki
+          student_description: Dogodki
+          title: Dogodki
+        express-2017:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+        express-2019:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Pogoji
+            csf_functions:
+              display_name: Funkcije
+            csf_loops:
+              display_name: Zanke
+            csf_sprites:
+              display_name: liki
+            csf_variables:
+              display_name: Spremenljivke
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Pogoji
+            csf_functions:
+              display_name: Funkcije
+            csf_loops:
+              display_name: Zanke
+            csf_sprites:
+              display_name: liki
+            csf_variables:
+              display_name: Spremenljivke
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Pogoji
+            csf_functions:
+              display_name: Funkcije
+            csf_loops:
+              display_name: Zanke
+            csf_sprites:
+              display_name: liki
+            csf_variables:
+              display_name: Spremenljivke
+            lessonGroup-9:
+              display_name: Dogodki
+        express-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Pogoji
+            csf_functions:
+              display_name: Funkcije
+            csf_loops:
+              display_name: Zanke
+            csf_sprites:
+              display_name: liki
+            csf_variables:
+              display_name: Spremenljivke
+            lessonGroup-9:
+              display_name: Dogodki
+        express-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Pogoji
+            csf_functions:
+              display_name: Funkcije
+            csf_loops:
+              display_name: Zanke
+            csf_sprites:
+              display_name: liki
+            csf_variables:
+              display_name: Spremenljivke
+            lessonGroup-9:
+              display_name: Dogodki
+        fit-test:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        fit2019-apprentice:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        fit2019-novice:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        flappy:
+          description: Bi hotel/a svojo igrico izdelati v manj kot 10 minutah? Pomagaj
+            si z priročnikom za Plahutača (Flappy-ja)!
+          student_description: Bi hotel/a svojo igrico izdelati v manj kot 10 minutah?
+            Pomagaj si z priročnikom za Plahutača (Flappy-ja)!
+          title: Program za Plahutača (Flappyja)
+        frozen:
+          description: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju
+            čarabnosti in lepote ledu.
+          description_short: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju
+            čarabnosti in lepote ledu.
+          student_description: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju
+            čarabnosti in lepote ledu.
+          title: Frozen (Ledeno kraljestvo) z Ano in Elso
+        grade1:
+          description_audience: Starost 5-18
+        grade2:
+          description_audience: Starost 5-18
+        grade3:
+          description_audience: Starost 5-18
+        grade4:
+          description_audience: Starost 9-99
+        grade5:
+          description_audience: Starost 10-110
+        gradeKinder:
+          description_audience: Starost 5-18
+        hero:
+          name: junak
+        hourofcode:
+          title: Klasičen labirint
+        jigsaw:
+          title: Sestavljanka
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: Uvod
+            k5_getting_started_1:
+              display_name: Uvod
+        mc:
+          description: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
+            v svet Minecraft-a
+          description_short: Razišči svet Minecraft-a s pomočjo kode
+          student_description: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
+            v svet Minecraft-a
+          title: Minecraft Ura za kodo
+        minecraft:
+          description: Sprogramiraj živali in druga Minecraft bitja v svoji lastni
+            različici Minecrafta.
+          description_short: Sprogramiraj živali in druga Minecraft bitja v svoji
+            lastni različici Minecrafta.
+          student_description: Sprogramiraj živali in druga Minecraft bitja v svoji
+            lastni različici Minecrafta.
+          title: Minecraft Ura za kodo Oblikovalec
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: liki
+            lessonGroup-3:
+              display_name: Pogoji
+            lessonGroup-5:
+              display_name: Spremenljivke
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: liki
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno državljanstvo
+            lessonGroup-4:
+              display_name: Zanke
+            lessonGroup-6:
+              display_name: Dogodki
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Gnezdenje zank
+            lessonGroup-4:
+              display_name: Funkcije
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno državljanstvo
+            lessonGroup-4:
+              display_name: Zanke
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno državljanstvo
+            lessonGroup-4:
+              display_name: Zanke
+            lessonGroup-5:
+              display_name: Dogodki
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno državljanstvo
+            lessonGroup-6:
+              display_name: Zanke
+        new-express:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Uvod
+        playlab:
+          title: Play Lab
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+        soccer:
+          name: nogomet
+        spelling-bee:
+          title: Čebelica črkuje besede
+        step:
+          title: Korak
+        teachercon:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno državljanstvo
+            lessonGroup-4:
+              display_name: Zanke
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            content:
+              display_name: Vsebina
+            required:
+              display_name: Pregled
+        time4cs-control-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Pogoji
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+            csf_sprites:
+              display_name: liki
+        time4cs-control-unit-2:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Pogoji
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Gnezdenje zank
+        time4cs-experiment-unit-1:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Pogoji
+            csf_digcit:
+              display_name: Digitalno državljanstvo
+            csf_events:
+              display_name: Dogodki
+            csf_loops:
+              display_name: Zanke
+            csf_sprites:
+              display_name: liki
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: liki
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -873,569 +1483,11 @@ sl:
           lesson_groups:
             lg_1:
               display_name: Vsebina
-        2021drafting:
+        virtual-holding-place:
           lesson_groups:
-            introduction:
-              display_name: Uvod
-            lessonGroup-3:
-              display_name: Spremenljivke
-            debugging:
-              display_name: Odpravljanje napak
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Spremenljivke
-            csp_conditionals:
-              display_name: Pogoji
-            csp_functions:
-              display_name: Funkcije
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Seznami
-            csp_loops:
-              display_name: Zanke
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Algoritmi
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            csf_binary:
-              display_name: Binarno
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Dogodki
-            csf_loops:
-              display_name: Zanke
-            csf_conditionals:
-              display_name: Pogoji
-            csf_binary:
-              display_name: Binarno
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            lessonGroup-6:
-              display_name: Digitalno državljanstvo
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Gnezdenje zank
-            csf_sprites:
-              display_name: liki
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            csf_nested_loops:
-              display_name: Pogoji
-            csf_functions:
-              display_name: Funkcije
-        coursef-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: liki
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            lessonGroup-8:
-              display_name: Spremenljivke
-            lessonGroup-9:
-              display_name: odstrani
-            lessonGroup-7:
-              display_name: Digitalno državljanstvo
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Zanke
-            csf_conditionals:
-              display_name: Pogoji
-            csf_functions:
-              display_name: Funkcije
-            csf_variables:
-              display_name: Spremenljivke
-            csf_sprites:
-              display_name: liki
-            lessonGroup-9:
-              display_name: Dogodki
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: Uvod
-            lessonGroup-3:
-              display_name: Spremenljivke
-            Sprites:
-              display_name: liki
-            variables:
-              display_name: Spremenljivke
-        csa1-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa2-pilot:
-          lesson_groups:
-            lesson group:
-              display_name: Vsebina
-        csa3-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa4-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa5-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa6-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa8-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: Uvod
-            Introduction:
-              display_name: Uvod
-        csa1-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa2-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa3-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        dlp21-csp-mod4:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Stopnja 1
-            lessonGroup-3:
-              display_name: Stopnja 2
-        dlp21-csd:
-          lesson_groups:
-            lessonGroup-2:
-              description: preizkus
-        csa1-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa2-pilot-facilitator:
-          lesson_groups:
-            lesson group:
-              display_name: Vsebina
-        csa3-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa4-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa5-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa4-exemplars:
-          lesson_groups:
-            lesson group:
-              display_name: Vsebina
             content:
               display_name: Vsebina
-            lesson_group:
-              display_name: Vsebina
-            lessonGroup-2:
-              display_name: Vsebina
-        spelling-bee:
-          title: Čebelica črkuje besede
-        csa5-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa6-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa6-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Ura kode
-        csa7-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: liki
-            lessonGroup-3:
-              display_name: Spremenljivke
-        csa8-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa7-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa8-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        express-2022:
-          lesson_groups:
-            csf_sprites:
-              display_name: liki
-            lessonGroup-9:
-              display_name: Dogodki
-            csf_loops:
-              display_name: Zanke
-            csf_conditionals:
-              display_name: Pogoji
-            csf_functions:
-              display_name: Funkcije
-            csf_variables:
-              display_name: Spremenljivke
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: Spremenljivke
-            csp_conditionals:
-              display_name: Pogoji
-            csp_functions:
-              display_name: Funkcije
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Seznami
-            csp_loops:
-              display_name: Zanke
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digitalno državljanstvo
-            csf_events:
-              display_name: Dogodki
-            csf_loops:
-              display_name: Zanke
-            csf_conditionals:
-              display_name: Pogoji
-        coursee-2022:
-          lesson_groups:
-            csf_sprites:
-              display_name: liki
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            ramp_up:
-              display_name: Gnezdenje zank
-            csf_functions:
-              display_name: Funkcije
-            csf_nested_loops:
-              display_name: Pogoji
-        coursef-2022:
-          lesson_groups:
-            ramp_up:
-              display_name: liki
-            lessonGroup-7:
-              display_name: Digitalno državljanstvo
-            lessonGroup-8:
-              display_name: Spremenljivke
-        csa1-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        csa2-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa3-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa4-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa5-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa1-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa7-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa8-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Digitalno državljanstvo
-            ramp_up:
-              display_name: liki
-            lessonGroup-8:
-              display_name: Spremenljivke
-        csa6-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa7-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa8-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa2-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        soccer:
-          name: nogomet
-        csa1-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa2-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa3-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa4-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa5-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa6-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa7-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa8-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: Zanke
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Vsebina
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Spremenljivke
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa3-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa5-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa7-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csa8-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Vsebina
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Spremenljivke
-            csp_conditionals:
-              display_name: Pogoji
-            csp_functions:
-              display_name: Funkcije
-        csp5-2023:
-          lesson_groups:
-            csp_loops:
-              display_name: Zanke
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Seznami
-            lessonGroup-3:
-              display_name: Zanke
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        express-2023:
-          lesson_groups:
-            csf_sprites:
-              display_name: liki
-            lessonGroup-9:
-              display_name: Dogodki
-            csf_loops:
-              display_name: Zanke
-            csf_conditionals:
-              display_name: Pogoji
-            csf_functions:
-              display_name: Funkcije
-            csf_variables:
-              display_name: Spremenljivke
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        courseb-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            csf_loops:
-              display_name: Zanke
-            csf_events:
-              display_name: Dogodki
-        coursed-2023:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Digitalno državljanstvo
-            csf_events:
-              display_name: Dogodki
-            csf_loops:
-              display_name: Zanke
-            csf_conditionals:
-              display_name: Pogoji
-        coursee-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Digitalno državljanstvo
-            csf_sprites:
-              display_name: liki
-            ramp_up:
-              display_name: Gnezdenje zank
-            csf_functions:
-              display_name: Funkcije
-            csf_nested_loops:
-              display_name: Pogoji
-        pl-csd-summer-day1:
-          lessons:
-            lesson-3:
-              name: Uvod
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
               name: Uvod
-        coursef-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Digitalno državljanstvo
-            lessonGroup-3:
-              display_name: liki
-            lessonGroup-4:
-              display_name: Spremenljivke

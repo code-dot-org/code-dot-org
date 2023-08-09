@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-adaptations",
-    "serialized_at": "2023-06-30 16:26:49 UTC",
+    "serialized_at": "2023-07-25 22:10:48 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1985,6 +1985,28 @@
   ],
   "resources": [
     {
+      "name": "CS Connections Landing Page",
+      "url": "https://code.org/educate/csc",
+      "key": "cs_connections_landing_page",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page"
+      }
+    },
+    {
+      "name": "CSC Extended Connections Book List",
+      "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview\t",
+      "key": "csc_extended_connections_book_list",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list"
+      }
+    },
+    {
       "name": "Modeling Animal Adaptations",
       "url": "https://docs.google.com/presentation/d/1J9yCLR8vBYHgKxuuKymGNWU_KFCGGGUpzTmpl_dvl7A/template/preview",
       "key": "ecosystems",
@@ -2035,6 +2057,49 @@
       "seeding_key": {
         "resource.key": "helpful_hints_2"
       }
+    },
+    {
+      "name": "Helpful Hints for teachers and learners",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\t",
+      "key": "helpful_hints_for_teachers_and_learners",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners"
+      }
+    },
+    {
+      "name": "Resource List for All Lessons",
+      "url": "/s/csc-adaptations-2023/resources",
+      "key": "resource_list_for_all_lessons",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons"
+      }
+    },
+    {
+      "name": "Standards in Modeling Animal Adaptations ",
+      "url": "/s/csc-adaptations-2023/standards",
+      "key": "standards_in_modeling_animal_adaptations",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "standards_in_modeling_animal_adaptations"
+      }
+    },
+    {
+      "name": "Vocabulary in Modeling Animal Adaptations ",
+      "url": "/s/csc-adaptations-2023/vocab",
+      "key": "vocabulary_in_modeling_animal_adaptations",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_in_modeling_animal_adaptations"
+      }
     }
   ],
   "lessons_resources": [
@@ -2076,7 +2141,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standards_in_modeling_animal_adaptations",
+        "script.name": "csc-adaptations-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_in_modeling_animal_adaptations",
+        "script.name": "csc-adaptations-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 

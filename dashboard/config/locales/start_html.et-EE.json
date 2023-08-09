@@ -3,44 +3,44 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Jah",
           "No": "Ei",
+          "Yes": "Jah",
           "cute": "armas"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Jah",
           "No": "Ei",
+          "Yes": "Jah",
           "cute": "armas"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Jah",
           "No": "Ei",
+          "Yes": "Jah",
           "cute": "armas"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Jah",
           "No": "Ei",
+          "Yes": "Jah",
           "cute": "armas"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Nimi",
-          "Color": "Värv",
           "City": "Linn",
+          "Color": "Värv",
+          "Name": "Nimi",
           "text": "tekst"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Nimi",
-          "Color": "Värv",
           "City": "Linn",
+          "Color": "Värv",
+          "Name": "Nimi",
           "text": "tekst"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
-          "k": "k"
+          "k": "k",
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
-          "k": "k"
+          "k": "k",
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
           "text": "tekst"
@@ -67,26 +67,26 @@
           "Back": "Tagasi"
         },
         "CSD U1 storage movies_2021": {
+          "No": "Ei",
           "Star Wars": "Star Wars",
           "Yes": "Jah",
-          "No": "Ei",
           "text": "tekst"
         },
         "CSD U1 storage movies_2022": {
+          "No": "Ei",
           "Star Wars": "Star Wars",
           "Yes": "Jah",
-          "No": "Ei",
           "text": "tekst"
         },
         "CSD U1 storage outfit_2021": {
-          "green": "roheline",
+          "Clear": "Tühjenda",
           "black": "must",
-          "Clear": "Tühjenda"
+          "green": "roheline"
         },
         "CSD U1 storage outfit_2022": {
-          "green": "roheline",
+          "Clear": "Tühjenda",
           "black": "must",
-          "Clear": "Tühjenda"
+          "green": "roheline"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Ära tegid!"
@@ -125,39 +125,39 @@
           "Medium": "Keskmine"
         },
         "CSD U6 - Combine Inputs - A_2222": {
+          "green": "roheline",
           "left": "vasakule",
-          "right": "paremale",
           "red": "punane",
-          "green": "roheline"
+          "right": "paremale"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "kiire",
-          "slow": "aeglane",
+          "long": "pikk",
           "short": "lühike",
-          "long": "pikk"
+          "slow": "aeglane"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "vasakule",
           "right": "paremale"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "roheline",
-          "blue": "sinine"
+          "blue": "sinine",
+          "green": "roheline"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "Test": "Test"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
@@ -176,40 +176,40 @@
           "G": "G"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Korras!"
@@ -278,10 +278,10 @@
           "White": "Valge"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "üles",
           "down": "alla",
           "left": "vasakule",
-          "right": "paremale"
+          "right": "paremale",
+          "up": "üles"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "nimi"
@@ -353,40 +353,40 @@
           "Update": "Uuenda"
         },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "esimene"
@@ -401,20 +401,20 @@
           "first": "esimene"
         },
         "CSD U6 change": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 change_2018": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 change_2019": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 change_2021": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Keskmine"
@@ -429,36 +429,36 @@
           "Medium": "Keskmine"
         },
         "CSD U6 frequency": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 frequency_2018": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 frequency_2019": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 frequency_2021": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 get toggle": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 get toggle_2018": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 get toggle_2019": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 get toggle_2021": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 getProperty Demo": {
           "Save": "Salvesta"
@@ -485,44 +485,44 @@
           "Submit": "Esita"
         },
         "CSD U6 getters debug": {
-          "slow": "aeglane",
           "fast": "kiire",
+          "long": "pikk",
           "short": "lühike",
-          "long": "pikk"
+          "slow": "aeglane"
         },
         "CSD U6 getters debug_2018": {
           "fast": "kiire",
-          "slow": "aeglane",
+          "long": "pikk",
           "short": "lühike",
-          "long": "pikk"
+          "slow": "aeglane"
         },
         "CSD U6 getters debug_2019": {
           "fast": "kiire",
-          "slow": "aeglane",
+          "long": "pikk",
           "short": "lühike",
-          "long": "pikk"
+          "slow": "aeglane"
         },
         "CSD U6 getters debug_2021": {
           "fast": "kiire",
-          "slow": "aeglane",
+          "long": "pikk",
           "short": "lühike",
-          "long": "pikk"
+          "slow": "aeglane"
         },
         "CSD U6 interval": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 interval_2018": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 interval_2019": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 interval_2021": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 predict LED button": {
           "Success!": "Korras!"
@@ -561,20 +561,20 @@
           "title": "pealkiri"
         },
         "CSD U6 slider intro": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 slider intro_2018": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 slider intro_2019": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 slider intro_2021": {
-          "short": "lühike",
-          "long": "pikk"
+          "long": "pikk",
+          "short": "lühike"
         },
         "CSD U6 test LED": {
           "Success!": "Korras!"
@@ -591,23 +591,23 @@
         "CSDU4 Crowdsource App Demo": {
           "About": "Info",
           "Cancel": "Tühista",
-          "Yes": "Jah",
           "No": "Ei",
-          "Save": "Salvesta"
+          "Save": "Salvesta",
+          "Yes": "Jah"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Info",
           "Cancel": "Tühista",
-          "Yes": "Jah",
           "No": "Ei",
-          "Save": "Salvesta"
+          "Save": "Salvesta",
+          "Yes": "Jah"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Info",
           "Cancel": "Tühista",
-          "Yes": "Jah",
           "No": "Ei",
-          "Save": "Salvesta"
+          "Save": "Salvesta",
+          "Yes": "Jah"
         },
         "CSDU4 Decision App Demo": {
           "About": "Info",
@@ -630,18 +630,18 @@
         },
         "CSDU4 List App Demo": {
           "About": "Info",
-          "Done": "Valmis",
-          "Cancel": "Tühista"
+          "Cancel": "Tühista",
+          "Done": "Valmis"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Info",
-          "Done": "Valmis",
-          "Cancel": "Tühista"
+          "Cancel": "Tühista",
+          "Done": "Valmis"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Info",
-          "Done": "Valmis",
-          "Cancel": "Tühista"
+          "Cancel": "Tühista",
+          "Done": "Valmis"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Info",
@@ -680,76 +680,76 @@
           "Success!": "Korras!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "Ida",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "allthethings design mode elements": {
           "text": "tekst"
@@ -767,20 +767,20 @@
           "Start": "Alusta"
         },
         "csd-apps for good-2": {
-          "Next": "Järgmine",
-          "Home": "Kodu"
+          "Home": "Kodu",
+          "Next": "Järgmine"
         },
         "csd-apps for good-2_2022": {
-          "Next": "Järgmine",
-          "Home": "Kodu"
+          "Home": "Kodu",
+          "Next": "Järgmine"
         },
         "csd-explore ui-2": {
-          "Next": "Järgmine",
-          "Home": "Kodu"
+          "Home": "Kodu",
+          "Next": "Järgmine"
         },
         "csd-explore ui-2_2022": {
-          "Next": "Järgmine",
-          "Home": "Kodu"
+          "Home": "Kodu",
+          "Next": "Järgmine"
         },
         "csd-explore ui-4": {
           "Sorry!": "Vabandust!"
@@ -809,12 +809,12 @@
           "Next": "Järgmine"
         },
         "ml-customize-raspado-2021": {
-          "yes": "jah",
-          "no": "ei"
+          "no": "ei",
+          "yes": "jah"
         },
         "ml-customize-raspado_2022": {
-          "yes": "jah",
-          "no": "ei"
+          "no": "ei",
+          "yes": "jah"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Jätka",
@@ -825,16 +825,16 @@
           "Loading...": "Laadimine..."
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "Lääs",
           "A": "A",
-          "yes": "jah",
-          "no": "ei"
+          "W": "Lääs",
+          "no": "ei",
+          "yes": "jah"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "Lääs",
           "A": "A",
-          "yes": "jah",
-          "no": "ei"
+          "W": "Lääs",
+          "no": "ei",
+          "yes": "jah"
         },
         "ml-models in applab-choice intended warnings": {
           "Back": "Tagasi"
@@ -843,34 +843,34 @@
           "Back": "Tagasi"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Jah",
+          "B": "B",
           "No": "Ei",
-          "B": "B"
+          "Yes": "Jah"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Jah",
+          "B": "B",
           "No": "Ei",
-          "B": "B"
+          "Yes": "Jah"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Jah",
-          "No": "Ei"
+          "No": "Ei",
+          "Yes": "Jah"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Jah",
-          "No": "Ei"
+          "No": "Ei",
+          "Yes": "Jah"
         },
         "ml-use model card-example3A-2021": {
-          "rain": "vihm",
-          "snow": "lumi",
           "cloudy": "pilvine",
-          "night": "öö"
+          "night": "öö",
+          "rain": "vihm",
+          "snow": "lumi"
         },
         "ml-use model card-example3A_2022": {
-          "rain": "vihm",
-          "snow": "lumi",
           "cloudy": "pilvine",
-          "night": "öö"
+          "night": "öö",
+          "rain": "vihm",
+          "snow": "lumi"
         }
       }
     }

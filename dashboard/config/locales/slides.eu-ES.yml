@@ -1,470 +1,9 @@
 ---
 eu:
   slides:
-    maze_intro:
-      1:
-        text: Ongi etorri zure lehen kode ordura! Goazen bada zure lehen programazio
-          esperientzian sakontzera.
-      2:
-        text: Blockly erabiliko dugu, blokeak arrastatu eta askatuz kodea idazten
-          duen programazio lengoaia bisuala.
-      3:
-        text: Normalean, programatu tekleatuz egiten da, baina Blockly bisuala da.
-          Bloke bakoitzak "benetako" kode lerro bat adierazten du.
-      4:
-        text: Konputazio zientzien oinarriak ikasiko dituzu. Kontzeptu hauek appak
-          egiteko edota Mars rover-a kontrolatzeko erabiltzen dira.
-      5:
-        text: Programa bat, zure ordenagailuak jarraituko duen agindu multzo bat da.
-      6:
-        text: Zure lehenengo programaren helburua, Angry Bird labirintoan zehar gidatzea
-          da txerri berdea harrapatzeko.
-      7:
-        text: Ezkerreko aldea zure programa exekutatuko den labirintoa da. Jarraibideak
-          labirintoaren azpian daude.
-      8:
-        text: Erdiko tresna kutxak Angry Bird-entzako aginduak ditu. Kodea eraikitzeko
-          erabiliko dituzu.
-      9:
-        text: Eskuinaldean lan eremua dago. Bertara tresna kutxako blokeak arrastatuko
-          dituzu zure programa eraikitzeko. Bloke bat ezabatzeko, iskinean dagoen
-          zakarrontzira arrastatu.
-      10:
-        text: Bloke bakoitza instrukzio bat da. "aurrera mugitu" blokea zure lan eremura
-          mugitzen baduzu eta "Hasi" sakatzen baduzu, gure txoria espazio bat mugituko
-          da labirintoan.
-      11:
-        text: Ekintza bat baino gehiago egiteko, bloke asko arrastatu ditzakezu zure
-          lan eremura eta denak batera elkartu. Txoriak aginduak egikarituko ditu
-          goitik beherako ordenan.
-      12:
-        text: Zure kodea konpondu eta beste saiakera bat egin nahi baduzu, "Berrabiarazi"
-          botoia sakatu.
-      13:
-        text: Goazen txerri horiek harrapatzera!
-    artist_intro:
-      1:
-        text: Kaixo, JR naiz! Edozein kotxe lasterketak informatikariak behar ditu
-          irabazteko. Kotxeen datuak aztertzen dituzte azkarragoak egiteko.
-      2:
-        text: Ariketa hauetan, pasatzen den lekutik lerro bat marraztuko duen artista
-          izango zara.
-      3:
-        image: notes/stage5_3.jpg
-        text: Bloke honek "mugitu aurrera 100 pixel" esaten du. "Pixelak" zure pantaila
-          osatzen duten puntu txikiak dira.
-      4:
-        image: notes/stage5_4.jpg
-        text: Bloke honek "biratu 90 gradu eskuinerantz" esaten du. Honek, zure artista
-          "biratu" blokeak dioen gradu kopurua bira araziko du, labirintoko ariketetan
-          gertatzen zen bezalaxe.
-      5:
-        image: notes/stage5_5.jpg
-        text: Bloketako gezietan klikatu ezkero, gure artista zenbateko kopuruan aurrera
-          mugitzen edo biratzen duen aldatu ahal izango duzu. Bloke berri hauekin
-          trebatzeko jolastu beraiekin.
-    farmer_intro:
-      1:
-        text: Kaixo, Paola naiz! Ariketa hauetan, zelaia guztiz berdindu behar duen
-          baserritarra izango zara.
-      2:
-        text: Menditxoak kentzen eta zuloak betetzen lagundu behar diozu.
-      3:
-        text: Bloke berriek menditxo batetik palakada bat lur ezabatu eta zulo bat
-          lur palakada batez beteko dute.
-      4:
-        text: Menditxoak eta zuloak tamaina ezberdinetakoak dira, beraz baserritarrari
-          zenbat palakada erabili behar dituen esan beharko diozu.
-    flappy_intro:
-      1:
-        image: notes/flappy01.jpg
-        text: Kaixo, Katie naiz! Informatikaren gauzarik interesgarrienetakoa, sortzen
-          ditugun programak elkarreragileak izan daitezkeela da.
-      2:
-        image: notes/flappy02.jpg
-        text: Ordenagailu edo telefono batean norbaitek klikatu, pantaila ukitu edo
-          tekleatzen duen unean, honek GERTAERA bat sortzen du, eta badago kode bat
-          erabakitzen duena zer egin GERTAERA bat jazotzen denean.
-      3:
-        image: notes/flappy03.jpg
-        text: 'Adibidez, GERTAERA-KONTROLATZAILE bat, "Sagua klikatzean, jo soinu
-          bat" izan daiteke '
-      4:
-        image: notes/flappy04.jpg
-        text: Noizbait entzun duzu FlappyBird jokoari buruz? Gertaera kontrolatzaileak
-          erabiliz, gure FlappyBird bertsio propioa programatzen ikasiko dugu!
-      5:
-        image: notes/flappy05.jpg
-        text: Kodea idaztea, blokeak arrastatu eta askatuz egingo dugu, bloke hauetako
-          bakoitza, ordenagailuak ulertuko dituen agindu ezberdinak ordezkatzen du.
-          Azken finean, bloke hauetako bakoitzak, programa kode lerroak dira.
-      6:
-        image: notes/flappy06.jpg
-        text: 'Lan eremuan, aurrez beteta dauden zenbait bloke berde aurkituko dituzu,
-          hauek "gertaera kontrolatzaileak" dira '
-      7:
-        image: notes/flappy07.jpg
-        text: Sagua klikatzean txoriak HEGALDI bat egitea nahi baduzu, "HEGALDI" blokea
-          gertaera kudeatzailea egokiari elkartuz egin dezakezu, horrela, sagua klikatzen
-          duzun bakoitzean txoriak hegoak eragingo ditu.
-      8:
-        image: notes/flappy08.jpg
-        text: Atal honetako ariketa bakoitzean, bloke berde itxura duten gertaera
-          mota berriak ikusiko ditugu, zuk erabaki beharko duzu zein bloke diren egokiak
-          gertaera horiei erantzuteko.
-      9:
-        image: notes/flappy09.jpg
-        text: Honelako gezitxo bat ikusten duzunean, horrek esan nahi du aukerak aldatu
-          ditzakezula - flappyk lurra jotzean egiten duen soinua adibidez.
-      10:
-        image: notes/flappy10.jpg
-        text: Azken ariketa bezala, zure gustuko jokoa sortu eta zure lagunekin partekatu
-          ahal izango duzu. Ondo pasa!
-    loop_times:
-      1:
-        text: Kaixo, Mark naiz! Ikas dezagun begiztei buruz. Begiztek, edozein ekintza
-          multzo, behin eta berriro errepikatzeko balio dute, bai milaka edo baita
-          milioika aldiz ere.
-      2:
-        text: Ariketa honetan, txoria 5 aldiz aurrera mugiarazi nahi dugu txerriarengana
-          iristeko.
-      3:
-        text: Gure lana errazteko, "errepikatu" bloke berria erabili dezakegu.
-      4:
-        text: 5 "mugitu aurrera" bloke arrastatu beharrean...
-      5:
-        text: '"aurrera mugitu" blokea "errepikatu" blokearen barruan jarri dezakegu,
-          eta blokean, zenbakiz adierazi zenbat aldiz errepikatu nahi dugun.'
-      6:
-        text: 'Hau garrantzitsua da: "errepikatu" bloke baten barruan agindu bat baino
-          gehiago jarri ditzakezu.'
-      7:
-        text: Ondo pasa "errepikatu" bloke berria erabiliz!
-    loop_until:
-      1:
-        text: Kaixo, Chris naiz. Miami Heat taldean jokatu aurretik, informatika ikasi
-          nuen Georgia Tech unibertsitatean. Probatu dezagun "errepikatu arte" bloke
-          berria.
-      2:
-        text: Eta, txoria txerriarenganaino iristeko zenbat mugitu behar duen jakingo
-          ez bagenu?
-      3:
-        text: '"errepikatu harik eta" bloke baten barruan "mugitu aurrera" bloke bat
-          sartzen badugu, txoria aurrera mugituko da txerriarenganaino iritsi ARTE
-          (edo horma baten kontra jo arte).'
-      4:
-        text: 'Hau garrantzitsua da: "errepikatu harik eta" blokearen barruan bloke
-          asko sar ditzakegu, eta sartutako errepikatuko dira.'
-    if:
-      1:
-        text: 'Kaixo, Bill naiz! Ikas dezagun oinarrizko kontzeptu bat: "baldin" aginduak.
-          Horiei esker hartzen dituzte konputagailuek erabakiak.'
-      2:
-        text: Zuk zeuk egunero erabiltzen dituzu "baldin" aginduak. Goizero kalera
-          irten baino lehen, zera esaten duzu BALDIN kanpoan euria badago, xira jantzi
-          beharko dut.
-      3:
-        text: Zonbiari agindu diezaiokegu begiratzea ea ezker alden bidea dagoen,
-          eta ezkerrerako bidea topatzen BALDIN badu, noranzko horretara biratzeko
-          esan diezaiokegu.
-      4:
-        text: Hau egiteko kodea idazteko, "baldin" blokea arrastatuko dugu eta haren
-          barruan "biratu ezkerrera" bloke bat jarri.
-      5:
-        text: Orain, horren gainean "mugitu aurrera" bloke bat jartzen badugu, eta
-          guztiaren inguruan "errepikatu" bloke bat, zonbia mugitzen den bakoitzean
-          begiratuko du ea ezkerretara bidea dagoen eta biratuko du. "Errepikatu"
-          agindua funtsezkoa da urrats bakoitzean biratu daitekeen begiratzeko.
-      6:
-        text: '"Baldin" aginduak oso garrantzitsuak dira programazioan. Nire lehenengo
-          programetako bat "hiru lerroan" jolasa izan zen, eta bazegoen "baldin" agindu
-          bat, hau esaten zuena: BALDIN beste jokalaria irabazteko zorian dago, kokatu
-          nire pieza besteak ez irabazteko tokian.'
-      7:
-        text: Ongi pasa "baldin" blokea erabiltzen!
-    if_else:
-      1:
-        text: Kaixo, Saloni naiz. Programazioa erabiltzen dut arazoei soluzioak bilatzeko,
-          osasungintzan eta medikuntzan. Ikas dezagun "baldin bestela" blokea. "baldin"
-          blokea bezalakoa da, baina atal gehigarri bat dauka bukaeran, "bestela"
-          atala.
-      2:
-        text: '"Mugitu aurrera" bloke bat jartzen badut "egin" dioen tokian eta "biratu
-          ezkerrera" bloke bat "bestela" dioen tokian, horrek esan nahi du zonbiak
-          bi aukera izango dituela mugitzeko. BALDIN bidea libre badago aurrera joateko,
-          orduan zonbia aurrera mugituko da, BESTELA (hau da, aurrera joateko bidea
-          ez badago libre) zonbiak ezkerrera biratuko du.'
-      3:
-        text: '"Baldin" blokearekin bezala, "baldin bestela" blokeak ere jar ditzakegu
-          "errepikatu" bloke baten barruan; horrela, zonbia ez da geldituko eta "baldin
-          bestela" blokeak detektatuko du norantz mugitu daitekeen.'
-      4:
-        text: Orain eraman ditzagun zonbi horiek haien tokira!
-    if_else_scrat:
-      1:
-        text: Baldin-bestela agindu bat bi aukeren arteko erabaki bat da. Ikus dezagun
-          nola erabil dezakegun baldin-bestela agindua gure adiskide Scrat urtxintxarekin.
-      2:
-        text: Bloke hau "baldin" blokearen antzekoa da, baina honek badu bigarren
-          zati bat "bestela" dioena. "mugitu aurrera" bloke bat jartzen badut "egin"-en
-          ondoren, eta "biratu ezkerrera" bloke bat "bestela"-ren ondoren, horrek
-          zera esan nahi du, Scrat urtxintxa aurrera mugituko da aurrean bide irekia
-          baldin badu; bestela, aurrean oztoporen bat baldin badu, Scrat ezkerrera
-          biratuko da.
-      3:
-        text: Erabaki bat hartu eta erabaki horretan oinarrituz bi ekintzetako bat
-          aukeratzean datza. Eta, "baldin" blokeekin gertatzen zen bezala, "baldin-bestela"
-          blokeak ere jar daitezke "errepikatu" bloke baten barnean.
-      4:
-        text: Orain lagun diezaiogun Scrat urtxintxari ezkurra lortzen!
-    function:
-      1:
-        text: 'Kaixo! Brina naiz, ingeniaria Instagram enpresan. Funtzio bat hauxe
-          da: behin eta berriro erabili nahi dituzun kode lerro batzuen sekuentzia
-          bat, eta kode lerro horiek behin eta berriro idatzi beharrean, bloke berri
-          batean bildu ditzakezu eta, aurrerago behar duzunean, bloke hori erabili.'
-      2:
-        text: Orain, funtzioak nola definitzen diren ikasiko dugu. Funtzioen definizioek
-          izartxo bat dute izkinan. Funtzioaren izena lerroaren goiko aldean idazten
-          da.
-      3:
-        text: Definizioaren barruan dauden blokeek adierazten digute zer egiten duen
-          funtzioak. Adibidez, funtzio honen definizioaren izena "bete 5" da eta haren
-          barruan "errepikatu" bloke bat eta "bete" bloke bat daude.
-      4:
-        text: Definizioa lan eremuan dago, baina gure baserritarrak ez du funtzioa
-          exekutatuko, "bete 5" funtzio-blokea funtzioen kategoriatik arrastatzen
-          ez dugun bitartean.
-      5:
-        text: 'Egin dezagun jolas funtzioekin! '
-    loop_while:
-      1:
-        text: 'Kaixo! Makinde naiz. Ikas dezagun "bitartean blokea." '
-      2:
-        text: '"Bitartean blokea"k barruan jartzen duzuna egingo du goiko adierazpena
-          EGIA den BITARTEAN.'
-      3:
-        text: Adibidez, baserritarra menditxo baten gainean baldin badago, palakada
-          bat ateratzen jarraituko du bere azpian menditxorik geratzen den BITARTEAN.
-    loop_for:
-      1:
-        text: Kaixo! Trina naiz eta Pixar enpresan egiten dut lan. Film askotan egin
-          dut lan, Shrek barne.
-      2:
-        text: Hau da gure "kontagailu" begizta berria. Behin eta berriro beteko ditu
-          aginduak, baina begizta bakoitzean aldaketa txikiak ere sartu ditzake agindu
-          horietan.
-      3:
-        text: Adibide honetan, gure "kontagailu" begiztak dio "kontatu kontagailuarekin
-          50etik 90era 10naka" eta haren barruan gure "marraztu karratu bat" blokea
-          dago. Arrastatu "kontagailu" blokea "Aldagaiak" ataletik "luzera" dioen
-          lekura.
-      4:
-        text: Honek esan nahi du gure artistak 50 pixeleko luzerako aldeak dituen
-          lauki bat marraztuko duela, gero 10 gehitu eta 60 pixeleko aldeko laukia
-          marraztuko du. Gero jarraituko du laukiak marrazten 10naka gehituz, 90koa
-          lortu arte. Horrela 50, 60, 70, 80 eta 90ko laukiak lortuko ditugu.
-    parameters:
-      1:
-        text: Kaixo, Janete naiz eta Zynga enpresako ingeniaria naiz.
-      2:
-        text: Eta luzera desberdineko aldeak dituzten triangelu mordo bat marraztu
-          nahi badugu?
-      3:
-        text: Kode hori guztia eskuz idatz genezake, edo bestela parametrodun funtzio
-          bat erabil dezakegu.
-      4:
-        text: Hau egiteko, klikatu "marraztu triangelu bat" funtzioaren izar urdinean.
-          Gero arrastatu "sarrera izena" "sarrera" blokera.
-      5:
-        text: '"x" dioen lekuan "luzera" idatzi eta "Enter" sakatzen baduzu, zure
-          funtzioarentzako, luzera parametro bat sortuko duzu.'
-      6:
-        text: Klik egin izarraren gainean. Orain, aldagaien kategorian egin klik eta
-          arrastatu "luzera" blokeak zuri funtzioaren definizioko "aurrera mugitu"
-          blokera. Eta kendu zenbaki bloke zaharra.
-      7:
-        text: Zure funtzioa parametroekin probatzeko "funtzioak" kategoriako eta bertaratu
-          ezazu "triangelua luzerarekin irudikatu" funtzioa.
-      8:
-        text: Orain matematikako blokea erabili dezakezu zenbaki desberdinak sartuz
-          gero tamaina desberdineko triangeluak marrazteko.
-    hoc_wrapup:
-      1:
-        text: Zorionak! Ebatzi duzun azken puzlearekin, edozein erroboti labirinto
-          batean zehar bidea aurkitzeko kodea idatzi duzu. Errobot hori edozer izan
-          daiteke, txori bat, zonbi bat, espazioko gailua... Baita auto-gidatutako
-          autoa ere!
-      2:
-        text: Erabili dituzun oinarrizko kontzeptuak ezagutzen dugun edozein programaren
-          edo app-ren bihotza dira. "Errepikatu" begiztak, "errepikatu arte", "baldin"
-          eta "bestela baldin" aginduak ikasi ditugu.
-      3:
-        text: Disfrutatu bazenuen zure lehenengo ordua kodetzen, bisitatu code.org
-          informatikan zure heziketa zabaltzeko! Behin 20 ordu ematen dituzula ikasten,
-          programazioaren oinarriak menperatuta edukiko dituzu eta ikasten hasi ahal
-          izango zara mugikorrentzako app-ak, robotentzako aginduak, jokoak edo zuk
-          nahi duzuna.
-      4:
-        text: 'Teknologia egiten dugun oro aldatzen ari da eta ez du axola gazte edo
-          zaharra zaren: programatzea dibertigarria da, sormena dario eta edonork
-          ikas dezake!'
     20_wrapup:
       1:
         text: Notak erakutsi laster atzigarri!
-    frozen_intro:
-      1:
-        text: Kaixo, nire izena Lindsey da. nire aplikazioak sortu eta idazten ditut.
-          Erabil dezagun gure kodea Anna eta Elsarekin bateratzeko izotzaren mundu
-          magikoa aztertzen duten bitartean.
-      2:
-        text: Elur-malutak sor ditzakezu izotzetan patinatzen duzun heinean eta horrekin
-          zure lagunekin elkarbanatu dezakezun neguko mundu magikoa sortu.
-      3:
-        text: 'Hurrengo ordubetean, programazioaren oinarriak ikasiko dituzu. Ohiko
-          programazioa testu formatuan izaten da, baina guk Blockly erabiliko dugu
-          , arrastatu eta askatu daitezkeen bloke bisualen bidez programatzeko aukera
-          ematen duena. Unibertsitateko ikasleek ere metodo hau erabiltzen dute askotan.
-          Hala ez badirudi ere, azken finean kodea idazten ari zara. '
-      4:
-        text: Programa bat agindu multzo bat da konputagailuari zer egin behar duen
-          adieraziko diona. Eraiki dezagun  Elsari lerro bat marrazten lagunduko dion
-          kodea. Ondoren, eredu konplexuagoak sortzeko erabiliko dugu kode hau.
-      5:
-        text: Zure pantaila hiru zati nagusitan banatzen da. Ezkerrean, izotzezko
-          panela dago, non zure programa exekutatuko da. Maila bakoitzeko zehaztapenak
-          panelaren azpian daude idatzita.
-      6:
-        text: Erdiko zati hau erremintek osatzen dute, eta hemengo bloke bakoitza
-          Elsa eta Annak egin ditzaketen ekintzak dira.
-      7:
-        text: Eskubiko zati txuriari lan tokia deitzen zaio, eta bertan gure programa
-          sortuko dugu. IZotzezko paneletik mugitu ahal izateko "Mugitu Aurrera" blokea
-          erabiliko da.
-      8:
-        text: Hemen "Aurrera mugitu" blokean "100 pixel aurrera mugitu" esaten du.
-          "Hasi" klikatzen duzunean zer gertatzen da? Elsa pantailan mugitzen da,
-          100 pixel hain zuzen ere! Pixelak, oinarrian, zure pantailako karratu txiki-txikiak
-          dira.
-      9:
-        text: Puzle honetan dugun beste blokeak "biratu 90 gradu eskubira" dio, eta
-          bloke hau erabiltzean Elsa pixka bat biratuko da eskubira. Probatu eta ikusi
-          ea zenbat biratuko den Elsa. Angelu hau Elsaren pareko bidetik bidetik neurtzen
-          da. Beraz, hau 90 graduko biraketa bat da. Eta hau 120 graduko biraketa
-          bat.
-      10:
-        text: Akorda zaitez, pixel kopurua eta graduak alda ditzakezu bere ondoko
-          geziak klikatuz.
-    frozen_loops:
-      1:
-        text: Kaixo, Paola naiz! Ordenagailuek oso ondo errepikatzen dituzte ekintzak.
-          10era, 20ra edo 100era arte zenbatu dezakezu. Ordenagailu batek, ordea,
-          bilioira edo trilioira arte zenba dezake. Ez da aspertuko eta segun batzuen
-          tartean egingo du. Zenbatzen, marrazten edo edozertan aritzean ere, ordenagailuek
-          gauzak ehundaka edo bilioika aldiz errepika ditzakete.
-      2:
-        text: Programazioan honi begizta deitzen diogu. Begizta bat zure kodea behin
-          eta berriz errepikatzean datza. Hurrengo ariketan, zure helburua Anna lauki
-          bat sortzen laguntzea da "errepikatu" blokea erabiliz.
-      3:
-        text: '"Errepikatu" bloke baten barruan sartutako edozein kode bloke sekuentzia
-          batean errepikatuko da, zuk nahi duzun beste aldiz.'
-      4:
-        text: Karratu bat marrazteko, "mugitu aurrera" eta "biratu eskuinera" blokeak
-          4 aldiz erabil ditzakezu. Era errazena, ordea, ordenagailuari "mugitu aurrera"
-          eta "biratu 90 gradu eskuinera" behin esatea da, eta ondoren ekintza pare
-          hay lau aldiz errepikatzeko esatea. Hori egiteko, "mugitu aurrera" eta "biratu
-          eskuinera" blokeak "errepikatu" bloke baten barruan sartu behar dituzu.
-      5:
-        text: Gogoratu, "Errepikatu" blokeko zenbakia nahieran alda dezakezu, eta
-          ordenagailuak bloke barruan dagoena hainbeste aldiz errepikatuko du.
-    frozen_functions:
-      1:
-        text: Kaixo! Chris Bosh naiz. Saskibaloi-jokalari profesionala naiz eta unibertsitatean
-          nengoenean programatzen nuen.
-      2:
-        text: Informatikako kontzepturik garrantzitsuenetako bat komando berriak nola
-          definitzea da. Programazio lengoaia gehienek 100 hitz edo komando inguru
-          izaten dituzte soilik Eta, egia esan, mamia eraikitzeko bloke hauetatik
-          hasita zure hitz berriak definitzean datza.
-      3:
-        text: Behin ordenagailuari komando sekuentzia erabiliz ekintza bat egiten
-          erakutsi diozunean, ekintzari izena jar diezaiokezu gerora errepikatzeko
-          errazagoa izateko. Komando berri bat definitu eta izena emateari funtzio
-          deitzen zaio.
-      4:
-        text: Kaixo, Jess naiz. Blokeekin programatzean, askotan erabiliko dituzun
-          ekintza multzoak badaude, funtzioak erabiliko dituzu. Adibidez, karratu
-          bat sortzeko kodea idatzi duzu.
-      5:
-        text: Hau "sortu karratua" izeneko funtzioa bezala erazagutu dezakezu
-      6:
-        text: Orain hainbat aldiz erabilita hainbat karratu sortzeko blokea duzu.
-      7:
-        text: Figura sinple askok patroi konplexu bat sortu dezakete. Hurrengo ariketan,
-          zirkulua egiteko egindako kodea eskuragarri duzu funtzio berri honetan,
-          tamaina ezberdinetako zirkuluak marraztuko dituena. Erabili al dezakezu
-          Elsak honako irudi polit eta korapilatsuak marraz dezan?
-    playlab_intro:
-      1:
-        text: 'Play Lab erabiliz jokoak sortuko ditugu. Joko onek istorio bat dute,
-          eta istorioek aktoreak. Gure aktoreak sorgin eta alien bihurtzen ikasiko
-          dugu, animaliak hiztegirarazi, mugiarazi, eta beraien arteak elkarreragin
-          daitezen. Tutorial honen bukaeran, hasieratik joko bat sortzeko gai izango
-          zara, eta elkarbanatu ahal izango duzu. '
-      2:
-        text: Zure pantaila 3 zati nagusitan zatitu da. Ezkerrean programa exekutatzeko
-          jokalekua duzu. Maila bakoitzaren instrukzioak behean idatzita daude.
-      3:
-        text: Erdiko zatian erremintak dituzu, eta bloke bakoitza kodigoaren zati
-          bat da. Eskuineko espazio zuria lan-lekua izena du eta hemen eraikiko dugu
-          gure programa.
-      4:
-        text: Hasteko, zure blokeak elkartu beharko dituzu "egikaritzean" bloke laranjarekin.
-          Hainbat bloke elkartu ditzakezu blokeak, lerro horia ikusi arte kanporaka
-          mugituz gero, denak elkartuko dira.
-      5:
-        text: Lehenengo puzle honetan, gure aktorea pinguino bat da eta "Kaixo!" esanaraziko
-          diogu. Horretarako "esan" blokea mugituko dugu "egikaritu" blokearekin elkartu
-          arte, eta bertan "Kaixo!" idatziko dugu. Pinguinoa mugiarazi dezakegu ere,
-          "mugitu eskuinera" eta "mugitu ezkerrera" blokeak erabiliz. Blokeak dagokien
-          tokian dituzunean, "egikaritu" botoia klikatu programatutakoa ikusteko.
-      6:
-        text: Hasi ikasten eta bukatzerakoan zure joko propioa sortu ahalko duzu,
-          jokalari ezberdinekin, elkarreragin dezaketenak, pozik edo triste jar daitezkeenak,
-          puntuak lortu ditzaketenak edo suzko bolak bota ditzaketenak, baita bata
-          bestea desagerrarazi ere. Dena zure esku eta sortu nahi duzun jokoaren esku
-          dago.
-    playlab_events:
-      1:
-        text: Orain, joko-programatzaile orok euren egunerokoan erabiltzen duten zerbait
-          ikasiko dugu. "Gertaerak" deitzen dira. Gertaera batek zure programari adi
-          egoteko esaten dio, zerbait gertatzen bada entzuteko. Hori gertatzen denean,
-          ekintza bat egikarituko du.
-      2:
-        text: Hainat ekintza saguaren klikarekin, geziekin, edota pantaila ukimanarekin
-          daude erlazionatuta.
-      3:
-        text: Oraingoan, jokalariak espazioko robot batean klik egitean, lurtarrak
-          agurtzeko programa inplementatuko dugu, "klik egitean" eta "hitz egin" blokeak
-          erabiliz. Jokalariak robotean klik egitean, "klik egitean" blokea exekutatuko
-          da. Zer dio zure alienak?
-      4:
-        text: '"Gezia sakatzean" blokeak ere badaude. Hauek "mugitu" blokeekin lotzen
-          badituzu, hasi zaitezke zure aktoreak gora, behera, ezker, eskuin mugitzen.
-          Urratsez urrats, zure jokoa elkarreragileago bihurtzen ari da.'
-    playlab_repeat_forever:
-      1:
-        text: Hau da "errepikatu betirako" blokea. Edozein gauza bloke honen barruan
-          beti gertatuko da jokoan.
-      2:
-        text: Aktore batek hainbatetan zerbait egitea nahi baldin badugu, jokalariak
-          ezer egin behar izan gabe, bloke horiek "errepikatu betirako" blokearen
-          barruan jarriko ditugu.
-      3:
-        text: Hurrengo puzlean gure helburua magoarekin erreinuko zaurituak patruilatzea
-          da ezkerratik eskurbira denbora guztian. Agindu lanak nola nola errepikatzen
-          ikasiko dugu horrela zure jokua egitean denbora asko aurreztuko duzu.
     C1_artist_intro:
       1:
         text: Hauek dira marrazteko eskuartean dituzun blokeak. Artistak lerro grisak
@@ -577,6 +116,42 @@ eu:
           egin nahi duzu eta begiztaren baitan argiaren abiadura handituko da" esango
           duena. Eta hori begiztaz sortuta dago. Begiztak garrantzitsuak dira informatikan
           gure lana errazagoa eta laburragoa egiten dutelako.
+    C1_going_places_safely:
+      1:
+        text: Kaixo! Jeremiah dut izena. Zazpi urte ditut. Nire amaren ordenagailuan
+          jolastea atsegin dut, baina bere baimenarekin. "Ama, erabil al dezaket ordenagailua?
+          Jakina, laztana!"
+      2:
+        text: Oso gustuko dut nire amaren ordenagailua interneten sar naitekeelako.
+          Internet zure auzoaren antzekoa da. Leku paregabeak bisita ditzakegu, familia
+          eta lagunekin hitz egin dezakezu eta gauza berri asko ikas ditzakezu.
+      3:
+        text: Atzo, nire etxetik hurbil dagoen zoo bat bisitatu nuen. Zebrakume bat
+          ikusi nuen. Argazki bat atera nion eta marren kolorea aldatu nion, gero
+          kapela bat jarri nion eta nire animalia bitxien bildumara gehitu nuen. Itzel!
+          Gero, oso urrun dagoen leku batera joan nintzen. Kenia bisitatu nuen. Afrikako
+          herrialde bat da. Han zebra asko bizi dira.
+      4:
+        text: Batzutan ezagutzen dudan jendearekin hitz egiten dut interneten, adibidez,
+          beste estatu batean bizi den nire amonarekin. Kaixo, amona! Nire urtebetetzean
+          bidaliko dizkidan gailetak egiten ari da. "Mmmm, internetetik usaintzea
+          gustatuko litzaidake!" Edonorekin hitz egin dezaket internetetik, adibidez,
+          nire lehengusina; baina ezagutzen dudan jendearekin baino ez dut hitz egiten.
+      5:
+        text: Interneten gehien gustatzen zaidana jolas dibertigarriean jolastu ahal
+          izatea da. Tanto! Marraztea eta gauza berriak sortzea eta horiek lagunekin
+          elkarbanatzea ere gustatzen zait. Itzel! Batzuetan gauza berriak ikasteko
+          webguneak bisitatzen ditut, baina beti niretzat egokiak diren webguneetan
+          ibiltzen naiz. Hara, dinosauruak!
+      6:
+        text: 'Internet oso leku dibertigarria da. Baina auzoan errepidea gurutzatzean
+          bezala, adi egon behar duzu konektatzen zarenean. Gogoratzeko 3 arau dago.
+          Lehen araua: baimena eskatu gurasoei beti. Bigarren araua: ezagutzen duzun
+          jendearekin soilik hitz egin. Hirugarren araua: zuretzat egokiak diren lekuetan
+          geratu.'
+      7:
+        text: Hara, hori bai dibertigarria! Afalordua. Deskonektatuko naiz. Irrikitan
+          nago noiz berriz konektatu eta zer berri bisitatu.
     C1_happy_maps_unplugged:
       1:
         text: Ikasgai honek Mapa Zoriontsuak izena du. Gaur gure lagun iletsu Flurb
@@ -651,42 +226,6 @@ eu:
           zerbait dela uste dugu. Programak oso onak dira horretarako, baina beste
           leku batzuetan ere baliogarriak dira. Zure jolasa sor dezakezu edo zuretzako
           lan egingo duen errobot bat programa dezakezu.
-    C1_going_places_safely:
-      1:
-        text: Kaixo! Jeremiah dut izena. Zazpi urte ditut. Nire amaren ordenagailuan
-          jolastea atsegin dut, baina bere baimenarekin. "Ama, erabil al dezaket ordenagailua?
-          Jakina, laztana!"
-      2:
-        text: Oso gustuko dut nire amaren ordenagailua interneten sar naitekeelako.
-          Internet zure auzoaren antzekoa da. Leku paregabeak bisita ditzakegu, familia
-          eta lagunekin hitz egin dezakezu eta gauza berri asko ikas ditzakezu.
-      3:
-        text: Atzo, nire etxetik hurbil dagoen zoo bat bisitatu nuen. Zebrakume bat
-          ikusi nuen. Argazki bat atera nion eta marren kolorea aldatu nion, gero
-          kapela bat jarri nion eta nire animalia bitxien bildumara gehitu nuen. Itzel!
-          Gero, oso urrun dagoen leku batera joan nintzen. Kenia bisitatu nuen. Afrikako
-          herrialde bat da. Han zebra asko bizi dira.
-      4:
-        text: Batzutan ezagutzen dudan jendearekin hitz egiten dut interneten, adibidez,
-          beste estatu batean bizi den nire amonarekin. Kaixo, amona! Nire urtebetetzean
-          bidaliko dizkidan gailetak egiten ari da. "Mmmm, internetetik usaintzea
-          gustatuko litzaidake!" Edonorekin hitz egin dezaket internetetik, adibidez,
-          nire lehengusina; baina ezagutzen dudan jendearekin baino ez dut hitz egiten.
-      5:
-        text: Interneten gehien gustatzen zaidana jolas dibertigarriean jolastu ahal
-          izatea da. Tanto! Marraztea eta gauza berriak sortzea eta horiek lagunekin
-          elkarbanatzea ere gustatzen zait. Itzel! Batzuetan gauza berriak ikasteko
-          webguneak bisitatzen ditut, baina beti niretzat egokiak diren webguneetan
-          ibiltzen naiz. Hara, dinosauruak!
-      6:
-        text: 'Internet oso leku dibertigarria da. Baina auzoan errepidea gurutzatzean
-          bezala, adi egon behar duzu konektatzen zarenean. Gogoratzeko 3 arau dago.
-          Lehen araua: baimena eskatu gurasoei beti. Bigarren araua: ezagutzen duzun
-          jendearekin soilik hitz egin. Hirugarren araua: zuretzat egokiak diren lekuetan
-          geratu.'
-      7:
-        text: Hara, hori bai dibertigarria! Afalordua. Deskonektatuko naiz. Irrikitan
-          nago noiz berriz konektatu eta zer berri bisitatu.
     C1_pair_programming:
       1:
         text: Gaur bikotekako programazioa ikasiko dugu. Programatzean taldeka lan
@@ -791,6 +330,16 @@ eu:
         text: Ahal bezain aina comando sartu ditzakezu errepikatu blokearen barruan.
           Adibide honetan, aurrera eta gero ekubira mugitzeko esaten ari zara, 5 aldiz
           egingo dena. Ondo pasa!
+    C2_artist_debugging:
+      1:
+        text: Hemen badauzkagu jada bloke batzuk gure laneremuan. Baina zerbait dago
+          gaizki.
+      2:
+        text: Debugeatu dezagun kode exekuzio-abiadura motelduz, bloke bakoitza pausoka-pausoka
+          nola exekutatzen den ikusteko.
+      3:
+        text: Oh! Hemen dago arazoa! Katuaren biboteak 75 pixeleko luzera dute, ez
+          25 pixelekoa.
     C2_artist_intro:
       1:
         text: Ezin zara lasterketarako sailkatu informatikan onak diren pertsonak
@@ -812,6 +361,16 @@ eu:
       5:
         text: Eta hau 120 graduko biraketa bat da. Eta gogoratu, balio hauek alda
           ditzakezu zenbakien ondoan dauden geziak sakatuta. Atera barruan duzun artista!
+    C2_artist_loops:
+      1:
+        text: Hemen errepikapen blokea erabiliko dugu gure artista programatzerakoan
+          pausoak saiesten lagunduko digu. Dagoeneko baditugu eszenatokian bloke batzuk
+          baina programatzen hasteko daude bakarrik.
+      2:
+        text: Bloke horiek begizta batean sartzeko karratu oso marraztu ahal izateko,
+          errepikapen blokea arrastatuko dugu, eta aurrera mugitu eta eskubira biratu
+          blokeak errepikapen blokearen barnean sartuko ditugu. Kodea exekutatzean,
+          artistak mugimendu horiek lau aldiz errepikatuko ditu laukia osatu arte.
     C2_bee_conditionals:
       1:
         text: Hau baldintza bat da. Nektar edo eztia zenbaki bat baino gehiago/gutxiago/berdina
@@ -823,6 +382,29 @@ eu:
         text: Adibide honetan, lore moreak 0 nektar baino gehiago baldin badu, hartu
           nektarra. Honi esker gure erleak nektarra hartzen jarraituko du lorean badagoen
           bitartean. Ta-txan!
+    C2_bee_debugging:
+      1:
+        text: Entzun al duzu "programa bat debugeatu" esaldia? Horrela ikus dezakegu
+          zer doan gaizki. Kodea debugeatzen duzunean, erroreak identifikatu eta konpontzen
+          dituzu.
+      2:
+        text: Gure lan eremuan baditugu dagoeneko zenbait bloke. Urrats botoia erabiliko
+          dugu, blokeak urratsez urrats exekutatzeko. Honela gure emaitza zuzena den
+          edota zuzendu behar dugun jakingo dugu.
+      3:
+        text: Arazoa hemen dagoela ematen du! "Aurrera egin" beste bloke bat behar
+          dugu. "Pauso bat eman" botoiak debugeatzen uzten diigu problema identifikatuz
+          eta erroreak hautemanez.
+    C2_bee_loops:
+      1:
+        text: Begizta bat eragiketa bat errepikatzea da. Erlauntza bat aztertzean,
+          gelaxka bat begiratu eta utzi egingo dut. Hau gelaxka guztiekin errepikatu
+          behar denez, begizta batean aztertuko ditut gelaxkak.
+      2:
+        text: Hau da errepikapen blokea. Bloke horren barnean sartzen duzun guztia
+          hainbat aldiz errepikatuko da, zuk esan adina aldiz. Esate baterako, maila
+          honetan, hainbat aldiz mugitu eta nektarra hartu ordez, errepikapen bloke
+          batean sartu eta hiru aldiz higikaratuko dugu. Halako erraza izango da!
     C2_binary_bracelets:
       1:
         text: Hau eskumuturreko bitarren ikasgaia da. Gure inizialak eskumuturreko
@@ -871,29 +453,6 @@ eu:
           Helburua lortzerakoan, hamar puntu irabazten dituzu, bestela hiru galdu.
           Baldintzak erabiltzen jakiteak, joko dibertigarriak sortzea ahalbidetzen
           dizu.
-    C2_artist_debugging:
-      1:
-        text: Hemen badauzkagu jada bloke batzuk gure laneremuan. Baina zerbait dago
-          gaizki.
-      2:
-        text: Debugeatu dezagun kode exekuzio-abiadura motelduz, bloke bakoitza pausoka-pausoka
-          nola exekutatzen den ikusteko.
-      3:
-        text: Oh! Hemen dago arazoa! Katuaren biboteak 75 pixeleko luzera dute, ez
-          25 pixelekoa.
-    C2_bee_debugging:
-      1:
-        text: Entzun al duzu "programa bat debugeatu" esaldia? Horrela ikus dezakegu
-          zer doan gaizki. Kodea debugeatzen duzunean, erroreak identifikatu eta konpontzen
-          dituzu.
-      2:
-        text: Gure lan eremuan baditugu dagoeneko zenbait bloke. Urrats botoia erabiliko
-          dugu, blokeak urratsez urrats exekutatzeko. Honela gure emaitza zuzena den
-          edota zuzendu behar dugun jakingo dugu.
-      3:
-        text: Arazoa hemen dagoela ematen du! "Aurrera egin" beste bloke bat behar
-          dugu. "Pauso bat eman" botoiak debugeatzen uzten diigu problema identifikatuz
-          eta erroreak hautemanez.
     C2_digital_footprint:
       1:
         text: Buruan kapela duzu eta zure azkarrek esango dizute non zauden eta zooari
@@ -957,26 +516,6 @@ eu:
           pieza bera berriz errepika dezaket, edo norbaiti nola egin irakats diezaioket.
           Jarri beira labean, urtu, jarraitu hurrengo aginduak eta bola egin. Algoritmoek
           zerbait egiteko zer bide jarraitu esaten dizute.
-    C2_artist_loops:
-      1:
-        text: Hemen errepikapen blokea erabiliko dugu gure artista programatzerakoan
-          pausoak saiesten lagunduko digu. Dagoeneko baditugu eszenatokian bloke batzuk
-          baina programatzen hasteko daude bakarrik.
-      2:
-        text: Bloke horiek begizta batean sartzeko karratu oso marraztu ahal izateko,
-          errepikapen blokea arrastatuko dugu, eta aurrera mugitu eta eskubira biratu
-          blokeak errepikapen blokearen barnean sartuko ditugu. Kodea exekutatzean,
-          artistak mugimendu horiek lau aldiz errepikatuko ditu laukia osatu arte.
-    C2_bee_loops:
-      1:
-        text: Begizta bat eragiketa bat errepikatzea da. Erlauntza bat aztertzean,
-          gelaxka bat begiratu eta utzi egingo dut. Hau gelaxka guztiekin errepikatu
-          behar denez, begizta batean aztertuko ditut gelaxkak.
-      2:
-        text: Hau da errepikapen blokea. Bloke horren barnean sartzen duzun guztia
-          hainbat aldiz errepikatuko da, zuk esan adina aldiz. Esate baterako, maila
-          honetan, hainbat aldiz mugitu eta nektarra hartu ordez, errepikapen bloke
-          batean sartu eta hiru aldiz higikaratuko dugu. Halako erraza izango da!
     C2_maze_intro:
       1:
         text: Normalean programazioa testuan soilik oinarritzen da, baina guk Blockly
@@ -1797,6 +1336,423 @@ eu:
           inkrementatu edo dekrementatu dezake. Letra-tamainaren arabera liburuaren
           orrialde kopurua alda daiteke. Doitu dezakezu aldagaian orrialde kopurua
           gordez.
+    artist_intro:
+      1:
+        text: Kaixo, JR naiz! Edozein kotxe lasterketak informatikariak behar ditu
+          irabazteko. Kotxeen datuak aztertzen dituzte azkarragoak egiteko.
+      2:
+        text: Ariketa hauetan, pasatzen den lekutik lerro bat marraztuko duen artista
+          izango zara.
+      3:
+        image: notes/stage5_3.jpg
+        text: Bloke honek "mugitu aurrera 100 pixel" esaten du. "Pixelak" zure pantaila
+          osatzen duten puntu txikiak dira.
+      4:
+        image: notes/stage5_4.jpg
+        text: Bloke honek "biratu 90 gradu eskuinerantz" esaten du. Honek, zure artista
+          "biratu" blokeak dioen gradu kopurua bira araziko du, labirintoko ariketetan
+          gertatzen zen bezalaxe.
+      5:
+        image: notes/stage5_5.jpg
+        text: Bloketako gezietan klikatu ezkero, gure artista zenbateko kopuruan aurrera
+          mugitzen edo biratzen duen aldatu ahal izango duzu. Bloke berri hauekin
+          trebatzeko jolastu beraiekin.
+    farmer_intro:
+      1:
+        text: Kaixo, Paola naiz! Ariketa hauetan, zelaia guztiz berdindu behar duen
+          baserritarra izango zara.
+      2:
+        text: Menditxoak kentzen eta zuloak betetzen lagundu behar diozu.
+      3:
+        text: Bloke berriek menditxo batetik palakada bat lur ezabatu eta zulo bat
+          lur palakada batez beteko dute.
+      4:
+        text: Menditxoak eta zuloak tamaina ezberdinetakoak dira, beraz baserritarrari
+          zenbat palakada erabili behar dituen esan beharko diozu.
+    flappy_intro:
+      1:
+        image: notes/flappy01.jpg
+        text: Kaixo, Katie naiz! Informatikaren gauzarik interesgarrienetakoa, sortzen
+          ditugun programak elkarreragileak izan daitezkeela da.
+      2:
+        image: notes/flappy02.jpg
+        text: Ordenagailu edo telefono batean norbaitek klikatu, pantaila ukitu edo
+          tekleatzen duen unean, honek GERTAERA bat sortzen du, eta badago kode bat
+          erabakitzen duena zer egin GERTAERA bat jazotzen denean.
+      3:
+        image: notes/flappy03.jpg
+        text: 'Adibidez, GERTAERA-KONTROLATZAILE bat, "Sagua klikatzean, jo soinu
+          bat" izan daiteke '
+      4:
+        image: notes/flappy04.jpg
+        text: Noizbait entzun duzu FlappyBird jokoari buruz? Gertaera kontrolatzaileak
+          erabiliz, gure FlappyBird bertsio propioa programatzen ikasiko dugu!
+      5:
+        image: notes/flappy05.jpg
+        text: Kodea idaztea, blokeak arrastatu eta askatuz egingo dugu, bloke hauetako
+          bakoitza, ordenagailuak ulertuko dituen agindu ezberdinak ordezkatzen du.
+          Azken finean, bloke hauetako bakoitzak, programa kode lerroak dira.
+      6:
+        image: notes/flappy06.jpg
+        text: 'Lan eremuan, aurrez beteta dauden zenbait bloke berde aurkituko dituzu,
+          hauek "gertaera kontrolatzaileak" dira '
+      7:
+        image: notes/flappy07.jpg
+        text: Sagua klikatzean txoriak HEGALDI bat egitea nahi baduzu, "HEGALDI" blokea
+          gertaera kudeatzailea egokiari elkartuz egin dezakezu, horrela, sagua klikatzen
+          duzun bakoitzean txoriak hegoak eragingo ditu.
+      8:
+        image: notes/flappy08.jpg
+        text: Atal honetako ariketa bakoitzean, bloke berde itxura duten gertaera
+          mota berriak ikusiko ditugu, zuk erabaki beharko duzu zein bloke diren egokiak
+          gertaera horiei erantzuteko.
+      9:
+        image: notes/flappy09.jpg
+        text: Honelako gezitxo bat ikusten duzunean, horrek esan nahi du aukerak aldatu
+          ditzakezula - flappyk lurra jotzean egiten duen soinua adibidez.
+      10:
+        image: notes/flappy10.jpg
+        text: Azken ariketa bezala, zure gustuko jokoa sortu eta zure lagunekin partekatu
+          ahal izango duzu. Ondo pasa!
+    frozen_functions:
+      1:
+        text: Kaixo! Chris Bosh naiz. Saskibaloi-jokalari profesionala naiz eta unibertsitatean
+          nengoenean programatzen nuen.
+      2:
+        text: Informatikako kontzepturik garrantzitsuenetako bat komando berriak nola
+          definitzea da. Programazio lengoaia gehienek 100 hitz edo komando inguru
+          izaten dituzte soilik Eta, egia esan, mamia eraikitzeko bloke hauetatik
+          hasita zure hitz berriak definitzean datza.
+      3:
+        text: Behin ordenagailuari komando sekuentzia erabiliz ekintza bat egiten
+          erakutsi diozunean, ekintzari izena jar diezaiokezu gerora errepikatzeko
+          errazagoa izateko. Komando berri bat definitu eta izena emateari funtzio
+          deitzen zaio.
+      4:
+        text: Kaixo, Jess naiz. Blokeekin programatzean, askotan erabiliko dituzun
+          ekintza multzoak badaude, funtzioak erabiliko dituzu. Adibidez, karratu
+          bat sortzeko kodea idatzi duzu.
+      5:
+        text: Hau "sortu karratua" izeneko funtzioa bezala erazagutu dezakezu
+      6:
+        text: Orain hainbat aldiz erabilita hainbat karratu sortzeko blokea duzu.
+      7:
+        text: Figura sinple askok patroi konplexu bat sortu dezakete. Hurrengo ariketan,
+          zirkulua egiteko egindako kodea eskuragarri duzu funtzio berri honetan,
+          tamaina ezberdinetako zirkuluak marraztuko dituena. Erabili al dezakezu
+          Elsak honako irudi polit eta korapilatsuak marraz dezan?
+    frozen_intro:
+      1:
+        text: Kaixo, nire izena Lindsey da. nire aplikazioak sortu eta idazten ditut.
+          Erabil dezagun gure kodea Anna eta Elsarekin bateratzeko izotzaren mundu
+          magikoa aztertzen duten bitartean.
+      2:
+        text: Elur-malutak sor ditzakezu izotzetan patinatzen duzun heinean eta horrekin
+          zure lagunekin elkarbanatu dezakezun neguko mundu magikoa sortu.
+      3:
+        text: 'Hurrengo ordubetean, programazioaren oinarriak ikasiko dituzu. Ohiko
+          programazioa testu formatuan izaten da, baina guk Blockly erabiliko dugu
+          , arrastatu eta askatu daitezkeen bloke bisualen bidez programatzeko aukera
+          ematen duena. Unibertsitateko ikasleek ere metodo hau erabiltzen dute askotan.
+          Hala ez badirudi ere, azken finean kodea idazten ari zara. '
+      4:
+        text: Programa bat agindu multzo bat da konputagailuari zer egin behar duen
+          adieraziko diona. Eraiki dezagun  Elsari lerro bat marrazten lagunduko dion
+          kodea. Ondoren, eredu konplexuagoak sortzeko erabiliko dugu kode hau.
+      5:
+        text: Zure pantaila hiru zati nagusitan banatzen da. Ezkerrean, izotzezko
+          panela dago, non zure programa exekutatuko da. Maila bakoitzeko zehaztapenak
+          panelaren azpian daude idatzita.
+      6:
+        text: Erdiko zati hau erremintek osatzen dute, eta hemengo bloke bakoitza
+          Elsa eta Annak egin ditzaketen ekintzak dira.
+      7:
+        text: Eskubiko zati txuriari lan tokia deitzen zaio, eta bertan gure programa
+          sortuko dugu. IZotzezko paneletik mugitu ahal izateko "Mugitu Aurrera" blokea
+          erabiliko da.
+      8:
+        text: Hemen "Aurrera mugitu" blokean "100 pixel aurrera mugitu" esaten du.
+          "Hasi" klikatzen duzunean zer gertatzen da? Elsa pantailan mugitzen da,
+          100 pixel hain zuzen ere! Pixelak, oinarrian, zure pantailako karratu txiki-txikiak
+          dira.
+      9:
+        text: Puzle honetan dugun beste blokeak "biratu 90 gradu eskubira" dio, eta
+          bloke hau erabiltzean Elsa pixka bat biratuko da eskubira. Probatu eta ikusi
+          ea zenbat biratuko den Elsa. Angelu hau Elsaren pareko bidetik bidetik neurtzen
+          da. Beraz, hau 90 graduko biraketa bat da. Eta hau 120 graduko biraketa
+          bat.
+      10:
+        text: Akorda zaitez, pixel kopurua eta graduak alda ditzakezu bere ondoko
+          geziak klikatuz.
+    frozen_loops:
+      1:
+        text: Kaixo, Paola naiz! Ordenagailuek oso ondo errepikatzen dituzte ekintzak.
+          10era, 20ra edo 100era arte zenbatu dezakezu. Ordenagailu batek, ordea,
+          bilioira edo trilioira arte zenba dezake. Ez da aspertuko eta segun batzuen
+          tartean egingo du. Zenbatzen, marrazten edo edozertan aritzean ere, ordenagailuek
+          gauzak ehundaka edo bilioika aldiz errepika ditzakete.
+      2:
+        text: Programazioan honi begizta deitzen diogu. Begizta bat zure kodea behin
+          eta berriz errepikatzean datza. Hurrengo ariketan, zure helburua Anna lauki
+          bat sortzen laguntzea da "errepikatu" blokea erabiliz.
+      3:
+        text: '"Errepikatu" bloke baten barruan sartutako edozein kode bloke sekuentzia
+          batean errepikatuko da, zuk nahi duzun beste aldiz.'
+      4:
+        text: Karratu bat marrazteko, "mugitu aurrera" eta "biratu eskuinera" blokeak
+          4 aldiz erabil ditzakezu. Era errazena, ordea, ordenagailuari "mugitu aurrera"
+          eta "biratu 90 gradu eskuinera" behin esatea da, eta ondoren ekintza pare
+          hay lau aldiz errepikatzeko esatea. Hori egiteko, "mugitu aurrera" eta "biratu
+          eskuinera" blokeak "errepikatu" bloke baten barruan sartu behar dituzu.
+      5:
+        text: Gogoratu, "Errepikatu" blokeko zenbakia nahieran alda dezakezu, eta
+          ordenagailuak bloke barruan dagoena hainbeste aldiz errepikatuko du.
+    function:
+      1:
+        text: 'Kaixo! Brina naiz, ingeniaria Instagram enpresan. Funtzio bat hauxe
+          da: behin eta berriro erabili nahi dituzun kode lerro batzuen sekuentzia
+          bat, eta kode lerro horiek behin eta berriro idatzi beharrean, bloke berri
+          batean bildu ditzakezu eta, aurrerago behar duzunean, bloke hori erabili.'
+      2:
+        text: Orain, funtzioak nola definitzen diren ikasiko dugu. Funtzioen definizioek
+          izartxo bat dute izkinan. Funtzioaren izena lerroaren goiko aldean idazten
+          da.
+      3:
+        text: Definizioaren barruan dauden blokeek adierazten digute zer egiten duen
+          funtzioak. Adibidez, funtzio honen definizioaren izena "bete 5" da eta haren
+          barruan "errepikatu" bloke bat eta "bete" bloke bat daude.
+      4:
+        text: Definizioa lan eremuan dago, baina gure baserritarrak ez du funtzioa
+          exekutatuko, "bete 5" funtzio-blokea funtzioen kategoriatik arrastatzen
+          ez dugun bitartean.
+      5:
+        text: 'Egin dezagun jolas funtzioekin! '
+    gumball_events:
+      1:
+        text: Orain, joko programatzaileek egunero erabiltzen duten zerbait ikasiko
+          dugu. Gertaerak deritze. Gertaera batek zure programari esaten dio zerbait
+          gertatzearen zain adi egoteko, eta zerbait hori gertatzen denean jokoak
+          ekintza bat gauzatuko du.
+      2:
+        text: Gertaera adibide batzuk dira saguaren klik bat edo gora eta beherako
+          gezi tekla bat edo baita ere pantaila ukitzea.
+      3:
+        text: Hemen jokalariak aktorearen gainean klik egiten duenean honek zerbait
+          esatea lortuko dugu. "Klik egiterakoan" blokea erabiliko dugu eta horri
+          lotuko diogu "esan" blokea. Jokalariak klik egiterakoan, bloke horretara
+          lotutako bloke guztiak burutuko dira.
+      4:
+        text: Badira ere "gezia sakatzean" blokeak. Mugimendu blokeak lotzen badizkiozu
+          bloke horiei, zure aktoreak gora, behera, eskuin eta ezker mugitzen has
+          zaitezke geziekin. Pixkanaka zure jokoa elkarreragileago bihurtzen ari da.
+    gumball_intro:
+      1:
+        text: Zure jokoa egin nahi izanez gero, oso erraza da. Programazio pixka bat
+          ikasi eta zuk sortutako jokoa jokatzen hasi ahal izango duzu.
+      2:
+        text: Bideo-joko faboritorik ba al daukazu? Pauso bat emango dugu Jolas Laborategiko
+          jokoaren antzeko jokoak sortzeko. Joko onek istorio bat izan ohi dute eta
+          istorio guztiek aktoreak dituzte. Aktore horiek hitz egin, mugitu eta haien
+          artean elkar eragiten dute. Agian puntuak ere eskuratuko dituzte, jokoaren
+          arauen arabera. Gaur, gauza horiek guztiak aktore dibertigarriekin banan
+          bana nola egin ikasiko dugu eta jarraian zerotik hasita, partekatua izan
+          daitekeen eta telefonoan jolasteko balioko duen joko bat gauzatuko dugu.
+      3:
+        text: Gaur, gauza horiek guztiak aktore dibertigarriekin banan bana nola egin
+          ikasiko dugu eta jarraian zerotik hasita, partekatua izan daitekeen eta
+          telefonoak jolasteko balioko duen joko bat eraikiko dugu.
+      4:
+        text: Zure pantaila hiru zati nagusitan banatuta dago. Ezkerrean programa
+          nola exekutatzen den ikusi ahal izango duzu. Maila bakoitzean egin beharrekoa
+          azpialdean azaltzen zaizu.
+      5:
+        text: Erdiko eremua tresna kutxa da non blokeetako bakoitza kode zati bat
+          den.
+      6:
+        text: Eskuinean duzun gune zuria laneremua da eta bertan eraikiko dugu programa.
+      7:
+        text: Hasteko, zure blokeak "martxan dagoenean" bloke laranjarekin lotu beharko
+          dituzu. Hainbat bloke lotu ditzakezu elkarrekin hauek arrastatuz inguruko
+          marra horia agertu arte. Orduan elkar lotu egingo dira.
+      8:
+        text: Lehen puzzle honetan, aktoreek zerbait esatea lortuko dugu "esan" blokea
+          "martxan dagoenean" blokearekin lotzen eta zure mezua bertan idazten. Zure
+          blokeak behar den lekuan dituzunean hasi botoian sakatu programatu duzuna
+          ikusteko.
+      9:
+        text: Has zaitez eta bukaerarako zure joko propioa sortzeko kapaz izango zara,
+          elkar eragin dezaketen mota guztietako jokalariekin, puntuekin, gauzak jaurtikiz,
+          eta elkar desagerraraziz. Dena zure esku dago!
+    gumball_repeat:
+      1:
+        text: Imajina dezakezu zerbait behin eta berriz betirako errepikatzen egon
+          beharko bazenu? Zorionez ez duzu horrelakorik inoiz egin beharko konputagailuak
+          oso onak baitira gauzak errepikatzen.
+      2:
+        text: Hau da betirako errepikatu blokea. Edozer gauza bloke honen barruan
+          betirako errepikatuko da jokoan. Aktore batek gauzaren bat errepikatzen
+          ibiltzea nahi badugu jokalariaren parte hartzerik gabe, bloke horiek betirako
+          errepikatu blokearen barruan jarriko ditugu.
+      3:
+        text: Ondorengo puzzlean gure helburua da aktoreari laguntzea modu jarraituan
+          lan bat egiten. Aginduak errepikatzen ikastea denbora asko aurrezteko aukera
+          emango dizu gero zure joko propioa egiten ari zarenean.
+    hoc_dance_events_2019:
+      4:
+        text: Hainat ekintza saguaren klikarekin, geziekin, edota pantaila ukimanarekin
+          daude erlazionatuta.
+    hoc_wrapup:
+      1:
+        text: Zorionak! Ebatzi duzun azken puzlearekin, edozein erroboti labirinto
+          batean zehar bidea aurkitzeko kodea idatzi duzu. Errobot hori edozer izan
+          daiteke, txori bat, zonbi bat, espazioko gailua... Baita auto-gidatutako
+          autoa ere!
+      2:
+        text: Erabili dituzun oinarrizko kontzeptuak ezagutzen dugun edozein programaren
+          edo app-ren bihotza dira. "Errepikatu" begiztak, "errepikatu arte", "baldin"
+          eta "bestela baldin" aginduak ikasi ditugu.
+      3:
+        text: Disfrutatu bazenuen zure lehenengo ordua kodetzen, bisitatu code.org
+          informatikan zure heziketa zabaltzeko! Behin 20 ordu ematen dituzula ikasten,
+          programazioaren oinarriak menperatuta edukiko dituzu eta ikasten hasi ahal
+          izango zara mugikorrentzako app-ak, robotentzako aginduak, jokoak edo zuk
+          nahi duzuna.
+      4:
+        text: 'Teknologia egiten dugun oro aldatzen ari da eta ez du axola gazte edo
+          zaharra zaren: programatzea dibertigarria da, sormena dario eta edonork
+          ikas dezake!'
+    iceage_events:
+      1:
+        text: Orain, joko programatzaileek egunero erabiltzen duten zerbait ikasiko
+          dugu. Gertaerak deritze. Gertaera batek zure programari esaten dio zerbait
+          gertatzearen zain adi egoteko, eta zerbait hori gertatzen denean jokoak
+          ekintza bat gauzatuko du.
+      2:
+        text: Gertaera adibide batzuk dira saguaren klik bat edo gora eta beherako
+          gezi tekla bat edo baita ere pantaila ukitzea.
+      3:
+        text: Hemen jokalariak aktorearen gainean klik egiten duenean honek zerbait
+          esatea lortuko dugu. "Klik egiterakoan" blokea erabiliko dugu eta horri
+          lotuko diogu "esan" blokea. Jokalariak klik egiterakoan, bloke horretara
+          lotutako bloke guztiak burutuko dira.
+      4:
+        text: Badira ere "gezia sakatzean" blokeak. Mugimendu blokeak lotzen badizkiozu
+          bloke horiei, zure aktoreak gora, behera, eskuin eta ezker mugitzen has
+          zaitezke geziekin. Pixkanaka zure jokoa elkarreragileago bihurtzen ari da.
+    iceage_intro:
+      1:
+        text: Zure jokoa egin nahi izanez gero, oso erraza da. Programazio pixka bat
+          ikasi eta zuk sortutako jokoa jokatzen hasi ahal izango duzu.
+      2:
+        text: Bideo-joko faboritorik ba al daukazu? Pauso bat emango dugu Jolas Laborategiko
+          jokoaren antzeko jokoak sortzeko. Joko onek istorio bat izan ohi dute eta
+          istorio guztiek aktoreak dituzte. Aktore horiek hitz egin, mugitu eta haien
+          artean elkar eragiten dute. Agian puntuak ere eskuratuko dituzte, jokoaren
+          arauen arabera. Gaur, gauza horiek guztiak aktore dibertigarriekin banan
+          bana nola egin ikasiko dugu eta jarraian zerotik hasita, partekatua izan
+          daitekeen eta telefonoan jolasteko balioko duen joko bat gauzatuko dugu.
+      3:
+        text: Gaur, gauza horiek guztiak aktore dibertigarriekin banan bana nola egin
+          ikasiko dugu eta jarraian zerotik hasita, partekatua izan daitekeen eta
+          telefonoak jolasteko balioko duen joko bat eraikiko dugu.
+      4:
+        text: Zure pantaila hiru zati nagusitan banatuta dago. Ezkerrean programa
+          nola exekutatzen den ikusi ahal izango duzu. Maila bakoitzean egin beharrekoa
+          azpialdean azaltzen zaizu.
+      5:
+        text: Erdiko eremua tresna kutxa da non blokeetako bakoitza kode zati bat
+          den.
+      6:
+        text: Eskuinean duzun gune zuria laneremua da eta bertan eraikiko dugu programa.
+      7:
+        text: Hasteko, zure blokeak "martxan dagoenean" bloke laranjarekin lotu beharko
+          dituzu. Hainbat bloke lotu ditzakezu elkarrekin hauek arrastatuz inguruko
+          marra horia agertu arte. Orduan elkar lotu egingo dira.
+      8:
+        text: Lehen puzzle honetan, aktoreek zerbait esatea lortuko dugu "esan" blokea
+          "martxan dagoenean" blokearekin lotzen eta zure mezua bertan idazten. Zure
+          blokeak behar den lekuan dituzunean hasi botoian sakatu programatu duzuna
+          ikusteko.
+      9:
+        text: Has zaitez eta bukaerarako zure joko propioa sortzeko kapaz izango zara,
+          elkar eragin dezaketen mota guztietako jokalariekin, puntuekin, gauzak jaurtikiz,
+          eta elkar desagerraraziz. Dena zure esku dago!
+    iceage_repeat:
+      1:
+        text: Imajina dezakezu zerbait behin eta berriz betirako errepikatzen egon
+          beharko bazenu? Zorionez ez duzu horrelakorik inoiz egin beharko konputagailuak
+          oso onak baitira gauzak errepikatzen.
+      2:
+        text: Hau da betirako errepikatu blokea. Edozer gauza bloke honen barruan
+          betirako errepikatuko da jokoan. Aktore batek gauzaren bat errepikatzen
+          ibiltzea nahi badugu jokalariaren parte hartzerik gabe, bloke horiek betirako
+          errepikatu blokearen barruan jarriko ditugu.
+      3:
+        text: Ondorengo puzzlean gure helburua da aktoreari laguntzea modu jarraituan
+          lan bat egiten. Aginduak errepikatzen ikastea denbora asko aurrezteko aukera
+          emango dizu gero zure joko propioa egiten ari zarenean.
+    if:
+      1:
+        text: 'Kaixo, Bill naiz! Ikas dezagun oinarrizko kontzeptu bat: "baldin" aginduak.
+          Horiei esker hartzen dituzte konputagailuek erabakiak.'
+      2:
+        text: Zuk zeuk egunero erabiltzen dituzu "baldin" aginduak. Goizero kalera
+          irten baino lehen, zera esaten duzu BALDIN kanpoan euria badago, xira jantzi
+          beharko dut.
+      3:
+        text: Zonbiari agindu diezaiokegu begiratzea ea ezker alden bidea dagoen,
+          eta ezkerrerako bidea topatzen BALDIN badu, noranzko horretara biratzeko
+          esan diezaiokegu.
+      4:
+        text: Hau egiteko kodea idazteko, "baldin" blokea arrastatuko dugu eta haren
+          barruan "biratu ezkerrera" bloke bat jarri.
+      5:
+        text: Orain, horren gainean "mugitu aurrera" bloke bat jartzen badugu, eta
+          guztiaren inguruan "errepikatu" bloke bat, zonbia mugitzen den bakoitzean
+          begiratuko du ea ezkerretara bidea dagoen eta biratuko du. "Errepikatu"
+          agindua funtsezkoa da urrats bakoitzean biratu daitekeen begiratzeko.
+      6:
+        text: '"Baldin" aginduak oso garrantzitsuak dira programazioan. Nire lehenengo
+          programetako bat "hiru lerroan" jolasa izan zen, eta bazegoen "baldin" agindu
+          bat, hau esaten zuena: BALDIN beste jokalaria irabazteko zorian dago, kokatu
+          nire pieza besteak ez irabazteko tokian.'
+      7:
+        text: Ongi pasa "baldin" blokea erabiltzen!
+    if_else:
+      1:
+        text: Kaixo, Saloni naiz. Programazioa erabiltzen dut arazoei soluzioak bilatzeko,
+          osasungintzan eta medikuntzan. Ikas dezagun "baldin bestela" blokea. "baldin"
+          blokea bezalakoa da, baina atal gehigarri bat dauka bukaeran, "bestela"
+          atala.
+      2:
+        text: '"Mugitu aurrera" bloke bat jartzen badut "egin" dioen tokian eta "biratu
+          ezkerrera" bloke bat "bestela" dioen tokian, horrek esan nahi du zonbiak
+          bi aukera izango dituela mugitzeko. BALDIN bidea libre badago aurrera joateko,
+          orduan zonbia aurrera mugituko da, BESTELA (hau da, aurrera joateko bidea
+          ez badago libre) zonbiak ezkerrera biratuko du.'
+      3:
+        text: '"Baldin" blokearekin bezala, "baldin bestela" blokeak ere jar ditzakegu
+          "errepikatu" bloke baten barruan; horrela, zonbia ez da geldituko eta "baldin
+          bestela" blokeak detektatuko du norantz mugitu daitekeen.'
+      4:
+        text: Orain eraman ditzagun zonbi horiek haien tokira!
+    if_else_scrat:
+      1:
+        text: Baldin-bestela agindu bat bi aukeren arteko erabaki bat da. Ikus dezagun
+          nola erabil dezakegun baldin-bestela agindua gure adiskide Scrat urtxintxarekin.
+      2:
+        text: Bloke hau "baldin" blokearen antzekoa da, baina honek badu bigarren
+          zati bat "bestela" dioena. "mugitu aurrera" bloke bat jartzen badut "egin"-en
+          ondoren, eta "biratu ezkerrera" bloke bat "bestela"-ren ondoren, horrek
+          zera esan nahi du, Scrat urtxintxa aurrera mugituko da aurrean bide irekia
+          baldin badu; bestela, aurrean oztoporen bat baldin badu, Scrat ezkerrera
+          biratuko da.
+      3:
+        text: Erabaki bat hartu eta erabaki horretan oinarrituz bi ekintzetako bat
+          aukeratzean datza. Eta, "baldin" blokeekin gertatzen zen bezala, "baldin-bestela"
+          blokeak ere jar daitezke "errepikatu" bloke baten barnean.
+      4:
+        text: Orain lagun diezaiogun Scrat urtxintxari ezkurra lortzen!
     infinity_playlab_events:
       1:
         text: Orain joko programatzaileek egunero erabiltzen duten zerbait ikasiko
@@ -1871,6 +1827,596 @@ eu:
           ditugu. Hurrengo puzle hontan helburua Anna etengabe gora eta behera mugitzea
           da. Errepikatu komandoen funtzionamendua ulertzen baduzu, denbora luzea
           aurreratuko duzu gero, zure jokoa garatzen duzunean.
+    loop_for:
+      1:
+        text: Kaixo! Trina naiz eta Pixar enpresan egiten dut lan. Film askotan egin
+          dut lan, Shrek barne.
+      2:
+        text: Hau da gure "kontagailu" begizta berria. Behin eta berriro beteko ditu
+          aginduak, baina begizta bakoitzean aldaketa txikiak ere sartu ditzake agindu
+          horietan.
+      3:
+        text: Adibide honetan, gure "kontagailu" begiztak dio "kontatu kontagailuarekin
+          50etik 90era 10naka" eta haren barruan gure "marraztu karratu bat" blokea
+          dago. Arrastatu "kontagailu" blokea "Aldagaiak" ataletik "luzera" dioen
+          lekura.
+      4:
+        text: Honek esan nahi du gure artistak 50 pixeleko luzerako aldeak dituen
+          lauki bat marraztuko duela, gero 10 gehitu eta 60 pixeleko aldeko laukia
+          marraztuko du. Gero jarraituko du laukiak marrazten 10naka gehituz, 90koa
+          lortu arte. Horrela 50, 60, 70, 80 eta 90ko laukiak lortuko ditugu.
+    loop_times:
+      1:
+        text: Kaixo, Mark naiz! Ikas dezagun begiztei buruz. Begiztek, edozein ekintza
+          multzo, behin eta berriro errepikatzeko balio dute, bai milaka edo baita
+          milioika aldiz ere.
+      2:
+        text: Ariketa honetan, txoria 5 aldiz aurrera mugiarazi nahi dugu txerriarengana
+          iristeko.
+      3:
+        text: Gure lana errazteko, "errepikatu" bloke berria erabili dezakegu.
+      4:
+        text: 5 "mugitu aurrera" bloke arrastatu beharrean...
+      5:
+        text: '"aurrera mugitu" blokea "errepikatu" blokearen barruan jarri dezakegu,
+          eta blokean, zenbakiz adierazi zenbat aldiz errepikatu nahi dugun.'
+      6:
+        text: 'Hau garrantzitsua da: "errepikatu" bloke baten barruan agindu bat baino
+          gehiago jarri ditzakezu.'
+      7:
+        text: Ondo pasa "errepikatu" bloke berria erabiliz!
+    loop_until:
+      1:
+        text: Kaixo, Chris naiz. Miami Heat taldean jokatu aurretik, informatika ikasi
+          nuen Georgia Tech unibertsitatean. Probatu dezagun "errepikatu arte" bloke
+          berria.
+      2:
+        text: Eta, txoria txerriarenganaino iristeko zenbat mugitu behar duen jakingo
+          ez bagenu?
+      3:
+        text: '"errepikatu harik eta" bloke baten barruan "mugitu aurrera" bloke bat
+          sartzen badugu, txoria aurrera mugituko da txerriarenganaino iritsi ARTE
+          (edo horma baten kontra jo arte).'
+      4:
+        text: 'Hau garrantzitsua da: "errepikatu harik eta" blokearen barruan bloke
+          asko sar ditzakegu, eta sartutako errepikatuko dira.'
+    loop_while:
+      1:
+        text: 'Kaixo! Makinde naiz. Ikas dezagun "bitartean blokea." '
+      2:
+        text: '"Bitartean blokea"k barruan jartzen duzuna egingo du goiko adierazpena
+          EGIA den BITARTEAN.'
+      3:
+        text: Adibidez, baserritarra menditxo baten gainean baldin badago, palakada
+          bat ateratzen jarraituko du bere azpian menditxorik geratzen den BITARTEAN.
+    maze_intro:
+      1:
+        text: Ongi etorri zure lehen kode ordura! Goazen bada zure lehen programazio
+          esperientzian sakontzera.
+      2:
+        text: Blockly erabiliko dugu, blokeak arrastatu eta askatuz kodea idazten
+          duen programazio lengoaia bisuala.
+      3:
+        text: Normalean, programatu tekleatuz egiten da, baina Blockly bisuala da.
+          Bloke bakoitzak "benetako" kode lerro bat adierazten du.
+      4:
+        text: Konputazio zientzien oinarriak ikasiko dituzu. Kontzeptu hauek appak
+          egiteko edota Mars rover-a kontrolatzeko erabiltzen dira.
+      5:
+        text: Programa bat, zure ordenagailuak jarraituko duen agindu multzo bat da.
+      6:
+        text: Zure lehenengo programaren helburua, Angry Bird labirintoan zehar gidatzea
+          da txerri berdea harrapatzeko.
+      7:
+        text: Ezkerreko aldea zure programa exekutatuko den labirintoa da. Jarraibideak
+          labirintoaren azpian daude.
+      8:
+        text: Erdiko tresna kutxak Angry Bird-entzako aginduak ditu. Kodea eraikitzeko
+          erabiliko dituzu.
+      9:
+        text: Eskuinaldean lan eremua dago. Bertara tresna kutxako blokeak arrastatuko
+          dituzu zure programa eraikitzeko. Bloke bat ezabatzeko, iskinean dagoen
+          zakarrontzira arrastatu.
+      10:
+        text: Bloke bakoitza instrukzio bat da. "aurrera mugitu" blokea zure lan eremura
+          mugitzen baduzu eta "Hasi" sakatzen baduzu, gure txoria espazio bat mugituko
+          da labirintoan.
+      11:
+        text: Ekintza bat baino gehiago egiteko, bloke asko arrastatu ditzakezu zure
+          lan eremura eta denak batera elkartu. Txoriak aginduak egikarituko ditu
+          goitik beherako ordenan.
+      12:
+        text: Zure kodea konpondu eta beste saiakera bat egin nahi baduzu, "Berrabiarazi"
+          botoia sakatu.
+      13:
+        text: Goazen txerri horiek harrapatzera!
+    mc_2016_intro:
+      1:
+        text: Kaixo, nire izena Jens da eta Minecraft-en sortzaile diseinugile burua
+          naiz. Datorren orduan, zure berezko Minecraft-jokoa egingo duzu. Honek Minecraft-en
+          antza du baina mundua gelditu da. Ardiak ez dira mugitzen ari, oilaskoak
+          ez dira arrautzak jartzen ari, eta oraintxe zonbiak bare egoten ari dira.
+          Zure esku dago Kodea gehitzea Minecraft-en mundua ibil dadin.
+      8:
+        text: Bloke bat ezabatu nahi baduzu, zerrendatik kendu eta arrastatu berriro
+          tresna-kutxara.
+    mc_congrats_no_share:
+      1:
+        text: Zorionak! Informatikaren oinarriak ikasi berri dituzu.
+      2:
+        text: Orain bloke hauek erabili ditzakezu nahi duzuna egiteko. Ez dago argibiderik
+          eta ebazteko puzlerik. Gogoak ematen dizuna eraiki dezakezu. Aukeratu beharko
+          duzu.
+      3:
+        text: "[ikasleak hizketan] Erreala izan behar du. Ilea moztu. L bat egin dut
+          argi-zuziekin. A bat egin dut urki oholekin. Funtzionatu du. Funtzionatu
+          du. Lanazko etxea egin dugu!"
+      4:
+        text: Orain nahi duzuna eraiki dezakezu! Gozatu!
+    mc_congrats_share:
+      1:
+        text: Zorionak! Informatikaren oinarriak ikasi berri dituzu.
+      2:
+        text: Orain bloke hauek erabili ditzakezu nahi duzuna egiteko. Ez dago argibiderik
+          eta ebazteko puzlerik. Gogoak ematen dizuna eraiki dezakezu. Aukeratu beharko
+          duzu.
+      3:
+        text: "[ikasleak hizketan] Erreala izan behar du. Ilea moztu. L bat egin dut
+          argi-zuziekin. A bat egin dut urki oholekin. Funtzionatu du. Funtzionatu
+          du. Lanazko etxea egin dugu!"
+      4:
+        text: Zure sorkuntza amaitu duzunean, aukeratu partekatu esteka bat lortu
+          eta zure lagunekin partekatzeko. Ondo pasa!
+    mc_if_statements:
+      1:
+        text: Orain, baldintzapeko aginduak ikasiko ditugu. Baldintzapeko aginduak
+          programatzen ikasteko oinarrizkoak dira. Konputagailuari erabakiak hartzen
+          laguntzen diote.
+      2:
+        text: Konputagailu guztiek erabiltzen dituzte baldintzapeko aginduak, nire
+          telefonoak ere bai. Adibidez, nire telefonoa hartzen dudanean kode bat exekutatzen
+          du telefonoa desblokeatuko duen pasahitza zuzena sartuz gero. Kontrako kasuan,
+          errore mezu bat bistaratuko du.
+      3:
+        text: Baldintzapeko aginduak erabil ditzakezu zure kodean Steve eta Alice-ek
+          erreakziona dezaten munduan ikusten dutenaren arabera. Adibidez, harri bat
+          badute aurrean, orduan ezkerrera bira egin dezakete. Edo eskuinera, arbola
+          baten aurrean aurkitzen badira.
+      4:
+        text: Kasu hontan, ez dugu laban erori nahi. Erraza da labaren kasuan zer
+          egin planifikatzea. Pantailan ikus dezakegu. Baina zer gertatzen da harriaren
+          azpian dagoen eta ikusi ezin dezakegun labarekin?
+      5:
+        text: Harria suntsitu ondoren eta aurrera egin aurretik labarik dagoen begiratu
+          behar dugu. Laba baldin badago, harri bat jarri beharko dugu gure pertsonaiaren
+          aurrean aurrera egin aurretik. Horrela modu seguruan mugitu ahal izango
+          gara. Suntsitzeko garaia! Eta gogoratu baldintzapeko agindua erabili behar
+          duzula kontuz ibiltzeko.
+    mc_intro:
+      1:
+        text: Nire izena Jens Bergensten da baina Jeb izenarekin ezagutzen naute.
+          Minecraft-en garatzaileen burua naiz hemen, Mojang-en, Estokolmon. Hamaika
+          edo hamabi urte nituen programatzen hasi nintzenean jokoak egin nahi nituelako.
+          Nire aitaren lagun batez esan zidan jokoak egiteko programatzen ikasi behar
+          zela. Eta horrela hasi nintzen. Jokoen arkitektura pentsatzea eta diseinatzea
+          gustoko dut. Hori da Minecraft-etik gehien erakartzen nauena.
+      2:
+        text: Hurrengo orduan informatikaren oinarriak ikasiko dituzu Minecraft mundu
+          simulatu batean Alex edo Steve mugitzeko programatuz.
+      3:
+        text: Ohikoprogramazioa testu moduan egiten da baina gaur Blockly erabiliko
+          dugu, programak idazteko arrastatu eta askatu ditzakezun bloke bisualak
+          erabiltzen dituen sistema. Azken finean, javascript kodea sortzen arituko
+          zara.
+      4:
+        text: Ikasiko dituzun kontzeptuak programatzaileek egunero erabiltzen dituztenak
+          dira eta informatikaren oinarriak dira. Hemen, Mojang-en, Minecraft martxan
+          jartzeko erabiltzen ditugun berak dira.
+      5:
+        text: Hasi aurretik, zure pertsonaia aukeratuko duzu. Nik Alex aukeratuko
+          dut. Pantailan zehar mugituko duen programaren kodea idatziko dugu.
+      6:
+        text: Zure pantaila hiru zati nagusitan banatzen da. Ezkerrean, Minecraft-en
+          jokoeremua dago, zure programa bertan exekutatuko da. Maila bakoitzeko zehaztapenak
+          azpian daude idatzita.
+      7:
+        text: Erdiko gunea tresna-kutxa da eta hauetako bloke bakoitza Alex-en ekintzak
+          gidatzen dituen agindu bat da.
+      8:
+        text: Eskuinean duzun gune zuria laneremua da eta bertan eraikiko dugu programa.
+      9:
+        text: mugituAurrera(); blokea arrastatzen badugu laneremura eta, ondoren,
+          Hasi sakatu, zer gertatzen da? Alex-ek lauki bat aurrera egiten du lauki-sarean.
+      10:
+        text: Eta beste zerbait eginnahi badugu aurrera lauki bat egin ondoren? Programari
+          beste bloke bat gehitu diezaiokegu. biraEskuinera(); blokea aukeratuko dut
+          eta nire mugituAurrera(); blokearen azpira arrastatuko dut lerro naranja
+          azaltzen den arte. Ondoren, askatu eta bi blokeek bat egingo dute. Berriro
+          Hasi sakatzen dugunean, Alex-ek laneremuko zerrendan dauden aginduak exekutatuko
+          ditu, goitik behera.
+      11:
+        text: Bloke bat ezabatu nahi baduzu, zerrendatik kendu eta arrastatu berriro
+          tresna-kutxara.
+      12:
+        text: Zure aldaketak desegin eta hasierako egoerara itzultzeko, erabili laneremuko
+          goiko eskuin izkinan dagoen Hasi berriro botoia. Kontu bat gehiago, ikusten
+          al dituzu biratzeko blokeetan dauden triangelu txiki horiek? Triangelu horiek
+          ikusten badituzu, aukera desberdinak dituzula esan nahi du. Hasi gaitezen
+          kodearekin!
+    mc_repeat:
+      1:
+        text: Lydia Winters naiz, Mojang markako zuzendaria eta Minecraft izeneko
+          joko txiki bat egin dugu.
+      2:
+        text: Nire zeregin gogokoena Minecraft-en esploratzea da. Kobazuloetako abenturak
+          maite ditut eta bertan zer bilatu dezakedan ikusi. Programatzaile ez naizenez,
+          Minecraft-eko ikasgaia jarraitu eta nere kabuz kodetzen ikasteko desiatzen
+          nago.
+      3:
+        text: Azkeneko mailak mugituAurrera(); bloke mordoa behar du. Errazagoa litzateke
+          konutagailuari esan ahal izatea mugituAurrera(); komandoa lau edo bost aldiz
+          exekutatzeko. Zorionez, konputagailuak oso onak dira komandoak errepikatzen
+          errepikatu begizten bidez.
+      4:
+        text: Minecraft egiterakoan, errepikatu begiztak erabiltzen ditugu mundu berri
+          bat sortzeko hasierako materialak kokatzeko. Hori milaka eta milaka bloke
+          dira. Begiztak erabiltzen ditugu ere bai, adibidez Alex-en oinak aurrera
+          eta atzera mugitzeko bera oinez doan heinean. Errepikatu begiztak programazioaren
+          tresna oso baliozkoak dira.
+      5:
+        text: Gaua gainera datorkigu eta horregatik, datozen hurrengo mailatan salbu
+          egoteko etxea eraikiko dugu. Modu errazean egingo dugu hau errepikatu blokea
+          erabiliz.
+      6:
+        text: Gure etxearen horma eraikitzeko Alex-i mugituAurrera(); egiteko eta
+          ohola jartzeko lau aldiz estea daukagu, edo esan mugituAurrera(); egiteko
+          eta ohol bat jartzeko eta, ondoren, erabili errepikatu blokea ekintza hori
+          hainbat aldiz egikaritzeko. Errepikatu blokean egingo dugu klik eta esan
+          zenbat aldiz nahi dugun ekintza hori exekutatzea. Eraiki dezagun gure etxea
+          gaua egin aurretik! Ongi pasa.
+    parameters:
+      1:
+        text: Kaixo, Janete naiz eta Zynga enpresako ingeniaria naiz.
+      2:
+        text: Eta luzera desberdineko aldeak dituzten triangelu mordo bat marraztu
+          nahi badugu?
+      3:
+        text: Kode hori guztia eskuz idatz genezake, edo bestela parametrodun funtzio
+          bat erabil dezakegu.
+      4:
+        text: Hau egiteko, klikatu "marraztu triangelu bat" funtzioaren izar urdinean.
+          Gero arrastatu "sarrera izena" "sarrera" blokera.
+      5:
+        text: '"x" dioen lekuan "luzera" idatzi eta "Enter" sakatzen baduzu, zure
+          funtzioarentzako, luzera parametro bat sortuko duzu.'
+      6:
+        text: Klik egin izarraren gainean. Orain, aldagaien kategorian egin klik eta
+          arrastatu "luzera" blokeak zuri funtzioaren definizioko "aurrera mugitu"
+          blokera. Eta kendu zenbaki bloke zaharra.
+      7:
+        text: Zure funtzioa parametroekin probatzeko "funtzioak" kategoriako eta bertaratu
+          ezazu "triangelua luzerarekin irudikatu" funtzioa.
+      8:
+        text: Orain matematikako blokea erabili dezakezu zenbaki desberdinak sartuz
+          gero tamaina desberdineko triangeluak marrazteko.
+    playlab_events:
+      1:
+        text: Orain, joko-programatzaile orok euren egunerokoan erabiltzen duten zerbait
+          ikasiko dugu. "Gertaerak" deitzen dira. Gertaera batek zure programari adi
+          egoteko esaten dio, zerbait gertatzen bada entzuteko. Hori gertatzen denean,
+          ekintza bat egikarituko du.
+      2:
+        text: Hainat ekintza saguaren klikarekin, geziekin, edota pantaila ukimanarekin
+          daude erlazionatuta.
+      3:
+        text: Oraingoan, jokalariak espazioko robot batean klik egitean, lurtarrak
+          agurtzeko programa inplementatuko dugu, "klik egitean" eta "hitz egin" blokeak
+          erabiliz. Jokalariak robotean klik egitean, "klik egitean" blokea exekutatuko
+          da. Zer dio zure alienak?
+      4:
+        text: '"Gezia sakatzean" blokeak ere badaude. Hauek "mugitu" blokeekin lotzen
+          badituzu, hasi zaitezke zure aktoreak gora, behera, ezker, eskuin mugitzen.
+          Urratsez urrats, zure jokoa elkarreragileago bihurtzen ari da.'
+    playlab_intro:
+      1:
+        text: 'Play Lab erabiliz jokoak sortuko ditugu. Joko onek istorio bat dute,
+          eta istorioek aktoreak. Gure aktoreak sorgin eta alien bihurtzen ikasiko
+          dugu, animaliak hiztegirarazi, mugiarazi, eta beraien arteak elkarreragin
+          daitezen. Tutorial honen bukaeran, hasieratik joko bat sortzeko gai izango
+          zara, eta elkarbanatu ahal izango duzu. '
+      2:
+        text: Zure pantaila 3 zati nagusitan zatitu da. Ezkerrean programa exekutatzeko
+          jokalekua duzu. Maila bakoitzaren instrukzioak behean idatzita daude.
+      3:
+        text: Erdiko zatian erremintak dituzu, eta bloke bakoitza kodigoaren zati
+          bat da. Eskuineko espazio zuria lan-lekua izena du eta hemen eraikiko dugu
+          gure programa.
+      4:
+        text: Hasteko, zure blokeak elkartu beharko dituzu "egikaritzean" bloke laranjarekin.
+          Hainbat bloke elkartu ditzakezu blokeak, lerro horia ikusi arte kanporaka
+          mugituz gero, denak elkartuko dira.
+      5:
+        text: Lehenengo puzle honetan, gure aktorea pinguino bat da eta "Kaixo!" esanaraziko
+          diogu. Horretarako "esan" blokea mugituko dugu "egikaritu" blokearekin elkartu
+          arte, eta bertan "Kaixo!" idatziko dugu. Pinguinoa mugiarazi dezakegu ere,
+          "mugitu eskuinera" eta "mugitu ezkerrera" blokeak erabiliz. Blokeak dagokien
+          tokian dituzunean, "egikaritu" botoia klikatu programatutakoa ikusteko.
+      6:
+        text: Hasi ikasten eta bukatzerakoan zure joko propioa sortu ahalko duzu,
+          jokalari ezberdinekin, elkarreragin dezaketenak, pozik edo triste jar daitezkeenak,
+          puntuak lortu ditzaketenak edo suzko bolak bota ditzaketenak, baita bata
+          bestea desagerrarazi ere. Dena zure esku eta sortu nahi duzun jokoaren esku
+          dago.
+    playlab_repeat_forever:
+      1:
+        text: Hau da "errepikatu betirako" blokea. Edozein gauza bloke honen barruan
+          beti gertatuko da jokoan.
+      2:
+        text: Aktore batek hainbatetan zerbait egitea nahi baldin badugu, jokalariak
+          ezer egin behar izan gabe, bloke horiek "errepikatu betirako" blokearen
+          barruan jarriko ditugu.
+      3:
+        text: Hurrengo puzlean gure helburua magoarekin erreinuko zaurituak patruilatzea
+          da ezkerratik eskurbira denbora guztian. Agindu lanak nola nola errepikatzen
+          ikasiko dugu horrela zure jokua egitean denbora asko aurreztuko duzu.
+    starwars_blocks_congrats:
+      1:
+        text: Kaixo, nire izena Alice da eta proiektu eta injeniaritza taldeak gidatzen
+          ditut hemen, Code.org-en eta une hontan jarraitzen ari zaren tutorialean
+          egin dut lan.
+      2:
+        text: Azkeneko maila lortu duzu. Zorionak! Star Wars jokoa egiteko behar duzun
+          guztia ikasi duzu. Ez dago ez argibiderik, ez ebazteko puzlerik. Zure jokoa
+          eraiki dezakezu eta aukeratu nola funtzionatuko duen. Kontu bat gehiago,
+          soinu berriak eta komando berriak desblokeatu dituzu, oraindik gehiago egin
+          ahal izateko.
+      3:
+        text: "[ikasleak berriketan] Joko bat egin dugu funtsean puntuak lortzeko
+          Puffer Pig-ak lortzen dituzuenean. Ordaina da Puffer Pig bat lortzen duzun
+          bakoitzean Storm Trooper bat azaltzen dela. Orain pantaila Puffer Pig-ez
+          beteta daukazu eta 10,000 ukitu behar dituzu irabazteko."
+      4:
+        text: "[ikasleak berriketan] Joko bat egin dugu zeinetan ezin duzun galdu
+          eta akatzen duzun orok puntuak ematen dizkizun. Nire programan, gauzak aldatu
+          ditut eta gora klikatzen duzunean zure pertsonaia behera doa eta, eskuinera
+          joateko esaten diozunean, pertsonaiak ezkerrera egiten du. Benetan zaila
+          da! Batzuetan abantaila daukazu, abantaila injustua, jokoaren garatzailea
+          bazara. Lortu al dut? Bai noski!"
+      5:
+        text: Zure sorkuntza amaitu duzunean, aukeratu partekatu zure lagunekin partekatzeko
+          edo zure telefonoak jokatzeko esteka lortzeko. Ondo pasa!
+    starwars_blocks_events:
+      1:
+        text: Kaixo, nire izena Charita Carter da. Ekoizke kreatibo seniorra naiz
+          Walt Disney Imagineering-en. Gure gonbidatuentzako atrakzioak ekoizten dituen
+          taldearen arduraduna naiz. Beti ari gara gure gonbidatuen esperientzia hobetzeko
+          moduak bilatzen eta teknologia horren muina da.
+      2:
+        text: Zorionak, lortu duzu! BB-8 programatu duzu. Orain prest zaude zerbait
+          zailagoa egiteko. Goazen bada. programazioaren oinarriak ikasi dituzunez,
+          atzera egingo dugu denboran zure jokoa eraikitzeko, R2-D2 eta C3PO protagonista
+          dituzula.
+      3:
+        text: 'Joko berri bat egiteko, joko programatzaileek egunero erabiltzen duten
+          gauza bat ikasi behar duzu: gertaerak dira. Gertaerek zure programari esaten
+          diote entzun edo itxaroteko zerbait gertatu bitartean, eta gertatzen denean,
+          ekintza bat exekutatzen da.'
+      4:
+        text: Gertaeren adibideak dira saguan klikatzeko, gezidun botoi bat sakatzeko
+          edo pantaila ukitzeko zain egotea.
+      5:
+        text: R2-D2 gora mugitu eta Rebel Pilot-arii mezu bat helaraztea egingo dugu
+          eta, ondoren, behera mugitu beste Rebel Pilot-arengana. Gertaerak erabiliko
+          ditugu mugitu arazteko. Jokalariak gora/behera gezidun teklak edo gora/behera
+          botoiak erabiltzen dituenean.
+      6:
+        text: GoraEgitean() gertaera-blokea erabili eta itsatsi horri joanGora() blokea.
+          Jokalariak gora gezidun tekla sakatzen duenean, goraEgitean() blokeari dagokion
+          kodea exekutatuko da. Eta gauza bera egingo dugu R2-D2 behera mugi dadin.
+          Oraingoan, gure robota kontrolatzeko kode guztia idatzi ordez, botoiak sakatzeko
+          gertaerekin erreakzionatzen utziko diogu R2-D2-ri pantailan zehar mugitzeko.
+      7:
+        text: Urratsez urrats, zure jokoarekin gero eta gehiago elkarreragin daiteke.
+    starwars_blocks_intro:
+      1:
+        text: Kaixo, ni Kathleen Kennedy naiz eta Star Wars-en ekoizlea naiz. Indarraren
+          Iratzarraldia. Gaur gure izar batekin arituko zara lanean, BB-8-rekin. BB-8
+          robot esferiko bat da. Egiten duen guztia eta egiten duen mugimendu bakoitza
+          konputagailu software bidez dago kontrolatuta. Informatikak industria guztietan
+          du eragina, marketinetik hasi eta osasungintza eta zinemagintzaraino. Finean,
+          ehundaka informatikarik elkarrekin egin zuten lan Indarraren Iratzarraldia
+          filma egiteko.
+      2:
+        text: Kaixo, ni Rachel Rose naiz, Ikerkuntza eta Garapenerako senior injeniaria
+          ILM-n, eta animazio eta izakien garapenerako taldearen burua. Indarraren
+          Iratzarraldia filman nire ardura artistei pertsonaien atal mugikorrak garatzen
+          laguntzea da pertsonaiak oso sinisgarriak gerta daitezen urrun-urruneko
+          galaxia batean.
+      3:
+        text: Hurrengo ordubetean gure Star Wars jokoa garatuko dugu. Programazioaren
+          oinarriak irakatsiko dizkizugu. Ohiko programazioa testu formatuan izaten
+          da, baina guk hemen blokeak erabiliko ditugu, arrastatu eta askatuz programak
+          idazteko. Hurrengo ordubetean Hasteko Rey-rekin egingo dugu lan BB-8-ri
+          oinez ibiltarazi eta txatarra guztia jaso arazteko.
+      4:
+        text: Zure pantaila 3 zati nagusitan zatitu da. Ezkerrean programa exekutatzeko
+          Star Wars jokalekua duzu. Maila bakoitzaren instrukzioak jokalekuaren azpian
+          idatzita daude.
+      5:
+        text: Erdiko gunea tresna-kutxa da eta hauetako bloke bakoitza BB-8-k ulertzen
+          duen komando bat da.
+      6:
+        text: Eskuinean dagoen espazio zuria laneremua da eta hor eraikiko dugu gure
+          programa.
+      7:
+        text: mugituEzkerrera(); blokea laneremura arrastatzen badut, zer gertatzen
+          da? BB-8 lauki-sarean koadro bat mugitzen da.
+      8:
+        text: Eta mugituEzkerrera(); blokearen ondoren BB-8-k zerbait egitea nahi
+          badut? Gure programari beste bloke bat gehi diezaioket. mugituGora(); blokea
+          aukeratuko dut eta arrastatu mugituEzkerrera(); blokearen azpira nabarmentzen
+          den arte. Ondoren, askatu eta bi blokeek bat egingo dute. Hasi sakatzen
+          dudanean, BB-8-k laneremuan dauden aginduak goitik behera exekutatuko ditu.
+      9:
+        text: Bloke bat ezabatu nahi baduzu, zerrendatik kendu eta arrastatu berriro
+          tresna-kutxara.
+      10:
+        text: Hasi sakatu ondoren, beti sakatu dezakezu leheneratu botoia BB-8 berriro
+          hasierara eramateko. Goazen proba egitera!
+    starwars_congrats:
+      1:
+        text: Kaixo, nire izena Alice da eta proiektu eta injeniaritza taldeak gidatzen
+          ditut hemen, Code.org-en eta une hontan jarraitzen ari zaren tutorialean
+          egin dut lan.
+      2:
+        text: Azkeneko maila lortu duzu. Zorionak! Star Wars jokoa egiteko behar duzun
+          guztia ikasi duzu. Ez dago ez argibiderik, ez ebazteko puzlerik. Zure jokoa
+          eraiki dezakezu eta aukeratu nola funtzionatuko duen. Kontu bat gehiago,
+          soinu berriak eta komando berriak desblokeatu dituzu, oraindik gehiago egin
+          ahal izateko.
+      3:
+        text: "[ikasleak berriketan] Joko bat egin dugu funtsean puntuak lortzeko
+          Puffer Pig-ak lortzen dituzuenean. Ordaina da Puffer Pig bat lortzen duzun
+          bakoitzean Storm Trooper bat azaltzen dela. Orain pantaila Puffer Pig-ez
+          beteta daukazu eta 10,000 ukitu behar dituzu irabazteko."
+      4:
+        text: "[ikasleak berriketan] Joko bat egin dugu zeinetan ezin duzun galdu
+          eta akatzen duzun orok puntuak ematen dizkizun. Nire programan, gauzak aldatu
+          ditut eta gora klikatzen duzunean zure pertsonaia behera doa eta, eskuinera
+          joateko esaten diozunean, pertsonaiak ezkerrera egiten du. Benetan zaila
+          da! Batzuetan abantaila daukazu, abantaila injustua, jokoaren garatzailea
+          bazara. Lortu al dut? Bai noski!"
+      5:
+        text: Zure sorkuntza amaitu duzunean, aukeratu partekatu zure lagunekin partekatzeko
+          edo zure telefonoak jokatzeko esteka lortzeko. Ondo pasa!
+    starwars_events:
+      1:
+        text: Kaixo, nire izena Charita Carter da. Ekoizke kreatibo seniorra naiz
+          Walt Disney Imagineering-en. Gure gonbidatuentzako atrakzioak ekoizten dituen
+          taldearen arduraduna naiz. Beti ari gara gure gonbidatuen esperientzia hobetzeko
+          moduak bilatzen eta teknologia horren muina da.
+      2:
+        text: Zorionak, lortu duzu! BB-8 programatu duzu. Orain prest zaude zerbait
+          zailagoa egiteko. Goazen bada. programazioaren oinarriak ikasi dituzunez,
+          atzera egingo dugu denboran zure jokoa eraikitzeko, R2-D2 eta C3PO protagonista
+          dituzula.
+      3:
+        text: 'Joko berri bat egiteko, joko programatzaileek egunero erabiltzen duten
+          gauza bat ikasi behar duzu: gertaerak dira. Gertaerek zure programari esaten
+          diote entzun edo itxaroteko zerbait gertatu bitartean, eta gertatzen denean,
+          ekintza bat exekutatzen da.'
+      4:
+        text: Gertaeren adibideak dira saguan klikatzeko, gezidun botoi bat sakatzeko
+          edo pantaila ukitzeko zain egotea.
+      5:
+        text: R2-D2 gora mugitu eta Rebel Pilot-arii mezu bat helaraztea egingo dugu
+          eta, ondoren, behera mugitu beste Rebel Pilot-arengana. Gertaerak erabiliko
+          ditugu mugitu arazteko. Jokalariak gora/behera gezidun teklak edo gora/behera
+          botoiak erabiltzen dituenean.
+      6:
+        text: goraEgitean() gertaera blokea erabiltzen dugu eta eginGora() blokea
+          lotzen diogu. Erabiltzaileak gora gezia sakatzen duenean, goraEgitean()
+          blokea exekutatzen da. Gauza bera egingo dugu R2-D2 behera mugi arazteko.
+      7:
+        text: Hau egiteko goraEgitean() komandoa erabilio dugu. Komandoa tresna-kutxatik
+          kanpo arrastatzen baduzu, ikusiko duzu giltza artean azaltzen dela eta ez
+          puntu eta komarekin. Honek lekua uzten digu erdian beste komando batzuk
+          jartzeko. Giltza horien artean kokatzen dugun komando guztiak exekutatuko
+          dira erabiltzaileak gora gezia sakatzen duenean.
+      8:
+        text: R2-D2-k gora egitea nahi dugu beraz, jar dezagun joanGora(); bloke bat
+          komandoaren barnean. Eta gauza bera egingo dugu R2-D2-k behera egiteko.
+      9:
+        text: Horrela, gure robota kontrolatzeko kode guztia aldez aurretik idatzi
+          ordez R2-D2 pantailan zehar mugituko duten botoiak sakatzeko gertaeren aurrean
+          erreakziona dezan nahi dugu. Urratsez urrats zure jokoarekin gero eta gehiago
+          elkarreragin daiteke.
+    starwars_intro:
+      1:
+        text: Kaixo, ni Kathleen Kennedy naiz eta Star Wars-en ekoizlea naiz. Indarraren
+          Iratzarraldia. Gaur gure izar batekin arituko zara lanean, BB-8-rekin. BB-8
+          robot esferiko bat da. Egiten duen guztia eta egiten duen mugimendu bakoitza
+          konputagailu software bidez dago kontrolatuta. Informatikak industria guztietan
+          du eragina, marketinetik hasi eta osasungintza eta zinemagintzaraino. Finean,
+          ehundaka informatikarik elkarrekin egin zuten lan Indarraren Iratzarraldia
+          filma egiteko.
+      2:
+        text: Kaixo, ni Rachel Rose naiz, Ikerkuntza eta Garapenerako senior injeniaria
+          ILM-n, eta animazio eta izakien garapenerako taldearen burua. Indarraren
+          Iratzarraldia filman nire ardura artistei pertsonaien atal mugikorrak garatzen
+          laguntzea da pertsonaiak oso sinisgarriak gerta daitezen urrun-urruneko
+          galaxia batean.
+      3:
+        text: Hurrengo ordubetean gure Star Wars jokoa garatuko dugu. Programazioaren
+          oinarriak irakatsiko dizkizugu. Ohiko programazioa testu formatuan izaten
+          da, baina guk hemen blokeak erabiliko ditugu, arrastatu eta askatuz programak
+          idazteko. Azken finean kodea sortzen arituko zara. Oinarriak blokeen bidez
+          landu eta gero, javaScript-era aldatuko dugu, programazio lengoaia arrakastatsuenetakoa
+          amaraunean.
+      4:
+        text: Hasteko Rey-rekin egingo dugu lan BB-8-ri oinez ibiltarazi eta txatarra
+          guztia jaso arazteko. Zure pantaila hiru zatitan dago banatuta. Ezkerrean
+          Star Wars-en joko-eremua dago, bertan kodea exekutatuko da. Maila bakoitzaren
+          argibideak joko-eremuaren azpian daude idatzita.
+      5:
+        text: Erdiko gunea tresna-kutxa da eta hauetako bloke bakoitza BB-8-k ulertzen
+          duen komando bat da.
+      6:
+        text: Eskuineko gune zuria lan-eremua da eta bertan eraikiko dugu gure programa.
+      7:
+        text: mugituEzkerrera(); blokea arrastatzen badut gure laneremura eta Hasi
+          sakatu, zer gertatzen da? BB-8 ezkerrera lauki bat mugitzen da lauki-sarean.
+      8:
+        text: Eta BB-8-k beste zerbait egitea nahi badut mugituEzkerrera(); blokearen
+          ondoren? Beste bloke bat gehitu diezaioket gure programari. mugituGora();
+          blokea aukeratuko dut eta mugituEzkerrera(); blokearen azpira arrastatuko
+          dut nabarmenduta agertzen den arte. Orduan, askatu eta bi blokeek bat egingo
+          dute.
+      9:
+        text: Eta berriro Hasi sakatzen badut, BB-8-k gure laneremuan zerrendatuta
+          dauden aginduak exekutatuko ditu. Bloke bat ezabatu nahi baduzu, zerrendakit
+          kendu eta arrastatu berriro tresna-kutxara.
+      10:
+        text: Hasi sakatzen duzunean beti daukazu aukera leheneratu botoia sakatzeko
+          BB-8 berriro hasierako egoerara itzultzeko. Goazen proba egitera!
+    starwars_typing:
+      1:
+        text: Erabiltzen aritu garen blokeen barnean JavaScript aginduak daude. Gauregun,
+          garatzaile profesionalen artean programazio lengoaia ezagunena da JavaScript.
+          Blokeak oso egokiak dira kodetzen ikasten hasteko eta esaterako, Harvard
+          eta Berkeley unibertsitateetan modu hontan hasten dira irakasten. Baina
+          oinarriak ikasita, injeniariek kodea mekanografiatuz idazten dute arinago
+          egiten dutelako horrela.
+      2:
+        text: Ehundaka agindu idatzi ditzakegu tresna-kutxa batean bilatu gabe edo
+          arrastatu gabe. Ikasten ari zarenez hasieran mekanografiatzea motelagoa
+          gertatzen zaizu baina proba egitea nahi genuen.
+      3:
+        text: Zure lan-eremuk goiko ezker izkinan sakatu dezakezu Ikusi iturburua
+          botoia edozein puzletan blokeak utzi eta kodea testu moduan mekanografiatzera
+          pasatzeko.
+      4:
+        text: Hurrengo ikasgaian, mekanografia moduaren oinarriak erakutsiko dizkizugu.
+          Oraindik tresna-kutxatik blokeak arrastatu ahal izango dituzu edo komandoaren
+          izena idatzi. Mekanografiatzen hasten zarenean, komando posible guztiak
+          ikusi ahal izango dituzu idazten ari zaren horren azpian. Komando osoaren
+          izena idatzi ordez, aukeran erakusten zaizun horietako bat aukeratu dezakezu,
+          azkarrago egiteko. Nire lanean osatze automatikorako ezaugarri hau etengabe
+          erabiltzen dut kodea idazten dudanean.
+      5:
+        text: Kodea idazten ari zarenean, konputagailuak zehaztasuna eskatuko dizu.
+          Komandoa letreiatu eta lehenengo letra maiuskulaz modu egoki eta zehatzean
+          jarri beharko duzu, parentesiak eta puntu eta koma barne. Errore tipografiko
+          txiki bat egiten baduzu, BB-8-k ezingo du ulertu eta ez da mugitzeko gai
+          izango.
+      6:
+        text: Lerro batean errore bat egiten baduzu, editoreak nabarmendu egingo du
+          zuretzat aldatu eta zuzendu dezazun.
+      7:
+        text: Trabazen bazara, beti has zaitezke berriro Hasi berriro botoia sakatuz,
+          eta bloke modura alda dezakezu edozein momentutan goiko eskuin izkinean
+          klik eginez. Ondo da, saia gaitezen mekanografiatzen! Eta erroreak egiten
+          badituzu, ez etsi. Guztiok behar ditugu hainbat saiakera zuzen egiteko.
     tutorial_puzzle_challenge:
       1:
         text: Zer izan nahi duzu handitzean, Olivia? Astronauta. Ba al dakizu zer
@@ -1937,6 +2483,44 @@ eu:
           egiteko gai izango zara. Ekintza dibertigarria da eta oso bizigarria, bitarrak
           oso teknikoa dirudien arren, behin ulertuz gero, hizkuntza sekretu bat hitzegitea
           bezala baita.
+    unplug10:
+      1:
+        text: Jarduera honek modu ulerterrazean azaltzen du nola funtzionatzen duen
+          internetek. Behar den terminologia guztia modu sinplean azaltzen dugu eta
+          horrela ikasleek mezuak pasatzea simulatu dezakete, mail batean egingo litzatekeen
+          moduan.
+      2:
+        text: 'Ikasleek mezuak igorriko dituzte hiru igortze metodoetako bat direla
+          suposatuz: haririk gabeko internet, DSLa edo zuntz optikoa. Wi-fia ordezkatzen
+          duten ikasleek igorri behar duten mezua buruan eraman behar dute, wifia
+          delako informazioa galtzeko probabilitaterik handiena duena.'
+      3:
+        text: DSLa edo haria direla suposatzen duten ikasleek mezua eramango dute
+          esku-gainean, non suposatzen den informazioa galtzeko arriskua txikiagoa
+          den. Eta zuntz optikoa ordezkatzen duten ikasleek mezuak eramango dituzte
+          bi eskuekin. Jarduera hau oso baliagarria da gutako askok egunero erabiltzen
+          dugun zerbait ulertzeko.
+    unplug11:
+      1:
+        text: Beraz, unea iritsi da atzera egin eta gainetik aztertzeko azken hemeretzi
+          ikasgaietan ikasi duzun guztia. Une aproposa da ikasleei ikusarazteko egin
+          dutena garrantzitsua dela. Ikasgai hauetan zehar pertsona heldu askok informatikari
+          buruz dakitena baino askoz gehiago ikasi dute.
+      2:
+        text: Eztabaidatu talde osoan edo talde txikitan adierazteko zein izan diren
+          haien ikasgairik gustukoenak. Ikasi duzun guztia errepasatzen duzunean,
+          orduan ikasleen sormena agerian gera daiteke. Bana itzazu taldetan eta utziezu
+          bere kabuz sortzen ikasgai bat. Esleitu talde bakoitzari kontzeptu garrantzitsu
+          bat, funtzio edo algoritmo bezalakoa, eta utziezu material asko eskura,
+          erabil ditzaten. Talde bakoitzak aurkez dezala sortutako jarduera eta, nahi
+          izanez gero, erreserbatu beste egun bat ikasleek sortutako jarduera horietako
+          batzuk egiteko.
+      3:
+        text: Code.org-eko guztiek espero dugu PRIMERAN pasako zenuela ikastaro honetan
+          zehar. Eta zure ametsa app hoberena sortzea dela, gaisotasunak sendatzen
+          laguntzeko programak egitea dela edo, besterik gabe, problema ebazle bikaina
+          izan nahi duzula, ikastaro honekin amets horiek egi bihurtzeko lehenengo
+          urratsa eman duzu.
     unplug2:
       1:
         text: Pentsamendu konputazionalari buruzko ikasgaiaren muina da nora heldu
@@ -2071,587 +2655,3 @@ eu:
           eta zure aurretik joan direnen lana egiaztatu behar izatea. Oso azkar ulertuko
           duzu ze garrantzitsua den kontuz idaztea zure kodea talde oso bat zure menpekoa
           denean.
-    unplug10:
-      1:
-        text: Jarduera honek modu ulerterrazean azaltzen du nola funtzionatzen duen
-          internetek. Behar den terminologia guztia modu sinplean azaltzen dugu eta
-          horrela ikasleek mezuak pasatzea simulatu dezakete, mail batean egingo litzatekeen
-          moduan.
-      2:
-        text: 'Ikasleek mezuak igorriko dituzte hiru igortze metodoetako bat direla
-          suposatuz: haririk gabeko internet, DSLa edo zuntz optikoa. Wi-fia ordezkatzen
-          duten ikasleek igorri behar duten mezua buruan eraman behar dute, wifia
-          delako informazioa galtzeko probabilitaterik handiena duena.'
-      3:
-        text: DSLa edo haria direla suposatzen duten ikasleek mezua eramango dute
-          esku-gainean, non suposatzen den informazioa galtzeko arriskua txikiagoa
-          den. Eta zuntz optikoa ordezkatzen duten ikasleek mezuak eramango dituzte
-          bi eskuekin. Jarduera hau oso baliagarria da gutako askok egunero erabiltzen
-          dugun zerbait ulertzeko.
-    unplug11:
-      1:
-        text: Beraz, unea iritsi da atzera egin eta gainetik aztertzeko azken hemeretzi
-          ikasgaietan ikasi duzun guztia. Une aproposa da ikasleei ikusarazteko egin
-          dutena garrantzitsua dela. Ikasgai hauetan zehar pertsona heldu askok informatikari
-          buruz dakitena baino askoz gehiago ikasi dute.
-      2:
-        text: Eztabaidatu talde osoan edo talde txikitan adierazteko zein izan diren
-          haien ikasgairik gustukoenak. Ikasi duzun guztia errepasatzen duzunean,
-          orduan ikasleen sormena agerian gera daiteke. Bana itzazu taldetan eta utziezu
-          bere kabuz sortzen ikasgai bat. Esleitu talde bakoitzari kontzeptu garrantzitsu
-          bat, funtzio edo algoritmo bezalakoa, eta utziezu material asko eskura,
-          erabil ditzaten. Talde bakoitzak aurkez dezala sortutako jarduera eta, nahi
-          izanez gero, erreserbatu beste egun bat ikasleek sortutako jarduera horietako
-          batzuk egiteko.
-      3:
-        text: Code.org-eko guztiek espero dugu PRIMERAN pasako zenuela ikastaro honetan
-          zehar. Eta zure ametsa app hoberena sortzea dela, gaisotasunak sendatzen
-          laguntzeko programak egitea dela edo, besterik gabe, problema ebazle bikaina
-          izan nahi duzula, ikastaro honekin amets horiek egi bihurtzeko lehenengo
-          urratsa eman duzu.
-    starwars_intro:
-      1:
-        text: Kaixo, ni Kathleen Kennedy naiz eta Star Wars-en ekoizlea naiz. Indarraren
-          Iratzarraldia. Gaur gure izar batekin arituko zara lanean, BB-8-rekin. BB-8
-          robot esferiko bat da. Egiten duen guztia eta egiten duen mugimendu bakoitza
-          konputagailu software bidez dago kontrolatuta. Informatikak industria guztietan
-          du eragina, marketinetik hasi eta osasungintza eta zinemagintzaraino. Finean,
-          ehundaka informatikarik elkarrekin egin zuten lan Indarraren Iratzarraldia
-          filma egiteko.
-      2:
-        text: Kaixo, ni Rachel Rose naiz, Ikerkuntza eta Garapenerako senior injeniaria
-          ILM-n, eta animazio eta izakien garapenerako taldearen burua. Indarraren
-          Iratzarraldia filman nire ardura artistei pertsonaien atal mugikorrak garatzen
-          laguntzea da pertsonaiak oso sinisgarriak gerta daitezen urrun-urruneko
-          galaxia batean.
-      3:
-        text: Hurrengo ordubetean gure Star Wars jokoa garatuko dugu. Programazioaren
-          oinarriak irakatsiko dizkizugu. Ohiko programazioa testu formatuan izaten
-          da, baina guk hemen blokeak erabiliko ditugu, arrastatu eta askatuz programak
-          idazteko. Azken finean kodea sortzen arituko zara. Oinarriak blokeen bidez
-          landu eta gero, javaScript-era aldatuko dugu, programazio lengoaia arrakastatsuenetakoa
-          amaraunean.
-      4:
-        text: Hasteko Rey-rekin egingo dugu lan BB-8-ri oinez ibiltarazi eta txatarra
-          guztia jaso arazteko. Zure pantaila hiru zatitan dago banatuta. Ezkerrean
-          Star Wars-en joko-eremua dago, bertan kodea exekutatuko da. Maila bakoitzaren
-          argibideak joko-eremuaren azpian daude idatzita.
-      5:
-        text: Erdiko gunea tresna-kutxa da eta hauetako bloke bakoitza BB-8-k ulertzen
-          duen komando bat da.
-      6:
-        text: Eskuineko gune zuria lan-eremua da eta bertan eraikiko dugu gure programa.
-      7:
-        text: mugituEzkerrera(); blokea arrastatzen badut gure laneremura eta Hasi
-          sakatu, zer gertatzen da? BB-8 ezkerrera lauki bat mugitzen da lauki-sarean.
-      8:
-        text: Eta BB-8-k beste zerbait egitea nahi badut mugituEzkerrera(); blokearen
-          ondoren? Beste bloke bat gehitu diezaioket gure programari. mugituGora();
-          blokea aukeratuko dut eta mugituEzkerrera(); blokearen azpira arrastatuko
-          dut nabarmenduta agertzen den arte. Orduan, askatu eta bi blokeek bat egingo
-          dute.
-      9:
-        text: Eta berriro Hasi sakatzen badut, BB-8-k gure laneremuan zerrendatuta
-          dauden aginduak exekutatuko ditu. Bloke bat ezabatu nahi baduzu, zerrendakit
-          kendu eta arrastatu berriro tresna-kutxara.
-      10:
-        text: Hasi sakatzen duzunean beti daukazu aukera leheneratu botoia sakatzeko
-          BB-8 berriro hasierako egoerara itzultzeko. Goazen proba egitera!
-    starwars_typing:
-      1:
-        text: Erabiltzen aritu garen blokeen barnean JavaScript aginduak daude. Gauregun,
-          garatzaile profesionalen artean programazio lengoaia ezagunena da JavaScript.
-          Blokeak oso egokiak dira kodetzen ikasten hasteko eta esaterako, Harvard
-          eta Berkeley unibertsitateetan modu hontan hasten dira irakasten. Baina
-          oinarriak ikasita, injeniariek kodea mekanografiatuz idazten dute arinago
-          egiten dutelako horrela.
-      2:
-        text: Ehundaka agindu idatzi ditzakegu tresna-kutxa batean bilatu gabe edo
-          arrastatu gabe. Ikasten ari zarenez hasieran mekanografiatzea motelagoa
-          gertatzen zaizu baina proba egitea nahi genuen.
-      3:
-        text: Zure lan-eremuk goiko ezker izkinan sakatu dezakezu Ikusi iturburua
-          botoia edozein puzletan blokeak utzi eta kodea testu moduan mekanografiatzera
-          pasatzeko.
-      4:
-        text: Hurrengo ikasgaian, mekanografia moduaren oinarriak erakutsiko dizkizugu.
-          Oraindik tresna-kutxatik blokeak arrastatu ahal izango dituzu edo komandoaren
-          izena idatzi. Mekanografiatzen hasten zarenean, komando posible guztiak
-          ikusi ahal izango dituzu idazten ari zaren horren azpian. Komando osoaren
-          izena idatzi ordez, aukeran erakusten zaizun horietako bat aukeratu dezakezu,
-          azkarrago egiteko. Nire lanean osatze automatikorako ezaugarri hau etengabe
-          erabiltzen dut kodea idazten dudanean.
-      5:
-        text: Kodea idazten ari zarenean, konputagailuak zehaztasuna eskatuko dizu.
-          Komandoa letreiatu eta lehenengo letra maiuskulaz modu egoki eta zehatzean
-          jarri beharko duzu, parentesiak eta puntu eta koma barne. Errore tipografiko
-          txiki bat egiten baduzu, BB-8-k ezingo du ulertu eta ez da mugitzeko gai
-          izango.
-      6:
-        text: Lerro batean errore bat egiten baduzu, editoreak nabarmendu egingo du
-          zuretzat aldatu eta zuzendu dezazun.
-      7:
-        text: Trabazen bazara, beti has zaitezke berriro Hasi berriro botoia sakatuz,
-          eta bloke modura alda dezakezu edozein momentutan goiko eskuin izkinean
-          klik eginez. Ondo da, saia gaitezen mekanografiatzen! Eta erroreak egiten
-          badituzu, ez etsi. Guztiok behar ditugu hainbat saiakera zuzen egiteko.
-    starwars_events:
-      1:
-        text: Kaixo, nire izena Charita Carter da. Ekoizke kreatibo seniorra naiz
-          Walt Disney Imagineering-en. Gure gonbidatuentzako atrakzioak ekoizten dituen
-          taldearen arduraduna naiz. Beti ari gara gure gonbidatuen esperientzia hobetzeko
-          moduak bilatzen eta teknologia horren muina da.
-      2:
-        text: Zorionak, lortu duzu! BB-8 programatu duzu. Orain prest zaude zerbait
-          zailagoa egiteko. Goazen bada. programazioaren oinarriak ikasi dituzunez,
-          atzera egingo dugu denboran zure jokoa eraikitzeko, R2-D2 eta C3PO protagonista
-          dituzula.
-      3:
-        text: 'Joko berri bat egiteko, joko programatzaileek egunero erabiltzen duten
-          gauza bat ikasi behar duzu: gertaerak dira. Gertaerek zure programari esaten
-          diote entzun edo itxaroteko zerbait gertatu bitartean, eta gertatzen denean,
-          ekintza bat exekutatzen da.'
-      4:
-        text: Gertaeren adibideak dira saguan klikatzeko, gezidun botoi bat sakatzeko
-          edo pantaila ukitzeko zain egotea.
-      5:
-        text: R2-D2 gora mugitu eta Rebel Pilot-arii mezu bat helaraztea egingo dugu
-          eta, ondoren, behera mugitu beste Rebel Pilot-arengana. Gertaerak erabiliko
-          ditugu mugitu arazteko. Jokalariak gora/behera gezidun teklak edo gora/behera
-          botoiak erabiltzen dituenean.
-      6:
-        text: goraEgitean() gertaera blokea erabiltzen dugu eta eginGora() blokea
-          lotzen diogu. Erabiltzaileak gora gezia sakatzen duenean, goraEgitean()
-          blokea exekutatzen da. Gauza bera egingo dugu R2-D2 behera mugi arazteko.
-      7:
-        text: Hau egiteko goraEgitean() komandoa erabilio dugu. Komandoa tresna-kutxatik
-          kanpo arrastatzen baduzu, ikusiko duzu giltza artean azaltzen dela eta ez
-          puntu eta komarekin. Honek lekua uzten digu erdian beste komando batzuk
-          jartzeko. Giltza horien artean kokatzen dugun komando guztiak exekutatuko
-          dira erabiltzaileak gora gezia sakatzen duenean.
-      8:
-        text: R2-D2-k gora egitea nahi dugu beraz, jar dezagun joanGora(); bloke bat
-          komandoaren barnean. Eta gauza bera egingo dugu R2-D2-k behera egiteko.
-      9:
-        text: Horrela, gure robota kontrolatzeko kode guztia aldez aurretik idatzi
-          ordez R2-D2 pantailan zehar mugituko duten botoiak sakatzeko gertaeren aurrean
-          erreakziona dezan nahi dugu. Urratsez urrats zure jokoarekin gero eta gehiago
-          elkarreragin daiteke.
-    starwars_congrats:
-      1:
-        text: Kaixo, nire izena Alice da eta proiektu eta injeniaritza taldeak gidatzen
-          ditut hemen, Code.org-en eta une hontan jarraitzen ari zaren tutorialean
-          egin dut lan.
-      2:
-        text: Azkeneko maila lortu duzu. Zorionak! Star Wars jokoa egiteko behar duzun
-          guztia ikasi duzu. Ez dago ez argibiderik, ez ebazteko puzlerik. Zure jokoa
-          eraiki dezakezu eta aukeratu nola funtzionatuko duen. Kontu bat gehiago,
-          soinu berriak eta komando berriak desblokeatu dituzu, oraindik gehiago egin
-          ahal izateko.
-      3:
-        text: "[ikasleak berriketan] Joko bat egin dugu funtsean puntuak lortzeko
-          Puffer Pig-ak lortzen dituzuenean. Ordaina da Puffer Pig bat lortzen duzun
-          bakoitzean Storm Trooper bat azaltzen dela. Orain pantaila Puffer Pig-ez
-          beteta daukazu eta 10,000 ukitu behar dituzu irabazteko."
-      4:
-        text: "[ikasleak berriketan] Joko bat egin dugu zeinetan ezin duzun galdu
-          eta akatzen duzun orok puntuak ematen dizkizun. Nire programan, gauzak aldatu
-          ditut eta gora klikatzen duzunean zure pertsonaia behera doa eta, eskuinera
-          joateko esaten diozunean, pertsonaiak ezkerrera egiten du. Benetan zaila
-          da! Batzuetan abantaila daukazu, abantaila injustua, jokoaren garatzailea
-          bazara. Lortu al dut? Bai noski!"
-      5:
-        text: Zure sorkuntza amaitu duzunean, aukeratu partekatu zure lagunekin partekatzeko
-          edo zure telefonoak jokatzeko esteka lortzeko. Ondo pasa!
-    starwars_blocks_intro:
-      1:
-        text: Kaixo, ni Kathleen Kennedy naiz eta Star Wars-en ekoizlea naiz. Indarraren
-          Iratzarraldia. Gaur gure izar batekin arituko zara lanean, BB-8-rekin. BB-8
-          robot esferiko bat da. Egiten duen guztia eta egiten duen mugimendu bakoitza
-          konputagailu software bidez dago kontrolatuta. Informatikak industria guztietan
-          du eragina, marketinetik hasi eta osasungintza eta zinemagintzaraino. Finean,
-          ehundaka informatikarik elkarrekin egin zuten lan Indarraren Iratzarraldia
-          filma egiteko.
-      2:
-        text: Kaixo, ni Rachel Rose naiz, Ikerkuntza eta Garapenerako senior injeniaria
-          ILM-n, eta animazio eta izakien garapenerako taldearen burua. Indarraren
-          Iratzarraldia filman nire ardura artistei pertsonaien atal mugikorrak garatzen
-          laguntzea da pertsonaiak oso sinisgarriak gerta daitezen urrun-urruneko
-          galaxia batean.
-      3:
-        text: Hurrengo ordubetean gure Star Wars jokoa garatuko dugu. Programazioaren
-          oinarriak irakatsiko dizkizugu. Ohiko programazioa testu formatuan izaten
-          da, baina guk hemen blokeak erabiliko ditugu, arrastatu eta askatuz programak
-          idazteko. Hurrengo ordubetean Hasteko Rey-rekin egingo dugu lan BB-8-ri
-          oinez ibiltarazi eta txatarra guztia jaso arazteko.
-      4:
-        text: Zure pantaila 3 zati nagusitan zatitu da. Ezkerrean programa exekutatzeko
-          Star Wars jokalekua duzu. Maila bakoitzaren instrukzioak jokalekuaren azpian
-          idatzita daude.
-      5:
-        text: Erdiko gunea tresna-kutxa da eta hauetako bloke bakoitza BB-8-k ulertzen
-          duen komando bat da.
-      6:
-        text: Eskuinean dagoen espazio zuria laneremua da eta hor eraikiko dugu gure
-          programa.
-      7:
-        text: mugituEzkerrera(); blokea laneremura arrastatzen badut, zer gertatzen
-          da? BB-8 lauki-sarean koadro bat mugitzen da.
-      8:
-        text: Eta mugituEzkerrera(); blokearen ondoren BB-8-k zerbait egitea nahi
-          badut? Gure programari beste bloke bat gehi diezaioket. mugituGora(); blokea
-          aukeratuko dut eta arrastatu mugituEzkerrera(); blokearen azpira nabarmentzen
-          den arte. Ondoren, askatu eta bi blokeek bat egingo dute. Hasi sakatzen
-          dudanean, BB-8-k laneremuan dauden aginduak goitik behera exekutatuko ditu.
-      9:
-        text: Bloke bat ezabatu nahi baduzu, zerrendatik kendu eta arrastatu berriro
-          tresna-kutxara.
-      10:
-        text: Hasi sakatu ondoren, beti sakatu dezakezu leheneratu botoia BB-8 berriro
-          hasierara eramateko. Goazen proba egitera!
-    starwars_blocks_events:
-      1:
-        text: Kaixo, nire izena Charita Carter da. Ekoizke kreatibo seniorra naiz
-          Walt Disney Imagineering-en. Gure gonbidatuentzako atrakzioak ekoizten dituen
-          taldearen arduraduna naiz. Beti ari gara gure gonbidatuen esperientzia hobetzeko
-          moduak bilatzen eta teknologia horren muina da.
-      2:
-        text: Zorionak, lortu duzu! BB-8 programatu duzu. Orain prest zaude zerbait
-          zailagoa egiteko. Goazen bada. programazioaren oinarriak ikasi dituzunez,
-          atzera egingo dugu denboran zure jokoa eraikitzeko, R2-D2 eta C3PO protagonista
-          dituzula.
-      3:
-        text: 'Joko berri bat egiteko, joko programatzaileek egunero erabiltzen duten
-          gauza bat ikasi behar duzu: gertaerak dira. Gertaerek zure programari esaten
-          diote entzun edo itxaroteko zerbait gertatu bitartean, eta gertatzen denean,
-          ekintza bat exekutatzen da.'
-      4:
-        text: Gertaeren adibideak dira saguan klikatzeko, gezidun botoi bat sakatzeko
-          edo pantaila ukitzeko zain egotea.
-      5:
-        text: R2-D2 gora mugitu eta Rebel Pilot-arii mezu bat helaraztea egingo dugu
-          eta, ondoren, behera mugitu beste Rebel Pilot-arengana. Gertaerak erabiliko
-          ditugu mugitu arazteko. Jokalariak gora/behera gezidun teklak edo gora/behera
-          botoiak erabiltzen dituenean.
-      6:
-        text: GoraEgitean() gertaera-blokea erabili eta itsatsi horri joanGora() blokea.
-          Jokalariak gora gezidun tekla sakatzen duenean, goraEgitean() blokeari dagokion
-          kodea exekutatuko da. Eta gauza bera egingo dugu R2-D2 behera mugi dadin.
-          Oraingoan, gure robota kontrolatzeko kode guztia idatzi ordez, botoiak sakatzeko
-          gertaerekin erreakzionatzen utziko diogu R2-D2-ri pantailan zehar mugitzeko.
-      7:
-        text: Urratsez urrats, zure jokoarekin gero eta gehiago elkarreragin daiteke.
-    starwars_blocks_congrats:
-      1:
-        text: Kaixo, nire izena Alice da eta proiektu eta injeniaritza taldeak gidatzen
-          ditut hemen, Code.org-en eta une hontan jarraitzen ari zaren tutorialean
-          egin dut lan.
-      2:
-        text: Azkeneko maila lortu duzu. Zorionak! Star Wars jokoa egiteko behar duzun
-          guztia ikasi duzu. Ez dago ez argibiderik, ez ebazteko puzlerik. Zure jokoa
-          eraiki dezakezu eta aukeratu nola funtzionatuko duen. Kontu bat gehiago,
-          soinu berriak eta komando berriak desblokeatu dituzu, oraindik gehiago egin
-          ahal izateko.
-      3:
-        text: "[ikasleak berriketan] Joko bat egin dugu funtsean puntuak lortzeko
-          Puffer Pig-ak lortzen dituzuenean. Ordaina da Puffer Pig bat lortzen duzun
-          bakoitzean Storm Trooper bat azaltzen dela. Orain pantaila Puffer Pig-ez
-          beteta daukazu eta 10,000 ukitu behar dituzu irabazteko."
-      4:
-        text: "[ikasleak berriketan] Joko bat egin dugu zeinetan ezin duzun galdu
-          eta akatzen duzun orok puntuak ematen dizkizun. Nire programan, gauzak aldatu
-          ditut eta gora klikatzen duzunean zure pertsonaia behera doa eta, eskuinera
-          joateko esaten diozunean, pertsonaiak ezkerrera egiten du. Benetan zaila
-          da! Batzuetan abantaila daukazu, abantaila injustua, jokoaren garatzailea
-          bazara. Lortu al dut? Bai noski!"
-      5:
-        text: Zure sorkuntza amaitu duzunean, aukeratu partekatu zure lagunekin partekatzeko
-          edo zure telefonoak jokatzeko esteka lortzeko. Ondo pasa!
-    mc_intro:
-      1:
-        text: Nire izena Jens Bergensten da baina Jeb izenarekin ezagutzen naute.
-          Minecraft-en garatzaileen burua naiz hemen, Mojang-en, Estokolmon. Hamaika
-          edo hamabi urte nituen programatzen hasi nintzenean jokoak egin nahi nituelako.
-          Nire aitaren lagun batez esan zidan jokoak egiteko programatzen ikasi behar
-          zela. Eta horrela hasi nintzen. Jokoen arkitektura pentsatzea eta diseinatzea
-          gustoko dut. Hori da Minecraft-etik gehien erakartzen nauena.
-      2:
-        text: Hurrengo orduan informatikaren oinarriak ikasiko dituzu Minecraft mundu
-          simulatu batean Alex edo Steve mugitzeko programatuz.
-      3:
-        text: Ohikoprogramazioa testu moduan egiten da baina gaur Blockly erabiliko
-          dugu, programak idazteko arrastatu eta askatu ditzakezun bloke bisualak
-          erabiltzen dituen sistema. Azken finean, javascript kodea sortzen arituko
-          zara.
-      4:
-        text: Ikasiko dituzun kontzeptuak programatzaileek egunero erabiltzen dituztenak
-          dira eta informatikaren oinarriak dira. Hemen, Mojang-en, Minecraft martxan
-          jartzeko erabiltzen ditugun berak dira.
-      5:
-        text: Hasi aurretik, zure pertsonaia aukeratuko duzu. Nik Alex aukeratuko
-          dut. Pantailan zehar mugituko duen programaren kodea idatziko dugu.
-      6:
-        text: Zure pantaila hiru zati nagusitan banatzen da. Ezkerrean, Minecraft-en
-          jokoeremua dago, zure programa bertan exekutatuko da. Maila bakoitzeko zehaztapenak
-          azpian daude idatzita.
-      7:
-        text: Erdiko gunea tresna-kutxa da eta hauetako bloke bakoitza Alex-en ekintzak
-          gidatzen dituen agindu bat da.
-      8:
-        text: Eskuinean duzun gune zuria laneremua da eta bertan eraikiko dugu programa.
-      9:
-        text: mugituAurrera(); blokea arrastatzen badugu laneremura eta, ondoren,
-          Hasi sakatu, zer gertatzen da? Alex-ek lauki bat aurrera egiten du lauki-sarean.
-      10:
-        text: Eta beste zerbait eginnahi badugu aurrera lauki bat egin ondoren? Programari
-          beste bloke bat gehitu diezaiokegu. biraEskuinera(); blokea aukeratuko dut
-          eta nire mugituAurrera(); blokearen azpira arrastatuko dut lerro naranja
-          azaltzen den arte. Ondoren, askatu eta bi blokeek bat egingo dute. Berriro
-          Hasi sakatzen dugunean, Alex-ek laneremuko zerrendan dauden aginduak exekutatuko
-          ditu, goitik behera.
-      11:
-        text: Bloke bat ezabatu nahi baduzu, zerrendatik kendu eta arrastatu berriro
-          tresna-kutxara.
-      12:
-        text: Zure aldaketak desegin eta hasierako egoerara itzultzeko, erabili laneremuko
-          goiko eskuin izkinan dagoen Hasi berriro botoia. Kontu bat gehiago, ikusten
-          al dituzu biratzeko blokeetan dauden triangelu txiki horiek? Triangelu horiek
-          ikusten badituzu, aukera desberdinak dituzula esan nahi du. Hasi gaitezen
-          kodearekin!
-    mc_repeat:
-      1:
-        text: Lydia Winters naiz, Mojang markako zuzendaria eta Minecraft izeneko
-          joko txiki bat egin dugu.
-      2:
-        text: Nire zeregin gogokoena Minecraft-en esploratzea da. Kobazuloetako abenturak
-          maite ditut eta bertan zer bilatu dezakedan ikusi. Programatzaile ez naizenez,
-          Minecraft-eko ikasgaia jarraitu eta nere kabuz kodetzen ikasteko desiatzen
-          nago.
-      3:
-        text: Azkeneko mailak mugituAurrera(); bloke mordoa behar du. Errazagoa litzateke
-          konutagailuari esan ahal izatea mugituAurrera(); komandoa lau edo bost aldiz
-          exekutatzeko. Zorionez, konputagailuak oso onak dira komandoak errepikatzen
-          errepikatu begizten bidez.
-      4:
-        text: Minecraft egiterakoan, errepikatu begiztak erabiltzen ditugu mundu berri
-          bat sortzeko hasierako materialak kokatzeko. Hori milaka eta milaka bloke
-          dira. Begiztak erabiltzen ditugu ere bai, adibidez Alex-en oinak aurrera
-          eta atzera mugitzeko bera oinez doan heinean. Errepikatu begiztak programazioaren
-          tresna oso baliozkoak dira.
-      5:
-        text: Gaua gainera datorkigu eta horregatik, datozen hurrengo mailatan salbu
-          egoteko etxea eraikiko dugu. Modu errazean egingo dugu hau errepikatu blokea
-          erabiliz.
-      6:
-        text: Gure etxearen horma eraikitzeko Alex-i mugituAurrera(); egiteko eta
-          ohola jartzeko lau aldiz estea daukagu, edo esan mugituAurrera(); egiteko
-          eta ohol bat jartzeko eta, ondoren, erabili errepikatu blokea ekintza hori
-          hainbat aldiz egikaritzeko. Errepikatu blokean egingo dugu klik eta esan
-          zenbat aldiz nahi dugun ekintza hori exekutatzea. Eraiki dezagun gure etxea
-          gaua egin aurretik! Ongi pasa.
-    mc_if_statements:
-      1:
-        text: Orain, baldintzapeko aginduak ikasiko ditugu. Baldintzapeko aginduak
-          programatzen ikasteko oinarrizkoak dira. Konputagailuari erabakiak hartzen
-          laguntzen diote.
-      2:
-        text: Konputagailu guztiek erabiltzen dituzte baldintzapeko aginduak, nire
-          telefonoak ere bai. Adibidez, nire telefonoa hartzen dudanean kode bat exekutatzen
-          du telefonoa desblokeatuko duen pasahitza zuzena sartuz gero. Kontrako kasuan,
-          errore mezu bat bistaratuko du.
-      3:
-        text: Baldintzapeko aginduak erabil ditzakezu zure kodean Steve eta Alice-ek
-          erreakziona dezaten munduan ikusten dutenaren arabera. Adibidez, harri bat
-          badute aurrean, orduan ezkerrera bira egin dezakete. Edo eskuinera, arbola
-          baten aurrean aurkitzen badira.
-      4:
-        text: Kasu hontan, ez dugu laban erori nahi. Erraza da labaren kasuan zer
-          egin planifikatzea. Pantailan ikus dezakegu. Baina zer gertatzen da harriaren
-          azpian dagoen eta ikusi ezin dezakegun labarekin?
-      5:
-        text: Harria suntsitu ondoren eta aurrera egin aurretik labarik dagoen begiratu
-          behar dugu. Laba baldin badago, harri bat jarri beharko dugu gure pertsonaiaren
-          aurrean aurrera egin aurretik. Horrela modu seguruan mugitu ahal izango
-          gara. Suntsitzeko garaia! Eta gogoratu baldintzapeko agindua erabili behar
-          duzula kontuz ibiltzeko.
-    mc_congrats_share:
-      1:
-        text: Zorionak! Informatikaren oinarriak ikasi berri dituzu.
-      2:
-        text: Orain bloke hauek erabili ditzakezu nahi duzuna egiteko. Ez dago argibiderik
-          eta ebazteko puzlerik. Gogoak ematen dizuna eraiki dezakezu. Aukeratu beharko
-          duzu.
-      3:
-        text: "[ikasleak hizketan] Erreala izan behar du. Ilea moztu. L bat egin dut
-          argi-zuziekin. A bat egin dut urki oholekin. Funtzionatu du. Funtzionatu
-          du. Lanazko etxea egin dugu!"
-      4:
-        text: Zure sorkuntza amaitu duzunean, aukeratu partekatu esteka bat lortu
-          eta zure lagunekin partekatzeko. Ondo pasa!
-    mc_congrats_no_share:
-      1:
-        text: Zorionak! Informatikaren oinarriak ikasi berri dituzu.
-      2:
-        text: Orain bloke hauek erabili ditzakezu nahi duzuna egiteko. Ez dago argibiderik
-          eta ebazteko puzlerik. Gogoak ematen dizuna eraiki dezakezu. Aukeratu beharko
-          duzu.
-      3:
-        text: "[ikasleak hizketan] Erreala izan behar du. Ilea moztu. L bat egin dut
-          argi-zuziekin. A bat egin dut urki oholekin. Funtzionatu du. Funtzionatu
-          du. Lanazko etxea egin dugu!"
-      4:
-        text: Orain nahi duzuna eraiki dezakezu! Gozatu!
-    gumball_intro:
-      1:
-        text: Zure jokoa egin nahi izanez gero, oso erraza da. Programazio pixka bat
-          ikasi eta zuk sortutako jokoa jokatzen hasi ahal izango duzu.
-      2:
-        text: Bideo-joko faboritorik ba al daukazu? Pauso bat emango dugu Jolas Laborategiko
-          jokoaren antzeko jokoak sortzeko. Joko onek istorio bat izan ohi dute eta
-          istorio guztiek aktoreak dituzte. Aktore horiek hitz egin, mugitu eta haien
-          artean elkar eragiten dute. Agian puntuak ere eskuratuko dituzte, jokoaren
-          arauen arabera. Gaur, gauza horiek guztiak aktore dibertigarriekin banan
-          bana nola egin ikasiko dugu eta jarraian zerotik hasita, partekatua izan
-          daitekeen eta telefonoan jolasteko balioko duen joko bat gauzatuko dugu.
-      3:
-        text: Gaur, gauza horiek guztiak aktore dibertigarriekin banan bana nola egin
-          ikasiko dugu eta jarraian zerotik hasita, partekatua izan daitekeen eta
-          telefonoak jolasteko balioko duen joko bat eraikiko dugu.
-      4:
-        text: Zure pantaila hiru zati nagusitan banatuta dago. Ezkerrean programa
-          nola exekutatzen den ikusi ahal izango duzu. Maila bakoitzean egin beharrekoa
-          azpialdean azaltzen zaizu.
-      5:
-        text: Erdiko eremua tresna kutxa da non blokeetako bakoitza kode zati bat
-          den.
-      6:
-        text: Eskuinean duzun gune zuria laneremua da eta bertan eraikiko dugu programa.
-      7:
-        text: Hasteko, zure blokeak "martxan dagoenean" bloke laranjarekin lotu beharko
-          dituzu. Hainbat bloke lotu ditzakezu elkarrekin hauek arrastatuz inguruko
-          marra horia agertu arte. Orduan elkar lotu egingo dira.
-      8:
-        text: Lehen puzzle honetan, aktoreek zerbait esatea lortuko dugu "esan" blokea
-          "martxan dagoenean" blokearekin lotzen eta zure mezua bertan idazten. Zure
-          blokeak behar den lekuan dituzunean hasi botoian sakatu programatu duzuna
-          ikusteko.
-      9:
-        text: Has zaitez eta bukaerarako zure joko propioa sortzeko kapaz izango zara,
-          elkar eragin dezaketen mota guztietako jokalariekin, puntuekin, gauzak jaurtikiz,
-          eta elkar desagerraraziz. Dena zure esku dago!
-    gumball_events:
-      1:
-        text: Orain, joko programatzaileek egunero erabiltzen duten zerbait ikasiko
-          dugu. Gertaerak deritze. Gertaera batek zure programari esaten dio zerbait
-          gertatzearen zain adi egoteko, eta zerbait hori gertatzen denean jokoak
-          ekintza bat gauzatuko du.
-      2:
-        text: Gertaera adibide batzuk dira saguaren klik bat edo gora eta beherako
-          gezi tekla bat edo baita ere pantaila ukitzea.
-      3:
-        text: Hemen jokalariak aktorearen gainean klik egiten duenean honek zerbait
-          esatea lortuko dugu. "Klik egiterakoan" blokea erabiliko dugu eta horri
-          lotuko diogu "esan" blokea. Jokalariak klik egiterakoan, bloke horretara
-          lotutako bloke guztiak burutuko dira.
-      4:
-        text: Badira ere "gezia sakatzean" blokeak. Mugimendu blokeak lotzen badizkiozu
-          bloke horiei, zure aktoreak gora, behera, eskuin eta ezker mugitzen has
-          zaitezke geziekin. Pixkanaka zure jokoa elkarreragileago bihurtzen ari da.
-    gumball_repeat:
-      1:
-        text: Imajina dezakezu zerbait behin eta berriz betirako errepikatzen egon
-          beharko bazenu? Zorionez ez duzu horrelakorik inoiz egin beharko konputagailuak
-          oso onak baitira gauzak errepikatzen.
-      2:
-        text: Hau da betirako errepikatu blokea. Edozer gauza bloke honen barruan
-          betirako errepikatuko da jokoan. Aktore batek gauzaren bat errepikatzen
-          ibiltzea nahi badugu jokalariaren parte hartzerik gabe, bloke horiek betirako
-          errepikatu blokearen barruan jarriko ditugu.
-      3:
-        text: Ondorengo puzzlean gure helburua da aktoreari laguntzea modu jarraituan
-          lan bat egiten. Aginduak errepikatzen ikastea denbora asko aurrezteko aukera
-          emango dizu gero zure joko propioa egiten ari zarenean.
-    iceage_intro:
-      1:
-        text: Zure jokoa egin nahi izanez gero, oso erraza da. Programazio pixka bat
-          ikasi eta zuk sortutako jokoa jokatzen hasi ahal izango duzu.
-      2:
-        text: Bideo-joko faboritorik ba al daukazu? Pauso bat emango dugu Jolas Laborategiko
-          jokoaren antzeko jokoak sortzeko. Joko onek istorio bat izan ohi dute eta
-          istorio guztiek aktoreak dituzte. Aktore horiek hitz egin, mugitu eta haien
-          artean elkar eragiten dute. Agian puntuak ere eskuratuko dituzte, jokoaren
-          arauen arabera. Gaur, gauza horiek guztiak aktore dibertigarriekin banan
-          bana nola egin ikasiko dugu eta jarraian zerotik hasita, partekatua izan
-          daitekeen eta telefonoan jolasteko balioko duen joko bat gauzatuko dugu.
-      3:
-        text: Gaur, gauza horiek guztiak aktore dibertigarriekin banan bana nola egin
-          ikasiko dugu eta jarraian zerotik hasita, partekatua izan daitekeen eta
-          telefonoak jolasteko balioko duen joko bat eraikiko dugu.
-      4:
-        text: Zure pantaila hiru zati nagusitan banatuta dago. Ezkerrean programa
-          nola exekutatzen den ikusi ahal izango duzu. Maila bakoitzean egin beharrekoa
-          azpialdean azaltzen zaizu.
-      5:
-        text: Erdiko eremua tresna kutxa da non blokeetako bakoitza kode zati bat
-          den.
-      6:
-        text: Eskuinean duzun gune zuria laneremua da eta bertan eraikiko dugu programa.
-      7:
-        text: Hasteko, zure blokeak "martxan dagoenean" bloke laranjarekin lotu beharko
-          dituzu. Hainbat bloke lotu ditzakezu elkarrekin hauek arrastatuz inguruko
-          marra horia agertu arte. Orduan elkar lotu egingo dira.
-      8:
-        text: Lehen puzzle honetan, aktoreek zerbait esatea lortuko dugu "esan" blokea
-          "martxan dagoenean" blokearekin lotzen eta zure mezua bertan idazten. Zure
-          blokeak behar den lekuan dituzunean hasi botoian sakatu programatu duzuna
-          ikusteko.
-      9:
-        text: Has zaitez eta bukaerarako zure joko propioa sortzeko kapaz izango zara,
-          elkar eragin dezaketen mota guztietako jokalariekin, puntuekin, gauzak jaurtikiz,
-          eta elkar desagerraraziz. Dena zure esku dago!
-    iceage_events:
-      1:
-        text: Orain, joko programatzaileek egunero erabiltzen duten zerbait ikasiko
-          dugu. Gertaerak deritze. Gertaera batek zure programari esaten dio zerbait
-          gertatzearen zain adi egoteko, eta zerbait hori gertatzen denean jokoak
-          ekintza bat gauzatuko du.
-      2:
-        text: Gertaera adibide batzuk dira saguaren klik bat edo gora eta beherako
-          gezi tekla bat edo baita ere pantaila ukitzea.
-      3:
-        text: Hemen jokalariak aktorearen gainean klik egiten duenean honek zerbait
-          esatea lortuko dugu. "Klik egiterakoan" blokea erabiliko dugu eta horri
-          lotuko diogu "esan" blokea. Jokalariak klik egiterakoan, bloke horretara
-          lotutako bloke guztiak burutuko dira.
-      4:
-        text: Badira ere "gezia sakatzean" blokeak. Mugimendu blokeak lotzen badizkiozu
-          bloke horiei, zure aktoreak gora, behera, eskuin eta ezker mugitzen has
-          zaitezke geziekin. Pixkanaka zure jokoa elkarreragileago bihurtzen ari da.
-    iceage_repeat:
-      1:
-        text: Imajina dezakezu zerbait behin eta berriz betirako errepikatzen egon
-          beharko bazenu? Zorionez ez duzu horrelakorik inoiz egin beharko konputagailuak
-          oso onak baitira gauzak errepikatzen.
-      2:
-        text: Hau da betirako errepikatu blokea. Edozer gauza bloke honen barruan
-          betirako errepikatuko da jokoan. Aktore batek gauzaren bat errepikatzen
-          ibiltzea nahi badugu jokalariaren parte hartzerik gabe, bloke horiek betirako
-          errepikatu blokearen barruan jarriko ditugu.
-      3:
-        text: Ondorengo puzzlean gure helburua da aktoreari laguntzea modu jarraituan
-          lan bat egiten. Aginduak errepikatzen ikastea denbora asko aurrezteko aukera
-          emango dizu gero zure joko propioa egiten ari zarenean.
-    mc_2016_intro:
-      1:
-        text: Kaixo, nire izena Jens da eta Minecraft-en sortzaile diseinugile burua
-          naiz. Datorren orduan, zure berezko Minecraft-jokoa egingo duzu. Honek Minecraft-en
-          antza du baina mundua gelditu da. Ardiak ez dira mugitzen ari, oilaskoak
-          ez dira arrautzak jartzen ari, eta oraintxe zonbiak bare egoten ari dira.
-          Zure esku dago Kodea gehitzea Minecraft-en mundua ibil dadin.
-      8:
-        text: Bloke bat ezabatu nahi baduzu, zerrendatik kendu eta arrastatu berriro
-          tresna-kutxara.
-    hoc_dance_events_2019:
-      4:
-        text: Hainat ekintza saguaren klikarekin, geziekin, edota pantaila ukimanarekin
-          daude erlazionatuta.

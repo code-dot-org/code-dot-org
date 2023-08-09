@@ -3,65 +3,1318 @@ kk:
   data:
     script:
       name:
+        20-hour:
+          description: Бұл 20-сағаттық курс информатика саласы мен бағдарламалау негіздерінің
+            2-4 курсын қамтиды. Курс 10-18 жастағыларға арналған. Тереңдетіп оқу үшін
+            2-4 курстарды қараңыз!
+          description_audience: 10-18 жастағылар үшін
+          description_short: Бұл 20-сағаттық курс информатика саласы мен бағдарламалау
+            негіздерінің 2-4 курсын қамтиды.
+          student_description: Бұл 20-сағаттық курс информатика саласы мен бағдарламалау
+            негіздерінің 2-4 курсын қамтиды. Курс 10-18 жастағыларға арналған. Тереңдетіп
+            оқу үшін 2-4 курстарды қараңыз!
+          title: Информатика Курсына жеделдетілген кіріспе
+        2021drafting:
+          lesson_groups:
+            debugging:
+              display_name: Бағдарламаны дұрыстау
+            introduction:
+              display_name: Кіріспе
+            lessonGroup-3:
+              display_name: Айнымалылар
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Код жазу Сағаты
+        CSDU3-Draft:
+          description_short: Бағдарламалау
+        CSF_Secret_Sample:
+          description_audience: 8-18 жастағылар үшін
+        CSF_Secret_Sample_Story:
+          description_audience: 8-18 жастағылар үшін+
+        Course4pre:
+          description: 2 және 3 курсты оқымаған оқушылар үшін қысқаша кіріспе.
+          description_short: 2 және 3 курсты оқымаған оқушылар үшін қысқаша кіріспе.
+          student_description: 2 және 3 курсты оқымаған оқушылар үшін қысқаша кіріспе.
+          title: Курс 4 Қажетті шарттар
+        ECSPD2:
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          student_description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+        ECSPD2-NexTech:
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          student_description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+        ECSPD2-iZone:
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          student_description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+        Hour of Code:
+          description: Ашулы Құстар және Өсімдіктер Зомбилерге Қарсы кейіпкерлерімен
+            информатика негіздерін оқып көріңіз!
+          description_short: Информатика негіздерін көптеген көңілді кейіпкерлерімен
+            оқыңыз!
+          student_description: Ашулы Құстар және Өсімдіктер Зомбилерге Қарсы кейіпкерлерімен
+            информатика негіздерін оқып көріңіз!
+          title: Код Жазу Сағаты 2013
+        MikeTest:
+          description_audience: 8-98 жастағылар үшін
+        Special Fun:
+          description_audience: 10-18 жастағылар үшін
+        SpecialSeries:
+          description_audience: 10-18 жастағылар үшін
+        TEMP CSD Unit 3:
+          description_short: Бағдарламалау
+        afterschool1:
+          description_audience: Жас аралығы 7-13
+        algebra:
+          title: Алгебрадағы информатика
+        algebraPD2a:
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          student_description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+        algebraPD2b:
+          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          student_description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+        alltheplcthings:
+          lesson_groups:
+            content:
+              display_name: Контент
+            practice:
+              display_name: Сабақ беру Практикалары
+            required:
+              display_name: Қысқаша шолу
+        andrea-test:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Бағалаулар
+        artist:
+          description: Суретші арқылы тамаша суреттер мен дизайн салыңыз!
+          description_short: Суретші арқылы тамаша суреттер мен дизайн салыңыз!
+          student_description: Суретші арқылы тамаша суреттер мен дизайн салыңыз!
+          title: Кейіпкер
+        artistExemplar:
+          description_audience: 8-18 жастағылар үшін
+        asUnplugged:
+          description_audience: Жас аралығы 6-13
+        basketball:
+          description: Баскетбол ойынды жасау
+          description_short: Баскетбол ойынды жасау
+          student_description: Баскетбол ойынды жасау
+          title: Баскетбол ойынды жасау
+        classic-hoc-impact-study:
+          description_short: Информатика негіздерін көптеген көңілді кейіпкерлерімен
+            оқыңыз!
         course1:
-          title: Курс 1
           description: Енді бастаушылар Курс 1 - ден бастаңыздар. Оқушылар басқалармен
             бірлесіп жұмыс, мәселелерді шешу дағдыларын дамыта отырып, компьютерлік
             бағдарламалар жасайды. Курс соңында оқушылар бөлісе алатындай өздерінің
             ойындарын немесе оқиғаларын жасайды. K-1 оқушыларына пайдалануға кеңес
             береміз.
-          description_short: Енді бастаушылар Курс 1 - ден бастаңыздар.
           description_audience: 4-6 жастағылар үшін
+          description_short: Енді бастаушылар Курс 1 - ден бастаңыздар.
           student_description: Енді бастаушылар Курс 1 - ден бастаңыздар. Оқушылар
             басқалармен бірлесіп жұмыс, мәселелерді шешу дағдыларын дамыта отырып,
             компьютерлік бағдарламалар жасайды. Курс соңында оқушылар бөлісе алатындай
             өздерінің ойындарын немесе оқиғаларын жасайды. K-1 оқушыларына пайдалануға
             кеңес береміз.
+          title: Курс 1
         course2:
-          title: Курс 2
           description: Курс 2 оқи алатын және бағдарламалаудан тәжірибелері жоқ оқушыларға
             арналған. Бұл курста оқушылар бөлісе алатын, мәселерді шешетін және интерактивті
             ойындар немесе оқиға жасауды үйренеді. 2-5 сынып оқушыларына пайдалануға
             кеңес береміз.
-          description_short: Жазу танитын оқушылар Курс 2 - ден бастаңыздар.
           description_audience: Жас 6-дан бастап (оқу міндетті)
+          description_short: Жазу танитын оқушылар Курс 2 - ден бастаңыздар.
           student_description: Курс 2 оқи алатын және бағдарламалаудан тәжірибелері
             жоқ оқушыларға арналған. Бұл курста оқушылар бөлісе алатын, мәселерді
             шешетін және интерактивті ойындар немесе оқиға жасауды үйренеді. 2-5 сынып
             оқушыларына пайдалануға кеңес береміз.
+          title: Курс 2
         course3:
-          title: Курс 3
           description: Курс 3 Курс 2-ні бітірген оқушыларға арналған. Оқушылар алдыңғы
             сабақтарда қаралған бағдарламалау тақырыптарын тереңдетіп оқып, аса күрделі
             мәселерді икемді тәсілдермен шешуді үйренеді. 4-5 сынып оқушыларына пайдалануға
             кеңес береміз.
-          description_short: Курс 3 Курс 2-нің жалғасы болып табылады.
           description_audience: 8-18 жастағылар үшін
+          description_short: Курс 3 Курс 2-нің жалғасы болып табылады.
           student_description: Курс 3 Курс 2-ні бітірген оқушыларға арналған. Оқушылар
             алдыңғы сабақтарда қаралған бағдарламалау тақырыптарын тереңдетіп оқып,
             аса күрделі мәселерді икемді тәсілдермен шешуді үйренеді. 4-5 сынып оқушыларына
             пайдалануға кеңес береміз.
-        playlab:
-          title: Ойындар Лабораториясы
-          description: Ойындар Лабораториясымен oқиға құрыңыз немесе ойын жасаңыз!
-          description_short: Ойындар Лабораториясымен oқиға құрыңыз немесе ойын жасаңыз!
-          student_description: Ойындар Лабораториясымен oқиға құрыңыз немесе ойын
-            жасаңыз!
-        artist:
-          title: Кейіпкер
-          description: Суретші арқылы тамаша суреттер мен дизайн салыңыз!
-          description_short: Суретші арқылы тамаша суреттер мен дизайн салыңыз!
-          student_description: Суретші арқылы тамаша суреттер мен дизайн салыңыз!
-        hourofcode:
-          title: Классикалық лабиринт
-          description: Ашулы Құстар, Өсімдіктер Зомбилерге Қарсы және Мұзды Дәуірдегі
-            Скрат кейіпкерлерімен информатика негіздерін оқып көріңіз!
-          description_short: Информатика негіздерін көптеген көңілді кейіпкерлерімен
-            оқыңыз!
-          student_description: Ашулы Құстар, Өсімдіктер Зомбилерге Қарсы және Мұзды
-            Дәуірдегі Скрат кейіпкерлерімен информатика негіздерін оқып көріңіз!
+          title: Курс 3
+        course4:
+          description: "Курс 4 Курс 2-ні және 3-ті бітірген оқушыларға арналған. \nОқушылар
+            әр проблеманы шешу үшін бірнеше ұғымдар біріктіріп, жоғары қиындық басқатырғыштарды
+            шешуді үйренеді.\nОсы курс оқушылар, олардың параметрлері бар ілмектер
+            мен функцияларын, соның ішінде кейбір дағдыларын, көрсетуге мүмкіндік
+            бағдарламаларды жасайды, аяқталды.\n4-8 сынып оқушыларына пайдалануға
+            кеңес береміз."
+          description_audience: 10-18 жастағылар үшін
+          description_short: Курс 4 Курс 2 және 3-ті бітіргендер үшін арналған.
+          student_description: "Курс 4 Курс 2-ні және 3-ті бітірген оқушыларға арналған.
+            \nОқушылар әр проблеманы шешу үшін бірнеше ұғымдар біріктіріп, жоғары
+            қиындық басқатырғыштарды шешуді үйренеді.\nОсы курс оқушылар, олардың
+            параметрлері бар ілмектер мен функцияларын, соның ішінде кейбір дағдыларын,
+            көрсетуге мүмкіндік бағдарламаларды жасайды, аяқталды.\n4-8 сынып оқушыларына
+            пайдалануға кеңес береміз."
+          title: Курс 4
+        coursea-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        coursea-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        coursea-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        coursea-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        courseb-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        courseb-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        courseb-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        courseb-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        coursec-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Бинарлы
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        coursec-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: Бинарлы
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        coursec-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: Бинарлы
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        coursec-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        coursed-2019:
+          lesson_groups:
+            csf_binary:
+              display_name: Бинарлы
+            csf_conditionals:
+              display_name: Шарттар
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        coursed-2020:
+          lesson_groups:
+            csf_binary:
+              display_name: Бинарлы
+            csf_conditionals:
+              display_name: Шарттар
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        coursed-2021:
+          lesson_groups:
+            csf_binary:
+              display_name: Бинарлы
+            csf_conditionals:
+              display_name: Шарттар
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+            lessonGroup-6:
+              display_name: Сандық Азаматтық
+        coursed-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шарттар
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+            lessonGroup-6:
+              display_name: Сандық Азаматтық
+        coursed-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шарттар
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+            lessonGroup-6:
+              display_name: Сандық Азаматтық
+        coursee-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_functions:
+              display_name: Функциялар
+            csf_nested_loops:
+              display_name: Кіріккен Циклдер
+        coursee-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_functions:
+              display_name: Функциялар
+            csf_nested_loops:
+              display_name: Кіріккен Циклдер
+        coursee-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_functions:
+              display_name: Функциялар
+            csf_nested_loops:
+              display_name: Шарттар
+            ramp_up:
+              display_name: Кіріккен Циклдер
+        coursee-2022:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_functions:
+              display_name: Функциялар
+            csf_nested_loops:
+              display_name: Шарттар
+            ramp_up:
+              display_name: Кіріккен Циклдер
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_functions:
+              display_name: Функциялар
+            csf_nested_loops:
+              display_name: Шарттар
+            ramp_up:
+              display_name: Кіріккен Циклдер
+        coursee-draft:
+          lesson_groups:
+            content:
+              display_name: Контент
+        coursef-2019:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_for_loops:
+              display_name: For ілмектері
+            csf_internet:
+              display_name: Ғаламтор
+            csf_variables:
+              display_name: Айнымалылар
+        coursef-2020:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_for_loops:
+              display_name: For ілмектері
+            csf_variables:
+              display_name: Айнымалылар
+        coursef-2021:
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_for_loops:
+              display_name: For ілмектері
+            csf_variables:
+              display_name: For ілмектері
+            lessonGroup-7:
+              display_name: Сандық Азаматтық
+            lessonGroup-8:
+              display_name: Айнымалылар
+            lessonGroup-9:
+              display_name: жою
+        coursef-2022:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Сандық Азаматтық
+            lessonGroup-8:
+              display_name: Айнымалылар
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Сандық Азаматтық
+            lessonGroup-8:
+              display_name: Айнымалылар
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Айнымалылар
+        coursef-draft:
+          lesson_groups:
+            content:
+              display_name: Контент
+        csa-videos:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Бөлім 1
+            lessonGroup-4:
+              display_name: Бөлім 2
+            lessonGroup-5:
+              display_name: Бөлім 3
+            lessonGroup-6:
+              display_name: Бөлім 4
+            lessonGroup-7:
+              display_name: Бөлім 5
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa1-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa1-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Контент
+          lessons:
+            lesson-6:
+              name: Ілмек
+        csa1-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa1-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa1-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa1-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa2-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+          lessons:
+            lesson-4:
+              name: Айнымалылар
+        csa2-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa2-pilot:
+          lesson_groups:
+            lesson group:
+              display_name: Контент
+        csa2-pilot-facilitator:
+          lesson_groups:
+            lesson group:
+              display_name: Контент
+        csa2-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+          lessons:
+            lesson-3:
+              name: For ілмектері
+        csa3-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa3-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa3-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa3-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa4-exemplars:
+          lesson_groups:
+            content:
+              display_name: Контент
+            lesson group:
+              display_name: Контент
+            lessonGroup-2:
+              display_name: Контент
+            lesson_group:
+              display_name: Контент
+        csa4-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa4-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa4-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa5-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa6-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa7-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa8-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa8-validation-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csd-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csd-novice-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csd1-dlp:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csd1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csd2-dlp:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csd2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csd3-dlp:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csd3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csd3-virtual:
+          lesson_groups:
+            csd3_1:
+              display_name: Контент
+            csd3_2:
+              display_name: Контент
+            cspSurvey:
+              display_name: Контент
+        csd4-dlp:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csd4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csd5-dlp:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csd5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csd6-dlp:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csd6-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csf-2021-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Айнымалылар
+            ramp_up:
+              display_name: Кіріспе
+            variables:
+              display_name: Айнымалылар
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Айнымалылар
+        csf2harvey:
+          lesson_groups:
+            content:
+              display_name: Контент
+        csl-vn:
+          lesson_groups:
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        csp-apprentice-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp-create-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp-explore-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp-novice-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp-online-test:
+          lesson_groups:
+            content:
+              display_name: Контент
+            practice:
+              display_name: Сабақ беру Практикалары
+            required:
+              display_name: Қысқаша шолу
+        csp1-dlp:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp1-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: Қысқаша шолу
+        csp1-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Айнымалылар
+        csp1-support:
+          lesson_groups:
+            content:
+              display_name: Контент
+            practice:
+              display_name: Сабақ беру Практикалары
+            required:
+              display_name: Қысқаша шолу
+        csp10-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Айнымалылар
+        csp2-dlp:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp2-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp2-pilot:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp2-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Айнымалылар
+        csp2-support:
+          lesson_groups:
+            content:
+              display_name: Контент
+            practice:
+              display_name: Сабақ беру Практикалары
+            required:
+              display_name: Қысқаша шолу
+        csp3-dlp:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp3-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp3-pilot:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp3-support:
+          lesson_groups:
+            content:
+              display_name: Контент
+            practice:
+              display_name: Сабақ беру Практикалары
+            required:
+              display_name: Қысқаша шолу
+        csp4-2020:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Айнымалылар
+        csp4-2021:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Айнымалылар
+        csp4-2022:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Айнымалылар
+        csp4-2023:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Айнымалылар
+        csp4-dlp:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp4-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp4-pilot:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Айнымалылар
+            required:
+              display_name: Қысқаша шолу
+        csp4-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Айнымалылар
+        csp4-preview:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Айнымалылар
+        csp4-support:
+          lesson_groups:
+            content:
+              display_name: Контент
+            practice:
+              display_name: Сабақ беру Практикалары
+            required:
+              display_name: Қысқаша шолу
+        csp5-2020:
+          lesson_groups:
+            csp_lists:
+              display_name: Тізімдер
+            csp_loops:
+              display_name: Ілмек
+        csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Тізімдер
+            csp_loops:
+              display_name: Ілмек
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Тізімдер
+            csp_loops:
+              display_name: Ілмек
+        csp5-2023:
+          lesson_groups:
+            csp_loops:
+              display_name: Ілмек
+        csp5-dlp:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp5-dlp-18:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp5-pilot:
+          lesson_groups:
+            csp_lists:
+              display_name: Тізімдер
+            csp_loops:
+              display_name: Ілмек
+            required:
+              display_name: Қысқаша шолу
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Тізімдер
+            csp_loops:
+              display_name: Ілмек
+        csp5-support:
+          lesson_groups:
+            content:
+              display_name: Контент
+            practice:
+              display_name: Сабақ беру Практикалары
+            required:
+              display_name: Қысқаша шолу
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Алгоритмдер
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Тізімдер
+            lessonGroup-3:
+              display_name: Ілмек
+        csp6-pilot:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        csp6-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Айнымалылар
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: Қысқаша шолу
+        csp8-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Айнымалылар
+        csp9-pilot-staging:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Айнымалылар
+        cspnovice:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        cspplayground:
+          lesson_groups:
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+            csp_variables:
+              display_name: Айнымалылар
+        csppostap-2017:
+          lesson_groups:
+            content:
+              display_name: Контент
+        cspunit1-support:
+          lesson_groups:
+            content:
+              display_name: Контент
+            practice:
+              display_name: Сабақ беру Практикалары
+            required:
+              display_name: Қысқаша шолу
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        dlp21-csd:
+          lesson_groups:
+            lessonGroup-2:
+              description: таңдау
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Деңгей 1
+            lessonGroup-3:
+              display_name: Деңгей 2
+        edit-code:
+          description: Кодты өзгерту
+          description_short: Кодты өзгерту
+          student_description: Кодты өзгерту
+          title: Кодты өзгерту
+        events:
+          description: Шаралар
+          description_short: Шаралар
+          student_description: Шаралар
+          title: Шаралар
+        express-2017:
+          lesson_groups:
+            content:
+              display_name: Контент
+        express-2019:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шарттар
+            csf_for_loops:
+              display_name: For ілмектері
+            csf_functions:
+              display_name: Функциялар
+            csf_loops:
+              display_name: Ілмек
+            csf_variables:
+              display_name: Айнымалылар
+        express-2020:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шарттар
+            csf_for_loops:
+              display_name: For ілмектері
+            csf_functions:
+              display_name: Функциялар
+            csf_loops:
+              display_name: Ілмек
+            csf_variables:
+              display_name: Айнымалылар
+        express-2021:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шарттар
+            csf_for_loops:
+              display_name: For ілмектері
+            csf_functions:
+              display_name: Функциялар
+            csf_loops:
+              display_name: Ілмек
+            csf_variables:
+              display_name: Айнымалылар
+            lessonGroup-9:
+              display_name: Шаралар
+        express-2022:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шарттар
+            csf_for_loops:
+              display_name: For ілмектері
+            csf_functions:
+              display_name: Функциялар
+            csf_loops:
+              display_name: Ілмек
+            csf_variables:
+              display_name: Айнымалылар
+            lessonGroup-9:
+              display_name: Шаралар
+        express-2023:
+          lesson_groups:
+            csf_conditionals:
+              display_name: Шарттар
+            csf_for_loops:
+              display_name: For ілмектері
+            csf_functions:
+              display_name: Функциялар
+            csf_loops:
+              display_name: Ілмек
+            csf_variables:
+              display_name: Айнымалылар
+            lessonGroup-9:
+              display_name: Шаралар
+        fit-test:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        fit2019-apprentice:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        fit2019-novice:
+          lesson_groups:
+            content:
+              display_name: Контент
+            required:
+              display_name: Қысқаша шолу
+        flappy:
+          description: Өз ойыныңызды 10 минут ішінде жасағыңыз келеді ме? Онда біздің
+            Қанат Қағу Коды сабағын байқап көріңіз!
+          description_short: Flappy ойынын 10 минут ішінде жазыңыз!
+          student_description: Өз ойыныңызды 10 минут ішінде жасағыңыз келеді ме?
+            Онда біздің Қанат Қағу Коды сабағын байқап көріңіз!
+          title: Қанат Қағу Коды
         frozen:
-          title: Анна және Эльзамен код жазыңыз
           description: Анна мен Эльзаның мұздың әдемілігі мен сиқырын зерттеулері
             үшін кодты қолданып көріңіз. Сіз конькимен мұз бетіне сурет салғандай,
             қысты көркін келтіретін ақша қар мен өрнектер саласыз және онымен достарыңызбен
@@ -72,97 +1325,165 @@ kk:
             үшін кодты қолданып көріңіз. Сіз конькимен мұз бетіне сурет салғандай,
             қысты көркін келтіретін ақша қар мен өрнектер саласыз және онымен достарыңызбен
             бөлісесіз!
-        course4:
-          title: Курс 4
-          description: "Курс 4 Курс 2-ні және 3-ті бітірген оқушыларға арналған. \nОқушылар
-            әр проблеманы шешу үшін бірнеше ұғымдар біріктіріп, жоғары қиындық басқатырғыштарды
-            шешуді үйренеді.\nОсы курс оқушылар, олардың параметрлері бар ілмектер
-            мен функцияларын, соның ішінде кейбір дағдыларын, көрсетуге мүмкіндік
-            бағдарламаларды жасайды, аяқталды.\n4-8 сынып оқушыларына пайдалануға
-            кеңес береміз."
-          description_short: Курс 4 Курс 2 және 3-ті бітіргендер үшін арналған.
-          description_audience: 10-18 жастағылар үшін
-          student_description: "Курс 4 Курс 2-ні және 3-ті бітірген оқушыларға арналған.
-            \nОқушылар әр проблеманы шешу үшін бірнеше ұғымдар біріктіріп, жоғары
-            қиындық басқатырғыштарды шешуді үйренеді.\nОсы курс оқушылар, олардың
-            параметрлері бар ілмектер мен функцияларын, соның ішінде кейбір дағдыларын,
-            көрсетуге мүмкіндік бағдарламаларды жасайды, аяқталды.\n4-8 сынып оқушыларына
-            пайдалануға кеңес береміз."
-        Course4pre:
-          title: Курс 4 Қажетті шарттар
-          description: 2 және 3 курсты оқымаған оқушылар үшін қысқаша кіріспе.
-          description_short: 2 және 3 курсты оқымаған оқушылар үшін қысқаша кіріспе.
-          student_description: 2 және 3 курсты оқымаған оқушылар үшін қысқаша кіріспе.
-        algebra:
-          title: Алгебрадағы информатика
+          title: Анна және Эльзамен код жазыңыз
+        grade1:
+          description_audience: 5-18 жастағылар үшін
+        grade2:
+          description_audience: 5-18 жастағылар үшін
+        grade3:
+          description_audience: 5-18 жастағылар үшін
+        grade4:
+          description_audience: Жас аралығы 9-99
+        grade5:
+          description_audience: Жас аралығы 10-110
+        gradeKinder:
+          description_audience: 5-18 жастағылар үшін
+        gumball:
+          description: Оқиға жаса немесе Gumball ойын лабораториясы арқылы ойын жаса!
+          description_short: Оқиға жаса немесе Gumball ойын лабораториясы арқылы ойын
+            жаса!
+          student_description: Оқиға жаса немесе Gumball ойын лабораториясы арқылы
+            ойын жаса!
+          title: Gumball ойын лабораториясы
+        hoc-impact-study:
+          description_short: Информатика негіздерін көптеген көңілді кейіпкерлерімен
+            оқыңыз!
+        hourofcode:
+          description: Ашулы Құстар, Өсімдіктер Зомбилерге Қарсы және Мұзды Дәуірдегі
+            Скрат кейіпкерлерімен информатика негіздерін оқып көріңіз!
+          description_short: Информатика негіздерін көптеген көңілді кейіпкерлерімен
+            оқыңыз!
+          student_description: Ашулы Құстар, Өсімдіктер Зомбилерге Қарсы және Мұзды
+            Дәуірдегі Скрат кейіпкерлерімен информатика негіздерін оқып көріңіз!
+          title: Классикалық лабиринт
+        iceage:
+          description: Оқиға жаса немесе Mұзды дәуірі ойын лабораториясы арқылы ойын
+            жаса!
+          description_short: Оқиға жаса немесе Mұзды дәуірі ойын лабораториясы арқылы
+            ойын жаса!
+          student_description: Оқиға жаса немесе Mұзды дәуірі ойын лабораториясы арқылы
+            ойын жаса!
+          title: Mұзды дәуірі ойын лабораториясы
         infinity:
-          title: Диснейдің Шексіз Ойындар Лабораториясы
           description: Ойындар Лабораториясын пайдаланып оқиға немесе Шексіз Диснейдің
             танымал кейіпкерлерімен ойын жасаңыз.
           description_short: Ойындар Лабораториясын пайдаланып оқиға немесе Шексіз
             Диснейдің танымал кейіпкерлерімен ойын жасаңыз.
           student_description: Ойындар Лабораториясын пайдаланып оқиға немесе Шексіз
             Диснейдің танымал кейіпкерлерімен ойын жасаңыз.
-        netsim:
-          title: Ғаламтор Симуляторы
-        20-hour:
-          title: Информатика Курсына жеделдетілген кіріспе
-          description: Бұл 20-сағаттық курс информатика саласы мен бағдарламалау негіздерінің
-            2-4 курсын қамтиды. Курс 10-18 жастағыларға арналған. Тереңдетіп оқу үшін
-            2-4 курстарды қараңыз!
-          description_short: Бұл 20-сағаттық курс информатика саласы мен бағдарламалау
-            негіздерінің 2-4 курсын қамтиды.
-          description_audience: 10-18 жастағылар үшін
-          student_description: Бұл 20-сағаттық курс информатика саласы мен бағдарламалау
-            негіздерінің 2-4 курсын қамтиды. Курс 10-18 жастағыларға арналған. Тереңдетіп
-            оқу үшін 2-4 курстарды қараңыз!
-        edit-code:
-          title: Кодты өзгерту
-          description: Кодты өзгерту
-          description_short: Кодты өзгерту
-          student_description: Кодты өзгерту
-        events:
-          title: Шаралар
-          description: Шаралар
-          description_short: Шаралар
-          student_description: Шаралар
-        flappy:
-          title: Қанат Қағу Коды
-          description: Өз ойыныңызды 10 минут ішінде жасағыңыз келеді ме? Онда біздің
-            Қанат Қағу Коды сабағын байқап көріңіз!
-          description_short: Flappy ойынын 10 минут ішінде жазыңыз!
-          student_description: Өз ойыныңызды 10 минут ішінде жасағыңыз келеді ме?
-            Онда біздің Қанат Қағу Коды сабағын байқап көріңіз!
+          title: Диснейдің Шексіз Ойындар Лабораториясы
         jigsaw:
-          title: Бас қатырғыш
           description: Біздің Jigsaw сабағымызды байқап көріңіз.
           description_short: Біздің Jigsaw сабағымызды байқап көріңіз.
           student_description: Біздің Jigsaw сабағымызды байқап көріңіз.
-        step:
-          title: Қадам
-          description: Қадам сабағы
-          description_short: Қадам сабағы
-          student_description: Қадам сабағы
-        Hour of Code:
-          title: Код Жазу Сағаты 2013
-          description: Ашулы Құстар және Өсімдіктер Зомбилерге Қарсы кейіпкерлерімен
-            информатика негіздерін оқып көріңіз!
-          description_short: Информатика негіздерін көптеген көңілді кейіпкерлерімен
-            оқыңыз!
-          student_description: Ашулы Құстар және Өсімдіктер Зомбилерге Қарсы кейіпкерлерімен
-            информатика негіздерін оқып көріңіз!
-        algebraPD2a:
-          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          student_description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-        algebraPD2b:
-          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          student_description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-        ECSPD2:
-          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          student_description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
+          title: Бас қатырғыш
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: Кіріспе
+            k5_getting_started_1:
+              display_name: Кіріспе
+        mc:
+          description: Стив пен Алексек олардың Minecraft әлеміндегі саяхаттарына
+            көмектесу үшін код блоктарын қолданыңыз.
+          description_short: Код арқылы Minecraft әлемінде саяхаттаңыз.
+          student_description: Стив пен Алексек олардың Minecraft әлеміндегі саяхаттарына
+            көмектесу үшін код блоктарын қолданыңыз.
+          title: Minecraft Кодтау Сағаты
+        minecraft:
+          description: Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары
+            сенің өз Minecraft ойынының нұсқасында.
+          description_short: Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары
+            сенің өз Minecraft ойынының нұсқасында.
+          student_description: Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары
+            сенің өз Minecraft ойынының нұсқасында.
+          title: Minecraft кодтау сағатының дизайнеры
+        netsim:
+          title: Ғаламтор Симуляторы
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Шарттар
+            lessonGroup-5:
+              display_name: Айнымалылар
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Ілмек
+            lessonGroup-6:
+              display_name: Шаралар
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Кіріккен Циклдер
+            lessonGroup-4:
+              display_name: Функциялар
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Ілмек
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-4:
+              display_name: Ілмек
+            lessonGroup-5:
+              display_name: Шаралар
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Сандық Азаматтық
+            lessonGroup-6:
+              display_name: Ілмек
+        new-express:
+          lesson_groups:
+            content:
+              display_name: Контент
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Кіріспе
+        playlab:
+          description: Ойындар Лабораториясымен oқиға құрыңыз немесе ойын жасаңыз!
+          description_short: Ойындар Лабораториясымен oқиға құрыңыз немесе ойын жасаңыз!
+          student_description: Ойындар Лабораториясымен oқиға құрыңыз немесе ойын
+            жасаңыз!
+          title: Ойындар Лабораториясы
+        pre-express-2019:
+          lesson_groups:
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        pre-express-2020:
+          lesson_groups:
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        pre-express-2021:
+          lesson_groups:
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
         sciencePD2b:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
@@ -171,37 +1492,15 @@ kk:
           description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
           student_description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-        ECSPD2-iZone:
-          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          student_description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-        ECSPD2-NexTech:
-          description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          description_short: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-          student_description: 'Кезең 2 Онлайн: Араласқан Жазғы зерттеулер'
-        asUnplugged:
-          description_audience: Жас аралығы 6-13
-        afterschool1:
-          description_audience: Жас аралығы 7-13
-        Special Fun:
-          description_audience: 10-18 жастағылар үшін
-        SpecialSeries:
-          description_audience: 10-18 жастағылар үшін
-        iceage:
-          title: Mұзды дәуірі ойын лабораториясы
-          description: Оқиға жаса немесе Mұзды дәуірі ойын лабораториясы арқылы ойын
-            жаса!
-          description_short: Оқиға жаса немесе Mұзды дәуірі ойын лабораториясы арқылы
-            ойын жаса!
-          student_description: Оқиға жаса немесе Mұзды дәуірі ойын лабораториясы арқылы
-            ойын жаса!
-        gumball:
-          title: Gumball ойын лабораториясы
-          description: Оқиға жаса немесе Gumball ойын лабораториясы арқылы ойын жаса!
-          description_short: Оқиға жаса немесе Gumball ойын лабораториясы арқылы ойын
-            жаса!
-          student_description: Оқиға жаса немесе Gumball ойын лабораториясы арқылы
-            ойын жаса!
+        soccer:
+          name: футбол
+        spelling-bee:
+          title: Сөз жазушы Ара
+        sports:
+          description: Өзіңнің жеке спорт ойынын жаз
+          description_short: Өзіңнің жеке спорт ойынын жаз
+          student_description: Өзіңнің жеке спорт ойынын жаз
+          title: Спорттар
         starwars:
           description: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар
             ойыныңды алыстағы галактикада жаса.
@@ -216,753 +1515,63 @@ kk:
             ойыныңды алыстағы галактикада жаса.
           student_description: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар
             ойыныңды алыстағы галактикада жаса.
-        mc:
-          title: Minecraft Кодтау Сағаты
-          description: Стив пен Алексек олардың Minecraft әлеміндегі саяхаттарына
-            көмектесу үшін код блоктарын қолданыңыз.
-          description_short: Код арқылы Minecraft әлемінде саяхаттаңыз.
-          student_description: Стив пен Алексек олардың Minecraft әлеміндегі саяхаттарына
-            көмектесу үшін код блоктарын қолданыңыз.
-        CSDU3-Draft:
-          description_short: Бағдарламалау
-        TEMP CSD Unit 3:
-          description_short: Бағдарламалау
-        CSF_Secret_Sample:
-          description_audience: 8-18 жастағылар үшін
-        cspunit1-support:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-            practice:
-              display_name: Сабақ беру Практикалары
-        test-teaching-ap-cs-unit-1:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-            practice:
-              display_name: Сабақ беру Практикалары
-        CSF_Secret_Sample_Story:
-          description_audience: 8-18 жастағылар үшін+
-        MikeTest:
-          description_audience: 8-98 жастағылар үшін
-        artistExemplar:
-          description_audience: 8-18 жастағылар үшін
+        step:
+          description: Қадам сабағы
+          description_short: Қадам сабағы
+          student_description: Қадам сабағы
+          title: Қадам
         teachercon:
           lesson_groups:
-            required:
-              display_name: Қысқаша шолу
             content:
               display_name: Контент
             practice:
               display_name: Сабақ беру Практикалары
-        gradeKinder:
-          description_audience: 5-18 жастағылар үшін
-        grade4:
-          description_audience: Жас аралығы 9-99
-        grade1:
-          description_audience: 5-18 жастағылар үшін
-        grade5:
-          description_audience: Жас аралығы 10-110
-        grade3:
-          description_audience: 5-18 жастағылар үшін
-        alltheplcthings:
-          lesson_groups:
             required:
               display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-            practice:
-              display_name: Сабақ беру Практикалары
-        grade2:
-          description_audience: 5-18 жастағылар үшін
-        csp-online-test:
+        test-nv-coursea-2023:
           lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-            practice:
-              display_name: Сабақ беру Практикалары
-        csp1-support:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-            practice:
-              display_name: Сабақ беру Практикалары
-        basketball:
-          title: Баскетбол ойынды жасау
-          description_short: Баскетбол ойынды жасау
-          description: Баскетбол ойынды жасау
-          student_description: Баскетбол ойынды жасау
-        csp2-support:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-            practice:
-              display_name: Сабақ беру Практикалары
-        minecraft:
-          title: Minecraft кодтау сағатының дизайнеры
-          description_short: Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары
-            сенің өз Minecraft ойынының нұсқасында.
-          description: Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары
-            сенің өз Minecraft ойынының нұсқасында.
-          student_description: Бағдарламалау жануарлары мен басқа да Minecraft жаратылыстары
-            сенің өз Minecraft ойынының нұсқасында.
-        coursee-draft:
-          lesson_groups:
-            content:
-              display_name: Контент
-        coursef-draft:
-          lesson_groups:
-            content:
-              display_name: Контент
-        classic-hoc-impact-study:
-          description_short: Информатика негіздерін көптеген көңілді кейіпкерлерімен
-            оқыңыз!
-        hoc-impact-study:
-          description_short: Информатика негіздерін көптеген көңілді кейіпкерлерімен
-            оқыңыз!
-        sports:
-          title: Спорттар
-          description_short: Өзіңнің жеке спорт ойынын жаз
-          description: Өзіңнің жеке спорт ойынын жаз
-          student_description: Өзіңнің жеке спорт ойынын жаз
-        csp3-support:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-            practice:
-              display_name: Сабақ беру Практикалары
-        csp4-support:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-            practice:
-              display_name: Сабақ беру Практикалары
-        csf2harvey:
-          lesson_groups:
-            content:
-              display_name: Контент
-        csp5-support:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-            practice:
-              display_name: Сабақ беру Практикалары
-        csppostap-2017:
-          lesson_groups:
-            content:
-              display_name: Контент
-        cspnovice:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp1-dlp:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp2-dlp:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp3-dlp:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp4-dlp:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp5-dlp:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csd1-dlp:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csd6-dlp:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csd5-dlp:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csd4-dlp:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csd3-dlp:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csd2-dlp:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        express-2017:
-          lesson_groups:
-            content:
-              display_name: Контент
-        new-express:
-          lesson_groups:
-            content:
-              display_name: Контент
-        csd1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csd2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csd3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csd4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csd5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csd6-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp1-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp2-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp3-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp4-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp5-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp-explore-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp-create-dlp-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csd-novice-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csd-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp-novice-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp-apprentice-18:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        fit-test:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        cspplayground:
-          lesson_groups:
-            csp_variables:
-              display_name: Айнымалылар
-            csp_conditionals:
-              display_name: Шарттар
-            csp_functions:
-              display_name: Функциялар
-        coursef-2019:
-          lesson_groups:
-            csf_variables:
-              display_name: Айнымалылар
-            csf_for_loops:
-              display_name: For ілмектері
-            csf_internet:
-              display_name: Ғаламтор
-            csf_digcit:
+            lessonGroup-2:
               display_name: Сандық Азаматтық
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: Шаралар
-            csf_loops:
+            lessonGroup-4:
               display_name: Ілмек
-            csf_conditionals:
-              display_name: Шарттар
-            csf_binary:
-              display_name: Бинарлы
-            csf_digcit:
-              display_name: Сандық Азаматтық
-        coursee-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_nested_loops:
-              display_name: Кіріккен Циклдер
-            csf_functions:
-              display_name: Функциялар
-        express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Ілмек
-            csf_conditionals:
-              display_name: Шарттар
-            csf_functions:
-              display_name: Функциялар
-            csf_variables:
-              display_name: Айнымалылар
-            csf_for_loops:
-              display_name: For ілмектері
-        andrea-test:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        coursec-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_binary:
-              display_name: Бинарлы
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        coursea-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        courseb-2019:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        pre-express-2019:
-          lesson_groups:
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        csp4-pilot:
-          lesson_groups:
-            csp_variables:
-              display_name: Айнымалылар
-            csp_conditionals:
-              display_name: Шарттар
-            csp_functions:
-              display_name: Функциялар
-            required:
-              display_name: Қысқаша шолу
-        csp1-pilot:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-        csp1-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Айнымалылар
-            csp_conditionals:
-              display_name: Шарттар
-            csp_functions:
-              display_name: Функциялар
-        csp2-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Айнымалылар
-            csp_conditionals:
-              display_name: Шарттар
-            csp_functions:
-              display_name: Функциялар
-        csp4-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Айнымалылар
-            csp_conditionals:
-              display_name: Шарттар
-            csp_functions:
-              display_name: Функциялар
-        csp5-pilot-staging:
-          lesson_groups:
-            csp_lists:
-              display_name: Тізімдер
-            csp_loops:
-              display_name: Ілмек
-        csp6-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Айнымалылар
-            csp_conditionals:
-              display_name: Шарттар
-            csp_functions:
-              display_name: Функциялар
-        csp8-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Айнымалылар
-            csp_conditionals:
-              display_name: Шарттар
-            csp_functions:
-              display_name: Функциялар
-        csp9-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Айнымалылар
-            csp_conditionals:
-              display_name: Шарттар
-            csp_functions:
-              display_name: Функциялар
-        csp10-pilot-staging:
-          lesson_groups:
-            csp_variables:
-              display_name: Айнымалылар
-            csp_conditionals:
-              display_name: Шарттар
-            csp_functions:
-              display_name: Функциялар
-        csp5-pilot:
-          lesson_groups:
-            csp_lists:
-              display_name: Тізімдер
-            csp_loops:
-              display_name: Ілмек
-            required:
-              display_name: Қысқаша шолу
-        fit2019-novice:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        fit2019-apprentice:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp3-pilot:
+        test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:
               display_name: Контент
+            practice:
+              display_name: Сабақ беру Практикалары
             required:
               display_name: Қысқаша шолу
-        csl-vn:
-          lesson_groups:
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        dlp19-csd-mod-fit:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        dlp19-csp-mod-fit:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        dlp19-csd-mod-w1:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        dlp19-csd-mod-w2:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        dlp19-csd-mod-w3:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        dlp19-csd-mod-w4:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        dlp19-csp-mod-w1:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        dlp19-csp-mod-w2:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        dlp19-csp-mod-w3:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        dlp19-csp-mod-w4:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-            content:
-              display_name: Контент
-        csp2-pilot:
-          lesson_groups:
-            content:
-              display_name: Контент
-            required:
-              display_name: Қысқаша шолу
-        csp6-pilot:
-          lesson_groups:
-            content:
-              display_name: Контент
-            required:
-              display_name: Қысқаша шолу
-        csp4-preview:
-          lesson_groups:
-            csp_variables:
-              display_name: Айнымалылар
-            csp_conditionals:
-              display_name: Шарттар
-            csp_functions:
-              display_name: Функциялар
-        time4cs-control-unit-2:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_conditionals:
-              display_name: Шарттар
-            csf_nested_loops:
-              display_name: Кіріккен Циклдер
-            csf_functions:
-              display_name: Функциялар
         time4cs-control-unit-1:
           lesson_groups:
-            csf_loops:
-              display_name: Ілмек
             csf_conditionals:
               display_name: Шарттар
-            csf_events:
-              display_name: Шаралар
             csf_digcit:
               display_name: Сандық Азаматтық
-        time4cs-experiment-unit-1:
-          lesson_groups:
+            csf_events:
+              display_name: Шаралар
             csf_loops:
               display_name: Ілмек
+        time4cs-control-unit-2:
+          lesson_groups:
             csf_conditionals:
               display_name: Шарттар
-            csf_events:
-              display_name: Шаралар
             csf_digcit:
               display_name: Сандық Азаматтық
-        csp7-pilot:
-          lesson_groups:
-            required:
-              display_name: Қысқаша шолу
-        csp4-2020:
-          lesson_groups:
-            csp_variables:
-              display_name: Айнымалылар
-            csp_conditionals:
-              display_name: Шарттар
-            csp_functions:
+            csf_functions:
               display_name: Функциялар
-        csp5-2020:
-          lesson_groups:
-            csp_lists:
-              display_name: Тізімдер
-            csp_loops:
-              display_name: Ілмек
-        coursea-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        courseb-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        coursec-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_binary:
-              display_name: Бинарлы
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        coursed-2020:
-          lesson_groups:
-            csf_events:
-              display_name: Шаралар
-            csf_loops:
-              display_name: Ілмек
-            csf_conditionals:
-              display_name: Шарттар
-            csf_binary:
-              display_name: Бинарлы
-            csf_digcit:
-              display_name: Сандық Азаматтық
-        coursee-2020:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
             csf_nested_loops:
               display_name: Кіріккен Циклдер
-            csf_functions:
-              display_name: Функциялар
-        coursef-2020:
+        time4cs-experiment-unit-1:
           lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_variables:
-              display_name: Айнымалылар
-            csf_for_loops:
-              display_name: For ілмектері
-        express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Ілмек
             csf_conditionals:
               display_name: Шарттар
-            csf_functions:
-              display_name: Функциялар
-            csf_variables:
-              display_name: Айнымалылар
-            csf_for_loops:
-              display_name: For ілмектері
-        pre-express-2020:
-          lesson_groups:
-            csf_loops:
-              display_name: Ілмек
+            csf_digcit:
+              display_name: Сандық Азаматтық
             csf_events:
               display_name: Шаралар
-        virtual-holding-place:
-          lesson_groups:
-            content:
-              display_name: Контент
-        csd3-virtual:
-          lesson_groups:
-            csd3_1:
-              display_name: Контент
-            csd3_2:
-              display_name: Контент
-            cspSurvey:
-              display_name: Контент
+            csf_loops:
+              display_name: Ілмек
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -979,574 +1588,11 @@ kk:
           lesson_groups:
             lg_1:
               display_name: Контент
-        2021drafting:
+        virtual-holding-place:
           lesson_groups:
-            introduction:
-              display_name: Кіріспе
-            lessonGroup-3:
-              display_name: Айнымалылар
-            debugging:
-              display_name: Бағдарламаны дұрыстау
-        csp4-2021:
-          lesson_groups:
-            csp_variables:
-              display_name: Айнымалылар
-            csp_conditionals:
-              display_name: Шарттар
-            csp_functions:
-              display_name: Функциялар
-        csp5-2021:
-          lesson_groups:
-            csp_lists:
-              display_name: Тізімдер
-            csp_loops:
-              display_name: Ілмек
-        csp6-2021:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Алгоритмдер
-        coursea-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        courseb-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        coursec-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_binary:
-              display_name: Бинарлы
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: Шаралар
-            csf_loops:
-              display_name: Ілмек
-            csf_conditionals:
-              display_name: Шарттар
-            csf_binary:
-              display_name: Бинарлы
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            lessonGroup-6:
-              display_name: Сандық Азаматтық
-        coursee-2021:
-          lesson_groups:
-            ramp_up:
-              display_name: Кіріккен Циклдер
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_nested_loops:
-              display_name: Шарттар
-            csf_functions:
-              display_name: Функциялар
-        coursef-2021:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_variables:
-              display_name: For ілмектері
-            csf_for_loops:
-              display_name: For ілмектері
-            lessonGroup-8:
-              display_name: Айнымалылар
-            lessonGroup-9:
-              display_name: жою
-            lessonGroup-7:
-              display_name: Сандық Азаматтық
-        express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Ілмек
-            csf_conditionals:
-              display_name: Шарттар
-            csf_functions:
-              display_name: Функциялар
-            csf_variables:
-              display_name: Айнымалылар
-            csf_for_loops:
-              display_name: For ілмектері
-            lessonGroup-9:
-              display_name: Шаралар
-        pre-express-2021:
-          lesson_groups:
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        csf-2021-pilot:
-          lesson_groups:
-            ramp_up:
-              display_name: Кіріспе
-            lessonGroup-3:
-              display_name: Айнымалылар
-            variables:
-              display_name: Айнымалылар
-        csa1-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa2-pilot:
-          lesson_groups:
-            lesson group:
-              display_name: Контент
-        csa3-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa4-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa5-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa6-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa7-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa8-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        k5-onlinepd-2021:
-          lesson_groups:
-            k5_getting_started_1:
-              display_name: Кіріспе
-            Introduction:
-              display_name: Кіріспе
-        csa1-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa2-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa-videos:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Бөлім 1
-            lessonGroup-4:
-              display_name: Бөлім 2
-            lessonGroup-5:
-              display_name: Бөлім 3
-            lessonGroup-6:
-              display_name: Бөлім 4
-            lessonGroup-7:
-              display_name: Бөлім 5
-        csa3-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        dlp21-csp-mod4:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Деңгей 1
-            lessonGroup-3:
-              display_name: Деңгей 2
-        dlp21-csd:
-          lesson_groups:
-            lessonGroup-2:
-              description: таңдау
-        csa1-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa2-pilot-facilitator:
-          lesson_groups:
-            lesson group:
-              display_name: Контент
-        csa3-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa4-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa5-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa4-exemplars:
-          lesson_groups:
-            lesson group:
-              display_name: Контент
             content:
               display_name: Контент
-            lesson_group:
-              display_name: Контент
-            lessonGroup-2:
-              display_name: Контент
-        spelling-bee:
-          title: Сөз жазушы Ара
-        csa5-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa6-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa6-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        2022drafting:
-          lesson_groups:
-            lessonGroup-8:
-              display_name: Код жазу Сағаты
-        csa7-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csf-2022-pilot:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Айнымалылар
-        csa8-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa7-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa8-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        coursea-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        express-2022:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: Шаралар
-            csf_loops:
-              display_name: Ілмек
-            csf_conditionals:
-              display_name: Шарттар
-            csf_functions:
-              display_name: Функциялар
-            csf_variables:
-              display_name: Айнымалылар
-            csf_for_loops:
-              display_name: For ілмектері
-        csp4-2022:
-          lesson_groups:
-            csp_variables:
-              display_name: Айнымалылар
-            csp_conditionals:
-              display_name: Шарттар
-            csp_functions:
-              display_name: Функциялар
-        csp5-2022:
-          lesson_groups:
-            csp_lists:
-              display_name: Тізімдер
-            csp_loops:
-              display_name: Ілмек
-        courseb-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        coursec-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        coursed-2022:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Сандық Азаматтық
-            csf_events:
-              display_name: Шаралар
-            csf_loops:
-              display_name: Ілмек
-            csf_conditionals:
-              display_name: Шарттар
-        coursee-2022:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            ramp_up:
-              display_name: Кіріккен Циклдер
-            csf_functions:
-              display_name: Функциялар
-            csf_nested_loops:
-              display_name: Шарттар
-        coursef-2022:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Сандық Азаматтық
-            lessonGroup-8:
-              display_name: Айнымалылар
-        csa1-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        pre-express-2022:
-          lesson_groups:
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        csa2-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa3-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa4-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa5-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa1-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa7-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa8-pilot-extra:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        coursef-2022-pilot:
-          lesson_groups:
-            lessonGroup-7:
-              display_name: Сандық Азаматтық
-            lessonGroup-8:
-              display_name: Айнымалылар
-        csa6-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa7-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa8-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa2-2022-exemplars:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        soccer:
-          name: футбол
-        csa1-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa2-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa3-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa4-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa5-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa6-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa7-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa8-validation-pilot-2022:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa1-2023:
-          lessons:
-            lesson-6:
-              name: Ілмек
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Контент
-        csa2-2023:
-          lessons:
-            lesson-4:
-              name: Айнымалылар
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa3-2023:
-          lessons:
-            lesson-3:
-              name: For ілмектері
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa5-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa7-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csa8-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Контент
-        csp4-2023:
-          lesson_groups:
-            csp_variables:
-              display_name: Айнымалылар
-            csp_conditionals:
-              display_name: Шарттар
-            csp_functions:
-              display_name: Функциялар
-        csp5-2023:
-          lesson_groups:
-            csp_loops:
-              display_name: Ілмек
-        csp6-2023:
-          lesson_groups:
-            csp_unit6_2020:
-              display_name: Тізімдер
-            lessonGroup-3:
-              display_name: Ілмек
-        angelina-playground:
-          lessons:
-            lesson-5:
-              name: Бағалаулар
-        pre-express-2023:
-          lesson_groups:
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        express-2023:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: Шаралар
-            csf_loops:
-              display_name: Ілмек
-            csf_conditionals:
-              display_name: Шарттар
-            csf_functions:
-              display_name: Функциялар
-            csf_variables:
-              display_name: Айнымалылар
-            csf_for_loops:
-              display_name: For ілмектері
-        coursea-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        courseb-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        coursec-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            csf_loops:
-              display_name: Ілмек
-            csf_events:
-              display_name: Шаралар
-        coursed-2023:
-          lesson_groups:
-            lessonGroup-6:
-              display_name: Сандық Азаматтық
-            csf_events:
-              display_name: Шаралар
-            csf_loops:
-              display_name: Ілмек
-            csf_conditionals:
-              display_name: Шарттар
-        coursee-2023:
-          lesson_groups:
-            csf_digcit:
-              display_name: Сандық Азаматтық
-            ramp_up:
-              display_name: Кіріккен Циклдер
-            csf_functions:
-              display_name: Функциялар
-            csf_nested_loops:
-              display_name: Шарттар
-        pl-csd-summer-day1:
-          lessons:
-            lesson-3:
-              name: Кіріспе
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
               name: Кіріспе
-        coursef-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Сандық Азаматтық
-            lessonGroup-4:
-              display_name: Айнымалылар

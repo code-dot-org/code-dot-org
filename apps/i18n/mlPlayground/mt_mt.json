@@ -1,23 +1,39 @@
 {
-  "navigateBack": "Lura",
-  "correctAnswer": "Korrett",
   "columnInspectorDescription": "Deskrizzjoni",
+  "correctAnswer": "Korrett",
   "datasets": {
-    "medical_priority": {
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Età"
+        },
+        "Gender": {
+          "id": "Sess"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "età"
         }
       }
     },
-    "shoe_survey_toy": {
+    "heart": {
       "fields": {
-        "day": {
-          "id": "jum"
+        "Age": {
+          "id": "Età"
         }
       }
     },
     "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "età"
+        }
+      }
+    },
+    "medical_priority": {
       "fields": {
         "age": {
           "id": "età"
@@ -31,13 +47,10 @@
         }
       }
     },
-    "billionaires": {
+    "shoe_survey_toy": {
       "fields": {
-        "Age": {
-          "id": "Età"
-        },
-        "Gender": {
-          "id": "Sess"
+        "day": {
+          "id": "jum"
         }
       }
     },
@@ -48,31 +61,18 @@
         }
       }
     },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "età"
-        }
-      }
-    },
     "student_survey": {
       "fields": {
         "Age": {
-          "id": "Età",
-          "description": "Età"
+          "description": "Età",
+          "id": "Età"
         },
         "Gender": {
-          "id": "Sess",
-          "description": "Sess"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "Età"
+          "description": "Sess",
+          "id": "Sess"
         }
       }
     }
-  }
+  },
+  "navigateBack": "Lura"
 }

@@ -2,16 +2,293 @@
 eu:
   data:
     unplugged:
+      BigEvent:
+        desc: Ikasleak "ebentu"-aren programazioaren kontzeptua ikasiko dute, hau
+          da, konputagailu batek uneoro monitorizatzen dituen ekintzak izanik. Irakasleak
+          botoiak zanpatuko ditu eta ikasleak horren araberako erreakzioak edukiko
+          dituzte.
+        title: Gertaera Handia
+      BigEvent_2018:
+        desc: Ikasleak "ebentu"-aren programazioaren kontzeptua ikasiko dute, hau
+          da, konputagailu batek uneoro monitorizatzen dituen ekintzak izanik. Irakasleak
+          botoiak zanpatuko ditu eta ikasleak horren araberako erreakzioak edukiko
+          dituzte.
+        title: Gertaera Handia
+      BigEvent_2019:
+        desc: Ikasleak "ebentu"-aren programazioaren kontzeptua ikasiko dute, hau
+          da, konputagailu batek uneoro monitorizatzen dituen ekintzak izanik. Irakasleak
+          botoiak zanpatuko ditu eta ikasleak horren araberako erreakzioak edukiko
+          dituzte.
+        title: Gertaera Handia
+      BinaryBracelets:
+        desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia
+          era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela
+          ikasten dute honela.
+        title: Eskumuturreko bitarrak
+      BinaryBracelets_2018:
+        desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia
+          era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela
+          ikasten dute honela.
+        title: Eskumuturreko bitarrak
+      BinaryBracelets_2019:
+        desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia
+          era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela
+          ikasten dute honela.
+        title: Eskumuturreko bitarrak
+      BinaryImages:
+        desc: Nahiz eta askok pentsatu sistema bitarra bat eta zeroekin bakarri osatuta
+          dagoela, aurreko ikastaroetan gure ikasleei erakutsi genien bezala, informazioa
+          aukera bitar ezberdinez osatua egon daiteke. Ikasgai honetan kontzeptu hori
+          haratago eramango du erakutsiz ordenagailu batek informazio bitar konplexua
+          gordetzeko gai dela (irudi eta kolore bezalakoak).
+        title: Irudi bitarrak
+      BinaryImages_2018:
+        desc: Nahiz eta askok pentsatu sistema bitarra bat eta zeroekin bakarri osatuta
+          dagoela, aurreko ikastaroetan gure ikasleei erakutsi genien bezala, informazioa
+          aukera bitar ezberdinez osatua egon daiteke. Ikasgai honetan kontzeptu hori
+          haratago eramango du erakutsiz ordenagailu batek informazio bitar konplexua
+          gordetzeko gai dela (irudi eta kolore bezalakoak).
+        title: Irudi bitarrak
+      BinaryImages_2019:
+        desc: Nahiz eta askok pentsatu sistema bitarra bat eta zeroekin bakarri osatuta
+          dagoela, aurreko ikastaroetan gure ikasleei erakutsi genien bezala, informazioa
+          aukera bitar ezberdinez osatua egon daiteke. Ikasgai honetan kontzeptu hori
+          haratago eramango du erakutsiz ordenagailu batek informazio bitar konplexua
+          gordetzeko gai dela (irudi eta kolore bezalakoak).
+        title: Irudi bitarrak
+      Booleans:
+        desc: Boolearrak ikastaro honetan landuko ditugun laugarren eta azken datu
+          motak dira. Ataza honetan Boolearrak zer diren eta nola erabil daitezkeen
+          era logikoan pentsatzen duten funtzioak idazteko ikasiko dugu
+        title: Boolearrak eta logika
+      BuildingAFoundation:
+        desc: Ikasleek egitura bat eraiki beharko dute eskainitako baliabideak soilik
+          erabiliz. Egitura horiek ataza bat egin behar dute (altuera batera heldu,
+          edo pisu bat jasan, esaterako) eta ikasleek iraunkortasunaren ideia landu
+          beharko dute atazak zailtzen direnean.
+        title: Oinarri bat Eraikitzen
+      CollisionDetection:
+        desc: Pantailan dauden objektuek elkarren artean talka egiten duten jakitea
+          oso garrantzitsua da joko gehienetan. Ikastaro honetan Pitagorasen teorema
+          eta Distantzia formula nola erabili ikusiko dugu plano batean dauden bi
+          puntuen (edo objetu, pertsonaia...) arteko distantzia neurtu eta ea elkar
+          ukitzen duten jakiteko.
+        title: Kolisio detekzioa eta Pitagorasen teorema
+      ComputationalThinking:
+        desc: Ikasleek pentsamendu konputazionaleko pausoetan pentsatzen dute( deskonposatu,
+          patroien bat egitea, abstrakzioa, algoritmoak) imajinatzeko joko baten jokatzeko
+          pausoak instrukzioak eduki gabe.
+        title: Pentsamendu konputazionala
+      Conditionals:
+        desc: 'Baldintzen inguruan ikasteko, ikasleak karta joko batean jokatuko dute
+          eta arau batzuk sortuko dituzte. Adibidez: "Karta gorri bat marrazten badut,
+          puntu bat lortzen duzu."'
+        title: Baldintzak
+      ConditionalsPiecewiseFunctions:
+        desc: Funtzioei pasatzen dizkiegun parametroak patroi bati erantzuten dioten
+          irteerak sortzen dituzte. Imajina ezazu hainbat parametro nahi ditugula
+          hainbat balioekin hainbat irteera sortzeko patroi bati jarraituz. Honegatik
+          kondizionalak beharrezkoak dira...
+        title: Baldintzazko eta zatikako funtzioak
+      Conditionals_2018:
+        desc: 'Baldintzen inguruan ikasteko, ikasleak karta joko batean jokatuko dute
+          eta arau batzuk sortuko dituzte. Adibidez: "Karta gorri bat marrazten badut,
+          puntu bat lortzen duzu."'
+        title: Baldintzak
+      Conditionals_2019:
+        desc: 'Baldintzen inguruan ikasteko, ikasleak karta joko batean jokatuko dute
+          eta arau batzuk sortuko dituzte. Adibidez: "Karta gorri bat marrazten badut,
+          puntu bat lortzen duzu."'
+        title: Baldintzak
+      Contracts:
+        desc: Kontratuek ahalbidetzen digute funtzio bat ulertzea eta eztabaidatzea.
+          Irakasgai honetan ikasiko dugu nola Kontratuek laguntzen diguten zentzua
+          ematen programazio lengoai bati edo funtzio bati.
+        title: Kontratu, domeinu eta irispena
+      Crowdsourcing:
+        desc: Ikasleek talde-lana erabiltzen dute, eta hau oso erabilia den teknika
+          bat da informatikan. Ekintza bat klasekoekin burutzea ekintza askoz ere
+          eraginkorragoa bihurtzen du, lana banaka burutu ordez.
+        title: Crowdsourcing
+      DesignRecipe:
+        desc: Azken zati honetan ikasleek funtzio erraz batzuk idatz ditzakete, funtzio
+          konplexuenak egiteko gehiago pentsatu beharko delarik. Diseinuaren errezeta
+          era estrukturatuan idaztea ahalbidetzen du, funtzioak behar bezala funtzionatuko
+          dutela bermatzeko.
+        title: Diseinuaren errezeta
+      DiceRace:
+        desc: Ikasgai honek algoritmoak eguneroko bizitzan nola erabiltzen ditugun
+          azaltzen du. Bertan ikasleek dado lasterketa baten algoritmoa identifikatu
+          eta idatziko dute.
+        title: 'Benetako algoritmoak: dado lasterketa'
+      DigitalCitizenship:
+        desc: Ikasleek informazio pribatu eta pertsonalaren artean dagoen desberdintasuna
+          bilatzen dute desberdintzen zer den segurua eta zer ez partekatzea sarean.
+        title: Hiritartasun digitala
+      DigitalFootprint:
+        desc: Irakasleek norberaren informazioaren aztarnat interneten uzteak izan
+          ditzakeen ondorioak zeintzuk izan daitezkeen azalduko die ikasleei.
+        title: Zure aztarna digitala
+      DigitalFootprint_2018:
+        desc: Irakasleek norberaren informazioaren aztarnat interneten uzteak izan
+          ditzakeen ondorioak zeintzuk izan daitezkeen azalduko die ikasleei.
+        title: Zure aztarna digitala
+      DigitalFootprint_2019:
+        desc: Irakasleek norberaren informazioaren aztarnat interneten uzteak izan
+          ditzakeen ondorioak zeintzuk izan daitezkeen azalduko die ikasleei.
+        title: Zure aztarna digitala
+      EnvelopeVariables:
+        desc: Aldagaik askatasun handia ematen dute informatika arloan. Ikasgai honek
+          lagunduko digu azaltzen zein aldagaiak dauden eta nola erabili ditzakegun
+          era ezberdinetan. Erabili ikasgai hau abstrakzio ikasgaia baino lehen (edo
+          batera) ideiak nabarmentzeko.
+        title: Gutun-azaleko aldagarriak
+      ForLoopFun:
+        desc: Begiztak ekintzak behin eta berriro egiten laguntzen digutela badakigu,
+          baina orain ikasi behar dugu nola erabili begiztak barne egitura batekin.
+        title: Begizta jostarirako
+      FunctionalSuncatchers:
+        desc: Ikasleek algoritmo bat sortzen dute aldagai eta funtzioekin (kode zatiak
+          erabil nahi ditugunak behin eta berriz) kristalezko apaingarriak sortzeko
+          kateak eta aleak erabiliz.
+        title: Funtzioak aztertzen
+      GettingLoopy:
+        desc: Ikastaro honek begizta( agindu errepikatuak) kontzeptua dantzaren bidez
+          irakasten digu. Ikasleek koreografia erraz bat ikasiko dute, ondoren errepikatu
+          egin beharko dute.
+        title: Iteratzen
+      GettingLoopy_2018:
+        desc: Ikastaro honek begizta( agindu errepikatuak) kontzeptua dantzaren bidez
+          irakasten digu. Ikasleek koreografia erraz bat ikasiko dute, ondoren errepikatu
+          egin beharko dute.
+        title: Iteratzen
+      GettingLoopy_2019:
+        desc: Ikastaro honek begizta( agindu errepikatuak) kontzeptua dantzaren bidez
+          irakasten digu. Ikasleek koreografia erraz bat ikasiko dute, ondoren errepikatu
+          egin beharko dute.
+        title: Iteratzen
+      GoingPlacesSafely:
+        desc: Interneta oso boteretsua da, baina leku oso arriskutsua ere. Irakasleek
+          adieraziko dute nola nabigatu modu seguruan interneten.
+        title: Joan segurtasunez
+      GoingPlacesSafely_2018:
+        desc: Interneta oso boteretsua da, baina leku oso arriskutsua ere. Irakasleek
+          adieraziko dute nola nabigatu modu seguruan interneten.
+        title: Joan segurtasunez
+      GoingPlacesSafely_2019:
+        desc: Interneta oso boteretsua da, baina leku oso arriskutsua ere. Irakasleek
+          adieraziko dute nola nabigatu modu seguruan interneten.
+        title: Joan segurtasunez
+      GraphPaperProgramming:
+        desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen
+          bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
+        title: Paper grafiko programazioa
+      GraphPaperProgramming_2018:
+        desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen
+          bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
+        title: Paper grafiko programazioa
+      GraphPaperProgramming_2019:
+        desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen
+          bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
+        title: Paper grafiko programazioa
+      Internet:
+        desc: Ikasleek mezuak bidaltzen dituzte Interneteko transmisio metodo imitatuz
+          paperezko zatiak erabiliz.
+        title: Internet
+      MadGlibs:
+        desc: Informatikari batek izan behar duen gaitasun garrantzitsuenetako bat
+          abstrakzioa da. Ekintza honekin zure ikasleak istorio ezberdinak aztertuko
+          dituzte ezberdintasunen bila eta hauekin abstrakzioa egin. Istorio abstrakto
+          hauek beste istorio berri eta dibertigarrien oinarria izango dira.
+        title: Glibs txoroa
+      MoveIt:
+        desc: Ikasleek algoritmo sinpleak sortuko dituzte pertsonai bat labirinto
+          baten barnean gidatuko dute komando bakar bat erabiliz.
+        title: Mugitu, mugitu
+      MoveItMoveIt_2018:
+        title: Mugi ezazu, mugi ezazu!
+      MoveItMoveIt_2019:
+        title: Mugi ezazu, mugi ezazu!
+      PaperPlanes:
+        desc: Lekzio honetan erakusten da nolatan erabiltzen ditugun algoritmoak gure
+          bizitza errealean, espezifikoki paperezko hegazkinak egiterakoan. Lekzio
+          honetan informatikaren irudi zabalagoa ikus dezakegu, eta nola algoritmoak
+          diren bere zati esentzialetako bat.
+        title: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
+      PaperPlanes_2018:
+        desc: Lekzio honetan erakusten da nolatan erabiltzen ditugun algoritmoak gure
+          bizitza errealean, espezifikoki paperezko hegazkinak egiterakoan. Lekzio
+          honetan informatikaren irudi zabalagoa ikus dezakegu, eta nola algoritmoak
+          diren bere zati esentzialetako bat.
+        title: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
+      PaperPlanes_2019:
+        desc: Lekzio honetan erakusten da nolatan erabiltzen ditugun algoritmoak gure
+          bizitza errealean, espezifikoki paperezko hegazkinak egiterakoan. Lekzio
+          honetan informatikaren irudi zabalagoa ikus dezakegu, eta nola algoritmoak
+          diren bere zati esentzialetako bat.
+        title: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
+      PlantASeed:
+        desc: Ikastaro honetan gure egunerokoan algoritmoak nola erabiltzen ditugun
+          azaltzen da, adibidez haziak landatzen ditugunean. Gainera informatikaren
+          ikuspegi zabalagoa azaltzen du, bai eta algoritmoek duten garrantzia.
+        title: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
+      PlantASeed_2018:
+        desc: Ikastaro honetan gure egunerokoan algoritmoak nola erabiltzen ditugun
+          azaltzen da, adibidez haziak landatzen ditugunean. Gainera informatikaren
+          ikuspegi zabalagoa azaltzen du, bai eta algoritmoek duten garrantzia.
+        title: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
+      PlantASeed_2019:
+        desc: Ikastaro honetan gure egunerokoan algoritmoak nola erabiltzen ditugun
+          azaltzen da, adibidez haziak landatzen ditugunean. Gainera informatikaren
+          ikuspegi zabalagoa azaltzen du, bai eta algoritmoek duten garrantzia.
+        title: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
+      RelayProgramming:
+        desc: Ikasleak lasterketa bat errepikatzen dute non jolastokia zearkatzen
+          duten "Grafo Papera Programazioan" oinarritutako algoritmoa idatziz. Agindu
+          bakarra idazt dezakete aldiro eta errora bat egonez gero atzera egin behar
+          dute egindakoa ezabatuz.
+        title: Txandaka programatzen
+      RelayProgramming_2018:
+        title: Txandaka programatzen
+      RelayProgramming_2018_2019:
+        title: Txandaka programatzen
+      SongwritingParameters:
+        desc: Ikasleek kantu baten leloa erabil dezakete adibide gisa funtzioen erabilpena
+          ulertzeko, baita parametroen pasatzea ulertzeko ere (funtzio baten eraldatzea
+          ahalbidetzen duena, funtzio oso berridatzi beharrik gabe).
+        title: Musika idazten
+      SongwritingWithParameters:
+        desc: 'Funtzioa da informatika munduan dagoen egitura bikainenetako bat. Funtzioak
+          (batzuetan prozedurak deituak) programa handiago batean behin eta berriro
+          erabil ditzakezun programa txikiak dira. ikasgai honek ikasleei lagunduko
+          die intuitiboki ulertzen zergatik den lagungarria kode zatiak elkartzea
+          funtzioak osatuz.  '
+        title: Abestiak sortzen parametroekin
+      TangramAlgorithms:
+        desc: Ikasgai honek algoritmoei buruzko garrantzizkoa den zerbait erakusten
+          digu. Algoritmo bat sinple mantentzen badugu aukera asko daude hau erabiltzeko.
+          Guztiek emaitza berdina lortzeaz ziurtatu nahi baduzu, orduan zure algoritmoak
+          xehetasun gehiago behar ditu.
+        title: Tangram algoritmoak
       Unplug1:
-        title: Konputazio zientzetarako sarrera
         desc: Ikasgai honetan  informatika mundura gerturatuko gara eta informatikari
           batek zer egiten duen azalduko da. Ikasleei informatikarien rola hartzeko
           aukera emango zaie. Ekintzaren amaieran ikasle bakoitzak ikasi duenari buruz
           gogoeta egiteko aukera izango du. Izan zaitezke tentatua ikasleei ikasgaiarekin
           lotutako hiztegia ez erakusten, baina orain era atseginean egiten baduzu
           askoz ere amankorragoa izango da aukera berriei itxaroten baduzu baino.
+        title: Konputazio zientzetarako sarrera
+      Unplug10:
+        desc: 'Ikastaro honetan ikasleek webari buruz ikasiko dute: web helbidea,
+          IPa eta DNSa zer diren. Honetarako interneten nabigatzen dutela simulatuko
+          dute.'
+        title: Internet
+      Unplug11:
+        desc: Azken laburbiltzeak lehen 20 orduko seriean ikasleei une gogokoena berriro
+          bizitzea ahalbidetuko die, informatikan bidea egiten jarraitu nahi badute
+          euren kabuz hartuko dituzten urratsak emanez.
+        title: Itxi
       Unplug2:
-        title: Pentsamendu konputazionala
         desc: Orri eta arkatzak soilik erabiliz, ikasleek, pentsamendu konputazionalaren
           lau urratsak ikasiko dituzte. Sarrera motz baten ostean, ikasleak talde
           ezberdinetan banatuak izan beharko dira, eta beste ikasleek munstro zehatz
@@ -22,21 +299,21 @@ eu:
           beste talde batek munstroa eraiki dezan. Taldeek algoritmo horiek trukatuko
           dituzte eta munstroa marraztuko dute algoritmoak zehazten duenaren arabera.
           Marrazkia hasierako taldeak esperotakoa islatzen al du?
+        title: Pentsamendu konputazionala
       Unplug3:
-        title: Paper grafiko programazioa
         desc: Marrazki batzuk programatzen, ikasleak programazioa benetan zer den
           ikasten hasiko dira. Eskola hasiko da ikasleak elkarri aginduak ematen orri
           laukidun batean lauki batzuk koloreztatzeko, irudi konkretu bat osatzeko
           asmoz. Ikasleek egin dituzten irudiak aztertuz bukatu daiteke eskola.
+        title: Paper grafiko programazioa
       Unplug4:
-        title: Algoritmoak
         desc: Ikasgai hau algoritmoei buruzkoa da. Tangrama eta paper koadrikulatua
           erabiliz, lehen ariketan argibideak modu garbian ematearen garrantzia ikasiko
           dugu. Ondoren, ikasleek folio bat laukizuzen bihurtzeko metodo ezberdinak
           proposatuko dituzte. Modu honetan ikasleek metodo bakoitzak tolestura kopuru
           ezberdina behar dutela ikusiko dute.
+        title: Algoritmoak
       Unplug5:
-        title: Funtzioak
         desc: Ikasgai honetan, ikasleek eguzki-harrapatzaile bat egingo dute soka,
           apaingarriak eta amuleto berezia erabiliz. Ikasleek urrats errepikakor batzuk
           jarraituko dituzte eta ondoren behin baino gehiagotan errepikatzen diren
@@ -48,463 +325,186 @@ eu:
           "abstrakzioa egin" beharko dute eta bakoitzaren baliabideentzako termino
           orokorrak sortu.  Leku-marka generikoak erabiltzea aldagaientzako sarrera
           paregabea da.
+        title: Funtzioak
       Unplug6:
-        title: Baldintzak
         desc: Hau klase joko bat da. Baldintzak sartu eta gero, baldin eta begizta
           adierazpenak, klaseak batera praktika dezake aurre idatzita dagoen programa
           baten bidez.
+        title: Baldintzak
       Unplug7:
-        title: Abestiak idazten
         desc: Abestien hitzak irakurtzea lan erraz eta polita da ikasle gehienentzat.
           Jarduera ohiko hau eraldatu dugu hezkuntza solido bat eskaintzeko, funtzioen
           definizioa eta hauen deiak ondo ulertzea ahalbidetuko duena. Behin ikasleek
           ondo ulertu dutela definizio eta dei prozesu hau, parametroekin hauek nola
           hedatu ikasiko dugu.
+        title: Abestiak idazten
       Unplug8:
-        title: Abstrakzioa
         desc: Ariketa honek ikaslearen eguneroko errutina eta hitzekin zerikusia duen
           joko baten bidez, zure klaseari ikasten lagunduko dio abstrakzioaren eraginkortasuna.
+        title: Abstrakzioa
       Unplug9:
-        title: Rele programazioa
         desc: Ikasgai honek beste jarduera bateko (4. Laukidun Orri Programazioa)
           ideia hartuko du eta bertan lortutako gaitasunak. Honekin azpimarratuko
           dugu programak osatzearen garrantzia, batez ere sekuentzian exekutatzen
           direnak eta ez direla existitzen errorerik ("bug").
-      Unplug10:
-        title: Internet
-        desc: 'Ikastaro honetan ikasleek webari buruz ikasiko dute: web helbidea,
-          IPa eta DNSa zer diren. Honetarako interneten nabigatzen dutela simulatuko
-          dute.'
-      Unplug11:
-        title: Itxi
-        desc: Azken laburbiltzeak lehen 20 orduko seriean ikasleei une gogokoena berriro
-          bizitzea ahalbidetuko die, informatikan bidea egiten jarraitu nahi badute
-          euren kabuz hartuko dituzten urratsak emanez.
+        title: Rele programazioa
       UnplugHappyMaps:
+        desc: Ikasleek algoritmo sinpleak sortuko dituzte pertsonai bat labirinto
+          baten barnean gidatuko dute komando bakar bat erabiliz.
         title: Mapa Zoriontsuak
+      UnplugHappyMaps_2018:
         desc: Ikasleek algoritmo sinpleak sortuko dituzte pertsonai bat labirinto
           baten barnean gidatuko dute komando bakar bat erabiliz.
-      MoveIt:
-        title: Mugitu, mugitu
+        title: Mapa Zoriontsuak
+      UnplugHappyMaps_2019:
         desc: Ikasleek algoritmo sinpleak sortuko dituzte pertsonai bat labirinto
           baten barnean gidatuko dute komando bakar bat erabiliz.
-      PlantASeed:
-        title: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-        desc: Ikastaro honetan gure egunerokoan algoritmoak nola erabiltzen ditugun
-          azaltzen da, adibidez haziak landatzen ditugunean. Gainera informatikaren
-          ikuspegi zabalagoa azaltzen du, bai eta algoritmoek duten garrantzia.
-      BuildingAFoundation:
-        title: Oinarri bat Eraikitzen
-        desc: Ikasleek egitura bat eraiki beharko dute eskainitako baliabideak soilik
-          erabiliz. Egitura horiek ataza bat egin behar dute (altuera batera heldu,
-          edo pisu bat jasan, esaterako) eta ikasleek iraunkortasunaren ideia landu
-          beharko dute atazak zailtzen direnean.
-      GettingLoopy:
-        title: Iteratzen
-        desc: Ikastaro honek begizta( agindu errepikatuak) kontzeptua dantzaren bidez
-          irakasten digu. Ikasleek koreografia erraz bat ikasiko dute, ondoren errepikatu
-          egin beharko dute.
-      RelayProgramming:
-        title: Txandaka programatzen
-        desc: Ikasleak lasterketa bat errepikatzen dute non jolastokia zearkatzen
-          duten "Grafo Papera Programazioan" oinarritutako algoritmoa idatziz. Agindu
-          bakarra idazt dezakete aldiro eta errora bat egonez gero atzera egin behar
-          dute egindakoa ezabatuz.
-      Conditionals:
-        title: Baldintzak
-        desc: 'Baldintzen inguruan ikasteko, ikasleak karta joko batean jokatuko dute
-          eta arau batzuk sortuko dituzte. Adibidez: "Karta gorri bat marrazten badut,
-          puntu bat lortzen duzu."'
-      BigEvent:
-        title: Gertaera Handia
-        desc: Ikasleak "ebentu"-aren programazioaren kontzeptua ikasiko dute, hau
-          da, konputagailu batek uneoro monitorizatzen dituen ekintzak izanik. Irakasleak
-          botoiak zanpatuko ditu eta ikasleak horren araberako erreakzioak edukiko
-          dituzte.
-      GoingPlacesSafely:
-        title: Joan segurtasunez
-        desc: Interneta oso boteretsua da, baina leku oso arriskutsua ere. Irakasleek
-          adieraziko dute nola nabigatu modu seguruan interneten.
-      GraphPaperProgramming:
-        title: Paper grafiko programazioa
-        desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen
-          bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
-      PaperPlanes:
-        title: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
-        desc: Lekzio honetan erakusten da nolatan erabiltzen ditugun algoritmoak gure
-          bizitza errealean, espezifikoki paperezko hegazkinak egiterakoan. Lekzio
-          honetan informatikaren irudi zabalagoa ikus dezakegu, eta nola algoritmoak
-          diren bere zati esentzialetako bat.
-      BinaryBracelets:
-        title: Eskumuturreko bitarrak
-        desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia
-          era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela
-          ikasten dute honela.
-      DigitalFootprint:
-        title: Zure aztarna digitala
-        desc: Irakasleek norberaren informazioaren aztarnat interneten uzteak izan
-          ditzakeen ondorioak zeintzuk izan daitezkeen azalduko die ikasleei.
-      ComputationalThinking:
-        title: Pentsamendu konputazionala
-        desc: Ikasleek pentsamendu konputazionaleko pausoetan pentsatzen dute( deskonposatu,
-          patroien bat egitea, abstrakzioa, algoritmoak) imajinatzeko joko baten jokatzeko
-          pausoak instrukzioak eduki gabe.
-      FunctionalSuncatchers:
-        title: Funtzioak aztertzen
-        desc: Ikasleek algoritmo bat sortzen dute aldagai eta funtzioekin (kode zatiak
-          erabil nahi ditugunak behin eta berriz) kristalezko apaingarriak sortzeko
-          kateak eta aleak erabiliz.
-      SongwritingParameters:
-        title: Musika idazten
-        desc: Ikasleek kantu baten leloa erabil dezakete adibide gisa funtzioen erabilpena
-          ulertzeko, baita parametroen pasatzea ulertzeko ere (funtzio baten eraldatzea
-          ahalbidetzen duena, funtzio oso berridatzi beharrik gabe).
-      DiceRace:
-        title: 'Benetako algoritmoak: dado lasterketa'
-        desc: Ikasgai honek algoritmoak eguneroko bizitzan nola erabiltzen ditugun
-          azaltzen du. Bertan ikasleek dado lasterketa baten algoritmoa identifikatu
-          eta idatziko dute.
-      Internet:
-        title: Internet
-        desc: Ikasleek mezuak bidaltzen dituzte Interneteko transmisio metodo imitatuz
-          paperezko zatiak erabiliz.
-      Crowdsourcing:
-        title: Crowdsourcing
-        desc: Ikasleek talde-lana erabiltzen dute, eta hau oso erabilia den teknika
-          bat da informatikan. Ekintza bat klasekoekin burutzea ekintza askoz ere
-          eraginkorragoa bihurtzen du, lana banaka burutu ordez.
-      DigitalCitizenship:
-        title: Hiritartasun digitala
-        desc: Ikasleek informazio pribatu eta pertsonalaren artean dagoen desberdintasuna
-          bilatzen dute desberdintzen zer den segurua eta zer ez partekatzea sarean.
-      TangramAlgorithms:
-        title: Tangram algoritmoak
-        desc: Ikasgai honek algoritmoei buruzko garrantzizkoa den zerbait erakusten
-          digu. Algoritmo bat sinple mantentzen badugu aukera asko daude hau erabiltzeko.
-          Guztiek emaitza berdina lortzeaz ziurtatu nahi baduzu, orduan zure algoritmoak
-          xehetasun gehiago behar ditu.
-      EnvelopeVariables:
-        title: Gutun-azaleko aldagarriak
-        desc: Aldagaik askatasun handia ematen dute informatika arloan. Ikasgai honek
-          lagunduko digu azaltzen zein aldagaiak dauden eta nola erabili ditzakegun
-          era ezberdinetan. Erabili ikasgai hau abstrakzio ikasgaia baino lehen (edo
-          batera) ideiak nabarmentzeko.
-      MadGlibs:
-        title: Glibs txoroa
-        desc: Informatikari batek izan behar duen gaitasun garrantzitsuenetako bat
-          abstrakzioa da. Ekintza honekin zure ikasleak istorio ezberdinak aztertuko
-          dituzte ezberdintasunen bila eta hauekin abstrakzioa egin. Istorio abstrakto
-          hauek beste istorio berri eta dibertigarrien oinarria izango dira.
-      ForLoopFun:
-        title: Begizta jostarirako
-        desc: Begiztak ekintzak behin eta berriro egiten laguntzen digutela badakigu,
-          baina orain ikasi behar dugu nola erabili begiztak barne egitura batekin.
-      SongwritingWithParameters:
-        title: Abestiak sortzen parametroekin
-        desc: 'Funtzioa da informatika munduan dagoen egitura bikainenetako bat. Funtzioak
-          (batzuetan prozedurak deituak) programa handiago batean behin eta berriro
-          erabil ditzakezun programa txikiak dira. ikasgai honek ikasleei lagunduko
-          die intuitiboki ulertzen zergatik den lagungarria kode zatiak elkartzea
-          funtzioak osatuz.  '
-      BinaryImages:
-        title: Irudi bitarrak
-        desc: Nahiz eta askok pentsatu sistema bitarra bat eta zeroekin bakarri osatuta
-          dagoela, aurreko ikastaroetan gure ikasleei erakutsi genien bezala, informazioa
-          aukera bitar ezberdinez osatua egon daiteke. Ikasgai honetan kontzeptu hori
-          haratago eramango du erakutsiz ordenagailu batek informazio bitar konplexua
-          gordetzeko gai dela (irudi eta kolore bezalakoak).
+        title: Mapa Zoriontsuak
       VideoGamesCoordinatePlanes:
-        title: Bideo-jokoak eta koordenatuen planoak
         desc: Jabetu zaitez nola maite dituzun jokoek aljebra duten beraien barnean!
           Esploratu ezazu espresio aljebraikoek eta koordenatu planoek nola lagun
           gaitzaketen bideo jokoek nola funtzionatzen duten ulertzen eta ondoren hasi
           zaitez zure bideo jokoa nola sortuko duzun pentsatzen.
-      Contracts:
-        title: Kontratu, domeinu eta irispena
-        desc: Kontratuek ahalbidetzen digute funtzio bat ulertzea eta eztabaidatzea.
-          Irakasgai honetan ikasiko dugu nola Kontratuek laguntzen diguten zentzua
-          ematen programazio lengoai bati edo funtzio bati.
-      DesignRecipe:
-        title: Diseinuaren errezeta
-        desc: Azken zati honetan ikasleek funtzio erraz batzuk idatz ditzakete, funtzio
-          konplexuenak egiteko gehiago pentsatu beharko delarik. Diseinuaren errezeta
-          era estrukturatuan idaztea ahalbidetzen du, funtzioak behar bezala funtzionatuko
-          dutela bermatzeko.
-      Booleans:
-        title: Boolearrak eta logika
-        desc: Boolearrak ikastaro honetan landuko ditugun laugarren eta azken datu
-          motak dira. Ataza honetan Boolearrak zer diren eta nola erabil daitezkeen
-          era logikoan pentsatzen duten funtzioak idazteko ikasiko dugu
-      ConditionalsPiecewiseFunctions:
-        title: Baldintzazko eta zatikako funtzioak
-        desc: Funtzioei pasatzen dizkiegun parametroak patroi bati erantzuten dioten
-          irteerak sortzen dituzte. Imajina ezazu hainbat parametro nahi ditugula
-          hainbat balioekin hainbat irteera sortzeko patroi bati jarraituz. Honegatik
-          kondizionalak beharrezkoak dira...
-      CollisionDetection:
-        title: Kolisio detekzioa eta Pitagorasen teorema
-        desc: Pantailan dauden objektuek elkarren artean talka egiten duten jakitea
-          oso garrantzitsua da joko gehienetan. Ikastaro honetan Pitagorasen teorema
-          eta Distantzia formula nola erabili ikusiko dugu plano batean dauden bi
-          puntuen (edo objetu, pertsonaia...) arteko distantzia neurtu eta ea elkar
-          ukitzen duten jakiteko.
-      courseB_unplugged_MRF:
-        title: Lineaz kanpoko ekintza
-      courseB_unplugged_loopyMRF:
-        title: Lineaz kanpoko ekintza
-      courseC_Unplugged_ScreenOutTheMean:
-        title: Lineaz kanpoko ekintza
-      courseD_unplugged_digitalCitizenship:
-        title: Lineaz kanpoko ekintza
-      courseF_unplugged_powerOfWords:
-        title: Lineaz kanpoko ekintza
-      courseAB_unplugged_plantASeed:
-        title: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-        desc: Ikastaro honetan gure egunerokoan algoritmoak nola erabiltzen ditugun
-          azaltzen da, adibidez haziak landatzen ditugunean. Gainera informatikaren
-          ikuspegi zabalagoa azaltzen du, bai eta algoritmoek duten garrantzia.
-      courseA_unplugged_happyMaps:
-        title: Mapa Zoriontsuak
-        desc: Ikasleek algoritmo sinpleak sortuko dituzte pertsonai bat labirinto
-          baten barnean gidatuko dute komando bakar bat erabiliz.
-      courseA_unplugged_goingPlacesSafely:
-        title: Joan segurtasunez
-        desc: Interneta oso boteretsua da, baina leku oso arriskutsua ere. Irakasleek
-          adieraziko dute nola nabigatu modu seguruan interneten.
+        title: Bideo-jokoak eta koordenatuen planoak
       courseABC_unplugged_bigEvent:
-        title: Gertaera Handia
         desc: Ikasleak "ebentu"-aren programazioaren kontzeptua ikasiko dute, hau
           da, konputagailu batek uneoro monitorizatzen dituen ekintzak izanik. Irakasleak
           botoiak zanpatuko ditu eta ikasleak horren araberako erreakzioak edukiko
           dituzte.
+        title: Gertaera Handia
+      courseAB_unplugged_plantASeed:
+        desc: Ikastaro honetan gure egunerokoan algoritmoak nola erabiltzen ditugun
+          azaltzen da, adibidez haziak landatzen ditugunean. Gainera informatikaren
+          ikuspegi zabalagoa azaltzen du, bai eta algoritmoek duten garrantzia.
+        title: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
+      courseA_unplugged_goingPlacesSafely:
+        desc: Interneta oso boteretsua da, baina leku oso arriskutsua ere. Irakasleek
+          adieraziko dute nola nabigatu modu seguruan interneten.
+        title: Joan segurtasunez
+      courseA_unplugged_happyMaps:
+        desc: Ikasleek algoritmo sinpleak sortuko dituzte pertsonai bat labirinto
+          baten barnean gidatuko dute komando bakar bat erabiliz.
+        title: Mapa Zoriontsuak
+      courseB_unplugged_MRF:
+        title: Lineaz kanpoko ekintza
+      courseB_unplugged_MRF_2018:
+        title: Nire lagun robotikoak
+      courseB_unplugged_MRF_2019:
+        title: Nire lagun robotikoak
       courseB_unplugged_digitalFootprint:
-        title: Zure aztarna digitala
         desc: Irakasleek norberaren informazioaren aztarnat interneten uzteak izan
           ditzakeen ondorioak zeintzuk izan daitezkeen azalduko die ikasleei.
+        title: Zure aztarna digitala
+      courseB_unplugged_loopyMRF:
+        title: Lineaz kanpoko ekintza
+      courseC_Unplugged_ScreenOutTheMean:
+        title: Lineaz kanpoko ekintza
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: Lineaz kanpoko ekintza
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: Lineaz kanpoko ekintza
+      courseC_unplugged_binaryBracelets:
+        desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia
+          era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela
+          ikasten dute honela.
+        title: Eskumuturreko bitarrak
       courseC_unplugged_buildingAFoundation:
-        title: Oinarri bat Eraikitzen
         desc: Ikasleek egitura bat eraiki beharko dute eskainitako baliabideak soilik
           erabiliz. Egitura horiek ataza bat egin behar dute (altuera batera heldu,
           edo pisu bat jasan, esaterako) eta ikasleek iraunkortasunaren ideia landu
           beharko dute atazak zailtzen direnean.
+        title: Oinarri bat Eraikitzen
+      courseC_unplugged_gettingLoopy:
+        desc: Ikastaro honek begizta( agindu errepikatuak) kontzeptua dantzaren bidez
+          irakasten digu. Ikasleek koreografia erraz bat ikasiko dute, ondoren errepikatu
+          egin beharko dute.
+        title: Iteratzen
       courseC_unplugged_paperPlanes:
-        title: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
         desc: Lekzio honetan erakusten da nolatan erabiltzen ditugun algoritmoak gure
           bizitza errealean, espezifikoki paperezko hegazkinak egiterakoan. Lekzio
           honetan informatikaren irudi zabalagoa ikus dezakegu, eta nola algoritmoak
           diren bere zati esentzialetako bat.
-      courseC_unplugged_gettingLoopy:
-        title: Iteratzen
-        desc: Ikastaro honek begizta( agindu errepikatuak) kontzeptua dantzaren bidez
-          irakasten digu. Ikasleek koreografia erraz bat ikasiko dute, ondoren errepikatu
-          egin beharko dute.
-      courseC_unplugged_binaryBracelets:
-        title: Eskumuturreko bitarrak
-        desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia
-          era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela
-          ikasten dute honela.
-      courseD_unplugged_graphPaperProgramming:
-        title: Paper grafiko programazioa
-        desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen
-          bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
-      courseD_unplugged_relayProgramming:
-        title: Txandaka programatzen
-        desc: Ikasleak lasterketa bat errepikatzen dute non jolastokia zearkatzen
-          duten "Grafo Papera Programazioan" oinarritutako algoritmoa idatziz. Agindu
-          bakarra idazt dezakete aldiro eta errora bat egonez gero atzera egin behar
-          dute egindakoa ezabatuz.
-      courseD_unplugged_conditionalsCards:
-        title: Baldintzak Txartelekin
-        desc: 'Baldintzen inguruan ikasteko, ikasleak karta joko batean jokatuko dute
-          eta arau batzuk sortuko dituzte. Adibidez: "Karta gorri bat marrazten badut,
-          puntu bat lortzen duzu."'
+        title: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
       courseD_unplugged_binaryImages:
-        title: Irudi bitarrak
         desc: Nahiz eta askok pentsatu sistema bitarra bat eta zeroekin bakarri osatuta
           dagoela, aurreko ikastaroetan gure ikasleei erakutsi genien bezala, informazioa
           aukera bitar ezberdinez osatua egon daiteke. Ikasgai honetan kontzeptu hori
           haratago eramango du erakutsiz ordenagailu batek informazio bitar konplexua
           gordetzeko gai dela (irudi eta kolore bezalakoak).
+        title: Irudi bitarrak
+      courseD_unplugged_conditionalsCards:
+        desc: 'Baldintzen inguruan ikasteko, ikasleak karta joko batean jokatuko dute
+          eta arau batzuk sortuko dituzte. Adibidez: "Karta gorri bat marrazten badut,
+          puntu bat lortzen duzu."'
+        title: Baldintzak Txartelekin
+      courseD_unplugged_digitalCitizenship:
+        title: Lineaz kanpoko ekintza
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Lineaz kanpoko ekintza
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Lineaz kanpoko ekintza
+      courseD_unplugged_graphPaperProgramming:
+        desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen
+          bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
+        title: Paper grafiko programazioa
+      courseD_unplugged_relayProgramming:
+        desc: Ikasleak lasterketa bat errepikatzen dute non jolastokia zearkatzen
+          duten "Grafo Papera Programazioan" oinarritutako algoritmoa idatziz. Agindu
+          bakarra idazt dezakete aldiro eta errora bat egonez gero atzera egin behar
+          dute egindakoa ezabatuz.
+        title: Txandaka programatzen
+      courseE_unplugged_crowdsourcing:
+        desc: Ikasleek talde-lana erabiltzen dute, eta hau oso erabilia den teknika
+          bat da informatikan. Ekintza bat klasekoekin burutzea ekintza askoz ere
+          eraginkorragoa bihurtzen du, lana banaka burutu ordez.
+        title: Crowdsourcing
       courseE_unplugged_diceRace:
         desc: Ikasgai honek algoritmoak eguneroko bizitzan nola erabiltzen ditugun
           azaltzen du. Bertan ikasleek dado lasterketa baten algoritmoa identifikatu
           eta idatziko dute.
-      courseE_unplugged_songwritingParameters:
-        title: Abestiak idazten parametroekin
-        desc: Ikasleek kantu baten leloa erabil dezakete adibide gisa funtzioen erabilpena
-          ulertzeko, baita parametroen pasatzea ulertzeko ere (funtzio baten eraldatzea
-          ahalbidetzen duena, funtzio oso berridatzi beharrik gabe).
       courseE_unplugged_internet:
-        title: Internet
         desc: Ikasleek mezuak bidaltzen dituzte Interneteko transmisio metodo imitatuz
           paperezko zatiak erabiliz.
-      courseE_unplugged_crowdsourcing:
-        title: Crowdsourcing
-        desc: Ikasleek talde-lana erabiltzen dute, eta hau oso erabilia den teknika
-          bat da informatikan. Ekintza bat klasekoekin burutzea ekintza askoz ere
-          eraginkorragoa bihurtzen du, lana banaka burutu ordez.
+        title: Internet
       courseE_unplugged_songwriting:
-        title: Musika idazten
         desc: Ikasleek kantu baten leloa erabil dezakete adibide gisa funtzioen erabilpena
           ulertzeko, baita parametroen pasatzea ulertzeko ere (funtzio baten eraldatzea
           ahalbidetzen duena, funtzio oso berridatzi beharrik gabe).
-      courseF_unplugged_tangrams:
-        title: Tangram algoritmoak
-        desc: Ikasgai honek algoritmoei buruzko garrantzizkoa den zerbait erakusten
-          digu. Algoritmo bat sinple mantentzen badugu aukera asko daude hau erabiltzeko.
-          Guztiek emaitza berdina lortzeaz ziurtatu nahi baduzu, orduan zure algoritmoak
-          xehetasun gehiago behar ditu.
+        title: Musika idazten
+      courseE_unplugged_songwritingParameters:
+        desc: Ikasleek kantu baten leloa erabil dezakete adibide gisa funtzioen erabilpena
+          ulertzeko, baita parametroen pasatzea ulertzeko ere (funtzio baten eraldatzea
+          ahalbidetzen duena, funtzio oso berridatzi beharrik gabe).
+        title: Abestiak idazten parametroekin
       courseF_unplugged_envelopeVariables:
-        title: Gutun-azaleko aldagarriak
         desc: Aldagaik askatasun handia ematen dute informatika arloan. Ikasgai honek
           lagunduko digu azaltzen zein aldagaiak dauden eta nola erabili ditzakegun
           era ezberdinetan. Erabili ikasgai hau abstrakzio ikasgaia baino lehen (edo
           batera) ideiak nabarmentzeko.
+        title: Gutun-azaleko aldagarriak
       courseF_unplugged_forLoopFun:
-        title: Begizta jostarirako
         desc: Begiztak ekintzak behin eta berriro egiten laguntzen digutela badakigu,
           baina orain ikasi behar dugu nola erabili begiztak barne egitura batekin.
+        title: Begizta jostarirako
+      courseF_unplugged_powerOfWords:
+        title: Lineaz kanpoko ekintza
       courseF_unplugged_songwritingParameters:
-        title: Abestiak sortzen parametroekin
         desc: 'Funtzioa da informatika munduan dagoen egitura bikainenetako bat. Funtzioak
           (batzuetan prozedurak deituak) programa handiago batean behin eta berriro
           erabil ditzakezun programa txikiak dira. ikasgai honek ikasleei lagunduko
           die intuitiboki ulertzen zergatik den lagungarria kode zatiak elkartzea
           funtzioak osatuz.  '
-      courseB_unplugged_MRF_2018:
-        title: Nire lagun robotikoak
-      PlantASeed_2018:
-        title: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-        desc: Ikastaro honetan gure egunerokoan algoritmoak nola erabiltzen ditugun
-          azaltzen da, adibidez haziak landatzen ditugunean. Gainera informatikaren
-          ikuspegi zabalagoa azaltzen du, bai eta algoritmoek duten garrantzia.
-      UnplugHappyMaps_2018:
-        title: Mapa Zoriontsuak
-        desc: Ikasleek algoritmo sinpleak sortuko dituzte pertsonai bat labirinto
-          baten barnean gidatuko dute komando bakar bat erabiliz.
-      GoingPlacesSafely_2018:
-        title: Joan segurtasunez
-        desc: Interneta oso boteretsua da, baina leku oso arriskutsua ere. Irakasleek
-          adieraziko dute nola nabigatu modu seguruan interneten.
-      BigEvent_2018:
-        title: Gertaera Handia
-        desc: Ikasleak "ebentu"-aren programazioaren kontzeptua ikasiko dute, hau
-          da, konputagailu batek uneoro monitorizatzen dituen ekintzak izanik. Irakasleak
-          botoiak zanpatuko ditu eta ikasleak horren araberako erreakzioak edukiko
-          dituzte.
-      GraphPaperProgramming_2018:
-        title: Paper grafiko programazioa
-        desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen
-          bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
-      courseD_unplugged_digitalCitizenship_2018:
-        title: Lineaz kanpoko ekintza
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Lineaz kanpoko ekintza
-      Conditionals_2018:
-        title: Baldintzak
+        title: Abestiak sortzen parametroekin
+      courseF_unplugged_tangrams:
+        desc: Ikasgai honek algoritmoei buruzko garrantzizkoa den zerbait erakusten
+          digu. Algoritmo bat sinple mantentzen badugu aukera asko daude hau erabiltzeko.
+          Guztiek emaitza berdina lortzeaz ziurtatu nahi baduzu, orduan zure algoritmoak
+          xehetasun gehiago behar ditu.
+        title: Tangram algoritmoak
+      timeforcs_demo_conditionals:
         desc: 'Baldintzen inguruan ikasteko, ikasleak karta joko batean jokatuko dute
           eta arau batzuk sortuko dituzte. Adibidez: "Karta gorri bat marrazten badut,
           puntu bat lortzen duzu."'
-      DigitalFootprint_2018:
-        title: Zure aztarna digitala
-        desc: Irakasleek norberaren informazioaren aztarnat interneten uzteak izan
-          ditzakeen ondorioak zeintzuk izan daitezkeen azalduko die ikasleei.
-      BinaryImages_2018:
-        title: Irudi bitarrak
-        desc: Nahiz eta askok pentsatu sistema bitarra bat eta zeroekin bakarri osatuta
-          dagoela, aurreko ikastaroetan gure ikasleei erakutsi genien bezala, informazioa
-          aukera bitar ezberdinez osatua egon daiteke. Ikasgai honetan kontzeptu hori
-          haratago eramango du erakutsiz ordenagailu batek informazio bitar konplexua
-          gordetzeko gai dela (irudi eta kolore bezalakoak).
-      PaperPlanes_2018:
-        title: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
-        desc: Lekzio honetan erakusten da nolatan erabiltzen ditugun algoritmoak gure
-          bizitza errealean, espezifikoki paperezko hegazkinak egiterakoan. Lekzio
-          honetan informatikaren irudi zabalagoa ikus dezakegu, eta nola algoritmoak
-          diren bere zati esentzialetako bat.
-      GettingLoopy_2018:
-        title: Iteratzen
-        desc: Ikastaro honek begizta( agindu errepikatuak) kontzeptua dantzaren bidez
-          irakasten digu. Ikasleek koreografia erraz bat ikasiko dute, ondoren errepikatu
-          egin beharko dute.
-      BinaryBracelets_2018:
-        title: Eskumuturreko bitarrak
-        desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia
-          era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela
-          ikasten dute honela.
-      MoveItMoveIt_2018:
-        title: Mugi ezazu, mugi ezazu!
-      RelayProgramming_2018:
-        title: Txandaka programatzen
-      courseB_unplugged_MRF_2019:
-        title: Nire lagun robotikoak
-      Conditionals_2019:
         title: Baldintzak
-        desc: 'Baldintzen inguruan ikasteko, ikasleak karta joko batean jokatuko dute
-          eta arau batzuk sortuko dituzte. Adibidez: "Karta gorri bat marrazten badut,
-          puntu bat lortzen duzu."'
-      GraphPaperProgramming_2019:
-        title: Paper grafiko programazioa
-        desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen
-          bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
-      RelayProgramming_2018_2019:
-        title: Txandaka programatzen
-      courseD_unplugged_digitalCitizenship_2019:
-        title: Lineaz kanpoko ekintza
-      BinaryImages_2019:
-        title: Irudi bitarrak
-        desc: Nahiz eta askok pentsatu sistema bitarra bat eta zeroekin bakarri osatuta
-          dagoela, aurreko ikastaroetan gure ikasleei erakutsi genien bezala, informazioa
-          aukera bitar ezberdinez osatua egon daiteke. Ikasgai honetan kontzeptu hori
-          haratago eramango du erakutsiz ordenagailu batek informazio bitar konplexua
-          gordetzeko gai dela (irudi eta kolore bezalakoak).
-      GettingLoopy_2019:
-        title: Iteratzen
-        desc: Ikastaro honek begizta( agindu errepikatuak) kontzeptua dantzaren bidez
-          irakasten digu. Ikasleek koreografia erraz bat ikasiko dute, ondoren errepikatu
-          egin beharko dute.
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Lineaz kanpoko ekintza
-      BigEvent_2019:
-        title: Gertaera Handia
-        desc: Ikasleak "ebentu"-aren programazioaren kontzeptua ikasiko dute, hau
-          da, konputagailu batek uneoro monitorizatzen dituen ekintzak izanik. Irakasleak
-          botoiak zanpatuko ditu eta ikasleak horren araberako erreakzioak edukiko
-          dituzte.
-      BinaryBracelets_2019:
-        title: Eskumuturreko bitarrak
-        desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia
-          era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela
-          ikasten dute honela.
-      PaperPlanes_2019:
-        title: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
-        desc: Lekzio honetan erakusten da nolatan erabiltzen ditugun algoritmoak gure
-          bizitza errealean, espezifikoki paperezko hegazkinak egiterakoan. Lekzio
-          honetan informatikaren irudi zabalagoa ikus dezakegu, eta nola algoritmoak
-          diren bere zati esentzialetako bat.
-      PlantASeed_2019:
-        title: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
-        desc: Ikastaro honetan gure egunerokoan algoritmoak nola erabiltzen ditugun
-          azaltzen da, adibidez haziak landatzen ditugunean. Gainera informatikaren
-          ikuspegi zabalagoa azaltzen du, bai eta algoritmoek duten garrantzia.
-      UnplugHappyMaps_2019:
-        title: Mapa Zoriontsuak
-        desc: Ikasleek algoritmo sinpleak sortuko dituzte pertsonai bat labirinto
-          baten barnean gidatuko dute komando bakar bat erabiliz.
-      GoingPlacesSafely_2019:
-        title: Joan segurtasunez
-        desc: Interneta oso boteretsua da, baina leku oso arriskutsua ere. Irakasleek
-          adieraziko dute nola nabigatu modu seguruan interneten.
-      MoveItMoveIt_2019:
-        title: Mugi ezazu, mugi ezazu!
-      DigitalFootprint_2019:
-        title: Zure aztarna digitala
-        desc: Irakasleek norberaren informazioaren aztarnat interneten uzteak izan
-          ditzakeen ondorioak zeintzuk izan daitezkeen azalduko die ikasleei.
       timeforcs_demo_crowdsourcing:
         title: Crowdsourcing
-      timeforcs_demo_conditionals:
-        title: Baldintzak
-        desc: 'Baldintzen inguruan ikasteko, ikasleak karta joko batean jokatuko dute
-          eta arau batzuk sortuko dituzte. Adibidez: "Karta gorri bat marrazten badut,
-          puntu bat lortzen duzu."'

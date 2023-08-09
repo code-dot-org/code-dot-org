@@ -17,8 +17,11 @@
         "csd-2022/applab-overview": {
           "display_name": "Огляд"
         },
+        "csd-2022/board-events": {
+          "display_name": "Події плати"
+        },
         "csd-2022/body-styling": {
-          "display_name": "Стилізація основної конструкції"
+          "display_name": "Стилізація тіла сторінки"
         },
         "csd-2022/booleans-and-comparison-operators": {
           "display_name": "Булеві та оператори порівняння"
@@ -28,6 +31,9 @@
         },
         "csd-2022/classes": {
           "display_name": "Класи"
+        },
+        "csd-2022/collision-detection": {
+          "display_name": "Виявлення зіткнень"
         },
         "csd-2022/color-lights": {
           "display_name": "Кольорове світло"
@@ -46,6 +52,9 @@
         },
         "csd-2022/design-mode": {
           "display_name": "Режим проектування"
+        },
+        "csd-2022/designing-screens-with-code": {
+          "display_name": "Проектування екранів за допомогою коду"
         },
         "csd-2022/drawing-shapes": {
           "display_name": "Малювання фігур"
@@ -78,7 +87,7 @@
           "display_name": "Огляд"
         },
         "csd-2022/html-tags": {
-          "display_name": "HTML Теги"
+          "display_name": "Теги HTML"
         },
         "csd-2022/hyperlinks": {
           "display_name": "Гіперпосилання"
@@ -88,6 +97,9 @@
         },
         "csd-2022/importing-screens": {
           "display_name": "Імпортування екранів"
+        },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "Вступ до Лабораторії ШІ"
         },
         "csd-2022/javascript": {
           "display_name": "JavaScript"
@@ -119,11 +131,17 @@
         "csd-2022/patterns-overview": {
           "display_name": "Огляд"
         },
+        "csd-2022/playing-notes": {
+          "display_name": "Відтворення нот"
+        },
         "csd-2022/problem-solving-process": {
           "display_name": "Процес вирішення проблем"
         },
         "csd-2022/problem-solving-process-general": {
           "display_name": "Процес вирішення проблем"
+        },
+        "csd-2022/random-numbers": {
+          "display_name": "Випадкові числа"
         },
         "csd-2022/selecting-a-label": {
           "display_name": "Вибір мітки"
@@ -131,11 +149,20 @@
         "csd-2022/selecting-features": {
           "display_name": "Вибір ознак"
         },
+        "csd-2022/shapes-and-parameters": {
+          "display_name": "Фігури та параметри"
+        },
+        "csd-2022/sprite-interactions": {
+          "display_name": "Взаємодія спрайтів"
+        },
+        "csd-2022/sprite-properties": {
+          "display_name": "Властивості спрайтів"
+        },
         "csd-2022/sprites": {
           "display_name": "Спрайти"
         },
         "csd-2022/style-sheets": {
-          "display_name": "Таблиця стилів"
+          "display_name": "Аркуші стилів"
         },
         "csd-2022/taking-input-with-getproperty": {
           "display_name": "Отримання вхідних даних за допомогою getProperty"
@@ -148,6 +175,9 @@
         },
         "csd-2022/the-counter-pattern-2": {
           "display_name": "Лічильник шаблону"
+        },
+        "csd-2022/the-draw-loop": {
+          "display_name": "Цикл малювання"
         },
         "csd-2022/using-data-with-categorical-features": {
           "display_name": "Використання даних з категорійними ознаками"
@@ -162,7 +192,7 @@
           "display_name": "Швидкість"
         },
         "csd-2022/web-lab": {
-          "display_name": "Веб-лабораторія"
+          "display_name": "Веб Лабораторія"
         }
       }
     }

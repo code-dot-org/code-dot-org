@@ -2,34 +2,35 @@
   "fi-FI": {
     "data": {
       "course_offerings": {
-        "csd": "Tietojenkäsittelytieteiden löydöt",
-        "csp": "Tietojenkäsittelytieteiden alkeet",
         "20-hour": "Nopeutettu tietojenkäsittelyn johdantokurssi",
-        "flappy": "Flappy Code",
-        "jigsaw": "Palapeli",
-        "algebrab": "Tietotekniikka algebrassa",
         "algebra": "Tietotekniikka algebrassa",
+        "algebrab": "Tietotekniikka algebrassa",
         "aquatic": "Minecraft: Merellinen matka",
         "artist": "Taiteilija",
         "course1": "Kurssi 1",
         "course2": "Kurssi 2",
         "course3": "Kurssi 3",
         "course4": "Kurssi 4",
+        "csd": "Tietojenkäsittelytieteiden löydöt",
+        "csp": "Tietojenkäsittelytieteiden alkeet",
         "dance-2019": "Tanssibileet (2019)",
-        "dance-extras-2019": "Jatka tanssimista (2019)",
         "dance-extras": "Jatka tanssimista (2018)",
+        "dance-extras-2019": "Jatka tanssimista (2019)",
+        "edit-code": "Muokkaa koodia",
+        "flappy": "Flappy Code",
         "frozen": "Koodaa Annan ja Elsan kanssa",
         "gumball": "Gumball Pelilabra",
         "hourofcode": "Klassinen sokkelo",
         "iceage": "Ice Age Pelilabra",
         "infinity": "Disneyn Infinity-Pelilabra",
+        "jigsaw": "Palapeli",
         "mc": "Minecraft Koodaustunti",
         "minecraft": "Koodaustunti Minecraft Suunnittelija",
         "pixelation": "Pikselöityminen",
         "playlab": "Pelilabra",
-        "edit-code": "Muokkaa koodia",
-        "step": "askel",
-        "soccer": "Jalkapallo"
+        "soccer": "Jalkapallo",
+        "starwars": "Tähtien sota: Rakenna galaksi koodaten (JavaScript)",
+        "step": "askel"
       }
     }
   }

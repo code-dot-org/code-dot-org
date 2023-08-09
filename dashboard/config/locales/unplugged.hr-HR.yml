@@ -2,8 +2,98 @@
 hr:
   data:
     unplugged:
+      BigEvent:
+        title: Veliki događaj
+      BigEvent_2018:
+        title: Veliki događaj
+      BigEvent_2019:
+        title: Veliki događaj
+      BinaryBracelets:
+        title: Binarne narukvice
+      BinaryBracelets_2018:
+        title: Binarne narukvice
+      BinaryBracelets_2019:
+        title: Binarne narukvice
+      BuildingAFoundation:
+        desc: Učenici grade strukturu koristeći samo obezbjeđeni pribor. Strukture
+          moraju zadovoljiti zadatak (doseći određenu visinu ili nositi određeni teret),
+          a učenici raspravljaju o ideji kako biti ustrajan kada se stvari zakompliciraju.
+        title: Izrada temelja
+      ComputationalThinking:
+        title: Razmišljati poput računala
+      Conditionals:
+        title: Uvjeti
+      ConditionalsPiecewiseFunctions:
+        title: Uvjeti i Funkcije po dijelovima
+      Conditionals_2018:
+        title: Uvjeti
+      Conditionals_2019:
+        title: Uvjeti
+      Crowdsourcing:
+        title: Crowdsourcing
+      DigitalCitizenship:
+        title: Digitalno građanstvo
+      DigitalFootprint:
+        title: Tvoj digitalni trag
+      DigitalFootprint_2018:
+        title: Tvoj digitalni trag
+      DigitalFootprint_2019:
+        title: Tvoj digitalni trag
+      ForLoopFun:
+        title: For Petlja Zabava
+      FunctionalSuncatchers:
+        title: Funkcionalni ukrasi
+      GettingLoopy:
+        title: Zapetljancije
+      GettingLoopy_2018:
+        title: Zapetljancije
+      GettingLoopy_2019:
+        title: Zapetljancije
+      GoingPlacesSafely:
+        title: Sigurna putovanja
+      GoingPlacesSafely_2018:
+        title: Sigurna putovanja
+      GoingPlacesSafely_2019:
+        title: Sigurna putovanja
+      GraphPaperProgramming:
+        title: Grafičko programiranje
+      GraphPaperProgramming_2018:
+        title: Grafičko programiranje
+      GraphPaperProgramming_2019:
+        title: Grafičko programiranje
+      Internet:
+        title: Internet
+      MoveIt:
+        desc: Studenti stvaraju jednostavne algoritme (skupove instrukcija) za pomicanje
+          lika kroz labirint koristeći jednu naredbu.
+        title: Pomakni, pomakni
+      MoveItMoveIt_2018:
+        title: Pomakni, pomakni
+      MoveItMoveIt_2019:
+        title: Pomakni, pomakni
+      PaperPlanes:
+        title: 'Algoritmi iz stvarnog života: Papirnati avioni'
+      PaperPlanes_2018:
+        title: 'Algoritmi iz stvarnog života: Papirnati avioni'
+      PaperPlanes_2019:
+        title: 'Algoritmi iz stvarnog života: Papirnati avioni'
+      PlantASeed:
+        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
+      PlantASeed_2018:
+        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
+      PlantASeed_2019:
+        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
+      RelayProgramming:
+        title: Odnosno programiranje
+      RelayProgramming_2018:
+        title: Odnosno programiranje
+      RelayProgramming_2018_2019:
+        title: Odnosno programiranje
+      SongwritingParameters:
+        title: Pisanje pjesama
+      SongwritingWithParameters:
+        title: Pisanje pjesama s parametrima
       Unplug1:
-        title: Uvod u Informatiku
         desc: Ova lekcija će predstaviti koncept računalne znanosti i objasniti što
           radi računalni znanstvenik. Studenti će također dobiti mogućnost biti u
           ulozi računalnog znanstvenika. Do kraja lekcije, svaki student dobit će
@@ -11,8 +101,12 @@ hr:
           od kompliciranijih riječi koje dolaze uz lekcije, no upoznanje s takvim
           riječima na jednostavan i zabavan način je pno produktivnije  nego čekanje
           pogodnije situacije.
+        title: Uvod u Informatiku
+      Unplug10:
+        title: Internet
+      Unplug11:
+        title: Zamotavanje
       Unplug2:
-        title: Razmišljati poput računala
         desc: Pomoću papira i markera studenti će naučiti četiri koraka u razmišljanj
           kao računalo.. Nakon kratkog uvoda, studenti bi trebali podijeliti u grupe
           gdje će stvoritiupute za ostale studente kako bi nacrtali određeno čudovište
@@ -23,20 +117,21 @@ hr:
           tim nacrtao to određeno čudovište. Timovi će zatim zamijeniti algoritame
           s drugima i nacrtati čudovište koje taj algoritam opisuje. Prikazuje li
           crtež čudovište koje je tim koji je napisao algoritem odabrao?
+        title: Razmišljati poput računala
       Unplug3:
-        title: Grafičko programiranje
         desc: Programiranjem jedan drugoga za crtanje slika, studenti će početi razumjeti
           o čemu se u programiranju zapravo radi. Sat će početi tako što će učenici
           uputiti jedan drugog da oboje kvadrate na grafikon papiru trudeći se da
           prikažu postojeću sliku. Ako bude vremena, lekcija će se zaključiti slikama
           koje su učenici sami stvorili.
+        title: Grafičko programiranje
       Unplug4:
-        title: Algoritmi
         desc: Ova lekcija obuhvaća algoritama.  Koristeći oblik tangram i graficki
           papir, prva vježba će pokazati koliko je važno  da se svaka instrukcija
           razumna i nedvosmislena što je više moguće.  Nakon toga, studenti će istražiti
           na koliko načina mogu da presaviju papir u obliku pravokutnik, primjetice
           da  neki metodi mogu uzeti više ili manje presavijanja od drugih.
+        title: Algoritmi
       Unplug5:
         title: Funkcije
       Unplug6:
@@ -47,177 +142,82 @@ hr:
         title: Apstrakcija
       Unplug9:
         title: Odnosno programiranje
-      Unplug10:
-        title: Internet
-      Unplug11:
-        title: Zamotavanje
       UnplugHappyMaps:
+        desc: Studenti stvaraju jednostavne algoritme (skupove instrukcija) za pomicanje
+          lika kroz labirint koristeći jednu naredbu.
         title: Vesele karte
+      UnplugHappyMaps_2018:
         desc: Studenti stvaraju jednostavne algoritme (skupove instrukcija) za pomicanje
           lika kroz labirint koristeći jednu naredbu.
-      MoveIt:
-        title: Pomakni, pomakni
+        title: Vesele karte
+      UnplugHappyMaps_2019:
         desc: Studenti stvaraju jednostavne algoritme (skupove instrukcija) za pomicanje
           lika kroz labirint koristeći jednu naredbu.
-      PlantASeed:
-        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
-      BuildingAFoundation:
-        title: Izrada temelja
-        desc: Učenici grade strukturu koristeći samo obezbjeđeni pribor. Strukture
-          moraju zadovoljiti zadatak (doseći određenu visinu ili nositi određeni teret),
-          a učenici raspravljaju o ideji kako biti ustrajan kada se stvari zakompliciraju.
-      GettingLoopy:
-        title: Zapetljancije
-      RelayProgramming:
-        title: Odnosno programiranje
-      Conditionals:
-        title: Uvjeti
-      BigEvent:
+        title: Vesele karte
+      courseABC_unplugged_bigEvent:
         title: Veliki događaj
-      GoingPlacesSafely:
+      courseAB_unplugged_plantASeed:
+        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
+      courseA_unplugged_goingPlacesSafely:
         title: Sigurna putovanja
-      GraphPaperProgramming:
-        title: Grafičko programiranje
-      PaperPlanes:
-        title: 'Algoritmi iz stvarnog života: Papirnati avioni'
-      BinaryBracelets:
-        title: Binarne narukvice
-      DigitalFootprint:
-        title: Tvoj digitalni trag
-      ComputationalThinking:
-        title: Razmišljati poput računala
-      FunctionalSuncatchers:
-        title: Funkcionalni ukrasi
-      SongwritingParameters:
-        title: Pisanje pjesama
-      Internet:
-        title: Internet
-      Crowdsourcing:
-        title: Crowdsourcing
-      DigitalCitizenship:
-        title: Digitalno građanstvo
-      ForLoopFun:
-        title: For Petlja Zabava
-      SongwritingWithParameters:
-        title: Pisanje pjesama s parametrima
-      ConditionalsPiecewiseFunctions:
-        title: Uvjeti i Funkcije po dijelovima
+      courseA_unplugged_happyMaps:
+        desc: Studenti stvaraju jednostavne algoritme (skupove instrukcija) za pomicanje
+          lika kroz labirint koristeći jednu naredbu.
+        title: Vesele karte
       courseB_unplugged_MRF:
         title: Izvanmrežna aktivnost
+      courseB_unplugged_MRF_2018:
+        title: Moji robotski prijatelji
+      courseB_unplugged_MRF_2019:
+        title: Moji robotski prijatelji
+      courseB_unplugged_digitalFootprint:
+        title: Tvoj digitalni trag
       courseB_unplugged_loopyMRF:
         title: Izvanmrežna aktivnost
       courseC_Unplugged_ScreenOutTheMean:
         title: Izvanmrežna aktivnost
-      courseD_unplugged_digitalCitizenship:
+      courseC_Unplugged_ScreenOutTheMean_2018:
         title: Izvanmrežna aktivnost
-      courseF_unplugged_powerOfWords:
+      courseC_Unplugged_ScreenOutTheMean_2019:
         title: Izvanmrežna aktivnost
-      courseAB_unplugged_plantASeed:
-        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
-      courseA_unplugged_happyMaps:
-        title: Vesele karte
-        desc: Studenti stvaraju jednostavne algoritme (skupove instrukcija) za pomicanje
-          lika kroz labirint koristeći jednu naredbu.
-      courseA_unplugged_goingPlacesSafely:
-        title: Sigurna putovanja
-      courseABC_unplugged_bigEvent:
-        title: Veliki događaj
-      courseB_unplugged_digitalFootprint:
-        title: Tvoj digitalni trag
+      courseC_unplugged_binaryBracelets:
+        title: Binarne narukvice
       courseC_unplugged_buildingAFoundation:
-        title: Izrada temelja
         desc: Učenici grade strukturu koristeći samo obezbjeđeni pribor. Strukture
           moraju zadovoljiti zadatak (doseći određenu visinu ili nositi određeni teret),
           a učenici raspravljaju o ideji kako biti ustrajan kada se stvari zakompliciraju.
-      courseC_unplugged_paperPlanes:
-        title: 'Algoritmi iz stvarnog života: Papirnati avioni'
+        title: Izrada temelja
       courseC_unplugged_gettingLoopy:
         title: Zapetljancije
-      courseC_unplugged_binaryBracelets:
-        title: Binarne narukvice
+      courseC_unplugged_paperPlanes:
+        title: 'Algoritmi iz stvarnog života: Papirnati avioni'
+      courseD_unplugged_conditionalsCards:
+        title: Uvjeti s kartama
+      courseD_unplugged_digitalCitizenship:
+        title: Izvanmrežna aktivnost
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Izvanmrežna aktivnost
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Izvanmrežna aktivnost
       courseD_unplugged_graphPaperProgramming:
         title: Grafičko programiranje
       courseD_unplugged_relayProgramming:
         title: Odnosno programiranje
-      courseD_unplugged_conditionalsCards:
-        title: Uvjeti s kartama
-      courseE_unplugged_songwritingParameters:
-        title: Pisanje pjesama s parametrima
-      courseE_unplugged_internet:
-        title: Internet
       courseE_unplugged_crowdsourcing:
         title: Crowdsourcing
+      courseE_unplugged_internet:
+        title: Internet
       courseE_unplugged_songwriting:
         title: Pisanje pjesama
+      courseE_unplugged_songwritingParameters:
+        title: Pisanje pjesama s parametrima
       courseF_unplugged_forLoopFun:
         title: For Petlja Zabava
+      courseF_unplugged_powerOfWords:
+        title: Izvanmrežna aktivnost
       courseF_unplugged_songwritingParameters:
         title: Pisanje pjesama s parametrima
-      courseB_unplugged_MRF_2018:
-        title: Moji robotski prijatelji
-      PlantASeed_2018:
-        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
-      UnplugHappyMaps_2018:
-        title: Vesele karte
-        desc: Studenti stvaraju jednostavne algoritme (skupove instrukcija) za pomicanje
-          lika kroz labirint koristeći jednu naredbu.
-      GoingPlacesSafely_2018:
-        title: Sigurna putovanja
-      BigEvent_2018:
-        title: Veliki događaj
-      GraphPaperProgramming_2018:
-        title: Grafičko programiranje
-      courseD_unplugged_digitalCitizenship_2018:
-        title: Izvanmrežna aktivnost
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Izvanmrežna aktivnost
-      Conditionals_2018:
-        title: Uvjeti
-      DigitalFootprint_2018:
-        title: Tvoj digitalni trag
-      PaperPlanes_2018:
-        title: 'Algoritmi iz stvarnog života: Papirnati avioni'
-      GettingLoopy_2018:
-        title: Zapetljancije
-      BinaryBracelets_2018:
-        title: Binarne narukvice
-      MoveItMoveIt_2018:
-        title: Pomakni, pomakni
-      RelayProgramming_2018:
-        title: Odnosno programiranje
-      courseB_unplugged_MRF_2019:
-        title: Moji robotski prijatelji
-      Conditionals_2019:
-        title: Uvjeti
-      GraphPaperProgramming_2019:
-        title: Grafičko programiranje
-      RelayProgramming_2018_2019:
-        title: Odnosno programiranje
-      courseD_unplugged_digitalCitizenship_2019:
-        title: Izvanmrežna aktivnost
-      GettingLoopy_2019:
-        title: Zapetljancije
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Izvanmrežna aktivnost
-      BigEvent_2019:
-        title: Veliki događaj
-      BinaryBracelets_2019:
-        title: Binarne narukvice
-      PaperPlanes_2019:
-        title: 'Algoritmi iz stvarnog života: Papirnati avioni'
-      PlantASeed_2019:
-        title: 'Algoritmi u stvarnom životu: Posadi sjeme'
-      UnplugHappyMaps_2019:
-        title: Vesele karte
-        desc: Studenti stvaraju jednostavne algoritme (skupove instrukcija) za pomicanje
-          lika kroz labirint koristeći jednu naredbu.
-      GoingPlacesSafely_2019:
-        title: Sigurna putovanja
-      MoveItMoveIt_2019:
-        title: Pomakni, pomakni
-      DigitalFootprint_2019:
-        title: Tvoj digitalni trag
-      timeforcs_demo_crowdsourcing:
-        title: Crowdsourcing
       timeforcs_demo_conditionals:
         title: Uvjeti
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing

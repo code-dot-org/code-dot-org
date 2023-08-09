@@ -2,10 +2,7 @@
   "sq-AL": {
     "data": {
       "course_offerings": {
-        "csp": "Ap® Parimet e Shkencave Kompjuterike",
         "20-hour": "Hyrje e pershpejtuar ne kurset e shkencave kompjuterike",
-        "flappy": "Kodi Flappy",
-        "jigsaw": "Jigsaw",
         "algebra": "Shkenëa Kompjuterike në Algjebër",
         "aquatic": "Minecraft: Udhëtimi ujor",
         "artist": "Artisti",
@@ -13,23 +10,27 @@
         "course2": "Kursi 2",
         "course3": "Kursi 3",
         "course4": "Kursi 4",
+        "csc-bookcover": "csc-bookcover",
+        "csp": "Ap® Parimet e Shkencave Kompjuterike",
+        "edit-code": "Ndrysho kodin",
+        "flappy": "Kodi Flappy",
         "frozen": "Kodo me Ann-en dhe Elsa-n",
         "gumball": "Laboratori i Lojës Gumball",
+        "halloween": "Halloween",
+        "hello-world-soccer": "Përshëndetje Botërore: futboll",
         "hourofcode": "Labirint Klasik",
         "iceage": "Laboratori i lojës Epoka e Akullnajave",
         "infinity": "Larmishmeria e lojrave ne laboratorin e Disney",
+        "jigsaw": "Jigsaw",
         "mc": "Ora e Kodimit Minecraft",
         "minecraft": "Dizenjo Minecraft-in e Orës së Kodimit",
         "pixelation": "Pixelation",
         "playlab": "Play Lab",
-        "sports": "Krijo lojën tënde sportive",
-        "edit-code": "Ndrysho kodin",
-        "valentine": "Shën Valentinit",
-        "halloween": "Halloween",
-        "step": "hap",
         "soccer": "futboll",
-        "hello-world-soccer": "Përshëndetje Botërore: futboll",
-        "csc-bookcover": "csc-bookcover"
+        "sports": "Krijo lojën tënde sportive",
+        "starwars": "Lufta e yjeve: Ndërtimi i një Galaxy me kod (JavaScript)",
+        "step": "hap",
+        "valentine": "Shën Valentinit"
       }
     }
   }

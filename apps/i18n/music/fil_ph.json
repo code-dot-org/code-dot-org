@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "magpatugtog ng tunog",
   "blockly_blockPlaySoundAtMeasureTooltip": "magpatugtog ng tunog",
+  "blockly_blockPlaySoundTooltip": "magpatugtog ng tunog",
   "blockly_blockRepeatTooltip": "ulitin",
   "blockly_blockRestTooltip": "pahinga",
   "blockly_blockWhenRun": "kapag tumakbo",
@@ -13,11 +13,11 @@
   "blockly_toolboxCategoryMath": "Math",
   "blockly_toolboxCategoryPlay": "Mga Tunog",
   "blockly_toolboxCategoryVariables": "Mga variable",
+  "continue": "Magpatuloy",
   "feedback": "Feedback",
-  "share": "Ibahagi",
-  "startOver": "Magsimula sa Umpisa",
-  "upload": "I-upload",
   "panelHeaderInstructions": "Mga Tagubilin",
   "panelHeaderWorkspace": "Workspace: ",
-  "continue": "Magpatuloy"
+  "share": "Ibahagi",
+  "startOver": "Magsimula sa Umpisa",
+  "upload": "I-upload"
 }

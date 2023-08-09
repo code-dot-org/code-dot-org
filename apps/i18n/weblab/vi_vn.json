@@ -1,7 +1,7 @@
 {
   "addCSSButton": "Thêm CSS",
-  "addImageButton": "Thêm ảnh",
   "addHTMLButton": "Thêm HTML",
+  "addImageButton": "Thêm ảnh",
   "closeFullscreenPreview": "Đóng xem trước toàn màn hình",
   "currentProjectCapacity": "{currentMegabytes}MB của {totalMegabytes}MB đã sử dụng",
   "disallowedHtml": "Tệp \"{filename}\" chứa các phần tử HTML không được phép: `{disallowedTags}`. Chúng sẽ bị xóa khi hộp thoại này đóng lại.",
@@ -14,8 +14,8 @@
   "reset": "Đặt lại Web Lab",
   "resetComplete": "Hoàn tất thiết lập lại Web Lab",
   "resetFailure": "Không thể đặt lại Web Lab: {message}.",
-  "toggleInspectorOn": "Thanh tra: Tắt",
   "toggleInspectorOff": "Thanh tra: On",
+  "toggleInspectorOn": "Thanh tra: Tắt",
   "troubleshootingSupport": "Vui lòng xem bài viết hỗ trợ của chúng tôi [\"Khắc phục sự cố Web Lab\"]({url}) để biết thêm thông tin.",
   "uploadError": "Lỗi tải lên"
 }

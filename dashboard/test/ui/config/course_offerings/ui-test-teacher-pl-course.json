@@ -3,5 +3,9 @@
   "display_name": "Teacher PL Course",
   "category": "pl_other",
   "is_featured": false,
-  "assignable": true
+  "assignable": true,
+  "curriculum_type": "Professional Learning",
+  "marketing_initiative": null,
+  "grade_levels": null,
+  "header": "summer_workshops_612"
 }

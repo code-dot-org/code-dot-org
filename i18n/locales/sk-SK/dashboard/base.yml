@@ -273,6 +273,8 @@ sk:
     student_associated_subject: 'Prihlasovacie údaje pre Code.org'
     parent_email_added_subject: 'Vitajte na Code.org!'
     parent_permission_request_subject: "Súhlas rodičov potrebný na prístup vášho dieťaťa na Code.org"
+    parent_permission_reminder_subject: "Pripomenutie, súhlas rodičov potrebný na prístup vášho dieťaťa na Code.org"
+    parent_permission_confirmation_subject: "Ďakujeme, že ste schválili prístup vášho dieťaťa na Code.org!"
   teacher_mailer:
     new_teacher_subject: 'Vitajte na Code.org!'
     delete_teacher_subject: 'Správa z Code.org: Tvoj účet bol vymazaný'
@@ -351,6 +353,7 @@ sk:
       professional_learning: "Vzdelávanie pre profesionálov"
       documentation: "Dokumentácia"
       tutorials: "Návody"
+      game_lab_tutorials: "Návody na herné laboratórium"
       web_lab_documentation: "Dokumentácia k Web Lab"
       educate_overview: "Prehľad školiteľov"
       educate_elementary: "Základná škola"
@@ -1229,7 +1232,7 @@ sk:
       sports: 'Športy'
       express: 'Zrýchlené'
       csf: 'Základy informatiky'
-      csc: 'CS Connections'
+      csc: 'informatika a medzipredmetové vzťahy'
       year_long: 'Celoročné'
       csa_labs: 'CSA Labs'
       self_paced: 'Vlastným tempom'

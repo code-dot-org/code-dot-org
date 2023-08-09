@@ -2,268 +2,55 @@
   "si-LK": {
     "data": {
       "resources": {
-        "implementation_guide/coursed/2022": {
-          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        "lesson_plans/csd/2017": {
+          "name": "පාඩම් සැලසුම්"
         },
-        "graph_paper_programming/coursed/2022": {
-          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        "lesson_plans_1/csd/2017": {
+          "name": "පාඩම් සැලසුම්"
         },
-        "graph_paper_programming_1/coursed/2022": {
-          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        "lesson_plans_2/csd/2017": {
+          "name": "පාඩම් සැලසුම්"
         },
-        "graph_paper_programming_2/coursed/2022": {
-          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        "lesson_plans_3/csd/2017": {
+          "name": "පාඩම් සැලසුම්"
         },
-        "graph_paper_programming_3/coursed/2022": {
-          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        "lesson_plans_4/csd/2017": {
+          "name": "පාඩම් සැලසුම්"
         },
-        "graph_paper_programming_4/coursed/2022": {
-          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        "lesson_plans_5/csd/2017": {
+          "name": "පාඩම් සැලසුම්"
         },
-        "graph_paper_programming_5/coursed/2022": {
-          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        "lesson_plans/csd/2018": {
+          "name": "පාඩම් සැලසුම්"
         },
-        "pair_programming/coursed/2022": {
-          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
+        "lesson_plans_1/csd/2018": {
+          "name": "පාඩම් සැලසුම්"
         },
-        "relay_programming/coursed/2022": {
-          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        "lesson_plans_2/csd/2018": {
+          "name": "පාඩම් සැලසුම්"
         },
-        "relay_programming_1/coursed/2022": {
-          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        "lesson_plans_3/csd/2018": {
+          "name": "පාඩම් සැලසුම්"
         },
-        "relay_programming_2/coursed/2022": {
-          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        "lesson_plans_4/csd/2018": {
+          "name": "පාඩම් සැලසුම්"
         },
-        "relay_programming_3/coursed/2022": {
-          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
-        },
-        "relay_programming_4/coursed/2022": {
-          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
-        },
-        "relay_programming_5/coursed/2022": {
-          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
-        },
-        "conditionals_with_cards/coursed/2022": {
-          "name": "කාඩ්පත් සමඟ කොන්දේසික"
-        },
-        "conditionals_with_cards_1/coursed/2022": {
-          "name": "කාඩ්පත් සමඟ කොන්දේසික"
-        },
-        "conditionals_with_cards_2/coursed/2022": {
-          "name": "කාඩ්පත් සමඟ කොන්දේසික"
-        },
-        "conditionals_with_cards_3/coursed/2022": {
-          "name": "කාඩ්පත් සමඟ කොන්දේසික"
-        },
-        "conditionals_with_cards_4/coursed/2022": {
-          "name": "කාඩ්පත් සමඟ කොන්දේසික"
-        },
-        "implementation_guide/coursef/2022": {
-          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
-        },
-        "internet/coursef/2022": {
-          "name": "අන්තර්ජාලය"
-        },
-        "internet_1/coursef/2022": {
-          "name": "අන්තර්ජාලය"
-        },
-        "the_internet/coursef/2022": {
-          "name": "අන්තර්ජාලය"
-        },
-        "implementation_guide/coursee/2022": {
-          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
-        },
-        "implementation_guide/courseb/2022": {
-          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
-        },
-        "move_it_move_it/courseb/2022": {
-          "name": "එය ගෙන යන්න, ගෙන යන්න"
-        },
-        "move_it_move_it_1/courseb/2022": {
-          "name": "එය ගෙන යන්න, ගෙන යන්න"
-        },
-        "move_it_move_it_2/courseb/2022": {
-          "name": "එය ගෙන යන්න, ගෙන යන්න"
-        },
-        "move_it_move_it_3/courseb/2022": {
-          "name": "එය ගෙන යන්න, ගෙන යන්න"
-        },
-        "pair_programming/courseb/2022": {
-          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
-        },
-        "getting_loopy/courseb/2022": {
-          "name": "ඔල්මාද වීම"
-        },
-        "getting_loopy_1/courseb/2022": {
-          "name": "ඔල්මාද වීම"
-        },
-        "getting_loopy_2/courseb/2022": {
-          "name": "ඔල්මාද වීම"
-        },
-        "getting_loopy_3/courseb/2022": {
-          "name": "ඔල්මාද වීම"
-        },
-        "the_big_event/courseb/2022": {
-          "name": "විශාල සිදුවීම"
-        },
-        "the_big_event_1/courseb/2022": {
-          "name": "විශාල සිදුවීම"
-        },
-        "the_big_event_2/courseb/2022": {
-          "name": "විශාල සිදුවීම"
-        },
-        "pair_programming/express/2022": {
-          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
-        },
-        "variables/express/2022": {
-          "name": "විචල්‍යන්"
-        },
-        "pair_programming/pre-express/2022": {
-          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
-        },
-        "implementation_guide/coursea/2022": {
-          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
-        },
-        "pair_programming/coursea/2022": {
-          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
-        },
-        "happy_maps/coursea/2022": {
-          "name": "සතුටු සිතියම්"
-        },
-        "the_big_event/coursea/2022": {
-          "name": "විශාල සිදුවීම"
-        },
-        "the_big_event_1/coursea/2022": {
-          "name": "විශාල සිදුවීම"
-        },
-        "the_big_event_2/coursea/2022": {
-          "name": "විශාල සිදුවීම"
-        },
-        "implementation_guide/coursec/2022": {
-          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
-        },
-        "my_robotic_friends/coursec/2022": {
-          "name": "මගේ රොබෝ මිතුරන්"
-        },
-        "my_robotic_friends_1/coursec/2022": {
-          "name": "මගේ රොබෝ මිතුරන්"
-        },
-        "my_robotic_friends_2/coursec/2022": {
-          "name": "මගේ රොබෝ මිතුරන්"
-        },
-        "my_robotic_friends_3/coursec/2022": {
-          "name": "මගේ රොබෝ මිතුරන්"
-        },
-        "my_robotic_friends_4/coursec/2022": {
-          "name": "මගේ රොබෝ මිතුරන්"
-        },
-        "pair_programming/coursec/2022": {
-          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
-        },
-        "the_big_event/coursec/2022": {
-          "name": "විශාල සිදුවීම"
-        },
-        "the_big_event_1/coursec/2022": {
-          "name": "විශාල සිදුවීම"
-        },
-        "the_big_event_2/coursec/2022": {
-          "name": "විශාල සිදුවීම"
-        },
-        "binary_bracelets/coursec/2022": {
-          "name": "ද්විමය වළලු"
-        },
-        "binary_bracelets_1/coursec/2022": {
-          "name": "ද්විමය වළලු"
-        },
-        "binary_bracelets_2/coursec/2022": {
-          "name": "ද්විමය වළලු"
-        },
-        "binary_bracelets_3/coursec/2022": {
-          "name": "ද්විමය වළලු"
-        },
-        "binary_bracelets_4/coursec/2022": {
-          "name": "ද්විමය වළලු"
-        },
-        "computer_science_practices/csd/2022": {
-          "type": "අන්තරාවලෝකනය"
-        },
-        "video_machine_learning/csd/2022": {
-          "name": "වීඩියෝ: යන්ත්‍ර ඉගෙනීම"
-        },
-        "make_a_recommendation/csd/2022": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "apps_and_problem_solving_1/csd/2022": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "variables/csd/2022": {
-          "name": "විචල්‍යන්"
-        },
-        "variables_3/csd/2022": {
-          "name": "විචල්‍යන්"
-        },
-        "text/csd/2022": {
-          "name": "පෙළ"
-        },
-        "conditionals/csd/2022": {
-          "name": "කන්ඩිෂනලස්"
-        },
-        "interactive_card_2/csd/2022": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "functions/csd/2022": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "functions_1/csd/2022": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "functions_4/csd/2022": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "make_your_own_game_2/csd/2022": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "html_web_page_2/csd/2022": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "lists/csd/2022": {
-          "name": "ලැයිස්තු"
-        },
-        "your_personal_style_1/csd/2022": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "personal_web_page/csd/2022": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "website_for_a_purpose_1/csd/2022": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "variables_1/csd/2022": {
-          "name": "විචල්‍යන්"
-        },
-        "variables_2/csd/2022": {
-          "name": "විචල්‍යන්"
-        },
-        "functions_2/csd/2022": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "functions_3/csd/2022": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "functions_with_parameters/csd/2022": {
-          "name": "පරාමිතියන් සහිත ශ්‍රිත"
-        },
-        "functions_5/csd/2022": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "lesson_plans/courseb/2018": {
+        "lesson_plans_5/csd/2018": {
           "name": "පාඩම් සැලසුම්"
         },
         "lesson_plans/coursea/2018": {
           "name": "පාඩම් සැලසුම්"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
         "lesson_plans/coursed/2018": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursee/2018": {
           "name": "පාඩම් සැලසුම්"
         },
         "lesson_plans/coursef/2018": {
@@ -272,55 +59,13 @@
         "lesson_plans/express/2018": {
           "name": "පාඩම් සැලසුම්"
         },
-        "lesson_plans/coursee/2018": {
+        "lesson_plans/csd/2019": {
           "name": "පාඩම් සැලසුම්"
         },
-        "lesson_plans/coursec/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_2/csd/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_5/csd/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_4/csd/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_3/csd/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_1/csd/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/csd/2018": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursea/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/courseb/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursed/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursef/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursee/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/express/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans/coursec/2019": {
+        "lesson_plans_1/csd/2019": {
           "name": "පාඩම් සැලසුම්"
         },
         "lesson_plans_2/csd/2019": {
-          "name": "පාඩම් සැලසුම්"
-        },
-        "lesson_plans_5/csd/2019": {
           "name": "පාඩම් සැලසුම්"
         },
         "lesson_plans_3/csd/2019": {
@@ -329,61 +74,122 @@
         "lesson_plans_4/csd/2019": {
           "name": "පාඩම් සැලසුම්"
         },
-        "lesson_plans/csd/2019": {
+        "lesson_plans_5/csd/2019": {
           "name": "පාඩම් සැලසුම්"
         },
-        "lesson_plans_1/csd/2019": {
+        "lesson_plans/coursea/2019": {
           "name": "පාඩම් සැලසුම්"
         },
-        "lesson_plans_2/csd/2017": {
+        "lesson_plans/courseb/2019": {
           "name": "පාඩම් සැලසුම්"
         },
-        "lesson_plans_5/csd/2017": {
+        "lesson_plans/coursec/2019": {
           "name": "පාඩම් සැලසුම්"
         },
-        "lesson_plans_1/csd/2017": {
+        "lesson_plans/coursed/2019": {
           "name": "පාඩම් සැලසුම්"
         },
-        "lesson_plans/csd/2017": {
+        "lesson_plans/coursee/2019": {
           "name": "පාඩම් සැලසුම්"
         },
-        "lesson_plans_4/csd/2017": {
+        "lesson_plans/coursef/2019": {
           "name": "පාඩම් සැලසුම්"
         },
-        "lesson_plans_3/csd/2017": {
+        "lesson_plans/express/2019": {
           "name": "පාඩම් සැලසුම්"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
+        "lesson_plans/coursea/2020": {
+          "name": "පාඩම් සැලසුම්"
         },
-        "implementation_guide/coursef/2021": {
+        "lesson_plans/courseb/2020": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/express/2020": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "පාඩම් සැලසුම්"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "අන්තරාවලෝකනය"
+        },
+        "html-web-page/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "lists/csd/2021": {
+          "name": "ලැයිස්තු"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "variables_1/csd/2021": {
+          "name": "විචල්‍යන්"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "functions_1/csd/2021": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "වීඩියෝ: යන්ත්‍ර ඉගෙනීම"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "functions_2/csd/2021": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "ලූපයන් සඳහා"
+        },
+        "for_loops/csd/2021": {
+          "name": "ලූපයන් සඳහා"
+        },
+        "implementation_guide/coursea/2021": {
           "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
         },
-        "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "For ලුපයේ සතුට"
+        "pair-programming-vid/coursea/2021": {
+          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
         },
-        "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "For ලුපයේ සතුට"
+        "unplugged-video-happy-maps/coursea/2021": {
+          "name": "සතුටු සිතියම්"
         },
-        "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "For ලුපයේ සතුට"
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "විශාල සිදුවීම"
         },
-        "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "For ලුපයේ සතුට"
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "විශාල සිදුවීම"
         },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "For ලුපයේ සතුට"
-        },
-        "assessment-answer-internet/coursef/2021": {
-          "name": "අන්තර්ජාලය"
-        },
-        "csf-internet-assessment/coursef/2021": {
-          "name": "අන්තර්ජාලය"
-        },
-        "unplugged-video-internet/coursef/2021": {
-          "name": "අන්තර්ජාලය"
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "විශාල සිදුවීම"
         },
         "implementation_guide/courseb/2021": {
           "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
@@ -422,24 +228,6 @@
           "name": "විශාල සිදුවීම"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "විශාල සිදුවීම"
-        },
-        "implementation_guide/coursea/2021": {
-          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
-        },
-        "pair-programming-vid/coursea/2021": {
-          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "name": "සතුටු සිතියම්"
-        },
-        "assessment-answer-big-event/coursea/2021": {
-          "name": "විශාල සිදුවීම"
-        },
-        "csf-the-big-event-assessment/coursea/2021": {
-          "name": "විශාල සිදුවීම"
-        },
-        "unplugged-video-big-event/coursea/2021": {
           "name": "විශාල සිදුවීම"
         },
         "implementation_guide/coursec/2021": {
@@ -544,6 +332,36 @@
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "කාඩ්පත් සමඟ කොන්දේසික"
         },
+        "implementation_guide/coursee/2021": {
+          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "name": "For ලුපයේ සතුට"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "name": "For ලුපයේ සතුට"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "name": "For ලුපයේ සතුට"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "name": "For ලුපයේ සතුට"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "name": "For ලුපයේ සතුට"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "name": "අන්තර්ජාලය"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "name": "අන්තර්ජාලය"
+        },
+        "unplugged-video-internet/coursef/2021": {
+          "name": "අන්තර්ජාලය"
+        },
         "pair_programming/express/2021": {
           "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
         },
@@ -553,83 +371,265 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
         },
-        "implementation_guide/coursee/2021": {
-          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        "apps_and_problem_solving_1/csd/2022": {
+          "type": "සමූහ විමර්ශනය"
         },
-        "computer-science-practices/csd/2021": {
+        "computer_science_practices/csd/2022": {
           "type": "අන්තරාවලෝකනය"
         },
-        "functions_2/csd/2021": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "loops_in_app_lab/csd/2021": {
-          "name": "ලූපයන් සඳහා"
-        },
-        "for_loops/csd/2021": {
-          "name": "ලූපයන් සඳහා"
-        },
-        "video_machine_learning/csd/2021": {
-          "name": "වීඩියෝ: යන්ත්‍ර ඉගෙනීම"
-        },
-        "make-a-recommendation-peer-review-2019/csd/2021": {
+        "html_web_page_2/csd/2022": {
           "type": "සමූහ විමර්ශනය"
         },
-        "variables_1/csd/2021": {
-          "name": "විචල්‍යන්"
-        },
-        "interactive-card-1-2-3-4/csd/2021": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "calling_and_defining_functions/csd/2021": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "functions_1/csd/2021": {
-          "name": "ශ්‍රිතයන්"
-        },
-        "make-your-own-game-1-2-3/csd/2021": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "apps-and-problem-solving-peer-review-2019/csd/2021": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "html-web-page/csd/2021": {
-          "type": "සමූහ විමර්ශනය"
-        },
-        "lists/csd/2021": {
+        "lists/csd/2022": {
           "name": "ලැයිස්තු"
         },
-        "your-personal-style-1/csd/2021": {
+        "your_personal_style_1/csd/2022": {
           "type": "සමූහ විමර්ශනය"
         },
-        "personal-web-page-1/csd/2021": {
+        "personal_web_page/csd/2022": {
           "type": "සමූහ විමර්ශනය"
         },
-        "website-for-a-purpose/csd/2021": {
+        "website_for_a_purpose_1/csd/2022": {
           "type": "සමූහ විමර්ශනය"
         },
-        "lesson_plans/pre-express/2020": {
-          "name": "පාඩම් සැලසුම්"
+        "variables/csd/2022": {
+          "name": "විචල්‍යන්"
         },
-        "lesson_plans/express/2020": {
-          "name": "පාඩම් සැලසුම්"
+        "variables_3/csd/2022": {
+          "name": "විචල්‍යන්"
         },
-        "lesson_plans/courseb/2020": {
-          "name": "පාඩම් සැලසුම්"
+        "text/csd/2022": {
+          "name": "පෙළ"
         },
-        "lesson_plans/coursed/2020": {
-          "name": "පාඩම් සැලසුම්"
+        "conditionals/csd/2022": {
+          "name": "කන්ඩිෂනලස්"
         },
-        "lesson_plans/coursec/2020": {
-          "name": "පාඩම් සැලසුම්"
+        "interactive_card_2/csd/2022": {
+          "type": "සමූහ විමර්ශනය"
         },
-        "lesson_plans/coursee/2020": {
-          "name": "පාඩම් සැලසුම්"
+        "functions/csd/2022": {
+          "name": "ශ්‍රිතයන්"
         },
-        "lesson_plans/coursea/2020": {
-          "name": "පාඩම් සැලසුම්"
+        "functions_1/csd/2022": {
+          "name": "ශ්‍රිතයන්"
         },
-        "lesson_plans/coursef/2020": {
-          "name": "පාඩම් සැලසුම්"
+        "functions_4/csd/2022": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "make_your_own_game_2/csd/2022": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "video_machine_learning/csd/2022": {
+          "name": "වීඩියෝ: යන්ත්‍ර ඉගෙනීම"
+        },
+        "make_a_recommendation/csd/2022": {
+          "type": "සමූහ විමර්ශනය"
+        },
+        "variables_1/csd/2022": {
+          "name": "විචල්‍යන්"
+        },
+        "variables_2/csd/2022": {
+          "name": "විචල්‍යන්"
+        },
+        "functions_2/csd/2022": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "functions_3/csd/2022": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "functions_with_parameters/csd/2022": {
+          "name": "පරාමිතියන් සහිත ශ්‍රිත"
+        },
+        "functions_5/csd/2022": {
+          "name": "ශ්‍රිතයන්"
+        },
+        "implementation_guide/coursea/2022": {
+          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "pair_programming/coursea/2022": {
+          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
+        },
+        "happy_maps/coursea/2022": {
+          "name": "සතුටු සිතියම්"
+        },
+        "the_big_event/coursea/2022": {
+          "name": "විශාල සිදුවීම"
+        },
+        "the_big_event_1/coursea/2022": {
+          "name": "විශාල සිදුවීම"
+        },
+        "the_big_event_2/coursea/2022": {
+          "name": "විශාල සිදුවීම"
+        },
+        "implementation_guide/courseb/2022": {
+          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "move_it_move_it/courseb/2022": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න"
+        },
+        "move_it_move_it_1/courseb/2022": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න"
+        },
+        "move_it_move_it_2/courseb/2022": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න"
+        },
+        "move_it_move_it_3/courseb/2022": {
+          "name": "එය ගෙන යන්න, ගෙන යන්න"
+        },
+        "pair_programming/courseb/2022": {
+          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
+        },
+        "getting_loopy/courseb/2022": {
+          "name": "ඔල්මාද වීම"
+        },
+        "getting_loopy_1/courseb/2022": {
+          "name": "ඔල්මාද වීම"
+        },
+        "getting_loopy_2/courseb/2022": {
+          "name": "ඔල්මාද වීම"
+        },
+        "getting_loopy_3/courseb/2022": {
+          "name": "ඔල්මාද වීම"
+        },
+        "the_big_event/courseb/2022": {
+          "name": "විශාල සිදුවීම"
+        },
+        "the_big_event_1/courseb/2022": {
+          "name": "විශාල සිදුවීම"
+        },
+        "the_big_event_2/courseb/2022": {
+          "name": "විශාල සිදුවීම"
+        },
+        "implementation_guide/coursec/2022": {
+          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "my_robotic_friends/coursec/2022": {
+          "name": "මගේ රොබෝ මිතුරන්"
+        },
+        "my_robotic_friends_1/coursec/2022": {
+          "name": "මගේ රොබෝ මිතුරන්"
+        },
+        "my_robotic_friends_2/coursec/2022": {
+          "name": "මගේ රොබෝ මිතුරන්"
+        },
+        "my_robotic_friends_3/coursec/2022": {
+          "name": "මගේ රොබෝ මිතුරන්"
+        },
+        "my_robotic_friends_4/coursec/2022": {
+          "name": "මගේ රොබෝ මිතුරන්"
+        },
+        "pair_programming/coursec/2022": {
+          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
+        },
+        "the_big_event/coursec/2022": {
+          "name": "විශාල සිදුවීම"
+        },
+        "the_big_event_1/coursec/2022": {
+          "name": "විශාල සිදුවීම"
+        },
+        "the_big_event_2/coursec/2022": {
+          "name": "විශාල සිදුවීම"
+        },
+        "binary_bracelets/coursec/2022": {
+          "name": "ද්විමය වළලු"
+        },
+        "binary_bracelets_1/coursec/2022": {
+          "name": "ද්විමය වළලු"
+        },
+        "binary_bracelets_2/coursec/2022": {
+          "name": "ද්විමය වළලු"
+        },
+        "binary_bracelets_3/coursec/2022": {
+          "name": "ද්විමය වළලු"
+        },
+        "binary_bracelets_4/coursec/2022": {
+          "name": "ද්විමය වළලු"
+        },
+        "implementation_guide/coursed/2022": {
+          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "graph_paper_programming/coursed/2022": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "graph_paper_programming_1/coursed/2022": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "graph_paper_programming_2/coursed/2022": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "graph_paper_programming_3/coursed/2022": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "graph_paper_programming_4/coursed/2022": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "graph_paper_programming_5/coursed/2022": {
+          "name": "ප්‍රස්තාර රටා වැඩසටහන්"
+        },
+        "pair_programming/coursed/2022": {
+          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
+        },
+        "relay_programming/coursed/2022": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "relay_programming_1/coursed/2022": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "relay_programming_2/coursed/2022": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "relay_programming_3/coursed/2022": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "relay_programming_4/coursed/2022": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "relay_programming_5/coursed/2022": {
+          "name": "ක්‍රමලේඛණය ප්‍රතිචාරණය"
+        },
+        "conditionals_with_cards/coursed/2022": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "conditionals_with_cards_1/coursed/2022": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "conditionals_with_cards_2/coursed/2022": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "conditionals_with_cards_3/coursed/2022": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "conditionals_with_cards_4/coursed/2022": {
+          "name": "කාඩ්පත් සමඟ කොන්දේසික"
+        },
+        "implementation_guide/coursee/2022": {
+          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "implementation_guide/coursef/2022": {
+          "name": "ක්‍රියාවට නැංවීමේ උපදෙස්"
+        },
+        "internet/coursef/2022": {
+          "name": "අන්තර්ජාලය"
+        },
+        "internet_1/coursef/2022": {
+          "name": "අන්තර්ජාලය"
+        },
+        "the_internet/coursef/2022": {
+          "name": "අන්තර්ජාලය"
+        },
+        "pair_programming/express/2022": {
+          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
+        },
+        "variables/express/2022": {
+          "name": "විචල්‍යන්"
+        },
+        "pair_programming/pre-express/2022": {
+          "name": "යුගල වශයෙන් ක්‍රමලේඛනය"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "",
+          "url": "",
+          "type": ""
         }
       }
     }

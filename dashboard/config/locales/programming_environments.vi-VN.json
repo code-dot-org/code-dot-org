@@ -2,237 +2,10 @@
   "vi-VN": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Kho Web"
-        },
-        "gamelab": {
-          "name": "Phòng thí nghiệm trò chơi",
-          "categories": {
-            "game_lab": {
-              "name": "Phòng thí nghiệm trò chơi",
-              "expressions": {
-                "mouseIsOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Nhân vật"
-                    }
-                  }
-                },
-                "mousePressedOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Nhân vật"
-                    }
-                  }
-                },
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "Đen và trắng"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Tạo âm nhạc"
-                    }
-                  },
-                  "short_description": "Bật tệp âm thanh MP3 từ một URL đã chỉ định."
-                },
-                "showMobileControls": {
-                  "content": "Thay đổi các điều khiển di động hiển thị bên dưới không gian phát.",
-                  "short_description": "Thay đổi các điều khiển di động hiển thị bên dưới không gian phát."
-                }
-              }
-            },
-            "sprites": {
-              "name": "Nhân vật",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Xoắn ốc"
-                    }
-                  }
-                },
-                "sprite.height": {
-                  "return_value": "Chiều cao của sprite."
-                },
-                "sprite.width": {
-                  "return_value": "Chiều rộng của sprite."
-                }
-              }
-            },
-            "groups": {
-              "name": "Nhóm",
-              "expressions": {
-                "add": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Nhân vật"
-                    }
-                  }
-                },
-                "contains": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Nhân vật"
-                    }
-                  }
-                },
-                "remove": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "Nhân vật"
-                    }
-                  }
-                },
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Màu sắc"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Màu sắc"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "Bản vẽ",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Ngôi sao"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Số mili giây giữa mỗi lần thực hiện hàm."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Số mili giây cần đợi trước khi thực hiện chức năng."
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Phép toán",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Số nhỏ nhất đã được trả về"
-                    },
-                    "max": {
-                      "description": "Số lớn nhất đã được trả về"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Số nhỏ nhất đã được trả về"
-                    },
-                    "max": {
-                      "description": "Số lớn nhất đã được trả về"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Các biến",
-              "expressions": {
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "Chuỗi cần tìm kiếm."
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "Chuỗi cần tìm kiếm."
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "Chiều dài của chuỗi"
-                }
-              }
-            },
-            "functions": {
-              "name": "Các hàm"
-            }
-          }
-        },
         "applab": {
-          "name": "Phòng thí nghiệm ứng dụng",
-          "description": "App Lab là một môi trường lập trình nơi bạn có thể tạo các ứng dụng đơn giản. Thiết kế một ứng dụng, mã với các khối hoặc JavaScript để làm cho nó hoạt động, sau đó chia sẻ ứng dụng của bạn trong vài giây.",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "button": {
-                  "short_description": "Tạo một nút trên màn hình hiển thị văn bản được cung cấp và tham chiếu bởi id đã cho tại vị trí mặc định (0,0)."
-                },
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "Thu nhỏ và phóng to"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "Hàm"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Tạo âm nhạc"
-                    }
-                  },
-                  "short_description": "Bật tệp âm thanh MP3 từ một URL đã chỉ định."
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "property": {
-                      "description": "Thuộc tính cần thay đổi."
-                    }
-                  },
-                  "short_description": "Đặt thuộc tính thành một giá trị mới cho phần tử đã xác định."
-                },
-                "setScreen": {
-                  "short_description": "Đặt màn hình thành ScreenID đã cho."
-                },
-                "showElement": {
-                  "short_description": "Hiển thị phần tử với id được cung cấp."
-                },
-                "textLabel": {
-                  "short_description": "Tạo nhãn văn bản trên màn hình hiển thị văn bản được cung cấp và tham chiếu bởi id đã cho tại vị trí mặc định (0,0)."
-                }
-              }
+            "advanced": {
+              "name": "Nâng cao"
             },
             "canvas": {
               "expressions": {
@@ -298,17 +71,17 @@
                 },
                 "getImageData": {
                   "palette_params": {
+                    "height": {
+                      "description": "Chiều cao của hình chữ nhật bao quanh để chụp dữ liệu hình ảnh."
+                    },
+                    "width": {
+                      "description": "Chiều rộng của hình chữ nhật bao quanh để chụp dữ liệu hình ảnh."
+                    },
                     "x": {
                       "description": "Vị trí x theo pixel để bắt đầu chụp."
                     },
                     "y": {
                       "description": "Vị trí y theo pixel để bắt đầu chụp."
-                    },
-                    "width": {
-                      "description": "Chiều rộng của hình chữ nhật bao quanh để chụp dữ liệu hình ảnh."
-                    },
-                    "height": {
-                      "description": "Chiều cao của hình chữ nhật bao quanh để chụp dữ liệu hình ảnh."
                     }
                   }
                 },
@@ -340,22 +113,25 @@
                 },
                 "rect": {
                   "palette_params": {
+                    "height": {
+                      "description": "Chiều cao thẳng đứng tính bằng pixel của hình chữ nhật."
+                    },
+                    "width": {
+                      "description": "Chiều rộng ngang tính bằng pixel của hình chữ nhật."
+                    },
                     "x": {
                       "description": "Vị trí x tính bằng pixel của góc trên bên trái của hình chữ nhật."
                     },
                     "y": {
                       "description": "Vị trí y theo pixel của góc trên bên trái của hình chữ nhật."
-                    },
-                    "width": {
-                      "description": "Chiều rộng ngang tính bằng pixel của hình chữ nhật."
-                    },
-                    "height": {
-                      "description": "Chiều cao thẳng đứng tính bằng pixel của hình chữ nhật."
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
+                    "alphaValue": {
+                      "description": "Lượng alpha (độ mờ) (từ 0 đến 255) để đặt trong điểm ảnh."
+                    },
                     "imageData": {
                       "type": "đối tượng"
                     },
@@ -364,15 +140,15 @@
                     },
                     "y": {
                       "description": "Vị trí y theo điểm ảnh bắt đầu từ góc trên bên trái của hình ảnh."
-                    },
-                    "alphaValue": {
-                      "description": "Lượng alpha (độ mờ) (từ 0 đến 255) để đặt trong điểm ảnh."
                     }
                   },
                   "short_description": "Đặt lượng alpha (độ mờ) (dao động từ 0 đến 255) trong màu của điểm ảnh nằm ở vị trí x và y đã cho trong dữ liệu hình ảnh đã cho."
                 },
                 "setBlue": {
                   "palette_params": {
+                    "blueValue": {
+                      "description": "Lượng màu xanh lam (từ 0 đến 255) để đặt trong điểm ảnh."
+                    },
                     "imageData": {
                       "type": "đối tượng"
                     },
@@ -381,15 +157,15 @@
                     },
                     "y": {
                       "description": "Vị trí y theo điểm ảnh bắt đầu từ góc trên bên trái của hình ảnh."
-                    },
-                    "blueValue": {
-                      "description": "Lượng màu xanh lam (từ 0 đến 255) để đặt trong điểm ảnh."
                     }
                   },
                   "short_description": "Đặt lượng màu xanh lam (dao động từ 0 đến 255) trong màu của điểm ảnh nằm ở vị trí x và y đã cho trong dữ liệu hình ảnh đã cho đến lượng đầu vào BlueVALUE."
                 },
                 "setGreen": {
                   "palette_params": {
+                    "greenValue": {
+                      "description": "Lượng màu xanh lá cây (từ 0 đến 255) để đặt trong điểm ảnh."
+                    },
                     "imageData": {
                       "type": "đối tượng"
                     },
@@ -398,35 +174,32 @@
                     },
                     "y": {
                       "description": "Vị trí y theo điểm ảnh bắt đầu từ góc trên bên trái của hình ảnh."
-                    },
-                    "greenValue": {
-                      "description": "Lượng màu xanh lá cây (từ 0 đến 255) để đặt trong điểm ảnh."
                     }
                   },
                   "short_description": "Đặt số lượng màu xanh lá cây (dao động từ 0 đến 255) trong màu sắc của điểm ảnh nằm ở vị trí x và y đã cho trong dữ liệu hình ảnh đã cho đến lượng nhập GreenValue."
                 },
                 "setRGB": {
                   "palette_params": {
+                    "alpha": {
+                      "description": "Tùy chọn. Mức độ mờ đục (từ 0 đến 255) để đặt trong điểm ảnh. Mặc định là 255 (độ mờ hoàn toàn)."
+                    },
+                    "blue": {
+                      "description": "Lượng màu xanh lam (từ 0 đến 255) để đặt trong điểm ảnh."
+                    },
+                    "green": {
+                      "description": "Lượng màu xanh lá cây (từ 0 đến 255) để đặt trong điểm ảnh."
+                    },
                     "imageData": {
                       "type": "đối tượng"
+                    },
+                    "red": {
+                      "description": "Lượng màu đỏ (từ 0 đến 255) để đặt trong điểm ảnh."
                     },
                     "x": {
                       "description": "Vị trí x tính bằng pixel bắt đầu từ góc trên bên trái của hình ảnh."
                     },
                     "y": {
                       "description": "Vị trí y theo điểm ảnh bắt đầu từ góc trên bên trái của hình ảnh."
-                    },
-                    "red": {
-                      "description": "Lượng màu đỏ (từ 0 đến 255) để đặt trong điểm ảnh."
-                    },
-                    "green": {
-                      "description": "Lượng màu xanh lá cây (từ 0 đến 255) để đặt trong điểm ảnh."
-                    },
-                    "blue": {
-                      "description": "Lượng màu xanh lam (từ 0 đến 255) để đặt trong điểm ảnh."
-                    },
-                    "alpha": {
-                      "description": "Tùy chọn. Mức độ mờ đục (từ 0 đến 255) để đặt trong điểm ảnh. Mặc định là 255 (độ mờ hoàn toàn)."
                     }
                   }
                 },
@@ -435,22 +208,53 @@
                     "imageData": {
                       "type": "đối tượng"
                     },
+                    "redValue": {
+                      "description": "Lượng màu đỏ (từ 0 đến 255) để đặt trong điểm ảnh."
+                    },
                     "x": {
                       "description": "Vị trí x tính bằng pixel bắt đầu từ góc trên bên trái của hình ảnh."
                     },
                     "y": {
                       "description": "Vị trí y theo điểm ảnh bắt đầu từ góc trên bên trái của hình ảnh."
-                    },
-                    "redValue": {
-                      "description": "Lượng màu đỏ (từ 0 đến 255) để đặt trong điểm ảnh."
                     }
                   },
                   "short_description": "Đặt số lượng màu đỏ (dao động từ 0 đến 255) trong màu của điểm ảnh nằm ở vị trí x và y đã cho trong dữ liệu hình ảnh đã cho đến lượng đầu vào RedValue."
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Giá trị trả về bởi chức năng SetTimeout để hủy bỏ."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Số mili giây giữa mỗi lần thực hiện hàm."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Số mili giây cần đợi trước khi thực hiện chức năng."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Hàm"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Dữ liệu",
               "expressions": {
                 "createRecord": {
                   "palette_params": {
@@ -475,11 +279,11 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
-                    "tableName": {
-                      "description": "Tên của bảng để truy xuất bản ghi từ đó."
-                    },
                     "options": {
                       "type": "đối tượng"
+                    },
+                    "tableName": {
+                      "description": "Tên của bảng để truy xuất bản ghi từ đó."
                     }
                   }
                 },
@@ -539,7 +343,36 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "Dữ liệu"
+            },
+            "functions": {
+              "name": "Các hàm"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Số lớn nhất đã được trả về"
+                    },
+                    "min": {
+                      "description": "Số nhỏ nhất đã được trả về"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Số lớn nhất đã được trả về"
+                    },
+                    "min": {
+                      "description": "Số nhỏ nhất đã được trả về"
+                    }
+                  }
+                }
+              },
+              "name": "Phép toán"
             },
             "turtle": {
               "expressions": {
@@ -606,75 +439,64 @@
                 }
               }
             },
-            "control": {
+            "ui_controls": {
               "expressions": {
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "description": "Giá trị trả về bởi chức năng SetTimeout để hủy bỏ."
-                    }
-                  }
+                "button": {
+                  "short_description": "Tạo một nút trên màn hình hiển thị văn bản được cung cấp và tham chiếu bởi id đã cho tại vị trí mặc định (0,0)."
                 },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Số mili giây giữa mỗi lần thực hiện hàm."
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Thu nhỏ và phóng to"
                     }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "Số mili giây cần đợi trước khi thực hiện chức năng."
-                    }
-                  }
-                },
-                "timedLoop": {
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "Hàm"
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "Phép toán",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Số nhỏ nhất đã được trả về"
-                    },
-                    "max": {
-                      "description": "Số lớn nhất đã được trả về"
-                    }
-                  }
                 },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Số nhỏ nhất đã được trả về"
-                    },
-                    "max": {
-                      "description": "Số lớn nhất đã được trả về"
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Tạo âm nhạc"
                     }
-                  }
+                  },
+                  "short_description": "Bật tệp âm thanh MP3 từ một URL đã chỉ định."
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "Thuộc tính cần thay đổi."
+                    }
+                  },
+                  "short_description": "Đặt thuộc tính thành một giá trị mới cho phần tử đã xác định."
+                },
+                "setScreen": {
+                  "short_description": "Đặt màn hình thành ScreenID đã cho."
+                },
+                "showElement": {
+                  "short_description": "Hiển thị phần tử với id được cung cấp."
+                },
+                "textLabel": {
+                  "short_description": "Tạo nhãn văn bản trên màn hình hiển thị văn bản được cung cấp và tham chiếu bởi id đã cho tại vị trí mặc định (0,0)."
                 }
               }
             },
             "variables": {
-              "name": "Các biến",
               "expressions": {
+                "addPair": {
+                  "return_value": "Không có"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "Khai báo và gán một mảng cho một biến"
+                },
                 "declareAssign_object": {
                   "examples": {
                     "Choose Your Own Adventure": {
                       "name": "Chọn cuộc phiêu lưu của riêng bạn"
                     }
                   }
-                },
-                "declareAssign_list_123": {
-                  "short_description": "Khai báo và gán một mảng cho một biến"
                 },
                 "includes": {
                   "palette_params": {
@@ -690,68 +512,246 @@
                     }
                   }
                 },
-                "addPair": {
-                  "return_value": "Không có"
+                "length": {
+                  "return_value": "Chiều dài của chuỗi"
+                }
+              },
+              "name": "Các biến"
+            }
+          },
+          "description": "App Lab là một môi trường lập trình nơi bạn có thể tạo các ứng dụng đơn giản. Thiết kế một ứng dụng, mã với các khối hoặc JavaScript để làm cho nó hoạt động, sau đó chia sẻ ứng dụng của bạn trong vài giây.",
+          "name": "Phòng thí nghiệm ứng dụng"
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Số mili giây giữa mỗi lần thực hiện hàm."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Số mili giây cần đợi trước khi thực hiện chức năng."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Ngôi sao"
+                    }
+                  }
+                }
+              },
+              "name": "Bản vẽ"
+            },
+            "functions": {
+              "name": "Các hàm"
+            },
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Nhân vật"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Nhân vật"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Đen và trắng"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Tạo âm nhạc"
+                    }
+                  },
+                  "short_description": "Bật tệp âm thanh MP3 từ một URL đã chỉ định."
+                },
+                "showMobileControls": {
+                  "content": "Thay đổi các điều khiển di động hiển thị bên dưới không gian phát.",
+                  "short_description": "Thay đổi các điều khiển di động hiển thị bên dưới không gian phát."
+                }
+              },
+              "name": "Phòng thí nghiệm trò chơi"
+            },
+            "groups": {
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Nhân vật"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Nhân vật"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Nhân vật"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Màu sắc"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Màu sắc"
+                    }
+                  }
+                }
+              },
+              "name": "Nhóm"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Số lớn nhất đã được trả về"
+                    },
+                    "min": {
+                      "description": "Số nhỏ nhất đã được trả về"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Số lớn nhất đã được trả về"
+                    },
+                    "min": {
+                      "description": "Số nhỏ nhất đã được trả về"
+                    }
+                  }
+                }
+              },
+              "name": "Phép toán"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Xoắn ốc"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "Chiều cao của sprite."
+                },
+                "sprite.width": {
+                  "return_value": "Chiều rộng của sprite."
+                }
+              },
+              "name": "Nhân vật"
+            },
+            "variables": {
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Chuỗi cần tìm kiếm."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Chuỗi cần tìm kiếm."
+                    }
+                  }
                 },
                 "length": {
                   "return_value": "Chiều dài của chuỗi"
                 }
-              }
-            },
-            "functions": {
-              "name": "Các hàm"
-            },
-            "advanced": {
-              "name": "Nâng cao"
+              },
+              "name": "Các biến"
             }
-          }
+          },
+          "name": "Phòng thí nghiệm trò chơi"
+        },
+        "javalab": {
+          "name": "Java Lab"
         },
         "spritelab": {
-          "name": "Sprite Lab",
           "categories": {
-            "sprites": {
-              "name": "Nhân vật"
-            },
-            "world": {
-              "name": "Thế giới"
-            },
-            "location": {
-              "name": "Địa điểm"
-            },
             "actions": {
               "name": "Hành động"
-            },
-            "events": {
-              "name": "Các sự kiện"
             },
             "behaviors": {
               "name": "Hành vi"
             },
-            "loops": {
-              "name": "Vòng lặp"
+            "comments": {
+              "name": "Bình luận"
             },
-            "variables": {
-              "name": "Các biến"
-            },
-            "math": {
-              "name": "Phép toán"
-            },
-            "logic": {
-              "name": "Logic"
+            "events": {
+              "name": "Các sự kiện"
             },
             "functions": {
               "name": "Các hàm"
             },
+            "location": {
+              "name": "Địa điểm"
+            },
+            "logic": {
+              "name": "Logic"
+            },
+            "loops": {
+              "name": "Vòng lặp"
+            },
+            "math": {
+              "name": "Phép toán"
+            },
+            "sprites": {
+              "name": "Nhân vật"
+            },
             "text": {
               "name": "Văn bản"
             },
-            "comments": {
-              "name": "Bình luận"
+            "variables": {
+              "name": "Các biến"
+            },
+            "world": {
+              "name": "Thế giới"
             }
-          }
+          },
+          "name": "Sprite Lab"
         },
-        "javalab": {
-          "name": "Java Lab"
+        "weblab": {
+          "name": "Kho Web"
         }
       }
     }

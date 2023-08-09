@@ -3,6 +3,7 @@
  * currently active Lab (determined by the current app name). This
  * helps facilitate level-switching between labs without page reloads.
  */
+import AichatView from '@cdo/apps/aichat/views/AichatView';
 import MusicView from '@cdo/apps/music/views/MusicView';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import classNames from 'classnames';
@@ -35,11 +36,15 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
     backgroundMode: false,
     node: <StandaloneVideo />,
   },
+  aichat: {
+    backgroundMode: false,
+    node: <AichatView />,
+  },
 };
 
 const LabViewsRenderer: React.FunctionComponent = () => {
   const currentAppName = useSelector(
-    (state: {lab: LabState}) => state.lab.appName
+    (state: {lab: LabState}) => state.lab.levelProperties?.appName
   );
 
   const [appsToRender, setAppsToRender] = useState<AppName[]>([]);

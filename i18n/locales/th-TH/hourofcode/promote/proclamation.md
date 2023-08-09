@@ -1,5 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+title: มติตัวอย่างสนับสนุนสัปดาห์การศึกษาวิทยาการคอมพิวเตอร์และชั่วโมงแห่งประมวลกฎหมาย
 ---
 
 {{ signup_button }}

@@ -4231,6 +4231,8 @@ ja:
               display_name: '第 1章: 問題解決プロセス'
             lessonGroup-3:
               display_name: 第 2 章コンピューターと問題解決
+            lessonGroup-5:
+              display_name: アンケート
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4582,6 +4584,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-4:
+              display_name: アンケート
         focus-on-creativity2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4607,6 +4611,8 @@ ja:
               display_name: '第 1章: 問題解決プロセス'
             lessonGroup-3:
               display_name: 第 2 章コンピューターと問題解決
+            lessonGroup-5:
+              display_name: アンケート
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4624,6 +4630,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-4:
+              display_name: アンケート
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4650,6 +4658,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-4:
+              display_name: アンケート
         focus-on-design-with-purpose2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4673,6 +4683,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-4:
+              display_name: アンケート
         focus-on-coding2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4696,6 +4708,8 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: '第 1章: 問題解決プロセス'
+            lessonGroup-4:
+              display_name: アンケート
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5002,3 +5016,106 @@ ja:
           lesson_groups:
             lessonGroup-3:
               display_name: クラス
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: デジタル シティズンシップ
+            lessonGroup-3:
+              display_name: シークエンス
+            lessonGroup-4:
+              display_name: くりかえし
+            lessonGroup-5:
+              display_name: コンピューティングの影響
+          description_audience: 4-7 才
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: データ
+          lesson_groups:
+            lessonGroup-2:
+              display_name: デジタル シティズンシップ
+            lessonGroup-3:
+              display_name: シークエンス
+            lessonGroup-4:
+              display_name: くりかえし
+            lessonGroup-5:
+              display_name: コンピューティングの影響
+            lessonGroup-6:
+              display_name: データ
+          description_audience: 4-7 才
+          description_short: 低学年向けコンピューター サイエンス入門
+          description: コースAでは、幼稚園生を含む初級読者向けにコンピュータサイエンスのカリキュラムを提供しています。学生はループやイベントなどのコマンドを使ったプログラミングを学びます。このコースの授業では、他の学生と有意義に協力し、さまざまな問題解決手法を研究し、困難な課題に直面しても粘り強く取り組み、インターネットの安全性について学ぶことも学びます。
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: デジタル シティズンシップ
+            lessonGroup-3:
+              display_name: シークエンス
+            lessonGroup-4:
+              display_name: くりかえし
+            lessonGroup-5:
+              display_name: コンピューティングの影響
+            lessonGroup-6:
+              display_name: イベント
+            lessonGroup-7:
+              display_name: コース最後のプロジェクト
+          description_audience: 5-8 才
+          description_short: 就学前の児童のためのコンピューター サイエンス入門。コースAと似ていますが、コンセプトが深化しています。
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: デジタル シティズンシップ
+            lessonGroup-3:
+              display_name: シークエンス
+            lessonGroup-4:
+              display_name: くりかえし
+            lessonGroup-5:
+              display_name: イベント
+            lessonGroup-6:
+              display_name: データ
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: デジタル シティズンシップ
+            lessonGroup-3:
+              display_name: シークエンス
+            lessonGroup-4:
+              display_name: コンピューティングの影響
+            lessonGroup-6:
+              display_name: くりかえし
+            lessonGroup-7:
+              display_name: データ
+            lessonGroup-8:
+              display_name: コース最後のプロジェクト
+          description_audience: '年齢: 7～11才'
+          description_short: 条件文について学び、独自のアート、ゲーム、さらにはダンスパーティーを作成しましょう。
+          description: 3年生の学生向けにコースDを作成しました。コースは、ループやイベントなど、以前のコースで見つかった概念を復習することから始まります。その後、学生はアルゴリズム、入れ子のループ、whileループ、条件などについての理解を深めます。
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 入れ子のループ
+            lessonGroup-4:
+              display_name: 関数(かんすう)
+            lessonGroup-6:
+              display_name: コース最後のプロジェクト
+          description_audience: '年齢: 8～12才'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: スプライト
+          description_audience: '年齢: 9～13才'
+          description_short: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: スプライト
+            lessonGroup-3:
+              display_name: 条件
+            lessonGroup-5:
+              display_name: 変数（へんすう）
+            lessonGroup-6:
+              display_name: コンピューティングの影響
+            lessonGroup-7:
+              display_name: コース最後のプロジェクト
+          description_audience: '年齢: 9～13才'
+          description_short: コンピューター サイエンス入門のすべての概念を学び、独自のアート、ストーリー、ゲームを作成しましょう。

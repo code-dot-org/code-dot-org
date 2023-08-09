@@ -19,55 +19,52 @@
           }
         },
         "2-3 Artist 3.4": {
-          "draw a circle": {
-            "name": "nakresli kružnici"
-          },
           "draw a car": {
             "name": "nakreslit auto"
+          },
+          "draw a circle": {
+            "name": "nakresli kružnici"
           }
         },
         "2-3 Artist 7": {
           "draw_rect": {
+            "name": "draw_rect",
             "parameters": {
-              "width": "šířka",
-              "height": "výška"
-            },
-            "name": "draw_rect"
+              "height": "výška",
+              "width": "šířka"
+            }
           }
         },
         "2-3 Artist Debugging 10": {
-          "draw square": {
-            "name": "nakreslit čtverec",
-            "parameters": {
-              "width": "šířka",
-              "height": "výška"
-            }
+          "draw R pad": {
+            "name": "namaluj R ovladač"
+          },
+          "draw a button": {
+            "name": "namaluj tlačítko"
           },
           "draw a circle": {
             "name": "nakresli kružnici"
+          },
+          "draw cord": {
+            "name": "namaluj šňůru"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec",
+            "parameters": {
+              "height": "výška",
+              "width": "šířka"
+            }
           },
           "jump to controller top left": {
             "name": "skoč na ovladač vrchní levý"
           },
           "jump to middle": {
             "name": "skoč doprostřed"
-          },
-          "draw a button": {
-            "name": "namaluj tlačítko"
-          },
-          "draw cord": {
-            "name": "namaluj šňůru"
-          },
-          "draw R pad": {
-            "name": "namaluj R ovladač"
           }
         },
         "2-3 Artist Debugging 5": {
-          "draw left leg": {
-            "name": "nakresli levou nohu"
-          },
-          "draw right leg": {
-            "name": "nakresli pravou nohu"
+          "draw a head": {
+            "name": "nakreslit hlavu"
           },
           "draw body and arms": {
             "name": "nakresli tělo a ruce",
@@ -76,39 +73,47 @@
               "bodylength": "bodylength"
             }
           },
-          "draw a head": {
-            "name": "nakreslit hlavu"
+          "draw left leg": {
+            "name": "nakresli levou nohu"
+          },
+          "draw right leg": {
+            "name": "nakresli pravou nohu"
           }
         },
         "2-3 Artist Debugging 6": {
-          "draw right leg": {
-            "name": "nakresli pravou nohu"
+          "draw arms": {
+            "name": "nakreslit ruce"
           },
           "draw head": {
             "name": "nakreslit hlavu"
           },
-          "draw arms": {
-            "name": "nakreslit ruce"
-          },
-          "jump to neck": {
-            "name": "skoč na krk"
-          },
           "draw left leg": {
             "name": "nakresli levou nohu"
           },
+          "draw right leg": {
+            "name": "nakresli pravou nohu"
+          },
           "draw sitting stick figure": {
             "name": "draw sitting stick figure"
+          },
+          "jump to neck": {
+            "name": "skoč na krk"
           }
         },
         "2-3 Artist Debugging 7": {
-          "draw O": {
-            "name": "nakresli O"
-          },
           "draw D": {
             "name": "nakresli D"
           },
           "draw E": {
             "name": "nakresli E"
+          },
+          "draw O": {
+            "name": "nakresli O"
+          }
+        },
+        "2-3 Artist Functions 1": {
+          "draw ear stems": {
+            "name": "nakresli stranice"
           }
         },
         "2-3 Artist Functions 10": {
@@ -221,14 +226,14 @@
           }
         },
         "4-5 Artist 7": {
-          "draw triangle": {
-            "name": "nakresli trojúhelník"
+          "draw a car": {
+            "name": "nakreslit auto"
           },
           "draw a circle": {
             "name": "nakresli kružnici"
           },
-          "draw a car": {
-            "name": "nakreslit auto"
+          "draw triangle": {
+            "name": "nakresli trojúhelník"
           }
         },
         "4-5 Artist 8": {
@@ -272,6 +277,20 @@
         "Alien Defender": {
           "game has been won": {
             "name": "hra skončila"
+          }
+        },
+        "Artist Autorun Test": {
+          "draw a square": {
+            "name": "nakresli čtverec"
+          }
+        },
+        "Auto Open Function Editor": {
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "length": "délka",
+              "sides": "strany"
+            }
           }
         },
         "Course 4 Artist Binary 1": {
@@ -368,11 +387,11 @@
           }
         },
         "Course 4 Artist Functions challenge": {
-          "draw a square 20": {
-            "name": "nakresli čtvrtec 20"
-          },
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw a square 20": {
+            "name": "nakresli čtvrtec 20"
           }
         },
         "Course 4 Bee Params 1": {
@@ -440,8 +459,8 @@
           "jump": {
             "name": "skoč",
             "parameters": {
-              "height": "výška",
-              "actor": "postava"
+              "actor": "postava",
+              "height": "výška"
             }
           }
         },
@@ -505,14 +524,14 @@
           "draw a line of hexagons": {
             "name": "nakresli řadu šestiúhelníků"
           },
-          "shift down/forward": {
-            "name": "posun dolů/vpřed"
+          "draw a square 20": {
+            "name": "nakresli čtvrtec 20"
           },
           "shift down/backward": {
             "name": "posun dolů/zpět"
           },
-          "draw a square 20": {
-            "name": "nakresli čtvrtec 20"
+          "shift down/forward": {
+            "name": "posun dolů/vpřed"
           }
         },
         "Course 4 SCF 1a": {
@@ -527,22 +546,22 @@
           "draw a square 20": {
             "name": "nakresli čtvrtec 20"
           },
-          "draw octagons": {
-            "name": "nekresli osmiúhelníky"
-          },
           "draw an octagon": {
             "name": "nekresli osmiúhelník"
+          },
+          "draw octagons": {
+            "name": "nekresli osmiúhelníky"
           },
           "shift down": {
             "name": "posun dolů"
           }
         },
         "Course 4 SCF 3": {
-          "draw a square 20": {
-            "name": "nakresli čtvrtec 20"
-          },
           "do something": {
             "name": "proveď něco"
+          },
+          "draw a square 20": {
+            "name": "nakresli čtvrtec 20"
           },
           "draw an octagon": {
             "name": "nekresli osmiúhelník",
@@ -551,9 +570,460 @@
             }
           }
         },
+        "Course E: Artist Project_examples2022": {
+          "my function": {
+            "name": "moje funkce"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "moje funkce"
+          }
+        },
+        "Course E: Frozen Project_examples2022": {
+          "LOGIC FLOWER": {
+            "name": "KVĚT LOGIKY"
+          },
+          "LOGIC FLOWERS": {
+            "name": "KVĚTY LOGIKY"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "KVĚTY LOGIKY 2"
+          },
+          "draw a circle": {
+            "description": "nakresli kruh s daným poloměrem",
+            "name": "nakresli kružnici",
+            "parameters": {
+              "radius": "poloměr"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "nakresli větrník",
+            "parameters": {
+              "length": "délka",
+              "repeat": "opakuj",
+              "sides": "strany"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "length": "délka",
+              "sides": "strany"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli čtverec",
+            "parameters": {
+              "length": "délka",
+              "sides": "strany"
+            }
+          },
+          "draw a star": {
+            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou",
+            "name": "nakresli hvězdu",
+            "parameters": {
+              "length": "délka",
+              "points": "body"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "small flower": {
+            "name": "malá květina"
+          }
+        },
+        "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+            "name": "KVĚT LOGIKY"
+          },
+          "LOGIC FLOWERS": {
+            "name": "KVĚTY LOGIKY"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "KVĚTY LOGIKY 2"
+          },
+          "draw a circle": {
+            "description": "nakresli kruh s daným poloměrem",
+            "name": "nakresli kružnici",
+            "parameters": {
+              "radius": "poloměr"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "nakresli větrník",
+            "parameters": {
+              "length": "délka",
+              "repeat": "opakuj",
+              "sides": "strany"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "length": "délka",
+              "sides": "strany"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli čtverec",
+            "parameters": {
+              "length": "délka",
+              "sides": "strany"
+            }
+          },
+          "draw a star": {
+            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou",
+            "name": "nakresli hvězdu",
+            "parameters": {
+              "length": "délka",
+              "points": "body"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "small flower": {
+            "name": "malá květina"
+          }
+        },
         "Course E: Play Lab Project": {
           "do something": {
             "name": "proveď něco"
+          }
+        },
+        "Course F: Artist Project_Flowers_examples_2021": {
+          "draw a circle": {
+            "description": "nakresli kruh s daným poloměrem",
+            "name": "nakresli kružnici",
+            "parameters": {
+              "radius": "poloměr"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "nakresli větrník",
+            "parameters": {
+              "length": "délka",
+              "repeat": "opakuj",
+              "sides": "strany"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "length": "délka",
+              "sides": "strany"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli čtverec",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a star": {
+            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou",
+            "name": "nakresli hvězdu",
+            "parameters": {
+              "length": "délka",
+              "points": "body"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
+            "parameters": {
+              "length": "délka"
+            }
+          }
+        },
+        "CourseD_EOC_artist": {
+          "draw a circle": {
+            "description": "nakresli kruh s daným poloměrem",
+            "name": "nakresli kružnici",
+            "parameters": {
+              "radius": "poloměr"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "nakresli větrník",
+            "parameters": {
+              "length": "délka",
+              "repeat": "opakuj",
+              "sides": "strany"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "length": "délka",
+              "sides": "strany"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli čtverec",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a star": {
+            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou",
+            "name": "nakresli hvězdu",
+            "parameters": {
+              "length": "délka",
+              "points": "body"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
+            "parameters": {
+              "length": "délka"
+            }
+          }
+        },
+        "CourseD_EOC_artist2022": {
+          "draw a circle": {
+            "description": "nakresli kruh s daným poloměrem",
+            "name": "nakresli kružnici",
+            "parameters": {
+              "radius": "poloměr"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "nakresli větrník",
+            "parameters": {
+              "length": "délka",
+              "repeat": "opakuj",
+              "sides": "strany"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "length": "délka",
+              "sides": "strany"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli čtverec",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a star": {
+            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou",
+            "name": "nakresli hvězdu",
+            "parameters": {
+              "length": "délka",
+              "points": "body"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
+            "parameters": {
+              "length": "délka"
+            }
+          }
+        },
+        "CourseD_EOC_artist_2021": {
+          "draw a circle": {
+            "description": "nakresli kruh s daným poloměrem",
+            "name": "nakresli kružnici",
+            "parameters": {
+              "radius": "poloměr"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "nakresli větrník",
+            "parameters": {
+              "length": "délka",
+              "repeat": "opakuj",
+              "sides": "strany"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "length": "délka",
+              "sides": "strany"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli čtverec",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a star": {
+            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou",
+            "name": "nakresli hvězdu",
+            "parameters": {
+              "length": "délka",
+              "points": "body"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
+            "parameters": {
+              "length": "délka"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021": {
+          "draw a circle": {
+            "description": "nakresli kruh s daným poloměrem",
+            "name": "nakresli kružnici",
+            "parameters": {
+              "radius": "poloměr"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "nakresli větrník",
+            "parameters": {
+              "length": "délka",
+              "repeat": "opakuj",
+              "sides": "strany"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "length": "délka",
+              "sides": "strany"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli čtverec",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a star": {
+            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou",
+            "name": "nakresli hvězdu",
+            "parameters": {
+              "length": "délka",
+              "points": "body"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
+            "parameters": {
+              "length": "délka"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "description": "nakresli kruh s daným poloměrem",
+            "name": "nakresli kružnici",
+            "parameters": {
+              "radius": "poloměr"
+            }
+          },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "nakresli větrník",
+            "parameters": {
+              "length": "délka",
+              "repeat": "opakuj",
+              "sides": "strany"
+            }
+          },
+          "draw a shape": {
+            "name": "nakresli tvar",
+            "parameters": {
+              "length": "délka",
+              "sides": "strany"
+            }
+          },
+          "draw a square": {
+            "name": "nakresli čtverec",
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "draw a star": {
+            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou",
+            "name": "nakresli hvězdu",
+            "parameters": {
+              "length": "délka",
+              "points": "body"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
+            "parameters": {
+              "length": "délka"
+            }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "resetovat hru"
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": "resetovat hru"
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "resetovat hru"
           }
         },
         "Find the Wizard": {
@@ -574,6 +1044,11 @@
             "name": "postav most"
           }
         },
+        "Function intro Ryan2022": {
+          "build bridge": {
+            "name": "postav most"
+          }
+        },
         "Function intro Ryan_2019": {
           "build bridge": {
             "name": "postav most"
@@ -584,9 +1059,20 @@
             "name": "postav most"
           }
         },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "postav most"
+          }
+        },
         "Geometric Sun": {
+          "diamond": {
+            "name": "diamant"
+          },
           "draw a door": {
             "name": "nakresli dveře"
+          },
+          "draw a house": {
+            "name": "nakresli dům"
           },
           "draw grass": {
             "name": "nakresli trávu"
@@ -597,28 +1083,28 @@
           "rectangle": {
             "name": "obdélník"
           },
+          "square": {
+            "name": "čtverec"
+          },
           "sun": {
             "name": "slunce"
-          },
-          "diamond": {
-            "name": "diamant"
-          },
-          "window": {
-            "name": "okno"
-          },
-          "draw a house": {
-            "name": "nakresli dům"
           },
           "triangle": {
             "name": "trojúhelník"
           },
-          "square": {
-            "name": "čtverec"
+          "window": {
+            "name": "okno"
           }
         },
         "Geometric Sun_2018": {
+          "diamond": {
+            "name": "diamant"
+          },
           "draw a door": {
             "name": "nakresli dveře"
+          },
+          "draw a house": {
+            "name": "nakresli dům"
           },
           "draw grass": {
             "name": "nakresli trávu"
@@ -629,32 +1115,20 @@
           "rectangle": {
             "name": "obdélník"
           },
+          "square": {
+            "name": "čtverec"
+          },
           "sun": {
             "name": "slunce"
-          },
-          "diamond": {
-            "name": "diamant"
-          },
-          "window": {
-            "name": "okno"
-          },
-          "draw a house": {
-            "name": "nakresli dům"
           },
           "triangle": {
             "name": "trojúhelník"
           },
-          "square": {
-            "name": "čtverec"
+          "window": {
+            "name": "okno"
           }
         },
         "InspirationalArtwork": {
-          "n-sided shape": {
-            "parameters": {
-              "length": "délka",
-              "sides": "strany"
-            }
-          },
           "draw a loop": {
             "parameters": {
               "length": "délka",
@@ -664,6 +1138,12 @@
           "draw spiral circle": {
             "parameters": {
               "size": "velikost"
+            }
+          },
+          "n-sided shape": {
+            "parameters": {
+              "length": "délka",
+              "sides": "strany"
             }
           }
         },
@@ -695,7 +1175,20 @@
             "name": "nakresli obdélník"
           }
         },
+        "MC Agent Freeplay": {
+          "function 1": {
+            "name": "funkce 1"
+          },
+          "function 2": {
+            "name": "funkce 2"
+          }
+        },
         "MC_HOC_2017_07_Cole": {
+          "clear path": {
+            "name": "vyčisti cestu"
+          }
+        },
+        "MC_HOC_2017_07_Cole2022": {
           "clear path": {
             "name": "vyčisti cestu"
           }
@@ -710,7 +1203,100 @@
             "name": "vyčisti cestu"
           }
         },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "vyčisti cestu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "oprav dlouhou cestu"
+          },
+          "fix short path": {
+            "name": "oprav krátkou cestu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY2022": {
+          "fix long path": {
+            "name": "oprav dlouhou cestu"
+          },
+          "fix short path": {
+            "name": "oprav krátkou cestu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "oprav dlouhou cestu"
+          },
+          "fix short path": {
+            "name": "oprav krátkou cestu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "oprav dlouhou cestu"
+          },
+          "fix short path": {
+            "name": "oprav krátkou cestu"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "oprav dlouhou cestu"
+          },
+          "fix short path": {
+            "name": "oprav krátkou cestu"
+          }
+        },
+        "MC_HOC_2017_Ali": {
+          "build long bridge": {
+            "name": "postav dlouhý most"
+          },
+          "build short bridge": {
+            "name": "postav krátký most"
+          }
+        },
+        "MC_HOC_2017_Ali2022": {
+          "build long bridge": {
+            "name": "postav dlouhý most"
+          },
+          "build short bridge": {
+            "name": "postav krátký most"
+          }
+        },
+        "MC_HOC_2017_Ali_2019": {
+          "build long bridge": {
+            "name": "postav dlouhý most"
+          },
+          "build short bridge": {
+            "name": "postav krátký most"
+          }
+        },
+        "MC_HOC_2017_Ali_2020": {
+          "build long bridge": {
+            "name": "postav dlouhý most"
+          },
+          "build short bridge": {
+            "name": "postav krátký most"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build long bridge": {
+            "name": "postav dlouhý most"
+          },
+          "build short bridge": {
+            "name": "postav krátký most"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
+          "function 1": {
+            "name": "funkce 1"
+          },
+          "function 2": {
+            "name": "funkce 2"
+          }
+        },
+        "MC_HOC_2017_FP20x202022": {
           "function 1": {
             "name": "funkce 1"
           },
@@ -734,42 +1320,50 @@
             "name": "funkce 2"
           }
         },
-        "NEW Course 4 Artist Functions 11": {
-          "draw a square 20": {
-            "name": "nakresli čtvrtec 20"
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funkce 1"
           },
+          "function 2": {
+            "name": "funkce 2"
+          }
+        },
+        "NEW Course 4 Artist Functions 11": {
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw a square 20": {
+            "name": "nakresli čtvrtec 20"
           }
         },
         "NEW Course 4 Artist Functions 12": {
-          "draw a square 20": {
-            "name": "nakresli čtvrtec 20"
-          },
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw a square 20": {
+            "name": "nakresli čtvrtec 20"
           }
         },
         "NEW Course 4 Artist Functions 13": {
-          "draw a square 20": {
-            "name": "nakresli čtvrtec 20"
-          },
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw a square 20": {
+            "name": "nakresli čtvrtec 20"
           }
         },
         "NEW Course 4 Artist Functions 14": {
-          "empty function": {
-            "name": "prázdná funkce"
+          "draw a line of squares": {
+            "name": "nakresli řadu čtverců"
+          },
+          "draw a square 20": {
+            "name": "nakresli čtvrtec 20"
           },
           "draw a square 40": {
             "name": "nakresli čtverec 40"
           },
-          "draw a square 20": {
-            "name": "nakresli čtvrtec 20"
-          },
-          "draw a line of squares": {
-            "name": "nakresli řadu čtverců"
+          "empty function": {
+            "name": "prázdná funkce"
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -817,15 +1411,15 @@
           }
         },
         "NEW Course 4 Artist Params 11": {
-          "draw a polygon": {
-            "name": "nakresli mnohoúhelník",
+          "do something": {
+            "name": "proveď něco",
             "parameters": {
               "length": "délka",
               "sides": "strany"
             }
           },
-          "do something": {
-            "name": "proveď něco",
+          "draw a polygon": {
+            "name": "nakresli mnohoúhelník",
             "parameters": {
               "length": "délka",
               "sides": "strany"
@@ -868,33 +1462,25 @@
           }
         },
         "NEW Course 4 Artist Params 15": {
-          "draw a star": {
-            "name": "nakresli hvězdu",
-            "parameters": {
-              "points": "body",
-              "length": "délka"
-            },
-            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou"
-          },
           "draw a circle": {
-            "name": "nakresli kružnici",
             "description": "nakresli kruh s daným poloměrem",
+            "name": "nakresli kružnici",
             "parameters": {
               "radius": "poloměr"
             }
           },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
           "draw a pinwheel": {
+            "name": "nakresli větrník",
             "parameters": {
               "length": "délka",
               "repeat": "opakuj",
               "sides": "strany"
-            },
-            "name": "nakresli větrník"
-          },
-          "draw a triangle": {
-            "name": "nakresli trojúhelník",
-            "parameters": {
-              "length": "délka"
             }
           },
           "draw a shape": {
@@ -904,17 +1490,25 @@
               "sides": "strany"
             }
           },
-          "draw a house": {
-            "name": "nakresli dům",
-            "parameters": {
-              "length": "délka"
-            }
-          },
           "draw a square": {
             "name": "nakresli čtverec",
             "parameters": {
               "length": "délka",
               "sides": "strany"
+            }
+          },
+          "draw a star": {
+            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou",
+            "name": "nakresli hvězdu",
+            "parameters": {
+              "length": "délka",
+              "points": "body"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
+            "parameters": {
+              "length": "délka"
             }
           }
         },
@@ -923,8 +1517,8 @@
             "name": "proveď něco"
           },
           "draw a triangle": {
-            "name": "nakresli trojúhelník",
-            "description": "nakresli trojúhelník"
+            "description": "nakresli trojúhelník",
+            "name": "nakresli trojúhelník"
           }
         },
         "NEW Course 4 Artist Params 3": {
@@ -948,14 +1542,14 @@
           }
         },
         "NEW Course 4 Artist Params 6": {
-          "draw a triangle": {
-            "name": "nakresli trojúhelník",
+          "draw a hexagon": {
+            "name": "nakresli šestiúhelník",
             "parameters": {
               "length": "délka"
             }
           },
-          "draw a hexagon": {
-            "name": "nakresli šestiúhelník",
+          "draw a sqaure": {
+            "name": "nakresli čtverec",
             "parameters": {
               "length": "délka"
             }
@@ -966,8 +1560,8 @@
               "length": "délka"
             }
           },
-          "draw a sqaure": {
-            "name": "nakresli čtverec",
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
             "parameters": {
               "length": "délka"
             }
@@ -990,14 +1584,14 @@
           }
         },
         "NEW Course 4 Artist Params 9": {
+          "do something": {
+            "name": "proveď něco"
+          },
           "draw a square": {
             "name": "nakresli čtverec",
             "parameters": {
               "length": "délka"
             }
-          },
-          "do something": {
-            "name": "proveď něco"
           }
         },
         "NEW Course 4 Artist Params inspire": {
@@ -1013,8 +1607,8 @@
           "jump": {
             "name": "skoč",
             "parameters": {
-              "height": "výška",
-              "actor": "postava"
+              "actor": "postava",
+              "height": "výška"
             }
           },
           "patrol": {
@@ -1025,33 +1619,25 @@
           }
         },
         "New Artist Project": {
-          "draw a star": {
-            "name": "nakresli hvězdu",
-            "parameters": {
-              "points": "body",
-              "length": "délka"
-            },
-            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou"
-          },
           "draw a circle": {
-            "name": "nakresli kružnici",
             "description": "nakresli kruh s daným poloměrem",
+            "name": "nakresli kružnici",
             "parameters": {
               "radius": "poloměr"
             }
           },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
           "draw a pinwheel": {
+            "name": "nakresli větrník",
             "parameters": {
               "length": "délka",
               "repeat": "opakuj",
               "sides": "strany"
-            },
-            "name": "nakresli větrník"
-          },
-          "draw a triangle": {
-            "name": "nakresli trojúhelník",
-            "parameters": {
-              "length": "délka"
             }
           },
           "draw a shape": {
@@ -1061,14 +1647,22 @@
               "sides": "strany"
             }
           },
-          "draw a house": {
-            "name": "nakresli dům",
+          "draw a square": {
+            "name": "nakresli čtverec",
             "parameters": {
               "length": "délka"
             }
           },
-          "draw a square": {
-            "name": "nakresli čtverec",
+          "draw a star": {
+            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou",
+            "name": "nakresli hvězdu",
+            "parameters": {
+              "length": "délka",
+              "points": "body"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
             "parameters": {
               "length": "délka"
             }
@@ -1086,8 +1680,8 @@
           "jump": {
             "name": "skoč",
             "parameters": {
-              "height": "výška",
-              "actor": "postava"
+              "actor": "postava",
+              "height": "výška"
             }
           },
           "patrol": {
@@ -1120,6 +1714,16 @@
         "Standalone_Artist_9": {
           "my function": {
             "name": "moje funkce"
+          }
+        },
+        "course1_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "Vzorové řešení"
+          }
+        },
+        "course1_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "potenciální řešení"
           }
         },
         "course3_artist_functions_challenge1": {
@@ -1155,28 +1759,39 @@
           }
         },
         "course3_bee_functions_challenge3": {
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
+          },
           "row of nectar": {
             "name": "řada nektaru"
           },
           "rowOfNectar": {
             "name": "řada nektaru"
-          },
-          "check nectar or honey": {
-            "name": "zkontroluj nektar nebo med"
           }
         },
         "course3_bee_functions_challenge4": {
-          "row of nectar": {
-            "name": "řada nektaru"
-          },
-          "rowOfNectar": {
-            "name": "řada nektaru"
-          },
           "check nectar or honey": {
             "name": "zkontroluj nektar nebo med"
           },
           "move and check": {
             "name": "posuň se a zkontroluj"
+          },
+          "row of nectar": {
+            "name": "řada nektaru"
+          },
+          "rowOfNectar": {
+            "name": "řada nektaru"
+          }
+        },
+        "course3_playLab_challenge1": {
+          "keep playing": {
+            "name": "hraj dál"
+          },
+          "lose game": {
+            "name": "prohra"
+          },
+          "win game": {
+            "name": "vítězství"
           }
         },
         "course4_artist_binary_challenge1": {
@@ -1204,10 +1819,8 @@
           }
         },
         "course4_artist_fwp_challenge1": {
-          "draw background": {
-            "parameters": {
-              "color": "barva"
-            }
+          "do something": {
+            "name": "proveď něco"
           },
           "draw a polygon": {
             "name": "nakresli mnohoúhelník",
@@ -1218,8 +1831,15 @@
           "draw a square 20": {
             "name": "nakresli čtvrtec 20"
           },
-          "do something": {
-            "name": "proveď něco"
+          "draw background": {
+            "parameters": {
+              "color": "barva"
+            }
+          }
+        },
+        "course4_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "posuň se a seber nektar pomocí čítače"
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -1236,48 +1856,135 @@
             }
           }
         },
+        "courseA_artist_loops_challenge1": {
+          "\"simple\" solution": {
+            "name": "Vzorové řešení"
+          }
+        },
+        "courseB_artist_loops_challenge2": {
+          "potential solution": {
+            "name": "potenciální řešení"
+          }
+        },
+        "courseB_artist_loops_challenge22022": {
+          "potential solution": {
+            "name": "potenciální řešení"
+          }
+        },
+        "courseB_artist_loops_challenge2_2018": {
+          "potential solution": {
+            "name": "potenciální řešení"
+          }
+        },
+        "courseB_artist_loops_challenge2_2019": {
+          "potential solution": {
+            "name": "potenciální řešení"
+          }
+        },
+        "courseB_artist_loops_challenge2_2020": {
+          "potential solution": {
+            "name": "potenciální řešení"
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "potenciální řešení"
+          }
+        },
         "courseC_artist_prog3": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
-            "name": "nakresli plamen"
-          },
           "draw fire": {
             "name": "nakresli oheň"
+          },
+          "draw flame": {
+            "name": "nakresli plamen",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog32022": {
+          "draw fire": {
+            "name": "nakresli oheň"
+          },
+          "draw flame": {
+            "name": "nakresli plamen",
+            "parameters": {
+              "x": "x"
+            }
           }
         },
         "courseC_artist_prog3_2018": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
-            "name": "nakresli plamen"
-          },
           "draw fire": {
             "name": "nakresli oheň"
+          },
+          "draw flame": {
+            "name": "nakresli plamen",
+            "parameters": {
+              "x": "x"
+            }
           }
         },
         "courseC_artist_prog3_2019": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
-            "name": "nakresli plamen"
-          },
           "draw fire": {
             "name": "nakresli oheň"
+          },
+          "draw flame": {
+            "name": "nakresli plamen",
+            "parameters": {
+              "x": "x"
+            }
           }
         },
         "courseC_artist_prog3_2020": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
-            "name": "nakresli plamen"
-          },
           "draw fire": {
             "name": "nakresli oheň"
+          },
+          "draw flame": {
+            "name": "nakresli plamen",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw fire": {
+            "name": "nakresli oheň"
+          },
+          "draw flame": {
+            "name": "nakresli plamen",
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog4": {
+          "booster": {
+            "name": "posilovač"
+          }
+        },
+        "courseC_artist_prog42022": {
+          "booster": {
+            "name": "posilovač"
+          }
+        },
+        "courseC_artist_prog4_2018": {
+          "booster": {
+            "name": "posilovač"
+          }
+        },
+        "courseC_artist_prog4_2019": {
+          "booster": {
+            "name": "posilovač"
+          }
+        },
+        "courseC_artist_prog4_2020": {
+          "booster": {
+            "name": "posilovač"
+          }
+        },
+        "courseC_artist_prog4_2021": {
+          "booster": {
+            "name": "posilovač"
           }
         },
         "courseC_data wizard": {
@@ -1285,7 +1992,17 @@
             "name": "proveď něco"
           }
         },
+        "courseC_data wizard2022": {
+          "do something": {
+            "name": "proveď něco"
+          }
+        },
         "courseC_data wizard_2020": {
+          "do something": {
+            "name": "proveď něco"
+          }
+        },
+        "courseC_data wizard_2021": {
           "do something": {
             "name": "proveď něco"
           }
@@ -1704,19 +2421,19 @@
           }
         },
         "courseE_artist_concept4": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          },
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw a square": {
+            "name": "nakresli čtverec"
           }
         },
         "courseE_artist_concept4_2018": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          },
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw a square": {
+            "name": "nakresli čtverec"
           }
         },
         "courseE_artist_concept_challenge1": {
@@ -1729,7 +2446,23 @@
             "name": "proveď něco"
           }
         },
+        "courseE_artist_functions1": {
+          "draw ear stems": {
+            "name": "nakresli stranice"
+          }
+        },
         "courseE_artist_functions10": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "draw hexagon": {
+            "name": "nakresli šestiúhelník"
+          },
+          "draw line of hexagons": {
+            "name": "nakresli řadu šestiúhelníků"
+          }
+        },
+        "courseE_artist_functions102022": {
           "do something": {
             "name": "proveď něco"
           },
@@ -1773,7 +2506,36 @@
             "name": "nakresli řadu šestiúhelníků"
           }
         },
+        "courseE_artist_functions10_2021": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "draw hexagon": {
+            "name": "nakresli šestiúhelník"
+          },
+          "draw line of hexagons": {
+            "name": "nakresli řadu šestiúhelníků"
+          }
+        },
+        "courseE_artist_functions1_copy": {
+          "draw ear stems": {
+            "name": "nakresli stranice"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "nakresli stranice"
+          }
+        },
         "courseE_artist_functions2": {
+          "draw a square": {
+            "name": "nakresli čtverec"
+          },
+          "draw ear stems": {
+            "name": "nakresli stranice"
+          }
+        },
+        "courseE_artist_functions22022": {
           "draw a square": {
             "name": "nakresli čtverec"
           },
@@ -1805,12 +2567,33 @@
             "name": "nakresli stranice"
           }
         },
+        "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "nakresli čtverec"
+          },
+          "draw ear stems": {
+            "name": "nakresli stranice"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "nakresli čtverec"
           },
           "draw ear stems": {
             "name": "nakresli stranice"
+          }
+        },
+        "courseE_artist_functions2_dani": {
+          "draw a square": {
+            "name": "nakresli čtverec"
+          },
+          "draw ear stems": {
+            "name": "nakresli stranice"
+          }
+        },
+        "courseE_artist_functions32022": {
+          "draw a star": {
+            "name": "nakresli hvězdu"
           }
         },
         "courseE_artist_functions3_2018": {
@@ -1828,6 +2611,11 @@
             "name": "nakresli hvězdu"
           }
         },
+        "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "nakresli hvězdu"
+          }
+        },
         "courseE_artist_functions4": {
           "draw a star": {
             "name": "nakresli hvězdu"
@@ -1838,7 +2626,17 @@
             "name": "nakresli hvězdu"
           }
         },
+        "courseE_artist_functions4_dani": {
+          "draw a star": {
+            "name": "nakresli hvězdu"
+          }
+        },
         "courseE_artist_functions5": {
+          "draw a star": {
+            "name": "nakresli hvězdu"
+          }
+        },
+        "courseE_artist_functions52022": {
           "draw a star": {
             "name": "nakresli hvězdu"
           }
@@ -1858,7 +2656,17 @@
             "name": "nakresli hvězdu"
           }
         },
+        "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "nakresli hvězdu"
+          }
+        },
         "courseE_artist_functions5_copy": {
+          "draw a star": {
+            "name": "nakresli hvězdu"
+          }
+        },
+        "courseE_artist_functions5_dani": {
           "draw a star": {
             "name": "nakresli hvězdu"
           }
@@ -1871,10 +2679,20 @@
             "name": "nakresli okno"
           }
         },
+        "courseE_artist_functions72022": {
+          "draw a window": {
+            "name": "nakresli okno"
+          }
+        },
         "courseE_artist_functions7_2018": {
           "draw a house": {
             "name": "nakresli dům"
           },
+          "draw a window": {
+            "name": "nakresli okno"
+          }
+        },
+        "courseE_artist_functions7_2019": {
           "draw a window": {
             "name": "nakresli okno"
           }
@@ -1887,153 +2705,252 @@
             "name": "nakresli okno"
           }
         },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "nakresli okno"
+          }
+        },
         "courseE_artist_functions8": {
           "do something": {
             "name": "proveď něco"
           },
+          "draw a line of squares": {
+            "name": "nakresli řadu čtverců"
+          },
           "draw square": {
             "name": "nakreslit čtverec"
+          }
+        },
+        "courseE_artist_functions82022": {
+          "do something": {
+            "name": "proveď něco"
           },
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
+          },
+          "staggered squares": {
+            "name": "čtverce na přeskáčku"
           }
         },
         "courseE_artist_functions8_2018": {
           "do something": {
             "name": "proveď něco"
           },
+          "draw a line of squares": {
+            "name": "nakresli řadu čtverců"
+          },
           "draw square": {
             "name": "nakreslit čtverec"
           },
           "staggered squares": {
             "name": "čtverce na přeskáčku"
-          },
-          "draw a line of squares": {
-            "name": "nakresli řadu čtverců"
           }
         },
         "courseE_artist_functions8_2019": {
           "do something": {
             "name": "proveď něco"
           },
+          "draw a line of squares": {
+            "name": "nakresli řadu čtverců"
+          },
           "draw square": {
             "name": "nakreslit čtverec"
           },
           "staggered squares": {
             "name": "čtverce na přeskáčku"
-          },
-          "draw a line of squares": {
-            "name": "nakresli řadu čtverců"
           }
         },
         "courseE_artist_functions8_2020": {
           "do something": {
             "name": "proveď něco"
           },
+          "draw a line of squares": {
+            "name": "nakresli řadu čtverců"
+          },
           "draw square": {
             "name": "nakreslit čtverec"
           },
           "staggered squares": {
             "name": "čtverce na přeskáčku"
+          }
+        },
+        "courseE_artist_functions8_2021": {
+          "do something": {
+            "name": "proveď něco"
           },
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
+          },
+          "staggered squares": {
+            "name": "čtverce na přeskáčku"
+          }
+        },
+        "courseE_artist_functions8a2022": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "draw a square": {
+            "name": "nakresli čtverec"
           }
         },
         "courseE_artist_functions8a_2018": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          },
           "do something": {
             "name": "proveď něco"
+          },
+          "draw a square": {
+            "name": "nakresli čtverec"
           }
         },
         "courseE_artist_functions8a_2019": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          },
           "do something": {
             "name": "proveď něco"
+          },
+          "draw a square": {
+            "name": "nakresli čtverec"
           }
         },
         "courseE_artist_functions8a_2020": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          },
           "do something": {
             "name": "proveď něco"
+          },
+          "draw a square": {
+            "name": "nakresli čtverec"
+          }
+        },
+        "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "draw a square": {
+            "name": "nakresli čtverec"
+          }
+        },
+        "courseE_artist_functions8b2022": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "draw a line of squares": {
+            "name": "nakresli řadu čtverců"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
           }
         },
         "courseE_artist_functions8b_2018": {
-          "draw square": {
-            "name": "nakreslit čtverec"
-          },
           "do something": {
             "name": "proveď něco"
           },
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
           }
         },
         "courseE_artist_functions8b_2019": {
-          "draw square": {
-            "name": "nakreslit čtverec"
-          },
           "do something": {
             "name": "proveď něco"
           },
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
           }
         },
         "courseE_artist_functions8b_2020": {
-          "draw square": {
-            "name": "nakreslit čtverec"
-          },
           "do something": {
             "name": "proveď něco"
           },
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
+          }
+        },
+        "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "draw a line of squares": {
+            "name": "nakresli řadu čtverců"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
+          }
+        },
+        "courseE_artist_functions8c2022": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "draw a line of squares": {
+            "name": "nakresli řadu čtverců"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
+          },
+          "staggered squares": {
+            "name": "čtverce na přeskáčku"
           }
         },
         "courseE_artist_functions8c_2018": {
-          "draw square": {
-            "name": "nakreslit čtverec"
-          },
           "do something": {
             "name": "proveď něco"
           },
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
           },
           "staggered squares": {
             "name": "čtverce na přeskáčku"
           }
         },
         "courseE_artist_functions8c_2019": {
-          "draw square": {
-            "name": "nakreslit čtverec"
-          },
           "do something": {
             "name": "proveď něco"
           },
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
           },
           "staggered squares": {
             "name": "čtverce na přeskáčku"
           }
         },
         "courseE_artist_functions8c_2020": {
-          "draw square": {
-            "name": "nakreslit čtverec"
-          },
           "do something": {
             "name": "proveď něco"
           },
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
+          },
+          "staggered squares": {
+            "name": "čtverce na přeskáčku"
+          }
+        },
+        "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "draw a line of squares": {
+            "name": "nakresli řadu čtverců"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
           },
           "staggered squares": {
             "name": "čtverce na přeskáčku"
@@ -2043,49 +2960,88 @@
           "do something": {
             "name": "proveď něco"
           },
+          "draw line of triangles": {
+            "name": "nakresli řadu trojúhelníků"
+          },
           "draw triangle": {
             "name": "nakresli trojúhelník"
+          }
+        },
+        "courseE_artist_functions92022": {
+          "do something": {
+            "name": "proveď něco"
           },
           "draw line of triangles": {
             "name": "nakresli řadu trojúhelníků"
+          },
+          "draw triangle": {
+            "name": "nakresli trojúhelník"
           }
         },
         "courseE_artist_functions9_2018": {
           "do something": {
             "name": "proveď něco"
           },
-          "draw triangle": {
-            "name": "nakresli trojúhelník"
-          },
           "draw line of triangles": {
             "name": "nakresli řadu trojúhelníků"
+          },
+          "draw triangle": {
+            "name": "nakresli trojúhelník"
           }
         },
         "courseE_artist_functions9_2019": {
           "do something": {
             "name": "proveď něco"
           },
-          "draw triangle": {
-            "name": "nakresli trojúhelník"
-          },
           "draw line of triangles": {
             "name": "nakresli řadu trojúhelníků"
+          },
+          "draw triangle": {
+            "name": "nakresli trojúhelník"
           }
         },
         "courseE_artist_functions9_2020": {
           "do something": {
             "name": "proveď něco"
           },
+          "draw line of triangles": {
+            "name": "nakresli řadu trojúhelníků"
+          },
           "draw triangle": {
             "name": "nakresli trojúhelník"
+          }
+        },
+        "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "proveď něco"
           },
           "draw line of triangles": {
             "name": "nakresli řadu trojúhelníků"
+          },
+          "draw triangle": {
+            "name": "nakresli trojúhelník"
+          }
+        },
+        "courseE_artist_functionsProj2022": {
+          "draw a line of squares": {
+            "name": "nakresli řadu čtverců"
+          },
+          "draw hexagon": {
+            "name": "nakresli šestiúhelník"
+          },
+          "draw line of hexagons": {
+            "name": "nakresli řadu šestiúhelníků"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
+          },
+          "staggered squares": {
+            "name": "čtverce na přeskáčku"
           }
         },
         "courseE_artist_functionsProj_2018": {
-          "draw square": {
-            "name": "nakreslit čtverec"
+          "draw a line of squares": {
+            "name": "nakresli řadu čtverců"
           },
           "draw hexagon": {
             "name": "nakresli šestiúhelník"
@@ -2093,16 +3049,16 @@
           "draw line of hexagons": {
             "name": "nakresli řadu šestiúhelníků"
           },
+          "draw square": {
+            "name": "nakreslit čtverec"
+          },
           "staggered squares": {
             "name": "čtverce na přeskáčku"
-          },
-          "draw a line of squares": {
-            "name": "nakresli řadu čtverců"
           }
         },
         "courseE_artist_functionsProj_2019": {
-          "draw square": {
-            "name": "nakreslit čtverec"
+          "draw a line of squares": {
+            "name": "nakresli řadu čtverců"
           },
           "draw hexagon": {
             "name": "nakresli šestiúhelník"
@@ -2110,16 +3066,16 @@
           "draw line of hexagons": {
             "name": "nakresli řadu šestiúhelníků"
           },
+          "draw square": {
+            "name": "nakreslit čtverec"
+          },
           "staggered squares": {
             "name": "čtverce na přeskáčku"
-          },
-          "draw a line of squares": {
-            "name": "nakresli řadu čtverců"
           }
         },
         "courseE_artist_functionsProj_2020": {
-          "draw square": {
-            "name": "nakreslit čtverec"
+          "draw a line of squares": {
+            "name": "nakresli řadu čtverců"
           },
           "draw hexagon": {
             "name": "nakresli šestiúhelník"
@@ -2127,14 +3083,39 @@
           "draw line of hexagons": {
             "name": "nakresli řadu šestiúhelníků"
           },
+          "draw square": {
+            "name": "nakreslit čtverec"
+          },
           "staggered squares": {
             "name": "čtverce na přeskáčku"
-          },
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
           "draw a line of squares": {
             "name": "nakresli řadu čtverců"
+          },
+          "draw hexagon": {
+            "name": "nakresli šestiúhelník"
+          },
+          "draw line of hexagons": {
+            "name": "nakresli řadu šestiúhelníků"
+          },
+          "draw square": {
+            "name": "nakreslit čtverec"
+          },
+          "staggered squares": {
+            "name": "čtverce na přeskáčku"
           }
         },
         "courseE_artist_functions_challenge1": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "my design": {
+            "name": "můj návrh"
+          }
+        },
+        "courseE_artist_functions_challenge12022": {
           "do something": {
             "name": "proveď něco"
           },
@@ -2166,7 +3147,23 @@
             "name": "můj návrh"
           }
         },
+        "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "my design": {
+            "name": "můj návrh"
+          }
+        },
         "courseE_artist_functions_challenge2": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "my design": {
+            "name": "můj návrh"
+          }
+        },
+        "courseE_artist_functions_challenge22022": {
           "do something": {
             "name": "proveď něco"
           },
@@ -2198,7 +3195,23 @@
             "name": "můj návrh"
           }
         },
+        "courseE_artist_functions_challenge2_2021": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "my design": {
+            "name": "můj návrh"
+          }
+        },
         "courseE_artist_functions_predict1": {
+          "draw a square": {
+            "name": "nakresli čtverec"
+          },
+          "draw ear stems": {
+            "name": "nakresli stranice"
+          }
+        },
+        "courseE_artist_functions_predict12022": {
           "draw a square": {
             "name": "nakresli čtverec"
           },
@@ -2230,6 +3243,14 @@
             "name": "nakresli stranice"
           }
         },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "nakresli čtverec"
+          },
+          "draw ear stems": {
+            "name": "nakresli stranice"
+          }
+        },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "nakresli čtverec"
@@ -2238,7 +3259,26 @@
             "name": "nakresli stranice"
           }
         },
+        "courseE_artist_functions_predict1_dani": {
+          "draw a square": {
+            "name": "nakresli čtverec"
+          },
+          "draw ear stems": {
+            "name": "nakresli stranice"
+          }
+        },
         "courseE_artist_functions_predict2": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "draw line of polygons": {
+            "name": "nakresli řadu mnohoúhelníků"
+          },
+          "draw polygon": {
+            "name": "nakresli mnohoúhelník"
+          }
+        },
+        "courseE_artist_functions_predict22022": {
           "do something": {
             "name": "proveď něco"
           },
@@ -2272,6 +3312,17 @@
           }
         },
         "courseE_artist_functions_predict2_2020": {
+          "do something": {
+            "name": "proveď něco"
+          },
+          "draw line of polygons": {
+            "name": "nakresli řadu mnohoúhelníků"
+          },
+          "draw polygon": {
+            "name": "nakresli mnohoúhelník"
+          }
+        },
+        "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "proveď něco"
           },
@@ -2348,6 +3399,502 @@
             "name": "proveď něco"
           }
         },
+        "courseE_farmer_functions10a12022": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          },
+          "pumpkin square": {
+            "name": "políčko s dýní"
+          }
+        },
+        "courseE_farmer_functions10a1_2018": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          },
+          "pumpkin square": {
+            "name": "políčko s dýní"
+          }
+        },
+        "courseE_farmer_functions10a1_2019": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          },
+          "pumpkin square": {
+            "name": "políčko s dýní"
+          }
+        },
+        "courseE_farmer_functions10a1_2020": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          },
+          "pumpkin square": {
+            "name": "políčko s dýní"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          },
+          "pumpkin square": {
+            "name": "políčko s dýní"
+          }
+        },
+        "courseE_farmer_functions11_predict2022": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "get produce": {
+            "name": "skliď úrodu"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          },
+          "pumpkin square": {
+            "name": "políčko s dýní"
+          }
+        },
+        "courseE_farmer_functions11_predict_2018": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "get produce": {
+            "name": "skliď úrodu"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          },
+          "pumpkin square": {
+            "name": "políčko s dýní"
+          }
+        },
+        "courseE_farmer_functions11_predict_2019": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "get produce": {
+            "name": "skliď úrodu"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          },
+          "pumpkin square": {
+            "name": "políčko s dýní"
+          }
+        },
+        "courseE_farmer_functions11_predict_2020": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "get produce": {
+            "name": "skliď úrodu"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          },
+          "pumpkin square": {
+            "name": "políčko s dýní"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "get produce": {
+            "name": "skliď úrodu"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          },
+          "pumpkin square": {
+            "name": "políčko s dýní"
+          }
+        },
+        "courseE_farmer_functions132022": {
+          "check for corn": {
+            "name": "zkontroluj, jestli je tady kukuřice"
+          },
+          "corn rectangle": {
+            "name": "obdélník z kukuřic"
+          },
+          "lettuce stairs": {
+            "name": "schodišťově nasetý salát"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          }
+        },
+        "courseE_farmer_functions13_2018": {
+          "check for corn": {
+            "name": "zkontroluj, jestli je tady kukuřice"
+          },
+          "corn rectangle": {
+            "name": "obdélník z kukuřic"
+          },
+          "lettuce stairs": {
+            "name": "schodišťově nasetý salát"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          }
+        },
+        "courseE_farmer_functions13_2019": {
+          "check for corn": {
+            "name": "zkontroluj, jestli je tady kukuřice"
+          },
+          "corn rectangle": {
+            "name": "obdélník z kukuřic"
+          },
+          "lettuce stairs": {
+            "name": "schodišťově nasetý salát"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          }
+        },
+        "courseE_farmer_functions13_2020": {
+          "check for corn": {
+            "name": "zkontroluj, jestli je tady kukuřice"
+          },
+          "corn rectangle": {
+            "name": "obdélník z kukuřic"
+          },
+          "lettuce stairs": {
+            "name": "schodišťově nasetý salát"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "check for corn": {
+            "name": "zkontroluj, jestli je tady kukuřice"
+          },
+          "corn rectangle": {
+            "name": "obdélník z kukuřic"
+          },
+          "lettuce stairs": {
+            "name": "schodišťově nasetý salát"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          }
+        },
+        "courseE_farmer_functions1a2022": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          }
+        },
+        "courseE_farmer_functions1a_2018": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          }
+        },
+        "courseE_farmer_functions1a_2019": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          }
+        },
+        "courseE_farmer_functions1a_2020": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "zkontrolovat, jestli je na políčku kukuřice"
+          }
+        },
+        "courseE_farmer_functions2b2022": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          }
+        },
+        "courseE_farmer_functions2b_2018": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          }
+        },
+        "courseE_farmer_functions2b_2019": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          }
+        },
+        "courseE_farmer_functions2b_2020": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          }
+        },
+        "courseE_farmer_functions2ba2022": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          }
+        },
+        "courseE_farmer_functions2ba_2018": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          }
+        },
+        "courseE_farmer_functions2ba_2019": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          }
+        },
+        "courseE_farmer_functions2ba_2020": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          }
+        },
+        "courseE_farmer_functions3c12022": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          }
+        },
+        "courseE_farmer_functions3c1_2018": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          }
+        },
+        "courseE_farmer_functions3c1_2019": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          }
+        },
+        "courseE_farmer_functions3c1_2020": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          },
+          "pick along path": {
+            "name": "sbírej při cestě"
+          }
+        },
+        "courseE_farmer_functions3c2022": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          }
+        },
+        "courseE_farmer_functions3c_2018": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          }
+        },
+        "courseE_farmer_functions3c_2019": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          }
+        },
+        "courseE_farmer_functions3c_2020": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "zkontroluj, jestli je na políčku kukuřice"
+          },
+          "get all pumpkins": {
+            "name": "skliď všechny dýně"
+          }
+        },
+        "courseE_farmer_functions7a12022": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_farmer_functions7a1_2018": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_farmer_functions7a1_2019": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_farmer_functions7a1_2020": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_farmer_functions8a12022": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_farmer_functions8a1_2018": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_farmer_functions8a1_2019": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_farmer_functions8a1_2020": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_farmer_functions9a12022": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_farmer_functions9a1_2018": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_farmer_functions9a1_2019": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_farmer_functions9a1_2020": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "čtvercový záhon"
+          }
+        },
+        "courseE_playLab_challenge1": {
+          "keep playing": {
+            "name": "hraj dál"
+          },
+          "lose game": {
+            "name": "prohra"
+          },
+          "win game": {
+            "name": "vítězství"
+          }
+        },
         "courseE_playLab_scaffold1": {
           "do something": {
             "name": "proveď něco"
@@ -2368,19 +3915,22 @@
             "name": "proveď něco"
           }
         },
+        "courseF_apps_collector": {
+          "end game": {
+            "name": "konec hry"
+          }
+        },
+        "courseF_apps_collector2022": {
+          "end game": {
+            "name": "konec hry"
+          }
+        },
+        "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "konec hry"
+          }
+        },
         "courseF_artist_fwp1": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          },
-          "checker": {
-            "parameters": {
-              "size": "velikost",
-              "color": "barva"
-            }
-          },
-          "do something": {
-            "name": "proveď něco"
-          },
           "Make gingham": {
             "parameters": {
               "size": "velikost"
@@ -2390,30 +3940,42 @@
             "parameters": {
               "length": "délka"
             }
+          },
+          "checker": {
+            "parameters": {
+              "color": "barva",
+              "size": "velikost"
+            }
+          },
+          "do something": {
+            "name": "proveď něco"
+          },
+          "draw a square": {
+            "name": "nakresli čtverec"
           }
         },
         "courseF_artist_fwp2": {
-          "draw a square": {
-            "name": "nakresli čtverec",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "checker": {
-            "parameters": {
-              "size": "velikost",
-              "color": "barva"
-            }
-          },
-          "do something": {
-            "name": "proveď něco"
-          },
           "Make gingham": {
             "parameters": {
               "size": "velikost"
             }
           },
           "black outline": {
+            "parameters": {
+              "length": "délka"
+            }
+          },
+          "checker": {
+            "parameters": {
+              "color": "barva",
+              "size": "velikost"
+            }
+          },
+          "do something": {
+            "name": "proveď něco"
+          },
+          "draw a square": {
+            "name": "nakresli čtverec",
             "parameters": {
               "length": "délka"
             }
@@ -2428,6 +3990,11 @@
           }
         },
         "courseF_artist_fwp3": {
+          "black outline": {
+            "parameters": {
+              "length": "délka"
+            }
+          },
           "draw a square": {
             "name": "nakresli čtverec",
             "parameters": {
@@ -2441,13 +4008,8 @@
           },
           "filled square": {
             "parameters": {
-              "size": "velikost",
-              "color": "barva"
-            }
-          },
-          "black outline": {
-            "parameters": {
-              "length": "délka"
+              "color": "barva",
+              "size": "velikost"
             }
           }
         },
@@ -2496,33 +4058,25 @@
           }
         },
         "courseF_artist_fwp9": {
-          "draw a star": {
-            "name": "nakresli hvězdu",
-            "parameters": {
-              "points": "body",
-              "length": "délka"
-            },
-            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou"
-          },
           "draw a circle": {
-            "name": "nakresli kružnici",
             "description": "nakresli kruh s daným poloměrem",
+            "name": "nakresli kružnici",
             "parameters": {
               "radius": "poloměr"
             }
           },
+          "draw a house": {
+            "name": "nakresli dům",
+            "parameters": {
+              "length": "délka"
+            }
+          },
           "draw a pinwheel": {
+            "name": "nakresli větrník",
             "parameters": {
               "length": "délka",
               "repeat": "opakuj",
               "sides": "strany"
-            },
-            "name": "nakresli větrník"
-          },
-          "draw a triangle": {
-            "name": "nakresli trojúhelník",
-            "parameters": {
-              "length": "délka"
             }
           },
           "draw a shape": {
@@ -2532,10 +4086,11 @@
               "sides": "strany"
             }
           },
-          "draw a house": {
-            "name": "nakresli dům",
+          "draw a spiral edge": {
             "parameters": {
-              "length": "délka"
+              "length": "délka",
+              "min": "min",
+              "sides": "strany"
             }
           },
           "draw a square": {
@@ -2544,19 +4099,24 @@
               "length": "délka"
             }
           },
-          "draw a spiral edge": {
+          "draw a star": {
+            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou",
+            "name": "nakresli hvězdu",
             "parameters": {
               "length": "délka",
-              "min": "min",
-              "sides": "strany"
+              "points": "body"
+            }
+          },
+          "draw a triangle": {
+            "name": "nakresli trojúhelník",
+            "parameters": {
+              "length": "délka"
             }
           }
         },
         "courseF_artist_fwp_challenge1": {
-          "draw background": {
-            "parameters": {
-              "color": "barva"
-            }
+          "do something": {
+            "name": "proveď něco"
           },
           "draw a polygon": {
             "name": "nakresli mnohoúhelník",
@@ -2567,22 +4127,62 @@
           "draw a square 20": {
             "name": "nakresli čtvrtec 20"
           },
-          "do something": {
-            "name": "proveď něco"
+          "draw background": {
+            "parameters": {
+              "color": "barva"
+            }
           }
         },
         "courseF_artist_fwp_challenge2": {
-          "draw a square 20": {
-            "name": "nakresli čtvrtec 20"
-          },
           "do something": {
             "name": "proveď něco"
+          },
+          "draw a square 20": {
+            "name": "nakresli čtvrtec 20"
           },
           "draw an octagon": {
             "name": "nekresli osmiúhelník",
             "parameters": {
               "length": "délka"
             }
+          }
+        },
+        "courseF_bee_conditionals2": {
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
+          },
+          "move and check": {
+            "name": "posuň se a zkontroluj"
+          }
+        },
+        "courseF_bee_for_challenge1": {
+          "move and get nectar with counter": {
+            "name": "posuň se a seber nektar pomocí čítače"
+          }
+        },
+        "courseF_bee_for_challenge12022": {
+          "move and get nectar with counter": {
+            "name": "posuň se a seber nektar pomocí čítače"
+          }
+        },
+        "courseF_bee_for_challenge1_2018": {
+          "move and get nectar with counter": {
+            "name": "posuň se a seber nektar pomocí čítače"
+          }
+        },
+        "courseF_bee_for_challenge1_2019": {
+          "move and get nectar with counter": {
+            "name": "posuň se a seber nektar pomocí čítače"
+          }
+        },
+        "courseF_bee_for_challenge1_2020": {
+          "move and get nectar with counter": {
+            "name": "posuň se a seber nektar pomocí čítače"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "posuň se a seber nektar pomocí čítače"
           }
         },
         "courseF_bee_functions2": {
@@ -2593,6 +4193,27 @@
         "courseF_bee_functions3": {
           "only make honey": {
             "name": "vyrob pouze med"
+          }
+        },
+        "courseF_bee_functions3a": {
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
+          }
+        },
+        "courseF_bee_functions4": {
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
+          },
+          "move and check": {
+            "name": "posuň se a zkontroluj"
+          }
+        },
+        "courseF_bee_functions5a": {
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
+          },
+          "move and check": {
+            "name": "posuň se a zkontroluj"
           }
         },
         "courseF_bee_functions6": {
@@ -2619,25 +4240,25 @@
           }
         },
         "courseF_bee_functions_challenge1": {
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
+          },
           "row of nectar": {
             "name": "řada nektaru"
           },
           "rowOfNectar": {
             "name": "řada nektaru"
-          },
-          "check nectar or honey": {
-            "name": "zkontroluj nektar nebo med"
           }
         },
         "courseF_bee_functions_challenge2": {
-          "rowOfNectar": {
-            "name": "řada nektaru"
+          "check nectar or honey": {
+            "name": "zkontroluj nektar nebo med"
           },
           "move and check": {
             "name": "posuň se a zkontroluj"
           },
-          "check nectar or honey": {
-            "name": "zkontroluj nektar nebo med"
+          "rowOfNectar": {
+            "name": "řada nektaru"
           }
         },
         "courseF_bee_fwp2": {
@@ -2855,1627 +4476,6 @@
         "grade5_artist_binary9": {
           "draw": {
             "name": "kresli"
-          }
-        },
-        "course1_artist_loops_challenge1": {
-          "\"simple\" solution": {
-            "name": "Vzorové řešení"
-          }
-        },
-        "course1_artist_loops_challenge2": {
-          "potential solution": {
-            "name": "potenciální řešení"
-          }
-        },
-        "courseA_artist_loops_challenge1": {
-          "\"simple\" solution": {
-            "name": "Vzorové řešení"
-          }
-        },
-        "courseB_artist_loops_challenge2": {
-          "potential solution": {
-            "name": "potenciální řešení"
-          }
-        },
-        "courseB_artist_loops_challenge2_2018": {
-          "potential solution": {
-            "name": "potenciální řešení"
-          }
-        },
-        "courseB_artist_loops_challenge2_2019": {
-          "potential solution": {
-            "name": "potenciální řešení"
-          }
-        },
-        "courseB_artist_loops_challenge2_2020": {
-          "potential solution": {
-            "name": "potenciální řešení"
-          }
-        },
-        "course3_playLab_challenge1": {
-          "win game": {
-            "name": "vítězství"
-          },
-          "lose game": {
-            "name": "prohra"
-          },
-          "keep playing": {
-            "name": "hraj dál"
-          }
-        },
-        "courseE_playLab_challenge1": {
-          "win game": {
-            "name": "vítězství"
-          },
-          "lose game": {
-            "name": "prohra"
-          },
-          "keep playing": {
-            "name": "hraj dál"
-          }
-        },
-        "courseF_bee_conditionals2": {
-          "move and check": {
-            "name": "posuň se a zkontroluj"
-          },
-          "check nectar or honey": {
-            "name": "zkontroluj nektar nebo med"
-          }
-        },
-        "courseF_bee_functions3a": {
-          "check nectar or honey": {
-            "name": "zkontroluj nektar nebo med"
-          }
-        },
-        "courseF_bee_functions4": {
-          "move and check": {
-            "name": "posuň se a zkontroluj"
-          },
-          "check nectar or honey": {
-            "name": "zkontroluj nektar nebo med"
-          }
-        },
-        "courseF_bee_functions5a": {
-          "move and check": {
-            "name": "posuň se a zkontroluj"
-          },
-          "check nectar or honey": {
-            "name": "zkontroluj nektar nebo med"
-          }
-        },
-        "MC_HOC_2017_10_RETRY": {
-          "fix long path": {
-            "name": "oprav dlouhou cestu"
-          },
-          "fix short path": {
-            "name": "oprav krátkou cestu"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2019": {
-          "fix long path": {
-            "name": "oprav dlouhou cestu"
-          },
-          "fix short path": {
-            "name": "oprav krátkou cestu"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2020": {
-          "fix long path": {
-            "name": "oprav dlouhou cestu"
-          },
-          "fix short path": {
-            "name": "oprav krátkou cestu"
-          }
-        },
-        "MC_HOC_2017_Ali": {
-          "build short bridge": {
-            "name": "postav krátký most"
-          },
-          "build long bridge": {
-            "name": "postav dlouhý most"
-          }
-        },
-        "MC_HOC_2017_Ali_2019": {
-          "build short bridge": {
-            "name": "postav krátký most"
-          },
-          "build long bridge": {
-            "name": "postav dlouhý most"
-          }
-        },
-        "MC_HOC_2017_Ali_2020": {
-          "build short bridge": {
-            "name": "postav krátký most"
-          },
-          "build long bridge": {
-            "name": "postav dlouhý most"
-          }
-        },
-        "CourseD_EOC_artist": {
-          "draw a star": {
-            "name": "nakresli hvězdu",
-            "parameters": {
-              "points": "body",
-              "length": "délka"
-            },
-            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou"
-          },
-          "draw a circle": {
-            "name": "nakresli kružnici",
-            "description": "nakresli kruh s daným poloměrem",
-            "parameters": {
-              "radius": "poloměr"
-            }
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "délka",
-              "repeat": "opakuj",
-              "sides": "strany"
-            },
-            "name": "nakresli větrník"
-          },
-          "draw a triangle": {
-            "name": "nakresli trojúhelník",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a shape": {
-            "name": "nakresli tvar",
-            "parameters": {
-              "length": "délka",
-              "sides": "strany"
-            }
-          },
-          "draw a house": {
-            "name": "nakresli dům",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a square": {
-            "name": "nakresli čtverec",
-            "parameters": {
-              "length": "délka"
-            }
-          }
-        },
-        "Course F: Artist Project_Flowers_examples_2021": {
-          "draw a star": {
-            "name": "nakresli hvězdu",
-            "parameters": {
-              "points": "body",
-              "length": "délka"
-            },
-            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou"
-          },
-          "draw a circle": {
-            "name": "nakresli kružnici",
-            "description": "nakresli kruh s daným poloměrem",
-            "parameters": {
-              "radius": "poloměr"
-            }
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "délka",
-              "repeat": "opakuj",
-              "sides": "strany"
-            },
-            "name": "nakresli větrník"
-          },
-          "draw a triangle": {
-            "name": "nakresli trojúhelník",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a shape": {
-            "name": "nakresli tvar",
-            "parameters": {
-              "length": "délka",
-              "sides": "strany"
-            }
-          },
-          "draw a house": {
-            "name": "nakresli dům",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a square": {
-            "name": "nakresli čtverec",
-            "parameters": {
-              "length": "délka"
-            }
-          }
-        },
-        "courseB_artist_loops_challenge2_2021": {
-          "potential solution": {
-            "name": "potenciální řešení"
-          }
-        },
-        "courseC_artist_prog3_2021": {
-          "draw flame": {
-            "parameters": {
-              "x": "x"
-            },
-            "name": "nakresli plamen"
-          },
-          "draw fire": {
-            "name": "nakresli oheň"
-          }
-        },
-        "courseC_data wizard_2021": {
-          "do something": {
-            "name": "proveď něco"
-          }
-        },
-        "courseE_artist_functions2_dani": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          },
-          "draw ear stems": {
-            "name": "nakresli stranice"
-          }
-        },
-        "courseE_artist_functions4_dani": {
-          "draw a star": {
-            "name": "nakresli hvězdu"
-          }
-        },
-        "courseE_artist_functions5_dani": {
-          "draw a star": {
-            "name": "nakresli hvězdu"
-          }
-        },
-        "courseE_artist_functions_predict1_dani": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          },
-          "draw ear stems": {
-            "name": "nakresli stranice"
-          }
-        },
-        "courseF_apps_collector": {
-          "end game": {
-            "name": "konec hry"
-          }
-        },
-        "Course E: Artist Project_examples_2021": {
-          "my function": {
-            "name": "moje funkce"
-          }
-        },
-        "Course E: Frozen Project_examples_2021": {
-          "small flower": {
-            "name": "malá květina"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "KVĚTY LOGIKY 2"
-          },
-          "LOGIC FLOWER": {
-            "name": "KVĚT LOGIKY"
-          },
-          "LOGIC FLOWERS": {
-            "name": "KVĚTY LOGIKY"
-          },
-          "draw a star": {
-            "name": "nakresli hvězdu",
-            "parameters": {
-              "points": "body",
-              "length": "délka"
-            },
-            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou"
-          },
-          "draw a circle": {
-            "name": "nakresli kružnici",
-            "description": "nakresli kruh s daným poloměrem",
-            "parameters": {
-              "radius": "poloměr"
-            }
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "délka",
-              "repeat": "opakuj",
-              "sides": "strany"
-            },
-            "name": "nakresli větrník"
-          },
-          "draw a triangle": {
-            "name": "nakresli trojúhelník",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a shape": {
-            "name": "nakresli tvar",
-            "parameters": {
-              "length": "délka",
-              "sides": "strany"
-            }
-          },
-          "draw a house": {
-            "name": "nakresli dům",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a square": {
-            "name": "nakresli čtverec",
-            "parameters": {
-              "length": "délka",
-              "sides": "strany"
-            }
-          }
-        },
-        "CourseD_EOC_artist_2021": {
-          "draw a star": {
-            "name": "nakresli hvězdu",
-            "parameters": {
-              "points": "body",
-              "length": "délka"
-            },
-            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou"
-          },
-          "draw a circle": {
-            "name": "nakresli kružnici",
-            "description": "nakresli kruh s daným poloměrem",
-            "parameters": {
-              "radius": "poloměr"
-            }
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "délka",
-              "repeat": "opakuj",
-              "sides": "strany"
-            },
-            "name": "nakresli větrník"
-          },
-          "draw a triangle": {
-            "name": "nakresli trojúhelník",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a shape": {
-            "name": "nakresli tvar",
-            "parameters": {
-              "length": "délka",
-              "sides": "strany"
-            }
-          },
-          "draw a house": {
-            "name": "nakresli dům",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a square": {
-            "name": "nakresli čtverec",
-            "parameters": {
-              "length": "délka"
-            }
-          }
-        },
-        "CourseD_EOC_artist_example2021": {
-          "draw a star": {
-            "name": "nakresli hvězdu",
-            "parameters": {
-              "points": "body",
-              "length": "délka"
-            },
-            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou"
-          },
-          "draw a circle": {
-            "name": "nakresli kružnici",
-            "description": "nakresli kruh s daným poloměrem",
-            "parameters": {
-              "radius": "poloměr"
-            }
-          },
-          "draw a pinwheel": {
-            "parameters": {
-              "length": "délka",
-              "repeat": "opakuj",
-              "sides": "strany"
-            },
-            "name": "nakresli větrník"
-          },
-          "draw a triangle": {
-            "name": "nakresli trojúhelník",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a shape": {
-            "name": "nakresli tvar",
-            "parameters": {
-              "length": "délka",
-              "sides": "strany"
-            }
-          },
-          "draw a house": {
-            "name": "nakresli dům",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a square": {
-            "name": "nakresli čtverec",
-            "parameters": {
-              "length": "délka"
-            }
-          }
-        },
-        "CourseF_app_computer": {
-          "reset game": {
-            "name": "resetovat hru"
-          }
-        },
-        "Function intro Ryan_2021": {
-          "build bridge": {
-            "name": "postav most"
-          }
-        },
-        "MC_HOC_2017_07_Cole_2021": {
-          "clear path": {
-            "name": "vyčisti cestu"
-          }
-        },
-        "MC_HOC_2017_10_RETRY_2021": {
-          "fix long path": {
-            "name": "oprav dlouhou cestu"
-          },
-          "fix short path": {
-            "name": "oprav krátkou cestu"
-          }
-        },
-        "MC_HOC_2017_Ali_2021": {
-          "build short bridge": {
-            "name": "postav krátký most"
-          },
-          "build long bridge": {
-            "name": "postav dlouhý most"
-          }
-        },
-        "MC_HOC_2017_FP20x20_2021": {
-          "function 1": {
-            "name": "funkce 1"
-          },
-          "function 2": {
-            "name": "funkce 2"
-          }
-        },
-        "courseE_artist_functions10_2021": {
-          "do something": {
-            "name": "proveď něco"
-          },
-          "draw hexagon": {
-            "name": "nakresli šestiúhelník"
-          },
-          "draw line of hexagons": {
-            "name": "nakresli řadu šestiúhelníků"
-          }
-        },
-        "courseE_artist_functions2_2021": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          },
-          "draw ear stems": {
-            "name": "nakresli stranice"
-          }
-        },
-        "courseE_artist_functions3_2021": {
-          "draw a star": {
-            "name": "nakresli hvězdu"
-          }
-        },
-        "courseE_artist_functions5_2021": {
-          "draw a star": {
-            "name": "nakresli hvězdu"
-          }
-        },
-        "courseE_artist_functions8_2021": {
-          "do something": {
-            "name": "proveď něco"
-          },
-          "draw square": {
-            "name": "nakreslit čtverec"
-          },
-          "staggered squares": {
-            "name": "čtverce na přeskáčku"
-          },
-          "draw a line of squares": {
-            "name": "nakresli řadu čtverců"
-          }
-        },
-        "courseE_artist_functions8a_2021": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          },
-          "do something": {
-            "name": "proveď něco"
-          }
-        },
-        "courseE_artist_functions8b_2021": {
-          "draw square": {
-            "name": "nakreslit čtverec"
-          },
-          "do something": {
-            "name": "proveď něco"
-          },
-          "draw a line of squares": {
-            "name": "nakresli řadu čtverců"
-          }
-        },
-        "courseE_artist_functions8c_2021": {
-          "draw square": {
-            "name": "nakreslit čtverec"
-          },
-          "do something": {
-            "name": "proveď něco"
-          },
-          "draw a line of squares": {
-            "name": "nakresli řadu čtverců"
-          },
-          "staggered squares": {
-            "name": "čtverce na přeskáčku"
-          }
-        },
-        "courseE_artist_functions9_2021": {
-          "do something": {
-            "name": "proveď něco"
-          },
-          "draw triangle": {
-            "name": "nakresli trojúhelník"
-          },
-          "draw line of triangles": {
-            "name": "nakresli řadu trojúhelníků"
-          }
-        },
-        "courseE_artist_functionsProj_2021": {
-          "draw square": {
-            "name": "nakreslit čtverec"
-          },
-          "draw hexagon": {
-            "name": "nakresli šestiúhelník"
-          },
-          "draw line of hexagons": {
-            "name": "nakresli řadu šestiúhelníků"
-          },
-          "staggered squares": {
-            "name": "čtverce na přeskáčku"
-          },
-          "draw a line of squares": {
-            "name": "nakresli řadu čtverců"
-          }
-        },
-        "courseE_artist_functions_challenge1_2021": {
-          "do something": {
-            "name": "proveď něco"
-          },
-          "my design": {
-            "name": "můj návrh"
-          }
-        },
-        "courseE_artist_functions_challenge2_2021": {
-          "do something": {
-            "name": "proveď něco"
-          },
-          "my design": {
-            "name": "můj návrh"
-          }
-        },
-        "courseE_artist_functions_predict1_2021": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          },
-          "draw ear stems": {
-            "name": "nakresli stranice"
-          }
-        },
-        "courseE_artist_functions_predict2_2021": {
-          "do something": {
-            "name": "proveď něco"
-          },
-          "draw line of polygons": {
-            "name": "nakresli řadu mnohoúhelníků"
-          },
-          "draw polygon": {
-            "name": "nakresli mnohoúhelník"
-          }
-        },
-        "courseC_artist_prog4_2021": {
-          "booster": {
-            "name": "posilovač"
-          }
-        },
-        "courseE_artist_functions7_2021": {
-          "draw a window": {
-            "name": "nakresli okno"
-          }
-        },
-        "courseE_farmer_functions10a1_2021": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          },
-          "pumpkin square": {
-            "name": "políčko s dýní"
-          }
-        },
-        "courseE_farmer_functions11_predict_2021": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "pumpkin square": {
-            "name": "políčko s dýní"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get produce": {
-            "name": "skliď úrodu"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions13_2021": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check for corn": {
-            "name": "zkontroluj, jestli je tady kukuřice"
-          },
-          "corn rectangle": {
-            "name": "obdélník z kukuřic"
-          },
-          "lettuce stairs": {
-            "name": "schodišťově nasetý salát"
-          }
-        },
-        "courseE_farmer_functions1a_2021": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          }
-        },
-        "courseE_farmer_functions2b_2021": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          }
-        },
-        "courseE_farmer_functions2ba_2021": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions3c1_2021": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions3c_2021": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions7a1_2021": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseE_farmer_functions8a1_2021": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseE_farmer_functions9a1_2021": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseF_bee_for_challenge1_2021": {
-          "move and get nectar with counter": {
-            "name": "posuň se a seber nektar pomocí čítače"
-          }
-        },
-        "2-3 Artist Functions 1": {
-          "draw ear stems": {
-            "name": "nakresli stranice"
-          }
-        },
-        "course4_bee_for_challenge1": {
-          "move and get nectar with counter": {
-            "name": "posuň se a seber nektar pomocí čítače"
-          }
-        },
-        "courseC_artist_prog4": {
-          "booster": {
-            "name": "posilovač"
-          }
-        },
-        "courseC_artist_prog4_2018": {
-          "booster": {
-            "name": "posilovač"
-          }
-        },
-        "courseC_artist_prog4_2019": {
-          "booster": {
-            "name": "posilovač"
-          }
-        },
-        "courseC_artist_prog4_2020": {
-          "booster": {
-            "name": "posilovač"
-          }
-        },
-        "courseE_artist_functions1": {
-          "draw ear stems": {
-            "name": "nakresli stranice"
-          }
-        },
-        "courseE_artist_functions1_copy": {
-          "draw ear stems": {
-            "name": "nakresli stranice"
-          }
-        },
-        "courseE_artist_functions1_dani": {
-          "draw ear stems": {
-            "name": "nakresli stranice"
-          }
-        },
-        "courseE_artist_functions7_2019": {
-          "draw a window": {
-            "name": "nakresli okno"
-          }
-        },
-        "courseE_farmer_functions10a1_2018": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          },
-          "pumpkin square": {
-            "name": "políčko s dýní"
-          }
-        },
-        "courseE_farmer_functions10a1_2019": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          },
-          "pumpkin square": {
-            "name": "políčko s dýní"
-          }
-        },
-        "courseE_farmer_functions10a1_2020": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          },
-          "pumpkin square": {
-            "name": "políčko s dýní"
-          }
-        },
-        "courseE_farmer_functions11_predict_2018": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "pumpkin square": {
-            "name": "políčko s dýní"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get produce": {
-            "name": "skliď úrodu"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions11_predict_2019": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "pumpkin square": {
-            "name": "políčko s dýní"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get produce": {
-            "name": "skliď úrodu"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions11_predict_2020": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "pumpkin square": {
-            "name": "políčko s dýní"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get produce": {
-            "name": "skliď úrodu"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions13_2018": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check for corn": {
-            "name": "zkontroluj, jestli je tady kukuřice"
-          },
-          "corn rectangle": {
-            "name": "obdélník z kukuřic"
-          },
-          "lettuce stairs": {
-            "name": "schodišťově nasetý salát"
-          }
-        },
-        "courseE_farmer_functions13_2019": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check for corn": {
-            "name": "zkontroluj, jestli je tady kukuřice"
-          },
-          "corn rectangle": {
-            "name": "obdélník z kukuřic"
-          },
-          "lettuce stairs": {
-            "name": "schodišťově nasetý salát"
-          }
-        },
-        "courseE_farmer_functions13_2020": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check for corn": {
-            "name": "zkontroluj, jestli je tady kukuřice"
-          },
-          "corn rectangle": {
-            "name": "obdélník z kukuřic"
-          },
-          "lettuce stairs": {
-            "name": "schodišťově nasetý salát"
-          }
-        },
-        "courseE_farmer_functions1a_2018": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          }
-        },
-        "courseE_farmer_functions1a_2019": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          }
-        },
-        "courseE_farmer_functions1a_2020": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          }
-        },
-        "courseE_farmer_functions2b_2018": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          }
-        },
-        "courseE_farmer_functions2b_2019": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          }
-        },
-        "courseE_farmer_functions2b_2020": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          }
-        },
-        "courseE_farmer_functions2ba_2018": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions2ba_2019": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions2ba_2020": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions3c1_2018": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions3c1_2019": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions3c1_2020": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions3c_2018": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions3c_2019": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions3c_2020": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions7a1_2018": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseE_farmer_functions7a1_2019": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseE_farmer_functions7a1_2020": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseE_farmer_functions8a1_2018": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseE_farmer_functions8a1_2019": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseE_farmer_functions8a1_2020": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseE_farmer_functions9a1_2018": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseE_farmer_functions9a1_2019": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseE_farmer_functions9a1_2020": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseF_bee_for_challenge1": {
-          "move and get nectar with counter": {
-            "name": "posuň se a seber nektar pomocí čítače"
-          }
-        },
-        "courseF_bee_for_challenge1_2018": {
-          "move and get nectar with counter": {
-            "name": "posuň se a seber nektar pomocí čítače"
-          }
-        },
-        "courseF_bee_for_challenge1_2019": {
-          "move and get nectar with counter": {
-            "name": "posuň se a seber nektar pomocí čítače"
-          }
-        },
-        "courseF_bee_for_challenge1_2020": {
-          "move and get nectar with counter": {
-            "name": "posuň se a seber nektar pomocí čítače"
-          }
-        },
-        "Artist Autorun Test": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          }
-        },
-        "Auto Open Function Editor": {
-          "draw a shape": {
-            "name": "nakresli tvar",
-            "parameters": {
-              "sides": "strany",
-              "length": "délka"
-            }
-          }
-        },
-        "MC Agent Freeplay": {
-          "function 1": {
-            "name": "funkce 1"
-          },
-          "function 2": {
-            "name": "funkce 2"
-          }
-        },
-        "Course E: Artist Project_examples2022": {
-          "my function": {
-            "name": "moje funkce"
-          }
-        },
-        "Course E: Frozen Project_examples2022": {
-          "small flower": {
-            "name": "malá květina"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "KVĚTY LOGIKY 2"
-          },
-          "LOGIC FLOWER": {
-            "name": "KVĚT LOGIKY"
-          },
-          "LOGIC FLOWERS": {
-            "name": "KVĚTY LOGIKY"
-          },
-          "draw a star": {
-            "name": "nakresli hvězdu",
-            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou",
-            "parameters": {
-              "points": "body",
-              "length": "délka"
-            }
-          },
-          "draw a circle": {
-            "name": "nakresli kružnici",
-            "description": "nakresli kruh s daným poloměrem",
-            "parameters": {
-              "radius": "poloměr"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "nakresli větrník",
-            "parameters": {
-              "sides": "strany",
-              "length": "délka",
-              "repeat": "opakuj"
-            }
-          },
-          "draw a triangle": {
-            "name": "nakresli trojúhelník",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a shape": {
-            "name": "nakresli tvar",
-            "parameters": {
-              "sides": "strany",
-              "length": "délka"
-            }
-          },
-          "draw a house": {
-            "name": "nakresli dům",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a square": {
-            "name": "nakresli čtverec",
-            "parameters": {
-              "length": "délka",
-              "sides": "strany"
-            }
-          }
-        },
-        "CourseD_EOC_artist2022": {
-          "draw a star": {
-            "name": "nakresli hvězdu",
-            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou",
-            "parameters": {
-              "points": "body",
-              "length": "délka"
-            }
-          },
-          "draw a circle": {
-            "name": "nakresli kružnici",
-            "description": "nakresli kruh s daným poloměrem",
-            "parameters": {
-              "radius": "poloměr"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "nakresli větrník",
-            "parameters": {
-              "sides": "strany",
-              "length": "délka",
-              "repeat": "opakuj"
-            }
-          },
-          "draw a triangle": {
-            "name": "nakresli trojúhelník",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a shape": {
-            "name": "nakresli tvar",
-            "parameters": {
-              "sides": "strany",
-              "length": "délka"
-            }
-          },
-          "draw a house": {
-            "name": "nakresli dům",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a square": {
-            "name": "nakresli čtverec",
-            "parameters": {
-              "length": "délka"
-            }
-          }
-        },
-        "CourseD_EOC_artist_example20212022": {
-          "draw a star": {
-            "name": "nakresli hvězdu",
-            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou",
-            "parameters": {
-              "points": "body",
-              "length": "délka"
-            }
-          },
-          "draw a circle": {
-            "name": "nakresli kružnici",
-            "description": "nakresli kruh s daným poloměrem",
-            "parameters": {
-              "radius": "poloměr"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "nakresli větrník",
-            "parameters": {
-              "sides": "strany",
-              "length": "délka",
-              "repeat": "opakuj"
-            }
-          },
-          "draw a triangle": {
-            "name": "nakresli trojúhelník",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a shape": {
-            "name": "nakresli tvar",
-            "parameters": {
-              "sides": "strany",
-              "length": "délka"
-            }
-          },
-          "draw a house": {
-            "name": "nakresli dům",
-            "parameters": {
-              "length": "délka"
-            }
-          },
-          "draw a square": {
-            "name": "nakresli čtverec",
-            "parameters": {
-              "length": "délka"
-            }
-          }
-        },
-        "CourseF_app_computer2022": {
-          "reset game": {
-            "name": "resetovat hru"
-          }
-        },
-        "CourseF_app_computer_-2022-2": {
-          "reset game": {
-            "name": "resetovat hru"
-          }
-        },
-        "Function intro Ryan2022": {
-          "build bridge": {
-            "name": "postav most"
-          }
-        },
-        "MC_HOC_2017_07_Cole2022": {
-          "clear path": {
-            "name": "vyčisti cestu"
-          }
-        },
-        "MC_HOC_2017_10_RETRY2022": {
-          "fix long path": {
-            "name": "oprav dlouhou cestu"
-          },
-          "fix short path": {
-            "name": "oprav krátkou cestu"
-          }
-        },
-        "MC_HOC_2017_Ali2022": {
-          "build short bridge": {
-            "name": "postav krátký most"
-          },
-          "build long bridge": {
-            "name": "postav dlouhý most"
-          }
-        },
-        "MC_HOC_2017_FP20x202022": {
-          "function 1": {
-            "name": "funkce 1"
-          },
-          "function 2": {
-            "name": "funkce 2"
-          }
-        },
-        "courseB_artist_loops_challenge22022": {
-          "potential solution": {
-            "name": "potenciální řešení"
-          }
-        },
-        "courseC_artist_prog32022": {
-          "draw flame": {
-            "name": "nakresli plamen",
-            "parameters": {
-              "x": "x"
-            }
-          },
-          "draw fire": {
-            "name": "nakresli oheň"
-          }
-        },
-        "courseC_artist_prog42022": {
-          "booster": {
-            "name": "posilovač"
-          }
-        },
-        "courseC_data wizard2022": {
-          "do something": {
-            "name": "proveď něco"
-          }
-        },
-        "courseE_artist_functions102022": {
-          "do something": {
-            "name": "proveď něco"
-          },
-          "draw hexagon": {
-            "name": "nakresli šestiúhelník"
-          },
-          "draw line of hexagons": {
-            "name": "nakresli řadu šestiúhelníků"
-          }
-        },
-        "courseE_artist_functions22022": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          },
-          "draw ear stems": {
-            "name": "nakresli stranice"
-          }
-        },
-        "courseE_artist_functions32022": {
-          "draw a star": {
-            "name": "nakresli hvězdu"
-          }
-        },
-        "courseE_artist_functions52022": {
-          "draw a star": {
-            "name": "nakresli hvězdu"
-          }
-        },
-        "courseE_artist_functions72022": {
-          "draw a window": {
-            "name": "nakresli okno"
-          }
-        },
-        "courseE_artist_functions82022": {
-          "do something": {
-            "name": "proveď něco"
-          },
-          "staggered squares": {
-            "name": "čtverce na přeskáčku"
-          },
-          "draw a line of squares": {
-            "name": "nakresli řadu čtverců"
-          },
-          "draw square": {
-            "name": "nakreslit čtverec"
-          }
-        },
-        "courseE_artist_functions8a2022": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          },
-          "do something": {
-            "name": "proveď něco"
-          }
-        },
-        "courseE_artist_functions8b2022": {
-          "draw a line of squares": {
-            "name": "nakresli řadu čtverců"
-          },
-          "draw square": {
-            "name": "nakreslit čtverec"
-          },
-          "do something": {
-            "name": "proveď něco"
-          }
-        },
-        "courseE_artist_functions8c2022": {
-          "draw a line of squares": {
-            "name": "nakresli řadu čtverců"
-          },
-          "draw square": {
-            "name": "nakreslit čtverec"
-          },
-          "do something": {
-            "name": "proveď něco"
-          },
-          "staggered squares": {
-            "name": "čtverce na přeskáčku"
-          }
-        },
-        "courseE_artist_functions92022": {
-          "do something": {
-            "name": "proveď něco"
-          },
-          "draw triangle": {
-            "name": "nakresli trojúhelník"
-          },
-          "draw line of triangles": {
-            "name": "nakresli řadu trojúhelníků"
-          }
-        },
-        "courseE_artist_functionsProj2022": {
-          "draw hexagon": {
-            "name": "nakresli šestiúhelník"
-          },
-          "draw line of hexagons": {
-            "name": "nakresli řadu šestiúhelníků"
-          },
-          "staggered squares": {
-            "name": "čtverce na přeskáčku"
-          },
-          "draw a line of squares": {
-            "name": "nakresli řadu čtverců"
-          },
-          "draw square": {
-            "name": "nakreslit čtverec"
-          }
-        },
-        "courseE_artist_functions_challenge12022": {
-          "my design": {
-            "name": "můj návrh"
-          },
-          "do something": {
-            "name": "proveď něco"
-          }
-        },
-        "courseE_artist_functions_challenge22022": {
-          "my design": {
-            "name": "můj návrh"
-          },
-          "do something": {
-            "name": "proveď něco"
-          }
-        },
-        "courseE_artist_functions_predict12022": {
-          "draw a square": {
-            "name": "nakresli čtverec"
-          },
-          "draw ear stems": {
-            "name": "nakresli stranice"
-          }
-        },
-        "courseE_artist_functions_predict22022": {
-          "draw line of polygons": {
-            "name": "nakresli řadu mnohoúhelníků"
-          },
-          "draw polygon": {
-            "name": "nakresli mnohoúhelník"
-          },
-          "do something": {
-            "name": "proveď něco"
-          }
-        },
-        "courseE_farmer_functions10a12022": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          },
-          "pumpkin square": {
-            "name": "políčko s dýní"
-          }
-        },
-        "courseE_farmer_functions11_predict2022": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "pumpkin square": {
-            "name": "políčko s dýní"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get produce": {
-            "name": "skliď úrodu"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions132022": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check for corn": {
-            "name": "zkontroluj, jestli je tady kukuřice"
-          },
-          "corn rectangle": {
-            "name": "obdélník z kukuřic"
-          },
-          "lettuce stairs": {
-            "name": "schodišťově nasetý salát"
-          }
-        },
-        "courseE_farmer_functions1a2022": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          }
-        },
-        "courseE_farmer_functions2b2022": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          }
-        },
-        "courseE_farmer_functions2ba2022": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions3c12022": {
-          "pick along path": {
-            "name": "sbírej při cestě"
-          },
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions3c2022": {
-          "check square for corn": {
-            "name": "zkontroluj, jestli je na políčku kukuřice"
-          },
-          "get all pumpkins": {
-            "name": "skliď všechny dýně"
-          }
-        },
-        "courseE_farmer_functions7a12022": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseE_farmer_functions8a12022": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseE_farmer_functions9a12022": {
-          "garden square": {
-            "name": "čtvercový záhon"
-          }
-        },
-        "courseF_apps_collector2022": {
-          "end game": {
-            "name": "konec hry"
-          }
-        },
-        "courseF_apps_collector_-2022-2": {
-          "end game": {
-            "name": "konec hry"
-          }
-        },
-        "courseF_bee_for_challenge12022": {
-          "move and get nectar with counter": {
-            "name": "posuň se a seber nektar pomocí čítače"
           }
         }
       }

@@ -61,8 +61,8 @@
           "create_function": "Klikni ovdje da otvoriš izbornik \"Funkcije\", a zatim klikni na gumb \"Napravi funkciju\"."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Klikni na Uredi da bi dodao parametar u svoju funkciju",
-          "add_and_drag_parameter": "Ovdje napiši ime svog parametra, klikni na Dodaj, a zatim ga odvuci u definiciju svoje funkcije"
+          "add_and_drag_parameter": "Ovdje napiši ime svog parametra, klikni na Dodaj, a zatim ga odvuci u definiciju svoje funkcije",
+          "edit_add_parameter": "Klikni na Uredi da bi dodao parametar u svoju funkciju"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Dovuci ovdje varijablu duljine da bi zamijenio upitnike"
@@ -76,13 +76,22 @@
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Stavili smo malo blokovi za početak"
         },
+        "Overworld Chop Trees2022": {
+          "craft_callout_preplaced": "Stavili smo malo blokovi za početak"
+        },
         "Overworld Chop Trees_2019": {
           "craft_callout_preplaced": "Stavili smo malo blokovi za početak"
         },
         "Overworld Chop Trees_2020": {
           "craft_callout_preplaced": "Stavili smo malo blokovi za početak"
         },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Stavili smo malo blokovi za početak"
+        },
         "Overworld House Frame Chosen": {
+          "craft_callout_preplaced_house": "Ovaj kod će početi graditi svoju kuću. Može li to završiti?"
+        },
+        "Overworld House Frame Chosen2022": {
           "craft_callout_preplaced_house": "Ovaj kod će početi graditi svoju kuću. Može li to završiti?"
         },
         "Overworld House Frame Chosen_2019": {
@@ -91,7 +100,13 @@
         "Overworld House Frame Chosen_2020": {
           "craft_callout_preplaced_house": "Ovaj kod će početi graditi svoju kuću. Može li to završiti?"
         },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Ovaj kod će početi graditi svoju kuću. Može li to završiti?"
+        },
         "Overworld Move to Sheep": {
+          "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
+        },
+        "Overworld Move to Sheep2022": {
           "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
         },
         "Overworld Move to Sheep_2019": {
@@ -100,7 +115,13 @@
         "Overworld Move to Sheep_2020": {
           "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
         },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
+        },
         "Overworld Place Wall": {
+          "craft_inside_repeat": "Ponavljanje akcije stavljanjem blokova ovdje"
+        },
+        "Overworld Place Wall2022": {
           "craft_inside_repeat": "Ponavljanje akcije stavljanjem blokova ovdje"
         },
         "Overworld Place Wall_2019": {
@@ -109,7 +130,13 @@
         "Overworld Place Wall_2020": {
           "craft_inside_repeat": "Ponavljanje akcije stavljanjem blokova ovdje"
         },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Ponavljanje akcije stavljanjem blokova ovdje"
+        },
         "Underground Avoiding Lava": {
+          "craft_callout_moveforward": "Ovaj kod htijenje ček za lava, možete dodati naredbu da se krene naprijed?"
+        },
+        "Underground Avoiding Lava2022": {
           "craft_callout_moveforward": "Ovaj kod htijenje ček za lava, možete dodati naredbu da se krene naprijed?"
         },
         "Underground Avoiding Lava_2019": {
@@ -118,7 +145,13 @@
         "Underground Avoiding Lava_2020": {
           "craft_callout_moveforward": "Ovaj kod htijenje ček za lava, možete dodati naredbu da se krene naprijed?"
         },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Ovaj kod htijenje ček za lava, možete dodati naredbu da se krene naprijed?"
+        },
         "Underground Iron": {
+          "craft_what_is_iron": "Meni ovo glačalo!"
+        },
+        "Underground Iron2022": {
           "craft_what_is_iron": "Meni ovo glačalo!"
         },
         "Underground Iron_2019": {
@@ -126,6 +159,13 @@
         },
         "Underground Iron_2020": {
           "craft_what_is_iron": "Meni ovo glačalo!"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "Meni ovo glačalo!"
+        },
+        "coursee_helloworld_say": {
+          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite.",
+          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili."
         },
         "frozen circle function with parameter": {
           "frozen_circle_function_with_parameter_circle": "Koristi blok \"napravi krug\" i promijeni veličinu."
@@ -167,23 +207,15 @@
         "frozen square snowflake": {
           "replace_questions": "Koristi padajući izbornik da bi zamijenio \"???\" s brojem"
         },
-        "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Stavili smo malo blokovi za početak"
+        "helloworld_animals_location": {
+          "pin": "zakači"
         },
-        "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Ovaj kod će početi graditi svoju kuću. Može li to završiti?"
+        "helloworld_animals_multi": {
+          "pin": "zakači"
         },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
-        },
-        "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Ponavljanje akcije stavljanjem blokova ovdje"
-        },
-        "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Ovaj kod htijenje ček za lava, možete dodati naredbu da se krene naprijed?"
-        },
-        "Underground Iron_2021": {
-          "craft_what_is_iron": "Meni ovo glačalo!"
+        "helloworld_animals_say": {
+          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite.",
+          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili."
         },
         "helloworld_emoji_costumes": {
           "hello_world_new": "Novi blok!"
@@ -195,8 +227,8 @@
           "pin": "zakači"
         },
         "helloworld_emoji_say": {
-          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili.",
-          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite."
+          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite.",
+          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili."
         },
         "helloworld_emoji_sizes": {
           "hello_world_new": "Novi blok!",
@@ -205,62 +237,16 @@
         "helloworld_emoji_sounds": {
           "hello_world_new": "Novi blok!"
         },
-        "helloworld_animals_location": {
-          "pin": "zakači"
-        },
-        "helloworld_animals_multi": {
-          "pin": "zakači"
-        },
-        "helloworld_animals_say": {
-          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili.",
-          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite."
-        },
         "helloworld_food_location": {
           "pin": "zakači"
-        },
-        "helloworld_food_multi": {
-          "pin": "zakači"
-        },
-        "helloworld_food_say": {
-          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili.",
-          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite."
-        },
-        "helloworld_retro_location": {
-          "pin": "zakači"
-        },
-        "helloworld_retro_multi": {
-          "pin": "zakači"
-        },
-        "helloworld_retro_say": {
-          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili.",
-          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite."
-        },
-        "Overworld Chop Trees2022": {
-          "craft_callout_preplaced": "Stavili smo malo blokovi za početak"
-        },
-        "Overworld House Frame Chosen2022": {
-          "craft_callout_preplaced_house": "Ovaj kod će početi graditi svoju kuću. Može li to završiti?"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Klikni na \"Pokreni\" da isprobaš svoj program"
-        },
-        "Overworld Place Wall2022": {
-          "craft_inside_repeat": "Ponavljanje akcije stavljanjem blokova ovdje"
-        },
-        "Underground Avoiding Lava2022": {
-          "craft_callout_moveforward": "Ovaj kod htijenje ček za lava, možete dodati naredbu da se krene naprijed?"
-        },
-        "Underground Iron2022": {
-          "craft_what_is_iron": "Meni ovo glačalo!"
-        },
-        "coursee_helloworld_say": {
-          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili.",
-          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite."
         },
         "helloworld_food_location_soccer-2022": {
           "pin": "zakači"
         },
         "helloworld_food_location_space-2022": {
+          "pin": "zakači"
+        },
+        "helloworld_food_multi": {
           "pin": "zakači"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -269,13 +255,27 @@
         "helloworld_food_multi_space-2022": {
           "pin": "zakači"
         },
+        "helloworld_food_say": {
+          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite.",
+          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili."
+        },
         "helloworld_food_say_soccer-2022": {
-          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili.",
-          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite."
+          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite.",
+          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili."
         },
         "helloworld_food_say_space-2022": {
-          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili.",
-          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite."
+          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite.",
+          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili."
+        },
+        "helloworld_retro_location": {
+          "pin": "zakači"
+        },
+        "helloworld_retro_multi": {
+          "pin": "zakači"
+        },
+        "helloworld_retro_say": {
+          "hello_world_make_sprite": "Koristite ovaj blok da bi stvorio sprite.",
+          "hello_world_say": "Koristite ovaj blok da bi spriteovi govorili."
         }
       }
     }

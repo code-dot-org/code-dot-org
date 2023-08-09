@@ -1,5 +1,6 @@
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import ProjectContainer from '@cdo/apps/lab2/projects/ProjectContainer';
+import DialogManager from '@cdo/apps/lab2/views/dialogs/DialogManager';
 import Lab2Wrapper from '@cdo/apps/lab2/views/Lab2Wrapper';
 import MetricsAdapter from '@cdo/apps/lab2/views/MetricsAdapter';
 import {getStore} from '@cdo/apps/redux';
@@ -18,10 +19,12 @@ const ProjectBeats: React.FunctionComponent<{channelId: string}> = ({
   return (
     <Provider store={getStore()}>
       <Lab2Wrapper>
-        <MetricsAdapter />
-        <ProjectContainer channelId={channelId}>
-          <DeferredMusicView />
-        </ProjectContainer>
+        <DialogManager>
+          <MetricsAdapter />
+          <ProjectContainer channelId={channelId} appName={'music'}>
+            <DeferredMusicView />
+          </ProjectContainer>
+        </DialogManager>
       </Lab2Wrapper>
     </Provider>
   );

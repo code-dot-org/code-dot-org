@@ -2,95 +2,59 @@
   "uz-UZ": {
     "data": {
       "standard_categories": {
-        "CL": {
-          "description": "Hamkorlik"
-        },
-        "CPP": {
-          "description": "Hisoblash amaliyoti va dasturlash"
-        },
-        "CT": {
-          "description": "Dasturiy fikrlash"
-        },
-        "L": {
-          "description": "Til"
-        },
-        "RI": {
-          "description": "Axborotni o‘qish"
-        },
-        "SL": {
-          "description": "Gapirish va tinglash"
-        },
-        "W": {
-          "description": "Yozish"
-        },
-        "C": {
-          "description": "Aylanalar"
-        },
-        "F": {
-          "description": "Funksiyalar"
-        },
-        "MP": {
-          "description": "Matematik amaliyotlar"
-        },
         "1": {
           "description": "Talabalar ijodiy fikrlashni namoyish etadilar, bilimlarini mustahkamlaydilar va texnologiyalar yordamida innovatsion mahsulotlar va jarayonlarni ishlab chiqadilar."
         },
         "2": {
           "description": "Talabalar raqamli axborot vositalari va uskunalaridan muloqot qilish va birgalikda ishlash, shu jumladan masofadan turib, individual ta'limni qo‘llab-quvvatlash va boshqalarning o‘rganishiga hissa qo‘shish uchun foydalanadilar."
         },
+        "3": {
+          "description": "Talabalar ma'lumot to'plash, baholash va ulardan foydalanish uchun raqamli vositalarni qo'llaydilar."
+        },
+        "3-A-i": {
+          "description": "O'qish tabiati - odamlar va mashinalar"
+        },
+        "3-A-ii": {
+          "description": "O'rganishning tabiati - ma'lumotlarda naqshlarni topish"
+        },
+        "3-A-iii": {
+          "description": "O'qitishning tabiati - modelni o'rgatish"
+        },
+        "3-A-iv": {
+          "description": "O'rganishning tabiati - konstruktiv va asoschidan foydalanish"
+        },
+        "3-A-v": {
+          "description": "O'rganishning tabiati - ichki tasavvurlarni sozlash"
+        },
+        "3-A-vi": {
+          "description": "O'rganishning tabiati - tajribadan o'rganish"
+        },
+        "3-B-i": {
+          "description": "Neyron tarmoqlari - neyron tarmoqning tuzilishi"
+        },
+        "3-B-ii": {
+          "description": "Neyron tarmoqlari - vaznni sozlash"
+        },
+        "3-C-i": {
+          "description": "Ma'lumotlar to'plamlari - xususiyatlar to'plami"
+        },
+        "3-C-ii": {
+          "description": "Ma'lumotlar to'plamlari - katta ma'lumotlar to'plami"
+        },
+        "3-C-iii": {
+          "description": "Ma'lumotlar to'plami - tarafkashlik"
+        },
         "4": {
           "description": "Talabalar tadqiqotlarni rejalashtirish va o‘tkazish, loyihalarni boshqarish, muammolarni hal qilish va tegishli raqamli vositalar va resurslardan foydalangan holda asosli qarorlar qabul qilishda tanqidiy fikrlash qobiliyatlaridan foydalanadilar."
         },
-        "AP": {
-          "description": "Algoritmlar va dasturlash"
+        "5": {
+          "description": "Talabalar texnologiya bilan bog'liq insoniy, madaniy va ijtimoiy muammolarni tushunadilar va huquqiy va axloqiy xulq -atvor bilan shug'ullanadilar."
         },
-        "CS": {
-          "description": "Hisoblash tizimlari"
-        },
-        "DA": {
-          "description": "Ma'lumotlar va tahlil"
-        },
-        "IC": {
-          "description": "Xulosa chiqarish va xulosalar chiqarish"
-        },
-        "NI": {
-          "description": "Tarmoqlar va Internet"
+        "6": {
+          "description": "Talabalar texnologiya tushunchalari, tizimlari va operatsiyalari haqida to'g'ri tushunishni namoyish etadilar."
         },
         "AAP-1": {
           "description": "Umumlashtiriladigan muammolarga aniq echimlarni topish uchun dasturchilar ma'lumotlarni bir necha usulda namoyish etadilar va tartibga soladilar."
-        },
-        "AAP-2": {
-          "description": "Dasturda bayonotlarning ketma -ketligi va birlashtirilishi hisoblangan natijani aniqlaydi. Dasturlar takrorlashni ifodalash va turli xil kirish qiymatlarini boshqarish uchun qaror qabul qilish uchun takrorlash va tanlov tuzilmalarini o'z ichiga oladi."
-        },
-        "AAP-3": {
-          "description": "Dasturchilar muammolarni kichikroq va boshqariladigan qismlarga ajratadilar. Protseduralarni yaratish va parametrlardan foydalanish orqali dasturchilar qayta ishlatilishi mumkin bo'lgan jarayonlarni umumlashtiradilar. Protseduralar dasturchilarga allaqachon sinovdan o'tgan mavjud kodlardan foydalanishga imkon beradi, bu esa dasturchilarga dasturlarni tezroq va ko'proq ishonch bilan yozishga imkon beradi."
-        },
-        "AAP-4": {
-          "description": "Kompyuter hal qila olmaydigan muammolar mavjud va hatto kompyuter muammoni hal qila olsa ham, u oqilona vaqt ichida buni qila olmasligi mumkin."
-        },
-        "CRD-1": {
-          "description": "Hamkorlik orqali bir nechta istiqbollarni kiritish ishlab chiqilayotgan hisoblash yangiliklarini yaxshilaydi."
-        },
-        "CRD-2": {
-          "description": "Ishlab chiquvchilar foydalanuvchilarga yo'naltirilgan, amalga oshirish/teskari aloqa davrlarini o'z ichiga olgan va tajriba va tavakkalchilik uchun keng joy qoldiradigan takroriy dizayn jarayonidan foydalangan holda yaratadilar va yangilik kiritadilar."
-        },
-        "CSN-1": {
-          "description": "Kompyuter tizimlari va tarmoqlari ma'lumotlarning uzatilishini osonlashtiradi."
-        },
-        "CSN-2": {
-          "description": "Parallel va taqsimlangan hisoblash murakkab muammolarni tezroq hal qilish yoki katta ma'lumotlar to'plamini qayta ishlash uchun bir nechta kompyuterlardan foydalanadi."
-        },
-        "DAT-1": {
-          "description": "Kompyuterning ma'lumotlarni aks ettirish usuli ma'lumotlarning foydalanuvchi uchun talqin qilinishi va ko'rsatilishidan farq qiladi. Dasturlar ma'lumotlarni odamlar tomonidan osonroq tushuniladigan tasvirga aylantirish uchun ishlatiladi."
-        },
-        "DAT-2": {
-          "description": "Dasturlardan ma'lumotlarni qayta ishlash uchun foydalanish mumkin, bu foydalanuvchilarga ma'lumotlarni kashf qilish va yangi bilimlarni yaratish imkonini beradi."
-        },
-        "IOC-1": {
-          "description": "Dasturlar odatda ma'lum bir maqsadga erishish uchun ishlab chiqilgan bo'lsa -da, ular kutilmagan oqibatlarga olib kelishi mumkin"
-        },
-        "IOC-2": {
-          "description": "Hisoblash yangiliklaridan foydalanish sizning shaxsiy xavfsizligingiz va shaxsingiz uchun xavf tug'dirishi mumkin."
         },
         "AAP-1.A": {
           "description": "Qiymatni o'zgaruvchi bilan ifodalang."
@@ -103,6 +67,9 @@
         },
         "AAP-1.D": {
           "description": "Ma'lumotlarni abstraktsiya qilish uchun: \na Bir nechta elementlarni saqlash uchun ro'yxatlar yordamida ma'lumotlar abstraktsiyasini ishlab chiqish.\nb Ma'lumotlarni abstraktsiyasidan foydalanish dastur kodidagi murakkablikni qanday boshqarishini tushuntiring."
+        },
+        "AAP-2": {
+          "description": "Dasturda bayonotlarning ketma -ketligi va birlashtirilishi hisoblangan natijani aniqlaydi. Dasturlar takrorlashni ifodalash va turli xil kirish qiymatlarini boshqarish uchun qaror qabul qilish uchun takrorlash va tanlov tuzilmalarini o'z ichiga oladi."
         },
         "AAP-2.A": {
           "description": "Dasturlash tilidan foydalanmasdan ketma-ketlikni ishlatadigan algoritmni ifoda eting."
@@ -149,6 +116,9 @@
         "AAP-2.P": {
           "description": "Ikkilik qidiruv algoritmlari uchun:\na Ma'lumotlar to'plamidagi qiymatni topish uchun zarur bo'lgan takrorlanishlar sonini aniqlang. \nb Ikkilik qidiruvni bajarish uchun zarur bo'lgan talablarni tushuntiring."
         },
+        "AAP-3": {
+          "description": "Dasturchilar muammolarni kichikroq va boshqariladigan qismlarga ajratadilar. Protseduralarni yaratish va parametrlardan foydalanish orqali dasturchilar qayta ishlatilishi mumkin bo'lgan jarayonlarni umumlashtiradilar. Protseduralar dasturchilarga allaqachon sinovdan o'tgan mavjud kodlardan foydalanishga imkon beradi, bu esa dasturchilarga dasturlarni tezroq va ko'proq ishonch bilan yozishga imkon beradi."
+        },
         "AAP-3.A": {
           "description": "Protsedura qo'ng'iroqlari uchun:\na Qo'ng'iroq protseduralariga bayonotlar yozing.\nb. protsedura chaqiruvining natijasini yoki ta'sirini aniqlang."
         },
@@ -167,347 +137,65 @@
         "AAP-3.F": {
           "description": "Simulyatsiyalar uchun:\na Kompyuterlardan real hodisalar yoki natijalarni ifodalash uchun qanday foydalanish mumkinligini tushuntiring. \nb Simulyatsiyalardan foydalanishni haqiqiy kontekstlar bilan solishtiring."
         },
+        "AAP-4": {
+          "description": "Kompyuter hal qila olmaydigan muammolar mavjud va hatto kompyuter muammoni hal qila olsa ham, u oqilona vaqt ichida buni qila olmasligi mumkin."
+        },
         "AAP-4.A": {
           "description": "Algoritmning samaradorligini aniqlash uchun:\na Aqlli vaqtda ishlaydigan va oqilona vaqtda ishlamaydigan algoritmlar o'rtasidagi farqni tushuntiring. \nb. evristik yechim ko'proq mos kelishi mumkin bo'lgan vaziyatlarni aniqlang."
         },
         "AAP-4.B": {
           "description": "Informatika fanida hal qilib bo'lmaydigan muammolar mavjudligini tushuntiring."
         },
-        "CRD-1.A": {
-          "description": "Hamkorlik orqali hisoblash yangiliklari qanday yaxshilanishini tushuntiring."
+        "AP": {
+          "description": "Algoritmlar va dasturlash"
         },
-        "CRD-1.B": {
-          "description": "Hisoblash yangiliklari odamlar guruhlari tomonidan qanday ishlab chiqilishini tushuntiring."
+        "APR": {
+          "description": "Polinomlar va ratsional iboralar bilan arifmetik"
         },
-        "CRD-1.C": {
-          "description": "Hamkorlik davomida samarali shaxslararo ko'nikmalarni namoyish eting."
+        "BF": {
+          "description": "Qurilish funktsiyalari"
         },
-        "CRD-2.A": {
-          "description": "Hisoblash yangiligining maqsadini aytib bering."
+        "BI-1": {
+          "description": "Kompyuterlar dunyoni sensorlar yordamida sezadilar"
         },
-        "CRD-2.B": {
-          "description": "Dastur yoki kod segmenti qanday ishlashini tushuntiring."
+        "BI-2": {
+          "description": "Agentlar dunyoning vakolatxonalarini saqlaydilar va ularni fikrlash uchun ishlatadilar"
         },
-        "CRD-2.C": {
-          "description": "Dasturga kirish (lar) ni aniqlang."
+        "BI-3": {
+          "description": "Kompyuterlar ma'lumotlardan o'rganishlari mumkin"
         },
-        "CRD-2.D": {
-          "description": "Dastur tomonidan ishlab chiqarilgan mahsulot (lar) ni aniqlang."
+        "BI-4": {
+          "description": "Aqlli agentlar odamlar bilan tabiiy ravishda muloqot qilish uchun ko'p turdagi bilimlarni talab qiladi"
         },
-        "CRD-2.E": {
-          "description": "Rivojlanish jarayonidan foydalangan holda dastur ishlab chiqing."
+        "BI-5": {
+          "description": "AI jamiyatga ijobiy va salbiy ta'sir ko'rsatishi mumkin"
         },
-        "CRD-2.F": {
-          "description": "Dastur va uning foydalanuvchi interfeysini loyihalash."
+        "C": {
+          "description": "Aylanalar"
         },
-        "CRD-2.G": {
-          "description": "Hujjatlarni yozish orqali kod segmenti yoki dasturining maqsadini tavsiflang."
-        },
-        "CRD-2.H": {
-          "description": "Boshqa manbalardan foydalanilgan kod segmentlarini tan oling."
-        },
-        "CRD-2.I": {
-          "description": "Algoritm yoki dasturdagi xatolar uchun: \na Xatoni aniqlang. \nb Xatoni to'g'rilang."
-        },
-        "CRD-2.J": {
-          "description": "Algoritm yoki dasturning to'g'riligini tekshirish uchun ishlatilishi mumkin bo'lgan kirishlar va mos keladigan kutilgan chiqish yoki xatti -harakatlarni aniqlang."
-        },
-        "CSN-1.A": {
-          "description": "Hisoblash qurilmalari tarmoqda qanday ishlashini tushuntiring."
-        },
-        "CSN-1.B": {
-          "description": "Internet qanday ishlashini tushuntiring."
-        },
-        "CSN-1.C": {
-          "description": "Ma'lumotlar Internet orqali paketlar orqali qanday yuborilishini tushuntiring."
-        },
-        "CSN-1.D": {
-          "description": "Internet va World Wide Web o'rtasidagi farqlarni aytib bering."
-        },
-        "CSN-1.E": {
-          "description": "Xatolarga bardoshli tizimlar uchun, masalan, Internet:\na Xatolikka bardoshlilikning afzalliklarini tavsiflang\nb Berilgan tizim qanday xatolarga chidamliligini tushuntiring\nc Tizimdagi zaifliklarni aniqlang."
-        },
-        "CSN-2.A": {
-          "description": "Ketma -ket, parallel va taqsimlangan hisoblashdan foydalanadigan muammoli echimlarni solishtiring."
-        },
-        "CSN-2.B": {
-          "description": "Ketma-ket va parallel echimlarning samaradorligini aniqlang."
-        },
-        "CSN-2.C": {
-          "description": "Parallel va taqsimlangan hisoblashning afzalliklari va qiyinchiliklarini tasvirlab bering."
-        },
-        "DAT-1.A": {
-          "description": "Ma'lumotlarni bit yordamida qanday ko'rsatish mumkinligini tushuntiring."
-        },
-        "DAT-1.B": {
-          "description": "Ma'lumotlarni ifodalash uchun bitlardan foydalanish oqibatlarini tushuntiring."
-        },
-        "DAT-1.C": {
-          "description": "Ikkilik raqamlar uchun:\na Musbat butun sonning ikkilik (2-asos) ekvivalentini hisoblang (10-asos) va aksincha. \nb Ikkilik raqamlarni solishtiring va tartiblang."
-        },
-        "DAT-1.D": {
-          "description": "Muayyan kontekstda qaysi biri yaxshiroq ekanligini aniqlash uchun ma'lumotlarni siqish algoritmlarini solishtiring."
-        },
-        "DAT-2.A": {
-          "description": "Ma'lumotlardan qanday ma'lumotlarni olish mumkinligini tasvirlab bering."
-        },
-        "DAT-2.B": {
-          "description": "Metama'lumotlardan qanday ma'lumotlarni olish mumkinligini tasvirlab bering."
-        },
-        "DAT-2.C": {
-          "description": "Ma'lumotlarni qayta ishlash bilan bog'liq muammolarni aniqlang."
-        },
-        "DAT-2.D": {
-          "description": "Dastur yordamida ma'lumotlardan ma'lumot olish."
-        },
-        "DAT-2.E": {
-          "description": "Ma'lumotlardan tushuncha va bilim olish uchun dasturlardan qanday foydalanish mumkinligini tushuntiring."
-        },
-        "IOC-1.A": {
-          "description": "Hisoblash tizimlarining axloqiy va ijtimoiy oqibatlarini tushuntiring"
-        },
-        "IOC-1.B": {
-          "description": "Shaxsiy ma'lumotlarni kompyuter tizimlarida to'plash va saqlashdan maxfiylik uchun xavflarni tushuntiring."
-        },
-        "IOC-1.C": {
-          "description": "Raqamli bo'linishga hissa qo'shadigan muammolarni tasvirlab bering."
-        },
-        "IOC-1.D": {
-          "description": "Hisoblash innovatsiyalarida qanday noaniqlik mavjudligini tushuntiring."
-        },
-        "IOC-1.E": {
-          "description": "Muammolarni hal qilish jarayonlarida odamlar qanday ishtirok etishini tushuntiring."
-        },
-        "IOC-1.F": {
-          "description": "Hisoblashdan foydalanish huquqiy va axloqiy muammolarni qanday keltirib chiqarishi mumkinligini tushuntiring."
-        },
-        "IOC-2.A": {
-          "description": "Shaxsiy ma'lumotlarni kompyuter tizimida to'plash va saqlashdan maxfiylik uchun xavflarni tasvirlab bering."
-        },
-        "IOC-2.B": {
-          "description": "Hisoblash resurslarini qanday himoya qilish va noto'g'ri ishlatish mumkinligini tushuntiring."
-        },
-        "IOC-2.C": {
-          "description": "Hisoblash resurslariga ruxsatsiz kirish qanday qo'lga kiritilganligini tushuntiring."
-        },
-        "D1": {
-          "description": "Savollar va rejalashtirish so'rovlarini ishlab chiqish"
-        },
-        "D3.Sources": {
-          "description": "Manbalarni yig'ish va baholash"
-        },
-        "D3.Claims": {
-          "description": "Da'volarni ishlab chiqish va dalillardan foydalanish"
-        },
-        "D4.Conclusions": {
-          "description": "Muloqot va tanqidiy xulosalar"
-        },
-        "D4.Action": {
-          "description": "Ma'lumotli choralar ko'rish"
-        },
-        "D2.Civ": {
-          "description": "Fuqarolik"
-        },
-        "D2.Eco": {
-          "description": "Iqtisodiyot"
+        "CC": {
+          "description": "Hisoblash va kardinallik"
         },
         "CD": {
           "description": "Kompyuterlar va aloqa qurilmalari"
         },
+        "CED": {
+          "description": "Tenglamalarni yaratish"
+        },
         "CI": {
           "description": "Hamjamiyat, global va axloqiy ta'sirlar"
         },
-        "RF": {
-          "description": "Asosiy ko'nikmalarni o'qish"
+        "CL": {
+          "description": "Hamkorlik"
         },
-        "RH": {
-          "description": "O'qish tarixi/ijtimoiy tadqiqotlar"
+        "CN": {
+          "description": "Kompleks sonlar tizimi"
         },
-        "RL": {
-          "description": "Adabiyotni o'qish"
-        },
-        "RST": {
-          "description": "O'qish fani/texnik"
-        },
-        "WHST": {
-          "description": "HS/S/T yozish"
-        },
-        "ESS": {
-          "description": "Yer va kosmik fan"
-        },
-        "ETS": {
-          "description": "Fanlar muhandisligi"
-        },
-        "LS": {
-          "description": "Hayot haqidagi fan"
-        },
-        "PS": {
-          "description": "Fizika fanlari"
-        },
-        "ESS1": {
-          "description": "Erning koinotdagi o'rni"
-        },
-        "ESS2": {
-          "description": "Yer tizimlari"
-        },
-        "ESS3": {
-          "description": "Yer va inson faoliyati"
-        },
-        "ETS1": {
-          "description": "Muhandislik dizayni"
-        },
-        "LS1": {
-          "description": "Molekulalardan organizmlarga: tuzilmalar va jarayonlar"
-        },
-        "LS2": {
-          "description": "Ekotizimlar: o'zaro ta'sirlar, energiya va dinamika"
-        },
-        "LS3": {
-          "description": "Irsiyat: merosxo'rlik va xususiyatlarning o'zgarishi"
-        },
-        "LS4": {
-          "description": "Biologik evolyutsiya: birlik va xilma-xillik"
-        },
-        "PS1": {
-          "description": "Materiya va uning o'zaro ta'siri"
-        },
-        "PS2": {
-          "description": "Harakat va barqarorlik: kuchlar va o'zaro ta'sirlar"
-        },
-        "PS3": {
-          "description": "Energiya"
-        },
-        "PS4": {
-          "description": "To'lqinlar va ularning axborot uzatishda texnologiyalarda qo'llanilishi"
-        },
-        "MOD-1": {
-          "description": "Ba'zi ob'ektlar yoki tushunchalar shunchalik tez -tez ifodalanadiki, dasturchilar allaqachon sinovdan o'tgan mavjud koddan foydalanib, echimlarni tezroq va ko'proq ishonch bilan yozishga imkon beradi."
-        },
-        "MOD-2": {
-          "description": "Dasturchilar ob'ekt yoki kontseptsiyaning attirbutlari va/yoki xatti -harakatlariga asoslangan sinfni aniqlash orqali haqiqiy yoki xayoliy jismoniy ob'ekt yoki jismoniy bo'lmagan tushunchani ifodalash uchun koddan foydalanadilar."
-        },
-        "MOD-3": {
-          "description": "Mulitple sinflari umumiy atributlar va xatti -harakatlarni o'z ichiga olgan bo'lsa, dasturchilar ierachini tashkil etuvchi umumiy atributlar va xatti -harakatlarni o'z ichiga olgan yangi sinf yaratadilar. Ierarxiyaning eng yuqori darajasida kiritilgan o'zgartirishlar quyi sinflarga nisbatan qo'llaniladi."
-        },
-        "VAR-1": {
-          "description": "Umumiy muammolarga aniq echimlarni topish uchun dasturchilar o'z kodlariga o'zgaruvchilarni kiritadilar, shunda bir xil algoritm turli xil kirish qiymatlari yordamida ishlaydi"
-        },
-        "VAR-2": {
-          "description": "Katta hajmdagi ma'lumotlarni yoki ma'lumotlardagi murakkab munosabatlarni boshqarish uchun dasturchilar har bir qiymat uchun individual o'zgaruvchilarni yaratish orqali ma'lumotlarni bitta ma'lumotlar tuzilmasiga birlashtiradigan kod yozadilar."
+        "CO": {
+          "description": "Muvofiqlik"
         },
         "CON-1": {
           "description": "O'zgaruvchilar va operatorlarning ketma -ketligi va ifodada birlashtirilishi hisoblangan natijani aniqlaydi."
-        },
-        "CON-2": {
-          "description": "Dasturchilar takrorlash va tanlovni kodga kiritadilar, bu kompyuterga mumkin bo'lgan kirish qiymatlarining har birini qayta ishlash bo'yicha ko'rsatmalar berish usuli sifatida"
-        },
-        "MOD-1.A": {
-          "description": "Konsolga chiqish hosil qilish uchun tizim sinf usullariga qo'ng'iroq qiling."
-        },
-        "MOD-1.B": {
-          "description": "Sinf va ob'ekt o'rtasidagi munosabatni tushuntiring."
-        },
-        "MOD-1.C": {
-          "description": "Uning imzosidan foydalanib, chaqirilayotgan to'g'ri konstruktorni aniqlang."
-        },
-        "MOD-1.D": {
-          "description": "Ob'ektni yaratish uchun: a. ob'ektlarni parametrsiz konstruktorlarni chaqirish orqali yaratish. b. parametrli konstruktorlarni chaqirish orqali ob'ektlarni yaratish."
-        },
-        "MOD-1.E": {
-          "description": "Parametrlarsiz statik bo'lmagan void usullarini chaqiring."
-        },
-        "MOD-1.F": {
-          "description": "Parametrlar bilan statik bo'lmagan void usullarini chaqiring"
-        },
-        "MOD-1.G": {
-          "description": "Parametrli yoki parametrsiz statik bo'lmagan bo'sh usullarni chaqiring"
-        },
-        "MOD-1.H": {
-          "description": "Statik usullarni chaqiring."
-        },
-        "MOD-2.A": {
-          "description": "Sinflar, ma'lumotlar, konstruktorlar va usullarga kirish va ko'rish cheklovlarini belgilang."
-        },
-        "MOD-2.B": {
-          "description": "Sinf konstruktorlari orqali ishga tushiriladigan atributlar uchun misol o'zgaruvchilarini aniqlang."
-        },
-        "MOD-2.C": {
-          "description": "Dastur kodi thorugh izohlar funktsional va foydalanish Desribe."
-        },
-        "MOD-2.D": {
-          "description": "Ob'ektning xatti-harakatlarini sinfda yozilgan prametrlarsiz bo'sh bo'lmagan usullar orqali aniqlang."
-        },
-        "MOD-2.E": {
-          "description": "Ob'ektning xatti-harakatlarini sinfda yozilgan parametrlarga ega yoki bo'lmagan bo'sh usullar orqali aniqlang."
-        },
-        "MOD-2.F": {
-          "description": "Ob'ektning xatti-harakatlarini sinfda yozilgan parametrlar bilan bo'sh bo'lmagan usullar orqali aniqlang."
-        },
-        "MOD-2.G": {
-          "description": "Statik usullar yordamida sinfning xatti -harakatlarini aniqlang."
-        },
-        "MOD-2.H": {
-          "description": "Sinfga tegishli statik o'zgaruvchilarni aniqlang."
-        },
-        "MOD-3.A": {
-          "description": "Ob'ektning atributlarini qamrab olish uchun misol o'zgaruvchilarining shaxsiy ko'rinishini belgilang."
-        },
-        "MOD-3.B": {
-          "description": "Subklassdan superklassga meros munosabatlarini yarating."
-        },
-        "MOD-3.C": {
-          "description": "Xuddi shu ierarxiyadagi kichik sinf ob'ektiga tayinlanadigan superklassning mos yozuvlar o'zgaruvchilarini aniqlang."
-        },
-        "MOD-3.D": {
-          "description": "Meros munosabatlarida qo'ng'iroq usullari."
-        },
-        "MOD-3.E": {
-          "description": "Meros orqali Object sinf usullarini chaqiring."
-        },
-        "VAR-1.A": {
-          "description": "String literallarini yarating"
-        },
-        "VAR-1.B": {
-          "description": "Muayyan spetsifikatsiya uchun eng mos ma'lumotlar turi toifasini aniqlang"
-        },
-        "VAR-1.C": {
-          "description": "Ibtidoiy ma'lumotlarni ko'rsatish uchun to'g'ri turdagi o'zgaruvchilarni e'lon qiling"
-        },
-        "VAR-1.D": {
-          "description": "Malumot ma'lumotlarini ko'rsatish uchun to'g'ri turdagi o'zgaruvchilarni aniqlang."
-        },
-        "VAR-1.E": {
-          "description": "String sinfi uchun: a String moslamalarini yaratish. b. chaqiruv String usullari."
-        },
-        "VAR-1.F": {
-          "description": "Wrapper sinflari uchun: a. Integer ob'ektlarini yaratish. b. chaqiruv Integer usullari. c Double ob'ektlarini yaratish. d Double usullarini chaqiring."
-        },
-        "VAR-1.G": {
-          "description": "Dastur kodida o'zgaruvchilardan qayerda foydalanish mumkinligini tushuntiring."
-        },
-        "VAR-1.H": {
-          "description": "Bu kalit so'zini ishlatadigan ob'ekt mos yozuvlar ifodalarini baholang."
-        },
-        "VAR-2.A": {
-          "description": "Bir o'lchovli (1D) massiv ob'ektlaridan foydalangan holda tegishli ibtidoiy yoki ob'ektga mos yozuvlar ma'lumotlari to'plamini taqdim eting."
-        },
-        "VAR-2.B": {
-          "description": "Elementlarni 1D massivda kesib o'tadi."
-        },
-        "VAR-2.C": {
-          "description": "Kengaytirilgan for loop yordamida 1D massiv ob'ektidagi elementlarni aylantiring."
-        },
-        "VAR-2.D": {
-          "description": "ArrayList moslamalari yordamida tegishli ob'ektlar ma'lumotnomalari to'plamlarini ko'rsatish."
-        },
-        "VAR-2.E": {
-          "description": "ArrayList ob'ektlari uchun: • for yoki while pastadir yordamida o'tish. • Kengaytirilgan for pastadir yordamida shpal."
-        },
-        "VAR-2.F": {
-          "description": "Ikki o'lchovli (2D) massivli ob'ektlardan foydalangan holda tegishli ibtidoiy yoki ob'ektga mos yozuvlar ma'lumotlari to'plamini taqdim eting."
-        },
-        "VAR-2.G": {
-          "description": "2D massiv ob'ektlari uchun: • ko'chadan ichki o'rnatilgan yordamida shpal. • ko'chadan uchun kengaytirilgan ichki yordamida shpal."
         },
         "CON-1.A": {
           "description": "Dastur kodidagi arifmetik ifodalarni baholang"
@@ -532,6 +220,9 @@
         },
         "CON-1.H": {
           "description": "Dastur kodidagi mantiqiy iboralar yordamida ob'ekt havolalarini solishtiring."
+        },
+        "CON-2": {
+          "description": "Dasturchilar takrorlash va tanlovni kodga kiritadilar, bu kompyuterga mumkin bo'lgan kirish qiymatlarining har birini qayta ishlash bo'yicha ko'rsatmalar berish usuli sifatida"
         },
         "CON-2.A": {
           "description": "Shartli bayonotlar yordamida tarmoqlangan mantiqiy jarayonlarni ifodalang."
@@ -584,29 +275,173 @@
         "CON-2.Q": {
           "description": "ArrayList yoki ArrayList ob'ektlarining elementlarini tartiblashtirish uchun rekursiv algoritmlarni qo'llang."
         },
-        "APR": {
-          "description": "Polinomlar va ratsional iboralar bilan arifmetik"
-        },
-        "BF": {
-          "description": "Qurilish funktsiyalari"
-        },
-        "CC": {
-          "description": "Hisoblash va kardinallik"
-        },
-        "CED": {
-          "description": "Tenglamalarni yaratish"
-        },
-        "CN": {
-          "description": "Kompleks sonlar tizimi"
-        },
-        "CO": {
-          "description": "Muvofiqlik"
-        },
         "CP": {
           "description": "Shartli ehtimollik va ehtimollik qoidalari"
         },
+        "CPP": {
+          "description": "Hisoblash amaliyoti va dasturlash"
+        },
+        "CRD-1": {
+          "description": "Hamkorlik orqali bir nechta istiqbollarni kiritish ishlab chiqilayotgan hisoblash yangiliklarini yaxshilaydi."
+        },
+        "CRD-1.A": {
+          "description": "Hamkorlik orqali hisoblash yangiliklari qanday yaxshilanishini tushuntiring."
+        },
+        "CRD-1.B": {
+          "description": "Hisoblash yangiliklari odamlar guruhlari tomonidan qanday ishlab chiqilishini tushuntiring."
+        },
+        "CRD-1.C": {
+          "description": "Hamkorlik davomida samarali shaxslararo ko'nikmalarni namoyish eting."
+        },
+        "CRD-2": {
+          "description": "Ishlab chiquvchilar foydalanuvchilarga yo'naltirilgan, amalga oshirish/teskari aloqa davrlarini o'z ichiga olgan va tajriba va tavakkalchilik uchun keng joy qoldiradigan takroriy dizayn jarayonidan foydalangan holda yaratadilar va yangilik kiritadilar."
+        },
+        "CRD-2.A": {
+          "description": "Hisoblash yangiligining maqsadini aytib bering."
+        },
+        "CRD-2.B": {
+          "description": "Dastur yoki kod segmenti qanday ishlashini tushuntiring."
+        },
+        "CRD-2.C": {
+          "description": "Dasturga kirish (lar) ni aniqlang."
+        },
+        "CRD-2.D": {
+          "description": "Dastur tomonidan ishlab chiqarilgan mahsulot (lar) ni aniqlang."
+        },
+        "CRD-2.E": {
+          "description": "Rivojlanish jarayonidan foydalangan holda dastur ishlab chiqing."
+        },
+        "CRD-2.F": {
+          "description": "Dastur va uning foydalanuvchi interfeysini loyihalash."
+        },
+        "CRD-2.G": {
+          "description": "Hujjatlarni yozish orqali kod segmenti yoki dasturining maqsadini tavsiflang."
+        },
+        "CRD-2.H": {
+          "description": "Boshqa manbalardan foydalanilgan kod segmentlarini tan oling."
+        },
+        "CRD-2.I": {
+          "description": "Algoritm yoki dasturdagi xatolar uchun: \na Xatoni aniqlang. \nb Xatoni to'g'rilang."
+        },
+        "CRD-2.J": {
+          "description": "Algoritm yoki dasturning to'g'riligini tekshirish uchun ishlatilishi mumkin bo'lgan kirishlar va mos keladigan kutilgan chiqish yoki xatti -harakatlarni aniqlang."
+        },
+        "CS": {
+          "description": "Hisoblash tizimlari"
+        },
+        "CSN-1": {
+          "description": "Kompyuter tizimlari va tarmoqlari ma'lumotlarning uzatilishini osonlashtiradi."
+        },
+        "CSN-1.A": {
+          "description": "Hisoblash qurilmalari tarmoqda qanday ishlashini tushuntiring."
+        },
+        "CSN-1.B": {
+          "description": "Internet qanday ishlashini tushuntiring."
+        },
+        "CSN-1.C": {
+          "description": "Ma'lumotlar Internet orqali paketlar orqali qanday yuborilishini tushuntiring."
+        },
+        "CSN-1.D": {
+          "description": "Internet va World Wide Web o'rtasidagi farqlarni aytib bering."
+        },
+        "CSN-1.E": {
+          "description": "Xatolarga bardoshli tizimlar uchun, masalan, Internet:\na Xatolikka bardoshlilikning afzalliklarini tavsiflang\nb Berilgan tizim qanday xatolarga chidamliligini tushuntiring\nc Tizimdagi zaifliklarni aniqlang."
+        },
+        "CSN-2": {
+          "description": "Parallel va taqsimlangan hisoblash murakkab muammolarni tezroq hal qilish yoki katta ma'lumotlar to'plamini qayta ishlash uchun bir nechta kompyuterlardan foydalanadi."
+        },
+        "CSN-2.A": {
+          "description": "Ketma -ket, parallel va taqsimlangan hisoblashdan foydalanadigan muammoli echimlarni solishtiring."
+        },
+        "CSN-2.B": {
+          "description": "Ketma-ket va parallel echimlarning samaradorligini aniqlang."
+        },
+        "CSN-2.C": {
+          "description": "Parallel va taqsimlangan hisoblashning afzalliklari va qiyinchiliklarini tasvirlab bering."
+        },
+        "CT": {
+          "description": "Dasturiy fikrlash"
+        },
+        "D1": {
+          "description": "Savollar va rejalashtirish so'rovlarini ishlab chiqish"
+        },
+        "D2.Civ": {
+          "description": "Fuqarolik"
+        },
+        "D2.Eco": {
+          "description": "Iqtisodiyot"
+        },
+        "D3.Claims": {
+          "description": "Da'volarni ishlab chiqish va dalillardan foydalanish"
+        },
+        "D3.Sources": {
+          "description": "Manbalarni yig'ish va baholash"
+        },
+        "D4.Action": {
+          "description": "Ma'lumotli choralar ko'rish"
+        },
+        "D4.Conclusions": {
+          "description": "Muloqot va tanqidiy xulosalar"
+        },
+        "DA": {
+          "description": "Ma'lumotlar va tahlil"
+        },
+        "DAT-1": {
+          "description": "Kompyuterning ma'lumotlarni aks ettirish usuli ma'lumotlarning foydalanuvchi uchun talqin qilinishi va ko'rsatilishidan farq qiladi. Dasturlar ma'lumotlarni odamlar tomonidan osonroq tushuniladigan tasvirga aylantirish uchun ishlatiladi."
+        },
+        "DAT-1.A": {
+          "description": "Ma'lumotlarni bit yordamida qanday ko'rsatish mumkinligini tushuntiring."
+        },
+        "DAT-1.B": {
+          "description": "Ma'lumotlarni ifodalash uchun bitlardan foydalanish oqibatlarini tushuntiring."
+        },
+        "DAT-1.C": {
+          "description": "Ikkilik raqamlar uchun:\na Musbat butun sonning ikkilik (2-asos) ekvivalentini hisoblang (10-asos) va aksincha. \nb Ikkilik raqamlarni solishtiring va tartiblang."
+        },
+        "DAT-1.D": {
+          "description": "Muayyan kontekstda qaysi biri yaxshiroq ekanligini aniqlash uchun ma'lumotlarni siqish algoritmlarini solishtiring."
+        },
+        "DAT-2": {
+          "description": "Dasturlardan ma'lumotlarni qayta ishlash uchun foydalanish mumkin, bu foydalanuvchilarga ma'lumotlarni kashf qilish va yangi bilimlarni yaratish imkonini beradi."
+        },
+        "DAT-2.A": {
+          "description": "Ma'lumotlardan qanday ma'lumotlarni olish mumkinligini tasvirlab bering."
+        },
+        "DAT-2.B": {
+          "description": "Metama'lumotlardan qanday ma'lumotlarni olish mumkinligini tasvirlab bering."
+        },
+        "DAT-2.C": {
+          "description": "Ma'lumotlarni qayta ishlash bilan bog'liq muammolarni aniqlang."
+        },
+        "DAT-2.D": {
+          "description": "Dastur yordamida ma'lumotlardan ma'lumot olish."
+        },
+        "DAT-2.E": {
+          "description": "Ma'lumotlardan tushuncha va bilim olish uchun dasturlardan qanday foydalanish mumkinligini tushuntiring."
+        },
         "EE": {
           "description": "Ifodalar va tenglamalar"
+        },
+        "ESS": {
+          "description": "Yer va kosmik fan"
+        },
+        "ESS1": {
+          "description": "Erning koinotdagi o'rni"
+        },
+        "ESS2": {
+          "description": "Yer tizimlari"
+        },
+        "ESS3": {
+          "description": "Yer va inson faoliyati"
+        },
+        "ETS": {
+          "description": "Fanlar muhandisligi"
+        },
+        "ETS1": {
+          "description": "Muhandislik dizayni"
+        },
+        "F": {
+          "description": "Funksiyalar"
         },
         "G": {
           "description": "Geometriya"
@@ -617,14 +452,68 @@
         "GPE": {
           "description": "Geometrik xossalarni tenglamalar bilan ifodalash"
         },
+        "IC": {
+          "description": "Kompyuterlar ta'siri"
+        },
         "ID": {
           "description": "Kategorik va miqdoriy ma'lumotlarni talqin qilish"
         },
         "IF": {
           "description": "Funksiyalarni talqin qilish"
         },
+        "IOC-1": {
+          "description": "Hisoblash yangiliklari odatda ma'lum bir maqsadga erishish uchun mo'ljallangan bo'lsa -da, ular kutilmagan oqibatlarga olib kelishi mumkin."
+        },
+        "IOC-1.A": {
+          "description": "Hisoblash yangiligining ta'siri qanday foydali, ham zararli bo'lishi mumkinligini tushuntiring."
+        },
+        "IOC-1.B": {
+          "description": "Hisoblash innovatsiyasi o'z maqsadidan tashqarida qanday ta'sir qilishi mumkinligini tushuntiring."
+        },
+        "IOC-1.C": {
+          "description": "Raqamli bo'linishga hissa qo'shadigan muammolarni tasvirlab bering."
+        },
+        "IOC-1.D": {
+          "description": "Hisoblash innovatsiyalarida qanday noaniqlik mavjudligini tushuntiring."
+        },
+        "IOC-1.E": {
+          "description": "Muammolarni hal qilish jarayonlarida odamlar qanday ishtirok etishini tushuntiring."
+        },
+        "IOC-1.F": {
+          "description": "Hisoblashdan foydalanish huquqiy va axloqiy muammolarni qanday keltirib chiqarishi mumkinligini tushuntiring."
+        },
+        "IOC-2": {
+          "description": "Hisoblash yangiliklaridan foydalanish sizning shaxsiy xavfsizligingiz va shaxsingiz uchun xavf tug'dirishi mumkin."
+        },
+        "IOC-2.A": {
+          "description": "Shaxsiy ma'lumotlarni kompyuter tizimida to'plash va saqlashdan maxfiylik uchun xavflarni tasvirlab bering."
+        },
+        "IOC-2.B": {
+          "description": "Hisoblash resurslarini qanday himoya qilish va noto'g'ri ishlatish mumkinligini tushuntiring."
+        },
+        "IOC-2.C": {
+          "description": "Hisoblash resurslariga ruxsatsiz kirish qanday qo'lga kiritilganligini tushuntiring."
+        },
+        "L": {
+          "description": "Til"
+        },
         "LE": {
           "description": "Chiziqli, kvadratik va eksponensial modellar ★"
+        },
+        "LS": {
+          "description": "Hayot haqidagi fan"
+        },
+        "LS1": {
+          "description": "Molekulalardan organizmlarga: tuzilmalar va jarayonlar"
+        },
+        "LS2": {
+          "description": "Ekotizimlar: o'zaro ta'sirlar, energiya va dinamika"
+        },
+        "LS3": {
+          "description": "Irsiyat: merosxo'rlik va xususiyatlarning o'zgarishi"
+        },
+        "LS4": {
+          "description": "Biologik evolyutsiya: birlik va xilma-xillik"
         },
         "MD": {
           "description": "Qaror qabul qilish uchun ehtimollikdan foydalanish"
@@ -632,11 +521,89 @@
         "MG": {
           "description": "Geometriya yordamida modellashtirish"
         },
+        "MOD-1": {
+          "description": "Ba'zi ob'ektlar yoki tushunchalar shunchalik tez -tez ifodalanadiki, dasturchilar allaqachon sinovdan o'tgan mavjud koddan foydalanib, echimlarni tezroq va ko'proq ishonch bilan yozishga imkon beradi."
+        },
+        "MOD-1.A": {
+          "description": "Konsolga chiqish hosil qilish uchun tizim sinf usullariga qo'ng'iroq qiling."
+        },
+        "MOD-1.B": {
+          "description": "Sinf va ob'ekt o'rtasidagi munosabatni tushuntiring."
+        },
+        "MOD-1.C": {
+          "description": "Uning imzosidan foydalanib, chaqirilayotgan to'g'ri konstruktorni aniqlang."
+        },
+        "MOD-1.D": {
+          "description": "Ob'ektni yaratish uchun: a. ob'ektlarni parametrsiz konstruktorlarni chaqirish orqali yaratish. b. parametrli konstruktorlarni chaqirish orqali ob'ektlarni yaratish."
+        },
+        "MOD-1.E": {
+          "description": "Parametrlarsiz statik bo'lmagan void usullarini chaqiring."
+        },
+        "MOD-1.F": {
+          "description": "Parametrlar bilan statik bo'lmagan void usullarini chaqiring"
+        },
+        "MOD-1.G": {
+          "description": "Parametrli yoki parametrsiz statik bo'lmagan bo'sh usullarni chaqiring"
+        },
+        "MOD-1.H": {
+          "description": "Statik usullarni chaqiring."
+        },
+        "MOD-2": {
+          "description": "Dasturchilar ob'ekt yoki kontseptsiyaning attirbutlari va/yoki xatti -harakatlariga asoslangan sinfni aniqlash orqali haqiqiy yoki xayoliy jismoniy ob'ekt yoki jismoniy bo'lmagan tushunchani ifodalash uchun koddan foydalanadilar."
+        },
+        "MOD-2.A": {
+          "description": "Sinflar, ma'lumotlar, konstruktorlar va usullarga kirish va ko'rish cheklovlarini belgilang."
+        },
+        "MOD-2.B": {
+          "description": "Sinf konstruktorlari orqali ishga tushiriladigan atributlar uchun misol o'zgaruvchilarini aniqlang."
+        },
+        "MOD-2.C": {
+          "description": "Dastur kodi thorugh izohlar funktsional va foydalanish Desribe."
+        },
+        "MOD-2.D": {
+          "description": "Ob'ektning xatti-harakatlarini sinfda yozilgan prametrlarsiz bo'sh bo'lmagan usullar orqali aniqlang."
+        },
+        "MOD-2.E": {
+          "description": "Ob'ektning xatti-harakatlarini sinfda yozilgan parametrlarga ega yoki bo'lmagan bo'sh usullar orqali aniqlang."
+        },
+        "MOD-2.F": {
+          "description": "Ob'ektning xatti-harakatlarini sinfda yozilgan parametrlar bilan bo'sh bo'lmagan usullar orqali aniqlang."
+        },
+        "MOD-2.G": {
+          "description": "Statik usullar yordamida sinfning xatti -harakatlarini aniqlang."
+        },
+        "MOD-2.H": {
+          "description": "Sinfga tegishli statik o'zgaruvchilarni aniqlang."
+        },
+        "MOD-3": {
+          "description": "Mulitple sinflari umumiy atributlar va xatti -harakatlarni o'z ichiga olgan bo'lsa, dasturchilar ierachini tashkil etuvchi umumiy atributlar va xatti -harakatlarni o'z ichiga olgan yangi sinf yaratadilar. Ierarxiyaning eng yuqori darajasida kiritilgan o'zgartirishlar quyi sinflarga nisbatan qo'llaniladi."
+        },
+        "MOD-3.A": {
+          "description": "Ob'ektning atributlarini qamrab olish uchun misol o'zgaruvchilarining shaxsiy ko'rinishini belgilang."
+        },
+        "MOD-3.B": {
+          "description": "Subklassdan superklassga meros munosabatlarini yarating."
+        },
+        "MOD-3.C": {
+          "description": "Xuddi shu ierarxiyadagi kichik sinf ob'ektiga tayinlanadigan superklassning mos yozuvlar o'zgaruvchilarini aniqlang."
+        },
+        "MOD-3.D": {
+          "description": "Meros munosabatlarida qo'ng'iroq usullari."
+        },
+        "MOD-3.E": {
+          "description": "Meros orqali Object sinf usullarini chaqiring."
+        },
+        "MP": {
+          "description": "Matematik amaliyotlar"
+        },
         "NBT": {
           "description": "O'ninchi bazadagi raqam va operatsiyalar"
         },
         "NF": {
           "description": "Raqam va operatsiyalar — kasrlar"
+        },
+        "NI": {
+          "description": "Tarmoqlar va Internet"
         },
         "NS": {
           "description": "Raqamlar tizimi"
@@ -644,17 +611,50 @@
         "OA": {
           "description": "Operatsiyalar va algebraik fikrlash"
         },
+        "PS": {
+          "description": "Fizika fanlari"
+        },
+        "PS1": {
+          "description": "Materiya va uning o'zaro ta'siri"
+        },
+        "PS2": {
+          "description": "Harakat va barqarorlik: kuchlar va o'zaro ta'sirlar"
+        },
+        "PS3": {
+          "description": "Energiya"
+        },
+        "PS4": {
+          "description": "To'lqinlar va ularning axborot uzatishda texnologiyalarda qo'llanilishi"
+        },
         "Q": {
           "description": "Miqdorlar"
         },
         "REI": {
           "description": "Tenglamalar va tengsizliklar bilan mulohaza yuritish"
         },
+        "RF": {
+          "description": "Asosiy ko'nikmalarni o'qish"
+        },
+        "RH": {
+          "description": "O'qish tarixi/ijtimoiy tadqiqotlar"
+        },
+        "RI": {
+          "description": "Axborotni o‘qish"
+        },
+        "RL": {
+          "description": "Adabiyotni o'qish"
+        },
         "RN": {
           "description": "Haqiqiy raqamlar tizimi"
         },
         "RP": {
           "description": "Nisbatlar va mutanosib munosabatlar"
+        },
+        "RST": {
+          "description": "O'qish fani/texnik"
+        },
+        "SL": {
+          "description": "Gapirish va tinglash"
         },
         "SP": {
           "description": "Statistika va ehtimollik"
@@ -668,65 +668,65 @@
         "TF": {
           "description": "Trigonometrik funksiyalar"
         },
+        "VAR-1": {
+          "description": "Umumiy muammolarga aniq echimlarni topish uchun dasturchilar o'z kodlariga o'zgaruvchilarni kiritadilar, shunda bir xil algoritm turli xil kirish qiymatlari yordamida ishlaydi"
+        },
+        "VAR-1.A": {
+          "description": "String literallarini yarating"
+        },
+        "VAR-1.B": {
+          "description": "Muayyan spetsifikatsiya uchun eng mos ma'lumotlar turi toifasini aniqlang"
+        },
+        "VAR-1.C": {
+          "description": "Ibtidoiy ma'lumotlarni ko'rsatish uchun to'g'ri turdagi o'zgaruvchilarni e'lon qiling"
+        },
+        "VAR-1.D": {
+          "description": "Malumot ma'lumotlarini ko'rsatish uchun to'g'ri turdagi o'zgaruvchilarni aniqlang."
+        },
+        "VAR-1.E": {
+          "description": "String sinfi uchun: a String moslamalarini yaratish. b. chaqiruv String usullari."
+        },
+        "VAR-1.F": {
+          "description": "Wrapper sinflari uchun: a. Integer ob'ektlarini yaratish. b. chaqiruv Integer usullari. c Double ob'ektlarini yaratish. d Double usullarini chaqiring."
+        },
+        "VAR-1.G": {
+          "description": "Dastur kodida o'zgaruvchilardan qayerda foydalanish mumkinligini tushuntiring."
+        },
+        "VAR-1.H": {
+          "description": "Bu kalit so'zini ishlatadigan ob'ekt mos yozuvlar ifodalarini baholang."
+        },
+        "VAR-2": {
+          "description": "Katta hajmdagi ma'lumotlarni yoki ma'lumotlardagi murakkab munosabatlarni boshqarish uchun dasturchilar har bir qiymat uchun individual o'zgaruvchilarni yaratish orqali ma'lumotlarni bitta ma'lumotlar tuzilmasiga birlashtiradigan kod yozadilar."
+        },
+        "VAR-2.A": {
+          "description": "Bir o'lchovli (1D) massiv ob'ektlaridan foydalangan holda tegishli ibtidoiy yoki ob'ektga mos yozuvlar ma'lumotlari to'plamini taqdim eting."
+        },
+        "VAR-2.B": {
+          "description": "Elementlarni 1D massivda kesib o'tadi."
+        },
+        "VAR-2.C": {
+          "description": "Kengaytirilgan for loop yordamida 1D massiv ob'ektidagi elementlarni aylantiring."
+        },
+        "VAR-2.D": {
+          "description": "ArrayList moslamalari yordamida tegishli ob'ektlar ma'lumotnomalari to'plamlarini ko'rsatish."
+        },
+        "VAR-2.E": {
+          "description": "ArrayList ob'ektlari uchun: • for yoki while pastadir yordamida o'tish. • Kengaytirilgan for pastadir yordamida shpal."
+        },
+        "VAR-2.F": {
+          "description": "Ikki o'lchovli (2D) massivli ob'ektlardan foydalangan holda tegishli ibtidoiy yoki ob'ektga mos yozuvlar ma'lumotlari to'plamini taqdim eting."
+        },
+        "VAR-2.G": {
+          "description": "2D massiv ob'ektlari uchun: • ko'chadan ichki o'rnatilgan yordamida shpal. • ko'chadan uchun kengaytirilgan ichki yordamida shpal."
+        },
         "VM": {
           "description": "Vektor va matritsa miqdorlari"
         },
-        "BI-1": {
-          "description": "Kompyuterlar dunyoni sensorlar yordamida sezadilar"
+        "W": {
+          "description": "Yozish"
         },
-        "BI-2": {
-          "description": "Agentlar dunyoning vakolatxonalarini saqlaydilar va ularni fikrlash uchun ishlatadilar"
-        },
-        "BI-3": {
-          "description": "Kompyuterlar ma'lumotlardan o'rganishlari mumkin"
-        },
-        "BI-4": {
-          "description": "Aqlli agentlar odamlar bilan tabiiy ravishda muloqot qilish uchun ko'p turdagi bilimlarni talab qiladi"
-        },
-        "BI-5": {
-          "description": "AI jamiyatga ijobiy va salbiy ta'sir ko'rsatishi mumkin"
-        },
-        "3-A-i": {
-          "description": "O'qish tabiati - odamlar va mashinalar"
-        },
-        "3-A-ii": {
-          "description": "O'rganishning tabiati - ma'lumotlarda naqshlarni topish"
-        },
-        "3-A-iii": {
-          "description": "O'qitishning tabiati - modelni o'rgatish"
-        },
-        "3-A-iv": {
-          "description": "O'rganishning tabiati - konstruktiv va asoschidan foydalanish"
-        },
-        "3-A-v": {
-          "description": "O'rganishning tabiati - ichki tasavvurlarni sozlash"
-        },
-        "3-A-vi": {
-          "description": "O'rganishning tabiati - tajribadan o'rganish"
-        },
-        "3-B-i": {
-          "description": "Neyron tarmoqlari - neyron tarmoqning tuzilishi"
-        },
-        "3-B-ii": {
-          "description": "Neyron tarmoqlari - vaznni sozlash"
-        },
-        "3-C-i": {
-          "description": "Ma'lumotlar to'plamlari - xususiyatlar to'plami"
-        },
-        "3-C-ii": {
-          "description": "Ma'lumotlar to'plamlari - katta ma'lumotlar to'plami"
-        },
-        "3-C-iii": {
-          "description": "Ma'lumotlar to'plami - tarafkashlik"
-        },
-        "3": {
-          "description": "Talabalar ma'lumot to'plash, baholash va ulardan foydalanish uchun raqamli vositalarni qo'llaydilar."
-        },
-        "5": {
-          "description": "Talabalar texnologiya bilan bog'liq insoniy, madaniy va ijtimoiy muammolarni tushunadilar va huquqiy va axloqiy xulq -atvor bilan shug'ullanadilar."
-        },
-        "6": {
-          "description": "Talabalar texnologiya tushunchalari, tizimlari va operatsiyalari haqida to'g'ri tushunishni namoyish etadilar."
+        "WHST": {
+          "description": "HS/S/T yozish"
         }
       }
     }

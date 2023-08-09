@@ -2,17 +2,17 @@
   "fi-FI": {
     "data": {
       "standard_categories": {
-        "CT": {
-          "description": "Laskennallinen ajattelu"
-        },
-        "L": {
-          "description": "Kieli"
-        },
         "C": {
           "description": "Ympyrät"
         },
+        "CT": {
+          "description": "Laskennallinen ajattelu"
+        },
         "F": {
           "description": "Funktiot"
+        },
+        "L": {
+          "description": "Kieli"
         }
       }
     }

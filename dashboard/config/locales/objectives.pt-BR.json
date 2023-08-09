@@ -2,1406 +2,209 @@
   "pt-BR": {
     "data": {
       "objectives": {
-        "d48452ca-5cba-4bc4-b52c-424f10d43bab": {
-          "description": "Definição de \"codificação\" e \"ciência da computação\"."
+        "74126a3c-61fa-40ac-aef5-ffe0bf68a549": {
+          "description": " Comunique-se e colabore com colegas de classe para resolver um problema "
         },
-        "bdb824f7-9d5c-4465-b019-0294329fd999": {
-          "description": "Identifique o vocabulário mais importante em ciência da computação."
+        "8bc02767-3a96-4d13-a946-1e5a0dbcb037": {
+          "description": "Melhorar a solução para um problema gradativamente"
         },
-        "69ffb469-2601-46aa-bc80-82043d8dcd1e": {
-          "description": "Identifique locais para continuar a aprendizagem de ciência da computação e codificação."
+        "1a3a0395-0d25-44f7-9d47-e1c7700c3507": {
+          "description": "Identificar diferentes estratégias utilizadas para resolver um problema"
         },
-        "008a40f4-a5ee-42aa-862e-670f19129694": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        "e8cad68d-4922-47bd-9b73-c22e8af10879": {
+          "description": "Aplicar o processo de resolução de problemas para abordar uma variedade de problemas"
         },
-        "a4ad4a3c-f2b2-4675-90e5-626ce70c2764": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
+        "34e775e2-0c00-4052-9987-1ea46e705fa0": {
+          "description": "Avaliar se um problema está bem definido e aplicar estratégias para definir o problema com mais precisão"
         },
-        "343631be-830a-44f6-a249-a6aa96ea38f0": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        "ccfcb058-12bd-488b-8356-b22d10c4ea6f": {
+          "description": "Identificar um computador como uma máquina que trabalha com informações"
         },
-        "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        "bac6e9a1-3d3a-4632-951a-18176be462c8": {
+          "description": "Analisar se determinados objetos são ou não computadores."
         },
-        "f149f330-032b-40db-a3db-62ff2a8c04fb": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
+        "10f87a6a-1dee-44d3-b8d9-1a8d79891db9": {
+          "description": "Escolha problemas que podem ser resolvidos com a computação e justifique essas escolhas."
         },
-        "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        "b77ee6ff-2558-4b8a-b835-6cc16409602f": {
+          "description": "Selecionar as entradas e saídas usadas para realizar tarefas comuns de computação."
         },
-        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
-          "description": "Ilustre as mudanças no humor de um poema."
+        "372ca368-9509-4398-b84c-21ac4c890a1d": {
+          "description": "Explicar a função que a entrada e a saída desempenham quando os computadores são usados para resolver problemas de informação."
         },
-        "6da037be-d0be-4f41-a1e5-10b24a247190": {
-          "description": "Represente a linguagem literal e a figurativa através de um texto"
+        "36878c76-5f41-4efb-bba1-e9ca4a2e32fa": {
+          "description": "Definir processamento como o trabalho realizado (possivelmente por um computador) para transformar uma entrada em uma saída"
         },
-        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
-          "description": "Desenvolver programas que respondam a eventos temporizados."
+        "dd98dbf4-2b0d-4d8b-be4e-4807c06de0a0": {
+          "description": "Identificar vários tipos comuns de processamento usados na computação."
         },
-        "6394fdc5-50c3-423e-8135-a64594824db3": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        "434ebdb0-40d0-4a29-bcfb-635ade18fb5e": {
+          "description": "Determinar quais tipos de processamento são apropriados para um problema de computação específico."
         },
-        "36208a0a-f319-4d09-ad20-46f8d68c0ff4": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
+        "eecfc6b0-93e7-4a6f-bdc2-fcfe306a3407": {
+          "description": "Determinar quais informações em um problema de computação devem ser armazenadas para uso posterior."
         },
-        "bed6c56c-a270-4835-96f1-33d9d9ec78da": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
+        "f8ceacee-8c38-4d94-a2f3-35ee71d8b382": {
+          "description": "Identificar diretrizes sobre quais informações devem e quais não devem ser armazenadas como parte do processo de computação."
         },
-        "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        "30f1b582-38d8-402b-83da-c8a7cba4b2aa": {
+          "description": "Usar o modelo de entrada-saída-armazenamento-processamento para descrever um processo de computação."
         },
-        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
+        "e543e22d-8270-4eb9-81ad-6de8d5455d59": {
+          "description": "Identifique e defina um problema que poderia ser resolvido usando a computação"
         },
-        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
+        "6fa18746-fa9c-4ace-a0e3-fc7936899b64": {
+          "description": "Crie um aplicativo que insira, produza, armazene e processe informações para resolver um problema"
         },
-        "3e5eebcd-2140-4152-8654-410468108ab6": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        "5caf913a-779e-4174-9e9f-b6a87756263e": {
+          "description": "Fornecer e incorporar feedback direcionado de colegas para melhorar um artefato de computação"
         },
-        "fcb92339-9036-46ec-b5ab-d8d252651e2d": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
+        "07998a0e-1ef2-4bc0-af59-5278007a0058": {
+          "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
         },
-        "0a56ebd1-4df4-492c-b630-2a6b1f43e3c4": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        "74336c50-eaa5-4dce-a478-27925ce67729": {
+          "description": "Melhorar a solução para um problema gradativamente"
         },
-        "e23f32e6-7d12-41e6-a601-bcf0825f0e30": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        "30d66e3d-96aa-4b8e-adb5-6f112d41f16d": {
+          "description": "Identificar diferentes estratégias utilizadas para resolver um problema"
         },
-        "a5bebcad-7295-4ecd-af0d-4012f97de704": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
+        "71eb384e-9034-406d-a8fc-3e410e869985": {
+          "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
         },
-        "303a2b74-af73-401c-8929-1fc1c5611f18": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
+        "eb402ed0-5510-4b3a-bc73-694ddde8bf0f": {
+          "description": "Melhorar a solução para um problema gradativamente"
         },
-        "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        "9f5e8294-cf6c-4f28-9f8f-1c0c869a69be": {
+          "description": "Identificar diferentes estratégias utilizadas para resolver um problema"
         },
-        "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        "dd44e0a2-e2a0-46aa-bc51-e0d67dc95491": {
+          "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
         },
-        "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
+        "2c2dc6c4-9a9f-4186-85ba-44882179e48b": {
+          "description": "Melhorar a solução para um problema gradativamente"
         },
-        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
+        "1829ce9e-4e7e-451f-898e-692c3abb5ad6": {
+          "description": "Identificar diferentes estratégias utilizadas para resolver um problema"
         },
-        "59992d8c-d194-4063-82fa-001a0b6482d9": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        "a98e9a65-fe9a-421b-854f-ee5c090c9503": {
+          "description": "Aplicar o processo de resolução de problemas para abordar uma variedade de problemas"
         },
-        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
+        "4616a321-c362-4a0e-928a-b1bc642d4010": {
+          "description": "Avaliar se um problema está bem definido e aplicar estratégias para definir o problema com mais precisão"
         },
-        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
+        "69a7b9a8-b9be-4d2e-aacc-43805fc5f186": {
+          "description": "Aplicar o processo de resolução de problemas para abordar uma variedade de problemas"
         },
-        "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
-          "description": "Criar um programa para concluir uma imagem utilizando etapas sequenciais."
+        "1e8b24b5-f8b6-46a6-b0b1-aba1633a02f0": {
+          "description": "Avaliar se um problema está bem definido e aplicar estratégias para definir o problema com mais precisão"
         },
-        "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
-          "description": "Dividir formas complexas em partes simples."
+        "364c4d7c-4f39-4cef-95ed-9a5b7d7a2e9e": {
+          "description": "Identifique os motivos pelos quais alguém pode visitar um determinado site"
         },
-        "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        "4682c681-72e1-43df-8443-27ba6ff068de": {
+          "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
         },
-        "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
-        },
-        "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
-          "description": "Desenvolver programas que respondam a eventos programados"
-        },
-        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
-          "description": "Desenvolver programas que respondam à entrada do usuário"
-        },
-        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
-          "description": "Criar animações de dança utilizando código"
-        },
-        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
-        },
-        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
-        },
-        "586fecaa-52c0-4889-adaf-cc11a172d4a7": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "e2745118-9d93-4e33-a607-c1927403c0c3": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
-          "description": "Explicar por que a criptografia é uma necessidade importante no cotidiano da internet."
-        },
-        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
-          "description": "Decifrar uma mensagem criptografada com a cifra de César, usando um widget para cifra de César"
-        },
-        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
-          "description": "Decifrar uma mensagem criptografada por substituição aleatória usando a análise de frequência"
-        },
-        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
-          "description": "Explicar os pontos fracos e falhas de segurança da criptografia por substituição"
-        },
-        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
-        },
-        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
-        },
-        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
-        },
-        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
-        },
-        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
-        },
-        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "74f6b7a3-df1b-4f98-9619-30b2c2118c14": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "d1660224-18b1-4e70-b7fc-b0fce29c8cd6": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "ef08539f-6652-4fb9-a0ec-781dfec114f8": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "b1e4a88d-565b-4d95-a6d7-129869cff301": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
-        },
-        "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "50b1fb31-4471-433d-a5f1-74e38886d49f": {
-          "description": "Criar e compartilhar seus próprios aplicativos no App Lab usando recursos como botões, textos, imagens, sons e telas."
-        },
-        "f7a3786d-0859-48d5-a4f9-827d6d681133": {
-          "description": "Continuar criando projetos no App Lab completo usando os recursos fornecidos na página code.org/applab."
-        },
-        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
-        },
-        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
-        },
-        "e475558e-d7ca-4fc3-950a-b09be116dafb": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
-        },
-        "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "d2d65101-b356-4092-8f88-59b387334dd9": {
-          "description": "Colaborar com um colega para encontrar uma solução para um problema de compactação de texto usando o widget Text Compression (esquema de compactação sem perdas)."
-        },
-        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
-          "description": "Explicar por que é difícil ou impossível identificar a quantidade ideal de compactação."
-        },
-        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
-          "description": "Explicar alguns fatores que tornam a compactação desafiadora."
-        },
-        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
-          "description": "Descrever o objetivo e o raciocínio da compactação sem perdas."
-        },
-        "93e23857-027c-4711-9033-a41de9430672": {
-          "description": "Identificar ações que se correlacionem com eventos de entrada."
-        },
-        "8e120010-1817-488a-8ca8-ce5198a0883d": {
-          "description": "Criar um jogo interativo utilizando sequências e manipuladores de eventos."
-        },
-        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
-          "description": "Compartilhar um artefato criativo com outros alunos."
-        },
-        "559aa8ee-c19e-41b2-8820-8cf04cf72dad": {
-          "description": "Defina \"codificação\" e \"ciência da computação\"."
-        },
-        "bd8e3dc4-47f2-41ac-8c7f-01126eb5e68a": {
-          "description": "Identifique o vocabulário mais importante em ciência da computação."
-        },
-        "0e2bbedd-f066-4dc1-b80c-291dac187c62": {
-          "description": "Identifique locais para continuar a aprendizagem de ciência da computação e codificação."
-        },
-        "63be9575-1232-47a5-991c-8bd03ac7c949": {
-          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
-        },
-        "0b17cf0a-2614-40be-afbc-1045245d0a38": {
-          "description": "Identificar o vocabulário essencial da ciência da computação"
-        },
-        "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
-          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
-        },
-        "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
-          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
-        },
-        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
-          "description": "Identificar ações que se correlacionem com eventos de entrada."
-        },
-        "73964b0e-cea1-43cf-a130-410017addf73": {
-          "description": "Criar um jogo interativo utilizando sequências e manipuladores de eventos."
-        },
-        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
-          "description": "Compartilhar um artefato criativo com outros alunos."
-        },
-        "8b4629a9-0621-4442-9801-e3b61e4fbaf3": {
-          "description": "Defina \"codificação\" e \"ciência da computação\"."
-        },
-        "16a00a1c-4559-4e9c-95e1-1cd1e542fe68": {
-          "description": "Identifique o vocabulário mais importante em ciência da computação."
-        },
-        "5e05fbeb-12c6-437c-b0c4-5e2057d3d975": {
-          "description": "Identifique locais para continuar a aprendizagem de ciência da computação e codificação."
-        },
-        "83f493e8-9941-4154-b2f4-f34836741746": {
-          "description": "Definição de \"codificação\" e \"ciência da computação\"."
-        },
-        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
-          "description": "Identifique o vocabulário mais importante em ciência da computação."
-        },
-        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
-          "description": "Identifique locais para continuar a aprendizagem de ciência da computação e codificação."
-        },
-        "f9486b57-7160-4b3b-b327-b311239d5d26": {
-          "description": "Desenvolver programas que respondam a eventos programados"
-        },
-        "251fe027-d9b3-4384-99f6-53505275e4ce": {
-          "description": "Desenvolver programas que respondam à entrada do usuário"
-        },
-        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
-          "description": "Criar animações de dança utilizando código"
-        },
-        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
-          "description": "Discutir o papel da inteligência artificial na vida deles."
-        },
-        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "Treinar e testar um modelo de aprendizado de máquina."
         },
-        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
           "description": "Raciocinar sobre o papel do viés humano no aprendizado de máquina."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
-        },
-        "1033b638-05a5-40c2-8e29-1efe1b5f3451": {
-          "description": "Defina o termo “senha” e descreva o propósito de uma senha."
-        },
-        "c14cd5a0-312f-491c-aa00-73b82dd8e628": {
-          "description": "Pratique a criação de uma senha memorável e forte."
-        },
-        "2d16e09e-308f-4fe5-b53a-bfd2a50ec736": {
-          "description": "Reformular uma sequência de etapas como um programa codificado"
-        },
-        "e2eb4dfd-1b5b-4a01-aceb-1b96c49cd254": {
-          "description": "Explicar as restrições ao transportar problemas da linguagem humana para a linguagem de máquina"
-        },
-        "86d6703f-6086-48c6-820f-d9d972471655": {
-          "description": "Ordenar comandos de movimento como etapas sequenciais em um programa."
-        },
-        "c141459a-a5b8-41ce-ada6-33b92afb0596": {
-          "description": "Decompor uma longa sequência de instruções na maior sequência repetível."
-        },
-        "f0a49033-5a23-4b2e-b570-69fd6d678f65": {
-          "description": "Modificar um programa existente para resolver erros."
-        },
-        "15927fdc-d944-4de3-89ca-f238d8014f55": {
-          "description": "Definir ideias usando código e símbolos."
-        },
-        "55ae003d-10f1-4364-ab38-3a3360491e38": {
-          "description": "Identifique sinais de frustração "
-        },
-        "d5c5bdd3-6ca6-48b2-ae3b-5aaf0c8dbb70": {
-          "description": "Verificar o trabalho realizado por colegas de equipe."
-        },
-        "0d2e39ca-970f-40e0-b26a-84bcecf9315d": {
-          "description": "Descrever e implementar um plano para depurar um programa."
-        },
-        "59c4efee-e0c3-4293-9609-a82db6698755": {
-          "description": "Ler e compreender um determinado código."
-        },
-        "66a6e0e0-c56c-4148-9d57-ce509afa4fc6": {
-          "description": "Identificar um bug e os problemas que ele causa em um programa."
-        },
-        "a7fe08e4-1943-4bbc-a18a-e10bd0942173": {
-          "description": "Compartilhar um artefato criativo com outros alunos."
-        },
-        "d2a9a010-d6c6-4ce1-9f70-cb5ceba6af8f": {
-          "description": "Identificar ações que se correlacionem com eventos de entrada."
-        },
-        "df973a96-c08b-4f3f-9a11-c93434193cfe": {
-          "description": "Criar um jogo interativo utilizando sequências e manipuladores de eventos."
-        },
-        "04cbf3cd-2cb7-451b-b4ed-1ccd70594cc5": {
-          "description": "Identificar ações que se correlacionem com eventos de entrada."
-        },
-        "f47c401e-4a61-4f0e-a4d3-75f3bd9d8908": {
-          "description": "Criar um jogo animado e interativo utilizando sequências e eventos."
-        },
-        "4ed9cede-cc9a-409d-b433-781185b454b6": {
-          "description": "Criar animações de dança utilizando código"
-        },
-        "4fa04785-108a-4cea-831b-8078658ea413": {
-          "description": "Desenvolver programas que respondam à entrada do usuário"
-        },
-        "7728246b-7582-4624-a2b1-229b998fc2ae": {
-          "description": "Desenvolver programas que respondam a eventos programados"
-        },
-        "07bc7c07-d75a-45cc-9f98-74501813e5af": {
-          "description": "Construir um programa usando estruturas que repetem partes do código"
-        },
-        "fcc0109d-8a25-4194-8a5c-69985bac106c": {
-          "description": "Melhorar o código atual identificando áreas de repetição e movendo-as para estruturas de laço"
-        },
-        "c2ec43ae-26ae-48df-8657-373765b01821": {
-          "description": "Entender a diferença entre comandos que precisam ser repetidos em laços e comandos que devem ser usados sozinhos."
-        },
-        "f9dc8f2c-6f5a-4854-b0bb-296d0ca89233": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
-        },
-        "64421cd8-645b-40d1-b071-4f4238065252": {
-          "description": "Dividir tarefas complexas em seções menores e repetíveis."
-        },
-        "ddac6ae3-6abe-444e-af05-8a6b2a5eec65": {
-          "description": "Reconhecer padrões grandes e repetidos como sendo compostos de padrões menores e repetidos."
-        },
-        "f466b8aa-18bf-460d-9780-1abcb7f32589": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
-        },
-        "1368d16e-4e0d-4b76-8473-2765f5379362": {
-          "description": "Determinar se um condicional foi atendido com base em critérios."
-        },
-        "744e09fe-1aaa-4253-95e2-7f1c8fc4e5dc": {
-          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
-        },
-        "ec9adec1-48c1-458e-bae1-37f2be6a863b": {
-          "description": "Percorrer um programa e prever o resultado, considerando um conjunto de entrada."
-        },
-        "3ca80839-1859-48e0-a010-de7ef526512d": {
-          "description": "Determinar se um condicional foi atendido com base em critérios."
-        },
-        "c6a481f9-8493-4b50-876c-c16309ec4e50": {
-          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
-        },
-        "37326a7f-29b6-4ea6-9ed5-a08c2aa2dfd4": {
-          "description": "Resolver quebra-cabeças usando uma combinação de sequências com laços e condicionais."
-        },
-        "b7bbc7eb-a6d3-4820-9b4b-27b64ec0b0d4": {
-          "description": "Transformar instruções condicionais da linguagem falada em um programa."
-        },
-        "a4808383-ef10-4135-9a5d-f695b62aeb36": {
-          "description": "Usar um laço “while” para criar programas que consigam resolver problemas com valores desconhecidos."
-        },
-        "d8494711-ae41-4ccd-8db3-04385d787ca3": {
-          "description": "Diferenciar laços que se repetem um número fixo de vezes e laços que se repetem enquanto uma condição for verdadeira."
-        },
-        "115e7f69-47a1-495a-bc11-8a9ed3270324": {
-          "description": "Desenvolver programas com o entendimento de várias estratégias para implementar condicionais."
-        },
-        "7164456d-4573-432f-b255-a0596e702d96": {
-          "description": "Transformar laços e instruções condicionais da linguagem falada em um programa."
-        },
-        "bbd1a283-a817-4fd2-9335-651b698f63d2": {
-          "description": "Superar obstáculos, como restrições de tempo ou bugs."
-        },
-        "afa30921-d88a-4d96-a8d1-94de6acad10d": {
-          "description": "Decida quais tipos de declarações são aceitáveis para dizer online e quais não são."
-        },
-        "14b788f7-6566-40f5-8b91-a8c86d6d3afa": {
-          "description": "Descreva a importância do usuário no processo de design."
-        },
-        "6cea05e6-2733-4d09-be8f-1c02c646cb85": {
-          "description": "Identifique sprites em um programa de computador em execução."
-        },
-        "3be6fc2a-7c73-4ff2-b8b6-10639f40e6ad": {
-          "description": "Crie uma animação usando sprites e comportamentos."
-        },
-        "b5e9cc94-d3f5-4a4f-93db-bcadcac0be4b": {
-          "description": "Crie novos sprites e atribua a eles fantasias e comportamentos."
-        },
-        "7b9c0f1d-efa4-4397-8334-d392bb962fb7": {
-          "description": "Desenvolver programas que respondam a eventos temporizados."
-        },
-        "8fac9b1a-450f-4d68-aa87-d7b8e1bbe873": {
-          "description": "Desenvolver programas que respondam à intervenção do usuário."
-        },
-        "d13ed164-0cf7-4bb3-882a-69ed146aeb9f": {
-          "description": "Crie uma animação interativa usando eventos."
-        },
-        "8b5814c2-524a-4871-ae01-bba3f6bce488": {
-          "description": "Programe soluções para problemas que surgem ao projetar um animal de estimação virtual, como alimentá-lo."
-        },
-        "cf3f971b-43c5-4cb5-beeb-d23c903e1752": {
-          "description": "Crie um animal de estimação virtual interativo usando eventos, comportamentos e arte personalizada."
-        },
-        "04ae0169-fb41-46fb-bc74-dc22c70707f7": {
-          "description": "Determine a relação entre como uma variável é definida, armazenada e recuperada quando pressionamos “Executar” em um programa."
-        },
-        "8805bb75-452c-4778-9cd2-6df020a13216": {
-          "description": "Declarar uma variável"
-        },
-        "cc733f62-1646-49dc-b2b4-8b47a7c36fca": {
-          "description": "Chame uma variável várias vezes em um programa."
-        },
-        "d059371b-b3f0-40cb-915a-586645b2f109": {
-          "description": "Atribua um valor a uma variável"
-        },
-        "4d88e11e-77b5-4060-ab3d-2f2ae6cfa8ea": {
-          "description": "Use variáveis em conjunto com prompts."
-        },
-        "b155264b-806c-417e-bd5f-2fd91b6093ec": {
-          "description": "Usar variáveis para armazenar palavras e frases."
-        },
-        "5c6f9917-2c5e-442f-a402-14c15c8b1737": {
-          "description": "Crie um programa de computador interativo que responda à entrada do usuário."
-        },
-        "72c8cd33-c097-48d6-9178-3b146fdc243a": {
-          "description": "Usar variáveis para armazenar palavras e frases."
-        },
-        "ea8b6be7-f51c-420f-a295-ec02488a066f": {
-          "description": "Use variáveis em conjunto com prompts."
-        },
-        "3606812b-a55f-4eb9-8a40-a9ca52df3726": {
-          "description": "Faça e teste uma previsão modificando variáveis de simulação"
-        },
-        "7f41cf27-501d-4676-9ca7-9fcc15161d54": {
-          "description": "Crie um gráfico de linha dupla para comparar dados sobre duas fontes diferentes"
-        },
-        "e29b6e4a-ed9b-4aba-81ab-c1ee2a7ada84": {
-          "description": "Use uma simulação de computador para coletar dados sobre um modelo"
-        },
-        "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
-          "description": "Discutir o papel da inteligência artificial na vida deles."
-        },
-        "9ec60d3b-ddcc-479c-9e4d-220ff3d8a10a": {
-          "description": "Treinar e testar um modelo de aprendizado de máquina."
-        },
-        "ba631251-039e-4f7a-9320-158390f318c2": {
-          "description": "Raciocinar sobre o papel do viés humano no aprendizado de máquina."
-        },
-        "422e8552-7c1c-4aba-a702-e627365b7bd6": {
-          "description": "Transformar URLs em endereços IP."
-        },
-        "7a2c2a3b-c61d-4bb4-9720-c0b46a63a940": {
-          "description": "Aprender a complexidade do envio de mensagens pela internet."
-        },
-        "30f2f515-c020-4631-9ffe-3d9ba8749eb2": {
-          "description": "Conseguir explicar como as limitações do sistema podem influenciar o design do projeto."
-        },
-        "33a17071-53d7-4ba9-b041-af3fcb4fabaf": {
-          "description": "Formular e implementar planos para resolver problemas no código."
-        },
-        "505fcab3-063d-4c18-9ce1-83077359307d": {
-          "description": "Explicar o processo de design e como ele ajudou a moldar o projeto final acabado."
-        },
-        "88fa834a-0717-4422-a6df-a6af49a1e928": {
-          "description": "Descrever como o comprometimento pode ajudar a manter um projeto no caminho certo e inspirar a criatividade."
-        },
-        "9183e5a7-1776-4ffb-a65b-730edea18bc3": {
-          "description": "Aprender a se planejar para uma tarefa contínua."
-        },
-        "0265cc40-2950-42f3-a457-7b967fa9c0d9": {
-          "description": "Explique a diferença entre informações pessoais e privadas."
-        },
-        "16baead5-8507-4681-94b1-0314783a5418": {
-          "description": "Explique por que é arriscado compartilhar informações privadas on-line."
-        },
-        "d4c584f8-36e7-471a-9b83-713ca5e4711a": {
-          "description": "Identifique os motivos pelos quais as pessoas compartilham informações sobre si mesmas on-line."
-        },
-        "6f3e5897-b529-4f7a-a41f-83c11f7f03c5": {
-          "description": "Crie novos sprites e atribua a eles fantasias e comportamentos."
-        },
-        "bf11a11b-35be-4fdc-a266-9f192e141760": {
-          "description": "Defina “sprite” como um personagem ou objeto na tela que pode ser movido e alterado."
-        },
-        "0601569e-2f95-4d2f-a3a9-0aea3df102ed": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
-        },
-        "884d4f4c-abd4-493c-8029-cde7399519f4": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
-        },
-        "41232751-173e-4eaa-9bc4-bb5b65957d03": {
-          "description": "Escolha quais informações sobre eles mesmos são seguras para compartilhar on-line."
-        },
-        "6a824aaa-b3b2-4c7f-b2f9-daed0835a2c5": {
-          "description": "Crie um programa de computador interativo que expresse quem eles são com texto e imagens personalizadas."
-        },
-        "62ffafea-c5f4-4942-b283-9462c41d52cd": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
-        },
-        "68b90262-3e0e-4c90-9888-21796cd30869": {
-          "description": "Entender a diferença entre comandos que precisam ser repetidos em laços e comandos que devem ser usados sozinhos."
-        },
-        "3fac17b3-f27c-4f5c-98f1-a43e3e18d4e0": {
-          "description": "Contar o número de vezes que uma ação deve ser repetida e representar isso como um laço."
-        },
-        "81e6c614-6b5d-43db-8178-3adf983eb5b6": {
-          "description": "Dividir tarefas complexas em seções menores e repetíveis."
-        },
-        "e4a76fad-2750-4f3b-8138-0e0a932b5e2b": {
-          "description": "Combinar formas simples em designs complexos com laços aninhados."
-        },
-        "2cae95f3-a3dc-4541-8b5c-43d876d26ce3": {
-          "description": "Descrever quando é necessário um laço, um laço aninhado ou nenhum laço."
-        },
-        "45801eec-c3af-4a73-afb8-988d55e7a469": {
-          "description": "Identificar a diferença entre o uso de um laço e um laço aninhado."
-        },
-        "feae5f14-f531-4db9-b746-9582df08da12": {
-          "description": "Decompor o código nas maiores sequências repetíveis utilizando laços e laços aninhados."
-        },
-        "020afd03-339c-4b70-af23-62f495f2088f": {
-          "description": "Identificar seções de uma música para colocar em uma função."
-        },
-        "386901b7-db20-4705-90ee-391a42d76d3a": {
-          "description": "Descrever como as funções podem facilitar a escrita de programas."
-        },
-        "887412d7-6f80-42df-98b4-6ef39bb4f09c": {
-          "description": "Localizar frases repetidas em letras de músicas."
-        },
-        "50d6d0ce-0013-47e4-9f0b-ac6bca5d4a30": {
-          "description": "Usar funções predeterminadas para concluir tarefas comumente repetidas."
-        },
-        "e3843037-6a2c-4561-9a5c-c27b4e84de71": {
-          "description": "Usar funções para simplificar programas complexos."
-        },
-        "34743a30-9835-4b96-9933-c84ccd8a20b6": {
-          "description": "Reconhecer quando uma função pode ajudar a simplificar um programa."
-        },
-        "fa73c58f-368d-4e53-97eb-7de987b548c3": {
-          "description": "Classificar e generalizar códigos em funções úteis."
-        },
-        "818dc160-2ce6-4d7d-a358-208b9026debb": {
-          "description": "Determinar se um condicional foi atendido com base em critérios."
-        },
-        "cb32fed2-db37-4e6c-9651-3b1f39fd4741": {
-          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
-        },
-        "1b6a66df-472f-49d6-acdf-13c2f6fdb263": {
-          "description": "Determinar se um condicional foi atendido com base em critérios."
-        },
-        "80cf9584-e814-4880-8c83-119966ed7a89": {
-          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
-        },
-        "59e29159-7e29-48ce-95c7-8510877793e9": {
-          "description": "Reconhecer quando uma função pode ajudar a simplificar um programa."
-        },
-        "b92ee5de-79d3-4fd6-8bf6-e86e3dad779a": {
-          "description": "Usar funções predeterminadas para concluir tarefas comumente repetidas."
-        },
-        "5fb6d430-a2bf-4d0b-b128-5592afc2d856": {
-          "description": "Melhore o design de um aplicativo existente abordando as necessidades de acessibilidade dos usuários."
-        },
-        "bb1f6fd9-3327-411d-b91e-d3b4e756fff3": {
-          "description": "Explique por que a acessibilidade é uma parte importante do design de um aplicativo para os usuários."
-        },
-        "fcecef31-84d0-4df2-80cd-f8641b06c24f": {
-          "description": "Descreva o impacto dos aplicativos móveis no mundo moderno."
-        },
-        "2c0ee6b8-608a-47b6-9093-dbab81b92cbf": {
-          "description": "Entenda seus próprios direitos em relação aos materiais que eles criaram"
-        },
-        "a8686006-16c5-4b08-94d2-32430cd6d77f": {
-          "description": "Interprete o compartilhamento ético de material protegido por direitos autorais versus o compartilhamento que não é ético."
-        },
-        "0c9da891-a9a1-4747-a7da-dc2c76462eb4": {
-          "description": "Explicar como as limitações do sistema podem influenciar o design do projeto."
-        },
-        "5d3b2774-424f-487f-b119-05254b043b89": {
-          "description": "Descrever como o comprometimento pode ajudar a manter um projeto no caminho certo e inspirar a criatividade."
-        },
-        "78939802-f928-4ec5-89cb-3e2aef29d9ce": {
-          "description": "Explicar o processo de design e como ele ajudou a moldar o projeto final acabado."
-        },
-        "82992d38-7821-4608-92a1-bd4fd05d7226": {
-          "description": "Formular e implementar planos para resolver problemas no código."
-        },
-        "d3dbfefc-34eb-4b0a-ab79-53a1ce3adfdc": {
-          "description": "Aprender a se planejar para uma tarefa contínua."
-        },
-        "4bf451c9-a1ce-4e40-95a6-10c911a081bf": {
-          "description": "Saiba que as informações que eles compartilham online deixam uma pegada digital ou um “rastro”."
-        },
-        "7cc37ede-4e83-4881-9213-1746313de397": {
-          "description": "Explore quais informações podem ser compartilhadas online."
-        },
-        "1fb2f469-060b-4caf-ab67-28747acc0f00": {
-          "description": "Traduza uma lista de etapas em uma série de ações físicas"
-        },
-        "8a9a5295-648e-47f2-baec-c5a360f2788a": {
-          "description": "Defina uma lista de etapas (algoritmo) para levar um amigo da posição inicial ao objetivo"
-        },
-        "ab239024-3c6d-4db1-8c7c-2572c316dc75": {
-          "description": "Identificar e corrigir erros na execução de um algoritmo"
-        },
-        "9c04f7e1-5859-4e61-9ae0-630df254a9aa": {
-          "description": "Modele comportamentos adequados de laboratório de informática"
-        },
-        "c78930e6-cbb5-418c-8ca3-9124e79570cd": {
-          "description": "Experimente ações de programação padrão baseadas em blocos, como: clicar, arrastar e soltar, etc."
-        },
-        "0ad6ceff-faa1-40ea-a688-7ad92308dca3": {
-          "description": "Construa um programa reorganizando movimentos sequenciais."
-        },
-        "1c946e64-eafa-4a8f-8c2d-5829ab3acbf7": {
-          "description": "Crie um programa de computador a partir de um conjunto de instruções escritas."
-        },
-        "59718681-70e8-4b7f-91a7-e6b02e4ca98f": {
-          "description": "Transformar movimentos em uma série de comandos."
-        },
-        "a278cf3e-4bf9-4d1c-b9d0-a73c2530e3d8": {
-          "description": "Transformar movimentos em uma série de comandos."
-        },
-        "ae6f9158-191c-458c-9850-331faf94b567": {
-          "description": "Identificar e localizar erros em um programa."
-        },
-        "72900cbd-2ad8-4073-abde-f397a2832b5d": {
-          "description": "Converter uma série de ações em um único laço."
-        },
-        "76138142-0691-4645-8e78-5dbb1c19eab0": {
-          "description": "Transformar um programa de imagens em uma dança no mundo real."
-        },
-        "ad9095b2-5de7-41af-89b9-aac0f2fd0726": {
-          "description": "Repetir ações iniciadas pelo instrutor."
-        },
-        "2b7ac17e-7e3a-44b5-8c46-e28eec5af112": {
-          "description": "Decompor uma longa sequência de instruções na menor sequência repetível possível."
-        },
-        "4d6affaa-f8b0-4dbc-a436-4dccf8c57fc1": {
-          "description": "Utilizar uma combinação de comandos sequenciais e com laços para chegar ao final de um labirinto."
-        },
-        "be1a4163-770d-4fbd-85a1-4c18198d5c94": {
-          "description": "Criar um programa para uma determinada tarefa que faça um laço de uma sequência de comandos."
-        },
-        "dbb376e1-41ba-4f5f-8125-30a2de24cead": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
-        },
-        "36786d0a-ce44-48d7-b557-a7e44c32c28d": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
-        },
-        "6baba9ab-130e-4a58-bf30-7cee60bacb18": {
-          "description": "Decompor uma longa sequência de instruções na menor sequência repetível possível."
-        },
-        "54ae27f7-71b5-41ce-a67a-61d15e520bc3": {
-          "description": "Contar o número de vezes que uma ação deve ser repetida e representar isso como um laço."
-        },
-        "5f8621d2-481c-487d-a2e1-90d7fd15b929": {
-          "description": "Criar um programa que desenhe formas complexas pela repetição de sequências simples."
-        },
-        "b85981bf-b2e5-49f6-bf08-348f8d16ba2b": {
-          "description": "Decompor uma forma em sua maior sequência repetível."
-        },
-        "28c09bb0-c9f4-44ab-ba0a-8c9cdb24e5f0": {
-          "description": "Recomende tecnologia para outras pessoas com base em suas necessidades exclusivas. "
-        },
-        "9e78b33b-39a6-4524-89e4-a26fdba11cb5": {
-          "description": "Aplique empatia e criatividade à tecnologia de design para outras pessoas. "
-        },
-        "f854671c-b4c0-4bd7-8dd6-bf0094cd1733": {
-          "description": "Liste vários exemplos diferentes de aplicativos para smartphones."
-        },
-        "1275ac31-dcd9-49c5-92e2-68abd8aa9955": {
-          "description": "Repetir os comandos dados por um instrutor."
-        },
-        "4dbb2bcf-bd83-4c90-a077-6261a6b2607c": {
-          "description": "Praticar a diferenciação de ações predefinidas e ações orientadas a eventos."
-        },
-        "ef1a9273-ff0e-4134-8456-9762728bed55": {
-          "description": "Reconhecer ações do professor como sinais para iniciar comandos."
-        },
-        "2583489b-c21a-415d-bd1f-c0fa1eca9ef0": {
-          "description": "Identificar ações que se correlacionem com eventos de entrada."
-        },
-        "2f9f9b26-d5f6-48ab-be27-98608a47b74d": {
-          "description": "Criar uma história animada e interativa utilizando sequências e manipuladores de eventos."
-        },
-        "a64618b3-e151-46ce-9670-cada1927a2db": {
-          "description": "Compartilhar um artefato criativo com outros alunos."
-        },
-        "0e1a61eb-eb48-4c3b-ab89-5b19ef6c6977": {
-          "description": "Aplique conceitos de ciência da computação em um projeto aberto."
-        },
-        "3aa63e80-f3d8-4043-811d-5b275f168499": {
-          "description": "Superar obstáculos, como restrições de tempo ou bugs."
-        },
-        "7279e4aa-2ccc-49b2-b912-e4e4d680e15b": {
-          "description": "Identificar e localizar erros em um programa."
-        },
-        "a87240fd-cb47-49df-ae9e-d058ab3fcb26": {
-          "description": "Transformar movimentos em uma série de comandos."
-        },
-        "1fd14cce-1e61-42c8-83d4-2252ec67f9e9": {
-          "description": "Refletir sobre o processo de depuração de maneira adequada à idade."
-        },
-        "3e5024e3-0c8e-436c-b532-42749d6a5cf0": {
-          "description": "Prever onde um programa vai falhar."
-        },
-        "d219187c-ecad-4854-ba3e-b136b4511fcc": {
-          "description": "Modificar um programa existente para resolver erros."
-        },
-        "5c54f1b4-f582-4b2f-8db1-396336c44a7b": {
-          "description": "Representar um algoritmo como um programa de computador."
-        },
-        "87bbc4aa-8c38-4428-8a5c-e6b86bc489f5": {
-          "description": "Ordenar comandos de movimento como etapas sequenciais em um programa."
-        },
-        "ff07b623-686f-4193-91c9-c427b5d780ad": {
-          "description": "Desenvolver competências de solução de problemas e pensamento crítico analisando práticas de depuração."
-        },
-        "b06566c3-55fe-4cb6-9e55-f40814d47ad8": {
-          "description": "Criar um programa para concluir uma imagem utilizando etapas sequenciais."
-        },
-        "fbaccfd8-2a19-449c-a260-3e0e4b6f0cc6": {
-          "description": "Dividir formas complexas em partes simples."
-        },
-        "09012264-2762-4a05-a5e5-f5b826fe16ad": {
-          "description": "Crie novos sprites e atribua a eles fantasias e comportamentos."
-        },
-        "0e3791df-3c03-4b83-9943-d3b57110dea1": {
-          "description": "Defina “sprite” como um personagem ou objeto na tela que pode ser movido e alterado."
-        },
-        "0b712f3f-c5fb-4d8d-8247-23bfa13c0139": {
-          "description": "Crie novos sprites e atribua a eles fantasias e comportamentos."
-        },
-        "7ecf2549-51ae-4bcd-bc3a-d4fc6059b7bc": {
-          "description": "Crie uma animação usando sprites e comportamentos."
-        },
-        "7bb23f18-d99f-4ded-af08-d9e8eee2e1e5": {
-          "description": "Crie uma animação interativa usando eventos."
-        },
-        "938b2178-a433-4324-ba73-b1b6f8e0c0be": {
-          "description": "Desenvolver programas que respondam a eventos temporizados."
-        },
-        "ae7debff-9532-4a44-9f44-50813f955edf": {
-          "description": "Desenvolver programas que respondam à intervenção do usuário."
-        },
-        "afc3a3eb-84f3-462c-89e5-2b8d3cb1f879": {
-          "description": "Crie um animal de estimação virtual interativo usando eventos, comportamentos, variáveis e arte personalizada."
-        },
-        "eb7e84c2-0694-4b77-90a0-747270409a09": {
-          "description": "Programe soluções para problemas que surgem ao projetar um animal de estimação virtual, como alimentá-lo ou monitorar sua felicidade."
-        },
-        "9f0d4053-b0bb-4213-bb8a-b07433bb84cf": {
-          "description": "Desenvolver programas que respondam a eventos programados"
-        },
-        "f4427747-3b3f-43ac-b124-2ed1856ab5be": {
-          "description": "Criar animações de dança utilizando código"
-        },
-        "f6a45c87-6f01-4df0-8020-0a9be77f0d10": {
-          "description": "Desenvolver programas que respondam à entrada do usuário"
-        },
-        "1d64ca6b-c3c3-41c5-b923-280bf46dbdc9": {
-          "description": "Utilizar uma combinação de comandos sequenciais e com laços para chegar ao final de um labirinto."
-        },
-        "8a54dbc1-2cc5-4fbe-a69d-1fcdeb521415": {
-          "description": "Decompor uma longa sequência de instruções na maior sequência repetível."
-        },
-        "d1a8cfa4-2a01-4cd1-bf6b-7bdb85dfbba2": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
-        },
-        "19f2a21b-7cd6-49c1-b058-a71afadfbf0f": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
-        },
-        "bbb2787f-1faa-4193-93ec-e2e5ff8de139": {
-          "description": "Entender a diferença entre comandos que precisam ser repetidos em laços e comandos que devem ser usados sozinhos."
-        },
-        "64f8b4e0-c197-41bc-9e3d-b957587027d9": {
-          "description": "Reconhecer padrões grandes e repetidos como sendo compostos de padrões menores e repetidos."
-        },
-        "a3d9c13d-e5d1-4c96-8605-b6c6968e446a": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
-        },
-        "f875fba7-8b45-4faa-b661-24d7eae983b5": {
-          "description": "Dividir tarefas complexas em seções menores e repetíveis."
-        },
-        "2dc48a33-af54-4ea5-b2a5-4b8c16018529": {
-          "description": "Identificar a diferença entre o uso de um laço e um laço aninhado."
-        },
-        "3eb2fbbc-383b-4293-94a9-df920d67ff2e": {
-          "description": "Descrever quando é necessário um laço, um laço aninhado ou nenhum laço."
-        },
-        "7376c401-4ea5-4247-a739-1b3c8f3077c7": {
-          "description": "Decompor o código nas maiores sequências repetíveis utilizando laços e laços aninhados."
-        },
-        "5abe1116-ce82-4bce-8454-7537bdce12d4": {
-          "description": "Determinar se um condicional foi atendido com base em critérios."
-        },
-        "b75b5c74-2020-4cba-abb7-9c1d2432c93f": {
-          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
-        },
-        "94a0640b-eaf9-4797-b448-601edefe53f7": {
-          "description": "Transformar instruções condicionais da linguagem falada em um programa."
-        },
-        "da9556fa-6a34-4735-a0fe-4f61e5dfba88": {
-          "description": "Resolver quebra-cabeças usando uma combinação de sequências com laços e condicionais."
-        },
-        "9a923506-c553-4734-8675-3925b4205a40": {
-          "description": "Diferenciar laços que se repetem um número fixo de vezes e laços que se repetem enquanto uma condição for verdadeira."
-        },
-        "ef9064e8-a2fc-43a5-a847-0e504ffd7043": {
-          "description": "Usar um laço “while” para criar programas que consigam resolver problemas com valores desconhecidos."
-        },
-        "11cc6b71-35eb-4651-87ef-17cb48e8e93a": {
-          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
-        },
-        "979a7e2a-759e-4ffc-96b2-552fe5888fb9": {
-          "description": "Determinar se um condicional foi atendido com base em critérios."
-        },
-        "580ad418-73dc-42d0-8934-42fe0a9af98a": {
-          "description": "Desenvolver programas com o entendimento de várias estratégias para implementar condicionais."
-        },
-        "94e41188-94ca-4365-878b-408e000c2a1d": {
-          "description": "Transformar laços e instruções condicionais da linguagem falada em um programa."
-        },
-        "24fd8517-7a14-4489-8d76-76ddf7b9a7fe": {
-          "description": "Emparelhar um laço e uma instrução condicional juntos."
-        },
-        "57a8c756-ad85-4861-ae8d-a54d86c19d26": {
-          "description": "Aninhar condicionais para analisar várias condições de valor usando a lógica se… então."
-        },
-        "6c8101ef-895e-43de-b0a5-cbfddc2ca79f": {
-          "description": "Usar funções para simplificar programas complexos."
-        },
-        "90578a9d-1c23-4b7e-be6d-5c2d5c18ff7b": {
-          "description": "Usar funções predeterminadas para concluir tarefas comumente repetidas."
-        },
-        "05e395d7-bc15-440b-a765-833fc2e05258": {
-          "description": "Reconhecer quando uma função pode ajudar a simplificar um programa."
-        },
-        "3ccd51c5-ad2c-4f0e-9a41-5816a40cc190": {
-          "description": "Usar funções predeterminadas para concluir tarefas comumente repetidas."
-        },
-        "33ccfa77-2a9e-4500-ba9c-0ba82af10a78": {
-          "description": "Classificar e generalizar códigos em funções úteis."
-        },
-        "fdfbb07a-5a1c-459d-81ae-8b7c35da4ecc": {
-          "description": "Reconhecer quando uma função pode ajudar a simplificar um programa."
-        },
-        "7540f285-a55a-465e-87cd-ed3a930b9ea7": {
-          "description": "Use variáveis em conjunto com prompts."
-        },
-        "fc585f17-d535-4c1d-aaba-65e878894373": {
-          "description": "Ações Use variáveis para conter palavras e frases."
-        },
-        "75953ae5-c4fa-40d3-85e1-deb508c32847": {
-          "description": "Atribuir valores a variáveis existentes."
-        },
-        "ba1c8ef0-b9fa-4784-9951-6999428d1bbc": {
-          "description": "Usar variáveis para alterar valores dentro de um laço."
-        },
-        "e17081b3-65af-4076-afc7-e8aa69da02f2": {
-          "description": "Utilizar variáveis no lugar de valores repetitivos em um programa."
-        },
-        "4df8eb31-02ee-4e5d-ae28-368a29da7142": {
-          "description": "Examine o código para encontrar locais onde as variáveis podem ser substituídas por valores específicos."
-        },
-        "d800c885-0e72-4325-a176-68612c826131": {
-          "description": "Identifique áreas nas quais eles podem usar variáveis para modificar quantidades durante o tempo de execução. "
-        },
-        "61ae46d2-2f10-4073-935c-b46ab9fae340": {
-          "description": "Reconheça quando usar um loop for e quando usar outros loops, como loops repeat e while."
-        },
-        "ec3dab8e-cfb2-4b3a-9b33-dace79bba6c6": {
-          "description": "Determine o valor inicial, o valor de parada e o valor de passo para um loop for."
-        },
-        "a75dc8b9-eebc-48cd-9495-289d69501b09": {
-          "description": "Use loops for para alterar o loop várias vezes com valores diferentes."
-        },
-        "d759d477-89f3-4ef8-b701-c4115a3258cd": {
-          "description": "Reconheça quando usar um loop for e quando usar outros loops, como loops repeat e while."
-        },
-        "546d4a38-5abb-402c-9e61-bef13a71001d": {
-          "description": "Superar obstáculos, como restrições de tempo ou bugs."
-        },
-        "8d8fffd3-6411-4778-95f5-76953d066786": {
-          "description": "Identificar o que se espera deles ao fazerem a transição para o laboratório de informática."
-        },
-        "d62cb1ce-6c5d-4893-ba48-3f8a844f0670": {
-          "description": "Use a terminologia apropriada ao se referir a um mouse de computador, painel tátil (touchpad), ou tela sensível ao toque."
-        },
-        "1527c354-dff7-4d8c-94f7-8b55d5bc3099": {
-          "description": "Modele comportamentos adequados de laboratório de informática"
-        },
-        "fc61a33c-e645-4600-b2d3-70bb8e46a938": {
-          "description": "Experimente ações de programação padrão baseadas em blocos, como: clicar, arrastar e soltar, etc."
-        },
-        "26c1a686-8627-439a-b7f9-3e42d80d4a6c": {
-          "description": "Desenvolver um programa de computador a partir de um conjunto de instruções por escrito"
-        },
-        "8f583ef0-bd0b-4e2c-81c3-11057794f7e2": {
-          "description": "Construir um programa reorganizando movimentos sequenciais"
-        },
-        "e20881b1-a3ad-4095-a434-6db807d457ed": {
-          "description": "Transformar movimentos em uma série de comandos."
-        },
-        "6856ac6b-753c-4870-bfe4-d6ee553ff409": {
-          "description": "Ordenar comandos em uma sequência lógica."
-        },
-        "bbf10b3a-152d-472c-82b5-761d1be6e3b2": {
-          "description": "Identificar problemas ou “bugs” em um programa e desenvolver um plano para resolvê-los."
-        },
-        "21d90a6a-f1ea-4d0b-ba17-f2e6a53cf78c": {
-          "description": "Identificar e localizar erros em um programa."
-        },
-        "d73df8bf-fcc2-4732-a4be-cab60f8b326d": {
-          "description": "Transformar movimentos em uma série de comandos."
-        },
-        "26b58b7e-9af6-4979-8a63-8f69d7f308c8": {
-          "description": "Construir um programa usando estruturas que repetem partes do código"
-        },
-        "65939b9f-ba0f-4834-8f54-24419c9391e5": {
-          "description": "Melhorar o código atual identificando áreas de repetição e movendo-as para estruturas de laço"
-        },
-        "3a06cce8-584a-431c-8cca-05ad9b0df32d": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
-        },
-        "d7a5432f-6854-483b-8a5b-fcb1844dd603": {
-          "description": "Decompor uma longa sequência de instruções na menor sequência repetível possível."
-        },
-        "356a5953-6822-4156-b54f-e5f2095156e1": {
-          "description": "Contar o número de vezes que uma ação deve ser repetida e representar isso como um laço."
-        },
-        "e8114e57-1426-4241-9cbb-dc57a3edadab": {
-          "description": "Decompor uma forma em sua maior sequência repetível."
-        },
-        "fcdb6a79-7043-4f4d-b4fe-04beeb339fea": {
-          "description": "Criar um programa que desenhe formas complexas pela repetição de sequências simples."
-        },
-        "416213df-e386-420c-aafe-40e05d790f59": {
-          "description": "Criar um programa que desenhe formas complexas pela repetição de sequências simples."
-        },
-        "448fabd8-2154-4840-9807-b0b79bab8c96": {
-          "description": "Contar o número de vezes que uma ação deve ser repetida e representar isso como um laço."
-        },
-        "f2e5268e-cbce-4db0-abb3-e2b6a65684d8": {
-          "description": "Decompor uma forma em sua maior sequência repetível."
-        },
-        "35be46ad-58dd-4072-97a4-09a55c75e329": {
-          "description": "Identificar ações que se correlacionem com eventos de entrada."
-        },
-        "37987315-bfd5-46fd-9faa-9e480ef816b2": {
-          "description": "Criar uma história animada e interativa utilizando sequências e manipuladores de eventos."
-        },
-        "fb6ff331-603c-4310-83e8-77e3e606edfe": {
-          "description": "Compartilhar um artefato criativo com outros alunos."
-        },
-        "0f40a956-c075-4b89-a139-101c2288896f": {
-          "description": "Compartilhar um artefato criativo com outros alunos."
-        },
-        "11e630e5-0551-49c9-9894-2db312a9f1df": {
-          "description": "Identificar ações que se correlacionem com eventos de entrada."
-        },
-        "d2669646-8580-4bb3-a6e0-54961b42a029": {
-          "description": "Criar uma história animada e interativa utilizando sequências e manipuladores de eventos."
-        },
-        "086d6899-da60-486b-a9f7-89715397d81c": {
-          "description": "Explique as regras para viajar com segurança pela internet."
-        },
-        "6ec5d1a8-13d0-43ab-a269-dc1060d0f872": {
-          "description": "Compare como ficar seguro online é semelhante a ficar seguro no mundo real."
-        },
-        "dfa4ff01-8e4b-410d-93fb-2380f70f0042": {
+        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
           "description": "Descubra que a internet pode ser usada para visitar lugares distantes e aprender coisas novas."
         },
-        "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
+        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
+          "description": "Compare como ficar seguro online é semelhante a ficar seguro no mundo real."
+        },
+        "ba49206c-c099-4994-be57-1f8744273eaf": {
+          "description": "Explique as regras para viajar com segurança pela internet."
+        },
+        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "Identificar o que se espera deles ao fazerem a transição para o laboratório de informática."
         },
-        "d386bcb1-393c-46bc-8524-7380583d6ebb": {
+        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
           "description": "Use a terminologia apropriada ao se referir a um mouse de computador, painel tátil (touchpad), ou tela sensível ao toque."
         },
-        "42c68792-f472-4122-906c-67bef3edae73": {
+        "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
           "description": "Transformar um algoritmo em um programa"
         },
-        "4d08a4a4-7475-4257-a955-62768629b65e": {
-          "description": "Identificar e resolver bugs ou erros nas instruções sequenciadas"
-        },
-        "f28907e3-caa2-4cfa-bd01-39282b5f5f8d": {
+        "95ef707d-603d-4106-955e-3138f0f16a5d": {
           "description": "Decodificar e executar um programa criado por outra pessoa"
         },
-        "25a06d14-94e5-41a1-b199-2d8ef7041b0f": {
-          "description": "Experimente ações de programação padrão baseadas em blocos, como: clicar, arrastar e soltar, etc."
-        },
-        "2e7e4324-ea3b-4e18-a61a-0e449579669a": {
-          "description": "Modele comportamentos adequados de laboratório de informática"
-        },
-        "81b0eb83-7612-4f91-91d1-f6dd25afebb6": {
-          "description": "Construir um programa reorganizando movimentos sequenciais"
-        },
-        "d6d95ae8-01ab-408a-a17d-6c4813fe0991": {
-          "description": "Desenvolver um programa de computador a partir de um conjunto de instruções por escrito"
-        },
-        "f3ccc59a-2988-4ec2-994f-ae781e4e66d6": {
-          "description": "Escolher práticas de depuração adequadas ao solucionar problemas"
-        },
-        "8fda32cd-f173-4d41-9a5c-4bb91f282534": {
-          "description": "Identificar problemas ou “bugs” em um programa e desenvolver um plano para resolvê-los."
-        },
-        "ad2e874f-6827-4cec-bd3e-4c12a0596df5": {
-          "description": "Ordenar comandos em uma sequência lógica."
-        },
-        "242ad249-b860-4727-9b98-01f0e2025d8d": {
-          "description": "Interpretar um programa com laços como uma série de ações."
-        },
-        "616d06fa-de3a-4e8e-970b-1077be296a30": {
-          "description": "Identificar códigos repetitivos e reduzir várias ações a um único laço."
-        },
-        "a28f100d-9129-44e2-ae89-93a0e4da1ef2": {
-          "description": "Melhorar o código atual identificando áreas de repetição e movendo-as para estruturas de laço"
-        },
-        "b55b43b6-9b0d-4703-be2e-9525b05c0a26": {
-          "description": "Construir um programa usando estruturas que repetem partes do código"
-        },
-        "95c27888-7fcc-4606-8647-b8d7aca4841c": {
-          "description": "Decompor uma longa sequência de instruções na menor sequência repetível possível."
-        },
-        "afb9f46f-81f6-4f0a-a017-4e9c5fd5c7f6": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
-        },
-        "03eb830d-5a23-4897-b23b-067e5eb0180f": {
-          "description": "Decompor uma forma em sua maior sequência repetível."
-        },
-        "408f218c-3c80-44f0-9a98-c6bd82fa4021": {
-          "description": "Criar um programa que desenhe formas complexas pela repetição de sequências simples."
-        },
-        "eb0c126b-1a28-4a64-81a8-84713ba12efb": {
-          "description": "Contar o número de vezes que uma ação deve ser repetida e representar isso como um laço."
-        },
-        "11ae4f6e-9a22-4fe7-b476-d0251076f65b": {
-          "description": "Praticar a diferenciação de ações predefinidas e ações orientadas a eventos."
-        },
-        "699d524a-9ba6-430d-8ab4-fdce1b832b6f": {
-          "description": "Reconhecer ações do professor como sinais para iniciar comandos."
-        },
-        "805cf72f-fb59-4003-b6b5-1879ced802b9": {
-          "description": "Repetir os comandos dados por um instrutor."
-        },
-        "946d56ae-8a81-476c-93ab-6d5eff1f9633": {
-          "description": "Criar uma história animada e interativa utilizando sequências e manipuladores de eventos."
-        },
-        "ab8e0f55-bcb7-4af5-813f-df7d9629e21f": {
-          "description": "Compartilhar um artefato criativo com outros alunos."
-        },
-        "dddf548b-2b97-45fd-ad62-f4c633d3647d": {
-          "description": "Identificar ações que se correlacionem com eventos de entrada."
-        },
-        "12be98ac-b495-4379-94d1-6cdd7395776a": {
-          "description": "Superar obstáculos, como restrições de tempo ou bugs."
-        },
-        "6619f367-009a-49ca-9d78-582a2ff9ad5e": {
-          "description": "Aplique conceitos de ciência da computação em um projeto aberto."
-        },
-        "33b55b11-ca81-406f-be39-265e8f33d09d": {
-          "description": "Identifique maneiras de responder a palavras maldosas online, usando S-T-O-P."
-        },
-        "ce3ba860-7753-4c2c-a161-64d59903674a": {
-          "description": "Entenda como pode ser a maldade online e como ela pode fazer as pessoas se sentirem."
-        },
-        "87841dc9-5cfa-4c68-9c56-9ca76b2668f8": {
-          "description": "Prestar atenção à precisão ao criar instruções"
-        },
-        "ce7a9596-845a-4d2f-b7ce-3e27b6faa99d": {
+        "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
           "description": "Identificar e resolver bugs ou erros nas instruções sequenciadas"
         },
-        "1e020282-115c-4c09-877d-5003b8eb49a6": {
-          "description": "Identificar e localizar erros em um programa."
+        "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
+          "description": "Modele comportamentos adequados de laboratório de informática"
         },
-        "fd4b3a3e-1db9-4890-babf-f0def99a0792": {
-          "description": "Transformar movimentos em uma série de comandos."
+        "6df3d067-06bb-4e95-856f-ef980543a15e": {
+          "description": "Experimente ações de programação padrão baseadas em blocos, como: clicar, arrastar e soltar, etc."
         },
-        "1f6fd95f-78cb-4839-8943-ef8bf1b589e9": {
-          "description": "Prever onde um programa vai falhar."
+        "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
+          "description": "Construir um programa reorganizando movimentos sequenciais"
         },
-        "b3dfe6ec-41ae-4e35-92b0-aa57386cbe5d": {
-          "description": "Modificar um programa existente para resolver erros."
+        "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
+          "description": "Desenvolver um programa de computador a partir de um conjunto de instruções por escrito"
         },
-        "feceda1c-bb8d-4811-9f23-0594de02a6ed": {
-          "description": "Refletir sobre o processo de depuração de maneira adequada à idade."
+        "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
+          "description": "Escolher práticas de depuração adequadas ao solucionar problemas"
         },
-        "10c02df1-0f34-4c22-beef-7607c0b55c9a": {
-          "description": "Representar um algoritmo como um programa de computador."
+        "199aed02-347c-4892-9e98-d7571ae64c9d": {
+          "description": "Ordenar comandos em uma sequência lógica."
         },
-        "704602b1-99ad-45e8-ac96-eba9ad885da8": {
-          "description": "Ordenar comandos de movimento como etapas sequenciais em um programa."
+        "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
+          "description": "Identificar problemas ou “bugs” em um programa e desenvolver um plano para resolvê-los."
         },
-        "a8bc7283-57bf-460e-8f1c-f4a26035ebfc": {
-          "description": "Desenvolver competências de solução de problemas e pensamento crítico analisando práticas de depuração."
+        "407c5a4d-9337-4218-92d5-018597e41e19": {
+          "description": "Identificar códigos repetitivos e reduzir várias ações a um único laço."
         },
-        "30aa1d4a-8e6e-4b27-8a1a-5c5ea80d6b3f": {
-          "description": "Criar um programa para concluir uma imagem utilizando etapas sequenciais."
+        "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
+          "description": "Interpretar um programa com laços como uma série de ações."
         },
-        "e0ada5e4-a180-4691-9bd3-8b83763f9dd2": {
-          "description": "Dividir formas complexas em partes simples."
+        "cb7cab91-20ca-495a-a429-621631cb0507": {
+          "description": "Construir um programa usando estruturas que repetem partes do código"
         },
-        "81c36d87-10e0-4f7e-91f2-88b6065ab543": {
-          "description": "Identificar padrões repetidos no código que possam ser substituídos por um laço"
+        "381b89ab-336f-41cd-b755-78142a1f1f90": {
+          "description": "Melhorar o código atual identificando áreas de repetição e movendo-as para estruturas de laço"
         },
-        "d96017f7-e2b0-45e1-aa9f-12055fcee5fe": {
-          "description": "Escrever instruções que utilizem laços para repetir padrões"
-        },
-        "00417e59-53f6-4f10-9e17-ae69f9e5db7b": {
-          "description": "Utilizar uma combinação de comandos sequenciais e com laços para chegar ao final de um labirinto."
-        },
-        "b2de5b75-e224-4eee-aa3a-ab51792f3dea": {
-          "description": "Decompor uma longa sequência de instruções na maior sequência repetível."
-        },
-        "be258fd0-4790-440a-99ef-bb20ce2d3c8b": {
+        "632bd918-c124-4f4c-892e-980cdc07b3bf": {
           "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
         },
-        "2998b3d3-4953-4cbf-94f2-004630893e21": {
-          "description": "Utilizar uma combinação de comandos sequenciais e com laços para mover e realizar ações."
+        "ea6a44e1-0175-4ecc-a257-4489b703c063": {
+          "description": "Decompor uma longa sequência de instruções na menor sequência repetível possível."
         },
-        "35810652-e1be-48aa-923b-1148a5c1584e": {
-          "description": "Identificar quando é possível usar um laço para simplificar uma ação repetitiva."
+        "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
+          "description": "Contar o número de vezes que uma ação deve ser repetida e representar isso como um laço."
         },
-        "5b7b74bc-4f78-4c98-b221-5233324b086e": {
-          "description": "Escrever um programa para uma determinada tarefa que faça um laço de um único comando."
+        "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
+          "description": "Decompor uma forma em sua maior sequência repetível."
         },
-        "cf1d581f-7554-4432-a92e-3e5f57f9144e": {
-          "description": "Entender a diferença entre comandos que precisam ser repetidos em laços e comandos que devem ser usados sozinhos."
+        "66267233-8532-4f63-aea5-3a214dac119a": {
+          "description": "Criar um programa que desenhe formas complexas pela repetição de sequências simples."
         },
-        "dda209ff-ec81-4914-93c0-2716153efce4": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
-        },
-        "05615b7c-1833-4ca9-96a8-45812c1e8a4a": {
-          "description": "Praticar a diferenciação de ações predefinidas e ações orientadas a eventos."
-        },
-        "3070da76-01ca-461e-a251-7a0abd74ec8d": {
+        "134f184c-8865-44d2-8921-5740c749bcd5": {
           "description": "Repetir os comandos dados por um instrutor."
         },
-        "ec6ade74-43c3-41d9-a10e-5001a2630fba": {
-          "description": "Reconhecer movimentos do professor como sinais para iniciar comandos."
+        "b7973aec-afbf-4f81-820c-daced7731b0f": {
+          "description": "Reconhecer ações do professor como sinais para iniciar comandos."
         },
-        "08847046-9784-46fb-996b-17a827cbea6f": {
-          "description": "Correlacionar blocos ao manipulador de eventos adequado."
+        "3ec1a741-277f-46fb-9ec1-e358f399dab4": {
+          "description": "Praticar a diferenciação de ações predefinidas e ações orientadas a eventos."
         },
-        "6f45e56c-85b7-4e48-86d4-3394e0e7048e": {
-          "description": "Compartilhar um artefato criativo com outros alunos."
-        },
-        "c912e4f7-5734-44cc-8090-77fe751676f4": {
-          "description": "Criar um jogo usando manipuladores de eventos."
-        },
-        "36275ea8-84ac-4220-87ca-53d1b5eaac43": {
+        "106c5668-bbc0-404b-8cb5-8ff2bd66eeef": {
           "description": "Identificar ações que se correlacionem com eventos de entrada."
         },
-        "7263be7c-5e96-4ce0-8f3a-04cd57918643": {
-          "description": "Criar um jogo animado e interativo utilizando sequências e manipuladores de eventos."
+        "b366b41e-9396-4c1b-9d35-164052448c1c": {
+          "description": "Criar uma história animada e interativa utilizando sequências e manipuladores de eventos."
         },
-        "93ff4ab3-b610-4f61-aa17-c5d1dc187ebf": {
-          "description": "Crie um gráfico de barras e um gráfico de pizza para representar dados simples."
+        "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
+          "description": "Compartilhar um artefato criativo com outros alunos."
         },
-        "b1760cb7-8bc1-4f45-85a4-f8231785ab7e": {
-          "description": "Faça comparações entre visualizações de dados feitas por outras pessoas e use-as para fazer uma previsão."
+        "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
+          "description": "Aplique conceitos de ciência da computação em um projeto aberto."
         },
-        "e77eca08-1bf5-47df-a660-6c5ba38d4fec": {
-          "description": "Colete e registre dados sobre quantidades de objetos reais ou caracteres em uma tela"
-        },
-        "2579c049-c0cd-4fcc-ac9f-bdd6c561ef52": {
-          "description": "Decodificar binários, transformando-os novamente em letras."
-        },
-        "9a7d25e3-3f39-45fb-b14d-56c90df8e06a": {
-          "description": "Codificar letras como binários."
-        },
-        "bf86db48-ae33-49e8-a236-883b166a81bb": {
-          "description": "Relacionar a ideia de armazenar letras no papel com a ideia de armazenar informações em um computador."
-        },
-        "06e84ef1-68ef-4bce-adfe-fcd8c7e010c7": {
+        "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "Superar obstáculos, como restrições de tempo ou bugs."
-        },
-        "5feb276e-2e95-4bd6-87b8-7bb9075d0d0a": {
-          "description": "Use um design planejado como um plano para a criação."
-        },
-        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
-          "description": "Treinar e testar um modelo de aprendizado de máquina."
-        },
-        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
-          "description": "Raciocinar sobre o papel do viés humano no aprendizado de máquina."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Desenvolver programas que respondam a eventos temporizados."
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Ilustre as mudanças no humor de um poema."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Represente a linguagem literal e a figurativa através de um texto"
-        },
-        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
-          "description": "Identificar o que se espera deles ao fazerem a transição para o laboratório de informática."
-        },
-        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
-          "description": "Use a terminologia apropriada ao se referir a um mouse de computador, painel tátil (touchpad), ou tela sensível ao toque."
-        },
-        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
-          "description": "Descreva a importância do usuário no processo de design."
-        },
-        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
-          "description": "Identifique sprites em um programa de computador em execução."
-        },
-        "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
-          "description": "Crie novos sprites e atribua a eles fantasias e comportamentos."
-        },
-        "06a89cf1-1a4d-429a-9797-934770d0ed18": {
-          "description": "Crie uma animação usando sprites e comportamentos."
-        },
-        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
-          "description": "Desenvolver programas que respondam a eventos temporizados."
-        },
-        "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
-          "description": "Desenvolver programas que respondam à intervenção do usuário."
-        },
-        "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
-          "description": "Crie uma animação interativa usando eventos."
-        },
-        "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
-          "description": "Crie um animal de estimação virtual interativo usando eventos, comportamentos e arte personalizada."
-        },
-        "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
-          "description": "Programe soluções para problemas que surgem ao projetar um animal de estimação virtual, como alimentá-lo."
-        },
-        "8cbf109a-b450-420b-973a-db9efd47f61f": {
-          "description": "Decida quais tipos de declarações são aceitáveis para dizer online e quais não são."
-        },
-        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
-          "description": "Declarar uma variável"
-        },
-        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
-          "description": "Atribua um valor a uma variável"
-        },
-        "41ddf297-8c92-42c1-8157-97ba0660483d": {
-          "description": "Chame uma variável várias vezes em um programa."
-        },
-        "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
-          "description": "Determine a relação entre como uma variável é definida, armazenada e recuperada quando pressionamos “Executar” em um programa."
-        },
-        "28d3cc79-4aea-431d-a445-745e75e747d8": {
-          "description": "Usar variáveis para armazenar palavras e frases."
-        },
-        "66e1fe88-3957-437f-a065-66909844fcd1": {
-          "description": "Use variáveis em conjunto com prompts."
-        },
-        "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
-          "description": "Usar variáveis para armazenar palavras e frases."
-        },
-        "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
-          "description": "Use variáveis em conjunto com prompts."
-        },
-        "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
-          "description": "Crie um programa de computador interativo que responda à entrada do usuário."
-        },
-        "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
-        },
-        "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
-          "description": "Entender a diferença entre comandos que precisam ser repetidos em laços e comandos que devem ser usados sozinhos."
-        },
-        "8cba8ac9-820e-48fd-b726-f7926ecf3348": {
-          "description": "Atribuir valores a variáveis existentes."
-        },
-        "550ac608-922b-468f-a69d-08cc1f20799e": {
-          "description": "Utilizar variáveis no lugar de valores repetitivos em um programa."
-        },
-        "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f": {
-          "description": "Usar variáveis para alterar valores dentro de um laço."
-        },
-        "dd570e3f-8340-4838-8ba1-de856546f834": {
-          "description": "Dividir tarefas complexas em seções menores e repetíveis."
-        },
-        "12412b47-e83e-43a9-ad42-e98cba364913": {
-          "description": "Reconhecer padrões grandes e repetidos como sendo compostos de padrões menores e repetidos."
-        },
-        "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
-        },
-        "059b2997-3d05-4186-8450-066fceeb8c5b": {
-          "description": "Identifique áreas nas quais eles podem usar variáveis para modificar quantidades durante o tempo de execução. "
-        },
-        "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
-          "description": "Examine o código para encontrar locais onde as variáveis podem ser substituídas por valores específicos."
-        },
-        "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
-          "description": "Determine o valor inicial, o valor de parada e o valor de passo para um “loop for”."
-        },
-        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
-          "description": "Ilustre os valores do contador atingidos cada vez por meio de um “loop for” durante o tempo de execução."
-        },
-        "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
-          "description": "Determine o valor inicial, o valor de parada e o valor de passo para um loop for."
-        },
-        "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
-          "description": "Reconheça quando usar um loop for e quando usar outros loops, como loops repeat e while."
-        },
-        "68c038c1-990a-4009-ad61-619ba6ea71af": {
-          "description": "Use loops for para alterar o loop várias vezes com valores diferentes."
-        },
-        "7ad09074-8899-4330-bb54-6a00c5164299": {
-          "description": "Reconheça quando usar um loop for e quando usar outros loops, como loops repeat e while."
-        },
-        "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
-          "description": "Use uma simulação de computador para coletar dados sobre um modelo"
-        },
-        "519c1444-230e-4182-a4eb-09414a7d09fb": {
-          "description": "Crie um gráfico de linha dupla para comparar dados sobre duas fontes diferentes"
-        },
-        "16dabf47-0051-4143-834c-067bb8fb605c": {
-          "description": "Faça e teste uma previsão modificando variáveis de simulação"
-        },
-        "f748f186-f152-468e-9f51-48bee23c44db": {
-          "description": "Discutir o papel da inteligência artificial na vida deles."
-        },
-        "82bb0282-0550-4779-9a86-a15fbb93215f": {
-          "description": "Treinar e testar um modelo de aprendizado de máquina."
-        },
-        "6638c886-891e-4d59-820a-227e37274e49": {
-          "description": "Raciocinar sobre o papel do viés humano no aprendizado de máquina."
-        },
-        "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
-          "description": "Aprender a complexidade do envio de mensagens pela internet."
-        },
-        "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
-          "description": "Transformar URLs em endereços IP."
-        },
-        "12c53e25-70d7-4192-a97a-da08dd673338": {
-          "description": "Aprender a se planejar para uma tarefa contínua."
-        },
-        "b76f1811-9865-416d-bd06-601301120384": {
-          "description": "Conseguir explicar como as limitações do sistema podem influenciar o design do projeto."
-        },
-        "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
-          "description": "Descrever como o comprometimento pode ajudar a manter um projeto no caminho certo e inspirar a criatividade."
-        },
-        "ad877f06-ef7d-4a69-8217-1e593cfac32f": {
-          "description": "Formular e implementar planos para resolver problemas no código."
-        },
-        "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
-          "description": "Explicar o processo de design e como ele ajudou a moldar o projeto final acabado."
         },
         "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
           "description": "Saiba que as informações que eles compartilham online deixam uma pegada digital ou um “rastro”."
@@ -1506,102 +309,6 @@
           "description": "Aplique conceitos de ciência da computação em um projeto aberto."
         },
         "ae68c8b9-0188-48da-a066-b89a819b67e2": {
-          "description": "Superar obstáculos, como restrições de tempo ou bugs."
-        },
-        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
-          "description": "Descubra que a internet pode ser usada para visitar lugares distantes e aprender coisas novas."
-        },
-        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
-          "description": "Compare como ficar seguro online é semelhante a ficar seguro no mundo real."
-        },
-        "ba49206c-c099-4994-be57-1f8744273eaf": {
-          "description": "Explique as regras para viajar com segurança pela internet."
-        },
-        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
-          "description": "Identificar o que se espera deles ao fazerem a transição para o laboratório de informática."
-        },
-        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
-          "description": "Use a terminologia apropriada ao se referir a um mouse de computador, painel tátil (touchpad), ou tela sensível ao toque."
-        },
-        "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
-          "description": "Transformar um algoritmo em um programa"
-        },
-        "95ef707d-603d-4106-955e-3138f0f16a5d": {
-          "description": "Decodificar e executar um programa criado por outra pessoa"
-        },
-        "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
-          "description": "Identificar e resolver bugs ou erros nas instruções sequenciadas"
-        },
-        "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
-          "description": "Modele comportamentos adequados de laboratório de informática"
-        },
-        "6df3d067-06bb-4e95-856f-ef980543a15e": {
-          "description": "Experimente ações de programação padrão baseadas em blocos, como: clicar, arrastar e soltar, etc."
-        },
-        "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
-          "description": "Construir um programa reorganizando movimentos sequenciais"
-        },
-        "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
-          "description": "Desenvolver um programa de computador a partir de um conjunto de instruções por escrito"
-        },
-        "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
-          "description": "Escolher práticas de depuração adequadas ao solucionar problemas"
-        },
-        "199aed02-347c-4892-9e98-d7571ae64c9d": {
-          "description": "Ordenar comandos em uma sequência lógica."
-        },
-        "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
-          "description": "Identificar problemas ou “bugs” em um programa e desenvolver um plano para resolvê-los."
-        },
-        "407c5a4d-9337-4218-92d5-018597e41e19": {
-          "description": "Identificar códigos repetitivos e reduzir várias ações a um único laço."
-        },
-        "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
-          "description": "Interpretar um programa com laços como uma série de ações."
-        },
-        "cb7cab91-20ca-495a-a429-621631cb0507": {
-          "description": "Construir um programa usando estruturas que repetem partes do código"
-        },
-        "381b89ab-336f-41cd-b755-78142a1f1f90": {
-          "description": "Melhorar o código atual identificando áreas de repetição e movendo-as para estruturas de laço"
-        },
-        "632bd918-c124-4f4c-892e-980cdc07b3bf": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
-        },
-        "ea6a44e1-0175-4ecc-a257-4489b703c063": {
-          "description": "Decompor uma longa sequência de instruções na menor sequência repetível possível."
-        },
-        "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
-          "description": "Contar o número de vezes que uma ação deve ser repetida e representar isso como um laço."
-        },
-        "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
-          "description": "Decompor uma forma em sua maior sequência repetível."
-        },
-        "66267233-8532-4f63-aea5-3a214dac119a": {
-          "description": "Criar um programa que desenhe formas complexas pela repetição de sequências simples."
-        },
-        "134f184c-8865-44d2-8921-5740c749bcd5": {
-          "description": "Repetir os comandos dados por um instrutor."
-        },
-        "b7973aec-afbf-4f81-820c-daced7731b0f": {
-          "description": "Reconhecer ações do professor como sinais para iniciar comandos."
-        },
-        "3ec1a741-277f-46fb-9ec1-e358f399dab4": {
-          "description": "Praticar a diferenciação de ações predefinidas e ações orientadas a eventos."
-        },
-        "106c5668-bbc0-404b-8cb5-8ff2bd66eeef": {
-          "description": "Identificar ações que se correlacionem com eventos de entrada."
-        },
-        "b366b41e-9396-4c1b-9d35-164052448c1c": {
-          "description": "Criar uma história animada e interativa utilizando sequências e manipuladores de eventos."
-        },
-        "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
-          "description": "Compartilhar um artefato criativo com outros alunos."
-        },
-        "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
-          "description": "Aplique conceitos de ciência da computação em um projeto aberto."
-        },
-        "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "Superar obstáculos, como restrições de tempo ou bugs."
         },
         "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
@@ -1843,6 +550,273 @@
         },
         "92ad0a98-e2e5-4104-8a9f-1dee9409f300": {
           "description": "Superar obstáculos, como restrições de tempo ou bugs."
+        },
+        "a937dee9-2cd3-4978-8f88-09f8af577395": {
+          "description": "comece a fazer conexões sobre uma nova maneira de escrever programas"
+        },
+        "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
+          "description": "Defina “sprite” como um personagem ou objeto na tela que pode ser movido e alterado."
+        },
+        "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
+          "description": "Crie novos sprites e atribua a eles fantasias e comportamentos."
+        },
+        "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
+          "description": "Identificar ações que se correlacionem com eventos de entrada."
+        },
+        "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
+          "description": "Crie uma animação interativa usando sprites, comportamentos e eventos."
+        },
+        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
+          "description": "Identifique os motivos pelos quais as pessoas compartilham informações sobre si mesmas on-line."
+        },
+        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
+          "description": "Explique a diferença entre informações pessoais e privadas."
+        },
+        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
+          "description": "Explique por que é arriscado compartilhar informações privadas on-line."
+        },
+        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
+          "description": "Escolha quais informações sobre eles mesmos são seguras para compartilhar on-line."
+        },
+        "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
+          "description": "Crie um programa de computador interativo que expresse quem eles são com texto e imagens personalizadas."
+        },
+        "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
+          "description": "Interprete o compartilhamento ético de material protegido por direitos autorais versus o compartilhamento que não é ético."
+        },
+        "0709575a-e9e6-4856-a4f4-02b290f86975": {
+          "description": "Entenda seus próprios direitos em relação aos materiais que eles criaram"
+        },
+        "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
+          "description": "Entender a diferença entre comandos que precisam ser repetidos em laços e comandos que devem ser usados sozinhos."
+        },
+        "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
+          "description": "Combinar formas simples em designs complexos com laços aninhados."
+        },
+        "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
+          "description": "Contar o número de vezes que uma ação deve ser repetida e representar isso como um laço."
+        },
+        "5b77c883-5479-4cfe-a31a-605957dd083d": {
+          "description": "Dividir tarefas complexas em seções menores e repetíveis."
+        },
+        "6174da85-eb3a-4c0e-925d-360b04604fdb": {
+          "description": "Descrever quando é necessário um laço, um laço aninhado ou nenhum laço."
+        },
+        "90591bd7-cbd5-46c4-95dc-59e16e5a949c": {
+          "description": "Identificar a diferença entre o uso de um laço e um laço aninhado."
+        },
+        "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d": {
+          "description": "Decompor o código nas maiores sequências repetíveis utilizando laços e laços aninhados."
+        },
+        "e26d818e-81fd-43c6-8558-fc69835e693a": {
+          "description": "Localizar frases repetidas em letras de músicas."
+        },
+        "815c91bc-4848-43ba-a234-d1b184ab120b": {
+          "description": "Identificar seções de uma música para colocar em uma função."
+        },
+        "77ee523c-1e51-4c99-beda-c0e53812a1e7": {
+          "description": "Descrever como as funções podem facilitar a escrita de programas."
+        },
+        "4a6b973a-63cc-4c8d-8e25-e10648ccaa20": {
+          "description": "Usar funções para simplificar programas complexos."
+        },
+        "763f0ac3-d0b3-487a-b83d-151e2b3bee94": {
+          "description": "Usar funções predeterminadas para concluir tarefas comumente repetidas."
+        },
+        "fbae45e8-1bd0-4b7d-9ae3-431c11cf0c56": {
+          "description": "Classificar e generalizar códigos em funções úteis."
+        },
+        "75ef4b25-6f64-4795-9a13-f0d27662040e": {
+          "description": "Reconhecer quando uma função pode ajudar a simplificar um programa."
+        },
+        "e23e9b8a-cb10-4ec2-ac46-516d6a538d91": {
+          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
+        },
+        "fa7e3e31-19dd-47cb-b3f3-fdf47765b870": {
+          "description": "Determinar se um condicional foi atendido com base em critérios."
+        },
+        "9c7ff713-c208-4acf-9691-da7a4a152565": {
+          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
+        },
+        "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc": {
+          "description": "Determinar se um condicional foi atendido com base em critérios."
+        },
+        "dc1b604a-9814-45f4-aed5-b76776ad818c": {
+          "description": "Reconhecer quando uma função pode ajudar a simplificar um programa."
+        },
+        "cff52f84-5090-495e-a37b-02cf8b666ad6": {
+          "description": "Usar funções predeterminadas para concluir tarefas comumente repetidas."
+        },
+        "87094122-056f-4fa4-83b7-e3d6abb52e67": {
+          "description": "Descreva o impacto dos aplicativos móveis no mundo moderno."
+        },
+        "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
+          "description": "Explique por que a acessibilidade é uma parte importante do design de um aplicativo para os usuários."
+        },
+        "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
+          "description": "Melhore o design de um aplicativo existente abordando as necessidades de acessibilidade dos usuários."
+        },
+        "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
+          "description": "Aprender a se planejar para uma tarefa contínua."
+        },
+        "63070ef2-2aab-4493-a65f-7516e7aadb98": {
+          "description": "Explicar como as limitações do sistema podem influenciar o design do projeto."
+        },
+        "45927b72-922a-4845-8b40-2458a92372f5": {
+          "description": "Descrever como o comprometimento pode ajudar a manter um projeto no caminho certo e inspirar a criatividade."
+        },
+        "db7d248b-f06c-475c-8413-f1ea08fae35b": {
+          "description": "Formular e implementar planos para resolver problemas no código."
+        },
+        "2594052b-3b87-4d83-9038-56175058c1c2": {
+          "description": "Explicar o processo de design e como ele ajudou a moldar o projeto final acabado."
+        },
+        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
+          "description": "Descreva a importância do usuário no processo de design."
+        },
+        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
+          "description": "Identifique sprites em um programa de computador em execução."
+        },
+        "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
+          "description": "Crie novos sprites e atribua a eles fantasias e comportamentos."
+        },
+        "06a89cf1-1a4d-429a-9797-934770d0ed18": {
+          "description": "Crie uma animação usando sprites e comportamentos."
+        },
+        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
+          "description": "Desenvolver programas que respondam a eventos temporizados."
+        },
+        "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
+          "description": "Desenvolver programas que respondam à intervenção do usuário."
+        },
+        "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
+          "description": "Crie uma animação interativa usando eventos."
+        },
+        "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
+          "description": "Crie um animal de estimação virtual interativo usando eventos, comportamentos e arte personalizada."
+        },
+        "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
+          "description": "Programe soluções para problemas que surgem ao projetar um animal de estimação virtual, como alimentá-lo."
+        },
+        "8cbf109a-b450-420b-973a-db9efd47f61f": {
+          "description": "Decida quais tipos de declarações são aceitáveis para dizer online e quais não são."
+        },
+        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
+          "description": "Declarar uma variável"
+        },
+        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
+          "description": "Atribua um valor a uma variável"
+        },
+        "41ddf297-8c92-42c1-8157-97ba0660483d": {
+          "description": "Chame uma variável várias vezes em um programa."
+        },
+        "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
+          "description": "Determine a relação entre como uma variável é definida, armazenada e recuperada quando pressionamos “Executar” em um programa."
+        },
+        "28d3cc79-4aea-431d-a445-745e75e747d8": {
+          "description": "Usar variáveis para armazenar palavras e frases."
+        },
+        "66e1fe88-3957-437f-a065-66909844fcd1": {
+          "description": "Use variáveis em conjunto com prompts."
+        },
+        "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
+          "description": "Usar variáveis para armazenar palavras e frases."
+        },
+        "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
+          "description": "Use variáveis em conjunto com prompts."
+        },
+        "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
+          "description": "Crie um programa de computador interativo que responda à entrada do usuário."
+        },
+        "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
+          "description": "Entender a diferença entre comandos que precisam ser repetidos em laços e comandos que devem ser usados sozinhos."
+        },
+        "8cba8ac9-820e-48fd-b726-f7926ecf3348": {
+          "description": "Atribuir valores a variáveis existentes."
+        },
+        "550ac608-922b-468f-a69d-08cc1f20799e": {
+          "description": "Utilizar variáveis no lugar de valores repetitivos em um programa."
+        },
+        "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f": {
+          "description": "Usar variáveis para alterar valores dentro de um laço."
+        },
+        "dd570e3f-8340-4838-8ba1-de856546f834": {
+          "description": "Dividir tarefas complexas em seções menores e repetíveis."
+        },
+        "12412b47-e83e-43a9-ad42-e98cba364913": {
+          "description": "Reconhecer padrões grandes e repetidos como sendo compostos de padrões menores e repetidos."
+        },
+        "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "059b2997-3d05-4186-8450-066fceeb8c5b": {
+          "description": "Identifique áreas nas quais eles podem usar variáveis para modificar quantidades durante o tempo de execução. "
+        },
+        "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
+          "description": "Examine o código para encontrar locais onde as variáveis podem ser substituídas por valores específicos."
+        },
+        "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
+          "description": "Determine o valor inicial, o valor de parada e o valor de passo para um “loop for”."
+        },
+        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
+          "description": "Ilustre os valores do contador atingidos cada vez por meio de um “loop for” durante o tempo de execução."
+        },
+        "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
+          "description": "Determine o valor inicial, o valor de parada e o valor de passo para um loop for."
+        },
+        "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
+          "description": "Reconheça quando usar um loop for e quando usar outros loops, como loops repeat e while."
+        },
+        "68c038c1-990a-4009-ad61-619ba6ea71af": {
+          "description": "Use loops for para alterar o loop várias vezes com valores diferentes."
+        },
+        "7ad09074-8899-4330-bb54-6a00c5164299": {
+          "description": "Reconheça quando usar um loop for e quando usar outros loops, como loops repeat e while."
+        },
+        "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
+          "description": "Use uma simulação de computador para coletar dados sobre um modelo"
+        },
+        "519c1444-230e-4182-a4eb-09414a7d09fb": {
+          "description": "Crie um gráfico de linha dupla para comparar dados sobre duas fontes diferentes"
+        },
+        "16dabf47-0051-4143-834c-067bb8fb605c": {
+          "description": "Faça e teste uma previsão modificando variáveis de simulação"
+        },
+        "f748f186-f152-468e-9f51-48bee23c44db": {
+          "description": "Discutir o papel da inteligência artificial na vida deles."
+        },
+        "82bb0282-0550-4779-9a86-a15fbb93215f": {
+          "description": "Treinar e testar um modelo de aprendizado de máquina."
+        },
+        "6638c886-891e-4d59-820a-227e37274e49": {
+          "description": "Raciocinar sobre o papel do viés humano no aprendizado de máquina."
+        },
+        "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
+          "description": "Aprender a complexidade do envio de mensagens pela internet."
+        },
+        "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
+          "description": "Transformar URLs em endereços IP."
+        },
+        "12c53e25-70d7-4192-a97a-da08dd673338": {
+          "description": "Aprender a se planejar para uma tarefa contínua."
+        },
+        "b76f1811-9865-416d-bd06-601301120384": {
+          "description": "Conseguir explicar como as limitações do sistema podem influenciar o design do projeto."
+        },
+        "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
+          "description": "Descrever como o comprometimento pode ajudar a manter um projeto no caminho certo e inspirar a criatividade."
+        },
+        "ad877f06-ef7d-4a69-8217-1e593cfac32f": {
+          "description": "Formular e implementar planos para resolver problemas no código."
+        },
+        "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
+          "description": "Explicar o processo de design e como ele ajudou a moldar o projeto final acabado."
         },
         "8c021568-46ed-4243-a4d1-f2037138c01a": {
           "description": "Transformar movimentos em uma série de comandos."
@@ -2114,134 +1088,1382 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Compartilhar um artefato criativo com outros alunos."
         },
-        "a937dee9-2cd3-4978-8f88-09f8af577395": {
-          "description": "comece a fazer conexões sobre uma nova maneira de escrever programas"
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
         },
-        "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
-          "description": "Defina “sprite” como um personagem ou objeto na tela que pode ser movido e alterado."
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Crie uma animação interativa utilizando fadas e eventos."
         },
-        "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
-          "description": "Crie novos sprites e atribua a eles fantasias e comportamentos."
+        "0476cbe2-4b38-4943-8a29-10e8f9307666": {
+          "description": "Se comunicar e colaborar com os colegas a fim de solucionar um problema"
         },
-        "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
-          "description": "Identificar ações que se correlacionem com eventos de entrada."
+        "80c42d14-ae97-41e5-9f54-e2d301214878": {
+          "description": "Identificar diferentes estratégias utilizadas para resolver um problema"
         },
-        "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
-          "description": "Crie uma animação interativa usando sprites, comportamentos e eventos."
+        "b85bb5be-65f2-4ac9-8f0f-414a534e8ee0": {
+          "description": "Melhorar a solução para um problema gradativamente"
         },
-        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
-          "description": "Identifique os motivos pelos quais as pessoas compartilham informações sobre si mesmas on-line."
+        "2c8a7aae-0eb3-43e4-af11-a7d983f08293": {
+          "description": "Identifique estratégias úteis em cada etapa do processo de resolução de problemas"
         },
-        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
-          "description": "Explique a diferença entre informações pessoais e privadas."
+        "de78bf50-a981-49ce-94a6-1794ff2e6076": {
+          "description": "Diante de um problema, identifique as ações individuais que se enquadrariam em cada etapa do processo de solução de problemas"
         },
-        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
-          "description": "Explique por que é arriscado compartilhar informações privadas on-line."
+        "5304d021-0887-40c2-8189-44163b7d0252": {
+          "description": "Aplicar o processo de resolução de problemas para abordar uma variedade de problemas"
         },
-        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
-          "description": "Escolha quais informações sobre eles mesmos são seguras para compartilhar on-line."
+        "5c991204-e725-4b24-8cb6-21aaf734ad2a": {
+          "description": "Avaliar se um problema está bem definido e adotar estratégias para definir o problema com mais precisão"
         },
-        "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
-          "description": "Crie um programa de computador interativo que expresse quem eles são com texto e imagens personalizadas."
+        "7cdf9380-d6a5-4ee5-a9a0-c1e6e198a7f3": {
+          "description": "Identificar um computador como uma máquina que trabalha com informações"
         },
-        "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
-          "description": "Interprete o compartilhamento ético de material protegido por direitos autorais versus o compartilhamento que não é ético."
+        "a0596f12-31b4-4ff8-8546-6e46c95f1f24": {
+          "description": "Escolher problemas que podem ser resolvidos com a computação e justifique essas escolhas."
         },
-        "0709575a-e9e6-4856-a4f4-02b290f86975": {
-          "description": "Entenda seus próprios direitos em relação aos materiais que eles criaram"
+        "c11d1740-d582-464b-aaa4-bd22c710fce1": {
+          "description": "Analisar se determinados objetos são ou não computadores."
         },
-        "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
-          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        "79703655-22be-4793-9467-645a51036c6e": {
+          "description": "Selecionar as entradas e saídas usadas para realizar tarefas comuns de computação."
         },
-        "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
-          "description": "Entender a diferença entre comandos que precisam ser repetidos em laços e comandos que devem ser usados sozinhos."
+        "c7d19ce4-de97-45e9-9eca-24091cf33f2e": {
+          "description": "Explicar a função que a entrada e a saída desempenham quando os computadores são usados para resolver problemas de informação."
         },
-        "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
-          "description": "Combinar formas simples em designs complexos com laços aninhados."
+        "562b0b01-1b21-4c50-a63f-8d749d32f9de": {
+          "description": "Identificar vários tipos comuns de processamento usados na computação."
         },
-        "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
-          "description": "Contar o número de vezes que uma ação deve ser repetida e representar isso como um laço."
+        "653717aa-11b9-45b1-b2c8-fac35c18feea": {
+          "description": "Determinar quais tipos de processamento são apropriados para um problema de computação específico."
         },
-        "5b77c883-5479-4cfe-a31a-605957dd083d": {
-          "description": "Dividir tarefas complexas em seções menores e repetíveis."
+        "b2463106-01c4-42ed-a732-46be3ca3191f": {
+          "description": "Definir processamento como o trabalho realizado (possivelmente por um computador) para transformar uma entrada em uma saída"
         },
-        "6174da85-eb3a-4c0e-925d-360b04604fdb": {
-          "description": "Descrever quando é necessário um laço, um laço aninhado ou nenhum laço."
+        "42d14a4e-0836-4d86-aba7-207e9a322daf": {
+          "description": "Determinar quais informações em um problema de computação devem ser armazenadas para uso posterior."
         },
-        "90591bd7-cbd5-46c4-95dc-59e16e5a949c": {
-          "description": "Identificar a diferença entre o uso de um laço e um laço aninhado."
+        "5a49bc36-dccc-454a-8b8c-290946b595bf": {
+          "description": "Usar o modelo de entrada-saída-armazenamento-processamento para descrever um processo de computação."
         },
-        "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d": {
-          "description": "Decompor o código nas maiores sequências repetíveis utilizando laços e laços aninhados."
+        "81d18fde-09cd-411b-a2b8-e49eb0e44aa7": {
+          "description": "Identificar diretrizes sobre quais informações devem e quais não devem ser armazenadas como parte do processo de computação."
         },
-        "e26d818e-81fd-43c6-8558-fc69835e693a": {
-          "description": "Localizar frases repetidas em letras de músicas."
+        "76cff286-8d27-4ec9-9203-0dbf0c6235fe": {
+          "description": "Identificar e definir um problema que poderia ser resolvido usando a computação"
         },
-        "815c91bc-4848-43ba-a234-d1b184ab120b": {
-          "description": "Identificar seções de uma música para colocar em uma função."
+        "86acd27d-2f32-46a5-944e-6caf24e43873": {
+          "description": "Criar um aplicativo que insira, produza, armazene e processe informações para resolver um problema"
         },
-        "77ee523c-1e51-4c99-beda-c0e53812a1e7": {
-          "description": "Descrever como as funções podem facilitar a escrita de programas."
+        "bfa63478-5cbf-4a29-992e-45f3c7a34673": {
+          "description": "Fornecer e incorporar feedback direcionado de colegas para melhorar um artefato de computação"
         },
-        "4a6b973a-63cc-4c8d-8e25-e10648ccaa20": {
-          "description": "Usar funções para simplificar programas complexos."
+        "2ebd7cbf-186c-4685-966c-0bff0c440c41": {
+          "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
         },
-        "763f0ac3-d0b3-487a-b83d-151e2b3bee94": {
-          "description": "Usar funções predeterminadas para concluir tarefas comumente repetidas."
+        "c7072356-f905-45ea-8a1d-896c1d3d59d0": {
+          "description": "Melhorar a solução para um problema gradativamente"
         },
-        "fbae45e8-1bd0-4b7d-9ae3-431c11cf0c56": {
-          "description": "Classificar e generalizar códigos em funções úteis."
+        "d9ab8195-2b9a-4ba8-9b24-98abe5172a2d": {
+          "description": "Identificar diferentes estratégias utilizadas para resolver um problema"
         },
-        "75ef4b25-6f64-4795-9a13-f0d27662040e": {
-          "description": "Reconhecer quando uma função pode ajudar a simplificar um programa."
+        "4478ba9d-cd39-48a1-9eb2-dae2bd660d68": {
+          "description": "Identificar diferentes estratégias utilizadas para resolver um problema"
         },
-        "e23e9b8a-cb10-4ec2-ac46-516d6a538d91": {
-          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
+        "5567e330-9ea2-49ba-922f-f85ec5b38eea": {
+          "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
         },
-        "fa7e3e31-19dd-47cb-b3f3-fdf47765b870": {
-          "description": "Determinar se um condicional foi atendido com base em critérios."
+        "c2af5d23-e29f-4427-a128-d18d656b134d": {
+          "description": "Melhorar a solução para um problema gradativamente"
         },
-        "9c7ff713-c208-4acf-9691-da7a4a152565": {
-          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
+        "0a5b806f-c672-409e-8f04-5a2416ef9f8a": {
+          "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
         },
-        "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc": {
-          "description": "Determinar se um condicional foi atendido com base em critérios."
+        "5d04bd39-2968-4018-bd3a-4ba26d88fe06": {
+          "description": "Melhorar a solução para um problema gradativamente"
         },
-        "dc1b604a-9814-45f4-aed5-b76776ad818c": {
-          "description": "Reconhecer quando uma função pode ajudar a simplificar um programa."
+        "ff942d9c-3b05-4664-9ef3-a8c5646eaf13": {
+          "description": "Identificar diferentes estratégias utilizadas para resolver um problema"
         },
-        "cff52f84-5090-495e-a37b-02cf8b666ad6": {
-          "description": "Usar funções predeterminadas para concluir tarefas comumente repetidas."
+        "dedc8e2d-6a07-46e3-89c2-d8a214416d44": {
+          "description": "Avaliar se um problema está bem definido e aplicar estratégias para definir o problema com mais precisão"
         },
-        "87094122-056f-4fa4-83b7-e3d6abb52e67": {
-          "description": "Descreva o impacto dos aplicativos móveis no mundo moderno."
+        "e47931fd-1372-47f9-87d0-759a46e37e41": {
+          "description": "Aplicar o processo de resolução de problemas para abordar uma variedade de problemas"
         },
-        "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
-          "description": "Explique por que a acessibilidade é uma parte importante do design de um aplicativo para os usuários."
+        "371879c7-e338-45a3-8c40-4f82b78702f9": {
+          "description": "Avaliar se um problema está bem definido e aplicar estratégias para definir o problema com mais precisão"
         },
-        "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
-          "description": "Melhore o design de um aplicativo existente abordando as necessidades de acessibilidade dos usuários."
+        "9a3394cc-5d5a-4cef-9f48-6dcdacb47888": {
+          "description": "Aplicar o processo de resolução de problemas para abordar uma variedade de problemas"
         },
-        "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
-          "description": "Aprender a se planejar para uma tarefa contínua."
+        "14cb0543-587a-4d56-9495-f11715494118": {
+          "description": "Identificar os motivos pelos quais alguém pode criar um determinado site"
         },
-        "63070ef2-2aab-4493-a65f-7516e7aadb98": {
-          "description": "Explicar como as limitações do sistema podem influenciar o design do projeto."
+        "65d72158-3fc1-4b35-abd8-03a25397aa01": {
+          "description": "Identifique os motivos pelos quais alguém pode criar um determinado site"
         },
-        "45927b72-922a-4845-8b40-2458a92372f5": {
-          "description": "Descrever como o comprometimento pode ajudar a manter um projeto no caminho certo e inspirar a criatividade."
+        "b50c5885-deac-4218-b87d-7a128401353d": {
+          "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
         },
-        "db7d248b-f06c-475c-8413-f1ea08fae35b": {
-          "description": "Formular e implementar planos para resolver problemas no código."
+        "216cb133-b606-43be-adb9-6cf77faa357f": {
+          "description": "Identificar como a Ciência da Computação é usada em um determinado campo de entretenimento"
         },
-        "2594052b-3b87-4d83-9038-56175058c1c2": {
-          "description": "Explicar o processo de design e como ele ajudou a moldar o projeto final acabado."
+        "39ea0ee9-0bed-4684-b37f-78fb7585a784": {
+          "description": "Explicar  como desenhar uma imagem no Game Lab, levando em conta a forma, a posição, a cor e a ordem"
         },
-        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+        "772d2b7c-9863-42d1-8eb6-ec0520b19441": {
+          "description": "Pensar de forma lógica sobre as localizações na grade de coordenadas do Game Lab"
+        },
+        "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Treinar e testar um modelo de aprendizado de máquina."
         },
-        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+        "db7f5c46-7cbc-477f-a325-dac7168fd719": {
           "description": "Raciocinar sobre o papel do viés humano no aprendizado de máquina."
+        },
+        "086d6899-da60-486b-a9f7-89715397d81c": {
+          "description": "Explique as regras para viajar com segurança pela internet."
+        },
+        "6ec5d1a8-13d0-43ab-a269-dc1060d0f872": {
+          "description": "Compare como ficar seguro online é semelhante a ficar seguro no mundo real."
+        },
+        "dfa4ff01-8e4b-410d-93fb-2380f70f0042": {
+          "description": "Descubra que a internet pode ser usada para visitar lugares distantes e aprender coisas novas."
+        },
+        "9ffae8f4-4880-42db-ba40-b4379c1a5f6c": {
+          "description": "Identificar o que se espera deles ao fazerem a transição para o laboratório de informática."
+        },
+        "d386bcb1-393c-46bc-8524-7380583d6ebb": {
+          "description": "Use a terminologia apropriada ao se referir a um mouse de computador, painel tátil (touchpad), ou tela sensível ao toque."
+        },
+        "42c68792-f472-4122-906c-67bef3edae73": {
+          "description": "Transformar um algoritmo em um programa"
+        },
+        "4d08a4a4-7475-4257-a955-62768629b65e": {
+          "description": "Identificar e resolver bugs ou erros nas instruções sequenciadas"
+        },
+        "f28907e3-caa2-4cfa-bd01-39282b5f5f8d": {
+          "description": "Decodificar e executar um programa criado por outra pessoa"
+        },
+        "25a06d14-94e5-41a1-b199-2d8ef7041b0f": {
+          "description": "Experimente ações de programação padrão baseadas em blocos, como: clicar, arrastar e soltar, etc."
+        },
+        "2e7e4324-ea3b-4e18-a61a-0e449579669a": {
+          "description": "Modele comportamentos adequados de laboratório de informática"
+        },
+        "81b0eb83-7612-4f91-91d1-f6dd25afebb6": {
+          "description": "Construir um programa reorganizando movimentos sequenciais"
+        },
+        "d6d95ae8-01ab-408a-a17d-6c4813fe0991": {
+          "description": "Desenvolver um programa de computador a partir de um conjunto de instruções por escrito"
+        },
+        "f3ccc59a-2988-4ec2-994f-ae781e4e66d6": {
+          "description": "Escolher práticas de depuração adequadas ao solucionar problemas"
+        },
+        "8fda32cd-f173-4d41-9a5c-4bb91f282534": {
+          "description": "Identificar problemas ou “bugs” em um programa e desenvolver um plano para resolvê-los."
+        },
+        "ad2e874f-6827-4cec-bd3e-4c12a0596df5": {
+          "description": "Ordenar comandos em uma sequência lógica."
+        },
+        "242ad249-b860-4727-9b98-01f0e2025d8d": {
+          "description": "Interpretar um programa com laços como uma série de ações."
+        },
+        "616d06fa-de3a-4e8e-970b-1077be296a30": {
+          "description": "Identificar códigos repetitivos e reduzir várias ações a um único laço."
+        },
+        "a28f100d-9129-44e2-ae89-93a0e4da1ef2": {
+          "description": "Melhorar o código atual identificando áreas de repetição e movendo-as para estruturas de laço"
+        },
+        "b55b43b6-9b0d-4703-be2e-9525b05c0a26": {
+          "description": "Construir um programa usando estruturas que repetem partes do código"
+        },
+        "95c27888-7fcc-4606-8647-b8d7aca4841c": {
+          "description": "Decompor uma longa sequência de instruções na menor sequência repetível possível."
+        },
+        "afb9f46f-81f6-4f0a-a017-4e9c5fd5c7f6": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "03eb830d-5a23-4897-b23b-067e5eb0180f": {
+          "description": "Decompor uma forma em sua maior sequência repetível."
+        },
+        "408f218c-3c80-44f0-9a98-c6bd82fa4021": {
+          "description": "Criar um programa que desenhe formas complexas pela repetição de sequências simples."
+        },
+        "eb0c126b-1a28-4a64-81a8-84713ba12efb": {
+          "description": "Contar o número de vezes que uma ação deve ser repetida e representar isso como um laço."
+        },
+        "11ae4f6e-9a22-4fe7-b476-d0251076f65b": {
+          "description": "Praticar a diferenciação de ações predefinidas e ações orientadas a eventos."
+        },
+        "699d524a-9ba6-430d-8ab4-fdce1b832b6f": {
+          "description": "Reconhecer ações do professor como sinais para iniciar comandos."
+        },
+        "805cf72f-fb59-4003-b6b5-1879ced802b9": {
+          "description": "Repetir os comandos dados por um instrutor."
+        },
+        "946d56ae-8a81-476c-93ab-6d5eff1f9633": {
+          "description": "Criar uma história animada e interativa utilizando sequências e manipuladores de eventos."
+        },
+        "ab8e0f55-bcb7-4af5-813f-df7d9629e21f": {
+          "description": "Compartilhar um artefato criativo com outros alunos."
+        },
+        "dddf548b-2b97-45fd-ad62-f4c633d3647d": {
+          "description": "Identificar ações que se correlacionem com eventos de entrada."
+        },
+        "12be98ac-b495-4379-94d1-6cdd7395776a": {
+          "description": "Superar obstáculos, como restrições de tempo ou bugs."
+        },
+        "6619f367-009a-49ca-9d78-582a2ff9ad5e": {
+          "description": "Aplique conceitos de ciência da computação em um projeto aberto."
+        },
+        "4bf451c9-a1ce-4e40-95a6-10c911a081bf": {
+          "description": "Saiba que as informações que eles compartilham online deixam uma pegada digital ou um “rastro”."
+        },
+        "7cc37ede-4e83-4881-9213-1746313de397": {
+          "description": "Explore quais informações podem ser compartilhadas online."
+        },
+        "1fb2f469-060b-4caf-ab67-28747acc0f00": {
+          "description": "Traduza uma lista de etapas em uma série de ações físicas"
+        },
+        "8a9a5295-648e-47f2-baec-c5a360f2788a": {
+          "description": "Defina uma lista de etapas (algoritmo) para levar um amigo da posição inicial ao objetivo"
+        },
+        "ab239024-3c6d-4db1-8c7c-2572c316dc75": {
+          "description": "Identificar e corrigir erros na execução de um algoritmo"
+        },
+        "9c04f7e1-5859-4e61-9ae0-630df254a9aa": {
+          "description": "Modele comportamentos adequados de laboratório de informática"
+        },
+        "c78930e6-cbb5-418c-8ca3-9124e79570cd": {
+          "description": "Experimente ações de programação padrão baseadas em blocos, como: clicar, arrastar e soltar, etc."
+        },
+        "0ad6ceff-faa1-40ea-a688-7ad92308dca3": {
+          "description": "Construa um programa reorganizando movimentos sequenciais."
+        },
+        "1c946e64-eafa-4a8f-8c2d-5829ab3acbf7": {
+          "description": "Crie um programa de computador a partir de um conjunto de instruções escritas."
+        },
+        "59718681-70e8-4b7f-91a7-e6b02e4ca98f": {
+          "description": "Transformar movimentos em uma série de comandos."
+        },
+        "a278cf3e-4bf9-4d1c-b9d0-a73c2530e3d8": {
+          "description": "Transformar movimentos em uma série de comandos."
+        },
+        "ae6f9158-191c-458c-9850-331faf94b567": {
+          "description": "Identificar e localizar erros em um programa."
+        },
+        "72900cbd-2ad8-4073-abde-f397a2832b5d": {
+          "description": "Converter uma série de ações em um único laço."
+        },
+        "76138142-0691-4645-8e78-5dbb1c19eab0": {
+          "description": "Transformar um programa de imagens em uma dança no mundo real."
+        },
+        "ad9095b2-5de7-41af-89b9-aac0f2fd0726": {
+          "description": "Repetir ações iniciadas pelo instrutor."
+        },
+        "2b7ac17e-7e3a-44b5-8c46-e28eec5af112": {
+          "description": "Decompor uma longa sequência de instruções na menor sequência repetível possível."
+        },
+        "4d6affaa-f8b0-4dbc-a436-4dccf8c57fc1": {
+          "description": "Utilizar uma combinação de comandos sequenciais e com laços para chegar ao final de um labirinto."
+        },
+        "be1a4163-770d-4fbd-85a1-4c18198d5c94": {
+          "description": "Criar um programa para uma determinada tarefa que faça um laço de uma sequência de comandos."
+        },
+        "dbb376e1-41ba-4f5f-8125-30a2de24cead": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "36786d0a-ce44-48d7-b557-a7e44c32c28d": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "6baba9ab-130e-4a58-bf30-7cee60bacb18": {
+          "description": "Decompor uma longa sequência de instruções na menor sequência repetível possível."
+        },
+        "54ae27f7-71b5-41ce-a67a-61d15e520bc3": {
+          "description": "Contar o número de vezes que uma ação deve ser repetida e representar isso como um laço."
+        },
+        "5f8621d2-481c-487d-a2e1-90d7fd15b929": {
+          "description": "Criar um programa que desenhe formas complexas pela repetição de sequências simples."
+        },
+        "b85981bf-b2e5-49f6-bf08-348f8d16ba2b": {
+          "description": "Decompor uma forma em sua maior sequência repetível."
+        },
+        "28c09bb0-c9f4-44ab-ba0a-8c9cdb24e5f0": {
+          "description": "Recomende tecnologia para outras pessoas com base em suas necessidades exclusivas. "
+        },
+        "9e78b33b-39a6-4524-89e4-a26fdba11cb5": {
+          "description": "Aplique empatia e criatividade à tecnologia de design para outras pessoas. "
+        },
+        "f854671c-b4c0-4bd7-8dd6-bf0094cd1733": {
+          "description": "Liste vários exemplos diferentes de aplicativos para smartphones."
+        },
+        "1275ac31-dcd9-49c5-92e2-68abd8aa9955": {
+          "description": "Repetir os comandos dados por um instrutor."
+        },
+        "4dbb2bcf-bd83-4c90-a077-6261a6b2607c": {
+          "description": "Praticar a diferenciação de ações predefinidas e ações orientadas a eventos."
+        },
+        "ef1a9273-ff0e-4134-8456-9762728bed55": {
+          "description": "Reconhecer ações do professor como sinais para iniciar comandos."
+        },
+        "2583489b-c21a-415d-bd1f-c0fa1eca9ef0": {
+          "description": "Identificar ações que se correlacionem com eventos de entrada."
+        },
+        "2f9f9b26-d5f6-48ab-be27-98608a47b74d": {
+          "description": "Criar uma história animada e interativa utilizando sequências e manipuladores de eventos."
+        },
+        "a64618b3-e151-46ce-9670-cada1927a2db": {
+          "description": "Compartilhar um artefato criativo com outros alunos."
+        },
+        "0e1a61eb-eb48-4c3b-ab89-5b19ef6c6977": {
+          "description": "Aplique conceitos de ciência da computação em um projeto aberto."
+        },
+        "3aa63e80-f3d8-4043-811d-5b275f168499": {
+          "description": "Superar obstáculos, como restrições de tempo ou bugs."
+        },
+        "33b55b11-ca81-406f-be39-265e8f33d09d": {
+          "description": "Identifique maneiras de responder a palavras maldosas online, usando S-T-O-P."
+        },
+        "ce3ba860-7753-4c2c-a161-64d59903674a": {
+          "description": "Entenda como pode ser a maldade online e como ela pode fazer as pessoas se sentirem."
+        },
+        "87841dc9-5cfa-4c68-9c56-9ca76b2668f8": {
+          "description": "Prestar atenção à precisão ao criar instruções"
+        },
+        "ce7a9596-845a-4d2f-b7ce-3e27b6faa99d": {
+          "description": "Identificar e resolver bugs ou erros nas instruções sequenciadas"
+        },
+        "1e020282-115c-4c09-877d-5003b8eb49a6": {
+          "description": "Identificar e localizar erros em um programa."
+        },
+        "fd4b3a3e-1db9-4890-babf-f0def99a0792": {
+          "description": "Transformar movimentos em uma série de comandos."
+        },
+        "1f6fd95f-78cb-4839-8943-ef8bf1b589e9": {
+          "description": "Prever onde um programa vai falhar."
+        },
+        "b3dfe6ec-41ae-4e35-92b0-aa57386cbe5d": {
+          "description": "Modificar um programa existente para resolver erros."
+        },
+        "feceda1c-bb8d-4811-9f23-0594de02a6ed": {
+          "description": "Refletir sobre o processo de depuração de maneira adequada à idade."
+        },
+        "10c02df1-0f34-4c22-beef-7607c0b55c9a": {
+          "description": "Representar um algoritmo como um programa de computador."
+        },
+        "704602b1-99ad-45e8-ac96-eba9ad885da8": {
+          "description": "Ordenar comandos de movimento como etapas sequenciais em um programa."
+        },
+        "a8bc7283-57bf-460e-8f1c-f4a26035ebfc": {
+          "description": "Desenvolver competências de solução de problemas e pensamento crítico analisando práticas de depuração."
+        },
+        "30aa1d4a-8e6e-4b27-8a1a-5c5ea80d6b3f": {
+          "description": "Criar um programa para concluir uma imagem utilizando etapas sequenciais."
+        },
+        "e0ada5e4-a180-4691-9bd3-8b83763f9dd2": {
+          "description": "Dividir formas complexas em partes simples."
+        },
+        "81c36d87-10e0-4f7e-91f2-88b6065ab543": {
+          "description": "Identificar padrões repetidos no código que possam ser substituídos por um laço"
+        },
+        "d96017f7-e2b0-45e1-aa9f-12055fcee5fe": {
+          "description": "Escrever instruções que utilizem laços para repetir padrões"
+        },
+        "00417e59-53f6-4f10-9e17-ae69f9e5db7b": {
+          "description": "Utilizar uma combinação de comandos sequenciais e com laços para chegar ao final de um labirinto."
+        },
+        "b2de5b75-e224-4eee-aa3a-ab51792f3dea": {
+          "description": "Decompor uma longa sequência de instruções na maior sequência repetível."
+        },
+        "be258fd0-4790-440a-99ef-bb20ce2d3c8b": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "2998b3d3-4953-4cbf-94f2-004630893e21": {
+          "description": "Utilizar uma combinação de comandos sequenciais e com laços para mover e realizar ações."
+        },
+        "35810652-e1be-48aa-923b-1148a5c1584e": {
+          "description": "Identificar quando é possível usar um laço para simplificar uma ação repetitiva."
+        },
+        "5b7b74bc-4f78-4c98-b221-5233324b086e": {
+          "description": "Escrever um programa para uma determinada tarefa que faça um laço de um único comando."
+        },
+        "cf1d581f-7554-4432-a92e-3e5f57f9144e": {
+          "description": "Entender a diferença entre comandos que precisam ser repetidos em laços e comandos que devem ser usados sozinhos."
+        },
+        "dda209ff-ec81-4914-93c0-2716153efce4": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "05615b7c-1833-4ca9-96a8-45812c1e8a4a": {
+          "description": "Praticar a diferenciação de ações predefinidas e ações orientadas a eventos."
+        },
+        "3070da76-01ca-461e-a251-7a0abd74ec8d": {
+          "description": "Repetir os comandos dados por um instrutor."
+        },
+        "ec6ade74-43c3-41d9-a10e-5001a2630fba": {
+          "description": "Reconhecer movimentos do professor como sinais para iniciar comandos."
+        },
+        "08847046-9784-46fb-996b-17a827cbea6f": {
+          "description": "Correlacionar blocos ao manipulador de eventos adequado."
+        },
+        "6f45e56c-85b7-4e48-86d4-3394e0e7048e": {
+          "description": "Compartilhar um artefato criativo com outros alunos."
+        },
+        "c912e4f7-5734-44cc-8090-77fe751676f4": {
+          "description": "Criar um jogo usando manipuladores de eventos."
+        },
+        "36275ea8-84ac-4220-87ca-53d1b5eaac43": {
+          "description": "Identificar ações que se correlacionem com eventos de entrada."
+        },
+        "7263be7c-5e96-4ce0-8f3a-04cd57918643": {
+          "description": "Criar um jogo animado e interativo utilizando sequências e manipuladores de eventos."
+        },
+        "93ff4ab3-b610-4f61-aa17-c5d1dc187ebf": {
+          "description": "Crie um gráfico de barras e um gráfico de pizza para representar dados simples."
+        },
+        "b1760cb7-8bc1-4f45-85a4-f8231785ab7e": {
+          "description": "Faça comparações entre visualizações de dados feitas por outras pessoas e use-as para fazer uma previsão."
+        },
+        "e77eca08-1bf5-47df-a660-6c5ba38d4fec": {
+          "description": "Colete e registre dados sobre quantidades de objetos reais ou caracteres em uma tela"
+        },
+        "2579c049-c0cd-4fcc-ac9f-bdd6c561ef52": {
+          "description": "Decodificar binários, transformando-os novamente em letras."
+        },
+        "9a7d25e3-3f39-45fb-b14d-56c90df8e06a": {
+          "description": "Codificar letras como binários."
+        },
+        "bf86db48-ae33-49e8-a236-883b166a81bb": {
+          "description": "Relacionar a ideia de armazenar letras no papel com a ideia de armazenar informações em um computador."
+        },
+        "06e84ef1-68ef-4bce-adfe-fcd8c7e010c7": {
+          "description": "Superar obstáculos, como restrições de tempo ou bugs."
+        },
+        "5feb276e-2e95-4bd6-87b8-7bb9075d0d0a": {
+          "description": "Use um design planejado como um plano para a criação."
+        },
+        "1033b638-05a5-40c2-8e29-1efe1b5f3451": {
+          "description": "Defina o termo “senha” e descreva o propósito de uma senha."
+        },
+        "c14cd5a0-312f-491c-aa00-73b82dd8e628": {
+          "description": "Pratique a criação de uma senha memorável e forte."
+        },
+        "2d16e09e-308f-4fe5-b53a-bfd2a50ec736": {
+          "description": "Reformular uma sequência de etapas como um programa codificado"
+        },
+        "e2eb4dfd-1b5b-4a01-aceb-1b96c49cd254": {
+          "description": "Explicar as restrições ao transportar problemas da linguagem humana para a linguagem de máquina"
+        },
+        "86d6703f-6086-48c6-820f-d9d972471655": {
+          "description": "Ordenar comandos de movimento como etapas sequenciais em um programa."
+        },
+        "c141459a-a5b8-41ce-ada6-33b92afb0596": {
+          "description": "Decompor uma longa sequência de instruções na maior sequência repetível."
+        },
+        "f0a49033-5a23-4b2e-b570-69fd6d678f65": {
+          "description": "Modificar um programa existente para resolver erros."
+        },
+        "15927fdc-d944-4de3-89ca-f238d8014f55": {
+          "description": "Definir ideias usando código e símbolos."
+        },
+        "55ae003d-10f1-4364-ab38-3a3360491e38": {
+          "description": "Identifique sinais de frustração "
+        },
+        "d5c5bdd3-6ca6-48b2-ae3b-5aaf0c8dbb70": {
+          "description": "Verificar o trabalho realizado por colegas de equipe."
+        },
+        "0d2e39ca-970f-40e0-b26a-84bcecf9315d": {
+          "description": "Descrever e implementar um plano para depurar um programa."
+        },
+        "59c4efee-e0c3-4293-9609-a82db6698755": {
+          "description": "Ler e compreender um determinado código."
+        },
+        "66a6e0e0-c56c-4148-9d57-ce509afa4fc6": {
+          "description": "Identificar um bug e os problemas que ele causa em um programa."
+        },
+        "a7fe08e4-1943-4bbc-a18a-e10bd0942173": {
+          "description": "Compartilhar um artefato criativo com outros alunos."
+        },
+        "d2a9a010-d6c6-4ce1-9f70-cb5ceba6af8f": {
+          "description": "Identificar ações que se correlacionem com eventos de entrada."
+        },
+        "df973a96-c08b-4f3f-9a11-c93434193cfe": {
+          "description": "Criar um jogo interativo utilizando sequências e manipuladores de eventos."
+        },
+        "04cbf3cd-2cb7-451b-b4ed-1ccd70594cc5": {
+          "description": "Identificar ações que se correlacionem com eventos de entrada."
+        },
+        "f47c401e-4a61-4f0e-a4d3-75f3bd9d8908": {
+          "description": "Criar um jogo animado e interativo utilizando sequências e eventos."
+        },
+        "4ed9cede-cc9a-409d-b433-781185b454b6": {
+          "description": "Criar animações de dança utilizando código"
+        },
+        "4fa04785-108a-4cea-831b-8078658ea413": {
+          "description": "Desenvolver programas que respondam à entrada do usuário"
+        },
+        "7728246b-7582-4624-a2b1-229b998fc2ae": {
+          "description": "Desenvolver programas que respondam a eventos programados"
+        },
+        "07bc7c07-d75a-45cc-9f98-74501813e5af": {
+          "description": "Construir um programa usando estruturas que repetem partes do código"
+        },
+        "fcc0109d-8a25-4194-8a5c-69985bac106c": {
+          "description": "Melhorar o código atual identificando áreas de repetição e movendo-as para estruturas de laço"
+        },
+        "c2ec43ae-26ae-48df-8657-373765b01821": {
+          "description": "Entender a diferença entre comandos que precisam ser repetidos em laços e comandos que devem ser usados sozinhos."
+        },
+        "f9dc8f2c-6f5a-4854-b0bb-296d0ca89233": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "64421cd8-645b-40d1-b071-4f4238065252": {
+          "description": "Dividir tarefas complexas em seções menores e repetíveis."
+        },
+        "ddac6ae3-6abe-444e-af05-8a6b2a5eec65": {
+          "description": "Reconhecer padrões grandes e repetidos como sendo compostos de padrões menores e repetidos."
+        },
+        "f466b8aa-18bf-460d-9780-1abcb7f32589": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "1368d16e-4e0d-4b76-8473-2765f5379362": {
+          "description": "Determinar se um condicional foi atendido com base em critérios."
+        },
+        "744e09fe-1aaa-4253-95e2-7f1c8fc4e5dc": {
+          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
+        },
+        "ec9adec1-48c1-458e-bae1-37f2be6a863b": {
+          "description": "Percorrer um programa e prever o resultado, considerando um conjunto de entrada."
+        },
+        "3ca80839-1859-48e0-a010-de7ef526512d": {
+          "description": "Determinar se um condicional foi atendido com base em critérios."
+        },
+        "c6a481f9-8493-4b50-876c-c16309ec4e50": {
+          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
+        },
+        "37326a7f-29b6-4ea6-9ed5-a08c2aa2dfd4": {
+          "description": "Resolver quebra-cabeças usando uma combinação de sequências com laços e condicionais."
+        },
+        "b7bbc7eb-a6d3-4820-9b4b-27b64ec0b0d4": {
+          "description": "Transformar instruções condicionais da linguagem falada em um programa."
+        },
+        "a4808383-ef10-4135-9a5d-f695b62aeb36": {
+          "description": "Usar um laço “while” para criar programas que consigam resolver problemas com valores desconhecidos."
+        },
+        "d8494711-ae41-4ccd-8db3-04385d787ca3": {
+          "description": "Diferenciar laços que se repetem um número fixo de vezes e laços que se repetem enquanto uma condição for verdadeira."
+        },
+        "115e7f69-47a1-495a-bc11-8a9ed3270324": {
+          "description": "Desenvolver programas com o entendimento de várias estratégias para implementar condicionais."
+        },
+        "7164456d-4573-432f-b255-a0596e702d96": {
+          "description": "Transformar laços e instruções condicionais da linguagem falada em um programa."
+        },
+        "bbd1a283-a817-4fd2-9335-651b698f63d2": {
+          "description": "Superar obstáculos, como restrições de tempo ou bugs."
+        },
+        "0265cc40-2950-42f3-a457-7b967fa9c0d9": {
+          "description": "Explique a diferença entre informações pessoais e privadas."
+        },
+        "16baead5-8507-4681-94b1-0314783a5418": {
+          "description": "Explique por que é arriscado compartilhar informações privadas on-line."
+        },
+        "d4c584f8-36e7-471a-9b83-713ca5e4711a": {
+          "description": "Identifique os motivos pelos quais as pessoas compartilham informações sobre si mesmas on-line."
+        },
+        "6f3e5897-b529-4f7a-a41f-83c11f7f03c5": {
+          "description": "Crie novos sprites e atribua a eles fantasias e comportamentos."
+        },
+        "bf11a11b-35be-4fdc-a266-9f192e141760": {
+          "description": "Defina “sprite” como um personagem ou objeto na tela que pode ser movido e alterado."
+        },
+        "0601569e-2f95-4d2f-a3a9-0aea3df102ed": {
+          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
+        },
+        "884d4f4c-abd4-493c-8029-cde7399519f4": {
+          "description": "Crie uma animação interativa utilizando fadas e eventos."
+        },
+        "41232751-173e-4eaa-9bc4-bb5b65957d03": {
+          "description": "Escolha quais informações sobre eles mesmos são seguras para compartilhar on-line."
+        },
+        "6a824aaa-b3b2-4c7f-b2f9-daed0835a2c5": {
+          "description": "Crie um programa de computador interativo que expresse quem eles são com texto e imagens personalizadas."
+        },
+        "62ffafea-c5f4-4942-b283-9462c41d52cd": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "68b90262-3e0e-4c90-9888-21796cd30869": {
+          "description": "Entender a diferença entre comandos que precisam ser repetidos em laços e comandos que devem ser usados sozinhos."
+        },
+        "3fac17b3-f27c-4f5c-98f1-a43e3e18d4e0": {
+          "description": "Contar o número de vezes que uma ação deve ser repetida e representar isso como um laço."
+        },
+        "81e6c614-6b5d-43db-8178-3adf983eb5b6": {
+          "description": "Dividir tarefas complexas em seções menores e repetíveis."
+        },
+        "e4a76fad-2750-4f3b-8138-0e0a932b5e2b": {
+          "description": "Combinar formas simples em designs complexos com laços aninhados."
+        },
+        "2cae95f3-a3dc-4541-8b5c-43d876d26ce3": {
+          "description": "Descrever quando é necessário um laço, um laço aninhado ou nenhum laço."
+        },
+        "45801eec-c3af-4a73-afb8-988d55e7a469": {
+          "description": "Identificar a diferença entre o uso de um laço e um laço aninhado."
+        },
+        "feae5f14-f531-4db9-b746-9582df08da12": {
+          "description": "Decompor o código nas maiores sequências repetíveis utilizando laços e laços aninhados."
+        },
+        "020afd03-339c-4b70-af23-62f495f2088f": {
+          "description": "Identificar seções de uma música para colocar em uma função."
+        },
+        "386901b7-db20-4705-90ee-391a42d76d3a": {
+          "description": "Descrever como as funções podem facilitar a escrita de programas."
+        },
+        "887412d7-6f80-42df-98b4-6ef39bb4f09c": {
+          "description": "Localizar frases repetidas em letras de músicas."
+        },
+        "50d6d0ce-0013-47e4-9f0b-ac6bca5d4a30": {
+          "description": "Usar funções predeterminadas para concluir tarefas comumente repetidas."
+        },
+        "e3843037-6a2c-4561-9a5c-c27b4e84de71": {
+          "description": "Usar funções para simplificar programas complexos."
+        },
+        "34743a30-9835-4b96-9933-c84ccd8a20b6": {
+          "description": "Reconhecer quando uma função pode ajudar a simplificar um programa."
+        },
+        "fa73c58f-368d-4e53-97eb-7de987b548c3": {
+          "description": "Classificar e generalizar códigos em funções úteis."
+        },
+        "818dc160-2ce6-4d7d-a358-208b9026debb": {
+          "description": "Determinar se um condicional foi atendido com base em critérios."
+        },
+        "cb32fed2-db37-4e6c-9651-3b1f39fd4741": {
+          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
+        },
+        "1b6a66df-472f-49d6-acdf-13c2f6fdb263": {
+          "description": "Determinar se um condicional foi atendido com base em critérios."
+        },
+        "80cf9584-e814-4880-8c83-119966ed7a89": {
+          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
+        },
+        "59e29159-7e29-48ce-95c7-8510877793e9": {
+          "description": "Reconhecer quando uma função pode ajudar a simplificar um programa."
+        },
+        "b92ee5de-79d3-4fd6-8bf6-e86e3dad779a": {
+          "description": "Usar funções predeterminadas para concluir tarefas comumente repetidas."
+        },
+        "5fb6d430-a2bf-4d0b-b128-5592afc2d856": {
+          "description": "Melhore o design de um aplicativo existente abordando as necessidades de acessibilidade dos usuários."
+        },
+        "bb1f6fd9-3327-411d-b91e-d3b4e756fff3": {
+          "description": "Explique por que a acessibilidade é uma parte importante do design de um aplicativo para os usuários."
+        },
+        "fcecef31-84d0-4df2-80cd-f8641b06c24f": {
+          "description": "Descreva o impacto dos aplicativos móveis no mundo moderno."
+        },
+        "2c0ee6b8-608a-47b6-9093-dbab81b92cbf": {
+          "description": "Entenda seus próprios direitos em relação aos materiais que eles criaram"
+        },
+        "a8686006-16c5-4b08-94d2-32430cd6d77f": {
+          "description": "Interprete o compartilhamento ético de material protegido por direitos autorais versus o compartilhamento que não é ético."
+        },
+        "0c9da891-a9a1-4747-a7da-dc2c76462eb4": {
+          "description": "Explicar como as limitações do sistema podem influenciar o design do projeto."
+        },
+        "5d3b2774-424f-487f-b119-05254b043b89": {
+          "description": "Descrever como o comprometimento pode ajudar a manter um projeto no caminho certo e inspirar a criatividade."
+        },
+        "78939802-f928-4ec5-89cb-3e2aef29d9ce": {
+          "description": "Explicar o processo de design e como ele ajudou a moldar o projeto final acabado."
+        },
+        "82992d38-7821-4608-92a1-bd4fd05d7226": {
+          "description": "Formular e implementar planos para resolver problemas no código."
+        },
+        "d3dbfefc-34eb-4b0a-ab79-53a1ce3adfdc": {
+          "description": "Aprender a se planejar para uma tarefa contínua."
+        },
+        "afa30921-d88a-4d96-a8d1-94de6acad10d": {
+          "description": "Decida quais tipos de declarações são aceitáveis para dizer online e quais não são."
+        },
+        "14b788f7-6566-40f5-8b91-a8c86d6d3afa": {
+          "description": "Descreva a importância do usuário no processo de design."
+        },
+        "6cea05e6-2733-4d09-be8f-1c02c646cb85": {
+          "description": "Identifique sprites em um programa de computador em execução."
+        },
+        "3be6fc2a-7c73-4ff2-b8b6-10639f40e6ad": {
+          "description": "Crie uma animação usando sprites e comportamentos."
+        },
+        "b5e9cc94-d3f5-4a4f-93db-bcadcac0be4b": {
+          "description": "Crie novos sprites e atribua a eles fantasias e comportamentos."
+        },
+        "7b9c0f1d-efa4-4397-8334-d392bb962fb7": {
+          "description": "Desenvolver programas que respondam a eventos temporizados."
+        },
+        "8fac9b1a-450f-4d68-aa87-d7b8e1bbe873": {
+          "description": "Desenvolver programas que respondam à intervenção do usuário."
+        },
+        "d13ed164-0cf7-4bb3-882a-69ed146aeb9f": {
+          "description": "Crie uma animação interativa usando eventos."
+        },
+        "8b5814c2-524a-4871-ae01-bba3f6bce488": {
+          "description": "Programe soluções para problemas que surgem ao projetar um animal de estimação virtual, como alimentá-lo."
+        },
+        "cf3f971b-43c5-4cb5-beeb-d23c903e1752": {
+          "description": "Crie um animal de estimação virtual interativo usando eventos, comportamentos e arte personalizada."
+        },
+        "04ae0169-fb41-46fb-bc74-dc22c70707f7": {
+          "description": "Determine a relação entre como uma variável é definida, armazenada e recuperada quando pressionamos “Executar” em um programa."
+        },
+        "8805bb75-452c-4778-9cd2-6df020a13216": {
+          "description": "Declarar uma variável"
+        },
+        "cc733f62-1646-49dc-b2b4-8b47a7c36fca": {
+          "description": "Chame uma variável várias vezes em um programa."
+        },
+        "d059371b-b3f0-40cb-915a-586645b2f109": {
+          "description": "Atribua um valor a uma variável"
+        },
+        "4d88e11e-77b5-4060-ab3d-2f2ae6cfa8ea": {
+          "description": "Use variáveis em conjunto com prompts."
+        },
+        "b155264b-806c-417e-bd5f-2fd91b6093ec": {
+          "description": "Usar variáveis para armazenar palavras e frases."
+        },
+        "5c6f9917-2c5e-442f-a402-14c15c8b1737": {
+          "description": "Crie um programa de computador interativo que responda à entrada do usuário."
+        },
+        "72c8cd33-c097-48d6-9178-3b146fdc243a": {
+          "description": "Usar variáveis para armazenar palavras e frases."
+        },
+        "ea8b6be7-f51c-420f-a295-ec02488a066f": {
+          "description": "Use variáveis em conjunto com prompts."
+        },
+        "3606812b-a55f-4eb9-8a40-a9ca52df3726": {
+          "description": "Faça e teste uma previsão modificando variáveis de simulação"
+        },
+        "7f41cf27-501d-4676-9ca7-9fcc15161d54": {
+          "description": "Crie um gráfico de linha dupla para comparar dados sobre duas fontes diferentes"
+        },
+        "e29b6e4a-ed9b-4aba-81ab-c1ee2a7ada84": {
+          "description": "Use uma simulação de computador para coletar dados sobre um modelo"
+        },
+        "8a99a9c0-2079-4c7e-a39c-188f940fcfe2": {
+          "description": "Discutir o papel da inteligência artificial na vida deles."
+        },
+        "9ec60d3b-ddcc-479c-9e4d-220ff3d8a10a": {
+          "description": "Treinar e testar um modelo de aprendizado de máquina."
+        },
+        "ba631251-039e-4f7a-9320-158390f318c2": {
+          "description": "Raciocinar sobre o papel do viés humano no aprendizado de máquina."
+        },
+        "422e8552-7c1c-4aba-a702-e627365b7bd6": {
+          "description": "Transformar URLs em endereços IP."
+        },
+        "7a2c2a3b-c61d-4bb4-9720-c0b46a63a940": {
+          "description": "Aprender a complexidade do envio de mensagens pela internet."
+        },
+        "30f2f515-c020-4631-9ffe-3d9ba8749eb2": {
+          "description": "Conseguir explicar como as limitações do sistema podem influenciar o design do projeto."
+        },
+        "33a17071-53d7-4ba9-b041-af3fcb4fabaf": {
+          "description": "Formular e implementar planos para resolver problemas no código."
+        },
+        "505fcab3-063d-4c18-9ce1-83077359307d": {
+          "description": "Explicar o processo de design e como ele ajudou a moldar o projeto final acabado."
+        },
+        "88fa834a-0717-4422-a6df-a6af49a1e928": {
+          "description": "Descrever como o comprometimento pode ajudar a manter um projeto no caminho certo e inspirar a criatividade."
+        },
+        "9183e5a7-1776-4ffb-a65b-730edea18bc3": {
+          "description": "Aprender a se planejar para uma tarefa contínua."
+        },
+        "7279e4aa-2ccc-49b2-b912-e4e4d680e15b": {
+          "description": "Identificar e localizar erros em um programa."
+        },
+        "a87240fd-cb47-49df-ae9e-d058ab3fcb26": {
+          "description": "Transformar movimentos em uma série de comandos."
+        },
+        "1fd14cce-1e61-42c8-83d4-2252ec67f9e9": {
+          "description": "Refletir sobre o processo de depuração de maneira adequada à idade."
+        },
+        "3e5024e3-0c8e-436c-b532-42749d6a5cf0": {
+          "description": "Prever onde um programa vai falhar."
+        },
+        "d219187c-ecad-4854-ba3e-b136b4511fcc": {
+          "description": "Modificar um programa existente para resolver erros."
+        },
+        "5c54f1b4-f582-4b2f-8db1-396336c44a7b": {
+          "description": "Representar um algoritmo como um programa de computador."
+        },
+        "87bbc4aa-8c38-4428-8a5c-e6b86bc489f5": {
+          "description": "Ordenar comandos de movimento como etapas sequenciais em um programa."
+        },
+        "ff07b623-686f-4193-91c9-c427b5d780ad": {
+          "description": "Desenvolver competências de solução de problemas e pensamento crítico analisando práticas de depuração."
+        },
+        "b06566c3-55fe-4cb6-9e55-f40814d47ad8": {
+          "description": "Criar um programa para concluir uma imagem utilizando etapas sequenciais."
+        },
+        "fbaccfd8-2a19-449c-a260-3e0e4b6f0cc6": {
+          "description": "Dividir formas complexas em partes simples."
+        },
+        "09012264-2762-4a05-a5e5-f5b826fe16ad": {
+          "description": "Crie novos sprites e atribua a eles fantasias e comportamentos."
+        },
+        "0e3791df-3c03-4b83-9943-d3b57110dea1": {
+          "description": "Defina “sprite” como um personagem ou objeto na tela que pode ser movido e alterado."
+        },
+        "0b712f3f-c5fb-4d8d-8247-23bfa13c0139": {
+          "description": "Crie novos sprites e atribua a eles fantasias e comportamentos."
+        },
+        "7ecf2549-51ae-4bcd-bc3a-d4fc6059b7bc": {
+          "description": "Crie uma animação usando sprites e comportamentos."
+        },
+        "7bb23f18-d99f-4ded-af08-d9e8eee2e1e5": {
+          "description": "Crie uma animação interativa usando eventos."
+        },
+        "938b2178-a433-4324-ba73-b1b6f8e0c0be": {
+          "description": "Desenvolver programas que respondam a eventos temporizados."
+        },
+        "ae7debff-9532-4a44-9f44-50813f955edf": {
+          "description": "Desenvolver programas que respondam à intervenção do usuário."
+        },
+        "afc3a3eb-84f3-462c-89e5-2b8d3cb1f879": {
+          "description": "Crie um animal de estimação virtual interativo usando eventos, comportamentos, variáveis e arte personalizada."
+        },
+        "eb7e84c2-0694-4b77-90a0-747270409a09": {
+          "description": "Programe soluções para problemas que surgem ao projetar um animal de estimação virtual, como alimentá-lo ou monitorar sua felicidade."
+        },
+        "9f0d4053-b0bb-4213-bb8a-b07433bb84cf": {
+          "description": "Desenvolver programas que respondam a eventos programados"
+        },
+        "f4427747-3b3f-43ac-b124-2ed1856ab5be": {
+          "description": "Criar animações de dança utilizando código"
+        },
+        "f6a45c87-6f01-4df0-8020-0a9be77f0d10": {
+          "description": "Desenvolver programas que respondam à entrada do usuário"
+        },
+        "1d64ca6b-c3c3-41c5-b923-280bf46dbdc9": {
+          "description": "Utilizar uma combinação de comandos sequenciais e com laços para chegar ao final de um labirinto."
+        },
+        "8a54dbc1-2cc5-4fbe-a69d-1fcdeb521415": {
+          "description": "Decompor uma longa sequência de instruções na maior sequência repetível."
+        },
+        "d1a8cfa4-2a01-4cd1-bf6b-7bdb85dfbba2": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "19f2a21b-7cd6-49c1-b058-a71afadfbf0f": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "bbb2787f-1faa-4193-93ec-e2e5ff8de139": {
+          "description": "Entender a diferença entre comandos que precisam ser repetidos em laços e comandos que devem ser usados sozinhos."
+        },
+        "64f8b4e0-c197-41bc-9e3d-b957587027d9": {
+          "description": "Reconhecer padrões grandes e repetidos como sendo compostos de padrões menores e repetidos."
+        },
+        "a3d9c13d-e5d1-4c96-8605-b6c6968e446a": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "f875fba7-8b45-4faa-b661-24d7eae983b5": {
+          "description": "Dividir tarefas complexas em seções menores e repetíveis."
+        },
+        "2dc48a33-af54-4ea5-b2a5-4b8c16018529": {
+          "description": "Identificar a diferença entre o uso de um laço e um laço aninhado."
+        },
+        "3eb2fbbc-383b-4293-94a9-df920d67ff2e": {
+          "description": "Descrever quando é necessário um laço, um laço aninhado ou nenhum laço."
+        },
+        "7376c401-4ea5-4247-a739-1b3c8f3077c7": {
+          "description": "Decompor o código nas maiores sequências repetíveis utilizando laços e laços aninhados."
+        },
+        "5abe1116-ce82-4bce-8454-7537bdce12d4": {
+          "description": "Determinar se um condicional foi atendido com base em critérios."
+        },
+        "b75b5c74-2020-4cba-abb7-9c1d2432c93f": {
+          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
+        },
+        "94a0640b-eaf9-4797-b448-601edefe53f7": {
+          "description": "Transformar instruções condicionais da linguagem falada em um programa."
+        },
+        "da9556fa-6a34-4735-a0fe-4f61e5dfba88": {
+          "description": "Resolver quebra-cabeças usando uma combinação de sequências com laços e condicionais."
+        },
+        "9a923506-c553-4734-8675-3925b4205a40": {
+          "description": "Diferenciar laços que se repetem um número fixo de vezes e laços que se repetem enquanto uma condição for verdadeira."
+        },
+        "ef9064e8-a2fc-43a5-a847-0e504ffd7043": {
+          "description": "Usar um laço “while” para criar programas que consigam resolver problemas com valores desconhecidos."
+        },
+        "11cc6b71-35eb-4651-87ef-17cb48e8e93a": {
+          "description": "Definir as circunstâncias em que certas partes de um programa devem ser executadas e quando não devem."
+        },
+        "979a7e2a-759e-4ffc-96b2-552fe5888fb9": {
+          "description": "Determinar se um condicional foi atendido com base em critérios."
+        },
+        "580ad418-73dc-42d0-8934-42fe0a9af98a": {
+          "description": "Desenvolver programas com o entendimento de várias estratégias para implementar condicionais."
+        },
+        "94e41188-94ca-4365-878b-408e000c2a1d": {
+          "description": "Transformar laços e instruções condicionais da linguagem falada em um programa."
+        },
+        "24fd8517-7a14-4489-8d76-76ddf7b9a7fe": {
+          "description": "Emparelhar um laço e uma instrução condicional juntos."
+        },
+        "57a8c756-ad85-4861-ae8d-a54d86c19d26": {
+          "description": "Aninhar condicionais para analisar várias condições de valor usando a lógica se… então."
+        },
+        "6c8101ef-895e-43de-b0a5-cbfddc2ca79f": {
+          "description": "Usar funções para simplificar programas complexos."
+        },
+        "90578a9d-1c23-4b7e-be6d-5c2d5c18ff7b": {
+          "description": "Usar funções predeterminadas para concluir tarefas comumente repetidas."
+        },
+        "05e395d7-bc15-440b-a765-833fc2e05258": {
+          "description": "Reconhecer quando uma função pode ajudar a simplificar um programa."
+        },
+        "3ccd51c5-ad2c-4f0e-9a41-5816a40cc190": {
+          "description": "Usar funções predeterminadas para concluir tarefas comumente repetidas."
+        },
+        "33ccfa77-2a9e-4500-ba9c-0ba82af10a78": {
+          "description": "Classificar e generalizar códigos em funções úteis."
+        },
+        "fdfbb07a-5a1c-459d-81ae-8b7c35da4ecc": {
+          "description": "Reconhecer quando uma função pode ajudar a simplificar um programa."
+        },
+        "7540f285-a55a-465e-87cd-ed3a930b9ea7": {
+          "description": "Use variáveis em conjunto com prompts."
+        },
+        "fc585f17-d535-4c1d-aaba-65e878894373": {
+          "description": "Ações Use variáveis para conter palavras e frases."
+        },
+        "75953ae5-c4fa-40d3-85e1-deb508c32847": {
+          "description": "Atribuir valores a variáveis existentes."
+        },
+        "ba1c8ef0-b9fa-4784-9951-6999428d1bbc": {
+          "description": "Usar variáveis para alterar valores dentro de um laço."
+        },
+        "e17081b3-65af-4076-afc7-e8aa69da02f2": {
+          "description": "Utilizar variáveis no lugar de valores repetitivos em um programa."
+        },
+        "4df8eb31-02ee-4e5d-ae28-368a29da7142": {
+          "description": "Examine o código para encontrar locais onde as variáveis podem ser substituídas por valores específicos."
+        },
+        "d800c885-0e72-4325-a176-68612c826131": {
+          "description": "Identifique áreas nas quais eles podem usar variáveis para modificar quantidades durante o tempo de execução. "
+        },
+        "61ae46d2-2f10-4073-935c-b46ab9fae340": {
+          "description": "Reconheça quando usar um loop for e quando usar outros loops, como loops repeat e while."
+        },
+        "ec3dab8e-cfb2-4b3a-9b33-dace79bba6c6": {
+          "description": "Determine o valor inicial, o valor de parada e o valor de passo para um loop for."
+        },
+        "a75dc8b9-eebc-48cd-9495-289d69501b09": {
+          "description": "Use loops for para alterar o loop várias vezes com valores diferentes."
+        },
+        "d759d477-89f3-4ef8-b701-c4115a3258cd": {
+          "description": "Reconheça quando usar um loop for e quando usar outros loops, como loops repeat e while."
+        },
+        "546d4a38-5abb-402c-9e61-bef13a71001d": {
+          "description": "Superar obstáculos, como restrições de tempo ou bugs."
+        },
+        "8d8fffd3-6411-4778-95f5-76953d066786": {
+          "description": "Identificar o que se espera deles ao fazerem a transição para o laboratório de informática."
+        },
+        "d62cb1ce-6c5d-4893-ba48-3f8a844f0670": {
+          "description": "Use a terminologia apropriada ao se referir a um mouse de computador, painel tátil (touchpad), ou tela sensível ao toque."
+        },
+        "1527c354-dff7-4d8c-94f7-8b55d5bc3099": {
+          "description": "Modele comportamentos adequados de laboratório de informática"
+        },
+        "fc61a33c-e645-4600-b2d3-70bb8e46a938": {
+          "description": "Experimente ações de programação padrão baseadas em blocos, como: clicar, arrastar e soltar, etc."
+        },
+        "26c1a686-8627-439a-b7f9-3e42d80d4a6c": {
+          "description": "Desenvolver um programa de computador a partir de um conjunto de instruções por escrito"
+        },
+        "8f583ef0-bd0b-4e2c-81c3-11057794f7e2": {
+          "description": "Construir um programa reorganizando movimentos sequenciais"
+        },
+        "e20881b1-a3ad-4095-a434-6db807d457ed": {
+          "description": "Transformar movimentos em uma série de comandos."
+        },
+        "6856ac6b-753c-4870-bfe4-d6ee553ff409": {
+          "description": "Ordenar comandos em uma sequência lógica."
+        },
+        "bbf10b3a-152d-472c-82b5-761d1be6e3b2": {
+          "description": "Identificar problemas ou “bugs” em um programa e desenvolver um plano para resolvê-los."
+        },
+        "21d90a6a-f1ea-4d0b-ba17-f2e6a53cf78c": {
+          "description": "Identificar e localizar erros em um programa."
+        },
+        "d73df8bf-fcc2-4732-a4be-cab60f8b326d": {
+          "description": "Transformar movimentos em uma série de comandos."
+        },
+        "26b58b7e-9af6-4979-8a63-8f69d7f308c8": {
+          "description": "Construir um programa usando estruturas que repetem partes do código"
+        },
+        "65939b9f-ba0f-4834-8f54-24419c9391e5": {
+          "description": "Melhorar o código atual identificando áreas de repetição e movendo-as para estruturas de laço"
+        },
+        "3a06cce8-584a-431c-8cca-05ad9b0df32d": {
+          "description": "Identificar as vantagens do uso de uma estrutura de laço em vez da repetição manual."
+        },
+        "d7a5432f-6854-483b-8a5b-fcb1844dd603": {
+          "description": "Decompor uma longa sequência de instruções na menor sequência repetível possível."
+        },
+        "356a5953-6822-4156-b54f-e5f2095156e1": {
+          "description": "Contar o número de vezes que uma ação deve ser repetida e representar isso como um laço."
+        },
+        "e8114e57-1426-4241-9cbb-dc57a3edadab": {
+          "description": "Decompor uma forma em sua maior sequência repetível."
+        },
+        "fcdb6a79-7043-4f4d-b4fe-04beeb339fea": {
+          "description": "Criar um programa que desenhe formas complexas pela repetição de sequências simples."
+        },
+        "416213df-e386-420c-aafe-40e05d790f59": {
+          "description": "Criar um programa que desenhe formas complexas pela repetição de sequências simples."
+        },
+        "448fabd8-2154-4840-9807-b0b79bab8c96": {
+          "description": "Contar o número de vezes que uma ação deve ser repetida e representar isso como um laço."
+        },
+        "f2e5268e-cbce-4db0-abb3-e2b6a65684d8": {
+          "description": "Decompor uma forma em sua maior sequência repetível."
+        },
+        "35be46ad-58dd-4072-97a4-09a55c75e329": {
+          "description": "Identificar ações que se correlacionem com eventos de entrada."
+        },
+        "37987315-bfd5-46fd-9faa-9e480ef816b2": {
+          "description": "Criar uma história animada e interativa utilizando sequências e manipuladores de eventos."
+        },
+        "fb6ff331-603c-4310-83e8-77e3e606edfe": {
+          "description": "Compartilhar um artefato criativo com outros alunos."
+        },
+        "0f40a956-c075-4b89-a139-101c2288896f": {
+          "description": "Compartilhar um artefato criativo com outros alunos."
+        },
+        "11e630e5-0551-49c9-9894-2db312a9f1df": {
+          "description": "Identificar ações que se correlacionem com eventos de entrada."
+        },
+        "d2669646-8580-4bb3-a6e0-54961b42a029": {
+          "description": "Criar uma história animada e interativa utilizando sequências e manipuladores de eventos."
+        },
+        "50b1fb31-4471-433d-a5f1-74e38886d49f": {
+          "description": "Criar e compartilhar seus próprios aplicativos no App Lab usando recursos como botões, textos, imagens, sons e telas."
+        },
+        "f7a3786d-0859-48d5-a4f9-827d6d681133": {
+          "description": "Continuar criando projetos no App Lab completo usando os recursos fornecidos na página code.org/applab."
+        },
+        "586fecaa-52c0-4889-adaf-cc11a172d4a7": {
+          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        },
+        "e2745118-9d93-4e33-a607-c1927403c0c3": {
+          "description": "Identificar o vocabulário essencial da ciência da computação"
+        },
+        "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
+          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        },
+        "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
+          "description": "Criar um programa para concluir uma imagem utilizando etapas sequenciais."
+        },
+        "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
+          "description": "Dividir formas complexas em partes simples."
+        },
+        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
+          "description": "Identificar ações que se correlacionem com eventos de entrada."
+        },
+        "73964b0e-cea1-43cf-a130-410017addf73": {
+          "description": "Criar um jogo interativo utilizando sequências e manipuladores de eventos."
+        },
+        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
+          "description": "Compartilhar um artefato criativo com outros alunos."
+        },
+        "8b4629a9-0621-4442-9801-e3b61e4fbaf3": {
+          "description": "Defina \"codificação\" e \"ciência da computação\"."
+        },
+        "16a00a1c-4559-4e9c-95e1-1cd1e542fe68": {
+          "description": "Identifique o vocabulário mais importante em ciência da computação."
+        },
+        "5e05fbeb-12c6-437c-b0c4-5e2057d3d975": {
+          "description": "Identifique locais para continuar a aprendizagem de ciência da computação e codificação."
+        },
+        "f9486b57-7160-4b3b-b327-b311239d5d26": {
+          "description": "Desenvolver programas que respondam a eventos programados"
+        },
+        "251fe027-d9b3-4384-99f6-53505275e4ce": {
+          "description": "Desenvolver programas que respondam à entrada do usuário"
+        },
+        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
+          "description": "Criar animações de dança utilizando código"
+        },
+        "83f493e8-9941-4154-b2f4-f34836741746": {
+          "description": "Definição de \"codificação\" e \"ciência da computação\"."
+        },
+        "58cd5fc3-375f-4840-a5ac-fdb527a38ebd": {
+          "description": "Identifique o vocabulário mais importante em ciência da computação."
+        },
+        "1cc8d9b3-ae28-4034-b5e3-c5c0a63d43d3": {
+          "description": "Identifique locais para continuar a aprendizagem de ciência da computação e codificação."
+        },
+        "d48452ca-5cba-4bc4-b52c-424f10d43bab": {
+          "description": "Definição de \"codificação\" e \"ciência da computação\"."
+        },
+        "bdb824f7-9d5c-4465-b019-0294329fd999": {
+          "description": "Identifique o vocabulário mais importante em ciência da computação."
+        },
+        "69ffb469-2601-46aa-bc80-82043d8dcd1e": {
+          "description": "Identifique locais para continuar a aprendizagem de ciência da computação e codificação."
+        },
+        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
+          "description": "Desenvolver programas que respondam a eventos programados"
+        },
+        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
+          "description": "Desenvolver programas que respondam à entrada do usuário"
+        },
+        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
+          "description": "Criar animações de dança utilizando código"
+        },
+        "6394fdc5-50c3-423e-8135-a64594824db3": {
+          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        },
+        "36208a0a-f319-4d09-ad20-46f8d68c0ff4": {
+          "description": "Identificar o vocabulário essencial da ciência da computação"
+        },
+        "bed6c56c-a270-4835-96f1-33d9d9ec78da": {
+          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
+        },
+        "f04c5ca1-4000-44ce-83f6-8fe6d381c283": {
+          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        },
+        "e23f32e6-7d12-41e6-a601-bcf0825f0e30": {
+          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        },
+        "a5bebcad-7295-4ecd-af0d-4012f97de704": {
+          "description": "Identificar o vocabulário essencial da ciência da computação"
+        },
+        "303a2b74-af73-401c-8929-1fc1c5611f18": {
+          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
+        },
+        "0de7aa41-13ea-4a30-a45d-701df2a562c8": {
+          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        },
+        "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
+          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        },
+        "db37b900-bbc1-46dc-a6c8-adc0ab833a8d": {
+          "description": "Identificar o vocabulário essencial da ciência da computação"
+        },
+        "86e75e93-de74-46cc-8100-6eb3f61e8f9e": {
+          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
+        },
+        "573d7675-e18e-418f-8bc9-9ec60547c1b2": {
+          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        },
+        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
+          "description": "Crie uma animação interativa utilizando fadas e eventos."
+        },
+        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
+          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
+        },
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "Crie uma animação interativa utilizando fadas e eventos."
+        },
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
+        },
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
+        },
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Crie uma animação interativa utilizando fadas e eventos."
+        },
+        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
+          "description": "Crie uma animação interativa utilizando fadas e eventos."
+        },
+        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
+          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
+        },
+        "1232eb04-9ab1-4fe2-87f9-61c6d94d770e": {
+          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
+        },
+        "3bbfb468-a89a-4720-a7ff-bccbd44369f2": {
+          "description": "Crie uma animação interativa utilizando fadas e eventos."
+        },
+        "7da72bfe-23c8-479f-8797-7dcfcf175ab0": {
+          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
+        },
+        "fa4bb1b0-8232-4b87-b825-abe69255d1e1": {
+          "description": "Crie uma animação interativa utilizando fadas e eventos."
+        },
+        "c15d5aa7-bb01-41e2-90d5-5929d68628f3": {
+          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        },
+        "f149f330-032b-40db-a3db-62ff2a8c04fb": {
+          "description": "Identificar o vocabulário essencial da ciência da computação"
+        },
+        "e68fca49-de4c-4e93-85e3-05bcc2f9a779": {
+          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        },
+        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
+          "description": "Explicar por que a criptografia é uma necessidade importante no cotidiano da internet."
+        },
+        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
+          "description": "Decifrar uma mensagem criptografada com a cifra de César, usando um widget para cifra de César"
+        },
+        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
+          "description": "Decifrar uma mensagem criptografada por substituição aleatória usando a análise de frequência"
+        },
+        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
+          "description": "Explicar os pontos fracos e falhas de segurança da criptografia por substituição"
+        },
+        "3e5eebcd-2140-4152-8654-410468108ab6": {
+          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        },
+        "fcb92339-9036-46ec-b5ab-d8d252651e2d": {
+          "description": "Identificar o vocabulário essencial da ciência da computação"
+        },
+        "0a56ebd1-4df4-492c-b630-2a6b1f43e3c4": {
+          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        },
+        "efde781a-6bb2-4cbf-a2e1-c88f9c6daffa": {
+          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        },
+        "502fa0e1-3f6d-4b44-8a8f-cc17ed7e3b7e": {
+          "description": "Identificar o vocabulário essencial da ciência da computação"
+        },
+        "bc47cc48-f07f-4d2b-aa2d-86f952ab0da3": {
+          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
+        },
+        "59992d8c-d194-4063-82fa-001a0b6482d9": {
+          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        },
+        "63be9575-1232-47a5-991c-8bd03ac7c949": {
+          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        },
+        "0b17cf0a-2614-40be-afbc-1045245d0a38": {
+          "description": "Identificar o vocabulário essencial da ciência da computação"
+        },
+        "b655e0ef-f98f-4db9-93f1-5d842b470c5d": {
+          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
+        },
+        "4fc4fb7c-051c-40b4-a93a-0b92afeb97e1": {
+          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        },
+        "ea5eae79-7d11-4fff-a02f-9d3913c8a7c5": {
+          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        },
+        "74f6b7a3-df1b-4f98-9619-30b2c2118c14": {
+          "description": "Identificar o vocabulário essencial da ciência da computação"
+        },
+        "d1660224-18b1-4e70-b7fc-b0fce29c8cd6": {
+          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        },
+        "008a40f4-a5ee-42aa-862e-670f19129694": {
+          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        },
+        "a4ad4a3c-f2b2-4675-90e5-626ce70c2764": {
+          "description": "Identificar o vocabulário essencial da ciência da computação"
+        },
+        "343631be-830a-44f6-a249-a6aa96ea38f0": {
+          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        },
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": "Discutir o papel da inteligência artificial na vida deles."
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": "Treinar e testar um modelo de aprendizado de máquina."
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": "Raciocinar sobre o papel do viés humano no aprendizado de máquina."
+        },
+        "ef08539f-6652-4fb9-a0ec-781dfec114f8": {
+          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        },
+        "b1e4a88d-565b-4d95-a6d7-129869cff301": {
+          "description": "Identificar o vocabulário essencial da ciência da computação"
+        },
+        "4cc87f80-aa2a-4996-96bd-de31f9836620": {
+          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
+        },
+        "f08d4441-3a67-48bd-a6e1-a8183ed7b427": {
+          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        },
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Ilustre as mudanças no humor de um poema."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Represente a linguagem literal e a figurativa através de um texto"
+        },
+        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
+          "description": "Desenvolver programas que respondam a eventos temporizados."
+        },
+        "93e23857-027c-4711-9033-a41de9430672": {
+          "description": "Identificar ações que se correlacionem com eventos de entrada."
+        },
+        "8e120010-1817-488a-8ca8-ce5198a0883d": {
+          "description": "Criar um jogo interativo utilizando sequências e manipuladores de eventos."
+        },
+        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
+          "description": "Compartilhar um artefato criativo com outros alunos."
+        },
+        "559aa8ee-c19e-41b2-8820-8cf04cf72dad": {
+          "description": "Defina \"codificação\" e \"ciência da computação\"."
+        },
+        "bd8e3dc4-47f2-41ac-8c7f-01126eb5e68a": {
+          "description": "Identifique o vocabulário mais importante em ciência da computação."
+        },
+        "0e2bbedd-f066-4dc1-b80c-291dac187c62": {
+          "description": "Identifique locais para continuar a aprendizagem de ciência da computação e codificação."
+        },
+        "7a1a8e77-d400-47a9-ad84-819e2c9d88f1": {
+          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        },
+        "dca3e183-1119-471b-b510-a5b6f40f34b4": {
+          "description": "Identificar o vocabulário essencial da ciência da computação"
+        },
+        "ff1a05a7-9dc8-40f7-862d-9524c94d19da": {
+          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
+        },
+        "0a1163db-4cf1-4e22-bcbd-16db7f25f71f": {
+          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        },
+        "e475558e-d7ca-4fc3-950a-b09be116dafb": {
+          "description": "Definir “programação” (ou “codificação”) e “ciência da computação”"
+        },
+        "6feb1920-3b43-4a49-ade4-e9c6ab5da092": {
+          "description": "Identificar o vocabulário essencial da ciência da computação"
+        },
+        "663f8e5f-9d35-425b-8d51-931fcef2c2d4": {
+          "description": "Fazer ligações entre conceitos de ciência da computação e o mundo real"
+        },
+        "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce": {
+          "description": "Identificar lugares para continuar aprendendo ciência da computação e programação"
+        },
+        "d2d65101-b356-4092-8f88-59b387334dd9": {
+          "description": "Colaborar com um colega para encontrar uma solução para um problema de compactação de texto usando o widget Text Compression (esquema de compactação sem perdas)."
+        },
+        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
+          "description": "Explicar por que é difícil ou impossível identificar a quantidade ideal de compactação."
+        },
+        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
+          "description": "Explicar alguns fatores que tornam a compactação desafiadora."
+        },
+        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
+          "description": "Descrever o objetivo e o raciocínio da compactação sem perdas."
+        },
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "Identificar o que se espera deles ao fazerem a transição para o laboratório de informática."
+        },
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "Use a terminologia apropriada ao se referir a um mouse de computador, painel tátil (touchpad), ou tela sensível ao toque."
+        },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Desenvolver programas que respondam a eventos temporizados."
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "Ilustre as mudanças no humor de um poema."
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "Represente a linguagem literal e a figurativa através de um texto"
         }
       }
     }

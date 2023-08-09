@@ -7,7 +7,6 @@
   "catProcedures": "Funkcije",
   "catText": "Besedilo",
   "catVariables": "Spremenljivke",
-  "designWorkspaceHeader": "Delovni prostor: ",
   "designElementEvent_input": "Vnos",
   "designElementProperty_text": "besedilo",
   "designElementProperty_textAlignment_left": "levo",
@@ -15,6 +14,7 @@
   "designElementProperty_zOrder": "globina",
   "designElementTheme_classic": "Klasika",
   "designElementTheme_default": "Privzeto",
+  "designWorkspaceHeader": "Delovni prostor: ",
   "dropletBlock_drawImage_param1": "x",
   "dropletBlock_drawImage_param2": "y",
   "dropletBlock_drawImage_param4": "višina",
@@ -27,7 +27,7 @@
   "nextLevel": "Čestitke! Zaključil/a si to uganko.",
   "no": "Ne",
   "numBlocksNeeded": "Ta uganka je lahko rešena z %1 bloki.",
-  "repeatForever": "ponavljaj kar naprej",
   "repeatDo": "izvrši",
+  "repeatForever": "ponavljaj kar naprej",
   "yes": "Da"
 }

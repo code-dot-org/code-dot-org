@@ -2139,6 +2139,14 @@ sm-WS:
         - {}
         questions:
         - {}
+      Test Contained Retriable Multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       Unit 1 Lesson 1 Overview:
         markdown: "#Vaaiga lautele\nO le vasega e galulue i vaega e fai se vaa i le
           pepa alumini e mafai ona tali sene enaena se tele. O le uma ai o le lesoni
@@ -3388,14 +3396,14 @@ sm-WS:
         - {}
       courseD_multi_scrat_predict1:
         answers:
-        - text: Leai se mea. E le mafai ona toe minoi se Scrat.
-          feedback: Sese. O le tuuina o le poloka 'move forward' i totonu o le poloka
+        - feedback: Sese. O le tuuina o le poloka 'move forward' i totonu o le poloka
             'repeat' e faaalu faatolu ai i luma Scrat.
+          text: Leai se mea. E le mafai ona toe minoi se Scrat.
         - text: E faatolu ona alu i luma Scrat, liliu, ona toe alu faatolu i luma,
             ona oo ai lea i le fatulaau.
-        - text: E alu i luma Scrat, ona liliu ma lavea.
-          feedback: Sese. O le tuuina o le poloka 'move forward' i totonu o le poloka
+        - feedback: Sese. O le tuuina o le poloka 'move forward' i totonu o le poloka
             'repeat' e faaalu faatolu ai i luma Scrat.
+          text: E alu i luma Scrat, ona liliu ma lavea.
         - feedback: O le tuuina o le poloka 'move forward' i totonu o le poloka 'repeat'
             e faatupu ai le alu i luma faatolu o Scrat. Ona ia liliu ma toe alu faatolu
             i luma, ona oo atu ai lea i le fatulaau.
@@ -9102,6 +9110,14 @@ sm-WS:
         - {}
         - {}
         - {}
+      test-single-multi-standalone-retriable:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       will-be-myself-in-cs:
         answers:
         - {}
@@ -9162,22 +9178,6 @@ sm-WS:
         - {}
         - {}
         - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      Test Contained Retriable Multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      test-single-multi-standalone-retriable:
-        answers:
         - {}
         - {}
         - {}

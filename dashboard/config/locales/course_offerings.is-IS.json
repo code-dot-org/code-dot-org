@@ -2,33 +2,34 @@
   "is-IS": {
     "data": {
       "course_offerings": {
-        "csd": "Uppgötvanir í Tölvunarfræði",
-        "csp": "Undirstöðuatriði tölvunarfræði",
         "20-hour": "Kynning á tölvunarfræði, hraðnámskeið",
-        "flappy": "Flappy kóði",
-        "jigsaw": "Púsl",
         "algebra": "Tölvunarfræði í algebru",
+        "allthethingscourse": "allthethings námskeið",
         "artist": "Listamaður",
         "course1": "Námskeið 1",
         "course2": "Námskeið 2",
         "course3": "Námskeið 3",
         "course4": "Námskeið 4",
+        "csd": "Uppgötvanir í Tölvunarfræði",
+        "csp": "Undirstöðuatriði tölvunarfræði",
+        "edit-code": "Breyta kóða",
+        "flappy": "Flappy kóði",
         "frozen": "Kóðaðu með Önnu og Elsu",
         "gumball": "Gumball Leikjasmiðja",
+        "halloween": "hrekkjavaka",
         "hourofcode": "Völundarhús",
         "iceage": "Ice Age Leikjasmiðja",
         "infinity": "Disney Infinity leikjasmiðja",
+        "jigsaw": "Púsl",
         "mc": "Klukkustund kóðunar með Minecraft",
         "minecraft": "Klukkustund kóðunar - Minecraft Hönnuður",
         "pixelation": "Dílamynstur",
         "playlab": "Leikjasmiðjan",
-        "text-compression": "Þjöppun texta",
-        "edit-code": "Breyta kóða",
-        "valentine": "ástarkveðja",
-        "allthethingscourse": "allthethings námskeið",
-        "halloween": "hrekkjavaka",
+        "soccer": "fótbolti",
+        "starwars": "Star Wars: Gerð Vetrarbrautar með Kóða - JavaScript",
         "step": "þrep",
-        "soccer": "fótbolti"
+        "text-compression": "Þjöppun texta",
+        "valentine": "ástarkveðja"
       }
     }
   }

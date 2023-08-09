@@ -175,34 +175,47 @@ cs:
   teach_ai_homepage_banner_title: AI education for the world
   teach_ai_homepage_banner_desc: Code.org is part of TeachAI, dedicated to empowering
     educators everywhere to teach with AI and about AI.
-  curriculum_launch_2023_title: Introducing incredible updates to our curriculum
-  curriculum_launch_2023_desc: Updates to CSC, CSP, CSD, and more — plus a new Curriculum
-    Catalog and redesigned Teach page to help you find it all!
+  curriculum_launch_2023_title: Naše učební osnovy prošly úžasnými změnami
+  curriculum_launch_2023_desc: Aktualizovali jsme kurzy CSC, CSP, CSD a další. Navíc
+    jsme přidali Katalog kurzů a přepracovanou stránku Učení, aby se vám kurzy lépe
+    hledaly.
+  in_partnership_with: Ve spolupráci s
+  afe_partnership_logo_alt: Logo Amazon Future Engineer
+  afe_partnership_thanks_desc: Inženýr budoucnosti (Amazon Future Engineer)* je komplexní
+    program pro děti a mladistvé z nízkopříjmových či jinak znevýhodněných rodin,
+    jehož cílem je provázet účastníky od dětství až k nástupu do práce, poskytovat
+    jim inspiraci, trénink a vzdělání a pomoci jim nastartovat kariéru v oblasti informatiky.
+    [Zjistěte o naší spolupráci více](%{afe_url}).
+  grade_level: Ročník
   grade_level_label_elementary: Elementary School
   grade_level_label_middle: Middle School
   grade_level_label_high: High School
+  teacher_label_csf: 'Základy informatiky: učitel'
   teacher_label_csd: CS Discoveries Teacher
-  teacher_label_csp: CS Principles Teacher
-  teacher_label_csc: CS Connections Teacher
-  required_materials: 'Required Materials:'
-  optional_materials: 'Optional Materials:'
+  teacher_label_csp: 'Principy informatiky: učitel'
+  teacher_label_csc: 'Mezipředmětové vztahy v informatice: učitel'
+  teacher_label_csa: AP® Computer Science A Teacher
+  required_materials: 'Požadované materiály:'
+  optional_materials: 'Volitelné materiály:'
   call_to_action_learn_more: Learn more
   call_to_action_watch_now: Watch now
   call_to_action_try_activity: Try activity
   call_to_action_explore_unit: Explore unit
   call_to_action_explore_curriculum: Explore curriculum
-  call_to_action_explore_curriculum_options: Explore curriculum options
+  call_to_action_explore_curriculum_options: Prozkoumat možnosti učebních osnov
   call_to_action_explore_modules: Explore modules
   call_to_action_explore_workshops: Explore workshops
-  call_to_action_explore_course: Explore course
-  call_to_action_explore_full_course: Explore full course
-  call_to_action_explore_widgets: Explore widgets
-  call_to_action_explore_choice_level: Explore example choice level
-  call_to_action_explore_collection: Explore collection
-  call_to_action_try_app_lab: Try App Lab
+  call_to_action_explore_course: Prozkoumat kurz
+  call_to_action_explore_courses: Prozkoumat kurzy
+  call_to_action_explore_full_course: Prozkoumat celý kurz
+  call_to_action_explore_widgets: Prozkoumat widgety
+  call_to_action_explore_choice_level: Prozkoumat vzorovou úroveň s výběrem možností
+  call_to_action_explore_collection: Prozkoumat sbírku
+  call_to_action_explore_unplugged_lesson: Prozkoumat lekce bez připojení
+  call_to_action_try_app_lab: Vyzkoušet App Lab
   call_to_action_view_lesson_plan: View lesson plan
   call_to_action_self_paced_pl: Start self-paced professional learning
-  call_to_action_apply_for_pl: Apply for Professional Learning
+  call_to_action_apply_for_pl: Přihlásit se k Profesnímu vzdělávání
   call_to_action_watch_panel: Watch panel
   call_to_action_learn_about_challenge: Learn about challenge
   call_to_action_explore_website: Explore website
@@ -210,6 +223,7 @@ cs:
   call_to_action_donate_online: Donate online
   call_to_action_get_updates: Get updates
   call_to_action_special_announcement: See special announcement
+  call_to_action_learning_opportunity: New Professional Learning Opportunity
   call_to_action_start_pl: Start professional learning
   call_to_action_contact_regional_partner: Contact your Regional Partner
   call_to_action_join_csta: Join CSTA
@@ -225,16 +239,19 @@ cs:
   call_to_action_see_full_curriculum_catalog: See full Curriculum Catalog
   call_to_action_find_self_paced_modules: Find self-paced modules
   call_to_action_join_teacher_forums: Join teacher forums
-  call_to_action_explore_teacher_forums: Explore teacher forums
+  call_to_action_explore_teacher_forums: Prozkoumat fórum pro učitele
   call_to_action_explore_career_resources: Explore career resources
   call_to_action_watch_videos: Watch videos
   call_to_action_download_posters: Download posters
-  call_to_action_contact_support: Contact Code.org support
-  call_to_action_pick_units: Pick units
-  call_to_action_focus_on_topic: Focus on a topic
-  call_to_action_teach_full_intro_course: Teach a full intro course
-  call_to_action_see_module_details: See module details
-  call_to_action_start_modules: Start modules
+  call_to_action_contact_support: Kontaktovat podporu Code.org
+  call_to_action_pick_units: Vybrat si tematické celky
+  call_to_action_focus_on_topic: Zaměřit se na téma
+  call_to_action_teach_full_intro_course: Odučit kompletní úvodní kurz
+  call_to_action_see_module_details: Zobrazit podrobnosti o modulu
+  call_to_action_start_modules: Začít s moduly
+  call_to_action_see_course_details: Zobrazit podrobnosti o kurzu
+  call_to_action_learn_about_approach: Zjistěte více o našem přístupu
+  call_to_action_try_java_lab: Vyzkoušet Java Lab
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -252,6 +269,10 @@ cs:
     with Devices (micro:bit) professional learning program
   aria_label_call_to_action_curriculum_csf: Explore the Computer Science Fundamentals
     curriculum
+  aria_label_call_to_action_curriculum_csf_express: Prozkoumat kurz Zrychlené základy
+    informatiky
+  aria_label_call_to_action_curriculum_csf_express_pre_reader: Prozkoumat Zrychlený
+    kurz základů informatiky pro předškoláky
   aria_label_call_to_action_curriculum_csd: Explore the Computer Science Discoveries
     curriculum
   aria_label_call_to_action_curriculum_csp: Explore the Computer Science Principles
@@ -263,129 +284,192 @@ cs:
     (Circuit Playground) curriculum
   aria_label_call_to_action_curriculum_maker_microbit: Explore the Creating Apps with
     Devices (micro:bit) curriculum
-  aria_label_call_to_action_curriculum_creating_apps_with_devices: Explore the Creating
-    Apps with Devices unit
-  aria_label_call_to_action_curriculum_problem_solving_computing: Explore the Problem
-    Solving and Computing unit
-  aria_label_call_to_action_curriculum_web_development: Explore the Web Development
-    unit
-  aria_label_call_to_action_curriculum_interactive_animations_games: Explore the Interactive
-    Animations and Games unit
-  aria_label_call_to_action_curriculum_design_process: Explore the Design Process
-    unit
-  aria_label_call_to_action_curriculum_data_society: Explore the Data and Society
-    unit
-  aria_label_call_to_action_collection_hardware: Explore the Hardware collection
-  aria_label_call_to_action_collection_design_purpose: Explore the Design with Purpose
-    collection
-  aria_label_call_to_action_collection_impact_society: Explore the Impact in Society
-    collection
-  aria_label_call_to_action_collection_creativity: Explore the Creativity collection
-  aria_label_call_to_action_collection_coding: Explore the Coding collection
-  aria_label_call_to_action_collection_data: Explore the Data collection
-  aria_label_call_to_action_module_coding_w_poetry: See the Coding with Poetry module
-    details
-  aria_label_call_to_action_module_coding_time_capsule: See the Coding a Time Capsule
-    module details
-  aria_label_call_to_action_module_simulating_marine_ecosystem: See the Simulating
-    a Marine Ecosystem module details
-  aria_label_call_to_action_module_coding_geometric_star_quilt: See the Coding a Geometric
-    Star Quilt module details
-  aria_label_call_to_action_module_modeling_animal_adaptations: See the Modeling Animal
-    Adaptations module details
-  aria_label_call_to_action_module_coding_book_covers: See the Coding Book Covers
-    module details
-  aria_label_call_to_action_module_coding_interactive_maps: See the Coding Interactive
-    Maps module details
+  aria_label_call_to_action_curriculum_creating_apps_with_devices: Prozkoumat tematický
+    celek Tvorba aplikací za pomocí nástrojů
+  aria_label_call_to_action_curriculum_problem_solving_computing: Prozkoumat tematický
+    celek Řešení problémů a práce s počítačem
+  aria_label_call_to_action_curriculum_web_development: Prozkoumat tematický celek
+    Vývoj webových stránek
+  aria_label_call_to_action_curriculum_interactive_animations_games: Prozkoumat tematický
+    celek Interaktivní animace a hry
+  aria_label_call_to_action_curriculum_design_process: Prozkoumat tematický celek
+    Proces navrhování
+  aria_label_call_to_action_curriculum_data_society: Prozkoumat tematický celek Data
+    a společnost
+  aria_label_call_to_action_collection_hardware: Prozkoumat sbírku Hardware
+  aria_label_call_to_action_collection_design_purpose: Prozkoumat sbírku Účelové návrhy
+  aria_label_call_to_action_collection_impact_society: Prozkoumat sbírku Dopad na
+    společnost
+  aria_label_call_to_action_collection_creativity: Prozkoumat sbírku Kreativita
+  aria_label_call_to_action_collection_coding: Prozkoumat sbírku Programování
+  aria_label_call_to_action_collection_data: Prozkoumat sbírku Data
+  aria_label_call_to_action_module_coding_w_poetry: Zobrazit podrobnosti o modulu
+    Programování a poezie
+  aria_label_call_to_action_module_coding_time_capsule: Zobrazit podrobnosti o modulu
+    Programování časové schránky
+  aria_label_call_to_action_module_simulating_marine_ecosystem: Zobrazit podrobnosti
+    o modulu Simulace mořského ekosystému
+  aria_label_call_to_action_module_coding_geometric_star_quilt: Zobrazit podrobnosti
+    o modulu Programování geometrických hvězd
+  aria_label_call_to_action_module_modeling_animal_adaptations: Zobrazit podrobnosti
+    o modulu Modelace zvířecích adaptací
+  aria_label_call_to_action_module_coding_book_covers: Zobrazit podrobnosti o modulu
+    Programování obalů knih
+  aria_label_call_to_action_module_coding_interactive_maps: Zobrazit podrobnosti o
+    modulu Programování inetraktivních map
+  aria_label_call_to_action_csf_course_a: Zobrazit podrobnosti o Kurzu A
+  aria_label_call_to_action_csf_course_b: Zobrazit podrobnosti o Kurzu B
+  aria_label_call_to_action_csf_course_c: Zobrazit podrobnosti o Kurzu C
+  aria_label_call_to_action_csf_course_d: Zobrazit podrobnosti o Kurzu D
+  aria_label_call_to_action_csf_course_e: Zobrazit podrobnosti o Kurzu E
+  aria_label_call_to_action_csf_course_f: Zobrazit podrobnosti o Kurzu F
   video_title_professional_learning_program: Code.org's Professional Learning Program
   curriculum_name_csf: Computer Science Fundamentals
   curriculum_name_csf_02: Any CS Fundamentals (Course A-F)
   curriculum_name_csf_a_f: CS Fundamentals A-F
+  curriculum_name_csf_express: Zrychlený kurz
+  curriculum_name_csf_express_pre_reader: Zrychlený kurz pro předškoláky
+  curriculum_name_csf_course_a: Kurz A
+  curriculum_name_csf_course_b: Kurz B
+  curriculum_name_csf_course_c: Kurz C
+  curriculum_name_csf_course_d: Kurz D
+  curriculum_name_csf_course_e: Kurz E
+  curriculum_name_csf_course_f: Kurz F
+  curriculum_name_csf_no_device: Bez přístroje/bez připojení
+  curriculum_name_csf_self_paced: Lekce k samostudiu
+  curriculum_name_csf_teacher_led: Lekce vedená učitelem
   curriculum_name_csd: Computer Science Discoveries
   curriculum_name_csp: Computer Science Principles
   curriculum_name_csc: Computer Science Connections
+  curriculum_name_csa: AP® Computer Science A
   curriculum_name_csc_02: Any CS Connections Module
-  curriculum_name_csa: Computer Science A
   curriculum_name_ai: Umělá inteligence a strojové učení
   curriculum_name_maker_cp: Creating Apps with Devices (Circuit Playground)
   curriculum_name_maker_microbit: Creating Apps with Devices (micro:bit)
-  curriculum_name_creating_apps_with_devices: Creating Apps with Devices
+  curriculum_name_creating_apps_with_devices: Tvorba aplikací pomocí nástrojů
   curriculum_name_poetry: Coding with Poetry
   curriculum_name_dance_party: Dance Party
-  curriculum_name_problem_solving_computing: Problem Solving & Computing
-  curriculum_name_web_development: Web Development
-  curriculum_name_interactive_animations_games: Interactive Animations & Games
-  curriculum_name_design_process: The Design Process
-  curriculum_name_data_society: Data & Society
-  curriculum_desc_problem_solving_computing: Use a problem-solving process to tackle
-    puzzles, challenges, and real-world scenarios. Learn about computer input, output,
-    storage, and processing to aid in problem-solving.
-  curriculum_desc_web_development: Create and share content on web pages, exploring
-    the creative potential of the web. Develop critical consumption skills, problem-solving
-    abilities, and teamwork while programming.
-  curriculum_desc_interactive_animations_games: Create programmatic images, animations,
-    interactive art, and games. Gain familiarity with programming concepts and the
-    design process.
-  curriculum_desc_design_process: Focus on considering the societal impact of computing.
-    Through design challenges, students empathize with others' needs and develop solutions.
-  curriculum_desc_data_society: Emphasizes the role of data in problem-solving and
-    the assistance of computers in this process. Cover representation systems and
-    associated challenges. Discover how data collections aid problem-solving.
-  curriculum_desc_creating_apps_with_devices: Explore the role of physical devices
-    in computing. Develop programs that utilize hardware inputs and outputs. There
-    is a version of this unit for both the micro:bit and Circuit Playground.
-  collection_hardware: Focus on Hardware
-  collection_hardware_desc: Empowers students to use data and physical devices to
-    solve problems.
-  collection_design_purpose: Focus on Design with Purpose
-  collection_design_purpose_desc: Empowers students to think about the needs of users
-    while designing websites and apps for devices.
-  collection_impact_society: Focus on Impact in Society
-  collection_impact_society_desc: Empowers students to think about computer science
-    as a tool to solve problems while considering the broader social impacts.
-  collection_creativity: Focus on Creativity
-  collection_creativity_desc: Empowers students to be creative as they learn to create
-    websites, animations and games, and apps for devices.
-  collection_coding: Focus on Coding
-  collection_coding_desc: Empowers students to build their coding skills in web development,
-    games and animation, and creating apps for devices.
-  collection_data: Focus on Data
-  collection_data_desc: Empowers students to use data to solve problems.
+  curriculum_name_problem_solving_computing: Řešení problémů a práce s počítačem
+  curriculum_name_web_development: Vývoj webových stránek
+  curriculum_name_interactive_animations_games: Interaktivní animace a hry
+  curriculum_name_design_process: Proces navrhování
+  curriculum_name_data_society: Data a společnost
+  curriculum_desc_csf_express: Naučte se vytvářet počítačové programy, rozvíjejte
+    své schopnosti řešit problémy a řešte zábavné úkoly! Vytvářejte hry a kreativní
+    projekty, které můžete sdílet s přáteli, rodinou a učiteli.
+  curriculum_desc_csf_express_pre_reader: Naučte se základy blokového programování
+    prostřednictvím hádanek a vytvářením animovaných scének. Vytvářejte umělecká dílka
+    a hry a podělte se o ně s přáteli, rodinou a učiteli.
+  curriculum_desc_csf_course_a: Programujte pomocí příkazů typu smyčky a události.
+    Pomozte studentům naučit se spolupráci s ostatními, zkoušet různé techniky řešení
+    problémů, nevzdávat se při řešení obtížných úkolů a dozvědět se více o internetové
+    bezpečnosti.
+  curriculum_desc_csf_course_b: Prostřednictvím aktivit bez připojení a rozličných
+    hádanek si studenti osvojí náklady programování, techniky spolupráce a výzkumu,
+    budou rozvíjet kritické myšlenky, naučí se čelit obtížným situacím a dozví se
+    více o internetové bezpečnosti.
+  curriculum_desc_csf_course_c: Vytvářejte programy se sekvencemi, smyčkami a událostmi.
+    Zkoumejte techniky řešení problémů a rozvíjejte strategie pro budování pozitivně
+    laděných komunit online i v reálném světě. Vytvářejte interaktivní hry, které
+    budou studenti moci sdílet mezi sebou.
+  curriculum_desc_csf_course_d: Zopakujte si pojmy z předchozích kurzů, např. smyčky
+    a události. Studenti si dále osvojí tematiku algoritmů, vnořených cyklů, cyklů
+    while-do, podmíněných příkazů a mnohem více.
+  curriculum_desc_csf_course_e: Vytvářejte zábavné interaktivní projekty, které zvyšují
+    povědomí o bezpečnosti na internetu. Pusťte se do složitějšího programování, které
+    zahrnuje např. vnořené cykly, funkce a podmíněné příkazy.
+  curriculum_desc_csf_course_f: Podívejte se, jaká rozhodnutí činí uživatelé v aplikacích,
+    které používají. Vytvářejte různé aplikace Sprite Lab, které také uživatelům nabízejí
+    možnost volby. Naučte se pokročilejší koncepty, včetně proměnných a cyklů for.
+  curriculum_desc_problem_solving_computing: Využijte postup řešení problémů na hádanky,
+    výzvy a situace z reálného života. Naučte se více o vstupu a výstupu a ukládání
+    dat a zpracování, což vám dále pomůže rozvíjet schopnost řešení problémů.
+  curriculum_desc_web_development: Vytvářejte a sdílejte obsah na webových stránkách
+    a objevujte tak kreativní potenciál internetu. Rozvíjejte programováním svou schopnost
+    kritické konzumace, řešení problémů a týmové spolupráce.
+  curriculum_desc_interactive_animations_games: Vytvářejte programové obrázky, animace,
+    interaktivní umění a hry. Seznamte se s programovacími koncepty a procesem vývoje.
+  curriculum_desc_design_process: Zaměřte se na společenský dopad programování. Studenti
+    se prostřednictvím vývojových výzev naučí porozumět potřebám ostatních a vytvářet
+    příslušná řešení.
+  curriculum_desc_data_society: Vyzdvihuje roli, kterou v řešení problémů hrají data,
+    a jak nám v tomto procesu pomáhají počítače. Zabývá se způsoby reprezentace a
+    s tím souvisejícími výzvami. Zjistěte, jak sběr dat pomáhá při řešení problémů.
+  curriculum_desc_creating_apps_with_devices: Zjistěte, jakou roli hrají ve výpočetní
+    technice fyzická zařízení. Vytvářejte programy, které využívají hardwarové vstupy
+    a výstupy. Tento tematický celek existuje i jako verze pro micro:bit a Circuit
+    Playground.
+  collection_hardware: Zaměření na Hardware
+  collection_hardware_desc: Motivuje studenty k tomu, aby k řešení problémů využívali
+    data a fyzická zařízení.
+  collection_design_purpose: Zaměření na Účelové návrhy
+  collection_design_purpose_desc: Motivujte studenty k tomu, aby při navrhování webových
+    stránek a vývoji aplikací mysleli na potřeby uživatelů.
+  collection_impact_society: Zaměření na Dopad na společnost
+  collection_impact_society_desc: Motivuje studenty k tomu, aby považovali informatiku
+    za nástroj k řešení problémů a zároveň si byli vědomi širších společenských dopadů.
+  collection_creativity: Zaměření na Kreativitu
+  collection_creativity_desc: Motivuje studenty ke kreativitě při vytváření webových
+    stránek, animací, her a aplikací pro různá zařízení.
+  collection_coding: Zaměření na Programování
+  collection_coding_desc: Motivuje studenty k rozvíjení programovacích schopností
+    potřebných k vývoji webových stránek a tvorbě her, animací a aplikací pro různá
+    zařízení.
+  collection_data: Zaměření na Data
+  collection_data_desc: Motivuje studenty k tomu, aby k řešení problémů využívali
+    data.
   module_label_ages: 'Ages:'
   module_label_grades: 'Grades:'
   module_label_curriculum: 'Curriculum:'
+  module_label_curriculum_pure: Učební osnovy
   module_label_duration: 'Duration:'
   module_label_prerequisites: 'Prerequisites:'
-  module_label_level: 'Level:'
-  module_label_topics: 'Topics:'
+  module_label_level: 'Úroveň:'
+  module_label_topics: 'Témata:'
   module_label_devices: 'Zařízení:'
-  module_label_tools: 'Programming Tools:'
-  module_label_professional_learning: 'Professional Learning:'
-  module_label_languages: 'Languages Supported:'
-  module_label_accessibility_features: 'Accessibility:'
+  module_label_tools: 'Programovací nástroje:'
+  module_label_professional_learning: 'Profesní vzdělávání:'
+  module_label_languages: 'Podporované jazyky:'
+  module_label_accessibility_features: 'Přístupnost:'
+  module_label_educator_tool: Nástroj pro učitele
+  module_label_educator_course: Kurz pro učitele
+  module_label_student_tool: Nástroj pro studenty
+  module_label_student_product: Produkt
+  module_label_student_content_resources: Obsah a zdroje
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
+  module_grade_k_5: K-5
+  module_grade_k_1: K-1
+  module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
+  module_grade_kindergarten: Předškoláci
+  module_grade_grade_01: 1. ročník
+  module_grade_grade_02: 2. ročník
+  module_grade_grade_03: 3. ročník
+  module_grade_grade_04: 4. ročník
+  module_grade_grade_05: 5. ročník
   module_grade_k_5_teachers: K-5 Teachers
   module_grade_6_10_teachers: 6-10 Teachers
   module_grade_9_12_teachers: 9-12 Teachers
-  module_level_beginner: Beginner
+  module_level_beginner: Začátečník
+  module_level_intermediate: Středně pokročilý
   module_duration_2_hrs: 2 hours
   module_duration_3_hrs: 3 hours
   module_duration_8_hrs: 8 hours
   module_duration_35_hrs: 35 hours
   module_duration_lesson: Lesson
-  module_duration_week: Week
+  module_duration_week: Týden
   module_duration_month: Month
   module_duration_quarter: Quarter
-  module_duration_semester: Semester
+  module_duration_semester: Semestr
   module_duration_school_year: School Year
-  module_duration_month_semester_year: Month, Semester, or Year
+  module_duration_month_quarter: Měsíc nebo čtvrtletí
+  module_duration_month_semester_year: Měsíc, semestr nebo rok
   module_prerequisites_none: None
   module_prerequisites_maker_cp: Access to a Circuit Playground
   module_prerequisites_maker_microbit: Access to a micro:bit
@@ -396,66 +480,90 @@ cs:
   module_label_teaching_ai: Teaching AI and Machine Learning
   module_label_teaching_maker_cp: Teaching Creating Apps with Devices (Circuit Playground)
   module_label_teaching_maker_microbit: Teaching Creating Apps with Devices (micro:bit)
-  module_subject_english_language_arts: English Language Arts
-  module_subject_social_studies: Social Studies
-  module_subject_science: Science
-  module_subject_math: Math
+  module_subject_english_language_arts: Anglický jazyk
+  module_subject_social_studies: Sociální studia
+  module_subject_science: Věda
+  module_subject_math: Matematika
   module_name_coding_w_poetry: Coding with Poetry
-  module_name_coding_time_capsule: Coding a Time Capsule
-  module_name_simulating_marine_ecosystem: Simulating a Marine Ecosystem
-  module_name_coding_geometric_star_quilt: Coding a Geometric Star Quilt
-  module_name_modeling_animal_adaptations: Modeling Animal Adaptations
-  module_name_coding_book_covers: Coding Book Covers
-  module_name_coding_interactive_maps: Coding Interactive Maps
-  module_desc_coding_w_poetry: Explore the intersection of coding and language arts
-    by creating interactive poems, illustrating the mood and tone with code.
-  module_desc_coding_time_capsule: Create a digital time capsule to capture and preserve
-    memories for the future.
-  module_desc_simulating_marine_ecosystem: Use coding to simulate a marine ecosystem,
-    exploring the interdependencies between different organisms and their environment.
-  module_desc_coding_geometric_star_quilt: Learn code to create geometric patterns
-    in stunning star quilts, blending mathematical concepts with creative expression.
-  module_desc_modeling_animal_adaptations: Use code to model animal adaptations, deepening
-    your understanding of how different species have evolved to survive in their environments.
-  module_desc_coding_book_covers: Use code to create an animated cover of a book,
-    using sprites and text to convey characters, setting, plot, and more.
-  module_desc_coding_interactive_maps: Use coding to develop a map that tells a story,
-    allowing you to explore geographic information in an engaging and interactive
-    way.
+  module_name_coding_time_capsule: Programování časové schránky
+  module_name_simulating_marine_ecosystem: Simulace mořského ekosystému
+  module_name_coding_geometric_star_quilt: Programování geometrických hvězd
+  module_name_modeling_animal_adaptations: Modelace zvířecích adaptací
+  module_name_coding_book_covers: Programování obalů knih
+  module_name_coding_interactive_maps: Programování inetraktivních map
+  module_desc_coding_w_poetry: Zjistěte, jak spolu souvisí programování a jazyk, a
+    vytvářejte interaktivních básně, ve kterých můžete pomocí kódu vyjádřit různé
+    nálady a vyznění.
+  module_desc_coding_time_capsule: Vytvořte si digitální časovou schránku a uchovejte
+    si tak vzpomínky do budoucna.
+  module_desc_simulating_marine_ecosystem: Pomocí programování vytvořte mořský ekosystém
+    a zkoumejte vzájemnou provázanost mezi různými organismy a prostředím, ve kterém
+    žijí.
+  module_desc_coding_geometric_star_quilt: Naučte se vytvářet geometrické vzory a
+    úchvatné hvězdy a propojujte tak matematické koncepty a kreativní činnost.
+  module_desc_modeling_animal_adaptations: Naučte se naprogramovat adaptace zvířat,
+    abyste lépe porozuměli tomu, jak se různé živočišné druhy vyvíjely, aby dokázaly
+    přežít.
+  module_desc_coding_book_covers: Pomocí programování vytvořte animovaný obal knihy
+    a pomocí spritů a textu odhalte detaily o postavách, lokaci, zápletce atd.
+  module_desc_coding_interactive_maps: Pomocí programování vytvořte mapu, která vypráví
+    příběh a umožní vám tak získat geografické informace poutavým a interaktivním
+    způsobem.
   values_01: We believe computer science is foundational for all students
   values_02: We are committed to equity, access, and opportunity
   values_03: We believe in the power of a collaborative education community
   values_04: We are agile and responsive to feedback
   values_05: We act with integrity and transparency
   values_06: We believe broad impact requires thinking big and acting holistically
-  heading_professional_learning: Professional learning that meets your needs
+  heading_professional_learning: Profesionální vzdělávání podle vašich potřeb
   heading_additional_resources: Additional resources
-  heading_support_and_questions: Support and questions
-  heading_faq: Frequently asked questions
-  heading_curriculum_at_a_glance: Curriculum at a glance
-  heading_curricula_at_a_glance: Curricula at a glance
-  heading_engaging_projects: Engaging projects and activities that inspire learning
-  heading_build_apps: Build apps
-  heading_widgets: Widgets
-  heading_choice_levels: Choice levels
-  heading_year_long_intro_course: Year-long introductory course
-  heading_flexible_units: Flexible units
-  heading_collections: Collections
-  heading_find_a_module: Find a module for your classroom
-  professional_learning_section_desc: Get the support you need as you prepare to teach.
-    Teachers love it, with over 90% ranking it the best professional development ever!
-  professional_learning_section_desc_self_paced: Just in time support that allows
-    you to prepare to teach with confidence on your schedule.
-  professional_learning_section_block_facilitator_led_workshops: Our highly supportive
-    Professional Learning Program will bring you together with a group of teachers
-    to learn from each other as well as expert facilitators as you take on the first
-    year of teaching the free curriculum to your students. In-person and virtual workshops
-    are starting this summer.
-  support_and_questions_section_subhead: Still have questions? Reach out to us! We
-    are here to help.
-  support_and_questions_section_desc: Our support team is here to answer any questions
-    you may have about starting teaching with Code.org. You can also ask other teachers
-    about their experience on our teacher forums.
+  heading_support_and_questions: Podpora a dotazy
+  heading_faq: Často kladené dotazy
+  heading_curriculum_at_a_glance: Rychlý přehled učebních osnov
+  heading_curricula_at_a_glance: Rychlý přehled učebních plánů
+  heading_engaging_projects: Zajímavé projekty a aktivity, které motivují k učení
+  heading_build_apps: Tvorba aplikací
+  heading_widgets: Widgety
+  heading_choice_levels: Úrovně s možností výběru
+  heading_year_long_intro_course: Roční úvodní kurz
+  heading_flexible_units: Flexibilní tematické celky
+  heading_collections: Sbírky
+  heading_find_a_module: Najděte modul pro svou třídu
+  heading_no_devices: Nemáte k dispozici žádné přístroje? Nevadí!
+  heading_java_lab: Java Lab
+  heading_objects_first: Nejprve objekty
+  professional_learning_section_desc: Získejte podporu potřebnou k přípravě na učení,
+    kterou doporučují samotní učitelé. Až 90 % z nich kurz považuje za ten nejlepší
+    program pro profesní rozvoj.
+  professional_learning_section_desc_short: Získejte podporu potřebnou k přípravě
+    na učení.
+  professional_learning_section_desc_self_paced: Včasná podpora, která vám umožní
+    připravit se na výuku tak, aby vše proběhlo podle plánu.
+  professional_learning_section_block_facilitator_led_workshops: Prostřednictvím našeho
+    podpůrného programu pro profesní vzdělávání se propojíte se skupinou učitelů,
+    abyste si mohli předávat zkušenosti, a také s profesionálními lektory. Ti vás
+    budou provázet v průběhu prvního roku, kdy budete své studenty učit podle našich
+    bezplatných osnov. Prezenční i virtuální workshopy začínají letos v létě.
+  professional_learning_section_block_facilitator_led_workshops_csf: Připojte se k
+    učitelům ve vašem regionu a získejte inspirativní a praktickou podporu pro výuku
+    informatiky. Naši regionální partneři nabízí vysoce kvalitní jednodenní workshopy
+    Code.org pro jednotlivce i celé učitelské sbory. Přihlaste se na seminář profesního
+    rozvoje ve vašem okolí!
+  professional_learning_section_block_csa: Our highly supportive Professional Learning
+    Program will bring you together with a group of teachers to learn from each other
+    as well as expert facilitators as you take on the first year of teaching the free
+    CSA curriculum to your students.
+  professional_learning_section_workshops_starting: Prezenční i virtuální workshopy
+    začínají letos v létě.
+  no_devices_section_subhead: Jen do toho, odpojte se (aspoň na chvíli)!
+  no_devices_section_desc: Učení informatiky nemusí zahrnovat jen sezení před obrazovkou,
+    a možnost naučit se základy by měl mít každý, bez ohledu na to, zda má přístup
+    k elektronice.
+  support_and_questions_section_subhead: Máte další otázky? Sem s nimi! Jsme tady
+    pro vás.
+  support_and_questions_section_desc: Náš tým podpory vám rád zodpoví jakékoliv otázky
+    ohledně toho, jak začít učit s Code.org. Na fóru pro učitele se také můžete zeptat
+    kolegů na jejich zkušenosti.
   blockchain_hero_heading: How Blockchain Works
   blockchain_hero_desc: Dive into the world of blockchain with "How Blockchain Works,"
     our new video series and accompanying lessons!
@@ -500,12 +608,13 @@ cs:
   teachai_launch_blog_desc_02: TeachAI aims to integrate AI education into primary
     and secondary curricula around the world through new reports, policy recommendations,
     and public engagement opportunities.
-  ai_pl_callout_title: Join us for AI EmpowerED!
-  ai_pl_callout_desc_01: Discover the transformative potential of artificial intelligence
-    (AI) in education with our free online learning series for educators.
-  ai_pl_callout_desc_02: Sign up for "Fireside Chat with Sal Khan and Hadi Partovi"
-    where the founders of Khan Academy and Code.org discover how generative AI can
-    become your most reliable teaching assistant.
+  ai_pl_callout_title: AI 101 for Teachers
+  ai_pl_callout_desc_01: Discover the groundbreaking world of artificial intelligence
+    (AI) and its transformative potential in education with our comprehensive online
+    learning series for teachers.
+  ai_pl_callout_desc_02: Code.org, ETS, ISTE and Khan Academy are partnering to bring
+    educators a professional learning series that supports teachers as they adapt
+    to AI’s impacts on the classroom.
   ai_hero_heading: Artificial intelligence isn't magic… It's just code!
   ai_hero_desc: Demystify artificial intelligence (AI) by learning how it's changing
     the ways we live, work, and learn.
@@ -588,6 +697,53 @@ cs:
     throughout K-12. Offer free professional development, webinars, conference presentations,
     and peer-to-peer learning opportunities.
   ai_resources_btn_aria_label_03: Explore the AI for Teachers website
+  ai_pl_101_hero_heading: AI 101 for Teachers
+  ai_pl_101_hero_desc: Objevte průlomový potenciál umělé inteligence (AI) ve vzdělávání
+    s naším bezplatným online školením pro učitele.
+  ai_pl_101_hero_presented: Uvádí
+  ai_pl_101_intro_heading: Co je AI 101 pro učitele?
+  ai_pl_101_intro_text: AI 101 pro učitele je bezplatné profesní online školení zaměřené
+    na základy a vhodné pro všechny učitele a pedagogy, které zajímá revoluční svět
+    umělé inteligence (AI) a její průlomový potenciál ve vzdělávání. Partneři Code.org,
+    ETS, ISTE a Khan Academy nabízejí poutavé lekce s renomovanými experty, ve kterých
+    vyvrátí některé mýty týkající se AI, budou se věnovat tématu její zodpovědné implementace
+    a předpojatosti a také předvedou, jak může AI ve výuce přinést průlom ve výsledcích
+    studentů. Vydejte se s námi na podnětnou cestu plnou poznání a nahlédněte do budoucnosti
+    učení s AI a AI obecně.
+  ai_pl_101_partnership_between: Spolupráce mezi
+  ai_pl_101_join_email_title: Přihlaste se k předběžnému přístupu do AI 101 pro učitele
+  ai_pl_101_pro_join_email_desc: O každé nové lekci budete vědět jako první. Získejte
+    novinky o zdrojích týkající se AI od Code.org, ETS, ISTE a Khan Academy.
+  ai_pl_101_explore_title: Zdroje týkající se AI
+  ai_pl_101_explore_desc: Code.org, ISTE a Khan Academy si pro vás připravili řadu
+    dalších zdrojů, které naleznete níže a které mají učitelům pomoci se orientovat
+    v tomto novém a stále rozvíjejícím se odvětví.
+  ai_pl_101_explore_title_1: Khanmigo
+  ai_pl_101_explore__desc_1: Díky učební pomůcce využívající umělou inteligenci, kterou
+    vyvinula Khan Academy, už nebudou učitelé muset ztrácet čas přípravou na vyučování
+    a místo toho se budou moci soustředit na to, co je opravdu baví –⁠ na samotné
+    učení.
+  ai_pl_101_explore__button_1: Vyzkoušet Khanmigo
+  ai_pl_101_explore_title_2: Zkoumání umělé inteligence pro učitele
+  ai_pl_101_explore__desc_2: Tento 15hodinový online kurz od ISTE již 6 let pomáhá
+    učitelům základních i středních škol osvojit si základy AI a jejího využití ve
+    vzdělávání. Kurz je zpřístupněn třikrát ročně, je plně asynchronní a jeho součástí
+    je kontinuální podpora odborného instruktora.
+  ai_pl_101_explore__button_2: Začít kurz
+  ai_pl_101_explore_title_3: Učební osnovy zaměřené na AI
+  ai_pl_101_explore__desc_3: Učební osnovy Code.org zaměřené na AI a určené pro žáky
+    3.-12. tříd poskytují studentům možnost prostřednictvím zábavných aktivit přijít
+    na to, jak se počítače učí z dat. Osnovy také žáky motivují k tomu, aby se snažili
+    zjistit více o strojovém učení a datech a zároveň přemýšleli o etických dopadech
+    umělé inteligence.
+  ai_pl_101_explore__button_3: Prozkoumat učební plány
+  ai_pl_101_explore_title_4: Criterion Interactive od ETS
+  ai_pl_101_explore__desc_4: 'Tato řízená platforma na psaní textů provede studenty
+    pěti základními fázemi procesu psaní: příprava/plán, psaní, revize, úprava, závěrečná
+    úvaha. ETS proces psaní personalizuje prostřednictvím nejmodernějších hodnoticích
+    modelů a umělé inteligence, díky čemuž mohou učitelé v průběhu psaní poskytovat
+    studentům průběžnou zpětnou vazbu a formativní hodnocení.'
+  ai_pl_101_explore__button_4: Prozkoumat nástroj
   ai_vid_intro_caption: Introducing How AI Works
   ai_vid_chatbots_caption: How Chatbots and Large Language Models Work
   ai_vid_creativity_caption: Does AI Have Creativity and Imagination?
@@ -913,10 +1069,10 @@ cs:
   teach_page_additional_materials_list_heading_03: Classroom Posters
   teach_page_additional_materials_list_desc_03: Print these posters of diverse role
     models to hang in your school and inspire your students to try computer science.
-  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
-    concepts of computer science and challenges them to explore how computing and
-    technology can impact the world. Can be taught as an introductory class and as
-    an AP course.
+  csp_page_top_desc: Free set of elementary curricula that introduces students to
+    the foundational concepts of computer science and challenges them to explore how
+    computing and technology can impact the world. Can be taught as an introductory
+    class and as an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1036,21 +1192,20 @@ cs:
   csp_page_faq_answer_07_04: For more information about our goals and approach to
     our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional
     Learning Values](%{pl_url}).
-  csd_page_top_desc: Code.org's most flexible course, allowing each unit to be taught
-    alone, combined into collections that focus on specific areas, or as a full year
-    course. The free curriculum introduces students to building their own websites,
-    apps, animations, games, and physical computing systems.
-  csd_page_intro_heading: Flexible curriculum to meet your needs
-  csd_page_intro_list_01: Flexible introductory curriculum
-  csd_page_intro_list_02: Breadth of topics
-  csd_page_intro_list_03: No prior experience needed
-  csd_page_intro_list_04: Build many different types of projects
-  csd_page_intro_list_05: Exciting and fun
-  csd_page_quote: This curriculum is all inclusive, well organized, and student centered!
-    The incredible organization in the curriculum is what makes me use it year after
-    year.
-  csd_page_curriculum_glance_topics: Artificial Intelligence, Data, Web Design, Physical
-    Computing, App Design, Games and Animations, Art and Design, Programming
+  csd_page_top_desc: Nejflexibilnější kurz, který Code.org nabízí. Každý tematický
+    celek může být vyučován samostatně, rozdělen do sbírek podle zaměření na konkrétní
+    oblasti, nebo jako kompletní roční kurz. Bezplatný učební plán slouží jako úvod
+    do tvorby webových stránek, aplikací, animací, her a fyzických počítačových systémů.
+  csd_page_intro_heading: Flexibilní učební plány podle vašich potřeb
+  csd_page_intro_list_01: Flexibilní úvodní učební plán
+  csd_page_intro_list_02: Rozsáhlá nabídka témat
+  csd_page_intro_list_03: Nejsou zapotřebí žádné předchozí zkušenosti
+  csd_page_intro_list_04: Vytvářejte různé typy projektů
+  csd_page_intro_list_05: Radost a zábava
+  csd_page_quote: Tyto osnovy jsou komplexní, skvěle zpracované a zaměřené hlavně
+    na studenty. Jsou neuvěřitelně přehledné, proto je využívám každý rok.
+  csd_page_curriculum_glance_topics: Umělá inteligence, Data, Návrh webových stránek,
+    Fyzické počítačové systémy, Vývoj aplikací, Hry a animace, Umění a design, Programování
   csd_page_curriculum_glance_devices: Laptop, Chromebook
   csd_page_curriculum_glance_tools: App Lab, Game Lab, AI Lab, Web Lab
   csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
@@ -1058,122 +1213,291 @@ cs:
   csd_page_curriculum_glance_professional_languages: Čeština
   csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csd_page_pick_a_course_heading: Picking the right CS Discoveries course for your
-    classroom
-  csd_page_pick_a_course_desc: With the diverse set of options offered for CS Discoveries,
-    there is a course for all different needs.
-  csd_page_pick_a_course_heading_02: How do you want to pick the content?
-  csd_page_courses_year_desc: Through 7 units students explore a wide variety of topics.
-  csd_page_courses_year_action_block_desc: 'An introductory computer science course
-    that empowers students to create authentic artifacts and engage with computer
-    science as a medium for creativity, communication, problem solving, and fun. '
-  csd_page_courses_flexible_units_desc: Each unit of CS Discoveries can be used on
-    its own with no prior experience required, which allows you to pick the exact
-    units that work for your classroom.
-  csd_page_courses_collections_desc: Dive deeper into one area with a set of units
-    focused on a specific topic.
-  csd_page_faq_question_01: Is CS Discoveries mapped to standards?
-  csd_page_faq_answer_01: CS Discoveries was written using both the K-12 Framework
-    for Computer Science and the 2017 CSTA standards as guidance. Currently, every
-    lesson in CS Discoveries contains mappings to the relevant 2017 CSTA standards.
-    [A summary of standards mappings can be found here](%{mappings_url}). A Google
-    Sheets version of the standards can be found at [CSD Standards](%{csd_standards_url}).
-  csd_page_faq_question_02: How/Where can I get professional development for this
-    course?
-  csd_page_faq_answer_02: Our Professional Learning Program offers year-round support.
-    The program kicks off with a five-day summer workshop where you'll have an opportunity
-    to work hands-on with the curriculum and meet other teachers from your area. Throughout
-    the year, we offer follow up workshops and forum support. You don't need any prior
-    computer science experience to get started. And teachers love it! 90% rank it
-    the best professional development ever. [Click here to apply and learn more](%{apply_url}).
-  csd_page_faq_question_03: I'm teaching CS Discoveries but have less than one semester
-    with my students. What would you recommend?
-  csd_page_faq_answer_03_01: Teachers who have a restricted schedule, unable to teach
-    all units of CS Discoveries over the course of a school year, can now easily assign
-    a specific set of CS Discoveries units based on what they want to focus on. These
-    collections are still the same exact units found in CS Discoveries, simply grouped
-    together based on our recommendations below to dive deep in a specific area of
-    CS Discoveries. Each collection is approximately one semester or slightly less
-    than one semester. [Click here to see our Collections options](%{collections_url}).
-  csd_page_faq_answer_03_02: For teachers who have an even more restricted schedule,
-    they have the ability to assign just one unit at a time from CS Discoveries without
-    assigning the entire course. We hope this helps support classrooms that teach
-    units of CS Discoveries embedded as part of larger courses or when teaching computer
-    science on a limited schedule. [Click here to see our flexible units](%).
-  csd_page_faq_question_04: What materials and supplies are required for CS Discoveries?
-  csd_page_faq_answer_04_01: One potential cost to consider when teaching this course
-    is printing. Many lessons have handouts that are designed to guide students through
-    activities. While it is not required that all of these handouts be printed, many
-    were designed to be printed and we highly recommend printing when possible.
-  csd_page_faq_answer_04_02: 'Beyond printing, some lessons call for typical classroom
-    supplies and manipulatives such as: Student journals, poster paper, markers/colored
-    pencils, scissors, scrap paper, glue or tape, post-it notes or index cards (or
-    similar sized scrap paper), and rulers or a straight edge of some kind.'
-  csd_page_faq_answer_04_03: 'In addition to those general course materials, the following
-    items are called for in specific units:'
-  csd_page_faq_answer_04_04: Problem Solving and Computing
-  csd_page_faq_answer_04_05: Aluminum foil, container for water, pennies (note that
-    pennies can be replaced with some other kind of weight of the same size). Alternate
-    activities are available if you do not have access to these supplies.
-  csd_page_faq_answer_04_06: Creating Apps with Devices (Option A and Option B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
-  csd_page_faq_answer_04_09: Maker supplies, such as empty tissue boxes or cardboard
-    rolls or scratch paper
-  csd_page_faq_answer_04_10: "*Note: The Creating Apps with Devices unit has two implementation
-    options - one for those using circuit playgrounds and one for those using micro:bit.
-    Teachers should not buy both sets of devices or teach both unit options as they
-    are equivalent and cover the same content."
-  csd_page_faq_question_06: How does CS Discoveries fit with the other Code.org courses?
-  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
-    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
-    While each of these courses is designed to be an age-appropriate entry point to
-    computer science, students with previous experience will find many new topics
-    to explore, and they will revisit familiar topics in novel and more challenging
-    contexts.
-  csc_page_top_desc: Make connections between computer science (CS) and other subjects
-    like math, language arts, science, and social studies.
-  csc_page_intro_heading: Teach CS while covering core subject standards
-  csc_page_intro_list_01: Incorporate CS into other subjects
-  csc_page_intro_list_02: Reinforce learning in other subjects
-  csc_page_intro_list_03: Meet core subject standards
-  csc_page_intro_list_04: Fun way to teach students about computer science
+  csd_page_pick_a_course_heading: Vyberte pro svou třídu vhodný kurz se série Objevování
+    informatiky
+  csd_page_pick_a_course_desc: Kurzy jsou rozmanité a přizpůsobené různým potřebám,
+    pro každého se tedy něco najde.
+  csd_page_pick_a_course_heading_02: Jak si budete chtít vybrat obsah?
+  csd_page_courses_year_desc: V průběhu sedmi lekcí se budou studenti zabývat rozličnými
+    tématy.
+  csd_page_courses_year_action_block_desc: Úvodní kurz informatiky, které motivuje
+    studenty k vytváření autentických výtvorů a k tomu, aby považovali informatiku
+    za kreativní nástroj, prostředek ke komunikaci a řešení problémů, a v neposlední
+    řadě také za zdroj zábavy.
+  csd_page_courses_flexible_units_desc: Každý tematický celek kurzu Objevování informatiky
+    lze využít samostatně a není k nim třeba žádných předchozích zkušeností, což zjednodušuje
+    výběr kurzů vhodných právě pro vaši třídu.
+  csd_page_courses_collections_desc: Pokud se chcete soustředit na jednu konkrétní
+    oblast, můžete využít speciální tematické celky, které se na toto téma zaměřují.
+  csd_page_faq_question_01: Je kurz Objevování informatiky standardizovaný?
+  csd_page_faq_answer_01: 'Kurz Objevování informatiky byl vytvořen v souladu s osnovami
+    K-12 Computer Science Framework (Rámcový vzdělávací program pro informatiku pro
+    žáky základních a středních škol) a standardy pro výuku informatiky z roku 2017
+    (2012 CSTA standards). Každá lekce kurzu Objevování informatiky momentálně obsahuje
+    odkazy na příslušné standardy. [Přehled odkazů na standardy naleznete zde:](%{mappings_url}).
+    Standardy ve formátu Google Sheets naleznete zde: [CSD Standards](%{csd_standards_url}).'
+  csd_page_faq_question_02: Jak/kde získám možnost profesního rozvoje související
+    s tímto kurzem?
+  csd_page_faq_answer_02: Náš program pro profesní vzdělávání nabízí celoroční podporu.
+    Začíná pětidenním letním workshopem, kde budete mít možnost se s učebními osnovami
+    seznámit s praxi a poznat další učitele z vašeho regionu. V průběhu celého roku
+    se pak konají další workshopy a také můžete využívat podporu našeho fóra. K účasti
+    v programu nejsou zapotřebí žádné předchozí zkušenosti s informatikou. A samotní
+    učitelé si ho moc pochvalují! Až 90 % z nich kurz považuje za ten nejlepší program
+    pro profesní rozvoj.
+  csd_page_faq_question_03: Učím kurz Objevování informatiky, ale se studenty nestrávím
+    ani semestr. Co byste mi doporučili?
+  csd_page_faq_answer_03_01: Učitelé se zkráceným rozvrhem, kteří nestihnou odučit
+    všechny tematické celky kurzu Objevování informatiky v průběhu klasického školního
+    roku, si nyní mohou vybrat pouze konkrétní celky, na které se chtějí zaměřit.
+    Jedná se o stejné celky, které jsou součástí původního kurzu Objevování informatiky,
+    jen jsou seskupené na základě našich doporučení a zaměřené na specifické oblasti.
+    Každá sbírka pokrývá období odpovídající přibližně jednomu semestru nebo trochu
+    kratší. [Kliknutím zde si prohlédnete naše Sbírky](%{collections_url}).
+  csd_page_faq_answer_03_02: Učitelé s ještě menším časovým prostorem mají možnost
+    si zvolit pouze jeden tematický celek z kurzu Objevování informatiky bez nutnosti
+    absolvovat celý kurz. Doufáme, že tak podpoříme třídy, které mají zájem vyučovat
+    tento kurz jako součást komplexnějších celků nebo které pracují s časovým omezením.
+  csd_page_faq_question_04: Jaké materiály a pomůcky jsou pro kurz Objevování informatiky
+    potřeba?
+  csd_page_faq_answer_04_01: Jedním z možných nákladů, který je třeba zvážit, jsou
+    náklady na tisk. Součástí mnoha lekcí jsou podklady s různými aktivitami pro studenty.
+    Není nutné tisknout všechny materiály, ale spousta z nich byla navržena právě
+    k tomuto účelu, pokud máte tedy tu možnost, důrazně vám doporučujeme je vytisknout.
+  csd_page_faq_answer_04_02: Kromě tisku jsou k některým lekcím zapotřebí typické
+    pomůcky a potřeby, jako např. studentské zápisníky,  plakátovací papíry, fixy/pastelky,
+    nůžky, scrapbookové papíry, lepidla nebo lepicí pásky, samolepicí bločky nebo
+    kartičky (nebo papírky v podobném fotmátu) a pravítka (nebo jiné potřeby k zarovnání).
+  csd_page_faq_answer_04_03: 'Kromě těchto všeobecných materiálů jsou ke konkrétním
+    tematickým celkům zapotřebí tyto pomůcky:'
+  csd_page_faq_answer_04_04: Řešení problémů a práce s počítačem
+  csd_page_faq_answer_04_05: Hliníková fólie, nádoba na vodu, drobné mince (které
+    mohou být nahrazeny jiným předmětem podobné váhy). Pokud nemáte k těmto pomůckám
+    přístup, jsou vám k dispozici i jiné aktivity.
+  csd_page_faq_answer_04_06: Tvorba aplikací pomocí nástrojů (Varianta A a Varianta
+    B)
+  csd_page_faq_answer_04_07: 'Verze A: Sada vývojových desek Circuit Playground. Více
+    informací naleznete na [code.org/maker/circuitplayground](%{url}).'
+  csd_page_faq_answer_04_08: 'Varianta B: Sada zařízení micro:bit. Více informací
+    naleznete na [code.org/maker/microbit](%{url}).'
+  csd_page_faq_answer_04_09: Kutilské potřeby, např. prázdné krabice od papírových
+    kapesníků, kartonové ruličky nebo obyčejné kusy papíru
+  csd_page_faq_answer_04_10: "*Upozornění: Tematický celek Tvorba aplikací pomocí
+    nástrojů je nabízen ve dvou variantách – jedna využívá zařízení Circuit Playground
+    a druhá micro:bit. Učitelům nedoporučujeme pořizovat obě zařízení ani učit oba
+    tematické celky, protože jsou ekvivalentní a pokrývají stejnou látku."
+  csd_page_faq_question_06: Jak je kurz Objevování informatiky propojen s ostatními
+    kurzy Code.org?
+  csd_page_faq_answer_06_01: Kurz Objevování informatiky funguje jako můstek mezi
+    kurzy [Základy informatiky](%{csf_url}) a [Principy informatiky](%{csp_url}).
+    Každý z těchto kurzů lze považovat za vhodný úvod do informatiky přizpůsobený
+    věku studentů, ale zejména studenti s předchozími zkušenostmi v něm najdou mnoho
+    nových témat a zároveň se budou zabývat těmi, s nimiž se již setkali, v nových
+    a náročnějších souvislostech.
+  csc_page_top_desc: Objevujte souvislosti mezi informatikou a jinými předměty, např.
+    matematikou, jazyky, vědou a sociálními studii.
+  csc_page_intro_heading: Vyučujte informatiku podle klíčových standardů
+  csc_page_intro_list_01: Zakomponujte informatiku do jiných předmětů
+  csc_page_intro_list_02: Podporujte učení i v jiných předmětech
+  csc_page_intro_list_03: Splňte klíčové standardy předmětu
+  csc_page_intro_list_04: Informatika zábavnou cestou
   csc_page_intro_list_05: Open-ended projects for more personalized learning
-  csc_page_intro_list_06: Easy for any teacher with any background
-  csc_page_curriculum_glance_topics: Interdisciplinary
-  csc_page_curriculum_glance_devices: Laptop, Chromebook, Tablet
+  csc_page_intro_list_06: Vhodné pro učitele s jakýmkoliv zaměřením
+  csc_page_curriculum_glance_topics: Mezioborové zaměření
+  csc_page_curriculum_glance_devices: Notebook, chromebook, tablet
   csc_page_curriculum_glance_tools: Sprite Lab
-  csc_page_curriculum_glance_professional_learning: Self-paced Modules
+  csc_page_curriculum_glance_professional_learning: Moduly k samostudiu
   csc_page_curriculum_glance_professional_languages: Čeština
   csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csc_page_quote: I loved the engagement [my students had with the module] and the
-    opportunities for choice and creativity. I loved hearing a student say, 'This
-    helped me see what we had been reading about in science.'
-  csc_page_find_a_module_desc: Our current CS Connections offerings are for 3rd to
-    5th grade classrooms and are designed to take 1 week of 45-minute lessons each
-    day.
-  csc_page_faq_question_01: Is CS Connections mapped to standards?
-  csc_page_faq_answer_01: Yes! CS Connections is mapped to the Common Core State Standards
-    (CCSS) for ELA and Math, the Next Generation Science Standards (NGSS), and the
-    Computer Science Teacher Association Standards (CSTA).
-  csc_page_faq_question_02: How much does it cost to teach CS Connections?
+  csc_page_quote: Moc se mi líbí záběr a skvělé rozvržení lekcí. V informatice se
+    neorientuji, ale díky vašim lekcím mám jistotu, že svým studentům dokážu přiblížit
+    základní koncepty a zakomponovat je do našich učebních osnov.
+  csc_page_find_a_module_desc: Aktuální kurz Mezipředmětové vztahy v informatice je
+    určen pro studenty 3. až 5. tříd a s denní dotací 45 minut jej lze absolvovat
+    za týden.
+  csc_page_faq_question_01: Je kurz Mezipředmětové vztahy v informatice standardizovaný?
+  csc_page_faq_answer_01: Ano! Kurz Mezipředmětové vztahy v informace vyhovuje základním
+    vyučovacím standardům pro anglický jazyk a matematiku (CCSS), standardům nové
+    generace pro vědu (NGSS) a standardům Asociace učitelů informatiky (CSTA).
+  csc_page_faq_question_02: Kolik bude výuka kurzu Mezipředmětové vztahy v informatice
+    stát?
   csc_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
     for anyone, anywhere, to teach!
-  csc_page_faq_question_03: How/Where can I get professional development for CS Connections?
-  csc_page_faq_answer_03: We offer self-paced professional development for CS Connections.
-    Through reading, viewing videos, completing interactive puzzles, and reflecting
-    on your learning, you will develop your own understanding while preparing to teach
-    any of the CS Connections modules in your classroom. [Get started here](%{get_started_url}).
-  csc_page_faq_answer_03_coming_soon: Professional learning for CS Connections is
-    coming soon!
-  csc_page_faq_question_04: What is the recommended timing for teaching CS Connections?
-  csc_page_faq_answer_04: Each CS Connections module is designed to take a week.
-  csc_page_faq_question_05: What materials do I need for CS Connections?
-  csc_page_faq_answer_05: Ideally, each student will have their own computer and teachers
-    will have a projector to display the slideshow that corresponds with each lesson.
+  csc_page_faq_question_03: Jak/kde získám možnost profesního rozvoje související
+    s kurzem Mezipředmětové vztahy v informatice?
+  csc_page_faq_answer_03: Pro tento kurz nabízíme možnost profesního rozvoje formou
+    samostudia. Své dovednosti si budete rozvíjet prostřednictvím čtení, sledování
+    videí, řešení interaktivních hádanek, sebereflexe a opakování. Zároveň se tak
+    připravíte na to, až budete látku předávat svým studentům. [Začněte zde](%{get_started_url}).
+  csc_page_faq_answer_03_coming_soon: Profesní vzdělávání ke kurzu Mezipředmětové
+    vztahy v informatice bude k dispozici již brzy!
+  csc_page_faq_question_04: Jaká je doporučená doba výuky kurzu Mezipředmětové vztahy
+    v informatice?
+  csc_page_faq_answer_04: Každý modul kurzu Mezipředmětové vztahy v informatice je
+    navržen tak, aby se dal absolvovat za týden.
+  csc_page_faq_question_05: Jaké materiály jsou pro kurz Mezipředmětové vztahy v informatice
+    potřeba?
+  csc_page_faq_answer_05: V ideálním případě bude mít každý student k dispozici svůj
+    vlastní počítač a učitelé budou mít možnost využít projektor k promítání snímků,
+    které jsou součástí každé lekce.
+  csf_page_top_desc: Bezplatné celoroční učební osnovy, které studenty seznámí se
+    základními koncepty informatiky a budou je motivovat k přemýšlení nad tím, jak
+    počítače a technologie ovlivňují svět.
+  csf_page_intro_heading: Bezplatné a zábavné kurzy pro všechny ročníky 1. stupně
+  csf_page_intro_list_01: Šest kurzů, od předškoláků až po žáky 5. tříd
+  csf_page_intro_list_02: Úvodní kurzy informatiky vhodné pro každého
+  csf_page_intro_list_03: Využijte jeden kurz pro všechny studenty stejného ročníku,
+    bez ohledu na jejich zkušenosti
+  csf_page_intro_list_04: Všechny kurzy jsou vhodným úvodem pro jakéhokoliv studenta
+  csf_page_quote: Tento kurz učím od pondělka, kdy proběhl workshop. Studenti i já
+    jsme z něj nadšení (a jejich třídní učitelé taky!).
+  csf_page_curriculum_glance_topics: Programování, Internet, Hry a animace, Umění
+    a design, Návrh aplikací
+  csf_page_curriculum_glance_devices: Notebook, chromebook, tablet
+  csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
+  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
+    Modules
+  csf_page_curriculum_glance_languages: Arabština, indonéština, katalánština, zjednodušená
+    čínština, tradiční čínština, čeština, francouzština, němčina, hindština, italština,
+    japonština, korejština, kannadština, malajština, maráthština, mongolština, polština,
+    brazilská portugalština, rumunština, ruština, slovenština, tagalština, tamilština,
+    thajština, turečtina, ukrajinština, latinskoamerická španělština, urdština, evropská
+    španělština, uzbečtina, vietnamština
+  csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
+    Immersive reader
+  csf_page_pick_a_course_heading: Vyberte pro svou třídu vhodný kurz se série Základy
+    informatiky
+  csf_page_pick_a_course_desc: Kurzy jsou rozmanité a přizpůsobené různým potřebám,
+    pro každého se tedy něco najde.
+  csf_page_pick_a_course_heading_02: Jak budou vaši studenti pracovat s obsahem?
+  csf_page_courses_heading: Kurzy vyvinuté speciálně pro žáky prvního stupně
+  csf_page_courses_desc: Najděte kurz pro jakýkoliv ročník, který právě učíte. Každý
+    kurz trvá přibližně jeden měsíc.
+  csf_page_courses_self_paced_heading: Učební osnovy pro první stupeň určené k samostudiu
+  csf_page_courses_self_paced_desc: Role učitele při práci s offline aktivitami a
+    vedení diskuzí v rámci třídy je klíčová, jsme si však vědomi toho, že Základy
+    informatiky nejsou vždy vyučovány v klasickém školním prostředí. Kromě kurzů A–F
+    tak nabízíme i dva expresní kurzy určené k samostudiu. Tyto expresní kurzy jsou
+    určené pro situace, kdy učitelé žákům nechávají volnou ruku a ti se učí svým vlastním
+    tempem.
+  csf_page_faq_question_01: Je kurz Základy informatiky standardizovaný?
+  csf_page_faq_answer_01_01: 'Kurz Základy informatiky byl vytvořen v souladu s osnovami
+    K-12 Computer Science Framework (Rámcový vzdělávací program pro informatiku pro
+    žáky základních a středních škol) a standardy Asociace učitelů informatiky (CSTA
+    standards). Každá lekce kurzu Základy informatiky momentálně obsahuje odkazy na
+    příslušné standardy CSTA. Seznam všech odkazů na CSTA je k dispozici zde:'
+  csf_page_faq_answer_01_list_01: "[Standardy pro Kurz A](%{course_a_url})"
+  csf_page_faq_answer_01_list_02: "[Standardy pro Kurz B](%{course_b_url})"
+  csf_page_faq_answer_01_list_03: "[Standardy pro Kurz C](%{course_c_url})"
+  csf_page_faq_answer_01_list_04: "[Standardy pro Kurz D](%{course_d_url})"
+  csf_page_faq_answer_01_list_05: "[Standardy pro Kurz E](%{course_e_url})"
+  csf_page_faq_answer_01_list_06: "[Standardy pro Kurz F](%{course_f_url})"
+  csf_page_faq_answer_01_02: 'Standardy ve formátu Google Sheets naleznete zde: [Standardy
+    pro kurz Základy informatiky](%{csf_standards_url}).'
+  csf_page_faq_question_02: Jak mohu kurz Základy informatiky představit celé škole?
+  csf_page_faq_answer_02: Náš program pro základní školy zaměřený na infomatiku, který
+    patří mezi přední učební plány svého typu ve Spojených státech, se setkal s úspěchem
+    jak ve velkoměstech (např. v Dallasu ve státě Texas), tak v menších venkovských
+    oblastech (např. ve státě Iowa). Učit informatiku nemusí jen experti. Náš program
+    je speciálně upraven tak, aby pokytoval podporu učitelům, kteří s informatikou
+    teprve začínají, a zároveň je dostatečně flexibilní a jednotlivé lekce lze přizpůsobit
+    potřebám studentům. [Ukažte tuto brožurku](%{brochure_url}) vedení vaší školy
+    či jiným odpovědným osobám nebo [jim poraďte, ať se podívají na tuto webovou stránku](%{admins_url}),
+    kde naleznou odpovědi na své dotazy.
+  csf_page_faq_question_03: Kolik bude výuka kurzu Základy informatiky stát?
+  csf_page_faq_question_04: Jak/kde získám možnost profesního rozvoje související
+    s kurzem Základy informatiky?
+  csf_page_faq_answer_04_01: Učíte informatiku poprvé? Žádný strach! Většina učitelů,
+    která naše kurzy využívá, je na tom stejně. Poznejte další učitele z vašeho regionu
+    a staňte se součástí inspirující a nápomocné komunity, která vám ve vašich začátcích
+    pomůže. Naši regionální partneři poskytují profesionální jednodenní Code.org workshopy
+    pro jednotlivé učitele i celé učitelské sbory. [Přihlaste se na seminář profesního
+    rozvoje ve vašem okolí](%{sign_up_url})!
+  csf_page_faq_answer_04_02: Připojte se k více než 100 000 učitelů, kteří se již
+    našich workshopů zúčastnili. Většina z nich je považuje za ty nejlepší programy
+    pro profesní rozvoj [a až 90 % z nich by je doporučilo svým kolegům](%{rec_url})!
+  csf_page_faq_question_05: Jaká je doporučená doba výuky kurzu Základy informatiky?
+  csf_page_faq_answer_05: Každý kurz Základů informatiky obsahuje 13–17 lekcí sestavených
+    tak, aby byly odučeny za klasickou 45minutovou hodinu. Doporučujeme, aby studenti
+    absolvovali jednotlivé lekce tempem, které určí učitel. Kurzy nabízí spoustu projektových
+    úrovní, na kterých by měla třída pracovat zároveň, ale lekce zaměřené na rozvoj
+    jednotlivých dovedností mohou studenti procházet svým vlastním tempem.
+  csf_page_faq_question_06: Jaké materiály jsou pro kurz Základy informatiky potřeba?
+  csf_page_faq_answer_06: Součástí spousty lekcí jsou i materiály s různými aktivitami,
+    které lze vytisknout nebo s nimi pracovat v jejich digitální podobě. K některým
+    lekcím jsou zapotřebí klasické školní potřeby a pomůcky [Více se dozvíte v sylabu
+    kurzu](%{syllabus_url}).
+  csa_page_top_desc: Introduce students to software engineering and object-oriented
+    design while they learn the Java programming language in this free curriculum
+    for [AP® Computer Science A (AP® CSA)](%{csa_url}).
+  csa_page_intro_heading: A new approach to AP® CSA
+  csa_page_intro_list_01: Culturally responsive pedagogy
+  csa_page_intro_list_02: Real-world problem investigation
+  csa_page_intro_list_03: Explainer videos with diverse presenters
+  csa_page_intro_list_04: Open-ended projects for more personalized learning
+  csa_page_intro_list_05: Student-friendly code review tool
+  csa_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
+    Animation
+  csa_page_curriculum_glance_devices: Laptop, Chromebook
+  csa_page_curriculum_glance_tools: Java Lab
+  csa_page_curriculum_glance_professional_learning: Facilitator-led Workshops
+  csa_page_curriculum_glance_languages: Čeština
+  csa_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
+    Immersive reader
+  csa_page_quote: I could tell last year how different and better this curriculum
+    and resources were than anything else out there... but this year, these past few
+    weeks preparing students for the exam have been some of my most fun teaching.
+    And I'm hardly doing anything! Kids understand the material and are talking with
+    each other at such a high level and it's a direct reflection of the lessons and
+    activities throughout the year. Thank you, thank you.
+  csa_page_projects_java_lab: Java Lab is a programming environment where you can
+    make Java programs using The Neighborhood, The Theater, or the console.
+  csa_page_projects_objects_first: Students learn the fundamentals of object-oriented
+    programming (OOP) first, giving them a foundation for the rest of the course while
+    encouraging them to consider the overall design of their programs.
+  csa_page_faq_question_01: Is CSA mapped to standards?
+  csa_page_faq_answer_01: Yes, Code.org's CSA curriculum is mapped to the College
+    Board Course and Exam Description for AP® CSA.
+  csa_page_faq_question_02: How much does it cost to teach CSA?
+  csa_page_faq_question_03: How/Where can I get professional development for CSA?
+  csa_page_faq_answer_03: Professional learning workshops for Code.org's CSA curriculum
+    start each summer. [Click here to apply](%{apply_url}).
+  csa_page_faq_question_04: What is the recommended timing for teaching CSA?
+  csa_page_faq_answer_04: A minimum of 140 class hours; should be taught as a full-year
+    course. Contains nine units, which includes an AP® Exam Prep unit.
+  csa_page_faq_question_05: What materials do I need for this course?
+  csa_page_faq_answer_05: This curriculum requires that students have access to computers
+    with a modern web browser. At this time, our curriculum is not optimized for tablets
+    or mobile devices. For more details, [check out our technology requirements](%{it_url}).
+    In addition to technology, typical classroom supplies like scissors and sticky
+    notes will also be used throughout the curriculum.
+  csa_page_faq_question_06: Why do I need to become a verified teacher to teach CSA
+    and run code in Java Lab?
+  csa_page_faq_answer_06: Java Lab is a unique environment from all other Code.org
+    programming environments and requires additional measures to ensure network security
+    for all. [Read more about it here](%{read_more_url}).
+  csa_page_faq_question_07: How can I access answer keys?
+  csa_page_faq_answer_07_01: With an approved teacher account, you can find answer
+    keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
+  csa_page_faq_answer_07_02: Teachers in our Professional Learning Program will automatically
+    be approved to view answer keys. If you need an approved teacher account, you
+    can apply for access to protected teacher-only materials (answer keys, etc) through
+    [this form](%{form_url}). Please keep in mind that it may take 3-5 business days
+    to verify your account.
+  csa_page_faq_question_08: How was the curriculum developed?
+  csa_page_faq_answer_08_01: 'Our CSA curriculum was written by teachers, for teachers
+    and was designed with our Curriculum Values in mind. In particular, we focused
+    on expanding access to those who historically have been denied opportunities to
+    learn about the exciting and impactful field of computing. The following goals
+    guided the creation of the CSA curriculum:'
+  csa_page_faq_answer_08_list_01: 'Goal 1: Develop an Equitable Course'
+  csa_page_faq_answer_08_list_02: 'Goal 2: Prepare Students for Higher Ed and Industry'
+  csa_page_faq_answer_08_list_03: 'Goal 3: Design Relevant, Engaging Activities'
+  csa_page_faq_answer_08_list_04: 'Goal 4: Incorporate Best Practices from the Field'
+  csa_page_faq_answer_08_02: For more information about the values that guided our
+    work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
+    learning values](%{pl_values_url}).
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -1605,6 +1929,7 @@ cs:
   signup_submit_census_error_message: Je nám líto. Došlo k chybě. Prosím zkuste formulář
     odeslat znovu.
   signup_submit_label: Zaregistrujte se
+  signup_submit_explore: Explore sessions
   signup_submit_error_message: Došlo k chybě. Zkontrolujte všechna požadovaná pole,
     zda jsou řádně vyplněná.
   signup_submit_and_continue_label: Odeslat a Pokračovat
@@ -4258,7 +4583,7 @@ cs:
     to address common misconceptions that new programmers have about these topics
     by offering many opportunities for practice, as well as targeted hints and feedback.
 
-'
+    '
   tutorial_zulama_longdescription: In this activity you will learn to edit JavaScript
     code through a playful action game and master computer science concepts like variables
     and functions. Create your own game in the Sandbox by remixing and expanding on
@@ -4557,7 +4882,7 @@ cs:
     completely open-ended; kids can use them as a starting point for their own app
     creations. Beginners welcome!
 
-'
+    '
   tutorial_tlcemo_longdescription: Students create and program a 2D robot made of
     card to show different emotions. They create a table that can be used to translate
     emotions (high level commands) into low level machine instructions.
@@ -12394,6 +12719,93 @@ cs:
     holding the ends of a Code.org-branded rainbow banner. Behind them, several people
     are wearing Code.org shirts and waving rainbow flags while walking alongside a
     multi-colored Volkswagen bug.
+  accessibility_hero_heading: Code.org a zpřístupnění
+  accessibility_hero_desc: Velmi nám záleží na tom, abychom odstraňovali překážky,
+    které studentům a učitelům se zdravotním znevýhoděním znemožňují se naplno zúčastnit
+    našich aktivit, a zajistili tak, aby měli VŠICHNI studenti možnost studovat informatiku.
+  accessibility_efforts_title: Naše cíle pro rok 2023
+  accessibility_efforts_desc: 'Abychom vytvořili zcela přístupnou platformu pro všechny,
+    rozhodli jsme se realixovat komplexní akční plán, jehož součástí je:'
+  accessibility_efforts_card_title_1: Interní školení zaměřené na zpřístupnění
+  accessibility_efforts_card_desc_1: Naše produktové a technické týmy by měly komplexní
+    školení zaměřené na zpřístupnění dokončit do prosince 2023.
+  accessibility_efforts_card_title_2: Dobrovolná analýza přístupnosti produktu (VPAT)
+  accessibility_efforts_card_desc_2: Zavazujeme se provádět [Dobrovolnou analýzu přístupnosti
+    produktu VPAT](%{voluntary_url}), abychom mohli každoročně zaznamenávat náš pokrok
+    a porovnávat jej s výchozím stavem. Výsledky budou zveřejněny na této stránce
+    v září 2023.
+  accessibility_efforts_card_title_3: Nástroje podporující přístupný design
+  accessibility_efforts_card_desc_3: Členové týmu budou mít přístup k nástrojům, které
+    jim pomohou vytvářet přístupný obsah.
+  accessibility_efforts_card_title_4: Přístupné učební osnovy
+  accessibility_efforts_card_desc_4: Do prosince 2023 se zavazujeme úvodní lekce kurzů
+    Principy informatiky a Objevování informatiky přizpůsobit standardům [úrovně AA
+    podle WCAG – směrnice pro tvorbu bezbariérového webu](%{wcag_url}).
+  accessibility_explore_title: Prohlédněte si zdroje Code.org týkající se zpřístupnění
+  accessibility_explore_text: Tato stránka poskytuje přehledný seznam dokumentace
+    a průvodce k našim nástrojům, včetně přístupných lekcí Hour of Code, asistivní
+    čtečky, navigace prostřednictvím klávesnice a možností přizpůsobení.
+  accessibility_explore_button: Zobrazit stránku se zdroji týkající se zpřístupnění
+  accessibility_help_us_title: Pomozte nám se zlepšit
+  accessibility_help_us_text: Code.org na zpětnou vazbu reaguje rychle a pružně. Pokud
+    vás napadá, jak bychom mohli vylepšit přístupnost našich nástrojů a zdrojů, ozvěte
+    se nám. Děkujeme, že nám pomáháte zpřístupňovat studium informatiky všem studentům!
+  accessibility_help_us_button: Řekněte nám, co by se dalo zlepšit
+  accessibility_commit_title: Závazek Code.org týkající se zpřístupnění
+  accessibility_commit_text_1: Věříme, že informatika je klíčová pro všechny studenty,
+    proto se zavazujeme vytvářet spravedlivé, přístupné a otevřené prostředí napříč
+    celou naší platformou i v rámci našich učebních osnov.
+  accessibility_commit_text_2: Na vzdělávací potřeby studentů pohlížíme komplexně
+    a snažíme se, aby měli znevýhodnění žáci stejný přístup ke studiu informatiky
+    jako ostatní.
+  accessibility_commit_text_3: Začínáme zlehka, ale budeme sledovat naše pokroky a
+    postupně si klást vyšší cíle, dokud nebudeme schopni se vypořádat i s těmi nejsložitějšími
+    výzvami v této oblasti.
+  accessibility_commit_text_4: V Code.org se neustále snažíme průběžně zlepšovat přístupnost
+    našich nástrojů. Moc nás těší, že můžeme tímto důležitým krokem přispět k větší
+    otevřenosti, lepšímu zpřístupnění a rovnějším příležitostem pro všechny studenty
+    i učitele.
+  accessibility_partner_title: Naši partneři a doporučení
+  accessibility_partner_desc: Tyto zdroje doporučujeme studentům a učitelům, kteří
+    hledají přístupnější obsah z oblasti informatiky.
+  accessibility_card_title_1: AccessCSForAll
+  accessibility_card_text_1: Zdroje pro učitele, kteří chtějí vyučovat přístupnější
+    informatiku studenty středních škol, a pro znevýhodněné středoškoláky, kteří se
+    chtějí propojit s mentory v oblasti technologií.
+  accessibility_card_title_2: Blocks4All
+  accessibility_card_text_2: Blokové programovací prostředí pro iPady, které učí studenty
+    základní programovací koncepty pomocí robota jménem Dash. K dispozici jsou funkce
+    VoiceOver, Switch Control a hlasové ovládání.
+  accessibility_card_title_3: Code Jumper
+  accessibility_card_text_3: Fyzická programovací pomůcka/zdroj pro studenty se zrakovým
+    znevýhodněním.
+  accessibility_card_title_4: CSForAll
+  accessibility_card_text_4: Organizace, která koordinuje projekty a programy napříč
+    různými organizacemi v rámci Spojených států.
+  accessibility_card_title_5: Deaf Kids Code
+  accessibility_card_text_5: Podporuje vzdělávání v oblasti informatiky a technologie
+    pro neslyšící studenty nebo studenty se sluchovými vadami.
+  accessibility_card_title_6: Everyone Can Code
+  accessibility_card_text_6: Učební plán vyvinutý společností Apple určený pro platformu
+    Swift Playgrounds, který využívá funkci VoiceOver (upravený systém převodu textu
+    na řeč) a nabízí přizpůsobené osnovy pro studenty se speciálními potřebami.
+  accessibility_card_title_7: Khanova Akademie
+  accessibility_card_text_7: Poskytovatel učebních osnov s různými funkcemi zpřístupnění,
+    např. titulky, přepisy a možnostmi redukovat animace nebo skrýt obsah založený
+    na vizuálních prvcích. Nabízí jak učební osnovy Code.org, tak i další osnovy z
+    oblasti informatiky.
+  accessibility_card_title_8: Snap Circuits
+  accessibility_card_text_8: Výukový produkt ke studiu elektroniky s elektronickými
+    součástkami, které lze secvaknout dohromady (bez nutnosti pájení). K dispozici
+    je i speciální balíček pro studenty se zrakovým znevýhodněním.
+  accessibility_card_title_9: Sphero
+  accessibility_card_text_9: Interaktivní programovací robotický míč a vzdělávací
+    sada pro technické (STEM) předměty. Určeno pro studenty s mentálním handicapem.
+    Je nutno spárovat s příslušnou aplikací.
+  accessibility_card_title_10: Quorum
+  accessibility_card_text_10: Upravené učební osnovy AP Principy informatiky od Code.org
+    využívající Quorum, nástroj původně vyvinutý za účelem zpřístupnit obsah nevidomým
+    či zrakově znevýhodněným studentům.
   language_code:
     ar: Arabic
     az: Azerbaijani

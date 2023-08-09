@@ -598,3 +598,37 @@ ky:
           lesson_groups:
             lessonGroup-4:
               display_name: Өзгөрмөлөр
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Циклдер
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Циклдер
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Циклдер
+            lessonGroup-6:
+              display_name: Окуялар
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Циклдер
+            lessonGroup-5:
+              display_name: Окуялар
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Циклдер
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Функциялар
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Шартуулар
+            lessonGroup-5:
+              display_name: Өзгөрмөлөр

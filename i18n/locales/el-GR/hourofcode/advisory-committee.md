@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Ώρα του Κώδικα και Συμβουλευτική Επιτροπή CsedWeek
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Ώρα του Κώδικα και Συμβουλευτική Επιτροπή CsedWeek
 
 {{ advisory-committee/about_headshots }}
 

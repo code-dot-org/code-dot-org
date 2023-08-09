@@ -3,49 +3,41 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "כן",
           "No": "לא",
+          "Yes": "כן",
           "cute": "חמוד"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "כן",
           "No": "לא",
+          "Yes": "כן",
           "cute": "חמוד"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "כן",
           "No": "לא",
+          "Yes": "כן",
           "cute": "חמוד"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "כן",
           "No": "לא",
+          "Yes": "כן",
           "cute": "חמוד"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "שם",
+          "City": "עיר",
           "Color": "צבע",
           "Food": "מזון",
-          "City": "עיר",
+          "Name": "שם",
           "text": "טקסט"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "שם",
+          "City": "עיר",
           "Color": "צבע",
           "Food": "מזון",
-          "City": "עיר",
+          "Name": "שם",
           "text": "טקסט"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -56,18 +48,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -78,28 +70,28 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -110,19 +102,19 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
           "text": "טקסט"
         },
         "CSD U1 processing guess_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -133,18 +125,26 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
           "text": "טקסט"
         },
         "CSD U1 processing live_2021": {
           "bear": "דוב",
-          "walking": "הליכה",
-          "rat": "עכברוש"
+          "rat": "עכברוש",
+          "walking": "הליכה"
         },
         "CSD U1 processing live_2022": {
           "bear": "דוב",
-          "walking": "הליכה",
-          "rat": "עכברוש"
+          "rat": "עכברוש",
+          "walking": "הליכה"
         },
         "CSD U1 processing npark_2021": {
           "Sorry!": "סליחה!"
@@ -154,14 +154,6 @@
         },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -172,18 +164,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -194,7 +186,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "חזור"
@@ -203,32 +203,32 @@
           "Back": "חזור"
         },
         "CSD U1 storage movies_2021": {
+          "No": "לא",
           "Star Wars": "מלחמת הכוכבים",
           "Yes": "כן",
-          "No": "לא",
           "text": "טקסט"
         },
         "CSD U1 storage movies_2022": {
+          "No": "לא",
           "Star Wars": "מלחמת הכוכבים",
           "Yes": "כן",
-          "No": "לא",
           "text": "טקסט"
         },
         "CSD U1 storage outfit_2021": {
-          "pink": "ורוד",
-          "green": "ירוק",
-          "black": "שחור",
           "Clear": "נקה",
-          "white": "לבן",
-          "purple": "סגול"
+          "black": "שחור",
+          "green": "ירוק",
+          "pink": "ורוד",
+          "purple": "סגול",
+          "white": "לבן"
         },
         "CSD U1 storage outfit_2022": {
-          "pink": "ורוד",
-          "green": "ירוק",
-          "black": "שחור",
           "Clear": "נקה",
-          "white": "לבן",
-          "purple": "סגול"
+          "black": "שחור",
+          "green": "ירוק",
+          "pink": "ורוד",
+          "purple": "סגול",
+          "white": "לבן"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -302,9 +302,9 @@
           "Success!": "הצלחה!"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "מזרחה",
           "North": "צפונה",
           "South": "דרומה",
-          "East": "מזרחה",
           "West": "מערבה"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
@@ -320,26 +320,26 @@
           "Medium": "בינוני"
         },
         "CSD U6 - Combine Inputs - A_2222": {
-          "left": "שמאלה",
-          "right": "ימינה",
-          "red": "אדום",
           "green": "ירוק",
-          "yellow": "צהוב",
-          "purple": "סגול"
+          "left": "שמאלה",
+          "purple": "סגול",
+          "red": "אדום",
+          "right": "ימינה",
+          "yellow": "צהוב"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "ב",
           "fast": "מהיר",
-          "slow": "איטי",
-          "short": "זמן קצר",
+          "high": "גבוה",
           "long": "זמן ארוך",
           "low": "נמוך",
-          "high": "גבוה"
+          "on": "ב",
+          "short": "זמן קצר",
+          "slow": "איטי"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "אדומים",
+          "Blue": "כחולים",
           "Green": "ירוקים",
-          "Blue": "כחולים"
+          "Red": "אדומים"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "שמאלה",
@@ -349,28 +349,31 @@
           "bright": "מוארת"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
-          "green": "ירוק",
           "blue": "כחול",
+          "green": "ירוק",
           "orange": "תפוז",
           "yellow": "צהוב"
         },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "שקט"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "זמן קצר",
-          "long": "זמן ארוך"
+          "long": "זמן ארוך",
+          "short": "זמן קצר"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "זמן קצר",
+          "high": "גבוה",
           "long": "זמן ארוך",
           "low": "נמוך",
-          "high": "גבוה"
+          "short": "זמן קצר"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "זמן קצר",
-          "long": "זמן ארוך"
+          "long": "זמן ארוך",
+          "short": "זמן קצר"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "אדומים",
-          "Blue": "כחולים"
+          "Blue": "כחולים",
+          "Red": "אדומים"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -379,9 +382,9 @@
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "שם"
@@ -402,41 +405,41 @@
           "G": "ו"
         },
         "CSD U6 - Music - Piano_2222": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
           "G": "ו",
-          "A": "א",
-          "B": "ב",
           "Note:": "הערה:"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "הצלחה!"
@@ -455,8 +458,8 @@
           "Success!": "הצלחה!"
         },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "ניקוד",
-          "0": "0"
+          "0": "0",
+          "Score": "ניקוד"
         },
         "CSD U6 - Physical Input - PC_2222": {
           "Success!": "הצלחה!"
@@ -498,15 +501,15 @@
           "Name:": "שם:"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "אדומים",
+          "Blue": "כחולים",
           "Green": "ירוקים",
-          "Blue": "כחולים"
+          "Red": "אדומים"
         },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "כחולים",
+          "Green": "ירוקים",
           "Name:": "שם:",
           "Red": "אדומים",
-          "Green": "ירוקים",
-          "Blue": "כחולים",
           "Save": "שמור"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
@@ -527,16 +530,16 @@
           "title": "כותרת"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "לבן",
-          "Red": "אדומים",
+          "Blue": "כחולים",
           "Green": "ירוקים",
-          "Blue": "כחולים"
+          "Red": "אדומים",
+          "White": "לבן"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "למעלה",
           "down": "למטה",
           "left": "שמאלה",
-          "right": "ימינה"
+          "right": "ימינה",
+          "up": "למעלה"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "שם"
@@ -549,12 +552,24 @@
           "on": "ב"
         },
         "CSD U6 - Sensors - P_2222": {
-          "text": "טקסט",
           "high": "גבוה",
-          "low": "נמוך"
+          "low": "נמוך",
+          "text": "טקסט"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "ערך"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "עדכון",
+          "value": "ערך"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "ערך"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "ערך"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
           "value": "ערך"
         },
         "CSD U6 Driver pt 2": {
@@ -629,6 +644,30 @@
         "CSD U6 add LED button_2021": {
           "Success!": "הצלחה!"
         },
+        "CSD U6 analog change": {
+          "value": "ערך"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "ערך"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "ערך"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "ערך"
+        },
+        "CSD U6 analog data": {
+          "value": "ערך"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "ערך"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "ערך"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "ערך"
+        },
         "CSD U6 analog light": {
           "Update": "עדכון",
           "value": "ערך"
@@ -645,41 +684,53 @@
           "Update": "עדכון",
           "value": "ערך"
         },
+        "CSD U6 analog sound": {
+          "value": "ערך"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "ערך"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "ערך"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "ערך"
+        },
         "CSD U6 array piano": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "CSD U6 array piano_2018": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "CSD U6 array piano_2019": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "CSD U6 array piano_2021": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "CSD U6 arrays select predict": {
           "first": "ראשון"
@@ -694,20 +745,20 @@
           "first": "ראשון"
         },
         "CSD U6 change": {
-          "short": "זמן קצר",
-          "long": "זמן ארוך"
+          "long": "זמן ארוך",
+          "short": "זמן קצר"
         },
         "CSD U6 change_2018": {
-          "short": "זמן קצר",
-          "long": "זמן ארוך"
+          "long": "זמן ארוך",
+          "short": "זמן קצר"
         },
         "CSD U6 change_2019": {
-          "short": "זמן קצר",
-          "long": "זמן ארוך"
+          "long": "זמן ארוך",
+          "short": "זמן קצר"
         },
         "CSD U6 change_2021": {
-          "short": "זמן קצר",
-          "long": "זמן ארוך"
+          "long": "זמן ארוך",
+          "short": "זמן קצר"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "בינוני"
@@ -734,79 +785,79 @@
           "Happy": "שמח"
         },
         "CSD U6 frequency": {
-          "short": "זמן קצר",
+          "high": "גבוה",
           "long": "זמן ארוך",
           "low": "נמוך",
-          "high": "גבוה"
+          "short": "זמן קצר"
         },
         "CSD U6 frequency_2018": {
-          "short": "זמן קצר",
+          "high": "גבוה",
           "long": "זמן ארוך",
           "low": "נמוך",
-          "high": "גבוה"
+          "short": "זמן קצר"
         },
         "CSD U6 frequency_2019": {
-          "short": "זמן קצר",
+          "high": "גבוה",
           "long": "זמן ארוך",
           "low": "נמוך",
-          "high": "גבוה"
+          "short": "זמן קצר"
         },
         "CSD U6 frequency_2021": {
-          "short": "זמן קצר",
+          "high": "גבוה",
           "long": "זמן ארוך",
           "low": "נמוך",
-          "high": "גבוה"
+          "short": "זמן קצר"
         },
         "CSD U6 get toggle": {
-          "short": "זמן קצר",
+          "high": "גבוה",
           "long": "זמן ארוך",
           "low": "נמוך",
-          "high": "גבוה"
+          "short": "זמן קצר"
         },
         "CSD U6 get toggle_2018": {
-          "short": "זמן קצר",
+          "high": "גבוה",
           "long": "זמן ארוך",
           "low": "נמוך",
-          "high": "גבוה"
+          "short": "זמן קצר"
         },
         "CSD U6 get toggle_2019": {
-          "short": "זמן קצר",
+          "high": "גבוה",
           "long": "זמן ארוך",
           "low": "נמוך",
-          "high": "גבוה"
+          "short": "זמן קצר"
         },
         "CSD U6 get toggle_2021": {
-          "short": "זמן קצר",
+          "high": "גבוה",
           "long": "זמן ארוך",
           "low": "נמוך",
-          "high": "גבוה"
+          "short": "זמן קצר"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "כחולים",
+          "Green": "ירוקים",
           "Name:": "שם:",
           "Red": "אדומים",
-          "Green": "ירוקים",
-          "Blue": "כחולים",
           "Save": "שמור"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "כחולים",
+          "Green": "ירוקים",
           "Name:": "שם:",
           "Red": "אדומים",
-          "Green": "ירוקים",
-          "Blue": "כחולים",
           "Save": "שמור"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "כחולים",
+          "Green": "ירוקים",
           "Name:": "שם:",
           "Red": "אדומים",
-          "Green": "ירוקים",
-          "Blue": "כחולים",
           "Save": "שמור"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "כחולים",
+          "Green": "ירוקים",
           "Name:": "שם:",
           "Red": "אדומים",
-          "Green": "ירוקים",
-          "Blue": "כחולים",
           "Save": "שמור"
         },
         "CSD U6 getProperty input": {
@@ -822,84 +873,84 @@
           "Submit": "שלח"
         },
         "CSD U6 getters debug": {
-          "slow": "איטי",
           "fast": "מהיר",
-          "short": "זמן קצר",
+          "high": "גבוה",
           "long": "זמן ארוך",
           "low": "נמוך",
-          "high": "גבוה"
+          "short": "זמן קצר",
+          "slow": "איטי"
         },
         "CSD U6 getters debug_2018": {
           "fast": "מהיר",
-          "slow": "איטי",
-          "short": "זמן קצר",
+          "high": "גבוה",
           "long": "זמן ארוך",
           "low": "נמוך",
-          "high": "גבוה"
+          "short": "זמן קצר",
+          "slow": "איטי"
         },
         "CSD U6 getters debug_2019": {
           "fast": "מהיר",
-          "slow": "איטי",
-          "short": "זמן קצר",
+          "high": "גבוה",
           "long": "זמן ארוך",
           "low": "נמוך",
-          "high": "גבוה"
+          "short": "זמן קצר",
+          "slow": "איטי"
         },
         "CSD U6 getters debug_2021": {
           "fast": "מהיר",
-          "slow": "איטי",
-          "short": "זמן קצר",
+          "high": "גבוה",
           "long": "זמן ארוך",
           "low": "נמוך",
-          "high": "גבוה"
+          "short": "זמן קצר",
+          "slow": "איטי"
         },
         "CSD U6 interval": {
-          "short": "זמן קצר",
-          "long": "זמן ארוך"
+          "long": "זמן ארוך",
+          "short": "זמן קצר"
         },
         "CSD U6 interval_2018": {
-          "short": "זמן קצר",
-          "long": "זמן ארוך"
+          "long": "זמן ארוך",
+          "short": "זמן קצר"
         },
         "CSD U6 interval_2019": {
-          "short": "זמן קצר",
-          "long": "זמן ארוך"
+          "long": "זמן ארוך",
+          "short": "זמן קצר"
         },
         "CSD U6 interval_2021": {
-          "short": "זמן קצר",
-          "long": "זמן ארוך"
+          "long": "זמן ארוך",
+          "short": "זמן קצר"
         },
         "CSD U6 light show": {
-          "on": "ב",
-          "off": "כבוי"
+          "off": "כבוי",
+          "on": "ב"
         },
         "CSD U6 light show_2018": {
-          "on": "ב",
-          "off": "כבוי"
+          "off": "כבוי",
+          "on": "ב"
         },
         "CSD U6 light show_2019": {
-          "on": "ב",
-          "off": "כבוי"
+          "off": "כבוי",
+          "on": "ב"
         },
         "CSD U6 light show_2021": {
-          "on": "ב",
-          "off": "כבוי"
+          "off": "כבוי",
+          "on": "ב"
         },
         "CSD U6 params create colors": {
-          "Red": "אדומים",
-          "Blue": "כחולים"
+          "Blue": "כחולים",
+          "Red": "אדומים"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "אדומים",
-          "Blue": "כחולים"
+          "Blue": "כחולים",
+          "Red": "אדומים"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "אדומים",
-          "Blue": "כחולים"
+          "Blue": "כחולים",
+          "Red": "אדומים"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "אדומים",
-          "Blue": "כחולים"
+          "Blue": "כחולים",
+          "Red": "אדומים"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -926,24 +977,24 @@
           "Success!": "הצלחה!"
         },
         "CSD U6 sensor experiment embedded": {
-          "text": "טקסט",
           "high": "גבוה",
-          "low": "נמוך"
+          "low": "נמוך",
+          "text": "טקסט"
         },
         "CSD U6 sensor experiment embedded_2018": {
-          "text": "טקסט",
           "high": "גבוה",
-          "low": "נמוך"
+          "low": "נמוך",
+          "text": "טקסט"
         },
         "CSD U6 sensor experiment embedded_2019": {
-          "text": "טקסט",
           "high": "גבוה",
-          "low": "נמוך"
+          "low": "נמוך",
+          "text": "טקסט"
         },
         "CSD U6 sensor experiment embedded_2021": {
-          "text": "טקסט",
           "high": "גבוה",
-          "low": "נמוך"
+          "low": "נמוך",
+          "text": "טקסט"
         },
         "CSD U6 setProperty predict app": {
           "title": "כותרת"
@@ -958,20 +1009,20 @@
           "title": "כותרת"
         },
         "CSD U6 slider intro": {
-          "short": "זמן קצר",
-          "long": "זמן ארוך"
+          "long": "זמן ארוך",
+          "short": "זמן קצר"
         },
         "CSD U6 slider intro_2018": {
-          "short": "זמן קצר",
-          "long": "זמן ארוך"
+          "long": "זמן ארוך",
+          "short": "זמן קצר"
         },
         "CSD U6 slider intro_2019": {
-          "short": "זמן קצר",
-          "long": "זמן ארוך"
+          "long": "זמן ארוך",
+          "short": "זמן קצר"
         },
         "CSD U6 slider intro_2021": {
-          "short": "זמן קצר",
-          "long": "זמן ארוך"
+          "long": "זמן ארוך",
+          "short": "זמן קצר"
         },
         "CSD U6 test LED": {
           "Success!": "הצלחה!"
@@ -986,70 +1037,70 @@
           "Success!": "הצלחה!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "אדומים",
+          "Blue": "כחולים",
           "Green": "ירוקים",
-          "Blue": "כחולים"
+          "Red": "אדומים"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "אדומים",
+          "Blue": "כחולים",
           "Green": "ירוקים",
-          "Blue": "כחולים"
+          "Red": "אדומים"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "אודות",
           "About Us": "אודותינו",
-          "Cancel": "בטל",
-          "Name:": "שם:",
-          "Red": "אדומים",
-          "Green": "ירוקים",
           "Blue": "כחולים",
-          "Yes": "כן",
+          "Cancel": "בטל",
+          "Green": "ירוקים",
+          "Name:": "שם:",
           "No": "לא",
-          "Save": "שמור"
+          "Red": "אדומים",
+          "Save": "שמור",
+          "Yes": "כן"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "אודות",
           "About Us": "אודותינו",
-          "Cancel": "בטל",
-          "Name:": "שם:",
-          "Red": "אדומים",
-          "Green": "ירוקים",
           "Blue": "כחולים",
-          "Yes": "כן",
+          "Cancel": "בטל",
+          "Green": "ירוקים",
+          "Name:": "שם:",
           "No": "לא",
-          "Save": "שמור"
+          "Red": "אדומים",
+          "Save": "שמור",
+          "Yes": "כן"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "אודות",
           "About Us": "אודותינו",
-          "Cancel": "בטל",
-          "Name:": "שם:",
-          "Red": "אדומים",
-          "Green": "ירוקים",
           "Blue": "כחולים",
-          "Yes": "כן",
+          "Cancel": "בטל",
+          "Green": "ירוקים",
+          "Name:": "שם:",
           "No": "לא",
-          "Save": "שמור"
+          "Red": "אדומים",
+          "Save": "שמור",
+          "Yes": "כן"
         },
         "CSDU4 Decision App Demo": {
           "About": "אודות",
+          "About Us": "אודותינו",
           "I don't know": "אינני יודע",
           "When?": "מתי?",
-          "About Us": "אודותינו",
           "Why?": "למה?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "אודות",
+          "About Us": "אודותינו",
           "I don't know": "אינני יודע",
           "When?": "מתי?",
-          "About Us": "אודותינו",
           "Why?": "למה?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "אודות",
+          "About Us": "אודותינו",
           "I don't know": "אינני יודע",
           "When?": "מתי?",
-          "About Us": "אודותינו",
           "Why?": "למה?"
         },
         "CSDU4 Functionality visible": {
@@ -1059,40 +1110,40 @@
         "CSDU4 List App Demo": {
           "About": "אודות",
           "About Us": "אודותינו",
-          "Done": "מוכן",
-          "Cancel": "בטל"
+          "Cancel": "בטל",
+          "Done": "מוכן"
         },
         "CSDU4 List App Demo_2018": {
           "About": "אודות",
           "About Us": "אודותינו",
-          "Done": "מוכן",
-          "Cancel": "בטל"
+          "Cancel": "בטל",
+          "Done": "מוכן"
         },
         "CSDU4 List App Demo_2019": {
           "About": "אודות",
           "About Us": "אודותינו",
-          "Done": "מוכן",
-          "Cancel": "בטל"
+          "Cancel": "בטל",
+          "Done": "מוכן"
         },
         "CSDU4 Quiz App Demo": {
           "About": "אודות",
+          "About Us": "אודותינו",
           "Submit": "שלח",
           "When?": "מתי?",
-          "About Us": "אודותינו",
           "Why?": "למה?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "אודות",
+          "About Us": "אודותינו",
           "Submit": "שלח",
           "When?": "מתי?",
-          "About Us": "אודותינו",
           "Why?": "למה?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "אודות",
+          "About Us": "אודותינו",
           "Submit": "שלח",
           "When?": "מתי?",
-          "About Us": "אודותינו",
           "Why?": "למה?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
@@ -1117,76 +1168,76 @@
           "Success!": "הצלחה!"
         },
         "CSDU6 circuit playground piano": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "CSDU6 piano with notes": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "א",
+          "B": "ב",
           "C": "ג",
           "D": "ד",
           "E": "מז",
           "F": "ה",
-          "G": "ו",
-          "A": "א",
-          "B": "ב"
+          "G": "ו"
         },
         "allthethings design mode elements": {
           "text": "טקסט"
@@ -1207,12 +1258,12 @@
           "Start": "התחל"
         },
         "csd-apps for good-2": {
-          "Next": "הבא",
-          "Home": "בית"
+          "Home": "בית",
+          "Next": "הבא"
         },
         "csd-apps for good-2_2022": {
-          "Next": "הבא",
-          "Home": "בית"
+          "Home": "בית",
+          "Next": "הבא"
         },
         "csd-apps for good-3": {
           "1": "1",
@@ -1227,23 +1278,15 @@
           "4": "4"
         },
         "csd-explore ui-2": {
-          "Next": "הבא",
-          "Home": "בית"
+          "Home": "בית",
+          "Next": "הבא"
         },
         "csd-explore ui-2_2022": {
-          "Next": "הבא",
-          "Home": "בית"
+          "Home": "בית",
+          "Next": "הבא"
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1254,18 +1297,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1276,7 +1319,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Sorry!": "סליחה!"
@@ -1286,14 +1337,6 @@
         },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1304,18 +1347,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1326,7 +1369,15 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "הבא"
@@ -1349,12 +1400,12 @@
           "Next": "הבא"
         },
         "ml-customize-raspado-2021": {
-          "yes": "כן",
-          "no": "לא"
+          "no": "לא",
+          "yes": "כן"
         },
         "ml-customize-raspado_2022": {
-          "yes": "כן",
-          "no": "לא"
+          "no": "לא",
+          "yes": "כן"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "המשך לשלב הבא",
@@ -1371,18 +1422,18 @@
           "Silly": "מטופש"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "מע",
           "A": "א",
-          "yes": "כן",
+          "W": "מע",
+          "head": "ראש",
           "no": "לא",
-          "head": "ראש"
+          "yes": "כן"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "מע",
           "A": "א",
-          "yes": "כן",
+          "W": "מע",
+          "head": "ראש",
           "no": "לא",
-          "head": "ראש"
+          "yes": "כן"
         },
         "ml-model cards-book recommender model card": {
           "Silly": "מטופש"
@@ -1391,135 +1442,84 @@
           "Silly": "מטופש"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Back": "חזור"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Back": "חזור"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
+          "1": "1",
           "2": "2",
-          "1": "1"
+          "3": "3"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "כן",
+          "B": "ב",
           "No": "לא",
-          "B": "ב"
+          "Yes": "כן"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "כן",
+          "B": "ב",
           "No": "לא",
-          "B": "ב"
+          "Yes": "כן"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "כן",
-          "No": "לא"
+          "No": "לא",
+          "Yes": "כן"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "כן",
-          "No": "לא"
-        },
-        "ml-use model card-example3A-2021": {
-          "rain": "גשום",
-          "snow": "שלג",
-          "cloudy": "מעונן",
-          "night": "לילה",
-          "dusk": "דמדומים"
-        },
-        "ml-use model card-example3A_2022": {
-          "rain": "גשום",
-          "snow": "שלג",
-          "cloudy": "מעונן",
-          "night": "לילה",
-          "dusk": "דמדומים"
-        },
-        "CSD U6 - Combine Inputs - PracD_2222": {
-          "quiet": "שקט"
-        },
-        "CSD U6 - Sensors - SB1_2222": {
-          "value": "ערך"
-        },
-        "CSD U6 - Sensors - SB3_2222": {
-          "value": "ערך"
-        },
-        "CSD U6 - Sensors - SB4.1_2222": {
-          "value": "ערך"
-        },
-        "CSD U6 - Sensors - SB4_2222": {
-          "value": "ערך"
-        },
-        "CSD U6 analog change": {
-          "value": "ערך"
-        },
-        "CSD U6 analog change_2018": {
-          "value": "ערך"
-        },
-        "CSD U6 analog change_2019": {
-          "value": "ערך"
-        },
-        "CSD U6 analog change_2021": {
-          "value": "ערך"
-        },
-        "CSD U6 analog data": {
-          "value": "ערך"
-        },
-        "CSD U6 analog data_2018": {
-          "value": "ערך"
-        },
-        "CSD U6 analog data_2019": {
-          "value": "ערך"
-        },
-        "CSD U6 analog data_2021": {
-          "value": "ערך"
-        },
-        "CSD U6 analog sound": {
-          "value": "ערך"
-        },
-        "CSD U6 analog sound_2018": {
-          "value": "ערך"
-        },
-        "CSD U6 analog sound_2019": {
-          "value": "ערך"
-        },
-        "CSD U6 analog sound_2021": {
-          "value": "ערך"
+          "No": "לא",
+          "Yes": "כן"
         },
         "ml-models-shoes decision tree-2021": {
           "Sports": "ספורט"
         },
         "ml-models-shoes decision tree_2022": {
           "Sports": "ספורט"
+        },
+        "ml-use model card-example3A-2021": {
+          "cloudy": "מעונן",
+          "dusk": "דמדומים",
+          "night": "לילה",
+          "rain": "גשום",
+          "snow": "שלג"
+        },
+        "ml-use model card-example3A_2022": {
+          "cloudy": "מעונן",
+          "dusk": "דמדומים",
+          "night": "לילה",
+          "rain": "גשום",
+          "snow": "שלג"
         }
       }
     }

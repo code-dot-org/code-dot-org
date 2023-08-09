@@ -1,157 +1,27 @@
 {
-  "navigateForward": "தொடர்க",
-  "navigateBack": "பின் செல்லவும்",
-  "tryAgain": "மீண்டும் முயற்சி செய்",
-  "navigateDone": "முடி",
-  "saveProgress": "சேமி",
-  "correctAnswer": "சரி",
-  "incorrectAnswer": "தவறான",
-  "modelCardPossibleValuesMinimum": "குறைந்தபட்சம்",
-  "modelCardPossibleValuesMaximum": "பெருமம்",
-  "columnInspectorDescription": "விளக்கம்",
-  "columnDetailsMinimumValue": "குறைந்தபட்சம்",
   "columnDetailsMaximumValue": "பெருமம்",
+  "columnDetailsMinimumValue": "குறைந்தபட்சம்",
+  "columnInspectorDescription": "விளக்கம்",
+  "correctAnswer": "சரி",
   "dataCardLastUpdated": "கடைசியாக புதுப்பிக்கப்பட்டது",
-  "predictButton": "கணிக்கவும்",
-  "uniqueOptionsWarningNotice": "குறிப்பு",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "வயது"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "பருவநிலை"
+        "Height": {
+          "id": "உயரம் "
         },
-        "day": {
-          "id": "நாள்"
-        },
-        "shoe": {
-          "id": "காலணி"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "வெங்காயம்"
-        },
-        "avocado": {
-          "id": "வெண்ணெய் பழம்"
-        },
-        "corn": {
-          "id": "சோளம்"
-        },
-        "beans": {
-          "id": "பீன்ஸ்"
-        },
-        "lime": {
-          "id": "எலுமிச்சை"
+        "Length": {
+          "id": "நீளம்"
         }
       }
     },
     "bike_sharing": {
       "fields": {
-        "index": {
-          "id": "உள்ளடக்க அட்டவனை"
-        },
         "Month": {
           "id": "மாதம்"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "காளான்கள்"
         },
-        "lobster": {
-          "id": "இரால் மீன்"
-        },
-        "bacon": {
-          "id": "பன்றி இறைச்சி"
-        },
-        "cheese": {
-          "id": "சீஸ்"
-        },
-        "meat": {
-          "id": "இறைச்சி"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "நிறம்"
-        },
-        "music": {
-          "id": "இசை"
-        },
-        "food": {
-          "id": "உணவு"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "வயது"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "வகை"
-        },
-        "Description": {
-          "id": "விளக்கம்"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "ஸ்ட்ராபெரி"
-        },
-        "lime": {
-          "id": "எலுமிச்சை"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "பக்கங்களிலும் "
-        },
-        "size": {
-          "id": "அளவு"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "தக்காளி "
-        },
-        "avocado": {
-          "id": "வெண்ணெய் பழம்"
-        },
-        "chicken": {
-          "id": "கோழி"
-        },
-        "fruit": {
-          "id": "கனி"
-        },
-        "beans": {
-          "id": "பீன்ஸ்"
-        },
-        "cheese": {
-          "id": "சீஸ்"
+        "index": {
+          "id": "உள்ளடக்க அட்டவனை"
         }
       }
     },
@@ -165,36 +35,41 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "பள்ளி"
-        },
-        "age": {
-          "id": "வயது"
-        },
-        "health": {
-          "id": "ஆரோக்கியம்"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "கோழி"
-        },
-        "lamb": {
-          "id": "ஆட்டுக்குட்டி"
-        },
-        "onion": {
-          "id": "வெங்காயம்"
-        },
-        "cheese": {
-          "id": "சீஸ்"
+        "banana": {
+          "id": "வாழைப்பழம்"
         }
       }
     },
     "census_part": {
+      "fields": {
+        "age": {
+          "id": "வயது"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "நிறம்"
+        },
+        "food": {
+          "id": "உணவு"
+        },
+        "music": {
+          "id": "இசை"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "வயது"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "வயது"
@@ -211,62 +86,65 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "நாடு"
+        },
+        "Dance": {
+          "id": "நடனம்"
+        },
+        "Music": {
+          "id": "இசை"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "வயது"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "ஸ்கோர்"
-        },
         "Country": {
           "id": "நாடு"
         },
         "Name": {
           "id": "பெயர்"
         },
+        "Score": {
+          "id": "ஸ்கோர்"
+        },
         "Star": {
           "id": "ஸ்டார்"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "கலைஞர்"
+        "cheese": {
+          "id": "சீஸ்"
+        },
+        "chicken": {
+          "id": "கோழி"
+        },
+        "lamb": {
+          "id": "ஆட்டுக்குட்டி"
+        },
+        "onion": {
+          "id": "வெங்காயம்"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "மக்கள்"
+        "Category": {
+          "id": "வகை"
         },
-        "rhino": {
-          "id": "காண்டா மிருகம்"
-        },
-        "elephant": {
-          "id": "யானை"
-        },
-        "alligator": {
-          "id": "முதலை"
-        },
-        "trees": {
-          "id": "மரங்கள்"
-        }
-      }
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "நீளம்"
-        },
-        "Height": {
-          "id": "உயரம் "
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "நீர்வாழ் "
+        "Description": {
+          "id": "விளக்கம்"
         }
       }
     },
@@ -275,59 +153,100 @@
         "avocado": {
           "id": "வெண்ணெய் பழம்"
         },
-        "onion": {
-          "id": "வெங்காயம்"
-        },
         "ginger": {
           "id": "இஞ்சி"
+        },
+        "onion": {
+          "id": "வெங்காயம்"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "இசை"
+        "bacon": {
+          "id": "பன்றி இறைச்சி"
         },
-        "Dance": {
-          "id": "நடனம்"
+        "cheese": {
+          "id": "சீஸ்"
         },
-        "Country": {
-          "id": "நாடு"
+        "lobster": {
+          "id": "இரால் மீன்"
         },
-        "Internet": {
-          "id": "இணையதளம்"
+        "meat": {
+          "id": "இறைச்சி"
         },
-        "Writing": {
-          "id": "எழுதுதல்"
-        },
-        "Achievements": {
-          "id": "அடைவுகள்"
-        },
-        "Age": {
-          "id": "வயது",
-          "description": "வயது"
-        },
-        "Height": {
-          "id": "உயரம் ",
-          "description": "உயரம் "
-        },
-        "Gender": {
-          "id": "பாலினம்",
-          "description": "பாலினம்"
+        "mushrooms": {
+          "id": "காளான்கள்"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "வாழைப்பழம்"
+        "lime": {
+          "id": "எலுமிச்சை"
+        },
+        "strawberry": {
+          "id": "ஸ்ட்ராபெரி"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "வயது"
+        "alligator": {
+          "id": "முதலை"
+        },
+        "elephant": {
+          "id": "யானை"
+        },
+        "people": {
+          "id": "மக்கள்"
+        },
+        "rhino": {
+          "id": "காண்டா மிருகம்"
+        },
+        "trees": {
+          "id": "மரங்கள்"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "வெண்ணெய் பழம்"
+        },
+        "beans": {
+          "id": "பீன்ஸ்"
+        },
+        "cheese": {
+          "id": "சீஸ்"
+        },
+        "chicken": {
+          "id": "கோழி"
+        },
+        "fruit": {
+          "id": "கனி"
+        },
+        "tomato": {
+          "id": "தக்காளி "
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "வெண்ணெய் பழம்"
+        },
+        "beans": {
+          "id": "பீன்ஸ்"
+        },
+        "corn": {
+          "id": "சோளம்"
+        },
+        "lime": {
+          "id": "எலுமிச்சை"
+        },
+        "onion": {
+          "id": "வெங்காயம்"
         }
       }
     },
@@ -341,18 +260,99 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "இசை"
+        "sides": {
+          "id": "பக்கங்களிலும் "
+        },
+        "size": {
+          "id": "அளவு"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "நாள்"
+        },
+        "shoe": {
+          "id": "காலணி"
+        },
+        "weather": {
+          "id": "பருவநிலை"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "கலைஞர்"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "வயது"
+        },
+        "health": {
+          "id": "ஆரோக்கியம்"
+        },
+        "school": {
+          "id": "பள்ளி"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "அடைவுகள்"
+        },
+        "Age": {
+          "description": "வயது",
+          "id": "வயது"
+        },
+        "Country": {
+          "id": "நாடு"
         },
         "Dance": {
           "id": "நடனம்"
         },
-        "Country": {
-          "id": "நாடு"
+        "Gender": {
+          "description": "பாலினம்",
+          "id": "பாலினம்"
+        },
+        "Height": {
+          "description": "உயரம் ",
+          "id": "உயரம் "
+        },
+        "Internet": {
+          "id": "இணையதளம்"
+        },
+        "Music": {
+          "id": "இசை"
+        },
+        "Writing": {
+          "id": "எழுதுதல்"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "நீர்வாழ் "
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "தவறான",
+  "modelCardPossibleValuesMaximum": "பெருமம்",
+  "modelCardPossibleValuesMinimum": "குறைந்தபட்சம்",
+  "navigateBack": "பின் செல்லவும்",
+  "navigateDone": "முடி",
+  "navigateForward": "தொடர்க",
+  "predictButton": "கணிக்கவும்",
+  "saveProgress": "சேமி",
+  "tryAgain": "மீண்டும் முயற்சி செய்",
+  "uniqueOptionsWarningNotice": "குறிப்பு"
 }

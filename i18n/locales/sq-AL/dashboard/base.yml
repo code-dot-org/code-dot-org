@@ -25,6 +25,11 @@ sq:
       pair_programmer: 'Ju jeni duke programuar në çift me një student i cili nuk ka akses në  këtë përmbajtje. Për të patur akses në këtë përmbajtje , ndalo së programuari në çift dhe provo përsëri.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "është i pavlefshëm. Vini re se çdo link mund të përdoret vetëm një herë për të rivendosur fjalëkalimin tuaj dhe vetëm linku i dërguar më së fundmi do të funksionojë."
       messages:
         blank: "E domosdoshme"
         blank_plural: "kërkohen"
@@ -40,17 +45,19 @@ sq:
         personal_email_markdown: "Adresa vetjake e email-it [(kliko këtu nëse nuk ke një adresë email-i)](%{url})"
         username: 'Emri i përdoruesit'
         password: 'Fjalëkalimi'
+        verified_teacher: 'Mësimdhënës i verifikuar'
         password_confirmation: 'Konfirmimi i fjalëkalimit'
         current_password: 'Fjalëkalimi aktual'
         locale: 'Gjuha'
         age: 'Mosha'
-        gender: 'Gjini'
+        gender: 'Gjinia'
         edit_header: 'Ndrysho detajet e llogarisë'
         finish_sign_up_header: 'Përfundo krijimin e llogarisë'
         finish_sign_up_subheader: 'Plotëso informacionin e mëposhtëm për të përfunduar krijimin e një llogarie në Code.org <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Plotëso informacionin e mëposhtëm për të përfunduar krijimin e një llogarie në Code.org **%{email}**.'
         finish_sign_up_subheader_provider: 'Plotëso informacionin e mëposhtëm për të përfunduar krijimin e një llogarie në Code.org <strong>%{provider}</strong> për <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'Plotëso informacionin e mëposhtëm për të përfunduar krijimin e një llogarie në Code.org **%{provider}** për **%{email}**.'
+        reset_password_token: "Linku i rivendosjes së fjalëkalimit që keni ndjekur"
         error:
           future: nuk mund të jetë në të ardhmen
         us_state: 'Shteti'
@@ -58,20 +65,24 @@ sq:
   hello: "Pershendetje Botë"
   welcome_back: "Mirë se erdhët sërish, %{name}"
   your_professional_learning_plan: "Plani Juaj Profesional i Mësimit"
-  see_your_learning_plan: "Shikoni planin juaj të mësimit"
+  see_your_learning_plan: "Shiko planin tuaj mësimor"
   submit: Dorëzo
   unsubmit: Mos dërgo
   previous_page: Faqja e kaluar
   next_page: Faqja tjetër
   next_resource: Burimi tjetër
+  done_with_module: Ky modul mësimor përfundojë
   cancel: "Anulo"
   okay: "Në rregull"
   or: "ose"
   heading_x_of_y: "%{heading} (faqja %{x} nga %{y})"
   join_section:
     code:
-      placeholder: "Kodi i Seksionit (ABCDEF)"
+      title: 'Bashkohu në sesion në Code.org'
+      placeholder: "Kodi i Sesionit (ABCDEF)"
+      instructions: "Ju lutemi shkruani kodin me 6 shkronja që mësimdhënësi juaj ndau me ju (shembull: “ABCDEF”) për t'u bashkuar me sesionin e tyre."
       instructions_short: "Fut kodin e seksionit me 6 shkronja"
+      submit: 'Bashkohu'
   add_hint_form:
     placeholder: 'Të lutem fut udhëzimin tënd këtu'
     submit: 'Shto udhëzim'
@@ -82,8 +93,8 @@ sq:
   trophies: "Trofetë"
   courses: 'Kurset'
   courses_page:
-    title_student: "Mëso në Code Studio"
-    title_teacher: "Meso Shkencat Kompjuterike"
+    title_student: "Mëso Shkencat Kompjuterike"
+    title_teacher: "Mësoni Shkencat Kompjuterike"
   unplugged_activity: 'Aktiviteti Unplugged'
   of: "i"
   more: "MË SHUMË"
@@ -100,6 +111,8 @@ sq:
     continue_with: 'Hyr me %{provider}'
     sign_in_with: 'Logohu me %{provider}'
     signed_in: 'U loguat!'
+    signed_out_markdown: '### Ju jeni ç''kyçur nga [Code.org](%{url}).'
+    sign_out_of_markdown: '#### Ju keni përdorur %{provider} për t''u kyçur. <a href="%{url}">Klikoni këtu për tu ç''kyçur nga %{provider}.'
     already_signedup: 'Jeni regjistruar?'
     notyet_signedup: "Nuk jeni të regjistruar akoma?"
     google_oauth2: 'Llogaria e Google'
@@ -107,16 +120,24 @@ sq:
     facebook: 'Facebook'
     windowslive: 'Llogaria e Microsoft'
     microsoft_v2_auth: 'Llogaria e Microsoft'
+    powerschool: 'Shkolla e fuqizuar'
     forgot_password: 'Keni harruar fjalëkalimin?'
     migration_success: 'Suksese! Ju keni përditësuar përvojën tonë të llogarisë së re.'
     demigration_success: 'Përvoja e llogarisë së re tani është çaktivizuar në llogarinë tuaj.'
     need_confirmation: "Nuk i keni marr instruksionet e konfirmimit?"
     need_unlock: "Nuk keni marre instruksionet e zhbllokimit?"
-    not_linked: "Ndjese, por llogaria juaj në Code.org nuk është e lidhur me %{provider}. Duhet të identifikohesh duke shtypur fjalëkalimin më poshtë."
-    use_clever: "Ndjesë, por llogaria juaj në Code.org nuk është e lidhur me %{provider}. Ju lutemi, përdorni më mirë portalin Clever, për t'u identifikuar."
+    not_linked: "Na vjen keq, por llogaria juaj në Code.org nuk është e lidhur me %{provider}. Duhet të identifikoheni duke shtypur fjalëkalimin më poshtë."
+    use_clever: "Na vjen keq, por llogaria juaj në Code.org nuk është e lidhur me %{provider}. Ju lutemi, përdorni më mirë portalin Clever, për t'u identifikuar."
+    invalid_provider: "Na vjen keq, %{provider} llogaria nuk mund të lidhet me llogarinë e Code.org."
+    migration_required: "Na vjen keq, ne nuk mund të lidhim ose shkëputim llogaritë që janë ende duke përdorur përvojën e vjetër të llogarisë. Ju lutemi përditësoni përvojën e re të llogarisë."
     unable_to_connect_provider: "Nuk mund të lidhim llogarinë tuaj në Code.org me llogarinë tuaj %{provider}. Ju lutemi provojeni sërish."
+    disconnect_successful: "Suksese! Ne kemi shkëputur llogarinë e jashtme nga llogaria juaj Code.org."
     already_in_use: "Llogaria juaj %{provider} është e lidhur tashmë me një tjetër llogari në Code.org."
     already_linked: "Llogaria juaj %{provider} është tashmë e lidhur me llogarinë tuaj në Code.org account."
+    existing_account:
+      account_exists: "Lajm i mirë! Ju tashmë keni një llogari në Code.org që përdor %{email}"
+      sign_in: "Ju lutemi regjistrohuni në llogarinë tuaj ekzistuese. Pastaj do të jeni në gjendje të lidhni profilin tuaj %{provider} nga faqja e parametrave konfigurues."
+      sign_up: "Nuk është email-i juaj? Dëshironi të krijoni një llogari të re me një email tjetër? Ju gjithashtu do të jeni në gjendje të lidhni profilin tuaj %{provider} nga faqja e parametrave konfigurues nëse vendosni të krijoni një llogari të re."
   signup_form:
     email_signup: 'Regjistrohu me adresën tënde të email-it'
     student_count: '%{count} nxënës janë regjistruar tashmë.'
@@ -134,9 +155,9 @@ sq:
     birthday: 'Ditëlindja (jo e domosdoshme)'
     age: 'Mosha'
     user_type: 'A jeni nxënës apo mësues?'
-    submit: 'Rregjistrohu'
+    submit: 'Regjistrohu'
     go_to_account: 'Shko te llogaria ime'
-    teacher: 'A jeni një mësues?'
+    teacher: 'A jeni një mësimdhënës?'
     valid_username: "I disponueshëm!"
     invalid_username: "Emri i përdoruesit duhet të ketë të paktën 5 karaktere"
     taken_username: "Ky emër është i zënë"
@@ -144,10 +165,19 @@ sq:
     invalid_password: "Fjalëkalimi duhet të ketë të paktën 6 karaktere"
     mismatch_password: "Dy fjalëkalimet që vendosët nuk përputhen"
     student_consent: "Konfirmoj se kam lejen e prindit ose të kujdestarit ligjor për të përdorur shërbimet e Code.org."
+    student_terms_markdown: "Email adresat nuk ruhen në një formë që na lejon t'i kontaktojmë nxënësit. Nxënësit nuk do të marrin kurrë email nga Code.org përveç rastit të rikthimit të fjalëkalimit. Shihni [Politikat e privatësisë] (http://code.org/privacy) për më shumë informacion."
     user_type_button: "Përditëso llojin e llogarisë"
     user_type_label: "Lloji i llogarisë"
-    user_type_student: "Student"
+    user_type_student: "Nxënës"
+    user_type_student_desc: "Eksploro të gjitha kurset dhe aktivitetet tona, plus:"
+    user_type_student_ability_1: "Ruaj progresin dhe projektet tuaja"
+    user_type_student_ability_2: "Bashkohu me sesionin e klasës së mësimdhënësit tuaj"
     user_type_teacher: "Mësues"
+    user_type_teacher_desc: "Çdo gjë që studentët kanë qasje në, plus:"
+    user_type_teacher_ability_1: "Krijo sesione për klasë"
+    user_type_teacher_ability_2: "Cakto dhe gjurmo punën e nxënësve"
+    user_type_teacher_ability_3: "Regjistrohu në mësim profesional"
+    user_type_teacher_ability_4: "Bashkëvepro në forumin tonë të mësimdhënësve"
     field_is_required: "E domosdoshme"
     accept_terms: "Ju duhet të jeni dakord për të krijuar një llogari"
     error: "Ndodhi një gabim."
@@ -158,13 +188,18 @@ sq:
     share_teacher_email_reg_partner_preference_yes: "Po"
     share_teacher_email_reg_partner_preference_no: "Jo"
     share_teacher_email_reg_partner_preference_required: "Ju duhet të specifikoni preferencën e postës elektronike."
+    parent_account_checkbox: "Unë jam prind/kujdestar që regjistrohem në emër të fëmijës tim"
+    parent_account_email_progress_permission: "A mund t'ju dërgojmë email me përditësimet mbi progresin dhe projektet e fëmijës suaj dhe përditësime në lidhje me kursin e tyre dhe shkencat kompjuterike? [(Shih politikën tonë të privatësisë)] (%{privacy_policy_url})"
+    parent_account_email_label: "Email-i i prindit/kujdestarit"
     us_state: 'Shteti'
+    us_state_dropdown_options:
+      other: "Unë jetoj diku që nuk është listuar këtu"
   school_info:
     title: 'Informacione për shkollën (opsionale)'
     school_country: 'Qyteti i shkollës'
     select_school_type: 'Lloji i shkollës'
     charter: 'Karta'
-    private: 'Privat'
+    private: 'Private'
     public: 'Publike'
     homeschool: 'Shtëpi shkollë'
     after_school: 'Pas shkollës'
@@ -222,7 +257,19 @@ sq:
       Tutorialet janë zbavitës, tërheqës, dhe të mësojnë konceptet bazë të shkencave kompjuterike duke përdorur një përvojë loje të thjeshtë. Mëso të kodosh nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies! :-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: 'Informacioni i kyçjes për Code.org'
+    parent_email_added_subject: 'Mirë se vini në Code.org!'
+    parent_permission_confirmation_subject: "Faleminderit për miratimin e qasjes së fëmijës suaj në Code.org!"
+  teacher_mailer:
+    new_teacher_subject: 'Mirë se vini në Code.org!'
+    delete_teacher_subject: 'Njoftim nga Code.org: Llogaria juaj është fshirë'
+    verified_teacher_subject: 'Verifikimi i mësimdhënësit në Code.org - Sukses'
   section:
+    your_section:
+      one: 'Sesioni juaj:'
+      other: 'Sesionet tuaja:'
+    default_name: 'Sesion pa titull'
     type:
       word: 'Fjala e Fshehtë'
       email: 'Email'
@@ -262,9 +309,17 @@ sq:
     header:
       finished_hoc: "Unë e mbarova Orën e Kodimit"
       sign_in_to_save: 'Logohu për të ruajtur ecurinë tënde'
-      project_gallery: "Projekte"
+      course_catalog: "Katalogu i kursit"
+      project_gallery: "Projektet"
+      sections: "Seksionet"
+      help_support: "Ndihmë dhe mbështetje"
+      report_bug: "Raporto një problem"
+      teacher_community: "Forumi i mësimdhënësve"
       educate_hoc: "Ora e Kodimit"
+      learn: "Mëso"
       stats: "statistikat"
+      help_us: "Na Ndihmo"
+      about: "Rreth"
       legal_privacy: "Rregullat e Privatësisë"
       legal_tos: "Kushtet e shërbimit"
     user:
@@ -296,6 +351,7 @@ sq:
       playlab: 'Play Lab'
       starwars: 'Lufta e Yjeve'
       loading: 'Në ngarkim...'
+      view_all: 'Shiko të gjitha projektet...'
     popup:
       progress_for_user: "Progresi i %{name}"
       progress: 'Progresi yt'
@@ -410,11 +466,12 @@ sq:
   footer:
     thank_you: 'Falenderojmë <a href="https://code.org/about/donors"> sponsorat </a>,<a href="https://code.org/about/partners"> partnerët </a>, skuadrën tonë të gjerë të punës<a href="https://code.org/about/team"><a href="https://code.org/about/team"></a>, grupin e videos, dhe <a href="https://code.org/about/advisors"><a href="https://code.org/about/advisors"> këshilltarin tonë të arsimit</a> për mbështetjen e dhënë në krijimin e Studios së Kodit.'
     help_from_html: 'Inxhinerë nga Google, Microsoft, Facebook dhe Twitter ndihmuan në krijimin e këtij tutoriali.'
-    help_from_html_old: 'Inxhinierët e Google, Microsoft, Facebook dhe Twitter kanë ndihmuar në krijimin e këtyre materialeve.'
+    help_from_html_old: "Inxhinierët nga Google, Amazon dhe Microsoft ndihmuan në krijimin e këtyre materialeve.\n"
     art_from_html: 'Minecraft &#8482;&copy; %{current_year} Microsoft. Të gjitha të drejtat e rezervuara <br /> Star Wars &#8482;&copy; %{current_year} Disney dhe Lucasfilm. Të gjitha të drejtat e rezervuara <br /> Frozen &#8482;&copy; %{current_year} Disney. Të gjitha të drejtat e rezervuara <br /> Ice Age &#8482;&copy; %{current_year} 20th Century Fox..Të gjitha të drejtat e rezervuara <br /> Angry Birds &#8482;&copy; 2009 - %{current_year} Rovio Entertainment Ltd. Të gjitha të drejtat e rezervuara <br /> Plants vs Zombies &#8482;&copy; %{current_year} Electronic Arts Inc. Të gjitha të drejtat e rezervuara <br /> The World Amazing e Gumball is trademark and &copy; %{current_year} Cartoon Network.'
-    art_from_html_old: 'Minecraft &#8482;&copy; %{current_year} Microsoft. Të gjitha të drejtat e rezervuara <br /> Star Wars &#8482;&copy; %{current_year} Disney dhe Lucasfilm. Të gjitha të drejtat e rezervuara <br /> Frozen &#8482;&copy; %{current_year} Disney. Të gjitha të drejtat e rezervuara <br /> Ice Age &#8482;&copy; %{current_year} 20th Century Fox. .Të gjitha të drejtat e rezervuara <br /> Angry Birds &#8482;&copy; 2009 - %{current_year} Rovio Entertainment Ltd. Të gjitha të drejtat e rezervuara <br /> Plants vs Zombies &#8482;&copy; %{current_year} Electronic Arts Inc. Të gjitha të drejtat e rezervuara <br /> The World Amazing e Gumball is trademark and &copy;  %{current_year} Cartoon Network.'
+    art_from_html_old: 'Minecraft &#8482;&copy; %{current_year} Microsoft. Të gjitha të drejtat e rezervuara <br /> Star Wars &#8482;&copy; %{current_year} Disney dhe Lucasfilm. Të gjitha të drejtat e rezervuara <br /> Frozen &#8482;&copy; %{current_year} Disney. Të gjitha të drejtat e rezervuara <br /> Ice Age &#8482;&copy; %{current_year} 20th Century Fox. .Të gjitha të drejtat e rezervuara <br /> Angry Birds &#8482;&copy; 2009 - %{current_year} Rovio Entertainment Ltd. Të gjitha të drejtat e rezervuara <br /> Bimët vs Zombies &#8482;&copy; %{current_year} Electronic Arts Inc. All Rights Reserved. DreamWorks The Bad Guys &copy; %{current_year} DreamWorks Animation LLC.Të gjitha të drejtat e rezervuara'
     code_from_html: 'Code.org përdor p5.play, e cila është e licencuar sipas <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">  GNU LGPL 2.1</a> .'
     powered_by_aws: 'Mundësuar nga Amazon Web Services'
+    built_on_github: 'E ndërtuar në GitHub nga Microsoft'
     trademark: '&copy;Code.org%{current_year}Code.org&reg; logoja e Kodit dhe Ora e Kodit&reg;  janë marka tregtare të Code.org.'
     copyright: 'E drejta e autorit'
     more: 'Më shumë'
@@ -448,6 +505,9 @@ sq:
     upgrade:
       unsupported_message: "Shfletuesi juaj nuk suportohet. Ju lutem përmirësoni versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'> një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por mundet që të mos funksionojë."
       link: "Mëso më shumë"
+      applab_unsupported_tablet: "App Lab punon më së miri në një kompjuter desktop ose laptop me një mouse dhe tastierë. Mund të hasni probleme duke përdorur këtë mjet në pajisjen tuaj aktuale."
+      gamelab_unsupported_tablet: "Loja Lab punon më së miri në një kompjuter desktop ose laptop me një mouse dhe tastierë. Mund të hasni probleme duke përdorur këtë mjet në pajisjen tuaj aktuale."
+      weblab_unsupported_locale_storage: "Ju mund të hasni probleme duke përdorur Web Lab në modalitetin e Shfletimit Privat. Ju lutemi ringarkoni projektin tuaj në gjendje normal. Na vjen keq për shqetësimin."
   slow_loading: 'Kjo po zgjat më shumë seç duhet...'
   try_reloading: 'Provo të rifreskosh faqen'
   next_stage: 'Përfundoi! Vazhdo tek hapi tjetër'
@@ -540,6 +600,7 @@ sq:
     support: "Merr Ndihmë"
     support_url: "//support.code.org"
     help_resources: "Ndihmë dhe Burime"
+    help_support: "Ndihmë dhe mbështetje"
   free_response:
     placeholder: "Shkruani përgjigjen tuaj këtu"
   multi:
@@ -760,5 +821,6 @@ sq:
     accept: 'Pranoj'
   copy: 'Kopjo'
   confirm: 'Konfirmo'
+  code_org_logo_alt: "Code.org Faqja kryesore"
   pixelation:
     binary: "Binare"
