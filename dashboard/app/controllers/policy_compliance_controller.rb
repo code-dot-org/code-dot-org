@@ -19,17 +19,9 @@ class PolicyComplianceController < ApplicationController
     token = params.require(:token)
     permission_request = ParentalPermissionRequest.find_by(uuid: token)
     return render status: :bad_request if permission_request.nil?
-    #Get User
-    user = permission_request.user
-    #Update User
-    if user.child_account_compliance_state != Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
-      user.child_account_compliance_state = Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
-      user.child_account_compliance_state_last_updated = DateTime.now
-      user.save!
-      parent_email = permission_request.parent_email
-      ParentMailer.parent_permission_confirmation(parent_email).deliver_now
-    end
+    Services::ChildAccount.grant_permission_request!(permission_request)
     @permission_granted = true
+    user = permission_request.user
     @permission_granted_date = user.child_account_compliance_state_last_updated
   end
 

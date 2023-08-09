@@ -20,4 +20,19 @@ class Services::ChildAccount
     user.child_account_compliance_state = new_state
     user.child_account_compliance_state_last_updated = DateTime.now
   end
+
+  # Updates the User in the given PermissionRequest to indicate that their
+  # parent has granted permission for the account to exist.
+  # A confirmation email is sent to the parent after permission is granted.
+  # @param {ParentalPermissionRequest} permission_request
+  def self.grant_permission_request!(permission_request)
+    return unless permission_request
+    user = permission_request.user
+    if user.child_account_compliance_state != Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
+      update_compliance(user, Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED)
+      user.save!
+      parent_email = permission_request.parent_email
+      ParentMailer.parent_permission_confirmation(parent_email).deliver_now
+    end
+  end
 end
