@@ -41,6 +41,11 @@ if node.chef_environment == 'staging'
   dpkg_package("pdftk-java") {source pdftk_local_file}
 end
 
+# Used by pegasus tests
+if node.chef_environment == 'test'
+  apt_package 'pdftk'
+end
+
 # Used by lesson plan generator.
 apt_package 'enscript'
 
