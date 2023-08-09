@@ -3671,6 +3671,8 @@ uz:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: 'Chapter 2: Computers and Problem Solving'
+            lessonGroup-5:
+              display_name: Survey
         csd2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         csd4-2023:
@@ -3966,6 +3968,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-creativity2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         focus-on-creativity3-2023:
@@ -3986,6 +3990,8 @@ uz:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: 'Chapter 2: Computers and Problem Solving'
+            lessonGroup-5:
+              display_name: Survey
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4003,6 +4009,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4025,6 +4033,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-design-with-purpose2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         focus-on-design-with-purpose3-2023:
@@ -4043,6 +4053,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-coding2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         focus-on-coding3-2023:

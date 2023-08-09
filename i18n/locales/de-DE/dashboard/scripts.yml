@@ -4787,6 +4787,8 @@ de:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
             lessonGroup-3:
               display_name: 'Kapitel 2: Computer und Problemlösung'
+            lessonGroup-5:
+              display_name: Umfrage
         csd2-2023:
           title: Webentwicklung
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
@@ -5163,6 +5165,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         focus-on-creativity2-2023:
           title: Webentwicklung
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
@@ -5185,6 +5189,8 @@ de:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
             lessonGroup-3:
               display_name: 'Kapitel 2: Computer und Problemlösung'
+            lessonGroup-5:
+              display_name: Umfrage
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5202,6 +5208,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -5228,6 +5236,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         self-paced-pl-k5-getting-started: {}
         focus-on-design-with-purpose2-2023:
           title: Webentwicklung
@@ -5249,6 +5259,8 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
         focus-on-coding2-2023:
           title: Webentwicklung
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.

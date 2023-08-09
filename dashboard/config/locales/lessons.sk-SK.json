@@ -5384,6 +5384,7 @@
           "student_overview": "V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia má dve verzie."
         },
         "starwarsblocks/Hour of Code 2015": {
+          "name": "Star Wars: Budovanie galaxie pomocou kódu (Blockly)",
           "overview": "Na tejto lekcii získajú žiaci všetkých vekových kategórií úvodné skúsenosti s programovaním a informatikou v bezpečnom a podnetnom prostredí. Táto lekcia má dve verzie. Táto verzia využíva bloky na presúvanie a najlepšie sa hodí pre žiakov používajúcich mobilné zariadenia bez klávesnice, mladších žiakov a zahraničných žiakov. Odporúča sa pre vekovú kategóriu 6+.\n\nK dispozícii je aj verzia [JavaScript](s/starwars). Pre starších žiakov na počítačoch môže byť učenie sa jazyka JavaScript zábavné a predstavovať ďalšiu výzvu. Upozorňujeme, že syntax jazyka JavaScript nie je preložená a pre prvú Hodinu kódu poskytujú preložené bloky, ktoré nájdete tu, vhodnejší úvod. Táto verzia kurzu je skvelá aj vtedy, ak máte v triede žiakov, ktorí sa už naučili trochu programovať. Odporúča sa pre vekovú kategóriu 11+.",
           "preparation": "### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](http://hourofcode.com/resources/how-to/) a [Príklady osvedčených postupov úspešných pedagógov](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Star Wars: Budovanie Galaxie pomocou kódu](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) \n-   Skôr než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n### Jeden deň pred vašou Hodinou kódu\n\n-   Napíšte na tabuľu výrazy „kódovanie“, „programovanie“ a „ladenie“, prípadne ich môžete pridať aj na nástenku s informatickými pojmami, ak ste si ju už so žiakmi založili.\n-   Napíšte do stredu tabule slovo INFORMATIKA, prípadne ho napíšte na papier a zaveste do stredu nástenky. Toto slovo bude stredobodom [„myšlienkovej mapy“](https://en.wikipedia.org/wiki/Mind_map), ktorý budete so žiakmi budovať v častiach hodiny s označením „Začíname“ a „Hodnotenie“.\n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](http://code.org/certificates). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.",
           "purpose": "V tejto lekcii sa žiaci zoznámia so základnými konceptmi v informatike, kódovaním a programovaním, vrátane postupností a udalostí. V rámci verzie JavaScript tohto kurzu  si môžu žiaci vyskúšať aj písanie kódu.",
@@ -5461,6 +5462,9 @@
         },
         "allthethings/Text Compression": {
           "name": "Kompresia textu"
+        },
+        "allthethings/Pixelation": {
+          "name": "Pixelácia"
         },
         "allthethings/AppLab": {
           "name": "App Lab"
