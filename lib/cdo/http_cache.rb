@@ -58,6 +58,8 @@ class HttpCache
     'onetrust_cookie_scripts',
     # Feature flag for the Colorado Privacy Act (CPA)
     'cpa_experience',
+    # Feature flag for enabling AI rubric assessments
+    'ai_rubrics',
     # Page mode, for A/B experiments and feature-flag rollouts.
     'pm'
   ].freeze
