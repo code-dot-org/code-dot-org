@@ -11,12 +11,14 @@
     "level_data": {
       "text": "Second, please play three sounds at the same time.",
       "toolbox": {
-        "Play": [
-          "play_sound_at_current_location_simple2"
-        ],
-        "Control": [
-          "play_sounds_together"
-        ]
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        }
       },
       "sounds": {
         "beats": [

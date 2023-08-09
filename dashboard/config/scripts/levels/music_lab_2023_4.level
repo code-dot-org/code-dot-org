@@ -126,15 +126,17 @@
         }
       },
       "toolbox": {
-        "Play": [
-          "play_sound_at_current_location_simple2"
-        ],
-        "Control": [
-          "repeat_simple2"
-        ],
-        "Functions": [
-          "procedures_defnoreturn"
-        ]
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "repeat_simple2"
+          ],
+          "Functions": [
+            "procedures_defnoreturn"
+          ]
+        }
       },
       "validations": [
         {

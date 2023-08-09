@@ -42,6 +42,20 @@ And /^I create a new "([^"]*)" student section named "([^"]*)" assigned to "([^"
   GHERKIN
 end
 
+Given(/^I am a teacher with student sections named Section 1 and Section 2/) do
+  steps "Given I am a teacher"
+  browser_request(
+    url: '/api/test/create_student_section_with_name',
+    method: 'POST',
+    body: {section_name: 'Section 1'}
+  )
+  browser_request(
+    url: '/api/test/create_student_section_with_name',
+    method: 'POST',
+    body: {section_name: 'Section 2'}
+  )
+end
+
 Given(/^I create a new student section assigned to "([^"]*)"$/) do |script_name|
   browser_request(
     url: '/api/test/create_student_section_assigned_to_script',
@@ -114,6 +128,26 @@ end
 
 And(/^I attempt to join the section$/) do
   steps "Given I am on \"#{@section_url}\""
+end
+
+And /^I click the "([^"]*)" checkbox in the dialog$/ do |section_name|
+  @browser.execute_script("return $(\"span:contains(#{section_name})\").siblings()[0].click();")
+end
+
+And /^I see that "([^"]*)" is assigned to "([^"]*)" in the section table$/ do |section_name, course_name|
+  individual_steps <<~GHERKIN
+    And I wait until element "tr:contains(#{section_name}):contains(#{course_name})" is visible
+  GHERKIN
+end
+
+And /^I see that "([^"]*)" is not assigned to "([^"]*)" in the section table$/ do |section_name, course_name|
+  individual_steps <<~GHERKIN
+    And I wait until element "tr:contains(#{section_name}):contains(#{course_name})" is not visible
+  GHERKIN
+end
+
+And /^the "([^"]*)" checkbox is (not )?selected$/ do |section_name, negation|
+  wait_until {@browser.execute_script("return $(\"span:contains(#{section_name})\").siblings().is(':checked');") == negation.nil?}
 end
 
 And(/I type the section code into "([^"]*)"$/) do |selector|

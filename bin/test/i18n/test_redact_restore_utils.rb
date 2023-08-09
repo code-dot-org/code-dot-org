@@ -76,4 +76,11 @@ class RedactRestoreUtilsTest < Minitest::Test
 
     assert_equal expected_result, RedactRestoreUtils.redact_data(raw_redact_data, %w[resourceLink])
   end
+
+  def test_redaction_of_data_with_vocabulary_definition_plugin
+    raw_redact_data = {'valid' => '[v test/example/1]', 'invalid' => '[v test/example]'}
+    expected_result = {'valid' => '[test][0]', 'invalid' => '[v test/example]'}
+
+    assert_equal expected_result, RedactRestoreUtils.redact_data(raw_redact_data, %w[vocabularyDefinition])
+  end
 end

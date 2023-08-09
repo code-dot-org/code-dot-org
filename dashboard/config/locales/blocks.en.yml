@@ -1952,7 +1952,7 @@ en:
       Mikelab_groupWhileClicked:
         text: 'while clicking on {COSTUME}
 
-'
+          '
       Mikelab_groupWhileTouchingAny:
         text: |-
           while{COSTUME} is touching {COSTUME2}
@@ -2037,7 +2037,7 @@ en:
       Mikelab_repeatUntilComplete:
         text: 'repeat forever
 
-'
+          '
       Mikelab_sendBad:
         text: move object left
       Mikelab_sendGood:
@@ -2164,7 +2164,7 @@ en:
       Mikelab_whileClicked:
         text: 'while clicking on{SPRITE}
 
-'
+          '
       Mikelab_whileKeyPressed:
         text: while {KEY} stays pressed
         options:

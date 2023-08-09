@@ -1,6 +1,16 @@
 @import "color.scss";
 @import "./music-view.module.scss";
 
+@keyframes slidein {
+  from {
+    opacity: 0;
+    margin-top: 20px; }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
 .instructions {
   background-color: $neutral_dark;
   width: 100%;
@@ -84,8 +94,35 @@
     .text {
       overflow-y: auto;
       white-space: pre-wrap;
-      flex: 1;
-      color:  $neutral_light;
+      background-color: $neutral_light;
+      padding: 15px 20px 5px 20px;
+      border-radius: 10px;
+      color: $neutral_dark;
+      margin-bottom: 10px;
+      animation: slidein 0.5s;
+    }
+
+    .feedback {
+      .message {
+        background-color: $neutral_light;
+        padding: 15px 20px 5px 20px;
+        border-radius: 10px;
+        color: $neutral_dark;
+        border: dashed $neutral_dark 2px;
+        animation: slidein 0.5s;
+      }
+
+      .buttonNext {
+        font-size: 14px;
+        background-color: $brand_secondary_default;
+        border-color: $brand_secondary_default;
+        color: $neutral_light;
+        width: 100%;
+        padding: 5px 10px;
+        border-radius: 8px;
+        height: 38px;
+        margin: 0 0 10px 0;
+      }
     }
 
     .markdownText {
@@ -108,28 +145,9 @@
       code {
         color: $neutral_light;
       }
-    }
 
-    .feedback {
-      .message {
-        margin-top: 10px;
-        color: #ffa400;
-
-        p {
-          margin-bottom: 0;
-        }
-      }
-
-      .buttonNext {
+      p {
         font-size: 14px;
-        background-color: $brand_secondary_default;
-        border-color: $brand_secondary_default;
-        color: white;
-        width: 100%;
-        padding: 5px 10px;
-        border-radius: 8px;
-        height: 38px;
-        margin: 10px 0 0 0;
       }
     }
   }

@@ -28,11 +28,6 @@
     }
   }
 
-  .text-wrapper p {
-    font-size: 20px;
-    margin-bottom: 30px;
-  }
-
   @media screen and(max-width: 1499px) {
     background-position: calc(20vw - 350px) center, right bottom
   }
@@ -142,8 +137,19 @@
 }
 
 .action-block {
-  &--explore .overline {
-    text-transform: uppercase;
+  &--explore {
+    .overline {
+      text-transform: uppercase;
+    }
+
+    .action-block__space {
+      height: 32px;
+      display: block;
+      @media screen and (max-width: $width-sm) {
+        display: none;
+      }
+    }
+
   }
 }
 
@@ -152,7 +158,7 @@
 }
 
 .newsletter-signup {
-  padding-bottom: 0;
+  padding-top: 40px;
 
   .wrapper {
     padding-bottom: 0;
@@ -165,7 +171,7 @@
   padding-bottom: calc(64px - 50px);
   @media screen and (max-width: $width-sm) {
     &__iframe {
-      height: 550px;
+      height: 700px;
     }
   }
 
@@ -175,3 +181,43 @@
   padding-bottom: calc(64px - 10px);
 }
 
+.img {
+  &--max {
+    max-width: 100%;
+  }
+}
+
+.video-101 {
+  padding-bottom: 8px;
+
+  &__text {
+    margin-bottom: 32px;
+  }
+
+  & a.link-button {
+    background: $neutral_white !important;
+    color: $neutral_dark !important;
+    border: 2px solid $neutral_dark;
+
+    &:hover {
+      color: white !important;
+      background-color: $brand_secondary_dark !important;
+      border-color: $brand_secondary_dark !important;
+    }
+  }
+
+  .action-block {
+    margin-bottom: 32px;
+    background: $neutral_white;
+  }
+  &__image {
+
+    @media (min-width: 971px) {
+      margin: 20px 0 20px 20px;
+      width: calc(50% - 20px);
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

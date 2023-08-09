@@ -30,10 +30,8 @@ export const Themes = {
 export const Renderers = {
   GERAS: 'cdo_renderer_geras',
   THRASOS: 'cdo_renderer_thrasos',
-  THRASOS_IRS: 'cdo_renderer_thrasos_irs',
   ZELOS: 'cdo_renderer_zelos',
-  // The default renderer includes inline row separators.
-  DEFAULT: 'cdo_renderer_thrasos_irs',
+  DEFAULT: 'cdo_renderer_thrasos',
 };
 
 // Used for custom field type ClampedNumber(,)
@@ -71,3 +69,8 @@ export function stringIsXml(str) {
     }
   }
 }
+
+// A list of block types that are procedure definitions. These are sorted
+// first when loading blocks so that we can set up the procedure map
+// correctly while using the shareable procedure blocks plugin.
+export const PROCEDURE_DEFINITION_TYPES = ['procedures_defnoreturn'];

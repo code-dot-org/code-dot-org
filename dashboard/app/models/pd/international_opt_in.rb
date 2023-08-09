@@ -81,7 +81,7 @@ class Pd::InternationalOptIn < ApplicationRecord
 
   def self.options
     entry_keys = {
-      schoolCountry: %w(australia barbados belize brazil canada chile colombia dominican_republic india indonesia israel jamaica kenya malaysia maldives mexico mongolia new_zealand paraguay portugal slovakia south_korea spain thailand trinidad_and_tobago uzbekistan vietnam),
+      schoolCountry: %w(australia barbados belize brazil canada chile colombia dominican_republic india indonesia israel jamaica kenya kosovo malaysia maldives mexico mongolia new_zealand paraguay portugal slovakia south_korea spain thailand trinidad_and_tobago uzbekistan vietnam),
       workshopCourse: %w(csf_af csf_express csd csp csa other not_applicable),
       emailOptIn: %w(opt_in_yes opt_in_no),
       legalOptIn: %w(opt_in_yes opt_in_no)

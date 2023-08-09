@@ -103,11 +103,6 @@ Lint/MixedRegexpCaptureTypes:
 Lint/NoReturnInBeginEndBlocks:
   Enabled: false
 
-# Offense count: 2
-# This cop supports unsafe auto-correction (--auto-correct-all).
-Lint/OrAssignmentToConstant:
-  Enabled: false
-
 # Offense count: 10
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: AllowedImplicitNamespaces.
@@ -156,13 +151,6 @@ Performance/Detect:
 # Offense count: 7
 # This cop supports safe auto-correction (--auto-correct).
 Rails/ApplicationMailer:
-  Enabled: false
-
-# Offense count: 21
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: Include.
-# Include: **/test/**/*
-Rails/AssertNot:
   Enabled: false
 
 # Offense count: 472
@@ -232,13 +220,6 @@ Security/MarshalLoad:
 # Configuration parameters: EnforcedStyle, AllowModifiersOnSymbols.
 # SupportedStyles: inline, group
 Style/AccessModifierDeclarations:
-  Enabled: false
-
-# Offense count: 27
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: IgnoredMethods.
-# IgnoredMethods: ==, equal?, eql?
-Style/ClassEqualityComparison:
   Enabled: false
 
 # Offense count: 151
@@ -413,11 +394,6 @@ Style/OptionalBooleanParameter:
 # Offense count: 14
 # This cop supports safe auto-correction (--auto-correct).
 Style/RedundantAssignment:
-  Enabled: false
-
-# Offense count: 6
-# This cop supports safe auto-correction (--auto-correct).
-Style/RedundantBegin:
   Enabled: false
 
 # Offense count: 29

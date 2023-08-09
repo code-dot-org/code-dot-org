@@ -13,8 +13,8 @@
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
   "description": null,
-  "self_paced_professional_learning": null,
-  "professional_learning_program": null,
+  "professional_learning_program": "code.org/apply",
   "video": null,
-  "published_date": null
+  "published_date": "2023-07-10 04:00:00 UTC",
+  "self_paced_pl_course_offering_id": null
 }

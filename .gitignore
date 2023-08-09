@@ -39,6 +39,7 @@ npm-debug.log
 /apps/src/applab/sharedApplabGoalBlocks.js
 /apps/src/p5lab/gamelab/sharedGamelabBlocks.js
 /apps/src/styleConstants.js
+/apps/storybook-deploy
 /apps/test/entry-tests.js
 /apps/test/interpreter/test-results-new*.json
 /apps/yarn-error.log

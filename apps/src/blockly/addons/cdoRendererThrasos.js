@@ -3,7 +3,7 @@ import CdoPathObject from './cdoPathObjectThrasos';
 import CdoConstantsProvider from './cdoConstantsProvider';
 import {addInlineRowSeparators} from '@blockly/renderer-inline-row-separators';
 
-export class CdoRendererThrasos extends GoogleBlockly.thrasos.Renderer {
+export class CdoRendererThrasosBase extends GoogleBlockly.thrasos.Renderer {
   /**
    * @override
    * Use our PathObject class instead of the default. Our PathObject has
@@ -23,8 +23,7 @@ export class CdoRendererThrasos extends GoogleBlockly.thrasos.Renderer {
   };
 }
 
-// Create a separate version of the renderer that includes inline row separators.
-export const CdoRendererThrasosIRS = addInlineRowSeparators(
-  CdoRendererThrasos,
+export const CdoRendererThrasos = addInlineRowSeparators(
+  CdoRendererThrasosBase,
   GoogleBlockly.thrasos.RenderInfo
 );
