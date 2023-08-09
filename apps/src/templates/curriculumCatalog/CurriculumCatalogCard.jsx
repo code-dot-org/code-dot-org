@@ -288,6 +288,10 @@ const CustomizableCurriculumCatalogCard = ({
           video={video}
           publishedDate={publishedDate}
           selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
+          pathToCourse={pathToCourse}
+          assignButtonOnClick={handleClickAssign}
+          assignButtonDescription={assignButtonDescription}
+          onClose={handleQuickView}
         />
       )}
     </div>
