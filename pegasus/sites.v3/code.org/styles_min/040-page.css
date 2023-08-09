@@ -185,7 +185,7 @@ td {
 }
 
 a.about_list_item {
-  color: #7F8286;
+  color: var(--neutral_dark60);
   font-family: 'Gotham 5r', sans-serif;
   text-decoration: none;
 }
