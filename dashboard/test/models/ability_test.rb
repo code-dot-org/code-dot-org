@@ -947,7 +947,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'teacher with pilot experiment can view rubrics' do
     rubric = create :rubric, lesson: @public_teacher_to_student_lesson, level: @public_teacher_to_student_script_level.levels[0]
     teacher = create :teacher
-    create :single_user_experiment, min_user_id: teacher.id, max_user_id: teacher.id, name: 'ai-ta-rubrics'
+    create :single_user_experiment, min_user_id: teacher.id, max_user_id: teacher.id, name: 'ai-rubrics'
     assert Ability.new(teacher).can? :read, rubric
     refute Ability.new(teacher).can? :edit, rubric
   end
@@ -956,7 +956,7 @@ class AbilityTest < ActiveSupport::TestCase
     rubric = create :rubric, lesson: @public_teacher_to_student_lesson, level: @public_teacher_to_student_script_level.levels[0]
     teacher = create :teacher
 
-    refute teacher.has_pilot_experiment?('ai-ta-rubrics')
+    refute teacher.has_pilot_experiment?('ai-rubrics')
     refute Ability.new(teacher).can? :read, rubric
     refute Ability.new(teacher).can? :edit, rubric
   end
@@ -964,13 +964,13 @@ class AbilityTest < ActiveSupport::TestCase
   test 'any levelbuilder can manage rubrics' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     levelbuilder = create :levelbuilder
-    refute levelbuilder.has_pilot_experiment?('ai-ta-rubrics')
+    refute levelbuilder.has_pilot_experiment?('ai-rubrics')
     assert Ability.new(levelbuilder).can? :manage, Rubric
   end
 
   test 'students in the section of a teacher with pilot experiment can view rubrics' do
     teacher = create :teacher
-    create :single_user_experiment, min_user_id: teacher.id, max_user_id: teacher.id, name: 'ai-ta-rubrics'
+    create :single_user_experiment, min_user_id: teacher.id, max_user_id: teacher.id, name: 'ai-rubrics'
     student = create :student
     unit_group = create :unit_group, name: 'csd-2022'
     section = create :section, user: teacher, unit_group: unit_group

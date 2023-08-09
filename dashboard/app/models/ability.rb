@@ -192,7 +192,7 @@ class Ability
 
       can :read, Rubric do |rubric|
         if user.teacher?
-          user.has_pilot_experiment?('ai-ta-rubrics') && can?(:read, rubric.lesson)
+          user.has_pilot_experiment?('ai-rubrics') && can?(:read, rubric.lesson)
         else
           user.sections_as_student.reject(&:hidden).any? {|s| s.unit_group.name == 'csd-2022' && Ability.new(s.teacher).can?(:read, rubric)}
         end
