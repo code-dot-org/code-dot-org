@@ -113,9 +113,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
   render_() {
     if (this.flyout_.isVisible()) {
       this.flyout_.reflowInternal_();
-      console.log(`calling show in render_`);
       this.flyout_.show(CdoFieldFlyout.getFlyoutId(this.sourceBlock_));
-      console.log(`done calling show in render_`);
     }
     const fieldGroupBBox = this.fieldGroup_.getBBox();
     const height = fieldGroupBBox.height;

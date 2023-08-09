@@ -70,6 +70,7 @@ export const blocks = {
     // Insert the toggle field at the beginning for the first input row.
     const firstInput = this.inputList[0];
     firstInput.insertFieldAt(0, flyoutToggleButton, `button_${this.type}`);
+    firstInput.setAlign(Blockly.Input.Align.LEFT);
 
     // These blocks require a renderer that treats dummy inputs like row separators:
     // https://github.com/google/blockly-samples/tree/master/plugins/renderer-inline-row-separators
@@ -174,9 +175,6 @@ export const blocks = {
 // On change event for a block that shadows an image source block.
 // On an event, checks if the block image should change, and update it.
 function onBlockImageSourceChange(event, block) {
-  console.log(
-    `event ${event.type} fired for block ${block.id} on workspace ${event.workspaceId}`
-  );
   const imagePreview =
     block.inputList && block.inputList[0] && block.inputList[0].fieldRow[1];
   if (!imagePreview) {
