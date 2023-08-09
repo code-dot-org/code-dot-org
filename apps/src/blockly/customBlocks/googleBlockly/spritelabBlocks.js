@@ -156,7 +156,14 @@ export const blocks = {
           );
           const imageSourceBlockWorkspace = imageSourceBlock.workspace;
           imageSourceBlockWorkspace.addChangeListener(event => {
+            const flyout = imageSourceBlock.inputList[3].fieldRow[0].flyout_;
+            console.log({flyout});
             onBlockImageSourceChange(event, this);
+            Blockly.Events.disable();
+            console.log('calling show...');
+            flyout.show(CdoFieldFlyout.getFlyoutId(imageSourceBlock));
+            console.log('done calling show...');
+            Blockly.Events.enable();
           });
         }
       };
@@ -174,7 +181,11 @@ export const blocks = {
 // On change event for a block that shadows an image source block.
 // On an event, checks if the block image should change, and update it.
 function onBlockImageSourceChange(event, block) {
-  const imagePreview = block.inputList && block.inputList[0].fieldRow[1];
+  console.log(
+    `event ${event.type} fired for block ${block.id} on workspace ${event.workspaceId}`
+  );
+  const imagePreview =
+    block.inputList && block.inputList[0] && block.inputList[0].fieldRow[1];
   if (!imagePreview) {
     return;
   }
