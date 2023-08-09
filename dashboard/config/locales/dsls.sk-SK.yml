@@ -4715,6 +4715,30 @@ sk-SK:
           spoločne\n Po určitom čase hrania sa porozprávaj s niekým, či už partnerom,
           malou skupinou alebo celou triedou, o tom, čo ste zistili. Overte si, že
           viete, čo sa deje, a poznáte rôzne spôsoby, ako môžete tento nástroj použiť.\n"
+      OPD-K5 CS Courses:
+        markdown: "# Plánovanie > Začíname s Code.org\n\n\n## 1. krok: Vyberte si
+          kurz\nVšetky naše kurzy - od predškolských až po stredoškolské - sú uvedené
+          v našom **[katalógu kurzov](https://studio.code.org/courses)**. Ak chcete
+          nájsť lekcie Základy informatiky, ktoré ste precvičovali, prejdite na našu
+          **[stránku pre základné školy](https://code.org/educate/curriculum/elementary-school)**
+          a posuňte sa nadol do časti „Kurzy“. Všetky naše kurzy sú k dispozícii zadarmo.
+          Porozprávajte sa s kolegami vo vašej škole a zistite, ako sa dá učivo kurzu
+          integrovať do rôznych predmetov.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          2. krok: Nastavte si sekciu triedy\nNastavte si sekciu triedy, v ktorej
+          si môžete prezerať pokrok svojich žiakov, tlačiť prihlasovacie karty pre
+          svojich žiakov, spravovať ich účty a tlačiť certifikáty, ktoré si môžu zobrať
+          domov po ukončení kurzu. Kliknite na tento odkaz a **[pozrite si krátke
+          video](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**,
+          ktoré ukazuje, ako nastaviť svoju prvú triedu informatiky na Code.org. Postup
+          nájdete aj v **[tomto článku podpory](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          3. krok: Priraďte kurz k sekcii\nKliknite na kurz, ktorý vyučujete – mala
+          by sa vám zobraziť obrazovka, ktorá vyzerá ako tá nižšie. Potom môžete kliknúť
+          na „Priradiť kurz“ a priradiť tento kurz k jednej zo svojich sekcií. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          4. krok: Začnite učiť! \nStačí jedna vyučovacia hodina, aby ste do svojej
+          triedy zaviedli koncepty informatiky. Keď zbadáte nadšenie svojich žiakov
+          pre informatiku, pokračujte ďalej pomocou denných učebných plánov, ktoré
+          usmernia vašich žiakov, aktivít, ktoré môžete robiť bez počítača, a diskusných
+          fór, na ktorých sa môžete spojiť s ostatnými učiteľmi.\n\n"
       OPD-K5 Reviewing Reflections:
         content1: Sem pridať popis
       OPD-K5 Stage3aGo:
@@ -9875,7 +9899,7 @@ sk-SK:
           text: Nie
         - correct: true
         questions:
-        - {}
+        - text: Vývoj webových stránok
       csd-post-survey-2019-I like cs:
         answers:
         - correct: true

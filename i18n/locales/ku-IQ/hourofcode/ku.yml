@@ -213,6 +213,7 @@ ku:
   call_to_action_donate_online: Donate online
   call_to_action_get_updates: Get updates
   call_to_action_special_announcement: See special announcement
+  call_to_action_learning_opportunity: New Professional Learning Opportunity
   call_to_action_start_pl: Start professional learning
   call_to_action_contact_regional_partner: Contact your Regional Partner
   call_to_action_join_csta: Join CSTA
@@ -589,12 +590,13 @@ ku:
   teachai_launch_blog_desc_02: TeachAI aims to integrate AI education into primary
     and secondary curricula around the world through new reports, policy recommendations,
     and public engagement opportunities.
-  ai_pl_callout_title: Join us for AI EmpowerED!
-  ai_pl_callout_desc_01: Discover the transformative potential of artificial intelligence
-    (AI) in education with our free online learning series for educators.
-  ai_pl_callout_desc_02: Sign up for "Fireside Chat with Sal Khan and Hadi Partovi"
-    where the founders of Khan Academy and Code.org discover how generative AI can
-    become your most reliable teaching assistant.
+  ai_pl_callout_title: AI 101 for Teachers
+  ai_pl_callout_desc_01: Discover the groundbreaking world of artificial intelligence
+    (AI) and its transformative potential in education with our comprehensive online
+    learning series for teachers.
+  ai_pl_callout_desc_02: Code.org, ETS, ISTE and Khan Academy are partnering to bring
+    educators a professional learning series that supports teachers as they adapt
+    to AI’s impacts on the classroom.
   ai_hero_heading: Artificial intelligence isn't magic… It's just code!
   ai_hero_desc: Demystify artificial intelligence (AI) by learning how it's changing
     the ways we live, work, and learn.
@@ -1891,6 +1893,7 @@ ku:
   signup_submit_census_error_message: We're sorry. An error occurred. Please try submitting
     the form again.
   signup_submit_label: Sign up
+  signup_submit_explore: Explore sessions
   signup_submit_error_message: An error occurred. Please check to make sure all required
     fields have been filled out properly.
   signup_submit_and_continue_label: Submit and Continue

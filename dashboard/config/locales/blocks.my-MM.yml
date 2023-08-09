@@ -5,19 +5,11 @@ my:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': အလယ်အလတ်
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': အလယ်အလတ်
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -137,21 +129,13 @@ my:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '0.25': very slow
-            '0.5': slow
             '1': ပုံမှန်
-            '2': fast
-            '4': very fast
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
             sprites: အားလုံး
           SPEED:
-            '0.25': very slow
-            '0.5': slow
             '1': ပုံမှန်
-            '2': fast
-            '4': very fast
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -392,16 +376,10 @@ my:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': အားလုံး
       aalab_someStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': အားလုံး
       binary_move:
         options:
@@ -499,8 +477,6 @@ my:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '100': large
-            '30': small
             '50': အလယ်အလတ်
       gamelab_mirrorSprite:
         options:
@@ -535,9 +511,6 @@ my:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '100': large
-            '25': extra small
-            '50': small
             '75': အလယ်အလတ်
       gamelab_setProp:
         options:
@@ -551,9 +524,6 @@ my:
           PROPERTY:
             '"scale"': အရွယ်အစား
           SIZE:
-            '100': large
-            '25': extra small
-            '50': small
             '75': အလယ်အလတ်
       gamelab_setSizes:
         options:
@@ -562,11 +532,7 @@ my:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
-            '3': slow
             '5': ပုံမှန်
-            '7': fast
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

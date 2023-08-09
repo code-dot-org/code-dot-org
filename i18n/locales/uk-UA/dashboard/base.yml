@@ -415,7 +415,7 @@ uk:
       starwarsblocks_hour: 'Зоряні війни (блоки)'
       thebadguys: 'Погані хлопці'
       loading: 'Завантаження...'
-      weblab: 'Веб-лабораторія'
+      weblab: 'Веб Лабораторія'
       view_all: 'Переглянути всі проекти...'
     popup:
       progress_for_user: "Прогрес %{name}"
@@ -912,7 +912,7 @@ uk:
     instructor_feedback: 'Коментар вчителя'
     peer_feedback: 'Коментар інших учнів'
     outdated: 'Цей коментар стосується попередньої версії роботи'
-    peer_review: 'Рецензування'
+    peer_review: 'Взаємо-оцінювання'
   external_links:
     disclaimer: Відмова від відповідальності
     leaving_domain: Ви покидаєте цей домен на сайт, який не керується Code.org.

@@ -91,7 +91,7 @@ km:
         CSF_SpriteLab_SpritesInAction_v2: កំណត់សកម្មភាពឱ្យ Sprites
         CSF_Spritelab_MakeSprite_v2: របៀបបង្កើត SPRITE
         CSF_a_b_artist_loops: សិល្បះដោយប្រើប្រតិបត្តិដដែលៗ (loops)
-        CSF_bb8_loops_C-F: ការធ្វើដដែលៗជាមួយ​ BB-8
+        CSF_bb8_loops_C-F: ប្រតិបត្តិដដែលៗជាមួយ​ BB-8
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_collector_k1_blocks: 'មូលដ្ធានគ្រឹះ វិទ្យាសាស្រ្តកុំព្យូទ័រ : អ្នកប្រមូលកំណប់'
@@ -100,6 +100,8 @@ km:
         CSF_debugging_k1_blocks: ការបំបាត់កំហុស (Debugging)
         CSF_debugging_text_blocks: ការបំបាត់កំហុស (Debugging)
         CSF_harvester_skinOverview_K-1: អ្នកប្រមូលផល
+        CSF_if_allskins: ការណែនាំពី ប្លុក ប្រសិនបើ (if)
+        CSF_ifelse_allskins: របៀបប្រើប្រាស់ប្លុក If/Else
         CSF_loops_AB: ប្រតិបត្តិដដែលៗ
         CSF_maze_intro_k1_blocks: ការណែនាំអំពីកូដស្ទូឌីយោ (Code studio)
         CSF_maze_intro_text_blocks: ការណែនាំអំពីកូដស្ទូឌីយោ (Code studio)
@@ -119,10 +121,15 @@ km:
         csf21pilot_events: កំណត់សកម្មភាពឱ្យ Sprites
         csp_applab_loops: ប្រតិបត្តិដដែលៗ
         function: អនុគមន៍
-        hoc_dance_events: ព្រឹត្ដិការណ៍ - Dance Party
-        hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - ជប់លៀងរាំ
-        hoc_dance_properties: លក្ខណៈសម្បត្តិ - Dance Party
-        hoc_dance_properties_2019: លក្ខណៈសម្បត្តិ - Dance Party
+        hoc_dance_congrats: កម្មវិធីរាំ - កម្មវិធីរីករាយ
+        hoc_dance_congrats_2019: កម្មវិធីរាំ - កម្មវិធីរីករាយ
+        hoc_dance_events: ព្រឹត្ដិការណ៍ - ពិធីជប់លៀងរាំកំសាន្ត
+        hoc_dance_events_2019: ព្រឹត្ដិការណ៍ - ពិធីជប់លៀងរាំកំសាន្ត
+        hoc_dance_measures_2019: ចង្វាក់ភ្លេង-ពិធីជួបលៀងរាំកំសាន្ត
+        hoc_dance_properties: ជប់លៀងរាំ - លក្ខណៈសម្បត្តិ
+        hoc_dance_properties_2019: លក្ខណៈ​ (properties) - ពិធីជួបលៀងរាំកំសាន្ត
+        hoc_dance_warmup: កម្មវិធីរាំ - ការចាប់ផ្ដើម
+        hoc_dance_warmup_2019: កម្មវិធីរាំ - ការចាប់ផ្ដើម
         loop_until: ធ្វើឡើងវិញរហូតដល់ប្លុក
         mc_2016_congrats: Minecraft Hour of Code - អបអរសាទរ
         mc_2017_agent_intro: Minecraft Hour of Code - The Agent

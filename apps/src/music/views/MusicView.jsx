@@ -36,11 +36,7 @@ import {
   setUndoStatus,
 } from '../redux/musicRedux';
 import KeyHandler from './KeyHandler';
-import {
-  sendSuccessReport,
-  navigateToLevelId,
-  navigateToNextLevel,
-} from '@cdo/apps/code-studio/progressRedux';
+import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
 import {
   levelsForLessonId,
   ProgressLevelType,
@@ -50,17 +46,11 @@ import {
 import {
   isReadOnlyWorkspace,
   setIsLoading,
-  setLabReadyForReload,
   setPageError,
 } from '@cdo/apps/lab2/lab2Redux';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
 import {baseAssetUrl, BlockMode} from '../constants';
-import {
-  setProjectUpdatedAt,
-  setProjectUpdatedError,
-  setProjectUpdatedSaving,
-} from '../../code-studio/projectRedux';
 import musicI18n from '../locale';
 import UpdateTimer from './UpdateTimer';
 import ValidatorProvider from '@cdo/apps/lab2/progress/ValidatorProvider';
@@ -105,24 +95,16 @@ class UnconnectedMusicView extends React.Component {
     instructionsPosition: PropTypes.string,
     setShowInstructions: PropTypes.func,
     setInstructionsPosition: PropTypes.func,
-    navigateToLevelId: PropTypes.func,
     clearPlaybackEvents: PropTypes.func,
     clearOrderedFunctions: PropTypes.func,
     addPlaybackEvents: PropTypes.func,
     addOrderedFunctions: PropTypes.func,
     currentlyPlayingBlockIds: PropTypes.array,
     hideHeaders: PropTypes.bool,
-    sendSuccessReport: PropTypes.func,
-    currentScriptId: PropTypes.number,
-    setProjectUpdatedSaving: PropTypes.func,
-    setProjectUpdatedAt: PropTypes.func,
-    setProjectUpdatedError: PropTypes.func,
     setIsLoading: PropTypes.func,
     setPageError: PropTypes.func,
     initialSources: PropTypes.object,
     levelData: PropTypes.object,
-    labReadyForReload: PropTypes.bool,
-    setLabReadyForReload: PropTypes.func,
     startingPlayheadPosition: PropTypes.number,
     navigateToNextLevel: PropTypes.func,
     isReadOnlyWorkspace: PropTypes.bool,
@@ -749,11 +731,9 @@ const MusicView = connect(
     showInstructions: state.music.showInstructions,
     instructionsPosition: state.music.instructionsPosition,
     hideHeaders: state.music.hideHeaders,
-    currentScriptId: state.progress.scriptId,
     currentlyPlayingBlockIds: getCurrentlyPlayingBlockIds(state),
     initialSources: state.lab.initialSources,
     levelData: state.lab.levelProperties?.levelData,
-    labReadyForReload: state.lab.labReadyForReload,
     isReadOnlyWorkspace: isReadOnlyWorkspace(state),
     appName: state.lab.levelProperties?.appName,
     startingPlayheadPosition: state.music.startingPlayheadPosition,
@@ -768,21 +748,14 @@ const MusicView = connect(
       dispatch(setShowInstructions(showInstructions)),
     setInstructionsPosition: instructionsPosition =>
       dispatch(setInstructionsPosition(instructionsPosition)),
-    navigateToLevelId: levelId => dispatch(navigateToLevelId(levelId)),
     clearPlaybackEvents: () => dispatch(clearPlaybackEvents()),
     clearOrderedFunctions: () => dispatch(clearOrderedFunctions()),
     addPlaybackEvents: playbackEvents =>
       dispatch(addPlaybackEvents(playbackEvents)),
     addOrderedFunctions: orderedFunctions =>
       dispatch(addOrderedFunctions(orderedFunctions)),
-    sendSuccessReport: appType => dispatch(sendSuccessReport(appType)),
-    setProjectUpdatedSaving: () => dispatch(setProjectUpdatedSaving()),
-    setProjectUpdatedAt: updatedAt => dispatch(setProjectUpdatedAt(updatedAt)),
-    setProjectUpdatedError: () => dispatch(setProjectUpdatedError()),
     setIsLoading: isLoading => dispatch(setIsLoading(isLoading)),
     setPageError: pageError => dispatch(setPageError(pageError)),
-    setLabReadyForReload: labReadyForReload =>
-      dispatch(setLabReadyForReload(labReadyForReload)),
     navigateToNextLevel: () => dispatch(navigateToNextLevel()),
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
