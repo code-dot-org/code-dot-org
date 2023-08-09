@@ -17,7 +17,6 @@ id:
             '0.75': kecil
             '1.00': sedang
             '2.00': besar
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -25,7 +24,6 @@ id:
             '0.75': kecil
             '1.00': sedang
             '2.00': besar
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: |-
           {GROUP} berganti setiap {N}
@@ -1011,8 +1009,6 @@ id:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: lakukan efek {EFFECT}
         options:
@@ -1029,8 +1025,6 @@ id:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Berkomunikasi {VAR1} dengan {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -2042,14 +2036,10 @@ id:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
         options:
@@ -2271,7 +2261,6 @@ id:
         text: saat baris {N} memperlihatkan
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2331,9 +2320,6 @@ id:
         options:
           PORTION:
             '1': semua
-            '0.75': most
-            '0.5': half of
-            '0.25': few
           RATE:
             '"slowly"': pelan-pelan
           BEHAVIOR:
@@ -2342,9 +2328,6 @@ id:
         options:
           PORTION:
             '1': semua
-            '0.75': most
-            '0.5': half of
-            '0.25': few
           BEHAVIOR:
             '"avoiding"': jaga jarak
       aalab_spriteSayChoices:
@@ -2483,7 +2466,6 @@ id:
         text: "{VALUE}"
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

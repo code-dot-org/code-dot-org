@@ -85,6 +85,15 @@
         "gamelab": {
           "categories": {
             "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "ផ្កាយ"
+                    }
+                  }
+                }
+              },
               "name": "គំនូរ"
             },
             "functions": {
@@ -92,6 +101,13 @@
             },
             "game_lab": {
               "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "ខ្មៅ និងស"
+                    }
+                  }
+                },
                 "playSound": {
                   "short_description": "ចាក់ឯកសារសំឡេង MP3 ពី URL ដែលបានបញ្ជាក់។"
                 }
@@ -143,6 +159,15 @@
               "name": "គណិត​វិទ្យា"
             },
             "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "រាងគូទខ្យង"
+                    }
+                  }
+                }
+              },
               "name": "Sprites"
             },
             "variables": {

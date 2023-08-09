@@ -4122,6 +4122,8 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+            lessonGroup-5:
+              display_name: Questionário
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4426,6 +4428,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4444,6 +4448,8 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+            lessonGroup-5:
+              display_name: Questionário
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4461,6 +4467,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4487,6 +4495,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4503,6 +4513,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:

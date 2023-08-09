@@ -1871,6 +1871,8 @@ id:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
             lessonGroup-3:
               display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            lessonGroup-5:
+              display_name: Survei
         csd1-dlp:
           description: 'Ini adalah Unit 1 dari Deeper Learning Plan bagi fasilitator
             pelatihan  CS Discoveries Code.org. Di sini Anda akan mendapati prompt
@@ -5230,6 +5232,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-coding2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
             membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten
@@ -5265,6 +5269,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-creativity2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
             membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten
@@ -5300,6 +5306,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-data2:
           description_short: Pelajari cara orang menggunakan komputer untuk memecahkan
             masalah data.
@@ -5344,6 +5352,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-design-with-purpose2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
             membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten
@@ -5382,6 +5392,8 @@ id:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
             lessonGroup-3:
               display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            lessonGroup-5:
+              display_name: Survei
         focus-on-hardware2-2023:
           description_short: Pelajari cara orang menggunakan komputer untuk memecahkan
             masalah data.

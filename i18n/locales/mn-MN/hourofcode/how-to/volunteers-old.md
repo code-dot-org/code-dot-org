@@ -1,5 +1,5 @@
 ---
-title: How-to guide for Hour of Code volunteers
+title: Код цагийн сайн дурын ажилтнуудыг хэрхэн удирдан чиглүүлэх вэ
 ---
 
 {{ signup_button }}

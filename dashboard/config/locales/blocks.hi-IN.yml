@@ -16,7 +16,6 @@ hi:
             '0.75': छोटा
             '1.00': मध्यम
             '2.00': बड़ा
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -24,7 +23,6 @@ hi:
             '0.75': छोटा
             '1.00': मध्यम
             '2.00': बड़ा
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -472,28 +470,8 @@ hi:
             '19': '19'
             '2': '2'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
             '3': '3'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
             '4': '4'
-            '40': '40'
             '5': '5'
             '6': '6'
             '7': '7'
@@ -591,7 +569,6 @@ hi:
           SPEED:
             '0.25': अत्‍यधिक धीमा
             '0.5': धीमा
-            '1': normal
             '2': तेज़
             '4': अत्यधिक तेज़
         text: "{SPRITE} की डांस स्पीड {SPEED} पर सेट करें"
@@ -614,7 +591,6 @@ hi:
           SPEED:
             '0.25': अत्‍यधिक धीमा
             '0.5': धीमा
-            '1': normal
             '2': तेज़
             '4': अत्यधिक तेज़
         text: "{GROUP} की डांस स्पीड {SPEED} पर सेट करें"
@@ -997,8 +973,6 @@ hi:
         options:
           INPUT1:
             '1': नींबू का रस
-            '3': baking soda
-            '5': both
         text: माइक्रोस्कोप में {INPUT1}है
       DansBlocks_setForegroundEffect2:
         options:
@@ -1016,8 +990,6 @@ hi:
         options:
           INPUT1:
             '1': नींबू का रस
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: "{VAR1} को {SPRITE1COSTUME}के साथ संवाद करें"
       FunctionBlocks_makeManipulative2:
@@ -1415,15 +1387,11 @@ hi:
         options:
           INPUT1:
             '1': नींबू का रस
-            '3': baking soda
-            '5': both
         text: माइक्रोस्कोप में {INPUT1}है
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': नींबू का रस
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1946,7 +1914,6 @@ hi:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': १
             '10': '10'
             '2': '2'
@@ -2468,11 +2435,8 @@ hi:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': धीमा
-            '5': normal
             '7': तेज़
-            '9': extra fast
       gamelab_setTint:
         text: "{THIS} का रंग {COLOR} पर सेट करें"
       gamelab_setupScoreboard:
