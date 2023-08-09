@@ -158,10 +158,12 @@ export const blocks = {
           const imageSourceBlock = Blockly.getMainWorkspace().getBlockById(
             this.imageSourceId
           );
-          const imageSourceBlockWorkspace = imageSourceBlock.workspace;
-          imageSourceBlockWorkspace.addChangeListener(event => {
-            onBlockImageSourceChange(event, this);
-          });
+          if (imageSourceBlock) {
+            const imageSourceBlockWorkspace = imageSourceBlock.workspace;
+            imageSourceBlockWorkspace.addChangeListener(event => {
+              onBlockImageSourceChange(event, this);
+            });
+          }
         }
       };
 

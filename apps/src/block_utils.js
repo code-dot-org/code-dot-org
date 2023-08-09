@@ -1074,7 +1074,9 @@ exports.createJsWrapperBlockCreator = function (
         let flyoutToggleButton;
         if (showMiniToolbox) {
           flyoutToggleButton =
-            Blockly.customBlocks.initializeMiniToolbox.bind(this)();
+            Blockly.customBlocks.initializeMiniToolbox.bind(this)(
+              miniToolboxBlocks
+            );
         }
 
         Blockly.customBlocks.setUpBlockShadowing.bind(this)();
