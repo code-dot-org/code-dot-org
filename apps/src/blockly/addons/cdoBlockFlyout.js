@@ -117,8 +117,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
       this.positionAt_(
         this.width_,
         this.height_,
-        0,
-        //this.RTL ? -this.flyoutBlockPadding : 0,
+        this.RTL ? -this.flyoutBlockPadding : 0,
         0
       );
   }
@@ -190,5 +189,55 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    */
   wouldDelete(element, _couldConnect) {
     return false;
+  }
+
+  /**
+   * Lay out the blocks in the flyout.
+   *
+   * @param contents The blocks and buttons to lay out.
+   * @param gaps The visible gaps between blocks.
+   */
+  layout_(contents, gaps) {
+    this.workspace_.scale = this.targetWorkspace?.scale;
+    const margin = this.MARGIN;
+    let cursorX = margin + this.tabWidth_;
+    const cursorY = margin;
+    if (this.RTL) {
+      contents = contents.reverse();
+    }
+
+    for (let i = 0, item; (item = contents[i]); i++) {
+      if (item.type === 'block') {
+        const block = item.block;
+        const allBlocks = block?.getDescendants(false);
+        for (let j = 0, child; (child = allBlocks[j]); j++) {
+          // Mark blocks as being inside a flyout.  This is used to detect and
+          // prevent the closure of the flyout if the user right-clicks on such
+          // a block.
+          child.isInFlyout = true;
+        }
+        const root = block?.getSvgRoot();
+        const blockHW = block?.getHeightWidth();
+        // Figure out where to place the block.
+        const tab = block?.outputConnection ? this.tabWidth_ : 0;
+        let moveX;
+        if (this.RTL) {
+          moveX = cursorX + blockHW.width;
+        } else {
+          moveX = cursorX - tab;
+        }
+        // No 'reason' provided since events are disabled.
+        block?.moveTo(new Blockly.utils.Coordinate(moveX, cursorY));
+
+        const rect = this.createRect_(block, moveX, cursorY, blockHW, i);
+        cursorX += blockHW.width + gaps[i];
+
+        this.addBlockListeners_(root, block, rect);
+      } else if (item.type === 'button') {
+        const button = item.button;
+        this.initFlyoutButton_(button, cursorX, cursorY);
+        cursorX += button.width + gaps[i];
+      }
+    }
   }
 }
