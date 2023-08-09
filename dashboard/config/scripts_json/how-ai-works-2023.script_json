@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "how-ai-works",
-    "serialized_at": "2023-08-03 21:31:54 UTC",
+    "serialized_at": "2023-08-08 18:21:57 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2532,7 +2532,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "This might be a good discussion to use the Whip Around Protocol for. https://www.theteachertoolkit.com/index.php/tool/whip-around"
+            "markdown": "This might be a good discussion to use the [Whip Around Protocol](https://www.theteachertoolkit.com/index.php/tool/whip-around)."
           }
         ]
       },
@@ -2592,7 +2592,7 @@
       "key": "d7cae2b6-1735-4036-b8dc-5b8c35d4bb01",
       "position": 2,
       "properties": {
-        "progression_name": "Eliza Widget"
+        "progression_name": "(Optional) Eliza Widget"
       },
       "seeding_key": {
         "activity_section.key": "d7cae2b6-1735-4036-b8dc-5b8c35d4bb01",
@@ -3896,7 +3896,7 @@
         "level_keys": [
           "LLM - Eliza_ai23"
         ],
-        "progression": "Eliza Widget"
+        "progression": "(Optional) Eliza Widget"
       },
       "bonus": false,
       "seeding_key": {
