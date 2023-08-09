@@ -2,8 +2,12 @@ require 'aws-sdk-ec2'
 
 module Cdo::CloudFormation
   # Helper functions related to adhoc instances of CdoApp,
-  # included AWS::CloudFormation in adhoc environment.
+  # included in AWS::CloudFormation for adhoc environments (in ./cdo_app).
   module Adhoc
+    def stack_has_running_instance?
+      instance.state.name == 'running'
+    end
+
     def start_inactive_instance
       if instance.state.name == 'stopped'
         log.info "Starting Instance #{instance.id} ..."
@@ -26,12 +30,14 @@ module Cdo::CloudFormation
               "Delete this unrecoverable CloudFormation stack: rake adhoc:delete STACK_NAME=#{stack_name}"
       elsif instance.state.name == 'stopped'
         log.info "Instance #{instance.id} is already Stopped."
+        # todo: tag if not tagged
       elsif instance.state.name == 'running'
         log.info "Stopping Instance #{instance.id} ..."
         stop_result = instance.stop
         log.info "Instance Status - #{stop_result.stopping_instances[0].current_state.name}"
         log.info "Waiting until Stopped ..."
         instance.wait_until_stopped
+        # todo: tag it
         log.info "Instance Status - #{instance.reload.state.name}"
         log.info "To start instance: rake adhoc:start_inactive_instance STACK_NAME=#{stack_name}"
       else

@@ -1,3 +1,4 @@
+require 'cdo/chat_client'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
@@ -36,12 +37,12 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
     @cfn.start_inactive_instance
   end
 
-  desc 'Stop an adhoc environment\'s EC2 Instance '
+  desc 'Stop an adhoc environment\'s EC2 Instance.'
   timed_task_with_logging stop: :environment do
     @cfn.stop
   end
 
-  desc 'Delete an adhoc environment and all of its AWS Resources.  '
+  desc 'Delete an adhoc environment and all of its AWS Resources.'
   timed_task_with_logging delete: :environment do
     @cfn.delete
   end
@@ -49,6 +50,54 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
   desc 'Validate adhoc CloudFormation template.'
   timed_task_with_logging validate: :environment do
     @cfn.validate
+  end
+
+  desc 'Cleans up adhoc resources no longer in use, stopping instances or deleting the stack.'
+  timed_task_with_logging cleanup: :environment do
+    # What do?
+    # - stop_running_adhoc_instances
+    # - delete_stale_adhoc_stacks
+    # - log_error_stacks
+
+    if @cfn.stack_has_running_instance?
+      log.info "Instance #{@cfn.instance.id} is running."
+    else
+      log.info "Instance is not running."
+    end
+    # Can we simply call @cfn.delete here?
+  end
+
+  desc 'Cleans up all adhoc environments, stopping instances or deleting the stacks.'
+  timed_task_with_logging cleanup_all: :environment do
+    # Note that while @cfn relates to a single adhoc environment, we'll be operating on all of them.
+    # TODO: some for of iteration on cleanup:
+
+    # What do?
+    # - tag_previously_stopped_adhocs
+    #   - foreach adhoc stack
+    #     - foreach ec2 instance within
+    #     - if stopped and untagged
+    #       - tag with a Stopped_At timestamp
+
+    ChatClient.log "Fetching adhoc stacks..."
+    adhoc_stacks = @cfn.describe_adhoc_stacks
+
+    ChatClient.log "Checking instance status for each stack..."
+    adhoc_stacks.each do |stack|
+      begin
+        # TODO: extend to support multiple instances per stack
+        cfn_stack = Aws::CloudFormation::Stack.new(stack.stack_name)
+
+        instance = Aws::EC2::Instance.new(id: cfn_stack.resource('WebServer').physical_resource_id)
+        ChatClient.log "Instance: #{instance.id} - #{instance.state.name}"
+      rescue Aws::EC2::Errors::InvalidInstanceIDNotFound
+        ChatClient.log "Oh snatp caught that error"
+      end
+    end
+
+    # - stop_running_adhoc_instances
+    # - delete_stale_adhoc_stacks
+    # - log_error_stacks
   end
 
   namespace :full_stack do

@@ -73,6 +73,19 @@ module AWS
       end
     end
 
+    def describe_adhoc_stacks
+      cfn_client = Aws::CloudFormation::Client.new(region: 'us-east-1')
+
+      adhoc_stacks = cfn_client.describe_stacks.stacks.select do |stack|
+        stack.tags.any? do |tag|
+          tag.key == 'environment' && tag.value == 'adhoc'
+        end
+      end
+
+      # TODO: is this right
+      return adhoc_stacks
+    end
+
     # @return [Aws::CloudFormation::Client]
     private def cfn
       @cfn ||= Aws::CloudFormation::Client.new
