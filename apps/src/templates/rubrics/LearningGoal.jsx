@@ -4,7 +4,10 @@ import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
 import {learningGoalShape} from './rubricShapes';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
+import {
+  BodyThreeText,
+  BodyFourText,
+} from '@cdo/apps/componentLibrary/typography';
 
 export default function LearningGoal({
   learningGoal,
@@ -60,9 +63,9 @@ LearningGoal.propTypes = {
 
 const AiToken = () => {
   return (
-    <BodyThreeText className={style.aiToken}>
+    <BodyFourText className={style.aiToken}>
       {i18n.artificialIntelligenceAbbreviation()}
-      <FontAwesome icon="check" />
-    </BodyThreeText>
+      <FontAwesome icon="check" title={i18n.aiAssessmentEnabled()} />
+    </BodyFourText>
   );
 };

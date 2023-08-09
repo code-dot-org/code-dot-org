@@ -97,18 +97,14 @@
   justify-content: center;
   align-items: center;
   gap: 4px;
+  margin-bottom: 0;
 
   border-radius: 30px;
   border: 1px solid $product_affirmative_default;
   color: $product_affirmative_default;
   background: $light_affirmative_100;
 
-  text-align: center;
-  font-feature-settings: 'clig' off, 'liga' off;
   font-family: $gotham-extra-bold;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 150%;
 }
 
 .learningGoalExpanded {

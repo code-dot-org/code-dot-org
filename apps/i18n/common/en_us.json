@@ -64,6 +64,7 @@
   "advancedSettings": "Advanced Settings",
   "age": "Age",
   "agenda": "Agenda",
+  "aiAssessmentEnabled": "AI Assessment Enabled",
   "aiTrainedModels": "AI Trained Models",
   "aiTrainedModelsNoModels": "You have not trained any AI models yet.",
   "aiTrainedModelsDeleteModelConfirm": "Are you sure you would like to delete this model?",
