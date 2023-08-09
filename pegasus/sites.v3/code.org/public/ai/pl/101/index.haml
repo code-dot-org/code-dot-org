@@ -36,7 +36,7 @@ theme: responsive_full_width
 %section.bg-neutral-light.video-101.bg-neutral-light{id: "ai-pl-callout"}
   .wrapper
     .text-wrapper
-      %h2=hoc_s(:ai_pl_callout_title)
+      %h2=hoc_s(:ai_pl_101_intro_heading)
       %p.video-101__text=hoc_s(:ai_pl_callout_desc_01)
 
     - video_101_index.times do |index|
@@ -48,7 +48,7 @@ theme: responsive_full_width
           %h3=hoc_s("ai_pl_101_video_title_#{index + 1}")
           %p.heading-sm=hoc_s("ai_pl_101_video_desc_#{index + 1}")
           - if index >= 1
-            %a{href: "#newsletter-signup", class: "link-button", aria: { label: hoc_s("ai_pl_101_video_title_#{index + 1}") }}
+            %a.link-button.secondary{href: "#newsletter-signup", aria: { label: hoc_s("ai_pl_101_video_title_#{index + 1}") }}
               = hoc_s(:call_to_action_notify_available)
 
       .clear
@@ -58,9 +58,7 @@ theme: responsive_full_width
     %h2=hoc_s(:ai_pl_101_join_email_title)
     %p=hoc_s(:ai_pl_101_pro_join_email_desc)
     .signup-iframe
-      %iframe.signup-iframe__iframe{:allowtransparency => "true", :frameborder => "0", :height => "600", :scrolling => "yes", :src => "http://go.pardot.com/l/153401/2023-06-01/pqnddj", :style => "overflow:hidden; float: none", :type => "text/html", :width => "100%"}
-
-= view :visit_partial_event_logger
+      %iframe.signup-iframe__iframe{:allowtransparency => "true", :frameborder => "0", :height => "570", :scrolling => "yes", :src => "http://go.pardot.com/l/153401/2023-06-01/pqnddj", :style => "overflow:hidden; float: none", :type => "text/html", :width => "100%"}
 
 = view :section_divider_line
 
@@ -77,7 +75,7 @@ theme: responsive_full_width
           %img{src: "/images/ai/pl/101/ai-curriclum-machine-learning-with-logo.png", alt: ""}
           %p=hoc_s(:ai_pl_101_explore__desc_3)
         .content-footer
-          %a{href: "https://code.org/ai#ai-curricula", target: "_blank", class: "link-button",  rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+          %a.link-button{href: "https://code.org/ai#ai-curricula", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
             =hoc_s(:ai_pl_101_explore__button_3)
 
       .action-block.action-block--explore.action-block--one-col.flex-space-between
@@ -87,7 +85,7 @@ theme: responsive_full_width
           %img{src: "/images/ai/pl/101/explore_4.jpg", alt: ""}
           %p=hoc_s(:ai_pl_101_explore__desc_4)
         .content-footer
-          %a{href: "https://www.ets.org/research/ai-labs.html", target: "_blank", class: "link-button",  rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+          %a.link-button{href: "https://www.ets.org/research/ai-labs.html", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
             =hoc_s(:ai_pl_101_explore__button_4)
 
       .action-block.action-block--explore.action-block--one-col.flex-space-between
@@ -97,27 +95,27 @@ theme: responsive_full_width
           %img{src: "/images/ai/pl/101/explore_2.jpg", alt: ""}
           %p=hoc_s(:ai_pl_101_explore__desc_2)
         .content-footer
-          %a{href: "https://www.iste.org/professional-development/iste-u/artificial-intelligence", target: "_blank", class: "link-button",  rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+          %a.link-button{href: "https://www.iste.org/professional-development/iste-u/artificial-intelligence", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
             =hoc_s(:ai_pl_101_explore__button_2)
 
       .action-block.action-block--explore.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline=hoc_s(:module_label_educator_tool)
           %h3=hoc_s(:ai_pl_101_explore_title_1)
-          %span.action-block__space
           %img{src: "/images/ai/pl/101/explore_1.jpg", alt: ""}
           %p=hoc_s(:ai_pl_101_explore__desc_1)
         .content-footer
-          %a{href: "https://blog.khanacademy.org/teacher-khanmigo/?utm_source=code.org&utm_medium=referral&utm_campaign=code.orgwebinar", target: "_blank", class: "link-button",  rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
+          %a.link-button{href: "https://blog.khanacademy.org/teacher-khanmigo/?utm_source=code.org&utm_medium=referral&utm_campaign=code.orgwebinar", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
             =hoc_s(:ai_pl_101_explore__button_1)
 
+= view :visit_partial_event_logger
 
 %section.partnership-ai
   .wrapper
-    .partnership-ai__content
-      %p=hoc_s(:ai_pl_101_partnership_between)
-      .partnership-ai__list
-        %img.partnership-ai__logo.partnership-ai__logo--code{src: "/images/ai/pl/101/code.svg", height: "50px", alt: "CODE"}
-        %img.partnership-ai__logo.partnership-ai__logo--ets{src: "/images/ai/pl/101/ets.png", height: "55px", alt: "ETS"}
-        %img.partnership-ai__logo.partnership-ai__logo--iste{src: "/images/ai/pl/101/iste.png", height: "38px", alt: "ISTE"}
-        %img.partnership-ai__logo.partnership-ai__logo--khan{src: "/images/ai/pl/101/khan.svg", height: "50px", alt: "Khan Academy"}
+    %p.centered
+      =hoc_s(:ai_pl_101_partnership_between)
+    .partnership-ai__list
+      %img.partnership-ai__logo.partnership-ai__logo--code{src: "/images/ai/pl/101/code.svg", height: "50px", alt: "CODE"}
+      %img.partnership-ai__logo.partnership-ai__logo--ets{src: "/images/ai/pl/101/ets.png", height: "55px", alt: "ETS"}
+      %img.partnership-ai__logo.partnership-ai__logo--iste{src: "/images/ai/pl/101/iste.png", height: "38px", alt: "ISTE"}
+      %img.partnership-ai__logo.partnership-ai__logo--khan{src: "/images/ai/pl/101/khan.svg", height: "50px", alt: "Khan Academy"}
