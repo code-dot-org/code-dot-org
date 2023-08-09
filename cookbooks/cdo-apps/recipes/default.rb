@@ -24,8 +24,10 @@ apt_package %w(
   fonts-noto
 )
 
-# Used by lesson plan generator
-if %w(staging test).include?(node.chef_environment)
+# Used by lesson plan generator; we install on staging so the actual
+# functionality will work, on test so we can test that functionality, and on
+# adhoc so we can verify that installation continues to work
+if %w(staging test adhoc).include?(node.chef_environment)
   pdftk_file = 'pdftk-java_3.1.1-1_all.deb'
   pdftk_local_file = "#{Chef::Config[:file_cache_path]}/#{pdftk_file}"
   remote_file pdftk_local_file do
