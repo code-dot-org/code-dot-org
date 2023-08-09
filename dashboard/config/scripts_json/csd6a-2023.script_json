@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2023-08-02 17:33:35 UTC",
+    "serialized_at": "2023-08-08 18:39:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11937,7 +11937,7 @@
     },
     {
       "name": "The Counter Pattern",
-      "url": "https://youtu.be/G666sFzAg5g",
+      "url": "https://www.youtube.com/watch?v=GiHbeLq1ZkM",
       "key": "the_counter_pattern",
       "properties": {
         "audience": "Student",
