@@ -71,6 +71,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
 
   /**
    * This is the Blockly hook to create an editor for the field.
+   * All we do here is set the flyout to visible.
    * @override
    */
   showEditor_() {
@@ -89,6 +90,9 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     if (!this.isVisible()) {
       return new Blockly.utils.Size(0, 0);
     }
+    // On first render, if the flyout is not visible and it should be,
+    // show the flyout. We can't show the flyout until other components are
+    // rendered, so we delay showing it until here.
     if (this.flyoutShouldBeVisible && !this.isFlyoutVisible()) {
       this.setFlyoutVisible(true);
     }
@@ -109,11 +113,12 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
   render_() {
     if (this.flyout_.isVisible()) {
       // Always reflow and re-show the flyout before re-sizing the field.
-      // This will ensure the flyout is reporting the correct size (reflowInteral_),
-      // and the blocks in the flyout are space correctly (show).
-      this.flyout_.reflowInternal_();
+      // This will ensure the flyout is reporting the correct size (reflow),
+      // and the blocks in the flyout are spaced correctly (show).
+      this.flyout_.reflow();
       this.flyout_.show(CdoFieldFlyout.getFlyoutId(this.sourceBlock_));
     }
+    // The field should be the size of the fieldGroup_.
     const fieldGroupBBox = this.fieldGroup_.getBBox();
     this.size_ = new Blockly.utils.Size(
       fieldGroupBBox.width,
