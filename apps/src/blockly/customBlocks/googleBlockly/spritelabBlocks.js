@@ -156,14 +156,7 @@ export const blocks = {
           );
           const imageSourceBlockWorkspace = imageSourceBlock.workspace;
           imageSourceBlockWorkspace.addChangeListener(event => {
-            const flyout = imageSourceBlock.inputList[3].fieldRow[0].flyout_;
-            console.log({flyout});
             onBlockImageSourceChange(event, this);
-            Blockly.Events.disable();
-            console.log('calling show...');
-            flyout.show(CdoFieldFlyout.getFlyoutId(imageSourceBlock));
-            console.log('done calling show...');
-            Blockly.Events.enable();
           });
         }
       };
