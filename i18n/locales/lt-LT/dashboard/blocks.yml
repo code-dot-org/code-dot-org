@@ -5,19 +5,11 @@ lt:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': šiek tiek
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': šiek tiek
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -306,9 +298,7 @@ lt:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': šiek tiek
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -344,10 +334,7 @@ lt:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': šiek tiek
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -360,10 +347,7 @@ lt:
           PROPERTY:
             '"scale"': dydis
           SIZE:
-            '25': extra small
-            '50': small
             '75': šiek tiek
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:

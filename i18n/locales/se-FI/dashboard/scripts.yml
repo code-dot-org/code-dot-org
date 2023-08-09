@@ -1636,6 +1636,8 @@ se:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
             lessonGroup-3:
               display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            lessonGroup-5:
+              display_name: Iskkadeapmi
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1764,6 +1766,8 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1776,14 +1780,20 @@ se:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
             lessonGroup-3:
               display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
+            lessonGroup-5:
+              display_name: Iskkadeapmi
         focus-on-data1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-design-with-purpose1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1794,6 +1804,8 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
+            lessonGroup-4:
+              display_name: Iskkadeapmi
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:

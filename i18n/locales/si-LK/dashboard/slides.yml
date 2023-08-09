@@ -388,7 +388,6 @@ si:
       7:
         image: 'notes/C1_going_places_safely_7.png'
     C1_pair_programming:
-      1:
       2:
         image: 'notes/C1_pair_programming_2.png'
       3:
@@ -440,7 +439,6 @@ si:
         image: 'notes/C2_artist_intro_3.png'
       4:
         image: 'notes/C2_artist_intro_4.png'
-      5:
     C2_bee_conditionals:
       1:
         image: 'notes/C2_bee_conditionals_1.png'
@@ -514,9 +512,6 @@ si:
       2:
         image: 'notes/C2_artist_loops_2.png'
     C2_maze_intro:
-      1:
-      2:
-      3:
       4:
         image: 'notes/C2_maze_intro_4.png'
       5:
@@ -595,7 +590,6 @@ si:
         image: 'notes/C3_bounce_1.png'
       2:
         image: 'notes/C3_bounce_2.png'
-      3:
     C3_computational_thinking:
       1:
         image: 'notes/C3_computational_thinking_1.png'
@@ -635,7 +629,6 @@ si:
         image: 'notes/C3_maze_conditionals_1.png'
       2:
         image: 'notes/C3_maze_conditionals_2.png'
-      3:
       4:
         image: 'notes/C3_maze_conditionals_4.png'
     C3_maze_level_4:
@@ -750,7 +743,6 @@ si:
     C4_unplugged_madlibs:
       1:
         image: 'notes/C4_unplugged_madlibs_1.png'
-      2:
     C4_unplugged_parameters:
       1:
         image: 'notes/C4_unplugged_parameters_1.png'
@@ -782,7 +774,6 @@ si:
     infinity_playlab_events:
       1:
         image: 'notes/infinity_playlab_events_1.png'
-      2:
     infinity_playlab_intro:
       1:
         image: 'notes/infinity_playlab_intro_1.png'
@@ -1024,8 +1015,6 @@ si:
         image: 'notes/mc_intro_9.JPG'
       10:
         image: 'notes/mc_intro_10.JPG'
-      11:
-      12:
     mc_if_statements:
       1:
         image: 'notes/mc_if_statements_1.JPG'
@@ -1059,12 +1048,10 @@ si:
         image: 'notes/mc_congrats_no_share_4.JPG'
         text: "දැන් ඔබට අවශ්‍ය ඕනෑම දෙයක් හදන්න පුලුවන්!"
     gumball_intro:
-      1:
       2:
         image: 'notes/gumball_intro_2.JPG'
       3:
         image: 'notes/gumball_intro_3.JPG'
-      4:
       5:
         image: 'notes/gumball_intro_5.JPG'
         text: "මේ මැද තමයි ඔයාට ඕන කරන උපකරණ ඔක්කොම තියෙන්නේ. මේ හැම උපකරණයක් හෝ කොටසක් කේත කොටසක් වෙනවා."
@@ -1093,16 +1080,8 @@ si:
       3:
         image: 'notes/gumball_repeat_3.JPG'
     iceage_intro:
-      1:
-      2:
-      3:
-      4:
       5:
         text: "මේ මැද තමයි ඔයාට ඕන කරන උපකරණ ඔක්කොම තියෙන්නේ. මේ හැම උපකරණයක් හෝ කොටසක් කේත කොටසක් වෙනවා."
-      6:
-      7:
-      8:
-      9:
     iceage_events:
       1:
         image: 'notes/iceage_events_1.JPG'

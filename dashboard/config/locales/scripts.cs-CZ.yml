@@ -3664,6 +3664,8 @@ cs:
               display_name: 'Kapitola 2: Počítače a řešení problémů'
             lessonGroup-4:
               display_name: Alternativní lekce
+            lessonGroup-5:
+              display_name: Průzkum
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní
             a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším
             úsilí o řešení problémů. Procvičíte si pomocí procesu řešení problémů
@@ -8577,6 +8579,8 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
               display_name: Alternativní lekce
+            lessonGroup-4:
+              display_name: Průzkum
           name: zaměřit se na kódování1-2023
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní
             a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším
@@ -8659,6 +8663,8 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
               display_name: Alternativní lekce
+            lessonGroup-4:
+              display_name: Průzkum
           name: zaměřit se na kreativitu1-2023
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní
             a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším
@@ -8740,6 +8746,8 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
               display_name: Alternativní lekce
+            lessonGroup-4:
+              display_name: Průzkum
           name: zaměřit se na data1-2023
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní
             a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším
@@ -8849,6 +8857,8 @@ cs:
               display_name: 'Kapitola 1: Proces řešení problémů'
             lessonGroup-3:
               display_name: Alternativní lekce
+            lessonGroup-4:
+              display_name: Průzkum
           name: zaměřit se na design-s-účelu-1-2023
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní
             a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším
@@ -8934,6 +8944,8 @@ cs:
               display_name: 'Kapitola 2: Počítače a řešení problémů'
             lessonGroup-4:
               display_name: Alternativní lekce
+            lessonGroup-5:
+              display_name: Průzkum
           name: zaměřit se na hardware1-2023
           student_description: Řešení problémů a výpočetní technika je vysoce interaktivní
             a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším

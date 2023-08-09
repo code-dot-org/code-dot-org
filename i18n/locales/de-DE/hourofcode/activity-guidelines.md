@@ -137,7 +137,7 @@ What you’ll need:
         * iOS mobile Safari (mobile-optimized)
         * Android Chrome (mobile-optimized)
     * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
+    * Nicht angeschlossen
 * Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
 * In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 

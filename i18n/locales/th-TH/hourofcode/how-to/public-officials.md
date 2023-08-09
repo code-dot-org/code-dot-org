@@ -1,5 +1,5 @@
 ---
-title: How-to guide for public officials
+title: คู่มือแนะนำสำหรับเจ้าหน้าที่ของรัฐ
 ---
 
 {{ signup_button }}

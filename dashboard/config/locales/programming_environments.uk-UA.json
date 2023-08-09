@@ -407,11 +407,14 @@
         },
         "weblab": {
           "categories": {
+            "css_properties": {
+              "name": "Властивості CSS"
+            },
             "html_tags": {
-              "name": "HTML Теги"
+              "name": "Теги HTML"
             }
           },
-          "name": "Веб-лабораторія"
+          "name": "Веб Лабораторія"
         }
       }
     }
