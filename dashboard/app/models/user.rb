@@ -136,7 +136,7 @@ class User < ApplicationRecord
     gender_third_party_input
     child_account_compliance_state
     child_account_compliance_state_last_updated
-    child_account_compliance_lock_out
+    child_account_compliance_lock_out_date
     us_state
     country_code
     family_name

@@ -10,7 +10,7 @@ class Services::ChildAccount
       user,
       Policies::ChildAccount::ComplianceState::LOCKED_OUT
     )
-    user.child_account_compliance_lock_out = DateTime.now
+    user.child_account_compliance_lock_out_date = DateTime.now
   end
 
   # Updates the child_account_compliance_state attribute to the given state.

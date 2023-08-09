@@ -4952,7 +4952,7 @@ class UserTest < ActiveSupport::TestCase
     student = create :non_compliant_child
     student.save!
     assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, student.child_account_compliance_state
-    assert_not_empty student.child_account_compliance_lock_out
+    assert_not_empty student.child_account_compliance_lock_out_date
   end
 
   test "given a compliant child account, that account is NOT locked out" do

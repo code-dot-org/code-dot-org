@@ -16,7 +16,7 @@ class Queries::ChildAccount
         Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
       ).
       where(
-        "CAST(properties->>'$.child_account_compliance_lock_out' AS DATETIME) <= ?",
+        "CAST(properties->>'$.child_account_compliance_lock_out_date' AS DATETIME) <= ?",
         expiration_date
       )
   end
