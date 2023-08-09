@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {assert} from 'chai';
+import {assert, expect} from 'chai';
 import {Factory} from 'rosie';
 import {FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Permission, {
@@ -74,6 +74,87 @@ describe('WorkshopForm test', () => {
 
     const someControl = wrapper.find(FormControl);
     assert(someControl.exists());
+  });
+
+  it('inputs disabled in readonly', () => {
+    const workshop = Factory.build('workshop');
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([ProgramManager])}
+            facilitatorCourses={[]}
+            workshop={workshop}
+            readOnly={true}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    ['input', 'select', 'Radio', 'FormControl'].forEach(elementType => {
+      wrapper
+        .find(elementType)
+        .forEach(element => assert(element.props().disabled));
+    });
+  });
+
+  it('workshop with one session shows add session button in row', () => {
+    const workshop = Factory.build('workshop');
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            workshop={workshop}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const addIcon = wrapper
+      .find('SessionListFormPart')
+      .find('SessionFormPart')
+      .find('i')
+      .slice(-1);
+    expect(addIcon.props().className.trim()).to.equal('fa fa-plus');
+  });
+
+  it('workshop with 2+ sessions shows remove session button in each row and add session in last row', () => {
+    const workshop = Factory.build('workshop multiple sessions');
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            workshop={workshop}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const icons = wrapper
+      .find('SessionListFormPart')
+      .find('SessionFormPart')
+      .find('Col')
+      .slice(-1)
+      .find('i')
+      .map(icon => icon.props().className.trim());
+
+    // There is one remove icon per row and then the final row has an add icon followed by a remove icon
+    const addIcon = icons[icons.length - 2];
+    const removeIcons = [
+      ...icons.slice(0, icons.length - 2),
+      ...icons.slice(-1),
+    ];
+
+    removeIcons.forEach(ri => {
+      expect(ri).to.equal('fa fa-minus');
+    });
+    expect(addIcon).to.equal('fa fa-plus');
   });
 
   it('virtual field disabled for non-ws-admin for CSP/CSA summer workshop within a month of starting', () => {

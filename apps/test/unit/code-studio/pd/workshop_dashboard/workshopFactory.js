@@ -33,6 +33,10 @@ Factory.define('workshop')
   .attr('organizer', {name: 'Oscar Organzier', email: 'oscar@code.org'})
   .attr('virtual', false);
 
+Factory.define('workshop multiple sessions')
+  .extend('workshop')
+  .attr('sessions', () => Factory.buildList('session', 3));
+
 Factory.define('csp summer workshop')
   .extend('workshop')
   .attr('course', 'CS Principles')
