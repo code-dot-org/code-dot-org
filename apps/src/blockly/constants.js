@@ -77,3 +77,6 @@ export const PROCEDURE_DEFINITION_TYPES = [
   'behavior_definition',
   'procedures_defnoreturn',
 ];
+
+// A list of block types associated with the Run button.
+export const SETUP_TYPES = ['when_run', 'Dancelab_whenSetup'];

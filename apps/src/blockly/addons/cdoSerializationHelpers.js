@@ -1,5 +1,9 @@
 import BlockSvgUnused from './blockSvgUnused';
-import {WORKSPACE_PADDING} from '../constants';
+import {
+  WORKSPACE_PADDING,
+  PROCEDURE_DEFINITION_TYPES,
+  SETUP_TYPES,
+} from '../constants';
 import {frameSizes} from './cdoConstants';
 
 const {HEADER_HEIGHT, MARGIN_BOTTOM, MARGIN_SIDE, MARGIN_TOP} = frameSizes;
@@ -80,7 +84,7 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
 
   const orderedBlocks = reorderBlocks(topBlocks, blockOrderMap);
 
-  orderedBlocks.forEach(block => {
+  orderedBlocks.sort(sortProceduresAfterSetup).forEach(block => {
     positionBlockWithCursor(block, cursor);
   });
 }
@@ -180,4 +184,20 @@ function reorderBlocks(blocks, blockOrderMap) {
   });
 
   return orderedBlocks;
+}
+
+function sortProceduresAfterSetup(blockA, blockB) {
+  const blockAType = blockA.type;
+  const blockBType = blockB.type;
+
+  const blockAIsSetup = SETUP_TYPES.includes(blockAType);
+  const blockBIsProcedure = PROCEDURE_DEFINITION_TYPES.includes(blockBType);
+
+  if (blockAIsSetup && blockBIsProcedure) {
+    return -1; // blockA comes before blockB
+  } else if (!blockAIsSetup && !blockBIsProcedure) {
+    return 0; // no changes in order
+  } else {
+    return 1; // blockB comes before blockA or no changes in order
+  }
 }
