@@ -30,28 +30,11 @@ theme: responsive_full_width
           %img{src: "/images/ai/pl/101/iste--w.png", height: "18px", alt: "ISTE"}
           %img{src: "/images/ai/pl/101/khan--w.png", height: "20px", alt: "Khan Academy"}
 
-- video_101_index = 5
-- video_101_tags = [hoc_s(:module_label_new), hoc_s(:module_label_coming_soon), hoc_s(:module_label_coming_soon), hoc_s(:module_label_coming_soon), hoc_s(:module_label_coming_soon)]
-
 %section.bg-neutral-light.video-101.bg-neutral-light{id: "ai-pl-callout"}
   .wrapper
-    .text-wrapper
-      %h2=hoc_s(:ai_pl_101_intro_heading)
-      %p.video-101__text=hoc_s(:ai_pl_callout_desc_01)
-
-    - video_101_index.times do |index|
-      .action-block.action-block--two-col
-        .video-101__image
-          %img{src: "/images/ai/pl/101/coming-soon.jpg", alt: hoc_s("ai_pl_101_video_title_#{index + 1}"), class: "col-50"}
-        .text-wrapper.col-50
-          %p.overline=video_101_tags[index]
-          %h3=hoc_s("ai_pl_101_video_title_#{index + 1}")
-          %p.heading-sm=hoc_s("ai_pl_101_video_desc_#{index + 1}")
-          - if index >= 1
-            %a.link-button.secondary{href: "#newsletter-signup", aria: { label: hoc_s("ai_pl_101_video_title_#{index + 1}") }}
-              = hoc_s(:call_to_action_notify_available)
-
-      .clear
+    %h2=hoc_s(:ai_pl_101_intro_heading)
+    %p.video-101__text=hoc_s(:ai_pl_callout_desc_01)
+    = view :ai_101_videos
 
 %section.newsletter-signup#newsletter-signup
   .wrapper
@@ -66,13 +49,13 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:ai_pl_101_explore_title)
     %p=hoc_s(:ai_pl_101_explore_desc)
-    .action-block__wrapper.action-block__wrapper--two-col
+    .action-block__wrapper.action-block__wrapper--four-col
 
       .action-block.action-block--explore.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline=hoc_s(:module_label_curriculum_pure)
-          %h3=hoc_s(:ai_pl_101_explore_title_3)
           %img{src: "/images/ai/pl/101/ai-curriclum-machine-learning-with-logo.png", alt: ""}
+          %h3=hoc_s(:ai_pl_101_explore_title_3)
           %p=hoc_s(:ai_pl_101_explore__desc_3)
         .content-footer
           %a.link-button{href: "https://code.org/ai#ai-curricula", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
@@ -81,8 +64,8 @@ theme: responsive_full_width
       .action-block.action-block--explore.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline=hoc_s(:module_label_student_tool)
-          %h3=hoc_s(:ai_pl_101_explore_title_4)
           %img{src: "/images/ai/pl/101/explore_4.png", alt: ""}
+          %h3=hoc_s(:ai_pl_101_explore_title_4)
           %p=hoc_s(:ai_pl_101_explore__desc_4)
         .content-footer
           %a.link-button{href: "https://www.ets.org/research/ai-labs.html", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
@@ -91,8 +74,8 @@ theme: responsive_full_width
       .action-block.action-block--explore.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline=hoc_s(:module_label_educator_course)
-          %h3=hoc_s(:ai_pl_101_explore_title_2)
           %img{src: "/images/ai/pl/101/explore_2.png", alt: ""}
+          %h3=hoc_s(:ai_pl_101_explore_title_2)
           %p=hoc_s(:ai_pl_101_explore__desc_2)
         .content-footer
           %a.link-button{href: "https://www.iste.org/professional-development/iste-u/artificial-intelligence", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}
@@ -101,8 +84,8 @@ theme: responsive_full_width
       .action-block.action-block--explore.action-block--one-col.flex-space-between
         .content-wrapper
           %p.overline=hoc_s(:module_label_educator_tool)
-          %h3=hoc_s(:ai_pl_101_explore_title_1)
           %img{src: "/images/ai/pl/101/explore_1.png", alt: ""}
+          %h3=hoc_s(:ai_pl_101_explore_title_1)
           %p=hoc_s(:ai_pl_101_explore__desc_1)
         .content-footer
           %a.link-button{href: "https://blog.khanacademy.org/teacher-khanmigo/?utm_source=code.org&utm_medium=referral&utm_campaign=code.orgwebinar", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:ai_resources_btn_aria_label_01)}}

@@ -118,22 +118,20 @@
 .video-101 {
 
   &__text {
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
   }
 
   .action-block {
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
     background: $neutral_white;
   }
 
-  &__image {
+  &__image,
+  &__video {
 
     @media (min-width: 971px) {
       margin: 20px 0 20px 20px;
       width: calc(50% - 20px);
-    }
-    img {
-      width: 100%;
     }
   }
 }
