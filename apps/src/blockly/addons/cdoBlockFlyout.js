@@ -72,7 +72,6 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @override
    */
   reflowInternal_() {
-    console.log(`in reflowInternal_`);
     this.height_ = 0;
     this.width_ = 0;
     const topBlocks = this.workspace_.getTopBlocks(false);
