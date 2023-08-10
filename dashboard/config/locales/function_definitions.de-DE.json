@@ -3771,7 +3771,7 @@
             "name": "hole alle Kürbisse"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           },
           "pumpkin square": {
             "name": "Kürbis-Quadrat"
@@ -3785,7 +3785,7 @@
             "name": "hole alle Kürbisse"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           },
           "pumpkin square": {
             "name": "Kürbis-Quadrat"
@@ -3799,7 +3799,7 @@
             "name": "hole alle Kürbisse"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           },
           "pumpkin square": {
             "name": "Kürbis-Quadrat"
@@ -3813,7 +3813,7 @@
             "name": "hole alle Kürbisse"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           },
           "pumpkin square": {
             "name": "Kürbis-Quadrat"
@@ -3840,13 +3840,13 @@
         },
         "courseE_farmer_functions11_predict": {
           "check and pick": {
-            "name": "suchen und pflücken"
+            "name": "suchen und pflücken\n"
           },
           "find pumpkin": {
             "name": "finde Kürbis"
           },
           "wander path": {
-            "name": "Weg entlanggehen"
+            "name": "Weg entlanggehen\n"
           }
         },
         "courseE_farmer_functions11_predict2022": {
@@ -3860,7 +3860,7 @@
             "name": "Landwirtschaftliche Erzeugnisse holen"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           },
           "pumpkin square": {
             "name": "Kürbis-Quadrat"
@@ -3877,7 +3877,7 @@
             "name": "Landwirtschaftliche Erzeugnisse holen"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           },
           "pumpkin square": {
             "name": "Kürbis-Quadrat"
@@ -3894,7 +3894,7 @@
             "name": "Landwirtschaftliche Erzeugnisse holen"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           },
           "pumpkin square": {
             "name": "Kürbis-Quadrat"
@@ -3911,7 +3911,7 @@
             "name": "Landwirtschaftliche Erzeugnisse holen"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           },
           "pumpkin square": {
             "name": "Kürbis-Quadrat"
@@ -3936,7 +3936,7 @@
         },
         "courseE_farmer_functions132022": {
           "check for corn": {
-            "name": "Mais suchen"
+            "name": "Mais suchen\n"
           },
           "corn rectangle": {
             "name": "Mais-Rechteck"
@@ -3945,12 +3945,12 @@
             "name": "Salat-Treppe"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           }
         },
         "courseE_farmer_functions13_2018": {
           "check for corn": {
-            "name": "Mais suchen"
+            "name": "Mais suchen\n"
           },
           "corn rectangle": {
             "name": "Mais-Rechteck"
@@ -3959,12 +3959,12 @@
             "name": "Salat-Treppe"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           }
         },
         "courseE_farmer_functions13_2019": {
           "check for corn": {
-            "name": "Mais suchen"
+            "name": "Mais suchen\n"
           },
           "corn rectangle": {
             "name": "Mais-Rechteck"
@@ -3973,12 +3973,12 @@
             "name": "Salat-Treppe"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           }
         },
         "courseE_farmer_functions13_2020": {
           "check for corn": {
-            "name": "Mais suchen"
+            "name": "Mais suchen\n"
           },
           "corn rectangle": {
             "name": "Mais-Rechteck"
@@ -3987,12 +3987,12 @@
             "name": "Salat-Treppe"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           }
         },
         "courseE_farmer_functions13_2021": {
           "check for corn": {
-            "name": "Mais suchen"
+            "name": "Mais suchen\n"
           },
           "corn rectangle": {
             "name": "Mais-Rechteck"
@@ -4112,7 +4112,7 @@
             "name": "hole alle Kürbisse"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           }
         },
         "courseE_farmer_functions3c1_2018": {
@@ -4123,7 +4123,7 @@
             "name": "hole alle Kürbisse"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           }
         },
         "courseE_farmer_functions3c1_2019": {
@@ -4134,7 +4134,7 @@
             "name": "hole alle Kürbisse"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           }
         },
         "courseE_farmer_functions3c1_2020": {
@@ -4145,7 +4145,7 @@
             "name": "hole alle Kürbisse"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           }
         },
         "courseE_farmer_functions3c1_2021": {

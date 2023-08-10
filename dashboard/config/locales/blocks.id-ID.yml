@@ -18,7 +18,6 @@ id:
             '0.75': kecil
             '1.00': sedang
             '2.00': besar
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -26,7 +25,6 @@ id:
             '0.75': kecil
             '1.00': sedang
             '2.00': besar
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -1011,8 +1009,6 @@ id:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
         text: Mikroskop memimliki {INPUT1}
       DansBlocks_setForegroundEffect2:
         options:
@@ -1030,8 +1026,6 @@ id:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Berkomunikasi {VAR1} dengan {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1401,15 +1395,11 @@ id:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
         text: Mikroskop memimliki {INPUT1}
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1633,7 +1623,6 @@ id:
       Poetry_whenLineShows:
         options:
           N:
-            '0': "???"
             '1': '1'
             '10': '10'
             '11': '11'
@@ -1695,9 +1684,6 @@ id:
           BEHAVIOR:
             '"avoiding"': jaga jarak
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': semua
           RATE:
             '"slowly"': pelan-pelan
@@ -1706,9 +1692,6 @@ id:
           BEHAVIOR:
             '"avoiding"': jaga jarak
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': semua
       aalab_spriteSayChoices:
         options:
@@ -1845,7 +1828,6 @@ id:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'

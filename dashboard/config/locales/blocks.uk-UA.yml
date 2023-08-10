@@ -16,7 +16,6 @@ uk:
             '0.75': маленький
             '1.00': середньо
             '2.00': великий
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -24,7 +23,6 @@ uk:
             '0.75': маленький
             '1.00': середньо
             '2.00': великий
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -480,28 +478,8 @@ uk:
             '19': '19'
             '2': '2'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
             '3': '3'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
             '4': '4'
-            '40': '40'
             '5': '5'
             '6': '6'
             '7': '7'
@@ -1006,8 +984,6 @@ uk:
         options:
           INPUT1:
             '1': лимонний сік
-            '3': baking soda
-            '5': both
         text: Мікроскоп має {INPUT1}
       DansBlocks_setForegroundEffect2:
         options:
@@ -1021,8 +997,6 @@ uk:
         options:
           INPUT1:
             '1': лимонний сік
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Спілкуйтеся з {VAR1} з {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1273,10 +1247,10 @@ uk:
             '"y"': позиція по осі y
       Mikelab_setupSim:
         text: |-
-          налаштування моделі з
+          налаштувати модель для
           {SPRITE1N}{SPRITE1COSTUME}швидкість{SPRITE1SPEED}
           {SPRITE2N}{SPRITE2COSTUME}швидкість{SPRITE2SPEED}
-          збирати
+          щоб зібрати
           {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
@@ -1348,15 +1322,11 @@ uk:
         options:
           INPUT1:
             '1': лимонний сік
-            '3': baking soda
-            '5': both
         text: Мікроскоп має {INPUT1}
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': лимонний сік
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1452,7 +1422,7 @@ uk:
             '"spring"': весна
             '"winter"': зима
       Poetry_setBackgroundImageAs:
-        text: встановити фон {IMG}
+        text: встановити тло {IMG}
       Poetry_setForegroundEffect:
         options:
           EFFECT:
@@ -1490,7 +1460,6 @@ uk:
       Poetry_whenLineShows:
         options:
           N:
-            '0': "???"
             '1': '1'
             '10': '10'
             '11': '11'
@@ -1549,16 +1518,10 @@ uk:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': усі
       aalab_someStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': усі
       adaptations_adaptationBehaviors:
         options:
@@ -1719,7 +1682,6 @@ uk:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'
@@ -1760,6 +1722,8 @@ uk:
             '"x"': позиція по осі x
             '"y"': позиція по осі y
         text: змінити {SPRITE} {PROPERTY} на {VAL}
+      gamelab_changeVarBy:
+        text: змінити {VARIABLE} на {VAL}
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -1797,6 +1761,8 @@ uk:
         text: видалити {THIS}
       gamelab_draggable:
         text: при перетягуванні
+      gamelab_drawLine:
+        text: малювати лінію {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: краї блокують рух {SPRITE}
       gamelab_everyInterval:
@@ -2103,6 +2069,8 @@ uk:
         text: зняти колір з {THIS}
       gamelab_repeatForever:
         text: повторювати постійно
+      gamelab_resetTimer:
+        text: скинути таймер
       gamelab_setAnimation:
         text: змінити {THIS} костюм на {ANIMATION}
       gamelab_setBackground:
@@ -2131,9 +2099,9 @@ uk:
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': підводний
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
             undefined: немає
-        text: встановити фон {IMG}
+        text: встановити тло {IMG}
       gamelab_setBackgroundImageAs:
-        text: встановити фон {IMG}
+        text: встановити тло {IMG}
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
@@ -2156,7 +2124,7 @@ uk:
             '"speed"': швидкість
             '"x"': позиція по осі x
             '"y"': позиція по осі y
-        text: встановити {SPRITE} властивість {PROPERTY} у {VAL}
+        text: встановити {SPRITE} властивість {PROPERTY} у значення {VAL}
       gamelab_setProp_dropdown:
         options:
           PROPERTY:
@@ -2166,30 +2134,31 @@ uk:
             '25': дуже маленький
             '50': маленький
             '75': середньо
-        text: встановити {SPRITE} властивість {PROPERTY} у {SIZE}
+        text: встановити {SPRITE} властивість {PROPERTY} у значення {SIZE}
       gamelab_setSizes:
         options:
           PROPERTY:
             '"height"': висота
             '"scale"': розмір
             '"width"': ширина
-        text: встановити {SPRITE} властивість {PROPERTY} у {N}%
+        text: встановити {SPRITE} властивість {PROPERTY} у значення {N}%
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': повільно
             '5': нормальний
             '7': швидко
-            '9': extra fast
+        text: встановити швидкість {SPRITE} у значення {SIZE}
       gamelab_setTint:
         text: змінити колір {THIS} на {COLOR}
+      gamelab_setupScoreboard:
+        text: "малювати табло \n{SPRITE1COSTUME}бал{VAR1}{SPRITE2COSTUME}бал{VAR2}мета{SPRITE3COSTUME}"
       gamelab_setupSim:
         text: |-
-          налаштування моделі з
+          налаштувати модель для
           {SPRITE1N}{SPRITE1COSTUME}швидкість{SPRITE1SPEED}
           {SPRITE2N}{SPRITE2COSTUME}швидкість{SPRITE2SPEED}
-          збирати
+          щоб зібрати
           {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: Показати титульний екран {BREAK} Заголовок {TITLE} Текст {SUBTITLE}
