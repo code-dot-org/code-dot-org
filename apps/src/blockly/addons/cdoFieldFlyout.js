@@ -11,6 +11,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @param {Object} [opt_config] - A map of options used to configure the field.
    * @param {number} [opt_config.minWidth] - The minimum width of the field.
    * @param {number} [opt_config.maxWidth] - The maximum width of the field.
+   * @param {boolean} [opt_config.isFlyoutVisible] - Whether the flyout is visible.
    */
   constructor(value, opt_config) {
     super(value);
@@ -46,6 +47,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     if (config) {
       this.minWidth_ = config.minWidth;
       this.maxWidth_ = config.maxWidth;
+      this.flyoutShouldBeVisible = config.isFlyoutVisible;
     }
   }
 
@@ -69,10 +71,11 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
 
   /**
    * This is the Blockly hook to create an editor for the field.
+   * All we do here is set the flyout to visible.
    * @override
    */
   showEditor_() {
-    this.setFlyoutVisible(!this.isFlyoutVisible());
+    this.setFlyoutVisible(true);
   }
 
   /**
@@ -87,19 +90,17 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
     if (!this.isVisible()) {
       return new Blockly.utils.Size(0, 0);
     }
+    // On first render, if the flyout is not visible and it should be,
+    // show the flyout. We can't show the flyout until other components are
+    // rendered, so we delay showing it until here.
+    if (this.flyoutShouldBeVisible && !this.isFlyoutVisible()) {
+      this.setFlyoutVisible(true);
+    }
     // Normally, Blockly skips rendering fields unless we've notified the
     // rendering system that they've changed (this.isDirty_), but in this
-    // case, we want to always re-render / resize the field so that it
-    // matches the width of the block.
-    this.render_();
-
-    if (this.visible_ && this.size_.width === 0) {
-      // If the field is not visible the width will be 0 as well, one of the
-      // problems with the old system.
-      this.render_();
-    }
-
-    return this.size_;
+    // case, we want to always re-render / resize the field.
+    this.isDirty_ = true;
+    return super.getSize();
   }
 
   /**
@@ -110,19 +111,19 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @override
    */
   render_() {
-    this.showEditor_();
-    const fieldGroupBBox = this.fieldGroup_.getBBox();
     if (this.flyout_.isVisible()) {
-      this.size_ = new Blockly.utils.Size(
-        this.flyout_.getWidth(),
-        fieldGroupBBox.height
-      );
-    } else {
-      this.size_ = new Blockly.utils.Size(
-        fieldGroupBBox.width,
-        fieldGroupBBox.height
-      );
+      // Always reflow and re-show the flyout before re-sizing the field.
+      // This will ensure the flyout is reporting the correct size (reflow),
+      // and the blocks in the flyout are spaced correctly (show).
+      this.flyout_.reflow();
+      this.flyout_.show(CdoFieldFlyout.getFlyoutId(this.sourceBlock_));
     }
+    // The field should be the size of the fieldGroup_.
+    const fieldGroupBBox = this.fieldGroup_.getBBox();
+    this.size_ = new Blockly.utils.Size(
+      fieldGroupBBox.width,
+      fieldGroupBBox.height
+    );
   }
 
   /**
@@ -131,13 +132,14 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
    * @param {boolean} isVisible Whether or not the flyout should be shown.
    */
   setFlyoutVisible(isVisible) {
+    this.flyoutShouldBeVisible = isVisible;
     if (!this.flyout_.targetWorkspace) {
       this.flyout_.init(this.workspace_);
     }
     isVisible
       ? this.flyout_.show(CdoFieldFlyout.getFlyoutId(this.sourceBlock_))
       : this.flyout_.hide();
-    this.forceRerender();
+    this.isDirty_ = true;
   }
 
   /**
