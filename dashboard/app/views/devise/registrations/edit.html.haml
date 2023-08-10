@@ -137,8 +137,10 @@
       %hr
       %h2= 'AI Settings'
       .field
-        = form.label :ai_rubrics_disabled, 'AI Rubric Assessment Disabled', class: "label-bold"
-        = form.check_box :ai_rubrics_disabled
+        = form.label :ai_rubrics_disabled, class: "label-bold" do
+          = form.check_box :ai_rubrics_disabled
+          %span{style: "position: relative; top: 3px"}
+            = 'Disable AI Rubric Assessment'
       %div= form.submit t('crud.update'), id: 'edit-ai-settings', class: 'btn btn-warning'
 
 - if current_user.migrated?
