@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:19:38.000Z",
   "level_num": "custom",
@@ -44,8 +45,8 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
-    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/b311448b6ee292e90663da3d1e00af0b-image-1644443524422.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Add Another External Button\r\n\r\nLet's add another external button to our device on pin `\"A1\"` that toggles the red LED on and off. This will only require **one** new wire connected to pin `\"A1\"` - to press the button, we can use the same `\"GND\"` wire from before.\r\n\r\n# Do This\r\n\r\n**Wiring Our Device:**\r\n\r\n1) Disconnect your Circuit Playground from the computer\r\n2) Connect another wire to pin `\"A1\"`\r\n3) Reconnect your Circuit Playground to the computer. You may need to run the Maker Setup again.\r\n\r\n**Coding Your Device:**\r\n\r\n1) Create a button variable on pin `\"A1\"`\r\n\t- Drag out a [`createButton()`(#4dd0e1)](/docs/applab/createButton/) block. \r\n    - Name the variable `ledButton`\r\n    - Change the pin to `\"A1\"`\r\n2) Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) to detect when `ledButton` is pressed `down`\r\n\t- Drag out an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/). \r\n    - Set the component to `ledButton` by typing in the first parameter\r\n    - Set the event to `\"down\"`\r\n3) When `ledButton` is pressed: toggle the led\r\n\t- Use the [`led.toggle()`(#f78183)](/docs/applab/led.toggle/) block to make the red LED turn on and off\r\n\r\n**Run the program!** You should use the `\"GND\"` wire to switch between your two buttons - connecting it to the `buzzButton` should make the buzzer sounds from before, and connecting it to the `ledButton` should make the red LED turn on and off.",
+    "makerlab_enabled": "circuitPlayground",
+    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/cce428e702ec29af67f1af9e286fdc94-image-1691601797447.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Add Another External Button\r\n\r\nLet's add another external button to our device on pin `\"A2\"` that toggles the red LED on and off. This will only require **one** new wire connected to pin `\"A2\"` - to press the button, we can use the same `\"GND\"` wire from before.\r\n\r\n# Do This\r\n\r\n**Wiring Our Device:**\r\n\r\n1) Disconnect your Circuit Playground from the computer\r\n2) Connect another wire to pin `\"A2\"`\r\n3) Reconnect your Circuit Playground to the computer. You may need to run the [Maker Setup](https://studio.code.org/maker/setup) again.\r\n\r\n**Coding Your Device:**\r\n\r\n1) Create a button variable on pin `\"A2\"`\r\n\t- Drag out a [`createButton()`(#4dd0e1)](/docs/applab/createButton/) block. \r\n    - Name the variable `ledButton`\r\n    - Change the pin to `\"A2\"`\r\n2) Use an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) to detect when `ledButton` is pressed `down`\r\n\t- Drag out an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/). \r\n    - Set the component to `ledButton` by typing in the first parameter\r\n    - Set the event to `\"down\"`\r\n3) When `ledButton` is pressed: toggle the led\r\n\t- Use the [`led.toggle()`(#f78183)](/docs/applab/led.toggle/) block to make the red LED turn on and off\r\n\r\n**Run the program!** You should use the `\"GND\"` wire to switch between your two buttons - connecting it to the `buzzButton` should make the buzzer sounds from before, and connecting it to the `ledButton` should make the red LED turn on and off.",
     "text_mode_at_start": "false",
     "parent_level_id": 20603,
     "name_suffix": "_2023",
@@ -61,11 +62,17 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
     "project_template_level_name": "CSD U6 - Physical Input - SB Template_2023",
     "encrypted_examples": "ccEDGBCr0ivvz08DbMKU/QeZ2G5cukOAcBLhMh43yoGU0a1dBB/Tj3rIhMgd\n9665Y4Ni9WGqLGd7zp9MXW3wnQ==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "code_functions": {
+      "var myButton = createButton": null,
+      "onBoardEvent": null,
+      "buzzer.frequency": null,
+      "var myLed = createLed": null,
+      "led.toggle": null
+    }
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:19:38.242+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - SB3_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:19:38.242+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - SB3_2222\"},{\"changed_at\":\"2023-08-09 17:24:55 +0000\",\"changed\":[\"makerlab_enabled\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-09 17:33:52 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
