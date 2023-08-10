@@ -268,7 +268,7 @@ class I18nScriptUtils
   # filesystem and from github, but it would be significantly harder to also
   # remove it from Crowdin.
   def self.unit_directory_change?(script_i18n_name, script_i18n_filename)
-    level_content_directory = "../#{I18N_SOURCE_DIR}/course_content"
+    level_content_directory = CDO.dir(File.join(I18N_SOURCE_DIR, 'course_content'))
 
     matching_files = Dir.glob(File.join(level_content_directory, "**", script_i18n_name)).reject do |other_filename|
       other_filename == script_i18n_filename
