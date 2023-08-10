@@ -16,7 +16,7 @@ import Button from '@cdo/apps/templates/Button';
 const FooterButtonType = makeEnum('cancel', 'confirm', 'default');
 const FooterButtonColor = {
   [FooterButtonType.cancel]: Button.ButtonColor.gray,
-  [FooterButtonType.confirm]: Button.ButtonColor.orange,
+  [FooterButtonType.confirm]: Button.ButtonColor.brandSecondaryDefault,
 };
 
 const DialogStyle = makeEnum('default', 'simple');
