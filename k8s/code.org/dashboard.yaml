@@ -85,6 +85,10 @@ data:
     # db_reader_user: code.org
     # db_reader_password: FIXME_WITH_REAL_PASSWORD
     # db_writer: mysql://code.org:FIXME_WITH_REAL_PASSWORD@db/
+
+    db_credential_writer: {"username": "code.org", "password": "FIXME_WITH_REAL_PASSWORD"}
+    db_writer_user: code.org
+    db_writer_password: FIXME_WITH_REAL_PASSWORD
     db_writer: 'mysql://root@db/'
     
     db_cluster_id: db
