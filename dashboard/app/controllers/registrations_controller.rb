@@ -482,7 +482,7 @@ class RegistrationsController < Devise::RegistrationsController
         :school_id,
         :school_other,
         :school_name,
-        :full_address
+        :full_address,
       ],
       races: [],
     )
