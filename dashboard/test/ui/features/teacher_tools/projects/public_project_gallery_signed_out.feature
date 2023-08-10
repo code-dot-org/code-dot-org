@@ -4,7 +4,7 @@ Background:
   Given I am on "http://studio.code.org/projects/public"
 
 Scenario: Public Gallery Shows Expected Elements
-  Then I wait until element "#header-banner" is visible
+  Then I wait until element "h1" contains text "Projects"
   Then I wait until element "#uitest-public-projects" is visible
 
 Scenario: Public Gallery Shows Expected Project Types
