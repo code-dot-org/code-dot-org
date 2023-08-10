@@ -1,4 +1,5 @@
 class ParentMailer < ActionMailer::Base
+  include ActionMailerMetrics
   default from: 'Hadi Partovi <hadi_partovi@code.org>'
   default reply_to: 'Code.org <support@code.org>'
 

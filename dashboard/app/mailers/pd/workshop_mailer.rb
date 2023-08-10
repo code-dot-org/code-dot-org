@@ -2,6 +2,7 @@ require 'pd/certificate_renderer'
 
 class Pd::WorkshopMailer < ActionMailer::Base
   include Rails.application.routes.url_helpers
+  include ActionMailerMetrics
 
   default bcc: MailerConstants::PLC_EMAIL_LOG
 
