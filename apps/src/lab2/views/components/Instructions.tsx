@@ -25,6 +25,10 @@ interface InstructionsProps {
 /**
  * Lab2 instructions component. This can be used by any Lab2 lab, and will retrieve
  * all necessary data from the Lab2 redux store.
+ *
+ * Note that currently, this component solely renders instructions, and does not include any features
+ * present on the legacy instructions panel, such as Help & Tips, Documentation, Code Review,
+ * For Teachers Only, etc.
  */
 const Instructions: React.FunctionComponent<InstructionsProps> = ({
   baseUrl, // Currently unused, but may be needed in the future if we support instructions images.
