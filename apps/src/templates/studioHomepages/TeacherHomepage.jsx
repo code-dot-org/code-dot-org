@@ -173,8 +173,8 @@ export const UnconnectedTeacherHomepage = ({
     <div>
       <HeaderBanner
         headingText={i18n.homepageHeading()}
-        short={true}
         backgroundUrl={backgroundUrl}
+        backgroundImageStyling={{backgroundPosition: '90% 30%'}}
       />
       <div className={'container main'}>
         <ProtectedStatefulDiv ref={flashes} />
