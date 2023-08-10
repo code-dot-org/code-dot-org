@@ -1,4 +1,5 @@
 require_relative 'curriculum_content/sync_in'
+require_relative '../../metrics'
 
 module I18n
   module Resources
@@ -8,7 +9,9 @@ module I18n
         REDACT_RESTORE_PLUGINS = %w[resourceLink vocabularyDefinition].freeze
 
         def self.sync_in
-          SyncIn.perform
+          I18n::Metrics.report_runtime('CurriculumContent', 'in') do
+            SyncIn.perform
+          end
         end
       end
     end
