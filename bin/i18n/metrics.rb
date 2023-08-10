@@ -10,14 +10,14 @@ module I18n
 
     # logging to CloudWatch the runtime of a yield block, typically a method.
     # @param method_name [String] Name of the method logged to CloudWatch
-    # @param sync_comp [String] Component of the sync where the method is used. Options: in, up, down, out.
-    def self.report_runtime(method_name, sync_comp)
+    # @param sync_step [String] Step of the sync where the method is used. Options: in, up, down, out.
+    def self.report_runtime(method_name, sync_step)
       result = nil
       runtime = Benchmark.realtime {result = yield}
       log_metric(
         :Runtime,
         runtime.in_milliseconds.to_i,
-        [{name: "MethodName", value: method_name}, {name: "SyncComp", value: sync_comp}],
+        [{name: "MethodName", value: method_name}, {name: "SyncStep", value: sync_step}],
         'Milliseconds'
       )
 
