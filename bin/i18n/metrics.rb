@@ -11,16 +11,21 @@ module I18n
       log_metric(:Runtime, yield, addtl_dimensions)
     end
 
-    def self.report_success(sync_comp)
-      log_metric(:Success, 1, [])
-    end
+    def self.report_filesize(file_name, sync_step)
+      # addtl_dimensions << {name: 'SyncStep', value: sync_step}
+      # addtl_dimensions << {name: 'FileName', value: file_name}
+      file_path = CDO.dir(File.join("/i18n/locales/source", file_name))
+      log_metric(
+        :FileSizeTest,
+        File.size(file_path),
+        [{name: 'SyncStep', value: sync_step}, {name: 'FileName', value: file_name}],
+        'Bytes'
+      )
+      file = File.read(file_path)
+      log_metric(:FileLinesTest, file.count($/), [{name: 'SyncStep', value: sync_step}, {name: 'FileName', value: file_name}])
 
-    def self.report_failure(sync_comp)
-      log_metric(:Failure, 0, [])
-    end
-
-    def self.report_filesize(sync_comp)
-      log_metric(:Filesize, 0, [])
+      # puts "metric_name: :LOC, value: #{file.count($/)}, SyncStep: #{sync_step}, FileName: #{file_name}"
+      # log_metric(:Filesize, File.size(file_path), [{name: 'FileName', value: file_name}])
     end
 
     # returns the EC2 instance ID if we are running the sync from an EC2,
@@ -33,17 +38,18 @@ module I18n
       end
     end
 
-    def self.log_metric(metric_name, value, addtl_dimensions = [])
+    def self.log_metric(metric_name, metric_value, addtl_dimensions = [], metric_units = nil)
       # add machine_id and environment dimensions to addtl_dimensions
       addtl_dimensions << {name: 'Environment', value: CDO.rack_env}
       addtl_dimensions << {name: 'MachineId', value: machine_id}
-
+      puts "#{I18N_METRICS_NAMESPACE} {metric_name: #{metric_name}, value: #{metric_value}, dimensions: #{addtl_dimensions}, unit: #{metric_units}}"
       Cdo::Metrics.put_metric(
         I18N_METRICS_NAMESPACE,
           {
             metric_name: metric_name,
+            value: metric_value,
             dimensions: addtl_dimensions,
-            value: value
+            unit: metric_units
           }
       )
     end

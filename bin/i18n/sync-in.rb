@@ -19,23 +19,26 @@ module I18n
   module SyncIn
     def self.perform
       puts "Sync in starting"
-      Services::I18n::CurriculumSyncUtils.sync_in
-      I18n::Resources::Pegasus::HourOfCode.sync_in
-      localize_level_and_project_content
-      I18n::Resources::Dashboard::Blocks.sync_in
-      I18n::Resources::Apps::Animations.sync_in
-      I18n::Resources::Dashboard::SharedFunctions.sync_in
-      I18n::Resources::Dashboard::CourseOfferings.sync_in
-      I18n::Resources::Dashboard::Standards.sync_in
-      I18n::Resources::Dashboard::Docs.sync_in
+      # Sync in Apps resources
+      # I18n::Resources::Apps::Animations.sync_in
       I18n::Resources::Apps::ExternalSources.sync_in
-      I18n::Resources::Dashboard::Scripts.sync_in
-      I18n::Resources::Dashboard::Courses.sync_in
-      I18n::Resources::Apps::Labs.sync_in
-      I18n::Resources::Pegasus::Markdown.sync_in
-      puts "Copying source files"
-      I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
-      redact_level_content
+      # I18n::Resources::Apps::Labs.sync_in
+      # # Sync in Pegasus resources
+      # I18n::Resources::Pegasus::Markdown.sync_in
+      # I18n::Resources::Pegasus::HourOfCode.sync_in
+      # # Sync in Dashboard resources
+      # I18n::Resources::Dashboard::Blocks.sync_in
+      # I18n::Resources::Dashboard::SharedFunctions.sync_in
+      # I18n::Resources::Dashboard::CourseOfferings.sync_in
+      # I18n::Resources::Dashboard::Standards.sync_in
+      # I18n::Resources::Dashboard::Docs.sync_in
+      # I18n::Resources::Dashboard::Scripts.sync_in
+      # I18n::Resources::Dashboard::Courses.sync_in
+      # Services::I18n::CurriculumSyncUtils.sync_in
+      # localize_level_and_project_content
+      # puts "Copying source files"
+      # I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
+      # redact_level_content
       puts "Sync in completed successfully"
     rescue => exception
       puts "Sync in failed from the error: #{exception}"

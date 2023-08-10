@@ -13,7 +13,6 @@ module I18n
           markdown_files_to_localize = %w[
             public/athome.md.partial
             public/break.md.partial
-            public/coldplay.md.partial
             public/csforgood.md
             public/curriculum/unplugged.md.partial
             public/educate/csc.md.partial
