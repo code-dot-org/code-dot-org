@@ -215,7 +215,7 @@ export const UnconnectedTeacherHomepage = ({
             headingText="Return to Your Application"
             descriptionText="Finish applying for our Professional Learning Program"
             buttonText="Finish Application"
-            buttonColor={Button.ButtonColor.orange}
+            buttonColor={Button.ButtonColor.brandSecondaryDefault}
             buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
@@ -226,7 +226,7 @@ export const UnconnectedTeacherHomepage = ({
             headingText="Return to Your Application"
             descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
             buttonText="Return to Application"
-            buttonColor={Button.ButtonColor.orange}
+            buttonColor={Button.ButtonColor.brandSecondaryDefault}
             buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
