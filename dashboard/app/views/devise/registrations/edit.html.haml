@@ -135,12 +135,12 @@
   - if current_user.verified_teacher?
     = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |form|
       %hr
-      %h2= 'AI Settings'
+      %h2= t('activerecord.attributes.user.ai_settings_header')
       .field
         = form.label :ai_rubrics_disabled, class: "label-bold" do
           = form.check_box :ai_rubrics_disabled
           %span{style: "position: relative; top: 3px"}
-            = 'Disable AI Rubric Assessment'
+            = t('activerecord.attributes.user.ai_rubrics_disabled')
       %div= form.submit t('crud.update'), id: 'edit-ai-settings', class: 'btn btn-warning'
 
 - if current_user.migrated?
