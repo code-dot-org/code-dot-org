@@ -9,8 +9,6 @@
   background-repeat: no-repeat, no-repeat;
   background-color: #360161;
   background-size: contain, 500px;
-  padding-bottom: 64px;
-
 
   &__by {
     display: flex;
@@ -71,59 +69,34 @@
 .partnership-ai {
   background: $neutral_light;
 
-  &__content {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-
-  }
-
   &__list {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 0 3rem;
   }
 
-  &__logo {
-    margin: 0 26px
-  }
-
-  @media screen and(max-width: 1279px) {
-    &__list {
-      justify-content: space-between;
-
-    }
+  @media screen and(max-width: $width-md) {
     &__logo {
       height: 35px;
-      margin: 0;
 
       &--iste {
-        height: 32px;
-      }
-
-      &--ets {
         height: 30px;
       }
     }
-
   }
+
   @media screen and (max-width: $width-sm) {
     &__list {
       align-items: center;
-      justify-content: space-between;
-      margin: 0;
-
+      justify-content: center;
+      gap: 0 1rem;
     }
 
     &__logo {
       margin: 20px;
       height: 30px;
-
-      &:last-child {
-        margin-right: auto;
-      }
 
       &--iste {
         height: 24px;
@@ -136,51 +109,6 @@
   }
 }
 
-.action-block {
-  &--explore {
-    .overline {
-      text-transform: uppercase;
-    }
-
-    .action-block__space {
-      height: 32px;
-      display: block;
-      @media screen and (max-width: $width-sm) {
-        display: none;
-      }
-    }
-
-  }
-}
-
-.partnership-ai + #clearboth + .desktop-feature {
-  display: none
-}
-
-.newsletter-signup {
-  padding-top: 40px;
-
-  .wrapper {
-    padding-bottom: 0;
-  }
-}
-
-.signup-iframe {
-  margin: 0 auto;
-  max-width: 1005px;
-  padding-bottom: calc(64px - 50px);
-  @media screen and (max-width: $width-sm) {
-    &__iframe {
-      height: 700px;
-    }
-  }
-
-}
-
-.intro {
-  padding-bottom: calc(64px - 10px);
-}
-
 .img {
   &--max {
     max-width: 100%;
@@ -188,36 +116,26 @@
 }
 
 .video-101 {
-  padding-bottom: 8px;
 
   &__text {
-    margin-bottom: 32px;
-  }
-
-  & a.link-button {
-    background: $neutral_white !important;
-    color: $neutral_dark !important;
-    border: 2px solid $neutral_dark;
-
-    &:hover {
-      color: white !important;
-      background-color: $brand_secondary_dark !important;
-      border-color: $brand_secondary_dark !important;
-    }
+    margin-bottom: 2rem;
   }
 
   .action-block {
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
     background: $neutral_white;
   }
-  &__image {
+
+  &__image,
+  &__video {
 
     @media (min-width: 971px) {
       margin: 20px 0 20px 20px;
       width: calc(50% - 20px);
     }
-    img {
-      width: 100%;
-    }
   }
+}
+
+.partnership-ai + #clearboth + .desktop-feature {
+  display: none;
 }

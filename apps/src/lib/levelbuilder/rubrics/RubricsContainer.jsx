@@ -75,7 +75,7 @@ export default function RubricsContainer({
           id="ui-test-add-new-concept-button"
         />
         <Button
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           text="Save your rubric"
           onClick={() => console.log('this will work later')}
           size={Button.ButtonSize.narrow}
