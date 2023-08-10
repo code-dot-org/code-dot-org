@@ -1,113 +1,82 @@
 ---
-title: Computer Science Fundamentals
+title: Join Our Engineering Team!
 theme: responsive_full_width
 ---
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/engineering-styles.css", rel: "stylesheet"}
 
-%section.hero-banner-basic.hero-banner-basic--accessibility
+%section.hero-banner-basic.hero-banner-basic--engineering
     .wrapper
         .flex-container
-            .text-wrapper.col-50.flex-container.align-items-center
+            .text-wrapper.col-60.flex-container.align-items-center
                 .hero-banner-basic__content
                     %h1{style: "color: white"}
-                        =hoc_s(:careers_hero_heading)
+                        =hoc_s(:engineering_hero_heading)
                     %p{style: "color: white"}
-                        =hoc_s(:careers_hero_desc)
-            .col-50.flex-container.justify-end
-                %img{src: "/images/about/careers/engineering/hero-image.png", alt: ""}
-        .clear
-careers_team.jpg
-
-%section
-    .wrapper
-        %div.col-50{style: "margin: .5rem 0 1rem;"}
-            = view :display_video_thumbnail, id: "intro_csf", video_code: "rNIM1fzJ8u0", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/curriculum_videos/curriculum_video_csf.mp4"
-        .text-wrapper.col-45{style: "float: right;"}
-            %h2=hoc_s(:csf_page_intro_heading)
-            %ul
-                %li=hoc_s(:csf_page_intro_list_01)
-                %li=hoc_s(:csf_page_intro_list_02)
-                %li=hoc_s(:csf_page_intro_list_03)
-                %li=hoc_s(:csf_page_intro_list_04)
-            %a.link-button{href: "#pick-a-course"}
-                =hoc_s(:call_to_action_explore_courses)
+                        =hoc_s(:engineering_hero_desc)
+                    %a{href: "https://code.org/about/careers#roles ", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_explore_title")}}
+                        =hoc_s(:call_to_action_open_positions)
+            .col-40.flex-container.justify-end
+                %img.hero-banner-basic__image{src: "/images/about/careers/engineering/hero-image.png", alt: ""}
         .clear
 
-%section.bg-neutral-light
+
+%section.engineering-team#accessibility-team
     .wrapper
-        = view :curriculum_glance_section, heading: hoc_s(:heading_curricula_at_a_glance), grades: hoc_s(:module_grade_k_5), duration: hoc_s(:module_duration_month_quarter), level: hoc_s(:module_level_beginner), tools: hoc_s(:csf_page_curriculum_glance_tools), devices: hoc_s(:csf_page_curriculum_glance_devices), professional_learning: hoc_s(:csf_page_curriculum_glance_professional_learning), topics: hoc_s(:csf_page_curriculum_glance_topics), accessibility_features: hoc_s(:csf_page_curriculum_glance_accessibility_features), languages: hoc_s(:csf_page_curriculum_glance_languages)
-
-%section.quote.bg-neutral-dark
-    .wrapper
-        %div.quotes-wrapper
-            %p.quote-text.large
-                =hoc_s(:csf_page_quote)
-            %p.no-margin-bottom
-                =hoc_s(:teacher_label_csf)
-
-%section#pick-a-course.bg-neutral-light
-    .wrapper
-        %h2=hoc_s(:csf_page_pick_a_course_heading)
-        %p=hoc_s(:csf_page_pick_a_course_desc)
-        %hr
-        %div.centered
-            %h3.heading-md
-                =hoc_s(:csf_page_pick_a_course_heading_02)
-            %div.flex-container.justify-center.wrap{style: "gap: 1rem"}
-                %a.link-button{href: "#csf-teacher-led"}
-                    =hoc_s(:curriculum_name_csf_teacher_led)
-                %a.link-button{href: "#csf-self-paced"}
-                    =hoc_s(:curriculum_name_csf_self_paced)
-                %a.link-button{href: "#csf-no-devices"}
-                    =hoc_s(:curriculum_name_csf_no_device)
-
-%section#csf-teacher-led
-    .wrapper
-        %h2=hoc_s(:csf_page_courses_heading)
-        %p=hoc_s(:csf_page_courses_desc)
-        = view :csf_page_courses
-
-= view :section_divider_line
-
-%section#csf-self-paced
-    .wrapper
-        %h2=hoc_s(:csf_page_courses_self_paced_heading)
-        %p=hoc_s(:csf_page_courses_self_paced_desc)
-        = view :csf_page_courses_self_paced
-
-= view :section_divider_line
-
-%section#csf-no-devices
-    .wrapper
-        %h2=hoc_s(:heading_no_devices)
+        %h2=hoc_s(:engineering_team_title)
         .action-block.action-block--two-col
-            %img.col-50{src: "/images/new-main.jpg", alt: ""}
+            %img{src: "/images/about/careers/engineering/careers_team.jpg", alt: hoc_s(:accessibility_explore_title), class: "col-50 action-block__image"}
             .text-wrapper.col-50
-                %h3=hoc_s(:no_devices_section_subhead)
-                %p=hoc_s(:no_devices_section_desc)
-                %a.link-button{href: "/curriculum/unplugged", target: "_blank", rel: "noopener noreferrer"}
-                    =hoc_s(:call_to_action_explore_unplugged_lesson)
+                %p.heading-sm=hoc_s(:engineering_team_card_text_1)
+                %p.heading-sm=hoc_s(:engineering_team_card_text_2)
+                %a{href: "https://code.org/about/careers#roles ", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_explore_title")}}
+                    =hoc_s(:call_to_action_open_positions)
+        .clear
+
+= view :section_divider_line
+
+%section.our-team-text
+    .wrapper
+        %h2=hoc_s(:engineering_our_team_title)
+        %p=hoc_s(:engineering_our_team_desc)
+        .our-team-text__divider.our-team-text__divider--small
+        %div
+            %img.our-team-text__image.our-team-text__image--1{src: "/images/about/careers/engineering/our-team--1.jpg", alt: hoc_s(:engineering_our_team_sub_title_1)}
+            %h3.heading-md=hoc_s(:engineering_our_team_sub_title_1)
+            %p=hoc_s(:engineering_our_team_text_1, markdown: :inline, locals: {youtube_url: "https://www.youtube.com/watch?v=YMjRTjonlWg"})
             .clear
 
-%section.bg-neutral-light
-    .wrapper
-        = view :resources_tabs
+            .our-team-text__divider
 
-%section
-    .wrapper
-        = view :curriculum_pages_pl_section, facilitator_desc: hoc_s(:professional_learning_section_block_facilitator_led_workshops_csf), apply_url: "/professional-development-workshops", modules_url: CDO.studio_url("/s/k5-onlinepd-2023")
+            %img.our-team-text__image.our-team-text__image--2{src: "/images/about/careers/engineering/our-team--2.jpg", alt: hoc_s(:engineering_our_team_sub_title_2)}
+            %h3.heading-md=hoc_s(:engineering_our_team_sub_title_2)
+            %p=hoc_s(:engineering_our_team_text_2)
+            .clear
+
+            .our-team-text__divider
+
+            %img.our-team-text__image.our-team-text__image--3{src: "/images/about/careers/engineering/our-team--3.jpg", alt: hoc_s(:engineering_our_team_sub_title_1)}
+            %h3.heading-md=hoc_s(:engineering_our_team_sub_title_3)
+            %p=hoc_s(:engineering_our_team_text_3)
+            .clear
+
+            .our-team-text__divider
+
+            %img.our-team-text__image.our-team-text__image--4{src: "/images/about/careers/engineering/our-team--4.jpg", alt: hoc_s(:engineering_our_team_sub_title_2)}
+            %h3.heading-md=hoc_s(:engineering_our_team_sub_title_4)
+            %p=hoc_s(:engineering_our_team_text_4)
+            .clear
 
 = view :section_divider_line
 
-%section.no-padding-bottom
+%section.no-padding-bottom.faq
     .wrapper
         %h2=hoc_s(:heading_faq)
-        = view :faq_csf
 
-%section
-    .wrapper
-        = view :support_and_questions_section
+        = view :faq_engineering
 
-= view :analytics_event_log_helper, event_name: AnalyticsConstants::CSF_CURRICULUM_PAGE_VISITED_EVENT
+        %a{href: "https://code.org/about/careers#roles", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_explore_title")}}
+            =hoc_s(:call_to_action_open_positions)
+
+

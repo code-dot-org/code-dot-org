@@ -4,260 +4,130 @@
   background-image: url("/images/about/careers/engineering/hero-bg.jpg");
   background-size: cover;
   background-color: #999;
+
+  &__image {
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .text-wrapper {
+    margin-right: 1.25rem;
+  }
+
+  a.link-button {
+    background-color: $neutral-white;
+    border-color: $neutral-white;
+    color: $neutral-dark;
+  }
+
   @media screen and (max-width: $width-sm) {
+    .text-wrapper {
+      margin-right: 0;
+    }
+
     .flex-container {
       flex-direction: column;
     }
   }
 }
 
-.careers-header {
-  border: 1px solid rgba(0, 173, 178, 0.25); /* gives the illusion of < 1px */
-  border-left: 0;
-  border-right: 0;
-  padding: 24px 0;
-}
-
-.careers__banner,
-.careers__banner--faq {
-  align-items: center;
-  background: url("/images/careers-at-code/jobs-banner.jpg") top right/contain no-repeat #00adbc;
-  display: flex;
-  margin-bottom: 32px;
-  padding: 18px 24px;
-  gap: 1em;
-}
-
-.careers__banner h1,
-.careers__banner--faq h2,
-.careers__banner--faq h3 {
-  color: #ffffff;
-  margin: 0;
-  width: 70%;
-}
-
-.careers__banner--faq a:link,
-.careers__banner--faq a:visited {
-  color: #ffffff;
-  font-family: "Gotham 4r", sans-serif;
-}
-
-.careers__banner--faq i {
-  color: #ffffff;
-  font-size: 72px;
-}
-
-.careers-video {
-  padding-right: 12px;
-}
-
-.careers__intro-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.careers__intro-text p {
-  color: #000000;
-  font-weight: bold;
-}
-
-.careers__explore {
-  align-self: center;
-}
-
-.careers__explore-button {
-  font-family: "Gotham 7r", sans-serif;
-  font-size: 16px;
-  padding: 6px 24px;
-}
-
-.careers__section-container {
-  min-height: 100px;
-  overflow: hidden;
-}
-
-.careers__benefits {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-}
-
-.careers__benefit {
-  box-sizing: border-box;
-  display: flex;
-  width: 50%;
-  margin: 6px 0;
-}
-
-.careers__benefit__title {
-  color: #ffffff;
-  font-size: 18px;
-  width: 100%;
-  padding: 18px;
-  display: flex;
-  align-items: center;
-}
-
-.careers__benefit:nth-child(odd) {
-  padding-right: 12px;
-}
-
-.careers__benefit:nth-child(odd) .careers__benefit__title {
-  margin-right: 12px;
-}
-
-.careers__benefit:nth-child(even) .careers__benefit__title {
-  margin-left: 12px;
-  text-align: right;
-}
-
-.careers__benefit__icon {
-  min-width: 25%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.careers__benefit__icon img {
-  width: 58px;
-}
-
-.careers__benefit--teal {
-  background: linear-gradient(90deg, #4fabba, #79c8d1);
-}
-
-.careers__benefit__icon.careers__benefit--teal {
-  background: #4fabba;
-}
-
-.careers__benefit--green {
-  background: linear-gradient(90deg, #babe41, #aaac48);
-}
-
-.careers__benefit__icon.careers__benefit--green {
-  background: #babe41;
-}
-
-.careers__benefit--orange {
-  background: linear-gradient(90deg, #e19444, #f1a73b);
-}
-
-.careers__benefit__icon.careers__benefit--orange {
-  background: #f1a73b;
-}
-
-.careers__benefit--purple {
-  background: linear-gradient(90deg, #7665a0, #5f5988);
-}
-
-.careers__benefit__icon.careers__benefit--purple {
-  background: #7665a0;
-}
-
 ul li:before {
   content: "";
 }
 
-.careers__team-photos {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 0 24px 0;
-}
-
-.careers__team-photos img {
-  max-height: 198px;
-  max-width: 100%;
-  margin: 12px 0;
-}
-
-.careers__team-photos img:first-of-type {
-  margin-right: 12px;
-}
-
-.careers__unifying-approach {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.careers__unifying-approach img {
-  margin-top: 1.5em;
-}
-
-@media screen and (max-width: 970px) {
-  .careers__banner {
-    background-position-x: 125%;
-  }
-
-  .careers__banner h1 {
-    width: 55%;
-  }
-
-  .careers__banner--faq {
-    background-position: top right;
-  }
-
-  .careers__banner--faq h2,
-  .careers__banner--faq h3 {
-    width: 50%;
-  }
-
-  .careers-video {
-    padding-right: 0;
-  }
-
-  .careers__benefit__title {
-    font-size: 15px;
-    font-weight: 700;
-  }
-
-  .careers__benefit__icon img {
-    width: 48px;
-  }
-
-  .careers__unifying-approach {
-    justify-content: center;
+.engineering-team {
+  .action-block {
+    &__image {
+      @media screen and (min-width: 971px) {
+        object-fit: cover;
+        object-position: left;
+      }
+    }
   }
 }
 
-@media screen and (max-width: 600px) and (min-width: 470px) {
-  .careers__banner {
-    background-position: top right;
+.our-team-text {
+  @media (max-width: 767px) {
+    &__image {
+      margin-top: 0;
+      margin-bottom: 1.8rem;
+      max-width: 100%;
+    }
+    &__image--1 {
+      margin-top: 0;
+    }
+    &__image--2 {
+      margin-top: 0;
+    }
+    &__image--3 {
+      margin-left: 1.25rem;
+      margin-bottom: 1.25rem;
+      max-width: 15rem;
+      width: 50%;
+      float: right;
+
+    }
+    &__divider {
+      height: 2.5rem;
+
+      &--small {
+        height: 1.75rem;
+      }
+    }
   }
 
-  .careers__banner h1 {
-    max-width: 70%;
-    min-width: 60%;
-    width: auto;
+  @media (min-width: 768px) {
+    &__image--1 {
+      max-width: 29.4rem;
+      float: right;
+      margin-left: 3.75rem;
+
+    }
+    &__image--2 {
+      max-width: 22.8rem;
+      float: left;
+      margin-right: 3.75rem;
+    }
+    &__image--3 {
+      max-width: 16.8rem;
+      float: right;
+      margin-left: 3.75rem;
+
+    }
+    &__image--4 {
+      max-width: 25.5rem;
+      float: left;
+      margin-right: 3.75rem;
+    }
+    &__divider {
+      height: 3.75rem;
+
+      &--small {
+        height: 3rem;
+      }
+    }
+
   }
 }
 
-@media screen and (max-width: 560px) {
-  .careers__banner--faq {
-    background: #00adbc;
-  }
-
-  .careers__banner--faq h2,
-  .careers__banner--faq h3 {
-    width: 100%;
-  }
-  .careers__benefit {
-    width: 100%;
-  }
-
-  .careers__benefit:nth-child(odd) {
-    padding-right: 0;
-  }
-
-  .careers__benefit:nth-child(even) .careers__benefit__title {
-    text-align: left;
+.no-padding-bottom {
+  .link-button {
+    margin-top: 2.5rem;
+    @media (max-width: 767px) {
+      margin-bottom: 2.5rem;
+    }
   }
 }
 
-@media screen and (max-width: 475px) {
-  .careers__banner {
-    padding: 12px;
+.engineering-team,
+.our-team-text {
+  padding-bottom: calc(4rem - 1rem);
+}
+
+.faq {
+  b {
+    font-family: $gotham-bold;
+
   }
 }
