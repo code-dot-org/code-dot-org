@@ -20,6 +20,16 @@ const defaultLearningGoal = {
       understanding: 2,
       teacherDescription: 'Student is able to write some correct code',
     },
+    {
+      id: 3,
+      understanding: RubricUnderstandingLevels.LIMITED,
+      teacherDescription: 'Student is able to write partially correct code',
+    },
+    {
+      id: 4,
+      understanding: RubricUnderstandingLevels.NONE,
+      teacherDescription: 'Student is unable to write correct code',
+    },
   ],
 };
 
@@ -51,6 +61,16 @@ export const AiEnabledFeedbackAvailable = () => (
   <LearningGoal
     learningGoal={{...defaultLearningGoal, aiEnabled: true}}
     teacherHasEnabledAi
+    canProvideFeedback
+  />
+);
+
+export const WithTipsFeedbackAvailable = () => (
+  <LearningGoal
+    learningGoal={{
+      ...defaultLearningGoal,
+      tips: 'Show some tips for evaluation\n\nPossibly use newlines and _some_ **markdown**',
+    }}
     canProvideFeedback
   />
 );
