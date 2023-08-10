@@ -1259,7 +1259,7 @@ class BlocklyTest < ActiveSupport::TestCase
 
     I18n.expects(:t).with('expected-blockly-level', scope: [:data, 'failure_message_overrides'], default: nil, smart: true).once.returns('expected-blockly-level-property-translation')
 
-    assert_equal 'expected-blockly-level-property-translation', level.get_localized_property('failure_message_overrides')
+    assert_equal 'expected-blockly-level-property-translation', level.get_localized_property('failure_message_override')
   end
 
   test 'get_localized_property returns nil when level should not be localized' do
@@ -1269,7 +1269,7 @@ class BlocklyTest < ActiveSupport::TestCase
 
     I18n.expects(:t).with('expected-blockly-level', scope: [:data, 'failure_message_overrides'], default: nil, smart: true).never
 
-    assert_nil level.get_localized_property('failure_message_overrides')
+    assert_nil level.get_localized_property('failure_message_override')
   end
 
   test 'get_localized_property returns nil when value is nil' do
@@ -1279,13 +1279,13 @@ class BlocklyTest < ActiveSupport::TestCase
 
     I18n.expects(:t).with('expected-blockly-level', scope: [:data, 'failure_message_overrides'], default: nil, smart: true).never
 
-    assert_nil level.get_localized_property('failure_message_overrides')
+    assert_nil level.get_localized_property('failure_message_override')
   end
 
   test 'localized_failure_message_override returns failure_message_override property translation' do
     level = Blockly.new
 
-    level.expects(:get_localized_property).with('failure_message_overrides').once.returns('expected_failure_message_override_translation')
+    level.expects(:get_localized_property).with('failure_message_override').once.returns('expected_failure_message_override_translation')
 
     assert_equal 'expected_failure_message_override_translation', level.localized_failure_message_override
   end
