@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2023-07-25 23:07:17 UTC",
+    "serialized_at": "2023-08-08 17:54:31 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8843,7 +8843,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/coursee-2022/resources",
+      "url": "/s/coursee-2023/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -8854,7 +8854,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursee-2022/standards",
+      "url": "/s/coursee-2023/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -8865,7 +8865,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursee-2022/vocab",
+      "url": "/s/coursee-2023/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -10615,5 +10615,14 @@
         "opportunity_standard.shortcode": "4.MD.5.b"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }
