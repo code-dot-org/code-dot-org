@@ -29,7 +29,7 @@ const ExpandedCurriculumCatalogCard = ({
   useEffect(() => {
     const subjects = subjectsRef.current;
     if (subjects.scrollWidth > 410) {
-      setTopics(i18n.topic() + ': ' + 'Multiple');
+      setTopics(i18n.topic() + ': ' + i18n.multiple());
     }
   }, []);
 
@@ -104,36 +104,36 @@ const ExpandedCurriculumCatalogCard = ({
               </div>
               <div className={style.linksContainer}>
                 <div className={style.resourcesContainer}>
-                  <h6>Available Resources</h6>
+                  <h6>{i18n.availableResources()}</h6>
                   <hr className={style.thickDivider} />
                   <a className={style.bodyText} href="#">
-                    Lesson Plans
+                    {i18n.lessonPlans()}
                   </a>
                   <hr className={style.horizontalDivider} />
                   <a className={style.bodyText} href="#">
-                    Slide Decks
+                    {i18n.slideDecks()}
                   </a>
                   <hr className={style.horizontalDivider} />
                   <a className={style.bodyText} href="#">
-                    Activity Guides
+                    {i18n.activityGuides()}
                   </a>
                   <hr className={style.horizontalDivider} />
                   <a className={style.bodyText} href="#">
-                    Answer Keys/Exemplars
+                    {i18n.answerKeysExemplars()}
                   </a>
                   <hr className={style.horizontalDivider} />
                   <a className={style.bodyText} href="#">
-                    Project Rubrics
+                    {i18n.projectRubrics()}
                   </a>
                 </div>
                 <div className={style.professionalLearning}>
-                  <h6>Professional Learning</h6>
+                  <h6>{i18n.professionalLearning()}</h6>
                   <hr className={style.thickDivider} />
                   <a
                     className={style.professionalLearningText}
                     href={professionalLearningProgram}
                   >
-                    Facilitator led workshops
+                    {i18n.facilitatorLedWorkshops()}
                     <FontAwesome
                       icon="arrow-up-right-from-square"
                       className="fa-solid"
@@ -144,7 +144,7 @@ const ExpandedCurriculumCatalogCard = ({
                     className={style.professionalLearningText}
                     href={selfPacedPlCourseOfferingPath}
                   >
-                    Self-paced PL
+                    {i18n.selfPacedPl()}
                     <FontAwesome
                       icon="arrow-up-right-from-square"
                       className="fa-solid"
@@ -176,7 +176,7 @@ const ExpandedCurriculumCatalogCard = ({
                 aria-label={i18n.quickViewDescription({
                   course_name: courseDisplayName,
                 })}
-                text={i18n.learnMore()}
+                text={i18n.seeCurriculumDetails()}
                 style={{flex: 1}}
               />
               <Button
@@ -184,7 +184,7 @@ const ExpandedCurriculumCatalogCard = ({
                 type="button"
                 onClick={assignButtonOnClick}
                 aria-label={assignButtonDescription}
-                text="Assign to class sections"
+                text={i18n.assignToClassSections()}
                 style={{flex: 1}}
               />
             </div>
@@ -196,7 +196,7 @@ const ExpandedCurriculumCatalogCard = ({
               </a>
             </div>
             <div className={style.relatedContainer}>
-              <h6>Related Curricula</h6>
+              <h6>{i18n.relatedCurricula()}</h6>
               <hr className={style.thickDivider} />
             </div>
           </div>
