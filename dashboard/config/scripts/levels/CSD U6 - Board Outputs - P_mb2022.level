@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:44:44.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -56,21 +61,16 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "teacher_markdown": "When the button on the screen is clicked, the code will turn on one of the LEDs on the `ledScreen`. Students may predict that one of the \"corners\" will turn on, but will surprised to see that one of the LEDs one-level in turns on instead. This is because the `ledScreen` starts at index `0` - if we wanted to turn on the corner, we should use `ledScreen(0, 0)`.\r\n\r\nStudents may also be unsure which corner will illuminate and may be surprised to see the upper-left corner illuminate. This is because the `ledScreen` starts in the upper-left corner with `(0, 0)`. Students will soon receive a resource they can use to keep track of the positions of the LEDs on the micro:bit.",
+    "contained_level_names": [
+      "CSD U6 LEDbutton predict embed_mb2022"
+    ],
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "contained_level_names": [
-      "CSD U6 LEDbutton predict embed_mb2022"
     ]
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:44:44.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:44:44.754+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - P_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - P_2222\"},{\"changed_at\":\"2023-02-03 20:30:50 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"palette_category_at_start\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-03 20:34:11 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-13 22:48:37 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"hide_view_data_button\",\"start_blocks\",\"start_html\",\"map_reference\",\"teacher_markdown\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 20:39:29 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-04-03 18:36:55 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-04-03 18:37:50 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:44:44.754+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - P_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - P_2222\"},{\"changed_at\":\"2023-02-03 20:30:50 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"palette_category_at_start\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-03 20:34:11 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-13 22:48:37 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"hide_view_data_button\",\"start_blocks\",\"start_html\",\"map_reference\",\"teacher_markdown\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 20:39:29 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-04-03 18:36:55 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-04-03 18:37:50 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-09 20:41:07 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-09 20:44:23 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-09 20:48:10 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-09 20:50:52 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

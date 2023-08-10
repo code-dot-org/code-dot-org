@@ -19,8 +19,7 @@ module I18n
   module SyncIn
     def self.perform
       puts "Sync in starting"
-
-      I18n::Metrics.report_runtime('CurriculumSyncUtils', 'in') {Services::I18n::CurriculumSyncUtils.sync_in}
+      I18n::Resources::Dashboard::CurriculumContent.sync_in
       I18n::Resources::Pegasus::HourOfCode.sync_in
       I18n::Metrics.report_runtime('localize_level_and_project_content', 'in') {localize_level_and_project_content}
       I18n::Resources::Dashboard::Blocks.sync_in
