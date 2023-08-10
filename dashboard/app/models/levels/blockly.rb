@@ -456,7 +456,7 @@ class Blockly < Level
     if should_localize? && try(property_name)
       I18n.t(
         name,
-        scope: [:data, property_name.pluralize],
+        scope: [:data, property_name],
         default: nil,
         smart: true
       )
