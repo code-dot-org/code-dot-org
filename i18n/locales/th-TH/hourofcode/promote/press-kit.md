@@ -1,5 +1,5 @@
 ---
-title: Press Kit
+title: ชุดสื่อมวลชน
 ---
 
 {{ signup_button }}

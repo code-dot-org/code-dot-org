@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2023-07-28T17:41:14.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "instructions_important": "false",
-    "long_instructions": "# Collaborative and Independent Work\r\nA common misconception students bring to programming is that programming is an independent activity.  But in reality, programmers collaborate and communicate frequently!  \r\n\r\nThere is also a time and place for independent work while students are learning to code.  As the teacher, it is your role to consider when, where, and how you want to encourage collaborative work vs. independent work in your classroom.  \r\n\r\nBefore we develop a framework for when we want to encourage students to work independently or collaboratively, let’s brainstorm some pros and cons of each of these options.  \r\n\r\n## Reflect:  \r\n* What are some pros and cons of having students work independently when programming?\r\n* What are some pros and cons of having students work collaboratively when programming?\r\n\r\n",
+    "long_instructions": "# Collaborative and Independent Work\r\n##### A common misconception students bring to programming is that programming is an independent activity.  But in reality, programmers collaborate and communicate frequently!  \r\n\r\n##### There is also a time and place for independent work while students are learning to code.  As the teacher, it is your role to consider when, where, and how you want to encourage collaborative work vs. independent work in your classroom.  \r\n\r\n##### Before we develop a framework for when we want to encourage students to work independently or collaboratively, let’s brainstorm some pros and cons of each of these options.  \r\n\r\n## Reflect:  \r\n* ##### What are some pros and cons of having students work independently when programming?\r\n* ##### What are some pros and cons of having students work collaboratively when programming?\r\n\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -20,8 +21,9 @@
     "name_suffix": "_2023",
     "allow_multiple_attempts": "true"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-07-28T17:41:14.150+00:00\",\"changed\":[\"cloned from \\\"CSP - PL - Collaboration Reflection_2022\\\"\"],\"cloned_from\":\"CSP - PL - Collaboration Reflection_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-07-28T17:41:14.150+00:00\",\"changed\":[\"cloned from \\\"CSP - PL - Collaboration Reflection_2022\\\"\"],\"cloned_from\":\"CSP - PL - Collaboration Reflection_2022\"},{\"changed_at\":\"2023-08-01 23:52:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>

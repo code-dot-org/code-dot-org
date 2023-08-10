@@ -16,12 +16,6 @@ module I18n
 
             FileUtils.mkdir_p(I18N_SOURCE_DIR_PATH)
 
-          # Preparing Oceans tutorial
-          # TODO: move the file to the `external-sources` folder instead of `blockly-mooc`
-          labs_dir = CDO.dir(File.join(I18N_SOURCE_DIR, 'blockly-mooc'))
-          FileUtils.mkdir_p(labs_dir)
-          FileUtils.cp(CDO.dir('apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json'), File.join(labs_dir, 'fish.json'))
-
           # ml-playground (AI Lab) files
 
 

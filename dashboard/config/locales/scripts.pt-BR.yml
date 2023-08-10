@@ -2094,6 +2094,8 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+            lessonGroup-5:
+              display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
         csd1-dlp:
           description: 'Esta é a Unidade 1 do Plano de Aprendizagem Mais Profunda
@@ -3648,7 +3650,7 @@ pt:
             lessonGroup-2:
               display_name: Capítulo 1 - Compreendendo o Aprendizado de Máquina
             lessonGroup-3:
-              display_name: Capítulo 2 - Crie um aplicativo de aprendizado de máquina
+              display_name: Capítulo 2 - Crie um aplicativo de Aprendizado de Máquina
             lessonGroup-4:
               display_name: Questionário
           student_description: Esta unidade é uma introdução prática ao desenvolvimento
@@ -6158,6 +6160,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
         focus-on-coding2-2023:
           description: |-
@@ -6411,6 +6415,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
         focus-on-creativity2-2023:
           description: |-
@@ -6664,6 +6670,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
         focus-on-data2:
           description: "A unidade de Dados e Sociedade aborda a importância de usar
             dados para solucionar problemas e destaca como os computadores podem ajudar
@@ -6862,6 +6870,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-4:
+              display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
         focus-on-design-with-purpose2-2023:
           description: |-
@@ -7169,6 +7179,8 @@ pt:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+            lessonGroup-5:
+              display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
         focus-on-hardware2-2023:
           description_short: Aprenda como as pessoas usam computadores para resolver
@@ -7954,7 +7966,7 @@ pt:
               display_name: Dia 2
           lessons:
             lesson-10:
-              name: Conclusão
+              name: Fechamento
           title: Dia 2
         pl-csd-summer-day3:
           lesson_groups:
@@ -7967,7 +7979,7 @@ pt:
               display_name: Dia 4
           lessons:
             lesson-12:
-              name: Conclusão
+              name: Fechamento
           title: Dia 4
         playlab:
           description: Crie uma história ou um jogo no Laboratório!
@@ -8799,22 +8811,22 @@ pt:
             lesson-1:
               name: Introdução
             lesson-12:
-              name: Conclusão
+              name: Fechamento
           title: Dia 1
         virtual-pl-csd-summer-day2:
           lessons:
             lesson-10:
-              name: Conclusão
+              name: Fechamento
           title: Dia 2
         virtual-pl-csd-summer-day3:
           lessons:
             lesson-12:
-              name: Conclusão
+              name: Fechamento
           title: Dia 3
         virtual-pl-csd-summer-day4:
           lessons:
             lesson-13:
-              name: Conclusão
+              name: Fechamento
           title: Dia 4
         virtual-pl-csd-summer-day5:
           lessons:

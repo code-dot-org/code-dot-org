@@ -56,7 +56,7 @@
   csedweek_map_legend_title: "Legjend"
   csedweek_map_legend_event: "Ngjarje e Orës së Kodimit"
   csedweek_map_legend_cs_tech_jam: "Ngjarje speciale"
-  cded_sign_up: "Rregjistrohu"
+  cded_sign_up: "Regjistrohu"
   cded_try_it: "Provoje"
   try_now: "Mëso më Shumë"
   california_heading: "Kerkoj shkollës tënde që të të mësojë shkencën kompjuterike"
@@ -294,7 +294,7 @@
   homepage_action_text_hoc: "Një Orë e Kodimit për çdo nxënës."
   homepage_action_text_num_served: "# e dorëzuar"
   homepage_action_text_join_us: "Na u bashko!"
-  homepage_action_text_sign_up: "Rregjistrohu"
+  homepage_action_text_sign_up: "Regjistrohu"
   homepage_action_text_try_it: "Provoje"
   homepage_action_text_volunteers: "Kërkohen vullnetarë teknik"
   homepage_action_text_codevideo: "Ndiq videon"
@@ -448,7 +448,7 @@
   video_5min: "5 minutë"
   speak_another_language: "Flet një gjuhë tjetër?"
   help_translate: "Na ndihmo të përkthejmë."
-  are_you_teacher: "A jeni një mësues?"
+  are_you_teacher: "A jeni një mësimdhënës?"
   volunteer_engineer_submission_title: "Frymëzo nxënësit dhe vullnetarizo"
   volunteer_engineer_submission_subtitle_generic: '100,000 mësues do të organizojnë një Orë të Kodimit në klasën e tyre këtë vit. më 7-13 dhjetor 2015. Ata duan ndihmën tënde! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} e mësuesve kanë nevojë për vullnetarë.<br>%{num_volunteers} vullnetarë janë regjistruar. Bashkoju atyre."
@@ -674,7 +674,7 @@
   code_sign_up: "Rregjistrohu për të marrë pjesë në Javën Edukative për SHK"
   learn_more: "Mëso më Shumë"
   learn_sign_up_description: "Regjostrohuni që të bëheni pjesë e Orës së Kodimit gjatë Javës së Mësimdhënies së Shkencave Kompjuterike"
-  learn_sign_up_button: "Rregjistrohu"
+  learn_sign_up_button: "Regjistrohu"
   learn_educator_resources_description: "Mësoni si të jepni mësim për Orën e Kodimit"
   learn_educator_resources_button: "Burimet e Mësimdhënësit"
   hoc2014_try_new_tutorials: "Provo tutorialet e reja të Orës së Kodimit"
@@ -759,6 +759,7 @@
   courseb-2022_name: Kursi B (2022)
   coursec-2022_name: Kursi C (2022)
   coursed-2022_name: Kursi D (2022)
+  coursee-2022_name: Kursi E (2022)
   accelerated_name: "Kurs i Avancuar"
   20-hour_name: Kurs i Avancuar
   gumball_name: "Bota Mahnitëse e Gumball"

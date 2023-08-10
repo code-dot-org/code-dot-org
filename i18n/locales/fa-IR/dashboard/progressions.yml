@@ -229,7 +229,7 @@ fa:
       Layout with CSS: طرح بندی با CSS
       Learning from Simulations: یادگیری از طریق شبیه سازی
       Lesson Extra: موارد اضافه درسی
-      Lesson Extras: موارد اضافه درسی
+      Lesson Extras: مطالعه مباحث بیشتر
       Level Overview: نمای کلی مرحله
       Levels: مراحل
       Light Show: نمایش نور
@@ -270,7 +270,7 @@ fa:
       'Mini-project: Chase Game': 'پروژه کوچک: بازی تعقیب و گریزی'
       'Mini-project: Flappy Game': 'پروژه کوچک: بازی فلاپی'
       'Mini-project: Interactive Poster': 'پروژه کوچک: پوستر تعاملی'
-      'Mini-project: Jorge the Dog': 'پروژه کوچک: جرج و سگ'
+      'Mini-project: Jorge the Dog': 'پروژه کوچک: خورخه سگه'
       'Mini-project: Sticker Art': 'پروژه کوچک: هنر برچسب'
       'Mini-project: Sticker Design': 'پروژه کوچک: طراحی برچسب'
       Modify simulation variables: اصلاح متغیرهای شبیه سازی
@@ -302,7 +302,7 @@ fa:
       Pizza Recommendations: پیتزاهای توصیه شده
       Plan Your Project: طرح ریزی پروژه خود
       Plan Your Scene: طرح ریزی صحنه خود
-      Planning: طرح ریزی
+      Planning: برنامه ریزی
       Platform Jumper - Background and Variables: اتصال دهنده بستر - پس زمینه و متغیرها
       Platform Jumper - Items: اتصال دهنده بستر - موارد
       Platform Jumper - Platforms: اتصال دهنده بستر - بسترها
@@ -428,7 +428,7 @@ fa:
       Variables: متغیرها
       Velocity: سرعت
       Velocity and the Counter Pattern: الگوی شمارشگر و سرعت
-      Video: ویدیو
+      Video: ویدئو
       Video - Encryption and Public Keys: فیلم - کلیدهای عمومی و رمزنگاری
       Video - Functions: فیلم - توابع
       Video - If Statements: فیلم - گزاره های شرطی
@@ -481,7 +481,7 @@ fa:
       'Video: Introducing Sprite Lab': 'فیلم: معرفی آزمایشگاه اسپرایت'
       'Video: Introduction to Play Lab': 'فیلم: معرفی آزمایشگاه بازی'
       'Video: Introduction to Variables': 'فیلم: معرفی و متغیرها'
-      'Video: Loops in Artist': 'فیلم: حلقه ها در Artist'
+      'Video: Loops in Artist': 'ویدئو: حلقه ها در هنرمند'
       'Video: Loops with the Artist': 'فیلم: حلقه ها با Artist'
       'Video: Lots of Sprites': 'فیلم: تعداد زیادی اسپرایت'
       'Video: Managing Disagreement': 'فیلم: اختلاف مدیریت'
@@ -519,7 +519,7 @@ fa:
       'Video: Star Wars Project': 'فیلم: پروژه Star Wars'
       'Video: Teamwork': 'فیلم: کار گروهی'
       'Video: Text and Prompts': 'فیلم: متن و پیامواره ها'
-      'Video: The Artist in Code Studio': 'فیلم: Artist در استودیو کدنویسی'
+      'Video: The Artist in Code Studio': 'ویدئو: هنرمند در استودیوی کدنویسی'
       'Video: The Big Event - Unplugged Activity': 'فیلم: رویداد بزرگ - فعالیت بدون کار با رایانه'
       'Video: The Collector': 'ویدئو: جمع‌کننده'
       'Video: The Harvester': 'فیلم: برداشت کننده'
