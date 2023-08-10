@@ -14,8 +14,11 @@ import {ProjectLevelData} from '../../types';
 const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {
+  /** Base asset URL for images */
   baseUrl: string;
+  /** If the instructions panel should be rendered vertically. Defaults to false */
   vertical?: boolean;
+  /** If the instructions panel should be rendered on the right side of the screen. Defaults to false. */
   right?: boolean;
 }
 
@@ -25,8 +28,8 @@ interface InstructionsProps {
  */
 const Instructions: React.FunctionComponent<InstructionsProps> = ({
   baseUrl, // Currently unused, but may be needed in the future if we support instructions images.
-  vertical,
-  right,
+  vertical = false,
+  right = false,
 }) => {
   // Prefer using long instructions if available, otherwise fall back to level data text.
   const instructionsText = useSelector(
@@ -62,12 +65,19 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 };
 
 interface InstructionsPanelProps {
+  /** Primary instructions text to display. */
   text: string;
+  /** Optional message to display under the main text. This is typically a validation message. */
   message?: string;
+  /** Optional image URL to display. */
   imageUrl?: string;
+  /** If the next button should be shown. */
   showNextButton?: boolean;
+  /** Callback to call when clicking the next button. */
   onNextPanel?: () => void;
+  /** If the instructions panel should be rendered vertically. Defaults to false */
   vertical?: boolean;
+  /** If the instructions panel should be rendered on the right side of the screen. Defaults to false. */
   right?: boolean;
 }
 
