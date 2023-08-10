@@ -1,23 +1,18 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
-  "created_at": "2023-02-01T15:16:44.000Z",
+  "created_at": "2023-08-09T15:13:14.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
     "submittable": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "csa_view_mode": "neighborhood",
-    "start_sources": {
-      "MyNeighborhood.java": {
-        "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\n    painter pedro = new painter();\n\n    for(int i = 0; i < 7; i++){\n      pedro.move();\n    }\n    \n  }\n}",
-        "isVisible": true,
-        "tabOrder": 0
-      }
-    },
-    "long_instructions": "# Debugging practice\r\n\r\nThe `Painter` should move to the to right hand corner of the neighborhood but it isn’t working as expected. \r\n\r\n## Do this:\r\n1. Run the code.\r\n2. Read the error message \r\n3. Use the error message to help determine what you need to fix in your code.\r\n4. Fix the program.\r\n\r\n::: details [**Need a hint?**]\r\nWhen reading the error message notice what line the error is occurring on and notice where the `^` character is pointing.  This should help direct you to the bug. \r\n:::",
+    "project_template_level_name": "CSA U1L9-Selection PBT_2023",
+    "long_instructions": "##Investigate and Modify\r\n\r\n**THIS IS A COPY OF U3L4 from the Code.org curriculum**\r\n\r\nRun the program to observe the results.\r\n\r\n✅ **TO DO:** Experiment with the program and answer the questions on the <a href=\"https://docs.google.com/document/d/19ANtAu7p4M4gifIAYntFMehTp4DzLklIIKMKOXLwHJk/edit?usp=sharing\" target=\"_blank\">**Investigate: Selection Statements**</a> activity guide.",
     "serialized_maze": [
       [
         {
@@ -26,9 +21,19 @@
           "assetId": 0
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 61
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 61
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 61
         },
         {
           "tileType": 1,
@@ -49,6 +54,38 @@
           "tileType": 1,
           "value": 0,
           "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 1,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 12
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 13
         },
         {
           "tileType": 1,
@@ -83,56 +120,14 @@
           "assetId": 0
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 14
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        }
-      ],
-      [
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "assetId": 15
         },
         {
           "tileType": 1,
@@ -167,14 +162,14 @@
           "assetId": 0
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 16
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 17
         },
         {
           "tileType": 1,
@@ -209,14 +204,14 @@
           "assetId": 0
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 18
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 19
         },
         {
           "tileType": 1,
@@ -355,9 +350,11 @@
           "assetId": 0
         }
       ]
+    ],
+    "encrypted_examples": [
+
     ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-02-01T15:16:44.948+00:00\",\"changed\":[\"cloned from \\\"CSA U1L3-L0_2022\\\"\"],\"cloned_from\":\"CSA U1L3-L0_2022\"},{\"changed_at\":\"2023-02-01 15:19:52 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-02-01 15:21:10 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\",\"teacher_markdown\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-02-01 15:23:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-02-01 15:23:51 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-08-09 19:00:58 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-08-09T15:13:14.583+00:00\",\"changed\":[\"cloned from \\\"CSA U1L9-L2_2023\\\"\"],\"cloned_from\":\"CSA U1L9-L2_2023\"},{\"changed_at\":\"2023-08-09 15:14:30 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
 </Javalab>
