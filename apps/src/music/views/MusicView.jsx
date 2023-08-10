@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import Instructions from './Instructions';
+import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import Controls from './Controls';
 import Timeline from './Timeline';
 import MusicPlayer from '../player/MusicPlayer';
