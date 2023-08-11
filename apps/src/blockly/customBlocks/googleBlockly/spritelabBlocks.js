@@ -10,13 +10,14 @@ export const blocks = {
   // Creates and returns a toggle button field. This field should be
   // added to the block after other inputs have been created.
   initializeMiniToolbox() {
-    // Function to toggle the flyout visibility
+    // Function to create the flyout
     const createFlyoutField = function (block) {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
       const flyoutField = new Blockly.FieldFlyout(_, {
         flyoutKey: flyoutKey,
         sizingBehavior: 'fitContent',
         name: 'FLYOUT',
+        isFlyoutVisible: true,
       });
       block
         .appendDummyInput('flyout_input')
@@ -24,11 +25,13 @@ export const blocks = {
       return flyoutField;
     };
 
+    // Function to toggle the flyout visibility, which actually creates or
+    // deletes the flyout depending on the current visibility.
     const toggleFlyout = function () {
       const block = this.getSourceBlock();
       if (!block.getInput('flyout_input')) {
         const flyoutField = createFlyoutField(block);
-        flyoutField.showEditor_();
+        flyoutField.showEditor();
         flyoutField.render_();
       } else {
         block.removeInput('flyout_input');
@@ -63,6 +66,11 @@ export const blocks = {
   // Adds a toggle button field to a block. Requires other inputs to already exist.
   appendMiniToolboxToggle(miniToolboxBlocks, flyoutToggleButton) {
     this.setInputsInline(true);
+    // We set the inputs to align left so that if the flyout is larger than the
+    // inputs will be aligned with the left edge of the block.
+    this.inputList.forEach(input => {
+      input.setAlign(Blockly.Input.Align.LEFT);
+    });
 
     // Insert the toggle field at the beginning for the first input row.
     const firstInput = this.inputList[0];
@@ -148,46 +156,59 @@ export const blocks = {
         this.imageSourceId = state['imageSourceId'];
         if (this.imageSourceId) {
           updatePointerBlockImage(this, spriteLabPointers, this.imageSourceId);
+          const imageSourceBlock = Blockly.getMainWorkspace().getBlockById(
+            this.imageSourceId
+          );
+          if (imageSourceBlock) {
+            const imageSourceBlockWorkspace = imageSourceBlock.workspace;
+            imageSourceBlockWorkspace.addChangeListener(event => {
+              onBlockImageSourceChange(event, this);
+            });
+          }
         }
       };
 
       // When the block's parent workspace changes, we check to see if
       // we need to update the shadowed block image.
       this.onchange = function (event) {
-        const imagePreview = this.inputList && this.inputList[0].fieldRow[1];
-        if (!imagePreview) {
-          return;
-        }
-        if (
-          event.type === Blockly.Events.BLOCK_DRAG &&
-          event.blockId === this.id
-        ) {
-          // If this is a start event, prevent image changes.
-          // If it is an end event, allow image changes again.
-          imagePreview.setAllowImageChange(!event.isStart);
-        }
-        if (
-          (event.type === Blockly.Events.BLOCK_CREATE &&
-            event.blockId === this.id) ||
-          (event.type === Blockly.Events.BLOCK_CHANGE &&
-            event.blockId === this.id)
-        ) {
-          // We can skip the following events:
-          // This block's create event, as we handle setting the image on block creation
-          // in src/p5lab/spritelab/blocks.
-          // This block's change event, as that means we just changed the image due to
-          // some other event.
-          return;
-        }
-        if (
-          imagePreview.shouldAllowImageChange() &&
-          (event.type === Blockly.Events.BLOCK_CREATE ||
-            event.type === Blockly.Events.BLOCK_CHANGE ||
-            event.type === Blockly.Events.BLOCK_DRAG)
-        ) {
-          updatePointerBlockImage(this, spriteLabPointers);
-        }
+        onBlockImageSourceChange(event, this);
       };
     }
   },
 };
+
+// HELPERS
+// On change event for a block that shadows an image source block.
+// On an event, checks if the block image should change, and update it.
+function onBlockImageSourceChange(event, block) {
+  const imagePreview =
+    block.inputList && block.inputList[0] && block.inputList[0].fieldRow[1];
+  if (!imagePreview) {
+    return;
+  }
+  if (event.type === Blockly.Events.BLOCK_DRAG && event.blockId === block.id) {
+    // If this is a start event, prevent image changes.
+    // If it is an end event, allow image changes again.
+    imagePreview.setAllowImageChange(!event.isStart);
+  }
+  if (
+    (event.type === Blockly.Events.BLOCK_CREATE &&
+      event.blockId === block.id) ||
+    (event.type === Blockly.Events.BLOCK_CHANGE && event.blockId === block.id)
+  ) {
+    // We can skip the following events:
+    // This block's create event, as we handle setting the image on block creation
+    // in src/p5lab/spritelab/blocks.
+    // This block's change event, as that means we just changed the image due to
+    // some other event.
+    return;
+  }
+  if (
+    imagePreview.shouldAllowImageChange() &&
+    (event.type === Blockly.Events.BLOCK_CREATE ||
+      event.type === Blockly.Events.BLOCK_CHANGE ||
+      event.type === Blockly.Events.BLOCK_DRAG)
+  ) {
+    updatePointerBlockImage(block, spriteLabPointers);
+  }
+}
