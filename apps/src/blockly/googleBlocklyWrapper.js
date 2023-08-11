@@ -19,7 +19,7 @@ import CdoFieldMultilineInput from './addons/cdoFieldMultilineInput';
 import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldTextInput from './addons/cdoFieldTextInput';
 import CdoFieldVariable from './addons/cdoFieldVariable';
-import FunctionEditor from './addons/functionEditor.js';
+import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
@@ -82,6 +82,7 @@ const INFINITE_LOOP_TRAP =
 const BlocklyWrapper = function (blocklyInstance) {
   this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
+  this.mainWorkspace = undefined;
 
   this.wrapReadOnlyProperty = function (propertyName) {
     Object.defineProperty(this, propertyName, {
@@ -320,12 +321,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
     get: function () {
-      return this.blockly_.getMainWorkspace();
+      return this.mainWorkspace || this.blockly_.getMainWorkspace();
     },
   });
   Object.defineProperty(blocklyWrapper, 'mainBlockSpaceEditor', {
     get: function () {
-      return this.blockly_.getMainWorkspace();
+      return this.mainWorkspace || this.blockly_.getMainWorkspace();
     },
   });
   Object.defineProperty(blocklyWrapper, 'SVG_NS', {
@@ -602,6 +603,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.inject = function (container, opt_options, opt_audioPlayer) {
+    console.log('in inject');
     const options = {
       ...opt_options,
       theme: cdoUtils.getUserTheme(opt_options.theme),
@@ -660,11 +662,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     trashcan.init();
 
     if (options.useModalFunctionEditor) {
-      Blockly.functionEditor = new Blockly.FunctionEditor();
+      Blockly.functionEditor = new FunctionEditor();
       // TODO: Is this the best place to call the init function
       // (and is using the init function) reasonable for the modal function editor?
       Blockly.functionEditor.init(workspace, opt_options);
     }
+    blocklyWrapper.setMainWorkspace(workspace);
 
     return workspace;
   };
@@ -672,8 +675,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.
   blocklyWrapper.fireUiEvent = function (element, eventName, opt_properties) {
     if (eventName === 'resize') {
-      blocklyWrapper.svgResize(blocklyWrapper.getMainWorkspace());
+      blocklyWrapper.svgResize(blocklyWrapper.mainBlockSpace);
     }
+  };
+
+  blocklyWrapper.setMainWorkspace = function (mainWorkspace) {
+    this.mainWorkspace = mainWorkspace;
   };
 
   initializeBlocklyXml(blocklyWrapper);
