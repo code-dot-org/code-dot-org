@@ -1,11 +1,11 @@
 require 'test_helper'
 
 class Services::ChildAccountTest < ActiveSupport::TestCase
-  teardown do
-    Timecop.return
-  end
-
   class LockOut < ActiveSupport::TestCase
+    teardown do
+      Timecop.return
+    end
+
     test 'given no user should not throw an error' do
       Services::ChildAccount.lock_out(nil)
     end
@@ -58,6 +58,10 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
   end
 
   class UpdateCompliance < ActiveSupport::TestCase
+    teardown do
+      Timecop.return
+    end
+
     test 'given no user should not throw an error' do
       new_state = Policies::ChildAccount::ComplianceState::LOCKED_OUT
 
@@ -93,6 +97,10 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
   end
 
   class GrantPermissionRequest < ActionDispatch::IntegrationTest
+    teardown do
+      Timecop.return
+    end
+
     test 'given nil request it should do nothing' do
       Services::ChildAccount.grant_permission_request! nil
     end
