@@ -100,7 +100,7 @@ class AssignButton extends React.Component {
         <div style={buttonMarginStyle}>
           <Button
             style={styles.boxShadow}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={i18n.assignToSection()}
             icon="plus"
             onClick={this.handleClick}

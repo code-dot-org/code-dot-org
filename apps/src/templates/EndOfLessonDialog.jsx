@@ -37,7 +37,7 @@ function EndOfLessonDialog({lessonNumber, isSummaryView}) {
         <Button
           __useDeprecatedTag
           text={i18n.ok()}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           onClick={handleClose}
         />
       </DialogFooter>

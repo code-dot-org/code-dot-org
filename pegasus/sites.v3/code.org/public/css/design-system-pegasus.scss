@@ -631,6 +631,12 @@ form {
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
+  &.action-block__wrapper--four-col {
+    @media screen and (min-width: $width-lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }
 
 // Action blocks shared styles
