@@ -12,7 +12,6 @@ require 'digest/md5'
 
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
-require_relative 'metrics'
 Dir[File.expand_path('../resources/**/*.rb', __FILE__)].sort.each {|file| require file}
 
 module I18n
@@ -36,7 +35,6 @@ module I18n
       puts "Copying source files"
       I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
       redact_level_content
-
       puts "Sync in completed successfully"
     rescue => exception
       puts "Sync in failed from the error: #{exception}"
