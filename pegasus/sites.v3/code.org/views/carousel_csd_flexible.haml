@@ -84,25 +84,3 @@
 
 
 
-:javascript
-  $(document).ready(function() {
-    let idFlexible = '#flexible_units_carousel';
-    handleScreenSize('flexible_units_carousel');
-    $(idFlexible + ' .slides').carouFredSel({
-      auto  : false,
-      pagination : '#flexible_units_carousel-pagination',
-      prev: '#prev_1',
-      next: '#next_1',
-      responsive: true,
-      width: '100%',
-      height: '490',
-      scroll: 1,
-      swipe	: {
-        onTouch : true,
-        onMouse : true
-      }
-    });
-  });
-
-
-
