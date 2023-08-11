@@ -98,22 +98,28 @@ Metrics/AbcSize:
 Metrics/BlockNesting:
   Enabled: false
 
+Layout/ClosingParenthesisIndentation:
+  Enabled: false
+
+Layout/ExtraSpacing:
+  Enabled: false
+
 Layout/LineLength:
   Enabled: false
 
 Metrics/ModuleLength:
   Enabled: false
 
+# ActiveRecord does not implement a `detect` method and `find` has its own
+# meaning. Correcting ActiveRecord methods with this cop should be considered
+# unsafe, so out of an abundance of caution disable this everywhere.
+Performance/Detect:
+  Enabled: false
+
 Style/AsciiComments:
   Enabled: false
 
 Style/BarePercentLiterals:
-  Enabled: false
-
-Layout/ClosingParenthesisIndentation:
-  Enabled: false
-
-Layout/ExtraSpacing:
   Enabled: false
 
 Style/IdenticalConditionalBranches:
