@@ -121,6 +121,12 @@
   border-radius: 4px;
   border: 1px solid $neutral_dark50;
   background: $neutral_dark10;
+
+  // This should be Body3 but I'm not sure how to support markdown with typography elements
+  font-family: $gotham-regular;
+  font-size: 14px;
+  font-weight: 325;
+  line-height: 154%;
 }
 
 .evidenceLevelSet {

@@ -60,9 +60,7 @@ export default function LearningGoal({
           <div>
             <Heading6>Tips for Evaluation</Heading6>
             <div className={style.learningGoalTips}>
-              <BodyThreeText>
-                <SafeMarkdown markdown={learningGoal.tips} />
-              </BodyThreeText>
+              <SafeMarkdown markdown={learningGoal.tips} />
             </div>
           </div>
         )}
