@@ -1,5 +1,6 @@
 @import 'color.scss';
 @import 'font.scss';
+@import 'typography.scss';
 
 .floatingActionButton {
   position: fixed;
@@ -114,6 +115,11 @@
 .learningGoalExpanded {
   border-bottom: 1px solid $neutral_dark40;
   padding: 20px 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-self: stretch;
 }
 
 .learningGoalTips {
@@ -122,11 +128,9 @@
   border: 1px solid $neutral_dark50;
   background: $neutral_dark10;
 
-  // This should be Body3 but I'm not sure how to support markdown with typography elements
-  font-family: $gotham-regular;
-  font-size: 14px;
-  font-weight: 325;
-  line-height: 154%;
+  p {
+    @include body-three;
+  }
 }
 
 .evidenceLevelSet {
