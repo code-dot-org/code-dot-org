@@ -48,7 +48,9 @@ const CurriculumCatalog = ({
 
   const getQuickViewState = () => {
     const urlParams = queryParams();
-    return 'quick_view' in urlParams ? true : false;
+    return 'quick_view' in urlParams && urlParams['quick_view'] === 'true'
+      ? true
+      : false;
   };
 
   const isQuickViewDisplayed = getQuickViewState();
