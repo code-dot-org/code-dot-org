@@ -45,7 +45,7 @@ const ExpandedCurriculumCatalogCard = ({
       compatibilityIcons[
         device !== 'no_device'
           ? device.charAt(0).toUpperCase() + device.slice(1)
-          : 'Offline'
+          : i18n.offline()
       ] = icons[devices[device]];
     }
     return compatibilityIcons;
