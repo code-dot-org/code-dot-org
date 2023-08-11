@@ -14,8 +14,7 @@ class I18nMetricsTest < Minitest::Test
   end
 
   def test_report_runtime
-    test_time = Benchmark.realtime {sleep 1.second}
-    expect_metric(:Runtime, test_time.in_milliseconds.to_i, [{name: 'MethodName', value: 'method'}, {name: 'SyncStep', value: 'step'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'Milliseconds')
-    I18n::Metrics.report_runtime('method', 'step') {sleep 1.second}
+    expect_metric(:Runtime, 1, [{name: 'MethodName', value: 'method'}, {name: 'SyncStep', value: 'step'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'Milliseconds')
+    I18n::Metrics.report_runtime('method', 'step') {sleep 0.001.second}
   end
 end
