@@ -12263,6 +12263,8 @@ en:
           lessons:
             lesson-1:
               name: Remix Projects
+            lesson-2:
+              name: SNAP - Rosa Linn
           lesson_groups: {}
           name: musiclab
           title: Music Lab Test Lessons
