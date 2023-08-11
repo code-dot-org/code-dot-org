@@ -9,9 +9,7 @@ module I18n
         REDACT_RESTORE_PLUGINS = %w[resourceLink vocabularyDefinition].freeze
 
         def self.sync_in
-          I18n::Metrics.report_runtime('CurriculumContent', 'in') do
-            SyncIn.perform
-          end
+          SyncIn.perform
         end
       end
     end

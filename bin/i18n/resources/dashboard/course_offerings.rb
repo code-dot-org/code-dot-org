@@ -13,19 +13,17 @@ module I18n
         # Aggregate every CourseOffering record's `key` as the translation key, and
         # each record's `display_name` as the translation string.
         def self.sync_in
-          I18n::Metrics.report_runtime('CourseOfferings', 'in') do
-            puts 'Preparing course offerings'
-            course_offerings = {}
+          puts 'Preparing course offerings'
+          course_offerings = {}
 
-            # TODO: Refactor course_offerings data collection
-            #   1. Select data in batches of 1k records
-            #   2. Fix data sorting
-            CourseOffering.all.sort.each do |co|
-              course_offerings[co.key] = co.display_name
-            end
-
-            File.write(I18N_SOURCE_FILE_PATH, JSON.pretty_generate(course_offerings))
+          # TODO: Refactor course_offerings data collection
+          #   1. Select data in batches of 1k records
+          #   2. Fix data sorting
+          CourseOffering.all.sort.each do |co|
+            course_offerings[co.key] = co.display_name
           end
+
+          File.write(I18N_SOURCE_FILE_PATH, JSON.pretty_generate(course_offerings))
         end
       end
     end

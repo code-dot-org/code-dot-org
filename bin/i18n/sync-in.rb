@@ -21,7 +21,7 @@ module I18n
       puts "Sync in starting"
       I18n::Resources::Dashboard::CurriculumContent.sync_in
       I18n::Resources::Pegasus::HourOfCode.sync_in
-      I18n::Metrics.report_runtime('localize_level_and_project_content', 'in') {localize_level_and_project_content}
+      localize_level_and_project_content
       I18n::Resources::Dashboard::Blocks.sync_in
       I18n::Resources::Apps::Animations.sync_in
       I18n::Resources::Dashboard::SharedFunctions.sync_in
@@ -34,8 +34,8 @@ module I18n
       I18n::Resources::Apps::Labs.sync_in
       I18n::Resources::Pegasus::Markdown.sync_in
       puts "Copying source files"
-      I18n::Metrics.report_runtime('in.sh', 'in') {I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"}
-      I18n::Metrics.report_runtime('redact_level_content', 'in') {redact_level_content}
+      I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
+      redact_level_content
 
       puts "Sync in completed successfully"
     rescue => exception

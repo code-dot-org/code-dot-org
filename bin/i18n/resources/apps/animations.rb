@@ -12,13 +12,11 @@ module I18n
         I18N_SOURCE_FILE_PATH = CDO.dir(File.join(I18N_SOURCE_DIR, 'animations/spritelab_animation_library.json')).freeze
 
         def self.sync_in
-          I18n::Metrics.report_runtime('Animations', 'in') do
-            FileUtils.mkdir_p(File.dirname(I18N_SOURCE_FILE_PATH))
+          FileUtils.mkdir_p(File.dirname(I18N_SOURCE_FILE_PATH))
 
-            animation_strings = ManifestBuilder.new({spritelab: true, quiet: true}).get_animation_strings
+          animation_strings = ManifestBuilder.new({spritelab: true, quiet: true}).get_animation_strings
 
-            File.write(I18N_SOURCE_FILE_PATH, JSON.pretty_generate(animation_strings))
-          end
+          File.write(I18N_SOURCE_FILE_PATH, JSON.pretty_generate(animation_strings))
         end
       end
     end
