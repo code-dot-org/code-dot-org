@@ -2,7 +2,6 @@ require 'json'
 
 require_relative '../../../../dashboard/config/environment'
 require_relative '../../i18n_script_utils'
-require_relative '../../metrics'
 
 module I18n
   module Resources
@@ -14,6 +13,7 @@ module I18n
         # each record's `display_name` as the translation string.
         def self.sync_in
           puts 'Preparing course offerings'
+
           course_offerings = {}
 
           # TODO: Refactor course_offerings data collection

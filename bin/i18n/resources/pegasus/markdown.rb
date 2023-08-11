@@ -2,7 +2,6 @@ require 'fileutils'
 require 'json'
 
 require_relative '../../i18n_script_utils'
-require_relative '../../metrics'
 
 module I18n
   module Resources
@@ -54,6 +53,7 @@ module I18n
             FileUtils.cp(full_filepath, source_path)
 
             header, content, _line = Documents.new.helpers.parse_yaml_header(source_path)
+
             I18nScriptUtils.sanitize_header!(header)
             I18nScriptUtils.write_markdown_with_header(content, header, source_path)
           end

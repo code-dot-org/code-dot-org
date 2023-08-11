@@ -1,5 +1,4 @@
 require_relative 'curriculum_content/sync_in'
-require_relative '../../metrics'
 
 module I18n
   module Resources

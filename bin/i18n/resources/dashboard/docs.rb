@@ -4,7 +4,6 @@ require 'json'
 require_relative '../../../../dashboard/config/environment'
 require_relative '../../i18n_script_utils'
 require_relative '../../redact_restore_utils'
-require_relative '../../metrics'
 
 module I18n
   module Resources
@@ -59,11 +58,11 @@ module I18n
                 expressions_data.store(
                   expression_key, {
                     'content' => expression_docs.properties['content'],
-                  'examples' => ({} unless expression_docs.properties['examples'].nil?),
-                  'palette_params' => ({} unless expression_docs.properties['palette_params'].nil?),
-                  'return_value' => expression_docs.properties['return_value'],
-                  'short_description' => expression_docs.properties['short_description'],
-                  'tips' => expression_docs.properties['tips']
+                    'examples' => ({} unless expression_docs.properties['examples'].nil?),
+                    'palette_params' => ({} unless expression_docs.properties['palette_params'].nil?),
+                    'return_value' => expression_docs.properties['return_value'],
+                    'short_description' => expression_docs.properties['short_description'],
+                    'tips' => expression_docs.properties['tips']
                   }.compact
                 )
 

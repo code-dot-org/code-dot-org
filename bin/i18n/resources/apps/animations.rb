@@ -3,7 +3,6 @@ require 'json'
 
 require_relative '../../i18n_script_utils'
 require_relative '../../../animation_assets/manifest_builder'
-require_relative '../../metrics'
 
 module I18n
   module Resources
