@@ -86,14 +86,6 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
       }
     });
 
-    // We need to set the flyout width based on the block itself, excluding children.
-    // Using block.getHeightWidth() would include blocks connected to input and next
-    // connections, which could make the flyout wider than the block that contains it.
-    const topBlockWidth = this.sourceBlock_.svgGroup_
-      .querySelector('path')
-      .getBoundingClientRect().width;
-    const blockWidthMinusPadding = topBlockWidth - this.flyoutBlockPadding * 2;
-    this.width_ = Math.max(this.width_, blockWidthMinusPadding);
     this.setBackgroundPath_(this.width_, this.height_);
     this.position();
   }
@@ -121,13 +113,7 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    * @override
    */
   position() {
-    this.isVisible() &&
-      this.positionAt_(
-        this.width_,
-        this.height_,
-        this.RTL ? -this.flyoutBlockPadding : 0,
-        0
-      );
+    this.isVisible() && this.positionAt_(this.width_, this.height_, 0, 0);
   }
 
   /**
@@ -197,5 +183,60 @@ export default class CdoBlockFlyout extends GoogleBlockly.HorizontalFlyout {
    */
   wouldDelete(element, _couldConnect) {
     return false;
+  }
+
+  /**
+   * Lay out the blocks in the flyout.
+   *
+   * @param contents The blocks and buttons to lay out.
+   * @param gaps The visible gaps between blocks.
+   * @override
+   */
+  // TODO: once we upgrade to v10 of blockly we should not need this anymore
+  // and can rely on the parent version of this function.
+  // This is copied from the core blockly repo to include a fix from this PR on Blockly:
+  // https://github.com/google/blockly/pull/7333
+  layout_(contents, gaps) {
+    this.workspace_.scale = this.targetWorkspace?.scale;
+    const margin = this.MARGIN;
+    let cursorX = margin + this.tabWidth_;
+    const cursorY = margin;
+    if (this.RTL) {
+      contents = contents.reverse();
+    }
+
+    for (let i = 0, item; (item = contents[i]); i++) {
+      if (item.type === 'block') {
+        const block = item.block;
+        const allBlocks = block?.getDescendants(false);
+        for (let j = 0, child; (child = allBlocks[j]); j++) {
+          // Mark blocks as being inside a flyout.  This is used to detect and
+          // prevent the closure of the flyout if the user right-clicks on such
+          // a block.
+          child.isInFlyout = true;
+        }
+        const root = block?.getSvgRoot();
+        const blockHW = block?.getHeightWidth();
+        // Figure out where to place the block.
+        const tab = block?.outputConnection ? this.tabWidth_ : 0;
+        let moveX;
+        if (this.RTL) {
+          moveX = cursorX + blockHW.width;
+        } else {
+          moveX = cursorX - tab;
+        }
+        // No 'reason' provided since events are disabled.
+        block?.moveTo(new Blockly.utils.Coordinate(moveX, cursorY));
+
+        const rect = this.createRect_(block, moveX, cursorY, blockHW, i);
+        cursorX += blockHW.width + gaps[i];
+
+        this.addBlockListeners_(root, block, rect);
+      } else if (item.type === 'button') {
+        const button = item.button;
+        this.initFlyoutButton_(button, cursorX, cursorY);
+        cursorX += button.width + gaps[i];
+      }
+    }
   }
 }

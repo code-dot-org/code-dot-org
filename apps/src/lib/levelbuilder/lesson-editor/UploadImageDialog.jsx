@@ -118,7 +118,7 @@ export default function UploadImageDialog({
         <Button
           text={i18n.closeAndSave()}
           onClick={handleCloseAndSave}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           className="save-upload-image-button"
           disabled={isUploading}
         />{' '}

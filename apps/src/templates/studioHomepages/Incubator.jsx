@@ -11,7 +11,7 @@ class Incubator extends Component {
           subHeadingText="Try something new"
           backgroundUrl="/shared/images/banners/banner-incubator.png"
           imageUrl="/shared/images/banners/banner-incubator-image.png"
-          short={true}
+          imgStyling={{maxHeight: '160px'}}
         />
         <div className="main" style={{maxWidth: 970, margin: '0 auto'}}>
           <div style={{margin: '40px 0'}}>

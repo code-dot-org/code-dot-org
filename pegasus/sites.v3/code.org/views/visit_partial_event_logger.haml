@@ -1,8 +1,9 @@
 :ruby
   # Map path of where the .md.partial file is used to its associated visit page
   # event.
-  def partial_url_to_event_map 
+  def partial_url_to_event_map
     {
+      '/ai/pl/101': AnalyticsConstants::AI_PL_PAGE_VISIT_EVENT,
       '/ai': AnalyticsConstants::AI_PAGE_VISIT_EVENT,
       '/educate/csc': AnalyticsConstants::CSC_CURRICULUM_PAGE_VISITED_EVENT,
       '/maker': AnalyticsConstants::PHYSICAL_COMPUTING_PAGE_VISITED_EVENT,
