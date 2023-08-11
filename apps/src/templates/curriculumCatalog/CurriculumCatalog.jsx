@@ -12,6 +12,7 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {queryParams} from '../../code-studio/utils';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -44,6 +45,13 @@ const CurriculumCatalog = ({
     setShowAssignSuccessMessage(false);
     setAssignSuccessMessage('');
   };
+
+  const getQuickViewState = () => {
+    const urlParams = queryParams();
+    return 'quick_view' in urlParams ? true : false;
+  };
+
+  const isQuickViewDisplayed = getQuickViewState();
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
   // message if no results).
@@ -94,6 +102,7 @@ const CurriculumCatalog = ({
                   scriptId={script_id}
                   isStandAloneUnit={is_standalone_unit}
                   onAssignSuccess={response => handleAssignSuccess(response)}
+                  quickViewDisplayed={isQuickViewDisplayed}
                   {...props}
                 />
               )
