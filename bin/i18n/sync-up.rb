@@ -29,14 +29,12 @@ def sync_up
             else
               I18n::Metrics.report_filesize(file_name, 'up')
             end
-            # file_path = Dir.pwd + "/i18n/locales/source/" + file_name
           else
             puts line
           end
         end
         raise "Sync up failed" unless status_thread.value.success?
       end
-      puts "Project: #{name}, FilesUploaded: #{file_count}"
     end
 
     puts "Sync up completed successfully"

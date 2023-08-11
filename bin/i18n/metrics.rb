@@ -38,7 +38,7 @@ module I18n
       end
     end
 
-    def self.log_metric(metric_name, metric_value, addtl_dimensions = [], metric_units = nil)
+    def self.log_metric(metric_name, metric_value, addtl_dimensions = [], metric_units = 'None')
       # add machine_id and environment dimensions to addtl_dimensions
       addtl_dimensions << {name: 'Environment', value: CDO.rack_env}
       addtl_dimensions << {name: 'MachineId', value: machine_id}
