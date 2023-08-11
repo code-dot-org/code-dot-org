@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class Services::ChildAccountTest < ActiveSupport::TestCase
+  teardown do
+    Timecop.return
+  end
+
   class LockOut < ActiveSupport::TestCase
     test 'given no user should not throw an error' do
       Services::ChildAccount.lock_out(nil)
@@ -20,6 +24,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       user = create :locked_out_child
       compliance_state = user.child_account_compliance_state
       last_updated = user.child_account_compliance_state_last_updated
+      Timecop.travel 5.minutes
 
       Services::ChildAccount.lock_out(user)
 
@@ -31,6 +36,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       user = create :locked_out_child, :with_pending_parent_permission
       compliance_state = user.child_account_compliance_state
       last_updated = user.child_account_compliance_state_last_updated
+      Timecop.travel 5.minutes
 
       Services::ChildAccount.lock_out(user)
 
@@ -42,6 +48,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       user = create :locked_out_child, :with_parent_permission
       compliance_state = user.child_account_compliance_state
       last_updated = user.child_account_compliance_state_last_updated
+      Timecop.travel 5.minutes
 
       Services::ChildAccount.lock_out(user)
 
@@ -68,6 +75,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       assert_not_nil user.child_account_compliance_state_last_updated
 
       last_updated = user.child_account_compliance_state_last_updated
+      Timecop.travel 5.minutes
       new_state = Policies::ChildAccount::ComplianceState::REQUEST_SENT
       Services::ChildAccount.update_compliance(user, new_state)
 
@@ -75,6 +83,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       assert_not_equal last_updated, user.child_account_compliance_state_last_updated
 
       last_updated = user.child_account_compliance_state_last_updated
+      Timecop.travel 5.minutes
       new_state = Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
       Services::ChildAccount.update_compliance(user, new_state)
 
@@ -108,6 +117,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       user.reload
       assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.child_account_compliance_state
       last_updated = user.child_account_compliance_state_last_updated
+      Timecop.travel 5.minutes
       assert_not_empty last_updated
 
       # No emails should be sent
