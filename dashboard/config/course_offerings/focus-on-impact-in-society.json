@@ -12,9 +12,9 @@
   "cs_topic": "app_design,artificial_intelligence",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
-  "description": null,
-  "professional_learning_program": null,
-  "video": null,
+  "description": "How does code impact the world around us? In this unit, students are challenged to consider the broader social impacts of various aspects of computer science.",
+  "professional_learning_program": "code.org/apply",
+  "video": "https://www.youtube-nocookie.com/embed/QvyTEx1wyOY/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=QvyTEx1wyOY&wmode=transparent",
   "published_date": null,
-  "self_paced_pl_course_offering_id": null
+  "self_paced_pl_course_offering_id": 443
 }
