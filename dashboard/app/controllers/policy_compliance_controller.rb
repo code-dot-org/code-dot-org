@@ -1,5 +1,6 @@
 require 'policies/child_account'
 require 'services/child_account'
+require 'digest/md5'
 
 class PolicyComplianceController < ApplicationController
   before_action :authenticate_user!, except: [:child_account_consent]
@@ -32,6 +33,7 @@ class PolicyComplianceController < ApplicationController
   # There are several limits imposed that are reflected in the logic below:
   # * Student may only send permission requests to 3 unique email addressed per day.
   # * Student may only "resend" to a particular email address at most 2 times.
+  # * Student cannot send a request to their own email address.
   #
   # This is to control for abuse vectors that might try to overwhelm our email
   # system. It is, effectively, a limit of 9 emails, on average, per studetnt pet
@@ -42,6 +44,12 @@ class PolicyComplianceController < ApplicationController
   def child_account_consent_request
     # If we already comply, don't suddenly invalid it
     if current_user.child_account_compliance_state == Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
+      redirect_back fallback_location: lockout_path and return
+    end
+
+    # Validate that the parent email is not the same as the student email
+    parent_email = params.require(:'parent-email')
+    if current_user.hashed_email == Digest::MD5.hexdigest(parent_email)
       redirect_back fallback_location: lockout_path and return
     end
 
@@ -57,7 +65,7 @@ class PolicyComplianceController < ApplicationController
     # new request row.
     permission_request = ParentalPermissionRequest.find_or_initialize_by(
       user: current_user,
-      parent_email: params.require(:'parent-email')
+      parent_email: parent_email
     )
 
     # If we are making a new request but already sent too many today,
