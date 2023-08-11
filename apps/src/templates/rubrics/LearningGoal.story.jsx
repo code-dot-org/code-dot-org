@@ -8,6 +8,7 @@ export default {
 };
 
 const defaultLearningGoal = {
+  key: 'story-learning-goal',
   learningGoal: 'Coding Proficiency',
   evidenceLevels: [
     {

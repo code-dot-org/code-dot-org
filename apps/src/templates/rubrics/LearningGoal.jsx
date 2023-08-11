@@ -53,6 +53,7 @@ export default function LearningGoal({
       </summary>
       <div className={style.learningGoalExpanded}>
         <EvidenceLevels
+          learningGoalKey={learningGoal.key}
           evidenceLevels={learningGoal.evidenceLevels}
           canProvideFeedback={canProvideFeedback}
         />
