@@ -3,7 +3,6 @@
 
 @import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
 
-// Hero banner
 .hero-banner-basic {
 
   &.overlay {
@@ -77,11 +76,9 @@
   @media (max-width: 1279px) {
     overflow: hidden;
   }
-
 }
 
 .carousel {
-
   &__next {
     position: absolute;
     right: -100vh;
@@ -90,10 +87,6 @@
   &__prev {
     position: absolute;
     left: -100vw;
-  }
-
-  &--flexible_units {
-
   }
 
   .action-block {
@@ -119,10 +112,7 @@
         width: 48%;
         margin: 0;
       }
-
     }
-
-
     .action-block {
       min-width: 230px;
     }
@@ -134,7 +124,6 @@
       }
     }
   }
-
   @media (min-width: 1280px) {
     &__prev {
       position: absolute;
@@ -156,7 +145,6 @@
         width: 100%;
       }
     }
-
     &__next {
       position: absolute;
       top: calc(50% - 20px);
