@@ -73,6 +73,8 @@ zh-TW:
           description_short: 學習計算機科學的基礎概念。
         mike-test:
           title: 計算機科學基礎
+        vpl-csa-2023:
+          title: CSA 虛擬專業學習
     resources:
       curriculum/csd/2017:
         name: 課程

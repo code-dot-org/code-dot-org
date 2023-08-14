@@ -3322,7 +3322,7 @@ zh-TW:
         display_name: 藝術家練習
       CourseF_outbreak_story:
         content1: 在此描述
-        markdown: "# 疫情大爆發：建立你自己的模擬器\n\n## 歡迎來到怪物鎮！\n怪物鎮是一個充滿歡樂和健康的地方。怪物們喜歡到處散步拜訪朋友。
+        markdown: "# 疫情爆發：編寫自己的模擬\n\n## 歡迎來到怪獸城鎮！\n怪獸城鎮平常是一個快樂而健康的地方。怪獸城鎮的怪獸們喜歡四處走動去拜訪他們的朋友。
           \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -3334,7 +3334,7 @@ zh-TW:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\n有一天，一個怪物身體覺得不舒服。原來，這個怪物接觸到病毒！病毒是一個可以使你生病的東西。但是怪物們不是很擔心。他們繼續拜訪朋友。\n\n<img
+          style=\"width:8%\">\n\n有一天，其中一個怪獸開始生病。怪獸感染了**病毒**！病毒是一種能讓你生病的微生物。其他的怪獸並不太擔心。他們繼續拜訪朋友。\n\n<img
           src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -3346,8 +3346,7 @@ zh-TW:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\n不久後，另外兩個怪物也生病了。後來發現，這是同一個病毒造成的！他們好像從他們的朋友感染了病毒。\n\n<img
-          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n不久之後，又有兩隻怪獸生病了。是同一種病毒！似乎他們是從朋友那裡感染了病毒。\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -3358,7 +3357,7 @@ zh-TW:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\n病毒逐漸的傳播到了其他怪物身上。健康的怪物們開始擔心，他們會被感染而生病，生病的怪物們也開始擔心，他們會傳播病毒給別人。\n\n<img
+          style=\"width:8%\">\n\n病毒慢慢地擴散到附近的其他怪獸身上。健康的怪獸開始擔心他們會生病。生病的怪獸開始擔心他們會把病毒傳染給其他人。\n\n<img
           src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -3371,14 +3370,15 @@ zh-TW:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
-          style=\"float:right; width:30%\">\n\n## 阻止傳播\n幸運的是，在研究完病毒之後，怪物鎮的鄰居們發現戴上口罩，可以有效減少病毒的傳播。戴上口罩後，生病的怪物們會降低傳播病毒的機率。\n\n<img
+          style=\"float:right; width:30%\">\n\n## 停止傳播\n幸運的是，在研究了病毒之後，怪獸城鎮的居民們有了一個重要發現。他們意識到，如果他們戴口罩，傳播病毒的可能性就更低。如果帶口罩，生病怪獸將病毒傳染給健康怪獸的可能性更低。\n\n<img
           src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
           style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
           16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
-          接下來會發生什麼？\n\n今天，你將編寫程式，模擬怪物鎮病毒爆發的過程。「模擬」指的是運用電腦模型，對真實世界不同要素的相互作用，進行類比和實驗。讓我們透過學習程式設計，預測怪物鎮接下來會發生什麼事情。\n\n<img
+          接下來會發生什麼？\n\n今天，你將編寫代碼創建並運行自己的怪獸城鎮病毒爆發**類比**。類比是一個過程或系統的電腦模型。學習編寫代碼並預測怪獸城鎮的居民會發生什麼。\n\n<img
           src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
-          style=\"float:right; width:15%\">\n\n* *病毒會傳播多快？*\n\n* *人人都會生病嗎？*\n\n* *口罩有什麼作用？*\n\n\n當你完成後，與其他人分享你的模擬器。同時，也動動腦思考，你認為病毒到達城鎮時，我們可以做出什麼行動，來保護其他人的健康。 "
+          style=\"float:right; width:15%\">\n\n* *病毒傳播的速度有多快？*\n\n* *每個人都會生病嗎？*\n\n*
+          *戴口罩有什麼幫助？*\n\n\n當你完成時，與他人分享你的模擬。當病毒到來時，你認為我們可以做些什麼來幫助他人保持健康？分享你的資訊。 \n"
       CourseF_outbreak_story2:
         content1: 在此描述
         markdown: "# 疫情爆發：像科學家一樣思考\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
