@@ -29,6 +29,8 @@ const ChatWorkspace: React.FunctionComponent = () => {
       message,
       appropriateChatMessages
     );
+    // If the returned array contains only one message, the user's message did not pass filters and is returned without
+    // returned without an assistant chat message.
     if (updatedUserAndAssistantChatMessages.length === 2) {
       // Update assistant chat message with appropriate name.
       updatedUserAndAssistantChatMessages[1].name = 'EduBot'; // TODO: assign name from levelbuilder settings.
