@@ -2278,83 +2278,57 @@ ta-IN:
         display_name: 'கலைஞர் பயிற்சி '
       CourseF_outbreak_story:
         content1: விளக்கம் இங்கே
-        markdown: "# தீவிர நோய் பரவல்: உங்கள் சொந்த உருவகப்படுத்துதலைக் குறிக்கவும்\n##
-          மான்ஸ்டர் டவுனுக்கு வருக! \nமான்ஸ்டர் டவுன் பொதுவாக மகிழ்ச்சியான மற்றும்
-          ஆரோக்கியமான இடமாக இருந்தது. மான்ஸ்டர் நகரத்தின் அரக்கர்கள் தங்கள் நண்பர்களைப்
-          பார்க்க சுற்றித் திரிவதை விரும்பினர்.\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nஒரு நாள், அரக்கர்களில் ஒருவருக்கு உடல்நிலை சரியில்லாமல்
-          போக ஆரம்பித்தது. அசுரன் ** வைரஸைப் பிடித்தான் **! வைரஸ் என்பது ஒரு சிறிய
-          கிருமியாகும், இது உங்களை நோய்வாய்ப்படுத்தும். மற்ற அரக்கர்கள் அதிகம் கவலைப்படவில்லை.
-          அவர்கள் தங்கள் நண்பர்களைப் பார்த்துக் கொண்டே இருந்தார்கள்.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nவிரைவில், மேலும் இரண்டு அரக்கர்கள் நோய்வாய்ப்பட்டனர்.
-          அதே வைரஸ் தான்! அவர்கள் தங்கள் நண்பரிடமிருந்து வைரஸ் வந்ததாக தெரிகிறது.\n\n<img
-          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"><img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\">\n\nவைரஸ் மெதுவாக அருகில் இருந்த மற்ற அரக்கர்களிடமும்
-          பரவியது. ஆரோக்கியமான அரக்கர்கள் அவர்கள் அனைவரும் நோய்வாய்ப்படப் போகிறார்கள்
-          என்று கவலைப்படத் தொடங்கினர். நோய்வாய்ப்பட்ட அரக்கர்கள் மற்ற அனைவருக்கும்
-          வைரஸைக் கொடுக்கப் போகிறார்கள் என்று கவலைப்படத் தொடங்கினர்.\n\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
-          style=\"float:right; width:30%\">\n\n## பரவுவதை நிறுத்துகிறது\nஅதிர்ஷ்டவசமாக,
-          வைரஸைப் படித்த பிறகு, மான்ஸ்டர் டவுனின் அண்டை நாடுகள் ஒரு முக்கியமான கண்டுபிடிப்பை
-          மேற்கொண்டன. அவர்கள் வாய்க்கு மேல் முகமூடிகளை அணிந்தால் அவர்கள் வைரஸ் பரவுவதற்கான
-          வாய்ப்புகள் குறைவு என்பதை அவர்கள் உணர்ந்தார்கள். முகமூடிகளை வைத்து, நோய்வாய்ப்பட்ட
-          அரக்கர்கள் ஆரோக்கியமான அரக்கர்களுக்கு வைரஸைக் கொடுப்பது குறைவு.\n\n<img
-          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
-          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
-          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
-          அடுத்து என்ன நடக்கும்?\n\nஇன்று, மான்ஸ்டர் டவுனில் வைரஸ் வெடித்த உங்கள்
-          சொந்த ** உருவகப்படுத்துதலை ** உருவாக்க மற்றும் இயக்க குறியீடு எழுதப் போகிறீர்கள்.
-          ஒரு உருவகப்படுத்துதல் என்பது ஒரு செயல்முறை அல்லது அமைப்பின் கணினி மாதிரி.
-          மான்ஸ்டர் டவுனின் அண்டை நாடுகளுக்கு என்ன நடக்கும் என்பது குறித்து குறியீட்டைக்
-          கற்றுக் கொள்ளுங்கள்.\n\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
-          style=\"float:right; width:15%\">\n\n* * வைரஸ் எவ்வளவு விரைவாக பரவுகிறது?
-          *\n\n* * அனைவருக்கும் நோய்வாய்ப்படுமா? *\n\n* * முகமூடிகள் எவ்வாறு உதவும்?
-          *\n\nநீங்கள் முடிந்ததும், உங்கள் உருவகப்படுத்துதலை மற்றவர்களுடன் பகிர்ந்து
-          கொள்ளுங்கள். ஒரு வைரஸ் நகரத்திற்கு வரும்போது மற்றவர்களை ஆரோக்கியமாக வைத்திருக்க
-          நாங்கள் என்ன செய்ய முடியும் என்று நீங்கள் நினைக்கிறீர்கள் என்பது பற்றிய
-          உங்கள் செய்தியைப் பகிரவும்.\n\n"
+        markdown: |+
+          ## மான்ஸ்டர் டவுனுக்கு வரவேற்கிறோம்!
+          மான்ஸ்டர் டவுன் பொதுவாக மகிழ்ச்சியான மற்றும் ஆரோக்கியமான இடமாக இருந்தது. மான்ஸ்டர் நகரத்தின் அரக்கர்கள் தங்கள் நண்பர்களைப் பார்க்க சுற்றித் திரிவதை விரும்பினர்.
+
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          ஒரு நாள், அசுரன் ஒருவன் உடம்பு சரியில்லை. அசுரன் ஒரு ** வைரஸ் ** பிடிபட்டான்! ஒரு வைரஸ் உங்களை நோய்வாய்ப்படுத்தக்கூடிய ஒரு சிறிய கிருமி. மற்ற அரக்கர்கள் அதிகம் கவலைப்படவில்லை. அவர்கள் தொடர்ந்து தங்கள் நண்பர்களைச் சந்தித்தனர்.
+
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          விரைவில், மேலும் இரண்டு அரக்கர்கள் நோய்வாய்ப்பட்டனர். அதே வைரஸ் தான்! அவர்கள் தங்கள் நண்பரிடமிருந்து வைரஸ் வந்ததாக தெரிகிறது.
+
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          வைரஸ் மெதுவாக அருகில் இருந்த மற்ற அரக்கர்களுக்கும் பரவியது. ஆரோக்கியமான அசுரர்கள் அவர்கள் அனைவரும் நோய்வாய்ப்படப் போகிறார்கள் என்று கவலைப்படத் தொடங்கினர். நோய்வாய்ப்பட்ட அரக்கர்கள் மற்ற அனைவருக்கும் வைரஸைக் கொடுக்கப் போகிறார்கள் என்று கவலைப்படத் தொடங்கினர்.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## பரவலை நிறுத்துதல்
+          அதிர்ஷ்டவசமாக, வைரஸைப் படித்த பிறகு, மான்ஸ்டர் டவுனின் அண்டை நாடுகள் ஒரு முக்கியமான கண்டுபிடிப்பைச் செய்தன. அவர்கள் வாயில் முகமூடி அணிந்தால் வைரஸ் பரவுவது குறைவு என்பதை அவர்கள் உணர்ந்தனர். முகமூடிகளை அணிந்திருப்பதால், நோய்வாய்ப்பட்ட அரக்கர்கள் ஆரோக்கியமான அரக்கர்களுக்கு வைரஸைக் கொடுப்பது குறைவு.
+
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## அடுத்து என்ன நடக்கும்?
+
+          இன்று, மான்ஸ்டர் டவுனில் வைரஸ் வெடிப்பின் சொந்த ** உருவகப்படுத்துதல் ** ஐ உருவாக்க மற்றும் இயக்க குறியீடு எழுதப் போகிறீர்கள். ஒரு உருவகப்படுத்துதல் என்பது ஒரு செயல்முறை அல்லது அமைப்பின் கணினி மாதிரி. மான்ஸ்டர் டவுனின் அண்டை நாடுகளுக்கு என்ன நடக்கும் என்பதைப் பற்றி குறியீடுகள் மற்றும் கணிப்புகளைக் கற்றுக்கொள்ளுங்கள்.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * * வைரஸ் எவ்வளவு விரைவாக பரவுகிறது? *
+
+          * * அனைவரும் நோய்வாய்ப்படுவார்களா? *
+
+          * * முகமூடிகள் எப்படி உதவும்? *
+
+
+          நீங்கள் முடித்ததும், உங்கள் உருவகப்படுத்துதலை மற்றவர்களுடன் பகிர்ந்து கொள்ளுங்கள். ஊருக்கு ஒரு வைரஸ் வரும்போது மற்றவர்களை ஆரோக்கியமாக வைத்திருக்க நாங்கள் என்ன செய்ய முடியும் என்று நீங்கள் நினைக்கிறீர்கள் என்பதைப் பற்றி உங்கள் செய்தியைப் பகிரவும்.
+
+
       CourseF_outbreak_story2:
         content1: விளக்கம் இங்கே
         markdown: |

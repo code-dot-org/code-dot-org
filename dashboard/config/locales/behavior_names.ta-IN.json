@@ -291,7 +291,7 @@
         },
         "CourseF_outbreak1": {
           "recovering": "மீட்கிறது",
-          "wandering": "சுற்றித் திரிந்து"
+          "wandering": "அலைந்து திரிதல்"
         },
         "CourseF_outbreak1_-2022-2": {
           "recovering": "மீட்கிறது",
@@ -307,27 +307,27 @@
         },
         "CourseF_outbreak3": {
           "recovering": "மீட்கிறது",
-          "wandering": "சுற்றி திரிதல்"
+          "wandering": "அலைந்து திரிதல்"
         },
         "CourseF_outbreak3_-2022-2": {
           "recovering": "மீட்கிறது",
           "wandering": "அலைந்து திரிதல்"
         },
         "CourseF_outbreak4": {
-          "growing": "வளர்தல்",
-          "jittering": "நடுங்குவது",
-          "moving east": "கிழக்கு நோக்கி நகர்தல்",
-          "moving north": "வடக்கு நோக்கி நகர்வது",
-          "moving south": "தெற்கு நோக்கி நகர்வது",
-          "moving west": "மேற்கு நோக்கி நகர்வது",
+          "growing": "வளரும்",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகரும் ",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
-          "patrolling": "ரோந்து சுற்றுதல்",
+          "patrolling": "ரோந்து",
           "recovering": "மீட்கிறது",
-          "shrinking": "சுருங்குதல்",
-          "spinning left": "இடதுபுறமாக சுழல்வது",
-          "spinning right": "வலதுபுறமாக சுழல்வது",
-          "swimming left and right": "இடது மற்றும் வலது புறமாக நீந்துவது",
-          "wandering": "அலைந்து கொண்டிருத்தல்"
+          "shrinking": "சுருங்குகிறது",
+          "spinning left": "இடதுபுறம் சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்"
         },
         "CourseF_outbreak4_-2022-2": {
           "growing": "வளர்கிறது",
@@ -347,7 +347,7 @@
         },
         "CourseF_outbreak5": {
           "recovering": "மீட்கிறது",
-          "wandering": "அலைந்து கொண்டிருத்தல்"
+          "wandering": "அலைந்து திரிதல்"
         },
         "CourseF_outbreak5_-2022-2": {
           "recovering": "மீட்கிறது",
@@ -355,27 +355,27 @@
         },
         "CourseF_outbreak6": {
           "recovering": "மீட்கிறது",
-          "wandering": "அலைந்து கொண்டிருத்தல்"
+          "wandering": "அலைந்து திரிதல்"
         },
         "CourseF_outbreak6_-2022-2": {
           "recovering": "மீட்கிறது",
           "wandering": "அலைந்து திரிதல்"
         },
         "CourseF_outbreak7": {
-          "growing": "வளர்தல்",
-          "jittering": "நடுங்குவது",
-          "moving east": "கிழக்கு நோக்கி நகர்வது",
+          "growing": "வளரும்",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
           "moving left and right": "இடது மற்றும் வலது நகரும்",
-          "moving north": "வடக்கு நோக்கி நகர்வது",
-          "moving south": "தெற்கு நோக்கி நகர்வது",
-          "moving west": "மேற்கு நோக்கி நகர்வது",
+          "moving north": "வடக்கு நோக்கி நகரும்",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
-          "patrolling": "ரோந்து சுற்றுதல்",
+          "patrolling": "ரோந்து",
           "recovering": "மீட்கிறது",
-          "shrinking": "சுருங்குதல்",
-          "spinning left": "இடதுபுறமாக சுழல்வது",
-          "spinning right": "வலதுபுறமாக சுழல்வது",
-          "wandering": "அலைந்து திரிதல்"
+          "shrinking": "சுருங்குகிறது",
+          "spinning left": "இடதுபுறம் சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "wandering": "அலைந்து திரிதல் "
         },
         "CourseF_outbreak7_-2022-2": {
           "growing": "வளர்கிறது",
@@ -394,20 +394,20 @@
           "wandering": "அலைந்து திரிதல்"
         },
         "CourseF_outbreak8": {
-          "growing": "வளர்தல்",
-          "jittering": "நடுங்குவது",
-          "moving east": "கிழக்கு நோக்கி நகர்வது",
+          "growing": "வளரும்",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
           "moving left and right": "இடது மற்றும் வலது நகரும்",
           "moving north": "வடக்கு நோக்கி நகரும்",
-          "moving south": "தெற்கு நோக்கி நகர்வது",
-          "moving west": "மேற்கு நோக்கி நகர்வது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
-          "patrolling": "ரோந்து சுற்றுதல்",
+          "patrolling": "ரோந்து",
           "recovering": "மீட்கிறது",
-          "shrinking": "சுருங்குதல்",
+          "shrinking": "சுருங்குகிறது",
           "spinning left": "இடதுபுறம் சுழல்கிறது",
-          "spinning right": "வலதுபுறமாக சுழல்வது",
-          "wandering": "அலைந்து கொண்டிருத்தல்"
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "wandering": "அலைந்து திரிதல்"
         },
         "CourseF_outbreak8_-2022-2": {
           "growing": "வளர்கிறது",
@@ -4502,26 +4502,26 @@
           "wobbling": "தள்ளாடுகிறது"
         },
         "helloworld_food_backgrounds": {
-          "driving with arrow keys": "அம்புக்குறி விசைகளைக் கொண்டு இயக்குகிறது",
-          "fluttering": "படபடக்கிறது",
+          "driving with arrow keys": "அம்புக்குறி விசைகளை ஓட்டுதல்",
+          "fluttering": "படபடக்கும் ",
           "growing": "வளர்கிறது",
-          "jittering": "நடுங்குகிறது",
-          "moving east": "கிழக்கு நோக்கி நகர்கிறது",
-          "moving east and looping": "கிழக்கு நோக்கி நகர்ந்து, லூப் செய்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving east and looping": "கிழக்கு நோக்கி நகர்ந்து வளையும் ",
           "moving north": "வடக்கு நோக்கி நகர்கிறது",
           "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
-          "moving south": "தெற்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
           "moving south and looping": "தெற்கே நகர்ந்து வளையும்",
-          "moving west": "மேற்கு நோக்கி நகர்கிறது",
-          "moving west and looping": "மேற்கு நோக்கி நகர்ந்து, லூப் செய்கிறது",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "moving west and looping": "மேற்கு நோக்கி நகர்ந்து வளையும்",
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
           "patrolling": "ரோந்து",
           "shrinking": "சுருங்குகிறது",
           "spinning left": "இடதுபுறமாக சுழல்கிறது",
-          "spinning right": "வலதுபுறமாக சுழல்கிறது",
-          "swimming left and right": "இடது மற்றும் வலதுபுறமாக நீந்துகிறது",
-          "wandering": "சுற்றித் திரிகிறது",
-          "wobbling": "தள்ளாடுகிறது"
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "wobbling": "தள்ளாட்டம்"
         },
         "helloworld_food_backgrounds_soccer-2022": {
           "driving with arrow keys": "அம்புக்குறி விசைகளை ஓட்டுதல்",
@@ -4568,41 +4568,41 @@
           "wobbling": "தள்ளாட்டம்"
         },
         "helloworld_food_behaviors": {
-          "driving with arrow keys": "அம்புக்குறி விசைகளைக் கொண்டு இயக்குகிறது",
-          "fluttering": "படபடக்கிறது",
+          "driving with arrow keys": "அம்புக்குறி விசைகளை ஓட்டுதல்",
+          "fluttering": "படபடக்கும் ",
           "growing": "வளர்கிறது",
-          "jittering": "நடுங்குகிறது",
-          "moving east": "கிழக்கு நோக்கி நகர்கிறது",
-          "moving east and looping": "கிழக்கு நோக்கி நகர்ந்து, லூப் செய்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving east and looping": "கிழக்கு நோக்கி நகர்ந்து வளையும் ",
           "moving north": "வடக்கு நோக்கி நகர்கிறது",
           "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
-          "moving south": "தெற்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
           "moving south and looping": "தெற்கே நகர்ந்து வளையும்",
-          "moving west": "மேற்கு நோக்கி நகர்கிறது",
-          "moving west and looping": "மேற்கு நோக்கி நகர்ந்து, லூப் செய்கிறது",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "moving west and looping": "மேற்கு நோக்கி நகர்ந்து வளையும்",
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
           "patrolling": "ரோந்து",
           "shrinking": "சுருங்குகிறது",
           "spinning left": "இடதுபுறமாக சுழல்கிறது",
-          "spinning right": "வலதுபுறமாக சுழல்கிறது",
-          "swimming left and right": "இடது மற்றும் வலதுபுறமாக நீந்துகிறது",
-          "wandering": "சுற்றித் திரிகிறது",
-          "wobbling": "தள்ளாடுகிறது"
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "wobbling": "தள்ளாட்டம்"
         },
         "helloworld_food_costumes": {
-          "fluttering": "படபடக்கிறது",
+          "fluttering": "படபடக்கும் ",
           "growing": "வளர்கிறது",
-          "jittering": "நடுங்குகிறது",
-          "moving east": "கிழக்கு நோக்கி நகர்கிறது",
-          "moving east and looping": "கிழக்கு நோக்கி நகர்ந்து, லூப் செய்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving east and looping": "கிழக்கு நோக்கி நகர்ந்து வளையும் ",
           "moving north": "வடக்கு நோக்கி நகர்கிறது",
-          "moving south": "தெற்கு நோக்கி நகர்கிறது",
-          "moving west": "மேற்கு நோக்கி நகர்கிறது",
-          "moving west and looping": "மேற்கு நோக்கி நகர்ந்து, லூப் செய்கிறது",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "moving west and looping": "மேற்கு நோக்கி நகர்ந்து வளையும்",
           "shrinking": "சுருங்குகிறது",
           "spinning left": "இடதுபுறமாக சுழல்கிறது",
-          "spinning right": "வலதுபுறமாக சுழல்கிறது",
-          "wobbling": "தள்ளாடுகிறது"
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "wobbling": "தள்ளாட்டம்"
         },
         "helloworld_food_events": {
           "fluttering": "படபடக்கிறது",
@@ -4622,26 +4622,26 @@
           "wandering": "சுற்றித் திரிகிறது"
         },
         "helloworld_food_sounds": {
-          "driving with arrow keys": "அம்புக்குறி விசைகளைக் கொண்டு இயக்குகிறது",
-          "fluttering": "படபடக்கிறது",
+          "driving with arrow keys": "அம்புக்குறி விசைகளை ஓட்டுதல்",
+          "fluttering": "படபடக்கும் ",
           "growing": "வளர்கிறது",
-          "jittering": "நடுங்குகிறது",
-          "moving east": "கிழக்கு நோக்கி நகர்கிறது",
-          "moving east and looping": "கிழக்கு நோக்கி நகர்ந்து, லூப் செய்கிறது",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving east and looping": "கிழக்கு நோக்கி நகர்ந்து வளையும் ",
           "moving north": "வடக்கு நோக்கி நகர்கிறது",
           "moving north and looping": "வடக்கே நகர்ந்து வளையும்",
-          "moving south": "தெற்கு நோக்கி நகர்கிறது",
+          "moving south": "தெற்கு நகரும் ",
           "moving south and looping": "தெற்கே நகர்ந்து வளையும்",
-          "moving west": "மேற்கு நோக்கி நகர்கிறது",
-          "moving west and looping": "மேற்கு நோக்கி நகர்ந்து, லூப் செய்கிறது",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "moving west and looping": "மேற்கு நோக்கி நகர்ந்து வளையும்",
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
           "patrolling": "ரோந்து",
           "shrinking": "சுருங்குகிறது",
           "spinning left": "இடதுபுறமாக சுழல்கிறது",
-          "spinning right": "வலதுபுறமாக சுழல்கிறது",
-          "swimming left and right": "இடது மற்றும் வலதுபுறமாக நீந்துகிறது",
-          "wandering": "சுற்றித் திரிகிறது",
-          "wobbling": "தள்ளாடுகிறது"
+          "spinning right": "வலதுபுறம் சுழல்கிறது  ",
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "wandering": "அலைந்து திரிதல்",
+          "wobbling": "தள்ளாட்டம்"
         },
         "helloworld_food_sounds_soccer-2022": {
           "driving with arrow keys": "அம்புக்குறி விசைகளை ஓட்டுதல்",
