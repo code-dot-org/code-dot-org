@@ -41,6 +41,7 @@ export function setUpBlocklyForMusicLab() {
     Blockly.JavaScript[blockType] = blockConfig.generator;
   }
 
+  Blockly.cdoUtils.registerCustomProcedureBlocks();
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
   Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
   Blockly.fieldRegistry.register(FIELD_CHORD_TYPE, FieldChord);

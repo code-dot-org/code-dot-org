@@ -1,4 +1,5 @@
 require 'cdo/activity_constants'
+require 'policies/child_account'
 
 FactoryBot.define do
   factory :course_offering do
@@ -154,6 +155,12 @@ FactoryBot.define do
         after(:create) do |authorized_teacher|
           authorized_teacher.permission = UserPermission::AUTHORIZED_TEACHER
           authorized_teacher.save
+        end
+      end
+      factory :ai_chat_access do
+        after(:create) do |ai_chat_access|
+          ai_chat_access.permission = UserPermission::AI_CHAT_ACCESS
+          ai_chat_access.save
         end
       end
       factory :facilitator do
@@ -380,7 +387,12 @@ FactoryBot.define do
       end
 
       trait :with_parent_permission do
-        child_account_compliance_state {User::ChildAccountCompliance::PERMISSION_GRANTED}
+        child_account_compliance_state {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
+        child_account_compliance_state_last_updated {DateTime.now}
+      end
+
+      trait :with_pending_parent_permission do
+        child_account_compliance_state {Policies::ChildAccount::ComplianceState::REQUEST_SENT}
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
@@ -389,7 +401,16 @@ FactoryBot.define do
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
-      factory :locked_out_student, traits: [:U13, :in_colorado]
+      factory :non_compliant_child, traits: [:U13, :in_colorado] do
+        factory :locked_out_child do
+          child_account_compliance_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
+          child_account_compliance_state_last_updated {DateTime.now}
+          child_account_compliance_lock_out_date {DateTime.now}
+          trait :expired do
+            child_account_compliance_lock_out_date {7.days.ago}
+          end
+        end
+      end
     end
 
     # We have some tests which want to create student accounts which don't have any authentication setup.
@@ -1757,5 +1778,24 @@ FactoryBot.define do
     trait :granted do
       user {create :young_student, :with_parent_permission}
     end
+  end
+
+  factory :rubric do
+    association :lesson
+    association :level
+  end
+
+  factory :learning_goal do
+    association :rubric
+    sequence(:key) {|n| "lg_#{n}"}
+    position {0}
+    learning_goal {"Test Learning Goal"}
+    ai_enabled {false}
+  end
+
+  factory :learning_goal_evidence_level do
+    association :learning_goal
+    understanding {0}
+    teacher_description {"Description for teacher"}
   end
 end

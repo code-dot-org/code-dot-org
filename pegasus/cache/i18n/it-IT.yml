@@ -1250,7 +1250,7 @@ it-IT:
   header_about_partners: Partner
   header_about_team: Tutto il team
   header_about_us: Chi siamo
-  header_course_catalog: Catalogo Corsi
+  header_course_catalog: Corsi
   header_courses: Corsi
   header_documentation: Documentazione
   header_educate_beyond: Dopo Code.org
@@ -1267,6 +1267,7 @@ it-IT:
   header_help_support: Help and support
   header_help_us: Aiutaci
   header_home: Home
+  header_incubator: Incubatrice
   header_learn: Impara
   header_legal: Privacy & Legale
   header_legal_privacy: Informativa sulla privacy

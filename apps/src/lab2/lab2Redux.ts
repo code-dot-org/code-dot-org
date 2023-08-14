@@ -13,10 +13,9 @@ import {
 import {
   AppName,
   Channel,
-  LevelData,
-  LevelProperties,
   ProjectManagerStorageType,
   ProjectSources,
+  LevelProperties,
 } from './types';
 import Lab2Registry from './Lab2Registry';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
@@ -28,11 +27,11 @@ import {
 } from '../code-studio/projectRedux';
 import ProjectManager from './projects/ProjectManager';
 import HttpClient from '../util/HttpClient';
-import {convertOptionalStringToBoolean} from '../types/utils';
 import {
   initialValidationState,
   ValidationState,
 } from './progress/ProgressManager';
+import {LevelPropertiesValidator} from './responseValidators';
 
 export interface LabState {
   // If we are currently loading common data for a project or level. Should only be used internally
@@ -53,14 +52,11 @@ export interface LabState {
   // Initial sources for the current level, as loaded from the server. Subsequent changes to sources
   // while the project is being edited are managed by the Lab and Project Manager directly.
   initialSources: ProjectSources | undefined;
-  // Level data for the current level
-  levelData: LevelData | undefined;
-  hideShareAndRemix: boolean;
-  isProjectLevel: boolean;
   // Validation status for the current level. This is used by the progress system to determine
   // what instructions to display and if the user has satisfied the validation conditions, if present.
   validationState: ValidationState;
-  appName: AppName | undefined;
+  // Level properties for the current level.
+  levelProperties: LevelProperties | undefined;
 }
 
 const initialState: LabState = {
@@ -69,11 +65,8 @@ const initialState: LabState = {
   pageError: undefined,
   channel: undefined,
   initialSources: undefined,
-  levelData: undefined,
-  hideShareAndRemix: true,
-  isProjectLevel: false,
   validationState: {...initialValidationState},
-  appName: undefined,
+  levelProperties: undefined,
 };
 
 // Thunks
@@ -100,14 +93,8 @@ export const setUpWithLevel = createAsyncThunk(
     const levelProperties = await loadLevelProperties(
       payload.levelPropertiesPath
     );
-    const isProjectLevel = convertOptionalStringToBoolean(
-      levelProperties.isProjectLevel,
-      false
-    );
-    const disableProjects = convertOptionalStringToBoolean(
-      levelProperties.disableProjects,
-      false
-    );
+
+    const {isProjectLevel, disableProjects} = levelProperties;
 
     if (disableProjects) {
       // If projects are disabled on this level, we can skip loading projects data.
@@ -203,6 +190,13 @@ export const hasPageError = (state: {lab: LabState}) => {
   return state.lab.pageError !== undefined;
 };
 
+// If the share and remix buttons should be hidden for the lab. Defaults to true (hidden)
+// if not specified.
+export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
+  const hideShareAndRemix = state.lab.levelProperties?.hideShareAndRemix;
+  return hideShareAndRemix === undefined ? true : hideShareAndRemix;
+};
+
 const labSlice = createSlice({
   name: 'lab',
   initialState,
@@ -226,29 +220,21 @@ const labSlice = createSlice({
     setChannel(state, action: PayloadAction<Channel | undefined>) {
       state.channel = action.payload;
     },
-    setHideShareAndRemix(state, action: PayloadAction<boolean>) {
-      state.hideShareAndRemix = action.payload;
-    },
-    setIsProjectLevel(state, action: PayloadAction<boolean>) {
-      state.isProjectLevel = action.payload;
-    },
     setValidationState(state, action: PayloadAction<ValidationState>) {
       state.validationState = {...action.payload};
     },
-    // Update the level data and initial sources simultaneously when the level changes.
+    // Update the level properties, initial sources, and channel simultaneously when the level changes.
     // These fields are updated together so that labs receive all updates at once.
     onLevelChange(
       state,
       action: PayloadAction<{
         channel?: Channel;
-        appName?: AppName;
-        levelData?: LevelData;
+        levelProperties: LevelProperties;
         initialSources?: ProjectSources;
       }>
     ) {
       state.channel = action.payload.channel;
-      state.appName = action.payload.appName;
-      state.levelData = action.payload.levelData;
+      state.levelProperties = action.payload.levelProperties;
       state.initialSources = action.payload.initialSources;
     },
   },
@@ -326,9 +312,9 @@ async function setUpAndLoadProject(
 // thunk dispatch method.
 function setProjectAndLevelData(
   data: {
+    levelProperties: LevelProperties;
     channel?: Channel;
     initialSources?: ProjectSources;
-    levelProperties?: LevelProperties;
   },
   aborted: boolean,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
@@ -337,40 +323,18 @@ function setProjectAndLevelData(
   if (aborted) {
     return;
   }
-  const {channel, initialSources, levelProperties} = data;
-  if (levelProperties) {
-    const hideShareAndRemix = convertOptionalStringToBoolean(
-      levelProperties.hideShareAndRemix,
-      /* defaultValue*/ true
-    );
-    dispatch(setHideShareAndRemix(hideShareAndRemix));
-    const isProjectLevel = convertOptionalStringToBoolean(
-      levelProperties.isProjectLevel,
-      /* defaultValue*/ false
-    );
-    dispatch(setIsProjectLevel(isProjectLevel));
-  } else {
-    // set default values to clear out any previous values
-    dispatch(setHideShareAndRemix(true));
-    dispatch(setIsProjectLevel(false));
-  }
   // Dispatch level change last so labs can react to the new level data
   // and new initial sources at once.
-  dispatch(
-    onLevelChange({
-      appName: levelProperties?.appName,
-      levelData: levelProperties?.levelData,
-      channel,
-      initialSources,
-    })
-  );
+  dispatch(onLevelChange(data));
 }
 
 async function loadLevelProperties(
   levelPropertiesPath: string
 ): Promise<LevelProperties> {
   const response = await HttpClient.fetchJson<LevelProperties>(
-    levelPropertiesPath
+    levelPropertiesPath,
+    {},
+    LevelPropertiesValidator
   );
   return response.value;
 }
@@ -388,7 +352,6 @@ export const {setIsLoading, setPageError, clearPageError, setValidationState} =
   labSlice.actions;
 
 // These should not be set outside of the lab slice.
-const {setHideShareAndRemix, setIsProjectLevel, setChannel, onLevelChange} =
-  labSlice.actions;
+const {setChannel, onLevelChange} = labSlice.actions;
 
 export default labSlice.reducer;

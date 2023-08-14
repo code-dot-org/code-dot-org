@@ -7,7 +7,12 @@
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 import Lab2Registry from '../Lab2Registry';
-import {LabState, setUpWithLevel, setUpWithoutLevel} from '../lab2Redux';
+import {
+  LabState,
+  setUpWithLevel,
+  setUpWithoutLevel,
+  shouldHideShareAndRemix,
+} from '../lab2Redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
@@ -28,11 +33,9 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   );
 
   const isStandaloneProjectLevel = useSelector(
-    (state: {lab: LabState}) => state.lab.isProjectLevel
+    (state: {lab: LabState}) => state.lab.levelProperties?.isProjectLevel
   );
-  const hideShareAndRemix = useSelector(
-    (state: {lab: LabState}) => state.lab.hideShareAndRemix
-  );
+  const hideShareAndRemix = useSelector(shouldHideShareAndRemix);
   const loadedChannelId = useSelector(
     (state: {lab: LabState}) => state.lab.channel && state.lab.channel.id
   );

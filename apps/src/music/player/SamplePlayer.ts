@@ -93,15 +93,23 @@ export default class SamplePlayer {
     return this.isInitialized;
   }
 
-  startPlayback(sampleEventList: SampleEvent[]) {
+  /**
+   * Start playback with the given sample events.
+   * @param sampleEventList samples to play
+   * @param playTimeOffsetSeconds the number of seconds to offset playback by.
+   */
+  startPlayback(
+    sampleEventList: SampleEvent[],
+    playTimeOffsetSeconds?: number
+  ) {
     if (!this.isInitialized) {
       this.logUninitialized();
       return;
     }
 
     this.stopPlayback();
-
-    this.startPlayingAudioTime = soundApi.GetCurrentAudioTime();
+    this.startPlayingAudioTime =
+      soundApi.GetCurrentAudioTime() - (playTimeOffsetSeconds || 0);
     this.isPlaying = true;
 
     this.playSamples(sampleEventList);

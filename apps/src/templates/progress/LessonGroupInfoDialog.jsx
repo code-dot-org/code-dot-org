@@ -34,7 +34,7 @@ export default class LessonGroupInfoDialog extends Component {
           <Button
             text={i18n.closeDialog()}
             onClick={this.props.closeDialog}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </BaseDialog>

@@ -1579,14 +1579,6 @@ columns:
     collation: utf8_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: self_paced_professional_learning
-    sql_type_metadata: *3
-    'null': true
-    default:
-    default_function:
-    collation: utf8_unicode_ci
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: professional_learning_program
     sql_type_metadata: *3
     'null': true
@@ -1605,6 +1597,14 @@ columns:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: published_date
     sql_type_metadata: *4
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: self_paced_pl_course_offering_id
+    sql_type_metadata: *2
     'null': true
     default:
     default_function:
@@ -12535,7 +12535,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20230713141627
+version: 20230720231439
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5

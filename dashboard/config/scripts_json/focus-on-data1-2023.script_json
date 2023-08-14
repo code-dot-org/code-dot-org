@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-21 18:23:27 UTC",
+    "serialized_at": "2023-07-25 22:38:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -28,9 +28,21 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 1,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "focus-on-data1-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
       "properties": {
         "display_name": "Chapter 1: The Problem Solving Process"
       },
@@ -42,7 +54,7 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
         "display_name": "Alternative Lessons"
       },
@@ -54,9 +66,24 @@
   ],
   "lessons": [
     {
+      "key": "Student Pre-Course Survey",
+      "name": "Student Pre-Course Survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "focus-on-data1-2023"
+      }
+    },
+    {
       "key": "Intro to Problem Solving",
       "name": "Intro to Problem Solving",
-      "absolute_position": 1,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
@@ -75,7 +102,7 @@
     {
       "key": "The Problem Solving Process",
       "name": "The Problem Solving Process",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
@@ -94,7 +121,7 @@
     {
       "key": "Exploring Problem Solving",
       "name": "Exploring Problem Solving",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
@@ -113,7 +140,7 @@
     {
       "key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
       "name": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
@@ -132,7 +159,7 @@
     {
       "key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
       "name": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
@@ -151,7 +178,7 @@
     {
       "key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
       "name": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
@@ -170,7 +197,7 @@
     {
       "key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
       "name": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
@@ -190,7 +217,7 @@
     {
       "key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
       "name": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
@@ -208,6 +235,19 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "2eadbdde-210f-462c-9c6b-aa721db7911e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2eadbdde-210f-462c-9c6b-aa721db7911e",
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "focus-on-data1-2023"
+      }
+    },
     {
       "key": "07a27a03-af58-428c-9309-2b99894cbe92",
       "position": 1,
@@ -663,6 +703,16 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "a09e8128-5f12-4d3e-a80e-ef5429574598",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a09e8128-5f12-4d3e-a80e-ef5429574598",
+        "lesson_activity.key": "2eadbdde-210f-462c-9c6b-aa721db7911e"
+      }
+    },
     {
       "key": "071a365f-73a7-4796-a6ce-0d53ea81780f",
       "position": 1,
@@ -2861,6 +2911,27 @@
       "level_keys": [
         "intro-pulse-survey_csd1_2023"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pre-survey-levelgroup_21_22_2023"
+        ],
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "focus-on-data1-2023",
+        "activity_section.key": "a09e8128-5f12-4d3e-a80e-ef5429574598"
+      },
+      "level_keys": [
+        "csd-pre-survey-levelgroup_21_22_2023"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -2874,6 +2945,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "focus-on-data1-2023",
         "activity_section.key": "8b0483bb-3d92-4b33-9418-dd639a6062cb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pre-survey-levelgroup_21_22_2023",
+        "script_level.level_keys": [
+          "csd-pre-survey-levelgroup_21_22_2023"
+        ],
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "focus-on-data1-2023",
+        "activity_section.key": "a09e8128-5f12-4d3e-a80e-ef5429574598"
       }
     }
   ],
