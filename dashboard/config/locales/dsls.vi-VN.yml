@@ -2151,81 +2151,53 @@ vi-VN:
         display_name: Thực hành chương trình Họa sĩ
       CourseF_outbreak_story:
         content1: mô tả ở đây
-        markdown: "# Dịch bệnh bùng phát: Tự lập trình mô phỏng\n\n## Chào mừng bạn
-          đến với Thị Trấn Quái Vật!\nThị Trấn Quái Vật vốn là một thị trấn hạnh phúc
-          và khỏe mạnh. Các quái vật trong Thị Trấn Quái Vật rất thích lang thang
-          khắp nơi để ghé thăm bạn bè.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nMột ngày nọ, một chú quái vật bắt đầu có cảm giác
-          bị bệnh. Chú quái vật này đã bị dính **vi rút** rồi! Vi rút là một loại
-          vi khuẩn nhỏ xíu khiến bạn bị bệnh. Các quái vật khác thì vẫn vô tư. Họ
-          tiếp tục ghé thăm bạn bè.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nKhông lâu sau, thêm hai quái vật nữa bị bệnh. Vẫn
-          là loại vi rút đó! Dường như họ bị nhiễm vi rút từ bạn bè của mình.\n\n<img
-          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nVi rút dần lây lan sang các quái vật khác ở xung
-          quanh. Các quái vật khỏe mạnh bắt đầu lo lắng rằng họ cũng bị bệnh. Các
-          quái vật bị bệnh bắt đầu lo lắng rằng họ sẽ lây vi rút cho những quái vật
-          khác.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
-          style=\"float:right; width:30%\">\n\n## Ngăn chặn lây lan\nMay mắn thay,
-          sau khi nghiên cứu loại vi rút này, vùng đất láng giềng của Thị Trấn Quái
-          Vật đã phát hiện ra một thông tin quan trọng. Họ nhận ra rằng vi rút sẽ
-          khó lây lan hơn nếu họ đeo khẩu trang che miệng. Nếu đeo khẩu trang, quái
-          vật bị bệnh sẽ khó truyền vi rút cho các quái vật khỏe mạnh.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
-          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
-          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
-          Rồi chuyện gì sẽ xảy ra?\n\nHôm nay, bạn sẽ lập trình để tạo ra và tự mình
-          chạy **mô phỏng** dịch bệnh bùng phát do vi rút tại Thị Trấn Quái Vật. Bản
-          mô phỏng là một mô hình máy tính cho một quy trình hoặc một hệ thống. Hãy
-          học cách lập trình và dự đoán điều gì sẽ xảy ra với các vùng đất láng giềng
-          của Thị Trấn Quái Vật.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
-          style=\"float:right; width:15%\">\n\n* *Vi rút lây lan nhanh tới mức nào?*\n\n*
-          *Rồi rất cả mọi người sẽ bị bệnh sao?*\n\n* *Khẩu trang có tác dụng gì?*\n\n\nSau
-          khi hoàn thành, hãy chia sẻ bản mô phỏng với mọi người. Hãy chia sẻ thông
-          điệp mang những suy nghĩ của bạn về cách giữ gìn sức khỏe cho mọi người
-          khi vi rút lan tới thị trấn. \n\n<img src=\"https://images.code.org/5e41169fcaf0e949b09ab225d183c165-image-1617128998517.png\"
-          style=\"float:left;width:30%\">\n"
+        markdown: |-
+          # Dịch bệnh bùng phát: Tự lập trình mô phỏng
+
+          ## Chào mừng bạn đến với Thị Trấn Quái Vật!
+          Thị Trấn Quái Vật vốn là một thị trấn hạnh phúc và khỏe mạnh. Các quái vật trong Thị Trấn Quái Vật rất thích lang thang khắp nơi để ghé thăm bạn bè.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Một ngày nọ, một chú quái vật bắt đầu thấy không khỏe. Chú quái vật này đã bị dính **vi rút** rồi! Vi rút là một loại vi khuẩn nhỏ xíu khiến bạn bị ốm. Các quái vật khác thì vẫn vô tư. Họ tiếp tục ghé thăm bạn bè.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Không lâu sau, thêm hai quái vật nữa bị ốm. Vẫn là loại vi rút đó! Dường như họ bị nhiễm vi rút từ bạn bè của mình.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Vi rút dần lây lan sang các quái vật khác ở gần. Các quái vật khỏe mạnh bắt đầu lo lắng rằng họ cũng bị ốm. Các quái vật bị ốm bắt đầu lo lắng rằng họ sẽ lây vi rút cho những quái vật khác.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Ngăn chặn lây lan
+          May mắn thay, sau khi nghiên cứu loại vi rút này, vùng đất láng giềng của Thị Trấn Quái Vật đã phát hiện ra một thông tin quan trọng. Họ nhận ra rằng vi rút sẽ khó lây lan hơn nếu họ đeo khẩu trang che miệng. Nếu đeo khẩu trang, quái vật bị ốm sẽ khó truyền vi rút cho các quái vật khỏe mạnh.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## Rồi chuyện gì sẽ xảy ra?
+
+          Hôm nay, bạn sẽ lập trình để tạo ra và tự mình chạy **bản mô phỏng** dịch bệnh bùng phát do vi rút tại Thị Trấn Quái Vật. Bản mô phỏng là một mô hình máy tính cho một quy trình hoặc một hệ thống. Hãy học cách lập trình và dự đoán điều gì sẽ xảy ra với các vùng đất láng giềng của Thị Trấn Quái Vật.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * *Vi rút lây lan nhanh tới mức nào?*
+
+          * *Rồi rất cả mọi người sẽ bị ốm sao?*
+
+          * *Khẩu trang có tác dụng gì?*
+
+
+          Sau khi hoàn thành, hãy chia sẻ bản mô phỏng với mọi người. Hãy chia sẻ thông điệp mang những suy nghĩ của bạn về cách giữ gìn sức khỏe cho mọi người khi vi rút lan tới thị trấn.
       CourseF_outbreak_story2:
         content1: mô tả ở đây
         markdown: |
@@ -3724,6 +3696,14 @@ vi-VN:
           * Lập trình viên cần phải hiểu nhu cầu của mọi người và thiết kế ứng dụng phù hợp với họ!
 
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      Unit 1 Lesson 1 Overview:
+        markdown: "# Tổng quan\n\nCả lớp đang hoạt động nhóm để thiết kế những con
+          tàu bằng lá nhôm mang được nhiều đồng xu nhất có thể. Vào cuối buổi học,
+          các nhóm suy nghĩ về trải nghiệm của họ với hoạt động và liên kết với các
+          phương án giải quyết vấn đề mà họ sẽ làm xuyên suốt khóa học. \n\n\n## Nguồn
+          dẫn\n\n* [Những con thuyền nhôm](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Hướng dẫn hoạt động (sao chép lại dưới dạng [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Tài Liệu](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))"
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
