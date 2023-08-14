@@ -66,7 +66,7 @@ class SessionsController < Devise::SessionsController
 
     # If the user is compliant with the Child Account Policy, redirect them to
     # /home
-    redirect_to '/home' if Policies::ChildAccount.compliant? current_user
+    redirect_to home_path if Policies::ChildAccount.compliant? current_user
 
     # Basic defaults. If the @pending_email is empty, the request was never sent
     @pending_email = ''
