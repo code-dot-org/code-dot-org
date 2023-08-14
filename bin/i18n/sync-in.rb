@@ -12,18 +12,8 @@ module I18n
     def self.perform
       puts "Sync in starting"
       I18n::Resources::Apps.sync_in
-      I18n::Resources::Dashboard::CurriculumContent.sync_in
-      I18n::Resources::Dashboard::CourseContent.sync_in
-      I18n::Resources::Dashboard::Blocks.sync_in
-      I18n::Resources::Dashboard::SharedFunctions.sync_in
-      I18n::Resources::Dashboard::CourseOfferings.sync_in
-      I18n::Resources::Dashboard::Standards.sync_in
-      I18n::Resources::Dashboard::Docs.sync_in
-      I18n::Resources::Dashboard::Scripts.sync_in
-      I18n::Resources::Dashboard::Courses.sync_in
+      I18n::Resources::Dashboard.sync_in
       I18n::Resources::Pegasus.sync_in
-      puts "Copying source files"
-      I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
       puts "Sync in completed successfully"
     rescue => exception
       puts "Sync in failed from the error: #{exception}"
