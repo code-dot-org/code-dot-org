@@ -194,6 +194,8 @@ tr:
   grade_level_label_elementary: İlkokul
   grade_level_label_middle: Ortaokul
   grade_level_label_high: Lise
+  students_label: Öğrenciler
+  teachers_label: Öğretmenler
   teacher_label_csf: CS Temelleri Öğretmeni
   teacher_label_csd: Bilgisayar Bilimi Keşifleri Öğretmeni
   teacher_label_csp: CS İlkeleri Öğretmeni
@@ -207,7 +209,9 @@ tr:
   call_to_action_explore_unit: Üniteyi keşfedin
   call_to_action_explore_curriculum: Müfredatı keşfedin
   call_to_action_explore_curriculum_options: Müfredat seçeneklerini keşfedin
+  call_to_action_explore_lessons: Dersleri keşfedin
   call_to_action_explore_modules: Modülleri keşfedin
+  call_to_action_explore_module: Modülü keşfedin
   call_to_action_explore_workshops: Atölyeleri keşfedin
   call_to_action_explore_course: Kursu keşfedin
   call_to_action_explore_courses: Kursları keşfedin
@@ -255,8 +259,10 @@ tr:
   call_to_action_see_module_details: Modül ayrıntılarına bakın
   call_to_action_start_modules: Başlangıç modülleri
   call_to_action_see_course_details: Kurs ayrıntılarına bakın
+  call_to_action_see_lesson_details: Ders ayrıntılarına bakın
   call_to_action_learn_about_approach: Yaklaşımımız hakkında daha fazla bilgi edinin
   call_to_action_try_java_lab: Java Lab'i deneyin
+  call_to_action_notify_available: Uygun olduğunda bana haber ver
   aria_label_call_to_action_afe: Amazon Future Engineer hakkında daha fazla bilgi
     edinin
   aria_label_call_to_action_teaching_csf: Bilgisayar Bilimi Temelleri Öğretimi profesyonel
@@ -328,6 +334,24 @@ tr:
   aria_label_call_to_action_csf_course_d: Kurs D ayrıntılarına bakın
   aria_label_call_to_action_csf_course_e: Kurs E ayrıntılarına bakın
   aria_label_call_to_action_csf_course_f: Kurs F ayrıntılarına bakın
+  aria_label_call_to_action_ai_pl_101_videos: Öğretmenler için AI 101 videolarını
+    izleyin
+  aria_label_call_to_action_ai_teaching_module: Yapay Zeka Öğretimi ve Makine Öğrenimi
+    modülünü keşfedin
+  aria_label_call_to_action_how_ai_works_lesson_01: Makine Öğrenimine Giriş dersi
+    ayrıntılarına bakın
+  aria_label_call_to_action_how_ai_works_lesson_02: Bilgisayarla Görme dersi ayrıntılarına
+    bakın
+  aria_label_call_to_action_how_ai_works_lesson_03: Sinir Ağları ders ayrıntılarına
+    bakın
+  aria_label_call_to_action_how_ai_works_lesson_04: Sohbet Robotları ve Büyük Dil
+    Modelleri ders ayrıntılarına bakın
+  aria_label_call_to_action_how_ai_works_lesson_05: Generative Images ders ayrıntılarına
+    bakın
+  aria_label_call_to_action_how_ai_works_lesson_06: Algoritmik Önyargı dersi ayrıntılarına
+    bakın
+  aria_label_call_to_action_how_ai_works_lesson_07: Yapay Zeka Etik Kurallarımız ders
+    ayrıntılarına bakın
   video_title_professional_learning_program: Code.org'un Profesyonel Öğrenme Programı
   curriculum_name_csf: Bilgisayar Biliminin Temelleri
   curriculum_name_csf_02: Herhangi bir CS Temelleri (Kurs A-F)
@@ -442,6 +466,10 @@ tr:
   module_label_student_tool: Öğrenci aracı
   module_label_student_product: Ürün
   module_label_student_content_resources: İçerik ve kaynaklar
+  module_label_new: Yeni
+  module_label_coming_soon: Yakında geliyor
+  module_label_video_series: Video serisi
+  module_label_self_paced: Kendinden tempolu modül
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -464,9 +492,13 @@ tr:
   module_grade_9_12_teachers: 9-12 Öğretmenleri
   module_level_beginner: Acemi
   module_level_intermediate: Orta
+  module_duration_45_mins: 45 dakika
+  module_duration_1_hr: 1 saat
   module_duration_2_hrs: 2 saat
   module_duration_3_hrs: 3 saat
+  module_duration_5_hrs: 5 saat
   module_duration_8_hrs: 8 saat
+  module_duration_20_hrs: 20 saat
   module_duration_35_hrs: 35 saat
   module_duration_lesson: Ders
   module_duration_week: Hafta
@@ -540,6 +572,7 @@ tr:
   heading_no_devices: Cihaz yok mu? Seni koruduk
   heading_java_lab: Java Laboratuvarı
   heading_objects_first: Önce nesneler
+  heading_these_lessons_will: 'Bu dersler:'
   professional_learning_section_desc: Öğretmeye hazırlanırken ihtiyacınız olan desteği
     alın. Öğretmenler onu seviyor,% 90'dan fazlası onu şimdiye kadarki en iyi mesleki
     gelişim olarak sıralıyor!
@@ -672,6 +705,11 @@ tr:
   ai_curriculum_grades_03: 'Sınıf Seviyeleri: 3-12'
   ai_curriculum_duration_03: 'Süre: 1 saat'
   ai_curriculum_btn_aria_label_03: Okyanuslar için AI etkinliğini deneyin
+  ai_curriculum_title_04: Yapay Zeka Nasıl Çalışır
+  ai_curriculum_desc_04: Bu dersler AI Nasıl Çalışır video serisini tamamlar. Her
+    ders, diziden tek bir video ile eşleştirilir, videolarda tanıtılan kavramların
+    derinliklerine dalmak.
+  ai_curriculum_btn_aria_label_04: Yapay Zekanın Nasıl Çalıştığını Keşfedin
   ai_carousel_heading: 'Öğretmenler Code.org ile AI hakkında ne söylüyor:'
   ai_carousel_quote_01: Bu ders aynı zamanda öğrencilerime sınıflandırma sistemlerinde
     bir fikir unsuru olduğunu görme fırsatı verdi. Daha sonra, önyargının yapay zekada
@@ -688,6 +726,10 @@ tr:
   ai_pl_list_04: Yapay zeka ve makine öğreniminin gerçek dünyadaki etkilerini düşünün.
   ai_pl_list_05: Bölüm sonu projelerini keşfedin.
   ai_pl_duration: 'Süre: 2 saat'
+  ai_pl_title: Yapay Zeka ve Makine Öğrenimi Öğretimi
+  ai_pl_desc: Yapay zeka ve makine öğrenimine giriş. AI Lab'ı kullanarak bir makine
+    öğrenimi modeli eğitin ve makine öğrenimi uygulamalarıyla etkileşim kurun. Yapay
+    zeka ve makine öğreniminin gerçek dünyadaki etkilerini düşünün.
   ai_video_series_title: Yapay Zeka Nasıl Çalışır
   ai_video_series_desc: Microsoft CEO'su Satya Nadella'nın tanıtımıyla, bu kısa video
     dizisi size yapay zekanın nasıl çalıştığını ve neden önemli olduğunu tanıtacak.
@@ -712,6 +754,7 @@ tr:
   ai_pl_101_hero_heading: AI EmpowerED için bize katılın!
   ai_pl_101_hero_desc: Eğitmenlere yönelik ücretsiz çevrimiçi öğrenme serimizle eğitimde
     yapay zekanın (AI) dönüştürücü potansiyelini keşfedin.
+  ai_pl_101_hero_desc_02: Öğretmenler için kapsamlı bir çevrimiçi öğrenme serisi.
   ai_pl_101_hero_presented: Tarafından sunuldu
   ai_pl_101_intro_heading: Öğretmenler için AI 101 nedir?
   ai_pl_101_intro_text: Öğretmenler için AI 101, yapay zekanın (AI) çığır açan dünyası
@@ -754,6 +797,97 @@ tr:
     yazma deneyimini kişiselleştirir, öğretmenlere yazma deneyimi boyunca yinelemeli
     geri bildirim ve biçimlendirici değerlendirme sağlamada yardımcı olmak.'
   ai_pl_101_explore__button_4: Keşfet aracı
+  ai_pl_101_video_title_1: Sal Khan ve Hadi Partovi ile Ocak başı Sohbeti
+  ai_pl_101_video_desc_1: Sınıfta yapay zekayı kucaklama üzerine ocak başı sohbeti
+    için Sal Khan (Khan Academy) ve Hadi Partovi'ye (Code.org) katılın. Bugün yapay
+    zekayı çevreleyen en tartışmalı konulardan bazılarını içeren canlı bir tartışma
+    bekleyin.
+  ai_pl_101_video_title_2: Eğitimciler için Yapay Zekanın gizemini açığa çıkarma
+  ai_pl_101_video_desc_2: Yapay zekanın toplumumuzdaki derin etkisini ve eğitim alanıyla
+    artan ilgisini anlamak için sizi temel bilgilerle donatacak olan Yapay Zekanın
+    temellerine giriş. Sınıftaki görevler için yapay zekadan yararlanma ve idari görevlerde
+    zaman kazanma konusunda pratik bilgiler edineceksiniz.
+  ai_pl_101_video_title_3: Yapay Zeka ile Öğrenmeyi Dönüştürme
+  ai_pl_101_video_desc_3: Yapay zeka ve eğitimin kesişimini keşfedin. Bu oturum, öğrencilerin
+    öğrenimini geliştirmek için yapay zekanın pedagoji ile nasıl birleştirilebileceğini
+    araştırıyor. Öğrencilerinin öğrenme deneyimlerini zenginleştirmek için öğretim
+    uygulamalarını dönüştürmek için yapay zekayı kullanmak isteyen eğitimciler için
+    mutlaka katılmalıdır.
+  ai_pl_101_video_title_4: Yapay Zekaya Sorumlu Bir Yaklaşımın Sağlanması
+  ai_pl_101_video_desc_4: Yapay zekayı eğitim ortamlarına dahil etmek için etik hususları
+    ve en iyi uygulamaları keşfedin. Bu oturum somut stratejiler sağlayacaktır, kaynaklar,
+    ve gerçek dünya örnekleri, hepsi AI"nın potansiyel önyargılarını anlamayı amaçladı,
+    ve onunla birlikte gelen etik hususlar.
+  ai_pl_101_video_title_5: Yapay Zekayı Sınıfa Getirmek
+  ai_pl_101_video_desc_5: Bu oturum, yapay zeka hakkında öğretmeye, AI eğitim araçlarını
+    değerlendirmeye ve kullanmaya ve öğrenci değerlendirmesi için yapay zekayı kullanmaya
+    odaklanmaktadır. Teori, pratik örnekler ve kaynakların zengin bir karışımıyla,
+    eğitimcileri AI ortamında gezinmeleri ve öğrenci öğrenme deneyimlerini geliştirmeleri
+    için güçlendirmeyi amaçlamaktadır.
+  ai_pl_101_video_desc_6: 'Büyük Dil Modelleri (ChatGPT gibi) ve Üretken Yapay Zeka
+    hakkında iki yeni video içeren yapay zekadaki büyük değişiklikleri yönlendiren
+    yeni teknoloji hakkında daha fazla bilgi edinin. Bu yeni teknolojilerin nasıl
+    çalıştığını doğrudan uzmanlardan dinleyin: OpenAI CTO Mira Murati ve RunwayML
+    CEO''su Cristóbal Valenzuela.'
+  how_ai_works_hero_heading: Yapay Zeka Nasıl Çalışır
+  how_ai_works_hero_desc: Video serimiz ve beraberindeki derslerimiz “AI Nasıl Çalışır”
+    ile AI dünyasına dalın!
+  how_ai_works_intro_desc: Bu kısa videolar ve beraberindeki sınıf içi dersler dizisi,
+    sizi ve öğrencilerinizi yapay zekanın nasıl çalıştığını ve neden önemli olduğunu
+    tanıtacak. Konuya göre bireysel dersler seçebilir, bir sınıftaki tüm konu serisini
+    keşfedebilir veya daha derin bir dalış yapmak için 7 dersin tümünü öğretebilirsiniz.
+  how_ai_works_intro_list_01: Sizi yapay zeka ve makine öğrenimi ile tanıştırın
+  how_ai_works_intro_list_02: Büyük dil modelleri (LLM'ler) ve görüntü oluşturma dahil
+    olmak üzere üretken yapay zekanın nasıl çalıştığına dalın
+  how_ai_works_intro_list_03: Önyargıları, etiği, gizliliği ve yapay zekanın sorumlu
+    kullanımını keşfedin
+  how_ai_works_intro_list_04: Bilgisayarla görme de dahil olmak üzere yapay zekanın
+    gerçek dünya uygulamalarına dokunun
+  how_ai_works_lessons_heading: Sınıfınız için yapay zeka dersleri
+  how_ai_works_lesson_title_01: Makine Öğrenmesine Giriş
+  how_ai_works_lesson_desc_01: Makine öğrenimi adı verilen bir yapay zeka biçimi ve
+    problemleri çözmek için bir robotu eğitmeye yardımcı olmak için Problem Çözme
+    Sürecini nasıl kullanabileceklerini öğrenin. Bir robotun balıklardaki kalıpları
+    nasıl tespit edeceğini öğrendiği makine öğrenimi etkinliklerine katılın.
+  how_ai_works_lesson_title_02: Bilgisayarla Görme
+  how_ai_works_lesson_desc_02: Bilgisayarla görmenin nasıl çalıştığını öğrenin. Bilgisayarla
+    görüşü ve bir bilgisayarın nasıl “gördüğünü” açıklayan bir video izleyin. Ardından,
+    yedi segmentli ekranın hangi sayıyı görüntülediğine karar vermek ve test etmek
+    için bir ağ kullanan bir algoritma tasarlayın.
+  how_ai_works_lesson_title_03: Sinir Ağları
+  how_ai_works_lesson_desc_03: Sinir ağlarının nasıl çalıştığını öğrenin. Yolda sinir
+    ağlarını keşfetmek için bir widget kullanın. Sinir ağlarını açıklayan bir video
+    izleyin. Son olarak, öneri sistemleri oluştururken farklı bakış açılarına duyulan
+    ihtiyacı tartışın.
+  how_ai_works_lesson_title_04: Sohbet Robotları ve Büyük Dil Modelleri
+  how_ai_works_lesson_desc_04: Büyük Dil Modelinin (LLM) ne olduğunu ve nasıl çalıştığını
+    öğrenin, ardından AI ile bir metin oluşturmak için bir LLM kullanın. Son olarak,
+    LLM'lerin zeki mi yoksa yaratıcı mı olduğunu tartışın.
+  how_ai_works_lesson_title_05: Üretken Görüntüler
+  how_ai_works_lesson_desc_05: Yapay zekanın nasıl görüntü oluşturabileceğini öğrenin,
+    ardından bir difüzyon AI widget'ını keşfedin ve bu modellerin yaratıcı olup olmadığını
+    tartışın.
+  how_ai_works_lesson_title_06: Algoritmik Önyargı
+  how_ai_works_lesson_desc_06: Twitter kırpma algoritmasının altında yatan önyargıyı
+    ortaya çıkarmak için görüntüleri kırpma alıştırması yapın, ardından bu önyargılı
+    algoritmanın keşfi hakkında bir video okuyun ve izleyin. Son olarak, algoritmalardaki
+    önyargıyı tanımanın ve azaltmanın yollarını tartışın.
+  how_ai_works_lesson_title_07: Yapay Zeka Etik Kurallarımız
+  how_ai_works_lesson_desc_07: Seçtikleri bir yapay zeka alanında etik tuzakları ortaya
+    çıkaran makaleler ve videolar kullanarak araştırma yapın. Her yerde yapay zeka
+    yaratıcıları ve yasa koyucular için sınıf çapında bir “AI Etik Kurallarımız” kaynağı
+    oluşturun.
+  how_ai_works_lessons_in_a_day_title: Yapay Zeka Bir Günde Nasıl Çalışır?
+  how_ai_works_lessons_in_a_day_desc: Sadece bir gününüz var mı? Ayrıca tüm seriyi
+    öğrencilere tek bir günde tanıtma seçeneği de var. Öğrencileri yapay zeka ile
+    tanıştırmak isteyen herhangi bir konu alanı öğretmeni için mükemmel, hatta konuk
+    öğretmen için bir ders olarak.
+  how_ai_works_lessons_in_a_day_desc_02: Tüm “AI Nasıl Çalışır” videolarını bir günde
+    tanıtın. Öğrenciler, videodaki kelimeleri eşleştirerek her videoyu takip eder,
+    ardından her video hakkında bir yansıma sorusunu yanıtlamak.
+  how_ai_works_resources_desc: AI hakkında daha fazla bilgi edinmek ister misiniz?
+    İşte sizi ve öğrencilerinizin öğrenimini genişletmeye yardımcı olabilecek bazı
+    ek kaynaklar.
   ai_vid_intro_caption: Yapay Zekanın Nasıl Çalıştığını Tanıtıyoruz
   ai_vid_chatbots_caption: Sohbet Robotları ve Büyük Dil Modelleri Nasıl Çalışır?
   ai_vid_creativity_caption: Yapay Zekanın Yaratıcılığı ve Hayal Gücü Var mı?
@@ -1087,10 +1221,10 @@ tr:
   teach_page_additional_materials_list_desc_03: Okulunuza asmak için çeşitli rol model
     posterlerini yazdırın ve öğrencilerinize bilgisayar bilimini denemeleri için ilham
     verin.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1648,6 +1782,7 @@ tr:
   not_found_desc: İstenen sayfa bulunamadı
   not_found_instructions: Web adresini denetleyin ve yeniden gönderin ya da aşağıdaki
     listeden bir bağlantı seçin.
+  company_code_dot_org: Code.org
   company_4-H: 4-H Gençlik Geliştirme
   company_asa: Okul-sonrası İttifakı
   company_asos: ASOS
@@ -1700,6 +1835,7 @@ tr:
   company_evsd: East Valley Okul Bölgesi
   company_eastonvilleschooldistrict: Eatonville Okul Bölgesi
   company_enumclawschooldistrict: Enumclaw Okul Bölgesi
+  company_ets: ETS
   company_everettsd: Everette Devlet Okulları
   company_fsusd: Fairfield-Suisun Birleşik Okul Bölgesi
   company_fayettecountypublicschools: Fayette County Devlet Okulları
@@ -1721,6 +1857,7 @@ tr:
   company_houstonisd: Houston Bağımsız Okul Bölgesi
   company_hcpss: Howard County Kamu Okulları
   company_idla: Idaho Dijital Öğrenme Akademisi
+  company_iste: İSTE
   company_janesvilleschooldistrict: Janesville Okul Bölgesi
   company_johnstoncountyschools: Johnston County Okulları
   company_lps: Lincoln Kamu Okulları
@@ -11959,8 +12096,10 @@ tr:
   tutorial_ai4alldance_string_platforms: Tüm modern tarayıcılar
   tutorial_ai4allneural_string_platforms: Tüm modern tarayıcılar
   tutorial_spheroinout_string_platforms: Bağlantısız
-  tutorial_edisonblueprint_string_platforms: Tüm modern tarayıcılar
-  tutorial_edisonmaze_string_platforms: Tüm modern tarayıcılar
+  tutorial_edisonblueprint_string_platforms: Bütün modern tarayıcılar, Android tablet,
+    Ipad
+  tutorial_edisonmaze_string_platforms: Bütün modern tarayıcılar, Android tablet,
+    Ipad
   tutorial_milnefunctions_string_platforms: Bütün modern tarayıcılar, Ekran okuyucu
   tutorial_sasmap_string_platforms: Tüm modern tarayıcılar, iPad, Ekran okuyucu
   tutorial_firstrobotics_string_platforms: Tüm modern tarayıcılar

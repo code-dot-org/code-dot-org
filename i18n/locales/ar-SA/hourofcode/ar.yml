@@ -177,6 +177,8 @@ ar:
   grade_level_label_elementary: المدرسة الابتدائية
   grade_level_label_middle: المرحلة المتوسطة
   grade_level_label_high: المرحلة الثانوية
+  students_label: الطلاب
+  teachers_label: المعلمون
   teacher_label_csf: مدرس أساسيات علوم الكمبيوتر
   teacher_label_csd: مُعلم اكتشافات علوم الكمبيوتر
   teacher_label_csp: مدرس مبادئ علوم الكمبيوتر
@@ -190,7 +192,9 @@ ar:
   call_to_action_explore_unit: وحدة المستكشف
   call_to_action_explore_curriculum: اكتشف المنهج
   call_to_action_explore_curriculum_options: استكشف خيارات المناهج
+  call_to_action_explore_lessons: استكشف الدروس
   call_to_action_explore_modules: استكشف الوحدات
+  call_to_action_explore_module: وحدة الاستكشاف
   call_to_action_explore_workshops: استكشف ورش العمل
   call_to_action_explore_course: اكتشف الدورة
   call_to_action_explore_courses: اكتشف الدورات
@@ -237,8 +241,10 @@ ar:
   call_to_action_see_module_details: راجع تفاصيل الوحدة
   call_to_action_start_modules: ابدأ الوحدات
   call_to_action_see_course_details: راجع تفاصيل الدورة التدريبية
+  call_to_action_see_lesson_details: راجع تفاصيل الدرس
   call_to_action_learn_about_approach: تعرف على المزيد حول نهجنا
   call_to_action_try_java_lab: جرب مختبر جافا
+  call_to_action_notify_available: أعلمني عندما تكون متاحة
   aria_label_call_to_action_afe: تعرف على المزيد حول مهندس المستقبل في أمازون
   aria_label_call_to_action_teaching_csf: ابدأ برنامج التعلم المهني لتدريس أساسيات
     علوم الكمبيوتر
@@ -301,6 +307,19 @@ ar:
   aria_label_call_to_action_csf_course_d: راجع تفاصيل الدورة D
   aria_label_call_to_action_csf_course_e: راجع تفاصيل الدورة E
   aria_label_call_to_action_csf_course_f: راجع تفاصيل الدورة F
+  aria_label_call_to_action_ai_pl_101_videos: شاهد مقاطع فيديو AI 101 للمعلمين
+  aria_label_call_to_action_ai_teaching_module: استكشف وحدة تعليم الذكاء الاصطناعي
+    والتعلم الآلي
+  aria_label_call_to_action_how_ai_works_lesson_01: راجع مقدمة إلى تفاصيل درس التعلم
+    الآلي
+  aria_label_call_to_action_how_ai_works_lesson_02: راجع تفاصيل درس رؤية الكمبيوتر
+  aria_label_call_to_action_how_ai_works_lesson_03: راجع تفاصيل درس الشبكات العصبية
+  aria_label_call_to_action_how_ai_works_lesson_04: راجع تفاصيل درس روبوتات المحادثة
+    ونماذج اللغات الكبيرة
+  aria_label_call_to_action_how_ai_works_lesson_05: راجع تفاصيل درس الصور التوليدية
+  aria_label_call_to_action_how_ai_works_lesson_06: راجع تفاصيل درس التحيز الخوارزمي
+  aria_label_call_to_action_how_ai_works_lesson_07: راجع تفاصيل درس مدونة أخلاقيات
+    الذكاء الاصطناعي الخاصة بنا
   video_title_professional_learning_program: برنامج التعلم المهني الخاص بـ Code.org
   curriculum_name_csf: أساسيات علوم الكمبيوتر
   curriculum_name_csf_02: أي أساسيات في علوم الكمبيوتر (الدورة من الألف إلى الياء)
@@ -407,6 +426,10 @@ ar:
   module_label_student_tool: أداة الطالب
   module_label_student_product: المنتج
   module_label_student_content_resources: المحتوى والموارد
+  module_label_new: جديد
+  module_label_coming_soon: سيتوفر قريبًا
+  module_label_video_series: سلسلة فيديو
+  module_label_self_paced: وحدة ذاتية السرعة
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -429,9 +452,13 @@ ar:
   module_grade_9_12_teachers: معلمو الصفوف 9-12
   module_level_beginner: مبتدئ
   module_level_intermediate: المستوى المتوسط
+  module_duration_45_mins: 45 دقيقة
+  module_duration_1_hr: 1 ساعة
   module_duration_2_hrs: 2 ساعة
   module_duration_3_hrs: 3 ساعات
+  module_duration_5_hrs: 5 ساعات
   module_duration_8_hrs: 8 ساعات
+  module_duration_20_hrs: 20 ساعة
   module_duration_35_hrs: 35 ساعة
   module_duration_lesson: الدرس
   module_duration_week: الأسبوع
@@ -500,6 +527,7 @@ ar:
   heading_no_devices: لا توجد أجهزة؟ لقد قمنا بتغطيتك
   heading_java_lab: مختبر جافا
   heading_objects_first: الكائنات أولاً
+  heading_these_lessons_will: 'ستقوم هذه الدروس بما يلي:'
   professional_learning_section_desc: احصل على الدعم الذي تحتاجه أثناء الاستعداد للتدريس.
     يحبها المعلمون، حيث صنفها أكثر من 90٪ على أنها أفضل تطوير مهني على الإطلاق!
   professional_learning_section_desc_short: احصل على الدعم الذي تحتاجه أثناء الاستعداد
@@ -623,6 +651,10 @@ ar:
   ai_curriculum_grades_03: 'مستويات الصفوف: 3-12'
   ai_curriculum_duration_03: 'المدة: ساعة'
   ai_curriculum_btn_aria_label_03: جرب نشاط الذكاء الاصطناعي للمحيطات
+  ai_curriculum_title_04: كيف يعمل الذكاء الاصطناعي
+  ai_curriculum_desc_04: تكمل هذه الدروس سلسلة فيديو How AI Works. يتم ربط كل درس
+    بفيديو واحد من السلسلة، للتعمق في المفاهيم المقدمة في مقاطع الفيديو.
+  ai_curriculum_btn_aria_label_04: استكشف دروس كيف يعمل الذكاء الاصطناعي
   ai_carousel_heading: 'ماذا يقول المعلمون عن الذكاء الاصطناعي مع Code.org:'
   ai_carousel_quote_01: كما أتاح هذا الدرس لطلابي الفرصة لرؤية وجود عنصر رأي في أنظمة
     التصنيف. في وقت لاحق، عندما بدأنا نرى كيف يمكن أن ينتهي التحيز في الذكاء الاصطناعي،
@@ -638,6 +670,10 @@ ar:
   ai_pl_list_04: ضع في اعتبارك الآثار الواقعية للذكاء الاصطناعي والتعلم الآلي.
   ai_pl_list_05: اكتشف مشاريع نهاية الفصل.
   ai_pl_duration: 'المدة: ساعتان'
+  ai_pl_title: تعليم الذكاء الاصطناعي والتعلم الآلي
+  ai_pl_desc: مقدمة في الذكاء الاصطناعي والتعلم الآلي. قم بتدريب نموذج التعلم الآلي
+    باستخدام AI Lab. وتفاعل مع تطبيقات التعلم الآلي. ضع في اعتبارك الآثار الواقعية
+    للذكاء الاصطناعي والتعلم الآلي.
   ai_video_series_title: كيف يعمل الذكاء الاصطناعي
   ai_video_series_desc: مع مقدمة من الرئيس التنفيذي لشركة Microsoft Satya Nadella،
     ستقدم لك هذه السلسلة من مقاطع الفيديو القصيرة كيفية عمل الذكاء الاصطناعي وسبب
@@ -661,6 +697,7 @@ ar:
   ai_pl_101_hero_heading: انضم إلينا في AI EmpowerED!
   ai_pl_101_hero_desc: اكتشف الإمكانات التحويلية للذكاء الاصطناعي (AI) في التعليم
     من خلال سلسلة التعلم المجانية عبر الإنترنت للمعلمين.
+  ai_pl_101_hero_desc_02: سلسلة تعليمية شاملة عبر الإنترنت للمعلمين.
   ai_pl_101_hero_presented: مُقدم من
   ai_pl_101_intro_heading: ما هو الذكاء الاصطناعي 101 للمعلمين؟
   ai_pl_101_intro_text: AI 101 للمعلمين عبارة عن سلسلة تعلم احترافي تأسيسية مجانية
@@ -702,6 +739,87 @@ ar:
     المتطورة والذكاء الاصطناعي، ومساعدة المعلمين في تقديم ملاحظات تكرارية وتقييم تكويني
     طوال تجربة الكتابة.'
   ai_pl_101_explore__button_4: أداة الاستكشاف
+  ai_pl_101_video_title_1: دردشة بجانب المدفأة مع سال خان وهادي بارتوفي
+  ai_pl_101_video_desc_1: انضم إلى سال خان (أكاديمية خان) وهادي بارتوفي (Code.org)
+    للدردشة بجانب المدفأة حول تبني الذكاء الاصطناعي في الفصل الدراسي. نتوقع مناقشة
+    حية تتضمن بعض الموضوعات الأكثر إثارة للجدل حول الذكاء الاصطناعي اليوم.
+  ai_pl_101_video_title_2: إزالة الغموض عن الذكاء الاصطناعي للمعلمين
+  ai_pl_101_video_desc_2: مقدمة لأساسيات الذكاء الاصطناعي التي ستزودك بالمعرفة التأسيسية
+    لفهم التأثير العميق للذكاء الاصطناعي في مجتمعنا وأهميته المتزايدة في مجال التعليم.
+    ستحصل على رؤى عملية للاستفادة من الذكاء الاصطناعي للمهام في الفصل الدراسي، وتوفير
+    الوقت في المهام الإدارية.
+  ai_pl_101_video_title_3: تحويل التعلم باستخدام الذكاء الاصطناعي
+  ai_pl_101_video_desc_3: اكتشف التقاطع بين الذكاء الاصطناعي والتعليم. تستكشف هذه
+    الجلسة كيف يمكن دمج الذكاء الاصطناعي مع أصول التدريس لتعزيز تعلم الطلاب. إنه أمر
+    لا بد منه للمعلمين الذين يسعون إلى الاستفادة من الذكاء الاصطناعي لتحويل ممارساتهم
+    التعليمية لإثراء تجارب تعلم طلابهم.
+  ai_pl_101_video_title_4: ضمان نهج مسؤول للذكاء الاصطناعي
+  ai_pl_101_video_desc_4: استكشف الاعتبارات الأخلاقية وأفضل الممارسات لدمج الذكاء
+    الاصطناعي في البيئات التعليمية. ستقدم هذه الجلسة استراتيجيات وموارد وأمثلة واقعية
+    ملموسة، تهدف جميعها إلى فهم التحيزات المحتملة للذكاء الاصطناعي والاعتبارات الأخلاقية
+    التي تأتي معها.
+  ai_pl_101_video_title_5: جلب الذكاء الاصطناعي إلى الفصل الدراسي
+  ai_pl_101_video_desc_5: تركز هذه الجلسة على التدريس حول الذكاء الاصطناعي وتقييم
+    واستخدام الأدوات التعليمية للذكاء الاصطناعي والاستفادة من الذكاء الاصطناعي لتقييم
+    الطلاب. من خلال مزيج غني من النظرية والأمثلة العملية والموارد، تهدف إلى تمكين
+    المعلمين من التنقل في مشهد الذكاء الاصطناعي وتعزيز تجارب تعلم الطلاب.
+  ai_pl_101_video_desc_6: 'تعرف على المزيد حول التكنولوجيا الجديدة التي تقود التغييرات
+    الكبيرة في الذكاء الاصطناعي، والتي تضم مقطعي فيديو جديدين عن نماذج اللغات الكبيرة
+    (مثل ChatGPT) والذكاء الاصطناعي التوليدي. استمع إلى كيفية عمل هذه التقنيات الجديدة
+    مباشرة من الخبراء: ميرا موراتي، رئيسة قسم التكنولوجيا في OpenAI، وكريستوبل فالينزويلا،
+    الرئيس التنفيذي لشركة RunWayML.'
+  how_ai_works_hero_heading: كيف يعمل الذكاء الاصطناعي
+  how_ai_works_hero_desc: انغمس في عالم الذكاء الاصطناعي من خلال سلسلة مقاطع الفيديو
+    «How AI Works» والدروس المصاحبة لها!
+  how_ai_works_intro_desc: ستقدم لك هذه السلسلة من مقاطع الفيديو القصيرة والدروس المصاحبة
+    داخل الفصل الدراسي لك ولطلابك كيفية عمل الذكاء الاصطناعي وسبب أهميته. يمكنك اختيار
+    الدروس الفردية بناءً على الموضوع، واستكشاف سلسلة كاملة من الموضوعات في فصل واحد
+    أو تدريس جميع الدروس السبعة للتعمق.
+  how_ai_works_intro_list_01: نقدم لك الذكاء الاصطناعي والتعلم الآلي
+  how_ai_works_intro_list_02: تعرف على كيفية عمل الذكاء الاصطناعي التوليدي، بما في
+    ذلك نماذج اللغات الكبيرة (LLMs) وتوليد الصور
+  how_ai_works_intro_list_03: استكشف التحيز والأخلاقيات والخصوصية والاستخدام المسؤول
+    للذكاء الاصطناعي
+  how_ai_works_intro_list_04: تطرق إلى تطبيقات العالم الحقيقي للذكاء الاصطناعي، بما
+    في ذلك رؤية الكمبيوتر
+  how_ai_works_lessons_heading: دروس الذكاء الاصطناعي لفصلك
+  how_ai_works_lesson_title_01: مقدمة إلى التعلم الآلي
+  how_ai_works_lesson_desc_01: تعرف على شكل من أشكال الذكاء الاصطناعي يسمى التعلم
+    الآلي وكيف يمكنهم استخدام عملية حل المشكلات للمساعدة في تدريب الروبوت على حل المشكلات.
+    شارك في أنشطة التعلم الآلي حيث يتعلم الروبوت كيفية اكتشاف الأنماط في الأسماك.
+  how_ai_works_lesson_title_02: رؤية الكمبيوتر
+  how_ai_works_lesson_desc_02: تعرف على كيفية عمل رؤية الكمبيوتر. شاهد مقطع فيديو
+    يشرح رؤية الكمبيوتر وكيف «يرى» الكمبيوتر. ثم صمم خوارزمية تستخدم شبكة لتحديد الرقم
+    الذي تعرضه شاشة المقاطع السبعة واختباره.
+  how_ai_works_lesson_title_03: الشبكات العصبية
+  how_ai_works_lesson_desc_03: تعرف على كيفية عمل الشبكات العصبية. استخدم الأدوات
+    لاستكشاف الشبكات العصبية بطريقة عملية. شاهد مقطع فيديو يشرح الشبكات العصبية. ناقش
+    أخيرًا الحاجة إلى وجهات نظر متنوعة عند إنشاء أنظمة التوصية.
+  how_ai_works_lesson_title_04: روبوتات المحادثة ونماذج اللغات الكبيرة
+  how_ai_works_lesson_desc_04: تعرف على نموذج اللغة الكبيرة (LLM) وكيف يعمل، ثم استخدم
+    LLM للمشاركة في إنشاء نص باستخدام الذكاء الاصطناعي. أخيرًا، ناقش ما إذا كانت LLM
+    ذكية أم إبداعية أم لا.
+  how_ai_works_lesson_title_05: صور توليدية
+  how_ai_works_lesson_desc_05: تعرف على كيفية قيام الذكاء الاصطناعي بإنشاء الصور،
+    ثم استكشف أداة نشر الذكاء الاصطناعي وناقش ما إذا كانت هذه النماذج إبداعية أم لا.
+  how_ai_works_lesson_title_06: التحيز الخوارزمي
+  how_ai_works_lesson_desc_06: تدرب على قص الصور للكشف عن التحيز الكامن وراء خوارزمية
+    الاقتصاص على تويتر، ثم اقرأ وشاهد مقطع فيديو حول اكتشاف هذه الخوارزمية المتحيزة.
+    أخيرًا، ناقش طرق التعرف على التحيز في الخوارزميات وتقليله.
+  how_ai_works_lesson_title_07: مدونة أخلاقيات الذكاء الاصطناعي الخاصة بنا
+  how_ai_works_lesson_desc_07: قم بإجراء الأبحاث باستخدام المقالات ومقاطع الفيديو
+    التي تكشف المخاطر الأخلاقية في مجال الذكاء الاصطناعي الذي يختارونه. قم بتجميع
+    مورد «مدونة أخلاقيات الذكاء الاصطناعي الخاصة بنا» على مستوى الفصل لمنشئي الذكاء
+    الاصطناعي والمشرعين في كل مكان.
+  how_ai_works_lessons_in_a_day_title: كيف يعمل الذكاء الاصطناعي في يوم واحد
+  how_ai_works_lessons_in_a_day_desc: لديك يوم واحد فقط؟ هناك أيضًا خيار تقديم السلسلة
+    بأكملها للطلاب في يوم واحد. مثالي لأي معلم في مجال الموضوع يتطلع إلى تعريف الطلاب
+    بالذكاء الاصطناعي، أو حتى كدرس لمعلم ضيف.
+  how_ai_works_lessons_in_a_day_desc_02: اعرض جميع مقاطع فيديو «كيف يعمل الذكاء الاصطناعي»
+    في يوم واحد. يتابع الطلاب كل مقطع فيديو من خلال مطابقة المفردات من الفيديو، ثم
+    الإجابة على سؤال تأملي حول كل فيديو.
+  how_ai_works_resources_desc: هل أنت مهتم بمعرفة المزيد عن الذكاء الاصطناعي؟ فيما
+    يلي بعض الموارد الإضافية التي يمكن أن تساعد في توسيع نطاق تعلمك أنت وطلابك.
   ai_vid_intro_caption: تقديم كيفية عمل الذكاء الاصطناعي
   ai_vid_chatbots_caption: كيف تعمل روبوتات المحادثة ونماذج اللغات الكبيرة
   ai_vid_creativity_caption: هل يتمتع الذكاء الاصطناعي بالإبداع والخيال؟
@@ -1004,10 +1122,10 @@ ar:
   teach_page_additional_materials_list_heading_03: ملصقات الفص الدراسي
   teach_page_additional_materials_list_desc_03: اطبع هذه الملصقات التي تحتوي على نماذج
     متنوعة وعلّقها في مدرستك وألهم طُلابك لتجربة علوم الكمبيوتر.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1547,6 +1665,7 @@ ar:
   not_found_desc: لم يتم العثور على الصفحة المطلوبة
   not_found_instructions: تحقق من عنوان الصفحة او اعد تحميلها أو اختر أحد الروابط
     من القائمة أدناه.
+  company_code_dot_org: Code.org
   company_4-H: منظمة "4-H" للنهوض بالشباب
   company_asa: منظمة "Afterschool Alliance"
   company_asos: منصة "ASOS"
@@ -1601,6 +1720,7 @@ ar:
   company_evsd: منطقة إيست فالي التعليمية
   company_eastonvilleschooldistrict: منطقة إيتونفيل التعليمية
   company_enumclawschooldistrict: منطقة إيموكلو التعليمية
+  company_ets: الحيوانات الأليفة
   company_everettsd: مدارس إيفرت العامة
   company_fsusd: منطقة فيرفيلد - سويسون التعليمية الموحدة
   company_fayettecountypublicschools: مدارس مقاطعة فاييت العامة
@@ -1622,6 +1742,7 @@ ar:
   company_houstonisd: منطقة هيوستن التعليمية المستقلة
   company_hcpss: مدارس مقاطعة هوارد العامة
   company_idla: أكاديمية ايداهو للتعلم الرقمي
+  company_iste: موقع
   company_janesvilleschooldistrict: منطقة جينسفيل التعليمية
   company_johnstoncountyschools: مدارس مقاطعة جونستون
   company_lps: مدرسة لينكولن العامة
@@ -11360,8 +11481,10 @@ ar:
   tutorial_ai4alldance_string_platforms: جميع المتصفحات الحديثة
   tutorial_ai4allneural_string_platforms: جميع المتصفحات الحديثة
   tutorial_spheroinout_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
-  tutorial_edisonblueprint_string_platforms: جميع المتصفحات الحديثة
-  tutorial_edisonmaze_string_platforms: جميع المتصفحات الحديثة
+  tutorial_edisonblueprint_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد
+    اللوحية، أجهزة آيباد
+  tutorial_edisonmaze_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
+    أجهزة آيباد
   tutorial_milnefunctions_string_platforms: جميع المتصفحات الحديثة
   tutorial_sasmap_string_platforms: جميع المتصفحات الحديثة، iPad، قارئ الشاشة
   tutorial_firstrobotics_string_platforms: جميع المتصفحات الحديثة
