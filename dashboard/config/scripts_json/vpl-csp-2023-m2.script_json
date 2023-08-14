@@ -2,14 +2,17 @@
   "script": {
     "name": "vpl-csp-2023-m2",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSP Virtual PL",
-      "is_migrated": true
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-28 17:47:44 UTC",
+    "serialized_at": "2023-08-01 23:56:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -128,6 +131,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWS2 Workshop Overview_2023"
+        ],
         "progression": "Module 2 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -150,6 +156,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Variables Practice overview_2023"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -172,6 +181,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL - U4 L03 Variables numbers practice 1_2023"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -194,6 +206,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables numbers practice 4_2023"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -216,6 +231,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 1_2023"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -238,6 +256,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 3_2023"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -260,6 +281,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 2_2023"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -282,6 +306,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 5_2023"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -304,6 +331,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL8 - U4 L03 Variables operator practice 6_2023"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -326,6 +356,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL9 - U4 L03 Variable Scope: Local vs. Global_2023"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -348,6 +381,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - Practice Reflection_2023"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -370,6 +406,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Variables Make overview_2023"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -392,6 +431,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL U4 L04 Variables Make Project_2023"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -414,6 +456,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L04 Variables Make Project Submit_2023"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -436,6 +481,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - Make Reflection_2023"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -458,6 +506,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL - Unit 4 Wrap-up_2023"
+        ],
         "progression": "Collaborative and Independent Work (~10 minutes)"
       },
       "bonus": false,
@@ -480,6 +531,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - Collaboration Reflection_2023"
+        ],
         "progression": "Collaborative and Independent Work (~10 minutes)"
       },
       "bonus": false,
@@ -502,6 +556,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 2 Wrap Up_2023"
+        ],
         "progression": "Module 2 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,

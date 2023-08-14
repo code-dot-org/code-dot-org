@@ -1,0 +1,33 @@
+name 'vpl-csa-module-7-unit-7-project-structure-2022-text_-f_2023'
+editor_experiment ''
+display_name 'CSA Module 3 Wrap-up'
+
+title 'Module 1: CSA Virtual Professional Learning'
+markdown <<MARKDOWN
+# The process for the Unit 7 project
+
+Students will work on their projects throughout the Unit.  In each of the lessons below, students will have the opportunity to work on their project
+
+<img src="https://images.code.org/44ffb4f2ce6d4a82c97dc378fa2329f4-image-1672806778159.32.45 PM.png" width="80%" alt="Unit 7 Calendar">
+
+Let's look at what happens in each of these lessons:
+1. In U7L1 - Students will spend the entire hour getting started on their project.  Students will:
+	* Look at exemplar projects. 
+	* Brainstorm their own projects.
+	* Set up their Project Planning Board
+2. In U7L2 - Students will develop User Stories for their projects.  
+3. In U7L3 - Students have the last 15 minutes of the lesson to:
+	* Decompose the problem and identify the classes and methods they will need to implement 
+	* Obtain and implement feedback from peers 
+	* Update their Project Planning Board
+4. In U7L4 - Students have the last 10 minutes of the class to complete a task from their Project Planning Board
+5. In U7L7 - Students have the last 15 minutes in the lesson to complete a task from their Project Planning Board
+6. In U7L8 - Students have the last 15 minutes in the lesson to complete a task from their Project Planning Board
+7. In U7L10 - 12 - Students have three full lessons dedicated to finishing their project including finishing acceptance testing and doing a code review. 
+
+This means that students are much more frequently working on their project throughout the unit.  In order to support students in being able to pivot quickly to working on tasks for their project, the Project Planning Board provides an essential structure for students.  
+
+<hr>
+
+**Up next:** Let’s take a look at the Project Planning Board. 
+MARKDOWN

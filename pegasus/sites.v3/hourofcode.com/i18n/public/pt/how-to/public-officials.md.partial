@@ -26,41 +26,41 @@ Da esquerda para a direita: *governadores de Arkansas, Carolina do Norte e Arizo
 
 ### 1. Leia um resumo das informações
 
-See [why computer science education is important]({{ localized_files/hoc_one_pager }}), and how you can help the effort by supporting the Hour of Code.
+Veja [Por que a educação em ciência da computação é importante]({{ localized/hoc_one_pager }}), e como você pode ajudar a iniciativa oferecendo seu apoio ao Hour of Code.
 
 ### 2. Recrute bairros e escolas da região
 
-Use [this email]({{ promote/sample_emails }}) or [this blurb]({{ promote/stats_url }}) as a starting point, and take a look at this [how-to]({{ urls/how_to_guide }}) for schools and districts.
+Use [este e-mail]({{ promote/sample_emails }}) ou [este texto promocional]({{ promote/stats_url }}) como ponto de partida, e confira estas [instruções]({{ urls/how_to_guide }}) para escolas e distritos.
 
 ### 3. Como sediar um evento da Hora do Código
 
-See our [event how-to guide]({{ urls/how_to_events }}) for a sample run of show, [media outreach kit]({{ promote/press_kit_url }}), and other event-planning resources. Sediar um evento é uma excelente maneira de promover a Hora do Código e aumentar o número de participantes.
+Consulte o [guia de instruções do evento]({{ urls/how_to_events }}) para ver uma amostra de realização do evento, [ kit de envolvimento da mídia]({{ promote/press_kit_url }}) e outros recursos de planejamento de eventos. Sediar um evento é uma excelente maneira de promover a Hora do Código e aumentar o número de participantes.
 
-### 4. Attend an event during Computer Science Education Week ({{ campaign_date/short }})
+### 4. Compareça a um evento da Semana da educação em ciência da computação ({{ campaign_date/short }})
 
-[Find classrooms and schools]({{ urls/events }}) participating in your district, city, or state.
+[Encontre a sala de aula e a escola]({{ urls/events }}) participante no seu distrito, cidade ou estado.
 
 ### 5. Faça um Declaração ou Intenção de participação
 
-See this [sample resolution]({{ urls/proclamation }}) supportive of Computer Science Education Week and its goals that could be used by state and local legislators.
+Veja esta [amostra de resolução]({{ urls/proclamation }}) de apoio à Semana da educação em ciência da computação e suas metas, que podem ser utilizadas por legisladores estaduais e municipais.
 
 ### 6. Escreva um artigo de opinião
 
-Consider publishing an opinion piece in your local paper. See this [sample op-ed]({{ promote/op_ed }}) supporting Computer Science Education Week and its goals.
+Considere a possibilidade de publicar uma matéria no jornal local. Veja esta [amostra de artigo independente de jornal]({{ promote/op_ed }}) em apoio à Semana da educação em ciência da computação e suas metas.
 
 ### 7. Espalhe a noticia
 
 [Compartilhe o video da Hora de Código on Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) e [mostre seu apoio no Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Compartilhe fotos de eventos ou um vídeo de você e os outros adultos participando da Hora do código. Use a hashtag **#HourOfCode** para que Code.org (@code.org) possa vêr e promover o apoio. Ou, use esses tweets prontos:
 
-- *Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode [https://hourofcode.com]({{ urls/home }})*
-- *Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
+- *Todos os estudantes, de qualquer sexo, devem ter a chance de aprender ciência da computação. Juntar-se a nós nessa iniciativa com um #HjourOfCode [https://hourofcode.com]({{ urls/home }})*
+- *Hoje, temos o orgulho de nos unirmos ao movimento Hour of Code. Você está dentro? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
 
 ### 8. Faça um Comunicado a Imprensa
 
-[Use this sample]({{ promote/official_press_release }}) as a guide.
+[Use esta amostra]({{ promote/official_press_release }}) como um guia.
 
 ### 9. Se conecte na sua região
 
-[Learn more about computer science education in your state]({{ urls/advocacy }}). Sign the petition there and you’ll get updates on Code.org's local, state, and federal advocacy efforts.
+[Saiba mais sobre educação em ciência da computação no seu estado]({{ urls/advocacy }}). Assine a petição e você receberá atualizações sobre as iniciativas de defesa dos direitos dos cidadãos do Code.org em nível municipal, estadual e federal.
 
 {{ signup_button }}

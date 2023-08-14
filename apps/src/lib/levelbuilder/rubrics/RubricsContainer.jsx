@@ -4,13 +4,15 @@ import {BodyTwoText, Heading1} from '@cdo/apps/componentLibrary/typography';
 import LearningGoalItem from './LearningGoalItem';
 import Button from '@cdo/apps/templates/Button';
 
-export default function RubricsContainer({unit, lesson}) {
+export default function RubricsContainer({
+  unitName,
+  lessonNumber,
+  levels,
+  rubric,
+}) {
   // note that the use of currentId here is temporary until we are connected to the data
   const [currentId, setCurrentId] = useState(1);
   const [learningGoalList, setLearningGoalList] = useState([{id: currentId}]);
-
-  // holding levels in this temporary variable before connecting the data
-  const tempLevelList = [1, 2, 3, 4, 5];
 
   const renderLearningGoalItems = learningGoalList.map(goal => (
     <LearningGoalItem
@@ -38,11 +40,13 @@ export default function RubricsContainer({unit, lesson}) {
     });
   };
 
+  // TODO: In the future we might want to filter the levels in the dropdown for "submittable" levels
+  //  "submittable" is in the properties of each level in the list.
   return (
     <div>
       <Heading1>Create or modify your rubric</Heading1>
       <BodyTwoText>
-        This rubric will be used for Unit {unit}, lesson {lesson}.
+        This rubric will be used for {unitName}, lesson {lessonNumber}.
       </BodyTwoText>
 
       <div style={styles.containerStyle}>
@@ -51,9 +55,9 @@ export default function RubricsContainer({unit, lesson}) {
           required={true}
           onChange={() => console.log('dropdown changed')}
         >
-          {tempLevelList.map(level => (
-            <option key={level} value={level}>
-              {level}
+          {levels.map(level => (
+            <option key={level.id} value={level.id}>
+              {level.name}
             </option>
           ))}
         </select>
@@ -71,7 +75,7 @@ export default function RubricsContainer({unit, lesson}) {
           id="ui-test-add-new-concept-button"
         />
         <Button
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           text="Save your rubric"
           onClick={() => console.log('this will work later')}
           size={Button.ButtonSize.narrow}
@@ -82,8 +86,12 @@ export default function RubricsContainer({unit, lesson}) {
 }
 
 RubricsContainer.propTypes = {
-  unit: PropTypes.number,
-  lesson: PropTypes.number,
+  unitName: PropTypes.string,
+  lessonNumber: PropTypes.number,
+  levels: PropTypes.arrayOf(
+    PropTypes.shape({id: PropTypes.number, name: PropTypes.string})
+  ),
+  rubric: PropTypes.object,
 };
 
 const styles = {

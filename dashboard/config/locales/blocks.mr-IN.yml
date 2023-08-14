@@ -16,7 +16,6 @@ mr:
             '0.75': लहान
             '1.00': मध्यम
             '2.00': मोठे
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -24,7 +23,6 @@ mr:
             '0.75': लहान
             '1.00': मध्यम
             '2.00': मोठे
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -431,28 +429,8 @@ mr:
             '19': '19'
             '2': '2'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
             '3': '3'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
             '4': '4'
-            '40': '40'
             '5': '5'
             '6': '6'
             '7': '7'
@@ -913,8 +891,6 @@ mr:
         options:
           INPUT1:
             '1': लिंबू रस
-            '3': baking soda
-            '5': both
         text: मायक्रोस्कोपमध्ये {INPUT1} आहे
       DansBlocks_setForegroundEffect2:
         options:
@@ -931,8 +907,6 @@ mr:
         options:
           INPUT1:
             '1': लिंबू रस
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: "{VAR1} ला {SPRITE1COSTUME} शी संवाद साधा"
       FunctionBlocks_makeManipulative2:
@@ -1227,15 +1201,11 @@ mr:
         options:
           INPUT1:
             '1': लिंबू रस
-            '3': baking soda
-            '5': both
         text: मायक्रोस्कोपमध्ये {INPUT1} आहे
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': लिंबू रस
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1440,7 +1410,6 @@ mr:
       Poetry_whenLineShows:
         options:
           N:
-            '0': "???"
             '1': '1'
             '10': '10'
             '11': '11'
@@ -1477,16 +1446,10 @@ mr:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': सर्व
       aalab_someStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': सर्व
       aalab_spriteSayChoices:
         text: "{SPRITE} {SPEECH} म्हणा"
@@ -1571,7 +1534,6 @@ mr:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'
@@ -2085,11 +2047,9 @@ mr:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': संथ
             '5': सामान्य
             '7': जलद
-            '9': extra fast
       gamelab_setTint:
         text: "{THIS} चा रंग {COLOR} मध्ये बदला"
       gamelab_setupScoreboard:

@@ -4255,6 +4255,8 @@ ko:
               display_name: '챕터 1: 문제 해결 과정'
             lessonGroup-3:
               display_name: '챕터 2: 컴퓨터와 문제 해결'
+            lessonGroup-5:
+              display_name: 설문조사
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4610,6 +4612,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-creativity2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4635,6 +4639,8 @@ ko:
               display_name: '챕터 1: 문제 해결 과정'
             lessonGroup-3:
               display_name: '챕터 2: 컴퓨터와 문제 해결'
+            lessonGroup-5:
+              display_name: 설문조사
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4652,6 +4658,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4678,6 +4686,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-design-with-purpose2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4701,6 +4711,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: '챕터 1: 문제 해결 과정'
+            lessonGroup-4:
+              display_name: 설문조사
         focus-on-coding2-2023:
           lesson_groups:
             lessonGroup-2:

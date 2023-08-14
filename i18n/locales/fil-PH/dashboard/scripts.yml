@@ -2944,6 +2944,8 @@ fil:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
             lessonGroup-3:
               display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
+            lessonGroup-5:
+              display_name: Pagsisiyasat
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3202,6 +3204,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3219,6 +3223,8 @@ fil:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
             lessonGroup-3:
               display_name: 'Kabanata 2: Mga Kompyuter at Paglutas ng Problema'
+            lessonGroup-5:
+              display_name: Pagsisiyasat
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3236,6 +3242,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -3262,6 +3270,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3278,6 +3288,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kabanata 1: Ang Proseso ng Paglutas ng Problema'
+            lessonGroup-4:
+              display_name: Pagsisiyasat
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:

@@ -227,6 +227,7 @@ it:
   call_to_action_donate_online: Donate online
   call_to_action_get_updates: Get updates
   call_to_action_special_announcement: See special announcement
+  call_to_action_learning_opportunity: New Professional Learning Opportunity
   call_to_action_start_pl: Start professional learning
   call_to_action_contact_regional_partner: Contact your Regional Partner
   call_to_action_join_csta: Join CSTA
@@ -694,7 +695,7 @@ it:
     throughout K-12. Offer free professional development, webinars, conference presentations,
     and peer-to-peer learning opportunities.
   ai_resources_btn_aria_label_03: Explore the AI for Teachers website
-  ai_pl_101_hero_heading: AI 101 for Teachers
+  ai_pl_101_hero_heading: Partecipa con noi al AI EmpowerED!
   ai_pl_101_hero_desc: Scopri il potenziale di trasformazione dell'intelligenza artificiale
     (AI) nell'istruzione con la nostra serie di apprendimento online gratuita per
     gli educatori.
@@ -1944,6 +1945,7 @@ it:
   signup_submit_census_error_message: Siamo spiacenti. Si è verificato un errore.
     Prova a inviare nuovamente il modulo.
   signup_submit_label: Iscriviti
+  signup_submit_explore: Explore sessions
   signup_submit_error_message: Si è verificato un errore. Per favore controlla per
     assicurarti che tutti i campi obbligatori siano stati riempiti correttamente.
   signup_submit_and_continue_label: Invia e Continua

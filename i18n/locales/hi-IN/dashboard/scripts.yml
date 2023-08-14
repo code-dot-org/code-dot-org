@@ -3798,6 +3798,8 @@ hi:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
             lessonGroup-3:
               display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
+            lessonGroup-5:
+              display_name: सर्वेक्षण
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4119,6 +4121,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4137,6 +4141,8 @@ hi:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
             lessonGroup-3:
               display_name: 'अध्याय 2: कंप्यूटर और प्रश्न हल करना'
+            lessonGroup-5:
+              display_name: सर्वेक्षण
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4154,6 +4160,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4180,6 +4188,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4196,6 +4206,8 @@ hi:
           lesson_groups:
             lessonGroup-2:
               display_name: 'अध्याय 1: प्रश्न हल करने की प्रक्रिया'
+            lessonGroup-4:
+              display_name: सर्वेक्षण
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:

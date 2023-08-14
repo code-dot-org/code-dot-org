@@ -1,5 +1,5 @@
 ---
-title: Press Kit
+title: Хэвлэлийн хэрэгсэл
 ---
 
 {{ signup_button }}

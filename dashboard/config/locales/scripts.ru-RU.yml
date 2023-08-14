@@ -1905,6 +1905,8 @@ ru:
               display_name: 'Глава 1: Процесс решения проблемы'
             lessonGroup-3:
               display_name: 'Глава 2: Компьютеры и решение проблем'
+            lessonGroup-5:
+              display_name: Опрос
         csd1-dlp:
           lesson_groups:
             content:
@@ -3985,6 +3987,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4001,6 +4005,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4017,6 +4023,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4041,6 +4049,8 @@ ru:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-4:
+              display_name: Опрос
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4059,6 +4069,8 @@ ru:
               display_name: 'Глава 1: Процесс решения проблемы'
             lessonGroup-3:
               display_name: 'Глава 2: Компьютеры и решение проблем'
+            lessonGroup-5:
+              display_name: Опрос
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:

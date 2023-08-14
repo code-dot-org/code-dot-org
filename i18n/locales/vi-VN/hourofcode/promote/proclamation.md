@@ -1,5 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+title: Giải pháp mẫu Hỗ trợ Tuần giáo dục Khoa học Máy tính và Giờ viết mã
 ---
 
 {{ signup_button }}
