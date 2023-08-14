@@ -1,4 +1,4 @@
-class Pd::RegionalPartnerMiniContactMailer < ActionMailer::Base
+class Pd::RegionalPartnerMiniContactMailer < ApplicationMailer
   include ActionMailerMetrics
   NO_REPLY = 'Code.org <noreply@code.org>'
   default from: 'Dave Frye <partner@code.org>'
