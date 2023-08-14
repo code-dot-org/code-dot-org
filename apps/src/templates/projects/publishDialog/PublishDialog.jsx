@@ -102,7 +102,7 @@ class PublishDialog extends Component {
           <Button
             text={i18n.publish()}
             onClick={this.confirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="no-mc"
             isPending={isPublishPending}
             pendingText={i18n.publishPending()}
