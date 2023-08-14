@@ -48,12 +48,9 @@ const CurriculumCatalog = ({
 
   const getQuickViewState = () => {
     const urlParams = queryParams();
-    return 'quick_view' in urlParams && urlParams['quick_view'] === 'true'
-      ? true
-      : false;
+    console.log(urlParams['quick_view'] === 'true');
+    return urlParams['quick_view'] === 'true';
   };
-
-  const isQuickViewDisplayed = getQuickViewState();
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
   // message if no results).
@@ -104,7 +101,7 @@ const CurriculumCatalog = ({
                   scriptId={script_id}
                   isStandAloneUnit={is_standalone_unit}
                   onAssignSuccess={response => handleAssignSuccess(response)}
-                  quickViewDisplayed={isQuickViewDisplayed}
+                  quickViewDisplayed={getQuickViewState()}
                   {...props}
                 />
               )
