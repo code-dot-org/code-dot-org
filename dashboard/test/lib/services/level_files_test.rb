@@ -4,9 +4,9 @@ module Services
   class LevelFilesTest < ActiveSupport::TestCase
     test 'can write custom level file' do
       Policies::LevelFiles.stubs(:write_to_file?).returns(true)
-      level = build(:level, name: "Testing Level File Writing", published: true)
+      level = build(:maze, name: "Testing Level File Writing", published: true)
       File.expects(:write).with do |path, _data|
-        assert_equal path, Rails.root.join("config/scripts/levels/#{level.name}.level")
+        assert_equal path, Rails.root.join("config/levels/custom/maze/Testing Level File Writing.level")
       end
       Services::LevelFiles.write_custom_level_file(level)
     end
@@ -18,11 +18,10 @@ module Services
       # There are a couple of different places level files can end up, and we want
       # to check all of them.
       level_files = [
-        # Check at the root of the levels directory
+        # Check at the old default location
         "config/scripts/levels/#{level.name}.level",
-        # Check nested and deeply-nested subdirectories of the levels directory
-        "config/scripts/levels/foo/#{level.name}.level",
-        "config/scripts/levels/foo/bar/baz/qux/#{level.name}.level",
+        # Check at the new default location
+        "config/levels/custom/#{level.game.app}/#{level.name}.level",
       ]
 
       level_files.each do |level_file|
