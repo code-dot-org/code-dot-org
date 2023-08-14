@@ -3,29 +3,30 @@ import React from 'react';
 import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Select from 'react-select';
 
-// update this to lock scholarships so that scholarship status can't be updated via the UI.
-const locked = false;
+const ScholarshipDropdown = ({
+  scholarshipStatus,
+  dropdownOptions,
+  onChange,
+  disabled,
+  isWorkshopAdmin,
+}) => (
+  <FormGroup>
+    <Select
+      clearable={false}
+      value={scholarshipStatus}
+      onChange={onChange}
+      options={dropdownOptions}
+      disabled={!isWorkshopAdmin || disabled}
+    />
+  </FormGroup>
+);
 
-export class ScholarshipDropdown extends React.Component {
-  static propTypes = {
-    scholarshipStatus: PropTypes.string,
-    dropdownOptions: PropTypes.array,
-    onChange: PropTypes.func,
-    disabled: PropTypes.bool,
-    isWorkshopAdmin: PropTypes.bool.isRequired,
-  };
+ScholarshipDropdown.propTypes = {
+  scholarshipStatus: PropTypes.string,
+  dropdownOptions: PropTypes.array,
+  onChange: PropTypes.func,
+  disabled: PropTypes.bool,
+  isWorkshopAdmin: PropTypes.bool.isRequired,
+};
 
-  render() {
-    return (
-      <FormGroup>
-        <Select
-          clearable={false}
-          value={this.props.scholarshipStatus}
-          onChange={this.props.onChange}
-          options={this.props.dropdownOptions}
-          disabled={locked || this.props.disabled}
-        />
-      </FormGroup>
-    );
-  }
-}
+export default ScholarshipDropdown;
