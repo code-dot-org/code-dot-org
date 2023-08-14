@@ -752,7 +752,7 @@ uk-UA:
         questions:
         - text: Підготовка
         - text: Рефлексія
-        - text: Перша версія
+        - text: Спроба
         - text: Визначити
       CSD U1 Test PSP match_2021:
         answers:
@@ -763,7 +763,7 @@ uk-UA:
         questions:
         - text: Підготовка
         - text: Рефлексія
-        - text: Перша версія
+        - text: Спроба
         - text: Визначити
       CSD U1 Test PSP match_2022:
         answers:
@@ -774,7 +774,7 @@ uk-UA:
         questions:
         - text: Підготовка
         - text: Рефлексія
-        - text: Перша версія
+        - text: Спроба
         - text: Визначити
       CSD U1 Test define a computer:
         answers:
@@ -12044,12 +12044,16 @@ uk-UA:
         markdown: |-
           # STOP недоброзичливісті
 
-          ## Що ви повинні робити, якщо хтось недоброзичливий з вами онлайн?
+          ## Що потрібно робити, якщо хтось до тебе недоброзичливий онлайн?
 
-          * **В**ідстороньтеся.
-          * ** Р**озкажіть дорослому, якому довіряєте
-          * **O**K сайти спочатку.
-          * **З**робіть паузу та подумайте.
+          * **S**tep away (Відсторонися)
+
+          * **T**ell a trusted adult (Розкажи дорослому, якому довіряєш)
+
+          * **O**K sites only (Оминай неперевірені сайти)
+
+          * **P**ause and think (Призупинись і подумай)
+
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_safety_in_my_online_neighborhood:

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-01 19:55:06 UTC",
+    "serialized_at": "2023-08-07 21:53:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2505,9 +2505,45 @@
       "key": "c63f75dd-64e9-43af-bf23-874d159c71bf",
       "position": 9,
       "properties": {
+        "progression_name": "End-of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "c63f75dd-64e9-43af-bf23-874d159c71bf",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
+      }
+    },
+    {
+      "key": "9d0d7852-03bd-4ca6-a7f1-6f1c3cbe760c",
+      "position": 10,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d0d7852-03bd-4ca6-a7f1-6f1c3cbe760c",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
+      }
+    },
+    {
+      "key": "29bfe180-695f-4f5f-9c45-fdbb0b049d63",
+      "position": 11,
+      "properties": {
+        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
+        "name": "CSP Vocabulary Bingo",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "29bfe180-695f-4f5f-9c45-fdbb0b049d63",
+        "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
+      }
+    },
+    {
+      "key": "59190cf1-7357-4a51-9931-9058f719f300",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Eight in order to generate clues for the students."
+      },
+      "seeding_key": {
+        "activity_section.key": "59190cf1-7357-4a51-9931-9058f719f300",
         "lesson_activity.key": "975fcfcd-c102-4e87-9a93-797c8526583a"
       }
     },
@@ -2942,7 +2978,8 @@
       "properties": {
         "level_keys": [
           "Student End of Unit Survey_csp10_2023"
-        ]
+        ],
+        "progression": "End-of-Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
@@ -3308,6 +3345,31 @@
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "CSP Bingo Cards - Unit Eight",
+      "url": "https://drive.google.com/file/d/1Y3nk6a5yehh29OH-WYt2GVUgbc4UNCbD/view?usp=drive_link",
+      "key": "csp_bingo_cards_-_unit_eight",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1Y3nk6a5yehh29OH-WYt2GVUgbc4UNCbD",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_eight"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
       }
     },
     {
@@ -3807,6 +3869,18 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Innovation Simulation Part 5",
+        "resource.key": "csp_bingo_cards_-_unit_eight"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Innovation Simulation Part 5",
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Innovation Simulation Part 5",
         "resource.key": "csp_innovation_simulation_project_guide"
       }
     },
@@ -3961,10 +4035,200 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "computer_virus_scanning_software",
+      "word": "Computer Virus Scanning Software",
+      "definition": "protects a computing system against infection",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computer_virus_scanning_software"
+      }
+    },
+    {
+      "key": "computing_innovation",
+      "word": "Computing Innovation",
+      "definition": "includes a program as an integral part of its function. Can be physical (e.g. self-driving car), non-physical computing software (e.g. picture editing software), or non-physical computing concepts (e.g., e-commerce).",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computing_innovation"
+      }
+    },
+    {
+      "key": "decryption",
+      "word": "Decryption",
+      "definition": "a process that reverses encryption, taking a secret message and reproducing the original plain text",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decryption"
+      }
+    },
+    {
+      "key": "encryption",
+      "word": "Encryption",
+      "definition": "a process of encoding messages to keep them secret, so only \"authorized\" parties can read it",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "encryption"
+      }
+    },
+    {
+      "key": "keylogging",
+      "word": "Keylogging",
+      "definition": "the use of a program to record every keystroke made by a computer user in order to gain fraudulent access to passwords and other confidential information",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "keylogging"
+      }
+    },
+    {
+      "key": "malware",
+      "word": "Malware",
+      "definition": "software intended to damage a computing system or to take partial control over its operation",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "malware"
+      }
+    },
+    {
+      "key": "multi_factor_authentication",
+      "word": "Multi-factor Authentication",
+      "definition": "a system that requires at least two steps to unlock protected information; each step adds a new layer of security that must be broken to gain unauthorized access",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "multi_factor_authentication"
+      }
+    },
+    {
+      "key": "personally_identifiable_information_ppi_",
+      "word": "Personally Identifiable Information (PPI)",
+      "definition": "information about an individual that identifies, links, relates, or describes them",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "personally_identifiable_information_ppi_"
+      }
+    },
+    {
+      "key": "phishing",
+      "word": "Phishing",
+      "definition": "a technique that attempts to trick a user into providing personal information. That personal information can then be used to access sensitive online resources, such as bank accounts and emails",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "phishing"
+      }
+    },
+    {
+      "key": "public_key_encryption",
+      "word": "Public Key Encryption",
+      "definition": "pairs a public key for encryption and a private key for decryption. The sender does not need the receiver’s private key to encrypt a message, but the receiver’s private key is required to decrypt the message",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "public_key_encryption"
+      }
+    },
+    {
+      "key": "rouge_access_point",
+      "word": "Rouge Access Point",
+      "definition": "a wireless access point that gives unauthorized access to secure networks",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "rouge_access_point"
+      }
+    },
+    {
+      "key": "symmetric_key_encryption",
+      "word": "Symmetric Key Encryption",
+      "definition": "involves one key for both encryption and decryption",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "symmetric_key_encryption"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Data Policies and Privacy",
+        "vocabulary.key": "personally_identifiable_information_ppi_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project   Innovation Simulation Part 1",
+        "vocabulary.key": "computing_innovation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "vocabulary.key": "decryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "vocabulary.key": "encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "vocabulary.key": "public_key_encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "vocabulary.key": "symmetric_key_encryption"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "vocabulary.key": "computer_virus_scanning_software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "vocabulary.key": "multi_factor_authentication"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "vocabulary.key": "keylogging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "vocabulary.key": "malware"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "vocabulary.key": "phishing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "vocabulary.key": "rouge_access_point"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 

@@ -33,6 +33,8 @@ sk:
           title: 'Informatika v Algebre: Kurz B'
         CSDU1-Draft:
           description_short: Riešenie problémov
+        CSDU2-Draft:
+          description_short: Vývoj webových stránok
         CSDU3-Draft:
           description_short: Programovanie
         CSDU5-Draft:
@@ -1687,6 +1689,8 @@ sk:
               display_name: 'Kapitola 1: Postup riešenia problémov'
             lessonGroup-3:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+            lessonGroup-5:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“
             je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
             kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
@@ -1832,6 +1836,8 @@ sk:
               display_name: Obsah
             required:
               display_name: Prehľad
+        csd2-old:
+          description_short: Vývoj webových stránok
         csd2-pilot:
           lesson_groups:
             csd2_1:
@@ -3637,6 +3643,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“
             je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
             kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
@@ -3674,6 +3682,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“
             je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
             kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
@@ -3711,6 +3721,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“
             je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
             kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
@@ -3744,6 +3756,8 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-4:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“
             je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
             kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
@@ -3783,6 +3797,8 @@ sk:
               display_name: 'Kapitola 1: Postup riešenia problémov'
             lessonGroup-3:
               display_name: 'Kapitola 2: Počítače a riešenie problémov'
+            lessonGroup-5:
+              display_name: Dotazník
           student_description: Tematický celok „Riešenie problémov a výpočtová technika“
             je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
             kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
@@ -4178,6 +4194,8 @@ sk:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+        pixelation:
+          title: Pixelácia
         pl-csd-summer-day1:
           lessons:
             lesson-3:
@@ -4213,6 +4231,8 @@ sk:
         poetry:
           name: poézia
           title: Informatika a poézia
+        poetry-2021:
+          title: Programovanie s poéziou
         poetry-hoc:
           description_short: 'Aktivita projektu Hodina kódu – V2 '
           name: poetry-hoc
@@ -4362,6 +4382,7 @@ sk:
             Wars v ďalekej galaxii.
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru
             Star Wars v ďalekej galaxii.
+          title: 'Star Wars: Budovanie galaxie pomocou kódu (Blockly)'
         step:
           description: Návod po krokoch
           description_short: Návod po krokoch
@@ -4412,6 +4433,7 @@ sk:
               display_name: 'Kapitola 1: Tvorba webových stránok'
             lessonGroup-4:
               display_name: 'Kapitola 2: Viacstránkové weby'
+          title: Vývoj webových stránok
         text-compression:
           title: Kompresia textu
         time4cs-control-unit-1:

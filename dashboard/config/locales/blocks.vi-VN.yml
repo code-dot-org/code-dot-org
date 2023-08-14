@@ -17,7 +17,6 @@ vi:
             '0.75': nhỏ
             '1.00': trung bình
             '2.00': lớn
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -25,7 +24,6 @@ vi:
             '0.75': nhỏ
             '1.00': trung bình
             '2.00': lớn
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -474,28 +472,8 @@ vi:
             '19': '19'
             '2': '2'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
             '3': '3'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
             '4': '4'
-            '40': '40'
             '5': '5'
             '6': '6'
             '7': '7'
@@ -998,8 +976,6 @@ vi:
         options:
           INPUT1:
             '1': nước chanh
-            '3': baking soda
-            '5': both
         text: Kính hiển vi có {INPUT1}
       DansBlocks_setForegroundEffect2:
         options:
@@ -1017,8 +993,6 @@ vi:
         options:
           INPUT1:
             '1': nước chanh
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Giao tiếp {VAR1} với {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1386,15 +1360,11 @@ vi:
         options:
           INPUT1:
             '1': nước chanh
-            '3': baking soda
-            '5': both
         text: Kính hiển vi có {INPUT1}
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': nước chanh
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1630,7 +1600,6 @@ vi:
       Poetry_whenLineShows:
         options:
           N:
-            '0': "???"
             '1': '1'
             '10': '10'
             '11': '11'
@@ -1690,16 +1659,10 @@ vi:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': tất cả
       aalab_someStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': tất cả
       aalab_spriteSayChoices:
         text: "{SPRITE} nói {SPEECH}"
@@ -1860,7 +1823,6 @@ vi:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '10': '10'
             '2': '2'
@@ -2405,11 +2367,9 @@ vi:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': chậm
             '5': bình thường
             '7': nhanh
-            '9': extra fast
         text: đặt tốc độ của {SPRITE} thành {SIZE}
       gamelab_setTint:
         text: thay đổi màu sắc của {THIS} thành {COLOR}

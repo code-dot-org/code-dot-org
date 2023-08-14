@@ -7,19 +7,11 @@ ka:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': საშუალო
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': საშუალო
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -227,40 +219,11 @@ ka:
             '"row"': მწკრივი
             '"spiral"': სპირალი
           N:
-            '10': '10'
-            '11': '11'
             '12': '12'
-            '13': '13'
-            '14': '14'
             '15': '15'
-            '16': '16'
-            '17': '17'
-            '18': '18'
-            '19': '19'
             '2': '2'
-            '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
             '3': '3'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
             '4': '4'
-            '40': '40'
             '5': '5'
             '6': '6'
             '7': '7'
@@ -285,11 +248,9 @@ ka:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '0.25': very slow
             '0.5': ნელი
             '1': ჩვეულებრივი
             '2': ჩქარი
-            '4': very fast
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
@@ -298,11 +259,9 @@ ka:
             '"ROBOT"': რობოტები
             sprites: ყველა
           SPEED:
-            '0.25': very slow
             '0.5': ნელი
             '1': ჩვეულებრივი
             '2': ჩქარი
-            '4': very fast
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -513,8 +472,6 @@ ka:
         options:
           INPUT1:
             '1': ლიმონის წვენი
-            '3': baking soda
-            '5': both
         text: მიკროსკოპს აქვს {INPUT1}
       DansBlocks_setForegroundEffect2:
         options:
@@ -525,8 +482,6 @@ ka:
         options:
           INPUT1:
             '1': ლიმონის წვენი
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: კომუნიკაცია {VAR1} {SPRITE1COSTUME}-თან
       FunctionBlocks_makeManipulative2:
@@ -710,15 +665,11 @@ ka:
         options:
           INPUT1:
             '1': ლიმონის წვენი
-            '3': baking soda
-            '5': both
         text: მიკროსკოპს აქვს {INPUT1}
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': ლიმონის წვენი
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -815,13 +766,7 @@ ka:
       Poetry_whenLineShows:
         options:
           N:
-            '0': "???"
-            '1': '1'
-            '10': '10'
-            '11': '11'
             '12': '12'
-            '13': '13'
-            '14': '14'
             '15': '15'
             '2': '2'
             '3': '3'
@@ -856,16 +801,10 @@ ka:
       aalab_someGraduallyStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': ყველა
       aalab_someStartIntervention:
         options:
           PORTION:
-            '0.25': few
-            '0.5': half of
-            '0.75': most
             '1': ყველა
       binary_move:
         options:
@@ -948,9 +887,6 @@ ka:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
-            '1': '1'
-            '10': '10'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -1008,8 +944,6 @@ ka:
       gamelab_int10:
         options:
           VALUE:
-            '1': '1'
-            '10': '10'
             '2': '2'
             '3': '3'
             '4': '4'
@@ -1116,8 +1050,6 @@ ka:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '100': large
-            '30': small
             '50': საშუალო
       gamelab_mirrorSprite:
         options:
@@ -1218,9 +1150,6 @@ ka:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '100': large
-            '25': extra small
-            '50': small
             '75': საშუალო
       gamelab_setProp:
         options:
@@ -1236,9 +1165,6 @@ ka:
           PROPERTY:
             '"scale"': ზომა
           SIZE:
-            '100': large
-            '25': extra small
-            '50': small
             '75': საშუალო
       gamelab_setSizes:
         options:
@@ -1249,11 +1175,9 @@ ka:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': ნელი
             '5': ჩვეულებრივი
             '7': ჩქარი
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -1308,11 +1232,8 @@ ka:
       gamelab_withPercentChanceDropdown:
         options:
           NUM:
-            '10': very low
             '25': დაბალი
-            '50': 50/50
             '75': მაღალი
-            '90': very high
       storylab_setForegroundEffect2:
         options:
           EFFECT:

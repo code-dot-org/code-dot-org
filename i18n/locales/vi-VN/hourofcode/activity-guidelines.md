@@ -1,5 +1,5 @@
 ---
-title: Activity Guidelines
+title: Nguyên tắc hoạt động
 ---
 
 <style>

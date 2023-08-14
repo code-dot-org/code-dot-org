@@ -1354,6 +1354,10 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Vragenlijst
         csd1-dlp:
           lesson_groups:
             content:
@@ -2624,14 +2628,26 @@ nl:
           title: Flappy Code
         flappy-impact-study:
           title: Flappy Code met enquête
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-coding4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-creativity4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -2646,10 +2662,18 @@ nl:
               display_name: Hoofdstuk 1
             lessonGroup-4:
               display_name: Hoofdstuk 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-design-with-purpose4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Vragenlijst
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:

@@ -1,3 +1,6 @@
+require 'policies/child_account'
+require 'services/child_account'
+
 class PolicyComplianceController < ApplicationController
   before_action :authenticate_user!, except: [:child_account_consent]
 
@@ -16,17 +19,9 @@ class PolicyComplianceController < ApplicationController
     token = params.require(:token)
     permission_request = ParentalPermissionRequest.find_by(uuid: token)
     return render status: :bad_request if permission_request.nil?
-    #Get User
-    user = permission_request.user
-    #Update User
-    if user.child_account_compliance_state != User::ChildAccountCompliance::PERMISSION_GRANTED
-      user.child_account_compliance_state = User::ChildAccountCompliance::PERMISSION_GRANTED
-      user.child_account_compliance_state_last_updated = DateTime.now
-      user.save!
-      parent_email = permission_request.parent_email
-      ParentMailer.parent_permission_confirmation(parent_email).deliver_now
-    end
+    Services::ChildAccount.grant_permission_request!(permission_request)
     @permission_granted = true
+    user = permission_request.user
     @permission_granted_date = user.child_account_compliance_state_last_updated
   end
 
@@ -46,7 +41,7 @@ class PolicyComplianceController < ApplicationController
   # acts like the email was sent and sends no notice to the student it was not.
   def child_account_consent_request
     # If we already comply, don't suddenly invalid it
-    if current_user.child_account_compliance_state == User::ChildAccountCompliance::PERMISSION_GRANTED
+    if current_user.child_account_compliance_state == Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
       redirect_back fallback_location: lockout_path and return
     end
 
@@ -85,7 +80,10 @@ class PolicyComplianceController < ApplicationController
     permission_request.save!
 
     # Update the User
-    current_user.update_child_account_compliance(User::ChildAccountCompliance::REQUEST_SENT)
+    Services::ChildAccount.update_compliance(
+      current_user,
+      Policies::ChildAccount::ComplianceState::REQUEST_SENT
+    )
     current_user.save!
 
     # Send the request email
