@@ -22,43 +22,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "उम्र"
-        },
-        "Gender": {
-          "id": "लिंग"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "केला"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "उम्र"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "रंग"
-        },
-        "food": {
-          "id": "खाना"
-        },
-        "music": {
-          "id": "संगीत"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -67,36 +30,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "उम्र"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "इंटरनेट"
-        },
-        "Writing": {
-          "id": "लिखना"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "देश"
-        },
-        "Dance": {
-          "id": "डांस"
-        },
-        "Music": {
-          "id": "संगीत"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "उम्र"
@@ -119,22 +52,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "चीज़"
-        },
-        "chicken": {
-          "id": "murghi"
-        },
-        "lamb": {
-          "id": "मेमना"
-        },
-        "onion": {
-          "id": "प्याज"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -142,142 +59,6 @@
         },
         "Description": {
           "id": "विवरण "
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "एवोकैडो"
-        },
-        "ginger": {
-          "id": "अदरक"
-        },
-        "onion": {
-          "id": "प्याज"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "बेकन"
-        },
-        "cheese": {
-          "id": "चीज़"
-        },
-        "lobster": {
-          "id": "केकड़ा"
-        },
-        "meat": {
-          "id": "मांस"
-        },
-        "mushrooms": {
-          "id": "मशरूम्स"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "नींबू"
-        },
-        "strawberry": {
-          "id": "स्ट्रॉबरी"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "घड़ियाल "
-        },
-        "elephant": {
-          "id": "हाथी"
-        },
-        "people": {
-          "id": "लोग"
-        },
-        "rhino": {
-          "id": "गैंडा"
-        },
-        "trees": {
-          "id": "पेड़"
-        }
-      },
-      "name": "सफारी"
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "एवोकैडो"
-        },
-        "beans": {
-          "id": "बीन्स"
-        },
-        "cheese": {
-          "id": "चीज़"
-        },
-        "chicken": {
-          "id": "murghi"
-        },
-        "fruit": {
-          "id": "फल "
-        },
-        "tomato": {
-          "id": "टमाटर"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "एवोकैडो"
-        },
-        "beans": {
-          "id": "बीन्स"
-        },
-        "corn": {
-          "id": "कॉर्न"
-        },
-        "lime": {
-          "id": "नींबू"
-        },
-        "onion": {
-          "id": "प्याज"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "भुजाएं"
-        },
-        "size": {
-          "id": "आकार"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "भुजाएं"
-        },
-        "size": {
-          "id": "आकार"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "दिन"
-        },
-        "shoe": {
-          "id": "जूता"
-        },
-        "weather": {
-          "id": "मौसम"
         }
       }
     },
@@ -298,47 +79,6 @@
         },
         "school": {
           "id": "स्कूल"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "उप्लाभ्दियाँ"
-        },
-        "Age": {
-          "description": "उम्र",
-          "id": "उम्र"
-        },
-        "Country": {
-          "id": "देश"
-        },
-        "Dance": {
-          "id": "डांस"
-        },
-        "Gender": {
-          "description": "लिंग",
-          "id": "लिंग"
-        },
-        "Height": {
-          "description": "ऊंचाई",
-          "id": "ऊंचाई"
-        },
-        "Internet": {
-          "id": "इंटरनेट"
-        },
-        "Music": {
-          "id": "संगीत"
-        },
-        "Writing": {
-          "id": "लिखना"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "जलचर"
         }
       }
     }

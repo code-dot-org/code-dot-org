@@ -56,14 +56,6 @@
       },
       "name": "Abulón"
     },
-    "auto_mpg": {
-      "fields": {
-        "mpg": {
-          "description": "Millas por galón.",
-          "id": "mpg"
-        }
-      }
-    },
     "bike_sharing": {
       "fields": {
         "Month": {
@@ -77,71 +69,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Edad"
-        },
-        "Company Founding Year": {
-          "description": "El año en que se fundó su empresa.",
-          "id": "Año de fundación de la empresa"
-        },
-        "Gender": {
-          "id": "Sexo"
-        },
-        "Rank": {
-          "description": "Su rango de riqueza para el año de este récord.",
-          "id": "Posición"
-        },
-        "Year": {
-          "id": "Año"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "plátano"
-        },
-        "preference": {
-          "id": "preferencia"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "edad"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "color"
-        },
-        "food": {
-          "id": "comida"
-        },
-        "music": {
-          "id": "música"
-        }
-      }
-    },
-    "cookies_toy": {
-      "fields": {
-        "preference": {
-          "id": "preferencia"
-        }
-      }
-    },
-    "global_happiness_raw": {
-      "fields": {
-        "Year": {
-          "id": "Año"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -152,50 +79,12 @@
         }
       }
     },
-    "icecream_toppings_toy": {
-      "fields": {
-        "Preference": {
-          "id": "Preferencia"
-        }
-      }
-    },
     "insurance_cost": {
       "fields": {
         "age": {
           "id": "edad"
         }
       }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        },
-        "Writing": {
-          "id": "Escribir"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "País"
-        },
-        "Dance": {
-          "id": "Baile"
-        },
-        "Music": {
-          "id": "Música"
-        }
-      }
-    },
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "edad"
-        }
-      },
-      "name": "Prioridad Médica"
     },
     "movies": {
       "fields": {
@@ -216,25 +105,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "Queso"
-        },
-        "chicken": {
-          "id": "gallina"
-        },
-        "lamb": {
-          "id": "cordero"
-        },
-        "onion": {
-          "id": "cebolla"
-        },
-        "preference": {
-          "id": "preferencia"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -242,218 +112,6 @@
         },
         "Description": {
           "id": "Descripción"
-        }
-      }
-    },
-    "pizza_toppings_toy": {
-      "fields": {
-        "Olives": {
-          "description": "¿La pizza tenía aceitunas?"
-        },
-        "Preference": {
-          "id": "Preferencia"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "aguacate"
-        },
-        "ginger": {
-          "id": "jengibre"
-        },
-        "onion": {
-          "id": "cebolla"
-        },
-        "preference": {
-          "id": "preferencia"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "tocino"
-        },
-        "cheese": {
-          "id": "Queso"
-        },
-        "lobster": {
-          "id": "langosta"
-        },
-        "meat": {
-          "id": "carne"
-        },
-        "mushrooms": {
-          "id": "setas"
-        },
-        "preference": {
-          "id": "preferencia"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "lima"
-        },
-        "preference": {
-          "id": "preferencia"
-        },
-        "strawberry": {
-          "id": "fresa"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "caimán"
-        },
-        "elephant": {
-          "id": "elefante"
-        },
-        "people": {
-          "id": "personas"
-        },
-        "rhino": {
-          "id": "rinoceronte"
-        },
-        "trees": {
-          "id": "árboles"
-        }
-      },
-      "name": "Safari"
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "aguacate"
-        },
-        "beans": {
-          "id": "alubias"
-        },
-        "cheese": {
-          "id": "Queso"
-        },
-        "chicken": {
-          "id": "gallina"
-        },
-        "fruit": {
-          "id": "fruta"
-        },
-        "preference": {
-          "id": "preferencia"
-        },
-        "tomato": {
-          "id": "tomate"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "aguacate"
-        },
-        "beans": {
-          "id": "alubias"
-        },
-        "corn": {
-          "id": "maíz"
-        },
-        "lime": {
-          "id": "lima"
-        },
-        "onion": {
-          "id": "cebolla"
-        },
-        "preference": {
-          "id": "preferencia"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "card": {
-        "context": {
-          "potentialMisuses": "Cualquier otra cosa que no sea el propósito anterior.",
-          "potentialUses": "Se utiliza para entrenar al AI Bot sobre cómo clasificar formas."
-        },
-        "description": "Se extrajeron características de un dataset visual que muestra diferentes formas."
-      },
-      "fields": {
-        "background color": {
-          "description": "Color del fondo detrás de la forma",
-          "id": "Color del fondo"
-        },
-        "border color": {
-          "description": "Color del contorno de la forma",
-          "id": "color de borde"
-        },
-        "fill color": {
-          "description": "Color del interior de la forma",
-          "id": "color de relleno"
-        },
-        "shape": {
-          "description": "Tipo de forma",
-          "id": "Forma"
-        },
-        "sides": {
-          "description": "Número de lados que tiene la forma",
-          "id": "lados"
-        },
-        "size": {
-          "description": "Ya sea grande o pequeño",
-          "id": "tamaño"
-        }
-      },
-      "name": "Formas V1"
-    },
-    "shapes_v2_toy": {
-      "card": {
-        "context": {
-          "potentialMisuses": "Cualquier otra cosa que no sea el propósito anterior.",
-          "potentialUses": "Se utiliza para entrenar al AI Bot sobre cómo clasificar formas."
-        },
-        "description": "Se extrajeron características de un dataset visual que muestra diferentes formas."
-      },
-      "fields": {
-        "background color": {
-          "description": "Color del fondo detrás de la forma",
-          "id": "Color del fondo"
-        },
-        "border color": {
-          "description": "Color del contorno de la forma",
-          "id": "color de borde"
-        },
-        "fill color": {
-          "description": "Color del interior de la forma",
-          "id": "color de relleno"
-        },
-        "shape": {
-          "description": "Tipo de forma",
-          "id": "Forma"
-        },
-        "sides": {
-          "description": "Número de lados que tiene la forma",
-          "id": "lados"
-        },
-        "size": {
-          "description": "Ya sea grande o pequeño",
-          "id": "tamaño"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "día"
-        },
-        "shoe": {
-          "id": "zapato"
-        },
-        "weather": {
-          "id": "clima"
         }
       }
     },
@@ -480,63 +138,6 @@
         },
         "school": {
           "id": "escuela"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Logros"
-        },
-        "Age": {
-          "description": "Edad",
-          "id": "Edad"
-        },
-        "Country": {
-          "id": "País"
-        },
-        "Dance": {
-          "id": "Baile"
-        },
-        "Empathy": {
-          "id": "Empatía"
-        },
-        "Gender": {
-          "description": "Sexo",
-          "id": "Sexo"
-        },
-        "Height": {
-          "description": "Altura",
-          "id": "Altura"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Music": {
-          "id": "Música"
-        },
-        "Writing": {
-          "id": "Escribir"
-        }
-      }
-    },
-    "taco_toppings_toy": {
-      "fields": {
-        "Preference": {
-          "id": "Preferencia"
-        }
-      }
-    },
-    "zoo": {
-      "card": {
-        "description": "Un pequeño conjunto de datos de diferentes atributos de animales (si tienen pelo, plumas, dientes y más) usados para propósitos de clasificación. Casi todas las características son Yes/No excepto el Nombre del Animal, Clase y Número de Patas."
-      },
-      "fields": {
-        "Aquatic": {
-          "id": "Aquatic"
-        },
-        "Toothed": {
-          "description": "¿El animal tiene dientes?"
         }
       }
     }

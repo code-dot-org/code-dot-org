@@ -34,43 +34,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "גיל"
-        },
-        "Gender": {
-          "id": "מין"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "בננה"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "גיל"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "צבע"
-        },
-        "food": {
-          "id": "אוכל"
-        },
-        "music": {
-          "id": "מוסיקה"
-        }
-      }
-    },
     "heart": {
       "card": {
         "context": {
@@ -102,33 +65,6 @@
         }
       }
     },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "אינטרנט"
-        },
-        "Writing": {
-          "id": "כתיבה"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "מדינה"
-        },
-        "Music": {
-          "id": "מוסיקה"
-        }
-      }
-    },
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "גיל"
-        }
-      }
-    },
     "movies": {
       "card": {
         "context": {
@@ -150,22 +86,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "גבינה"
-        },
-        "chicken": {
-          "id": "תרנגולת"
-        },
-        "lamb": {
-          "id": "טלה"
-        },
-        "onion": {
-          "id": "בצל"
-        }
-      }
-    },
     "nutrition": {
       "card": {
         "context": {
@@ -178,136 +98,6 @@
         },
         "Description": {
           "id": "תיאור"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "אבוקדו"
-        },
-        "ginger": {
-          "id": "ג'ינג'ר"
-        },
-        "onion": {
-          "id": "בצל"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "בייקון"
-        },
-        "cheese": {
-          "id": "גבינה"
-        },
-        "lobster": {
-          "id": "לובסטר"
-        },
-        "meat": {
-          "id": "בשר"
-        },
-        "mushrooms": {
-          "id": "פטריות"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "ליים"
-        },
-        "strawberry": {
-          "id": "תות שדה"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "תנין"
-        },
-        "elephant": {
-          "id": "פיל"
-        },
-        "people": {
-          "id": "אנשים"
-        },
-        "rhino": {
-          "id": "קרנף"
-        },
-        "trees": {
-          "id": "עצים"
-        }
-      },
-      "name": "ספארי"
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "אבוקדו"
-        },
-        "beans": {
-          "id": "שעועית"
-        },
-        "cheese": {
-          "id": "גבינה"
-        },
-        "chicken": {
-          "id": "תרנגולת"
-        },
-        "fruit": {
-          "id": "פרי"
-        },
-        "tomato": {
-          "id": "עגבנייה"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "אבוקדו"
-        },
-        "beans": {
-          "id": "שעועית"
-        },
-        "corn": {
-          "id": "תירס"
-        },
-        "lime": {
-          "id": "ליים"
-        },
-        "onion": {
-          "id": "בצל"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "גודל"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "גודל"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "יום"
-        },
-        "shoe": {
-          "id": "פרסה"
-        },
-        "weather": {
-          "id": "מזג אוויר"
         }
       }
     },
@@ -339,37 +129,6 @@
         },
         "school": {
           "id": "בית ספר"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "הישגים"
-        },
-        "Age": {
-          "description": "גיל",
-          "id": "גיל"
-        },
-        "Country": {
-          "id": "מדינה"
-        },
-        "Gender": {
-          "description": "מין",
-          "id": "מין"
-        },
-        "Height": {
-          "description": "גובה",
-          "id": "גובה"
-        },
-        "Internet": {
-          "id": "אינטרנט"
-        },
-        "Music": {
-          "id": "מוסיקה"
-        },
-        "Writing": {
-          "id": "כתיבה"
         }
       }
     }

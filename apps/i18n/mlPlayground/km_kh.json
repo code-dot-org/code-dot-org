@@ -12,37 +12,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "អាយុ"
-        },
-        "Gender": {
-          "id": "ភេទ"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "ចេក"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "អាយុ"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "ពណ៌"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -51,23 +20,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "អាយុ"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "ប្រទេស"
-        },
-        "Dance": {
-          "id": "រាំ"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "អាយុ"
@@ -90,59 +42,10 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "មេមាន់"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "សេចក្តីពិពណ៌នា"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "ក្រពើ"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "មេមាន់"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "ពោត"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "ទំហំ"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "ទំហំ"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "អាកាសធាតុ"
         }
       }
     },
@@ -157,27 +60,6 @@
       "fields": {
         "age": {
           "id": "អាយុ"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "ការទទួលជោគជ័យ"
-        },
-        "Age": {
-          "description": "អាយុ",
-          "id": "អាយុ"
-        },
-        "Country": {
-          "id": "ប្រទេស"
-        },
-        "Dance": {
-          "id": "រាំ"
-        },
-        "Gender": {
-          "description": "ភេទ",
-          "id": "ភេទ"
         }
       }
     }

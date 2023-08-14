@@ -11,37 +11,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "වයස"
-        },
-        "Gender": {
-          "id": "ස්ත්‍රී/පුරුෂ භාවය"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "කෙසෙල්"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "වයස"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "පාට"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -50,27 +19,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "වයස"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "අන්තර්ජාලය"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "රට"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "වයස"
@@ -94,64 +42,6 @@
         }
       }
     },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "අලිපේර "
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "බේකන් "
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "අලිපේර "
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "අලිපේර "
-        },
-        "corn": {
-          "id": "ඉරිඟු"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "පැති"
-        },
-        "size": {
-          "id": "විශාලත්වය"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "පැති"
-        },
-        "size": {
-          "id": "විශාලත්වය"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "දිනය"
-        }
-      }
-    },
     "songs": {
       "fields": {
         "Artist": {
@@ -163,24 +53,6 @@
       "fields": {
         "age": {
           "id": "වයස"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Age": {
-          "description": "වයස",
-          "id": "වයස"
-        },
-        "Country": {
-          "id": "රට"
-        },
-        "Gender": {
-          "description": "ස්ත්‍රී/පුරුෂ භාවය",
-          "id": "ස්ත්‍රී/පුරුෂ භාවය"
-        },
-        "Internet": {
-          "id": "අන්තර්ජාලය"
         }
       }
     }

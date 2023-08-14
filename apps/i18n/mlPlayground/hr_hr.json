@@ -18,37 +18,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Godine"
-        },
-        "Gender": {
-          "id": "Spol"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "banana"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "godine"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "boja"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -57,30 +26,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "godine"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Država"
-        },
-        "Music": {
-          "id": "Glazba"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "godine"
@@ -100,82 +45,10 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "kokoš"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "Opis"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "slanina"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "krokodil"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "chicken": {
-          "id": "kokoš"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "corn": {
-          "id": "kukuruz"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "veličina"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "veličina"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "dan"
-        },
-        "weather": {
-          "id": "vrijeme"
         }
       }
     },
@@ -190,27 +63,6 @@
       "fields": {
         "age": {
           "id": "godine"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Age": {
-          "description": "Godine",
-          "id": "Godine"
-        },
-        "Country": {
-          "id": "Država"
-        },
-        "Gender": {
-          "description": "Spol",
-          "id": "Spol"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Music": {
-          "id": "Glazba"
         }
       }
     }

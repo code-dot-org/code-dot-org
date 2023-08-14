@@ -22,43 +22,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Umur"
-        },
-        "Gender": {
-          "id": "Jantina"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "pisang"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "umur"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "warna"
-        },
-        "food": {
-          "id": "makanan"
-        },
-        "music": {
-          "id": "muzik"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -67,36 +30,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "umur"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        },
-        "Writing": {
-          "id": "Penulisan"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Negara"
-        },
-        "Dance": {
-          "id": "Tarian"
-        },
-        "Music": {
-          "id": "Muzik"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "umur"
@@ -119,22 +52,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "keju"
-        },
-        "chicken": {
-          "id": "ayam"
-        },
-        "lamb": {
-          "id": "anak biri-biri"
-        },
-        "onion": {
-          "id": "bawang besar"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -142,142 +59,6 @@
         },
         "Description": {
           "id": "Keterangan"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "ginger": {
-          "id": "halia"
-        },
-        "onion": {
-          "id": "bawang besar"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "dendeng babi"
-        },
-        "cheese": {
-          "id": "keju"
-        },
-        "lobster": {
-          "id": "udang galah"
-        },
-        "meat": {
-          "id": "daging"
-        },
-        "mushrooms": {
-          "id": "cendawan"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "limau"
-        },
-        "strawberry": {
-          "id": "strawberi"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "aligator"
-        },
-        "elephant": {
-          "id": "gajah"
-        },
-        "people": {
-          "id": "individu"
-        },
-        "rhino": {
-          "id": "badak"
-        },
-        "trees": {
-          "id": "Pokok"
-        }
-      },
-      "name": "Safari"
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "beans": {
-          "id": "kekacang"
-        },
-        "cheese": {
-          "id": "keju"
-        },
-        "chicken": {
-          "id": "ayam"
-        },
-        "fruit": {
-          "id": "buah-buahan"
-        },
-        "tomato": {
-          "id": "tomato"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "beans": {
-          "id": "kekacang"
-        },
-        "corn": {
-          "id": "jagung"
-        },
-        "lime": {
-          "id": "limau"
-        },
-        "onion": {
-          "id": "bawang besar"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "tepi"
-        },
-        "size": {
-          "id": "saiz"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "tepi"
-        },
-        "size": {
-          "id": "saiz"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "hari"
-        },
-        "shoe": {
-          "id": "kasut"
-        },
-        "weather": {
-          "id": "cuaca"
         }
       }
     },
@@ -298,47 +79,6 @@
         },
         "school": {
           "id": "sekolah"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Pencapaian"
-        },
-        "Age": {
-          "description": "Umur",
-          "id": "Umur"
-        },
-        "Country": {
-          "id": "Negara"
-        },
-        "Dance": {
-          "id": "Tarian"
-        },
-        "Gender": {
-          "description": "Jantina",
-          "id": "Jantina"
-        },
-        "Height": {
-          "description": "Ketinggian",
-          "id": "Ketinggian"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Music": {
-          "id": "Muzik"
-        },
-        "Writing": {
-          "id": "Penulisan"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Akuatik"
         }
       }
     }

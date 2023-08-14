@@ -4,40 +4,6 @@
   "columnInspectorDescription": "বর্ণনা",
   "correctAnswer": "সঠিক",
   "datasets": {
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "বয়স"
-        },
-        "Gender": {
-          "id": "লিঙ্গ"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "কলা"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "বয়স"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "রং"
-        },
-        "food": {
-          "id": "খাবার"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -46,27 +12,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "বয়স"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "ইন্টারনেট"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "দেশ"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "বয়স"
@@ -83,69 +28,10 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "onion": {
-          "id": "পেঁয়াজ"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "বর্ণনা"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "onion": {
-          "id": "পেঁয়াজ"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "লেবু"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "fruit": {
-          "id": "ফল"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "lime": {
-          "id": "লেবু"
-        },
-        "onion": {
-          "id": "পেঁয়াজ"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "আকার"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "আকার"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "দিন"
         }
       }
     },
@@ -160,24 +46,6 @@
       "fields": {
         "age": {
           "id": "বয়স"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Age": {
-          "description": "বয়স",
-          "id": "বয়স"
-        },
-        "Country": {
-          "id": "দেশ"
-        },
-        "Gender": {
-          "description": "লিঙ্গ",
-          "id": "লিঙ্গ"
-        },
-        "Internet": {
-          "id": "ইন্টারনেট"
         }
       }
     }

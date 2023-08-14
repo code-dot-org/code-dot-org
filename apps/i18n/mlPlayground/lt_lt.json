@@ -11,37 +11,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Amžius"
-        },
-        "Gender": {
-          "id": "Lytis"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "bananas"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "amžius"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "spalva"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -50,27 +19,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "amžius"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internetas"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Šalis"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "amžius"
@@ -90,79 +38,10 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "viščiukas"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "Aprašymas"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokadas"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "šoninė"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "Aligatorius"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokadas"
-        },
-        "chicken": {
-          "id": "viščiukas"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokadas"
-        },
-        "corn": {
-          "id": "kukurūzas"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "dydis"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "dydis"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "diena"
         }
       }
     },
@@ -177,27 +56,6 @@
       "fields": {
         "age": {
           "id": "amžius"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Pasiekimai"
-        },
-        "Age": {
-          "description": "Amžius",
-          "id": "Amžius"
-        },
-        "Country": {
-          "id": "Šalis"
-        },
-        "Gender": {
-          "description": "Lytis",
-          "id": "Lytis"
-        },
-        "Internet": {
-          "id": "Internetas"
         }
       }
     }

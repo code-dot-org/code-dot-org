@@ -12,37 +12,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Ikä"
-        },
-        "Gender": {
-          "id": "Sukupuoli"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "banaani"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "ikä"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "väri"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -51,30 +20,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "ikä"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Maa"
-        },
-        "Dance": {
-          "id": "Tanssi"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "ikä"
@@ -97,84 +42,10 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "kana"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "Kuvaus"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "pekoni"
-        }
-      }
-    },
-    "safari_toy": {
-      "name": "Safari"
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "chicken": {
-          "id": "kana"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "corn": {
-          "id": "maissi"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "sivut"
-        },
-        "size": {
-          "id": "koko"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "sivut"
-        },
-        "size": {
-          "id": "koko"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "päivä"
-        },
-        "weather": {
-          "id": "sää"
         }
       }
     },
@@ -189,37 +60,6 @@
       "fields": {
         "age": {
           "id": "ikä"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Saavutukset"
-        },
-        "Age": {
-          "description": "Ikä",
-          "id": "Ikä"
-        },
-        "Country": {
-          "id": "Maa"
-        },
-        "Dance": {
-          "id": "Tanssi"
-        },
-        "Gender": {
-          "description": "Sukupuoli",
-          "id": "Sukupuoli"
-        },
-        "Internet": {
-          "id": "Internet"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "merellinen"
         }
       }
     }

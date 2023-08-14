@@ -11,37 +11,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Starost"
-        },
-        "Gender": {
-          "id": "Spol"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "banana"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "starost"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "boja"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -50,27 +19,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "starost"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Država"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "starost"
@@ -90,55 +38,10 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "pile"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "Opis"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "pile"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "kukuruz"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "veličina"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "veličina"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "dan"
-        },
-        "weather": {
-          "id": "vrijeme"
         }
       }
     },
@@ -153,24 +56,6 @@
       "fields": {
         "age": {
           "id": "starost"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Age": {
-          "description": "Starost",
-          "id": "Starost"
-        },
-        "Country": {
-          "id": "Država"
-        },
-        "Gender": {
-          "description": "Spol",
-          "id": "Spol"
-        },
-        "Internet": {
-          "id": "Internet"
         }
       }
     }

@@ -11,37 +11,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Жасы"
-        },
-        "Gender": {
-          "id": "Жынысы"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "банан"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "жасы"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "түс"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -50,27 +19,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "жасы"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Ғаламтор"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Мемлекет"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "жасы"
@@ -90,45 +38,10 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "тауық"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "Сипаттама"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "тауық"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "шама"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "шама"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "күн"
         }
       }
     },
@@ -143,24 +56,6 @@
       "fields": {
         "age": {
           "id": "жасы"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Age": {
-          "description": "Жасы",
-          "id": "Жасы"
-        },
-        "Country": {
-          "id": "Мемлекет"
-        },
-        "Gender": {
-          "description": "Жынысы",
-          "id": "Жынысы"
-        },
-        "Internet": {
-          "id": "Ғаламтор"
         }
       }
     }

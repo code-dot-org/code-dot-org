@@ -2,23 +2,6 @@
   "columnInspectorDescription": "Deskrizzjoni",
   "correctAnswer": "Korrett",
   "datasets": {
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Età"
-        },
-        "Gender": {
-          "id": "Sess"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "età"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -33,13 +16,6 @@
         }
       }
     },
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "età"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
@@ -47,29 +23,10 @@
         }
       }
     },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "jum"
-        }
-      }
-    },
     "student_alcohol_consumption": {
       "fields": {
         "age": {
           "id": "età"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Age": {
-          "description": "Età",
-          "id": "Età"
-        },
-        "Gender": {
-          "description": "Sess",
-          "id": "Sess"
         }
       }
     }

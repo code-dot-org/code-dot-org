@@ -22,43 +22,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Věk"
-        },
-        "Gender": {
-          "id": "Pohlaví"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "banán"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "věk"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "barva"
-        },
-        "food": {
-          "id": "jídlo"
-        },
-        "music": {
-          "id": "hudba"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -67,36 +30,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "věk"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        },
-        "Writing": {
-          "id": "Psaní"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Země"
-        },
-        "Dance": {
-          "id": "Taneční"
-        },
-        "Music": {
-          "id": "Hudba"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "věk"
@@ -119,22 +52,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "sýr"
-        },
-        "chicken": {
-          "id": "slepice"
-        },
-        "lamb": {
-          "id": "jehně"
-        },
-        "onion": {
-          "id": "cibule"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -142,142 +59,6 @@
         },
         "Description": {
           "id": "Popis"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokádo"
-        },
-        "ginger": {
-          "id": "zázvor"
-        },
-        "onion": {
-          "id": "cibule"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "slanina"
-        },
-        "cheese": {
-          "id": "sýr"
-        },
-        "lobster": {
-          "id": "humr"
-        },
-        "meat": {
-          "id": "maso"
-        },
-        "mushrooms": {
-          "id": "houby"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "limetka"
-        },
-        "strawberry": {
-          "id": "jahoda"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "aligátor"
-        },
-        "elephant": {
-          "id": "slon"
-        },
-        "people": {
-          "id": "lidé"
-        },
-        "rhino": {
-          "id": "nosorožec"
-        },
-        "trees": {
-          "id": "stromy"
-        }
-      },
-      "name": "Safari"
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokádo"
-        },
-        "beans": {
-          "id": "fazole"
-        },
-        "cheese": {
-          "id": "sýr"
-        },
-        "chicken": {
-          "id": "slepice"
-        },
-        "fruit": {
-          "id": "ovoce"
-        },
-        "tomato": {
-          "id": "rajče"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokádo"
-        },
-        "beans": {
-          "id": "fazole"
-        },
-        "corn": {
-          "id": "kukuřici"
-        },
-        "lime": {
-          "id": "limetka"
-        },
-        "onion": {
-          "id": "cibule"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "strany"
-        },
-        "size": {
-          "id": "velikost"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "strany"
-        },
-        "size": {
-          "id": "velikost"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "den"
-        },
-        "shoe": {
-          "id": "bota"
-        },
-        "weather": {
-          "id": "počasí"
         }
       }
     },
@@ -298,47 +79,6 @@
         },
         "school": {
           "id": "škola"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Úspěchy"
-        },
-        "Age": {
-          "description": "Věk",
-          "id": "Věk"
-        },
-        "Country": {
-          "id": "Země"
-        },
-        "Dance": {
-          "id": "Taneční"
-        },
-        "Gender": {
-          "description": "Pohlaví",
-          "id": "Pohlaví"
-        },
-        "Height": {
-          "description": "Výška",
-          "id": "Výška"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Music": {
-          "id": "Hudba"
-        },
-        "Writing": {
-          "id": "Psaní"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Vodní"
         }
       }
     }

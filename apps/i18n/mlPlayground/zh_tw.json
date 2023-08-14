@@ -25,43 +25,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "年齡"
-        },
-        "Gender": {
-          "id": "性別"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "香蕉"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "年齡"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "顏色"
-        },
-        "food": {
-          "id": "食物"
-        },
-        "music": {
-          "id": "音樂"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -70,36 +33,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "年齡"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "網際網路 Internet"
-        },
-        "Writing": {
-          "id": "寫作"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "國家"
-        },
-        "Dance": {
-          "id": "舞蹈"
-        },
-        "Music": {
-          "id": "音樂"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "年齡"
@@ -122,22 +55,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "乳酪"
-        },
-        "chicken": {
-          "id": "雞"
-        },
-        "lamb": {
-          "id": "小羊"
-        },
-        "onion": {
-          "id": "洋蔥"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -145,142 +62,6 @@
         },
         "Description": {
           "id": "描述"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "牛油果"
-        },
-        "ginger": {
-          "id": "生薑"
-        },
-        "onion": {
-          "id": "洋蔥"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "培根"
-        },
-        "cheese": {
-          "id": "乳酪"
-        },
-        "lobster": {
-          "id": "龍蝦"
-        },
-        "meat": {
-          "id": "肉"
-        },
-        "mushrooms": {
-          "id": "蘑菇"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "萊姆"
-        },
-        "strawberry": {
-          "id": "草莓"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "短吻鰐"
-        },
-        "elephant": {
-          "id": "大象"
-        },
-        "people": {
-          "id": "人"
-        },
-        "rhino": {
-          "id": "犀牛"
-        },
-        "trees": {
-          "id": "樹木"
-        }
-      },
-      "name": "遊獵"
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "牛油果"
-        },
-        "beans": {
-          "id": "豆子"
-        },
-        "cheese": {
-          "id": "乳酪"
-        },
-        "chicken": {
-          "id": "雞"
-        },
-        "fruit": {
-          "id": "水果"
-        },
-        "tomato": {
-          "id": "番茄"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "牛油果"
-        },
-        "beans": {
-          "id": "豆子"
-        },
-        "corn": {
-          "id": "玉米"
-        },
-        "lime": {
-          "id": "萊姆"
-        },
-        "onion": {
-          "id": "洋蔥"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "邊"
-        },
-        "size": {
-          "id": "尺寸"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "邊"
-        },
-        "size": {
-          "id": "尺寸"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "天"
-        },
-        "shoe": {
-          "id": "鞋履"
-        },
-        "weather": {
-          "id": "天氣"
         }
       }
     },
@@ -301,47 +82,6 @@
         },
         "school": {
           "id": "學校"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "成就"
-        },
-        "Age": {
-          "description": "年齡",
-          "id": "年齡"
-        },
-        "Country": {
-          "id": "國家"
-        },
-        "Dance": {
-          "id": "舞蹈"
-        },
-        "Gender": {
-          "description": "性別",
-          "id": "性別"
-        },
-        "Height": {
-          "description": "高度",
-          "id": "高度"
-        },
-        "Internet": {
-          "id": "網際網路 Internet"
-        },
-        "Music": {
-          "id": "音樂"
-        },
-        "Writing": {
-          "id": "寫作"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "水上巡航"
         }
       }
     }

@@ -11,43 +11,10 @@
         }
       }
     },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "fa'i"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "food": {
-          "id": "meaai"
-        },
-        "music": {
-          "id": "musika"
-        }
-      }
-    },
     "movies": {
       "fields": {
         "Score": {
           "id": "Ai"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "sisi"
-        },
-        "chicken": {
-          "id": "moa"
-        },
-        "lamb": {
-          "id": "mamoe"
-        },
-        "onion": {
-          "id": "aniani"
         }
       }
     },
@@ -61,132 +28,6 @@
         }
       }
     },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avoka "
-        },
-        "ginger": {
-          "id": "fiu"
-        },
-        "onion": {
-          "id": "aniani"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "bacon "
-        },
-        "cheese": {
-          "id": "sisi"
-        },
-        "lobster": {
-          "id": "ula"
-        },
-        "meat": {
-          "id": "aano a manu fasi"
-        },
-        "mushrooms": {
-          "id": "pautaliga"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "meamata"
-        },
-        "strawberry": {
-          "id": "strawberry"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "korokalaila"
-        },
-        "elephant": {
-          "id": "elefane"
-        },
-        "people": {
-          "id": "tagata"
-        },
-        "rhino": {
-          "id": "manu isupatumaa"
-        },
-        "trees": {
-          "id": "laau"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avoka "
-        },
-        "beans": {
-          "id": "pi"
-        },
-        "cheese": {
-          "id": "sisi"
-        },
-        "chicken": {
-          "id": "moa"
-        },
-        "fruit": {
-          "id": "fualaau aina"
-        },
-        "tomato": {
-          "id": "tamato"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avoka "
-        },
-        "beans": {
-          "id": "pi"
-        },
-        "corn": {
-          "id": "saga"
-        },
-        "lime": {
-          "id": "meamata"
-        },
-        "onion": {
-          "id": "aniani"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "lapoa"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "lapoa"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "shoe": {
-          "id": "seevae"
-        },
-        "weather": {
-          "id": "tau"
-        }
-      }
-    },
     "student_alcohol_consumption": {
       "fields": {
         "health": {
@@ -194,13 +35,6 @@
         },
         "school": {
           "id": "aoga"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "O Tulaga Manuia"
         }
       }
     }

@@ -51,70 +51,7 @@
       },
       "name": "Abulón"
     },
-    "auto_mpg": {
-      "fields": {
-        "mpg": {
-          "description": "Millas por galón.",
-          "id": "mpg"
-        }
-      }
-    },
     "bike_sharing": {
-      "fields": {
-        "Year": {
-          "id": "Año"
-        }
-      }
-    },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Edad"
-        },
-        "Company Founding Year": {
-          "description": "El año en que se fundó su empresa.",
-          "id": "Año de fundación de la empresa"
-        },
-        "Gender": {
-          "id": "Sexo"
-        },
-        "Rank": {
-          "description": "Su rango de riqueza para el año de este récord.",
-          "id": "Posición"
-        },
-        "Year": {
-          "id": "Año"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "plátano"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "edad"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "color"
-        },
-        "food": {
-          "id": "comida"
-        },
-        "music": {
-          "id": "música"
-        }
-      }
-    },
-    "global_happiness_raw": {
       "fields": {
         "Year": {
           "id": "Año"
@@ -138,37 +75,6 @@
         }
       }
     },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        },
-        "Writing": {
-          "id": "Escribir"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "País"
-        },
-        "Dance": {
-          "id": "Baile"
-        },
-        "Music": {
-          "id": "Música"
-        }
-      }
-    },
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "edad"
-        }
-      },
-      "name": "Prioridad Médica"
-    },
     "movies": {
       "fields": {
         "Country": {
@@ -188,22 +94,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "queso"
-        },
-        "chicken": {
-          "id": "pollo"
-        },
-        "lamb": {
-          "id": "cordero"
-        },
-        "onion": {
-          "id": "cebolla"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -211,142 +101,6 @@
         },
         "Description": {
           "id": "Descripción"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "aguacate"
-        },
-        "ginger": {
-          "id": "pelirroja"
-        },
-        "onion": {
-          "id": "cebolla"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "beicon"
-        },
-        "cheese": {
-          "id": "queso"
-        },
-        "lobster": {
-          "id": "langosta"
-        },
-        "meat": {
-          "id": "carne"
-        },
-        "mushrooms": {
-          "id": "setas"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "lima"
-        },
-        "strawberry": {
-          "id": "fresa"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "caimán"
-        },
-        "elephant": {
-          "id": "elefante"
-        },
-        "people": {
-          "id": "personas"
-        },
-        "rhino": {
-          "id": "rinoceronte"
-        },
-        "trees": {
-          "id": "árboles"
-        }
-      },
-      "name": "Safari"
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "aguacate"
-        },
-        "beans": {
-          "id": "alubias"
-        },
-        "cheese": {
-          "id": "queso"
-        },
-        "chicken": {
-          "id": "pollo"
-        },
-        "fruit": {
-          "id": "fruta"
-        },
-        "tomato": {
-          "id": "tomate"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "aguacate"
-        },
-        "beans": {
-          "id": "alubias"
-        },
-        "corn": {
-          "id": "maíz"
-        },
-        "lime": {
-          "id": "lima"
-        },
-        "onion": {
-          "id": "cebolla"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "lados"
-        },
-        "size": {
-          "id": "tamaño"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "lados"
-        },
-        "size": {
-          "id": "tamaño"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "día"
-        },
-        "shoe": {
-          "id": "zapato"
-        },
-        "weather": {
-          "id": "tiempo"
         }
       }
     },
@@ -370,50 +124,6 @@
         },
         "school": {
           "id": "escuela"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Logros"
-        },
-        "Age": {
-          "description": "Edad",
-          "id": "Edad"
-        },
-        "Country": {
-          "id": "País"
-        },
-        "Dance": {
-          "id": "Baile"
-        },
-        "Empathy": {
-          "id": "Empatía"
-        },
-        "Gender": {
-          "description": "Sexo",
-          "id": "Sexo"
-        },
-        "Height": {
-          "description": "Alto",
-          "id": "Alto"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Music": {
-          "id": "Música"
-        },
-        "Writing": {
-          "id": "Escribir"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Aquatic"
         }
       }
     }

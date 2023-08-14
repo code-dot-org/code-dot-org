@@ -12,40 +12,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Starost"
-        },
-        "Gender": {
-          "id": "Spol"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "banana"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "starost"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "barva"
-        },
-        "food": {
-          "id": "hrana"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -54,27 +20,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "starost"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Država"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "starost"
@@ -94,131 +39,10 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "sir"
-        },
-        "chicken": {
-          "id": "piščanec"
-        },
-        "lamb": {
-          "id": "jagenjček"
-        },
-        "onion": {
-          "id": "čebula"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "Opis"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "onion": {
-          "id": "čebula"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "slanina"
-        },
-        "cheese": {
-          "id": "sir"
-        },
-        "lobster": {
-          "id": "jastog"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "limeta"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "aligator"
-        },
-        "elephant": {
-          "id": "slon"
-        },
-        "people": {
-          "id": "ljudje"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "beans": {
-          "id": "fižolčki"
-        },
-        "cheese": {
-          "id": "sir"
-        },
-        "chicken": {
-          "id": "piščanec"
-        },
-        "fruit": {
-          "id": "sadje"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "beans": {
-          "id": "fižolčki"
-        },
-        "corn": {
-          "id": "koruza"
-        },
-        "lime": {
-          "id": "limeta"
-        },
-        "onion": {
-          "id": "čebula"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "velikost"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "velikost"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "dan"
-        },
-        "weather": {
-          "id": "vreme"
         }
       }
     },
@@ -236,27 +60,6 @@
         },
         "health": {
           "id": "zdravje"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Dosežki"
-        },
-        "Age": {
-          "description": "Starost",
-          "id": "Starost"
-        },
-        "Country": {
-          "id": "Država"
-        },
-        "Gender": {
-          "description": "Spol",
-          "id": "Spol"
-        },
-        "Internet": {
-          "id": "Internet"
         }
       }
     }

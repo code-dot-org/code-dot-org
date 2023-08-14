@@ -25,43 +25,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "வயது"
-        },
-        "Gender": {
-          "id": "பாலினம்"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "வாழைப்பழம்"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "வயது"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "நிறம்"
-        },
-        "food": {
-          "id": "உணவு"
-        },
-        "music": {
-          "id": "இசை"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -70,36 +33,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "வயது"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "இணையதளம்"
-        },
-        "Writing": {
-          "id": "எழுதுதல்"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "நாடு"
-        },
-        "Dance": {
-          "id": "நடனம்"
-        },
-        "Music": {
-          "id": "இசை"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "வயது"
@@ -122,22 +55,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "சீஸ்"
-        },
-        "chicken": {
-          "id": "கோழி"
-        },
-        "lamb": {
-          "id": "ஆட்டுக்குட்டி"
-        },
-        "onion": {
-          "id": "வெங்காயம்"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -145,141 +62,6 @@
         },
         "Description": {
           "id": "விளக்கம்"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "வெண்ணெய் பழம்"
-        },
-        "ginger": {
-          "id": "இஞ்சி"
-        },
-        "onion": {
-          "id": "வெங்காயம்"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "பன்றி இறைச்சி"
-        },
-        "cheese": {
-          "id": "சீஸ்"
-        },
-        "lobster": {
-          "id": "இரால் மீன்"
-        },
-        "meat": {
-          "id": "இறைச்சி"
-        },
-        "mushrooms": {
-          "id": "காளான்கள்"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "எலுமிச்சை"
-        },
-        "strawberry": {
-          "id": "ஸ்ட்ராபெரி"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "முதலை"
-        },
-        "elephant": {
-          "id": "யானை"
-        },
-        "people": {
-          "id": "மக்கள்"
-        },
-        "rhino": {
-          "id": "காண்டா மிருகம்"
-        },
-        "trees": {
-          "id": "மரங்கள்"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "வெண்ணெய் பழம்"
-        },
-        "beans": {
-          "id": "பீன்ஸ்"
-        },
-        "cheese": {
-          "id": "சீஸ்"
-        },
-        "chicken": {
-          "id": "கோழி"
-        },
-        "fruit": {
-          "id": "கனி"
-        },
-        "tomato": {
-          "id": "தக்காளி "
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "வெண்ணெய் பழம்"
-        },
-        "beans": {
-          "id": "பீன்ஸ்"
-        },
-        "corn": {
-          "id": "சோளம்"
-        },
-        "lime": {
-          "id": "எலுமிச்சை"
-        },
-        "onion": {
-          "id": "வெங்காயம்"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "பக்கங்களிலும் "
-        },
-        "size": {
-          "id": "அளவு"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "பக்கங்களிலும் "
-        },
-        "size": {
-          "id": "அளவு"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "நாள்"
-        },
-        "shoe": {
-          "id": "காலணி"
-        },
-        "weather": {
-          "id": "பருவநிலை"
         }
       }
     },
@@ -300,47 +82,6 @@
         },
         "school": {
           "id": "பள்ளி"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "அடைவுகள்"
-        },
-        "Age": {
-          "description": "வயது",
-          "id": "வயது"
-        },
-        "Country": {
-          "id": "நாடு"
-        },
-        "Dance": {
-          "id": "நடனம்"
-        },
-        "Gender": {
-          "description": "பாலினம்",
-          "id": "பாலினம்"
-        },
-        "Height": {
-          "description": "உயரம் ",
-          "id": "உயரம் "
-        },
-        "Internet": {
-          "id": "இணையதளம்"
-        },
-        "Music": {
-          "id": "இசை"
-        },
-        "Writing": {
-          "id": "எழுதுதல்"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "நீர்வாழ் "
         }
       }
     }

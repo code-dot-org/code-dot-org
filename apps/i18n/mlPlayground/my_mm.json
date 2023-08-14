@@ -4,30 +4,6 @@
   "columnInspectorDescription": "ဖော်ပြချက်",
   "dataCardLastUpdated": "​နောက်ဆုံးမွမ်းမံထား​သော",
   "datasets": {
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "အသက်"
-        },
-        "Gender": {
-          "id": "က်ား/မ"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "ငှက်ပျောသီး"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "အသက်"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -36,20 +12,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "အသက်"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "နိုင်ငံ"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "အသက်"
@@ -69,13 +31,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ကြက်ကလေး"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
@@ -83,56 +38,10 @@
         }
       }
     },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ကြက်ကလေး"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "အရွယ်အစား"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "အရွယ်အစား"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "မိုး​လေဝသ"
-        }
-      }
-    },
     "student_alcohol_consumption": {
       "fields": {
         "age": {
           "id": "အသက်"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "တိုးတက်မှုများ"
-        },
-        "Age": {
-          "description": "အသက်",
-          "id": "အသက်"
-        },
-        "Country": {
-          "id": "နိုင်ငံ"
-        },
-        "Gender": {
-          "description": "က်ား/မ",
-          "id": "က်ား/မ"
         }
       }
     }

@@ -22,60 +22,10 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "वय"
-        },
-        "Gender": {
-          "id": "लिंग "
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "केळे"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "food": {
-          "id": "जेवण "
-        },
-        "music": {
-          "id": "संगीत"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
           "id": "वय"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "इंटरनेट"
-        },
-        "Writing": {
-          "id": "लेखन"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "देश"
-        },
-        "Dance": {
-          "id": "डान्स"
-        },
-        "Music": {
-          "id": "संगीत"
         }
       }
     },
@@ -95,22 +45,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "चीज"
-        },
-        "chicken": {
-          "id": "कोंबडीचे पिल्लू"
-        },
-        "lamb": {
-          "id": "कोकरू"
-        },
-        "onion": {
-          "id": " कांदा"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -118,141 +52,6 @@
         },
         "Description": {
           "id": "वर्णन"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "अव्होकॅडो"
-        },
-        "ginger": {
-          "id": "आले"
-        },
-        "onion": {
-          "id": " कांदा"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "डुकराचे मांस"
-        },
-        "cheese": {
-          "id": "चीज"
-        },
-        "lobster": {
-          "id": "कोळंबी"
-        },
-        "meat": {
-          "id": "मांस"
-        },
-        "mushrooms": {
-          "id": "अळंब्या"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "लिंबू"
-        },
-        "strawberry": {
-          "id": "स्ट्रॉबेरी"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "एलीगेटर / मगर"
-        },
-        "elephant": {
-          "id": "हत्ती "
-        },
-        "people": {
-          "id": "लोक"
-        },
-        "rhino": {
-          "id": "गेंडा"
-        },
-        "trees": {
-          "id": "झाडे"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "अव्होकॅडो"
-        },
-        "beans": {
-          "id": "बीन्स"
-        },
-        "cheese": {
-          "id": "चीज"
-        },
-        "chicken": {
-          "id": "कोंबडीचे पिल्लू"
-        },
-        "fruit": {
-          "id": "फळ "
-        },
-        "tomato": {
-          "id": "टमाटर"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "अव्होकॅडो"
-        },
-        "beans": {
-          "id": "बीन्स"
-        },
-        "corn": {
-          "id": "मका"
-        },
-        "lime": {
-          "id": "लिंबू"
-        },
-        "onion": {
-          "id": " कांदा"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "बाजू"
-        },
-        "size": {
-          "id": "आकार"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "बाजू"
-        },
-        "size": {
-          "id": "आकार"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "दिवस"
-        },
-        "shoe": {
-          "id": "बूट"
-        },
-        "weather": {
-          "id": "हवामान"
         }
       }
     },
@@ -270,47 +69,6 @@
         },
         "school": {
           "id": "शाळा"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "कामगिरी"
-        },
-        "Age": {
-          "description": "वय",
-          "id": "वय"
-        },
-        "Country": {
-          "id": "देश"
-        },
-        "Dance": {
-          "id": "डान्स"
-        },
-        "Gender": {
-          "description": "लिंग ",
-          "id": "लिंग "
-        },
-        "Height": {
-          "description": "ऊंची",
-          "id": "ऊंची"
-        },
-        "Internet": {
-          "id": "इंटरनेट"
-        },
-        "Music": {
-          "id": "संगीत"
-        },
-        "Writing": {
-          "id": "लेखन"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "पाण्याखालचे जग"
         }
       }
     }

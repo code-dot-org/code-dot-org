@@ -11,37 +11,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Pakeke"
-        },
-        "Gender": {
-          "id": "Ira"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "panana"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "pakeke"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "tae"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -50,27 +19,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "pakeke"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Te Ipurangi"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Dance": {
-          "id": "Kanikani"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "pakeke"
@@ -90,63 +38,10 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "heihei"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "Whakaahuatanga"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "arikeita"
-        }
-      },
-      "name": "Haumaru"
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "heihei"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "kānga"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "te rahi"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "te rahi"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "rā"
-        },
-        "weather": {
-          "id": "huarere"
         }
       }
     },
@@ -161,27 +56,6 @@
       "fields": {
         "age": {
           "id": "pakeke"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Whakatutukitanga"
-        },
-        "Age": {
-          "description": "Pakeke",
-          "id": "Pakeke"
-        },
-        "Dance": {
-          "id": "Kanikani"
-        },
-        "Gender": {
-          "description": "Ira",
-          "id": "Ira"
-        },
-        "Internet": {
-          "id": "Te Ipurangi"
         }
       }
     }

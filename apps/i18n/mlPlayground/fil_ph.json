@@ -22,43 +22,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Edad"
-        },
-        "Gender": {
-          "id": "Kasarian"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "saging"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "edad"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "kulay"
-        },
-        "food": {
-          "id": "pagkain"
-        },
-        "music": {
-          "id": "musika"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -67,33 +30,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "edad"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Bansa"
-        },
-        "Dance": {
-          "id": "Sayaw"
-        },
-        "Music": {
-          "id": "Musika"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "edad"
@@ -116,22 +52,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "keso"
-        },
-        "chicken": {
-          "id": "manok"
-        },
-        "lamb": {
-          "id": "tupa"
-        },
-        "onion": {
-          "id": "sibuyas"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -139,136 +59,6 @@
         },
         "Description": {
           "id": "Deskripsyon"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avocado"
-        },
-        "ginger": {
-          "id": "luya"
-        },
-        "onion": {
-          "id": "sibuyas"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "bacon"
-        },
-        "cheese": {
-          "id": "keso"
-        },
-        "lobster": {
-          "id": "ulang"
-        },
-        "meat": {
-          "id": "karne"
-        },
-        "mushrooms": {
-          "id": "mga kabute"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "kalamansi"
-        },
-        "strawberry": {
-          "id": "strawberry"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "buwaya"
-        },
-        "elephant": {
-          "id": "elepante"
-        },
-        "people": {
-          "id": "mga tao"
-        },
-        "rhino": {
-          "id": "rhino"
-        },
-        "trees": {
-          "id": "mga puno"
-        }
-      },
-      "name": "Safari"
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avocado"
-        },
-        "beans": {
-          "id": "beans"
-        },
-        "cheese": {
-          "id": "keso"
-        },
-        "chicken": {
-          "id": "manok"
-        },
-        "fruit": {
-          "id": "prutas"
-        },
-        "tomato": {
-          "id": "kamatis"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avocado"
-        },
-        "beans": {
-          "id": "beans"
-        },
-        "corn": {
-          "id": "mais"
-        },
-        "lime": {
-          "id": "kalamansi"
-        },
-        "onion": {
-          "id": "sibuyas"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "sukat"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "sukat"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "araw"
-        },
-        "shoe": {
-          "id": "sapatos"
-        },
-        "weather": {
-          "id": "lagay ng panahon"
         }
       }
     },
@@ -289,44 +79,6 @@
         },
         "school": {
           "id": "paaralan"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Mga Nakamit"
-        },
-        "Age": {
-          "description": "Edad",
-          "id": "Edad"
-        },
-        "Country": {
-          "id": "Bansa"
-        },
-        "Dance": {
-          "id": "Sayaw"
-        },
-        "Gender": {
-          "description": "Kasarian",
-          "id": "Kasarian"
-        },
-        "Height": {
-          "description": "Taas",
-          "id": "Taas"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Music": {
-          "id": "Musika"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Pantubig"
         }
       }
     }

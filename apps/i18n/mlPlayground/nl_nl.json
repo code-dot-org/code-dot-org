@@ -15,40 +15,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Leeftijd"
-        },
-        "Gender": {
-          "id": "Geslacht"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "banaan"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "leeftijd"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "kleur"
-        },
-        "food": {
-          "id": "eten"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -57,33 +23,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "leeftijd"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Land"
-        },
-        "Dance": {
-          "id": "Dans"
-        },
-        "Music": {
-          "id": "Muziek"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "leeftijd"
@@ -106,19 +45,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "kip"
-        },
-        "lamb": {
-          "id": "Lam"
-        },
-        "onion": {
-          "id": "ui"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -126,112 +52,6 @@
         },
         "Description": {
           "id": "Omschrijving"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avocado"
-        },
-        "onion": {
-          "id": "ui"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "spek"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "citroen"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "Alligator"
-        },
-        "elephant": {
-          "id": "oliefant"
-        }
-      },
-      "name": "Safari"
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avocado"
-        },
-        "beans": {
-          "id": "Bonen"
-        },
-        "chicken": {
-          "id": "kip"
-        },
-        "fruit": {
-          "id": "fruit"
-        },
-        "tomato": {
-          "id": "Tomaat"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avocado"
-        },
-        "beans": {
-          "id": "Bonen"
-        },
-        "corn": {
-          "id": "maïs"
-        },
-        "lime": {
-          "id": "citroen"
-        },
-        "onion": {
-          "id": "ui"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "zijden"
-        },
-        "size": {
-          "id": "grootte"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "zijden"
-        },
-        "size": {
-          "id": "grootte"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "dag"
-        },
-        "shoe": {
-          "id": "schoen"
-        },
-        "weather": {
-          "id": "weer"
         }
       }
     },
@@ -246,44 +66,6 @@
       "fields": {
         "age": {
           "id": "leeftijd"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Prestaties"
-        },
-        "Age": {
-          "description": "Leeftijd",
-          "id": "Leeftijd"
-        },
-        "Country": {
-          "id": "Land"
-        },
-        "Dance": {
-          "id": "Dans"
-        },
-        "Gender": {
-          "description": "Geslacht",
-          "id": "Geslacht"
-        },
-        "Height": {
-          "description": "Hoogte",
-          "id": "Hoogte"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Music": {
-          "id": "Muziek"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Aquatisch"
         }
       }
     }

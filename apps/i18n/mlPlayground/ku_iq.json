@@ -1,30 +1,6 @@
 {
   "columnInspectorDescription": "باسکردن",
   "datasets": {
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "تەمەن"
-        },
-        "Gender": {
-          "id": "ڕەگەز"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "تەمەن"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "ڕەنگ"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -33,20 +9,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "تەمەن"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "ووڵات"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "تەمەن"
@@ -73,32 +35,10 @@
         }
       }
     },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "دانەوێڵە/گەنمەشامی"
-        }
-      }
-    },
     "student_alcohol_consumption": {
       "fields": {
         "age": {
           "id": "تەمەن"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Age": {
-          "description": "تەمەن",
-          "id": "تەمەن"
-        },
-        "Country": {
-          "id": "ووڵات"
-        },
-        "Gender": {
-          "description": "ڕەگەز",
-          "id": "ڕەگەز"
         }
       }
     }

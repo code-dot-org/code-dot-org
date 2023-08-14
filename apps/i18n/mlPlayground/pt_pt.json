@@ -22,43 +22,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Idade  "
-        },
-        "Gender": {
-          "id": "Género"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "banana"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "idade"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "cor"
-        },
-        "food": {
-          "id": "comida"
-        },
-        "music": {
-          "id": "música"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -67,36 +30,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "idade"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        },
-        "Writing": {
-          "id": "Escrevendo"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "País"
-        },
-        "Dance": {
-          "id": "Dançar"
-        },
-        "Music": {
-          "id": "Música"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "idade"
@@ -119,22 +52,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "queijo"
-        },
-        "chicken": {
-          "id": "galinha"
-        },
-        "lamb": {
-          "id": "cordeiro"
-        },
-        "onion": {
-          "id": "cebola"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -142,142 +59,6 @@
         },
         "Description": {
           "id": "Descrição"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "abacate"
-        },
-        "ginger": {
-          "id": "ruivo"
-        },
-        "onion": {
-          "id": "cebola"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "bacon"
-        },
-        "cheese": {
-          "id": "queijo"
-        },
-        "lobster": {
-          "id": "lagosta"
-        },
-        "meat": {
-          "id": "carne"
-        },
-        "mushrooms": {
-          "id": "cogumelos"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "lima"
-        },
-        "strawberry": {
-          "id": "morango"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "jacaré"
-        },
-        "elephant": {
-          "id": "elefante"
-        },
-        "people": {
-          "id": "pessoas"
-        },
-        "rhino": {
-          "id": "rinoceronte"
-        },
-        "trees": {
-          "id": "árvores"
-        }
-      },
-      "name": "Safári"
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "abacate"
-        },
-        "beans": {
-          "id": "feijão"
-        },
-        "cheese": {
-          "id": "queijo"
-        },
-        "chicken": {
-          "id": "galinha"
-        },
-        "fruit": {
-          "id": "fruta"
-        },
-        "tomato": {
-          "id": "tomate"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "abacate"
-        },
-        "beans": {
-          "id": "feijão"
-        },
-        "corn": {
-          "id": "milho"
-        },
-        "lime": {
-          "id": "lima"
-        },
-        "onion": {
-          "id": "cebola"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "lados"
-        },
-        "size": {
-          "id": "tamanho"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "lados"
-        },
-        "size": {
-          "id": "tamanho"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "dia"
-        },
-        "shoe": {
-          "id": "sapato"
-        },
-        "weather": {
-          "id": "clima"
         }
       }
     },
@@ -298,47 +79,6 @@
         },
         "school": {
           "id": "escola"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Conquistas"
-        },
-        "Age": {
-          "description": "Idade  ",
-          "id": "Idade  "
-        },
-        "Country": {
-          "id": "País"
-        },
-        "Dance": {
-          "id": "Dançar"
-        },
-        "Gender": {
-          "description": "Género",
-          "id": "Género"
-        },
-        "Height": {
-          "description": "Altura",
-          "id": "Altura"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Music": {
-          "id": "Música"
-        },
-        "Writing": {
-          "id": "Escrevendo"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Aquático"
         }
       }
     }

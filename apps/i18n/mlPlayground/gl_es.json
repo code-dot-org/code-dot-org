@@ -11,37 +11,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Idade"
-        },
-        "Gender": {
-          "id": "Xénero"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "plátano"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "idade"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "cor"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -50,27 +19,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "idade"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "País"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "idade"
@@ -94,34 +42,6 @@
         }
       }
     },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "millo"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "tamaño"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "tamaño"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "día"
-        }
-      }
-    },
     "songs": {
       "fields": {
         "Artist": {
@@ -133,27 +53,6 @@
       "fields": {
         "age": {
           "id": "idade"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Logros"
-        },
-        "Age": {
-          "description": "Idade",
-          "id": "Idade"
-        },
-        "Country": {
-          "id": "País"
-        },
-        "Gender": {
-          "description": "Xénero",
-          "id": "Xénero"
-        },
-        "Internet": {
-          "id": "Internet"
         }
       }
     }

@@ -12,40 +12,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Alder"
-        },
-        "Gender": {
-          "id": "Kjønn"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "banan"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "alder"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "farge"
-        },
-        "food": {
-          "id": "mat"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -54,33 +20,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "alder"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internett"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Land"
-        },
-        "Dance": {
-          "id": "Dans"
-        },
-        "Music": {
-          "id": "Musikk"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "alder"
@@ -103,93 +42,10 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "kylling"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "Beskrivelse"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "alligator"
-        },
-        "elephant": {
-          "id": "elefant"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "beans": {
-          "id": "bønner"
-        },
-        "chicken": {
-          "id": "kylling"
-        },
-        "fruit": {
-          "id": "frukt"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "beans": {
-          "id": "bønner"
-        },
-        "corn": {
-          "id": "mais"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "Sider"
-        },
-        "size": {
-          "id": "størrelse"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "Sider"
-        },
-        "size": {
-          "id": "størrelse"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "dag"
-        },
-        "weather": {
-          "id": "vær"
         }
       }
     },
@@ -204,33 +60,6 @@
       "fields": {
         "age": {
           "id": "alder"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Prestasjoner"
-        },
-        "Age": {
-          "description": "Alder",
-          "id": "Alder"
-        },
-        "Country": {
-          "id": "Land"
-        },
-        "Dance": {
-          "id": "Dans"
-        },
-        "Gender": {
-          "description": "Kjønn",
-          "id": "Kjønn"
-        },
-        "Internet": {
-          "id": "Internett"
-        },
-        "Music": {
-          "id": "Musikk"
         }
       }
     }

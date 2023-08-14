@@ -4,40 +4,6 @@
   "columnInspectorDescription": "Նկարագիր",
   "correctAnswer": "ճիշտ",
   "datasets": {
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Տարիք"
-        },
-        "Gender": {
-          "id": "Սեռ"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "բանան"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "տարիք"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "գույնը"
-        },
-        "food": {
-          "id": "սնունդ"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -46,27 +12,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "տարիք"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Երկիր"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "տարիք"
@@ -86,69 +31,10 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ճուտիկ"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "Նկարագիր"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "լայմ"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "elephant": {
-          "id": "փիղ"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ճուտիկ"
-        },
-        "fruit": {
-          "id": "միրգ"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "lime": {
-          "id": "լայմ"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "չափ"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "չափ"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "օր"
         }
       }
     },
@@ -163,24 +49,6 @@
       "fields": {
         "age": {
           "id": "տարիք"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Age": {
-          "description": "Տարիք",
-          "id": "Տարիք"
-        },
-        "Country": {
-          "id": "Երկիր"
-        },
-        "Gender": {
-          "description": "Սեռ",
-          "id": "Սեռ"
-        },
-        "Internet": {
-          "id": "Internet"
         }
       }
     }

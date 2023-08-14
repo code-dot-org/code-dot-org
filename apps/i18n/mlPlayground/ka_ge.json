@@ -12,43 +12,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "ასაკი"
-        },
-        "Gender": {
-          "id": "სქესი"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "ბანანი"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "ასაკი"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "ფერი"
-        },
-        "food": {
-          "id": "საჭმელი"
-        },
-        "music": {
-          "id": "მუსიკა"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -57,36 +20,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "ასაკი"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "ინტერნეტი"
-        },
-        "Writing": {
-          "id": "წერა"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "ქვეყანა"
-        },
-        "Dance": {
-          "id": "ცეკვა"
-        },
-        "Music": {
-          "id": "მუსიკა"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "ასაკი"
@@ -106,22 +39,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "ყველი"
-        },
-        "chicken": {
-          "id": "ქათამი"
-        },
-        "lamb": {
-          "id": "ცხვრის"
-        },
-        "onion": {
-          "id": "ხახვი"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -129,135 +46,6 @@
         },
         "Description": {
           "id": "აღწერა"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "ავოკადო"
-        },
-        "ginger": {
-          "id": "კოჭა"
-        },
-        "onion": {
-          "id": "ხახვი"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "ბეკონი"
-        },
-        "cheese": {
-          "id": "ყველი"
-        },
-        "lobster": {
-          "id": "ომარი"
-        },
-        "meat": {
-          "id": "ხორცი"
-        },
-        "mushrooms": {
-          "id": "სოკო"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "ლაიმი"
-        },
-        "strawberry": {
-          "id": "მარწყვი"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "ალიგატორი"
-        },
-        "elephant": {
-          "id": "სპილო"
-        },
-        "people": {
-          "id": "ადამიანები"
-        },
-        "rhino": {
-          "id": "მარტორქა"
-        },
-        "trees": {
-          "id": "ხეები"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "ავოკადო"
-        },
-        "beans": {
-          "id": "ლობიო"
-        },
-        "cheese": {
-          "id": "ყველი"
-        },
-        "chicken": {
-          "id": "ქათამი"
-        },
-        "fruit": {
-          "id": "ხილი"
-        },
-        "tomato": {
-          "id": "პომიდორი"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "ავოკადო"
-        },
-        "beans": {
-          "id": "ლობიო"
-        },
-        "corn": {
-          "id": "სიმინდი"
-        },
-        "lime": {
-          "id": "ლაიმი"
-        },
-        "onion": {
-          "id": "ხახვი"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "ზომა"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "ზომა"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "დღე"
-        },
-        "shoe": {
-          "id": "ფეხსაცმლის"
-        },
-        "weather": {
-          "id": "ამინდი"
         }
       }
     },
@@ -278,36 +66,6 @@
         },
         "school": {
           "id": "სკოლა"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "მიღწევები"
-        },
-        "Age": {
-          "description": "ასაკი",
-          "id": "ასაკი"
-        },
-        "Country": {
-          "id": "ქვეყანა"
-        },
-        "Dance": {
-          "id": "ცეკვა"
-        },
-        "Gender": {
-          "description": "სქესი",
-          "id": "სქესი"
-        },
-        "Internet": {
-          "id": "ინტერნეტი"
-        },
-        "Music": {
-          "id": "მუსიკა"
-        },
-        "Writing": {
-          "id": "წერა"
         }
       }
     }

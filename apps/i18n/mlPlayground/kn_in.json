@@ -22,57 +22,10 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "ವಯಸ್ಸು"
-        },
-        "Gender": {
-          "id": "ಲಿಂಗ"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "ಬಾಳೆಹಣ್ಣು"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "food": {
-          "id": "ಆಹಾರ"
-        },
-        "music": {
-          "id": "ಸಂಗೀತ"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
           "id": "ವಯಸ್ಸು"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "ಇಂಟರ್ನೆಟ್"
-        },
-        "Writing": {
-          "id": "ಬರೆಯುವುದು"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "ದೇಶ"
-        },
-        "Music": {
-          "id": "ಸಂಗಿತ"
         }
       }
     },
@@ -89,22 +42,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "ಚೀಸ್"
-        },
-        "chicken": {
-          "id": "ಚಿಕನ್"
-        },
-        "lamb": {
-          "id": "ಕುರಿಮರಿ"
-        },
-        "onion": {
-          "id": "ಈರುಳ್ಳಿ"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -112,141 +49,6 @@
         },
         "Description": {
           "id": "ವಿವರಣೆ"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "ಅವೊಕಾಡೋ"
-        },
-        "ginger": {
-          "id": "ಶುಂಠಿ"
-        },
-        "onion": {
-          "id": "ಈರುಳ್ಳಿ"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "ಬೇಕನ್"
-        },
-        "cheese": {
-          "id": "ಚೀಸ್"
-        },
-        "lobster": {
-          "id": "ಲಾಬ್‌ಸ್ಟರ್"
-        },
-        "meat": {
-          "id": "ಮಾಂಸ"
-        },
-        "mushrooms": {
-          "id": "ಅಣಬೆಗಳು"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "ನಿಂಬೆ"
-        },
-        "strawberry": {
-          "id": "ಸ್ಟ್ರಾಬೆರಿ"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "ಮೊಸಳೆ"
-        },
-        "elephant": {
-          "id": "ಆನೆ"
-        },
-        "people": {
-          "id": "ಜನರು"
-        },
-        "rhino": {
-          "id": "ರಿನೋ"
-        },
-        "trees": {
-          "id": "ಮರಗಳು"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "ಅವೊಕಾಡೋ"
-        },
-        "beans": {
-          "id": "ಬೀನ್ಸ್"
-        },
-        "cheese": {
-          "id": "ಚೀಸ್"
-        },
-        "chicken": {
-          "id": "ಚಿಕನ್"
-        },
-        "fruit": {
-          "id": "ಹಣ್ಣು"
-        },
-        "tomato": {
-          "id": "ಟೊಮಾಟೋ"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "ಅವೊಕಾಡೋ"
-        },
-        "beans": {
-          "id": "ಬೀನ್ಸ್"
-        },
-        "corn": {
-          "id": "ಜೋಳ"
-        },
-        "lime": {
-          "id": "ನಿಂಬೆ"
-        },
-        "onion": {
-          "id": "ಈರುಳ್ಳಿ"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "ಬದಿಗಳು"
-        },
-        "size": {
-          "id": "ಗಾತ್ರ"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "ಬದಿಗಳು"
-        },
-        "size": {
-          "id": "ಗಾತ್ರ"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "ದಿನ"
-        },
-        "shoe": {
-          "id": "ಶೂ"
-        },
-        "weather": {
-          "id": "ಹವಾಮಾನ"
         }
       }
     },
@@ -264,44 +66,6 @@
         },
         "school": {
           "id": "ಶಾಲೆ"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "ಸಾಧನೆಗಳು"
-        },
-        "Age": {
-          "description": "ವಯಸ್ಸು",
-          "id": "ವಯಸ್ಸು"
-        },
-        "Country": {
-          "id": "ದೇಶ"
-        },
-        "Gender": {
-          "description": "ಲಿಂಗ",
-          "id": "ಲಿಂಗ"
-        },
-        "Height": {
-          "description": "ಎತ್ತರ",
-          "id": "ಎತ್ತರ"
-        },
-        "Internet": {
-          "id": "ಇಂಟರ್ನೆಟ್"
-        },
-        "Music": {
-          "id": "ಸಂಗಿತ"
-        },
-        "Writing": {
-          "id": "ಬರೆಯುವುದು"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "ಜಲಚರ"
         }
       }
     }

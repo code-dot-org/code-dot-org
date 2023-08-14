@@ -10,37 +10,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Узраст"
-        },
-        "Gender": {
-          "id": "Пол"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "банана"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "узраст"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "боја"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -48,64 +17,7 @@
         }
       }
     },
-    "housing_data": {
-      "fields": {
-        "Accessibility to highways": {
-          "id": "Доступност аутопутева"
-        },
-        "Distance to employment centers": {
-          "id": "Растојање до агенција за запошљавање"
-        },
-        "Lower status population": {
-          "id": "Становништво нижег статуса"
-        },
-        "Median home value": {
-          "description": "Медијална вредност непокретности у хиљадама долара",
-          "id": "Медијална вредност непокретности"
-        },
-        "Per Capita Crime Rate": {
-          "description": "Стопа криминала по глави становника по градовима",
-          "id": "Стопа криминала по глави становника"
-        },
-        "Property tax": {
-          "description": "Стопа пореза на имовину по $10.000.",
-          "id": "Порез на имовину"
-        },
-        "Rooms per dwelling": {
-          "description": "Просечан број соба по стамбеној јединици.",
-          "id": "Број соба по стамбеној јединици"
-        },
-        "Student-teacher ratio": {
-          "description": "Однос просечног броја студената према броју наставника по градовима.",
-          "id": "Однос броја студената према броју наставника"
-        }
-      }
-    },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "узраст"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Интернет"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Землја"
-        },
-        "Dance": {
-          "id": "Плес"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "узраст"
@@ -128,13 +40,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "пиле"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -142,34 +47,6 @@
         },
         "Description": {
           "id": "Опис"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "пиле"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "величина"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "величина"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "време"
         }
       }
     },
@@ -184,30 +61,6 @@
       "fields": {
         "age": {
           "id": "узраст"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Достигнућа"
-        },
-        "Age": {
-          "description": "Узраст",
-          "id": "Узраст"
-        },
-        "Country": {
-          "id": "Землја"
-        },
-        "Dance": {
-          "id": "Плес"
-        },
-        "Gender": {
-          "description": "Пол",
-          "id": "Пол"
-        },
-        "Internet": {
-          "id": "Интернет"
         }
       }
     }

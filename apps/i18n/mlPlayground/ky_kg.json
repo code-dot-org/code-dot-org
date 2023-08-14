@@ -10,34 +10,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Жашы"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "банан"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "жашы"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "түс"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -46,13 +18,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "жашы"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "жашы"
@@ -69,55 +34,10 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "тоок"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "Түшүндүрмөсү"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "тоок"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "жүгөрү"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "өлчөмү"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "өлчөмү"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "күн"
-        },
-        "weather": {
-          "id": "аба ырайы"
         }
       }
     },
@@ -132,17 +52,6 @@
       "fields": {
         "age": {
           "id": "жашы"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Жетишкендиктер"
-        },
-        "Age": {
-          "description": "Жашы",
-          "id": "Жашы"
         }
       }
     }

@@ -19,43 +19,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Ηλικία"
-        },
-        "Gender": {
-          "id": "Φύλο"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "μπανάνα"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "ηλικία"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "χρώμα"
-        },
-        "food": {
-          "id": "φαγητό"
-        },
-        "music": {
-          "id": "μουσική"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -64,36 +27,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "ηλικία"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Διαδίκτυο"
-        },
-        "Writing": {
-          "id": "Γραφή"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Χώρα"
-        },
-        "Dance": {
-          "id": "Χορός"
-        },
-        "Music": {
-          "id": "Μουσική"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "ηλικία"
@@ -116,22 +49,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "κασέρι"
-        },
-        "chicken": {
-          "id": "κοτόπουλο"
-        },
-        "lamb": {
-          "id": "αρνί"
-        },
-        "onion": {
-          "id": "κρεμμύδι"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -139,142 +56,6 @@
         },
         "Description": {
           "id": "Περιγραφή"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "αβοκάντο"
-        },
-        "ginger": {
-          "id": "τζίντζερ"
-        },
-        "onion": {
-          "id": "κρεμμύδι"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "μπέικον"
-        },
-        "cheese": {
-          "id": "κασέρι"
-        },
-        "lobster": {
-          "id": "αστακός"
-        },
-        "meat": {
-          "id": "κρέας"
-        },
-        "mushrooms": {
-          "id": "μανιτάρια"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "λάιμ"
-        },
-        "strawberry": {
-          "id": "φράουλα"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "αλιγάτορας"
-        },
-        "elephant": {
-          "id": "ελέφαντας"
-        },
-        "people": {
-          "id": "λαός"
-        },
-        "rhino": {
-          "id": "ρινόκερος"
-        },
-        "trees": {
-          "id": "δέντρα"
-        }
-      },
-      "name": "Σαφάρι"
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "αβοκάντο"
-        },
-        "beans": {
-          "id": "φασόλια"
-        },
-        "cheese": {
-          "id": "κασέρι"
-        },
-        "chicken": {
-          "id": "κοτόπουλο"
-        },
-        "fruit": {
-          "id": "φρούτο"
-        },
-        "tomato": {
-          "id": "ντομάτα"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "αβοκάντο"
-        },
-        "beans": {
-          "id": "φασόλια"
-        },
-        "corn": {
-          "id": "καλαμπόκι"
-        },
-        "lime": {
-          "id": "λάιμ"
-        },
-        "onion": {
-          "id": "κρεμμύδι"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "πλευρές"
-        },
-        "size": {
-          "id": "μέγεθος"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "πλευρές"
-        },
-        "size": {
-          "id": "μέγεθος"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "ημέρα"
-        },
-        "shoe": {
-          "id": "παπούτσι"
-        },
-        "weather": {
-          "id": "καιρός"
         }
       }
     },
@@ -295,43 +76,6 @@
         },
         "school": {
           "id": "σχολείο"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Επιτεύγματα"
-        },
-        "Age": {
-          "description": "Ηλικία",
-          "id": "Ηλικία"
-        },
-        "Country": {
-          "id": "Χώρα"
-        },
-        "Dance": {
-          "id": "Χορός"
-        },
-        "Gender": {
-          "description": "Φύλο",
-          "id": "Φύλο"
-        },
-        "Internet": {
-          "id": "Διαδίκτυο"
-        },
-        "Music": {
-          "id": "Μουσική"
-        },
-        "Writing": {
-          "id": "Γραφή"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Υδάτινο"
         }
       }
     }

@@ -12,37 +12,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Aois"
-        },
-        "Gender": {
-          "id": "Inscne"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "banana"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "aois"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "dath"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -51,33 +20,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "aois"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "An tIdirlíon"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Tír"
-        },
-        "Dance": {
-          "id": "Damhsa"
-        },
-        "Music": {
-          "id": "Ceol"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "aois"
@@ -100,58 +42,10 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "sicín"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Description": {
           "id": "Cur Síos"
-        }
-      }
-    },
-    "safari_toy": {
-      "name": "Safáraí"
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "sicín"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "arbhar"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "méid"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "méid"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "lá"
-        },
-        "weather": {
-          "id": "aimsir"
         }
       }
     },
@@ -166,33 +60,6 @@
       "fields": {
         "age": {
           "id": "aois"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Éachtaí"
-        },
-        "Age": {
-          "description": "Aois",
-          "id": "Aois"
-        },
-        "Country": {
-          "id": "Tír"
-        },
-        "Dance": {
-          "id": "Damhsa"
-        },
-        "Gender": {
-          "description": "Inscne",
-          "id": "Inscne"
-        },
-        "Internet": {
-          "id": "An tIdirlíon"
-        },
-        "Music": {
-          "id": "Ceol"
         }
       }
     }

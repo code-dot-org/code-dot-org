@@ -19,43 +19,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Yoshi"
-        },
-        "Gender": {
-          "id": "Jinsi"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "banan"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "yoshi"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "rang"
-        },
-        "food": {
-          "id": "ovqat"
-        },
-        "music": {
-          "id": "musiqa"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -64,36 +27,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "yoshi"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        },
-        "Writing": {
-          "id": "Yozish"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Mamlakat"
-        },
-        "Dance": {
-          "id": "Raqs"
-        },
-        "Music": {
-          "id": "Musiqa"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "yoshi"
@@ -116,22 +49,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "pishloq"
-        },
-        "chicken": {
-          "id": "tovuq"
-        },
-        "lamb": {
-          "id": "qo'zichoq"
-        },
-        "onion": {
-          "id": "piyoz"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -139,142 +56,6 @@
         },
         "Description": {
           "id": "Ta‘rif"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "ginger": {
-          "id": "zanjabil"
-        },
-        "onion": {
-          "id": "piyoz"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "bekon"
-        },
-        "cheese": {
-          "id": "pishloq"
-        },
-        "lobster": {
-          "id": "lobster"
-        },
-        "meat": {
-          "id": "go'sht"
-        },
-        "mushrooms": {
-          "id": "qo'ziqorinlar"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "laym"
-        },
-        "strawberry": {
-          "id": "qulupnay"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "alligator"
-        },
-        "elephant": {
-          "id": "fil"
-        },
-        "people": {
-          "id": "odamlar"
-        },
-        "rhino": {
-          "id": "karkidon"
-        },
-        "trees": {
-          "id": "daraxtlar"
-        }
-      },
-      "name": "Safari"
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "beans": {
-          "id": "dukkaklilar"
-        },
-        "cheese": {
-          "id": "pishloq"
-        },
-        "chicken": {
-          "id": "tovuq"
-        },
-        "fruit": {
-          "id": "meva"
-        },
-        "tomato": {
-          "id": "pomidor"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "beans": {
-          "id": "dukkaklilar"
-        },
-        "corn": {
-          "id": "makkajo‘xori"
-        },
-        "lime": {
-          "id": "laym"
-        },
-        "onion": {
-          "id": "piyoz"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "tomonlar"
-        },
-        "size": {
-          "id": "kattalik"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "tomonlar"
-        },
-        "size": {
-          "id": "kattalik"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "kun"
-        },
-        "shoe": {
-          "id": "poyafzal"
-        },
-        "weather": {
-          "id": "ob-havo"
         }
       }
     },
@@ -295,43 +76,6 @@
         },
         "school": {
           "id": "maktab"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Yutuqlar"
-        },
-        "Age": {
-          "description": "Yoshi",
-          "id": "Yoshi"
-        },
-        "Country": {
-          "id": "Mamlakat"
-        },
-        "Dance": {
-          "id": "Raqs"
-        },
-        "Gender": {
-          "description": "Jinsi",
-          "id": "Jinsi"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Music": {
-          "id": "Musiqa"
-        },
-        "Writing": {
-          "id": "Yozish"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Aquatic"
         }
       }
     }

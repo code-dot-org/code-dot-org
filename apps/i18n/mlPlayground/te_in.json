@@ -11,40 +11,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "వయస్సు"
-        },
-        "Gender": {
-          "id": "లింగం"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "అరటి"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "వయస్సు"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "food": {
-          "id": "ఆహార"
-        },
-        "music": {
-          "id": "సంగీతం"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -59,30 +25,6 @@
         }
       }
     },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "అంతర్జాలం"
-        },
-        "Writing": {
-          "id": "రాయడం"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Music": {
-          "id": "సంగీతం"
-        }
-      }
-    },
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "వయస్సు"
-        }
-      }
-    },
     "movies": {
       "fields": {
         "Star": {
@@ -90,146 +32,10 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "చీజ్"
-        },
-        "lamb": {
-          "id": "గొర్రె"
-        },
-        "onion": {
-          "id": "ఉల్లిపాయ"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
           "id": "వర్గం"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "అవోకాడో"
-        },
-        "ginger": {
-          "id": "అల్లం"
-        },
-        "onion": {
-          "id": "ఉల్లిపాయ"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "బేకన్"
-        },
-        "cheese": {
-          "id": "చీజ్"
-        },
-        "lobster": {
-          "id": "ఎండ్రకాయలు"
-        },
-        "meat": {
-          "id": "మాంసం"
-        },
-        "mushrooms": {
-          "id": "పుట్టగొడుగులు"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "నిమ్మ"
-        },
-        "strawberry": {
-          "id": "స్ట్రాబెర్రీ"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "పెద్ధ  మొసలి "
-        },
-        "elephant": {
-          "id": "ఏనుగు"
-        },
-        "people": {
-          "id": "ప్రజలు"
-        },
-        "rhino": {
-          "id": "ఖడ్గమృగం"
-        },
-        "trees": {
-          "id": "చెట్లు"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "అవోకాడో"
-        },
-        "beans": {
-          "id": "బీన్స్"
-        },
-        "cheese": {
-          "id": "చీజ్"
-        },
-        "fruit": {
-          "id": "పండు"
-        },
-        "tomato": {
-          "id": "టమోటా"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "అవోకాడో"
-        },
-        "beans": {
-          "id": "బీన్స్"
-        },
-        "corn": {
-          "id": "మొక్కజొన్న"
-        },
-        "lime": {
-          "id": "నిమ్మ"
-        },
-        "onion": {
-          "id": "ఉల్లిపాయ"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "size": {
-          "id": "సైజు"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "సైజు"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "రోజు"
-        },
-        "shoe": {
-          "id": "షూ"
         }
       }
     },
@@ -250,30 +56,6 @@
         },
         "school": {
           "id": "పాఠశాల"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "విజయాలు"
-        },
-        "Age": {
-          "description": "వయస్సు",
-          "id": "వయస్సు"
-        },
-        "Gender": {
-          "description": "లింగం",
-          "id": "లింగం"
-        },
-        "Internet": {
-          "id": "అంతర్జాలం"
-        },
-        "Music": {
-          "id": "సంగీతం"
-        },
-        "Writing": {
-          "id": "రాయడం"
         }
       }
     }

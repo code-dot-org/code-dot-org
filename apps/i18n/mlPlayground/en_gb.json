@@ -3,30 +3,6 @@
   "columnDetailsMinimumValue": "min",
   "columnInspectorDescription": "Description",
   "datasets": {
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Age"
-        },
-        "Gender": {
-          "id": "Gender"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "age"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "color"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -41,24 +17,10 @@
         }
       }
     },
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "age"
-        }
-      }
-    },
     "movies": {
       "fields": {
         "Name": {
           "id": "Name"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "chicken"
         }
       }
     },
@@ -69,32 +31,10 @@
         }
       }
     },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "chicken"
-        }
-      }
-    },
     "student_alcohol_consumption": {
       "fields": {
         "age": {
           "id": "age"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Achievements"
-        },
-        "Age": {
-          "description": "Age",
-          "id": "Age"
-        },
-        "Gender": {
-          "description": "Gender",
-          "id": "Gender"
         }
       }
     }

@@ -25,43 +25,6 @@
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "年齢"
-        },
-        "Gender": {
-          "id": "性別"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "バナナ"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "年齢"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "色"
-        },
-        "food": {
-          "id": "食物\n"
-        },
-        "music": {
-          "id": "音楽"
-        }
-      }
-    },
     "heart": {
       "fields": {
         "Age": {
@@ -70,36 +33,6 @@
       }
     },
     "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "年齢"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "インターネット"
-        },
-        "Writing": {
-          "id": "ライティング"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "国"
-        },
-        "Dance": {
-          "id": "ダンス"
-        },
-        "Music": {
-          "id": "音楽"
-        }
-      }
-    },
-    "medical_priority": {
       "fields": {
         "age": {
           "id": "年齢"
@@ -122,22 +55,6 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "チーズ"
-        },
-        "chicken": {
-          "id": "ニワトリ"
-        },
-        "lamb": {
-          "id": "仔羊"
-        },
-        "onion": {
-          "id": "玉ねぎ"
-        }
-      }
-    },
     "nutrition": {
       "fields": {
         "Category": {
@@ -145,142 +62,6 @@
         },
         "Description": {
           "id": "説明"
-        }
-      }
-    },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "アボカド"
-        },
-        "ginger": {
-          "id": "しょうが"
-        },
-        "onion": {
-          "id": "玉ねぎ"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "ベーコン"
-        },
-        "cheese": {
-          "id": "チーズ"
-        },
-        "lobster": {
-          "id": "ロブスター"
-        },
-        "meat": {
-          "id": "肉"
-        },
-        "mushrooms": {
-          "id": "キノコ"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "ライム"
-        },
-        "strawberry": {
-          "id": "イチゴ"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "ワニ"
-        },
-        "elephant": {
-          "id": "ゾウ"
-        },
-        "people": {
-          "id": "人々"
-        },
-        "rhino": {
-          "id": "サイ"
-        },
-        "trees": {
-          "id": "木"
-        }
-      },
-      "name": "サファリ"
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "アボカド"
-        },
-        "beans": {
-          "id": "マメ"
-        },
-        "cheese": {
-          "id": "チーズ"
-        },
-        "chicken": {
-          "id": "ニワトリ"
-        },
-        "fruit": {
-          "id": "フルーツ"
-        },
-        "tomato": {
-          "id": "トマト"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "アボカド"
-        },
-        "beans": {
-          "id": "マメ"
-        },
-        "corn": {
-          "id": "トウモロコシ"
-        },
-        "lime": {
-          "id": "ライム"
-        },
-        "onion": {
-          "id": "玉ねぎ"
-        }
-      }
-    },
-    "shapes_v1_toy": {
-      "fields": {
-        "sides": {
-          "id": "辺"
-        },
-        "size": {
-          "id": "大きさ"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "辺"
-        },
-        "size": {
-          "id": "大きさ"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "日"
-        },
-        "shoe": {
-          "id": "靴"
-        },
-        "weather": {
-          "id": "天気"
         }
       }
     },
@@ -301,47 +82,6 @@
         },
         "school": {
           "id": "学校"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "実績（じっせき）"
-        },
-        "Age": {
-          "description": "年齢",
-          "id": "年齢"
-        },
-        "Country": {
-          "id": "国"
-        },
-        "Dance": {
-          "id": "ダンス"
-        },
-        "Gender": {
-          "description": "性別",
-          "id": "性別"
-        },
-        "Height": {
-          "description": "高さ",
-          "id": "高さ"
-        },
-        "Internet": {
-          "id": "インターネット"
-        },
-        "Music": {
-          "id": "音楽"
-        },
-        "Writing": {
-          "id": "ライティング"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "アクアティック"
         }
       }
     }
