@@ -104,6 +104,30 @@
         "4682c681-72e1-43df-8443-27ba6ff068de": {
           "description": "Comunicar-se e colaborar com os colegas a fim de solucionar um problema"
         },
+        "b2682f90-e600-48aa-aef4-def3798b261d": {
+          "description": "Identifique como a ciência da computação é usada em um determinado campo de entretenimento"
+        },
+        "92707a88-4d6e-44a5-a1ba-e888e9ea27c8": {
+          "description": "Usar um sistema de coordenadas para inserir elementos na tela."
+        },
+        "d8f92cff-b148-455d-b1c9-690e0d8c3929": {
+          "description": "Sequenciar o código corretamente para sobrepor formas."
+        },
+        "1fc6f9a4-a172-4504-a702-e0f6b219e62c": {
+          "description": "Praticar e raciocinar sobre comandos de desenho com vários parâmetros"
+        },
+        "5fc17aef-b130-416f-8746-54fe3f0ed390": {
+          "description": "Identificar uma variável como uma forma de rotular e referenciar um valor em um programa"
+        },
+        "e09ca0a1-6d0c-4177-9bcb-b97ab36faeca": {
+          "description": "Usar variáveis em um programa para armazenar uma informação usada várias vezes"
+        },
+        "ad6a4213-49c3-49e2-ace9-5a7d36daa458": {
+          "description": "Avaliar criticamente um objeto para verificar se seu design atende a um determinado conjunto de necessidades"
+        },
+        "5b050fa6-537c-42bd-ab68-8da930f96fc1": {
+          "description": "Identificar-se de maneira empática com o usuário como um componente importante do processo de design"
+        },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "Treinar e testar um modelo de aprendizado de máquina."
         },
@@ -1213,6 +1237,27 @@
         },
         "772d2b7c-9863-42d1-8eb6-ec0520b19441": {
           "description": "Pensar de forma lógica sobre as localizações na grade de coordenadas do Game Lab"
+        },
+        "530ec96a-34f8-4ebd-9ba3-13c2ba0926cd": {
+          "description": "Sequenciar o código corretamente para sobrepor formas."
+        },
+        "a2eaee21-e82f-4b0d-aae4-dc6ebc2280c0": {
+          "description": "Usar um sistema de coordenadas para inserir elementos na tela."
+        },
+        "43fc52a2-e27f-40b0-8b9b-77f757f6f764": {
+          "description": "Praticar e raciocinar sobre comandos de desenho com vários parâmetros"
+        },
+        "9d3158aa-110b-43d2-89c9-6510524bd9bb": {
+          "description": "Identificar uma variável como uma forma de rotular e referenciar um valor em um programa"
+        },
+        "c25b3f0d-dcfb-415a-a97f-89b4e89311a5": {
+          "description": "Usar variáveis em um programa para armazenar uma informação usada várias vezes"
+        },
+        "608b3d15-c429-49e9-84e0-26c7e151143c": {
+          "description": "Identificar-se de maneira empática com o usuário como um componente importante do processo de design"
+        },
+        "a623c1a7-f58d-44fd-80da-924e9ad6ec1c": {
+          "description": "Avaliar criticamente um objeto para verificar se seu design atende a um determinado conjunto de necessidades"
         },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Treinar e testar um modelo de aprendizado de máquina."

@@ -289,12 +289,12 @@ pt:
               display_name: Capítulo 2
             lessonGroup-5:
               display_name: Questionário
-          student_description: Esta unidade é uma introdução prática ao desenvolvimento
+          student_description: 'Esta unidade é uma introdução prática ao desenvolvimento
             de modelos de aprendizado de máquina com dados tabulares. Você aprenderá
             como os computadores aprendem através dos dados e então desenvolverá seu
             próprio projeto de aprendizado de máquina através de dados reais. A unidade
             finaliza com o desenvolvimento de seu própio aplicativo de aprendizado
-            de máquina para resolver um problema relevante para você.
+            de máquina para resolver um problema relevante para você. '
         algPDmiami:
           description: Ensine álgebra com programação funcional
           description_short: Ensine álgebra com programação funcional
@@ -488,6 +488,7 @@ pt:
         contagion-pilot:
           description: 'Use o Sprite Lab para programar uma simulação de epidemia
             de vírus. '
+          description_audience: 5° Ano
           description_short: 'Use o Sprite Lab para programar uma simulação de epidemia
             de vírus. '
           student_description: 'Use o Sprite Lab para programar uma simulação de epidemia
@@ -1475,6 +1476,10 @@ pt:
           lessons:
             lesson-21:
               name: Iniciando
+        csa-consumer-review-lab:
+          title: Curso Preparatório - Laboratório de Avaliação de Consumidores
+        csa-data-lab:
+          title: Curso Preparatório - Laboratório de Dados
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -1514,6 +1519,10 @@ pt:
               display_name: Classes
             lessonGroup-5:
               display_name: Vetores 2D
+        csa-labs-2022:
+          title: Curso Preparatório - Laboratórios do Conselho Universitário.
+        csa-magpie-lab:
+          title: Curso Preparatório - Laboratório Andorinha.
         csa-pl-module-1-test:
           name: csa-pl-módulo-1-teste
           title: Orientações para Code.org e CSA
@@ -2831,6 +2840,7 @@ pt:
             de identificar uma necessidade com a qual se preocupam, protótipos de
             soluções tanto no papel quanto no App Lab e testam soluções com usuários
             reais para obter feedback e avançar iteração.
+          title: O Processo de Design ('22-'23)
         csd4-2023:
           description: "A unidade de Processo de Design faz com que os alunos deixem
             de pensar na ciência da computação como uma ferramenta para resolver seus
@@ -6842,10 +6852,10 @@ pt:
             informações sobre esta unidade.\n    :::\n\n::: details [**Desenvolvimento
             Profissional**]\nSe você estiver interessado em lecionar este curso, recomendamos
             concluir o gratuito [Módulo de Desenvolvimento Profissional Individualizado
-            de AI/ML](https://studio.code.org/s/self-paced-pl-csd5-2023). O módulo
-            é projetado para ser concluído em 2 horas. Não se faz necessária nenhuma
-            experiência com codificação ou IA.\n\n## Terminou de Lecionar esta Unidade?\n\nResponda
-            a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
+            de AI/ML](https://studio.code.org/courses/self-paced-pl-aiml-2023). O
+            módulo é projetado para ser concluído em 2 horas. Não se faz necessária
+            nenhuma experiência com codificação ou IA.\n\n## Terminou de Lecionar
+            esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
             para a equipe de currículo do Code.org saber como foi a sua experiência
             com esta unidade."
           lesson_groups:
@@ -7468,10 +7478,10 @@ pt:
             informações sobre esta unidade.\n    :::\n\n::: details [**Desenvolvimento
             Profissional**]\nSe você estiver interessado em lecionar este curso, recomendamos
             concluir o gratuito [Módulo de Desenvolvimento Profissional Individualizado
-            de AI/ML](https://studio.code.org/s/self-paced-pl-csd5-2023). O módulo
-            é projetado para ser concluído em 2 horas. Não se faz necessária nenhuma
-            experiência com codificação ou IA.\n\n## Terminou de Lecionar esta Unidade?\n\nResponda
-            a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
+            de AI/ML](https://studio.code.org/courses/self-paced-pl-aiml-2023). O
+            módulo é projetado para ser concluído em 2 horas. Não se faz necessária
+            nenhuma experiência com codificação ou IA.\n\n## Terminou de Lecionar
+            esta Unidade?\n\nResponda a esta [\\*\\*breve pesquisa\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
             para a equipe de currículo do Code.org saber como foi a sua experiência
             com esta unidade."
           lesson_groups:
@@ -7524,16 +7534,22 @@ pt:
           title: Teste do Laboratório de Jogos Jr. - Comportamento
         grade1:
           description_audience: 5-18 anos de idade
+          title: 1° Ano
         grade2:
           description_audience: 5-18 anos de idade
+          title: 2° Ano
         grade3:
           description_audience: 5-18 anos de idade
+          title: 3° Ano
         grade4:
           description_audience: De 9 a 99 anos
+          title: 4° Ano
         grade5:
           description_audience: 10-110 anos de idade
+          title: 5° Ano
         gradeKinder:
           description_audience: 5-18 anos de idade
+          title: Pré-escola
         gumball:
           description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
           description_short: Crie uma história ou faça um jogo com o Laboratório do
@@ -7574,7 +7590,7 @@ pt:
         hello-world-retro-2021:
           title: "\"Olá, mundo: Retrô"
         hello-world-soccer-2022:
-          title: 'Olá, Mundo: Futebol'
+          title: 'Olá, mundo: Futebol'
         hello-world-space-2022:
           title: 'Olá, Mundo: Espaço'
         hero:
@@ -7586,6 +7602,8 @@ pt:
           student_description: O Minecraft está de volta para a Hora do Código com
             uma nova atividade! Viaje através de Minecraft com código.
           title: 'Minecraft: Jornada do Herói'
+        hoc-encryption:
+          title: Hora do Código - Encriptação Simples
         hoc-impact-study:
           description_short: Conheça os conceitos básicos da ciência da computação
             com a ajuda de vários personagens divertidos!
@@ -7600,6 +7618,8 @@ pt:
             com os personagens do Angry Birds, Plants vs. Zombies e com o Scrat, da
             Era do Gelo!
           title: Labirinto clássico
+        how-ai-works-2023:
+          title: Como funciona a IA
         iceage:
           description: Crie uma história ou faça um jogo com o Laboratório da Era
             do Gelo!
@@ -7794,6 +7814,7 @@ pt:
               display_name: Impacto da computação
             lessonGroup-7:
               display_name: Projeto de Fim do Curso
+          title: Curso de 5° Ano Alinhado aos Padrões de Nevada
         nevada-standards-aligned-fifth-grade-2023-2023:
           description_audience: 'Idades: 9-13'
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da
@@ -7801,6 +7822,7 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Sprite
+          title: Curso de 5° Ano Alinhado aos Padrões de Nevada
         nevada-standards-aligned-first-grade-2023:
           description_audience: 'Idades: 5-8'
           description_short: Uma introdução à ciência da computação na alfabetização
@@ -7818,6 +7840,12 @@ pt:
               display_name: Eventos
             lessonGroup-7:
               display_name: Projeto de Fim do Curso
+            lessonGroup-8:
+              display_name: Dados
+          lessons:
+            lesson-1:
+              name: Dados
+          title: Curso de 1° Ano Alinhado aos Padrões de Nevada
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: De 8 a 12 anos
           lesson_groups:
@@ -7827,6 +7855,7 @@ pt:
               display_name: funções
             lessonGroup-6:
               display_name: Projeto de Fim do Curso
+          title: Curso de 4° Ano Alinhado aos Padrões de Nevada
         nevada-standards-aligned-kindergarten-2023:
           description_audience: 'Idade: de 4 a 7 anos'
           description_short: Uma introdução à ciência da computação para pré-leitores.
@@ -7844,6 +7873,7 @@ pt:
           lessons:
             lesson-1:
               name: Dados
+          title: Curso Pré-escolar Alinhado aos Padrões de Nevada
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -7856,6 +7886,12 @@ pt:
               display_name: Eventos
             lessonGroup-6:
               display_name: Dados
+            lessonGroup-8:
+              display_name: Sistemas de computação
+          lessons:
+            lesson-1:
+              name: Sistemas de computação
+          title: Curso de 2° Ano Alinhado aos Padrões de Nevada
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'Idades: 7-11'
           description_short: Aprenda sobre declarações condicionais. Crie sua própria
@@ -7873,6 +7909,7 @@ pt:
               display_name: Dados
             lessonGroup-8:
               display_name: Projeto de Fim do Curso
+          title: Curso de 3° Ano Alinhado aos Padrões de Nevada
         new-d:
           title: Novo Curso Script D
         new-e:
@@ -8836,6 +8873,22 @@ pt:
           description_short: 'Use o Sprite Lab para criar uma simulação de epidemia
             de vírus. '
           title: Simulação de uma epidemia
+        vpl-csa-2023-m1:
+          title: Módulo 1
+        vpl-csa-2023-m2:
+          title: Módulo 2
+        vpl-csa-2023-m3:
+          title: Módulo 3
+        vpl-csa-2023-m4:
+          title: Módulo 4
+        vpl-csa-2023-m5:
+          title: Módulo 5
+        vpl-csa-2023-m6:
+          title: Módulo 6
+        vpl-csa-2023-m7:
+          title: Módulo 7
+        vpl-csa-2023-m8:
+          title: Módulo 8
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -8854,6 +8907,22 @@ pt:
               display_name: Módulo 7
             CSD_Module 8:
               display_name: Módulo 8
+        vpl-csd-2023-m1:
+          title: Módulo 1
+        vpl-csd-2023-m2:
+          title: Módulo 2
+        vpl-csd-2023-m3:
+          title: Módulo 3
+        vpl-csd-2023-m4:
+          title: Módulo 4
+        vpl-csd-2023-m5:
+          title: Módulo 5
+        vpl-csd-2023-m6:
+          title: Módulo 6
+        vpl-csd-2023-m7:
+          title: Módulo 7
+        vpl-csd-2023-m8:
+          title: Módulo 8
         vpl-csd-ci-1:
           description: "Este módulo de aprendizagem profissional foi projetado para
             ajudar você a se preparar para lecionar a unidade de Solução de Problemas
@@ -9081,6 +9150,22 @@ pt:
             no final do capítulo. \n– Planejar a implementação da unidade com seus
             alunos. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
           title: 'Módulo 7: Preparação para lecionar sobre IA e aprendizagem de máquina'
+        vpl-csp-2023-m1:
+          title: Módulo 1
+        vpl-csp-2023-m2:
+          title: Módulo 2
+        vpl-csp-2023-m3:
+          title: Módulo 3
+        vpl-csp-2023-m4:
+          title: Módulo 4
+        vpl-csp-2023-m5:
+          title: Módulo 5
+        vpl-csp-2023-m6:
+          title: Módulo 6
+        vpl-csp-2023-m7:
+          title: Módulo 7
+        vpl-csp-2023-m8:
+          title: Módulo 8
         web-development-2023:
           description: |-
             Na Desenvolvimento Web, os alunos têm o poder de criar e compartilhar conteúdo em suas próprias páginas da web. Eles começam pensando sobre o papel da internt e como ela pode ser usada como meio de expressão criativa. À medida que os alunos desenvolvem suas páginas e começam a se ver como programadores, eles são incentivados a pensar criticamente sobre o impacto do compartilhamento de informações on-line e sobre como ser consumidores mais críticos de conteúdo. Eles também são introduzidos à resolução de problemas no que se refere à programação, enquanto aprendem habilidades valiosas, como depuração, uso de recursos e trabalho em equipe. No final da unidade, os alunos terão criado um site pessoal que poderão publicar e compartilhar.
