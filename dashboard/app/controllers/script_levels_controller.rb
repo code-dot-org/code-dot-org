@@ -160,6 +160,8 @@ class ScriptLevelsController < ApplicationController
 
     @body_classes = @level.properties['background']
 
+    @rubric = @script_level.lesson.rubric
+
     present_level
   end
 
