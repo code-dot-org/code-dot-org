@@ -78,10 +78,6 @@ export const procedureDefMutator = {
    * @returns The state of this block, eg the parameters and statements.
    */
   saveExtraState: function () {
-    console.log(
-      'saving extra state, procedure model is ',
-      this.getProcedureModel()
-    );
     const state = Object.create(null);
     state['procedureId'] = this.getProcedureModel().getId();
     state['name'] = this.getProcedureModel().getName();
@@ -112,9 +108,7 @@ export const procedureDefMutator = {
    *     statements.
    */
   loadExtraState: function (state) {
-    console.log('loading extra state for ', this, ' state is ', state);
     const map = this.workspace.getProcedureMap();
-    console.log({procedure_in_map: map.get(procedureId)});
     const procedureId = state['procedureId'];
     if (
       procedureId &&
@@ -126,7 +120,6 @@ export const procedureDefMutator = {
         map.delete(this.model_.getId());
       }
       this.model_ = map.get(procedureId);
-      console.log(`loading extra state for model `, this.model_);
     }
 
     if (state['params'] && !this.getProcedureModel().getParameters().length) {

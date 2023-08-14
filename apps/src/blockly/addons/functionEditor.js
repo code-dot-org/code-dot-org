@@ -43,6 +43,7 @@ export default class FunctionEditor {
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
       toolbox: options.toolbox,
+      theme: Blockly.cdoUtils.getUserTheme(options.theme),
     });
 
     document
@@ -66,6 +67,7 @@ export default class FunctionEditor {
       .getElementById(MODAL_EDITOR_DELETE_ID)
       .addEventListener('click', () => {
         // TODO: Handle deletion
+        console.log('in delete click handler');
       });
 
     this.mainWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
@@ -95,16 +97,18 @@ export default class FunctionEditor {
       const id = this.block.getProcedureModel().getId();
       const blockState = Blockly.serialization.blocks.save(this.block);
       this.allFunctions[id] = blockState;
-      console.log('block state to append: ', blockState);
       //Blockly.serialization.blocks.append(blockState, this.mainWorkspace);
-      console.log({new_function_def: this.allFunctions[id]});
     });
 
     // TODO: I think this is firing too often. How can we fix it?
     this.editorWorkspace.addChangeListener(e => {
       // If the main workspace hasn't been initialized yet, don't do anything
       if (!this.mainWorkspace) return;
-      if (e instanceof ProcedureBase && e.type !== 'procedure_create') {
+      if (
+        e instanceof ProcedureBase &&
+        e.type !== 'procedure_create' &&
+        e.type !== 'procedure_delete'
+      ) {
         let event;
         try {
           console.log('e.toJson()', e.toJson());
@@ -121,10 +125,6 @@ export default class FunctionEditor {
         this.mainWorkspace.getToolbox().refreshSelection();
       }
     });
-    console.log(
-      'this.editorWorkspace.procedureModel in init',
-      this.editorWorkspace.getProcedureMap()
-    );
   }
 
   // TODO: Address areas in codebase where hideIfOpen is used
@@ -145,8 +145,6 @@ export default class FunctionEditor {
   // TODO: Rename
   showForFunction(procedure) {
     this.editorWorkspace.clear();
-    console.log('in showForFunction, procedure: ', procedure);
-    console.log({allFunctions: this.allFunctions});
     this.nameInput.value = procedure.getName();
     // TODO: procedure.getDescription() is not a thing -- this will be on extra state, I think
     // this.functionDescriptionInput.value = procedure.getDescription();
@@ -154,14 +152,18 @@ export default class FunctionEditor {
     this.dom.style.display = '';
     Blockly.common.svgResize(this.editorWorkspace);
 
-    const existingData = this.allFunctions[procedure.getId()];
+    let existingData = this.allFunctions[procedure.getId()];
     if (existingData) {
       // If we already have stored data about the procedure, use that
+      existingData = {
+        ...existingData,
+        x: 50,
+        y: 200,
+      };
       this.block = Blockly.serialization.blocks.append(
         existingData,
         this.editorWorkspace
       );
-      console.log(`existing block found`, this.block);
     } else {
       // Otherwise, we need to create a new block from scratch.
       const newDefinitionBlock = {
@@ -178,12 +180,10 @@ export default class FunctionEditor {
         x: 50,
         y: 200, // TODO: This is a magic number
       };
-      console.log();
       this.block = Blockly.serialization.blocks.append(
         newDefinitionBlock,
         this.editorWorkspace
       );
-      console.log('new block: ', this.block);
     }
   }
 
@@ -272,9 +272,6 @@ export function flyoutCategory(workspace, includeNewButton = true) {
   );
   const blockList = [];
   if (includeNewButton) {
-    console.log(
-      "includeNewButton is true, so we're adding a new procedure button"
-    );
     blockList.push({
       kind: 'button',
       text: 'Create a Function',
@@ -289,6 +286,5 @@ export function flyoutCategory(workspace, includeNewButton = true) {
     .getProcedureMap()
     .getProcedures()
     .forEach(procedure => blockList.push(createCallBlock(procedure)));
-  console.log({blockList: blockList});
   return blockList;
 }

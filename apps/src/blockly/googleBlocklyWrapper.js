@@ -603,7 +603,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.inject = function (container, opt_options, opt_audioPlayer) {
-    console.log('in inject');
     const options = {
       ...opt_options,
       theme: cdoUtils.getUserTheme(opt_options.theme),
