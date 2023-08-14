@@ -5,6 +5,10 @@ class EmailDeliveryObserverTest < ActiveSupport::TestCase
     ActionMailer::Base.register_observer EmailDeliveryObserver
   end
 
+  teardown do
+    ActionMailer::Base.unregister_observer EmailDeliveryObserver
+  end
+
   test 'push a metric when an email is sent' do
     expected_metric = [
       {
