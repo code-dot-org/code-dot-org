@@ -3847,6 +3847,8 @@ fil:
             gamit ang mga karakter mula sa Angry Birds, Plants vs. Zombies, at Scrat
             mula sa Ice Age!
           title: Klasiko na Maze
+        how-ai-works-2023:
+          title: Paano Gumagana ang AI
         iceage:
           description: Maglikha ng kuwento o gumawa ng laro gamit ang Ice Age na Play
             Lab!
@@ -3962,6 +3964,11 @@ fil:
               display_name: Epekto ng Pag-Compute
             lessonGroup-6:
               display_name: Mga event
+            lessonGroup-8:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Mga Edad: 8-12'
           lesson_groups:
