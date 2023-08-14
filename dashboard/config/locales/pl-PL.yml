@@ -155,6 +155,10 @@ pl:
       się na przechowywanie plików cookie na Twoim komputerze lub urządzeniu.
     more_information: Zapoznaj się z polityką prywatności Code.org.
   copy: Kopia/Kopiuj
+  course_deprecated:
+    button: Zobacz nowy program nauczania
+    title: Głowy do góry! Ten program nauczania nie jest już dostępny, ale Code.org
+      ma dla Ciebie nowsze opcje.
   course_offering:
     headers:
       collections: Kolekcje

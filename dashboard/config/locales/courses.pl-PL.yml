@@ -363,6 +363,10 @@ pl:
             uczniów. \n-   Staniesz się częścią sieci nauczycieli, którzy wykonują
             podobną pracę."
           title: virtual-pl-csd-summer-2023
+        vpl-csa-2023:
+          title: CSA Wirtualne profesjonalne uczenie się
+        vpl-csd-2023:
+          title: Wirtualne profesjonalne uczenie się CSD
         vpl-csd-ayw-pilot-2022:
           title: Warsztaty wirtualnego roku akademickiego CS Discoveries (Odkrycia
             Informatyki)
@@ -386,6 +390,8 @@ pl:
         vpl-csd-summer-pilot-ci-2022:
           title: Badania programu Odkryć informatycznych
           version_title: "'21-'22"
+        vpl-csp-2023:
+          title: Zasady CS Wirtualny kurs warsztatowy PL
     resources:
       all_code/csd/2021:
         name: Cały kod
