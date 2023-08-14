@@ -314,7 +314,7 @@
           "wandering": "rătăcit"
         },
         "CourseF_outbreak4": {
-          "growing": "creștere",
+          "growing": "mărire",
           "jittering": "tremurat",
           "moving east": "deplasare către est",
           "moving north": "deplasare către nord",
@@ -324,8 +324,8 @@
           "patrolling": "patrulare",
           "recovering": "recuperare",
           "shrinking": "micșorare",
-          "spinning left": "învârtit spre stânga",
-          "spinning right": "învârtit spre dreapta",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
           "swimming left and right": "înotat către stânga și către dreapta",
           "wandering": "rătăcit"
         },
@@ -362,7 +362,7 @@
           "wandering": "rătăcit"
         },
         "CourseF_outbreak7": {
-          "growing": "creștere",
+          "growing": "mărire",
           "jittering": "tremurat",
           "moving east": "deplasare către est",
           "moving left and right": "mișcare de la stânga la dreapta",
@@ -373,8 +373,8 @@
           "patrolling": "patrulare",
           "recovering": "recuperare",
           "shrinking": "micșorare",
-          "spinning left": "învârtit spre stânga",
-          "spinning right": "învârtit spre dreapta",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
           "wandering": "rătăcit"
         },
         "CourseF_outbreak7_-2022-2": {
@@ -394,7 +394,7 @@
           "wandering": "rătăcit"
         },
         "CourseF_outbreak8": {
-          "growing": "creștere",
+          "growing": "mărire",
           "jittering": "tremurat",
           "moving east": "deplasare către est",
           "moving left and right": "mișcare de la stânga la dreapta",
@@ -405,8 +405,8 @@
           "patrolling": "patrulare",
           "recovering": "recuperare",
           "shrinking": "micșorare",
-          "spinning left": "învârtit spre stânga",
-          "spinning right": "învârtit spre dreapta",
+          "spinning left": "rotire spre stânga",
+          "spinning right": "rotire spre dreapta",
           "wandering": "rătăcit"
         },
         "CourseF_outbreak8_-2022-2": {
