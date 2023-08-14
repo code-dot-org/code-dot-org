@@ -25,6 +25,8 @@ const CurriculumCatalog = ({
   const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
     useState(false);
 
+  const isQuickViewDisplayed = queryParams()['quick_view'] === 'true';
+
   const handleAssignSuccess = assignmentData => {
     setAssignSuccessMessage(
       i18n.successAssigningCurriculum({
@@ -44,12 +46,6 @@ const CurriculumCatalog = ({
   const handleCloseAssignSuccessMessage = () => {
     setShowAssignSuccessMessage(false);
     setAssignSuccessMessage('');
-  };
-
-  const getQuickViewState = () => {
-    const urlParams = queryParams();
-    console.log(urlParams['quick_view'] === 'true');
-    return urlParams['quick_view'] === 'true';
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
@@ -101,7 +97,7 @@ const CurriculumCatalog = ({
                   scriptId={script_id}
                   isStandAloneUnit={is_standalone_unit}
                   onAssignSuccess={response => handleAssignSuccess(response)}
-                  quickViewDisplayed={getQuickViewState()}
+                  quickViewDisplayed={isQuickViewDisplayed}
                   {...props}
                 />
               )
