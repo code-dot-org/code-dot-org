@@ -291,7 +291,7 @@
         },
         "CourseF_outbreak1": {
           "recovering": "pulih",
-          "wandering": "bergerak"
+          "wandering": "merayau"
         },
         "CourseF_outbreak1_-2022-2": {
           "recovering": "pulih",
@@ -299,7 +299,7 @@
         },
         "CourseF_outbreak2": {
           "recovering": "pulih",
-          "wandering": "bergerak"
+          "wandering": "merayau"
         },
         "CourseF_outbreak2_-2022-2": {
           "recovering": "pulih",
@@ -307,27 +307,27 @@
         },
         "CourseF_outbreak3": {
           "recovering": "pulih",
-          "wandering": "bergerak"
+          "wandering": "merayau"
         },
         "CourseF_outbreak3_-2022-2": {
           "recovering": "pulih",
           "wandering": "merayau"
         },
         "CourseF_outbreak4": {
-          "growing": "kembang",
-          "jittering": "gelisah",
-          "moving east": "ke timur",
-          "moving north": "ke utara",
-          "moving south": "ke selatan",
-          "moving west": "ke barat",
+          "growing": "membesar",
+          "jittering": "terketar",
+          "moving east": "bergerak ke timur",
+          "moving north": "bergerak ke utara",
+          "moving south": "bergerak ke selatan",
+          "moving west": "bergerak ke barat",
           "moving with arrow keys": "bergerak dengan kunci arah",
-          "patrolling": "ronda",
+          "patrolling": "meronda",
           "recovering": "pulih",
-          "shrinking": "kecut",
-          "spinning left": "putar kiri",
-          "spinning right": "putar kanan",
-          "swimming left and right": "berenang kiri dan kanan",
-          "wandering": "bergerak"
+          "shrinking": "mengecil",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "swimming left and right": "berenang ke kiri dan ke kanan",
+          "wandering": "merayau"
         },
         "CourseF_outbreak4_-2022-2": {
           "growing": "membesar",
@@ -347,7 +347,7 @@
         },
         "CourseF_outbreak5": {
           "recovering": "pulih",
-          "wandering": "bergerak"
+          "wandering": "merayau"
         },
         "CourseF_outbreak5_-2022-2": {
           "recovering": "pulih",
@@ -355,27 +355,27 @@
         },
         "CourseF_outbreak6": {
           "recovering": "pulih",
-          "wandering": "bergerak"
+          "wandering": "merayau"
         },
         "CourseF_outbreak6_-2022-2": {
           "recovering": "pulih",
           "wandering": "merayau"
         },
         "CourseF_outbreak7": {
-          "growing": "kembang",
-          "jittering": "gelisah",
-          "moving east": "ke timur",
+          "growing": "membesar",
+          "jittering": "terketar",
+          "moving east": "bergerak ke timur",
           "moving left and right": "bergerak kiri dan kanan",
-          "moving north": "ke utara",
-          "moving south": "ke selatan",
-          "moving west": "ke barat",
+          "moving north": "bergerak ke utara",
+          "moving south": "bergerak ke selatan",
+          "moving west": "bergerak ke barat",
           "moving with arrow keys": "bergerak dengan kunci arah",
-          "patrolling": "ronda",
+          "patrolling": "meronda",
           "recovering": "pulih",
-          "shrinking": "kecut",
-          "spinning left": "putar kiri",
-          "spinning right": "putar kanan",
-          "wandering": "bergerak"
+          "shrinking": "mengecil",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "wandering": "merayau"
         },
         "CourseF_outbreak7_-2022-2": {
           "growing": "membesar",
@@ -394,20 +394,20 @@
           "wandering": "merayau"
         },
         "CourseF_outbreak8": {
-          "growing": "kembang",
-          "jittering": "gelisah",
-          "moving east": "ke timur",
+          "growing": "membesar",
+          "jittering": "terketar",
+          "moving east": "bergerak ke timur",
           "moving left and right": "bergerak kiri dan kanan",
-          "moving north": "ke utara",
-          "moving south": "ke selatan",
-          "moving west": "ke barat",
+          "moving north": "bergerak ke utara",
+          "moving south": "bergerak ke selatan",
+          "moving west": "bergerak ke barat",
           "moving with arrow keys": "bergerak dengan kunci arah",
-          "patrolling": "ronda",
+          "patrolling": "meronda",
           "recovering": "pulih",
-          "shrinking": "kecut",
-          "spinning left": "putar kiri",
-          "spinning right": "putar kanan",
-          "wandering": "bergerak"
+          "shrinking": "mengecil",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "wandering": "merayau"
         },
         "CourseF_outbreak8_-2022-2": {
           "growing": "membesar",
