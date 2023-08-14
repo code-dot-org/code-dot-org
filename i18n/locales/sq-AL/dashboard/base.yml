@@ -119,7 +119,8 @@ sq:
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Llogaria e Microsoft'
-    microsoft_v2_auth: 'Llogaria e Microsoft'
+    microsoft_v2_auth: 'Microsoft'
+    clever: 'Të zgjuar'
     powerschool: 'Shkolla e fuqizuar'
     forgot_password: 'Keni harruar fjalëkalimin?'
     migration_success: 'Suksese! Ju keni përditësuar përvojën tonë të llogarisë së re.'
@@ -782,6 +783,7 @@ sq:
     mac: 'Mac OS X'
   locked_stage: 'Përmbajtjet e kësaj faze nuk janë të dukshme për shkak se kjo fazë është e bllokuar aktualisht. Mësuesi juaj mund të zhbllokuar këtë fazë kur është koha për të punuar mbi të ose të shqyrtojë përgjigjet tuaja.'
   hidden_stage: "Mësuesi juaj nuk pret që të jeni këtu. Ju lutem pyesni mësuesin tuaj se cili mësim duhet të jetë."
+  no_script_access_student: "Ju nuk keni qasje në këtë njësi. Ju lutemi pyesni mësimdhënësin tuaj se në cilën njësi duhet të jeni."
   return_unit_overview: 'Shko në njësinë e rishikimit'
   return_course_overview: 'Shko në njësinë e rishikimit'
   pd:
@@ -824,3 +826,4 @@ sq:
   code_org_logo_alt: "Code.org Faqja kryesore"
   pixelation:
     binary: "Binare"
+

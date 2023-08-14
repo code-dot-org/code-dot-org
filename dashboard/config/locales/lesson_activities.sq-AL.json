@@ -6809,6 +6809,9 @@
         "cf77273f-fbf5-470c-90c1-19dbc5bdbc35": {
           "name": "Parapërgatitje"
         },
+        "51259ea3-edb5-4c2d-ae16-45795c6396cb": {
+          "name": "Aktiviteti Lidhës- Zgjidh një"
+        },
         "e9a43341-7ad3-4351-b866-2e1a35d6d0a9": {
           "name": "Aktiviteti kryesor"
         },
@@ -6825,7 +6828,7 @@
           "name": "Aktiviteti kryesor"
         },
         "5f075543-8ff0-4898-a88c-b77a1cb0afbb": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "6496f3a3-d253-44df-9139-7b3870eee21f": {
           "name": "Mëso: Çfarë është padrejtësia?"
@@ -6852,13 +6855,13 @@
           "name": "Aktiviteti"
         },
         "cf3b92c1-1534-4b5f-aee0-d1d0fc689f07": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "fef0dd69-afa1-48b8-a91a-bb7c90de0fff": {
           "name": "Parapërgatitje"
         },
         "b274f4c7-f500-40b8-be45-9514daa5fd33": {
-          "name": "Bridging Activity - Programimi"
+          "name": "Aktivitet lidhës - Programimi"
         },
         "21f339fc-a078-41b5-a2c0-bb95b7668103": {
           "name": "Pamje paraprake të Enigmave Online si klasë"
@@ -6867,7 +6870,7 @@
           "name": "Aktiviteti kryesor"
         },
         "88b97b3d-d366-48f8-a1ab-3889b60043b5": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "162606b4-d220-420b-9703-a3fde0f875bd": {
           "name": "Mësim shtesë"
@@ -6882,7 +6885,7 @@
           "name": "Aktiviteti kryesor"
         },
         "290e1afa-cec3-4eeb-96cc-1ef2695e1ae7": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "ad5f23ed-1a14-49b9-b7d5-f0739393e1f9": {
           "name": "Mësim shtesë"
@@ -6897,7 +6900,7 @@
           "name": "Aktiviteti kryesor"
         },
         "d5ffd47e-72e1-4c51-b0b2-c2eb8add6d6c": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "a91088f0-aa3f-4df8-9274-d0311f23690b": {
           "name": "Parapërgatitje"
@@ -6906,7 +6909,7 @@
           "name": "Aktiviteti kryesor"
         },
         "c385379d-be36-40b9-9a56-a4c34885eb1a": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "fe040a1c-988d-4d15-a3bc-a4482aee15ad": {
           "name": "Mësim shtesë"
@@ -6918,10 +6921,10 @@
           "name": "Parapërgatitje"
         },
         "bc37d277-781e-45ce-a009-5b860924fd0f": {
-          "name": "Aktiviteti"
+          "name": "Aktivitet"
         },
         "23a470c7-c3b7-472d-b6bf-f1788fb36b22": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "e45b301d-d9e3-4217-a048-dc3bd80bbb09": {
           "name": "Mësim shtesë"
@@ -6929,11 +6932,14 @@
         "7aa3d9d0-5f51-4169-935f-83c34e385ec4": {
           "name": "Parapërgatitje"
         },
+        "c530700c-f18a-489f-a8a4-3919972c9152": {
+          "name": "Aktivitet lidhës - Zgjedh një"
+        },
         "08501ea2-5017-47ab-8c8a-b6670a53d8e4": {
-          "name": "Aktiviteti kryesor"
+          "name": "Aktivitet kryesor"
         },
         "8c27f4d1-b29d-48c6-b0e2-b572561d4318": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "0b553378-ac34-4727-9d20-6e2418b91d92": {
           "name": "Mësim shtesë"
@@ -6945,7 +6951,7 @@
           "name": "Aktiviteti kryesor"
         },
         "f62b81e6-26e7-4c34-9852-3a50db5f9122": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "94065f57-a74c-4669-aba3-4545afc1ac99": {
           "name": "Mësim shtesë"
@@ -6960,7 +6966,7 @@
           "name": "Aktiviteti kryesor"
         },
         "ce2af74c-6ea2-4be2-b451-660bca33f7c9": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "80232621-bdde-444c-a5a0-3b34841a7204": {
           "name": "Mundësi ndër-kurrikulare"
@@ -6972,7 +6978,7 @@
           "name": "Aktiviteti kryesor"
         },
         "4d247419-2bf3-4cfb-92e3-922317b3baab": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "07fa3f05-8e3a-4bb1-aaca-5d35b3ec01a4": {
           "name": "Mësim shtesë"
@@ -6980,14 +6986,20 @@
         "b1fb0e94-332b-43de-b96f-70188d1852ef": {
           "name": "Parapërgatitje"
         },
+        "1f8652f9-9c36-4b8b-a711-5006415c9a02": {
+          "name": "Aktivitet lidhës - Zgjedh një"
+        },
         "9051d98c-093f-4e07-a4b7-af876ed109df": {
-          "name": "Aktiviteti kryesor"
+          "name": "Aktivitet kryesor"
         },
         "6e5ae7b5-8fc7-4fb9-8ea0-341a7dc015a5": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "320641ce-d300-442c-9c02-25d01b79c703": {
           "name": "Mësim shtesë"
+        },
+        "1cbfc372-bd13-4e94-b2c7-f334d93014a3": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "7124ed35-c669-491b-8481-6406fa13bd93": {
           "name": "Parapërgatitje"
@@ -6996,7 +7008,7 @@
           "name": "Aktiviteti kryesor"
         },
         "9ca8b3bc-e3a4-4f52-a27c-c0552ebf4840": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "f73ce05b-cbd9-4cf0-b94d-5544bcaf3347": {
           "name": "Mësim shtesë"
@@ -7008,7 +7020,7 @@
           "name": "Aktiviteti kryesor"
         },
         "821ee9a2-8dee-4363-b44e-7fe17bb0c736": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "f4b09758-1a3c-413b-b493-8e8f620af413": {
           "name": "Parapërgatitje"
@@ -7220,8 +7232,23 @@
         "069f8d26-8e31-484a-9e8c-3d67add0197d": {
           "name": "Krijo: Superheroi juaj i qytetarit digjital"
         },
+        "da7bb20b-3692-45ca-a939-6b44411eea77": {
+          "name": "Përmbledhje: Ruani Ditën! Comic Strip"
+        },
         "02ff6b22-0825-41c1-9e77-721f5801fede": {
           "name": "Mësim shtesë"
+        },
+        "01746bcd-3c02-43f5-8a35-0a775acc2095": {
+          "name": "Parapërgatitje: Ngrihuni, Uluni"
+        },
+        "6114e1af-1c83-4f1f-add9-a97c2523b343": {
+          "name": "Analizoni: Pse njerëzit ndajnë?"
+        },
+        "d1c5ae68-dd15-4aec-aff6-44d0ea484781": {
+          "name": "Analizo: Private apo Personale?"
+        },
+        "776101b2-57fc-4032-b1b3-1ec318adfbb2": {
+          "name": "Përmbledhje: Bileta e daljes"
         },
         "74025568-d2f7-4ad1-8196-55a2955dd2f8": {
           "name": "Mësim shtesë"
@@ -7231,6 +7258,9 @@
         },
         "4d2e3a7b-6f10-4ae8-a150-38c094379da1": {
           "name": "Parapërgatitje"
+        },
+        "2d9ca8e8-3d7b-42c1-8d9a-7765bf7d0847": {
+          "name": "Bridging Activity"
         },
         "49c18026-c59e-4aa1-93da-e7f15d4bee21": {
           "name": "Aktiviteti kryesor"
@@ -7259,6 +7289,9 @@
         "e8117fa4-c0ea-4ad9-b368-24ec9f6d4923": {
           "name": "Mbyll"
         },
+        "3f920d9d-49c0-4a91-af81-7fbb5b9fc757": {
+          "name": "Mundësi ndër-kurrikulare"
+        },
         "ca73e49f-ddae-48b1-88b4-99adf0c7d092": {
           "name": "Parapërgatitje"
         },
@@ -7267,6 +7300,9 @@
         },
         "f42d12fc-5eb1-4601-9ca8-46e0a3219bf0": {
           "name": "Mbyll"
+        },
+        "1e9a6f37-f162-4f87-ab30-471ba44cc016": {
+          "name": "Mundësitë ndër-kurrikulare"
         },
         "f063bf55-a69c-43d8-aacf-9bf5fdc6e5b2": {
           "name": "Parapërgatitje"
@@ -7289,6 +7325,9 @@
         "6a3dbe1e-1e7a-46d4-a84a-2c89274513d8": {
           "name": "Mbyll"
         },
+        "7d419f10-c436-4f75-b11b-8f83d5d5c791": {
+          "name": "Mundësi ndër-kurrikulare"
+        },
         "4eec94f8-b49f-4b9a-944a-ab0ad4f03b6e": {
           "name": "Parapërgatitje"
         },
@@ -7298,17 +7337,26 @@
         "fcd44400-dd8c-41a0-9314-1479e4f80ce2": {
           "name": "Mbyll"
         },
+        "dac66c49-0189-4dc9-b2d1-f00cbdfa8ce7": {
+          "name": "Vlerësimi"
+        },
         "79e1e2e9-dce6-4f3d-b5c8-3d762a776b10": {
           "name": "Mësim shtesë"
         },
+        "5ed04482-6be8-433c-bf16-737461554f43": {
+          "name": "Mundësi ndër-kurrikulare"
+        },
         "29e0563f-459b-4d33-8100-3677a52b69d0": {
           "name": "Parapërgatitje"
+        },
+        "d5847a58-72f4-4636-81c7-05927ecc4cfe": {
+          "name": "Aktiviteti lidhës - Zgjedh një"
         },
         "d79e14f3-5b82-4cc2-ba94-cb3aa379f5ca": {
           "name": "Aktiviteti kryesor"
         },
         "b4363c12-5a58-42e1-b872-f90b1ad5fe3e": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "7fef7c1f-99e3-4375-9440-2e0b2dc05349": {
           "name": "Parapërgatitje"
@@ -7376,6 +7424,18 @@
         "07ac5b5f-997f-4ee3-bbd3-45cb1aeca6af": {
           "name": "Mësim shtesë"
         },
+        "4297e4f8-df09-4a0f-a1f1-6eebb5fb75b3": {
+          "name": "Parapërgatitje: E njëjta fjalë. Kuptim të ndryshëm"
+        },
+        "5d5fd9dd-ddf2-43b6-b079-90a4951fc484": {
+          "name": "Shiko: Fuqia e fjalëve"
+        },
+        "a97a978a-4f85-4d03-b3aa-f9ade97cac23": {
+          "name": "Heto: Cili është problemi?"
+        },
+        "13324f62-aa57-47e7-a446-9f26c40da904": {
+          "name": "Përmbledhje: Kalimi i vijës"
+        },
         "06eca5a9-6166-4def-972b-ecf15e73ee59": {
           "name": "Mësim shtesë"
         },
@@ -7386,7 +7446,7 @@
           "name": "Aktiviteti kryesor"
         },
         "16075938-2b45-408d-a373-1e286c2068da": {
-          "name": "Mbyll"
+          "name": "Përmbledhje"
         },
         "7cde513f-d979-4541-bc42-59000562fd58": {
           "name": "Parapërgatitje"

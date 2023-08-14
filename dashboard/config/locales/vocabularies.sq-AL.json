@@ -374,8 +374,8 @@
           "definition": "Pjesë e një programi që nuk funksionon si duhet."
         },
         "debugging/coursec/2022": {
-          "word": "Rregullimi",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+          "word": "Debugging",
+          "definition": "Gjetja dhe korrigjimi i problemeve në një algoritëm ose program."
         },
         "program/coursec/2022": {
           "word": "Programi",
@@ -386,10 +386,11 @@
           "definition": "Vendosja e komandave në mënyrë korrekte në mënyrë që kompjuterët të lexojnë komandat."
         },
         "persistence/coursec/2022": {
+          "word": "Këmbngulje",
           "definition": "Të mos heqësh dorë."
         },
         "programming/coursec/2022": {
-          "word": "Programim",
+          "word": "Programimi",
           "definition": "Arti i krijimit të një programi."
         },
         "angle/coursec/2022": {
@@ -397,7 +398,7 @@
           "definition": "Ku dy anët e një forme vijnë së bashku, të matura në shkallë."
         },
         "loop/coursec/2022": {
-          "word": "Unazë përsëritëse",
+          "word": "Loop",
           "definition": "Veprimi i të bërit diçka pa pushim."
         },
         "repeat/coursec/2022": {
@@ -448,21 +449,43 @@
           "definition": "Diçka që kontrollon një program për të parë nëse është e vërtetë përpara se të lejojë një veprim."
         },
         "behavior/coursee/2022": {
-          "word": "Sjellja"
+          "word": "Sjellja",
+          "definition": "Një veprim që një sprite kryen vazhdimisht derisa t'i thuhet të ndalojë."
+        },
+        "sprite/coursee/2022": {
+          "definition": "Një grafik në ekran me një vendndodhje, madhësi dhe pamje."
         },
         "loop/coursee/2022": {
-          "word": "Unazë përsëritëse",
+          "word": "Loop",
           "definition": "Veprimi i të bërit diçka pa pushim."
         },
+        "repeat/coursee/2022": {
+          "word": "Përsëritje",
+          "definition": "Për të bërë diçka përsëri."
+        },
         "function/coursee/2022": {
-          "word": "Funksion"
+          "word": "Funksion",
+          "definition": "Një pjesë kodi që mund ta thirrni në mënyrë të përsëritshme. "
+        },
+        "call_a_function/coursee/2022": {
+          "word": "Thirrni një funksion",
+          "definition": "Përdorimi i emrit të funksionit për t'i thënë kompjuterit të ekzekutojë kodin e shkruar në funksion."
+        },
+        "declare_a_function/coursee/2022": {
+          "word": "Deklaroni një funksion",
+          "definition": "Plotësoni një funksion me kod dhe jepni funksionit një emër."
         },
         "condition/coursee/2022": {
-          "word": "Kusht"
+          "word": "Kusht",
+          "definition": "Një deklaratë që një program kontrollon për të parë nëse është e vërtetë apo e gabuar. Nëse është e vërtetë, ndërmerret një veprim. Përndryshe, veprimi injorohet."
         },
         "conditionals/coursee/2022": {
           "word": "Kushtet",
           "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
+        },
+        "while_loop/coursee/2022": {
+          "word": "While Loop",
+          "definition": "Një loop që vazhdon të përsëritet kur një kusht është i vërtetë."
         },
         "copyright/coursee/2022": {
           "word": "E drejta e autorit"
@@ -473,8 +496,17 @@
         "reflect/coursee/2022": {
           "word": "Reflekto"
         },
+        "sprite/coursef/2022": {
+          "word": "Sprite",
+          "definition": "Një grafik në ekran me një vendndodhje, madhësi dhe pamje."
+        },
+        "user/coursef/2022": {
+          "word": "Përdorues",
+          "definition": "Dikush që përdor një objekt, duke përfshirë softuerin dhe harduerin."
+        },
         "behavior/coursef/2022": {
-          "word": "Sjellja"
+          "word": "Sjellja",
+          "definition": "Një veprim që një sprite kryen vazhdimisht derisa t'i thuhet të ndalojë."
         },
         "program/coursef/2022": {
           "word": "Programi",

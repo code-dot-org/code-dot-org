@@ -935,7 +935,8 @@
           "name": "Eventi i Madh"
         },
         "play_lab_project_planning_guide/courseb/2021": {
-          "name": "Udhëzues për planifikimin e projektit Play Lab"
+          "name": "Udhëzues për planifikimin e projektit Play Lab",
+          "type": "Fletushkë"
         },
         "play_lab_project_planning_guide_1/courseb/2021": {
           "name": "Udhëzues për planifikimin e projektit Play Lab"
@@ -2473,10 +2474,12 @@
           "type": "Imazh kontrollues"
         },
         "play_lab_project_planning_guide/courseb/2022": {
-          "name": "Udhëzues për planifikimin e projektit Play Lab"
+          "name": "Udhëzues për planifikimin e projektit Play Lab",
+          "type": "Fletushkë"
         },
         "play_lab_project_planning_guide_1/courseb/2022": {
-          "name": "Udhëzues për planifikimin e projektit Play Lab"
+          "name": "Udhëzues për planifikimin e projektit Play Lab",
+          "type": "Çelësi i përgjigjes"
         },
         "2022_change_log/coursec/2022": {
           "name": "2022 Dokumenti i ndryshimeve"
@@ -2526,9 +2529,10 @@
         },
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "Vendosja e një STOP për padrejtësitë në internet: Sllajdet e mësimit",
-          "type": "Slide Deck"
+          "type": "Slladjet e mësimdhënësve"
         },
         "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2022": {
+          "name": "Vendosja e një STOP për padrejtësitë në internet",
           "type": "Doracaku i nxënësve"
         },
         "csf_-_course_c_-_slides_2022-2023/coursec/2022": {
@@ -2556,7 +2560,11 @@
           "name": "Shokët e mi robotik",
           "type": "Modeli i trapezoidit të letrës"
         },
+        "maze_bridging_page/coursec/2022": {
+          "name": "Faqja e lidhjes së labirintit"
+        },
         "unplugged_maze_blocks/coursec/2022": {
+          "name": "Blloqet të shkëputura të labirintit",
           "type": "Manipulativë"
         },
         "cs_fundamentals_main_activity_tips/coursec/2022": {
@@ -2564,7 +2572,7 @@
           "type": "Rekomandime për mësim"
         },
         "debugging_guide/coursec/2022": {
-          "name": "Udhëzues për korrigjimin e gabimeve",
+          "name": "Udhëzues për Debugging",
           "type": "Burim"
         },
         "pair_programming/coursec/2022": {
@@ -2585,7 +2593,7 @@
         },
         "turns_angles_1/coursec/2022": {
           "name": "Kthesat dhe këndet",
-          "type": "Doracaku i Studentëve"
+          "type": "Fletushkë për nxënës"
         },
         "the_big_event/coursec/2022": {
           "name": "Eventi i Madh",
@@ -2810,7 +2818,8 @@
           "type": "Burim"
         },
         "sprite_lab_documentation/coursee/2022": {
-          "type": "Burim"
+          "type": "Burim",
+          "name": "Dokumentacioni Sprite Lab"
         },
         "teacher_forum/coursee/2022": {
           "type": "Burim"
@@ -2826,23 +2835,72 @@
           "name": "Bëhu një Super Qytetar Digjital: Super Qytetari Digjital"
         },
         "private_and_personal_information_exit_ticket/coursee/2022": {
-          "type": "Doracaku i Studentëve"
+          "name": "Informatë private dhe personale: Bileta e daljes",
+          "type": "Fletushka e nxënësit"
+        },
+        "private_and_personal_information_lesson_quiz/coursee/2022": {
+          "name": "Informatë private dhe personale: Kuizi i mësimeve",
+          "type": "Formulari"
+        },
+        "private_and_personal_information_lesson_quiz_1/coursee/2022": {
+          "name": "Informatë private dhe personale: Bileta e daljes",
+          "type": "Çelësi i përgjigjes"
+        },
+        "private_and_personal_information_lesson_slides/coursee/2022": {
+          "name": "Informatë private dhe personale: Bileta e daljes"
+        },
+        "private_and_personal_information_private_and_personal_information/coursee/2022": {
+          "name": "Informatë private dhe personale: Informatë private dhe personale",
+          "type": "Video për Nxënës"
         },
         "csf_-_course_e_-_slides_2022-2023/coursee/2022": {
-          "type": "Sllajdet"
+          "type": "Slides",
+          "name": "CSF - Kursi E - Slides 2022-2023"
+        },
+        "swimming_fish_teacher_sandbox/coursee/2022": {
+          "type": "Niveli i Programimit"
         },
         "csf_-_course_e_-_slides_2022-2023_1/coursee/2022": {
-          "type": "Sllajdet"
+          "name": "CSF - Kursi E - Slides 2022-2023",
+          "type": "Slides"
+        },
+        "about_me_planning_guide/coursee/2022": {
+          "name": "Udhëzuesi i Planifikimit Rreth Meje"
         },
         "turns_angles/coursee/2022": {
           "name": "Kthesat dhe këndet",
-          "type": "Doracaku i Studentëve"
+          "type": "Fletushka e Nxënësve"
         },
         "turns_angles_1/coursee/2022": {
-          "name": "Kthesat dhe këndet"
+          "name": "Kthesat dhe këndet",
+          "type": "Video për Nxënës"
+        },
+        "functions_unplugged_songwriting/coursee/2022": {
+          "name": "Funksionet e shkëputura: Shkrimi i këngëve",
+          "type": "Mësimi në video të veprimit"
         },
         "functions_unplugged_songwriting_1/coursee/2022": {
+          "name": "Funksionet e shkëputura: Shkrimi i këngëve",
           "type": "Fletë punuese"
+        },
+        "functions_unplugged_songwriting_2/coursee/2022": {
+          "name": "Funksionet e shkëputura: Shkrimi i këngëve",
+          "type": "Vlerësimi"
+        },
+        "functions_unplugged_songwriting_3/coursee/2022": {
+          "name": "Funksionet e shkëputura: Shkrimi i këngëve",
+          "type": "Përgjigje kryesore të vlerësimit"
+        },
+        "songwriting_with_functions/coursee/2022": {
+          "name": "Shkrimi i këngëve me funksione",
+          "type": "Video e shkëputur"
+        },
+        "unplugged_blocks_courses_c-f_/coursee/2022": {
+          "name": " Blloqe të shkëputura (Kurset C-F)",
+          "type": "Manipulativë"
+        },
+        "pause_and_think_online/coursee/2022": {
+          "name": "Ndalo dhe Mendo Online"
         },
         "types_of_disabilities/coursee/2022": {
           "type": "Burim"
@@ -2853,10 +2911,24 @@
         "2022_change_log/coursef/2022": {
           "name": "Regjistri i Ndryshimeve 2022"
         },
+        "all_resources/coursef/2022": {
+          "name": "Të gjitha Burimet",
+          "url": "/s/kursef-2022/burimet"
+        },
+        "all_standards/coursef/2022": {
+          "name": "Të gjitha Standardet",
+          "url": "/s/kursef-2022/standardet"
+        },
+        "all_vocabulary/coursef/2022": {
+          "name": "Gjithë Fjalori",
+          "url": "/s/kursef-2022/fjalor"
+        },
         "common_core_and_ngss_guidance/coursef/2022": {
+          "name": "Common Core dhe Udhëzimi NGSS",
           "type": "Burim"
         },
         "cross-curricular_extension_activities/coursef/2022": {
+          "name": "Aktivitete Zgjeruese Ndër-kurrikulare",
           "type": "Burim"
         },
         "curriculum_guide/coursef/2022": {
@@ -2871,27 +2943,60 @@
           "name": "Guida e Implementimit",
           "type": "Burim"
         },
+        "lesson_type_guide/coursef/2022": {
+          "name": "Udhëzues për llojin e mësimit"
+        },
         "sprite_lab_documentation/coursef/2022": {
+          "name": "Sprite Lab Documentation",
+          "url": "Dokumentacioni i Sprite Lab",
           "type": "Burim"
         },
         "teacher_forum/coursef/2022": {
+          "name": "Forumi i mësimdhënësit",
           "type": "Burim"
+        },
+        "virtual_lesson_modifications/coursef/2022": {
+          "name": "Modifikimet Virtuale të Mësimit"
         },
         "extension_lessons_micro_bit/coursef/2022": {
           "name": "Mësimet shtesë me micro:bit",
           "type": "Burim"
         },
         "the_power_of_words_lesson_quiz/coursef/2022": {
+          "name": "Fuqia e Fjalëve: Kuizi i Mësimit",
           "type": "Burim"
         },
+        "the_power_of_words_lesson_quiz_1/coursef/2022": {
+          "name": "Fuqia e Fjalëve: Kuizi i Mësimit",
+          "type": "Çelësi i përgjigjes"
+        },
         "the_power_of_words_lesson_slides/coursef/2022": {
+          "name": "Fuqia e fjalëve: Sllajdet e mësimit",
           "type": "Sllajdet"
         },
+        "the_power_of_words_the_power_of_words/coursef/2022": {
+          "name": "Fuqia e fjalëve: Fuqia e fjalëve\t",
+          "type": "Video"
+        },
+        "the_power_of_words_words_can_hurt/coursef/2022": {
+          "name": "Fuqia e fjalëve: Fjalët mund të lëndojnë",
+          "type": "Fletushkë"
+        },
         "csf_-_course_f_-_slides_2022-2023/coursef/2022": {
+          "name": "CSF - Kursi F - Sllajdet 2022-2023",
           "type": "Sllajdet"
         },
         "exploring_apps/coursef/2022": {
+          "name": "Eksplorimi i Aplikacioneve",
           "type": "Burim"
+        },
+        "exploring_apps_1/coursef/2022": {
+          "name": "Eksplorimi i Aplikacioneve",
+          "type": "Çelësi i përgjigjes"
+        },
+        "introducing_sprite_lab_1/coursef/2022": {
+          "name": "Prezantimi i Sprite Lab",
+          "type": "Video"
         },
         "making_sprites/coursef/2022": {
           "type": "Sllajdet"

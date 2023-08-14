@@ -2204,6 +2204,11 @@ sq-AL:
         - {}
       Multi-Screen Apps:
         content1: përshkrimi këtu
+      MyRoboticFriends-Unplugged2022:
+        markdown: |-
+          # Shokët e mi robotik
+
+          Mësoni të programoni duke shkruar kode për miqtë tuaj!
       New Challenge Introduction:
         content1: përshkrimi këtu
         markdown: "### Sfida e re: Prisni një shifër zëvendësimi të rastësishëm...
@@ -2354,6 +2359,11 @@ sq-AL:
         - {}
       Prepare for your presentation:
         content1: përshkrimi këtu
+      Songwriting-Unplugged2022:
+        markdown: |-
+          # Shkrim i këngëve
+
+          Përdorni konceptin e refrenit në një këngë për të mësuar rreth përcaktimit dhe thirrjes së funksioneve.
       Student End of Unit Survey - Q1_2022:
         answers:
         - {}
@@ -2874,7 +2884,8 @@ sq-AL:
         - text: '15'
         - {}
         questions:
-        - {}
+        - text: Shikoni nga afër kodin më poshtë. Sa kunguj do të mbledhë fermeri
+            pasi të klikoni "Ekzekuto"?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - {}
@@ -3746,7 +3757,7 @@ sq-AL:
         - {}
         - {}
         questions:
-        - {}
+        - text: Çfarë do të ndodhë kur shtypni butinin “Ekzekuto”?
       courseE_prediction_artistFunction1_2018:
         answers:
         - {}
@@ -7281,6 +7292,17 @@ sq-AL:
         content1: përshkrimi këtu
       csf_putting_a_stop_to_online_meanness2022:
         content1: përshkrimi këtu
+        markdown: |-
+          # STOP padrejtësinë
+
+          ## Çfarë duhet të bëni nëse dikush sillet keq me ju në internet?
+
+          * **S**Largohu.
+          * **T**Tregoj një të rrituri.
+          * **O**Vetëm faqet e besueshme.
+          * **P**Ndalo dhe mendo.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_putting_a_stop_to_online_meanness_2021:
         content1: përshkrimi këtu
       csf_safety_in_my_online_neighborhood2022:
