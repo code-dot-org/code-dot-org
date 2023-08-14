@@ -6719,7 +6719,7 @@ es-ES:
         display_name: Práctica con Artista
       CourseF_outbreak_story:
         content1: descripción aquí
-        markdown: "# El Brote: Codifica tu propia simulación\n\n## ¡Bienvenido a Monster
+        markdown: "El Brote: Codifica tu Propia Simulación\n\n## ¡Bienvenido a Monster
           Town!\nMonster Town solía ser un lugar feliz y saludable. A los monstruos
           de Monster Town les encantaba pasearse para visitar a sus amigos. \n\n<img
           src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -6734,9 +6734,9 @@ es-ES:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\nUn día, uno de los monstruos empezó a sentirse mal.
-          ¡El monstruo había cogido un **virus**! Un virus es un pequeño germen que
-          te puede enfermar. Los otros monstruos no se preocuparon demasiado. Siguieron
-          visitando a sus amigos.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          ¡El monstruo había cogido un **virus**! Un virus es un pequeño organismo
+          que puede hacerte enfermar. Los otros monstruos no se preocuparon demasiado.
+          Siguieron visitando a sus amigos.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -6761,7 +6761,7 @@ es-ES:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">\n\nEl virus se extendió lentamente a otros monstruos
           que estaban cerca. Los monstruos sanos empezaron a preocuparse de que todos
-          fueran a enfermar. Los monstruos enfermos empezaron a preocuparse de que
+          pudieran enfermar. Los monstruos enfermos empezaron a preocuparse de que
           iban a contagiar el virus a todos los demás.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -6788,8 +6788,8 @@ es-ES:
           simulación es un modelo informático de un proceso o sistema. Aprende a codificar
           y a hacer predicciones sobre lo que les ocurrirá a los vecinos de Monster
           Town.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
-          style=\"float:right; width:15%\">\n\n* ¿Con qué rapidez se propagará el
-          virus?\n\n* ¿Se enfermará todo el mundo?\n\n* ¿Cómo ayudarán las mascarillas?\n\n\nCuando
+          style=\"float:right; width:15%\">\n\n* * ¿Con qué rapidez se propagará el
+          virus?\n\n* * ¿Se enfermará todo el mundo?\n\n* * ¿Cómo ayudarán las mascarillas?\n\n\nCuando
           hayas terminado, comparte tu simulación con los demás. Comparte tu mensaje
           sobre lo que crees que podemos hacer para ayudar a mantener a los demás
           sanos cuando un virus llega a la ciudad. \n"
