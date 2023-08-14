@@ -25,7 +25,7 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
           onSubmit?.(userMessage);
           setUserMessage('');
         }}
-        color="purple"
+        color={Button.ButtonColor.brandSecondaryDefault}
       />
     </div>
   );
