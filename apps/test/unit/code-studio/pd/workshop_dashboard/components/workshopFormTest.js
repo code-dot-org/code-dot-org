@@ -9,6 +9,7 @@ import Permission, {
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
 import '../workshopFactory';
+import {Subjects} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {Provider} from 'react-redux';
 import {MemoryRouter} from 'react-router-dom';
 import mapboxReducer from '@cdo/apps/redux/mapbox';
@@ -155,6 +156,164 @@ describe('WorkshopForm test', () => {
       expect(ri).to.equal('fa fa-minus');
     });
     expect(addIcon).to.equal('fa fa-plus');
+  });
+
+  it('selecting CSF, CSD, CSP, CSA, and Facilitator courses show standard workshop type options', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            onSaved={() => {}}
+            today={getFakeToday(false)}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    [
+      'CS Fundamentals',
+      'CS Discoveries',
+      'CS Principles',
+      'Computer Science A',
+      'Facilitator',
+    ].forEach(courseName => {
+      const courseField = wrapper.find('#course').first();
+      courseField.simulate('change', {
+        target: {name: 'course', value: courseName},
+      });
+
+      assert(wrapper.find('#funded').exists());
+      assert(wrapper.find('#virtual').exists());
+      assert(wrapper.find('#suppress_email').exists());
+    });
+  });
+
+  it('selecting CSF course shows help link that displays help text', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            onSaved={() => {}}
+            today={getFakeToday(false)}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const courseField = wrapper.find('#course').first();
+    courseField.simulate('change', {
+      target: {name: 'course', value: 'CS Fundamentals'},
+    });
+
+    assert(!wrapper.find('#helpTextDisplay').exists());
+
+    const helpLink = wrapper.find('#helpLink').first();
+    helpLink.simulate('click');
+
+    assert(wrapper.find('#helpTextDisplay').exists());
+  });
+
+  it('shows correct CSP, CSD, and CSA subjects', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            onSaved={() => {}}
+            today={getFakeToday(false)}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const courseField = wrapper.find('#course').first();
+
+    ['CS Principles', 'CS Discoveries', 'Computer Science A'].forEach(
+      courseName => {
+        courseField.simulate('change', {
+          target: {name: 'course', value: courseName},
+        });
+
+        const subjectOptions = wrapper
+          .find('SubjectSelect')
+          .first()
+          .find('option')
+          .map(option => option.props().value)
+          .slice(1);
+
+        expect(subjectOptions).to.deep.equal(Subjects[courseName]);
+      }
+    );
+  });
+
+  it('selecting CSF course and Intro, Deep Dive, or Facilitator Weekend subject shows fee and map questions', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            onSaved={() => {}}
+            today={getFakeToday(false)}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const courseField = wrapper.find('#course').first();
+    courseField.simulate('change', {
+      target: {name: 'course', value: 'CS Fundamentals'},
+    });
+
+    ['Intro', 'Deep Dive', 'Code.org Facilitator Weekend'].forEach(
+      subjectName => {
+        const subjectField = wrapper.find('#subject').first();
+        subjectField.simulate('change', {
+          target: {name: 'subject', value: subjectName},
+        });
+
+        assert(wrapper.find('#fee').exists());
+        assert(wrapper.find('#on_map').exists());
+      }
+    );
+  });
+
+  it('selecting CSF course and District subject shows virtual and reminder fields', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            onSaved={() => {}}
+            today={getFakeToday(false)}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const courseField = wrapper.find('#course').first();
+    courseField.simulate('change', {
+      target: {name: 'course', value: 'CS Fundamentals'},
+    });
+
+    const subjectField = wrapper.find('#subject').first();
+    subjectField.simulate('change', {
+      target: {name: 'subject', value: 'District'},
+    });
+
+    assert(wrapper.find('#virtual').exists());
+    assert(wrapper.find('#suppress_email').exists());
   });
 
   it('virtual field disabled for non-ws-admin for CSP/CSA summer workshop within a month of starting', () => {
