@@ -66,4 +66,4 @@ theme: responsive_full_width
     %p=hoc_s(:how_ai_works_resources_desc)
     = view :how_ai_works_resources
 
-= view :visit_partial_event_logger
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::AI_HOW_WORKS_PAGE_VISITED_EVENT
