@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2022-09-19T23:04:04.000Z",
   "level_num": "custom",
@@ -45,7 +46,7 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20914,
     "name_suffix": "_2023",
-    "long_instructions": "# Collect Items\r\n\r\nLast, you'll want your player to collect the items falling from the top of the screen.\r\n\r\n# Do This\r\n\r\n* Create a `collectItems` function and add it to the \"functions\" area of your code.\r\n* Use the `if` and `isTouching` blocks to change the x and y position of the items when the player touches them.  You can look at the `loopItem` function for clues in how to reset the item position.\r\n* Inside your `if` statement, add a counter pattern that will increase the score every time the player touches an item.  Look at [Lesson 24 Puzzle 10](../../24/levels/10) for an example.\r\n* Call the function inside the draw loop, in the \"update sprites\" area of your code.\r\n* Run the code to test your function.",
+    "long_instructions": "# Collect Items\r\n\r\nLast, you'll want your player to collect the items falling from the top of the screen.\r\n\r\n# Do This\r\n\r\n* Create a `collectItems` function and add it to the \"functions\" area of your code.\r\n* Use the `if` and `isTouching` blocks to change the x and y position of the items when the player touches them.  You can look at the `loopItem` function for clues in how to reset the item position.\r\n* Inside your `if` statement, add a counter pattern that will increase the score every time the player touches an item.  Look at [Lesson 25 Puzzle 9](../../25/levels/9) for an example.\r\n* Call the function inside the draw loop, in the \"update sprites\" area of your code.\r\n* Run the code to test your function.",
     "reference_links": [
       "/courses/csd-2022/guides/drawing-shapes",
       "/courses/csd-2022/guides/shapes-and-parameters",
@@ -66,9 +67,8 @@
     "libraries_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:04.698+00:00\",\"changed\":[\"cloned from \\\"CSD U3 platform player4_2022\\\"\"],\"cloned_from\":\"CSD U3 platform player4_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T23:04:04.698+00:00\",\"changed\":[\"cloned from \\\"CSD U3 platform player4_2022\\\"\"],\"cloned_from\":\"CSD U3 platform player4_2022\"},{\"changed_at\":\"2023-08-02 23:05:03 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

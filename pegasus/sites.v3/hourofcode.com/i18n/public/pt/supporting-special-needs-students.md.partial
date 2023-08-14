@@ -4,7 +4,7 @@ title: Apoiando estudantes com necessidades especiais para a Hora do Código
 
 # Apoiando estudantes com necessidades especiais para a Hora do Código
 
-Anyone can try an Hour of Code during Computer Science Education Week. Frequentemente, estudantes com autismo, TDAH ou outras necessidades especiais descobrem que adoram programar. Encoraje todos os alunos de sua sala a aceitar o desafio! Ao preparar a experiência para a sua sala, recompense participação ao invés de competição. Você pode conceder um [certificado]({{ supporting-special-needs-students/certificate }}) a todos os participantes independentemente do número de desafios resolvidos no período de uma hora. [Programação em Duplas](https://www.youtube.com/watch?v=vgkahOzFH2Q) é outra ótima forma de ensinar colaboração e trabalho coletivo para solução de problemas.
+Qualquer pessoa pode experimentar o Hour of Code durante a Semana da educação em ciência da computação. Frequentemente, estudantes com autismo, TDAH ou outras necessidades especiais descobrem que adoram programar. Encoraje todos os alunos de sua sala a aceitar o desafio! Ao preparar a experiência para a sua sala, recompense participação ao invés de competição. Você pode conceder um [certificado]({{ supporting-special-needs-students/certificate }}) a todos os participantes independentemente do número de desafios resolvidos no período de uma hora. [Programação em Duplas](https://www.youtube.com/watch?v=vgkahOzFH2Q) é outra ótima forma de ensinar colaboração e trabalho coletivo para solução de problemas.
 
 ## Atenda as várias necessidades com tutoriais online e offline
 
@@ -20,7 +20,7 @@ Por exemplo, os seus alunos têm mobilidade ou destreza reduzida? Se todos os al
 
 ### Alunos com deficiência visual
 
-Para alunos que usam leitor de tela, o [tutorial Quforum para iniciantes](https://quorumlanguage.com/hourofcode/astro1.html) ou o [Tutorial Quorum para alunos já iniciados](https://quorumlanguage.com/hourofcode/part1.html) é uma ótima opção para se iniciar. Quorum se inicia como uma linguagem interpretada projetada para ser acessível para usuários que usam leitor de telas. Por acaso, Quorum tornou-se uma linguagem de programação de propósito geral projetada para qualquer usuário. Você pode usar este tutorial da Hora do Código com sua sala de aula inteira. And, if you want to go beyond an Hour of Code, the team at Quorum has additional tools and curriculum.
+Para alunos que usam leitor de tela, o [tutorial Quforum para iniciantes](https://quorumlanguage.com/hourofcode/astro1.html) ou o [Tutorial Quorum para alunos já iniciados](https://quorumlanguage.com/hourofcode/part1.html) é uma ótima opção para se iniciar. Quorum se inicia como uma linguagem interpretada projetada para ser acessível para usuários que usam leitor de telas. Por acaso, Quorum tornou-se uma linguagem de programação de propósito geral projetada para qualquer usuário. Você pode usar este tutorial da Hora do Código com sua sala de aula inteira. E, se você quiser ir além do Hour of Code, a equipe da Quorum acrescentou ferramentas e currículos.
 
 Se seu aluno usa outras acomodações em aulas de tecnologia, você pode usá-las para ajudar com a Hora do Código também. Podendo incluir monitores maiores, ampliação de tela do software, configurações de alto contraste em seu sistema operacional, controle de voz entre outros recursos.
 

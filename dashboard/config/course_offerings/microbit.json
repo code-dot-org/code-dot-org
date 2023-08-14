@@ -12,9 +12,9 @@
   "cs_topic": "art_and_design,app_design,physical_computing,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
-  "description": null,
-  "professional_learning_program": null,
+  "description": "In this unit, students use App Lab and the BBC micro:bit to develop programs that use the same hardware inputs and outputs found in smart devices.",
+  "professional_learning_program": "code.org/apply",
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_id": null
+  "self_paced_pl_course_offering_id": 444
 }

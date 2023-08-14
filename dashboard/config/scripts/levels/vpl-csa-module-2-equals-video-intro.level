@@ -1,5 +1,10 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2022-07-12T23:17:14.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "properties": {
     "video_key": "csa-pl-intro-to-equals-method",
     "skip_dialog": true,
@@ -9,15 +14,10 @@
     "parent_level_id": 20745,
     "name_suffix": "_-m2",
     "encrypted": "false",
-    "long_instructions": "This video helps explain some of the content from Unit 4, Lesson 2 in order to help you, as the teacher, teach the content to students.\r\n\r\n## As you watch the video, consider the following:\r\n\r\n* How can you connect this concept to other concepts students have learned in class?\r\n* Typically, you need to define a method before you are able to call it.  What questions will the `equals()` method raise for students given you don't need to define it in a subclass to use the method?\r\n\r\n## Want to know what else is in the `Object` class?  \r\nYou can read the documentation for the `Object` class from  <a href=\"https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html\" target=\"blank\">Oracle</a> to dig in a bit deeper!  You will notice the `toString()` method is also defined in the `Object` class. \r\n\r\n"
+    "long_instructions": "This video helps explain some of the content from Unit 4, Lesson 6 in order to help you, as the teacher, teach the content to students.\r\n\r\n## As you watch the video, consider the following:\r\n\r\n* How can you connect this concept to other concepts students have learned in class?\r\n* Typically, you need to define a method before you are able to call it.  What questions will the `equals()` method raise for students given you don't need to define it in a subclass to use the method?\r\n\r\n## Want to know what else is in the `Object` class?  \r\nYou can read the documentation for the `Object` class from  <a href=\"https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html\" target=\"blank\">Oracle</a> to dig in a bit deeper!  You will notice the `toString()` method is also defined in the `Object` class. \r\n\r\n"
   },
-  "game_id": 54,
-  "published": true,
-  "created_at": "2022-07-12T23:17:14.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-07-12T23:17:14.010+00:00\",\"changed\":[\"cloned from \\\"vpl-csa-module-2-equals-video_-m2\\\"\"],\"cloned_from\":\"vpl-csa-module-2-equals-video_-m2\"},{\"changed_at\":\"2022-07-13 00:42:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-07-13 00:45:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-07-13 16:31:42 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-07-12T23:17:14.010+00:00\",\"changed\":[\"cloned from \\\"vpl-csa-module-2-equals-video_-m2\\\"\"],\"cloned_from\":\"vpl-csa-module-2-equals-video_-m2\"},{\"changed_at\":\"2022-07-13 00:42:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-07-13 00:45:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-07-13 16:31:42 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2023-08-03 15:15:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19056,\"changed_by_email\":\"jjarboe@miltonps.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
