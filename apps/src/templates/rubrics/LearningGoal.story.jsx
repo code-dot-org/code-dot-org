@@ -70,7 +70,7 @@ export const WithTipsFeedbackAvailable = () => (
   <LearningGoal
     learningGoal={{
       ...defaultLearningGoal,
-      tips: 'Show some tips for evaluation\n\nPossibly use newlines and _some_ **markdown**',
+      tips: 'Show some tips for evaluation\n\nPossibly use newlines and _some_ **markdown**\n\n* bullet\n* points',
     }}
     canProvideFeedback
   />

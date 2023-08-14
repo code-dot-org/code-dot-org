@@ -128,8 +128,13 @@
   border: 1px solid $neutral_dark50;
   background: $neutral_dark10;
 
-  p {
-    @include body-three;
+  // This is body three styles but the typography components don't work well with markdown support
+  // SafeMarkdown also wraps everything in its own div so explicitly apply this style to the div
+  div {
+    color: $neutral-dark;
+    font-family: $gotham-regular, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.54;
   }
 }
 
