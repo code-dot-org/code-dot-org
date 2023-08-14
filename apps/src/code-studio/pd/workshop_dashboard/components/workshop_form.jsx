@@ -278,7 +278,7 @@ export class WorkshopForm extends React.Component {
     return (
       <FormGroup validationState={validation.style.on_map}>
         <ControlLabel>Should this appear on the K-5 workshop map?</ControlLabel>
-        <FormGroup>
+        <FormGroup id="on_map">
           <Radio
             checked={this.state.on_map}
             inline
@@ -425,11 +425,15 @@ export class WorkshopForm extends React.Component {
       <FormGroup>
         <ControlLabel>
           Workshop Type Options&nbsp;
-          {isCsf && <a onClick={this.toggleTypeOptionsHelpDisplay}>(help)</a>}
+          {isCsf && (
+            <a id="helpLink" onClick={this.toggleTypeOptionsHelpDisplay}>
+              (help)
+            </a>
+          )}
         </ControlLabel>
         <div style={{height: 7}}>&nbsp;</div>
         {this.state.showTypeOptionsHelpDisplay && isCsf && (
-          <FormGroup>
+          <FormGroup id="helpTextDisplay">
             <p>
               If you’d like to make your workshop open to the public, select Yes
               to show it on the K-5 workshop map.
