@@ -249,6 +249,7 @@ class TeacherPanel extends React.Component {
               sortByStyles={styles.sortBy}
               selectStyles={styles.select}
               sectionId={sectionId}
+              unitName={unitName}
             />
           )}
           {viewAs === ViewType.Instructor && (students || []).length > 0 && (

@@ -4,7 +4,9 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
 
-function SortByNameDropdown({sortByStyles, selectStyles, sectionId}) {
+const DROPDOWN_COMPONENT = 'DropdownComponent';
+
+function SortByNameDropdown({sortByStyles, selectStyles, sectionId, unitName}) {
   const dispatch = useDispatch();
   return (
     <div>
@@ -14,7 +16,14 @@ function SortByNameDropdown({sortByStyles, selectStyles, sectionId}) {
         style={selectStyles}
         defaultValue={i18n.displayName}
         onChange={e => {
-          dispatch(setSortByFamilyName(e.target.value, sectionId));
+          dispatch(
+            setSortByFamilyName(
+              e.target.value,
+              sectionId,
+              unitName,
+              DROPDOWN_COMPONENT
+            )
+          );
         }}
       >
         <option value={false}>{i18n.displayName()}</option>
@@ -28,6 +37,7 @@ SortByNameDropdown.propTypes = {
   sortByStyles: PropTypes.object,
   selectStyles: PropTypes.object,
   sectionId: PropTypes.number,
+  unitName: PropTypes.string,
 };
 
 export default SortByNameDropdown;
